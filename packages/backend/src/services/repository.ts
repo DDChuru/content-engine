@@ -61,6 +61,7 @@ async function ensureRepoBaseDir(): Promise<void> {
 /**
  * Clone or update a repository
  * Uses shallow clone (--depth 1) for efficiency
+ * Also supports local file paths
  */
 export async function cloneRepository(
   repoUrl: string,
@@ -71,6 +72,26 @@ export async function cloneRepository(
     branch = 'main',
     force = false
   } = options;
+
+  // Check if this is a local path (not a URL)
+  if (repoUrl.startsWith('/') || repoUrl.startsWith('~')) {
+    const expandedPath = repoUrl.replace(/^~/, process.env.HOME || '');
+
+    if (existsSync(expandedPath)) {
+      console.log(`Using local repository: ${expandedPath}`);
+
+      // Cache local path
+      repositoryCache.set(repoUrl, {
+        path: expandedPath,
+        url: repoUrl,
+        lastUpdated: new Date()
+      });
+
+      return expandedPath;
+    } else {
+      throw new Error(`Local repository path does not exist: ${expandedPath}`);
+    }
+  }
 
   await ensureRepoBaseDir();
 

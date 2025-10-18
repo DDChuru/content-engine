@@ -41,7 +41,7 @@ export const PROJECTS: ProjectConfig[] = [
     id: 'peakflow',
     name: 'PeakFlow',
     description: 'Peak performance and flow state optimization',
-    repoUrl: 'https://github.com/yourusername/peakflow.git', // Update with actual repo
+    repoUrl: '/home/dachu/Documents/projects/vercel/peakflow', // Local repository path
     branch: 'main',
     firebaseProject: 'peakflow'
   }
