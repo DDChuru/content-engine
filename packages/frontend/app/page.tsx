@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { MessageSquarePlus } from 'lucide-react';
 import { ChatInterface } from '@/components/chat-interface';
 import { GenerationPanel } from '@/components/generation-panel';
@@ -26,13 +26,21 @@ const PROJECTS = [
 export default function Home() {
   const [activeProject, setActiveProject] = useState<string>('iclean');
   const [selectedArtifact, setSelectedArtifact] = useState<Artifact | null>(null);
-  const [chatSessionId, setChatSessionId] = useState<string>(() => `chat-${Date.now()}`);
+  const generateChatId = () => `chat-${Date.now()}-${Math.random().toString(36).slice(2, 11)}`;
+  const [chatSessionId, setChatSessionId] = useState<string>('chat-initial');
+
+  useEffect(() => {
+    if (chatSessionId === 'chat-initial') {
+      const newId = generateChatId();
+      console.debug('[Home] Hydrating chat session with ID:', newId);
+      setChatSessionId(newId);
+    }
+  }, [chatSessionId]);
 
   const currentProject = PROJECTS.find(p => p.id === activeProject) || PROJECTS[0];
 
   const handleNewChat = () => {
-    const newChatId = `chat-${Date.now()}`;
-    setChatSessionId(newChatId);
+    setChatSessionId(generateChatId());
   };
 
   return (
@@ -85,9 +93,10 @@ export default function Home() {
       {/* Main Content */}
       <div className="glass-panel flex-1 min-h-0 grid grid-cols-1 gap-4 rounded-[2.5rem] border border-transparent bg-white/30 p-6 shadow-[0_25px_60px_-40px_rgba(15,23,42,0.5)] backdrop-blur-xl transition-colors dark:bg-white/5 dark:shadow-[0_35px_80px_-50px_rgba(2,6,23,0.9)] lg:grid-cols-2">
         {/* Chat Panel */}
-        <div className="flex flex-col rounded-3xl border border-slate-200/70 bg-white/80 p-4 shadow-[0_18px_50px_-26px_rgba(15,23,42,0.45)] backdrop-blur transition-colors dark:border-white/10 dark:bg-slate-900/70 dark:shadow-[0_20px_50px_-30px_rgba(0,0,0,0.75)]">
+        <div className="flex min-h-0 flex-col rounded-3xl border border-slate-200/70 bg-white/80 p-4 shadow-[0_18px_50px_-26px_rgba(15,23,42,0.45)] backdrop-blur transition-colors dark:border-white/10 dark:bg-slate-900/70 dark:shadow-[0_20px_50px_-30px_rgba(0,0,0,0.75)]">
           <h2 className="mb-4 text-xl font-semibold text-slate-900 transition-colors dark:text-white">Chat with Claude</h2>
           <ChatInterface
+            key={chatSessionId}
             activeProject={activeProject}
             chatSessionId={chatSessionId}
             onArtifactSelect={setSelectedArtifact}

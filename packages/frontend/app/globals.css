@@ -55,6 +55,7 @@
   }
   body {
     @apply bg-background text-foreground;
+    overflow-x: clip;
   }
 }
 
@@ -102,7 +103,7 @@
   .stage-layered::before,
   .stage-layered::after {
     content: '';
-    position: absolute;
+    position: fixed;
     pointer-events: none;
     border-radius: 9999px;
     filter: blur(0px);

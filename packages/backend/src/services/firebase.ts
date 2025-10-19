@@ -94,7 +94,7 @@ export function initializeFirebase() {
       const serviceAccount = JSON.parse(process.env.PEAKFLOW_FIREBASE_KEY) as ServiceAccount;
       const app = admin.initializeApp({
         credential: admin.credential.cert(serviceAccount),
-        storageBucket: `${serviceAccount.project_id}.appspot.com`
+        storageBucket: `${serviceAccount.project_id}.firebasestorage.app`
       }, 'peakflow');
 
       firebaseProjects.set('peakflow', {

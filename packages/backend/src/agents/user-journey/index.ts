@@ -132,7 +132,6 @@ export class UserJourneyAgent {
    * Analyze project structure
    */
   private async analyzeProject(projectPath: string, features: string[]): Promise<any> {
-    // Simple analysis - count files and directories
     const analysis = {
       features: [],
       summary: {
@@ -145,19 +144,57 @@ export class UserJourneyAgent {
     for (const feature of features) {
       const featureAnalysis = {
         name: feature,
+        description: '',
         components: [],
         routes: [],
-        services: []
+        services: [],
+        workflows: [],
+        dataModels: []
       };
 
-      // Find relevant files (simplified)
+      // Find relevant files
       try {
+        let files: string[] = [];
         const srcPath = path.join(projectPath, 'src');
-        const files = await this.findFiles(srcPath, feature.toLowerCase());
+        const appPath = path.join(projectPath, 'app');
 
-        featureAnalysis.components = files.filter(f => f.includes('component') || f.endsWith('.tsx'));
-        featureAnalysis.routes = files.filter(f => f.includes('route') || f.includes('page'));
-        featureAnalysis.services = files.filter(f => f.includes('service') || f.includes('api'));
+        // Try src directory first
+        try {
+          files = await this.findFiles(srcPath, feature.toLowerCase());
+        } catch (e) {
+          // src doesn't exist, that's ok
+        }
+
+        // Try app directory if src had no results
+        if (files.length === 0) {
+          try {
+            files = await this.findFiles(appPath, feature.toLowerCase());
+          } catch (e) {
+            // app doesn't exist either
+          }
+        }
+
+        console.log(`[${feature}] Found ${files.length} files`);
+
+        // Categorize files
+        const componentFiles = files.filter(f => f.includes('component') || f.endsWith('.tsx'));
+        const routeFiles = files.filter(f => f.includes('route') || f.includes('page'));
+        const serviceFiles = files.filter(f => f.includes('service') || f.includes('api'));
+
+        // Analyze key files by reading their content
+        const keyFile = routeFiles[0] || componentFiles[0];
+        if (keyFile) {
+          const analysis = await this.analyzeFeatureFile(keyFile);
+          featureAnalysis.description = analysis.description;
+          featureAnalysis.workflows = analysis.workflows;
+          featureAnalysis.dataModels = analysis.dataModels;
+        }
+
+        featureAnalysis.components = componentFiles.map(f => path.basename(f));
+        featureAnalysis.routes = routeFiles.map(f => path.basename(f));
+        featureAnalysis.services = serviceFiles.map(f => path.basename(f));
+
+        console.log(`[${feature}] Analyzed: ${featureAnalysis.components.length} components, ${featureAnalysis.routes.length} routes, ${featureAnalysis.services.length} services`);
 
         analysis.summary.totalComponents += featureAnalysis.components.length;
         analysis.summary.totalRoutes += featureAnalysis.routes.length;
@@ -170,6 +207,151 @@ export class UserJourneyAgent {
     }
 
     return analysis;
+  }
+
+  /**
+   * Analyze a feature file to extract meaningful information
+   */
+  private async analyzeFeatureFile(filePath: string): Promise<any> {
+    try {
+      const content = await fs.readFile(filePath, 'utf-8');
+      const fileName = path.basename(filePath);
+      const dirPath = path.dirname(filePath);
+
+      // Extract imports to understand dependencies
+      const importMatches = content.match(/import .+ from ['"](.+)['"]/g) || [];
+      const services = importMatches
+        .filter(imp => imp.includes('Service'))
+        .map(imp => {
+          const match = imp.match(/import \{(.+)\} from/);
+          return match?.[1]?.split(',').map(s => s.trim()).filter(s => s.includes('Service'));
+        })
+        .flat()
+        .filter(Boolean);
+
+      // Extract types from imports
+      const typeImports = importMatches
+        .filter(imp => imp.includes('types') || imp.includes('Type'))
+        .map(imp => {
+          const match = imp.match(/import \{(.+)\} from/);
+          return match?.[1]?.split(',').map(s => s.trim());
+        })
+        .flat()
+        .filter(Boolean);
+
+      // Extract local interface/type definitions
+      const localTypes = (content.match(/interface (\w+)|type (\w+) =/g) || [])
+        .map(t => t.replace(/interface |type |=/g, '').trim());
+
+      // Combine all data models
+      const dataModels = [...new Set([...typeImports, ...localTypes])].slice(0, 8);
+
+      // Extract useState to understand state management
+      const stateMatches = content.match(/useState<(\w+)>/g) || [];
+      const stateTypes = stateMatches
+        .map(s => s.match(/useState<(\w+)>/)?.[1])
+        .filter(Boolean);
+
+      // Extract main functions (CRUD operations, handlers)
+      const functionMatches = content.match(/const (\w+) = async|function (\w+)|const handle(\w+) =/g) || [];
+      const workflows = [...new Set(functionMatches.map(w =>
+        w.replace(/const |= async|function |=/g, '').trim()
+      ))].slice(0, 8);
+
+      // Try to read related service files for deeper analysis
+      let servicePurpose = '';
+      if (services.length > 0) {
+        const serviceFile = await this.findServiceFile(dirPath, services[0]);
+        if (serviceFile) {
+          servicePurpose = await this.analyzeServiceFile(serviceFile);
+        }
+      }
+
+      // Generate rich description
+      let description = `${fileName.replace(/page\.tsx|\.tsx/g, '')} - `;
+
+      if (servicePurpose) {
+        description += servicePurpose;
+      } else if (services.length > 0) {
+        description += `Manages data through ${services.join(', ')}`;
+      } else if (stateTypes.length > 0) {
+        description += `Manages ${stateTypes.join(', ')} state`;
+      } else {
+        description += 'Feature component with user interface';
+      }
+
+      return {
+        description,
+        workflows,
+        dataModels,
+        services: services.slice(0, 5)
+      };
+    } catch (error) {
+      console.error('Error analyzing feature file:', error);
+      return {
+        description: 'Feature component',
+        workflows: [],
+        dataModels: [],
+        services: []
+      };
+    }
+  }
+
+  /**
+   * Find service file in the project
+   */
+  private async findServiceFile(startDir: string, serviceName: string): Promise<string | null> {
+    try {
+      // Common service locations
+      const possiblePaths = [
+        path.join(startDir, `${serviceName}.ts`),
+        path.join(startDir, `${serviceName}.tsx`),
+        path.join(startDir, '../lib', `${serviceName}.ts`),
+        path.join(startDir, '../../lib', `${serviceName}.ts`),
+        path.join(startDir, '../../../lib/firebase', `${serviceName}.ts`),
+        path.join(startDir, '../services', `${serviceName}.ts`)
+      ];
+
+      for (const filePath of possiblePaths) {
+        try {
+          await fs.access(filePath);
+          return filePath;
+        } catch {
+          continue;
+        }
+      }
+      return null;
+    } catch {
+      return null;
+    }
+  }
+
+  /**
+   * Analyze service file to understand its purpose
+   */
+  private async analyzeServiceFile(filePath: string): Promise<string> {
+    try {
+      const content = await fs.readFile(filePath, 'utf-8');
+
+      // Extract class/export name and its methods
+      const classMatch = content.match(/export class (\w+)/);
+      const className = classMatch?.[1] || 'Service';
+
+      // Extract public methods
+      const methods = (content.match(/async (\w+)\(|(\w+)\(/g) || [])
+        .map(m => m.replace(/async |[(]/g, '').trim())
+        .filter(m => !m.startsWith('_')) // Exclude private methods
+        .slice(0, 5);
+
+      if (methods.length > 0) {
+        const operations = methods.join(', ');
+        return `Provides operations: ${operations}`;
+      }
+
+      return `Handles data operations via ${className}`;
+    } catch {
+      return '';
+    }
   }
 
   /**
@@ -187,8 +369,12 @@ export class UserJourneyAgent {
         if (entry.isDirectory() && !entry.name.startsWith('.') && entry.name !== 'node_modules') {
           const subFiles = await this.findFiles(fullPath, pattern);
           files.push(...subFiles);
-        } else if (entry.isFile() && entry.name.toLowerCase().includes(pattern)) {
-          files.push(fullPath);
+        } else if (entry.isFile()) {
+          // Check if the full path contains the pattern (not just filename)
+          // This catches files inside feature directories like app/companies/[id]/contracts/page.tsx
+          if (fullPath.toLowerCase().includes(pattern)) {
+            files.push(fullPath);
+          }
         }
       }
     } catch (error) {
@@ -238,7 +424,31 @@ export class UserJourneyAgent {
     const features = analysis.features.map((f: any) => `
       <div class="feature-card">
         <h3>${f.name}</h3>
-        <p>${f.components.length} components, ${f.routes.length} routes</p>
+        <p class="feature-description">${f.description || 'Feature component'}</p>
+
+        ${f.dataModels && f.dataModels.length > 0 ? `
+          <div class="feature-section">
+            <h4>Data Models</h4>
+            <ul class="compact-list">
+              ${f.dataModels.map((m: string) => `<li><code>${m}</code></li>`).join('')}
+            </ul>
+          </div>
+        ` : ''}
+
+        ${f.workflows && f.workflows.length > 0 ? `
+          <div class="feature-section">
+            <h4>Key Functions</h4>
+            <ul class="compact-list">
+              ${f.workflows.map((w: string) => `<li><code>${w}()</code></li>`).join('')}
+            </ul>
+          </div>
+        ` : ''}
+
+        <div class="feature-stats">
+          <span class="stat-badge">${f.components.length} components</span>
+          <span class="stat-badge">${f.routes.length} routes</span>
+          ${f.services.length > 0 ? `<span class="stat-badge">${f.services.length} services</span>` : ''}
+        </div>
       </div>
     `).join('');
 
@@ -285,6 +495,53 @@ export class UserJourneyAgent {
       margin: 1rem 0;
       border-radius: 8px;
       border-left: 4px solid #667eea;
+    }
+    .feature-description {
+      color: #4a5568;
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+    }
+    .feature-section {
+      margin: 1rem 0;
+    }
+    .feature-section h4 {
+      color: #2d3748;
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+    }
+    .compact-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .compact-list li {
+      padding: 0.25rem 0;
+      color: #4a5568;
+      font-size: 0.9rem;
+    }
+    .compact-list code {
+      background: #edf2f7;
+      padding: 0.125rem 0.5rem;
+      border-radius: 3px;
+      font-family: 'Monaco', 'Courier New', monospace;
+      font-size: 0.85rem;
+      color: #667eea;
+    }
+    .feature-stats {
+      margin-top: 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e2e8f0;
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+    .stat-badge {
+      background: #667eea;
+      color: white;
+      padding: 0.25rem 0.75rem;
+      border-radius: 12px;
+      font-size: 0.85rem;
+      font-weight: 500;
     }
     .stats {
       display: flex;

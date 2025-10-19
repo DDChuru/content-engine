@@ -197,6 +197,8 @@ export class ClaudeService {
     assistantResponse: any, // The response containing tool_use
     toolResult: any,
     toolUseId: string,
+    tools: any[] | undefined,
+    systemPrompt?: string,
     model?: string
   ): Promise<any> {
     // Build proper message history:
@@ -221,7 +223,7 @@ export class ClaudeService {
       }
     ];
 
-    return await this.sendMessage(updatedMessages, undefined, undefined, model);
+    return await this.sendMessage(updatedMessages, tools, systemPrompt, model);
   }
 
   /**

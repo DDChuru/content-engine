@@ -34,15 +34,33 @@ const MODELS = [
 ] as const;
 
 export function ChatInterface({ activeProject, chatSessionId, onArtifactSelect }: ChatInterfaceProps) {
-  const [messages, setMessages] = useState<Message[]>([]);
+  // Initialize with welcome message to avoid flicker
+  const [messages, setMessages] = useState<Message[]>(() => {
+    return [{
+      id: '1',
+      role: 'assistant' as const,
+      content: 'Hello! I can help you generate content. Try asking me to create a user manual, SOP, or educational lesson.',
+      timestamp: new Date(),
+    }];
+  });
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
   const [selectedModel, setSelectedModel] = useState('claude-haiku-4-5-20251001');
-  const messagesEndRef = useRef<HTMLDivElement>(null);
+  const messagesContainerRef = useRef<HTMLDivElement>(null);
 
-  const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+  const scrollToBottom = (behavior: ScrollBehavior = 'smooth') => {
+    const container = messagesContainerRef.current;
+    if (!container) return;
+
+    const targetTop = Math.max(container.scrollHeight - container.clientHeight, 0);
+    if (behavior === 'smooth' && typeof container.scrollTo === 'function') {
+      container.scrollTo({ top: targetTop, left: 0, behavior });
+      return;
+    }
+
+    container.scrollTop = targetTop;
+    container.scrollLeft = 0;
   };
 
   const formatTime = (date: Date) =>
@@ -56,16 +74,48 @@ export function ChatInterface({ activeProject, chatSessionId, onArtifactSelect }
     setIsMounted(true);
   }, []);
 
-  // Clear messages when chat session changes (new chat started)
+  // Track previous chatSessionId to detect changes
+  const prevChatSessionId = useRef(chatSessionId);
+  const hasReceivedRealId = useRef(false);
+
+  // Reset refs on unmount to handle React Strict Mode properly
   useEffect(() => {
-    setMessages([
-      {
+    return () => {
+      console.log('[ChatInterface] Component unmounting, resetting refs');
+      hasReceivedRealId.current = false;
+      prevChatSessionId.current = '';
+    };
+  }, []);
+
+  // Clear messages when New Chat is clicked
+  useEffect(() => {
+    console.log('[ChatInterface] chatSessionId effect triggered', {
+      hasReceivedRealId: hasReceivedRealId.current,
+      prevChatSessionId: prevChatSessionId.current,
+      newChatSessionId: chatSessionId,
+      isInitialValue: chatSessionId === 'chat-initial',
+      willReset: hasReceivedRealId.current && prevChatSessionId.current !== chatSessionId
+    });
+
+    // Skip the change from 'chat-initial' to the first real ID
+    if (chatSessionId !== 'chat-initial' && !hasReceivedRealId.current) {
+      hasReceivedRealId.current = true;
+      prevChatSessionId.current = chatSessionId;
+      console.log('[ChatInterface] First real chat ID received, skipping reset:', chatSessionId);
+      return;
+    }
+
+    // Only reset if this is a real change after we've received the first real ID
+    if (hasReceivedRealId.current && prevChatSessionId.current !== chatSessionId && chatSessionId !== 'chat-initial') {
+      console.log('[ChatInterface] Chat session changed (New Chat clicked), resetting messages');
+      setMessages([{
         id: '1',
-        role: 'assistant',
+        role: 'assistant' as const,
         content: 'Hello! I can help you generate content. Try asking me to create a user manual, SOP, or educational lesson.',
         timestamp: new Date(),
-      },
-    ]);
+      }]);
+    }
+    prevChatSessionId.current = chatSessionId;
   }, [chatSessionId]);
 
   useEffect(() => {
@@ -111,8 +161,8 @@ export function ChatInterface({ activeProject, chatSessionId, onArtifactSelect }
     setInput('');
     setIsLoading(true);
 
-    // Auto-save user message
-    await saveMessageToFirestore(userMessage);
+    // Auto-save user message (fire-and-forget, don't block UI)
+    saveMessageToFirestore(userMessage);
 
     try {
       const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001';
@@ -133,18 +183,61 @@ export function ChatInterface({ activeProject, chatSessionId, onArtifactSelect }
 
       const data = await response.json();
 
+      // Parse Claude's response - check different response formats
+      let assistantText = '';
+
+      // Check if response has direct content with text
+      if (data.response?.content) {
+        if (Array.isArray(data.response.content)) {
+          // Claude format: content is array with objects containing text
+          const textContent = data.response.content.find((c: any) => c.type === 'text');
+          if (textContent && textContent.text) {
+            assistantText = textContent.text;
+          }
+        } else if (typeof data.response.content === 'string') {
+          // Simple string content
+          assistantText = data.response.content;
+        }
+      }
+
+      // Fallback to checking direct response properties
+      if (!assistantText && data.response) {
+        if (typeof data.response === 'string') {
+          assistantText = data.response;
+        } else if (data.response.text) {
+          assistantText = data.response.text;
+        }
+      }
+
+      // Final fallback
+      if (!assistantText) {
+        assistantText = data.error || 'I generated the content successfully!';
+      }
+
       const assistantMessage: Message = {
         id: (Date.now() + 1).toString(),
         role: 'assistant',
-        content: data.response?.content?.[0]?.text || 'I generated the content successfully!',
+        content: assistantText,
         timestamp: new Date(),
         artifact: data.artifact || undefined,
       };
 
-      setMessages((prev) => [...prev, assistantMessage]);
+      console.log('[ChatInterface] Adding assistant message:', {
+        id: assistantMessage.id,
+        content: assistantText.substring(0, 50) + '...',
+        messagesBeforeAdd: messages.length
+      });
 
-      // Auto-save assistant message
-      await saveMessageToFirestore(assistantMessage);
+      setMessages((prev) => {
+        console.log('[ChatInterface] Messages state update:', {
+          previousCount: prev.length,
+          newCount: prev.length + 1
+        });
+        return [...prev, assistantMessage];
+      });
+
+      // Auto-save assistant message (fire-and-forget, don't block UI)
+      saveMessageToFirestore(assistantMessage);
 
       // Auto-select artifact if present
       if (data.artifact && onArtifactSelect) {
@@ -172,7 +265,7 @@ export function ChatInterface({ activeProject, chatSessionId, onArtifactSelect }
   };
 
   return (
-    <div className="glass-panel flex h-full flex-col overflow-hidden rounded-3xl border border-slate-200/80 bg-white/85 shadow-[0_15px_40px_-24px_rgba(15,23,42,0.45)] backdrop-blur-2xl transition-all duration-500 dark:border-white/10 dark:bg-slate-950/70 dark:shadow-[0_30px_70px_-40px_rgba(0,0,0,0.85)]">
+    <div className="glass-panel flex h-full min-h-0 flex-col overflow-hidden rounded-3xl border border-slate-200/80 bg-white/85 shadow-[0_15px_40px_-24px_rgba(15,23,42,0.45)] backdrop-blur-2xl transition-all duration-500 dark:border-white/10 dark:bg-slate-950/70 dark:shadow-[0_30px_70px_-40px_rgba(0,0,0,0.85)]">
       <div className="flex items-center gap-4 border-b border-slate-200/80 px-6 py-5 transition-colors dark:border-white/10">
         <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-teal-500 to-cyan-500 text-white shadow-lg">
           <Bot className="h-6 w-6" />
@@ -190,7 +283,11 @@ export function ChatInterface({ activeProject, chatSessionId, onArtifactSelect }
         </div>
       </div>
 
-      <div className="flex-1 space-y-6 overflow-y-auto px-6 py-6">
+      <div ref={messagesContainerRef} className="flex-1 min-h-0 space-y-6 overflow-y-auto px-6 py-6">
+        {console.log('[ChatInterface] Rendering messages:', {
+          count: messages.length,
+          messageIds: messages.map(m => m.id)
+        })}
         {messages.map((message) => {
           const isUser = message.role === 'user';
           return (
@@ -207,7 +304,7 @@ export function ChatInterface({ activeProject, chatSessionId, onArtifactSelect }
               >
                 {isUser ? <User className="h-5 w-5" /> : <Bot className="h-5 w-5" />}
               </div>
-              <div className={`max-w-[75%] space-y-2 ${isUser ? 'items-end' : 'items-start'} flex flex-col`}> 
+              <div className={`max-w-[75%] space-y-2 ${isUser ? 'items-end' : 'items-start'} flex flex-col`}>
                 <div
                   className={`text-xs font-semibold uppercase tracking-wide transition-colors ${
                     isUser ? 'text-teal-600 dark:text-white/60' : 'text-slate-500 dark:text-white/50'
@@ -260,7 +357,6 @@ export function ChatInterface({ activeProject, chatSessionId, onArtifactSelect }
             </div>
           </div>
         )}
-        <div ref={messagesEndRef} />
       </div>
 
       <form

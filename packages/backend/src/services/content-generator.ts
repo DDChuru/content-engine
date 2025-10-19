@@ -108,11 +108,32 @@ export class ContentGenerator {
           result.htmlUrl = htmlUrl;
           console.log(`✓ HTML uploaded to Firebase Storage: ${htmlUrl}`);
 
+          // Upload thumbnail if present
+          if (result.thumbnailUrl) {
+            try {
+              const fs = await import('fs/promises');
+              const thumbnailBuffer = await fs.readFile(result.thumbnailUrl);
+              const thumbnailUrl = await uploadToFirebaseStorage(
+                request.targetProject,
+                thumbnailBuffer,
+                `thumbnails/${request.type}-${timestamp}.png`,
+                'image/png'
+              );
+              result.thumbnailUrl = thumbnailUrl;
+              console.log(`✓ Thumbnail uploaded to Firebase Storage: ${thumbnailUrl}`);
+            } catch (thumbError: any) {
+              console.error('Thumbnail upload error:', thumbError);
+              // Don't fail if thumbnail upload fails
+              result.thumbnailUrl = undefined;
+            }
+          }
+
           // Save metadata to Firestore
           const firestoreData: any = {
             type: request.type,
             metadata: result.metadata,
             htmlUrl,
+            thumbnailUrl: result.thumbnailUrl,
             createdAt: new Date().toISOString()
           };
 
@@ -197,17 +218,27 @@ export class ContentGenerator {
     // Generate using agent
     const result: UserJourneyResult = await agent.generate(journeyRequest);
 
+    // Read the HTML file content for Firebase upload
+    let htmlContent: string | undefined;
+    try {
+      const fs = await import('fs/promises');
+      htmlContent = await fs.readFile(result.presentation.htmlPath, 'utf-8');
+    } catch (error) {
+      console.error('Failed to read HTML file:', error);
+    }
+
     return {
       success: result.success,
       type: 'user-manual',
       content: result,
-      html: result.presentation.htmlPath,
+      html: htmlContent, // Return HTML content, not file path
       thumbnailUrl: result.mockups.paths[0],
       metadata: {
         slideCount: result.presentation.slideCount,
         duration: result.stats.duration,
         estimatedCost: result.stats.estimatedCost,
-        repositoryPath: projectPath
+        repositoryPath: projectPath,
+        localPath: result.presentation.htmlPath // Keep local path in metadata
       }
     };
   }

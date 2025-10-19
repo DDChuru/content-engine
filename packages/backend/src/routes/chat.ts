@@ -34,24 +34,28 @@ router.post('/message', async (req: Request, res: Response) => {
     const tools = [
       {
         name: 'generate_user_manual',
-        description: 'Generate a user manual from a codebase',
+        description: 'Generate a user manual from a codebase. If targetProject is specified (iclean, haccp, math, peakflow), the system will automatically use the configured repository (local or GitHub). You do NOT need to provide repoUrl when targetProject is set.',
         input_schema: {
           type: 'object',
           properties: {
-            repoUrl: { type: 'string', description: 'GitHub repository URL' },
+            repoUrl: {
+              type: 'string',
+              description: 'Optional: GitHub repository URL or local path. Not needed if targetProject is specified, as each project has a pre-configured repository location.'
+            },
             features: {
               type: 'array',
               items: { type: 'string' },
-              description: 'Features to document'
+              description: 'List of feature names to analyze and document (e.g., ["Contracts", "Invoices", "Quotes"])'
             },
-            title: { type: 'string' },
-            subtitle: { type: 'string' },
+            title: { type: 'string', description: 'Title for the user manual' },
+            subtitle: { type: 'string', description: 'Optional subtitle for the user manual' },
             targetProject: {
               type: 'string',
-              enum: ['iclean', 'haccp', 'math', 'peakflow']
+              enum: ['iclean', 'haccp', 'math', 'peakflow'],
+              description: 'Target project. Each project has a pre-configured repository location (PeakFlow uses local path: /home/dachu/Documents/projects/vercel/peakflow)'
             }
           },
-          required: ['features', 'title']
+          required: ['features', 'title', 'targetProject']
         }
       },
       {
@@ -133,6 +137,8 @@ router.post('/message', async (req: Request, res: Response) => {
         response, // The assistant's response containing tool_use
         toolResult,
         toolUse.id,
+        tools, // Pass the same tools
+        systemPrompt,
         model
       );
 
