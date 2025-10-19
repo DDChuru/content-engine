@@ -110,6 +110,28 @@ export function initializeFirebase() {
     }
   }
 
+  // Initialize ACS project (if configured)
+  if (process.env.ACS_FIREBASE_KEY) {
+    try {
+      const serviceAccount = JSON.parse(process.env.ACS_FIREBASE_KEY) as ServiceAccount;
+      const app = admin.initializeApp({
+        credential: admin.credential.cert(serviceAccount),
+        storageBucket: `${serviceAccount.project_id}.appspot.com`
+      }, 'acs');
+
+      firebaseProjects.set('acs', {
+        app,
+        db: app.firestore(),
+        storage: app.storage(),
+        auth: app.auth()
+      });
+
+      console.log('   ✓ ACS Firebase initialized');
+    } catch (error) {
+      console.error('   ✗ Failed to initialize ACS Firebase:', error);
+    }
+  }
+
   console.log(`   Total projects initialized: ${firebaseProjects.size}`);
 }
 
@@ -234,6 +256,162 @@ export async function queryFirestore(
   return snapshot.docs.map((doc: any) => ({ id: doc.id, ...doc.data() }));
 }
 
+/**
+ * CSC Architecture: Build path for company-scoped collection
+ */
+export function getCSCCollectionPath(companyId: string, collection: string): string {
+  return `companies/${companyId}/${collection}`;
+}
+
+/**
+ * CSC Architecture: Query sites with iClean enabled
+ */
+export async function getICleanSites(
+  projectName: string,
+  companyId: string,
+  limit: number = 1000
+): Promise<any[]> {
+  console.log('🔥 [getICleanSites] Starting query:', {
+    projectName,
+    companyId,
+    limit
+  });
+
+  const project = getFirebaseProject(projectName);
+  if (!project) {
+    console.error('❌ [getICleanSites] Firebase project not initialized:', projectName);
+    throw new Error(`Firebase project ${projectName} not initialized`);
+  }
+
+  console.log('✅ [getICleanSites] Firebase project found:', projectName);
+
+  const collectionPath = getCSCCollectionPath(companyId, 'sites');
+  console.log('📂 [getICleanSites] Collection path:', collectionPath);
+
+  // Fetch ALL sites first (no filter)
+  console.log('🔍 [getICleanSites] Fetching ALL sites (no filter)...');
+  const snapshot = await project.db
+    .collection(collectionPath)
+    .limit(limit)
+    .get();
+
+  console.log('📊 [getICleanSites] Query results:', {
+    docCount: snapshot.docs.length,
+    empty: snapshot.empty
+  });
+
+  const allSites = snapshot.docs.map((doc: any) => ({ id: doc.id, ...doc.data() }));
+
+  if (allSites.length > 0) {
+    console.log('✅ [getICleanSites] Sample sites (first 3):', allSites.slice(0, 3).map(s => ({
+      id: s.id,
+      name: s.name,
+      iClean_root: s.iClean,
+      iClean_settings: s.settings?.iClean,
+      location: s.location
+    })));
+  } else {
+    console.warn('⚠️ [getICleanSites] No sites found at path:', collectionPath);
+    return [];
+  }
+
+  // Filter in memory for iClean sites (check both root and settings)
+  const iCleanSites = allSites.filter((site: any) =>
+    site.iClean === true || site.settings?.iClean === true
+  );
+
+  console.log('📊 [getICleanSites] In-memory filter results:', {
+    totalSites: allSites.length,
+    iCleanSites: iCleanSites.length,
+    filteredOut: allSites.length - iCleanSites.length
+  });
+
+  if (iCleanSites.length === 0) {
+    console.warn('⚠️ [getICleanSites] No sites have iClean flag set!');
+    console.log('💡 [getICleanSites] Returning ALL sites instead of empty array');
+    // Return all sites if none have iClean flag (for development)
+    return allSites;
+  }
+
+  return iCleanSites;
+}
+
+/**
+ * CSC Architecture: Search sites by name (for type-ahead)
+ */
+export async function searchSitesByName(
+  projectName: string,
+  companyId: string,
+  searchTerm: string,
+  iCleanOnly: boolean = true,
+  limit: number = 100
+): Promise<any[]> {
+  console.log('🔥 [searchSitesByName] Starting search:', {
+    projectName,
+    companyId,
+    searchTerm,
+    iCleanOnly,
+    limit
+  });
+
+  const project = getFirebaseProject(projectName);
+  if (!project) {
+    console.error('❌ [searchSitesByName] Firebase project not initialized:', projectName);
+    throw new Error(`Firebase project ${projectName} not initialized`);
+  }
+
+  const collectionPath = getCSCCollectionPath(companyId, 'sites');
+  console.log('📂 [searchSitesByName] Collection path:', collectionPath);
+
+  // Fetch ALL sites (no Firestore filter)
+  console.log('🔍 [searchSitesByName] Fetching ALL sites for in-memory filtering...');
+  const snapshot = await project.db
+    .collection(collectionPath)
+    .limit(1000)
+    .get();
+
+  console.log('📊 [searchSitesByName] Fetched sites:', {
+    count: snapshot.docs.length
+  });
+
+  let sites = snapshot.docs.map((doc: any) => ({ id: doc.id, ...doc.data() }));
+
+  // Filter by iClean in memory (check both root and settings)
+  if (iCleanOnly) {
+    const beforeFilter = sites.length;
+    sites = sites.filter((site: any) =>
+      site.iClean === true || site.settings?.iClean === true
+    );
+    console.log('🔍 [searchSitesByName] iClean filter:', {
+      before: beforeFilter,
+      after: sites.length,
+      filtered: beforeFilter - sites.length
+    });
+
+    if (sites.length === 0) {
+      console.warn('⚠️ [searchSitesByName] No iClean sites found, returning all sites');
+      sites = snapshot.docs.map((doc: any) => ({ id: doc.id, ...doc.data() }));
+    }
+  }
+
+  // Client-side filtering by name
+  const searchLower = searchTerm.toLowerCase();
+  const filtered = sites.filter((site: any) =>
+    site.name?.toLowerCase().includes(searchLower) ||
+    site.location?.toLowerCase().includes(searchLower) ||
+    site.fullAddress?.toLowerCase().includes(searchLower)
+  );
+
+  console.log('✅ [searchSitesByName] Filtered results:', {
+    searchTerm,
+    beforeFilter: sites.length,
+    afterFilter: filtered.length,
+    matches: filtered.slice(0, 5).map(s => s.name)
+  });
+
+  return filtered.slice(0, limit);
+}
+
 export default {
   initializeFirebase,
   getFirebaseProject,
@@ -241,5 +419,8 @@ export default {
   uploadToFirebaseStorage,
   saveToFirestore,
   readFromFirestore,
-  queryFirestore
+  queryFirestore,
+  getCSCCollectionPath,
+  getICleanSites,
+  searchSitesByName
 };

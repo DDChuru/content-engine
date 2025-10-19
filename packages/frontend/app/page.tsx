@@ -1,11 +1,12 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { MessageSquarePlus } from 'lucide-react';
 import { ChatInterface } from '@/components/chat-interface';
-import { GenerationPanel } from '@/components/generation-panel';
 import { ThemeToggle } from '@/components/theme-toggle';
 import { ArtifactViewer } from '@/components/artifact-viewer';
+import { AcsWorkspace } from '@/components/acs-workspace';
+import type { WorkInstructionExtraction } from 'shared/types';
 
 interface Artifact {
   type: string;
@@ -21,6 +22,7 @@ const PROJECTS = [
   { id: 'haccp', name: 'HACCP Audits', color: 'from-green-500 to-emerald-500' },
   { id: 'math', name: 'Math Platform', color: 'from-purple-500 to-pink-500' },
   { id: 'peakflow', name: 'PeakFlow', color: 'from-orange-500 to-red-500' },
+  { id: 'acs', name: 'ACS', color: 'from-slate-500 to-slate-700' },
 ] as const;
 
 export default function Home() {
@@ -28,6 +30,9 @@ export default function Home() {
   const [selectedArtifact, setSelectedArtifact] = useState<Artifact | null>(null);
   const generateChatId = () => `chat-${Date.now()}-${Math.random().toString(36).slice(2, 11)}`;
   const [chatSessionId, setChatSessionId] = useState<string>('chat-initial');
+  const [instructions, setInstructions] = useState<WorkInstructionExtraction[]>([]);
+  const [selectedInstructionId, setSelectedInstructionId] = useState<string | null>(null);
+  const [isLoadingInstructions, setIsLoadingInstructions] = useState(false);
 
   useEffect(() => {
     if (chatSessionId === 'chat-initial') {
@@ -38,10 +43,82 @@ export default function Home() {
   }, [chatSessionId]);
 
   const currentProject = PROJECTS.find(p => p.id === activeProject) || PROJECTS[0];
+  const isACSProject = activeProject === 'acs';
 
   const handleNewChat = () => {
     setChatSessionId(generateChatId());
   };
+
+  useEffect(() => {
+    if (isACSProject) {
+      const controller = new AbortController();
+      const fetchInstructions = async () => {
+        try {
+          setIsLoadingInstructions(true);
+          const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001';
+          const response = await fetch(`${apiUrl}/api/extraction/work-instruction/acs?limit=20`, {
+            signal: controller.signal
+          });
+
+          if (!response.ok) {
+            throw new Error('Failed to load work instructions');
+          }
+
+          const payload = await response.json();
+          const items = (payload?.data || []) as WorkInstructionExtraction[];
+          const validItems = items.filter((item) => item?.section);
+          setInstructions(validItems);
+          setSelectedInstructionId(validItems[0]?.id ?? null);
+        } catch (error) {
+          if ((error as Error).name !== 'AbortError') {
+            console.error('Failed to fetch work instructions:', error);
+          }
+        } finally {
+          setIsLoadingInstructions(false);
+        }
+      };
+
+      void fetchInstructions();
+
+      return () => {
+        controller.abort();
+      };
+    } else {
+      setInstructions([]);
+      setSelectedInstructionId(null);
+    }
+  }, [isACSProject]);
+
+  const handleInstructionsImported = (records: WorkInstructionExtraction[]) => {
+    const validRecords = records.filter((record) => record?.section);
+    if (!validRecords.length) {
+      return;
+    }
+    setInstructions((prev) => {
+      const filteredPrev = prev.filter((item) => item?.section && !validRecords.some((record) => record.id === item.id));
+      return [...validRecords, ...filteredPrev];
+    });
+    if (validRecords[0]) {
+      setSelectedInstructionId(validRecords[0].id);
+    }
+  };
+
+  const instructionPills = useMemo(() => {
+    if (!isACSProject || instructions.length === 0) {
+      return [];
+    }
+    return instructions
+      .filter((instruction) => instruction.section)
+      .map((instruction) => ({
+        id: instruction.id,
+        label:
+          instruction.section?.title ||
+          instruction.section?.documentMetadata.documentId ||
+          instruction.sourceFile.name ||
+          `Section ${instruction.id}`,
+        isActive: instruction.id === selectedInstructionId
+      }));
+  }, [isACSProject, instructions, selectedInstructionId]);
 
   return (
     <div className="container mx-auto flex h-screen flex-col p-4 pb-8">
@@ -91,31 +168,43 @@ export default function Home() {
       </div>
 
       {/* Main Content */}
-      <div className="glass-panel flex-1 min-h-0 grid grid-cols-1 gap-4 rounded-[2.5rem] border border-transparent bg-white/30 p-6 shadow-[0_25px_60px_-40px_rgba(15,23,42,0.5)] backdrop-blur-xl transition-colors dark:bg-white/5 dark:shadow-[0_35px_80px_-50px_rgba(2,6,23,0.9)] lg:grid-cols-2">
-        {/* Chat Panel */}
-        <div className="flex min-h-0 flex-col rounded-3xl border border-slate-200/70 bg-white/80 p-4 shadow-[0_18px_50px_-26px_rgba(15,23,42,0.45)] backdrop-blur transition-colors dark:border-white/10 dark:bg-slate-900/70 dark:shadow-[0_20px_50px_-30px_rgba(0,0,0,0.75)]">
-          <h2 className="mb-4 text-xl font-semibold text-slate-900 transition-colors dark:text-white">Chat with Claude</h2>
-          <ChatInterface
-            key={chatSessionId}
-            activeProject={activeProject}
-            chatSessionId={chatSessionId}
-            onArtifactSelect={setSelectedArtifact}
+      <div
+        className={`glass-panel flex-1 min-h-0 overflow-hidden rounded-[2.5rem] border border-transparent bg-white/30 shadow-[0_25px_60px_-40px_rgba(15,23,42,0.5)] backdrop-blur-xl transition-colors dark:bg-white/5 dark:shadow-[0_35px_80px_-50px_rgba(2,6,23,0.9)] ${
+          isACSProject ? '' : 'p-6 grid grid-cols-1 gap-4 lg:grid-cols-2'
+        }`}
+      >
+        {isACSProject ? (
+          <AcsWorkspace
+            instructions={instructions}
+            selectedInstructionId={selectedInstructionId}
+            onSelectInstruction={(id) => setSelectedInstructionId(id)}
+            onImportComplete={handleInstructionsImported}
           />
-        </div>
-
-        {/* Artifact Viewer */}
-        <div className="flex flex-col">
-          <ArtifactViewer
-            artifact={selectedArtifact}
-            onClose={() => setSelectedArtifact(null)}
-          />
-        </div>
+        ) : (
+          <>
+            <div className="flex min-h-0 flex-col rounded-3xl border border-slate-200/70 bg-white/80 p-4 shadow-[0_18px_50px_-26px_rgba(15,23,42,0.45)] backdrop-blur transition-colors dark:border-white/10 dark:bg-slate-900/70 dark:shadow-[0_20px_50px_-30px_rgba(0,0,0,0.75)]">
+              <h2 className="mb-4 text-xl font-semibold text-slate-900 transition-colors dark:text-white">Chat with Claude</h2>
+              <ChatInterface
+                key={chatSessionId}
+                activeProject={activeProject}
+                chatSessionId={chatSessionId}
+                onArtifactSelect={setSelectedArtifact}
+              />
+            </div>
+            <div className="flex flex-col">
+              <ArtifactViewer
+                artifact={selectedArtifact}
+                onClose={() => setSelectedArtifact(null)}
+              />
+            </div>
+          </>
+        )}
       </div>
 
       {/* Status Bar */}
       <div className="glass-panel mt-4 rounded-3xl border border-slate-200/70 bg-white/70 p-2 shadow-[0_20px_60px_-40px_rgba(15,23,42,0.45)] backdrop-blur transition-colors dark:border-white/10 dark:bg-slate-900/70">
         <div className="flex justify-between text-sm text-slate-600 transition-colors dark:text-white/80">
-          <span>Status: Connected</span>
+          <span>Status: Connected {isACSProject && isLoadingInstructions ? '(Syncing imports...)' : ''}</span>
           <span>Backend: {process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001'}</span>
         </div>
       </div>

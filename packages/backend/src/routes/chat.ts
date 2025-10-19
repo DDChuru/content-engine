@@ -51,7 +51,7 @@ router.post('/message', async (req: Request, res: Response) => {
             subtitle: { type: 'string', description: 'Optional subtitle for the user manual' },
             targetProject: {
               type: 'string',
-              enum: ['iclean', 'haccp', 'math', 'peakflow'],
+              enum: ['iclean', 'haccp', 'math', 'peakflow', 'acs'],
               description: 'Target project. Each project has a pre-configured repository location (PeakFlow uses local path: /home/dachu/Documents/projects/vercel/peakflow)'
             }
           },
@@ -87,6 +87,22 @@ router.post('/message', async (req: Request, res: Response) => {
             targetProject: { type: 'string' }
           },
           required: ['topic', 'syllabus']
+        }
+      },
+      {
+        name: 'import_work_instruction',
+        description: 'Retrieve a previously imported work instruction by its ID',
+        input_schema: {
+          type: 'object',
+          properties: {
+            documentId: { type: 'string', description: 'Work instruction document ID' },
+            project: {
+              type: 'string',
+              enum: ['acs', 'iclean', 'haccp', 'math', 'peakflow'],
+              description: 'Project that stores the work instruction (defaults to active project)'
+            }
+          },
+          required: ['documentId']
         }
       }
     ];
@@ -126,6 +142,44 @@ router.post('/message', async (req: Request, res: Response) => {
             targetProject: activeProject
           });
           break;
+
+        case 'import_work_instruction': {
+          const documentId = toolUse.input.documentId;
+          const targetProject =
+            toolUse.input.project || activeProject || 'acs';
+
+          if (!documentId) {
+            toolResult = { success: false, error: 'documentId is required' };
+            break;
+          }
+
+          try {
+            const instruction = await readFromFirestore(
+              targetProject,
+              'work_instructions',
+              documentId
+            );
+
+            toolResult = {
+              success: true,
+              section: instruction.section,
+              metadata: {
+                project: targetProject,
+                id: instruction.id,
+                parentDocumentId: instruction.parentDocumentId,
+                createdAt: instruction.createdAt,
+                updatedAt: instruction.updatedAt,
+                sourceFile: instruction.sourceFile
+              }
+            };
+          } catch (fetchError: any) {
+            toolResult = {
+              success: false,
+              error: fetchError?.message || 'Failed to fetch work instruction'
+            };
+          }
+          break;
+        }
 
         default:
           toolResult = { error: `Unknown tool: ${toolUse.name}` };

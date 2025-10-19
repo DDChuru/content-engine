@@ -11,11 +11,13 @@ import { fileURLToPath } from 'url';
 import { initializeFirebase } from './services/firebase.js';
 import { ClaudeService } from './services/claude.js';
 import { ContentGenerator } from './services/content-generator.js';
+import { DocumentExtractionService } from './services/document-extraction.js';
 import { GitHubService } from './services/github.js';
 import chatRoutes from './routes/chat.js';
 import generateRoutes from './routes/generate.js';
 import firebaseRoutes from './routes/firebase.js';
 import healthRoutes from './routes/health.js';
+import extractionRoutes from './routes/extraction.js';
 
 // Load environment variables from root directory
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -56,12 +58,16 @@ const contentGenerator = new ContentGenerator(
   claudeService
 );
 
+// Initialize Document Extraction
+const documentExtraction = new DocumentExtractionService(process.env.GEMINI_API_KEY!);
+
 // Initialize GitHub
 const githubService = new GitHubService(process.env.GITHUB_TOKEN!);
 
 // Make services available to routes
 app.locals.claude = claudeService;
 app.locals.contentGenerator = contentGenerator;
+app.locals.documentExtraction = documentExtraction;
 app.locals.github = githubService;
 
 // Routes
@@ -69,6 +75,7 @@ app.use('/api/health', healthRoutes);
 app.use('/api/chat', chatRoutes);
 app.use('/api/generate', generateRoutes);
 app.use('/api/firebase', firebaseRoutes);
+app.use('/api/extraction', extractionRoutes);
 
 // Error handling middleware
 app.use((err: any, req: Request, res: Response, next: any) => {
@@ -89,6 +96,7 @@ app.listen(PORT, () => {
   console.log(`\n📦 Services initialized:`);
   console.log(`   • Claude AI: ${claudeService ? '✓' : '✗'}`);
   console.log(`   • Content Generator: ${contentGenerator ? '✓' : '✗'}`);
+  console.log(`   • Document Extraction: ${documentExtraction ? '✓' : '✗'}`);
   console.log(`   • GitHub: ${githubService ? '✓' : '✗'}`);
   console.log(`   • Firebase Projects: Check /api/health/firebase`);
 });

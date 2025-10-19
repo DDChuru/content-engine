@@ -21,10 +21,18 @@ interface Message {
   artifact?: Artifact;
 }
 
+interface InstructionPill {
+  id: string;
+  label: string;
+  isActive?: boolean;
+}
+
 interface ChatInterfaceProps {
   activeProject: string;
   chatSessionId: string;
   onArtifactSelect?: (artifact: Artifact) => void;
+  instructionPills?: InstructionPill[];
+  onInstructionPillSelect?: (id: string) => void;
 }
 
 const MODELS = [
@@ -284,10 +292,6 @@ export function ChatInterface({ activeProject, chatSessionId, onArtifactSelect }
       </div>
 
       <div ref={messagesContainerRef} className="flex-1 min-h-0 space-y-6 overflow-y-auto px-6 py-6">
-        {console.log('[ChatInterface] Rendering messages:', {
-          count: messages.length,
-          messageIds: messages.map(m => m.id)
-        })}
         {messages.map((message) => {
           const isUser = message.role === 'user';
           return (
