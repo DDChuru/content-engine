@@ -1,7 +1,8 @@
 'use client';
 
 import { useEffect, useMemo, useState } from 'react';
-import { MessageSquarePlus } from 'lucide-react';
+import { MessageSquarePlus, Sparkles } from 'lucide-react';
+import Link from 'next/link';
 import { ChatInterface } from '@/components/chat-interface';
 import { ThemeToggle } from '@/components/theme-toggle';
 import { ArtifactViewer } from '@/components/artifact-viewer';
@@ -146,6 +147,14 @@ export default function Home() {
                 ))}
               </select>
             </div>
+            <Link
+              href="/workspace/content-creation"
+              className="mt-6 flex items-center gap-2 rounded-xl border border-purple-200 bg-gradient-to-r from-purple-500 to-pink-500 px-4 py-2 text-sm font-semibold text-white shadow-sm transition-all hover:from-purple-600 hover:to-pink-600 focus:outline-none focus:ring-2 focus:ring-purple-400 dark:border-purple-400/30"
+              title="Content Creation Workspace"
+            >
+              <Sparkles className="h-4 w-4" />
+              <span>Content Workspace</span>
+            </Link>
             <button
               onClick={handleNewChat}
               className="mt-6 flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-900 shadow-sm transition-all hover:border-teal-400 hover:bg-teal-50 focus:border-teal-400 focus:outline-none focus:ring-2 focus:ring-teal-200 dark:border-white/20 dark:bg-slate-800 dark:text-white dark:hover:border-cyan-400 dark:hover:bg-cyan-900/20 dark:focus:border-cyan-400 dark:focus:ring-cyan-400/40"

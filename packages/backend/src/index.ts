@@ -25,6 +25,10 @@ import firebaseRoutes from './routes/firebase.js';
 import healthRoutes from './routes/health.js';
 import extractionRoutes from './routes/extraction.js';
 import educationRoutes from './routes/education.js';
+import imagesRoutes from './routes/images.js';
+import contentRoutes from './routes/content.js';
+import diagramsRoutes from './routes/diagrams.js';
+import videoDirectorRoutes from './routes/video-director.js';
 
 // Initialize Express app
 const app = express();
@@ -80,6 +84,10 @@ app.use('/api/generate', generateRoutes);
 app.use('/api/firebase', firebaseRoutes);
 app.use('/api/extraction', extractionRoutes);
 app.use('/api/education', educationRoutes);
+app.use('/api/images', imagesRoutes);
+app.use('/api/content', contentRoutes);
+app.use('/api/diagrams', diagramsRoutes);
+app.use('/api/video-director', videoDirectorRoutes);
 
 // Error handling middleware
 app.use((err: any, req: Request, res: Response, next: any) => {
