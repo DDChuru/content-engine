@@ -3,11 +3,17 @@
  * Main API server with Firebase and Claude integration
  */
 
-import express, { Request, Response } from 'express';
-import cors from 'cors';
+// IMPORTANT: Load environment variables FIRST before any imports that need them
 import dotenv from 'dotenv';
 import path from 'path';
 import { fileURLToPath } from 'url';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+dotenv.config({ path: path.resolve(__dirname, '../../../.env') });
+
+// Now import everything else
+import express, { Request, Response } from 'express';
+import cors from 'cors';
 import { initializeFirebase } from './services/firebase.js';
 import { ClaudeService } from './services/claude.js';
 import { ContentGenerator } from './services/content-generator.js';
@@ -18,10 +24,7 @@ import generateRoutes from './routes/generate.js';
 import firebaseRoutes from './routes/firebase.js';
 import healthRoutes from './routes/health.js';
 import extractionRoutes from './routes/extraction.js';
-
-// Load environment variables from root directory
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-dotenv.config({ path: path.resolve(__dirname, '../../../.env') });
+import educationRoutes from './routes/education.js';
 
 // Initialize Express app
 const app = express();
@@ -76,6 +79,7 @@ app.use('/api/chat', chatRoutes);
 app.use('/api/generate', generateRoutes);
 app.use('/api/firebase', firebaseRoutes);
 app.use('/api/extraction', extractionRoutes);
+app.use('/api/education', educationRoutes);
 
 // Error handling middleware
 app.use((err: any, req: Request, res: Response, next: any) => {
