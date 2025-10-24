@@ -25,6 +25,7 @@ import firebaseRoutes from './routes/firebase.js';
 import healthRoutes from './routes/health.js';
 import extractionRoutes from './routes/extraction.js';
 import educationRoutes from './routes/education.js';
+import tiktokRoutes from './routes/tiktok.js';
 
 // Initialize Express app
 const app = express();
@@ -80,6 +81,7 @@ app.use('/api/generate', generateRoutes);
 app.use('/api/firebase', firebaseRoutes);
 app.use('/api/extraction', extractionRoutes);
 app.use('/api/education', educationRoutes);
+app.use('/api/tiktok', tiktokRoutes);
 
 // Error handling middleware
 app.use((err: any, req: Request, res: Response, next: any) => {
@@ -103,6 +105,16 @@ app.listen(PORT, () => {
   console.log(`   • Document Extraction: ${documentExtraction ? '✓' : '✗'}`);
   console.log(`   • GitHub: ${githubService ? '✓' : '✗'}`);
   console.log(`   • Firebase Projects: Check /api/health/firebase`);
+  console.log(`\n📚 Educational Content System:`);
+  console.log(`   • API Routes: /api/education/*`);
+  console.log(`   • Manim Integration: ✓`);
+  console.log(`   • ElevenLabs Voice: ✓`);
+  console.log(`   • Avatar Generation: ✓`);
+  console.log(`\n🎬 TikTok Multilingual Pipeline:`);
+  console.log(`   • API Routes: /api/tiktok/*`);
+  console.log(`   • Session Manager: ✓`);
+  console.log(`   • Operation Tracker: ✓`);
+  console.log(`   • Shared Voice (ElevenLabs): ✓`);
 });
 
 export default app;
