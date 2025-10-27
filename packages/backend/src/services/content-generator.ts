@@ -366,18 +366,23 @@ export class ContentGenerator {
         model: 'gemini-2.5-flash-image'
       });
 
-      const prompt = `Create a professional thumbnail image for:
-      Title: ${title}
-      ${subtitle ? `Subtitle: ${subtitle}` : ''}
+      const prompt = `Create a professional thumbnail background image.
+
       Theme: ${theme || 'professional'}
       Style: ${style || 'modern, clean, corporate'}
+
+      🚫 CRITICAL: NO TEXT in the image
+      - NO WORDS, NO LETTERS, NO NUMBERS
+      - NO labels, NO captions, NO titles
+      - PURE VISUAL ONLY - abstract gradients, shapes, patterns
+      - Text (Title: "${title}"${subtitle ? `, Subtitle: "${subtitle}"` : ''}) will be added separately as overlays
 
       Requirements:
       - Professional gradient background
       - Clean, modern design
-      - High contrast for readability
+      - High contrast base for readability
       - Suitable for business documentation
-      - No text overlays (text will be added separately)`;
+      - Centered composition with space for text overlay`;
 
       const result = await model.generateContent(prompt);
       const response = result.response;

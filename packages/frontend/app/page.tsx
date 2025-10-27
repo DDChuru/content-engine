@@ -1,7 +1,8 @@
 'use client';
 
 import { useEffect, useMemo, useState } from 'react';
-import { MessageSquarePlus } from 'lucide-react';
+import { MessageSquarePlus, Beaker } from 'lucide-react';
+import Link from 'next/link';
 import { ChatInterface } from '@/components/chat-interface';
 import { ThemeToggle } from '@/components/theme-toggle';
 import { ArtifactViewer } from '@/components/artifact-viewer';
@@ -23,6 +24,7 @@ const PROJECTS = [
   { id: 'math', name: 'Math Platform', color: 'from-purple-500 to-pink-500' },
   { id: 'peakflow', name: 'PeakFlow', color: 'from-orange-500 to-red-500' },
   { id: 'acs', name: 'ACS', color: 'from-slate-500 to-slate-700' },
+  { id: 'education', name: 'Education', color: 'from-indigo-500 to-violet-500' },
 ] as const;
 
 export default function Home() {
@@ -146,6 +148,14 @@ export default function Home() {
                 ))}
               </select>
             </div>
+            <Link
+              href="/training-lab"
+              className="mt-6 flex items-center gap-2 rounded-xl border border-purple-200 bg-purple-50 px-4 py-2 text-sm font-semibold text-purple-900 shadow-sm transition-all hover:border-purple-400 hover:bg-purple-100 focus:border-purple-400 focus:outline-none focus:ring-2 focus:ring-purple-200 dark:border-purple-500/30 dark:bg-purple-900/20 dark:text-purple-300 dark:hover:border-purple-400 dark:hover:bg-purple-900/30 dark:focus:border-purple-400 dark:focus:ring-purple-400/40"
+              title="Agent Training Lab"
+            >
+              <Beaker className="h-4 w-4" />
+              <span>Training Lab</span>
+            </Link>
             <button
               onClick={handleNewChat}
               className="mt-6 flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-900 shadow-sm transition-all hover:border-teal-400 hover:bg-teal-50 focus:border-teal-400 focus:outline-none focus:ring-2 focus:ring-teal-200 dark:border-white/20 dark:bg-slate-800 dark:text-white dark:hover:border-cyan-400 dark:hover:bg-cyan-900/20 dark:focus:border-cyan-400 dark:focus:ring-cyan-400/40"

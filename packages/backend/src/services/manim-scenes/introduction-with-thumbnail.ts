@@ -338,7 +338,10 @@ class WorkedExample(Scene):
         self.wait(2.0)
         time_spent += 2.0
 
-        # STEP 2: Shrink question and move to top-right corner
+        # STEP 2: Fade out big question and show small question in corner
+        self.play(FadeOut(question_big), run_time=0.8)
+        time_spent += 0.8
+
         question_small = VGroup(
             Text("Given:", font_size=16, color=ORANGE, weight=BOLD),
             Text(f"∠AOB = ${givenAngle}°", font_size=18, color=YELLOW),
@@ -346,11 +349,8 @@ class WorkedExample(Scene):
         ).arrange(DOWN, aligned_edge=LEFT, buff=0.15)
         question_small.to_corner(UR, buff=0.5)
 
-        self.play(
-            Transform(question_big, question_small),
-            run_time=1.5
-        )
-        time_spent += 1.5
+        self.play(FadeIn(question_small), run_time=1.0)
+        time_spent += 1.0
         self.wait(0.5)
         time_spent += 0.5
 

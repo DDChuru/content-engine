@@ -11,7 +11,7 @@ export const VideoScene: React.FC<VideoSceneProps> = ({ videoPath, audioPath }) 
     <AbsoluteFill>
       {/* Manim animation video */}
       <Video
-        src={videoPath}
+        src={staticFile(videoPath)}
         style={{
           width: '100%',
           height: '100%',
@@ -20,7 +20,7 @@ export const VideoScene: React.FC<VideoSceneProps> = ({ videoPath, audioPath }) 
       />
 
       {/* Voice narration audio */}
-      <Audio src={audioPath} />
+      {audioPath && <Audio src={staticFile(audioPath)} />}
     </AbsoluteFill>
   );
 };

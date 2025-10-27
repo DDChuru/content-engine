@@ -3,23 +3,50 @@ import { AbsoluteFill, Sequence, useCurrentFrame, useVideoConfig } from 'remotio
 import { VideoScene } from '../components/VideoScene';
 import { ImageScene } from '../components/ImageScene';
 import { FadeTransition } from '../components/FadeTransition';
+import {
+  VennDiagramSlide,
+  WebSlidesSlide,
+  SlideTitle,
+  SlideSubtitle,
+  MathNotation,
+  SlideTransition,
+  WebSlidesTheme,
+  getTheme,
+  ThemeName
+} from '../components/webslides';
 
 export interface SceneData {
   id: number;
   title: string;
+  subtitle?: string;
+  mathNotation?: string;
   visual: string;
-  audio: string;
+  audio?: string;
   duration: number;
-  type: 'manim' | 'gemini';
+  type: 'manim' | 'gemini' | 'd3-svg' | 'webslides-venn';
+
+  // Optional: Sets Agent layout data
+  layout?: {
+    union_size?: number;
+    intersection_size?: number;
+    circle_radius?: number;
+    circle_separation?: number;
+    tier?: string;
+  };
 }
 
 export interface EducationalLessonProps {
   scenes: SceneData[];
+  theme?: ThemeName;  // WebSlides theme
 }
 
-export const EducationalLesson: React.FC<EducationalLessonProps> = ({ scenes }) => {
+export const EducationalLesson: React.FC<EducationalLessonProps> = ({
+  scenes,
+  theme = 'education-dark'
+}) => {
   const { fps } = useVideoConfig();
   const frame = useCurrentFrame();
+  const webSlidesTheme = getTheme(theme);
 
   // Calculate frame positions for each scene
   let currentFrame = 0;
@@ -43,7 +70,7 @@ export const EducationalLesson: React.FC<EducationalLessonProps> = ({ scenes }) 
   });
 
   return (
-    <AbsoluteFill style={{ backgroundColor: '#000000' }}>
+    <AbsoluteFill style={{ backgroundColor: webSlidesTheme.colors.background }}>
       {sceneSequences.map((seq, index) => (
         <React.Fragment key={seq.scene.id}>
           {/* Scene */}
@@ -51,15 +78,36 @@ export const EducationalLesson: React.FC<EducationalLessonProps> = ({ scenes }) 
             from={seq.startFrame}
             durationInFrames={seq.durationInFrames}
           >
-            {seq.scene.type === 'manim' ? (
+            {/* Use WebSlides components for supported types */}
+            {seq.scene.type === 'webslides-venn' ? (
+              <VennDiagramSlide
+                title={seq.scene.title}
+                subtitle={seq.scene.subtitle}
+                mathNotation={seq.scene.mathNotation}
+                visualType="manim"
+                visualPath={seq.scene.visual}
+                layout={seq.scene.layout}
+                theme={webSlidesTheme}
+              />
+            ) : seq.scene.type === 'd3-svg' ? (
+              <VennDiagramSlide
+                title={seq.scene.title}
+                subtitle={seq.scene.subtitle}
+                mathNotation={seq.scene.mathNotation}
+                visualType="d3-svg"
+                visualPath={seq.scene.visual}
+                layout={seq.scene.layout}
+                theme={webSlidesTheme}
+              />
+            ) : seq.scene.type === 'manim' ? (
               <VideoScene
                 videoPath={seq.scene.visual}
-                audioPath={seq.scene.audio}
+                audioPath={seq.scene.audio || ''}
               />
             ) : (
               <ImageScene
                 imagePath={seq.scene.visual}
-                audioPath={seq.scene.audio}
+                audioPath={seq.scene.audio || ''}
               />
             )}
           </Sequence>
@@ -70,7 +118,7 @@ export const EducationalLesson: React.FC<EducationalLessonProps> = ({ scenes }) 
               from={seq.transitionStart}
               durationInFrames={seq.transitionFrames}
             >
-              <FadeTransition />
+              <SlideTransition theme={webSlidesTheme} />
             </Sequence>
           )}
         </React.Fragment>

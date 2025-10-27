@@ -1,6 +1,9 @@
 import express from 'express';
 import EducationalVideoGenerator, { Module, VideoScript, Concept } from '../agents/education/video-generator';
 import FFmpegVideoCombiner from '../services/ffmpeg-video-combiner.js';
+import { ClaudeService } from '../services/claude.js';
+import { EducationalVizAgent } from '../agents/educational-viz-agent.js';
+import type { EducationalVisualizationRequest } from '../agents/educational-viz-agent.js';
 import multer from 'multer';
 import { execSync } from 'child_process';
 import fs from 'fs/promises';
@@ -1241,6 +1244,294 @@ router.post('/circle-theorem-with-avatar', upload.single('avatarImage'), async (
     });
   } catch (error: any) {
     console.error('Lesson with avatar generation failed:', error);
+    res.status(500).json({
+      success: false,
+      error: error.message
+    });
+  }
+});
+
+/**
+ * POST /api/education/visualize
+ *
+ * Generate educational visualization (D3 + Manim side-by-side video)
+ *
+ * Request body:
+ * {
+ *   "problem": "Find A ∩ B where A = {1,2,3,4,5} and B = {4,5,6,7,8}",
+ *   "type": "sets",
+ *   "targetAge": 13,
+ *   "duration": 12,
+ *   "style": {
+ *     "d3Style": "clean",
+ *     "manimStyle": "educational"
+ *   }
+ * }
+ */
+router.post('/visualize', async (req, res) => {
+  try {
+    const request: EducationalVisualizationRequest = req.body;
+
+    // Validate request
+    if (!request.problem) {
+      return res.status(400).json({
+        success: false,
+        error: 'Missing required field: problem'
+      });
+    }
+
+    if (!request.type) {
+      request.type = 'general';
+    }
+
+    if (!request.targetAge) {
+      request.targetAge = 13; // Default to 13-year-olds
+    }
+
+    // Get Claude service from app locals
+    const claudeService = req.app.locals.claudeService as ClaudeService;
+
+    if (!claudeService) {
+      return res.status(500).json({
+        success: false,
+        error: 'Claude service not initialized'
+      });
+    }
+
+    // Create agent and generate
+    const agent = new EducationalVizAgent(claudeService);
+    const result = await agent.generate(request);
+
+    if (!result.success) {
+      return res.status(500).json(result);
+    }
+
+    // Return result with file paths
+    res.json({
+      success: true,
+      data: {
+        finalVideo: result.finalVideoPath,
+        d3Output: result.d3Output,
+        manimOutput: result.manimOutput,
+        metadata: result.metadata
+      }
+    });
+
+  } catch (error: any) {
+    console.error('Visualization generation error:', error);
+    res.status(500).json({
+      success: false,
+      error: error.message
+    });
+  }
+});
+
+/**
+ * POST /api/education/lesson
+ *
+ * Generate complete educational lesson with multiple visualizations
+ *
+ * Request body:
+ * {
+ *   "topic": "Set Theory Basics",
+ *   "concepts": ["union", "intersection", "complement"],
+ *   "targetAge": 13,
+ *   "duration": 10 // minutes
+ * }
+ */
+router.post('/lesson', async (req, res) => {
+  try {
+    const { topic, concepts, targetAge, duration } = req.body;
+
+    if (!topic || !concepts || !Array.isArray(concepts)) {
+      return res.status(400).json({
+        success: false,
+        error: 'Missing required fields: topic, concepts (array)'
+      });
+    }
+
+    const claudeService = req.app.locals.claudeService as ClaudeService;
+
+    if (!claudeService) {
+      return res.status(500).json({
+        success: false,
+        error: 'Claude service not initialized'
+      });
+    }
+
+    // Generate lesson structure using Claude
+    const lessonPrompt = `Create an educational lesson plan for:
+
+TOPIC: ${topic}
+CONCEPTS: ${concepts.join(', ')}
+TARGET AGE: ${targetAge || 13} years old
+DURATION: ${duration || 10} minutes
+
+For each concept, provide:
+1. A clear explanation
+2. An example problem
+3. Visual aid suggestion (D3 text solution + Manim animation)
+
+Format as JSON:
+{
+  "title": "...",
+  "concepts": [
+    {
+      "name": "...",
+      "explanation": "...",
+      "exampleProblem": "...",
+      "visualizationType": "venn_diagram" | "graph" | "geometric_shape"
+    }
+  ]
+}`;
+
+    const response = await claudeService.chat([
+      { role: 'user', content: lessonPrompt }
+    ]);
+
+    // Extract JSON
+    const jsonMatch = response.content.match(/\{[\s\S]*\}/);
+    if (!jsonMatch) {
+      throw new Error('Failed to parse lesson plan from Claude');
+    }
+
+    const lesson = JSON.parse(jsonMatch[0]);
+
+    // Generate visualizations for each concept
+    const agent = new EducationalVizAgent(claudeService);
+    const visualizations = [];
+
+    for (const concept of lesson.concepts) {
+      const vizRequest: EducationalVisualizationRequest = {
+        problem: concept.exampleProblem,
+        type: concept.visualizationType || 'general',
+        targetAge: targetAge || 13,
+        duration: 12
+      };
+
+      const result = await agent.generate(vizRequest);
+      visualizations.push({
+        concept: concept.name,
+        video: result.finalVideoPath,
+        success: result.success
+      });
+    }
+
+    res.json({
+      success: true,
+      data: {
+        lesson,
+        visualizations
+      }
+    });
+
+  } catch (error: any) {
+    console.error('Lesson generation error:', error);
+    res.status(500).json({
+      success: false,
+      error: error.message
+    });
+  }
+});
+
+/**
+ * GET /api/education/examples
+ *
+ * Get example problems for different math topics
+ */
+router.get('/examples', (req, res) => {
+  const examples = {
+    sets: [
+      {
+        problem: 'Find A ∩ B where A = {1,2,3,4,5} and B = {4,5,6,7,8}',
+        type: 'sets',
+        targetAge: 13
+      },
+      {
+        problem: 'Find A ∪ B where A = {a,b,c} and B = {c,d,e}',
+        type: 'sets',
+        targetAge: 13
+      }
+    ],
+    algebra: [
+      {
+        problem: 'Solve for x: 2x + 5 = 13',
+        type: 'algebra',
+        targetAge: 14
+      }
+    ],
+    geometry: [
+      {
+        problem: 'Find the area of a circle with radius 5',
+        type: 'geometry',
+        targetAge: 13
+      }
+    ]
+  };
+
+  res.json({
+    success: true,
+    data: examples
+  });
+});
+
+/**
+ * POST /api/education/sets-demo
+ *
+ * Demo endpoint: Generate the sets intersection visualization we demoed earlier
+ * This uses the proven template from output/sets-demo/
+ */
+router.post('/sets-demo', async (req, res) => {
+  try {
+    const claudeService = req.app.locals.claudeService as ClaudeService;
+
+    if (!claudeService) {
+      return res.status(400).json({
+        success: false,
+        error: 'Claude service not initialized'
+      });
+    }
+
+    console.log('\n╔═══════════════════════════════════════════════════════════════╗');
+    console.log('║  SETS INTERSECTION DEMO (D3 + Manim)                         ║');
+    console.log('╚═══════════════════════════════════════════════════════════════╝\n');
+
+    const agent = new EducationalVizAgent(claudeService);
+
+    const result = await agent.generate({
+      problem: 'Find A ∩ B where A = {1,2,3,4,5} and B = {4,5,6,7,8}',
+      type: 'sets',
+      targetAge: 13,
+      duration: 12
+    });
+
+    if (!result.success) {
+      return res.status(500).json({
+        success: false,
+        error: result.error || 'Generation failed'
+      });
+    }
+
+    res.json({
+      success: true,
+      message: 'Sets intersection demo generated successfully!',
+      result: {
+        finalVideo: result.finalVideoPath,
+        d3Output: {
+          script: result.d3Output.scriptPath,
+          image: result.d3Output.imagePath,
+          video: result.d3Output.videoPath
+        },
+        manimOutput: {
+          script: result.manimOutput.scriptPath,
+          video: result.manimOutput.videoPath
+        },
+        metadata: result.metadata
+      }
+    });
+
+  } catch (error: any) {
+    console.error('Sets demo generation failed:', error);
     res.status(500).json({
       success: false,
       error: error.message

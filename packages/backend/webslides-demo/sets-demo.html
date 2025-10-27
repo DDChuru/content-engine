@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- SEO -->
+  <title>Set Theory - Cambridge IGCSE Mathematics</title>
+  <meta name="description" content="Interactive lesson on Set Theory (C1.2) with visualizations and examples">
+
+  <!-- WebSlides CSS -->
+  <link rel="stylesheet" type='text/css' media='all' href="static/css/webslides.css">
+
+  <!-- Custom CSS for dark theme and animations -->
+  <style>
+    :root {
+      --bg-black: #000000;
+      --text-white: #ffffff;
+      --primary-blue: #1e88e5;
+      --accent-green: #4caf50;
+      --highlight-yellow: #ffeb3b;
+      --accent-orange: #ff5722;
+    }
+
+    body {
+      background-color: var(--bg-black);
+      color: var(--text-white);
+    }
+
+    #webslides {
+      background-color: var(--bg-black);
+    }
+
+    .bg-black {
+      background-color: var(--bg-black) !important;
+    }
+
+    .slide-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      padding: 40px;
+    }
+
+    h1, h2, h3 {
+      color: var(--text-white);
+      font-weight: 700;
+    }
+
+    .subtitle {
+      color: var(--highlight-yellow);
+      font-size: 1.5rem;
+      margin-top: 20px;
+    }
+
+    #venn-container {
+      width: 900px;
+      height: 600px;
+      margin: 20px auto;
+    }
+
+    #venn-diagram {
+      background-color: var(--bg-black);
+    }
+
+    .controls {
+      margin: 20px 0;
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+    }
+
+    button {
+      background-color: var(--primary-blue);
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      background-color: var(--accent-green);
+      transform: scale(1.05);
+    }
+
+    button.active {
+      background-color: var(--accent-orange);
+    }
+
+    .math-notation {
+      font-size: 2rem;
+      color: var(--highlight-yellow);
+      margin: 15px 0;
+      font-family: 'Courier New', monospace;
+    }
+
+    .example-box {
+      background-color: rgba(30, 136, 229, 0.1);
+      border-left: 4px solid var(--primary-blue);
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 5px;
+    }
+
+    .definition {
+      background-color: rgba(76, 175, 80, 0.1);
+      border: 2px solid var(--accent-green);
+      padding: 25px;
+      border-radius: 10px;
+      margin: 20px 0;
+      font-size: 1.2rem;
+    }
+
+    .element-list {
+      display: flex;
+      gap: 10px;
+      margin: 15px 0;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .element {
+      background-color: var(--primary-blue);
+      color: white;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 1.1rem;
+    }
+
+    .highlight-box {
+      background-color: rgba(255, 235, 59, 0.2);
+      padding: 15px;
+      border-radius: 5px;
+      margin: 15px 0;
+    }
+
+    video {
+      border-radius: 10px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+    }
+  </style>
+</head>
+<body>
+
+  <main role="main">
+    <article id="webslides" class="vertical bg-black">
+
+      <!-- ===== SLIDE 1: Title ===== -->
+      <section class="bg-black aligncenter">
+        <div class="slide-content">
+          <h1 style="font-size: 5rem; margin-bottom: 20px;">Set Theory</h1>
+          <p class="subtitle">Cambridge IGCSE Mathematics - C1.2</p>
+          <p style="margin-top: 40px; font-size: 1.3rem; color: #aaa;">
+            Understanding sets, notation, and Venn diagrams
+          </p>
+        </div>
+      </section>
+
+      <!-- ===== SLIDE 2: What is a Set? ===== -->
+      <section class="bg-black">
+        <div class="wrap">
+          <h2 style="text-align: center; margin-bottom: 40px;">What is a Set?</h2>
+
+          <div class="definition">
+            <p><strong>Definition:</strong> A set is a well-defined collection of distinct objects.</p>
+          </div>
+
+          <div class="example-box">
+            <h3 style="color: var(--primary-blue);">Examples:</h3>
+            <p><strong>Set A:</strong> A = {1, 2, 3, 4, 5}</p>
+            <p><strong>Set B:</strong> B = {4, 5, 6, 7, 8}</p>
+            <p><strong>Universal Set (ξ):</strong> ξ = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}</p>
+          </div>
+
+          <div class="element-list">
+            <span class="element">1</span>
+            <span class="element">2</span>
+            <span class="element">3</span>
+            <span class="element">4</span>
+            <span class="element">5</span>
+            <span class="element">6</span>
+            <span class="element">7</span>
+            <span class="element">8</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== SLIDE 3: Animated Venn Diagram (Manim) ===== -->
+      <section class="bg-black aligncenter" data-audio="narration-venn.mp3">
+        <div class="wrap">
+          <h2 style="text-align: center; margin-bottom: 30px;">Venn Diagrams - Animated</h2>
+
+          <video width="854" height="480" controls autoplay loop style="border-radius: 10px; box-shadow: 0 4px 20px rgba(255,255,255,0.1);">
+            <source src="sets-complete.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+
+          <div class="highlight-box" style="text-align: center; font-size: 1.2rem; margin-top: 30px; padding: 20px; background: rgba(30, 136, 229, 0.1); border-radius: 8px;">
+            <p><strong>Watch numbers move into their sets!</strong></p>
+            <p style="font-size: 0.9rem; color: #aaa; margin-top: 10px;">
+              This animation shows how elements are organized into Set A, Set B, and their intersection.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== SLIDE 4: Set Notation (Manim Video) ===== -->
+      <section class="bg-black aligncenter">
+        <div class="slide-content">
+          <h2 style="margin-bottom: 30px;">Set Notation & Operations</h2>
+
+          <video width="854" height="480" controls autoplay loop>
+            <source src="set-notation.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+
+          <p style="margin-top: 30px; font-size: 1.2rem; color: #aaa;">
+            Mathematical animation showing unions, intersections, and element counting
+          </p>
+        </div>
+      </section>
+
+      <!-- ===== SLIDE 5: Key Notation ===== -->
+      <section class="bg-black">
+        <div class="wrap">
+          <h2 style="text-align: center; margin-bottom: 40px;">Important Set Notation</h2>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
+            <div class="definition">
+              <p class="math-notation">A ∪ B</p>
+              <p><strong>Union:</strong> All elements in A or B (or both)</p>
+              <p style="color: var(--highlight-yellow);">A ∪ B = {1, 2, 3, 4, 5, 6, 7, 8}</p>
+            </div>
+
+            <div class="definition">
+              <p class="math-notation">A ∩ B</p>
+              <p><strong>Intersection:</strong> Elements in both A and B</p>
+              <p style="color: var(--highlight-yellow);">A ∩ B = {4, 5}</p>
+            </div>
+
+            <div class="definition">
+              <p class="math-notation">n(A)</p>
+              <p><strong>Number of elements:</strong> Count of items in set A</p>
+              <p style="color: var(--highlight-yellow);">n(A) = 5</p>
+            </div>
+
+            <div class="definition">
+              <p class="math-notation">A'</p>
+              <p><strong>Complement:</strong> Elements in ξ but not in A</p>
+              <p style="color: var(--highlight-yellow);">A' = {6, 7, 8, 9, 10}</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== SLIDE 6: Practice Exercise ===== -->
+      <section class="bg-black">
+        <div class="wrap">
+          <h2 style="text-align: center; margin-bottom: 40px;">Try It Yourself!</h2>
+
+          <div class="example-box">
+            <h3 style="color: var(--accent-green);">Given:</h3>
+            <p><strong>A = {1, 2, 3, 4, 5}</strong></p>
+            <p><strong>B = {4, 5, 6, 7, 8}</strong></p>
+          </div>
+
+          <div class="definition">
+            <p style="font-size: 1.5rem; margin-bottom: 20px;">
+              <strong>Question:</strong> What is A ∩ B?
+            </p>
+            <input type="text" id="answer" placeholder="Enter your answer (e.g., {4, 5})"
+                   style="padding: 15px; font-size: 1.2rem; width: 60%; background-color: #222; color: white; border: 2px solid var(--primary-blue); border-radius: 5px;">
+            <button onclick="checkAnswer()" style="margin-left: 15px; padding: 15px 30px; font-size: 1.2rem;">Check Answer</button>
+            <p id="feedback" style="margin-top: 20px; font-size: 1.3rem;"></p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== SLIDE 7: Summary ===== -->
+      <section class="bg-black aligncenter">
+        <div class="slide-content">
+          <h2 style="margin-bottom: 40px;">Summary: Set Theory</h2>
+
+          <div style="text-align: left; max-width: 800px;">
+            <div class="highlight-box">
+              <h3 style="color: var(--accent-green);">Key Takeaways:</h3>
+              <ul style="font-size: 1.2rem; line-height: 2;">
+                <li>✓ A <strong>set</strong> is a collection of distinct objects</li>
+                <li>✓ <strong>Union (∪)</strong>: All elements in either set</li>
+                <li>✓ <strong>Intersection (∩)</strong>: Elements in both sets</li>
+                <li>✓ <strong>n(A)</strong>: Number of elements in set A</li>
+                <li>✓ <strong>Venn diagrams</strong> visualize set relationships</li>
+              </ul>
+            </div>
+
+            <p style="margin-top: 40px; font-size: 1.3rem; text-align: center; color: var(--highlight-yellow);">
+              🎓 Cambridge IGCSE Mathematics C1.2 Complete!
+            </p>
+          </div>
+        </div>
+      </section>
+
+    </article>
+  </main>
+
+  <!-- WebSlides JavaScript -->
+  <script src="static/js/webslides.js"></script>
+
+  <!-- D3.js for interactive visualizations -->
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+
+  <!-- Custom JavaScript for audio narration and interactions -->
+  <script>
+    // Initialize WebSlides
+    window.ws = new WebSlides();
+
+    // ===== AUDIO NARRATION SYSTEM =====
+    let currentAudio = null;
+
+    // Function to play audio for a slide
+    function playSlideAudio(slideElement) {
+      // Stop any currently playing audio
+      if (currentAudio) {
+        currentAudio.pause();
+        currentAudio.currentTime = 0;
+      }
+
+      // Check if slide has audio attribute
+      const audioFile = slideElement.getAttribute('data-audio');
+      if (audioFile) {
+        currentAudio = new Audio(audioFile);
+        currentAudio.play().catch(err => {
+          console.log('Audio autoplay prevented:', err);
+        });
+      }
+    }
+
+    // Listen for slide changes
+    window.ws.el.addEventListener('ws:slide-change', function(event) {
+      const currentSlide = event.detail.slides[event.detail.currentSlide0];
+      playSlideAudio(currentSlide);
+    });
+
+    // Play audio for first slide on load
+    window.addEventListener('load', function() {
+      const firstSlide = document.querySelector('section');
+      if (firstSlide) {
+        playSlideAudio(firstSlide);
+      }
+    });
+
+    // D3 Venn Diagram (legacy, now replaced with Manim video)
+    const setA = [1, 2, 3, 4, 5];
+    const setB = [4, 5, 6, 7, 8];
+    const intersection = setA.filter(x => setB.includes(x)); // [4, 5]
+    const union = [...new Set([...setA, ...setB])]; // [1, 2, 3, 4, 5, 6, 7, 8]
+
+    const svg = d3.select("#venn-diagram");
+    let highlightGroup = null;
+
+    // Draw Universal Set rectangle
+    svg.append("rect")
+      .attr("x", 50)
+      .attr("y", 50)
+      .attr("width", 800)
+      .attr("height", 500)
+      .attr("fill", "none")
+      .attr("stroke", "#555")
+      .attr("stroke-width", 2)
+      .attr("stroke-dasharray", "5,5");
+
+    svg.append("text")
+      .attr("x", 70)
+      .attr("y", 80)
+      .attr("fill", "#888")
+      .attr("font-size", 24)
+      .text("ξ (Universal Set)");
+
+    // Draw Set A circle
+    const circleA = svg.append("circle")
+      .attr("cx", 350)
+      .attr("cy", 300)
+      .attr("r", 150)
+      .attr("fill", "rgba(30, 136, 229, 0.3)")
+      .attr("stroke", "#1e88e5")
+      .attr("stroke-width", 3);
+
+    // Draw Set B circle
+    const circleB = svg.append("circle")
+      .attr("cx", 550)
+      .attr("cy", 300)
+      .attr("r", 150)
+      .attr("fill", "rgba(76, 175, 80, 0.3)")
+      .attr("stroke", "#4caf50")
+      .attr("stroke-width", 3);
+
+    // Labels
+    svg.append("text")
+      .attr("x", 280)
+      .attr("y", 200)
+      .attr("fill", "#1e88e5")
+      .attr("font-size", 36)
+      .attr("font-weight", "bold")
+      .text("A");
+
+    svg.append("text")
+      .attr("x", 600)
+      .attr("y", 200)
+      .attr("fill", "#4caf50")
+      .attr("font-size", 36)
+      .attr("font-weight", "bold")
+      .text("B");
+
+    // Functions for button interactions
+    function showSets() {
+      resetVenn();
+      document.getElementById("info").innerHTML = `
+        <strong>Set A:</strong> {${setA.join(", ")}}<br>
+        <strong>Set B:</strong> {${setB.join(", ")}}<br>
+        <strong>n(A) = ${setA.length}</strong> | <strong>n(B) = ${setB.length}</strong>
+      `;
+      document.getElementById("btn-sets").classList.add("active");
+    }
+
+    function showIntersection() {
+      resetVenn();
+
+      // Highlight intersection region
+      const clip = svg.append("defs")
+        .append("clipPath")
+        .attr("id", "clip-intersection");
+
+      clip.append("circle")
+        .attr("cx", 350)
+        .attr("cy", 300)
+        .attr("r", 150);
+
+      highlightGroup = svg.append("circle")
+        .attr("cx", 550)
+        .attr("cy", 300)
+        .attr("r", 150)
+        .attr("fill", "rgba(255, 235, 59, 0.7)")
+        .attr("clip-path", "url(#clip-intersection)");
+
+      document.getElementById("info").innerHTML = `
+        <strong>A ∩ B (Intersection):</strong> {${intersection.join(", ")}}<br>
+        <strong>n(A ∩ B) = ${intersection.length}</strong> - Elements in BOTH sets
+      `;
+      document.getElementById("btn-intersection").classList.add("active");
+    }
+
+    function showUnion() {
+      resetVenn();
+
+      circleA.attr("fill", "rgba(255, 235, 59, 0.5)");
+      circleB.attr("fill", "rgba(255, 235, 59, 0.5)");
+
+      document.getElementById("info").innerHTML = `
+        <strong>A ∪ B (Union):</strong> {${union.join(", ")}}<br>
+        <strong>n(A ∪ B) = ${union.length}</strong> - All elements in A or B (or both)
+      `;
+      document.getElementById("btn-union").classList.add("active");
+    }
+
+    function resetVenn() {
+      if (highlightGroup) highlightGroup.remove();
+      svg.select("#clip-intersection").remove();
+
+      circleA.attr("fill", "rgba(30, 136, 229, 0.3)");
+      circleB.attr("fill", "rgba(76, 175, 80, 0.3)");
+
+      document.querySelectorAll("button").forEach(btn => btn.classList.remove("active"));
+      document.getElementById("info").innerHTML = "Click buttons to explore set operations";
+    }
+
+    // Practice exercise
+    function checkAnswer() {
+      const answer = document.getElementById("answer").value.trim().toLowerCase();
+      const feedback = document.getElementById("feedback");
+
+      const correct = answer === "{4, 5}" || answer === "{4,5}" || answer === "{5, 4}" || answer === "{5,4}";
+
+      if (correct) {
+        feedback.innerHTML = "✅ <strong style='color: #4caf50;'>Correct!</strong> A ∩ B = {4, 5}";
+      } else {
+        feedback.innerHTML = "❌ <strong style='color: #ff5722;'>Not quite.</strong> Remember, intersection (∩) means elements in BOTH sets. Try again!";
+      }
+    }
+  </script>
+
+</body>
+</html>
