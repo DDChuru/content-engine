@@ -25,10 +25,12 @@ import firebaseRoutes from './routes/firebase.js';
 import healthRoutes from './routes/health.js';
 import extractionRoutes from './routes/extraction.js';
 import educationRoutes from './routes/education.js';
-import imagesRoutes from './routes/images.js';
-import contentRoutes from './routes/content.js';
-import diagramsRoutes from './routes/diagrams.js';
-import videoDirectorRoutes from './routes/video-director.js';
+import educationContentRoutes from './routes/education-content.js';
+import interactiveRoutes from './routes/interactive.js';
+import setsAgentRoutes from './routes/sets-agent-demo.js';
+import agentRegistryRoutes from './routes/agent-registry-routes.js';
+import agentsRoutes from './routes/agents.js';
+import videoRoutes from './routes/video.js';
 
 // Initialize Express app
 const app = express();
@@ -73,6 +75,7 @@ const githubService = new GitHubService(process.env.GITHUB_TOKEN!);
 
 // Make services available to routes
 app.locals.claude = claudeService;
+app.locals.claudeService = claudeService; // Also expose as claudeService for new routes
 app.locals.contentGenerator = contentGenerator;
 app.locals.documentExtraction = documentExtraction;
 app.locals.github = githubService;
@@ -84,10 +87,12 @@ app.use('/api/generate', generateRoutes);
 app.use('/api/firebase', firebaseRoutes);
 app.use('/api/extraction', extractionRoutes);
 app.use('/api/education', educationRoutes);
-app.use('/api/images', imagesRoutes);
-app.use('/api/content', contentRoutes);
-app.use('/api/diagrams', diagramsRoutes);
-app.use('/api/video-director', videoDirectorRoutes);
+app.use('/api/education-content', educationContentRoutes); // NEW: 3-layer content generation
+app.use('/api/interactive', interactiveRoutes);
+app.use('/api/sets-agent', setsAgentRoutes);
+app.use('/api/agents', agentsRoutes); // NEW: Specialized agent system
+app.use('/api/agent-registry', agentRegistryRoutes); // OLD: Legacy agent registry
+app.use('/api/video', videoRoutes); // GLOBAL: Video rendering with WebSlides
 
 // Error handling middleware
 app.use((err: any, req: Request, res: Response, next: any) => {
@@ -111,6 +116,11 @@ app.listen(PORT, () => {
   console.log(`   • Document Extraction: ${documentExtraction ? '✓' : '✗'}`);
   console.log(`   • GitHub: ${githubService ? '✓' : '✗'}`);
   console.log(`   • Firebase Projects: Check /api/health/firebase`);
+  console.log(`\n🎓 Interactive Learning System:`);
+  console.log(`   • API Routes: /api/interactive/*`);
+  console.log(`   • D3 Visualizations: ✓`);
+  console.log(`   • Manim Animations: ✓`);
+  console.log(`   • Step-by-Step Reveals: ✓`);
 });
 
 export default app;

@@ -1,190 +1,247 @@
 /**
- * Video Rendering Service
- * Uses Remotion to render videos programmatically
+ * Global Video Renderer Service
+ *
+ * Renders videos using Remotion with WebSlides-inspired components
+ * Available to ALL workspaces (education, marketing, documentation, etc.)
  */
 
 import { bundle } from '@remotion/bundler';
 import { renderMedia, selectComposition } from '@remotion/renderer';
-import path from 'path';
+import * as path from 'path';
+import { promises as fs } from 'fs';
 import { fileURLToPath } from 'url';
-import fs from 'fs/promises';
+import { ThemeName } from '../remotion/components/webslides';
+import { remotionFileManager } from './remotion-file-manager.js';
 
+// ES module equivalent of __dirname
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-export interface RenderOptions {
-  sessionId: string;
+export interface WebSlidesScene {
+  id: number;
   title: string;
-  scenes: Array<{
-    id: number;
-    title: string;
-    narration: string;
-    visualDescription: string;
-    duration: number;
-    imagePath: string;
-    audioPath: string;
-    videoStyle?: 'gallery' | 'presentation' | 'hybrid';
-  }>;
-  totalDuration: number;
-  outputPath: string;
-  videoStyle?: 'gallery' | 'presentation' | 'hybrid';
+  subtitle?: string;
+  mathNotation?: string;
+  visual: string;
+  audio?: string;
+  duration: number;
+  type: 'manim' | 'gemini' | 'd3-svg' | 'webslides-venn';
+
+  // Optional: Sets Agent layout data
+  layout?: {
+    union_size?: number;
+    intersection_size?: number;
+    circle_radius?: number;
+    circle_separation?: number;
+    tier?: string;
+  };
 }
 
-export interface RenderProgress {
-  stage: 'bundling' | 'rendering' | 'complete' | 'error';
-  progress: number; // 0-100
-  message: string;
+export interface RenderOptions {
+  composition?: string;  // Remotion composition name
+  scenes: WebSlidesScene[];
+  theme?: ThemeName;
+  outputPath: string;
+  codec?: 'h264' | 'h265' | 'vp8' | 'vp9';
+  width?: number;
+  height?: number;
+  fps?: number;
+}
+
+export interface RenderResult {
+  success: boolean;
+  videoPath?: string;
+  duration?: number;
   error?: string;
+  metadata: {
+    scenes: number;
+    codec: string;
+    resolution: string;
+    fps: number;
+  };
 }
 
 export class VideoRenderer {
-  private progressCallbacks: Map<string, (progress: RenderProgress) => void> = new Map();
+  private bundleCache: string | null = null;
+  private defaultOutputDir = 'output/videos';
+
+  constructor() {
+    this.ensureDirectories();
+  }
 
   /**
-   * Render a video from storyboard data
+   * Ensure output directories exist
    */
-  async renderVideo(options: RenderOptions, onProgress?: (progress: RenderProgress) => void): Promise<string> {
-    const { sessionId, title, scenes, totalDuration, outputPath, videoStyle = 'gallery' } = options;
+  private async ensureDirectories(): Promise<void> {
+    await fs.mkdir(this.defaultOutputDir, { recursive: true });
+    await fs.mkdir('output/videos/education', { recursive: true });
+    await fs.mkdir('output/videos/marketing', { recursive: true });
+    await fs.mkdir('output/videos/documentation', { recursive: true });
+  }
 
-    if (onProgress) {
-      this.progressCallbacks.set(sessionId, onProgress);
-    }
+  /**
+   * Render video using WebSlides aesthetic
+   *
+   * This is the main method used by all agents
+   */
+  async renderWebSlidesVideo(options: RenderOptions): Promise<RenderResult> {
+    const startTime = Date.now();
 
     try {
-      this.updateProgress(sessionId, {
-        stage: 'bundling',
-        progress: 0,
-        message: 'Bundling Remotion project...'
-      });
+      console.log('[VideoRenderer] Starting WebSlides video render...');
+      console.log(`  Scenes: ${options.scenes.length}`);
+      console.log(`  Theme: ${options.theme || 'education-dark'}`);
+      console.log(`  Output: ${options.outputPath}`);
 
-      // Step 1: Bundle the Remotion project
-      const remotionRoot = path.join(__dirname, '..', 'remotion', 'Root.tsx');
-      const publicDir = path.join(__dirname, '..', 'remotion', 'public');
+      // Copy all assets to Remotion public directory
+      console.log('[VideoRenderer] Copying assets to Remotion public directory...');
+      const scenesWithRelativePaths = await Promise.all(
+        options.scenes.map(async (scene) => {
+          // Copy visual asset
+          const visualRelativePath = await remotionFileManager.copyVisual(scene.visual);
 
-      console.log(`📦 Bundling Remotion project from: ${remotionRoot}`);
-      console.log(`📁 Public directory: ${publicDir}`);
-      console.log(`🎨 Video style: ${videoStyle}`);
+          // Copy audio if present
+          let audioRelativePath = '';
+          if (scene.audio) {
+            audioRelativePath = await remotionFileManager.copyAudio(scene.audio);
+          }
 
-      const bundleLocation = await bundle({
-        entryPoint: remotionRoot,
-        publicDir,
-        webpackOverride: (config) => config,
-      });
+          return {
+            ...scene,
+            visual: visualRelativePath,
+            audio: audioRelativePath
+          };
+        })
+      );
+      console.log('[VideoRenderer] ✓ All assets copied');
 
-      console.log(`✅ Bundle created at: ${bundleLocation}`);
+      // Bundle Remotion project (cache for performance)
+      if (!this.bundleCache) {
+        console.log('[VideoRenderer] Bundling Remotion project...');
+        const bundleResult = await bundle({
+          entryPoint: path.join(__dirname, '../remotion/Root.tsx'),
+          publicDir: path.join(__dirname, '../remotion/public'),
+          webpackOverride: (config) => config,
+        });
 
-      this.updateProgress(sessionId, {
-        stage: 'bundling',
-        progress: 30,
-        message: 'Bundle complete, preparing composition...'
-      });
+        // bundleResult can be either a string (serveUrl) or an object with serveUrl property
+        if (typeof bundleResult === 'string') {
+          this.bundleCache = bundleResult;
+        } else if (bundleResult && typeof bundleResult === 'object' && 'serveUrl' in bundleResult) {
+          this.bundleCache = bundleResult.serveUrl;
+        } else {
+          throw new Error(`Bundle result is invalid: ${JSON.stringify(bundleResult)}`);
+        }
 
-      // Step 2: Select the composition
-      const compositionId = 'VideoDirector';
+        console.log(`[VideoRenderer] Bundle cached: ${this.bundleCache}`);
+      }
 
+      // Get composition
+      const compositionId = options.composition || 'EducationalLesson';
       const composition = await selectComposition({
-        serveUrl: bundleLocation,
+        serveUrl: this.bundleCache,
         id: compositionId,
         inputProps: {
-          title,
-          scenes,
-          totalDuration,
-          videoStyle,
-        },
+          scenes: scenesWithRelativePaths,
+          theme: options.theme || 'education-dark'
+        }
       });
 
-      console.log(`🎬 Composition selected: ${composition.id}`);
-      console.log(`   Duration: ${composition.durationInFrames} frames (${composition.durationInFrames / composition.fps}s)`);
-      console.log(`   Dimensions: ${composition.width}x${composition.height}`);
-      console.log(`   FPS: ${composition.fps}`);
+      console.log(`[VideoRenderer] Composition: ${composition.id}`);
+      console.log(`  Duration: ${composition.durationInFrames} frames`);
+      console.log(`  FPS: ${composition.fps}`);
+      console.log(`  Dimensions: ${composition.width}x${composition.height}`);
 
-      this.updateProgress(sessionId, {
-        stage: 'rendering',
-        progress: 40,
-        message: 'Starting video render...'
-      });
-
-      // Ensure output directory exists
-      const outputDir = path.dirname(outputPath);
-      await fs.mkdir(outputDir, { recursive: true });
-
-      // Step 3: Render the video
-      console.log(`🎥 Rendering video to: ${outputPath}`);
-
+      // Render video
+      console.log('[VideoRenderer] Rendering video...');
       await renderMedia({
         composition,
-        serveUrl: bundleLocation,
-        codec: 'h264',
-        outputLocation: outputPath,
+        serveUrl: this.bundleCache,
+        codec: options.codec || 'h264',
+        outputLocation: options.outputPath,
         inputProps: {
-          title,
-          scenes,
-          totalDuration,
-          videoStyle,
-        },
-        onProgress: ({ progress, renderedFrames, encodedFrames }) => {
-          const overallProgress = 40 + (progress * 60); // 40-100%
-          this.updateProgress(sessionId, {
-            stage: 'rendering',
-            progress: overallProgress,
-            message: `Rendering: ${renderedFrames} frames rendered, ${encodedFrames} frames encoded (${Math.round(progress * 100)}%)`
-          });
-
-          if (renderedFrames % 30 === 0) { // Log every second
-            console.log(`   Progress: ${Math.round(progress * 100)}% (${renderedFrames}/${composition.durationInFrames} frames)`);
-          }
-        },
+          scenes: scenesWithRelativePaths,
+          theme: options.theme || 'education-dark'
+        }
       });
 
-      console.log(`✅ Video rendered successfully: ${outputPath}`);
+      const executionTime = Date.now() - startTime;
+      console.log(`[VideoRenderer] ✓ Video rendered in ${(executionTime / 1000).toFixed(2)}s`);
+      console.log(`  Output: ${options.outputPath}`);
 
-      this.updateProgress(sessionId, {
-        stage: 'complete',
-        progress: 100,
-        message: 'Video rendering complete!'
-      });
+      return {
+        success: true,
+        videoPath: options.outputPath,
+        duration: composition.durationInFrames / composition.fps,
+        metadata: {
+          scenes: options.scenes.length,
+          codec: options.codec || 'h264',
+          resolution: `${composition.width}x${composition.height}`,
+          fps: composition.fps
+        }
+      };
+    } catch (error) {
+      console.error('[VideoRenderer] Error rendering video:', error);
 
-      // Cleanup: Remove bundle directory
-      await fs.rm(bundleLocation, { recursive: true, force: true });
-
-      return outputPath;
-
-    } catch (error: any) {
-      console.error('❌ Video rendering failed:', error);
-
-      this.updateProgress(sessionId, {
-        stage: 'error',
-        progress: 0,
-        message: 'Video rendering failed',
-        error: error.message
-      });
-
-      throw error;
-    } finally {
-      this.progressCallbacks.delete(sessionId);
+      return {
+        success: false,
+        error: error instanceof Error ? error.message : String(error),
+        metadata: {
+          scenes: options.scenes.length,
+          codec: options.codec || 'h264',
+          resolution: `${options.width || 1920}x${options.height || 1080}`,
+          fps: options.fps || 30
+        }
+      };
     }
   }
 
   /**
-   * Update progress for a rendering session
+   * Render presentation video (generic, no domain-specific styling)
+   *
+   * For marketing, documentation, general presentations
    */
-  private updateProgress(sessionId: string, progress: RenderProgress) {
-    const callback = this.progressCallbacks.get(sessionId);
-    if (callback) {
-      callback(progress);
-    }
+  async renderPresentation(options: RenderOptions): Promise<RenderResult> {
+    console.log('[VideoRenderer] Rendering presentation video...');
+
+    // Use marketing or documentation theme by default
+    return this.renderWebSlidesVideo({
+      ...options,
+      theme: options.theme || 'marketing'
+    });
   }
 
   /**
-   * Get estimated render time
+   * Quick render with defaults (for testing)
    */
-  estimateRenderTime(durationSeconds: number): number {
-    // Rough estimate: ~2-4x real-time on average hardware
-    // A 10-minute video might take 20-40 minutes to render
-    const multiplier = 3; // Conservative estimate
-    return durationSeconds * multiplier;
+  async quickRender(
+    scenes: WebSlidesScene[],
+    outputFilename: string,
+    theme: ThemeName = 'education-dark'
+  ): Promise<RenderResult> {
+    const outputPath = path.join(this.defaultOutputDir, outputFilename);
+
+    return this.renderWebSlidesVideo({
+      scenes,
+      theme,
+      outputPath,
+      codec: 'h264',
+      width: 1920,
+      height: 1080,
+      fps: 30
+    });
+  }
+
+  /**
+   * Clear bundle cache (useful for development)
+   */
+  clearCache(): void {
+    this.bundleCache = null;
+    console.log('[VideoRenderer] Cache cleared');
   }
 }
 
-// Singleton instance
+/**
+ * Singleton instance (global access)
+ */
 export const videoRenderer = new VideoRenderer();

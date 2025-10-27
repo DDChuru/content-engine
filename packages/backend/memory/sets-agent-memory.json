@@ -1,0 +1,23 @@
+{
+  "spatialRules": [],
+  "pedagogyRules": [],
+  "successfulPatterns": [
+    {
+      "problem": "Find A ∩ B",
+      "approach": "Conversational element-by-element explanation",
+      "collisions": 0,
+      "clarityScore": 10,
+      "timestamp": "2025-10-25T04:24:44.334Z"
+    }
+  ],
+  "failures": [
+    {
+      "problem": "Find A ∩ B",
+      "approach": "Script generation",
+      "issue": "this.claudeService.chat is not a function",
+      "lesson": "Need better error handling",
+      "timestamp": "2025-10-25T04:23:51.713Z"
+    }
+  ],
+  "version": 3
+}

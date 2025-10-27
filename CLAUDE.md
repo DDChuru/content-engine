@@ -347,6 +347,7 @@ The platform supports multiple Firebase projects simultaneously. Projects are in
 - `math` - Educational Math Platform
 - `peakflow` - PeakFlow Accounting
 - `acs` - ACS (Advanced Cleaning Systems)
+- `education` - Educational Content Platform (Cambridge IGCSE, SCORM packages)
 
 **Access Pattern:**
 ```typescript
@@ -380,7 +381,7 @@ dotenv.config({ path: path.resolve(__dirname, '../../../.env') });
 - `GITHUB_TOKEN` - GitHub API access (optional)
 - `FRONTEND_URL` - CORS configuration
 - `PORT` - Backend server port (default: 3001)
-- `{PROJECT}_FIREBASE_KEY` - JSON service account keys (e.g., `ICLEAN_FIREBASE_KEY`, `ACS_FIREBASE_KEY`)
+- `{PROJECT}_FIREBASE_KEY` - JSON service account keys (e.g., `ICLEAN_FIREBASE_KEY`, `ACS_FIREBASE_KEY`, `EDUCATION_FIREBASE_KEY`)
 
 ## Type System
 
@@ -469,3 +470,230 @@ npm run deploy
 6. **Type Safety:** Import shared types from `@shared/types` (aliased in tsconfig) rather than duplicating.
 
 7. **Video Generation:** This worktree shares video infrastructure with the main `content-engine` repo. Don't rebuild Remotion components - extend and reuse existing ones. See the "Video Generation System" section above for integration patterns and existing API endpoints.
+
+## Education Platform (NEW)
+
+### Overview
+
+The Education platform (`education` Firebase project) generates SCORM-compliant educational content from structured syllabi. It combines:
+- **Syllabus import** (Cambridge IGCSE, etc.)
+- **Content generation** (Claude AI)
+- **Math animations** (Manim - FREE, local)
+- **Interactive visualizations** (D3)
+- **Voice narration** (ElevenLabs with voice cloning)
+- **Video composition** (Remotion)
+- **SCORM packaging** (LMS deployment)
+
+### Key Documentation
+
+- **`EDUCATION-FIREBASE-SCHEMA.md`** - Complete Firestore database schema
+- **`EDUCATION-PROJECT-SETUP.md`** - Setup instructions and architecture
+- **`SYLLABUS-IMPORT-GUIDE.md`** - How to import syllabi (Cambridge IGCSE example)
+
+### Quick Start
+
+1. **Create Education Firebase Project** (see `EDUCATION-PROJECT-SETUP.md`)
+2. **Add service account key** to `.env`:
+   ```bash
+   EDUCATION_FIREBASE_KEY='{"type":"service_account",...}'
+   ```
+3. **Import Cambridge IGCSE syllabus**:
+   ```bash
+   cd packages/backend
+   npm run import-syllabus ./data/cambridge-igcse-0580.json
+   ```
+4. **Verify in Firebase Console**: Check `syllabi/cambridge-igcse-maths-0580`
+
+### Database Structure
+
+```
+syllabi/
+  {syllabusId}/
+    - Curriculum metadata (exam board, years, assessment info)
+
+    units/
+      {unitId}/
+        - Learning outcomes, duration, difficulty
+
+        topics/
+          {topicId}/
+            - Learning objectives, status, SCORM info
+
+            concepts/
+              {conceptId}/
+                - Narration, timeline, assets (video, audio, interactive)
+
+            exercises/
+              {exerciseId}/
+                - Questions, answers, feedback
+
+            quiz/
+              - Assessment questions, passing score
+```
+
+### Cost Estimation
+
+**Per 10-minute educational module:**
+- Manim animations: $0 (local, FREE)
+- Gemini images: ~$0.16 (4 images × $0.039)
+- ElevenLabs narration: ~$0.90 (3K chars × $0.30/1K)
+- Remotion composition: $0 (local, FREE)
+- **Total: ~$1.06 per module**
+
+**Complete Cambridge IGCSE Mathematics (99 topics):**
+- Total cost: ~$80-$100
+- Output: 300-500 video lessons
+- SCORM packages ready for any LMS
+
+Compare to traditional production: $50,000+
+
+### Implementation Status
+
+✅ **Completed:**
+- Firebase schema designed (`EDUCATION-FIREBASE-SCHEMA.md`)
+- Syllabus import script built (`src/scripts/import-cambridge-igcse.ts`)
+- Import validation script (`src/scripts/test-import-validation.ts`)
+- Backend integration (Firebase project initialized in `firebase.ts`)
+- Frontend integration (Education in project selector)
+- Sample data created (`data/cambridge-igcse-0580-sample.json`)
+- TypeScript compilation verified
+- Import structure validated (6 topics, 3 units, ~$6.36 estimated cost)
+
+⏳ **Pending:**
+- Firebase project setup (user action required)
+- Content generation pipeline (Claude → concepts)
+- Manim integration (math animations)
+- D3 visualization generator
+- ElevenLabs voice cloning setup
+- SCORM packager
+- Student progress tracking
+- API routes for education endpoints
+
+### Testing the Education Platform
+
+**Validate syllabus import structure (no Firebase required):**
+```bash
+cd packages/backend
+npm run validate-syllabus ./data/cambridge-igcse-0580-sample.json
+```
+
+This will show:
+- Syllabus structure (syllabi → units → topics)
+- Unit and topic breakdown with metadata
+- Firestore path preview
+- Cost estimation (~$1.06 per module)
+- Implementation checklist
+
+**Import syllabus to Firebase (requires EDUCATION_FIREBASE_KEY):**
+```bash
+cd packages/backend
+npm run import-syllabus ./data/cambridge-igcse-0580-sample.json
+```
+
+This will:
+- Create syllabus document in Firestore
+- Import all units (topics in Cambridge structure)
+- Import all topics (subtopics in Cambridge structure)
+- Preserve all metadata, examples, notes, notation, etc.
+
+### Next Steps
+
+See `SYLLABUS-IMPORT-GUIDE.md` for:
+1. Setting up Education Firebase project
+2. Importing Cambridge IGCSE syllabus
+3. Generating content for topics
+4. Exporting as SCORM packages
+
+## Future: Agent Workspace (ROADMAP)
+
+### Vision
+
+Transform Content Engine Cloud into an AI-powered development platform with autonomous agents that can:
+- Analyze codebases
+- Implement features
+- Fix bugs
+- Review code
+- Create pull requests
+- Run tests
+
+### Architecture Plan
+
+**Two execution modes:**
+
+1. **Local (Development):**
+   - Use CLI tools (FREE): Claude Code, Gemini CLI, Aider, Droid
+   - Direct filesystem access
+   - Git operations
+   - Your tools and environment
+   - Cost: $0
+
+2. **Remote (Production/API):**
+   - Use AI APIs: Claude API, Gemini API, OpenAI API, DeepSeek API
+   - Scalable cloud execution
+   - Authenticated with API keys
+   - Accessible from anywhere
+   - Cost: ~$0.01-$0.50 per task
+
+**Model routing:**
+- Auto-select best model for task
+- Or user specifies preferred model
+- Options: Claude Opus/Sonnet, Gemini Flash/Pro, GPT-4, DeepSeek Coder
+
+### Planned Features
+
+**Phase 1: MVP (4 hours)**
+- Add "Spawn Agent" button to existing chat interface
+- Basic `/api/agents/spawn` endpoint
+- Execute tasks with Claude API
+- Simple status tracking
+
+**Phase 2: Tracking (8 hours)**
+- Store agent execution in Firebase
+- View agent history
+- Track costs and performance
+- Basic analytics
+
+**Phase 3: Dashboard (16 hours)**
+- Dedicated agent workspace UI
+- Kanban board for tasks
+- Agent status monitoring
+- Project health metrics
+- Real-time updates
+
+**Phase 4: Advanced (1 week)**
+- CLI tool detection (local execution)
+- Model routing (auto-select best AI)
+- GitHub webhooks (PR tracking)
+- API key system (remote access)
+- WebSockets (real-time status)
+
+### Implementation Effort
+
+- **Minimal (agent spawn):** 2-4 hours
+- **Production-ready (UI + tracking):** 1-2 days
+- **Full-featured (everything):** 1 week
+
+### Key Documents (To Be Created)
+
+- `AGENT-WORKSPACE-ARCHITECTURE.md` - System design
+- `AGENT-EXECUTOR-SPEC.md` - CLI vs API execution
+- `MODEL-ROUTING-GUIDE.md` - Auto-selecting AI models
+- `API-KEY-SYSTEM.md` - Authentication and quotas
+
+### Status: PLANNED
+
+The agent workspace is **not yet implemented**. Focus is currently on:
+1. ✅ Completing education platform
+2. ✅ Testing educational content generation
+3. ⏳ Documenting workflows
+
+Agent workspace will be built **after** education platform is validated and tested in production.
+
+### Notes
+
+The existing chat interface (`ChatInterface` component) can already be used for conversational agent-like interactions. The agent workspace will formalize this with:
+- Persistent tracking
+- Task queuing
+- Status monitoring
+- Cost analytics
+- Team collaboration

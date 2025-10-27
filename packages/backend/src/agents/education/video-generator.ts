@@ -185,15 +185,25 @@ export class EducationalVideoGenerator {
 
     const model = this.gemini.getGenerativeModel({ model: 'gemini-2.5-flash-image' });
 
-    const prompt = `Educational illustration for: ${concept.name}
+    // STRICT NO TEXT POLICY - Gemini often adds text which looks unprofessional
+    const prompt = `Create a professional educational background image.
 
-Description: ${concept.description}
+Visual concept: ${concept.name}
+Visual elements: ${concept.description}
 
-Style: Clean, professional educational diagram
-Visual approach: Clear, easy to understand, suitable for learning
-Technical specs: Well-lit, high clarity, suitable for video presentation
-Color palette: Professional, not distracting
-Composition: Centered, balanced, with clear focal point`;
+🚫 CRITICAL: NO TEXT in the image
+- NO WORDS, NO LETTERS, NO NUMBERS
+- NO labels, NO captions, NO titles
+- PURE VISUAL ONLY - abstract shapes, gradients, illustrations
+- Text will be added separately as overlays
+
+Style requirements:
+- Clean, professional educational aesthetic
+- Clear, easy to understand visual metaphor
+- High clarity, suitable for 1920x1080 video background
+- Professional color palette (blues, purples, gradients)
+- Not distracting - subtle and supportive
+- Centered composition with clear focal area`;
 
     const result = await model.generateContent(prompt);
     const imagePart = result.response.candidates?.[0]?.content?.parts?.find(

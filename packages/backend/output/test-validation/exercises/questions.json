@@ -1,0 +1,181 @@
+[
+  {
+    "id": "q1",
+    "question": "Find A ∪ B where A = {2, 4, 6} and B = {4, 6, 8}",
+    "type": "multiple-choice",
+    "difficulty": "easy",
+    "options": [
+      "{2, 4, 6, 8}",
+      "{4, 6}",
+      "{2, 8}",
+      "{2, 4, 6, 8, 10}"
+    ],
+    "correctAnswer": "{2, 4, 6, 8}",
+    "explanation": "The union A ∪ B includes all elements from both sets. From A we get 2, 4, 6. From B we get 4, 6, 8. Removing duplicates (4 and 6 appear in both), we get {2, 4, 6, 8}.",
+    "hint": "Union means ALL elements from either set A OR set B.",
+    "commonMistakes": [
+      "Forgetting to remove duplicates",
+      "Confusing union with intersection"
+    ],
+    "subtopic": "Union operation",
+    "points": 1
+  },
+  {
+    "id": "q2",
+    "question": "Find A ∩ B where A = {1, 3, 5, 7} and B = {3, 6, 9}",
+    "type": "short-answer",
+    "difficulty": "easy",
+    "correctAnswer": "{3}",
+    "explanation": "The intersection A ∩ B contains only elements that appear in BOTH sets. Looking at both sets, only 3 appears in both A and B.",
+    "hint": "Intersection means elements that are in BOTH set A AND set B.",
+    "commonMistakes": [
+      "Including elements from only one set",
+      "Confusing intersection with union"
+    ],
+    "subtopic": "Intersection operation",
+    "points": 1
+  },
+  {
+    "id": "q3",
+    "question": "If ξ = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10} and A = {2, 4, 6, 8, 10}, find A'",
+    "type": "short-answer",
+    "difficulty": "easy",
+    "correctAnswer": "{1, 3, 5, 7, 9}",
+    "explanation": "The complement A' contains all elements in the universal set ξ that are NOT in A. Since A contains all even numbers from 1-10, A' contains all odd numbers: {1, 3, 5, 7, 9}.",
+    "hint": "The complement A' means all elements in ξ that are NOT in A.",
+    "commonMistakes": [
+      "Including elements that are in A",
+      "Forgetting some elements from the universal set"
+    ],
+    "subtopic": "Complement operation",
+    "points": 1
+  },
+  {
+    "id": "q4",
+    "question": "If n(A) = 5, n(B) = 7, and n(A ∩ B) = 2, find n(A ∪ B)",
+    "type": "multiple-choice",
+    "difficulty": "medium",
+    "options": [
+      "10",
+      "12",
+      "14",
+      "9"
+    ],
+    "correctAnswer": "10",
+    "explanation": "Use the formula: n(A ∪ B) = n(A) + n(B) - n(A ∩ B). Substituting: n(A ∪ B) = 5 + 7 - 2 = 10.",
+    "hint": "Use the formula for the number of elements in a union.",
+    "commonMistakes": [
+      "Adding n(A) + n(B) without subtracting n(A ∩ B)",
+      "Subtracting n(A ∩ B) twice"
+    ],
+    "subtopic": "Cardinality",
+    "points": 2
+  },
+  {
+    "id": "q5",
+    "question": "True or False: If A ⊂ B, then A ∩ B = A",
+    "type": "true-false",
+    "difficulty": "medium",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correctAnswer": "True",
+    "explanation": "If A is a proper subset of B, then all elements of A are also in B. Therefore, the intersection of A and B will contain exactly the elements of A, so A ∩ B = A.",
+    "hint": "Think about what happens when one set is completely inside another.",
+    "commonMistakes": [
+      "Confusing subset with superset",
+      "Not understanding the relationship between subsets and intersection"
+    ],
+    "subtopic": "Subsets",
+    "points": 1
+  },
+  {
+    "id": "q6",
+    "question": "If A = {x : x is a prime number less than 10}, list the elements of A",
+    "type": "short-answer",
+    "difficulty": "easy",
+    "correctAnswer": "{2, 3, 5, 7}",
+    "explanation": "Prime numbers less than 10 are: 2 (the only even prime), 3, 5, and 7. Note that 1 is not considered prime.",
+    "hint": "Remember: prime numbers are only divisible by 1 and themselves. Is 1 prime?",
+    "commonMistakes": [
+      "Including 1 (which is not prime)",
+      "Forgetting 2 (the only even prime number)",
+      "Including 9 (which is 3 × 3)"
+    ],
+    "subtopic": "Set-builder notation",
+    "points": 1
+  },
+  {
+    "id": "q7",
+    "question": "Given ξ = {1-10}, A = {1, 2, 3, 4}, B = {3, 4, 5, 6}, find (A ∪ B)'",
+    "type": "short-answer",
+    "difficulty": "hard",
+    "correctAnswer": "{7, 8, 9, 10}",
+    "explanation": "First find A ∪ B = {1, 2, 3, 4, 5, 6}. Then find the complement: all elements in ξ NOT in A ∪ B, which is {7, 8, 9, 10}.",
+    "hint": "Work in steps: first find A ∪ B, then find the complement of that result.",
+    "commonMistakes": [
+      "Finding (A' ∪ B') instead of (A ∪ B)'",
+      "Forgetting to find the union first"
+    ],
+    "subtopic": "Combined operations",
+    "points": 2
+  },
+  {
+    "id": "q8",
+    "question": "If A ∩ B = ∅, what can we say about sets A and B?",
+    "type": "multiple-choice",
+    "difficulty": "medium",
+    "options": [
+      "They are disjoint (have no common elements)",
+      "They are equal",
+      "One is a subset of the other",
+      "They are both empty sets"
+    ],
+    "correctAnswer": "They are disjoint (have no common elements)",
+    "explanation": "When A ∩ B = ∅ (the empty set), it means there are no elements in common between A and B. Sets with no common elements are called disjoint sets.",
+    "hint": "What does ∅ (the empty set) mean in terms of intersection?",
+    "commonMistakes": [
+      "Thinking both sets must be empty",
+      "Confusing empty intersection with empty sets"
+    ],
+    "subtopic": "Empty set and disjoint sets",
+    "points": 1
+  },
+  {
+    "id": "q9",
+    "question": "In a class of 30 students, 18 study French, 15 study Spanish, and 8 study both. How many students study neither French nor Spanish?",
+    "type": "short-answer",
+    "difficulty": "hard",
+    "correctAnswer": "5",
+    "explanation": "Use n(F ∪ S) = n(F) + n(S) - n(F ∩ S) = 18 + 15 - 8 = 25 students study at least one language. Therefore, 30 - 25 = 5 students study neither.",
+    "hint": "First find how many study at least one language using the union formula, then subtract from the total.",
+    "commonMistakes": [
+      "Forgetting to subtract those who study both",
+      "Not subtracting the union from the total"
+    ],
+    "subtopic": "Venn diagram applications",
+    "points": 3
+  },
+  {
+    "id": "q10",
+    "question": "Which notation represents \"x is an element of set A\"?",
+    "type": "multiple-choice",
+    "difficulty": "easy",
+    "options": [
+      "x ∈ A",
+      "x ⊂ A",
+      "x ∪ A",
+      "x ∩ A"
+    ],
+    "correctAnswer": "x ∈ A",
+    "explanation": "The symbol ∈ means \"is an element of\" or \"belongs to\". So x ∈ A means \"x is an element of set A\".",
+    "hint": "Think about the basic symbol for membership in a set.",
+    "commonMistakes": [
+      "Confusing ∈ with ⊂ (subset)",
+      "Using operation symbols instead of membership"
+    ],
+    "subtopic": "Set notation",
+    "points": 1
+  }
+]

@@ -1,0 +1,214 @@
+{
+  "metadata": {
+    "subject": "Mathematics",
+    "code": "0580",
+    "title": "Cambridge IGCSE Mathematics 0580",
+    "examBoard": "Cambridge International",
+    "years": [2025, 2026, 2027],
+    "version": "2025-2027",
+    "lastUpdated": "2024-01-15",
+    "levels": ["Core", "Extended"],
+    "description": "Cambridge IGCSE Mathematics develops mathematical knowledge as a key life skill and provides a basis for more advanced study.",
+    "assessmentInfo": {
+      "papers": {
+        "core": ["Paper 1 (Short answer)", "Paper 3 (Structured questions)"],
+        "extended": ["Paper 2 (Short answer)", "Paper 4 (Structured questions)"]
+      },
+      "gradingScale": {
+        "core": "C-G",
+        "extended": "A*-E"
+      }
+    },
+    "totalTopics": 3,
+    "coreSubtopics": 4,
+    "extendedSubtopics": 5
+  },
+  "topics": [
+    {
+      "id": "c1",
+      "code": "C1",
+      "title": "Number",
+      "level": "Core",
+      "icon": "Hash",
+      "color": "text-blue-600",
+      "bgColor": "bg-blue-50",
+      "subtopics": [
+        {
+          "code": "C1.1",
+          "title": "Types of number",
+          "content": [
+            "Natural numbers, integers (positive, negative and zero), prime numbers, square numbers, common factors and common multiples",
+            "Rational and irrational numbers, real numbers",
+            "Continued fractions limited to no more than three terms"
+          ],
+          "examples": [
+            "Convert between numbers and words (e.g. hundreds, thousands, millions)",
+            "Express 72 as a product of its prime factors",
+            "Find the Highest Common Factor (HCF) of 48 and 180",
+            "Find the Lowest Common Multiple (LCM) of 12 and 18"
+          ],
+          "notes": [
+            "Knowledge that all terminating and recurring decimals are exact fractions",
+            "Continued fractions are new to this syllabus"
+          ],
+          "isNew": false
+        },
+        {
+          "code": "C1.2",
+          "title": "Sets",
+          "content": [
+            "Set language, notation and Venn diagrams",
+            "Limited to two sets"
+          ],
+          "notation": [
+            "n(A) - Number of elements in set A",
+            "A' - Complement of set A",
+            "∅ - Empty set",
+            "ξ - Universal set",
+            "∪ - Union",
+            "∩ - Intersection",
+            "∈ - Is an element of",
+            "∉ - Is not an element of",
+            "⊂ - Is a proper subset of",
+            "⊆ - Is a subset of"
+          ],
+          "examples": [
+            "A = {x: x is a natural number}",
+            "B = {a, b, c, ...}",
+            "List members of sets given in set-builder form",
+            "Use Venn diagrams to represent sets and solve problems"
+          ],
+          "notes": [
+            "Two-set Venn diagrams only"
+          ],
+          "isNew": false
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "code": "C2",
+      "title": "Algebra and graphs",
+      "level": "Core",
+      "icon": "Variable",
+      "color": "text-green-600",
+      "bgColor": "bg-green-50",
+      "subtopics": [
+        {
+          "code": "C2.1",
+          "title": "Algebraic representation and manipulation",
+          "content": [
+            "Use letters to express generalised numbers and express basic arithmetic processes algebraically",
+            "Substitute numbers for words and letters in formulae",
+            "Construct and transform formulae and equations"
+          ],
+          "examples": [
+            "Simplify 3x + 5x - 2x",
+            "Expand (x + 3)(x - 2)",
+            "Factorise x² + 7x + 12",
+            "Make x the subject of y = 3x + 5"
+          ],
+          "required": [
+            "Manipulation of algebraic fractions",
+            "Expand products of algebraic expressions",
+            "Factorise where possible expressions of the form ax + bx"
+          ],
+          "isNew": false
+        }
+      ]
+    }
+  ],
+  "extendedTopics": [
+    {
+      "id": "e1",
+      "code": "E1",
+      "title": "Number",
+      "level": "Extended",
+      "icon": "Hash",
+      "color": "text-blue-600",
+      "bgColor": "bg-blue-50",
+      "subtopics": [
+        {
+          "code": "E1.1",
+          "title": "Types of number",
+          "content": [
+            "Natural numbers, integers (positive, negative and zero), prime numbers, square numbers, common factors and common multiples",
+            "Rational and irrational numbers, real numbers",
+            "Continued fractions limited to no more than three terms",
+            "Surds in the form a√b where a and b are integers"
+          ],
+          "examples": [
+            "Express 72 as a product of its prime factors",
+            "Find the HCF of 48 and 180",
+            "Simplify √50",
+            "Rationalise the denominator of 1/√5",
+            "Simplify (2 + √3)(2 - √3)"
+          ],
+          "notes": [
+            "Extended includes surds manipulation",
+            "Rationalisation of denominators"
+          ],
+          "properties": [
+            "√(a×b) = √a × √b",
+            "√(a/b) = √a / √b",
+            "(a + √b)(a - √b) = a² - b"
+          ],
+          "isNew": false
+        },
+        {
+          "code": "E1.2",
+          "title": "Sets",
+          "content": [
+            "Set language, notation and Venn diagrams",
+            "Can include up to three sets"
+          ],
+          "notation": [
+            "n(A) - Number of elements in set A",
+            "A' - Complement of set A",
+            "∅ - Empty set",
+            "ξ - Universal set",
+            "∪ - Union",
+            "∩ - Intersection",
+            "∈ - Is an element of",
+            "∉ - Is not an element of",
+            "⊂ - Is a proper subset of",
+            "⊆ - Is a subset of"
+          ],
+          "examples": [
+            "Use Venn diagrams with three sets",
+            "Solve problems involving n(A ∪ B ∪ C)",
+            "Find n(A ∩ B' ∩ C)"
+          ],
+          "notes": [
+            "Extended can include three-set Venn diagrams"
+          ],
+          "isNew": false
+        },
+        {
+          "code": "E2.1",
+          "title": "Algebraic representation and manipulation",
+          "content": [
+            "Use letters to express generalised numbers and express basic arithmetic processes algebraically",
+            "Substitute numbers for words and letters in formulae",
+            "Construct and transform formulae and equations",
+            "Manipulate directed numbers",
+            "Use brackets and extract common factors"
+          ],
+          "examples": [
+            "Factorise 6x² + 11x + 3",
+            "Simplify (2x³y²)/(4x²y)",
+            "Make r the subject of V = πr²h",
+            "Simplify (2/(x-1)) + (3/(x+2))"
+          ],
+          "required": [
+            "Manipulation of algebraic fractions",
+            "Use and interpret positive, negative and zero indices",
+            "Factorise and simplify rational expressions"
+          ],
+          "formulas_given": [],
+          "isNew": false
+        }
+      ]
+    }
+  ]
+}

@@ -11,7 +11,7 @@ export const ImageScene: React.FC<ImageSceneProps> = ({ imagePath, audioPath }) 
     <AbsoluteFill>
       {/* Static background image */}
       <Img
-        src={imagePath}
+        src={staticFile(imagePath)}
         style={{
           width: '100%',
           height: '100%',
@@ -20,7 +20,7 @@ export const ImageScene: React.FC<ImageSceneProps> = ({ imagePath, audioPath }) 
       />
 
       {/* Voice narration audio */}
-      <Audio src={audioPath} />
+      {audioPath && <Audio src={staticFile(audioPath)} />}
     </AbsoluteFill>
   );
 };

@@ -1,8 +1,12 @@
 import express from 'express';
 import EducationalVideoGenerator, { Module, VideoScript, Concept } from '../agents/education/video-generator';
 import FFmpegVideoCombiner from '../services/ffmpeg-video-combiner.js';
+import { ClaudeService } from '../services/claude.js';
+import { EducationalVizAgent } from '../agents/educational-viz-agent.js';
+import type { EducationalVisualizationRequest } from '../agents/educational-viz-agent.js';
 import multer from 'multer';
 import { execSync } from 'child_process';
+import fs from 'fs/promises';
 
 const router = express.Router();
 
@@ -934,6 +938,600 @@ router.post('/streamlined-lesson', async (req, res) => {
     });
   } catch (error: any) {
     console.error('Streamlined lesson generation failed:', error);
+    res.status(500).json({
+      success: false,
+      error: error.message
+    });
+  }
+});
+
+/**
+ * POST /api/education/generate-avatar
+ * Generate lip-synced avatar video from audio and image
+ */
+router.post('/generate-avatar', upload.single('avatarImage'), async (req, res) => {
+  try {
+    const { audioPath, provider, quality, fps } = req.body;
+    const avatarImageFile = req.file;
+
+    if (!audioPath) {
+      return res.status(400).json({
+        success: false,
+        error: 'audioPath is required'
+      });
+    }
+
+    if (!avatarImageFile) {
+      return res.status(400).json({
+        success: false,
+        error: 'avatarImage file is required'
+      });
+    }
+
+    console.log('\n🎭 Generating avatar video...');
+    console.log(`   Audio: ${audioPath}`);
+    console.log(`   Provider: ${provider || 'a2e'}`);
+
+    // Import avatar service
+    const { default: AvatarService } = await import('../services/avatar-service.js');
+
+    // Create avatar service instance
+    const avatarService = new AvatarService(
+      provider || 'a2e',
+      undefined, // Use env API key
+      'output/avatars'
+    );
+
+    // Check if configured
+    if (!avatarService.isConfigured()) {
+      return res.status(500).json({
+        success: false,
+        error: `${provider || 'a2e'} API key not configured. Set ${(provider || 'a2e').toUpperCase()}_API_KEY in .env`
+      });
+    }
+
+    // Save uploaded image temporarily
+    const tempImagePath = `/tmp/avatar_${Date.now()}.${avatarImageFile.mimetype.split('/')[1]}`;
+    await fs.writeFile(tempImagePath, avatarImageFile.buffer);
+
+    // Generate avatar
+    const result = await avatarService.generateAvatar({
+      avatarImage: tempImagePath,
+      audioFile: audioPath,
+      quality: quality || 'standard',
+      fps: fps || 30,
+      provider: provider || 'a2e'
+    });
+
+    // Clean up temp file
+    await fs.unlink(tempImagePath).catch(() => {});
+
+    res.json({
+      success: true,
+      avatar: {
+        videoPath: result.videoPath,
+        videoUrl: result.videoUrl,
+        duration: result.duration,
+        cost: result.cost,
+        provider: result.provider
+      },
+      message: 'Avatar generated successfully!'
+    });
+  } catch (error: any) {
+    console.error('Avatar generation failed:', error);
+    res.status(500).json({
+      success: false,
+      error: error.message
+    });
+  }
+});
+
+/**
+ * POST /api/education/composite-avatar
+ * Composite avatar video onto main educational video
+ */
+router.post('/composite-avatar', async (req, res) => {
+  try {
+    const { mainVideo, avatarVideo, position, scale, addBorder } = req.body;
+
+    if (!mainVideo || !avatarVideo) {
+      return res.status(400).json({
+        success: false,
+        error: 'mainVideo and avatarVideo paths are required'
+      });
+    }
+
+    console.log('\n🎬 Compositing avatar onto video...');
+    console.log(`   Main: ${mainVideo}`);
+    console.log(`   Avatar: ${avatarVideo}`);
+    console.log(`   Position: ${position || 'top-right'}`);
+
+    // Import compositor
+    const { default: AvatarCompositor } = await import('../services/avatar-compositor.js');
+
+    // Create compositor instance
+    const compositor = new AvatarCompositor('output/education/videos');
+
+    // Composite avatar
+    const result = await compositor.createPictureInPicture(mainVideo, avatarVideo, {
+      position: position || 'top-right',
+      scale: scale || 0.2,
+      addBorder: addBorder !== false
+    });
+
+    res.json({
+      success: true,
+      video: {
+        path: result.videoPath,
+        duration: result.duration,
+        fileSize: (result.fileSize / 1024 / 1024).toFixed(2) + ' MB'
+      },
+      message: 'Avatar composited successfully!'
+    });
+  } catch (error: any) {
+    console.error('Avatar compositing failed:', error);
+    res.status(500).json({
+      success: false,
+      error: error.message
+    });
+  }
+});
+
+/**
+ * POST /api/education/circle-theorem-with-avatar
+ * Generate complete Circle Theorem lesson WITH avatar overlay
+ */
+router.post('/circle-theorem-with-avatar', upload.single('avatarImage'), async (req, res) => {
+  try {
+    const voiceId = req.body.voiceId || process.env.DEFAULT_VOICE_ID;
+    const avatarImageFile = req.file;
+    const { provider, position, scale } = req.body;
+
+    if (!voiceId) {
+      return res.status(400).json({
+        success: false,
+        error: 'voiceId is required (provide in request body or set DEFAULT_VOICE_ID in .env)'
+      });
+    }
+
+    console.log('\n🎓 Generating Circle Theorem Lesson WITH Avatar');
+
+    // Create module
+    const module: Module = {
+      id: 'circle-angle-at-centre',
+      title: 'Circle Theorem: Angle at Centre',
+      concepts: [
+        {
+          name: 'Introduction',
+          description: 'Introduction to circle theorems',
+          type: 'theorem',
+          metadata: {}
+        },
+        {
+          name: 'Angle at Centre Theorem',
+          description: 'The angle at the centre is twice the angle at the circumference',
+          type: 'theorem',
+          metadata: {
+            theorem: 'Angle at Centre',
+            angle: 120
+          }
+        },
+        {
+          name: 'Worked Example',
+          description: 'Solving problems with the angle at centre theorem',
+          type: 'application',
+          metadata: {
+            theorem: 'Angle at Centre',
+            angle: 100
+          }
+        }
+      ],
+      videoScript: {
+        segments: [
+          {
+            title: 'Introduction',
+            narration: 'Welcome to this lesson on circle theorems. Today we will explore one of the most fundamental relationships in circle geometry - the angle at the centre theorem.',
+            duration: 10,
+            visualType: 'gemini'
+          },
+          {
+            title: 'Angle at Centre Theorem',
+            narration: 'The angle at the centre theorem states that the angle subtended by an arc at the centre of a circle is exactly twice the angle subtended by the same arc at any point on the circumference.',
+            duration: 25,
+            visualType: 'manim'
+          },
+          {
+            title: 'Worked Example',
+            narration: 'Let\'s apply this theorem. If the angle at the centre is 100 degrees, what is the angle at the circumference? Using our theorem, we divide by 2 to get 50 degrees.',
+            duration: 20,
+            visualType: 'manim'
+          }
+        ]
+      }
+    };
+
+    // Generate scenes
+    console.log('📹 Generating scenes...');
+    const result = await getGenerator().generateModuleVideo(module, voiceId);
+
+    // Combine scenes
+    console.log('\n🎬 Combining scenes...');
+    const videoCombiner = new FFmpegVideoCombiner();
+    const mainVideoPath = await videoCombiner.combineScenesIntoFinalVideo({
+      scenes: result.scenes,
+      outputFilename: `circle_main_${Date.now()}.mp4`
+    });
+
+    let finalVideoPath = mainVideoPath;
+    let avatarCost = 0;
+
+    // Add avatar if image provided
+    if (avatarImageFile) {
+      console.log('\n🎭 Generating avatar...');
+
+      // Import services
+      const { default: AvatarService } = await import('../services/avatar-service.js');
+      const { default: AvatarCompositor } = await import('../services/avatar-compositor.js');
+
+      // Get combined audio path (first scene's audio for now)
+      const audioPath = result.scenes[0].audio;
+
+      // Save uploaded image
+      const tempImagePath = `/tmp/avatar_${Date.now()}.${avatarImageFile.mimetype.split('/')[1]}`;
+      await fs.writeFile(tempImagePath, avatarImageFile.buffer);
+
+      // Generate avatar
+      const avatarService = new AvatarService(
+        provider || 'a2e',
+        undefined,
+        'output/avatars'
+      );
+
+      if (!avatarService.isConfigured()) {
+        console.warn('⚠️  Avatar service not configured, skipping avatar overlay');
+      } else {
+        const avatarResult = await avatarService.generateAvatar({
+          avatarImage: tempImagePath,
+          audioFile: audioPath,
+          quality: 'standard',
+          fps: 30
+        });
+
+        avatarCost = avatarResult.cost;
+
+        // Composite avatar onto main video
+        console.log('\n🎬 Compositing avatar...');
+        const compositor = new AvatarCompositor('output/education/videos');
+        const compositeResult = await compositor.createPictureInPicture(
+          mainVideoPath,
+          avatarResult.videoPath,
+          {
+            position: position || 'top-right',
+            scale: scale || 0.2,
+            addBorder: true
+          }
+        );
+
+        finalVideoPath = compositeResult.videoPath;
+
+        // Clean up temp file
+        await fs.unlink(tempImagePath).catch(() => {});
+      }
+    }
+
+    res.json({
+      success: true,
+      result: {
+        title: module.title,
+        hasAvatar: avatarImageFile !== undefined,
+        scenes: result.scenes.length,
+        duration: result.duration,
+        cost: {
+          scenes: result.cost,
+          avatar: avatarCost,
+          total: result.cost + avatarCost
+        },
+        finalVideo: finalVideoPath,
+        sceneDetails: result.scenes.map(s => ({
+          id: s.id,
+          title: s.title,
+          duration: s.duration
+        }))
+      },
+      message: avatarImageFile
+        ? '✨ Lesson with avatar generated successfully!'
+        : '✨ Lesson generated successfully!'
+    });
+  } catch (error: any) {
+    console.error('Lesson with avatar generation failed:', error);
+    res.status(500).json({
+      success: false,
+      error: error.message
+    });
+  }
+});
+
+/**
+ * POST /api/education/visualize
+ *
+ * Generate educational visualization (D3 + Manim side-by-side video)
+ *
+ * Request body:
+ * {
+ *   "problem": "Find A ∩ B where A = {1,2,3,4,5} and B = {4,5,6,7,8}",
+ *   "type": "sets",
+ *   "targetAge": 13,
+ *   "duration": 12,
+ *   "style": {
+ *     "d3Style": "clean",
+ *     "manimStyle": "educational"
+ *   }
+ * }
+ */
+router.post('/visualize', async (req, res) => {
+  try {
+    const request: EducationalVisualizationRequest = req.body;
+
+    // Validate request
+    if (!request.problem) {
+      return res.status(400).json({
+        success: false,
+        error: 'Missing required field: problem'
+      });
+    }
+
+    if (!request.type) {
+      request.type = 'general';
+    }
+
+    if (!request.targetAge) {
+      request.targetAge = 13; // Default to 13-year-olds
+    }
+
+    // Get Claude service from app locals
+    const claudeService = req.app.locals.claudeService as ClaudeService;
+
+    if (!claudeService) {
+      return res.status(500).json({
+        success: false,
+        error: 'Claude service not initialized'
+      });
+    }
+
+    // Create agent and generate
+    const agent = new EducationalVizAgent(claudeService);
+    const result = await agent.generate(request);
+
+    if (!result.success) {
+      return res.status(500).json(result);
+    }
+
+    // Return result with file paths
+    res.json({
+      success: true,
+      data: {
+        finalVideo: result.finalVideoPath,
+        d3Output: result.d3Output,
+        manimOutput: result.manimOutput,
+        metadata: result.metadata
+      }
+    });
+
+  } catch (error: any) {
+    console.error('Visualization generation error:', error);
+    res.status(500).json({
+      success: false,
+      error: error.message
+    });
+  }
+});
+
+/**
+ * POST /api/education/lesson
+ *
+ * Generate complete educational lesson with multiple visualizations
+ *
+ * Request body:
+ * {
+ *   "topic": "Set Theory Basics",
+ *   "concepts": ["union", "intersection", "complement"],
+ *   "targetAge": 13,
+ *   "duration": 10 // minutes
+ * }
+ */
+router.post('/lesson', async (req, res) => {
+  try {
+    const { topic, concepts, targetAge, duration } = req.body;
+
+    if (!topic || !concepts || !Array.isArray(concepts)) {
+      return res.status(400).json({
+        success: false,
+        error: 'Missing required fields: topic, concepts (array)'
+      });
+    }
+
+    const claudeService = req.app.locals.claudeService as ClaudeService;
+
+    if (!claudeService) {
+      return res.status(500).json({
+        success: false,
+        error: 'Claude service not initialized'
+      });
+    }
+
+    // Generate lesson structure using Claude
+    const lessonPrompt = `Create an educational lesson plan for:
+
+TOPIC: ${topic}
+CONCEPTS: ${concepts.join(', ')}
+TARGET AGE: ${targetAge || 13} years old
+DURATION: ${duration || 10} minutes
+
+For each concept, provide:
+1. A clear explanation
+2. An example problem
+3. Visual aid suggestion (D3 text solution + Manim animation)
+
+Format as JSON:
+{
+  "title": "...",
+  "concepts": [
+    {
+      "name": "...",
+      "explanation": "...",
+      "exampleProblem": "...",
+      "visualizationType": "venn_diagram" | "graph" | "geometric_shape"
+    }
+  ]
+}`;
+
+    const response = await claudeService.chat([
+      { role: 'user', content: lessonPrompt }
+    ]);
+
+    // Extract JSON
+    const jsonMatch = response.content.match(/\{[\s\S]*\}/);
+    if (!jsonMatch) {
+      throw new Error('Failed to parse lesson plan from Claude');
+    }
+
+    const lesson = JSON.parse(jsonMatch[0]);
+
+    // Generate visualizations for each concept
+    const agent = new EducationalVizAgent(claudeService);
+    const visualizations = [];
+
+    for (const concept of lesson.concepts) {
+      const vizRequest: EducationalVisualizationRequest = {
+        problem: concept.exampleProblem,
+        type: concept.visualizationType || 'general',
+        targetAge: targetAge || 13,
+        duration: 12
+      };
+
+      const result = await agent.generate(vizRequest);
+      visualizations.push({
+        concept: concept.name,
+        video: result.finalVideoPath,
+        success: result.success
+      });
+    }
+
+    res.json({
+      success: true,
+      data: {
+        lesson,
+        visualizations
+      }
+    });
+
+  } catch (error: any) {
+    console.error('Lesson generation error:', error);
+    res.status(500).json({
+      success: false,
+      error: error.message
+    });
+  }
+});
+
+/**
+ * GET /api/education/examples
+ *
+ * Get example problems for different math topics
+ */
+router.get('/examples', (req, res) => {
+  const examples = {
+    sets: [
+      {
+        problem: 'Find A ∩ B where A = {1,2,3,4,5} and B = {4,5,6,7,8}',
+        type: 'sets',
+        targetAge: 13
+      },
+      {
+        problem: 'Find A ∪ B where A = {a,b,c} and B = {c,d,e}',
+        type: 'sets',
+        targetAge: 13
+      }
+    ],
+    algebra: [
+      {
+        problem: 'Solve for x: 2x + 5 = 13',
+        type: 'algebra',
+        targetAge: 14
+      }
+    ],
+    geometry: [
+      {
+        problem: 'Find the area of a circle with radius 5',
+        type: 'geometry',
+        targetAge: 13
+      }
+    ]
+  };
+
+  res.json({
+    success: true,
+    data: examples
+  });
+});
+
+/**
+ * POST /api/education/sets-demo
+ *
+ * Demo endpoint: Generate the sets intersection visualization we demoed earlier
+ * This uses the proven template from output/sets-demo/
+ */
+router.post('/sets-demo', async (req, res) => {
+  try {
+    const claudeService = req.app.locals.claudeService as ClaudeService;
+
+    if (!claudeService) {
+      return res.status(400).json({
+        success: false,
+        error: 'Claude service not initialized'
+      });
+    }
+
+    console.log('\n╔═══════════════════════════════════════════════════════════════╗');
+    console.log('║  SETS INTERSECTION DEMO (D3 + Manim)                         ║');
+    console.log('╚═══════════════════════════════════════════════════════════════╝\n');
+
+    const agent = new EducationalVizAgent(claudeService);
+
+    const result = await agent.generate({
+      problem: 'Find A ∩ B where A = {1,2,3,4,5} and B = {4,5,6,7,8}',
+      type: 'sets',
+      targetAge: 13,
+      duration: 12
+    });
+
+    if (!result.success) {
+      return res.status(500).json({
+        success: false,
+        error: result.error || 'Generation failed'
+      });
+    }
+
+    res.json({
+      success: true,
+      message: 'Sets intersection demo generated successfully!',
+      result: {
+        finalVideo: result.finalVideoPath,
+        d3Output: {
+          script: result.d3Output.scriptPath,
+          image: result.d3Output.imagePath,
+          video: result.d3Output.videoPath
+        },
+        manimOutput: {
+          script: result.manimOutput.scriptPath,
+          video: result.manimOutput.videoPath
+        },
+        metadata: result.metadata
+      }
+    });
+
+  } catch (error: any) {
+    console.error('Sets demo generation failed:', error);
     res.status(500).json({
       success: false,
       error: error.message

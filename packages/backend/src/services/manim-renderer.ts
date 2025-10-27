@@ -687,13 +687,13 @@ class ${className}(Scene):
       if (stderr) console.warn('Manim warnings:', stderr);
 
       // Parse output path from Manim logs (remove line breaks for wrapped paths)
-      const cleanOutput = stdout.replace(/\n\s+/g, ' ');
+      const cleanOutput = stdout.replace(/\n\s+/g, '');  // Remove ALL newlines and following spaces
       const match = cleanOutput.match(/File ready at\s+'([^']+\.mp4)'/);
       if (!match) {
         throw new Error('Could not find rendered video path in Manim output');
       }
 
-      const videoPath = match[1];
+      const videoPath = match[1].replace(/\s+/g, '');  // Extra safety: remove any remaining spaces from path
       console.log(`✅ Video ready: ${videoPath}`);
 
       return videoPath;
