@@ -165,6 +165,7 @@ interface VideoPreviewProps {
   currentFrame: number;
   isPlaying: boolean;
   onTimeUpdate: (frame: number) => void;
+  onPlayToggle: (playing: boolean) => void;
   onLoadedMetadata: (clipId: string, duration: number) => void;
   selection: TimelineSelection;
 }
@@ -174,6 +175,7 @@ const VideoPreview: React.FC<VideoPreviewProps> = ({
   currentFrame,
   isPlaying,
   onTimeUpdate,
+  onPlayToggle,
   onLoadedMetadata,
   selection
 }) => {
@@ -211,7 +213,7 @@ const VideoPreview: React.FC<VideoPreviewProps> = ({
     }
 
     if (isPlaying && video.paused) {
-      video.play().catch(err => console.log('Play error:', err));
+      video.play().catch(() => {});
     } else if (!isPlaying && !video.paused) {
       video.pause();
     }
@@ -255,16 +257,6 @@ const VideoPreview: React.FC<VideoPreviewProps> = ({
     currentFrame < c.startFrame + c.durationFrames
   );
 
-  // Debug logging
-  useEffect(() => {
-    console.log('VideoPreview Debug:', {
-      activeClip: activeClip ? { id: activeClip.id, name: activeClip.name, type: activeClip.type, src: activeClip.src?.substring(0, 50) } : null,
-      currentFrame,
-      clipsCount: clips.length,
-      clipsInRange: clips.filter(c => currentFrame >= c.startFrame && currentFrame < c.startFrame + c.durationFrames).map(c => c.name)
-    });
-  }, [activeClip, currentFrame, clips]);
-
   return (
     <div
       style={{
@@ -282,15 +274,29 @@ const VideoPreview: React.FC<VideoPreviewProps> = ({
           key={activeClip.id}
           ref={videoRef}
           src={activeClip.src}
-          style={{ maxWidth: '100%', maxHeight: '100%' }}
-          controls
-          muted
+          style={{ maxWidth: '100%', maxHeight: '100%', cursor: 'pointer' }}
           playsInline
+          onClick={() => {
+            // Click video to toggle play/pause
+            onPlayToggle(!isPlaying);
+          }}
+          onPlay={() => {
+            // Sync video play to timeline state
+            if (!isPlaying) {
+              onPlayToggle(true);
+            }
+          }}
+          onPause={() => {
+            // Sync video pause to timeline state
+            if (isPlaying) {
+              onPlayToggle(false);
+            }
+          }}
+          onTimeUpdate={() => handleVideoTimeUpdate(activeClip)}
           onLoadedMetadata={(e) => {
             handleVideoLoaded(activeClip, e.currentTarget);
           }}
           onError={() => handleVideoError(activeClip)}
-          onCanPlay={() => console.log('Video ready:', activeClip.name)}
         />
       )}
 
@@ -1262,16 +1268,64 @@ export default function VideoEditorPage() {
       activeClip: activeClip || undefined
     };
 
-    console.log('Claude Context:', { message, context });
     // TODO: Integrate with studio-bridge WebSocket
     alert(`Sent to Claude:\n\n"${message}"\n\nContext:\n- Selection: ${JSON.stringify(selection)}\n- Frame: ${Math.round(currentFrame)}\n- Active: ${activeClip?.name || 'none'}`);
   }, [selection, currentFrame, clips, activeClip]);
 
   const handleScreenshot = useCallback(() => {
-    console.log('Taking screenshot...');
-    // TODO: Use html2canvas
+    // TODO: Implement with html2canvas
     alert('Screenshot captured! (Integration pending)');
   }, []);
+
+  // Cut clip at playhead position
+  const handleCutAtPlayhead = useCallback(() => {
+    const frame = Math.round(currentFrame);
+
+    // Find all clips that span the playhead
+    const clipsAtPlayhead = clips.filter(clip =>
+      frame > clip.startFrame &&
+      frame < clip.startFrame + clip.durationFrames
+    );
+
+    if (clipsAtPlayhead.length === 0) {
+      return; // No clip to cut
+    }
+
+    // Cut each clip at the playhead
+    const newClips: Clip[] = [];
+    const clipsToRemove = new Set(clipsAtPlayhead.map(c => c.id));
+
+    clips.forEach(clip => {
+      if (clipsToRemove.has(clip.id)) {
+        // Split this clip into two
+        const cutPoint = frame - clip.startFrame;
+
+        // First half (before cut)
+        const firstHalf: Clip = {
+          ...clip,
+          id: generateId(),
+          durationFrames: cutPoint,
+          trimEnd: clip.trimEnd + (clip.durationFrames - cutPoint)
+        };
+
+        // Second half (after cut)
+        const secondHalf: Clip = {
+          ...clip,
+          id: generateId(),
+          startFrame: frame,
+          durationFrames: clip.durationFrames - cutPoint,
+          trimStart: clip.trimStart + cutPoint
+        };
+
+        newClips.push(firstHalf, secondHalf);
+      } else {
+        newClips.push(clip);
+      }
+    });
+
+    setClips(newClips);
+    setSelection({ type: 'none' });
+  }, [clips, currentFrame]);
 
   const handleUpdateClip = useCallback((clipId: string, updates: Partial<Clip>) => {
     setClips(prev => prev.map(c =>
@@ -1325,6 +1379,9 @@ export default function VideoEditorPage() {
           setSelection({ type: 'none' });
           setShowProperties(false);
           break;
+        case 'c':
+          handleCutAtPlayhead();
+          break;
         case 'm':
           setShowMediaBrowser(p => !p);
           break;
@@ -1333,7 +1390,7 @@ export default function VideoEditorPage() {
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [selection, totalFrames]);
+  }, [selection, totalFrames, handleCutAtPlayhead]);
 
   return (
     <div className="h-screen flex flex-col bg-zinc-950 text-white overflow-hidden">
@@ -1362,6 +1419,12 @@ export default function VideoEditorPage() {
           <button className="p-2 hover:bg-zinc-800 rounded" title="Settings">
             <Settings size={18} />
           </button>
+          <div className="ml-2 pl-2 border-l border-zinc-700 text-xs text-zinc-500 hidden lg:flex items-center gap-3">
+            <span title="Play/Pause"><kbd className="px-1.5 py-0.5 bg-zinc-800 rounded text-zinc-400">Space</kbd></span>
+            <span title="Cut at playhead"><kbd className="px-1.5 py-0.5 bg-zinc-800 rounded text-zinc-400">C</kbd> Cut</span>
+            <span title="Delete selected"><kbd className="px-1.5 py-0.5 bg-zinc-800 rounded text-zinc-400">Del</kbd></span>
+            <span title="Toggle media browser"><kbd className="px-1.5 py-0.5 bg-zinc-800 rounded text-zinc-400">M</kbd></span>
+          </div>
         </div>
       </header>
 
@@ -1387,6 +1450,7 @@ export default function VideoEditorPage() {
               currentFrame={Math.round(currentFrame)}
               isPlaying={isPlaying}
               onTimeUpdate={setCurrentFrame}
+              onPlayToggle={setIsPlaying}
               onLoadedMetadata={handleClipMetadataLoaded}
               selection={selection}
             />
@@ -1456,12 +1520,16 @@ export default function VideoEditorPage() {
 
             <div className="w-px h-6 bg-zinc-700 mx-2" />
 
-            <button className="p-2 hover:bg-zinc-800 rounded text-zinc-400" title="Cut at playhead">
+            <button
+              onClick={handleCutAtPlayhead}
+              className="p-2 hover:bg-zinc-800 rounded text-zinc-400 hover:text-white"
+              title="Cut at playhead (C)"
+            >
               <Scissors size={18} />
             </button>
             <button
-              className="p-2 hover:bg-zinc-800 rounded text-zinc-400"
-              title="Delete selected"
+              className="p-2 hover:bg-zinc-800 rounded text-zinc-400 hover:text-red-400"
+              title="Delete selected (Del)"
               onClick={() => {
                 if (selection.type === 'clip') {
                   setClips(prev => prev.filter(c => c.id !== selection.clipId));
