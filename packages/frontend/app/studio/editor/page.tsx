@@ -983,6 +983,11 @@ export default function VideoEditorPage() {
   const [selectedClipForProps, setSelectedClipForProps] = useState<Clip | null>(null);
   const [draggedAsset, setDraggedAsset] = useState<MediaAsset | null>(null);
 
+  // In/Out point markers for range editing
+  const [inPoint, setInPoint] = useState<number | null>(null);
+  const [outPoint, setOutPoint] = useState<number | null>(null);
+  const [editMessage, setEditMessage] = useState<string | null>(null);
+
   // Refs
   const timelineRef = useRef<HTMLDivElement>(null);
   const playheadRef = useRef<HTMLDivElement>(null);
@@ -1180,15 +1185,50 @@ export default function VideoEditorPage() {
   // Clip manipulation
   const handleDragClip = useCallback((clip: Clip, e: React.MouseEvent) => {
     const startX = e.clientX;
+    const startY = e.clientY;
     const startFrame = clip.startFrame;
+    const startTrackId = clip.trackId;
+
+    // Track heights for calculating which track we're over
+    const trackHeights = tracks.map(t => t.height);
+    const trackIds = tracks.map(t => t.id);
 
     const handleMouseMove = (moveEvent: MouseEvent) => {
       const deltaX = moveEvent.clientX - startX;
+      const deltaY = moveEvent.clientY - startY;
       const deltaFrames = Math.round(deltaX / (PIXELS_PER_FRAME * zoom));
       const newStart = Math.max(0, startFrame + deltaFrames);
 
+      // Calculate which track based on vertical movement
+      let newTrackId = startTrackId;
+      const startTrackIndex = trackIds.indexOf(startTrackId);
+
+      if (Math.abs(deltaY) > 30) { // Threshold for track change
+        // Calculate cumulative track heights to determine which track
+        let accumulatedHeight = 0;
+        const trackThreshold = 30; // pixels to move to change track
+
+        if (deltaY > 0) {
+          // Moving down
+          for (let i = startTrackIndex + 1; i < trackIds.length; i++) {
+            accumulatedHeight += trackHeights[i - 1];
+            if (deltaY > accumulatedHeight - trackThreshold) {
+              newTrackId = trackIds[i];
+            }
+          }
+        } else {
+          // Moving up
+          for (let i = startTrackIndex - 1; i >= 0; i--) {
+            accumulatedHeight += trackHeights[i + 1];
+            if (-deltaY > accumulatedHeight - trackThreshold) {
+              newTrackId = trackIds[i];
+            }
+          }
+        }
+      }
+
       setClips(prev => prev.map(c =>
-        c.id === clip.id ? { ...c, startFrame: newStart } : c
+        c.id === clip.id ? { ...c, startFrame: newStart, trackId: newTrackId } : c
       ));
     };
 
@@ -1199,7 +1239,7 @@ export default function VideoEditorPage() {
 
     document.addEventListener('mousemove', handleMouseMove);
     document.addEventListener('mouseup', handleMouseUp);
-  }, [zoom]);
+  }, [zoom, tracks]);
 
   const handleTrimClip = useCallback((clip: Clip, handle: 'left' | 'right', e: React.MouseEvent) => {
     e.stopPropagation();
@@ -1327,6 +1367,153 @@ export default function VideoEditorPage() {
     setSelection({ type: 'none' });
   }, [clips, currentFrame]);
 
+  // Set In point (start of range)
+  const handleSetInPoint = useCallback(() => {
+    const frame = Math.round(currentFrame);
+    setInPoint(frame);
+
+    if (outPoint !== null && frame < outPoint) {
+      // Both points set - create range selection
+      setSelection({
+        type: 'range',
+        startFrame: frame,
+        endFrame: outPoint,
+        trackIds: tracks.map(t => t.id)
+      });
+      setEditMessage(`Range: ${frameToTime(frame)} → ${frameToTime(outPoint)}`);
+    } else {
+      // Clear out point if in point is after it
+      if (outPoint !== null && frame >= outPoint) {
+        setOutPoint(null);
+      }
+      setEditMessage(`In point set at ${frameToTime(frame)} — Press O to set out point`);
+    }
+
+    // Clear message after 3 seconds
+    setTimeout(() => setEditMessage(null), 3000);
+  }, [currentFrame, outPoint, tracks]);
+
+  // Set Out point (end of range)
+  const handleSetOutPoint = useCallback(() => {
+    const frame = Math.round(currentFrame);
+    setOutPoint(frame);
+
+    if (inPoint !== null && frame > inPoint) {
+      // Both points set - create range selection
+      setSelection({
+        type: 'range',
+        startFrame: inPoint,
+        endFrame: frame,
+        trackIds: tracks.map(t => t.id)
+      });
+      setEditMessage(`Range: ${frameToTime(inPoint)} → ${frameToTime(frame)}`);
+    } else {
+      // Clear in point if out point is before it
+      if (inPoint !== null && frame <= inPoint) {
+        setInPoint(null);
+      }
+      setEditMessage(`Out point set at ${frameToTime(frame)} — Press I to set in point`);
+    }
+
+    // Clear message after 3 seconds
+    setTimeout(() => setEditMessage(null), 3000);
+  }, [currentFrame, inPoint, tracks]);
+
+  // Clear In/Out points
+  const handleClearInOutPoints = useCallback(() => {
+    setInPoint(null);
+    setOutPoint(null);
+    setSelection({ type: 'none' });
+    setEditMessage('In/Out points cleared');
+    setTimeout(() => setEditMessage(null), 2000);
+  }, []);
+
+  // Delete clips in range (or selected clip)
+  const handleDeleteSelection = useCallback(() => {
+    if (selection.type === 'clip') {
+      // Delete single clip
+      setClips(prev => prev.filter(c => c.id !== selection.clipId));
+      setSelection({ type: 'none' });
+      setShowProperties(false);
+    } else if (selection.type === 'range' && selection.startFrame !== undefined && selection.endFrame !== undefined) {
+      // Delete parts of clips within range
+      const start = selection.startFrame;
+      const end = selection.endFrame;
+
+      const newClips: Clip[] = [];
+
+      clips.forEach(clip => {
+        const clipStart = clip.startFrame;
+        const clipEnd = clip.startFrame + clip.durationFrames;
+
+        // Clip is completely outside range - keep as is
+        if (clipEnd <= start || clipStart >= end) {
+          newClips.push(clip);
+          return;
+        }
+
+        // Clip is completely inside range - delete it
+        if (clipStart >= start && clipEnd <= end) {
+          return;
+        }
+
+        // Clip overlaps start of range - keep left part
+        if (clipStart < start && clipEnd > start && clipEnd <= end) {
+          newClips.push({
+            ...clip,
+            durationFrames: start - clipStart,
+            trimEnd: clip.trimEnd + (clipEnd - start)
+          });
+          return;
+        }
+
+        // Clip overlaps end of range - keep right part
+        if (clipStart >= start && clipStart < end && clipEnd > end) {
+          newClips.push({
+            ...clip,
+            id: generateId(),
+            startFrame: end,
+            durationFrames: clipEnd - end,
+            trimStart: clip.trimStart + (end - clipStart)
+          });
+          return;
+        }
+
+        // Clip spans entire range - split into two parts
+        if (clipStart < start && clipEnd > end) {
+          // Left part
+          newClips.push({
+            ...clip,
+            durationFrames: start - clipStart,
+            trimEnd: clip.trimEnd + (clipEnd - start)
+          });
+          // Right part
+          newClips.push({
+            ...clip,
+            id: generateId(),
+            startFrame: end,
+            durationFrames: clipEnd - end,
+            trimStart: clip.trimStart + (end - clipStart)
+          });
+        }
+      });
+
+      setClips(newClips);
+      setSelection({ type: 'none' });
+      setInPoint(null);
+      setOutPoint(null);
+      setEditMessage('Range deleted');
+      setTimeout(() => setEditMessage(null), 2000);
+    }
+  }, [selection, clips]);
+
+  // Move clip to different track
+  const handleMoveClipToTrack = useCallback((clipId: string, newTrackId: string) => {
+    setClips(prev => prev.map(c =>
+      c.id === clipId ? { ...c, trackId: newTrackId } : c
+    ));
+  }, []);
+
   const handleUpdateClip = useCallback((clipId: string, updates: Partial<Clip>) => {
     setClips(prev => prev.map(c =>
       c.id === clipId ? { ...c, ...updates } : c
@@ -1369,18 +1556,24 @@ export default function VideoEditorPage() {
           break;
         case 'Delete':
         case 'Backspace':
-          if (selection.type === 'clip') {
-            setClips(prev => prev.filter(c => c.id !== selection.clipId));
-            setSelection({ type: 'none' });
-            setShowProperties(false);
-          }
+          e.preventDefault();
+          handleDeleteSelection();
           break;
         case 'Escape':
-          setSelection({ type: 'none' });
+          handleClearInOutPoints();
           setShowProperties(false);
           break;
         case 'c':
           handleCutAtPlayhead();
+          break;
+        case 'i':
+          handleSetInPoint();
+          break;
+        case 'o':
+          handleSetOutPoint();
+          break;
+        case 'x':
+          handleClearInOutPoints();
           break;
         case 'm':
           setShowMediaBrowser(p => !p);
@@ -1390,7 +1583,7 @@ export default function VideoEditorPage() {
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [selection, totalFrames, handleCutAtPlayhead]);
+  }, [selection, totalFrames, handleCutAtPlayhead, handleSetInPoint, handleSetOutPoint, handleClearInOutPoints, handleDeleteSelection]);
 
   return (
     <div className="h-screen flex flex-col bg-zinc-950 text-white overflow-hidden">
@@ -1421,9 +1614,11 @@ export default function VideoEditorPage() {
           </button>
           <div className="ml-2 pl-2 border-l border-zinc-700 text-xs text-zinc-500 hidden lg:flex items-center gap-3">
             <span title="Play/Pause"><kbd className="px-1.5 py-0.5 bg-zinc-800 rounded text-zinc-400">Space</kbd></span>
-            <span title="Cut at playhead"><kbd className="px-1.5 py-0.5 bg-zinc-800 rounded text-zinc-400">C</kbd> Cut</span>
-            <span title="Delete selected"><kbd className="px-1.5 py-0.5 bg-zinc-800 rounded text-zinc-400">Del</kbd></span>
-            <span title="Toggle media browser"><kbd className="px-1.5 py-0.5 bg-zinc-800 rounded text-zinc-400">M</kbd></span>
+            <span title="Set In point"><kbd className="px-1.5 py-0.5 bg-green-800 rounded text-green-400">I</kbd></span>
+            <span title="Set Out point"><kbd className="px-1.5 py-0.5 bg-yellow-800 rounded text-yellow-400">O</kbd></span>
+            <span title="Clear In/Out"><kbd className="px-1.5 py-0.5 bg-zinc-800 rounded text-zinc-400">X</kbd></span>
+            <span title="Cut at playhead"><kbd className="px-1.5 py-0.5 bg-zinc-800 rounded text-zinc-400">C</kbd></span>
+            <span title="Delete"><kbd className="px-1.5 py-0.5 bg-red-800 rounded text-red-400">Del</kbd></span>
           </div>
         </div>
       </header>
@@ -1456,8 +1651,15 @@ export default function VideoEditorPage() {
             />
           </div>
 
+          {/* Edit message toast */}
+          {editMessage && (
+            <div className="absolute top-4 left-1/2 -translate-x-1/2 z-50 bg-zinc-800 border border-zinc-700 px-4 py-2 rounded-lg shadow-lg">
+              <p className="text-sm text-white">{editMessage}</p>
+            </div>
+          )}
+
           {/* Transport controls */}
-          <div className="h-14 bg-zinc-900 border-t border-zinc-800 flex items-center justify-center gap-4 px-4">
+          <div className="h-14 bg-zinc-900 border-t border-zinc-800 flex items-center justify-center gap-4 px-4 relative">
             <button
               onClick={() => { setCurrentFrame(0); setIsPlaying(false); }}
               className="p-2 hover:bg-zinc-800 rounded"
@@ -1529,13 +1731,9 @@ export default function VideoEditorPage() {
             </button>
             <button
               className="p-2 hover:bg-zinc-800 rounded text-zinc-400 hover:text-red-400"
-              title="Delete selected (Del)"
-              onClick={() => {
-                if (selection.type === 'clip') {
-                  setClips(prev => prev.filter(c => c.id !== selection.clipId));
-                  setSelection({ type: 'none' });
-                }
-              }}
+              title="Delete selection (Del)"
+              onClick={handleDeleteSelection}
+              disabled={selection.type === 'none'}
             >
               <Trash2 size={18} />
             </button>
@@ -1568,6 +1766,41 @@ export default function VideoEditorPage() {
                 ))}
               </div>
             </div>
+
+            {/* In/Out Range Highlight */}
+            {inPoint !== null && outPoint !== null && (
+              <div
+                className="absolute top-8 bottom-0 bg-blue-500/20 border-x-2 border-blue-500 z-20 pointer-events-none"
+                style={{
+                  left: `${192 + Math.min(inPoint, outPoint) * PIXELS_PER_FRAME * zoom}px`,
+                  width: `${Math.abs(outPoint - inPoint) * PIXELS_PER_FRAME * zoom}px`
+                }}
+              />
+            )}
+
+            {/* In Point Marker */}
+            {inPoint !== null && (
+              <div
+                className="absolute top-0 bottom-0 w-0.5 bg-green-500 z-25 pointer-events-none"
+                style={{ left: `${192 + inPoint * PIXELS_PER_FRAME * zoom}px` }}
+              >
+                <div className="absolute -top-0 -left-1.5 w-3 h-4 bg-green-500 text-[8px] text-white flex items-center justify-center font-bold rounded-b">
+                  I
+                </div>
+              </div>
+            )}
+
+            {/* Out Point Marker */}
+            {outPoint !== null && (
+              <div
+                className="absolute top-0 bottom-0 w-0.5 bg-yellow-500 z-25 pointer-events-none"
+                style={{ left: `${192 + outPoint * PIXELS_PER_FRAME * zoom}px` }}
+              >
+                <div className="absolute -top-0 -left-1.5 w-3 h-4 bg-yellow-500 text-[8px] text-black flex items-center justify-center font-bold rounded-b">
+                  O
+                </div>
+              </div>
+            )}
 
             {/* Playhead */}
             <div
