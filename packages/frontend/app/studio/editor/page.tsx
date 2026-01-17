@@ -90,6 +90,10 @@ interface ClaudeContext {
   clips: Clip[];
   activeClip?: Clip;
   screenshot?: string;
+  // In/Out point range for precise editing instructions
+  inPoint: number | null;
+  outPoint: number | null;
+  rangeClips: Clip[]; // Clips within the In/Out range
 }
 
 interface MediaAsset {
@@ -898,20 +902,23 @@ const ClaudeContextPanel: React.FC<ClaudeContextPanelProps> = ({
 }) => {
   const [message, setMessage] = useState('');
 
+  const hasRange = context.inPoint !== null && context.outPoint !== null;
+  const rangeDuration = hasRange
+    ? Math.abs((context.outPoint || 0) - (context.inPoint || 0)) / FPS
+    : 0;
+
   const getSelectionDescription = () => {
-    if (context.selection.type === 'none') {
-      return context.activeClip ? `At: ${context.activeClip.name}` : 'No selection';
-    }
     if (context.selection.type === 'clip') {
       const clip = context.clips.find(c => c.id === context.selection.clipId);
       return clip ? `Clip: ${clip.name} (${clip.type})` : 'Clip selected';
     }
-    if (context.selection.type === 'range') {
-      const start = frameToTime(context.selection.startFrame || 0);
-      const end = frameToTime(context.selection.endFrame || 0);
-      return `Range: ${start} → ${end}`;
+    if (hasRange) {
+      return `Range: ${frameToTime(context.inPoint || 0)} → ${frameToTime(context.outPoint || 0)} (${rangeDuration.toFixed(1)}s)`;
     }
-    return 'Unknown selection';
+    if (context.activeClip) {
+      return `At: ${context.activeClip.name}`;
+    }
+    return 'No selection — Press I to set In point';
   };
 
   const handleSend = () => {
@@ -928,6 +935,28 @@ const ClaudeContextPanel: React.FC<ClaudeContextPanelProps> = ({
           <Wand2 size={18} className="text-indigo-400" />
           <span className="text-sm font-medium text-white">Claude Context</span>
         </div>
+
+        {/* In/Out point indicators */}
+        <div className="flex items-center gap-2">
+          {context.inPoint !== null && (
+            <span className="flex items-center gap-1 px-2 py-0.5 bg-green-900/50 border border-green-700 rounded text-xs text-green-400">
+              <span className="font-bold">I</span>
+              <span className="font-mono">{frameToTime(context.inPoint)}</span>
+            </span>
+          )}
+          {context.outPoint !== null && (
+            <span className="flex items-center gap-1 px-2 py-0.5 bg-yellow-900/50 border border-yellow-700 rounded text-xs text-yellow-400">
+              <span className="font-bold">O</span>
+              <span className="font-mono">{frameToTime(context.outPoint)}</span>
+            </span>
+          )}
+          {hasRange && context.rangeClips.length > 0 && (
+            <span className="text-xs text-zinc-500">
+              {context.rangeClips.length} clip{context.rangeClips.length !== 1 ? 's' : ''} in range
+            </span>
+          )}
+        </div>
+
         <div className="flex-1 text-sm text-zinc-400">
           {getSelectionDescription()}
         </div>
@@ -1301,16 +1330,37 @@ export default function VideoEditorPage() {
 
   // Claude integration
   const handleSendToClaude = useCallback((message: string) => {
+    // Calculate clips within the In/Out range
+    const rangeClips = inPoint !== null && outPoint !== null
+      ? clips.filter(c => {
+          const clipStart = c.startFrame;
+          const clipEnd = c.startFrame + c.durationFrames;
+          const rangeStart = Math.min(inPoint, outPoint);
+          const rangeEnd = Math.max(inPoint, outPoint);
+          return clipStart < rangeEnd && clipEnd > rangeStart;
+        })
+      : [];
+
     const context: ClaudeContext = {
       selection,
       currentFrame: Math.round(currentFrame),
       clips,
-      activeClip: activeClip || undefined
+      activeClip: activeClip || undefined,
+      inPoint,
+      outPoint,
+      rangeClips
     };
 
+    // Build context summary for alert (temporary until WebSocket integration)
+    const rangeInfo = inPoint !== null && outPoint !== null
+      ? `\n- Range: ${frameToTime(Math.min(inPoint, outPoint))} → ${frameToTime(Math.max(inPoint, outPoint))} (${rangeClips.length} clip${rangeClips.length !== 1 ? 's' : ''} affected)`
+      : inPoint !== null
+        ? `\n- In point: ${frameToTime(inPoint)} (no out point set)`
+        : '';
+
     // TODO: Integrate with studio-bridge WebSocket
-    alert(`Sent to Claude:\n\n"${message}"\n\nContext:\n- Selection: ${JSON.stringify(selection)}\n- Frame: ${Math.round(currentFrame)}\n- Active: ${activeClip?.name || 'none'}`);
-  }, [selection, currentFrame, clips, activeClip]);
+    alert(`Sent to Claude:\n\n"${message}"\n\nContext:\n- Selection: ${JSON.stringify(selection)}\n- Frame: ${Math.round(currentFrame)}\n- Active: ${activeClip?.name || 'none'}${rangeInfo}`);
+  }, [selection, currentFrame, clips, activeClip, inPoint, outPoint]);
 
   const handleScreenshot = useCallback(() => {
     // TODO: Implement with html2canvas
@@ -1850,7 +1900,19 @@ export default function VideoEditorPage() {
               selection,
               currentFrame: Math.round(currentFrame),
               clips,
-              activeClip: activeClip || undefined
+              activeClip: activeClip || undefined,
+              inPoint,
+              outPoint,
+              rangeClips: inPoint !== null && outPoint !== null
+                ? clips.filter(c => {
+                    const clipStart = c.startFrame;
+                    const clipEnd = c.startFrame + c.durationFrames;
+                    const rangeStart = Math.min(inPoint, outPoint);
+                    const rangeEnd = Math.max(inPoint, outPoint);
+                    // Clip overlaps with range
+                    return clipStart < rangeEnd && clipEnd > rangeStart;
+                  })
+                : []
             }}
             onSendToClaude={handleSendToClaude}
             onScreenshot={handleScreenshot}
