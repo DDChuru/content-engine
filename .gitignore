@@ -71,3 +71,49 @@ screenshots/
 current-session-id.txt
 studio-change-requests.json
 studio-change-responses.json
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+packages/backend/src/manim/media/
+
+# Test files and scripts (development only)
+test-*.js
+test-*.ts
+*-test.js
+*-test.ts
+generate-*.cjs
+load-*.js
+load-*.sh
+render-*.sh
+
+# Example projects and demos
+examples/
+projects/
+perfect-freehand/
+presentation-studio/
+
+# Standalone HTML demos
+excalidraw-*.html
+whiteboard-*.html
+manim-preview*.html
+multi-mode-studio.html
+voice-studio.html
+presentation-studio.html
+
+# Bridge and session files
+bridge-agent-server.js
+studio-bridge-integration.js
+start-voice-studio.sh
+
+# Local config
+puppeteer-config.json
+
+# Documentation (generated/temporary)
+packages/backend/*.md
+!packages/backend/README.md
+
+# Diagrams (generated)
+*.mmd
+test-diagram.png
