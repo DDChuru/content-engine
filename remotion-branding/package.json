@@ -1,0 +1,31 @@
+{
+  "name": "remotion-branding",
+  "version": "1.0.0",
+  "description": "Content Engine Branded Intro/Outro Templates",
+  "scripts": {
+    "start": "remotion preview src/index.ts",
+    "build": "remotion render src/index.ts Intro out/intro.mp4",
+    "render:intro": "remotion render src/index.ts Intro out/intro.mp4",
+    "render:outro": "remotion render src/index.ts Outro out/outro.mp4",
+    "render:sop-intro": "remotion render src/index.ts SOPIntro out/sop-intro.mp4",
+    "render:pipeline": "remotion render src/index.ts PipelineDiagram out/pipeline.mp4",
+    "render:all": "npm run render:intro && npm run render:outro && npm run render:pipeline"
+  },
+  "keywords": [
+    "remotion",
+    "video",
+    "branding"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "remotion": "^4.0.364"
+  },
+  "devDependencies": {
+    "@remotion/cli": "^4.0.364",
+    "@types/react": "^18.3.26",
+    "typescript": "^5.9.3"
+  }
+}
