@@ -26,9 +26,10 @@ export function initializeFirebase() {
   if (process.env.ICLEAN_FIREBASE_KEY) {
     try {
       const serviceAccount = JSON.parse(process.env.ICLEAN_FIREBASE_KEY) as ServiceAccount;
+      const projectId = (serviceAccount as any).project_id || serviceAccount.projectId;
       const app = admin.initializeApp({
         credential: admin.credential.cert(serviceAccount),
-        storageBucket: `${serviceAccount.projectId}.appspot.com`
+        storageBucket: `${projectId}.appspot.com`
       }, 'iclean');
 
       firebaseProjects.set('iclean', {
@@ -48,9 +49,10 @@ export function initializeFirebase() {
   if (process.env.HACCP_FIREBASE_KEY) {
     try {
       const serviceAccount = JSON.parse(process.env.HACCP_FIREBASE_KEY) as ServiceAccount;
+      const projectId = (serviceAccount as any).project_id || serviceAccount.projectId;
       const app = admin.initializeApp({
         credential: admin.credential.cert(serviceAccount),
-        storageBucket: `${serviceAccount.projectId}.appspot.com`
+        storageBucket: `${projectId}.appspot.com`
       }, 'haccp');
 
       firebaseProjects.set('haccp', {
@@ -70,9 +72,10 @@ export function initializeFirebase() {
   if (process.env.MATH_FIREBASE_KEY) {
     try {
       const serviceAccount = JSON.parse(process.env.MATH_FIREBASE_KEY) as ServiceAccount;
+      const projectId = (serviceAccount as any).project_id || serviceAccount.projectId;
       const app = admin.initializeApp({
         credential: admin.credential.cert(serviceAccount),
-        storageBucket: `${serviceAccount.projectId}.appspot.com`
+        storageBucket: `${projectId}.appspot.com`
       }, 'math');
 
       firebaseProjects.set('math', {
@@ -92,9 +95,10 @@ export function initializeFirebase() {
   if (process.env.PEAKFLOW_FIREBASE_KEY) {
     try {
       const serviceAccount = JSON.parse(process.env.PEAKFLOW_FIREBASE_KEY) as ServiceAccount;
+      const projectId = (serviceAccount as any).project_id || serviceAccount.projectId;
       const app = admin.initializeApp({
         credential: admin.credential.cert(serviceAccount),
-        storageBucket: `${serviceAccount.projectId}.firebasestorage.app`
+        storageBucket: `${projectId}.firebasestorage.app`
       }, 'peakflow');
 
       firebaseProjects.set('peakflow', {
@@ -110,13 +114,16 @@ export function initializeFirebase() {
     }
   }
 
-  // Initialize ACS project (if configured)
+  // Initialize ACS project
+  // NOTE: ACS is a TENANT within the iClean Firebase project (same database: iclean-field-service-4bddd)
+  // It can use either its own key OR reuse the iClean key as an alias
   if (process.env.ACS_FIREBASE_KEY) {
     try {
       const serviceAccount = JSON.parse(process.env.ACS_FIREBASE_KEY) as ServiceAccount;
+      const projectId = (serviceAccount as any).project_id || serviceAccount.projectId;
       const app = admin.initializeApp({
         credential: admin.credential.cert(serviceAccount),
-        storageBucket: `${serviceAccount.projectId}.appspot.com`
+        storageBucket: `${projectId}.appspot.com`
       }, 'acs');
 
       firebaseProjects.set('acs', {
@@ -126,19 +133,25 @@ export function initializeFirebase() {
         auth: app.auth()
       });
 
-      console.log('   ✓ ACS Firebase initialized');
+      console.log('   ✓ ACS Firebase initialized (dedicated key)');
     } catch (error) {
       console.error('   ✗ Failed to initialize ACS Firebase:', error);
     }
+  } else if (firebaseProjects.has('iclean')) {
+    // ACS is a tenant in iClean - reuse iClean's Firebase connection
+    const icleanProject = firebaseProjects.get('iclean')!;
+    firebaseProjects.set('acs', icleanProject);
+    console.log('   ✓ ACS Firebase initialized (alias to iClean - same database)');
   }
 
   // Initialize Education project (if configured)
   if (process.env.EDUCATION_FIREBASE_KEY) {
     try {
       const serviceAccount = JSON.parse(process.env.EDUCATION_FIREBASE_KEY) as ServiceAccount;
+      const projectId = (serviceAccount as any).project_id || serviceAccount.projectId;
       const app = admin.initializeApp({
         credential: admin.credential.cert(serviceAccount),
-        storageBucket: `${serviceAccount.projectId}.appspot.com`
+        storageBucket: `${projectId}.appspot.com`
       }, 'education');
 
       firebaseProjects.set('education', {
@@ -250,6 +263,40 @@ export async function readFromFirestore(
   }
 
   return { id: doc.id, ...doc.data() };
+}
+
+/**
+ * Delete document from Firestore
+ */
+export async function deleteFromFirestore(
+  projectName: string,
+  collection: string,
+  docId: string
+): Promise<void> {
+  const project = getFirebaseProject(projectName);
+  if (!project) {
+    throw new Error(`Firebase project ${projectName} not initialized`);
+  }
+
+  await project.db.collection(collection).doc(docId).delete();
+}
+
+/**
+ * Update a document in Firestore (merge by default)
+ */
+export async function updateInFirestore(
+  projectName: string,
+  collection: string,
+  docId: string,
+  data: Record<string, any>,
+  merge: boolean = true
+): Promise<void> {
+  const project = getFirebaseProject(projectName);
+  if (!project) {
+    throw new Error(`Firebase project ${projectName} not initialized`);
+  }
+
+  await project.db.collection(collection).doc(docId).set(data, { merge });
 }
 
 /**

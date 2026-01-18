@@ -29,7 +29,7 @@ export class RemotionFileManager {
     await fs.mkdir(this.publicDir, { recursive: true });
     await fs.mkdir(path.join(this.publicDir, 'videos'), { recursive: true });
     await fs.mkdir(path.join(this.publicDir, 'images'), { recursive: true });
-    await fs.mkdir(path.join(this.publicDir, 'audio'), { recursive: true });
+    await fs.mkdir(path.join(this.publicDir, 'audios'), { recursive: true });
   }
 
   /**
@@ -83,7 +83,7 @@ export class RemotionFileManager {
     try {
       await fs.rm(path.join(this.publicDir, 'videos'), { recursive: true, force: true });
       await fs.rm(path.join(this.publicDir, 'images'), { recursive: true, force: true });
-      await fs.rm(path.join(this.publicDir, 'audio'), { recursive: true, force: true });
+      await fs.rm(path.join(this.publicDir, 'audios'), { recursive: true, force: true });
       await this.ensurePublicDir();
       console.log('[RemotionFileManager] Assets cleared');
     } catch (error) {

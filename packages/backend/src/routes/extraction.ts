@@ -46,13 +46,26 @@ const uploadSectionImages = async (
     return;
   }
 
-  // Filter out likely logo/header images
-  // Heuristic: Images on page 1 with no caption are likely logos
-  const filteredImages = section.images.filter((img) => {
-    // Keep if has a meaningful caption
-    if (img.caption && img.caption.length > 10) return true;
+  // Filter out logos, icons, and small images
+  // Heuristics:
+  // 1. Small images (< 15KB) are likely icons (PPE icons, logos, etc.)
+  // 2. Page 1 images without meaningful captions are likely logos
+  // Actual inspection photos are typically 50KB+
+  const MIN_IMAGE_SIZE_BYTES = 15000; // 15KB minimum for inspection photos
 
-    // Filter out page 1 images without captions (likely logos)
+  const filteredImages = section.images.filter((img) => {
+    // Check image size if we have base64 data
+    if (img.data) {
+      const buffer = Buffer.from(img.data, 'base64');
+      const sizeKB = buffer.length / 1024;
+
+      if (buffer.length < MIN_IMAGE_SIZE_BYTES) {
+        console.log(`🚫 [uploadSectionImages] Filtering out small image (${sizeKB.toFixed(1)}KB) - likely icon/logo`);
+        return false;
+      }
+    }
+
+    // Filter out page 1 images without meaningful captions (likely logos)
     if (img.pageNumber === 1 && (!img.caption || img.caption.length < 10)) {
       console.log(`🚫 [uploadSectionImages] Filtering out likely logo/header image from page 1`);
       return false;

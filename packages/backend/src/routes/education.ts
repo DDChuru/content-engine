@@ -4,6 +4,8 @@ import FFmpegVideoCombiner from '../services/ffmpeg-video-combiner.js';
 import { ClaudeService } from '../services/claude.js';
 import { EducationalVizAgent } from '../agents/educational-viz-agent.js';
 import type { EducationalVisualizationRequest } from '../agents/educational-viz-agent.js';
+import { EducationFirestoreService } from '../services/education-firestore.js';
+import type { ContentStatus, TopicLevel, LessonContent, TopicAsset } from '../services/education-firestore.js';
 import multer from 'multer';
 import { execSync } from 'child_process';
 import fs from 'fs/promises';
@@ -1532,6 +1534,762 @@ router.post('/sets-demo', async (req, res) => {
 
   } catch (error: any) {
     console.error('Sets demo generation failed:', error);
+    res.status(500).json({
+      success: false,
+      error: error.message
+    });
+  }
+});
+
+// ============================================================================
+// IGCSE EDUCATION PLATFORM - FIRESTORE ROUTES
+// Cambridge IGCSE 0580 Mathematics Content Management
+// ============================================================================
+
+// Lazy-initialize Firestore service
+let educationServiceInstance: EducationFirestoreService | null = null;
+
+function getEducationService(): EducationFirestoreService {
+  if (!educationServiceInstance) {
+    educationServiceInstance = new EducationFirestoreService();
+  }
+  return educationServiceInstance;
+}
+
+// ---------------------------------------------------------------------------
+// SYLLABUS MANAGEMENT
+// ---------------------------------------------------------------------------
+
+/**
+ * GET /api/education/syllabus
+ * Get syllabus overview with units, topics, and hasLesson status
+ */
+router.get('/syllabus', async (req, res) => {
+  try {
+    const educationService = getEducationService();
+    const overview = await educationService.getSyllabusOverview();
+
+    // Enrich units with topics and hasLesson status
+    const unitsWithTopics = await Promise.all(
+      overview.units.map(async (unit) => {
+        const topics = await educationService.getUnitTopics(unit.id);
+
+        // Check which topics have lesson files
+        const topicsWithLessonStatus = await Promise.all(
+          topics.map(async (topic) => {
+            const normalizedCode = topic.code.toLowerCase();
+            const lessonPath = `${process.cwd()}/output/lessons/igcse-0580-${normalizedCode}.json`;
+
+            let hasLesson = false;
+            try {
+              await fs.access(lessonPath);
+              hasLesson = true;
+            } catch {
+              // File doesn't exist, check Firestore
+              hasLesson = topic.status === 'published' || topic.status === 'approved';
+            }
+
+            return {
+              code: topic.code,
+              title: topic.title,
+              level: topic.level,
+              status: topic.status,
+              estimatedDuration: topic.estimatedDuration || 30,
+              hasLesson,
+            };
+          })
+        );
+
+        return {
+          code: unit.code,
+          title: unit.title,
+          level: unit.level,
+          icon: unit.icon,
+          color: unit.color,
+          topics: topicsWithLessonStatus,
+        };
+      })
+    );
+
+    res.json({
+      success: true,
+      syllabus: {
+        metadata: overview.metadata,
+        units: unitsWithTopics,
+      },
+      coverage: overview.coverage,
+    });
+  } catch (error: any) {
+    console.error('Failed to get syllabus overview:', error);
+    res.status(500).json({
+      success: false,
+      error: error.message
+    });
+  }
+});
+
+/**
+ * POST /api/education/syllabus/initialize
+ * Initialize syllabus from JSON data (one-time setup)
+ */
+router.post('/syllabus/initialize', async (req, res) => {
+  try {
+    const { syllabusData } = req.body;
+
+    if (!syllabusData) {
+      return res.status(400).json({
+        success: false,
+        error: 'syllabusData is required'
+      });
+    }
+
+    await getEducationService().initializeSyllabus(syllabusData);
+
+    res.json({
+      success: true,
+      message: 'Syllabus initialized successfully'
+    });
+  } catch (error: any) {
+    console.error('Failed to initialize syllabus:', error);
+    res.status(500).json({
+      success: false,
+      error: error.message
+    });
+  }
+});
+
+// ---------------------------------------------------------------------------
+// UNIT & TOPIC MANAGEMENT
+// ---------------------------------------------------------------------------
+
+/**
+ * GET /api/education/units/:unitId/topics
+ * Get all topics for a specific unit
+ */
+router.get('/units/:unitId/topics', async (req, res) => {
+  try {
+    const { unitId } = req.params;
+    const topics = await getEducationService().getUnitTopics(unitId);
+
+    res.json({
+      success: true,
+      data: {
+        unitId,
+        topics,
+        count: topics.length
+      }
+    });
+  } catch (error: any) {
+    console.error('Failed to get unit topics:', error);
+    res.status(500).json({
+      success: false,
+      error: error.message
+    });
+  }
+});
+
+/**
+ * GET /api/education/topics/by-status
+ * Get topics filtered by content status and optionally by level (Core/Extended)
+ * Query params: status (required), level (optional: 'Core' | 'Extended')
+ */
+router.get('/topics/by-status', async (req, res) => {
+  try {
+    const status = req.query.status as ContentStatus;
+    const level = req.query.level as TopicLevel | undefined;
+
+    if (!status) {
+      return res.status(400).json({
+        success: false,
+        error: 'status query parameter is required'
+      });
+    }
+
+    const validStatuses: ContentStatus[] = ['not_started', 'generating', 'review', 'approved', 'published'];
+    if (!validStatuses.includes(status)) {
+      return res.status(400).json({
+        success: false,
+        error: `Invalid status. Must be one of: ${validStatuses.join(', ')}`
+      });
+    }
+
+    const topics = await getEducationService().getTopicsByStatus(status, level);
+
+    res.json({
+      success: true,
+      data: {
+        status,
+        level: level || 'all',
+        topics,
+        count: topics.length
+      }
+    });
+  } catch (error: any) {
+    console.error('Failed to get topics by status:', error);
+    res.status(500).json({
+      success: false,
+      error: error.message
+    });
+  }
+});
+
+/**
+ * GET /api/education/topics/next-to-generate
+ * Get the next topics ready for content generation
+ * Query params: count (optional, default 5)
+ */
+router.get('/topics/next-to-generate', async (req, res) => {
+  try {
+    const count = parseInt(req.query.count as string) || 5;
+    const topics = await getEducationService().getNextTopicsToGenerate(count);
+
+    res.json({
+      success: true,
+      data: {
+        topics,
+        count: topics.length,
+        message: topics.length > 0
+          ? `Found ${topics.length} topics ready for generation`
+          : 'No topics pending generation'
+      }
+    });
+  } catch (error: any) {
+    console.error('Failed to get next topics:', error);
+    res.status(500).json({
+      success: false,
+      error: error.message
+    });
+  }
+});
+
+/**
+ * GET /api/education/topics/:topicCode
+ * Get a specific topic by its code (e.g., 'C1.2' or 'E4.7')
+ */
+router.get('/topics/:topicCode', async (req, res) => {
+  try {
+    const { topicCode } = req.params;
+    const topic = await getEducationService().getTopic(topicCode);
+
+    if (!topic) {
+      return res.status(404).json({
+        success: false,
+        error: `Topic ${topicCode} not found`
+      });
+    }
+
+    res.json({
+      success: true,
+      data: topic
+    });
+  } catch (error: any) {
+    console.error('Failed to get topic:', error);
+    res.status(500).json({
+      success: false,
+      error: error.message
+    });
+  }
+});
+
+/**
+ * PUT /api/education/topics/:topicCode/status
+ * Update topic content status
+ */
+router.put('/topics/:topicCode/status', async (req, res) => {
+  try {
+    const { topicCode } = req.params;
+    const { status } = req.body;
+
+    const validStatuses: ContentStatus[] = ['not_started', 'generating', 'review', 'approved', 'published'];
+    if (!validStatuses.includes(status)) {
+      return res.status(400).json({
+        success: false,
+        error: `Invalid status. Must be one of: ${validStatuses.join(', ')}`
+      });
+    }
+
+    await getEducationService().updateTopicStatus(topicCode, status);
+
+    res.json({
+      success: true,
+      message: `Topic ${topicCode} status updated to ${status}`
+    });
+  } catch (error: any) {
+    console.error('Failed to update topic status:', error);
+    res.status(500).json({
+      success: false,
+      error: error.message
+    });
+  }
+});
+
+// ---------------------------------------------------------------------------
+// LESSON CONTENT MANAGEMENT
+// ---------------------------------------------------------------------------
+
+/**
+ * POST /api/education/topics/:topicCode/lesson
+ * Save generated lesson content for a topic
+ */
+router.post('/topics/:topicCode/lesson', async (req, res) => {
+  try {
+    const { topicCode } = req.params;
+    const { lesson, generatedBy } = req.body;
+
+    if (!lesson) {
+      return res.status(400).json({
+        success: false,
+        error: 'lesson content is required'
+      });
+    }
+
+    await getEducationService().saveLessonContent(
+      topicCode,
+      lesson as LessonContent,
+      generatedBy || 'api'
+    );
+
+    res.json({
+      success: true,
+      message: `Lesson content saved for topic ${topicCode}`,
+      topicCode
+    });
+  } catch (error: any) {
+    console.error('Failed to save lesson:', error);
+    res.status(500).json({
+      success: false,
+      error: error.message
+    });
+  }
+});
+
+/**
+ * GET /api/education/topics/:topicCode/lesson
+ * Get lesson content for a topic (from local file or Firestore)
+ */
+router.get('/topics/:topicCode/lesson', async (req, res) => {
+  try {
+    const { topicCode } = req.params;
+    const normalizedCode = topicCode.toLowerCase();
+
+    // Try to load from local JSON file first
+    const lessonPath = `${process.cwd()}/output/lessons/igcse-0580-${normalizedCode}.json`;
+
+    try {
+      const lessonContent = await fs.readFile(lessonPath, 'utf-8');
+      const lesson = JSON.parse(lessonContent);
+
+      return res.json({
+        success: true,
+        lesson,
+        source: 'file'
+      });
+    } catch (fileError) {
+      // File not found, try Firestore
+      console.log(`Lesson file not found at ${lessonPath}, checking Firestore...`);
+    }
+
+    // Try to get from Firestore
+    const topic = await getEducationService().getTopic(topicCode);
+
+    if (!topic) {
+      return res.status(404).json({
+        success: false,
+        error: `Topic ${topicCode} not found`
+      });
+    }
+
+    // Check if topic has lesson content in Firestore
+    if (topic.lessonContent) {
+      return res.json({
+        success: true,
+        lesson: topic.lessonContent,
+        source: 'firestore'
+      });
+    }
+
+    // No lesson available
+    return res.status(404).json({
+      success: false,
+      error: `No lesson content available for topic ${topicCode}`,
+      topic: {
+        code: topic.code,
+        title: topic.title,
+        status: topic.status
+      }
+    });
+  } catch (error: any) {
+    console.error('Failed to get lesson:', error);
+    res.status(500).json({
+      success: false,
+      error: error.message
+    });
+  }
+});
+
+/**
+ * POST /api/education/topics/:topicCode/assets
+ * Add an asset (video, audio, image, interactive) to a topic
+ */
+router.post('/topics/:topicCode/assets', async (req, res) => {
+  try {
+    const { topicCode } = req.params;
+    const asset = req.body as TopicAsset;
+
+    if (!asset.type || !asset.url) {
+      return res.status(400).json({
+        success: false,
+        error: 'Asset must have type and url'
+      });
+    }
+
+    const assetId = await getEducationService().addTopicAsset(topicCode, asset);
+
+    res.json({
+      success: true,
+      message: `Asset added to topic ${topicCode}`,
+      assetId
+    });
+  } catch (error: any) {
+    console.error('Failed to add asset:', error);
+    res.status(500).json({
+      success: false,
+      error: error.message
+    });
+  }
+});
+
+// ---------------------------------------------------------------------------
+// STUDENT PROGRESS TRACKING
+// ---------------------------------------------------------------------------
+
+/**
+ * GET /api/education/students/:studentId/dashboard
+ * Get student's learning dashboard with overall progress
+ */
+router.get('/students/:studentId/dashboard', async (req, res) => {
+  try {
+    const { studentId } = req.params;
+    const dashboard = await getEducationService().getStudentDashboard(studentId);
+
+    res.json({
+      success: true,
+      data: dashboard
+    });
+  } catch (error: any) {
+    console.error('Failed to get student dashboard:', error);
+    res.status(500).json({
+      success: false,
+      error: error.message
+    });
+  }
+});
+
+/**
+ * GET /api/education/students/:studentId/progress/:topicCode
+ * Get student's progress for a specific topic
+ */
+router.get('/students/:studentId/progress/:topicCode', async (req, res) => {
+  try {
+    const { studentId, topicCode } = req.params;
+    const progress = await getEducationService().getStudentProgress(studentId, topicCode);
+
+    res.json({
+      success: true,
+      data: progress
+    });
+  } catch (error: any) {
+    console.error('Failed to get student progress:', error);
+    res.status(500).json({
+      success: false,
+      error: error.message
+    });
+  }
+});
+
+/**
+ * PUT /api/education/students/:studentId/progress/:topicCode
+ * Update student's progress for a topic
+ */
+router.put('/students/:studentId/progress/:topicCode', async (req, res) => {
+  try {
+    const { studentId, topicCode } = req.params;
+    const updates = req.body;
+
+    await getEducationService().updateStudentProgress(studentId, topicCode, updates);
+
+    res.json({
+      success: true,
+      message: `Progress updated for student ${studentId} on topic ${topicCode}`
+    });
+  } catch (error: any) {
+    console.error('Failed to update progress:', error);
+    res.status(500).json({
+      success: false,
+      error: error.message
+    });
+  }
+});
+
+/**
+ * POST /api/education/students/:studentId/quiz/:topicCode
+ * Record a quiz attempt for a student
+ */
+router.post('/students/:studentId/quiz/:topicCode', async (req, res) => {
+  try {
+    const { studentId, topicCode } = req.params;
+    const { score, maxScore, answers } = req.body;
+
+    if (typeof score !== 'number' || typeof maxScore !== 'number') {
+      return res.status(400).json({
+        success: false,
+        error: 'score and maxScore are required numbers'
+      });
+    }
+
+    await getEducationService().recordQuizAttempt(
+      studentId,
+      topicCode,
+      score,
+      maxScore,
+      answers || []
+    );
+
+    const percentage = Math.round((score / maxScore) * 100);
+    const passed = percentage >= 70;
+
+    res.json({
+      success: true,
+      data: {
+        score,
+        maxScore,
+        percentage,
+        passed,
+        message: passed
+          ? `Great job! You scored ${percentage}%`
+          : `You scored ${percentage}%. Keep practicing!`
+      }
+    });
+  } catch (error: any) {
+    console.error('Failed to record quiz:', error);
+    res.status(500).json({
+      success: false,
+      error: error.message
+    });
+  }
+});
+
+// ---------------------------------------------------------------------------
+// GENERATION QUEUE (MULTI-AGENT SUPPORT)
+// ---------------------------------------------------------------------------
+
+/**
+ * GET /api/education/generation/queue
+ * Get current generation queue status
+ */
+router.get('/generation/queue', async (req, res) => {
+  try {
+    const status = await getEducationService().getQueueStatus();
+
+    res.json({
+      success: true,
+      data: status
+    });
+  } catch (error: any) {
+    console.error('Failed to get queue status:', error);
+    res.status(500).json({
+      success: false,
+      error: error.message
+    });
+  }
+});
+
+/**
+ * POST /api/education/generation/queue
+ * Add topics to the generation queue
+ */
+router.post('/generation/queue', async (req, res) => {
+  try {
+    const { topicCodes, priority } = req.body;
+
+    if (!topicCodes || !Array.isArray(topicCodes)) {
+      return res.status(400).json({
+        success: false,
+        error: 'topicCodes array is required'
+      });
+    }
+
+    const taskIds = await getEducationService().queueTopicsForGeneration(
+      topicCodes,
+      priority || 1
+    );
+
+    res.json({
+      success: true,
+      data: {
+        queued: topicCodes.length,
+        taskIds,
+        message: `Added ${topicCodes.length} topics to generation queue`
+      }
+    });
+  } catch (error: any) {
+    console.error('Failed to queue topics:', error);
+    res.status(500).json({
+      success: false,
+      error: error.message
+    });
+  }
+});
+
+/**
+ * POST /api/education/generation/claim
+ * Claim the next task from the generation queue (for agents)
+ */
+router.post('/generation/claim', async (req, res) => {
+  try {
+    const { agentId } = req.body;
+
+    if (!agentId) {
+      return res.status(400).json({
+        success: false,
+        error: 'agentId is required'
+      });
+    }
+
+    const task = await getEducationService().claimNextTask(agentId);
+
+    if (!task) {
+      return res.json({
+        success: true,
+        data: null,
+        message: 'No tasks available in queue'
+      });
+    }
+
+    res.json({
+      success: true,
+      data: task
+    });
+  } catch (error: any) {
+    console.error('Failed to claim task:', error);
+    res.status(500).json({
+      success: false,
+      error: error.message
+    });
+  }
+});
+
+/**
+ * PUT /api/education/generation/tasks/:taskId/progress
+ * Update task progress
+ */
+router.put('/generation/tasks/:taskId/progress', async (req, res) => {
+  try {
+    const { taskId } = req.params;
+    const { step, status } = req.body;
+
+    if (!step || !status) {
+      return res.status(400).json({
+        success: false,
+        error: 'step and status are required'
+      });
+    }
+
+    await getEducationService().updateTaskProgress(taskId, step, status);
+
+    res.json({
+      success: true,
+      message: `Task ${taskId} progress updated: ${step} - ${status}`
+    });
+  } catch (error: any) {
+    console.error('Failed to update task progress:', error);
+    res.status(500).json({
+      success: false,
+      error: error.message
+    });
+  }
+});
+
+/**
+ * POST /api/education/generation/tasks/:taskId/complete
+ * Mark a generation task as complete
+ */
+router.post('/generation/tasks/:taskId/complete', async (req, res) => {
+  try {
+    const { taskId } = req.params;
+    const { lessonId } = req.body;
+
+    await getEducationService().completeTask(taskId, lessonId);
+
+    res.json({
+      success: true,
+      message: `Task ${taskId} completed successfully`
+    });
+  } catch (error: any) {
+    console.error('Failed to complete task:', error);
+    res.status(500).json({
+      success: false,
+      error: error.message
+    });
+  }
+});
+
+// ---------------------------------------------------------------------------
+// COVERAGE & STATISTICS
+// ---------------------------------------------------------------------------
+
+/**
+ * GET /api/education/coverage
+ * Get syllabus coverage statistics by level (Core/Extended)
+ */
+router.get('/coverage', async (req, res) => {
+  try {
+    const educationService = getEducationService();
+    const overview = await educationService.getSyllabusOverview();
+
+    // Fetch all topics by status to calculate coverage
+    const allNotStarted = await educationService.getTopicsByStatus('not_started');
+    const allGenerating = await educationService.getTopicsByStatus('generating');
+    const allReview = await educationService.getTopicsByStatus('review');
+    const allApproved = await educationService.getTopicsByStatus('approved');
+    const allPublished = await educationService.getTopicsByStatus('published');
+
+    const allTopics = [...allNotStarted, ...allGenerating, ...allReview, ...allApproved, ...allPublished];
+
+    const calculateCoverage = (topics: any[]) => {
+      const total = topics.length;
+      const published = topics.filter(t => t.status === 'published').length;
+      const approved = topics.filter(t => t.status === 'approved').length;
+      const inReview = topics.filter(t => t.status === 'review').length;
+      const generating = topics.filter(t => t.status === 'generating').length;
+      const notStarted = topics.filter(t => t.status === 'not_started').length;
+
+      return {
+        total,
+        published,
+        approved,
+        inReview,
+        generating,
+        notStarted,
+        percentComplete: total > 0 ? Math.round((published / total) * 100) : 0,
+        percentReady: total > 0 ? Math.round(((published + approved) / total) * 100) : 0
+      };
+    };
+
+    const coreTopics = allTopics.filter(t => t.level === 'Core');
+    const extendedTopics = allTopics.filter(t => t.level === 'Extended');
+
+    res.json({
+      success: true,
+      data: {
+        core: calculateCoverage(coreTopics),
+        extended: calculateCoverage(extendedTopics),
+        overall: calculateCoverage(allTopics),
+        metadata: overview.metadata
+      }
+    });
+  } catch (error: any) {
+    console.error('Failed to get coverage:', error);
     res.status(500).json({
       success: false,
       error: error.message
