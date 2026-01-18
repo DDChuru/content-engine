@@ -1,0 +1,2123 @@
+{
+  "metadata": {
+    "subject": "Mathematics",
+    "code": "0580",
+    "title": "Cambridge IGCSE Mathematics 0580",
+    "examBoard": "Cambridge International",
+    "years": [
+      2025,
+      2026,
+      2027
+    ],
+    "version": "3",
+    "lastUpdated": "2024-05-01",
+    "levels": [
+      "Core",
+      "Extended"
+    ],
+    "description": "Cambridge IGCSE Mathematics is tiered to enable effective differentiation for learners. The Core subject content is intended for learners targeting grades C–G, and the Extended subject content is intended for learners targeting grades A*–C. The Extended subject content contains the Core subject content as well as additional content.",
+    "assessmentInfo": {
+      "core": {
+        "targetGrades": "C-G",
+        "papers": [
+          {
+            "number": 1,
+            "name": "Non-calculator (Core)",
+            "type": "Written",
+            "duration": "1h 30min",
+            "marks": 80,
+            "weight": "50%",
+            "calculator": false
+          },
+          {
+            "number": 3,
+            "name": "Calculator (Core)",
+            "type": "Written",
+            "duration": "1h 30min",
+            "marks": 80,
+            "weight": "50%",
+            "calculator": true
+          }
+        ]
+      },
+      "extended": {
+        "targetGrades": "A*-C",
+        "papers": [
+          {
+            "number": 2,
+            "name": "Non-calculator (Extended)",
+            "type": "Written",
+            "duration": "2h",
+            "marks": 100,
+            "weight": "50%",
+            "calculator": false
+          },
+          {
+            "number": 4,
+            "name": "Calculator (Extended)",
+            "type": "Written",
+            "duration": "2h 30min",
+            "marks": 100,
+            "weight": "50%",
+            "calculator": true
+          }
+        ]
+      }
+    },
+    "totalTopics": 9,
+    "coreSubtopics": 47,
+    "extendedSubtopics": 52
+  },
+  "topics": [
+    {
+      "id": "C1",
+      "code": "C1",
+      "title": "Number",
+      "level": "Core",
+      "icon": "Hash",
+      "color": "text-blue-600",
+      "bgColor": "bg-blue-50",
+      "subtopics": [
+        {
+          "code": "C1.1",
+          "title": "Types of number",
+          "content": [
+            "Natural numbers",
+            "Integers (positive, zero and negative)",
+            "Prime numbers",
+            "Square numbers",
+            "Cube numbers",
+            "Common factors",
+            "Common multiples",
+            "Rational and irrational numbers",
+            "Reciprocals"
+          ],
+          "examples": [
+            "Convert between numbers and words (e.g., six billion is 6000000000, 10007 is ten thousand and seven)",
+            "Express 72 as a product of its prime factors",
+            "Find the highest common factor (HCF) of two numbers",
+            "Find the lowest common multiple (LCM) of two numbers"
+          ]
+        },
+        {
+          "code": "C1.2",
+          "title": "Sets",
+          "content": [
+            "Set language, notation and Venn diagrams",
+            "Limited to two sets"
+          ],
+          "notation": [
+            "n(A) - Number of elements in set A",
+            "A' - Complement of set A",
+            "ξ - Universal set",
+            "A ∪ B - Union of A and B",
+            "A ∩ B - Intersection of A and B"
+          ],
+          "examples": [
+            "A = {x: x is a natural number}",
+            "B = {a, b, c, ...}",
+            "C = {x: a ≤ x ≤ b}"
+          ]
+        },
+        {
+          "code": "C1.3",
+          "title": "Powers and roots",
+          "content": [
+            "Squares and square roots",
+            "Cubes and cube roots",
+            "Other powers and roots of numbers"
+          ],
+          "required": [
+            "Recall squares and roots from 1 to 15",
+            "Recall cubes and roots of 1, 2, 3, 4, 5 and 10"
+          ],
+          "examples": [
+            "Write down the value of √169",
+            "Work out 5∛8 × 2³"
+          ]
+        },
+        {
+          "code": "C1.4",
+          "title": "Fractions, decimals and percentages",
+          "content": [
+            "Proper fractions",
+            "Improper fractions",
+            "Mixed numbers",
+            "Decimals",
+            "Percentages",
+            "Recognise equivalence and convert between forms"
+          ],
+          "notes": [
+            "Write fractions in simplest form",
+            "NOT expected: recurring decimal notation",
+            "NOT expected: converting recurring decimals to fractions"
+          ]
+        },
+        {
+          "code": "C1.5",
+          "title": "Ordering",
+          "content": [
+            "Order quantities by magnitude",
+            "Use symbols: =, ≠, >, <, ≥, ≤"
+          ]
+        },
+        {
+          "code": "C1.6",
+          "title": "The four operations",
+          "content": [
+            "Calculations with integers, fractions and decimals",
+            "Correct ordering of operations",
+            "Use of brackets",
+            "Negative numbers",
+            "Improper fractions and mixed numbers"
+          ],
+          "examples": [
+            "Temperature change calculations",
+            "Practical situations"
+          ]
+        },
+        {
+          "code": "C1.7",
+          "title": "Indices I",
+          "content": [
+            "Understand and use indices (positive, zero and negative integers)",
+            "Understand and use the rules of indices"
+          ],
+          "examples": [
+            "Find the value of 7⁻²",
+            "Find the value of 2⁻³ × 2⁴",
+            "Find the value of (2³)²",
+            "Find the value of 2³ ÷ 2⁴"
+          ]
+        },
+        {
+          "code": "C1.8",
+          "title": "Standard form",
+          "content": [
+            "Use standard form A × 10ⁿ where n is positive or negative integer and 1 ≤ A < 10",
+            "Convert numbers into and out of standard form",
+            "Calculate with values in standard form"
+          ],
+          "notes": [
+            "Core candidates expected to calculate with standard form only on Paper 3"
+          ]
+        },
+        {
+          "code": "C1.9",
+          "title": "Estimation",
+          "content": [
+            "Round values to specified degree of accuracy",
+            "Make estimates for calculations",
+            "Round answers to reasonable degree of accuracy"
+          ],
+          "examples": [
+            "Write 5764 correct to the nearest thousand",
+            "Estimate 41.3/(9.79 × 0.765) by rounding to 1 significant figure"
+          ],
+          "notes": [
+            "Includes decimal places and significant figures"
+          ]
+        },
+        {
+          "code": "C1.10",
+          "title": "Limits of accuracy",
+          "content": [
+            "Give upper and lower bounds for data rounded to specified accuracy"
+          ],
+          "examples": [
+            "Write down the upper bound of a length measured correct to the nearest metre"
+          ],
+          "notes": [
+            "NOT expected: bounds of results of calculations using rounded data"
+          ]
+        },
+        {
+          "code": "C1.11",
+          "title": "Ratio and proportion",
+          "content": [
+            "Give ratios in simplest form",
+            "Divide a quantity in a given ratio",
+            "Use proportional reasoning and ratios in context"
+          ],
+          "examples": [
+            "20:30:40 in simplest form is 2:3:4",
+            "Adapt recipes",
+            "Use map scales",
+            "Determine best value"
+          ]
+        },
+        {
+          "code": "C1.12",
+          "title": "Rates",
+          "content": [
+            "Use common measures of rate",
+            "Apply other measures of rate",
+            "Solve problems involving average speed"
+          ],
+          "examples": [
+            "Hourly rates of pay",
+            "Exchange rates between currencies",
+            "Flow rates",
+            "Fuel consumption",
+            "Pressure, density, population density",
+            "A cyclist travels 45km in 3 hours 45 minutes. What is their average speed?"
+          ],
+          "notes": [
+            "Required formulas given in question",
+            "Knowledge of speed/distance/time formula required",
+            "Notation: m/s (metres per second), g/cm³ (grams per cubic centimetre)"
+          ]
+        },
+        {
+          "code": "C1.13",
+          "title": "Percentages",
+          "content": [
+            "Calculate a given percentage of a quantity",
+            "Express one quantity as a percentage of another",
+            "Calculate percentage increase or decrease",
+            "Calculate with simple and compound interest"
+          ],
+          "examples": [
+            "Deposit calculations",
+            "Discount calculations",
+            "Profit and loss (as amount or percentage)",
+            "Earnings",
+            "Percentages over 100%"
+          ],
+          "notes": [
+            "Formulas are NOT given"
+          ]
+        },
+        {
+          "code": "C1.14",
+          "title": "Using a calculator",
+          "content": [
+            "Use a calculator efficiently",
+            "Enter values appropriately on a calculator",
+            "Interpret the calculator display appropriately"
+          ],
+          "examples": [
+            "Know not to round values within a calculation",
+            "Enter 2 hours 30 minutes as 2.5 hours or 2° 30' 0''",
+            "In money 4.8 means $4.80",
+            "In time 3.25 means 3 hours 15 minutes"
+          ]
+        },
+        {
+          "code": "C1.15",
+          "title": "Time",
+          "content": [
+            "Calculate with time: seconds, minutes, hours, days, weeks, months, years",
+            "Calculate times in 24-hour and 12-hour clock",
+            "Read clocks and timetables"
+          ],
+          "notes": [
+            "1 year = 365 days",
+            "24-hour: 3.15 a.m. = 0315, 3.15 p.m. = 1515",
+            "Includes time zones, local times and time differences"
+          ]
+        },
+        {
+          "code": "C1.16",
+          "title": "Money",
+          "content": [
+            "Calculate with money",
+            "Convert from one currency to another"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "C2",
+      "code": "C2",
+      "title": "Algebra and graphs",
+      "level": "Core",
+      "icon": "TrendingUp",
+      "color": "text-green-600",
+      "bgColor": "bg-green-50",
+      "subtopics": [
+        {
+          "code": "C2.1",
+          "title": "Introduction to algebra",
+          "content": [
+            "Letters can be used to represent generalised numbers",
+            "Substitute numbers into expressions and formulas"
+          ]
+        },
+        {
+          "code": "C2.2",
+          "title": "Algebraic manipulation",
+          "content": [
+            "Simplify expressions by collecting like terms",
+            "Expand products of algebraic expressions",
+            "Factorise by extracting common factors"
+          ],
+          "examples": [
+            "Simplify: 2a + 3b + 5a - 9b = 7a - 6b",
+            "Expand: 3x(2x - 4y)",
+            "Expand: (2x + 1)(x - 4)",
+            "Factorise: 9x² + 15xy = 3x(3x + 5y)"
+          ],
+          "notes": [
+            "Simplify means give answer in simplest form",
+            "Factorise means factorise fully"
+          ]
+        },
+        {
+          "code": "C2.4",
+          "title": "Indices II",
+          "content": [
+            "Understand and use indices (positive, zero and negative)",
+            "Understand and use the rules of indices"
+          ],
+          "examples": [
+            "2ˣ = 32. Find the value of x",
+            "Simplify: (5x³)²",
+            "Simplify: 12a⁵ ÷ 3a⁻²",
+            "Simplify: 6x⁷y⁴ × 5x⁻⁵y"
+          ],
+          "notes": [
+            "Knowledge of logarithms is NOT required"
+          ]
+        },
+        {
+          "code": "C2.5",
+          "title": "Equations",
+          "content": [
+            "Construct simple expressions, equations and formulas",
+            "Solve linear equations in one unknown",
+            "Solve simultaneous linear equations in two unknowns",
+            "Change the subject of simple formulas"
+          ],
+          "examples": [
+            "Write an expression for a number that is 2 more than n",
+            "Solve: 3x + 4 = 10",
+            "Solve: 5 - 2x = 3(x + 7)",
+            "Change subject where: subject only appears once, no power or root of subject"
+          ],
+          "notes": [
+            "Includes constructing linear simultaneous equations"
+          ]
+        },
+        {
+          "code": "C2.6",
+          "title": "Inequalities",
+          "content": [
+            "Represent and interpret inequalities",
+            "Including on a number line"
+          ],
+          "notes": [
+            "Open circles for strict inequalities (<, >)",
+            "Closed circles for inclusive inequalities (≤, ≥)"
+          ],
+          "examples": [
+            "-3 ≤ x < 1 shown on number line"
+          ]
+        },
+        {
+          "code": "C2.7",
+          "title": "Sequences",
+          "content": [
+            "Continue a given number sequence or pattern",
+            "Recognise patterns in sequences, including term-to-term rule",
+            "Find and use nth term of linear, simple quadratic, and simple cubic sequences"
+          ],
+          "examples": [
+            "Continue: 1, 3, 6, 10, 15, ...",
+            "Find the nth term of 2, 5, 10, 17"
+          ]
+        },
+        {
+          "code": "C2.9",
+          "title": "Graphs in practical situations",
+          "content": [
+            "Use and interpret graphs in practical situations",
+            "Travel graphs and conversion graphs",
+            "Draw graphs from given data"
+          ],
+          "examples": [
+            "Interpret gradient of straight-line graph as rate of change",
+            "Draw distance-time graph to represent a journey"
+          ]
+        },
+        {
+          "code": "C2.10",
+          "title": "Graphs of functions",
+          "content": [
+            "Construct tables of values and draw graphs",
+            "Functions: ax + b, ±x² + ax + b, a/x (x ≠ 0)",
+            "Solve associated equations graphically"
+          ],
+          "examples": [
+            "Find intersection of line and curve"
+          ],
+          "notes": [
+            "a and b are integer constants"
+          ]
+        },
+        {
+          "code": "C2.11",
+          "title": "Sketching curves",
+          "content": [
+            "Recognise, sketch and interpret graphs",
+            "Linear and quadratic functions"
+          ],
+          "notes": [
+            "Knowledge of symmetry and roots required",
+            "Knowledge of turning points NOT required"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "C3",
+      "code": "C3",
+      "title": "Coordinate geometry",
+      "level": "Core",
+      "icon": "Grid3X3",
+      "color": "text-purple-600",
+      "bgColor": "bg-purple-50",
+      "subtopics": [
+        {
+          "code": "C3.1",
+          "title": "Coordinates",
+          "content": [
+            "Use and interpret Cartesian coordinates in two dimensions"
+          ]
+        },
+        {
+          "code": "C3.2",
+          "title": "Drawing linear graphs",
+          "content": [
+            "Draw straight-line graphs for linear equations"
+          ],
+          "notes": [
+            "Equations given in form y = mx + c (e.g., y = -2x + 5)",
+            "Unless table of values is given"
+          ]
+        },
+        {
+          "code": "C3.3",
+          "title": "Gradient of linear graphs",
+          "content": [
+            "Find the gradient of a straight line"
+          ],
+          "notes": [
+            "From a grid only"
+          ]
+        },
+        {
+          "code": "C3.5",
+          "title": "Equations of linear graphs",
+          "content": [
+            "Interpret and obtain equation of straight-line graph in form y = mx + c"
+          ],
+          "examples": [
+            "Use and request lines in forms: y = mx + c, x = k",
+            "Find equation when graph is given",
+            "Find gradient and y-intercept from equation y = 6x + 3"
+          ],
+          "notes": [
+            "Give equations in fully simplified form"
+          ]
+        },
+        {
+          "code": "C3.6",
+          "title": "Parallel lines",
+          "content": [
+            "Find gradient and equation of straight line parallel to given line"
+          ],
+          "examples": [
+            "Find equation of line parallel to y = 4x - 1 that passes through (1, -3)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "C4",
+      "code": "C4",
+      "title": "Geometry",
+      "level": "Core",
+      "icon": "Triangle",
+      "color": "text-orange-600",
+      "bgColor": "bg-orange-50",
+      "subtopics": [
+        {
+          "code": "C4.1",
+          "title": "Geometrical terms",
+          "content": [
+            "Lines and angles",
+            "Triangles and quadrilaterals",
+            "Polygons",
+            "Circles",
+            "Simple solids"
+          ],
+          "vocabulary": {
+            "lines": [
+              "Parallel",
+              "Perpendicular"
+            ],
+            "angles": [
+              "Acute",
+              "Right",
+              "Obtuse",
+              "Reflex"
+            ],
+            "triangles": [
+              "Equilateral",
+              "Isosceles",
+              "Scalene",
+              "Right-angled"
+            ],
+            "quadrilaterals": [
+              "Square",
+              "Rectangle",
+              "Parallelogram",
+              "Rhombus",
+              "Trapezium",
+              "Kite"
+            ],
+            "polygons": [
+              "Pentagon",
+              "Hexagon",
+              "Heptagon",
+              "Octagon",
+              "Nonagon",
+              "Decagon"
+            ],
+            "circles": [
+              "Centre",
+              "Radius",
+              "Diameter",
+              "Circumference",
+              "Semicircle",
+              "Chord",
+              "Tangent",
+              "Arc",
+              "Sector",
+              "Segment"
+            ],
+            "solids": [
+              "Cube",
+              "Cuboid",
+              "Prism",
+              "Cylinder",
+              "Pyramid",
+              "Cone",
+              "Sphere",
+              "Face",
+              "Surface",
+              "Edge"
+            ]
+          }
+        },
+        {
+          "code": "C4.2",
+          "title": "Geometrical constructions",
+          "content": [
+            "Measure and draw lines and angles",
+            "Construct triangle given all sides using ruler and compasses only",
+            "Draw, use and interpret nets"
+          ],
+          "examples": [
+            "Construct rhombus by drawing two triangles",
+            "Draw nets of cubes, cuboids, prisms and pyramids",
+            "Use measurements from nets to calculate volumes and surface areas"
+          ],
+          "notes": [
+            "Ruler used for all straight edges",
+            "Construction arcs must be shown",
+            "Perpendicular bisectors and angle bisectors NOT required"
+          ]
+        },
+        {
+          "code": "C4.3",
+          "title": "Scale drawings",
+          "content": [
+            "Draw and interpret scale drawings",
+            "Use and interpret three-figure bearings"
+          ],
+          "examples": [
+            "Find bearing of A from B if bearing of B from A is 025°",
+            "Point D is due east of point C"
+          ],
+          "notes": [
+            "Ruler must be used for all straight edges",
+            "Bearings measured clockwise from north (000° to 360°)",
+            "Understanding of north, east, south, west required"
+          ]
+        },
+        {
+          "code": "C4.4",
+          "title": "Similarity",
+          "content": [
+            "Calculate lengths of similar shapes"
+          ]
+        },
+        {
+          "code": "C4.5",
+          "title": "Symmetry",
+          "content": [
+            "Recognise line symmetry",
+            "Order of rotational symmetry in 2D"
+          ],
+          "notes": [
+            "Includes properties of triangles, quadrilaterals and polygons related to symmetries"
+          ]
+        },
+        {
+          "code": "C4.6",
+          "title": "Angles",
+          "content": [
+            "Calculate unknown angles using geometrical properties",
+            "Angles formed within parallel lines",
+            "Angle properties of regular polygons"
+          ],
+          "properties": [
+            "Sum of angles at a point = 360°",
+            "Sum of angles on straight line = 180°",
+            "Vertically opposite angles are equal",
+            "Angle sum of triangle = 180°",
+            "Angle sum of quadrilateral = 360°",
+            "Corresponding angles are equal",
+            "Alternate angles are equal",
+            "Co-interior angles sum to 180° (supplementary)"
+          ],
+          "notes": [
+            "Three-letter notation for angles (e.g., angle ABC)",
+            "Use correct geometrical terminology when giving reasons",
+            "Includes exterior and interior angles, and angle sum"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "C5",
+      "code": "C5",
+      "title": "Mensuration",
+      "level": "Core",
+      "icon": "Calculator",
+      "color": "text-red-600",
+      "bgColor": "bg-red-50",
+      "subtopics": [
+        {
+          "code": "C5.1",
+          "title": "Units of measure",
+          "content": [
+            "Use metric units of mass, length, area, volume and capacity",
+            "Convert quantities into larger or smaller units"
+          ],
+          "units": [
+            "Length: mm, cm, m, km",
+            "Area: mm², cm², m², km²",
+            "Volume: mm³, cm³, m³",
+            "Capacity: ml, l",
+            "Mass: g, kg"
+          ],
+          "conversions": [
+            "Between different units of area (e.g., cm² ↔ m²)",
+            "Between units of volume and capacity (e.g., m³ ↔ litres)"
+          ]
+        },
+        {
+          "code": "C5.2",
+          "title": "Area and perimeter",
+          "content": [
+            "Perimeter and area of rectangle",
+            "Perimeter and area of triangle",
+            "Perimeter and area of parallelogram",
+            "Perimeter and area of trapezium"
+          ],
+          "notes": [
+            "Except for area of triangle, formulas are NOT given"
+          ]
+        },
+        {
+          "code": "C5.3",
+          "title": "Circles, arcs and sectors",
+          "content": [
+            "Circumference and area of circle",
+            "Arc length and sector area as fractions of circumference and area",
+            "Sector angle must be factor of 360°"
+          ],
+          "notes": [
+            "Answers may be asked for in terms of π",
+            "Formulas are given in List of formulas"
+          ]
+        },
+        {
+          "code": "C5.4",
+          "title": "Surface area and volume",
+          "content": [
+            "Surface area and volume of cuboid",
+            "Surface area and volume of prism",
+            "Surface area and volume of cylinder",
+            "Surface area and volume of sphere",
+            "Surface area and volume of pyramid",
+            "Surface area and volume of cone"
+          ],
+          "formulas_given": [
+            "Curved surface area of cylinder",
+            "Curved surface area of cone",
+            "Surface area of sphere",
+            "Volume of prism",
+            "Volume of pyramid",
+            "Volume of cylinder",
+            "Volume of cone",
+            "Volume of sphere"
+          ],
+          "notes": [
+            "Answers may be asked for in terms of π",
+            "Prism refers to any solid with uniform cross-section (e.g., cylindrical sector)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "C6",
+      "code": "C6",
+      "title": "Trigonometry",
+      "level": "Core",
+      "icon": "Triangle",
+      "color": "text-indigo-600",
+      "bgColor": "bg-indigo-50",
+      "subtopics": [
+        {
+          "code": "C6.1",
+          "title": "Pythagoras' theorem",
+          "content": [
+            "Know and use Pythagoras' theorem"
+          ]
+        },
+        {
+          "code": "C6.2",
+          "title": "Right-angled triangles",
+          "content": [
+            "Know and use sine, cosine and tangent ratios for acute angles",
+            "Calculations involving sides and angles of right-angled triangle",
+            "Solve problems in 2D using Pythagoras' theorem and trigonometry"
+          ],
+          "notes": [
+            "Angles in degrees, answers to one decimal place",
+            "Knowledge of bearings may be required"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "C7",
+      "code": "C7",
+      "title": "Transformations and vectors",
+      "level": "Core",
+      "icon": "Shuffle",
+      "color": "text-pink-600",
+      "bgColor": "bg-pink-50",
+      "subtopics": [
+        {
+          "code": "C7.1",
+          "title": "Transformations",
+          "content": [
+            "Reflection of shape in vertical or horizontal line",
+            "Rotation about origin, vertices or midpoints through multiples of 90°",
+            "Enlargement from a centre by scale factor",
+            "Translation by a vector"
+          ],
+          "notes": [
+            "No combinations of transformations",
+            "Ruler must be used for all straight edges",
+            "Positive and fractional scale factors only"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "C8",
+      "code": "C8",
+      "title": "Probability",
+      "level": "Core",
+      "icon": "BarChart3",
+      "color": "text-teal-600",
+      "bgColor": "bg-teal-50",
+      "subtopics": [
+        {
+          "code": "C8.1",
+          "title": "Introduction to probability",
+          "content": [
+            "Understand and use probability scale from 0 to 1",
+            "Calculate probability of single event",
+            "Probability of event not occurring = 1 - probability of event occurring"
+          ],
+          "examples": [
+            "The probability that a counter is blue is 0.8. What is the probability that it is not blue?"
+          ],
+          "notes": [
+            "Probability notation NOT required",
+            "Give as fraction, decimal or percentage",
+            "May use tables, graphs or Venn diagrams (limited to two sets)"
+          ]
+        },
+        {
+          "code": "C8.2",
+          "title": "Relative and expected frequencies",
+          "content": [
+            "Understand relative frequency as estimate of probability",
+            "Calculate expected frequencies"
+          ],
+          "examples": [
+            "Use results of experiments with spinner to estimate probability",
+            "Use probability to estimate expected value from population"
+          ],
+          "notes": [
+            "Includes understanding fair, bias and random"
+          ]
+        },
+        {
+          "code": "C8.3",
+          "title": "Probability of combined events",
+          "content": [
+            "Calculate probability using sample space diagrams",
+            "Calculate probability using Venn diagrams",
+            "Calculate probability using tree diagrams"
+          ],
+          "notes": [
+            "Combined events only with replacement",
+            "Venn diagrams limited to two sets",
+            "Tree diagrams: outcomes at end of branches, probabilities by side of branches"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "C9",
+      "code": "C9",
+      "title": "Statistics",
+      "level": "Core",
+      "icon": "Sigma",
+      "color": "text-cyan-600",
+      "bgColor": "bg-cyan-50",
+      "subtopics": [
+        {
+          "code": "C9.1",
+          "title": "Classifying statistical data",
+          "content": [
+            "Classify and tabulate statistical data"
+          ],
+          "examples": [
+            "Tally tables",
+            "Two-way tables"
+          ]
+        },
+        {
+          "code": "C9.2",
+          "title": "Interpreting statistical data",
+          "content": [
+            "Read, interpret and draw inferences from tables and statistical diagrams",
+            "Compare sets of data using tables, graphs and statistical measures",
+            "Appreciate restrictions on drawing conclusions from given data"
+          ],
+          "examples": [
+            "Compare averages and ranges between two data sets"
+          ]
+        },
+        {
+          "code": "C9.3",
+          "title": "Averages and range",
+          "content": [
+            "Calculate mean, median, mode and range for individual data",
+            "Distinguish between purposes for which these are used"
+          ],
+          "notes": [
+            "Data may be in list or frequency table",
+            "Data will NOT be grouped"
+          ]
+        },
+        {
+          "code": "C9.4",
+          "title": "Statistical charts and diagrams",
+          "content": [
+            "Draw and interpret bar charts",
+            "Draw and interpret pie charts",
+            "Draw and interpret pictograms",
+            "Draw and interpret stem-and-leaf diagrams",
+            "Draw and interpret simple frequency distributions"
+          ],
+          "notes": [
+            "Includes composite (stacked) and dual (side-by-side) bar charts",
+            "Stem-and-leaf diagrams should have ordered data with a key"
+          ]
+        },
+        {
+          "code": "C9.5",
+          "title": "Scatter diagrams",
+          "content": [
+            "Draw and interpret scatter diagrams",
+            "Understand positive, negative and zero correlation",
+            "Draw by eye, interpret and use straight line of best fit"
+          ],
+          "notes": [
+            "Plotted points clearly marked (e.g., small crosses ×)",
+            "Line of best fit: single ruled line by inspection, extends across full data set",
+            "Roughly even distribution of points either side of line"
+          ]
+        }
+      ]
+    }
+  ],
+  "extendedTopics": [
+    {
+      "id": "E1",
+      "code": "E1",
+      "title": "Number",
+      "level": "Extended",
+      "icon": "Hash",
+      "color": "text-blue-600",
+      "bgColor": "bg-blue-50",
+      "subtopics": [
+        {
+          "code": "E1.1",
+          "title": "Types of number",
+          "content": [
+            "Natural numbers",
+            "Integers (positive, zero and negative)",
+            "Prime numbers",
+            "Square numbers",
+            "Cube numbers",
+            "Common factors",
+            "Common multiples",
+            "Rational and irrational numbers",
+            "Reciprocals"
+          ],
+          "examples": [
+            "Convert between numbers and words (e.g., six billion is 6000000000, 10007 is ten thousand and seven)",
+            "Express 72 as a product of its prime factors",
+            "Find the highest common factor (HCF) of two numbers",
+            "Find the lowest common multiple (LCM) of two numbers"
+          ]
+        },
+        {
+          "code": "E1.2",
+          "title": "Sets",
+          "content": [
+            "Understand and use set language, notation and Venn diagrams to describe sets and represent relationships between sets",
+            "Limited to two or three sets"
+          ],
+          "notation": [
+            "n(A) - Number of elements in set A",
+            "A' - Complement of set A",
+            "ξ - Universal set",
+            "A ∪ B - Union of A and B",
+            "A ∩ B - Intersection of A and B",
+            "A ⊆ B - A is a subset of B",
+            "A ⊈ B - A is not a subset of B"
+          ],
+          "examples": [
+            "A = {x: x is a natural number}",
+            "B = {a, b, c, ...}",
+            "C = {x: a ≤ x ≤ b}"
+          ],
+          "notes": [
+            "Venn diagrams are limited to two or three sets",
+            "The following set notation will be used: n(A), ∈, ∉, A', ξ, A ⊆ B, A ⊈ B, ∅, A ∪ B, A ∩ B"
+          ]
+        },
+        {
+          "code": "E1.3",
+          "title": "Powers and roots",
+          "content": [
+            "Squares and square roots",
+            "Cubes and cube roots",
+            "Other powers and roots of numbers"
+          ],
+          "required": [
+            "Recall squares and roots from 1 to 15",
+            "Recall cubes and roots of 1, 2, 3, 4, 5 and 10"
+          ],
+          "examples": [
+            "Write down the value of √169",
+            "Work out 5∛8 × 2³"
+          ]
+        },
+        {
+          "code": "E1.4",
+          "title": "Fractions, decimals and percentages",
+          "content": [
+            "Proper fractions",
+            "Improper fractions",
+            "Mixed numbers",
+            "Decimals",
+            "Percentages",
+            "Recognise equivalence and convert between forms"
+          ],
+          "notes": [
+            "Write fractions in simplest form",
+            "NOT expected: recurring decimal notation",
+            "NOT expected: converting recurring decimals to fractions"
+          ]
+        },
+        {
+          "code": "E1.5",
+          "title": "Ordering",
+          "content": [
+            "Order quantities by magnitude",
+            "Use symbols: =, ≠, >, <, ≥, ≤"
+          ]
+        },
+        {
+          "code": "E1.6",
+          "title": "The four operations",
+          "content": [
+            "Calculations with integers, fractions and decimals",
+            "Correct ordering of operations",
+            "Use of brackets",
+            "Negative numbers",
+            "Improper fractions and mixed numbers"
+          ],
+          "examples": [
+            "Temperature change calculations",
+            "Practical situations"
+          ]
+        },
+        {
+          "code": "E1.7",
+          "title": "Indices I",
+          "content": [
+            "Understand and use indices (positive, zero and negative integers)",
+            "Understand and use the rules of indices"
+          ],
+          "examples": [
+            "Find the value of 7⁻²",
+            "Find the value of 2⁻³ × 2⁴",
+            "Find the value of (2³)²",
+            "Find the value of 2³ ÷ 2⁴"
+          ]
+        },
+        {
+          "code": "E1.8",
+          "title": "Standard form",
+          "content": [
+            "Use standard form A × 10ⁿ where n is positive or negative integer and 1 ≤ A < 10",
+            "Convert numbers into and out of standard form",
+            "Calculate with values in standard form"
+          ],
+          "notes": [
+            "Core candidates expected to calculate with standard form only on Paper 3"
+          ]
+        },
+        {
+          "code": "E1.9",
+          "title": "Estimation",
+          "content": [
+            "Round values to specified degree of accuracy",
+            "Make estimates for calculations",
+            "Round answers to reasonable degree of accuracy"
+          ],
+          "examples": [
+            "Write 5764 correct to the nearest thousand",
+            "Estimate 41.3/(9.79 × 0.765) by rounding to 1 significant figure"
+          ],
+          "notes": [
+            "Includes decimal places and significant figures"
+          ]
+        },
+        {
+          "code": "E1.10",
+          "title": "Limits of accuracy",
+          "content": [
+            "Give upper and lower bounds for data rounded to specified accuracy"
+          ],
+          "examples": [
+            "Write down the upper bound of a length measured correct to the nearest metre"
+          ],
+          "notes": [
+            "NOT expected: bounds of results of calculations using rounded data"
+          ]
+        },
+        {
+          "code": "E1.11",
+          "title": "Ratio and proportion",
+          "content": [
+            "Give ratios in simplest form",
+            "Divide a quantity in a given ratio",
+            "Use proportional reasoning and ratios in context"
+          ],
+          "examples": [
+            "20:30:40 in simplest form is 2:3:4",
+            "Adapt recipes",
+            "Use map scales",
+            "Determine best value"
+          ]
+        },
+        {
+          "code": "E1.12",
+          "title": "Rates",
+          "content": [
+            "Use common measures of rate",
+            "Apply other measures of rate",
+            "Solve problems involving average speed"
+          ],
+          "examples": [
+            "Hourly rates of pay",
+            "Exchange rates between currencies",
+            "Flow rates",
+            "Fuel consumption",
+            "Pressure, density, population density",
+            "A cyclist travels 45km in 3 hours 45 minutes. What is their average speed?"
+          ],
+          "notes": [
+            "Required formulas given in question",
+            "Knowledge of speed/distance/time formula required",
+            "Notation: m/s (metres per second), g/cm³ (grams per cubic centimetre)"
+          ]
+        },
+        {
+          "code": "E1.13",
+          "title": "Percentages",
+          "content": [
+            "Calculate a given percentage of a quantity",
+            "Express one quantity as a percentage of another",
+            "Calculate percentage increase or decrease",
+            "Calculate with simple and compound interest"
+          ],
+          "examples": [
+            "Deposit calculations",
+            "Discount calculations",
+            "Profit and loss (as amount or percentage)",
+            "Earnings",
+            "Percentages over 100%"
+          ],
+          "notes": [
+            "Formulas are NOT given"
+          ]
+        },
+        {
+          "code": "E1.14",
+          "title": "Using a calculator",
+          "content": [
+            "Use a calculator efficiently",
+            "Enter values appropriately on a calculator",
+            "Interpret the calculator display appropriately"
+          ],
+          "examples": [
+            "Know not to round values within a calculation",
+            "Enter 2 hours 30 minutes as 2.5 hours or 2° 30' 0''",
+            "In money 4.8 means $4.80",
+            "In time 3.25 means 3 hours 15 minutes"
+          ]
+        },
+        {
+          "code": "E1.15",
+          "title": "Time",
+          "content": [
+            "Calculate with time: seconds, minutes, hours, days, weeks, months, years",
+            "Calculate times in 24-hour and 12-hour clock",
+            "Read clocks and timetables"
+          ],
+          "notes": [
+            "1 year = 365 days",
+            "24-hour: 3.15 a.m. = 0315, 3.15 p.m. = 1515",
+            "Includes time zones, local times and time differences"
+          ]
+        },
+        {
+          "code": "E1.16",
+          "title": "Money",
+          "content": [
+            "Calculate with money",
+            "Convert from one currency to another"
+          ]
+        },
+        {
+          "code": "E1.17",
+          "title": "Surds",
+          "content": [
+            "Understand and use the rules of surds",
+            "Simplify expressions involving surds",
+            "Rationalise denominators"
+          ],
+          "examples": [
+            "Simplify √50",
+            "Simplify 2√3 + 5√3",
+            "Rationalise 1/√2",
+            "Expand and simplify (2 + √3)(5 - √3)"
+          ],
+          "isNew": true
+        }
+      ]
+    },
+    {
+      "id": "E2",
+      "code": "E2",
+      "title": "Algebra and graphs",
+      "level": "Extended",
+      "icon": "TrendingUp",
+      "color": "text-green-600",
+      "bgColor": "bg-green-50",
+      "subtopics": [
+        {
+          "code": "E2.1",
+          "title": "Introduction to algebra",
+          "content": [
+            "Letters can be used to represent generalised numbers",
+            "Substitute numbers into expressions and formulas"
+          ]
+        },
+        {
+          "code": "E2.2",
+          "title": "Algebraic manipulation",
+          "content": [
+            "Simplify expressions by collecting like terms",
+            "Expand products of algebraic expressions",
+            "Factorise by extracting common factors"
+          ],
+          "examples": [
+            "Simplify: 2a + 3b + 5a - 9b = 7a - 6b",
+            "Expand: 3x(2x - 4y)",
+            "Expand: (2x + 1)(x - 4)",
+            "Factorise: 9x² + 15xy = 3x(3x + 5y)"
+          ],
+          "notes": [
+            "Simplify means give answer in simplest form",
+            "Factorise means factorise fully"
+          ]
+        },
+        {
+          "code": "E2.3",
+          "title": "Factorisation",
+          "content": [
+            "Factorise where possible expressions of the form: ax² + bx + c",
+            "Factorise difference of two squares",
+            "Simplify algebraic fractions"
+          ],
+          "examples": [
+            "Factorise: x² + 5x + 6",
+            "Factorise: 2x² + 7x + 3",
+            "Factorise: x² - 9",
+            "Simplify: (x² - 4)/(x + 2)"
+          ],
+          "isNew": true
+        },
+        {
+          "code": "E2.4",
+          "title": "Indices II",
+          "content": [
+            "Understand and use indices (positive, zero and negative)",
+            "Understand and use the rules of indices",
+            "Use and simplify expressions involving fractional and negative indices",
+            "Write roots using fractional indices"
+          ],
+          "examples": [
+            "2ˣ = 32. Find the value of x",
+            "Simplify: (5x³)²",
+            "Simplify: 12a⁵ ÷ 3a⁻²",
+            "Simplify: 6x⁷y⁴ × 5x⁻⁵y",
+            "Write √x as x^(1/2)",
+            "Simplify: 16^(3/4)",
+            "Simplify: (4x^6)^(1/2)"
+          ],
+          "notes": [
+            "Knowledge of logarithms is NOT required"
+          ]
+        },
+        {
+          "code": "E2.5",
+          "title": "Equations",
+          "content": [
+            "Construct simple expressions, equations and formulas",
+            "Solve linear equations in one unknown",
+            "Solve simultaneous linear equations in two unknowns",
+            "Change the subject of simple formulas",
+            "Solve quadratic equations by factorisation",
+            "Solve quadratic equations using the formula",
+            "Solve simple exponential equations",
+            "Change the subject of more complex formulas"
+          ],
+          "examples": [
+            "Write an expression for a number that is 2 more than n",
+            "Solve: 3x + 4 = 10",
+            "Solve: 5 - 2x = 3(x + 7)",
+            "Change subject where: subject only appears once, no power or root of subject",
+            "Solve: x² + 5x + 6 = 0",
+            "Solve: 2x² - 3x - 2 = 0 using the formula",
+            "Solve: 2^x = 16",
+            "Make x the subject of: y = (x + 3)/(x - 2)"
+          ],
+          "notes": [
+            "Includes constructing linear simultaneous equations"
+          ],
+          "formulas_given": [
+            "Quadratic formula: x = [-b ± √(b² - 4ac)] / 2a"
+          ]
+        },
+        {
+          "code": "E2.6",
+          "title": "Inequalities",
+          "content": [
+            "Represent and interpret inequalities",
+            "Including on a number line",
+            "Solve simple linear inequalities in one variable",
+            "Represent linear inequalities in two variables graphically"
+          ],
+          "notes": [
+            "Open circles for strict inequalities (<, >)",
+            "Closed circles for inclusive inequalities (≤, ≥)"
+          ],
+          "examples": [
+            "-3 ≤ x < 1 shown on number line"
+          ]
+        },
+        {
+          "code": "E2.7",
+          "title": "Sequences",
+          "content": [
+            "Continue a given number sequence or pattern",
+            "Recognise patterns in sequences, including term-to-term rule",
+            "Find and use nth term of linear, simple quadratic, and simple cubic sequences"
+          ],
+          "examples": [
+            "Continue: 1, 3, 6, 10, 15, ...",
+            "Find the nth term of 2, 5, 10, 17"
+          ]
+        },
+        {
+          "code": "E2.8",
+          "title": "Proportion",
+          "content": [
+            "Direct proportion: y ∝ x and y = kx",
+            "Inverse proportion: y ∝ 1/x and y = k/x",
+            "Recognise and solve problems involving direct and inverse proportion"
+          ],
+          "examples": [
+            "y is directly proportional to x. When x = 4, y = 12. Find y when x = 7",
+            "y is inversely proportional to x. When x = 2, y = 6. Find y when x = 3"
+          ],
+          "isNew": true
+        },
+        {
+          "code": "E2.9",
+          "title": "Graphs in practical situations",
+          "content": [
+            "Use and interpret graphs in practical situations",
+            "Travel graphs and conversion graphs",
+            "Draw graphs from given data"
+          ],
+          "examples": [
+            "Interpret gradient of straight-line graph as rate of change",
+            "Draw distance-time graph to represent a journey"
+          ]
+        },
+        {
+          "code": "E2.10",
+          "title": "Graphs of functions",
+          "content": [
+            "Construct tables of values and draw graphs",
+            "Functions: ax + b, ±x² + ax + b, a/x (x ≠ 0)",
+            "Solve associated equations graphically"
+          ],
+          "examples": [
+            "Find intersection of line and curve"
+          ],
+          "notes": [
+            "a and b are integer constants"
+          ]
+        },
+        {
+          "code": "E2.11",
+          "title": "Sketching curves",
+          "content": [
+            "Construct tables of values and draw graphs for functions",
+            "Functions include: ax^n where n = -2, -1, -1/2, 0, 1/2, 1, 2, 3",
+            "Functions include: a^x for positive values of x",
+            "Estimate gradients of curves by drawing tangents"
+          ],
+          "notes": [
+            "Reciprocal graphs: vertical asymptote where denominator = 0",
+            "Exponential graphs: y-intercept is the coefficient, horizontal asymptote at y = 0",
+            "Drawing tangents for gradient estimation"
+          ]
+        },
+        {
+          "code": "E2.12",
+          "title": "Function notation",
+          "content": [
+            "Use function notation",
+            "Find composite functions",
+            "Find inverse functions"
+          ],
+          "notation": [
+            "f(x) - function notation",
+            "fg(x) or f(g(x)) - composite function",
+            "f⁻¹(x) - inverse function"
+          ],
+          "examples": [
+            "If f(x) = 2x + 3, find f(5)",
+            "If f(x) = x² and g(x) = x + 1, find fg(x)",
+            "If f(x) = 3x - 2, find f⁻¹(x)"
+          ],
+          "isNew": true
+        },
+        {
+          "code": "E2.13",
+          "title": "Domain and range",
+          "content": [
+            "Understand and use the terms domain and range",
+            "Identify domain and range from context or graph"
+          ],
+          "examples": [
+            "State the domain and range of f(x) = √x",
+            "State the range of f(x) = x² for domain -2 ≤ x ≤ 3"
+          ],
+          "notes": [
+            "Domain: set of possible input values",
+            "Range: set of possible output values"
+          ],
+          "isNew": true
+        }
+      ]
+    },
+    {
+      "id": "E3",
+      "code": "E3",
+      "title": "Coordinate geometry",
+      "level": "Extended",
+      "icon": "Grid3X3",
+      "color": "text-purple-600",
+      "bgColor": "bg-purple-50",
+      "subtopics": [
+        {
+          "code": "E3.1",
+          "title": "Coordinates",
+          "content": [
+            "Use and interpret Cartesian coordinates in two dimensions"
+          ]
+        },
+        {
+          "code": "E3.2",
+          "title": "Drawing linear graphs",
+          "content": [
+            "Draw straight-line graphs for linear equations"
+          ],
+          "notes": [
+            "Equations given in form y = mx + c (e.g., y = -2x + 5)",
+            "Unless table of values is given"
+          ]
+        },
+        {
+          "code": "E3.3",
+          "title": "Gradient of linear graphs",
+          "content": [
+            "Find the gradient of a straight line"
+          ],
+          "notes": [
+            "From a grid only"
+          ]
+        },
+        {
+          "code": "E3.4",
+          "title": "Coordinate geometry calculations",
+          "content": [
+            "Find the gradient of a straight line from coordinates of two points",
+            "Find the length of a line segment",
+            "Find the midpoint of a line segment",
+            "Find the equation of a straight line given sufficient information"
+          ],
+          "examples": [
+            "Find gradient of line through (1, 2) and (4, 8)",
+            "Find length of line joining (-1, 3) and (2, 7)",
+            "Find midpoint of line joining (-2, 5) and (4, 1)"
+          ],
+          "formulas_given": [
+            "Distance formula",
+            "Midpoint formula"
+          ],
+          "isNew": true
+        },
+        {
+          "code": "E3.5",
+          "title": "Equations of linear graphs",
+          "content": [
+            "Interpret and obtain equation of straight-line graph in form y = mx + c"
+          ],
+          "examples": [
+            "Use and request lines in forms: y = mx + c, x = k",
+            "Find equation when graph is given",
+            "Find gradient and y-intercept from equation y = 6x + 3"
+          ],
+          "notes": [
+            "Give equations in fully simplified form"
+          ]
+        },
+        {
+          "code": "E3.6",
+          "title": "Parallel lines",
+          "content": [
+            "Find gradient and equation of straight line parallel to given line"
+          ],
+          "examples": [
+            "Find equation of line parallel to y = 4x - 1 that passes through (1, -3)"
+          ]
+        },
+        {
+          "code": "E3.7",
+          "title": "Perpendicular lines",
+          "content": [
+            "Understand that perpendicular lines have gradients m₁ and m₂ such that m₁ × m₂ = -1",
+            "Find equation of perpendicular line"
+          ],
+          "examples": [
+            "Find equation of line perpendicular to y = 2x + 1 passing through (4, 3)"
+          ],
+          "notes": [
+            "Product of gradients of perpendicular lines = -1"
+          ],
+          "isNew": true
+        }
+      ]
+    },
+    {
+      "id": "E4",
+      "code": "E4",
+      "title": "Geometry",
+      "level": "Extended",
+      "icon": "Triangle",
+      "color": "text-orange-600",
+      "bgColor": "bg-orange-50",
+      "subtopics": [
+        {
+          "code": "E4.1",
+          "title": "Geometrical terms",
+          "content": [
+            "Lines and angles",
+            "Triangles and quadrilaterals",
+            "Polygons",
+            "Circles",
+            "Simple solids"
+          ],
+          "vocabulary": {
+            "lines": [
+              "Parallel",
+              "Perpendicular"
+            ],
+            "angles": [
+              "Acute",
+              "Right",
+              "Obtuse",
+              "Reflex"
+            ],
+            "triangles": [
+              "Equilateral",
+              "Isosceles",
+              "Scalene",
+              "Right-angled"
+            ],
+            "quadrilaterals": [
+              "Square",
+              "Rectangle",
+              "Parallelogram",
+              "Rhombus",
+              "Trapezium",
+              "Kite"
+            ],
+            "polygons": [
+              "Pentagon",
+              "Hexagon",
+              "Heptagon",
+              "Octagon",
+              "Nonagon",
+              "Decagon"
+            ],
+            "circles": [
+              "Centre",
+              "Radius",
+              "Diameter",
+              "Circumference",
+              "Semicircle",
+              "Chord",
+              "Tangent",
+              "Arc",
+              "Sector",
+              "Segment"
+            ],
+            "solids": [
+              "Cube",
+              "Cuboid",
+              "Prism",
+              "Cylinder",
+              "Pyramid",
+              "Cone",
+              "Sphere",
+              "Face",
+              "Surface",
+              "Edge"
+            ]
+          }
+        },
+        {
+          "code": "E4.2",
+          "title": "Geometrical constructions",
+          "content": [
+            "Measure and draw lines and angles",
+            "Construct triangle given all sides using ruler and compasses only",
+            "Draw, use and interpret nets"
+          ],
+          "examples": [
+            "Construct rhombus by drawing two triangles",
+            "Draw nets of cubes, cuboids, prisms and pyramids",
+            "Use measurements from nets to calculate volumes and surface areas"
+          ],
+          "notes": [
+            "Ruler used for all straight edges",
+            "Construction arcs must be shown",
+            "Perpendicular bisectors and angle bisectors NOT required"
+          ]
+        },
+        {
+          "code": "E4.3",
+          "title": "Scale drawings",
+          "content": [
+            "Draw and interpret scale drawings",
+            "Use and interpret three-figure bearings"
+          ],
+          "examples": [
+            "Find bearing of A from B if bearing of B from A is 025°",
+            "Point D is due east of point C"
+          ],
+          "notes": [
+            "Ruler must be used for all straight edges",
+            "Bearings measured clockwise from north (000° to 360°)",
+            "Understanding of north, east, south, west required"
+          ]
+        },
+        {
+          "code": "E4.4",
+          "title": "Similarity",
+          "content": [
+            "Calculate lengths of similar shapes"
+          ]
+        },
+        {
+          "code": "E4.5",
+          "title": "Symmetry",
+          "content": [
+            "Recognise line symmetry",
+            "Order of rotational symmetry in 2D"
+          ],
+          "notes": [
+            "Includes properties of triangles, quadrilaterals and polygons related to symmetries"
+          ]
+        },
+        {
+          "code": "E4.6",
+          "title": "Angles",
+          "content": [
+            "Calculate unknown angles using geometrical properties",
+            "Angles formed within parallel lines",
+            "Angle properties of regular polygons"
+          ],
+          "properties": [
+            "Sum of angles at a point = 360°",
+            "Sum of angles on straight line = 180°",
+            "Vertically opposite angles are equal",
+            "Angle sum of triangle = 180°",
+            "Angle sum of quadrilateral = 360°",
+            "Corresponding angles are equal",
+            "Alternate angles are equal",
+            "Co-interior angles sum to 180° (supplementary)"
+          ],
+          "notes": [
+            "Three-letter notation for angles (e.g., angle ABC)",
+            "Use correct geometrical terminology when giving reasons",
+            "Includes exterior and interior angles, and angle sum"
+          ]
+        },
+        {
+          "code": "E4.7",
+          "title": "Circle theorems",
+          "content": [
+            "Know and use circle theorem properties",
+            "Solve problems using circle theorems"
+          ],
+          "properties": [
+            "Angle in a semicircle is a right angle",
+            "Angle at centre is twice angle at circumference",
+            "Angles in same segment are equal",
+            "Opposite angles of cyclic quadrilateral sum to 180°",
+            "Angle between tangent and radius is 90°",
+            "Tangents from external point are equal length",
+            "Alternate segment theorem"
+          ],
+          "notes": [
+            "Proofs of circle theorems are NOT required",
+            "Use correct geometrical terminology when giving reasons"
+          ],
+          "isNew": true
+        }
+      ]
+    },
+    {
+      "id": "E5",
+      "code": "E5",
+      "title": "Mensuration",
+      "level": "Extended",
+      "icon": "Calculator",
+      "color": "text-red-600",
+      "bgColor": "bg-red-50",
+      "subtopics": [
+        {
+          "code": "E5.1",
+          "title": "Units of measure",
+          "content": [
+            "Use metric units of mass, length, area, volume and capacity",
+            "Convert quantities into larger or smaller units"
+          ],
+          "units": [
+            "Length: mm, cm, m, km",
+            "Area: mm², cm², m², km²",
+            "Volume: mm³, cm³, m³",
+            "Capacity: ml, l",
+            "Mass: g, kg"
+          ],
+          "conversions": [
+            "Between different units of area (e.g., cm² ↔ m²)",
+            "Between units of volume and capacity (e.g., m³ ↔ litres)"
+          ]
+        },
+        {
+          "code": "E5.2",
+          "title": "Area and perimeter",
+          "content": [
+            "Perimeter and area of rectangle",
+            "Perimeter and area of triangle",
+            "Perimeter and area of parallelogram",
+            "Perimeter and area of trapezium",
+            "Area of compound shapes"
+          ],
+          "notes": [
+            "Except for area of triangle, formulas are NOT given"
+          ],
+          "examples": [
+            "Find area of L-shaped figure",
+            "Find area of shape with circular and rectangular parts"
+          ]
+        },
+        {
+          "code": "E5.3",
+          "title": "Circles, arcs and sectors",
+          "content": [
+            "Circumference and area of circle",
+            "Arc length as fraction of circumference",
+            "Sector area as fraction of circle area",
+            "Solve problems involving arcs and sectors"
+          ],
+          "notes": [
+            "Answers may be asked for in terms of π",
+            "Formulas are given in List of formulas",
+            "Sector angle NOT restricted to factors of 360°"
+          ]
+        },
+        {
+          "code": "E5.4",
+          "title": "Surface area and volume",
+          "content": [
+            "Surface area and volume of cuboid",
+            "Surface area and volume of prism",
+            "Surface area and volume of cylinder",
+            "Surface area and volume of sphere",
+            "Surface area and volume of pyramid",
+            "Surface area and volume of cone",
+            "Surface area and volume of composite solids",
+            "Surface area and volume of hemisphere"
+          ],
+          "formulas_given": [
+            "Curved surface area of cylinder",
+            "Curved surface area of cone",
+            "Surface area of sphere",
+            "Volume of prism",
+            "Volume of pyramid",
+            "Volume of cylinder",
+            "Volume of cone",
+            "Volume of sphere"
+          ],
+          "notes": [
+            "Answers may be asked for in terms of π",
+            "Prism refers to any solid with uniform cross-section (e.g., cylindrical sector)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "E6",
+      "code": "E6",
+      "title": "Trigonometry",
+      "level": "Extended",
+      "icon": "Triangle",
+      "color": "text-indigo-600",
+      "bgColor": "bg-indigo-50",
+      "subtopics": [
+        {
+          "code": "E6.1",
+          "title": "Pythagoras' theorem",
+          "content": [
+            "Know and use Pythagoras' theorem"
+          ]
+        },
+        {
+          "code": "E6.2",
+          "title": "Right-angled triangles",
+          "content": [
+            "Know and use sine, cosine and tangent ratios for acute and obtuse angles",
+            "Solve problems in 2D and 3D using Pythagoras' theorem and trigonometry",
+            "Calculate lengths and angles in three-dimensional situations"
+          ],
+          "notes": [
+            "Angles in degrees, answers to one decimal place",
+            "Knowledge of bearings may be required",
+            "Includes problems with angles of elevation and depression"
+          ]
+        },
+        {
+          "code": "E6.3",
+          "title": "Sine and cosine rules",
+          "content": [
+            "Know and use the sine rule: a/sin A = b/sin B = c/sin C",
+            "Know and use the cosine rule: a² = b² + c² - 2bc cos A",
+            "Use sine and cosine rules to solve problems in 2D",
+            "Calculate area of triangle using ½ab sin C"
+          ],
+          "formulas_given": [
+            "Sine rule",
+            "Cosine rule",
+            "Area of triangle = ½ab sin C"
+          ],
+          "notes": [
+            "Triangles may be acute-angled or obtuse-angled",
+            "Choose appropriate rule based on given information"
+          ],
+          "isNew": true
+        },
+        {
+          "code": "E6.4",
+          "title": "Exact trigonometric values",
+          "content": [
+            "Know and use exact values of sin, cos, tan for 0°, 30°, 45°, 60°, 90°"
+          ],
+          "required": [
+            "sin 30° = 1/2, cos 30° = √3/2, tan 30° = 1/√3",
+            "sin 45° = 1/√2, cos 45° = 1/√2, tan 45° = 1",
+            "sin 60° = √3/2, cos 60° = 1/2, tan 60° = √3",
+            "sin 0° = 0, cos 0° = 1, tan 0° = 0",
+            "sin 90° = 1, cos 90° = 0, tan 90° is undefined"
+          ],
+          "notes": [
+            "Values should be known exactly, not as decimals"
+          ],
+          "isNew": true
+        }
+      ]
+    },
+    {
+      "id": "E7",
+      "code": "E7",
+      "title": "Transformations and vectors",
+      "level": "Extended",
+      "icon": "Shuffle",
+      "color": "text-pink-600",
+      "bgColor": "bg-pink-50",
+      "subtopics": [
+        {
+          "code": "E7.1",
+          "title": "Transformations",
+          "content": [
+            "Reflection of shape in any line (including y = x, y = -x)",
+            "Rotation about any centre through any angle",
+            "Enlargement from any centre by any scale factor (positive, negative, fractional)",
+            "Translation by a vector",
+            "Stretch parallel to an axis",
+            "Combined transformations"
+          ],
+          "notes": [
+            "Ruler must be used for all straight edges",
+            "Includes negative and fractional scale factors",
+            "Combined transformations: apply in order stated",
+            "Stretch has scale factor parallel to one axis"
+          ]
+        },
+        {
+          "code": "E7.2",
+          "title": "Vectors",
+          "content": [
+            "Describe a translation using a vector",
+            "Add and subtract vectors",
+            "Multiply a vector by a scalar",
+            "Calculate the magnitude of a vector",
+            "Represent vectors using directed line segments",
+            "Use position vectors"
+          ],
+          "notation": [
+            "Vector AB with arrow notation",
+            "Column vector notation: (x, y)",
+            "|a| - magnitude of vector a",
+            "Position vector: vector from origin to a point"
+          ],
+          "examples": [
+            "If a = (3, 2) and b = (1, -4), find a + b",
+            "If a = (2, 5), find 3a",
+            "Find |a| if a = (3, 4)"
+          ],
+          "isNew": true
+        }
+      ]
+    },
+    {
+      "id": "E8",
+      "code": "E8",
+      "title": "Probability",
+      "level": "Extended",
+      "icon": "BarChart3",
+      "color": "text-teal-600",
+      "bgColor": "bg-teal-50",
+      "subtopics": [
+        {
+          "code": "E8.1",
+          "title": "Introduction to probability",
+          "content": [
+            "Understand and use probability scale from 0 to 1",
+            "Calculate probability of single event",
+            "Probability of event not occurring = 1 - probability of event occurring"
+          ],
+          "examples": [
+            "The probability that a counter is blue is 0.8. What is the probability that it is not blue?"
+          ],
+          "notes": [
+            "Give as fraction, decimal or percentage",
+            "May use tables, graphs or Venn diagrams (limited to two or three sets)"
+          ],
+          "notation": [
+            "P(A) - probability of event A",
+            "P(A') - probability of event A not occurring",
+            "P(A ∪ B) - probability of A or B",
+            "P(A ∩ B) - probability of A and B"
+          ]
+        },
+        {
+          "code": "E8.2",
+          "title": "Relative and expected frequencies",
+          "content": [
+            "Understand relative frequency as estimate of probability",
+            "Calculate expected frequencies"
+          ],
+          "examples": [
+            "Use results of experiments with spinner to estimate probability",
+            "Use probability to estimate expected value from population"
+          ],
+          "notes": [
+            "Includes understanding fair, bias and random"
+          ]
+        },
+        {
+          "code": "E8.3",
+          "title": "Probability of combined events",
+          "content": [
+            "Calculate probability using sample space diagrams",
+            "Calculate probability using Venn diagrams (two or three sets)",
+            "Calculate probability using tree diagrams",
+            "Calculate conditional probability",
+            "Understand mutually exclusive and independent events"
+          ],
+          "notes": [
+            "Combined events with and without replacement",
+            "Venn diagrams limited to two or three sets",
+            "Tree diagrams: outcomes at end of branches, probabilities by side of branches",
+            "Conditional probability: P(A|B) means probability of A given B has occurred"
+          ],
+          "notation": [
+            "P(A|B) - conditional probability"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "E9",
+      "code": "E9",
+      "title": "Statistics",
+      "level": "Extended",
+      "icon": "Sigma",
+      "color": "text-cyan-600",
+      "bgColor": "bg-cyan-50",
+      "subtopics": [
+        {
+          "code": "E9.1",
+          "title": "Classifying statistical data",
+          "content": [
+            "Classify and tabulate statistical data"
+          ],
+          "examples": [
+            "Tally tables",
+            "Two-way tables"
+          ]
+        },
+        {
+          "code": "E9.2",
+          "title": "Interpreting statistical data",
+          "content": [
+            "Read, interpret and draw inferences from tables and statistical diagrams",
+            "Compare sets of data using tables, graphs and statistical measures",
+            "Appreciate restrictions on drawing conclusions from given data"
+          ],
+          "examples": [
+            "Compare averages and ranges between two data sets"
+          ]
+        },
+        {
+          "code": "E9.3",
+          "title": "Averages and range",
+          "content": [
+            "Calculate mean, median, mode and range for individual and discrete data",
+            "Calculate mean for grouped data",
+            "Identify the modal class for grouped data",
+            "Calculate and use estimated mean for grouped data"
+          ],
+          "notes": [
+            "Data may be in list, frequency table, or grouped frequency table",
+            "For grouped data, use midpoint of class interval"
+          ]
+        },
+        {
+          "code": "E9.4",
+          "title": "Statistical charts and diagrams",
+          "content": [
+            "Draw and interpret bar charts",
+            "Draw and interpret pie charts",
+            "Draw and interpret pictograms",
+            "Draw and interpret stem-and-leaf diagrams",
+            "Draw and interpret simple frequency distributions",
+            "Draw and interpret histograms with equal class intervals",
+            "Draw and interpret cumulative frequency diagrams",
+            "Estimate median, quartiles and interquartile range from cumulative frequency"
+          ],
+          "notes": [
+            "Includes composite (stacked) and dual (side-by-side) bar charts",
+            "Stem-and-leaf diagrams should have ordered data with a key",
+            "Histograms: area represents frequency, all class intervals equal width",
+            "Cumulative frequency: plot at upper class boundary",
+            "Quartiles: Q1 at 25%, median at 50%, Q3 at 75%",
+            "Interquartile range = Q3 - Q1"
+          ]
+        },
+        {
+          "code": "E9.5",
+          "title": "Scatter diagrams",
+          "content": [
+            "Draw and interpret scatter diagrams",
+            "Understand positive, negative and zero correlation",
+            "Draw by eye, interpret and use straight line of best fit"
+          ],
+          "notes": [
+            "Plotted points clearly marked (e.g., small crosses ×)",
+            "Line of best fit: single ruled line by inspection, extends across full data set",
+            "Roughly even distribution of points either side of line"
+          ]
+        }
+      ]
+    }
+  ]
+}

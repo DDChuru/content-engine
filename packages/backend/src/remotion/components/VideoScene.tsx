@@ -1,16 +1,16 @@
 import React from 'react';
-import { AbsoluteFill, Video, Audio, staticFile } from 'remotion';
+import { AbsoluteFill, OffthreadVideo, Audio, staticFile } from 'remotion';
 
 export interface VideoSceneProps {
   videoPath: string;
-  audioPath: string;
+  audioPath?: string;
 }
 
 export const VideoScene: React.FC<VideoSceneProps> = ({ videoPath, audioPath }) => {
   return (
     <AbsoluteFill>
       {/* Manim animation video */}
-      <Video
+      <OffthreadVideo
         src={staticFile(videoPath)}
         style={{
           width: '100%',

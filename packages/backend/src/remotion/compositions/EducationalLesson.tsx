@@ -108,6 +108,8 @@ export const EducationalLesson: React.FC<EducationalLessonProps> = ({
               <ImageScene
                 imagePath={seq.scene.visual}
                 audioPath={seq.scene.audio || ''}
+                title={seq.scene.title}
+                subtitle={seq.scene.subtitle}
               />
             )}
           </Sequence>

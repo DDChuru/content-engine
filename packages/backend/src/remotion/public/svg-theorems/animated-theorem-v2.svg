@@ -1,0 +1,270 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="50%" style="stop-color:#16213e"/>
+      <stop offset="100%" style="stop-color:#0f3460"/>
+    </linearGradient>
+
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="goldGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feFlood flood-color="#ffd700" flood-opacity="0.6"/>
+      <feComposite in2="coloredBlur" operator="in"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="redGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feFlood flood-color="#ef4444" flood-opacity="0.6"/>
+      <feComposite in2="coloredBlur" operator="in"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    @keyframes draw {
+      to { stroke-dashoffset: 0; }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeOut {
+      from { opacity: 1; }
+      to { opacity: 0; }
+    }
+
+    @keyframes reveal {
+      from { opacity: 0; transform: scale(0); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
+
+    /* Moving point along arc - travels from P1 to P2 to P3 */
+    @keyframes moveAlongArc {
+      0%   { cx: 285; cy: 184; }   /* P1 position (140°) */
+      33%  { cx: 400; cy: 130; }   /* P3 position (90°) - top center */
+      66%  { cx: 496; cy: 165; }   /* P2 position (50°) */
+      100% { cx: 400; cy: 130; }   /* Back to P3 for finale */
+    }
+
+    /* === PHASE 1: Setup (0-4s) === */
+    .circle {
+      stroke-dasharray: 942;
+      stroke-dashoffset: 942;
+      animation: draw 2s ease-out forwards;
+    }
+    .diameter-glow {
+      stroke-dasharray: 300;
+      stroke-dashoffset: 300;
+      animation: draw 1.5s ease-in-out 2s forwards;
+    }
+    .diameter {
+      stroke-dasharray: 300;
+      stroke-dashoffset: 300;
+      animation: draw 1.5s ease-in-out 2s forwards;
+    }
+    .point-a, .point-b {
+      opacity: 0;
+      animation: reveal 0.4s ease-out 3.5s forwards;
+    }
+    .label-a, .label-b {
+      opacity: 0;
+      animation: fadeIn 0.3s ease-out 3.7s forwards;
+    }
+
+    /* === PHASE 2: Moving point with triangles (4-12s) === */
+    .moving-point {
+      opacity: 0;
+      animation:
+        fadeIn 0.3s ease-out 4s forwards,
+        moveAlongArc 6s ease-in-out 4.5s forwards;
+    }
+
+    /* Triangle at P1 - purple */
+    .line-a-p1, .line-p1-b {
+      stroke-dasharray: 300;
+      stroke-dashoffset: 300;
+      animation: draw 0.6s ease-out 4.5s forwards;
+    }
+    .angle-p1 {
+      opacity: 0;
+      animation: fadeIn 0.3s ease-out 5.2s forwards;
+    }
+
+    /* Triangle at P3 (center) - green */
+    .line-a-p3-first, .line-p3-b-first {
+      stroke-dasharray: 300;
+      stroke-dashoffset: 300;
+      animation: draw 0.6s ease-out 6.5s forwards;
+    }
+    .angle-p3-first {
+      opacity: 0;
+      animation: fadeIn 0.3s ease-out 7.2s forwards;
+    }
+
+    /* Triangle at P2 - cyan */
+    .line-a-p2, .line-p2-b {
+      stroke-dasharray: 300;
+      stroke-dashoffset: 300;
+      animation: draw 0.6s ease-out 8.5s forwards;
+    }
+    .angle-p2 {
+      opacity: 0;
+      animation: fadeIn 0.3s ease-out 9.2s forwards;
+    }
+
+    /* === PHASE 3: The Proof (12-20s) === */
+    /* Fade out old triangles */
+    .fade-for-proof {
+      animation: fadeOut 0.5s ease-out 14.5s forwards;
+    }
+
+    /* Center point O */
+    .center-point {
+      opacity: 0;
+      animation: reveal 0.4s ease-out 15s forwards;
+    }
+    .label-o {
+      opacity: 0;
+      animation: fadeIn 0.3s ease-out 15.3s forwards;
+    }
+
+    /* Radii from center to P */
+    .radius-op {
+      stroke-dasharray: 150;
+      stroke-dashoffset: 150;
+      animation: draw 0.8s ease-out 15.5s forwards;
+    }
+
+    /* 180° arc indicator at center */
+    .arc-180 {
+      opacity: 0;
+      animation: fadeIn 0.5s ease-out 16.5s forwards;
+    }
+    .label-180 {
+      opacity: 0;
+      animation: fadeIn 0.5s ease-out 17s forwards;
+    }
+
+    /* Final 90° reveal */
+    .final-triangle {
+      stroke-dasharray: 300;
+      stroke-dashoffset: 300;
+      animation: draw 0.8s ease-out 19s forwards;
+    }
+    .final-angle {
+      opacity: 0;
+      animation: reveal 0.5s ease-out 20s forwards;
+    }
+    .final-90 {
+      opacity: 0;
+      animation: fadeIn 0.5s ease-out 20.5s forwards, pulse 1.5s ease-in-out 21s infinite;
+    }
+  </style>
+
+  <!-- Background -->
+  <rect width="800" height="500" fill="url(#bgGradient)"/>
+
+  <!-- Subtle grid -->
+  <g opacity="0.08" stroke="#ffffff" stroke-width="0.5">
+    <line x1="0" y1="250" x2="800" y2="250"/>
+    <line x1="400" y1="0" x2="400" y2="500"/>
+  </g>
+
+  <!-- Circle -->
+  <circle class="circle" cx="400" cy="280" r="150" fill="none" stroke="#60a5fa" stroke-width="3" filter="url(#glow)"/>
+
+  <!-- Diameter -->
+  <line class="diameter-glow" x1="250" y1="280" x2="550" y2="280" stroke="#60a5fa" stroke-width="8" stroke-linecap="round" opacity="0.5"/>
+  <line class="diameter" x1="250" y1="280" x2="550" y2="280" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- Endpoints A and B -->
+  <circle class="point-a" cx="250" cy="280" r="7" fill="#60a5fa" filter="url(#glow)" style="transform-origin: 250px 280px;"/>
+  <text class="label-a" x="230" y="310" fill="#94a3b8" font-family="Arial, sans-serif" font-size="20" font-weight="bold">A</text>
+  <circle class="point-b" cx="550" cy="280" r="7" fill="#60a5fa" filter="url(#glow)" style="transform-origin: 550px 280px;"/>
+  <text class="label-b" x="560" y="310" fill="#94a3b8" font-family="Arial, sans-serif" font-size="20" font-weight="bold">B</text>
+
+  <!-- Moving highlight point -->
+  <circle class="moving-point" cx="285" cy="184" r="10" fill="#ffd700" filter="url(#goldGlow)"/>
+
+  <!-- Triangle 1: P1 at 140° (purple) - fades for proof -->
+  <g class="fade-for-proof" opacity="0.6">
+    <line class="line-a-p1" x1="250" y1="280" x2="285" y2="184" stroke="#a78bfa" stroke-width="2" stroke-linecap="round"/>
+    <line class="line-p1-b" x1="285" y1="184" x2="550" y2="280" stroke="#a78bfa" stroke-width="2" stroke-linecap="round"/>
+    <g class="angle-p1">
+      <rect x="279" y="181" width="10" height="10" fill="none" stroke="#a78bfa" stroke-width="1.5" transform="rotate(-55, 285, 187)"/>
+      <text x="258" y="168" fill="#a78bfa" font-family="Arial, sans-serif" font-size="12" font-weight="bold">90°</text>
+    </g>
+  </g>
+
+  <!-- Triangle 2: P3 at 90° center (green) - fades for proof -->
+  <g class="fade-for-proof" opacity="0.6">
+    <line class="line-a-p3-first" x1="250" y1="280" x2="400" y2="130" stroke="#34d399" stroke-width="2" stroke-linecap="round"/>
+    <line class="line-p3-b-first" x1="400" y1="130" x2="550" y2="280" stroke="#34d399" stroke-width="2" stroke-linecap="round"/>
+    <g class="angle-p3-first">
+      <rect x="394" y="137" width="10" height="10" fill="none" stroke="#34d399" stroke-width="1.5"/>
+      <text x="408" y="125" fill="#34d399" font-family="Arial, sans-serif" font-size="12" font-weight="bold">90°</text>
+    </g>
+  </g>
+
+  <!-- Triangle 3: P2 at 50° (cyan) - fades for proof -->
+  <g class="fade-for-proof" opacity="0.6">
+    <line class="line-a-p2" x1="250" y1="280" x2="496" y2="165" stroke="#22d3ee" stroke-width="2" stroke-linecap="round"/>
+    <line class="line-p2-b" x1="496" y1="165" x2="550" y2="280" stroke="#22d3ee" stroke-width="2" stroke-linecap="round"/>
+    <g class="angle-p2">
+      <rect x="490" y="162" width="10" height="10" fill="none" stroke="#22d3ee" stroke-width="1.5" transform="rotate(25, 496, 168)"/>
+      <text x="505" y="152" fill="#22d3ee" font-family="Arial, sans-serif" font-size="12" font-weight="bold">90°</text>
+    </g>
+  </g>
+
+  <!-- ============ THE PROOF ============ -->
+
+  <!-- Center point O -->
+  <circle class="center-point" cx="400" cy="280" r="6" fill="#ef4444" filter="url(#redGlow)" style="transform-origin: 400px 280px;"/>
+  <text class="label-o" x="408" y="298" fill="#ef4444" font-family="Arial, sans-serif" font-size="16" font-weight="bold">O</text>
+
+  <!-- Radius from O to P (at top center) -->
+  <line class="radius-op" x1="400" y1="280" x2="400" y2="130" stroke="#ef4444" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="5,5" filter="url(#redGlow)"/>
+
+  <!-- 180° - highlight the diameter as the straight angle -->
+  <!-- Small angle arc showing the straight line = 180° -->
+  <g class="arc-180">
+    <!-- Arc above the diameter line showing it's a straight angle -->
+    <path d="M 370 280 Q 400 250 430 280" fill="none" stroke="#ef4444" stroke-width="2.5" opacity="0.8"/>
+  </g>
+  <text class="label-180" x="400" y="262" fill="#ef4444" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">180°</text>
+
+  <!-- Final gold triangle (redrawn prominently) -->
+  <line class="final-triangle" x1="250" y1="280" x2="400" y2="130" stroke="#ffd700" stroke-width="3" stroke-linecap="round" filter="url(#goldGlow)"/>
+  <line class="final-triangle" x1="400" y1="130" x2="550" y2="280" stroke="#ffd700" stroke-width="3" stroke-linecap="round" filter="url(#goldGlow)"/>
+
+  <!-- Final angle symbol -->
+  <g class="final-angle" filter="url(#goldGlow)" style="transform-origin: 400px 140px;">
+    <path d="M 400 130 L 388 142 L 400 154 L 412 142 Z" fill="rgba(255, 215, 0, 0.3)" stroke="#ffd700" stroke-width="2"/>
+  </g>
+
+  <!-- Final 90° with pulse -->
+  <text class="final-90" x="420" y="155" fill="#ffd700" font-family="Arial, sans-serif" font-size="28" font-weight="bold" filter="url(#goldGlow)">90°</text>
+
+</svg>

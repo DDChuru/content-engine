@@ -11,3 +11,4 @@ export * from './SlideSubtitle';
 export * from './MathNotation';
 export * from './SlideTransition';
 export * from './VennDiagramSlide';
+export * from './IntroSlides';
