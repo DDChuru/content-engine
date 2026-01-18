@@ -42,4 +42,32 @@ temp/
 # Test coverage
 coverage/
 .nyc_output/
+
+# Firebase service account keys (NEVER commit these)
 education-service-account.json
+education-service.json
+*-firebase-key.json
+*-service-account.json
+
+# Generated output (videos, images, audio)
+packages/backend/output/
+packages/backend/src/remotion/public/videos/*.mp4
+packages/backend/src/remotion/public/audio/
+packages/backend/src/remotion/public/audios/
+packages/backend/src/manim/output/
+output/
+
+# Large binary files
+*.mp4
+*.mp3
+*.wav
+*.m4a
+
+# Keep lesson JSON but not generated media
+!packages/backend/output/lessons/*.json
+
+# Screenshots and temporary files
+screenshots/
+current-session-id.txt
+studio-change-requests.json
+studio-change-responses.json
