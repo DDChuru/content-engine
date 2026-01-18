@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/studio-icon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Content Engine Studio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500;600&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+      /* Grid background */
+      .grid-bg {
+        background-image:
+          linear-gradient(rgba(0, 255, 136, 0.02) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(0, 255, 136, 0.02) 1px, transparent 1px);
+        background-size: 40px 40px;
+      }
+
+      /* Text glow */
+      .text-glow {
+        text-shadow: 0 0 10px currentColor, 0 0 20px currentColor;
+      }
+      .text-glow-subtle {
+        text-shadow: 0 0 5px currentColor;
+      }
+
+      /* Neon pulse */
+      @keyframes neonPulse {
+        0%, 100% {
+          box-shadow: 0 0 5px rgba(0, 255, 136, 0.5), 0 0 10px rgba(0, 255, 136, 0.3);
+        }
+        50% {
+          box-shadow: 0 0 10px rgba(0, 255, 136, 0.8), 0 0 20px rgba(0, 255, 136, 0.5);
+        }
+      }
+      .neon-pulse {
+        animation: neonPulse 1.5s ease-in-out infinite;
+      }
+
+      /* Scan lines overlay */
+      .scan-lines::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: repeating-linear-gradient(
+          0deg,
+          transparent,
+          transparent 2px,
+          rgba(0, 255, 136, 0.01) 2px,
+          rgba(0, 255, 136, 0.01) 4px
+        );
+        pointer-events: none;
+        z-index: 100;
+      }
+
+      /* Scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: rgba(0, 255, 136, 0.05);
+      }
+      ::-webkit-scrollbar-thumb {
+        background: rgba(0, 255, 136, 0.2);
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: rgba(0, 255, 136, 0.4);
+      }
+
+      /* Workspace tab colors */
+      .workspace-video { --workspace-color: #ef4444; }
+      .workspace-education { --workspace-color: #22c55e; }
+      .workspace-course { --workspace-color: #f59e0b; }
+      .workspace-media { --workspace-color: #8b5cf6; }
+    </style>
+  </head>
+  <body class="bg-studio-bg text-studio-text font-mono antialiased">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

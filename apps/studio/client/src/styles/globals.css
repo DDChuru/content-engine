@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base styles */
+body {
+  background-color: #0a0a0f;
+  color: #e8e8f0;
+}
+
+/* Terminal styles */
+.xterm {
+  padding: 8px;
+}
+
+.xterm-viewport {
+  overflow-y: auto !important;
+}
+
+/* Panel styles */
+@layer components {
+  .panel {
+    @apply bg-studio-card border border-studio-border rounded-lg overflow-hidden;
+  }
+
+  .panel-header {
+    @apply px-4 py-2 border-b border-studio-border bg-studio-bg/50 flex items-center justify-between;
+  }
+
+  .panel-title {
+    @apply font-display text-xs uppercase tracking-[0.2em] text-accent-primary;
+  }
+
+  .btn {
+    @apply px-4 py-2 rounded-lg font-ui text-sm uppercase tracking-wider transition-all;
+  }
+
+  .btn-primary {
+    @apply bg-accent-primary text-studio-bg hover:shadow-neon;
+  }
+
+  .btn-secondary {
+    @apply bg-studio-card border border-studio-border text-studio-muted hover:text-studio-text hover:border-accent-primary;
+  }
+
+  .btn-ghost {
+    @apply bg-transparent text-studio-muted hover:text-studio-text hover:bg-studio-card;
+  }
+
+  .workspace-tab {
+    @apply px-4 py-2 font-ui text-sm uppercase tracking-wider transition-all relative;
+  }
+
+  .workspace-tab.active {
+    @apply text-white;
+  }
+
+  .workspace-tab.active::after {
+    content: '';
+    @apply absolute bottom-0 left-0 right-0 h-0.5;
+    background-color: var(--workspace-color);
+    box-shadow: 0 0 10px var(--workspace-color);
+  }
+
+  .context-badge {
+    @apply inline-flex items-center gap-1 px-2 py-0.5 rounded text-xs font-mono;
+  }
+}
+
+/* Corner accents */
+.corner-accent {
+  position: relative;
+}
+.corner-accent::before,
+.corner-accent::after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-color: rgba(0, 255, 136, 0.4);
+  border-style: solid;
+  border-width: 0;
+}
+.corner-accent::before {
+  top: 0;
+  left: 0;
+  border-top-width: 2px;
+  border-left-width: 2px;
+}
+.corner-accent::after {
+  bottom: 0;
+  right: 0;
+  border-bottom-width: 2px;
+  border-right-width: 2px;
+}
+
+/* Status indicator animations */
+@keyframes statusPulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.status-active {
+  animation: statusPulse 2s ease-in-out infinite;
+}
