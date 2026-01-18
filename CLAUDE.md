@@ -156,8 +156,8 @@ Claude AI → Lesson Structure & Scripts
 For Each Concept:
 ├─ Manim (Math animations - FREE, local)
 │  └─ Circle theorems, differentiation, graphs
-├─ Gemini 2.5 Flash Image (Backgrounds - $0.039/image)
-│  └─ Introduction slides, context images
+├─ Gemini Image Generation (gemini-3-pro-image-preview - $0.039/image)
+│  └─ Infographics, training visuals, backgrounds
 └─ ElevenLabs TTS (User's voice - $0.30/1K chars)
     └─ Scene narration
     ↓
@@ -178,7 +178,7 @@ Educational content pipeline dependencies in `packages/backend/package.json`:
   "@remotion/renderer": "^4.0.364",
   "@remotion/lambda": "^4.0.364",
   "@elevenlabs/elevenlabs-js": "^0.x.x",  // Voice cloning & TTS
-  "@google/generative-ai": "^0.24.1",     // Gemini 2.5 Flash Image
+  "@google/generative-ai": "^0.24.1",     // Gemini Image (gemini-3-pro-image-preview)
   "@anthropic-ai/sdk": "^0.30.0"          // Claude for lesson generation
 }
 ```
@@ -274,7 +274,7 @@ export class EducationalVideoGenerator {
 | Component | Count | Cost Each | Total |
 |-----------|-------|-----------|-------|
 | Manim animations (math content) | 6 scenes | FREE | $0.00 |
-| Gemini 2.5 Flash Image (backgrounds) | 4 scenes | $0.039 | $0.16 |
+| Gemini Image (gemini-3-pro-image-preview) | 4 scenes | $0.039 | $0.16 |
 | ElevenLabs narration (~3K chars total) | 10 scenes | $0.30/1K | $0.90 |
 | Remotion rendering | 1 video | FREE (local) | $0.00 |
 | **TOTAL per module** | | | **~$1.06** |
@@ -382,6 +382,50 @@ dotenv.config({ path: path.resolve(__dirname, '../../../.env') });
 - `FRONTEND_URL` - CORS configuration
 - `PORT` - Backend server port (default: 3001)
 - `{PROJECT}_FIREBASE_KEY` - JSON service account keys (e.g., `ICLEAN_FIREBASE_KEY`, `ACS_FIREBASE_KEY`, `EDUCATION_FIREBASE_KEY`)
+
+## Gemini Image Generation
+
+**IMPORTANT:** Always use `gemini-3-pro-image-preview` for ALL image generation tasks.
+
+```typescript
+import { GoogleGenAI } from '@google/genai';
+
+const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
+
+const response = await ai.models.generateContent({
+  model: 'gemini-3-pro-image-preview',  // ALWAYS use this model
+  contents: prompt,
+  config: {
+    imageConfig: {
+      aspectRatio: '16:9',  // or '1:1', '4:3', '9:16'
+    }
+  }
+});
+
+// Extract image from response
+const imagePart = response.candidates?.[0]?.content?.parts?.find(
+  (part) => part.inlineData
+);
+
+if (imagePart?.inlineData?.data) {
+  const imageBuffer = Buffer.from(imagePart.inlineData.data, 'base64');
+  // Save or use imageBuffer
+}
+```
+
+**Use Cases:**
+- Training infographics and visual aids
+- Presentation backgrounds and slides
+- Educational content visuals
+- Whiteboard-style explanations
+- Professional marketing materials
+
+**Existing Service:** `packages/backend/src/services/gemini-image-generator.ts`
+- `generateDirect()` - Direct prompt generation (recommended)
+- `generateWhiteboard()` - Handwritten/whiteboard style content
+- `generateImage()` - Educational backgrounds with NO TEXT enforcement
+
+**Cost:** ~$0.039 per image
 
 ## Type System
 
@@ -697,3 +741,69 @@ The existing chat interface (`ChatInterface` component) can already be used for 
 - Status monitoring
 - Cost analytics
 - Team collaboration
+
+## 🎓 Education Platform - Complete Video Pipeline (NEW!)
+
+**Status:** Production-Ready Educational Video System ✅
+
+We've built a complete Cambridge IGCSE mathematics lesson generation system. When user mentions "education", "lessons", or "videos", see **EDUCATION-CONTEXT.md** for full capabilities.
+
+### Quick Summary
+
+**What's Working:**
+- ✅ Complete Sets lesson rendered (3m 15s, 13MB)
+- ✅ Manim animations (FREE, Python-based, 3Blue1Brown quality)
+- ✅ Remotion intro slides (professional, animated)
+- ✅ Full video composition pipeline
+- ✅ Render scripts (`render-sets-complete.sh`)
+
+**Example Lesson Structure:**
+```
+Introduction to Sets (3m 15s)
+├─ Professional Intro (2m 10s)
+│  ├─ Branding (10s)
+│  ├─ Topic Title (15s)
+│  ├─ Learning Objectives (45s) - 8 items
+│  ├─ Prerequisites (30s) - 4 items
+│  └─ Lesson Roadmap (30s) - 7 sections
+└─ Manim Animations (1m 5s)
+   ├─ What is a Set? (8s)
+   ├─ Set Notation (7s)
+   ├─ Venn Diagrams (4s)
+   ├─ Visualizing Sets (8s)
+   ├─ Intersection (12s)
+   ├─ Union (8s)
+   └─ Universal Sets (18s)
+```
+
+**Cost Model:**
+- Current: $0.00 (all local)
+- With narration: ~$0.90 per lesson (ElevenLabs)
+- With AI backgrounds: ~$1.06 per lesson
+- **vs. Traditional: $5,000-$10,000 per lesson** (99%+ savings!)
+
+**Key Files:**
+- `packages/backend/src/manim/` - Manim Python animations
+- `packages/backend/src/remotion/` - Remotion React compositions
+- `packages/backend/src/manim/output/sets-lesson-complete.mp4` - Final rendered video ✅
+- `EDUCATION-CONTEXT.md` - Full system documentation
+
+**Tech Stack:**
+- Manim Community v0.19.0 (Python 3.11, conda env `aitools`)
+- Remotion 4.0.364 (React + TypeScript)
+- FFmpeg (video processing)
+
+**When user asks about education, you can:**
+1. Generate new lesson structures (objectives, prerequisites, narration)
+2. Create Manim scene code for math concepts
+3. Design interactive practice questions
+4. Estimate costs for course creation
+5. Explain rendering and composition process
+6. Help with SCORM packaging for LMS
+
+**Documentation:**
+- `EDUCATION-STUDIO-ARCHITECTURE.md` - UI/system design
+- `EDUCATION-STUDIO-QUICKSTART.md` - Implementation guide
+- `EDUCATION-CONTEXT.md` - Complete system reference
+- `packages/backend/src/manim/SETS-LESSON-README.md` - Sets lesson guide
+
