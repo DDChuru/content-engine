@@ -267,52 +267,71 @@ function LessonImage({ src, alt }: { src: string; alt: string }) {
 // LaTeX Renderer using KaTeX
 function LaTeXFormula({ latex, name }: { latex: string; name?: string }) {
   const containerRef = useRef<HTMLDivElement>(null);
-  const [rendered, setRendered] = useState(false);
+  const [html, setHtml] = useState<string | null>(null);
+  const [error, setError] = useState(false);
 
   useEffect(() => {
-    // Load KaTeX if not already loaded
-    if (typeof window !== 'undefined' && !(window as any).katex) {
-      const link = document.createElement('link');
-      link.rel = 'stylesheet';
-      link.href = 'https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css';
-      document.head.appendChild(link);
+    let mounted = true;
 
-      const script = document.createElement('script');
-      script.src = 'https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js';
-      script.async = true;
-      script.onload = () => renderLatex();
-      document.head.appendChild(script);
-    } else {
-      renderLatex();
-    }
-  }, [latex]);
+    const loadAndRender = async () => {
+      // Load KaTeX if not already loaded
+      if (typeof window !== 'undefined' && !(window as any).katex) {
+        // Check if already loading
+        if (!(window as any).__katexLoading) {
+          (window as any).__katexLoading = new Promise<void>((resolve) => {
+            const link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.href = 'https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css';
+            document.head.appendChild(link);
 
-  const renderLatex = () => {
-    if (containerRef.current && (window as any).katex) {
-      try {
-        (window as any).katex.render(latex, containerRef.current, {
-          throwOnError: false,
-          displayMode: true
-        });
-        setRendered(true);
-      } catch (e) {
-        // Fallback to showing raw LaTeX as text
-        if (containerRef.current) {
-          containerRef.current.textContent = latex;
+            const script = document.createElement('script');
+            script.src = 'https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js';
+            script.async = true;
+            script.onload = () => resolve();
+            document.head.appendChild(script);
+          });
         }
-        setRendered(true);
+        await (window as any).__katexLoading;
       }
-    }
-  };
+
+      // Render to HTML string instead of DOM manipulation
+      if (mounted && (window as any).katex) {
+        try {
+          const rendered = (window as any).katex.renderToString(latex, {
+            throwOnError: false,
+            displayMode: true
+          });
+          setHtml(rendered);
+          setError(false);
+        } catch (e) {
+          setError(true);
+        }
+      }
+    };
+
+    loadAndRender();
+
+    return () => {
+      mounted = false;
+    };
+  }, [latex]);
 
   return (
     <div className="bg-zinc-800/50 rounded-xl p-6">
       {name && (
         <p className="text-sm text-indigo-400 mb-3 font-medium">{name}</p>
       )}
-      <div ref={containerRef} className="text-xl text-white overflow-x-auto">
-        {!rendered && <code className="text-zinc-400">{latex}</code>}
-      </div>
+      {html ? (
+        <div
+          ref={containerRef}
+          className="text-xl text-white overflow-x-auto katex-container"
+          dangerouslySetInnerHTML={{ __html: html }}
+        />
+      ) : error ? (
+        <code className="text-zinc-400 block">{latex}</code>
+      ) : (
+        <code className="text-zinc-400 block">{latex}</code>
+      )}
     </div>
   );
 }
