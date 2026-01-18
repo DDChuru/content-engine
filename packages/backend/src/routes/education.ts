@@ -2297,4 +2297,236 @@ router.get('/coverage', async (req, res) => {
   }
 });
 
+// ---------------------------------------------------------------------------
+// LESSON GENERATION WITH CLAUDE
+// ---------------------------------------------------------------------------
+
+import { generateLesson, SyllabusTopic } from '../education/lesson-generator.js';
+
+// Cache for syllabus data
+let syllabusCache: Record<string, SyllabusTopic> | null = null;
+
+async function loadSyllabusData(): Promise<Record<string, SyllabusTopic>> {
+  if (syllabusCache) return syllabusCache;
+
+  try {
+    const syllabusPath = `${process.cwd()}/data/maths-0580-syllabus-complete.json`;
+    const data = await fs.readFile(syllabusPath, 'utf-8');
+    const syllabus = JSON.parse(data);
+
+    // Build lookup by topic code
+    syllabusCache = {};
+    for (const unit of syllabus.units || []) {
+      for (const topic of unit.topics || []) {
+        syllabusCache[topic.code.toLowerCase()] = {
+          code: topic.code,
+          title: topic.title,
+          content: topic.content || [],
+          examples: topic.examples || [],
+          notes: topic.notes || [],
+          notation: topic.notation || [],
+          required: topic.required || [],
+          properties: topic.properties || [],
+          level: topic.level || 'Core'
+        };
+      }
+    }
+
+    return syllabusCache;
+  } catch (error) {
+    console.error('Failed to load syllabus:', error);
+    return {};
+  }
+}
+
+/**
+ * GET /api/education/syllabus
+ * Get full syllabus data with all topics
+ */
+router.get('/syllabus', async (req, res) => {
+  try {
+    const syllabusPath = `${process.cwd()}/data/maths-0580-syllabus-complete.json`;
+    const data = await fs.readFile(syllabusPath, 'utf-8');
+    const syllabus = JSON.parse(data);
+
+    res.json({
+      success: true,
+      syllabus
+    });
+  } catch (error: any) {
+    console.error('Failed to load syllabus:', error);
+    res.status(500).json({
+      success: false,
+      error: error.message
+    });
+  }
+});
+
+/**
+ * GET /api/education/syllabus/topics
+ * Get list of all topics with generation status
+ */
+router.get('/syllabus/topics', async (req, res) => {
+  try {
+    const syllabusData = await loadSyllabusData();
+    const topics = Object.values(syllabusData);
+
+    // Check which topics have generated lessons
+    const topicsWithStatus = await Promise.all(
+      topics.map(async (topic) => {
+        const lessonPath = `${process.cwd()}/output/lessons/igcse-0580-${topic.code.toLowerCase()}.json`;
+        let hasLesson = false;
+        let lessonMeta = null;
+
+        try {
+          const lessonData = await fs.readFile(lessonPath, 'utf-8');
+          const lesson = JSON.parse(lessonData);
+          hasLesson = true;
+          lessonMeta = {
+            estimatedDuration: lesson.estimatedDuration,
+            sectionsCount: lesson.theorySections?.length || 0,
+            examplesCount: lesson.workedExamples?.length || 0,
+            generatedAt: lesson.generation?.generatedAt
+          };
+        } catch {
+          // No lesson file
+        }
+
+        return {
+          code: topic.code,
+          title: topic.title,
+          level: topic.level,
+          hasLesson,
+          lessonMeta
+        };
+      })
+    );
+
+    res.json({
+      success: true,
+      topics: topicsWithStatus,
+      summary: {
+        total: topics.length,
+        generated: topicsWithStatus.filter(t => t.hasLesson).length,
+        pending: topicsWithStatus.filter(t => !t.hasLesson).length
+      }
+    });
+  } catch (error: any) {
+    console.error('Failed to get topics:', error);
+    res.status(500).json({
+      success: false,
+      error: error.message
+    });
+  }
+});
+
+/**
+ * POST /api/education/generate/:topicCode
+ * Generate a complete lesson for a topic using Claude
+ */
+router.post('/generate/:topicCode', async (req, res) => {
+  try {
+    const { topicCode } = req.params;
+    const { preferredStyle, exampleCount, practiceCount } = req.body;
+
+    console.log(`\n🎓 Starting lesson generation for ${topicCode}`);
+
+    // Load syllabus data
+    const syllabusData = await loadSyllabusData();
+    const normalizedCode = topicCode.toLowerCase();
+    const topic = syllabusData[normalizedCode];
+
+    if (!topic) {
+      return res.status(404).json({
+        success: false,
+        error: `Topic ${topicCode} not found in syllabus`,
+        availableTopics: Object.keys(syllabusData).slice(0, 10)
+      });
+    }
+
+    console.log(`📚 Found topic: ${topic.title}`);
+    console.log(`   Level: ${topic.level}`);
+    console.log(`   Content points: ${topic.content.length}`);
+
+    // Generate the lesson using Claude
+    const lesson = await generateLesson(topic, {
+      preferredStyle: preferredStyle || 'auto',
+      exampleCount: exampleCount || 6,
+      practiceCount: practiceCount || 10
+    });
+
+    // Save to file
+    const outputDir = `${process.cwd()}/output/lessons`;
+    await fs.mkdir(outputDir, { recursive: true });
+
+    const outputPath = `${outputDir}/igcse-0580-${normalizedCode}.json`;
+    await fs.writeFile(outputPath, JSON.stringify(lesson, null, 2));
+
+    console.log(`\n✅ Lesson saved to ${outputPath}`);
+
+    res.json({
+      success: true,
+      message: `Lesson generated for ${topic.title}`,
+      lesson: {
+        id: lesson.id,
+        title: lesson.title,
+        level: lesson.level,
+        estimatedDuration: lesson.estimatedDuration,
+        sectionsCount: lesson.theorySections?.length || 0,
+        examplesCount: lesson.workedExamples?.length || 0,
+        practiceCount: lesson.practiceQuestions?.length || 0
+      },
+      outputPath
+    });
+  } catch (error: any) {
+    console.error('Failed to generate lesson:', error);
+    res.status(500).json({
+      success: false,
+      error: error.message,
+      details: error.stack
+    });
+  }
+});
+
+/**
+ * GET /api/education/generate/status/:topicCode
+ * Check generation status for a topic
+ */
+router.get('/generate/status/:topicCode', async (req, res) => {
+  try {
+    const { topicCode } = req.params;
+    const normalizedCode = topicCode.toLowerCase();
+    const lessonPath = `${process.cwd()}/output/lessons/igcse-0580-${normalizedCode}.json`;
+
+    try {
+      const lessonData = await fs.readFile(lessonPath, 'utf-8');
+      const lesson = JSON.parse(lessonData);
+
+      res.json({
+        success: true,
+        status: 'complete',
+        lesson: {
+          id: lesson.id,
+          title: lesson.title,
+          estimatedDuration: lesson.estimatedDuration,
+          generatedAt: lesson.generation?.generatedAt,
+          sectionsCount: lesson.theorySections?.length || 0,
+          examplesCount: lesson.workedExamples?.length || 0
+        }
+      });
+    } catch {
+      res.json({
+        success: true,
+        status: 'not_generated',
+        message: 'Lesson has not been generated yet'
+      });
+    }
+  } catch (error: any) {
+    res.status(500).json({
+      success: false,
+      error: error.message
+    });
+  }
+});
+
 export default router;
