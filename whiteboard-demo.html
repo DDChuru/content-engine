@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Whiteboard Animation Demo - Sets Tutorial</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/roughjs@4.5.2/bundled/rough.js"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Comic Sans MS', 'Marker Felt', cursive;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 1200px;
+      width: 100%;
+    }
+
+    .whiteboard {
+      background: #ffffff;
+      border-radius: 20px;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+      padding: 60px;
+      min-height: 700px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .whiteboard::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background:
+        linear-gradient(90deg, rgba(200, 200, 200, 0.1) 1px, transparent 1px),
+        linear-gradient(rgba(200, 200, 200, 0.1) 1px, transparent 1px);
+      background-size: 50px 50px;
+      pointer-events: none;
+    }
+
+    #canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+    }
+
+    h1 {
+      font-size: 48px;
+      color: #1a202c;
+      margin-bottom: 40px;
+      opacity: 0;
+    }
+
+    .step {
+      margin: 30px 0;
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+
+    .step-number {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      background: #667eea;
+      color: white;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 40px;
+      font-weight: bold;
+      margin-right: 15px;
+      font-size: 20px;
+    }
+
+    .step-content {
+      display: inline-block;
+      font-size: 24px;
+      color: #2d3748;
+      vertical-align: middle;
+      max-width: calc(100% - 60px);
+    }
+
+    .drawing-path {
+      stroke: #2d3748;
+      stroke-width: 3;
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .venn-circle {
+      stroke: #667eea;
+      stroke-width: 4;
+      fill: none;
+    }
+
+    .controls {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 100;
+      display: flex;
+      gap: 15px;
+    }
+
+    button {
+      padding: 15px 30px;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+    }
+
+    .btn-primary {
+      background: #667eea;
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: #5a67d8;
+      transform: translateY(-2px);
+      box-shadow: 0 15px 30px -5px rgba(102, 126, 234, 0.4);
+    }
+
+    .btn-secondary {
+      background: #48bb78;
+      color: white;
+    }
+
+    .btn-secondary:hover {
+      background: #38a169;
+      transform: translateY(-2px);
+    }
+
+    .mode-selector {
+      position: fixed;
+      top: 30px;
+      left: 30px;
+      z-index: 100;
+      background: white;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+    }
+
+    .mode-selector h3 {
+      font-size: 18px;
+      margin-bottom: 15px;
+      color: #1a202c;
+    }
+
+    .mode-option {
+      margin: 10px 0;
+    }
+
+    .mode-option input[type="radio"] {
+      margin-right: 10px;
+    }
+
+    .mode-option label {
+      font-size: 14px;
+      color: #4a5568;
+      cursor: pointer;
+    }
+
+    .progress-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #667eea, #764ba2);
+      width: 0%;
+      transition: width 0.3s ease;
+      z-index: 101;
+    }
+
+    .audio-indicator {
+      position: fixed;
+      top: 30px;
+      right: 30px;
+      background: #48bb78;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 25px;
+      display: none;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 10px 25px -5px rgba(72, 187, 120, 0.4);
+    }
+
+    .audio-indicator.playing {
+      display: flex;
+    }
+
+    .audio-wave {
+      width: 20px;
+      height: 20px;
+      display: flex;
+      align-items: center;
+      gap: 3px;
+    }
+
+    .audio-wave span {
+      width: 3px;
+      background: white;
+      border-radius: 2px;
+      animation: wave 1s ease-in-out infinite;
+    }
+
+    .audio-wave span:nth-child(2) {
+      animation-delay: 0.1s;
+    }
+
+    .audio-wave span:nth-child(3) {
+      animation-delay: 0.2s;
+    }
+
+    @keyframes wave {
+      0%, 100% { height: 8px; }
+      50% { height: 16px; }
+    }
+
+    .rough-canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="progress-bar" id="progressBar"></div>
+
+  <div class="audio-indicator" id="audioIndicator">
+    <div class="audio-wave">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <span>Narrating...</span>
+  </div>
+
+  <div class="mode-selector">
+    <h3>Animation Style</h3>
+    <div class="mode-option">
+      <input type="radio" id="anime" name="mode" value="anime" checked>
+      <label for="anime">Anime.js (Smooth)</label>
+    </div>
+    <div class="mode-option">
+      <input type="radio" id="rough" name="mode" value="rough">
+      <label for="rough">Rough.js (Sketchy)</label>
+    </div>
+    <div class="mode-option">
+      <input type="radio" id="combined" name="mode" value="combined">
+      <label for="combined">Combined</label>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="whiteboard">
+      <svg id="canvas" xmlns="http://www.w3.org/2000/svg">
+        <!-- SVG paths will be drawn here -->
+      </svg>
+
+      <canvas id="roughCanvas" class="rough-canvas"></canvas>
+
+      <div class="content" id="content">
+        <h1 id="title">Introduction to Sets</h1>
+
+        <div class="step" data-step="1">
+          <span class="step-number">1</span>
+          <span class="step-content">A <strong>Set</strong> is a collection of distinct objects</span>
+        </div>
+
+        <div class="step" data-step="2">
+          <span class="step-number">2</span>
+          <span class="step-content">Sets are denoted using curly braces: <strong>{a, b, c}</strong></span>
+        </div>
+
+        <div class="step" data-step="3">
+          <span class="step-number">3</span>
+          <span class="step-content">The <strong>Union (∪)</strong> combines all elements from both sets</span>
+        </div>
+
+        <div class="step" data-step="4">
+          <span class="step-number">4</span>
+          <span class="step-content">The <strong>Intersection (∩)</strong> shows common elements</span>
+        </div>
+
+        <div class="step" data-step="5">
+          <span class="step-number">5</span>
+          <span class="step-content">Example: A = {1, 2, 3} and B = {2, 3, 4}</span>
+        </div>
+
+        <div class="step" data-step="6">
+          <span class="step-number">6</span>
+          <span class="step-content">A ∪ B = {1, 2, 3, 4}</span>
+        </div>
+
+        <div class="step" data-step="7">
+          <span class="step-number">7</span>
+          <span class="step-content">A ∩ B = {2, 3}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="controls">
+    <button class="btn-secondary" id="resetBtn">Reset</button>
+    <button class="btn-primary" id="playBtn">Play Animation</button>
+  </div>
+
+  <script>
+    // Content data with narration
+    const lessonSteps = [
+      {
+        step: 'title',
+        narration: "Welcome to our lesson on Introduction to Sets, a fundamental concept in mathematics."
+      },
+      {
+        step: 1,
+        narration: "First, let's understand what a Set is. A Set is simply a collection of distinct objects or elements."
+      },
+      {
+        step: 2,
+        narration: "We write sets using curly braces. For example, the set containing a, b, and c is written as shown here."
+      },
+      {
+        step: 3,
+        narration: "One important operation is the Union, represented by this symbol. Union combines all elements from both sets."
+      },
+      {
+        step: 4,
+        narration: "Another key operation is Intersection, shown by this symbol. Intersection gives us only the common elements."
+      },
+      {
+        step: 5,
+        narration: "Let's look at a concrete example. Set A contains the numbers 1, 2, and 3. Set B contains 2, 3, and 4."
+      },
+      {
+        step: 6,
+        narration: "The Union of A and B gives us all unique elements: 1, 2, 3, and 4."
+      },
+      {
+        step: 7,
+        narration: "The Intersection of A and B shows only the common elements: 2 and 3. This completes our introduction to Sets!"
+      }
+    ];
+
+    let currentMode = 'anime';
+    let isPlaying = false;
+    let currentAudio = null;
+
+    // Get mode from radio buttons
+    document.querySelectorAll('input[name="mode"]').forEach(radio => {
+      radio.addEventListener('change', (e) => {
+        currentMode = e.target.value;
+      });
+    });
+
+    // Speech synthesis for narration (fallback)
+    function speak(text, onEnd) {
+      // Try to use Web Speech API as fallback
+      const utterance = new SpeechSynthesisUtterance(text);
+      utterance.rate = 0.9;
+      utterance.pitch = 1;
+      utterance.onend = onEnd;
+
+      // Show audio indicator
+      document.getElementById('audioIndicator').classList.add('playing');
+
+      utterance.onend = () => {
+        document.getElementById('audioIndicator').classList.remove('playing');
+        if (onEnd) onEnd();
+      };
+
+      speechSynthesis.speak(utterance);
+    }
+
+    // Fetch audio from ElevenLabs
+    async function fetchAudio(text, voiceId) {
+      try {
+        const response = await fetch('http://localhost:3001/api/voice/generate', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            text: text,
+            voiceId: voiceId
+          })
+        });
+
+        if (!response.ok) {
+          console.warn('ElevenLabs API failed, using Web Speech API fallback');
+          return null;
+        }
+
+        const audioBlob = await response.blob();
+        const audioUrl = URL.createObjectURL(audioBlob);
+
+        const audio = new Audio(audioUrl);
+        return audio;
+      } catch (error) {
+        console.warn('ElevenLabs audio fetch failed, using fallback:', error);
+        return null;
+      }
+    }
+
+    // Play narration (ElevenLabs or fallback)
+    async function playNarration(text, onEnd) {
+      const voiceId = 'gYWKdgLtqjPO3D5uDrDP';
+
+      // Try ElevenLabs first
+      const audio = await fetchAudio(text, voiceId);
+
+      if (audio) {
+        document.getElementById('audioIndicator').classList.add('playing');
+
+        audio.onended = () => {
+          document.getElementById('audioIndicator').classList.remove('playing');
+          if (onEnd) onEnd();
+        };
+
+        audio.play();
+        currentAudio = audio;
+      } else {
+        // Fallback to Web Speech API
+        speak(text, onEnd);
+      }
+    }
+
+    // Anime.js animations
+    function animateWithAnime() {
+      const timeline = anime.timeline({
+        easing: 'easeOutExpo',
+        duration: 800
+      });
+
+      // Animate title
+      timeline.add({
+        targets: '#title',
+        opacity: [0, 1],
+        translateY: [-20, 0],
+        complete: function() {
+          playNarration(lessonSteps[0].narration);
+        }
+      });
+
+      // Animate steps sequentially
+      lessonSteps.slice(1).forEach((stepData, index) => {
+        timeline.add({
+          targets: `[data-step="${stepData.step}"]`,
+          opacity: [0, 1],
+          translateX: [-20, 0],
+          begin: function() {
+            updateProgress((index + 1) / lessonSteps.length * 100);
+          },
+          complete: function() {
+            if (index < lessonSteps.length - 1) {
+              playNarration(stepData.narration);
+            } else {
+              playNarration(stepData.narration, () => {
+                updateProgress(100);
+                isPlaying = false;
+              });
+            }
+          }
+        }, `+=${2500}`); // Wait for narration
+      });
+
+      return timeline;
+    }
+
+    // Rough.js animations
+    function animateWithRough() {
+      const canvas = document.getElementById('roughCanvas');
+      const whiteboard = document.querySelector('.whiteboard');
+      canvas.width = whiteboard.offsetWidth;
+      canvas.height = whiteboard.offsetHeight;
+
+      const rc = rough.canvas(canvas);
+
+      let stepIndex = 0;
+
+      function drawStep() {
+        if (stepIndex >= lessonSteps.length) {
+          isPlaying = false;
+          updateProgress(100);
+          return;
+        }
+
+        const stepData = lessonSteps[stepIndex];
+        updateProgress((stepIndex / lessonSteps.length) * 100);
+
+        if (stepData.step === 'title') {
+          document.getElementById('title').style.opacity = '1';
+          playNarration(stepData.narration, () => {
+            stepIndex++;
+            setTimeout(drawStep, 500);
+          });
+        } else {
+          const stepEl = document.querySelector(`[data-step="${stepData.step}"]`);
+
+          // Draw rough box around step
+          const rect = stepEl.getBoundingClientRect();
+          const whiteboardRect = whiteboard.getBoundingClientRect();
+
+          rc.rectangle(
+            rect.left - whiteboardRect.left - 10,
+            rect.top - whiteboardRect.top - 10,
+            rect.width + 20,
+            rect.height + 20,
+            {
+              stroke: '#667eea',
+              strokeWidth: 2,
+              roughness: 1.5,
+              fill: 'rgba(102, 126, 234, 0.05)',
+              fillStyle: 'hachure'
+            }
+          );
+
+          // Show step with animation
+          anime({
+            targets: stepEl,
+            opacity: [0, 1],
+            translateX: [-20, 0],
+            duration: 600,
+            easing: 'easeOutExpo',
+            complete: function() {
+              playNarration(stepData.narration, () => {
+                stepIndex++;
+                setTimeout(drawStep, 500);
+              });
+            }
+          });
+        }
+      }
+
+      drawStep();
+    }
+
+    // Combined mode
+    function animateWithCombined() {
+      // Use anime for smooth transitions + rough for decorations
+      const canvas = document.getElementById('roughCanvas');
+      const whiteboard = document.querySelector('.whiteboard');
+      canvas.width = whiteboard.offsetWidth;
+      canvas.height = whiteboard.offsetHeight;
+
+      const rc = rough.canvas(canvas);
+
+      const timeline = anime.timeline({
+        easing: 'easeOutExpo',
+        duration: 800
+      });
+
+      // Title with rough underline
+      timeline.add({
+        targets: '#title',
+        opacity: [0, 1],
+        translateY: [-20, 0],
+        complete: function() {
+          const title = document.getElementById('title');
+          const rect = title.getBoundingClientRect();
+          const whiteboardRect = whiteboard.getBoundingClientRect();
+
+          rc.line(
+            rect.left - whiteboardRect.left,
+            rect.bottom - whiteboardRect.top + 5,
+            rect.right - whiteboardRect.left,
+            rect.bottom - whiteboardRect.top + 5,
+            {
+              stroke: '#667eea',
+              strokeWidth: 3,
+              roughness: 1
+            }
+          );
+
+          playNarration(lessonSteps[0].narration);
+        }
+      });
+
+      // Steps with rough highlights
+      lessonSteps.slice(1).forEach((stepData, index) => {
+        timeline.add({
+          targets: `[data-step="${stepData.step}"]`,
+          opacity: [0, 1],
+          translateX: [-20, 0],
+          begin: function() {
+            updateProgress((index + 1) / lessonSteps.length * 100);
+          },
+          complete: function() {
+            const stepEl = document.querySelector(`[data-step="${stepData.step}"]`);
+            const rect = stepEl.getBoundingClientRect();
+            const whiteboardRect = whiteboard.getBoundingClientRect();
+
+            // Draw rough highlight
+            rc.circle(
+              rect.left - whiteboardRect.left - 25,
+              rect.top - whiteboardRect.top + rect.height / 2,
+              35,
+              {
+                stroke: '#48bb78',
+                strokeWidth: 2,
+                roughness: 2,
+                fill: 'rgba(72, 187, 120, 0.1)',
+                fillStyle: 'solid'
+              }
+            );
+
+            if (index < lessonSteps.length - 1) {
+              playNarration(stepData.narration);
+            } else {
+              playNarration(stepData.narration, () => {
+                updateProgress(100);
+                isPlaying = false;
+              });
+            }
+          }
+        }, `+=${2500}`);
+      });
+
+      return timeline;
+    }
+
+    function updateProgress(percent) {
+      document.getElementById('progressBar').style.width = percent + '%';
+    }
+
+    function reset() {
+      // Stop any playing audio
+      if (currentAudio) {
+        currentAudio.pause();
+        currentAudio = null;
+      }
+      speechSynthesis.cancel();
+
+      // Clear canvas
+      const canvas = document.getElementById('roughCanvas');
+      const ctx = canvas.getContext('2d');
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      // Reset all elements
+      document.getElementById('title').style.opacity = '0';
+      document.querySelectorAll('.step').forEach(step => {
+        step.style.opacity = '0';
+        step.style.transform = 'translateX(-20px)';
+      });
+
+      // Reset progress
+      updateProgress(0);
+
+      // Remove audio indicator
+      document.getElementById('audioIndicator').classList.remove('playing');
+
+      isPlaying = false;
+      document.getElementById('playBtn').textContent = 'Play Animation';
+    }
+
+    function play() {
+      if (isPlaying) return;
+
+      reset();
+      isPlaying = true;
+      document.getElementById('playBtn').textContent = 'Playing...';
+
+      setTimeout(() => {
+        switch(currentMode) {
+          case 'anime':
+            animateWithAnime();
+            break;
+          case 'rough':
+            animateWithRough();
+            break;
+          case 'combined':
+            animateWithCombined();
+            break;
+        }
+      }, 500);
+    }
+
+    // Event listeners
+    document.getElementById('playBtn').addEventListener('click', play);
+    document.getElementById('resetBtn').addEventListener('click', reset);
+
+    // Initialize
+    reset();
+  </script>
+</body>
+</html>

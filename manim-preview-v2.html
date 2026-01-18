@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Manim Preview - Updated Scenes</title>
+  <style>
+    body { font-family: Arial; background: #1a1a1a; color: white; padding: 40px; }
+    h1 { color: #4a9eff; }
+    .scene { margin: 40px 0; padding: 20px; background: #2a2a2a; border-radius: 10px; }
+    video { width: 100%; max-width: 800px; border-radius: 8px; }
+    .label { color: #ffa500; font-weight: bold; margin-bottom: 10px; }
+  </style>
+</head>
+<body>
+  <h1>🎬 Updated Manim Scenes - Narrative Flow Version</h1>
+  
+  <div class="scene">
+    <div class="label">Step 4: Set A Visualized (IMPROVED)</div>
+    <p>Watch: Notation appears → Elements highlighted → Circle appears → Elements FLY into circle!</p>
+    <video controls autoplay>
+      <source src="packages/backend/src/manim/output/manim/step4.mp4?nocache=<?php echo time(); ?>" type="video/mp4">
+    </video>
+  </div>
+
+  <div class="scene">
+    <div class="label">Step 5: Two Sets Overlap (IMPROVED)</div>
+    <p>Watch: A={1,2,3} shown → B={2,3,4} shown → Circles appear → Elements FLY from notation into Venn diagram!</p>
+    <video controls>
+      <source src="packages/backend/src/manim/output/manim/step5.mp4?nocache=<?php echo time(); ?>" type="video/mp4">
+    </video>
+  </div>
+
+  <div class="scene">
+    <div class="label">Step 6: Intersection (OLD - Not Updated)</div>
+    <p>This is the old static version for comparison</p>
+    <video controls>
+      <source src="packages/backend/src/manim/output/manim/step6.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <script>
+    // Add unique timestamps to force cache bypass
+    document.querySelectorAll('video source').forEach(src => {
+      const url = src.src;
+      if (!url.includes('step6')) {
+        src.src = url.replace('?nocache=', '?v=' + Date.now() + '&t=');
+      }
+    });
+  </script>
+</body>
+</html>

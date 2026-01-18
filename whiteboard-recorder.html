@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whiteboard Pointer Recorder</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #1a1a2e;
+            color: #eee;
+            min-height: 100vh;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        .toolbar {
+            background: #16213e;
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            border-bottom: 2px solid #0f3460;
+        }
+
+        .toolbar h1 {
+            font-size: 18px;
+            color: #e94560;
+            margin-right: 20px;
+        }
+
+        .toolbar button {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+
+        .btn-primary {
+            background: #e94560;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #ff6b8a;
+        }
+
+        .btn-secondary {
+            background: #0f3460;
+            color: #eee;
+        }
+
+        .btn-secondary:hover {
+            background: #1a4a7a;
+        }
+
+        .btn-success {
+            background: #00b894;
+            color: white;
+        }
+
+        .btn-success:hover {
+            background: #00d9a0;
+        }
+
+        .btn-warning {
+            background: #fdcb6e;
+            color: #1a1a2e;
+        }
+
+        .btn-warning:hover {
+            background: #ffeaa7;
+        }
+
+        .toolbar select {
+            padding: 8px 12px;
+            border-radius: 6px;
+            border: none;
+            background: #0f3460;
+            color: #eee;
+            font-size: 14px;
+        }
+
+        .toolbar input[type="color"] {
+            width: 40px;
+            height: 32px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .toolbar input[type="range"] {
+            width: 100px;
+        }
+
+        .toolbar label {
+            font-size: 13px;
+            color: #aaa;
+        }
+
+        .status {
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .status-idle {
+            background: #636e72;
+        }
+
+        .status-recording {
+            background: #e94560;
+            animation: pulse 1s infinite;
+        }
+
+        .status-playing {
+            background: #00b894;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.6; }
+        }
+
+        .main-area {
+            flex: 1;
+            display: flex;
+            overflow: hidden;
+        }
+
+        .canvas-container {
+            flex: 1;
+            position: relative;
+            overflow: hidden;
+            background: #0f0f1a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #whiteboard-canvas {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            cursor: none;
+        }
+
+        .pointer {
+            position: absolute;
+            pointer-events: none;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: opacity 0.1s;
+            z-index: 100;
+        }
+
+        .pointer-circle {
+            width: 30px;
+            height: 30px;
+            background: rgba(255, 215, 0, 0.4);
+            border: 3px solid #ffd700;
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+        }
+
+        .pointer-dot {
+            width: 12px;
+            height: 12px;
+            background: #e94560;
+            box-shadow: 0 0 15px rgba(233, 69, 96, 0.8);
+        }
+
+        .pointer-crosshair {
+            width: 24px;
+            height: 24px;
+            background: transparent;
+            border: 2px solid #00b894;
+            position: relative;
+        }
+
+        .pointer-crosshair::before,
+        .pointer-crosshair::after {
+            content: '';
+            position: absolute;
+            background: #00b894;
+        }
+
+        .pointer-crosshair::before {
+            width: 2px;
+            height: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .pointer-crosshair::after {
+            width: 100%;
+            height: 2px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .sidebar {
+            width: 320px;
+            background: #16213e;
+            border-left: 2px solid #0f3460;
+            padding: 15px;
+            overflow-y: auto;
+        }
+
+        .sidebar h3 {
+            color: #e94560;
+            margin-bottom: 10px;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .image-list {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .image-item {
+            padding: 10px;
+            background: #0f3460;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-size: 13px;
+        }
+
+        .image-item:hover {
+            background: #1a4a7a;
+        }
+
+        .image-item.active {
+            border: 2px solid #e94560;
+        }
+
+        .recording-data {
+            background: #0a0a15;
+            border-radius: 8px;
+            padding: 10px;
+            font-family: monospace;
+            font-size: 11px;
+            max-height: 200px;
+            overflow-y: auto;
+            white-space: pre-wrap;
+            word-break: break-all;
+        }
+
+        .drop-zone {
+            border: 2px dashed #0f3460;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+            transition: all 0.2s;
+        }
+
+        .drop-zone.dragover {
+            border-color: #e94560;
+            background: rgba(233, 69, 96, 0.1);
+        }
+
+        .drop-zone p {
+            color: #888;
+            font-size: 13px;
+        }
+
+        .timeline {
+            margin-top: 15px;
+        }
+
+        .timeline-slider {
+            width: 100%;
+            margin-top: 8px;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            margin-top: 15px;
+        }
+
+        .stat-box {
+            background: #0f3460;
+            padding: 10px;
+            border-radius: 6px;
+            text-align: center;
+        }
+
+        .stat-box .value {
+            font-size: 20px;
+            font-weight: bold;
+            color: #e94560;
+        }
+
+        .stat-box .label {
+            font-size: 11px;
+            color: #888;
+            text-transform: uppercase;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="toolbar">
+            <h1>Whiteboard Recorder</h1>
+
+            <button id="btn-record" class="btn-primary">
+                Start Recording
+            </button>
+            <button id="btn-play" class="btn-success" disabled>
+                Play
+            </button>
+            <button id="btn-clear" class="btn-secondary">
+                Clear
+            </button>
+
+            <label>Pointer:</label>
+            <select id="pointer-style">
+                <option value="circle">Circle Highlight</option>
+                <option value="dot">Dot</option>
+                <option value="crosshair">Crosshair</option>
+            </select>
+
+            <label>Color:</label>
+            <input type="color" id="pointer-color" value="#ffd700">
+
+            <label>Size:</label>
+            <input type="range" id="pointer-size" min="10" max="60" value="30">
+
+            <span id="status" class="status status-idle">IDLE</span>
+
+            <button id="btn-export" class="btn-warning" style="margin-left: auto;">
+                Export JSON
+            </button>
+        </div>
+
+        <div class="main-area">
+            <div class="canvas-container" id="canvas-container">
+                <img id="whiteboard-canvas" src="" alt="Load an image to begin">
+                <div id="pointer" class="pointer pointer-circle"></div>
+            </div>
+
+            <div class="sidebar">
+                <h3>Load Image</h3>
+                <div class="drop-zone" id="drop-zone">
+                    <p>Drop image here or click to browse</p>
+                    <input type="file" id="file-input" accept="image/*" style="display: none;">
+                </div>
+
+                <h3>Sample Images</h3>
+                <div class="image-list">
+                    <div class="image-item" data-src="https://via.placeholder.com/1920x1080/1a1a2e/ffffff?text=Math+Problem+1">
+                        Sample: Math Problem
+                    </div>
+                    <div class="image-item" data-src="https://via.placeholder.com/1920x1080/1a1a2e/ffffff?text=Venn+Diagram">
+                        Sample: Venn Diagram
+                    </div>
+                    <div class="image-item" data-src="https://via.placeholder.com/1920x1080/1a1a2e/ffffff?text=Whiteboard+Notes">
+                        Sample: Whiteboard Notes
+                    </div>
+                </div>
+
+                <h3>Recording Stats</h3>
+                <div class="stats">
+                    <div class="stat-box">
+                        <div class="value" id="stat-duration">0.0s</div>
+                        <div class="label">Duration</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="value" id="stat-points">0</div>
+                        <div class="label">Points</div>
+                    </div>
+                </div>
+
+                <div class="timeline">
+                    <h3>Playback</h3>
+                    <input type="range" class="timeline-slider" id="timeline-slider" min="0" max="100" value="0" disabled>
+                </div>
+
+                <h3 style="margin-top: 20px;">Recording Data</h3>
+                <div class="recording-data" id="recording-data">
+                    No recording yet. Start recording to capture pointer movements.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // State
+        let isRecording = false;
+        let isPlaying = false;
+        let recordingData = {
+            imageSrc: '',
+            imageWidth: 0,
+            imageHeight: 0,
+            startTime: 0,
+            movements: []
+        };
+        let playbackIndex = 0;
+        let playbackTimer = null;
+
+        // Elements
+        const canvas = document.getElementById('whiteboard-canvas');
+        const canvasContainer = document.getElementById('canvas-container');
+        const pointer = document.getElementById('pointer');
+        const btnRecord = document.getElementById('btn-record');
+        const btnPlay = document.getElementById('btn-play');
+        const btnClear = document.getElementById('btn-clear');
+        const btnExport = document.getElementById('btn-export');
+        const pointerStyle = document.getElementById('pointer-style');
+        const pointerColor = document.getElementById('pointer-color');
+        const pointerSize = document.getElementById('pointer-size');
+        const statusEl = document.getElementById('status');
+        const dropZone = document.getElementById('drop-zone');
+        const fileInput = document.getElementById('file-input');
+        const recordingDataEl = document.getElementById('recording-data');
+        const statDuration = document.getElementById('stat-duration');
+        const statPoints = document.getElementById('stat-points');
+        const timelineSlider = document.getElementById('timeline-slider');
+
+        // Initialize pointer visibility
+        pointer.style.opacity = '0';
+
+        // Update pointer appearance
+        function updatePointer() {
+            const style = pointerStyle.value;
+            const color = pointerColor.value;
+            const size = parseInt(pointerSize.value);
+
+            pointer.className = 'pointer pointer-' + style;
+
+            if (style === 'circle') {
+                pointer.style.width = size + 'px';
+                pointer.style.height = size + 'px';
+                pointer.style.background = hexToRgba(color, 0.4);
+                pointer.style.border = '3px solid ' + color;
+                pointer.style.boxShadow = '0 0 20px ' + hexToRgba(color, 0.5);
+            } else if (style === 'dot') {
+                pointer.style.width = (size / 2.5) + 'px';
+                pointer.style.height = (size / 2.5) + 'px';
+                pointer.style.background = color;
+                pointer.style.border = 'none';
+                pointer.style.boxShadow = '0 0 15px ' + hexToRgba(color, 0.8);
+            } else if (style === 'crosshair') {
+                pointer.style.width = size + 'px';
+                pointer.style.height = size + 'px';
+                pointer.style.background = 'transparent';
+                pointer.style.border = '2px solid ' + color;
+                pointer.style.boxShadow = 'none';
+            }
+        }
+
+        function hexToRgba(hex, alpha) {
+            const r = parseInt(hex.slice(1, 3), 16);
+            const g = parseInt(hex.slice(3, 5), 16);
+            const b = parseInt(hex.slice(5, 7), 16);
+            return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+        }
+
+        // Pointer style controls
+        pointerStyle.addEventListener('change', updatePointer);
+        pointerColor.addEventListener('input', updatePointer);
+        pointerSize.addEventListener('input', updatePointer);
+
+        // Mouse tracking on canvas
+        canvasContainer.addEventListener('mousemove', (e) => {
+            if (!canvas.src || canvas.src === window.location.href) return;
+
+            const rect = canvas.getBoundingClientRect();
+            const x = e.clientX;
+            const y = e.clientY;
+
+            // Check if within canvas bounds
+            if (x >= rect.left && x <= rect.right && y >= rect.top && y <= rect.bottom) {
+                pointer.style.opacity = '1';
+                pointer.style.left = x + 'px';
+                pointer.style.top = y + 'px';
+
+                // Record movement if recording
+                if (isRecording) {
+                    const relX = (x - rect.left) / rect.width;
+                    const relY = (y - rect.top) / rect.height;
+                    const time = Date.now() - recordingData.startTime;
+
+                    recordingData.movements.push({
+                        x: relX,
+                        y: relY,
+                        t: time
+                    });
+
+                    updateStats();
+                }
+            } else {
+                pointer.style.opacity = '0';
+            }
+        });
+
+        canvasContainer.addEventListener('mouseleave', () => {
+            if (!isPlaying) {
+                pointer.style.opacity = '0';
+            }
+        });
+
+        // Recording controls
+        btnRecord.addEventListener('click', () => {
+            if (!canvas.src || canvas.src === window.location.href) {
+                alert('Please load an image first');
+                return;
+            }
+
+            if (isRecording) {
+                // Stop recording
+                isRecording = false;
+                btnRecord.textContent = 'Start Recording';
+                btnRecord.classList.remove('btn-warning');
+                btnRecord.classList.add('btn-primary');
+                statusEl.textContent = 'STOPPED';
+                statusEl.className = 'status status-idle';
+                btnPlay.disabled = recordingData.movements.length === 0;
+
+                // Update recording data display
+                updateRecordingDataDisplay();
+            } else {
+                // Start recording
+                recordingData = {
+                    imageSrc: canvas.src,
+                    imageWidth: canvas.naturalWidth,
+                    imageHeight: canvas.naturalHeight,
+                    startTime: Date.now(),
+                    movements: [],
+                    pointerStyle: pointerStyle.value,
+                    pointerColor: pointerColor.value,
+                    pointerSize: parseInt(pointerSize.value)
+                };
+                isRecording = true;
+                btnRecord.textContent = 'Stop Recording';
+                btnRecord.classList.remove('btn-primary');
+                btnRecord.classList.add('btn-warning');
+                statusEl.textContent = 'RECORDING';
+                statusEl.className = 'status status-recording';
+                btnPlay.disabled = true;
+            }
+        });
+
+        btnPlay.addEventListener('click', () => {
+            if (isPlaying) {
+                stopPlayback();
+            } else {
+                startPlayback();
+            }
+        });
+
+        btnClear.addEventListener('click', () => {
+            recordingData.movements = [];
+            playbackIndex = 0;
+            updateStats();
+            updateRecordingDataDisplay();
+            btnPlay.disabled = true;
+            timelineSlider.value = 0;
+            timelineSlider.disabled = true;
+        });
+
+        btnExport.addEventListener('click', () => {
+            if (recordingData.movements.length === 0) {
+                alert('No recording to export');
+                return;
+            }
+
+            const dataStr = JSON.stringify(recordingData, null, 2);
+            const blob = new Blob([dataStr], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'pointer-recording-' + Date.now() + '.json';
+            a.click();
+            URL.revokeObjectURL(url);
+        });
+
+        // Playback
+        function startPlayback() {
+            if (recordingData.movements.length === 0) return;
+
+            isPlaying = true;
+            playbackIndex = 0;
+            btnPlay.textContent = 'Stop';
+            statusEl.textContent = 'PLAYING';
+            statusEl.className = 'status status-playing';
+            timelineSlider.disabled = false;
+            timelineSlider.max = recordingData.movements.length - 1;
+
+            playNextFrame();
+        }
+
+        function playNextFrame() {
+            if (!isPlaying || playbackIndex >= recordingData.movements.length) {
+                stopPlayback();
+                return;
+            }
+
+            const movement = recordingData.movements[playbackIndex];
+            const rect = canvas.getBoundingClientRect();
+
+            const x = rect.left + movement.x * rect.width;
+            const y = rect.top + movement.y * rect.height;
+
+            pointer.style.opacity = '1';
+            pointer.style.left = x + 'px';
+            pointer.style.top = y + 'px';
+
+            timelineSlider.value = playbackIndex;
+
+            playbackIndex++;
+
+            // Calculate delay to next frame
+            if (playbackIndex < recordingData.movements.length) {
+                const nextMovement = recordingData.movements[playbackIndex];
+                const delay = nextMovement.t - movement.t;
+                playbackTimer = setTimeout(playNextFrame, Math.max(delay, 16));
+            } else {
+                stopPlayback();
+            }
+        }
+
+        function stopPlayback() {
+            isPlaying = false;
+            clearTimeout(playbackTimer);
+            btnPlay.textContent = 'Play';
+            statusEl.textContent = 'IDLE';
+            statusEl.className = 'status status-idle';
+            pointer.style.opacity = '0';
+        }
+
+        timelineSlider.addEventListener('input', (e) => {
+            if (recordingData.movements.length === 0) return;
+
+            const index = parseInt(e.target.value);
+            const movement = recordingData.movements[index];
+            const rect = canvas.getBoundingClientRect();
+
+            const x = rect.left + movement.x * rect.width;
+            const y = rect.top + movement.y * rect.height;
+
+            pointer.style.opacity = '1';
+            pointer.style.left = x + 'px';
+            pointer.style.top = y + 'px';
+        });
+
+        // Stats update
+        function updateStats() {
+            const duration = recordingData.movements.length > 0
+                ? (recordingData.movements[recordingData.movements.length - 1].t / 1000).toFixed(1)
+                : '0.0';
+            statDuration.textContent = duration + 's';
+            statPoints.textContent = recordingData.movements.length;
+        }
+
+        function updateRecordingDataDisplay() {
+            if (recordingData.movements.length === 0) {
+                recordingDataEl.textContent = 'No recording yet. Start recording to capture pointer movements.';
+            } else {
+                const summary = {
+                    duration: (recordingData.movements[recordingData.movements.length - 1].t / 1000).toFixed(2) + 's',
+                    points: recordingData.movements.length,
+                    imageSize: recordingData.imageWidth + 'x' + recordingData.imageHeight,
+                    samplePoints: recordingData.movements.slice(0, 5)
+                };
+                recordingDataEl.textContent = JSON.stringify(summary, null, 2);
+            }
+        }
+
+        // Image loading
+        dropZone.addEventListener('click', () => fileInput.click());
+
+        dropZone.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            dropZone.classList.add('dragover');
+        });
+
+        dropZone.addEventListener('dragleave', () => {
+            dropZone.classList.remove('dragover');
+        });
+
+        dropZone.addEventListener('drop', (e) => {
+            e.preventDefault();
+            dropZone.classList.remove('dragover');
+
+            const file = e.dataTransfer.files[0];
+            if (file && file.type.startsWith('image/')) {
+                loadImageFile(file);
+            }
+        });
+
+        fileInput.addEventListener('change', (e) => {
+            const file = e.target.files[0];
+            if (file) {
+                loadImageFile(file);
+            }
+        });
+
+        function loadImageFile(file) {
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                canvas.src = e.target.result;
+                btnClear.click(); // Clear any existing recording
+            };
+            reader.readAsDataURL(file);
+        }
+
+        // Sample images
+        document.querySelectorAll('.image-item').forEach(item => {
+            item.addEventListener('click', () => {
+                const src = item.dataset.src;
+                canvas.src = src;
+
+                document.querySelectorAll('.image-item').forEach(i => i.classList.remove('active'));
+                item.classList.add('active');
+
+                btnClear.click();
+            });
+        });
+
+        // Initialize pointer style
+        updatePointer();
+
+        // Instructions
+        console.log(`
+========================================
+WHITEBOARD POINTER RECORDER
+========================================
+
+USAGE:
+1. Load an image (drag & drop or click the drop zone)
+2. Click "Start Recording" to begin
+3. Move your mouse over the whiteboard to record pointer path
+4. Click "Stop Recording" when done
+5. Click "Play" to replay the recording
+6. Click "Export JSON" to save the recording
+
+The JSON can be imported into Remotion for video composition!
+
+REMOTION INTEGRATION:
+- Import the JSON file
+- Use the movement data to animate a pointer overlay
+- Sync with narration audio for educational videos
+========================================
+        `);
+    </script>
+</body>
+</html>

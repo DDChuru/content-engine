@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multi-Mode Content Studio - Sets Lesson</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/roughjs@4.5.2/bundled/rough.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      background: #1a202c;
+      color: #e2e8f0;
+      min-height: 100vh;
+    }
+
+    .app-container {
+      display: grid;
+      grid-template-columns: 350px 1fr;
+      height: 100vh;
+    }
+
+    /* Left Panel - Scene Editor */
+    .scene-editor {
+      background: #2d3748;
+      border-right: 2px solid #4a5568;
+      overflow-y: auto;
+      padding: 20px;
+    }
+
+    .editor-header {
+      margin-bottom: 25px;
+    }
+
+    .editor-header h1 {
+      font-size: 20px;
+      color: #667eea;
+      margin-bottom: 5px;
+    }
+
+    .editor-header p {
+      font-size: 12px;
+      color: #a0aec0;
+    }
+
+    .scene-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .scene-card {
+      background: #1a202c;
+      border: 2px solid #4a5568;
+      border-radius: 12px;
+      padding: 15px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .scene-card:hover {
+      border-color: #667eea;
+      transform: translateX(5px);
+    }
+
+    .scene-card.active {
+      border-color: #667eea;
+      background: #2a4365;
+    }
+
+    .scene-card.needs-thought {
+      border-color: #f6ad55;
+      background: #2c2410;
+    }
+
+    .scene-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .scene-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: #e2e8f0;
+    }
+
+    .mode-badge {
+      padding: 4px 10px;
+      border-radius: 12px;
+      font-size: 10px;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    .mode-manim {
+      background: #48bb78;
+      color: white;
+    }
+
+    .mode-rough {
+      background: #ed8936;
+      color: white;
+    }
+
+    .mode-excalidraw {
+      background: #4299e1;
+      color: white;
+    }
+
+    .mode-hybrid {
+      background: #9f7aea;
+      color: white;
+    }
+
+    .scene-description {
+      font-size: 12px;
+      color: #a0aec0;
+      margin-bottom: 8px;
+    }
+
+    .scene-flow {
+      background: #2d3748;
+      padding: 8px;
+      border-radius: 6px;
+      font-size: 11px;
+      color: #fbd38d;
+      margin-bottom: 8px;
+    }
+
+    .scene-flow strong {
+      color: #f6ad55;
+    }
+
+    .scene-meta {
+      display: flex;
+      gap: 10px;
+      font-size: 11px;
+      color: #718096;
+    }
+
+    .thought-indicator {
+      background: #f6ad55;
+      color: #1a202c;
+      padding: 4px 8px;
+      border-radius: 6px;
+      font-size: 10px;
+      font-weight: 600;
+      margin-top: 8px;
+    }
+
+    /* Right Panel - Preview */
+    .preview-panel {
+      background: #0f1419;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .preview-header {
+      background: #1a202c;
+      padding: 20px 30px;
+      border-bottom: 2px solid #4a5568;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .preview-title {
+      font-size: 18px;
+      color: #e2e8f0;
+    }
+
+    .preview-controls {
+      display: flex;
+      gap: 10px;
+    }
+
+    .btn {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .btn-primary {
+      background: #667eea;
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: #5a67d8;
+    }
+
+    .btn-secondary {
+      background: #4a5568;
+      color: #e2e8f0;
+    }
+
+    .btn-secondary:hover {
+      background: #2d3748;
+    }
+
+    .btn-success {
+      background: #48bb78;
+      color: white;
+    }
+
+    /* Preview Content */
+    .preview-content {
+      flex: 1;
+      padding: 40px;
+      overflow-y: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .canvas-container {
+      background: white;
+      border-radius: 20px;
+      padding: 60px;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+      max-width: 1000px;
+      width: 100%;
+      min-height: 600px;
+      position: relative;
+    }
+
+    #roughCanvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+    }
+
+    .content-layer {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Video Preview */
+    .video-preview {
+      width: 100%;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #000;
+    }
+
+    video {
+      width: 100%;
+      display: block;
+    }
+
+    /* Narrative Flow Indicator */
+    .flow-indicator {
+      position: fixed;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #2d3748;
+      padding: 15px 25px;
+      border-radius: 12px;
+      border: 2px solid #667eea;
+      display: none;
+      align-items: center;
+      gap: 15px;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+      z-index: 1000;
+    }
+
+    .flow-indicator.show {
+      display: flex;
+    }
+
+    .flow-step {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+    }
+
+    .flow-arrow {
+      color: #667eea;
+      font-size: 16px;
+    }
+
+    /* Studio Integration */
+    .studio-panel {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #2d3748;
+      padding: 15px;
+      border-radius: 12px;
+      border: 2px solid #48bb78;
+      width: 380px;
+      max-height: 90vh;
+      overflow-y: auto;
+      z-index: 1000;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    .studio-status {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .status-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #48bb78;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
+
+    .studio-text {
+      font-size: 12px;
+      color: #a0aec0;
+    }
+
+    .edit-request-btn {
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    /* Thought Process Panel */
+    .thought-panel {
+      background: #2c2410;
+      border: 2px solid #f6ad55;
+      border-radius: 12px;
+      padding: 20px;
+      margin-top: 20px;
+    }
+
+    .thought-title {
+      color: #fbd38d;
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    .thought-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .thought-item {
+      display: flex;
+      align-items: start;
+      gap: 10px;
+      font-size: 12px;
+      color: #e2e8f0;
+    }
+
+    .thought-icon {
+      color: #f6ad55;
+      font-weight: bold;
+      margin-top: 2px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Studio Edit Request Panel -->
+  <div class="studio-panel" id="studioPanel">
+    <div class="studio-status">
+      <div class="status-dot"></div>
+      <div>
+        <div style="font-weight: 600; font-size: 14px; color: #48bb78;">Studio Bridge Active</div>
+        <div class="studio-text">Connected to bridge-agent-server.js</div>
+      </div>
+    </div>
+
+    <div style="margin-top: 15px;">
+      <label style="font-size: 12px; color: #a0aec0; display: block; margin-bottom: 5px;">
+        Edit Request
+      </label>
+      <textarea
+        id="editRequestText"
+        placeholder="Describe what needs to change in this scene..."
+        style="width: 100%; height: 80px; padding: 8px; border-radius: 6px; border: 1px solid #4a5568; background: #1a202c; color: #e2e8f0; font-size: 12px; font-family: inherit; resize: vertical;"
+      ></textarea>
+    </div>
+
+    <div style="margin-top: 10px; display: flex; gap: 8px; flex-wrap: wrap;">
+      <button class="btn btn-secondary" style="flex: 1; padding: 8px 12px; font-size: 12px;" onclick="takeScreenshot()">
+        📸 Screenshot
+      </button>
+      <button class="btn btn-success" style="flex: 1; padding: 8px 12px; font-size: 12px;" onclick="sendToStudio()">
+        ✉️ Send Request
+      </button>
+    </div>
+
+    <div id="screenshotPreview" style="margin-top: 10px; display: none;">
+      <div style="font-size: 11px; color: #a0aec0; margin-bottom: 5px;">Screenshot attached:</div>
+      <img id="screenshotImg" style="width: 100%; border-radius: 6px; border: 1px solid #4a5568;">
+      <button class="btn btn-secondary" style="width: 100%; margin-top: 5px; padding: 6px; font-size: 11px;" onclick="clearScreenshot()">
+        Remove Screenshot
+      </button>
+    </div>
+
+    <div id="requestHistory" style="margin-top: 15px; max-height: 200px; overflow-y: auto; display: none;">
+      <div style="font-size: 12px; font-weight: 600; color: #e2e8f0; margin-bottom: 8px;">Recent Requests:</div>
+      <div id="historyList"></div>
+    </div>
+  </div>
+
+  <!-- Narrative Flow Indicator -->
+  <div class="flow-indicator" id="flowIndicator">
+    <div class="flow-step">
+      <span>📝</span>
+      <span id="flowStep1">Show notation</span>
+    </div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-step">
+      <span>✨</span>
+      <span id="flowStep2">Animate elements</span>
+    </div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-step">
+      <span>🎯</span>
+      <span id="flowStep3">Final result</span>
+    </div>
+  </div>
+
+  <div class="app-container">
+    <!-- Left Panel: Scene Editor -->
+    <div class="scene-editor">
+      <div class="editor-header">
+        <h1>Sets Lesson - Multi-Mode Studio</h1>
+        <p>Choose the right tool for each scene</p>
+      </div>
+
+      <div class="scene-list" id="sceneList">
+        <!-- Scenes will be populated by JavaScript -->
+      </div>
+
+      <!-- Thought Process Panel -->
+      <div class="thought-panel">
+        <div class="thought-title">💡 When to Use Each Mode</div>
+        <div class="thought-list">
+          <div class="thought-item">
+            <span class="thought-icon">M</span>
+            <div><strong>Manim:</strong> Flowing animations, transformations, elements moving</div>
+          </div>
+          <div class="thought-item">
+            <span class="thought-icon">R</span>
+            <div><strong>Rough.js:</strong> Interactive challenges, quizzes, playful content</div>
+          </div>
+          <div class="thought-item">
+            <span class="thought-icon">E</span>
+            <div><strong>Excalidraw:</strong> Quick sketches, static diagrams, casual tone</div>
+          </div>
+          <div class="thought-item">
+            <span class="thought-icon">H</span>
+            <div><strong>Hybrid:</strong> Combine for narrative flow (notation → animation)</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Panel: Preview -->
+    <div class="preview-panel">
+      <div class="preview-header">
+        <div class="preview-title" id="previewTitle">Select a scene to preview</div>
+        <div class="preview-controls">
+          <button class="btn btn-secondary" onclick="switchMode()">Change Mode</button>
+          <button class="btn btn-primary" onclick="playScene()">Play Scene</button>
+        </div>
+      </div>
+
+      <div class="preview-content" id="previewContent">
+        <div class="canvas-container">
+          <canvas id="roughCanvas" class="rough-canvas"></canvas>
+          <div class="content-layer" id="contentLayer">
+            <h1 style="font-size: 48px; color: #1a202c; text-align: center;">
+              Select a scene from the left panel
+            </h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Scene configuration with narrative flow guidance
+    const scenes = [
+      {
+        id: 'title',
+        title: 'Title Slide',
+        mode: 'rough',
+        description: 'Welcome introduction',
+        duration: 4,
+        flow: null,
+        needsThought: false
+      },
+      {
+        id: 'step1',
+        title: 'What is a Set',
+        mode: 'hybrid',
+        description: 'Definition with examples',
+        duration: 8,
+        flow: 'Show text definition → Animate example elements appearing',
+        needsThought: false
+      },
+      {
+        id: 'step2',
+        title: 'Set Notation',
+        mode: 'rough',
+        description: 'Curly braces notation',
+        duration: 7,
+        flow: 'Write notation → Highlight each part',
+        needsThought: false
+      },
+      {
+        id: 'step3',
+        title: 'Venn Diagram Intro',
+        mode: 'manim',
+        description: 'Introduce visual representation',
+        duration: 4,
+        flow: 'Draw circles smoothly → Label sets',
+        needsThought: false
+      },
+      {
+        id: 'step4',
+        title: 'Set A Visualized',
+        mode: 'hybrid',
+        description: 'Elements in a Venn diagram',
+        duration: 6,
+        flow: 'Show A = {2,4,6,8,10} → Elements flow INTO circle',
+        needsThought: true,
+        thoughtNote: '⚠️ Should animate elements FROM notation INTO diagram'
+      },
+      {
+        id: 'step5',
+        title: 'Two Sets Overlap',
+        mode: 'manim',
+        description: 'Introduction to intersection',
+        duration: 7,
+        flow: 'Show A notation → Show B notation → Circles appear → Elements populate',
+        needsThought: true,
+        thoughtNote: '⚠️ Narrative: notation first, THEN diagram with flowing elements'
+      },
+      {
+        id: 'step6',
+        title: 'Intersection Concept',
+        mode: 'manim',
+        description: 'A ∩ B highlighted',
+        duration: 6,
+        flow: 'Highlight overlap region → Common elements glow',
+        needsThought: false
+      },
+      {
+        id: 'step7',
+        title: 'Union Concept',
+        mode: 'manim',
+        description: 'A ∪ B explained',
+        duration: 6,
+        flow: 'Highlight both circles → All elements glow',
+        needsThought: false
+      },
+      {
+        id: 'step9',
+        title: 'Universal Set Intro',
+        mode: 'manim',
+        description: 'ξ concept introduction',
+        duration: 8,
+        flow: 'Show box appearing → Sets populate inside',
+        needsThought: false
+      },
+      {
+        id: 'step10',
+        title: 'Universal Set Example',
+        mode: 'hybrid',
+        description: 'Complete diagram with ξ',
+        duration: 7,
+        flow: 'Show notation → Box appears → Elements flow in',
+        needsThought: true,
+        thoughtNote: '⚠️ Show all notation FIRST, then animate into diagram'
+      },
+      {
+        id: 'step11',
+        title: 'Practice Question 1',
+        mode: 'rough',
+        description: 'Find A ∩ B',
+        duration: 8,
+        flow: 'Show question → Interactive pause → Reveal answer',
+        needsThought: false
+      },
+      {
+        id: 'step12',
+        title: 'Practice Question 2',
+        mode: 'rough',
+        description: 'Find A ∪ B',
+        duration: 8,
+        flow: 'Show question → Interactive pause → Reveal answer',
+        needsThought: false
+      },
+      {
+        id: 'step13',
+        title: 'Spot the Error',
+        mode: 'rough',
+        description: 'Challenge with mistakes',
+        duration: 8,
+        flow: 'Show problem → PAUSE for thinking → Reveal next scene',
+        needsThought: false
+      },
+      {
+        id: 'step13a',
+        title: 'Errors Revealed',
+        mode: 'rough',
+        description: 'Highlight mistakes',
+        duration: 7,
+        flow: 'Circle errors in red → Explain corrections',
+        needsThought: false
+      },
+      {
+        id: 'step14',
+        title: 'True/False #1',
+        mode: 'rough',
+        description: 'Vowels intersection',
+        duration: 8,
+        flow: 'Show question → Pause → Reveal with explanation',
+        needsThought: false
+      },
+      {
+        id: 'step15',
+        title: 'True/False #2',
+        mode: 'rough',
+        description: 'Subset relationship',
+        duration: 8,
+        flow: 'Show question → Pause → Reveal with diagram',
+        needsThought: false
+      },
+      {
+        id: 'step8',
+        title: 'Summary',
+        mode: 'manim',
+        description: 'Recap key concepts',
+        duration: 10,
+        flow: 'All concepts appear sequentially with smooth transitions',
+        needsThought: false
+      }
+    ];
+
+    let currentScene = null;
+
+    // Initialize scene list
+    function initSceneList() {
+      const sceneList = document.getElementById('sceneList');
+
+      scenes.forEach(scene => {
+        const card = document.createElement('div');
+        card.className = `scene-card ${scene.needsThought ? 'needs-thought' : ''}`;
+        card.onclick = () => selectScene(scene.id);
+
+        let modeClass = 'mode-' + scene.mode;
+        let modeLabel = scene.mode === 'rough' ? 'Rough.js' :
+                        scene.mode === 'manim' ? 'Manim' :
+                        scene.mode === 'hybrid' ? 'Hybrid' : 'Excalidraw';
+
+        card.innerHTML = `
+          <div class="scene-header">
+            <div class="scene-title">${scene.title}</div>
+            <div class="mode-badge ${modeClass}">${modeLabel}</div>
+          </div>
+          <div class="scene-description">${scene.description}</div>
+          ${scene.flow ? `<div class="scene-flow"><strong>Flow:</strong> ${scene.flow}</div>` : ''}
+          <div class="scene-meta">
+            <span>⏱ ${scene.duration}s</span>
+            <span>📝 Scene ${scene.id}</span>
+          </div>
+          ${scene.needsThought ? `<div class="thought-indicator">${scene.thoughtNote}</div>` : ''}
+        `;
+
+        sceneList.appendChild(card);
+      });
+    }
+
+    // Select and preview scene
+    function selectScene(sceneId) {
+      currentScene = scenes.find(s => s.id === sceneId);
+
+      // Update active state
+      document.querySelectorAll('.scene-card').forEach(card => {
+        card.classList.remove('active');
+      });
+      event.currentTarget.classList.add('active');
+
+      // Update preview title
+      document.getElementById('previewTitle').textContent =
+        `${currentScene.title} (${currentScene.mode.toUpperCase()})`;
+
+      // Show narrative flow if available
+      if (currentScene.flow) {
+        const indicator = document.getElementById('flowIndicator');
+        indicator.classList.add('show');
+
+        const steps = currentScene.flow.split('→');
+        document.getElementById('flowStep1').textContent = steps[0]?.trim() || 'Step 1';
+        document.getElementById('flowStep2').textContent = steps[1]?.trim() || 'Step 2';
+        document.getElementById('flowStep3').textContent = steps[2]?.trim() || 'Step 3';
+      } else {
+        document.getElementById('flowIndicator').classList.remove('show');
+      }
+
+      // Load preview based on mode
+      loadPreview(currentScene);
+    }
+
+    // Load preview for selected scene
+    function loadPreview(scene) {
+      const contentLayer = document.getElementById('contentLayer');
+
+      if (scene.mode === 'manim') {
+        // Show Manim video with cache-busting
+        const timestamp = Date.now();
+        const videoPath = `packages/backend/src/manim/output/manim/${scene.id}.mp4?v=${timestamp}`;
+        contentLayer.innerHTML = `
+          <div class="video-preview">
+            <video controls autoplay>
+              <source src="${videoPath}" type="video/mp4">
+              Manim video for ${scene.title}
+            </video>
+          </div>
+        `;
+      } else if (scene.mode === 'rough' || scene.mode === 'hybrid') {
+        // Show rough.js canvas preview
+        contentLayer.innerHTML = `
+          <div style="text-align: center;">
+            <h2 style="color: #1a202c; margin-bottom: 20px;">${scene.title}</h2>
+            <p style="color: #4a5568; font-size: 18px;">${scene.description}</p>
+            <div style="margin-top: 40px; padding: 30px; background: #f7fafc; border-radius: 12px;">
+              <p style="color: #2d3748;">
+                <strong>Narrative Flow:</strong><br>
+                ${scene.flow || 'Interactive animation'}
+              </p>
+            </div>
+          </div>
+        `;
+      }
+    }
+
+    // Play scene animation
+    function playScene() {
+      if (!currentScene) {
+        alert('Please select a scene first');
+        return;
+      }
+
+      alert(`Playing ${currentScene.title} in ${currentScene.mode} mode`);
+      // Actual playback implementation would go here
+    }
+
+    // Switch rendering mode
+    function switchMode() {
+      if (!currentScene) {
+        alert('Please select a scene first');
+        return;
+      }
+
+      const modes = ['rough', 'manim', 'hybrid', 'excalidraw'];
+      const currentIndex = modes.indexOf(currentScene.mode);
+      const nextMode = modes[(currentIndex + 1) % modes.length];
+
+      currentScene.mode = nextMode;
+      selectScene(currentScene.id);
+    }
+
+    // Screenshot management
+    let currentScreenshot = null;
+
+    async function takeScreenshot() {
+      try {
+        // Capture the preview area
+        const previewContent = document.getElementById('previewContent');
+
+        // Use html2canvas to capture the preview
+        const canvas = await html2canvas(previewContent, {
+          backgroundColor: '#0f1419',
+          scale: 2
+        });
+
+        // Convert to blob
+        canvas.toBlob(blob => {
+          currentScreenshot = blob;
+
+          // Show preview
+          const reader = new FileReader();
+          reader.onload = (e) => {
+            document.getElementById('screenshotImg').src = e.target.result;
+            document.getElementById('screenshotPreview').style.display = 'block';
+          };
+          reader.readAsDataURL(blob);
+        });
+
+      } catch (error) {
+        console.error('Screenshot capture failed:', error);
+        alert('Failed to capture screenshot. Using basic capture...');
+
+        // Fallback: just show a placeholder
+        document.getElementById('screenshotImg').src = 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300"><rect fill="%23667eea" width="400" height="300"/><text x="50%" y="50%" fill="white" font-size="20" text-anchor="middle">Screenshot of ' + (currentScene?.title || 'scene') + '</text></svg>';
+        document.getElementById('screenshotPreview').style.display = 'block';
+        currentScreenshot = 'placeholder';
+      }
+    }
+
+    function clearScreenshot() {
+      currentScreenshot = null;
+      document.getElementById('screenshotPreview').style.display = 'none';
+      document.getElementById('screenshotImg').src = '';
+    }
+
+    // Send to Studio Bridge
+    async function sendToStudio() {
+      if (!currentScene) {
+        alert('Please select a scene first');
+        return;
+      }
+
+      const customRequest = document.getElementById('editRequestText').value.trim();
+
+      const request = {
+        sceneId: currentScene.id,
+        title: currentScene.title,
+        mode: currentScene.mode,
+        request: customRequest || `Review the narrative flow for ${currentScene.title}. ${currentScene.flow || 'No flow specified'}`,
+        needsThought: currentScene.needsThought,
+        thoughtNote: currentScene.thoughtNote,
+        hasScreenshot: !!currentScreenshot
+      };
+
+      console.log('Sending to studio:', request);
+
+      try {
+        // Send request
+        const response = await fetch('http://localhost:3001/api/studio/change-request', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(request)
+        });
+
+        const data = await response.json();
+
+        // If screenshot exists, upload it
+        if (currentScreenshot && currentScreenshot !== 'placeholder') {
+          const formData = new FormData();
+          formData.append('screenshot', currentScreenshot, `scene-${currentScene.id}-${Date.now()}.png`);
+
+          await fetch('http://localhost:3001/api/screenshot/save', {
+            method: 'POST',
+            body: formData
+          });
+        }
+
+        // Show success
+        alert(`✅ Edit request sent!\n\nScene: ${currentScene.title}\nRequest ID: ${data.requestId}\n\nCheck studio-change-requests.json`);
+
+        // Add to history
+        addToHistory(request);
+
+        // Clear form
+        document.getElementById('editRequestText').value = '';
+        clearScreenshot();
+
+      } catch (err) {
+        console.error('Studio bridge error:', err);
+        alert('❌ Studio bridge connection failed. Make sure bridge-agent-server.js is running on port 3001.');
+      }
+    }
+
+    function addToHistory(request) {
+      const historyPanel = document.getElementById('requestHistory');
+      const historyList = document.getElementById('historyList');
+
+      historyPanel.style.display = 'block';
+
+      const item = document.createElement('div');
+      item.style.cssText = 'background: #1a202c; padding: 8px; border-radius: 6px; margin-bottom: 8px; font-size: 11px; border-left: 3px solid #48bb78;';
+      item.innerHTML = `
+        <div style="color: #48bb78; font-weight: 600;">${request.sceneId} - ${request.title}</div>
+        <div style="color: #a0aec0; margin-top: 4px;">${request.request.substring(0, 80)}${request.request.length > 80 ? '...' : ''}</div>
+        <div style="color: #718096; margin-top: 4px; font-size: 10px;">${new Date().toLocaleTimeString()}</div>
+      `;
+
+      historyList.insertBefore(item, historyList.firstChild);
+
+      // Keep only last 5
+      while (historyList.children.length > 5) {
+        historyList.removeChild(historyList.lastChild);
+      }
+    }
+
+    // Initialize on load
+    initSceneList();
+  </script>
+</body>
+</html>

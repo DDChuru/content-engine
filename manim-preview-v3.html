@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Manim Preview - Enhanced Step 5</title>
+  <style>
+    body { font-family: Arial; background: #1a1a1a; color: white; padding: 40px; }
+    h1 { color: #4a9eff; }
+    .scene { margin: 40px 0; padding: 20px; background: #2a2a2a; border-radius: 10px; }
+    video { width: 100%; max-width: 800px; border-radius: 8px; }
+    .label { color: #ffa500; font-weight: bold; margin-bottom: 10px; font-size: 20px; }
+    .flow { color: #aaa; margin: 10px 0; line-height: 1.6; }
+    .highlight { color: #4eff4e; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <h1>🎬 Step 5: Two Sets Overlap - COMPLETE NARRATIVE</h1>
+  
+  <div class="scene">
+    <div class="label">✨ Enhanced Version - All-in-One Scene</div>
+    <div class="flow">
+      <strong>Complete Flow:</strong><br>
+      1. Show A = {1,2,3} notation (left)<br>
+      2. Show B = {2,3,4} notation (right)<br>
+      3. Draw circles<br>
+      4. <span class="highlight">Elements FLY from notation into Venn diagram</span><br>
+      5. <span class="highlight">Circle highlights the overlap region</span><br>
+      6. <span class="highlight">Show A ∩ B = {2, 3} formula</span><br>
+      7. <span class="highlight">Add "(Elements in BOTH sets)" explanation</span>
+    </div>
+    <video controls autoplay>
+      <source src="packages/backend/src/manim/output/manim/step5.mp4?v=NEW" type="video/mp4">
+    </video>
+  </div>
+
+  <div class="scene" style="background: #1a1a2a; border: 2px solid #666;">
+    <div class="label" style="color: #ff6b6b;">❌ Old Step 6 (Now Redundant)</div>
+    <div class="flow">
+      This separate "Intersection" scene is no longer needed since Step 5 now explains intersection completely!
+    </div>
+    <video controls>
+      <source src="packages/backend/src/manim/output/manim/step6.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <script>
+    // Force cache bypass
+    const timestamp = Date.now();
+    document.querySelectorAll('video source').forEach(src => {
+      if (src.src.includes('step5')) {
+        src.src = src.src.replace('?v=NEW', '?v=' + timestamp);
+      }
+    });
+  </script>
+</body>
+</html>

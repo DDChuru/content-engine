@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatterbox Voice Studio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            min-height: 100vh;
+            color: #e4e4e7;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            background: linear-gradient(90deg, #60a5fa, #a78bfa, #f472b6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            color: #94a3b8;
+            font-size: 1.1rem;
+        }
+
+        .status-bar {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .status-badge {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 9999px;
+            font-size: 0.875rem;
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #ef4444;
+        }
+
+        .status-dot.connected {
+            background: #22c55e;
+            box-shadow: 0 0 10px #22c55e;
+        }
+
+        .main-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        @media (max-width: 900px) {
+            .main-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .panel {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            overflow: hidden;
+        }
+
+        .panel-header {
+            padding: 1rem 1.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .panel-header h2 {
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+
+        .panel-icon {
+            font-size: 1.5rem;
+        }
+
+        .panel-content {
+            padding: 1.5rem;
+        }
+
+        /* Text Input Section */
+        textarea {
+            width: 100%;
+            min-height: 150px;
+            padding: 1rem;
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 0.5rem;
+            color: #fff;
+            font-size: 1rem;
+            resize: vertical;
+            font-family: inherit;
+        }
+
+        textarea:focus {
+            outline: none;
+            border-color: #60a5fa;
+            box-shadow: 0 0 0 2px rgba(96, 165, 250, 0.2);
+        }
+
+        textarea::placeholder {
+            color: #64748b;
+        }
+
+        /* Controls */
+        .controls {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .control-group {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .control-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 0.875rem;
+            color: #94a3b8;
+        }
+
+        select, input[type="range"] {
+            width: 100%;
+            padding: 0.5rem;
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 0.5rem;
+            color: #fff;
+            font-size: 0.875rem;
+        }
+
+        input[type="range"] {
+            -webkit-appearance: none;
+            height: 8px;
+            cursor: pointer;
+        }
+
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background: #60a5fa;
+            cursor: pointer;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(59, 130, 246, 0.4);
+        }
+
+        .btn-primary:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .btn-danger {
+            background: linear-gradient(135deg, #dc2626, #f43f5e);
+            color: white;
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        /* Recording Section */
+        .recorder {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .record-btn {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #dc2626, #f43f5e);
+            border: 4px solid rgba(255, 255, 255, 0.2);
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+        }
+
+        .record-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 30px rgba(220, 38, 38, 0.5);
+        }
+
+        .record-btn.recording {
+            animation: pulse 1.5s infinite;
+            background: linear-gradient(135deg, #22c55e, #16a34a);
+        }
+
+        .record-btn svg {
+            width: 48px;
+            height: 48px;
+            fill: white;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .recording-time {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #f472b6;
+            margin: 1rem 0;
+        }
+
+        .recording-hint {
+            color: #94a3b8;
+            font-size: 0.875rem;
+        }
+
+        /* Voice Profiles */
+        .voice-list {
+            max-height: 300px;
+            overflow-y: auto;
+        }
+
+        .voice-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.75rem 1rem;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .voice-item:hover {
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        .voice-info {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .voice-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #f472b6, #a78bfa);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+        }
+
+        .voice-name {
+            font-weight: 500;
+        }
+
+        .voice-duration {
+            font-size: 0.75rem;
+            color: #94a3b8;
+        }
+
+        .voice-actions {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .voice-actions button {
+            padding: 0.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            border-radius: 0.25rem;
+            cursor: pointer;
+            color: #94a3b8;
+            transition: all 0.2s;
+        }
+
+        .voice-actions button:hover {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+        }
+
+        /* Audio Player */
+        .audio-player {
+            margin-top: 1.5rem;
+            padding: 1rem;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 0.5rem;
+        }
+
+        .audio-player audio {
+            width: 100%;
+        }
+
+        /* Loading State */
+        .loading {
+            display: none;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 1rem;
+            color: #60a5fa;
+        }
+
+        .loading.active {
+            display: flex;
+        }
+
+        .spinner {
+            width: 24px;
+            height: 24px;
+            border: 3px solid rgba(96, 165, 250, 0.2);
+            border-top-color: #60a5fa;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Notifications */
+        .notification {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            padding: 1rem 1.5rem;
+            border-radius: 0.5rem;
+            color: white;
+            font-weight: 500;
+            transform: translateY(100px);
+            opacity: 0;
+            transition: all 0.3s;
+            z-index: 1000;
+        }
+
+        .notification.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .notification.success {
+            background: linear-gradient(135deg, #22c55e, #16a34a);
+        }
+
+        .notification.error {
+            background: linear-gradient(135deg, #dc2626, #f43f5e);
+        }
+
+        /* Empty State */
+        .empty-state {
+            text-align: center;
+            padding: 2rem;
+            color: #64748b;
+        }
+
+        .empty-state svg {
+            width: 48px;
+            height: 48px;
+            margin-bottom: 1rem;
+            opacity: 0.5;
+        }
+
+        /* Name Input Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+        }
+
+        .modal.show {
+            display: flex;
+        }
+
+        .modal-content {
+            background: #1e293b;
+            border-radius: 1rem;
+            padding: 2rem;
+            width: 90%;
+            max-width: 400px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .modal-content h3 {
+            margin-bottom: 1rem;
+        }
+
+        .modal-content input {
+            width: 100%;
+            padding: 0.75rem;
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 0.5rem;
+            color: white;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .modal-content input:focus {
+            outline: none;
+            border-color: #60a5fa;
+        }
+
+        .modal-actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: flex-end;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Chatterbox Voice Studio</h1>
+            <p>Free, Open-Source Text-to-Speech & Voice Cloning</p>
+        </header>
+
+        <div class="status-bar">
+            <div class="status-badge">
+                <div class="status-dot" id="serverStatus"></div>
+                <span id="serverStatusText">Connecting...</span>
+            </div>
+            <div class="status-badge">
+                <span id="deviceStatus">Checking GPU...</span>
+            </div>
+        </div>
+
+        <div class="main-grid">
+            <!-- Text to Speech Panel -->
+            <div class="panel">
+                <div class="panel-header">
+                    <span class="panel-icon">🗣️</span>
+                    <h2>Text to Speech</h2>
+                </div>
+                <div class="panel-content">
+                    <textarea
+                        id="textInput"
+                        placeholder="Enter the text you want to convert to speech...
+
+Try adding emotion tags like [laugh] or [chuckle] for natural speech!"
+                    ></textarea>
+
+                    <div class="controls">
+                        <div class="control-group">
+                            <label>Voice Profile</label>
+                            <select id="voiceSelect">
+                                <option value="">Default Voice</option>
+                            </select>
+                        </div>
+                        <div class="control-group">
+                            <label>Emotion: <span id="emotionValue">0.5</span></label>
+                            <input type="range" id="emotionSlider" min="0" max="1" step="0.1" value="0.5">
+                        </div>
+                    </div>
+
+                    <div class="btn-group">
+                        <button class="btn btn-primary" id="generateBtn" disabled>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                            </svg>
+                            Generate Speech
+                        </button>
+                    </div>
+
+                    <div class="loading" id="generateLoading">
+                        <div class="spinner"></div>
+                        <span>Generating speech...</span>
+                    </div>
+
+                    <div class="audio-player" id="audioPlayer" style="display: none;">
+                        <audio id="audioElement" controls></audio>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Voice Cloning Panel -->
+            <div class="panel">
+                <div class="panel-header">
+                    <span class="panel-icon">🎤</span>
+                    <h2>Voice Cloning</h2>
+                </div>
+                <div class="panel-content">
+                    <div class="recorder">
+                        <div style="display: flex; gap: 1rem; align-items: center; justify-content: center; margin-bottom: 1rem;">
+                            <button class="record-btn" id="recordBtn" disabled title="Record from microphone">
+                                <svg id="micIcon" viewBox="0 0 24 24">
+                                    <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/>
+                                    <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+                                    <line x1="12" y1="19" x2="12" y2="23"/>
+                                    <line x1="8" y1="23" x2="16" y2="23"/>
+                                </svg>
+                                <svg id="stopIcon" viewBox="0 0 24 24" style="display: none;">
+                                    <rect x="6" y="6" width="12" height="12" rx="2"/>
+                                </svg>
+                            </button>
+                            <span style="color: #64748b;">or</span>
+                            <label class="record-btn" id="uploadBtn" title="Upload audio file" style="cursor: pointer;">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                    <polyline points="17 8 12 3 7 8"/>
+                                    <line x1="12" y1="3" x2="12" y2="15"/>
+                                </svg>
+                                <input type="file" id="audioFileInput" accept="audio/*,.wav,.mp3,.m4a,.ogg,.webm" style="display: none;">
+                            </label>
+                        </div>
+                        <div class="recording-time" id="recordingTime">00:00</div>
+                        <p class="recording-hint">Record 7-20 seconds OR upload any audio file</p>
+                        <p id="uploadedFileName" style="color: #22c55e; margin-top: 0.5rem; display: none;"></p>
+                    </div>
+
+                    <div class="loading" id="saveLoading">
+                        <div class="spinner"></div>
+                        <span>Processing voice...</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Saved Voices Panel -->
+            <div class="panel" style="grid-column: 1 / -1;">
+                <div class="panel-header">
+                    <span class="panel-icon">👥</span>
+                    <h2>Voice Profiles</h2>
+                </div>
+                <div class="panel-content">
+                    <div class="voice-list" id="voiceList">
+                        <div class="empty-state" id="emptyState">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                <circle cx="9" cy="7" r="4"/>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                            </svg>
+                            <p>No voice profiles yet</p>
+                            <p>Record your voice to create one!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Name Input Modal -->
+    <div class="modal" id="nameModal">
+        <div class="modal-content">
+            <h3>Name Your Voice</h3>
+            <input type="text" id="voiceName" placeholder="e.g., My Voice, Narrator">
+            <div class="modal-actions">
+                <button class="btn btn-secondary" id="cancelSave">Cancel</button>
+                <button class="btn btn-primary" id="confirmSave">Save Voice</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification -->
+    <div class="notification" id="notification"></div>
+
+    <script>
+        const API_URL = 'http://localhost:8765';
+
+        // Elements
+        const serverStatus = document.getElementById('serverStatus');
+        const serverStatusText = document.getElementById('serverStatusText');
+        const deviceStatus = document.getElementById('deviceStatus');
+        const textInput = document.getElementById('textInput');
+        const voiceSelect = document.getElementById('voiceSelect');
+        const emotionSlider = document.getElementById('emotionSlider');
+        const emotionValue = document.getElementById('emotionValue');
+        const generateBtn = document.getElementById('generateBtn');
+        const generateLoading = document.getElementById('generateLoading');
+        const audioPlayer = document.getElementById('audioPlayer');
+        const audioElement = document.getElementById('audioElement');
+        const recordBtn = document.getElementById('recordBtn');
+        const micIcon = document.getElementById('micIcon');
+        const stopIcon = document.getElementById('stopIcon');
+        const recordingTime = document.getElementById('recordingTime');
+        const saveLoading = document.getElementById('saveLoading');
+        const voiceList = document.getElementById('voiceList');
+        const emptyState = document.getElementById('emptyState');
+        const nameModal = document.getElementById('nameModal');
+        const voiceName = document.getElementById('voiceName');
+        const cancelSave = document.getElementById('cancelSave');
+        const confirmSave = document.getElementById('confirmSave');
+        const notification = document.getElementById('notification');
+
+        // State
+        let isRecording = false;
+        let mediaRecorder = null;
+        let audioChunks = [];
+        let recordingInterval = null;
+        let recordingSeconds = 0;
+        let pendingAudioBlob = null;
+
+        // Check server status
+        async function checkServer() {
+            try {
+                const response = await fetch(`${API_URL}/health`);
+                const data = await response.json();
+
+                serverStatus.classList.add('connected');
+                serverStatusText.textContent = 'Server Connected';
+                deviceStatus.textContent = data.cuda_available ? `GPU: ${data.device}` : 'CPU Mode';
+
+                generateBtn.disabled = false;
+                recordBtn.disabled = false;
+
+                loadVoices();
+            } catch (error) {
+                serverStatus.classList.remove('connected');
+                serverStatusText.textContent = 'Server Offline';
+                deviceStatus.textContent = 'Start server with: python server.py';
+            }
+        }
+
+        // Load voice profiles
+        async function loadVoices() {
+            try {
+                const response = await fetch(`${API_URL}/voices`);
+                const data = await response.json();
+
+                // Update select dropdown
+                voiceSelect.innerHTML = '<option value="">Default Voice</option>';
+                data.voices.forEach(voice => {
+                    voiceSelect.innerHTML += `<option value="${voice.voice_id}">${voice.name} (${voice.duration_seconds}s)</option>`;
+                });
+
+                // Update voice list
+                if (data.voices.length === 0) {
+                    voiceList.innerHTML = `
+                        <div class="empty-state">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                <circle cx="9" cy="7" r="4"/>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                            </svg>
+                            <p>No voice profiles yet</p>
+                            <p>Record or upload audio to create one!</p>
+                        </div>`;
+                } else {
+                    voiceList.innerHTML = data.voices.map(voice => `
+                        <div class="voice-item">
+                            <div class="voice-info">
+                                <div class="voice-avatar">${voice.name[0].toUpperCase()}</div>
+                                <div>
+                                    <div class="voice-name">${voice.name}</div>
+                                    <div class="voice-duration">${voice.duration_seconds} seconds</div>
+                                </div>
+                            </div>
+                            <div class="voice-actions">
+                                <button onclick="useVoice('${voice.voice_id}')" title="Use this voice">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                                    </svg>
+                                </button>
+                                <button onclick="deleteVoice('${voice.voice_id}')" title="Delete">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M3 6h18M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    `).join('');
+                }
+            } catch (error) {
+                console.error('Failed to load voices:', error);
+            }
+        }
+
+        // Generate speech
+        async function generateSpeech() {
+            const text = textInput.value.trim();
+            if (!text) {
+                showNotification('Please enter some text', 'error');
+                return;
+            }
+
+            generateBtn.disabled = true;
+            generateLoading.classList.add('active');
+            audioPlayer.style.display = 'none';
+
+            try {
+                const formData = new FormData();
+                formData.append('text', text);
+                formData.append('exaggeration', emotionSlider.value);
+                formData.append('cfg_weight', '0.5');
+
+                if (voiceSelect.value) {
+                    formData.append('voice_id', voiceSelect.value);
+                }
+
+                const response = await fetch(`${API_URL}/generate`, {
+                    method: 'POST',
+                    body: formData
+                });
+
+                if (!response.ok) {
+                    throw new Error('Generation failed');
+                }
+
+                const blob = await response.blob();
+                const url = URL.createObjectURL(blob);
+
+                audioElement.src = url;
+                audioPlayer.style.display = 'block';
+                audioElement.play();
+
+                showNotification('Speech generated!', 'success');
+            } catch (error) {
+                console.error('Generation error:', error);
+                showNotification('Failed to generate speech', 'error');
+            } finally {
+                generateBtn.disabled = false;
+                generateLoading.classList.remove('active');
+            }
+        }
+
+        // Start/stop recording
+        async function toggleRecording() {
+            if (isRecording) {
+                stopRecording();
+            } else {
+                await startRecording();
+            }
+        }
+
+        async function startRecording() {
+            try {
+                const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+                mediaRecorder = new MediaRecorder(stream);
+                audioChunks = [];
+
+                mediaRecorder.ondataavailable = (e) => {
+                    audioChunks.push(e.data);
+                };
+
+                mediaRecorder.onstop = async () => {
+                    const blob = new Blob(audioChunks, { type: 'audio/wav' });
+                    pendingAudioBlob = blob;
+                    stream.getTracks().forEach(track => track.stop());
+                    nameModal.classList.add('show');
+                    voiceName.value = '';
+                    voiceName.focus();
+                };
+
+                mediaRecorder.start();
+                isRecording = true;
+                recordingSeconds = 0;
+
+                recordBtn.classList.add('recording');
+                micIcon.style.display = 'none';
+                stopIcon.style.display = 'block';
+
+                recordingInterval = setInterval(() => {
+                    recordingSeconds++;
+                    const mins = Math.floor(recordingSeconds / 60).toString().padStart(2, '0');
+                    const secs = (recordingSeconds % 60).toString().padStart(2, '0');
+                    recordingTime.textContent = `${mins}:${secs}`;
+                }, 1000);
+
+            } catch (error) {
+                console.error('Recording error:', error);
+                showNotification('Could not access microphone', 'error');
+            }
+        }
+
+        function stopRecording() {
+            if (mediaRecorder && mediaRecorder.state !== 'inactive') {
+                mediaRecorder.stop();
+            }
+            isRecording = false;
+            recordBtn.classList.remove('recording');
+            micIcon.style.display = 'block';
+            stopIcon.style.display = 'none';
+            clearInterval(recordingInterval);
+        }
+
+        // Save voice profile
+        async function saveVoice() {
+            const name = voiceName.value.trim();
+            if (!name) {
+                showNotification('Please enter a name', 'error');
+                return;
+            }
+
+            nameModal.classList.remove('show');
+            saveLoading.classList.add('active');
+
+            try {
+                const formData = new FormData();
+                // Use original filename for uploads, 'recording.webm' for mic recordings
+                const filename = pendingAudioBlob.name || 'recording.webm';
+                formData.append('audio', pendingAudioBlob, filename);
+                formData.append('name', name);
+
+                const response = await fetch(`${API_URL}/clone`, {
+                    method: 'POST',
+                    body: formData
+                });
+
+                if (!response.ok) {
+                    throw new Error('Failed to save voice');
+                }
+
+                const data = await response.json();
+                showNotification(`Voice "${name}" saved! Ready for use.`, 'success');
+                loadVoices();
+                recordingTime.textContent = '00:00';
+                uploadedFileName.style.display = 'none';
+                uploadedFileName.textContent = '';
+                audioFileInput.value = ''; // Reset file input
+
+            } catch (error) {
+                console.error('Save error:', error);
+                showNotification('Failed to save voice profile: ' + error.message, 'error');
+            } finally {
+                saveLoading.classList.remove('active');
+                pendingAudioBlob = null;
+            }
+        }
+
+        // Use a voice profile
+        function useVoice(voiceId) {
+            voiceSelect.value = voiceId;
+            showNotification('Voice selected!', 'success');
+        }
+
+        // Delete a voice profile
+        async function deleteVoice(voiceId) {
+            if (!confirm('Delete this voice profile?')) return;
+
+            try {
+                const response = await fetch(`${API_URL}/voices/${voiceId}`, {
+                    method: 'DELETE'
+                });
+
+                if (!response.ok) {
+                    throw new Error('Failed to delete');
+                }
+
+                showNotification('Voice deleted', 'success');
+                loadVoices();
+            } catch (error) {
+                console.error('Delete error:', error);
+                showNotification('Failed to delete voice', 'error');
+            }
+        }
+
+        // Show notification
+        function showNotification(message, type) {
+            notification.textContent = message;
+            notification.className = `notification ${type} show`;
+            setTimeout(() => {
+                notification.classList.remove('show');
+            }, 3000);
+        }
+
+        // Event listeners
+        emotionSlider.addEventListener('input', () => {
+            emotionValue.textContent = emotionSlider.value;
+        });
+
+        generateBtn.addEventListener('click', generateSpeech);
+        recordBtn.addEventListener('click', toggleRecording);
+        cancelSave.addEventListener('click', () => {
+            nameModal.classList.remove('show');
+            pendingAudioBlob = null;
+            recordingTime.textContent = '00:00';
+            uploadedFileName.style.display = 'none';
+            uploadedFileName.textContent = '';
+            audioFileInput.value = '';
+        });
+        confirmSave.addEventListener('click', saveVoice);
+
+        // Enter key on voice name input
+        voiceName.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') saveVoice();
+        });
+
+        // File upload for voice cloning
+        const audioFileInput = document.getElementById('audioFileInput');
+        const uploadedFileName = document.getElementById('uploadedFileName');
+
+        audioFileInput.addEventListener('change', async (e) => {
+            const file = e.target.files[0];
+            if (!file) return;
+
+            // Show file name
+            uploadedFileName.textContent = `Selected: ${file.name}`;
+            uploadedFileName.style.display = 'block';
+
+            // Convert to blob and trigger save dialog
+            pendingAudioBlob = file;
+            recordingTime.textContent = 'File ready';
+
+            // Auto-suggest name from filename
+            const suggestedName = file.name.replace(/\.[^/.]+$/, "").replace(/[_-]/g, " ");
+            voiceName.value = suggestedName;
+            nameModal.classList.add('show');
+            voiceName.focus();
+
+            showNotification('Audio file loaded! Enter a name to save.', 'success');
+        });
+
+        // Initial check
+        checkServer();
+        setInterval(checkServer, 5000);
+    </script>
+</body>
+</html>

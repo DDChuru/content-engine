@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Autonomous Studio - Sets Tutorial</title>
+  <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      height: 100vh;
+      display: flex;
+      align-items: stretch;
+      justify-content: center;
+      padding: 20px;
+      overflow: hidden;
+    }
+
+    .container {
+      max-width: 1800px;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      gap: 20px;
+    }
+
+    .main-area {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+    }
+
+    .excalidraw-wrapper {
+      background: #ffffff;
+      border-radius: 20px;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+      padding: 20px;
+      height: 100%;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .preview-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #e2e8f0;
+    }
+
+    .preview-header h3 {
+      font-size: 18px;
+      color: #2d3748;
+      margin: 0;
+    }
+
+    .preview-controls {
+      display: flex;
+      gap: 8px;
+    }
+
+    .preview-controls button {
+      padding: 8px 16px;
+      font-size: 13px;
+      border-radius: 8px;
+    }
+
+    #excalidraw-container {
+      width: 100%;
+      flex: 1;
+      min-height: 600px;
+      position: relative;
+      border: 2px solid #e2e8f0;
+      border-radius: 10px;
+      overflow: hidden;
+      background: #f7fafc;
+    }
+
+    #lessonPreview {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
+
+    .studio-panel {
+      width: 400px;
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+      padding: 20px;
+      height: 100%;
+      overflow-y: auto;
+      flex-shrink: 0;
+    }
+
+    .studio-panel h2 {
+      font-size: 22px;
+      margin-bottom: 10px;
+      color: #1a202c;
+    }
+
+    .status-badge {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 12px;
+      font-size: 12px;
+      font-weight: bold;
+      margin-left: 10px;
+    }
+
+    .status-connected {
+      background: #48bb78;
+      color: white;
+    }
+
+    .status-disconnected {
+      background: #fc8181;
+      color: white;
+    }
+
+    .status-pending {
+      background: #ed8936;
+      color: white;
+    }
+
+    .change-form {
+      background: #f7fafc;
+      padding: 15px;
+      border-radius: 10px;
+      margin: 15px 0;
+      border-left: 4px solid #667eea;
+    }
+
+    .change-form h3 {
+      font-size: 16px;
+      color: #2d3748;
+      margin-bottom: 10px;
+    }
+
+    .form-group {
+      margin: 10px 0;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 13px;
+      color: #4a5568;
+      margin-bottom: 5px;
+      font-weight: 600;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #cbd5e0;
+      border-radius: 5px;
+      font-size: 14px;
+      font-family: inherit;
+    }
+
+    .form-group textarea {
+      min-height: 80px;
+      resize: vertical;
+    }
+
+    button {
+      padding: 12px 24px;
+      font-size: 14px;
+      font-weight: bold;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .btn-primary {
+      background: #667eea;
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: #5a67d8;
+      transform: translateY(-2px);
+    }
+
+    .btn-success {
+      background: #48bb78;
+      color: white;
+    }
+
+    .btn-success:hover {
+      background: #38a169;
+    }
+
+    .btn-danger {
+      background: #fc8181;
+      color: white;
+    }
+
+    .btn-secondary {
+      background: #718096;
+      color: white;
+    }
+
+    .pending-requests {
+      margin: 20px 0;
+    }
+
+    .request-item {
+      background: #fff5f5;
+      padding: 12px;
+      border-radius: 8px;
+      margin: 8px 0;
+      border-left: 3px solid #ed8936;
+    }
+
+    .request-item strong {
+      color: #ed8936;
+      font-size: 13px;
+    }
+
+    .request-item p {
+      font-size: 12px;
+      color: #4a5568;
+      margin: 4px 0;
+    }
+
+    .instructions {
+      background: #ebf8ff;
+      padding: 15px;
+      border-radius: 10px;
+      margin: 15px 0;
+      border-left: 4px solid #4299e1;
+    }
+
+    .instructions h4 {
+      color: #2c5282;
+      margin-bottom: 8px;
+      font-size: 14px;
+    }
+
+    .instructions p {
+      color: #2d3748;
+      font-size: 13px;
+      line-height: 1.6;
+      margin: 4px 0;
+    }
+
+    .instructions code {
+      background: #2d3748;
+      color: #48bb78;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 12px;
+    }
+
+    canvas {
+      border-radius: 10px;
+    }
+
+    .quick-actions {
+      margin: 15px 0;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .quick-actions button {
+      flex: 1;
+      min-width: 120px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="main-area">
+      <div class="excalidraw-wrapper">
+        <div class="preview-header">
+          <h3>📺 Live Preview - Sets Tutorial</h3>
+          <div class="preview-controls">
+            <button class="btn-success" onclick="reloadPreview()">🔄 Refresh</button>
+            <button class="btn-primary" onclick="playPreview()">▶️ Play</button>
+          </div>
+        </div>
+        <div id="excalidraw-container">
+          <iframe
+            id="lessonPreview"
+            src="excalidraw-demo-smart-clear.html"
+            allow="autoplay">
+          </iframe>
+        </div>
+      </div>
+    </div>
+
+    <div class="studio-panel">
+      <h2>
+        Autonomous Studio
+        <span class="status-badge status-disconnected" id="connectionStatus">Disconnected</span>
+      </h2>
+
+      <div class="instructions">
+        <h4>🤖 How This Works</h4>
+        <p>1. Make changes below</p>
+        <p>2. Click "Send to Claude Code"</p>
+        <p>3. Changes auto-apply (no manual steps!)</p>
+        <p>4. Browser refreshes automatically</p>
+        <p><strong>Tell Claude Code:</strong> <code>process studio requests</code></p>
+      </div>
+
+      <div class="pending-requests" id="pendingRequests">
+        <h3 style="font-size: 16px; color: #2d3748; margin-bottom: 10px;">
+          Pending Changes (<span id="pendingCount">0</span>)
+        </h3>
+        <div id="requestsList"></div>
+      </div>
+
+      <div class="change-form">
+        <h3>🎨 Make a Change</h3>
+
+        <div class="form-group">
+          <label>Change Type</label>
+          <select id="changeType">
+            <option value="narration">Change Narration</option>
+            <option value="visual">Adjust Visual</option>
+            <option value="spacing">Fix Spacing</option>
+            <option value="color">Change Color</option>
+            <option value="timing">Adjust Timing</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Step ID</label>
+          <input type="text" id="stepId" placeholder="e.g., step5" value="step5">
+        </div>
+
+        <div class="form-group">
+          <label>Instruction / New Value</label>
+          <textarea id="instruction" placeholder="Describe the change you want...">Make the Venn circles 20% larger</textarea>
+        </div>
+
+        <button class="btn-primary" onclick="sendChange()">
+          📤 Send to Claude Code
+        </button>
+      </div>
+
+      <div class="quick-actions">
+        <button class="btn-success" onclick="quickChange('bigger-circles')">
+          Bigger Circles
+        </button>
+        <button class="btn-success" onclick="quickChange('change-colors')">
+          Change Colors
+        </button>
+        <button class="btn-success" onclick="quickChange('add-pause')">
+          Add Pause
+        </button>
+      </div>
+
+      <hr style="margin: 20px 0; border: none; border-top: 1px solid #e2e8f0;">
+
+      <button class="btn-primary" onclick="captureScreenshot()" style="width: 100%; margin-bottom: 10px;">
+        📸 Capture Screenshot
+      </button>
+
+      <button class="btn-secondary" onclick="clearPending()" style="width: 100%;">
+        🗑️ Clear Pending Requests
+      </button>
+    </div>
+  </div>
+
+  <script>
+    // WebSocket connection to bridge agent
+    let socket = null;
+    let pendingRequests = [];
+
+    // Connect to bridge agent
+    function connectToBridge() {
+      socket = io('http://localhost:3001');
+
+      socket.on('connect', () => {
+        console.log('✅ Connected to Studio Bridge Agent');
+        updateConnectionStatus(true);
+      });
+
+      socket.on('disconnect', () => {
+        console.log('❌ Disconnected from Bridge Agent');
+        updateConnectionStatus(false);
+      });
+
+      socket.on('refresh', () => {
+        console.log('🔄 Received refresh signal from Bridge Agent');
+        setTimeout(() => {
+          location.reload();
+        }, 500);
+      });
+    }
+
+    function updateConnectionStatus(connected) {
+      const badge = document.getElementById('connectionStatus');
+      if (connected) {
+        badge.textContent = 'Connected';
+        badge.className = 'status-badge status-connected';
+      } else {
+        badge.textContent = 'Disconnected';
+        badge.className = 'status-badge status-disconnected';
+      }
+    }
+
+    // Send change to bridge agent
+    function sendChange() {
+      const changeType = document.getElementById('changeType').value;
+      const stepId = document.getElementById('stepId').value;
+      const instruction = document.getElementById('instruction').value;
+
+      if (!stepId || !instruction) {
+        alert('Please fill in all fields');
+        return;
+      }
+
+      const change = {
+        changeType,
+        step: stepId,
+        instruction,
+        timestamp: new Date().toISOString()
+      };
+
+      // Send via WebSocket
+      if (socket && socket.connected) {
+        socket.emit('studio-change', change);
+        console.log('📤 Sent change to Bridge Agent:', change);
+
+        // Add to pending list
+        pendingRequests.push(change);
+        updatePendingList();
+
+        // Clear form
+        document.getElementById('instruction').value = '';
+
+        alert('✅ Change sent to Claude Code!\n\nGo to terminal and say: "process studio requests"');
+      } else {
+        alert('❌ Not connected to Bridge Agent. Check backend server.');
+      }
+    }
+
+    // Quick change shortcuts
+    function quickChange(type) {
+      let instruction = '';
+
+      switch(type) {
+        case 'bigger-circles':
+          instruction = 'Increase Venn circle radius from 150 to 200';
+          document.getElementById('changeType').value = 'visual';
+          document.getElementById('stepId').value = 'step5';
+          break;
+
+        case 'change-colors':
+          instruction = 'Change Set A color from blue to red (#ff6b6b)';
+          document.getElementById('changeType').value = 'color';
+          document.getElementById('stepId').value = 'step5';
+          break;
+
+        case 'add-pause':
+          instruction = 'Add 2 second pause after this step';
+          document.getElementById('changeType').value = 'timing';
+          document.getElementById('stepId').value = 'step3';
+          break;
+      }
+
+      document.getElementById('instruction').value = instruction;
+    }
+
+    // Update pending list display
+    function updatePendingList() {
+      const list = document.getElementById('requestsList');
+      const count = document.getElementById('pendingCount');
+
+      count.textContent = pendingRequests.length;
+
+      if (pendingRequests.length === 0) {
+        list.innerHTML = '<p style="color: #718096; font-size: 13px;">No pending changes</p>';
+        return;
+      }
+
+      list.innerHTML = pendingRequests.map((req, index) => `
+        <div class="request-item">
+          <strong>#${index + 1} - ${req.changeType}</strong>
+          <p>Step: ${req.step}</p>
+          <p>${req.instruction}</p>
+        </div>
+      `).join('');
+    }
+
+    // Clear pending
+    function clearPending() {
+      if (confirm('Clear all pending requests?')) {
+        pendingRequests = [];
+        updatePendingList();
+      }
+    }
+
+    // Screenshot capture function
+    async function captureScreenshot() {
+      try {
+        const iframe = document.getElementById('lessonPreview');
+        const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+
+        // Use html2canvas to capture the iframe content
+        const canvas = await html2canvas(iframeDoc.body, {
+          backgroundColor: '#ffffff',
+          scale: 2, // Higher quality
+          logging: false,
+          useCORS: true
+        });
+
+        // Convert canvas to blob
+        canvas.toBlob(async (blob) => {
+          const timestamp = Date.now();
+          const filename = `studio-screenshot-${timestamp}.png`;
+
+          // Send to backend
+          const formData = new FormData();
+          formData.append('screenshot', blob, filename);
+
+          const response = await fetch('http://localhost:3001/api/screenshot/save', {
+            method: 'POST',
+            body: formData
+          });
+
+          if (response.ok) {
+            const data = await response.json();
+            alert(`Screenshot saved! 📸\n\nFile: ${data.filename}\nPath: ${data.path}\n\nYou can now use /screenshot command in Claude to analyze it.`);
+
+            // Also save to clipboard if supported
+            if (navigator.clipboard && navigator.clipboard.write) {
+              try {
+                await navigator.clipboard.write([
+                  new ClipboardItem({ 'image/png': blob })
+                ]);
+                console.log('Screenshot also copied to clipboard!');
+              } catch (err) {
+                console.log('Clipboard copy not supported:', err);
+              }
+            }
+          } else {
+            alert('Failed to save screenshot. Make sure the bridge agent is running.');
+          }
+        }, 'image/png');
+      } catch (error) {
+        console.error('Screenshot capture error:', error);
+        alert('Error capturing screenshot: ' + error.message);
+      }
+    }
+
+    // Preview control functions
+    function reloadPreview() {
+      const iframe = document.getElementById('lessonPreview');
+      iframe.src = iframe.src;
+      console.log('🔄 Preview reloaded');
+    }
+
+    function playPreview() {
+      const iframe = document.getElementById('lessonPreview');
+      // Send play message to iframe
+      iframe.contentWindow.postMessage({ action: 'play' }, '*');
+      console.log('▶️ Play signal sent to preview');
+    }
+
+    // Initialize
+    connectToBridge();
+    updatePendingList();
+
+    console.log('🎨 Autonomous Studio ready!');
+    console.log('📡 Connecting to Bridge Agent...');
+  </script>
+</body>
+</html>

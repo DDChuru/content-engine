@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Step 5 - Collision Fixed</title>
+  <style>
+    body { font-family: Arial; background: #1a1a1a; color: white; padding: 40px; }
+    h1 { color: #4a9eff; margin-bottom: 10px; }
+    .subtitle { color: #aaa; margin-bottom: 30px; }
+    .scene { margin: 40px 0; padding: 20px; background: #2a2a2a; border-radius: 10px; }
+    video { width: 100%; max-width: 900px; border-radius: 8px; }
+    .label { color: #4eff4e; font-weight: bold; margin-bottom: 15px; font-size: 22px; }
+    .fix { color: #ffa500; margin: 10px 0; line-height: 1.6; background: #333; padding: 15px; border-radius: 6px; }
+  </style>
+</head>
+<body>
+  <h1>🎬 Step 5: Two Sets Overlap</h1>
+  <div class="subtitle">✅ Collision Fixed - Formula Now Positioned to the Right</div>
+  
+  <div class="scene">
+    <div class="label">✨ Complete Narrative (No Collisions!)</div>
+    <div class="fix">
+      <strong>Fixed:</strong><br>
+      ❌ <del>Formula overlapping yellow circle</del><br>
+      ✅ Formula positioned to the RIGHT of circle B<br>
+      ✅ Yellow highlight circle smaller and moved up<br>
+      ✅ All elements have proper spacing
+    </div>
+    <video controls autoplay>
+      <source src="packages/backend/src/manim/output/manim/step5.mp4?fix=COLLISION" type="video/mp4">
+    </video>
+  </div>
+
+  <script>
+    // Force fresh load with timestamp
+    const video = document.querySelector('video source');
+    video.src = video.src.replace('?fix=COLLISION', '?v=' + Date.now());
+    document.querySelector('video').load();
+  </script>
+</body>
+</html>
