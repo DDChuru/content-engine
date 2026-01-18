@@ -2315,23 +2315,25 @@ async function loadSyllabusData(): Promise<Record<string, SyllabusTopic>> {
     const syllabus = JSON.parse(data);
 
     // Build lookup by topic code
+    // File structure: syllabus.topics[].subtopics[]
     syllabusCache = {};
-    for (const unit of syllabus.units || []) {
-      for (const topic of unit.topics || []) {
-        syllabusCache[topic.code.toLowerCase()] = {
-          code: topic.code,
-          title: topic.title,
-          content: topic.content || [],
-          examples: topic.examples || [],
-          notes: topic.notes || [],
-          notation: topic.notation || [],
-          required: topic.required || [],
-          properties: topic.properties || [],
-          level: topic.level || 'Core'
+    for (const unit of syllabus.topics || []) {
+      for (const subtopic of unit.subtopics || []) {
+        syllabusCache[subtopic.code.toLowerCase()] = {
+          code: subtopic.code,
+          title: subtopic.title,
+          content: subtopic.content || [],
+          examples: subtopic.examples || [],
+          notes: subtopic.notes || [],
+          notation: subtopic.notation || [],
+          required: subtopic.required || [],
+          properties: subtopic.properties || [],
+          level: unit.level || 'Core'
         };
       }
     }
 
+    console.log(`📚 Loaded ${Object.keys(syllabusCache).length} topics from syllabus`);
     return syllabusCache;
   } catch (error) {
     console.error('Failed to load syllabus:', error);
