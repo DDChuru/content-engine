@@ -475,3 +475,9 @@ export interface PictorialAuditModel {
   auditorSignature?: string;
   reviewerSignature?: string;
 }
+
+// ============================================================================
+// Content Studio Pipeline Types (re-export)
+// ============================================================================
+
+export * from './types/studio-manifest';

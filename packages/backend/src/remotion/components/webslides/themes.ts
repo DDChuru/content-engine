@@ -177,13 +177,85 @@ export const documentationTheme: WebSlidesTheme = {
 };
 
 /**
+ * EnviroWize Corporate Theme
+ * For food safety / corporate presentations (dark navy + green accents)
+ */
+export const envirowizeCorporateTheme: WebSlidesTheme = {
+  name: 'envirowize-corporate',
+  colors: {
+    background: '#0a1628',      // Dark navy
+    text: '#f0f4f8',
+    primary: '#2d8a4e',         // EnviroWize green
+    accent: '#34d399',          // Bright mint green
+    highlight: '#fbbf24',       // Warm amber
+    secondary: '#1e3a5f'        // Medium navy
+  },
+  typography: {
+    fontFamily: '"Inter", system-ui, -apple-system, sans-serif',
+    mathFont: '"Fira Code", "Courier New", monospace',
+    headingWeight: 700,
+    titleSize: '3.5rem',
+    subtitleSize: '1.4rem',
+    mathNotationSize: '1.8rem',
+    bodySize: '1.15rem'
+  },
+  spacing: {
+    padding: '60px',
+    margin: '24px',
+    gap: '18px'
+  },
+  effects: {
+    borderRadius: '10px',
+    shadow: '0 16px 48px rgba(0,0,0,0.4)',
+    transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)'
+  }
+};
+
+/**
+ * Ecowize Corporate Theme
+ * Professional navy/teal palette for Ecowize pitch presentations
+ */
+export const ecowizeCorporateTheme: WebSlidesTheme = {
+  name: 'ecowize-corporate',
+  colors: {
+    background: '#091a2a',      // Deep navy
+    text: '#eef2f7',
+    primary: '#0891b2',         // Teal / cyan-600
+    accent: '#22d3ee',          // Bright cyan
+    highlight: '#f59e0b',       // Amber for emphasis
+    secondary: '#164e63'        // Dark cyan-800
+  },
+  typography: {
+    fontFamily: '"Inter", system-ui, -apple-system, sans-serif',
+    mathFont: '"Fira Code", "Courier New", monospace',
+    headingWeight: 700,
+    titleSize: '3.5rem',
+    subtitleSize: '1.4rem',
+    mathNotationSize: '1.8rem',
+    bodySize: '1.15rem'
+  },
+  spacing: {
+    padding: '60px',
+    margin: '24px',
+    gap: '18px'
+  },
+  effects: {
+    borderRadius: '10px',
+    shadow: '0 16px 48px rgba(0,0,0,0.4)',
+    transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)'
+  }
+};
+
+/**
  * All available themes
  */
 export const themes = {
   'education-dark': educationDarkTheme,
   'education-light': educationLightTheme,
   'marketing': marketingTheme,
-  'documentation': documentationTheme
+  'documentation': documentationTheme,
+  'envirowize-corporate': envirowizeCorporateTheme,
+  'ecowize-corporate': ecowizeCorporateTheme
 };
 
 export type ThemeName = keyof typeof themes;

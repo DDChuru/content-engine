@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Excalidraw Demo - Smart Clearing</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 1400px;
+      width: 100%;
+    }
+
+    .excalidraw-wrapper {
+      background: #ffffff;
+      border-radius: 20px;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+      padding: 20px;
+      min-height: 800px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #excalidraw-container {
+      width: 100%;
+      height: 750px;
+      position: relative;
+    }
+
+    .controls {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 100;
+      display: flex;
+      gap: 15px;
+    }
+
+    button {
+      padding: 15px 30px;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+    }
+
+    .btn-primary {
+      background: #667eea;
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: #5a67d8;
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      background: #48bb78;
+      color: white;
+    }
+
+    .btn-secondary:hover {
+      background: #38a169;
+      transform: translateY(-2px);
+    }
+
+    .btn-export {
+      background: #ed8936;
+      color: white;
+    }
+
+    .progress-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #667eea, #764ba2);
+      width: 0%;
+      transition: width 0.3s ease;
+      z-index: 101;
+    }
+
+    .audio-indicator {
+      position: fixed;
+      top: 30px;
+      right: 30px;
+      background: #48bb78;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 25px;
+      display: none;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 10px 25px -5px rgba(72, 187, 120, 0.4);
+      z-index: 100;
+    }
+
+    .audio-indicator.playing {
+      display: flex;
+    }
+
+    .audio-wave {
+      width: 20px;
+      height: 20px;
+      display: flex;
+      align-items: center;
+      gap: 3px;
+    }
+
+    .audio-wave span {
+      width: 3px;
+      background: white;
+      border-radius: 2px;
+      animation: wave 1s ease-in-out infinite;
+    }
+
+    .audio-wave span:nth-child(2) {
+      animation-delay: 0.1s;
+    }
+
+    .audio-wave span:nth-child(3) {
+      animation-delay: 0.2s;
+    }
+
+    @keyframes wave {
+      0%, 100% { height: 8px; }
+      50% { height: 16px; }
+    }
+
+    .step-info {
+      position: fixed;
+      top: 30px;
+      left: 30px;
+      background: white;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+      max-width: 350px;
+      z-index: 100;
+    }
+
+    .step-info h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+      color: #1a202c;
+    }
+
+    .step-info p {
+      font-size: 14px;
+      color: #4a5568;
+      line-height: 1.6;
+    }
+
+    .step-counter {
+      display: inline-block;
+      background: #667eea;
+      color: white;
+      padding: 4px 12px;
+      border-radius: 12px;
+      font-size: 12px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .clear-badge {
+      display: inline-block;
+      background: #48bb78;
+      color: white;
+      padding: 2px 8px;
+      border-radius: 10px;
+      font-size: 11px;
+      margin-left: 8px;
+    }
+
+    canvas {
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="progress-bar" id="progressBar"></div>
+
+  <div class="audio-indicator" id="audioIndicator">
+    <div class="audio-wave">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <span>Narrating...</span>
+  </div>
+
+  <div class="step-info" id="stepInfo">
+    <div class="step-counter">Step 0/8</div>
+    <h3 id="stepTitle">Introduction to Sets</h3>
+    <p id="stepDescription">Click "Play Demo" to see smart clearing in action</p>
+  </div>
+
+  <div class="container">
+    <div class="excalidraw-wrapper">
+      <div id="excalidraw-container">
+        <canvas id="canvas" width="1360" height="750"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <div class="controls">
+    <button class="btn-secondary" id="resetBtn">Reset</button>
+    <button class="btn-export" id="exportBtn">Export PNG</button>
+    <button class="btn-primary" id="playBtn">Play Demo</button>
+  </div>
+
+  <script>
+    // Excalidraw-style renderer with smart clearing
+    class ExcalidrawRenderer {
+      constructor(canvas) {
+        this.canvas = canvas;
+        this.ctx = canvas.getContext('2d');
+        this.elements = [];
+        this.visibleElements = new Set();
+      }
+
+      drawRoughLine(x1, y1, x2, y2, color = '#000000', width = 2) {
+        this.ctx.strokeStyle = color;
+        this.ctx.lineWidth = width;
+        this.ctx.lineCap = 'round';
+        this.ctx.lineJoin = 'round';
+
+        const segments = 20;
+        this.ctx.beginPath();
+        this.ctx.moveTo(x1, y1);
+
+        for (let i = 1; i <= segments; i++) {
+          const t = i / segments;
+          const x = x1 + (x2 - x1) * t + (Math.random() - 0.5) * 2;
+          const y = y1 + (y2 - y1) * t + (Math.random() - 0.5) * 2;
+          this.ctx.lineTo(x, y);
+        }
+
+        this.ctx.stroke();
+      }
+
+      drawRoughCircle(x, y, radius, color = '#667eea', fillColor = null, opacity = 0.1) {
+        this.ctx.strokeStyle = color;
+        this.ctx.lineWidth = 3;
+
+        const segments = 64;
+        const roughness = 3;
+
+        this.ctx.beginPath();
+        for (let i = 0; i <= segments; i++) {
+          const angle = (Math.PI * 2 * i) / segments;
+          const r = radius + (Math.random() - 0.5) * roughness;
+          const px = x + Math.cos(angle) * r;
+          const py = y + Math.sin(angle) * r;
+
+          if (i === 0) {
+            this.ctx.moveTo(px, py);
+          } else {
+            this.ctx.lineTo(px, py);
+          }
+        }
+        this.ctx.closePath();
+
+        if (fillColor) {
+          this.ctx.fillStyle = fillColor;
+          this.ctx.globalAlpha = opacity;
+          this.ctx.fill();
+          this.ctx.globalAlpha = 1;
+        }
+
+        this.ctx.stroke();
+      }
+
+      drawRoughRect(x, y, width, height, color = '#000000', fillColor = null) {
+        this.ctx.strokeStyle = color;
+        this.ctx.lineWidth = 2;
+
+        this.drawRoughLine(x, y, x + width, y, color);
+        this.drawRoughLine(x + width, y, x + width, y + height, color);
+        this.drawRoughLine(x + width, y + height, x, y + height, color);
+        this.drawRoughLine(x, y + height, x, y, color);
+
+        if (fillColor) {
+          this.ctx.fillStyle = fillColor;
+          this.ctx.globalAlpha = 0.1;
+          this.ctx.fillRect(x, y, width, height);
+          this.ctx.globalAlpha = 1;
+        }
+      }
+
+      drawText(text, x, y, size = 24, color = '#1a202c', align = 'left', bold = false) {
+        this.ctx.fillStyle = color;
+        this.ctx.font = `${bold ? 'bold' : 'normal'} ${size}px "Comic Sans MS", cursive`;
+        this.ctx.textAlign = align;
+        this.ctx.textBaseline = 'middle';
+        this.ctx.fillText(text, x, y);
+      }
+
+      drawArrow(x1, y1, x2, y2, color = '#667eea') {
+        this.drawRoughLine(x1, y1, x2, y2, color, 2);
+
+        const angle = Math.atan2(y2 - y1, x2 - x1);
+        const headLength = 15;
+
+        this.ctx.fillStyle = color;
+        this.ctx.beginPath();
+        this.ctx.moveTo(x2, y2);
+        this.ctx.lineTo(
+          x2 - headLength * Math.cos(angle - Math.PI / 6),
+          y2 - headLength * Math.sin(angle - Math.PI / 6)
+        );
+        this.ctx.lineTo(
+          x2 - headLength * Math.cos(angle + Math.PI / 6),
+          y2 - headLength * Math.sin(angle + Math.PI / 6)
+        );
+        this.ctx.closePath();
+        this.ctx.fill();
+      }
+
+      clear() {
+        this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+      }
+
+      addElement(id, drawFunc) {
+        this.elements.push({ id, drawFunc });
+      }
+
+      showElement(id) {
+        this.visibleElements.add(id);
+        this.render();
+      }
+
+      // Smart clear - only clear canvas, keep element definitions
+      smartClear() {
+        this.visibleElements.clear();
+        this.clear();
+      }
+
+      render() {
+        this.clear();
+        this.elements.forEach(el => {
+          if (this.visibleElements.has(el.id)) {
+            el.drawFunc(this);
+          }
+        });
+      }
+
+      reset() {
+        this.visibleElements.clear();
+        this.clear();
+      }
+
+      exportPNG() {
+        const link = document.createElement('a');
+        link.download = 'sets-diagram-smart-clear.png';
+        link.href = this.canvas.toDataURL('image/png');
+        link.click();
+      }
+    }
+
+    const canvas = document.getElementById('canvas');
+    const renderer = new ExcalidrawRenderer(canvas);
+
+    // Scene setup with better spacing
+    function setupScene() {
+      // Title
+      renderer.addElement('title', (r) => {
+        r.drawText('Introduction to Sets', 680, 80, 48, '#1a202c', 'center', true);
+        r.drawText('Cambridge IGCSE Mathematics', 680, 130, 20, '#718096', 'center');
+      });
+
+      // Step 1: Definition (centered, clean)
+      renderer.addElement('step1-definition', (r) => {
+        r.drawRoughRect(330, 250, 700, 180, '#667eea', 'rgba(102, 126, 234, 0.1)');
+        r.drawText('What is a Set?', 360, 290, 32, '#667eea', 'left', true);
+        r.drawText('A Set is a collection of distinct objects or', 380, 340, 24, '#1a202c');
+        r.drawText('elements. We write sets using curly braces: { }', 380, 380, 24, '#1a202c');
+      });
+
+      // Step 2: Set notation (centered, clean)
+      renderer.addElement('step2-notation', (r) => {
+        r.drawRoughRect(380, 220, 600, 340, '#667eea');
+        r.drawText('Set Notation', 680, 270, 36, '#667eea', 'center', true);
+
+        r.drawText('Set A = {1, 2, 3}', 680, 340, 32, '#ff6b6b', 'center', true);
+        r.drawText('Set B = {2, 3, 4}', 680, 400, 32, '#48bb78', 'center', true);
+
+        r.drawText('Notice: Elements 2 and 3 appear', 680, 480, 20, '#ed8936', 'center');
+        r.drawText('in BOTH sets', 680, 510, 20, '#ed8936', 'center');
+      });
+
+      // Step 3: Venn diagram intro (clean canvas)
+      renderer.addElement('step3-venn-intro', (r) => {
+        r.drawText('Venn Diagrams', 680, 100, 40, '#1a202c', 'center', true);
+        r.drawText('Visual way to show sets and their relationships', 680, 150, 22, '#718096', 'center');
+      });
+
+      // Step 4: Set A only (clean, well-spaced)
+      renderer.addElement('step4-vennA', (r) => {
+        r.drawText('Set A', 680, 240, 32, '#ff6b6b', 'center', true);
+        r.drawText('A = {1, 2, 3}', 680, 280, 24, '#ff6b6b', 'center');
+
+        r.drawRoughCircle(680, 450, 150, '#ff6b6b', 'rgba(255, 107, 107, 0.2)', 0.15);
+        r.drawText('A', 680, 320, 28, '#ff6b6b', 'center', true);
+
+        // All elements clearly visible
+        r.drawText('1', 680, 400, 36, '#1a202c', 'center', true);
+        r.drawText('2', 650, 470, 36, '#1a202c', 'center', true);
+        r.drawText('3', 710, 470, 36, '#1a202c', 'center', true);
+      });
+
+      // Step 5: Both sets (clear canvas before drawing)
+      renderer.addElement('step5-vennB', (r) => {
+        // Prominent title
+        r.drawRoughRect(350, 120, 660, 90, '#667eea', 'rgba(102, 126, 234, 0.1)');
+        r.drawText('Visualizing Two Sets', 680, 165, 40, '#667eea', 'center', true);
+
+        r.drawText('Set A and Set B', 680, 230, 28, '#1a202c', 'center');
+
+        // Left circle (A)
+        r.drawRoughCircle(550, 450, 150, '#ff6b6b', 'rgba(255, 107, 107, 0.2)', 0.15);
+        r.drawText('A', 500, 290, 28, '#ff6b6b', 'center', true);
+
+        // Right circle (B)
+        r.drawRoughCircle(750, 450, 150, '#48bb78', 'rgba(72, 187, 120, 0.2)', 0.15);
+        r.drawText('B', 800, 290, 28, '#48bb78', 'center', true);
+
+        // Elements positioned correctly
+        r.drawText('1', 470, 450, 36, '#1a202c', 'center', true); // A only
+        r.drawText('2', 650, 420, 36, '#1a202c', 'center', true); // Overlap
+        r.drawText('3', 650, 485, 36, '#1a202c', 'center', true); // Overlap
+        r.drawText('4', 830, 450, 36, '#1a202c', 'center', true); // B only
+      });
+
+      // Step 6: Intersection (highlight on existing diagram)
+      renderer.addElement('step6-intersection', (r) => {
+        r.drawText('Intersection (A ∩ B)', 680, 200, 32, '#ed8936', 'center', true);
+
+        // Redraw Venn diagram
+        r.drawRoughCircle(550, 450, 150, '#ff6b6b', 'rgba(255, 107, 107, 0.2)', 0.15);
+        r.drawText('A', 500, 290, 28, '#ff6b6b', 'center', true);
+        r.drawRoughCircle(750, 450, 150, '#48bb78', 'rgba(72, 187, 120, 0.2)', 0.15);
+        r.drawText('B', 800, 290, 28, '#48bb78', 'center', true);
+
+        r.drawText('1', 470, 450, 36, '#1a202c', 'center', true);
+        r.drawText('2', 650, 420, 36, '#ed8936', 'center', true); // Highlighted
+        r.drawText('3', 650, 485, 36, '#ed8936', 'center', true); // Highlighted
+        r.drawText('4', 830, 450, 36, '#1a202c', 'center', true);
+
+        // Annotation below
+        r.drawArrow(650, 600, 650, 560, '#ed8936');
+        r.drawText('A ∩ B = {2, 3}', 650, 640, 28, '#ed8936', 'center', true);
+        r.drawText('(Elements in BOTH sets)', 650, 680, 18, '#718096', 'center');
+      });
+
+      // Step 7: Union (new annotation)
+      renderer.addElement('step7-union', (r) => {
+        r.drawText('Union (A ∪ B)', 680, 200, 32, '#667eea', 'center', true);
+
+        // Redraw Venn diagram
+        r.drawRoughCircle(550, 450, 150, '#ff6b6b', 'rgba(255, 107, 107, 0.2)', 0.15);
+        r.drawText('A', 500, 290, 28, '#ff6b6b', 'center', true);
+        r.drawRoughCircle(750, 450, 150, '#48bb78', 'rgba(72, 187, 120, 0.2)', 0.15);
+        r.drawText('B', 800, 290, 28, '#48bb78', 'center', true);
+
+        r.drawText('1', 470, 450, 36, '#1a202c', 'center', true);
+        r.drawText('2', 650, 420, 36, '#1a202c', 'center', true);
+        r.drawText('3', 650, 485, 36, '#1a202c', 'center', true);
+        r.drawText('4', 830, 450, 36, '#1a202c', 'center', true);
+
+        // Union annotation
+        r.drawRoughRect(520, 620, 320, 70, '#ff6b6b');
+        r.drawText('A ∪ B = {1, 2, 3, 4}', 680, 655, 28, '#1a202c', 'center', true);
+        r.drawText('(ALL elements, no duplicates)', 680, 690, 18, '#718096', 'center');
+      });
+
+      // Step 8: Summary (completely clean canvas)
+      renderer.addElement('step8-summary', (r) => {
+        r.drawText('Set Theory Summary', 680, 100, 40, '#9f7aea', 'center', true);
+
+        r.drawRoughRect(280, 180, 800, 450, '#9f7aea', 'rgba(159, 122, 234, 0.05)');
+
+        r.drawText('✓ Sets use curly braces: A = {1, 2, 3}', 320, 250, 26, '#1a202c', 'left');
+
+        r.drawText('✓ Intersection (A ∩ B): Common elements', 320, 320, 26, '#1a202c', 'left');
+        r.drawText('   Example: {2, 3}', 360, 360, 22, '#718096', 'left');
+
+        r.drawText('✓ Union (A ∪ B): All unique elements', 320, 430, 26, '#1a202c', 'left');
+        r.drawText('   Example: {1, 2, 3, 4}', 360, 470, 22, '#718096', 'left');
+
+        r.drawText('✓ Universal Set (ξ): All possible elements', 320, 540, 26, '#1a202c', 'left');
+        r.drawText('✓ Complement (A\'): Elements NOT in A', 320, 595, 26, '#1a202c', 'left');
+      });
+    }
+
+    // Lesson steps with SMART CLEARING
+    const lessonSteps = [
+      {
+        id: 'title',
+        elements: ['title'],
+        clearBefore: false,
+        title: 'Introduction to Sets',
+        description: 'Welcome to Set Theory',
+        narration: "Welcome to our lesson on Introduction to Sets, a fundamental topic in Cambridge IGCSE Mathematics."
+      },
+      {
+        id: 'step1',
+        elements: ['title', 'step1-definition'],
+        clearBefore: false,
+        title: 'What is a Set?',
+        description: 'Definition and basic concept',
+        narration: "First, let's understand what a Set is. A Set is a collection of distinct objects or elements. We write sets using curly braces."
+      },
+      {
+        id: 'step2',
+        elements: ['step2-notation'],
+        clearBefore: true, // CLEAR before showing notation
+        title: 'Set Notation',
+        description: 'Defining our example sets',
+        narration: "Let's look at two sets. Set A contains 1, 2, and 3. Set B contains 2, 3, and 4. Notice that elements 2 and 3 appear in both sets."
+      },
+      {
+        id: 'step3',
+        elements: ['step3-venn-intro'],
+        clearBefore: true, // CLEAR before intro to Venn
+        title: 'Venn Diagrams',
+        description: 'Visual representation of sets',
+        narration: "Now we'll use Venn Diagrams, which are a visual way to show sets and their relationships."
+      },
+      {
+        id: 'step4',
+        elements: ['step3-venn-intro', 'step4-vennA'],
+        clearBefore: false, // Keep the intro text
+        title: 'Visualizing Set A',
+        description: 'Set A with all 3 elements',
+        narration: "Here's Set A visualized as a circle. It contains all three elements: 1, 2, and 3, clearly visible inside the circle."
+      },
+      {
+        id: 'step5',
+        elements: ['step5-vennB'],
+        clearBefore: true, // CLEAR before drawing both sets
+        title: 'Two Sets Overlap',
+        description: 'Sets A and B together',
+        narration: "Now let's see both sets together. The circles overlap because some elements appear in both. Notice how 1 is only in A, 4 is only in B, and 2 and 3 are in the overlapping region."
+      },
+      {
+        id: 'step6',
+        elements: ['step6-intersection'],
+        clearBefore: true, // CLEAR before highlighting intersection
+        title: 'Intersection',
+        description: 'Common elements highlighted',
+        narration: "The Intersection, written as A intersect B, shows the elements that appear in BOTH sets. The intersection is 2 and 3, shown in the overlapping region."
+      },
+      {
+        id: 'step7',
+        elements: ['step7-union'],
+        clearBefore: true, // CLEAR before showing union
+        title: 'Union',
+        description: 'All unique elements combined',
+        narration: "The Union, written as A union B, combines all elements from both sets without duplication. This gives us 1, 2, 3, and 4."
+      },
+      {
+        id: 'step8',
+        elements: ['step8-summary'],
+        clearBefore: true, // CLEAR for clean summary
+        title: 'Summary',
+        description: 'Key concepts review',
+        narration: "Let's review what we learned. We covered sets, set notation, Venn diagrams, intersection for common elements, and union for all elements combined. This completes our introduction to Set Theory!"
+      }
+    ];
+
+    let currentStep = -1;
+    let isPlaying = false;
+    let currentAudio = null;
+
+    // Voice functions
+    async function fetchAudio(text, voiceId) {
+      try {
+        const response = await fetch('http://localhost:3001/api/voice/generate', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ text, voiceId })
+        });
+
+        if (!response.ok) return null;
+
+        const audioBlob = await response.blob();
+        return new Audio(URL.createObjectURL(audioBlob));
+      } catch (error) {
+        console.warn('Audio fetch failed:', error);
+        return null;
+      }
+    }
+
+    function speak(text, onEnd) {
+      const utterance = new SpeechSynthesisUtterance(text);
+      utterance.rate = 0.9;
+      utterance.pitch = 1;
+
+      document.getElementById('audioIndicator').classList.add('playing');
+
+      utterance.onend = () => {
+        document.getElementById('audioIndicator').classList.remove('playing');
+        if (onEnd) onEnd();
+      };
+
+      speechSynthesis.speak(utterance);
+    }
+
+    async function playNarration(text, onEnd) {
+      const voiceId = 'gYWKdgLtqjPO3D5uDrDP';
+      const audio = await fetchAudio(text, voiceId);
+
+      if (audio) {
+        document.getElementById('audioIndicator').classList.add('playing');
+
+        audio.onended = () => {
+          document.getElementById('audioIndicator').classList.remove('playing');
+          if (onEnd) onEnd();
+        };
+
+        audio.play();
+        currentAudio = audio;
+      } else {
+        speak(text, onEnd);
+      }
+    }
+
+    function updateStepInfo(step, index) {
+      const badge = step.clearBefore ? '<span class="clear-badge">Clean Canvas</span>' : '';
+      document.querySelector('.step-counter').innerHTML = `Step ${index + 1}/${lessonSteps.length} ${badge}`;
+      document.getElementById('stepTitle').textContent = step.title;
+      document.getElementById('stepDescription').textContent = step.description;
+    }
+
+    function updateProgress(percent) {
+      document.getElementById('progressBar').style.width = percent + '%';
+    }
+
+    function playNextStep() {
+      currentStep++;
+
+      if (currentStep >= lessonSteps.length) {
+        isPlaying = false;
+        document.getElementById('playBtn').textContent = 'Play Demo';
+        updateProgress(100);
+        return;
+      }
+
+      const step = lessonSteps[currentStep];
+      updateStepInfo(step, currentStep);
+      updateProgress((currentStep / lessonSteps.length) * 100);
+
+      // SMART CLEAR: Clear canvas if step requests it
+      if (step.clearBefore) {
+        console.log(`🧹 Smart clearing before: ${step.id}`);
+        renderer.smartClear();
+      }
+
+      // Show elements for this step
+      step.elements.forEach(elementId => {
+        renderer.showElement(elementId);
+      });
+
+      // Play narration and move to next step
+      playNarration(step.narration, () => {
+        setTimeout(() => {
+          if (isPlaying) {
+            playNextStep();
+          }
+        }, 1000);
+      });
+    }
+
+    function play() {
+      if (isPlaying) return;
+
+      isPlaying = true;
+      currentStep = -1;
+      document.getElementById('playBtn').textContent = 'Playing...';
+
+      playNextStep();
+    }
+
+    function reset() {
+      if (currentAudio) {
+        currentAudio.pause();
+        currentAudio = null;
+      }
+      speechSynthesis.cancel();
+
+      isPlaying = false;
+      currentStep = -1;
+
+      renderer.reset();
+      updateProgress(0);
+      document.getElementById('audioIndicator').classList.remove('playing');
+      document.getElementById('playBtn').textContent = 'Play Demo';
+
+      document.querySelector('.step-counter').textContent = 'Step 0/' + lessonSteps.length;
+      document.getElementById('stepTitle').textContent = 'Introduction to Sets';
+      document.getElementById('stepDescription').textContent = 'Click "Play Demo" to see smart clearing';
+    }
+
+    function exportImage() {
+      renderer.exportPNG();
+    }
+
+    // Event listeners
+    document.getElementById('playBtn').addEventListener('click', play);
+    document.getElementById('resetBtn').addEventListener('click', reset);
+    document.getElementById('exportBtn').addEventListener('click', exportImage);
+
+    // Listen for messages from parent Studio
+    window.addEventListener('message', (event) => {
+      if (event.data && event.data.action === 'play') {
+        console.log('▶️ Received play command from Studio');
+        play();
+      }
+    });
+
+    // Initialize
+    setupScene();
+    reset();
+
+    console.log('✅ Smart clearing demo ready!');
+    console.log('📋 Steps with clearing:', lessonSteps.filter(s => s.clearBefore).map(s => s.id));
+  </script>
+</body>
+</html>

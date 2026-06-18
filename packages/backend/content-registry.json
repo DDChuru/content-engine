@@ -1,0 +1,513 @@
+{
+  "$schema": "Content Registry — indexes all generated educational content for discovery and reuse.",
+  "version": "1.0.0",
+  "updatedAt": "2026-02-22",
+  "subjects": {
+    "biology": {
+      "label": "Cambridge A-Level Biology 9700",
+      "topics": {
+        "biomolecules": {
+          "label": "Topic 2: Biological Molecules",
+          "slug": "biomolecules",
+          "syllabus": "Cambridge 9700",
+          "status": "complete",
+          "createdAt": "2026-02-14",
+          "formats": {
+            "landscape": {
+              "compositionId": "BiologyBiomolecules",
+              "resolution": "1920x1080",
+              "durationS": null,
+              "composition": "src/remotion/compositions/BiologyBiomolecules.tsx"
+            }
+          },
+          "narration": {
+            "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+            "slides": 9,
+            "audio": [
+              "src/remotion/public/audio/biology/slide-01.mp3",
+              "src/remotion/public/audio/biology/slide-02.mp3",
+              "src/remotion/public/audio/biology/slide-03.mp3",
+              "src/remotion/public/audio/biology/slide-04.mp3",
+              "src/remotion/public/audio/biology/slide-05.mp3",
+              "src/remotion/public/audio/biology/slide-06.mp3",
+              "src/remotion/public/audio/biology/slide-07.mp3",
+              "src/remotion/public/audio/biology/slide-08.mp3",
+              "src/remotion/public/audio/biology/slide-09.mp3"
+            ]
+          },
+          "images": {
+            "directory": "src/remotion/public/images/biology/",
+            "count": 9,
+            "files": [
+              "slide-01-intro.jpg",
+              "slide-02-tests.jpg",
+              "slide-03-carbohydrates.jpg",
+              "slide-04-lipids.jpg",
+              "slide-05-amino-acids.jpg",
+              "slide-06-protein-structure.jpg",
+              "slide-07-globular-fibrous.jpg",
+              "slide-08-water.jpg",
+              "slide-09-summary.jpg"
+            ]
+          },
+          "scripts": {
+            "generateAssets": "src/scripts/generate-biology-assets.ts",
+            "transcribe": "src/scripts/transcribe-biology.ts",
+            "render": "src/scripts/render-biology.ts"
+          },
+          "cost": {
+            "images": 0.35,
+            "narration": 0.90,
+            "transcription": 0.01,
+            "total": 1.26
+          }
+        },
+        "food-tests": {
+          "label": "Topic 2.1: Biochemical Food Tests",
+          "slug": "food-tests",
+          "syllabus": "Cambridge 9700",
+          "status": "complete",
+          "createdAt": "2026-02-15",
+          "formats": {
+            "tiktok": {
+              "compositionId": "BiologyFoodTests-TikTok",
+              "resolution": "1080x1920",
+              "durationS": 66,
+              "composition": "src/remotion/compositions/BiologyFoodTestsTikTok.tsx",
+              "render": "out/biology-food-tests-tiktok-v3.mp4",
+              "renderSize": "12MB"
+            },
+            "cover": {
+              "compositionId": "BiologyFoodTests-Cover",
+              "resolution": "1080x1920",
+              "render": "out/biology-food-tests-cover.png",
+              "renderSize": "3.6MB"
+            }
+          },
+          "narration": {
+            "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+            "durationS": 63.7,
+            "wordCount": 137,
+            "audio": "src/remotion/public/audio/biology/food-tests-narration.mp3",
+            "audioOriginal": "src/remotion/public/audio/biology/food-tests-narration-original.mp3",
+            "normalized": true
+          },
+          "transcript": {
+            "file": "src/remotion/public/transcripts/biology/food-tests.json",
+            "cueCount": 24,
+            "engine": "whisper-1"
+          },
+          "images": {
+            "directory": "src/remotion/public/images/biology/food-tests/",
+            "count": 15,
+            "files": [
+              "hook-lab-bg.jpg",
+              "benedicts-sample.jpg",
+              "benedicts-reagent.jpg",
+              "benedicts-heating.jpg",
+              "benedicts-result.jpg",
+              "iodine-reagent.jpg",
+              "iodine-result.jpg",
+              "iodine-food.jpg",
+              "emulsion-ethanol.jpg",
+              "emulsion-result.jpg",
+              "emulsion-food.jpg",
+              "biuret-reagents.jpg",
+              "biuret-result.jpg",
+              "biuret-food.jpg",
+              "thumbnail.jpg"
+            ]
+          },
+          "scripts": {
+            "generateAssets": "src/scripts/generate-food-tests-assets.ts",
+            "generateFoodImages": "src/scripts/generate-food-images.ts",
+            "transcribe": "src/scripts/transcribe-food-tests.ts"
+          },
+          "cost": {
+            "images": 0.59,
+            "narration": 0.20,
+            "transcription": 0.01,
+            "total": 0.80
+          }
+        },
+        "enzymes": {
+          "label": "Topic 3.1: Enzymes — Lock & Key vs Induced Fit",
+          "slug": "enzymes",
+          "syllabus": "Cambridge 9700",
+          "status": "complete",
+          "createdAt": "2026-02-17",
+          "description": "Lock & Key vs Induced Fit model, activation energy, temperature/pH denaturation.",
+          "formats": {
+            "tiktok": {
+              "compositionId": "BiologyEnzymes-TikTok",
+              "resolution": "1080x1920",
+              "durationS": 102,
+              "composition": "src/remotion/compositions/BiologyEnzymesTikTok.tsx",
+              "render": "out/biology-enzymes-tiktok.mp4",
+              "renderSize": "7.7MB"
+            },
+            "cover": {
+              "compositionId": "BiologyEnzymes-Cover",
+              "resolution": "1080x1920",
+              "render": "out/biology-enzymes-cover.png"
+            }
+          },
+          "narration": {
+            "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+            "durationS": 101.8,
+            "wordCount": 214,
+            "audio": "src/remotion/public/audio/biology/enzymes-narration.mp3",
+            "normalized": true
+          },
+          "transcript": {
+            "file": "src/remotion/public/transcripts/biology/enzymes.json",
+            "cueCount": 35,
+            "engine": "whisper-1"
+          },
+          "images": {
+            "directory": "src/remotion/public/images/biology/enzymes/",
+            "count": 2,
+            "files": ["hook-enzyme.jpg", "cover-enzyme.jpg"],
+            "note": "Hook + cover only; educational content is pure CSS motion graphics"
+          },
+          "scripts": {
+            "generateAssets": "src/scripts/generate-bio-batch3-assets.ts",
+            "generateImages": "src/scripts/generate-bio-batch3-images.ts",
+            "transcribe": "src/scripts/transcribe-bio-batch3.ts"
+          },
+          "cost": {
+            "images": 0.08,
+            "narration": 0.42,
+            "transcription": 0.01,
+            "total": 0.51
+          }
+        },
+        "osmosis": {
+          "label": "Topic 4.2: Osmosis — Lysis, Crenation, Plasmolysis",
+          "slug": "osmosis",
+          "syllabus": "Cambridge 9700",
+          "status": "complete",
+          "createdAt": "2026-02-17",
+          "description": "Osmosis definition, hypotonic/isotonic/hypertonic, lysis, crenation, plasmolysis, potato experiment, water potential.",
+          "formats": {
+            "tiktok": {
+              "compositionId": "BiologyOsmosis-TikTok",
+              "resolution": "1080x1920",
+              "durationS": 97,
+              "composition": "src/remotion/compositions/BiologyOsmosisTikTok.tsx",
+              "render": "out/biology-osmosis-tiktok.mp4",
+              "renderSize": "8.1MB"
+            },
+            "cover": {
+              "compositionId": "BiologyOsmosis-Cover",
+              "resolution": "1080x1920",
+              "render": "out/biology-osmosis-cover.png"
+            }
+          },
+          "narration": {
+            "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+            "durationS": 97.2,
+            "wordCount": 212,
+            "audio": "src/remotion/public/audio/biology/osmosis-narration.mp3",
+            "normalized": true
+          },
+          "transcript": {
+            "file": "src/remotion/public/transcripts/biology/osmosis.json",
+            "cueCount": 26,
+            "engine": "whisper-1"
+          },
+          "images": {
+            "directory": "src/remotion/public/images/biology/osmosis/",
+            "count": 2,
+            "files": ["hook-cell-burst.jpg", "cover-osmosis.jpg"],
+            "note": "Hook + cover only; educational content is pure CSS motion graphics"
+          },
+          "scripts": {
+            "generateAssets": "src/scripts/generate-bio-batch3-assets.ts",
+            "generateImages": "src/scripts/generate-bio-batch3-images.ts",
+            "transcribe": "src/scripts/transcribe-bio-batch3.ts"
+          },
+          "cost": {
+            "images": 0.08,
+            "narration": 0.41,
+            "transcription": 0.01,
+            "total": 0.50
+          }
+        },
+        "active-transport": {
+          "label": "Topic 4.3: Active Transport — Na⁺/K⁺ Pump",
+          "slug": "active-transport",
+          "syllabus": "Cambridge 9700",
+          "status": "complete",
+          "createdAt": "2026-02-17",
+          "description": "Active transport, sodium-potassium pump 6-step cycle, 3Na+/2K+ ratio, gut and root hair examples.",
+          "formats": {
+            "tiktok": {
+              "compositionId": "BiologyActiveTransport-TikTok",
+              "resolution": "1080x1920",
+              "durationS": 94,
+              "composition": "src/remotion/compositions/BiologyActiveTransportTikTok.tsx",
+              "render": "out/biology-active-transport-tiktok.mp4",
+              "renderSize": "7.3MB"
+            },
+            "cover": {
+              "compositionId": "BiologyActiveTransport-Cover",
+              "resolution": "1080x1920",
+              "render": "out/biology-active-transport-cover.png"
+            }
+          },
+          "narration": {
+            "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+            "durationS": 94.3,
+            "wordCount": 212,
+            "audio": "src/remotion/public/audio/biology/active-transport-narration.mp3",
+            "normalized": true
+          },
+          "transcript": {
+            "file": "src/remotion/public/transcripts/biology/active-transport.json",
+            "cueCount": 26,
+            "engine": "whisper-1"
+          },
+          "images": {
+            "directory": "src/remotion/public/images/biology/active-transport/",
+            "count": 2,
+            "files": ["hook-pump.jpg", "cover-transport.jpg"],
+            "note": "Hook + cover only; educational content is pure CSS motion graphics"
+          },
+          "scripts": {
+            "generateAssets": "src/scripts/generate-bio-batch3-assets.ts",
+            "generateImages": "src/scripts/generate-bio-batch3-images.ts",
+            "transcribe": "src/scripts/transcribe-bio-batch3.ts"
+          },
+          "cost": {
+            "images": 0.08,
+            "narration": 0.41,
+            "transcription": 0.01,
+            "total": 0.50
+          }
+        },
+        "endocytosis": {
+          "label": "Topic 1: Endocytosis & Exocytosis — How Cells Eat & Spit",
+          "slug": "endocytosis",
+          "syllabus": "Cambridge 9700",
+          "status": "pending-narration",
+          "createdAt": "2026-02-22",
+          "description": "Endocytosis (phagocytosis/pinocytosis), exocytosis, lysosome-endosome fusion, exam sequence.",
+          "formats": {
+            "tiktok": {
+              "compositionId": "BiologyEndocytosis-TikTok",
+              "resolution": "1080x1920",
+              "durationS": 82,
+              "composition": "src/remotion/compositions/BiologyEndocytosisTikTok.tsx"
+            },
+            "cover": {
+              "compositionId": "BiologyEndocytosis-Cover",
+              "resolution": "1080x1920"
+            }
+          },
+          "narration": {
+            "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+            "durationS": null,
+            "wordCount": 180,
+            "audio": "src/remotion/public/audio/biology/endocytosis-narration.mp3"
+          },
+          "images": {
+            "directory": "src/remotion/public/images/biology/endocytosis/",
+            "count": 2,
+            "files": ["hook-membrane.jpg", "cover-endo-exo.jpg"],
+            "note": "Hook + cover only; educational content is pure CSS motion graphics"
+          },
+          "scripts": {
+            "generateAssets": "src/scripts/generate-batch4-lysosome-assets.ts",
+            "generateImages": "src/scripts/generate-batch4-lysosome-images.ts",
+            "transcribe": "src/scripts/transcribe-batch4-lysosomes.ts"
+          },
+          "cost": {
+            "images": 0.08,
+            "narration": 0.35,
+            "transcription": 0.01,
+            "total": 0.44
+          }
+        },
+        "phagocytosis": {
+          "label": "Topic 1: Phagocytosis — How Cells Engulf & Destroy",
+          "slug": "phagocytosis",
+          "syllabus": "Cambridge 9700",
+          "status": "pending-narration",
+          "createdAt": "2026-02-22",
+          "description": "5-step phagocytosis: detection, attachment, engulfment, digestion, antigen presentation.",
+          "formats": {
+            "tiktok": {
+              "compositionId": "BiologyPhagocytosis-TikTok",
+              "resolution": "1080x1920",
+              "durationS": 88,
+              "composition": "src/remotion/compositions/BiologyPhagocytosisTikTok.tsx"
+            },
+            "cover": {
+              "compositionId": "BiologyPhagocytosis-Cover",
+              "resolution": "1080x1920"
+            }
+          },
+          "narration": {
+            "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+            "durationS": null,
+            "wordCount": 200,
+            "audio": "src/remotion/public/audio/biology/phagocytosis-narration.mp3"
+          },
+          "images": {
+            "directory": "src/remotion/public/images/biology/phagocytosis/",
+            "count": 2,
+            "files": ["hook-wbc.jpg", "cover-phagocytosis.jpg"],
+            "note": "Hook + cover only; educational content is pure CSS motion graphics"
+          },
+          "scripts": {
+            "generateAssets": "src/scripts/generate-batch4-lysosome-assets.ts",
+            "generateImages": "src/scripts/generate-batch4-lysosome-images.ts",
+            "transcribe": "src/scripts/transcribe-batch4-lysosomes.ts"
+          },
+          "cost": {
+            "images": 0.08,
+            "narration": 0.39,
+            "transcription": 0.01,
+            "total": 0.48
+          }
+        },
+        "autophagy": {
+          "label": "Topic 1: Autophagy & Autolysis — Self-Digestion",
+          "slug": "autophagy",
+          "syllabus": "Cambridge 9700",
+          "status": "pending-narration",
+          "createdAt": "2026-02-22",
+          "description": "Autophagy (selective recycling) vs autolysis (total self-destruction). Tadpole tail example.",
+          "formats": {
+            "tiktok": {
+              "compositionId": "BiologyAutophagy-TikTok",
+              "resolution": "1080x1920",
+              "durationS": 88,
+              "composition": "src/remotion/compositions/BiologyAutophagyTikTok.tsx"
+            },
+            "cover": {
+              "compositionId": "BiologyAutophagy-Cover",
+              "resolution": "1080x1920"
+            }
+          },
+          "narration": {
+            "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+            "durationS": null,
+            "wordCount": 180,
+            "audio": "src/remotion/public/audio/biology/autophagy-narration.mp3"
+          },
+          "images": {
+            "directory": "src/remotion/public/images/biology/autophagy/",
+            "count": 2,
+            "files": ["hook-self-eat.jpg", "cover-autophagy.jpg"],
+            "note": "Hook + cover only; educational content is pure CSS motion graphics"
+          },
+          "scripts": {
+            "generateAssets": "src/scripts/generate-batch4-lysosome-assets.ts",
+            "generateImages": "src/scripts/generate-batch4-lysosome-images.ts",
+            "transcribe": "src/scripts/transcribe-batch4-lysosomes.ts"
+          },
+          "cost": {
+            "images": 0.08,
+            "narration": 0.35,
+            "transcription": 0.01,
+            "total": 0.44
+          }
+        },
+        "cell-fractionation": {
+          "label": "Topic 1.2: Cell Structure — Cell Fractionation",
+          "slug": "cell-fractionation",
+          "syllabus": "Cambridge 9700",
+          "status": "complete",
+          "createdAt": "2026-02-15",
+          "description": "Lysosomes, Ribosomes, Cell Fractionation & Sedimentation. Requested by Star (daughter) via WhatsApp.",
+          "formats": {
+            "tiktok": {
+              "compositionId": "BiologyCellFractionation-TikTok",
+              "resolution": "1080x1920",
+              "durationS": 78,
+              "composition": "src/remotion/compositions/BiologyCellFractionationTikTok.tsx",
+              "render": "out/biology-cell-fractionation-tiktok-v3.mp4",
+              "renderSize": "11MB"
+            },
+            "cover": {
+              "compositionId": "BiologyCellFractionation-Cover",
+              "resolution": "1080x1920",
+              "render": "out/biology-cell-fractionation-cover.png",
+              "renderSize": "1.6MB"
+            }
+          },
+          "narration": {
+            "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+            "durationS": 77.6,
+            "wordCount": 158,
+            "audio": "src/remotion/public/audio/biology/cell-fractionation-narration.mp3",
+            "audioOriginal": "src/remotion/public/audio/biology/cell-fractionation-narration-original.mp3",
+            "normalized": true
+          },
+          "transcript": {
+            "file": "src/remotion/public/transcripts/biology/cell-fractionation.json",
+            "cueCount": 32,
+            "engine": "whisper-1"
+          },
+          "images": {
+            "directory": "src/remotion/public/images/biology/cell-fractionation/",
+            "count": 10,
+            "files": [
+              "hook-microscope.jpg",
+              "lysosome-infographic.jpg",
+              "ribosome-infographic.jpg",
+              "cell-organelles.jpg",
+              "homogenisation.jpg",
+              "filtration.jpg",
+              "centrifuge-tubes.jpg",
+              "centrifuge-machine.jpg",
+              "thumbnail.jpg",
+              "whatsapp-hook.png"
+            ]
+          },
+          "scripts": {
+            "generateAssets": "src/scripts/generate-cell-fractionation-assets.ts",
+            "generateNarration": "src/scripts/generate-cell-narration.ts",
+            "transcribe": "src/scripts/transcribe-cell-fractionation.ts"
+          },
+          "cost": {
+            "images": 0.35,
+            "narration": 0.33,
+            "transcription": 0.01,
+            "total": 0.69
+          }
+        }
+      }
+    }
+  },
+  "summary": {
+    "totalTopics": 9,
+    "totalImages": 46,
+    "totalAudioFiles": 19,
+    "totalRenders": 10,
+    "totalCost": 5.78,
+    "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+    "voiceNote": "ElevenLabs cloned voice — consistent across all biology content"
+  },
+  "conventions": {
+    "imageDir": "src/remotion/public/images/biology/{topic-slug}/",
+    "audioDir": "src/remotion/public/audio/biology/",
+    "transcriptDir": "src/remotion/public/transcripts/biology/",
+    "compositionDir": "src/remotion/compositions/",
+    "scriptDir": "src/scripts/",
+    "renderDir": "out/",
+    "namingPattern": {
+      "images": "{topic-slug}/{descriptive-name}.jpg",
+      "audio": "{topic-slug}-narration.mp3",
+      "transcript": "{topic-slug}.json",
+      "composition": "Biology{PascalCase}.tsx",
+      "render": "biology-{topic-slug}-{format}-v{n}.mp4"
+    },
+    "fps": 30,
+    "tiktokResolution": "1080x1920",
+    "landscapeResolution": "1920x1080",
+    "audioNormalization": "-14 LUFS via ffmpeg loudnorm"
+  }
+}

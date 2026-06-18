@@ -1,0 +1,82 @@
+{
+  "fps": 30,
+  "total_frames": 881,
+  "total_seconds": 29.367,
+  "audio": "iinm/ch4-narration.mp3",
+  "video": "iinm/ch4.mp4",
+  "title": "Verify, close & prove it",
+  "cues": [
+    [
+      0.5,
+      4.633,
+      "Now it reaches SHEQ \u2014 the final check before the record is closed."
+    ],
+    [
+      5.183,
+      11.499,
+      "SHEQ runs the verification gate: work-related, risk assessment reviewed, procedure updated, root cause done."
+    ],
+    [
+      12.049,
+      14.835,
+      "Only when every box is true can the record be closed."
+    ],
+    [
+      15.385,
+      23.698,
+      "And for a Section 24, one click generates the Annexure 1 \u2014 the official Department of Labour form, filled from the record."
+    ],
+    [
+      24.248,
+      28.567,
+      "Complete, signed, and ready to hand over. On paper, on time."
+    ]
+  ],
+  "beats": [
+    {
+      "chip": "SHEQ reviews",
+      "voStart": 0.5,
+      "voEnd": 4.633,
+      "videoSec": 0,
+      "guide": false,
+      "s24": false,
+      "end": false
+    },
+    {
+      "chip": "The gate",
+      "voStart": 5.183,
+      "voEnd": 11.499,
+      "videoSec": 0,
+      "guide": true,
+      "s24": false,
+      "end": false
+    },
+    {
+      "chip": "Close it",
+      "voStart": 12.049,
+      "voEnd": 14.835,
+      "videoSec": 0,
+      "guide": false,
+      "s24": false,
+      "end": false
+    },
+    {
+      "chip": "Annexure 1",
+      "voStart": 15.385,
+      "voEnd": 23.698,
+      "videoSec": 0,
+      "guide": false,
+      "s24": true,
+      "end": false
+    },
+    {
+      "chip": "Ready to send",
+      "voStart": 24.248,
+      "voEnd": 28.567,
+      "videoSec": 0,
+      "guide": false,
+      "s24": false,
+      "end": true
+    }
+  ]
+}

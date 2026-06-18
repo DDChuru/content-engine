@@ -15,6 +15,7 @@ dotenv.config({ path: path.resolve(__dirname, '../../../.env') });
 import express, { Request, Response } from 'express';
 import http from 'http';
 import cors from 'cors';
+import { WebSocketServer, WebSocket } from 'ws';
 import { initializeFirebase } from './services/firebase.js';
 import { ClaudeService } from './services/claude.js';
 import { ContentGenerator } from './services/content-generator.js';
@@ -44,6 +45,10 @@ import pictorialAuditRoutes from './routes/pictorial-audit.js';
 import imagesRoutes from './routes/images.js';
 import veoRoutes from './routes/veo.js';
 import journalistRoutes from './routes/journalist.js';
+import lifeStoriesRoutes from './routes/life-stories.js';
+import narrationStudioRoutes from './routes/narration-studio.js';
+import studioProjectsRoutes from './routes/studio-projects.js';
+import trainingExportRoutes from './routes/training-export.js';
 
 // Initialize Express app
 const app = express();
@@ -68,6 +73,10 @@ app.use(express.urlencoded({ extended: true, limit: '50mb' }));
 // Serve static files from output directory (for generated images/videos)
 app.use('/output', express.static(path.join(__dirname, '../output')));
 console.log('📁 Serving static files from /output');
+
+// Also serve from project root output (for life-stories, journalist projects, etc.)
+app.use('/output', express.static(path.join(process.cwd(), 'output')));
+console.log('📁 Serving project output files');
 
 // Serve lesson videos from Remotion public folder
 app.use('/videos/sets', express.static(path.join(__dirname, 'remotion/public/videos')));
@@ -130,7 +139,11 @@ app.use('/api/pictorial-audit', pictorialAuditRoutes); // NEW: Pictorial audit m
 app.use('/api/screenshot', studioRoutes); // Maps /api/screenshot/* to /api/studio/*
 app.use('/api/images', imagesRoutes); // NEW: Gemini image generation
 app.use('/api/veo', veoRoutes); // NEW: Veo 3.1 video generation
-app.use('/api/journalist', journalistRoutes); // NEW: Journalist Studio persistence
+app.use('/api/journalist', journalistRoutes); // LEGACY: Journalist Studio (renamed to Life Stories)
+app.use('/api/life-stories', lifeStoriesRoutes); // NEW: Life Stories with CLI orchestrators
+app.use('/api/narration-studio', narrationStudioRoutes); // NEW: Direct upload + auto-convert for narration
+app.use('/api/studio', studioProjectsRoutes); // NEW: Content Studio project management
+app.use('/api/training', trainingExportRoutes); // NEW: Training video export for e-wizer LMS
 
 // Error handling middleware
 app.use((err: any, req: Request, res: Response, next: any) => {
@@ -145,6 +158,92 @@ app.use((err: any, req: Request, res: Response, next: any) => {
 
 // Create HTTP server (needed for WebSocket)
 const server = http.createServer(app);
+
+// Create WebSocket server for Studio terminal connections
+const wss = new WebSocketServer({ noServer: true });
+const terminalClients = new Map<WebSocket, { sessionId: string; projectPath: string }>();
+
+// Handle WebSocket upgrade requests
+server.on('upgrade', (request, socket, head) => {
+  const url = new URL(request.url || '', `http://${request.headers.host}`);
+
+  // Only handle /ws path
+  if (url.pathname === '/ws') {
+    wss.handleUpgrade(request, socket, head, (ws) => {
+      const sessionId = url.searchParams.get('session') || 'default';
+      const projectPath = url.searchParams.get('project') || '';
+      const type = url.searchParams.get('type') || 'terminal';
+
+      wss.emit('connection', ws, request, { sessionId, projectPath, type });
+    });
+  } else {
+    socket.destroy();
+  }
+});
+
+// Handle WebSocket connections
+wss.on('connection', (ws: WebSocket, request: http.IncomingMessage, params: { sessionId: string; projectPath: string; type: string }) => {
+  console.log(`🔌 WebSocket connected: session=${params.sessionId}, type=${params.type}`);
+
+  terminalClients.set(ws, { sessionId: params.sessionId, projectPath: params.projectPath });
+
+  // Send welcome message
+  ws.send('\x1b[38;5;82m╔══════════════════════════════════════════════════════════════╗\x1b[0m\r\n');
+  ws.send('\x1b[38;5;82m║\x1b[0m  \x1b[1;38;5;214mContent Engine Studio\x1b[0m - Claude Code Integration         \x1b[38;5;82m║\x1b[0m\r\n');
+  ws.send('\x1b[38;5;82m╚══════════════════════════════════════════════════════════════╝\x1b[0m\r\n\r\n');
+  ws.send('\x1b[38;5;246mThis terminal receives context from Studio workspaces.\x1b[0m\r\n');
+  ws.send('\x1b[38;5;246mUse the workspace panels to send context here.\x1b[0m\r\n\r\n');
+  ws.send('\x1b[38;5;82m$ \x1b[0m');
+
+  // Handle messages from client
+  ws.on('message', (data: Buffer | string) => {
+    const message = data.toString();
+
+    // Try to parse as JSON (for resize/context messages)
+    try {
+      const parsed = JSON.parse(message);
+      if (parsed.type === 'resize') {
+        console.log(`📐 Terminal resize: ${parsed.cols}x${parsed.rows}`);
+      } else if (parsed.type === 'context') {
+        ws.send('\r\n\x1b[38;5;214mContext received from workspace\x1b[0m\r\n');
+        ws.send('\x1b[38;5;82m$ \x1b[0m');
+      }
+    } catch {
+      // Plain text input - echo it back
+      if (message.includes('\r') || message.includes('\n')) {
+        ws.send('\r\n\x1b[38;5;246mNote: Direct terminal commands are not executed.\x1b[0m\r\n');
+        ws.send('\x1b[38;5;246mUse workspace UI to send context to Claude Code.\x1b[0m\r\n');
+        ws.send('\x1b[38;5;82m$ \x1b[0m');
+      } else {
+        ws.send(message); // Echo typed characters
+      }
+    }
+  });
+
+  ws.on('close', () => {
+    console.log('🔌 WebSocket disconnected');
+    terminalClients.delete(ws);
+  });
+
+  ws.on('error', (error) => {
+    console.error('WebSocket error:', error);
+    terminalClients.delete(ws);
+  });
+});
+
+// Function to broadcast to terminal clients
+function broadcastToTerminals(message: string, sessionId?: string) {
+  terminalClients.forEach((client, ws) => {
+    if (ws.readyState === WebSocket.OPEN) {
+      if (!sessionId || client.sessionId === sessionId) {
+        ws.send(message);
+      }
+    }
+  });
+}
+
+// Expose broadcast function to routes
+app.locals.broadcastToTerminals = broadcastToTerminals;
 
 // Initialize Studio Bridge Agent
 let studioBridge: StudioBridgeAgent | null = null;

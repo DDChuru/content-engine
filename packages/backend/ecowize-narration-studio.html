@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ecowize v10 Narration Studio</title>
+  <script>
+    // API endpoint for direct upload
+    const API_BASE = 'http://localhost:3001/api/narration-studio';
+
+    // IndexedDB for large audio storage (localStorage has 5MB limit)
+    const DB_NAME = 'ecowize-narration-db';
+    const DB_VERSION = 1;
+    const STORE_NAME = 'recordings';
+    let db = null;
+
+    function openDB() {
+      return new Promise((resolve, reject) => {
+        const request = indexedDB.open(DB_NAME, DB_VERSION);
+        request.onerror = () => reject(request.error);
+        request.onsuccess = () => {
+          db = request.result;
+          resolve(db);
+        };
+        request.onupgradeneeded = (event) => {
+          const database = event.target.result;
+          if (!database.objectStoreNames.contains(STORE_NAME)) {
+            database.createObjectStore(STORE_NAME, { keyPath: 'slideIndex' });
+          }
+        };
+      });
+    }
+
+    async function saveToIndexedDB(slideIndex, blob, duration) {
+      if (!db) await openDB();
+      return new Promise((resolve, reject) => {
+        const tx = db.transaction(STORE_NAME, 'readwrite');
+        const store = tx.objectStore(STORE_NAME);
+        store.put({ slideIndex, blob, duration, timestamp: Date.now() });
+        tx.oncomplete = () => resolve();
+        tx.onerror = () => reject(tx.error);
+      });
+    }
+
+    async function loadAllFromIndexedDB() {
+      if (!db) await openDB();
+      return new Promise((resolve, reject) => {
+        const tx = db.transaction(STORE_NAME, 'readonly');
+        const store = tx.objectStore(STORE_NAME);
+        const request = store.getAll();
+        request.onsuccess = () => resolve(request.result || []);
+        request.onerror = () => reject(request.error);
+      });
+    }
+
+    async function deleteFromIndexedDB(slideIndex) {
+      if (!db) await openDB();
+      return new Promise((resolve, reject) => {
+        const tx = db.transaction(STORE_NAME, 'readwrite');
+        const store = tx.objectStore(STORE_NAME);
+        store.delete(slideIndex);
+        tx.oncomplete = () => resolve();
+        tx.onerror = () => reject(tx.error);
+      });
+    }
+
+    // Migrate from localStorage to IndexedDB on first load
+    async function migrateFromLocalStorage() {
+      const saved = localStorage.getItem('ecowize-recordings');
+      if (!saved) return 0;
+
+      const data = JSON.parse(saved);
+      const entries = Object.entries(data);
+      if (entries.length === 0) return 0;
+
+      console.log('Migrating', entries.length, 'recordings from localStorage to IndexedDB...');
+
+      for (const [idx, rec] of entries) {
+        try {
+          const response = await fetch(rec.data);
+          const blob = await response.blob();
+          await saveToIndexedDB(parseInt(idx, 10), blob, rec.duration);
+        } catch (err) {
+          console.error('Migration failed for slide', idx, err);
+        }
+      }
+
+      // Clear localStorage after successful migration
+      localStorage.removeItem('ecowize-recordings');
+      console.log('Migration complete!');
+      return entries.length;
+    }
+  </script>
+  <style>
+    :root {
+      --bg: #0a1628;
+      --surface: #1a2940;
+      --surface2: #243447;
+      --text: #f0f4f8;
+      --muted: #64748b;
+      --accent: #34d399;
+      --accent2: #22d3ee;
+      --warning: #fbbf24;
+      --danger: #ef4444;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      padding: 20px;
+    }
+    .header {
+      text-align: center;
+      padding: 20px 0 30px;
+      border-bottom: 1px solid var(--surface2);
+      margin-bottom: 30px;
+    }
+    .header h1 { font-size: 28px; font-weight: 600; margin-bottom: 8px; }
+    .header p { color: var(--muted); font-size: 14px; }
+    .progress-bar {
+      display: flex;
+      gap: 4px;
+      margin-top: 20px;
+      justify-content: center;
+    }
+    .progress-dot {
+      width: 24px;
+      height: 6px;
+      border-radius: 3px;
+      background: var(--surface2);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .progress-dot.recorded { background: var(--accent); }
+    .progress-dot.current { background: var(--warning); transform: scaleY(1.5); }
+    .main-container {
+      display: grid;
+      grid-template-columns: 1fr 400px;
+      gap: 30px;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    .slide-panel {
+      background: var(--surface);
+      border-radius: 16px;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+    }
+    .slide-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .slide-number { font-size: 14px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; }
+    .slide-type {
+      padding: 4px 12px;
+      border-radius: 12px;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+    .slide-type.hook { background: #7c3aed33; color: #a78bfa; }
+    .slide-type.problem { background: #ef444433; color: #fca5a5; }
+    .slide-type.impact { background: #f9731633; color: #fdba74; }
+    .slide-type.solution { background: #34d39933; color: #6ee7b7; }
+    .slide-type.proof { background: #22d3ee33; color: #67e8f9; }
+    .slide-type.partnership { background: #fbbf2433; color: #fde047; }
+    .slide-type.differentiation { background: #818cf833; color: #a5b4fc; }
+    .slide-type.cta { background: #34d39933; color: #6ee7b7; }
+    .slide-title { font-size: 32px; font-weight: 700; margin-bottom: 30px; line-height: 1.2; }
+    .teleprompter {
+      background: var(--bg);
+      border-radius: 12px;
+      padding: 30px;
+      flex: 1;
+      overflow-y: auto;
+      position: relative;
+    }
+    .teleprompter-label {
+      position: absolute;
+      top: 12px;
+      left: 20px;
+      font-size: 11px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .script-text {
+      font-size: 24px;
+      line-height: 1.7;
+      padding-top: 20px;
+      color: var(--text);
+      white-space: pre-wrap;
+    }
+    .script-text .hl { color: var(--accent); font-weight: 600; }
+    .nav-buttons { display: flex; gap: 12px; margin-top: 20px; }
+    .nav-btn {
+      flex: 1;
+      padding: 14px 20px;
+      border: none;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .nav-btn.prev { background: var(--surface2); color: var(--text); }
+    .nav-btn.next { background: var(--accent); color: var(--bg); }
+    .nav-btn:disabled { opacity: 0.3; cursor: not-allowed; }
+    .recording-panel {
+      background: var(--surface);
+      border-radius: 16px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .panel-title { font-size: 16px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; }
+    .recording-controls {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+      padding: 20px 0;
+    }
+    .record-btn {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      border: 4px solid var(--danger);
+      background: transparent;
+      cursor: pointer;
+      transition: all 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .record-btn:hover { background: var(--danger)22; }
+    .record-btn.recording { background: var(--danger); animation: pulse 1.5s infinite; }
+    .record-btn .icon {
+      width: 40px;
+      height: 40px;
+      background: var(--danger);
+      border-radius: 50%;
+      transition: all 0.2s;
+    }
+    .record-btn.recording .icon { background: var(--text); border-radius: 6px; width: 30px; height: 30px; }
+    @keyframes pulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4); }
+      50% { box-shadow: 0 0 0 20px rgba(239, 68, 68, 0); }
+    }
+    .recording-time { font-size: 32px; font-weight: 300; font-family: 'SF Mono', Monaco, monospace; }
+    .recording-status { font-size: 14px; color: var(--muted); }
+    .recording-status.recording { color: var(--danger); font-weight: 600; }
+    .playback-section { background: var(--bg); border-radius: 12px; padding: 16px; }
+    .playback-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+    .playback-label { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; }
+    .playback-status { font-size: 12px; padding: 4px 10px; border-radius: 10px; }
+    .playback-status.recorded { background: var(--accent)22; color: var(--accent); }
+    .playback-status.not-recorded { background: var(--surface2); color: var(--muted); }
+    .playback-controls { display: flex; gap: 10px; }
+    .play-btn, .delete-btn {
+      flex: 1;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .play-btn { background: var(--accent); color: var(--bg); }
+    .play-btn:disabled { background: var(--surface2); color: var(--muted); cursor: not-allowed; }
+    .delete-btn { background: var(--danger)22; color: var(--danger); }
+    .delete-btn:disabled { opacity: 0.3; cursor: not-allowed; }
+    .slide-list { flex: 1; overflow-y: auto; max-height: 300px; }
+    .slide-list-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-bottom: 4px;
+    }
+    .slide-list-item:hover { background: var(--surface2); }
+    .slide-list-item.current { background: var(--accent)22; border-left: 3px solid var(--accent); }
+    .slide-list-num {
+      width: 28px;
+      height: 28px;
+      border-radius: 6px;
+      background: var(--surface2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: 600;
+      flex-shrink: 0;
+    }
+    .slide-list-item.recorded .slide-list-num { background: var(--accent); color: var(--bg); }
+    .slide-list-title { font-size: 13px; flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .slide-list-duration { font-size: 11px; color: var(--muted); font-family: monospace; }
+    .export-section { margin-top: auto; padding-top: 20px; border-top: 1px solid var(--surface2); }
+    .export-btn {
+      width: 100%;
+      padding: 16px;
+      border: none;
+      border-radius: 10px;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      color: var(--bg);
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .export-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+    .export-info { text-align: center; margin-top: 12px; font-size: 12px; color: var(--muted); }
+    .duration-summary {
+      background: var(--bg);
+      border-radius: 10px;
+      padding: 14px;
+      margin-top: 16px;
+    }
+    .duration-summary-title { font-size: 12px; font-weight: 600; color: var(--accent); margin-bottom: 8px; display: flex; justify-content: space-between; align-items: center; }
+    .duration-summary-total { font-size: 20px; font-weight: 600; color: var(--text); margin-bottom: 8px; }
+    .duration-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; }
+    .duration-cell {
+      background: var(--surface2);
+      padding: 6px 4px;
+      border-radius: 6px;
+      text-align: center;
+      font-family: monospace;
+      font-size: 11px;
+    }
+    .duration-cell.recorded { background: var(--accent)33; color: var(--accent); }
+    .duration-cell .num { font-size: 9px; color: var(--muted); display: block; }
+    .copy-btn {
+      background: var(--surface2);
+      border: none;
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-size: 10px;
+      color: var(--muted);
+      cursor: pointer;
+    }
+    .copy-btn:hover { background: var(--accent); color: var(--bg); }
+    .tips {
+      background: var(--warning)11;
+      border: 1px solid var(--warning)33;
+      border-radius: 10px;
+      padding: 14px;
+    }
+    .tips-title { font-size: 12px; font-weight: 600; color: var(--warning); margin-bottom: 8px; }
+    .tips-text { font-size: 12px; color: var(--muted); line-height: 1.5; }
+    .keyboard-hint { margin-top: 8px; font-size: 11px; color: var(--muted); text-align: center; }
+    .keyboard-hint kbd {
+      background: var(--surface2);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Ecowize v10 Narration Studio</h1>
+    <p>Record voice-over for each slide with natural pauses</p>
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+  <div class="main-container">
+    <div class="slide-panel">
+      <div class="slide-header">
+        <span class="slide-number" id="slideNumber">Slide 1 of 15</span>
+        <span class="slide-type" id="slideType">Hook</span>
+      </div>
+      <h2 class="slide-title" id="slideTitle">Food Safety Without Blind Spots</h2>
+      <div class="teleprompter">
+        <span class="teleprompter-label">Script (highlighted = emphasize)</span>
+        <div class="script-text" id="scriptText"></div>
+      </div>
+      <div class="nav-buttons">
+        <button class="nav-btn prev" id="prevBtn">← Previous</button>
+        <button class="nav-btn next" id="nextBtn">Next →</button>
+      </div>
+    </div>
+    <div class="recording-panel">
+      <div class="panel-title">Recording</div>
+      <div class="recording-controls">
+        <button class="record-btn" id="recordBtn"><div class="icon"></div></button>
+        <div class="recording-time" id="recordingTime">0:00</div>
+        <div class="recording-status" id="recordingStatus">Press Space or click to record</div>
+      </div>
+      <div class="playback-section">
+        <div class="playback-header">
+          <span class="playback-label">This Slide</span>
+          <span class="playback-status not-recorded" id="playbackStatus">Not recorded</span>
+        </div>
+        <div class="playback-controls">
+          <button class="play-btn" id="playBtn" disabled>▶ Play</button>
+          <button class="delete-btn" id="deleteBtn" disabled>Delete</button>
+        </div>
+      </div>
+      <div class="tips">
+        <div class="tips-title">Tips</div>
+        <div class="tips-text">Speak naturally. Pause between sentences. Green text = emphasize. You can re-record any slide.</div>
+      </div>
+      <div class="keyboard-hint"><kbd>Space</kbd> Record · <kbd>←</kbd><kbd>→</kbd> Navigate</div>
+      <div class="panel-title" style="margin-top: 20px;">All Slides</div>
+      <div class="slide-list" id="slideList"></div>
+      <div class="duration-summary">
+        <div class="duration-summary-title">
+          <span>Recording Durations</span>
+          <button class="copy-btn" id="copyDurationsBtn" title="Copy for Remotion">Copy Array</button>
+        </div>
+        <div class="duration-summary-total" id="totalDuration">Total: 0:00</div>
+        <div class="duration-grid" id="durationGrid"></div>
+      </div>
+      <div class="export-section">
+        <button class="export-btn" id="exportBtn" disabled>Upload All to Remotion</button>
+        <div class="export-info" id="exportInfo">Record slides to enable upload</div>
+        <div class="export-info" id="serverStatus" style="margin-top: 8px;">Checking server...</div>
+      </div>
+    </div>
+  </div>
+<script>
+const SLIDES = [
+  { num: 1, type: 'Hook', title: 'Food Safety Without Blind Spots',
+    script: 'Food Safety Without Blind Spots.\n\nFor global food brands, sanitation is a [board-level risk] — not a line item.\n\nWe\'re here to propose a digital platform for Ecowize — one that delivers [always-on assurance] across every site, every shift, every day.' },
+  { num: 2, type: 'Problem', title: 'The Accountability Gap',
+    script: 'The Accountability Gap.\n\nThe people who execute sanitation are [not the people held accountable].\n\nWithout continuous visibility, leadership relies on periodic reports and site visits to assess risk.\n\nSite supervisors do the work — but Ecowize management holds the accountability.\n\nToday, that accountability relies on trust. But in our industry, [trust requires proof].' },
+  { num: 3, type: 'Problem', title: 'If It\'s Not Recorded...',
+    script: 'If it isn\'t recorded, it didn\'t happen.\n\nWhen incidents occur, paper can\'t prove what happened on a night shift or at a remote site.\n\nTorn logbook pages, faded checklists, no timestamps, no geolocation.\n\nExecutives need evidence that is [timestamped, traceable, and defensible].\n\nA digital platform transforms paper doubt into digital proof.' },
+  { num: 4, type: 'Impact', title: 'One Incident, Enterprise Impact',
+    script: 'One Incident, Enterprise Impact.\n\nA single sanitation failure can cascade into product recalls, lost shelf space, regulatory action, and reputational damage.\n\nThe exposure [multiplies with every site] and every customer.\n\nA single incident at any site reflects on Ecowize as a whole.\n\nThis is about [brand protection].' },
+  { num: 5, type: 'Impact', title: 'Audit Drag and Decision Lag',
+    script: 'Audit Drag and Decision Lag.\n\nManual records slow audits and obscure trends until they become incidents.\n\nPiles of binders take weeks to compile.\n\nBy the time leadership sees the data, [the risk has already matured].\n\nLeaders need faster decisions and fewer surprises.' },
+  { num: 6, type: 'Solution', title: 'The Ecowize Digital Platform',
+    script: 'The Ecowize Digital Platform.\n\nA unified system that turns sanitation into a [live, auditable operation] — instead of monthly snapshots.\n\nFour pillars:\n[Verify] cleaning at point of work.\n[Correct] issues with automatic escalation.\n[Audit] with standardized templates and scoring.\nAnd [Oversee] everything from a multi-site command centre.\n\nMobile-first, offline-capable, and secure.' },
+  { num: 7, type: 'Solution', title: 'Cleaning Verification',
+    script: 'Module One: Cleaning Verification.\n\nEvery zone identified by QR code — scanned by the team on the ground.\n\nException-based reporting reduces data noise by up to [97 percent].\n\nOnly failures are documented, so leaders focus on what matters.\n\nPhoto evidence attached to every finding provides irrefutable proof of where, when, and what was found.' },
+  { num: 8, type: 'Solution', title: 'NCR Management',
+    script: 'Module Two: NCR Management.\n\nFour severity levels with defined response times:\n[Critical] within two hours.\n[Major] within 24 hours.\n[Minor] within seven days.\n[Observation] within thirty days.\n\nA seven-status workflow from Open through Verified to Closed.\n\nAutomatic escalation ensures critical NCRs reach management immediately.\n\nFull audit trail: who raised it, who actioned it, who verified it, and when.' },
+  { num: 9, type: 'Solution', title: 'Internal Audits',
+    script: 'Module Three: Internal Audit Platform.\n\nConfigurable templates for [FSSC 22000, BRC, SANS 10049], or any custom framework.\n\nScored questions with section-level and overall compliance percentages.\n\nNCRs raised directly from audit findings — fully linked for traceability.\n\nDigital signatures, offline capability, and historical comparison to track improvement over time.' },
+  { num: 10, type: 'Solution', title: 'Executive Command Centre',
+    script: 'The Executive Command Centre.\n\nA single dashboard showing all sites — South Africa, Namibia, Australia, New Zealand, and the USA.\n\nCompliance scores per site with drill-down to individual areas.\n\nNCR count and ageing by severity across the business.\n\nTrend analysis showing whether sites are improving or declining.\n\n[Faster decisions, fewer surprises.]\n\nThis is the visibility that accountability requires.' },
+  { num: 11, type: 'Proof', title: 'Trusted by Food Safety Leaders',
+    script: 'Trusted by Food Safety Leaders.\n\nEcowize has over [25 years] in food safety, operating across [five countries] and twelve industries.\n\nTrusted by global leaders — Heineken, Nestlé, PepsiCo, Tiger Brands, AB InBev.\n\nWe already support enterprise-grade operations.\n\nThe bar is high — and we meet it.' },
+  { num: 12, type: 'Proof', title: 'Proven Capabilities',
+    script: '(Visual zoom reveal of 10 modules — optional brief intro)\n\nThese are the capabilities we\'ve already built and proven in production.' },
+  { num: 13, type: 'Partnership', title: 'Co-Build and Own',
+    script: 'Co-Build and Own.\n\nWe work with your teams to map workflows and build what fits your operations.\n\nDeep food-safety expertise plus scalable architecture and a responsive team.\n\nAnd crucially — what we build together is [Ecowize IP].\n\nThe platform and intellectual property remain yours, protecting your competitive advantage.' },
+  { num: 14, type: 'Differentiation', title: 'The Transformation',
+    script: 'The Transformation.\n\n[Paper is reactive] — Digital is proactive.\n\nPaper records are locked in site filing cabinets — digital makes them accessible from any device, anywhere.\n\nPaper cannot prove what happened at 2am — digital provides timestamped, geolocated, photo-verified evidence.\n\nNCRs get lost or delayed in paper systems — digital delivers automatic escalation.\n\nPaper needs management visits for visibility — digital provides a command centre that\'s [always on].' },
+  { num: 15, type: 'CTA', title: 'Let\'s Build This Together',
+    script: 'Let\'s build this together.\n\nA platform where you [delegate responsibility] at site level, [retain accountability] at the top, and [see everything].\n\nAlways-on assurance — food safety without blind spots.' }
+];
+
+let currentSlide = 0;
+let recordings = {};
+let mediaRecorder = null;
+let audioChunks = [];
+let isRecording = false;
+let recordingStartTime = null;
+let timerInterval = null;
+
+async function checkServerStatus() {
+  const statusEl = document.getElementById('serverStatus');
+  try {
+    const response = await fetch(API_BASE + '/status');
+    const data = await response.json();
+    statusEl.textContent = '✅ Server connected • ' + data.count + '/15 saved on server';
+    statusEl.style.color = 'var(--accent)';
+
+    // If server has recordings we don't have locally, note it
+    if (data.count > 0) {
+      console.log('Server recordings:', data.recordings);
+    }
+  } catch (error) {
+    statusEl.textContent = '⚠️ Backend not running (port 3001)';
+    statusEl.style.color = 'var(--warning)';
+  }
+}
+
+async function init() {
+  renderProgressBar();
+  renderSlideList();
+  renderDurationGrid();
+  loadSlide(0);
+  await loadSavedRecordings();
+  checkServerStatus();
+  document.getElementById('prevBtn').onclick = prevSlide;
+  document.getElementById('nextBtn').onclick = nextSlide;
+  document.getElementById('recordBtn').onclick = toggleRecording;
+  document.getElementById('playBtn').onclick = playRecording;
+  document.getElementById('deleteBtn').onclick = deleteRecording;
+  document.getElementById('exportBtn').onclick = exportAll;
+  document.getElementById('copyDurationsBtn').onclick = copyDurationsArray;
+}
+
+function renderProgressBar() {
+  const bar = document.getElementById('progressBar');
+  SLIDES.forEach((_, i) => {
+    const dot = document.createElement('div');
+    dot.className = 'progress-dot';
+    dot.onclick = () => goToSlide(i);
+    bar.appendChild(dot);
+  });
+}
+
+function updateProgressBar() {
+  const dots = document.querySelectorAll('.progress-dot');
+  dots.forEach((dot, i) => {
+    dot.className = 'progress-dot';
+    if (i === currentSlide) dot.classList.add('current');
+    if (recordings[i]) dot.classList.add('recorded');
+  });
+}
+
+function renderSlideList() {
+  const list = document.getElementById('slideList');
+  list.textContent = '';
+  SLIDES.forEach((slide, i) => {
+    const item = document.createElement('div');
+    item.className = 'slide-list-item';
+    item.onclick = () => goToSlide(i);
+    const num = document.createElement('div');
+    num.className = 'slide-list-num';
+    num.textContent = slide.num;
+    const title = document.createElement('div');
+    title.className = 'slide-list-title';
+    title.textContent = slide.title;
+    const dur = document.createElement('div');
+    dur.className = 'slide-list-duration';
+    dur.id = 'dur-' + i;
+    dur.textContent = '--:--';
+    item.appendChild(num);
+    item.appendChild(title);
+    item.appendChild(dur);
+    list.appendChild(item);
+  });
+}
+
+function updateSlideList() {
+  const items = document.querySelectorAll('.slide-list-item');
+  items.forEach((item, i) => {
+    item.className = 'slide-list-item';
+    if (i === currentSlide) item.classList.add('current');
+    if (recordings[i]) {
+      item.classList.add('recorded');
+      const dur = document.getElementById('dur-' + i);
+      if (dur) dur.textContent = formatTime(recordings[i].duration);
+    }
+  });
+}
+
+function formatScript(text) {
+  return text.replace(/\[([^\]]+)\]/g, '<span class="hl">$1</span>');
+}
+
+function loadSlide(index) {
+  currentSlide = index;
+  const slide = SLIDES[index];
+  document.getElementById('slideNumber').textContent = 'Slide ' + slide.num + ' of ' + SLIDES.length;
+  document.getElementById('slideType').textContent = slide.type;
+  document.getElementById('slideType').className = 'slide-type ' + slide.type.toLowerCase();
+  document.getElementById('slideTitle').textContent = slide.title;
+  const scriptEl = document.getElementById('scriptText');
+  scriptEl.innerHTML = formatScript(slide.script).replace(/\n/g, '<br>');
+  document.getElementById('prevBtn').disabled = index === 0;
+  document.getElementById('nextBtn').disabled = index === SLIDES.length - 1;
+  updatePlaybackUI();
+  updateProgressBar();
+  updateSlideList();
+}
+
+function goToSlide(index) {
+  if (isRecording) {
+    if (!confirm('Stop recording and switch slides?')) return;
+    stopRecording();
+  }
+  loadSlide(index);
+}
+
+function prevSlide() { if (currentSlide > 0) goToSlide(currentSlide - 1); }
+function nextSlide() { if (currentSlide < SLIDES.length - 1) goToSlide(currentSlide + 1); }
+
+async function toggleRecording() {
+  if (isRecording) stopRecording();
+  else await startRecording();
+}
+
+async function startRecording() {
+  try {
+    const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+    mediaRecorder = new MediaRecorder(stream);
+    audioChunks = [];
+    mediaRecorder.ondataavailable = (e) => audioChunks.push(e.data);
+    mediaRecorder.onstop = saveRecording;
+    mediaRecorder.start();
+    isRecording = true;
+    recordingStartTime = Date.now();
+    document.getElementById('recordBtn').classList.add('recording');
+    document.getElementById('recordingStatus').textContent = 'Recording...';
+    document.getElementById('recordingStatus').classList.add('recording');
+    timerInterval = setInterval(updateTimer, 100);
+  } catch (err) {
+    alert('Could not access microphone.');
+  }
+}
+
+function stopRecording() {
+  if (mediaRecorder && isRecording) {
+    mediaRecorder.stop();
+    mediaRecorder.stream.getTracks().forEach(t => t.stop());
+    isRecording = false;
+    document.getElementById('recordBtn').classList.remove('recording');
+    document.getElementById('recordingStatus').textContent = 'Press Space or click to record';
+    document.getElementById('recordingStatus').classList.remove('recording');
+    clearInterval(timerInterval);
+  }
+}
+
+async function saveRecording() {
+  const blob = new Blob(audioChunks, { type: 'audio/webm' });
+  const duration = (Date.now() - recordingStartTime) / 1000;
+  recordings[currentSlide] = { blob, duration, url: URL.createObjectURL(blob), uploaded: false };
+
+  // Save to IndexedDB (no size limit issues)
+  try {
+    await saveToIndexedDB(currentSlide, blob, duration);
+    console.log('Saved slide', currentSlide, 'to IndexedDB (' + Math.round(blob.size / 1024) + 'KB)');
+  } catch (err) {
+    console.error('Failed to save to IndexedDB:', err);
+    alert('Warning: Failed to save recording to storage. It may be lost on refresh.');
+  }
+
+  updatePlaybackUI();
+  updateProgressBar();
+  updateSlideList();
+  updateExportButton();
+  updateDurationSummary();
+}
+
+async function loadSavedRecordings() {
+  const exportInfo = document.getElementById('exportInfo');
+
+  try {
+    // Initialize IndexedDB
+    await openDB();
+
+    // Migrate from localStorage if needed (one-time)
+    const migrated = await migrateFromLocalStorage();
+    if (migrated > 0) {
+      exportInfo.textContent = 'Migrated ' + migrated + ' recordings to new storage...';
+    }
+
+    // Load all recordings from IndexedDB
+    const savedRecordings = await loadAllFromIndexedDB();
+
+    if (savedRecordings.length === 0) {
+      exportInfo.textContent = 'No saved recordings. Start recording!';
+      return;
+    }
+
+    exportInfo.textContent = 'Loading ' + savedRecordings.length + ' saved recordings...';
+
+    for (const rec of savedRecordings) {
+      recordings[rec.slideIndex] = {
+        blob: rec.blob,
+        duration: rec.duration,
+        url: URL.createObjectURL(rec.blob),
+        uploaded: false
+      };
+    }
+
+    // Update UI after all recordings loaded
+    updatePlaybackUI();
+    updateProgressBar();
+    updateSlideList();
+    updateExportButton();
+    updateDurationSummary();
+
+    const totalSize = savedRecordings.reduce((sum, r) => sum + r.blob.size, 0);
+    exportInfo.textContent = 'Loaded ' + savedRecordings.length + ' recordings (' + Math.round(totalSize / 1024 / 1024 * 10) / 10 + 'MB). Ready to upload.';
+
+  } catch (err) {
+    console.error('Failed to load recordings:', err);
+    exportInfo.textContent = 'Error loading recordings: ' + err.message;
+  }
+}
+
+function updatePlaybackUI() {
+  const rec = recordings[currentSlide];
+  const playBtn = document.getElementById('playBtn');
+  const delBtn = document.getElementById('deleteBtn');
+  const status = document.getElementById('playbackStatus');
+  if (rec) {
+    playBtn.disabled = false;
+    delBtn.disabled = false;
+    status.textContent = 'Recorded (' + formatTime(rec.duration) + ')';
+    status.className = 'playback-status recorded';
+  } else {
+    playBtn.disabled = true;
+    delBtn.disabled = true;
+    status.textContent = 'Not recorded';
+    status.className = 'playback-status not-recorded';
+  }
+}
+
+function playRecording() {
+  const rec = recordings[currentSlide];
+  if (rec) new Audio(rec.url).play();
+}
+
+async function deleteRecording() {
+  const slide = SLIDES[currentSlide];
+  const rec = recordings[currentSlide];
+  const durStr = rec ? ' (' + formatTime(rec.duration) + ')' : '';
+  if (confirm('Delete recording for Slide ' + slide.num + ': "' + slide.title + '"' + durStr + '?')) {
+    delete recordings[currentSlide];
+    // Delete from IndexedDB
+    try {
+      await deleteFromIndexedDB(currentSlide);
+    } catch (err) {
+      console.error('Failed to delete from IndexedDB:', err);
+    }
+    updatePlaybackUI();
+    updateProgressBar();
+    updateSlideList();
+    updateExportButton();
+    updateDurationSummary();
+  }
+}
+
+function updateTimer() {
+  const elapsed = (Date.now() - recordingStartTime) / 1000;
+  document.getElementById('recordingTime').textContent = formatTime(elapsed);
+}
+
+function formatTime(sec) {
+  const m = Math.floor(sec / 60);
+  const s = Math.floor(sec % 60);
+  return m + ':' + String(s).padStart(2, '0');
+}
+
+function updateExportButton() {
+  const count = Object.keys(recordings).length;
+  document.getElementById('exportBtn').disabled = count === 0;
+  document.getElementById('exportInfo').textContent = count === 0 ? 'Record slides to enable export' : count + ' of ' + SLIDES.length + ' recorded';
+}
+
+function renderDurationGrid() {
+  const grid = document.getElementById('durationGrid');
+  grid.textContent = '';
+  SLIDES.forEach((slide, i) => {
+    const cell = document.createElement('div');
+    cell.className = 'duration-cell';
+    cell.id = 'dur-cell-' + i;
+    const num = document.createElement('span');
+    num.className = 'num';
+    num.textContent = slide.num;
+    const time = document.createElement('span');
+    time.id = 'dur-time-' + i;
+    time.textContent = '--:--';
+    cell.appendChild(num);
+    cell.appendChild(time);
+    cell.onclick = () => goToSlide(i);
+    cell.style.cursor = 'pointer';
+    grid.appendChild(cell);
+  });
+}
+
+function updateDurationSummary() {
+  let total = 0;
+  SLIDES.forEach((_, i) => {
+    const cell = document.getElementById('dur-cell-' + i);
+    const time = document.getElementById('dur-time-' + i);
+    if (recordings[i]) {
+      cell.classList.add('recorded');
+      time.textContent = formatTime(recordings[i].duration);
+      total += recordings[i].duration;
+    } else {
+      cell.classList.remove('recorded');
+      time.textContent = '--:--';
+    }
+  });
+  document.getElementById('totalDuration').textContent = 'Total: ' + formatTime(total) + ' (' + Object.keys(recordings).length + '/15 slides)';
+}
+
+function copyDurationsArray() {
+  const durations = SLIDES.map((_, i) => {
+    if (recordings[i]) {
+      return Math.ceil(recordings[i].duration); // Round up to whole seconds
+    }
+    return 0;
+  });
+  const arrayStr = 'const NARRATED_DURATIONS = [' + durations.join(', ') + '];';
+  navigator.clipboard.writeText(arrayStr).then(() => {
+    const btn = document.getElementById('copyDurationsBtn');
+    btn.textContent = 'Copied!';
+    setTimeout(() => { btn.textContent = 'Copy Array'; }, 2000);
+  });
+}
+
+async function exportAll() {
+  const count = Object.keys(recordings).length;
+  if (count === 0) {
+    alert('No recordings to export!');
+    return;
+  }
+
+  const exportBtn = document.getElementById('exportBtn');
+  const exportInfo = document.getElementById('exportInfo');
+  exportBtn.disabled = true;
+  exportBtn.textContent = 'Uploading...';
+
+  try {
+    // Convert blobs to base64 for upload
+    exportInfo.textContent = 'Preparing ' + count + ' recordings...';
+
+    const toUpload = [];
+    for (const [idx, rec] of Object.entries(recordings)) {
+      const slideIdx = parseInt(idx, 10);
+      const slide = SLIDES[slideIdx];
+      if (rec.blob) {
+        // Convert blob to base64
+        const base64 = await new Promise((resolve, reject) => {
+          const reader = new FileReader();
+          reader.onload = () => resolve(reader.result);
+          reader.onerror = reject;
+          reader.readAsDataURL(rec.blob);
+        });
+        toUpload.push({
+          slideNum: slide.num,
+          audio: base64,
+          duration: rec.duration
+        });
+      }
+    }
+
+    exportInfo.textContent = 'Uploading ' + toUpload.length + ' recordings...';
+
+    // Batch upload to backend
+    const response = await fetch(API_BASE + '/upload-all', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ recordings: toUpload })
+    });
+
+    const result = await response.json();
+
+    if (result.success) {
+      // Mark all as uploaded
+      for (const idx of Object.keys(recordings)) {
+        recordings[parseInt(idx, 10)].uploaded = true;
+      }
+
+      // Show success with Remotion code
+      alert(
+        '✅ Uploaded ' + result.uploaded + ' recordings!\\n\\n' +
+        'Files saved to:\\n' + result.outputDir + '\\n\\n' +
+        'Remotion duration array:\\n' + result.remotionCode + '\\n\\n' +
+        'Total duration: ' + formatTime(result.results.reduce((s, r) => s + r.duration, 0))
+      );
+
+      // Copy Remotion code to clipboard
+      navigator.clipboard.writeText(result.remotionCode);
+      exportInfo.textContent = '✅ Uploaded! Duration array copied.';
+    } else {
+      alert('⚠️ Upload completed with errors:\\n\\nUploaded: ' + result.uploaded + '\\nFailed: ' + result.failed + '\\n\\nErrors:\\n' + result.errors.map(e => 'Slide ' + e.slideNum + ': ' + e.error).join('\\n'));
+      exportInfo.textContent = result.uploaded + ' uploaded, ' + result.failed + ' failed';
+    }
+  } catch (error) {
+    console.error('Upload error:', error);
+    alert('❌ Upload failed: ' + error.message + '\\n\\nIs the backend running on port 3001?');
+    exportInfo.textContent = 'Upload failed - check backend';
+  } finally {
+    exportBtn.disabled = false;
+    exportBtn.textContent = 'Upload All to Remotion';
+  }
+}
+
+document.addEventListener('keydown', (e) => {
+  if (e.code === 'Space' && e.target.tagName !== 'BUTTON') { e.preventDefault(); toggleRecording(); }
+  if (e.code === 'ArrowLeft') prevSlide();
+  if (e.code === 'ArrowRight') nextSlide();
+});
+
+init();
+</script>
+</body>
+</html>

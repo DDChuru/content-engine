@@ -1,0 +1,82 @@
+{
+  "fps": 30,
+  "total_frames": 827,
+  "total_seconds": 27.556,
+  "audio": "iinm/ch3-narration.mp3",
+  "video": "iinm/ch3.mp4",
+  "title": "Investigate & find the cause",
+  "cues": [
+    [
+      0.5,
+      5.144,
+      "When a report is raised, it routes itself \u2014 and lands with the right person to act."
+    ],
+    [
+      5.694,
+      12.753,
+      "The site manager opens it and investigates: what happened, and why. The e-wizer guide is right there to help."
+    ],
+    [
+      13.303,
+      18.086,
+      "Ask why \u2014 five times \u2014 to reach the real root cause, not just the symptom."
+    ],
+    [
+      18.636,
+      22.165,
+      "Write the corrective action, and the step that stops it happening again."
+    ],
+    [
+      22.716,
+      26.756,
+      "Sign your part, and the record advances to the next person on its own."
+    ]
+  ],
+  "beats": [
+    {
+      "chip": "It routes itself",
+      "voStart": 0.5,
+      "voEnd": 5.144,
+      "videoSec": 0,
+      "guide": false,
+      "s24": false,
+      "end": false
+    },
+    {
+      "chip": "Investigate",
+      "voStart": 5.694,
+      "voEnd": 12.753,
+      "videoSec": 0,
+      "guide": true,
+      "s24": false,
+      "end": false
+    },
+    {
+      "chip": "Five whys",
+      "voStart": 13.303,
+      "voEnd": 18.086,
+      "videoSec": 0,
+      "guide": false,
+      "s24": false,
+      "end": false
+    },
+    {
+      "chip": "Fix it",
+      "voStart": 18.636,
+      "voEnd": 22.165,
+      "videoSec": 0,
+      "guide": false,
+      "s24": false,
+      "end": false
+    },
+    {
+      "chip": "Sign & advance",
+      "voStart": 22.716,
+      "voEnd": 26.756,
+      "videoSec": 0,
+      "guide": false,
+      "s24": false,
+      "end": true
+    }
+  ]
+}

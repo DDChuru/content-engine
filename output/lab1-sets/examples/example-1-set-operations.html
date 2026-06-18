@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Worked Example: Set Operations</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .example-container {
+      max-width: 900px;
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+      padding: 40px;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 30px;
+      border-bottom: 3px solid #667eea;
+      padding-bottom: 20px;
+    }
+
+    .header h1 {
+      color: #1a202c;
+      margin-bottom: 5px;
+      font-size: 28px;
+    }
+
+    .header .subtitle {
+      color: #718096;
+      font-size: 14px;
+    }
+
+    .problem-statement {
+      background: #ebf8ff;
+      border-left: 4px solid #4299e1;
+      padding: 20px;
+      border-radius: 8px;
+      margin: 20px 0;
+    }
+
+    .problem-statement h3 {
+      color: #2c5282;
+      margin-bottom: 10px;
+    }
+
+    .given-sets {
+      margin: 15px 0;
+      font-size: 18px;
+      color: #2d3748;
+    }
+
+    .set-definition {
+      margin: 10px 0;
+      padding: 10px 15px;
+      background: white;
+      border-radius: 5px;
+      font-weight: 600;
+    }
+
+    .step {
+      background: #f7fafc;
+      border-left: 4px solid #48bb78;
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 8px;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.5s ease;
+    }
+
+    .step.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .step-number {
+      display: inline-block;
+      background: #48bb78;
+      color: white;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 32px;
+      font-weight: bold;
+      margin-right: 10px;
+    }
+
+    .step h4 {
+      display: inline;
+      color: #2d3748;
+      font-size: 18px;
+    }
+
+    .step-content {
+      margin-top: 15px;
+      color: #4a5568;
+      line-height: 1.8;
+    }
+
+    .venn-container {
+      margin: 20px 0;
+      text-align: center;
+    }
+
+    canvas {
+      border: 2px solid #e2e8f0;
+      border-radius: 10px;
+      background: white;
+    }
+
+    .answer-box {
+      background: #f0fff4;
+      border: 2px solid #48bb78;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+      text-align: center;
+    }
+
+    .answer-box h3 {
+      color: #2f855a;
+      margin-bottom: 10px;
+    }
+
+    .answer-box .answer {
+      font-size: 24px;
+      font-weight: bold;
+      color: #276749;
+      margin: 10px 0;
+    }
+
+    .controls {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 30px;
+    }
+
+    button {
+      padding: 12px 30px;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .btn-primary {
+      background: #667eea;
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: #5a67d8;
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      background: #48bb78;
+      color: white;
+    }
+
+    .btn-secondary:hover {
+      background: #38a169;
+    }
+  </style>
+</head>
+<body>
+  <div class="example-container">
+    <div class="header">
+      <h1>Worked Example: Set Operations</h1>
+      <p class="subtitle">Cambridge IGCSE Mathematics 0580 - Topic C1.2</p>
+    </div>
+
+    <div class="problem-statement">
+      <h3>Problem</h3>
+      <div class="given-sets">
+        <p>Given the following two sets:</p>
+        <div class="set-definition">Set A = {2, 4, 6, 8, 10}</div>
+        <div class="set-definition">Set B = {6, 8, 10, 12, 14}</div>
+        <p style="margin-top: 15px; font-weight: 600;">Find:</p>
+        <ul style="margin-left: 30px; margin-top: 10px;">
+          <li>a) A ∩ B (the intersection)</li>
+          <li>b) A ∪ B (the union)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="steps">
+      <div class="step" data-step="1">
+        <span class="step-number">1</span>
+        <h4>Understand the Question</h4>
+        <div class="step-content">
+          We have two sets containing numbers. Set A contains even numbers from 2 to 10, while Set B contains even numbers from 6 to 14. Notice that some numbers appear in both sets (6, 8, and 10).
+          <br><br>
+          The intersection (∩) will give us elements that are in BOTH sets.
+          <br>
+          The union (∪) will give us ALL unique elements from both sets combined.
+        </div>
+      </div>
+
+      <div class="step" data-step="2">
+        <span class="step-number">2</span>
+        <h4>Find the Intersection (A ∩ B)</h4>
+        <div class="step-content">
+          To find the intersection, we look for elements that appear in BOTH Set A and Set B.
+          <br><br>
+          Looking at Set A: {2, 4, <strong style="color: #667eea;">6</strong>, <strong style="color: #667eea;">8</strong>, <strong style="color: #667eea;">10</strong>}
+          <br>
+          Looking at Set B: {<strong style="color: #667eea;">6</strong>, <strong style="color: #667eea;">8</strong>, <strong style="color: #667eea;">10</strong>, 12, 14}
+          <br><br>
+          The numbers 6, 8, and 10 appear in both sets.
+        </div>
+        <div class="venn-container">
+          <canvas id="vennIntersection" width="500" height="300"></canvas>
+        </div>
+      </div>
+
+      <div class="step" data-step="3">
+        <span class="step-number">3</span>
+        <h4>Find the Union (A ∪ B)</h4>
+        <div class="step-content">
+          To find the union, we combine ALL elements from both sets, but only list each unique element once (no duplicates).
+          <br><br>
+          From Set A: 2, 4, 6, 8, 10
+          <br>
+          From Set B: 6, 8, 10, 12, 14
+          <br><br>
+          Combining all unique elements in order: 2, 4, 6, 8, 10, 12, 14
+        </div>
+        <div class="venn-container">
+          <canvas id="vennUnion" width="500" height="300"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <div class="answer-box">
+      <h3>Final Answers</h3>
+      <div class="answer">a) A ∩ B = {6, 8, 10}</div>
+      <div class="answer">b) A ∪ B = {2, 4, 6, 8, 10, 12, 14}</div>
+    </div>
+
+    <div class="controls">
+      <button class="btn-secondary" onclick="resetExample()">Start Over</button>
+      <button class="btn-primary" onclick="showNextStep()" id="nextBtn">Show Next Step</button>
+    </div>
+  </div>
+
+  <script>
+    let currentStep = 0;
+    const totalSteps = 3;
+
+    function showNextStep() {
+      if (currentStep < totalSteps) {
+        currentStep++;
+        const step = document.querySelector(`.step[data-step="${currentStep}"]`);
+        step.classList.add('visible');
+
+        // Draw diagrams
+        if (currentStep === 2) {
+          setTimeout(() => drawIntersectionVenn(), 300);
+        } else if (currentStep === 3) {
+          setTimeout(() => drawUnionVenn(), 300);
+          document.getElementById('nextBtn').textContent = 'Complete';
+        }
+
+        if (currentStep === totalSteps) {
+          document.getElementById('nextBtn').style.display = 'none';
+        }
+      }
+    }
+
+    function resetExample() {
+      currentStep = 0;
+      document.querySelectorAll('.step').forEach(step => {
+        step.classList.remove('visible');
+      });
+      document.getElementById('nextBtn').style.display = 'inline-block';
+      document.getElementById('nextBtn').textContent = 'Show Next Step';
+
+      // Clear canvases
+      const ctx1 = document.getElementById('vennIntersection').getContext('2d');
+      const ctx2 = document.getElementById('vennUnion').getContext('2d');
+      ctx1.clearRect(0, 0, 500, 300);
+      ctx2.clearRect(0, 0, 500, 300);
+    }
+
+    function drawIntersectionVenn() {
+      const canvas = document.getElementById('vennIntersection');
+      const ctx = canvas.getContext('2d');
+
+      // Set A circle
+      ctx.beginPath();
+      ctx.arc(180, 150, 100, 0, Math.PI * 2);
+      ctx.strokeStyle = '#667eea';
+      ctx.lineWidth = 3;
+      ctx.stroke();
+      ctx.fillStyle = 'rgba(102, 126, 234, 0.1)';
+      ctx.fill();
+
+      // Set B circle
+      ctx.beginPath();
+      ctx.arc(320, 150, 100, 0, Math.PI * 2);
+      ctx.strokeStyle = '#764ba2';
+      ctx.lineWidth = 3;
+      ctx.stroke();
+      ctx.fillStyle = 'rgba(118, 75, 162, 0.1)';
+      ctx.fill();
+
+      // Highlight intersection
+      ctx.save();
+      ctx.globalCompositeOperation = 'source-over';
+      ctx.beginPath();
+      ctx.arc(180, 150, 100, 0, Math.PI * 2);
+      ctx.clip();
+      ctx.beginPath();
+      ctx.arc(320, 150, 100, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(72, 187, 120, 0.4)';
+      ctx.fill();
+      ctx.restore();
+
+      // Labels
+      ctx.fillStyle = '#1a202c';
+      ctx.font = 'bold 16px Arial';
+      ctx.fillText('Set A', 120, 80);
+      ctx.fillText('Set B', 340, 80);
+
+      // Elements
+      ctx.font = '14px Arial';
+      ctx.fillText('2', 120, 140);
+      ctx.fillText('4', 120, 160);
+      ctx.fillText('6, 8, 10', 230, 150);
+      ctx.fillText('12', 360, 140);
+      ctx.fillText('14', 360, 160);
+
+      // Intersection label
+      ctx.fillStyle = '#2f855a';
+      ctx.font = 'bold 14px Arial';
+      ctx.fillText('A ∩ B', 230, 230);
+    }
+
+    function drawUnionVenn() {
+      const canvas = document.getElementById('vennUnion');
+      const ctx = canvas.getContext('2d');
+
+      // Highlight both circles (union)
+      ctx.fillStyle = 'rgba(72, 187, 120, 0.2)';
+      ctx.beginPath();
+      ctx.arc(180, 150, 100, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.beginPath();
+      ctx.arc(320, 150, 100, 0, Math.PI * 2);
+      ctx.fill();
+
+      // Set A circle
+      ctx.beginPath();
+      ctx.arc(180, 150, 100, 0, Math.PI * 2);
+      ctx.strokeStyle = '#667eea';
+      ctx.lineWidth = 3;
+      ctx.stroke();
+
+      // Set B circle
+      ctx.beginPath();
+      ctx.arc(320, 150, 100, 0, Math.PI * 2);
+      ctx.strokeStyle = '#764ba2';
+      ctx.lineWidth = 3;
+      ctx.stroke();
+
+      // Labels
+      ctx.fillStyle = '#1a202c';
+      ctx.font = 'bold 16px Arial';
+      ctx.fillText('Set A', 120, 80);
+      ctx.fillText('Set B', 340, 80);
+
+      // Elements
+      ctx.font = '14px Arial';
+      ctx.fillText('2', 120, 140);
+      ctx.fillText('4', 120, 160);
+      ctx.fillText('6, 8, 10', 230, 150);
+      ctx.fillText('12', 360, 140);
+      ctx.fillText('14', 360, 160);
+
+      // Union label
+      ctx.fillStyle = '#2f855a';
+      ctx.font = 'bold 14px Arial';
+      ctx.fillText('A ∪ B = {2, 4, 6, 8, 10, 12, 14}', 120, 250);
+    }
+
+    // Auto-start
+    showNextStep();
+  </script>
+</body>
+</html>

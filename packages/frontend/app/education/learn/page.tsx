@@ -115,28 +115,88 @@ export default function LearnPage() {
       const data = await res.json();
 
       if (data.success) {
-        // Refresh topics status
-        const topicsRes = await fetch(`${API_URL}/api/education/syllabus/topics`);
-        const topicsData = await topicsRes.json();
-        if (topicsData.success) {
-          const statusMap: Record<string, TopicWithStatus> = {};
-          for (const topic of topicsData.topics) {
-            statusMap[topic.code.toLowerCase()] = topic;
-          }
-          setTopicsStatus(statusMap);
+        if (data.status === 'queued') {
+          // Task queued for Claude Code - keep showing as generating
+          console.log(`Task queued: ${data.taskId}`);
+          // Don't remove from generatingTopics - keep showing spinner
+          // Poll for completion
+          pollForCompletion(topicCode);
+          return;
+        } else if (data.status === 'already_generated') {
+          // Already exists, refresh status
+          await refreshTopicsStatus();
+        } else {
+          // Completed immediately (shouldn't happen with new queue system)
+          await refreshTopicsStatus();
         }
       } else {
-        setGenerationError(data.error || 'Failed to generate lesson');
+        setGenerationError(data.error || 'Failed to queue lesson');
       }
     } catch (err: any) {
-      console.error('Failed to generate lesson:', err);
-      setGenerationError(err.message || 'Failed to generate lesson');
+      console.error('Failed to queue lesson:', err);
+      setGenerationError(err.message || 'Failed to queue lesson');
     } finally {
+      // Only remove from generating if not queued
       setGeneratingTopics(prev => {
         const next = new Set(prev);
         next.delete(topicCode);
         return next;
       });
+    }
+  };
+
+  const pollForCompletion = async (topicCode: string) => {
+    // Poll every 3 seconds for up to 5 minutes
+    const maxAttempts = 100;
+    let attempts = 0;
+
+    const poll = async () => {
+      attempts++;
+      try {
+        const res = await fetch(`${API_URL}/api/education/generate/status/${topicCode}`);
+        const data = await res.json();
+
+        if (data.success && data.status === 'complete') {
+          // Lesson is ready
+          await refreshTopicsStatus();
+          setGeneratingTopics(prev => {
+            const next = new Set(prev);
+            next.delete(topicCode);
+            return next;
+          });
+          return;
+        }
+
+        if (attempts < maxAttempts) {
+          setTimeout(poll, 3000);
+        } else {
+          // Timeout - stop polling
+          setGeneratingTopics(prev => {
+            const next = new Set(prev);
+            next.delete(topicCode);
+            return next;
+          });
+          setGenerationError('Generation timed out. Check Claude Code for status.');
+        }
+      } catch {
+        if (attempts < maxAttempts) {
+          setTimeout(poll, 3000);
+        }
+      }
+    };
+
+    poll();
+  };
+
+  const refreshTopicsStatus = async () => {
+    const topicsRes = await fetch(`${API_URL}/api/education/syllabus/topics`);
+    const topicsData = await topicsRes.json();
+    if (topicsData.success) {
+      const statusMap: Record<string, TopicWithStatus> = {};
+      for (const topic of topicsData.topics) {
+        statusMap[topic.code.toLowerCase()] = topic;
+      }
+      setTopicsStatus(statusMap);
     }
   };
 
@@ -366,9 +426,9 @@ export default function LearnPage() {
                               View Lesson
                             </Link>
                           ) : isGenerating ? (
-                            <span className="flex items-center gap-2 px-4 py-2 bg-amber-500/20 text-amber-400 rounded-lg text-sm">
+                            <span className="flex items-center gap-2 px-4 py-2 bg-purple-500/20 text-purple-400 rounded-lg text-sm">
                               <Loader2 size={16} className="animate-spin" />
-                              Generating...
+                              Queued for Claude...
                             </span>
                           ) : (
                             <button

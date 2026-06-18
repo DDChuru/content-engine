@@ -1,0 +1,68 @@
+{
+  "fps": 30,
+  "total_frames": 891,
+  "total_seconds": 29.699,
+  "audio": "iinm/ch5-narration.mp3",
+  "video": "iinm/ch5.mp4",
+  "title": "Oversight, and your guide",
+  "cues": [
+    [
+      0.5,
+      6.166,
+      "Across a busy site, things pile up. The register keeps the whole picture in one place."
+    ],
+    [
+      6.716,
+      12.567,
+      "Open investigations, what's due to the Department of Labour, and deadlines drawing near \u2014 all at a glance."
+    ],
+    [
+      13.117,
+      19.711,
+      "And wherever you are, the e-wizer guide on the right explains each step \u2014 so you're never on your own."
+    ],
+    [
+      20.262,
+      28.9,
+      "Captured by anyone, guided at every step, routed to the right person, and proven. That's incident management, the e-wizer way."
+    ]
+  ],
+  "beats": [
+    {
+      "chip": "The whole picture",
+      "voStart": 0.5,
+      "voEnd": 6.166,
+      "videoSec": 0,
+      "guide": false,
+      "s24": false,
+      "end": false
+    },
+    {
+      "chip": "At a glance",
+      "voStart": 6.716,
+      "voEnd": 12.567,
+      "videoSec": 0,
+      "guide": false,
+      "s24": false,
+      "end": false
+    },
+    {
+      "chip": "Meet your guide",
+      "voStart": 13.117,
+      "voEnd": 19.711,
+      "videoSec": 0,
+      "guide": true,
+      "s24": false,
+      "end": false
+    },
+    {
+      "chip": "The e-wizer way",
+      "voStart": 20.262,
+      "voEnd": 28.9,
+      "videoSec": 0,
+      "guide": false,
+      "s24": false,
+      "end": true
+    }
+  ]
+}

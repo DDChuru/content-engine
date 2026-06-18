@@ -1,0 +1,189 @@
+{
+  "project": "AI Changes Everything",
+  "platform": "YouTube",
+  "voice_id": "gYWKdgLtqjPO3D5uDrDP",
+  "voice_name": "Daniel (ElevenLabs)",
+  "total_duration_target": "8-10 minutes",
+  "style": "conversational, honest, slightly comedic, relatable",
+  "target_audience": "Developers questioning framework choices, bootcamp grads, career switchers",
+  "scenes": [
+    {
+      "id": "scene_01_hook",
+      "title": "The Hook",
+      "duration_seconds": 15,
+      "visual_notes": "Close-up face, dramatic lighting, slow zoom",
+      "script": "I spent YEARS mastering Angular. The dependency injection. The RxJS observables. The NgModules. What if I told you... that knowledge is now... optional?"
+    },
+    {
+      "id": "scene_02_old_world_intro",
+      "title": "The Old World - Introduction",
+      "duration_seconds": 30,
+      "visual_notes": "Walk towards whiteboard, CSS meme appears",
+      "script": "Let me paint you a picture of how we USED to learn frontend. First, you'd spend three months just understanding why CSS does... this. Then JavaScript. And not just JavaScript - you needed to know WHICH JavaScript. ES5, ES6, ESNext, TypeScript... the list went on."
+    },
+    {
+      "id": "scene_02_framework_marriage",
+      "title": "The Framework Marriage",
+      "duration_seconds": 40,
+      "visual_notes": "Wedding invitation graphic appears, dramatic music sting",
+      "script": "Then came the frameworks. And here's where it got expensive. You didn't just learn a framework. You MARRIED it. Because switching? That meant YEARS of new learning. Angular to React? Another year. React to Vue? Another year. The sunk cost fallacy was REAL. And we all fell for it."
+    },
+    {
+      "id": "scene_02_mountain",
+      "title": "The Mountain of Knowledge",
+      "duration_seconds": 40,
+      "visual_notes": "Animated mountain infographic with camps",
+      "script": "Think about everything you had to memorize. Base camp was HTML and CSS fundamentals. The lower slopes were JavaScript basics, DOM manipulation, async patterns. Mid-mountain was your framework - state management, routing, form handling. Upper slopes were testing, build tools, performance. And the summit? Architecture patterns, CI/CD, team leadership. It took YEARS to climb that mountain."
+    },
+    {
+      "id": "scene_03_new_world_intro",
+      "title": "The New World - Introduction",
+      "duration_seconds": 25,
+      "visual_notes": "Bright optimistic color shift, sit down conversational",
+      "script": "Now here's where it gets interesting. AI didn't make development skills obsolete. It just... reorganized them. There's now two categories: What you MUST know. And what you can DELEGATE."
+    },
+    {
+      "id": "scene_03_must_know",
+      "title": "Skills You Must Know",
+      "duration_seconds": 50,
+      "visual_notes": "Two-column layout, warm colors for essential skills",
+      "script": "What's still essential? Architecture thinking - AI suggests, but YOU decide what fits your context. Data modeling - business logic is domain-specific. Recognizing bad output - AI doesn't know your production environment. Security awareness - stakes are too high to blindly trust. User experience intuition - AI optimizes for code, not humans. And debugging skills - because AI needs YOU to describe the problem correctly."
+    },
+    {
+      "id": "scene_03_delegatable",
+      "title": "What You Can Delegate",
+      "duration_seconds": 40,
+      "visual_notes": "Cool colors, skills moving between columns animation",
+      "script": "What's now delegatable? Syntax memorization - AI rarely gets this wrong. Boilerplate code - patterns are predictable. CSS styling - may need tweaks but mostly excellent. Documentation lookup - faster than MDN. Error message interpretation - great at pattern matching. And my personal favorite... regex. Finally, READABLE regex."
+    },
+    {
+      "id": "scene_04_comparison_intro",
+      "title": "Timeline Comparison - Setup",
+      "duration_seconds": 20,
+      "visual_notes": "Two parallel timelines appear side by side",
+      "script": "Let's compare two developers starting TODAY. Developer A, learning the traditional way. Developer B, learning WITH AI. Same goal: Build a fullstack application. Different approaches. VERY different timelines."
+    },
+    {
+      "id": "scene_04_traditional",
+      "title": "Traditional Learning Path",
+      "duration_seconds": 45,
+      "visual_notes": "Left timeline highlights, trudging runner animation",
+      "script": "Developer A's journey. Months one through three, HTML and CSS basics - excited but overwhelmed. Months four through six, core JavaScript - confused by 'this'. Months seven through twelve, pick ONE framework, learn its ecosystem - identity crisis. Year two, backend and databases - wait, there's MORE? Year three, DevOps basics - why is production different? Year four plus, actually productive... in your ONE stack. Comfortable, but trapped."
+    },
+    {
+      "id": "scene_04_ai_path",
+      "title": "AI-Assisted Learning Path",
+      "duration_seconds": 40,
+      "visual_notes": "Right timeline highlights, sprinting runner animation",
+      "script": "Developer B's journey. Week one, scaffolding - describe what you want, AI generates structure. Week two, evaluation - learn to read AI output, spot issues. Week three, architecture - understand WHY decisions were made. Week four, ship it - deploy something real, get user feedback. Month two onwards, fill knowledge gaps as needed. Month three? Work across ANY framework based on project needs. Total time to fullstack competency: two to three months."
+    },
+    {
+      "id": "scene_05_gains_intro",
+      "title": "Biggest Gains - Introduction",
+      "duration_seconds": 15,
+      "visual_notes": "Energetic list-style delivery, counting on fingers",
+      "script": "Let me tell you what actually changes with AI coding tools."
+    },
+    {
+      "id": "scene_05_gains_list",
+      "title": "The Four Gains",
+      "duration_seconds": 30,
+      "visual_notes": "Code snippets flipping between languages",
+      "script": "Number one: Boilerplate DEATH. Number two: Context switching between languages? Gone. Number three: Learning new frameworks in HOURS, not months. Number four: You focus on WHAT, not HOW."
+    },
+    {
+      "id": "scene_05_proof",
+      "title": "Real World Proof",
+      "duration_seconds": 35,
+      "visual_notes": "Show QMS app screenshots, actual interface",
+      "script": "And here's the real one. I built an entire QMS platform in SvelteKit. Quality Management System - multi-tenant authentication, role-based permissions, CRUD operations for ten plus entities, real-time subscriptions, dashboard with analytics. My Svelte experience before? Zero. Time to functional MVP? Two weeks. Would have taken WITHOUT AI? Three to four months. Minimum."
+    },
+    {
+      "id": "scene_06_personal_intro",
+      "title": "My Angular Story - Introduction",
+      "duration_seconds": 20,
+      "visual_notes": "Sit back, reflective tone, old coding setup appears",
+      "script": "Let me get personal for a second. I started learning Angular in 2017. The investment was... significant. Pluralsight courses. Udemy certificates. Conference tickets. Side projects. Late nights debugging Zone.js."
+    },
+    {
+      "id": "scene_06_identity",
+      "title": "The Framework Identity",
+      "duration_seconds": 35,
+      "visual_notes": "Air quotes gesture, emotional journey timeline",
+      "script": "Angular wasn't just a tool. It was my IDENTITY. 'I'm an Angular developer.' And here's the thing about identity... it creates FEAR. Learning React? That would take ANOTHER year. Learning Vue? ANOTHER year. Learning Svelte? You get the idea. The sunk cost kept me trapped. Until AI changed the math."
+    },
+    {
+      "id": "scene_06_evolution",
+      "title": "The Emotional Evolution",
+      "duration_seconds": 40,
+      "visual_notes": "Confidence meter visualization over years",
+      "script": "2017: Angular is the future! Enterprise-ready! 2018: Wait, React has more jobs? Whatever, Angular is better. 2019: Vue is interesting but I've invested too much. 2020: Svelte looks cool but... NgModules forever? 2021: Maybe I should learn React... someday. 2022: The ecosystem is fragmenting. This is fine. 2023: AI can write React code FOR me? Mind. Blown. 2024: I'm not an Angular developer anymore. I'm a developer who CAN USE Angular."
+    },
+    {
+      "id": "scene_07_challenge_intro",
+      "title": "The Conversion Challenge",
+      "duration_seconds": 15,
+      "visual_notes": "Challenge mode activated, game show energy, timer appears",
+      "script": "Alright, let's prove this. I'm going to convert an Angular component to React AND SvelteKit. With AI assistance. Ready? GO."
+    },
+    {
+      "id": "scene_07_challenge_result",
+      "title": "Challenge Results",
+      "duration_seconds": 25,
+      "visual_notes": "Split screen three editors, timer stops, lean back",
+      "script": "Angular to React: 3 minutes. Angular to SvelteKit: 4 minutes. Now imagine doing that without AI. That's a WEEK of work. At least. The 45 lines of Angular became 20 lines of React and 15 lines of Svelte. Same functionality. Less ceremony."
+    },
+    {
+      "id": "scene_08_goodbye_intro",
+      "title": "Goodbye Angular - Introduction",
+      "duration_seconds": 15,
+      "visual_notes": "Mock emotional tone, holding picture frame",
+      "script": "Angular... we need to talk. It's not you... actually, wait. It IS you."
+    },
+    {
+      "id": "scene_08_wont_miss",
+      "title": "What I Won't Miss",
+      "duration_seconds": 50,
+      "visual_notes": "Rapid fire list, meme inserts, breakup song playing",
+      "script": "Things I won't miss. NgModules - declarations, imports, exports, providers, entryComponents... seriously, why? Four files per component - .ts, .html, .scss, .spec.ts - just to say Hello World. RxJS subscription management - takeUntil, unsubscribe, async pipe, memory leaks everywhere. Zone.js magic - works until it doesn't, then good luck debugging. That error message: 'Expression has changed after it was checked.' The one that haunts my dreams. And ng serve compilation times. Time to make coffee... and a three-course meal."
+    },
+    {
+      "id": "scene_08_will_miss",
+      "title": "What I'll Actually Miss",
+      "duration_seconds": 30,
+      "visual_notes": "Softer tone, genuine appreciation",
+      "script": "But honestly? There are things I'll miss. Strong opinions - sometimes it's nice when decisions are made for you. TypeScript-first mentality - before React caught up. The comprehensive CLI - ng generate just WORKED. And the community - genuinely helpful, battle-tested knowledge. Angular taught me a lot. I just don't need to be married to it anymore."
+    },
+    {
+      "id": "scene_09_twist_setup",
+      "title": "Plot Twist - Setup",
+      "duration_seconds": 15,
+      "visual_notes": "Dramatic pause, look down, conflicted expression",
+      "script": "Actually... wait. I can't do this. I can't say goodbye to Angular. I still... love Angular."
+    },
+    {
+      "id": "scene_09_twist_reveal",
+      "title": "Plot Twist - Reveal",
+      "duration_seconds": 35,
+      "visual_notes": "Energy shift, smile, framework logos appear around",
+      "script": "But thanks to AI... our marriage is now POLYGAMOUS. I can be fluent in ALL of them. The question isn't which framework to MARRY anymore. It's which one to use for THIS project. Greenfield startup? SvelteKit. Enterprise behemoth? Angular. Maximum ecosystem? React. Progressive enhancement? Nuxt."
+    },
+    {
+      "id": "scene_09_declaration",
+      "title": "The Declaration",
+      "duration_seconds": 20,
+      "visual_notes": "Stand up, declarative, spread arms, confetti effect",
+      "script": "I'm not a framework developer anymore. I'm just a DEVELOPER. And yes... even PHP. Sometimes."
+    },
+    {
+      "id": "scene_10_cta",
+      "title": "Call to Action",
+      "duration_seconds": 20,
+      "visual_notes": "Direct to camera, energetic, subscribe button pulses",
+      "script": "If this hit home, smash that subscribe. Drop a comment: What framework are YOU adding to your relationship? Next video: I'm converting an ENTIRE production Angular app to SvelteKit. My boss doesn't know yet."
+    }
+  ],
+  "total_scenes": 26,
+  "estimated_character_count": 6500,
+  "estimated_elevenlabs_cost": "$1.95"
+}

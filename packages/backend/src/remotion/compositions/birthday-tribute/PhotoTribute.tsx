@@ -10,7 +10,7 @@ import {
   interpolate,
   spring,
 } from 'remotion';
-import { Orientation } from '../BirthdayTribute';
+import { Orientation, tributeFonts } from '../BirthdayTribute';
 
 interface Props {
   orientation: Orientation;
@@ -84,6 +84,15 @@ export const PhotoTribute: React.FC<Props> = ({
         );
       })}
 
+      {/* Cinematic vignette — subtle radial darkening at edges, pulls eye to subject */}
+      <AbsoluteFill
+        style={{
+          background:
+            'radial-gradient(ellipse at center, transparent 50%, rgba(0,0,0,0.35) 100%)',
+          pointerEvents: 'none',
+        }}
+      />
+
       {/* Dark gradient overlay for label legibility */}
       <AbsoluteFill
         style={{
@@ -120,8 +129,8 @@ export const PhotoTribute: React.FC<Props> = ({
           />
           <div
             style={{
-              fontFamily: 'Georgia, serif',
-              fontSize: orientation === 'vertical' ? 52 : 44,
+              fontFamily: tributeFonts.serif,
+              fontSize: orientation === 'vertical' ? 56 : 46,
               fontWeight: 400,
               color: '#fff',
               letterSpacing: 1,

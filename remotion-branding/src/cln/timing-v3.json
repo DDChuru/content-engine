@@ -1,0 +1,217 @@
+{
+  "fps": 30,
+  "total_seconds": 240.706,
+  "total_frames": 7222,
+  "beats": [
+    {
+      "id": "intro",
+      "shot": "v3-phone-01-home-scan-entry",
+      "chip": "Home overview",
+      "ring": null,
+      "audio": "cln-tutorial/audio/01-intro.mp3",
+      "voStart": 0.6,
+      "duration": 12.016,
+      "text": "Cleaning verification on e-wizer — the whole loop, start to finish. This is your day: areas covered, checks done, and anything waiting on follow-up. Let's work."
+    },
+    {
+      "id": "homeHero",
+      "shot": "v3-phone-01-home-scan-entry",
+      "chip": "Home -> Scan QR code",
+      "ring": "homeHeroScan",
+      "audio": "cln-tutorial/audio/01a-home-hero.mp3",
+      "text": "From Home, start with the Scan QR code button in the hero. This is the main way to begin your area check-in.",
+      "voStart": 13.566,
+      "duration": 7.941
+    },
+    {
+      "id": "controlScan",
+      "shot": "v3-phone-01-home-scan-entry",
+      "chip": "Control panel scan",
+      "ring": "controlScan",
+      "audio": "cln-tutorial/audio/01b-control-scan.mp3",
+      "text": "You can also use the centre scan button in the control panel at any time. It opens the same scanner and follows the same check-in path.",
+      "voStart": 22.457,
+      "duration": 9.038
+    },
+    {
+      "id": "scanFrameV3",
+      "shot": "v3-phone-02-scanner-frame-qr",
+      "chip": "QR inside the frame",
+      "ring": "scanFrameV3",
+      "audio": "cln-tutorial/audio/02a-scan-frame.mp3",
+      "text": "Point the scan frame at the zone QR. Once the area is recognised, e-wizer checks you in and opens that zone.",
+      "voStart": 32.445,
+      "duration": 9.43
+    },
+    {
+      "id": "zoneDue",
+      "shot": "v3-phone-04-simplot-due-tasks",
+      "chip": "Scheduled work",
+      "ring": "dueTasks",
+      "audio": "cln-tutorial/audio/03a-zone-due.mp3",
+      "text": "If work is scheduled for today, it appears under Due. Start there first. These are the checks expected for this zone today.",
+      "voStart": 42.825,
+      "duration": 8.49
+    },
+    {
+      "id": "noDue",
+      "shot": "v3-phone-06-spiral-no-due",
+      "chip": "No scheduled tasks",
+      "ring": "noDueState",
+      "audio": "cln-tutorial/audio/03b-no-due.mp3",
+      "text": "Sometimes nothing shows under Due. That can happen on a holiday, an extra booked shift, an ad-hoc clean, or a weekly or monthly clean that is not due today.",
+      "voStart": 52.265,
+      "duration": 12.016
+    },
+    {
+      "id": "offSchedule",
+      "shot": "v3-phone-07-spiral-off-schedule",
+      "chip": "Off-schedule work",
+      "ring": "offScheduleList",
+      "audio": "cln-tutorial/audio/03c-off-schedule.mp3",
+      "text": "Open Off-schedule. This is the full zone catalogue for work done outside today's schedule. Capture only what you actually did. Nothing here is forced.",
+      "voStart": 65.231,
+      "duration": 12.356
+    },
+    {
+      "id": "pass",
+      "shot": "shot-04-zone-first-pass",
+      "chip": "Clean? One tap",
+      "ring": "greenTick",
+      "audio": "cln-tutorial/audio/04-pass.mp3",
+      "voStart": 78.537,
+      "duration": 5.564,
+      "text": "Surface checks out clean? One tap on the green tick. Done. Next."
+    },
+    {
+      "id": "fail",
+      "shot": "shot-06-remedial-banner",
+      "chip": "Found a problem? Tap the cross",
+      "ring": "remedialBanner",
+      "audio": "cln-tutorial/audio/05-fail.mp3",
+      "voStart": 85.051,
+      "duration": 11.703,
+      "text": "Found a problem? Tap the red cross — and the remedial action capture opens. This is where the real value lives, so slow down right here."
+    },
+    {
+      "id": "photo",
+      "shot": "shot-08-annotated",
+      "chip": "Photo: optional — but gold",
+      "ring": "photoArea",
+      "audio": "cln-tutorial/audio/06-photo.mp3",
+      "voStart": 97.704,
+      "duration": 11.363,
+      "text": "Photos are optional — but they're gold. Snap the finding, circle the dirt, drop an arrow. Ten seconds now saves an argument later."
+    },
+    {
+      "id": "grade",
+      "shot": "shot-09-grade-major",
+      "chip": "Grade the finding",
+      "ring": "majorChip",
+      "audio": "cln-tutorial/audio/07-grade.mp3",
+      "voStart": 110.017,
+      "duration": 12.669,
+      "text": "Grade it. Minor — one. Major — two. Critical — three. Dried dough caked on a rounder frame? That's a Major."
+    },
+    {
+      "id": "severityGuide",
+      "shot": "shot-09-grade-major",
+      "chip": "Grading key",
+      "ring": null,
+      "audio": "cln-tutorial/audio/08-severity-guide.mp3",
+      "voStart": 123.636,
+      "duration": 27.611,
+      "text": "This is exactly the way you are used to grading findings. One is still Minor: traces on non food contact surfaces, low contamination risk. Two is Major: traces on equipment contact surfaces, high product contamination risk. Dried dough on the rounder frame fits here. Three is Critical: not cleaned, gross soiling, not fit for production."
+    },
+    {
+      "id": "action",
+      "shot": "shot-10-remedial-text",
+      "chip": "What, and WHO",
+      "ring": "actionBox",
+      "audio": "cln-tutorial/audio/08-action.mp3",
+      "voStart": 152.197,
+      "duration": 9.691,
+      "text": "Now write down what you found, and what happens about it. Then give it an owner. Jabulani is cleaning this one. No owner, no action."
+    },
+    {
+      "id": "submit",
+      "shot": "shot-11-submit-confirmed",
+      "chip": "Submit — on the record",
+      "ring": "dialog",
+      "audio": "cln-tutorial/audio/09-submit.mp3",
+      "voStart": 162.838,
+      "duration": 4.075,
+      "text": "Submit. Recorded, time-stamped, on the record."
+    },
+    {
+      "id": "passrem",
+      "shot": "shot-12-pass-remaining",
+      "chip": "Pass the rest — one tap",
+      "ring": "passRemaining",
+      "audio": "cln-tutorial/audio/10-passrem.mp3",
+      "voStart": 167.863,
+      "duration": 9.979,
+      "text": "The rest of the area checks out clean? You've earned the shortcut. PASS REMAINING — nine checks, one tap."
+    },
+    {
+      "id": "confirm",
+      "shot": "shot-12b-pass-dialog",
+      "chip": "Confirm",
+      "ring": "dialog",
+      "audio": "cln-tutorial/audio/11-confirm.mp3",
+      "voStart": 178.792,
+      "duration": 4.127,
+      "text": "Confirm — and they're recorded as passes against your name."
+    },
+    {
+      "id": "complete",
+      "shot": "shot-13-zone-complete",
+      "chip": "Area done — honestly",
+      "ring": "progressCard",
+      "audio": "cln-tutorial/audio/12-complete.mp3",
+      "voStart": 183.869,
+      "duration": 8.594,
+      "text": "Area done. One hundred percent — with the failure honestly on the record. That's not a bad day. That's a credible one."
+    },
+    {
+      "id": "banner",
+      "shot": "shot-14-home-banner",
+      "chip": "NOT done yet — follow up",
+      "ring": "followBanner",
+      "audio": "cln-tutorial/audio/13-banner.mp3",
+      "voStart": 193.413,
+      "duration": 11.938,
+      "text": "But hear me — recording a remedial is NOT the end of the job. Back home, it queues on the follow-up banner. And it stays there until somebody closes it."
+    },
+    {
+      "id": "queue",
+      "shot": "shot-15-followups-rounder",
+      "chip": "The follow-up queue",
+      "ring": "confirmFollowedUp",
+      "audio": "cln-tutorial/audio/14-queue.mp3",
+      "voStart": 206.301,
+      "duration": 13.558,
+      "text": "This is the part you MUST do. Open the queue — every outstanding remedial, graded, with the photo and the owner. Follow up until it's fixed."
+    },
+    {
+      "id": "close",
+      "shot": "shot-16-confirm-followup",
+      "chip": "Verify and close",
+      "ring": "confirmBtn",
+      "audio": "cln-tutorial/audio/15-close.mp3",
+      "voStart": 220.809,
+      "duration": 7.367,
+      "text": "When the work's done, go look at it. Add a note — an after-photo if you like — and confirm."
+    },
+    {
+      "id": "allclear",
+      "shot": "shot-17-all-clear",
+      "chip": "Loop closed",
+      "ring": null,
+      "audio": "cln-tutorial/audio/16-allclear.mp3",
+      "voStart": 229.126,
+      "duration": 9.43,
+      "text": "All clear. Found it, fixed it, followed it up. THAT is cleaning verification — not a tick exercise. A closed loop."
+    }
+  ]
+}

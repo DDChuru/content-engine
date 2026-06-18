@@ -1,0 +1,110 @@
+{
+  "fps": 30,
+  "total_frames": 1076,
+  "total_seconds": 35.854,
+  "audio": "iinm/ch1-narration.mp3",
+  "video": "iinm/ch1.mp4",
+  "videoDur": 15.167,
+  "cues": [
+    [
+      0.5,
+      3.983,
+      "Reporting an incident starts here. First \u2014 what happened?"
+    ],
+    [
+      4.533,
+      6.762,
+      "Tap the type. This one's an injury on duty."
+    ],
+    [
+      7.312,
+      15.346,
+      "Fill in the detail \u2014 the part of the body, and the effect. And watch the right side: the e-wizer guide explains the rule as you go."
+    ],
+    [
+      15.896,
+      21.237,
+      "Set how long they're booked off. Up to thirteen days, it stays a normal lost-time injury."
+    ],
+    [
+      21.787,
+      23.505,
+      "But fourteen days or more \u2014"
+    ],
+    [
+      24.055,
+      30.975,
+      "\u2014 and e-wizer marks it a Section 24: a report to the Department of Labour. The form knew the law for you."
+    ],
+    [
+      31.525,
+      35.054,
+      "Then log the report \u2014 and it routes itself to the right people."
+    ]
+  ],
+  "beats": [
+    {
+      "chip": "Start",
+      "voStart": 0.5,
+      "voEnd": 3.983,
+      "videoSec": 0.3,
+      "guide": false,
+      "s24": false,
+      "end": false
+    },
+    {
+      "chip": "Classify",
+      "voStart": 4.533,
+      "voEnd": 6.762,
+      "videoSec": 2.1,
+      "guide": false,
+      "s24": false,
+      "end": false
+    },
+    {
+      "chip": "Injury detail",
+      "voStart": 7.312,
+      "voEnd": 15.346,
+      "videoSec": 4.4,
+      "guide": true,
+      "s24": false,
+      "end": false
+    },
+    {
+      "chip": "How long off?",
+      "voStart": 15.896,
+      "voEnd": 21.237,
+      "videoSec": 9.2,
+      "guide": false,
+      "s24": false,
+      "end": false
+    },
+    {
+      "chip": "14 days or more",
+      "voStart": 21.787,
+      "voEnd": 23.505,
+      "videoSec": 11.9,
+      "guide": false,
+      "s24": true,
+      "end": false
+    },
+    {
+      "chip": "Section 24",
+      "voStart": 24.055,
+      "voEnd": 30.975,
+      "videoSec": 13.6,
+      "guide": false,
+      "s24": true,
+      "end": false
+    },
+    {
+      "chip": "Log it",
+      "voStart": 31.525,
+      "voEnd": 35.054,
+      "videoSec": 15.0,
+      "guide": false,
+      "s24": false,
+      "end": true
+    }
+  ]
+}

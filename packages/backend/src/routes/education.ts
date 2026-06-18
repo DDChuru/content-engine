@@ -2301,7 +2301,62 @@ router.get('/coverage', async (req, res) => {
 // LESSON GENERATION WITH CLAUDE
 // ---------------------------------------------------------------------------
 
-import { generateLesson, SyllabusTopic } from '../education/lesson-generator.js';
+import { SyllabusTopic } from '../education/lesson-generator.js';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+// Task queue paths - use path relative to this file to find project root
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const ROOT_DIR = path.resolve(__dirname, '../../../..');
+const EDUCATION_QUEUE_FILE = path.join(ROOT_DIR, 'education-task-queue.json');
+
+interface EducationTask {
+  id: string;
+  type: 'generate_lesson';
+  topicCode: string;
+  topic: SyllabusTopic;
+  options: {
+    preferredStyle: string;
+    exampleCount: number;
+    practiceCount: number;
+  };
+  status: 'pending' | 'in_progress' | 'completed' | 'failed';
+  createdAt: string;
+  startedAt?: string;
+  completedAt?: string;
+  error?: string;
+  result?: {
+    outputPath: string;
+    lessonId: string;
+    title: string;
+  };
+}
+
+interface EducationQueue {
+  instructions: string;
+  pendingTasks: EducationTask[];
+  inProgressTasks: EducationTask[];
+  completedTasks: EducationTask[];
+}
+
+async function readQueue(): Promise<EducationQueue> {
+  try {
+    const data = await fs.readFile(EDUCATION_QUEUE_FILE, 'utf-8');
+    return JSON.parse(data);
+  } catch {
+    return {
+      instructions: "Education task queue for Claude Code.",
+      pendingTasks: [],
+      inProgressTasks: [],
+      completedTasks: []
+    };
+  }
+}
+
+async function writeQueue(queue: EducationQueue): Promise<void> {
+  await fs.writeFile(EDUCATION_QUEUE_FILE, JSON.stringify(queue, null, 2));
+}
 
 // Cache for syllabus data
 let syllabusCache: Record<string, SyllabusTopic> | null = null;
@@ -2424,14 +2479,18 @@ router.get('/syllabus/topics', async (req, res) => {
 
 /**
  * POST /api/education/generate/:topicCode
- * Generate a complete lesson for a topic using Claude
+ * Queue a lesson generation task for Claude Code to process
+ *
+ * Architecture: Instead of calling Anthropic API directly, this queues
+ * the task for Claude Code to generate the content. This allows Claude
+ * Code to be the central "brain" for content generation.
  */
 router.post('/generate/:topicCode', async (req, res) => {
   try {
     const { topicCode } = req.params;
     const { preferredStyle, exampleCount, practiceCount } = req.body;
 
-    console.log(`\n🎓 Starting lesson generation for ${topicCode}`);
+    console.log(`\n🎓 Queuing lesson generation for ${topicCode}`);
 
     // Load syllabus data
     const syllabusData = await loadSyllabusData();
@@ -2450,42 +2509,180 @@ router.post('/generate/:topicCode', async (req, res) => {
     console.log(`   Level: ${topic.level}`);
     console.log(`   Content points: ${topic.content.length}`);
 
-    // Generate the lesson using Claude
-    const lesson = await generateLesson(topic, {
-      preferredStyle: preferredStyle || 'auto',
-      exampleCount: exampleCount || 6,
-      practiceCount: practiceCount || 10
-    });
-
-    // Save to file
+    // Check if lesson already exists
     const outputDir = `${process.cwd()}/output/lessons`;
-    await fs.mkdir(outputDir, { recursive: true });
-
     const outputPath = `${outputDir}/igcse-0580-${normalizedCode}.json`;
-    await fs.writeFile(outputPath, JSON.stringify(lesson, null, 2));
 
-    console.log(`\n✅ Lesson saved to ${outputPath}`);
+    try {
+      const existingLesson = await fs.readFile(outputPath, 'utf-8');
+      const lesson = JSON.parse(existingLesson);
+      console.log(`✅ Lesson already exists for ${topic.title}`);
+      return res.json({
+        success: true,
+        status: 'already_generated',
+        message: `Lesson already exists for ${topic.title}`,
+        lesson: {
+          id: lesson.id,
+          title: lesson.title,
+          level: lesson.level,
+          estimatedDuration: lesson.estimatedDuration,
+          sectionsCount: lesson.theorySections?.length || 0,
+          examplesCount: lesson.workedExamples?.length || 0,
+          practiceCount: lesson.practiceQuestions?.length || 0
+        },
+        outputPath
+      });
+    } catch {
+      // Lesson doesn't exist, proceed with queuing
+    }
+
+    // Create task for the queue
+    const task: EducationTask = {
+      id: `edu_${Date.now()}_${normalizedCode}`,
+      type: 'generate_lesson',
+      topicCode: normalizedCode,
+      topic,
+      options: {
+        preferredStyle: preferredStyle || 'auto',
+        exampleCount: exampleCount || 6,
+        practiceCount: practiceCount || 10
+      },
+      status: 'pending',
+      createdAt: new Date().toISOString()
+    };
+
+    // Add to queue
+    const queue = await readQueue();
+
+    // Check if already in queue
+    const existingTask = queue.pendingTasks.find(t => t.topicCode === normalizedCode) ||
+                         queue.inProgressTasks.find(t => t.topicCode === normalizedCode);
+
+    if (existingTask) {
+      console.log(`⏳ Task already in queue for ${topic.title}`);
+      return res.json({
+        success: true,
+        status: 'already_queued',
+        message: `Task already queued for ${topic.title}`,
+        taskId: existingTask.id,
+        queuePosition: queue.pendingTasks.findIndex(t => t.id === existingTask.id) + 1
+      });
+    }
+
+    queue.pendingTasks.push(task);
+    await writeQueue(queue);
+
+    console.log(`📋 Task queued: ${task.id}`);
+    console.log(`   Queue position: ${queue.pendingTasks.length}`);
+    console.log(`\n🤖 WAITING FOR CLAUDE CODE TO PROCESS`);
+    console.log(`   Run in Claude Code: "Process education tasks"`);
 
     res.json({
       success: true,
-      message: `Lesson generated for ${topic.title}`,
-      lesson: {
-        id: lesson.id,
-        title: lesson.title,
-        level: lesson.level,
-        estimatedDuration: lesson.estimatedDuration,
-        sectionsCount: lesson.theorySections?.length || 0,
-        examplesCount: lesson.workedExamples?.length || 0,
-        practiceCount: lesson.practiceQuestions?.length || 0
-      },
-      outputPath
+      status: 'queued',
+      message: `Lesson generation queued for ${topic.title}`,
+      taskId: task.id,
+      queuePosition: queue.pendingTasks.length,
+      topic: {
+        code: topic.code,
+        title: topic.title,
+        level: topic.level
+      }
     });
   } catch (error: any) {
-    console.error('Failed to generate lesson:', error);
+    console.error('Failed to queue lesson generation:', error);
     res.status(500).json({
       success: false,
       error: error.message,
       details: error.stack
+    });
+  }
+});
+
+/**
+ * GET /api/education/queue
+ * Get the current state of the education task queue
+ */
+router.get('/queue', async (req, res) => {
+  try {
+    const queue = await readQueue();
+
+    res.json({
+      success: true,
+      queue: {
+        pending: queue.pendingTasks.length,
+        inProgress: queue.inProgressTasks.length,
+        completed: queue.completedTasks.length,
+        tasks: {
+          pending: queue.pendingTasks,
+          inProgress: queue.inProgressTasks,
+          recentlyCompleted: queue.completedTasks.slice(-5)
+        }
+      }
+    });
+  } catch (error: any) {
+    res.status(500).json({
+      success: false,
+      error: error.message
+    });
+  }
+});
+
+/**
+ * POST /api/education/queue/complete/:taskId
+ * Mark a task as completed (called by Claude Code after processing)
+ */
+router.post('/queue/complete/:taskId', async (req, res) => {
+  try {
+    const { taskId } = req.params;
+    const { outputPath, lessonId, title, error } = req.body;
+
+    const queue = await readQueue();
+
+    // Find task in pending or inProgress
+    let task = queue.pendingTasks.find(t => t.id === taskId);
+    let fromList: EducationTask[] = queue.pendingTasks;
+
+    if (!task) {
+      task = queue.inProgressTasks.find(t => t.id === taskId);
+      fromList = queue.inProgressTasks;
+    }
+
+    if (!task) {
+      return res.status(404).json({
+        success: false,
+        error: `Task ${taskId} not found`
+      });
+    }
+
+    // Remove from source list
+    const index = fromList.indexOf(task);
+    fromList.splice(index, 1);
+
+    // Update task
+    task.completedAt = new Date().toISOString();
+    if (error) {
+      task.status = 'failed';
+      task.error = error;
+    } else {
+      task.status = 'completed';
+      task.result = { outputPath, lessonId, title };
+    }
+
+    // Add to completed
+    queue.completedTasks.push(task);
+    await writeQueue(queue);
+
+    console.log(`✅ Task ${taskId} marked as ${task.status}`);
+
+    res.json({
+      success: true,
+      task
+    });
+  } catch (error: any) {
+    res.status(500).json({
+      success: false,
+      error: error.message
     });
   }
 });

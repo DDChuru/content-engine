@@ -117,3 +117,19 @@ packages/backend/*.md
 # Diagrams (generated)
 *.mmd
 test-diagram.png
+
+# Agent / CLI tooling state (machine-local, never commit)
+.agent/
+.agents/
+.claude/
+.codex/
+.factory/
+.gemini/
+.opencode/
+*-task-queue.json
+education-task-queue.json
+
+# Root output/ IS tracked (renders to review across machines); only the
+# heavy packages/backend/output/ stays ignored (rule above).
+!/output/
+!/output/**

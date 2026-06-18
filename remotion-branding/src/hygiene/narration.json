@@ -1,0 +1,137 @@
+{
+  "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+  "voiceSettings": {
+    "stability": 0.55,
+    "similarity_boost": 0.8,
+    "style": 0.35,
+    "use_speaker_boost": true
+  },
+  "beats": [
+    {
+      "id": "intro",
+      "shot": "daily-hygiene-01-home-tile",
+      "chip": "Daily Hygiene",
+      "ring": null,
+      "script": "Daily Hygiene creates a clear hygiene record for the shift. You confirm who is present, indicate who is off duty, and record whether each working operative is clear or needs action."
+    },
+    {
+      "id": "setup",
+      "shot": "daily-hygiene-02-staff-allocation",
+      "chip": "Confirm context",
+      "ring": "staffAllocation",
+      "script": "For the best experience, make sure the site and shift context is ready before the checklist starts. Daily Hygiene then uses that context so you can focus on the hygiene check itself."
+    },
+    {
+      "id": "home",
+      "shot": "daily-hygiene-01-home-tile",
+      "chip": "Open the module",
+      "ring": "homeTile",
+      "script": "From Home, open Daily Hygiene Checklist. This takes you to today's hygiene sessions for the site."
+    },
+    {
+      "id": "newChecklist",
+      "shot": "daily-hygiene-03-list",
+      "chip": "Start a checklist",
+      "ring": "newChecklistButton",
+      "script": "Tap New hygiene checklist. If this is the first check of the day, it creates the hygiene record you are about to complete."
+    },
+    {
+      "id": "checkpoint",
+      "shot": "daily-hygiene-04-checkpoint-modal",
+      "chip": "Choose when",
+      "ring": "checkpointOptions",
+      "script": "Choose when the check is happening. Use Start of shift for the first hygiene check. Use During shift when the team is being checked again later."
+    },
+    {
+      "id": "shift",
+      "shot": "daily-hygiene-05-shift-picker",
+      "chip": "Tie it to shift",
+      "ring": "shiftChoice",
+      "script": "Tie the checklist to the shift whenever you can. That keeps the record clear for supervisors and avoids confusion about which team was checked."
+    },
+    {
+      "id": "roster",
+      "shot": "daily-hygiene-06-roster-unchecked",
+      "chip": "Checklist opens",
+      "ring": "uncheckedRoster",
+      "script": "The checklist opens with the operatives for that shift context. Every operative shown must end with a status before the session can be completed."
+    },
+    {
+      "id": "offDuty",
+      "shot": "daily-hygiene-07-status-picker",
+      "chip": "Absences first",
+      "ring": "statusOptions",
+      "script": "Start by indicating anyone who is off duty or absent from the shift. This keeps the record honest before you check the people who are actually present."
+    },
+    {
+      "id": "offDutyMarked",
+      "shot": "daily-hygiene-08-off-duty-marked",
+      "chip": "Off duty marked",
+      "ring": "offDutyRow",
+      "script": "Off duty is absence, not a hygiene verdict. It keeps the person out of the hygiene outcome, and it does not unlock Pass all remaining clear."
+    },
+    {
+      "id": "gate",
+      "shot": "daily-hygiene-09-pass-all-gated",
+      "chip": "Gate is locked",
+      "ring": "passAllGate",
+      "script": "The app needs one real verification first. Mark one present operative clear, or flag a real exception, before passing the rest."
+    },
+    {
+      "id": "oneClear",
+      "shot": "daily-hygiene-10-one-clear",
+      "chip": "One clear check",
+      "ring": "clearRow",
+      "script": "If everything is fine, check one present operative and mark them Clear. That proves the check has started properly and unlocks the shortcut."
+    },
+    {
+      "id": "passAll",
+      "shot": "daily-hygiene-10-one-clear",
+      "chip": "Pass the clear rest",
+      "ring": "passAllButton",
+      "script": "Now use Pass all remaining clear. It only applies to people who still need a status; it does not overwrite the off duty people you already marked."
+    },
+    {
+      "id": "afterPassAll",
+      "shot": "daily-hygiene-11-pass-all-complete-roster",
+      "chip": "Ready to complete",
+      "ring": "completeButton",
+      "script": "When the remaining operatives are all clear, the footer changes to Complete session. That is the fast path for a clean shift."
+    },
+    {
+      "id": "issuePath",
+      "shot": "daily-hygiene-12-status-change-to-exception",
+      "chip": "If there is an issue",
+      "ring": "exceptionOption",
+      "script": "If someone has a hygiene issue, do not pass them. Change that operative to Exception so the problem is captured instead of hidden inside the clear group."
+    },
+    {
+      "id": "exceptionCapture",
+      "shot": "daily-hygiene-13-exception-modal-clean",
+      "chip": "Record the issue",
+      "ring": "exceptionCriterion",
+      "script": "Pick the failed criterion, write the action taken, and add a photo if it helps prove the issue or the correction."
+    },
+    {
+      "id": "exceptionRecorded",
+      "shot": "daily-hygiene-14-exception-recorded",
+      "chip": "Record each issue",
+      "ring": "exceptionRow",
+      "script": "If more than one operative has an issue, record each affected operative first. Pass all is only for the clear remainder."
+    },
+    {
+      "id": "complete",
+      "shot": "daily-hygiene-15-session-completed-alert",
+      "chip": "Complete",
+      "ring": "completedAlert",
+      "script": "When every operative shown has a status, complete the session. The checklist is now an honest hygiene record: who was off duty, who was clear, and who needed action."
+    },
+    {
+      "id": "summary",
+      "shot": "daily-hygiene-16-session-complete-quiet",
+      "chip": "Close the loop",
+      "ring": null,
+      "script": "The order is simple: confirm the shift context, indicate off duty first, do one real verification, record every exception, then pass only the clear remainder and complete the session."
+    }
+  ]
+}

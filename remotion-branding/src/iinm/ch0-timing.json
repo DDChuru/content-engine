@@ -1,0 +1,121 @@
+{
+  "fps": 30,
+  "total_frames": 1949,
+  "total_seconds": 64.98,
+  "audio": "iinm/ch0-narration.mp3",
+  "cues": [
+    [
+      11.452,
+      16.514,
+      "A captured incident protects three things: your people, your site, and you."
+    ],
+    [
+      33.292,
+      36.357,
+      "Welcome to the Incidents, Injuries and Near-Misses guide."
+    ],
+    [
+      36.857,
+      40.154,
+      "Watch with the app open. Find your job on the pyramid."
+    ],
+    [
+      40.654,
+      45.298,
+      "The site manager captures and investigates \u2014 the area manager can too."
+    ],
+    [
+      45.798,
+      49.049,
+      "The area manager verifies the action and signs it off."
+    ],
+    [
+      49.549,
+      51.499,
+      "SHEQ reviews and closes it out."
+    ],
+    [
+      51.999,
+      53.532,
+      "The GM keeps the overview."
+    ],
+    [
+      54.032,
+      56.4,
+      "The one rule: every incident is recorded."
+    ],
+    [
+      56.9,
+      61.498,
+      "Serious ones \u2014 or a dangerous occurrence \u2014 go to the Department of Labour."
+    ],
+    [
+      61.998,
+      64.181,
+      "Next, start here: capture a report."
+    ]
+  ],
+  "segments": [
+    {
+      "name": "why_open",
+      "durFrames": 188
+    },
+    {
+      "name": "why_act",
+      "durFrames": 138
+    },
+    {
+      "name": "why_protect",
+      "durFrames": 195
+    },
+    {
+      "name": "why_prevent",
+      "durFrames": 154
+    },
+    {
+      "name": "why_proof",
+      "durFrames": 185
+    },
+    {
+      "name": "why_cta",
+      "durFrames": 122
+    },
+    {
+      "name": "coldopen",
+      "durFrames": 116
+    },
+    {
+      "name": "avatar",
+      "durFrames": 114
+    },
+    {
+      "name": "walk",
+      "durFrames": 401
+    },
+    {
+      "name": "legal",
+      "durFrames": 86
+    },
+    {
+      "name": "teaser",
+      "durFrames": 153
+    },
+    {
+      "name": "outro",
+      "durFrames": 97
+    }
+  ],
+  "segmentText": {
+    "why_open": "Every shift, real things happen on the floor \u2014 a slip, a cut, a near miss.",
+    "why_act": "What you do next matters. Capture it \u2014 quickly, honestly.",
+    "why_prevent": "It stops a small problem today from becoming a serious one tomorrow.",
+    "why_proof": "When the law needs answers, the proof is already there \u2014 complete, and on time.",
+    "why_cta": "That's what this guide is for. Let's walk through it."
+  },
+  "walkTierStarts": [
+    8,
+    162,
+    274,
+    348
+  ]
+}

@@ -27,7 +27,9 @@ export default {
         workspace: {
           video: '#ef4444',       // Red for video
           education: '#22c55e',   // Green for education
-          faceless: '#ec4899',    // Pink for faceless creator
+          life: '#f97316',        // Orange for life stories
+          strategy: '#f59e0b',    // Amber for strategy canvas
+          training: '#14b8a6',    // Teal for training lab
           media: '#8b5cf6',       // Purple for media
         },
       },

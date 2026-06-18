@@ -1,0 +1,82 @@
+{
+  "fps": 30,
+  "total_frames": 820,
+  "total_seconds": 27.324,
+  "audio": "iinm/ch2-narration.mp3",
+  "video": "iinm/ch2.mp4",
+  "title": "When no one is hurt",
+  "cues": [
+    [
+      0.5,
+      5.33,
+      "Not every incident is an injury. Sometimes nobody is hurt \u2014 and it still matters."
+    ],
+    [
+      5.88,
+      9.781,
+      "Pick what happened. Here, property was damaged \u2014 and no one was hurt."
+    ],
+    [
+      10.331,
+      15.811,
+      "Open Advanced \u2014 dangerous occurrences. The e-wizer guide explains why these still count."
+    ],
+    [
+      16.361,
+      22.584,
+      "Flag a hazardous spill, and e-wizer raises a Section 24 \u2014 with no injury at all."
+    ],
+    [
+      23.134,
+      26.524,
+      "The danger alone is reportable. Capture it, and you're covered."
+    ]
+  ],
+  "beats": [
+    {
+      "chip": "Not just injuries",
+      "voStart": 0.5,
+      "voEnd": 5.33,
+      "videoSec": 0,
+      "guide": false,
+      "s24": false,
+      "end": false
+    },
+    {
+      "chip": "What happened?",
+      "voStart": 5.88,
+      "voEnd": 9.781,
+      "videoSec": 0,
+      "guide": false,
+      "s24": false,
+      "end": false
+    },
+    {
+      "chip": "Dangerous occurrence",
+      "voStart": 10.331,
+      "voEnd": 15.811,
+      "videoSec": 0,
+      "guide": true,
+      "s24": false,
+      "end": false
+    },
+    {
+      "chip": "Section 24",
+      "voStart": 16.361,
+      "voEnd": 22.584,
+      "videoSec": 0,
+      "guide": false,
+      "s24": true,
+      "end": false
+    },
+    {
+      "chip": "Reportable",
+      "voStart": 23.134,
+      "voEnd": 26.524,
+      "videoSec": 0,
+      "guide": false,
+      "s24": false,
+      "end": true
+    }
+  ]
+}

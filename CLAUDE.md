@@ -81,7 +81,72 @@ npm run build:backend
 npm run build:frontend
 ```
 
+## Reserved Ports - CRITICAL
+
+**⚠️ NEVER kill or use these ports:**
+
+| Port | Service | Reason |
+|------|---------|--------|
+| **3210** | Claude Code WebSocket | Claude Code's browser extension uses this port. Killing it disconnects the active session. |
+
+**Safe ports for this project:**
+- 3000 - Frontend (Next.js)
+- 3001 - Backend API (Express)
+- 3002 - Backend alternate
+- 3003 - Life Stories app
+- 3215-3220 - Remotion preview servers
+
+If a port conflict occurs with 3210, **change the conflicting service's port, never kill 3210**.
+
 ## Architecture Patterns
+
+### Narration-Driven Video Rendering (CRITICAL)
+
+**The #1 pattern in this codebase. Read this before touching any Remotion composition.**
+
+**Core Principle:** Narration timestamps drive visual element timing. Visual elements appear when mentioned in the narration, synchronized to word-level Whisper transcription data. **NEVER** treat narration as a caption overlay — it is the timing source for all visual animations.
+
+**Anti-Patterns (DO NOT DO):**
+- Adding captions/subtitles on top of existing visuals
+- Hardcoding animation keyframes without reference to audio timing
+- Using fixed durations instead of transcript-derived timestamps
+- Creating a composition without first reading the transcript JSON
+
+**Canonical Pattern — `useCue()` hook:**
+```typescript
+// From EcowizePitchFull.tsx — the proven pattern for all compositions
+function useCue(cueTimeSeconds: number, fadeDuration = 0.5) {
+  const frame = useCurrentFrame();
+  const { fps } = useVideoConfig();
+  const cueFrame = cueTimeSeconds * fps;
+  const opacity = interpolate(
+    frame,
+    [cueFrame, cueFrame + fadeDuration * fps],
+    [0, 1],
+    { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' }
+  );
+  return { opacity, isActive: frame >= cueFrame };
+}
+```
+
+**How timing flows:**
+```
+Audio Recording → Whisper API (word timestamps) → Transcript JSON
+→ Cue Resolution (keyword → timestamp) → useCue(timestamp)
+→ Visual element appears when narrator says the keyword
+```
+
+**Reference files:**
+- `EcowizePitchFull.tsx` — Battle-tested 2000-line composition with 15 slides, all narration-synced
+- `transcripts/ecowize/slide-01.json` — Canonical transcript format with word-level timing
+- `ProjectComposition.tsx` — Generic manifest-driven composition (reusable for any project)
+
+**Content Studio Pipeline (`/storyboard → /script → /transcribe → /render`):**
+- `/script` — Generates narration with `{{cue:keyword}}` markers for visual sync
+- `/transcribe` — Calls Whisper API, resolves cue markers to actual word timestamps
+- `/render` — Validates all phases, passes manifest to Remotion
+- Project API: `POST/GET /api/studio/projects`, `POST /api/studio/projects/:slug/transcribe`
+- Types: `packages/shared/src/types/studio-manifest.ts` (StudioProjectManifest, SlideManifest, TranscriptData, CuePoint)
 
 ### CSC Architecture (Company-Site-Collection)
 

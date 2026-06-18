@@ -1,9 +1,29 @@
 import React from 'react';
-import { AbsoluteFill, Audio, Sequence, staticFile } from 'remotion';
+import { AbsoluteFill, Audio, interpolate, Sequence, staticFile } from 'remotion';
+import { loadFont as loadEBGaramond } from '@remotion/google-fonts/EBGaramond';
 import { OpeningFace } from './birthday-tribute/OpeningFace';
 import { PhotoTribute } from './birthday-tribute/PhotoTribute';
 import { ClosingFace } from './birthday-tribute/ClosingFace';
 import { EndCard } from './birthday-tribute/EndCard';
+import { Captions } from './birthday-tribute/Captions';
+import { FilmGrain } from './birthday-tribute/FilmGrain';
+
+// Load EB Garamond once at module scope — used by name labels and end card.
+// Selected for its quiet, literary serif character — pairs well with the slow,
+// reflective tone of the tribute. Italic loaded for the end card "Plus one." line.
+const { fontFamily: serifFont } = loadEBGaramond('normal', {
+  weights: ['400', '500'],
+  subsets: ['latin'],
+});
+const { fontFamily: serifItalicFont } = loadEBGaramond('italic', {
+  weights: ['400'],
+  subsets: ['latin'],
+});
+
+export const tributeFonts = {
+  serif: serifFont,
+  serifItalic: serifItalicFont,
+};
 
 export type Orientation = 'vertical' | 'horizontal';
 
@@ -52,16 +72,29 @@ export const BirthdayTribute: React.FC<BirthdayTributeProps> = ({ orientation })
 
   return (
     <AbsoluteFill style={{ backgroundColor: '#0a0a0f' }}>
-      {/* Quiet instrumental music bed throughout */}
-      {/* TEMP: bumped to 0.45 for evaluation — drop back to 0.15 for final */}
+      {/* Quiet instrumental music bed throughout, ducking out before the closing line.
+          Music file is ~102s, composition is ~113s. We fade the bed from 0.45 → 0
+          between frames 2850-3060 (95s-102s) so the strongest line of the closing VO
+          ("Thank you for standing with me when standing was the hardest thing in the world.")
+          lands in near-silence — a key emotional payoff in tribute videos. */}
       <Audio
         src={staticFile('birthday-tribute/audio/music-bed.mp3')}
-        volume={0.45}
+        volume={(f) =>
+          interpolate(f, [0, 2850, 3060], [0.3, 0.3, 0], {
+            extrapolateLeft: 'clamp',
+            extrapolateRight: 'clamp',
+          })
+        }
       />
 
       {/* Sections 1+2: Opening face (0:00 - 0:28) */}
       <Sequence from={sec(t.opening, fps)} durationInFrames={sec(d.opening, fps)}>
         <OpeningFace orientation={orientation} />
+        <Captions
+          source="birthday-tribute/captions/opening.json"
+          orientation={orientation}
+          bottomOffset={140}
+        />
       </Sequence>
 
       {/* Section 3: Mum (0:28 - 0:45) */}
@@ -76,6 +109,10 @@ export const BirthdayTribute: React.FC<BirthdayTributeProps> = ({ orientation })
           nameLabel="Mum — The Queen Mamoyo"
           audioSrc="birthday-tribute/audio/vo-mum.mp3"
           accentColor="#d4a574"
+        />
+        <Captions
+          source="birthday-tribute/captions/mum.json"
+          orientation={orientation}
         />
       </Sequence>
 
@@ -92,6 +129,10 @@ export const BirthdayTribute: React.FC<BirthdayTributeProps> = ({ orientation })
           audioSrc="birthday-tribute/audio/vo-family.mp3"
           accentColor="#c89b6c"
         />
+        <Captions
+          source="birthday-tribute/captions/family.json"
+          orientation={orientation}
+        />
       </Sequence>
 
       {/* Section 5: Sisters (1:00 - 1:13) */}
@@ -107,6 +148,10 @@ export const BirthdayTribute: React.FC<BirthdayTributeProps> = ({ orientation })
           audioSrc="birthday-tribute/audio/vo-sisters.mp3"
           accentColor="#b88860"
         />
+        <Captions
+          source="birthday-tribute/captions/sisters.json"
+          orientation={orientation}
+        />
       </Sequence>
 
       {/* Section 6: Teekay (closes the honoree run; brief Phyllis nod inside this VO) */}
@@ -121,17 +166,30 @@ export const BirthdayTribute: React.FC<BirthdayTributeProps> = ({ orientation })
           audioSrc="birthday-tribute/audio/vo-teekay.mp3"
           accentColor="#a87555"
         />
+        <Captions
+          source="birthday-tribute/captions/teekay.json"
+          orientation={orientation}
+        />
       </Sequence>
 
       {/* Closing face */}
       <Sequence from={sec(t.closing, fps)} durationInFrames={sec(d.closing, fps)}>
         <ClosingFace orientation={orientation} />
+        <Captions
+          source="birthday-tribute/captions/closing.json"
+          orientation={orientation}
+          bottomOffset={140}
+        />
       </Sequence>
 
       {/* End card (1:48 - 1:50) */}
       <Sequence from={sec(t.endCard, fps)} durationInFrames={sec(d.endCard, fps)}>
         <EndCard orientation={orientation} />
       </Sequence>
+
+      {/* Subtle film grain over everything — pointerEvents: none so it never
+          blocks anything. Last in the tree so it composites on top. */}
+      <FilmGrain />
     </AbsoluteFill>
   );
 };

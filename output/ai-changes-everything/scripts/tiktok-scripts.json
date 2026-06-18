@@ -1,0 +1,64 @@
+{
+  "project": "AI Changes Everything",
+  "platform": "TikTok",
+  "voice_id": "gYWKdgLtqjPO3D5uDrDP",
+  "voice_name": "Daniel (ElevenLabs)",
+  "total_videos": 6,
+  "style": "fast-paced, punchy, conversational",
+  "videos": [
+    {
+      "id": "tiktok_01_hook",
+      "title": "The Framework Trap",
+      "duration_target": 60,
+      "hook": "What if your framework knowledge is now optional?",
+      "script": "I spent YEARS mastering Angular. The dependency injection. The RxJS observables. The NgModules. What if I told you that knowledge is now... optional? Here's the thing. I'm not saying Angular is dead. I'm saying the MARRIAGE is dead. You know what I mean? That feeling of 'I'm an Angular developer' - that identity? AI just made it irrelevant. Because now you can be fluent in ALL of them. React? Sure. Vue? Why not. SvelteKit? Absolutely. The question isn't which framework to commit to anymore. It's which one fits THIS project. Stay for the plot twist.",
+      "cta": "Follow for part 2",
+      "hashtags": ["techtok", "devtok", "coding", "angular", "react", "ai"]
+    },
+    {
+      "id": "tiktok_02_old_world",
+      "title": "How We Used to Learn Code",
+      "duration_target": 60,
+      "hook": "Let me show you how developers USED to learn",
+      "script": "Let me paint you a picture of how we USED to learn frontend. Three months just understanding why CSS does... this. Then JavaScript. And not just any JavaScript - you needed to know WHICH JavaScript. ES5, ES6, TypeScript. Then came the frameworks. And here's where it got EXPENSIVE. You didn't just learn a framework. You MARRIED it. Because switching? That meant ANOTHER year of learning. Angular to React? Year. React to Vue? Year. The sunk cost was REAL. But then... everything changed.",
+      "cta": "Part 3 shows what changed",
+      "hashtags": ["webdev", "javascript", "learntocode", "programming", "tech"]
+    },
+    {
+      "id": "tiktok_03_new_world",
+      "title": "What AI Changed About Coding",
+      "duration_target": 60,
+      "hook": "Here's what AI actually changed about learning to code",
+      "script": "AI didn't make development skills obsolete. It just reorganized them. There's now two categories. What you MUST know. And what you can DELEGATE. Must know? Architecture. Security. Recognizing bad code. User experience. Business logic. Debugging skills. Delegatable? Syntax. Boilerplate. CSS styling. File organization. Documentation lookup. REGEX. Yes, finally readable regex. The mental model shifted. Old way: You produce code. New way: You DIRECT and VERIFY. The skill ceiling didn't lower. The skill floor rose dramatically.",
+      "cta": "Watch part 4 for the timeline comparison",
+      "hashtags": ["aitools", "chatgpt", "copilot", "developer", "techcareer"]
+    },
+    {
+      "id": "tiktok_04_timeline",
+      "title": "4 Years vs 4 Weeks",
+      "duration_target": 60,
+      "hook": "What took me 4 years now takes 4 weeks",
+      "script": "Two developers starting today. Same goal: build a fullstack app. Developer A, traditional path. Month one through three, HTML CSS. Month four through six, JavaScript. Month seven through twelve, pick ONE framework. Year two, backend. Year three, DevOps. Year four? Finally productive. Developer B, learning WITH AI. Week one, scaffold with AI. Week two, learn to evaluate output. Week three, understand architecture. Week four, SHIP IT. Month two onwards? Fill gaps as needed. Four years versus four weeks. The skill ceiling didn't change. The FLOOR did.",
+      "cta": "Part 5 is the proof",
+      "hashtags": ["100daysofcode", "webdeveloper", "softwareengineer", "techlife"]
+    },
+    {
+      "id": "tiktok_05_proof",
+      "title": "I Built This Without Knowing Svelte",
+      "duration_target": 60,
+      "hook": "I built a production app in a framework I'd never used",
+      "script": "Let me tell you what actually happened. I built an entire QMS platform in SvelteKit. A Quality Management System. Multi-tenant auth. Role-based permissions. Ten plus entities with CRUD. Real-time subscriptions. Analytics dashboard. My Svelte experience before? ZERO. Zilch. Nada. Time to functional MVP? Two weeks. Without AI? Three to four months minimum. Boilerplate? Gone. Context switching between languages? Gone. Learning new frameworks? HOURS, not months. The game changed. Did you adapt?",
+      "cta": "Last part is the plot twist",
+      "hashtags": ["sveltekit", "webdev", "programming", "startup", "buildinpublic"]
+    },
+    {
+      "id": "tiktok_06_twist",
+      "title": "The Plot Twist",
+      "duration_target": 60,
+      "hook": "Here's the plot twist I promised",
+      "script": "Actually... wait. I can't do this. I can't say goodbye to Angular. I still... love Angular. But thanks to AI... our marriage is now POLYGAMOUS. I can be fluent in ALL of them. React for maximum ecosystem. Angular for enterprise. SvelteKit for greenfield. Vue for quick prototypes. I'm not a framework developer anymore. I'm just a DEVELOPER. The question isn't which framework to marry. It's which one to use for THIS project. And yes... even PHP. Sometimes. What framework are YOU adding to your relationship? Drop it in the comments.",
+      "cta": "Follow for more dev content",
+      "hashtags": ["plottwist", "angular", "react", "svelte", "developer", "techhumor"]
+    }
+  ]
+}

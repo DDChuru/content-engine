@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lab 1: Sets - Quiz</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .quiz-container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+      padding: 40px;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 30px;
+      border-bottom: 3px solid #667eea;
+      padding-bottom: 20px;
+    }
+
+    .header h1 {
+      color: #1a202c;
+      margin-bottom: 10px;
+    }
+
+    .header .subtitle {
+      color: #718096;
+      font-size: 14px;
+    }
+
+    .progress-bar {
+      background: #e2e8f0;
+      height: 8px;
+      border-radius: 4px;
+      margin: 20px 0;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      background: linear-gradient(90deg, #667eea, #764ba2);
+      height: 100%;
+      width: 0%;
+      transition: width 0.3s ease;
+    }
+
+    .question-card {
+      background: #f7fafc;
+      border-radius: 12px;
+      padding: 25px;
+      margin: 20px 0;
+      border-left: 4px solid #667eea;
+      display: none;
+    }
+
+    .question-card.active {
+      display: block;
+      animation: fadeIn 0.3s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .question-number {
+      color: #667eea;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .question-text {
+      font-size: 18px;
+      color: #2d3748;
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+
+    .options {
+      margin: 15px 0;
+    }
+
+    .option {
+      background: white;
+      border: 2px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 15px 20px;
+      margin: 10px 0;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+    }
+
+    .option:hover {
+      border-color: #667eea;
+      background: #f7fafc;
+      transform: translateX(5px);
+    }
+
+    .option.selected {
+      border-color: #667eea;
+      background: #ebf4ff;
+    }
+
+    .option.correct {
+      border-color: #48bb78;
+      background: #f0fff4;
+    }
+
+    .option.incorrect {
+      border-color: #fc8181;
+      background: #fff5f5;
+    }
+
+    .option-label {
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: #667eea;
+      color: white;
+      text-align: center;
+      line-height: 30px;
+      font-weight: bold;
+      margin-right: 15px;
+    }
+
+    .option.correct .option-label {
+      background: #48bb78;
+    }
+
+    .option.incorrect .option-label {
+      background: #fc8181;
+    }
+
+    .feedback {
+      margin-top: 15px;
+      padding: 15px;
+      border-radius: 8px;
+      display: none;
+    }
+
+    .feedback.show {
+      display: block;
+    }
+
+    .feedback.correct {
+      background: #f0fff4;
+      color: #2f855a;
+      border-left: 4px solid #48bb78;
+    }
+
+    .feedback.incorrect {
+      background: #fff5f5;
+      color: #c53030;
+      border-left: 4px solid #fc8181;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 25px;
+    }
+
+    button {
+      padding: 12px 30px;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .btn-primary {
+      background: #667eea;
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: #5a67d8;
+      transform: translateY(-2px);
+    }
+
+    .btn-primary:disabled {
+      background: #cbd5e0;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    .btn-secondary {
+      background: #e2e8f0;
+      color: #4a5568;
+    }
+
+    .btn-secondary:hover {
+      background: #cbd5e0;
+    }
+
+    .results {
+      display: none;
+      text-align: center;
+      padding: 40px;
+    }
+
+    .results.show {
+      display: block;
+    }
+
+    .score-circle {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 48px;
+      font-weight: bold;
+      margin: 0 auto 20px;
+    }
+
+    .results h2 {
+      color: #1a202c;
+      margin: 20px 0;
+    }
+
+    .results p {
+      color: #718096;
+      font-size: 16px;
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="quiz-container">
+    <div class="header">
+      <h1>Introduction to Sets - Quiz</h1>
+      <p class="subtitle">Cambridge IGCSE Mathematics 0580 - Topic C1.2</p>
+      <div class="progress-bar">
+        <div class="progress-fill" id="progressBar"></div>
+      </div>
+      <p id="progressText">Question 1 of 5</p>
+    </div>
+
+    <div id="quizArea">
+      <!-- Question 1 -->
+      <div class="question-card active" data-question="1">
+        <div class="question-number">Question 1</div>
+        <div class="question-text">
+          Which of the following correctly represents the set of vowels in the English alphabet?
+        </div>
+        <div class="options">
+          <div class="option" data-answer="correct">
+            <span class="option-label">A</span>
+            {a, e, i, o, u}
+          </div>
+          <div class="option" data-answer="incorrect">
+            <span class="option-label">B</span>
+            (a, e, i, o, u)
+          </div>
+          <div class="option" data-answer="incorrect">
+            <span class="option-label">C</span>
+            [a, e, i, o, u]
+          </div>
+          <div class="option" data-answer="incorrect">
+            <span class="option-label">D</span>
+            a, e, i, o, u
+          </div>
+        </div>
+        <div class="feedback"></div>
+      </div>
+
+      <!-- Question 2 -->
+      <div class="question-card" data-question="2">
+        <div class="question-number">Question 2</div>
+        <div class="question-text">
+          Given Set A = {1, 2, 3} and Set B = {2, 3, 4, 5}, what is A ∩ B (the intersection)?
+        </div>
+        <div class="options">
+          <div class="option" data-answer="incorrect">
+            <span class="option-label">A</span>
+            {1, 2, 3, 4, 5}
+          </div>
+          <div class="option" data-answer="correct">
+            <span class="option-label">B</span>
+            {2, 3}
+          </div>
+          <div class="option" data-answer="incorrect">
+            <span class="option-label">C</span>
+            {1, 4, 5}
+          </div>
+          <div class="option" data-answer="incorrect">
+            <span class="option-label">D</span>
+            {3}
+          </div>
+        </div>
+        <div class="feedback"></div>
+      </div>
+
+      <!-- Question 3 -->
+      <div class="question-card" data-question="3">
+        <div class="question-number">Question 3</div>
+        <div class="question-text">
+          If Set C = {red, blue, green} and Set D = {blue, yellow, purple}, what is C ∪ D (the union)?
+        </div>
+        <div class="options">
+          <div class="option" data-answer="incorrect">
+            <span class="option-label">A</span>
+            {blue}
+          </div>
+          <div class="option" data-answer="correct">
+            <span class="option-label">B</span>
+            {red, blue, green, yellow, purple}
+          </div>
+          <div class="option" data-answer="incorrect">
+            <span class="option-label">C</span>
+            {red, green, yellow, purple}
+          </div>
+          <div class="option" data-answer="incorrect">
+            <span class="option-label">D</span>
+            {red, blue, blue, green, yellow, purple}
+          </div>
+        </div>
+        <div class="feedback"></div>
+      </div>
+
+      <!-- Question 4 -->
+      <div class="question-card" data-question="4">
+        <div class="question-number">Question 4</div>
+        <div class="question-text">
+          In a Venn diagram, what does the overlapping region between two circles represent?
+        </div>
+        <div class="options">
+          <div class="option" data-answer="incorrect">
+            <span class="option-label">A</span>
+            The union of the two sets
+          </div>
+          <div class="option" data-answer="correct">
+            <span class="option-label">B</span>
+            The intersection of the two sets
+          </div>
+          <div class="option" data-answer="incorrect">
+            <span class="option-label">C</span>
+            Elements that are in neither set
+          </div>
+          <div class="option" data-answer="incorrect">
+            <span class="option-label">D</span>
+            Elements that are in only one set
+          </div>
+        </div>
+        <div class="feedback"></div>
+      </div>
+
+      <!-- Question 5 -->
+      <div class="question-card" data-question="5">
+        <div class="question-number">Question 5</div>
+        <div class="question-text">
+          Which symbol is used to represent the intersection of two sets?
+        </div>
+        <div class="options">
+          <div class="option" data-answer="incorrect">
+            <span class="option-label">A</span>
+            ∪ (cup/U symbol)
+          </div>
+          <div class="option" data-answer="correct">
+            <span class="option-label">B</span>
+            ∩ (cap/upside-down U)
+          </div>
+          <div class="option" data-answer="incorrect">
+            <span class="option-label">C</span>
+            ⊂ (subset symbol)
+          </div>
+          <div class="option" data-answer="incorrect">
+            <span class="option-label">D</span>
+            ∈ (element of symbol)
+          </div>
+        </div>
+        <div class="feedback"></div>
+      </div>
+    </div>
+
+    <div class="results" id="results">
+      <div class="score-circle" id="scoreCircle">0%</div>
+      <h2 id="resultTitle">Quiz Complete!</h2>
+      <p id="resultMessage"></p>
+      <div class="buttons">
+        <button class="btn-secondary" onclick="reviewAnswers()">Review Answers</button>
+        <button class="btn-primary" onclick="restartQuiz()">Try Again</button>
+      </div>
+    </div>
+
+    <div class="buttons" id="quizButtons">
+      <button class="btn-secondary" id="prevBtn" onclick="previousQuestion()" disabled>Previous</button>
+      <button class="btn-primary" id="nextBtn" onclick="nextQuestion()" disabled>Next</button>
+      <button class="btn-primary" id="submitBtn" onclick="submitQuiz()" style="display:none;">Submit Quiz</button>
+    </div>
+  </div>
+
+  <script>
+    let currentQuestion = 1;
+    const totalQuestions = 5;
+    let answers = {};
+    let score = 0;
+
+    // Add click listeners to all options
+    document.querySelectorAll('.option').forEach(option => {
+      option.addEventListener('click', function() {
+        if (this.parentElement.parentElement.classList.contains('active')) {
+          selectOption(this);
+        }
+      });
+    });
+
+    function selectOption(option) {
+      const card = option.parentElement.parentElement;
+      const questionNum = parseInt(card.dataset.question);
+
+      // Remove selection from other options
+      card.querySelectorAll('.option').forEach(opt => {
+        opt.classList.remove('selected');
+      });
+
+      // Select this option
+      option.classList.add('selected');
+
+      // Store answer
+      answers[questionNum] = option.dataset.answer;
+
+      // Enable next/submit button
+      updateButtons();
+    }
+
+    function updateButtons() {
+      const prevBtn = document.getElementById('prevBtn');
+      const nextBtn = document.getElementById('nextBtn');
+      const submitBtn = document.getElementById('submitBtn');
+
+      // Previous button
+      prevBtn.disabled = currentQuestion === 1;
+
+      // Next/Submit button
+      const currentAnswered = answers[currentQuestion] !== undefined;
+
+      if (currentQuestion === totalQuestions) {
+        nextBtn.style.display = 'none';
+        submitBtn.style.display = currentAnswered ? 'inline-block' : 'none';
+        submitBtn.disabled = !currentAnswered;
+      } else {
+        nextBtn.style.display = 'inline-block';
+        nextBtn.disabled = !currentAnswered;
+        submitBtn.style.display = 'none';
+      }
+    }
+
+    function nextQuestion() {
+      if (currentQuestion < totalQuestions) {
+        document.querySelector('.question-card.active').classList.remove('active');
+        currentQuestion++;
+        document.querySelector(`.question-card[data-question="${currentQuestion}"]`).classList.add('active');
+        updateProgress();
+        updateButtons();
+      }
+    }
+
+    function previousQuestion() {
+      if (currentQuestion > 1) {
+        document.querySelector('.question-card.active').classList.remove('active');
+        currentQuestion--;
+        document.querySelector(`.question-card[data-question="${currentQuestion}"]`).classList.add('active');
+        updateProgress();
+        updateButtons();
+      }
+    }
+
+    function updateProgress() {
+      const progress = (currentQuestion / totalQuestions) * 100;
+      document.getElementById('progressBar').style.width = progress + '%';
+      document.getElementById('progressText').textContent = `Question ${currentQuestion} of ${totalQuestions}`;
+    }
+
+    function submitQuiz() {
+      // Calculate score
+      score = 0;
+      Object.values(answers).forEach(answer => {
+        if (answer === 'correct') score++;
+      });
+
+      // Show all questions with feedback
+      document.querySelectorAll('.question-card').forEach((card, index) => {
+        const questionNum = index + 1;
+        const selectedOption = card.querySelector('.option.selected');
+        const allOptions = card.querySelectorAll('.option');
+        const feedback = card.querySelector('.feedback');
+
+        // Mark correct/incorrect
+        allOptions.forEach(opt => {
+          if (opt.dataset.answer === 'correct') {
+            opt.classList.add('correct');
+          } else if (opt.classList.contains('selected') && opt.dataset.answer === 'incorrect') {
+            opt.classList.add('incorrect');
+          }
+        });
+
+        // Show feedback
+        if (answers[questionNum] === 'correct') {
+          feedback.className = 'feedback correct show';
+          feedback.textContent = '✓ Correct! Well done.';
+        } else {
+          feedback.className = 'feedback incorrect show';
+          feedback.textContent = '✗ Incorrect. The correct answer is highlighted in green.';
+        }
+      });
+
+      // Hide quiz buttons
+      document.getElementById('quizButtons').style.display = 'none';
+
+      // Show results
+      const percentage = Math.round((score / totalQuestions) * 100);
+      document.getElementById('scoreCircle').textContent = percentage + '%';
+
+      let message = '';
+      if (percentage === 100) {
+        message = 'Perfect score! You have mastered the concepts of sets.';
+      } else if (percentage >= 80) {
+        message = 'Excellent work! You have a strong understanding of sets.';
+      } else if (percentage >= 60) {
+        message = 'Good job! Review the concepts you missed to strengthen your understanding.';
+      } else {
+        message = 'Keep practicing! Review the lesson and try again.';
+      }
+
+      document.getElementById('resultMessage').textContent = message + ` You got ${score} out of ${totalQuestions} questions correct.`;
+      document.getElementById('results').classList.add('show');
+    }
+
+    function reviewAnswers() {
+      document.getElementById('results').classList.remove('show');
+      document.querySelector('.question-card').classList.add('active');
+      currentQuestion = 1;
+      updateProgress();
+    }
+
+    function restartQuiz() {
+      // Reset state
+      currentQuestion = 1;
+      answers = {};
+      score = 0;
+
+      // Reset UI
+      document.querySelectorAll('.question-card').forEach(card => {
+        card.classList.remove('active');
+        card.querySelectorAll('.option').forEach(opt => {
+          opt.classList.remove('selected', 'correct', 'incorrect');
+        });
+        card.querySelector('.feedback').className = 'feedback';
+      });
+
+      document.querySelector('.question-card').classList.add('active');
+      document.getElementById('results').classList.remove('show');
+      document.getElementById('quizButtons').style.display = 'flex';
+
+      updateProgress();
+      updateButtons();
+    }
+
+    // Initialize
+    updateProgress();
+    updateButtons();
+  </script>
+</body>
+</html>

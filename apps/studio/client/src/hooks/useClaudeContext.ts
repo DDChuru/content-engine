@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
 
-export type WorkspaceType = 'video-editor' | 'education-studio' | 'faceless-creator' | 'media-pool';
+export type WorkspaceType = 'video-editor' | 'education-studio' | 'strategy-canvas' | 'training-lab' | 'media-pool' | 'life-stories';
 
 export interface WorkspaceContext {
   workspace: WorkspaceType;

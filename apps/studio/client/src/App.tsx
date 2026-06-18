@@ -14,15 +14,20 @@ import Terminal, { TerminalRef } from './components/Terminal';
 import { useClaudeContext, WorkspaceType, WorkspaceContext } from './hooks/useClaudeContext';
 import VideoEditorFull from './components/workspaces/VideoEditorFull';
 import EducationStudioFull from './components/workspaces/EducationStudioFull';
-import FacelessCreator from './components/workspaces/FacelessCreator';
+import StrategyCanvas from './components/workspaces/StrategyCanvas';
+import TrainingLab from './components/workspaces/TrainingLab';
 import MediaPool from './components/workspaces/MediaPool';
+import LifeStoriesWorkspace from './components/workspaces/LifeStoriesWorkspace';
+import { Beaker, Clapperboard } from 'lucide-react';
 
 // Workspace configuration
 const workspaces = [
   { id: 'video-editor' as WorkspaceType, name: 'Video Editor', icon: Film, color: 'workspace-video', shortcut: '1' },
   { id: 'education-studio' as WorkspaceType, name: 'Education', icon: BookOpen, color: 'workspace-education', shortcut: '2' },
-  { id: 'faceless-creator' as WorkspaceType, name: 'Faceless', icon: Sparkles, color: 'workspace-faceless', shortcut: '3' },
-  { id: 'media-pool' as WorkspaceType, name: 'Media', icon: FolderOpen, color: 'workspace-media', shortcut: '4' },
+  { id: 'life-stories' as WorkspaceType, name: 'Life Stories', icon: Clapperboard, color: 'workspace-life', shortcut: '3' },
+  { id: 'strategy-canvas' as WorkspaceType, name: 'Strategy', icon: Sparkles, color: 'workspace-strategy', shortcut: '4' },
+  { id: 'training-lab' as WorkspaceType, name: 'Training Lab', icon: Beaker, color: 'workspace-training', shortcut: '5' },
+  { id: 'media-pool' as WorkspaceType, name: 'Media', icon: FolderOpen, color: 'workspace-media', shortcut: '6' },
 ];
 
 // Get project path from URL or default
@@ -73,7 +78,7 @@ export default function App() {
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       // Cmd/Ctrl + number to switch workspaces
-      if ((e.metaKey || e.ctrlKey) && e.key >= '1' && e.key <= '4') {
+      if ((e.metaKey || e.ctrlKey) && e.key >= '1' && e.key <= '6') {
         e.preventDefault();
         const index = parseInt(e.key) - 1;
         if (workspaces[index]) {
@@ -183,7 +188,9 @@ export default function App() {
         <div className="flex-1 min-w-0">
           {activeWorkspace === 'video-editor' && <VideoEditorFull onContextUpdate={handleContextUpdate} />}
           {activeWorkspace === 'education-studio' && <EducationStudioFull onContextUpdate={handleContextUpdate} />}
-          {activeWorkspace === 'faceless-creator' && <FacelessCreator onContextUpdate={handleContextUpdate} />}
+          {activeWorkspace === 'life-stories' && <LifeStoriesWorkspace onContextUpdate={handleContextUpdate} />}
+          {activeWorkspace === 'strategy-canvas' && <StrategyCanvas onContextUpdate={handleContextUpdate} />}
+          {activeWorkspace === 'training-lab' && <TrainingLab onContextUpdate={handleContextUpdate} />}
           {activeWorkspace === 'media-pool' && <MediaPool onContextUpdate={handleContextUpdate} />}
         </div>
 
@@ -304,7 +311,7 @@ export default function App() {
           </span>
         </div>
         <div className="flex items-center gap-4">
-          <span>⌘1-4: Switch workspace</span>
+          <span>⌘1-6: Switch workspace</span>
           <span>⌘\: Toggle terminal</span>
           <span>⌘↵: Send context</span>
         </div>
