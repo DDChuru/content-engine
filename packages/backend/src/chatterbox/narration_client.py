@@ -23,6 +23,16 @@ CHATTERBOX_URL = "http://localhost:8765"
 OUTPUT_DIR = Path(__file__).parent / "output" / "narration"
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
+# TTS provider switch: kokoro (default — free local CPU) | chatterbox (local server, cloning/
+# emotion) | elevenlabs (paid, kept on the back burner). Override per-run via env.
+TTS_PROVIDER = os.environ.get("TTS_PROVIDER", "kokoro").lower()
+KOKORO_VOICE = os.environ.get("KOKORO_VOICE", "bm_george")   # British male, narration-grade
+KOKORO_LANG = os.environ.get("KOKORO_LANG", "en-gb")
+_MODELS = Path(__file__).parent / "models"
+KOKORO_MODEL = os.environ.get("KOKORO_MODEL", str(_MODELS / "kokoro-v1.0.onnx"))
+KOKORO_VOICES = os.environ.get("KOKORO_VOICES", str(_MODELS / "voices-v1.0.bin"))
+_kokoro_engine = None
+
 
 def check_server(wait_timeout: int = 60) -> bool:
     """Check if Chatterbox server is running, wait up to timeout seconds"""
@@ -40,6 +50,52 @@ def check_server(wait_timeout: int = 60) -> bool:
     return False
 
 
+def _gen_kokoro(text: str, voice: Optional[str], output_path) -> None:
+    """Local Kokoro (kokoro-onnx) — CPU, free, faster-than-real-time. Model loaded once."""
+    global _kokoro_engine
+    if _kokoro_engine is None:
+        from kokoro_onnx import Kokoro
+        _kokoro_engine = Kokoro(KOKORO_MODEL, KOKORO_VOICES)
+    import soundfile as sf
+    samples, sample_rate = _kokoro_engine.create(text, voice=voice or KOKORO_VOICE, speed=1.0, lang=KOKORO_LANG)
+    sf.write(str(output_path), samples, sample_rate)
+
+
+def _gen_elevenlabs(text: str, voice: Optional[str], output_path) -> None:
+    """ElevenLabs (paid) — kept on the back burner. Use with TTS_PROVIDER=elevenlabs."""
+    api_key = os.environ.get("ELEVENLABS_API_KEY")
+    if not api_key:
+        raise RuntimeError("ELEVENLABS_API_KEY not set (required for TTS_PROVIDER=elevenlabs)")
+    voice_id = voice or os.environ.get("ELEVENLABS_VOICE_ID", "JBFqnCBsd6RMkjVDRZzb")  # "George"
+    resp = requests.post(
+        f"https://api.elevenlabs.io/v1/text-to-speech/{voice_id}",
+        headers={"xi-api-key": api_key, "Content-Type": "application/json"},
+        json={"text": text, "model_id": "eleven_turbo_v2_5"},
+        timeout=120,
+    )
+    if resp.status_code != 200:
+        raise RuntimeError(f"ElevenLabs failed: {resp.text[:200]}")
+    with open(output_path, "wb") as f:
+        f.write(resp.content)
+
+
+def _gen_chatterbox(text: str, voice: Optional[str], exaggeration: float, output_path) -> None:
+    """Local Chatterbox server (voice cloning + emotion). Start: python server.py"""
+    if not check_server():
+        raise RuntimeError(
+            "Chatterbox server not running. Start it with:\n"
+            "  cd packages/backend/src/chatterbox && python server.py"
+        )
+    data = {"text": text, "exaggeration": str(exaggeration), "cfg_weight": "0.5"}
+    if voice:
+        data["voice_id"] = voice
+    resp = requests.post(f"{CHATTERBOX_URL}/generate", data=data, timeout=300)
+    if resp.status_code != 200:
+        raise RuntimeError(f"Generation failed: {resp.text}")
+    with open(output_path, "wb") as f:
+        f.write(resp.content)
+
+
 def generate_narration(
     text: str,
     voice_id: Optional[str] = None,
@@ -47,59 +103,32 @@ def generate_narration(
     output_filename: Optional[str] = None
 ) -> str:
     """
-    Generate narration audio from text.
+    Generate narration audio from text via the configured TTS provider
+    (TTS_PROVIDER: kokoro | chatterbox | elevenlabs).
 
     Args:
         text: The text to convert to speech
-        voice_id: Optional voice profile ID for voice cloning
-        exaggeration: Emotion level (0.0 = monotone, 1.0 = dramatic)
+        voice_id: Optional voice (Kokoro voice name, EL voice id, or Chatterbox profile)
+        exaggeration: Emotion level for Chatterbox (0.0 monotone .. 1.0 dramatic)
         output_filename: Optional custom filename
 
     Returns:
         Path to the generated audio file
     """
-    if not check_server():
-        raise RuntimeError(
-            "Chatterbox server not running. Start it with:\n"
-            "  cd packages/backend/src/chatterbox && python server.py"
-        )
-
-    # Prepare request
-    data = {
-        "text": text,
-        "exaggeration": str(exaggeration),
-        "cfg_weight": "0.5"
-    }
-    if voice_id:
-        data["voice_id"] = voice_id
-
-    # Generate filename
     if output_filename is None:
-        timestamp = int(time.time() * 1000)
-        output_filename = f"narration_{timestamp}.wav"
-
+        output_filename = f"narration_{int(time.time() * 1000)}.wav"
     output_path = OUTPUT_DIR / output_filename
 
-    # Make request
-    print(f"Generating: {text[:50]}...")
+    print(f"[{TTS_PROVIDER}] Generating: {text[:50]}...")
     start_time = time.time()
+    if TTS_PROVIDER == "kokoro":
+        _gen_kokoro(text, voice_id, output_path)
+    elif TTS_PROVIDER == "elevenlabs":
+        _gen_elevenlabs(text, voice_id, output_path)
+    else:
+        _gen_chatterbox(text, voice_id, exaggeration, output_path)
 
-    response = requests.post(
-        f"{CHATTERBOX_URL}/generate",
-        data=data,
-        timeout=300  # 5 minute timeout for CPU generation
-    )
-
-    if response.status_code != 200:
-        raise RuntimeError(f"Generation failed: {response.text}")
-
-    # Save audio
-    with open(output_path, "wb") as f:
-        f.write(response.content)
-
-    elapsed = time.time() - start_time
-    print(f"Generated in {elapsed:.1f}s: {output_path}")
-
+    print(f"Generated in {time.time() - start_time:.1f}s: {output_path}")
     return str(output_path)
 
 
@@ -124,8 +153,8 @@ def batch_narrate(
 
     print(f"\n{'='*60}")
     print(f"  BATCH NARRATION: {total} segments")
-    print(f"  Voice: {voice_id or 'Default'}")
-    print(f"  Cost: $0.00 (Chatterbox - FREE)")
+    print(f"  Voice: {voice_id or (KOKORO_VOICE if TTS_PROVIDER == 'kokoro' else 'Default')}")
+    print(f"  Provider: {TTS_PROVIDER}{' (FREE)' if TTS_PROVIDER != 'elevenlabs' else ' (paid)'}")
     print(f"{'='*60}\n")
 
     start_time = time.time()
