@@ -15,9 +15,10 @@ Usage:
 
 import os
 import time
-import requests
 from pathlib import Path
 from typing import Optional, List, Dict
+# `requests` is imported lazily inside the chatterbox/elevenlabs paths, so the default Kokoro
+# path needs only kokoro-onnx + soundfile (runs from a bare python via the venv fallback).
 
 CHATTERBOX_URL = "http://localhost:8765"
 OUTPUT_DIR = Path(__file__).parent / "output" / "narration"
@@ -36,7 +37,7 @@ _kokoro_engine = None
 
 def check_server(wait_timeout: int = 60) -> bool:
     """Check if Chatterbox server is running, wait up to timeout seconds"""
-    import time
+    import time, requests
     start = time.time()
     while time.time() - start < wait_timeout:
         try:
@@ -53,16 +54,27 @@ def check_server(wait_timeout: int = 60) -> bool:
 def _gen_kokoro(text: str, voice: Optional[str], output_path) -> None:
     """Local Kokoro (kokoro-onnx) — CPU, free, faster-than-real-time. Model loaded once."""
     global _kokoro_engine
-    if _kokoro_engine is None:
-        from kokoro_onnx import Kokoro
-        _kokoro_engine = Kokoro(KOKORO_MODEL, KOKORO_VOICES)
+    try:
+        import kokoro_onnx  # noqa: F401
+    except ImportError:
+        # Run from any python: fall back to the setup venv's site-packages (kokoro-onnx +
+        # soundfile are installed there via `uv venv .venv-kokoro`). Override with KOKORO_VENV.
+        import sys, glob
+        venv = os.environ.get("KOKORO_VENV", str(Path(__file__).parent / ".venv-kokoro"))
+        for sp in sorted(glob.glob(f"{venv}/lib/python*/site-packages")):
+            if sp not in sys.path:
+                sys.path.insert(0, sp)
+    from kokoro_onnx import Kokoro
     import soundfile as sf
+    if _kokoro_engine is None:
+        _kokoro_engine = Kokoro(KOKORO_MODEL, KOKORO_VOICES)
     samples, sample_rate = _kokoro_engine.create(text, voice=voice or KOKORO_VOICE, speed=1.0, lang=KOKORO_LANG)
     sf.write(str(output_path), samples, sample_rate)
 
 
 def _gen_elevenlabs(text: str, voice: Optional[str], output_path) -> None:
     """ElevenLabs (paid) — kept on the back burner. Use with TTS_PROVIDER=elevenlabs."""
+    import requests
     api_key = os.environ.get("ELEVENLABS_API_KEY")
     if not api_key:
         raise RuntimeError("ELEVENLABS_API_KEY not set (required for TTS_PROVIDER=elevenlabs)")
@@ -81,6 +93,7 @@ def _gen_elevenlabs(text: str, voice: Optional[str], output_path) -> None:
 
 def _gen_chatterbox(text: str, voice: Optional[str], exaggeration: float, output_path) -> None:
     """Local Chatterbox server (voice cloning + emotion). Start: python server.py"""
+    import requests
     if not check_server():
         raise RuntimeError(
             "Chatterbox server not running. Start it with:\n"
