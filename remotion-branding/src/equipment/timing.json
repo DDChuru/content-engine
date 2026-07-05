@@ -1,0 +1,107 @@
+{
+  "fps": 30,
+  "total_seconds": 68.691,
+  "total_frames": 2061,
+  "beats": [
+    {
+      "id": "eq-01-landing",
+      "shot": "eq-01-landing",
+      "chip": "Equipment",
+      "ring": "listAll",
+      "audio": "equipment-tutorial/audio/01-eq-01-landing.mp3",
+      "voStart": 0.6,
+      "duration": 10.449,
+      "text": "At the start of every shift, cleaning equipment goes out — and every piece has to come back. Here's how e-wiser turns issue and return into a thirty-second job."
+    },
+    {
+      "id": "eq-02-issue-list",
+      "shot": "eq-02-issue-list",
+      "chip": "Issue",
+      "ring": "listRows",
+      "audio": "equipment-tutorial/audio/02-eq-02-issue-list.mp3",
+      "voStart": 11.499,
+      "duration": 5.851,
+      "text": "Issuing is one list — every item, by colour code, already laid out for your site."
+    },
+    {
+      "id": "eq-03-qty-all",
+      "shot": "eq-03-qty-all",
+      "chip": "Quantity",
+      "ring": "qtyAll",
+      "audio": "equipment-tutorial/audio/03-eq-03-qty-all.mp3",
+      "voStart": 17.8,
+      "duration": 5.669,
+      "text": "Type the quantity going out, or tap 'All' to issue the full stock in one touch."
+    },
+    {
+      "id": "eq-04-condition",
+      "shot": "eq-04-condition",
+      "chip": "Condition",
+      "ring": "condition",
+      "audio": "equipment-tutorial/audio/04-eq-04-condition.mp3",
+      "voStart": 23.919,
+      "duration": 7.34,
+      "text": "Condition defaults to clean and intact — you only stop to flag something when there's a real problem."
+    },
+    {
+      "id": "eq-05-signature",
+      "shot": "eq-05-signature",
+      "chip": "Sign off",
+      "ring": "signature",
+      "audio": "equipment-tutorial/audio/05-eq-05-signature.mp3",
+      "voStart": 31.709,
+      "duration": 4.728,
+      "text": "One signature at the bottom signs off the whole issue, and carries to every row."
+    },
+    {
+      "id": "eq-06-issued",
+      "shot": "eq-06-issued",
+      "chip": "Issued",
+      "ring": "confirm",
+      "audio": "equipment-tutorial/audio/06-eq-06-issued.mp3",
+      "voStart": 36.888,
+      "duration": 3.657,
+      "text": "Issued. It's out, on the record, against your name."
+    },
+    {
+      "id": "eq-07-return-list",
+      "shot": "eq-07-return-list",
+      "chip": "Return",
+      "ring": "returnList",
+      "audio": "equipment-tutorial/audio/07-eq-07-return-list.mp3",
+      "voStart": 40.995,
+      "duration": 7.602,
+      "text": "At the end of the shift the same list returns — every outstanding item, quantity pre-filled to what went out."
+    },
+    {
+      "id": "eq-08-exception",
+      "shot": "eq-08-exception",
+      "chip": "Exception",
+      "ring": "exception",
+      "audio": "equipment-tutorial/audio/08-eq-08-exception.mp3",
+      "voStart": 49.046,
+      "duration": 7.288,
+      "text": "Something damaged? Dive into the row — log the damaged quantity, a note, a photo. That's your evidence trail."
+    },
+    {
+      "id": "eq-09-all-clear",
+      "shot": "eq-09-all-clear",
+      "chip": "All clear",
+      "ring": "allClear",
+      "audio": "equipment-tutorial/audio/09-eq-09-all-clear.mp3",
+      "voStart": 56.784,
+      "duration": 4.493,
+      "text": "Everything back clean? One tap — 'All clear' — reconciles the rest."
+    },
+    {
+      "id": "eq-10-reconciled",
+      "shot": "eq-10-reconciled",
+      "chip": "Done",
+      "ring": "done",
+      "audio": "equipment-tutorial/audio/10-eq-10-reconciled.mp3",
+      "voStart": 61.728,
+      "duration": 4.963,
+      "text": "Signed off. Issue and return, fully reconciled — ready for the reconciliation report."
+    }
+  ]
+}

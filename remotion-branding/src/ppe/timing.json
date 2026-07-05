@@ -1,0 +1,87 @@
+{
+  "fps": 30,
+  "total_seconds": 46.658,
+  "total_frames": 1400,
+  "beats": [
+    {
+      "id": "ppe-01-landing",
+      "shot": "ppe-01-landing",
+      "chip": "PPE",
+      "ring": "groups",
+      "audio": "ppe-tutorial/audio/01-ppe-01-landing.mp3",
+      "voStart": 0.6,
+      "duration": 9.874,
+      "text": "P-P-E Inspection opens on what matters — what's still out, and what's ready to sign off, across the last seven days."
+    },
+    {
+      "id": "ppe-02-new-issue",
+      "shot": "ppe-02-new-issue",
+      "chip": "New issue",
+      "ring": "newIssue",
+      "audio": "ppe-tutorial/audio/02-ppe-02-new-issue.mp3",
+      "voStart": 10.924,
+      "duration": 1.75,
+      "text": "Starting a shift? New issue."
+    },
+    {
+      "id": "ppe-03-issue-capture",
+      "shot": "ppe-03-issue-capture",
+      "chip": "Capture",
+      "ring": "typeRows",
+      "audio": "ppe-tutorial/audio/03-ppe-03-issue-capture.mp3",
+      "voStart": 13.124,
+      "duration": 5.669,
+      "text": "Pick the P-P-E going out, set the quantities — issued and inspected in one pass."
+    },
+    {
+      "id": "ppe-04-awaiting",
+      "shot": "ppe-04-awaiting",
+      "chip": "Tracked",
+      "ring": "awaiting",
+      "audio": "ppe-tutorial/audio/04-ppe-04-awaiting.mp3",
+      "voStart": 19.243,
+      "duration": 6.034,
+      "text": "Recorded. It drops straight into 'Awaiting return', so nothing gets re-issued by mistake."
+    },
+    {
+      "id": "ppe-05-tap-return",
+      "shot": "ppe-05-tap-return",
+      "chip": "Return",
+      "ring": "returnRow",
+      "audio": "ppe-tutorial/audio/05-ppe-05-tap-return.mp3",
+      "voStart": 25.727,
+      "duration": 3.344,
+      "text": "At shift end, tap the open session to return it."
+    },
+    {
+      "id": "ppe-06-return-capture",
+      "shot": "ppe-06-return-capture",
+      "chip": "Reconcile",
+      "ring": "returnQty",
+      "audio": "ppe-tutorial/audio/06-ppe-06-return-capture.mp3",
+      "voStart": 29.521,
+      "duration": 5.512,
+      "text": "Quantities come back pre-filled — flag anything missing or damaged right here."
+    },
+    {
+      "id": "ppe-07-signoff",
+      "shot": "ppe-07-signoff",
+      "chip": "Sign off",
+      "ring": "signature",
+      "audio": "ppe-tutorial/audio/07-ppe-07-signoff.mp3",
+      "voStart": 35.483,
+      "duration": 5.146,
+      "text": "The manager signs off the return — one signature closes the session."
+    },
+    {
+      "id": "ppe-08-done",
+      "shot": "ppe-08-done",
+      "chip": "Done",
+      "ring": "done",
+      "audio": "ppe-tutorial/audio/08-ppe-08-done.mp3",
+      "voStart": 41.079,
+      "duration": 3.579,
+      "text": "Done. A clean, signed P-P-E record, every shift."
+    }
+  ]
+}

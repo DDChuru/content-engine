@@ -47,6 +47,20 @@ import {
   DAILY_HYGIENE_FPS,
   DAILY_HYGIENE_TUTORIAL_FRAMES,
 } from './hygiene/DailyHygieneTutorial';
+import {
+  EquipmentIssueTutorial,
+  EquipmentIssueTutorialBranded,
+  EQUIPMENT_BRANDED_FRAMES,
+  EQUIPMENT_FPS,
+  EQUIPMENT_JOURNEY_FRAMES,
+} from './equipment/EquipmentIssueTutorial';
+import {
+  PpeIssueTutorial,
+  PpeIssueTutorialBranded,
+  PPE_BRANDED_FRAMES,
+  PPE_FPS,
+  PPE_JOURNEY_FRAMES,
+} from './ppe/PpeIssueTutorial';
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -302,6 +316,46 @@ export const RemotionRoot: React.FC = () => {
         component={DailyHygieneTutorialBranded}
         durationInFrames={DAILY_HYGIENE_BRANDED_FRAMES}
         fps={DAILY_HYGIENE_FPS}
+        width={1920}
+        height={1080}
+      />
+
+      {/* e-wizer mobile - Equipment Issue & Returns journey (teal, PhoneJourney pattern) */}
+      <Composition
+        id="EquipmentIssueTutorial"
+        component={EquipmentIssueTutorial}
+        durationInFrames={EQUIPMENT_JOURNEY_FRAMES}
+        fps={EQUIPMENT_FPS}
+        width={1920}
+        height={1080}
+      />
+
+      {/* e-wizer mobile - Equipment Issue & Returns with Ecowize/e-wizer branded bookends */}
+      <Composition
+        id="EquipmentIssueTutorialBranded"
+        component={EquipmentIssueTutorialBranded}
+        durationInFrames={EQUIPMENT_BRANDED_FRAMES}
+        fps={EQUIPMENT_FPS}
+        width={1920}
+        height={1080}
+      />
+
+      {/* e-wizer mobile - PPE Issue & Returns journey (amber, PhoneJourney pattern) */}
+      <Composition
+        id="PpeIssueTutorial"
+        component={PpeIssueTutorial}
+        durationInFrames={PPE_JOURNEY_FRAMES}
+        fps={PPE_FPS}
+        width={1920}
+        height={1080}
+      />
+
+      {/* e-wizer mobile - PPE Issue & Returns with Ecowize/e-wizer branded bookends */}
+      <Composition
+        id="PpeIssueTutorialBranded"
+        component={PpeIssueTutorialBranded}
+        durationInFrames={PPE_BRANDED_FRAMES}
+        fps={PPE_FPS}
         width={1920}
         height={1080}
       />
