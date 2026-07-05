@@ -300,9 +300,9 @@ export const BrandOutro: React.FC<{
 			<div
 				style={{
 					position: 'absolute',
-					left: 900,
+					left: 990,
 					top: 180,
-					width: 800,
+					width: 720,
 					opacity: reveal,
 					transform: `translateY(${interpolate(reveal, [0, 1], [26, 0])}px)`,
 				}}
