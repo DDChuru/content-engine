@@ -27,7 +27,7 @@ const MUSIC = 'equipment-tutorial/audio/tutorial.mp3';
 const COPY: Record<string, BeatCopy> = {
 	'eq-01-landing': {
 		headline: 'Issue & Returns',
-		body: 'Cleaning equipment, out and back — in 30 seconds.',
+		body: 'Cleaning equipment, out and back — every piece on the record.',
 		proof: 'One register, out and back.',
 	},
 	'eq-02-issue-list': {
