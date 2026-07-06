@@ -1,7 +1,7 @@
 {
   "fps": 30,
-  "total_seconds": 46.658,
-  "total_frames": 1400,
+  "total_seconds": 47.758,
+  "total_frames": 1434,
   "beats": [
     {
       "id": "ppe-01-landing",
@@ -11,11 +11,11 @@
       "audio": "ppe-tutorial/audio/01-ppe-01-landing.mp3",
       "voStart": 0.6,
       "duration": 9.874,
-      "text": "P-P-E Inspection opens on what matters — what's still out, and what's ready to sign off, across the last seven days."
+      "text": "P-P-E Inspection opens on what matters \u2014 what's still out, and what's ready to sign off, across the last seven days."
     },
     {
       "id": "ppe-02-new-issue",
-      "shot": "ppe-02-new-issue",
+      "shot": "ppe-01-landing",
       "chip": "New issue",
       "ring": "newIssueButton",
       "audio": "ppe-tutorial/audio/02-ppe-02-new-issue.mp3",
@@ -29,9 +29,9 @@
       "chip": "Capture",
       "ring": "issueCaptureRows",
       "audio": "ppe-tutorial/audio/03-ppe-03-issue-capture.mp3",
-      "voStart": 13.124,
+      "voStart": 14.224,
       "duration": 5.669,
-      "text": "Pick the P-P-E going out, set the quantities — issued and inspected in one pass."
+      "text": "Pick the P-P-E going out, set the quantities \u2014 issued and inspected in one pass."
     },
     {
       "id": "ppe-04-awaiting",
@@ -39,7 +39,7 @@
       "chip": "Tracked",
       "ring": "awaitingRow",
       "audio": "ppe-tutorial/audio/04-ppe-04-awaiting.mp3",
-      "voStart": 19.243,
+      "voStart": 20.343,
       "duration": 6.034,
       "text": "Recorded. It drops straight into 'Awaiting return', so nothing gets re-issued by mistake."
     },
@@ -49,7 +49,7 @@
       "chip": "Return",
       "ring": "returnRow",
       "audio": "ppe-tutorial/audio/05-ppe-05-tap-return.mp3",
-      "voStart": 25.727,
+      "voStart": 26.827,
       "duration": 3.344,
       "text": "At shift end, tap the open session to return it."
     },
@@ -59,9 +59,9 @@
       "chip": "Reconcile",
       "ring": "returnCaptureFields",
       "audio": "ppe-tutorial/audio/06-ppe-06-return-capture.mp3",
-      "voStart": 29.521,
+      "voStart": 30.621,
       "duration": 5.512,
-      "text": "Quantities come back pre-filled — flag anything missing or damaged right here."
+      "text": "Quantities come back pre-filled \u2014 flag anything missing or damaged right here."
     },
     {
       "id": "ppe-07-signoff",
@@ -69,9 +69,9 @@
       "chip": "Sign off",
       "ring": "managerSignature",
       "audio": "ppe-tutorial/audio/07-ppe-07-signoff.mp3",
-      "voStart": 35.483,
+      "voStart": 36.583,
       "duration": 5.146,
-      "text": "The manager signs off the return — one signature closes the session."
+      "text": "The manager signs off the return \u2014 one signature closes the session."
     },
     {
       "id": "ppe-08-done",
@@ -79,7 +79,7 @@
       "chip": "Done",
       "ring": "doneState",
       "audio": "ppe-tutorial/audio/08-ppe-08-done.mp3",
-      "voStart": 41.079,
+      "voStart": 42.179,
       "duration": 3.579,
       "text": "Done. A clean, signed P-P-E record, every shift."
     }

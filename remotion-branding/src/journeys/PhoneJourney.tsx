@@ -57,6 +57,10 @@ export type PhoneJourneyProps = {
 	footerLabel: string;
 	accent: string;
 	titleCard?: { kicker: string; title: string; tagline: string };
+	/** Show the full-screen scene title. Off in the branded cut, where the
+	 * bookend intro already carries the title — so the journey opens straight
+	 * on the working phone as narration begins. */
+	showTitleCard?: boolean;
 	narrationVolume?: number;
 };
 
@@ -115,6 +119,12 @@ const PhoneRing: React.FC<{
 	);
 };
 
+// Panel envelope the zoom card is fitted inside. The card takes the SHAPE of
+// the crop (its aspect ratio) so the screenshot fills it edge-to-edge — no
+// letterbox voids for portrait vs. landscape controls.
+const PANEL_MAX_W = 900;
+const PANEL_MAX_H = 420;
+
 const ZoomPanel: React.FC<{
 	beat: JourneyBeat;
 	box: RingBox | null;
@@ -125,7 +135,6 @@ const ZoomPanel: React.FC<{
 	stillH: number;
 	accent: string;
 }> = ({ beat, box, crop, appear, stillDir, stillW, stillH, accent }) => {
-	const panelW = 900;
 	const frame = useCurrentFrame();
 	const { fps } = useVideoConfig();
 	const lift = spring({
@@ -136,17 +145,38 @@ const ZoomPanel: React.FC<{
 
 	if (!box) return null;
 
-	const padX = Math.max(180, box.w * 0.45);
-	const padY = Math.max(180, box.h * 0.55);
+	// Tight, purposeful crop hugging the ringed control (not the whole screen).
+	const padX = crop ? 0 : Math.max(58, box.w * 0.16);
+	const padY = crop ? 0 : Math.max(66, box.h * 0.12);
 	const cropW = crop ? crop.w : Math.min(stillW, box.w + padX * 2);
 	const cropH = crop ? crop.h : Math.min(stillH, box.h + padY * 2);
 	const cropX = crop ? crop.x : clampNum(box.x + box.w / 2 - cropW / 2, 0, stillW - cropW);
 	const cropY = crop ? crop.y : clampNum(box.y + box.h / 2 - cropH / 2, 0, stillH - cropH);
-	const panelH = crop?.panelH ?? 360;
-	const inset = 18;
-	const scale = Math.min((panelW - inset * 2) / cropW, (panelH - inset * 2) / cropH);
-	const imageX = (panelW - cropW * scale) / 2;
-	const imageY = (panelH - cropH * scale) / 2;
+
+	// Fit the crop's aspect ratio inside the max envelope → the card *is* the
+	// crop's shape, so the image covers it with zero dead space.
+	const aspect = cropW / cropH;
+	let panelW = PANEL_MAX_W;
+	let panelH = PANEL_MAX_W / aspect;
+	if (panelH > PANEL_MAX_H) {
+		panelH = PANEL_MAX_H;
+		panelW = PANEL_MAX_H * aspect;
+	}
+	const scale = panelW / cropW; // crop fills width; height matches by aspect
+
+	// Ring position inside the (unscaled) card.
+	const ringL = (box.x - cropX) * scale;
+	const ringT = (box.y - cropY) * scale;
+	const ringW = box.w * scale;
+	const ringH = box.h * scale;
+
+	// Gentle Ken Burns push-in over the beat, anchored on the ringed control so
+	// the highlight stays put while the surrounding UI drifts in.
+	const local = frame / fps - beat.voStart;
+	const kb = interpolate(local, [0, Math.max(beat.duration, 2.4)], [1, 1.055], {
+		extrapolateLeft: 'clamp',
+		extrapolateRight: 'clamp',
+	});
 	const rgb = hexToRgb(box.color ?? accent);
 
 	return (
@@ -155,55 +185,77 @@ const ZoomPanel: React.FC<{
 				position: 'relative',
 				width: panelW,
 				height: panelH,
-				borderRadius: 28,
+				borderRadius: 26,
 				overflow: 'hidden',
-				background: `linear-gradient(135deg, rgba(${rgb},0.08), rgba(255,255,255,0.03)), #0b1219`,
-				border: `2px solid rgba(${rgb},0.8)`,
-				boxShadow: `0 28px 80px rgba(0,0,0,0.34), 0 0 42px rgba(${rgb},0.25)`,
+				background: '#0b1219',
+				border: `2px solid rgba(${rgb},0.82)`,
+				boxShadow: `0 28px 80px rgba(0,0,0,0.36), 0 0 42px rgba(${rgb},0.26)`,
 				opacity: appear,
 				transform: `translateY(${interpolate(lift, [0, 1], [18, 0])}px)`,
 			}}
 		>
-			<Img
-				src={staticFile(`${stillDir}/${beat.shot}.png`)}
-				style={{
-					position: 'absolute',
-					left: imageX - cropX * scale,
-					top: imageY - cropY * scale,
-					width: stillW * scale,
-					height: stillH * scale,
-					filter: 'drop-shadow(0 18px 34px rgba(0,0,0,0.24))',
-				}}
-			/>
 			<div
 				style={{
 					position: 'absolute',
-					left: imageX + (box.x - cropX) * scale - 8,
-					top: imageY + (box.y - cropY) * scale - 8,
-					width: box.w * scale + 16,
-					height: box.h * scale + 16,
-					borderRadius: 18,
-					border: `6px solid rgba(${rgb},0.9)`,
-					boxShadow: `0 0 36px rgba(${rgb},0.62)`,
-					background: `rgba(${rgb},0.14)`,
-				}}
-			/>
-			<div
-				style={{
-					position: 'absolute',
-					left: 22,
-					bottom: 20,
-					background: `rgba(${rgb},0.94)`,
-					color: '#fff',
-					fontWeight: 900,
-					fontSize: 26,
-					letterSpacing: 1.4,
-					textTransform: 'uppercase',
-					padding: '10px 16px',
-					borderRadius: 14,
+					inset: 0,
+					transform: `scale(${kb})`,
+					transformOrigin: `${ringL + ringW / 2}px ${ringT + ringH / 2}px`,
 				}}
 			>
-				Focus here
+				<Img
+					src={staticFile(`${stillDir}/${beat.shot}.png`)}
+					style={{
+						position: 'absolute',
+						left: -cropX * scale,
+						top: -cropY * scale,
+						width: stillW * scale,
+						height: stillH * scale,
+					}}
+				/>
+				<div
+					style={{
+						position: 'absolute',
+						left: ringL - 6,
+						top: ringT - 6,
+						width: ringW + 12,
+						height: ringH + 12,
+						borderRadius: 16,
+						border: `5px solid rgba(${rgb},0.95)`,
+						boxShadow: `0 0 30px rgba(${rgb},0.58)`,
+						background: `rgba(${rgb},0.10)`,
+					}}
+				/>
+			</div>
+			{/* soft top sheen for glass depth */}
+			<div
+				style={{
+					position: 'absolute',
+					inset: 0,
+					background: 'linear-gradient(180deg, rgba(255,255,255,0.07), transparent 20%)',
+					pointerEvents: 'none',
+				}}
+			/>
+			<div
+				style={{
+					position: 'absolute',
+					left: 16,
+					bottom: 14,
+					display: 'flex',
+					alignItems: 'center',
+					gap: 9,
+					background: `rgba(${rgb},0.95)`,
+					color: '#fff',
+					fontWeight: 900,
+					fontSize: 21,
+					letterSpacing: 1.4,
+					textTransform: 'uppercase',
+					padding: '8px 13px',
+					borderRadius: 11,
+					boxShadow: `0 8px 22px rgba(${rgb},0.4)`,
+				}}
+			>
+				<div style={{ width: 8, height: 8, borderRadius: 4, background: '#fff' }} />
+				Focus
 			</div>
 		</div>
 	);
@@ -221,6 +273,7 @@ export const PhoneJourney: React.FC<PhoneJourneyProps> = ({
 	footerLabel,
 	accent,
 	titleCard,
+	showTitleCard = true,
 	narrationVolume = 1.22,
 }) => {
 	const frame = useCurrentFrame();
@@ -262,7 +315,7 @@ export const PhoneJourney: React.FC<PhoneJourneyProps> = ({
 		extrapolateRight: 'clamp',
 	});
 	const titleOp = titleCard
-		? interpolate(sec, [0, 0.35, 2.25, 3.0], [1, 1, 1, 0], {
+		? interpolate(sec, [0, 0.3, 1.6, 2.15], [1, 1, 1, 0], {
 				extrapolateLeft: 'clamp',
 				extrapolateRight: 'clamp',
 			})
@@ -281,6 +334,16 @@ export const PhoneJourney: React.FC<PhoneJourneyProps> = ({
 					position: 'absolute',
 					inset: 0,
 					background: `radial-gradient(circle at 24% 18%, rgba(${accentRgb},0.16), transparent 26%), radial-gradient(circle at 83% 78%, rgba(${accentRgb},0.10), transparent 30%), linear-gradient(135deg, #111d28, #071018 58%, #05090d)`,
+				}}
+			/>
+			{/* edge vignette for depth — keeps focus on the phone + copy */}
+			<div
+				style={{
+					position: 'absolute',
+					inset: 0,
+					background:
+						'radial-gradient(125% 125% at 50% 40%, transparent 55%, rgba(0,0,0,0.36))',
+					pointerEvents: 'none',
 				}}
 			/>
 			<div
@@ -499,7 +562,7 @@ export const PhoneJourney: React.FC<PhoneJourneyProps> = ({
 				) : null,
 			)}
 
-			{titleCard && titleOp > 0 && (
+			{titleCard && showTitleCard && titleOp > 0 && (
 				<AbsoluteFill
 					style={{
 						background: 'linear-gradient(135deg, rgba(7,16,24,0.96), rgba(10,22,32,0.92))',

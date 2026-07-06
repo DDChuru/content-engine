@@ -62,8 +62,8 @@ const COPY: Record<string, BeatCopy> = {
 	},
 	'eq-08-exception': {
 		headline: 'Damaged? Dive in',
-		body: 'Log damaged qty, a note, a photo — your evidence.',
-		proof: 'Damage recorded with evidence.',
+		body: 'Damaged counts toward the total back — log it with a note and photo.',
+		proof: 'Returned + damaged = what went out.',
 	},
 	'eq-09-all-clear': {
 		headline: 'One tap reconciles',
@@ -82,7 +82,7 @@ export const EQUIPMENT_JOURNEY_FRAMES = (TIMING as JourneyTiming).total_frames;
 export const EQUIPMENT_BRANDED_FRAMES =
 	BOOKEND_INTRO_FRAMES + EQUIPMENT_JOURNEY_FRAMES + BOOKEND_OUTRO_FRAMES;
 
-export const EquipmentIssueTutorial: React.FC = () => (
+export const EquipmentIssueTutorial: React.FC<{ showTitle?: boolean }> = ({ showTitle = true }) => (
 	<PhoneJourney
 		timing={TIMING as JourneyTiming}
 		boxes={BOXES as Record<string, RingBox>}
@@ -93,6 +93,7 @@ export const EquipmentIssueTutorial: React.FC = () => (
 		cropTop={60}
 		footerLabel="e-wizer field guide - equipment issue & returns"
 		accent={ACCENT}
+		showTitleCard={showTitle}
 		titleCard={{
 			kicker: 'e-wizer field guide',
 			title: 'Equipment Issue & Returns',
@@ -121,7 +122,7 @@ export const EquipmentIssueTutorialBranded: React.FC = () => {
 				/>
 			</Sequence>
 			<Sequence from={BOOKEND_INTRO_FRAMES} durationInFrames={EQUIPMENT_JOURNEY_FRAMES} premountFor={EQUIPMENT_FPS}>
-				<EquipmentIssueTutorial />
+				<EquipmentIssueTutorial showTitle={false} />
 			</Sequence>
 			<Sequence from={outroStart} durationInFrames={BOOKEND_OUTRO_FRAMES} premountFor={EQUIPMENT_FPS}>
 				<BrandOutro

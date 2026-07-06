@@ -51,13 +51,13 @@ const COPY: Record<string, BeatCopy> = {
 		proof: 'Same session, closed at shift end.',
 	},
 	'ppe-06-return-capture': {
-		headline: 'Pre-filled return',
-		body: 'Flag anything missing or damaged.',
-		proof: 'Exceptions stay visible.',
+		headline: 'Make the count balance',
+		body: 'Intact, damaged, disposed — together they account for what went out.',
+		proof: 'Every unit accounted for.',
 	},
 	'ppe-07-signoff': {
 		headline: 'Manager signature',
-		body: 'One signature closes the session.',
+		body: 'One signature closes the session — any shortfall raises a remedial.',
 		proof: 'Signed by the manager.',
 	},
 	'ppe-08-done': {
@@ -72,7 +72,7 @@ export const PPE_JOURNEY_FRAMES = (TIMING as JourneyTiming).total_frames;
 export const PPE_BRANDED_FRAMES =
 	BOOKEND_INTRO_FRAMES + PPE_JOURNEY_FRAMES + BOOKEND_OUTRO_FRAMES;
 
-export const PpeIssueTutorial: React.FC = () => (
+export const PpeIssueTutorial: React.FC<{ showTitle?: boolean }> = ({ showTitle = true }) => (
 	<PhoneJourney
 		timing={TIMING as JourneyTiming}
 		boxes={BOXES as Record<string, RingBox>}
@@ -83,6 +83,7 @@ export const PpeIssueTutorial: React.FC = () => (
 		cropTop={60}
 		footerLabel="e-wizer field guide - ppe issue & returns"
 		accent={ACCENT}
+		showTitleCard={showTitle}
 		titleCard={{
 			kicker: 'e-wizer field guide',
 			title: 'PPE Issue & Returns',
@@ -111,7 +112,7 @@ export const PpeIssueTutorialBranded: React.FC = () => {
 				/>
 			</Sequence>
 			<Sequence from={BOOKEND_INTRO_FRAMES} durationInFrames={PPE_JOURNEY_FRAMES} premountFor={PPE_FPS}>
-				<PpeIssueTutorial />
+				<PpeIssueTutorial showTitle={false} />
 			</Sequence>
 			<Sequence from={outroStart} durationInFrames={BOOKEND_OUTRO_FRAMES} premountFor={PPE_FPS}>
 				<BrandOutro
