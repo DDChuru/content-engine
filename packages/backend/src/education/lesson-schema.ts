@@ -1,3 +1,4 @@
+// LEGACY generator-internal shape. Canonical schema is packages/shared/src/types/lesson-schema.ts — generator output must be migrated/validated against it before shipping (see docs/LESSON-SCHEMA.md; generator alignment is a known follow-up).
 /**
  * Cambridge IGCSE Mathematics 0580 - Comprehensive Lesson Schema
  *

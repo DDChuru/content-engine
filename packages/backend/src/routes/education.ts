@@ -6,6 +6,7 @@ import { EducationalVizAgent } from '../agents/educational-viz-agent.js';
 import type { EducationalVisualizationRequest } from '../agents/educational-viz-agent.js';
 import { EducationFirestoreService } from '../services/education-firestore.js';
 import type { ContentStatus, TopicLevel, LessonContent, TopicAsset } from '../services/education-firestore.js';
+import { validateLesson } from '../services/lesson-validator.js';
 import multer from 'multer';
 import { execSync } from 'child_process';
 import fs from 'fs/promises';
@@ -1879,10 +1880,13 @@ router.get('/topics/:topicCode/lesson', async (req, res) => {
       const lessonContent = await fs.readFile(lessonPath, 'utf-8');
       const lesson = JSON.parse(lessonContent);
 
+      const { valid, errors } = validateLesson(lesson);
+
       return res.json({
         success: true,
         lesson,
-        source: 'file'
+        source: 'file',
+        ...(valid ? {} : { schemaWarnings: errors })
       });
     } catch (fileError) {
       // File not found, try Firestore
@@ -1900,11 +1904,15 @@ router.get('/topics/:topicCode/lesson', async (req, res) => {
     }
 
     // Check if topic has lesson content in Firestore
-    if (topic.lessonContent) {
+    const firestoreLesson = (topic as { lessonContent?: unknown }).lessonContent;
+    if (firestoreLesson) {
+      const { valid, errors } = validateLesson(firestoreLesson);
+
       return res.json({
         success: true,
-        lesson: topic.lessonContent,
-        source: 'firestore'
+        lesson: firestoreLesson,
+        source: 'firestore',
+        ...(valid ? {} : { schemaWarnings: errors })
       });
     }
 
