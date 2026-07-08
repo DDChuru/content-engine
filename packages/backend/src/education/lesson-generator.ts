@@ -78,6 +78,12 @@ CONTENT PRINCIPLES:
 7. PRACTICE with graduated difficulty
 8. SUMMARIZE key takeaways
 
+MATH NOTATION FORMAT - HARD REQUIREMENT:
+- Every piece of mathematical notation in ANY string field must be wrapped in inline LaTeX delimiters \\( ... \\).
+- This applies to theory content, question stems, options, worked-example steps, misconceptions, key formulas, summaries, hints, feedback, captions, and any other learner-facing string.
+- Use proper LaTeX commands such as \\cup, \\cap, \\in, \\notin, \\subseteq, \\xi, A', ^2, \\sqrt{}, \\leq, \\geq, and \\neq. Do not use unicode math symbols such as ∪, ∩, ∈, ∉, ⊆, ξ, √, ≤, ≥, or ≠.
+- Keep surrounding prose plain. Example: The union \\( A \\cup B \\) contains every element that is in \\( A \\), in \\( B \\), or in both.
+
 VISUAL CONTENT NOTES:
 - Suggest where SVG animations would help (moving points, transformations)
 - Suggest where Gemini diagrams would help (realistic scenarios, infographics)

@@ -22,6 +22,9 @@ import { generateLesson, SyllabusTopic } from './lesson-generator.js';
 import { LessonGenerationRequest, VisualStyle } from './lesson-schema.js';
 import visualGenerator from './visual-generator.js';
 
+const LATEX_CONTENT_REQUIREMENT =
+  "MATH NOTATION FORMAT - HARD REQUIREMENT: Every piece of mathematical notation in ANY string field must be wrapped in inline LaTeX delimiters \\( ... \\). This applies to theory content, question stems, options, worked-example steps, misconceptions, key formulas, summaries, hints, feedback, captions, and any other learner-facing string. Use proper LaTeX commands such as \\cup, \\cap, \\in, \\notin, \\subseteq, \\xi, A', ^2, \\sqrt{}, \\leq, \\geq, and \\neq instead of unicode math symbols. Keep surrounding prose plain. Example: The union \\( A \\cup B \\) contains every element that is in \\( A \\), in \\( B \\), or in both.";
+
 // Load syllabus
 async function loadSyllabus() {
   const syllabusPath = path.join(__dirname, '../../data/maths-0580-syllabus-complete.json');
@@ -178,7 +181,13 @@ async function main() {
   const startTime = Date.now();
 
   try {
-    const lesson = await generateLesson(topic, request);
+    const lesson = await generateLesson(
+      {
+        ...topic,
+        notes: [...(topic.notes ?? []), LATEX_CONTENT_REQUIREMENT],
+      },
+      request
+    );
 
     // Save lesson
     const outputDir = path.join(__dirname, '../../output/lessons');
