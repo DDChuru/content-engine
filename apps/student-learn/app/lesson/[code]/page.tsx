@@ -1,722 +1,1174 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { useParams } from 'next/navigation';
 import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-  ArrowLeft,
-  BookOpen,
-  CheckCircle,
-  ChevronRight,
-  Clock,
-  Target,
-  AlertTriangle,
-  Lightbulb,
-  PenTool,
-  HelpCircle,
-  Trophy,
-  ChevronDown,
-  ChevronUp,
-  Play,
-  RotateCcw
-} from 'lucide-react';
-import { BlockMath } from 'react-katex';
-import { InteractiveVennDiagram } from '@/components/interactive-venn-diagram';
+import Image from 'next/image';
+import { MathText, MathBlock } from '@/components/math-text';
+import { QuestionCard, type ReviewLink } from '@/components/question-card';
+import { Quiz } from '@/components/quiz';
+import { VennBoard } from '@/components/venn-board';
+import type {
+  ContentBlock,
+  Lesson,
+  LessonOpening,
+  LessonSummary,
+  Misconception,
+  Question,
+  QuestionOption,
+  TheorySection,
+  WorkedExample,
+} from '@/lib/types';
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001';
 
-// Interfaces
-interface ContentBlock {
-  id: string;
-  type: string;
-  title?: string;
+// ---------------------------------------------------------------------------
+// Normalization — tolerate the legacy C1.5 shape (no opening, learningObjectives
+// as plain strings, string misconceptions, loose question encodings).
+// ---------------------------------------------------------------------------
+
+interface NormalizedQuiz {
+  passingScore: number;
   description?: string;
-  narrationText?: string;
-  imagePath?: string;
-  videoPath?: string;
-  latex?: string;
-  interactiveType?: string;
-  interactiveConfig?: any;
+  questions: Question[];
 }
 
-interface TheorySection {
-  id: string;
+interface NormalizedLesson {
   title: string;
-  order: number;
-  introduction: string;
-  keyQuestion?: string;
-  content: ContentBlock[];
-  keyDefinitions?: { term: string; definition: string; example?: string }[];
-  keyPoints: string[];
-}
-
-interface Lesson {
-  id: string;
-  syllabusCode: string;
-  title: string;
-  level: string;
-  estimatedDuration: number;
-  opening: { hook: string; realWorldConnection: string };
-  objectives: { id: string; description: string; verb: string }[];
+  level?: string;
+  estimatedDuration?: number;
+  opening?: LessonOpening;
+  objectives: string[];
   theorySections: TheorySection[];
-  misconceptions: { id: string; wrongIdea: string; whyWrong: string; correctUnderstanding: string }[];
-  workedExamples: any[];
-  practiceQuestions: any[];
-  quiz: { title: string; passingScore: number; questions: any[] };
-  summary: { keyTakeaways: string[]; examTips: string[] };
+  richMisconceptions: Misconception[];
+  plainMisconceptions: string[];
+  workedExamples: WorkedExample[];
+  practiceQuestions: Question[];
+  quiz?: NormalizedQuiz;
+  summary?: LessonSummary;
 }
 
-type SectionType = 'overview' | 'learn' | 'practice' | 'quiz';
+function optionId(index: number): string {
+  return String.fromCharCode(97 + index);
+}
 
-export default function LessonPage() {
-  const params = useParams();
-  const code = params.code as string;
-
-  const [lesson, setLesson] = useState<Lesson | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [activeSection, setActiveSection] = useState<SectionType>('overview');
-  const [activeTheoryIndex, setActiveTheoryIndex] = useState(0);
-  const [quizAnswers, setQuizAnswers] = useState<Record<string, string>>({});
-  const [quizSubmitted, setQuizSubmitted] = useState(false);
-  const [quizScore, setQuizScore] = useState<number | null>(null);
-
-  useEffect(() => {
-    fetchLesson();
-  }, [code]);
-
-  const fetchLesson = async () => {
-    try {
-      setLoading(true);
-      // Fetch from backend API
-      const res = await fetch(`${API_URL}/api/education/topics/${code}/lesson`);
-      const data = await res.json();
-
-      if (data.success && data.lesson) {
-        setLesson(data.lesson);
-      }
-    } catch (err) {
-      console.error('Failed to fetch lesson:', err);
-    } finally {
-      setLoading(false);
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/**
+ * Real generated lessons encode MC options three ways:
+ *  - canonical: {id, text}
+ *  - c1.2 style: {label: display text, value: option id letter, isCorrect}
+ *  - c1.3 style: {label: enumerator letter, value: display text, isCorrect}
+ *  - c1.5 style: plain strings
+ */
+function normalizeOption(o: any, index: number): QuestionOption {
+  if (typeof o === 'string') return { id: optionId(index), text: o };
+  if (typeof o?.text === 'string' && o.text.trim() !== '') {
+    return { id: typeof o.id === 'string' ? o.id : optionId(index), text: o.text };
+  }
+  const label = o?.label != null ? String(o.label) : '';
+  const value = o?.value != null ? String(o.value) : '';
+  const enumerator = /^[a-e]$/i;
+  if (label !== '' && value !== '') {
+    if (enumerator.test(value) && !enumerator.test(label)) {
+      return { id: value.toLowerCase(), text: label };
     }
+    if (enumerator.test(label)) {
+      return { id: label.toLowerCase(), text: value };
+    }
+    return { id: optionId(index), text: label };
+  }
+  return { id: optionId(index), text: label !== '' ? label : value };
+}
+
+function warnDroppedQuestion(raw: any, index: number, topicCode: string): null {
+  const questionRef =
+    raw && typeof raw.id === 'string' && raw.id.trim() !== ''
+      ? `id ${raw.id} (index ${index})`
+      : `index ${index}`;
+  console.warn(
+    `Dropped ungradeable question for lesson ${topicCode}: ${questionRef}.`
+  );
+  return null;
+}
+
+function normalizeQuestion(raw: any, index: number, topicCode: string): Question | null {
+  if (!raw || typeof raw.question !== 'string') {
+    return warnDroppedQuestion(raw, index, topicCode);
+  }
+  const base = {
+    id: typeof raw.id === 'string' ? raw.id : `q-${index}`,
+    skillTag: typeof raw.skillTag === 'string' ? raw.skillTag : '',
+    difficulty: raw.difficulty ?? 'core',
+    question: raw.question,
+    hint:
+      typeof raw.hint === 'string'
+        ? raw.hint
+        : Array.isArray(raw.hints) && raw.hints.length > 0
+          ? raw.hints.map(String).join(' ')
+          : undefined,
+    solutionSteps: Array.isArray(raw.solutionSteps)
+      ? raw.solutionSteps.map(String)
+      : undefined,
+    feedbackCorrect:
+      typeof raw.feedbackCorrect === 'string' ? raw.feedbackCorrect : '',
+    feedbackIncorrect:
+      typeof raw.feedbackIncorrect === 'string'
+        ? raw.feedbackIncorrect
+        : typeof raw.explanation === 'string'
+          ? raw.explanation
+          : '',
+    addressesMisconception:
+      typeof raw.addressesMisconception === 'string'
+        ? raw.addressesMisconception
+        : undefined,
   };
 
-  const handleQuizAnswer = (questionId: string, answer: string) => {
-    setQuizAnswers(prev => ({ ...prev, [questionId]: answer }));
-  };
-
-  const submitQuiz = () => {
-    if (!lesson) return;
-
-    let correct = 0;
-    lesson.quiz.questions.forEach(q => {
-      const answer = quizAnswers[q.id];
-      if (q.questionType === 'multiple-choice') {
-        const correctOption = q.options?.find((o: any) => o.isCorrect);
-        if (answer === correctOption?.value) correct++;
-      } else if (answer === q.correctAnswer) {
-        correct++;
+  if (Array.isArray(raw.options) && raw.options.length > 0) {
+    const options: QuestionOption[] = raw.options.map(normalizeOption);
+    let correctOptionId: string | undefined =
+      typeof raw.correctOptionId === 'string' ? raw.correctOptionId : undefined;
+    if (!correctOptionId) {
+      // Legacy encodings: options[].isCorrect, numeric index, or answer text.
+      const flagged = raw.options.findIndex((o: any) => o && o.isCorrect === true);
+      if (flagged >= 0) {
+        correctOptionId = options[flagged].id;
+      } else {
+        const answer = raw.correctAnswer ?? raw.answer;
+        if (typeof answer === 'number' && options[answer]) {
+          correctOptionId = options[answer].id;
+        } else if (answer != null) {
+          const text = String(answer).trim().toLowerCase();
+          const hit = options.find(
+            (o) => o.id === text || o.text.trim().toLowerCase() === text
+          );
+          if (hit) correctOptionId = hit.id;
+        }
       }
-    });
+    }
+    if (!correctOptionId) {
+      // ungradeable — drop rather than mis-grade
+      return warnDroppedQuestion(raw, index, topicCode);
+    }
+    return { ...base, questionType: 'multiple-choice', options, correctOptionId };
+  }
 
-    setQuizScore(Math.round((correct / lesson.quiz.questions.length) * 100));
-    setQuizSubmitted(true);
+  const answer = raw.correctAnswer ?? raw.answer;
+  if (answer == null) return warnDroppedQuestion(raw, index, topicCode);
+  const freeType =
+    raw.questionType === 'numeric' || raw.questionType === 'true-false'
+      ? raw.questionType
+      : 'short-answer';
+  return {
+    ...base,
+    questionType: freeType,
+    correctAnswer: String(answer),
+    acceptableAnswers: Array.isArray(raw.acceptableAnswers)
+      ? raw.acceptableAnswers.map(String)
+      : undefined,
   };
+}
 
-  if (loading) {
-    return (
-      <div className="flex items-center justify-center min-h-[60vh]">
-        <div className="text-center">
-          <motion.div
-            animate={{ rotate: 360 }}
-            transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
-            className="mb-4"
-          >
-            <BookOpen className="w-10 h-10 text-indigo-400" />
-          </motion.div>
-          <p className="text-slate-400">Loading lesson...</p>
-        </div>
-      </div>
-    );
+/**
+ * Canonical examples use question/steps[{stepNumber, working, explanation}];
+ * legacy (c1.5) uses title/problem/steps[{step, work, result}]/commonMistake.
+ */
+function normalizeWorkedExample(raw: any, index: number): WorkedExample | null {
+  const problem =
+    typeof raw?.question === 'string'
+      ? raw.question
+      : typeof raw?.problem === 'string'
+        ? raw.problem
+        : '';
+  if (problem.trim() === '') return null;
+  const title = typeof raw.title === 'string' ? raw.title.trim() : '';
+  const steps = (Array.isArray(raw.steps) ? raw.steps : []).map(
+    (st: any, j: number) => ({
+      stepNumber:
+        typeof st?.stepNumber === 'number'
+          ? st.stepNumber
+          : typeof st?.step === 'number'
+            ? st.step
+            : j + 1,
+      instruction: String(st?.instruction ?? ''),
+      working:
+        typeof st?.working === 'string'
+          ? st.working
+          : typeof st?.work === 'string'
+            ? st.work
+            : '',
+      explanation:
+        typeof st?.explanation === 'string'
+          ? st.explanation
+          : typeof st?.result === 'string'
+            ? st.result
+            : undefined,
+      commonError: typeof st?.commonError === 'string' ? st.commonError : undefined,
+    })
+  );
+  // Legacy example-level commonMistake surfaces as the final step's watch-out.
+  if (
+    typeof raw.commonMistake === 'string' &&
+    raw.commonMistake.trim() !== '' &&
+    steps.length > 0 &&
+    !steps[steps.length - 1].commonError
+  ) {
+    steps[steps.length - 1].commonError = raw.commonMistake;
+  }
+  return {
+    id: typeof raw.id === 'string' ? raw.id : `ex-${index}`,
+    difficulty: raw.difficulty ?? 'core',
+    questionType: typeof raw.questionType === 'string' ? raw.questionType : '',
+    question: title !== '' ? `${title}. ${problem}` : problem,
+    marks: typeof raw.marks === 'number' ? raw.marks : undefined,
+    steps,
+    answer: String(raw.answer ?? ''),
+    examTip: typeof raw.examTip === 'string' ? raw.examTip : undefined,
+  };
+}
+
+function normalizeLesson(raw: any, topicCode: string): NormalizedLesson {
+  const opening =
+    raw.opening && typeof raw.opening.hook === 'string'
+      ? (raw.opening as LessonOpening)
+      : undefined;
+
+  const objectiveSource = Array.isArray(raw.objectives)
+    ? raw.objectives
+    : Array.isArray(raw.learningObjectives)
+      ? raw.learningObjectives
+      : [];
+  const objectives: string[] = objectiveSource
+    .map((o: any) =>
+      typeof o === 'string' ? o : typeof o?.description === 'string' ? o.description : ''
+    )
+    .filter((s: string) => s.trim() !== '');
+
+  const theorySections: TheorySection[] = (
+    Array.isArray(raw.theorySections) ? raw.theorySections : []
+  )
+    .filter((s: any) => s && typeof s.title === 'string')
+    .map((s: any, i: number) => {
+      const id = typeof s.id === 'string' ? s.id : `theory-${i}`;
+      // Legacy sections carry their prose as a plain string in `content`.
+      const content: ContentBlock[] = Array.isArray(s.content)
+        ? s.content
+        : typeof s.content === 'string' && s.content.trim() !== ''
+          ? [{ id: `${id}-content`, type: 'text' as const, body: s.content }]
+          : [];
+      return {
+        ...s,
+        id,
+        introduction: typeof s.introduction === 'string' ? s.introduction : '',
+        content,
+      };
+    })
+    .sort((a: TheorySection, b: TheorySection) => (a.order ?? 0) - (b.order ?? 0));
+
+  const richMisconceptions: Misconception[] = [];
+  const plainMisconceptions: string[] = [];
+  for (const m of Array.isArray(raw.misconceptions) ? raw.misconceptions : []) {
+    if (typeof m === 'string') {
+      if (m.trim() !== '') plainMisconceptions.push(m);
+    } else if (m && typeof m.wrongIdea === 'string') {
+      richMisconceptions.push(m);
+    } else if (m && typeof m.misconception === 'string') {
+      // Legacy pair: {misconception, correction} → trap/truth panel.
+      richMisconceptions.push({
+        id: typeof m.id === 'string' ? m.id : `m-${richMisconceptions.length}`,
+        wrongIdea: m.misconception,
+        whyWrong: '',
+        correctUnderstanding:
+          typeof m.correction === 'string' ? m.correction : '',
+      });
+    }
   }
 
-  if (!lesson) {
-    return (
-      <div className="flex items-center justify-center min-h-[60vh]">
-        <div className="glass-card p-8 text-center max-w-md">
-          <AlertTriangle className="w-12 h-12 text-amber-400 mx-auto mb-4" />
-          <h2 className="text-xl font-bold text-white mb-2">Lesson Not Found</h2>
-          <p className="text-slate-400 mb-6">
-            This lesson is not available yet.
-          </p>
-          <Link href="/" className="btn-primary inline-flex items-center gap-2">
-            <ArrowLeft className="w-4 h-4" />
-            Back to Topics
-          </Link>
-        </div>
-      </div>
-    );
+  const workedExamples: WorkedExample[] = (
+    Array.isArray(raw.workedExamples) ? raw.workedExamples : []
+  )
+    .map((ex: any, i: number) => normalizeWorkedExample(ex, i))
+    .filter((ex: WorkedExample | null): ex is WorkedExample => ex !== null);
+
+  const practiceQuestions = (
+    Array.isArray(raw.practiceQuestions) ? raw.practiceQuestions : []
+  )
+    .map((q: any, i: number) => normalizeQuestion(q, i, topicCode))
+    .filter((q: Question | null): q is Question => q !== null);
+
+  let quiz: NormalizedQuiz | undefined;
+  if (raw.quiz && Array.isArray(raw.quiz.questions)) {
+    const questions = raw.quiz.questions
+      .map((q: any, i: number) => normalizeQuestion(q, i, topicCode))
+      .filter((q: Question | null): q is Question => q !== null);
+    if (questions.length > 0) {
+      quiz = {
+        passingScore:
+          typeof raw.quiz.passingScore === 'number' ? raw.quiz.passingScore : 70,
+        description:
+          typeof raw.quiz.description === 'string' ? raw.quiz.description : undefined,
+        questions,
+      };
+    }
   }
 
-  const sections: { id: SectionType; label: string; icon: React.ComponentType<any> }[] = [
-    { id: 'overview', label: 'Overview', icon: BookOpen },
-    { id: 'learn', label: 'Learn', icon: Lightbulb },
-    { id: 'practice', label: 'Practice', icon: PenTool },
-    { id: 'quiz', label: 'Quiz', icon: Trophy },
-  ];
+  const summary =
+    raw.summary &&
+    (Array.isArray(raw.summary.keyTakeaways) || Array.isArray(raw.summary.examTips))
+      ? {
+          keyTakeaways: Array.isArray(raw.summary.keyTakeaways)
+            ? raw.summary.keyTakeaways.map(String)
+            : [],
+          examTips: Array.isArray(raw.summary.examTips)
+            ? raw.summary.examTips.map(String)
+            : [],
+          formulaSheet: Array.isArray(raw.summary.formulaSheet)
+            ? raw.summary.formulaSheet.map(String)
+            : undefined,
+          nextTopics: Array.isArray(raw.summary.nextTopics)
+            ? raw.summary.nextTopics.map(String)
+            : undefined,
+        }
+      : undefined;
 
+  return {
+    title: typeof raw.title === 'string' ? raw.title : 'Lesson',
+    level: typeof raw.level === 'string' ? raw.level : undefined,
+    estimatedDuration:
+      typeof raw.estimatedDuration === 'number' ? raw.estimatedDuration : undefined,
+    opening,
+    objectives,
+    theorySections,
+    richMisconceptions,
+    plainMisconceptions,
+    workedExamples,
+    practiceQuestions,
+    quiz,
+    summary,
+  };
+}
+/* eslint-enable @typescript-eslint/no-explicit-any */
+
+function normalizeKey(s: string): string {
+  return s.toLowerCase().replace(/[^a-z0-9]/g, '');
+}
+
+function makeReviewLinkResolver(sections: TheorySection[]) {
+  return (question: Question): ReviewLink | undefined => {
+    if (sections.length === 0) return undefined;
+    const tail = normalizeKey(question.skillTag.split('.').pop() ?? '');
+    if (tail !== '') {
+      const hit = sections.find(
+        (s) =>
+          normalizeKey(s.id).includes(tail) || normalizeKey(s.title).includes(tail)
+      );
+      if (hit) return { href: `#section-${hit.id}`, label: hit.title };
+    }
+    return { href: '#theory' };
+  };
+}
+
+function resolveMedia(p: string): string {
+  if (p.startsWith('http')) return p;
+  return `${API_URL}${p.startsWith('/') ? '' : '/'}${p}`;
+}
+
+// ---------------------------------------------------------------------------
+// Presentational pieces
+// ---------------------------------------------------------------------------
+
+function SectionShell({
+  id,
+  step,
+  title,
+  active,
+  hideTitle,
+  children,
+}: {
+  id: string;
+  step: number;
+  title: string;
+  active: boolean;
+  hideTitle?: boolean;
+  children: React.ReactNode;
+}) {
   return (
-    <div className="max-w-5xl mx-auto px-4 py-6">
-      {/* Breadcrumb */}
-      <Link
-        href="/"
-        className="inline-flex items-center gap-2 text-slate-400 hover:text-white text-sm mb-6 transition-colors"
+    <section
+      id={id}
+      aria-label={hideTitle ? title : undefined}
+      className="relative mt-14 scroll-mt-16 first:mt-10 lg:scroll-mt-8"
+    >
+      <a
+        href={`#${id}`}
+        aria-hidden="true"
+        tabIndex={-1}
+        className={`absolute -left-24 top-1.5 hidden w-[4.5rem] justify-end font-mono text-xs lg:flex ${
+          active ? 'text-accent' : 'text-ink-muted'
+        }`}
       >
-        <ArrowLeft className="w-4 h-4" />
-        Back to Topics
-      </Link>
+        {step}
+      </a>
+      {!hideTitle && (
+        <h2 className="font-heading text-2xl font-semibold">{title}</h2>
+      )}
+      {children}
+    </section>
+  );
+}
 
-      {/* Header */}
-      <div className="glass-card p-6 mb-6">
-        <div className="flex items-center gap-3 mb-2">
-          <span className="text-xs font-semibold px-2 py-1 rounded bg-indigo-500/20 text-indigo-400">
-            {lesson.syllabusCode}
-          </span>
-          <span className="text-xs text-slate-500 flex items-center gap-1">
-            <Clock className="w-3 h-3" />
-            {lesson.estimatedDuration} min
-          </span>
-        </div>
-        <h1 className="text-2xl font-bold text-white">{lesson.title}</h1>
-      </div>
+/** Margin marker for nested items (theory subsections, worked-example steps). */
+function MarginMarker({ text }: { text: string }) {
+  return (
+    <span
+      aria-hidden="true"
+      className="absolute -left-24 top-1.5 hidden w-[4.5rem] justify-end font-mono text-xs text-ink-muted lg:flex"
+    >
+      {text}
+    </span>
+  );
+}
 
-      {/* Navigation */}
-      <div className="glass-card p-2 mb-6">
-        <div className="flex gap-1">
-          {sections.map(section => {
-            const Icon = section.icon;
-            const isActive = activeSection === section.id;
-            return (
-              <button
-                key={section.id}
-                onClick={() => setActiveSection(section.id)}
-                className={`flex items-center gap-2 px-4 py-3 rounded-lg text-sm font-medium transition-all ${
-                  isActive
-                    ? 'bg-indigo-500 text-white'
-                    : 'text-slate-400 hover:text-white hover:bg-slate-700/50'
-                }`}
-              >
-                <Icon className="w-4 h-4" />
-                {section.label}
-              </button>
-            );
-          })}
-        </div>
-      </div>
-
-      {/* Content */}
-      <AnimatePresence mode="wait">
-        <motion.div
-          key={activeSection}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -20 }}
-          transition={{ duration: 0.2 }}
-        >
-          {/* Overview */}
-          {activeSection === 'overview' && (
-            <div className="space-y-6">
-              <div className="glass-card p-6">
-                <h2 className="text-lg font-semibold text-white mb-4">Why Learn This?</h2>
-                <p className="text-slate-300 leading-relaxed">{lesson.opening.hook}</p>
-              </div>
-
-              <div className="glass-card p-6 bg-gradient-to-br from-indigo-500/10 to-purple-500/10">
-                <h2 className="text-lg font-semibold text-white mb-4">Real-World Connection</h2>
-                <p className="text-slate-300 leading-relaxed">{lesson.opening.realWorldConnection}</p>
-              </div>
-
-              <div className="glass-card p-6">
-                <h2 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
-                  <Target className="w-5 h-5 text-indigo-400" />
-                  What You'll Learn
-                </h2>
-                <div className="space-y-3">
-                  {lesson.objectives.map((obj, i) => (
-                    <div key={obj.id} className="flex items-start gap-3">
-                      <div className="w-6 h-6 rounded-full bg-indigo-500 flex items-center justify-center flex-shrink-0 text-xs font-bold text-white">
-                        {i + 1}
-                      </div>
-                      <p className="text-slate-300">{obj.description}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <button
-                onClick={() => setActiveSection('learn')}
-                className="btn-primary w-full flex items-center justify-center gap-2"
-              >
-                Start Learning
-                <ChevronRight className="w-5 h-5" />
-              </button>
-            </div>
-          )}
-
-          {/* Learn */}
-          {activeSection === 'learn' && (
-            <div className="flex gap-6">
-              {/* Sidebar */}
-              <div className="w-64 flex-shrink-0">
-                <div className="glass-card p-4 sticky top-24">
-                  <h3 className="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-3">
-                    Sections
-                  </h3>
-                  <div className="space-y-1">
-                    {lesson.theorySections.map((section, i) => (
-                      <button
-                        key={section.id}
-                        onClick={() => setActiveTheoryIndex(i)}
-                        className={`w-full text-left px-3 py-2 rounded-lg text-sm transition-all flex items-center gap-2 ${
-                          activeTheoryIndex === i
-                            ? 'bg-indigo-500 text-white'
-                            : 'text-slate-400 hover:text-white hover:bg-slate-700/50'
-                        }`}
-                      >
-                        <span className="w-5 h-5 rounded bg-slate-700 flex items-center justify-center text-xs font-medium">
-                          {i + 1}
-                        </span>
-                        <span className="truncate">{section.title}</span>
-                      </button>
-                    ))}
-                  </div>
-                </div>
-              </div>
-
-              {/* Content */}
-              <div className="flex-1">
-                {lesson.theorySections[activeTheoryIndex] && (
-                  <div className="glass-card p-6">
-                    <h2 className="text-xl font-bold text-white mb-2">
-                      {lesson.theorySections[activeTheoryIndex].title}
-                    </h2>
-
-                    {lesson.theorySections[activeTheoryIndex].keyQuestion && (
-                      <div className="p-4 rounded-xl bg-indigo-500/10 border border-indigo-500/30 mb-6">
-                        <p className="text-indigo-300 italic">
-                          Key Question: {lesson.theorySections[activeTheoryIndex].keyQuestion}
-                        </p>
-                      </div>
-                    )}
-
-                    <p className="text-slate-300 leading-relaxed mb-6">
-                      {lesson.theorySections[activeTheoryIndex].introduction}
-                    </p>
-
-                    {/* Content Blocks */}
-                    <div className="space-y-6">
-                      {lesson.theorySections[activeTheoryIndex].content?.map(block => (
-                        <div key={block.id} className="rounded-xl overflow-hidden bg-slate-800/50 border border-slate-700">
-                          {/* Video */}
-                          {(block.type === 'manim-animation' || block.type === 'svg-animation') && block.videoPath && (
-                            <div>
-                              <video
-                                controls
-                                className="w-full aspect-video bg-black"
-                              >
-                                <source src={`${API_URL}${block.videoPath}`} type="video/mp4" />
-                              </video>
-                              {block.title && (
-                                <div className="p-4">
-                                  <h4 className="font-semibold text-white mb-1">{block.title}</h4>
-                                  {block.narrationText && (
-                                    <p className="text-sm text-slate-400">{block.narrationText}</p>
-                                  )}
-                                </div>
-                              )}
-                            </div>
-                          )}
-
-                          {/* Image/Diagram */}
-                          {block.type === 'gemini-diagram' && (
-                            <div>
-                              {block.imagePath ? (
-                                <img
-                                  src={`${API_URL}${block.imagePath}`}
-                                  alt={block.title || 'Diagram'}
-                                  className="w-full"
-                                />
-                              ) : (
-                                <div className="aspect-video bg-gradient-to-br from-indigo-900/50 to-purple-900/50 flex items-center justify-center">
-                                  <p className="text-slate-400">Visual diagram</p>
-                                </div>
-                              )}
-                              {block.title && (
-                                <div className="p-4">
-                                  <h4 className="font-semibold text-white mb-1">{block.title}</h4>
-                                  {block.narrationText && (
-                                    <p className="text-sm text-slate-400">{block.narrationText}</p>
-                                  )}
-                                </div>
-                              )}
-                            </div>
-                          )}
-
-                          {/* LaTeX */}
-                          {block.type === 'latex-formula' && block.latex && (
-                            <div className="p-6">
-                              {block.title && (
-                                <h4 className="text-indigo-400 font-medium mb-4 text-sm">{block.title}</h4>
-                              )}
-                              <div className="bg-slate-900 rounded-xl p-6 text-center text-xl text-white">
-                                <BlockMath math={block.latex} />
-                              </div>
-                              {block.narrationText && (
-                                <p className="text-sm text-slate-400 mt-4">{block.narrationText}</p>
-                              )}
-                            </div>
-                          )}
-
-                          {/* Interactive Venn Diagram */}
-                          {block.type === 'interactive' && block.interactiveType === 'venn' && block.interactiveConfig && (
-                            <div className="p-6">
-                              {block.title && (
-                                <h4 className="text-green-400 font-semibold mb-4">{block.title}</h4>
-                              )}
-                              {block.interactiveConfig.type === 'two-sets' && (
-                                <InteractiveVennDiagram
-                                  setA={{ label: 'A', color: '#ef4444' }}
-                                  setB={{ label: 'B', color: '#22c55e' }}
-                                  elements={(() => {
-                                    const config = block.interactiveConfig!;
-                                    const setA = new Set(config.setA || []);
-                                    const setB = new Set(config.setB || []);
-                                    const universal = config.universalSet || [];
-
-                                    return universal.map((val: number) => {
-                                      const inA = setA.has(val);
-                                      const inB = setB.has(val);
-                                      let correctRegion: 'onlyA' | 'onlyB' | 'intersection' | 'outside';
-
-                                      if (inA && inB) correctRegion = 'intersection';
-                                      else if (inA) correctRegion = 'onlyA';
-                                      else if (inB) correctRegion = 'onlyB';
-                                      else correctRegion = 'outside';
-
-                                      return {
-                                        id: `el-${val}`,
-                                        value: val,
-                                        correctRegion
-                                      };
-                                    });
-                                  })()}
-                                  onComplete={(isCorrect, score) => {
-                                    console.log('Venn exercise complete:', { isCorrect, score });
-                                  }}
-                                />
-                              )}
-                              {block.interactiveConfig.type === 'single-set' && (
-                                <div className="p-6 rounded-xl bg-green-500/10 border border-green-500/30 text-center">
-                                  <p className="text-slate-400 mb-4">Complement Explorer</p>
-                                  <div className="flex flex-wrap gap-2 justify-center">
-                                    {block.interactiveConfig.universalSet?.map((val: number) => {
-                                      const inSet = block.interactiveConfig!.setA?.includes(val);
-                                      return (
-                                        <span
-                                          key={val}
-                                          className={`px-4 py-2 rounded-full font-semibold ${
-                                            inSet
-                                              ? 'bg-red-500/20 text-red-400 border border-red-500/40'
-                                              : 'bg-slate-700/50 text-slate-400 border border-slate-600'
-                                          }`}
-                                        >
-                                          {val} {inSet ? '∈ A' : "∈ A'"}
-                                        </span>
-                                      );
-                                    })}
-                                  </div>
-                                </div>
-                              )}
-                              {block.narrationText && (
-                                <p className="text-sm text-slate-400 mt-4">{block.narrationText}</p>
-                              )}
-                            </div>
-                          )}
-                        </div>
-                      ))}
-                    </div>
-
-                    {/* Key Definitions */}
-                    {lesson.theorySections[activeTheoryIndex]?.keyDefinitions?.length && lesson.theorySections[activeTheoryIndex]?.keyDefinitions?.length > 0 && (
-                      <div className="mt-8">
-                        <h3 className="text-lg font-semibold text-white mb-4">Key Definitions</h3>
-                        <div className="space-y-3">
-                          {lesson.theorySections[activeTheoryIndex]?.keyDefinitions?.map((def, i) => (
-                            <div key={i} className="p-4 rounded-xl bg-slate-800/50 border-l-4 border-indigo-500">
-                              <div className="font-semibold text-indigo-400 mb-1">{def.term}</div>
-                              <p className="text-slate-300">{def.definition}</p>
-                              {def.example && (
-                                <p className="text-sm text-slate-500 mt-2">
-                                  <strong>Example:</strong> {def.example}
-                                </p>
-                              )}
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-                    )}
-
-                    {/* Key Points */}
-                    {lesson.theorySections[activeTheoryIndex]?.keyPoints?.length && lesson.theorySections[activeTheoryIndex]?.keyPoints?.length > 0 && (
-                      <div className="mt-8 p-5 rounded-xl bg-green-500/10 border border-green-500/30">
-                        <h3 className="text-green-400 font-semibold mb-3 flex items-center gap-2">
-                          <CheckCircle className="w-5 h-5" />
-                          Key Points
-                        </h3>
-                        <ul className="space-y-2">
-                          {lesson.theorySections[activeTheoryIndex].keyPoints.map((point, i) => (
-                            <li key={i} className="text-slate-300 flex items-start gap-2">
-                              <span className="text-green-400 mt-1">•</span>
-                              {point}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    )}
-
-                    {/* Navigation */}
-                    <div className="flex justify-between mt-8 pt-6 border-t border-slate-700">
-                      <button
-                        onClick={() => setActiveTheoryIndex(i => Math.max(0, i - 1))}
-                        disabled={activeTheoryIndex === 0}
-                        className={`px-4 py-2 rounded-lg flex items-center gap-2 ${
-                          activeTheoryIndex === 0
-                            ? 'text-slate-600 cursor-not-allowed'
-                            : 'text-slate-400 hover:text-white hover:bg-slate-700'
-                        }`}
-                      >
-                        <ArrowLeft className="w-4 h-4" />
-                        Previous
-                      </button>
-                      <button
-                        onClick={() => {
-                          if (activeTheoryIndex < lesson.theorySections.length - 1) {
-                            setActiveTheoryIndex(i => i + 1);
-                          } else {
-                            setActiveSection('practice');
-                          }
-                        }}
-                        className="btn-primary flex items-center gap-2"
-                      >
-                        {activeTheoryIndex < lesson.theorySections.length - 1 ? 'Next' : 'Start Practice'}
-                        <ChevronRight className="w-4 h-4" />
-                      </button>
-                    </div>
-                  </div>
-                )}
-              </div>
-            </div>
-          )}
-
-          {/* Practice */}
-          {activeSection === 'practice' && (
-            <div className="space-y-6">
-              <div className="glass-card p-6">
-                <h2 className="text-xl font-bold text-white mb-2">Practice Questions</h2>
-                <p className="text-slate-400">Test your understanding with these practice questions.</p>
-              </div>
-
-              {lesson.practiceQuestions.map((q, i) => (
-                <PracticeQuestion key={q.id} question={q} index={i} />
-              ))}
-
-              <button
-                onClick={() => setActiveSection('quiz')}
-                className="btn-primary w-full flex items-center justify-center gap-2"
-              >
-                Take the Quiz
-                <Trophy className="w-5 h-5" />
-              </button>
-            </div>
-          )}
-
-          {/* Quiz */}
-          {activeSection === 'quiz' && (
-            <div className="glass-card p-6">
-              {!quizSubmitted ? (
-                <>
-                  <div className="text-center mb-8">
-                    <Trophy className="w-16 h-16 text-amber-400 mx-auto mb-4" />
-                    <h2 className="text-2xl font-bold text-white mb-2">{lesson.quiz.title}</h2>
-                    <p className="text-slate-400">
-                      Score {lesson.quiz.passingScore}% or higher to pass
-                    </p>
-                  </div>
-
-                  <div className="space-y-6">
-                    {lesson.quiz.questions.map((q: any, i: number) => (
-                      <div key={q.id} className="p-5 rounded-xl bg-slate-800/50 border border-slate-700">
-                        <p className="text-sm text-slate-500 mb-2">Question {i + 1}</p>
-                        <p className="text-white mb-4">{q.question}</p>
-
-                        {q.questionType === 'multiple-choice' && (
-                          <div className="space-y-2">
-                            {q.options?.map((opt: any, j: number) => (
-                              <button
-                                key={j}
-                                onClick={() => handleQuizAnswer(q.id, opt.value)}
-                                className={`w-full p-3 rounded-lg text-left transition-all ${
-                                  quizAnswers[q.id] === opt.value
-                                    ? 'bg-indigo-500/20 border-2 border-indigo-500 text-white'
-                                    : 'bg-slate-700/50 border-2 border-transparent text-slate-300 hover:border-slate-600'
-                                }`}
-                              >
-                                {opt.label}
-                              </button>
-                            ))}
-                          </div>
-                        )}
-                      </div>
-                    ))}
-                  </div>
-
-                  <button
-                    onClick={submitQuiz}
-                    className="btn-primary w-full mt-8"
-                  >
-                    Submit Quiz
-                  </button>
-                </>
-              ) : (
-                <div className="text-center py-8">
-                  {quizScore !== null && quizScore >= lesson.quiz.passingScore ? (
-                    <>
-                      <div className="w-20 h-20 rounded-full bg-green-500/20 flex items-center justify-center mx-auto mb-4">
-                        <Trophy className="w-10 h-10 text-green-400" />
-                      </div>
-                      <h2 className="text-3xl font-bold text-white mb-2">{quizScore}%</h2>
-                      <p className="text-green-400 text-lg font-semibold mb-6">
-                        Congratulations! You passed!
-                      </p>
-                    </>
-                  ) : (
-                    <>
-                      <div className="w-20 h-20 rounded-full bg-amber-500/20 flex items-center justify-center mx-auto mb-4">
-                        <RotateCcw className="w-10 h-10 text-amber-400" />
-                      </div>
-                      <h2 className="text-3xl font-bold text-white mb-2">{quizScore}%</h2>
-                      <p className="text-amber-400 text-lg font-semibold mb-6">
-                        Keep practicing! You need {lesson.quiz.passingScore}% to pass.
-                      </p>
-                    </>
-                  )}
-
-                  <button
-                    onClick={() => {
-                      setQuizSubmitted(false);
-                      setQuizScore(null);
-                      setQuizAnswers({});
-                    }}
-                    className="btn-primary"
-                  >
-                    Try Again
-                  </button>
-                </div>
-              )}
-            </div>
-          )}
-        </motion.div>
-      </AnimatePresence>
+/** Quiet placeholder for interactive types the app doesn't support yet. */
+function InteractivePlaceholder({ title }: { title?: string }) {
+  return (
+    <div className="mt-5 rounded-sm border border-grid-line bg-paper-raised p-5">
+      {title && <p className="font-medium">{title}</p>}
+      <p className={`text-sm text-ink-muted ${title ? 'mt-1' : ''}`}>
+        An interactive diagram will appear here soon.
+      </p>
     </div>
   );
 }
 
-// Practice Question Component
-function PracticeQuestion({ question, index }: { question: any; index: number }) {
-  const [answer, setAnswer] = useState('');
-  const [showResult, setShowResult] = useState(false);
-
-  const checkAnswer = () => {
-    setShowResult(true);
-  };
-
-  const isCorrect = () => {
-    if (question.questionType === 'multiple-choice') {
-      const correctOption = question.options?.find((o: any) => o.isCorrect);
-      return answer === correctOption?.value;
-    }
-    return answer === question.correctAnswer || question.acceptableAnswers?.includes(answer);
-  };
+function VennBlock({ title, config }: { title?: string; config: unknown }) {
+  const cfg = (config ?? {}) as Record<string, unknown>;
+  const a = Array.isArray(cfg.setA) ? cfg.setA.map(String) : null;
+  const b = Array.isArray(cfg.setB) ? cfg.setB.map(String) : null;
+  if (!a || !b) return <InteractivePlaceholder title={title} />;
+  const authoredUniverse = Array.isArray(cfg.universalSet)
+    ? cfg.universalSet.map(String)
+    : null;
+  const universe =
+    authoredUniverse && authoredUniverse.length > 0
+      ? authoredUniverse
+      : Array.from(new Set([...a, ...b]));
 
   return (
-    <div className="glass-card p-5">
-      <div className="flex items-center gap-3 mb-4">
-        <div className="w-8 h-8 rounded-lg bg-indigo-500 flex items-center justify-center text-sm font-bold text-white">
-          {index + 1}
+    <div className="mt-5">
+      {title && (
+        <h3 className="font-heading text-lg font-semibold">{title}</h3>
+      )}
+      <VennBoard
+        universe={universe}
+        setA={{ label: 'A', members: a }}
+        setB={{ label: 'B', members: b }}
+      />
+    </div>
+  );
+}
+
+function ContentBlockView({ block }: { block: ContentBlock }) {
+  switch (block.type) {
+    case 'text':
+      return (
+        <div className="mt-5">
+          {block.title && <h3 className="font-heading text-lg font-semibold">{block.title}</h3>}
+          {block.body.split(/\n{2,}/).map((p, i) => (
+            <p key={i} className="mt-3 leading-relaxed first:mt-2">
+              <MathText>{p}</MathText>
+            </p>
+          ))}
         </div>
-        <span className="text-xs font-semibold px-2 py-1 rounded bg-slate-700 text-slate-400">
-          {question.difficulty}
-        </span>
-      </div>
+      );
+    case 'latex-formula':
+      return (
+        <figure className="mt-5">
+          <MathBlock tex={block.latex} className="py-1" />
+          {(block.formulaName || block.description) && (
+            <figcaption className="text-center text-sm text-ink-muted">
+              {block.formulaName ?? block.description}
+            </figcaption>
+          )}
+        </figure>
+      );
+    case 'gemini-diagram': {
+      const hasCaption = Boolean(block.title || block.description);
+      if (!block.imagePath && !hasCaption) return null;
+      return (
+        <figure className="mt-5">
+          {block.imagePath && (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img
+              src={resolveMedia(block.imagePath)}
+              alt={block.title ?? block.description ?? ''}
+              className="w-full rounded-sm border border-grid-line"
+            />
+          )}
+          {hasCaption && (
+            <figcaption className="mt-2 text-sm text-ink-muted">
+              {block.title && <span className="font-medium text-ink">{block.title}. </span>}
+              {block.description && <MathText>{block.description}</MathText>}
+            </figcaption>
+          )}
+        </figure>
+      );
+    }
+    case 'svg-animation':
+    case 'manim-animation':
+      if (!block.videoPath) return null;
+      return (
+        <figure className="mt-5">
+          <video
+            src={resolveMedia(block.videoPath)}
+            controls
+            playsInline
+            className="w-full rounded-sm border border-grid-line"
+          />
+          {(block.title || block.description) && (
+            <figcaption className="mt-2 text-sm text-ink-muted">
+              {block.title && <span className="font-medium text-ink">{block.title}. </span>}
+              {block.description && <MathText>{block.description}</MathText>}
+            </figcaption>
+          )}
+        </figure>
+      );
+    case 'interactive':
+      if (String(block.interactiveType ?? '').toLowerCase().includes('venn')) {
+        return (
+          <VennBlock title={block.title} config={block.interactiveConfig} />
+        );
+      }
+      return <InteractivePlaceholder title={block.title} />;
+    default:
+      return null;
+  }
+}
 
-      <p className="text-white mb-4">{question.question}</p>
-
-      {question.questionType === 'multiple-choice' && (
-        <div className="space-y-2 mb-4">
-          {question.options?.map((opt: any, j: number) => {
-            const isSelected = answer === opt.value;
-            const isOptionCorrect = opt.isCorrect;
-
-            let bg = 'bg-slate-700/50 border-transparent';
-            if (showResult && isSelected) {
-              bg = isOptionCorrect ? 'bg-green-500/20 border-green-500' : 'bg-red-500/20 border-red-500';
-            } else if (showResult && isOptionCorrect) {
-              bg = 'bg-green-500/10 border-green-500/50';
-            } else if (isSelected) {
-              bg = 'bg-indigo-500/20 border-indigo-500';
-            }
-
-            return (
-              <button
-                key={j}
-                onClick={() => !showResult && setAnswer(opt.value)}
-                disabled={showResult}
-                className={`w-full p-3 rounded-lg text-left transition-all border-2 ${bg} ${
-                  showResult ? 'cursor-default' : 'hover:border-slate-600'
-                }`}
-              >
-                <span className="text-slate-300">{opt.label}</span>
-                {showResult && isOptionCorrect && (
-                  <CheckCircle className="w-5 h-5 text-green-400 float-right" />
-                )}
-              </button>
-            );
-          })}
+function TheorySectionView({
+  section,
+  marker,
+}: {
+  section: TheorySection;
+  marker: string;
+}) {
+  return (
+    <section
+      id={`section-${section.id}`}
+      className="relative mt-10 scroll-mt-16 first:mt-2 lg:scroll-mt-8"
+    >
+      <MarginMarker text={marker} />
+      <h2 className="font-heading text-2xl font-semibold">
+        <MathText>{section.title}</MathText>
+      </h2>
+      {section.introduction.trim() !== '' && (
+        <p className="mt-3 leading-relaxed">
+          <MathText>{section.introduction}</MathText>
+        </p>
+      )}
+      {section.keyQuestion && (
+        <p className="mt-3 italic text-ink-muted">
+          <MathText>{section.keyQuestion}</MathText>
+        </p>
+      )}
+      {section.content.map((block) => (
+        <ContentBlockView key={block.id} block={block} />
+      ))}
+      {section.keyDefinitions && section.keyDefinitions.length > 0 && (
+        <dl className="mt-6 space-y-3">
+          {section.keyDefinitions.map((d) => (
+            <div key={d.term} className="border-l border-grid-line pl-4">
+              <dt className="font-medium">
+                <MathText>{d.term}</MathText>
+              </dt>
+              <dd className="text-ink-muted">
+                <MathText>{d.definition}</MathText>
+              </dd>
+              {d.example && (
+                <dd className="mt-1 text-sm">
+                  <MathText>{d.example}</MathText>
+                </dd>
+              )}
+            </div>
+          ))}
+        </dl>
+      )}
+      {section.keyFormulas && section.keyFormulas.length > 0 && (
+        <div className="mt-6 space-y-4">
+          {section.keyFormulas.map((f) => (
+            <figure key={f.name}>
+              <MathBlock tex={f.latex} className="py-1" />
+              <figcaption className="text-center text-sm text-ink-muted">
+                <span className="font-medium text-ink">{f.name}.</span>{' '}
+                {f.explanation && <MathText>{f.explanation}</MathText>}{' '}
+                {f.whenToUse && <MathText>{f.whenToUse}</MathText>}
+              </figcaption>
+            </figure>
+          ))}
         </div>
       )}
-
-      {!showResult ? (
-        <button
-          onClick={checkAnswer}
-          disabled={!answer}
-          className={`px-4 py-2 rounded-lg font-medium transition-all ${
-            answer
-              ? 'bg-indigo-500 text-white hover:bg-indigo-600'
-              : 'bg-slate-700 text-slate-500 cursor-not-allowed'
-          }`}
-        >
-          Check Answer
-        </button>
-      ) : (
-        <div
-          className={`p-4 rounded-lg ${
-            isCorrect() ? 'bg-green-500/10 text-green-400' : 'bg-red-500/10 text-red-400'
-          }`}
-        >
-          {isCorrect() ? question.feedbackCorrect : question.feedbackIncorrect}
+      {section.keyPoints && section.keyPoints.length > 0 && (
+        <div className="mt-6">
+          <p className="text-xs font-medium uppercase tracking-[0.14em] text-ink-muted">
+            Key points
+          </p>
+          <ul className="mt-2 list-disc space-y-1.5 pl-5">
+            {section.keyPoints.map((kp, i) => (
+              <li key={i} className="leading-relaxed">
+                <MathText>{kp}</MathText>
+              </li>
+            ))}
+          </ul>
         </div>
+      )}
+    </section>
+  );
+}
+
+function MisconceptionPanel({ m }: { m: Misconception }) {
+  return (
+    <div className="rounded-sm border border-grid-line bg-paper-raised p-4 sm:p-5">
+      <p className="text-xs font-medium uppercase tracking-[0.14em] text-ink-muted">
+        The trap
+      </p>
+      <p className="mt-1 text-ink-muted">
+        <span aria-hidden="true" className="mr-1.5 text-developing">
+          ✗
+        </span>
+        <s>
+          <MathText>{m.wrongIdea}</MathText>
+        </s>
+      </p>
+      {m.exampleOfMistake && (
+        <p className="mt-1 text-sm text-ink-muted">
+          <MathText>{m.exampleOfMistake}</MathText>
+        </p>
+      )}
+      {m.whyWrong && (
+        <p className="mt-2 text-sm text-ink-muted">
+          <MathText>{m.whyWrong}</MathText>
+        </p>
+      )}
+      <p className="mt-4 text-xs font-medium uppercase tracking-[0.14em] text-ink-muted">
+        The truth
+      </p>
+      <p className="mt-1">
+        <span aria-hidden="true" className="mr-1.5 text-secure">
+          ✓
+        </span>
+        <MathText>{m.correctUnderstanding}</MathText>
+      </p>
+      {m.correctExample && (
+        <p className="mt-1 text-sm">
+          <MathText>{m.correctExample}</MathText>
+        </p>
       )}
     </div>
+  );
+}
+
+function WorkedExampleView({ example }: { example: WorkedExample }) {
+  return (
+    <article className="mt-10 first:mt-4">
+      <div className="flex items-baseline justify-between gap-4">
+        <p className="font-medium leading-relaxed">
+          <MathText>{example.question}</MathText>
+        </p>
+        {typeof example.marks === 'number' && (
+          <span className="shrink-0 font-mono text-xs text-ink-muted">
+            [{example.marks} marks]
+          </span>
+        )}
+      </div>
+      <ol className="mt-4 space-y-4">
+        {example.steps.map((step) => (
+          <li key={step.stepNumber} className="relative">
+            <MarginMarker text={String(step.stepNumber)} />
+            <p className="leading-relaxed">
+              <span className="mr-2 font-mono text-xs text-ink-muted lg:hidden">
+                {step.stepNumber}.
+              </span>
+              <MathText>{step.instruction}</MathText>
+            </p>
+            {step.working.trim() !== '' && (
+              <p className="mt-1 pl-5 leading-relaxed lg:pl-0">
+                <MathText>{step.working}</MathText>
+              </p>
+            )}
+            {step.explanation && (
+              <p className="mt-1 pl-5 text-sm text-ink-muted lg:pl-0">
+                <MathText>{step.explanation}</MathText>
+              </p>
+            )}
+            {step.commonError && (
+              <p className="mt-1 pl-5 text-sm text-ink-muted lg:pl-0">
+                <span aria-hidden="true" className="mr-1 text-developing">
+                  ✗
+                </span>
+                Watch out: <MathText>{step.commonError}</MathText>
+              </p>
+            )}
+          </li>
+        ))}
+      </ol>
+      <p className="mt-4 flex items-baseline gap-3 border-t border-grid-line pt-3">
+        <span className="text-xs font-medium uppercase tracking-[0.14em] text-ink-muted">
+          Answer
+        </span>
+        <span className="font-medium">
+          <MathText>{example.answer}</MathText>
+        </span>
+      </p>
+      {example.examTip && (
+        <p className="mt-2 text-sm text-ink-muted">
+          <span className="font-medium">Exam tip:</span>{' '}
+          <MathText>{example.examTip}</MathText>
+        </p>
+      )}
+    </article>
+  );
+}
+
+// ---------------------------------------------------------------------------
+// Page
+// ---------------------------------------------------------------------------
+
+type LoadState =
+  | { status: 'loading' }
+  | { status: 'error' }
+  | { status: 'not-found' }
+  | { status: 'ready'; lesson: NormalizedLesson };
+
+export default function LessonPage() {
+  const params = useParams<{ code: string }>();
+  const code = decodeURIComponent(String(params?.code ?? '')).toUpperCase();
+
+  const [state, setState] = useState<LoadState>({ status: 'loading' });
+  const [activeSection, setActiveSection] = useState('');
+  const [heroFailed, setHeroFailed] = useState(false);
+
+  const load = useCallback(async () => {
+    setState({ status: 'loading' });
+    try {
+      const res = await fetch(
+        `${API_URL}/api/education/topics/${encodeURIComponent(code)}/lesson`
+      );
+      if (res.status === 404) {
+        setState({ status: 'not-found' });
+        return;
+      }
+      if (!res.ok) {
+        setState({ status: 'error' });
+        return;
+      }
+      const data = await res.json();
+      if (!data || data.success !== true || !data.lesson) {
+        setState({ status: 'not-found' });
+        return;
+      }
+      setState({ status: 'ready', lesson: normalizeLesson(data.lesson, code) });
+    } catch {
+      setState({ status: 'error' });
+    }
+  }, [code]);
+
+  useEffect(() => {
+    load();
+  }, [load]);
+
+  const lesson = state.status === 'ready' ? state.lesson : null;
+
+  useEffect(() => {
+    if (lesson) document.title = `${lesson.title} · Cambridge Maths`;
+  }, [lesson]);
+
+  // Nav sections present in this lesson, in reading order.
+  const navSections: Array<{ id: string; label: string }> = [];
+  if (lesson) {
+    if (lesson.opening) navSections.push({ id: 'opening', label: 'Opening' });
+    if (lesson.objectives.length > 0)
+      navSections.push({ id: 'objectives', label: 'Objectives' });
+    if (lesson.theorySections.length > 0)
+      navSections.push({ id: 'theory', label: 'Theory' });
+    if (lesson.richMisconceptions.length > 0 || lesson.plainMisconceptions.length > 0)
+      navSections.push({ id: 'misconceptions', label: 'Traps' });
+    if (lesson.workedExamples.length > 0)
+      navSections.push({ id: 'worked-examples', label: 'Examples' });
+    if (lesson.practiceQuestions.length > 0)
+      navSections.push({ id: 'practice', label: 'Practice' });
+    if (lesson.quiz) navSections.push({ id: 'quiz', label: 'Quiz' });
+    if (lesson.summary) navSections.push({ id: 'summary', label: 'Summary' });
+  }
+  const stepOf = (id: string) =>
+    navSections.findIndex((s) => s.id === id) + 1;
+
+  // Scrollspy for the stepper + margin numbers.
+  useEffect(() => {
+    if (!lesson || navSections.length === 0) return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((e) => e.isIntersecting)
+          .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+        if (visible.length > 0) setActiveSection(visible[0].target.id);
+      },
+      { rootMargin: '-15% 0px -70% 0px' }
+    );
+    for (const s of navSections) {
+      const el = document.getElementById(s.id);
+      if (el) observer.observe(el);
+    }
+    return () => observer.disconnect();
+    // navSections is derived from lesson; observing on lesson change is enough.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [lesson]);
+
+  const backLink = (
+    <Link
+      href="/"
+      className="inline-flex min-h-[44px] items-center text-sm font-medium text-accent underline-offset-4 hover:underline"
+    >
+      ← Back to the map
+    </Link>
+  );
+
+  if (state.status === 'loading') {
+    return (
+      <main className="mx-auto max-w-2xl px-5 pb-24 pt-8">
+        {backLink}
+        <p className="mt-8 text-xs font-medium uppercase tracking-[0.18em] text-ink-muted">
+          {code}
+        </p>
+        <div className="mt-4 space-y-3" role="status" aria-label="Loading lesson">
+          <div className="h-9 w-2/3 animate-pulse rounded-sm bg-grid-line" />
+          <div className="h-4 w-full animate-pulse rounded-sm bg-grid-line" />
+          <div className="h-4 w-5/6 animate-pulse rounded-sm bg-grid-line" />
+        </div>
+      </main>
+    );
+  }
+
+  if (state.status === 'not-found') {
+    return (
+      <main className="mx-auto max-w-2xl px-5 pb-24 pt-8">
+        {backLink}
+        <h1 className="mt-10 font-heading text-3xl font-semibold">
+          This lesson isn&apos;t available yet.
+        </h1>
+        <p className="mt-3 max-w-[60ch] text-ink-muted">
+          There&apos;s no lesson for {code} right now. The map shows which
+          topics are live.
+        </p>
+      </main>
+    );
+  }
+
+  if (state.status === 'error') {
+    return (
+      <main className="mx-auto max-w-2xl px-5 pb-24 pt-8">
+        {backLink}
+        <h1 className="mt-10 font-heading text-3xl font-semibold">
+          Couldn&apos;t load this lesson.
+        </h1>
+        <p className="mt-3 max-w-[60ch] text-ink-muted">
+          Something went wrong fetching {code}. Check your connection and try
+          again.
+        </p>
+        <button
+          type="button"
+          onClick={load}
+          className="mt-6 min-h-[44px] rounded-sm bg-accent px-5 font-medium text-paper transition-colors duration-150 ease-out-quart hover:bg-accent-pressed"
+        >
+          Retry
+        </button>
+      </main>
+    );
+  }
+
+  if (!lesson) return null;
+
+  const resolveReviewLink = makeReviewLinkResolver(lesson.theorySections);
+  const heroSrc = `/illustrations/${code.toLowerCase()}-hook.png`;
+
+  return (
+    <main className="mx-auto max-w-2xl px-5 pb-24 pt-8">
+      {backLink}
+
+      <header className="mt-6">
+        <p className="text-xs font-medium uppercase tracking-[0.18em] text-ink-muted">
+          {code} · Cambridge IGCSE Mathematics 0580
+        </p>
+        <h1 className="mt-3 font-heading text-3xl font-semibold leading-tight sm:text-4xl">
+          <MathText>{lesson.title}</MathText>
+        </h1>
+        {(lesson.level !== undefined || lesson.estimatedDuration !== undefined) && (
+          <p className="mt-2 text-sm text-ink-muted">
+            {[
+              lesson.level,
+              lesson.estimatedDuration !== undefined
+                ? `about ${lesson.estimatedDuration} min`
+                : undefined,
+            ]
+              .filter((x): x is string => Boolean(x))
+              .join(' · ')}
+          </p>
+        )}
+      </header>
+
+      {/* Mobile: sticky horizontal stepper. ≥lg the margin column takes over. */}
+      {navSections.length > 0 && (
+        <nav
+          aria-label="Lesson sections"
+          className="sticky top-0 z-10 -mx-5 mt-6 border-b border-grid-line bg-paper px-5 lg:hidden"
+        >
+          <ol className="flex gap-5 overflow-x-auto whitespace-nowrap text-sm">
+            {navSections.map((s, i) => (
+              <li key={s.id}>
+                <a
+                  href={`#${s.id}`}
+                  className={`flex min-h-[44px] items-center gap-1.5 border-b-2 transition-colors duration-150 ease-out-quart ${
+                    activeSection === s.id
+                      ? 'border-accent font-medium text-accent'
+                      : 'border-transparent text-ink-muted'
+                  }`}
+                >
+                  <span className="font-mono text-xs">{i + 1}</span>
+                  {s.label}
+                </a>
+              </li>
+            ))}
+          </ol>
+        </nav>
+      )}
+
+      {/* Margin rule at lg+: hairline at the content's left edge. */}
+      <div className="relative lg:pl-24">
+        <span
+          aria-hidden="true"
+          className="absolute inset-y-0 left-[5.25rem] hidden w-px bg-grid-line lg:block"
+        />
+
+        {!heroFailed && (
+          <div className="-mx-5 mt-8 sm:mx-0">
+            <Image
+              src={heroSrc}
+              alt=""
+              width={1536}
+              height={1024}
+              priority
+              onError={() => setHeroFailed(true)}
+              className="h-auto w-full border-y border-grid-line sm:rounded-sm sm:border"
+            />
+          </div>
+        )}
+
+        {lesson.opening && (
+          <SectionShell
+            id="opening"
+            step={stepOf('opening')}
+            title="Opening"
+            hideTitle
+            active={activeSection === 'opening'}
+          >
+            <p className="text-lg leading-relaxed">
+              <MathText>{lesson.opening.hook}</MathText>
+            </p>
+            {lesson.opening.realWorldConnection && (
+              <p className="mt-3 leading-relaxed text-ink-muted">
+                <MathText>{lesson.opening.realWorldConnection}</MathText>
+              </p>
+            )}
+          </SectionShell>
+        )}
+
+        {lesson.objectives.length > 0 && (
+          <SectionShell
+            id="objectives"
+            step={stepOf('objectives')}
+            title="By the end you can…"
+            active={activeSection === 'objectives'}
+          >
+            <ul className="mt-4 space-y-2.5">
+              {lesson.objectives.map((o, i) => (
+                <li key={i} className="flex items-start gap-3 leading-relaxed">
+                  <span
+                    aria-hidden="true"
+                    className="mt-1.5 h-3 w-3 shrink-0 rounded-[2px] border border-ink-muted opacity-50"
+                  />
+                  <MathText>{o}</MathText>
+                </li>
+              ))}
+            </ul>
+          </SectionShell>
+        )}
+
+        {lesson.theorySections.length > 0 && (
+          <SectionShell
+            id="theory"
+            step={stepOf('theory')}
+            title="Theory"
+            hideTitle
+            active={activeSection === 'theory'}
+          >
+            {lesson.theorySections.map((s, i) => (
+              <TheorySectionView
+                key={s.id}
+                section={s}
+                marker={`${stepOf('theory')}.${i + 1}`}
+              />
+            ))}
+          </SectionShell>
+        )}
+
+        {(lesson.richMisconceptions.length > 0 ||
+          lesson.plainMisconceptions.length > 0) && (
+          <SectionShell
+            id="misconceptions"
+            step={stepOf('misconceptions')}
+            title="Common traps"
+            active={activeSection === 'misconceptions'}
+          >
+            {lesson.richMisconceptions.length > 0 && (
+              <div className="mt-4 space-y-4">
+                {lesson.richMisconceptions.map((m) => (
+                  <MisconceptionPanel key={m.id ?? m.wrongIdea} m={m} />
+                ))}
+              </div>
+            )}
+            {lesson.plainMisconceptions.length > 0 && (
+              <ul className="mt-4 space-y-2.5">
+                {lesson.plainMisconceptions.map((t, i) => (
+                  <li key={i} className="flex items-start gap-2 leading-relaxed text-ink-muted">
+                    <span aria-hidden="true" className="text-developing">
+                      ✗
+                    </span>
+                    <MathText>{t}</MathText>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </SectionShell>
+        )}
+
+        {lesson.workedExamples.length > 0 && (
+          <SectionShell
+            id="worked-examples"
+            step={stepOf('worked-examples')}
+            title="Worked examples"
+            active={activeSection === 'worked-examples'}
+          >
+            {lesson.workedExamples.map((ex) => (
+              <WorkedExampleView key={ex.id ?? ex.question} example={ex} />
+            ))}
+          </SectionShell>
+        )}
+
+        {lesson.practiceQuestions.length > 0 && (
+          <SectionShell
+            id="practice"
+            step={stepOf('practice')}
+            title="Practice"
+            active={activeSection === 'practice'}
+          >
+            <div className="mt-4 space-y-4">
+              {lesson.practiceQuestions.map((q, i) => (
+                <QuestionCard
+                  key={q.id}
+                  question={q}
+                  mode="practice"
+                  label={`Practice question ${i + 1}`}
+                  reviewLink={resolveReviewLink(q)}
+                />
+              ))}
+            </div>
+          </SectionShell>
+        )}
+
+        {lesson.quiz && (
+          <SectionShell
+            id="quiz"
+            step={stepOf('quiz')}
+            title="Quiz"
+            active={activeSection === 'quiz'}
+          >
+            <div className="mt-4">
+              <Quiz
+                quiz={{
+                  id: 'quiz',
+                  title: 'Quiz',
+                  description: lesson.quiz.description,
+                  passingScore: lesson.quiz.passingScore,
+                  questions: lesson.quiz.questions,
+                }}
+                topicCode={code}
+                resolveReviewLink={resolveReviewLink}
+              />
+            </div>
+          </SectionShell>
+        )}
+
+        {lesson.summary && (
+          <SectionShell
+            id="summary"
+            step={stepOf('summary')}
+            title="Summary"
+            active={activeSection === 'summary'}
+          >
+            <div className="mt-4 rounded-sm border border-grid-line bg-paper-raised p-5">
+              {lesson.summary.keyTakeaways.length > 0 && (
+                <>
+                  <p className="text-xs font-medium uppercase tracking-[0.14em] text-ink-muted">
+                    Key takeaways
+                  </p>
+                  <ul className="mt-2 list-disc space-y-1.5 pl-5">
+                    {lesson.summary.keyTakeaways.map((t, i) => (
+                      <li key={i} className="leading-relaxed">
+                        <MathText>{t}</MathText>
+                      </li>
+                    ))}
+                  </ul>
+                </>
+              )}
+              {lesson.summary.formulaSheet &&
+                lesson.summary.formulaSheet.length > 0 && (
+                  <>
+                    <p className="mt-5 text-xs font-medium uppercase tracking-[0.14em] text-ink-muted">
+                      Formula sheet
+                    </p>
+                    <ul className="mt-2 space-y-1.5">
+                      {lesson.summary.formulaSheet.map((f, i) => (
+                        <li key={i}>
+                          <MathText>{f}</MathText>
+                        </li>
+                      ))}
+                    </ul>
+                  </>
+                )}
+              {lesson.summary.examTips.length > 0 && (
+                <>
+                  <p className="mt-5 text-xs font-medium uppercase tracking-[0.14em] text-ink-muted">
+                    Exam tips
+                  </p>
+                  <ul className="mt-2 space-y-1.5">
+                    {lesson.summary.examTips.map((t, i) => (
+                      <li key={i} className="flex items-start gap-2 leading-relaxed">
+                        <span aria-hidden="true" className="text-secure">
+                          ✓
+                        </span>
+                        <MathText>{t}</MathText>
+                      </li>
+                    ))}
+                  </ul>
+                </>
+              )}
+              {lesson.summary.nextTopics &&
+                lesson.summary.nextTopics.length > 0 && (
+                  <p className="mt-5 text-sm text-ink-muted">
+                    Next: {lesson.summary.nextTopics.join(' · ')}
+                  </p>
+                )}
+            </div>
+          </SectionShell>
+        )}
+      </div>
+    </main>
   );
 }
