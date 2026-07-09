@@ -14,6 +14,7 @@ Usage:
 """
 
 import os
+import re
 import time
 from pathlib import Path
 from typing import Optional, List, Dict
@@ -33,6 +34,25 @@ _MODELS = Path(__file__).parent / "models"
 KOKORO_MODEL = os.environ.get("KOKORO_MODEL", str(_MODELS / "kokoro-v1.0.onnx"))
 KOKORO_VOICES = os.environ.get("KOKORO_VOICES", str(_MODELS / "voices-v1.0.bin"))
 _kokoro_engine = None
+
+
+# Maths pronunciation fixes applied to ALL narration text before any TTS provider.
+# Scripts are written in maths notation ("sin x") but every TTS engine reads "sin" as the
+# word — the recurring "sin vs sine" bug. In this pipeline a standalone "sin" is always the
+# trig function, so the rewrite is safe. (Not \sin: LaTeX shouldn't reach TTS text at all.)
+_TTS_PRONUNCIATIONS = [
+    (re.compile(r"(?<!\\)\b[Ss]in\b"), lambda m: "Sine" if m.group(0)[0] == "S" else "sine"),
+]
+
+
+def _normalize_for_tts(text: str) -> str:
+    """Rewrite notation that TTS engines mispronounce; logs when a fix fires."""
+    fixed = text
+    for pattern, repl in _TTS_PRONUNCIATIONS:
+        fixed = pattern.sub(repl, fixed)
+    if fixed != text:
+        print(f"[tts-normalize] pronunciation fix applied: {text[:60]!r} -> {fixed[:60]!r}")
+    return fixed
 
 
 def check_server(wait_timeout: int = 60) -> bool:
@@ -131,6 +151,7 @@ def generate_narration(
     if output_filename is None:
         output_filename = f"narration_{int(time.time() * 1000)}.wav"
     output_path = OUTPUT_DIR / output_filename
+    text = _normalize_for_tts(text)
 
     print(f"[{TTS_PROVIDER}] Generating: {text[:50]}...")
     start_time = time.time()
