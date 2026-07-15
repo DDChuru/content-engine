@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>e-wizer · Content Studio</title>
+<title>VidStud · Video Annotation Studio</title>
 <style>
   :root{
     --sky:#3CB6E0; --skyDeep:#1582AB; --emerald:#1F9C5A; --amber:#E89A30; --coral:#D6432F;
@@ -52,8 +52,8 @@
 </head>
 <body>
 <header>
-  <div class="logo">eW</div>
-  <div><h1>Content Studio</h1><div class="sub">annotate · edit with agents · preview live</div></div>
+  <div class="logo">VS</div>
+  <div><h1>VidStud</h1><div class="sub">annotate any video · edit with agents · preview live</div></div>
   <div class="spacer"></div>
   <div class="layout" id="layout">
     <button class="lay active" data-lay="all">All</button>
@@ -91,6 +91,7 @@
       <button class="tbtn" data-engine="claude" id="engClaude" title="Start Claude Code in the terminal">Claude</button>
       <button class="tbtn" data-engine="codex" id="engCodex" title="Start Codex in the terminal">Codex</button>
       <select id="comp" title="Composition to preview + render">
+        <option value="AnnotatedVideo">AnnotatedVideo (any project)</option>
         <option value="DailyHygieneWalkthrough">DailyHygieneWalkthrough</option>
         <option value="TapDemo">TapDemo</option>
       </select>

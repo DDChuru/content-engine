@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# e-wizer Content Studio (Stage-1) launcher.
+# VidStud — video annotation studio launcher.
 # Boots Remotion Studio (live preview) + the agent bridge, then opens the
 # 3-pane shell as an app window. Ctrl-C tears everything down.
 set -euo pipefail
@@ -12,7 +12,7 @@ TERM_PORT=7682
 TMUX_SESSION=studio
 TTYD="$(command -v ttyd || echo "$HOME/.local/bin/ttyd")"
 
-echo "▸ Content Studio — repo: $REPO"
+echo "▸ VidStud — repo: $REPO"
 
 # Prefer Node 22 if nvm has it (Remotion is happiest there)
 if [ -x "$HOME/.nvm/versions/node/v22.22.0/bin/node" ]; then
