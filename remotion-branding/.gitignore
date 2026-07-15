@@ -6,3 +6,8 @@ dist/
 *.mov
 *.webm
 .remotion/
+
+# VidStud — per-machine project scratch (uploaded recordings + their marks) and
+# the active-project state the studio rewrites on each activate.
+public/projects/
+src/tapdemo/active-project.json

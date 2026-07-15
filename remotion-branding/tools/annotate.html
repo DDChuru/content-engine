@@ -411,11 +411,25 @@ function buildTicks(){
 function currentDoc(){ return { clip: state.clip, fps: fps(), annotations: state.anns.map(({id,...rest})=>rest) }; }
 function download(name, text){ const b=new Blob([text],{type:'application/json'}); const u=URL.createObjectURL(b);
   const a=document.createElement('a'); a.href=u; a.download=name; a.click(); URL.revokeObjectURL(u); }
+// When embedded in VidStud, Export also hands the marks to the shell so it can
+// save them to the active project (no manual download/upload round-trip).
+const EMBEDDED = window.parent && window.parent !== window;
 function doExport(){ const doc=currentDoc(); const json=JSON.stringify(doc,null,2);
   navigator.clipboard?.writeText(json).catch(()=>{});
   const base=(state.clip||'annotations').replace(/\.[^.]+$/,'');
-  download(base+'.annotations.json', json);
+  if(EMBEDDED){ window.parent.postMessage({type:'vidstud:marks', doc}, '*'); }
+  else { download(base+'.annotations.json', json); }
 }
+
+// VidStud → annotator: load a clip (File) or restore an existing marks doc.
+window.addEventListener('message', (e)=>{
+  const d = e.data || {};
+  if(d.type==='vidstud:load-file' && d.file){ loadVideoFile(d.file); }
+  if(d.type==='vidstud:load-doc' && d.doc){
+    const doc=d.doc; state.clip=doc.clip||state.clip; if(doc.fps)$('fpsInput').value=doc.fps;
+    state.anns=(doc.annotations||[]).map(a=>({id:idSeq++,...a})); renderList(); render(); buildTicks();
+  }
+});
 $('exportBtn').onclick=doExport; $('exportBtn2').onclick=doExport;
 $('importBtn').onclick=()=>$('jsonInput').click();
 $('jsonInput').onchange=e=>{ const f=e.target.files[0]; if(!f)return; const r=new FileReader();

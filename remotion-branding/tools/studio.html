@@ -70,9 +70,15 @@
   <!-- PANE 1: annotate -->
   <section class="pane p-annotate">
     <div class="ph"><b>Annotate</b><span class="spacer"></span>
+      <input type="file" id="videoFile" accept="video/*" hidden />
+      <button class="tbtn" id="newVideo" title="Load a new recording as a project">＋ New video</button>
+      <select id="layoutSel" title="How to frame the recording">
+        <option value="phone">Phone</option>
+        <option value="wide">Wide</option>
+      </select>
       <a class="lnk" data-focus="annotate" href="#" title="Expand this pane to full width">Expand ⤢</a>
       <a class="lnk" href="/annotate.html" target="_blank">Pop out ↗</a></div>
-    <iframe src="/annotate.html" title="Annotate"></iframe>
+    <iframe id="annotateFrame" src="/annotate.html" title="Annotate"></iframe>
   </section>
 
   <!-- PANE 2: live preview -->
@@ -132,10 +138,49 @@ fetch('/api/config').then(r=>r.json()).then(cfg=>{
     .catch(()=>{ pill.classList.remove('on'); shown = false; });
   probe(); setInterval(probe, 2500);
   const reload = ()=>{ shown=false; lastSet=0; preview.src = previewUrl(); $('popPreview').href = previewUrl(); };
+  reloadPreview = reload; // expose to the picker
   $('reloadPreview').onclick = e=>{ e.preventDefault(); reload(); };
   // switching the composition retargets both the preview and the render button
   $('comp').addEventListener('change', reload);
 }).catch(()=>{});
+
+// ── Picker: load any recording → annotate → activate → preview/render ────────
+// currentSlug is the active project the AnnotatedVideo comp renders.
+let currentSlug = null;
+let reloadPreview = ()=>{};
+
+$('newVideo').onclick = ()=> $('videoFile').click();
+$('videoFile').onchange = async (e)=>{
+  const file = e.target.files[0]; if(!file) return;
+  const layout = $('layoutSel').value;
+  // 1) load it straight into the annotate pane so you can mark it up now
+  $('annotateFrame').contentWindow.postMessage({type:'vidstud:load-file', file}, '*');
+  // 2) upload to the bridge → saves under public/projects, ffprobes fps/dims/len
+  flash($('newVideo'), '⤴');
+  try{
+    const r = await fetch(`/api/projects/new?name=${encodeURIComponent(file.name)}&layout=${layout}`, {method:'POST', body:file});
+    const meta = await r.json();
+    if(!r.ok){ flash($('newVideo'), '✕'); console.warn(meta); return; }
+    currentSlug = meta.slug;
+    $('newVideo').title = `Project: ${meta.slug} · ${meta.srcW}×${meta.srcH} · ${meta.fps}fps · ${meta.clipSeconds}s`;
+    flash($('newVideo'), '✓');
+  }catch(err){ flash($('newVideo'), '✕'); console.warn(err); }
+};
+
+// annotate pane → studio: marks exported → activate the project → preview it
+window.addEventListener('message', async (e)=>{
+  const d = e.data || {};
+  if(d.type!=='vidstud:marks' || !d.doc) return;
+  if(!currentSlug){ console.warn('No active project — use ＋ New video first.'); return; }
+  const layout = $('layoutSel').value;
+  try{
+    const r = await fetch('/api/projects/activate', {method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({ slug: currentSlug, marks: d.doc.annotations||[], layout })});
+    const j = await r.json();
+    if(r.ok){ $('comp').value='AnnotatedVideo'; reloadPreview(); }
+    else console.warn(j);
+  }catch(err){ console.warn(err); }
+});
 
 // Layout: 'all' shows all three panes; a name expands that pane full-width.
 // The switcher lives in the top bar (never hidden) so nothing is unrecoverable.
@@ -173,9 +218,12 @@ $('engCodex').onclick  = e=>{ setActive('codex');  toTerm('codex',  e.currentTar
 function setActive(e){ document.querySelectorAll('.tbtn[data-engine]').forEach(b=>b.classList.toggle('active', b.dataset.engine===e)); }
 
 // Render button runs the render in the terminal (visible, cancelable with Ctrl-C).
+// AnnotatedVideo renders the active project via --props, named by its slug.
 $('render').onclick = e=>{
-  const comp = ($('comp').value || 'DailyHygieneWalkthrough').replace(/[^A-Za-z0-9_]/g,'');
-  toTerm(`npx remotion render src/index.ts ${comp} out/${comp}.mp4 --concurrency=4`, e.currentTarget);
+  const comp = ($('comp').value || 'AnnotatedVideo').replace(/[^A-Za-z0-9_]/g,'');
+  const out = (comp==='AnnotatedVideo' && currentSlug) ? currentSlug : comp;
+  const propsArg = comp==='AnnotatedVideo' ? ' --props=src/tapdemo/active-project.json' : '';
+  toTerm(`npx remotion render src/index.ts ${comp} out/${out}.mp4${propsArg} --concurrency=4`, e.currentTarget);
 };
 </script>
 </body>

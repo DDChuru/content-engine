@@ -256,9 +256,10 @@ const Scene: React.FC<{ project: VideoProject; g: Geom }> = ({ project, g }) => 
       )}
       {/* bezel / frame */}
       <div style={{ position: 'absolute', left: g.X - pad, top: g.Y - pad, width: g.VID_W + pad * 2, height: g.VID_H + pad * 2, borderRadius: g.radius + 12, background: '#05090D', border: '1px solid rgba(255,255,255,0.1)', boxShadow: '0 40px 90px rgba(0,0,0,0.5)', opacity: enter, transform: `translateY(${interpolate(enter, [0, 1], [24, 0])}px)` }} />
-      {/* recording */}
+      {/* recording — mute only when a separate voiceover is supplied; otherwise
+          play the clip's own audio (picked projects have no voiceover track) */}
       <div style={{ position: 'absolute', left: g.X, top: g.Y, width: g.VID_W, height: g.VID_H, borderRadius: g.radius, overflow: 'hidden', opacity: enter }}>
-        <OffthreadVideo src={staticFile(project.video)} style={{ width: g.VID_W, height: g.VID_H, objectFit: 'cover' }} muted />
+        <OffthreadVideo src={staticFile(project.video)} style={{ width: g.VID_W, height: g.VID_H, objectFit: 'cover' }} muted={!!project.audio} />
       </div>
       {/* shapes overlay (recording-px space) */}
       <svg style={{ position: 'absolute', left: g.X, top: g.Y, width: g.VID_W, height: g.VID_H, overflow: 'visible' }} viewBox={`0 0 ${g.VID_W} ${g.VID_H}`}>
