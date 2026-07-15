@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>e-wizer · Content Studio</title>
+<style>
+  :root{
+    --sky:#3CB6E0; --skyDeep:#1582AB; --emerald:#1F9C5A; --amber:#E89A30; --coral:#D6432F;
+    --ink:#071018; --panel:#0E1822; --panel2:#132234; --line:rgba(255,255,255,.10);
+    --fg:#EAF2F8; --fg2:#9FB1C1; --muted:#6C7E8E; --body:"DM Sans",Inter,system-ui,sans-serif;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;height:100%;overflow:hidden}
+  body{background:var(--ink);color:var(--fg);font-family:var(--body);display:flex;flex-direction:column;height:100vh}
+  header{display:flex;align-items:center;gap:12px;padding:9px 16px;border-bottom:1px solid var(--line);background:rgba(7,16,24,.7)}
+  header .logo{width:30px;height:30px;border-radius:8px;background:linear-gradient(135deg,var(--sky),var(--skyDeep));display:flex;align-items:center;justify-content:center;font-weight:900;color:#fff;font-size:14px}
+  header h1{font-size:15px;margin:0;font-weight:800}
+  header .sub{color:var(--muted);font-size:10px;letter-spacing:2px;text-transform:uppercase}
+  header .spacer{flex:1}
+  .pill{font-size:11px;color:var(--fg2);border:1px solid var(--line);border-radius:999px;padding:4px 11px;display:flex;align-items:center;gap:6px}
+  .pill .dot{width:7px;height:7px;border-radius:5px;background:var(--muted)}
+  .pill.on .dot{background:var(--emerald);box-shadow:0 0 8px var(--emerald)}
+  .layout{display:flex;gap:4px;margin-right:12px;background:var(--panel);border:1px solid var(--line);border-radius:9px;padding:3px}
+  .lay{border:none;background:transparent;color:var(--fg2);font-size:11px;font-weight:800;padding:5px 10px;border-radius:6px;cursor:pointer;font-family:var(--body)}
+  .lay:hover{color:#fff}
+  .lay.active{background:var(--sky);color:#04121a}
+  main{flex:1;display:grid;grid-template-columns:minmax(340px,1fr) minmax(420px,1.25fr) minmax(360px,1fr);min-height:0}
+  .pane{display:flex;flex-direction:column;min-width:0;min-height:0;border-right:1px solid var(--line)}
+  .pane:last-child{border-right:none}
+  /* per-pane focus: expand one pane to the full window, hide the others */
+  main.focus-annotate,main.focus-preview,main.focus-agent{grid-template-columns:1fr}
+  main.focus-annotate .pane:not(.p-annotate),
+  main.focus-preview .pane:not(.p-preview),
+  main.focus-agent .pane:not(.p-agent){display:none}
+  .lnk.on{border-color:var(--sky);background:rgba(60,182,224,.14);color:#fff}
+  .pane>.ph{display:flex;align-items:center;gap:8px;padding:8px 12px;border-bottom:1px solid var(--line);background:rgba(9,18,28,.6)}
+  .pane>.ph b{font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:var(--fg2);font-weight:800}
+  .pane>.ph .spacer{flex:1}
+  .pane iframe{flex:1;border:none;width:100%;background:#0b0b0b}
+  .lnk{color:var(--sky);font-size:11px;text-decoration:none;border:1px solid var(--line);border-radius:7px;padding:4px 9px}
+  .lnk:hover{border-color:var(--sky)}
+  /* agent pane = real terminal */
+  #term{flex:1;border:none;width:100%;background:#060d14}
+  .tbtn{border:1px solid var(--line);background:var(--panel);color:var(--fg2);border-radius:7px;padding:4px 10px;font-size:11px;font-weight:800;cursor:pointer;font-family:var(--body)}
+  .tbtn:hover{color:#fff;border-color:var(--sky)}
+  .tbtn[data-engine=claude].active{border-color:var(--sky);background:rgba(60,182,224,.16);color:#fff}
+  .tbtn[data-engine=codex].active{border-color:var(--emerald);background:rgba(31,156,90,.18);color:#fff}
+  .tbtn.render{border-color:rgba(31,156,90,.5);color:#8fe6b4}
+  select{background:var(--panel);border:1px solid var(--line);color:var(--fg);border-radius:8px;padding:5px;font-size:11px}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">eW</div>
+  <div><h1>Content Studio</h1><div class="sub">annotate · edit with agents · preview live</div></div>
+  <div class="spacer"></div>
+  <div class="layout" id="layout">
+    <button class="lay active" data-lay="all">All</button>
+    <button class="lay" data-lay="annotate">Annotate</button>
+    <button class="lay" data-lay="preview">Preview</button>
+    <button class="lay" data-lay="agent">Agent</button>
+  </div>
+  <div class="pill" id="studioPill"><span class="dot"></span><span>Remotion preview</span></div>
+  <div class="pill on"><span class="dot"></span><span>Bridge :8910</span></div>
+  <div class="pill" id="termPill"><span class="dot"></span><span>Terminal :7682</span></div>
+</header>
+
+<main>
+  <!-- PANE 1: annotate -->
+  <section class="pane p-annotate">
+    <div class="ph"><b>Annotate</b><span class="spacer"></span>
+      <a class="lnk" data-focus="annotate" href="#" title="Expand this pane to full width">Expand ⤢</a>
+      <a class="lnk" href="/annotate.html" target="_blank">Pop out ↗</a></div>
+    <iframe src="/annotate.html" title="Annotate"></iframe>
+  </section>
+
+  <!-- PANE 2: live preview -->
+  <section class="pane p-preview">
+    <div class="ph"><b>Live preview</b><span class="spacer"></span>
+      <a class="lnk" data-focus="preview" href="#" title="Expand this pane to full width">Expand ⤢</a>
+      <a class="lnk" id="popPreview" href="#" target="_blank">Pop out ↗</a>
+      <a class="lnk" id="reloadPreview" href="#">Reload</a>
+    </div>
+    <iframe id="preview" title="Remotion preview"></iframe>
+  </section>
+
+  <!-- PANE 3: real terminal (Claude Code / Codex CLI in a tmux session) -->
+  <section class="pane p-agent">
+    <div class="ph"><b>Terminal</b><span class="spacer"></span>
+      <button class="tbtn" data-engine="claude" id="engClaude" title="Start Claude Code in the terminal">Claude</button>
+      <button class="tbtn" data-engine="codex" id="engCodex" title="Start Codex in the terminal">Codex</button>
+      <select id="comp" title="Composition to preview + render">
+        <option value="DailyHygieneWalkthrough">DailyHygieneWalkthrough</option>
+        <option value="TapDemo">TapDemo</option>
+      </select>
+      <button class="tbtn render" id="render" title="Render this comp in the terminal">Render ▸</button>
+      <a class="lnk" data-focus="agent" href="#" title="Expand this pane to full width">Expand ⤢</a>
+      <a class="lnk" id="popTerm" href="#" target="_blank">Pop out ↗</a>
+    </div>
+    <iframe id="term" title="Terminal"></iframe>
+  </section>
+</main>
+
+<script>
+const $ = id => document.getElementById(id);
+
+// preview wiring — auto-retry the iframe until Remotion Studio answers, so a
+// slow boot never leaves a broken page. A cross-origin iframe still fires
+// 'load' on a real successful load, but NOT on connection-refused — so `shown`
+// only flips true once Studio genuinely rendered.
+fetch('/api/config').then(r=>r.json()).then(cfg=>{
+  // Terminal pane: embed the ttyd terminal + probe it for the status pill.
+  const term = $('term'), termPill = $('termPill');
+  term.src = cfg.termUrl; $('popTerm').href = cfg.termUrl;
+  const probeTerm = () => fetch(cfg.termUrl, {mode:'no-cors'})
+    .then(()=>termPill.classList.add('on')).catch(()=>termPill.classList.remove('on'));
+  probeTerm(); setInterval(probeTerm, 2500);
+
+  const preview = $('preview'), pill = $('studioPill');
+  let shown = false, lastSet = 0;
+  // open Remotion Studio directly on the working composition, not the whole
+  // project library — Studio routes to /<CompositionId>.
+  const previewUrl = () => `${cfg.studioUrl}/${$('comp').value}`;
+  $('popPreview').href = previewUrl();
+  preview.addEventListener('load', ()=>{ shown = true; });
+  const probe = () => fetch(cfg.studioUrl, {mode:'no-cors'})
+    .then(()=>{ pill.classList.add('on');
+      const now = performance.now();
+      if(!shown && now - lastSet > 4000){ lastSet = now; preview.src = previewUrl(); } })
+    .catch(()=>{ pill.classList.remove('on'); shown = false; });
+  probe(); setInterval(probe, 2500);
+  const reload = ()=>{ shown=false; lastSet=0; preview.src = previewUrl(); $('popPreview').href = previewUrl(); };
+  $('reloadPreview').onclick = e=>{ e.preventDefault(); reload(); };
+  // switching the composition retargets both the preview and the render button
+  $('comp').addEventListener('change', reload);
+}).catch(()=>{});
+
+// Layout: 'all' shows all three panes; a name expands that pane full-width.
+// The switcher lives in the top bar (never hidden) so nothing is unrecoverable.
+function setLayout(which){
+  const main = document.querySelector('main');
+  main.classList.remove('focus-annotate','focus-preview','focus-agent');
+  if(which !== 'all') main.classList.add('focus-' + which);
+  document.querySelectorAll('.lay').forEach(b=>b.classList.toggle('active', b.dataset.lay===which));
+  document.querySelectorAll('[data-focus]').forEach(b=>b.classList.toggle('on', b.dataset.focus===which));
+}
+document.querySelectorAll('.lay').forEach(b=>b.onclick=()=>setLayout(b.dataset.lay));
+// per-pane Expand toggles between that pane and 'all'
+document.querySelectorAll('[data-focus]').forEach(btn=>{
+  btn.onclick = e=>{ e.preventDefault();
+    const on = document.querySelector('main').classList.contains('focus-'+btn.dataset.focus);
+    setLayout(on ? 'all' : btn.dataset.focus);
+  };
+});
+
+// Type a command into the real terminal (tmux session) via the bridge.
+// We don't reimplement the CLI — the buttons just drop you into it.
+async function toTerm(cmd, btn){
+  try{
+    const r = await fetch('/api/term',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({cmd})});
+    if(!r.ok){ const t = await r.text(); flash(btn, '✕'); console.warn('term:', t); return; }
+    flash(btn, '↵');
+  }catch(e){ flash(btn, '✕'); console.warn(e); }
+  $('term').focus();
+}
+function flash(btn, mark){ if(!btn) return; const o=btn.textContent; btn.textContent=`${o} ${mark}`; setTimeout(()=>btn.textContent=o, 900); }
+
+// Claude / Codex buttons launch the actual CLI in the terminal.
+$('engClaude').onclick = e=>{ setActive('claude'); toTerm('claude', e.currentTarget); };
+$('engCodex').onclick  = e=>{ setActive('codex');  toTerm('codex',  e.currentTarget); };
+function setActive(e){ document.querySelectorAll('.tbtn[data-engine]').forEach(b=>b.classList.toggle('active', b.dataset.engine===e)); }
+
+// Render button runs the render in the terminal (visible, cancelable with Ctrl-C).
+$('render').onclick = e=>{
+  const comp = ($('comp').value || 'DailyHygieneWalkthrough').replace(/[^A-Za-z0-9_]/g,'');
+  toTerm(`npx remotion render src/index.ts ${comp} out/${comp}.mp4 --concurrency=4`, e.currentTarget);
+};
+</script>
+</body>
+</html>
