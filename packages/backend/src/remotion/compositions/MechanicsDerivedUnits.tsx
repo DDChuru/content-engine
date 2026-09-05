@@ -43,6 +43,20 @@ const T = {
   mono: '"JetBrains Mono", "SFMono-Regular", Consolas, monospace',
 };
 
+const CARD_INK = {
+  '--ink-cyan': '#08717a',
+  '--ink-cyanSoft': '#08717a',
+  '--ink-amber': '#925000',
+  '--ink-green': '#186d48',
+  '--ink-textMuted': '#526672',
+} as React.CSSProperties;
+
+function labelColor(color: string): string {
+  const key = (['cyan', 'cyanSoft', 'amber', 'green', 'textMuted'] as const)
+    .find((name) => T[name] === color);
+  return key ? `var(--ink-${key}, ${color})` : color;
+}
+
 interface TranscriptWord {
   word: string;
   start: number;
@@ -206,14 +220,14 @@ const StepBadge: React.FC<{ scene: number; label: string }> = ({ scene, label })
       borderRadius: 999,
       border: `1px solid ${T.cyan}55`,
       background: `${T.bgDeep}dd`,
-      color: T.textMuted,
+      color: labelColor(T.textMuted),
       fontFamily: T.mono,
-      fontSize: 17,
+      fontSize: 28,
       letterSpacing: 1.4,
       textTransform: 'uppercase',
     }}
   >
-    <span style={{ color: T.cyan, fontWeight: 900 }}>
+    <span style={{ color: labelColor(T.cyan), fontWeight: 900 }}>
       {String(scene).padStart(2, '0')} / 10
     </span>
     <span>{label}</span>
@@ -229,7 +243,7 @@ const LabBackground: React.FC<{
   const drift = Math.sin(frame / 80) * 12;
 
   return (
-    <AbsoluteFill style={{ overflow: 'hidden', background: T.bg, fontFamily: T.sans }}>
+    <AbsoluteFill style={{ overflow: 'hidden', isolation: 'isolate', background: T.bg, fontFamily: T.sans }}>
       <AbsoluteFill
         style={{
           background: `radial-gradient(circle at ${28 + drift / 5}% 18%, ${T.cyan}15, transparent 35%), radial-gradient(circle at 78% 90%, ${T.amber}10, transparent 32%), linear-gradient(145deg, ${T.bgDeep}, ${T.bg})`,
@@ -248,9 +262,9 @@ const LabBackground: React.FC<{
           position: 'absolute',
           left: 58,
           top: 48,
-          color: T.textMuted,
+          color: labelColor(T.textMuted),
           fontFamily: T.mono,
-          fontSize: 17,
+          fontSize: 28,
           letterSpacing: 2.6,
         }}
       >
@@ -296,6 +310,8 @@ const WarmCard: React.FC<{
 }> = ({ children, style, accent = T.cyan }) => (
   <div
     style={{
+      ...CARD_INK,
+      boxSizing: 'border-box',
       borderRadius: 24,
       background: T.card,
       color: T.ink,
@@ -317,13 +333,13 @@ const UnitTile: React.FC<{
 }> = ({ symbol, label, color = T.cyan, width = 188, height = 132 }) => (
   <WarmCard
     accent={color}
-    style={{ width, height, display: 'grid', placeItems: 'center', padding: '10px 16px' }}
+    style={{ width, height, display: 'grid', placeItems: 'center', padding: '8px 16px' }}
   >
     <div style={{ textAlign: 'center' }}>
-      <div style={{ color, fontFamily: T.mono, fontSize: 50, lineHeight: 1, fontWeight: 950 }}>
+      <div style={{ color: labelColor(color), fontFamily: T.mono, fontSize: 46, lineHeight: 1, fontWeight: 950 }}>
         {symbol}
       </div>
-      <div style={{ color: '#687680', fontSize: 18, lineHeight: 1.1, fontWeight: 800, marginTop: 10 }}>
+      <div style={{ color: '#687680', fontSize: 28, lineHeight: 1.1, fontWeight: 800, marginTop: 8 }}>
         {label}
       </div>
     </div>
@@ -337,6 +353,7 @@ const HorizontalArrow: React.FC<{
   label?: string;
 }> = ({ width, color = T.cyan, progress = 1, label }) => {
   const drawn = width * clamp01(progress);
+  if (drawn <= 0) return null;
   return (
     <div style={{ position: 'relative', width, height: 48 }}>
       <div
@@ -344,18 +361,18 @@ const HorizontalArrow: React.FC<{
           position: 'absolute',
           left: 0,
           top: 21,
-          width: drawn,
+          width: Math.max(0, drawn - 14),
           height: 6,
           borderRadius: 6,
           background: color,
           boxShadow: `0 0 15px ${color}88`,
         }}
       />
-      {progress > 0.96 && (
+      {progress > 0 && (
         <div
           style={{
             position: 'absolute',
-            left: width - 2,
+            left: Math.max(0, drawn - 18),
             top: 10,
             width: 0,
             height: 0,
@@ -371,10 +388,10 @@ const HorizontalArrow: React.FC<{
             position: 'absolute',
             left: 0,
             right: 0,
-            top: -10,
-            color,
+            top: -25,
+            color: labelColor(color),
             fontFamily: T.mono,
-            fontSize: 17,
+            fontSize: 28,
             fontWeight: 900,
             textAlign: 'center',
           }}
@@ -392,17 +409,16 @@ const DownArrow: React.FC<{
   opacity?: number;
   label?: string;
 }> = ({ length, color = T.amber, opacity = 1, label }) => (
-  <div style={{ position: 'relative', width: 96, height: length + 50, opacity }}>
+  <div style={{ position: 'relative', width: 96, height: length + 26, opacity }}>
     {label && (
       <div
         style={{
           position: 'absolute',
-          left: 0,
-          right: 0,
-          top: 0,
-          color,
+          left: 68,
+          top: length * 0.5,
+          color: labelColor(color),
           fontFamily: T.mono,
-          fontSize: 22,
+          fontSize: 28,
           fontWeight: 950,
           textAlign: 'center',
         }}
@@ -414,9 +430,9 @@ const DownArrow: React.FC<{
       style={{
         position: 'absolute',
         left: 45,
-        top: 33,
+        top: 0,
         width: 7,
-        height: Math.max(0, length - 22),
+        height: Math.max(0, length - 20),
         borderRadius: 7,
         background: color,
         boxShadow: `0 0 15px ${color}88`,
@@ -426,7 +442,7 @@ const DownArrow: React.FC<{
       style={{
         position: 'absolute',
         left: 30,
-        top: length,
+        top: length - 22,
         width: 0,
         height: 0,
         borderLeft: '18px solid transparent',
@@ -471,7 +487,7 @@ const Instrument: React.FC<{
     style={{
       position: 'absolute',
       left: x,
-      top: 305,
+      top: 420,
       width: 300,
       height: 235,
       opacity,
@@ -481,7 +497,7 @@ const Instrument: React.FC<{
       boxShadow: `0 20px 45px #0008, inset 0 0 35px ${T.cyan}0d`,
     }}
   >
-    <div style={{ position: 'absolute', left: 0, right: 0, top: 18, color: T.textMuted, fontFamily: T.mono, fontSize: 15, letterSpacing: 2, textAlign: 'center' }}>{label}</div>
+    <div style={{ position: 'absolute', left: 0, right: 0, top: 18, color: labelColor(T.textMuted), fontFamily: T.mono, fontSize: 28, letterSpacing: 2, textAlign: 'center' }}>{label}</div>
     {kind === 'dial' && (
       <div style={{ position: 'absolute', left: 74, top: 68, width: 150, height: 112, borderRadius: '150px 150px 22px 22px', border: `7px solid ${powered > 0.05 ? T.cyan : T.textMuted}77` }}>
         <div style={{ position: 'absolute', left: 71, top: 32, width: 7, height: 58, borderRadius: 7, background: powered > 0.05 ? T.amber : T.textMuted, transform: `rotate(${-48 + powered * 76}deg)`, transformOrigin: 'bottom' }} />
@@ -520,16 +536,16 @@ const Scene01: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
 
   return (
     <LabBackground scene={1} label="derived units">
-      <Instrument x={260} label="SPEED DIAL" kind="dial" opacity={instruments.opacity * 0.48} powered={0} />
-      <Instrument x={810} label="ROCKET GAUGE" kind="rocket" opacity={instruments.opacity * 0.48} powered={0} />
-      <Instrument x={1360} label="FORCE SENSOR" kind="force" opacity={instruments.opacity * 0.48} powered={0} />
+      <Instrument x={260} label="SPEED DIAL" kind="dial" opacity={instruments.opacity * 0.8} powered={0} />
+      <Instrument x={810} label="ROCKET GAUGE" kind="rocket" opacity={instruments.opacity * 0.8} powered={0} />
+      <Instrument x={1360} label="FORCE SENSOR" kind="force" opacity={instruments.opacity * 0.8} powered={0} />
 
       <Cued at={revealAt} fromScale={0.9} style={{ position: 'absolute', left: 510, top: 190 }}>
         <WarmCard accent={T.cyan} style={{ width: 900, height: 205, display: 'grid', placeItems: 'center' }}>
           <div style={{ textAlign: 'center' }}>
-            <div style={{ color: '#60727c', fontFamily: T.mono, fontSize: 18, letterSpacing: 4 }}>THE EQUATION INSIDE THE ANSWER</div>
+            <div style={{ color: '#60727c', fontFamily: T.mono, fontSize: 28, letterSpacing: 4 }}>THE EQUATION INSIDE THE ANSWER</div>
             <div style={{ marginTop: 20, color: T.ink, fontSize: 68, fontWeight: 950, letterSpacing: -2 }}>
-              Derived <span style={{ color: T.cyan }}>Units</span>
+              Derived <span style={{ color: labelColor(T.cyan) }}>Units</span>
             </div>
             <div style={{ width: 620 * etch, height: 5, borderRadius: 5, margin: '19px auto 0', background: T.cyan, boxShadow: `0 0 14px ${T.cyan}88` }} />
           </div>
@@ -537,7 +553,7 @@ const Scene01: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
       </Cued>
 
       <div style={{ position: 'absolute', left: 0, right: 0, top: 652, height: 250 }}>
-        <div style={{ position: 'absolute', left: 165, right: 165, top: 188, height: 17, borderRadius: 8, background: '#263d49', borderTop: `3px solid ${T.cyan}55` }} />
+        <div style={{ position: 'absolute', left: 165, right: 165, top: 192, height: 17, borderRadius: 8, background: '#263d49', borderTop: `3px solid ${T.cyan}55` }} />
         {tiles.map((tile, index) => {
           const targetX = 565 + index * 264;
           const x = interpolate(assembly, [0, 1], [tile.x, targetX], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' });
@@ -549,7 +565,7 @@ const Scene01: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
           );
         })}
         <div style={{ position: 'absolute', left: 541, top: 22, width: 838, height: 191, borderRadius: 28, border: `3px solid ${T.cyan}`, opacity: assembly, boxShadow: `0 0 32px ${T.cyan}33`, pointerEvents: 'none' }} />
-        <div style={{ position: 'absolute', left: 0, right: 0, top: 222, color: T.cyanSoft, fontFamily: T.mono, fontSize: 18, fontWeight: 850, letterSpacing: 2.2, textAlign: 'center', opacity: mechanics.opacity }}>
+        <div style={{ position: 'absolute', left: 0, right: 0, top: 222, color: labelColor(T.cyanSoft), fontFamily: T.mono, fontSize: 28, fontWeight: 850, letterSpacing: 2.2, textAlign: 'center', opacity: mechanics.opacity }}>
           MECHANICS TOOLKIT · READY
         </div>
       </div>
@@ -582,10 +598,10 @@ const Scene02: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
       {[310, 530, 750].map((top) => <Rail key={top} left={270} top={top} width={390} />)}
 
       <div style={{ position: 'absolute', left: 560, top: 215, width: 740, height: 600, borderRadius: 34, border: `3px solid ${T.cyan}66`, background: `${T.panel}d8`, boxShadow: '0 25px 60px #0008' }}>
-        <div style={{ position: 'absolute', left: 30, top: 24, color: T.textMuted, fontFamily: T.mono, fontSize: 17, letterSpacing: 2.3 }}>MAGNETIC ASSEMBLY BAY</div>
+        <div style={{ position: 'absolute', left: 30, top: 24, color: labelColor(T.textMuted), fontFamily: T.mono, fontSize: 28, letterSpacing: 2.3 }}>MAGNETIC ASSEMBLY BAY</div>
         <div style={{ position: 'absolute', left: 350, top: 240, width: 270, height: 5, background: T.cyan, borderRadius: 5, opacity: operations.opacity }} />
-        <div style={{ position: 'absolute', left: 340, top: 229, color: T.amber, fontFamily: T.mono, fontSize: 44, fontWeight: 950, opacity: operations.opacity }}>×</div>
-        <div style={{ position: 'absolute', left: 630, top: 229, color: T.cyan, fontFamily: T.mono, fontSize: 37, fontWeight: 950, opacity: operations.opacity }}>÷</div>
+        <div style={{ position: 'absolute', left: 305, top: 210, color: labelColor(T.amber), fontFamily: T.mono, fontSize: 44, fontWeight: 950, opacity: operations.opacity }}>×</div>
+        <div style={{ position: 'absolute', left: 630, top: 229, color: labelColor(T.cyan), fontFamily: T.mono, fontSize: 37, fontWeight: 950, opacity: operations.opacity }}>÷</div>
         <div style={{ position: 'absolute', left: 278, top: 18, bottom: 24, width: 2, background: `${T.cyan}2d` }} />
       </div>
 
@@ -600,21 +616,21 @@ const Scene02: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
       })}
 
       <div style={{ position: 'absolute', right: 78, top: 224, width: 455, height: 608, padding: '30px 28px', borderRadius: 30, border: `2px solid ${T.cyan}44`, background: `${T.bgDeep}b8` }}>
-        <div style={{ color: T.textMuted, fontFamily: T.mono, fontSize: 16, letterSpacing: 2.4 }}>DERIVED SHAPES</div>
+        <div style={{ color: labelColor(T.textMuted), fontFamily: T.mono, fontSize: 28, letterSpacing: 2.4 }}>DERIVED SHAPES</div>
         {[
           { unit: 'm / s', name: 'speed', y: 78, color: T.cyan },
           { unit: 'm / s²', name: 'acceleration', y: 228, color: T.amber },
           { unit: 'kg·m / s²', name: 'force', y: 378, color: T.green },
         ].map((shape) => (
           <div key={shape.name} style={{ position: 'absolute', left: 28, right: 28, top: shape.y, height: 116, borderRadius: 20, border: `2px dashed ${shape.color}88`, background: `${shape.color}0d`, opacity: base.opacity * (0.2 + equation.opacity * 0.8), display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0 25px' }}>
-            <span style={{ color: shape.color, fontFamily: T.mono, fontSize: 36, fontWeight: 950 }}>{shape.unit}</span>
-            <span style={{ color: T.textMuted, fontSize: 19, fontWeight: 800 }}>{shape.name}</span>
+            <span style={{ color: labelColor(shape.color), fontFamily: T.mono, fontSize: 36, fontWeight: 950 }}>{shape.unit}</span>
+            <span style={{ color: labelColor(T.textMuted), fontSize: 28, fontWeight: 800 }}>{shape.name}</span>
           </div>
         ))}
       </div>
 
       <Cued at={equationAt} fromY={18} style={{ position: 'absolute', left: 530, right: 530, bottom: 76 }}>
-        <div style={{ borderRadius: 20, padding: '18px 28px', background: `${T.green}16`, border: `2px solid ${T.green}88`, color: T.text, textAlign: 'center', fontSize: 27, fontWeight: 850 }}>
+        <div style={{ borderRadius: 20, padding: '18px 28px', background: `${T.green}16`, border: `2px solid ${T.green}88`, color: T.text, textAlign: 'center', fontSize: 28, fontWeight: 850 }}>
           equation → unit structure
         </div>
       </Cued>
@@ -642,7 +658,7 @@ const Scene03: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
   const vectorAt = spokenAt(scene, 'vector');
   const distance = useCue(distanceAt, 0.35);
   const travel = useCueProgress(distanceAt, 2.5);
-  const fold = useCueProgress(unitAt, 0.65);
+  const fold = useCueProgress(unitAt, 0.85);
   const direction = useCueProgress(directionAt, 0.6);
 
   return (
@@ -655,50 +671,50 @@ const Scene03: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
           <div key={index} style={{ position: 'absolute', left: 74 + index * 94, bottom: 66, width: 3, height: index % 2 === 0 ? 34 : 22, background: T.cyan }} />
         ))}
         <div style={{ position: 'absolute', left: 78 + travel * 575, bottom: 90 }}><MiniCar /></div>
-        <div style={{ position: 'absolute', left: 72, bottom: 25, color: T.textMuted, fontFamily: T.mono, fontSize: 17 }}>0 m</div>
-        <div style={{ position: 'absolute', right: 62, bottom: 25, color: T.cyan, fontFamily: T.mono, fontSize: 17, fontWeight: 900 }}>distance</div>
+        <div style={{ position: 'absolute', left: 72, bottom: 25, color: labelColor(T.textMuted), fontFamily: T.mono, fontSize: 28 }}>0 m</div>
+        <div style={{ position: 'absolute', right: 62, bottom: 25, color: labelColor(T.cyan), fontFamily: T.mono, fontSize: 28, fontWeight: 900 }}>distance</div>
       </div>
 
       <div style={{ position: 'absolute', right: 105, top: 224, width: 690, height: 398, borderRadius: 30, border: `2px solid ${T.cyan}55`, background: `${T.bgDeep}db` }}>
-        <div style={{ position: 'absolute', left: 0, right: 0, top: 26, color: T.textMuted, fontFamily: T.mono, fontSize: 17, letterSpacing: 2, textAlign: 'center' }}>UNIT ASSEMBLY</div>
+        <div style={{ position: 'absolute', left: 0, right: 0, top: 26, color: labelColor(T.textMuted), fontFamily: T.mono, fontSize: 28, letterSpacing: 2, textAlign: 'center' }}>UNIT ASSEMBLY</div>
         <Cued at={distanceAt} fromY={-55} style={{ position: 'absolute', left: 128, top: 90 }}>
-          <div style={{ opacity: 1 - fold }}>
+          <div style={{ opacity: clamp01(1 - fold * 2), transform: `translate(${242 * fold}px, ${46 * fold}px) scale(${1 - fold * 0.45})` }}>
             <UnitTile symbol="m" label="distance" color={T.cyan} width={182} height={112} />
           </div>
         </Cued>
         <Cued at={distanceAt} fromY={55} style={{ position: 'absolute', left: 128, top: 242 }}>
-          <div style={{ opacity: 1 - fold }}>
+          <div style={{ opacity: clamp01(1 - fold * 2), transform: `translate(${242 * fold}px, ${-18 * fold}px) scale(${1 - fold * 0.45})` }}>
             <UnitTile symbol="s" label="time" color={T.amber} width={182} height={112} />
           </div>
         </Cued>
         <div style={{ position: 'absolute', left: 102, top: 218, width: 234, height: 5, borderRadius: 5, background: T.card, opacity: distance.opacity * (1 - fold) }} />
-        <div style={{ position: 'absolute', left: 355, top: 174, color: T.textMuted, fontSize: 46, opacity: distance.opacity * (1 - fold) }}>→</div>
-        <div style={{ position: 'absolute', left: 424, top: 136, opacity: fold, transform: `scale(${0.86 + fold * 0.14})` }}>
-          <WarmCard accent={T.green} style={{ width: 205, height: 150, display: 'grid', placeItems: 'center' }}>
+        <div style={{ position: 'absolute', left: 355, top: 174, color: labelColor(T.textMuted), fontSize: 46, opacity: distance.opacity * (1 - fold) }}>→</div>
+        <div style={{ position: 'absolute', left: 370, top: 136, opacity: clamp01((fold - 0.5) / 0.35), transform: `scale(${0.86 + fold * 0.14})` }}>
+          <WarmCard accent={T.green} style={{ width: 270, height: 175, display: 'grid', placeItems: 'center' }}>
             <div style={{ textAlign: 'center' }}>
-              <div style={{ color: T.green, fontFamily: T.mono, fontSize: 52, fontWeight: 950 }}>m s<sup style={{ fontSize: 25 }}>−1</sup></div>
-              <div style={{ color: '#687680', fontSize: 18, fontWeight: 800, marginTop: 8 }}>metres per second</div>
+              <div style={{ color: labelColor(T.green), fontFamily: T.mono, fontSize: 52, fontWeight: 950 }}>m s<sup style={{ fontSize: 28 }}>−1</sup></div>
+              <div style={{ color: '#687680', fontSize: 28, fontWeight: 800, marginTop: 8 }}>metres per second</div>
             </div>
           </WarmCard>
         </div>
       </div>
 
       <Cued at={directionAt} fromY={28} style={{ position: 'absolute', left: 210, top: 685 }}>
-        <div style={{ width: 1500, height: 236, borderRadius: 28, background: `${T.panel}e6`, border: `2px solid ${T.cyan}55`, display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 32, padding: '28px 42px' }}>
+        <div style={{ boxSizing: 'border-box', width: 1500, height: 270, borderRadius: 28, background: `${T.panel}e6`, border: `2px solid ${T.cyan}55`, display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 32, padding: '28px 42px' }}>
           <div style={{ position: 'relative', borderRight: `2px solid ${T.textMuted}35` }}>
-            <div style={{ color: T.textMuted, fontFamily: T.mono, fontSize: 18, letterSpacing: 2 }}>SPEED</div>
+            <div style={{ color: labelColor(T.textMuted), fontFamily: T.mono, fontSize: 28, letterSpacing: 2 }}>SPEED</div>
             <div style={{ position: 'absolute', left: 45, top: 72 }}><MiniCar color={T.cyanSoft} /></div>
             <div style={{ position: 'absolute', right: 85, top: 74, color: T.text, fontSize: 31, fontWeight: 850 }}>size only</div>
             <Cued at={scalarAt} fromScale={0.84} style={{ position: 'absolute', right: 84, bottom: 4 }}>
-              <span style={{ color: T.cyanSoft, fontFamily: T.mono, fontSize: 20, fontWeight: 900 }}>SCALAR</span>
+              <span style={{ color: labelColor(T.cyanSoft), fontFamily: T.mono, fontSize: 28, fontWeight: 900 }}>SCALAR</span>
             </Cued>
           </div>
           <div style={{ position: 'relative' }}>
-            <div style={{ color: T.textMuted, fontFamily: T.mono, fontSize: 18, letterSpacing: 2 }}>VELOCITY</div>
+            <div style={{ color: labelColor(T.textMuted), fontFamily: T.mono, fontSize: 28, letterSpacing: 2 }}>VELOCITY</div>
             <div style={{ position: 'absolute', left: 45, top: 72 }}><MiniCar color={T.cyan} /></div>
             <div style={{ position: 'absolute', left: 230, top: 76 }}><HorizontalArrow width={250} color={T.amber} progress={direction} label="direction" /></div>
             <Cued at={vectorAt} fromScale={0.84} style={{ position: 'absolute', right: 55, bottom: 4 }}>
-              <span style={{ color: T.amber, fontFamily: T.mono, fontSize: 20, fontWeight: 900 }}>VECTOR</span>
+              <span style={{ color: labelColor(T.amber), fontFamily: T.mono, fontSize: 28, fontWeight: 900 }}>VECTOR</span>
             </Cued>
           </div>
         </div>
@@ -718,75 +734,72 @@ const Scene04: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
   const divideAt = spokenAt(scene, 'divide-by-time', ['divide by time']);
   const squaredAt = spokenAt(scene, 'second-squared', ['second squared']);
   const perSecondAt = spokenAt(scene, 'per-second-per-second', ['per second per second', 'per second, per second']);
-  const chartProgress = useCueProgress(velocityAt, 3.0);
+  const chartProgress = useCueProgress(velocityAt, 4.3);
   const divide = useCueProgress(divideAt, 0.7);
   const squared = useCueProgress(squaredAt, 0.6);
   const perSecond = useCue(perSecondAt, 0.4);
-  const velocityCounter = Math.floor(chartProgress * 4 + 0.0001);
+  const velocityCounter = Math.min(4, Math.floor(chartProgress * 4.3 + 0.0001));
 
   return (
     <LabBackground scene={4} label="acceleration">
       <SceneHeading at={accelerationAt}>Velocity change, measured again</SceneHeading>
 
       <div style={{ position: 'absolute', left: 74, top: 224, width: 890, height: 650, borderRadius: 30, border: `2px solid ${T.cyan}55`, background: `${T.panel}d7` }}>
-        <div style={{ position: 'absolute', left: 35, top: 28, color: T.textMuted, fontFamily: T.mono, fontSize: 17, letterSpacing: 2 }}>VELOCITY READOUT · ONE-SECOND TICKS</div>
-        <div style={{ position: 'absolute', right: 35, top: 22, width: 164, height: 60, borderRadius: 14, border: `2px solid ${T.cyan}77`, background: T.bgDeep, display: 'grid', placeItems: 'center', color: T.cyan, fontFamily: T.mono, fontSize: 27, fontWeight: 950 }}>
+        <div style={{ position: 'absolute', left: 35, top: 28, color: labelColor(T.textMuted), fontFamily: T.mono, fontSize: 28, letterSpacing: 2 }}>VELOCITY · 1 s TICKS</div>
+        <div style={{ position: 'absolute', right: 35, top: 22, width: 164, height: 60, borderRadius: 14, border: `2px solid ${T.cyan}77`, background: T.bgDeep, display: 'grid', placeItems: 'center', color: labelColor(T.cyan), fontFamily: T.mono, fontSize: 28, fontWeight: 950 }}>
           {velocityCounter} m/s
         </div>
         <div style={{ position: 'absolute', left: 92, bottom: 104, width: 700, height: 4, background: `${T.card}55` }} />
         <div style={{ position: 'absolute', left: 92, top: 120, bottom: 102, width: 4, background: `${T.card}55` }} />
         {[0, 1, 2, 3, 4].map((index) => {
-          const reveal = clamp01(chartProgress * 5 - index);
-          const left = 110 + index * 142;
+          const reveal = clamp01((chartProgress * 4.3 - index) / 0.25);
+          const left = 110 + index * 130;
           const bottom = 118 + index * 78;
           return (
             <React.Fragment key={index}>
-              <div style={{ position: 'absolute', left, bottom: 72, color: T.textMuted, fontFamily: T.mono, fontSize: 16, opacity: reveal }}>t={index}s</div>
+              <div style={{ position: 'absolute', left, bottom: 72, color: labelColor(T.textMuted), fontFamily: T.mono, fontSize: 28, opacity: reveal }}>t={index}s</div>
               <div style={{ position: 'absolute', left, bottom, opacity: reveal, transform: `scale(${0.84 + reveal * 0.16})`, transformOrigin: 'bottom left' }}>
-                <HorizontalArrow width={58 + index * 34} color={index === 0 ? T.cyanSoft : T.cyan} progress={reveal} />
-                <div style={{ marginTop: 4, color: T.text, fontFamily: T.mono, fontSize: 18, fontWeight: 850 }}>{index} m/s</div>
+                <HorizontalArrow width={index * 48} color={index === 0 ? T.cyanSoft : T.cyan} progress={reveal} />
+                <div style={{ marginTop: 4, color: T.text, fontFamily: T.mono, fontSize: 28, fontWeight: 850 }}>{index} m/s</div>
               </div>
-              {index > 0 && (
-                <div style={{ position: 'absolute', left: left + 18, bottom: bottom - 55, height: 47, width: 3, background: T.amber, opacity: reveal }} />
-              )}
             </React.Fragment>
           );
         })}
         <Cued at={velocityAt} fromY={16} style={{ position: 'absolute', left: 205, right: 205, bottom: 12 }}>
-          <div style={{ color: T.amber, fontFamily: T.mono, fontSize: 19, fontWeight: 900, textAlign: 'center' }}>+1 m/s during each 1 s</div>
+          <div style={{ color: labelColor(T.amber), fontFamily: T.mono, fontSize: 28, fontWeight: 900, textAlign: 'center' }}>+1 m/s during each 1 s</div>
         </Cued>
       </div>
 
       <div style={{ position: 'absolute', right: 74, top: 224, width: 808, height: 650, borderRadius: 30, border: `2px solid ${T.amber}55`, background: `${T.bgDeep}df` }}>
-        <div style={{ position: 'absolute', left: 36, top: 28, color: T.textMuted, fontFamily: T.mono, fontSize: 17, letterSpacing: 2 }}>UNIT BUILDER</div>
+        <div style={{ position: 'absolute', left: 36, top: 28, color: labelColor(T.textMuted), fontFamily: T.mono, fontSize: 28, letterSpacing: 2 }}>UNIT BUILDER</div>
         <Cued at={velocityUnitAt} fromX={-42} style={{ position: 'absolute', left: 82, top: 126 }}>
           <WarmCard accent={T.cyan} style={{ width: 255, height: 180, display: 'grid', placeItems: 'center' }}>
             <div style={{ textAlign: 'center' }}>
-              <div style={{ color: T.cyan, fontFamily: T.mono, fontSize: 57, fontWeight: 950 }}>m / s</div>
-              <div style={{ color: '#687680', fontSize: 19, fontWeight: 800 }}>velocity already has time</div>
+              <div style={{ color: labelColor(T.cyan), fontFamily: T.mono, fontSize: 57, fontWeight: 950 }}>m / s</div>
+              <div style={{ color: '#687680', fontSize: 28, fontWeight: 800 }}>velocity already has time</div>
             </div>
           </WarmCard>
         </Cued>
-        <div style={{ position: 'absolute', left: 360, top: 190, opacity: divide, color: T.textMuted, fontSize: 50 }}>÷</div>
+        <div style={{ position: 'absolute', left: 360, top: 190, opacity: divide, color: labelColor(T.textMuted), fontSize: 50 }}>÷</div>
         <div style={{ position: 'absolute', left: 432, top: 148, opacity: divide, transform: `translateX(${(1 - divide) * 44}px)` }}>
           <UnitTile symbol="s" label="time again" color={T.amber} width={205} height={145} />
         </div>
-        <div style={{ position: 'absolute', left: 700, top: 190, opacity: divide, color: T.textMuted, fontSize: 50 }}>→</div>
+        <div style={{ position: 'absolute', left: 700, top: 335, opacity: squared, color: labelColor(T.textMuted), fontSize: 50 }}>↓</div>
 
-        <div style={{ position: 'absolute', left: 185, top: 376, opacity: squared, transform: `scale(${0.84 + squared * 0.16})` }}>
-          <WarmCard accent={T.green} style={{ width: 438, height: 174, display: 'grid', placeItems: 'center' }}>
+        <div style={{ position: 'absolute', left: 185, top: 445, opacity: squared, transform: `scale(${0.84 + squared * 0.16})` }}>
+          <WarmCard accent={T.green} style={{ width: 438, height: 160, display: 'grid', placeItems: 'center' }}>
             <div style={{ textAlign: 'center' }}>
-              <div style={{ color: T.green, fontFamily: T.mono, fontSize: 63, fontWeight: 950 }}>m / s²</div>
-              <div style={{ color: '#687680', fontSize: 20, fontWeight: 850, marginTop: 7 }}>metres per second squared</div>
+              <div style={{ color: labelColor(T.green), fontFamily: T.mono, fontSize: 63, fontWeight: 950 }}>m / s²</div>
+              <div style={{ color: '#687680', fontSize: 28, fontWeight: 850, marginTop: 7 }}>metres per second squared</div>
             </div>
           </WarmCard>
         </div>
 
-        <div style={{ position: 'absolute', left: 82, top: 318, width: 255, height: 53, borderLeft: `4px solid ${T.amber}`, borderBottom: `4px solid ${T.amber}`, opacity: perSecond.opacity }}>
-          <span style={{ position: 'absolute', left: 12, top: 20, color: T.amber, fontFamily: T.mono, fontSize: 16, fontWeight: 900 }}>per second in velocity</span>
+        <div style={{ position: 'absolute', left: 82, top: 318, width: 255, height: 85, borderLeft: `4px solid ${T.amber}`, borderBottom: `4px solid ${T.amber}`, opacity: perSecond.opacity }}>
+          <span style={{ position: 'absolute', left: 12, top: 8, color: labelColor(T.amber), fontFamily: T.mono, fontSize: 28, fontWeight: 900 }}>time in<br />velocity</span>
         </div>
-        <div style={{ position: 'absolute', left: 433, top: 318, width: 205, height: 53, borderRight: `4px solid ${T.amber}`, borderBottom: `4px solid ${T.amber}`, opacity: perSecond.opacity }}>
-          <span style={{ position: 'absolute', right: 12, top: 20, color: T.amber, fontFamily: T.mono, fontSize: 16, fontWeight: 900 }}>per second of change</span>
+        <div style={{ position: 'absolute', left: 433, top: 318, width: 205, height: 85, borderRight: `4px solid ${T.amber}`, borderBottom: `4px solid ${T.amber}`, opacity: perSecond.opacity }}>
+          <span style={{ position: 'absolute', right: 12, top: 8, color: labelColor(T.amber), fontFamily: T.mono, fontSize: 28, fontWeight: 900 }}>time for<br />change</span>
         </div>
       </div>
     </LabBackground>
@@ -806,19 +819,19 @@ const ConverterLane: React.FC<{
   factor: React.ReactNode;
   output: React.ReactNode;
 }> = ({ at, top, color, label, input, factor, output }) => (
-  <Cued at={at} fromX={-38} style={{ position: 'absolute', left: 525, top }}>
-    <div style={{ width: 1160, height: 175, borderRadius: 25, border: `2px solid ${color}77`, background: `${color}0e`, display: 'grid', gridTemplateColumns: '210px 1fr 260px', alignItems: 'center', padding: '22px 28px', columnGap: 28 }}>
-      <div>
-        <div style={{ color, fontFamily: T.mono, fontSize: 15, letterSpacing: 2, fontWeight: 900 }}>{label}</div>
-        <div style={{ color: T.text, fontFamily: T.mono, fontSize: 39, fontWeight: 950, marginTop: 15 }}>{input}</div>
+  <Cued at={at} fromY={0} fromScale={1} fadeDuration={0.2} style={{ position: 'absolute', left: 525, top }}>
+    <div style={{ position: 'relative', width: 1230, height: 210, boxSizing: 'border-box', borderRadius: 25, border: `2px solid ${color}77`, background: `${color}0e` }}>
+      <div style={{ position: 'absolute', left: 28, top: 20, color, fontFamily: T.mono, fontSize: 28, fontWeight: 900 }}>{label}</div>
+      <Cued at={at} fromX={-308} fromY={top < 400 ? 127 : 37} fromScale={1} fadeDuration={0.85} style={{ position: 'absolute', left: 28, top: 78 }}>
+        <WarmCard accent={color} style={{ width: 150, height: 104, display: 'grid', placeItems: 'center', fontFamily: T.mono, fontSize: 40, fontWeight: 950 }}>{input}</WarmCard>
+      </Cued>
+      <div style={{ position: 'absolute', left: 330, top: 40, width: 560, height: 130, borderRadius: 18, background: T.bgDeep, border: `2px solid ${color}55` }}>
+        <div style={{ position: 'absolute', top: 12, left: 0, right: 0, color, fontFamily: T.mono, fontSize: 32, fontWeight: 950, textAlign: 'center' }}>{factor}</div>
+        <div style={{ position: 'absolute', left: 100, top: 68 }}><HorizontalArrow width={360} color={color} /></div>
       </div>
-      <div style={{ position: 'relative', height: 88, borderRadius: 18, background: `${T.bgDeep}dd`, border: `2px solid ${color}55`, display: 'grid', placeItems: 'center' }}>
-        <HorizontalArrow width={360} color={color} />
-        <div style={{ position: 'absolute', inset: 0, display: 'grid', placeItems: 'center', color, fontFamily: T.mono, fontSize: 24, fontWeight: 950 }}>{factor}</div>
-      </div>
-      <WarmCard accent={color} style={{ height: 112, display: 'grid', placeItems: 'center' }}>
-        <div style={{ color, fontFamily: T.mono, fontSize: 37, fontWeight: 950 }}>{output}</div>
-      </WarmCard>
+      <Cued at={at} fromX={-150} fromY={0} fromScale={1} fadeDuration={0.85} style={{ position: 'absolute', right: 28, top: 58 }}>
+        <WarmCard accent={color} style={{ width: 205, height: 104, display: 'grid', placeItems: 'center', fontFamily: T.mono, fontSize: 40, fontWeight: 950 }}>{output}</WarmCard>
+      </Cued>
     </div>
   </Cued>
 );
@@ -842,34 +855,34 @@ const Scene05: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
         <Cued at={compoundAt} fromScale={0.88} style={{ position: 'absolute', inset: 0 }}>
           <WarmCard accent={T.cyan} style={{ width: 372, height: 500, display: 'grid', placeItems: 'center' }}>
             <div style={{ textAlign: 'center' }}>
-              <div style={{ color: '#687680', fontFamily: T.mono, fontSize: 17, letterSpacing: 2 }}>COMPOUND UNIT</div>
-              <div style={{ marginTop: 58, width: 235 }}>
-                <div style={{ color: T.cyan, fontFamily: T.mono, fontSize: 70, fontWeight: 950, opacity: topReveal }}>km</div>
+              <div style={{ color: '#687680', fontFamily: T.mono, fontSize: 28, letterSpacing: 1 }}>COMPOUND UNIT</div>
+              <div style={{ marginTop: 30, width: 320 }}>
+                <div style={{ color: labelColor(T.cyan), fontFamily: T.mono, fontSize: 70, fontWeight: 950, opacity: topReveal }}>km</div>
                 <div style={{ height: 6, borderRadius: 6, background: T.ink, margin: '18px 0', transform: `scaleX(${0.45 + topReveal * 0.55})`, opacity: topReveal }} />
-                <div style={{ color: T.amber, fontFamily: T.mono, fontSize: 70, fontWeight: 950, opacity: bottomReveal }}>h<span style={{ opacity: squared }}>²</span></div>
+                <div style={{ color: labelColor(T.amber), fontFamily: T.mono, fontSize: 70, fontWeight: 950, opacity: bottomReveal }}>h<span style={{ opacity: squared }}>²</span></div>
               </div>
-              <div style={{ marginTop: 55, color: '#687680', fontSize: 19, fontWeight: 800 }}>open the fraction</div>
-              <div style={{ display: 'flex', justifyContent: 'center', gap: 9, marginTop: 24, fontFamily: T.mono, fontSize: 14, fontWeight: 900 }}>
-                <span style={{ padding: '7px 11px', borderRadius: 10, background: squared < 0.05 ? `${T.cyan}22` : '#7b879022', color: squared < 0.05 ? T.cyan : '#7b8790' }}>SPEED</span>
-                <span style={{ padding: '7px 11px', borderRadius: 10, background: `${T.amber}${squared > 0.05 ? '33' : '12'}`, color: squared > 0.05 ? T.amber : '#9d8b72' }}>ACCELERATION</span>
+              <div style={{ marginTop: 22, color: '#687680', fontSize: 28, fontWeight: 800 }}>open the fraction</div>
+              <div style={{ display: 'flex', justifyContent: 'center', gap: 8, marginTop: 20, fontFamily: T.mono, fontSize: 28, fontWeight: 900 }}>
+                <span style={{ padding: '7px 6px', borderRadius: 10, background: squared < 0.05 ? `${T.cyan}22` : '#7b879022', color: squared < 0.05 ? labelColor(T.cyan) : '#7b8790' }}>SPEED</span>
+                <span style={{ padding: '7px 6px', borderRadius: 10, background: `${T.amber}${squared > 0.05 ? '33' : '12'}`, color: squared > 0.05 ? labelColor(T.amber) : '#9d8b72' }}>ACCELERATION</span>
               </div>
             </div>
           </WarmCard>
         </Cued>
       </div>
 
-      <ConverterLane at={kilometresAt} top={255} color={T.cyan} label="NUMERATOR · DISTANCE" input="km" factor="× 1000" output="m" />
-      <ConverterLane at={hoursAt} top={505} color={T.amber} label="DENOMINATOR · TIME" input={<span>h<span style={{ opacity: squared }}>²</span></span>} factor={<span>× 3600<span style={{ opacity: squared }}> · × 3600</span></span>} output={<span>s<span style={{ opacity: squared }}>²</span></span>} />
+      <ConverterLane at={kilometresAt} top={255} color={T.cyan} label="DISTANCE" input="km" factor="× 1000" output="m" />
+      <ConverterLane at={hoursAt} top={505} color={T.amber} label="TIME" input={<span>h<span style={{ opacity: squared }}>²</span></span>} factor={<span>× 3600<span style={{ display: 'inline-block', opacity: squared, transform: `translateX(${-150 * (1 - squared)}px)` }}> · × 3600</span></span>} output={<span>s<span style={{ opacity: squared }}>²</span></span>} />
 
       <Cued at={topAt} fromY={12} style={{ position: 'absolute', left: 110, top: 245 }}>
-        <div style={{ color: T.cyan, fontFamily: T.mono, fontSize: 17, fontWeight: 900, letterSpacing: 2 }}>TOP / NUMERATOR</div>
+        <div style={{ color: labelColor(T.cyan), fontFamily: T.mono, fontSize: 28, fontWeight: 900, letterSpacing: 2 }}>TOP / NUMERATOR</div>
       </Cued>
       <Cued at={bottomAt} fromY={12} style={{ position: 'absolute', left: 103, top: 822 }}>
-        <div style={{ color: T.amber, fontFamily: T.mono, fontSize: 17, fontWeight: 900, letterSpacing: 2 }}>BOTTOM / DENOMINATOR</div>
+        <div style={{ color: labelColor(T.amber), fontFamily: T.mono, fontSize: 28, fontWeight: 900, letterSpacing: 2 }}>BOTTOM / DENOMINATOR</div>
       </Cued>
 
       <Cued at={squaredAt} fromY={18} style={{ position: 'absolute', left: 665, right: 205, bottom: 82 }}>
-        <div style={{ borderRadius: 20, padding: '17px 26px', background: `${T.red}13`, border: `2px solid ${T.red}88`, color: T.text, fontSize: 24, fontWeight: 850, textAlign: 'center' }}>
+        <div style={{ borderRadius: 20, padding: '17px 26px', background: `${T.red}13`, border: `2px solid ${T.red}88`, color: T.text, fontSize: 28, fontWeight: 850, textAlign: 'center' }}>
           h² means the clock conversion runs twice
         </div>
       </Cued>
@@ -886,11 +899,18 @@ const EquationToken: React.FC<{
   children: React.ReactNode;
   color?: string;
   style?: React.CSSProperties;
-}> = ({ at, children, color = T.ink, style }) => (
-  <Cued at={at} fromY={16} fromScale={0.88} style={{ color, fontFamily: T.mono, fontSize: 38, fontWeight: 950, ...style }}>
+  fromX?: number;
+  fromY?: number;
+  via?: [number, number];
+}> = ({ at, children, color = T.ink, style, fromX = 0, fromY = 16, via }) => {
+  const travel = useCueProgress(at, 0.85);
+  const path = via ? { transform: `translate(${interpolate(travel, [0, 0.5, 1], [fromX, via[0], 0])}px, ${interpolate(travel, [0, 0.5, 1], [fromY, via[1], 0])}px)` } : {};
+  return (
+  <Cued at={at} fromX={fromX} fromY={fromY} fadeDuration={fromX || fromY !== 16 ? 0.85 : 0.4} fromScale={1} style={{ whiteSpace: 'nowrap', background: fromX ? T.card : undefined, borderRadius: 6, padding: fromX ? '0 4px' : undefined, color: labelColor(color), fontFamily: T.mono, fontSize: 38, fontWeight: 950, ...style, ...path }}>
     {children}
   </Cued>
-);
+  );
+};
 
 const Speedometer: React.FC<{ firstAt: number; finalAt: number }> = ({ firstAt, finalAt }) => {
   const first = useCue(firstAt, 0.35);
@@ -904,12 +924,11 @@ const Speedometer: React.FC<{ firstAt: number; finalAt: number }> = ({ firstAt, 
         ))}
         <div style={{ position: 'absolute', left: 182, top: 74, width: 9, height: 127, borderRadius: 9, background: T.amber, transformOrigin: 'bottom', transform: `rotate(${angle}deg)`, boxShadow: `0 0 17px ${T.amber}` }} />
         <div style={{ position: 'absolute', left: 160, top: 178, width: 53, height: 53, borderRadius: '50%', background: T.card, border: `9px solid ${T.amber}` }} />
-        <div style={{ position: 'absolute', left: 28, top: 170, color: T.cyanSoft, fontFamily: T.mono, fontSize: 17, fontWeight: 900 }}>72 km/h</div>
-        <div style={{ position: 'absolute', right: 23, top: 170, color: T.green, fontFamily: T.mono, fontSize: 17, fontWeight: 900, opacity: sweep }}>20 m/s</div>
+        <div style={{ position: 'absolute', left: 28, top: 190, color: labelColor(T.cyanSoft), fontFamily: T.mono, fontSize: 28, fontWeight: 900 }}>72 km/h</div>
+        <div style={{ position: 'absolute', right: 23, top: 190, color: labelColor(T.green), fontFamily: T.mono, fontSize: 28, fontWeight: 900, opacity: sweep }}>20 m/s</div>
       </div>
-      <div style={{ position: 'absolute', left: 114, bottom: 0, width: 272, height: 80, borderRadius: 18, background: T.card, border: `3px solid ${sweep > 0 ? T.green : T.cyan}`, display: 'grid', placeItems: 'center', color: sweep > 0 ? T.green : T.ink, fontFamily: T.mono, fontSize: 35, fontWeight: 950 }}>
-        <span style={{ position: 'absolute', opacity: 1 - sweep }}>72 km/h</span>
-        <span style={{ position: 'absolute', opacity: sweep }}>20 m/s</span>
+      <div style={{ position: 'absolute', overflow: 'hidden', left: 114, bottom: 0, width: 272, height: 80, borderRadius: 18, background: T.card, border: `3px solid ${sweep > 0 ? T.green : T.cyan}`, display: 'grid', placeItems: 'center', color: sweep > 0 ? '#186d48' : T.ink, fontFamily: T.mono, fontSize: 35, fontWeight: 950 }}>
+        <span>{sweep > 0 ? '20 m/s' : '72 km/h'}</span>
       </div>
     </div>
   );
@@ -942,27 +961,27 @@ const Scene06: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
         <div style={{ position: 'absolute', left: 185, bottom: 67 }}><MiniCar /></div>
       </div>
 
-      <div style={{ position: 'absolute', left: 628, top: 214, width: 1224, height: 704, borderRadius: 32, border: `2px solid ${T.cyan}55`, background: T.card, color: T.ink, boxShadow: '0 24px 62px #0008' }}>
-        <Cued at={numeratorAt} fromX={-28} style={{ position: 'absolute', left: 40, right: 40, top: 38, height: 245, borderRadius: 23, background: `${T.cyan}14`, border: `2px solid ${T.cyan}88` }}>
-          <div style={{ position: 'absolute', left: 28, top: 20, color: '#61757e', fontFamily: T.mono, fontSize: 16, letterSpacing: 2, fontWeight: 900 }}>NUMERATOR · DISTANCE</div>
-          <EquationToken at={seventyTwoTimesAt} style={{ position: 'absolute', left: 58, top: 111 }}>72</EquationToken>
+      <div style={{ position: 'absolute', ...CARD_INK, left: 628, top: 214, width: 1224, height: 704, borderRadius: 32, border: `2px solid ${T.cyan}55`, background: T.card, color: T.ink, boxShadow: '0 24px 62px #0008' }}>
+        <Cued at={numeratorAt} fromX={-28} style={{ zIndex: 1, position: 'absolute', left: 40, right: 40, top: 38, height: 245, borderRadius: 23, background: `${T.cyan}14`, border: `2px solid ${T.cyan}88` }}>
+          <div style={{ position: 'absolute', left: 28, top: 20, color: '#61757e', fontFamily: T.mono, fontSize: 28, letterSpacing: 2, fontWeight: 900 }}>NUMERATOR · DISTANCE</div>
+          <EquationToken at={seventyTwoTimesAt} fromX={-475} fromY={340} style={{ position: 'absolute', left: 58, top: 111 }}>72</EquationToken>
           <EquationToken at={timesAt} color={T.cyan} style={{ position: 'absolute', left: 165, top: 111 }}>×</EquationToken>
           <EquationToken at={thousandAt} style={{ position: 'absolute', left: 235, top: 111 }}>1000</EquationToken>
           <EquationToken at={givesNumeratorAt} color="#71818a" style={{ position: 'absolute', left: 405, top: 111 }}>=</EquationToken>
-          <EquationToken at={numeratorResultAt} color={T.cyan} style={{ position: 'absolute', left: 485, top: 104, fontSize: 43 }}>72 000 <span style={{ fontSize: 26 }}>m/h</span></EquationToken>
+          <EquationToken at={numeratorResultAt} color={T.cyan} style={{ position: 'absolute', left: 485, top: 104, fontSize: 43 }}>72 000 <span style={{ fontSize: 28 }}>m/h</span></EquationToken>
         </Cued>
 
-        <Cued at={denominatorAt} fromX={28} style={{ position: 'absolute', left: 40, right: 40, top: 310, height: 345, borderRadius: 23, background: `${T.amber}12`, border: `2px solid ${T.amber}88` }}>
-          <div style={{ position: 'absolute', left: 28, top: 20, color: '#61757e', fontFamily: T.mono, fontSize: 16, letterSpacing: 2, fontWeight: 900 }}>DENOMINATOR · CLOCK</div>
+        <Cued at={denominatorAt} fromX={28} style={{ zIndex: 2, position: 'absolute', left: 40, right: 40, top: 310, height: 345, borderRadius: 23, background: `${T.amber}12`, border: `2px solid ${T.amber}88` }}>
+          <div style={{ position: 'absolute', left: 28, top: 20, color: '#61757e', fontFamily: T.mono, fontSize: 28, letterSpacing: 2, fontWeight: 900 }}>DENOMINATOR · CLOCK</div>
           <EquationToken at={oneHourAt} style={{ position: 'absolute', left: 58, top: 82, fontSize: 31 }}>1 hour</EquationToken>
           <EquationToken at={thirtySixHundredAt} color="#71818a" style={{ position: 'absolute', left: 206, top: 82, fontSize: 31 }}>=</EquationToken>
           <EquationToken at={thirtySixHundredAt} color={T.amber} style={{ position: 'absolute', left: 265, top: 82, fontSize: 31 }}>3600 seconds</EquationToken>
           <div style={{ position: 'absolute', left: 38, right: 38, top: 163, height: 2, background: `${T.ink}1f` }} />
-          <EquationToken at={divisionNumberAt} style={{ position: 'absolute', left: 58, top: 220 }}>72 000</EquationToken>
+          <EquationToken at={divisionNumberAt} fromX={427} fromY={-388} via={[650, -135]} style={{ position: 'absolute', left: 58, top: 220 }}>72 000</EquationToken>
           <EquationToken at={dividedByAt} color={T.amber} style={{ position: 'absolute', left: 250, top: 220 }}>÷</EquationToken>
-          <EquationToken at={divisorAt} style={{ position: 'absolute', left: 323, top: 220 }}>3600</EquationToken>
+          <EquationToken at={divisorAt} fromX={-58} fromY={-138} style={{ position: 'absolute', left: 323, top: 220 }}>3600</EquationToken>
           <EquationToken at={givesResultAt} color="#71818a" style={{ position: 'absolute', left: 484, top: 220 }}>=</EquationToken>
-          <EquationToken at={finalAt} color={T.green} style={{ position: 'absolute', left: 557, top: 208, fontSize: 46 }}>20 <span style={{ fontSize: 27 }}>m/s</span></EquationToken>
+          <EquationToken at={finalAt} color={T.green} style={{ position: 'absolute', left: 557, top: 208, fontSize: 46 }}>20 <span style={{ fontSize: 28 }}>m/s</span></EquationToken>
         </Cued>
       </div>
     </LabBackground>
@@ -986,7 +1005,7 @@ const Scene07: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
   const motion = useCueProgress(acceleratesAt, 3);
   const oneKilogram = useCueProgress(oneKilogramAt, 0.4);
   // Constant acceleration: distance grows with elapsed time squared.
-  const blockX = 235 + motion * motion * 785;
+  const blockX = 235 + motion * motion * 555;
 
   return (
     <LabBackground scene={7} label="build one newton">
@@ -995,67 +1014,67 @@ const Scene07: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
       <Cued at={massAccelerationAt} fromY={-18} style={{ position: 'absolute', left: 130, top: 210 }}>
         <WarmCard accent={T.amber} style={{ width: 720, height: 165, display: 'grid', placeItems: 'center' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 30, fontFamily: T.mono, fontSize: 52, fontWeight: 950 }}>
-            <span style={{ color: T.amber }}>F</span>
+            <span style={{ color: labelColor(T.amber) }}>F</span>
             <span style={{ color: '#75838b' }}>=</span>
             <span style={{ color: T.ink }}>m</span>
-            <span style={{ color: T.amber }}>×</span>
-            <span style={{ color: T.cyan }}>a</span>
+            <span style={{ color: labelColor(T.amber) }}>×</span>
+            <span style={{ color: labelColor(T.cyan) }}>a</span>
           </div>
         </WarmCard>
       </Cued>
 
       <div style={{ position: 'absolute', right: 88, top: 205, width: 840, height: 390, borderRadius: 30, border: `2px solid ${T.cyan}55`, background: `${T.panel}dc` }}>
-        <div style={{ position: 'absolute', left: 30, top: 24, color: T.textMuted, fontFamily: T.mono, fontSize: 16, letterSpacing: 2 }}>UNIT LOCK</div>
-        <div style={{ position: 'absolute', left: 42 + unitLock * 23, top: 95 }}>
+        <div style={{ position: 'absolute', left: 30, top: 24, color: labelColor(T.textMuted), fontFamily: T.mono, fontSize: 28, letterSpacing: 2 }}>UNIT LOCK</div>
+        <div style={{ position: 'absolute', left: 35, top: 80, width: 485, height: 175, borderRadius: 24, border: `3px solid ${T.cyan}`, opacity: unitLock }} />
+        <div style={{ position: 'absolute', left: 42 + unitLock * 8, top: 95 }}>
           <Cued at={kilogramsAt} fromX={-75}><UnitTile symbol="kg" label="mass" color={T.amber} width={190} height={130} /></Cued>
         </div>
-        <div style={{ position: 'absolute', left: 310, top: 133, color: T.amber, fontSize: 42, fontWeight: 950, opacity: unitLock }}>×</div>
-        <div style={{ position: 'absolute', left: 390 - unitLock * 45, top: 95 }}>
+        <div style={{ position: 'absolute', left: 245, top: 133, color: labelColor(T.amber), fontSize: 42, fontWeight: 950, opacity: unitLock }}>×</div>
+        <div style={{ position: 'absolute', left: 390 - unitLock * 110, top: 95 }}>
           <Cued at={accelerationUnitAt} fromX={75}><UnitTile symbol="m/s²" label="acceleration" color={T.cyan} width={225} height={130} /></Cued>
         </div>
-        <div style={{ position: 'absolute', left: 610, top: 133, color: T.textMuted, fontSize: 42, opacity: unitLock }}>→</div>
-        <div style={{ position: 'absolute', right: 10, top: 89, width: 172, height: 145, borderRadius: 22, background: T.card, border: `5px solid ${T.green}`, opacity: newton, transform: `rotate(${-5 + newton * 5}deg) scale(${0.78 + newton * 0.22})`, display: 'grid', placeItems: 'center', boxShadow: `0 0 32px ${T.green}44` }}>
+        <div style={{ position: 'absolute', left: 545, top: 133, color: labelColor(T.textMuted), fontSize: 42, opacity: unitLock }}>→</div>
+        <div style={{ position: 'absolute', ...CARD_INK, right: 24, top: 89, width: 172, height: 145, borderRadius: 22, background: T.card, border: `5px solid ${T.green}`, opacity: newton, transform: `rotate(${-5 + newton * 5}deg) scale(${0.78 + newton * 0.22})`, display: 'grid', placeItems: 'center', boxShadow: `0 0 32px ${T.green}44` }}>
           <div style={{ textAlign: 'center' }}>
-            <div style={{ color: T.green, fontFamily: T.mono, fontSize: 53, fontWeight: 950 }}>1 N</div>
-            <div style={{ color: '#687680', fontSize: 17, fontWeight: 850 }}>newton</div>
+            <div style={{ color: labelColor(T.green), fontFamily: T.mono, fontSize: 53, fontWeight: 950 }}>1 N</div>
+            <div style={{ color: '#687680', fontSize: 28, fontWeight: 850 }}>newton</div>
           </div>
         </div>
         <Cued at={newtonAt} fromY={15} style={{ position: 'absolute', left: 70, right: 70, bottom: 33 }}>
-          <div style={{ color: T.green, fontFamily: T.mono, fontSize: 24, fontWeight: 900, textAlign: 'center' }}>kg·m/s² = N</div>
+          <div style={{ color: labelColor(T.green), fontFamily: T.mono, fontSize: 28, fontWeight: 900, textAlign: 'center' }}>kg·m/s² = N</div>
         </Cued>
       </div>
 
       <div style={{ position: 'absolute', left: 78, top: 604, width: 1240, height: 316, borderRadius: 28, border: `2px solid ${T.cyan}55`, background: `${T.bgDeep}d8`, overflow: 'hidden' }}>
         <div style={{ position: 'absolute', left: 44, right: 44, bottom: 66, height: 13, borderRadius: 7, background: '#435865', borderTop: `3px solid ${T.cyan}88` }} />
-        {[322, 584, 1020].map((left, index) => {
-          const gateProgress = clamp01(motion * 3 - index);
+        {[297, 482, 790].map((left, index) => {
+          const gateProgress = clamp01((motion * 3 - (index + 1)) * 4 + 1);
           return (
-            <div key={left} style={{ position: 'absolute', left, top: 41, width: 95, height: 207, borderLeft: `3px solid ${T.cyan}88`, borderRight: `3px solid ${T.cyan}88`, opacity: 0.25 + gateProgress * 0.75 }}>
+            <div key={left} style={{ position: 'absolute', left, top: 15, width: 95, height: 222, borderLeft: `3px solid ${T.cyan}88`, borderRight: `3px solid ${T.cyan}88`, opacity: 0.25 + gateProgress * 0.75 }}>
               <div style={{ position: 'absolute', left: -3, right: -3, top: 0, height: 8, borderRadius: 8, background: T.cyan, boxShadow: gateProgress > 0.7 ? `0 0 20px ${T.cyan}` : undefined }} />
-              <div style={{ position: 'absolute', left: -35, right: -35, top: 26, color: T.cyanSoft, fontFamily: T.mono, fontSize: 17, fontWeight: 900, textAlign: 'center' }}>{index + 1} s</div>
-              <div style={{ position: 'absolute', left: -42, right: -42, top: 62, color: T.text, fontFamily: T.mono, fontSize: 19, fontWeight: 900, textAlign: 'center', opacity: gateProgress }}>{index + 1} m/s</div>
+              <div style={{ position: 'absolute', left: -35, right: -35, top: 12, color: labelColor(T.cyanSoft), fontFamily: T.mono, fontSize: 28, fontWeight: 900, textAlign: 'center' }}>{index + 1} s</div>
+              <div style={{ position: 'absolute', left: -42, right: -42, top: 50, color: T.text, fontFamily: T.mono, fontSize: 28, fontWeight: 900, textAlign: 'center', opacity: gateProgress }}>{index + 1} m/s</div>
             </div>
           );
         })}
 
-        <Cued at={forceAt} fromX={-30} style={{ position: 'absolute', left: blockX - 175, top: 148 }}>
-          <HorizontalArrow width={150} color={T.amber} progress={1} label={newton > 0.05 ? '1 N' : 'F'} />
+        <Cued at={forceAt} fromX={-30} style={{ position: 'absolute', left: blockX + 94, top: 192 }}>
+          <HorizontalArrow width={300} color={T.amber} progress={1} label={newton > 0.05 ? '1 N' : 'F'} />
         </Cued>
-        <div style={{ position: 'absolute', left: blockX, top: 113, width: 188, height: 132, borderRadius: 20, background: T.card, border: `4px solid ${newton > 0.05 ? T.green : T.amber}`, boxShadow: '0 15px 35px #0008', display: 'grid', placeItems: 'center' }}>
+        <div style={{ position: 'absolute', ...CARD_INK, boxSizing: 'border-box', left: blockX, top: 105, width: 188, height: 132, borderRadius: 20, background: T.card, border: `4px solid ${newton > 0.05 ? T.green : T.amber}`, boxShadow: '0 15px 35px #0008', display: 'grid', placeItems: 'center' }}>
           <div style={{ textAlign: 'center' }}>
             <Cued at={kilogramsAt} fromScale={0.9} fromY={0}>
-              <div style={{ position: 'relative', height: 47, color: T.ink, fontFamily: T.mono, fontSize: 39, fontWeight: 950 }}>
-                <span style={{ position: 'absolute', left: 0, right: 0, opacity: 1 - oneKilogram }}>kg</span>
-                <span style={{ position: 'absolute', left: 0, right: 0, opacity: oneKilogram }}>1 kg</span>
+              <div style={{ position: 'relative', width: 160, height: 47, whiteSpace: 'nowrap', overflow: 'hidden', color: T.ink, fontFamily: T.mono, fontSize: 39, fontWeight: 950 }}>
+                <span>{oneKilogram > 0 ? '1 kg' : 'kg'}</span>
               </div>
             </Cued>
-            <div style={{ color: '#687680', fontSize: 16, fontWeight: 850, marginTop: 5 }}>LAB BLOCK</div>
+            <div style={{ color: '#687680', fontSize: 28, fontWeight: 850, marginTop: 5 }}>MASS</div>
           </div>
         </div>
       </div>
 
       <Cued at={oneKilogramAt} fromX={25} style={{ position: 'absolute', right: 102, bottom: 116 }}>
-        <div style={{ width: 430, borderRadius: 20, padding: '18px 22px', border: `2px solid ${T.green}88`, background: `${T.green}13`, color: T.text, fontFamily: T.mono, fontSize: 21, fontWeight: 900, textAlign: 'center' }}>1 kg gains 1 m/s every second</div>
+        <div style={{ width: 430, borderRadius: 20, padding: '18px 22px', border: `2px solid ${T.green}88`, background: `${T.green}13`, color: T.text, fontFamily: T.mono, fontSize: 28, fontWeight: 900, textAlign: 'center' }}>1 kg gains 1 m/s every second</div>
       </Cued>
     </LabBackground>
   );
@@ -1079,7 +1098,7 @@ const PlanetPlatform: React.FC<{
       { left: 285, top: 41, size: 58 },
       { left: 475, top: 91, size: 36 },
     ].map((crater) => <div key={crater.left} style={{ position: 'absolute', left: crater.left, top: crater.top, width: crater.size, height: crater.size / 2, borderRadius: '50%', background: '#87939b66' }} />)}
-    <div style={{ position: 'absolute', left: 0, right: 0, top: 27, color: T.bgDeep, fontFamily: T.mono, fontSize: 25, fontWeight: 950, letterSpacing: 2, textAlign: 'center' }}>{label}</div>
+    <div style={{ position: 'absolute', left: 0, right: 0, top: 27, color: T.bgDeep, fontFamily: T.mono, fontSize: 28, fontWeight: 950, letterSpacing: 2, textAlign: 'center' }}>{label}</div>
   </div>
 );
 
@@ -1093,7 +1112,7 @@ const Scene08: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
   const move = useCueProgress(moonAt, 1.0);
   const shrink = useCueProgress(smallerAt, 0.7);
   const massLock = useCue(massSameAt, 0.4);
-  const objectX = 390 + move * 800;
+  const objectX = 325 + move * 1060;
   const arrowLength = 185 - shrink * 105;
 
   return (
@@ -1103,40 +1122,40 @@ const Scene08: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
       <Cued at={localAccelerationAt} fromY={-22} style={{ position: 'absolute', left: 570, top: 198 }}>
         <WarmCard accent={T.amber} style={{ width: 780, height: 166, display: 'grid', placeItems: 'center' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 28, fontFamily: T.mono, fontSize: 48, fontWeight: 950 }}>
-            <span style={{ color: T.amber }}>W</span>
+            <span style={{ color: labelColor(T.amber) }}>W</span>
             <span style={{ color: '#74838c' }}>=</span>
             <span style={{ color: T.ink }}>m</span>
             <span style={{ color: '#74838c' }}>×</span>
-            <span style={{ color: T.cyan }}>g<sub style={{ fontSize: 20 }}>local</sub></span>
+            <span style={{ color: labelColor(T.cyan) }}>g<sub style={{ fontSize: 28 }}>local</sub></span>
           </div>
         </WarmCard>
       </Cued>
 
       <Cued at={newtonsAt} fromX={-20} style={{ position: 'absolute', left: 122, top: 235 }}>
-        <div style={{ width: 350, height: 108, borderRadius: 22, border: `2px solid ${T.amber}88`, background: `${T.amber}12`, display: 'grid', placeItems: 'center', color: T.text, fontSize: 26, fontWeight: 850 }}>
-          weight → <span style={{ color: T.amber, fontFamily: T.mono, fontWeight: 950 }}>newtons (N)</span>
+        <div style={{ width: 350, height: 108, borderRadius: 22, border: `2px solid ${T.amber}88`, background: `${T.amber}12`, display: 'grid', placeItems: 'center', color: T.text, fontSize: 28, fontWeight: 850 }}>
+          weight → <span style={{ color: labelColor(T.amber), fontFamily: T.mono, fontWeight: 950 }}>newtons (N)</span>
         </div>
       </Cued>
 
       <PlanetPlatform left={115} label="EARTH" color="#4c9d72" active={1 - move} />
       <PlanetPlatform left={1175} label="MOON" color={T.moon} active={move} minimumOpacity={0} craters />
 
-      <div style={{ position: 'absolute', left: objectX, top: 486, width: 214, height: 202, borderRadius: 24, background: T.card, border: `4px solid ${massLock.isActive ? T.green : T.cyan}`, boxShadow: '0 18px 45px #0009', display: 'grid', placeItems: 'center', zIndex: 5 }}>
+      <div style={{ position: 'absolute', ...CARD_INK, left: objectX, top: 486, width: 214, height: 202, borderRadius: 24, background: T.card, border: `4px solid ${massLock.isActive ? T.green : T.cyan}`, boxShadow: '0 18px 45px #0009', display: 'grid', placeItems: 'center', zIndex: 5 }}>
         <div style={{ textAlign: 'center' }}>
           <div style={{ color: T.ink, fontFamily: T.mono, fontSize: 50, fontWeight: 950 }}>1 kg</div>
-          <div style={{ color: massLock.isActive ? T.green : '#687680', fontSize: 18, fontWeight: 900, marginTop: 8 }}>MASS {massLock.isActive ? 'LOCKED' : ''}</div>
+          <div style={{ color: massLock.isActive ? '#186d48' : '#526672', fontSize: 28, fontWeight: 900, marginTop: 8 }}>{massLock.isActive ? 'SAME MASS' : 'MASS'}</div>
         </div>
       </div>
-      <Cued at={weightAt} fromY={-20} style={{ position: 'absolute', left: objectX + 225, top: 499, zIndex: 6 }}>
+      <Cued at={weightAt} fromY={-20} style={{ position: 'absolute', left: objectX + 164, top: 555, zIndex: 6 }}>
         <DownArrow length={arrowLength} label="W" />
       </Cued>
 
       <Cued at={moonAt} fromY={14} style={{ position: 'absolute', left: 1235, top: 405 }}>
-        <div style={{ width: 500, borderRadius: 20, padding: '16px 24px', background: `${T.moon}14`, border: `2px solid ${T.moon}88`, color: T.text, fontFamily: T.mono, fontSize: 20, fontWeight: 900, textAlign: 'center' }}>same object · new gravity</div>
+        <div style={{ width: 500, borderRadius: 20, padding: '16px 24px', background: `${T.moon}14`, border: `2px solid ${T.moon}88`, color: T.text, fontFamily: T.mono, fontSize: 28, fontWeight: 900, textAlign: 'center' }}>same object · new gravity</div>
       </Cued>
 
       <Cued at={smallerAt} fromY={18} style={{ position: 'absolute', left: 620, right: 620, bottom: 88 }}>
-        <div style={{ borderRadius: 20, padding: '17px 26px', background: `${T.green}15`, border: `2px solid ${T.green}88`, color: T.text, fontSize: 25, fontWeight: 850, textAlign: 'center' }}>mass unchanged · weight smaller</div>
+        <div style={{ borderRadius: 20, padding: '17px 26px', background: `${T.green}15`, border: `2px solid ${T.green}88`, color: T.text, fontSize: 28, fontWeight: 850, textAlign: 'center' }}>mass unchanged · weight smaller</div>
       </Cued>
     </LabBackground>
   );
@@ -1148,7 +1167,7 @@ const Scene08: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
 
 const WarningLamp: React.FC<{ active: number }> = ({ active }) => {
   const frame = useCurrentFrame();
-  const pulse = 0.75 + Math.sin(frame / 3) * 0.25;
+  const pulse = 0.75 + Math.sin(frame / 12) * 0.25;
   return (
     <div style={{ width: 30, height: 30, borderRadius: '50%', background: T.red, opacity: active * pulse, boxShadow: `0 0 ${16 + active * 22}px ${T.red}` }} />
   );
@@ -1170,49 +1189,58 @@ const Scene09: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
       <SceneHeading at={powersAt} accent={T.red}>The power belongs to the conversion</SceneHeading>
 
       <div style={{ position: 'absolute', left: 70, top: 220, width: 855, height: 650, borderRadius: 31, border: `2px solid ${T.amber}66`, background: `${T.panel}dc`, overflow: 'hidden' }}>
-        <div style={{ position: 'absolute', left: 32, top: 25, color: T.textMuted, fontFamily: T.mono, fontSize: 16, letterSpacing: 2, opacity: hoursSquared.opacity }}>CHECK 01 · HOURS SQUARED</div>
+        <div style={{ position: 'absolute', left: 32, top: 25, color: labelColor(T.textMuted), fontFamily: T.mono, fontSize: 28, letterSpacing: 2, opacity: hoursSquared.opacity }}>CHECK 01 · HOURS SQUARED</div>
         <Cued at={hoursSquaredAt} fromX={-35} style={{ position: 'absolute', left: 74, top: 130 }}>
           <UnitTile symbol="h²" label="time squared" color={T.amber} width={210} height={150} />
         </Cued>
         <div style={{ position: 'absolute', left: 315, top: 175, opacity: doubleFactor }}><HorizontalArrow width={170} color={T.amber} /></div>
-        <div style={{ position: 'absolute', left: 500, top: 108, width: 260, height: 103, borderRadius: 18, background: `${T.amber}18`, border: `2px solid ${T.amber}88`, opacity: doubleFactor, transform: `translateY(${(1 - doubleFactor) * -35}px)`, display: 'grid', placeItems: 'center', color: T.amber, fontFamily: T.mono, fontSize: 27, fontWeight: 950 }}>× 3600</div>
-        <div style={{ position: 'absolute', left: 500, top: 238, width: 260, height: 103, borderRadius: 18, background: `${T.amber}18`, border: `2px solid ${T.amber}88`, opacity: doubleFactor, transform: `translateY(${(1 - doubleFactor) * 35}px)`, display: 'grid', placeItems: 'center', color: T.amber, fontFamily: T.mono, fontSize: 27, fontWeight: 950 }}>× 3600</div>
+        <div style={{ position: 'absolute', left: 500, top: 108, width: 260, height: 103, borderRadius: 18, background: `${T.amber}18`, border: `2px solid ${T.amber}88`, opacity: doubleFactor, transform: `translate(${-426 * (1 - doubleFactor)}px, ${22 * (1 - doubleFactor)}px)`, display: 'grid', placeItems: 'center', color: labelColor(T.amber), fontFamily: T.mono, fontSize: 28, fontWeight: 950 }}>× 3600</div>
+        <div style={{ position: 'absolute', left: 500, top: 238, width: 260, height: 103, borderRadius: 18, background: `${T.amber}18`, border: `2px solid ${T.amber}88`, opacity: doubleFactor, transform: `translate(${-426 * (1 - doubleFactor)}px, ${-108 * (1 - doubleFactor)}px)`, display: 'grid', placeItems: 'center', color: labelColor(T.amber), fontFamily: T.mono, fontSize: 28, fontWeight: 950 }}>× 3600</div>
         <div style={{ position: 'absolute', left: 175, right: 175, top: 390, height: 3, background: `${T.card}36` }} />
         <Cued at={factorTwiceAt} fromY={20} style={{ position: 'absolute', left: 175, top: 435 }}>
           <WarmCard accent={T.green} style={{ width: 505, height: 130, display: 'grid', placeItems: 'center' }}>
             <div style={{ textAlign: 'center' }}>
-              <div style={{ color: T.green, fontFamily: T.mono, fontSize: 36, fontWeight: 950 }}>(3600)²</div>
-              <div style={{ color: '#687680', fontSize: 18, fontWeight: 850, marginTop: 5 }}>the factor runs twice</div>
+              <div style={{ color: labelColor(T.green), fontFamily: T.mono, fontSize: 36, fontWeight: 950 }}>(3600)²</div>
+              <div style={{ color: '#687680', fontSize: 28, fontWeight: 850, marginTop: 5 }}>the factor runs twice</div>
             </div>
           </WarmCard>
         </Cued>
       </div>
 
       <div style={{ position: 'absolute', right: 70, top: 220, width: 855, height: 650, borderRadius: 31, border: `2px solid ${T.cyan}66`, background: `${T.bgDeep}df`, overflow: 'hidden' }}>
-        <div style={{ position: 'absolute', left: 32, top: 25, color: T.textMuted, fontFamily: T.mono, fontSize: 16, letterSpacing: 2, opacity: square }}>CHECK 02 · SQUARE CENTIMETRES</div>
+        <div style={{ position: 'absolute', left: 32, top: 25, color: labelColor(T.textMuted), fontFamily: T.mono, fontSize: 28, letterSpacing: 2, opacity: square }}>CHECK 02 · SQUARE CENTIMETRES</div>
         <Cued at={squareCentimetresAt} fromScale={0.82} style={{ position: 'absolute', left: 55, top: 105 }}>
           <WarmCard accent={T.cyan} style={{ width: 225, height: 170, display: 'grid', placeItems: 'center' }}>
             <div style={{ textAlign: 'center' }}>
               <div style={{ width: 82, height: 82, margin: '0 auto', border: `6px solid ${T.cyan}`, background: `${T.cyan}18` }} />
-              <div style={{ color: T.ink, fontFamily: T.mono, fontSize: 24, fontWeight: 950, marginTop: 10 }}>1 cm²</div>
+              <div style={{ color: T.ink, fontFamily: T.mono, fontSize: 28, fontWeight: 950, marginTop: 10 }}>1 cm²</div>
             </div>
           </WarmCard>
         </Cued>
         <div style={{ position: 'absolute', left: 310, top: 163, opacity: square }}><HorizontalArrow width={140} color={T.cyan} /></div>
-        <div style={{ position: 'absolute', left: 525, top: 91, width: 218, height: 218, borderRadius: 18, border: `4px solid ${T.cyan}`, opacity: square, transform: `scale(${0.76 + square * 0.24})`, backgroundColor: `${T.cyan}0b`, backgroundImage: `linear-gradient(${T.cyan}35 1px, transparent 1px), linear-gradient(90deg, ${T.cyan}35 1px, transparent 1px)`, backgroundSize: '11px 11px', display: 'grid', placeItems: 'center' }}>
-          <div style={{ borderRadius: 14, padding: '12px 18px', background: `${T.bgDeep}e8`, color: T.cyanSoft, fontFamily: T.mono, fontSize: 27, fontWeight: 950 }}>100 × 100</div>
+        <div style={{ position: 'absolute', left: 490, top: 85, width: 270, opacity: square, transform: `translateX(${-458 * (1 - square)}px) scale(${0.32 + square * 0.68})`, transformOrigin: 'center' }}>
+          <svg width="270" height="270" viewBox="0 0 270 270" style={{ display: 'block', background: T.panel }}>
+            <defs>
+              <pattern id="derived-centimetre-grid" width="2.7" height="2.7" patternUnits="userSpaceOnUse"><path d="M2.7 0H0V2.7" fill="none" stroke={T.cyan} strokeWidth="0.35" /></pattern>
+              <pattern id="derived-ten-centimetre-grid" width="27" height="27" patternUnits="userSpaceOnUse"><path d="M27 0H0V27" fill="none" stroke={T.cyanSoft} strokeWidth="1" /></pattern>
+            </defs>
+            <rect width="270" height="270" fill="url(#derived-centimetre-grid)" />
+            <rect width="270" height="270" fill="url(#derived-ten-centimetre-grid)" />
+            <rect x="1" y="1" width="268" height="268" fill="none" stroke={T.cyan} strokeWidth="2" />
+          </svg>
+          <div style={{ marginTop: 10, color: T.cyanSoft, fontFamily: T.mono, fontSize: 28, fontWeight: 900, textAlign: 'center' }}>100 × 100 cm²<br />= 1 m²</div>
         </div>
-        <div style={{ position: 'absolute', left: 68, top: 378, display: 'flex', alignItems: 'center', gap: 24, opacity: square }}>
-          <div style={{ width: 260, height: 105, borderRadius: 18, border: `2px solid ${T.cyan}88`, background: `${T.cyan}12`, display: 'grid', placeItems: 'center', color: T.text, fontFamily: T.mono, fontSize: 30, fontWeight: 950 }}>N / cm²</div>
-          <div style={{ color: T.cyan, fontSize: 42 }}>→</div>
-          <div style={{ width: 330, height: 105, borderRadius: 18, border: `2px solid ${T.green}88`, background: `${T.green}12`, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 12, color: T.green, fontFamily: T.mono, fontSize: 29, fontWeight: 950 }}>
+        <div style={{ position: 'absolute', left: 48, top: 440, display: 'flex', alignItems: 'center', gap: 24, opacity: square }}>
+          <div style={{ width: 230, height: 105, borderRadius: 18, border: `2px solid ${T.cyan}88`, background: `${T.cyan}12`, display: 'grid', placeItems: 'center', color: T.text, fontFamily: T.mono, fontSize: 30, fontWeight: 950 }}>N / cm²</div>
+          <div style={{ color: labelColor(T.cyan), fontSize: 42 }}>→</div>
+          <div style={{ width: 370, height: 105, borderRadius: 18, border: `2px solid ${T.green}88`, background: `${T.green}12`, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 12, color: labelColor(T.green), fontFamily: T.mono, fontSize: 29, fontWeight: 950 }}>
             <Cued at={thousandsAt} fromScale={0.82} fromY={0}><span>10 000</span></Cued>
             <span>N / m²</span>
           </div>
         </div>
       </div>
 
-      <div style={{ position: 'absolute', left: 425, right: 425, bottom: 77, height: 100, borderRadius: 23, border: `3px solid ${T.red}`, background: `${T.red}18`, opacity: warning, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 25, color: T.text, fontSize: 27, fontWeight: 900, transform: `scale(${0.9 + warning * 0.1})` }}>
+      <div style={{ position: 'absolute', left: 425, right: 425, bottom: 77, height: 100, borderRadius: 23, border: `3px solid ${T.red}`, background: `${T.red}18`, opacity: warning, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 25, color: T.text, fontSize: 28, fontWeight: 900, transform: `scale(${0.9 + warning * 0.1})` }}>
         <WarningLamp active={warning} />
         OMIT THE POWER → THOUSANDS OFF
         <WarningLamp active={warning} />
@@ -1236,8 +1264,8 @@ const RecapUnitCard: React.FC<{
   <Cued at={at} fromY={-45} fromScale={0.86} style={{ position: 'absolute', left: x, top: 230 }}>
     <WarmCard accent={color} style={{ width: 355, height: 285, display: 'grid', placeItems: 'center' }}>
       <div style={{ textAlign: 'center' }}>
-        <div style={{ color, fontFamily: T.mono, fontSize: 55, lineHeight: 1.05, fontWeight: 950 }}>{symbol}</div>
-        <div style={{ color: T.ink, fontSize: 27, fontWeight: 900, marginTop: 18 }}>{name}</div>
+        <div style={{ color: labelColor(color), fontFamily: T.mono, fontSize: 55, lineHeight: 1.05, fontWeight: 950 }}>{symbol}</div>
+        <div style={{ color: T.ink, fontSize: 28, fontWeight: 900, marginTop: 18 }}>{name}</div>
         {children}
       </div>
     </WarmCard>
@@ -1246,11 +1274,11 @@ const RecapUnitCard: React.FC<{
 
 const Checklist: React.FC<{ at: number; x: number; index: number; label: string }> = ({ at, x, index, label }) => (
   <Cued at={at} fromX={index === 4 ? -28 : 28} style={{ position: 'absolute', left: x, top: 675 }}>
-    <div style={{ width: 340, height: 142, borderRadius: 22, border: `2px solid ${T.green}77`, background: `${T.panel}e8`, display: 'flex', alignItems: 'center', gap: 20, padding: '22px 24px' }}>
+    <div style={{ boxSizing: 'border-box', width: 355, height: 170, borderRadius: 22, border: `2px solid ${T.green}77`, background: `${T.panel}e8`, display: 'flex', alignItems: 'center', gap: 20, padding: '22px 24px' }}>
       <div style={{ width: 54, height: 54, flex: '0 0 auto', borderRadius: 16, background: T.green, color: T.bgDeep, display: 'grid', placeItems: 'center', fontSize: 31, fontWeight: 950 }}>✓</div>
       <div>
-        <div style={{ color: T.textMuted, fontFamily: T.mono, fontSize: 14, letterSpacing: 2 }}>0{index}</div>
-        <div style={{ color: T.text, fontSize: 24, lineHeight: 1.16, fontWeight: 850, marginTop: 6 }}>{label}</div>
+        <div style={{ color: labelColor(T.textMuted), fontFamily: T.mono, fontSize: 28, letterSpacing: 2 }}>0{index}</div>
+        <div style={{ color: T.text, fontSize: 28, lineHeight: 1.16, fontWeight: 850, marginTop: 6 }}>{label}</div>
       </div>
     </div>
   </Cued>
@@ -1277,14 +1305,14 @@ const Scene10: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
       <SceneHeading at={recapAt}>Derived-unit toolkit</SceneHeading>
 
       <Cued at={derivedAt} fromY={-12} style={{ position: 'absolute', left: 675, top: 174 }}>
-        <div style={{ width: 570, color: T.cyanSoft, fontFamily: T.mono, fontSize: 18, fontWeight: 900, letterSpacing: 2.2, textAlign: 'center' }}>BASE UNITS → MECHANICS UNITS</div>
+        <div style={{ width: 570, color: labelColor(T.cyanSoft), fontFamily: T.mono, fontSize: 28, fontWeight: 900, letterSpacing: 2.2, textAlign: 'center' }}>BASE UNITS → MECHANICS UNITS</div>
       </Cued>
 
       <RecapUnitCard at={speedAt} x={90} symbol="m/s" name="speed" color={T.cyan} />
       <RecapUnitCard at={accelerationAt} x={555} symbol="m/s²" name="acceleration" color={T.amber} />
       <RecapUnitCard at={newtonAt} x={1020} symbol="kg·m/s²" name="force · 1 N" color={T.green} />
-      <RecapUnitCard at={weightAt} x={1485} symbol={<span style={{ display: 'inline-flex', alignItems: 'center', gap: 12 }}><span style={{ fontSize: 34, color: T.ink }}>kg</span><span style={{ color: T.amber }}>↓</span></span>} name="weight is force" color={T.amber}>
-        <div style={{ color: '#687680', fontFamily: T.mono, fontSize: 16, fontWeight: 850, marginTop: 9 }}>mass unchanged</div>
+      <RecapUnitCard at={weightAt} x={1485} symbol={<span style={{ display: 'inline-flex', alignItems: 'center', gap: 12 }}><span style={{ fontSize: 34, color: T.ink }}>kg</span><span style={{ color: labelColor(T.amber) }}>↓</span></span>} name="weight is force" color={T.amber}>
+        <div style={{ color: '#687680', fontFamily: T.mono, fontSize: 28, fontWeight: 850, marginTop: 9 }}>mass unchanged</div>
       </RecapUnitCard>
 
       <svg width="1920" height="1080" style={{ position: 'absolute', inset: 0, pointerEvents: 'none' }}>
@@ -1299,7 +1327,7 @@ const Scene10: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
       <Checklist at={checkAt} x={1485} index={4} label="check the final unit" />
 
       <Cued at={checkAt} fromScale={0.9} style={{ position: 'absolute', left: 680, right: 680, bottom: 88 }}>
-        <div style={{ borderRadius: 21, padding: '17px 25px', background: T.green, color: T.bgDeep, fontFamily: T.mono, fontSize: 24, fontWeight: 950, letterSpacing: 1.2, textAlign: 'center', boxShadow: `0 0 35px ${T.green}44` }}>UNIT CHECKED ✓</div>
+        <div style={{ borderRadius: 21, padding: '17px 25px', background: T.green, color: T.bgDeep, fontFamily: T.mono, fontSize: 28, fontWeight: 950, letterSpacing: 1.2, textAlign: 'center', boxShadow: `0 0 35px ${T.green}44` }}>UNIT CHECKED ✓</div>
       </Cued>
     </LabBackground>
   );
