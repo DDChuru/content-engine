@@ -1,7 +1,5 @@
 import React from 'react';
 import { Composition } from 'remotion';
-import { HandwrittenMath, type MathScene } from './kit/HandwrittenMath';
-import mathDemo from './math/demo.json';
 import { Intro } from './Intro';
 import { Outro } from './Outro';
 import { IntroWithImage } from './IntroWithImage';
@@ -15,9 +13,7 @@ import { IinmSummaryScene } from './IinmSummaryScene';
 import { IinmCh0Intro } from './IinmCh0Intro';
 import ch0Timing from './iinm/ch0-timing.json';
 import { IinmCh1 } from './IinmCh1';
-import { IinmExpertChA } from './IinmExpertChA';
 import ch1Timing from './iinm/ch1-timing.json';
-import chATiming from './iinm/chA-timing.json';
 import { IinmCh2 } from './IinmCh2';
 import ch2Timing from './iinm/ch2-timing.json';
 import { IinmCh3 } from './IinmCh3';
@@ -65,32 +61,6 @@ import {
   PPE_FPS,
   PPE_JOURNEY_FRAMES,
 } from './ppe/PpeIssueTutorial';
-import {
-  SchedulePreviewTutorial,
-  SchedulePreviewTutorialBranded,
-  SCHEDULE_BRANDED_FRAMES,
-  SCHEDULE_FPS,
-  SCHEDULE_TUTORIAL_FRAMES,
-} from './schedule/SchedulePreviewTutorial';
-import { CcvTutorial, CCV_TUTORIAL_FPS, CCV_TUTORIAL_FRAMES } from './ccv/CcvTutorial';
-import {
-  BillOfHealthTutorial,
-  BillOfHealthTutorialBranded,
-  BOH_BRANDED_FRAMES,
-  BOH_FPS,
-  BOH_TUTORIAL_FRAMES,
-} from './boh/BillOfHealthTutorial';
-import { TapDemo, TAPDEMO_FPS, TAPDEMO_FRAMES } from './tapdemo/TapDemo';
-import { AnnotatedWalkthrough, WALK_FPS, WALK_FRAMES } from './tapdemo/AnnotatedWalkthrough';
-import { AnnotatedVideo, projectFrames } from './tapdemo/AnnotatedVideo';
-import activeProject from './tapdemo/active-project.json';
-import { TutorialKit, kitDurationInFrames } from './kit/TutorialKit';
-import type { BeatsDoc } from './kit/types';
-import ccvBeats from './ccv/beats.json';
-import icleanBeats from './iclean/beats.json';
-
-const ccvBeatsDoc = ccvBeats as BeatsDoc;
-const icleanBeatsDoc = icleanBeats as BeatsDoc;
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -112,14 +82,6 @@ export const RemotionRoot: React.FC = () => {
         id="IinmCh1"
         component={IinmCh1}
         durationInFrames={ch1Timing.total_frames}
-        fps={30}
-        width={1920}
-        height={1080}
-      />
-      <Composition
-        id="IinmExpertChA"
-        component={IinmExpertChA}
-        durationInFrames={chATiming.total_frames}
         fps={30}
         width={1920}
         height={1080}
@@ -398,118 +360,6 @@ export const RemotionRoot: React.FC = () => {
         height={1080}
       />
 
-      {/* e-wizer mobile - Schedule Preview (what's due today vs any date) step-by-step */}
-      <Composition
-        id="SchedulePreviewTutorial"
-        component={SchedulePreviewTutorial}
-        durationInFrames={SCHEDULE_TUTORIAL_FRAMES}
-        fps={SCHEDULE_FPS}
-        width={1920}
-        height={1080}
-      />
-
-      {/* e-wizer mobile - Schedule Preview with Ecowize/e-wizer branded bookends */}
-      <Composition
-        id="SchedulePreviewTutorialBranded"
-        component={SchedulePreviewTutorialBranded}
-        durationInFrames={SCHEDULE_BRANDED_FRAMES}
-        fps={SCHEDULE_FPS}
-        width={1920}
-        height={1080}
-      />
-
-      {/* e-wizer mobile — CCV "The Second Pair of Eyes" (12 narration beats, ~4:46) */}
-      <Composition
-        id="CcvSecondPairOfEyes"
-        component={CcvTutorial}
-        durationInFrames={CCV_TUTORIAL_FRAMES}
-        fps={CCV_TUTORIAL_FPS}
-        width={1920}
-        height={1080}
-      />
-
-      {/* e-wizer mobile — Bill of Health (Ecowize Academy video 07, 12 beats, ~4:40) */}
-      <Composition
-        id="BillOfHealthTutorial"
-        component={BillOfHealthTutorial}
-        durationInFrames={BOH_TUTORIAL_FRAMES}
-        fps={BOH_FPS}
-        width={1920}
-        height={1080}
-      />
-
-      {/* e-wizer mobile — Bill of Health with Ecowize/e-wizer branded bookends */}
-      <Composition
-        id="BillOfHealthTutorialBranded"
-        component={BillOfHealthTutorialBranded}
-        durationInFrames={BOH_BRANDED_FRAMES}
-        fps={BOH_FPS}
-        width={1920}
-        height={1080}
-      />
-
-      {/* TutorialKit — ONE data-driven field-guide composition (beatsmith Phase 0),
-          rendering the CCV beats.json end-to-end from the shared src/kit primitives. */}
-      <Composition
-        id="TutorialKit"
-        component={TutorialKit}
-        durationInFrames={kitDurationInFrames(ccvBeatsDoc)}
-        fps={ccvBeatsDoc.fps}
-        width={1920}
-        height={1080}
-        defaultProps={{ beats: ccvBeatsDoc, assetBase: 'ccv-tutorial' }}
-      />
-
-      {/* iClean 2.0 — "Your First Inspection" (12 narration beats via TutorialKit;
-          stills pending, beat 7 uses the captured wash-bay finding shot) */}
-      <Composition
-        id="IcleanFirstInspection"
-        component={TutorialKit}
-        durationInFrames={kitDurationInFrames(icleanBeatsDoc)}
-        fps={icleanBeatsDoc.fps}
-        width={1920}
-        height={1080}
-        defaultProps={{ beats: icleanBeatsDoc, assetBase: 'iclean-tutorial' }}
-      />
-
-      {/* e-wizer mobile — TapDemo PROOF: annotated in-app recording (tap ripples)
-          wrapped in the Ecowize bookends. intro → recording+taps → outro. */}
-      <Composition
-        id="TapDemo"
-        component={TapDemo}
-        durationInFrames={TAPDEMO_FRAMES}
-        fps={TAPDEMO_FPS}
-        width={1920}
-        height={1080}
-      />
-
-      {/* e-wizer mobile — Daily Hygiene FULL walkthrough: real recording + the
-          29-mark annotation storyboard (tools/annotate.html export), bookended. */}
-      <Composition
-        id="DailyHygieneWalkthrough"
-        component={AnnotatedWalkthrough}
-        durationInFrames={WALK_FRAMES}
-        fps={WALK_FPS}
-        width={1920}
-        height={1080}
-      />
-
-      {/* VidStud — GENERIC annotated-video stitcher. Point it at any recording +
-          marks JSON via props (defaults to the hygiene project). Duration is
-          derived from the project (clip length + optional bookends). */}
-      <Composition
-        id="AnnotatedVideo"
-        component={AnnotatedVideo}
-        defaultProps={activeProject as any}
-        fps={(activeProject as any).fps}
-        width={1920}
-        height={1080}
-        calculateMetadata={({ props }) => ({
-          durationInFrames: projectFrames(props),
-          fps: props.fps,
-        })}
-      />
-
       {/* Pipeline Diagram - Educational Video Production Flow */}
       <Composition
         id="PipelineDiagram"
@@ -519,15 +369,6 @@ export const RemotionRoot: React.FC = () => {
         width={1920}
         height={1080}
       />
-        <Composition
-      id="HandwrittenMath"
-      component={HandwrittenMath}
-      durationInFrames={(mathDemo as MathScene).durationInFrames}
-      fps={(mathDemo as MathScene).fps}
-      width={(mathDemo as MathScene).w}
-      height={(mathDemo as MathScene).h}
-      defaultProps={{ scene: mathDemo as MathScene, title: 'Solving for x' }}
-    />
-</>
+    </>
   );
 };
