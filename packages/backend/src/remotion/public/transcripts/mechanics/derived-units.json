@@ -1,0 +1,1955 @@
+{
+  "project": "mechanics-derived-units",
+  "sceneCount": 10,
+  "totalDuration": 163.004081,
+  "generatedAt": "2026-09-05T18:25:37.417631",
+  "engine": "faster-whisper-small (local)",
+  "scenes": [
+    {
+      "id": "s01",
+      "audio": "derived-units-s01.mp3",
+      "duration": 10.475102,
+      "wordCount": 27,
+      "text": "A unit can tell you more than the scale of an answer. It can reveal how the quantity was built. Let's assemble the units used in mechanics.",
+      "words": [
+        {
+          "word": "A",
+          "start": 0.0,
+          "end": 0.14
+        },
+        {
+          "word": "unit",
+          "start": 0.14,
+          "end": 0.26
+        },
+        {
+          "word": "can",
+          "start": 0.26,
+          "end": 0.5
+        },
+        {
+          "word": "tell",
+          "start": 0.5,
+          "end": 0.72
+        },
+        {
+          "word": "you",
+          "start": 0.72,
+          "end": 0.88
+        },
+        {
+          "word": "more",
+          "start": 0.88,
+          "end": 1.18
+        },
+        {
+          "word": "than",
+          "start": 1.18,
+          "end": 1.82
+        },
+        {
+          "word": "the",
+          "start": 1.82,
+          "end": 1.98
+        },
+        {
+          "word": "scale",
+          "start": 1.98,
+          "end": 2.36
+        },
+        {
+          "word": "of",
+          "start": 2.36,
+          "end": 2.52
+        },
+        {
+          "word": "an",
+          "start": 2.52,
+          "end": 2.64
+        },
+        {
+          "word": "answer.",
+          "start": 2.64,
+          "end": 3.0
+        },
+        {
+          "word": "It",
+          "start": 3.8,
+          "end": 4.34
+        },
+        {
+          "word": "can",
+          "start": 4.34,
+          "end": 4.5
+        },
+        {
+          "word": "reveal",
+          "start": 4.5,
+          "end": 4.92
+        },
+        {
+          "word": "how",
+          "start": 4.92,
+          "end": 5.58
+        },
+        {
+          "word": "the",
+          "start": 5.58,
+          "end": 5.72
+        },
+        {
+          "word": "quantity",
+          "start": 5.72,
+          "end": 6.2
+        },
+        {
+          "word": "was",
+          "start": 6.2,
+          "end": 6.82
+        },
+        {
+          "word": "built.",
+          "start": 6.82,
+          "end": 7.18
+        },
+        {
+          "word": "Let's",
+          "start": 7.52,
+          "end": 7.68
+        },
+        {
+          "word": "assemble",
+          "start": 7.68,
+          "end": 8.06
+        },
+        {
+          "word": "the",
+          "start": 8.06,
+          "end": 8.32
+        },
+        {
+          "word": "units",
+          "start": 8.32,
+          "end": 8.72
+        },
+        {
+          "word": "used",
+          "start": 8.72,
+          "end": 9.4
+        },
+        {
+          "word": "in",
+          "start": 9.4,
+          "end": 9.6
+        },
+        {
+          "word": "mechanics.",
+          "start": 9.6,
+          "end": 9.92
+        }
+      ],
+      "cues": {
+        "unit": 0.14,
+        "reveal": 4.5,
+        "assemble": 7.68,
+        "mechanics": 9.6
+      },
+      "generatedAt": "2026-09-05T18:25:37.417631",
+      "engine": "faster-whisper-small (local)"
+    },
+    {
+      "id": "s02",
+      "audio": "derived-units-s02.mp3",
+      "duration": 14.445714,
+      "wordCount": 26,
+      "text": "Metrics, seconds and kilograms are base units. A derived unit combines them by multiplication or division. The way they combine follows the equation for the quantity.",
+      "words": [
+        {
+          "word": "Metrics,",
+          "start": 0.0,
+          "end": 0.52
+        },
+        {
+          "word": "seconds",
+          "start": 0.96,
+          "end": 1.6
+        },
+        {
+          "word": "and",
+          "start": 1.6,
+          "end": 2.02
+        },
+        {
+          "word": "kilograms",
+          "start": 2.02,
+          "end": 2.44
+        },
+        {
+          "word": "are",
+          "start": 2.44,
+          "end": 3.0
+        },
+        {
+          "word": "base",
+          "start": 3.0,
+          "end": 3.48
+        },
+        {
+          "word": "units.",
+          "start": 3.48,
+          "end": 3.9
+        },
+        {
+          "word": "A",
+          "start": 5.32,
+          "end": 5.5
+        },
+        {
+          "word": "derived",
+          "start": 5.5,
+          "end": 5.86
+        },
+        {
+          "word": "unit",
+          "start": 5.86,
+          "end": 6.24
+        },
+        {
+          "word": "combines",
+          "start": 6.24,
+          "end": 7.04
+        },
+        {
+          "word": "them",
+          "start": 7.04,
+          "end": 7.44
+        },
+        {
+          "word": "by",
+          "start": 7.44,
+          "end": 7.74
+        },
+        {
+          "word": "multiplication",
+          "start": 7.74,
+          "end": 8.42
+        },
+        {
+          "word": "or",
+          "start": 8.42,
+          "end": 9.22
+        },
+        {
+          "word": "division.",
+          "start": 9.22,
+          "end": 9.56
+        },
+        {
+          "word": "The",
+          "start": 10.54,
+          "end": 10.64
+        },
+        {
+          "word": "way",
+          "start": 10.64,
+          "end": 10.86
+        },
+        {
+          "word": "they",
+          "start": 10.86,
+          "end": 11.04
+        },
+        {
+          "word": "combine",
+          "start": 11.04,
+          "end": 11.5
+        },
+        {
+          "word": "follows",
+          "start": 11.5,
+          "end": 12.18
+        },
+        {
+          "word": "the",
+          "start": 12.18,
+          "end": 12.46
+        },
+        {
+          "word": "equation",
+          "start": 12.46,
+          "end": 12.88
+        },
+        {
+          "word": "for",
+          "start": 12.88,
+          "end": 13.5
+        },
+        {
+          "word": "the",
+          "start": 13.5,
+          "end": 13.62
+        },
+        {
+          "word": "quantity.",
+          "start": 13.62,
+          "end": 13.94
+        }
+      ],
+      "cues": {
+        "base-units": 3.0,
+        "combines": 6.24,
+        "multiplication-or-division": 7.74,
+        "equation": 12.46
+      },
+      "generatedAt": "2026-09-05T18:25:37.417631",
+      "engine": "faster-whisper-small (local)"
+    },
+    {
+      "id": "s03",
+      "audio": "derived-units-s03.mp3",
+      "duration": 14.445714,
+      "wordCount": 33,
+      "text": "speed is distance divided by time. So its unit is meters per second. Velocity uses the same unit, but velocity also carries direction. That is why speed is scalar and velocity is vector.",
+      "words": [
+        {
+          "word": "speed",
+          "start": 0.0,
+          "end": 0.28
+        },
+        {
+          "word": "is",
+          "start": 0.28,
+          "end": 0.52
+        },
+        {
+          "word": "distance",
+          "start": 0.52,
+          "end": 0.9
+        },
+        {
+          "word": "divided",
+          "start": 0.9,
+          "end": 1.3
+        },
+        {
+          "word": "by",
+          "start": 1.3,
+          "end": 1.88
+        },
+        {
+          "word": "time.",
+          "start": 1.88,
+          "end": 2.3
+        },
+        {
+          "word": "So",
+          "start": 3.22,
+          "end": 3.28
+        },
+        {
+          "word": "its",
+          "start": 3.28,
+          "end": 3.44
+        },
+        {
+          "word": "unit",
+          "start": 3.44,
+          "end": 3.74
+        },
+        {
+          "word": "is",
+          "start": 3.74,
+          "end": 4.08
+        },
+        {
+          "word": "meters",
+          "start": 4.08,
+          "end": 4.32
+        },
+        {
+          "word": "per",
+          "start": 4.32,
+          "end": 4.54
+        },
+        {
+          "word": "second.",
+          "start": 4.54,
+          "end": 4.86
+        },
+        {
+          "word": "Velocity",
+          "start": 5.72,
+          "end": 6.34
+        },
+        {
+          "word": "uses",
+          "start": 6.34,
+          "end": 6.6
+        },
+        {
+          "word": "the",
+          "start": 6.6,
+          "end": 6.82
+        },
+        {
+          "word": "same",
+          "start": 6.82,
+          "end": 7.06
+        },
+        {
+          "word": "unit,",
+          "start": 7.06,
+          "end": 7.34
+        },
+        {
+          "word": "but",
+          "start": 7.8,
+          "end": 7.94
+        },
+        {
+          "word": "velocity",
+          "start": 7.94,
+          "end": 8.3
+        },
+        {
+          "word": "also",
+          "start": 8.3,
+          "end": 8.58
+        },
+        {
+          "word": "carries",
+          "start": 8.58,
+          "end": 8.86
+        },
+        {
+          "word": "direction.",
+          "start": 8.86,
+          "end": 9.34
+        },
+        {
+          "word": "That",
+          "start": 10.3,
+          "end": 10.5
+        },
+        {
+          "word": "is",
+          "start": 10.5,
+          "end": 10.64
+        },
+        {
+          "word": "why",
+          "start": 10.64,
+          "end": 10.92
+        },
+        {
+          "word": "speed",
+          "start": 10.92,
+          "end": 11.52
+        },
+        {
+          "word": "is",
+          "start": 11.52,
+          "end": 11.74
+        },
+        {
+          "word": "scalar",
+          "start": 11.74,
+          "end": 12.12
+        },
+        {
+          "word": "and",
+          "start": 12.12,
+          "end": 12.54
+        },
+        {
+          "word": "velocity",
+          "start": 12.54,
+          "end": 13.0
+        },
+        {
+          "word": "is",
+          "start": 13.0,
+          "end": 13.64
+        },
+        {
+          "word": "vector.",
+          "start": 13.64,
+          "end": 13.94
+        }
+      ],
+      "cues": {
+        "distance-divided-by-time": 0.52,
+        "metres-per-second": 4.08,
+        "direction": 8.86,
+        "vector": 13.64
+      },
+      "generatedAt": "2026-09-05T18:25:37.417631",
+      "engine": "faster-whisper-small (local)"
+    },
+    {
+      "id": "s04",
+      "audio": "derived-units-s04.mp3",
+      "duration": 13.374694,
+      "wordCount": 33,
+      "text": "Acceleration measures how quickly velocity changes. Start with meters per second, then divide by time once more. The result is meters per second squared. Think of it as meters per second per second.",
+      "words": [
+        {
+          "word": "Acceleration",
+          "start": 0.0,
+          "end": 0.4
+        },
+        {
+          "word": "measures",
+          "start": 0.4,
+          "end": 0.94
+        },
+        {
+          "word": "how",
+          "start": 0.94,
+          "end": 1.24
+        },
+        {
+          "word": "quickly",
+          "start": 1.24,
+          "end": 1.6
+        },
+        {
+          "word": "velocity",
+          "start": 1.6,
+          "end": 2.02
+        },
+        {
+          "word": "changes.",
+          "start": 2.02,
+          "end": 2.54
+        },
+        {
+          "word": "Start",
+          "start": 3.18,
+          "end": 3.62
+        },
+        {
+          "word": "with",
+          "start": 3.62,
+          "end": 3.92
+        },
+        {
+          "word": "meters",
+          "start": 3.92,
+          "end": 4.24
+        },
+        {
+          "word": "per",
+          "start": 4.24,
+          "end": 4.52
+        },
+        {
+          "word": "second,",
+          "start": 4.52,
+          "end": 4.88
+        },
+        {
+          "word": "then",
+          "start": 5.32,
+          "end": 5.68
+        },
+        {
+          "word": "divide",
+          "start": 5.68,
+          "end": 6.06
+        },
+        {
+          "word": "by",
+          "start": 6.06,
+          "end": 6.3
+        },
+        {
+          "word": "time",
+          "start": 6.3,
+          "end": 6.64
+        },
+        {
+          "word": "once",
+          "start": 6.64,
+          "end": 7.02
+        },
+        {
+          "word": "more.",
+          "start": 7.02,
+          "end": 7.34
+        },
+        {
+          "word": "The",
+          "start": 8.14,
+          "end": 8.26
+        },
+        {
+          "word": "result",
+          "start": 8.26,
+          "end": 8.56
+        },
+        {
+          "word": "is",
+          "start": 8.56,
+          "end": 8.76
+        },
+        {
+          "word": "meters",
+          "start": 8.76,
+          "end": 9.06
+        },
+        {
+          "word": "per",
+          "start": 9.06,
+          "end": 9.32
+        },
+        {
+          "word": "second",
+          "start": 9.32,
+          "end": 9.62
+        },
+        {
+          "word": "squared.",
+          "start": 9.62,
+          "end": 9.92
+        },
+        {
+          "word": "Think",
+          "start": 10.74,
+          "end": 11.02
+        },
+        {
+          "word": "of",
+          "start": 11.02,
+          "end": 11.2
+        },
+        {
+          "word": "it",
+          "start": 11.2,
+          "end": 11.32
+        },
+        {
+          "word": "as",
+          "start": 11.32,
+          "end": 11.5
+        },
+        {
+          "word": "meters",
+          "start": 11.5,
+          "end": 11.82
+        },
+        {
+          "word": "per",
+          "start": 11.82,
+          "end": 12.1
+        },
+        {
+          "word": "second",
+          "start": 12.1,
+          "end": 12.46
+        },
+        {
+          "word": "per",
+          "start": 12.46,
+          "end": 12.66
+        },
+        {
+          "word": "second.",
+          "start": 12.66,
+          "end": 12.94
+        }
+      ],
+      "cues": {
+        "velocity-changes": 1.6,
+        "divide-by-time": 5.68,
+        "second-squared": 9.32,
+        "per-second-per-second": 11.82
+      },
+      "generatedAt": "2026-09-05T18:25:37.417631",
+      "engine": "faster-whisper-small (local)"
+    },
+    {
+      "id": "s05",
+      "audio": "derived-units-s05.mp3",
+      "duration": 15.830204,
+      "wordCount": 35,
+      "text": "For a compound unit, separate the top from the bottom. Convert kilometers to meters in the numerator. Convert hours to seconds in the denominator. If the time unit is squared, square its conversion factor 2.",
+      "words": [
+        {
+          "word": "For",
+          "start": 0.0,
+          "end": 0.16
+        },
+        {
+          "word": "a",
+          "start": 0.16,
+          "end": 0.28
+        },
+        {
+          "word": "compound",
+          "start": 0.28,
+          "end": 0.5
+        },
+        {
+          "word": "unit,",
+          "start": 0.5,
+          "end": 0.94
+        },
+        {
+          "word": "separate",
+          "start": 1.42,
+          "end": 2.0
+        },
+        {
+          "word": "the",
+          "start": 2.0,
+          "end": 2.32
+        },
+        {
+          "word": "top",
+          "start": 2.32,
+          "end": 2.58
+        },
+        {
+          "word": "from",
+          "start": 2.58,
+          "end": 2.98
+        },
+        {
+          "word": "the",
+          "start": 2.98,
+          "end": 3.1
+        },
+        {
+          "word": "bottom.",
+          "start": 3.1,
+          "end": 3.46
+        },
+        {
+          "word": "Convert",
+          "start": 3.98,
+          "end": 4.66
+        },
+        {
+          "word": "kilometers",
+          "start": 4.66,
+          "end": 5.18
+        },
+        {
+          "word": "to",
+          "start": 5.18,
+          "end": 5.82
+        },
+        {
+          "word": "meters",
+          "start": 5.82,
+          "end": 6.12
+        },
+        {
+          "word": "in",
+          "start": 6.12,
+          "end": 6.36
+        },
+        {
+          "word": "the",
+          "start": 6.36,
+          "end": 6.44
+        },
+        {
+          "word": "numerator.",
+          "start": 6.44,
+          "end": 6.86
+        },
+        {
+          "word": "Convert",
+          "start": 7.7,
+          "end": 8.18
+        },
+        {
+          "word": "hours",
+          "start": 8.18,
+          "end": 8.52
+        },
+        {
+          "word": "to",
+          "start": 8.52,
+          "end": 9.16
+        },
+        {
+          "word": "seconds",
+          "start": 9.16,
+          "end": 9.5
+        },
+        {
+          "word": "in",
+          "start": 9.5,
+          "end": 9.8
+        },
+        {
+          "word": "the",
+          "start": 9.8,
+          "end": 9.88
+        },
+        {
+          "word": "denominator.",
+          "start": 9.88,
+          "end": 10.42
+        },
+        {
+          "word": "If",
+          "start": 11.56,
+          "end": 11.72
+        },
+        {
+          "word": "the",
+          "start": 11.72,
+          "end": 11.84
+        },
+        {
+          "word": "time",
+          "start": 11.84,
+          "end": 12.06
+        },
+        {
+          "word": "unit",
+          "start": 12.06,
+          "end": 12.36
+        },
+        {
+          "word": "is",
+          "start": 12.36,
+          "end": 13.0
+        },
+        {
+          "word": "squared,",
+          "start": 13.0,
+          "end": 13.38
+        },
+        {
+          "word": "square",
+          "start": 13.84,
+          "end": 14.16
+        },
+        {
+          "word": "its",
+          "start": 14.16,
+          "end": 14.42
+        },
+        {
+          "word": "conversion",
+          "start": 14.42,
+          "end": 14.86
+        },
+        {
+          "word": "factor",
+          "start": 14.86,
+          "end": 15.16
+        },
+        {
+          "word": "2.",
+          "start": 15.16,
+          "end": 15.44
+        }
+      ],
+      "cues": {
+        "top": 2.32,
+        "bottom": 3.1,
+        "hours-to-seconds": 8.18,
+        "squared": 13.0
+      },
+      "generatedAt": "2026-09-05T18:25:37.417631",
+      "engine": "faster-whisper-small (local)"
+    },
+    {
+      "id": "s06",
+      "audio": "derived-units-s06.mp3",
+      "duration": 20.244898,
+      "wordCount": 37,
+      "text": "Convert 72 km per hour. First handle the numerator. 72 times 1000 gives 72,000 m per hour. Now handle the denominator. 1 hour is 3600 seconds. 72,000 divided by 3600 gives 20 m per second.",
+      "words": [
+        {
+          "word": "Convert",
+          "start": 0.0,
+          "end": 0.34
+        },
+        {
+          "word": "72",
+          "start": 0.34,
+          "end": 0.98
+        },
+        {
+          "word": "km",
+          "start": 0.98,
+          "end": 1.22
+        },
+        {
+          "word": "per",
+          "start": 1.22,
+          "end": 1.72
+        },
+        {
+          "word": "hour.",
+          "start": 1.72,
+          "end": 2.12
+        },
+        {
+          "word": "First",
+          "start": 2.6,
+          "end": 3.14
+        },
+        {
+          "word": "handle",
+          "start": 3.14,
+          "end": 3.42
+        },
+        {
+          "word": "the",
+          "start": 3.42,
+          "end": 3.54
+        },
+        {
+          "word": "numerator.",
+          "start": 3.54,
+          "end": 3.98
+        },
+        {
+          "word": "72",
+          "start": 5.08,
+          "end": 5.72
+        },
+        {
+          "word": "times",
+          "start": 5.72,
+          "end": 6.04
+        },
+        {
+          "word": "1000",
+          "start": 6.04,
+          "end": 6.7
+        },
+        {
+          "word": "gives",
+          "start": 6.7,
+          "end": 7.52
+        },
+        {
+          "word": "72",
+          "start": 7.52,
+          "end": 8.1
+        },
+        {
+          "word": ",000",
+          "start": 8.1,
+          "end": 8.54
+        },
+        {
+          "word": "m",
+          "start": 8.54,
+          "end": 8.74
+        },
+        {
+          "word": "per",
+          "start": 8.74,
+          "end": 9.02
+        },
+        {
+          "word": "hour.",
+          "start": 9.02,
+          "end": 9.26
+        },
+        {
+          "word": "Now",
+          "start": 10.02,
+          "end": 10.24
+        },
+        {
+          "word": "handle",
+          "start": 10.24,
+          "end": 10.54
+        },
+        {
+          "word": "the",
+          "start": 10.54,
+          "end": 10.68
+        },
+        {
+          "word": "denominator.",
+          "start": 10.68,
+          "end": 11.16
+        },
+        {
+          "word": "1",
+          "start": 11.94,
+          "end": 12.24
+        },
+        {
+          "word": "hour",
+          "start": 12.24,
+          "end": 12.46
+        },
+        {
+          "word": "is",
+          "start": 12.46,
+          "end": 12.96
+        },
+        {
+          "word": "3600",
+          "start": 12.96,
+          "end": 14.0
+        },
+        {
+          "word": "seconds.",
+          "start": 14.0,
+          "end": 14.36
+        },
+        {
+          "word": "72",
+          "start": 15.26,
+          "end": 15.86
+        },
+        {
+          "word": ",000",
+          "start": 15.86,
+          "end": 16.4
+        },
+        {
+          "word": "divided",
+          "start": 16.4,
+          "end": 16.74
+        },
+        {
+          "word": "by",
+          "start": 16.74,
+          "end": 17.16
+        },
+        {
+          "word": "3600",
+          "start": 17.16,
+          "end": 18.26
+        },
+        {
+          "word": "gives",
+          "start": 18.26,
+          "end": 18.6
+        },
+        {
+          "word": "20",
+          "start": 18.6,
+          "end": 18.98
+        },
+        {
+          "word": "m",
+          "start": 18.98,
+          "end": 19.2
+        },
+        {
+          "word": "per",
+          "start": 19.2,
+          "end": 19.48
+        },
+        {
+          "word": "second.",
+          "start": 19.48,
+          "end": 19.78
+        }
+      ],
+      "cues": {
+        "seventy-two": 0.34,
+        "numerator": 3.54,
+        "seventy-two-times": 5.08,
+        "times": 5.72,
+        "one-thousand": 6.04,
+        "gives-numerator": 6.7,
+        "seventy-two-thousand-numerator": 7.52,
+        "denominator": 10.68,
+        "one-hour": 11.94,
+        "three-thousand-six-hundred": 12.96,
+        "seventy-two-thousand-division": 15.26,
+        "divided-by": 16.4,
+        "three-thousand-six-hundred-division": 17.16,
+        "gives-result": 18.26,
+        "twenty-metres-per-second": 18.6
+      },
+      "generatedAt": "2026-09-05T18:25:37.417631",
+      "engine": "faster-whisper-small (local)"
+    },
+    {
+      "id": "s07",
+      "audio": "derived-units-s07.mp3",
+      "duration": 20.662857,
+      "wordCount": 40,
+      "text": "force equals mass multiplied by acceleration put kilograms beside meters per second squared and you get kilograms meters per second squared that combination has a shorter name the newton one newton accelerates one kilogram by one meter per second squared",
+      "words": [
+        {
+          "word": "force",
+          "start": 0.0,
+          "end": 0.36
+        },
+        {
+          "word": "equals",
+          "start": 0.36,
+          "end": 1.16
+        },
+        {
+          "word": "mass",
+          "start": 1.16,
+          "end": 1.7
+        },
+        {
+          "word": "multiplied",
+          "start": 1.7,
+          "end": 2.66
+        },
+        {
+          "word": "by",
+          "start": 2.66,
+          "end": 3.34
+        },
+        {
+          "word": "acceleration",
+          "start": 3.34,
+          "end": 3.94
+        },
+        {
+          "word": "put",
+          "start": 3.94,
+          "end": 5.38
+        },
+        {
+          "word": "kilograms",
+          "start": 5.38,
+          "end": 5.88
+        },
+        {
+          "word": "beside",
+          "start": 5.88,
+          "end": 6.88
+        },
+        {
+          "word": "meters",
+          "start": 6.88,
+          "end": 7.2
+        },
+        {
+          "word": "per",
+          "start": 7.2,
+          "end": 7.48
+        },
+        {
+          "word": "second",
+          "start": 7.48,
+          "end": 7.76
+        },
+        {
+          "word": "squared",
+          "start": 7.76,
+          "end": 8.16
+        },
+        {
+          "word": "and",
+          "start": 8.78,
+          "end": 9.2
+        },
+        {
+          "word": "you",
+          "start": 9.2,
+          "end": 9.3
+        },
+        {
+          "word": "get",
+          "start": 9.3,
+          "end": 9.58
+        },
+        {
+          "word": "kilograms",
+          "start": 9.58,
+          "end": 10.14
+        },
+        {
+          "word": "meters",
+          "start": 10.14,
+          "end": 10.62
+        },
+        {
+          "word": "per",
+          "start": 10.62,
+          "end": 10.92
+        },
+        {
+          "word": "second",
+          "start": 10.92,
+          "end": 11.2
+        },
+        {
+          "word": "squared",
+          "start": 11.2,
+          "end": 11.64
+        },
+        {
+          "word": "that",
+          "start": 11.64,
+          "end": 12.82
+        },
+        {
+          "word": "combination",
+          "start": 12.82,
+          "end": 13.16
+        },
+        {
+          "word": "has",
+          "start": 13.16,
+          "end": 13.52
+        },
+        {
+          "word": "a",
+          "start": 13.52,
+          "end": 13.64
+        },
+        {
+          "word": "shorter",
+          "start": 13.64,
+          "end": 13.84
+        },
+        {
+          "word": "name",
+          "start": 13.84,
+          "end": 14.12
+        },
+        {
+          "word": "the",
+          "start": 14.12,
+          "end": 14.78
+        },
+        {
+          "word": "newton",
+          "start": 14.78,
+          "end": 15.26
+        },
+        {
+          "word": "one",
+          "start": 15.26,
+          "end": 16.04
+        },
+        {
+          "word": "newton",
+          "start": 16.04,
+          "end": 16.72
+        },
+        {
+          "word": "accelerates",
+          "start": 16.72,
+          "end": 17.58
+        },
+        {
+          "word": "one",
+          "start": 17.58,
+          "end": 17.8
+        },
+        {
+          "word": "kilogram",
+          "start": 17.8,
+          "end": 18.24
+        },
+        {
+          "word": "by",
+          "start": 18.24,
+          "end": 18.9
+        },
+        {
+          "word": "one",
+          "start": 18.9,
+          "end": 19.12
+        },
+        {
+          "word": "meter",
+          "start": 19.12,
+          "end": 19.36
+        },
+        {
+          "word": "per",
+          "start": 19.36,
+          "end": 19.58
+        },
+        {
+          "word": "second",
+          "start": 19.58,
+          "end": 19.82
+        },
+        {
+          "word": "squared",
+          "start": 19.82,
+          "end": 20.16
+        }
+      ],
+      "cues": {
+        "mass-multiplied-by-acceleration": 1.16,
+        "kilograms": 5.38,
+        "newton": 14.78,
+        "one-kilogram": 17.58
+      },
+      "generatedAt": "2026-09-05T18:25:37.417631",
+      "engine": "faster-whisper-small (local)"
+    },
+    {
+      "id": "s08",
+      "audio": "derived-units-s08.mp3",
+      "duration": 16.953469,
+      "wordCount": 37,
+      "text": "Weight is a force so we measure it in Newton's. It equals mass multiplied by the local acceleration due to gravity. Move the object to the moon. Its mass stays the same while its weight becomes smaller.",
+      "words": [
+        {
+          "word": "Weight",
+          "start": 0.0,
+          "end": 0.3
+        },
+        {
+          "word": "is",
+          "start": 0.3,
+          "end": 0.84
+        },
+        {
+          "word": "a",
+          "start": 0.84,
+          "end": 0.98
+        },
+        {
+          "word": "force",
+          "start": 0.98,
+          "end": 1.22
+        },
+        {
+          "word": "so",
+          "start": 1.22,
+          "end": 1.84
+        },
+        {
+          "word": "we",
+          "start": 1.84,
+          "end": 1.96
+        },
+        {
+          "word": "measure",
+          "start": 1.96,
+          "end": 2.42
+        },
+        {
+          "word": "it",
+          "start": 2.42,
+          "end": 2.82
+        },
+        {
+          "word": "in",
+          "start": 2.82,
+          "end": 3.62
+        },
+        {
+          "word": "Newton's.",
+          "start": 3.62,
+          "end": 4.2
+        },
+        {
+          "word": "It",
+          "start": 4.92,
+          "end": 5.02
+        },
+        {
+          "word": "equals",
+          "start": 5.02,
+          "end": 5.36
+        },
+        {
+          "word": "mass",
+          "start": 5.36,
+          "end": 5.88
+        },
+        {
+          "word": "multiplied",
+          "start": 5.88,
+          "end": 6.7
+        },
+        {
+          "word": "by",
+          "start": 6.7,
+          "end": 7.24
+        },
+        {
+          "word": "the",
+          "start": 7.24,
+          "end": 7.38
+        },
+        {
+          "word": "local",
+          "start": 7.38,
+          "end": 7.56
+        },
+        {
+          "word": "acceleration",
+          "start": 7.56,
+          "end": 8.22
+        },
+        {
+          "word": "due",
+          "start": 8.22,
+          "end": 8.98
+        },
+        {
+          "word": "to",
+          "start": 8.98,
+          "end": 9.14
+        },
+        {
+          "word": "gravity.",
+          "start": 9.14,
+          "end": 9.5
+        },
+        {
+          "word": "Move",
+          "start": 10.08,
+          "end": 10.44
+        },
+        {
+          "word": "the",
+          "start": 10.44,
+          "end": 10.64
+        },
+        {
+          "word": "object",
+          "start": 10.64,
+          "end": 10.96
+        },
+        {
+          "word": "to",
+          "start": 10.96,
+          "end": 11.28
+        },
+        {
+          "word": "the",
+          "start": 11.28,
+          "end": 11.38
+        },
+        {
+          "word": "moon.",
+          "start": 11.38,
+          "end": 11.62
+        },
+        {
+          "word": "Its",
+          "start": 12.54,
+          "end": 12.66
+        },
+        {
+          "word": "mass",
+          "start": 12.66,
+          "end": 13.08
+        },
+        {
+          "word": "stays",
+          "start": 13.08,
+          "end": 13.66
+        },
+        {
+          "word": "the",
+          "start": 13.66,
+          "end": 13.94
+        },
+        {
+          "word": "same",
+          "start": 13.94,
+          "end": 14.34
+        },
+        {
+          "word": "while",
+          "start": 14.34,
+          "end": 14.92
+        },
+        {
+          "word": "its",
+          "start": 14.92,
+          "end": 15.14
+        },
+        {
+          "word": "weight",
+          "start": 15.14,
+          "end": 15.52
+        },
+        {
+          "word": "becomes",
+          "start": 15.52,
+          "end": 16.0
+        },
+        {
+          "word": "smaller.",
+          "start": 16.0,
+          "end": 16.4
+        }
+      ],
+      "cues": {
+        "weight": 0.0,
+        "newtons": 3.62,
+        "local-acceleration": 7.38,
+        "moon": 11.38
+      },
+      "generatedAt": "2026-09-05T18:25:37.417631",
+      "engine": "faster-whisper-small (local)"
+    },
+    {
+      "id": "s09",
+      "audio": "derived-units-s09.mp3",
+      "duration": 14.471837,
+      "wordCount": 35,
+      "text": "Powers belong to the conversion as well as the unit. Our squared needs the hours to seconds factor twice. Square centimeters needs the length factor twice. Missing that power can move an answer by thousands.",
+      "words": [
+        {
+          "word": "Powers",
+          "start": 0.0,
+          "end": 0.34
+        },
+        {
+          "word": "belong",
+          "start": 0.34,
+          "end": 0.7
+        },
+        {
+          "word": "to",
+          "start": 0.7,
+          "end": 1.06
+        },
+        {
+          "word": "the",
+          "start": 1.06,
+          "end": 1.18
+        },
+        {
+          "word": "conversion",
+          "start": 1.18,
+          "end": 1.64
+        },
+        {
+          "word": "as",
+          "start": 1.64,
+          "end": 2.52
+        },
+        {
+          "word": "well",
+          "start": 2.52,
+          "end": 2.84
+        },
+        {
+          "word": "as",
+          "start": 2.84,
+          "end": 3.0
+        },
+        {
+          "word": "the",
+          "start": 3.0,
+          "end": 3.14
+        },
+        {
+          "word": "unit.",
+          "start": 3.14,
+          "end": 3.46
+        },
+        {
+          "word": "Our",
+          "start": 3.98,
+          "end": 4.12
+        },
+        {
+          "word": "squared",
+          "start": 4.12,
+          "end": 4.68
+        },
+        {
+          "word": "needs",
+          "start": 4.68,
+          "end": 5.4
+        },
+        {
+          "word": "the",
+          "start": 5.4,
+          "end": 5.64
+        },
+        {
+          "word": "hours",
+          "start": 5.64,
+          "end": 5.96
+        },
+        {
+          "word": "to",
+          "start": 5.96,
+          "end": 6.26
+        },
+        {
+          "word": "seconds",
+          "start": 6.26,
+          "end": 6.58
+        },
+        {
+          "word": "factor",
+          "start": 6.58,
+          "end": 6.86
+        },
+        {
+          "word": "twice.",
+          "start": 6.86,
+          "end": 7.3
+        },
+        {
+          "word": "Square",
+          "start": 7.52,
+          "end": 8.14
+        },
+        {
+          "word": "centimeters",
+          "start": 8.14,
+          "end": 8.66
+        },
+        {
+          "word": "needs",
+          "start": 8.66,
+          "end": 9.5
+        },
+        {
+          "word": "the",
+          "start": 9.5,
+          "end": 9.7
+        },
+        {
+          "word": "length",
+          "start": 9.7,
+          "end": 10.0
+        },
+        {
+          "word": "factor",
+          "start": 10.0,
+          "end": 10.46
+        },
+        {
+          "word": "twice.",
+          "start": 10.46,
+          "end": 10.9
+        },
+        {
+          "word": "Missing",
+          "start": 11.32,
+          "end": 11.82
+        },
+        {
+          "word": "that",
+          "start": 11.82,
+          "end": 11.98
+        },
+        {
+          "word": "power",
+          "start": 11.98,
+          "end": 12.28
+        },
+        {
+          "word": "can",
+          "start": 12.28,
+          "end": 12.8
+        },
+        {
+          "word": "move",
+          "start": 12.8,
+          "end": 13.1
+        },
+        {
+          "word": "an",
+          "start": 13.1,
+          "end": 13.24
+        },
+        {
+          "word": "answer",
+          "start": 13.24,
+          "end": 13.52
+        },
+        {
+          "word": "by",
+          "start": 13.52,
+          "end": 13.66
+        },
+        {
+          "word": "thousands.",
+          "start": 13.66,
+          "end": 13.92
+        }
+      ],
+      "cues": {
+        "powers": 0.0,
+        "factor-twice": 6.58,
+        "square-centimetres": 7.52,
+        "thousands": 13.66
+      },
+      "generatedAt": "2026-09-05T18:25:37.417631",
+      "engine": "faster-whisper-small (local)"
+    },
+    {
+      "id": "s10",
+      "audio": "derived-units-s10.mp3",
+      "duration": 22.099592,
+      "wordCount": 50,
+      "text": "Quick recap, derived units combine base units. Speed uses meters per second. Acceleration uses meters per second squared. And Newton is one kilogram meter per second squared. And weight is a force. Convert each part of a compound unit, keep every power, and let the final unit check your work.",
+      "words": [
+        {
+          "word": "Quick",
+          "start": 0.0,
+          "end": 0.24
+        },
+        {
+          "word": "recap,",
+          "start": 0.24,
+          "end": 0.54
+        },
+        {
+          "word": "derived",
+          "start": 1.1,
+          "end": 1.64
+        },
+        {
+          "word": "units",
+          "start": 1.64,
+          "end": 2.3
+        },
+        {
+          "word": "combine",
+          "start": 2.3,
+          "end": 2.76
+        },
+        {
+          "word": "base",
+          "start": 2.76,
+          "end": 3.34
+        },
+        {
+          "word": "units.",
+          "start": 3.34,
+          "end": 3.82
+        },
+        {
+          "word": "Speed",
+          "start": 4.72,
+          "end": 5.06
+        },
+        {
+          "word": "uses",
+          "start": 5.06,
+          "end": 5.54
+        },
+        {
+          "word": "meters",
+          "start": 5.54,
+          "end": 5.82
+        },
+        {
+          "word": "per",
+          "start": 5.82,
+          "end": 6.1
+        },
+        {
+          "word": "second.",
+          "start": 6.1,
+          "end": 6.36
+        },
+        {
+          "word": "Acceleration",
+          "start": 7.24,
+          "end": 7.58
+        },
+        {
+          "word": "uses",
+          "start": 7.58,
+          "end": 8.22
+        },
+        {
+          "word": "meters",
+          "start": 8.22,
+          "end": 8.48
+        },
+        {
+          "word": "per",
+          "start": 8.48,
+          "end": 8.74
+        },
+        {
+          "word": "second",
+          "start": 8.74,
+          "end": 8.98
+        },
+        {
+          "word": "squared.",
+          "start": 8.98,
+          "end": 9.32
+        },
+        {
+          "word": "And",
+          "start": 10.36,
+          "end": 10.44
+        },
+        {
+          "word": "Newton",
+          "start": 10.44,
+          "end": 10.74
+        },
+        {
+          "word": "is",
+          "start": 10.74,
+          "end": 11.34
+        },
+        {
+          "word": "one",
+          "start": 11.34,
+          "end": 11.64
+        },
+        {
+          "word": "kilogram",
+          "start": 11.64,
+          "end": 11.94
+        },
+        {
+          "word": "meter",
+          "start": 11.94,
+          "end": 12.54
+        },
+        {
+          "word": "per",
+          "start": 12.54,
+          "end": 12.78
+        },
+        {
+          "word": "second",
+          "start": 12.78,
+          "end": 13.04
+        },
+        {
+          "word": "squared.",
+          "start": 13.04,
+          "end": 13.46
+        },
+        {
+          "word": "And",
+          "start": 14.22,
+          "end": 14.34
+        },
+        {
+          "word": "weight",
+          "start": 14.34,
+          "end": 14.64
+        },
+        {
+          "word": "is",
+          "start": 14.64,
+          "end": 15.18
+        },
+        {
+          "word": "a",
+          "start": 15.18,
+          "end": 15.3
+        },
+        {
+          "word": "force.",
+          "start": 15.3,
+          "end": 15.54
+        },
+        {
+          "word": "Convert",
+          "start": 16.02,
+          "end": 16.32
+        },
+        {
+          "word": "each",
+          "start": 16.32,
+          "end": 16.56
+        },
+        {
+          "word": "part",
+          "start": 16.56,
+          "end": 16.78
+        },
+        {
+          "word": "of",
+          "start": 16.78,
+          "end": 16.92
+        },
+        {
+          "word": "a",
+          "start": 16.92,
+          "end": 17.02
+        },
+        {
+          "word": "compound",
+          "start": 17.02,
+          "end": 17.22
+        },
+        {
+          "word": "unit,",
+          "start": 17.22,
+          "end": 17.7
+        },
+        {
+          "word": "keep",
+          "start": 18.22,
+          "end": 18.34
+        },
+        {
+          "word": "every",
+          "start": 18.34,
+          "end": 18.7
+        },
+        {
+          "word": "power,",
+          "start": 18.7,
+          "end": 19.0
+        },
+        {
+          "word": "and",
+          "start": 19.54,
+          "end": 19.6
+        },
+        {
+          "word": "let",
+          "start": 19.6,
+          "end": 19.8
+        },
+        {
+          "word": "the",
+          "start": 19.8,
+          "end": 20.0
+        },
+        {
+          "word": "final",
+          "start": 20.0,
+          "end": 20.22
+        },
+        {
+          "word": "unit",
+          "start": 20.22,
+          "end": 20.74
+        },
+        {
+          "word": "check",
+          "start": 20.74,
+          "end": 21.24
+        },
+        {
+          "word": "your",
+          "start": 21.24,
+          "end": 21.44
+        },
+        {
+          "word": "work.",
+          "start": 21.44,
+          "end": 21.66
+        }
+      ],
+      "cues": {
+        "derived-units": 1.1,
+        "acceleration": 7.24,
+        "newton": 10.44,
+        "check-your-work": 20.74
+      },
+      "generatedAt": "2026-09-05T18:25:37.417631",
+      "engine": "faster-whisper-small (local)"
+    }
+  ]
+}
