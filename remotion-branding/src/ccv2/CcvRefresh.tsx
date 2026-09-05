@@ -1,5 +1,5 @@
 /**
- * e-wizer "Chemical Concentration Verification" — Ecowize Academy video 03 refresh (13 beats, ~4:30).
+ * e-wizer "Chemical Concentration Verification" — Ecowize Academy video 03 refresh (12 active beats).
  *
  * Spec: docs/ccv-refresh-storyboard.html. Engine: the Bill of Health pattern re-implemented
  * here (device-framed phone still + rings + zoom crop + right-hand explainer; full-frame scenes
@@ -8,7 +8,7 @@
  *
  * Data spine:
  *   src/ccv2/narration.json — scripts + chips (source for the ElevenLabs run)
- *   src/ccv2/timing.json    — voStart/duration per beat (PLACEHOLDER until the audio script rewrites it)
+ *   src/ccv2/timing.json    — measured voStart/duration per beat
  *   src/ccv2/boxes.json     — normalized ring rects measured on the stills
  *   public/ccv2/shots/ccv-NN.png — 720×1600 captures (I&J Blockbusters + Brito's)
  *   public/ccv2/audio/NN-id.mp3  — per-beat VO
@@ -34,7 +34,6 @@ import {
   Headline as CcvHeadline,
   hexToRgb,
   INK,
-  Iris,
   MUTED,
   ProofChip,
   SceneBackdrop,
@@ -112,11 +111,17 @@ type RingStep = { box: BoxName; cue?: string; delay?: number };
 const RING_PLAN: Record<string, RingStep[]> = {
   '02-strip': [{ box: 'strip' }],
   '03-hub': [{ box: 'hubTiles', cue: 'Three numbers first' }, { box: 'dueBand', cue: 'Then the band that matters' }, { box: 'todayStats', cue: 'Below that' }],
-  '04-issue': [{ box: 'pickerRow', cue: 'Pick the station' }, { box: 'batchField', cue: 'The batch or lot number' }, { box: 'scopeSeg', cue: 'The scope' }, { box: 'quantities', cue: 'you enter both' }], // the computed value is under the nav pill in the capture — the column's ComputedPanel carries it
+  '04-issue': [
+    { box: 'pickerRow', cue: 'Pick the station' },
+    { box: 'batchField', cue: 'the batch or lot number' },
+    { box: 'scopeSeg', cue: 'the scope' },
+    { box: 'issueType', cue: 'issue type' },
+    { box: 'quantities', cue: 'enter both' },
+    { box: 'awaitingIssue', cue: 'Awaiting verification' },
+  ], // the current blank form is composed with demonstration values; the later hub/Verify example uses real captures
   '05-standard': [{ box: 'rangeCard', cue: 'The approved range' }, { box: 'calcLine', cue: 'The calculation' }],
-  '06-lock': [{ box: 'lockCard', cue: 'No range, no method' }, { box: 'lockBanner', cue: 'It locks the reading' }],
   '07-baseline': [{ box: 'baselineCard', cue: 'So once a shift' }, { box: 'baselineButton', cue: 'One measurement, once' }],
-  '08-inspec': [{ box: 'verdictPass', cue: 'Captured. In spec' }],
+  '08-inspec': [{ box: 'verdictPass', cue: 'In spec.' }],
   '09-outofspec': [{ box: 'verdictFail', cue: 'Out of spec.' }, { box: 'retestBlock', cue: 'Two things appear' }],
   '10-escalate': [{ box: 'retestFailedPill' }, { box: 'escalationCard', cue: 'names the site manager' }],
   '11-record': [{ box: 'verifiedCard', cue: 'Every issue on the hub' }, { box: 'verificationLine', cue: 'Under it, the verification' }, { box: 'outOfSpecTile', cue: 'Back on the hub' }],
@@ -125,7 +130,11 @@ const RING_PLAN: Record<string, RingStep[]> = {
 /** In-beat still switches: the phone crossfades to the next still on its cue (14f). */
 type ShotStep = { shot: string; cue?: string };
 const SHOT_PLAN: Record<string, ShotStep[]> = {
-  '04-issue': [{ shot: 'ccv-04a-picker' }, { shot: 'ccv-04', cue: 'Then four things' }],
+  '04-issue': [
+    { shot: 'ccv-04a-picker' },
+    { shot: 'ccv-04', cue: 'Then complete the form' },
+    { shot: 'ccv-04c-awaiting', cue: 'On the Chemical hub' },
+  ],
   '05-standard': [{ shot: 'ccv-05' }, { shot: 'ccv-05b-sheet', cue: 'How to test.' }],
   '09-outofspec': [{ shot: 'ccv-09' }, { shot: 'ccv-09b-retest', cue: 'Two things appear' }],
   '11-record': [{ shot: 'ccv-11' }, { shot: 'ccv-03', cue: 'Back on the hub' }], // the detail-modal capture is mostly empty canvas; the history lines are zoomed in the column instead
@@ -151,11 +160,17 @@ type ZoomStep = { box?: BoxName; crop?: NormRect; cue?: string; still?: string; 
 const ZOOM_PLAN: Record<string, ZoomStep[]> = {
   '02-strip': [{ box: 'strip', crop: { nx: 0.03, ny: 0.345, nw: 0.94, nh: 0.11 }, cue: 'and it names them' }], // y 552..728: the three lines
   '03-hub': [{ box: 'dueBand', crop: { nx: 0.03, ny: 0.365, nw: 0.94, nh: 0.3 }, cue: 'The same three dosing points' }], // y 584..1064: the three OVERDUE rows
+  '04-issue': [
+    { box: 'awaitingIssue', crop: { nx: 0.03, ny: 0.29, nw: 0.94, nh: 0.255 }, cue: 'Awaiting verification', still: 'ccv-04c-awaiting' },
+    { box: 'pendingVerifyHero', crop: { nx: 0.03, ny: 0.18, nw: 0.94, nh: 0.3 }, cue: 'Find the issue and tap Verify', still: 'ccv-04d-pending-verify' }, // destination only: header, issue and approved range; excludes the baseline card below y≈885
+  ],
   '05-standard': [{ box: 'calcLine', crop: { nx: 0.03, ny: 0.65, nw: 0.94, nh: 0.17 }, cue: 'The procedure', still: 'ccv-05b-sheet' }], // y 1040..1312: the three steps
-  '06-lock': [{ box: 'lockBanner', crop: { nx: 0.03, ny: 0.711, nw: 0.94, nh: 0.08 }, cue: 'It locks the reading' }], // y 1138..1266: the composed no-spec banner (re-flowed up 88)
   '07-baseline': [{ box: 'baselineButton', crop: { nx: 0.03, ny: 0.65, nw: 0.94, nh: 0.225 }, cue: 'set the baseline' }], // y 1040..1400: tap-water field + SET BASELINE
-  '08-inspec': [{ box: 'verdictPass', crop: { nx: 0.03, ny: 0.68, nw: 0.94, nh: 0.145 }, cue: 'Enter the reading' }], // y 1088..1320: reading field + verdict
-  '09-outofspec': [{ box: 'retestBlock', crop: { nx: 0.03, ny: 0.385, nw: 0.94, nh: 0.155 }, cue: 'What you did', still: 'ccv-09b-retest' }], // y 616..864: CORRECTIVE ACTION · REQUIRED label + placeholder
+  '08-inspec': [{ box: 'verdictPass', crop: { nx: 0.03, ny: 0.606, nw: 0.94, nh: 0.22 }, cue: 'Enter the reading' }], // measured y 970..1322: 20-drop field, 1.9 % field, and live IN SPEC verdict
+  '09-outofspec': [
+    { box: 'retestBlock', crop: { nx: 0.03, ny: 0.318, nw: 0.94, nh: 0.096 }, cue: 'What you did', still: 'ccv-09b-retest' }, // measured y 509..663: corrective-action label + actual "Re-mixed dilution" field
+    { box: 'retestBlock', crop: { nx: 0.03, ny: 0.424, nw: 0.94, nh: 0.264 }, cue: 'Then repeat the method', still: 'ccv-09b-retest' }, // measured y 678..1100: re-test label, 20 drops, 1.9 %, and resolved verdict
+  ],
   '11-record': [
     { box: 'verifiedCard', crop: { nx: 0.03, ny: 0.213, nw: 0.94, nh: 0.14 }, cue: 'who issued it' }, // y 341..565: station · plant · dosing point · time, department, litres, issuer
     { box: 'verificationLine', crop: { nx: 0.03, ny: 0.347, nw: 0.94, nh: 0.044 }, cue: 'Under it, the verification' }, // y 555..625: time · method · reading · PASS · name
@@ -175,12 +190,11 @@ const zoomSteps = (beat: Beat, sec: number, out: number) => {
 const COPY: Record<string, { headline: string; body?: string }> = {
   '02-strip': { headline: 'The certificate tells you first', body: 'A coral strip at the top of the Bill of Health names the dosing points past their window.' },
   '03-hub': { headline: 'The hub: due, done, out of spec', body: 'Activity first. The strip is the exception.' },
-  '04-issue': { headline: 'Issue: batch, scope, chemical and water', body: 'You enter both. The app computes the percentage against the approved range.' },
-  '05-standard': { headline: 'The standard is already set', body: 'The approved range and the method are waiting at the station. How to test is one tap.' },
-  '06-lock': { headline: 'No spec, no reading', body: 'The app does not guess. A reading against no standard is not verification.' },
+  '04-issue': { headline: 'Issue, then choose when to verify', body: 'For manual dilution, Verify now is the usual path. Verify later leaves a pending check in Awaiting verification.' },
+  '05-standard': { headline: 'Count the drops — then enter both', body: 'For this method, follow the work instruction and enter both the drop count and the percentage it gives.' },
   '07-baseline': { headline: 'Conductivity: the baseline, once a shift', body: 'Set once, before the first check. Every reading that shift is corrected against it.' },
-  '08-inspec': { headline: 'In spec', body: 'The verdict is the reading against the range, not an opinion.' },
-  '09-outofspec': { headline: 'Out of spec: fix it, test again', body: 'Corrective action and a re-test reading — both required before the button unlocks.' },
+  '08-inspec': { headline: '20 drops → 1.9% · in spec', body: '20 × 0.095 = 1.9. The entered percentage is checked against the approved range.' },
+  '09-outofspec': { headline: '40 drops → 3.8% · out of spec', body: 'Corrective action, then repeat the method. The passing re-test is 20 drops → 1.9%.' },
   '11-record': { headline: 'The record, at the time', body: 'Who issued it, the method, the reading, pass or fail, the name — and the time it was made.' },
 };
 
@@ -209,7 +223,6 @@ type ShiftPatch = { from: number; to: number; dy: number; canvas: string };
 type ComposePlan = { base: string; patches: TextPatch[]; panels?: PanelPatch[]; shifts?: ShiftPatch[] };
 const APP_INK = '#141A21';
 const APP_MUTED = '#939CA8';
-const APP_META = '#596371'; // station meta / spec method line, sampled (89,99,113) / (80,91,105)
 const COMPOSE_PLAN: Record<string, ComposePlan> = {
   // The captured form is blank: batch/lot, chemical and water are set. The COMPUTED DILUTION value
   // sits under the nav pill in this capture, so the column carries it (ComputedPanel).
@@ -219,28 +232,6 @@ const COMPOSE_PLAN: Record<string, ComposePlan> = {
       { mask: [50, 545, 560, 52], x: 59, baseline: 584, lines: ['LOT-20250905'], fontSize: 26, color: APP_INK }, // placeholder glyphs 59..317 × 561..588
       { mask: [50, 1195, 120, 52], x: 59, baseline: 1231, lines: ['1'], fontSize: 27, color: APP_INK, weight: 500 }, // "0" glyph 59..76 × 1211..1231
       { mask: [390, 1195, 140, 52], x: 399, baseline: 1231, lines: ['50'], fontSize: 27, color: APP_INK, weight: 500 },
-    ],
-  },
-  // The app's real no-spec state (app/(app)/chemical/verify/[stationId].tsx): the spec hero reads
-  // "No range configured" and the CAPTURE READING button is replaced by the noSpecBanner. The
-  // reading inputs stay as they are. Station re-set to an unspecced dosing point from the strip.
-  '06-lock': {
-    base: 'ccv-06',
-    panels: [
-      { x: 33, y: 508, w: 654, h: 162, fill: '#DEEEF6', stroke: '#BFEBF7', rx: 16 }, // the shortened spec hero (fill + 2px border sampled from the native card)
-      { x: 32, y: 1158, w: 656, h: 88, fill: '#FBEEDB', stroke: AMBER, rx: 14 }, // the banner sits in the CAPTURE READING slot — moved up with the band (1246 − 88)
-    ],
-    // The shortened card left a 130px canvas gap under it; the app renders 42 (card bottom 758 → How-to-test
-    // row 800 on the native capture). Everything from the How-to-test row down to the nav band moves up 88px.
-    shifts: [{ from: 760, to: 1406, dy: -88, canvas: '#F1F4F8' }],
-    patches: [
-      { mask: [160, 336, 420, 40], x: 170, baseline: 368, lines: ['Argonox'], fontSize: 32, color: APP_INK, family: 'Barlow Condensed', weight: 700 },
-      { mask: [160, 382, 430, 60], x: 169, baseline: 407, lines: ['Site Operations · Argonox · Satellite 7'], fontSize: 23, color: APP_META },
-      // The spec hero is redrawn as the app would size it with no range and no method line: label + "No range
-      // configured" only (card 507..670, 163px, vs the native 251px card that holds the big value + method).
-      { mask: [28, 503, 664, 169], maskFill: '#F1F4F8', x: 360, baseline: 571, lines: ['APPROVED RANGE'], fontSize: 19, letterSpacing: 3, color: '#48BAE2', family: 'Barlow Condensed', weight: 600, anchor: 'middle' },
-      { mask: [0, 0, 0, 0], x: 360, baseline: 616, lines: ['No range configured'], fontSize: 28, color: APP_META, anchor: 'middle' },
-      { mask: [32, 1152, 656, 100], x: 360, baseline: 1194, lines: ['No verification spec configured for this', 'station — contact your site manager.'], lineHeight: 34, fontSize: 25, color: '#A5690F', weight: 500, anchor: 'middle' }, // 1240/1282 − 88
     ],
   },
 };
@@ -408,25 +399,26 @@ const ZoomPanel: React.FC<{ beat: Beat; zoom: ZoomStep; appear: number }> = ({ b
 const Eyebrow: React.FC<{ text: string; appear: number; color?: string }> = ({ text, appear, color = SKY }) => (
   <div style={{ color, fontFamily: BODY, fontWeight: 700, fontSize: 26, letterSpacing: 3.5, textTransform: 'uppercase', opacity: appear, transform: `translateY(${(1 - appear) * 10}px)` }}>{text}</div>
 );
-/** Beat 4, first panel: the three things the rings walk, each lighting on its cue; hands off to the ComputedPanel. */
+/** Beat 4, first panel: the form fields the rings walk; hands off to the computed state. */
 const IssueWalkPanel: React.FC<{ beat: Beat; sec: number; appear: number }> = ({ beat, sec, appear }) => {
   const items = [
-    ['Batch / lot', 'the traceability line', 'The batch or lot number'],
-    ['Scope', 'entire factory or one department', 'The scope'],
-    ['Chemical + water', 'you enter both', 'you enter both'],
+    ['Batch / lot', 'traceability', 'the batch or lot number'],
+    ['Scope', 'plant or department', 'the scope'],
+    ['Issue type', 'manual or dosing point', 'issue type'],
+    ['Quantities', 'chemical + water for manual', 'enter both'],
   ];
-  const out = 1 - rise(sec, cueAt(beat, 'The app does, live'), 18);
+  const out = 1 - rise(sec, cueAt(beat, 'the app calculates'), 18);
   return (
-    <div style={{ display: 'flex', gap: 16, opacity: appear * out, transform: `translateY(${(1 - appear) * 16}px)` }}>
+    <div style={{ display: 'flex', gap: 12, opacity: appear * out, transform: `translateY(${(1 - appear) * 16}px)` }}>
       {items.map(([title, body, cue], i) => {
         const lit = rise(sec, cueAt(beat, cue), 12);
         return (
-          <div key={title} style={{ flex: 1, padding: '18px 22px', borderRadius: 14, border: `2px solid rgba(${hexToRgb(SKY)},${0.25 + lit * 0.6})`, background: `rgba(${hexToRgb(SKY)},${lit * 0.1})` }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-              <div style={{ width: 34, height: 34, borderRadius: 999, background: lit > 0.5 ? SKY : 'rgba(255,255,255,0.12)', color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: DISPLAY, fontWeight: 700, fontSize: 20, fontVariantNumeric: 'tabular-nums' }}>{i + 1}</div>
-              <div style={{ color: '#fff', fontFamily: DISPLAY, fontWeight: 700, fontSize: 32, lineHeight: 1 }}>{title}</div>
+          <div key={title} style={{ flex: 1, minWidth: 0, padding: '16px 16px', borderRadius: 14, border: `2px solid rgba(${hexToRgb(SKY)},${0.25 + lit * 0.6})`, background: `rgba(${hexToRgb(SKY)},${lit * 0.1})` }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 9 }}>
+              <div style={{ width: 30, height: 30, flexShrink: 0, borderRadius: 999, background: lit > 0.5 ? SKY : 'rgba(255,255,255,0.12)', color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: DISPLAY, fontWeight: 700, fontSize: 18, fontVariantNumeric: 'tabular-nums' }}>{i + 1}</div>
+              <div style={{ color: '#fff', fontFamily: DISPLAY, fontWeight: 700, fontSize: 27, lineHeight: 1 }}>{title}</div>
             </div>
-            <div style={{ marginTop: 10, color: `rgba(255,255,255,${0.5 + lit * 0.35})`, fontFamily: BODY, fontSize: 24, fontWeight: 500 }}>{body}</div>
+            <div style={{ marginTop: 9, color: `rgba(255,255,255,${0.5 + lit * 0.35})`, fontFamily: BODY, fontSize: 20, lineHeight: 1.25, fontWeight: 500 }}>{body}</div>
           </div>
         );
       })}
@@ -436,20 +428,60 @@ const IssueWalkPanel: React.FC<{ beat: Beat; sec: number; appear: number }> = ({
 
 /** Beat 4: the computed dilution the capture hides under its nav pill, drawn in the column as the app draws it. */
 const ComputedPanel: React.FC<{ beat: Beat; sec: number; appear: number }> = ({ beat, sec, appear }) => {
-  const a = rise(sec, cueAt(beat, 'The app does, live'), 18) * appear;
-  const ok = rise(sec, cueAt(beat, 'Green, you carry on'), 12);
-  const color = ok > 0.5 ? EMERALD : SKY;
+  const a = rise(sec, cueAt(beat, 'the app calculates'), 18) * (1 - rise(sec, cueAt(beat, 'Record the issue'), 18)) * appear;
   return (
-    <div style={{ padding: '22px 28px', borderRadius: 18, border: `2px solid rgba(${hexToRgb(color)},0.7)`, opacity: a, transform: `translateY(${(1 - a) * 16}px)`, display: 'flex', alignItems: 'center', gap: 34 }}>
+    <div style={{ padding: '18px 24px', borderRadius: 18, border: `2px solid rgba(${hexToRgb(EMERALD)},0.7)`, opacity: a, transform: `translateY(${(1 - a) * 16}px)`, display: 'flex', alignItems: 'center', gap: 30 }}>
       <div>
-        <div style={{ color, fontFamily: BODY, fontSize: 22, fontWeight: 700, letterSpacing: 3, textTransform: 'uppercase' }}>Computed dilution</div>
-        <div style={{ marginTop: 6, color: '#fff', fontFamily: DISPLAY, fontWeight: 700, fontSize: 72, lineHeight: 1, fontVariantNumeric: 'tabular-nums' }}>2.0 %</div>
+        <div style={{ color: EMERALD, fontFamily: BODY, fontSize: 20, fontWeight: 700, letterSpacing: 2.6, textTransform: 'uppercase' }}>Computed dilution</div>
+        <div style={{ marginTop: 5, color: '#fff', fontFamily: DISPLAY, fontWeight: 700, fontSize: 66, lineHeight: 1, fontVariantNumeric: 'tabular-nums' }}>2.0 %</div>
       </div>
-      <div style={{ color: 'rgba(255,255,255,0.75)', fontFamily: BODY, fontSize: 26, lineHeight: 1.35 }}>
+      <div style={{ color: 'rgba(255,255,255,0.75)', fontFamily: BODY, fontSize: 24, lineHeight: 1.3 }}>
         1 L chemical · 50 L water
         <br />
-        Approved 0.5–5.0 % · <span style={{ color, fontWeight: 700 }}>{ok > 0.5 ? 'in range' : 'checking'}</span>
+        Approved 0.5–5.0 % · <span style={{ color: EMERALD, fontWeight: 700 }}>in range</span>
+        <br />
+        <span style={{ color: SKY, fontSize: 18, fontWeight: 700, letterSpacing: 2, textTransform: 'uppercase' }}>Composed form values · no live record</span>
       </div>
+    </div>
+  );
+};
+
+/** The current completion dialog was not safely capturable without creating a record. */
+const ManualCompletionPanel: React.FC<{ beat: Beat; sec: number; appear: number }> = ({ beat, sec, appear }) => {
+  const a = rise(sec, cueAt(beat, 'Record the issue'), 18) * (1 - rise(sec, cueAt(beat, 'On the Chemical hub'), 18)) * appear;
+  const now = rise(sec, cueAt(beat, 'normally choose Verify now'), 12);
+  return (
+    <div style={{ padding: '15px 20px', borderRadius: 18, border: `2px solid rgba(${hexToRgb(SKY)},0.62)`, background: 'rgba(255,255,255,0.04)', opacity: a, transform: `translateY(${(1 - a) * 16}px)` }}>
+      <div>
+        <div style={{ color: SKY, fontFamily: BODY, fontSize: 17, fontWeight: 700, letterSpacing: 2.3, textTransform: 'uppercase' }}>Composed illustration · manual dilution only</div>
+        <div style={{ marginTop: 4, color: '#fff', fontFamily: DISPLAY, fontSize: 34, fontWeight: 700 }}>Issue recorded. Verify it now?</div>
+      </div>
+      <div style={{ display: 'flex', gap: 14, marginTop: 13 }}>
+        <div style={{ flex: 1, borderRadius: 12, border: `2px solid rgba(${hexToRgb(SKY)},0.5)`, color: SKY, fontFamily: DISPLAY, fontWeight: 700, fontSize: 24, letterSpacing: 1.8, textAlign: 'center', padding: '10px 14px' }}>VERIFY LATER</div>
+        <div style={{ flex: 1, borderRadius: 12, background: now > 0.5 ? SKY : `rgba(${hexToRgb(SKY)},0.5)`, color: '#fff', fontFamily: DISPLAY, fontWeight: 700, fontSize: 24, letterSpacing: 1.8, textAlign: 'center', padding: '10px 14px' }}>VERIFY NOW</div>
+      </div>
+    </div>
+  );
+};
+
+const PendingRoutePanel: React.FC<{ beat: Beat; sec: number; appear: number }> = ({ beat, sec, appear }) => {
+  const a = rise(sec, cueAt(beat, 'On the Chemical hub'), 18) * appear;
+  const pending = rise(sec, cueAt(beat, 'Awaiting verification'), 12);
+  const verify = rise(sec, cueAt(beat, 'Find the issue and tap Verify'), 12);
+  const item = (label: string, detail: string, color: string, lit: number) => (
+    <div style={{ flex: 1, minWidth: 0, borderRadius: 12, padding: '12px 14px', border: `2px solid rgba(${hexToRgb(color)},${0.3 + lit * 0.55})`, background: `rgba(${hexToRgb(color)},${0.04 + lit * 0.08})` }}>
+      <div style={{ color, fontFamily: DISPLAY, fontSize: 24, fontWeight: 700, lineHeight: 1 }}>{label}</div>
+      <div style={{ marginTop: 7, color: 'rgba(255,255,255,0.68)', fontFamily: BODY, fontSize: 18, lineHeight: 1.25 }}>{detail}</div>
+    </div>
+  );
+  return (
+    <div style={{ opacity: a, transform: `translateY(${(1 - a) * 16}px)` }}>
+      <div style={{ color: EMERALD, fontFamily: BODY, fontSize: 17, fontWeight: 700, letterSpacing: 2.3, textTransform: 'uppercase' }}>Separate real example · existing Brito's pending check</div>
+      <div style={{ display: 'flex', gap: 10, marginTop: 9 }}>
+        {item('Awaiting verification', 'includes pending issues from prior days', AMBER, pending)}
+        {item('Find issue · tap VERIFY', 'continues that existing pending check', SKY, verify)}
+      </div>
+      <div style={{ marginTop: 8, color: 'rgba(255,255,255,0.5)', fontFamily: BODY, fontSize: 16 }}>ECO-CLEAN FA15 is not the composed manual-dilution example shown earlier.</div>
     </div>
   );
 };
@@ -465,39 +497,43 @@ const TypeOnLine: React.FC<{ text: string; accent: string; progress: number; dim
   return (
     <div style={{ overflow: 'hidden', marginTop: 34, opacity: progress > 0 ? dim : 0 }}>
       <div style={{ display: 'flex', alignItems: 'baseline', gap: 22, clipPath: `inset(0 ${(1 - reveal) * 100}% 0 0)` }}>
-        <span style={{ color: accent, fontFamily: DISPLAY, fontWeight: 700, fontSize: 84, letterSpacing: 1.5, textShadow: `0 0 44px rgba(${hexToRgb(accent)},0.45)` }}>{head.trim()}</span>
-        {tail && <span style={{ color: 'rgba(255,255,255,0.82)', fontFamily: BODY, fontWeight: 500, fontSize: 37 }}>— {tail.trim()}</span>}
+        <span style={{ color: accent, fontFamily: DISPLAY, fontWeight: 700, fontSize: 84, letterSpacing: 1.5, whiteSpace: 'nowrap', flexShrink: 0, textShadow: `0 0 44px rgba(${hexToRgb(accent)},0.45)` }}>{head.trim()}</span>
+        {tail && <span style={{ color: 'rgba(255,255,255,0.82)', fontFamily: BODY, fontWeight: 500, fontSize: 34, lineHeight: 1.16 }}>— {tail.trim()}</span>}
       </div>
       <div style={{ marginTop: 12, width: `${reveal * 46}%`, height: 4, borderRadius: 999, background: `rgba(${hexToRgb(accent)},0.65)` }} />
     </div>
   );
 };
-/** Beat 1 — the July hook, re-implemented frame for frame (composed grey drum, three typed lines, the iris that fails). */
+/** Beat 1 — cleaning, then sanitising, then concentration verification for food safety. */
 const HookScene: React.FC<SceneProps> = ({ beat, sec: abs, opacity }) => {
   const sec = voSec(beat, abs);
   const frame = useCurrentFrame();
   const zoom = 1.06 + (frame / FPS) * 0.004;
   const enter = seg(sec, -0.4, 1.2);
-  const irisTry = seg(sec, 13.4, 15.2);
-  const irisFail = seg(sec, 17.2, 18.6);
-  const openness = clamp01(irisTry * 0.66 - irisFail * 0.66);
-  const dip = seg(sec, 18.2, 19.6);
+  const cue = (phrase: string) => cueAt(beat, phrase) - beat.voStart;
+  const cleanAt = cue('Detergent');
+  const sanitiseAt = cue('On the cleaned surface');
+  const verifyAt = cue('Chemical concentration verification');
+  const checkedAt = cue('checks that each solution');
   return (
     <AbsoluteFill style={{ background: '#000', opacity }}>
-      <GuardedImg path="ccv-tutorial/shots/drum-grey.png" style={{ position: 'absolute', left: '50%', top: '50%', width: 1920, height: 1080, transform: `translate(-50%, -50%) scale(${zoom})`, opacity: enter * (1 - dip * 0.72), filter: 'saturate(0.32) brightness(0.8)' }} />
-      <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(circle at 50% 46%, transparent 30%, rgba(0,0,0,0.78) 88%)' }} />
-      <div style={{ position: 'absolute', left: 120, top: 210, width: 1500 }}>
-        <TypeOnLine text="TOO STRONG — corrodes the line, burns skin." accent={CORAL} progress={seg(sec, 0.7, 3.0)} dim={1 - dip * 0.7} />
-        <TypeOnLine text="TOO WEAK — bacteria survive the clean." accent={CORAL} progress={seg(sec, 5.1, 7.4)} dim={1 - dip * 0.7} />
-        <TypeOnLine text="NOBODY MEASURED — so nobody knew." accent="#B9C4CE" progress={seg(sec, 10.9, 13.2)} dim={1 - dip * 0.55} />
+      <GuardedImg path="ccv-tutorial/shots/drum-grey.png" style={{ position: 'absolute', left: '50%', top: '50%', width: 1920, height: 1080, transform: `translate(-50%, -50%) scale(${zoom})`, opacity: enter * 0.72, filter: 'saturate(0.38) brightness(0.64)' }} />
+      <div style={{ position: 'absolute', inset: 0, background: `radial-gradient(circle at 76% 50%, rgba(${hexToRgb(SKY)},0.16), transparent 30%), linear-gradient(90deg, rgba(3,9,14,0.94) 0%, rgba(3,9,14,0.76) 60%, rgba(3,9,14,0.48) 100%)` }} />
+      <div style={{ position: 'absolute', left: 120, top: 82 }}>
+        <ChipLabel text={beat.chip} appear={seg(sec, -0.1, 0.9)} color={SKY} />
       </div>
-      <Iris cx={962} cy={585} r={205} openness={openness} flicker={irisTry > 0.2 ? 0.55 + irisFail * 0.4 : 0} glow={0.7} />
-      {irisFail >= 1 && (
-        <div style={{ position: 'absolute', left: 690, top: 812, color: 'rgba(255,255,255,0.5)', fontFamily: BODY, fontSize: 26, letterSpacing: 3.5, textTransform: 'uppercase', opacity: seg(sec, 18.4, 19.2) * (1 - seg(sec, 19.9, 20.4)) }}>
-          nobody was watching
+      <div style={{ position: 'absolute', left: 120, top: 170, width: 1620 }}>
+        <TypeOnLine text="01 CLEAN — right-strength detergent helps remove food residues + biofilm." accent={SKY} progress={seg(sec, cleanAt - 0.25, cleanAt + 1.3)} dim={1} />
+        <TypeOnLine text="02 SANITISE — used for the required kill step · approved concentration + contact time." accent={AMBER} progress={seg(sec, sanitiseAt - 0.25, sanitiseAt + 1.3)} dim={1} />
+        <TypeOnLine text="03 VERIFY — each solution checked against its approved range." accent={EMERALD} progress={seg(sec, verifyAt - 0.25, verifyAt + 1.3)} dim={1} />
+      </div>
+      <div style={{ position: 'absolute', left: 120, bottom: 88, display: 'flex', alignItems: 'center', gap: 18, border: `2px solid rgba(${hexToRgb(EMERALD)},0.58)`, background: `rgba(${hexToRgb(EMERALD)},0.12)`, borderRadius: 18, padding: '16px 24px', opacity: seg(sec, checkedAt - 0.25, checkedAt + 0.8) }}>
+        <div style={{ minWidth: 64, height: 38, borderRadius: 19, padding: '0 12px', display: 'flex', alignItems: 'center', justifyContent: 'center', background: EMERALD, color: '#fff', fontFamily: DISPLAY, fontSize: 21, fontWeight: 700, letterSpacing: 1.5 }}>
+          CCV
         </div>
-      )}
-      <div style={{ position: 'absolute', right: 84, bottom: 44, background: '#F7FAFC', borderRadius: 14, padding: '10px 18px', display: 'flex', alignItems: 'center', opacity: seg(sec, 0.9, 2.0) * (1 - dip * 0.75) * 0.92 }}>
+        <div style={{ color: '#fff', fontFamily: DISPLAY, fontSize: 31, fontWeight: 700, letterSpacing: 2.5, textTransform: 'uppercase' }}>Concentration checked against approved range</div>
+      </div>
+      <div style={{ position: 'absolute', right: 84, bottom: 44, background: '#F7FAFC', borderRadius: 14, padding: '10px 18px', display: 'flex', alignItems: 'center', opacity: seg(sec, 0.9, 2.0) * 0.92 }}>
         <GuardedImg path="images/ecowize-logo.webp" style={{ width: 148, height: 54, objectFit: 'contain' }} />
       </div>
     </AbsoluteFill>
@@ -554,7 +590,7 @@ const EscalationScene: React.FC<SceneProps> = ({ beat, sec: abs, opacity }) => {
               <AppBadge text="NCR · CCV ESCALATION" color={CORAL} size={22} />
               <div style={{ marginTop: 14, color: FG, fontFamily: DISPLAY, fontWeight: 700, fontSize: 32 }}>Sandrox PA · Crate washers 1</div>
               <div style={{ marginTop: 10, color: FG2, fontFamily: BODY, fontSize: 21, lineHeight: 1.45 }}>
-                First reading 3.0 % · re-test 3.5 % — both out of 0.3–2.0 %.
+                First reading 3.8 % · re-test 5.7 % — both out of 0.3–2.0 %.
                 <br />
                 Corrective: re-mixed the dilution. Pump suspect.
               </div>
@@ -788,19 +824,25 @@ const Stage: React.FC = () => {
             <Headline text={copy.headline} appear={col.textIn} size={64} width={STAGE_W} />
             {copy.body ? <BodyText text={copy.body} appear={col.textIn} width={STAGE_W - 80} /> : null}
             {col.beat.id === '04-issue' ? (
-              <div style={{ position: 'relative', marginTop: 30, height: 200 }}>
+              <div style={{ position: 'relative', marginTop: 18, height: 176 }}>
                 <div style={{ position: 'absolute', left: 0, top: 0, width: STAGE_W }}>
                   <IssueWalkPanel beat={col.beat} sec={sec} appear={col.textIn} />
                 </div>
                 <div style={{ position: 'absolute', left: 0, top: 0, width: STAGE_W }}>
                   <ComputedPanel beat={col.beat} sec={sec} appear={col.textIn} />
                 </div>
+                <div style={{ position: 'absolute', left: 0, top: 0, width: STAGE_W }}>
+                  <ManualCompletionPanel beat={col.beat} sec={sec} appear={col.textIn} />
+                </div>
+                <div style={{ position: 'absolute', left: 0, top: 0, width: STAGE_W }}>
+                  <PendingRoutePanel beat={col.beat} sec={sec} appear={col.textIn} />
+                </div>
               </div>
             ) : null}
             {col.zooms.length ? (
-              <div style={{ position: 'relative', marginTop: 28, height: ZOOM_MAX_H }}>
+              <div style={{ position: 'relative', marginTop: col.beat.id === '04-issue' ? 4 : 28, height: ZOOM_MAX_H }}>
                 {col.zooms.map(({ step, appear }) => (
-                  <div key={step.box ?? step.cue} style={{ position: 'absolute', left: 0, top: 0 }}>
+                  <div key={`${step.box ?? 'clear'}-${step.cue ?? 'start'}`} style={{ position: 'absolute', left: 0, top: 0 }}>
                     <ZoomPanel beat={col.beat} zoom={step} appear={appear} />
                   </div>
                 ))}
@@ -867,7 +909,6 @@ export const Ccv2ComposeProof: React.FC = () => {
     { id: '04-issue', label: '04 · batch / lot — raw, composed', x: 32, y: 480, w: 656, h: 160, s: 1.4 },
     { id: '04-issue', label: '04 · chemical + water — raw, composed', x: 32, y: 1120, w: 656, h: 160, s: 1.4 },
   ];
-  const lock: Crop = { id: '06-lock', label: '06 · station, range hero, no-spec banner — raw | composed', x: 32, y: 320, w: 656, h: 1040, s: 0.66 };
   return (
     <AbsoluteFill style={{ background: CANVAS, fontFamily: BODY, color: APP_INK }}>
       {form.map((c, i) => (
@@ -878,12 +919,10 @@ export const Ccv2ComposeProof: React.FC = () => {
           {cell(c, true)}
         </div>
       ))}
-      <div style={{ position: 'absolute', left: 1000, top: 12 }}>
-        {label(lock.label)}
-        <div style={{ display: 'flex', gap: 20 }}>
-          {cell(lock, false)}
-          {cell(lock, true)}
-        </div>
+      <div style={{ position: 'absolute', left: 1000, top: 110, width: 820, padding: 34, borderRadius: 18, border: `2px solid rgba(${hexToRgb(SKY)},0.45)`, background: '#FFFFFF' }}>
+        {label('04 · production disclosure')}
+        <div style={{ color: APP_INK, fontFamily: DISPLAY, fontWeight: 700, fontSize: 48, lineHeight: 1.05 }}>Form values and the manual completion dialog are composed illustrations.</div>
+        <div style={{ marginTop: 22, color: APP_MUTED, fontFamily: BODY, fontSize: 28, lineHeight: 1.45 }}>No live issue was submitted. Awaiting verification and its Verify destination are genuine current-build captures of a separate existing Brito's pending check.</div>
       </div>
     </AbsoluteFill>
   );

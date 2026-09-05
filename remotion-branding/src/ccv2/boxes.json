@@ -75,6 +75,15 @@
     "still": "ccv-04",
     "note": "ISSUE SCOPE segment: ENTIRE FACTORY / DEPARTMENT"
   },
+  "issueType": {
+    "nx": 0.0306,
+    "ny": 0.5438,
+    "nw": 0.9389,
+    "nh": 0.1375,
+    "color": "sky",
+    "still": "ccv-04",
+    "note": "ISSUE TYPE segment: MANUAL DILUTION / DEPT-DOSING POINT"
+  },
   "quantities": {
     "nx": 0.0306,
     "ny": 0.7,
@@ -93,6 +102,24 @@
     "still": "ccv-04",
     "note": "COMPUTED DILUTION card — only its head is above the nav pill in the capture; the value is carried by the column panel"
   },
+  "awaitingIssue": {
+    "nx": 0.0306,
+    "ny": 0.2938,
+    "nw": 0.9389,
+    "nh": 0.2475,
+    "color": "amber",
+    "still": "ccv-04c-awaiting",
+    "note": "real current-build Brito's capture of a separate existing pending check: AWAITING VERIFICATION includes prior days and exposes VERIFY; it is not the composed manual form example"
+  },
+  "pendingVerifyHero": {
+    "nx": 0.0306,
+    "ny": 0.1875,
+    "nw": 0.9389,
+    "nh": 0.275,
+    "color": "sky",
+    "still": "ccv-04d-pending-verify",
+    "note": "real current-build destination for the separate Brito's pending-check example: same ECO-CLEAN FA15 issue, Conductivity method; the tutorial crop ends before baseline content"
+  },
   "rangeCard": {
     "nx": 0.0306,
     "ny": 0.3106,
@@ -100,7 +127,7 @@
     "nh": 0.1694,
     "color": "sky",
     "still": "ccv-05",
-    "note": "APPROVED RANGE 0.3–2.0 % · Method: Titration (drops)"
+    "note": "real current-build intermediate client-side capture: APPROVED RANGE 0.3–2.0 % · Titration (drops), with 20 drops entered and percentage still empty"
   },
   "calcLine": {
     "nx": 0.0417,
@@ -110,24 +137,6 @@
     "color": "sky",
     "still": "ccv-05b-sheet",
     "note": "CALCULATION box in the How to test sheet: % Sandrox PA = Drops × 0.095"
-  },
-  "lockCard": {
-    "nx": 0.0306,
-    "ny": 0.3106,
-    "nw": 0.9375,
-    "nh": 0.1144,
-    "color": "amber",
-    "still": "ccv-06",
-    "note": "composed: the shortened APPROVED RANGE card (163px) holding only 'No range configured'"
-  },
-  "lockBanner": {
-    "nx": 0.0306,
-    "ny": 0.7175,
-    "nw": 0.9389,
-    "nh": 0.0669,
-    "color": "amber",
-    "still": "ccv-06",
-    "note": "composed: the app's no-spec banner in the CAPTURE READING slot, re-flowed up 88px with the band below the shortened card"
   },
   "baselineCard": {
     "nx": 0.0306,
@@ -154,7 +163,7 @@
     "nh": 0.0569,
     "color": "emerald",
     "still": "ccv-08",
-    "note": "CAPTURED · IN SPEC = 1.0 % verdict pill"
+    "note": "real client-side capture: 20 drops and 1.9 %, with the IN SPEC verdict (20 × 0.095 = 1.9 exactly)"
   },
   "verdictFail": {
     "nx": 0.0306,
@@ -163,34 +172,34 @@
     "nh": 0.0569,
     "color": "coral",
     "still": "ccv-09",
-    "note": "CAPTURED · OUT OF SPEC = 3.0 % verdict pill"
+    "note": "real client-side capture: 40 drops and 3.8 %, with the OUT OF SPEC verdict (40 × 0.095 = 3.8 exactly)"
   },
   "retestBlock": {
     "nx": 0.0306,
-    "ny": 0.3844,
+    "ny": 0.315,
     "nw": 0.9389,
-    "nh": 0.3406,
+    "nh": 0.374,
     "color": "amber",
     "still": "ccv-09b-retest",
-    "note": "CORRECTIVE ACTION · REQUIRED field + RE-TEST READING · REQUIRED fields"
+    "note": "measured y 504..1102: real client-side corrective action plus passing re-test, 20 drops and 1.9 %"
   },
   "retestFailedPill": {
     "nx": 0.0306,
-    "ny": 0.725,
+    "ny": 0.6406,
     "nw": 0.9389,
     "nh": 0.0537,
     "color": "coral",
     "still": "ccv-10",
-    "note": "CAPTURED · RE-TEST FAILED pill"
+    "note": "real client-side capture: RE-TEST FAILED after 60 drops and 5.7 %"
   },
   "escalationCard": {
     "nx": 0.0306,
-    "ny": 0.7913,
+    "ny": 0.7031,
     "nw": 0.9389,
-    "nh": 0.0806,
+    "nh": 0.2656,
     "color": "coral",
     "still": "ccv-10",
-    "note": "SM ESCALATION · REQUIRED label + its first line (the second line and the site-manager field sit under the nav pill in the capture)"
+    "note": "real client-side capture: SM ESCALATION · REQUIRED card after the 5.7 % failed re-test; no record/escalate action was submitted"
   },
   "verifiedCard": {
     "nx": 0.0306,

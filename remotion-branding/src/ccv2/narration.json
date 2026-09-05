@@ -10,9 +10,9 @@
     {
       "id": "01-hook",
       "shot": null,
-      "chip": "Too strong · too weak",
+      "chip": "Food safety · clean → sanitise → verify",
       "ring": null,
-      "script": "Mix a cleaning chemical too strong, and it eats your equipment and burns your people. Mix it too weak, and it leaves behind the very bacteria it was meant to kill. And the worst part? Nobody sees the mistake — not until the audit, the injury, or the recall."
+      "script": "Food safety starts with effective cleaning. Detergent at the right strength helps remove food residues and biofilm. On the cleaned surface, sanitiser is then used for the required kill step, at the approved concentration and contact time. Chemical concentration verification — CCV — checks that each solution is within its approved range."
     },
     {
       "id": "02-strip",
@@ -31,23 +31,16 @@
     {
       "id": "04-issue",
       "shot": "ccv-04",
-      "chip": "+ picker → issue form · the % computes itself",
+      "chip": "+ issue → Verify now / later → Awaiting verification",
       "ring": "batchField",
-      "script": "Issuing starts with the plus. Pick the station. Then four things, every time. The batch or lot number — that is the traceability line, and the app will not let you skip it. The scope: the entire factory, or one department. The issue type. And in manual dilution, you enter both — the litres of chemical, and the litres of water. You do not work out the percentage. The app does, live, against the approved range. Green, you carry on. Coral, you know before you pour."
+      "script": "Issuing starts with the plus. Pick the station. Then complete the form: the batch or lot number, the scope, issue type and quantities. For manual dilution, enter both chemical and water; the app calculates the percentage against the approved range. Record the issue. For a manual dilution, normally choose Verify now. Verify later leaves the check pending. For satellites and dosing stations, you can return to verification later. On the Chemical hub, open Awaiting verification. It includes issues from earlier days. Find the issue and tap Verify to continue its check."
     },
     {
       "id": "05-standard",
       "shot": "ccv-05",
-      "chip": "Verify card · approved range · How to test",
+      "chip": "Drop method · required count + matching %",
       "ring": "rangeCard",
-      "script": "Now verification. Walk up to the station and the standard is already waiting. The approved range — nought point three to two percent. The method — titration drops, for this chemical. The operator does not choose either. And if they have forgotten how: How to test. The reagents. The procedure, step by step. The calculation — drops times nought point nought nine five. The standard lives in the app, not in anyone's memory."
-    },
-    {
-      "id": "06-lock",
-      "shot": "ccv-06",
-      "chip": "Verify · no spec set",
-      "ring": "lockCard",
-      "script": "Here is the failure mode most people never see. A station that has no specification yet. No range, no method. The app does not guess. It locks the reading — capture is unavailable — and it tells you why, and who to ask. A number recorded against no standard is not verification. It is a guess with a timestamp."
+      "script": "Now verification. The approved range is already waiting — nought point three to two percent — and the selected method is titration drops. The operator does not choose either. Tap How to test. The reagents are listed. The procedure is step by step. The calculation is drops times nought point nought nine five. Follow the work instruction. For this method, enter both the drop count and the percentage it gives."
     },
     {
       "id": "07-baseline",
@@ -59,16 +52,16 @@
     {
       "id": "08-inspec",
       "shot": "ccv-08",
-      "chip": "Reading → verdict · in spec",
+      "chip": "20 drops × 0.095 → 1.9% · in spec",
       "ring": "verdictPass",
-      "script": "Most days it is this simple. Count the drops if you want the log. Enter the reading — one percent. Captured. In spec. The verdict is not the operator's opinion. It is the reading against the range. Record it, and that dosing point is verified for the cadence."
+      "script": "Most days it is this simple. Follow the drop procedure and enter twenty drops. Enter the reading — one point nine percent. In spec. The verdict is the entered reading against the approved range, not the operator's opinion. Record it, and that dosing point is verified for the cadence."
     },
     {
       "id": "09-outofspec",
       "shot": "ccv-09",
-      "chip": "Out of spec · corrective action · re-test",
+      "chip": "40 drops × 0.095 → 3.8% · re-test",
       "ring": "verdictFail",
-      "script": "Three percent. Out of spec. And now the app simply refuses to move on. Two things appear, and both are required. What you did — re-mixed, re-calibrated the pump, replaced the cartridge. And a re-test reading. The button stays locked until both exist. So you fix it, you test again, and if it passes, the record shows both: the miss, and the recovery. That is not blame. That is the second pair of eyes doing its job."
+      "script": "Forty drops. Three point eight percent. Out of spec. Two things appear, and both are required before recording: corrective action and a re-test reading. In What you did, record the action taken. Then repeat the method: enter twenty drops and one point nine percent. If the re-test passes, the record keeps both the miss and the recovery. That is the second pair of eyes doing its job."
     },
     {
       "id": "10-escalate",
