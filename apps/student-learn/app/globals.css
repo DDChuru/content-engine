@@ -44,3 +44,10 @@ body {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* Ink tutor: a pen stroke draws itself from its start to its end. */
+@keyframes ink-write {
+  to {
+    stroke-dashoffset: 0;
+  }
+}

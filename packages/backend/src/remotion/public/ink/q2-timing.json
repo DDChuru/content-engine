@@ -1,0 +1,47 @@
+{
+ "total": 43.311,
+ "beats": [
+  {
+   "id": "hook",
+   "text": "Chain rule. Bracket to a power. Watch the pen, this takes thirty seconds.",
+   "start": 0.0,
+   "duration": 6.165
+  },
+  {
+   "id": "line1",
+   "text": "We're given y equals two x plus one, all to the power five.",
+   "start": 6.415,
+   "duration": 3.762
+  },
+  {
+   "id": "line2",
+   "text": "Bracket to a power? Let u be the inside. So y is just u to the five.",
+   "start": 10.427,
+   "duration": 6.296
+  },
+  {
+   "id": "line3",
+   "text": "Differentiate each part. dy by du is five u to the power four. du by dx is two.",
+   "start": 16.972,
+   "duration": 10.71
+  },
+  {
+   "id": "line4",
+   "text": "Chain rule: multiply them. Then put the inside back.",
+   "start": 27.932,
+   "duration": 4.127
+  },
+  {
+   "id": "answer",
+   "text": "So dy by dx is ten, times two x plus one, to the power four.",
+   "start": 32.31,
+   "duration": 4.963
+  },
+  {
+   "id": "annot",
+   "text": "That multiply step is the chain rule. Every time. Follow for the next one.",
+   "start": 37.523,
+   "duration": 5.747
+  }
+ ]
+}

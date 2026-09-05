@@ -58,6 +58,7 @@ import { StoichiometryReactingMassesTikTok, StoichiometryReactingMassesTikTokPro
 import { StoichiometrySolutionsTikTok, StoichiometrySolutionsTikTokProps, getStoichiometrySolutionsDuration, StoichiometrySolutionsCover } from './compositions/StoichiometrySolutionsTikTok';
 import { StoichiometryLimitingTikTok, StoichiometryLimitingTikTokProps, getStoichiometryLimitingDuration, StoichiometryLimitingCover } from './compositions/StoichiometryLimitingTikTok';
 import { StoichiometryGasVolumesTikTok, StoichiometryGasVolumesTikTokProps, getStoichiometryGasVolumesDuration, StoichiometryGasVolumesCover } from './compositions/StoichiometryGasVolumesTikTok';
+import { InkTutorTikTok, InkTutorTikTokProps, getInkTutorTikTokDuration } from './compositions/InkTutorTikTok';
 
 const fps = 30;
 
@@ -1166,6 +1167,15 @@ export const RemotionRoot: React.FC = () => {
           audioEnabled: true,
           cueOverrides: undefined,
         } satisfies StoichiometrySolutionsTikTokProps}
+      />
+      <Composition
+        id="InkTutorQ2"
+        component={InkTutorTikTok}
+        durationInFrames={getInkTutorTikTokDuration(fps)}
+        fps={fps}
+        width={1080}
+        height={1920}
+        defaultProps={{ audioEnabled: true, hand: 'fable' } satisfies InkTutorTikTokProps}
       />
       <Composition
         id="StoichiometrySolutions-Cover"

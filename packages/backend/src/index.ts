@@ -49,6 +49,7 @@ import lifeStoriesRoutes from './routes/life-stories.js';
 import narrationStudioRoutes from './routes/narration-studio.js';
 import studioProjectsRoutes from './routes/studio-projects.js';
 import trainingExportRoutes from './routes/training-export.js';
+import inkRoutes from './routes/ink.js';
 
 // Initialize Express app
 const app = express();
@@ -116,6 +117,7 @@ app.locals.github = githubService;
 
 // Routes
 app.use('/api/health', healthRoutes);
+app.use('/api/ink', inkRoutes);
 app.use('/api/chat', chatRoutes);
 app.use('/api/generate', generateRoutes);
 app.use('/api/firebase', firebaseRoutes);

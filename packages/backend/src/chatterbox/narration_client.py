@@ -42,6 +42,10 @@ _kokoro_engine = None
 # trig function, so the rewrite is safe. (Not \sin: LaTeX shouldn't reach TTS text at all.)
 _TTS_PRONUNCIATIONS = [
     (re.compile(r"(?<!\\)\b[Ss]in\b"), lambda m: "Sine" if m.group(0)[0] == "S" else "sine"),
+    # Leibniz notation is read letter by letter: dy/dx -> "dee y by dee x", "dy by du" likewise.
+    (re.compile(r"\bd([xyut])\s*/\s*d([xyut])\b"), lambda m: f"dee {m.group(1)} by dee {m.group(2)}"),
+    (re.compile(r"\bd([xyut])\b(?= by | over )"), lambda m: f"dee {m.group(1)}"),
+    (re.compile(r"(?<=by )d([xyut])\b|(?<=over )d([xyut])\b"), lambda m: f"dee {m.group(1) or m.group(2)}"),
 ]
 
 
