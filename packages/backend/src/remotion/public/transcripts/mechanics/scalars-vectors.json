@@ -1,0 +1,2031 @@
+{
+  "project": "mechanics-scalars-vectors",
+  "sceneCount": 11,
+  "totalDuration": 182.987754,
+  "generatedAt": "2026-09-05T11:43:06.690402",
+  "engine": "faster-whisper-small (local)",
+  "scenes": [
+    {
+      "id": "s01",
+      "audio": "scalars-vectors-s01.mp3",
+      "duration": 9.038367,
+      "wordCount": 23,
+      "text": "Mechanics uses two kinds of quantity. Some tell us only how much. Others also tell us which way. Those are scalars and vectors.",
+      "words": [
+        {
+          "word": "Mechanics",
+          "start": 0.0,
+          "end": 0.54
+        },
+        {
+          "word": "uses",
+          "start": 0.54,
+          "end": 0.8
+        },
+        {
+          "word": "two",
+          "start": 0.8,
+          "end": 1.02
+        },
+        {
+          "word": "kinds",
+          "start": 1.02,
+          "end": 1.24
+        },
+        {
+          "word": "of",
+          "start": 1.24,
+          "end": 1.44
+        },
+        {
+          "word": "quantity.",
+          "start": 1.44,
+          "end": 1.86
+        },
+        {
+          "word": "Some",
+          "start": 2.7,
+          "end": 2.86
+        },
+        {
+          "word": "tell",
+          "start": 2.86,
+          "end": 3.1
+        },
+        {
+          "word": "us",
+          "start": 3.1,
+          "end": 3.26
+        },
+        {
+          "word": "only",
+          "start": 3.26,
+          "end": 3.5
+        },
+        {
+          "word": "how",
+          "start": 3.5,
+          "end": 3.68
+        },
+        {
+          "word": "much.",
+          "start": 3.68,
+          "end": 3.94
+        },
+        {
+          "word": "Others",
+          "start": 4.64,
+          "end": 5.02
+        },
+        {
+          "word": "also",
+          "start": 5.02,
+          "end": 5.46
+        },
+        {
+          "word": "tell",
+          "start": 5.46,
+          "end": 5.7
+        },
+        {
+          "word": "us",
+          "start": 5.7,
+          "end": 5.82
+        },
+        {
+          "word": "which",
+          "start": 5.82,
+          "end": 5.98
+        },
+        {
+          "word": "way.",
+          "start": 5.98,
+          "end": 6.2
+        },
+        {
+          "word": "Those",
+          "start": 7.0,
+          "end": 7.18
+        },
+        {
+          "word": "are",
+          "start": 7.18,
+          "end": 7.36
+        },
+        {
+          "word": "scalars",
+          "start": 7.36,
+          "end": 7.9
+        },
+        {
+          "word": "and",
+          "start": 7.9,
+          "end": 8.2
+        },
+        {
+          "word": "vectors.",
+          "start": 8.2,
+          "end": 8.52
+        }
+      ],
+      "cues": {
+        "how-much": 3.5,
+        "which-way": 5.82,
+        "scalars": 7.36,
+        "vectors": 8.2
+      },
+      "generatedAt": "2026-09-05T11:43:06.690402",
+      "engine": "faster-whisper-small (local)"
+    },
+    {
+      "id": "s02",
+      "audio": "scalars-vectors-s02.mp3",
+      "duration": 14.393469,
+      "wordCount": 33,
+      "text": "A scalar is complete once you know its magnitude, meaning its size. A vector needs magnitude and direction. 12 meters per second is a speed. 12 meters per second east is a velocity.",
+      "words": [
+        {
+          "word": "A",
+          "start": 0.0,
+          "end": 0.16
+        },
+        {
+          "word": "scalar",
+          "start": 0.16,
+          "end": 0.46
+        },
+        {
+          "word": "is",
+          "start": 0.46,
+          "end": 1.08
+        },
+        {
+          "word": "complete",
+          "start": 1.08,
+          "end": 1.48
+        },
+        {
+          "word": "once",
+          "start": 1.48,
+          "end": 2.06
+        },
+        {
+          "word": "you",
+          "start": 2.06,
+          "end": 2.24
+        },
+        {
+          "word": "know",
+          "start": 2.24,
+          "end": 2.4
+        },
+        {
+          "word": "its",
+          "start": 2.4,
+          "end": 2.56
+        },
+        {
+          "word": "magnitude,",
+          "start": 2.56,
+          "end": 3.02
+        },
+        {
+          "word": "meaning",
+          "start": 3.52,
+          "end": 3.84
+        },
+        {
+          "word": "its",
+          "start": 3.84,
+          "end": 4.08
+        },
+        {
+          "word": "size.",
+          "start": 4.08,
+          "end": 4.46
+        },
+        {
+          "word": "A",
+          "start": 5.16,
+          "end": 5.28
+        },
+        {
+          "word": "vector",
+          "start": 5.28,
+          "end": 5.6
+        },
+        {
+          "word": "needs",
+          "start": 5.6,
+          "end": 6.22
+        },
+        {
+          "word": "magnitude",
+          "start": 6.22,
+          "end": 6.88
+        },
+        {
+          "word": "and",
+          "start": 6.88,
+          "end": 7.58
+        },
+        {
+          "word": "direction.",
+          "start": 7.58,
+          "end": 7.96
+        },
+        {
+          "word": "12",
+          "start": 8.8,
+          "end": 8.86
+        },
+        {
+          "word": "meters",
+          "start": 8.86,
+          "end": 9.08
+        },
+        {
+          "word": "per",
+          "start": 9.08,
+          "end": 9.34
+        },
+        {
+          "word": "second",
+          "start": 9.34,
+          "end": 9.62
+        },
+        {
+          "word": "is",
+          "start": 9.62,
+          "end": 10.0
+        },
+        {
+          "word": "a",
+          "start": 10.0,
+          "end": 10.12
+        },
+        {
+          "word": "speed.",
+          "start": 10.12,
+          "end": 10.32
+        },
+        {
+          "word": "12",
+          "start": 11.22,
+          "end": 11.54
+        },
+        {
+          "word": "meters",
+          "start": 11.54,
+          "end": 11.84
+        },
+        {
+          "word": "per",
+          "start": 11.84,
+          "end": 12.08
+        },
+        {
+          "word": "second",
+          "start": 12.08,
+          "end": 12.36
+        },
+        {
+          "word": "east",
+          "start": 12.36,
+          "end": 12.78
+        },
+        {
+          "word": "is",
+          "start": 12.78,
+          "end": 13.48
+        },
+        {
+          "word": "a",
+          "start": 13.48,
+          "end": 13.58
+        },
+        {
+          "word": "velocity.",
+          "start": 13.58,
+          "end": 13.92
+        }
+      ],
+      "cues": {
+        "scalar": 0.16,
+        "magnitude": 2.56,
+        "direction": 7.58,
+        "velocity": 13.58
+      },
+      "generatedAt": "2026-09-05T11:43:06.690402",
+      "engine": "faster-whisper-small (local)"
+    },
+    {
+      "id": "s03",
+      "audio": "scalars-vectors-s03.mp3",
+      "duration": 18.573061,
+      "wordCount": 39,
+      "text": "Maya walks 5 meters east, then 2 meters west. Distance counts every part of her route, so it reaches 7 meters. Displacement compares only her finish with her start. She finishes 3 meters east, so that is her displacement.",
+      "words": [
+        {
+          "word": "Maya",
+          "start": 0.0,
+          "end": 0.36
+        },
+        {
+          "word": "walks",
+          "start": 0.36,
+          "end": 1.2
+        },
+        {
+          "word": "5",
+          "start": 1.2,
+          "end": 1.5
+        },
+        {
+          "word": "meters",
+          "start": 1.5,
+          "end": 1.66
+        },
+        {
+          "word": "east,",
+          "start": 1.66,
+          "end": 2.1
+        },
+        {
+          "word": "then",
+          "start": 2.92,
+          "end": 2.98
+        },
+        {
+          "word": "2",
+          "start": 2.98,
+          "end": 3.2
+        },
+        {
+          "word": "meters",
+          "start": 3.2,
+          "end": 3.4
+        },
+        {
+          "word": "west.",
+          "start": 3.4,
+          "end": 3.88
+        },
+        {
+          "word": "Distance",
+          "start": 4.78,
+          "end": 5.44
+        },
+        {
+          "word": "counts",
+          "start": 5.44,
+          "end": 5.72
+        },
+        {
+          "word": "every",
+          "start": 5.72,
+          "end": 6.1
+        },
+        {
+          "word": "part",
+          "start": 6.1,
+          "end": 6.4
+        },
+        {
+          "word": "of",
+          "start": 6.4,
+          "end": 6.56
+        },
+        {
+          "word": "her",
+          "start": 6.56,
+          "end": 6.72
+        },
+        {
+          "word": "route,",
+          "start": 6.72,
+          "end": 6.98
+        },
+        {
+          "word": "so",
+          "start": 7.84,
+          "end": 8.12
+        },
+        {
+          "word": "it",
+          "start": 8.12,
+          "end": 8.24
+        },
+        {
+          "word": "reaches",
+          "start": 8.24,
+          "end": 8.58
+        },
+        {
+          "word": "7",
+          "start": 8.58,
+          "end": 9.02
+        },
+        {
+          "word": "meters.",
+          "start": 9.02,
+          "end": 9.3
+        },
+        {
+          "word": "Displacement",
+          "start": 10.7,
+          "end": 11.36
+        },
+        {
+          "word": "compares",
+          "start": 11.36,
+          "end": 11.9
+        },
+        {
+          "word": "only",
+          "start": 11.9,
+          "end": 12.58
+        },
+        {
+          "word": "her",
+          "start": 12.58,
+          "end": 12.78
+        },
+        {
+          "word": "finish",
+          "start": 12.78,
+          "end": 13.02
+        },
+        {
+          "word": "with",
+          "start": 13.02,
+          "end": 13.7
+        },
+        {
+          "word": "her",
+          "start": 13.7,
+          "end": 13.84
+        },
+        {
+          "word": "start.",
+          "start": 13.84,
+          "end": 14.16
+        },
+        {
+          "word": "She",
+          "start": 14.84,
+          "end": 14.96
+        },
+        {
+          "word": "finishes",
+          "start": 14.96,
+          "end": 15.26
+        },
+        {
+          "word": "3",
+          "start": 15.26,
+          "end": 15.7
+        },
+        {
+          "word": "meters",
+          "start": 15.7,
+          "end": 16.04
+        },
+        {
+          "word": "east,",
+          "start": 16.04,
+          "end": 16.5
+        },
+        {
+          "word": "so",
+          "start": 16.98,
+          "end": 17.16
+        },
+        {
+          "word": "that",
+          "start": 17.16,
+          "end": 17.34
+        },
+        {
+          "word": "is",
+          "start": 17.34,
+          "end": 17.46
+        },
+        {
+          "word": "her",
+          "start": 17.46,
+          "end": 17.58
+        },
+        {
+          "word": "displacement.",
+          "start": 17.58,
+          "end": 18.0
+        }
+      ],
+      "cues": {
+        "five-metres-east": 1.2,
+        "two-metres-west": 2.98,
+        "distance": 4.78,
+        "displacement": 10.7
+      },
+      "generatedAt": "2026-09-05T11:43:06.690402",
+      "engine": "faster-whisper-small (local)"
+    },
+    {
+      "id": "s04",
+      "audio": "scalars-vectors-s04.mp3",
+      "duration": 19.879184,
+      "wordCount": 39,
+      "text": "Speed is distance traveled per unit time. Velocity is displacement per unit time. If Maya's journey takes seven seconds, her average speed is one meter per second. Her average velocity is three sevenths of a meter per second east.",
+      "words": [
+        {
+          "word": "Speed",
+          "start": 0.0,
+          "end": 0.32
+        },
+        {
+          "word": "is",
+          "start": 0.32,
+          "end": 0.56
+        },
+        {
+          "word": "distance",
+          "start": 0.56,
+          "end": 0.92
+        },
+        {
+          "word": "traveled",
+          "start": 0.92,
+          "end": 1.44
+        },
+        {
+          "word": "per",
+          "start": 1.44,
+          "end": 2.06
+        },
+        {
+          "word": "unit",
+          "start": 2.06,
+          "end": 2.32
+        },
+        {
+          "word": "time.",
+          "start": 2.32,
+          "end": 2.68
+        },
+        {
+          "word": "Velocity",
+          "start": 4.26,
+          "end": 4.96
+        },
+        {
+          "word": "is",
+          "start": 4.96,
+          "end": 5.66
+        },
+        {
+          "word": "displacement",
+          "start": 5.66,
+          "end": 6.12
+        },
+        {
+          "word": "per",
+          "start": 6.12,
+          "end": 6.56
+        },
+        {
+          "word": "unit",
+          "start": 6.56,
+          "end": 6.76
+        },
+        {
+          "word": "time.",
+          "start": 6.76,
+          "end": 7.1
+        },
+        {
+          "word": "If",
+          "start": 8.02,
+          "end": 8.1
+        },
+        {
+          "word": "Maya's",
+          "start": 8.1,
+          "end": 8.52
+        },
+        {
+          "word": "journey",
+          "start": 8.52,
+          "end": 8.78
+        },
+        {
+          "word": "takes",
+          "start": 8.78,
+          "end": 10.26
+        },
+        {
+          "word": "seven",
+          "start": 10.26,
+          "end": 10.66
+        },
+        {
+          "word": "seconds,",
+          "start": 10.66,
+          "end": 11.1
+        },
+        {
+          "word": "her",
+          "start": 11.88,
+          "end": 11.98
+        },
+        {
+          "word": "average",
+          "start": 11.98,
+          "end": 12.36
+        },
+        {
+          "word": "speed",
+          "start": 12.36,
+          "end": 12.84
+        },
+        {
+          "word": "is",
+          "start": 12.84,
+          "end": 13.56
+        },
+        {
+          "word": "one",
+          "start": 13.56,
+          "end": 13.82
+        },
+        {
+          "word": "meter",
+          "start": 13.82,
+          "end": 14.08
+        },
+        {
+          "word": "per",
+          "start": 14.08,
+          "end": 14.32
+        },
+        {
+          "word": "second.",
+          "start": 14.32,
+          "end": 14.64
+        },
+        {
+          "word": "Her",
+          "start": 15.7,
+          "end": 15.82
+        },
+        {
+          "word": "average",
+          "start": 15.82,
+          "end": 16.12
+        },
+        {
+          "word": "velocity",
+          "start": 16.12,
+          "end": 16.62
+        },
+        {
+          "word": "is",
+          "start": 16.62,
+          "end": 17.3
+        },
+        {
+          "word": "three",
+          "start": 17.3,
+          "end": 17.56
+        },
+        {
+          "word": "sevenths",
+          "start": 17.56,
+          "end": 18.24
+        },
+        {
+          "word": "of",
+          "start": 18.24,
+          "end": 18.34
+        },
+        {
+          "word": "a",
+          "start": 18.34,
+          "end": 18.44
+        },
+        {
+          "word": "meter",
+          "start": 18.44,
+          "end": 18.68
+        },
+        {
+          "word": "per",
+          "start": 18.68,
+          "end": 18.9
+        },
+        {
+          "word": "second",
+          "start": 18.9,
+          "end": 19.14
+        },
+        {
+          "word": "east.",
+          "start": 19.14,
+          "end": 19.38
+        }
+      ],
+      "cues": {
+        "speed": 0.0,
+        "velocity": 4.26,
+        "one-metre-per-second": 13.56,
+        "east": 19.14
+      },
+      "generatedAt": "2026-09-05T11:43:06.690402",
+      "engine": "faster-whisper-small (local)"
+    },
+    {
+      "id": "s05",
+      "audio": "scalars-vectors-s05.mp3",
+      "duration": 14.28898,
+      "wordCount": 36,
+      "text": "Here is the quickest test. A runner goes 3 meters right and 3 meters back. The distance is 6 meters because the whole route counts. The displacement is 0 because the runner finishes at the start.",
+      "words": [
+        {
+          "word": "Here",
+          "start": 0.0,
+          "end": 0.22
+        },
+        {
+          "word": "is",
+          "start": 0.22,
+          "end": 0.34
+        },
+        {
+          "word": "the",
+          "start": 0.34,
+          "end": 0.48
+        },
+        {
+          "word": "quickest",
+          "start": 0.48,
+          "end": 0.7
+        },
+        {
+          "word": "test.",
+          "start": 0.7,
+          "end": 1.08
+        },
+        {
+          "word": "A",
+          "start": 2.1,
+          "end": 2.44
+        },
+        {
+          "word": "runner",
+          "start": 2.44,
+          "end": 2.66
+        },
+        {
+          "word": "goes",
+          "start": 2.66,
+          "end": 3.06
+        },
+        {
+          "word": "3",
+          "start": 3.06,
+          "end": 3.44
+        },
+        {
+          "word": "meters",
+          "start": 3.44,
+          "end": 3.72
+        },
+        {
+          "word": "right",
+          "start": 3.72,
+          "end": 4.1
+        },
+        {
+          "word": "and",
+          "start": 4.1,
+          "end": 4.74
+        },
+        {
+          "word": "3",
+          "start": 4.74,
+          "end": 5.04
+        },
+        {
+          "word": "meters",
+          "start": 5.04,
+          "end": 5.36
+        },
+        {
+          "word": "back.",
+          "start": 5.36,
+          "end": 5.7
+        },
+        {
+          "word": "The",
+          "start": 6.58,
+          "end": 6.7
+        },
+        {
+          "word": "distance",
+          "start": 6.7,
+          "end": 7.02
+        },
+        {
+          "word": "is",
+          "start": 7.02,
+          "end": 7.28
+        },
+        {
+          "word": "6",
+          "start": 7.28,
+          "end": 7.6
+        },
+        {
+          "word": "meters",
+          "start": 7.6,
+          "end": 7.98
+        },
+        {
+          "word": "because",
+          "start": 7.98,
+          "end": 8.76
+        },
+        {
+          "word": "the",
+          "start": 8.76,
+          "end": 8.96
+        },
+        {
+          "word": "whole",
+          "start": 8.96,
+          "end": 9.14
+        },
+        {
+          "word": "route",
+          "start": 9.14,
+          "end": 9.34
+        },
+        {
+          "word": "counts.",
+          "start": 9.34,
+          "end": 9.7
+        },
+        {
+          "word": "The",
+          "start": 10.44,
+          "end": 10.52
+        },
+        {
+          "word": "displacement",
+          "start": 10.52,
+          "end": 10.9
+        },
+        {
+          "word": "is",
+          "start": 10.9,
+          "end": 11.24
+        },
+        {
+          "word": "0",
+          "start": 11.24,
+          "end": 11.56
+        },
+        {
+          "word": "because",
+          "start": 11.56,
+          "end": 12.32
+        },
+        {
+          "word": "the",
+          "start": 12.32,
+          "end": 12.5
+        },
+        {
+          "word": "runner",
+          "start": 12.5,
+          "end": 12.76
+        },
+        {
+          "word": "finishes",
+          "start": 12.76,
+          "end": 13.16
+        },
+        {
+          "word": "at",
+          "start": 13.16,
+          "end": 13.42
+        },
+        {
+          "word": "the",
+          "start": 13.42,
+          "end": 13.52
+        },
+        {
+          "word": "start.",
+          "start": 13.52,
+          "end": 13.76
+        }
+      ],
+      "cues": {
+        "right": 3.72,
+        "back": 5.36,
+        "six-metres": 7.28,
+        "zero": 11.24
+      },
+      "generatedAt": "2026-09-05T11:43:06.690402",
+      "engine": "faster-whisper-small (local)"
+    },
+    {
+      "id": "s06",
+      "audio": "scalars-vectors-s06.mp3",
+      "duration": 20.192653,
+      "wordCount": 40,
+      "text": "Acceleration describes a change in velocity. So it is a vector. Speeding up changes velocity. Slowing down changes it too. Even turning changes velocity. Force is also a vector. A resultant force gives an object acceleration in the force's direction.",
+      "words": [
+        {
+          "word": "Acceleration",
+          "start": 0.0,
+          "end": 0.34
+        },
+        {
+          "word": "describes",
+          "start": 0.34,
+          "end": 0.96
+        },
+        {
+          "word": "a",
+          "start": 0.96,
+          "end": 1.36
+        },
+        {
+          "word": "change",
+          "start": 1.36,
+          "end": 1.66
+        },
+        {
+          "word": "in",
+          "start": 1.66,
+          "end": 1.92
+        },
+        {
+          "word": "velocity.",
+          "start": 1.92,
+          "end": 2.28
+        },
+        {
+          "word": "So",
+          "start": 3.28,
+          "end": 3.32
+        },
+        {
+          "word": "it",
+          "start": 3.32,
+          "end": 3.46
+        },
+        {
+          "word": "is",
+          "start": 3.46,
+          "end": 3.6
+        },
+        {
+          "word": "a",
+          "start": 3.6,
+          "end": 3.72
+        },
+        {
+          "word": "vector.",
+          "start": 3.72,
+          "end": 3.96
+        },
+        {
+          "word": "Speeding",
+          "start": 4.68,
+          "end": 5.14
+        },
+        {
+          "word": "up",
+          "start": 5.14,
+          "end": 5.42
+        },
+        {
+          "word": "changes",
+          "start": 5.42,
+          "end": 6.2
+        },
+        {
+          "word": "velocity.",
+          "start": 6.2,
+          "end": 6.7
+        },
+        {
+          "word": "Slowing",
+          "start": 7.64,
+          "end": 7.92
+        },
+        {
+          "word": "down",
+          "start": 7.92,
+          "end": 8.28
+        },
+        {
+          "word": "changes",
+          "start": 8.28,
+          "end": 9.2
+        },
+        {
+          "word": "it",
+          "start": 9.2,
+          "end": 9.4
+        },
+        {
+          "word": "too.",
+          "start": 9.4,
+          "end": 9.62
+        },
+        {
+          "word": "Even",
+          "start": 10.44,
+          "end": 10.66
+        },
+        {
+          "word": "turning",
+          "start": 10.66,
+          "end": 10.96
+        },
+        {
+          "word": "changes",
+          "start": 10.96,
+          "end": 11.32
+        },
+        {
+          "word": "velocity.",
+          "start": 11.32,
+          "end": 11.8
+        },
+        {
+          "word": "Force",
+          "start": 12.76,
+          "end": 13.1
+        },
+        {
+          "word": "is",
+          "start": 13.1,
+          "end": 13.68
+        },
+        {
+          "word": "also",
+          "start": 13.68,
+          "end": 13.88
+        },
+        {
+          "word": "a",
+          "start": 13.88,
+          "end": 14.06
+        },
+        {
+          "word": "vector.",
+          "start": 14.06,
+          "end": 14.28
+        },
+        {
+          "word": "A",
+          "start": 15.26,
+          "end": 15.34
+        },
+        {
+          "word": "resultant",
+          "start": 15.34,
+          "end": 15.74
+        },
+        {
+          "word": "force",
+          "start": 15.74,
+          "end": 16.06
+        },
+        {
+          "word": "gives",
+          "start": 16.06,
+          "end": 16.72
+        },
+        {
+          "word": "an",
+          "start": 16.72,
+          "end": 16.94
+        },
+        {
+          "word": "object",
+          "start": 16.94,
+          "end": 17.24
+        },
+        {
+          "word": "acceleration",
+          "start": 17.24,
+          "end": 17.94
+        },
+        {
+          "word": "in",
+          "start": 18.3,
+          "end": 18.66
+        },
+        {
+          "word": "the",
+          "start": 18.66,
+          "end": 18.76
+        },
+        {
+          "word": "force's",
+          "start": 18.76,
+          "end": 19.16
+        },
+        {
+          "word": "direction.",
+          "start": 19.16,
+          "end": 19.66
+        }
+      ],
+      "cues": {
+        "acceleration": 0.0,
+        "slowing-down": 7.64,
+        "turning": 10.66,
+        "force": 12.76
+      },
+      "generatedAt": "2026-09-05T11:43:06.690402",
+      "engine": "faster-whisper-small (local)"
+    },
+    {
+      "id": "s07",
+      "audio": "scalars-vectors-s07.mp3",
+      "duration": 18.703673,
+      "wordCount": 41,
+      "text": "On a straight line, choose a positive direction before you calculate. If right is positive, a leftward velocity has a negative component. Negative does not mean a negative speed. It tells you the object moves opposite to your chosen positive direction.",
+      "words": [
+        {
+          "word": "On",
+          "start": 0.0,
+          "end": 0.16
+        },
+        {
+          "word": "a",
+          "start": 0.16,
+          "end": 0.3
+        },
+        {
+          "word": "straight",
+          "start": 0.3,
+          "end": 0.48
+        },
+        {
+          "word": "line,",
+          "start": 0.48,
+          "end": 0.9
+        },
+        {
+          "word": "choose",
+          "start": 1.3,
+          "end": 1.84
+        },
+        {
+          "word": "a",
+          "start": 1.84,
+          "end": 2.06
+        },
+        {
+          "word": "positive",
+          "start": 2.06,
+          "end": 2.34
+        },
+        {
+          "word": "direction",
+          "start": 2.34,
+          "end": 2.92
+        },
+        {
+          "word": "before",
+          "start": 2.92,
+          "end": 3.68
+        },
+        {
+          "word": "you",
+          "start": 3.68,
+          "end": 3.88
+        },
+        {
+          "word": "calculate.",
+          "start": 3.88,
+          "end": 4.32
+        },
+        {
+          "word": "If",
+          "start": 5.08,
+          "end": 5.66
+        },
+        {
+          "word": "right",
+          "start": 5.66,
+          "end": 5.94
+        },
+        {
+          "word": "is",
+          "start": 5.94,
+          "end": 6.18
+        },
+        {
+          "word": "positive,",
+          "start": 6.18,
+          "end": 6.62
+        },
+        {
+          "word": "a",
+          "start": 7.24,
+          "end": 7.34
+        },
+        {
+          "word": "leftward",
+          "start": 7.34,
+          "end": 7.76
+        },
+        {
+          "word": "velocity",
+          "start": 7.76,
+          "end": 8.26
+        },
+        {
+          "word": "has",
+          "start": 8.26,
+          "end": 9.06
+        },
+        {
+          "word": "a",
+          "start": 9.06,
+          "end": 9.22
+        },
+        {
+          "word": "negative",
+          "start": 9.22,
+          "end": 9.42
+        },
+        {
+          "word": "component.",
+          "start": 9.42,
+          "end": 10.06
+        },
+        {
+          "word": "Negative",
+          "start": 11.04,
+          "end": 11.34
+        },
+        {
+          "word": "does",
+          "start": 11.34,
+          "end": 11.66
+        },
+        {
+          "word": "not",
+          "start": 11.66,
+          "end": 11.88
+        },
+        {
+          "word": "mean",
+          "start": 11.88,
+          "end": 12.16
+        },
+        {
+          "word": "a",
+          "start": 12.16,
+          "end": 12.58
+        },
+        {
+          "word": "negative",
+          "start": 12.58,
+          "end": 12.86
+        },
+        {
+          "word": "speed.",
+          "start": 12.86,
+          "end": 13.3
+        },
+        {
+          "word": "It",
+          "start": 14.3,
+          "end": 14.5
+        },
+        {
+          "word": "tells",
+          "start": 14.5,
+          "end": 14.66
+        },
+        {
+          "word": "you",
+          "start": 14.66,
+          "end": 14.88
+        },
+        {
+          "word": "the",
+          "start": 14.88,
+          "end": 15.08
+        },
+        {
+          "word": "object",
+          "start": 15.08,
+          "end": 15.44
+        },
+        {
+          "word": "moves",
+          "start": 15.44,
+          "end": 15.76
+        },
+        {
+          "word": "opposite",
+          "start": 15.76,
+          "end": 16.2
+        },
+        {
+          "word": "to",
+          "start": 16.2,
+          "end": 16.82
+        },
+        {
+          "word": "your",
+          "start": 16.82,
+          "end": 16.96
+        },
+        {
+          "word": "chosen",
+          "start": 16.96,
+          "end": 17.28
+        },
+        {
+          "word": "positive",
+          "start": 17.28,
+          "end": 17.68
+        },
+        {
+          "word": "direction.",
+          "start": 17.68,
+          "end": 18.18
+        }
+      ],
+      "cues": {
+        "positive-direction": 2.06,
+        "leftward": 7.34,
+        "negative-component": 9.22,
+        "opposite": 15.76
+      },
+      "generatedAt": "2026-09-05T11:43:06.690402",
+      "engine": "faster-whisper-small (local)"
+    },
+    {
+      "id": "s08",
+      "audio": "scalars-vectors-s08.mp3",
+      "duration": 11.180408,
+      "wordCount": 23,
+      "text": "Now build the table. Speed is scalar, distance is scalar, mass is scalar, time is scalar. Each needs a size, but no direction.",
+      "words": [
+        {
+          "word": "Now",
+          "start": 0.0,
+          "end": 0.18
+        },
+        {
+          "word": "build",
+          "start": 0.18,
+          "end": 0.54
+        },
+        {
+          "word": "the",
+          "start": 0.54,
+          "end": 0.74
+        },
+        {
+          "word": "table.",
+          "start": 0.74,
+          "end": 1.04
+        },
+        {
+          "word": "Speed",
+          "start": 1.64,
+          "end": 2.16
+        },
+        {
+          "word": "is",
+          "start": 2.16,
+          "end": 2.38
+        },
+        {
+          "word": "scalar,",
+          "start": 2.38,
+          "end": 2.82
+        },
+        {
+          "word": "distance",
+          "start": 3.5,
+          "end": 3.76
+        },
+        {
+          "word": "is",
+          "start": 3.76,
+          "end": 4.0
+        },
+        {
+          "word": "scalar,",
+          "start": 4.0,
+          "end": 4.4
+        },
+        {
+          "word": "mass",
+          "start": 5.04,
+          "end": 5.32
+        },
+        {
+          "word": "is",
+          "start": 5.32,
+          "end": 5.56
+        },
+        {
+          "word": "scalar,",
+          "start": 5.56,
+          "end": 5.98
+        },
+        {
+          "word": "time",
+          "start": 6.56,
+          "end": 6.86
+        },
+        {
+          "word": "is",
+          "start": 6.86,
+          "end": 7.04
+        },
+        {
+          "word": "scalar.",
+          "start": 7.04,
+          "end": 7.44
+        },
+        {
+          "word": "Each",
+          "start": 8.3,
+          "end": 8.52
+        },
+        {
+          "word": "needs",
+          "start": 8.52,
+          "end": 8.78
+        },
+        {
+          "word": "a",
+          "start": 8.78,
+          "end": 8.94
+        },
+        {
+          "word": "size,",
+          "start": 8.94,
+          "end": 9.26
+        },
+        {
+          "word": "but",
+          "start": 9.7,
+          "end": 9.92
+        },
+        {
+          "word": "no",
+          "start": 9.92,
+          "end": 10.2
+        },
+        {
+          "word": "direction.",
+          "start": 10.2,
+          "end": 10.62
+        }
+      ],
+      "cues": {
+        "speed": 1.64,
+        "distance": 3.5,
+        "mass": 5.04,
+        "time": 6.56
+      },
+      "generatedAt": "2026-09-05T11:43:06.690402",
+      "engine": "faster-whisper-small (local)"
+    },
+    {
+      "id": "s09",
+      "audio": "scalars-vectors-s09.mp3",
+      "duration": 13.87102,
+      "wordCount": 23,
+      "text": "Energy is scalar as well. Velocity is vector. Displacement is vector. Acceleration is vector. For each vector, direction is part of the answer.",
+      "words": [
+        {
+          "word": "Energy",
+          "start": 0.0,
+          "end": 0.36
+        },
+        {
+          "word": "is",
+          "start": 0.36,
+          "end": 0.56
+        },
+        {
+          "word": "scalar",
+          "start": 0.56,
+          "end": 0.96
+        },
+        {
+          "word": "as",
+          "start": 0.96,
+          "end": 1.36
+        },
+        {
+          "word": "well.",
+          "start": 1.36,
+          "end": 1.8
+        },
+        {
+          "word": "Velocity",
+          "start": 3.14,
+          "end": 3.94
+        },
+        {
+          "word": "is",
+          "start": 3.94,
+          "end": 4.3
+        },
+        {
+          "word": "vector.",
+          "start": 4.3,
+          "end": 4.74
+        },
+        {
+          "word": "Displacement",
+          "start": 5.98,
+          "end": 6.48
+        },
+        {
+          "word": "is",
+          "start": 6.48,
+          "end": 6.96
+        },
+        {
+          "word": "vector.",
+          "start": 6.96,
+          "end": 7.34
+        },
+        {
+          "word": "Acceleration",
+          "start": 8.52,
+          "end": 8.86
+        },
+        {
+          "word": "is",
+          "start": 8.86,
+          "end": 9.28
+        },
+        {
+          "word": "vector.",
+          "start": 9.28,
+          "end": 9.62
+        },
+        {
+          "word": "For",
+          "start": 10.58,
+          "end": 10.76
+        },
+        {
+          "word": "each",
+          "start": 10.76,
+          "end": 11.02
+        },
+        {
+          "word": "vector,",
+          "start": 11.02,
+          "end": 11.4
+        },
+        {
+          "word": "direction",
+          "start": 12.12,
+          "end": 12.18
+        },
+        {
+          "word": "is",
+          "start": 12.18,
+          "end": 12.64
+        },
+        {
+          "word": "part",
+          "start": 12.64,
+          "end": 12.88
+        },
+        {
+          "word": "of",
+          "start": 12.88,
+          "end": 13.04
+        },
+        {
+          "word": "the",
+          "start": 13.04,
+          "end": 13.14
+        },
+        {
+          "word": "answer.",
+          "start": 13.14,
+          "end": 13.4
+        }
+      ],
+      "cues": {
+        "energy": 0.0,
+        "velocity": 3.14,
+        "displacement": 5.98,
+        "acceleration": 8.52
+      },
+      "generatedAt": "2026-09-05T11:43:06.690402",
+      "engine": "faster-whisper-small (local)"
+    },
+    {
+      "id": "s10",
+      "audio": "scalars-vectors-s10.mp3",
+      "duration": 14.210612,
+      "wordCount": 23,
+      "text": "Force is vector. Weight is vector because gravity acts in a direction. Momentum is vector because it follows velocity. That completes the classification.",
+      "words": [
+        {
+          "word": "Force",
+          "start": 0.0,
+          "end": 0.34
+        },
+        {
+          "word": "is",
+          "start": 0.34,
+          "end": 0.62
+        },
+        {
+          "word": "vector.",
+          "start": 0.62,
+          "end": 0.9
+        },
+        {
+          "word": "Weight",
+          "start": 2.22,
+          "end": 2.44
+        },
+        {
+          "word": "is",
+          "start": 2.44,
+          "end": 3.26
+        },
+        {
+          "word": "vector",
+          "start": 3.26,
+          "end": 3.58
+        },
+        {
+          "word": "because",
+          "start": 3.58,
+          "end": 4.34
+        },
+        {
+          "word": "gravity",
+          "start": 4.34,
+          "end": 4.68
+        },
+        {
+          "word": "acts",
+          "start": 4.68,
+          "end": 5.1
+        },
+        {
+          "word": "in",
+          "start": 5.1,
+          "end": 5.74
+        },
+        {
+          "word": "a",
+          "start": 5.74,
+          "end": 5.84
+        },
+        {
+          "word": "direction.",
+          "start": 5.84,
+          "end": 6.24
+        },
+        {
+          "word": "Momentum",
+          "start": 7.08,
+          "end": 7.78
+        },
+        {
+          "word": "is",
+          "start": 7.78,
+          "end": 7.96
+        },
+        {
+          "word": "vector",
+          "start": 7.96,
+          "end": 8.32
+        },
+        {
+          "word": "because",
+          "start": 8.32,
+          "end": 9.22
+        },
+        {
+          "word": "it",
+          "start": 9.22,
+          "end": 9.52
+        },
+        {
+          "word": "follows",
+          "start": 9.52,
+          "end": 9.9
+        },
+        {
+          "word": "velocity.",
+          "start": 9.9,
+          "end": 10.88
+        },
+        {
+          "word": "That",
+          "start": 12.18,
+          "end": 12.62
+        },
+        {
+          "word": "completes",
+          "start": 12.62,
+          "end": 12.96
+        },
+        {
+          "word": "the",
+          "start": 12.96,
+          "end": 13.2
+        },
+        {
+          "word": "classification.",
+          "start": 13.2,
+          "end": 13.58
+        }
+      ],
+      "cues": {
+        "force": 0.0,
+        "weight": 2.22,
+        "momentum": 7.08,
+        "completes": 12.62
+      },
+      "generatedAt": "2026-09-05T11:43:06.690402",
+      "engine": "faster-whisper-small (local)"
+    },
+    {
+      "id": "s11",
+      "audio": "scalars-vectors-s11.mp3",
+      "duration": 28.656327,
+      "wordCount": 47,
+      "text": "Recap. A scalar has magnitude only. A vector has magnitude in direction. Distance and speed are scalars. Displacement and velocity are vectors. Acceleration, force, weight and momentum are vectors too. Choose a positive direction. Keep your signs consistent and always ask size only or size in direction.",
+      "words": [
+        {
+          "word": "Recap.",
+          "start": 0.0,
+          "end": 0.52
+        },
+        {
+          "word": "A",
+          "start": 1.28,
+          "end": 1.58
+        },
+        {
+          "word": "scalar",
+          "start": 1.58,
+          "end": 1.98
+        },
+        {
+          "word": "has",
+          "start": 1.98,
+          "end": 2.7
+        },
+        {
+          "word": "magnitude",
+          "start": 2.7,
+          "end": 3.14
+        },
+        {
+          "word": "only.",
+          "start": 3.14,
+          "end": 3.52
+        },
+        {
+          "word": "A",
+          "start": 4.72,
+          "end": 4.84
+        },
+        {
+          "word": "vector",
+          "start": 4.84,
+          "end": 5.2
+        },
+        {
+          "word": "has",
+          "start": 5.2,
+          "end": 6.0
+        },
+        {
+          "word": "magnitude",
+          "start": 6.0,
+          "end": 6.52
+        },
+        {
+          "word": "in",
+          "start": 6.52,
+          "end": 7.36
+        },
+        {
+          "word": "direction.",
+          "start": 7.36,
+          "end": 7.7
+        },
+        {
+          "word": "Distance",
+          "start": 9.08,
+          "end": 9.56
+        },
+        {
+          "word": "and",
+          "start": 9.56,
+          "end": 10.28
+        },
+        {
+          "word": "speed",
+          "start": 10.28,
+          "end": 10.62
+        },
+        {
+          "word": "are",
+          "start": 10.62,
+          "end": 11.02
+        },
+        {
+          "word": "scalars.",
+          "start": 11.02,
+          "end": 11.52
+        },
+        {
+          "word": "Displacement",
+          "start": 12.78,
+          "end": 13.3
+        },
+        {
+          "word": "and",
+          "start": 13.3,
+          "end": 13.6
+        },
+        {
+          "word": "velocity",
+          "start": 13.6,
+          "end": 13.96
+        },
+        {
+          "word": "are",
+          "start": 13.96,
+          "end": 14.62
+        },
+        {
+          "word": "vectors.",
+          "start": 14.62,
+          "end": 14.94
+        },
+        {
+          "word": "Acceleration,",
+          "start": 16.2,
+          "end": 16.6
+        },
+        {
+          "word": "force,",
+          "start": 17.12,
+          "end": 17.44
+        },
+        {
+          "word": "weight",
+          "start": 18.0,
+          "end": 18.3
+        },
+        {
+          "word": "and",
+          "start": 18.3,
+          "end": 18.92
+        },
+        {
+          "word": "momentum",
+          "start": 18.92,
+          "end": 19.26
+        },
+        {
+          "word": "are",
+          "start": 19.26,
+          "end": 19.68
+        },
+        {
+          "word": "vectors",
+          "start": 19.68,
+          "end": 19.98
+        },
+        {
+          "word": "too.",
+          "start": 19.98,
+          "end": 20.26
+        },
+        {
+          "word": "Choose",
+          "start": 21.1,
+          "end": 21.32
+        },
+        {
+          "word": "a",
+          "start": 21.32,
+          "end": 21.48
+        },
+        {
+          "word": "positive",
+          "start": 21.48,
+          "end": 21.66
+        },
+        {
+          "word": "direction.",
+          "start": 21.66,
+          "end": 22.2
+        },
+        {
+          "word": "Keep",
+          "start": 22.82,
+          "end": 22.94
+        },
+        {
+          "word": "your",
+          "start": 22.94,
+          "end": 23.14
+        },
+        {
+          "word": "signs",
+          "start": 23.14,
+          "end": 23.44
+        },
+        {
+          "word": "consistent",
+          "start": 23.44,
+          "end": 24.04
+        },
+        {
+          "word": "and",
+          "start": 24.04,
+          "end": 24.6
+        },
+        {
+          "word": "always",
+          "start": 24.6,
+          "end": 24.96
+        },
+        {
+          "word": "ask",
+          "start": 24.96,
+          "end": 25.38
+        },
+        {
+          "word": "size",
+          "start": 25.38,
+          "end": 26.14
+        },
+        {
+          "word": "only",
+          "start": 26.14,
+          "end": 26.52
+        },
+        {
+          "word": "or",
+          "start": 26.52,
+          "end": 27.0
+        },
+        {
+          "word": "size",
+          "start": 27.0,
+          "end": 27.32
+        },
+        {
+          "word": "in",
+          "start": 27.32,
+          "end": 27.8
+        },
+        {
+          "word": "direction.",
+          "start": 27.8,
+          "end": 28.1
+        }
+      ],
+      "cues": {
+        "scalar": 1.58,
+        "vector": 4.84,
+        "positive-direction": 21.48,
+        "always-ask": 24.6
+      },
+      "generatedAt": "2026-09-05T11:43:06.690402",
+      "engine": "faster-whisper-small (local)"
+    }
+  ]
+}

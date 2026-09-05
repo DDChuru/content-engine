@@ -60,6 +60,7 @@ import { StoichiometryLimitingTikTok, StoichiometryLimitingTikTokProps, getStoic
 import { StoichiometryGasVolumesTikTok, StoichiometryGasVolumesTikTokProps, getStoichiometryGasVolumesDuration, StoichiometryGasVolumesCover } from './compositions/StoichiometryGasVolumesTikTok';
 import { InkTutorTikTok, InkTutorTikTokProps, getInkTutorTikTokDuration } from './compositions/InkTutorTikTok';
 import { MechanicsSIUnits, MechanicsSIUnitsProps, getMechanicsSIUnitsDuration } from './compositions/MechanicsSIUnits';
+import { MechanicsScalarsVectors, MechanicsScalarsVectorsProps, getMechanicsScalarsVectorsDuration } from './compositions/MechanicsScalarsVectors';
 
 const fps = 30;
 
@@ -103,6 +104,7 @@ export const RemotionRoot: React.FC = () => {
   const stoichiometryLimitingDuration = getStoichiometryLimitingDuration(fps);
   const stoichiometryGasVolumesDuration = getStoichiometryGasVolumesDuration(fps);
   const mechanicsSIUnitsDuration = getMechanicsSIUnitsDuration(fps);
+  const mechanicsScalarsVectorsDuration = getMechanicsScalarsVectorsDuration(fps);
 
   return (
     <>
@@ -142,6 +144,18 @@ export const RemotionRoot: React.FC = () => {
         defaultProps={{
           audioEnabled: true,
         } satisfies MechanicsSIUnitsProps}
+      />
+
+      <Composition
+        id="MechanicsScalarsVectors"
+        component={MechanicsScalarsVectors}
+        durationInFrames={mechanicsScalarsVectorsDuration}
+        fps={fps}
+        width={1920}
+        height={1080}
+        defaultProps={{
+          audioEnabled: true,
+        } satisfies MechanicsScalarsVectorsProps}
       />
 
       <Composition
