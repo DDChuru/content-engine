@@ -152,7 +152,7 @@ const ZOOM_PLAN: Record<string, ZoomStep[]> = {
   '02-strip': [{ box: 'strip', crop: { nx: 0.03, ny: 0.345, nw: 0.94, nh: 0.11 }, cue: 'and it names them' }], // y 552..728: the three lines
   '03-hub': [{ box: 'dueBand', crop: { nx: 0.03, ny: 0.365, nw: 0.94, nh: 0.3 }, cue: 'The same three dosing points' }], // y 584..1064: the three OVERDUE rows
   '05-standard': [{ box: 'calcLine', crop: { nx: 0.03, ny: 0.65, nw: 0.94, nh: 0.17 }, cue: 'The procedure', still: 'ccv-05b-sheet' }], // y 1040..1312: the three steps
-  '06-lock': [{ box: 'lockBanner', crop: { nx: 0.03, ny: 0.766, nw: 0.94, nh: 0.08 }, cue: 'It locks the reading' }], // y 1226..1354: the composed no-spec banner
+  '06-lock': [{ box: 'lockBanner', crop: { nx: 0.03, ny: 0.711, nw: 0.94, nh: 0.08 }, cue: 'It locks the reading' }], // y 1138..1266: the composed no-spec banner (re-flowed up 88)
   '07-baseline': [{ box: 'baselineButton', crop: { nx: 0.03, ny: 0.65, nw: 0.94, nh: 0.225 }, cue: 'set the baseline' }], // y 1040..1400: tap-water field + SET BASELINE
   '08-inspec': [{ box: 'verdictPass', crop: { nx: 0.03, ny: 0.68, nw: 0.94, nh: 0.145 }, cue: 'Enter the reading' }], // y 1088..1320: reading field + verdict
   '09-outofspec': [{ box: 'retestBlock', crop: { nx: 0.03, ny: 0.385, nw: 0.94, nh: 0.155 }, cue: 'What you did', still: 'ccv-09b-retest' }], // y 616..864: CORRECTIVE ACTION · REQUIRED label + placeholder
@@ -202,7 +202,11 @@ type TextPatch = {
   anchor?: 'start' | 'middle';
 };
 type PanelPatch = { x: number; y: number; w: number; h: number; fill: string; stroke?: string; rx?: number };
-type ComposePlan = { base: string; patches: TextPatch[]; panels?: PanelPatch[] };
+/** Re-flow: the captured band [from, to) is translated by dy (still px); the strip it exposes at
+ * its old foot is masked with the canvas colour. Patches/panels below `from` must be written at
+ * their shifted positions. */
+type ShiftPatch = { from: number; to: number; dy: number; canvas: string };
+type ComposePlan = { base: string; patches: TextPatch[]; panels?: PanelPatch[]; shifts?: ShiftPatch[] };
 const APP_INK = '#141A21';
 const APP_MUTED = '#939CA8';
 const APP_META = '#596371'; // station meta / spec method line, sampled (89,99,113) / (80,91,105)
@@ -224,16 +228,19 @@ const COMPOSE_PLAN: Record<string, ComposePlan> = {
     base: 'ccv-06',
     panels: [
       { x: 33, y: 508, w: 654, h: 162, fill: '#DEEEF6', stroke: '#BFEBF7', rx: 16 }, // the shortened spec hero (fill + 2px border sampled from the native card)
-      { x: 32, y: 1246, w: 656, h: 88, fill: '#FBEEDB', stroke: AMBER, rx: 14 },
+      { x: 32, y: 1158, w: 656, h: 88, fill: '#FBEEDB', stroke: AMBER, rx: 14 }, // the banner sits in the CAPTURE READING slot — moved up with the band (1246 − 88)
     ],
+    // The shortened card left a 130px canvas gap under it; the app renders 42 (card bottom 758 → How-to-test
+    // row 800 on the native capture). Everything from the How-to-test row down to the nav band moves up 88px.
+    shifts: [{ from: 760, to: 1406, dy: -88, canvas: '#F1F4F8' }],
     patches: [
       { mask: [160, 336, 420, 40], x: 170, baseline: 368, lines: ['Argonox'], fontSize: 32, color: APP_INK, family: 'Barlow Condensed', weight: 700 },
       { mask: [160, 382, 430, 60], x: 169, baseline: 407, lines: ['Site Operations · Argonox · Satellite 7'], fontSize: 23, color: APP_META },
       // The spec hero is redrawn as the app would size it with no range and no method line: label + "No range
       // configured" only (card 507..670, 163px, vs the native 251px card that holds the big value + method).
-      { mask: [28, 503, 664, 262], maskFill: '#F1F4F8', x: 360, baseline: 571, lines: ['APPROVED RANGE'], fontSize: 19, letterSpacing: 3, color: '#48BAE2', family: 'Barlow Condensed', weight: 600, anchor: 'middle' },
+      { mask: [28, 503, 664, 169], maskFill: '#F1F4F8', x: 360, baseline: 571, lines: ['APPROVED RANGE'], fontSize: 19, letterSpacing: 3, color: '#48BAE2', family: 'Barlow Condensed', weight: 600, anchor: 'middle' },
       { mask: [0, 0, 0, 0], x: 360, baseline: 616, lines: ['No range configured'], fontSize: 28, color: APP_META, anchor: 'middle' },
-      { mask: [32, 1240, 656, 100], x: 360, baseline: 1282, lines: ['No verification spec configured for this', 'station — contact your site manager.'], lineHeight: 34, fontSize: 25, color: '#A5690F', weight: 500, anchor: 'middle' },
+      { mask: [32, 1152, 656, 100], x: 360, baseline: 1194, lines: ['No verification spec configured for this', 'station — contact your site manager.'], lineHeight: 34, fontSize: 25, color: '#A5690F', weight: 500, anchor: 'middle' }, // 1240/1282 − 88
     ],
   },
 };
@@ -243,8 +250,16 @@ const effectiveShot = (shot: string | null, beat: Beat) => (shot && COMPOSE_PLAN
 const ComposedStill: React.FC<{ still: string; left: number; top: number; scale: number; plan?: ComposePlan | null; opacity?: number }> = ({ still, left, top, scale, plan, opacity = 1 }) => (
   <div style={{ position: 'absolute', left, top, width: STILL_W, height: STILL_H, transform: `scale(${scale})`, transformOrigin: 'top left', opacity }}>
     <Img src={staticFile(`${ASSET_BASE}/shots/${still}.png`)} style={{ position: 'absolute', left: 0, top: 0, width: STILL_W, height: STILL_H }} />
+    {plan?.shifts?.map((sh, i) => (
+      <div key={`s${i}`} style={{ position: 'absolute', left: 0, top: sh.from + sh.dy, width: STILL_W, height: sh.to - sh.from, overflow: 'hidden' }}>
+        <Img src={staticFile(`${ASSET_BASE}/shots/${still}.png`)} style={{ position: 'absolute', left: 0, top: -sh.from, width: STILL_W, height: STILL_H }} />
+      </div>
+    ))}
     {plan ? (
       <svg width={STILL_W} height={STILL_H} viewBox={`0 0 ${STILL_W} ${STILL_H}`} style={{ position: 'absolute', left: 0, top: 0 }}>
+        {plan.shifts?.map((sh, i) => (
+          <rect key={`x${i}`} x={0} y={sh.to + Math.min(sh.dy, 0) - 10} width={STILL_W} height={Math.abs(sh.dy) + 10} fill={sh.canvas} />
+        ))}
         {plan.patches.map((t, i) => (
           <rect key={`m${i}`} x={t.mask[0]} y={t.mask[1]} width={t.mask[2]} height={t.mask[3]} fill={t.maskFill ?? '#FFFFFF'} />
         ))}
