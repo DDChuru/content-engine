@@ -36,7 +36,8 @@ export const UNITS: SyllabusUnit[] = [
     topics: [
       { code: 'M0.1', title: 'S.I. units for mechanics', live: true, kind: 'notes', href: '/notes/mechanics-si-units', hint: 'foundation' },
       { code: 'M0.2', title: 'Scalars and vectors', live: true, kind: 'notes', href: '/notes/mechanics-scalars-vectors', hint: 'foundation' },
-      { code: 'M4.1', title: 'Forces and equilibrium', live: false },
+      { code: 'M0.3', title: 'Derived units', live: true, kind: 'notes', href: '/notes/mechanics-derived-units', hint: 'foundation' },
+      { code: 'M4.1', title: 'Forces and equilibrium', live: true, kind: 'notes', href: '/notes/mechanics-types-of-forces', hint: 'types of force' },
       { code: 'M4.2', title: 'Kinematics of motion in a straight line', live: false },
       { code: 'M4.3', title: 'Momentum', live: false },
       { code: 'M4.4', title: "Newton's laws of motion", live: false },
