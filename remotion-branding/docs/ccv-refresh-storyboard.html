@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CCV Storyboard</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+<style>
+:root{
+  --canvas:#F1F4F8;--surface:#FFFFFF;--border:#ECF0F4;--fg:#141A21;--fg2:#505B69;--muted:#939CA8;
+  --sky:#3CB6E0;--skyDeep:#1582AB;--skyTint:#E5F4FB;--emerald:#1F9C5A;--emeraldTint:#DCEFE3;
+  --amber:#E89A30;--amberTint:#FBEEDB;--coral:#D6432F;--coralTint:#F8DDD8;
+  --heroFrom:#1A2330;--heroTo:#0B1219;--heroText:#F4F7FA;--heroMuted:#9AA7B6;
+  --shadow:0 1px 2px rgba(20,26,33,.05),0 6px 20px rgba(20,26,33,.06);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --canvas:#0F151C;--surface:#161E27;--border:#243040;--fg:#EEF2F6;--fg2:#B4BFCB;--muted:#7C8896;
+    --skyTint:#123344;--emeraldTint:#12352A;--amberTint:#3C2C12;--coralTint:#3E1C18;
+    --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.35);
+  }
+}
+:root[data-theme="dark"]{
+  --canvas:#0F151C;--surface:#161E27;--border:#243040;--fg:#EEF2F6;--fg2:#B4BFCB;--muted:#7C8896;
+  --skyTint:#123344;--emeraldTint:#12352A;--amberTint:#3C2C12;--coralTint:#3E1C18;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box}
+body{background:var(--canvas);color:var(--fg);font-family:"DM Sans",system-ui,-apple-system,sans-serif;font-size:15px;line-height:1.55;margin:0}
+h1,h2,h3,.disp{font-family:"Barlow Condensed","Arial Narrow",sans-serif;letter-spacing:-.01em;text-wrap:balance}
+h1{font-size:44px;font-weight:700;line-height:1;margin:0}
+h2{font-size:26px;font-weight:600;margin:0 0 6px}
+h3{font-size:22px;font-weight:600;margin:0}
+.wrap{max-width:1180px;margin:0 auto;padding:28px 20px 80px}
+.eyebrow{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);font-weight:600}
+.hero{background:linear-gradient(160deg,var(--heroFrom),var(--heroTo));color:var(--heroText);border-radius:18px;padding:34px 36px;position:relative;overflow:hidden;box-shadow:var(--shadow)}
+.hero::after{content:"";position:absolute;right:-120px;top:-140px;width:420px;height:420px;border-radius:50%;background:radial-gradient(closest-side,rgba(60,182,224,.35),rgba(60,182,224,0))}
+.hero .eyebrow{color:var(--sky)}
+.hero p{color:var(--heroMuted);max-width:62ch;margin:14px 0 0;font-size:16px}
+.hero .thesis{color:var(--heroText);font-size:19px;max-width:60ch;margin-top:18px;font-weight:500}
+.meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px;position:relative}
+.pill{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);border-radius:999px;padding:6px 12px;font-size:12px;color:var(--heroText);font-variant-numeric:tabular-nums}
+section{margin-top:40px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px}
+.card{background:var(--surface);border-radius:18px;padding:18px 20px;box-shadow:var(--shadow)}
+.card p{margin:8px 0 0;color:var(--fg2)}
+.rule{border-left:4px solid var(--coral);padding:14px 18px;background:var(--coralTint);border-radius:0 14px 14px 0;color:var(--fg);font-weight:500}
+/* run of show */
+.ros{display:flex;gap:4px;margin-top:14px;height:34px;border-radius:10px;overflow:hidden}
+.ros div{display:flex;align-items:center;justify-content:center;font-family:"Barlow Condensed";font-size:13px;font-weight:600;color:#fff;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding:0 6px}
+.legend{display:flex;gap:16px;flex-wrap:wrap;margin-top:8px;font-size:12px;color:var(--muted)}
+.legend span::before{content:"";display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:6px;vertical-align:-1px;background:var(--c)}
+/* beats */
+.beat{display:grid;grid-template-columns:260px 1fr;gap:22px;background:var(--surface);border-radius:18px;padding:20px;box-shadow:var(--shadow);margin-top:14px}
+@media (max-width:760px){.beat{grid-template-columns:1fr}}
+.beat header{display:flex;align-items:baseline;gap:12px;margin-bottom:6px}
+.num{font-family:"Barlow Condensed";font-weight:700;font-size:30px;color:var(--sky);line-height:1;font-variant-numeric:tabular-nums}
+.dur{margin-left:auto;font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums}
+.chip{display:inline-block;background:var(--skyTint);color:var(--skyDeep);border-radius:999px;padding:4px 11px;font-size:12px;font-weight:600;letter-spacing:.4px;margin:6px 0 10px}
+.chip.kept{background:var(--emeraldTint);color:var(--emerald)}
+.chip.comp{background:var(--amberTint);color:#A5690F}
+.vo{border-left:3px solid var(--sky);padding:8px 14px;margin:10px 0;color:var(--fg);font-style:italic}
+.vo b{font-style:normal;color:var(--skyDeep);font-size:11px;letter-spacing:1.2px;text-transform:uppercase;display:block;margin-bottom:4px}
+.notes{font-size:13px;color:var(--fg2)}
+.notes b{color:var(--fg);font-weight:600}
+/* phone schematic */
+.phone{width:240px;height:480px;border-radius:26px;background:#0B1219;padding:10px;position:relative;margin:0 auto;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+.screen{width:100%;height:100%;border-radius:18px;background:#F1F4F8;color:#141A21;overflow:hidden;position:relative;font-size:9px;line-height:1.3;padding:12px 10px}
+.screen .t{font-family:"Barlow Condensed";font-weight:700;font-size:15px;letter-spacing:-.01em;margin:6px 0 8px;color:#141A21}
+.screen .row{background:#fff;border-radius:8px;padding:6px 8px;margin:4px 0;display:flex;justify-content:space-between;align-items:center;box-shadow:0 1px 2px rgba(0,0,0,.05)}
+.screen .row small{color:#939CA8;display:block;font-size:8px}
+.dot{width:7px;height:7px;border-radius:50%;display:inline-block;margin-right:5px;vertical-align:1px}
+.g{background:#1F9C5A}.a{background:#E89A30}.r{background:#D6432F}.s{background:#3CB6E0}
+.div{font-size:8px;letter-spacing:1.2px;color:#939CA8;text-transform:uppercase;margin:8px 0 3px;display:flex;align-items:center;gap:6px}
+.div::after{content:"";flex:1;height:1px;background:#DCE2E8}
+.ring{position:absolute;border:2.5px solid var(--coral);border-radius:10px;pointer-events:none;box-shadow:0 0 0 3px rgba(214,67,47,.18)}
+.ring.sky{border-color:#3CB6E0;box-shadow:0 0 0 3px rgba(60,182,224,.2)}
+.ring.amber{border-color:#E89A30;box-shadow:0 0 0 3px rgba(232,154,48,.2)}
+.ring.emerald{border-color:#1F9C5A;box-shadow:0 0 0 3px rgba(31,156,90,.2)}
+.hcard{background:linear-gradient(160deg,#1A2330,#0B1219);color:#fff;border-radius:10px;padding:10px;margin:6px 0}
+.hcard .e{color:#3CB6E0;font-size:7px;letter-spacing:1.2px}
+.hcard .h{font-family:"Barlow Condensed";font-size:14px;font-weight:700;margin:3px 0}
+.tile{background:#fff;border-radius:8px;padding:8px;box-shadow:0 1px 2px rgba(0,0,0,.05);position:relative}
+.badge{position:absolute;top:-4px;right:-4px;background:#D6432F;color:#fff;border-radius:999px;font-size:8px;padding:1px 5px;font-weight:700}
+.full{width:240px;height:480px;border-radius:14px;background:linear-gradient(160deg,#1A2330,#0B1219);color:#F4F7FA;padding:26px 20px;display:flex;flex-direction:column;justify-content:center;gap:10px;margin:0 auto}
+.full .e{color:#3CB6E0;font-size:9px;letter-spacing:1.5px}
+.full .h{font-family:"Barlow Condensed";font-size:24px;font-weight:700;line-height:1.05}
+.full p{color:#9AA7B6;font-size:10px;margin:0}
+/* CCV-specific schematic bits */
+.strip{border:1.5px solid #D6432F;background:#F8DDD8;border-radius:8px;padding:6px 8px;margin:6px 0;font-size:8px;color:#141A21}
+.strip .e{font-family:"Barlow Condensed";font-weight:700;letter-spacing:1px;font-size:8px;color:#141A21;margin-bottom:2px}
+.strip.amber{border-color:#E89A30;background:#FBEEDB}
+.stat{display:flex;gap:4px;margin:6px 0}
+.stat div{flex:1;background:#fff;border-radius:8px;padding:6px 4px;text-align:center;box-shadow:0 1px 2px rgba(0,0,0,.05)}
+.stat b{font-family:"Barlow Condensed";font-size:16px;display:block;line-height:1}
+.stat small{font-size:6px;letter-spacing:1px;color:#939CA8}
+.pillr{font-family:"Barlow Condensed";font-weight:700;font-size:7px;letter-spacing:.5px;padding:2px 6px;border-radius:999px}
+.pillr.r{background:#F8DDD8;color:#D6432F}.pillr.g{background:#DCEFE3;color:#1F9C5A}.pillr.a{background:#FBEEDB;color:#A5690F}.pillr.s{background:#E5F4FB;color:#1582AB}
+.range{background:#E5F4FB;border-radius:8px;padding:8px;text-align:center;margin:6px 0}
+.range .e{font-size:6px;letter-spacing:1.2px;color:#1582AB}
+.range .v{font-family:"Barlow Condensed";font-weight:700;font-size:20px;color:#3CB6E0;line-height:1.1}
+.field{background:#fff;border-radius:8px;padding:7px 8px;margin:4px 0;display:flex;justify-content:space-between;color:#939CA8;font-family:"Barlow Condensed";font-weight:600;font-size:11px}
+.field.filled{color:#141A21;font-size:16px}
+.verdict{border-radius:8px;padding:5px 8px;margin:4px 0;font-family:"Barlow Condensed";font-weight:700;font-size:8px;letter-spacing:.6px}
+.verdict.g{background:#DCEFE3;color:#1F9C5A;border:1px solid #1F9C5A}.verdict.r{background:#F8DDD8;color:#D6432F;border:1px solid #D6432F}
+.btn{background:#3CB6E0;color:#fff;border-radius:8px;text-align:center;padding:7px;font-family:"Barlow Condensed";font-weight:700;letter-spacing:1px;font-size:9px;margin:6px 0}
+.btn.off{background:#A9D8EA;color:#fff}.btn.lock{background:#DCE2E8;color:#939CA8}
+.seg{display:flex;gap:4px;margin:3px 0 6px}
+.seg div{flex:1;border-radius:999px;padding:4px;text-align:center;font-family:"Barlow Condensed";font-weight:600;font-size:7px;letter-spacing:.6px;border:1px solid #DCE2E8;color:#939CA8}
+.seg .on{background:#E5F4FB;border-color:#3CB6E0;color:#141A21}
+.lbl{font-size:6px;letter-spacing:1.2px;color:#939CA8;text-transform:uppercase;margin:6px 0 2px}
+.sheet{background:#fff;border-radius:12px 12px 0 0;padding:8px;margin:8px -10px -12px;box-shadow:0 -4px 14px rgba(0,0,0,.12);position:absolute;left:10px;right:10px;bottom:0}
+.src{font-size:11px;color:var(--muted);text-align:center;margin-top:8px;font-variant-numeric:tabular-nums}
+.tag{display:inline-block;font-size:10px;letter-spacing:1px;text-transform:uppercase;font-weight:600;border-radius:6px;padding:2px 7px;margin-left:6px;vertical-align:1px}
+.tag.cap{background:var(--skyTint);color:var(--skyDeep)}.tag.comp{background:var(--amberTint);color:#A5690F}.tag.kept{background:var(--emeraldTint);color:var(--emerald)}
+table{border-collapse:collapse;width:100%;font-size:13px}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--border);vertical-align:top}
+th{font-size:11px;letter-spacing:1.2px;text-transform:uppercase;color:var(--muted);font-weight:600}
+td b{font-weight:600}
+.tw{overflow-x:auto}
+.ok{color:var(--emerald);font-weight:600}.warn{color:var(--amber);font-weight:600}.no{color:var(--coral);font-weight:600}
+footer{margin-top:40px;color:var(--muted);font-size:12px}
+</style>
+
+<div class="wrap">
+  <div class="hero">
+    <div class="eyebrow">e-wizer · Ecowize Academy series · Video 03 refresh · Storyboard v1</div>
+    <h1 style="margin-top:10px">Chemical Concentration Verification</h1>
+    <p class="thesis">A supervisor does not meet CCV on a chemistry screen. They meet it on the day's certificate: a coral strip that names three dosing points past their window, before an auditor does. Tap it and the Chemical hub tells you what is due, what was done, and what failed. Issue a chemical and the standard is already waiting at the station. Measure, read, record — at the time. The second pair of eyes, on the Bill of Health.</p>
+    <p>Audience: shift supervisors, SHEQ and the regional champions who lead on-site training. Daniel's voice. Landscape 1920×1080, phone-framed stills with zoom crops, Ecowize bookends. Target 4:30. Spoken numbers written as words for the voice engine. Refreshes the July video to the app as it is today.</p>
+    <div class="meta">
+      <span class="pill">13 beats</span><span class="pill">≈ 4:30 with bookends</span><span class="pill">Captured at I&amp;J Blockbusters · sheq@poc · current build</span><span class="pill">3 beats kept from July · 2 composed states</span><span class="pill">Built by Fable · rendered on machine B</span>
+    </div>
+  </div>
+
+  <section>
+    <div class="eyebrow">Run of show</div>
+    <div class="ros" aria-label="Timeline of the thirteen beats by section">
+      <div style="flex:.7;background:#1A2330">Hook</div>
+      <div style="flex:1.8;background:#D6432F">The strip · the hub</div>
+      <div style="flex:2;background:#3CB6E0">Issue · the standard</div>
+      <div style="flex:1.4;background:#E89A30">Lock · baseline</div>
+      <div style="flex:2.4;background:#1582AB">In spec · out · escalate</div>
+      <div style="flex:1.7;background:#1F9C5A">Record · offline · close</div>
+    </div>
+    <div class="legend"><span style="--c:#1A2330">Beat 1</span><span style="--c:#D6432F">Beats 2–3</span><span style="--c:#3CB6E0">Beats 4–5</span><span style="--c:#E89A30">Beats 6–7</span><span style="--c:#1582AB">Beats 8–10</span><span style="--c:#1F9C5A">Beats 11–13</span></div>
+  </section>
+
+  <section>
+    <div class="eyebrow">The line the video exists to land</div>
+    <div class="rule" style="margin-top:10px">The label says what the drum should be. Verification says what it is. A reading taken at the station, against a range the operator did not choose, recorded at the time — that is the second pair of eyes. And when it fails, the app does not let the shift look away: corrective action, re-test, then a named site manager. The day's certificate tells you before an auditor does.</div>
+  </section>
+
+  <section>
+    <div class="eyebrow">Terminology · from the July review · binding for every script line</div>
+    <div class="grid" style="margin-top:10px">
+      <div class="card"><h3>Retired</h3><p><b>"Load drum"</b> is gone from the voice and the captions. On dosing stations the issue screen records <b>litres of chemical issued</b>, nothing else. <b>Truth check:</b> the current build's station picker (still 07) still shows LOAD DRUM pills on the Multiline and Super Line stations — do not ring them, and raise it with the app team before capture day.</p></div>
+      <div class="card"><h3>Manual dilution</h3><p>The operator enters <b>both</b> the chemical and the water. The app computes the percentage. Never "the water is worked out for you". Batch / lot number is required on every issue. Neat volume has an <b>L / ml</b> switch.</p></div>
+      <div class="card"><h3>The three methods</h3><p><b>Titration drops</b>, <b>conductivity</b>, <b>test strips</b>. The app's own labels are the only labels: <code>methodLabel</code> gives "Titration (drops)", "Conductivity", and for the other two "PPM" and "Visual confirm". Say what the screen says.</p></div>
+      <div class="card"><h3>Scope and cadence</h3><p>Every issue carries a scope: <b>Entire factory</b> or <b>Department</b>. Verification is tracked per dosing point against the <b>CCV cadence</b>; the hub's due band and the Bill of Health strip both read from it.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="eyebrow">Beats</div>
+
+    <!-- 1 -->
+    <article class="beat">
+      <div class="full"><div class="e">COLD OPEN · COMPOSED DRUM</div><div class="h">Too strong burns.<br>Too weak leaves bacteria.</div><p>Grey drum, nobody watching. The iris tries to open over it and fails.</p><p style="margin-top:8px">Kept from the July cut, frame for frame.</p></div>
+      <div>
+        <header><span class="num">01</span><h3>Nobody sees the mistake</h3><span class="dur">0:00 – 0:18</span></header>
+        <span class="chip kept">KEPT FROM JULY · HOOK</span>
+        <div class="vo"><b>Daniel</b>Mix a cleaning chemical too strong, and it eats your equipment and burns your people. Mix it too weak, and it leaves behind the very bacteria it was meant to kill. And the worst part? Nobody sees the mistake — not until the audit, the injury, or the recall.</div>
+        <div class="notes"><b>Shot:</b> the July composed drum (grey, saturate 0.32) with the three typed lines and the failing iris. <b>Keep:</b> audio and picture unchanged; re-time only if the new VO durations shift the scene windows. <b>Music:</b> per Daniel's decision on Bill of Health, the bed plays under the bookends only — the July hook bed under this beat is dropped.</div>
+      </div>
+    </article>
+
+    <!-- 2 -->
+    <article class="beat">
+      <div class="phone"><div class="screen">
+        <div class="t">Bill of Health</div>
+        <div class="row" style="flex-direction:column;align-items:flex-start;padding:8px"><small style="color:#3CB6E0;letter-spacing:1px">BILL OF HEALTH</small><b style="font-size:12px">I&amp;J Blockbusters</b><small>7 of 10 pillars clear</small></div>
+        <div class="strip"><div class="e">CCV VERIFICATION OVERDUE</div>Argonox at Satellite 7 · 4d past the window<br>Alkafoam CL at Crate washer 1 · 3d past the window<br>Argonox at Satellite 5 · 2d past the window</div>
+        <div class="row"><span>Shift Handover<small>3 closed · none open</small></span><span class="pillr g">✓ Cleared</span></div>
+        <div class="row"><span>Cleaning Verification<small>314 of 434 checks done (72%)</small></span><span class="pillr a">120 pending</span></div>
+        <div class="row"><span>CCV<small>21 verifications · 0 pending · 0 failed</small></span><span class="pillr g">✓ Cleared</span></div>
+        <div class="row"><span>Remedial<small>0 cleaning remedials open</small></span><span class="pillr g">✓ Cleared</span></div>
+        <div class="ring" style="left:8px;top:96px;width:224px;height:64px"></div>
+      </div></div>
+      <div>
+        <header><span class="num">02</span><h3>The certificate tells you first</h3><span class="dur">0:18 – 0:42</span></header>
+        <span class="chip">BILL OF HEALTH · CCV STRIP</span>
+        <div class="vo"><b>Daniel</b>This is where a supervisor actually meets it. Not on a chemistry screen — on the day's certificate. A coral strip at the top of the Bill of Health, and it names them: Argonox at Satellite seven, four days past its window. Alkafoam at Crate washer one, three days. Argonox at Satellite five, two days. Three dosing points nobody has verified. The certificate tells you before an auditor does.</div>
+        <div class="notes"><b>Shot:</b> still 02 — the I&amp;J Bill of Health with the CCV VERIFICATION OVERDUE strip under the site card. <b>Ring:</b> the strip, coral; then a zoom crop on the three lines as each dosing point is named. <b>Chip:</b> "The certificate tells you first". <b>Finding:</b> of the nine sites hunted, only I&amp;J Blockbusters showed the strip; Albany, Oceana, PepsiCo PE and Rainbow had no active CCV, Bakery Demo, Lupo, Sunbake Bread and Brito's had no strip. <b>Note the row below it:</b> CCV reads "21 verifications · 0 pending · 0 failed · Cleared" on the same screen — the strip is about cadence, the row is about today's checks. The voice must not call the row a failure.</div>
+      </div>
+    </article>
+
+    <!-- 3 -->
+    <article class="beat">
+      <div class="phone"><div class="screen">
+        <div style="display:flex;justify-content:space-between;align-items:center"><div class="t" style="margin:0">Chemical<br><small style="font-family:'DM Sans';font-weight:400;font-size:8px;color:#939CA8">Chemical issuing and verification</small></div><span style="width:22px;height:22px;border-radius:50%;background:#3CB6E0;color:#fff;text-align:center;line-height:22px;font-weight:700">+</span></div>
+        <div class="stat"><div><b style="color:#D6432F">5</b><small>DUE</small></div><div><b style="color:#1F9C5A">2</b><small>DONE</small></div><div><b>0</b><small>OUT-OF-SPEC</small></div></div>
+        <div class="div" style="color:#D6432F"><span class="dot r"></span>Periodic verification due · 3</div>
+        <div class="row" style="border:1px solid #D6432F"><span><b>Argonox</b><small>Satellite 7 · 18 days since last verification</small></span><span class="pillr r">OVERDUE</span></div>
+        <div class="row" style="border:1px solid #D6432F"><span><b>Alkafoam CL</b><small>Crate washer 1 · 17 days</small></span><span class="pillr r">OVERDUE</span></div>
+        <div class="row" style="border:1px solid #D6432F"><span><b>Argonox</b><small>Satellite 5 · 16 days</small></span><span class="pillr r">OVERDUE</span></div>
+        <div class="row" style="justify-content:center;font-family:'Barlow Condensed';font-weight:700">‹ &nbsp; SAT, SEP 5 · <span style="color:#3CB6E0;font-size:7px">TODAY</span> &nbsp; ›</div>
+        <div class="stat"><div><b>21</b><small>ISSUED</small></div><div><b style="color:#3CB6E0">21</b><small>VERIFIED</small></div><div><b style="color:#1F9C5A">21</b><small>PASS</small></div><div><b>0</b><small>FAIL</small></div><div><b>0</b><small>PENDING</small></div></div>
+        <div class="ring sky" style="left:8px;top:58px;width:224px;height:40px"></div>
+        <div class="ring" style="left:8px;top:112px;width:224px;height:112px"></div>
+      </div></div>
+      <div>
+        <header><span class="num">03</span><h3>The hub: due, done, out of spec</h3><span class="dur">0:42 – 1:04</span></header>
+        <span class="chip">TAP → CHEMICAL HUB · DUE BAND</span>
+        <div class="vo"><b>Daniel</b>Tap it and you land on the Chemical hub. Three numbers first: five due, two done, none out of spec. Then the band that matters — periodic verification due. The same three dosing points, with the days since anyone last verified them. Eighteen. Seventeen. Sixteen. Below that, today's activity: twenty-one issued, twenty-one verified, twenty-one passed. The hub is activity first. The strip is the exception.</div>
+        <div class="notes"><b>Shot:</b> still 03 (hub, due band with OVERDUE pills); crossfade to still 04 for the activity summary is the same frame — one still carries both. <b>Rings:</b> sky on the three stat tiles as they are read, coral on the due band as the three rows are named. <b>Zoom crop:</b> the "days since last verification" line. <b>Truth check:</b> the counts (5 · 2 · 0; 21 · 21 · 21 · 0 · 0) are read off the capture; the voice is rewritten if capture day differs. <b>Amber variant (optional, COMPOSED):</b> if Daniel wants the "approaching, not overdue" state, compose one row's pill from OVERDUE to DUE SOON on this still — base still 03, ComposedStill over the pill region only.</div>
+      </div>
+    </article>
+
+    <!-- 4 -->
+    <article class="beat">
+      <div class="phone"><div class="screen">
+        <div class="t">Issue<br><small style="font-family:'DM Sans';font-weight:400;font-size:8px;color:#939CA8">Manual dilution</small></div>
+        <div class="row"><span><b>Extreme XF</b><small>Site Operations · Extreme XF</small></span></div>
+        <div class="lbl">Batch / lot number</div>
+        <div class="field">LOT-20460617</div>
+        <div class="lbl">Issue scope</div>
+        <div class="seg"><div class="on">ENTIRE FACTORY</div><div>DEPARTMENT</div></div>
+        <div class="lbl">Issue type</div>
+        <div class="seg"><div class="on">MANUAL DILUTION</div><div>DEPT / DOSING POINT</div></div>
+        <div style="display:flex;gap:4px"><div style="flex:1"><div class="lbl">Chemical <span class="pillr s">L · ml</span></div><div class="field filled">1</div></div><div style="flex:1"><div class="lbl">Litres water</div><div class="field filled">50</div></div></div>
+        <div class="range"><div class="e">COMPUTED DILUTION</div><div class="v" style="color:#1F9C5A">2.0 %</div><div style="font-size:7px;color:#505B69">Approved 0.5–5.0 % · in range</div></div>
+        <div class="ring sky" style="left:8px;top:62px;width:224px;height:34px"></div>
+        <div class="ring" style="left:8px;top:232px;width:224px;height:52px"></div>
+      </div></div>
+      <div>
+        <header><span class="num">04</span><h3>Issue: batch, scope, chemical and water</h3><span class="dur">1:04 – 1:32</span></header>
+        <span class="chip">+ PICKER → ISSUE FORM · THE % COMPUTES ITSELF</span>
+        <div class="vo"><b>Daniel</b>Issuing starts with the plus. Pick the station. Then four things, every time. The batch or lot number — that is the traceability line, and the app will not let you skip it. The scope: the entire factory, or one department. The issue type. And in manual dilution, you enter both — the litres of chemical, and the litres of water. You do not work out the percentage. The app does, live, against the approved range. Green, you carry on. Coral, you know before you pour.</div>
+        <div class="notes"><b>Shots:</b> still 07 (the + picker: station rows with method and range) → still 09 (issue form: batch / lot, ENTIRE FACTORY / DEPARTMENT, MANUAL DILUTION / DEPT · DOSING POINT, chemical with the L / ml switch, litres water, COMPUTED DILUTION). <b>Rings:</b> sky on the batch field on "traceability", sky on the scope segment, then coral-to-emerald on the computed dilution card as it resolves. <b>Compose:</b> the captured form is blank — fill batch (LOT-…), chemical 1, water 50 and the computed card (2.0 %, in range) as a ComposedStill over still 09; no real site had a filled form in the hunt. <b>Do not</b> ring the LOAD DRUM pills visible in the picker (retired term). <b>Still 08</b> (search with no match) is held in reserve for a "type to find the station" zoom if the beat needs a breath.</div>
+      </div>
+    </article>
+
+    <!-- 5 -->
+    <article class="beat">
+      <div class="phone"><div class="screen">
+        <div class="t">Verify<br><small style="font-family:'DM Sans';font-weight:400;font-size:8px;color:#939CA8">Titration (drops)</small></div>
+        <div class="row"><span><b>Sandrox PA</b><small>Site Operations · Sandrox PA · Crate washers 1</small></span></div>
+        <div class="range"><div class="e">APPROVED RANGE</div><div class="v">0.3–2.0 %</div><div style="font-size:7px;color:#505B69">Method: Titration (drops)</div></div>
+        <div class="row" style="background:#E5F4FB;color:#1582AB;font-weight:600">📖 How to test<span style="font-weight:400;color:#939CA8">View method ›</span></div>
+        <div class="sheet"><div style="font-size:7px;letter-spacing:1px;color:#1582AB">HOW TO TEST · SANDROX PA</div><div style="margin:3px 0"><span class="pillr s">Titration (drops)</span> <span class="pillr" style="background:#F1F4F8;color:#505B69">0.3–2.0 %</span></div><div class="lbl">Reagents</div><div style="font-size:8px">Sandrox PA A · Sandrox PA B</div><div class="lbl">Procedure</div><div style="font-size:8px">1 Take 5ml sample<br>2 Add 3 drops Sandrox PA A<br>3 Add Sandrox PA B dropwise until colourless → pink</div><div class="lbl">Calculation</div><div style="font-size:8px;background:#E5F4FB;border-radius:6px;padding:3px 5px;font-family:monospace">% Sandrox PA = Drops × 0.095</div></div>
+        <div class="ring sky" style="left:8px;top:96px;width:224px;height:62px"></div>
+      </div></div>
+      <div>
+        <header><span class="num">05</span><h3>The standard is already set</h3><span class="dur">1:32 – 1:54</span></header>
+        <span class="chip">VERIFY CARD · APPROVED RANGE · HOW TO TEST</span>
+        <div class="vo"><b>Daniel</b>Now verification. Walk up to the station and the standard is already waiting. The approved range — nought point three to two percent. The method — titration drops, for this chemical. The operator does not choose either. And if they have forgotten how: How to test. The reagents. The procedure, step by step. The calculation — drops times nought point nought nine five. The standard lives in the app, not in anyone's memory.</div>
+        <div class="notes"><b>Shots:</b> still 11 (verify card, blank reading, approved range 0.3–2.0 %, Method: Titration (drops), How to test) → still 12 (the method sheet: reagents, procedure, calculation, method reference SEN-TMPT-SANDROX PA v3.0). <b>Rings:</b> sky on the approved-range card; sky on the calculation line in the sheet. <b>Zoom crop:</b> the three procedure steps. <b>Replaces</b> the July "Matrix decides" and "no dropdown" beats: same truth, told from the screen the operator sees. Do not say "Matrix" on screen; the voice may say "the standard".</div>
+      </div>
+    </article>
+
+    <!-- 6 -->
+    <article class="beat">
+      <div class="phone"><div class="screen">
+        <div class="t">Verify<br><small style="font-family:'DM Sans';font-weight:400;font-size:8px;color:#939CA8">Titration (drops)</small></div>
+        <div class="row"><span><b>Argonox</b><small>Site Operations · Argonox · Satellite 7</small></span></div>
+        <div class="range" style="background:#FBEEDB"><div class="e" style="color:#A5690F">NO APPROVED RANGE ON FILE</div><div class="v" style="color:#E89A30;font-size:14px">Readings locked</div><div style="font-size:7px;color:#505B69">This station has no specification yet. Ask SHEQ to set the range and method before verifying.</div></div>
+        <div class="lbl">Your reading</div>
+        <div class="field">No. of drops (optional log)</div>
+        <div class="field">Reading %</div>
+        <div class="btn lock">CAPTURE READING · UNAVAILABLE</div>
+        <div class="ring amber" style="left:8px;top:96px;width:224px;height:66px"></div>
+        <div class="ring amber" style="left:8px;top:236px;width:224px;height:26px"></div>
+      </div></div>
+      <div>
+        <header><span class="num">06</span><h3>No spec, no reading</h3><span class="dur">1:54 – 2:12</span></header>
+        <span class="chip comp">COMPOSED · READING LOCK</span>
+        <div class="vo"><b>Daniel</b>Here is the failure mode most people never see. A station that has no specification yet. No range, no method. The app does not guess. It locks the reading — capture is unavailable — and it tells you why, and who to ask. A number recorded against no standard is not verification. It is a guess with a timestamp.</div>
+        <div class="notes"><b>COMPOSED.</b> No site in the hunt had an unspecced station on the verify screen. <b>Base:</b> still 11 (verify card). <b>Compose:</b> the approved-range card becomes the amber "no approved range on file · readings locked" card with the one-line explanation; the CAPTURE READING button becomes the disabled "unavailable" state; the station header re-set to an unspecced station (Argonox · Satellite 7 fits the strip). ComposedStill over three regions only; everything else photographed. <b>Truth check before recording:</b> confirm the exact lock copy on the current build (the explanation text and whether the button reads "unavailable" or is hidden); the voice says "locks the reading" and "capture is unavailable" deliberately — adjust if the build says otherwise. <b>Rings:</b> amber on the lock card, then amber on the disabled button.</div>
+      </div>
+    </article>
+
+    <!-- 7 -->
+    <article class="beat">
+      <div class="phone"><div class="screen">
+        <div class="t">Verify<br><small style="font-family:'DM Sans';font-weight:400;font-size:8px;color:#939CA8">Conductivity</small></div>
+        <div class="row"><span><b>ECO-CLEAN FA15</b><small>Site Operations · ECO-CLEAN FA15</small></span></div>
+        <div class="range"><div class="e">APPROVED RANGE</div><div class="v">1.0–5.0 %</div><div style="font-size:7px;color:#505B69">Method: Conductivity · 1:1171</div></div>
+        <div style="background:#FBEEDB;border:1px solid #E89A30;border-radius:8px;padding:7px;margin:6px 0"><div style="font-size:6px;letter-spacing:1.2px;color:#A5690F">SET PLANT-WATER BASELINE FOR THIS SHIFT</div><div style="font-size:7.5px;color:#505B69;margin:3px 0">Measure the tap water once — every conductivity check this shift uses it.</div><div class="field">Tap-water conductivity<span>µS</span></div><div class="field" style="font-size:8px;font-family:'DM Sans';font-weight:400">Water source (optional)</div><div class="btn off">SET BASELINE</div></div>
+        <div class="ring amber" style="left:8px;top:150px;width:224px;height:126px"></div>
+      </div></div>
+      <div>
+        <header><span class="num">07</span><h3>Conductivity: the baseline, once a shift</h3><span class="dur">2:12 – 2:30</span></header>
+        <span class="chip">CAPTURED AT BRITO'S · SHIFT BASELINE CARD</span>
+        <div class="vo"><b>Daniel</b>Conductivity has one extra step. Plant water is not the same at every site, or every day. So once a shift, before the first check, you measure the tap water and set the baseline. Every conductivity reading that shift is corrected against it. Skip it, and the app blocks the reading until you do. One measurement, once. Then the rest of the shift just flows.</div>
+        <div class="notes"><b>Shot:</b> Brito's still 03 — <code>hunt/britos/03-verify-conductivity-shift-baseline-block.png</code>: Verify · Conductivity on ECO-CLEAN FA15, approved range 1.0–5.0 %, Method: Conductivity · 1:1171, with the amber SET PLANT-WATER BASELINE FOR THIS SHIFT card blocking the reading. <b>This state was captured</b> — the brief listed it as "compose"; the Brito's hunt found it live, so it is a real still, not a composition. <b>Ring:</b> amber on the baseline card, then tighten to the SET BASELINE button on "once". <b>Compose (small, optional):</b> the "baseline set · recapture" chip after the button is pressed, if Daniel wants the after-state; base the same still. <b>Reading corrected against it:</b> the voice says "corrected against it" — confirm with the app team that the 1:1171 ratio and baseline subtraction is how the reading is derived before recording.</div>
+      </div>
+    </article>
+
+    <!-- 8 -->
+    <article class="beat">
+      <div class="phone"><div class="screen">
+        <div class="t">Verify<br><small style="font-family:'DM Sans';font-weight:400;font-size:8px;color:#939CA8">Titration (drops)</small></div>
+        <div class="row"><span><b>Sandrox PA</b><small>Site Operations · Sandrox PA · Crate washers 1</small></span></div>
+        <div class="range"><div class="e">APPROVED RANGE</div><div class="v">0.3–2.0 %</div></div>
+        <div class="lbl">Your reading</div>
+        <div class="field">No. of drops (optional log)<span>drops</span></div>
+        <div class="field filled">1.0<span style="font-size:10px;color:#939CA8">%</span></div>
+        <div class="verdict g"><span style="background:#fff;color:#939CA8;padding:1px 4px;border-radius:4px;margin-right:4px">CAPTURED</span>● IN SPEC = 1.0 %</div>
+        <div class="btn">RECORD VERIFICATION</div>
+        <div class="ring emerald" style="left:8px;top:214px;width:224px;height:24px"></div>
+      </div></div>
+      <div>
+        <header><span class="num">08</span><h3>In spec</h3><span class="dur">2:30 – 2:44</span></header>
+        <span class="chip">READING → VERDICT · IN SPEC</span>
+        <div class="vo"><b>Daniel</b>Most days it is this simple. Count the drops if you want the log. Enter the reading — one percent. Captured. In spec. The verdict is not the operator's opinion. It is the reading against the range. Record it, and that dosing point is verified for the cadence.</div>
+        <div class="notes"><b>Shot:</b> still 13 — reading 1.0 %, emerald CAPTURED · IN SPEC = 1.0 % verdict. <b>Ring:</b> emerald on the verdict pill; a beat of hold. <b>Zoom crop:</b> the reading field and the verdict together. <b>Numbers:</b> one percent is what the capture shows; keep the voice to it.</div>
+      </div>
+    </article>
+
+    <!-- 9 -->
+    <article class="beat">
+      <div class="phone"><div class="screen">
+        <div class="t">Verify<br><small style="font-family:'DM Sans';font-weight:400;font-size:8px;color:#939CA8">Titration (drops)</small></div>
+        <div class="field filled">3.0<span style="font-size:10px;color:#939CA8">%</span></div>
+        <div class="verdict r"><span style="background:#fff;color:#939CA8;padding:1px 4px;border-radius:4px;margin-right:4px">CAPTURED</span>● OUT OF SPEC = 3.0 %</div>
+        <div class="lbl">Corrective action · required</div>
+        <div class="field" style="font-family:'DM Sans';font-weight:400;font-size:8px">What you did before re-testing (re-mixed, re-calibrated pump, replaced cartridge…)</div>
+        <div class="lbl" style="color:#D6432F">Re-test reading · required</div>
+        <div class="field">No. of drops (optional log)<span>drops</span></div>
+        <div class="field">Reading %<span>%</span></div>
+        <div class="btn lock">CAPTURE READING</div>
+        <div class="ring" style="left:8px;top:64px;width:224px;height:24px"></div>
+        <div class="ring amber" style="left:8px;top:100px;width:224px;height:120px"></div>
+      </div></div>
+      <div>
+        <header><span class="num">09</span><h3>Out of spec: fix it, test again</h3><span class="dur">2:44 – 3:08</span></header>
+        <span class="chip">OUT OF SPEC · CORRECTIVE ACTION · RE-TEST</span>
+        <div class="vo"><b>Daniel</b>Three percent. Out of spec. And now the app simply refuses to move on. Two things appear, and both are required. What you did — re-mixed, re-calibrated the pump, replaced the cartridge. And a re-test reading. The button stays locked until both exist. So you fix it, you test again, and if it passes, the record shows both: the miss, and the recovery. That is not blame. That is the second pair of eyes doing its job.</div>
+        <div class="notes"><b>Shots:</b> still 14 (3.0 % · OUT OF SPEC, corrective action required, re-test required) → still 15 (re-test fields expanded). <b>Rings:</b> coral on the verdict; amber on the corrective-action and re-test block as "both are required"; hold on the locked button. <b>Zoom crop:</b> the corrective-action placeholder text — it is the app's own coaching. <b>Re-staged</b> from the July out-of-spec beat on the current screens; the voice keeps July's "the miss and the recovery".</div>
+      </div>
+    </article>
+
+    <!-- 10 -->
+    <article class="beat">
+      <div class="phone"><div class="screen">
+        <div class="t">Verify<br><small style="font-family:'DM Sans';font-weight:400;font-size:8px;color:#939CA8">Titration (drops)</small></div>
+        <div class="verdict r"><span style="background:#fff;color:#939CA8;padding:1px 4px;border-radius:4px;margin-right:4px">CAPTURED</span>● OUT OF SPEC = 3.0 %</div>
+        <div class="lbl" style="color:#D6432F">Re-test reading · required</div>
+        <div class="field filled">3.5<span style="font-size:10px;color:#939CA8">%</span></div>
+        <div class="verdict r"><span style="background:#fff;color:#939CA8;padding:1px 4px;border-radius:4px;margin-right:4px">CAPTURED</span>● RE-TEST FAILED</div>
+        <div style="background:#F8DDD8;border:1px solid #D6432F;border-radius:8px;padding:7px;margin:6px 0;text-align:center"><div style="font-size:6.5px;letter-spacing:1.2px;color:#D6432F">SM ESCALATION · REQUIRED</div><div style="font-size:7.5px;color:#505B69;margin-top:2px">Re-test still out of spec. Name the site manager — the system raises an NCR and the SM acknowledges + signs on their device.</div><div class="field" style="margin-top:4px;font-family:'DM Sans';font-weight:400;font-size:8px">Site manager</div></div>
+        <div class="btn" style="background:#D6432F">RECORD AND ESCALATE</div>
+        <div class="ring" style="left:8px;top:150px;width:224px;height:92px"></div>
+      </div></div>
+      <div>
+        <header><span class="num">10</span><h3>Re-test failed: it goes up the chain</h3><span class="dur">3:08 – 3:32</span></header>
+        <span class="chip kept">RE-STAGED LADDER · KEPT SM DEVICE HALF</span>
+        <div class="vo"><b>Daniel</b>What if the re-test fails too? One operator shouldn't carry that alone. So the app raises a non-conformance and names the site manager. The button becomes Record and Escalate. On their own device, the manager acknowledges, and signs. Accountability travels up the chain — automatically.</div>
+        <div class="notes"><b>Shot:</b> still 16 — 3.5 % · RE-TEST FAILED, the SM ESCALATION · REQUIRED ladder with the site-manager field; then the July composed SM device (acknowledge + sign) for the second half, unchanged. <b>Ring:</b> coral on the escalation card, tighten to the site-manager field on "names the site manager". <b>Voice:</b> the July line, verbatim. <b>Two-device split:</b> keep the July split-frame treatment; the left half is the new still 16, the right half is the kept SM device.</div>
+      </div>
+    </article>
+
+    <!-- 11 -->
+    <article class="beat">
+      <div class="phone"><div class="screen">
+        <div class="t">Chemical</div>
+        <div class="row" style="flex-direction:column;align-items:stretch;border:1px solid #1F9C5A"><div style="display:flex;justify-content:space-between"><b>Sandrox PA</b><span class="pillr g">✓ VERIFIED</span></div><small>Sandrox PA · Whole plant · Crate washer 1 · 12:17 AM</small><span class="pillr" style="background:#E5F4FB;color:#1582AB;align-self:flex-start;margin:3px 0">BIN WASH DEPARTMENT</span><small>5 L chemical · Issued by Luleko Maqula</small><small style="color:#1F9C5A">✓ 12:18 AM · titration_drops · 0.9 % · PASS · Luleko Maq…</small><small style="text-align:right;letter-spacing:1px">DETAILS ›</small></div>
+        <div class="sheet" style="bottom:0"><div style="display:flex;justify-content:space-between"><b style="font-size:11px">Sandrox PA</b><span>✕</span></div><div class="lbl" style="color:#3CB6E0">Issue details</div><div style="font-size:8px">Sep 5 5:12 AM · Whole plant · Bin Wash Department · Crate washers 1 · OPEN<br>5 L chemical<br>Issued by Bongani Mkancu</div><div class="lbl">Verification history</div><div style="font-size:8px;background:#fff;border:1px solid #DCE2E8;border-radius:6px;padding:4px"><span style="color:#1F9C5A">✓</span> Sep 5 5:12 AM · titration_drops · 0.4 % · <span style="color:#1F9C5A">PASS</span> · Bongani Mkancu</div></div>
+        <div class="ring emerald" style="left:8px;top:38px;width:224px;height:96px"></div>
+      </div></div>
+      <div>
+        <header><span class="num">11</span><h3>The record, at the time</h3><span class="dur">3:32 – 3:54</span></header>
+        <span class="chip">HISTORY ROWS · DETAIL · BACK ON THE HUB</span>
+        <div class="vo"><b>Daniel</b>And it is all there afterwards. Every issue on the hub: who issued it, which department, how much. Under it, the verification — the method, the reading, pass or fail, and the name. Open the detail and it is the same record, with the time it was made. Not a percentage somebody typed in later. A reading taken at the station, when the work was done. Back on the hub: none out of spec. That is what an auditor gets to see.</div>
+        <div class="notes"><b>Shots:</b> still 05 (history rows: VERIFIED cards with department chip, litres issued, issuer, the ✓ verification line) → still 06 (detail modal: ISSUE DETAILS, VERIFICATION HISTORY) → still 03 again, ringing the "0 out-of-spec" tile. <b>Rings:</b> emerald on one verified card, then on the verification line inside the detail; sky on the out-of-spec tile at the end. <b>Due-diligence thread from Bill of Health:</b> "recorded at the time" — same words, same idea, no new claims. <b>Still 10</b> (OTHER OPEN ISSUES · water dilution not captured · Verify again) is the reserve if Daniel wants "verification can be repeated" said explicitly.</div>
+      </div>
+    </article>
+
+    <!-- 12 -->
+    <article class="beat">
+      <div class="full"><div class="e">OFFLINE RELAY · KEPT FROM JULY</div><div class="h">Nothing lost.<br>Nothing doubled.</div><p>The queue, the buzz, the relay in strict order, temporary IDs swapped for real ones, the duplicate turned away.</p><p style="margin-top:8px">Frame for frame from the July cut.</p></div>
+      <div>
+        <header><span class="num">12</span><h3>Dead spots</h3><span class="dur">3:54 – 4:14</span></header>
+        <span class="chip kept">KEPT FROM JULY · OFFLINE RELAY</span>
+        <div class="vo"><b>Daniel</b>Factory floors have dead spots. CCV doesn't care. Offline, every action saves instantly — with a buzz — then waits in a queue. When the signal returns, they run like a relay, in strict order. Temporary IDs are swapped for real ones. And a retry that tries to submit twice is turned away. Nothing lost. Nothing doubled.</div>
+        <div class="notes"><b>Shot:</b> the July offline relay scene (queue + clientOpId gate), unchanged. <b>Keep:</b> audio and picture as they are; re-time the scene window only. <b>Note:</b> Sunbake Buns &amp; Rolls' hunt still (<code>01-home-top-sync-retry.png</code>) is a real "sync retry" home state — usable as a two-second insert before the relay if Daniel wants a real screen in this beat.</div>
+      </div>
+    </article>
+
+    <!-- 13 -->
+    <article class="beat">
+      <div class="full"><div class="e">CLOSE</div><div class="h">Measured, not assumed.<br>Recorded at the time.</div><p>The strip tells you first. The standard is already set. Fail, and it walks you through re-test and escalation.</p><p style="margin-top:14px;font-size:9px;color:#3CB6E0">e-wizer · Ecowize</p></div>
+      <div>
+        <header><span class="num">13</span><h3>Close</h3><span class="dur">4:14 – 4:30</span></header>
+        <span class="chip">OUTRO · BOOKEND</span>
+        <div class="vo"><b>Daniel</b>Three things to hold onto. The certificate tells you first. The standard is already set before anyone touches a station. And every reading is measured, not assumed — recorded at the time, by the person who did it. Fail, and the app walks you through re-test and escalation. A second pair of eyes on every drum. One that never blinks first.</div>
+        <div class="notes"><b>Shot:</b> Ecowize outro bookend with the closing lines; music under the bookends only (Daniel's Bill of Health decision), voice 1.5, bookend bed 0.88 with the 18-frame seam overlap. Outro text column at left 980+ to clear the logo lockup. <b>Voice:</b> the July close is rewritten — "the Matrix owns the standard" and "the station mode owns the flow" are gone; "one that never blinks first" stays.</div>
+      </div>
+    </article>
+  </section>
+
+  <section>
+    <div class="eyebrow">Production plan · everything off this machine</div>
+    <div class="grid" style="margin-top:10px">
+      <div class="card"><h3>1 · Captures are in</h3><p>The I&amp;J Blockbusters hunt (sixteen stills, 720×1600, current build, sheq@poc) covers beats 2–5, 8–11 and the left half of 10. Brito's still 03 covers beat 7. Nothing to re-capture unless capture-day counts change; then re-shoot stills 02 and 03 only, and rewrite the two voice lines that read numbers off them.</p></div>
+      <div class="card"><h3>2 · Compose, then record</h3><p>Two composed states (beat 6 reading lock; beat 4 filled issue form) plus two optional ones (amber DUE SOON pill on beat 3; baseline-set chip on beat 7), all as ComposedStill over the nearest real still — same discipline as Bill of Health: mask only the changed regions, app fonts, sampled inks, hero and counts reconciled. <b>Compose before narration</b> so every spoken figure matches a screen.</p></div>
+      <div class="card"><h3>3 · Order of work</h3><p>Confirm the reading-lock copy and the "unavailable" button state on the current build (beat 6). Confirm the conductivity correction wording (beat 7). Then narration: Daniel's voice, ElevenLabs, numbers as words; "verify" is spelled normally — the July "veryfy" respelling is dropped and checked on the first take. Then the composition from the July <code>src/ccv</code> entry with the three kept scenes untouched, the ring audit on a contact sheet, full render on B.</p></div>
+      <div class="card"><h3>4 · What this refresh retires</h3><p>Beats 3, 4, 5, 6, 7 and 8 of the July cut (issue scope, Matrix, manual dilution, satellite issue, "no dropdown", six methods) are replaced by beats 3–7 here. Every "load drum" line and every "water worked out for you" line is gone. The satellite beat is folded into beat 4's issue type (DEPT / DOSING POINT: litres of chemical issued, verification tracked per dosing point).</p></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="eyebrow">Capture / compose list</div>
+    <div class="tw"><table>
+      <tr><th>#</th><th>Still</th><th>Source</th><th>State</th><th>Ring / zoom</th></tr>
+      <tr><td>1</td><td>Composed drum, grey</td><td><span class="tag kept">kept</span></td><td>July hook scene, unchanged</td><td>iris tries and fails</td></tr>
+      <tr><td>2</td><td>Bill of Health with CCV strip</td><td><span class="tag cap">captured</span> I&amp;J 02</td><td>CCV VERIFICATION OVERDUE · three dosing points named</td><td>strip, coral; zoom on the three lines</td></tr>
+      <tr><td>3</td><td>Chemical hub, due band</td><td><span class="tag cap">captured</span> I&amp;J 03 / 04</td><td>5 due · 2 done · 0 out-of-spec; PERIODIC VERIFICATION DUE · 3 OVERDUE; today 21 · 21 · 21</td><td>sky on the tiles, coral on the band; zoom on "days since". Optional <span class="tag comp">composed</span> DUE SOON pill</td></tr>
+      <tr><td>4</td><td>+ picker → issue form</td><td><span class="tag cap">captured</span> I&amp;J 07 + 09, form <span class="tag comp">composed</span></td><td>batch / lot filled, ENTIRE FACTORY, MANUAL DILUTION, 1 L + 50 L, computed 2.0 % in range</td><td>batch field; scope; computed dilution card</td></tr>
+      <tr><td>5</td><td>Verify card → How to test sheet</td><td><span class="tag cap">captured</span> I&amp;J 11 + 12</td><td>approved range 0.3–2.0 %, Method: Titration (drops); reagents, procedure, calculation</td><td>range card; calculation line; zoom on the steps</td></tr>
+      <tr><td>6</td><td>Reading lock</td><td><span class="tag comp">composed</span> over I&amp;J 11</td><td>NO APPROVED RANGE ON FILE · readings locked · CAPTURE unavailable, on an unspecced station</td><td>lock card, then the disabled button</td></tr>
+      <tr><td>7</td><td>Conductivity baseline card</td><td><span class="tag cap">captured</span> Brito's 03</td><td>SET PLANT-WATER BASELINE FOR THIS SHIFT blocking the reading on ECO-CLEAN FA15 · 1.0–5.0 % · 1:1171</td><td>baseline card, then SET BASELINE. Optional <span class="tag comp">composed</span> after-state chip</td></tr>
+      <tr><td>8</td><td>In spec</td><td><span class="tag cap">captured</span> I&amp;J 13</td><td>1.0 % · CAPTURED · IN SPEC</td><td>verdict pill; zoom reading + verdict</td></tr>
+      <tr><td>9</td><td>Out of spec, re-test</td><td><span class="tag cap">captured</span> I&amp;J 14 + 15</td><td>3.0 % · OUT OF SPEC · corrective action required · re-test required</td><td>verdict; corrective + re-test block; locked button</td></tr>
+      <tr><td>10</td><td>Re-test failed, escalation</td><td><span class="tag cap">captured</span> I&amp;J 16 + <span class="tag kept">kept</span> SM device</td><td>3.5 % · RE-TEST FAILED · SM ESCALATION · REQUIRED</td><td>escalation card; site-manager field; split to the SM device</td></tr>
+      <tr><td>11</td><td>History rows → detail → hub</td><td><span class="tag cap">captured</span> I&amp;J 05 + 06 + 03</td><td>VERIFIED cards; ISSUE DETAILS + VERIFICATION HISTORY; 0 out-of-spec</td><td>verified card; verification line; out-of-spec tile</td></tr>
+      <tr><td>12</td><td>Offline relay</td><td><span class="tag kept">kept</span></td><td>July scene, unchanged (optional real insert: Sunbake Buns &amp; Rolls sync-retry home)</td><td>—</td></tr>
+      <tr><td>13</td><td>—</td><td>outro bookend</td><td>closing lines</td><td>—</td></tr>
+    </table></div>
+  </section>
+
+  <section>
+    <div class="eyebrow">Hunt findings · nine sites, current build, sheq@poc</div>
+    <div class="tw"><table>
+      <tr><th>Site</th><th>Bill of Health</th><th>Chemical</th></tr>
+      <tr><td><b>I&amp;J Blockbusters</b></td><td class="no">CCV VERIFICATION OVERDUE strip · three dosing points</td><td>full flow captured (16 stills)</td></tr>
+      <tr><td>Brito's</td><td>no strip</td><td>hub quiet, no activity; <b>conductivity shift-baseline block captured</b></td></tr>
+      <tr><td>Albany Pretoria Bakery · Oceana Riverlands · PepsiCo PE Mill · Rainbow Rustenburg</td><td>no active CCV</td><td>—</td></tr>
+      <tr><td>Bakery Demo · Lupo Bakery · Sunbake Bread</td><td>no strip</td><td>—</td></tr>
+      <tr><td>Sunbake Buns &amp; Rolls</td><td>home only (sync retry state)</td><td>—</td></tr>
+    </table></div>
+  </section>
+
+  <footer>Storyboard v1 · 2026-09-06 · numbers on the schematics are read from the I&amp;J and Brito's captures except where marked composed; every spoken figure is checked against its still before narration is generated. Beats 1, 10 (right half) and 12 keep the July audio verbatim.</footer>
+</div>
