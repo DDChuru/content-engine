@@ -24,6 +24,10 @@ import transcriptJson from '../public/transcripts/mechanics/scalars-vectors.json
 import { useCue } from './ProjectComposition';
 
 const TRANSITION_FRAMES = 15;
+const cardInk = (color: string) => ({
+  '#42dbe8': '#087782', '#8decf2': '#087782', '#f4aa45': '#925000',
+  '#61d095': '#237347', '#ef6f63': '#b6342c', '#b69cff': '#6940a0',
+}[color] ?? color);
 
 const T = {
   bg: '#061522',
@@ -167,7 +171,7 @@ const StepBadge: React.FC<{ scene: number; label: string }> = ({ scene, label })
       boxShadow: `0 0 30px ${T.cyan}12`,
       color: T.textMuted,
       fontFamily: T.mono,
-      fontSize: 17,
+      fontSize: 28,
       letterSpacing: 1.4,
       textTransform: 'uppercase',
     }}
@@ -187,7 +191,7 @@ const SceneShell: React.FC<{
   const frame = useCurrentFrame();
   const drift = Math.sin(frame / 75) * 10;
   return (
-    <AbsoluteFill style={{ overflow: 'hidden', background: T.bg, fontFamily: T.sans }}>
+    <AbsoluteFill style={{ overflow: 'hidden', isolation: 'isolate', background: T.bg, fontFamily: T.sans }}>
       <AbsoluteFill
         style={{
           background: `radial-gradient(circle at ${26 + drift / 5}% 17%, ${T.cyan}16, transparent 35%), radial-gradient(circle at 80% 88%, ${T.amber}10, transparent 31%), linear-gradient(145deg, ${T.bgDeep}, ${T.bg})`,
@@ -208,7 +212,7 @@ const SceneShell: React.FC<{
           top: 48,
           color: T.textMuted,
           fontFamily: T.mono,
-          fontSize: 17,
+          fontSize: 28,
           letterSpacing: 2.6,
         }}
       >
@@ -280,7 +284,7 @@ const SectionTitle: React.FC<{ kicker: string; children: React.ReactNode }> = ({
       style={{
         color: T.cyan,
         fontFamily: T.mono,
-        fontSize: 18,
+        fontSize: 28,
         fontWeight: 850,
         letterSpacing: 2.4,
         textTransform: 'uppercase',
@@ -344,15 +348,15 @@ const Compass: React.FC<{ size?: number; color?: string }> = ({ size = 180, colo
     <div style={{ position: 'absolute', inset: 8, borderRadius: '50%', border: `4px solid ${color}`, boxShadow: `0 0 25px ${color}33` }} />
     <div style={{ position: 'absolute', left: '50%', top: 20, bottom: 20, width: 3, background: `${color}88` }} />
     <div style={{ position: 'absolute', top: '50%', left: 20, right: 20, height: 3, background: `${color}88` }} />
-    <div style={{ position: 'absolute', top: -3, left: '45%', color, fontFamily: T.mono, fontSize: 25, fontWeight: 900 }}>N</div>
-    <div style={{ position: 'absolute', right: -2, top: '42%', color, fontFamily: T.mono, fontSize: 25, fontWeight: 900 }}>E</div>
+    <div style={{ position: 'absolute', top: -3, left: '45%', color, fontFamily: T.mono, fontSize: 28, fontWeight: 900 }}>N</div>
+    <div style={{ position: 'absolute', right: -30, top: '30%', color, fontFamily: T.mono, fontSize: 28, fontWeight: 900 }}>E</div>
     <div style={{ position: 'absolute', left: '50%', top: '50%', width: 18, height: 18, borderRadius: '50%', background: T.card, transform: 'translate(-42%, -42%)' }} />
   </div>
 );
 
-const Person: React.FC<{ color?: string; running?: boolean }> = ({ color = T.amber, running = false }) => {
+const Person: React.FC<{ color?: string; running?: boolean; moving?: boolean }> = ({ color = T.amber, running = false, moving = true }) => {
   const frame = useCurrentFrame();
-  const swing = Math.sin(frame * (running ? 0.42 : 0.26)) * (running ? 18 : 12);
+  const swing = moving ? Math.sin(frame * (running ? 0.42 : 0.26)) * (running ? 18 : 12) : 0;
   return (
     <div style={{ position: 'relative', width: 72, height: 126 }}>
       <div style={{ position: 'absolute', left: 23, top: 0, width: 31, height: 31, borderRadius: '50%', background: color, boxShadow: `0 0 16px ${color}66` }} />
@@ -406,28 +410,28 @@ const Scene01: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
         </div>
 
         <div style={{ position: 'absolute', left: 274, top: 330, width: 190, textAlign: 'center', opacity: sizeProgress }}>
-          <div style={{ color: T.cyan, fontFamily: T.mono, fontSize: 25, letterSpacing: 3, fontWeight: 900 }}>SIZE</div>
-          <div style={{ color: T.textMuted, fontSize: 20, marginTop: 8 }}>how much</div>
+          <div style={{ color: T.cyan, fontFamily: T.mono, fontSize: 28, letterSpacing: 3, fontWeight: 900 }}>SIZE</div>
+          <div style={{ color: T.textMuted, fontSize: 28, marginTop: 8 }}>how much</div>
         </div>
 
         <div style={{ position: 'absolute', left: 1050, top: 78, opacity: directionProgress, transform: `scale(${0.72 + directionProgress * 0.28}) rotate(${(1 - directionProgress) * 20}deg)` }}>
           <Compass size={260} />
-          <div style={{ position: 'absolute', left: 88, top: 112, transform: `rotate(${(1 - directionProgress) * -35}deg)`, transformOrigin: 'left center' }}>
+          <div style={{ position: 'absolute', left: 130, top: 112, transform: `rotate(${(1 - directionProgress) * -35}deg)`, transformOrigin: 'left center' }}>
             <VectorArrow width={310} color={T.amber} />
           </div>
-          <div style={{ position: 'absolute', left: 192, top: 310, width: 260, textAlign: 'center', color: T.amber, fontFamily: T.mono, fontSize: 24, fontWeight: 900, letterSpacing: 2 }}>DIRECTION</div>
+          <div style={{ position: 'absolute', left: 192, top: 310, width: 260, textAlign: 'center', color: T.amber, fontFamily: T.mono, fontSize: 28, fontWeight: 900, letterSpacing: 2 }}>DIRECTION</div>
         </div>
 
         <div style={{ position: 'absolute', left: 270, top: 438, width: 570, opacity: scalar.opacity }}>
           <WarmCard accent={T.cyan} style={{ padding: '20px 30px', textAlign: 'center' }}>
-            <span style={{ color: T.cyan, fontFamily: T.mono, fontSize: 31, fontWeight: 950 }}>SCALAR</span>
-            <span style={{ color: T.ink, fontSize: 27, fontWeight: 800 }}> = size</span>
+            <span style={{ color: cardInk(T.cyan), fontFamily: T.mono, fontSize: 31, fontWeight: 950 }}>SCALAR</span>
+            <span style={{ color: T.ink, fontSize: 28, fontWeight: 800 }}> = size</span>
           </WarmCard>
         </div>
         <div style={{ position: 'absolute', right: 270, top: 438, width: 570, opacity: vector.opacity }}>
           <WarmCard accent={T.amber} style={{ padding: '20px 30px', textAlign: 'center' }}>
-            <span style={{ color: T.amber, fontFamily: T.mono, fontSize: 31, fontWeight: 950 }}>VECTOR</span>
-            <span style={{ color: T.ink, fontSize: 27, fontWeight: 800 }}> = size + direction</span>
+            <span style={{ color: cardInk(T.amber), fontFamily: T.mono, fontSize: 31, fontWeight: 950 }}>VECTOR</span>
+            <span style={{ color: T.ink, fontSize: 28, fontWeight: 800 }}> = size + direction</span>
           </WarmCard>
         </div>
       </div>
@@ -449,7 +453,7 @@ const ScaleBar: React.FC<{
     <div style={{ position: 'absolute', left: 0, top: 68, width: 560, height: 4, background: `${T.textMuted}55` }} />
     {[0, 3, 6, 9, 12].map((n) => (
       <div key={n} style={{ position: 'absolute', left: n / 12 * 540, top: 58, width: 3, height: 25, background: T.textMuted }}>
-        <span style={{ position: 'absolute', top: 29, left: -10, color: T.textMuted, fontFamily: T.mono, fontSize: 16 }}>{n}</span>
+        <span style={{ position: 'absolute', top: 29, left: -10, color: T.textMuted, fontFamily: T.mono, fontSize: 28 }}>{n}</span>
       </div>
     ))}
     <div style={{ position: 'absolute', left: 0, top: 28, transform: `scaleX(${progress})`, transformOrigin: 'left center' }}>
@@ -474,19 +478,19 @@ const Scene02: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
       <SectionTitle kicker="definitions">What makes a quantity complete?</SectionTitle>
       <div style={{ position: 'absolute', left: 78, right: 78, top: 245, bottom: 108, display: 'flex', gap: 34 }}>
         <div style={{ flex: 1, borderRadius: 30, border: `3px solid ${T.cyan}${scalar.isActive ? 'aa' : '33'}`, background: `${T.panel}e8`, padding: '34px 44px', opacity: 0.35 + scalar.opacity * 0.65 }}>
-          <div style={{ color: T.cyan, fontFamily: T.mono, fontSize: 26, fontWeight: 950, letterSpacing: 3 }}>SCALAR</div>
+          <div style={{ color: T.cyan, fontFamily: T.mono, fontSize: 28, fontWeight: 950, letterSpacing: 3 }}>SCALAR</div>
           <div style={{ color: T.text, fontSize: 44, fontWeight: 900, marginTop: 22 }}>12 m/s</div>
           <div style={{ marginTop: 36 }}><ScaleBar progress={magnitude} arrow={false} color={T.cyan} /></div>
           <WarmCard accent={T.cyan} style={{ marginTop: 44, padding: '22px 28px', opacity: magnitude }}>
-            <div style={{ fontFamily: T.mono, color: T.cyan, fontSize: 18, fontWeight: 900, letterSpacing: 2 }}>MAGNITUDE</div>
-            <div style={{ fontSize: 27, fontWeight: 850, marginTop: 8 }}>size completes the answer</div>
+            <div style={{ fontFamily: T.mono, color: cardInk(T.cyan), fontSize: 28, fontWeight: 900, letterSpacing: 2 }}>MAGNITUDE</div>
+            <div style={{ fontSize: 28, fontWeight: 850, marginTop: 8 }}>size completes the answer</div>
           </WarmCard>
         </div>
 
         <div style={{ flex: 1, borderRadius: 30, border: `3px solid ${T.amber}${direction > 0 ? 'aa' : '33'}`, background: `${T.panel}e8`, padding: '34px 44px', opacity: direction }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-            <div style={{ color: T.amber, fontFamily: T.mono, fontSize: 26, fontWeight: 950, letterSpacing: 3 }}>VECTOR</div>
-            <div style={{ opacity: direction, color: T.amber, fontFamily: T.mono, fontSize: 23, fontWeight: 900, marginRight: 96 }}>EAST →</div>
+            <div style={{ color: T.amber, fontFamily: T.mono, fontSize: 28, fontWeight: 950, letterSpacing: 3 }}>VECTOR</div>
+            <div style={{ opacity: direction, color: T.amber, fontFamily: T.mono, fontSize: 28, fontWeight: 900, marginRight: 96 }}>EAST →</div>
           </div>
           <div style={{ color: T.text, fontSize: 44, fontWeight: 900, marginTop: 22 }}>
             12 m/s <span style={{ color: T.amber, opacity: direction }}>east</span>
@@ -498,12 +502,12 @@ const Scene02: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
           <div style={{ marginTop: 36 }}><ScaleBar progress={magnitude} arrow={true} color={T.amber} arrowheadOpacity={direction} /></div>
           <WarmCard accent={T.amber} style={{ marginTop: 44, padding: '22px 28px', position: 'relative', overflow: 'hidden', opacity: direction }}>
             <div style={{ opacity: 1 - velocity.opacity }}>
-              <div style={{ fontFamily: T.mono, color: T.cyan, fontSize: 18, fontWeight: 900, letterSpacing: 2 }}>SPEED</div>
-              <div style={{ fontSize: 27, fontWeight: 850, marginTop: 8 }}>magnitude only</div>
+              <div style={{ fontFamily: T.mono, color: cardInk(T.cyan), fontSize: 28, fontWeight: 900, letterSpacing: 2 }}>SPEED</div>
+              <div style={{ fontSize: 28, fontWeight: 850, marginTop: 8 }}>magnitude only</div>
             </div>
             <div style={{ position: 'absolute', inset: '22px 28px', opacity: velocity.opacity }}>
-              <div style={{ fontFamily: T.mono, color: T.amber, fontSize: 18, fontWeight: 900, letterSpacing: 2 }}>VELOCITY</div>
-              <div style={{ fontSize: 27, fontWeight: 850, marginTop: 8 }}>magnitude + direction</div>
+              <div style={{ fontFamily: T.mono, color: cardInk(T.amber), fontSize: 28, fontWeight: 900, letterSpacing: 2 }}>VELOCITY</div>
+              <div style={{ fontSize: 28, fontWeight: 850, marginTop: 8 }}>magnitude + direction</div>
             </div>
           </WarmCard>
         </div>
@@ -523,12 +527,14 @@ const Scene03: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
   const displacementAt = cueAt(scene, 'displacement');
   const outward = useProgress(eastAt, westAt);
   const returning = useProgress(westAt, distanceAt);
+  const walking = useCue(eastAt, 0.4);
   const distanceReveal = useCue(distanceAt, 0.45);
   const displacementReveal = useCue(displacementAt, 0.45);
   const metres = 5 * outward + 2 * returning;
   const netMetres = 5 * outward - 2 * returning;
-  const x = 260 + 170 * netMetres;
-  const pathY = 680 - Math.sin(netMetres / 5 * Math.PI) * 125;
+  const t = netMetres / 5;
+  const x = 260 * (1 - t) ** 3 + 3 * 510 * (1 - t) ** 2 * t + 3 * 835 * (1 - t) * t ** 2 + 1110 * t ** 3;
+  const pathY = 680 - 525 * t * (1 - t);
   const routeOne = outward;
   const routeTwo = returning;
   const displacementWidth = Math.max(18, x - 260);
@@ -539,34 +545,34 @@ const Scene03: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
       <svg width="1920" height="1080" style={{ position: 'absolute', inset: 0 }}>
         <path d="M260 680 C510 505 835 505 1110 680" fill="none" stroke={`${T.card}38`} strokeWidth="42" strokeLinecap="round" />
         <path d="M260 680 C510 505 835 505 1110 680" pathLength="1" fill="none" stroke={T.cyan} strokeWidth="12" strokeLinecap="round" strokeDasharray="1" strokeDashoffset={1 - routeOne} />
-        <path d="M1110 680 C1000 610 890 548 770 561" pathLength="1" fill="none" stroke={T.amber} strokeWidth="12" strokeLinecap="round" strokeDasharray="1" strokeDashoffset={1 - routeTwo} />
+        <path d="M1110 680 C1000 610 882 568 764 554" pathLength="1" fill="none" stroke={T.amber} strokeWidth="12" strokeLinecap="round" strokeDasharray="1" strokeDashoffset={1 - routeTwo} />
         {[260, 430, 600, 770, 940, 1110].map((tick, index) => (
           <g key={tick}>
             <line x1={tick} y1={724} x2={tick} y2={748} stroke={T.textMuted} strokeWidth="4" />
-            <text x={tick} y={778} fill={T.textMuted} textAnchor="middle" fontFamily={T.mono} fontSize="20">{index} m</text>
+            <text x={tick} y={778} fill={T.textMuted} textAnchor="middle" fontFamily={T.mono} fontSize="28">{index} m</text>
           </g>
         ))}
       </svg>
 
-      <div style={{ position: 'absolute', left: x - 35, top: pathY - 123, transform: returning > 0 ? 'scaleX(-1)' : undefined }}><Person /></div>
+      <div style={{ position: 'absolute', left: x - 35, top: pathY - 123, transform: returning > 0 ? 'scaleX(-1)' : undefined }}><Person moving={outward > 0 && returning < 1} /></div>
       <div style={{ position: 'absolute', left: 232, top: 621, width: 56, height: 56, borderRadius: '50%', border: `5px solid ${T.green}`, background: `${T.green}22`, boxShadow: `0 0 22px ${T.green}55` }} />
-      <div style={{ position: 'absolute', left: 218, top: 690, width: 88, textAlign: 'center', color: T.green, fontFamily: T.mono, fontSize: 18, fontWeight: 900 }}>START</div>
+      <div style={{ position: 'absolute', left: 218, top: 690, width: 88, textAlign: 'center', color: T.green, fontFamily: T.mono, fontSize: 28, fontWeight: 900 }}>START</div>
 
       <div style={{ position: 'absolute', left: 260, top: 805, opacity: Math.max(outward, returning) }}>
         <VectorArrow width={displacementWidth} color={T.amber} />
-        <div style={{ color: T.amber, fontFamily: T.mono, fontSize: 18, marginTop: 7, width: displacementWidth, textAlign: 'center' }}>START → FINISH</div>
+        <div style={{ color: T.amber, fontFamily: T.mono, fontSize: 28, marginTop: 7, whiteSpace: 'nowrap', width: Math.max(300, displacementWidth), textAlign: 'center' }}>START → FINISH</div>
       </div>
 
       <div style={{ position: 'absolute', right: 88, top: 288, width: 490 }}>
-        <WarmCard accent={T.cyan} style={{ height: 204, padding: '28px 34px', opacity: Math.max(0.25, outward) }}>
-          <div style={{ color: T.cyan, fontFamily: T.mono, fontSize: 21, fontWeight: 900, letterSpacing: 2 }}>DISTANCE</div>
+        <WarmCard accent={T.cyan} style={{ height: 240, padding: '28px 34px', opacity: walking.opacity }}>
+          <div style={{ color: cardInk(T.cyan), fontFamily: T.mono, fontSize: 28, fontWeight: 900, letterSpacing: 2 }}>DISTANCE</div>
           <div style={{ color: T.ink, fontFamily: T.mono, fontSize: 67, fontWeight: 950, marginTop: 18 }}>{metres.toFixed(1)} m</div>
-          <div style={{ color: T.ink, opacity: distanceReveal.opacity, fontSize: 23, fontWeight: 750 }}>the whole route = 7 m</div>
+          <div style={{ color: T.ink, opacity: distanceReveal.opacity, fontSize: 28, fontWeight: 750 }}>the whole route = 7 m</div>
         </WarmCard>
-        <WarmCard accent={T.amber} style={{ height: 204, padding: '28px 34px', marginTop: 26, opacity: displacementReveal.opacity }}>
-          <div style={{ color: T.amber, fontFamily: T.mono, fontSize: 21, fontWeight: 900, letterSpacing: 2 }}>DISPLACEMENT</div>
+        <WarmCard accent={T.amber} style={{ height: 240, padding: '28px 34px', marginTop: 26, opacity: displacementReveal.opacity }}>
+          <div style={{ color: cardInk(T.amber), fontFamily: T.mono, fontSize: 28, fontWeight: 900, letterSpacing: 2 }}>DISPLACEMENT</div>
           <div style={{ color: T.ink, fontFamily: T.mono, fontSize: 62, fontWeight: 950, marginTop: 18 }}>3 m east</div>
-          <div style={{ color: T.ink, opacity: displacementReveal.opacity, fontSize: 23, fontWeight: 750 }}>finish compared with start</div>
+          <div style={{ color: T.ink, opacity: displacementReveal.opacity, fontSize: 28, fontWeight: 750 }}>finish compared with start</div>
         </WarmCard>
       </div>
     </SceneShell>
@@ -589,7 +595,7 @@ const FractionCard: React.FC<{
   return (
     <div style={{ opacity: reveal.opacity, transform: `translateY(${(1 - reveal.opacity) * 35}px)` }}>
       <WarmCard accent={accent} style={{ width: 750, height: 445, padding: '34px 42px', position: 'relative' }}>
-        <div style={{ color: accent, fontFamily: T.mono, fontSize: 24, fontWeight: 950, letterSpacing: 2.6 }}>{title}</div>
+        <div style={{ color: cardInk(accent), fontFamily: T.mono, fontSize: 28, fontWeight: 950, letterSpacing: 2.6 }}>{title}</div>
         <div style={{ position: 'absolute', right: 38, top: 26 }}>{icon}</div>
         <MathTeX tex={tex} fontSize={54} color={T.ink} style={{ marginTop: 55, textAlign: 'center' }} />
         <div style={{ position: 'absolute', left: 42, right: 42, bottom: 35 }}>{result}</div>
@@ -624,7 +630,7 @@ const Scene04: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
           accent={T.amber}
           tex={'\\text{velocity}=\\frac{\\text{displacement}}{\\text{time}}'}
           icon={<VectorArrow width={130} color={T.amber} />}
-          result={<div style={{ opacity: east.opacity, borderRadius: 15, background: `${T.amber}20`, padding: '14px 20px', color: T.ink, textAlign: 'center', fontFamily: T.mono, fontSize: 31, fontWeight: 950 }}>3/7 m/s <span style={{ color: T.amber }}>east →</span></div>}
+          result={<div style={{ opacity: east.opacity, borderRadius: 15, background: `${T.amber}20`, padding: '14px 20px', color: T.ink, textAlign: 'center', fontFamily: T.mono, fontSize: 31, fontWeight: 950 }}>3/7 m/s <span style={{ color: cardInk(T.amber) }}>east →</span></div>}
         />
       </div>
     </SceneShell>
@@ -651,20 +657,20 @@ const Scene05: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
     <SceneShell scene={5} label="round-trip test">
       <SectionTitle kicker="quickest test">Back at the start</SectionTitle>
       <div style={{ position: 'absolute', left: 222, right: 222, top: 530, height: 7, borderRadius: 8, background: `${T.card}55` }} />
-      {[0, 1, 2, 3].map((n) => <div key={n} style={{ position: 'absolute', left: 336 + n * 310, top: 510, width: 4, height: 49, background: T.textMuted }}><span style={{ position: 'absolute', top: 55, left: -20, width: 45, color: T.textMuted, textAlign: 'center', fontFamily: T.mono, fontSize: 20 }}>{n} m</span></div>)}
-      <div style={{ position: 'absolute', left: 303, top: 390, transform: `translateX(${runnerX - 336}px) scaleX(${returning > 0 ? -1 : 1})` }}><Person running /></div>
+      {[0, 1, 2, 3].map((n) => <div key={n} style={{ position: 'absolute', left: 336 + n * 310, top: 510, width: 4, height: 49, background: T.textMuted }}><span style={{ position: 'absolute', top: 55, left: -32, width: 70, whiteSpace: 'nowrap', color: T.textMuted, textAlign: 'center', fontFamily: T.mono, fontSize: 28 }}>{n} m</span></div>)}
+      <div style={{ position: 'absolute', left: 303, top: 390, transform: `translateX(${runnerX - 336}px) scaleX(${returning > 0 ? -1 : 1})` }}><Person running moving={out > 0 && returning < 1} /></div>
       <div style={{ position: 'absolute', left: 310, top: 486, width: 55, height: 55, borderRadius: '50%', border: `5px solid ${T.green}`, background: `${T.green}22`, boxShadow: `0 0 22px ${T.green}55` }} />
 
       {displacementWidth > 8 && <div style={{ position: 'absolute', left: 336, top: 645 }}><VectorArrow width={displacementWidth} color={T.amber} /></div>}
-      <div style={{ position: 'absolute', left: 282, top: 619, width: 110, color: T.amber, fontFamily: T.mono, fontSize: 18, fontWeight: 900 }}>DISPLACEMENT</div>
+      <div style={{ position: 'absolute', left: 282, top: 600, width: 310, color: T.amber, fontFamily: T.mono, fontSize: 28, fontWeight: 900 }}>DISPLACEMENT</div>
       <div style={{ position: 'absolute', left: 322, top: 640, width: 30, height: 30, borderRadius: '50%', border: `5px solid ${T.amber}`, opacity: zero, boxShadow: `0 0 28px ${T.amber}` }} />
 
-      <WarmCard accent={T.cyan} style={{ position: 'absolute', right: 115, top: 205, width: 400, padding: '28px 34px' }}>
-        <div style={{ color: T.cyan, fontFamily: T.mono, fontSize: 19, fontWeight: 900, letterSpacing: 2 }}>DISTANCE ODOMETER</div>
+      <WarmCard accent={T.cyan} style={{ position: 'absolute', right: 115, top: 265, width: 430, padding: '28px 34px' }}>
+        <div style={{ color: cardInk(T.cyan), fontFamily: T.mono, fontSize: 28, fontWeight: 900, letterSpacing: 2 }}>DISTANCE ODOMETER</div>
         <div style={{ color: T.ink, fontFamily: T.mono, fontSize: 68, fontWeight: 950, marginTop: 12 }}>{distance.toFixed(1)} m</div>
       </WarmCard>
       <WarmCard accent={T.amber} style={{ position: 'absolute', right: 115, top: 712, width: 400, padding: '24px 34px', opacity: zero }}>
-        <div style={{ color: T.amber, fontFamily: T.mono, fontSize: 18, fontWeight: 900, letterSpacing: 2 }}>NET DISPLACEMENT</div>
+        <div style={{ color: cardInk(T.amber), fontFamily: T.mono, fontSize: 28, fontWeight: 900, letterSpacing: 2 }}>NET DISPLACEMENT</div>
         <div style={{ color: T.ink, fontFamily: T.mono, fontSize: 48, fontWeight: 950, marginTop: 8 }}>0 m</div>
       </WarmCard>
     </SceneShell>
@@ -692,33 +698,40 @@ const Scene06: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
   const slowing = useSpringAt(slowingAt, 30);
   const turning = useSpringAt(turningAt, 31);
   const force = useSpringAt(forceAt, 28);
+  const turnTravel = useProgress(turningAt, turningAt + 1.35);
+  const turnX = 30 + 455 * turnTravel;
+  const turnY = 90 - 66 * (1 - Math.cos(turnTravel * Math.PI)) / 2;
+  const turnAngle = Math.atan2(-33 * Math.PI * Math.sin(turnTravel * Math.PI), 455) * 180 / Math.PI;
 
   return (
     <SceneShell scene={6} label="acceleration + force">
       <SectionTitle kicker="vectors change">Magnitude, direction, or both</SectionTitle>
       <div style={{ position: 'absolute', left: 80, top: 260, width: 840, height: 660, boxSizing: 'border-box', borderRadius: 30, background: `${T.panel}df`, border: `2px solid ${T.cyan}55`, padding: '30px 38px' }}>
-        <div style={{ color: T.cyan, fontFamily: T.mono, fontSize: 22, fontWeight: 900, letterSpacing: 2 }}>VELOCITY CHANGES</div>
+        <div style={{ color: T.cyan, fontFamily: T.mono, fontSize: 28, fontWeight: 900, letterSpacing: 2 }}>VELOCITY CHANGES</div>
         <div style={{ position: 'absolute', left: 70, top: 128 }}><Car /></div>
-        <div style={{ position: 'absolute', left: 265, top: 151, opacity: accelerate }}><VectorArrow width={180 + accelerate * 330} color={T.cyan} /></div>
+        <div style={{ position: 'absolute', left: 232, top: 151, opacity: accelerate }}><VectorArrow width={180 + accelerate * 330} color={T.cyan} /></div>
         <div style={{ position: 'absolute', left: 70, top: 294 }}><Car color={T.cyanSoft} /></div>
-        <div style={{ position: 'absolute', left: 265, top: 317, opacity: slowing }}><VectorArrow width={420 - slowing * 245} color={T.cyanSoft} /></div>
+        <div style={{ position: 'absolute', left: 232, top: 317, opacity: slowing }}><VectorArrow width={420 - slowing * 245} color={T.cyanSoft} /></div>
         <div style={{ position: 'absolute', left: 70, top: 480, width: 665, height: 120 }}>
           <svg width="665" height="120" style={{ position: 'absolute', inset: 0 }}>
             <path d="M30 90 C210 90 290 20 485 24" fill="none" stroke={`${T.card}55`} strokeWidth="28" strokeLinecap="round" />
             <path d="M30 90 C210 90 290 20 485 24" pathLength="1" fill="none" stroke={T.amber} strokeWidth="7" strokeLinecap="round" strokeDasharray="1" strokeDashoffset={1 - turning} />
           </svg>
-          <div style={{ position: 'absolute', left: 402, top: 0, opacity: turning, transform: `rotate(${-35 * turning}deg)` }}><VectorArrow width={180} color={T.amber} /></div>
+          <div style={{ position: 'absolute', left: turnX, top: turnY - 17, opacity: turning, transform: `rotate(${turnAngle}deg)`, transformOrigin: '0 17px' }}>
+            <div style={{ position: 'absolute', left: -12, top: 5, width: 24, height: 24, borderRadius: '50%', background: T.card }} />
+            <VectorArrow width={150} color={T.amber} />
+          </div>
         </div>
       </div>
 
       <div style={{ position: 'absolute', right: 80, top: 260, width: 840, height: 660, boxSizing: 'border-box', borderRadius: 30, background: `${T.panel}df`, border: `2px solid ${T.amber}55`, padding: '30px 38px', opacity: force }}>
-        <div style={{ color: T.amber, fontFamily: T.mono, fontSize: 22, fontWeight: 900, letterSpacing: 2 }}>FORCE SETS DIRECTION</div>
-        <div style={{ position: 'absolute', left: 260, top: 215, width: 255, height: 210, borderRadius: 24, background: T.card, border: `5px solid ${T.amber}`, display: 'grid', placeItems: 'center', color: T.ink, fontSize: 34, fontWeight: 900, transform: `scale(${0.82 + force * 0.18})` }}>OBJECT</div>
-        <div style={{ position: 'absolute', left: 66, top: 259, opacity: force }}><VectorArrow width={210} color={T.amber} /></div>
-        <div style={{ position: 'absolute', left: 532, top: 259, opacity: force }}><VectorArrow width={220} color={T.cyan} /></div>
-        <div style={{ position: 'absolute', left: 96, top: 326, color: T.amber, fontFamily: T.mono, fontSize: 24, fontWeight: 900, opacity: force }}>FORCE, F</div>
-        <div style={{ position: 'absolute', left: 566, top: 326, color: T.cyan, fontFamily: T.mono, fontSize: 24, fontWeight: 900, opacity: force }}>ACCELERATION, a</div>
-        <div style={{ position: 'absolute', left: 120, right: 120, bottom: 62, padding: '20px 26px', borderRadius: 18, background: `${T.amber}15`, color: T.text, textAlign: 'center', fontSize: 27, fontWeight: 800, opacity: force }}>same direction →</div>
+        <div style={{ color: T.amber, fontFamily: T.mono, fontSize: 28, fontWeight: 900, letterSpacing: 2 }}>FORCE SETS DIRECTION</div>
+        <div style={{ position: 'absolute', left: 260, top: 215, width: 255, height: 210, borderRadius: 24, background: T.card, border: `5px solid ${T.amber}`, display: 'grid', placeItems: 'center', color: T.ink, fontSize: 34, fontWeight: 900, transform: 'scale(1)' }}>OBJECT</div>
+        <div style={{ position: 'absolute', left: 515, top: 240, opacity: force }}><VectorArrow width={210} color={T.amber} /></div>
+        <div style={{ position: 'absolute', left: 515, top: 345, opacity: force }}><VectorArrow width={220} color={T.cyan} /></div>
+        <div style={{ position: 'absolute', left: 548, top: 190, color: T.amber, fontFamily: T.mono, fontSize: 28, fontWeight: 900, opacity: force }}>FORCE, F</div>
+        <div style={{ position: 'absolute', left: 532, top: 395, color: T.cyan, fontFamily: T.mono, fontSize: 28, fontWeight: 900, opacity: force }}>ACCELERATION, a</div>
+        <div style={{ position: 'absolute', left: 120, right: 120, bottom: 62, padding: '20px 26px', borderRadius: 18, background: `${T.amber}15`, color: T.text, textAlign: 'center', fontSize: 28, fontWeight: 800, opacity: force }}>same direction →</div>
       </div>
     </SceneShell>
   );
@@ -739,8 +752,9 @@ const Scene07: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
   const negative = useCue(negativeAt, 0.4);
   const pulse = useSpringAt(oppositeAt, 25);
   const pixelsPerUnit = 120;
-  const signedValue = 6 - flip * 12;
-  const arrowWidth = Math.abs(signedValue) * pixelsPerUnit;
+  const reversed = useCurrentFrame() >= leftAt * useVideoConfig().fps;
+  const arrowWidth = 6 * pixelsPerUnit;
+  const bodyX = 800 + rightTravel * 300 - flip * 300;
 
   return (
     <SceneShell scene={7} label="signed direction">
@@ -748,29 +762,29 @@ const Scene07: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
       <div style={{ position: 'absolute', left: 220, right: 220, top: 485, height: 7, background: T.card, borderRadius: 8 }} />
       {[-6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6].map((n) => (
         <div key={n} style={{ position: 'absolute', left: 960 + n * pixelsPerUnit, top: 464, width: 4, height: 48, background: n === 0 ? T.card : T.textMuted }}>
-          <div style={{ position: 'absolute', top: 57, left: -22, width: 48, textAlign: 'center', color: n === 0 ? T.text : T.textMuted, fontFamily: T.mono, fontSize: 21 }}>{n}</div>
+          <div style={{ position: 'absolute', top: 57, left: -22, width: 48, textAlign: 'center', color: n === 0 ? T.text : T.textMuted, fontFamily: T.mono, fontSize: 28 }}>{n}</div>
         </div>
       ))}
 
-      <div style={{ position: 'absolute', left: 939 + rightTravel * 6 * pixelsPerUnit - flip * 12 * pixelsPerUnit, top: 449, width: 42, height: 42, borderRadius: '50%', background: flip < 0.5 ? T.cyan : T.amber, border: `5px solid ${T.card}`, boxShadow: `0 0 25px ${flip < 0.5 ? T.cyan : T.amber}88`, zIndex: 3, opacity: positive }} />
+      <div style={{ position: 'absolute', left: bodyX - 21, top: 621, width: 42, height: 42, borderRadius: '50%', background: reversed ? T.amber : T.cyan, border: `5px solid ${T.card}`, boxShadow: `0 0 25px ${reversed ? T.amber : T.cyan}88`, zIndex: 3, opacity: positive }} />
 
       <div style={{ position: 'absolute', left: 960, top: 334, opacity: positive }}>
         <VectorArrow width={6 * pixelsPerUnit} color={T.cyan} />
-        <div style={{ color: T.cyan, fontFamily: T.mono, fontSize: 23, fontWeight: 900, textAlign: 'center', marginTop: 7 }}>POSITIVE DIRECTION</div>
+        <div style={{ color: T.cyan, fontFamily: T.mono, fontSize: 28, fontWeight: 900, textAlign: 'center', marginTop: 7 }}>POSITIVE DIRECTION</div>
       </div>
 
-      {arrowWidth > 1 && <div style={{ position: 'absolute', left: signedValue >= 0 ? 960 : 960 - arrowWidth, top: 625, opacity: positive }}>
-        <VectorArrow width={arrowWidth} color={signedValue >= 0 ? T.cyan : T.amber} direction={signedValue >= 0 ? 'right' : 'left'} />
+      {arrowWidth > 1 && <div style={{ position: 'absolute', left: reversed ? bodyX - arrowWidth : bodyX, top: 625, opacity: positive }}>
+        <VectorArrow width={arrowWidth} color={reversed ? T.amber : T.cyan} direction={reversed ? 'left' : 'right'} />
       </div>}
-      <div style={{ position: 'absolute', left: 730, top: 724, width: 460, textAlign: 'center', color: negative.isActive ? T.amber : T.cyan, fontFamily: T.mono, fontSize: 45, fontWeight: 950, opacity: positive }}>
+      <div style={{ position: 'absolute', left: 730, top: 724, width: 460, textAlign: 'center', color: negative.isActive ? T.amber : T.cyan, fontFamily: T.mono, fontSize: 45, fontWeight: 950, opacity: reversed && !negative.isActive ? 0 : positive }}>
         {negative.isActive ? 'v = −6 m/s' : 'v = +6 m/s'}
       </div>
 
-      <div style={{ position: 'absolute', right: 105, top: 220, width: 380, opacity: Math.max(0.35, pulse), transform: `scale(${1 + pulse * 0.07})` }}>
+      <div style={{ position: 'absolute', right: 105, bottom: 100, width: 540, opacity: positive, transform: `scale(${1 + pulse * 0.07})` }}>
         <WarmCard accent={T.green} style={{ padding: '28px 30px', textAlign: 'center', boxShadow: pulse > 0 ? `0 0 ${24 + pulse * 25}px ${T.green}66` : undefined }}>
-          <div style={{ color: T.green, fontFamily: T.mono, fontSize: 20, fontWeight: 900, letterSpacing: 2 }}>MAGNITUDE</div>
-          <div style={{ color: T.ink, fontFamily: T.mono, fontSize: 54, fontWeight: 950, marginTop: 10 }}>|v| = 6 m/s</div>
-          <div style={{ color: T.ink, fontSize: 21, fontWeight: 700, marginTop: 7 }}>unchanged by the flip</div>
+          <div style={{ color: cardInk(T.green), fontFamily: T.mono, fontSize: 28, fontWeight: 900, letterSpacing: 2 }}>MAGNITUDE</div>
+          <div style={{ color: T.ink, fontFamily: T.mono, fontSize: 46, fontWeight: 950, marginTop: 10, whiteSpace: 'nowrap' }}>|v| = 6 m/s</div>
+          <div style={{ color: T.ink, fontSize: 28, fontWeight: 700, marginTop: 7 }}>unchanged by the flip</div>
         </WarmCard>
       </div>
     </SceneShell>
@@ -803,9 +817,12 @@ const ClassificationCell: React.FC<{ item: ClassificationItem; vector?: boolean 
         transform: `translateX(${item.at === undefined ? 0 : (1 - reveal.opacity) * (vector ? 28 : -28)}px)`,
       }}
     >
-      <div style={{ width: 44, height: 44, borderRadius: 12, display: 'grid', placeItems: 'center', background: `${item.color ?? (vector ? T.amber : T.cyan)}22`, color: item.color ?? (vector ? T.amber : T.cyan), fontSize: 25, fontWeight: 950 }}>{item.icon}</div>
-      <div style={{ color: T.ink, fontSize: 25, fontWeight: 850 }}>{item.label}</div>
-      {vector && <div style={{ marginLeft: 'auto' }}><VectorArrow width={72} color={item.color ?? T.amber} thickness={5} glow={false} /></div>}
+      <div style={{ width: 44, height: 44, borderRadius: 12, display: 'grid', placeItems: 'center', background: `${item.color ?? (vector ? T.amber : T.cyan)}22`, color: cardInk(item.color ?? (vector ? T.amber : T.cyan)), fontSize: 28, fontWeight: 950 }}>{item.icon}</div>
+      <div style={{ color: T.ink, fontSize: 28, fontWeight: 850 }}>{item.label}</div>
+      {vector && <div style={{ marginLeft: 'auto', position: 'relative' }}>
+        {item.label === 'Momentum' && <div style={{ position: 'absolute', left: -8, top: 9, width: 18, height: 18, borderRadius: 4, background: cardInk(T.purple) }} />}
+        <VectorArrow width={item.label === 'Weight' ? 44 : 72} direction={item.label === 'Weight' ? 'down' : 'right'} color={cardInk(item.color ?? T.amber)} thickness={5} glow={false} />
+      </div>}
     </div>
   );
 };
@@ -816,15 +833,15 @@ const ClassificationTable: React.FC<{
   scale?: number;
   top?: number;
 }> = ({ scalars, vectors, scale = 1, top = 230 }) => (
-  <div style={{ position: 'absolute', left: '50%', top, width: 1410, height: 725, transform: `translateX(-50%) scale(${scale})`, transformOrigin: 'center top', display: 'flex', gap: 28 }}>
+  <div style={{ position: 'absolute', left: '50%', top, width: 1410, height: 665, transform: `translateX(-50%) scale(${scale})`, transformOrigin: 'center top', display: 'flex', gap: 28 }}>
     {[
       { title: 'SCALARS', subtitle: 'magnitude only', color: T.cyan, items: scalars, vector: false },
       { title: 'VECTORS', subtitle: 'magnitude + direction', color: T.amber, items: vectors, vector: true },
     ].map((column) => (
-      <WarmCard key={column.title} accent={column.color} style={{ flex: 1, height: 710, overflow: 'hidden' }}>
-        <div style={{ height: 102, padding: '22px 28px', background: `${column.color}1b`, borderBottom: `3px solid ${column.color}` }}>
-          <div style={{ color: column.color, fontFamily: T.mono, fontSize: 26, fontWeight: 950, letterSpacing: 3 }}>{column.title}</div>
-          <div style={{ color: T.ink, fontSize: 20, fontWeight: 700, marginTop: 4 }}>{column.subtitle}</div>
+      <WarmCard key={column.title} accent={column.color} style={{ flex: 1, height: 650, overflow: 'hidden' }}>
+        <div style={{ height: 120, padding: '22px 28px', background: `${column.color}1b`, borderBottom: `3px solid ${column.color}` }}>
+          <div style={{ color: cardInk(column.color), fontFamily: T.mono, fontSize: 28, fontWeight: 950, letterSpacing: 3 }}>{column.title}</div>
+          <div style={{ color: T.ink, fontSize: 28, fontWeight: 700, marginTop: 4 }}>{column.subtitle}</div>
         </div>
         <div>{column.items.map((item) => <ClassificationCell key={item.label} item={item} vector={column.vector} />)}</div>
       </WarmCard>
@@ -890,9 +907,9 @@ const Scene10: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
   ];
   return (
     <SceneShell scene={10} label="complete classification">
-      <div style={{ opacity: 1 - complete * 0.75 }}><SectionTitle kicker="force family">Complete the vector column</SectionTitle></div>
-      <ClassificationTable scalars={scalars} vectors={vectors} top={215 - complete * 56} scale={1 + complete * 0.08} />
-      <div style={{ position: 'absolute', left: 0, right: 0, bottom: 62, textAlign: 'center', opacity: complete, color: T.green, fontFamily: T.mono, fontSize: 27, fontWeight: 950, letterSpacing: 3 }}>CLASSIFICATION COMPLETE ✓</div>
+      <div style={{ opacity: 1 - complete }}><SectionTitle kicker="force family">Complete the vector column</SectionTitle></div>
+      <ClassificationTable scalars={scalars} vectors={vectors} top={250 - complete * 20} scale={1 + complete * 0.08} />
+      <div style={{ position: 'absolute', left: 0, right: 0, bottom: 62, textAlign: 'center', opacity: complete, color: T.green, fontFamily: T.mono, fontSize: 28, fontWeight: 950, letterSpacing: 3 }}>CLASSIFICATION COMPLETE ✓</div>
     </SceneShell>
   );
 };
@@ -913,7 +930,7 @@ const RecapTile: React.FC<{
   return (
     <div style={{ position: 'absolute', left: x, top: y, opacity: reveal, transform: `scale(${0.83 + reveal * 0.17})` }}>
       <WarmCard accent={accent} style={{ width: 780, height: 280, padding: '22px 28px' }}>
-        <div style={{ color: accent, fontFamily: T.mono, fontSize: 18, fontWeight: 950, letterSpacing: 2.4 }}>{title}</div>
+        <div style={{ color: cardInk(accent), fontFamily: T.mono, fontSize: 28, fontWeight: 950, letterSpacing: 2.4 }}>{title}</div>
         {children}
       </WarmCard>
     </div>
@@ -932,22 +949,22 @@ const Scene11: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
     <SceneShell scene={11} label="recap">
       <SectionTitle kicker="twenty-second recap">The decision in four pictures</SectionTitle>
       <RecapTile at={scalarAt} title="MAGNITUDE DOT vs VECTOR ARROW" accent={T.cyan} x={120} y={250}>
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-around', height: 215 }}>
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-around', height: 200 }}>
           <div style={{ width: 95, height: 95, borderRadius: '50%', background: T.cyan, boxShadow: `0 0 38px ${T.cyan}88` }} />
           <div style={{ color: T.ink, fontFamily: T.mono, fontSize: 38, fontWeight: 950 }}>SIZE</div>
           <div style={{ opacity: vector.opacity }}><VectorArrow width={255} color={T.amber} glow={false} /></div>
         </div>
       </RecapTile>
       <RecapTile at={scalarAt} title="ROUTE vs SHORTCUT" accent={T.cyan} x={1020} y={250}>
-        <svg width="720" height="190" style={{ marginTop: 15 }}>
+        <svg width="720" height="190" style={{ marginTop: 10 }}>
           <path d="M45 145 C170 20 320 185 470 58 C555 0 620 70 680 40" fill="none" stroke={T.cyan} strokeWidth="12" strokeLinecap="round" />
           <line x1="45" y1="145" x2="680" y2="40" stroke={T.amber} strokeWidth="8" strokeDasharray="13 11" />
-          <text x="48" y="182" fill={T.ink} fontFamily={T.mono} fontSize="20">distance: route</text>
-          <text x="476" y="182" fill={T.ink} fontFamily={T.mono} fontSize="20">displacement: shortcut</text>
+          <text x="48" y="182" fill={T.ink} fontFamily={T.mono} fontSize="28">distance</text>
+          <text x="430" y="182" fill={T.ink} fontFamily={T.mono} fontSize="28">displacement</text>
         </svg>
       </RecapTile>
       <RecapTile at={vectorAt} title="SPEEDOMETER vs VELOCITY ARROW" accent={T.amber} x={120} y={560}>
-        <div style={{ height: 215, display: 'flex', alignItems: 'center', justifyContent: 'space-around' }}>
+        <div style={{ height: 200, display: 'flex', alignItems: 'center', justifyContent: 'space-around' }}>
           <div style={{ width: 175, height: 100, border: `10px solid ${T.cyan}`, borderRadius: '100px 100px 10px 10px', borderBottom: 0, position: 'relative' }}>
             <div style={{ position: 'absolute', left: 78, bottom: 0, width: 7, height: 72, borderRadius: 8, background: T.cyan, transform: 'rotate(38deg)', transformOrigin: 'bottom' }} />
           </div>
@@ -958,7 +975,7 @@ const Scene11: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
       <RecapTile at={positiveAt} title="SIGNED NUMBER LINE" accent={T.green} x={1020} y={560}>
         <div style={{ position: 'relative', height: 205 }}>
           <div style={{ position: 'absolute', left: 30, right: 30, top: 97, height: 5, background: T.ink }} />
-          {[-2, -1, 0, 1, 2].map((n) => <div key={n} style={{ position: 'absolute', left: 360 + n * 125, top: 80, width: 4, height: 39, background: T.ink }}><span style={{ position: 'absolute', top: 43, left: -15, fontFamily: T.mono, fontSize: 19 }}>{n}</span></div>)}
+          {[-2, -1, 0, 1, 2].map((n) => <div key={n} style={{ position: 'absolute', left: 360 + n * 125, top: 80, width: 4, height: 39, background: T.ink }}><span style={{ position: 'absolute', top: 43, left: -15, fontFamily: T.mono, fontSize: 28 }}>{n}</span></div>)}
           <div style={{ position: 'absolute', left: 370, top: 38 }}><VectorArrow width={260} color={T.green} /></div>
         </div>
       </RecapTile>
@@ -966,11 +983,11 @@ const Scene11: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
       <div style={{ position: 'absolute', inset: 0, background: `${T.bgDeep}${ask > 0 ? 'e8' : '00'}`, opacity: ask, display: 'grid', placeItems: 'center', zIndex: 20 }}>
         <WarmCard accent={T.amber} style={{ width: 1320, minHeight: 300, padding: '58px 70px', display: 'grid', placeItems: 'center', transform: `scale(${0.82 + ask * 0.18})` }}>
           <div style={{ textAlign: 'center' }}>
-            <div style={{ color: T.textMuted, fontFamily: T.mono, fontSize: 21, fontWeight: 900, letterSpacing: 3 }}>ALWAYS ASK</div>
+            <div style={{ color: T.ink, fontFamily: T.mono, fontSize: 28, fontWeight: 900, letterSpacing: 3 }}>ALWAYS ASK</div>
             <div style={{ color: T.ink, fontSize: 60, fontWeight: 950, marginTop: 22 }}>Size only, or size and direction?</div>
             <div style={{ display: 'flex', justifyContent: 'center', gap: 36, marginTop: 35 }}>
-              <span style={{ color: T.cyan, fontFamily: T.mono, fontSize: 29, fontWeight: 950 }}>SCALAR •</span>
-              <span style={{ color: T.amber, fontFamily: T.mono, fontSize: 29, fontWeight: 950 }}>VECTOR →</span>
+              <span style={{ color: cardInk(T.cyan), fontFamily: T.mono, fontSize: 29, fontWeight: 950 }}>SCALAR •</span>
+              <span style={{ color: cardInk(T.amber), fontFamily: T.mono, fontSize: 29, fontWeight: 950 }}>VECTOR →</span>
             </div>
           </div>
         </WarmCard>
