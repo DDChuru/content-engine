@@ -19,7 +19,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: 'Cambridge Maths — learn topic by topic',
   description:
-    'Cambridge IGCSE Mathematics 0580, taught topic by topic with worked examples and a quiz for each.',
+    'Cambridge International A Level Mathematics 9709, taught topic by topic: a short explainer, tight notes, and the working done by hand.',
 };
 
 export default function RootLayout({

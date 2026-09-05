@@ -45,8 +45,8 @@ export default function NotesPage() {
 
   return (
     <main className="mx-auto max-w-3xl px-4 py-6 md:py-10">
-      <Link href="/notes" className="text-sm text-ink-muted hover:text-accent">
-        ← All topics
+      <Link href="/" className="text-sm text-ink-muted hover:text-accent">
+        ← Back to the map
       </Link>
       {error && <p className="mt-6 rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-800">{error}</p>}
       {topic && (

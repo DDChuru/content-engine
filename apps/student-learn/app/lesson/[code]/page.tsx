@@ -894,7 +894,7 @@ export default function LessonPage() {
 
       <header className="mt-6">
         <p className="text-xs font-medium uppercase tracking-[0.18em] text-ink-muted">
-          {code} · Cambridge IGCSE Mathematics 0580
+          {code} · Cambridge International A Level Mathematics 9709
         </p>
         <h1 className="mt-3 font-heading text-3xl font-semibold leading-tight sm:text-4xl">
           <MathText>{lesson.title}</MathText>
