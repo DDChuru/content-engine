@@ -1,0 +1,102 @@
+{
+  "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+  "voiceSettings": {
+    "stability": 0.55,
+    "similarity_boost": 0.8,
+    "style": 0.35,
+    "use_speaker_boost": true
+  },
+  "beats": [
+    {
+      "id": "01-hook",
+      "shot": null,
+      "chip": "Cold open — too strong / too weak",
+      "ring": null,
+      "script": "Mix a cleaning chemical too strong, and it eats your equipment and burns your people. Mix it too weak, and it leaves behind the very bacteria it was meant to kill. And the worst part? Nobody sees the mistake — not until the audit, the injury, or the recall."
+    },
+    {
+      "id": "02-strip",
+      "shot": "ccv-02",
+      "chip": "Bill of Health · CCV strip",
+      "ring": "strip",
+      "script": "This is where a supervisor actually meets it. Not on a chemistry screen — on the day's certificate. A coral strip at the top of the Bill of Health, and it names them: Argonox at Satellite seven, four days past its window. Alkafoam at Crate washer one, three days. Argonox at Satellite five, two days. Three dosing points nobody has verified. The certificate tells you before an auditor does."
+    },
+    {
+      "id": "03-hub",
+      "shot": "ccv-03",
+      "chip": "Tap → Chemical hub · due band",
+      "ring": "dueBand",
+      "script": "Tap it and you land on the Chemical hub. Three numbers first: five due, two done, none out of spec. Then the band that matters — periodic verification due. The same three dosing points, with the days since anyone last verified them. Eighteen. Seventeen. Sixteen. Below that, today's activity: twenty-one issued, twenty-one verified, twenty-one passed. The hub is activity first. The strip is the exception."
+    },
+    {
+      "id": "04-issue",
+      "shot": "ccv-04",
+      "chip": "+ picker → issue form · the % computes itself",
+      "ring": "batchField",
+      "script": "Issuing starts with the plus. Pick the station. Then four things, every time. The batch or lot number — that is the traceability line, and the app will not let you skip it. The scope: the entire factory, or one department. The issue type. And in manual dilution, you enter both — the litres of chemical, and the litres of water. You do not work out the percentage. The app does, live, against the approved range. Green, you carry on. Coral, you know before you pour."
+    },
+    {
+      "id": "05-standard",
+      "shot": "ccv-05",
+      "chip": "Verify card · approved range · How to test",
+      "ring": "rangeCard",
+      "script": "Now verification. Walk up to the station and the standard is already waiting. The approved range — nought point three to two percent. The method — titration drops, for this chemical. The operator does not choose either. And if they have forgotten how: How to test. The reagents. The procedure, step by step. The calculation — drops times nought point nought nine five. The standard lives in the app, not in anyone's memory."
+    },
+    {
+      "id": "06-lock",
+      "shot": "ccv-06",
+      "chip": "Composed · reading lock",
+      "ring": "lockCard",
+      "script": "Here is the failure mode most people never see. A station that has no specification yet. No range, no method. The app does not guess. It locks the reading — capture is unavailable — and it tells you why, and who to ask. A number recorded against no standard is not verification. It is a guess with a timestamp."
+    },
+    {
+      "id": "07-baseline",
+      "shot": "ccv-07",
+      "chip": "Captured at Brito's · shift baseline card",
+      "ring": "baselineCard",
+      "script": "Conductivity has one extra step. Plant water is not the same at every site, or every day. So once a shift, before the first check, you measure the tap water and set the baseline. Every conductivity reading that shift is corrected against it. Skip it, and the app blocks the reading until you do. One measurement, once. Then the rest of the shift just flows."
+    },
+    {
+      "id": "08-inspec",
+      "shot": "ccv-08",
+      "chip": "Reading → verdict · in spec",
+      "ring": "verdictPass",
+      "script": "Most days it is this simple. Count the drops if you want the log. Enter the reading — one percent. Captured. In spec. The verdict is not the operator's opinion. It is the reading against the range. Record it, and that dosing point is verified for the cadence."
+    },
+    {
+      "id": "09-outofspec",
+      "shot": "ccv-09",
+      "chip": "Out of spec · corrective action · re-test",
+      "ring": "verdictFail",
+      "script": "Three percent. Out of spec. And now the app simply refuses to move on. Two things appear, and both are required. What you did — re-mixed, re-calibrated the pump, replaced the cartridge. And a re-test reading. The button stays locked until both exist. So you fix it, you test again, and if it passes, the record shows both: the miss, and the recovery. That is not blame. That is the second pair of eyes doing its job."
+    },
+    {
+      "id": "10-escalate",
+      "shot": "ccv-10",
+      "chip": "Re-staged ladder · kept SM device half",
+      "ring": "escalationCard",
+      "script": "What if the re-test fails too? One operator shouldn't carry that alone. So the app raises a non-conformance and names the site manager. The button becomes Record and Escalate. On their own device, the manager acknowledges, and signs. Accountability travels up the chain — automatically."
+    },
+    {
+      "id": "11-record",
+      "shot": "ccv-11",
+      "chip": "History rows · detail · back on the hub",
+      "ring": "verifiedCard",
+      "script": "And it is all there afterwards. Every issue on the hub: who issued it, which department, how much. Under it, the verification — the method, the reading, pass or fail, and the name. Open the detail and it is the same record, with the time it was made. Not a percentage somebody typed in later. A reading taken at the station, when the work was done. Back on the hub: none out of spec. That is what an auditor gets to see."
+    },
+    {
+      "id": "12-offline",
+      "shot": null,
+      "chip": "Kept from July · offline relay",
+      "ring": null,
+      "script": "Factory floors have dead spots. CCV doesn't care. Offline, every action saves instantly — with a buzz — then waits in a queue. When the signal returns, they run like a relay, in strict order. Temporary IDs are swapped for real ones. And a retry that tries to submit twice is turned away. Nothing lost. Nothing doubled."
+    },
+    {
+      "id": "13-close",
+      "shot": null,
+      "chip": "Outro · bookend",
+      "ring": null,
+      "script": "Three things to hold onto. The certificate tells you first. The standard is already set before anyone touches a station. And every reading is measured, not assumed — recorded at the time, by the person who did it. Fail, and the app walks you through re-test and escalation. A second pair of eyes on every drum. One that never blinks first."
+    }
+  ]
+}

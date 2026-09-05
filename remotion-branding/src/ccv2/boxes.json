@@ -1,0 +1,213 @@
+{
+  "_readme": [
+    "MEASURED 2026-09-06 against the real captures in public/ccv2/shots (720x1600, I&J Blockbusters + Brito's, current build, sheq@poc).",
+    "Each box = the target's pixel bounds plus a 10px margin, normalized 0..1 of the FULL still including the 120px status bar. color = sky | skyDeep | emerald | amber | coral. Re-measure: nx = px/720, ny = px/1600."
+  ],
+  "strip": {
+    "nx": 0.0333,
+    "ny": 0.3262,
+    "nw": 0.9319,
+    "nh": 0.145,
+    "color": "coral",
+    "still": "ccv-02",
+    "note": "CCV VERIFICATION OVERDUE strip under the site card (three named dosing points)"
+  },
+  "hubTiles": {
+    "nx": 0.025,
+    "ny": 0.1806,
+    "nw": 0.9486,
+    "nh": 0.105,
+    "color": "sky",
+    "still": "ccv-03",
+    "note": "the three stat tiles: 5 DUE · 2 DONE · 0 OUT-OF-SPEC"
+  },
+  "dueBand": {
+    "nx": 0.0306,
+    "ny": 0.3625,
+    "nw": 0.9389,
+    "nh": 0.3063,
+    "color": "coral",
+    "still": "ccv-03",
+    "note": "PERIODIC VERIFICATION DUE rows: Argonox · Alkafoam CL · Argonox, all OVERDUE"
+  },
+  "todayStats": {
+    "nx": 0.0306,
+    "ny": 0.7681,
+    "nw": 0.9389,
+    "nh": 0.0694,
+    "color": "sky",
+    "still": "ccv-03",
+    "note": "today's activity tiles: 21 issued · 21 verified · 21 pass · 0 fail · 0 pending"
+  },
+  "outOfSpecTile": {
+    "nx": 0.6583,
+    "ny": 0.1806,
+    "nw": 0.3153,
+    "nh": 0.105,
+    "color": "sky",
+    "still": "ccv-03",
+    "note": "the 0 OUT-OF-SPEC tile (beat 11 closes on it)"
+  },
+  "pickerRow": {
+    "nx": 0.0417,
+    "ny": 0.3594,
+    "nw": 0.9306,
+    "nh": 0.0906,
+    "color": "sky",
+    "still": "ccv-04a-picker",
+    "note": "first station row in the + picker (Extreme XF · Titration (drops) · 0.5–5.0 % · DUE NOW)"
+  },
+  "batchField": {
+    "nx": 0.0306,
+    "ny": 0.3206,
+    "nw": 0.9389,
+    "nh": 0.0744,
+    "color": "sky",
+    "still": "ccv-04",
+    "note": "BATCH / LOT NUMBER field (composed: LOT-20250905)"
+  },
+  "scopeSeg": {
+    "nx": 0.0306,
+    "ny": 0.4319,
+    "nw": 0.9375,
+    "nh": 0.0694,
+    "color": "sky",
+    "still": "ccv-04",
+    "note": "ISSUE SCOPE segment: ENTIRE FACTORY / DEPARTMENT"
+  },
+  "quantities": {
+    "nx": 0.0306,
+    "ny": 0.7,
+    "nw": 0.9389,
+    "nh": 0.0956,
+    "color": "sky",
+    "still": "ccv-04",
+    "note": "CHEMICAL (L · ml switch) + LITRES WATER fields (composed: 1 and 50)"
+  },
+  "computedCard": {
+    "nx": 0.0306,
+    "ny": 0.8106,
+    "nw": 0.9389,
+    "nh": 0.0694,
+    "color": "emerald",
+    "still": "ccv-04",
+    "note": "COMPUTED DILUTION card — only its head is above the nav pill in the capture; the value is carried by the column panel"
+  },
+  "rangeCard": {
+    "nx": 0.0306,
+    "ny": 0.3106,
+    "nw": 0.9375,
+    "nh": 0.1694,
+    "color": "sky",
+    "still": "ccv-05",
+    "note": "APPROVED RANGE 0.3–2.0 % · Method: Titration (drops)"
+  },
+  "calcLine": {
+    "nx": 0.0417,
+    "ny": 0.8512,
+    "nw": 0.9167,
+    "nh": 0.0762,
+    "color": "sky",
+    "still": "ccv-05b-sheet",
+    "note": "CALCULATION box in the How to test sheet: % Sandrox PA = Drops × 0.095"
+  },
+  "lockCard": {
+    "nx": 0.0306,
+    "ny": 0.3106,
+    "nw": 0.9375,
+    "nh": 0.1144,
+    "color": "amber",
+    "still": "ccv-06",
+    "note": "composed: the shortened APPROVED RANGE card (163px) holding only 'No range configured'"
+  },
+  "lockBanner": {
+    "nx": 0.0306,
+    "ny": 0.7725,
+    "nw": 0.9389,
+    "nh": 0.0669,
+    "color": "amber",
+    "still": "ccv-06",
+    "note": "composed: the app's no-spec banner in place of CAPTURE READING"
+  },
+  "baselineCard": {
+    "nx": 0.0306,
+    "ny": 0.5463,
+    "nw": 0.9375,
+    "nh": 0.3337,
+    "color": "amber",
+    "still": "ccv-07",
+    "note": "SET PLANT-WATER BASELINE FOR THIS SHIFT card (visible part above the nav pill)"
+  },
+  "baselineButton": {
+    "nx": 0.0778,
+    "ny": 0.815,
+    "nw": 0.8431,
+    "nh": 0.0569,
+    "color": "amber",
+    "still": "ccv-07",
+    "note": "the SET BASELINE button"
+  },
+  "verdictPass": {
+    "nx": 0.0306,
+    "ny": 0.7725,
+    "nw": 0.9375,
+    "nh": 0.0569,
+    "color": "emerald",
+    "still": "ccv-08",
+    "note": "CAPTURED · IN SPEC = 1.0 % verdict pill"
+  },
+  "verdictFail": {
+    "nx": 0.0306,
+    "ny": 0.7725,
+    "nw": 0.9375,
+    "nh": 0.0569,
+    "color": "coral",
+    "still": "ccv-09",
+    "note": "CAPTURED · OUT OF SPEC = 3.0 % verdict pill"
+  },
+  "retestBlock": {
+    "nx": 0.0306,
+    "ny": 0.3844,
+    "nw": 0.9389,
+    "nh": 0.3406,
+    "color": "amber",
+    "still": "ccv-09b-retest",
+    "note": "CORRECTIVE ACTION · REQUIRED field + RE-TEST READING · REQUIRED fields"
+  },
+  "retestFailedPill": {
+    "nx": 0.0306,
+    "ny": 0.725,
+    "nw": 0.9389,
+    "nh": 0.0537,
+    "color": "coral",
+    "still": "ccv-10",
+    "note": "CAPTURED · RE-TEST FAILED pill"
+  },
+  "escalationCard": {
+    "nx": 0.0306,
+    "ny": 0.7913,
+    "nw": 0.9389,
+    "nh": 0.0806,
+    "color": "coral",
+    "still": "ccv-10",
+    "note": "SM ESCALATION · REQUIRED label + its first line (the second line and the site-manager field sit under the nav pill in the capture)"
+  },
+  "verifiedCard": {
+    "nx": 0.0306,
+    "ny": 0.2069,
+    "nw": 0.9389,
+    "nh": 0.2369,
+    "color": "emerald",
+    "still": "ccv-11",
+    "note": "first VERIFIED card (capture 10-chemical-other-open-verify-again): Sandrox PA · Bin Wash Department · 5 L · issued by · ✓ line"
+  },
+  "verificationLine": {
+    "nx": 0.0694,
+    "ny": 0.3531,
+    "nw": 0.8611,
+    "nh": 0.0356,
+    "color": "emerald",
+    "still": "ccv-11",
+    "note": "the ✓ 12:18 AM · titration_drops · 0.9 % · PASS line inside the card"
+  }
+}
