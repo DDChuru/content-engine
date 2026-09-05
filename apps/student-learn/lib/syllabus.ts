@@ -54,7 +54,7 @@ export const UNITS: SyllabusUnit[] = [
       { code: 'P1.4', title: 'Circular measure', live: false },
       { code: 'P1.5', title: 'Trigonometry', live: false },
       { code: 'P1.6', title: 'Series', live: false },
-      { code: 'P1.7', title: 'Differentiation', live: false },
+      { code: 'P1.7', title: 'Differentiation', live: true, kind: 'notes', href: '/ink', hint: 'worked by hand' },
       { code: 'P1.8', title: 'Integration', live: false },
     ],
   },

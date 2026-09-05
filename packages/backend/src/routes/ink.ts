@@ -141,7 +141,8 @@ router.post('/draw', async (req, res) => {
       model,
       max_tokens: 16384,
       stream: true,
-      // Keep thinking on: without it the glyphs come out as gibberish (tested 2026-09-05).
+      // No `thinking` option is passed (SDK 0.30 predates it): the model's default adaptive thinking is what
+      // draws legible glyphs. Do not disable thinking here; without it the output is gibberish (tested 2026-09-05).
       system: SYSTEM,
       messages: [{ role: 'user', content: JSON.stringify({ question, hint }) }],
     }, { signal: controller.signal }));

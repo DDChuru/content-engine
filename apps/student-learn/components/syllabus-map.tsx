@@ -41,7 +41,7 @@ function TopicRow({ topic, state }: { topic: SyllabusTopic; state: SkillState })
         {topic.hint && <span className="ml-2 text-xs font-normal text-ink-muted">{topic.hint}</span>}
       </span>
       {topic.kind === 'notes' ? (
-        <span className="text-xs text-ink-muted">video · notes</span>
+        <span className="text-xs text-ink-muted">{topic.href === '/ink' ? 'show me the working' : 'video · notes'}</span>
       ) : (
         <MasteryBadge state={state} drawKey={topic.code} />
       )}
