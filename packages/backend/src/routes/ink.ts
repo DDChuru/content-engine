@@ -72,11 +72,11 @@ export function createInkParser(emit: (event: InkEvent) => void) {
       while (ids.has(id)) id = `${id}-${ids.size + 1}`;
       group = id;
       ids.add(group);
+      announced = false;
       if (combined) {
         emit({ type: 'group', id: group, say: combined[2].trim() });
         announced = true;
       }
-      announced = false;
     } else if (value.startsWith('SAY ') && group && !announced) {
       emit({ type: 'group', id: group, say: value.slice(4).trim() });
       announced = true;

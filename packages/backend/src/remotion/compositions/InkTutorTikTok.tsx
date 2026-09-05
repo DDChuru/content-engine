@@ -33,12 +33,30 @@ const INK = '#1a2a6c';
 const RED = '#c0392b';
 const RED_GROUPS = new Set(['answer', 'annot']);
 
-/** Rough pen-path length: sum of distances between consecutive coordinate pairs. */
+/**
+ * Pen-path length: walks the path, tracking the current point, so relative commands
+ * (q, l, v, h, c, t, s, m) measure correctly. Curves are approximated by their control polygon.
+ */
 function pathLength(d: string): number {
-  const nums = d.match(/-?\d+\.?\d*/g)?.map(Number) ?? [];
-  let len = 0;
-  for (let i = 2; i + 1 < nums.length; i += 2) {
-    len += Math.hypot(nums[i] - nums[i - 2], nums[i + 1] - nums[i - 1]);
+  const tokens = d.match(/[MLHVCSQTZmlhvcsqtz]|-?\d*\.?\d+(?:e-?\d+)?/g) ?? [];
+  let x = 0, y = 0, sx = 0, sy = 0, len = 0, cmd = '';
+  let i = 0;
+  const num = () => Number(tokens[i++]);
+  const seg = (nx: number, ny: number) => { len += Math.hypot(nx - x, ny - y); x = nx; y = ny; };
+  while (i < tokens.length) {
+    const t = tokens[i];
+    if (/[A-Za-z]/.test(t)) { cmd = t; i++; if (cmd === 'Z' || cmd === 'z') { seg(sx, sy); } continue; }
+    const rel = cmd === cmd.toLowerCase();
+    const ox = rel ? x : 0, oy = rel ? y : 0;
+    switch (cmd.toUpperCase()) {
+      case 'M': { const nx = ox + num(), ny = oy + num(); x = nx; y = ny; sx = x; sy = y; cmd = rel ? 'l' : 'L'; break; }
+      case 'L': case 'T': seg(ox + num(), oy + num()); break;
+      case 'H': seg(ox + num(), y); break;
+      case 'V': seg(x, oy + num()); break;
+      case 'Q': case 'S': { const cx = ox + num(), cy = oy + num(); const ex = ox + num(), ey = oy + num(); len += Math.hypot(cx - x, cy - y) + Math.hypot(ex - cx, ey - cy); x = ex; y = ey; break; }
+      case 'C': { const c1x = ox + num(), c1y = oy + num(), c2x = ox + num(), c2y = oy + num(), ex = ox + num(), ey = oy + num(); len += Math.hypot(c1x - x, c1y - y) + Math.hypot(c2x - c1x, c2y - c1y) + Math.hypot(ex - c2x, ey - c2y); x = ex; y = ey; break; }
+      default: i++;
+    }
   }
   return Math.max(len, 8);
 }

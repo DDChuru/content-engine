@@ -10,21 +10,31 @@ import { MathText } from '@/components/math-text';
 type Block =
   | { type: 'h'; level: number; text: string }
   | { type: 'p'; text: string }
-  | { type: 'ul'; items: string[] };
+  | { type: 'ul'; items: string[] }
+  | { type: 'ol'; items: string[] }
+  | { type: 'table'; header: string[]; rows: string[][] };
 
 function parse(md: string): Block[] {
   const lines = md.replace(/\r/g, '').split('\n');
   const blocks: Block[] = [];
   let para: string[] = [];
   let list: string[] = [];
+  let listType: 'ul' | 'ol' = 'ul';
+  let table: string[][] = [];
+  const cells = (line: string) => line.trim().replace(/^\||\|$/g, '').split('|').map((c) => c.trim());
   const flush = () => {
     if (para.length) {
       blocks.push({ type: 'p', text: para.join(' ') });
       para = [];
     }
     if (list.length) {
-      blocks.push({ type: 'ul', items: list });
+      blocks.push({ type: listType, items: list });
       list = [];
+    }
+    if (table.length) {
+      const [header, ...rows] = table;
+      blocks.push({ type: 'table', header, rows });
+      table = [];
     }
   };
   for (const raw of lines) {
@@ -35,10 +45,18 @@ function parse(md: string): Block[] {
       blocks.push({ type: 'h', level: h[1].length, text: h[2] });
       continue;
     }
+    if (/^\s*\|/.test(line)) {
+      if (para.length || list.length) flush();
+      if (!/^\s*\|?\s*:?-{2,}/.test(line)) table.push(cells(line)); // skip the |---| rule
+      continue;
+    }
     const li = line.match(/^\s*[-*]\s+(.*)$/);
-    if (li) {
-      if (para.length) flush();
-      list.push(li[1]);
+    const oli = line.match(/^\s*\d+[.)]\s+(.*)$/);
+    if (li || oli) {
+      const kind: 'ul' | 'ol' = li ? 'ul' : 'ol';
+      if (para.length || table.length || (list.length && kind !== listType)) flush();
+      listType = kind;
+      list.push((li ?? oli)![1]);
       continue;
     }
     if (!line.trim()) {
@@ -83,6 +101,33 @@ export function NotesMarkdown({ markdown }: { markdown: string }) {
           if (b.level === 1) return <h1 key={i} className="font-heading text-3xl mt-2">{<Inline text={b.text} />}</h1>;
           if (b.level === 2) return <h2 key={i} className="font-heading text-xl mt-8 border-b border-grid-line pb-1">{<Inline text={b.text} />}</h2>;
           return <h3 key={i} className="font-semibold text-base mt-5">{<Inline text={b.text} />}</h3>;
+        }
+        if (b.type === 'table') {
+          return (
+            <div key={i} className="overflow-x-auto">
+              <table className="min-w-full text-sm border border-grid-line">
+                <thead className="bg-paper-raised">
+                  <tr>{b.header.map((h, j) => <th key={j} className="px-3 py-2 text-left font-semibold"><Inline text={h} /></th>)}</tr>
+                </thead>
+                <tbody>
+                  {b.rows.map((r, j) => (
+                    <tr key={j} className="border-t border-grid-line">{r.map((c, k) => <td key={k} className="px-3 py-2 align-top"><Inline text={c} /></td>)}</tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          );
+        }
+        if (b.type === 'ol') {
+          return (
+            <ol key={i} className="list-decimal pl-6 space-y-1.5">
+              {b.items.map((it, j) => (
+                <li key={j}>
+                  <Inline text={it} />
+                </li>
+              ))}
+            </ol>
+          );
         }
         if (b.type === 'ul') {
           return (

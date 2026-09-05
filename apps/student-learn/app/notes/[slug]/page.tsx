@@ -30,8 +30,14 @@ export default function NotesPage() {
       .then((data: { topics: NoteTopic[] }) => {
         const t = data.topics.find((x) => x.slug === slug);
         if (!t) throw new Error('No notes for this topic yet.');
-        setTopic(t);
-        return fetch(t.notes).then((r) => (r.ok ? r.text() : Promise.reject(new Error('Notes file missing.'))));
+        // Renders are built artefacts and not committed; only show the player if the file is really there.
+        const withVideo = t.video
+          ? fetch(t.video, { method: 'HEAD' }).then((r) => (r.ok ? t : { ...t, video: undefined })).catch(() => ({ ...t, video: undefined }))
+          : Promise.resolve(t);
+        return withVideo.then((resolved) => {
+          setTopic(resolved);
+          return fetch(t.notes);
+        }).then((r) => (r.ok ? r.text() : Promise.reject(new Error('Notes file missing.'))));
       })
       .then(setMarkdown)
       .catch((e: Error) => setError(e.message));

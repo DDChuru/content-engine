@@ -151,7 +151,7 @@ export function InkPaper({ strokes, groups, playKey = 0, onGroupStart, onIdle }:
       <g fill="none" strokeWidth={3} strokeLinecap="round" strokeLinejoin="round">
         {scheduled.map((s) => (
           <path
-            key={s.id}
+            key={`${playKey}-${s.id}`}
             d={s.d}
             stroke={RED_GROUPS.has(s.group) ? RED_PEN : INK}
             strokeWidth={RED_GROUPS.has(s.group) ? 2.4 : 3}
