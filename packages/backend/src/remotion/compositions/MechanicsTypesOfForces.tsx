@@ -139,14 +139,14 @@ const StepBadge: React.FC<{ scene: number; label: string }> = ({ scene, label })
       border: `1px solid ${T.cyan}55`,
       background: `${T.bgDeep}dd`,
       boxShadow: `0 0 30px ${T.cyan}12`,
-      color: T.textMuted,
+      color: `var(--label-textMuted, ${T.textMuted})`,
       fontFamily: T.mono,
-      fontSize: 17,
+      fontSize: 28,
       letterSpacing: 1.4,
       textTransform: 'uppercase',
     }}
   >
-    <span style={{ color: T.cyan, fontWeight: 900 }}>
+    <span style={{ color: `var(--label-cyan, ${T.cyan})`, fontWeight: 900 }}>
       {String(scene).padStart(2, '0')} / 10
     </span>
     <span>{label}</span>
@@ -161,7 +161,7 @@ const SceneShell: React.FC<{
   const frame = useCurrentFrame();
   const drift = Math.sin(frame / 75) * 10;
   return (
-    <AbsoluteFill style={{ overflow: 'hidden', background: T.bg, fontFamily: T.sans }}>
+    <AbsoluteFill style={{ overflow: 'hidden', isolation: 'isolate', background: T.bg, fontFamily: T.sans }}>
       <AbsoluteFill
         style={{
           background: `radial-gradient(circle at ${26 + drift / 5}% 17%, ${T.cyan}16, transparent 35%), radial-gradient(circle at 80% 88%, ${T.amber}10, transparent 31%), linear-gradient(145deg, ${T.bgDeep}, ${T.bg})`,
@@ -180,9 +180,9 @@ const SceneShell: React.FC<{
           position: 'absolute',
           left: 58,
           top: 48,
-          color: T.textMuted,
+          color: `var(--label-textMuted, ${T.textMuted})`,
           fontFamily: T.mono,
-          fontSize: 17,
+          fontSize: 28,
           letterSpacing: 2.6,
         }}
       >
@@ -211,9 +211,9 @@ const SectionTitle: React.FC<{ kicker: string; children: React.ReactNode }> = ({
   <div style={{ position: 'absolute', left: 86, top: 112, zIndex: 30 }}>
     <div
       style={{
-        color: T.cyan,
+        color: `var(--label-cyan, ${T.cyan})`,
         fontFamily: T.mono,
-        fontSize: 18,
+        fontSize: 28,
         fontWeight: 850,
         letterSpacing: 2.4,
         textTransform: 'uppercase',
@@ -234,6 +234,7 @@ const WarmCard: React.FC<{
 }> = ({ children, accent = T.cyan, style }) => (
   <div
     style={{
+      ...({ '--label-cyan': '#08717a', '--label-amber': '#925000', '--label-green': '#186d48', '--label-textMuted': '#526672' } as React.CSSProperties),
       borderRadius: 26,
       background: T.card,
       color: T.ink,
@@ -322,6 +323,8 @@ const ForceArrow: React.FC<ForceArrowProps> = ({
   const labelX = x + ux * length * labelAlong + nx * labelOffset;
   const labelY = y + uy * length * labelAlong + ny * labelOffset;
 
+  if (shown <= 0) return null;
+
   return (
     <svg
       width="1920"
@@ -353,7 +356,7 @@ const ForceArrow: React.FC<ForceArrowProps> = ({
           textAnchor="middle"
           dominantBaseline="middle"
           fontFamily={T.mono}
-          fontSize="24"
+          fontSize="28"
           fontWeight="900"
           letterSpacing="1.2"
           stroke={T.bgDeep}
@@ -519,13 +522,13 @@ const Scene01: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
       <div
         style={{
           position: 'absolute',
-          left: 830,
-          top: 850,
-          width: 260,
+          left: 745,
+          top: 975,
+          width: 430,
           textAlign: 'center',
-          color: T.cyan,
+          color: `var(--label-cyan, ${T.cyan})`,
           fontFamily: T.mono,
-          fontSize: 18,
+          fontSize: 28,
           fontWeight: 900,
           letterSpacing: 2.2,
           opacity: invisible.opacity,
@@ -546,7 +549,7 @@ const Scene02: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
   const size = useSpringAt(cueAt(scene, 'size'), 26);
   const direction = useSpringAt(cueAt(scene, 'direction'), 28);
   const newtons = useCue(cueAt(scene, 'newtons'), 0.4);
-  const onePoint = useSpringAt(cueAt(scene, 'one-point'), 28);
+  const onePoint = useProgress(cueAt(scene, 'one-point'), cueAt(scene, 'one-point') + 0.8);
 
   return (
     <SceneShell scene={2} label="vector anatomy">
@@ -573,10 +576,10 @@ const Scene02: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
         {Array.from({ length: 9 }, (_, index) => 250 + index * 95).map((x, index) => (
           <g key={x} opacity={x <= 250 + 760 * size ? 1 : 0}>
             <line x1={x} y1="519" x2={x} y2={index % 2 === 0 ? 558 : 549} stroke={T.cyanSoft} strokeWidth="4" />
-            {index % 2 === 0 && <text x={x} y="585" fill={T.textMuted} textAnchor="middle" fontFamily={T.mono} fontSize="18">{index}</text>}
+            {index % 2 === 0 && <text x={x} y="585" fill={T.textMuted} textAnchor="middle" fontFamily={T.mono} fontSize="28">{index}</text>}
           </g>
         ))}
-        <text x="630" y="625" fill={T.cyan} textAnchor="middle" fontFamily={T.mono} fontSize="23" fontWeight="900">LENGTH = SIZE</text>
+        <text x="630" y="625" fill={T.cyan} textAnchor="middle" fontFamily={T.mono} fontSize="28" fontWeight="900">LENGTH = SIZE</text>
       </svg>
 
       <div
@@ -596,8 +599,8 @@ const Scene02: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
         <div style={{ position: 'absolute', left: 160, top: 25, width: 5, height: 280, background: `${T.amber}66` }} />
         <div style={{ position: 'absolute', left: 25, top: 160, width: 280, height: 5, background: `${T.amber}66` }} />
         <div style={{ position: 'absolute', left: 151, top: 151, width: 28, height: 28, borderRadius: '50%', background: T.card }} />
-        <div style={{ position: 'absolute', left: 270, top: 126, color: T.amber, fontFamily: T.mono, fontWeight: 950, fontSize: 28 }}>E</div>
-        <div style={{ position: 'absolute', left: 151, top: -42, color: T.amber, fontFamily: T.mono, fontWeight: 950, fontSize: 28 }}>N</div>
+        <div style={{ position: 'absolute', left: 270, top: 126, color: `var(--label-amber, ${T.amber})`, fontFamily: T.mono, fontWeight: 950, fontSize: 28 }}>E</div>
+        <div style={{ position: 'absolute', left: 151, top: -42, color: `var(--label-amber, ${T.amber})`, fontFamily: T.mono, fontWeight: 950, fontSize: 28 }}>N</div>
       </div>
 
       <WarmCard
@@ -613,7 +616,7 @@ const Scene02: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
           transform: `translateY(${(1 - newtons.opacity) * 24}px)`,
         }}
       >
-        <div style={{ color: T.amber, fontFamily: T.mono, fontSize: 20, fontWeight: 900, letterSpacing: 2 }}>SI UNIT</div>
+        <div style={{ color: `var(--label-amber, ${T.amber})`, fontFamily: T.mono, fontSize: 28, fontWeight: 900, letterSpacing: 2 }}>SI UNIT</div>
         <div style={{ fontFamily: T.mono, fontSize: 49, fontWeight: 950, marginTop: 6 }}>newton · N</div>
       </WarmCard>
 
@@ -626,14 +629,13 @@ const Scene02: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
           width: 570,
           height: 220,
           padding: '28px 34px',
-          opacity: onePoint,
-          transform: `scale(${0.84 + onePoint * 0.16})`,
+          opacity: newtons.opacity,
         }}
       >
-        <div style={{ color: T.cyan, fontFamily: T.mono, fontSize: 19, fontWeight: 900, letterSpacing: 2 }}>PARTICLE MODEL</div>
-        <div style={{ position: 'absolute', left: 82, top: 92, width: 120, height: 80, borderRadius: 15, background: T.cardMuted, border: `3px solid ${T.ink}`, opacity: 1 - onePoint }} />
-        <div style={{ position: 'absolute', left: 123, top: 105, width: 54, height: 54, borderRadius: '50%', background: T.cyan, boxShadow: `0 0 28px ${T.cyan}`, transform: `scale(${0.6 + onePoint * 0.4})` }} />
-        <div style={{ position: 'absolute', left: 240, top: 104, color: T.ink, fontSize: 30, fontWeight: 900 }}>all forces act<br />at one point</div>
+        <div style={{ color: `var(--label-cyan, ${T.cyan})`, fontFamily: T.mono, fontSize: 28, fontWeight: 900, letterSpacing: 2 }}>PARTICLE MODEL</div>
+        <div style={{ position: 'absolute', left: 82 + 51 * onePoint, top: 92 + 20 * onePoint, width: 120 - 80 * onePoint, height: 80 - 40 * onePoint, borderRadius: 15, background: T.cardMuted, border: `3px solid ${T.ink}`, opacity: 1 - onePoint }} />
+        <div style={{ position: 'absolute', left: 123, top: 105, width: 54, height: 54, borderRadius: '50%', background: T.cyan, boxShadow: `0 0 28px ${T.cyan}`, opacity: onePoint, transform: `scale(${0.6 + onePoint * 0.4})` }} />
+        <div style={{ position: 'absolute', left: 240, top: 104, opacity: onePoint, color: T.ink, fontSize: 30, fontWeight: 900 }}>all forces act<br />at one point</div>
       </WarmCard>
     </SceneShell>
   );
@@ -676,7 +678,6 @@ const Scene03: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
       <LabBlock
         width={330}
         height={184}
-        label="BLOCK"
         style={{
           position: 'absolute',
           left: contactX - 165,
@@ -701,8 +702,8 @@ const Scene03: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
         }}
       />
 
-      <ForceArrow x={centerX} y={centerY} length={285} angle={90} progress={weight} label="WEIGHT" labelOffset={52} />
-      <ForceArrow x={contactX} y={contactY} length={285} angle={angle - 90} progress={reaction} label="NORMAL REACTION" labelOffset={-70} labelAlong={0.9} />
+      <ForceArrow x={centerX} y={centerY} length={285} angle={90} progress={weight} label="WEIGHT" labelOffset={100} />
+      <ForceArrow x={contactX} y={contactY} length={285} angle={angle - 90} progress={reaction} label="NORMAL REACTION" labelOffset={-205} labelAlong={0.9} />
       <RightAngle x={contactX} y={contactY} angle={angle} opacity={reaction} />
 
       <WarmCard
@@ -718,7 +719,7 @@ const Scene03: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
           transform: `translateX(${(1 - formula.opacity) * 30}px)`,
         }}
       >
-        <div style={{ color: T.amber, fontFamily: T.mono, fontSize: 19, fontWeight: 900, letterSpacing: 2 }}>WEIGHT</div>
+        <div style={{ color: `var(--label-amber, ${T.amber})`, fontFamily: T.mono, fontSize: 28, fontWeight: 900, letterSpacing: 2 }}>WEIGHT</div>
         <div style={{ fontFamily: T.mono, fontSize: 62, fontWeight: 950, marginTop: 13 }}>W = mg</div>
       </WarmCard>
 
@@ -727,14 +728,14 @@ const Scene03: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
           position: 'absolute',
           right: 125,
           top: 520,
-          width: 390,
+          width: 440,
           padding: '18px 24px',
           borderRadius: 16,
           background: `${T.panel}e8`,
           border: `2px solid ${T.cyan}66`,
           color: T.text,
           fontFamily: T.mono,
-          fontSize: 22,
+          fontSize: 28,
           fontWeight: 850,
           textAlign: 'center',
           opacity: tilt,
@@ -773,7 +774,7 @@ const Scene04: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
           boxSizing: 'border-box',
         }}
       >
-        <div style={{ position: 'absolute', left: 32, top: 28, color: T.cyan, fontFamily: T.mono, fontSize: 22, fontWeight: 950, letterSpacing: 2.4 }}>TAUT STRING</div>
+        <div style={{ position: 'absolute', left: 32, top: 28, color: `var(--label-cyan, ${T.cyan})`, fontFamily: T.mono, fontSize: 28, fontWeight: 950, letterSpacing: 2.4 }}>TAUT STRING</div>
         <div style={{ position: 'absolute', left: 105, top: 302, width: 34, height: 210, borderRadius: 12, background: T.panelLight, border: `4px solid ${T.cyan}` }} />
         <svg width="850" height="670" style={{ position: 'absolute', inset: 0 }}>
           <line x1="139" y1="405" x2="550" y2="405" stroke={T.cardMuted} strokeWidth="10" strokeLinecap="round" opacity={1 - slack} />
@@ -786,17 +787,17 @@ const Scene04: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
             opacity={slack}
           />
         </svg>
-        <LabBlock width={210} height={170} label="BLOCK" style={{ position: 'absolute', left: 550, top: 320 }} />
+        <LabBlock width={210} height={170} style={{ position: 'absolute', left: 550, top: 320 }} />
         <div
           style={{
             position: 'absolute',
-            left: 220,
+            left: 120,
             top: 525,
-            width: 310,
+            width: 580,
             textAlign: 'center',
             color: slack > 0.4 ? T.red : T.cyan,
             fontFamily: T.mono,
-            fontSize: 22,
+            fontSize: 28,
             fontWeight: 900,
             letterSpacing: 1.8,
             opacity: Math.max(tension, slack),
@@ -822,7 +823,7 @@ const Scene04: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
           opacity: rod,
         }}
       >
-        <div style={{ position: 'absolute', left: 32, top: 28, color: T.amber, fontFamily: T.mono, fontSize: 22, fontWeight: 950, letterSpacing: 2.4 }}>RIGID ROD</div>
+        <div style={{ position: 'absolute', left: 32, top: 28, color: `var(--label-amber, ${T.amber})`, fontFamily: T.mono, fontSize: 28, fontWeight: 950, letterSpacing: 2.4 }}>RIGID ROD</div>
         <div style={{ position: 'absolute', left: 89, top: 302, width: 34, height: 210, borderRadius: 12, background: T.panelLight, border: `4px solid ${T.amber}` }} />
         <div
           style={{
@@ -836,7 +837,7 @@ const Scene04: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
             boxShadow: `0 0 16px ${T.amber}44`,
           }}
         />
-        <LabBlock width={210} height={170} label="BLOCK" accent={T.amber} style={{ position: 'absolute', left: 547, top: 320 }} />
+        <LabBlock width={210} height={170} accent={T.amber} style={{ position: 'absolute', left: 547, top: 320 }} />
         <div
           style={{
             position: 'absolute',
@@ -851,7 +852,7 @@ const Scene04: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
             placeItems: 'center',
             color: thrust > 0.5 ? T.amber : T.cyan,
             fontFamily: T.mono,
-            fontSize: 24,
+            fontSize: 28,
             fontWeight: 950,
             letterSpacing: 2.2,
           }}
@@ -860,8 +861,8 @@ const Scene04: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
         </div>
       </div>
 
-      <ForceArrow x={1652} y={670} length={230} angle={180} progress={rod * (1 - thrust)} label="TENSION" labelOffset={42} labelAlong={0.85} />
-      <ForceArrow x={1652} y={670} length={170} angle={0} progress={thrust} label="THRUST" labelOffset={-43} labelAlong={0.8} />
+      <ForceArrow x={1550} y={670} length={230} angle={180} progress={rod * (1 - thrust)} label="TENSION" labelOffset={42} labelAlong={0.65} />
+      <ForceArrow x={1550} y={670} length={250} angle={0} progress={thrust} label="THRUST" labelOffset={-115} labelAlong={0.55} />
     </SceneShell>
   );
 };
@@ -900,12 +901,12 @@ const LimitGauge: React.FC<{ progress: number }> = ({ progress }) => (
     accent={T.green}
     style={{ position: 'absolute', right: 105, top: 235, width: 410, height: 175, padding: '24px 30px', opacity: progress }}
   >
-    <div style={{ color: T.green, fontFamily: T.mono, fontSize: 18, fontWeight: 950, letterSpacing: 2 }}>LIMITING FRICTION</div>
+    <div style={{ color: `var(--label-green, ${T.green})`, fontFamily: T.mono, fontSize: 28, fontWeight: 950, letterSpacing: 2 }}>LIMITING FRICTION</div>
     <div style={{ position: 'absolute', left: 30, right: 30, top: 86, height: 28, borderRadius: 14, background: `${T.ink}22`, overflow: 'hidden' }}>
       <div style={{ width: `${90 * progress}%`, height: '100%', borderRadius: 14, background: `linear-gradient(90deg, ${T.cyan}, ${T.amber})` }} />
       <div style={{ position: 'absolute', right: '10%', top: -8, width: 5, height: 44, background: T.red }} />
     </div>
-    <div style={{ position: 'absolute', left: 30, right: 30, bottom: 19, display: 'flex', justifyContent: 'space-between', color: T.ink, fontFamily: T.mono, fontSize: 16, fontWeight: 800 }}>
+    <div style={{ position: 'absolute', left: 30, right: 30, bottom: 19, display: 'flex', justifyContent: 'space-between', color: T.ink, fontFamily: T.mono, fontSize: 28, fontWeight: 800 }}>
       <span>needed</span><span style={{ color: T.red }}>limit</span>
     </div>
   </WarmCard>
@@ -942,14 +943,14 @@ const Scene05: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
         ))}
       </div>
       <Sled left={iceX} top={455} opacity={ice} />
-      <ForceArrow x={iceX + 240} y={510} length={330} angle={0} progress={ice} label="MOTION" color={T.cyan} labelOffset={-39} />
-      <ForceArrow x={iceX} y={555} length={125} angle={180} progress={ice} label="FRICTION" labelOffset={42} />
+      <ForceArrow x={iceX + 218} y={510} length={330} angle={0} progress={ice} label="MOTION" color={T.cyan} labelOffset={-39} />
+      <ForceArrow x={iceX + 12} y={552} length={125} angle={180} progress={ice} label="FRICTION" labelOffset={42} />
 
       <div style={{ position: 'absolute', left: 165, top: 720, width: 1590, height: 195, borderRadius: 24, border: `2px solid ${T.amber}44`, background: `radial-gradient(circle at 18px 18px, ${T.amber}55 0 5px, transparent 6px), radial-gradient(circle at 48px 38px, ${T.cardMuted}33 0 4px, transparent 5px), ${T.panel}`, backgroundSize: '70px 55px', overflow: 'hidden', opacity: sand }}>
       </div>
       <Sled left={sandX} top={750} accent={T.amber} opacity={sand} />
-      <ForceArrow x={sandX + 240} y={805} length={330} angle={0} progress={opposes * sand} label="MOTION" color={T.cyan} labelOffset={-39} />
-      <ForceArrow x={sandX} y={850} length={310} angle={180} progress={opposes * sand} label="FRICTION" labelOffset={42} />
+      <ForceArrow x={sandX + 218} y={805} length={330} angle={0} progress={opposes * sand} label="MOTION" color={T.cyan} labelOffset={-39} />
+      <ForceArrow x={sandX + 12} y={847} length={310} angle={180} progress={opposes * sand} label="FRICTION" labelOffset={42} />
     </SceneShell>
   );
 };
@@ -967,8 +968,10 @@ const Scene06: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
   const air = useSpringAt(cueAt(scene, 'air-resistance'), 26);
   const balance = useSpringAt(balanceAt, 30);
   const buildSpeed = useProgress(drivingAt, balanceAt);
-  const carX = 680 + buildSpeed * 120;
-  const windShift = (frame * (3 + buildSpeed * 5)) % 180;
+  const { fps } = useVideoConfig();
+  const cruise = Math.max(0, frame / fps - balanceAt);
+  const carX = 680 + 120 * buildSpeed * buildSpeed + 20 * cruise;
+  const windShift = -(frame * 6) % 175;
 
   return (
     <SceneShell scene={6} label="vehicle forces">
@@ -979,21 +982,21 @@ const Scene06: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
           <div key={row} style={{ position: 'absolute', left: -180 + windShift, top: 72 + row * 78, width: 1940, height: 4, opacity: 0.22 + air * 0.55, background: `repeating-linear-gradient(90deg, ${T.cyan} 0 92px, transparent 92px 175px)` }} />
         ))}
         <div style={{ position: 'absolute', left: 0, right: 0, bottom: 62, height: 7, background: `${T.card}77` }} />
-        <div style={{ position: 'absolute', left: 38, top: 28, color: T.cyan, fontFamily: T.mono, fontSize: 19, fontWeight: 900, letterSpacing: 2 }}>CYAN AIRFLOW · TEST BAY 06</div>
+        <div style={{ position: 'absolute', left: 38, top: 28, color: `var(--label-cyan, ${T.cyan})`, fontFamily: T.mono, fontSize: 28, fontWeight: 900, letterSpacing: 2 }}>CYAN AIRFLOW · TEST BAY 06</div>
       </div>
 
-      <LabCar style={{ left: carX, top: 500, transform: `rotate(${(1 - balance) * driving * -1.8}deg)` }} />
-      <ForceArrow x={carX + 286} y={580} length={285} angle={0} progress={driving} label="DRIVING" labelOffset={-46} />
-      <ForceArrow x={carX + 16} y={568} length={175} angle={180} progress={braking} label="BRAKING" labelOffset={48} />
-      <ForceArrow x={carX + 16} y={620} length={245} angle={180} progress={air} label="AIR RESISTANCE" labelOffset={-47} labelAlong={0.58} />
+      <LabCar style={{ left: carX, top: 618 }} />
+      <ForceArrow x={carX + 286} y={698} length={480 - balance * 60} angle={0} progress={driving} label="DRIVING" labelOffset={-46} />
+      <ForceArrow x={carX + 16} y={686} length={175} angle={180} progress={braking} label="BRAKING" labelOffset={48} />
+      <ForceArrow x={carX + 16} y={738} length={245} angle={180} progress={air} label="AIR RESISTANCE" labelOffset={-47} labelAlong={0.58} />
 
       <WarmCard
         accent={T.green}
         style={{
           position: 'absolute',
-          left: 560,
-          top: 835,
-          width: 800,
+          left: 510,
+          top: 870,
+          width: 900,
           height: 145,
           padding: '22px 30px',
           opacity: balance,
@@ -1001,12 +1004,12 @@ const Scene06: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
         }}
       >
         <div style={{ display: 'flex', alignItems: 'center', gap: 22 }}>
-          <div style={{ color: T.green, fontFamily: T.mono, fontSize: 18, fontWeight: 950, letterSpacing: 2 }}>FORCES BALANCED</div>
+          <div style={{ color: `var(--label-green, ${T.green})`, fontFamily: T.mono, fontSize: 28, fontWeight: 950, letterSpacing: 2 }}>FORCES BALANCED</div>
           <div style={{ flex: 1, height: 18, borderRadius: 9, background: T.amber }} />
-          <div style={{ color: T.ink, fontFamily: T.mono, fontSize: 25, fontWeight: 950 }}>=</div>
+          <div style={{ color: T.ink, fontFamily: T.mono, fontSize: 28, fontWeight: 950 }}>=</div>
           <div style={{ flex: 1, height: 18, borderRadius: 9, background: T.amber }} />
         </div>
-        <div style={{ marginTop: 17, textAlign: 'center', color: T.ink, fontSize: 27, fontWeight: 900 }}>constant velocity · engine working</div>
+        <div style={{ marginTop: 17, textAlign: 'center', color: T.ink, fontSize: 28, fontWeight: 900 }}>constant velocity · engine working</div>
       </WarmCard>
     </SceneShell>
   );
@@ -1079,8 +1082,8 @@ const Scene07: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
         <div style={{ position: 'absolute', left: 58, right: 42, top: 106, height: 5, background: `${T.ink}33` }} />
       </div>
 
-      <ForceArrow x={centerX} y={centerY} length={weightLength} angle={90} progress={vertical} label="WEIGHT" labelOffset={-55} />
-      <ForceArrow x={centerX} y={centerY} length={260} angle={angle - 90} progress={perpendicular} label="REACTION" labelOffset={46} />
+      <ForceArrow x={centerX} y={centerY} length={weightLength} angle={90} progress={vertical} label="WEIGHT" labelOffset={-155} labelAlong={0.88} />
+      <ForceArrow x={centerX} y={centerY} length={normalComponentLength} angle={angle - 90} progress={perpendicular} label="REACTION" labelOffset={175} />
       <RightAngle x={contactX} y={contactY} angle={angle} opacity={perpendicular} />
 
       <svg width="1920" height="1080" style={{ position: 'absolute', inset: 0, opacity: downhill * 0.42 }}>
@@ -1094,16 +1097,16 @@ const Scene07: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
         <line x1={downhillEndX} y1={downhillEndY} x2={centerX} y2={weightEndY} stroke={T.cyanSoft} strokeWidth="5" strokeDasharray="14 11" />
         <line x1={normalEndX} y1={normalEndY} x2={centerX} y2={weightEndY} stroke={T.cyanSoft} strokeWidth="5" strokeDasharray="14 11" />
       </svg>
-      <ForceArrow x={centerX} y={centerY} length={downhillLength} angle={downhillAngle} progress={downhill} color={T.cyanSoft} dashed label="DOWN-SLOPE" labelOffset={-43} labelAlong={0.72} opacity={0.82} />
+      <ForceArrow x={centerX} y={centerY} length={downhillLength} angle={downhillAngle} progress={downhill} color={T.cyanSoft} dashed label="DOWN-SLOPE" labelOffset={-150} labelAlong={2.4} opacity={0.82} />
       <ForceArrow x={centerX} y={centerY} length={normalComponentLength} angle={intoSlopeAngle} progress={downhill} color={T.cyanSoft} dashed opacity={0.42} />
-      <ForceArrow x={centerX} y={centerY} length={250} angle={angle} progress={friction} label="FRICTION" labelOffset={-58} labelAlong={0.92} />
+      <ForceArrow x={centerX} y={centerY} length={downhillLength} angle={angle} progress={friction} label="FRICTION" labelOffset={-90} labelAlong={2.0} />
 
       <WarmCard
         accent={T.green}
         style={{
           position: 'absolute',
           right: 115,
-          top: 285,
+          top: 235,
           width: 405,
           height: 230,
           padding: '30px 35px',
@@ -1111,13 +1114,13 @@ const Scene07: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
           transform: `scale(${0.83 + atRest * 0.17})`,
         }}
       >
-        <div style={{ color: T.green, fontFamily: T.mono, fontSize: 18, fontWeight: 950, letterSpacing: 2 }}>BALANCE SENSOR</div>
+        <div style={{ color: `var(--label-green, ${T.green})`, fontFamily: T.mono, fontSize: 28, fontWeight: 950, letterSpacing: 2 }}>BALANCE SENSOR</div>
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 19, marginTop: 26 }}>
           <div style={{ width: 80, height: 8, borderRadius: 8, background: T.amber }} />
           <div style={{ color: T.ink, fontFamily: T.mono, fontSize: 52, fontWeight: 950 }}>0</div>
           <div style={{ width: 80, height: 8, borderRadius: 8, background: T.amber }} />
         </div>
-        <div style={{ textAlign: 'center', color: T.ink, fontSize: 25, fontWeight: 850, marginTop: 17 }}>below the friction limit</div>
+        <div style={{ textAlign: 'center', color: T.ink, fontSize: 28, fontWeight: 850, marginTop: 17 }}>below the friction limit</div>
       </WarmCard>
     </SceneShell>
   );
@@ -1131,10 +1134,10 @@ const RejectStamp: React.FC<{ opacity: number }> = ({ opacity }) => (
   <div
     style={{
       position: 'absolute',
-      left: 1443,
-      top: 535,
+      left: 1480,
+      top: 645,
       width: 225,
-      height: 118,
+      height: 85,
       border: `10px solid ${T.red}`,
       borderRadius: 19,
       color: T.red,
@@ -1169,10 +1172,10 @@ const Scene08: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
       <SectionTitle kicker="one body at a time">Build the diagram</SectionTitle>
 
       <div style={{ opacity: 1 - isolate.opacity }}>
-        <div style={{ position: 'absolute', left: 235, right: 230, top: 790, height: 35, borderRadius: 15, background: T.cyan, boxShadow: `0 0 24px ${T.cyan}55` }} />
+        <div style={{ position: 'absolute', left: 235, right: 230, top: 760, height: 35, borderRadius: 15, background: T.cyan, boxShadow: `0 0 24px ${T.cyan}55` }} />
         <div style={{ position: 'absolute', left: 1050, top: 645, width: 455, height: 8, borderRadius: 8, background: T.cardMuted }} />
         <Person style={{ left: 1500, top: 485 }} />
-        <div style={{ position: 'absolute', left: 270, top: 510, color: T.textMuted, fontFamily: T.mono, fontSize: 20, letterSpacing: 2 }}>TABLE + PERSON + ROOM</div>
+        <div style={{ position: 'absolute', left: 270, top: 510, color: `var(--label-textMuted, ${T.textMuted})`, fontFamily: T.mono, fontSize: 28, letterSpacing: 2 }}>TABLE + PERSON + ROOM</div>
       </div>
 
       <div
@@ -1189,7 +1192,8 @@ const Scene08: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
           boxShadow: `0 0 50px ${T.cyan}22`,
         }}
       />
-      <LabBlock width={300} height={220} label="5 kg" style={{ position: 'absolute', left: 750, top: 540, zIndex: 8 }} />
+      <LabBlock width={300} height={220} style={{ position: 'absolute', left: 750, top: 540 }} />
+      <div style={{ position: 'absolute', left: 780, top: 568, color: T.ink, fontFamily: T.mono, fontSize: 32, fontWeight: 900 }}>5 kg</div>
       <div
         style={{
           position: 'absolute',
@@ -1205,10 +1209,10 @@ const Scene08: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
         }}
       />
 
-      <ForceArrow x={originX} y={originY} length={285} angle={90} progress={weight} label="WEIGHT" labelOffset={-54} />
-      <ForceArrow x={originX} y={originY} length={285} angle={-90} progress={reaction} label="REACTION" labelOffset={-58} />
-      <ForceArrow x={originX} y={originY} length={340} angle={0} progress={tension} label="TENSION" labelOffset={-49} />
-      <ForceArrow x={originX} y={originY} length={310} angle={180} progress={friction} label="FRICTION" labelOffset={47} />
+      <ForceArrow x={originX} y={originY} length={285} angle={90} progress={weight} label="WEIGHT" labelOffset={-105} labelAlong={0.8} />
+      <ForceArrow x={originX} y={originY} length={285} angle={-90} progress={reaction} label="REACTION" labelOffset={-115} labelAlong={0.85} />
+      <ForceArrow x={originX} y={originY} length={340} angle={0} progress={tension} label="TENSION" labelOffset={-49} labelAlong={0.82} />
+      <ForceArrow x={originX} y={originY} length={310} angle={180} progress={friction} label="FRICTION" labelOffset={47} labelAlong={0.8} />
 
       <div
         style={{
@@ -1223,7 +1227,7 @@ const Scene08: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
           opacity: onlyForces,
         }}
       >
-        <div style={{ color: T.red, fontFamily: T.mono, fontSize: 18, fontWeight: 950, letterSpacing: 2, padding: '22px 25px' }}>REJECTED TARGET</div>
+        <div style={{ color: T.red, fontFamily: T.mono, fontSize: 28, fontWeight: 950, letterSpacing: 2, padding: '22px 25px' }}>REJECTED TARGET</div>
         <Person style={{ left: 145, top: 115 }} opacity={0.35} />
         <svg width="395" height="475" style={{ position: 'absolute', inset: 0 }}>
           <line x1="192" y1="240" x2="328" y2="240" stroke={T.red} strokeWidth="9" strokeLinecap="round" />
@@ -1235,13 +1239,13 @@ const Scene08: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
       <div
         style={{
           position: 'absolute',
-          left: 635,
-          top: 890,
-          width: 530,
+          left: 540,
+          top: 975,
+          width: 720,
           textAlign: 'center',
-          color: T.green,
+          color: `var(--label-green, ${T.green})`,
           fontFamily: T.mono,
-          fontSize: 23,
+          fontSize: 28,
           fontWeight: 950,
           letterSpacing: 2.1,
           opacity: onlyForces,
@@ -1270,10 +1274,10 @@ const Scene09: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
       <SectionTitle kicker="read the arrows">The diagram writes the equations</SectionTitle>
 
       <WarmCard accent={T.cyan} style={{ position: 'absolute', left: 90, top: 270, width: 650, height: 655, padding: '26px 30px' }}>
-        <div style={{ color: T.cyan, fontFamily: T.mono, fontSize: 19, fontWeight: 950, letterSpacing: 2 }}>DOCKED FORCE DIAGRAM</div>
-        <div style={{ position: 'absolute', left: 229, top: 225, width: 190, height: 155, borderRadius: 18, background: T.cardMuted, border: `4px solid ${T.ink}`, display: 'grid', placeItems: 'center', fontFamily: T.mono, fontSize: 26, fontWeight: 950 }}>5 kg</div>
+        <div style={{ color: `var(--label-cyan, ${T.cyan})`, fontFamily: T.mono, fontSize: 28, fontWeight: 950, letterSpacing: 2 }}>DOCKED FORCE DIAGRAM</div>
+        <div style={{ position: 'absolute', left: 229, top: 225, width: 190, height: 155, borderRadius: 18, background: T.cardMuted, border: `4px solid ${T.ink}`, padding: '16px 12px', boxSizing: 'border-box', fontFamily: T.mono, fontSize: 28, fontWeight: 950 }}>5 kg</div>
         <div style={{ position: 'absolute', left: 314, top: 292, width: 20, height: 20, borderRadius: '50%', background: T.amber, zIndex: 3 }} />
-        <div style={{ position: 'absolute', left: 94, right: 94, bottom: 44, borderRadius: 14, background: `${T.cyan}18`, padding: '16px 18px', textAlign: 'center', color: T.ink, fontSize: 23, fontWeight: 850 }}>four forces · one body</div>
+        <div style={{ position: 'absolute', left: 94, right: 94, bottom: 44, borderRadius: 14, background: `${T.cyan}18`, padding: '16px 18px', textAlign: 'center', color: T.ink, fontSize: 28, fontWeight: 850 }}>four forces · one body</div>
       </WarmCard>
       <ForceArrow x={414} y={573} length={145} angle={-90} progress={1} label="R" labelOffset={-30} labelAlong={0.66} />
       <ForceArrow x={414} y={573} length={145} angle={90} progress={1} label="W" labelOffset={-30} labelAlong={0.66} />
@@ -1289,16 +1293,16 @@ const Scene09: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
           width: 1010,
           height: 245,
           padding: '25px 32px',
-          opacity: 0.18 + vertically * 0.82,
+          opacity: vertically,
         }}
       >
-        <div style={{ color: T.cyan, fontFamily: T.mono, fontSize: 18, fontWeight: 950, letterSpacing: 2 }}>VERTICAL RAIL</div>
+        <div style={{ color: `var(--label-cyan, ${T.cyan})`, fontFamily: T.mono, fontSize: 28, fontWeight: 950, letterSpacing: 2 }}>VERTICAL RAIL</div>
         <div style={{ position: 'absolute', left: 68, right: 68, top: 110, height: 8, borderRadius: 8, background: `${T.ink}22` }} />
         <div style={{ position: 'absolute', left: 100, top: 82, width: 330 * vertically, height: 28, borderRadius: 14, background: T.amber }} />
         <div style={{ position: 'absolute', right: 100, top: 118, width: 330 * vertically, height: 28, borderRadius: 14, background: T.amber }} />
-        <div style={{ position: 'absolute', left: 125, top: 154, color: T.ink, fontFamily: T.mono, fontSize: 25, fontWeight: 950, opacity: vertically }}>R ↑</div>
-        <div style={{ position: 'absolute', right: 125, top: 154, color: T.ink, fontFamily: T.mono, fontSize: 25, fontWeight: 950, opacity: vertically }}>↓ W</div>
-        <div style={{ position: 'absolute', left: 432, top: 152, color: T.green, fontFamily: T.mono, fontSize: 32, fontWeight: 950, opacity: vertically }}>R = W</div>
+        <div style={{ position: 'absolute', left: 125, top: 154, color: T.ink, fontFamily: T.mono, fontSize: 28, fontWeight: 950, opacity: vertically }}>R ↑</div>
+        <div style={{ position: 'absolute', right: 125, top: 154, color: T.ink, fontFamily: T.mono, fontSize: 28, fontWeight: 950, opacity: vertically }}>↓ W</div>
+        <div style={{ position: 'absolute', left: 432, top: 152, color: `var(--label-green, ${T.green})`, fontFamily: T.mono, fontSize: 32, fontWeight: 950, opacity: vertically }}>R = W</div>
       </WarmCard>
 
       <WarmCard
@@ -1310,16 +1314,16 @@ const Scene09: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
           width: 1010,
           height: 285,
           padding: '25px 32px',
-          opacity: 0.18 + horizontally * 0.82,
+          opacity: horizontally,
         }}
       >
-        <div style={{ color: T.amber, fontFamily: T.mono, fontSize: 18, fontWeight: 950, letterSpacing: 2 }}>HORIZONTAL RAIL</div>
-        <div style={{ position: 'absolute', left: 75, top: 93, color: T.ink, fontFamily: T.mono, fontSize: 23, fontWeight: 900 }}>TENSION</div>
+        <div style={{ color: `var(--label-amber, ${T.amber})`, fontFamily: T.mono, fontSize: 28, fontWeight: 950, letterSpacing: 2 }}>HORIZONTAL RAIL</div>
+        <div style={{ position: 'absolute', left: 75, top: 93, color: T.ink, fontFamily: T.mono, fontSize: 28, fontWeight: 900 }}>TENSION</div>
         <div style={{ position: 'absolute', left: 245, top: 94, width: 480 * horizontally, height: 31, borderRadius: 16, background: T.amber }} />
-        <div style={{ position: 'absolute', right: 65, top: 91, color: T.ink, fontFamily: T.mono, fontSize: 25, fontWeight: 950, opacity: horizontally }}>22 N</div>
-        <div style={{ position: 'absolute', left: 75, top: 151, color: T.ink, fontFamily: T.mono, fontSize: 23, fontWeight: 900 }}>FRICTION</div>
+        <div style={{ position: 'absolute', right: 65, top: 91, color: T.ink, fontFamily: T.mono, fontSize: 28, fontWeight: 950, opacity: horizontally }}>22 N</div>
+        <div style={{ position: 'absolute', left: 75, top: 151, color: T.ink, fontFamily: T.mono, fontSize: 28, fontWeight: 900 }}>FRICTION</div>
         <div style={{ position: 'absolute', left: 245, top: 152, width: 321 * horizontally, height: 31, borderRadius: 16, background: `${T.amber}aa` }} />
-        <div style={{ position: 'absolute', left: 592, top: 148, color: T.ink, fontFamily: T.mono, fontSize: 25, fontWeight: 950, opacity: horizontally }}>14.7 N</div>
+        <div style={{ position: 'absolute', left: 592, top: 148, color: T.ink, fontFamily: T.mono, fontSize: 28, fontWeight: 950, opacity: horizontally }}>14.7 N</div>
         <div
           style={{
             position: 'absolute',
@@ -1334,9 +1338,9 @@ const Scene09: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
             transform: `translate(${189 * remaining}px, ${116 * remaining}px)`,
           }}
         >
-          <div style={{ position: 'absolute', left: -12, top: -35, width: 183, color: T.green, fontFamily: T.mono, fontSize: 20, fontWeight: 950, textAlign: 'center' }}>NET · 7.3 N</div>
+          <div style={{ position: 'absolute', left: -42, top: -40, width: 243, color: `var(--label-green, ${T.green})`, fontFamily: T.mono, fontSize: 28, fontWeight: 950, textAlign: 'center' }}>NET · 7.3 N</div>
         </div>
-        <div style={{ position: 'absolute', left: 247, bottom: 27, width: 474, textAlign: 'center', color: T.ink, fontFamily: T.mono, fontSize: 25, fontWeight: 950, opacity: remaining }}>22 − 14.7 = <span style={{ color: T.amber }}>7.3 N →</span></div>
+        <div style={{ position: 'absolute', left: 190, bottom: 27, width: 510, textAlign: 'center', color: T.ink, fontFamily: T.mono, fontSize: 28, fontWeight: 950, opacity: remaining }}>22 − 14.7 = <span style={{ color: T.amber }}>7.3 N →</span></div>
       </WarmCard>
 
       <div
@@ -1349,9 +1353,9 @@ const Scene09: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
           opacity: accelerates,
         }}
       >
-        <div style={{ position: 'absolute', left: 0, right: 0, top: 49, height: 4, background: `${T.cyan}55` }} />
-        <div style={{ position: 'absolute', left: 40 + travel * 390, top: 13, width: 115, height: 70, borderRadius: 12, background: T.card, border: `4px solid ${T.cyan}`, boxSizing: 'border-box' }} />
-        <div style={{ position: 'absolute', right: 24, top: 8, width: 340, color: T.green, fontFamily: T.mono, fontSize: 27, fontWeight: 950, textAlign: 'right' }}>a = 7.3 ÷ 5<br />= 1.46 m/s² →</div>
+        <div style={{ position: 'absolute', left: 0, right: 0, top: 83, height: 4, background: `${T.cyan}55` }} />
+        <div style={{ position: 'absolute', left: 40 + travel * travel * 390, top: 13, width: 115, height: 70, borderRadius: 12, background: T.card, border: `4px solid ${T.cyan}`, boxSizing: 'border-box' }} />
+        <div style={{ position: 'absolute', right: 24, top: 8, width: 340, color: `var(--label-green, ${T.green})`, fontFamily: T.mono, fontSize: 28, fontWeight: 950, textAlign: 'right' }}>a = 7.3 ÷ 5<br />= 1.46 m/s² →</div>
       </div>
     </SceneShell>
   );
@@ -1386,7 +1390,7 @@ const RecapTile: React.FC<{
         padding: '20px 24px',
       }}
     >
-      <div style={{ color: accent, fontFamily: T.mono, fontSize: 17, fontWeight: 950, letterSpacing: 2 }}>{title}</div>
+      <div style={{ color: T.ink, fontFamily: T.mono, fontSize: 28, fontWeight: 950, letterSpacing: 2 }}>{title}</div>
       {children}
     </WarmCard>
   );
@@ -1414,17 +1418,17 @@ const Scene10: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
         <div style={{ position: 'absolute', left: 205, top: 104, width: 150, height: 100, borderRadius: 15, background: T.cardMuted, border: `4px solid ${T.ink}` }} />
         <div style={{ position: 'absolute', left: 80, right: 80, bottom: 24, height: 10, borderRadius: 8, background: T.cyan }} />
       </RecapTile>
-      <ForceArrow x={360} y={390} length={90} angle={90} progress={weight} label="W" labelOffset={-27} labelAlong={0.74} />
-      <ForceArrow x={360} y={390} length={90} angle={-90} progress={reaction} label="R" labelOffset={-27} labelAlong={0.74} />
+      <ForceArrow x={360} y={390} length={90} angle={90} progress={weight} label="W" labelOffset={-95} labelAlong={0.74} />
+      <ForceArrow x={360} y={390} length={70} angle={-90} progress={reaction} label="R" labelOffset={-27} labelAlong={0.74} />
 
       <RecapTile x={680} y={255} width={560} height={270} at={tensionAt} accent={T.cyan} title="STRING / ROD">
         <div style={{ position: 'absolute', left: 45, top: 143, width: 315, height: thrust > 0.5 ? 18 : 8, background: thrust > 0.5 ? `repeating-linear-gradient(90deg, ${T.amber} 0 20px, ${T.cardMuted} 20px 28px)` : T.ink, borderRadius: 7 }} />
         <div style={{ position: 'absolute', left: 360, top: 94, width: 145, height: 110, borderRadius: 14, background: T.cardMuted, border: `4px solid ${T.ink}` }} />
-        <div style={{ position: 'absolute', left: 92, bottom: 20, color: thrust > 0.5 ? T.amber : T.cyan, fontFamily: T.mono, fontSize: 21, fontWeight: 950 }}>{thrust > 0.5 ? 'THRUST →' : '← TENSION'}</div>
+        <div style={{ position: 'absolute', left: 62, bottom: 20, color: T.ink, fontFamily: T.mono, fontSize: 28, fontWeight: 950 }}>{thrust > 0.5 ? 'THRUST →' : '← TENSION'}</div>
       </RecapTile>
-      <ForceArrow x={1040} y={400} length={160} angle={thrust > 0.5 ? 0 : 180} progress={tension} label={thrust > 0.5 ? 'PUSH' : 'PULL'} labelOffset={-34} strokeWidth={8} />
+      <ForceArrow x={1040} y={400} length={160} angle={thrust > 0.5 ? 0 : 180} progress={tension} label={thrust > 0.5 ? 'PUSH' : 'PULL'} labelOffset={thrust > 0.5 ? -65 : 34} strokeWidth={8} />
 
-      <RecapTile x={1280} y={255} width={560} height={270} at={frictionAt} accent={T.amber} title="FRICTION + RESISTANCE">
+      <RecapTile x={1280} y={255} width={560} height={270} at={frictionAt} accent={T.amber} title="FRICTION / DRAG">
         <div style={{ position: 'absolute', left: 42, right: 42, top: 178, height: 45, borderRadius: 12, background: `radial-gradient(circle at 12px 12px, ${T.amber}88 0 4px, transparent 5px), ${T.ink}22`, backgroundSize: '32px 27px' }} />
         <div style={{ position: 'absolute', left: 245, top: 92, width: 165, height: 88, borderRadius: 18, background: T.cardMuted, border: `4px solid ${T.ink}` }} />
         {[0, 1, 2].map((row) => <div key={row} style={{ position: 'absolute', right: 35, top: 76 + row * 35, width: 100, height: 4, background: T.cyan, opacity: resistance }} />)}
@@ -1438,7 +1442,7 @@ const Scene10: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
         <div style={{ position: 'absolute', left: 74, right: 74, bottom: 37, height: 6, background: `${T.ink}22` }} />
         <div style={{ position: 'absolute', left: 112, bottom: 30, width: 155, height: 20, borderRadius: 10, background: T.amber }} />
         <div style={{ position: 'absolute', right: 112, bottom: 30, width: 155, height: 20, borderRadius: 10, background: T.amber }} />
-        <div style={{ position: 'absolute', left: 282, bottom: 24, color: T.green, fontFamily: T.mono, fontSize: 25, fontWeight: 950 }}>=</div>
+        <div style={{ position: 'absolute', left: 282, bottom: 24, color: `var(--label-green, ${T.green})`, fontFamily: T.mono, fontSize: 28, fontWeight: 950 }}>=</div>
       </RecapTile>
 
       <RecapTile x={1005} y={565} width={650} height={305} at={drivingAt} accent={T.cyan} title="ONE ISOLATED BODY">
@@ -1448,7 +1452,7 @@ const Scene10: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
       <ForceArrow x={1330} y={720} length={115} angle={0} progress={driving} strokeWidth={8} />
       <ForceArrow x={1330} y={720} length={115} angle={180} progress={driving} strokeWidth={8} />
       <ForceArrow x={1330} y={720} length={105} angle={90} progress={driving} strokeWidth={8} />
-      <ForceArrow x={1330} y={720} length={105} angle={-90} progress={driving} strokeWidth={8} />
+      <ForceArrow x={1330} y={720} length={75} angle={-90} progress={driving} strokeWidth={8} />
 
       <div
         style={{
@@ -1473,16 +1477,16 @@ const Scene10: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
           padding: '45px 60px',
         }}
       >
-        <div style={{ textAlign: 'center', color: T.textMuted, fontFamily: T.mono, fontSize: 20, fontWeight: 950, letterSpacing: 3 }}>FOR EVERY FORCE DIAGRAM</div>
+        <div style={{ textAlign: 'center', color: `var(--label-textMuted, ${T.textMuted})`, fontFamily: T.mono, fontSize: 28, fontWeight: 950, letterSpacing: 3 }}>FOR EVERY FORCE DIAGRAM</div>
         <div style={{ position: 'absolute', left: 535, top: 175, width: 250, height: 170, borderRadius: 20, background: T.cardMuted, border: `5px solid ${T.ink}` }} />
         <div style={{ position: 'absolute', left: 648, top: 247, width: 24, height: 24, borderRadius: '50%', background: T.amber }} />
         <div style={{ position: 'absolute', left: 0, right: 0, bottom: 56, textAlign: 'center', color: T.ink, fontSize: 57, fontWeight: 950 }}>One body. Every force on it.</div>
       </WarmCard>
       <div style={{ position: 'absolute', inset: 0, zIndex: 45, opacity: oneBody, pointerEvents: 'none' }}>
-        <ForceArrow x={960} y={515} length={205} angle={0} progress={oneBody} label="T" labelOffset={-35} />
-        <ForceArrow x={960} y={515} length={205} angle={180} progress={oneBody} label="F" labelOffset={35} />
-        <ForceArrow x={960} y={515} length={160} angle={90} progress={oneBody} label="W" labelOffset={-34} />
-        <ForceArrow x={960} y={515} length={160} angle={-90} progress={oneBody} label="R" labelOffset={-34} />
+        <ForceArrow x={960} y={515} length={205} angle={0} progress={oneBody} label="T" labelOffset={-35} labelAlong={0.85} />
+        <ForceArrow x={960} y={515} length={205} angle={180} progress={oneBody} label="F" labelOffset={35} labelAlong={0.85} />
+        <ForceArrow x={960} y={515} length={160} angle={90} progress={oneBody} label="W" labelOffset={-34} labelAlong={0.9} />
+        <ForceArrow x={960} y={515} length={160} angle={-90} progress={oneBody} label="R" labelOffset={-34} labelAlong={0.8} />
       </div>
     </SceneShell>
   );
