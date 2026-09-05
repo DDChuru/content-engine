@@ -1,0 +1,2212 @@
+{
+  "project": "mechanics-types-of-forces",
+  "sceneCount": 10,
+  "totalDuration": 190.223674,
+  "generatedAt": "2026-09-05T18:31:12.987355",
+  "engine": "faster-whisper-small (local)",
+  "scenes": [
+    {
+      "id": "s01",
+      "audio": "types-of-forces-s01.mp3",
+      "duration": 13.139592,
+      "wordCount": 27,
+      "text": "Forces are invisible, but their effects are everywhere. A pull starts motion, a push changes it. In mechanics, the first skill is knowing which forces are present.",
+      "words": [
+        {
+          "word": "Forces",
+          "start": 0.0,
+          "end": 0.32
+        },
+        {
+          "word": "are",
+          "start": 0.32,
+          "end": 0.54
+        },
+        {
+          "word": "invisible,",
+          "start": 0.54,
+          "end": 0.96
+        },
+        {
+          "word": "but",
+          "start": 1.78,
+          "end": 1.98
+        },
+        {
+          "word": "their",
+          "start": 1.98,
+          "end": 2.18
+        },
+        {
+          "word": "effects",
+          "start": 2.18,
+          "end": 2.62
+        },
+        {
+          "word": "are",
+          "start": 2.62,
+          "end": 2.98
+        },
+        {
+          "word": "everywhere.",
+          "start": 2.98,
+          "end": 3.42
+        },
+        {
+          "word": "A",
+          "start": 4.26,
+          "end": 4.38
+        },
+        {
+          "word": "pull",
+          "start": 4.38,
+          "end": 4.7
+        },
+        {
+          "word": "starts",
+          "start": 4.7,
+          "end": 5.34
+        },
+        {
+          "word": "motion,",
+          "start": 5.34,
+          "end": 5.82
+        },
+        {
+          "word": "a",
+          "start": 6.32,
+          "end": 6.44
+        },
+        {
+          "word": "push",
+          "start": 6.44,
+          "end": 6.8
+        },
+        {
+          "word": "changes",
+          "start": 6.8,
+          "end": 7.5
+        },
+        {
+          "word": "it.",
+          "start": 7.5,
+          "end": 7.78
+        },
+        {
+          "word": "In",
+          "start": 8.72,
+          "end": 8.98
+        },
+        {
+          "word": "mechanics,",
+          "start": 8.98,
+          "end": 9.34
+        },
+        {
+          "word": "the",
+          "start": 9.86,
+          "end": 9.94
+        },
+        {
+          "word": "first",
+          "start": 9.94,
+          "end": 10.18
+        },
+        {
+          "word": "skill",
+          "start": 10.18,
+          "end": 10.64
+        },
+        {
+          "word": "is",
+          "start": 10.64,
+          "end": 10.88
+        },
+        {
+          "word": "knowing",
+          "start": 10.88,
+          "end": 11.2
+        },
+        {
+          "word": "which",
+          "start": 11.2,
+          "end": 11.84
+        },
+        {
+          "word": "forces",
+          "start": 11.84,
+          "end": 12.14
+        },
+        {
+          "word": "are",
+          "start": 12.14,
+          "end": 12.36
+        },
+        {
+          "word": "present.",
+          "start": 12.36,
+          "end": 12.64
+        }
+      ],
+      "cues": {
+        "invisible": 0.54,
+        "pull": 4.38,
+        "push": 6.44,
+        "which-forces": 11.2
+      },
+      "generatedAt": "2026-09-05T18:31:12.987355",
+      "engine": "faster-whisper-small (local)"
+    },
+    {
+      "id": "s02",
+      "audio": "types-of-forces-s02.mp3",
+      "duration": 11.102041,
+      "wordCount": 32,
+      "text": "A force is a vector. That means it has a size and a direction. We measure force in newtons. In a particle model, every force is shown as acting at one point.",
+      "words": [
+        {
+          "word": "A",
+          "start": 0.0,
+          "end": 0.14
+        },
+        {
+          "word": "force",
+          "start": 0.14,
+          "end": 0.48
+        },
+        {
+          "word": "is",
+          "start": 0.48,
+          "end": 0.78
+        },
+        {
+          "word": "a",
+          "start": 0.78,
+          "end": 0.9
+        },
+        {
+          "word": "vector.",
+          "start": 0.9,
+          "end": 1.28
+        },
+        {
+          "word": "That",
+          "start": 2.24,
+          "end": 2.3
+        },
+        {
+          "word": "means",
+          "start": 2.3,
+          "end": 2.52
+        },
+        {
+          "word": "it",
+          "start": 2.52,
+          "end": 2.74
+        },
+        {
+          "word": "has",
+          "start": 2.74,
+          "end": 2.88
+        },
+        {
+          "word": "a",
+          "start": 2.88,
+          "end": 3.02
+        },
+        {
+          "word": "size",
+          "start": 3.02,
+          "end": 3.44
+        },
+        {
+          "word": "and",
+          "start": 3.44,
+          "end": 3.68
+        },
+        {
+          "word": "a",
+          "start": 3.68,
+          "end": 3.76
+        },
+        {
+          "word": "direction.",
+          "start": 3.76,
+          "end": 4.14
+        },
+        {
+          "word": "We",
+          "start": 4.98,
+          "end": 5.04
+        },
+        {
+          "word": "measure",
+          "start": 5.04,
+          "end": 5.38
+        },
+        {
+          "word": "force",
+          "start": 5.38,
+          "end": 5.68
+        },
+        {
+          "word": "in",
+          "start": 5.68,
+          "end": 5.88
+        },
+        {
+          "word": "newtons.",
+          "start": 5.88,
+          "end": 6.2
+        },
+        {
+          "word": "In",
+          "start": 6.94,
+          "end": 7.08
+        },
+        {
+          "word": "a",
+          "start": 7.08,
+          "end": 7.18
+        },
+        {
+          "word": "particle",
+          "start": 7.18,
+          "end": 7.42
+        },
+        {
+          "word": "model,",
+          "start": 7.42,
+          "end": 7.8
+        },
+        {
+          "word": "every",
+          "start": 8.3,
+          "end": 8.52
+        },
+        {
+          "word": "force",
+          "start": 8.52,
+          "end": 8.88
+        },
+        {
+          "word": "is",
+          "start": 8.88,
+          "end": 9.14
+        },
+        {
+          "word": "shown",
+          "start": 9.14,
+          "end": 9.46
+        },
+        {
+          "word": "as",
+          "start": 9.46,
+          "end": 9.74
+        },
+        {
+          "word": "acting",
+          "start": 9.74,
+          "end": 10.0
+        },
+        {
+          "word": "at",
+          "start": 10.0,
+          "end": 10.2
+        },
+        {
+          "word": "one",
+          "start": 10.2,
+          "end": 10.38
+        },
+        {
+          "word": "point.",
+          "start": 10.38,
+          "end": 10.68
+        }
+      ],
+      "cues": {
+        "vector": 0.9,
+        "size": 3.02,
+        "direction": 3.76,
+        "newtons": 5.88,
+        "one-point": 10.2
+      },
+      "generatedAt": "2026-09-05T18:31:12.987355",
+      "engine": "faster-whisper-small (local)"
+    },
+    {
+      "id": "s03",
+      "audio": "types-of-forces-s03.mp3",
+      "duration": 21.86449,
+      "wordCount": 41,
+      "text": "weight is gravity, pulling the object vertically down. Its size is mass times gravity. The bench pushes back with a normal reaction. Normal means perpendicular to the surface. Tilt the surface and the reaction tilts too. Weight still points straight down.",
+      "words": [
+        {
+          "word": "weight",
+          "start": 0.0,
+          "end": 0.32
+        },
+        {
+          "word": "is",
+          "start": 0.32,
+          "end": 1.1
+        },
+        {
+          "word": "gravity,",
+          "start": 1.1,
+          "end": 1.48
+        },
+        {
+          "word": "pulling",
+          "start": 2.3,
+          "end": 2.56
+        },
+        {
+          "word": "the",
+          "start": 2.56,
+          "end": 2.78
+        },
+        {
+          "word": "object",
+          "start": 2.78,
+          "end": 3.12
+        },
+        {
+          "word": "vertically",
+          "start": 3.12,
+          "end": 3.7
+        },
+        {
+          "word": "down.",
+          "start": 3.7,
+          "end": 4.12
+        },
+        {
+          "word": "Its",
+          "start": 4.98,
+          "end": 5.08
+        },
+        {
+          "word": "size",
+          "start": 5.08,
+          "end": 5.54
+        },
+        {
+          "word": "is",
+          "start": 5.54,
+          "end": 6.08
+        },
+        {
+          "word": "mass",
+          "start": 6.08,
+          "end": 6.36
+        },
+        {
+          "word": "times",
+          "start": 6.36,
+          "end": 6.7
+        },
+        {
+          "word": "gravity.",
+          "start": 6.7,
+          "end": 7.14
+        },
+        {
+          "word": "The",
+          "start": 8.24,
+          "end": 8.32
+        },
+        {
+          "word": "bench",
+          "start": 8.32,
+          "end": 8.66
+        },
+        {
+          "word": "pushes",
+          "start": 8.66,
+          "end": 8.94
+        },
+        {
+          "word": "back",
+          "start": 8.94,
+          "end": 9.4
+        },
+        {
+          "word": "with",
+          "start": 9.4,
+          "end": 10.22
+        },
+        {
+          "word": "a",
+          "start": 10.22,
+          "end": 10.34
+        },
+        {
+          "word": "normal",
+          "start": 10.34,
+          "end": 10.7
+        },
+        {
+          "word": "reaction.",
+          "start": 10.7,
+          "end": 11.24
+        },
+        {
+          "word": "Normal",
+          "start": 12.22,
+          "end": 12.62
+        },
+        {
+          "word": "means",
+          "start": 12.62,
+          "end": 13.04
+        },
+        {
+          "word": "perpendicular",
+          "start": 13.04,
+          "end": 13.64
+        },
+        {
+          "word": "to",
+          "start": 13.64,
+          "end": 14.16
+        },
+        {
+          "word": "the",
+          "start": 14.16,
+          "end": 14.3
+        },
+        {
+          "word": "surface.",
+          "start": 14.3,
+          "end": 14.68
+        },
+        {
+          "word": "Tilt",
+          "start": 15.32,
+          "end": 15.68
+        },
+        {
+          "word": "the",
+          "start": 15.68,
+          "end": 16.02
+        },
+        {
+          "word": "surface",
+          "start": 16.02,
+          "end": 16.4
+        },
+        {
+          "word": "and",
+          "start": 16.4,
+          "end": 17.14
+        },
+        {
+          "word": "the",
+          "start": 17.14,
+          "end": 17.26
+        },
+        {
+          "word": "reaction",
+          "start": 17.26,
+          "end": 17.6
+        },
+        {
+          "word": "tilts",
+          "start": 17.6,
+          "end": 18.08
+        },
+        {
+          "word": "too.",
+          "start": 18.08,
+          "end": 18.28
+        },
+        {
+          "word": "Weight",
+          "start": 19.16,
+          "end": 19.48
+        },
+        {
+          "word": "still",
+          "start": 19.48,
+          "end": 20.06
+        },
+        {
+          "word": "points",
+          "start": 20.06,
+          "end": 20.4
+        },
+        {
+          "word": "straight",
+          "start": 20.4,
+          "end": 20.96
+        },
+        {
+          "word": "down.",
+          "start": 20.96,
+          "end": 21.38
+        }
+      ],
+      "cues": {
+        "weight": 0.0,
+        "mass-times-gravity": 6.08,
+        "normal-reaction": 10.34,
+        "tilt": 15.32
+      },
+      "generatedAt": "2026-09-05T18:31:12.987355",
+      "engine": "faster-whisper-small (local)"
+    },
+    {
+      "id": "s04",
+      "audio": "types-of-forces-s04.mp3",
+      "duration": 18.390204,
+      "wordCount": 38,
+      "text": "A taut string pulls, so it carries tension. Tension acts along the string away from the object. A rod can pull or push. Pulling means tension. Pushing means thrust. A string cannot provide thrust. It simply goes slack.",
+      "words": [
+        {
+          "word": "A",
+          "start": 0.0,
+          "end": 0.2
+        },
+        {
+          "word": "taut",
+          "start": 0.2,
+          "end": 0.48
+        },
+        {
+          "word": "string",
+          "start": 0.48,
+          "end": 0.88
+        },
+        {
+          "word": "pulls,",
+          "start": 0.88,
+          "end": 1.24
+        },
+        {
+          "word": "so",
+          "start": 1.94,
+          "end": 2.2
+        },
+        {
+          "word": "it",
+          "start": 2.2,
+          "end": 2.32
+        },
+        {
+          "word": "carries",
+          "start": 2.32,
+          "end": 2.62
+        },
+        {
+          "word": "tension.",
+          "start": 2.62,
+          "end": 3.06
+        },
+        {
+          "word": "Tension",
+          "start": 3.82,
+          "end": 4.5
+        },
+        {
+          "word": "acts",
+          "start": 4.5,
+          "end": 4.8
+        },
+        {
+          "word": "along",
+          "start": 4.8,
+          "end": 5.18
+        },
+        {
+          "word": "the",
+          "start": 5.18,
+          "end": 5.48
+        },
+        {
+          "word": "string",
+          "start": 5.48,
+          "end": 5.8
+        },
+        {
+          "word": "away",
+          "start": 5.8,
+          "end": 6.52
+        },
+        {
+          "word": "from",
+          "start": 6.52,
+          "end": 6.76
+        },
+        {
+          "word": "the",
+          "start": 6.76,
+          "end": 6.9
+        },
+        {
+          "word": "object.",
+          "start": 6.9,
+          "end": 7.28
+        },
+        {
+          "word": "A",
+          "start": 8.16,
+          "end": 8.26
+        },
+        {
+          "word": "rod",
+          "start": 8.26,
+          "end": 8.6
+        },
+        {
+          "word": "can",
+          "start": 8.6,
+          "end": 8.84
+        },
+        {
+          "word": "pull",
+          "start": 8.84,
+          "end": 9.26
+        },
+        {
+          "word": "or",
+          "start": 9.26,
+          "end": 9.58
+        },
+        {
+          "word": "push.",
+          "start": 9.58,
+          "end": 9.92
+        },
+        {
+          "word": "Pulling",
+          "start": 10.82,
+          "end": 11.16
+        },
+        {
+          "word": "means",
+          "start": 11.16,
+          "end": 11.36
+        },
+        {
+          "word": "tension.",
+          "start": 11.36,
+          "end": 11.82
+        },
+        {
+          "word": "Pushing",
+          "start": 12.78,
+          "end": 13.0
+        },
+        {
+          "word": "means",
+          "start": 13.0,
+          "end": 13.3
+        },
+        {
+          "word": "thrust.",
+          "start": 13.3,
+          "end": 13.68
+        },
+        {
+          "word": "A",
+          "start": 14.9,
+          "end": 14.98
+        },
+        {
+          "word": "string",
+          "start": 14.98,
+          "end": 15.24
+        },
+        {
+          "word": "cannot",
+          "start": 15.24,
+          "end": 15.54
+        },
+        {
+          "word": "provide",
+          "start": 15.54,
+          "end": 15.9
+        },
+        {
+          "word": "thrust.",
+          "start": 15.9,
+          "end": 16.32
+        },
+        {
+          "word": "It",
+          "start": 16.98,
+          "end": 17.1
+        },
+        {
+          "word": "simply",
+          "start": 17.1,
+          "end": 17.38
+        },
+        {
+          "word": "goes",
+          "start": 17.38,
+          "end": 17.58
+        },
+        {
+          "word": "slack.",
+          "start": 17.58,
+          "end": 17.92
+        }
+      ],
+      "cues": {
+        "tension": 2.62,
+        "rod": 8.26,
+        "thrust": 13.3,
+        "slack": 17.58
+      },
+      "generatedAt": "2026-09-05T18:31:12.987355",
+      "engine": "faster-whisper-small (local)"
+    },
+    {
+      "id": "s05",
+      "audio": "types-of-forces-s05.mp3",
+      "duration": 16.901224,
+      "wordCount": 43,
+      "text": "Friction acts along a rough surface. It opposes motion or the motion that is about to happen. On ice, it may be small. On sand, it may be larger. Before sleeping begins, friction only grows as much as needed up to its limit.",
+      "words": [
+        {
+          "word": "Friction",
+          "start": 0.0,
+          "end": 0.34
+        },
+        {
+          "word": "acts",
+          "start": 0.34,
+          "end": 0.68
+        },
+        {
+          "word": "along",
+          "start": 0.68,
+          "end": 1.02
+        },
+        {
+          "word": "a",
+          "start": 1.02,
+          "end": 1.24
+        },
+        {
+          "word": "rough",
+          "start": 1.24,
+          "end": 1.44
+        },
+        {
+          "word": "surface.",
+          "start": 1.44,
+          "end": 1.82
+        },
+        {
+          "word": "It",
+          "start": 2.56,
+          "end": 2.6
+        },
+        {
+          "word": "opposes",
+          "start": 2.6,
+          "end": 3.0
+        },
+        {
+          "word": "motion",
+          "start": 3.0,
+          "end": 3.4
+        },
+        {
+          "word": "or",
+          "start": 3.4,
+          "end": 4.14
+        },
+        {
+          "word": "the",
+          "start": 4.14,
+          "end": 4.3
+        },
+        {
+          "word": "motion",
+          "start": 4.3,
+          "end": 4.68
+        },
+        {
+          "word": "that",
+          "start": 4.68,
+          "end": 5.06
+        },
+        {
+          "word": "is",
+          "start": 5.06,
+          "end": 5.18
+        },
+        {
+          "word": "about",
+          "start": 5.18,
+          "end": 5.4
+        },
+        {
+          "word": "to",
+          "start": 5.4,
+          "end": 5.56
+        },
+        {
+          "word": "happen.",
+          "start": 5.56,
+          "end": 5.78
+        },
+        {
+          "word": "On",
+          "start": 6.58,
+          "end": 6.84
+        },
+        {
+          "word": "ice,",
+          "start": 6.84,
+          "end": 7.14
+        },
+        {
+          "word": "it",
+          "start": 7.52,
+          "end": 7.56
+        },
+        {
+          "word": "may",
+          "start": 7.56,
+          "end": 7.72
+        },
+        {
+          "word": "be",
+          "start": 7.72,
+          "end": 7.84
+        },
+        {
+          "word": "small.",
+          "start": 7.84,
+          "end": 8.16
+        },
+        {
+          "word": "On",
+          "start": 9.1,
+          "end": 9.18
+        },
+        {
+          "word": "sand,",
+          "start": 9.18,
+          "end": 9.48
+        },
+        {
+          "word": "it",
+          "start": 10.04,
+          "end": 10.1
+        },
+        {
+          "word": "may",
+          "start": 10.1,
+          "end": 10.24
+        },
+        {
+          "word": "be",
+          "start": 10.24,
+          "end": 10.36
+        },
+        {
+          "word": "larger.",
+          "start": 10.36,
+          "end": 10.66
+        },
+        {
+          "word": "Before",
+          "start": 11.6,
+          "end": 11.84
+        },
+        {
+          "word": "sleeping",
+          "start": 11.84,
+          "end": 12.22
+        },
+        {
+          "word": "begins,",
+          "start": 12.22,
+          "end": 12.78
+        },
+        {
+          "word": "friction",
+          "start": 13.34,
+          "end": 13.68
+        },
+        {
+          "word": "only",
+          "start": 13.68,
+          "end": 14.0
+        },
+        {
+          "word": "grows",
+          "start": 14.0,
+          "end": 14.32
+        },
+        {
+          "word": "as",
+          "start": 14.32,
+          "end": 14.68
+        },
+        {
+          "word": "much",
+          "start": 14.68,
+          "end": 14.9
+        },
+        {
+          "word": "as",
+          "start": 14.9,
+          "end": 15.02
+        },
+        {
+          "word": "needed",
+          "start": 15.02,
+          "end": 15.32
+        },
+        {
+          "word": "up",
+          "start": 15.32,
+          "end": 15.94
+        },
+        {
+          "word": "to",
+          "start": 15.94,
+          "end": 16.1
+        },
+        {
+          "word": "its",
+          "start": 16.1,
+          "end": 16.22
+        },
+        {
+          "word": "limit.",
+          "start": 16.22,
+          "end": 16.5
+        }
+      ],
+      "cues": {
+        "opposes": 2.6,
+        "ice": 6.84,
+        "sand": 9.18,
+        "limit": 16.22
+      },
+      "generatedAt": "2026-09-05T18:31:12.987355",
+      "engine": "faster-whisper-small (local)"
+    },
+    {
+      "id": "s06",
+      "audio": "types-of-forces-s06.mp3",
+      "duration": 17.972245,
+      "wordCount": 42,
+      "text": "A driving force propels a vehicle. Breaking force acts against its motion. Air resistance also acts backwards through the surrounding air if the forward and backward force is balanced. The car can keep a constant velocity even while the engine is working.",
+      "words": [
+        {
+          "word": "A",
+          "start": 0.0,
+          "end": 0.14
+        },
+        {
+          "word": "driving",
+          "start": 0.14,
+          "end": 0.44
+        },
+        {
+          "word": "force",
+          "start": 0.44,
+          "end": 0.82
+        },
+        {
+          "word": "propels",
+          "start": 0.82,
+          "end": 1.6
+        },
+        {
+          "word": "a",
+          "start": 1.6,
+          "end": 1.82
+        },
+        {
+          "word": "vehicle.",
+          "start": 1.82,
+          "end": 2.14
+        },
+        {
+          "word": "Breaking",
+          "start": 2.68,
+          "end": 2.92
+        },
+        {
+          "word": "force",
+          "start": 2.92,
+          "end": 3.32
+        },
+        {
+          "word": "acts",
+          "start": 3.32,
+          "end": 3.92
+        },
+        {
+          "word": "against",
+          "start": 3.92,
+          "end": 4.54
+        },
+        {
+          "word": "its",
+          "start": 4.54,
+          "end": 4.94
+        },
+        {
+          "word": "motion.",
+          "start": 4.94,
+          "end": 5.28
+        },
+        {
+          "word": "Air",
+          "start": 5.72,
+          "end": 5.96
+        },
+        {
+          "word": "resistance",
+          "start": 5.96,
+          "end": 6.38
+        },
+        {
+          "word": "also",
+          "start": 6.38,
+          "end": 7.62
+        },
+        {
+          "word": "acts",
+          "start": 7.62,
+          "end": 7.98
+        },
+        {
+          "word": "backwards",
+          "start": 7.98,
+          "end": 8.44
+        },
+        {
+          "word": "through",
+          "start": 8.44,
+          "end": 9.36
+        },
+        {
+          "word": "the",
+          "start": 9.36,
+          "end": 9.54
+        },
+        {
+          "word": "surrounding",
+          "start": 9.54,
+          "end": 9.9
+        },
+        {
+          "word": "air",
+          "start": 9.9,
+          "end": 10.3
+        },
+        {
+          "word": "if",
+          "start": 10.3,
+          "end": 10.9
+        },
+        {
+          "word": "the",
+          "start": 10.9,
+          "end": 11.02
+        },
+        {
+          "word": "forward",
+          "start": 11.02,
+          "end": 11.34
+        },
+        {
+          "word": "and",
+          "start": 11.34,
+          "end": 11.86
+        },
+        {
+          "word": "backward",
+          "start": 11.86,
+          "end": 12.16
+        },
+        {
+          "word": "force",
+          "start": 12.16,
+          "end": 12.48
+        },
+        {
+          "word": "is",
+          "start": 12.48,
+          "end": 12.62
+        },
+        {
+          "word": "balanced.",
+          "start": 12.62,
+          "end": 12.88
+        },
+        {
+          "word": "The",
+          "start": 13.52,
+          "end": 13.6
+        },
+        {
+          "word": "car",
+          "start": 13.6,
+          "end": 13.98
+        },
+        {
+          "word": "can",
+          "start": 13.98,
+          "end": 14.26
+        },
+        {
+          "word": "keep",
+          "start": 14.26,
+          "end": 14.5
+        },
+        {
+          "word": "a",
+          "start": 14.5,
+          "end": 14.66
+        },
+        {
+          "word": "constant",
+          "start": 14.66,
+          "end": 14.98
+        },
+        {
+          "word": "velocity",
+          "start": 14.98,
+          "end": 15.54
+        },
+        {
+          "word": "even",
+          "start": 15.54,
+          "end": 16.24
+        },
+        {
+          "word": "while",
+          "start": 16.24,
+          "end": 16.54
+        },
+        {
+          "word": "the",
+          "start": 16.54,
+          "end": 16.72
+        },
+        {
+          "word": "engine",
+          "start": 16.72,
+          "end": 17.02
+        },
+        {
+          "word": "is",
+          "start": 17.02,
+          "end": 17.22
+        },
+        {
+          "word": "working.",
+          "start": 17.22,
+          "end": 17.52
+        }
+      ],
+      "cues": {
+        "driving": 0.14,
+        "braking": 2.68,
+        "air-resistance": 5.72,
+        "balance": 12.62
+      },
+      "generatedAt": "2026-09-05T18:31:12.987355",
+      "engine": "faster-whisper-small (local)"
+    },
+    {
+      "id": "s07",
+      "audio": "types-of-forces-s07.mp3",
+      "duration": 17.737143,
+      "wordCount": 46,
+      "text": "Now place a book on a rough slope, weight is still vertical. Reaction is perpendicular to the slope. Part of the weight tries to slide the book downhill, so friction acts uphill. If the required friction is below its limiting value, the book remains at rest.",
+      "words": [
+        {
+          "word": "Now",
+          "start": 0.0,
+          "end": 0.18
+        },
+        {
+          "word": "place",
+          "start": 0.18,
+          "end": 0.38
+        },
+        {
+          "word": "a",
+          "start": 0.38,
+          "end": 0.54
+        },
+        {
+          "word": "book",
+          "start": 0.54,
+          "end": 0.76
+        },
+        {
+          "word": "on",
+          "start": 0.76,
+          "end": 1.62
+        },
+        {
+          "word": "a",
+          "start": 1.62,
+          "end": 1.76
+        },
+        {
+          "word": "rough",
+          "start": 1.76,
+          "end": 1.98
+        },
+        {
+          "word": "slope,",
+          "start": 1.98,
+          "end": 2.3
+        },
+        {
+          "word": "weight",
+          "start": 2.84,
+          "end": 3.02
+        },
+        {
+          "word": "is",
+          "start": 3.02,
+          "end": 3.3
+        },
+        {
+          "word": "still",
+          "start": 3.3,
+          "end": 3.42
+        },
+        {
+          "word": "vertical.",
+          "start": 3.42,
+          "end": 3.74
+        },
+        {
+          "word": "Reaction",
+          "start": 4.62,
+          "end": 5.06
+        },
+        {
+          "word": "is",
+          "start": 5.06,
+          "end": 5.68
+        },
+        {
+          "word": "perpendicular",
+          "start": 5.68,
+          "end": 6.08
+        },
+        {
+          "word": "to",
+          "start": 6.08,
+          "end": 6.48
+        },
+        {
+          "word": "the",
+          "start": 6.48,
+          "end": 6.6
+        },
+        {
+          "word": "slope.",
+          "start": 6.6,
+          "end": 6.9
+        },
+        {
+          "word": "Part",
+          "start": 7.56,
+          "end": 7.82
+        },
+        {
+          "word": "of",
+          "start": 7.82,
+          "end": 7.94
+        },
+        {
+          "word": "the",
+          "start": 7.94,
+          "end": 8.06
+        },
+        {
+          "word": "weight",
+          "start": 8.06,
+          "end": 8.34
+        },
+        {
+          "word": "tries",
+          "start": 8.34,
+          "end": 8.92
+        },
+        {
+          "word": "to",
+          "start": 8.92,
+          "end": 9.08
+        },
+        {
+          "word": "slide",
+          "start": 9.08,
+          "end": 9.32
+        },
+        {
+          "word": "the",
+          "start": 9.32,
+          "end": 9.46
+        },
+        {
+          "word": "book",
+          "start": 9.46,
+          "end": 9.64
+        },
+        {
+          "word": "downhill,",
+          "start": 9.64,
+          "end": 9.98
+        },
+        {
+          "word": "so",
+          "start": 10.64,
+          "end": 10.9
+        },
+        {
+          "word": "friction",
+          "start": 10.9,
+          "end": 11.26
+        },
+        {
+          "word": "acts",
+          "start": 11.26,
+          "end": 11.66
+        },
+        {
+          "word": "uphill.",
+          "start": 11.66,
+          "end": 12.0
+        },
+        {
+          "word": "If",
+          "start": 12.82,
+          "end": 12.96
+        },
+        {
+          "word": "the",
+          "start": 12.96,
+          "end": 13.08
+        },
+        {
+          "word": "required",
+          "start": 13.08,
+          "end": 13.42
+        },
+        {
+          "word": "friction",
+          "start": 13.42,
+          "end": 13.86
+        },
+        {
+          "word": "is",
+          "start": 13.86,
+          "end": 14.26
+        },
+        {
+          "word": "below",
+          "start": 14.26,
+          "end": 14.52
+        },
+        {
+          "word": "its",
+          "start": 14.52,
+          "end": 14.74
+        },
+        {
+          "word": "limiting",
+          "start": 14.74,
+          "end": 15.08
+        },
+        {
+          "word": "value,",
+          "start": 15.08,
+          "end": 15.5
+        },
+        {
+          "word": "the",
+          "start": 16.04,
+          "end": 16.06
+        },
+        {
+          "word": "book",
+          "start": 16.06,
+          "end": 16.36
+        },
+        {
+          "word": "remains",
+          "start": 16.36,
+          "end": 16.76
+        },
+        {
+          "word": "at",
+          "start": 16.76,
+          "end": 16.98
+        },
+        {
+          "word": "rest.",
+          "start": 16.98,
+          "end": 17.24
+        }
+      ],
+      "cues": {
+        "vertical": 3.42,
+        "perpendicular": 5.68,
+        "downhill": 9.64,
+        "friction": 10.9,
+        "remains-at-rest": 16.36
+      },
+      "generatedAt": "2026-09-05T18:31:12.987355",
+      "engine": "faster-whisper-small (local)"
+    },
+    {
+      "id": "s08",
+      "audio": "types-of-forces-s08.mp3",
+      "duration": 21.629388,
+      "wordCount": 45,
+      "text": "Build one force diagram, isolate the block, add its weight vertically down, add the reaction perpendicular to the table, add tension along the string. The pull tends to move the block right, so friction acts left, stop there, include only forces acting on the block.",
+      "words": [
+        {
+          "word": "Build",
+          "start": 0.0,
+          "end": 0.22
+        },
+        {
+          "word": "one",
+          "start": 0.22,
+          "end": 0.46
+        },
+        {
+          "word": "force",
+          "start": 0.46,
+          "end": 0.66
+        },
+        {
+          "word": "diagram,",
+          "start": 0.66,
+          "end": 1.14
+        },
+        {
+          "word": "isolate",
+          "start": 1.8,
+          "end": 2.36
+        },
+        {
+          "word": "the",
+          "start": 2.36,
+          "end": 2.6
+        },
+        {
+          "word": "block,",
+          "start": 2.6,
+          "end": 2.9
+        },
+        {
+          "word": "add",
+          "start": 3.56,
+          "end": 3.9
+        },
+        {
+          "word": "its",
+          "start": 3.9,
+          "end": 4.1
+        },
+        {
+          "word": "weight",
+          "start": 4.1,
+          "end": 4.4
+        },
+        {
+          "word": "vertically",
+          "start": 4.4,
+          "end": 5.34
+        },
+        {
+          "word": "down,",
+          "start": 5.34,
+          "end": 5.88
+        },
+        {
+          "word": "add",
+          "start": 6.44,
+          "end": 7.1
+        },
+        {
+          "word": "the",
+          "start": 7.1,
+          "end": 7.24
+        },
+        {
+          "word": "reaction",
+          "start": 7.24,
+          "end": 7.58
+        },
+        {
+          "word": "perpendicular",
+          "start": 8.12,
+          "end": 8.44
+        },
+        {
+          "word": "to",
+          "start": 8.44,
+          "end": 8.94
+        },
+        {
+          "word": "the",
+          "start": 8.94,
+          "end": 9.06
+        },
+        {
+          "word": "table,",
+          "start": 9.06,
+          "end": 9.36
+        },
+        {
+          "word": "add",
+          "start": 10.22,
+          "end": 10.44
+        },
+        {
+          "word": "tension",
+          "start": 10.44,
+          "end": 10.78
+        },
+        {
+          "word": "along",
+          "start": 10.78,
+          "end": 11.6
+        },
+        {
+          "word": "the",
+          "start": 11.6,
+          "end": 11.86
+        },
+        {
+          "word": "string.",
+          "start": 11.86,
+          "end": 12.12
+        },
+        {
+          "word": "The",
+          "start": 13.6,
+          "end": 13.74
+        },
+        {
+          "word": "pull",
+          "start": 13.74,
+          "end": 14.0
+        },
+        {
+          "word": "tends",
+          "start": 14.0,
+          "end": 14.36
+        },
+        {
+          "word": "to",
+          "start": 14.36,
+          "end": 14.58
+        },
+        {
+          "word": "move",
+          "start": 14.58,
+          "end": 14.76
+        },
+        {
+          "word": "the",
+          "start": 14.76,
+          "end": 14.9
+        },
+        {
+          "word": "block",
+          "start": 14.9,
+          "end": 15.14
+        },
+        {
+          "word": "right,",
+          "start": 15.14,
+          "end": 15.4
+        },
+        {
+          "word": "so",
+          "start": 16.06,
+          "end": 16.16
+        },
+        {
+          "word": "friction",
+          "start": 16.16,
+          "end": 16.5
+        },
+        {
+          "word": "acts",
+          "start": 16.5,
+          "end": 16.84
+        },
+        {
+          "word": "left,",
+          "start": 16.84,
+          "end": 17.2
+        },
+        {
+          "word": "stop",
+          "start": 18.14,
+          "end": 18.3
+        },
+        {
+          "word": "there,",
+          "start": 18.3,
+          "end": 18.6
+        },
+        {
+          "word": "include",
+          "start": 19.28,
+          "end": 19.58
+        },
+        {
+          "word": "only",
+          "start": 19.58,
+          "end": 19.96
+        },
+        {
+          "word": "forces",
+          "start": 19.96,
+          "end": 20.3
+        },
+        {
+          "word": "acting",
+          "start": 20.3,
+          "end": 20.62
+        },
+        {
+          "word": "on",
+          "start": 20.62,
+          "end": 20.9
+        },
+        {
+          "word": "the",
+          "start": 20.9,
+          "end": 21.02
+        },
+        {
+          "word": "block.",
+          "start": 21.02,
+          "end": 21.18
+        }
+      ],
+      "cues": {
+        "isolate": 1.8,
+        "weight": 4.1,
+        "reaction": 7.24,
+        "tension": 10.44,
+        "friction": 16.16,
+        "only-forces": 19.58
+      },
+      "generatedAt": "2026-09-05T18:31:12.987355",
+      "engine": "faster-whisper-small (local)"
+    },
+    {
+      "id": "s09",
+      "audio": "types-of-forces-s09.mp3",
+      "duration": 23.588571,
+      "wordCount": 46,
+      "text": "The diagram now writes the equations for us. Vertically, reaction balance is weight. Horizontally, tension is 22 N and friction is 14.7. The remaining force is 7.3 N to the right. So the 5 kg block accelerates at 1.46 m per second squared.",
+      "words": [
+        {
+          "word": "The",
+          "start": 0.0,
+          "end": 0.16
+        },
+        {
+          "word": "diagram",
+          "start": 0.16,
+          "end": 0.58
+        },
+        {
+          "word": "now",
+          "start": 0.58,
+          "end": 1.36
+        },
+        {
+          "word": "writes",
+          "start": 1.36,
+          "end": 1.8
+        },
+        {
+          "word": "the",
+          "start": 1.8,
+          "end": 2.24
+        },
+        {
+          "word": "equations",
+          "start": 2.24,
+          "end": 2.72
+        },
+        {
+          "word": "for",
+          "start": 2.72,
+          "end": 3.12
+        },
+        {
+          "word": "us.",
+          "start": 3.12,
+          "end": 3.38
+        },
+        {
+          "word": "Vertically,",
+          "start": 4.14,
+          "end": 4.62
+        },
+        {
+          "word": "reaction",
+          "start": 5.14,
+          "end": 5.5
+        },
+        {
+          "word": "balance",
+          "start": 5.5,
+          "end": 5.9
+        },
+        {
+          "word": "is",
+          "start": 5.9,
+          "end": 6.12
+        },
+        {
+          "word": "weight.",
+          "start": 6.12,
+          "end": 6.38
+        },
+        {
+          "word": "Horizontally,",
+          "start": 7.24,
+          "end": 7.84
+        },
+        {
+          "word": "tension",
+          "start": 8.3,
+          "end": 8.6
+        },
+        {
+          "word": "is",
+          "start": 8.6,
+          "end": 8.92
+        },
+        {
+          "word": "22",
+          "start": 8.92,
+          "end": 9.34
+        },
+        {
+          "word": "N",
+          "start": 9.34,
+          "end": 9.56
+        },
+        {
+          "word": "and",
+          "start": 9.56,
+          "end": 10.48
+        },
+        {
+          "word": "friction",
+          "start": 10.48,
+          "end": 10.82
+        },
+        {
+          "word": "is",
+          "start": 10.82,
+          "end": 11.2
+        },
+        {
+          "word": "14",
+          "start": 11.2,
+          "end": 11.88
+        },
+        {
+          "word": ".7.",
+          "start": 11.88,
+          "end": 12.56
+        },
+        {
+          "word": "The",
+          "start": 13.52,
+          "end": 13.64
+        },
+        {
+          "word": "remaining",
+          "start": 13.64,
+          "end": 13.92
+        },
+        {
+          "word": "force",
+          "start": 13.92,
+          "end": 14.32
+        },
+        {
+          "word": "is",
+          "start": 14.32,
+          "end": 14.76
+        },
+        {
+          "word": "7",
+          "start": 14.76,
+          "end": 15.0
+        },
+        {
+          "word": ".3",
+          "start": 15.0,
+          "end": 15.58
+        },
+        {
+          "word": "N",
+          "start": 15.58,
+          "end": 15.88
+        },
+        {
+          "word": "to",
+          "start": 15.88,
+          "end": 16.82
+        },
+        {
+          "word": "the",
+          "start": 16.82,
+          "end": 16.96
+        },
+        {
+          "word": "right.",
+          "start": 16.96,
+          "end": 17.2
+        },
+        {
+          "word": "So",
+          "start": 18.08,
+          "end": 18.26
+        },
+        {
+          "word": "the",
+          "start": 18.26,
+          "end": 18.4
+        },
+        {
+          "word": "5",
+          "start": 18.4,
+          "end": 18.66
+        },
+        {
+          "word": "kg",
+          "start": 18.66,
+          "end": 18.88
+        },
+        {
+          "word": "block",
+          "start": 18.88,
+          "end": 19.42
+        },
+        {
+          "word": "accelerates",
+          "start": 19.42,
+          "end": 20.4
+        },
+        {
+          "word": "at",
+          "start": 20.4,
+          "end": 20.7
+        },
+        {
+          "word": "1",
+          "start": 20.7,
+          "end": 20.94
+        },
+        {
+          "word": ".46",
+          "start": 20.94,
+          "end": 21.68
+        },
+        {
+          "word": "m",
+          "start": 21.68,
+          "end": 22.18
+        },
+        {
+          "word": "per",
+          "start": 22.18,
+          "end": 22.48
+        },
+        {
+          "word": "second",
+          "start": 22.48,
+          "end": 22.76
+        },
+        {
+          "word": "squared.",
+          "start": 22.76,
+          "end": 23.06
+        }
+      ],
+      "cues": {
+        "vertically": 4.14,
+        "horizontally": 7.24,
+        "remaining-force": 13.64,
+        "accelerates": 19.42
+      },
+      "generatedAt": "2026-09-05T18:31:12.987355",
+      "engine": "faster-whisper-small (local)"
+    },
+    {
+      "id": "s10",
+      "audio": "types-of-forces-s10.mp3",
+      "duration": 27.898776,
+      "wordCount": 45,
+      "text": "Recap. Forces are vectors measured in newtons. Weight is down. Reaction is perpendicular to the surface. Tension pulls. Thrust pushes. Friction and resistance or pose motion or intended motion. Driving force propels. For every diagram choose one body then draw every force acting on it.",
+      "words": [
+        {
+          "word": "Recap.",
+          "start": 0.0,
+          "end": 0.42
+        },
+        {
+          "word": "Forces",
+          "start": 1.18,
+          "end": 1.84
+        },
+        {
+          "word": "are",
+          "start": 1.84,
+          "end": 2.06
+        },
+        {
+          "word": "vectors",
+          "start": 2.06,
+          "end": 2.4
+        },
+        {
+          "word": "measured",
+          "start": 2.4,
+          "end": 2.84
+        },
+        {
+          "word": "in",
+          "start": 2.84,
+          "end": 3.1
+        },
+        {
+          "word": "newtons.",
+          "start": 3.1,
+          "end": 3.6
+        },
+        {
+          "word": "Weight",
+          "start": 4.44,
+          "end": 5.04
+        },
+        {
+          "word": "is",
+          "start": 5.04,
+          "end": 6.04
+        },
+        {
+          "word": "down.",
+          "start": 6.04,
+          "end": 6.34
+        },
+        {
+          "word": "Reaction",
+          "start": 7.44,
+          "end": 7.88
+        },
+        {
+          "word": "is",
+          "start": 7.88,
+          "end": 8.14
+        },
+        {
+          "word": "perpendicular",
+          "start": 8.14,
+          "end": 8.54
+        },
+        {
+          "word": "to",
+          "start": 8.54,
+          "end": 8.88
+        },
+        {
+          "word": "the",
+          "start": 8.88,
+          "end": 9.02
+        },
+        {
+          "word": "surface.",
+          "start": 9.02,
+          "end": 9.38
+        },
+        {
+          "word": "Tension",
+          "start": 10.94,
+          "end": 11.36
+        },
+        {
+          "word": "pulls.",
+          "start": 11.36,
+          "end": 11.74
+        },
+        {
+          "word": "Thrust",
+          "start": 12.94,
+          "end": 13.32
+        },
+        {
+          "word": "pushes.",
+          "start": 13.32,
+          "end": 13.76
+        },
+        {
+          "word": "Friction",
+          "start": 14.96,
+          "end": 15.38
+        },
+        {
+          "word": "and",
+          "start": 15.38,
+          "end": 15.64
+        },
+        {
+          "word": "resistance",
+          "start": 15.64,
+          "end": 16.1
+        },
+        {
+          "word": "or",
+          "start": 16.1,
+          "end": 16.96
+        },
+        {
+          "word": "pose",
+          "start": 16.96,
+          "end": 17.24
+        },
+        {
+          "word": "motion",
+          "start": 17.24,
+          "end": 17.64
+        },
+        {
+          "word": "or",
+          "start": 17.64,
+          "end": 18.2
+        },
+        {
+          "word": "intended",
+          "start": 18.2,
+          "end": 18.62
+        },
+        {
+          "word": "motion.",
+          "start": 18.62,
+          "end": 19.02
+        },
+        {
+          "word": "Driving",
+          "start": 19.94,
+          "end": 20.26
+        },
+        {
+          "word": "force",
+          "start": 20.26,
+          "end": 20.74
+        },
+        {
+          "word": "propels.",
+          "start": 20.74,
+          "end": 21.42
+        },
+        {
+          "word": "For",
+          "start": 22.24,
+          "end": 22.46
+        },
+        {
+          "word": "every",
+          "start": 22.46,
+          "end": 22.82
+        },
+        {
+          "word": "diagram",
+          "start": 22.82,
+          "end": 23.32
+        },
+        {
+          "word": "choose",
+          "start": 23.32,
+          "end": 24.02
+        },
+        {
+          "word": "one",
+          "start": 24.02,
+          "end": 24.32
+        },
+        {
+          "word": "body",
+          "start": 24.32,
+          "end": 24.62
+        },
+        {
+          "word": "then",
+          "start": 24.62,
+          "end": 25.38
+        },
+        {
+          "word": "draw",
+          "start": 25.38,
+          "end": 25.78
+        },
+        {
+          "word": "every",
+          "start": 25.78,
+          "end": 26.3
+        },
+        {
+          "word": "force",
+          "start": 26.3,
+          "end": 26.66
+        },
+        {
+          "word": "acting",
+          "start": 26.66,
+          "end": 27.14
+        },
+        {
+          "word": "on",
+          "start": 27.14,
+          "end": 27.34
+        },
+        {
+          "word": "it.",
+          "start": 27.34,
+          "end": 27.5
+        }
+      ],
+      "cues": {
+        "weight": 4.44,
+        "reaction": 7.44,
+        "tension": 10.94,
+        "thrust": 12.94,
+        "friction": 14.96,
+        "resistance": 15.64,
+        "driving-force": 19.94,
+        "one-body": 24.02
+      },
+      "generatedAt": "2026-09-05T18:31:12.987355",
+      "engine": "faster-whisper-small (local)"
+    }
+  ]
+}
