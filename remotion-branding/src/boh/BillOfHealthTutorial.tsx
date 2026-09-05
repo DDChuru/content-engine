@@ -107,9 +107,6 @@ const STAGE_W = 1148; // column right edge 1823 — title-safe (≥ 96px from th
 const LEAD = 0.6; // scene opens this far before its VO (matches the generator's lead-in)
 const NARRATION_VOLUME = 1.5; // voice leads (CCV mix)
 const MUSIC = 'cln-tutorial/audio/tutorial.mp3';
-const BED_UNDER_VO = 0.09; // storyboard beat 12: "bed 0.09 → 0.38", as per the CCV mix
-const BED_SWELL = 0.38;
-const BED_OPEN = 0.34;
 const BOOKEND_MUSIC_VOLUME = 0.88;
 const RING_IN_FRAMES = 14; // one orchestrated ring-in per beat, ease-out
 /** Review cuts: rings whose figures await Monday's re-capture (boxes.json `provisional`) render
@@ -1195,37 +1192,14 @@ const Stage: React.FC = () => {
 };
 
 // ─── Audio: VO spine + bed under the open and the close (CCV mix) ──
-// Seam overlap: the bookend beds run this far into the tutorial (intro) / start this far
-// before its end (outro) so the two beds cross-fade without passing through zero.
+// Music plays ONLY under the bookends (Daniel's decision). The intro bed runs this far into the
+// tutorial and the outro bed starts this far before its end, so neither seam passes through zero.
 const SEAM_FRAMES = 18;
-
-/** Bed envelope for the whole tutorial (absolute tutorial frames): 0.34 hook level,
- * down to 0.09 by the first VO, held under every beat, swelling to 0.38 after the last
- * line, then an 18f fade-out that the outro bed cross-fades over. */
-const bedVolume = (f: number) => {
-  const firstVo = Math.round(T.beats[0].voStart * FPS);
-  const last = T.beats[T.beats.length - 1];
-  const lastVoEnd = Math.round((last.voStart + last.duration) * FPS);
-  const level = interpolate(
-    f,
-    [0, 6, firstVo, lastVoEnd - 10, lastVoEnd + 30],
-    [BED_OPEN, BED_OPEN, BED_UNDER_VO, BED_UNDER_VO, BED_SWELL],
-    { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' },
-  );
-  const edges = interpolate(f, [0, 6, T.total_frames - SEAM_FRAMES, T.total_frames], [0, 1, 1, 0], {
-    extrapolateLeft: 'clamp',
-    extrapolateRight: 'clamp',
-  });
-  return level * edges;
-};
 
 const TutorialAudio: React.FC = () => {
   return (
     <>
-      {/* the bed (74s) loops under the whole tutorial so sentence gaps never fall to digital silence */}
-      <Sequence from={0} durationInFrames={T.total_frames} premountFor={FPS}>
-        <Audio src={staticFile(MUSIC)} loop volume={bedVolume} />
-      </Sequence>
+      {/* no music bed under beats 1–12 — the VO spine only */}
       {T.beats.map((b) => (
         <Sequence key={`vo-${b.id}`} from={Math.round(b.voStart * FPS)} durationInFrames={Math.ceil(b.duration * FPS) + 4} premountFor={FPS}>
           <GuardedAudio src={b.audio} volume={NARRATION_VOLUME} />
@@ -1307,11 +1281,11 @@ const BookendAudio: React.FC = () => {
   const outroStart = BOOKEND_INTRO_FRAMES + BOH_TUTORIAL_FRAMES;
   return (
     <>
-      {/* intro bed runs SEAM_FRAMES into the tutorial, fading out over the tutorial bed's rise */}
+      {/* intro bed runs SEAM_FRAMES into the tutorial with its 24-frame fade-out */}
       <Sequence from={0} durationInFrames={BOOKEND_INTRO_FRAMES + SEAM_FRAMES} premountFor={FPS}>
         <Audio src={staticFile(MUSIC)} volume={(f) => BOOKEND_MUSIC_VOLUME * fadeInOut(f, BOOKEND_INTRO_FRAMES + SEAM_FRAMES, 24)} />
       </Sequence>
-      {/* outro bed starts SEAM_FRAMES before the tutorial ends, rising over the tutorial bed's fade-out */}
+      {/* outro bed starts SEAM_FRAMES before the tutorial ends with its 28-frame fade-in */}
       <Sequence from={outroStart - SEAM_FRAMES} durationInFrames={BOOKEND_OUTRO_FRAMES + SEAM_FRAMES} premountFor={FPS}>
         <Audio src={staticFile(MUSIC)} volume={(f) => BOOKEND_MUSIC_VOLUME * fadeInOut(f, BOOKEND_OUTRO_FRAMES + SEAM_FRAMES, 28)} />
       </Sequence>
