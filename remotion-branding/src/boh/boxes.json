@@ -1,0 +1,177 @@
+{
+  "_readme": [
+    "MEASURED 2026-09-05 against the real captures in public/boh/shots (720x1600, B emulator, sheq@poc at Brito's, Sat 5 Sept; boh-01/boh-02 re-captured 01:15/01:22).",
+    "Each box = the target's pixel bounds plus a 10px still-pixel margin (12px on the small labels), normalized 0..1 of the FULL still including the 120px status bar.",
+    "color is an Ecowize palette key: sky | skyDeep | emerald | amber | coral. To re-measure: nx = px/720, ny = px/1600.",
+    "boh-01 (home) is cropped at 78px, not 120: its status bar overlays the canvas gap between the hero banner and the stat cards (see STILL_CROP_TOP in the comp).",
+    "alsoIn: { <still>: { ny } } on a box gives the same target's ny in another still (same margin) — SCROLL_PLAN aligns paired stills on it.",
+    "provisional: true = the ring's figures wait for Monday's re-capture (beats 3, 5, 8, 11); with SHOW_PROVISIONAL on, the comp draws these dashed with a coral callout.",
+    "Composed rows (COMPOSE_PLAN in the comp): beats 3, 8, 11 overlay narrated figures on real rows; their rings are not provisional. Beat 11 uses boh-02 as its base (Cleaning + PPE rows both visible; boh-06 hides PPE under the nav pill)."
+  ],
+  "homeTile": {
+    "nx": 0.0306,
+    "ny": 0.4706,
+    "nw": 0.3139,
+    "nh": 0.1313,
+    "color": "sky",
+    "still": "boh-01",
+    "note": "Bill of Health tile in the All actions grid (re-capture 01:15; card 32..238 x 763..953)"
+  },
+  "homeBadge": {
+    "nx": 0.2458,
+    "ny": 0.4756,
+    "nw": 0.0764,
+    "nh": 0.0344,
+    "color": "sky",
+    "still": "boh-01",
+    "note": "red '1' pillar badge on the tile, top-right"
+  },
+  "dailyBand": {
+    "nx": 0.0306,
+    "ny": 0.2013,
+    "nw": 0.9389,
+    "nh": 0.6256,
+    "color": "sky",
+    "still": "boh-02",
+    "note": "rows 01 Shift Handover .. 07 PPE Recon, all fully in frame (re-capture 01:22)"
+  },
+  "carryDivider": {
+    "nx": 0.3597,
+    "ny": 0.8394,
+    "nw": 0.2792,
+    "nh": 0.0319,
+    "color": "amber",
+    "still": "boh-02",
+    "note": "the CARRIES OVER divider label (boh-02 y 1355..1382). alsoIn = the same label's ny on other stills — the scroll transition aligns on it (boh-07 label 443px higher)",
+    "alsoIn": {
+      "boh-07": {
+        "ny": 0.5625
+      }
+    }
+  },
+  "clnRow": {
+    "nx": 0.0306,
+    "ny": 0.4144,
+    "nw": 0.9389,
+    "nh": 0.0925,
+    "color": "sky",
+    "still": "boh-03",
+    "note": "02 Cleaning Verification row on today's ledger — COMPOSED: '542 of 677 checks done · 135 still due this shift', chip 135 amber",
+    "provisional": false
+  },
+  "clnCount": {
+    "nx": 0.7361,
+    "ny": 0.4412,
+    "nw": 0.1264,
+    "nh": 0.04,
+    "color": "amber",
+    "still": "boh-03",
+    "note": "the composed '135' chip (right-aligned at x 611, 44px tall) on the composed Cleaning Verification row",
+    "provisional": false
+  },
+  "todoDivider": {
+    "nx": 0.0292,
+    "ny": 0.3463,
+    "nw": 0.1944,
+    "nh": 0.0244,
+    "color": "amber",
+    "still": "boh-04",
+    "note": "STILL TO DO section header above the 'All 536 checks captured' card"
+  },
+  "sectionRow": {
+    "nx": 0.0639,
+    "ny": 0.6525,
+    "nw": 0.8056,
+    "nh": 0.0544,
+    "color": "sky",
+    "still": "boh-05",
+    "note": "first section row under Follow-up owed: 'Tables / Benches' + area eyebrow",
+    "provisional": true
+  },
+  "sectionEyebrow": {
+    "nx": 0.1153,
+    "ny": 0.6794,
+    "nw": 0.7486,
+    "nh": 0.025,
+    "color": "sky",
+    "still": "boh-05",
+    "note": "area eyebrow under the section name: 'Vehicle and Sales Kitchens · Offices · daily · SSOP16' (zoom target)",
+    "provisional": true
+  },
+  "remedialRow": {
+    "nx": 0.0306,
+    "ny": 0.6006,
+    "nw": 0.9389,
+    "nh": 0.0925,
+    "color": "amber",
+    "still": "boh-06",
+    "note": "04 Remedial row on today's ledger"
+  },
+  "remedialCount": {
+    "nx": 0.65,
+    "ny": 0.6275,
+    "nw": 0.2125,
+    "nh": 0.0387,
+    "color": "amber",
+    "still": "boh-06",
+    "note": "the '116 pending' chip on the Remedial row"
+  },
+  "carryRows": {
+    "nx": 0.0306,
+    "ny": 0.6031,
+    "nw": 0.9389,
+    "nh": 0.2612,
+    "color": "amber",
+    "still": "boh-07",
+    "note": "rows 08 Inspection Remedials (147 pending), 09 NCR (8 pending), 10 IINM (No incidents)"
+  },
+  "dayLabel": {
+    "nx": 0.3111,
+    "ny": 0.14,
+    "nw": 0.1861,
+    "nh": 0.0625,
+    "color": "sky",
+    "still": "boh-08",
+    "note": "'Fri 4 Sept' + 'Yesterday' pill in the day strip (re-measured on the 07:55 capture; unchanged)",
+    "provisional": false
+  },
+  "gapRow": {
+    "nx": 0.0306,
+    "ny": 0.415,
+    "nw": 0.9389,
+    "nh": 0.0925,
+    "color": "coral",
+    "still": "boh-08",
+    "note": "composed 02 Cleaning Verification row in its real slot on the re-captured top-of-ledger boh-08 (card 32..688 x 674..802)",
+    "provisional": false
+  },
+  "amberRowOne": {
+    "nx": 0.0306,
+    "ny": 0.2894,
+    "nw": 0.9389,
+    "nh": 0.0925,
+    "color": "amber",
+    "still": "boh-02",
+    "note": "beat 11 (base boh-02): composed Cleaning Verification '612 of 677 · 65 due', chip 65 amber",
+    "provisional": false
+  },
+  "carryBand": {
+    "nx": 0.0306,
+    "ny": 0.6031,
+    "nw": 0.9389,
+    "nh": 0.2612,
+    "color": "amber",
+    "still": "boh-07",
+    "note": "rows 08 Inspection Remedials .. 10 IINM on the scrolled-down frame (beat 2 lands here after the scroll)"
+  },
+  "amberRowTwo": {
+    "nx": 0.0306,
+    "ny": 0.7462,
+    "nw": 0.9389,
+    "nh": 0.075,
+    "color": "amber",
+    "still": "boh-02",
+    "note": "beat 11 (base boh-02): composed PPE Recon 'afternoon session open', chip open amber",
+    "provisional": false
+  }
+}

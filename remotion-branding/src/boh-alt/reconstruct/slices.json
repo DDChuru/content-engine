@@ -1,0 +1,393 @@
+{
+  "width": 720,
+  "height": 1600,
+  "canvas": "#F1F4F8",
+  "viewportTop": 332,
+  "footerTop": 1400,
+  "scrollPx": 443,
+  "notes": [
+    "All UI assets are rectangular, unmodified crops of the real captures. Bounds are half-open source pixels.",
+    "The Android scroll changes glyph/edge rasterization: paired row crops preserve each captured endpoint while their document positions translate continuously by 443px.",
+    "The translucent navigation was already flattened over content in the captures. Fixed footer crops retain that backing; their endpoint dissolve is restricted to y=1400..1600.",
+    "Cleaning subtitle includes a second captured, ellipsized line. Its continuation is retained when resetting the original primary subtitle; illustrative values replace the complete subtitle."
+  ],
+  "slices": {
+    "header": {
+      "src": "boh-alt/reconstruct/header.png",
+      "source": "boh/shots/boh-02.png",
+      "box": [
+        0,
+        0,
+        720,
+        332
+      ],
+      "x": 0,
+      "y": 0,
+      "width": 720,
+      "height": 332
+    },
+    "header-scrolled": {
+      "src": "boh-alt/reconstruct/header-scrolled.png",
+      "source": "boh/shots/boh-07.png",
+      "box": [
+        0,
+        0,
+        720,
+        332
+      ],
+      "x": 0,
+      "y": 0,
+      "width": 720,
+      "height": 332
+    },
+    "footer": {
+      "src": "boh-alt/reconstruct/footer.png",
+      "source": "boh/shots/boh-02.png",
+      "box": [
+        0,
+        1400,
+        720,
+        1600
+      ],
+      "x": 0,
+      "y": 1400,
+      "width": 720,
+      "height": 200
+    },
+    "footer-scrolled": {
+      "src": "boh-alt/reconstruct/footer-scrolled.png",
+      "source": "boh/shots/boh-07.png",
+      "box": [
+        0,
+        1400,
+        720,
+        1600
+      ],
+      "x": 0,
+      "y": 1400,
+      "width": 720,
+      "height": 200
+    },
+    "row-01": {
+      "src": "boh-alt/reconstruct/row-01.png",
+      "source": "boh/shots/boh-02.png",
+      "box": [
+        0,
+        332,
+        720,
+        464
+      ],
+      "x": 0,
+      "y": 332,
+      "width": 720,
+      "height": 132,
+      "title": "Shift Handover",
+      "cue": "handover",
+      "group": "daily"
+    },
+    "row-02": {
+      "src": "boh-alt/reconstruct/row-02.png",
+      "source": "boh/shots/boh-02.png",
+      "box": [
+        0,
+        464,
+        720,
+        628
+      ],
+      "x": 0,
+      "y": 464,
+      "width": 720,
+      "height": 164,
+      "title": "Cleaning Verification",
+      "cue": "cleaning verification",
+      "group": "daily"
+    },
+    "row-03": {
+      "src": "boh-alt/reconstruct/row-03.png",
+      "source": "boh/shots/boh-02.png",
+      "box": [
+        0,
+        628,
+        720,
+        763
+      ],
+      "x": 0,
+      "y": 628,
+      "width": 720,
+      "height": 135,
+      "title": "CCV",
+      "cue": "chemical verification",
+      "group": "daily"
+    },
+    "row-04": {
+      "src": "boh-alt/reconstruct/row-04.png",
+      "source": "boh/shots/boh-02.png",
+      "box": [
+        0,
+        763,
+        720,
+        926
+      ],
+      "x": 0,
+      "y": 763,
+      "width": 720,
+      "height": 163,
+      "title": "Remedial",
+      "cue": "remedials",
+      "group": "daily"
+    },
+    "row-04-scrolled": {
+      "src": "boh-alt/reconstruct/row-04-scrolled.png",
+      "source": "boh/shots/boh-07.png",
+      "box": [
+        0,
+        332,
+        720,
+        483
+      ],
+      "x": 0,
+      "y": 775,
+      "width": 720,
+      "height": 151
+    },
+    "row-05": {
+      "src": "boh-alt/reconstruct/row-05.png",
+      "source": "boh/shots/boh-02.png",
+      "box": [
+        0,
+        926,
+        720,
+        1061
+      ],
+      "x": 0,
+      "y": 926,
+      "width": 720,
+      "height": 135,
+      "title": "Daily Hygiene Checklist",
+      "cue": "hygiene",
+      "group": "daily"
+    },
+    "row-05-scrolled": {
+      "src": "boh-alt/reconstruct/row-05-scrolled.png",
+      "source": "boh/shots/boh-07.png",
+      "box": [
+        0,
+        483,
+        720,
+        618
+      ],
+      "x": 0,
+      "y": 926,
+      "width": 720,
+      "height": 135
+    },
+    "row-06": {
+      "src": "boh-alt/reconstruct/row-06.png",
+      "source": "boh/shots/boh-02.png",
+      "box": [
+        0,
+        1061,
+        720,
+        1196
+      ],
+      "x": 0,
+      "y": 1061,
+      "width": 720,
+      "height": 135,
+      "title": "Equipment Recon",
+      "cue": "equipment",
+      "group": "daily"
+    },
+    "row-06-scrolled": {
+      "src": "boh-alt/reconstruct/row-06-scrolled.png",
+      "source": "boh/shots/boh-07.png",
+      "box": [
+        0,
+        618,
+        720,
+        753
+      ],
+      "x": 0,
+      "y": 1061,
+      "width": 720,
+      "height": 135
+    },
+    "row-07": {
+      "src": "boh-alt/reconstruct/row-07.png",
+      "source": "boh/shots/boh-02.png",
+      "box": [
+        0,
+        1196,
+        720,
+        1328
+      ],
+      "x": 0,
+      "y": 1196,
+      "width": 720,
+      "height": 132,
+      "title": "PPE Recon",
+      "cue": "PPE",
+      "group": "daily"
+    },
+    "row-07-scrolled": {
+      "src": "boh-alt/reconstruct/row-07-scrolled.png",
+      "source": "boh/shots/boh-07.png",
+      "box": [
+        0,
+        753,
+        720,
+        885
+      ],
+      "x": 0,
+      "y": 1196,
+      "width": 720,
+      "height": 132
+    },
+    "divider": {
+      "src": "boh-alt/reconstruct/divider.png",
+      "source": "boh/shots/boh-02.png",
+      "box": [
+        0,
+        1328,
+        720,
+        1410
+      ],
+      "x": 0,
+      "y": 1328,
+      "width": 720,
+      "height": 82
+    },
+    "divider-scrolled": {
+      "src": "boh-alt/reconstruct/divider-scrolled.png",
+      "source": "boh/shots/boh-07.png",
+      "box": [
+        0,
+        885,
+        720,
+        967
+      ],
+      "x": 0,
+      "y": 1328,
+      "width": 720,
+      "height": 82
+    },
+    "row-08": {
+      "src": "boh-alt/reconstruct/row-08.png",
+      "source": "boh/shots/boh-07.png",
+      "box": [
+        0,
+        967,
+        720,
+        1130
+      ],
+      "x": 0,
+      "y": 1410,
+      "width": 720,
+      "height": 163,
+      "title": "Inspection Remedials",
+      "cue": "inspection remedials",
+      "group": "carry"
+    },
+    "row-09": {
+      "src": "boh-alt/reconstruct/row-09.png",
+      "source": "boh/shots/boh-07.png",
+      "box": [
+        0,
+        1130,
+        720,
+        1265
+      ],
+      "x": 0,
+      "y": 1573,
+      "width": 720,
+      "height": 135,
+      "title": "NCR",
+      "cue": "non-conformances",
+      "group": "carry"
+    },
+    "row-10": {
+      "src": "boh-alt/reconstruct/row-10.png",
+      "source": "boh/shots/boh-07.png",
+      "box": [
+        0,
+        1265,
+        720,
+        1400
+      ],
+      "x": 0,
+      "y": 1708,
+      "width": 720,
+      "height": 135,
+      "title": "IINM",
+      "cue": "incidents",
+      "group": "carry"
+    },
+    "cleaning-compose": {
+      "src": "boh-alt/reconstruct/cleaning-compose.png",
+      "source": "boh/shots/boh-02.png",
+      "box": [
+        30,
+        464,
+        690,
+        612
+      ],
+      "x": 30,
+      "y": 464,
+      "width": 660,
+      "height": 148
+    }
+  },
+  "compose": {
+    "slice": "cleaning-compose",
+    "background": "#FFFFFF",
+    "originalSubtitle": "536 of 536 checks done (100%)",
+    "originalContinuation": "\u00b7 0 cleaning checks missing \u00b7 confor\u2026",
+    "originalChip": "\u2713 Cleared",
+    "subtitle": {
+      "x": 82,
+      "y": 65,
+      "width": 360,
+      "height": 53,
+      "fontFamily": "DM Sans",
+      "fontSize": 21,
+      "fontWeight": 400,
+      "letterSpacing": 0,
+      "baseline": 85,
+      "lineHeight": 28,
+      "color": "#939CA8"
+    },
+    "chip": {
+      "x": 465,
+      "y": 52,
+      "width": 117,
+      "height": 44,
+      "fontFamily": "Barlow Condensed",
+      "fontSize": 21,
+      "fontWeight": 700,
+      "letterSpacing": 0.3,
+      "baseline": 82
+    },
+    "tones": {
+      "sky": {
+        "accent": "#3CB6E0",
+        "tint": "#E0F3FA",
+        "ink": "#1582AB"
+      },
+      "emerald": {
+        "accent": "#1F9C5A",
+        "tint": "#DCEFE3",
+        "ink": "#1F9C5A"
+      },
+      "amber": {
+        "accent": "#E89A30",
+        "tint": "#FBEEDB",
+        "ink": "#A96800"
+      },
+      "coral": {
+        "accent": "#D6432F",
+        "tint": "#F8DCD8",
+        "ink": "#D6432F"
+      }
+    }
+  }
+}

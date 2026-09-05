@@ -1,0 +1,269 @@
+{
+  "_readme": [
+    "Measured from the actual full-resolution still pixels on 2026-09-05; every target has a 10px source-pixel margin.",
+    "Coordinates are normalized against the full 720x1600 image. The alternate shows the full still, without a crop or extra ring padding.",
+    "Dashed rings are PROVISIONAL: beats 3, 5, 8, 11 need Monday recaptures. Do not treat the current images as evidence of the final spoken examples.",
+    "Reproduce the 3x3 audit with python3 src/boh-alt/verify-rings.py."
+  ],
+  "sourceSize": {
+    "width": 720,
+    "height": 1600
+  },
+  "boxes": {
+    "homeTile": {
+      "still": "boh-01",
+      "nx": 0.030555555555555555,
+      "ny": 0.465625,
+      "nw": 0.31527777777777777,
+      "nh": 0.141875,
+      "color": "sky",
+      "provisional": false,
+      "targetPixels": [
+        32,
+        755,
+        239,
+        962
+      ],
+      "marginPixels": 10,
+      "note": "Bill of Health tile, including its badge."
+    },
+    "homeBadge": {
+      "still": "boh-01",
+      "nx": 0.24583333333333332,
+      "ny": 0.475625,
+      "nw": 0.07777777777777778,
+      "nh": 0.035,
+      "color": "sky",
+      "provisional": false,
+      "targetPixels": [
+        187,
+        771,
+        223,
+        807
+      ],
+      "marginPixels": 10,
+      "note": "The real red 1 badge."
+    },
+    "dailyBand": {
+      "still": "boh-02",
+      "nx": 0.030555555555555555,
+      "ny": 0.20125,
+      "nw": 0.9388888888888889,
+      "nh": 0.625625,
+      "color": "sky",
+      "provisional": false,
+      "targetPixels": [
+        32,
+        332,
+        688,
+        1313
+      ],
+      "marginPixels": 10,
+      "note": "All seven daily cards, rows 01 through 07."
+    },
+    "carryDivider": {
+      "still": "boh-02",
+      "nx": 0.3625,
+      "ny": 0.84375,
+      "nw": 0.275,
+      "nh": 0.0225,
+      "color": "amber",
+      "provisional": false,
+      "targetPixels": [
+        271,
+        1360,
+        449,
+        1376
+      ],
+      "marginPixels": 10,
+      "note": "CARRIES OVER text; carry-over rows are below the navigation overlay."
+    },
+    "clnRow": {
+      "still": "boh-03",
+      "nx": 0.030555555555555555,
+      "ny": 0.409375,
+      "nw": 0.9388888888888889,
+      "nh": 0.103125,
+      "color": "sky",
+      "provisional": true,
+      "targetPixels": [
+        32,
+        665,
+        688,
+        810
+      ],
+      "marginPixels": 10,
+      "note": "MONDAY: current row says 536 of 536 / Cleared; final VO says 542 of 677 / 135 due."
+    },
+    "clnCount": {
+      "still": "boh-03",
+      "nx": 0.6736111111111112,
+      "ny": 0.44125,
+      "nw": 0.19027777777777777,
+      "nh": 0.04,
+      "color": "emerald",
+      "provisional": true,
+      "targetPixels": [
+        495,
+        716,
+        612,
+        760
+      ],
+      "marginPixels": 10,
+      "note": "MONDAY: this is a Cleared chip, not the narrated outstanding count."
+    },
+    "todoDivider": {
+      "still": "boh-04",
+      "nx": 0.030555555555555555,
+      "ny": 0.3475,
+      "nw": 0.19444444444444445,
+      "nh": 0.0225,
+      "color": "amber",
+      "provisional": false,
+      "targetPixels": [
+        32,
+        566,
+        152,
+        582
+      ],
+      "marginPixels": 10,
+      "note": "STILL TO DO as rendered; beat 4 uses the final re-recorded script."
+    },
+    "sectionRow": {
+      "still": "boh-05",
+      "nx": 0.06944444444444445,
+      "ny": 0.655625,
+      "nw": 0.7972222222222223,
+      "nh": 0.0475,
+      "color": "sky",
+      "provisional": true,
+      "targetPixels": [
+        60,
+        1059,
+        614,
+        1115
+      ],
+      "marginPixels": 10,
+      "note": "MONDAY: Tables / Benches and its area subtitle under Follow-up owed; not the narrated Toilets pair."
+    },
+    "sectionEyebrow": {
+      "still": "boh-05",
+      "nx": 0.11388888888888889,
+      "ny": 0.679375,
+      "nw": 0.7527777777777778,
+      "nh": 0.02375,
+      "color": "sky",
+      "provisional": true,
+      "targetPixels": [
+        92,
+        1097,
+        614,
+        1115
+      ],
+      "marginPixels": 10,
+      "note": "MONDAY: the area is currently BELOW the section; the final capture must match the narrated area-above layout."
+    },
+    "remedialRow": {
+      "still": "boh-06",
+      "nx": 0.030555555555555555,
+      "ny": 0.595625,
+      "nw": 0.9388888888888889,
+      "nh": 0.103125,
+      "color": "amber",
+      "provisional": false,
+      "targetPixels": [
+        32,
+        963,
+        688,
+        1108
+      ],
+      "marginPixels": 10,
+      "note": "Remedial card, including its subtitle and status chip."
+    },
+    "remedialCount": {
+      "still": "boh-06",
+      "nx": 0.65,
+      "ny": 0.6275,
+      "nw": 0.21388888888888888,
+      "nh": 0.04,
+      "color": "amber",
+      "provisional": false,
+      "targetPixels": [
+        478,
+        1014,
+        612,
+        1058
+      ],
+      "marginPixels": 10,
+      "note": "116 pending as captured; no fabricated replacement count."
+    },
+    "carryRows": {
+      "still": "boh-07",
+      "nx": 0.030555555555555555,
+      "ny": 0.59875,
+      "nw": 0.9388888888888889,
+      "nh": 0.27125,
+      "color": "amber",
+      "provisional": false,
+      "targetPixels": [
+        32,
+        968,
+        688,
+        1382
+      ],
+      "marginPixels": 10,
+      "note": "Inspection Remedials, NCR and IINM cards, fully above the bottom navigation."
+    },
+    "dayLabel": {
+      "still": "boh-08",
+      "nx": 0.3125,
+      "ny": 0.141875,
+      "nw": 0.18333333333333332,
+      "nh": 0.06,
+      "color": "sky",
+      "provisional": true,
+      "targetPixels": [
+        235,
+        237,
+        347,
+        313
+      ],
+      "marginPixels": 10,
+      "note": "MONDAY: Fri 4 Sept and Yesterday are real; recapture must also show the narrated cleaning gap."
+    },
+    "gapRow": {
+      "still": "boh-08",
+      "nx": 0.030555555555555555,
+      "ny": 0.201875,
+      "nw": 0.9388888888888889,
+      "nh": 0.095625,
+      "color": "coral",
+      "provisional": true,
+      "targetPixels": [
+        32,
+        333,
+        688,
+        466
+      ],
+      "marginPixels": 10,
+      "note": "MONDAY: visible Remedial card is NOT evidence of sixty-six cleaning checks never done."
+    },
+    "amberRowOne": {
+      "still": "boh-11",
+      "nx": 0.030555555555555555,
+      "ny": 0.595625,
+      "nw": 0.9388888888888889,
+      "nh": 0.103125,
+      "color": "amber",
+      "provisional": true,
+      "targetPixels": [
+        32,
+        963,
+        688,
+        1108
+      ],
+      "marginPixels": 10,
+      "note": "MONDAY: only one amber row is visible (Remedial); do not invent a second ring."
+    }
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "extends": "../../tsconfig.json",
+  "include": ["./BillOfHealthAlt.tsx", "./index-alt.ts"],
+  "exclude": []
+}

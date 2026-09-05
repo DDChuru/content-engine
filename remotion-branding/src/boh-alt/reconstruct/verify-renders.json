@@ -1,0 +1,42 @@
+[
+  {
+    "id": "LedgerReconstructPhone",
+    "frame": 0,
+    "output": "/tmp/boh-recon-empty.png"
+  },
+  {
+    "id": "LedgerReconstructPhone",
+    "frame": 500,
+    "output": "/tmp/boh-recon-before-scroll.png"
+  },
+  {
+    "id": "LedgerReconstructPhone",
+    "frame": 835,
+    "output": "/tmp/boh-recon-after-scroll.png"
+  },
+  {
+    "id": "LedgerReconstructDemo",
+    "frame": 209,
+    "output": "/tmp/boh-recon-25.png"
+  },
+  {
+    "id": "LedgerReconstructDemo",
+    "frame": 418,
+    "output": "/tmp/boh-recon-50.png"
+  },
+  {
+    "id": "LedgerReconstructDemo",
+    "frame": 627,
+    "output": "/tmp/boh-recon-75.png"
+  },
+  {
+    "id": "ComposeRowFidelity",
+    "frame": 0,
+    "output": "/tmp/boh-compose-reset.png"
+  },
+  {
+    "id": "ComposeRowDemo",
+    "frame": 0,
+    "output": "/tmp/boh-compose-proof.png"
+  }
+]

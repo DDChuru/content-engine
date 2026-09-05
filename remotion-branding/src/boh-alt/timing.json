@@ -1,0 +1,127 @@
+{
+  "fps": 30,
+  "total_seconds": 301.592,
+  "total_frames": 9048,
+  "beats": [
+    {
+      "id": "01-open",
+      "shot": "boh-01",
+      "chip": "Bill of Health",
+      "ring": "homeTile",
+      "audio": "boh/audio/01-01-open.mp3",
+      "voStart": 0.6,
+      "duration": 19.409,
+      "text": "Every site you run gets one Bill of Health a day. Not a dashboard you glance at. A certificate the shift writes, line by line, as the work gets done. This is where you see what is due, what is done, and what is not."
+    },
+    {
+      "id": "02-ledger",
+      "shot": "boh-02",
+      "chip": "Bill of Health · today",
+      "ring": "dailyBand",
+      "audio": "boh/audio/02-02-ledger.mp3",
+      "voStart": 20.959,
+      "duration": 27.847,
+      "text": "Ten rows. The seven above the line are owed by this shift — handover, cleaning verification, chemical verification, remedials, hygiene, equipment, PPE. They start again every day. The three below the line carry over: inspection remedials, non-conformances, incidents. Those do not reset at midnight. They follow the site until somebody closes them."
+    },
+    {
+      "id": "03-row",
+      "shot": "boh-03",
+      "chip": "Cleaning Verification row",
+      "ring": "clnRow",
+      "audio": "boh/audio/03-03-row.mp3",
+      "voStart": 49.756,
+      "duration": 26.227,
+      "text": "Each row is the same shape. What was done, what is still outstanding, and a colour. Green means closed. Amber means work is still open. Coral means something is overdue or needs a decision. Five hundred and forty-two of six hundred and seventy-seven checks done — one hundred and thirty-five still due before this shift ends."
+    },
+    {
+      "id": "04-drilldown",
+      "shot": "boh-04",
+      "chip": "This is what is still outstanding",
+      "ring": "todoDivider",
+      "audio": "boh/audio/04-04-drilldown.mp3",
+      "voStart": 76.932,
+      "duration": 23.902,
+      "text": "Tap the row and you get the honest list. Not a percentage — the actual sections still to do, grouped by area. And below them, what is done today: the checks that passed, and the failed ones still owed a follow-up. If it is not under still to do, it is not outstanding. If it is, somebody has to go there today."
+    },
+    {
+      "id": "05-section",
+      "shot": "boh-05",
+      "chip": "Area · check counts",
+      "ring": "toiletsRow",
+      "audio": "boh/audio/05-05-section.mp3",
+      "voStart": 101.784,
+      "duration": 18.051,
+      "text": "Every line tells you where. The area above the section, so two \"toilets\" are never confused. And how many checks are still open in that section — one of two, two of two. This is the list you hand to the floor. Nobody has to interpret it."
+    },
+    {
+      "id": "06-remedial",
+      "shot": "boh-06",
+      "chip": "Remedial · sign-off owed",
+      "ring": "remedialRow",
+      "audio": "boh/audio/06-06-remedial.mp3",
+      "voStart": 120.785,
+      "duration": 23.641,
+      "text": "When a check fails, the row does not close. It moves to Remedial — a failed check waiting for a supervisor to look at the fix and sign it off. The operative's fail, the fix, and the supervisor's signature are three separate records, and the day is not complete until the third one exists."
+    },
+    {
+      "id": "07-carryover",
+      "shot": "boh-07",
+      "chip": "Carries over until resolved",
+      "ring": "carryRows",
+      "audio": "boh/audio/07-07-carryover.mp3",
+      "voStart": 145.376,
+      "duration": 27.115,
+      "text": "Below the line is different. An inspection finding might need a planned shutdown. A non-conformance might need capital. An incident has its own investigation. None of that is owed by tonight's shift — so it is not pretended to be. It sits here, visible, every single day, until it is genuinely resolved. It never quietly disappears."
+    },
+    {
+      "id": "08-lookback",
+      "shot": "boh-08",
+      "chip": "Yesterday's certificate",
+      "ring": "dayLabel",
+      "audio": "boh/audio/08-08-lookback.mp3",
+      "voStart": 173.441,
+      "duration": 18.155,
+      "text": "Tap back and you see yesterday. Exactly as it ended. Sixty-six checks that were never done are still sixty-six checks never done. There is no button to fix that now. You can look back — you cannot write back."
+    },
+    {
+      "id": "09-rule",
+      "shot": null,
+      "chip": "The rule",
+      "ring": null,
+      "audio": "boh/audio/09-09-rule.mp3",
+      "voStart": 192.546,
+      "duration": 25.678,
+      "text": "This is the part I need every supervisor to hear. You get one opportunity. The check is recorded when it is done, by the person who did it, with the photo taken then. If you spot a mistake during the shift, correct it during the shift. Once that day closes, it is closed. Nobody — not me, not head office — goes back and tidies up last Tuesday."
+    },
+    {
+      "id": "10-diligence",
+      "shot": null,
+      "chip": "Due diligence",
+      "ring": null,
+      "audio": "boh/audio/10-10-diligence.mp3",
+      "voStart": 219.174,
+      "duration": 44.382,
+      "text": "Here is why that matters beyond the site. In food safety, when something goes wrong, the question is not whether you had a system — it is whether you exercised due diligence: all reasonable steps, taken at the time, and recorded at the time. An auditor from a retailer, or under FSSC, or the health department, does not ask you to tell them about last Tuesday. They ask you to show them. A record you could have edited afterwards proves very little. A record nobody could touch after the shift proves that the work happened when you said it did. The Bill of Health is that record."
+    },
+    {
+      "id": "11-routine",
+      "shot": "boh-11",
+      "chip": "Start · mid-shift · before handover",
+      "ring": "amberRowOne",
+      "audio": "boh/audio/11-11-routine.mp3",
+      "voStart": 264.507,
+      "duration": 22.1,
+      "text": "So the routine is simple. Open the Bill of Health at the start of the shift, in the middle, and before handover. Anything amber is work still open. Tap it, read the list, send people where it says. Your job is seven rows to green before the day ends."
+    },
+    {
+      "id": "12-close",
+      "shot": null,
+      "chip": "Close",
+      "ring": null,
+      "audio": "boh/audio/12-12-close.mp3",
+      "voStart": 287.556,
+      "duration": 11.886,
+      "text": "Seven rows to green, before the day ends, every day, written once. That is the heartbeat of the site. That is the Bill of Health."
+    }
+  ]
+}
