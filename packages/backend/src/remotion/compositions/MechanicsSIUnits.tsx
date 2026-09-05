@@ -22,7 +22,10 @@ import 'katex/dist/katex.min.css';
 import transcriptJson from '../public/transcripts/mechanics/si-units.json';
 import { useCue } from './ProjectComposition';
 
-const FPS = 30;
+const cardInk = (color: string) => ({
+  '#42dbe8': '#087782', '#8decf2': '#087782', '#f4aa45': '#925000',
+  '#61d095': '#237347', '#ef6f63': '#b6342c',
+}[color] ?? color);
 const TRANSITION_FRAMES = 15;
 
 const T = {
@@ -236,7 +239,7 @@ const StepBadge: React.FC<{ scene: number; label: string }> = ({ scene, label })
       boxShadow: `0 0 30px ${T.cyan}12`,
       fontFamily: T.mono,
       color: T.textMuted,
-      fontSize: 17,
+      fontSize: 28,
       letterSpacing: 1.4,
       textTransform: 'uppercase',
     }}
@@ -255,7 +258,7 @@ const LabBackground: React.FC<{ scene: number; label: string; children: React.Re
   const drift = Math.sin(frame / 80) * 12;
 
   return (
-    <AbsoluteFill style={{ overflow: 'hidden', background: T.bg, fontFamily: T.sans }}>
+    <AbsoluteFill style={{ overflow: 'hidden', isolation: 'isolate', background: T.bg, fontFamily: T.sans }}>
       <AbsoluteFill
         style={{
           background: `radial-gradient(circle at ${28 + drift / 5}% 18%, ${T.cyan}15, transparent 35%), radial-gradient(circle at 78% 90%, ${T.amber}10, transparent 32%), linear-gradient(145deg, ${T.bgDeep}, ${T.bg})`,
@@ -276,7 +279,7 @@ const LabBackground: React.FC<{ scene: number; label: string; children: React.Re
           top: 48,
           color: T.textMuted,
           fontFamily: T.mono,
-          fontSize: 17,
+          fontSize: 28,
           letterSpacing: 2.6,
         }}
       >
@@ -335,7 +338,7 @@ const UnitPill: React.FC<{ value: string; label: string; color?: string }> = ({
     }}
   >
     <span style={{ fontFamily: T.mono, color, fontWeight: 900, fontSize: 34 }}>{value}</span>
-    <span style={{ color: T.textMuted, fontSize: 20, fontWeight: 650 }}>{label}</span>
+    <span style={{ color: T.textMuted, fontSize: 28, fontWeight: 650 }}>{label}</span>
   </div>
 );
 
@@ -387,14 +390,14 @@ const FormulaMachine: React.FC<{ jammed: boolean; resetProgress: number }> = ({
   resetProgress,
 }) => {
   const frame = useCurrentFrame();
-  const shake = jammed && resetProgress < 0.05 ? Math.sin(frame * 1.8) * 8 : 0;
+  const shake = jammed && resetProgress < 0.05 ? Math.sin(frame * 0.65) * 2 : 0;
 
   return (
     <div
       style={{
         position: 'absolute',
-        left: 646,
-        top: 268,
+        left: 468,
+        top: 150,
         width: 628,
         height: 430,
         transform: `translateX(${shake}px)`,
@@ -416,7 +419,7 @@ const FormulaMachine: React.FC<{ jammed: boolean; resetProgress: number }> = ({
           left: 54,
           right: 54,
           top: 52,
-          height: 122,
+          height: 160,
           borderRadius: 18,
           background: T.bgDeep,
           border: `2px solid ${jammed && resetProgress < 0.05 ? T.red : T.cyan}55`,
@@ -426,7 +429,7 @@ const FormulaMachine: React.FC<{ jammed: boolean; resetProgress: number }> = ({
         }}
       >
         {resetProgress < 0.05 ? (
-          <MathTeX tex="v=\frac{d}{t}" fontSize={68} color={jammed ? T.red : T.text} />
+          <MathTeX tex="v=\frac{d}{t}" fontSize={52} color={jammed ? T.red : T.text} />
         ) : (
           <div style={{ color: T.green, fontFamily: T.mono, fontSize: 31, fontWeight: 900, letterSpacing: 2, transform: `scale(${0.85 + resetProgress * 0.15})` }}>
             ✓ UNITS ALIGNED
@@ -445,7 +448,7 @@ const FormulaMachine: React.FC<{ jammed: boolean; resetProgress: number }> = ({
       >
         {['m', 's', 'kg'].map((unit) => (
           <div key={unit} style={{ width: 128, height: 78, borderRadius: 14, background: '#07131c', border: `2px solid ${resetProgress > 0 ? T.cyan : T.textMuted}66`, overflow: 'hidden', display: 'grid', placeItems: 'center' }}>
-            <div style={{ opacity: resetProgress, transform: `scale(${0.7 + resetProgress * 0.3})`, color: T.cyan, fontFamily: T.mono, fontSize: 36, fontWeight: 950 }}>
+            <div style={{ opacity: Math.max(0, (resetProgress - 0.35) / 0.65), transform: `scale(${0.7 + resetProgress * 0.3})`, color: T.cyan, fontFamily: T.mono, fontSize: 36, fontWeight: 950 }}>
               {unit}
             </div>
           </div>
@@ -478,16 +481,16 @@ const Scene01: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
   return (
     <LabBackground scene={1} label="unit trap">
       <Cued at={mismatchAt} fromY={-18} style={{ position: 'absolute', left: 84, top: 164 }}>
-        <div style={{ color: T.red, fontSize: 25, fontWeight: 800, letterSpacing: 2, textTransform: 'uppercase' }}>
+        <div style={{ opacity: 1 - resetProgress, color: T.red, fontSize: 28, fontWeight: 800, letterSpacing: 2, textTransform: 'uppercase' }}>
           incompatible inputs
         </div>
       </Cued>
 
       <div style={{ position: 'absolute', left: 178, right: 178, top: 118, height: 620 }}>
         {[
-          { value: '2.4', unit: 'km', left: 716, startTop: -82, rotate: -5 },
-          { value: '8', unit: 'min', left: 896, startTop: -136, rotate: 3 },
-          { value: '500', unit: 'g', left: 1076, startTop: -190, rotate: -2 },
+          { value: '2.4', unit: 'km', left: 538, startTop: 375, rotate: -5 },
+          { value: '8', unit: 'min', left: 718, startTop: 375, rotate: 3 },
+          { value: '500', unit: 'g', left: 898, startTop: 375, rotate: -2 },
         ].map((card) => (
           <WarmCard
             key={card.unit}
@@ -495,19 +498,19 @@ const Scene01: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
             style={{
               position: 'absolute',
               left: card.left,
-              top: interpolate(dropProgress, [0, 1], [card.startTop, 546], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' }),
+              top: interpolate(dropProgress, [0, 1], [card.startTop, 428], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' }),
               width: 128,
               height: 78,
               display: 'grid',
               placeItems: 'center',
-              opacity: mismatch.opacity * (1 - resetProgress),
+              opacity: mismatch.opacity * Math.max(0, 1 - resetProgress * 3),
               transform: `rotate(${card.rotate * (1 - dropProgress)}deg) scale(${0.92 + dropProgress * 0.08})`,
               zIndex: 4,
             }}
           >
             <div style={{ textAlign: 'center' }}>
-              <div style={{ fontFamily: T.mono, fontSize: 25, fontWeight: 900, lineHeight: 1 }}>{card.value}</div>
-              <div style={{ fontFamily: T.mono, fontSize: 18, color: T.red, fontWeight: 800, marginTop: 5 }}>{card.unit}</div>
+              <div style={{ fontFamily: T.mono, fontSize: 28, fontWeight: 900, lineHeight: 1 }}>{card.value}</div>
+              <div style={{ fontFamily: T.mono, fontSize: 28, color: cardInk(T.red), fontWeight: 800, marginTop: 5 }}>{card.unit}</div>
             </div>
           </WarmCard>
         ))}
@@ -585,7 +588,7 @@ const SITargetGlyph: React.FC<{
   color: string;
 }> = ({ kind, symbol, color }) => (
   <div style={{ position: 'relative', width: 220, height: 220, borderRadius: 24, background: `${T.bgDeep}e8`, border: `2px solid ${color}88`, boxShadow: `0 16px 40px #0007, 0 0 25px ${color}15` }}>
-    <div style={{ position: 'absolute', left: 0, right: 0, top: 102, textAlign: 'center', color, fontFamily: T.mono, fontSize: 18, fontWeight: 850, letterSpacing: 1.8 }}>{kind.toUpperCase()}</div>
+    <div style={{ position: 'absolute', left: 0, right: 0, top: 102, textAlign: 'center', color, fontFamily: T.mono, fontSize: 28, fontWeight: 850, letterSpacing: 1.8 }}>{kind.toUpperCase()}</div>
     {kind === 'length' && (
       <div style={{ position: 'absolute', left: 37, top: 151, width: 146, height: 27, borderRadius: 6, background: T.card, border: `3px solid ${color}` }}>
         {Array.from({ length: 8 }).map((_, index) => <div key={index} style={{ position: 'absolute', left: 10 + index * 18, top: 0, width: 2, height: index % 2 === 0 ? 14 : 9, background: T.ink }} />)}
@@ -597,9 +600,8 @@ const SITargetGlyph: React.FC<{
       </div>
     )}
     {kind === 'mass' && (
-      <div style={{ position: 'absolute', left: 69, top: 142, width: 84, height: 59, borderRadius: 10, background: color, color: T.bgDeep, display: 'grid', placeItems: 'center', fontFamily: T.mono, fontSize: 24, fontWeight: 950 }}>{symbol}</div>
+      <div style={{ position: 'absolute', left: 69, top: 142, width: 84, height: 59, borderRadius: 10, background: color, color: T.bgDeep, display: 'grid', placeItems: 'center', fontFamily: T.mono, fontSize: 28, fontWeight: 950 }}>{symbol}</div>
     )}
-    <div style={{ position: 'absolute', left: 0, right: 0, bottom: 8, textAlign: 'center', color: T.textMuted, fontFamily: T.mono, fontSize: 14 }}>S.I. target · {symbol}</div>
   </div>
 );
 
@@ -653,7 +655,7 @@ const Scene02: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
           <React.Fragment key={measurement.label}>
             <Cued at={sharedAt} fromScale={0.8} style={{ position: 'absolute', left: measurement.x, top: measurement.y }}>
               <div style={{ width: 260, height: 138, borderRadius: 22, background: T.panel, border: `2px solid ${measurement.color}88`, padding: 22, boxShadow: '0 18px 45px #0006' }}>
-                <div style={{ color: measurement.color, fontFamily: T.mono, fontSize: 17, letterSpacing: 2 }}>{measurement.label}</div>
+                <div style={{ color: measurement.color, fontFamily: T.mono, fontSize: 28, letterSpacing: 2 }}>{measurement.label}</div>
                 <div style={{ marginTop: 14, display: 'flex', gap: 9 }}>
                   {[0, 1, 2].map((bar) => <div key={bar} style={{ width: 13, height: 38 + bar * 10, borderRadius: 6, background: bar === 1 ? measurement.color : `${measurement.color}99` }} />)}
                 </div>
@@ -677,21 +679,21 @@ const Scene02: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
                 placeItems: 'center',
                 zIndex: 7,
                 fontFamily: T.mono,
-                fontSize: 25,
+                fontSize: 28,
                 fontWeight: 900,
               }}
             >
               <div style={{ position: 'relative', width: '100%', height: '100%', display: 'grid', placeItems: 'center' }}>
                 <span style={{ position: 'absolute', opacity: 1 - standardize }}>{measurement.source}</span>
-                <span style={{ position: 'absolute', opacity: standardize, color: measurement.color, transform: `scale(${0.78 + standardize * 0.22})` }}>{measurement.si}</span>
+                <span style={{ position: 'absolute', opacity: standardize, color: cardInk(measurement.color), transform: `scale(${0.78 + standardize * 0.22})` }}>{measurement.si}</span>
               </div>
             </WarmCard>
           </React.Fragment>
         );
       })}
 
-      <Cued at={metreAt} fromY={12} style={{ position: 'absolute', left: 690, top: 785, width: 540, textAlign: 'center' }}>
-        <div style={{ color: T.cyanSoft, fontFamily: T.mono, fontSize: 22, fontWeight: 850, letterSpacing: 1.4 }}>MATCHED TARGETS · DIRECTLY COMPARABLE</div>
+      <Cued at={metreAt} fromY={12} style={{ position: 'absolute', left: 530, top: 785, width: 860, textAlign: 'center' }}>
+        <div style={{ color: T.cyanSoft, fontFamily: T.mono, fontSize: 28, fontWeight: 850, letterSpacing: 1.4 }}>MATCHED TARGETS · DIRECTLY COMPARABLE</div>
       </Cued>
 
       <div
@@ -754,7 +756,7 @@ const Ruler: React.FC<{ progress: number; width: number; extensionProgress: numb
         }}
       >
         {index % 10 === 0 && (
-          <span style={{ position: 'absolute', top: 68, left: -8, fontFamily: T.mono, fontWeight: 800, fontSize: 18, color: T.ink }}>
+          <span style={{ position: 'absolute', top: 68, left: 6, fontFamily: T.mono, fontWeight: 800, fontSize: 28, color: T.ink }}>
             {index / 10}
           </span>
         )}
@@ -763,8 +765,6 @@ const Ruler: React.FC<{ progress: number; width: number; extensionProgress: numb
     {[748, 1068, 1388].map((left, index) => (
       <div key={left} style={{ position: 'absolute', left, top: 17, bottom: 0, width: 6, background: `${T.amber}${index === 0 ? 'aa' : '66'}`, opacity: extensionProgress, boxShadow: `0 0 12px ${T.amber}55` }} />
     ))}
-    <div style={{ position: 'absolute', right: 18, top: 37, color: T.amber, fontFamily: T.mono, fontSize: 17, fontWeight: 850, opacity: extensionProgress, letterSpacing: 1.2 }}>TELESCOPING →</div>
-    <div style={{ position: 'absolute', bottom: 17, right: 18, color: T.ink, fontFamily: T.mono, fontSize: 20, fontWeight: 800 }}>metres</div>
   </div>
 );
 
@@ -802,21 +802,26 @@ const Scene03: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
       </Cued>
 
       <div style={{ position: 'absolute', left: 110, top: 310 }}>
+        <div style={{ position: 'absolute', left: 0, top: -46, color: T.text, fontFamily: T.mono, fontSize: 28, opacity: rulerProgress }}>metres</div>
+        <div style={{ position: 'absolute', right: 0, top: -46, color: T.amber, fontFamily: T.mono, fontSize: 28, opacity: telescope }}>TELESCOPING →</div>
         <Ruler progress={rulerProgress} width={rulerWidth} extensionProgress={telescope} />
+        <div style={{ width: rulerWidth, height: 36, marginTop: 15, background: T.panelLight, borderBlock: `2px solid ${T.cardMuted}`, opacity: telescope }}>
+          <div style={{ marginTop: 15, borderTop: `3px dashed ${T.card}` }} />
+        </div>
       </div>
 
       <Cued at={displacementAt} fromY={18} style={{ position: 'absolute', left: 286, top: 505 }}>
-        <div style={{ color: T.textMuted, fontSize: 22, fontWeight: 700, letterSpacing: 1.4, textTransform: 'uppercase' }}>displacement</div>
+        <div style={{ color: T.textMuted, fontSize: 28, fontWeight: 700, letterSpacing: 1.4, textTransform: 'uppercase' }}>displacement</div>
         <MeasurementArrow width={560} progress={arrowProgress} />
-        <div style={{ display: 'flex', justifyContent: 'space-between', width: 580, fontFamily: T.mono, color: T.text, fontSize: 21 }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', width: 580, fontFamily: T.mono, color: T.text, fontSize: 28 }}>
           <span>x₁</span><span>x₂</span>
         </div>
       </Cued>
 
       <Cued at={kilometreAt} fromScale={0.8} style={{ position: 'absolute', left: 635, right: 635, bottom: 116 }}>
         <WarmCard accent={T.amber} style={{ padding: '22px 36px', textAlign: 'center' }}>
-          <div style={{ color: T.ink, fontFamily: T.mono, fontSize: 27, fontWeight: 800 }}>1 kilometre</div>
-          <div style={{ marginTop: 6, color: T.amber, fontFamily: T.mono, fontSize: 56, fontWeight: 950, lineHeight: 1 }}>
+          <div style={{ color: T.ink, fontFamily: T.mono, fontSize: 28, fontWeight: 800 }}>1 kilometre</div>
+          <div style={{ marginTop: 6, color: cardInk(T.amber), fontFamily: T.mono, fontSize: 56, fontWeight: 950, lineHeight: 1 }}>
             {counter.toLocaleString()} m
           </div>
         </WarmCard>
@@ -883,7 +888,7 @@ const ClockFace: React.FC<{
       }}
     />
     <div style={{ position: 'absolute', left: 194, top: 194, width: 40, height: 40, borderRadius: '50%', background: T.card, border: `8px solid ${T.cyan}` }} />
-    <div style={{ position: 'absolute', left: 0, right: 0, bottom: 86, textAlign: 'center', color: T.textMuted, fontFamily: T.mono, fontSize: 18, letterSpacing: 2 }}>BASE UNIT</div>
+    <div style={{ position: 'absolute', left: 0, right: 0, bottom: 86, textAlign: 'center', color: T.textMuted, fontFamily: T.mono, fontSize: 28, letterSpacing: 2 }}>BASE UNIT</div>
     <div style={{ position: 'absolute', left: 0, right: 0, bottom: 39, textAlign: 'center', color: T.text, fontFamily: T.mono, fontSize: 42, fontWeight: 900 }}>s</div>
   </div>
 );
@@ -918,11 +923,12 @@ const Scene04: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
       </Cued>
 
       <div style={{ position: 'absolute', left: 196, top: 275 }}>
-        <ClockFace opacity={clock} angle={angle} ringProgress={ring} />
+        <ClockFace opacity={clock} angle={angle} ringProgress={ring * (1 - condense)} />
+        <div style={{ position: 'absolute', left: 215 + condense * 665, top: 215 + condense * 475, width: 80, height: 80, borderRadius: '50%', border: `6px dotted ${T.amber}`, opacity: 4 * condense * (1 - condense), transform: 'translate(-50%, -50%)' }} />
       </div>
 
       <Cued at={howLongAt} fromX={40} style={{ position: 'absolute', left: 735, top: 318, width: 1010 }}>
-        <div style={{ color: T.textMuted, fontSize: 20, fontFamily: T.mono, letterSpacing: 2, marginBottom: 18 }}>MOTION OVER TIME</div>
+        <div style={{ color: T.textMuted, fontSize: 28, fontFamily: T.mono, letterSpacing: 2, marginBottom: 18 }}>MOTION OVER TIME</div>
         <div style={{ position: 'relative', width: 920, height: 170 }}>
           <div style={{ position: 'absolute', left: 0, right: 0, top: 100, height: 6, borderRadius: 8, background: `${T.card}55` }} />
           {Array.from({ length: 8 }).map((_, index) => (
@@ -992,7 +998,7 @@ const Cart: React.FC<{
   heavy?: boolean;
   progress: number;
 }> = ({ x, y, heavy = false, progress }) => {
-  const travel = progress * (heavy ? 130 : 340);
+  const travel = progress * progress * (heavy ? 130 : 340);
   const wheelTurn = progress * (heavy ? 190 : 500);
   return (
     <div style={{ position: 'absolute', left: x + travel, top: y, width: 340, height: 190 }}>
@@ -1064,21 +1070,21 @@ const Scene05: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
       <div style={{ opacity: carts.opacity }}>
         <Cart x={292} y={256} progress={motion} />
         <Cart x={292} y={490} heavy progress={motion} />
-        <div style={{ position: 'absolute', left: 208, top: 374, color: T.textMuted, fontFamily: T.mono, fontSize: 18, transform: 'rotate(-90deg)', transformOrigin: 'left center' }}>SAME PUSH</div>
-        {[326, 560].map((top) => (
-          <div key={top} style={{ position: 'absolute', left: 145, top, opacity: pushes }}>
+        <div style={{ position: 'absolute', left: 208, top: 470, color: T.textMuted, fontFamily: T.mono, fontSize: 28, transform: 'rotate(-90deg)', transformOrigin: 'left center' }}>SAME PUSH</div>
+        {[256, 490].map((top, index) => (
+          <div key={top} style={{ position: 'absolute', left: 328 + motion * motion * (index === 0 ? 340 : 130), top: top + 98, opacity: pushes }}>
             <MeasurementArrow width={154} color={T.amber} progress={pushes} thickness={8} />
           </div>
         ))}
-        <div style={{ position: 'absolute', left: 695, top: 321, width: 365, borderTop: `4px dashed ${T.cyan}88`, opacity: motion }} />
-        <div style={{ position: 'absolute', left: 568, top: 555, width: 140, borderTop: `4px dashed ${T.cyan}88`, opacity: motion }} />
+        <div style={{ position: 'absolute', left: 328, top: 450, width: motion * motion * 340, borderTop: `4px dashed ${T.cyan}88`, opacity: motion }} />
+        <div style={{ position: 'absolute', left: 328, top: 684, width: motion * motion * 130, borderTop: `4px dashed ${T.cyan}88`, opacity: motion }} />
       </div>
 
       <Cued at={resistsAt} fromX={30} style={{ position: 'absolute', right: 134, top: 190 }}>
         <WarmCard accent={T.amber} style={{ width: 540, padding: '26px 32px' }}>
-          <div style={{ color: T.ink, fontSize: 24, fontWeight: 750, textTransform: 'uppercase', letterSpacing: 1.5 }}>inertia</div>
+          <div style={{ color: T.ink, fontSize: 28, fontWeight: 750, textTransform: 'uppercase', letterSpacing: 1.5 }}>inertia</div>
           <div style={{ color: T.ink, fontSize: 37, fontWeight: 900, marginTop: 6 }}>More mass → less acceleration</div>
-          <div style={{ color: '#5f6d75', fontSize: 21, marginTop: 8 }}>for the same applied force</div>
+          <div style={{ color: '#5f6d75', fontSize: 28, marginTop: 8 }}>for the same applied force</div>
         </WarmCard>
       </Cued>
 
@@ -1090,7 +1096,7 @@ const Scene05: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
         <div style={{ position: 'absolute', left: 308, top: 90, opacity: gramStep, transform: `scale(${0.82 + gramStep * 0.18})` }}>
           <UnitPill value="1" label="kg" />
         </div>
-        <div style={{ position: 'absolute', left: 210, top: 205, opacity: tonneStep, transform: `scale(${0.82 + tonneStep * 0.18})` }}>
+        <div style={{ position: 'absolute', left: 150, top: 205, opacity: tonneStep, transform: `scale(${0.82 + tonneStep * 0.18})` }}>
           <UnitPill value="1 tonne" label="= 1000 kg" color={T.amber} />
         </div>
       </div>
@@ -1110,7 +1116,7 @@ const ForceArrowDown: React.FC<{ length: number; opacity: number; label?: string
   <div style={{ position: 'relative', width: 110, height: length + 36, opacity }}>
     <div style={{ position: 'absolute', left: 49, top: 0, width: 12, height: length, borderRadius: 8, background: T.amber, boxShadow: `0 0 17px ${T.amber}88` }} />
     <div style={{ position: 'absolute', left: 27, top: length - 2, width: 0, height: 0, borderLeft: '28px solid transparent', borderRight: '28px solid transparent', borderTop: `36px solid ${T.amber}` }} />
-    {label && <div style={{ position: 'absolute', left: 84, top: length / 2 - 16, color: T.amber, fontFamily: T.mono, fontSize: 26, fontWeight: 900 }}>{label}</div>}
+    {label && <div style={{ position: 'absolute', left: 84, top: length / 2 - 16, background: T.bgDeep, borderRadius: 6, padding: '2px 6px', color: T.amber, fontFamily: T.mono, fontSize: 28, fontWeight: 900 }}>{label}</div>}
   </div>
 );
 
@@ -1156,19 +1162,19 @@ const Scene06: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
       <div style={{ position: 'absolute', left: 76, right: 76, top: 124, bottom: 86, display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 42 }}>
         <div style={{ position: 'relative', borderRadius: 32, background: `${T.panel}d9`, border: `2px solid ${T.cyan}55`, overflow: 'hidden', opacity: mass, transform: `translateX(${(1 - mass) * -30}px)` }}>
           <div style={{ position: 'absolute', top: 35, left: 42, color: T.cyan, fontSize: 42, fontWeight: 900 }}>MASS</div>
-          <div style={{ position: 'absolute', top: 93, left: 43, color: T.textMuted, fontFamily: T.mono, fontSize: 20 }}>scalar · kilograms</div>
+          <div style={{ position: 'absolute', top: 93, left: 43, color: T.textMuted, fontFamily: T.mono, fontSize: 28 }}>scalar · kilograms</div>
           <div style={{ position: 'absolute', left: 218, top: 190, width: 390, height: 350 }}>
-            <div style={{ position: 'absolute', left: 97, top: 8, width: 190, height: 190, borderRadius: 25, background: T.card, border: `4px solid ${T.cyan}`, color: T.ink, display: 'grid', placeItems: 'center', fontFamily: T.mono, fontSize: 42, fontWeight: 900, boxShadow: '0 18px 45px #0008' }}>1 kg</div>
+            <div style={{ position: 'absolute', left: 97, top: 40, width: 190, height: 190, borderRadius: 25, background: T.card, border: `4px solid ${T.cyan}`, color: T.ink, display: 'grid', placeItems: 'center', fontFamily: T.mono, fontSize: 42, fontWeight: 900, boxShadow: '0 18px 45px #0008' }}>1 kg</div>
             <div style={{ position: 'absolute', left: 24, top: 230, width: 340, height: 34, borderRadius: '50%', background: T.cardMuted }} />
             <div style={{ position: 'absolute', left: 176, top: 256, width: 34, height: 94, background: T.cardMuted }} />
             <div style={{ position: 'absolute', left: 76, top: 336, width: 234, height: 18, borderRadius: 10, background: T.cardMuted }} />
           </div>
-          <div style={{ position: 'absolute', left: 0, right: 0, bottom: 52, textAlign: 'center', color: T.green, fontSize: 27, fontWeight: 800 }}>same everywhere</div>
+          <div style={{ position: 'absolute', left: 0, right: 0, bottom: 52, textAlign: 'center', color: T.green, fontSize: 28, fontWeight: 800 }}>same everywhere</div>
         </div>
 
         <div style={{ position: 'relative', borderRadius: 32, background: `${T.bgDeep}e6`, border: `2px solid ${T.amber}55`, overflow: 'hidden', opacity: weight, transform: `translateX(${(1 - weight) * 30}px)` }}>
           <div style={{ position: 'absolute', top: 35, left: 42, color: T.amber, fontSize: 42, fontWeight: 900 }}>WEIGHT</div>
-          <div style={{ position: 'absolute', top: 93, left: 43, color: T.textMuted, fontFamily: T.mono, fontSize: 20 }}>vector · gravitational force</div>
+          <div style={{ position: 'absolute', top: 93, left: 43, color: T.textMuted, fontFamily: T.mono, fontSize: 28 }}>vector · gravitational force</div>
 
           <div style={{ position: 'absolute', left: interpolate(moon, [0, 1], [138, -300]), top: 255, opacity: 1 - moon }}>
             <Planet />
@@ -1176,8 +1182,8 @@ const Scene06: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
           <div style={{ position: 'absolute', left: interpolate(moon, [0, 1], [620, 138]), top: 255, opacity: moon }}>
             <Planet moon />
           </div>
-          <div style={{ position: 'absolute', left: 205, top: 166, width: 112, height: 92, borderRadius: 17, background: T.card, border: `3px solid ${T.cyan}`, color: T.ink, display: 'grid', placeItems: 'center', fontFamily: T.mono, fontSize: 25, fontWeight: 900, zIndex: 4 }}>1 kg</div>
-          <div style={{ position: 'absolute', left: 310, top: 178 }}>
+          <div style={{ position: 'absolute', left: 205, top: 166, width: 112, height: 92, borderRadius: 17, background: T.card, border: `3px solid ${T.cyan}`, color: T.ink, display: 'grid', placeItems: 'center', fontFamily: T.mono, fontSize: 28, fontWeight: 900, zIndex: 4 }}>1 kg</div>
+          <div style={{ position: 'absolute', left: 206, top: 258 }}>
             <ForceArrowDown length={interpolate(moon, [0, 1], [165, 74])} opacity={weight} label="W" />
           </div>
           <div style={{ position: 'absolute', left: 125, right: 125, bottom: 39, textAlign: 'center', color: moon > 0.5 ? T.moon : T.cyanSoft, fontFamily: T.mono, fontSize: 28, fontWeight: 900 }}>
@@ -1186,10 +1192,10 @@ const Scene06: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
         </div>
       </div>
 
-      <div style={{ position: 'absolute', left: 765, top: 458, zIndex: 8, opacity: newtons, transform: `scale(${0.75 + newtons * 0.25})` }}>
+      <div style={{ position: 'absolute', left: 1390, top: 640, zIndex: 8, opacity: newtons, transform: `scale(${0.75 + newtons * 0.25})` }}>
         <WarmCard accent={T.amber} style={{ width: 390, padding: '20px 26px', textAlign: 'center' }}>
           <MathTeX tex="W=mg" fontSize={52} color={T.ink} />
-          <div style={{ marginTop: -10, fontFamily: T.mono, color: T.amber, fontSize: 21, fontWeight: 850 }}>force measured in N</div>
+          <div style={{ marginTop: -10, fontFamily: T.mono, color: cardInk(T.amber), fontSize: 28, fontWeight: 850 }}>force measured in N</div>
         </WarmCard>
       </div>
     </LabBackground>
@@ -1223,7 +1229,7 @@ const PrefixTile: React.FC<{
         background: `${color}16`,
         border: `2px solid ${color}88`,
         display: 'grid',
-        gridTemplateColumns: '125px 1fr 170px',
+        gridTemplateColumns: '185px 1fr 170px',
         alignItems: 'center',
         padding: '0 26px',
         boxShadow: `0 14px 38px #0005, 0 0 24px ${color}14`,
@@ -1268,8 +1274,8 @@ const Scene07: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
 
       <PrefixTile at={kiloAt} y={205} name="kilo" symbol="k" power="× 10³" color={T.amber} />
       <Cued at={factorsAt} fromScale={0.86} style={{ position: 'absolute', left: 245, top: 326 }}>
-        <div style={{ width: 620, height: 104, borderRadius: 22, background: T.card, color: T.ink, border: `3px solid ${T.cardMuted}`, display: 'grid', gridTemplateColumns: '125px 1fr 170px', alignItems: 'center', padding: '0 26px', boxShadow: '0 16px 42px #0006' }}>
-          <div style={{ fontFamily: T.mono, color: T.ink, fontSize: 41, fontWeight: 950 }}>m · kg</div>
+        <div style={{ width: 620, height: 104, borderRadius: 22, background: T.card, color: T.ink, border: `3px solid ${T.cardMuted}`, display: 'grid', gridTemplateColumns: '185px 1fr 170px', alignItems: 'center', padding: '0 26px', boxShadow: '0 16px 42px #0006' }}>
+          <div style={{ fontFamily: T.mono, color: T.ink, fontSize: 36, fontWeight: 950, whiteSpace: 'nowrap' }}>m · kg</div>
           <div style={{ fontSize: 29, fontWeight: 850 }}>base unit</div>
           <div style={{ fontFamily: T.mono, fontSize: 29, fontWeight: 900, textAlign: 'right' }}>× 10⁰</div>
         </div>
@@ -1279,11 +1285,11 @@ const Scene07: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
       <PrefixTile at={nanoAt} y={689} name="nano" symbol="n" power="× 10⁻⁹" color="#a9a4ff" side="right" />
 
       <div style={{ position: 'absolute', left: 1010, top: 243, width: 705, height: 300 }}>
-        <div style={{ color: T.textMuted, fontFamily: T.mono, fontSize: 20, letterSpacing: 2.2 }}>DECIMAL POSITION</div>
+        <div style={{ color: T.textMuted, fontFamily: T.mono, fontSize: 28, letterSpacing: 2.2 }}>DECIMAL POSITION</div>
         <WarmCard accent={T.cyan} style={{ marginTop: 23, height: 156, display: 'grid', placeItems: 'center', overflow: 'hidden' }}>
-          <div style={{ position: 'relative', width: 540, height: 100, color: T.ink, fontFamily: T.mono, fontSize: 73, fontWeight: 900, letterSpacing: 20, textAlign: 'center', lineHeight: '100px' }}>
+          <div style={{ position: 'relative', width: 600, height: 100, color: T.ink, fontFamily: T.mono, fontSize: 73, fontWeight: 900, letterSpacing: 20, textAlign: 'center', lineHeight: '100px' }}>
             0001000
-            <div style={{ position: 'absolute', left: 275 + decimalX, bottom: 16, width: 16, height: 16, borderRadius: '50%', background: T.amber, boxShadow: `0 0 20px ${T.amber}` }} />
+            <div style={{ position: 'absolute', left: 300 + decimalX, bottom: 16, width: 16, height: 16, borderRadius: '50%', background: T.amber, boxShadow: `0 0 20px ${T.amber}` }} />
           </div>
         </WarmCard>
         <div style={{ marginTop: 22, color: target.isActive ? T.green : T.textMuted, opacity: target.opacity, fontSize: 29, fontWeight: 800, textAlign: 'center' }}>
@@ -1316,7 +1322,7 @@ const Scene07: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
           <div style={{ position: 'absolute', left: 59, top: 23, width: 6, height: 43, borderRadius: 6, background: T.card, transform: 'rotate(22deg)', transformOrigin: 'bottom' }} />
         </div>
         <div>
-          <div style={{ color: T.amber, fontFamily: T.mono, fontSize: 21, letterSpacing: 1.8 }}>TIME IS DIFFERENT</div>
+          <div style={{ color: T.amber, fontFamily: T.mono, fontSize: 28, letterSpacing: 1.8 }}>TIME IS DIFFERENT</div>
           <div style={{ color: T.text, fontSize: 36, fontWeight: 900, marginTop: 7 }}>minutes → seconds</div>
           <div style={{ color: T.amber, fontFamily: T.mono, fontSize: 31, fontWeight: 900, marginTop: 5 }}>× 60, not × 10</div>
         </div>
@@ -1348,7 +1354,7 @@ const NumberToken: React.FC<{
       style={{
         display: 'inline-block',
         opacity: cue.opacity,
-        color,
+        color: cardInk(color),
         fontFamily: T.mono,
         fontWeight: 950,
         transform: `translateY(${(1 - settle) * -62}px) scale(${1 + (1 - settle) * 0.75})`,
@@ -1357,7 +1363,7 @@ const NumberToken: React.FC<{
         ...style,
       }}
     >
-      {children}{suffix && <span style={{ fontSize: '0.64em', marginLeft: 7 }}>{suffix}</span>}
+      {children}{suffix && <span style={{ fontSize: '0.75em', marginLeft: 7 }}>{suffix}</span>}
     </span>
   );
 };
@@ -1371,8 +1377,8 @@ const InlineToken: React.FC<{
 }> = ({ at, children, color = T.ink, suffix, style }) => {
   const cue = useCue(at, 0.2);
   return (
-    <span style={{ display: 'inline-block', opacity: cue.opacity, color, fontFamily: T.mono, fontWeight: 900, transform: `scale(${0.88 + cue.opacity * 0.12})`, transformOrigin: 'center', ...style }}>
-      {children}{suffix && <span style={{ fontSize: '0.64em', marginLeft: 7 }}>{suffix}</span>}
+    <span style={{ display: 'inline-block', opacity: cue.opacity, color: cardInk(color), fontFamily: T.mono, fontWeight: 900, transform: `scale(${0.88 + cue.opacity * 0.12})`, transformOrigin: 'center', ...style }}>
+      {children}{suffix && <span style={{ fontSize: '0.75em', marginLeft: 7 }}>{suffix}</span>}
     </span>
   );
 };
@@ -1381,7 +1387,7 @@ const Cyclist: React.FC<{ progress: number }> = ({ progress }) => {
   const frame = useCurrentFrame();
   const pedal = frame * 8;
   return (
-    <div style={{ position: 'absolute', left: 86 + progress * 470, top: 145, width: 180, height: 150, transform: `translateY(${Math.sin(frame / 4) * 2}px)` }}>
+    <div style={{ position: 'absolute', left: 86 + progress * 470, top: 145, width: 180, height: 150, transform: 'translateY(0px)' }}>
       {[23, 125].map((left) => (
         <div key={left} style={{ position: 'absolute', left, top: 83, width: 58, height: 58, borderRadius: '50%', border: `7px solid ${T.card}`, transform: `rotate(${pedal}deg)` }} />
       ))}
@@ -1401,9 +1407,9 @@ const WorkingRow: React.FC<{
 }> = ({ label, accent, at, children }) => {
   const cue = useCue(at, 0.25);
   return (
-    <div style={{ display: 'grid', gridTemplateColumns: '155px 1fr', alignItems: 'center', minHeight: 112, borderBottom: `2px solid ${T.ink}16`, opacity: cue.opacity }}>
-      <div style={{ color: accent, fontSize: 21, fontWeight: 850, textTransform: 'uppercase', letterSpacing: 1.5 }}>{label}</div>
-      <div style={{ color: T.ink, fontFamily: T.mono, fontSize: 39, fontWeight: 800, whiteSpace: 'nowrap' }}>{children}</div>
+    <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: 10, paddingBlock: 16, alignItems: 'center', minHeight: 160, borderBottom: `2px solid ${T.ink}16`, opacity: cue.opacity }}>
+      <div style={{ color: cardInk(accent), fontSize: 28, fontWeight: 850, textTransform: 'uppercase', letterSpacing: 1.5 }}>{label}</div>
+      <div style={{ color: T.ink, fontFamily: T.mono, fontSize: 38, fontWeight: 800, whiteSpace: 'nowrap' }}>{children}</div>
     </div>
   );
 };
@@ -1434,12 +1440,14 @@ const Scene08: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
   const formula = useCue(dividedAt, 0.35);
   const heading = useCue(firstAt, 0.3);
   const dial = useCueSpring(fiveAt, 28);
+  const distanceTransfer = useCueProgress(workingTwoFourAt, 0.85);
+  const timeTransfer = useCueProgress(workingEightAt, 0.85);
   const needleAngle = interpolate(dial, [0, 1], [-112, 18]);
 
   return (
     <LabBackground scene={8} label="worked conversion">
       <div style={{ position: 'absolute', left: 76, top: 126, width: 750, height: 365, borderRadius: 28, border: `2px solid ${T.cyan}55`, background: `${T.panel}d8`, overflow: 'hidden' }}>
-        <div style={{ position: 'absolute', left: 36, top: 28, color: T.textMuted, fontFamily: T.mono, fontSize: 19, letterSpacing: 2 }}>CYCLIST DATA</div>
+        <div style={{ position: 'absolute', left: 36, top: 28, color: T.textMuted, fontFamily: T.mono, fontSize: 28, letterSpacing: 2 }}>CYCLIST DATA</div>
         <Cyclist progress={cyclistProgress} />
         <div style={{ position: 'absolute', left: 58, right: 58, bottom: 57, height: 8, borderRadius: 8, background: `${T.card}66` }} />
         <div style={{ position: 'absolute', left: 54, bottom: 41, width: 4, height: 42, background: T.cyan }} />
@@ -1447,7 +1455,7 @@ const Scene08: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
       </div>
 
       <WarmCard accent={T.amber} style={{ position: 'absolute', left: 106, top: 530, width: 680, height: 235, padding: '28px 38px' }}>
-        <div style={{ color: '#687680', fontSize: 20, fontWeight: 800, letterSpacing: 1.5, textTransform: 'uppercase' }}>given</div>
+        <div style={{ color: '#687680', fontSize: 28, fontWeight: 800, letterSpacing: 1.5, textTransform: 'uppercase' }}>given</div>
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 32, marginTop: 34, fontSize: 56 }}>
           <NumberToken at={twoFourAt} suffix="km" color={T.ink}>2.4</NumberToken>
           <InlineToken at={eightAt} color="#83909a" style={{ fontSize: 35, fontWeight: 500 }}>in</InlineToken>
@@ -1458,16 +1466,16 @@ const Scene08: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
       <WarmCard accent={T.cyan} style={{ position: 'absolute', left: 862, top: 126, width: 976, height: 706, padding: '30px 44px' }}>
         <div style={{ color: T.ink, fontSize: 30, fontWeight: 900, marginBottom: 10, opacity: heading.opacity }}>Convert, then calculate</div>
         <WorkingRow label="distance" accent={T.cyan} at={firstAt}>
-          <InlineToken at={workingTwoFourAt}>2.4<span style={{ color: '#7b8991', fontWeight: 700 }}> km × </span></InlineToken>
+          <InlineToken at={workingTwoFourAt} style={{ background: T.card, borderRadius: 6, boxShadow: distanceTransfer < 1 ? `0 0 0 8px ${T.card}` : undefined, transform: `translate(${(1 - distanceTransfer) * -650}px, ${(1 - distanceTransfer) * 370}px)`, position: 'relative', zIndex: 5 }}>2.4<span style={{ color: '#7b8991', fontWeight: 700 }}> km × </span></InlineToken>
           <InlineToken at={thousandAt} color={T.amber} style={{ marginLeft: 10 }}>1000</InlineToken>
           <InlineToken at={twoFourHundredAt} color="#7b8991" style={{ margin: '0 10px' }}>=</InlineToken>
-          <InlineToken at={twoFourHundredAt} color={T.cyan}>2400<span style={{ fontSize: '0.7em' }}> m</span></InlineToken>
+          <InlineToken at={twoFourHundredAt} color={T.cyan}>2400<span style={{ fontSize: '0.75em' }}> m</span></InlineToken>
         </WorkingRow>
         <WorkingRow label="time" accent={T.amber} at={thenAt}>
-          <InlineToken at={workingEightAt}>8<span style={{ color: '#7b8991', fontWeight: 700 }}> min × </span></InlineToken>
+          <InlineToken at={workingEightAt} style={{ background: T.card, borderRadius: 6, boxShadow: timeTransfer < 1 ? `0 0 0 8px ${T.card}` : undefined, transform: `translate(${(1 - timeTransfer) * -360}px, ${(1 - timeTransfer) * 170}px)`, position: 'relative', zIndex: 5 }}>8<span style={{ color: '#7b8991', fontWeight: 700 }}> min × </span></InlineToken>
           <InlineToken at={sixtyAt} color={T.amber} style={{ marginLeft: 10 }}>60</InlineToken>
           <InlineToken at={fourEightyAt} color="#7b8991" style={{ margin: '0 10px' }}>=</InlineToken>
-          <InlineToken at={fourEightyAt} color={T.cyan}>480<span style={{ fontSize: '0.7em' }}> s</span></InlineToken>
+          <InlineToken at={fourEightyAt} color={T.cyan}>480<span style={{ fontSize: '0.75em' }}> s</span></InlineToken>
         </WorkingRow>
         <WorkingRow label="speed" accent={T.green} at={dividedAt}>
           <span style={{ opacity: formula.opacity, display: 'inline-flex', alignItems: 'center', gap: 10 }}>
@@ -1482,7 +1490,7 @@ const Scene08: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
         </WorkingRow>
       </WarmCard>
 
-      <div style={{ position: 'absolute', left: 396, bottom: 78, width: 350, height: 205, opacity: dial, transform: `scale(${0.82 + dial * 0.18})` }}>
+      <div style={{ position: 'absolute', left: 396, bottom: 78, width: 350, height: 240, opacity: dial, transform: `scale(${0.82 + dial * 0.18})` }}>
         <div style={{ position: 'absolute', left: 25, top: 18, width: 300, height: 150, borderRadius: '300px 300px 0 0', border: `16px solid ${T.cyan}`, borderBottom: 0, background: `${T.bgDeep}dd` }} />
         {[-100, -60, -20, 20, 60, 100].map((angle, index) => (
           <div key={angle} style={{ position: 'absolute', left: 171, top: 45, width: 4, height: 23, background: T.card, transformOrigin: 'center 113px', transform: `rotate(${angle}deg)` }} />
@@ -1512,8 +1520,8 @@ const MagneticTile: React.FC<{
   <SpringIn at={at} fromX={fromX} fromY={fromY} style={{ position: 'absolute', left: x, top: y }}>
     <WarmCard accent={color} style={{ width: 230, height: 160, display: 'grid', placeItems: 'center' }}>
       <div style={{ textAlign: 'center' }}>
-        <div style={{ color, fontFamily: T.mono, fontSize: 69, fontWeight: 950, lineHeight: 1 }}>{symbol}</div>
-        <div style={{ color: '#677680', fontSize: 19, fontWeight: 750, marginTop: 8 }}>{label}</div>
+        <div style={{ color: cardInk(color), fontFamily: T.mono, fontSize: 69, fontWeight: 950, lineHeight: 1 }}>{symbol}</div>
+        <div style={{ color: '#677680', fontSize: 28, fontWeight: 750, marginTop: 8 }}>{label}</div>
       </div>
     </WarmCard>
   </SpringIn>
@@ -1538,34 +1546,35 @@ const Scene09: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
       </Cued>
 
       <div style={{ position: 'absolute', left: 115, top: 257, width: 800, height: 560 }}>
-        <div style={{ position: 'absolute', left: 176, top: 235, width: 425, height: 6, borderRadius: 8, background: `${T.cyan}77`, opacity: speed }} />
-        <MagneticTile symbol="m" label="distance" color={T.cyan} at={speedAt} x={282} y={38} fromX={-180} fromY={-80} />
+        <div style={{ position: 'absolute', left: 282, top: 235, width: 230 + acceleration * 256, height: 6, borderRadius: 8, background: `${T.cyan}77`, opacity: speed }} />
+        <MagneticTile symbol="m" label="distance" color={T.cyan} at={speedAt} x={282 + acceleration * 128} y={38} fromX={-180} fromY={-80} />
         <MagneticTile symbol="s" label="time" color={T.amber} at={speedAt} x={282} y={292} fromX={180} fromY={100} />
+        <div style={{ position: 'absolute', left: 516, top: 346, color: T.amber, fontSize: 32, opacity: acceleration }}>×</div>
         <MagneticTile symbol="s" label="time again" color={T.amber} at={accelerationAt} x={538} y={292} fromX={190} fromY={0} />
 
-        <div style={{ position: 'absolute', left: 12, top: 194, width: 206, opacity: speed, transform: `translateX(${(1 - speed) * -30}px)` }}>
-          <div style={{ color: T.textMuted, fontFamily: T.mono, fontSize: 18, letterSpacing: 2 }}>SPEED</div>
+        <div style={{ position: 'absolute', left: 12, top: 170, width: 206, opacity: speed, transform: `translateX(${(1 - speed) * -30}px)` }}>
+          <div style={{ color: T.textMuted, fontFamily: T.mono, fontSize: 28, letterSpacing: 2 }}>SPEED</div>
           <div style={{ color: T.cyan, fontFamily: T.mono, fontSize: 45, fontWeight: 950, marginTop: 8 }}>m / s</div>
         </div>
-        <div style={{ position: 'absolute', right: -20, top: 194, width: 226, opacity: acceleration, transform: `translateX(${(1 - acceleration) * 30}px)` }}>
-          <div style={{ color: T.textMuted, fontFamily: T.mono, fontSize: 18, letterSpacing: 2 }}>ACCELERATION</div>
+        <div style={{ position: 'absolute', right: 0, top: 470, width: 430, opacity: acceleration, transform: `translateX(${(1 - acceleration) * 30}px)` }}>
+          <div style={{ color: T.textMuted, fontFamily: T.mono, fontSize: 28, letterSpacing: 2 }}>ACCELERATION</div>
           <div style={{ color: T.amber, fontFamily: T.mono, fontSize: 45, fontWeight: 950, marginTop: 8 }}>m / s²</div>
         </div>
       </div>
 
       <div style={{ position: 'absolute', left: 1010, top: 285, width: 735, height: 420, borderRadius: 30, border: `2px solid ${T.cyan}55`, background: `${T.panel}c9`, padding: '34px 42px' }}>
-        <div style={{ color: T.textMuted, fontFamily: T.mono, fontSize: 19, letterSpacing: 2 }}>VELOCITY CHANGE / EACH SECOND</div>
+        <div style={{ color: T.textMuted, fontFamily: T.mono, fontSize: 28, letterSpacing: 2 }}>VELOCITY CHANGE / EACH SECOND</div>
         <div style={{ position: 'relative', marginTop: 54, height: 230 }}>
           {[0, 1, 2, 3, 4].map((index) => {
             const local = Math.max(0, Math.min(1, arrowProgress * 5 - index));
             return (
-              <div key={index} style={{ position: 'absolute', left: index * 128, top: 150 - index * 27, opacity: local }}>
-                <MeasurementArrow width={70 + index * 25} color={index < 2 ? T.cyanSoft : T.cyan} progress={local} thickness={6} />
-                <div style={{ color: T.textMuted, fontFamily: T.mono, fontSize: 16, marginTop: 5 }}>t{index + 1}</div>
+              <div key={index} style={{ position: 'absolute', left: index * 120, top: 150 - index * 27, opacity: local }}>
+                <MeasurementArrow width={60 + index * 20} color={index < 2 ? T.cyanSoft : T.cyan} progress={local} thickness={6} />
+                <div style={{ position: 'absolute', left: 0, top: 40 + index * 27, color: T.textMuted, fontFamily: T.mono, fontSize: 28 }}>t{index + 1}</div>
               </div>
             );
           })}
-          <div style={{ position: 'absolute', left: 0, right: 0, bottom: 20, height: 4, borderRadius: 5, background: `${T.card}44` }} />
+          <div style={{ position: 'absolute', left: 0, right: 0, bottom: 0, height: 4, borderRadius: 5, background: `${T.card}44` }} />
         </div>
       </div>
 
@@ -1595,8 +1604,8 @@ const RecapCard: React.FC<{
   <SpringIn at={at} fromX={fromX} fromY={fromY} style={{ position: 'absolute', left: x, top: y }}>
     <WarmCard accent={color} style={{ width: 310, height: 172, display: 'grid', placeItems: 'center' }}>
       <div style={{ textAlign: 'center' }}>
-        <div style={{ color, fontFamily: T.mono, fontSize: 67, lineHeight: 1, fontWeight: 950 }}>{symbol}</div>
-        <div style={{ color: T.ink, fontSize: 27, fontWeight: 850, marginTop: 13 }}>{quantity}</div>
+        <div style={{ color: cardInk(color), fontFamily: T.mono, fontSize: 67, lineHeight: 1, fontWeight: 950 }}>{symbol}</div>
+        <div style={{ color: T.ink, fontSize: 28, fontWeight: 850, marginTop: 13 }}>{quantity}</div>
       </div>
     </WarmCard>
   </SpringIn>
@@ -1608,7 +1617,7 @@ const ChecklistItem: React.FC<{ at: number; label: string; index: number }> = ({
     <div style={{ display: 'flex', alignItems: 'center', gap: 19, opacity: progress, transform: `translateX(${(1 - progress) * 34}px)`, marginBottom: 26 }}>
       <div style={{ width: 53, height: 53, borderRadius: 15, display: 'grid', placeItems: 'center', background: T.green, color: T.bgDeep, fontSize: 31, fontWeight: 950, boxShadow: `0 0 22px ${T.green}44` }}>✓</div>
       <div>
-        <div style={{ color: T.textMuted, fontFamily: T.mono, fontSize: 15, letterSpacing: 2 }}>0{index}</div>
+        <div style={{ color: T.textMuted, fontFamily: T.mono, fontSize: 28, letterSpacing: 2 }}>0{index}</div>
         <div style={{ color: T.text, fontSize: 33, fontWeight: 850 }}>{label}</div>
       </div>
     </div>
@@ -1648,15 +1657,15 @@ const Scene10: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
         <RecapCard at={secondsAt} x={115} y={377} symbol="s" quantity="time" color={T.cyanSoft} fromX={-110} fromY={80} />
         <RecapCard at={kilogramsAt} x={685} y={377} symbol="kg" quantity="mass" color={T.amber} fromX={110} fromY={80} />
 
-        <div style={{ position: 'absolute', left: 998, top: 394, opacity: weight, transform: `translateX(${(1 - weight) * 44}px)` }}>
+        <div style={{ position: 'absolute', left: 1040, top: 394, opacity: weight, transform: `translateX(${(1 - weight) * 44}px)` }}>
           <ForceArrowDown length={118} opacity={weight} label="W" />
-          <div style={{ position: 'absolute', left: -20, top: 157, width: 150, color: T.amber, fontFamily: T.mono, fontSize: 22, fontWeight: 900, textAlign: 'center' }}>newtons</div>
+          <div style={{ position: 'absolute', left: -20, top: 157, width: 150, color: T.amber, fontFamily: T.mono, fontSize: 28, fontWeight: 900, textAlign: 'center' }}>newtons</div>
         </div>
-        <div style={{ position: 'absolute', left: 956, top: 351, opacity: weight, color: T.red, fontSize: 47, fontWeight: 950 }}>≠</div>
+        <div style={{ position: 'absolute', left: 1005, top: 330, opacity: weight, color: T.red, fontSize: 47, fontWeight: 950 }}>≠</div>
       </div>
 
       <div style={{ position: 'absolute', right: 90, top: 243, width: 525, height: 514, padding: '35px 38px', borderRadius: 30, background: `${T.panel}e3`, border: `2px solid ${T.green}55`, boxShadow: '0 20px 55px #0006' }}>
-        <div style={{ color: T.green, fontFamily: T.mono, fontSize: 19, letterSpacing: 2.2, marginBottom: 34 }}>FINAL CHECK</div>
+        <div style={{ color: T.green, fontFamily: T.mono, fontSize: 28, letterSpacing: 2.2, marginBottom: 34 }}>FINAL CHECK</div>
         <ChecklistItem at={convertAt} label="convert" index={1} />
         <ChecklistItem at={calculateAt} label="calculate" index={2} />
         <ChecklistItem at={unitAt} label="check the unit" index={3} />
