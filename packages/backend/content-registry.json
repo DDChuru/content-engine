@@ -916,7 +916,7 @@
           "slug": "mechanics-drawing-travel-graphs",
           "syllabus": "Cambridge 9709 Mechanics (Paper 4) · Kinematics",
           "syllabusCode": "M4.2c",
-          "status": "complete",
+          "status": "rebuilding",
           "createdAt": "2026-09-06",
           "pacing": "PACING.md standard: 8 scenes, two slow scenes (hand-written working at pen pace, 2 s holds, ELEVENLABS_SPEED 0.9)",
           "pipeline": "frame study → Sol notes/storyboard → Astra re-pace → Sol build on B → render on A → Fable review",
@@ -970,7 +970,10 @@
           "app": {
             "notesPage": "/notes/mechanics-drawing-travel-graphs",
             "mapCode": "M4.2c"
-          }
+          },
+          "reviewNotes": [
+            "2026-09-06 Durai: demonstration good but examples not clearly set up (needs spoken 'we will now look at…' + distance vs displacement idea before drawing); time-axis text collision ('6' over 't / s'); also lab chrome, g=9.8, 4 regions. Astra rebuild dispatched under TEACHING-STANDARD §1-8."
+          ]
         }
       },
       "inkTutor": {
