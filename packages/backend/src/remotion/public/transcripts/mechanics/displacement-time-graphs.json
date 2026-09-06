@@ -1,0 +1,1908 @@
+{
+  "project": "mechanics-displacement-time-graphs",
+  "sceneCount": 10,
+  "totalDuration": 161.280001,
+  "generatedAt": "2026-09-06T09:22:24.902048",
+  "engine": "faster-whisper-small (local)",
+  "scenes": [
+    {
+      "id": "s01",
+      "audio": "displacement-time-graphs-s01.mp3",
+      "duration": 7.653878,
+      "wordCount": 23,
+      "text": "A displacement time graph is a record of position. It shows where a particle is relative to a fixed origin as time passes.",
+      "words": [
+        {
+          "word": "A",
+          "start": 0.0,
+          "end": 0.14
+        },
+        {
+          "word": "displacement",
+          "start": 0.14,
+          "end": 0.48
+        },
+        {
+          "word": "time",
+          "start": 0.48,
+          "end": 0.9
+        },
+        {
+          "word": "graph",
+          "start": 0.9,
+          "end": 1.22
+        },
+        {
+          "word": "is",
+          "start": 1.22,
+          "end": 1.58
+        },
+        {
+          "word": "a",
+          "start": 1.58,
+          "end": 1.7
+        },
+        {
+          "word": "record",
+          "start": 1.7,
+          "end": 1.96
+        },
+        {
+          "word": "of",
+          "start": 1.96,
+          "end": 2.4
+        },
+        {
+          "word": "position.",
+          "start": 2.4,
+          "end": 2.8
+        },
+        {
+          "word": "It",
+          "start": 3.16,
+          "end": 3.28
+        },
+        {
+          "word": "shows",
+          "start": 3.28,
+          "end": 3.48
+        },
+        {
+          "word": "where",
+          "start": 3.48,
+          "end": 3.76
+        },
+        {
+          "word": "a",
+          "start": 3.76,
+          "end": 3.86
+        },
+        {
+          "word": "particle",
+          "start": 3.86,
+          "end": 4.2
+        },
+        {
+          "word": "is",
+          "start": 4.2,
+          "end": 4.64
+        },
+        {
+          "word": "relative",
+          "start": 4.64,
+          "end": 5.26
+        },
+        {
+          "word": "to",
+          "start": 5.26,
+          "end": 5.56
+        },
+        {
+          "word": "a",
+          "start": 5.56,
+          "end": 5.68
+        },
+        {
+          "word": "fixed",
+          "start": 5.68,
+          "end": 5.84
+        },
+        {
+          "word": "origin",
+          "start": 5.84,
+          "end": 6.28
+        },
+        {
+          "word": "as",
+          "start": 6.28,
+          "end": 6.7
+        },
+        {
+          "word": "time",
+          "start": 6.7,
+          "end": 6.9
+        },
+        {
+          "word": "passes.",
+          "start": 6.9,
+          "end": 7.12
+        }
+      ],
+      "cues": {
+        "record": 1.7,
+        "particle": 3.86,
+        "origin": 5.84
+      },
+      "generatedAt": "2026-09-06T09:22:24.902048",
+      "engine": "faster-whisper-small (local)"
+    },
+    {
+      "id": "s02",
+      "audio": "displacement-time-graphs-s02.mp3",
+      "duration": 14.393469,
+      "wordCount": 29,
+      "text": "Time runs across the graph. Displacement runs upward. Move the particle in the positive direction and the line rises. Every new point matches the particle's position at that instant.",
+      "words": [
+        {
+          "word": "Time",
+          "start": 0.0,
+          "end": 0.36
+        },
+        {
+          "word": "runs",
+          "start": 0.36,
+          "end": 0.78
+        },
+        {
+          "word": "across",
+          "start": 0.78,
+          "end": 1.14
+        },
+        {
+          "word": "the",
+          "start": 1.14,
+          "end": 1.36
+        },
+        {
+          "word": "graph.",
+          "start": 1.36,
+          "end": 1.66
+        },
+        {
+          "word": "Displacement",
+          "start": 2.44,
+          "end": 2.88
+        },
+        {
+          "word": "runs",
+          "start": 2.88,
+          "end": 3.24
+        },
+        {
+          "word": "upward.",
+          "start": 3.24,
+          "end": 3.56
+        },
+        {
+          "word": "Move",
+          "start": 4.18,
+          "end": 4.5
+        },
+        {
+          "word": "the",
+          "start": 4.5,
+          "end": 4.68
+        },
+        {
+          "word": "particle",
+          "start": 4.68,
+          "end": 5.0
+        },
+        {
+          "word": "in",
+          "start": 5.0,
+          "end": 5.82
+        },
+        {
+          "word": "the",
+          "start": 5.82,
+          "end": 5.92
+        },
+        {
+          "word": "positive",
+          "start": 5.92,
+          "end": 6.18
+        },
+        {
+          "word": "direction",
+          "start": 6.18,
+          "end": 6.72
+        },
+        {
+          "word": "and",
+          "start": 7.18,
+          "end": 7.54
+        },
+        {
+          "word": "the",
+          "start": 7.54,
+          "end": 7.68
+        },
+        {
+          "word": "line",
+          "start": 7.68,
+          "end": 8.02
+        },
+        {
+          "word": "rises.",
+          "start": 8.02,
+          "end": 8.72
+        },
+        {
+          "word": "Every",
+          "start": 9.8,
+          "end": 10.12
+        },
+        {
+          "word": "new",
+          "start": 10.12,
+          "end": 10.36
+        },
+        {
+          "word": "point",
+          "start": 10.36,
+          "end": 10.76
+        },
+        {
+          "word": "matches",
+          "start": 10.76,
+          "end": 11.46
+        },
+        {
+          "word": "the",
+          "start": 11.46,
+          "end": 11.72
+        },
+        {
+          "word": "particle's",
+          "start": 11.72,
+          "end": 12.24
+        },
+        {
+          "word": "position",
+          "start": 12.24,
+          "end": 12.66
+        },
+        {
+          "word": "at",
+          "start": 13.0,
+          "end": 13.36
+        },
+        {
+          "word": "that",
+          "start": 13.36,
+          "end": 13.56
+        },
+        {
+          "word": "instant.",
+          "start": 13.56,
+          "end": 13.88
+        }
+      ],
+      "cues": {
+        "time": 0.0,
+        "displacement": 2.44,
+        "positive-direction": 5.92,
+        "matches": 10.76
+      },
+      "generatedAt": "2026-09-06T09:22:24.902048",
+      "engine": "faster-whisper-small (local)"
+    },
+    {
+      "id": "s03",
+      "audio": "displacement-time-graphs-s03.mp3",
+      "duration": 10.396735,
+      "wordCount": 27,
+      "text": "The gradient tells us the velocity, a rising line gives positive velocity, a falling line gives negative velocity, and the steeper the line, the greater the speed.",
+      "words": [
+        {
+          "word": "The",
+          "start": 0.0,
+          "end": 0.16
+        },
+        {
+          "word": "gradient",
+          "start": 0.16,
+          "end": 0.56
+        },
+        {
+          "word": "tells",
+          "start": 0.56,
+          "end": 0.96
+        },
+        {
+          "word": "us",
+          "start": 0.96,
+          "end": 1.16
+        },
+        {
+          "word": "the",
+          "start": 1.16,
+          "end": 1.32
+        },
+        {
+          "word": "velocity,",
+          "start": 1.32,
+          "end": 1.78
+        },
+        {
+          "word": "a",
+          "start": 2.22,
+          "end": 2.32
+        },
+        {
+          "word": "rising",
+          "start": 2.32,
+          "end": 2.72
+        },
+        {
+          "word": "line",
+          "start": 2.72,
+          "end": 3.04
+        },
+        {
+          "word": "gives",
+          "start": 3.04,
+          "end": 3.5
+        },
+        {
+          "word": "positive",
+          "start": 3.5,
+          "end": 3.94
+        },
+        {
+          "word": "velocity,",
+          "start": 3.94,
+          "end": 4.5
+        },
+        {
+          "word": "a",
+          "start": 5.0,
+          "end": 5.06
+        },
+        {
+          "word": "falling",
+          "start": 5.06,
+          "end": 5.4
+        },
+        {
+          "word": "line",
+          "start": 5.4,
+          "end": 5.78
+        },
+        {
+          "word": "gives",
+          "start": 5.78,
+          "end": 6.18
+        },
+        {
+          "word": "negative",
+          "start": 6.18,
+          "end": 6.5
+        },
+        {
+          "word": "velocity,",
+          "start": 6.5,
+          "end": 7.06
+        },
+        {
+          "word": "and",
+          "start": 7.78,
+          "end": 7.82
+        },
+        {
+          "word": "the",
+          "start": 7.82,
+          "end": 7.96
+        },
+        {
+          "word": "steeper",
+          "start": 7.96,
+          "end": 8.4
+        },
+        {
+          "word": "the",
+          "start": 8.4,
+          "end": 8.48
+        },
+        {
+          "word": "line,",
+          "start": 8.48,
+          "end": 8.78
+        },
+        {
+          "word": "the",
+          "start": 9.16,
+          "end": 9.24
+        },
+        {
+          "word": "greater",
+          "start": 9.24,
+          "end": 9.5
+        },
+        {
+          "word": "the",
+          "start": 9.5,
+          "end": 9.7
+        },
+        {
+          "word": "speed.",
+          "start": 9.7,
+          "end": 9.94
+        }
+      ],
+      "cues": {
+        "gradient": 0.16,
+        "positive": 3.5,
+        "negative": 6.18,
+        "steeper": 7.96
+      },
+      "generatedAt": "2026-09-06T09:22:24.902048",
+      "engine": "faster-whisper-small (local)"
+    },
+    {
+      "id": "s04",
+      "audio": "displacement-time-graphs-s04.mp3",
+      "duration": 15.908571,
+      "wordCount": 33,
+      "text": "A straight sloping line has constant gradient, so velocity is constant, a horizontal line has zero gradient, so the particle is at rest, a curve has a changing gradient, so velocity is changing.",
+      "words": [
+        {
+          "word": "A",
+          "start": 0.0,
+          "end": 0.16
+        },
+        {
+          "word": "straight",
+          "start": 0.16,
+          "end": 0.5
+        },
+        {
+          "word": "sloping",
+          "start": 0.5,
+          "end": 1.1
+        },
+        {
+          "word": "line",
+          "start": 1.1,
+          "end": 1.32
+        },
+        {
+          "word": "has",
+          "start": 1.32,
+          "end": 1.78
+        },
+        {
+          "word": "constant",
+          "start": 1.78,
+          "end": 2.2
+        },
+        {
+          "word": "gradient,",
+          "start": 2.2,
+          "end": 2.72
+        },
+        {
+          "word": "so",
+          "start": 3.54,
+          "end": 3.82
+        },
+        {
+          "word": "velocity",
+          "start": 3.82,
+          "end": 4.28
+        },
+        {
+          "word": "is",
+          "start": 4.28,
+          "end": 5.16
+        },
+        {
+          "word": "constant,",
+          "start": 5.16,
+          "end": 5.5
+        },
+        {
+          "word": "a",
+          "start": 5.78,
+          "end": 5.98
+        },
+        {
+          "word": "horizontal",
+          "start": 5.98,
+          "end": 6.3
+        },
+        {
+          "word": "line",
+          "start": 6.3,
+          "end": 6.8
+        },
+        {
+          "word": "has",
+          "start": 6.8,
+          "end": 7.44
+        },
+        {
+          "word": "zero",
+          "start": 7.44,
+          "end": 7.78
+        },
+        {
+          "word": "gradient,",
+          "start": 7.78,
+          "end": 8.84
+        },
+        {
+          "word": "so",
+          "start": 9.56,
+          "end": 9.76
+        },
+        {
+          "word": "the",
+          "start": 9.76,
+          "end": 9.88
+        },
+        {
+          "word": "particle",
+          "start": 9.88,
+          "end": 10.18
+        },
+        {
+          "word": "is",
+          "start": 10.18,
+          "end": 10.64
+        },
+        {
+          "word": "at",
+          "start": 10.64,
+          "end": 10.78
+        },
+        {
+          "word": "rest,",
+          "start": 10.78,
+          "end": 11.1
+        },
+        {
+          "word": "a",
+          "start": 11.8,
+          "end": 11.9
+        },
+        {
+          "word": "curve",
+          "start": 11.9,
+          "end": 12.14
+        },
+        {
+          "word": "has",
+          "start": 12.14,
+          "end": 12.76
+        },
+        {
+          "word": "a",
+          "start": 12.76,
+          "end": 12.9
+        },
+        {
+          "word": "changing",
+          "start": 12.9,
+          "end": 13.14
+        },
+        {
+          "word": "gradient,",
+          "start": 13.14,
+          "end": 13.66
+        },
+        {
+          "word": "so",
+          "start": 14.16,
+          "end": 14.2
+        },
+        {
+          "word": "velocity",
+          "start": 14.2,
+          "end": 14.6
+        },
+        {
+          "word": "is",
+          "start": 14.6,
+          "end": 15.16
+        },
+        {
+          "word": "changing.",
+          "start": 15.16,
+          "end": 15.46
+        }
+      ],
+      "cues": {
+        "constant": 1.78,
+        "zero": 7.44,
+        "curve": 11.9,
+        "changing": 12.9
+      },
+      "generatedAt": "2026-09-06T09:22:24.902048",
+      "engine": "faster-whisper-small (local)"
+    },
+    {
+      "id": "s05",
+      "audio": "displacement-time-graphs-s05.mp3",
+      "duration": 15.36,
+      "wordCount": 33,
+      "text": "On a curve, velocity changes from moment to moment. Draw a tangent at the instant you need. Its gradient is the instantaneous velocity. As the tangent pivots, the velocity readout changes with it.",
+      "words": [
+        {
+          "word": "On",
+          "start": 0.0,
+          "end": 0.16
+        },
+        {
+          "word": "a",
+          "start": 0.16,
+          "end": 0.26
+        },
+        {
+          "word": "curve,",
+          "start": 0.26,
+          "end": 0.5
+        },
+        {
+          "word": "velocity",
+          "start": 1.12,
+          "end": 1.46
+        },
+        {
+          "word": "changes",
+          "start": 1.46,
+          "end": 1.9
+        },
+        {
+          "word": "from",
+          "start": 1.9,
+          "end": 2.38
+        },
+        {
+          "word": "moment",
+          "start": 2.38,
+          "end": 2.76
+        },
+        {
+          "word": "to",
+          "start": 2.76,
+          "end": 3.02
+        },
+        {
+          "word": "moment.",
+          "start": 3.02,
+          "end": 3.36
+        },
+        {
+          "word": "Draw",
+          "start": 4.06,
+          "end": 4.44
+        },
+        {
+          "word": "a",
+          "start": 4.44,
+          "end": 4.58
+        },
+        {
+          "word": "tangent",
+          "start": 4.58,
+          "end": 4.86
+        },
+        {
+          "word": "at",
+          "start": 4.86,
+          "end": 5.68
+        },
+        {
+          "word": "the",
+          "start": 5.68,
+          "end": 5.78
+        },
+        {
+          "word": "instant",
+          "start": 5.78,
+          "end": 6.02
+        },
+        {
+          "word": "you",
+          "start": 6.02,
+          "end": 6.28
+        },
+        {
+          "word": "need.",
+          "start": 6.28,
+          "end": 6.5
+        },
+        {
+          "word": "Its",
+          "start": 7.34,
+          "end": 7.48
+        },
+        {
+          "word": "gradient",
+          "start": 7.48,
+          "end": 7.94
+        },
+        {
+          "word": "is",
+          "start": 7.94,
+          "end": 8.4
+        },
+        {
+          "word": "the",
+          "start": 8.4,
+          "end": 8.54
+        },
+        {
+          "word": "instantaneous",
+          "start": 8.54,
+          "end": 9.08
+        },
+        {
+          "word": "velocity.",
+          "start": 9.08,
+          "end": 9.72
+        },
+        {
+          "word": "As",
+          "start": 10.58,
+          "end": 10.84
+        },
+        {
+          "word": "the",
+          "start": 10.84,
+          "end": 10.96
+        },
+        {
+          "word": "tangent",
+          "start": 10.96,
+          "end": 11.26
+        },
+        {
+          "word": "pivots,",
+          "start": 11.26,
+          "end": 11.86
+        },
+        {
+          "word": "the",
+          "start": 12.46,
+          "end": 12.56
+        },
+        {
+          "word": "velocity",
+          "start": 12.56,
+          "end": 12.94
+        },
+        {
+          "word": "readout",
+          "start": 12.94,
+          "end": 13.38
+        },
+        {
+          "word": "changes",
+          "start": 13.38,
+          "end": 13.84
+        },
+        {
+          "word": "with",
+          "start": 13.84,
+          "end": 14.78
+        },
+        {
+          "word": "it.",
+          "start": 14.78,
+          "end": 14.98
+        }
+      ],
+      "cues": {
+        "tangent": 4.58,
+        "instant": 5.78,
+        "gradient": 7.48,
+        "pivots": 11.26
+      },
+      "generatedAt": "2026-09-06T09:22:24.902048",
+      "engine": "faster-whisper-small (local)"
+    },
+    {
+      "id": "s06",
+      "audio": "displacement-time-graphs-s06.mp3",
+      "duration": 19.774694,
+      "wordCount": 43,
+      "text": "Now move back toward the origin. The graph falls at zero displacement. The particle is at the origin. Continue past it. And displacement becomes negative. The arrow flips because the particle is now on the negative side. Distance itself has not become negative.",
+      "words": [
+        {
+          "word": "Now",
+          "start": 0.0,
+          "end": 0.2
+        },
+        {
+          "word": "move",
+          "start": 0.2,
+          "end": 0.38
+        },
+        {
+          "word": "back",
+          "start": 0.38,
+          "end": 0.74
+        },
+        {
+          "word": "toward",
+          "start": 0.74,
+          "end": 1.04
+        },
+        {
+          "word": "the",
+          "start": 1.04,
+          "end": 1.28
+        },
+        {
+          "word": "origin.",
+          "start": 1.28,
+          "end": 1.6
+        },
+        {
+          "word": "The",
+          "start": 2.42,
+          "end": 2.46
+        },
+        {
+          "word": "graph",
+          "start": 2.46,
+          "end": 2.88
+        },
+        {
+          "word": "falls",
+          "start": 2.88,
+          "end": 3.54
+        },
+        {
+          "word": "at",
+          "start": 3.54,
+          "end": 4.46
+        },
+        {
+          "word": "zero",
+          "start": 4.46,
+          "end": 4.88
+        },
+        {
+          "word": "displacement.",
+          "start": 4.88,
+          "end": 5.68
+        },
+        {
+          "word": "The",
+          "start": 6.8,
+          "end": 6.92
+        },
+        {
+          "word": "particle",
+          "start": 6.92,
+          "end": 7.24
+        },
+        {
+          "word": "is",
+          "start": 7.24,
+          "end": 7.62
+        },
+        {
+          "word": "at",
+          "start": 7.62,
+          "end": 7.82
+        },
+        {
+          "word": "the",
+          "start": 7.82,
+          "end": 7.96
+        },
+        {
+          "word": "origin.",
+          "start": 7.96,
+          "end": 8.32
+        },
+        {
+          "word": "Continue",
+          "start": 8.9,
+          "end": 9.22
+        },
+        {
+          "word": "past",
+          "start": 9.22,
+          "end": 9.56
+        },
+        {
+          "word": "it.",
+          "start": 9.56,
+          "end": 9.78
+        },
+        {
+          "word": "And",
+          "start": 10.52,
+          "end": 10.62
+        },
+        {
+          "word": "displacement",
+          "start": 10.62,
+          "end": 11.06
+        },
+        {
+          "word": "becomes",
+          "start": 11.06,
+          "end": 11.7
+        },
+        {
+          "word": "negative.",
+          "start": 11.7,
+          "end": 12.04
+        },
+        {
+          "word": "The",
+          "start": 12.98,
+          "end": 13.06
+        },
+        {
+          "word": "arrow",
+          "start": 13.06,
+          "end": 13.34
+        },
+        {
+          "word": "flips",
+          "start": 13.34,
+          "end": 13.7
+        },
+        {
+          "word": "because",
+          "start": 13.7,
+          "end": 14.62
+        },
+        {
+          "word": "the",
+          "start": 14.62,
+          "end": 14.8
+        },
+        {
+          "word": "particle",
+          "start": 14.8,
+          "end": 15.14
+        },
+        {
+          "word": "is",
+          "start": 15.14,
+          "end": 15.34
+        },
+        {
+          "word": "now",
+          "start": 15.34,
+          "end": 15.58
+        },
+        {
+          "word": "on",
+          "start": 15.58,
+          "end": 15.76
+        },
+        {
+          "word": "the",
+          "start": 15.76,
+          "end": 15.88
+        },
+        {
+          "word": "negative",
+          "start": 15.88,
+          "end": 16.14
+        },
+        {
+          "word": "side.",
+          "start": 16.14,
+          "end": 16.52
+        },
+        {
+          "word": "Distance",
+          "start": 17.0,
+          "end": 17.4
+        },
+        {
+          "word": "itself",
+          "start": 17.4,
+          "end": 17.8
+        },
+        {
+          "word": "has",
+          "start": 17.8,
+          "end": 18.46
+        },
+        {
+          "word": "not",
+          "start": 18.46,
+          "end": 18.64
+        },
+        {
+          "word": "become",
+          "start": 18.64,
+          "end": 18.94
+        },
+        {
+          "word": "negative.",
+          "start": 18.94,
+          "end": 19.24
+        }
+      ],
+      "cues": {
+        "toward": 0.74,
+        "origin": 7.96,
+        "negative": 11.7,
+        "flips": 13.34
+      },
+      "generatedAt": "2026-09-06T09:22:24.902048",
+      "engine": "faster-whisper-small (local)"
+    },
+    {
+      "id": "s07",
+      "audio": "displacement-time-graphs-s07.mp3",
+      "duration": 18.416327,
+      "wordCount": 47,
+      "text": "Try one journey. The particle starts at 2 meters. It reaches 10 meters after 4 seconds. So its velocity is 2 meters per second. It rests until 6 seconds. Then it reaches minus 6 meters at 10 seconds. That final velocity is minus 4 meters per second.",
+      "words": [
+        {
+          "word": "Try",
+          "start": 0.0,
+          "end": 0.38
+        },
+        {
+          "word": "one",
+          "start": 0.38,
+          "end": 1.1
+        },
+        {
+          "word": "journey.",
+          "start": 1.1,
+          "end": 1.46
+        },
+        {
+          "word": "The",
+          "start": 2.32,
+          "end": 2.38
+        },
+        {
+          "word": "particle",
+          "start": 2.38,
+          "end": 2.76
+        },
+        {
+          "word": "starts",
+          "start": 2.76,
+          "end": 3.14
+        },
+        {
+          "word": "at",
+          "start": 3.14,
+          "end": 3.34
+        },
+        {
+          "word": "2",
+          "start": 3.34,
+          "end": 3.56
+        },
+        {
+          "word": "meters.",
+          "start": 3.56,
+          "end": 3.76
+        },
+        {
+          "word": "It",
+          "start": 4.46,
+          "end": 4.56
+        },
+        {
+          "word": "reaches",
+          "start": 4.56,
+          "end": 4.88
+        },
+        {
+          "word": "10",
+          "start": 4.88,
+          "end": 5.3
+        },
+        {
+          "word": "meters",
+          "start": 5.3,
+          "end": 5.72
+        },
+        {
+          "word": "after",
+          "start": 5.72,
+          "end": 6.4
+        },
+        {
+          "word": "4",
+          "start": 6.4,
+          "end": 6.68
+        },
+        {
+          "word": "seconds.",
+          "start": 6.68,
+          "end": 6.98
+        },
+        {
+          "word": "So",
+          "start": 7.68,
+          "end": 7.74
+        },
+        {
+          "word": "its",
+          "start": 7.74,
+          "end": 7.94
+        },
+        {
+          "word": "velocity",
+          "start": 7.94,
+          "end": 8.38
+        },
+        {
+          "word": "is",
+          "start": 8.38,
+          "end": 8.72
+        },
+        {
+          "word": "2",
+          "start": 8.72,
+          "end": 8.92
+        },
+        {
+          "word": "meters",
+          "start": 8.92,
+          "end": 9.06
+        },
+        {
+          "word": "per",
+          "start": 9.06,
+          "end": 9.28
+        },
+        {
+          "word": "second.",
+          "start": 9.28,
+          "end": 9.66
+        },
+        {
+          "word": "It",
+          "start": 10.1,
+          "end": 10.24
+        },
+        {
+          "word": "rests",
+          "start": 10.24,
+          "end": 10.62
+        },
+        {
+          "word": "until",
+          "start": 10.62,
+          "end": 10.9
+        },
+        {
+          "word": "6",
+          "start": 10.9,
+          "end": 11.28
+        },
+        {
+          "word": "seconds.",
+          "start": 11.28,
+          "end": 11.64
+        },
+        {
+          "word": "Then",
+          "start": 12.32,
+          "end": 12.48
+        },
+        {
+          "word": "it",
+          "start": 12.48,
+          "end": 12.74
+        },
+        {
+          "word": "reaches",
+          "start": 12.74,
+          "end": 13.12
+        },
+        {
+          "word": "minus",
+          "start": 13.12,
+          "end": 13.36
+        },
+        {
+          "word": "6",
+          "start": 13.36,
+          "end": 13.72
+        },
+        {
+          "word": "meters",
+          "start": 13.72,
+          "end": 14.04
+        },
+        {
+          "word": "at",
+          "start": 14.04,
+          "end": 14.26
+        },
+        {
+          "word": "10",
+          "start": 14.26,
+          "end": 14.48
+        },
+        {
+          "word": "seconds.",
+          "start": 14.48,
+          "end": 14.9
+        },
+        {
+          "word": "That",
+          "start": 15.5,
+          "end": 15.66
+        },
+        {
+          "word": "final",
+          "start": 15.66,
+          "end": 15.96
+        },
+        {
+          "word": "velocity",
+          "start": 15.96,
+          "end": 16.42
+        },
+        {
+          "word": "is",
+          "start": 16.42,
+          "end": 16.7
+        },
+        {
+          "word": "minus",
+          "start": 16.7,
+          "end": 16.94
+        },
+        {
+          "word": "4",
+          "start": 16.94,
+          "end": 17.28
+        },
+        {
+          "word": "meters",
+          "start": 17.28,
+          "end": 17.46
+        },
+        {
+          "word": "per",
+          "start": 17.46,
+          "end": 17.72
+        },
+        {
+          "word": "second.",
+          "start": 17.72,
+          "end": 17.98
+        }
+      ],
+      "cues": {
+        "two-metres": 3.34,
+        "ten-metres": 4.88,
+        "four-seconds": 6.4,
+        "two-metres-per-second": 8.72,
+        "rests": 10.24,
+        "six-seconds": 10.9,
+        "minus-six-metres": 13.12,
+        "ten-seconds": 14.26,
+        "minus-four-metres-per-second": 16.7
+      },
+      "generatedAt": "2026-09-06T09:22:24.902048",
+      "engine": "faster-whisper-small (local)"
+    },
+    {
+      "id": "s08",
+      "audio": "displacement-time-graphs-s08.mp3",
+      "duration": 14.628571,
+      "wordCount": 33,
+      "text": "Displacement compares the finish with the start. Here it is minus 8 meters. Distance adds the ground covered on every leg. 8 meters out, then 16 meters back, gives 24 meters in total.",
+      "words": [
+        {
+          "word": "Displacement",
+          "start": 0.0,
+          "end": 0.54
+        },
+        {
+          "word": "compares",
+          "start": 0.54,
+          "end": 0.92
+        },
+        {
+          "word": "the",
+          "start": 0.92,
+          "end": 1.16
+        },
+        {
+          "word": "finish",
+          "start": 1.16,
+          "end": 1.42
+        },
+        {
+          "word": "with",
+          "start": 1.42,
+          "end": 1.66
+        },
+        {
+          "word": "the",
+          "start": 1.66,
+          "end": 1.8
+        },
+        {
+          "word": "start.",
+          "start": 1.8,
+          "end": 2.08
+        },
+        {
+          "word": "Here",
+          "start": 2.92,
+          "end": 3.18
+        },
+        {
+          "word": "it",
+          "start": 3.18,
+          "end": 3.34
+        },
+        {
+          "word": "is",
+          "start": 3.34,
+          "end": 3.48
+        },
+        {
+          "word": "minus",
+          "start": 3.48,
+          "end": 3.7
+        },
+        {
+          "word": "8",
+          "start": 3.7,
+          "end": 4.04
+        },
+        {
+          "word": "meters.",
+          "start": 4.04,
+          "end": 4.34
+        },
+        {
+          "word": "Distance",
+          "start": 5.82,
+          "end": 6.26
+        },
+        {
+          "word": "adds",
+          "start": 6.26,
+          "end": 6.6
+        },
+        {
+          "word": "the",
+          "start": 6.6,
+          "end": 7.06
+        },
+        {
+          "word": "ground",
+          "start": 7.06,
+          "end": 7.38
+        },
+        {
+          "word": "covered",
+          "start": 7.38,
+          "end": 7.72
+        },
+        {
+          "word": "on",
+          "start": 7.72,
+          "end": 7.96
+        },
+        {
+          "word": "every",
+          "start": 7.96,
+          "end": 8.16
+        },
+        {
+          "word": "leg.",
+          "start": 8.16,
+          "end": 8.46
+        },
+        {
+          "word": "8",
+          "start": 9.4,
+          "end": 9.72
+        },
+        {
+          "word": "meters",
+          "start": 9.72,
+          "end": 9.98
+        },
+        {
+          "word": "out,",
+          "start": 9.98,
+          "end": 10.38
+        },
+        {
+          "word": "then",
+          "start": 11.06,
+          "end": 11.22
+        },
+        {
+          "word": "16",
+          "start": 11.22,
+          "end": 11.66
+        },
+        {
+          "word": "meters",
+          "start": 11.66,
+          "end": 12.02
+        },
+        {
+          "word": "back,",
+          "start": 12.02,
+          "end": 12.4
+        },
+        {
+          "word": "gives",
+          "start": 12.74,
+          "end": 13.02
+        },
+        {
+          "word": "24",
+          "start": 13.02,
+          "end": 13.44
+        },
+        {
+          "word": "meters",
+          "start": 13.44,
+          "end": 13.76
+        },
+        {
+          "word": "in",
+          "start": 13.76,
+          "end": 13.96
+        },
+        {
+          "word": "total.",
+          "start": 13.96,
+          "end": 14.16
+        }
+      ],
+      "cues": {
+        "finish": 1.16,
+        "minus-eight": 3.48,
+        "every-leg": 7.96,
+        "eight-metres-out": 9.4,
+        "sixteen-metres-back": 11.22,
+        "twenty-four": 13.02
+      },
+      "generatedAt": "2026-09-06T09:22:24.902048",
+      "engine": "faster-whisper-small (local)"
+    },
+    {
+      "id": "s09",
+      "audio": "displacement-time-graphs-s09.mp3",
+      "duration": 14.053878,
+      "wordCount": 29,
+      "text": "Divide by 10 seconds, average velocity is minus 0.8 meters per second. Average speed is 2.4 meters per second. One keeps direction, the other uses total distance.",
+      "words": [
+        {
+          "word": "Divide",
+          "start": 0.0,
+          "end": 0.42
+        },
+        {
+          "word": "by",
+          "start": 0.42,
+          "end": 0.54
+        },
+        {
+          "word": "10",
+          "start": 0.54,
+          "end": 0.78
+        },
+        {
+          "word": "seconds,",
+          "start": 0.78,
+          "end": 1.24
+        },
+        {
+          "word": "average",
+          "start": 1.9,
+          "end": 2.2
+        },
+        {
+          "word": "velocity",
+          "start": 2.2,
+          "end": 2.72
+        },
+        {
+          "word": "is",
+          "start": 2.72,
+          "end": 3.56
+        },
+        {
+          "word": "minus",
+          "start": 3.56,
+          "end": 3.8
+        },
+        {
+          "word": "0",
+          "start": 3.8,
+          "end": 4.2
+        },
+        {
+          "word": ".8",
+          "start": 4.2,
+          "end": 4.76
+        },
+        {
+          "word": "meters",
+          "start": 4.76,
+          "end": 5.02
+        },
+        {
+          "word": "per",
+          "start": 5.02,
+          "end": 5.3
+        },
+        {
+          "word": "second.",
+          "start": 5.3,
+          "end": 5.74
+        },
+        {
+          "word": "Average",
+          "start": 6.02,
+          "end": 6.76
+        },
+        {
+          "word": "speed",
+          "start": 6.76,
+          "end": 7.14
+        },
+        {
+          "word": "is",
+          "start": 7.14,
+          "end": 7.8
+        },
+        {
+          "word": "2",
+          "start": 7.8,
+          "end": 8.06
+        },
+        {
+          "word": ".4",
+          "start": 8.06,
+          "end": 8.56
+        },
+        {
+          "word": "meters",
+          "start": 8.56,
+          "end": 8.78
+        },
+        {
+          "word": "per",
+          "start": 8.78,
+          "end": 9.06
+        },
+        {
+          "word": "second.",
+          "start": 9.06,
+          "end": 9.44
+        },
+        {
+          "word": "One",
+          "start": 10.06,
+          "end": 10.26
+        },
+        {
+          "word": "keeps",
+          "start": 10.26,
+          "end": 10.5
+        },
+        {
+          "word": "direction,",
+          "start": 10.5,
+          "end": 10.96
+        },
+        {
+          "word": "the",
+          "start": 11.58,
+          "end": 11.68
+        },
+        {
+          "word": "other",
+          "start": 11.68,
+          "end": 11.92
+        },
+        {
+          "word": "uses",
+          "start": 11.92,
+          "end": 12.22
+        },
+        {
+          "word": "total",
+          "start": 12.22,
+          "end": 12.64
+        },
+        {
+          "word": "distance.",
+          "start": 12.64,
+          "end": 13.46
+        }
+      ],
+      "cues": {
+        "ten-seconds": 0.54,
+        "average-velocity": 1.9,
+        "minus-zero-point-eight": 3.56,
+        "average-speed": 6.02,
+        "two-point-four": 7.8,
+        "direction": 10.5
+      },
+      "generatedAt": "2026-09-06T09:22:24.902048",
+      "engine": "faster-whisper-small (local)"
+    },
+    {
+      "id": "s10",
+      "audio": "displacement-time-graphs-s10.mp3",
+      "duration": 30.693878,
+      "wordCount": 47,
+      "text": "Recap. A displacement time graph shows signed position against time. Its gradient is velocity. Straight means constant velocity. Horizontal means rest. A curve needs a tangent for velocity at one instant. Add absolute position changes for distance. Use endpoint change for displacement. Then keep the averages separate.",
+      "words": [
+        {
+          "word": "Recap.",
+          "start": 0.0,
+          "end": 0.4
+        },
+        {
+          "word": "A",
+          "start": 1.18,
+          "end": 1.36
+        },
+        {
+          "word": "displacement",
+          "start": 1.36,
+          "end": 1.72
+        },
+        {
+          "word": "time",
+          "start": 1.72,
+          "end": 2.26
+        },
+        {
+          "word": "graph",
+          "start": 2.26,
+          "end": 3.08
+        },
+        {
+          "word": "shows",
+          "start": 3.08,
+          "end": 3.96
+        },
+        {
+          "word": "signed",
+          "start": 3.96,
+          "end": 4.44
+        },
+        {
+          "word": "position",
+          "start": 4.44,
+          "end": 5.1
+        },
+        {
+          "word": "against",
+          "start": 5.1,
+          "end": 5.46
+        },
+        {
+          "word": "time.",
+          "start": 5.46,
+          "end": 5.9
+        },
+        {
+          "word": "Its",
+          "start": 6.7,
+          "end": 6.86
+        },
+        {
+          "word": "gradient",
+          "start": 6.86,
+          "end": 7.26
+        },
+        {
+          "word": "is",
+          "start": 7.26,
+          "end": 7.52
+        },
+        {
+          "word": "velocity.",
+          "start": 7.52,
+          "end": 7.88
+        },
+        {
+          "word": "Straight",
+          "start": 8.94,
+          "end": 9.28
+        },
+        {
+          "word": "means",
+          "start": 9.28,
+          "end": 10.04
+        },
+        {
+          "word": "constant",
+          "start": 10.04,
+          "end": 10.64
+        },
+        {
+          "word": "velocity.",
+          "start": 10.64,
+          "end": 11.38
+        },
+        {
+          "word": "Horizontal",
+          "start": 12.56,
+          "end": 13.12
+        },
+        {
+          "word": "means",
+          "start": 13.12,
+          "end": 13.36
+        },
+        {
+          "word": "rest.",
+          "start": 13.36,
+          "end": 13.76
+        },
+        {
+          "word": "A",
+          "start": 15.04,
+          "end": 15.18
+        },
+        {
+          "word": "curve",
+          "start": 15.18,
+          "end": 15.52
+        },
+        {
+          "word": "needs",
+          "start": 15.52,
+          "end": 16.3
+        },
+        {
+          "word": "a",
+          "start": 16.3,
+          "end": 16.48
+        },
+        {
+          "word": "tangent",
+          "start": 16.48,
+          "end": 16.76
+        },
+        {
+          "word": "for",
+          "start": 16.76,
+          "end": 17.78
+        },
+        {
+          "word": "velocity",
+          "start": 17.78,
+          "end": 18.22
+        },
+        {
+          "word": "at",
+          "start": 18.22,
+          "end": 18.7
+        },
+        {
+          "word": "one",
+          "start": 18.7,
+          "end": 18.88
+        },
+        {
+          "word": "instant.",
+          "start": 18.88,
+          "end": 19.24
+        },
+        {
+          "word": "Add",
+          "start": 20.02,
+          "end": 20.34
+        },
+        {
+          "word": "absolute",
+          "start": 20.34,
+          "end": 20.7
+        },
+        {
+          "word": "position",
+          "start": 20.7,
+          "end": 21.08
+        },
+        {
+          "word": "changes",
+          "start": 21.08,
+          "end": 21.48
+        },
+        {
+          "word": "for",
+          "start": 21.48,
+          "end": 22.3
+        },
+        {
+          "word": "distance.",
+          "start": 22.3,
+          "end": 22.62
+        },
+        {
+          "word": "Use",
+          "start": 23.52,
+          "end": 23.8
+        },
+        {
+          "word": "endpoint",
+          "start": 23.8,
+          "end": 24.38
+        },
+        {
+          "word": "change",
+          "start": 24.38,
+          "end": 25.62
+        },
+        {
+          "word": "for",
+          "start": 25.62,
+          "end": 26.44
+        },
+        {
+          "word": "displacement.",
+          "start": 26.44,
+          "end": 26.98
+        },
+        {
+          "word": "Then",
+          "start": 26.98,
+          "end": 28.28
+        },
+        {
+          "word": "keep",
+          "start": 28.28,
+          "end": 28.54
+        },
+        {
+          "word": "the",
+          "start": 28.54,
+          "end": 28.74
+        },
+        {
+          "word": "averages",
+          "start": 28.74,
+          "end": 29.3
+        },
+        {
+          "word": "separate.",
+          "start": 29.3,
+          "end": 30.08
+        }
+      ],
+      "cues": {
+        "gradient": 6.86,
+        "tangent": 16.48,
+        "distance": 22.3,
+        "endpoint-displacement": 26.44,
+        "separate": 29.3
+      },
+      "generatedAt": "2026-09-06T09:22:24.902048",
+      "engine": "faster-whisper-small (local)"
+    }
+  ]
+}
