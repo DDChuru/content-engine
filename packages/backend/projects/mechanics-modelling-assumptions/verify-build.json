@@ -1,0 +1,1607 @@
+{
+  "stillCount": 142,
+  "maxRegions": 3,
+  "maxWordsPerCardOrWorkingLine": 7,
+  "totalFrames": 11465,
+  "fps": 30,
+  "holdPairs": [
+    {
+      "scene": "s06",
+      "firstFrame": 6090,
+      "lastFrame": 6149,
+      "frames": 60,
+      "sha256": "2f8ee202a917c4014a1c9ca319c5b04017687c307227076c1892b9209f4cbd7b"
+    },
+    {
+      "scene": "s06",
+      "firstFrame": 6271,
+      "lastFrame": 6330,
+      "frames": 60,
+      "sha256": "a87b808a52d07646e5eb272a0efe579534424a1f3ca2ed59ccf876ef030ee4ba"
+    },
+    {
+      "scene": "s06",
+      "firstFrame": 6498,
+      "lastFrame": 6557,
+      "frames": 60,
+      "sha256": "cb7758951c8082ae14033175b15765ea2b3a0fc6cee0c2c5f74a1888cbcb9085"
+    },
+    {
+      "scene": "s06",
+      "firstFrame": 7925,
+      "lastFrame": 7984,
+      "frames": 60,
+      "sha256": "860db13c4112876bd72da730e2903356bb5069adcfd59bfeda5e761a9d687539"
+    },
+    {
+      "scene": "s06",
+      "firstFrame": 8254,
+      "lastFrame": 8313,
+      "frames": 60,
+      "sha256": "3490e5493cd5b3967fe8d257b2631b6758826aa572149dacf5ada26fc5404fd2"
+    },
+    {
+      "scene": "s06",
+      "firstFrame": 8577,
+      "lastFrame": 8636,
+      "frames": 60,
+      "sha256": "2e74a8e7f44481f02fb31c7fe14ab71ab184d67f61b9c94b1c29365f9ee8be7e"
+    },
+    {
+      "scene": "s07",
+      "firstFrame": 10167,
+      "lastFrame": 10256,
+      "frames": 90,
+      "sha256": "98d5b371f1687126c0c3ea7b00d8995937fefbadf9a8bafd9be76b3bc42d12ed"
+    }
+  ],
+  "stills": [
+    {
+      "frame": 9,
+      "cues": [
+        "s01:syllabus"
+      ],
+      "regions": 1,
+      "maxWords": 0,
+      "cards": []
+    },
+    {
+      "frame": 35,
+      "cues": [
+        "s01:smooth"
+      ],
+      "regions": 2,
+      "maxWords": 7,
+      "cards": [
+        "use the model of a \u2018smooth\u2019 contact"
+      ]
+    },
+    {
+      "frame": 104,
+      "cues": [
+        "s01:connected"
+      ],
+      "regions": 2,
+      "maxWords": 7,
+      "cards": [
+        "solve simple problems which may be modelled"
+      ]
+    },
+    {
+      "frame": 222,
+      "cues": [
+        "s01:continuation"
+      ],
+      "regions": 2,
+      "maxWords": 6,
+      "cards": [
+        "as the motion of connected particles."
+      ]
+    },
+    {
+      "frame": 289,
+      "cues": [
+        "s01:outcomes"
+      ],
+      "regions": 1,
+      "maxWords": 0,
+      "cards": []
+    },
+    {
+      "frame": 353,
+      "cues": [
+        "s01:explain"
+      ],
+      "regions": 2,
+      "maxWords": 7,
+      "cards": [
+        "Explain what modelling words let you ignore."
+      ]
+    },
+    {
+      "frame": 446,
+      "cues": [
+        "s01:find"
+      ],
+      "regions": 2,
+      "maxWords": 4,
+      "cards": [
+        "Find acceleration and tension."
+      ]
+    },
+    {
+      "frame": 500,
+      "cues": [
+        "s01:predict"
+      ],
+      "regions": 2,
+      "maxWords": 5,
+      "cards": [
+        "Predict changes when assumptions fail."
+      ]
+    },
+    {
+      "frame": 617,
+      "cues": [
+        "s02:hanging"
+      ],
+      "regions": 2,
+      "maxWords": 0,
+      "cards": []
+    },
+    {
+      "frame": 667,
+      "cues": [
+        "s02:box"
+      ],
+      "regions": 2,
+      "maxWords": 0,
+      "cards": []
+    },
+    {
+      "frame": 719,
+      "cues": [
+        "s02:table"
+      ],
+      "regions": 2,
+      "maxWords": 0,
+      "cards": []
+    },
+    {
+      "frame": 747,
+      "cues": [
+        "s02:string"
+      ],
+      "regions": 2,
+      "maxWords": 0,
+      "cards": []
+    },
+    {
+      "frame": 784,
+      "cues": [
+        "s02:pulley"
+      ],
+      "regions": 2,
+      "maxWords": 0,
+      "cards": []
+    },
+    {
+      "frame": 811,
+      "cues": [
+        "s02:particle"
+      ],
+      "regions": 3,
+      "maxWords": 1,
+      "cards": [
+        "Particle"
+      ]
+    },
+    {
+      "frame": 832,
+      "cues": [
+        "s02:mass"
+      ],
+      "regions": 3,
+      "maxWords": 1,
+      "cards": [
+        "Particle"
+      ]
+    },
+    {
+      "frame": 860,
+      "cues": [
+        "s02:size"
+      ],
+      "regions": 3,
+      "maxWords": 1,
+      "cards": [
+        "Particle"
+      ]
+    },
+    {
+      "frame": 958,
+      "cues": [
+        "s02:tips"
+      ],
+      "regions": 3,
+      "maxWords": 1,
+      "cards": [
+        "Particle"
+      ]
+    },
+    {
+      "frame": 1016,
+      "cues": [
+        "s02:air"
+      ],
+      "regions": 3,
+      "maxWords": 3,
+      "cards": [
+        "Air resistance neglected"
+      ]
+    },
+    {
+      "frame": 1142,
+      "cues": [
+        "s02:include"
+      ],
+      "regions": 3,
+      "maxWords": 3,
+      "cards": [
+        "Air resistance included"
+      ]
+    },
+    {
+      "frame": 1205,
+      "cues": [
+        "s02:drag"
+      ],
+      "regions": 3,
+      "maxWords": 3,
+      "cards": [
+        "Air resistance included"
+      ]
+    },
+    {
+      "frame": 1282,
+      "cues": [
+        "s03:light"
+      ],
+      "regions": 3,
+      "maxWords": 3,
+      "cards": [
+        "Light: negligible mass"
+      ]
+    },
+    {
+      "frame": 1378,
+      "cues": [
+        "s03:string"
+      ],
+      "regions": 3,
+      "maxWords": 2,
+      "cards": [
+        "Light string"
+      ]
+    },
+    {
+      "frame": 1518,
+      "cues": [
+        "s03:heavy"
+      ],
+      "regions": 3,
+      "maxWords": 2,
+      "cards": [
+        "Heavy string"
+      ]
+    },
+    {
+      "frame": 1571,
+      "cues": [
+        "s03:pulley"
+      ],
+      "regions": 3,
+      "maxWords": 2,
+      "cards": [
+        "Light pulley"
+      ]
+    },
+    {
+      "frame": 1702,
+      "cues": [
+        "s03:massive"
+      ],
+      "regions": 3,
+      "maxWords": 2,
+      "cards": [
+        "Massive pulley"
+      ]
+    },
+    {
+      "frame": 1737,
+      "cues": [
+        "s03:spin"
+      ],
+      "regions": 3,
+      "maxWords": 2,
+      "cards": [
+        "Massive pulley"
+      ]
+    },
+    {
+      "frame": 1825,
+      "cues": [
+        "s03:smooth"
+      ],
+      "regions": 3,
+      "maxWords": 2,
+      "cards": [
+        "Smooth pulley"
+      ]
+    },
+    {
+      "frame": 1870,
+      "cues": [
+        "s03:friction"
+      ],
+      "regions": 3,
+      "maxWords": 2,
+      "cards": [
+        "Smooth pulley"
+      ]
+    },
+    {
+      "frame": 1969,
+      "cues": [
+        "s03:equal"
+      ],
+      "regions": 3,
+      "maxWords": 2,
+      "cards": [
+        "Smooth pulley"
+      ]
+    },
+    {
+      "frame": 1981,
+      "cues": [
+        "s03:second-tension"
+      ],
+      "regions": 3,
+      "maxWords": 2,
+      "cards": [
+        "Smooth pulley"
+      ]
+    },
+    {
+      "frame": 2027,
+      "cues": [
+        "s03:rough"
+      ],
+      "regions": 3,
+      "maxWords": 2,
+      "cards": [
+        "Rough pulley"
+      ]
+    },
+    {
+      "frame": 2083,
+      "cues": [
+        "s03:unequal"
+      ],
+      "regions": 3,
+      "maxWords": 2,
+      "cards": [
+        "Rough pulley"
+      ]
+    },
+    {
+      "frame": 2130,
+      "cues": [
+        "s04:inextensible"
+      ],
+      "regions": 3,
+      "maxWords": 3,
+      "cards": [
+        "Inextensible: fixed length"
+      ]
+    },
+    {
+      "frame": 2237,
+      "cues": [
+        "s04:taut"
+      ],
+      "regions": 3,
+      "maxWords": 3,
+      "cards": [
+        "Inextensible: fixed length"
+      ]
+    },
+    {
+      "frame": 2290,
+      "cues": [
+        "s04:gained"
+      ],
+      "regions": 3,
+      "maxWords": 3,
+      "cards": [
+        "Inextensible: fixed length"
+      ]
+    },
+    {
+      "frame": 2336,
+      "cues": [
+        "s04:lost"
+      ],
+      "regions": 3,
+      "maxWords": 3,
+      "cards": [
+        "Inextensible: fixed length"
+      ]
+    },
+    {
+      "frame": 2415,
+      "cues": [
+        "s04:speed"
+      ],
+      "regions": 3,
+      "maxWords": 3,
+      "cards": [
+        "Inextensible: fixed length"
+      ]
+    },
+    {
+      "frame": 2463,
+      "cues": [
+        "s04:acceleration"
+      ],
+      "regions": 3,
+      "maxWords": 3,
+      "cards": [
+        "Inextensible: fixed length"
+      ]
+    },
+    {
+      "frame": 2528,
+      "cues": [
+        "s04:directions"
+      ],
+      "regions": 3,
+      "maxWords": 3,
+      "cards": [
+        "Inextensible: fixed length"
+      ]
+    },
+    {
+      "frame": 2582,
+      "cues": [
+        "s04:extensible"
+      ],
+      "regions": 3,
+      "maxWords": 4,
+      "cards": [
+        "Extensible: length can change"
+      ]
+    },
+    {
+      "frame": 2618,
+      "cues": [
+        "s04:stretch"
+      ],
+      "regions": 3,
+      "maxWords": 4,
+      "cards": [
+        "Extensible: length can change"
+      ]
+    },
+    {
+      "frame": 2719,
+      "cues": [
+        "s04:slack"
+      ],
+      "regions": 3,
+      "maxWords": 3,
+      "cards": [
+        "Slack: no tension"
+      ]
+    },
+    {
+      "frame": 2849,
+      "cues": [
+        "s04:no-tension"
+      ],
+      "regions": 3,
+      "maxWords": 3,
+      "cards": [
+        "Slack: no tension"
+      ]
+    },
+    {
+      "frame": 2876,
+      "cues": [
+        "s04:unlinked"
+      ],
+      "regions": 3,
+      "maxWords": 3,
+      "cards": [
+        "Slack: no tension"
+      ]
+    },
+    {
+      "frame": 2957,
+      "cues": [
+        "s05:other"
+      ],
+      "regions": 3,
+      "maxWords": 2,
+      "cards": [
+        "Extra vocabulary"
+      ]
+    },
+    {
+      "frame": 3240,
+      "cues": [
+        "s05:rod"
+      ],
+      "regions": 3,
+      "maxWords": 2,
+      "cards": [
+        "Rigid rod"
+      ]
+    },
+    {
+      "frame": 3402,
+      "cues": [
+        "s05:push"
+      ],
+      "regions": 3,
+      "maxWords": 2,
+      "cards": [
+        "Rigid rod"
+      ]
+    },
+    {
+      "frame": 3436,
+      "cues": [
+        "s05:pull"
+      ],
+      "regions": 3,
+      "maxWords": 2,
+      "cards": [
+        "Rigid rod"
+      ]
+    },
+    {
+      "frame": 3489,
+      "cues": [
+        "s05:flexible"
+      ],
+      "regions": 3,
+      "maxWords": 2,
+      "cards": [
+        "Flexible rod"
+      ]
+    },
+    {
+      "frame": 3536,
+      "cues": [
+        "s05:bends"
+      ],
+      "regions": 3,
+      "maxWords": 2,
+      "cards": [
+        "Flexible rod"
+      ]
+    },
+    {
+      "frame": 3578,
+      "cues": [
+        "s05:light-rod"
+      ],
+      "regions": 3,
+      "maxWords": 2,
+      "cards": [
+        "Light rod"
+      ]
+    },
+    {
+      "frame": 3677,
+      "cues": [
+        "s05:heavy-rod"
+      ],
+      "regions": 3,
+      "maxWords": 2,
+      "cards": [
+        "Heavy rod"
+      ]
+    },
+    {
+      "frame": 3694,
+      "cues": [
+        "s05:weight"
+      ],
+      "regions": 3,
+      "maxWords": 2,
+      "cards": [
+        "Heavy rod"
+      ]
+    },
+    {
+      "frame": 3749,
+      "cues": [
+        "s05:beam"
+      ],
+      "regions": 3,
+      "maxWords": 1,
+      "cards": [
+        "Beam"
+      ]
+    },
+    {
+      "frame": 3771,
+      "cues": [
+        "s05:positions"
+      ],
+      "regions": 3,
+      "maxWords": 1,
+      "cards": [
+        "Beam"
+      ]
+    },
+    {
+      "frame": 3840,
+      "cues": [
+        "s05:turning"
+      ],
+      "regions": 3,
+      "maxWords": 1,
+      "cards": [
+        "Beam"
+      ]
+    },
+    {
+      "frame": 3887,
+      "cues": [
+        "s05:uniform"
+      ],
+      "regions": 3,
+      "maxWords": 2,
+      "cards": [
+        "Uniform rod"
+      ]
+    },
+    {
+      "frame": 4065,
+      "cues": [
+        "s05:midpoint"
+      ],
+      "regions": 3,
+      "maxWords": 2,
+      "cards": [
+        "Uniform rod"
+      ]
+    },
+    {
+      "frame": 4108,
+      "cues": [
+        "s05:uneven-rod"
+      ],
+      "regions": 3,
+      "maxWords": 2,
+      "cards": [
+        "Non-uniform rod"
+      ]
+    },
+    {
+      "frame": 4143,
+      "cues": [
+        "s05:shift-rod"
+      ],
+      "regions": 3,
+      "maxWords": 2,
+      "cards": [
+        "Non-uniform rod"
+      ]
+    },
+    {
+      "frame": 4199,
+      "cues": [
+        "s05:lamina"
+      ],
+      "regions": 3,
+      "maxWords": 1,
+      "cards": [
+        "Lamina"
+      ]
+    },
+    {
+      "frame": 4329,
+      "cues": [
+        "s05:thickness"
+      ],
+      "regions": 3,
+      "maxWords": 1,
+      "cards": [
+        "Lamina"
+      ]
+    },
+    {
+      "frame": 4412,
+      "cues": [
+        "s05:plate"
+      ],
+      "regions": 3,
+      "maxWords": 2,
+      "cards": [
+        "Thick plate"
+      ]
+    },
+    {
+      "frame": 4509,
+      "cues": [
+        "s05:uniform-lamina"
+      ],
+      "regions": 3,
+      "maxWords": 2,
+      "cards": [
+        "Uniform lamina"
+      ]
+    },
+    {
+      "frame": 4634,
+      "cues": [
+        "s05:centroid"
+      ],
+      "regions": 3,
+      "maxWords": 2,
+      "cards": [
+        "Uniform lamina"
+      ]
+    },
+    {
+      "frame": 4676,
+      "cues": [
+        "s05:uneven-lamina"
+      ],
+      "regions": 3,
+      "maxWords": 2,
+      "cards": [
+        "Non-uniform lamina"
+      ]
+    },
+    {
+      "frame": 4714,
+      "cues": [
+        "s05:shift-lamina"
+      ],
+      "regions": 3,
+      "maxWords": 2,
+      "cards": [
+        "Non-uniform lamina"
+      ]
+    },
+    {
+      "frame": 4764,
+      "cues": [
+        "s05:bead"
+      ],
+      "regions": 3,
+      "maxWords": 1,
+      "cards": [
+        "Bead"
+      ]
+    },
+    {
+      "frame": 4788,
+      "cues": [
+        "s05:wire"
+      ],
+      "regions": 3,
+      "maxWords": 1,
+      "cards": [
+        "Bead"
+      ]
+    },
+    {
+      "frame": 4847,
+      "cues": [
+        "s05:detached"
+      ],
+      "regions": 3,
+      "maxWords": 1,
+      "cards": [
+        "Bead"
+      ]
+    },
+    {
+      "frame": 4932,
+      "cues": [
+        "s05:thin-wire"
+      ],
+      "regions": 3,
+      "maxWords": 1,
+      "cards": [
+        "Wire"
+      ]
+    },
+    {
+      "frame": 5040,
+      "cues": [
+        "s05:guide"
+      ],
+      "regions": 3,
+      "maxWords": 2,
+      "cards": [
+        "Thick guide"
+      ]
+    },
+    {
+      "frame": 5190,
+      "cues": [
+        "s05:normal"
+      ],
+      "regions": 3,
+      "maxWords": 2,
+      "cards": [
+        "Smooth wire"
+      ]
+    },
+    {
+      "frame": 5296,
+      "cues": [
+        "s05:wire-friction"
+      ],
+      "regions": 3,
+      "maxWords": 2,
+      "cards": [
+        "Rough wire"
+      ]
+    },
+    {
+      "frame": 5355,
+      "cues": [
+        "s05:peg"
+      ],
+      "regions": 3,
+      "maxWords": 2,
+      "cards": [
+        "Fixed peg"
+      ]
+    },
+    {
+      "frame": 5473,
+      "cues": [
+        "s05:moving"
+      ],
+      "regions": 3,
+      "maxWords": 2,
+      "cards": [
+        "Moving support"
+      ]
+    },
+    {
+      "frame": 5609,
+      "cues": [
+        "s05:smooth-peg"
+      ],
+      "regions": 3,
+      "maxWords": 2,
+      "cards": [
+        "Smooth peg"
+      ]
+    },
+    {
+      "frame": 5636,
+      "cues": [
+        "s05:peg-tension"
+      ],
+      "regions": 3,
+      "maxWords": 2,
+      "cards": [
+        "Smooth peg"
+      ]
+    },
+    {
+      "frame": 5812,
+      "cues": [
+        "s05:rough-peg"
+      ],
+      "regions": 3,
+      "maxWords": 2,
+      "cards": [
+        "Rough peg"
+      ]
+    },
+    {
+      "frame": 5837,
+      "cues": [
+        "s05:peg-unequal"
+      ],
+      "regions": 3,
+      "maxWords": 2,
+      "cards": [
+        "Rough peg"
+      ]
+    },
+    {
+      "frame": 5924,
+      "cues": [
+        "s06:find"
+      ],
+      "regions": 3,
+      "maxWords": 0,
+      "cards": []
+    },
+    {
+      "frame": 6048,
+      "cues": [
+        "s06:mass-three"
+      ],
+      "regions": 3,
+      "maxWords": 0,
+      "cards": []
+    },
+    {
+      "frame": 6090,
+      "cues": [
+        "s06:hold-0:0"
+      ],
+      "regions": 3,
+      "maxWords": 0,
+      "cards": []
+    },
+    {
+      "frame": 6149,
+      "cues": [
+        "s06:hold-0:59"
+      ],
+      "regions": 3,
+      "maxWords": 0,
+      "cards": []
+    },
+    {
+      "frame": 6154,
+      "cues": [
+        "s06:mass-two"
+      ],
+      "regions": 3,
+      "maxWords": 0,
+      "cards": []
+    },
+    {
+      "frame": 6271,
+      "cues": [
+        "s06:hold-1:0"
+      ],
+      "regions": 3,
+      "maxWords": 0,
+      "cards": []
+    },
+    {
+      "frame": 6330,
+      "cues": [
+        "s06:hold-1:59"
+      ],
+      "regions": 3,
+      "maxWords": 0,
+      "cards": []
+    },
+    {
+      "frame": 6336,
+      "cues": [
+        "s06:gravity"
+      ],
+      "regions": 3,
+      "maxWords": 0,
+      "cards": []
+    },
+    {
+      "frame": 6371,
+      "cues": [
+        "s06:ten"
+      ],
+      "regions": 3,
+      "maxWords": 0,
+      "cards": []
+    },
+    {
+      "frame": 6498,
+      "cues": [
+        "s06:hold-2:0"
+      ],
+      "regions": 3,
+      "maxWords": 0,
+      "cards": []
+    },
+    {
+      "frame": 6557,
+      "cues": [
+        "s06:hold-2:59"
+      ],
+      "regions": 3,
+      "maxWords": 0,
+      "cards": []
+    },
+    {
+      "frame": 6562,
+      "cues": [
+        "s06:forces"
+      ],
+      "regions": 3,
+      "maxWords": 0,
+      "cards": []
+    },
+    {
+      "frame": 6617,
+      "cues": [
+        "s06:box-weight"
+      ],
+      "regions": 3,
+      "maxWords": 0,
+      "cards": []
+    },
+    {
+      "frame": 6719,
+      "cues": [
+        "s06:reaction"
+      ],
+      "regions": 3,
+      "maxWords": 0,
+      "cards": []
+    },
+    {
+      "frame": 6793,
+      "cues": [
+        "s06:box-tension"
+      ],
+      "regions": 3,
+      "maxWords": 0,
+      "cards": []
+    },
+    {
+      "frame": 6862,
+      "cues": [
+        "s06:hanging-weight"
+      ],
+      "regions": 3,
+      "maxWords": 0,
+      "cards": []
+    },
+    {
+      "frame": 6950,
+      "cues": [
+        "s06:hanging-tension"
+      ],
+      "regions": 3,
+      "maxWords": 0,
+      "cards": []
+    },
+    {
+      "frame": 7018,
+      "cues": [
+        "s06:balance"
+      ],
+      "regions": 3,
+      "maxWords": 0,
+      "cards": []
+    },
+    {
+      "frame": 7129,
+      "cues": [
+        "s06:equations"
+      ],
+      "regions": 3,
+      "maxWords": 0,
+      "cards": []
+    },
+    {
+      "frame": 7181,
+      "cues": [
+        "s06:newton"
+      ],
+      "regions": 3,
+      "maxWords": 0,
+      "cards": []
+    },
+    {
+      "frame": 7404,
+      "cues": [
+        "s06:table-equation"
+      ],
+      "regions": 3,
+      "maxWords": 3,
+      "cards": [
+        "T = 3a"
+      ]
+    },
+    {
+      "frame": 7503,
+      "cues": [
+        "s06:hanging-equation"
+      ],
+      "regions": 3,
+      "maxWords": 5,
+      "cards": [
+        "T = 3a",
+        "2g - T = 2a"
+      ]
+    },
+    {
+      "frame": 7703,
+      "cues": [
+        "s06:add"
+      ],
+      "regions": 3,
+      "maxWords": 7,
+      "cards": [
+        "T = 3a",
+        "2g - T = 2a",
+        "2g = (3 + 2)a = 5a"
+      ]
+    },
+    {
+      "frame": 7822,
+      "cues": [
+        "s06:five"
+      ],
+      "regions": 3,
+      "maxWords": 7,
+      "cards": [
+        "T = 3a",
+        "2g - T = 2a",
+        "2g = (3 + 2)a = 5a"
+      ]
+    },
+    {
+      "frame": 7925,
+      "cues": [
+        "s06:hold-4:0"
+      ],
+      "regions": 3,
+      "maxWords": 7,
+      "cards": [
+        "T = 3a",
+        "2g - T = 2a",
+        "2g = (3 + 2)a = 5a"
+      ]
+    },
+    {
+      "frame": 7984,
+      "cues": [
+        "s06:hold-4:59"
+      ],
+      "regions": 3,
+      "maxWords": 7,
+      "cards": [
+        "T = 3a",
+        "2g - T = 2a",
+        "2g = (3 + 2)a = 5a"
+      ]
+    },
+    {
+      "frame": 7992,
+      "cues": [
+        "s06:acceleration"
+      ],
+      "regions": 3,
+      "maxWords": 7,
+      "cards": [
+        "2g = 5a",
+        "a = 2(10)/5 = 4 m s-2"
+      ]
+    },
+    {
+      "frame": 8073,
+      "cues": [
+        "s06:four"
+      ],
+      "regions": 3,
+      "maxWords": 7,
+      "cards": [
+        "2g = 5a",
+        "a = 2(10)/5 = 4 m s-2"
+      ]
+    },
+    {
+      "frame": 8254,
+      "cues": [
+        "s06:hold-6:0"
+      ],
+      "regions": 3,
+      "maxWords": 7,
+      "cards": [
+        "2g = 5a",
+        "a = 2(10)/5 = 4 m s-2"
+      ]
+    },
+    {
+      "frame": 8313,
+      "cues": [
+        "s06:hold-6:59"
+      ],
+      "regions": 3,
+      "maxWords": 7,
+      "cards": [
+        "2g = 5a",
+        "a = 2(10)/5 = 4 m s-2"
+      ]
+    },
+    {
+      "frame": 8319,
+      "cues": [
+        "s06:tension"
+      ],
+      "regions": 3,
+      "maxWords": 7,
+      "cards": [
+        "2g = 5a",
+        "a = 2(10)/5 = 4 m s-2"
+      ]
+    },
+    {
+      "frame": 8380,
+      "cues": [
+        "s06:substitute"
+      ],
+      "regions": 3,
+      "maxWords": 7,
+      "cards": [
+        "2g = 5a",
+        "a = 2(10)/5 = 4 m s-2",
+        "T = 3(4) = 12 N"
+      ]
+    },
+    {
+      "frame": 8464,
+      "cues": [
+        "s06:twelve"
+      ],
+      "regions": 3,
+      "maxWords": 7,
+      "cards": [
+        "2g = 5a",
+        "a = 2(10)/5 = 4 m s-2",
+        "T = 3(4) = 12 N"
+      ]
+    },
+    {
+      "frame": 8577,
+      "cues": [
+        "s06:hold-8:0"
+      ],
+      "regions": 3,
+      "maxWords": 7,
+      "cards": [
+        "2g = 5a",
+        "a = 2(10)/5 = 4 m s-2",
+        "T = 3(4) = 12 N"
+      ]
+    },
+    {
+      "frame": 8636,
+      "cues": [
+        "s06:hold-8:59"
+      ],
+      "regions": 3,
+      "maxWords": 7,
+      "cards": [
+        "2g = 5a",
+        "a = 2(10)/5 = 4 m s-2",
+        "T = 3(4) = 12 N"
+      ]
+    },
+    {
+      "frame": 8666,
+      "cues": [
+        "s07:plane"
+      ],
+      "regions": 3,
+      "maxWords": 5,
+      "cards": [
+        "a = 4 m s-2",
+        "Smooth table only"
+      ]
+    },
+    {
+      "frame": 8823,
+      "cues": [
+        "s07:curved"
+      ],
+      "regions": 3,
+      "maxWords": 5,
+      "cards": [
+        "a = 4 m s-2",
+        "Smooth table only"
+      ]
+    },
+    {
+      "frame": 8856,
+      "cues": [
+        "s07:bending"
+      ],
+      "regions": 3,
+      "maxWords": 5,
+      "cards": [
+        "a = 4 m s-2",
+        "Smooth table only"
+      ]
+    },
+    {
+      "frame": 9001,
+      "cues": [
+        "s07:smooth"
+      ],
+      "regions": 3,
+      "maxWords": 5,
+      "cards": [
+        "a = 4 m s-2",
+        "Smooth table only"
+      ]
+    },
+    {
+      "frame": 9158,
+      "cues": [
+        "s07:normal"
+      ],
+      "regions": 3,
+      "maxWords": 5,
+      "cards": [
+        "a = 4 m s-2",
+        "Smooth table only"
+      ]
+    },
+    {
+      "frame": 9226,
+      "cues": [
+        "s07:change"
+      ],
+      "regions": 3,
+      "maxWords": 5,
+      "cards": [
+        "a = 4 m s-2",
+        "Smooth table only"
+      ]
+    },
+    {
+      "frame": 9336,
+      "cues": [
+        "s07:rough"
+      ],
+      "regions": 3,
+      "maxWords": 5,
+      "cards": [
+        "a = 4 m s-2",
+        "Smooth table only"
+      ]
+    },
+    {
+      "frame": 9344,
+      "cues": [
+        "s07:friction"
+      ],
+      "regions": 3,
+      "maxWords": 5,
+      "cards": [
+        "a = 4 m s-2",
+        "Smooth table only"
+      ]
+    },
+    {
+      "frame": 9431,
+      "cues": [
+        "s07:slide"
+      ],
+      "regions": 3,
+      "maxWords": 5,
+      "cards": [
+        "a = 4 m s-2",
+        "Smooth table only"
+      ]
+    },
+    {
+      "frame": 9596,
+      "cues": [
+        "s07:table-equation"
+      ],
+      "regions": 3,
+      "maxWords": 5,
+      "cards": [
+        "T - F = 3a"
+      ]
+    },
+    {
+      "frame": 9725,
+      "cues": [
+        "s07:hanging-equation"
+      ],
+      "regions": 3,
+      "maxWords": 5,
+      "cards": [
+        "T - F = 3a",
+        "2g - T = 2a"
+      ]
+    },
+    {
+      "frame": 9803,
+      "cues": [
+        "s07:system-equation"
+      ],
+      "regions": 3,
+      "maxWords": 5,
+      "cards": [
+        "T - F = 3a",
+        "2g - T = 2a",
+        "2g - F = 5a"
+      ]
+    },
+    {
+      "frame": 9946,
+      "cues": [
+        "s07:less"
+      ],
+      "regions": 3,
+      "maxWords": 5,
+      "cards": [
+        "T - F = 3a",
+        "2g - T = 2a",
+        "2g - F = 5a"
+      ]
+    },
+    {
+      "frame": 10035,
+      "cues": [
+        "s07:question"
+      ],
+      "regions": 3,
+      "maxWords": 7,
+      "cards": [
+        "Does rough always mean F = \u03bcR?"
+      ]
+    },
+    {
+      "frame": 10167,
+      "cues": [
+        "s07:hold-2:0"
+      ],
+      "regions": 3,
+      "maxWords": 7,
+      "cards": [
+        "Does rough always mean F = \u03bcR?"
+      ]
+    },
+    {
+      "frame": 10256,
+      "cues": [
+        "s07:hold-2:89"
+      ],
+      "regions": 3,
+      "maxWords": 7,
+      "cards": [
+        "Does rough always mean F = \u03bcR?"
+      ]
+    },
+    {
+      "frame": 10259,
+      "cues": [
+        "s07:answer"
+      ],
+      "regions": 3,
+      "maxWords": 0,
+      "cards": []
+    },
+    {
+      "frame": 10296,
+      "cues": [
+        "s07:static"
+      ],
+      "regions": 3,
+      "maxWords": 5,
+      "cards": [
+        "0 \u2264 F \u2264 \u03bcR"
+      ]
+    },
+    {
+      "frame": 10441,
+      "cues": [
+        "s07:equality"
+      ],
+      "regions": 3,
+      "maxWords": 5,
+      "cards": [
+        "0 \u2264 F \u2264 \u03bcR",
+        "F = \u03bcR"
+      ]
+    },
+    {
+      "frame": 10474,
+      "cues": [
+        "s07:limiting"
+      ],
+      "regions": 3,
+      "maxWords": 5,
+      "cards": [
+        "0 \u2264 F \u2264 \u03bcR",
+        "F = \u03bcR",
+        "Limiting or stated sliding model"
+      ]
+    },
+    {
+      "frame": 10615,
+      "cues": [
+        "s07:check"
+      ],
+      "regions": 3,
+      "maxWords": 5,
+      "cards": [
+        "0 \u2264 F \u2264 \u03bcR",
+        "F = \u03bcR",
+        "Limiting or stated sliding model"
+      ]
+    },
+    {
+      "frame": 10847,
+      "cues": [
+        "s08:explain"
+      ],
+      "regions": 2,
+      "maxWords": 7,
+      "cards": [
+        "Explain what modelling words let you ignore."
+      ]
+    },
+    {
+      "frame": 10936,
+      "cues": [
+        "s08:tick-explain"
+      ],
+      "regions": 2,
+      "maxWords": 7,
+      "cards": [
+        "Explain what modelling words let you ignore."
+      ]
+    },
+    {
+      "frame": 11022,
+      "cues": [
+        "s08:find"
+      ],
+      "regions": 2,
+      "maxWords": 4,
+      "cards": [
+        "Find acceleration and tension."
+      ]
+    },
+    {
+      "frame": 11059,
+      "cues": [
+        "s08:tick-find"
+      ],
+      "regions": 2,
+      "maxWords": 4,
+      "cards": [
+        "Find acceleration and tension."
+      ]
+    },
+    {
+      "frame": 11192,
+      "cues": [
+        "s08:predict"
+      ],
+      "regions": 2,
+      "maxWords": 5,
+      "cards": [
+        "Predict changes when assumptions fail."
+      ]
+    },
+    {
+      "frame": 11260,
+      "cues": [
+        "s08:tick-predict"
+      ],
+      "regions": 2,
+      "maxWords": 5,
+      "cards": [
+        "Predict changes when assumptions fail."
+      ]
+    }
+  ]
+}

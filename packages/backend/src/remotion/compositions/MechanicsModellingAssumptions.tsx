@@ -1,14 +1,8 @@
-/**
- * Modelling Assumptions
- *
- * Eight narration-led mechanics-lab scenes. Brisk definition scenes use
- * Whisper cues; the two slow scenes preserve the storyboard's thinking time,
- * pen pace, and exact motion-free holds.
- */
-
-import React, { useMemo } from 'react';
+/** A plain, narration-led explanation of modelling assumptions. */
+import React, { useLayoutEffect, useMemo, useState, useRef } from 'react';
 import {
   AbsoluteFill,
+  Artifact,
   Audio,
   interpolate,
   staticFile,
@@ -24,265 +18,690 @@ import {
 import transcriptJson from '../public/transcripts/mechanics/modelling-assumptions.json';
 
 const TRANSITION_FRAMES = 15;
-const SCENE_SECONDS = [20, 20, 20, 20, 15, 75, 50, 20] as const;
-
 const T = {
-  bg: '#081521',
-  bgDeep: '#03101a',
-  panel: '#102a3a',
-  panelLight: '#183b4d',
-  paper: '#F7F1E6',
-  paperLine: '#9bbdcc',
-  ink: '#152a3a',
-  text: '#fffaf0',
-  muted: '#a8bdc7',
-  cyan: '#56D6E5',
-  amber: '#F5A623',
-  teal: '#49cbb2',
-  coral: '#ef7568',
-  green: '#77d59a',
-  purple: '#b69cff',
-  red: '#c94b42',
-  sans: 'Inter, ui-sans-serif, system-ui, sans-serif',
-  mono: '"JetBrains Mono", "SFMono-Regular", Consolas, monospace',
+  bg: '#171c20',
+  paper: '#f6f3eb',
+  ink: '#273238',
+  line: '#d8dad5',
+  text: '#e9e7e0',
+  muted: '#a9afad',
+  accent: '#3f9e89',
+  sans: 'Arial, sans-serif',
 };
+interface Word {
+  word: string;
+  start: number;
+  end: number;
+}
+interface Hold {
+  kind: string;
+  start: number;
+  end: number;
+  duration: number;
+}
+interface Scene {
+  id: string;
+  audio: string;
+  duration: number;
+  words: Word[];
+  cues: Record<string, number>;
+  holds: Hold[];
+  tempo: string;
+  voiceSpeed: number;
+}
+const SCENES = transcriptJson.scenes as unknown as Scene[];
+const OUTCOMES = [
+  'Explain what modelling words let you ignore.',
+  'Find acceleration and tension.',
+  'Predict changes when assumptions fail.',
+];
+const HEADERS = [
+  'What you will learn',
+  'What a particle model ignores',
+  'Why light and smooth give one tension',
+  'Why a taut string links the motion',
+  'What the other modelling words mean',
+  'Find acceleration and tension',
+  'What changes when the table is rough',
+  'By the end you can...',
+];
+export interface MechanicsModellingAssumptionsProps {
+  audioEnabled?: boolean;
+  audit?: boolean;
+}
+export function getMechanicsModellingAssumptionsDuration(fps: number): number {
+  return SCENES.reduce((n, s) => n + Math.ceil(s.duration * fps), 0);
+}
+const clamp = (n: number) => Math.max(0, Math.min(1, n));
+const mix = (a: number, b: number, p: number) => a + (b - a) * p;
+const progressBetween = (f: number, a: number, b: number) => clamp((f - a) / Math.max(1, b - a));
+function cue(s: Scene, id: string): number {
+  const t = s.cues[id];
+  if (t === undefined) throw new Error(`Missing cue ${s.id}:${id}`);
+  return t;
+}
+function useCue(s: Scene, id: string): boolean {
+  const f = useCurrentFrame();
+  const { fps } = useVideoConfig();
+  return f >= Math.ceil(cue(s, id) * fps);
+}
+function latest(s: Scene, t: number, ids: string[]): string {
+  return ids.filter((id) => t >= cue(s, id)).at(-1) ?? '';
+}
+function heldTime(s: Scene, t: number): number {
+  const hold = s.holds.find((h) => t >= h.start && t < h.end);
+  return hold ? hold.start : t;
+}
 
-type FadeThroughProps = { background: string };
-
-const FadeThrough: React.FC<TransitionPresentationComponentProps<FadeThroughProps>> = ({
+// Same fade-through presentation as MechanicsVelocityTimeGraphs: the two
+// scenes never remain visible together. Audio runs outside the fade overlap.
+type FadeProps = { background: string };
+const FadeThrough: React.FC<TransitionPresentationComponentProps<FadeProps>> = ({
   children,
   passedProps,
   presentationDirection,
   presentationProgress,
 }) => {
-  const opacity = presentationDirection === 'exiting'
-    ? interpolate(presentationProgress, [0, 0.5], [1, 0], {
-      extrapolateLeft: 'clamp',
-      extrapolateRight: 'clamp',
-    })
-    : interpolate(presentationProgress, [0.5, 1], [0, 1], {
-      extrapolateLeft: 'clamp',
-      extrapolateRight: 'clamp',
-    });
-
+  const opacity =
+    presentationDirection === 'exiting'
+      ? interpolate(presentationProgress, [0, 0.5], [1, 0], {
+          extrapolateLeft: 'clamp',
+          extrapolateRight: 'clamp',
+        })
+      : interpolate(presentationProgress, [0.5, 1], [0, 1], {
+          extrapolateLeft: 'clamp',
+          extrapolateRight: 'clamp',
+        });
   return <AbsoluteFill style={{ background: passedProps.background, opacity }}>{children}</AbsoluteFill>;
 };
-
-const fadeThroughGraphite: TransitionPresentation<FadeThroughProps> = {
+const fadeThroughGraphite: TransitionPresentation<FadeProps> = {
   component: FadeThrough,
   props: { background: T.bg },
 };
 
-interface TranscriptWord {
-  word: string;
-  start: number;
-  end: number;
-}
-
-interface TranscriptScene {
-  id: string;
-  audio: string;
-  duration: number;
-  wordCount: number;
-  text: string;
-  words: TranscriptWord[];
-  cues: Record<string, number>;
-}
-
-interface MechanicsTranscript {
-  project: string;
-  scenes: TranscriptScene[];
-  totalDuration: number;
-  generatedAt: string;
-  engine: string;
-}
-
-const TRANSCRIPT = transcriptJson as unknown as MechanicsTranscript;
-
-const normalize = (value: string): string => value.toLowerCase().replace(/[^a-z0-9]+/g, '');
-
-function cueAt(scene: TranscriptScene, cueName: string): number {
-  const match = Object.entries(scene.cues).find(([name]) => normalize(name) === normalize(cueName));
-  return match?.[1] ?? scene.duration + 1;
-}
-
-function wordAt(scene: TranscriptScene, word: string, fallback: number, occurrence = 1): number {
-  const matches = scene.words.filter((candidate) => normalize(candidate.word) === normalize(word));
-  return matches[occurrence - 1]?.start ?? fallback;
-}
-
-function getScene(id: string): TranscriptScene {
-  const scene = TRANSCRIPT.scenes.find((candidate) => candidate.id === id);
-  if (!scene) throw new Error(`Missing transcript scene: ${id}`);
-  return scene;
-}
-
-function sequenceDurationInFrames(index: number, fps: number): number {
-  return SCENE_SECONDS[index] * fps + (index < SCENE_SECONDS.length - 1 ? TRANSITION_FRAMES : 0);
-}
-
-export function getMechanicsModellingAssumptionsDuration(fps: number): number {
-  return SCENE_SECONDS.reduce((sum, seconds) => sum + seconds * fps, 0);
-}
-
-export interface MechanicsModellingAssumptionsProps {
-  audioEnabled?: boolean;
-}
-
-const clamp = (value: number, min = 0, max = 1): number => Math.min(max, Math.max(min, value));
-const mix = (from: number, to: number, progress: number): number => from + (to - from) * progress;
-
-function progressBetween(frame: number, start: number, end: number): number {
-  return interpolate(frame, [start, Math.max(start + 1, end)], [0, 1], {
-    extrapolateLeft: 'clamp',
-    extrapolateRight: 'clamp',
-  });
-}
-
-function secondsProgress(frame: number, fps: number, start: number, end: number): number {
-  return progressBetween(frame, start * fps, end * fps);
-}
-
-function useCue(cueTimeSeconds: number, fadeDuration = 0.5): { opacity: number; isActive: boolean } {
-  const frame = useCurrentFrame();
-  const { fps } = useVideoConfig();
-  const cueFrame = cueTimeSeconds * fps;
-  const opacity = interpolate(frame, [cueFrame, cueFrame + fadeDuration * fps], [0, 1], {
-    extrapolateLeft: 'clamp',
-    extrapolateRight: 'clamp',
-  });
-  return { opacity, isActive: frame >= cueFrame };
-}
-
-const darkInk = (color: string): string => ({
-  [T.cyan]: '#087782',
-  [T.amber]: '#8c5200',
-  [T.teal]: '#15705f',
-  [T.coral]: '#a5342d',
-  [T.green]: '#216c42',
-  [T.purple]: '#653c97',
-}[color] ?? color);
-
-const LabShell: React.FC<{
-  scene: number;
-  label: string;
-  children: React.ReactNode;
-}> = ({ scene, label, children }) => (
-  <AbsoluteFill style={{ overflow: 'hidden', isolation: 'isolate', background: T.bg, fontFamily: T.sans }}>
-    <AbsoluteFill style={{ background: `radial-gradient(circle at 18% 12%, ${T.cyan}12, transparent 34%), radial-gradient(circle at 88% 84%, ${T.amber}0d, transparent 31%), linear-gradient(145deg, ${T.bgDeep}, ${T.bg})` }} />
-    <AbsoluteFill style={{ opacity: 0.11, backgroundImage: `linear-gradient(${T.cyan}2a 1px, transparent 1px), linear-gradient(90deg, ${T.cyan}2a 1px, transparent 1px)`, backgroundSize: '64px 64px' }} />
-    <div style={{ position: 'absolute', left: 58, top: 43, color: T.muted, fontFamily: T.mono, fontSize: 28, letterSpacing: 2.5 }}>MECHANICS LAB · MODEL BAY</div>
-    <div style={{ position: 'absolute', right: 58, top: 39, display: 'flex', alignItems: 'center', gap: 14, padding: '10px 18px', borderRadius: 999, border: `1px solid ${T.cyan}66`, background: `${T.bgDeep}ee`, color: T.muted, fontFamily: T.mono, fontSize: 28, letterSpacing: 1.2, whiteSpace: 'nowrap', zIndex: 40 }}>
-      <span style={{ color: T.cyan, fontWeight: 950 }}>{String(scene).padStart(2, '0')} / 08</span>
-      <span>{label.toUpperCase()}</span>
-    </div>
+const Header: React.FC<{ children: React.ReactNode }> = ({ children }) => (
+  <div
+    data-region="header"
+    style={{ position: 'absolute', left: 100, top: 72, color: T.text, fontSize: 57, fontWeight: 600 }}
+  >
     {children}
-    <div style={{ position: 'absolute', left: 58, right: 58, bottom: 34, height: 2, background: `linear-gradient(90deg, transparent, ${T.cyan}66 14%, ${T.cyan}66 86%, transparent)` }} />
-  </AbsoluteFill>
-);
-
-const SectionTitle: React.FC<{ kicker: string; children: React.ReactNode }> = ({ kicker, children }) => (
-  <div style={{ position: 'absolute', left: 76, top: 101, zIndex: 20 }}>
-    <div style={{ color: T.cyan, fontFamily: T.mono, fontSize: 28, fontWeight: 900, letterSpacing: 2.2, textTransform: 'uppercase' }}>{kicker}</div>
-    <div style={{ color: T.text, fontSize: 49, lineHeight: 1.08, fontWeight: 930, marginTop: 7 }}>{children}</div>
   </div>
 );
+const Card: React.FC<{ text: string; centre?: boolean; tick?: boolean }> = ({
+  text,
+  centre = false,
+  tick = false,
+}) => (
+  <div
+    data-region="card"
+    data-card="true"
+    style={{
+      position: 'absolute',
+      left: centre ? 300 : 1050,
+      top: centre ? 330 : 370,
+      width: centre ? 1320 : 740,
+      minHeight: 230,
+      padding: '55px 58px',
+      boxSizing: 'border-box',
+      background: T.paper,
+      color: T.ink,
+      fontSize: centre ? 62 : 52,
+      lineHeight: 1.35,
+      borderRadius: 8,
+    }}
+  >
+    {text}
+    {tick && (
+      <svg
+        aria-hidden="true"
+        width="70"
+        height="60"
+        viewBox="0 0 70 60"
+        style={{ display: 'block', marginTop: 28 }}
+      >
+        <path d="M8 28 L27 47 L61 9" fill="none" stroke={T.accent} strokeWidth="7" strokeLinecap="round" />
+      </svg>
+    )}
+  </div>
+);
+const Diagram: React.FC<{ children: React.ReactNode }> = ({ children }) => (
+  <svg
+    data-region="diagram"
+    viewBox="0 0 850 710"
+    width="850"
+    height="710"
+    style={{ position: 'absolute', left: 100, top: 240, overflow: 'visible' }}
+  >
+    <defs>
+      <marker
+        id="model-arrow"
+        markerWidth="9"
+        markerHeight="9"
+        refX="7"
+        refY="4"
+        orient="auto-start-reverse"
+        markerUnits="strokeWidth"
+      >
+        <path d="M0 0 L8 4 L0 8" fill="context-stroke" />
+      </marker>
+    </defs>
+    {children}
+  </svg>
+);
+const Arrow: React.FC<{
+  x: number;
+  y: number;
+  dx: number;
+  dy: number;
+  label?: string;
+  accent?: boolean;
+  dashed?: boolean;
+}> = ({ x, y, dx, dy, label, accent = false, dashed = false }) => (
+  <g fill={accent ? T.accent : T.text} stroke={accent ? T.accent : T.text}>
+    <path
+      d={`M${x} ${y} l${dx} ${dy}`}
+      fill="none"
+      strokeWidth="5"
+      strokeDasharray={dashed ? '9 8' : undefined}
+      markerEnd="url(#model-arrow)"
+    />
+    {label && (
+      <text
+        x={x + dx / 2 + (dx ? 0 : 27)}
+        y={y + dy / 2 - (dx ? 22 : 0)}
+        stroke="none"
+        fontSize="35"
+        textAnchor={dx ? 'middle' : 'start'}
+      >
+        {label}
+      </text>
+    )}
+  </g>
+);
+const Ring: React.FC<{ x: number; y: number; rx?: number }> = ({ x, y, rx = 65 }) => (
+  <ellipse cx={x} cy={y} rx={rx} ry="40" fill="none" stroke={T.accent} strokeWidth="5" />
+);
 
-const Reveal: React.FC<{
-  at: number;
-  children: React.ReactNode;
-  style?: React.CSSProperties;
-  fromX?: number;
-  fromY?: number;
-}> = ({ at, children, style, fromX = 0, fromY = 20 }) => {
-  const cue = useCue(at, 0.38);
+interface SystemProps {
+  parts?: string[];
+  particle?: boolean;
+  tip?: boolean;
+  drag?: boolean;
+  heavyString?: boolean;
+  massivePulley?: boolean;
+  roughPulley?: boolean;
+  tensions?: number;
+  unequal?: boolean;
+  motion?: number;
+  extensible?: boolean;
+  slack?: boolean;
+  travel?: number;
+  acceleration?: boolean;
+  rough?: boolean;
+  curve?: boolean;
+  bend?: boolean;
+  masses?: number;
+  gravity?: boolean;
+  forceCount?: number;
+  friction?: boolean;
+  ring?: number;
+}
+const System: React.FC<SystemProps> = ({
+  parts,
+  particle,
+  tip,
+  drag,
+  heavyString,
+  massivePulley,
+  roughPulley,
+  tensions = 0,
+  unequal,
+  motion = 0,
+  extensible,
+  slack,
+  travel = 0,
+  acceleration,
+  rough,
+  curve,
+  bend,
+  masses = 0,
+  gravity,
+  forceCount = 0,
+  friction,
+  ring = -1,
+}) => {
+  const show = (name: string) => !parts || parts.includes(name);
+  const bx = 220 + (extensible ? 0 : motion),
+    by = 270;
+  const hy = 470 + (slack ? 0 : motion);
   return (
-    <div style={{ opacity: cue.opacity, transform: `translate(${(1 - cue.opacity) * fromX}px, ${(1 - cue.opacity) * fromY}px)`, ...style }}>
-      {children}
-    </div>
+    <g fill="none" stroke={T.text} strokeWidth="5" strokeLinejoin="round">
+      {show('table') && (
+        <g>
+          <path d={curve ? 'M60 370 Q340 280 570 370' : bend ? 'M60 370 Q340 430 570 370' : 'M60 370 H570'} />
+          <path d="M110 375 V635 M535 375 V635" stroke={T.muted} strokeWidth="4" />
+        </g>
+      )}
+      {rough &&
+        Array.from({ length: 18 }, (_, i) => (
+          <path key={i} d={`M${95 + i * 25} 370 l12 10`} stroke={T.muted} strokeWidth="3" />
+        ))}
+      {show('pulley') && (
+        <g>
+          <path d="M575 370 L620 365" stroke={T.muted} />
+          <circle
+            cx="620"
+            cy="365"
+            r="45"
+            stroke={massivePulley ? T.accent : T.text}
+            strokeWidth={massivePulley ? 16 : 5}
+          />
+          <circle cx="620" cy="365" r="7" fill={T.text} />
+        </g>
+      )}
+      {show('string') && (
+        <path
+          d={
+            slack
+              ? `M${bx + 115} 320 Q465 435 620 320 A45 45 0 0 1 665 365 Q695 425 665 ${hy}`
+              : `M${particle ? bx + 58 : bx + 115} 320 H620 A45 45 0 0 1 665 365 V${hy}`
+          }
+          stroke={heavyString || extensible ? T.accent : T.text}
+          strokeWidth={heavyString ? 12 : 4}
+          strokeDasharray={extensible ? '8 5' : undefined}
+        />
+      )}
+      {show('box') && (
+        <g transform={tip ? `rotate(-20 ${bx + 115} 370)` : undefined}>
+          {particle ? (
+            <circle cx={bx + 58} cy="320" r="12" fill={T.text} />
+          ) : (
+            <rect x={bx} y={by} width="115" height="100" rx="5" fill={T.bg} />
+          )}
+        </g>
+      )}
+      {show('hanging') && <rect x="613" y={hy} width="104" height="110" rx="5" fill={T.bg} />}
+      {masses >= 1 && (
+        <text x={bx + 57} y="334" fill={T.text} stroke="none" fontSize="34" textAnchor="middle">
+          3 kg
+        </text>
+      )}
+      {masses >= 2 && (
+        <text x="665" y={hy + 66} fill={T.text} stroke="none" fontSize="34" textAnchor="middle">
+          2 kg
+        </text>
+      )}
+      {gravity && (
+        <text x="190" y="680" fill={T.text} stroke="none" fontSize="34">
+          g = 10 m s⁻²
+        </text>
+      )}
+      {drag && <Arrow x={bx} y={310} dx={-130} dy={0} label="Drag" accent />}
+      {heavyString && <Arrow x={460} y={280} dx={0} dy={100} label="Weight" accent />}
+      {tensions >= 1 && <Arrow x={380} y={228} dx={105} dy={0} label={unequal ? 'T₁' : 'T'} accent />}
+      {tensions >= 2 && <Arrow x={750} y={428} dx={0} dy={-105} label={unequal ? 'T₂' : 'T'} accent />}
+      {roughPulley && (
+        <path d="M605 323 l5 12 m10 -15 l2 15 m13 -13 l-5 15 m17 -6 l-12 10" stroke={T.accent} />
+      )}
+      {travel >= 1 && <Arrow x={795} y={480} dx={0} dy={80} label={acceleration ? 'a' : 'd'} accent dashed />}
+      {travel >= 2 && (
+        <Arrow x={bx + 10} y={210} dx={80} dy={0} label={acceleration ? 'a' : 'd'} accent dashed />
+      )}
+      {forceCount >= 1 && <Arrow x={bx + 58} y={370} dx={0} dy={115} label="3g" />}
+      {forceCount >= 2 && <Arrow x={bx + 58} y={270} dx={curve || bend ? -50 : 0} dy={-120} label="R" />}
+      {forceCount >= 3 && <Arrow x={bx + 115} y={320} dx={120} dy={0} label="T" />}
+      {forceCount >= 4 && <Arrow x={665} y={hy + 110} dx={0} dy={100} label="2g" />}
+      {forceCount >= 5 && <Arrow x={665} y={hy} dx={0} dy={-115} label="T" />}
+      {friction && <Arrow x={bx} y={340} dx={-130} dy={0} label="F" accent />}
+      {ring === 0 && <Ring x={bx + 58} y={322} />}
+      {ring === 1 && <Ring x={665} y={hy + 53} />}
+      {ring === 2 && <Ring x={285} y={670} rx={42} />}
+    </g>
   );
 };
-
-const PaperCard: React.FC<{
-  children: React.ReactNode;
-  accent?: string;
-  style?: React.CSSProperties;
-}> = ({ children, accent = T.cyan, style }) => (
-  <div style={{ borderRadius: 22, background: T.paper, color: T.ink, border: `3px solid ${accent}`, boxShadow: `0 17px 50px #0008, 0 0 24px ${accent}14`, ...style }}>
-    {children}
-  </div>
-);
-
-const IndexTray: React.FC<{
-  title: string;
-  items: Array<{ at: number; term: string; consequence: string; color?: string }>;
-}> = ({ title, items }) => (
-  <div style={{ position: 'absolute', right: 58, top: 173, width: 438, height: 838, borderRadius: 28, border: `2px solid ${T.cyan}66`, background: `${T.bgDeep}ed`, padding: '24px 22px', boxShadow: '0 20px 55px #0008' }}>
-    <div style={{ color: T.cyan, fontFamily: T.mono, fontSize: 28, fontWeight: 950, letterSpacing: 1.8 }}>{title}</div>
-    <div style={{ height: 2, background: `${T.cyan}55`, margin: '18px 0' }} />
-    <div style={{ display: 'grid', gap: 14 }}>
-      {items.map((item) => (
-        <Reveal key={item.term} at={item.at} fromX={22} fromY={0}>
-          <PaperCard accent={item.color ?? T.cyan} style={{ padding: '13px 16px' }}>
-            <div style={{ color: darkInk(item.color ?? T.cyan), fontFamily: T.mono, fontSize: 28, fontWeight: 950 }}>{item.term}</div>
-            <div style={{ color: T.ink, fontSize: 28, lineHeight: 1.13, fontWeight: 780, marginTop: 5 }}>{item.consequence}</div>
-          </PaperCard>
-        </Reveal>
-      ))}
-    </div>
-  </div>
-);
-
-const StatusPill: React.FC<{ label: string; value: string; active?: boolean; color?: string }> = ({ label, value, active = true, color = T.cyan }) => (
-  <div style={{ width: '100%', boxSizing: 'border-box', padding: '10px 14px', borderRadius: 14, border: `2px solid ${active ? color : T.muted}88`, background: active ? `${color}18` : '#172631', color: active ? color : T.muted, fontFamily: T.mono }}>
-    <div style={{ fontSize: 28, fontWeight: 900 }}>{label}</div>
-    <div style={{ fontSize: 28, fontWeight: 800, marginTop: 4 }}>{value}</div>
-  </div>
-);
-
-const ArrowMarker: React.FC<{ id: string; color: string }> = ({ id, color }) => (
-  <marker id={id} markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
-    <path d="M0 0 L12 6 L0 12 Z" fill={color} />
-  </marker>
-);
-
-// ─────────────────────────────────────────────────────────────────────────────
-// Path-only ink player used by the worked example
-// ─────────────────────────────────────────────────────────────────────────────
 
 type Point = readonly [number, number];
 type Glyph = Point[][];
 
 const G: Record<string, Glyph> = {
-  '0': [[[2, 2], [7, 0], [10, 3], [10, 13], [7, 16], [2, 14], [0, 4], [2, 2]]],
-  '1': [[[2, 4], [6, 0], [6, 16]], [[2, 16], [10, 16]]],
-  '2': [[[0, 3], [3, 0], [8, 0], [10, 3], [9, 6], [0, 16], [11, 16]]],
-  '3': [[[0, 2], [4, 0], [9, 1], [10, 5], [7, 8], [10, 10], [10, 14], [7, 16], [2, 16], [0, 14]], [[4, 8], [7, 8]]],
-  '4': [[[9, 16], [9, 0], [0, 11], [12, 11]]],
-  '5': [[[10, 0], [1, 0], [0, 8], [7, 7], [10, 10], [9, 15], [5, 16], [1, 14]]],
-  '6': [[[10, 1], [6, 0], [2, 3], [0, 10], [2, 15], [7, 16], [10, 13], [9, 9], [6, 7], [1, 9]]],
-  '7': [[[0, 1], [11, 1], [4, 16]]],
-  '8': [[[5, 8], [1, 6], [1, 2], [5, 0], [9, 2], [9, 6], [5, 8], [1, 10], [1, 14], [5, 16], [9, 14], [9, 10], [5, 8]]],
-  '9': [[[10, 8], [7, 9], [2, 8], [0, 4], [2, 0], [7, 0], [10, 4], [9, 12], [6, 16], [2, 15]]],
-  'T': [[[0, 1], [12, 1]], [[6, 1], [6, 16]]],
-  'F': [[[1, 16], [1, 0], [11, 0]], [[1, 7], [9, 7]]],
-  'N': [[[1, 16], [1, 0], [11, 16], [11, 0]]],
-  'a': [[[9, 7], [6, 5], [2, 6], [0, 10], [2, 15], [6, 15], [9, 11]], [[9, 5], [9, 16]]],
-  'g': [[[9, 7], [6, 5], [2, 6], [0, 10], [2, 14], [6, 15], [9, 11]], [[9, 5], [9, 18], [6, 21], [2, 20]]],
-  'm': [[[0, 16], [0, 6], [4, 6], [5, 10], [7, 6], [11, 7], [11, 16]]],
-  's': [[[10, 7], [7, 5], [2, 6], [1, 9], [8, 11], [10, 14], [7, 16], [1, 15]]],
-  'f': [[[4, 16], [5, 3], [8, 0], [11, 1]], [[1, 7], [10, 7]]],
-  '=': [[[0, 6], [12, 6]], [[0, 12], [12, 12]]],
-  '+': [[[0, 9], [12, 9]], [[6, 3], [6, 15]]],
-  '-': [[[0, 9], [11, 9]]],
-  '/': [[[0, 18], [11, 0]]],
-  '(': [[[9, 0], [5, 3], [3, 8], [3, 13], [6, 17], [9, 19]]],
-  ')': [[[2, 0], [6, 3], [8, 8], [8, 13], [5, 17], [2, 19]]],
-  '.': [[[4, 15], [5, 16]]],
-  '~': [[[0, 10], [3, 7], [7, 12], [11, 8]]],
+  '0': [
+    [
+      [2, 2],
+      [7, 0],
+      [10, 3],
+      [10, 13],
+      [7, 16],
+      [2, 14],
+      [0, 4],
+      [2, 2],
+    ],
+  ],
+  '1': [
+    [
+      [2, 4],
+      [6, 0],
+      [6, 16],
+    ],
+    [
+      [2, 16],
+      [10, 16],
+    ],
+  ],
+  '2': [
+    [
+      [0, 3],
+      [3, 0],
+      [8, 0],
+      [10, 3],
+      [9, 6],
+      [0, 16],
+      [11, 16],
+    ],
+  ],
+  '3': [
+    [
+      [0, 2],
+      [4, 0],
+      [9, 1],
+      [10, 5],
+      [7, 8],
+      [10, 10],
+      [10, 14],
+      [7, 16],
+      [2, 16],
+      [0, 14],
+    ],
+    [
+      [4, 8],
+      [7, 8],
+    ],
+  ],
+  '4': [
+    [
+      [9, 16],
+      [9, 0],
+      [0, 11],
+      [12, 11],
+    ],
+  ],
+  '5': [
+    [
+      [10, 0],
+      [1, 0],
+      [0, 8],
+      [7, 7],
+      [10, 10],
+      [9, 15],
+      [5, 16],
+      [1, 14],
+    ],
+  ],
+  '6': [
+    [
+      [10, 1],
+      [6, 0],
+      [2, 3],
+      [0, 10],
+      [2, 15],
+      [7, 16],
+      [10, 13],
+      [9, 9],
+      [6, 7],
+      [1, 9],
+    ],
+  ],
+  '7': [
+    [
+      [0, 1],
+      [11, 1],
+      [4, 16],
+    ],
+  ],
+  '8': [
+    [
+      [5, 8],
+      [1, 6],
+      [1, 2],
+      [5, 0],
+      [9, 2],
+      [9, 6],
+      [5, 8],
+      [1, 10],
+      [1, 14],
+      [5, 16],
+      [9, 14],
+      [9, 10],
+      [5, 8],
+    ],
+  ],
+  '9': [
+    [
+      [10, 8],
+      [7, 9],
+      [2, 8],
+      [0, 4],
+      [2, 0],
+      [7, 0],
+      [10, 4],
+      [9, 12],
+      [6, 16],
+      [2, 15],
+    ],
+  ],
+  T: [
+    [
+      [0, 1],
+      [12, 1],
+    ],
+    [
+      [6, 1],
+      [6, 16],
+    ],
+  ],
+  F: [
+    [
+      [1, 16],
+      [1, 0],
+      [11, 0],
+    ],
+    [
+      [1, 7],
+      [9, 7],
+    ],
+  ],
+  N: [
+    [
+      [1, 16],
+      [1, 0],
+      [11, 16],
+      [11, 0],
+    ],
+  ],
+  a: [
+    [
+      [9, 7],
+      [6, 5],
+      [2, 6],
+      [0, 10],
+      [2, 15],
+      [6, 15],
+      [9, 11],
+    ],
+    [
+      [9, 5],
+      [9, 16],
+    ],
+  ],
+  g: [
+    [
+      [9, 7],
+      [6, 5],
+      [2, 6],
+      [0, 10],
+      [2, 14],
+      [6, 15],
+      [9, 11],
+    ],
+    [
+      [9, 5],
+      [9, 18],
+      [6, 21],
+      [2, 20],
+    ],
+  ],
+  m: [
+    [
+      [0, 16],
+      [0, 6],
+      [4, 6],
+      [5, 10],
+      [7, 6],
+      [11, 7],
+      [11, 16],
+    ],
+  ],
+  s: [
+    [
+      [10, 7],
+      [7, 5],
+      [2, 6],
+      [1, 9],
+      [8, 11],
+      [10, 14],
+      [7, 16],
+      [1, 15],
+    ],
+  ],
+  f: [
+    [
+      [4, 16],
+      [5, 3],
+      [8, 0],
+      [11, 1],
+    ],
+    [
+      [1, 7],
+      [10, 7],
+    ],
+  ],
+  '=': [
+    [
+      [0, 6],
+      [12, 6],
+    ],
+    [
+      [0, 12],
+      [12, 12],
+    ],
+  ],
+  '+': [
+    [
+      [0, 9],
+      [12, 9],
+    ],
+    [
+      [6, 3],
+      [6, 15],
+    ],
+  ],
+  '-': [
+    [
+      [0, 9],
+      [11, 9],
+    ],
+  ],
+  '/': [
+    [
+      [0, 18],
+      [11, 0],
+    ],
+  ],
+  '(': [
+    [
+      [9, 0],
+      [5, 3],
+      [3, 8],
+      [3, 13],
+      [6, 17],
+      [9, 19],
+    ],
+  ],
+  ')': [
+    [
+      [2, 0],
+      [6, 3],
+      [8, 8],
+      [8, 13],
+      [5, 17],
+      [2, 19],
+    ],
+  ],
+  '.': [
+    [
+      [4, 15],
+      [5, 16],
+    ],
+  ],
+  R: [
+    [
+      [1, 16],
+      [1, 0],
+      [9, 0],
+      [11, 3],
+      [9, 7],
+      [1, 7],
+    ],
+    [
+      [6, 7],
+      [12, 16],
+    ],
+  ],
+  μ: [
+    [
+      [1, 6],
+      [1, 20],
+    ],
+    [
+      [1, 13],
+      [4, 16],
+      [8, 15],
+      [9, 6],
+      [9, 16],
+      [12, 16],
+    ],
+  ],
+  '≤': [
+    [
+      [11, 2],
+      [1, 8],
+      [11, 13],
+    ],
+    [
+      [1, 17],
+      [12, 17],
+    ],
+  ],
+  '~': [
+    [
+      [0, 10],
+      [3, 7],
+      [7, 12],
+      [11, 8],
+    ],
+  ],
   '≈': [
-    [[0, 6], [3, 4], [7, 8], [11, 5]],
-    [[0, 13], [3, 11], [7, 15], [11, 12]],
+    [
+      [0, 6],
+      [3, 4],
+      [7, 8],
+      [11, 5],
+    ],
+    [
+      [0, 13],
+      [3, 11],
+      [7, 15],
+      [11, 12],
+    ],
   ],
 };
 
@@ -300,7 +719,9 @@ interface InkStroke {
 }
 
 function pointsPath(points: Point[]): string {
-  return points.map(([x, y], index) => `${index === 0 ? 'M' : 'L'} ${x.toFixed(2)} ${y.toFixed(2)}`).join(' ');
+  return points
+    .map(([x, y], index) => `${index === 0 ? 'M' : 'L'} ${x.toFixed(2)} ${y.toFixed(2)}`)
+    .join(' ');
 }
 
 function pointsLength(points: Point[]): number {
@@ -337,7 +758,7 @@ function makeInkLine(options: {
   color?: string;
   width?: number;
 }): InkStroke[] {
-  const { id, text, x, y, scale, startFrame, endFrame, color = '#1b3f77', width = 3.4 } = options;
+  const { id, text, x, y, scale, startFrame, endFrame, color = T.ink, width = 3.4 } = options;
   const raw: Array<{ points: Point[]; length: number }> = [];
   let cursor = x;
   for (const char of text) {
@@ -347,8 +768,7 @@ function makeInkLine(options: {
     }
     const glyph = G[char];
     if (!glyph) {
-      cursor += 12 * scale;
-      continue;
+      throw new Error(`Missing handwriting glyph: ${char}`);
     }
     for (const segment of glyph) {
       const points = segment.map(([px, py]) => [cursor + (px + py * 0.055) * scale, y + py * scale] as Point);
@@ -357,10 +777,11 @@ function makeInkLine(options: {
     cursor += (GLYPH_ADVANCE[char] ?? 14) * scale;
   }
   const totalLength = raw.reduce((sum, stroke) => sum + stroke.length, 0);
-  const available = Math.max(raw.length, endFrame - startFrame - raw.length * 1.2);
+  const gap = Math.min(1.2, Math.max(0, endFrame - startFrame) / (raw.length * 4));
+  const available = Math.max(0.01, endFrame - startFrame - gap * Math.max(0, raw.length - 1));
   let nextFrame = startFrame;
   return raw.map((stroke, index) => {
-    const durationFrames = Math.max(1, available * stroke.length / totalLength);
+    const durationFrames = Math.max(0.001, (available * stroke.length) / totalLength);
     const result: InkStroke = {
       id: `${id}-${index}`,
       points: stroke.points,
@@ -371,7 +792,7 @@ function makeInkLine(options: {
       color,
       width,
     };
-    nextFrame += durationFrames + 1.2;
+    nextFrame += durationFrames + gap;
     return result;
   });
 }
@@ -410,8 +831,8 @@ const InkPlayback: React.FC<{
       {paths}
       {showHand && penPoint && (
         <g transform={`translate(${penPoint[0]} ${penPoint[1]}) rotate(-24)`}>
-          <ellipse cx={25} cy={22} rx={25} ry={17} fill="#d8aa83" stroke="#845f48" strokeWidth={2.2} />
-          <rect x={-7} y={-3} width={53} height={8} rx={4} fill={T.cyan} stroke={T.ink} strokeWidth={2} />
+          <ellipse cx={25} cy={22} rx={25} ry={17} fill="#b5b9b5" stroke="#737976" strokeWidth={2.2} />
+          <rect x={-7} y={-3} width={53} height={8} rx={4} fill={T.accent} stroke={T.ink} strokeWidth={2} />
           <path d="M -10 1 L -2 -4 L -2 6 Z" fill={T.ink} />
           <circle cx={-10} cy={1} r={3.5} fill={T.ink} />
         </g>
@@ -420,919 +841,674 @@ const InkPlayback: React.FC<{
   );
 };
 
-const RuledPaper: React.FC<{
-  children: React.ReactNode;
-  x?: number;
-  y?: number;
-  width?: number;
-  height?: number;
-}> = ({ children, x = 0, y = 0, width = 870, height = 830 }) => (
-  <g transform={`translate(${x} ${y})`}>
-    <rect width={width} height={height} rx={24} fill={T.paper} stroke={T.amber} strokeWidth={3} />
-    <g stroke={T.paperLine} strokeWidth={1.2} opacity={0.58}>
-      {Array.from({ length: 15 }, (_, index) => 80 + index * 49).map((lineY) => (
-        <path key={lineY} d={`M 25 ${lineY} H ${width - 24}`} />
-      ))}
-    </g>
-    <path d={`M 76 28 V ${height - 24}`} stroke="#d67f78" strokeWidth={1.6} opacity={0.72} />
-    {children}
-  </g>
-);
-
-// ─────────────────────────────────────────────────────────────────────────────
-// S01 — REALITY BECOMES A PARTICLE MODEL
-// ─────────────────────────────────────────────────────────────────────────────
-
-const Scene01: React.FC<{ scene: TranscriptScene }> = ({ scene }) => {
-  const frame = useCurrentFrame();
-  const { fps } = useVideoConfig();
-  const modelAt = cueAt(scene, 'model');
-  const particleAt = cueAt(scene, 'particle');
-  const pointAt = cueAt(scene, 'one-point');
-  const separateAt = cueAt(scene, 'separate-choice');
-  const scan = secondsProgress(frame, fps, modelAt, particleAt);
-  const particle = secondsProgress(frame, fps, particleAt, particleAt + 0.8);
-  const force = secondsProgress(frame, fps, pointAt, pointAt + 0.65);
-  const drag = secondsProgress(frame, fps, separateAt, separateAt + 0.45);
-  const crateX = mix(430, 560, particle);
-  const crateY = mix(510, 500, particle);
-
-  return (
-    <LabShell scene={1} label="reality scanner">
-      <SectionTitle kicker="model selection">Keep the effects that matter</SectionTitle>
-      <div style={{ position: 'absolute', left: 58, top: 204, width: 1345, height: 770, borderRadius: 28, background: `${T.panel}e8`, border: `3px solid ${T.cyan}88`, boxShadow: '0 20px 58px #0008' }}>
-        <svg width="1345" height="770" viewBox="0 0 1345 770">
-          <defs>
-            <ArrowMarker id="s01-cyan" color={T.cyan} />
-            <ArrowMarker id="s01-amber" color={T.amber} />
-            <pattern id="s01-grain" width="18" height="18" patternUnits="userSpaceOnUse"><circle cx="4" cy="5" r="1.2" fill={T.ink} opacity="0.1" /><circle cx="14" cy="12" r="1" fill={T.ink} opacity="0.08" /></pattern>
-          </defs>
-          <rect x="30" y="42" width="1268" height="620" rx="24" fill={T.bgDeep} stroke={`${T.cyan}44`} strokeWidth="2" />
-          <path d="M 72 600 H 1270" stroke={T.paper} strokeWidth="8" />
-          <path d="M 104 624 H 1240" stroke={T.amber} strokeWidth="4" strokeDasharray="34 28" />
-
-          <g opacity={1 - particle * 0.88}>
-            <path d="M 215 225 C 290 195 345 255 415 220 C 470 194 510 230 553 215" fill="none" stroke={T.paper} strokeWidth="7" strokeLinecap="round" />
-            {Array.from({ length: 8 }, (_, index) => (
-              <path key={index} d={`M ${230 + index * 39} ${220 + Math.sin(index) * 12} q 18 34 36 5`} fill="none" stroke={T.muted} strokeWidth="2.5" />
-            ))}
-            <g transform="translate(365 470)">
-              <rect x="-150" y="0" width="300" height="105" rx="18" fill={T.panelLight} stroke={T.cyan} strokeWidth="5" />
-              <circle cx="-100" cy="111" r="25" fill={T.bgDeep} stroke={T.cyan} strokeWidth="5" />
-              <circle cx="100" cy="111" r="25" fill={T.bgDeep} stroke={T.cyan} strokeWidth="5" />
-              <path d="M -130 0 Q 0 -30 130 0" fill="none" stroke={T.coral} strokeWidth="5" />
-            </g>
-            <g opacity={0.4 + 0.6 * (1 - scan)}>
-              {[0, 1, 2].map((index) => <path key={index} d={`M 785 ${260 + index * 48} q 70 -38 155 0 t 165 0`} fill="none" stroke={T.cyan} strokeWidth="5" opacity={0.55 - index * 0.1} />)}
-            </g>
-          </g>
-
-          <g transform={`translate(${crateX} ${crateY})`}>
-            <rect x={mix(-115, -16, particle)} y={mix(-105, -16, particle)} width={mix(230, 32, particle)} height={mix(210, 32, particle)} rx={mix(12, 16, particle)} fill={particle > 0.92 ? T.cyan : T.paper} stroke={T.amber} strokeWidth="6" />
-            <rect x={mix(-115, -16, particle)} y={mix(-105, -16, particle)} width={mix(230, 32, particle)} height={mix(210, 32, particle)} rx="12" fill="url(#s01-grain)" opacity={1 - particle} />
-            <path d="M -108 -95 L 108 95 M 108 -95 L -108 95" stroke={T.ink} strokeWidth="4" opacity={1 - particle} />
-            <rect x="-76" y="45" width="152" height="61" rx="12" fill={T.ink} stroke={T.cyan} strokeWidth="3" />
-            <text x="0" y="86" fill={T.cyan} textAnchor="middle" fontFamily={T.mono} fontSize="30" fontWeight="950">MASS ON</text>
-            <g opacity={force}>
-              <line x1="0" y1="-25" x2="0" y2="-170" stroke={T.cyan} strokeWidth="8" markerEnd="url(#s01-cyan)" />
-              <line x1="0" y1="25" x2="0" y2="170" stroke={T.amber} strokeWidth="8" markerEnd="url(#s01-amber)" />
-              <line x1="-25" y1="0" x2="-180" y2="0" stroke={T.cyan} strokeWidth="8" markerEnd="url(#s01-cyan)" />
-              <line x1="25" y1="0" x2="180" y2="0" stroke={T.amber} strokeWidth="8" markerEnd="url(#s01-amber)" />
-              <circle r="22" fill={T.paper} stroke={T.ink} strokeWidth="5" />
-            </g>
-            <g opacity={force * (1 - drag)}>
-              <line x1="-35" y1="-62" x2="-185" y2="-62" stroke={T.amber} strokeWidth="7" strokeDasharray="12 8" markerEnd="url(#s01-amber)" />
-              <text x="-104" y="-83" fill={T.amber} textAnchor="middle" fontFamily={T.mono} fontSize="28" fontWeight="950">DRAG</text>
-            </g>
-          </g>
-
-          <g opacity={useCue(modelAt, 0.35).opacity}>
-            <rect x={mix(55, 1130, scan)} y="75" width="20" height="540" rx="10" fill={T.cyan} opacity="0.9" />
-            <rect x={mix(20, 1095, scan)} y="64" width="90" height="44" rx="12" fill={T.cyan} />
-            <text x={mix(65, 1140, scan)} y="95" fill={T.ink} fontFamily={T.mono} fontSize="28" fontWeight="950" textAnchor="middle">SCAN</text>
-          </g>
-
-          <foreignObject x="790" y="470" width="190" height="100">
-            <StatusPill label="SHAPE" value={particle > 0.55 ? 'OFF' : 'ON'} active={particle <= 0.55} color={T.coral} />
-          </foreignObject>
-          <foreignObject x="990" y="470" width="205" height="100">
-            <StatusPill label="ROTATION" value={particle > 0.55 ? 'OFF' : 'ON'} active={particle <= 0.55} color={T.coral} />
-          </foreignObject>
-          <g transform="translate(790 585)" opacity={useCue(separateAt, 0.35).opacity}>
-            <rect width="384" height="76" rx="16" fill={T.panel} stroke={T.amber} strokeWidth="3" />
-            <text x="22" y="48" fill={T.paper} fontFamily={T.mono} fontSize="28" fontWeight="900">AIR DRAG · OFF</text>
-            <rect x="294" y="17" width="68" height="42" rx="21" fill={drag > 0.55 ? T.green : T.coral} />
-            <circle cx={drag > 0.55 ? 341 : 315} cy="38" r="15" fill={T.paper} />
-          </g>
-          <g opacity={force}>
-            <rect x="455" y="106" width="278" height="57" rx="12" fill={T.ink} stroke={T.cyan} strokeWidth="2" />
-            <text x="594" y="145" textAnchor="middle" fill={T.cyan} fontFamily={T.mono} fontSize="28" fontWeight="950">ONE FORCE POINT</text>
-          </g>
-        </svg>
-      </div>
-      <IndexTray title="ASSUMPTION INDEX" items={[
-        { at: particleAt, term: 'PARTICLE', consequence: 'mass kept · size removed', color: T.cyan },
-        { at: separateAt, term: 'AIR RESISTANCE NEGLECTED', consequence: 'drag removed independently', color: T.amber },
-      ]} />
-    </LabShell>
-  );
-};
-
-// ─────────────────────────────────────────────────────────────────────────────
-// S02 — LIGHT AND INEXTENSIBLE DO DIFFERENT JOBS
-// ─────────────────────────────────────────────────────────────────────────────
-
-const Scene02: React.FC<{ scene: TranscriptScene }> = ({ scene }) => {
-  const frame = useCurrentFrame();
-  const { fps } = useVideoConfig();
-  const lightAt = cueAt(scene, 'light');
-  const inertiaAt = cueAt(scene, 'rotational-inertia');
-  const stretchyAt = cueAt(scene, 'stretchy');
-  const lengthAt = cueAt(scene, 'keeps-its-length');
-  const light = secondsProgress(frame, fps, lightAt, lightAt + 0.55);
-  const inertia = secondsProgress(frame, fps, inertiaAt, inertiaAt + 0.55);
-  const stretch = secondsProgress(frame, fps, stretchyAt, stretchyAt + 1.1);
-  const taut = secondsProgress(frame, fps, lengthAt, lengthAt + 0.7);
-
-  return (
-    <LabShell scene={2} label="connector bench">
-      <SectionTitle kicker="two independent controls">Light removes mass; inextensible locks length</SectionTitle>
-      <div style={{ position: 'absolute', left: 58, top: 204, width: 1345, height: 770, borderRadius: 28, background: `${T.panel}ed`, border: `3px solid ${T.cyan}88`, boxShadow: '0 20px 58px #0008' }}>
-        <svg width="1345" height="770" viewBox="0 0 1345 770">
-          <defs>
-            <ArrowMarker id="s02-cyan" color={T.cyan} />
-            <ArrowMarker id="s02-amber" color={T.amber} />
-          </defs>
-          <g transform="translate(60 65)">
-            <rect width="1175" height="235" rx="24" fill={T.bgDeep} stroke={`${T.cyan}55`} strokeWidth="2" />
-            <text x="28" y="43" fill={T.cyan} fontFamily={T.mono} fontSize="28" fontWeight="950">LIGHT COMPONENT TEST</text>
-            <path d="M 100 122 H 400" stroke={T.paper} strokeWidth="8" strokeLinecap="round" />
-            <text x="250" y="183" fill={T.paper} fontSize="29" fontWeight="850" textAnchor="middle">STRING</text>
-            <rect x="500" y="112" width="290" height="20" rx="8" fill={T.paper} stroke={T.cyan} strokeWidth="3" />
-            <text x="645" y="183" fill={T.paper} fontSize="29" fontWeight="850" textAnchor="middle">ROD</text>
-            <circle cx="990" cy="121" r="76" fill={T.panelLight} stroke={T.cyan} strokeWidth="7" />
-            <circle cx="990" cy="121" r={mix(52, 9, inertia)} fill="none" stroke={T.amber} strokeWidth="7" strokeDasharray="12 9" opacity={1 - inertia * 0.8} />
-            <text x="990" y="220" fill={T.paper} fontSize="29" fontWeight="850" textAnchor="middle">PULLEY</text>
-            {[250, 645, 990].map((x, index) => (
-              <g key={x} opacity={1 - light} transform={`translate(${x - 72} 55)`}>
-                <rect width="144" height="54" rx="12" fill={T.coral} />
-                <text x="72" y="37" fill={T.bgDeep} fontFamily={T.mono} fontSize="28" fontWeight="950" textAnchor="middle">MASS</text>
-                <path d="M 8 7 L 136 47" stroke={T.paper} strokeWidth="5" />
-              </g>
-            ))}
-          </g>
-
-          <g transform="translate(65 345)">
-            <rect width="575" height="320" rx="24" fill={T.paper} stroke={T.coral} strokeWidth="3" />
-            <text x="24" y="44" fill={darkInk(T.coral)} fontFamily={T.mono} fontSize="28" fontWeight="950">STRETCH TEST</text>
-            <rect x="55" y="142" width="90" height="80" rx="12" fill={T.panel} />
-            <rect x={mix(400, 455, stretch)} y="142" width="90" height="80" rx="12" fill={T.panel} />
-            <path d={`M 145 182 ${Array.from({ length: 9 }, (_, index) => `L ${165 + index * mix(27, 33, stretch)} ${index % 2 ? 160 : 204}`).join(' ')} L ${mix(400, 455, stretch)} 182`} fill="none" stroke={T.amber} strokeWidth="6" strokeLinejoin="round" />
-            <path d="M 95 254 v 35 M 445 254 v 35" stroke={T.ink} strokeWidth="4" />
-            <text x="287" y="292" fill={T.ink} fontFamily={T.mono} fontSize="28" fontWeight="900" textAnchor="middle">ENDS MAY DIFFER</text>
-          </g>
-
-          <g transform="translate(682 345)">
-            <rect width="586" height="320" rx="24" fill={T.paper} stroke={T.cyan} strokeWidth="3" />
-            <text x="24" y="44" fill={darkInk(T.cyan)} fontFamily={T.mono} fontSize="28" fontWeight="950">TAUT LENGTH LOCK</text>
-            <circle cx="292" cy="142" r="62" fill={T.panelLight} stroke={T.ink} strokeWidth="5" />
-            <path d="M 75 142 H 230 A 62 62 0 0 1 354 142 V 252" fill="none" stroke={T.cyan} strokeWidth="8" />
-            <rect x="35" y="112" width="72" height="60" rx="10" fill={T.panel} />
-            <rect x="318" y="244" width="72" height="60" rx="10" fill={T.panel} />
-            <g opacity={taut}>
-              <line x1="116" y1="93" x2="204" y2="93" stroke={T.amber} strokeWidth="7" markerEnd="url(#s02-amber)" />
-              <line x1="432" y1="154" x2="432" y2="241" stroke={T.amber} strokeWidth="7" markerEnd="url(#s02-amber)" />
-              <rect x="88" y="222" width="420" height="58" rx="12" fill={T.ink} />
-              <text x="298" y="261" fill={T.cyan} textAnchor="middle" fontFamily={T.mono} fontSize="28" fontWeight="950">EQUAL TRAVEL · |a| EQUAL</text>
-            </g>
-          </g>
-
-          <g opacity={useCue(lightAt, 0.35).opacity}>
-            <rect x="90" y="685" width="438" height="58" rx="14" fill={T.bgDeep} stroke={T.coral} strokeWidth="2" />
-            <path d="M 108 714 h 142" stroke={T.amber} strokeWidth="9" strokeDasharray="13 8" />
-            <text x="275" y="724" fill={T.paper} fontFamily={T.mono} fontSize="28" fontWeight="900">ROUGHNESS STAYS</text>
-          </g>
-        </svg>
-      </div>
-      <IndexTray title="ASSUMPTION INDEX" items={[
-        { at: lightAt, term: 'LIGHT STRING', consequence: 'negligible mass', color: T.cyan },
-        { at: lightAt, term: 'LIGHT ROD', consequence: 'no added weight', color: T.teal },
-        { at: inertiaAt, term: 'LIGHT PULLEY', consequence: 'no rotational inertia', color: T.amber },
-        { at: lengthAt, term: 'INEXTENSIBLE', consequence: 'length remains fixed', color: T.purple },
-      ]} />
-    </LabShell>
-  );
-};
-
-// ─────────────────────────────────────────────────────────────────────────────
-// S03 — SMOOTH ICE, ROUGH SAND
-// ─────────────────────────────────────────────────────────────────────────────
-
-const Scene03: React.FC<{ scene: TranscriptScene }> = ({ scene }) => {
-  const frame = useCurrentFrame();
-  const { fps } = useVideoConfig();
-  const smoothAt = cueAt(scene, 'smooth-surface');
-  const roughAt = cueAt(scene, 'rough-surface');
-  const redirectAt = cueAt(scene, 'pulley-or-peg');
-  const stringAt = cueAt(scene, 'light-string');
-  const smooth = secondsProgress(frame, fps, smoothAt, smoothAt + 0.5);
-  const rough = secondsProgress(frame, fps, roughAt, roughAt + 0.6);
-  const redirect = secondsProgress(frame, fps, redirectAt, redirectAt + 0.6);
-  const equal = secondsProgress(frame, fps, stringAt, stringAt + 0.5);
-
-  return (
-    <LabShell scene={3} label="contact rig">
-      <SectionTitle kicker="contact decides the force">Smooth ice; rough sand</SectionTitle>
-      <div style={{ position: 'absolute', left: 58, top: 204, width: 1345, height: 770, borderRadius: 28, background: `${T.panel}ed`, border: `3px solid ${T.cyan}88`, boxShadow: '0 20px 58px #0008' }}>
-        <svg width="1345" height="770" viewBox="0 0 1345 770">
-          <defs>
-            <ArrowMarker id="s03-cyan" color={T.cyan} />
-            <ArrowMarker id="s03-amber" color={T.amber} />
-            <ArrowMarker id="s03-coral" color={T.coral} />
-            <pattern id="s03-sand" width="18" height="14" patternUnits="userSpaceOnUse"><circle cx="4" cy="4" r="2" fill={T.amber} /><circle cx="13" cy="10" r="1.8" fill={T.amber} /></pattern>
-          </defs>
-          <g transform="translate(50 54)">
-            <rect width="1240" height="326" rx="24" fill={T.paper} stroke={T.cyan} strokeWidth="3" />
-            <text x="24" y="43" fill={darkInk(T.cyan)} fontFamily={T.mono} fontSize="28" fontWeight="950">SURFACE CHANNEL</text>
-            <rect x="42" y="232" width="520" height="42" rx="12" fill={`${T.cyan}77`} stroke={T.cyan} strokeWidth="4" />
-            <rect x="652" y="232" width="520" height="42" rx="12" fill="url(#s03-sand)" stroke={T.amber} strokeWidth="4" />
-            <rect x="220" y="142" width="170" height="90" rx="14" fill={T.panel} stroke={T.ink} strokeWidth="4" />
-            <rect x="830" y="142" width="170" height="90" rx="14" fill={T.panel} stroke={T.ink} strokeWidth="4" />
-            <g opacity={smooth}>
-              <line x1="305" y1="142" x2="305" y2="60" stroke={T.cyan} strokeWidth="8" markerEnd="url(#s03-cyan)" />
-              <text x="326" y="91" fill={darkInk(T.cyan)} fontFamily={T.mono} fontSize="28" fontWeight="950">R</text>
-              <rect x="92" y="283" width="420" height="38" rx="10" fill={T.ink} />
-              <text x="302" y="311" fill={T.cyan} textAnchor="middle" fontFamily={T.mono} fontSize="28" fontWeight="950">NORMAL ONLY · NO FRICTION</text>
-            </g>
-            <g opacity={rough}>
-              <line x1="915" y1="142" x2="915" y2="60" stroke={T.cyan} strokeWidth="8" markerEnd="url(#s03-cyan)" />
-              <line x1="830" y1="187" x2="730" y2="187" stroke={T.coral} strokeWidth="8" markerEnd="url(#s03-coral)" />
-              <line x1="1000" y1="105" x2="1105" y2="105" stroke={T.amber} strokeWidth="7" markerEnd="url(#s03-amber)" />
-              <text x="1047" y="83" fill={darkInk(T.amber)} fontFamily={T.mono} fontSize="28" fontWeight="950">SLIDE</text>
-              <rect x="704" y="283" width="420" height="38" rx="10" fill={T.ink} />
-              <text x="914" y="311" fill={T.coral} textAnchor="middle" fontFamily={T.mono} fontSize="28" fontWeight="950">FRICTION OPPOSES SLIDE</text>
-            </g>
-          </g>
-
-          <g transform="translate(55 435)" opacity={redirect}>
-            <rect width="1230" height="276" rx="24" fill={T.bgDeep} stroke={T.amber} strokeWidth="3" />
-            <text x="24" y="43" fill={T.amber} fontFamily={T.mono} fontSize="28" fontWeight="950">SMOOTH REDIRECTORS</text>
-            <circle cx="355" cy="133" r="76" fill={T.panelLight} stroke={T.cyan} strokeWidth="7" />
-            <circle cx="355" cy="133" r="12" fill={T.paper} />
-            <path d="M 80 133 H 279 A 76 76 0 0 1 431 133 H 605" fill="none" stroke={T.paper} strokeWidth="8" />
-            <circle cx="835" cy="133" r="26" fill={T.panelLight} stroke={T.cyan} strokeWidth="7" />
-            <path d="M 655 215 Q 806 213 819 151 Q 837 80 1128 78" fill="none" stroke={T.paper} strokeWidth="8" />
-            <text x="355" y="243" fill={T.paper} fontFamily={T.mono} fontSize="28" fontWeight="900" textAnchor="middle">PULLEY</text>
-            <text x="835" y="243" fill={T.paper} fontFamily={T.mono} fontSize="28" fontWeight="900" textAnchor="middle">PEG</text>
-            <g opacity={equal}>
-              <rect x="92" y="78" width="132" height="50" rx="11" fill={T.ink} stroke={T.teal} strokeWidth="3" />
-              <text x="158" y="113" fill={T.teal} textAnchor="middle" fontFamily={T.mono} fontSize="30" fontWeight="950">T</text>
-              <rect x="492" y="78" width="132" height="50" rx="11" fill={T.ink} stroke={T.teal} strokeWidth="3" />
-              <text x="558" y="113" fill={T.teal} textAnchor="middle" fontFamily={T.mono} fontSize="30" fontWeight="950">T</text>
-              <rect x="944" y="112" width="132" height="50" rx="11" fill={T.ink} stroke={T.teal} strokeWidth="3" />
-              <text x="1010" y="147" fill={T.teal} textAnchor="middle" fontFamily={T.mono} fontSize="30" fontWeight="950">T</text>
-            </g>
-          </g>
-        </svg>
-      </div>
-      <IndexTray title="CONTACT INDEX" items={[
-        { at: smoothAt, term: 'SMOOTH SURFACE', consequence: 'no friction', color: T.cyan },
-        { at: roughAt, term: 'ROUGH SURFACE', consequence: 'friction may act', color: T.coral },
-        { at: redirectAt, term: 'SMOOTH PULLEY', consequence: 'no contact friction', color: T.amber },
-        { at: redirectAt, term: 'SMOOTH PEG', consequence: 'redirects without loss', color: T.teal },
-      ]} />
-    </LabShell>
-  );
-};
-
-// ─────────────────────────────────────────────────────────────────────────────
-// S04 — KEEP LENGTH WHEN MOMENTS MATTER
-// ─────────────────────────────────────────────────────────────────────────────
-
-const Scene04: React.FC<{ scene: TranscriptScene }> = ({ scene }) => {
-  const frame = useCurrentFrame();
-  const { fps } = useVideoConfig();
-  const rigidAt = cueAt(scene, 'rigid-rod');
-  const beamAt = cueAt(scene, 'beam');
-  const uniformAt = cueAt(scene, 'uniform');
-  const midpointAt = cueAt(scene, 'midpoint');
-  const rigid = secondsProgress(frame, fps, rigidAt, rigidAt + 0.7);
-  const beam = secondsProgress(frame, fps, beamAt, beamAt + 0.65);
-  const uniform = secondsProgress(frame, fps, uniformAt, uniformAt + 0.8);
-  const midpoint = secondsProgress(frame, fps, midpointAt, midpointAt + 0.7);
-  const density = Array.from({ length: 15 }, (_, index) => ({
-    x: 94 + index * 50,
-    opacity: mix(0.25 + (index % 4) * 0.18, 0.82, uniform),
-  }));
-
-  return (
-    <LabShell scene={4} label="moments bench">
-      <SectionTitle kicker="geometry stays in the model">Keep length when force position matters</SectionTitle>
-      <div style={{ position: 'absolute', left: 58, top: 204, width: 1345, height: 770, borderRadius: 28, background: `${T.panel}ed`, border: `3px solid ${T.cyan}88`, boxShadow: '0 20px 58px #0008' }}>
-        <svg width="1345" height="770" viewBox="0 0 1345 770">
-          <defs>
-            <ArrowMarker id="s04-cyan" color={T.cyan} />
-            <ArrowMarker id="s04-amber" color={T.amber} />
-            <ArrowMarker id="s04-coral" color={T.coral} />
-          </defs>
-
-          <g transform="translate(45 48)">
-            <rect width="1248" height="252" rx="24" fill={T.bgDeep} stroke={`${T.cyan}55`} strokeWidth="2" />
-            <text x="24" y="43" fill={T.cyan} fontFamily={T.mono} fontSize="28" fontWeight="950">RIGIDITY / MOMENT ARM TEST</text>
-            <path d={`M 90 144 Q 305 ${144 + (1 - rigid) * 65} 520 144`} fill="none" stroke={T.paper} strokeWidth="22" strokeLinecap="round" />
-            <g opacity={rigid}>
-              <path d="M 90 105 V 183 M 520 105 V 183" stroke={T.cyan} strokeWidth="5" />
-              <path d="M 90 94 H 520" stroke={T.cyan} strokeWidth="4" strokeDasharray="10 8" />
-              <rect x="205" y="51" width="200" height="48" rx="11" fill={T.ink} />
-              <text x="305" y="85" fill={T.cyan} fontFamily={T.mono} fontSize="28" fontWeight="950" textAnchor="middle">FIXED LENGTH</text>
-            </g>
-            <g opacity={beam}>
-              <rect x="660" y="132" width="490" height="24" rx="7" fill={T.paper} stroke={T.amber} strokeWidth="3" />
-              <path d="M 905 156 l -32 44 h 64 Z" fill={T.cyan} stroke={T.ink} strokeWidth="3" />
-              <line x1="728" y1="62" x2="728" y2="127" stroke={T.coral} strokeWidth="8" markerEnd="url(#s04-coral)" />
-              <line x1="1082" y1="62" x2="1082" y2="127" stroke={T.amber} strokeWidth="8" markerEnd="url(#s04-amber)" />
-              <path d="M 728 188 H 905 M 905 188 H 1082" stroke={T.cyan} strokeWidth="4" strokeDasharray="10 7" />
-              <text x="816" y="227" fill={T.cyan} fontFamily={T.mono} fontSize="28" fontWeight="950" textAnchor="middle">ARM</text>
-              <text x="994" y="227" fill={T.cyan} fontFamily={T.mono} fontSize="28" fontWeight="950" textAnchor="middle">ARM</text>
-            </g>
-          </g>
-
-          <g transform="translate(45 345)">
-            <rect width="1248" height="360" rx="24" fill={T.paper} stroke={T.amber} strokeWidth="3" />
-            <text x="24" y="43" fill={darkInk(T.amber)} fontFamily={T.mono} fontSize="28" fontWeight="950">UNIFORM MASS SCAN · UNIFORM GRAVITY</text>
-            <g transform="translate(38 77)">
-              <rect x="45" y="62" width="760" height="74" rx="16" fill={`${T.cyan}30`} stroke={T.ink} strokeWidth="4" />
-              {density.map((point) => <circle key={point.x} cx={point.x} cy="99" r="11" fill={T.cyan} opacity={point.opacity} />)}
-              <g opacity={midpoint}>
-                <line x1="425" y1="55" x2="425" y2="188" stroke={T.coral} strokeWidth="7" markerEnd="url(#s04-coral)" />
-                <rect x="312" y="188" width="226" height="50" rx="11" fill={T.ink} />
-                <text x="425" y="223" fill={T.coral} fontFamily={T.mono} fontSize="28" fontWeight="950" textAnchor="middle">WEIGHT AT ½L</text>
-              </g>
-              <g transform="translate(868 8)" opacity={uniform}>
-                <path d="M 0 210 L 145 14 L 290 210 Z" fill={`${T.amber}28`} stroke={T.ink} strokeWidth="5" />
-                {Array.from({ length: 22 }, (_, index) => {
-                  const row = Math.floor(index / 6);
-                  const column = index % 6;
-                  return <circle key={index} cx={55 + column * 35 + row * 4} cy={176 - row * 40} r="7" fill={T.amber} opacity="0.82" />;
-                })}
-                <g opacity={midpoint}>
-                  <circle cx="145" cy="145" r="15" fill={T.coral} stroke={T.ink} strokeWidth="4" />
-                  <line x1="145" y1="145" x2="145" y2="244" stroke={T.coral} strokeWidth="7" markerEnd="url(#s04-coral)" />
-                  <text x="145" y="266" fill={darkInk(T.coral)} fontFamily={T.mono} fontSize="28" fontWeight="950" textAnchor="middle">AREA CENTROID</text>
-                </g>
-              </g>
-            </g>
-          </g>
-        </svg>
-      </div>
-      <IndexTray title="BODY INDEX" items={[
-        { at: rigidAt, term: 'RIGID ROD', consequence: 'no bending or extension', color: T.cyan },
-        { at: beamAt, term: 'BEAM', consequence: 'force positions retained', color: T.amber },
-        { at: uniformAt, term: 'UNIFORM ROD', consequence: 'midpoint weight · uniform g', color: T.teal },
-        { at: midpointAt, term: 'UNIFORM LAMINA', consequence: 'area centroid · uniform g', color: T.coral },
-        { at: midpointAt, term: 'LAMINA', consequence: 'negligible thickness', color: T.purple },
-      ]} />
-    </LabShell>
-  );
-};
-
-// ─────────────────────────────────────────────────────────────────────────────
-// S05 — CONSTRAINTS: BEAD, WIRE, PEG AND PLANE
-// ─────────────────────────────────────────────────────────────────────────────
-
-const Scene05: React.FC<{ scene: TranscriptScene }> = ({ scene }) => {
-  const frame = useCurrentFrame();
-  const { fps } = useVideoConfig();
-  const beadAt = cueAt(scene, 'bead');
-  const normalAt = cueAt(scene, 'normal');
-  const planeAt = cueAt(scene, 'plane');
-  const pegAt = cueAt(scene, 'peg');
-  const bead = secondsProgress(frame, fps, beadAt, beadAt + 0.65);
-  const normal = secondsProgress(frame, fps, normalAt, normalAt + 0.55);
-  const plane = secondsProgress(frame, fps, planeAt, planeAt + 0.7);
-  const peg = secondsProgress(frame, fps, pegAt, pegAt + 0.55);
-  const beadX = mix(160, 500, bead);
-  const beadY = 310 - 95 * Math.sin(bead * Math.PI);
-
-  return (
-    <LabShell scene={5} label="constraint track">
-      <SectionTitle kicker="motion follows the constraint">Path first; reaction normal to it</SectionTitle>
-      <div style={{ position: 'absolute', left: 58, top: 204, width: 1345, height: 770, borderRadius: 28, background: `${T.panel}ed`, border: `3px solid ${T.cyan}88`, boxShadow: '0 20px 58px #0008' }}>
-        <svg width="1345" height="770" viewBox="0 0 1345 770">
-          <defs>
-            <ArrowMarker id="s05-cyan" color={T.cyan} />
-            <ArrowMarker id="s05-amber" color={T.amber} />
-          </defs>
-          <g transform="translate(42 45)">
-            <rect width="750" height="620" rx="25" fill={T.paper} stroke={T.cyan} strokeWidth="3" />
-            <text x="25" y="45" fill={darkInk(T.cyan)} fontFamily={T.mono} fontSize="28" fontWeight="950">CURVED WIRE CONSTRAINT</text>
-            <path d="M 105 340 C 235 125 430 125 630 342" fill="none" stroke={T.ink} strokeWidth="13" strokeLinecap="round" />
-            <path d="M 105 340 C 235 125 430 125 630 342" fill="none" stroke={T.cyan} strokeWidth="5" strokeLinecap="round" />
-            <g transform={`translate(${beadX} ${beadY})`}>
-              <circle r="31" fill={T.amber} stroke={T.ink} strokeWidth="6" />
-              <circle r="9" fill={T.paper} />
-              <g opacity={normal} transform={`rotate(${mix(-35, 35, bead)})`}>
-                <line x1="0" y1="-34" x2="0" y2="-145" stroke={T.cyan} strokeWidth="8" markerEnd="url(#s05-cyan)" />
-                <text x="23" y="-104" fill={darkInk(T.cyan)} fontFamily={T.mono} fontSize="30" fontWeight="950">R</text>
-              </g>
-            </g>
-            <g opacity={normal}>
-              <rect x="118" y="430" width="510" height="94" rx="16" fill={T.ink} />
-              <text x="373" y="469" fill={T.cyan} fontFamily={T.mono} fontSize="28" fontWeight="950" textAnchor="middle">SMOOTH CONTACT</text>
-              <text x="373" y="505" fill={T.paper} fontFamily={T.mono} fontSize="28" fontWeight="850" textAnchor="middle">REACTION ⟂ LOCAL PATH</text>
-            </g>
-          </g>
-
-          <g transform="translate(835 45)">
-            <rect width="458" height="620" rx="25" fill={T.bgDeep} stroke={T.amber} strokeWidth="3" />
-            <text x="25" y="45" fill={T.amber} fontFamily={T.mono} fontSize="28" fontWeight="950">PLANE + FIXED PEG</text>
-            <g opacity={plane}>
-              <path d="M 55 380 L 400 172" stroke={T.paper} strokeWidth="17" strokeLinecap="round" />
-              <g transform="translate(205 270) rotate(-31)">
-                <rect x="-68" y="-70" width="136" height="70" rx="12" fill={T.panelLight} stroke={T.cyan} strokeWidth="5" />
-                <line x1="0" y1="-72" x2="0" y2="-160" stroke={T.cyan} strokeWidth="8" markerEnd="url(#s05-cyan)" />
-              </g>
-              <rect x="88" y="425" width="280" height="55" rx="12" fill={T.ink} />
-              <text x="228" y="463" fill={T.cyan} fontFamily={T.mono} fontSize="28" fontWeight="950" textAnchor="middle">FLAT CONTACT</text>
-            </g>
-            <g opacity={peg}>
-              <circle cx="334" cy="105" r="28" fill={T.panelLight} stroke={T.amber} strokeWidth="7" />
-              <path d="M 112 78 H 306 Q 358 78 358 130 V 250" fill="none" stroke={T.paper} strokeWidth="8" />
-              <circle cx="334" cy="105" r="8" fill={T.paper} />
-              <rect x="35" y="502" width="388" height="88" rx="14" fill={T.ink} stroke={T.amber} strokeWidth="2" />
-              <text x="229" y="537" fill={T.amber} fontFamily={T.mono} fontSize="28" fontWeight="950" textAnchor="middle">STRING REDIRECTED</text>
-              <text x="229" y="570" fill={T.paper} fontFamily={T.mono} fontSize="28" fontWeight="850" textAnchor="middle">AT ONE FIXED POINT</text>
-            </g>
-          </g>
-        </svg>
-      </div>
-      <IndexTray title="CONSTRAINT INDEX" items={[
-        { at: beadAt, term: 'BEAD', consequence: 'motion constrained to path', color: T.cyan },
-        { at: beadAt, term: 'WIRE', consequence: 'sets the allowed path', color: T.purple },
-        { at: planeAt, term: 'PLANE', consequence: 'flat contact surface', color: T.teal },
-        { at: pegAt, term: 'PEG', consequence: 'fixed redirect point', color: T.amber },
-      ]} />
-    </LabShell>
-  );
-};
-
-// ─────────────────────────────────────────────────────────────────────────────
-// S06 — WORKED LAB TEST
-// ─────────────────────────────────────────────────────────────────────────────
-
-interface HoldWindow {
+interface Line {
+  id: string;
+  text: string;
   start: number;
   end: number;
-}
-
-const S06_HOLDS: HoldWindow[] = [
-  { start: 8 * 30, end: 10 * 30 },
-  { start: 17 * 30, end: 19 * 30 },
-  { start: 31 * 30, end: 33 * 30 },
-  { start: 49 * 30, end: 51 * 30 },
-  { start: 61 * 30, end: 63 * 30 },
-  { start: 73 * 30, end: 75 * 30 },
-];
-
-function freezeDuring(frame: number, holds: HoldWindow[]): number {
-  const active = holds.find((hold) => frame >= hold.start && frame < hold.end);
-  return active ? active.start : frame;
-}
-
-function ringOpacity(frame: number, hold: HoldWindow): number {
-  return interpolate(frame, [hold.start - 12, hold.start, hold.end, hold.end + 10], [0, 1, 1, 0], {
-    extrapolateLeft: 'clamp',
-    extrapolateRight: 'clamp',
-  });
-}
-
-function measureInkText(text: string, scale: number): number {
-  return Array.from(text).reduce((width, char) => width + (char === ' ' ? GLYPH_ADVANCE[' '] : (GLYPH_ADVANCE[char] ?? 14)) * scale, 0);
-}
-
-const AssumptionChip: React.FC<{ x: number; y: number; width: number; title: string; color?: string }> = ({ x, y, width, title, color = T.cyan }) => (
-  <g transform={`translate(${x} ${y})`}>
-    <rect width={width} height="48" rx="12" fill={T.bgDeep} stroke={color} strokeWidth="2.5" />
-    <circle cx="23" cy="24" r="8" fill={color} />
-    <text x="42" y="33" fill={T.paper} fontFamily={T.mono} fontSize="28" fontWeight="900">{title}</text>
-  </g>
-);
-
-const HoldRing: React.FC<{
-  x: number;
   y: number;
-  width: number;
-  height: number;
-  opacity: number;
-  color?: string;
-}> = ({ x, y, width, height, opacity, color = T.amber }) => (
-  <rect x={x} y={y} width={width} height={height} rx={height / 2} fill="none" stroke={color} strokeWidth="6" opacity={opacity} />
-);
-
-const Scene06: React.FC<{ scene: TranscriptScene }> = ({ scene }) => {
-  const frame = useCurrentFrame();
-  const { fps } = useVideoConfig();
-  const motionFrame = freezeDuring(frame, S06_HOLDS);
-  const supportedAt = cueAt(scene, 'supported');
-  const equationsAt = cueAt(scene, 'equations');
-  const accelerationAt = cueAt(scene, 'acceleration');
-  const supportedCue = useCue(supportedAt, 0.4);
-  const equationsCue = useCue(equationsAt, 0.4);
-  const accelerationCue = useCue(accelerationAt, 0.4);
-
-  const benchMass = progressBetween(motionFrame, 70, 155);
-  const hangingMass = progressBetween(motionFrame, 340, 430);
-  const gravity = progressBetween(motionFrame, 610, 735);
-  const forceTrace = progressBetween(motionFrame, 990, 1042);
-  const linkTrace = progressBetween(motionFrame, equationsAt * fps, equationsAt * fps + 28);
-
-  const line3Prefix = '2g = (3 + 2)a =';
-  const line3ResultX = 104 + measureInkText(line3Prefix, 1.85) + 12;
-  const line4Prefix = 'a = 2(9.8)/5 =';
-  const line4ResultX = 104 + measureInkText(line4Prefix, 1.72) + 12;
-  const line5Prefix = 'T = 3(3.92) ≈';
-  const line5ResultX = 104 + measureInkText(line5Prefix, 1.8) + 12;
-
-  const strokes = useMemo(() => [
-    ...makeInkLine({ id: 's06-l1', text: 'T = 3a', x: 104, y: 166, scale: 2.05, startFrame: 1080, endFrame: 1160, width: 4.2 }),
-    ...makeInkLine({ id: 's06-l2', text: '2g - T = 2a', x: 104, y: 236, scale: 2.0, startFrame: 1170, endFrame: 1280, width: 4.2 }),
-    ...makeInkLine({ id: 's06-l3a', text: line3Prefix, x: 104, y: 348, scale: 1.85, startFrame: 1322, endFrame: 1425, width: 4.1 }),
-    ...makeInkLine({ id: 's06-l3b', text: '5a', x: line3ResultX, y: 348, scale: 1.95, startFrame: 1428, endFrame: 1454, color: darkInk(T.green), width: 4.4 }),
-    ...makeInkLine({ id: 's06-l4a', text: line4Prefix, x: 104, y: 472, scale: 1.72, startFrame: 1560, endFrame: 1688, width: 4.1 }),
-    ...makeInkLine({ id: 's06-l4b', text: '3.92 m s', x: line4ResultX, y: 472, scale: 1.75, startFrame: 1692, endFrame: 1788, color: darkInk(T.green), width: 4.3 }),
-    ...makeInkLine({ id: 's06-l4c', text: '-2', x: line4ResultX + measureInkText('3.92 m s', 1.75) + 2, y: 452, scale: 1.05, startFrame: 1790, endFrame: 1808, color: darkInk(T.green), width: 3.5 }),
-    ...makeInkLine({ id: 's06-l5a', text: line5Prefix, x: 104, y: 603, scale: 1.8, startFrame: 1925, endFrame: 2058, width: 4.1 }),
-    ...makeInkLine({ id: 's06-l5b', text: '11.8 N', x: line5ResultX, y: 603, scale: 1.9, startFrame: 2062, endFrame: 2132, color: darkInk(T.green), width: 4.4 }),
-    ...makeInkLine({ id: 's06-note', text: '3 s.f.', x: 620, y: 675, scale: 1.3, startFrame: 2138, endFrame: 2173, color: darkInk(T.coral), width: 3.6 }),
-  ], [line3ResultX, line4ResultX, line5ResultX]);
-
-  return (
-    <LabShell scene={6} label="worked lab test">
-      <SectionTitle kicker="assumptions earn the shortcut">One rig · one careful calculation</SectionTitle>
-      <svg width="1920" height="1080" viewBox="0 0 1920 1080" style={{ position: 'absolute', inset: 0 }}>
-        <defs>
-          <ArrowMarker id="s06-cyan" color={T.cyan} />
-          <ArrowMarker id="s06-amber" color={T.amber} />
-          <ArrowMarker id="s06-coral" color={T.coral} />
-        </defs>
-
-        <g transform="translate(55 190)">
-          <rect width="855" height="810" rx="28" fill={`${T.panel}f5`} stroke={T.cyan} strokeWidth="3" />
-          <text x="28" y="47" fill={T.cyan} fontFamily={T.mono} fontSize="28" fontWeight="950">RIG A · COUPLED PARTICLES</text>
-          <AssumptionChip x={26} y={70} width={210} title="PARTICLES" />
-          <AssumptionChip x={250} y={70} width={242} title="SMOOTH BENCH" color={T.cyan} />
-          <AssumptionChip x={506} y={70} width={242} title="LIGHT STRING" color={T.teal} />
-          <AssumptionChip x={26} y={132} width={390} title="TAUT · INEXTENSIBLE" color={T.purple} />
-          <AssumptionChip x={430} y={132} width={396} title="SMOOTH · LIGHT PULLEY" color={T.amber} />
-          <AssumptionChip x={26} y={194} width={404} title="AIR RESISTANCE · OFF" color={T.coral} />
-
-          <rect x="58" y="425" width="560" height="46" rx="10" fill={T.paper} stroke={T.ink} strokeWidth="4" />
-          {Array.from({ length: 17 }, (_, index) => <path key={index} d={`M ${70 + index * 32} 438 l 18 20`} stroke={`${T.cyan}66`} strokeWidth="3" />)}
-          <circle cx="680" cy="330" r="75" fill={T.panelLight} stroke={T.amber} strokeWidth="8" />
-          <circle cx="680" cy="330" r="12" fill={T.paper} />
-          <path d="M 390 330 H 605 A 75 75 0 0 1 755 330 V 511" fill="none" stroke={T.paper} strokeWidth="9" />
-          <rect x="270" y="330" width="150" height="95" rx="14" fill={T.panelLight} stroke={T.cyan} strokeWidth="6" />
-          <rect x="690" y="510" width="130" height="120" rx="14" fill={T.panelLight} stroke={T.amber} strokeWidth="6" />
-
-          <g opacity={benchMass}>
-            <rect x="282" y="348" width="126" height="54" rx="12" fill={T.bgDeep} stroke={T.cyan} strokeWidth="3" />
-            <text x="345" y="385" fill={T.cyan} fontFamily={T.mono} fontSize="31" fontWeight="950" textAnchor="middle">3 kg</text>
-            <HoldRing x={270} y={330} width={150} height={95} opacity={ringOpacity(frame, S06_HOLDS[0])} />
-          </g>
-          <g opacity={hangingMass}>
-            <rect x="701" y="543" width="108" height="54" rx="12" fill={T.bgDeep} stroke={T.amber} strokeWidth="3" />
-            <text x="755" y="580" fill={T.amber} fontFamily={T.mono} fontSize="31" fontWeight="950" textAnchor="middle">2 kg</text>
-            <HoldRing x={690} y={510} width={130} height={120} opacity={ringOpacity(frame, S06_HOLDS[1])} />
-          </g>
-          <g opacity={gravity}>
-            <rect x="46" y="650" width="334" height="78" rx="16" fill={T.paper} stroke={T.amber} strokeWidth="3" />
-            <text x="213" y="699" fill={T.ink} fontFamily={T.mono} fontSize="34" fontWeight="950" textAnchor="middle">g = 9.8 m s⁻²</text>
-            <HoldRing x={34} y={638} width={358} height={102} opacity={ringOpacity(frame, S06_HOLDS[2])} />
-          </g>
-
-          <g opacity={forceTrace}>
-            <line x1="345" y1="330" x2={mix(345, 345, forceTrace)} y2={mix(330, 244, forceTrace)} stroke={T.cyan} strokeWidth="7" markerEnd="url(#s06-cyan)" />
-            <line x1="345" y1="425" x2="345" y2={mix(425, 520, forceTrace)} stroke={T.amber} strokeWidth="7" markerEnd="url(#s06-amber)" />
-            <line x1="420" y1="377" x2={mix(420, 535, forceTrace)} y2="377" stroke={T.cyan} strokeWidth="7" markerEnd="url(#s06-cyan)" />
-            <text x="548" y="367" fill={T.cyan} fontFamily={T.mono} fontSize="29" fontWeight="950">T</text>
-            <text x="365" y="252" fill={T.cyan} fontFamily={T.mono} fontSize="29" fontWeight="950">R</text>
-            <text x="366" y="528" fill={T.amber} fontFamily={T.mono} fontSize="29" fontWeight="950">3g</text>
-            <line x1="755" y1="510" x2="755" y2={mix(510, 435, forceTrace)} stroke={T.cyan} strokeWidth="7" markerEnd="url(#s06-cyan)" />
-            <line x1="755" y1="630" x2="755" y2={mix(630, 731, forceTrace)} stroke={T.amber} strokeWidth="7" markerEnd="url(#s06-amber)" />
-            <text x="777" y="452" fill={T.cyan} fontFamily={T.mono} fontSize="29" fontWeight="950">T</text>
-            <text x="777" y="728" fill={T.amber} fontFamily={T.mono} fontSize="29" fontWeight="950">2g</text>
-            <line x1="445" y1="294" x2="550" y2="294" stroke={T.coral} strokeWidth="7" markerEnd="url(#s06-coral)" />
-            <line x1="827" y1="470" x2="827" y2="550" stroke={T.coral} strokeWidth="7" markerEnd="url(#s06-coral)" />
-            <text x="492" y="278" fill={T.coral} fontFamily={T.mono} fontSize="28" fontWeight="950">a</text>
-            <text x="800" y="500" fill={T.coral} fontFamily={T.mono} fontSize="28" fontWeight="950">a</text>
-          </g>
-
-          <g opacity={linkTrace * equationsCue.opacity}>
-            <path d="M 151 118 C 160 216 250 257 302 318" fill="none" stroke={T.cyan} strokeWidth="4" strokeDasharray="10 8" />
-            <path d="M 648 118 C 624 220 656 243 676 256" fill="none" stroke={T.purple} strokeWidth="4" strokeDasharray="10 8" />
-            <path d="M 214 180 C 348 226 510 218 618 290" fill="none" stroke={T.amber} strokeWidth="4" strokeDasharray="10 8" />
-          </g>
-          <g opacity={supportedCue.opacity}>
-            <rect x="436" y="655" width="370" height="78" rx="16" fill={T.bgDeep} stroke={T.cyan} strokeWidth="2" />
-            <text x="621" y="687" fill={T.muted} fontFamily={T.mono} fontSize="28" fontWeight="850" textAnchor="middle">ONE TENSION · ONE |a|</text>
-            <text x="621" y="719" fill={T.paper} fontFamily={T.mono} fontSize="28" fontWeight="850" textAnchor="middle">DIRECTIONS FOLLOW PATH</text>
-          </g>
-        </g>
-
-        <g transform="translate(955 170)">
-          <RuledPaper width={905} height={850}>
-            <text x="105" y="54" fill={darkInk(T.amber)} fontFamily={T.mono} fontSize="28" fontWeight="950" letterSpacing="2">WORKING · PATH INK</text>
-            <InkPlayback strokes={strokes} frame={motionFrame} />
-            <HoldRing x={line3ResultX - 14} y="324" width="88" height="64" opacity={ringOpacity(frame, S06_HOLDS[3])} color={T.green} />
-            <HoldRing x={line4ResultX - 13} y="445" width="276" height="65" opacity={ringOpacity(frame, S06_HOLDS[4])} color={T.green} />
-            <HoldRing x={line5ResultX - 13} y="575" width="187" height="66" opacity={ringOpacity(frame, S06_HOLDS[5])} color={T.green} />
-            <g opacity={accelerationCue.opacity}>
-              <path d="M 88 440 H 825" stroke={T.cyan} strokeWidth="2.5" opacity="0.5" />
-            </g>
-          </RuledPaper>
-        </g>
-      </svg>
-    </LabShell>
-  );
-};
-
-// ─────────────────────────────────────────────────────────────────────────────
-// S07 — JUSTIFY THE SHORTCUT, THEN TEST IT
-// ─────────────────────────────────────────────────────────────────────────────
-
-const ConsequenceRow: React.FC<{
-  y: number;
-  left: string;
-  right: string;
-  color: string;
-  opacity: number;
-  rejected?: boolean;
-}> = ({ y, left, right, color, opacity, rejected = false }) => (
-  <g opacity={opacity} transform={`translate(0 ${y})`}>
-    <rect x="92" y="0" width="300" height="62" rx="14" fill={T.bgDeep} stroke={color} strokeWidth="3" />
-    <text x="242" y="41" fill={color} fontFamily={T.mono} fontSize="28" fontWeight="950" textAnchor="middle">{left}</text>
-    <line x1="407" y1="31" x2="518" y2="31" stroke={color} strokeWidth="5" strokeDasharray={rejected ? '10 8' : undefined} />
-    <path d="M 518 31 l -18 -11 v 22 Z" fill={color} />
-    {rejected && <path d="M 448 8 l 28 46 M 476 8 l -28 46" stroke={T.coral} strokeWidth="6" />}
-    <rect x="535" y="0" width="355" height="62" rx="14" fill={T.paper} stroke={color} strokeWidth="3" />
-    <text x="712" y="41" fill={darkInk(color)} fontFamily={T.mono} fontSize="28" fontWeight="950" textAnchor="middle">{right}</text>
-  </g>
-);
-
-const Scene07: React.FC<{ scene: TranscriptScene }> = ({ scene }) => {
-  const frame = useCurrentFrame();
-  const { fps } = useVideoConfig();
-  const shortcutAt = cueAt(scene, 'shortcut');
-  const choicesAt = cueAt(scene, 'other-choices');
-  const roughAt = cueAt(scene, 'rough-bench');
-  const smoothMatch = useCue(wordAt(scene, 'smooth', shortcutAt), 0.42);
-  const tensionMatch = useCue(wordAt(scene, 'light', shortcutAt + 3), 0.42);
-  const inextensibleMatch = useCue(wordAt(scene, 'inextensible', choicesAt + 2), 0.42);
-  const uniformMatch = useCue(wordAt(scene, 'uniform', choicesAt + 8), 0.42);
-  const particleMatch = useCue(wordAt(scene, 'particle', choicesAt + 11), 0.42);
-  const dragRejection = useCue(wordAt(scene, 'nothing', choicesAt + 15), 0.42);
-  const rough = useCue(roughAt, 0.42);
-  const roughProgress = secondsProgress(frame, fps, roughAt, roughAt + 0.8);
-
-  const retainedStrokes = useMemo(() => [
-    ...makeInkLine({ id: 's07-old1', text: 'T = 3a', x: 102, y: 105, scale: 1.55, startFrame: 0, endFrame: 1, width: 3.6 }),
-    ...makeInkLine({ id: 's07-old2', text: '2g - T = 2a', x: 102, y: 164, scale: 1.5, startFrame: 0, endFrame: 1, width: 3.6 }),
-    ...makeInkLine({ id: 's07-old3', text: 'a = 3.92 m s', x: 102, y: 223, scale: 1.45, startFrame: 0, endFrame: 1, color: darkInk(T.green), width: 3.7 }),
-    ...makeInkLine({ id: 's07-old4', text: '-2', x: 102 + measureInkText('a = 3.92 m s', 1.45) + 2, y: 205, scale: 0.9, startFrame: 0, endFrame: 1, color: darkInk(T.green), width: 3.2 }),
-  ], []);
-  const revisedStrokes = useMemo(() => makeInkLine({
-    id: 's07-revised',
-    text: '2g - F = 5a',
-    x: 104,
-    y: 731,
-    scale: 2.0,
-    startFrame: roughAt * fps + 42,
-    endFrame: roughAt * fps + 184,
-    color: darkInk(T.coral),
-    width: 4.4,
-  }), [fps, roughAt]);
-
-  return (
-    <LabShell scene={7} label="model stress test">
-      <SectionTitle kicker="state the reason, then challenge it">Every shortcut has a boundary</SectionTitle>
-      <svg width="1920" height="1080" viewBox="0 0 1920 1080" style={{ position: 'absolute', inset: 0 }}>
-        <defs>
-          <ArrowMarker id="s07-cyan" color={T.cyan} />
-          <ArrowMarker id="s07-amber" color={T.amber} />
-          <ArrowMarker id="s07-coral" color={T.coral} />
-          <ArrowMarker id="s07-purple" color={T.purple} />
-          <pattern id="s07-sand" width="18" height="15" patternUnits="userSpaceOnUse"><circle cx="4" cy="5" r="2" fill={T.amber} /><circle cx="14" cy="11" r="1.7" fill={T.amber} /></pattern>
-        </defs>
-
-        <g transform="translate(52 190)">
-          <rect width="760" height="810" rx="28" fill={`${T.panel}f5`} stroke={roughProgress > 0.5 ? T.coral : T.cyan} strokeWidth="3" />
-          <text x="26" y="45" fill={T.cyan} fontFamily={T.mono} fontSize="28" fontWeight="950">RIG A · SAME COUPLED PARTICLES</text>
-          <AssumptionChip x={25} y={70} width={214} title="SMOOTH" />
-          <AssumptionChip x={252} y={70} width={202} title="LIGHT" color={T.teal} />
-          <AssumptionChip x={467} y={70} width={266} title="INEXTENSIBLE" color={T.purple} />
-          <rect x="50" y="425" width="495" height="48" rx="10" fill={T.paper} stroke={T.ink} strokeWidth="4" />
-          <rect x="50" y="425" width="495" height="48" rx="10" fill="url(#s07-sand)" opacity={roughProgress} />
-          <circle cx="610" cy="330" r="72" fill={T.panelLight} stroke={T.amber} strokeWidth="8" />
-          <circle cx="610" cy="330" r="11" fill={T.paper} />
-          <path d="M 340 330 H 538 A 72 72 0 0 1 682 330 V 510" fill="none" stroke={T.paper} strokeWidth="9" />
-          <rect x="210" y="330" width="160" height="95" rx="14" fill={T.panelLight} stroke={T.cyan} strokeWidth="6" />
-          <rect x="622" y="510" width="120" height="122" rx="14" fill={T.panelLight} stroke={T.amber} strokeWidth="6" />
-          <text x="290" y="388" fill={T.cyan} fontFamily={T.mono} fontSize="31" fontWeight="950" textAnchor="middle">3 kg</text>
-          <text x="682" y="581" fill={T.amber} fontFamily={T.mono} fontSize="31" fontWeight="950" textAnchor="middle">2 kg</text>
-          <line x1="370" y1="377" x2="475" y2="377" stroke={T.cyan} strokeWidth="7" markerEnd="url(#s07-cyan)" />
-          <line x1="682" y1="632" x2="682" y2="715" stroke={T.amber} strokeWidth="7" markerEnd="url(#s07-amber)" />
-          <g opacity={inextensibleMatch.opacity}>
-            <line x1="390" y1="289" x2="505" y2="289" stroke={T.purple} strokeWidth="7" markerEnd="url(#s07-purple)" />
-            <line x1="735" y1="448" x2="735" y2="535" stroke={T.purple} strokeWidth="7" markerEnd="url(#s07-purple)" />
-            <text x="448" y="273" fill={T.purple} fontFamily={T.mono} fontSize="28" fontWeight="950">a</text>
-            <text x="707" y="487" fill={T.purple} fontFamily={T.mono} fontSize="28" fontWeight="950">a</text>
-            <rect x="50" y="248" width="310" height="72" rx="12" fill={T.bgDeep} stroke={T.purple} strokeWidth="2" />
-            <text x="205" y="277" fill={T.purple} fontFamily={T.mono} fontSize="28" fontWeight="950" textAnchor="middle">EQUAL |a|</text>
-            <text x="205" y="307" fill={T.purple} fontFamily={T.mono} fontSize="28" fontWeight="950" textAnchor="middle">DIRECTIONS DIFFER</text>
-          </g>
-          <g opacity={rough.opacity}>
-            <line x1="210" y1="378" x2={mix(210, 103, roughProgress)} y2="378" stroke={T.coral} strokeWidth="8" markerEnd="url(#s07-coral)" />
-            <rect x="72" y="484" width="320" height="73" rx="13" fill={T.bgDeep} stroke={T.coral} strokeWidth="3" />
-            <text x="232" y="514" fill={T.coral} fontFamily={T.mono} fontSize="28" fontWeight="950" textAnchor="middle">FRICTION</text>
-            <text x="232" y="545" fill={T.coral} fontFamily={T.mono} fontSize="28" fontWeight="950" textAnchor="middle">REDUCES DRIVE</text>
-            <rect x="417" y="484" width="316" height="73" rx="13" fill={T.bgDeep} stroke={T.coral} strokeWidth="3" />
-            <text x="575" y="514" fill={T.coral} fontFamily={T.mono} fontSize="28" fontWeight="950" textAnchor="middle">SAME WEIGHT</text>
-            <text x="575" y="545" fill={T.coral} fontFamily={T.mono} fontSize="28" fontWeight="950" textAnchor="middle">|a| FALLS</text>
-          </g>
-          <rect x="56" y="610" width="504" height="120" rx="17" fill={T.paper} stroke={T.green} strokeWidth="3" />
-          <text x="308" y="653" fill={darkInk(T.green)} fontFamily={T.mono} fontSize="31" fontWeight="950" textAnchor="middle">3.92 m s⁻²</text>
-          <text x="308" y="696" fill={T.ink} fontFamily={T.mono} fontSize="28" fontWeight="900" textAnchor="middle">SMOOTH BENCH ONLY</text>
-          <g opacity={interpolate(frame, [43 * fps, 44 * fps], [0, 1], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' })}>
-            <rect x="55" y="748" width="650" height="48" rx="12" fill={T.bgDeep} stroke={T.cyan} strokeWidth="2" />
-            <text x="380" y="781" fill={T.paper} fontFamily={T.mono} fontSize="28" fontWeight="900" textAnchor="middle">SIZE · SIGN · UNITS · PLAUSIBILITY</text>
-          </g>
-        </g>
-
-        <g transform="translate(835 170)">
-          <RuledPaper width={1025} height={850}>
-            <text x="105" y="52" fill={darkInk(T.amber)} fontFamily={T.mono} fontSize="28" fontWeight="950">CONSEQUENCE SORTER</text>
-            <InkPlayback strokes={retainedStrokes} frame={9999} showHand={false} />
-            <rect x="590" y="80" width="350" height="170" rx="18" fill={`${T.green}16`} stroke={T.green} strokeWidth="3" />
-            <text x="765" y="124" fill={darkInk(T.green)} fontFamily={T.mono} fontSize="28" fontWeight="950" textAnchor="middle">WORKED RESULT</text>
-            <text x="765" y="165" fill={T.ink} fontSize="28" fontWeight="850" textAnchor="middle">kept for comparison</text>
-            <text x="765" y="207" fill={darkInk(T.coral)} fontFamily={T.mono} fontSize="28" fontWeight="900" textAnchor="middle">MODEL-SPECIFIC</text>
-            <ConsequenceRow y={286} left="SMOOTH" right="NO FRICTION" color={T.cyan} opacity={smoothMatch.opacity} />
-            <ConsequenceRow y={360} left="LIGHT + SMOOTH" right="EQUAL TENSION" color={T.teal} opacity={tensionMatch.opacity} />
-            <ConsequenceRow y={434} left="TAUT + INEXT." right="EQUAL |a|" color={T.purple} opacity={inextensibleMatch.opacity} />
-            <ConsequenceRow y={508} left="UNIFORM ROD" right="MIDPOINT WEIGHT" color={T.amber} opacity={uniformMatch.opacity} />
-            <ConsequenceRow y={576} left="PARTICLE" right="ONE FORCE POINT" color={T.cyan} opacity={particleMatch.opacity} />
-            <ConsequenceRow y={644} left="PARTICLE" right="NO DRAG" color={T.coral} opacity={dragRejection.opacity} rejected />
-            <InkPlayback strokes={revisedStrokes} frame={frame} />
-          </RuledPaper>
-        </g>
-      </svg>
-    </LabShell>
-  );
-};
-
-// ─────────────────────────────────────────────────────────────────────────────
-// S08 — TWENTY-SECOND RECAP
-// ─────────────────────────────────────────────────────────────────────────────
-
-interface RecapCardSpec {
-  term: string;
-  consequence: string;
-  breakAfter?: number;
-  color: string;
-  group: 'particle' | 'light' | 'smooth' | 'inextensible' | 'rigid' | 'uniform' | 'other';
+  exponent?: string;
+  resultAt?: number;
+  prefixEnd?: number;
 }
-
-const RECAP_CARDS: RecapCardSpec[] = [
-  { term: 'PARTICLE', consequence: 'one force point', color: T.cyan, group: 'particle' },
-  { term: 'LIGHT STRING', consequence: 'negligible mass', color: T.teal, group: 'light' },
-  { term: 'LIGHT ROD', consequence: 'no added weight', color: T.teal, group: 'light' },
-  { term: 'LIGHT PULLEY', consequence: 'no rotation inertia', color: T.teal, group: 'light' },
-  { term: 'SMOOTH SURFACE', consequence: 'no friction', color: T.coral, group: 'smooth' },
-  { term: 'SMOOTH PULLEY', consequence: 'equal tension', color: T.coral, group: 'smooth' },
-  { term: 'SMOOTH PEG', consequence: 'frictionless redirect', breakAfter: 1, color: T.coral, group: 'smooth' },
-  { term: 'INEXTENSIBLE', consequence: 'taut-string motion', breakAfter: 1, color: T.purple, group: 'inextensible' },
-  { term: 'RIGID ROD', consequence: 'fixed shape', color: T.amber, group: 'rigid' },
-  { term: 'BEAM', consequence: 'force positions kept', color: T.amber, group: 'rigid' },
-  { term: 'UNIFORM ROD', consequence: 'centre of mass', breakAfter: 2, color: T.green, group: 'uniform' },
-  { term: 'UNIFORM LAMINA', consequence: 'area centroid', color: T.green, group: 'uniform' },
-  { term: 'LAMINA', consequence: 'negligible thickness', breakAfter: 1, color: T.green, group: 'uniform' },
-  { term: 'BEAD', consequence: 'follows a wire', color: T.cyan, group: 'other' },
-  { term: 'WIRE', consequence: 'sets a path', color: T.cyan, group: 'other' },
-  { term: 'PLANE', consequence: 'flat contact', color: T.cyan, group: 'other' },
-  { term: 'PEG', consequence: 'fixed redirect', color: T.cyan, group: 'other' },
-  { term: 'ROUGH SURFACE', consequence: 'friction may act', color: T.coral, group: 'other' },
-];
-
-const Scene08: React.FC<{ scene: TranscriptScene }> = ({ scene }) => {
-  const frame = useCurrentFrame();
-  const { fps } = useVideoConfig();
-  const particleAt = cueAt(scene, 'particle');
-  const smoothAt = cueAt(scene, 'smooth');
-  const uniformAt = cueAt(scene, 'uniform');
-  const stateAt = cueAt(scene, 'state-it');
-  const particle = useCue(particleAt, 0.35);
-  const smooth = useCue(smoothAt, 0.35);
-  const uniform = useCue(uniformAt, 0.35);
-  const state = useCue(stateAt, 0.4);
-  const cycleBuild = secondsProgress(frame, fps, stateAt, stateAt + 0.8);
-
-  const groupOpacity = (group: RecapCardSpec['group']): number => {
-    if (group === 'particle' || group === 'light') return particle.opacity;
-    if (group === 'smooth' || group === 'inextensible') return smooth.opacity;
-    if (group === 'uniform' || group === 'rigid') return uniform.opacity;
-    return 1;
-  };
-
-  return (
-    <LabShell scene={8} label="assumption index">
-      <SectionTitle kicker="twenty-second recap">Six modelling words; six controlled shortcuts</SectionTitle>
-      <div style={{ position: 'absolute', left: 55, right: 55, top: 203, height: 680, borderRadius: 28, border: `3px solid ${T.cyan}88`, background: `${T.panel}ef`, padding: '26px 28px', boxShadow: '0 20px 58px #0008' }}>
-        <div style={{ color: T.cyan, fontFamily: T.mono, fontSize: 28, fontWeight: 950, letterSpacing: 2 }}>COMPLETE MODELLING INDEX</div>
-        <svg width="1750" height="590" viewBox="0 0 1750 590" style={{ position: 'absolute', left: 28, top: 70 }}>
-          {RECAP_CARDS.map((card, index) => {
-            const column = index % 6;
-            const row = Math.floor(index / 6);
-            const x = 8 + column * 289;
-            const y = 70 + row * 190;
-            const opacity = groupOpacity(card.group);
-            const words = card.consequence.split(' ');
-            const breakAfter = card.breakAfter ?? Math.min(2, words.length);
-            return (
-              <g key={card.term} transform={`translate(${x} ${y + (1 - opacity) * 18})`} opacity={opacity}>
-                <rect width="268" height="134" rx="18" fill={T.paper} stroke={card.color} strokeWidth="3" />
-                <rect x="0" y="0" width="268" height="43" rx="18" fill={`${card.color}32`} />
-                <text x="134" y="31" fill={darkInk(card.color)} fontFamily={T.mono} fontSize="28" fontWeight="950" textAnchor="middle">{card.term}</text>
-                {card.group !== 'other' && <path d="M 134 44 V 58" stroke={T.cyan} strokeWidth="4" strokeLinecap="round" />}
-                <text x="134" y="84" fill={T.ink} fontSize="28" fontWeight="850" textAnchor="middle">{words.slice(0, breakAfter).join(' ')}</text>
-                <text x="134" y="116" fill={T.ink} fontSize="28" fontWeight="850" textAnchor="middle">{words.slice(breakAfter).join(' ')}</text>
-              </g>
-            );
-          })}
-        </svg>
-      </div>
-      <div style={{ position: 'absolute', left: 250, right: 250, top: 906, height: 104, opacity: state.opacity, transform: `scale(${0.94 + cycleBuild * 0.06})` }}>
-        <PaperCard accent={T.green} style={{ height: '100%', padding: '18px 28px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', boxShadow: `0 0 ${22 + cycleBuild * 30}px ${T.green}55` }}>
-          {['ASSUME.', 'SOLVE.', 'CHECK.', 'REFINE.'].map((step, index) => (
-            <React.Fragment key={step}>
-              <div style={{ color: index === 3 ? darkInk(T.green) : T.ink, fontFamily: T.mono, fontSize: 34, fontWeight: 950 }}>{step}</div>
-              {index < 3 && <div style={{ color: T.cyan, fontSize: 42, fontWeight: 950 }}>→</div>}
-            </React.Fragment>
-          ))}
-        </PaperCard>
-      </div>
-    </LabShell>
-  );
-};
-
-const S01 = getScene('s01');
-const S02 = getScene('s02');
-const S03 = getScene('s03');
-const S04 = getScene('s04');
-const S05 = getScene('s05');
-const S06 = getScene('s06');
-const S07 = getScene('s07');
-const S08 = getScene('s08');
-
-const NarratedScene: React.FC<{
-  scene: TranscriptScene;
-  audioEnabled: boolean;
-  children: React.ReactNode;
-}> = ({ scene, audioEnabled, children }) => (
-  <AbsoluteFill>
-    {children}
-    {audioEnabled && <Audio src={staticFile(`audio/mechanics/${scene.audio}`)} volume={1} />}
-  </AbsoluteFill>
-);
-
-export const MechanicsModellingAssumptions: React.FC<MechanicsModellingAssumptionsProps> = ({
-  audioEnabled = true,
+const Paper: React.FC<{ lines: Line[]; t: number; ringLine?: number; note?: string }> = ({
+  lines,
+  t,
+  ringLine = -1,
+  note,
 }) => {
   const { fps } = useVideoConfig();
-  const transition = (
-    <TransitionSeries.Transition
-      presentation={fadeThroughGraphite}
-      timing={linearTiming({ durationInFrames: TRANSITION_FRAMES })}
-    />
+  const strokes = useMemo(
+    () =>
+      lines.map((line) => {
+        const width = line.text.split('').reduce((n: number, c: string) => n + (GLYPH_ADVANCE[c] ?? 14), 0);
+        const scale = Math.min(2.8, 655 / width);
+        const split = line.resultAt === undefined ? line.text.length : line.text.lastIndexOf('=') + 1;
+        const prefix = line.text.slice(0, split);
+        const prefixWidth = prefix.split('').reduce((n, c) => n + (GLYPH_ADVANCE[c] ?? 14), 0) * scale;
+        const base = makeInkLine({
+          id: line.id,
+          text: prefix,
+          x: 65,
+          y: line.y,
+          scale,
+          startFrame: line.start * fps,
+          endFrame:
+            line.resultAt === undefined
+              ? line.end * fps - (line.exponent ? 8 : 0)
+              : (line.prefixEnd ?? line.resultAt) * fps,
+          color: T.ink,
+          width: 3.8,
+        });
+        if (line.resultAt !== undefined)
+          base.push(
+            ...makeInkLine({
+              id: `${line.id}-result`,
+              text: line.text.slice(split),
+              x: 65 + prefixWidth,
+              y: line.y,
+              scale,
+              startFrame: line.resultAt * fps,
+              endFrame: line.end * fps - (line.exponent ? 8 : 0),
+              color: T.ink,
+              width: 3.8,
+            }),
+          );
+        if (line.exponent)
+          base.push(
+            ...makeInkLine({
+              id: `${line.id}-power`,
+              text: line.exponent,
+              x: 65 + width * scale,
+              y: line.y - 16,
+              scale: 1.6,
+              startFrame: line.end * fps - 8,
+              endFrame: line.end * fps,
+              color: T.ink,
+              width: 3.3,
+            }),
+          );
+        return base;
+      }),
+    [lines, fps],
   );
-
+  const ring = ringLine >= 0 ? lines[ringLine] : undefined;
+  const ringWidth = ring
+    ? ring.text.split('').reduce((n: number, c: string) => n + (GLYPH_ADVANCE[c] ?? 14), 0)
+    : 1;
+  const ringScale = Math.min(2.8, 655 / ringWidth);
+  const prefix = ring ? ring.text.slice(0, ring.text.lastIndexOf('=') + 1) : '';
+  const prefixWidth =
+    prefix.split('').reduce((n: number, c: string) => n + (GLYPH_ADVANCE[c] ?? 14), 0) * ringScale;
+  const resultWidth = ringWidth * ringScale - prefixWidth;
   return (
-    <AbsoluteFill style={{ background: T.bg }}>
+    <svg
+      data-region="paper"
+      width="810"
+      height="660"
+      viewBox="0 0 810 660"
+      style={{ position: 'absolute', left: 1010, top: 250 }}
+    >
+      <rect width="810" height="660" rx="8" fill={T.paper} />
+      {Array.from({ length: 12 }, (_, i) => (
+        <path key={i} d={`M30 ${70 + i * 48} H780`} fill="none" stroke={T.line} strokeWidth="1.5" />
+      ))}
+      <path d="M48 25 V635" stroke={T.line} strokeWidth="2" />
+      {lines.map((line, i) =>
+        t >= line.start ? (
+          <g key={line.id} data-ink-text={line.text + (line.exponent ? line.exponent : '')}>
+            <InkPlayback strokes={strokes[i]} frame={t * fps} />
+          </g>
+        ) : null,
+      )}
+      {ringLine >= 0 && (
+        <ellipse
+          cx={65 + prefixWidth + resultWidth / 2}
+          cy={lines[ringLine].y + 23}
+          rx={resultWidth / 2 + 18}
+          ry="54"
+          fill="none"
+          stroke={T.accent}
+          strokeWidth="4"
+        />
+      )}
+      {note && (
+        <text data-card="true" x="65" y="597" fill={T.ink} fontSize="29">
+          {note}
+        </text>
+      )}
+    </svg>
+  );
+};
+
+const Opening: React.FC<{ s: Scene }> = ({ s }) => {
+  const { fps } = useVideoConfig();
+  const t = useCurrentFrame() / fps;
+  const state = latest(s, t, [
+    'syllabus',
+    'smooth',
+    'connected',
+    'continuation',
+    'outcomes',
+    'explain',
+    'find',
+    'predict',
+  ]);
+  const header = ['outcomes', 'explain', 'find', 'predict'].includes(state)
+    ? 'By the end you can...'
+    : ['connected', 'continuation'].includes(state)
+      ? 'Syllabus 4.4 · p.33'
+      : 'Syllabus 4.1 · p.31';
+  const text =
+    state === 'smooth'
+      ? 'use the model of a ‘smooth’ contact'
+      : state === 'connected'
+        ? 'solve simple problems which may be modelled'
+        : state === 'continuation'
+          ? 'as the motion of connected particles.'
+          : state === 'explain'
+            ? OUTCOMES[0]
+            : state === 'find'
+              ? OUTCOMES[1]
+              : state === 'predict'
+                ? OUTCOMES[2]
+                : '';
+  return (
+    <>
+      <Header>{header}</Header>
+      {text && <Card text={text} centre />}
+    </>
+  );
+};
+const Particle: React.FC<{ s: Scene }> = ({ s }) => {
+  const { fps } = useVideoConfig();
+  const t = useCurrentFrame() / fps;
+  const at = (id: string) => t >= cue(s, id);
+  const card = at('include')
+    ? 'Air resistance included'
+    : at('air')
+      ? 'Air resistance neglected'
+      : at('particle')
+        ? 'Particle'
+        : '';
+  return (
+    <>
+      <Diagram>
+        <System
+          parts={['hanging', 'box', 'table', 'string', 'pulley'].filter(at)}
+          particle={at('size') && !at('tips')}
+          tip={at('tips') && !at('air')}
+          drag={at('drag')}
+        />
+      </Diagram>
+      {card && <Card text={card} />}
+    </>
+  );
+};
+const Light: React.FC<{ s: Scene }> = ({ s }) => {
+  const { fps } = useVideoConfig();
+  const t = useCurrentFrame() / fps;
+  const at = (id: string) => t >= cue(s, id);
+  const card = at('rough')
+    ? 'Rough pulley'
+    : at('smooth')
+      ? 'Smooth pulley'
+      : at('massive')
+        ? 'Massive pulley'
+        : at('pulley')
+          ? 'Light pulley'
+          : at('heavy')
+            ? 'Heavy string'
+            : at('string')
+              ? 'Light string'
+              : 'Light: negligible mass';
+  return (
+    <>
+      <Diagram>
+        <System
+          heavyString={at('heavy') && !at('pulley')}
+          massivePulley={at('massive') && !at('smooth')}
+          roughPulley={at('rough')}
+          tensions={
+            at('massive') && !at('smooth')
+              ? at('spin')
+                ? 2
+                : 1
+              : at('second-tension')
+                ? 2
+                : at('equal')
+                  ? 1
+                  : 0
+          }
+          unequal={(at('spin') && !at('smooth')) || at('unequal')}
+        />
+      </Diagram>
+      <Card text={card} />
+    </>
+  );
+};
+const StringMotion: React.FC<{ s: Scene }> = ({ s }) => {
+  const { fps } = useVideoConfig();
+  const t = useCurrentFrame() / fps;
+  const at = (id: string) => t >= cue(s, id);
+  const motion = at('slack')
+    ? clamp((t - cue(s, 'unlinked')) / 1.5) * 30
+    : at('stretch')
+      ? clamp((t - cue(s, 'stretch')) / 2) * 70
+      : clamp((t - cue(s, 'lost')) / 2) * 55;
+  return (
+    <>
+      <Diagram>
+        <System
+          motion={motion}
+          extensible={at('extensible') && !at('slack')}
+          slack={at('slack')}
+          travel={at('extensible') ? 0 : at('lost') ? 2 : at('gained') ? 1 : 0}
+          acceleration={at('acceleration')}
+          tensions={!at('slack') ? 2 : 0}
+        />
+      </Diagram>
+      <Card
+        text={
+          at('slack')
+            ? 'Slack: no tension'
+            : at('extensible')
+              ? 'Extensible: length can change'
+              : 'Inextensible: fixed length'
+        }
+      />
+    </>
+  );
+};
+
+const OtherWords: React.FC<{ s: Scene }> = ({ s }) => {
+  const { fps } = useVideoConfig();
+  const t = heldTime(s, useCurrentFrame() / fps);
+  const at = (id: string) => t >= cue(s, id);
+  const state = latest(s, t, [
+    'other',
+    'rod',
+    'flexible',
+    'light-rod',
+    'heavy-rod',
+    'beam',
+    'uniform',
+    'uneven-rod',
+    'lamina',
+    'plate',
+    'uniform-lamina',
+    'uneven-lamina',
+    'bead',
+    'thin-wire',
+    'guide',
+    'normal',
+    'wire-friction',
+    'peg',
+    'moving',
+    'smooth-peg',
+    'rough-peg',
+  ]);
+  const names: Record<string, string> = {
+    other: 'Extra vocabulary',
+    rod: 'Rigid rod',
+    flexible: 'Flexible rod',
+    'light-rod': 'Light rod',
+    'heavy-rod': 'Heavy rod',
+    beam: 'Beam',
+    uniform: 'Uniform rod',
+    'uneven-rod': 'Non-uniform rod',
+    lamina: 'Lamina',
+    plate: 'Thick plate',
+    'uniform-lamina': 'Uniform lamina',
+    'uneven-lamina': 'Non-uniform lamina',
+    bead: 'Bead',
+    'thin-wire': 'Wire',
+    guide: 'Thick guide',
+    normal: 'Smooth wire',
+    'wire-friction': 'Rough wire',
+    peg: 'Fixed peg',
+    moving: 'Moving support',
+    'smooth-peg': 'Smooth peg',
+    'rough-peg': 'Rough peg',
+  };
+  const rod = ['rod', 'flexible', 'light-rod', 'heavy-rod', 'beam', 'uniform', 'uneven-rod'].includes(state);
+  const sheet = ['lamina', 'plate', 'uniform-lamina', 'uneven-lamina'].includes(state);
+  const wire = ['bead', 'thin-wire', 'guide', 'normal', 'wire-friction'].includes(state);
+  const peg = ['peg', 'moving', 'smooth-peg', 'rough-peg'].includes(state);
+  const centre = state === 'uneven-rod' ? 570 : state === 'uneven-lamina' ? 550 : 420;
+  const collapse = state === 'beam' && at('turning');
+  return (
+    <>
+      <Diagram>
+        {(!state || state === 'other') && <System />}
+        {rod && (
+          <g stroke={T.text} fill="none" strokeWidth="5">
+            {collapse ? (
+              <circle cx="420" cy="350" r="12" fill={T.text} />
+            ) : (
+              <path
+                d={state === 'flexible' && at('bends') ? 'M150 350 Q420 500 690 350' : 'M150 350 H690'}
+                strokeWidth={state === 'beam' ? 18 : 6}
+              />
+            )}
+            {state === 'rod' && at('push') && <Arrow x={90} y={350} dx={55} dy={0} accent />}
+            {state === 'rod' && at('pull') && <Arrow x={695} y={350} dx={90} dy={0} accent />}
+            {state === 'heavy-rod' && at('weight') && (
+              <Arrow x={420} y={350} dx={0} dy={150} label="Weight" accent />
+            )}
+            {state === 'beam' && at('positions') && !collapse && (
+              <>
+                <Arrow x={200} y={210} dx={0} dy={125} />
+                <Arrow x={630} y={500} dx={0} dy={-125} />
+              </>
+            )}
+            {['uniform', 'uneven-rod'].includes(state) && (
+              <>
+                {Array.from({ length: 10 }, (_, i) => (
+                  <circle
+                    key={i}
+                    cx={180 + i * 53}
+                    cy={350}
+                    r={state === 'uneven-rod' && i > 5 ? 12 : 6}
+                    fill={T.muted}
+                    stroke="none"
+                  />
+                ))}
+                {at('midpoint') && (
+                  <Arrow x={at('shift-rod') ? centre : 420} y={365} dx={0} dy={140} label="Weight" accent />
+                )}
+                <path d={`M${centre - 27} 410 L${centre} 365 L${centre + 27} 410 Z`} stroke={T.muted} />
+              </>
+            )}
+          </g>
+        )}
+        {sheet && (
+          <g stroke={T.text} strokeWidth="4" fill="none">
+            <path d="M210 240 H630 V460 H210 Z" fill={T.bg} />
+            {state === 'plate' && <path d="M630 240 l35 40 v220 H245 l-35 -40 M630 460 l35 40" />}
+            {['uniform-lamina', 'uneven-lamina'].includes(state) &&
+              Array.from({ length: 20 }, (_, i) => (
+                <circle
+                  key={i}
+                  cx={250 + (i % 5) * 80}
+                  cy={280 + Math.floor(i / 5) * 48}
+                  r={state === 'uneven-lamina' && i % 5 > 2 ? 12 : 5}
+                  fill={T.muted}
+                  stroke="none"
+                />
+              ))}
+            {at('centroid') && (
+              <Arrow x={at('shift-lamina') ? centre : 420} y={350} dx={0} dy={180} label="Weight" accent />
+            )}
+          </g>
+        )}
+        {wire && (
+          <g fill="none" stroke={T.text} strokeWidth="5">
+            <path d="M170 470 L700 250" strokeWidth={state === 'guide' ? 20 : 4} />
+            <circle
+              cx="430"
+              cy={state === 'bead' && at('detached') ? 270 : 362}
+              r="25"
+              fill={T.bg}
+              stroke={T.accent}
+            />
+            {['normal', 'wire-friction'].includes(state) && (
+              <Arrow x={430} y={337} dx={-45} dy={-100} label="R" />
+            )}
+            {state === 'wire-friction' && <Arrow x={450} y={352} dx={95} dy={-40} label="F" accent />}
+          </g>
+        )}
+        {peg && (
+          <g
+            transform={state === 'moving' ? 'translate(65 -40)' : undefined}
+            fill="none"
+            stroke={T.text}
+            strokeWidth="5"
+          >
+            <path d="M120 330 H405 Q465 315 470 375 V570" />
+            <circle cx="430" cy="375" r="43" fill={T.bg} />
+            <path d="M395 405 L355 455 H495 L465 405" stroke={T.muted} />
+            {at('peg-tension') && <Arrow x={200} y={280} dx={130} dy={0} label="T" accent />}
+            {at('peg-tension') && (
+              <Arrow x={540} y={535} dx={0} dy={-125} label={at('peg-unequal') ? 'T₂' : 'T'} accent />
+            )}
+            {state === 'rough-peg' && (
+              <path d="M400 340 l10 13 m10 -22 l5 15 m20 -12 l-5 16" stroke={T.accent} />
+            )}
+          </g>
+        )}
+      </Diagram>
+      {state && <Card text={names[state]} />}
+    </>
+  );
+};
+
+const Worked: React.FC<{ s: Scene }> = ({ s }) => {
+  const { fps } = useVideoConfig();
+  const actual = useCurrentFrame() / fps;
+  const t = heldTime(s, actual);
+  const at = (id: string) => t >= cue(s, id);
+  const holds = s.holds.filter((h) => h.kind === 'hold');
+  const ring = holds.findIndex((h) => actual >= h.start && actual < h.end);
+  const forces = ['box-weight', 'reaction', 'box-tension', 'hanging-weight', 'hanging-tension'].filter(
+    at,
+  ).length;
+  const second = at('acceleration');
+  const lines: Line[] = second
+    ? [
+        { id: 'combined-copy', text: '2g = 5a', start: 0, end: 0.01, y: 110 },
+        {
+          id: 'acceleration',
+          text: 'a = 2(10)/5 = 4 m s',
+          exponent: '-2',
+          start: cue(s, 'acceleration'),
+          resultAt: cue(s, 'four'),
+          prefixEnd: s.holds.find((h) => h.kind === 'pause' && h.start > cue(s, 'acceleration'))?.start,
+          end: Math.min(holds[4].start - 0.2, cue(s, 'four') + 3),
+          y: 300,
+        },
+        {
+          id: 'tension',
+          text: 'T = 3(4) = 12 N',
+          start: cue(s, 'substitute'),
+          resultAt: cue(s, 'twelve'),
+          end: Math.min(holds[5].start - 0.2, cue(s, 'twelve') + 1.5),
+          y: 480,
+        },
+      ]
+    : [
+        {
+          id: 'table',
+          text: 'T = 3a',
+          start: cue(s, 'table-equation'),
+          end: cue(s, 'hanging-equation') - 0.3,
+          y: 110,
+        },
+        {
+          id: 'hanging',
+          text: '2g - T = 2a',
+          start: cue(s, 'hanging-equation'),
+          end: cue(s, 'add') - 0.3,
+          y: 300,
+        },
+        {
+          id: 'combined',
+          text: '2g = (3 + 2)a = 5a',
+          start: cue(s, 'add'),
+          resultAt: cue(s, 'five'),
+          end: Math.min(holds[3].start - 0.2, cue(s, 'five') + 0.8),
+          y: 480,
+        },
+      ];
+  return (
+    <>
+      <Diagram>
+        <System
+          masses={at('mass-two') ? 2 : at('mass-three') ? 1 : 0}
+          gravity={at('ten')}
+          travel={2}
+          acceleration
+          forceCount={forces}
+          ring={ring < 3 ? ring : -1}
+        />
+      </Diagram>
+      <Paper lines={lines} t={t} ringLine={ring === 3 ? 2 : ring === 4 ? 1 : ring === 5 ? 2 : -1} />
+    </>
+  );
+};
+const Rough: React.FC<{ s: Scene }> = ({ s }) => {
+  const { fps } = useVideoConfig();
+  const actual = useCurrentFrame() / fps;
+  const t = heldTime(s, actual);
+  const at = (id: string) => t >= cue(s, id);
+  const question = at('question') && !at('answer');
+  const initial = !at('table-equation');
+  const answer = at('answer');
+  const lines: Line[] = answer
+    ? [
+        { id: 'static', text: '0 ≤ F ≤ μR', start: cue(s, 'static'), end: cue(s, 'equality') - 0.2, y: 180 },
+        { id: 'limit', text: 'F = μR', start: cue(s, 'equality'), end: cue(s, 'check') - 0.5, y: 365 },
+      ]
+    : initial
+      ? [{ id: 'previous-result', text: 'a = 4 m s', exponent: '-2', start: 0, end: 0.01, y: 180 }]
+      : [
+          {
+            id: 'rough-table',
+            text: 'T - F = 3a',
+            start: cue(s, 'table-equation'),
+            end: cue(s, 'hanging-equation') - 0.2,
+            y: 110,
+          },
+          {
+            id: 'same-hanging',
+            text: '2g - T = 2a',
+            start: cue(s, 'hanging-equation'),
+            end: cue(s, 'system-equation') - 0.1,
+            y: 300,
+          },
+          {
+            id: 'rough-system',
+            text: '2g - F = 5a',
+            start: cue(s, 'system-equation'),
+            end: cue(s, 'less') - 0.1,
+            y: 480,
+          },
+        ];
+  return (
+    <>
+      <Diagram>
+        <System
+          masses={2}
+          forceCount={5}
+          curve={at('curved') && !at('bending')}
+          bend={at('bending') && !at('smooth')}
+          rough={at('rough')}
+          friction={at('friction')}
+        />
+      </Diagram>
+      {question ? (
+        <Card text="Does rough always mean F = μR?" />
+      ) : (
+        <Paper
+          lines={lines}
+          t={t}
+          note={
+            initial
+              ? 'Smooth table only'
+              : answer && at('limiting')
+                ? 'Limiting or stated sliding model'
+                : undefined
+          }
+        />
+      )}
+    </>
+  );
+};
+const Recap: React.FC<{ s: Scene }> = ({ s }) => {
+  const { fps } = useVideoConfig();
+  const t = useCurrentFrame() / fps;
+  const index = t >= cue(s, 'predict') ? 2 : t >= cue(s, 'find') ? 1 : 0;
+  const tick = useCue(s, ['tick-explain', 'tick-find', 'tick-predict'][index]);
+  return <Card text={OUTCOMES[index]} centre tick={tick} />;
+};
+const CONTENT = [Opening, Particle, Light, StringMotion, OtherWords, Worked, Rough, Recap];
+
+/** Optional still-audit instrumentation: measures rendered DOM, never on-screen text. */
+function useStillAudit(enabled: boolean, rootRef: React.RefObject<HTMLDivElement | null>) {
+  const frame = useCurrentFrame();
+  const [measurement, setMeasurement] = useState('');
+  useLayoutEffect(() => {
+    const container = rootRef.current;
+    if (!enabled || !container || container.getBoundingClientRect().width === 0) return;
+    const visible = (element: Element): boolean => {
+      let node: Element | null = element;
+      while (node) {
+        const style = getComputedStyle(node);
+        if (style.display === 'none' || style.visibility === 'hidden' || Number(style.opacity) < 0.001)
+          return false;
+        node = node.parentElement;
+      }
+      const rect = element.getBoundingClientRect();
+      return rect.width > 0 && rect.height > 0;
+    };
+    const regions = Array.from(container.querySelectorAll('[data-region]')).filter(visible);
+    const cards = Array.from(container.querySelectorAll('[data-card],[data-ink-text]'))
+      .filter(visible)
+      .map((el) => ({
+        text: el.getAttribute('data-ink-text') ?? el.textContent ?? '',
+        rect: el.getBoundingClientRect(),
+      }));
+    const root = container.getBoundingClientRect();
+    const overflow = root
+      ? [...regions, ...Array.from(container.querySelectorAll('svg[data-region] text')).filter(visible)].some(
+          (el) => {
+            const r = el.getBoundingClientRect();
+            return (
+              r.left < root.left - 1 ||
+              r.top < root.top - 1 ||
+              r.right > root.right + 1 ||
+              r.bottom > root.bottom + 1
+            );
+          },
+        )
+      : true;
+    setMeasurement(
+      JSON.stringify({
+        frame,
+        regions: regions.length,
+        maxWords: Math.max(0, ...cards.map((c) => c.text.trim().split(/\s+/).length)),
+        cards: cards.map((c) => c.text),
+        overflow,
+        root: root?.toJSON(),
+        bounds: regions.map((el) => ({
+          region: el.getAttribute('data-region'),
+          ...el.getBoundingClientRect().toJSON(),
+        })),
+      }),
+    );
+  }, [frame, enabled]);
+  return enabled && measurement ? (
+    <Artifact filename={`verify-modelling-${String(frame).padStart(5, '0')}.json`} content={measurement} />
+  ) : null;
+}
+export const MechanicsModellingAssumptions: React.FC<MechanicsModellingAssumptionsProps> = ({
+  audioEnabled = true,
+  audit = false,
+}) => {
+  const { fps, width, height } = useVideoConfig();
+  const rootRef = useRef<HTMLDivElement>(null);
+  const auditArtifact = useStillAudit(audit, rootRef);
+  return (
+    <AbsoluteFill
+      ref={rootRef}
+      data-modelling-root="true"
+      style={{ background: T.bg, fontFamily: T.sans, overflow: 'hidden', width, height }}
+    >
+      {auditArtifact}
       <TransitionSeries>
-        <TransitionSeries.Sequence name="Reality becomes a particle model" durationInFrames={sequenceDurationInFrames(0, fps)}><NarratedScene scene={S01} audioEnabled={audioEnabled}><Scene01 scene={S01} /></NarratedScene></TransitionSeries.Sequence>
-        {transition}
-        <TransitionSeries.Sequence name="Light and inextensible" durationInFrames={sequenceDurationInFrames(1, fps)}><NarratedScene scene={S02} audioEnabled={audioEnabled}><Scene02 scene={S02} /></NarratedScene></TransitionSeries.Sequence>
-        {transition}
-        <TransitionSeries.Sequence name="Smooth ice, rough sand" durationInFrames={sequenceDurationInFrames(2, fps)}><NarratedScene scene={S03} audioEnabled={audioEnabled}><Scene03 scene={S03} /></NarratedScene></TransitionSeries.Sequence>
-        {transition}
-        <TransitionSeries.Sequence name="Keep length for moments" durationInFrames={sequenceDurationInFrames(3, fps)}><NarratedScene scene={S04} audioEnabled={audioEnabled}><Scene04 scene={S04} /></NarratedScene></TransitionSeries.Sequence>
-        {transition}
-        <TransitionSeries.Sequence name="Bead, wire, peg and plane" durationInFrames={sequenceDurationInFrames(4, fps)}><NarratedScene scene={S05} audioEnabled={audioEnabled}><Scene05 scene={S05} /></NarratedScene></TransitionSeries.Sequence>
-        {transition}
-        <TransitionSeries.Sequence name="Worked lab test" durationInFrames={sequenceDurationInFrames(5, fps)}><NarratedScene scene={S06} audioEnabled={audioEnabled}><Scene06 scene={S06} /></NarratedScene></TransitionSeries.Sequence>
-        {transition}
-        <TransitionSeries.Sequence name="Why the assumptions matter" durationInFrames={sequenceDurationInFrames(6, fps)}><NarratedScene scene={S07} audioEnabled={audioEnabled}><Scene07 scene={S07} /></NarratedScene></TransitionSeries.Sequence>
-        {transition}
-        <TransitionSeries.Sequence name="Twenty-second recap" durationInFrames={sequenceDurationInFrames(7, fps)}><NarratedScene scene={S08} audioEnabled={audioEnabled}><Scene08 scene={S08} /></NarratedScene></TransitionSeries.Sequence>
+        {SCENES.map((s, index) => {
+          const Content = CONTENT[index];
+          return (
+            <React.Fragment key={s.id}>
+              {index > 0 && (
+                <TransitionSeries.Transition
+                  presentation={fadeThroughGraphite}
+                  timing={linearTiming({ durationInFrames: TRANSITION_FRAMES })}
+                />
+              )}
+              <TransitionSeries.Sequence
+                name={HEADERS[index]}
+                durationInFrames={Math.ceil(s.duration * fps) + (index < 7 ? TRANSITION_FRAMES : 0)}
+              >
+                <AbsoluteFill style={{ background: T.bg }}>
+                  {index !== 0 && <Header>{HEADERS[index]}</Header>}
+                  <Content s={s} />
+                  {audioEnabled && <Audio src={staticFile(`audio/mechanics/${s.audio}`)} />}
+                </AbsoluteFill>
+              </TransitionSeries.Sequence>
+            </React.Fragment>
+          );
+        })}
       </TransitionSeries>
     </AbsoluteFill>
   );
