@@ -846,7 +846,7 @@
           "syllabusCode": "M0.4",
           "status": "complete",
           "createdAt": "2026-09-06",
-          "pacing": "TEACHING-STANDARD.md + PACING.md: 8 scenes, 3 slow scenes (s05-s07, speed 0.9, inserted-silence holds), syllabus card first, <=3 regions, hand-written working",
+          "pacing": "TEACHING-STANDARD §1-6 + PACING.md: 6 scenes, 2 slow (stone critique 76 s, matching 67 s at speed 0.9), scope = source lesson",
           "pipeline": "frame study (Sol) -> storyboard/narration/composition (Astra on B, with syllabus + TEACHING-STANDARD context) -> render on A -> Fable contact-sheet review",
           "source": {
             "project": "projects/mechanics-modelling-assumptions/",
@@ -857,7 +857,7 @@
             "landscape": {
               "compositionId": "MechanicsModellingAssumptions",
               "resolution": "1920x1080",
-              "durationS": 382.19,
+              "durationS": 277.06,
               "composition": "src/remotion/compositions/MechanicsModellingAssumptions.tsx",
               "render": "output/mechanics/modelling-assumptions.mp4",
               "contactSheet": "output/mechanics/modelling-assumptions-sheet.png"
@@ -866,16 +866,14 @@
           "narration": {
             "voiceId": "gYWKdgLtqjPO3D5uDrDP",
             "provider": "elevenlabs",
-            "scenes": 8,
+            "scenes": 6,
             "sceneDurations": [
-              20.07,
-              22.37,
-              28.27,
-              27.4,
-              98.77,
-              91.53,
-              72.87,
-              20.9
+              27.04,
+              26.02,
+              76.04,
+              55.93,
+              66.98,
+              24.92
             ],
             "audio": [
               "src/remotion/public/audio/mechanics/modelling-assumptions-s01.mp3",
@@ -883,12 +881,10 @@
               "src/remotion/public/audio/mechanics/modelling-assumptions-s03.mp3",
               "src/remotion/public/audio/mechanics/modelling-assumptions-s04.mp3",
               "src/remotion/public/audio/mechanics/modelling-assumptions-s05.mp3",
-              "src/remotion/public/audio/mechanics/modelling-assumptions-s06.mp3",
-              "src/remotion/public/audio/mechanics/modelling-assumptions-s07.mp3",
-              "src/remotion/public/audio/mechanics/modelling-assumptions-s08.mp3"
+              "src/remotion/public/audio/mechanics/modelling-assumptions-s06.mp3"
             ],
             "transcript": "src/remotion/public/transcripts/mechanics/modelling-assumptions.json",
-            "cues": 128,
+            "cues": 72,
             "transcribeScript": "src/scripts/transcribe-mechanics-modelling-assumptions-local.py",
             "speed": {
               "brisk": 1.0,
@@ -899,14 +895,16 @@
             "astraNarration": "3dcadee",
             "astraBuild": "2ee79f0",
             "rootFix": "4988d10",
-            "storyboard": "b51d8fb"
+            "storyboard": "b51d8fb",
+            "recutNarration": "6ab9f6b",
+            "recutBuild": "adcb394"
           },
           "app": {
             "notesPage": "/notes/mechanics-modelling-assumptions",
             "mapCode": "M0.4"
           },
           "reviewNotes": [
-            "2026-09-06 Astra rebuild: g = 10 m/s^2 (a = 4, T = 12 N); no lab/rig vocabulary; 142 audited stills max 3 regions / 7 words; Fable contact-sheet review passed. Nit: diagrams small in frame. Length 6:22 vs 5 min target."
+            "2026-09-06 re-cut after Durai: 'structured well, too dense, beyond syllabus'. Scope now = FRAME-LOG (modelling cycle, stone-from-cliff critique, vocabulary, matching exercise). No a/T calculation, no friction. 4:37, 72 cues, 94 audited stills ≤3 regions. Fable contact-sheet review passed."
           ],
           "verification": "projects/mechanics-modelling-assumptions/verify-build.md"
         },
