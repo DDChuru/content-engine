@@ -78,3 +78,18 @@ Paced for explanation."
   value, one annotation at a time. This journey scene is the video's main worked example.
 - Keep the existing brisk concept scenes; the improvement is ADDING the journey close, not restyling.
 - Applies to: displacement-time, velocity-time, drawing travel graphs, and later kinematics topics.
+
+## 8. Set the example up in words before drawing (Durai, 2026-09-06, reviewing Drawing travel graphs)
+
+Durai: "the demonstration is good but it was not clear. It needs: 'We will now look at an example where a ball
+is thrown into the air and travels up and then down. Notice there is a difference between distance travelled
+and displacement: displacement is zero because it came back to the same place, but distance doesn't care
+whether it was up or down: scalar vs vector... okay, enough chatter, let's get drawing.'"
+
+- Every worked example opens with a short spoken SET-UP before any drawing: what the situation is, what we
+  are going to find, and the one idea the example is really about (e.g. distance vs displacement, scalar vs
+  vector). Brief, conversational, one breath; then "let's get drawing".
+- The set-up is narration over the bare diagram or a plain card; no working appears until it is done.
+- Then the drawing/working proceeds at pen pace as per PACING.md.
+- Check every graph frame for text collisions: labels, values and tick marks on the TIME axis (and value
+  axis) must not overlap each other or the curve. Offset or stagger them.
