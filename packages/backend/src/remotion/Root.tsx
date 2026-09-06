@@ -65,6 +65,7 @@ import { MechanicsDisplacementTimeGraphs, MechanicsDisplacementTimeGraphsProps, 
 import { MechanicsVelocityTimeGraphs, MechanicsVelocityTimeGraphsProps, getMechanicsVelocityTimeGraphsDuration } from './compositions/MechanicsVelocityTimeGraphs';
 import { MechanicsModellingAssumptions, MechanicsModellingAssumptionsProps, getMechanicsModellingAssumptionsDuration } from './compositions/MechanicsModellingAssumptions';
 import { MechanicsDrawingTravelGraphs, MechanicsDrawingTravelGraphsProps, getMechanicsDrawingTravelGraphsDuration } from './compositions/MechanicsDrawingTravelGraphs';
+import { MechanicsMultipleCollisions, MechanicsMultipleCollisionsProps, getMechanicsMultipleCollisionsDuration } from './compositions/MechanicsMultipleCollisions';
 import { MechanicsDerivedUnits, MechanicsDerivedUnitsProps, getMechanicsDerivedUnitsDuration } from './compositions/MechanicsDerivedUnits';
 import { MechanicsTypesOfForces, MechanicsTypesOfForcesProps, getMechanicsTypesOfForcesDuration } from './compositions/MechanicsTypesOfForces';
 
@@ -1339,6 +1340,15 @@ export const RemotionRoot: React.FC = () => {
         fps={fps}
         width={1080}
         height={1920}
+      />
+      <Composition
+        id="MechanicsMultipleCollisions"
+        component={MechanicsMultipleCollisions}
+        durationInFrames={getMechanicsMultipleCollisionsDuration(fps)}
+        fps={30}
+        width={1920}
+        height={1080}
+        defaultProps={{ audioEnabled: true } satisfies MechanicsMultipleCollisionsProps}
       />
     </>
   );
