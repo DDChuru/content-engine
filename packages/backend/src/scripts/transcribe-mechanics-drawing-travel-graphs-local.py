@@ -109,7 +109,7 @@ JOBS = [
             {
                 "id": "stop",
                 "searchTerms": [
-                    "and stops"
+                    "a stop"
                 ]
             },
             {

@@ -47,7 +47,7 @@ tempo: slow
 voiceSpeed: 0.9
 **Maps to:** O1. **Source:** f015–f025, animated as required by §9.
 
-**Narration:** “Consider a cyclist passing point A, already moving at six metres per second. For the first ten seconds, he holds that speed. Then he gradually slows down and stops. He rests. [hold 2 s] Now he turns, pedals back the other way, and speeds up to four metres per second. He keeps that speed until he is home at A. Picture the ride before we draw it.”
+**Narration:** “Consider a cyclist passing point A, already moving at six metres per second. For the first ten seconds, he holds that speed. Then he gradually slows down. Watch him getting slower and slower, until he finally comes to a stop. He rests. [hold 2 s] Now he turns, pedals back the other way, and speeds up to four metres per second. He keeps that speed until he is home at A. Picture the ride before we draw it.”
 
 **Viewer sees:** A large ordinary track, A at the starting position, and a simple cyclist with rotating wheels. Show the six-metre-per-second cruise, gradual braking, complete stop and two-second rest, turn, accelerating return, then constant return to A. Track markers appear at spoken leg changes. Show only numbers already spoken, on one replacing card. No axes or equations. The first ten seconds are constant speed as in the recording and all retained calculations; do not invent an initial acceleration from rest. The return acceleration supplies the visible speed-up. IDs stay stable: S08 plays immediately after S01, preserving unchanged audio filenames.
 
@@ -93,7 +93,7 @@ voiceSpeed: 1.0
 
 **Narration:** “Now the displacement time graph. [hold 1.5 s] One journey, both graphs. Constant velocity gives a straight displacement line: equal changes in equal times. Rest is horizontal. Changing velocity gives a curve. A straight join hides that change.”
 
-**Viewer sees:** After the plain signpost, show the same cyclist velocity and displacement graphs side by side, filling two large regions. Link the currently explained leg with the same accent and tracing dots; other legs stay neutral. Shade the matching velocity area. Use the same constant, rest and changing-velocity phases as before. The header carries the current idea, with no fourth card region. At the straight-line mistake, show a dashed chord over the existing reverse curve; no new system or calculation.
+**Viewer sees:** After the plain signpost, show the same cyclist velocity and displacement graphs side by side, filling two large regions. Link the currently explained leg with the same accent and tracing dots; other legs stay neutral. Shade the matching velocity area. Use the same constant, rest and changing-velocity phases as before. The header carries the current idea, with no fourth card region. At the straight-line mistake, show a dashed chord over the existing slowing curve; no new system or calculation.
 
 ## S06 — Check before the final journey
 

@@ -2,7 +2,7 @@
   "project": "mechanics-drawing-travel-graphs",
   "sceneCount": 8,
   "totalDuration": 310.334695,
-  "generatedAt": "2026-09-06T16:26:28.416428",
+  "generatedAt": "2026-09-06T16:32:44.900257",
   "engine": "faster-whisper-small (local)",
   "scenes": [
     {
@@ -239,375 +239,430 @@
       "id": "s08",
       "audio": "drawing-travel-graphs-s08.mp3",
       "duration": 38.034286,
-      "wordCount": 64,
-      "text": "Consider a cyclist passing point A, already moving at six metres per second. For the first ten seconds, he holds that speed. Then he gradually slows down and stops. He rests. Now he turns, pedals back the other way, and speeds up to four metres per second. He keeps that speed until he is home at A. Picture the ride before we draw it.",
+      "wordCount": 75,
+      "text": "Consider a cyclist passing point A, already moving at six metres per second. For the first ten seconds, he holds that speed. Then he gradually slows down. Watch him getting slower and slower, until he finally comes to a stop. He rests. Now he turns, pedals back the other way, and speeds up to four metres per second. He keeps that speed until he is home at A. Picture the ride before we draw it.",
       "words": [
         {
           "word": "Consider",
           "start": 0.21,
-          "end": 0.99
+          "end": 1.05
         },
         {
           "word": "a",
-          "start": 0.99,
-          "end": 1.23
+          "start": 1.05,
+          "end": 1.37
         },
         {
           "word": "cyclist",
-          "start": 1.23,
-          "end": 1.77
+          "start": 1.37,
+          "end": 1.91
         },
         {
           "word": "passing",
-          "start": 1.77,
-          "end": 2.29
+          "start": 1.91,
+          "end": 2.53
         },
         {
           "word": "point",
-          "start": 2.29,
-          "end": 2.65
+          "start": 2.53,
+          "end": 2.87
         },
         {
           "word": "A,",
-          "start": 2.65,
-          "end": 3.01
+          "start": 2.87,
+          "end": 3.31
         },
         {
           "word": "already",
-          "start": 3.63,
-          "end": 4.03
+          "start": 3.97,
+          "end": 4.47
         },
         {
           "word": "moving",
-          "start": 4.03,
-          "end": 4.41
+          "start": 4.47,
+          "end": 4.83
         },
         {
           "word": "at",
-          "start": 4.41,
-          "end": 5.33
+          "start": 4.83,
+          "end": 5.51
         },
         {
           "word": "six",
-          "start": 5.33,
-          "end": 5.67
+          "start": 5.51,
+          "end": 5.75
         },
         {
           "word": "metres",
-          "start": 5.67,
+          "start": 5.75,
           "end": 6.01
         },
         {
           "word": "per",
           "start": 6.01,
-          "end": 6.33
+          "end": 6.27
         },
         {
           "word": "second.",
-          "start": 6.33,
-          "end": 6.73
+          "start": 6.27,
+          "end": 6.63
         },
         {
           "word": "For",
-          "start": 7.29,
-          "end": 7.65
+          "start": 7.43,
+          "end": 7.83
         },
         {
           "word": "the",
-          "start": 7.65,
-          "end": 7.77
+          "start": 7.83,
+          "end": 7.97
         },
         {
           "word": "first",
-          "start": 7.77,
-          "end": 8.01
+          "start": 7.97,
+          "end": 8.35
         },
         {
           "word": "ten",
-          "start": 8.01,
-          "end": 8.23
+          "start": 8.35,
+          "end": 8.81
         },
         {
           "word": "seconds,",
-          "start": 8.23,
-          "end": 8.59
+          "start": 8.81,
+          "end": 9.43
         },
         {
           "word": "he",
-          "start": 9.19,
-          "end": 9.29
+          "start": 10.49,
+          "end": 10.59
         },
         {
           "word": "holds",
-          "start": 9.29,
-          "end": 9.65
+          "start": 10.59,
+          "end": 10.95
         },
         {
           "word": "that",
-          "start": 9.65,
-          "end": 9.97
+          "start": 10.95,
+          "end": 11.27
         },
         {
           "word": "speed.",
-          "start": 9.97,
-          "end": 10.25
+          "start": 11.27,
+          "end": 11.57
         },
         {
           "word": "Then",
-          "start": 11.17,
-          "end": 11.41
+          "start": 12.55,
+          "end": 12.73
         },
         {
           "word": "he",
-          "start": 11.41,
-          "end": 11.53
+          "start": 12.73,
+          "end": 12.91
         },
         {
           "word": "gradually",
-          "start": 11.53,
-          "end": 12.05
+          "start": 12.91,
+          "end": 13.47
         },
         {
           "word": "slows",
-          "start": 12.05,
-          "end": 12.47
+          "start": 13.47,
+          "end": 13.83
         },
         {
-          "word": "down",
-          "start": 12.47,
-          "end": 12.93
+          "word": "down.",
+          "start": 13.83,
+          "end": 14.25
         },
         {
-          "word": "and",
-          "start": 12.93,
-          "end": 13.31
+          "word": "Watch",
+          "start": 15.31,
+          "end": 15.65
         },
         {
-          "word": "stops.",
-          "start": 13.31,
-          "end": 13.67
+          "word": "him",
+          "start": 15.65,
+          "end": 15.85
         },
         {
-          "word": "He",
-          "start": 14.85,
-          "end": 15.05
+          "word": "getting",
+          "start": 15.85,
+          "end": 16.13
         },
         {
-          "word": "rests.",
-          "start": 15.05,
-          "end": 15.49
-        },
-        {
-          "word": "Now",
-          "start": 17.79,
-          "end": 18.03
-        },
-        {
-          "word": "he",
-          "start": 18.03,
-          "end": 18.21
-        },
-        {
-          "word": "turns,",
-          "start": 18.21,
-          "end": 18.65
-        },
-        {
-          "word": "pedals",
-          "start": 19.23,
-          "end": 19.39
-        },
-        {
-          "word": "back",
-          "start": 19.39,
-          "end": 19.77
-        },
-        {
-          "word": "the",
-          "start": 19.77,
-          "end": 20.27
-        },
-        {
-          "word": "other",
-          "start": 20.27,
-          "end": 20.49
-        },
-        {
-          "word": "way,",
-          "start": 20.49,
-          "end": 20.77
+          "word": "slower",
+          "start": 16.13,
+          "end": 16.59
         },
         {
           "word": "and",
-          "start": 21.63,
-          "end": 21.71
+          "start": 16.59,
+          "end": 16.85
         },
         {
-          "word": "speeds",
-          "start": 21.71,
-          "end": 21.99
-        },
-        {
-          "word": "up",
-          "start": 21.99,
-          "end": 22.29
-        },
-        {
-          "word": "to",
-          "start": 22.29,
-          "end": 22.49
-        },
-        {
-          "word": "four",
-          "start": 22.49,
-          "end": 22.71
-        },
-        {
-          "word": "metres",
-          "start": 22.71,
-          "end": 22.93
-        },
-        {
-          "word": "per",
-          "start": 22.93,
-          "end": 23.21
-        },
-        {
-          "word": "second.",
-          "start": 23.21,
-          "end": 23.53
-        },
-        {
-          "word": "He",
-          "start": 24.43,
-          "end": 24.63
-        },
-        {
-          "word": "keeps",
-          "start": 24.63,
-          "end": 24.87
-        },
-        {
-          "word": "that",
-          "start": 24.87,
-          "end": 25.11
-        },
-        {
-          "word": "speed",
-          "start": 25.11,
-          "end": 25.47
+          "word": "slower,",
+          "start": 16.85,
+          "end": 17.27
         },
         {
           "word": "until",
-          "start": 25.47,
-          "end": 26.15
+          "start": 17.77,
+          "end": 18.07
         },
         {
           "word": "he",
-          "start": 26.15,
-          "end": 26.39
+          "start": 18.07,
+          "end": 18.27
         },
         {
-          "word": "is",
-          "start": 26.39,
-          "end": 26.49
+          "word": "finally",
+          "start": 18.27,
+          "end": 18.53
         },
         {
-          "word": "home",
-          "start": 26.49,
-          "end": 26.85
+          "word": "comes",
+          "start": 18.53,
+          "end": 18.93
         },
         {
-          "word": "at",
-          "start": 26.85,
-          "end": 27.33
+          "word": "to",
+          "start": 18.93,
+          "end": 19.15
         },
         {
-          "word": "A.",
-          "start": 27.33,
-          "end": 27.63
+          "word": "a",
+          "start": 19.15,
+          "end": 19.27
         },
         {
-          "word": "Picture",
-          "start": 28.27,
-          "end": 28.91
+          "word": "stop.",
+          "start": 19.27,
+          "end": 19.57
+        },
+        {
+          "word": "He",
+          "start": 20.65,
+          "end": 20.95
+        },
+        {
+          "word": "rests.",
+          "start": 20.95,
+          "end": 21.37
+        },
+        {
+          "word": "Now",
+          "start": 23.71,
+          "end": 23.97
+        },
+        {
+          "word": "he",
+          "start": 23.97,
+          "end": 24.17
+        },
+        {
+          "word": "turns,",
+          "start": 24.17,
+          "end": 24.89
+        },
+        {
+          "word": "pedals",
+          "start": 25.19,
+          "end": 25.35
+        },
+        {
+          "word": "back",
+          "start": 25.35,
+          "end": 25.75
         },
         {
           "word": "the",
-          "start": 28.91,
+          "start": 25.75,
+          "end": 26.23
+        },
+        {
+          "word": "other",
+          "start": 26.23,
+          "end": 26.43
+        },
+        {
+          "word": "way,",
+          "start": 26.43,
+          "end": 26.73
+        },
+        {
+          "word": "and",
+          "start": 27.49,
+          "end": 27.67
+        },
+        {
+          "word": "speeds",
+          "start": 27.67,
+          "end": 27.93
+        },
+        {
+          "word": "up",
+          "start": 27.93,
+          "end": 28.25
+        },
+        {
+          "word": "to",
+          "start": 28.25,
+          "end": 28.43
+        },
+        {
+          "word": "four",
+          "start": 28.43,
+          "end": 28.67
+        },
+        {
+          "word": "metres",
+          "start": 28.67,
+          "end": 28.89
+        },
+        {
+          "word": "per",
+          "start": 28.89,
           "end": 29.17
         },
         {
-          "word": "ride",
+          "word": "second.",
           "start": 29.17,
-          "end": 29.51
+          "end": 29.49
+        },
+        {
+          "word": "He",
+          "start": 29.49,
+          "end": 30.57
+        },
+        {
+          "word": "keeps",
+          "start": 30.57,
+          "end": 30.83
+        },
+        {
+          "word": "that",
+          "start": 30.83,
+          "end": 31.05
+        },
+        {
+          "word": "speed",
+          "start": 31.05,
+          "end": 31.39
+        },
+        {
+          "word": "until",
+          "start": 31.39,
+          "end": 32.13
+        },
+        {
+          "word": "he",
+          "start": 32.13,
+          "end": 32.35
+        },
+        {
+          "word": "is",
+          "start": 32.35,
+          "end": 32.43
+        },
+        {
+          "word": "home",
+          "start": 32.43,
+          "end": 32.81
+        },
+        {
+          "word": "at",
+          "start": 32.81,
+          "end": 33.27
+        },
+        {
+          "word": "A.",
+          "start": 33.27,
+          "end": 33.57
+        },
+        {
+          "word": "Picture",
+          "start": 34.47,
+          "end": 34.87
+        },
+        {
+          "word": "the",
+          "start": 34.87,
+          "end": 35.11
+        },
+        {
+          "word": "ride",
+          "start": 35.11,
+          "end": 35.47
         },
         {
           "word": "before",
-          "start": 29.51,
-          "end": 30.43
+          "start": 35.47,
+          "end": 36.39
         },
         {
           "word": "we",
-          "start": 30.43,
-          "end": 30.67
+          "start": 36.39,
+          "end": 36.61
         },
         {
           "word": "draw",
-          "start": 30.67,
-          "end": 30.97
+          "start": 36.61,
+          "end": 36.93
         },
         {
           "word": "it.",
-          "start": 30.97,
-          "end": 31.23
+          "start": 36.93,
+          "end": 37.17
         }
       ],
       "cues": {
         "setup": 0.55,
-        "cruise": 3.63,
-        "six": 5.33,
-        "ten": 7.77,
-        "slowing": 11.53,
-        "stop": 12.93,
-        "rest": 14.85,
-        "turn": 17.8,
-        "pedal": 19.23,
-        "accelerate": 21.71,
-        "four": 22.49,
-        "return": 24.43,
-        "home": 26.49,
-        "close": 28.27
+        "cruise": 3.97,
+        "six": 5.51,
+        "ten": 7.97,
+        "slowing": 12.91,
+        "stop": 19.15,
+        "rest": 20.65,
+        "turn": 23.75,
+        "pedal": 25.19,
+        "accelerate": 27.67,
+        "four": 28.43,
+        "return": 29.49,
+        "home": 32.43,
+        "close": 34.47
       },
-      "generatedAt": "2026-09-06T16:19:00.008596",
+      "generatedAt": "2026-09-06T16:32:44.900257",
       "engine": "faster-whisper-small (local)",
       "tempo": "slow",
       "voiceSpeed": 0.9,
       "voiceId": "gYWKdgLtqjPO3D5uDrDP",
       "provider": "elevenlabs",
-      "audioSha256": "6f722cebb038fa1831d833e3d99f06dfaecf1d463fa7dc154e00e40d642a25bc",
+      "audioSha256": "9a091bf64ec1e610447b43bf61290ef245d1204232786d163de2623c5c02f05c",
       "beats": [
         {
-          "text": "Consider a cyclist passing point A, already moving at six metres per second. For the first ten seconds, he holds that speed. Then he gradually slows down and stops. He rests.",
+          "text": "Consider a cyclist passing point A, already moving at six metres per second. For the first ten seconds, he holds that speed. Then he gradually slows down. Watch him getting slower and slower, until he finally comes to a stop. He rests.",
           "start": 0.55,
-          "end": 15.8
+          "end": 21.75
         },
         {
           "text": "Now he turns, pedals back the other way, and speeds up to four metres per second. He keeps that speed until he is home at A. Picture the ride before we draw it.",
-          "start": 17.8,
-          "end": 31.38
+          "start": 23.75,
+          "end": 37.33
         }
       ],
       "holds": [
         {
           "kind": "hold",
-          "start": 15.8,
-          "end": 17.8,
+          "start": 21.75,
+          "end": 23.75,
           "duration": 2.0
         }
       ],
       "paragraphs": [
-        "Consider a cyclist passing point A, already moving at six metres per second. For the first ten seconds, he holds that speed. Then he gradually slows down and stops. He rests. [hold 2 s] Now he turns, pedals back the other way, and speeds up to four metres per second. He keeps that speed until he is home at A. Picture the ride before we draw it."
+        "Consider a cyclist passing point A, already moving at six metres per second. For the first ten seconds, he holds that speed. Then he gradually slows down. Watch him getting slower and slower, until he finally comes to a stop. He rests. [hold 2 s] Now he turns, pedals back the other way, and speeds up to four metres per second. He keeps that speed until he is home at A. Picture the ride before we draw it."
       ]
     },
     {
