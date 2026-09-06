@@ -983,6 +983,64 @@
             "2026-09-06 Astra rebuild: 4:32, 81 cues, 115 audited stills, zero axis collisions, g=10. Ball example omitted (not in recording FRAME-LOG) — Durai to decide whether to add as exception. Fable contact-sheet review passed.",
             "2026-09-06 revision after Durai (§9): animated cyclist story before any maths, spoken signposts, Sol's shaded/linked graph visuals restored (no chrome), larger graphs. 5:10, 100 cues, 163 stills, zero axis collisions. Fable contact-sheet review passed."
           ]
+        },
+        "mechanics-multiple-collisions": {
+          "label": "Multiple collisions",
+          "slug": "mechanics-multiple-collisions",
+          "syllabus": "Cambridge 9709 Mechanics (Paper 4) · Momentum",
+          "syllabusCode": "M4.3c",
+          "status": "complete",
+          "createdAt": "2026-09-06",
+          "pacing": "TEACHING-STANDARD §1-9: 6 scenes, animated sphere story before equations, separate diagram per collision, hand-written working, signed-velocity catch-up test",
+          "pipeline": "frame study (Sol, e9d4069) -> Astra storyboard/narration/composition on B -> render on A -> Fable contact-sheet review",
+          "source": {
+            "project": "projects/mechanics-multiple-collisions/",
+            "recording": "~/Videos/Screencasts/multiplecollisions.mp4",
+            "pdf": "projects/mechanics-multiple-collisions/source.pdf"
+          },
+          "formats": {
+            "landscape": {
+              "compositionId": "MechanicsMultipleCollisions",
+              "resolution": "1920x1080",
+              "durationS": 296.9,
+              "composition": "src/remotion/compositions/MechanicsMultipleCollisions.tsx",
+              "render": "output/mechanics/multiple-collisions.mp4",
+              "contactSheet": "output/mechanics/multiple-collisions-sheet.png"
+            }
+          },
+          "narration": {
+            "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+            "provider": "elevenlabs",
+            "scenes": 6,
+            "speed": {
+              "brisk": 1.0,
+              "slow": 0.9
+            },
+            "audio": [
+              "src/remotion/public/audio/mechanics/multiple-collisions-s01.mp3",
+              "src/remotion/public/audio/mechanics/multiple-collisions-s02.mp3",
+              "src/remotion/public/audio/mechanics/multiple-collisions-s03.mp3",
+              "src/remotion/public/audio/mechanics/multiple-collisions-s04.mp3",
+              "src/remotion/public/audio/mechanics/multiple-collisions-s05.mp3",
+              "src/remotion/public/audio/mechanics/multiple-collisions-s06.mp3"
+            ],
+            "transcript": "src/remotion/public/transcripts/mechanics/multiple-collisions.json",
+            "cues": 74
+          },
+          "commits": {
+            "study": "e9d4069",
+            "astraNarration": "bfc910b",
+            "astraCues": "444be16",
+            "astraBuild": "b616530"
+          },
+          "app": {
+            "notesPage": "/notes/mechanics-multiple-collisions",
+            "mapCode": "M4.3c"
+          },
+          "verification": "projects/mechanics-multiple-collisions/verify-build.md",
+          "reviewNotes": [
+            "Source errors corrected: 'identical' spheres with different masses; magnitude-based catch-up test replaced by signed velocities. v_B=4, w_B=1 m/s, A catches B again. 112 audited stills ≤3 regions, zero text collisions. Fable contact-sheet review passed; awaiting Durai."
+          ]
         }
       },
       "inkTutor": {

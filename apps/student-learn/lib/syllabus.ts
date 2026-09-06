@@ -44,6 +44,7 @@ export const UNITS: SyllabusUnit[] = [
       { code: 'M4.2c', title: 'Drawing travel graphs', live: true, kind: 'notes', href: '/notes/mechanics-drawing-travel-graphs', hint: 'kinematics' },
       { code: 'M4.2', title: 'Kinematics of motion in a straight line', live: false, hint: 'more coming' },
       { code: 'M4.3', title: 'Momentum', live: false },
+      { code: 'M4.3c', title: 'Multiple collisions', live: true, kind: 'notes', href: '/notes/mechanics-multiple-collisions', hint: 'momentum' },
       { code: 'M4.4', title: "Newton's laws of motion", live: false },
       { code: 'M4.5', title: 'Energy, work and power', live: false },
     ],
