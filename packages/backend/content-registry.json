@@ -1,5 +1,5 @@
 {
-  "$schema": "Content Registry \u2014 indexes all generated educational content for discovery and reuse.",
+  "$schema": "Content Registry — indexes all generated educational content for discovery and reuse.",
   "version": "1.0.0",
   "updatedAt": "2026-09-06",
   "subjects": {
@@ -131,7 +131,7 @@
           }
         },
         "enzymes": {
-          "label": "Topic 3.1: Enzymes \u2014 Lock & Key vs Induced Fit",
+          "label": "Topic 3.1: Enzymes — Lock & Key vs Induced Fit",
           "slug": "enzymes",
           "syllabus": "Cambridge 9700",
           "status": "complete",
@@ -186,7 +186,7 @@
           }
         },
         "osmosis": {
-          "label": "Topic 4.2: Osmosis \u2014 Lysis, Crenation, Plasmolysis",
+          "label": "Topic 4.2: Osmosis — Lysis, Crenation, Plasmolysis",
           "slug": "osmosis",
           "syllabus": "Cambridge 9700",
           "status": "complete",
@@ -241,7 +241,7 @@
           }
         },
         "active-transport": {
-          "label": "Topic 4.3: Active Transport \u2014 Na\u207a/K\u207a Pump",
+          "label": "Topic 4.3: Active Transport — Na⁺/K⁺ Pump",
           "slug": "active-transport",
           "syllabus": "Cambridge 9700",
           "status": "complete",
@@ -296,7 +296,7 @@
           }
         },
         "endocytosis": {
-          "label": "Topic 1: Endocytosis & Exocytosis \u2014 How Cells Eat & Spit",
+          "label": "Topic 1: Endocytosis & Exocytosis — How Cells Eat & Spit",
           "slug": "endocytosis",
           "syllabus": "Cambridge 9700",
           "status": "pending-narration",
@@ -342,7 +342,7 @@
           }
         },
         "phagocytosis": {
-          "label": "Topic 1: Phagocytosis \u2014 How Cells Engulf & Destroy",
+          "label": "Topic 1: Phagocytosis — How Cells Engulf & Destroy",
           "slug": "phagocytosis",
           "syllabus": "Cambridge 9700",
           "status": "pending-narration",
@@ -388,7 +388,7 @@
           }
         },
         "autophagy": {
-          "label": "Topic 1: Autophagy & Autolysis \u2014 Self-Digestion",
+          "label": "Topic 1: Autophagy & Autolysis — Self-Digestion",
           "slug": "autophagy",
           "syllabus": "Cambridge 9700",
           "status": "pending-narration",
@@ -434,7 +434,7 @@
           }
         },
         "cell-fractionation": {
-          "label": "Topic 1.2: Cell Structure \u2014 Cell Fractionation",
+          "label": "Topic 1.2: Cell Structure — Cell Fractionation",
           "slug": "cell-fractionation",
           "syllabus": "Cambridge 9700",
           "status": "complete",
@@ -510,7 +510,7 @@
           "status": "complete",
           "createdAt": "2026-09-05",
           "polishedAt": "2026-09-06",
-          "pipeline": "screen recording \u2192 frames \u2192 Sol frame study (NOTES/STORYBOARD/FRAME-LOG) \u2192 Sol build on B \u2192 render on A \u2192 Astra polish \u2192 Fable review",
+          "pipeline": "screen recording → frames → Sol frame study (NOTES/STORYBOARD/FRAME-LOG) → Sol build on B → render on A → Astra polish → Fable review",
           "source": {
             "project": "projects/mechanics-si-units/",
             "notes": "projects/mechanics-si-units/NOTES.md",
@@ -566,7 +566,7 @@
           "status": "complete",
           "createdAt": "2026-09-05",
           "polishedAt": "2026-09-06",
-          "pipeline": "screen recording \u2192 frames \u2192 Sol frame study (NOTES/STORYBOARD/FRAME-LOG) \u2192 Sol build on B \u2192 render on A \u2192 Astra polish \u2192 Fable review",
+          "pipeline": "screen recording → frames → Sol frame study (NOTES/STORYBOARD/FRAME-LOG) → Sol build on B → render on A → Astra polish → Fable review",
           "source": {
             "project": "projects/mechanics-scalars-vectors/",
             "notes": "projects/mechanics-scalars-vectors/NOTES.md",
@@ -623,7 +623,7 @@
           "status": "complete",
           "createdAt": "2026-09-05",
           "polishedAt": "2026-09-06",
-          "pipeline": "screen recording \u2192 frames \u2192 Sol frame study (NOTES/STORYBOARD/FRAME-LOG) \u2192 Sol build on B \u2192 render on A \u2192 Astra polish \u2192 Fable review",
+          "pipeline": "screen recording → frames → Sol frame study (NOTES/STORYBOARD/FRAME-LOG) → Sol build on B → render on A → Astra polish → Fable review",
           "source": {
             "project": "projects/mechanics-derived-units/",
             "notes": "projects/mechanics-derived-units/NOTES.md",
@@ -671,7 +671,7 @@
             "mapCode": "M0.3"
           },
           "reviewNotes": [
-            "syllabus check: 9709 Paper 4 uses g = 10 m/s^2; this video uses 9.8 \u2014 fix in a re-voice/re-build pass"
+            "syllabus check: 9709 Paper 4 uses g = 10 m/s^2; this video uses 9.8 — fix in a re-voice/re-build pass"
           ]
         },
         "mechanics-types-of-forces": {
@@ -682,7 +682,7 @@
           "status": "complete",
           "createdAt": "2026-09-05",
           "polishedAt": "2026-09-06",
-          "pipeline": "screen recording \u2192 frames \u2192 Sol frame study (NOTES/STORYBOARD/FRAME-LOG) \u2192 Sol build on B \u2192 render on A \u2192 Astra polish \u2192 Fable review",
+          "pipeline": "screen recording → frames → Sol frame study (NOTES/STORYBOARD/FRAME-LOG) → Sol build on B → render on A → Astra polish → Fable review",
           "source": {
             "project": "projects/mechanics-types-of-forces/",
             "notes": "projects/mechanics-types-of-forces/NOTES.md",
@@ -730,17 +730,17 @@
             "mapCode": "M4.1"
           },
           "reviewNotes": [
-            "syllabus check: 9709 Paper 4 uses g = 10 m/s^2; this video uses 9.8 \u2014 fix in a re-voice/re-build pass"
+            "syllabus check: 9709 Paper 4 uses g = 10 m/s^2; this video uses 9.8 — fix in a re-voice/re-build pass"
           ]
         },
         "mechanics-displacement-time-graphs": {
           "label": "Displacement-time graphs",
           "slug": "mechanics-displacement-time-graphs",
-          "syllabus": "Cambridge 9709 Mechanics (Paper 4) \u00b7 Kinematics",
+          "syllabus": "Cambridge 9709 Mechanics (Paper 4) · Kinematics",
           "syllabusCode": "M4.2a",
           "status": "complete",
           "createdAt": "2026-09-06",
-          "pipeline": "1 fps frame study (2x recording) \u2192 Sol notes/storyboard \u2192 Sol build on B \u2192 render on A \u2192 Fable review",
+          "pipeline": "1 fps frame study (2x recording) → Sol notes/storyboard → Sol build on B → render on A → Fable review",
           "source": {
             "project": "projects/mechanics-displacement-time-graphs/",
             "recording": "~/Documents/9709/",
@@ -788,11 +788,11 @@
         "mechanics-velocity-time-graphs": {
           "label": "Velocity-time graphs",
           "slug": "mechanics-velocity-time-graphs",
-          "syllabus": "Cambridge 9709 Mechanics (Paper 4) \u00b7 Kinematics",
+          "syllabus": "Cambridge 9709 Mechanics (Paper 4) · Kinematics",
           "syllabusCode": "M4.2b",
           "status": "complete",
           "createdAt": "2026-09-06",
-          "pipeline": "1 fps frame study (2x recording) \u2192 Sol notes/storyboard \u2192 Sol build on B \u2192 render on A \u2192 Fable review",
+          "pipeline": "1 fps frame study (2x recording) → Sol notes/storyboard → Sol build on B → render on A → Fable review",
           "source": {
             "project": "projects/mechanics-velocity-time-graphs/",
             "recording": "~/Documents/9709/",
@@ -842,12 +842,12 @@
         "mechanics-modelling-assumptions": {
           "label": "Modelling assumptions",
           "slug": "mechanics-modelling-assumptions",
-          "syllabus": "Cambridge 9709 Mechanics (Paper 4) \u00b7 Mechanics Toolkit",
+          "syllabus": "Cambridge 9709 Mechanics (Paper 4) · Mechanics Toolkit",
           "syllabusCode": "M0.4",
           "status": "complete",
           "createdAt": "2026-09-06",
-          "pacing": "PACING.md standard: 8 scenes, two slow scenes (hand-written working at pen pace, 2 s holds, ELEVENLABS_SPEED 0.9)",
-          "pipeline": "frame study \u2192 Sol notes/storyboard \u2192 Astra re-pace \u2192 Sol build on B \u2192 render on A \u2192 Fable review",
+          "pacing": "TEACHING-STANDARD.md + PACING.md: 8 scenes, 3 slow scenes (s05-s07, speed 0.9, inserted-silence holds), syllabus card first, <=3 regions, hand-written working",
+          "pipeline": "frame study (Sol) -> storyboard/narration/composition (Astra on B, with syllabus + TEACHING-STANDARD context) -> render on A -> Fable contact-sheet review",
           "source": {
             "project": "projects/mechanics-modelling-assumptions/",
             "recording": "~/Documents/9709/",
@@ -857,7 +857,7 @@
             "landscape": {
               "compositionId": "MechanicsModellingAssumptions",
               "resolution": "1920x1080",
-              "durationS": 240.02,
+              "durationS": 382.19,
               "composition": "src/remotion/compositions/MechanicsModellingAssumptions.tsx",
               "render": "output/mechanics/modelling-assumptions.mp4",
               "contactSheet": "output/mechanics/modelling-assumptions-sheet.png"
@@ -868,14 +868,14 @@
             "provider": "elevenlabs",
             "scenes": 8,
             "sceneDurations": [
-              19.9,
-              19.9,
-              19.9,
-              19.9,
-              14.9,
-              74.9,
-              49.9,
-              19.9
+              20.07,
+              22.37,
+              28.27,
+              27.4,
+              98.77,
+              91.53,
+              72.87,
+              20.9
             ],
             "audio": [
               "src/remotion/public/audio/mechanics/modelling-assumptions-s01.mp3",
@@ -888,30 +888,37 @@
               "src/remotion/public/audio/mechanics/modelling-assumptions-s08.mp3"
             ],
             "transcript": "src/remotion/public/transcripts/mechanics/modelling-assumptions.json",
-            "cues": 30,
-            "transcribeScript": "src/scripts/transcribe-mechanics-modelling-assumptions-local.py"
+            "cues": 128,
+            "transcribeScript": "src/scripts/transcribe-mechanics-modelling-assumptions-local.py",
+            "speed": {
+              "brisk": 1.0,
+              "slow": 0.9
+            }
           },
           "commits": {
-            "build": "9542f33",
-            "rootFix": "4988d10"
+            "astraNarration": "3dcadee",
+            "astraBuild": "2ee79f0",
+            "rootFix": "4988d10",
+            "storyboard": "b51d8fb"
           },
           "app": {
             "notesPage": "/notes/mechanics-modelling-assumptions",
             "mapCode": "M0.4"
           },
           "reviewNotes": [
-            "syllabus check: 9709 Paper 4 uses g = 10 m/s^2; this video uses 9.8 \u2014 fix in a re-voice/re-build pass"
-          ]
+            "2026-09-06 Astra rebuild: g = 10 m/s^2 (a = 4, T = 12 N); no lab/rig vocabulary; 142 audited stills max 3 regions / 7 words; Fable contact-sheet review passed. Nit: diagrams small in frame. Length 6:22 vs 5 min target."
+          ],
+          "verification": "projects/mechanics-modelling-assumptions/verify-build.md"
         },
         "mechanics-drawing-travel-graphs": {
           "label": "Drawing travel graphs",
           "slug": "mechanics-drawing-travel-graphs",
-          "syllabus": "Cambridge 9709 Mechanics (Paper 4) \u00b7 Kinematics",
+          "syllabus": "Cambridge 9709 Mechanics (Paper 4) · Kinematics",
           "syllabusCode": "M4.2c",
           "status": "complete",
           "createdAt": "2026-09-06",
           "pacing": "PACING.md standard: 8 scenes, two slow scenes (hand-written working at pen pace, 2 s holds, ELEVENLABS_SPEED 0.9)",
-          "pipeline": "frame study \u2192 Sol notes/storyboard \u2192 Astra re-pace \u2192 Sol build on B \u2192 render on A \u2192 Fable review",
+          "pipeline": "frame study → Sol notes/storyboard → Astra re-pace → Sol build on B → render on A → Fable review",
           "source": {
             "project": "projects/mechanics-drawing-travel-graphs/",
             "recording": "~/Documents/9709/",
@@ -972,7 +979,7 @@
           "syllabus": "Cambridge 9709 Pure 1 (P1.7 Differentiation)",
           "status": "complete",
           "createdAt": "2026-09-05",
-          "pipeline": "brief \u2192 model draws SVG pen strokes \u2192 stored JSON \u2192 Remotion stroke playback under per-beat ElevenLabs narration",
+          "pipeline": "brief → model draws SVG pen strokes → stored JSON → Remotion stroke playback under per-beat ElevenLabs narration",
           "formats": {
             "tiktok": {
               "compositionId": "InkTutorQ2",
@@ -1032,8 +1039,8 @@
     "totalRenders": 27,
     "totalCost": 5.78,
     "voiceId": "gYWKdgLtqjPO3D5uDrDP",
-    "voiceNote": "ElevenLabs cloned voice \u2014 consistent across all biology content",
-    "mathematics9709Note": "Mechanics explainers 16:9 in apps/student-learn /notes; ink tutor TikTok 9:16. Cost per explainer \u2248 ElevenLabs ~1.4k chars (~$0.40) + $0 Whisper/Remotion; Sol/Astra agent time not metered here."
+    "voiceNote": "ElevenLabs cloned voice — consistent across all biology content",
+    "mathematics9709Note": "Mechanics explainers 16:9 in apps/student-learn /notes; ink tutor TikTok 9:16. Cost per explainer ≈ ElevenLabs ~1.4k chars (~$0.40) + $0 Whisper/Remotion; Sol/Astra agent time not metered here."
   },
   "conventions": {
     "imageDir": "src/remotion/public/images/biology/{topic-slug}/",
