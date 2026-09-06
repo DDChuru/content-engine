@@ -93,3 +93,19 @@ whether it was up or down: scalar vs vector... okay, enough chatter, let's get d
 - Then the drawing/working proceeds at pen pace as per PACING.md.
 - Check every graph frame for text collisions: labels, values and tick marks on the TIME axis (and value
   axis) must not overlap each other or the curve. Offset or stagger them.
+
+## 9. Tell the story with the scenario moving, then signpost the maths (Durai, 2026-09-06, on the Drawing travel graphs rebuild)
+
+Durai: "the rebuild changed the original, which had nice visualisations; what we were meant to change was just
+telling the story of the cyclist. I would go: 'Consider a cyclist who cycles from point A to ... then ... then ...'
+— initially we are just talking about the plain journey and how he slows down; that is still not clear, we jump
+straight into maths mode. Show the cyclist cycling in the visuals, speed them up, rest them as necessary. Then be
+clear where we are doing velocity and where displacement. Some of the initial visuals were pretty good."
+
+- A worked journey opens with a STORY scene: plain narration ("Consider a cyclist who...") over an ANIMATED
+  scenario — the object actually moving along a track, faster, slower, stopping, turning back, in step with the
+  narration. No axes, no numbers yet.
+- Then an explicit signpost before each graph: "Now the velocity–time graph." ... "Now the displacement–time graph."
+- A rebuild keeps what already worked. When a video is revised for narration/scope, reuse the original
+  composition's strong visuals (diagrams, animations, graph builds) — do not replace them with plainer ones.
+  Read the previous composition from git before rewriting; carry its good scenes forward.
