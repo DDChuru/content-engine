@@ -1,7 +1,7 @@
 {
-  "$schema": "Content Registry — indexes all generated educational content for discovery and reuse.",
+  "$schema": "Content Registry \u2014 indexes all generated educational content for discovery and reuse.",
   "version": "1.0.0",
-  "updatedAt": "2026-02-22",
+  "updatedAt": "2026-09-06",
   "subjects": {
     "biology": {
       "label": "Cambridge A-Level Biology 9700",
@@ -57,7 +57,7 @@
           },
           "cost": {
             "images": 0.35,
-            "narration": 0.90,
+            "narration": 0.9,
             "transcription": 0.01,
             "total": 1.26
           }
@@ -125,13 +125,13 @@
           },
           "cost": {
             "images": 0.59,
-            "narration": 0.20,
+            "narration": 0.2,
             "transcription": 0.01,
-            "total": 0.80
+            "total": 0.8
           }
         },
         "enzymes": {
-          "label": "Topic 3.1: Enzymes — Lock & Key vs Induced Fit",
+          "label": "Topic 3.1: Enzymes \u2014 Lock & Key vs Induced Fit",
           "slug": "enzymes",
           "syllabus": "Cambridge 9700",
           "status": "complete",
@@ -167,7 +167,10 @@
           "images": {
             "directory": "src/remotion/public/images/biology/enzymes/",
             "count": 2,
-            "files": ["hook-enzyme.jpg", "cover-enzyme.jpg"],
+            "files": [
+              "hook-enzyme.jpg",
+              "cover-enzyme.jpg"
+            ],
             "note": "Hook + cover only; educational content is pure CSS motion graphics"
           },
           "scripts": {
@@ -183,7 +186,7 @@
           }
         },
         "osmosis": {
-          "label": "Topic 4.2: Osmosis — Lysis, Crenation, Plasmolysis",
+          "label": "Topic 4.2: Osmosis \u2014 Lysis, Crenation, Plasmolysis",
           "slug": "osmosis",
           "syllabus": "Cambridge 9700",
           "status": "complete",
@@ -219,7 +222,10 @@
           "images": {
             "directory": "src/remotion/public/images/biology/osmosis/",
             "count": 2,
-            "files": ["hook-cell-burst.jpg", "cover-osmosis.jpg"],
+            "files": [
+              "hook-cell-burst.jpg",
+              "cover-osmosis.jpg"
+            ],
             "note": "Hook + cover only; educational content is pure CSS motion graphics"
           },
           "scripts": {
@@ -231,11 +237,11 @@
             "images": 0.08,
             "narration": 0.41,
             "transcription": 0.01,
-            "total": 0.50
+            "total": 0.5
           }
         },
         "active-transport": {
-          "label": "Topic 4.3: Active Transport — Na⁺/K⁺ Pump",
+          "label": "Topic 4.3: Active Transport \u2014 Na\u207a/K\u207a Pump",
           "slug": "active-transport",
           "syllabus": "Cambridge 9700",
           "status": "complete",
@@ -271,7 +277,10 @@
           "images": {
             "directory": "src/remotion/public/images/biology/active-transport/",
             "count": 2,
-            "files": ["hook-pump.jpg", "cover-transport.jpg"],
+            "files": [
+              "hook-pump.jpg",
+              "cover-transport.jpg"
+            ],
             "note": "Hook + cover only; educational content is pure CSS motion graphics"
           },
           "scripts": {
@@ -283,11 +292,11 @@
             "images": 0.08,
             "narration": 0.41,
             "transcription": 0.01,
-            "total": 0.50
+            "total": 0.5
           }
         },
         "endocytosis": {
-          "label": "Topic 1: Endocytosis & Exocytosis — How Cells Eat & Spit",
+          "label": "Topic 1: Endocytosis & Exocytosis \u2014 How Cells Eat & Spit",
           "slug": "endocytosis",
           "syllabus": "Cambridge 9700",
           "status": "pending-narration",
@@ -314,7 +323,10 @@
           "images": {
             "directory": "src/remotion/public/images/biology/endocytosis/",
             "count": 2,
-            "files": ["hook-membrane.jpg", "cover-endo-exo.jpg"],
+            "files": [
+              "hook-membrane.jpg",
+              "cover-endo-exo.jpg"
+            ],
             "note": "Hook + cover only; educational content is pure CSS motion graphics"
           },
           "scripts": {
@@ -330,7 +342,7 @@
           }
         },
         "phagocytosis": {
-          "label": "Topic 1: Phagocytosis — How Cells Engulf & Destroy",
+          "label": "Topic 1: Phagocytosis \u2014 How Cells Engulf & Destroy",
           "slug": "phagocytosis",
           "syllabus": "Cambridge 9700",
           "status": "pending-narration",
@@ -357,7 +369,10 @@
           "images": {
             "directory": "src/remotion/public/images/biology/phagocytosis/",
             "count": 2,
-            "files": ["hook-wbc.jpg", "cover-phagocytosis.jpg"],
+            "files": [
+              "hook-wbc.jpg",
+              "cover-phagocytosis.jpg"
+            ],
             "note": "Hook + cover only; educational content is pure CSS motion graphics"
           },
           "scripts": {
@@ -373,7 +388,7 @@
           }
         },
         "autophagy": {
-          "label": "Topic 1: Autophagy & Autolysis — Self-Digestion",
+          "label": "Topic 1: Autophagy & Autolysis \u2014 Self-Digestion",
           "slug": "autophagy",
           "syllabus": "Cambridge 9700",
           "status": "pending-narration",
@@ -400,7 +415,10 @@
           "images": {
             "directory": "src/remotion/public/images/biology/autophagy/",
             "count": 2,
-            "files": ["hook-self-eat.jpg", "cover-autophagy.jpg"],
+            "files": [
+              "hook-self-eat.jpg",
+              "cover-autophagy.jpg"
+            ],
             "note": "Hook + cover only; educational content is pure CSS motion graphics"
           },
           "scripts": {
@@ -416,7 +434,7 @@
           }
         },
         "cell-fractionation": {
-          "label": "Topic 1.2: Cell Structure — Cell Fractionation",
+          "label": "Topic 1.2: Cell Structure \u2014 Cell Fractionation",
           "slug": "cell-fractionation",
           "syllabus": "Cambridge 9700",
           "status": "complete",
@@ -480,16 +498,305 @@
           }
         }
       }
+    },
+    "mathematics-9709": {
+      "label": "Cambridge International A Level Mathematics 9709",
+      "topics": {
+        "mechanics-si-units": {
+          "label": "S.I. units for mechanics",
+          "slug": "mechanics-si-units",
+          "syllabus": "Cambridge 9709 Mechanics (Paper 4)",
+          "syllabusCode": "M0.1",
+          "status": "complete",
+          "createdAt": "2026-09-05",
+          "polishedAt": "2026-09-06",
+          "pipeline": "screen recording \u2192 frames \u2192 Sol frame study (NOTES/STORYBOARD/FRAME-LOG) \u2192 Sol build on B \u2192 render on A \u2192 Astra polish \u2192 Fable review",
+          "source": {
+            "project": "projects/mechanics-si-units/",
+            "notes": "projects/mechanics-si-units/NOTES.md",
+            "storyboard": "projects/mechanics-si-units/STORYBOARD.md",
+            "frameLog": "projects/mechanics-si-units/FRAME-LOG.md"
+          },
+          "formats": {
+            "landscape": {
+              "compositionId": "MechanicsSIUnits",
+              "resolution": "1920x1080",
+              "durationS": 186.92,
+              "composition": "src/remotion/compositions/MechanicsSIUnits.tsx",
+              "render": "output/mechanics/si-units-v2.mp4",
+              "contactSheet": "output/mechanics/si-units-v2-sheet.png",
+              "previousRender": "output/mechanics/si-units.mp4"
+            }
+          },
+          "narration": {
+            "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+            "provider": "elevenlabs",
+            "scenes": 10,
+            "audio": [
+              "src/remotion/public/audio/mechanics/si-units-s01.mp3",
+              "src/remotion/public/audio/mechanics/si-units-s02.mp3",
+              "src/remotion/public/audio/mechanics/si-units-s03.mp3",
+              "src/remotion/public/audio/mechanics/si-units-s04.mp3",
+              "src/remotion/public/audio/mechanics/si-units-s05.mp3",
+              "src/remotion/public/audio/mechanics/si-units-s06.mp3",
+              "src/remotion/public/audio/mechanics/si-units-s07.mp3",
+              "src/remotion/public/audio/mechanics/si-units-s08.mp3",
+              "src/remotion/public/audio/mechanics/si-units-s09.mp3",
+              "src/remotion/public/audio/mechanics/si-units-s10.mp3"
+            ],
+            "transcript": "src/remotion/public/transcripts/mechanics/si-units.json",
+            "cues": 39,
+            "transcribeScript": "src/scripts/transcribe-mechanics-si-units-local.py"
+          },
+          "commits": {
+            "build": "c6292ba",
+            "polish": "a4e6194"
+          },
+          "app": {
+            "notesPage": "/notes/mechanics-si-units",
+            "video": "apps/student-learn/public/videos/mechanics-si-units.mp4 (gitignored copy)",
+            "mapCode": "M0.1"
+          }
+        },
+        "mechanics-scalars-vectors": {
+          "label": "Scalars and vectors",
+          "slug": "mechanics-scalars-vectors",
+          "syllabus": "Cambridge 9709 Mechanics (Paper 4)",
+          "syllabusCode": "M0.2",
+          "status": "complete",
+          "createdAt": "2026-09-05",
+          "polishedAt": "2026-09-06",
+          "pipeline": "screen recording \u2192 frames \u2192 Sol frame study (NOTES/STORYBOARD/FRAME-LOG) \u2192 Sol build on B \u2192 render on A \u2192 Astra polish \u2192 Fable review",
+          "source": {
+            "project": "projects/mechanics-scalars-vectors/",
+            "notes": "projects/mechanics-scalars-vectors/NOTES.md",
+            "storyboard": "projects/mechanics-scalars-vectors/STORYBOARD.md",
+            "frameLog": "projects/mechanics-scalars-vectors/FRAME-LOG.md"
+          },
+          "formats": {
+            "landscape": {
+              "compositionId": "MechanicsScalarsVectors",
+              "resolution": "1920x1080",
+              "durationS": 183.72,
+              "composition": "src/remotion/compositions/MechanicsScalarsVectors.tsx",
+              "render": "output/mechanics/scalars-vectors-v2.mp4",
+              "contactSheet": "output/mechanics/scalars-vectors-v2-sheet.png",
+              "previousRender": "output/mechanics/scalars-vectors.mp4"
+            }
+          },
+          "narration": {
+            "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+            "provider": "elevenlabs",
+            "scenes": 11,
+            "audio": [
+              "src/remotion/public/audio/mechanics/scalars-vectors-s01.mp3",
+              "src/remotion/public/audio/mechanics/scalars-vectors-s02.mp3",
+              "src/remotion/public/audio/mechanics/scalars-vectors-s03.mp3",
+              "src/remotion/public/audio/mechanics/scalars-vectors-s04.mp3",
+              "src/remotion/public/audio/mechanics/scalars-vectors-s05.mp3",
+              "src/remotion/public/audio/mechanics/scalars-vectors-s06.mp3",
+              "src/remotion/public/audio/mechanics/scalars-vectors-s07.mp3",
+              "src/remotion/public/audio/mechanics/scalars-vectors-s08.mp3",
+              "src/remotion/public/audio/mechanics/scalars-vectors-s09.mp3",
+              "src/remotion/public/audio/mechanics/scalars-vectors-s10.mp3",
+              "src/remotion/public/audio/mechanics/scalars-vectors-s11.mp3"
+            ],
+            "transcript": "src/remotion/public/transcripts/mechanics/scalars-vectors.json",
+            "cues": 44,
+            "transcribeScript": "src/scripts/transcribe-mechanics-scalars-vectors-local.py"
+          },
+          "commits": {
+            "build": "2c3c936",
+            "polish": "a012875"
+          },
+          "app": {
+            "notesPage": "/notes/mechanics-scalars-vectors",
+            "video": "apps/student-learn/public/videos/mechanics-scalars-vectors.mp4 (gitignored copy)",
+            "mapCode": "M0.2"
+          }
+        },
+        "mechanics-derived-units": {
+          "label": "Derived units",
+          "slug": "mechanics-derived-units",
+          "syllabus": "Cambridge 9709 Mechanics (Paper 4)",
+          "syllabusCode": "M0.3",
+          "status": "complete",
+          "createdAt": "2026-09-05",
+          "polishedAt": "2026-09-06",
+          "pipeline": "screen recording \u2192 frames \u2192 Sol frame study (NOTES/STORYBOARD/FRAME-LOG) \u2192 Sol build on B \u2192 render on A \u2192 Astra polish \u2192 Fable review",
+          "source": {
+            "project": "projects/mechanics-derived-units/",
+            "notes": "projects/mechanics-derived-units/NOTES.md",
+            "storyboard": "projects/mechanics-derived-units/STORYBOARD.md",
+            "frameLog": "projects/mechanics-derived-units/FRAME-LOG.md"
+          },
+          "formats": {
+            "landscape": {
+              "compositionId": "MechanicsDerivedUnits",
+              "resolution": "1920x1080",
+              "durationS": 163.69,
+              "composition": "src/remotion/compositions/MechanicsDerivedUnits.tsx",
+              "render": "output/mechanics/derived-units-v2.mp4",
+              "contactSheet": "output/mechanics/derived-units-v2-sheet.png",
+              "previousRender": "output/mechanics/derived-units.mp4"
+            }
+          },
+          "narration": {
+            "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+            "provider": "elevenlabs",
+            "scenes": 10,
+            "audio": [
+              "src/remotion/public/audio/mechanics/derived-units-s01.mp3",
+              "src/remotion/public/audio/mechanics/derived-units-s02.mp3",
+              "src/remotion/public/audio/mechanics/derived-units-s03.mp3",
+              "src/remotion/public/audio/mechanics/derived-units-s04.mp3",
+              "src/remotion/public/audio/mechanics/derived-units-s05.mp3",
+              "src/remotion/public/audio/mechanics/derived-units-s06.mp3",
+              "src/remotion/public/audio/mechanics/derived-units-s07.mp3",
+              "src/remotion/public/audio/mechanics/derived-units-s08.mp3",
+              "src/remotion/public/audio/mechanics/derived-units-s09.mp3",
+              "src/remotion/public/audio/mechanics/derived-units-s10.mp3"
+            ],
+            "transcript": "src/remotion/public/transcripts/mechanics/derived-units.json",
+            "cues": 51,
+            "transcribeScript": "src/scripts/transcribe-mechanics-derived-units-local.py"
+          },
+          "commits": {
+            "build": "0e2683d",
+            "polish": "30d01ab"
+          },
+          "app": {
+            "notesPage": "/notes/mechanics-derived-units",
+            "video": "apps/student-learn/public/videos/mechanics-derived-units.mp4 (gitignored copy)",
+            "mapCode": "M0.3"
+          }
+        },
+        "mechanics-types-of-forces": {
+          "label": "Types of force",
+          "slug": "mechanics-types-of-forces",
+          "syllabus": "Cambridge 9709 Mechanics (Paper 4)",
+          "syllabusCode": "M4.1",
+          "status": "complete",
+          "createdAt": "2026-09-05",
+          "polishedAt": "2026-09-06",
+          "pipeline": "screen recording \u2192 frames \u2192 Sol frame study (NOTES/STORYBOARD/FRAME-LOG) \u2192 Sol build on B \u2192 render on A \u2192 Astra polish \u2192 Fable review",
+          "source": {
+            "project": "projects/mechanics-types-of-forces/",
+            "notes": "projects/mechanics-types-of-forces/NOTES.md",
+            "storyboard": "projects/mechanics-types-of-forces/STORYBOARD.md",
+            "frameLog": "projects/mechanics-types-of-forces/FRAME-LOG.md"
+          },
+          "formats": {
+            "landscape": {
+              "compositionId": "MechanicsTypesOfForces",
+              "resolution": "1920x1080",
+              "durationS": 190.91,
+              "composition": "src/remotion/compositions/MechanicsTypesOfForces.tsx",
+              "render": "output/mechanics/types-of-forces-v2.mp4",
+              "contactSheet": "output/mechanics/types-of-forces-v2-sheet.png",
+              "previousRender": "output/mechanics/types-of-forces.mp4"
+            }
+          },
+          "narration": {
+            "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+            "provider": "elevenlabs",
+            "scenes": 10,
+            "audio": [
+              "src/remotion/public/audio/mechanics/types-of-forces-s01.mp3",
+              "src/remotion/public/audio/mechanics/types-of-forces-s02.mp3",
+              "src/remotion/public/audio/mechanics/types-of-forces-s03.mp3",
+              "src/remotion/public/audio/mechanics/types-of-forces-s04.mp3",
+              "src/remotion/public/audio/mechanics/types-of-forces-s05.mp3",
+              "src/remotion/public/audio/mechanics/types-of-forces-s06.mp3",
+              "src/remotion/public/audio/mechanics/types-of-forces-s07.mp3",
+              "src/remotion/public/audio/mechanics/types-of-forces-s08.mp3",
+              "src/remotion/public/audio/mechanics/types-of-forces-s09.mp3",
+              "src/remotion/public/audio/mechanics/types-of-forces-s10.mp3"
+            ],
+            "transcript": "src/remotion/public/transcripts/mechanics/types-of-forces.json",
+            "cues": 48,
+            "transcribeScript": "src/scripts/transcribe-mechanics-types-of-forces-local.py"
+          },
+          "commits": {
+            "build": "4e0a4b4",
+            "polish": "21cb975"
+          },
+          "app": {
+            "notesPage": "/notes/mechanics-types-of-forces",
+            "video": "apps/student-learn/public/videos/mechanics-types-of-forces.mp4 (gitignored copy)",
+            "mapCode": "M4.1"
+          }
+        }
+      },
+      "inkTutor": {
+        "ink-tutor-q2": {
+          "label": "Ink tutor: chain rule (2x+1)^5, hand-drawn worked solution",
+          "slug": "ink-tutor-q2",
+          "syllabus": "Cambridge 9709 Pure 1 (P1.7 Differentiation)",
+          "status": "complete",
+          "createdAt": "2026-09-05",
+          "pipeline": "brief \u2192 model draws SVG pen strokes \u2192 stored JSON \u2192 Remotion stroke playback under per-beat ElevenLabs narration",
+          "formats": {
+            "tiktok": {
+              "compositionId": "InkTutorQ2",
+              "resolution": "1080x1920",
+              "durationS": 44.54,
+              "composition": "src/remotion/compositions/InkTutorTikTok.tsx",
+              "renders": {
+                "fable": "output/ink/ink-tutor-q2-v2.mp4",
+                "opus": "output/ink/ink-tutor-q2-opus.mp4",
+                "sol": "output/ink/ink-tutor-q2-sol.mp4",
+                "astra": "output/ink/ink-tutor-q2-astra.mp4"
+              },
+              "handProp": "fable|opus|sol|astra"
+            }
+          },
+          "narration": {
+            "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+            "provider": "elevenlabs",
+            "beats": 7,
+            "audio": [
+              "src/remotion/public/audio/ink/q2-annot.mp3",
+              "src/remotion/public/audio/ink/q2-answer.mp3",
+              "src/remotion/public/audio/ink/q2-hook.mp3",
+              "src/remotion/public/audio/ink/q2-line1.mp3",
+              "src/remotion/public/audio/ink/q2-line2.mp3",
+              "src/remotion/public/audio/ink/q2-line3.mp3",
+              "src/remotion/public/audio/ink/q2-line4.mp3",
+              "src/remotion/public/audio/ink/q2-narration.mp3"
+            ],
+            "timing": "src/remotion/public/ink/q2-timing.json"
+          },
+          "drawings": {
+            "app": "apps/student-learn/public/ink/q2.json (opus hand)",
+            "alternates": [
+              "src/remotion/public/ink/q2.json (fable)",
+              "src/remotion/public/ink/q2-sol.json",
+              "src/remotion/public/ink/q2-astra.json"
+            ],
+            "brief": "apps/student-learn/briefs/ink-brief-q2.md",
+            "workflow": "apps/student-learn/briefs/INK-WORKFLOW.md"
+          },
+          "commits": {
+            "build": "19cc73b"
+          },
+          "app": {
+            "page": "/ink",
+            "mapCode": "P1.7"
+          }
+        }
+      }
     }
   },
   "summary": {
-    "totalTopics": 9,
+    "totalTopics": 13,
     "totalImages": 46,
-    "totalAudioFiles": 19,
-    "totalRenders": 10,
+    "totalAudioFiles": 68,
+    "totalRenders": 23,
     "totalCost": 5.78,
     "voiceId": "gYWKdgLtqjPO3D5uDrDP",
-    "voiceNote": "ElevenLabs cloned voice — consistent across all biology content"
+    "voiceNote": "ElevenLabs cloned voice \u2014 consistent across all biology content",
+    "mathematics9709Note": "Mechanics explainers 16:9 in apps/student-learn /notes; ink tutor TikTok 9:16. Cost per explainer \u2248 ElevenLabs ~1.4k chars (~$0.40) + $0 Whisper/Remotion; Sol/Astra agent time not metered here."
   },
   "conventions": {
     "imageDir": "src/remotion/public/images/biology/{topic-slug}/",
@@ -508,6 +815,20 @@
     "fps": 30,
     "tiktokResolution": "1080x1920",
     "landscapeResolution": "1920x1080",
-    "audioNormalization": "-14 LUFS via ffmpeg loudnorm"
+    "audioNormalization": "-14 LUFS via ffmpeg loudnorm",
+    "mechanics": {
+      "audioDir": "src/remotion/public/audio/mechanics/",
+      "transcriptDir": "src/remotion/public/transcripts/mechanics/",
+      "projectDir": "projects/mechanics-{slug}/",
+      "renderDir": "output/mechanics/",
+      "namingPattern": {
+        "audio": "{slug}-s{nn}.mp3",
+        "transcript": "{slug}.json",
+        "composition": "Mechanics{PascalCase}.tsx",
+        "render": "{slug}-v{n}.mp4",
+        "contactSheet": "{slug}-v{n}-sheet.png"
+      },
+      "renderHost": "A (B builds; B's ssh shell is Node 10 and shares 4 cores with the emulator)"
+    }
   }
 }
