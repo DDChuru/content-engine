@@ -1,6 +1,6 @@
 # Storyboard: Modelling assumptions
 
-Original 16:9 explainer: **4 minutes 25 seconds (265 seconds), six scenes**. Re-cut to the recording's scope ceiling in `FRAME-LOG.md`, under `../mechanics-syllabus-map/TEACHING-STANDARD.md` §6 and `../mechanics-syllabus-map/PACING.md`. Scene lengths below are editorial budgets; final durations come from generated narration and its inserted silences.
+Original 16:9 explainer: **4 minutes 37 seconds (277 seconds), six scenes**. Re-cut to the recording's scope ceiling in `FRAME-LOG.md`, under `../mechanics-syllabus-map/TEACHING-STANDARD.md` §6 and `../mechanics-syllabus-map/PACING.md`. Scene lengths below round the generated narration and inserted silences to whole seconds. Exact timings are in `verify-build.md`.
 
 ## Syllabus and outcomes
 
@@ -38,7 +38,7 @@ voiceSpeed: 1.0
 
 ## S02 — How a model is made
 
-**Duration:** 25 seconds (00:27–00:52)
+**Duration:** 26 seconds (00:27–00:53)
 tempo: brisk
 voiceSpeed: 1.0
 **Maps to:** O2. **Source:** f004–f016.
@@ -49,7 +49,7 @@ voiceSpeed: 1.0
 
 ## S03 — Model a falling stone
 
-**Duration:** 76 seconds (00:52–02:08)
+**Duration:** 76 seconds (00:53–02:09)
 tempo: slow
 voiceSpeed: 0.9
 **Maps to:** O2. **Source:** f017–f049; correct the f042 reading using the displayed model.
@@ -62,7 +62,7 @@ voiceSpeed: 0.9
 
 ## S04 — What the modelling words mean
 
-**Duration:** 49 seconds (02:08–02:57)
+**Duration:** 56 seconds (02:09–03:05)
 tempo: brisk
 voiceSpeed: 1.0
 **Maps to:** O1. **Source:** f050–f083.
@@ -73,7 +73,7 @@ voiceSpeed: 1.0
 
 ## S05 — Match words to the situation
 
-**Duration:** 64 seconds (02:57–04:01)
+**Duration:** 67 seconds (03:05–04:12)
 tempo: slow
 voiceSpeed: 0.9
 **Maps to:** O3, supported by O1. **Source:** f084–f103, with the particle/air-resistance distinction corrected.
@@ -86,7 +86,7 @@ voiceSpeed: 0.9
 
 ## S06 — By the end you can...
 
-**Duration:** 24 seconds (04:01–04:25)
+**Duration:** 25 seconds (04:12–04:37)
 tempo: brisk
 voiceSpeed: 1.0
 **Maps to:** O1, O2, O3. **Source:** f104–f118.

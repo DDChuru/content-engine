@@ -1,1607 +1,5314 @@
 {
-  "stillCount": 142,
+  "stillCount": 94,
   "maxRegions": 3,
-  "maxWordsPerCardOrWorkingLine": 7,
-  "totalFrames": 11465,
-  "fps": 30,
-  "holdPairs": [
+  "maxWords": 9,
+  "identicalHoldPairs": 8,
+  "holdHashes": [
     {
-      "scene": "s06",
-      "firstFrame": 6090,
-      "lastFrame": 6149,
+      "start": 2815,
+      "end": 2874,
       "frames": 60,
-      "sha256": "2f8ee202a917c4014a1c9ca319c5b04017687c307227076c1892b9209f4cbd7b"
+      "sha256": "d5dad9d9c860bd8774da253a7178ebcf9d33cb52951e4abfebf5ca36e32e3e07"
     },
     {
-      "scene": "s06",
-      "firstFrame": 6271,
-      "lastFrame": 6330,
+      "start": 2953,
+      "end": 3012,
       "frames": 60,
-      "sha256": "a87b808a52d07646e5eb272a0efe579534424a1f3ca2ed59ccf876ef030ee4ba"
+      "sha256": "11c0422d9f57bd580a742aeb07654d9a386bbe87254d21f073a5a7eaed9cab32"
     },
     {
-      "scene": "s06",
-      "firstFrame": 6498,
-      "lastFrame": 6557,
-      "frames": 60,
-      "sha256": "cb7758951c8082ae14033175b15765ea2b3a0fc6cee0c2c5f74a1888cbcb9085"
-    },
-    {
-      "scene": "s06",
-      "firstFrame": 7925,
-      "lastFrame": 7984,
-      "frames": 60,
-      "sha256": "860db13c4112876bd72da730e2903356bb5069adcfd59bfeda5e761a9d687539"
-    },
-    {
-      "scene": "s06",
-      "firstFrame": 8254,
-      "lastFrame": 8313,
-      "frames": 60,
-      "sha256": "3490e5493cd5b3967fe8d257b2631b6758826aa572149dacf5ada26fc5404fd2"
-    },
-    {
-      "scene": "s06",
-      "firstFrame": 8577,
-      "lastFrame": 8636,
-      "frames": 60,
-      "sha256": "2e74a8e7f44481f02fb31c7fe14ab71ab184d67f61b9c94b1c29365f9ee8be7e"
-    },
-    {
-      "scene": "s07",
-      "firstFrame": 10167,
-      "lastFrame": 10256,
+      "start": 3184,
+      "end": 3273,
       "frames": 90,
-      "sha256": "98d5b371f1687126c0c3ea7b00d8995937fefbadf9a8bafd9be76b3bc42d12ed"
+      "sha256": "44de40791132631d1f68453dc518be620d98a8dee0e6658b79500acc0270ad0f"
+    },
+    {
+      "start": 5929,
+      "end": 5988,
+      "frames": 60,
+      "sha256": "3ad77c23146c8325bdf98e7cfea39e97b7d74af5512ec44df4f45a1602528c03"
+    },
+    {
+      "start": 6411,
+      "end": 6470,
+      "frames": 60,
+      "sha256": "012274230e082956ccfab38a671bd7b977bf39887d18958bbf69ecf860ea3727"
+    },
+    {
+      "start": 6711,
+      "end": 6770,
+      "frames": 60,
+      "sha256": "430a4ac65783b3f9a3d789a670e2879a665aca744f229f7a1751d04a3c0605a0"
+    },
+    {
+      "start": 7027,
+      "end": 7086,
+      "frames": 60,
+      "sha256": "7eef36513d2ec3aeb153c08932843649d60372eb6eb75f2be414e341915c4f99"
+    },
+    {
+      "start": 7284,
+      "end": 7343,
+      "frames": 60,
+      "sha256": "74a8f4207f02a0cd9951928ba4678b082ac497abc8934e8fa9ea1b58de39c947"
     }
   ],
-  "stills": [
+  "measurements": [
     {
-      "frame": 9,
-      "cues": [
+      "labels": [
         "s01:syllabus"
       ],
+      "image": "00009.png",
+      "frame": 9,
       "regions": 1,
       "maxWords": 0,
-      "cards": []
+      "cards": [],
+      "overflow": false,
+      "root": {
+        "x": 0,
+        "y": -999999,
+        "width": 1920,
+        "height": 1080,
+        "top": -999999,
+        "right": 1920,
+        "bottom": -998919,
+        "left": 0
+      },
+      "bounds": [
+        {
+          "region": "header",
+          "x": 100,
+          "y": -999927,
+          "width": 750.8125,
+          "height": 66,
+          "top": -999927,
+          "right": 850.8125,
+          "bottom": -999861,
+          "left": 100
+        }
+      ]
     },
     {
-      "frame": 35,
-      "cues": [
-        "s01:smooth"
+      "labels": [
+        "s01:quote"
       ],
+      "image": "00066.png",
+      "frame": 66,
       "regions": 2,
       "maxWords": 7,
       "cards": [
         "use the model of a \u2018smooth\u2019 contact"
-      ]
-    },
-    {
-      "frame": 104,
-      "cues": [
-        "s01:connected"
       ],
-      "regions": 2,
-      "maxWords": 7,
-      "cards": [
-        "solve simple problems which may be modelled"
+      "overflow": false,
+      "root": {
+        "x": 0,
+        "y": -999999,
+        "width": 1920,
+        "height": 1080,
+        "top": -999999,
+        "right": 1920,
+        "bottom": -998919,
+        "left": 0
+      },
+      "bounds": [
+        {
+          "region": "header",
+          "x": 100,
+          "y": -999927,
+          "width": 750.8125,
+          "height": 66,
+          "top": -999927,
+          "right": 850.8125,
+          "bottom": -999861,
+          "left": 100
+        },
+        {
+          "region": "card",
+          "x": 300,
+          "y": -999669,
+          "width": 1320,
+          "height": 230,
+          "top": -999669,
+          "right": 1620,
+          "bottom": -999439,
+          "left": 300
+        }
       ]
     },
     {
-      "frame": 222,
-      "cues": [
-        "s01:continuation"
-      ],
-      "regions": 2,
-      "maxWords": 6,
-      "cards": [
-        "as the motion of connected particles."
-      ]
-    },
-    {
-      "frame": 289,
-      "cues": [
+      "labels": [
         "s01:outcomes"
       ],
+      "image": "00154.png",
+      "frame": 154,
       "regions": 1,
       "maxWords": 0,
-      "cards": []
+      "cards": [],
+      "overflow": false,
+      "root": {
+        "x": 0,
+        "y": -999999,
+        "width": 1920,
+        "height": 1080,
+        "top": -999999,
+        "right": 1920,
+        "bottom": -998919,
+        "left": 0
+      },
+      "bounds": [
+        {
+          "region": "header",
+          "x": 100,
+          "y": -999927,
+          "width": 570.125,
+          "height": 66,
+          "top": -999927,
+          "right": 670.125,
+          "bottom": -999861,
+          "left": 100
+        }
+      ]
     },
     {
-      "frame": 353,
-      "cues": [
+      "labels": [
         "s01:explain"
       ],
+      "image": "00208.png",
+      "frame": 208,
       "regions": 2,
       "maxWords": 7,
       "cards": [
         "Explain what modelling words let you ignore."
+      ],
+      "overflow": false,
+      "root": {
+        "x": 0,
+        "y": -999999,
+        "width": 1920,
+        "height": 1080,
+        "top": -999999,
+        "right": 1920,
+        "bottom": -998919,
+        "left": 0
+      },
+      "bounds": [
+        {
+          "region": "header",
+          "x": 100,
+          "y": -999927,
+          "width": 570.125,
+          "height": 66,
+          "top": -999927,
+          "right": 670.125,
+          "bottom": -999861,
+          "left": 100
+        },
+        {
+          "region": "card",
+          "x": 300,
+          "y": -999669,
+          "width": 1320,
+          "height": 277.375,
+          "top": -999669,
+          "right": 1620,
+          "bottom": -999391.625,
+          "left": 300
+        }
       ]
     },
     {
-      "frame": 446,
-      "cues": [
-        "s01:find"
+      "labels": [
+        "s01:list"
       ],
+      "image": "00324.png",
+      "frame": 324,
       "regions": 2,
+      "maxWords": 9,
+      "cards": [
+        "List assumptions for a real situation and say why."
+      ],
+      "overflow": false,
+      "root": {
+        "x": 0,
+        "y": -999999,
+        "width": 1920,
+        "height": 1080,
+        "top": -999999,
+        "right": 1920,
+        "bottom": -998919,
+        "left": 0
+      },
+      "bounds": [
+        {
+          "region": "header",
+          "x": 100,
+          "y": -999927,
+          "width": 570.125,
+          "height": 66,
+          "top": -999927,
+          "right": 670.125,
+          "bottom": -999861,
+          "left": 100
+        },
+        {
+          "region": "card",
+          "x": 300,
+          "y": -999669,
+          "width": 1320,
+          "height": 277.375,
+          "top": -999669,
+          "right": 1620,
+          "bottom": -999391.625,
+          "left": 300
+        }
+      ]
+    },
+    {
+      "labels": [
+        "s01:match"
+      ],
+      "image": "00498.png",
+      "frame": 498,
+      "regions": 2,
+      "maxWords": 7,
+      "cards": [
+        "Match modelling words to a described setup."
+      ],
+      "overflow": false,
+      "root": {
+        "x": 0,
+        "y": -999999,
+        "width": 1920,
+        "height": 1080,
+        "top": -999999,
+        "right": 1920,
+        "bottom": -998919,
+        "left": 0
+      },
+      "bounds": [
+        {
+          "region": "header",
+          "x": 100,
+          "y": -999927,
+          "width": 570.125,
+          "height": 66,
+          "top": -999927,
+          "right": 670.125,
+          "bottom": -999861,
+          "left": 100
+        },
+        {
+          "region": "card",
+          "x": 300,
+          "y": -999669,
+          "width": 1320,
+          "height": 277.375,
+          "top": -999669,
+          "right": 1620,
+          "bottom": -999391.625,
+          "left": 300
+        }
+      ]
+    },
+    {
+      "labels": [
+        "s02:real"
+      ],
+      "image": "00851.png",
+      "frame": 851,
+      "regions": 2,
+      "maxWords": 2,
+      "cards": [
+        "Real problem"
+      ],
+      "overflow": false,
+      "root": {
+        "x": 0,
+        "y": -999999,
+        "width": 1920,
+        "height": 1080,
+        "top": -999999,
+        "right": 1920,
+        "bottom": -998919,
+        "left": 0
+      },
+      "bounds": [
+        {
+          "region": "header",
+          "x": 100,
+          "y": -999927,
+          "width": 579.6875,
+          "height": 66,
+          "top": -999927,
+          "right": 679.6875,
+          "bottom": -999861,
+          "left": 100
+        },
+        {
+          "region": "diagram",
+          "x": 100,
+          "y": -999709,
+          "width": 1720,
+          "height": 650,
+          "top": -999709,
+          "right": 1820,
+          "bottom": -999059,
+          "left": 100
+        }
+      ]
+    },
+    {
+      "labels": [
+        "s02:assumptions"
+      ],
+      "image": "00896.png",
+      "frame": 896,
+      "regions": 2,
+      "maxWords": 2,
+      "cards": [
+        "Real problem",
+        "Assumptions"
+      ],
+      "overflow": false,
+      "root": {
+        "x": 0,
+        "y": -999999,
+        "width": 1920,
+        "height": 1080,
+        "top": -999999,
+        "right": 1920,
+        "bottom": -998919,
+        "left": 0
+      },
+      "bounds": [
+        {
+          "region": "header",
+          "x": 100,
+          "y": -999927,
+          "width": 579.6875,
+          "height": 66,
+          "top": -999927,
+          "right": 679.6875,
+          "bottom": -999861,
+          "left": 100
+        },
+        {
+          "region": "diagram",
+          "x": 100,
+          "y": -999709,
+          "width": 1720,
+          "height": 650,
+          "top": -999709,
+          "right": 1820,
+          "bottom": -999059,
+          "left": 100
+        }
+      ]
+    },
+    {
+      "labels": [
+        "s02:equations"
+      ],
+      "image": "01097.png",
+      "frame": 1097,
+      "regions": 2,
+      "maxWords": 3,
+      "cards": [
+        "Real problem",
+        "Assumptions",
+        "Equations or graph"
+      ],
+      "overflow": false,
+      "root": {
+        "x": 0,
+        "y": -999999,
+        "width": 1920,
+        "height": 1080,
+        "top": -999999,
+        "right": 1920,
+        "bottom": -998919,
+        "left": 0
+      },
+      "bounds": [
+        {
+          "region": "header",
+          "x": 100,
+          "y": -999927,
+          "width": 579.6875,
+          "height": 66,
+          "top": -999927,
+          "right": 679.6875,
+          "bottom": -999861,
+          "left": 100
+        },
+        {
+          "region": "diagram",
+          "x": 100,
+          "y": -999709,
+          "width": 1720,
+          "height": 650,
+          "top": -999709,
+          "right": 1820,
+          "bottom": -999059,
+          "left": 100
+        }
+      ]
+    },
+    {
+      "labels": [
+        "s02:check"
+      ],
+      "image": "01243.png",
+      "frame": 1243,
+      "regions": 2,
+      "maxWords": 3,
+      "cards": [
+        "Real problem",
+        "Assumptions",
+        "Equations or graph",
+        "Reasonable?"
+      ],
+      "overflow": false,
+      "root": {
+        "x": 0,
+        "y": -999999,
+        "width": 1920,
+        "height": 1080,
+        "top": -999999,
+        "right": 1920,
+        "bottom": -998919,
+        "left": 0
+      },
+      "bounds": [
+        {
+          "region": "header",
+          "x": 100,
+          "y": -999927,
+          "width": 579.6875,
+          "height": 66,
+          "top": -999927,
+          "right": 679.6875,
+          "bottom": -999861,
+          "left": 100
+        },
+        {
+          "region": "diagram",
+          "x": 100,
+          "y": -999709,
+          "width": 1720,
+          "height": 650,
+          "top": -999709,
+          "right": 1820,
+          "bottom": -999059,
+          "left": 100
+        }
+      ]
+    },
+    {
+      "labels": [
+        "s02:refine"
+      ],
+      "image": "01428.png",
+      "frame": 1428,
+      "regions": 2,
+      "maxWords": 3,
+      "cards": [
+        "Real problem",
+        "Assumptions",
+        "Equations or graph",
+        "Reasonable?",
+        "Refine"
+      ],
+      "overflow": false,
+      "root": {
+        "x": 0,
+        "y": -999999,
+        "width": 1920,
+        "height": 1080,
+        "top": -999999,
+        "right": 1920,
+        "bottom": -998919,
+        "left": 0
+      },
+      "bounds": [
+        {
+          "region": "header",
+          "x": 100,
+          "y": -999927,
+          "width": 579.6875,
+          "height": 66,
+          "top": -999927,
+          "right": 679.6875,
+          "bottom": -999861,
+          "left": 100
+        },
+        {
+          "region": "diagram",
+          "x": 100,
+          "y": -999709,
+          "width": 1720,
+          "height": 650,
+          "top": -999709,
+          "right": 1820,
+          "bottom": -999059,
+          "left": 100
+        }
+      ]
+    },
+    {
+      "labels": [
+        "s03:stone"
+      ],
+      "image": "01607.png",
+      "frame": 1607,
+      "regions": 2,
+      "maxWords": 0,
+      "cards": [],
+      "overflow": false,
+      "root": {
+        "x": 0,
+        "y": -999999,
+        "width": 1920,
+        "height": 1080,
+        "top": -999999,
+        "right": 1920,
+        "bottom": -998919,
+        "left": 0
+      },
+      "bounds": [
+        {
+          "region": "header",
+          "x": 100,
+          "y": -999927,
+          "width": 563.71875,
+          "height": 66,
+          "top": -999927,
+          "right": 663.71875,
+          "bottom": -999861,
+          "left": 100
+        },
+        {
+          "region": "diagram",
+          "x": 100,
+          "y": -999759,
+          "width": 850,
+          "height": 710,
+          "top": -999759,
+          "right": 950,
+          "bottom": -999049,
+          "left": 100
+        }
+      ]
+    },
+    {
+      "labels": [
+        "s03:dimensions"
+      ],
+      "image": "01662.png",
+      "frame": 1662,
+      "regions": 3,
       "maxWords": 4,
       "cards": [
-        "Find acceleration and tension."
+        "Two or three dimensions"
+      ],
+      "overflow": false,
+      "root": {
+        "x": 0,
+        "y": -999999,
+        "width": 1920,
+        "height": 1080,
+        "top": -999999,
+        "right": 1920,
+        "bottom": -998919,
+        "left": 0
+      },
+      "bounds": [
+        {
+          "region": "header",
+          "x": 100,
+          "y": -999927,
+          "width": 563.71875,
+          "height": 66,
+          "top": -999927,
+          "right": 663.71875,
+          "bottom": -999861,
+          "left": 100
+        },
+        {
+          "region": "diagram",
+          "x": 100,
+          "y": -999759,
+          "width": 850,
+          "height": 710,
+          "top": -999759,
+          "right": 950,
+          "bottom": -999049,
+          "left": 100
+        },
+        {
+          "region": "card",
+          "x": 1050,
+          "y": -999629,
+          "width": 740,
+          "height": 230,
+          "top": -999629,
+          "right": 1790,
+          "bottom": -999399,
+          "left": 1050
+        }
       ]
     },
     {
-      "frame": 500,
-      "cues": [
-        "s01:predict"
+      "labels": [
+        "s03:air"
       ],
-      "regions": 2,
+      "image": "01768.png",
+      "frame": 1768,
+      "regions": 3,
+      "maxWords": 3,
+      "cards": [
+        "Air and wind"
+      ],
+      "overflow": false,
+      "root": {
+        "x": 0,
+        "y": -999999,
+        "width": 1920,
+        "height": 1080,
+        "top": -999999,
+        "right": 1920,
+        "bottom": -998919,
+        "left": 0
+      },
+      "bounds": [
+        {
+          "region": "header",
+          "x": 100,
+          "y": -999927,
+          "width": 563.71875,
+          "height": 66,
+          "top": -999927,
+          "right": 663.71875,
+          "bottom": -999861,
+          "left": 100
+        },
+        {
+          "region": "diagram",
+          "x": 100,
+          "y": -999759,
+          "width": 850,
+          "height": 710,
+          "top": -999759,
+          "right": 950,
+          "bottom": -999049,
+          "left": 100
+        },
+        {
+          "region": "card",
+          "x": 1050,
+          "y": -999629,
+          "width": 740,
+          "height": 230,
+          "top": -999629,
+          "right": 1790,
+          "bottom": -999399,
+          "left": 1050
+        }
+      ]
+    },
+    {
+      "labels": [
+        "s03:size"
+      ],
+      "image": "01841.png",
+      "frame": 1841,
+      "regions": 3,
+      "maxWords": 4,
+      "cards": [
+        "Size, shape and spin"
+      ],
+      "overflow": false,
+      "root": {
+        "x": 0,
+        "y": -999999,
+        "width": 1920,
+        "height": 1080,
+        "top": -999999,
+        "right": 1920,
+        "bottom": -998919,
+        "left": 0
+      },
+      "bounds": [
+        {
+          "region": "header",
+          "x": 100,
+          "y": -999927,
+          "width": 563.71875,
+          "height": 66,
+          "top": -999927,
+          "right": 663.71875,
+          "bottom": -999861,
+          "left": 100
+        },
+        {
+          "region": "diagram",
+          "x": 100,
+          "y": -999759,
+          "width": 850,
+          "height": 710,
+          "top": -999759,
+          "right": 950,
+          "bottom": -999049,
+          "left": 100
+        },
+        {
+          "region": "card",
+          "x": 1050,
+          "y": -999629,
+          "width": 740,
+          "height": 230,
+          "top": -999629,
+          "right": 1790,
+          "bottom": -999399,
+          "left": 1050
+        }
+      ]
+    },
+    {
+      "labels": [
+        "s03:gravity"
+      ],
+      "image": "01968.png",
+      "frame": 1968,
+      "regions": 3,
+      "maxWords": 3,
+      "cards": [
+        "Gravity pulls down"
+      ],
+      "overflow": false,
+      "root": {
+        "x": 0,
+        "y": -999999,
+        "width": 1920,
+        "height": 1080,
+        "top": -999999,
+        "right": 1920,
+        "bottom": -998919,
+        "left": 0
+      },
+      "bounds": [
+        {
+          "region": "header",
+          "x": 100,
+          "y": -999927,
+          "width": 563.71875,
+          "height": 66,
+          "top": -999927,
+          "right": 663.71875,
+          "bottom": -999861,
+          "left": 100
+        },
+        {
+          "region": "diagram",
+          "x": 100,
+          "y": -999759,
+          "width": 850,
+          "height": 710,
+          "top": -999759,
+          "right": 950,
+          "bottom": -999049,
+          "left": 100
+        },
+        {
+          "region": "card",
+          "x": 1050,
+          "y": -999629,
+          "width": 740,
+          "height": 230,
+          "top": -999629,
+          "right": 1790,
+          "bottom": -999399,
+          "left": 1050
+        }
+      ]
+    },
+    {
+      "labels": [
+        "s03:vertical"
+      ],
+      "image": "02078.png",
+      "frame": 2078,
+      "regions": 3,
+      "maxWords": 2,
+      "cards": [
+        "Vertical fall"
+      ],
+      "overflow": false,
+      "root": {
+        "x": 0,
+        "y": -999999,
+        "width": 1920,
+        "height": 1080,
+        "top": -999999,
+        "right": 1920,
+        "bottom": -998919,
+        "left": 0
+      },
+      "bounds": [
+        {
+          "region": "header",
+          "x": 100,
+          "y": -999927,
+          "width": 563.71875,
+          "height": 66,
+          "top": -999927,
+          "right": 663.71875,
+          "bottom": -999861,
+          "left": 100
+        },
+        {
+          "region": "diagram",
+          "x": 100,
+          "y": -999759,
+          "width": 850,
+          "height": 710,
+          "top": -999759,
+          "right": 950,
+          "bottom": -999049,
+          "left": 100
+        },
+        {
+          "region": "card",
+          "x": 1050,
+          "y": -999629,
+          "width": 740,
+          "height": 230,
+          "top": -999629,
+          "right": 1790,
+          "bottom": -999399,
+          "left": 1050
+        }
+      ]
+    },
+    {
+      "labels": [
+        "s03:no-air"
+      ],
+      "image": "02141.png",
+      "frame": 2141,
+      "regions": 3,
+      "maxWords": 4,
+      "cards": [
+        "Ignore air and wind"
+      ],
+      "overflow": false,
+      "root": {
+        "x": 0,
+        "y": -999999,
+        "width": 1920,
+        "height": 1080,
+        "top": -999999,
+        "right": 1920,
+        "bottom": -998919,
+        "left": 0
+      },
+      "bounds": [
+        {
+          "region": "header",
+          "x": 100,
+          "y": -999927,
+          "width": 563.71875,
+          "height": 66,
+          "top": -999927,
+          "right": 663.71875,
+          "bottom": -999861,
+          "left": 100
+        },
+        {
+          "region": "diagram",
+          "x": 100,
+          "y": -999759,
+          "width": 850,
+          "height": 710,
+          "top": -999759,
+          "right": 950,
+          "bottom": -999049,
+          "left": 100
+        },
+        {
+          "region": "card",
+          "x": 1050,
+          "y": -999629,
+          "width": 740,
+          "height": 230,
+          "top": -999629,
+          "right": 1790,
+          "bottom": -999399,
+          "left": 1050
+        }
+      ]
+    },
+    {
+      "labels": [
+        "s03:particle"
+      ],
+      "image": "02226.png",
+      "frame": 2226,
+      "regions": 3,
+      "maxWords": 3,
+      "cards": [
+        "Particle: ignore dimensions"
+      ],
+      "overflow": false,
+      "root": {
+        "x": 0,
+        "y": -999999,
+        "width": 1920,
+        "height": 1080,
+        "top": -999999,
+        "right": 1920,
+        "bottom": -998919,
+        "left": 0
+      },
+      "bounds": [
+        {
+          "region": "header",
+          "x": 100,
+          "y": -999927,
+          "width": 563.71875,
+          "height": 66,
+          "top": -999927,
+          "right": 663.71875,
+          "bottom": -999861,
+          "left": 100
+        },
+        {
+          "region": "diagram",
+          "x": 100,
+          "y": -999759,
+          "width": 850,
+          "height": 710,
+          "top": -999759,
+          "right": 950,
+          "bottom": -999049,
+          "left": 100
+        },
+        {
+          "region": "card",
+          "x": 1050,
+          "y": -999629,
+          "width": 740,
+          "height": 250.375,
+          "top": -999629,
+          "right": 1790,
+          "bottom": -999378.625,
+          "left": 1050
+        }
+      ]
+    },
+    {
+      "labels": [
+        "s03:constant"
+      ],
+      "image": "02351.png",
+      "frame": 2351,
+      "regions": 3,
+      "maxWords": 2,
+      "cards": [
+        "Constant gravity"
+      ],
+      "overflow": false,
+      "root": {
+        "x": 0,
+        "y": -999999,
+        "width": 1920,
+        "height": 1080,
+        "top": -999999,
+        "right": 1920,
+        "bottom": -998919,
+        "left": 0
+      },
+      "bounds": [
+        {
+          "region": "header",
+          "x": 100,
+          "y": -999927,
+          "width": 563.71875,
+          "height": 66,
+          "top": -999927,
+          "right": 663.71875,
+          "bottom": -999861,
+          "left": 100
+        },
+        {
+          "region": "diagram",
+          "x": 100,
+          "y": -999759,
+          "width": 850,
+          "height": 710,
+          "top": -999759,
+          "right": 950,
+          "bottom": -999049,
+          "left": 100
+        },
+        {
+          "region": "card",
+          "x": 1050,
+          "y": -999629,
+          "width": 740,
+          "height": 230,
+          "top": -999629,
+          "right": 1790,
+          "bottom": -999399,
+          "left": 1050
+        }
+      ]
+    },
+    {
+      "labels": [
+        "s03:model"
+      ],
+      "image": "02482.png",
+      "frame": 2482,
+      "regions": 3,
       "maxWords": 5,
       "cards": [
-        "Predict changes when assumptions fail."
+        "h = 20 - 5t2"
+      ],
+      "overflow": false,
+      "root": {
+        "x": 0,
+        "y": -999999,
+        "width": 1920,
+        "height": 1080,
+        "top": -999999,
+        "right": 1920,
+        "bottom": -998919,
+        "left": 0
+      },
+      "bounds": [
+        {
+          "region": "header",
+          "x": 100,
+          "y": -999927,
+          "width": 563.71875,
+          "height": 66,
+          "top": -999927,
+          "right": 663.71875,
+          "bottom": -999861,
+          "left": 100
+        },
+        {
+          "region": "diagram",
+          "x": 100,
+          "y": -999759,
+          "width": 850,
+          "height": 710,
+          "top": -999759,
+          "right": 950,
+          "bottom": -999049,
+          "left": 100
+        },
+        {
+          "region": "paper",
+          "x": 1010,
+          "y": -999749,
+          "width": 810,
+          "height": 660,
+          "top": -999749,
+          "right": 1820,
+          "bottom": -999089,
+          "left": 1010
+        }
       ]
     },
     {
-      "frame": 617,
-      "cues": [
-        "s02:hanging"
+      "labels": [
+        "s03:domain"
       ],
-      "regions": 2,
-      "maxWords": 0,
-      "cards": []
+      "image": "02641.png",
+      "frame": 2641,
+      "regions": 3,
+      "maxWords": 5,
+      "cards": [
+        "h = 20 - 5t2",
+        "0 \u2264 t \u2264 2"
+      ],
+      "overflow": false,
+      "root": {
+        "x": 0,
+        "y": -999999,
+        "width": 1920,
+        "height": 1080,
+        "top": -999999,
+        "right": 1920,
+        "bottom": -998919,
+        "left": 0
+      },
+      "bounds": [
+        {
+          "region": "header",
+          "x": 100,
+          "y": -999927,
+          "width": 563.71875,
+          "height": 66,
+          "top": -999927,
+          "right": 663.71875,
+          "bottom": -999861,
+          "left": 100
+        },
+        {
+          "region": "diagram",
+          "x": 100,
+          "y": -999759,
+          "width": 850,
+          "height": 710,
+          "top": -999759,
+          "right": 950,
+          "bottom": -999049,
+          "left": 100
+        },
+        {
+          "region": "paper",
+          "x": 1010,
+          "y": -999749,
+          "width": 810,
+          "height": 660,
+          "top": -999749,
+          "right": 1820,
+          "bottom": -999089,
+          "left": 1010
+        }
+      ]
     },
     {
-      "frame": 667,
-      "cues": [
-        "s02:box"
+      "labels": [
+        "s03:domain-complete"
       ],
-      "regions": 2,
-      "maxWords": 0,
-      "cards": []
+      "image": "02726.png",
+      "frame": 2726,
+      "regions": 3,
+      "maxWords": 5,
+      "cards": [
+        "h = 20 - 5t2",
+        "0 \u2264 t \u2264 2"
+      ],
+      "overflow": false,
+      "root": {
+        "x": 0,
+        "y": -999999,
+        "width": 1920,
+        "height": 1080,
+        "top": -999999,
+        "right": 1920,
+        "bottom": -998919,
+        "left": 0
+      },
+      "bounds": [
+        {
+          "region": "header",
+          "x": 100,
+          "y": -999927,
+          "width": 563.71875,
+          "height": 66,
+          "top": -999927,
+          "right": 663.71875,
+          "bottom": -999861,
+          "left": 100
+        },
+        {
+          "region": "diagram",
+          "x": 100,
+          "y": -999759,
+          "width": 850,
+          "height": 710,
+          "top": -999759,
+          "right": 950,
+          "bottom": -999049,
+          "left": 100
+        },
+        {
+          "region": "paper",
+          "x": 1010,
+          "y": -999749,
+          "width": 810,
+          "height": 660,
+          "top": -999749,
+          "right": 1820,
+          "bottom": -999089,
+          "left": 1010
+        }
+      ]
     },
     {
-      "frame": 719,
-      "cues": [
-        "s02:table"
+      "labels": [
+        "s03:zero"
       ],
-      "regions": 2,
-      "maxWords": 0,
-      "cards": []
+      "image": "02729.png",
+      "frame": 2729,
+      "regions": 3,
+      "maxWords": 5,
+      "cards": [
+        "h = 20 - 5t2",
+        "h(0) = 20 m"
+      ],
+      "overflow": false,
+      "root": {
+        "x": 0,
+        "y": -999999,
+        "width": 1920,
+        "height": 1080,
+        "top": -999999,
+        "right": 1920,
+        "bottom": -998919,
+        "left": 0
+      },
+      "bounds": [
+        {
+          "region": "header",
+          "x": 100,
+          "y": -999927,
+          "width": 563.71875,
+          "height": 66,
+          "top": -999927,
+          "right": 663.71875,
+          "bottom": -999861,
+          "left": 100
+        },
+        {
+          "region": "diagram",
+          "x": 100,
+          "y": -999759,
+          "width": 850,
+          "height": 710,
+          "top": -999759,
+          "right": 950,
+          "bottom": -999049,
+          "left": 100
+        },
+        {
+          "region": "paper",
+          "x": 1010,
+          "y": -999749,
+          "width": 810,
+          "height": 660,
+          "top": -999749,
+          "right": 1820,
+          "bottom": -999089,
+          "left": 1010
+        }
+      ]
     },
     {
-      "frame": 747,
-      "cues": [
-        "s02:string"
+      "labels": [
+        "s03:zero-value"
       ],
-      "regions": 2,
-      "maxWords": 0,
-      "cards": []
+      "image": "02787.png",
+      "frame": 2787,
+      "regions": 3,
+      "maxWords": 5,
+      "cards": [
+        "h = 20 - 5t2",
+        "h(0) = 20 m"
+      ],
+      "overflow": false,
+      "root": {
+        "x": 0,
+        "y": -999999,
+        "width": 1920,
+        "height": 1080,
+        "top": -999999,
+        "right": 1920,
+        "bottom": -998919,
+        "left": 0
+      },
+      "bounds": [
+        {
+          "region": "header",
+          "x": 100,
+          "y": -999927,
+          "width": 563.71875,
+          "height": 66,
+          "top": -999927,
+          "right": 663.71875,
+          "bottom": -999861,
+          "left": 100
+        },
+        {
+          "region": "diagram",
+          "x": 100,
+          "y": -999759,
+          "width": 850,
+          "height": 710,
+          "top": -999759,
+          "right": 950,
+          "bottom": -999049,
+          "left": 100
+        },
+        {
+          "region": "paper",
+          "x": 1010,
+          "y": -999749,
+          "width": 810,
+          "height": 660,
+          "top": -999749,
+          "right": 1820,
+          "bottom": -999089,
+          "left": 1010
+        }
+      ]
     },
     {
-      "frame": 784,
-      "cues": [
-        "s02:pulley"
+      "labels": [
+        "s03:hold-0"
       ],
-      "regions": 2,
-      "maxWords": 0,
-      "cards": []
+      "image": "02815.png",
+      "frame": 2815,
+      "regions": 3,
+      "maxWords": 5,
+      "cards": [
+        "h = 20 - 5t2",
+        "h(0) = 20 m"
+      ],
+      "overflow": false,
+      "root": {
+        "x": 0,
+        "y": -999999,
+        "width": 1920,
+        "height": 1080,
+        "top": -999999,
+        "right": 1920,
+        "bottom": -998919,
+        "left": 0
+      },
+      "bounds": [
+        {
+          "region": "header",
+          "x": 100,
+          "y": -999927,
+          "width": 563.71875,
+          "height": 66,
+          "top": -999927,
+          "right": 663.71875,
+          "bottom": -999861,
+          "left": 100
+        },
+        {
+          "region": "diagram",
+          "x": 100,
+          "y": -999759,
+          "width": 850,
+          "height": 710,
+          "top": -999759,
+          "right": 950,
+          "bottom": -999049,
+          "left": 100
+        },
+        {
+          "region": "paper",
+          "x": 1010,
+          "y": -999749,
+          "width": 810,
+          "height": 660,
+          "top": -999749,
+          "right": 1820,
+          "bottom": -999089,
+          "left": 1010
+        }
+      ]
     },
     {
-      "frame": 811,
-      "cues": [
-        "s02:particle"
+      "labels": [
+        "s03:hold-0"
       ],
+      "image": "02874.png",
+      "frame": 2874,
+      "regions": 3,
+      "maxWords": 5,
+      "cards": [
+        "h = 20 - 5t2",
+        "h(0) = 20 m"
+      ],
+      "overflow": false,
+      "root": {
+        "x": 0,
+        "y": -999999,
+        "width": 1920,
+        "height": 1080,
+        "top": -999999,
+        "right": 1920,
+        "bottom": -998919,
+        "left": 0
+      },
+      "bounds": [
+        {
+          "region": "header",
+          "x": 100,
+          "y": -999927,
+          "width": 563.71875,
+          "height": 66,
+          "top": -999927,
+          "right": 663.71875,
+          "bottom": -999861,
+          "left": 100
+        },
+        {
+          "region": "diagram",
+          "x": 100,
+          "y": -999759,
+          "width": 850,
+          "height": 710,
+          "top": -999759,
+          "right": 950,
+          "bottom": -999049,
+          "left": 100
+        },
+        {
+          "region": "paper",
+          "x": 1010,
+          "y": -999749,
+          "width": 810,
+          "height": 660,
+          "top": -999749,
+          "right": 1820,
+          "bottom": -999089,
+          "left": 1010
+        }
+      ]
+    },
+    {
+      "labels": [
+        "s03:one"
+      ],
+      "image": "02875.png",
+      "frame": 2875,
+      "regions": 3,
+      "maxWords": 5,
+      "cards": [
+        "h = 20 - 5t2",
+        "h(0) = 20 m",
+        "h(1) = 15 m"
+      ],
+      "overflow": false,
+      "root": {
+        "x": 0,
+        "y": -999999,
+        "width": 1920,
+        "height": 1080,
+        "top": -999999,
+        "right": 1920,
+        "bottom": -998919,
+        "left": 0
+      },
+      "bounds": [
+        {
+          "region": "header",
+          "x": 100,
+          "y": -999927,
+          "width": 563.71875,
+          "height": 66,
+          "top": -999927,
+          "right": 663.71875,
+          "bottom": -999861,
+          "left": 100
+        },
+        {
+          "region": "diagram",
+          "x": 100,
+          "y": -999759,
+          "width": 850,
+          "height": 710,
+          "top": -999759,
+          "right": 950,
+          "bottom": -999049,
+          "left": 100
+        },
+        {
+          "region": "paper",
+          "x": 1010,
+          "y": -999749,
+          "width": 810,
+          "height": 660,
+          "top": -999749,
+          "right": 1820,
+          "bottom": -999089,
+          "left": 1010
+        }
+      ]
+    },
+    {
+      "labels": [
+        "s03:one-value"
+      ],
+      "image": "02924.png",
+      "frame": 2924,
+      "regions": 3,
+      "maxWords": 5,
+      "cards": [
+        "h = 20 - 5t2",
+        "h(0) = 20 m",
+        "h(1) = 15 m"
+      ],
+      "overflow": false,
+      "root": {
+        "x": 0,
+        "y": -999999,
+        "width": 1920,
+        "height": 1080,
+        "top": -999999,
+        "right": 1920,
+        "bottom": -998919,
+        "left": 0
+      },
+      "bounds": [
+        {
+          "region": "header",
+          "x": 100,
+          "y": -999927,
+          "width": 563.71875,
+          "height": 66,
+          "top": -999927,
+          "right": 663.71875,
+          "bottom": -999861,
+          "left": 100
+        },
+        {
+          "region": "diagram",
+          "x": 100,
+          "y": -999759,
+          "width": 850,
+          "height": 710,
+          "top": -999759,
+          "right": 950,
+          "bottom": -999049,
+          "left": 100
+        },
+        {
+          "region": "paper",
+          "x": 1010,
+          "y": -999749,
+          "width": 810,
+          "height": 660,
+          "top": -999749,
+          "right": 1820,
+          "bottom": -999089,
+          "left": 1010
+        }
+      ]
+    },
+    {
+      "labels": [
+        "s03:hold-1"
+      ],
+      "image": "02953.png",
+      "frame": 2953,
+      "regions": 3,
+      "maxWords": 5,
+      "cards": [
+        "h = 20 - 5t2",
+        "h(0) = 20 m",
+        "h(1) = 15 m"
+      ],
+      "overflow": false,
+      "root": {
+        "x": 0,
+        "y": -999999,
+        "width": 1920,
+        "height": 1080,
+        "top": -999999,
+        "right": 1920,
+        "bottom": -998919,
+        "left": 0
+      },
+      "bounds": [
+        {
+          "region": "header",
+          "x": 100,
+          "y": -999927,
+          "width": 563.71875,
+          "height": 66,
+          "top": -999927,
+          "right": 663.71875,
+          "bottom": -999861,
+          "left": 100
+        },
+        {
+          "region": "diagram",
+          "x": 100,
+          "y": -999759,
+          "width": 850,
+          "height": 710,
+          "top": -999759,
+          "right": 950,
+          "bottom": -999049,
+          "left": 100
+        },
+        {
+          "region": "paper",
+          "x": 1010,
+          "y": -999749,
+          "width": 810,
+          "height": 660,
+          "top": -999749,
+          "right": 1820,
+          "bottom": -999089,
+          "left": 1010
+        }
+      ]
+    },
+    {
+      "labels": [
+        "s03:hold-1"
+      ],
+      "image": "03012.png",
+      "frame": 3012,
+      "regions": 3,
+      "maxWords": 5,
+      "cards": [
+        "h = 20 - 5t2",
+        "h(0) = 20 m",
+        "h(1) = 15 m"
+      ],
+      "overflow": false,
+      "root": {
+        "x": 0,
+        "y": -999999,
+        "width": 1920,
+        "height": 1080,
+        "top": -999999,
+        "right": 1920,
+        "bottom": -998919,
+        "left": 0
+      },
+      "bounds": [
+        {
+          "region": "header",
+          "x": 100,
+          "y": -999927,
+          "width": 563.71875,
+          "height": 66,
+          "top": -999927,
+          "right": 663.71875,
+          "bottom": -999861,
+          "left": 100
+        },
+        {
+          "region": "diagram",
+          "x": 100,
+          "y": -999759,
+          "width": 850,
+          "height": 710,
+          "top": -999759,
+          "right": 950,
+          "bottom": -999049,
+          "left": 100
+        },
+        {
+          "region": "paper",
+          "x": 1010,
+          "y": -999749,
+          "width": 810,
+          "height": 660,
+          "top": -999749,
+          "right": 1820,
+          "bottom": -999089,
+          "left": 1010
+        }
+      ]
+    },
+    {
+      "labels": [
+        "s03:water"
+      ],
+      "image": "03014.png",
+      "frame": 3014,
+      "regions": 3,
+      "maxWords": 5,
+      "cards": [
+        "h = 20 - 5t2",
+        "h(0) = 20 m",
+        "h(1) = 15 m"
+      ],
+      "overflow": false,
+      "root": {
+        "x": 0,
+        "y": -999999,
+        "width": 1920,
+        "height": 1080,
+        "top": -999999,
+        "right": 1920,
+        "bottom": -998919,
+        "left": 0
+      },
+      "bounds": [
+        {
+          "region": "header",
+          "x": 100,
+          "y": -999927,
+          "width": 563.71875,
+          "height": 66,
+          "top": -999927,
+          "right": 663.71875,
+          "bottom": -999861,
+          "left": 100
+        },
+        {
+          "region": "diagram",
+          "x": 100,
+          "y": -999759,
+          "width": 850,
+          "height": 710,
+          "top": -999759,
+          "right": 950,
+          "bottom": -999049,
+          "left": 100
+        },
+        {
+          "region": "paper",
+          "x": 1010,
+          "y": -999749,
+          "width": 810,
+          "height": 660,
+          "top": -999749,
+          "right": 1820,
+          "bottom": -999089,
+          "left": 1010
+        }
+      ]
+    },
+    {
+      "labels": [
+        "s03:question"
+      ],
+      "image": "03104.png",
+      "frame": 3104,
+      "regions": 3,
+      "maxWords": 8,
+      "cards": [
+        "Is 1 m at t = 1 reasonable?"
+      ],
+      "overflow": false,
+      "root": {
+        "x": 0,
+        "y": -999999,
+        "width": 1920,
+        "height": 1080,
+        "top": -999999,
+        "right": 1920,
+        "bottom": -998919,
+        "left": 0
+      },
+      "bounds": [
+        {
+          "region": "header",
+          "x": 100,
+          "y": -999927,
+          "width": 563.71875,
+          "height": 66,
+          "top": -999927,
+          "right": 663.71875,
+          "bottom": -999861,
+          "left": 100
+        },
+        {
+          "region": "diagram",
+          "x": 100,
+          "y": -999759,
+          "width": 850,
+          "height": 710,
+          "top": -999759,
+          "right": 950,
+          "bottom": -999049,
+          "left": 100
+        },
+        {
+          "region": "card",
+          "x": 1050,
+          "y": -999629,
+          "width": 740,
+          "height": 230,
+          "top": -999629,
+          "right": 1790,
+          "bottom": -999399,
+          "left": 1050
+        }
+      ]
+    },
+    {
+      "labels": [
+        "s03:hold-2"
+      ],
+      "image": "03184.png",
+      "frame": 3184,
+      "regions": 3,
+      "maxWords": 8,
+      "cards": [
+        "Is 1 m at t = 1 reasonable?"
+      ],
+      "overflow": false,
+      "root": {
+        "x": 0,
+        "y": -999999,
+        "width": 1920,
+        "height": 1080,
+        "top": -999999,
+        "right": 1920,
+        "bottom": -998919,
+        "left": 0
+      },
+      "bounds": [
+        {
+          "region": "header",
+          "x": 100,
+          "y": -999927,
+          "width": 563.71875,
+          "height": 66,
+          "top": -999927,
+          "right": 663.71875,
+          "bottom": -999861,
+          "left": 100
+        },
+        {
+          "region": "diagram",
+          "x": 100,
+          "y": -999759,
+          "width": 850,
+          "height": 710,
+          "top": -999759,
+          "right": 950,
+          "bottom": -999049,
+          "left": 100
+        },
+        {
+          "region": "card",
+          "x": 1050,
+          "y": -999629,
+          "width": 740,
+          "height": 230,
+          "top": -999629,
+          "right": 1790,
+          "bottom": -999399,
+          "left": 1050
+        }
+      ]
+    },
+    {
+      "labels": [
+        "s03:hold-2"
+      ],
+      "image": "03273.png",
+      "frame": 3273,
+      "regions": 3,
+      "maxWords": 8,
+      "cards": [
+        "Is 1 m at t = 1 reasonable?"
+      ],
+      "overflow": false,
+      "root": {
+        "x": 0,
+        "y": -999999,
+        "width": 1920,
+        "height": 1080,
+        "top": -999999,
+        "right": 1920,
+        "bottom": -998919,
+        "left": 0
+      },
+      "bounds": [
+        {
+          "region": "header",
+          "x": 100,
+          "y": -999927,
+          "width": 563.71875,
+          "height": 66,
+          "top": -999927,
+          "right": 663.71875,
+          "bottom": -999861,
+          "left": 100
+        },
+        {
+          "region": "diagram",
+          "x": 100,
+          "y": -999759,
+          "width": 850,
+          "height": 710,
+          "top": -999759,
+          "right": 950,
+          "bottom": -999049,
+          "left": 100
+        },
+        {
+          "region": "card",
+          "x": 1050,
+          "y": -999629,
+          "width": 740,
+          "height": 230,
+          "top": -999629,
+          "right": 1790,
+          "bottom": -999399,
+          "left": 1050
+        }
+      ]
+    },
+    {
+      "labels": [
+        "s03:answer"
+      ],
+      "image": "03274.png",
+      "frame": 3274,
+      "regions": 3,
+      "maxWords": 5,
+      "cards": [
+        "The model gives 15 m"
+      ],
+      "overflow": false,
+      "root": {
+        "x": 0,
+        "y": -999999,
+        "width": 1920,
+        "height": 1080,
+        "top": -999999,
+        "right": 1920,
+        "bottom": -998919,
+        "left": 0
+      },
+      "bounds": [
+        {
+          "region": "header",
+          "x": 100,
+          "y": -999927,
+          "width": 563.71875,
+          "height": 66,
+          "top": -999927,
+          "right": 663.71875,
+          "bottom": -999861,
+          "left": 100
+        },
+        {
+          "region": "diagram",
+          "x": 100,
+          "y": -999759,
+          "width": 850,
+          "height": 710,
+          "top": -999759,
+          "right": 950,
+          "bottom": -999049,
+          "left": 100
+        },
+        {
+          "region": "card",
+          "x": 1050,
+          "y": -999629,
+          "width": 740,
+          "height": 230,
+          "top": -999629,
+          "right": 1790,
+          "bottom": -999399,
+          "left": 1050
+        }
+      ]
+    },
+    {
+      "labels": [
+        "s03:refine-air"
+      ],
+      "image": "03507.png",
+      "frame": 3507,
+      "regions": 3,
+      "maxWords": 3,
+      "cards": [
+        "Include air resistance"
+      ],
+      "overflow": false,
+      "root": {
+        "x": 0,
+        "y": -999999,
+        "width": 1920,
+        "height": 1080,
+        "top": -999999,
+        "right": 1920,
+        "bottom": -998919,
+        "left": 0
+      },
+      "bounds": [
+        {
+          "region": "header",
+          "x": 100,
+          "y": -999927,
+          "width": 563.71875,
+          "height": 66,
+          "top": -999927,
+          "right": 663.71875,
+          "bottom": -999861,
+          "left": 100
+        },
+        {
+          "region": "diagram",
+          "x": 100,
+          "y": -999759,
+          "width": 850,
+          "height": 710,
+          "top": -999759,
+          "right": 950,
+          "bottom": -999049,
+          "left": 100
+        },
+        {
+          "region": "card",
+          "x": 1050,
+          "y": -999629,
+          "width": 740,
+          "height": 230,
+          "top": -999629,
+          "right": 1790,
+          "bottom": -999399,
+          "left": 1050
+        }
+      ]
+    },
+    {
+      "labels": [
+        "s03:refine-size"
+      ],
+      "image": "03584.png",
+      "frame": 3584,
+      "regions": 3,
+      "maxWords": 4,
+      "cards": [
+        "Keep size and mass"
+      ],
+      "overflow": false,
+      "root": {
+        "x": 0,
+        "y": -999999,
+        "width": 1920,
+        "height": 1080,
+        "top": -999999,
+        "right": 1920,
+        "bottom": -998919,
+        "left": 0
+      },
+      "bounds": [
+        {
+          "region": "header",
+          "x": 100,
+          "y": -999927,
+          "width": 563.71875,
+          "height": 66,
+          "top": -999927,
+          "right": 663.71875,
+          "bottom": -999861,
+          "left": 100
+        },
+        {
+          "region": "diagram",
+          "x": 100,
+          "y": -999759,
+          "width": 850,
+          "height": 710,
+          "top": -999759,
+          "right": 950,
+          "bottom": -999049,
+          "left": 100
+        },
+        {
+          "region": "card",
+          "x": 1050,
+          "y": -999629,
+          "width": 740,
+          "height": 230,
+          "top": -999629,
+          "right": 1790,
+          "bottom": -999399,
+          "left": 1050
+        }
+      ]
+    },
+    {
+      "labels": [
+        "s03:refine-motion"
+      ],
+      "image": "03686.png",
+      "frame": 3686,
+      "regions": 3,
+      "maxWords": 5,
+      "cards": [
+        "Allow two or three dimensions"
+      ],
+      "overflow": false,
+      "root": {
+        "x": 0,
+        "y": -999999,
+        "width": 1920,
+        "height": 1080,
+        "top": -999999,
+        "right": 1920,
+        "bottom": -998919,
+        "left": 0
+      },
+      "bounds": [
+        {
+          "region": "header",
+          "x": 100,
+          "y": -999927,
+          "width": 563.71875,
+          "height": 66,
+          "top": -999927,
+          "right": 663.71875,
+          "bottom": -999861,
+          "left": 100
+        },
+        {
+          "region": "diagram",
+          "x": 100,
+          "y": -999759,
+          "width": 850,
+          "height": 710,
+          "top": -999759,
+          "right": 950,
+          "bottom": -999049,
+          "left": 100
+        },
+        {
+          "region": "card",
+          "x": 1050,
+          "y": -999629,
+          "width": 740,
+          "height": 250.375,
+          "top": -999629,
+          "right": 1790,
+          "bottom": -999378.625,
+          "left": 1050
+        }
+      ]
+    },
+    {
+      "labels": [
+        "s04:particle"
+      ],
+      "image": "03884.png",
+      "frame": 3884,
       "regions": 3,
       "maxWords": 1,
       "cards": [
         "Particle"
+      ],
+      "overflow": false,
+      "root": {
+        "x": 0,
+        "y": -999999,
+        "width": 1920,
+        "height": 1080,
+        "top": -999999,
+        "right": 1920,
+        "bottom": -998919,
+        "left": 0
+      },
+      "bounds": [
+        {
+          "region": "header",
+          "x": 100,
+          "y": -999927,
+          "width": 874.09375,
+          "height": 66,
+          "top": -999927,
+          "right": 974.09375,
+          "bottom": -999861,
+          "left": 100
+        },
+        {
+          "region": "diagram",
+          "x": 100,
+          "y": -999759,
+          "width": 850,
+          "height": 710,
+          "top": -999759,
+          "right": 950,
+          "bottom": -999049,
+          "left": 100
+        },
+        {
+          "region": "card",
+          "x": 1050,
+          "y": -999629,
+          "width": 740,
+          "height": 230,
+          "top": -999629,
+          "right": 1790,
+          "bottom": -999399,
+          "left": 1050
+        }
       ]
     },
     {
-      "frame": 832,
-      "cues": [
-        "s02:mass"
+      "labels": [
+        "s04:smooth"
       ],
+      "image": "04091.png",
+      "frame": 4091,
       "regions": 3,
-      "maxWords": 1,
+      "maxWords": 2,
       "cards": [
-        "Particle"
+        "Smooth surface"
+      ],
+      "overflow": false,
+      "root": {
+        "x": 0,
+        "y": -999999,
+        "width": 1920,
+        "height": 1080,
+        "top": -999999,
+        "right": 1920,
+        "bottom": -998919,
+        "left": 0
+      },
+      "bounds": [
+        {
+          "region": "header",
+          "x": 100,
+          "y": -999927,
+          "width": 874.09375,
+          "height": 66,
+          "top": -999927,
+          "right": 974.09375,
+          "bottom": -999861,
+          "left": 100
+        },
+        {
+          "region": "diagram",
+          "x": 100,
+          "y": -999759,
+          "width": 850,
+          "height": 710,
+          "top": -999759,
+          "right": 950,
+          "bottom": -999049,
+          "left": 100
+        },
+        {
+          "region": "card",
+          "x": 1050,
+          "y": -999629,
+          "width": 740,
+          "height": 230,
+          "top": -999629,
+          "right": 1790,
+          "bottom": -999399,
+          "left": 1050
+        }
       ]
     },
     {
-      "frame": 860,
-      "cues": [
-        "s02:size"
+      "labels": [
+        "s04:rough"
       ],
+      "image": "04195.png",
+      "frame": 4195,
       "regions": 3,
-      "maxWords": 1,
+      "maxWords": 2,
       "cards": [
-        "Particle"
+        "Rough surface"
+      ],
+      "overflow": false,
+      "root": {
+        "x": 0,
+        "y": -999999,
+        "width": 1920,
+        "height": 1080,
+        "top": -999999,
+        "right": 1920,
+        "bottom": -998919,
+        "left": 0
+      },
+      "bounds": [
+        {
+          "region": "header",
+          "x": 100,
+          "y": -999927,
+          "width": 874.09375,
+          "height": 66,
+          "top": -999927,
+          "right": 974.09375,
+          "bottom": -999861,
+          "left": 100
+        },
+        {
+          "region": "diagram",
+          "x": 100,
+          "y": -999759,
+          "width": 850,
+          "height": 710,
+          "top": -999759,
+          "right": 950,
+          "bottom": -999049,
+          "left": 100
+        },
+        {
+          "region": "card",
+          "x": 1050,
+          "y": -999629,
+          "width": 740,
+          "height": 230,
+          "top": -999629,
+          "right": 1790,
+          "bottom": -999399,
+          "left": 1050
+        }
       ]
     },
     {
-      "frame": 958,
-      "cues": [
-        "s02:tips"
+      "labels": [
+        "s04:friction"
       ],
+      "image": "04250.png",
+      "frame": 4250,
       "regions": 3,
-      "maxWords": 1,
+      "maxWords": 2,
       "cards": [
-        "Particle"
+        "Rough surface"
+      ],
+      "overflow": false,
+      "root": {
+        "x": 0,
+        "y": -999999,
+        "width": 1920,
+        "height": 1080,
+        "top": -999999,
+        "right": 1920,
+        "bottom": -998919,
+        "left": 0
+      },
+      "bounds": [
+        {
+          "region": "header",
+          "x": 100,
+          "y": -999927,
+          "width": 874.09375,
+          "height": 66,
+          "top": -999927,
+          "right": 974.09375,
+          "bottom": -999861,
+          "left": 100
+        },
+        {
+          "region": "diagram",
+          "x": 100,
+          "y": -999759,
+          "width": 850,
+          "height": 710,
+          "top": -999759,
+          "right": 950,
+          "bottom": -999049,
+          "left": 100
+        },
+        {
+          "region": "card",
+          "x": 1050,
+          "y": -999629,
+          "width": 740,
+          "height": 230,
+          "top": -999629,
+          "right": 1790,
+          "bottom": -999399,
+          "left": 1050
+        }
       ]
     },
     {
-      "frame": 1016,
-      "cues": [
-        "s02:air"
+      "labels": [
+        "s04:rod"
       ],
+      "image": "04320.png",
+      "frame": 4320,
       "regions": 3,
       "maxWords": 3,
       "cards": [
-        "Air resistance neglected"
+        "Rod or beam"
+      ],
+      "overflow": false,
+      "root": {
+        "x": 0,
+        "y": -999999,
+        "width": 1920,
+        "height": 1080,
+        "top": -999999,
+        "right": 1920,
+        "bottom": -998919,
+        "left": 0
+      },
+      "bounds": [
+        {
+          "region": "header",
+          "x": 100,
+          "y": -999927,
+          "width": 874.09375,
+          "height": 66,
+          "top": -999927,
+          "right": 974.09375,
+          "bottom": -999861,
+          "left": 100
+        },
+        {
+          "region": "diagram",
+          "x": 100,
+          "y": -999759,
+          "width": 850,
+          "height": 710,
+          "top": -999759,
+          "right": 950,
+          "bottom": -999049,
+          "left": 100
+        },
+        {
+          "region": "card",
+          "x": 1050,
+          "y": -999629,
+          "width": 740,
+          "height": 230,
+          "top": -999629,
+          "right": 1790,
+          "bottom": -999399,
+          "left": 1050
+        }
       ]
     },
     {
-      "frame": 1142,
-      "cues": [
-        "s02:include"
+      "labels": [
+        "s04:uniform"
       ],
+      "image": "04473.png",
+      "frame": 4473,
       "regions": 3,
-      "maxWords": 3,
+      "maxWords": 2,
       "cards": [
-        "Air resistance included"
+        "Uniform rod"
+      ],
+      "overflow": false,
+      "root": {
+        "x": 0,
+        "y": -999999,
+        "width": 1920,
+        "height": 1080,
+        "top": -999999,
+        "right": 1920,
+        "bottom": -998919,
+        "left": 0
+      },
+      "bounds": [
+        {
+          "region": "header",
+          "x": 100,
+          "y": -999927,
+          "width": 874.09375,
+          "height": 66,
+          "top": -999927,
+          "right": 974.09375,
+          "bottom": -999861,
+          "left": 100
+        },
+        {
+          "region": "diagram",
+          "x": 100,
+          "y": -999759,
+          "width": 850,
+          "height": 710,
+          "top": -999759,
+          "right": 950,
+          "bottom": -999049,
+          "left": 100
+        },
+        {
+          "region": "card",
+          "x": 1050,
+          "y": -999629,
+          "width": 740,
+          "height": 230,
+          "top": -999629,
+          "right": 1790,
+          "bottom": -999399,
+          "left": 1050
+        }
       ]
     },
     {
-      "frame": 1205,
-      "cues": [
-        "s02:drag"
+      "labels": [
+        "s04:centre"
       ],
+      "image": "04644.png",
+      "frame": 4644,
       "regions": 3,
-      "maxWords": 3,
+      "maxWords": 2,
       "cards": [
-        "Air resistance included"
+        "Uniform rod"
+      ],
+      "overflow": false,
+      "root": {
+        "x": 0,
+        "y": -999999,
+        "width": 1920,
+        "height": 1080,
+        "top": -999999,
+        "right": 1920,
+        "bottom": -998919,
+        "left": 0
+      },
+      "bounds": [
+        {
+          "region": "header",
+          "x": 100,
+          "y": -999927,
+          "width": 874.09375,
+          "height": 66,
+          "top": -999927,
+          "right": 974.09375,
+          "bottom": -999861,
+          "left": 100
+        },
+        {
+          "region": "diagram",
+          "x": 100,
+          "y": -999759,
+          "width": 850,
+          "height": 710,
+          "top": -999759,
+          "right": 950,
+          "bottom": -999049,
+          "left": 100
+        },
+        {
+          "region": "card",
+          "x": 1050,
+          "y": -999629,
+          "width": 740,
+          "height": 230,
+          "top": -999629,
+          "right": 1790,
+          "bottom": -999399,
+          "left": 1050
+        }
       ]
     },
     {
-      "frame": 1282,
-      "cues": [
-        "s03:light"
+      "labels": [
+        "s04:uneven"
       ],
+      "image": "04712.png",
+      "frame": 4712,
       "regions": 3,
-      "maxWords": 3,
+      "maxWords": 2,
       "cards": [
-        "Light: negligible mass"
+        "Uneven mass"
+      ],
+      "overflow": false,
+      "root": {
+        "x": 0,
+        "y": -999999,
+        "width": 1920,
+        "height": 1080,
+        "top": -999999,
+        "right": 1920,
+        "bottom": -998919,
+        "left": 0
+      },
+      "bounds": [
+        {
+          "region": "header",
+          "x": 100,
+          "y": -999927,
+          "width": 874.09375,
+          "height": 66,
+          "top": -999927,
+          "right": 974.09375,
+          "bottom": -999861,
+          "left": 100
+        },
+        {
+          "region": "diagram",
+          "x": 100,
+          "y": -999759,
+          "width": 850,
+          "height": 710,
+          "top": -999759,
+          "right": 950,
+          "bottom": -999049,
+          "left": 100
+        },
+        {
+          "region": "card",
+          "x": 1050,
+          "y": -999629,
+          "width": 740,
+          "height": 230,
+          "top": -999629,
+          "right": 1790,
+          "bottom": -999399,
+          "left": 1050
+        }
       ]
     },
     {
-      "frame": 1378,
-      "cues": [
-        "s03:string"
+      "labels": [
+        "s04:light"
       ],
+      "image": "04801.png",
+      "frame": 4801,
       "regions": 3,
       "maxWords": 2,
       "cards": [
         "Light string"
+      ],
+      "overflow": false,
+      "root": {
+        "x": 0,
+        "y": -999999,
+        "width": 1920,
+        "height": 1080,
+        "top": -999999,
+        "right": 1920,
+        "bottom": -998919,
+        "left": 0
+      },
+      "bounds": [
+        {
+          "region": "header",
+          "x": 100,
+          "y": -999927,
+          "width": 874.09375,
+          "height": 66,
+          "top": -999927,
+          "right": 974.09375,
+          "bottom": -999861,
+          "left": 100
+        },
+        {
+          "region": "diagram",
+          "x": 100,
+          "y": -999759,
+          "width": 850,
+          "height": 710,
+          "top": -999759,
+          "right": 950,
+          "bottom": -999049,
+          "left": 100
+        },
+        {
+          "region": "card",
+          "x": 1050,
+          "y": -999629,
+          "width": 740,
+          "height": 230,
+          "top": -999629,
+          "right": 1790,
+          "bottom": -999399,
+          "left": 1050
+        }
       ]
     },
     {
-      "frame": 1518,
-      "cues": [
-        "s03:heavy"
+      "labels": [
+        "s04:heavy"
       ],
+      "image": "05026.png",
+      "frame": 5026,
       "regions": 3,
       "maxWords": 2,
       "cards": [
         "Heavy string"
-      ]
-    },
-    {
-      "frame": 1571,
-      "cues": [
-        "s03:pulley"
       ],
-      "regions": 3,
-      "maxWords": 2,
-      "cards": [
-        "Light pulley"
+      "overflow": false,
+      "root": {
+        "x": 0,
+        "y": -999999,
+        "width": 1920,
+        "height": 1080,
+        "top": -999999,
+        "right": 1920,
+        "bottom": -998919,
+        "left": 0
+      },
+      "bounds": [
+        {
+          "region": "header",
+          "x": 100,
+          "y": -999927,
+          "width": 874.09375,
+          "height": 66,
+          "top": -999927,
+          "right": 974.09375,
+          "bottom": -999861,
+          "left": 100
+        },
+        {
+          "region": "diagram",
+          "x": 100,
+          "y": -999759,
+          "width": 850,
+          "height": 710,
+          "top": -999759,
+          "right": 950,
+          "bottom": -999049,
+          "left": 100
+        },
+        {
+          "region": "card",
+          "x": 1050,
+          "y": -999629,
+          "width": 740,
+          "height": 230,
+          "top": -999629,
+          "right": 1790,
+          "bottom": -999399,
+          "left": 1050
+        }
       ]
     },
     {
-      "frame": 1702,
-      "cues": [
-        "s03:massive"
-      ],
-      "regions": 3,
-      "maxWords": 2,
-      "cards": [
-        "Massive pulley"
-      ]
-    },
-    {
-      "frame": 1737,
-      "cues": [
-        "s03:spin"
-      ],
-      "regions": 3,
-      "maxWords": 2,
-      "cards": [
-        "Massive pulley"
-      ]
-    },
-    {
-      "frame": 1825,
-      "cues": [
-        "s03:smooth"
-      ],
-      "regions": 3,
-      "maxWords": 2,
-      "cards": [
-        "Smooth pulley"
-      ]
-    },
-    {
-      "frame": 1870,
-      "cues": [
-        "s03:friction"
-      ],
-      "regions": 3,
-      "maxWords": 2,
-      "cards": [
-        "Smooth pulley"
-      ]
-    },
-    {
-      "frame": 1969,
-      "cues": [
-        "s03:equal"
-      ],
-      "regions": 3,
-      "maxWords": 2,
-      "cards": [
-        "Smooth pulley"
-      ]
-    },
-    {
-      "frame": 1981,
-      "cues": [
-        "s03:second-tension"
-      ],
-      "regions": 3,
-      "maxWords": 2,
-      "cards": [
-        "Smooth pulley"
-      ]
-    },
-    {
-      "frame": 2027,
-      "cues": [
-        "s03:rough"
-      ],
-      "regions": 3,
-      "maxWords": 2,
-      "cards": [
-        "Rough pulley"
-      ]
-    },
-    {
-      "frame": 2083,
-      "cues": [
-        "s03:unequal"
-      ],
-      "regions": 3,
-      "maxWords": 2,
-      "cards": [
-        "Rough pulley"
-      ]
-    },
-    {
-      "frame": 2130,
-      "cues": [
+      "labels": [
         "s04:inextensible"
       ],
+      "image": "05120.png",
+      "frame": 5120,
       "regions": 3,
-      "maxWords": 3,
+      "maxWords": 2,
       "cards": [
-        "Inextensible: fixed length"
-      ]
-    },
-    {
-      "frame": 2237,
-      "cues": [
-        "s04:taut"
+        "Inextensible string"
       ],
-      "regions": 3,
-      "maxWords": 3,
-      "cards": [
-        "Inextensible: fixed length"
+      "overflow": false,
+      "root": {
+        "x": 0,
+        "y": -999999,
+        "width": 1920,
+        "height": 1080,
+        "top": -999999,
+        "right": 1920,
+        "bottom": -998919,
+        "left": 0
+      },
+      "bounds": [
+        {
+          "region": "header",
+          "x": 100,
+          "y": -999927,
+          "width": 874.09375,
+          "height": 66,
+          "top": -999927,
+          "right": 974.09375,
+          "bottom": -999861,
+          "left": 100
+        },
+        {
+          "region": "diagram",
+          "x": 100,
+          "y": -999759,
+          "width": 850,
+          "height": 710,
+          "top": -999759,
+          "right": 950,
+          "bottom": -999049,
+          "left": 100
+        },
+        {
+          "region": "card",
+          "x": 1050,
+          "y": -999629,
+          "width": 740,
+          "height": 230,
+          "top": -999629,
+          "right": 1790,
+          "bottom": -999399,
+          "left": 1050
+        }
       ]
     },
     {
-      "frame": 2290,
-      "cues": [
-        "s04:gained"
-      ],
-      "regions": 3,
-      "maxWords": 3,
-      "cards": [
-        "Inextensible: fixed length"
-      ]
-    },
-    {
-      "frame": 2336,
-      "cues": [
-        "s04:lost"
-      ],
-      "regions": 3,
-      "maxWords": 3,
-      "cards": [
-        "Inextensible: fixed length"
-      ]
-    },
-    {
-      "frame": 2415,
-      "cues": [
-        "s04:speed"
-      ],
-      "regions": 3,
-      "maxWords": 3,
-      "cards": [
-        "Inextensible: fixed length"
-      ]
-    },
-    {
-      "frame": 2463,
-      "cues": [
+      "labels": [
         "s04:acceleration"
       ],
+      "image": "05332.png",
+      "frame": 5332,
       "regions": 3,
-      "maxWords": 3,
+      "maxWords": 2,
       "cards": [
-        "Inextensible: fixed length"
+        "Inextensible string"
+      ],
+      "overflow": false,
+      "root": {
+        "x": 0,
+        "y": -999999,
+        "width": 1920,
+        "height": 1080,
+        "top": -999999,
+        "right": 1920,
+        "bottom": -998919,
+        "left": 0
+      },
+      "bounds": [
+        {
+          "region": "header",
+          "x": 100,
+          "y": -999927,
+          "width": 874.09375,
+          "height": 66,
+          "top": -999927,
+          "right": 974.09375,
+          "bottom": -999861,
+          "left": 100
+        },
+        {
+          "region": "diagram",
+          "x": 100,
+          "y": -999759,
+          "width": 850,
+          "height": 710,
+          "top": -999759,
+          "right": 950,
+          "bottom": -999049,
+          "left": 100
+        },
+        {
+          "region": "card",
+          "x": 1050,
+          "y": -999629,
+          "width": 740,
+          "height": 230,
+          "top": -999629,
+          "right": 1790,
+          "bottom": -999399,
+          "left": 1050
+        }
       ]
     },
     {
-      "frame": 2528,
-      "cues": [
-        "s04:directions"
+      "labels": [
+        "s04:direction"
       ],
+      "image": "05417.png",
+      "frame": 5417,
       "regions": 3,
-      "maxWords": 3,
+      "maxWords": 2,
       "cards": [
-        "Inextensible: fixed length"
+        "Inextensible string"
+      ],
+      "overflow": false,
+      "root": {
+        "x": 0,
+        "y": -999999,
+        "width": 1920,
+        "height": 1080,
+        "top": -999999,
+        "right": 1920,
+        "bottom": -998919,
+        "left": 0
+      },
+      "bounds": [
+        {
+          "region": "header",
+          "x": 100,
+          "y": -999927,
+          "width": 874.09375,
+          "height": 66,
+          "top": -999927,
+          "right": 974.09375,
+          "bottom": -999861,
+          "left": 100
+        },
+        {
+          "region": "diagram",
+          "x": 100,
+          "y": -999759,
+          "width": 850,
+          "height": 710,
+          "top": -999759,
+          "right": 950,
+          "bottom": -999049,
+          "left": 100
+        },
+        {
+          "region": "card",
+          "x": 1050,
+          "y": -999629,
+          "width": 740,
+          "height": 230,
+          "top": -999629,
+          "right": 1790,
+          "bottom": -999399,
+          "left": 1050
+        }
       ]
     },
     {
-      "frame": 2582,
-      "cues": [
-        "s04:extensible"
+      "labels": [
+        "s04:stretching"
       ],
+      "image": "05445.png",
+      "frame": 5445,
+      "regions": 3,
+      "maxWords": 2,
+      "cards": [
+        "Stretching string"
+      ],
+      "overflow": false,
+      "root": {
+        "x": 0,
+        "y": -999999,
+        "width": 1920,
+        "height": 1080,
+        "top": -999999,
+        "right": 1920,
+        "bottom": -998919,
+        "left": 0
+      },
+      "bounds": [
+        {
+          "region": "header",
+          "x": 100,
+          "y": -999927,
+          "width": 874.09375,
+          "height": 66,
+          "top": -999927,
+          "right": 974.09375,
+          "bottom": -999861,
+          "left": 100
+        },
+        {
+          "region": "diagram",
+          "x": 100,
+          "y": -999759,
+          "width": 850,
+          "height": 710,
+          "top": -999759,
+          "right": 950,
+          "bottom": -999049,
+          "left": 100
+        },
+        {
+          "region": "card",
+          "x": 1050,
+          "y": -999629,
+          "width": 740,
+          "height": 230,
+          "top": -999629,
+          "right": 1790,
+          "bottom": -999399,
+          "left": 1050
+        }
+      ]
+    },
+    {
+      "labels": [
+        "s05:box"
+      ],
+      "image": "05562.png",
+      "frame": 5562,
+      "regions": 2,
+      "maxWords": 0,
+      "cards": [],
+      "overflow": false,
+      "root": {
+        "x": 0,
+        "y": -999999,
+        "width": 1920,
+        "height": 1080,
+        "top": -999999,
+        "right": 1920,
+        "bottom": -998919,
+        "left": 0
+      },
+      "bounds": [
+        {
+          "region": "header",
+          "x": 100,
+          "y": -999927,
+          "width": 772.6875,
+          "height": 66,
+          "top": -999927,
+          "right": 872.6875,
+          "bottom": -999861,
+          "left": 100
+        },
+        {
+          "region": "diagram",
+          "x": 100,
+          "y": -999759,
+          "width": 850,
+          "height": 710,
+          "top": -999759,
+          "right": 950,
+          "bottom": -999049,
+          "left": 100
+        }
+      ]
+    },
+    {
+      "labels": [
+        "s05:desk"
+      ],
+      "image": "05589.png",
+      "frame": 5589,
+      "regions": 2,
+      "maxWords": 0,
+      "cards": [],
+      "overflow": false,
+      "root": {
+        "x": 0,
+        "y": -999999,
+        "width": 1920,
+        "height": 1080,
+        "top": -999999,
+        "right": 1920,
+        "bottom": -998919,
+        "left": 0
+      },
+      "bounds": [
+        {
+          "region": "header",
+          "x": 100,
+          "y": -999927,
+          "width": 772.6875,
+          "height": 66,
+          "top": -999927,
+          "right": 872.6875,
+          "bottom": -999861,
+          "left": 100
+        },
+        {
+          "region": "diagram",
+          "x": 100,
+          "y": -999759,
+          "width": 850,
+          "height": 710,
+          "top": -999759,
+          "right": 950,
+          "bottom": -999049,
+          "left": 100
+        }
+      ]
+    },
+    {
+      "labels": [
+        "s05:connects"
+      ],
+      "image": "05604.png",
+      "frame": 5604,
+      "regions": 2,
+      "maxWords": 0,
+      "cards": [],
+      "overflow": false,
+      "root": {
+        "x": 0,
+        "y": -999999,
+        "width": 1920,
+        "height": 1080,
+        "top": -999999,
+        "right": 1920,
+        "bottom": -998919,
+        "left": 0
+      },
+      "bounds": [
+        {
+          "region": "header",
+          "x": 100,
+          "y": -999927,
+          "width": 772.6875,
+          "height": 66,
+          "top": -999927,
+          "right": 872.6875,
+          "bottom": -999861,
+          "left": 100
+        },
+        {
+          "region": "diagram",
+          "x": 100,
+          "y": -999759,
+          "width": 850,
+          "height": 710,
+          "top": -999759,
+          "right": 950,
+          "bottom": -999049,
+          "left": 100
+        }
+      ]
+    },
+    {
+      "labels": [
+        "s05:pulley"
+      ],
+      "image": "05649.png",
+      "frame": 5649,
+      "regions": 2,
+      "maxWords": 0,
+      "cards": [],
+      "overflow": false,
+      "root": {
+        "x": 0,
+        "y": -999999,
+        "width": 1920,
+        "height": 1080,
+        "top": -999999,
+        "right": 1920,
+        "bottom": -998919,
+        "left": 0
+      },
+      "bounds": [
+        {
+          "region": "header",
+          "x": 100,
+          "y": -999927,
+          "width": 772.6875,
+          "height": 66,
+          "top": -999927,
+          "right": 872.6875,
+          "bottom": -999861,
+          "left": 100
+        },
+        {
+          "region": "diagram",
+          "x": 100,
+          "y": -999759,
+          "width": 850,
+          "height": 710,
+          "top": -999759,
+          "right": 950,
+          "bottom": -999049,
+          "left": 100
+        }
+      ]
+    },
+    {
+      "labels": [
+        "s05:sphere"
+      ],
+      "image": "05687.png",
+      "frame": 5687,
+      "regions": 2,
+      "maxWords": 0,
+      "cards": [],
+      "overflow": false,
+      "root": {
+        "x": 0,
+        "y": -999999,
+        "width": 1920,
+        "height": 1080,
+        "top": -999999,
+        "right": 1920,
+        "bottom": -998919,
+        "left": 0
+      },
+      "bounds": [
+        {
+          "region": "header",
+          "x": 100,
+          "y": -999927,
+          "width": 772.6875,
+          "height": 66,
+          "top": -999927,
+          "right": 872.6875,
+          "bottom": -999861,
+          "left": 100
+        },
+        {
+          "region": "diagram",
+          "x": 100,
+          "y": -999759,
+          "width": 850,
+          "height": 710,
+          "top": -999759,
+          "right": 950,
+          "bottom": -999049,
+          "left": 100
+        }
+      ]
+    },
+    {
+      "labels": [
+        "s05:exercise"
+      ],
+      "image": "05721.png",
+      "frame": 5721,
+      "regions": 2,
+      "maxWords": 0,
+      "cards": [],
+      "overflow": false,
+      "root": {
+        "x": 0,
+        "y": -999999,
+        "width": 1920,
+        "height": 1080,
+        "top": -999999,
+        "right": 1920,
+        "bottom": -998919,
+        "left": 0
+      },
+      "bounds": [
+        {
+          "region": "header",
+          "x": 100,
+          "y": -999927,
+          "width": 772.6875,
+          "height": 66,
+          "top": -999927,
+          "right": 872.6875,
+          "bottom": -999861,
+          "left": 100
+        },
+        {
+          "region": "diagram",
+          "x": 100,
+          "y": -999759,
+          "width": 850,
+          "height": 710,
+          "top": -999759,
+          "right": 950,
+          "bottom": -999049,
+          "left": 100
+        }
+      ]
+    },
+    {
+      "labels": [
+        "s05:q-particle"
+      ],
+      "image": "05789.png",
+      "frame": 5789,
+      "regions": 3,
+      "maxWords": 3,
+      "cards": [
+        "Ignore air resistance?"
+      ],
+      "overflow": false,
+      "root": {
+        "x": 0,
+        "y": -999999,
+        "width": 1920,
+        "height": 1080,
+        "top": -999999,
+        "right": 1920,
+        "bottom": -998919,
+        "left": 0
+      },
+      "bounds": [
+        {
+          "region": "header",
+          "x": 100,
+          "y": -999927,
+          "width": 772.6875,
+          "height": 66,
+          "top": -999927,
+          "right": 872.6875,
+          "bottom": -999861,
+          "left": 100
+        },
+        {
+          "region": "diagram",
+          "x": 100,
+          "y": -999759,
+          "width": 850,
+          "height": 710,
+          "top": -999759,
+          "right": 950,
+          "bottom": -999049,
+          "left": 100
+        },
+        {
+          "region": "paper",
+          "x": 1010,
+          "y": -999749,
+          "width": 810,
+          "height": 660,
+          "top": -999749,
+          "right": 1820,
+          "bottom": -999089,
+          "left": 1010
+        }
+      ]
+    },
+    {
+      "labels": [
+        "s05:hold-0"
+      ],
+      "image": "05929.png",
+      "frame": 5929,
+      "regions": 3,
+      "maxWords": 3,
+      "cards": [
+        "Ignore air resistance?"
+      ],
+      "overflow": false,
+      "root": {
+        "x": 0,
+        "y": -999999,
+        "width": 1920,
+        "height": 1080,
+        "top": -999999,
+        "right": 1920,
+        "bottom": -998919,
+        "left": 0
+      },
+      "bounds": [
+        {
+          "region": "header",
+          "x": 100,
+          "y": -999927,
+          "width": 772.6875,
+          "height": 66,
+          "top": -999927,
+          "right": 872.6875,
+          "bottom": -999861,
+          "left": 100
+        },
+        {
+          "region": "diagram",
+          "x": 100,
+          "y": -999759,
+          "width": 850,
+          "height": 710,
+          "top": -999759,
+          "right": 950,
+          "bottom": -999049,
+          "left": 100
+        },
+        {
+          "region": "paper",
+          "x": 1010,
+          "y": -999749,
+          "width": 810,
+          "height": 660,
+          "top": -999749,
+          "right": 1820,
+          "bottom": -999089,
+          "left": 1010
+        }
+      ]
+    },
+    {
+      "labels": [
+        "s05:hold-0"
+      ],
+      "image": "05988.png",
+      "frame": 5988,
+      "regions": 3,
+      "maxWords": 3,
+      "cards": [
+        "Ignore air resistance?"
+      ],
+      "overflow": false,
+      "root": {
+        "x": 0,
+        "y": -999999,
+        "width": 1920,
+        "height": 1080,
+        "top": -999999,
+        "right": 1920,
+        "bottom": -998919,
+        "left": 0
+      },
+      "bounds": [
+        {
+          "region": "header",
+          "x": 100,
+          "y": -999927,
+          "width": 772.6875,
+          "height": 66,
+          "top": -999927,
+          "right": 872.6875,
+          "bottom": -999861,
+          "left": 100
+        },
+        {
+          "region": "diagram",
+          "x": 100,
+          "y": -999759,
+          "width": 850,
+          "height": 710,
+          "top": -999759,
+          "right": 950,
+          "bottom": -999049,
+          "left": 100
+        },
+        {
+          "region": "paper",
+          "x": 1010,
+          "y": -999749,
+          "width": 810,
+          "height": 660,
+          "top": -999749,
+          "right": 1820,
+          "bottom": -999089,
+          "left": 1010
+        }
+      ]
+    },
+    {
+      "labels": [
+        "s05:particle"
+      ],
+      "image": "05989.png",
+      "frame": 5989,
+      "regions": 3,
+      "maxWords": 3,
+      "cards": [
+        "particle",
+        "Ignore air resistance?"
+      ],
+      "overflow": false,
+      "root": {
+        "x": 0,
+        "y": -999999,
+        "width": 1920,
+        "height": 1080,
+        "top": -999999,
+        "right": 1920,
+        "bottom": -998919,
+        "left": 0
+      },
+      "bounds": [
+        {
+          "region": "header",
+          "x": 100,
+          "y": -999927,
+          "width": 772.6875,
+          "height": 66,
+          "top": -999927,
+          "right": 872.6875,
+          "bottom": -999861,
+          "left": 100
+        },
+        {
+          "region": "diagram",
+          "x": 100,
+          "y": -999759,
+          "width": 850,
+          "height": 710,
+          "top": -999759,
+          "right": 950,
+          "bottom": -999049,
+          "left": 100
+        },
+        {
+          "region": "paper",
+          "x": 1010,
+          "y": -999749,
+          "width": 810,
+          "height": 660,
+          "top": -999749,
+          "right": 1820,
+          "bottom": -999089,
+          "left": 1010
+        }
+      ]
+    },
+    {
+      "labels": [
+        "s05:particle-complete"
+      ],
+      "image": "06096.png",
+      "frame": 6096,
+      "regions": 3,
+      "maxWords": 3,
+      "cards": [
+        "particle",
+        "Ignore air resistance?"
+      ],
+      "overflow": false,
+      "root": {
+        "x": 0,
+        "y": -999999,
+        "width": 1920,
+        "height": 1080,
+        "top": -999999,
+        "right": 1920,
+        "bottom": -998919,
+        "left": 0
+      },
+      "bounds": [
+        {
+          "region": "header",
+          "x": 100,
+          "y": -999927,
+          "width": 772.6875,
+          "height": 66,
+          "top": -999927,
+          "right": 872.6875,
+          "bottom": -999861,
+          "left": 100
+        },
+        {
+          "region": "diagram",
+          "x": 100,
+          "y": -999759,
+          "width": 850,
+          "height": 710,
+          "top": -999759,
+          "right": 950,
+          "bottom": -999049,
+          "left": 100
+        },
+        {
+          "region": "paper",
+          "x": 1010,
+          "y": -999749,
+          "width": 810,
+          "height": 660,
+          "top": -999749,
+          "right": 1820,
+          "bottom": -999089,
+          "left": 1010
+        }
+      ]
+    },
+    {
+      "labels": [
+        "s05:separate"
+      ],
+      "image": "06099.png",
+      "frame": 6099,
+      "regions": 3,
+      "maxWords": 7,
+      "cards": [
+        "particle",
+        "Ignore air resistance?",
+        "Neglecting air resistance is a separate assumption"
+      ],
+      "overflow": false,
+      "root": {
+        "x": 0,
+        "y": -999999,
+        "width": 1920,
+        "height": 1080,
+        "top": -999999,
+        "right": 1920,
+        "bottom": -998919,
+        "left": 0
+      },
+      "bounds": [
+        {
+          "region": "header",
+          "x": 100,
+          "y": -999927,
+          "width": 772.6875,
+          "height": 66,
+          "top": -999927,
+          "right": 872.6875,
+          "bottom": -999861,
+          "left": 100
+        },
+        {
+          "region": "diagram",
+          "x": 100,
+          "y": -999759,
+          "width": 850,
+          "height": 710,
+          "top": -999759,
+          "right": 950,
+          "bottom": -999049,
+          "left": 100
+        },
+        {
+          "region": "paper",
+          "x": 1010,
+          "y": -999749,
+          "width": 810,
+          "height": 660,
+          "top": -999749,
+          "right": 1820,
+          "bottom": -999089,
+          "left": 1010
+        }
+      ]
+    },
+    {
+      "labels": [
+        "s05:q-light"
+      ],
+      "image": "06294.png",
+      "frame": 6294,
+      "regions": 3,
+      "maxWords": 3,
+      "cards": [
+        "Ignore string mass?"
+      ],
+      "overflow": false,
+      "root": {
+        "x": 0,
+        "y": -999999,
+        "width": 1920,
+        "height": 1080,
+        "top": -999999,
+        "right": 1920,
+        "bottom": -998919,
+        "left": 0
+      },
+      "bounds": [
+        {
+          "region": "header",
+          "x": 100,
+          "y": -999927,
+          "width": 772.6875,
+          "height": 66,
+          "top": -999927,
+          "right": 872.6875,
+          "bottom": -999861,
+          "left": 100
+        },
+        {
+          "region": "diagram",
+          "x": 100,
+          "y": -999759,
+          "width": 850,
+          "height": 710,
+          "top": -999759,
+          "right": 950,
+          "bottom": -999049,
+          "left": 100
+        },
+        {
+          "region": "paper",
+          "x": 1010,
+          "y": -999749,
+          "width": 810,
+          "height": 660,
+          "top": -999749,
+          "right": 1820,
+          "bottom": -999089,
+          "left": 1010
+        }
+      ]
+    },
+    {
+      "labels": [
+        "s05:hold-1"
+      ],
+      "image": "06411.png",
+      "frame": 6411,
+      "regions": 3,
+      "maxWords": 3,
+      "cards": [
+        "Ignore string mass?"
+      ],
+      "overflow": false,
+      "root": {
+        "x": 0,
+        "y": -999999,
+        "width": 1920,
+        "height": 1080,
+        "top": -999999,
+        "right": 1920,
+        "bottom": -998919,
+        "left": 0
+      },
+      "bounds": [
+        {
+          "region": "header",
+          "x": 100,
+          "y": -999927,
+          "width": 772.6875,
+          "height": 66,
+          "top": -999927,
+          "right": 872.6875,
+          "bottom": -999861,
+          "left": 100
+        },
+        {
+          "region": "diagram",
+          "x": 100,
+          "y": -999759,
+          "width": 850,
+          "height": 710,
+          "top": -999759,
+          "right": 950,
+          "bottom": -999049,
+          "left": 100
+        },
+        {
+          "region": "paper",
+          "x": 1010,
+          "y": -999749,
+          "width": 810,
+          "height": 660,
+          "top": -999749,
+          "right": 1820,
+          "bottom": -999089,
+          "left": 1010
+        }
+      ]
+    },
+    {
+      "labels": [
+        "s05:hold-1"
+      ],
+      "image": "06470.png",
+      "frame": 6470,
+      "regions": 3,
+      "maxWords": 3,
+      "cards": [
+        "Ignore string mass?"
+      ],
+      "overflow": false,
+      "root": {
+        "x": 0,
+        "y": -999999,
+        "width": 1920,
+        "height": 1080,
+        "top": -999999,
+        "right": 1920,
+        "bottom": -998919,
+        "left": 0
+      },
+      "bounds": [
+        {
+          "region": "header",
+          "x": 100,
+          "y": -999927,
+          "width": 772.6875,
+          "height": 66,
+          "top": -999927,
+          "right": 872.6875,
+          "bottom": -999861,
+          "left": 100
+        },
+        {
+          "region": "diagram",
+          "x": 100,
+          "y": -999759,
+          "width": 850,
+          "height": 710,
+          "top": -999759,
+          "right": 950,
+          "bottom": -999049,
+          "left": 100
+        },
+        {
+          "region": "paper",
+          "x": 1010,
+          "y": -999749,
+          "width": 810,
+          "height": 660,
+          "top": -999749,
+          "right": 1820,
+          "bottom": -999089,
+          "left": 1010
+        }
+      ]
+    },
+    {
+      "labels": [
+        "s05:light"
+      ],
+      "image": "06471.png",
+      "frame": 6471,
+      "regions": 3,
+      "maxWords": 3,
+      "cards": [
+        "light",
+        "Ignore string mass?"
+      ],
+      "overflow": false,
+      "root": {
+        "x": 0,
+        "y": -999999,
+        "width": 1920,
+        "height": 1080,
+        "top": -999999,
+        "right": 1920,
+        "bottom": -998919,
+        "left": 0
+      },
+      "bounds": [
+        {
+          "region": "header",
+          "x": 100,
+          "y": -999927,
+          "width": 772.6875,
+          "height": 66,
+          "top": -999927,
+          "right": 872.6875,
+          "bottom": -999861,
+          "left": 100
+        },
+        {
+          "region": "diagram",
+          "x": 100,
+          "y": -999759,
+          "width": 850,
+          "height": 710,
+          "top": -999759,
+          "right": 950,
+          "bottom": -999049,
+          "left": 100
+        },
+        {
+          "region": "paper",
+          "x": 1010,
+          "y": -999749,
+          "width": 810,
+          "height": 660,
+          "top": -999749,
+          "right": 1820,
+          "bottom": -999089,
+          "left": 1010
+        }
+      ]
+    },
+    {
+      "labels": [
+        "s05:light-complete"
+      ],
+      "image": "06577.png",
+      "frame": 6577,
+      "regions": 3,
+      "maxWords": 3,
+      "cards": [
+        "light",
+        "Ignore string mass?"
+      ],
+      "overflow": false,
+      "root": {
+        "x": 0,
+        "y": -999999,
+        "width": 1920,
+        "height": 1080,
+        "top": -999999,
+        "right": 1920,
+        "bottom": -998919,
+        "left": 0
+      },
+      "bounds": [
+        {
+          "region": "header",
+          "x": 100,
+          "y": -999927,
+          "width": 772.6875,
+          "height": 66,
+          "top": -999927,
+          "right": 872.6875,
+          "bottom": -999861,
+          "left": 100
+        },
+        {
+          "region": "diagram",
+          "x": 100,
+          "y": -999759,
+          "width": 850,
+          "height": 710,
+          "top": -999759,
+          "right": 950,
+          "bottom": -999049,
+          "left": 100
+        },
+        {
+          "region": "paper",
+          "x": 1010,
+          "y": -999749,
+          "width": 810,
+          "height": 660,
+          "top": -999749,
+          "right": 1820,
+          "bottom": -999089,
+          "left": 1010
+        }
+      ]
+    },
+    {
+      "labels": [
+        "s05:q-pulley"
+      ],
+      "image": "06587.png",
+      "frame": 6587,
       "regions": 3,
       "maxWords": 4,
       "cards": [
-        "Extensible: length can change"
+        "Same tension both sides?"
+      ],
+      "overflow": false,
+      "root": {
+        "x": 0,
+        "y": -999999,
+        "width": 1920,
+        "height": 1080,
+        "top": -999999,
+        "right": 1920,
+        "bottom": -998919,
+        "left": 0
+      },
+      "bounds": [
+        {
+          "region": "header",
+          "x": 100,
+          "y": -999927,
+          "width": 772.6875,
+          "height": 66,
+          "top": -999927,
+          "right": 872.6875,
+          "bottom": -999861,
+          "left": 100
+        },
+        {
+          "region": "diagram",
+          "x": 100,
+          "y": -999759,
+          "width": 850,
+          "height": 710,
+          "top": -999759,
+          "right": 950,
+          "bottom": -999049,
+          "left": 100
+        },
+        {
+          "region": "paper",
+          "x": 1010,
+          "y": -999749,
+          "width": 810,
+          "height": 660,
+          "top": -999749,
+          "right": 1820,
+          "bottom": -999089,
+          "left": 1010
+        }
       ]
     },
     {
-      "frame": 2618,
-      "cues": [
-        "s04:stretch"
+      "labels": [
+        "s05:hold-2"
       ],
+      "image": "06711.png",
+      "frame": 6711,
       "regions": 3,
       "maxWords": 4,
       "cards": [
-        "Extensible: length can change"
+        "Same tension both sides?"
+      ],
+      "overflow": false,
+      "root": {
+        "x": 0,
+        "y": -999999,
+        "width": 1920,
+        "height": 1080,
+        "top": -999999,
+        "right": 1920,
+        "bottom": -998919,
+        "left": 0
+      },
+      "bounds": [
+        {
+          "region": "header",
+          "x": 100,
+          "y": -999927,
+          "width": 772.6875,
+          "height": 66,
+          "top": -999927,
+          "right": 872.6875,
+          "bottom": -999861,
+          "left": 100
+        },
+        {
+          "region": "diagram",
+          "x": 100,
+          "y": -999759,
+          "width": 850,
+          "height": 710,
+          "top": -999759,
+          "right": 950,
+          "bottom": -999049,
+          "left": 100
+        },
+        {
+          "region": "paper",
+          "x": 1010,
+          "y": -999749,
+          "width": 810,
+          "height": 660,
+          "top": -999749,
+          "right": 1820,
+          "bottom": -999089,
+          "left": 1010
+        }
       ]
     },
     {
-      "frame": 2719,
-      "cues": [
-        "s04:slack"
+      "labels": [
+        "s05:hold-2"
       ],
+      "image": "06770.png",
+      "frame": 6770,
+      "regions": 3,
+      "maxWords": 4,
+      "cards": [
+        "Same tension both sides?"
+      ],
+      "overflow": false,
+      "root": {
+        "x": 0,
+        "y": -999999,
+        "width": 1920,
+        "height": 1080,
+        "top": -999999,
+        "right": 1920,
+        "bottom": -998919,
+        "left": 0
+      },
+      "bounds": [
+        {
+          "region": "header",
+          "x": 100,
+          "y": -999927,
+          "width": 772.6875,
+          "height": 66,
+          "top": -999927,
+          "right": 872.6875,
+          "bottom": -999861,
+          "left": 100
+        },
+        {
+          "region": "diagram",
+          "x": 100,
+          "y": -999759,
+          "width": 850,
+          "height": 710,
+          "top": -999759,
+          "right": 950,
+          "bottom": -999049,
+          "left": 100
+        },
+        {
+          "region": "paper",
+          "x": 1010,
+          "y": -999749,
+          "width": 810,
+          "height": 660,
+          "top": -999749,
+          "right": 1820,
+          "bottom": -999089,
+          "left": 1010
+        }
+      ]
+    },
+    {
+      "labels": [
+        "s05:smooth-pulley"
+      ],
+      "image": "06771.png",
+      "frame": 6771,
+      "regions": 3,
+      "maxWords": 4,
+      "cards": [
+        "smooth pulley",
+        "Same tension both sides?"
+      ],
+      "overflow": false,
+      "root": {
+        "x": 0,
+        "y": -999999,
+        "width": 1920,
+        "height": 1080,
+        "top": -999999,
+        "right": 1920,
+        "bottom": -998919,
+        "left": 0
+      },
+      "bounds": [
+        {
+          "region": "header",
+          "x": 100,
+          "y": -999927,
+          "width": 772.6875,
+          "height": 66,
+          "top": -999927,
+          "right": 872.6875,
+          "bottom": -999861,
+          "left": 100
+        },
+        {
+          "region": "diagram",
+          "x": 100,
+          "y": -999759,
+          "width": 850,
+          "height": 710,
+          "top": -999759,
+          "right": 950,
+          "bottom": -999049,
+          "left": 100
+        },
+        {
+          "region": "paper",
+          "x": 1010,
+          "y": -999749,
+          "width": 810,
+          "height": 660,
+          "top": -999749,
+          "right": 1820,
+          "bottom": -999089,
+          "left": 1010
+        }
+      ]
+    },
+    {
+      "labels": [
+        "s05:tension-second"
+      ],
+      "image": "06828.png",
+      "frame": 6828,
+      "regions": 3,
+      "maxWords": 4,
+      "cards": [
+        "smooth pulley",
+        "Same tension both sides?"
+      ],
+      "overflow": false,
+      "root": {
+        "x": 0,
+        "y": -999999,
+        "width": 1920,
+        "height": 1080,
+        "top": -999999,
+        "right": 1920,
+        "bottom": -998919,
+        "left": 0
+      },
+      "bounds": [
+        {
+          "region": "header",
+          "x": 100,
+          "y": -999927,
+          "width": 772.6875,
+          "height": 66,
+          "top": -999927,
+          "right": 872.6875,
+          "bottom": -999861,
+          "left": 100
+        },
+        {
+          "region": "diagram",
+          "x": 100,
+          "y": -999759,
+          "width": 850,
+          "height": 710,
+          "top": -999759,
+          "right": 950,
+          "bottom": -999049,
+          "left": 100
+        },
+        {
+          "region": "paper",
+          "x": 1010,
+          "y": -999749,
+          "width": 810,
+          "height": 660,
+          "top": -999749,
+          "right": 1820,
+          "bottom": -999089,
+          "left": 1010
+        }
+      ]
+    },
+    {
+      "labels": [
+        "s05:smooth-pulley-complete"
+      ],
+      "image": "06877.png",
+      "frame": 6877,
+      "regions": 3,
+      "maxWords": 4,
+      "cards": [
+        "smooth pulley",
+        "Same tension both sides?"
+      ],
+      "overflow": false,
+      "root": {
+        "x": 0,
+        "y": -999999,
+        "width": 1920,
+        "height": 1080,
+        "top": -999999,
+        "right": 1920,
+        "bottom": -998919,
+        "left": 0
+      },
+      "bounds": [
+        {
+          "region": "header",
+          "x": 100,
+          "y": -999927,
+          "width": 772.6875,
+          "height": 66,
+          "top": -999927,
+          "right": 872.6875,
+          "bottom": -999861,
+          "left": 100
+        },
+        {
+          "region": "diagram",
+          "x": 100,
+          "y": -999759,
+          "width": 850,
+          "height": 710,
+          "top": -999759,
+          "right": 950,
+          "bottom": -999049,
+          "left": 100
+        },
+        {
+          "region": "paper",
+          "x": 1010,
+          "y": -999749,
+          "width": 810,
+          "height": 660,
+          "top": -999749,
+          "right": 1820,
+          "bottom": -999089,
+          "left": 1010
+        }
+      ]
+    },
+    {
+      "labels": [
+        "s05:q-surface"
+      ],
+      "image": "06919.png",
+      "frame": 6919,
       "regions": 3,
       "maxWords": 3,
       "cards": [
-        "Slack: no tension"
+        "Ignore desk friction?"
+      ],
+      "overflow": false,
+      "root": {
+        "x": 0,
+        "y": -999999,
+        "width": 1920,
+        "height": 1080,
+        "top": -999999,
+        "right": 1920,
+        "bottom": -998919,
+        "left": 0
+      },
+      "bounds": [
+        {
+          "region": "header",
+          "x": 100,
+          "y": -999927,
+          "width": 772.6875,
+          "height": 66,
+          "top": -999927,
+          "right": 872.6875,
+          "bottom": -999861,
+          "left": 100
+        },
+        {
+          "region": "diagram",
+          "x": 100,
+          "y": -999759,
+          "width": 850,
+          "height": 710,
+          "top": -999759,
+          "right": 950,
+          "bottom": -999049,
+          "left": 100
+        },
+        {
+          "region": "paper",
+          "x": 1010,
+          "y": -999749,
+          "width": 810,
+          "height": 660,
+          "top": -999749,
+          "right": 1820,
+          "bottom": -999089,
+          "left": 1010
+        }
       ]
     },
     {
-      "frame": 2849,
-      "cues": [
-        "s04:no-tension"
+      "labels": [
+        "s05:hold-3"
       ],
+      "image": "07027.png",
+      "frame": 7027,
       "regions": 3,
       "maxWords": 3,
       "cards": [
-        "Slack: no tension"
+        "Ignore desk friction?"
+      ],
+      "overflow": false,
+      "root": {
+        "x": 0,
+        "y": -999999,
+        "width": 1920,
+        "height": 1080,
+        "top": -999999,
+        "right": 1920,
+        "bottom": -998919,
+        "left": 0
+      },
+      "bounds": [
+        {
+          "region": "header",
+          "x": 100,
+          "y": -999927,
+          "width": 772.6875,
+          "height": 66,
+          "top": -999927,
+          "right": 872.6875,
+          "bottom": -999861,
+          "left": 100
+        },
+        {
+          "region": "diagram",
+          "x": 100,
+          "y": -999759,
+          "width": 850,
+          "height": 710,
+          "top": -999759,
+          "right": 950,
+          "bottom": -999049,
+          "left": 100
+        },
+        {
+          "region": "paper",
+          "x": 1010,
+          "y": -999749,
+          "width": 810,
+          "height": 660,
+          "top": -999749,
+          "right": 1820,
+          "bottom": -999089,
+          "left": 1010
+        }
       ]
     },
     {
-      "frame": 2876,
-      "cues": [
-        "s04:unlinked"
+      "labels": [
+        "s05:hold-3"
       ],
+      "image": "07086.png",
+      "frame": 7086,
       "regions": 3,
       "maxWords": 3,
       "cards": [
-        "Slack: no tension"
+        "Ignore desk friction?"
+      ],
+      "overflow": false,
+      "root": {
+        "x": 0,
+        "y": -999999,
+        "width": 1920,
+        "height": 1080,
+        "top": -999999,
+        "right": 1920,
+        "bottom": -998919,
+        "left": 0
+      },
+      "bounds": [
+        {
+          "region": "header",
+          "x": 100,
+          "y": -999927,
+          "width": 772.6875,
+          "height": 66,
+          "top": -999927,
+          "right": 872.6875,
+          "bottom": -999861,
+          "left": 100
+        },
+        {
+          "region": "diagram",
+          "x": 100,
+          "y": -999759,
+          "width": 850,
+          "height": 710,
+          "top": -999759,
+          "right": 950,
+          "bottom": -999049,
+          "left": 100
+        },
+        {
+          "region": "paper",
+          "x": 1010,
+          "y": -999749,
+          "width": 810,
+          "height": 660,
+          "top": -999749,
+          "right": 1820,
+          "bottom": -999089,
+          "left": 1010
+        }
       ]
     },
     {
-      "frame": 2957,
-      "cues": [
-        "s05:other"
+      "labels": [
+        "s05:smooth-surface"
       ],
-      "regions": 3,
-      "maxWords": 2,
-      "cards": [
-        "Extra vocabulary"
-      ]
-    },
-    {
-      "frame": 3240,
-      "cues": [
-        "s05:rod"
-      ],
-      "regions": 3,
-      "maxWords": 2,
-      "cards": [
-        "Rigid rod"
-      ]
-    },
-    {
-      "frame": 3402,
-      "cues": [
-        "s05:push"
-      ],
-      "regions": 3,
-      "maxWords": 2,
-      "cards": [
-        "Rigid rod"
-      ]
-    },
-    {
-      "frame": 3436,
-      "cues": [
-        "s05:pull"
-      ],
-      "regions": 3,
-      "maxWords": 2,
-      "cards": [
-        "Rigid rod"
-      ]
-    },
-    {
-      "frame": 3489,
-      "cues": [
-        "s05:flexible"
-      ],
-      "regions": 3,
-      "maxWords": 2,
-      "cards": [
-        "Flexible rod"
-      ]
-    },
-    {
-      "frame": 3536,
-      "cues": [
-        "s05:bends"
-      ],
-      "regions": 3,
-      "maxWords": 2,
-      "cards": [
-        "Flexible rod"
-      ]
-    },
-    {
-      "frame": 3578,
-      "cues": [
-        "s05:light-rod"
-      ],
-      "regions": 3,
-      "maxWords": 2,
-      "cards": [
-        "Light rod"
-      ]
-    },
-    {
-      "frame": 3677,
-      "cues": [
-        "s05:heavy-rod"
-      ],
-      "regions": 3,
-      "maxWords": 2,
-      "cards": [
-        "Heavy rod"
-      ]
-    },
-    {
-      "frame": 3694,
-      "cues": [
-        "s05:weight"
-      ],
-      "regions": 3,
-      "maxWords": 2,
-      "cards": [
-        "Heavy rod"
-      ]
-    },
-    {
-      "frame": 3749,
-      "cues": [
-        "s05:beam"
-      ],
-      "regions": 3,
-      "maxWords": 1,
-      "cards": [
-        "Beam"
-      ]
-    },
-    {
-      "frame": 3771,
-      "cues": [
-        "s05:positions"
-      ],
-      "regions": 3,
-      "maxWords": 1,
-      "cards": [
-        "Beam"
-      ]
-    },
-    {
-      "frame": 3840,
-      "cues": [
-        "s05:turning"
-      ],
-      "regions": 3,
-      "maxWords": 1,
-      "cards": [
-        "Beam"
-      ]
-    },
-    {
-      "frame": 3887,
-      "cues": [
-        "s05:uniform"
-      ],
-      "regions": 3,
-      "maxWords": 2,
-      "cards": [
-        "Uniform rod"
-      ]
-    },
-    {
-      "frame": 4065,
-      "cues": [
-        "s05:midpoint"
-      ],
-      "regions": 3,
-      "maxWords": 2,
-      "cards": [
-        "Uniform rod"
-      ]
-    },
-    {
-      "frame": 4108,
-      "cues": [
-        "s05:uneven-rod"
-      ],
-      "regions": 3,
-      "maxWords": 2,
-      "cards": [
-        "Non-uniform rod"
-      ]
-    },
-    {
-      "frame": 4143,
-      "cues": [
-        "s05:shift-rod"
-      ],
-      "regions": 3,
-      "maxWords": 2,
-      "cards": [
-        "Non-uniform rod"
-      ]
-    },
-    {
-      "frame": 4199,
-      "cues": [
-        "s05:lamina"
-      ],
-      "regions": 3,
-      "maxWords": 1,
-      "cards": [
-        "Lamina"
-      ]
-    },
-    {
-      "frame": 4329,
-      "cues": [
-        "s05:thickness"
-      ],
-      "regions": 3,
-      "maxWords": 1,
-      "cards": [
-        "Lamina"
-      ]
-    },
-    {
-      "frame": 4412,
-      "cues": [
-        "s05:plate"
-      ],
-      "regions": 3,
-      "maxWords": 2,
-      "cards": [
-        "Thick plate"
-      ]
-    },
-    {
-      "frame": 4509,
-      "cues": [
-        "s05:uniform-lamina"
-      ],
-      "regions": 3,
-      "maxWords": 2,
-      "cards": [
-        "Uniform lamina"
-      ]
-    },
-    {
-      "frame": 4634,
-      "cues": [
-        "s05:centroid"
-      ],
-      "regions": 3,
-      "maxWords": 2,
-      "cards": [
-        "Uniform lamina"
-      ]
-    },
-    {
-      "frame": 4676,
-      "cues": [
-        "s05:uneven-lamina"
-      ],
-      "regions": 3,
-      "maxWords": 2,
-      "cards": [
-        "Non-uniform lamina"
-      ]
-    },
-    {
-      "frame": 4714,
-      "cues": [
-        "s05:shift-lamina"
-      ],
-      "regions": 3,
-      "maxWords": 2,
-      "cards": [
-        "Non-uniform lamina"
-      ]
-    },
-    {
-      "frame": 4764,
-      "cues": [
-        "s05:bead"
-      ],
-      "regions": 3,
-      "maxWords": 1,
-      "cards": [
-        "Bead"
-      ]
-    },
-    {
-      "frame": 4788,
-      "cues": [
-        "s05:wire"
-      ],
-      "regions": 3,
-      "maxWords": 1,
-      "cards": [
-        "Bead"
-      ]
-    },
-    {
-      "frame": 4847,
-      "cues": [
-        "s05:detached"
-      ],
-      "regions": 3,
-      "maxWords": 1,
-      "cards": [
-        "Bead"
-      ]
-    },
-    {
-      "frame": 4932,
-      "cues": [
-        "s05:thin-wire"
-      ],
-      "regions": 3,
-      "maxWords": 1,
-      "cards": [
-        "Wire"
-      ]
-    },
-    {
-      "frame": 5040,
-      "cues": [
-        "s05:guide"
-      ],
-      "regions": 3,
-      "maxWords": 2,
-      "cards": [
-        "Thick guide"
-      ]
-    },
-    {
-      "frame": 5190,
-      "cues": [
-        "s05:normal"
-      ],
-      "regions": 3,
-      "maxWords": 2,
-      "cards": [
-        "Smooth wire"
-      ]
-    },
-    {
-      "frame": 5296,
-      "cues": [
-        "s05:wire-friction"
-      ],
-      "regions": 3,
-      "maxWords": 2,
-      "cards": [
-        "Rough wire"
-      ]
-    },
-    {
-      "frame": 5355,
-      "cues": [
-        "s05:peg"
-      ],
-      "regions": 3,
-      "maxWords": 2,
-      "cards": [
-        "Fixed peg"
-      ]
-    },
-    {
-      "frame": 5473,
-      "cues": [
-        "s05:moving"
-      ],
-      "regions": 3,
-      "maxWords": 2,
-      "cards": [
-        "Moving support"
-      ]
-    },
-    {
-      "frame": 5609,
-      "cues": [
-        "s05:smooth-peg"
-      ],
-      "regions": 3,
-      "maxWords": 2,
-      "cards": [
-        "Smooth peg"
-      ]
-    },
-    {
-      "frame": 5636,
-      "cues": [
-        "s05:peg-tension"
-      ],
-      "regions": 3,
-      "maxWords": 2,
-      "cards": [
-        "Smooth peg"
-      ]
-    },
-    {
-      "frame": 5812,
-      "cues": [
-        "s05:rough-peg"
-      ],
-      "regions": 3,
-      "maxWords": 2,
-      "cards": [
-        "Rough peg"
-      ]
-    },
-    {
-      "frame": 5837,
-      "cues": [
-        "s05:peg-unequal"
-      ],
-      "regions": 3,
-      "maxWords": 2,
-      "cards": [
-        "Rough peg"
-      ]
-    },
-    {
-      "frame": 5924,
-      "cues": [
-        "s06:find"
-      ],
-      "regions": 3,
-      "maxWords": 0,
-      "cards": []
-    },
-    {
-      "frame": 6048,
-      "cues": [
-        "s06:mass-three"
-      ],
-      "regions": 3,
-      "maxWords": 0,
-      "cards": []
-    },
-    {
-      "frame": 6090,
-      "cues": [
-        "s06:hold-0:0"
-      ],
-      "regions": 3,
-      "maxWords": 0,
-      "cards": []
-    },
-    {
-      "frame": 6149,
-      "cues": [
-        "s06:hold-0:59"
-      ],
-      "regions": 3,
-      "maxWords": 0,
-      "cards": []
-    },
-    {
-      "frame": 6154,
-      "cues": [
-        "s06:mass-two"
-      ],
-      "regions": 3,
-      "maxWords": 0,
-      "cards": []
-    },
-    {
-      "frame": 6271,
-      "cues": [
-        "s06:hold-1:0"
-      ],
-      "regions": 3,
-      "maxWords": 0,
-      "cards": []
-    },
-    {
-      "frame": 6330,
-      "cues": [
-        "s06:hold-1:59"
-      ],
-      "regions": 3,
-      "maxWords": 0,
-      "cards": []
-    },
-    {
-      "frame": 6336,
-      "cues": [
-        "s06:gravity"
-      ],
-      "regions": 3,
-      "maxWords": 0,
-      "cards": []
-    },
-    {
-      "frame": 6371,
-      "cues": [
-        "s06:ten"
-      ],
-      "regions": 3,
-      "maxWords": 0,
-      "cards": []
-    },
-    {
-      "frame": 6498,
-      "cues": [
-        "s06:hold-2:0"
-      ],
-      "regions": 3,
-      "maxWords": 0,
-      "cards": []
-    },
-    {
-      "frame": 6557,
-      "cues": [
-        "s06:hold-2:59"
-      ],
-      "regions": 3,
-      "maxWords": 0,
-      "cards": []
-    },
-    {
-      "frame": 6562,
-      "cues": [
-        "s06:forces"
-      ],
-      "regions": 3,
-      "maxWords": 0,
-      "cards": []
-    },
-    {
-      "frame": 6617,
-      "cues": [
-        "s06:box-weight"
-      ],
-      "regions": 3,
-      "maxWords": 0,
-      "cards": []
-    },
-    {
-      "frame": 6719,
-      "cues": [
-        "s06:reaction"
-      ],
-      "regions": 3,
-      "maxWords": 0,
-      "cards": []
-    },
-    {
-      "frame": 6793,
-      "cues": [
-        "s06:box-tension"
-      ],
-      "regions": 3,
-      "maxWords": 0,
-      "cards": []
-    },
-    {
-      "frame": 6862,
-      "cues": [
-        "s06:hanging-weight"
-      ],
-      "regions": 3,
-      "maxWords": 0,
-      "cards": []
-    },
-    {
-      "frame": 6950,
-      "cues": [
-        "s06:hanging-tension"
-      ],
-      "regions": 3,
-      "maxWords": 0,
-      "cards": []
-    },
-    {
-      "frame": 7018,
-      "cues": [
-        "s06:balance"
-      ],
-      "regions": 3,
-      "maxWords": 0,
-      "cards": []
-    },
-    {
-      "frame": 7129,
-      "cues": [
-        "s06:equations"
-      ],
-      "regions": 3,
-      "maxWords": 0,
-      "cards": []
-    },
-    {
-      "frame": 7181,
-      "cues": [
-        "s06:newton"
-      ],
-      "regions": 3,
-      "maxWords": 0,
-      "cards": []
-    },
-    {
-      "frame": 7404,
-      "cues": [
-        "s06:table-equation"
-      ],
+      "image": "07087.png",
+      "frame": 7087,
       "regions": 3,
       "maxWords": 3,
       "cards": [
-        "T = 3a"
+        "smooth surface",
+        "Ignore desk friction?"
+      ],
+      "overflow": false,
+      "root": {
+        "x": 0,
+        "y": -999999,
+        "width": 1920,
+        "height": 1080,
+        "top": -999999,
+        "right": 1920,
+        "bottom": -998919,
+        "left": 0
+      },
+      "bounds": [
+        {
+          "region": "header",
+          "x": 100,
+          "y": -999927,
+          "width": 772.6875,
+          "height": 66,
+          "top": -999927,
+          "right": 872.6875,
+          "bottom": -999861,
+          "left": 100
+        },
+        {
+          "region": "diagram",
+          "x": 100,
+          "y": -999759,
+          "width": 850,
+          "height": 710,
+          "top": -999759,
+          "right": 950,
+          "bottom": -999049,
+          "left": 100
+        },
+        {
+          "region": "paper",
+          "x": 1010,
+          "y": -999749,
+          "width": 810,
+          "height": 660,
+          "top": -999749,
+          "right": 1820,
+          "bottom": -999089,
+          "left": 1010
+        }
       ]
     },
     {
-      "frame": 7503,
-      "cues": [
-        "s06:hanging-equation"
+      "labels": [
+        "s05:smooth-surface-complete"
       ],
+      "image": "07150.png",
+      "frame": 7150,
       "regions": 3,
-      "maxWords": 5,
+      "maxWords": 3,
       "cards": [
-        "T = 3a",
-        "2g - T = 2a"
+        "smooth surface",
+        "Ignore desk friction?"
+      ],
+      "overflow": false,
+      "root": {
+        "x": 0,
+        "y": -999999,
+        "width": 1920,
+        "height": 1080,
+        "top": -999999,
+        "right": 1920,
+        "bottom": -998919,
+        "left": 0
+      },
+      "bounds": [
+        {
+          "region": "header",
+          "x": 100,
+          "y": -999927,
+          "width": 772.6875,
+          "height": 66,
+          "top": -999927,
+          "right": 872.6875,
+          "bottom": -999861,
+          "left": 100
+        },
+        {
+          "region": "diagram",
+          "x": 100,
+          "y": -999759,
+          "width": 850,
+          "height": 710,
+          "top": -999759,
+          "right": 950,
+          "bottom": -999049,
+          "left": 100
+        },
+        {
+          "region": "paper",
+          "x": 1010,
+          "y": -999749,
+          "width": 810,
+          "height": 660,
+          "top": -999749,
+          "right": 1820,
+          "bottom": -999089,
+          "left": 1010
+        }
       ]
     },
     {
-      "frame": 7703,
-      "cues": [
-        "s06:add"
+      "labels": [
+        "s05:q-string"
       ],
+      "image": "07158.png",
+      "frame": 7158,
       "regions": 3,
-      "maxWords": 7,
+      "maxWords": 3,
       "cards": [
-        "T = 3a",
-        "2g - T = 2a",
-        "2g = (3 + 2)a = 5a"
+        "Same acceleration magnitudes?"
+      ],
+      "overflow": false,
+      "root": {
+        "x": 0,
+        "y": -999999,
+        "width": 1920,
+        "height": 1080,
+        "top": -999999,
+        "right": 1920,
+        "bottom": -998919,
+        "left": 0
+      },
+      "bounds": [
+        {
+          "region": "header",
+          "x": 100,
+          "y": -999927,
+          "width": 772.6875,
+          "height": 66,
+          "top": -999927,
+          "right": 872.6875,
+          "bottom": -999861,
+          "left": 100
+        },
+        {
+          "region": "diagram",
+          "x": 100,
+          "y": -999759,
+          "width": 850,
+          "height": 710,
+          "top": -999759,
+          "right": 950,
+          "bottom": -999049,
+          "left": 100
+        },
+        {
+          "region": "paper",
+          "x": 1010,
+          "y": -999749,
+          "width": 810,
+          "height": 660,
+          "top": -999749,
+          "right": 1820,
+          "bottom": -999089,
+          "left": 1010
+        }
       ]
     },
     {
-      "frame": 7822,
-      "cues": [
-        "s06:five"
+      "labels": [
+        "s05:hold-4"
       ],
+      "image": "07284.png",
+      "frame": 7284,
       "regions": 3,
-      "maxWords": 7,
+      "maxWords": 3,
       "cards": [
-        "T = 3a",
-        "2g - T = 2a",
-        "2g = (3 + 2)a = 5a"
+        "Same acceleration magnitudes?"
+      ],
+      "overflow": false,
+      "root": {
+        "x": 0,
+        "y": -999999,
+        "width": 1920,
+        "height": 1080,
+        "top": -999999,
+        "right": 1920,
+        "bottom": -998919,
+        "left": 0
+      },
+      "bounds": [
+        {
+          "region": "header",
+          "x": 100,
+          "y": -999927,
+          "width": 772.6875,
+          "height": 66,
+          "top": -999927,
+          "right": 872.6875,
+          "bottom": -999861,
+          "left": 100
+        },
+        {
+          "region": "diagram",
+          "x": 100,
+          "y": -999759,
+          "width": 850,
+          "height": 710,
+          "top": -999759,
+          "right": 950,
+          "bottom": -999049,
+          "left": 100
+        },
+        {
+          "region": "paper",
+          "x": 1010,
+          "y": -999749,
+          "width": 810,
+          "height": 660,
+          "top": -999749,
+          "right": 1820,
+          "bottom": -999089,
+          "left": 1010
+        }
       ]
     },
     {
-      "frame": 7925,
-      "cues": [
-        "s06:hold-4:0"
+      "labels": [
+        "s05:hold-4"
       ],
+      "image": "07343.png",
+      "frame": 7343,
       "regions": 3,
-      "maxWords": 7,
+      "maxWords": 3,
       "cards": [
-        "T = 3a",
-        "2g - T = 2a",
-        "2g = (3 + 2)a = 5a"
+        "Same acceleration magnitudes?"
+      ],
+      "overflow": false,
+      "root": {
+        "x": 0,
+        "y": -999999,
+        "width": 1920,
+        "height": 1080,
+        "top": -999999,
+        "right": 1920,
+        "bottom": -998919,
+        "left": 0
+      },
+      "bounds": [
+        {
+          "region": "header",
+          "x": 100,
+          "y": -999927,
+          "width": 772.6875,
+          "height": 66,
+          "top": -999927,
+          "right": 872.6875,
+          "bottom": -999861,
+          "left": 100
+        },
+        {
+          "region": "diagram",
+          "x": 100,
+          "y": -999759,
+          "width": 850,
+          "height": 710,
+          "top": -999759,
+          "right": 950,
+          "bottom": -999049,
+          "left": 100
+        },
+        {
+          "region": "paper",
+          "x": 1010,
+          "y": -999749,
+          "width": 810,
+          "height": 660,
+          "top": -999749,
+          "right": 1820,
+          "bottom": -999089,
+          "left": 1010
+        }
       ]
     },
     {
-      "frame": 7984,
-      "cues": [
-        "s06:hold-4:59"
+      "labels": [
+        "s05:inextensible"
       ],
+      "image": "07344.png",
+      "frame": 7344,
       "regions": 3,
-      "maxWords": 7,
+      "maxWords": 3,
       "cards": [
-        "T = 3a",
-        "2g - T = 2a",
-        "2g = (3 + 2)a = 5a"
+        "inextensible",
+        "Same acceleration magnitudes?"
+      ],
+      "overflow": false,
+      "root": {
+        "x": 0,
+        "y": -999999,
+        "width": 1920,
+        "height": 1080,
+        "top": -999999,
+        "right": 1920,
+        "bottom": -998919,
+        "left": 0
+      },
+      "bounds": [
+        {
+          "region": "header",
+          "x": 100,
+          "y": -999927,
+          "width": 772.6875,
+          "height": 66,
+          "top": -999927,
+          "right": 872.6875,
+          "bottom": -999861,
+          "left": 100
+        },
+        {
+          "region": "diagram",
+          "x": 100,
+          "y": -999759,
+          "width": 850,
+          "height": 710,
+          "top": -999759,
+          "right": 950,
+          "bottom": -999049,
+          "left": 100
+        },
+        {
+          "region": "paper",
+          "x": 1010,
+          "y": -999749,
+          "width": 810,
+          "height": 660,
+          "top": -999749,
+          "right": 1820,
+          "bottom": -999089,
+          "left": 1010
+        }
       ]
     },
     {
-      "frame": 7992,
-      "cues": [
-        "s06:acceleration"
+      "labels": [
+        "s05:inextensible-complete"
       ],
+      "image": "07451.png",
+      "frame": 7451,
       "regions": 3,
-      "maxWords": 7,
+      "maxWords": 3,
       "cards": [
-        "2g = 5a",
-        "a = 2(10)/5 = 4 m s-2"
+        "inextensible",
+        "Same acceleration magnitudes?"
+      ],
+      "overflow": false,
+      "root": {
+        "x": 0,
+        "y": -999999,
+        "width": 1920,
+        "height": 1080,
+        "top": -999999,
+        "right": 1920,
+        "bottom": -998919,
+        "left": 0
+      },
+      "bounds": [
+        {
+          "region": "header",
+          "x": 100,
+          "y": -999927,
+          "width": 772.6875,
+          "height": 66,
+          "top": -999927,
+          "right": 872.6875,
+          "bottom": -999861,
+          "left": 100
+        },
+        {
+          "region": "diagram",
+          "x": 100,
+          "y": -999759,
+          "width": 850,
+          "height": 710,
+          "top": -999759,
+          "right": 950,
+          "bottom": -999049,
+          "left": 100
+        },
+        {
+          "region": "paper",
+          "x": 1010,
+          "y": -999749,
+          "width": 810,
+          "height": 660,
+          "top": -999749,
+          "right": 1820,
+          "bottom": -999089,
+          "left": 1010
+        }
       ]
     },
     {
-      "frame": 8073,
-      "cues": [
-        "s06:four"
+      "labels": [
+        "s05:acceleration-first"
       ],
+      "image": "07471.png",
+      "frame": 7471,
       "regions": 3,
-      "maxWords": 7,
+      "maxWords": 3,
       "cards": [
-        "2g = 5a",
-        "a = 2(10)/5 = 4 m s-2"
+        "inextensible",
+        "Same acceleration magnitudes?"
+      ],
+      "overflow": false,
+      "root": {
+        "x": 0,
+        "y": -999999,
+        "width": 1920,
+        "height": 1080,
+        "top": -999999,
+        "right": 1920,
+        "bottom": -998919,
+        "left": 0
+      },
+      "bounds": [
+        {
+          "region": "header",
+          "x": 100,
+          "y": -999927,
+          "width": 772.6875,
+          "height": 66,
+          "top": -999927,
+          "right": 872.6875,
+          "bottom": -999861,
+          "left": 100
+        },
+        {
+          "region": "diagram",
+          "x": 100,
+          "y": -999759,
+          "width": 850,
+          "height": 710,
+          "top": -999759,
+          "right": 950,
+          "bottom": -999049,
+          "left": 100
+        },
+        {
+          "region": "paper",
+          "x": 1010,
+          "y": -999749,
+          "width": 810,
+          "height": 660,
+          "top": -999749,
+          "right": 1820,
+          "bottom": -999089,
+          "left": 1010
+        }
       ]
     },
     {
-      "frame": 8254,
-      "cues": [
-        "s06:hold-6:0"
+      "labels": [
+        "s05:acceleration-second"
       ],
+      "image": "07526.png",
+      "frame": 7526,
       "regions": 3,
-      "maxWords": 7,
+      "maxWords": 3,
       "cards": [
-        "2g = 5a",
-        "a = 2(10)/5 = 4 m s-2"
+        "inextensible",
+        "Same acceleration magnitudes?"
+      ],
+      "overflow": false,
+      "root": {
+        "x": 0,
+        "y": -999999,
+        "width": 1920,
+        "height": 1080,
+        "top": -999999,
+        "right": 1920,
+        "bottom": -998919,
+        "left": 0
+      },
+      "bounds": [
+        {
+          "region": "header",
+          "x": 100,
+          "y": -999927,
+          "width": 772.6875,
+          "height": 66,
+          "top": -999927,
+          "right": 872.6875,
+          "bottom": -999861,
+          "left": 100
+        },
+        {
+          "region": "diagram",
+          "x": 100,
+          "y": -999759,
+          "width": 850,
+          "height": 710,
+          "top": -999759,
+          "right": 950,
+          "bottom": -999049,
+          "left": 100
+        },
+        {
+          "region": "paper",
+          "x": 1010,
+          "y": -999749,
+          "width": 810,
+          "height": 660,
+          "top": -999749,
+          "right": 1820,
+          "bottom": -999089,
+          "left": 1010
+        }
       ]
     },
     {
-      "frame": 8313,
-      "cues": [
-        "s06:hold-6:59"
+      "labels": [
+        "s06:explain"
       ],
-      "regions": 3,
-      "maxWords": 7,
-      "cards": [
-        "2g = 5a",
-        "a = 2(10)/5 = 4 m s-2"
-      ]
-    },
-    {
-      "frame": 8319,
-      "cues": [
-        "s06:tension"
-      ],
-      "regions": 3,
-      "maxWords": 7,
-      "cards": [
-        "2g = 5a",
-        "a = 2(10)/5 = 4 m s-2"
-      ]
-    },
-    {
-      "frame": 8380,
-      "cues": [
-        "s06:substitute"
-      ],
-      "regions": 3,
-      "maxWords": 7,
-      "cards": [
-        "2g = 5a",
-        "a = 2(10)/5 = 4 m s-2",
-        "T = 3(4) = 12 N"
-      ]
-    },
-    {
-      "frame": 8464,
-      "cues": [
-        "s06:twelve"
-      ],
-      "regions": 3,
-      "maxWords": 7,
-      "cards": [
-        "2g = 5a",
-        "a = 2(10)/5 = 4 m s-2",
-        "T = 3(4) = 12 N"
-      ]
-    },
-    {
-      "frame": 8577,
-      "cues": [
-        "s06:hold-8:0"
-      ],
-      "regions": 3,
-      "maxWords": 7,
-      "cards": [
-        "2g = 5a",
-        "a = 2(10)/5 = 4 m s-2",
-        "T = 3(4) = 12 N"
-      ]
-    },
-    {
-      "frame": 8636,
-      "cues": [
-        "s06:hold-8:59"
-      ],
-      "regions": 3,
-      "maxWords": 7,
-      "cards": [
-        "2g = 5a",
-        "a = 2(10)/5 = 4 m s-2",
-        "T = 3(4) = 12 N"
-      ]
-    },
-    {
-      "frame": 8666,
-      "cues": [
-        "s07:plane"
-      ],
-      "regions": 3,
-      "maxWords": 5,
-      "cards": [
-        "a = 4 m s-2",
-        "Smooth table only"
-      ]
-    },
-    {
-      "frame": 8823,
-      "cues": [
-        "s07:curved"
-      ],
-      "regions": 3,
-      "maxWords": 5,
-      "cards": [
-        "a = 4 m s-2",
-        "Smooth table only"
-      ]
-    },
-    {
-      "frame": 8856,
-      "cues": [
-        "s07:bending"
-      ],
-      "regions": 3,
-      "maxWords": 5,
-      "cards": [
-        "a = 4 m s-2",
-        "Smooth table only"
-      ]
-    },
-    {
-      "frame": 9001,
-      "cues": [
-        "s07:smooth"
-      ],
-      "regions": 3,
-      "maxWords": 5,
-      "cards": [
-        "a = 4 m s-2",
-        "Smooth table only"
-      ]
-    },
-    {
-      "frame": 9158,
-      "cues": [
-        "s07:normal"
-      ],
-      "regions": 3,
-      "maxWords": 5,
-      "cards": [
-        "a = 4 m s-2",
-        "Smooth table only"
-      ]
-    },
-    {
-      "frame": 9226,
-      "cues": [
-        "s07:change"
-      ],
-      "regions": 3,
-      "maxWords": 5,
-      "cards": [
-        "a = 4 m s-2",
-        "Smooth table only"
-      ]
-    },
-    {
-      "frame": 9336,
-      "cues": [
-        "s07:rough"
-      ],
-      "regions": 3,
-      "maxWords": 5,
-      "cards": [
-        "a = 4 m s-2",
-        "Smooth table only"
-      ]
-    },
-    {
-      "frame": 9344,
-      "cues": [
-        "s07:friction"
-      ],
-      "regions": 3,
-      "maxWords": 5,
-      "cards": [
-        "a = 4 m s-2",
-        "Smooth table only"
-      ]
-    },
-    {
-      "frame": 9431,
-      "cues": [
-        "s07:slide"
-      ],
-      "regions": 3,
-      "maxWords": 5,
-      "cards": [
-        "a = 4 m s-2",
-        "Smooth table only"
-      ]
-    },
-    {
-      "frame": 9596,
-      "cues": [
-        "s07:table-equation"
-      ],
-      "regions": 3,
-      "maxWords": 5,
-      "cards": [
-        "T - F = 3a"
-      ]
-    },
-    {
-      "frame": 9725,
-      "cues": [
-        "s07:hanging-equation"
-      ],
-      "regions": 3,
-      "maxWords": 5,
-      "cards": [
-        "T - F = 3a",
-        "2g - T = 2a"
-      ]
-    },
-    {
-      "frame": 9803,
-      "cues": [
-        "s07:system-equation"
-      ],
-      "regions": 3,
-      "maxWords": 5,
-      "cards": [
-        "T - F = 3a",
-        "2g - T = 2a",
-        "2g - F = 5a"
-      ]
-    },
-    {
-      "frame": 9946,
-      "cues": [
-        "s07:less"
-      ],
-      "regions": 3,
-      "maxWords": 5,
-      "cards": [
-        "T - F = 3a",
-        "2g - T = 2a",
-        "2g - F = 5a"
-      ]
-    },
-    {
-      "frame": 10035,
-      "cues": [
-        "s07:question"
-      ],
-      "regions": 3,
-      "maxWords": 7,
-      "cards": [
-        "Does rough always mean F = \u03bcR?"
-      ]
-    },
-    {
-      "frame": 10167,
-      "cues": [
-        "s07:hold-2:0"
-      ],
-      "regions": 3,
-      "maxWords": 7,
-      "cards": [
-        "Does rough always mean F = \u03bcR?"
-      ]
-    },
-    {
-      "frame": 10256,
-      "cues": [
-        "s07:hold-2:89"
-      ],
-      "regions": 3,
-      "maxWords": 7,
-      "cards": [
-        "Does rough always mean F = \u03bcR?"
-      ]
-    },
-    {
-      "frame": 10259,
-      "cues": [
-        "s07:answer"
-      ],
-      "regions": 3,
-      "maxWords": 0,
-      "cards": []
-    },
-    {
-      "frame": 10296,
-      "cues": [
-        "s07:static"
-      ],
-      "regions": 3,
-      "maxWords": 5,
-      "cards": [
-        "0 \u2264 F \u2264 \u03bcR"
-      ]
-    },
-    {
-      "frame": 10441,
-      "cues": [
-        "s07:equality"
-      ],
-      "regions": 3,
-      "maxWords": 5,
-      "cards": [
-        "0 \u2264 F \u2264 \u03bcR",
-        "F = \u03bcR"
-      ]
-    },
-    {
-      "frame": 10474,
-      "cues": [
-        "s07:limiting"
-      ],
-      "regions": 3,
-      "maxWords": 5,
-      "cards": [
-        "0 \u2264 F \u2264 \u03bcR",
-        "F = \u03bcR",
-        "Limiting or stated sliding model"
-      ]
-    },
-    {
-      "frame": 10615,
-      "cues": [
-        "s07:check"
-      ],
-      "regions": 3,
-      "maxWords": 5,
-      "cards": [
-        "0 \u2264 F \u2264 \u03bcR",
-        "F = \u03bcR",
-        "Limiting or stated sliding model"
-      ]
-    },
-    {
-      "frame": 10847,
-      "cues": [
-        "s08:explain"
-      ],
+      "image": "07580.png",
+      "frame": 7580,
       "regions": 2,
       "maxWords": 7,
       "cards": [
         "Explain what modelling words let you ignore."
+      ],
+      "overflow": false,
+      "root": {
+        "x": 0,
+        "y": -999999,
+        "width": 1920,
+        "height": 1080,
+        "top": -999999,
+        "right": 1920,
+        "bottom": -998919,
+        "left": 0
+      },
+      "bounds": [
+        {
+          "region": "header",
+          "x": 100,
+          "y": -999927,
+          "width": 570.125,
+          "height": 66,
+          "top": -999927,
+          "right": 670.125,
+          "bottom": -999861,
+          "left": 100
+        },
+        {
+          "region": "card",
+          "x": 300,
+          "y": -999669,
+          "width": 1320,
+          "height": 277.375,
+          "top": -999669,
+          "right": 1620,
+          "bottom": -999391.625,
+          "left": 300
+        }
       ]
     },
     {
-      "frame": 10936,
-      "cues": [
-        "s08:tick-explain"
+      "labels": [
+        "s06:tick-explain"
       ],
+      "image": "07652.png",
+      "frame": 7652,
       "regions": 2,
       "maxWords": 7,
       "cards": [
         "Explain what modelling words let you ignore."
+      ],
+      "overflow": false,
+      "root": {
+        "x": 0,
+        "y": -999999,
+        "width": 1920,
+        "height": 1080,
+        "top": -999999,
+        "right": 1920,
+        "bottom": -998919,
+        "left": 0
+      },
+      "bounds": [
+        {
+          "region": "header",
+          "x": 100,
+          "y": -999927,
+          "width": 570.125,
+          "height": 66,
+          "top": -999927,
+          "right": 670.125,
+          "bottom": -999861,
+          "left": 100
+        },
+        {
+          "region": "card",
+          "x": 300,
+          "y": -999669,
+          "width": 1320,
+          "height": 365.375,
+          "top": -999669,
+          "right": 1620,
+          "bottom": -999303.625,
+          "left": 300
+        }
       ]
     },
     {
-      "frame": 11022,
-      "cues": [
-        "s08:find"
+      "labels": [
+        "s06:list"
       ],
+      "image": "07680.png",
+      "frame": 7680,
       "regions": 2,
-      "maxWords": 4,
+      "maxWords": 9,
       "cards": [
-        "Find acceleration and tension."
+        "List assumptions for a real situation and say why."
+      ],
+      "overflow": false,
+      "root": {
+        "x": 0,
+        "y": -999999,
+        "width": 1920,
+        "height": 1080,
+        "top": -999999,
+        "right": 1920,
+        "bottom": -998919,
+        "left": 0
+      },
+      "bounds": [
+        {
+          "region": "header",
+          "x": 100,
+          "y": -999927,
+          "width": 570.125,
+          "height": 66,
+          "top": -999927,
+          "right": 670.125,
+          "bottom": -999861,
+          "left": 100
+        },
+        {
+          "region": "card",
+          "x": 300,
+          "y": -999669,
+          "width": 1320,
+          "height": 277.375,
+          "top": -999669,
+          "right": 1620,
+          "bottom": -999391.625,
+          "left": 300
+        }
       ]
     },
     {
-      "frame": 11059,
-      "cues": [
-        "s08:tick-find"
+      "labels": [
+        "s06:tick-list"
       ],
+      "image": "07773.png",
+      "frame": 7773,
       "regions": 2,
-      "maxWords": 4,
+      "maxWords": 9,
       "cards": [
-        "Find acceleration and tension."
+        "List assumptions for a real situation and say why."
+      ],
+      "overflow": false,
+      "root": {
+        "x": 0,
+        "y": -999999,
+        "width": 1920,
+        "height": 1080,
+        "top": -999999,
+        "right": 1920,
+        "bottom": -998919,
+        "left": 0
+      },
+      "bounds": [
+        {
+          "region": "header",
+          "x": 100,
+          "y": -999927,
+          "width": 570.125,
+          "height": 66,
+          "top": -999927,
+          "right": 670.125,
+          "bottom": -999861,
+          "left": 100
+        },
+        {
+          "region": "card",
+          "x": 300,
+          "y": -999669,
+          "width": 1320,
+          "height": 365.375,
+          "top": -999669,
+          "right": 1620,
+          "bottom": -999303.625,
+          "left": 300
+        }
       ]
     },
     {
-      "frame": 11192,
-      "cues": [
-        "s08:predict"
+      "labels": [
+        "s06:match"
       ],
+      "image": "07805.png",
+      "frame": 7805,
       "regions": 2,
-      "maxWords": 5,
+      "maxWords": 7,
       "cards": [
-        "Predict changes when assumptions fail."
+        "Match modelling words to a described setup."
+      ],
+      "overflow": false,
+      "root": {
+        "x": 0,
+        "y": -999999,
+        "width": 1920,
+        "height": 1080,
+        "top": -999999,
+        "right": 1920,
+        "bottom": -998919,
+        "left": 0
+      },
+      "bounds": [
+        {
+          "region": "header",
+          "x": 100,
+          "y": -999927,
+          "width": 570.125,
+          "height": 66,
+          "top": -999927,
+          "right": 670.125,
+          "bottom": -999861,
+          "left": 100
+        },
+        {
+          "region": "card",
+          "x": 300,
+          "y": -999669,
+          "width": 1320,
+          "height": 277.375,
+          "top": -999669,
+          "right": 1620,
+          "bottom": -999391.625,
+          "left": 300
+        }
       ]
     },
     {
-      "frame": 11260,
-      "cues": [
-        "s08:tick-predict"
+      "labels": [
+        "s06:tick-match"
       ],
+      "image": "07878.png",
+      "frame": 7878,
       "regions": 2,
-      "maxWords": 5,
+      "maxWords": 7,
       "cards": [
-        "Predict changes when assumptions fail."
+        "Match modelling words to a described setup."
+      ],
+      "overflow": false,
+      "root": {
+        "x": 0,
+        "y": -999999,
+        "width": 1920,
+        "height": 1080,
+        "top": -999999,
+        "right": 1920,
+        "bottom": -998919,
+        "left": 0
+      },
+      "bounds": [
+        {
+          "region": "header",
+          "x": 100,
+          "y": -999927,
+          "width": 570.125,
+          "height": 66,
+          "top": -999927,
+          "right": 670.125,
+          "bottom": -999861,
+          "left": 100
+        },
+        {
+          "region": "card",
+          "x": 300,
+          "y": -999669,
+          "width": 1320,
+          "height": 365.375,
+          "top": -999669,
+          "right": 1620,
+          "bottom": -999303.625,
+          "left": 300
+        }
       ]
+    }
+  ],
+  "composition": "MechanicsModellingAssumptions",
+  "fps": 30,
+  "frameCount": 8311,
+  "audioDuration": 276.924081,
+  "cueCount": 72,
+  "scenes": [
+    {
+      "id": "s01",
+      "title": "What you will learn",
+      "tempo": "brisk",
+      "voiceSpeed": 1.0,
+      "audioSeconds": 27.036735,
+      "frames": 812,
+      "cues": 6,
+      "audioSha256": "d180facca4f40689b630f669f838eb486ef8a2efbd8e46bc256904593c2b35e3"
+    },
+    {
+      "id": "s02",
+      "title": "How a model is made",
+      "tempo": "brisk",
+      "voiceSpeed": 1.0,
+      "audioSeconds": 26.017959,
+      "frames": 781,
+      "cues": 5,
+      "audioSha256": "01461df89748902e8abfb9f70c0e7faa69f1716eb2edec2b34f142c7db85efe3"
+    },
+    {
+      "id": "s03",
+      "title": "Model a falling stone",
+      "tempo": "slow",
+      "voiceSpeed": 0.9,
+      "audioSeconds": 76.042449,
+      "frames": 2282,
+      "cues": 21,
+      "audioSha256": "acc84c42b940444e328278a4d87707367d9088cedd30bcfe351387f2f7b63201"
+    },
+    {
+      "id": "s04",
+      "title": "What the modelling words mean",
+      "tempo": "brisk",
+      "voiceSpeed": 1.0,
+      "audioSeconds": 55.928163,
+      "frames": 1678,
+      "cues": 14,
+      "audioSha256": "9dfd56f3981df8b598d35f7b1407ec1895e6fa41fc0c2f7d99c2c13584d6f027"
+    },
+    {
+      "id": "s05",
+      "title": "Match words to the situation",
+      "tempo": "slow",
+      "voiceSpeed": 0.9,
+      "audioSeconds": 66.977959,
+      "frames": 2010,
+      "cues": 20,
+      "audioSha256": "e06b95d6f66ea83ebd0273e5e029b47b227a03d5fc43e5dcfd703bbc6e73202e"
+    },
+    {
+      "id": "s06",
+      "title": "By the end you can...",
+      "tempo": "brisk",
+      "voiceSpeed": 1.0,
+      "audioSeconds": 24.920816,
+      "frames": 748,
+      "cues": 6,
+      "audioSha256": "26e690d4435f2de4443a2f0c2ab5515d4b7bbd820bbddeead78233fb4541ea6c"
     }
   ]
 }

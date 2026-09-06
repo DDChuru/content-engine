@@ -29,6 +29,20 @@ def audit_frames(scenes):
             for frame in (start, end):
                 frames.setdefault(frame, []).append(f"{scene['id']}:hold-{index}")
             holds.append((start, end))
+        # A cue still catches the first pen stroke. Also inspect the completed
+        # domain and matching words before the next prompt clears the paper.
+        if scene['id'] == 's03':
+            frame = offset + math.ceil((scene['cues']['zero'] - 0.1) * 30)
+            frames.setdefault(frame, []).append('s03:domain-complete')
+        if scene['id'] == 's05':
+            pairs = [('particle', 'q-light'), ('light', 'q-pulley'),
+                     ('smooth-pulley', 'q-surface'), ('smooth-surface', 'q-string'),
+                     ('inextensible', None)]
+            for answer, following in pairs:
+                end = min(scene['cues'][answer] + 3.5,
+                          scene['cues'][following] - 0.3 if following else scene['duration'] - 0.4)
+                frame = offset + math.ceil((end + 0.05) * 30)
+                frames.setdefault(frame, []).append(f"s05:{answer}-complete")
         offset += math.ceil(scene['duration'] * 30)
     return frames, holds
 
@@ -68,15 +82,19 @@ def main():
 
     with concurrent.futures.ThreadPoolExecutor(max_workers=args.workers) as pool:
         measurements = list(pool.map(verify, sorted(frames.items())))
+    hold_hashes = []
     for start, end in holds:
         first = hashlib.sha256((args.output / f'{start:05d}.png').read_bytes()).digest()
         last = hashlib.sha256((args.output / f'{end:05d}.png').read_bytes()).digest()
         assert first == last, f'Hold moved between frames {start} and {end}'
+        hold_hashes.append({'start': start, 'end': end, 'frames': end - start + 1,
+                            'sha256': first.hex()})
     report = {
         'stillCount': len(measurements),
         'maxRegions': max(row['regions'] for row in measurements),
         'maxWords': max(row['maxWords'] for row in measurements),
         'identicalHoldPairs': len(holds),
+        'holdHashes': hold_hashes,
         'measurements': measurements,
     }
     (args.output / 'verify-measurements.json').write_text(json.dumps(report, indent=2) + '\n')

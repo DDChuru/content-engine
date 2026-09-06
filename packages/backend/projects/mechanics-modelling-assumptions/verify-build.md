@@ -1,45 +1,56 @@
-# Modelling assumptions — build verification
+# Modelling Assumptions re-cut — verification
 
-Built on 6 September 2026. **No video render was run.** Composition export names, ID, Root registration, audio filenames and transcript filename are retained.
+The six-scene re-cut replaces the previous eight-scene build. Narration is **276.924 seconds (4:36.924)**; the composition is **8,311 frames / 277.033 seconds at 30 fps**. No video render was run. The composition ID, exported names and Root registration are unchanged.
 
-The exact storyboard narration uses ElevenLabs voice `gYWKdgLtqjPO3D5uDrDP`, through `narration_client.py`, at speed 1.0 for brisk scenes and 0.9 for slow scenes. Written pauses are inserted silence; the bracketed directions are not spoken. Audio hashes, provider, voice, speed, spoken segments and silence intervals are recorded in the transcript.
+## Scene timings
 
-## Measured duration
+| Scene | Tempo | Voice speed | Audio seconds | Cues | Frames |
+|---|---|---:|---:|---:|---:|
+| s01 — What you will learn | brisk | 1.0 | 27.037 | 6 | 812 |
+| s02 — How a model is made | brisk | 1.0 | 26.018 | 5 | 781 |
+| s03 — Model a falling stone | slow | 0.9 | 76.042 | 21 | 2282 |
+| s04 — What the modelling words mean | brisk | 1.0 | 55.928 | 14 | 1678 |
+| s05 — Match words to the situation | slow | 0.9 | 66.978 | 20 | 2010 |
+| s06 — By the end you can... | brisk | 1.0 | 24.921 | 6 | 748 |
 
-The storyboard's 300-second estimate did not fit the specified narration and delivery. Audio totals **382.015 seconds**. The composition keeps all speech and holds, at **11,465 frames / 382.167 seconds / 30 fps**; each scene rounds its encoded audio duration up to a whole frame. The 15-frame graphite transitions overlap added outgoing visual tails, so they never subtract narration time.
+The 15-frame graphite fade-through transitions overlap added outgoing visual tails, preserving all narration time. All six scene scripts changed, so all six MP3s were regenerated with ElevenLabs through `narration_client.py`, voice `gYWKdgLtqjPO3D5uDrDP`. Slow scenes use speed 0.9; brisk scenes use 1.0. Written holds are inserted PCM silence, not spoken directions or provider-generated pauses.
 
-| Scene | Tempo | Voice speed | Audio seconds | Scene seconds | Cues | Frames |
-|---|---|---:|---:|---:|---:|---:|
-| s01 | brisk | 1.0 | 20.036 | 20.067 | 8 | 602 |
-| s02 | brisk | 1.0 | 22.361 | 22.367 | 12 | 671 |
-| s03 | brisk | 1.0 | 28.238 | 28.267 | 12 | 848 |
-| s04 | brisk | 1.0 | 27.376 | 27.400 | 12 | 822 |
-| s05 | slow | 0.9 | 98.743 | 98.767 | 36 | 2963 |
-| s06 | slow | 0.9 | 91.507 | 91.533 | 23 | 2746 |
-| s07 | slow | 0.9 | 72.856 | 72.867 | 19 | 2186 |
-| s08 | brisk | 1.0 | 20.898 | 20.900 | 6 | 627 |
+## Scope and teaching checks
 
-## Completed checks
+- S01: syllabus 4.1, printed p.31, exact excerpt “use the model of a ‘smooth’ contact”; three outcomes shown separately. FRAME-LOG f001–f003 plus the teaching standard's required Cambridge opening.
+- S02: five-stage modelling cycle, f004–f016.
+- S03: cliff assumptions, given height model, readings and three refinements, f017–f049. The one-second reading is corrected to 15 m. No force calculation is introduced.
+- S04: particle, smooth/rough, rod/beam, uniform, light and inextensible survey, f050–f083. Existing table/pulley and uniform-rod drawings are reused.
+- S05: five matching questions, f084–f103. Particle modelling and neglecting air resistance are explicitly distinguished. A taut string over the fixed pulley links acceleration magnitudes in different directions.
+- S06: identical outcome wording, individually ticked, f104–f118.
+- The full acceleration/tension calculation, friction inequality extension and additional glossary scenes are removed. Headers are plain ideas; no prohibited setting names or captions appear. One accent colour, one diagram and one card/paper panel are retained.
 
-- All **128 cues resolve** to local Whisper words, constrained by the generated speech-segment boundaries. No cue falls inside an explicit pause/hold. This prevents an earlier repeated phrase or a word timestamp stretched across silence from driving a reveal.
-- Eight audio hashes, voice IDs and speeds checked; decoded audio is silent throughout the interior of every written pause and hold.
-- `npx remotion still` generated **142 required stills**: every cue, plus the first and last frame of every result/question hold. Visible-region and text counts were measured from the composition DOM and checked against the stills. Maximum: **3 regions**, including the header; **7 words per teaching card or working line**. Region and diagram-text bounds fit the frame.
-- All **seven hold pairs are byte-identical PNGs**: six 60-frame numerical holds and one 90-frame question hold. The result rings are present during their holds.
-- All stills were visually inspected in contact sheets; the corrected force labels, massive-pulley/slack-string contrasts and worked-result frames were also inspected directly. Affected scenes were rechecked after the final visual/timing fixes.
-- Strict targeted TypeScript check passed. This checkout lacks React declaration packages, so the check used temporary `@types/react` / `@types/react-dom` under `/tmp/verify-modelling-types`; repository dependencies were unchanged.
-- `npx remotion compositions` lists `MechanicsModellingAssumptions` at 1920×1080, 30 fps, **11,465 frames**, longer than all narration combined.
+## Completed verification
 
-[Per-still measurements and hold hashes](verify-build.json) preserve the check results. Local stills are in `/tmp/verify-modelling-stills-v3`; they are verification artifacts, not a video export.
+- **72/72 cues resolved** against local faster-whisper words and generated speech-beat boundaries. The isolated one-second reading was independently transcribed to prevent Whisper copying “twenty” from the preceding reading. The boundary replacement also removes overlapping duplicate words.
+- Six audio SHA-256 hashes and voice/speed metadata match. All eight inserted holds are silent in decoded MP3 audio; no cue falls inside a hold. Both slow scenes and total narration fit the requested duration ranges.
+- **94 stills checked:** every cue, both ends of every hold, and six completed-writing frames. Rendered DOM measurements give **maximum 3 regions**, including the header, and **9 words per card or handwritten line**, with no frame overflow.
+- **Eight hold pairs are byte-identical PNGs:** two ringed 60-frame stone readings, five 60-frame matching questions, and the 90-frame stone question. The pen and diagram remain frozen throughout each hold.
+- All required stills were reviewed in contact sheets; the domain, matching questions, completed handwritten answers and corrected water label were also checked directly. The missing handwritten `y` found during the audit was added; all affected stills were regenerated. Matching prompts sit prominently at the top of the same paper panel.
+- Strict targeted TypeScript check passed, using temporary React declarations at `/tmp/verify-modelling-types` because this checkout lacks them. No dependency files changed.
+- `npx remotion compositions` lists `MechanicsModellingAssumptions`, 1920×1080, 30 fps, **8,311 frames**, longer than the combined narration. Root registration is unchanged.
+
+[Per-still measurements, scene/audio hashes and hold-image hashes](verify-build.json) preserve the results. The local stills are in `/tmp/verify-modelling-recut-stills`.
 
 ## Repeat the still audit
 
-From `packages/backend`, with the requested Node version on `PATH`:
+From `packages/backend`, with the requested nvm Node on `PATH`:
 
 ```bash
 npx remotion bundle src/remotion/Root.tsx
 python3 src/scripts/verify-mechanics-modelling-assumptions.py --workers 3
 ```
 
-The verifier invokes `npx remotion still` for each cue and hold boundary, checks the generated DOM-measurement artifacts, and compares hold images. Its optional `audit` composition prop emits JSON artifacts only; it adds no on-screen material. It retries transient CLI failures up to three times. It never invokes a video-render command.
+The verifier runs `npx remotion still` at every cue, both hold boundaries, and completed handwriting; it checks the DOM measurement artifacts and hashes each frozen hold pair. Its optional audit prop emits JSON only and adds nothing on screen. It retries transient CLI failures three times. It never invokes a video-render command.
 
-No files were deleted. The remaining production step is the video render on the other machine.
+## Explicitly requested deletions
+
+- `packages/backend/src/remotion/public/audio/mechanics/modelling-assumptions-s07.mp3` — obsolete rough-table extension audio; the re-cut ends at s06.
+- `packages/backend/src/remotion/public/audio/mechanics/modelling-assumptions-s08.mp3` — obsolete eighth-scene recap audio; the replacement recap is s06.
+
+No other files or directories were deleted. Rendering remains for the other machine.

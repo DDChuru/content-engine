@@ -612,7 +612,7 @@ def refine_readings(model, job, timing, words):
         if not replacement:
             raise RuntimeError(f"No isolated reading for {job['id']} beat {index}")
         words = [word for word in words
-                 if not beat["start"] <= (word["start"] + word["end"]) / 2 < beat["end"]]
+                 if not (word["end"] > beat["start"] and word["start"] < beat["end"])]
         words = sorted(words + replacement, key=lambda word: word["start"])
     return words
 

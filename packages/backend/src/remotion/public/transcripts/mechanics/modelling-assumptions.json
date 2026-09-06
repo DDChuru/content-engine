@@ -2,7 +2,7 @@
   "project": "mechanics-modelling-assumptions",
   "sceneCount": 6,
   "totalDuration": 276.924081,
-  "generatedAt": "2026-09-06T14:09:11.942513",
+  "generatedAt": "2026-09-06T14:10:48.827931",
   "engine": "faster-whisper-small (local)",
   "scenes": [
     {
@@ -538,8 +538,8 @@
       "id": "s03",
       "audio": "modelling-assumptions-s03.mp3",
       "duration": 76.042449,
-      "wordCount": 110,
-      "text": "A stone at a cliff. Two or three dimensional motion. Air and wind. Size, shape and spin. Gravity pulls down. Assume a vertical fall. Ignore air and wind. Use a particle. Omit dimensions. Keep gravity constant, simplifying height. Our model is h equals twenty minus five t squared, from zero to two seconds. At zero, height is twenty metres. At At one second, height is fifteen metres. Two seconds means the stone reaches the water. Is one metre at one second reasonable? No. That misreads this model, which gives fifteen. To improve realism, include air resistance. Keep the stone's size and mass, or allow motion in two or three dimensions.",
+      "wordCount": 109,
+      "text": "A stone at a cliff. Two or three dimensional motion. Air and wind. Size, shape and spin. Gravity pulls down. Assume a vertical fall. Ignore air and wind. Use a particle. Omit dimensions. Keep gravity constant, simplifying height. Our model is h equals twenty minus five t squared, from zero to two seconds. At zero, height is twenty metres. At one second, height is fifteen metres. Two seconds means the stone reaches the water. Is one metre at one second reasonable? No. That misreads this model, which gives fifteen. To improve realism, include air resistance. Keep the stone's size and mass, or allow motion in two or three dimensions.",
       "words": [
         {
           "word": "A",
@@ -835,11 +835,6 @@
           "word": "metres.",
           "start": 40.12,
           "end": 40.42
-        },
-        {
-          "word": "At",
-          "start": 42.48,
-          "end": 42.88
         },
         {
           "word": "At",

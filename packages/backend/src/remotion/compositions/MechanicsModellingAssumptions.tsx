@@ -52,17 +52,15 @@ interface Scene {
 const SCENES = transcriptJson.scenes as unknown as Scene[];
 const OUTCOMES = [
   'Explain what modelling words let you ignore.',
-  'Find acceleration and tension.',
-  'Predict changes when assumptions fail.',
+  'List assumptions for a real situation and say why.',
+  'Match modelling words to a described setup.',
 ];
 const HEADERS = [
   'What you will learn',
-  'What a particle model ignores',
-  'Why light and smooth give one tension',
-  'Why a taut string links the motion',
-  'What the other modelling words mean',
-  'Find acceleration and tension',
-  'What changes when the table is rough',
+  'How a model is made',
+  'Model a falling stone',
+  'What the modelling words mean',
+  'Match words to the situation',
   'By the end you can...',
 ];
 export interface MechanicsModellingAssumptionsProps {
@@ -223,6 +221,7 @@ const Ring: React.FC<{ x: number; y: number; rx?: number }> = ({ x, y, rx = 65 }
 );
 
 interface SystemProps {
+  sphere?: boolean;
   parts?: string[];
   particle?: boolean;
   tip?: boolean;
@@ -247,6 +246,7 @@ interface SystemProps {
   ring?: number;
 }
 const System: React.FC<SystemProps> = ({
+  sphere,
   parts,
   particle,
   tip,
@@ -320,7 +320,17 @@ const System: React.FC<SystemProps> = ({
           )}
         </g>
       )}
-      {show('hanging') && <rect x="613" y={hy} width="104" height="110" rx="5" fill={T.bg} />}
+      {show('hanging') &&
+        (sphere ? (
+          <circle
+            cx="665"
+            cy={particle ? hy : hy + 52}
+            r={particle ? 12 : 52}
+            fill={particle ? T.text : T.bg}
+          />
+        ) : (
+          <rect x="613" y={hy} width="104" height="110" rx="5" fill={T.bg} />
+        ))}
       {masses >= 1 && (
         <text x={bx + 57} y="334" fill={T.text} stroke="none" fontSize="34" textAnchor="middle">
           3 kg
@@ -705,6 +715,176 @@ const G: Record<string, Glyph> = {
   ],
 };
 
+Object.assign(G, {
+  y: [
+    [
+      [1, 6],
+      [5, 15],
+      [10, 6],
+    ],
+    [
+      [10, 6],
+      [8, 17],
+      [5, 22],
+      [1, 21],
+    ],
+  ],
+  b: [
+    [
+      [1, 0],
+      [1, 16],
+      [1, 8],
+      [5, 6],
+      [9, 7],
+      [11, 11],
+      [9, 15],
+      [5, 16],
+      [1, 14],
+    ],
+  ],
+  c: [
+    [
+      [10, 7],
+      [6, 5],
+      [2, 7],
+      [0, 11],
+      [2, 15],
+      [6, 16],
+      [10, 14],
+    ],
+  ],
+  e: [
+    [
+      [1, 10],
+      [10, 10],
+      [9, 7],
+      [5, 5],
+      [1, 8],
+      [0, 12],
+      [3, 16],
+      [7, 16],
+      [11, 14],
+    ],
+  ],
+  h: [
+    [
+      [1, 0],
+      [1, 16],
+    ],
+    [
+      [1, 9],
+      [5, 6],
+      [8, 6],
+      [10, 9],
+      [10, 16],
+    ],
+  ],
+  i: [
+    [
+      [5, 6],
+      [5, 16],
+    ],
+    [
+      [5, 1],
+      [5.1, 1.1],
+    ],
+  ],
+  l: [
+    [
+      [4, 0],
+      [4, 14],
+      [6, 16],
+      [9, 15],
+    ],
+  ],
+  n: [
+    [
+      [1, 6],
+      [1, 16],
+    ],
+    [
+      [1, 9],
+      [5, 6],
+      [8, 6],
+      [10, 9],
+      [10, 16],
+    ],
+  ],
+  o: [
+    [
+      [5, 5],
+      [1, 7],
+      [0, 12],
+      [3, 16],
+      [8, 16],
+      [11, 12],
+      [10, 7],
+      [5, 5],
+    ],
+  ],
+  p: [
+    [
+      [1, 6],
+      [1, 22],
+    ],
+    [
+      [1, 8],
+      [5, 6],
+      [9, 7],
+      [11, 11],
+      [9, 15],
+      [5, 16],
+      [1, 14],
+    ],
+  ],
+  r: [
+    [
+      [1, 6],
+      [1, 16],
+    ],
+    [
+      [1, 10],
+      [5, 6],
+      [9, 6],
+    ],
+  ],
+  t: [
+    [
+      [5, 1],
+      [5, 13],
+      [7, 16],
+      [10, 15],
+    ],
+    [
+      [1, 6],
+      [10, 6],
+    ],
+  ],
+  u: [
+    [
+      [1, 6],
+      [1, 13],
+      [3, 16],
+      [6, 16],
+      [10, 12],
+    ],
+    [
+      [10, 6],
+      [10, 16],
+    ],
+  ],
+  x: [
+    [
+      [1, 6],
+      [10, 16],
+    ],
+    [
+      [10, 6],
+      [1, 16],
+    ],
+  ],
+});
+
 const GLYPH_ADVANCE: Record<string, number> = { ' ': 7, '.': 6, '(': 9, ')': 9 };
 
 interface InkStroke {
@@ -851,10 +1031,11 @@ interface Line {
   resultAt?: number;
   prefixEnd?: number;
 }
-const Paper: React.FC<{ lines: Line[]; t: number; ringLine?: number; note?: string }> = ({
+const Paper: React.FC<{ lines: Line[]; t: number; ringLine?: number; prompt?: string; note?: string }> = ({
   lines,
   t,
   ringLine = -1,
+  prompt,
   note,
 }) => {
   const { fps } = useVideoConfig();
@@ -952,6 +1133,11 @@ const Paper: React.FC<{ lines: Line[]; t: number; ringLine?: number; note?: stri
           strokeWidth="4"
         />
       )}
+      {prompt && (
+        <text data-card="true" x="65" y="105" fill={T.ink} fontSize="40">
+          {prompt}
+        </text>
+      )}
       {note && (
         <text data-card="true" x="65" y="597" fill={T.ink} fontSize="29">
           {note}
@@ -964,454 +1150,417 @@ const Paper: React.FC<{ lines: Line[]; t: number; ringLine?: number; note?: stri
 const Opening: React.FC<{ s: Scene }> = ({ s }) => {
   const { fps } = useVideoConfig();
   const t = useCurrentFrame() / fps;
-  const state = latest(s, t, [
-    'syllabus',
-    'smooth',
-    'connected',
-    'continuation',
-    'outcomes',
-    'explain',
-    'find',
-    'predict',
-  ]);
-  const header = ['outcomes', 'explain', 'find', 'predict'].includes(state)
-    ? 'By the end you can...'
-    : ['connected', 'continuation'].includes(state)
-      ? 'Syllabus 4.4 · p.33'
-      : 'Syllabus 4.1 · p.31';
-  const text =
-    state === 'smooth'
-      ? 'use the model of a ‘smooth’ contact'
-      : state === 'connected'
-        ? 'solve simple problems which may be modelled'
-        : state === 'continuation'
-          ? 'as the motion of connected particles.'
-          : state === 'explain'
-            ? OUTCOMES[0]
-            : state === 'find'
-              ? OUTCOMES[1]
-              : state === 'predict'
-                ? OUTCOMES[2]
-                : '';
+  const state = latest(s, t, ['syllabus', 'quote', 'outcomes', 'explain', 'list', 'match']);
+  const outcome = ['explain', 'list', 'match'].indexOf(state);
   return (
     <>
-      <Header>{header}</Header>
-      {text && <Card text={text} centre />}
-    </>
-  );
-};
-const Particle: React.FC<{ s: Scene }> = ({ s }) => {
-  const { fps } = useVideoConfig();
-  const t = useCurrentFrame() / fps;
-  const at = (id: string) => t >= cue(s, id);
-  const card = at('include')
-    ? 'Air resistance included'
-    : at('air')
-      ? 'Air resistance neglected'
-      : at('particle')
-        ? 'Particle'
-        : '';
-  return (
-    <>
-      <Diagram>
-        <System
-          parts={['hanging', 'box', 'table', 'string', 'pulley'].filter(at)}
-          particle={at('size') && !at('tips')}
-          tip={at('tips') && !at('air')}
-          drag={at('drag')}
-        />
-      </Diagram>
-      {card && <Card text={card} />}
-    </>
-  );
-};
-const Light: React.FC<{ s: Scene }> = ({ s }) => {
-  const { fps } = useVideoConfig();
-  const t = useCurrentFrame() / fps;
-  const at = (id: string) => t >= cue(s, id);
-  const card = at('rough')
-    ? 'Rough pulley'
-    : at('smooth')
-      ? 'Smooth pulley'
-      : at('massive')
-        ? 'Massive pulley'
-        : at('pulley')
-          ? 'Light pulley'
-          : at('heavy')
-            ? 'Heavy string'
-            : at('string')
-              ? 'Light string'
-              : 'Light: negligible mass';
-  return (
-    <>
-      <Diagram>
-        <System
-          heavyString={at('heavy') && !at('pulley')}
-          massivePulley={at('massive') && !at('smooth')}
-          roughPulley={at('rough')}
-          tensions={
-            at('massive') && !at('smooth')
-              ? at('spin')
-                ? 2
-                : 1
-              : at('second-tension')
-                ? 2
-                : at('equal')
-                  ? 1
-                  : 0
-          }
-          unequal={(at('spin') && !at('smooth')) || at('unequal')}
-        />
-      </Diagram>
-      <Card text={card} />
-    </>
-  );
-};
-const StringMotion: React.FC<{ s: Scene }> = ({ s }) => {
-  const { fps } = useVideoConfig();
-  const t = useCurrentFrame() / fps;
-  const at = (id: string) => t >= cue(s, id);
-  const motion = at('slack')
-    ? clamp((t - cue(s, 'unlinked')) / 1.5) * 30
-    : at('stretch')
-      ? clamp((t - cue(s, 'stretch')) / 2) * 70
-      : clamp((t - cue(s, 'lost')) / 2) * 55;
-  return (
-    <>
-      <Diagram>
-        <System
-          motion={motion}
-          extensible={at('extensible') && !at('slack')}
-          slack={at('slack')}
-          travel={at('extensible') ? 0 : at('lost') ? 2 : at('gained') ? 1 : 0}
-          acceleration={at('acceleration')}
-          tensions={!at('slack') ? 2 : 0}
-        />
-      </Diagram>
-      <Card
-        text={
-          at('slack')
-            ? 'Slack: no tension'
-            : at('extensible')
-              ? 'Extensible: length can change'
-              : 'Inextensible: fixed length'
-        }
-      />
+      <Header>
+        {['outcomes', 'explain', 'list', 'match'].includes(state)
+          ? 'By the end you can...'
+          : 'Syllabus 4.1 · p.31 (excerpt)'}
+      </Header>
+      {state === 'quote' && <Card text="use the model of a ‘smooth’ contact" centre />}
+      {outcome >= 0 && <Card text={OUTCOMES[outcome]} centre />}
     </>
   );
 };
 
-const OtherWords: React.FC<{ s: Scene }> = ({ s }) => {
+const ModellingCycle: React.FC<{ s: Scene }> = ({ s }) => {
+  const { fps } = useVideoConfig();
+  const t = useCurrentFrame() / fps;
+  const nodes = [
+    { id: 'real', text: 'Real problem', x: 80, y: 75 },
+    { id: 'assumptions', text: 'Assumptions', x: 565, y: 75 },
+    { id: 'equations', text: 'Equations or graph', x: 1050, y: 75 },
+    { id: 'check', text: 'Reasonable?', x: 1050, y: 370 },
+    { id: 'refine', text: 'Refine', x: 565, y: 370 },
+  ];
+  const active = latest(
+    s,
+    t,
+    nodes.map((n) => n.id),
+  );
+  return (
+    <svg
+      data-region="diagram"
+      width="1720"
+      height="650"
+      viewBox="0 0 1720 650"
+      style={{ position: 'absolute', left: 100, top: 290 }}
+    >
+      {nodes.map(
+        (n, i) =>
+          t >= cue(s, n.id) && (
+            <g key={n.id}>
+              {i > 0 && (
+                <path
+                  d={
+                    [
+                      '',
+                      'M475 155 H555 m-12 -10 l12 10 l-12 10',
+                      'M960 155 H1040 m-12 -10 l12 10 l-12 10',
+                      'M1245 235 V360 m-10 -12 l10 12 l10 -12',
+                      'M1050 450 H970 m12 -10 l-12 10 l12 10',
+                    ][i]
+                  }
+                  fill="none"
+                  stroke={T.muted}
+                  strokeWidth="4"
+                />
+              )}
+              <rect
+                x={n.x}
+                y={n.y}
+                width="395"
+                height="160"
+                rx="8"
+                fill={T.paper}
+                stroke={active === n.id ? T.accent : T.paper}
+                strokeWidth="5"
+              />
+              <text
+                data-card="true"
+                x={n.x + 197.5}
+                y={n.y + 92}
+                textAnchor="middle"
+                fill={T.ink}
+                fontSize="38"
+              >
+                {n.text}
+              </text>
+              {n.id === 'refine' && (
+                <path
+                  d="M760 370 V244 m-10 13 l10 -13 l10 13"
+                  fill="none"
+                  stroke={T.accent}
+                  strokeWidth="4"
+                />
+              )}
+            </g>
+          ),
+      )}
+    </svg>
+  );
+};
+
+const FallingStone: React.FC<{ s: Scene }> = ({ s }) => {
   const { fps } = useVideoConfig();
   const t = heldTime(s, useCurrentFrame() / fps);
   const at = (id: string) => t >= cue(s, id);
   const state = latest(s, t, [
-    'other',
-    'rod',
-    'flexible',
-    'light-rod',
-    'heavy-rod',
-    'beam',
-    'uniform',
-    'uneven-rod',
-    'lamina',
-    'plate',
-    'uniform-lamina',
-    'uneven-lamina',
-    'bead',
-    'thin-wire',
-    'guide',
-    'normal',
-    'wire-friction',
-    'peg',
-    'moving',
-    'smooth-peg',
-    'rough-peg',
+    'stone',
+    'dimensions',
+    'air',
+    'size',
+    'gravity',
+    'vertical',
+    'no-air',
+    'particle',
+    'constant',
+    'model',
+    'domain',
+    'zero',
+    'one',
+    'water',
+    'question',
+    'answer',
+    'refine-air',
+    'refine-size',
+    'refine-motion',
   ]);
-  const names: Record<string, string> = {
-    other: 'Extra vocabulary',
-    rod: 'Rigid rod',
-    flexible: 'Flexible rod',
-    'light-rod': 'Light rod',
-    'heavy-rod': 'Heavy rod',
-    beam: 'Beam',
-    uniform: 'Uniform rod',
-    'uneven-rod': 'Non-uniform rod',
-    lamina: 'Lamina',
-    plate: 'Thick plate',
-    'uniform-lamina': 'Uniform lamina',
-    'uneven-lamina': 'Non-uniform lamina',
-    bead: 'Bead',
-    'thin-wire': 'Wire',
-    guide: 'Thick guide',
-    normal: 'Smooth wire',
-    'wire-friction': 'Rough wire',
-    peg: 'Fixed peg',
-    moving: 'Moving support',
-    'smooth-peg': 'Smooth peg',
-    'rough-peg': 'Rough peg',
+  const refining = at('refine-air');
+  const point = at('particle') && !at('refine-size');
+  const vertical = at('vertical') && !at('refine-motion');
+  const stoneY = refining ? 120 : at('water') ? 585 : at('one-value') ? 240 : 120;
+  const showAir = (at('air') && !at('no-air')) || refining;
+  const words: Record<string, string> = {
+    dimensions: 'Two or three dimensions',
+    air: 'Air and wind',
+    size: 'Size, shape and spin',
+    gravity: 'Gravity pulls down',
+    vertical: 'Vertical fall',
+    'no-air': 'Ignore air and wind',
+    particle: 'Particle: ignore dimensions',
+    constant: 'Constant gravity',
+    question: 'Is 1 m at t = 1 reasonable?',
+    answer: 'The model gives 15 m',
+    'refine-air': 'Include air resistance',
+    'refine-size': 'Keep size and mass',
+    'refine-motion': 'Allow two or three dimensions',
   };
-  const rod = ['rod', 'flexible', 'light-rod', 'heavy-rod', 'beam', 'uniform', 'uneven-rod'].includes(state);
-  const sheet = ['lamina', 'plate', 'uniform-lamina', 'uneven-lamina'].includes(state);
-  const wire = ['bead', 'thin-wire', 'guide', 'normal', 'wire-friction'].includes(state);
-  const peg = ['peg', 'moving', 'smooth-peg', 'rough-peg'].includes(state);
-  const centre = state === 'uneven-rod' ? 570 : state === 'uneven-lamina' ? 550 : 420;
-  const collapse = state === 'beam' && at('turning');
-  return (
-    <>
-      <Diagram>
-        {(!state || state === 'other') && <System />}
-        {rod && (
-          <g stroke={T.text} fill="none" strokeWidth="5">
-            {collapse ? (
-              <circle cx="420" cy="350" r="12" fill={T.text} />
-            ) : (
-              <path
-                d={state === 'flexible' && at('bends') ? 'M150 350 Q420 500 690 350' : 'M150 350 H690'}
-                strokeWidth={state === 'beam' ? 18 : 6}
-              />
-            )}
-            {state === 'rod' && at('push') && <Arrow x={90} y={350} dx={55} dy={0} accent />}
-            {state === 'rod' && at('pull') && <Arrow x={695} y={350} dx={90} dy={0} accent />}
-            {state === 'heavy-rod' && at('weight') && (
-              <Arrow x={420} y={350} dx={0} dy={150} label="Weight" accent />
-            )}
-            {state === 'beam' && at('positions') && !collapse && (
-              <>
-                <Arrow x={200} y={210} dx={0} dy={125} />
-                <Arrow x={630} y={500} dx={0} dy={-125} />
-              </>
-            )}
-            {['uniform', 'uneven-rod'].includes(state) && (
-              <>
-                {Array.from({ length: 10 }, (_, i) => (
-                  <circle
-                    key={i}
-                    cx={180 + i * 53}
-                    cy={350}
-                    r={state === 'uneven-rod' && i > 5 ? 12 : 6}
-                    fill={T.muted}
-                    stroke="none"
-                  />
-                ))}
-                {at('midpoint') && (
-                  <Arrow x={at('shift-rod') ? centre : 420} y={365} dx={0} dy={140} label="Weight" accent />
-                )}
-                <path d={`M${centre - 27} 410 L${centre} 365 L${centre + 27} 410 Z`} stroke={T.muted} />
-              </>
-            )}
-          </g>
-        )}
-        {sheet && (
-          <g stroke={T.text} strokeWidth="4" fill="none">
-            <path d="M210 240 H630 V460 H210 Z" fill={T.bg} />
-            {state === 'plate' && <path d="M630 240 l35 40 v220 H245 l-35 -40 M630 460 l35 40" />}
-            {['uniform-lamina', 'uneven-lamina'].includes(state) &&
-              Array.from({ length: 20 }, (_, i) => (
-                <circle
-                  key={i}
-                  cx={250 + (i % 5) * 80}
-                  cy={280 + Math.floor(i / 5) * 48}
-                  r={state === 'uneven-lamina' && i % 5 > 2 ? 12 : 5}
-                  fill={T.muted}
-                  stroke="none"
-                />
-              ))}
-            {at('centroid') && (
-              <Arrow x={at('shift-lamina') ? centre : 420} y={350} dx={0} dy={180} label="Weight" accent />
-            )}
-          </g>
-        )}
-        {wire && (
-          <g fill="none" stroke={T.text} strokeWidth="5">
-            <path d="M170 470 L700 250" strokeWidth={state === 'guide' ? 20 : 4} />
-            <circle
-              cx="430"
-              cy={state === 'bead' && at('detached') ? 270 : 362}
-              r="25"
-              fill={T.bg}
-              stroke={T.accent}
-            />
-            {['normal', 'wire-friction'].includes(state) && (
-              <Arrow x={430} y={337} dx={-45} dy={-100} label="R" />
-            )}
-            {state === 'wire-friction' && <Arrow x={450} y={352} dx={95} dy={-40} label="F" accent />}
-          </g>
-        )}
-        {peg && (
-          <g
-            transform={state === 'moving' ? 'translate(65 -40)' : undefined}
-            fill="none"
-            stroke={T.text}
-            strokeWidth="5"
-          >
-            <path d="M120 330 H405 Q465 315 470 375 V570" />
-            <circle cx="430" cy="375" r="43" fill={T.bg} />
-            <path d="M395 405 L355 455 H495 L465 405" stroke={T.muted} />
-            {at('peg-tension') && <Arrow x={200} y={280} dx={130} dy={0} label="T" accent />}
-            {at('peg-tension') && (
-              <Arrow x={540} y={535} dx={0} dy={-125} label={at('peg-unequal') ? 'T₂' : 'T'} accent />
-            )}
-            {state === 'rough-peg' && (
-              <path d="M400 340 l10 13 m10 -22 l5 15 m20 -12 l-5 16" stroke={T.accent} />
-            )}
-          </g>
-        )}
-      </Diagram>
-      {state && <Card text={names[state]} />}
-    </>
-  );
-};
-
-const Worked: React.FC<{ s: Scene }> = ({ s }) => {
-  const { fps } = useVideoConfig();
-  const actual = useCurrentFrame() / fps;
-  const t = heldTime(s, actual);
-  const at = (id: string) => t >= cue(s, id);
   const holds = s.holds.filter((h) => h.kind === 'hold');
-  const ring = holds.findIndex((h) => actual >= h.start && actual < h.end);
-  const forces = ['box-weight', 'reaction', 'box-tension', 'hanging-weight', 'hanging-tension'].filter(
-    at,
-  ).length;
-  const second = at('acceleration');
-  const lines: Line[] = second
-    ? [
-        { id: 'combined-copy', text: '2g = 5a', start: 0, end: 0.01, y: 110 },
-        {
-          id: 'acceleration',
-          text: 'a = 2(10)/5 = 4 m s',
-          exponent: '-2',
-          start: cue(s, 'acceleration'),
-          resultAt: cue(s, 'four'),
-          prefixEnd: s.holds.find((h) => h.kind === 'pause' && h.start > cue(s, 'acceleration'))?.start,
-          end: Math.min(holds[4].start - 0.2, cue(s, 'four') + 3),
-          y: 300,
-        },
-        {
-          id: 'tension',
-          text: 'T = 3(4) = 12 N',
-          start: cue(s, 'substitute'),
-          resultAt: cue(s, 'twelve'),
-          end: Math.min(holds[5].start - 0.2, cue(s, 'twelve') + 1.5),
-          y: 480,
-        },
-      ]
-    : [
-        {
-          id: 'table',
-          text: 'T = 3a',
-          start: cue(s, 'table-equation'),
-          end: cue(s, 'hanging-equation') - 0.3,
-          y: 110,
-        },
-        {
-          id: 'hanging',
-          text: '2g - T = 2a',
-          start: cue(s, 'hanging-equation'),
-          end: cue(s, 'add') - 0.3,
-          y: 300,
-        },
-        {
-          id: 'combined',
-          text: '2g = (3 + 2)a = 5a',
-          start: cue(s, 'add'),
-          resultAt: cue(s, 'five'),
-          end: Math.min(holds[3].start - 0.2, cue(s, 'five') + 0.8),
-          y: 480,
-        },
-      ];
+  const lines: Line[] = [
+    {
+      id: 'height-model',
+      text: 'h = 20 - 5t',
+      exponent: '2',
+      start: cue(s, 'model'),
+      end: cue(s, 'domain') - 0.15,
+      y: 95,
+    },
+  ];
+  if (at('domain') && !at('zero'))
+    lines.push({
+      id: 'domain',
+      text: '0 ≤ t ≤ 2',
+      start: cue(s, 'domain'),
+      end: cue(s, 'zero') - 0.15,
+      y: 245,
+    });
+  if (at('zero'))
+    lines.push({
+      id: 'zero-reading',
+      text: 'h(0) = 20 m',
+      start: cue(s, 'zero'),
+      prefixEnd: cue(s, 'zero-value'),
+      resultAt: cue(s, 'zero-value'),
+      end: holds[0].start - 0.1,
+      y: 245,
+    });
+  if (at('one'))
+    lines.push({
+      id: 'one-reading',
+      text: 'h(1) = 15 m',
+      start: cue(s, 'one'),
+      prefixEnd: cue(s, 'one-value'),
+      resultAt: cue(s, 'one-value'),
+      end: holds[1].start - 0.1,
+      y: 395,
+    });
+  const ringLine =
+    t >= holds[1].start && t < holds[1].end ? 2 : t >= holds[0].start && t < holds[0].end ? 1 : -1;
   return (
     <>
-      <Diagram>
-        <System
-          masses={at('mass-two') ? 2 : at('mass-three') ? 1 : 0}
-          gravity={at('ten')}
-          travel={2}
-          acceleration
-          forceCount={forces}
-          ring={ring < 3 ? ring : -1}
-        />
-      </Diagram>
-      <Paper lines={lines} t={t} ringLine={ring === 3 ? 2 : ring === 4 ? 1 : ring === 5 ? 2 : -1} />
-    </>
-  );
-};
-const Rough: React.FC<{ s: Scene }> = ({ s }) => {
-  const { fps } = useVideoConfig();
-  const actual = useCurrentFrame() / fps;
-  const t = heldTime(s, actual);
-  const at = (id: string) => t >= cue(s, id);
-  const question = at('question') && !at('answer');
-  const initial = !at('table-equation');
-  const answer = at('answer');
-  const lines: Line[] = answer
-    ? [
-        { id: 'static', text: '0 ≤ F ≤ μR', start: cue(s, 'static'), end: cue(s, 'equality') - 0.2, y: 180 },
-        { id: 'limit', text: 'F = μR', start: cue(s, 'equality'), end: cue(s, 'check') - 0.5, y: 365 },
-      ]
-    : initial
-      ? [{ id: 'previous-result', text: 'a = 4 m s', exponent: '-2', start: 0, end: 0.01, y: 180 }]
-      : [
-          {
-            id: 'rough-table',
-            text: 'T - F = 3a',
-            start: cue(s, 'table-equation'),
-            end: cue(s, 'hanging-equation') - 0.2,
-            y: 110,
-          },
-          {
-            id: 'same-hanging',
-            text: '2g - T = 2a',
-            start: cue(s, 'hanging-equation'),
-            end: cue(s, 'system-equation') - 0.1,
-            y: 300,
-          },
-          {
-            id: 'rough-system',
-            text: '2g - F = 5a',
-            start: cue(s, 'system-equation'),
-            end: cue(s, 'less') - 0.1,
-            y: 480,
-          },
-        ];
-  return (
-    <>
-      <Diagram>
-        <System
-          masses={2}
-          forceCount={5}
-          curve={at('curved') && !at('bending')}
-          bend={at('bending') && !at('smooth')}
-          rough={at('rough')}
-          friction={at('friction')}
-        />
-      </Diagram>
-      {question ? (
-        <Card text="Does rough always mean F = μR?" />
+      {at('stone') && (
+        <Diagram>
+          <path d="M50 120 H275 V590 H800" fill="none" stroke={T.muted} strokeWidth="5" />
+          <path
+            d="M300 608 Q330 595 360 608 T420 608 T480 608 T540 608 T600 608 T660 608 T720 608 T780 608"
+            fill="none"
+            stroke={T.muted}
+            strokeWidth="3"
+          />
+          {at('dimensions') && (
+            <path
+              d={
+                vertical
+                  ? `M315 120 Q${mix(565, 315, clamp((t - cue(s, 'vertical')) / 0.9))} 170 ${mix(650, 315, clamp((t - cue(s, 'vertical')) / 0.9))} 585`
+                  : 'M315 120 Q565 170 650 585'
+              }
+              fill="none"
+              stroke={
+                state === 'dimensions' || state === 'vertical' || state === 'refine-motion'
+                  ? T.accent
+                  : T.muted
+              }
+              strokeWidth="4"
+              strokeDasharray="10 10"
+            />
+          )}
+          {showAir && (
+            <path
+              d={
+                refining
+                  ? 'M450 365 V245 m-12 16 l12 -16 l12 16'
+                  : 'M430 165 Q480 130 525 165 m-12 -15 l12 15 l-20 1'
+              }
+              fill="none"
+              stroke={state === 'air' || state === 'refine-air' ? T.accent : T.muted}
+              strokeWidth="5"
+            />
+          )}
+          {at('gravity') && (
+            <Arrow x={160} y={220} dx={0} dy={135} accent={state === 'gravity' || state === 'constant'} />
+          )}
+          {point ? (
+            <circle cx="315" cy={stoneY} r="10" fill={state === 'particle' ? T.accent : T.text} />
+          ) : (
+            <path
+              d={`M297 ${stoneY - 13} l24 -8 l19 19 l-8 20 l-29 -3 Z`}
+              fill={T.bg}
+              stroke={state === 'size' || state === 'refine-size' ? T.accent : T.text}
+              strokeWidth="4"
+            />
+          )}
+          {at('size') && !point && !refining && (
+            <path
+              d="M350 105 A42 42 0 0 1 345 158 m0 -13 v13 h13"
+              fill="none"
+              stroke={state === 'size' ? T.accent : T.muted}
+              strokeWidth="3"
+            />
+          )}
+          {at('water') && !refining && (
+            <text x="365" y={stoneY - 18} fill={T.text} fontSize="35">
+              Water
+            </text>
+          )}
+        </Diagram>
+      )}
+      {at('model') && !at('question') ? (
+        <Paper lines={lines} t={t} ringLine={ringLine} />
       ) : (
-        <Paper
-          lines={lines}
-          t={t}
-          note={
-            initial
-              ? 'Smooth table only'
-              : answer && at('limiting')
-                ? 'Limiting or stated sliding model'
-                : undefined
-          }
-        />
+        words[state] && <Card text={words[state]} />
       )}
     </>
   );
 };
+
+const Vocabulary: React.FC<{ s: Scene }> = ({ s }) => {
+  const { fps } = useVideoConfig();
+  const t = useCurrentFrame() / fps;
+  const at = (id: string) => t >= cue(s, id);
+  const state = latest(s, t, [
+    'particle',
+    'smooth',
+    'rough',
+    'rod',
+    'uniform',
+    'uneven',
+    'light',
+    'heavy',
+    'inextensible',
+    'stretching',
+  ]);
+  const names: Record<string, string> = {
+    particle: 'Particle',
+    smooth: 'Smooth surface',
+    rough: 'Rough surface',
+    rod: 'Rod or beam',
+    uniform: 'Uniform rod',
+    uneven: 'Uneven mass',
+    light: 'Light string',
+    heavy: 'Heavy string',
+    inextensible: 'Inextensible string',
+    stretching: 'Stretching string',
+  };
+  const rod = ['rod', 'uniform', 'uneven'].includes(state);
+  const centre = state === 'uneven' ? 560 : 420;
+  return (
+    <>
+      {state && (
+        <Diagram>
+          {rod ? (
+            <g stroke={T.text} fill="none" strokeWidth="5">
+              <path d="M150 350 H690" strokeWidth="6" />
+              {at('uniform') &&
+                Array.from({ length: 10 }, (_, i) => (
+                  <circle
+                    key={i}
+                    cx={180 + i * 53}
+                    cy="350"
+                    r={state === 'uneven' && i > 5 ? 12 : 6}
+                    fill={T.muted}
+                    stroke="none"
+                  />
+                ))}
+              {at('centre') && <Arrow x={centre} y={365} dx={0} dy={140} label="Weight" accent />}
+            </g>
+          ) : (
+            <System
+              sphere
+              particle={state === 'particle'}
+              rough={state === 'rough'}
+              friction={state === 'rough' && at('friction')}
+              heavyString={state === 'heavy'}
+              extensible={state === 'stretching'}
+              motion={state === 'stretching' ? 30 : 0}
+              travel={state === 'inextensible' ? (at('direction') ? 2 : at('acceleration') ? 1 : 0) : 0}
+              acceleration
+            />
+          )}
+        </Diagram>
+      )}
+      {names[state] && <Card text={names[state]} />}
+    </>
+  );
+};
+
+const Matching: React.FC<{ s: Scene }> = ({ s }) => {
+  const { fps } = useVideoConfig();
+  const t = heldTime(s, useCurrentFrame() / fps);
+  const at = (id: string) => t >= cue(s, id);
+  const pairs = [
+    { question: 'q-particle', answer: 'particle', prompt: 'Ignore air resistance?', word: 'particle' },
+    { question: 'q-light', answer: 'light', prompt: 'Ignore string mass?', word: 'light' },
+    {
+      question: 'q-pulley',
+      answer: 'smooth-pulley',
+      prompt: 'Same tension both sides?',
+      word: 'smooth pulley',
+    },
+    {
+      question: 'q-surface',
+      answer: 'smooth-surface',
+      prompt: 'Ignore desk friction?',
+      word: 'smooth surface',
+    },
+    {
+      question: 'q-string',
+      answer: 'inextensible',
+      prompt: 'Same acceleration magnitudes?',
+      word: 'inextensible',
+    },
+  ];
+  const pair = pairs.filter((p) => at(p.question)).at(-1);
+  const answerStart = pair ? cue(s, pair.answer) : Infinity;
+  const nextQuestion = pair ? pairs[pairs.indexOf(pair) + 1] : undefined;
+  const answerEnd = Math.min(
+    answerStart + 3.5,
+    nextQuestion ? cue(s, nextQuestion.question) - 0.3 : s.duration - 0.4,
+  );
+  const lines: Line[] =
+    pair && at(pair.answer)
+      ? [{ id: pair.answer, text: pair.word, start: answerStart, end: answerEnd, y: 240 }]
+      : [];
+  const parts = [
+    at('box') ? 'box' : '',
+    at('desk') ? 'table' : '',
+    at('pulley') ? 'pulley' : '',
+    at('sphere') ? 'hanging' : '',
+    at('connects') ? 'string' : '',
+  ];
+  const note =
+    pair?.answer === 'particle' && at('separate')
+      ? 'Neglecting air resistance is a separate assumption'
+      : undefined;
+  return (
+    <>
+      {at('box') && (
+        <Diagram>
+          <System
+            sphere
+            parts={parts}
+            particle={pair?.answer === 'particle' && at('particle')}
+            tensions={
+              pair?.answer === 'smooth-pulley' && at('smooth-pulley') ? (at('tension-second') ? 2 : 1) : 0
+            }
+            travel={
+              pair?.answer === 'inextensible' && at('inextensible')
+                ? at('acceleration-second')
+                  ? 2
+                  : at('acceleration-first')
+                    ? 1
+                    : 0
+                : 0
+            }
+            acceleration
+          />
+        </Diagram>
+      )}
+      {pair && <Paper lines={lines} t={t} prompt={pair.prompt} note={note} />}
+    </>
+  );
+};
+
 const Recap: React.FC<{ s: Scene }> = ({ s }) => {
   const { fps } = useVideoConfig();
   const t = useCurrentFrame() / fps;
-  const index = t >= cue(s, 'predict') ? 2 : t >= cue(s, 'find') ? 1 : 0;
-  const tick = useCue(s, ['tick-explain', 'tick-find', 'tick-predict'][index]);
-  return <Card text={OUTCOMES[index]} centre tick={tick} />;
+  const index = t >= cue(s, 'match') ? 2 : t >= cue(s, 'list') ? 1 : 0;
+  const tick = useCue(s, ['tick-explain', 'tick-list', 'tick-match'][index]);
+  return t >= cue(s, 'explain') ? <Card text={OUTCOMES[index]} centre tick={tick} /> : null;
 };
-const CONTENT = [Opening, Particle, Light, StringMotion, OtherWords, Worked, Rough, Recap];
+const CONTENT = [Opening, ModellingCycle, FallingStone, Vocabulary, Matching, Recap];
 
 /** Optional still-audit instrumentation: measures rendered DOM, never on-screen text. */
 function useStillAudit(enabled: boolean, rootRef: React.RefObject<HTMLDivElement | null>) {
@@ -1498,7 +1647,9 @@ export const MechanicsModellingAssumptions: React.FC<MechanicsModellingAssumptio
               )}
               <TransitionSeries.Sequence
                 name={HEADERS[index]}
-                durationInFrames={Math.ceil(s.duration * fps) + (index < 7 ? TRANSITION_FRAMES : 0)}
+                durationInFrames={
+                  Math.ceil(s.duration * fps) + (index < SCENES.length - 1 ? TRANSITION_FRAMES : 0)
+                }
               >
                 <AbsoluteFill style={{ background: T.bg }}>
                   {index !== 0 && <Header>{HEADERS[index]}</Header>}
