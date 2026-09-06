@@ -106,7 +106,12 @@ def _gen_elevenlabs(text: str, voice: Optional[str], output_path) -> None:
     resp = requests.post(
         f"https://api.elevenlabs.io/v1/text-to-speech/{voice_id}",
         headers={"xi-api-key": api_key, "Content-Type": "application/json"},
-        json={"text": text, "model_id": "eleven_turbo_v2_5"},
+        json={
+            "text": text,
+            "model_id": "eleven_turbo_v2_5",
+            # Pacing (see projects/mechanics-syllabus-map/PACING.md): slow worked-example scenes at 0.9.
+            **({"voice_settings": {"speed": float(os.environ["ELEVENLABS_SPEED"])}} if os.environ.get("ELEVENLABS_SPEED") else {}),
+        },
         timeout=120,
     )
     if resp.status_code != 200:
