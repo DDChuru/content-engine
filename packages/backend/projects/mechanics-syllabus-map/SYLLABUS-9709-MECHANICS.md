@@ -2,7 +2,7 @@
 
 Source: [official 2026–2027 syllabus, version 4](https://www.cambridgeinternational.org/Images/697427-2026-2027-syllabus.pdf), accessed 6 September 2026. Printed pages and PDF page numbers coincide.
 
-**Status:** This is a concise reference summary, not the requested complete verbatim extraction. Full reproduction remains pending a user-provided PDF. Only the two blockquotes below are exact excerpts; do not present the other bullets as Cambridge quotations. The source was checked using `curl` and `pdftotext -layout`.
+**Status:** This is a concise reference summary, not the requested complete verbatim extraction. Full reproduction remains pending a user-provided PDF. Only the three blockquotes below are exact excerpts; do not present the other bullets as Cambridge quotations. The source was checked using `curl` and `pdftotext -layout`.
 
 ## 4.1 Forces and equilibrium
 
@@ -28,6 +28,10 @@ Exact opening excerpt (smooth-contact bullet; excerpt ends before its remaining 
 - Motion graphs: areas/gradients.
 - Time calculus; Paper 1 techniques.
 - Constant acceleration; multiple particles.
+
+Exact opening excerpt (graph bullet; verified from the official PDF with `pdftotext`, 6 September 2026):
+
+> sketch and interpret displacement–time graphs and velocity–time graphs
 
 ## 4.3 Momentum
 
