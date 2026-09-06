@@ -1,5 +1,5 @@
 /** Travel graphs: the recorded cyclist journey, drawn and explained leg by leg. */
-import React, { useLayoutEffect, useMemo, useState, useRef } from 'react';
+import React, { useLayoutEffect, useMemo, useState, useRef } from "react";
 import {
   AbsoluteFill,
   Artifact,
@@ -8,25 +8,25 @@ import {
   staticFile,
   useCurrentFrame,
   useVideoConfig,
-} from 'remotion';
+} from "remotion";
 import {
   TransitionSeries,
   linearTiming,
   type TransitionPresentation,
   type TransitionPresentationComponentProps,
-} from '@remotion/transitions';
-import transcriptJson from '../public/transcripts/mechanics/drawing-travel-graphs.json';
+} from "@remotion/transitions";
+import transcriptJson from "../public/transcripts/mechanics/drawing-travel-graphs.json";
 
 const TRANSITION_FRAMES = 15;
 const T = {
-  bg: '#171c20',
-  paper: '#f6f3eb',
-  ink: '#273238',
-  line: '#d8dad5',
-  text: '#e9e7e0',
-  muted: '#a9afad',
-  accent: '#3f9e89',
-  sans: 'Arial, sans-serif',
+  bg: "#171c20",
+  paper: "#f6f3eb",
+  ink: "#273238",
+  line: "#d8dad5",
+  text: "#e9e7e0",
+  muted: "#a9afad",
+  accent: "#3f9e89",
+  sans: "Arial, sans-serif",
 };
 interface Word {
   word: string;
@@ -51,18 +51,19 @@ interface Scene {
 }
 const SCENES = transcriptJson.scenes as unknown as Scene[];
 const OUTCOMES = [
-  'Turn journey descriptions into graph shapes.',
-  'Use signed area to find displacement.',
-  'Explain a journey using displacement-time gradients.',
+  "Turn journey descriptions into graph shapes.",
+  "Use signed area to find displacement.",
+  "Explain a journey using displacement-time gradients.",
 ];
 const HEADERS = [
-  'What you will learn',
-  'Read the graph correctly',
-  'Draw the cyclist’s velocity',
-  'Find when the cyclist returns',
-  'Choose straight lines or curves',
-  'Check before the final journey',
-  'Explain the whole journey',
+  "What you will learn",
+  "Follow the cyclist",
+  "Read the graph correctly",
+  "Draw the cyclist’s velocity",
+  "Find when the cyclist returns",
+  "Choose straight lines or curves",
+  "Check before the final journey",
+  "Explain the whole journey",
 ];
 export interface MechanicsDrawingTravelGraphsProps {
   audioEnabled?: boolean;
@@ -73,7 +74,8 @@ export function getMechanicsDrawingTravelGraphsDuration(fps: number): number {
 }
 const clamp = (n: number) => Math.max(0, Math.min(1, n));
 const mix = (a: number, b: number, p: number) => a + (b - a) * p;
-const progressBetween = (f: number, a: number, b: number) => clamp((f - a) / Math.max(1, b - a));
+const progressBetween = (f: number, a: number, b: number) =>
+  clamp((f - a) / Math.max(1, b - a));
 function cue(s: Scene, id: string): number {
   const t = s.cues[id];
   if (t === undefined) throw new Error(`Missing cue ${s.id}:${id}`);
@@ -85,33 +87,41 @@ function useCue(s: Scene, id: string): boolean {
   return f >= Math.ceil(cue(s, id) * fps);
 }
 function latest(s: Scene, t: number, ids: string[]): string {
-  return ids.filter((id) => t >= cue(s, id)).at(-1) ?? '';
+  return ids.filter((id) => t >= cue(s, id)).at(-1) ?? "";
 }
 function heldTime(s: Scene, t: number): number {
-  const hold = s.holds.find((h) => h.kind === 'hold' && t >= h.start && t < h.end);
+  const hold = s.holds.find(
+    (h) => h.kind === "hold" && t >= h.start && t < h.end,
+  );
   return hold ? hold.start : t;
 }
 
 // Same fade-through presentation as MechanicsVelocityTimeGraphs: the two
 // scenes never remain visible together. Audio runs outside the fade overlap.
 type FadeProps = { background: string };
-const FadeThrough: React.FC<TransitionPresentationComponentProps<FadeProps>> = ({
+const FadeThrough: React.FC<
+  TransitionPresentationComponentProps<FadeProps>
+> = ({
   children,
   passedProps,
   presentationDirection,
   presentationProgress,
 }) => {
   const opacity =
-    presentationDirection === 'exiting'
+    presentationDirection === "exiting"
       ? interpolate(presentationProgress, [0, 0.5], [1, 0], {
-          extrapolateLeft: 'clamp',
-          extrapolateRight: 'clamp',
+          extrapolateLeft: "clamp",
+          extrapolateRight: "clamp",
         })
       : interpolate(presentationProgress, [0.5, 1], [0, 1], {
-          extrapolateLeft: 'clamp',
-          extrapolateRight: 'clamp',
+          extrapolateLeft: "clamp",
+          extrapolateRight: "clamp",
         });
-  return <AbsoluteFill style={{ background: passedProps.background, opacity }}>{children}</AbsoluteFill>;
+  return (
+    <AbsoluteFill style={{ background: passedProps.background, opacity }}>
+      {children}
+    </AbsoluteFill>
+  );
 };
 const fadeThroughGraphite: TransitionPresentation<FadeProps> = {
   component: FadeThrough,
@@ -121,7 +131,14 @@ const fadeThroughGraphite: TransitionPresentation<FadeProps> = {
 const Header: React.FC<{ children: React.ReactNode }> = ({ children }) => (
   <div
     data-region="header"
-    style={{ position: 'absolute', left: 100, top: 72, color: T.text, fontSize: 57, fontWeight: 600 }}
+    style={{
+      position: "absolute",
+      left: 100,
+      top: 72,
+      color: T.text,
+      fontSize: 57,
+      fontWeight: 600,
+    }}
   >
     {children}
   </div>
@@ -135,16 +152,16 @@ const Card: React.FC<{ text: string; centre?: boolean; tick?: boolean }> = ({
     data-region="card"
     data-card="true"
     style={{
-      position: 'absolute',
-      left: centre ? 300 : 1050,
+      position: "absolute",
+      left: centre ? 300 : 1120,
       top: centre ? 330 : 370,
-      width: centre ? 1320 : 740,
+      width: centre ? 1320 : 730,
       minHeight: 230,
-      padding: '55px 58px',
-      boxSizing: 'border-box',
+      padding: "55px 58px",
+      boxSizing: "border-box",
       background: T.paper,
       color: T.ink,
-      fontSize: centre ? 62 : 52,
+      fontSize: centre ? 62 : 48,
       lineHeight: 1.35,
       borderRadius: 8,
     }}
@@ -156,9 +173,15 @@ const Card: React.FC<{ text: string; centre?: boolean; tick?: boolean }> = ({
         width="70"
         height="60"
         viewBox="0 0 70 60"
-        style={{ display: 'block', marginTop: 28 }}
+        style={{ display: "block", marginTop: 28 }}
       >
-        <path d="M8 28 L27 47 L61 9" fill="none" stroke={T.accent} strokeWidth="7" strokeLinecap="round" />
+        <path
+          d="M8 28 L27 47 L61 9"
+          fill="none"
+          stroke={T.accent}
+          strokeWidth="7"
+          strokeLinecap="round"
+        />
       </svg>
     )}
   </div>
@@ -167,9 +190,9 @@ const Diagram: React.FC<{ children: React.ReactNode }> = ({ children }) => (
   <svg
     data-region="diagram"
     viewBox="0 0 850 710"
-    width="850"
-    height="710"
-    style={{ position: 'absolute', left: 100, top: 240, overflow: 'visible' }}
+    width="1030"
+    height="860"
+    style={{ position: "absolute", left: 20, top: 180, overflow: "visible" }}
   >
     <defs>
       <marker
@@ -201,7 +224,7 @@ const Arrow: React.FC<{
       d={`M${x} ${y} l${dx} ${dy}`}
       fill="none"
       strokeWidth="5"
-      strokeDasharray={dashed ? '9 8' : undefined}
+      strokeDasharray={dashed ? "9 8" : undefined}
       markerEnd="url(#model-arrow)"
     />
     {label && (
@@ -210,22 +233,34 @@ const Arrow: React.FC<{
         y={y + dy / 2 - (dx ? 22 : 0)}
         stroke="none"
         fontSize="35"
-        textAnchor={dx ? 'middle' : 'start'}
+        textAnchor={dx ? "middle" : "start"}
       >
         {label}
       </text>
     )}
   </g>
 );
-const Ring: React.FC<{ x: number; y: number; rx?: number }> = ({ x, y, rx = 65 }) => (
-  <ellipse cx={x} cy={y} rx={rx} ry="40" fill="none" stroke={T.accent} strokeWidth="5" />
+const Ring: React.FC<{ x: number; y: number; rx?: number }> = ({
+  x,
+  y,
+  rx = 65,
+}) => (
+  <ellipse
+    cx={x}
+    cy={y}
+    rx={rx}
+    ry="40"
+    fill="none"
+    stroke={T.accent}
+    strokeWidth="5"
+  />
 );
 
 type Point = readonly [number, number];
 type Glyph = Point[][];
 
 const G: Record<string, Glyph> = {
-  '0': [
+  "0": [
     [
       [2, 2],
       [7, 0],
@@ -237,7 +272,7 @@ const G: Record<string, Glyph> = {
       [2, 2],
     ],
   ],
-  '1': [
+  "1": [
     [
       [2, 4],
       [6, 0],
@@ -248,7 +283,7 @@ const G: Record<string, Glyph> = {
       [10, 16],
     ],
   ],
-  '2': [
+  "2": [
     [
       [0, 3],
       [3, 0],
@@ -259,7 +294,7 @@ const G: Record<string, Glyph> = {
       [11, 16],
     ],
   ],
-  '3': [
+  "3": [
     [
       [0, 2],
       [4, 0],
@@ -277,7 +312,7 @@ const G: Record<string, Glyph> = {
       [7, 8],
     ],
   ],
-  '4': [
+  "4": [
     [
       [9, 16],
       [9, 0],
@@ -285,7 +320,7 @@ const G: Record<string, Glyph> = {
       [12, 11],
     ],
   ],
-  '5': [
+  "5": [
     [
       [10, 0],
       [1, 0],
@@ -297,7 +332,7 @@ const G: Record<string, Glyph> = {
       [1, 14],
     ],
   ],
-  '6': [
+  "6": [
     [
       [10, 1],
       [6, 0],
@@ -311,14 +346,14 @@ const G: Record<string, Glyph> = {
       [1, 9],
     ],
   ],
-  '7': [
+  "7": [
     [
       [0, 1],
       [11, 1],
       [4, 16],
     ],
   ],
-  '8': [
+  "8": [
     [
       [5, 8],
       [1, 6],
@@ -335,7 +370,7 @@ const G: Record<string, Glyph> = {
       [5, 8],
     ],
   ],
-  '9': [
+  "9": [
     [
       [10, 8],
       [7, 9],
@@ -445,7 +480,7 @@ const G: Record<string, Glyph> = {
       [10, 7],
     ],
   ],
-  '=': [
+  "=": [
     [
       [0, 6],
       [12, 6],
@@ -455,7 +490,7 @@ const G: Record<string, Glyph> = {
       [12, 12],
     ],
   ],
-  '+': [
+  "+": [
     [
       [0, 9],
       [12, 9],
@@ -465,19 +500,19 @@ const G: Record<string, Glyph> = {
       [6, 15],
     ],
   ],
-  '-': [
+  "-": [
     [
       [0, 9],
       [11, 9],
     ],
   ],
-  '/': [
+  "/": [
     [
       [0, 18],
       [11, 0],
     ],
   ],
-  '(': [
+  "(": [
     [
       [9, 0],
       [5, 3],
@@ -487,7 +522,7 @@ const G: Record<string, Glyph> = {
       [9, 19],
     ],
   ],
-  ')': [
+  ")": [
     [
       [2, 0],
       [6, 3],
@@ -497,7 +532,7 @@ const G: Record<string, Glyph> = {
       [2, 19],
     ],
   ],
-  '.': [
+  ".": [
     [
       [4, 15],
       [5, 16],
@@ -531,7 +566,7 @@ const G: Record<string, Glyph> = {
       [12, 16],
     ],
   ],
-  '≤': [
+  "≤": [
     [
       [11, 2],
       [1, 8],
@@ -542,7 +577,7 @@ const G: Record<string, Glyph> = {
       [12, 17],
     ],
   ],
-  '~': [
+  "~": [
     [
       [0, 10],
       [3, 7],
@@ -550,7 +585,7 @@ const G: Record<string, Glyph> = {
       [11, 8],
     ],
   ],
-  '≈': [
+  "≈": [
     [
       [0, 6],
       [3, 4],
@@ -582,7 +617,7 @@ Object.assign(G, {
       [0, 16],
     ],
   ],
-  '×': [
+  "×": [
     [
       [0, 3],
       [11, 14],
@@ -761,7 +796,12 @@ Object.assign(G, {
   ],
 });
 
-const GLYPH_ADVANCE: Record<string, number> = { ' ': 7, '.': 6, '(': 9, ')': 9 };
+const GLYPH_ADVANCE: Record<string, number> = {
+  " ": 7,
+  ".": 6,
+  "(": 9,
+  ")": 9,
+};
 
 interface InkStroke {
   id: string;
@@ -776,14 +816,20 @@ interface InkStroke {
 
 function pointsPath(points: Point[]): string {
   return points
-    .map(([x, y], index) => `${index === 0 ? 'M' : 'L'} ${x.toFixed(2)} ${y.toFixed(2)}`)
-    .join(' ');
+    .map(
+      ([x, y], index) =>
+        `${index === 0 ? "M" : "L"} ${x.toFixed(2)} ${y.toFixed(2)}`,
+    )
+    .join(" ");
 }
 
 function pointsLength(points: Point[]): number {
   let length = 0;
   for (let index = 1; index < points.length; index += 1) {
-    length += Math.hypot(points[index][0] - points[index - 1][0], points[index][1] - points[index - 1][1]);
+    length += Math.hypot(
+      points[index][0] - points[index - 1][0],
+      points[index][1] - points[index - 1][1],
+    );
   }
   return Math.max(1, length);
 }
@@ -814,12 +860,22 @@ function makeInkLine(options: {
   color?: string;
   width?: number;
 }): InkStroke[] {
-  const { id, text, x, y, scale, startFrame, endFrame, color = T.ink, width = 3.4 } = options;
+  const {
+    id,
+    text,
+    x,
+    y,
+    scale,
+    startFrame,
+    endFrame,
+    color = T.ink,
+    width = 3.4,
+  } = options;
   const raw: Array<{ points: Point[]; length: number }> = [];
   let cursor = x;
   for (const char of text) {
-    if (char === ' ') {
-      cursor += GLYPH_ADVANCE[' '] * scale;
+    if (char === " ") {
+      cursor += GLYPH_ADVANCE[" "] * scale;
       continue;
     }
     const glyph = G[char];
@@ -827,17 +883,29 @@ function makeInkLine(options: {
       throw new Error(`Missing handwriting glyph: ${char}`);
     }
     for (const segment of glyph) {
-      const points = segment.map(([px, py]) => [cursor + (px + py * 0.055) * scale, y + py * scale] as Point);
+      const points = segment.map(
+        ([px, py]) =>
+          [cursor + (px + py * 0.055) * scale, y + py * scale] as Point,
+      );
       raw.push({ points, length: pointsLength(points) });
     }
     cursor += (GLYPH_ADVANCE[char] ?? 14) * scale;
   }
   const totalLength = raw.reduce((sum, stroke) => sum + stroke.length, 0);
-  const gap = Math.min(1.2, Math.max(0, endFrame - startFrame) / (raw.length * 4));
-  const available = Math.max(0.01, endFrame - startFrame - gap * Math.max(0, raw.length - 1));
+  const gap = Math.min(
+    1.2,
+    Math.max(0, endFrame - startFrame) / (raw.length * 4),
+  );
+  const available = Math.max(
+    0.01,
+    endFrame - startFrame - gap * Math.max(0, raw.length - 1),
+  );
   let nextFrame = startFrame;
   return raw.map((stroke, index) => {
-    const durationFrames = Math.max(0.001, (available * stroke.length) / totalLength);
+    const durationFrames = Math.max(
+      0.001,
+      (available * stroke.length) / totalLength,
+    );
     const result: InkStroke = {
       id: `${id}-${index}`,
       points: stroke.points,
@@ -860,8 +928,15 @@ const InkPlayback: React.FC<{
 }> = ({ strokes, frame, showHand = true }) => {
   let active: { stroke: InkStroke; progress: number } | null = null;
   const paths = strokes.map((stroke) => {
-    const progress = progressBetween(frame, stroke.startFrame, stroke.startFrame + stroke.durationFrames);
-    if (frame >= stroke.startFrame && frame < stroke.startFrame + stroke.durationFrames) {
+    const progress = progressBetween(
+      frame,
+      stroke.startFrame,
+      stroke.startFrame + stroke.durationFrames,
+    );
+    if (
+      frame >= stroke.startFrame &&
+      frame < stroke.startFrame + stroke.durationFrames
+    ) {
       active = { stroke, progress };
     }
     if (progress <= 0) return null;
@@ -887,8 +962,25 @@ const InkPlayback: React.FC<{
       {paths}
       {showHand && penPoint && (
         <g transform={`translate(${penPoint[0]} ${penPoint[1]}) rotate(-24)`}>
-          <ellipse cx={25} cy={22} rx={25} ry={17} fill="#b5b9b5" stroke="#737976" strokeWidth={2.2} />
-          <rect x={-7} y={-3} width={53} height={8} rx={4} fill={T.accent} stroke={T.ink} strokeWidth={2} />
+          <ellipse
+            cx={25}
+            cy={22}
+            rx={25}
+            ry={17}
+            fill="#b5b9b5"
+            stroke="#737976"
+            strokeWidth={2.2}
+          />
+          <rect
+            x={-7}
+            y={-3}
+            width={53}
+            height={8}
+            rx={4}
+            fill={T.accent}
+            stroke={T.ink}
+            strokeWidth={2}
+          />
           <path d="M -10 1 L -2 -4 L -2 6 Z" fill={T.ink} />
           <circle cx={-10} cy={1} r={3.5} fill={T.ink} />
         </g>
@@ -907,22 +999,29 @@ interface Line {
   resultAt?: number;
   prefixEnd?: number;
 }
-const Paper: React.FC<{ lines: Line[]; t: number; ringLine?: number; prompt?: string; note?: string }> = ({
-  lines,
-  t,
-  ringLine = -1,
-  prompt,
-  note,
-}) => {
+const Paper: React.FC<{
+  lines: Line[];
+  t: number;
+  ringLine?: number;
+  prompt?: string;
+  note?: string;
+}> = ({ lines, t, ringLine = -1, prompt, note }) => {
   const { fps } = useVideoConfig();
   const strokes = useMemo(
     () =>
       lines.map((line) => {
-        const width = line.text.split('').reduce((n: number, c: string) => n + (GLYPH_ADVANCE[c] ?? 14), 0);
+        const width = line.text
+          .split("")
+          .reduce((n: number, c: string) => n + (GLYPH_ADVANCE[c] ?? 14), 0);
         const scale = Math.min(2.8, 655 / width);
-        const split = line.resultAt === undefined ? line.text.length : line.text.lastIndexOf('=') + 1;
+        const split =
+          line.resultAt === undefined
+            ? line.text.length
+            : line.text.lastIndexOf("=") + 1;
         const prefix = line.text.slice(0, split);
-        const prefixWidth = prefix.split('').reduce((n, c) => n + (GLYPH_ADVANCE[c] ?? 14), 0) * scale;
+        const prefixWidth =
+          prefix.split("").reduce((n, c) => n + (GLYPH_ADVANCE[c] ?? 14), 0) *
+          scale;
         const base = makeInkLine({
           id: line.id,
           text: prefix,
@@ -971,29 +1070,43 @@ const Paper: React.FC<{ lines: Line[]; t: number; ringLine?: number; prompt?: st
   );
   const ring = ringLine >= 0 ? lines[ringLine] : undefined;
   const ringWidth = ring
-    ? ring.text.split('').reduce((n: number, c: string) => n + (GLYPH_ADVANCE[c] ?? 14), 0)
+    ? ring.text
+        .split("")
+        .reduce((n: number, c: string) => n + (GLYPH_ADVANCE[c] ?? 14), 0)
     : 1;
   const ringScale = Math.min(2.8, 655 / ringWidth);
-  const prefix = ring ? ring.text.slice(0, ring.text.lastIndexOf('=') + 1) : '';
+  const prefix = ring ? ring.text.slice(0, ring.text.lastIndexOf("=") + 1) : "";
   const prefixWidth =
-    prefix.split('').reduce((n: number, c: string) => n + (GLYPH_ADVANCE[c] ?? 14), 0) * ringScale;
+    prefix
+      .split("")
+      .reduce((n: number, c: string) => n + (GLYPH_ADVANCE[c] ?? 14), 0) *
+    ringScale;
   const resultWidth = ringWidth * ringScale - prefixWidth;
   return (
     <svg
       data-region="paper"
-      width="810"
+      width="760"
       height="660"
       viewBox="0 0 810 660"
-      style={{ position: 'absolute', left: 1010, top: 250 }}
+      style={{ position: "absolute", left: 1110, top: 250 }}
     >
       <rect width="810" height="660" rx="8" fill={T.paper} />
       {Array.from({ length: 12 }, (_, i) => (
-        <path key={i} d={`M30 ${70 + i * 48} H780`} fill="none" stroke={T.line} strokeWidth="1.5" />
+        <path
+          key={i}
+          d={`M30 ${70 + i * 48} H780`}
+          fill="none"
+          stroke={T.line}
+          strokeWidth="1.5"
+        />
       ))}
       <path d="M48 25 V635" stroke={T.line} strokeWidth="2" />
       {lines.map((line, i) =>
         t >= line.start ? (
-          <g key={line.id} data-ink-text={line.text + (line.exponent ? line.exponent : '')}>
+          <g
+            key={line.id}
+            data-ink-text={line.text + (line.exponent ? line.exponent : "")}
+          >
             <InkPlayback strokes={strokes[i]} frame={t * fps} />
           </g>
         ) : null,
@@ -1026,10 +1139,10 @@ const Paper: React.FC<{ lines: Line[]; t: number; ringLine?: number; prompt?: st
 const TIMES = [0, 10, 22, 27, 31, 53];
 const POSITIONS = [0, 60, 96, 96, 88, 0];
 const SPEEDS = [6, 6, 0, 0, -4, -4];
-type Kind = 'velocity' | 'displacement';
+type Kind = "velocity" | "displacement";
 const gx = (n: number) => 90 + (n / 58) * 600;
 const gy = (kind: Kind, n: number) =>
-  kind === 'velocity' ? 70 + ((8 - n) / 14) * 470 : 560 - (n / 110) * 470;
+  kind === "velocity" ? 70 + ((8 - n) / 14) * 470 : 560 - (n / 110) * 470;
 function position(n: number): number {
   if (n <= 10) return 6 * n;
   if (n <= 22) return 60 + 6 * (n - 10) - 0.25 * (n - 10) ** 2;
@@ -1042,13 +1155,20 @@ function phasePoints(kind: Kind, i: number): Point[] {
     const time = mix(TIMES[i], TIMES[i + 1], j / 50);
     return [
       gx(time),
-      gy(kind, kind === 'velocity' ? mix(SPEEDS[i], SPEEDS[i + 1], j / 50) : position(time)),
+      gy(
+        kind,
+        kind === "velocity"
+          ? mix(SPEEDS[i], SPEEDS[i + 1], j / 50)
+          : position(time),
+      ),
     ] as Point;
   });
 }
 function wordEnd(s: Scene, id: string): number {
   const at = cue(s, id);
-  return s.words.find((w) => w.end >= at && w.start >= at - 0.08)?.end ?? at + 0.4;
+  return (
+    s.words.find((w) => w.end >= at && w.start >= at - 0.08)?.end ?? at + 0.4
+  );
 }
 const GraphStroke: React.FC<{
   points: Point[];
@@ -1060,7 +1180,7 @@ const GraphStroke: React.FC<{
 }> = ({ points, start, end, t, accent = true, curve = false }) => {
   const { fps } = useVideoConfig();
   const stroke: InkStroke = {
-    id: 'graph-stroke',
+    id: "graph-stroke",
     points,
     d: pointsPath(points),
     length: pointsLength(points),
@@ -1069,9 +1189,16 @@ const GraphStroke: React.FC<{
     color: accent ? T.accent : T.muted,
     width: 4,
   };
+  const trace = pointOnStroke(
+    stroke,
+    clamp((t - start) / Math.max(0.01, end - start)),
+  );
   return t >= start ? (
     <g data-graph-curve={curve || undefined}>
       <InkPlayback strokes={[stroke]} frame={t * fps} />
+      {curve && t < end && (
+        <circle cx={trace[0]} cy={trace[1]} r={6} fill={T.accent} />
+      )}
     </g>
   ) : null;
 };
@@ -1087,7 +1214,8 @@ const GraphInk: React.FC<{
 }> = ({ text, x, y, start, end, t, scale = 1.55, ring = false }) => {
   const { fps } = useVideoConfig();
   const width = (value: string) =>
-    value.split('').reduce((sum, ch) => sum + (GLYPH_ADVANCE[ch] ?? 14), 0) * scale;
+    value.split("").reduce((sum, ch) => sum + (GLYPH_ADVANCE[ch] ?? 14), 0) *
+    scale;
   const strokes = makeInkLine({
     id: text,
     text,
@@ -1099,7 +1227,7 @@ const GraphInk: React.FC<{
     color: T.text,
     width: 2.8,
   });
-  const prefix = text.slice(0, text.lastIndexOf('=') + 1);
+  const prefix = text.slice(0, text.lastIndexOf("=") + 1);
   return t >= start ? (
     <g data-ink-text={text}>
       <InkPlayback strokes={strokes} frame={t * fps} />
@@ -1117,18 +1245,18 @@ const GraphInk: React.FC<{
     </g>
   ) : null;
 };
-const Axes: React.FC<{ kind: Kind; count: number; solved?: boolean; numeric?: boolean }> = ({
-  kind,
-  count,
-  solved = false,
-  numeric = true,
-}) => {
+const Axes: React.FC<{
+  kind: Kind;
+  count: number;
+  solved?: boolean;
+  numeric?: boolean;
+}> = ({ kind, count, solved = false, numeric = true }) => {
   const zero = gy(kind, 0);
   const ticks = numeric ? TIMES.slice(0, count + 1) : [];
   const values =
     !numeric || count === 0
       ? []
-      : kind === 'velocity'
+      : kind === "velocity"
         ? count >= 4
           ? [6, -4]
           : [6]
@@ -1140,16 +1268,36 @@ const Axes: React.FC<{ kind: Kind; count: number; solved?: boolean; numeric?: bo
       <path d={`M90 50 V570 M90 ${zero} H710`} fill="none" strokeWidth="2.5" />
       {ticks.map((n) => (
         <g key={n}>
-          <path data-axis-tick="true" d={`M${gx(n)} ${zero - 6} v12`} strokeWidth="2" />
-          <text data-axis-text="true" x={gx(n)} y="650" textAnchor="middle" stroke="none">
-            {n === 53 && !solved ? 'T' : n}
+          <path
+            data-axis-tick="true"
+            d={`M${gx(n)} ${zero - 6} v12`}
+            strokeWidth="2"
+          />
+          <text
+            data-axis-text="true"
+            x={gx(n)}
+            y="650"
+            textAnchor="middle"
+            stroke="none"
+          >
+            {n === 53 && !solved ? "T" : n}
           </text>
         </g>
       ))}
       {values.map((n) => (
         <g key={n}>
-          <path data-axis-tick="true" d={`M84 ${gy(kind, n)} h12`} strokeWidth="2" />
-          <text data-axis-text="true" x="70" y={gy(kind, n) + 8} textAnchor="end" stroke="none">
+          <path
+            data-axis-tick="true"
+            d={`M84 ${gy(kind, n)} h12`}
+            strokeWidth="2"
+          />
+          <text
+            data-axis-text="true"
+            x="70"
+            y={gy(kind, n) + 8}
+            textAnchor="end"
+            stroke="none"
+          >
             {n}
           </text>
         </g>
@@ -1158,7 +1306,7 @@ const Axes: React.FC<{ kind: Kind; count: number; solved?: boolean; numeric?: bo
         t / s
       </text>
       <text data-axis-text="true" x="90" y="25" stroke="none" fontSize="30">
-        {kind === 'velocity' ? 'v / (m s⁻¹)' : 's / m'}
+        {kind === "velocity" ? "v / (m s⁻¹)" : "s / m"}
       </text>
     </g>
   );
@@ -1190,20 +1338,227 @@ const TravelGraph: React.FC<{
     {children}
   </Diagram>
 );
+function signpostEnd(s: Scene, id: string): number {
+  return s.holds.find(
+    (h) => h.kind === "hold" && h.duration === 1.5 && h.start >= cue(s, id),
+  )!.end;
+}
+const Signpost: React.FC<{ kind: Kind }> = ({ kind }) => (
+  <Card centre text={`Now the ${kind}–time graph.`} />
+);
+const SceneHeader: React.FC<{ s: Scene; fallback: string }> = ({
+  s,
+  fallback,
+}) => {
+  const { fps } = useVideoConfig();
+  const t = heldTime(s, useCurrentFrame() / fps);
+  let title = fallback;
+  if (s.id === "s02")
+    title =
+      t >= cue(s, "displacement-signpost")
+        ? "Displacement–time graph"
+        : "Velocity–time graph";
+  if (s.id === "s03" || s.id === "s04") title = "Velocity–time graph";
+  if (s.id === "s07") title = "Displacement–time graph";
+  if (s.id === "s05")
+    title =
+      t < signpostEnd(s, "signpost")
+        ? "Displacement–time graph"
+        : "One journey, both graphs";
+  return <Header>{title}</Header>;
+};
+
+// Story first: motion along an ordinary road, with no graph axes.
+const CyclistStory: React.FC<{ s: Scene }> = ({ s }) => {
+  const { fps } = useVideoConfig();
+  const t = heldTime(s, useCurrentFrame() / fps);
+  const phase = (a: string, b: string) =>
+    clamp((t - cue(s, a)) / Math.max(0.01, cue(s, b) - cue(s, a)));
+  const origin = 220,
+    cruiseEnd = 940,
+    stop = 1372,
+    reverseEnd = 1276;
+  const outward = phase("cruise", "slowing");
+  const braking = phase("slowing", "stop");
+  const cruiseSpeed =
+    (cruiseEnd - origin) / (cue(s, "slowing") - cue(s, "cruise"));
+  const brakingPower = Math.max(
+    1.05,
+    (cruiseSpeed * (cue(s, "stop") - cue(s, "slowing"))) / (stop - cruiseEnd),
+  );
+  const accelerating = phase("pedal", "return");
+  const returning = phase("return", "home");
+  let x = mix(origin, cruiseEnd, outward);
+  if (t >= cue(s, "slowing"))
+    x = mix(cruiseEnd, stop, 1 - (1 - braking) ** brakingPower);
+  if (t >= cue(s, "stop")) x = stop;
+  if (t >= cue(s, "pedal"))
+    x = mix(stop, reverseEnd, accelerating * accelerating);
+  if (t >= cue(s, "return")) x = mix(reverseEnd, origin, returning);
+  const reverse = t >= cue(s, "turn");
+  const distance = reverse ? stop - origin + stop - x : x - origin;
+  const rotation = ((distance / 33) * 180) / Math.PI;
+  const leg = (rotation * Math.PI) / 360;
+  const card =
+    t >= cue(s, "home")
+      ? "Home at A"
+      : t >= cue(s, "four")
+        ? "4 m/s on the return"
+        : t >= cue(s, "turn")
+          ? "Turning back"
+          : t >= cue(s, "rest")
+            ? "Resting"
+            : t >= cue(s, "slowing")
+              ? "Slowing to a stop"
+              : t >= cue(s, "ten")
+                ? "10 s at 6 m/s"
+                : t >= cue(s, "six")
+                  ? "6 m/s"
+                  : "";
+  return (
+    <>
+      {card && (
+        <div
+          data-region="card"
+          data-card="true"
+          style={{
+            position: "absolute",
+            left: 610,
+            top: 225,
+            width: 700,
+            padding: "26px 35px",
+            background: T.paper,
+            color: T.ink,
+            borderRadius: 8,
+            fontSize: 46,
+            textAlign: "center",
+          }}
+        >
+          {card}
+        </div>
+      )}
+      <svg
+        data-region="story"
+        width="1760"
+        height="600"
+        viewBox="0 0 1760 600"
+        style={{ position: "absolute", left: 80, top: 360 }}
+      >
+        <path
+          d="M90 330 H1680 M90 355 H1680"
+          stroke={T.muted}
+          strokeWidth={3}
+          fill="none"
+        />
+        <path
+          d="M90 343 H1680"
+          stroke={T.muted}
+          strokeWidth={2}
+          strokeDasharray="35 30"
+          opacity={0.35}
+        />
+        <path d={`M${origin} 325 V375`} stroke={T.text} strokeWidth={4} />
+        <text
+          x={origin}
+          y={425}
+          fill={T.text}
+          fontSize={48}
+          textAnchor="middle"
+        >
+          A
+        </text>
+        {[
+          [cruiseEnd, "slowing"],
+          [stop, "stop"],
+          [reverseEnd, "four"],
+        ].map(
+          ([place, id]) =>
+            t >= cue(s, String(id)) && (
+              <circle
+                key={id}
+                cx={Number(place)}
+                cy={355}
+                r={7}
+                fill={T.accent}
+              />
+            ),
+        )}
+        <g
+          data-cyclist-x={x}
+          data-wheel-angle={rotation}
+          data-direction={reverse ? -1 : 1}
+          transform={`translate(${x} 295) scale(${reverse ? -1 : 1} 1)`}
+        >
+          {[-48, 48].map((wheel) => (
+            <g
+              key={wheel}
+              transform={`translate(${wheel} 0) rotate(${rotation})`}
+              stroke={T.text}
+              fill="none"
+            >
+              <circle r={33} strokeWidth={5} />
+              <path
+                d="M-30 0 H30 M0 -30 V30 M-21 -21 L21 21 M-21 21 L21 -21"
+                strokeWidth={2}
+              />
+              <circle r={4} fill={T.text} />
+            </g>
+          ))}
+          <path
+            d="M-48 0 L-15 -48 L12 0 Z M-15 -48 H28 L12 0 M28 -48 L48 0 M28 -48 L24 -66 H43 M-25 -51 H-5"
+            fill="none"
+            stroke={T.accent}
+            strokeWidth={6}
+            strokeLinejoin="round"
+            strokeLinecap="round"
+          />
+          <circle cx={3} cy={-119} r={14} fill={T.text} />
+          <path
+            d="M-4 -101 L-22 -63 L-9 -49 M-4 -98 L21 -76 L35 -67"
+            fill="none"
+            stroke={T.text}
+            strokeWidth={9}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d={`M-20 -62 L${-12 + Math.cos(leg) * 16} ${-28 + Math.sin(leg) * 12} L${12 + Math.cos(leg) * 14} ${Math.sin(leg) * 14}`}
+            fill="none"
+            stroke={T.text}
+            strokeWidth={8}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </g>
+      </svg>
+    </>
+  );
+};
+
 const Opening: React.FC<{ s: Scene }> = ({ s }) => {
   const { fps } = useVideoConfig();
   const t = useCurrentFrame() / fps;
-  const state = latest(s, t, ['syllabus', 'quote', 'outcomes', 'shapes', 'area', 'gradients']);
-  const index = ['shapes', 'area', 'gradients'].indexOf(state);
+  const state = latest(s, t, [
+    "syllabus",
+    "quote",
+    "outcomes",
+    "shapes",
+    "area",
+    "gradients",
+  ]);
+  const index = ["shapes", "area", "gradients"].indexOf(state);
   return (
     <>
       <Header>
-        {['outcomes', 'shapes', 'area', 'gradients'].includes(state)
-          ? 'By the end you can...'
-          : 'Syllabus 4.2 · p.32 (excerpt)'}
+        {["outcomes", "shapes", "area", "gradients"].includes(state)
+          ? "By the end you can..."
+          : "Syllabus 4.2 · p.32 (excerpt)"}
       </Header>
-      {state === 'quote' && (
-        <Card centre text="sketch and interpret displacement–time graphs and velocity–time graphs" />
+      {state === "quote" && (
+        <Card
+          centre
+          text="sketch and interpret displacement–time graphs and velocity–time graphs"
+        />
       )}
       {index >= 0 && <Card centre text={OUTCOMES[index]} />}
     </>
@@ -1212,44 +1567,78 @@ const Opening: React.FC<{ s: Scene }> = ({ s }) => {
 const GraphFacts: React.FC<{ s: Scene }> = ({ s }) => {
   const { fps } = useVideoConfig();
   const t = useCurrentFrame() / fps;
-  const state = latest(s, t, ['velocity', 'slope', 'area', 'negative', 'displacement', 'return']);
-  const kind = ['displacement', 'return'].includes(state) ? 'displacement' : 'velocity';
-  const negative = state === 'negative';
+  const state = latest(s, t, [
+    "velocity",
+    "slope",
+    "area",
+    "negative",
+    "displacement-signpost",
+    "displacement",
+    "return",
+  ]);
+  if (state === "velocity" || state === "displacement-signpost")
+    return (
+      <Signpost kind={state === "velocity" ? "velocity" : "displacement"} />
+    );
+  const kind = ["displacement", "return"].includes(state)
+    ? "displacement"
+    : "velocity";
+  const negative = state === "negative";
   const points: Point[] =
-    kind === 'displacement'
+    kind === "displacement"
       ? [
           [160, 180],
           [610, 510],
         ]
       : negative
         ? [
-            [160, gy('velocity', 0)],
+            [160, gy("velocity", 0)],
             [610, 490],
           ]
         : [
-            [160, gy('velocity', 0)],
+            [160, gy("velocity", 0)],
             [610, 130],
           ];
   const names: Record<string, string> = {
-    slope: 'Gradient gives acceleration',
-    area: 'Signed area gives displacement',
-    negative: 'Below-axis area is negative',
-    displacement: 'Gradient gives velocity',
-    return: 'Negative velocity means returning',
+    slope: "Gradient gives acceleration",
+    area: "Signed area gives displacement",
+    negative: "Below-axis area is negative",
+    displacement: "Gradient gives velocity",
+    return: "Negative velocity means returning",
   };
   return (
     <>
       {state && (
         <Diagram>
           <Axes kind={kind} count={0} numeric={false} />
-          {['area', 'negative'].includes(state) && (
-            <path d={`${pointsPath(points)} L610 ${gy('velocity', 0)} Z`} fill={T.accent} opacity="0.15" />
+          {["area", "negative"].includes(state) && (
+            <path
+              d={`${pointsPath(points)} L610 ${gy("velocity", 0)} Z`}
+              fill={T.accent}
+              opacity="0.32"
+            />
           )}
-          {state !== 'velocity' && (
+          {state !== "velocity" && (
             <GraphStroke
               points={points}
-              start={cue(s, state === 'return' ? 'displacement' : state === 'area' ? 'slope' : state)}
-              end={cue(s, state === 'return' ? 'displacement' : state === 'area' ? 'slope' : state) + 1.8}
+              start={cue(
+                s,
+                state === "return"
+                  ? "displacement"
+                  : state === "area"
+                    ? "slope"
+                    : state,
+              )}
+              end={
+                cue(
+                  s,
+                  state === "return"
+                    ? "displacement"
+                    : state === "area"
+                      ? "slope"
+                      : state,
+                ) + 1.8
+              }
               t={t}
               curve
             />
@@ -1263,23 +1652,37 @@ const GraphFacts: React.FC<{ s: Scene }> = ({ s }) => {
 const VelocityJourney: React.FC<{ s: Scene }> = ({ s }) => {
   const { fps } = useVideoConfig();
   const t = useCurrentFrame() / fps;
-  const keys = ['constant', 'slowing', 'rest', 'reverse', 'return'];
-  const starts = keys.map((k) => Math.max(cue(s, k), wordEnd(s, 'draw') + 0.1));
-  const ends = ['ten', 'twentytwo', 'twentyseven', 'thirtyone', 'finish'].map((k) => cue(s, k) + 0.65);
+  if (t < signpostEnd(s, "signpost"))
+    return t >= cue(s, "signpost") ? <Signpost kind="velocity" /> : null;
+  const keys = ["constant", "slowing", "rest", "reverse", "return"];
+  const starts = keys.map((k) => Math.max(cue(s, k), wordEnd(s, "draw") + 0.1));
+  const ends = ["ten", "twentytwo", "twentyseven", "thirtyone", "finish"].map(
+    (k) => cue(s, k) + 0.65,
+  );
   const count = ends.filter(
-    (_, i) => t >= cue(s, ['ten', 'twentytwo', 'twentyseven', 'thirtyone', 'finish'][i]),
+    (_, i) =>
+      t >=
+      cue(s, ["ten", "twentytwo", "twentyseven", "thirtyone", "finish"][i]),
   ).length;
   const active = starts.filter((n) => t >= n).length - 1;
   const names = [
-    'Constant velocity',
-    'Uniform deceleration',
-    'At rest',
-    'Accelerating in reverse',
-    'Constant return velocity',
+    "Constant velocity",
+    "Uniform deceleration",
+    "At rest",
+    "Accelerating in reverse",
+    "Constant return velocity",
   ];
   return (
     <>
-      <TravelGraph s={s} t={t} kind="velocity" starts={starts} ends={ends} count={count} active={active} />
+      <TravelGraph
+        s={s}
+        t={t}
+        kind="velocity"
+        starts={starts}
+        ends={ends}
+        count={count}
+        active={active}
+      />
       {active >= 0 && <Card text={names[active]} />}
     </>
   );
@@ -1287,33 +1690,47 @@ const VelocityJourney: React.FC<{ s: Scene }> = ({ s }) => {
 const ReturnTime: React.FC<{ s: Scene }> = ({ s }) => {
   const { fps } = useVideoConfig();
   const t = heldTime(s, useCurrentFrame() / fps);
-  const draw = wordEnd(s, 'draw') + 0.05;
-  const hold = s.holds.filter((h) => h.kind === 'hold');
+  const draw = wordEnd(s, "draw") + 0.05;
+  const hold = s.holds.filter((h) => h.kind === "hold");
   const starts = Array.from({ length: 5 }, (_, i) => draw + i * 0.35),
     ends = starts.map((n) => n + 0.35);
   const rows = [
-    { id: 'rectangle', value: 'sixty', text: '6 × 10 = 60 m' },
-    { id: 'triangle', value: 'thirtysix', text: '12 × 6 / 2 = 36 m' },
-    { id: 'total', value: 'ninetysix', text: '60 + 36 = 96 m' },
-    { id: 'reverse', value: 'eight', text: '4 × 4 / 2 = 8 m' },
-    { id: 'remaining', value: 'eightyeight', text: '96 - 8 = 88 m' },
-    { id: 'duration', value: 'twentytwo', text: '88 / 4 = 22 s' },
-    { id: 'total-time', value: 'fiftythree', text: 'T = 31 + 22 = 53 s' },
+    { id: "rectangle", value: "sixty", text: "6 × 10 = 60 m" },
+    { id: "triangle", value: "thirtysix", text: "12 × 6 / 2 = 36 m" },
+    { id: "total", value: "ninetysix", text: "60 + 36 = 96 m" },
+    { id: "reverse", value: "eight", text: "4 × 4 / 2 = 8 m" },
+    { id: "remaining", value: "eightyeight", text: "96 - 8 = 88 m" },
+    { id: "duration", value: "twentytwo", text: "88 / 4 = 22 s" },
+    { id: "total-time", value: "fiftythree", text: "T = 31 + 22 = 53 s" },
   ];
   const active = rows.filter((r) => t >= cue(s, r.id)).length - 1;
   const page = active < 3 ? 0 : active < 6 ? 3 : 6;
-  const lines: Line[] = rows.slice(page, Math.max(page, active + 1)).map((r, i) => ({
-    id: r.id,
-    text: r.text,
-    start: cue(s, r.id),
-    resultAt: cue(s, r.value),
-    prefixEnd: cue(s, r.value),
-    end: hold[page + i].start - 0.1,
-    y: 95 + i * 150,
-  }));
-  const ring = active >= 0 && t >= hold[active].start && t < hold[active].end ? active - page : -1;
-  const areaIndex = active === 0 ? 0 : active === 1 ? 1 : active === 3 ? 3 : active >= 4 ? 4 : -1;
-  const area = areaIndex >= 0 ? phasePoints('velocity', areaIndex) : [];
+  const lines: Line[] = rows
+    .slice(page, Math.max(page, active + 1))
+    .map((r, i) => ({
+      id: r.id,
+      text: r.text,
+      start: cue(s, r.id),
+      resultAt: cue(s, r.value),
+      prefixEnd: cue(s, r.value),
+      end: hold[page + i].start - 0.1,
+      y: 95 + i * 150,
+    }));
+  const ring =
+    active >= 0 && t >= hold[active].start && t < hold[active].end
+      ? active - page
+      : -1;
+  const areaIndex =
+    active === 0
+      ? 0
+      : active === 1
+        ? 1
+        : active === 3
+          ? 3
+          : active >= 4
+            ? 4
+            : -1;
+  const area = areaIndex >= 0 ? phasePoints("velocity", areaIndex) : [];
   return (
     <>
       <TravelGraph
@@ -1323,13 +1740,13 @@ const ReturnTime: React.FC<{ s: Scene }> = ({ s }) => {
         starts={starts}
         ends={ends}
         count={t >= draw + 1.75 ? 5 : 0}
-        solved={t >= cue(s, 'fiftythree')}
+        solved={t >= cue(s, "fiftythree")}
       >
         {area.length > 0 && (
           <path
-            d={`${pointsPath(area)} L${area.at(-1)![0]} ${gy('velocity', 0)} L${area[0][0]} ${gy('velocity', 0)} Z`}
+            d={`${pointsPath(area)} L${area.at(-1)![0]} ${gy("velocity", 0)} L${area[0][0]} ${gy("velocity", 0)} Z`}
             fill={T.accent}
-            opacity="0.2"
+            opacity="0.35"
           />
         )}
       </TravelGraph>
@@ -1337,97 +1754,191 @@ const ReturnTime: React.FC<{ s: Scene }> = ({ s }) => {
     </>
   );
 };
+// Restore Sol's paired area/gradient bridge using the recorded cyclist model.
+// Both graphs share one active accent and one physical instant, without extra chrome.
+const PairedPlot: React.FC<{
+  kind: Kind;
+  active: number;
+  time: number;
+  chord: boolean;
+}> = ({ kind, active, time, chord }) => {
+  const value =
+    kind === "velocity"
+      ? mix(
+          SPEEDS[active],
+          SPEEDS[active + 1],
+          clamp((time - TIMES[active]) / (TIMES[active + 1] - TIMES[active])),
+        )
+      : position(time);
+  return (
+    <svg
+      data-region="paired-graph"
+      width="900"
+      height="810"
+      viewBox="0 -65 850 775"
+      style={{
+        position: "absolute",
+        left: kind === "velocity" ? 30 : 990,
+        top: 215,
+      }}
+    >
+      <text data-card="true" x={90} y={-35} fill={T.text} fontSize={37}>
+        {kind === "velocity" ? "Velocity–time" : "Displacement–time"}
+      </text>
+      <Axes kind={kind} count={5} solved />
+      {TIMES.slice(0, -1).map((_, i) => {
+        const points = phasePoints(kind, i);
+        const d = pointsPath(points);
+        return (
+          <g key={i}>
+            {kind === "velocity" && (
+              <path
+                d={`${d} L${points.at(-1)![0]} ${gy(kind, 0)} L${points[0][0]} ${gy(kind, 0)} Z`}
+                fill={i === active ? T.accent : T.muted}
+                opacity={i === active ? 0.35 : 0.1}
+              />
+            )}
+            <path
+              data-graph-curve="true"
+              d={d}
+              fill="none"
+              stroke={i === active ? T.accent : T.muted}
+              strokeWidth={i === active ? 6 : 3}
+              strokeLinecap="round"
+            />
+          </g>
+        );
+      })}
+      {chord && kind === "displacement" && (
+        <path
+          data-graph-curve="true"
+          d={`M${gx(10)} ${gy(kind, 60)} L${gx(22)} ${gy(kind, 96)}`}
+          stroke={T.text}
+          strokeWidth={3}
+          strokeDasharray="8 8"
+          fill="none"
+        />
+      )}
+      <line
+        x1={gx(time)}
+        x2={gx(time)}
+        y1={60}
+        y2={570}
+        stroke={T.accent}
+        strokeWidth={2}
+        strokeDasharray="8 8"
+        opacity={0.55}
+      />
+      <circle
+        data-trace-time={time}
+        cx={gx(time)}
+        cy={gy(kind, value)}
+        r={8}
+        fill={T.accent}
+        stroke={T.text}
+        strokeWidth={2}
+      />
+    </svg>
+  );
+};
 const Shapes: React.FC<{ s: Scene }> = ({ s }) => {
   const { fps } = useVideoConfig();
-  const t = useCurrentFrame() / fps;
-  const state = latest(s, t, ['straight', 'rest', 'curve', 'chord']);
-  const names: Record<string, string> = {
-    straight: 'Constant velocity: straight',
-    rest: 'Rest: horizontal',
-    curve: 'Changing velocity: curved',
-    chord: 'A straight join misses changing velocity',
-  };
-  const points: Point[] =
-    state === 'straight'
-      ? [
-          [150, 480],
-          [630, 160],
-        ]
-      : state === 'rest'
-        ? [
-            [150, 270],
-            [630, 270],
-          ]
-        : Array.from({ length: 51 }, (_, i) => [150 + i * 9.6, 170 + 0.13 * i * i] as Point);
+  const t = heldTime(s, useCurrentFrame() / fps);
+  if (t < signpostEnd(s, "signpost"))
+    return t >= cue(s, "signpost") ? <Signpost kind="displacement" /> : null;
+  const state = latest(s, t, ["pair", "straight", "rest", "curve", "chord"]);
+  const active =
+    state === "rest" ? 2 : ["curve", "chord"].includes(state) ? 1 : 0;
+  const start = cue(s, state === "chord" ? "curve" : state || "pair");
+  const end =
+    state === "pair"
+      ? cue(s, "straight")
+      : state === "straight"
+        ? cue(s, "rest")
+        : state === "rest"
+          ? cue(s, "curve")
+          : s.duration - 0.5;
+  const time = mix(
+    TIMES[active],
+    TIMES[active + 1],
+    clamp((t - start) / Math.max(0.1, end - start)),
+  );
   return (
     <>
       {state && (
-        <Diagram>
-          <Axes kind="displacement" count={0} numeric={false} />
-          <GraphStroke
-            points={points}
-            start={cue(s, state === 'chord' ? 'curve' : state)}
-            end={cue(s, state === 'chord' ? 'curve' : state) + 1.8}
-            t={t}
-            curve
-          />
-          {state === 'chord' && (
-            <path
-              data-graph-curve="true"
-              d="M150 170 L630 495"
-              fill="none"
-              stroke={T.text}
-              strokeDasharray="9 9"
-              strokeWidth="3"
-            />
-          )}
-        </Diagram>
+        <PairedPlot kind="velocity" active={active} time={time} chord={false} />
       )}
-      {names[state] && <Card text={names[state]} />}
+      {t >= cue(s, "straight") && (
+        <PairedPlot
+          kind="displacement"
+          active={active}
+          time={time}
+          chord={state === "chord"}
+        />
+      )}
     </>
   );
 };
 const Check: React.FC<{ s: Scene }> = ({ s }) => {
   const { fps } = useVideoConfig();
   const t = heldTime(s, useCurrentFrame() / fps);
-  const state = latest(s, t, ['question', 'answer', 'shapes', 'area', 'gradients']);
-  const i = ['shapes', 'area', 'gradients'].indexOf(state);
-  return state === 'question' ? (
+  const state = latest(s, t, [
+    "question",
+    "answer",
+    "shapes",
+    "area",
+    "gradients",
+  ]);
+  const i = ["shapes", "area", "gradients"].indexOf(state);
+  return state === "question" ? (
     <Card centre text="Negative velocity: must displacement be negative?" />
-  ) : state === 'answer' ? (
+  ) : state === "answer" ? (
     <Card centre text="Returning can still mean positive displacement" />
   ) : i >= 0 ? (
-    <Card centre text={OUTCOMES[i]} tick={t >= cue(s, ['tick-shapes', 'tick-area', 'tick-gradients'][i])} />
+    <Card
+      centre
+      text={OUTCOMES[i]}
+      tick={t >= cue(s, ["tick-shapes", "tick-area", "tick-gradients"][i])}
+    />
   ) : null;
 };
 const JourneyClose: React.FC<{ s: Scene }> = ({ s }) => {
   const { fps } = useVideoConfig();
   const t = heldTime(s, useCurrentFrame() / fps);
-  const hold = s.holds.filter((h) => h.kind === 'hold');
+  const hold = s.holds.filter((h) => h.kind === "hold" && h.duration === 2);
+  if (t < signpostEnd(s, "signpost"))
+    return t >= cue(s, "signpost") ? <Signpost kind="displacement" /> : null;
   const starts = Array.from({ length: 5 }, (_, i) =>
-    Math.max(cue(s, `leg${i + 1}`), wordEnd(s, 'draw') + 0.1),
+    Math.max(cue(s, `leg${i + 1}`), wordEnd(s, "draw") + 0.1),
   );
   const ends = starts.map((_, i) => cue(s, `ds${i + 1}`) - 0.05);
   const active = starts.filter((n) => t >= n).length - 1;
   const i = Math.max(0, active),
     k = i + 1;
-  const a: [number, number] = [gx(TIMES[i]), gy('displacement', POSITIONS[i])],
-    b: [number, number] = [gx(TIMES[i + 1]), gy('displacement', POSITIONS[i + 1])];
-  const ds = ['60', '36', '0', '-8', '-88'][i],
-    dt = ['10', '12', '5', '4', '22'][i];
+  const a: [number, number] = [gx(TIMES[i]), gy("displacement", POSITIONS[i])],
+    b: [number, number] = [
+      gx(TIMES[i + 1]),
+      gy("displacement", POSITIONS[i + 1]),
+    ];
+  const ds = ["60", "36", "0", "-8", "-88"][i],
+    dt = ["10", "12", "5", "4", "22"][i];
   const formulas = [
-    'v = 60/10 = 6 m/s',
-    'average v = 36/12 = 3 m/s',
-    'v = 0/5 = 0 m/s',
-    'average v = -8/4 = -2 m/s',
-    'v = -88/22 = -4 m/s',
+    "v = 60/10 = 6 m/s",
+    "average v = 36/12 = 3 m/s",
+    "v = 0/5 = 0 m/s",
+    "average v = -8/4 = -2 m/s",
+    "v = -88/22 = -4 m/s",
   ];
   const cards = [
-    'Positive: steady outward motion',
-    t >= cue(s, 'tangent2') ? 'Tangent falls from 6 to 0' : 'Positive average velocity',
-    'Zero gradient: stationary',
-    t >= cue(s, 'tangent4') ? 'Tangent falls from 0 to -4' : 'Negative average: returning',
-    'Negative: constant motion back to O',
+    "Positive: steady outward motion",
+    t >= cue(s, "tangent2")
+      ? "Tangent falls from 6 to 0"
+      : "Positive average velocity",
+    "Zero gradient: stationary",
+    t >= cue(s, "tangent4")
+      ? "Tangent falls from 0 to -4"
+      : "Negative average: returning",
+    "Negative: constant motion back to A",
   ];
   const dsPos: Point[] = [
     [210, 390],
@@ -1488,7 +1999,12 @@ const JourneyClose: React.FC<{ s: Scene }> = ({ s }) => {
             )}
             {at(`dt${k}`) && (
               <>
-                <GraphStroke points={[a, [b[0], a[1]]]} start={dtStart} end={dtStart + 0.3} t={t} />
+                <GraphStroke
+                  points={[a, [b[0], a[1]]]}
+                  start={dtStart}
+                  end={dtStart + 0.3}
+                  t={t}
+                />
                 <GraphInk
                   text={`Δt=${dt} s`}
                   x={dtPos[i][0]}
@@ -1526,74 +2042,123 @@ const JourneyClose: React.FC<{ s: Scene }> = ({ s }) => {
     </>
   );
 };
-const CONTENT = [Opening, GraphFacts, VelocityJourney, ReturnTime, Shapes, Check, JourneyClose];
+const CONTENT = [
+  Opening,
+  CyclistStory,
+  GraphFacts,
+  VelocityJourney,
+  ReturnTime,
+  Shapes,
+  Check,
+  JourneyClose,
+];
 
 /** Optional still-audit instrumentation: measures rendered DOM, never on-screen text. */
-function useStillAudit(enabled: boolean, rootRef: React.RefObject<HTMLDivElement | null>) {
+function useStillAudit(
+  enabled: boolean,
+  rootRef: React.RefObject<HTMLDivElement | null>,
+) {
   const frame = useCurrentFrame();
-  const [measurement, setMeasurement] = useState('');
+  const [measurement, setMeasurement] = useState("");
   useLayoutEffect(() => {
     const container = rootRef.current;
-    if (!enabled || !container || container.getBoundingClientRect().width === 0) return;
+    if (!enabled || !container || container.getBoundingClientRect().width === 0)
+      return;
     const visible = (element: Element): boolean => {
       let node: Element | null = element;
       while (node) {
         const style = getComputedStyle(node);
-        if (style.display === 'none' || style.visibility === 'hidden' || Number(style.opacity) < 0.001)
+        if (
+          style.display === "none" ||
+          style.visibility === "hidden" ||
+          Number(style.opacity) < 0.001
+        )
           return false;
         node = node.parentElement;
       }
       const rect = element.getBoundingClientRect();
       return rect.width > 0 && rect.height > 0;
     };
-    const regions = Array.from(container.querySelectorAll('[data-region]')).filter(visible);
-    const cards = Array.from(container.querySelectorAll('[data-card],[data-ink-text]'))
+    const regions = Array.from(
+      container.querySelectorAll("[data-region]"),
+    ).filter(visible);
+    const cards = Array.from(
+      container.querySelectorAll("[data-card],[data-ink-text]"),
+    )
       .filter(visible)
       .map((el) => ({
-        text: el.getAttribute('data-ink-text') ?? el.textContent ?? '',
+        text: el.getAttribute("data-ink-text") ?? el.textContent ?? "",
         rect: el.getBoundingClientRect(),
       }));
-    const axisText = Array.from(container.querySelectorAll('[data-axis-text]')).filter(visible);
+    const axisText = Array.from(
+      container.querySelectorAll("[data-axis-text]"),
+    ).filter(visible);
     const obstacles = Array.from(
-      container.querySelectorAll('[data-axis-tick],[data-graph-curve],[data-ink-text]'),
+      container.querySelectorAll(
+        "[data-axis-tick],[data-graph-curve],[data-ink-text]",
+      ),
     ).filter(visible);
     const overlaps = (a: Element, b: Element): boolean => {
       const x = a.getBoundingClientRect(),
         y = b.getBoundingClientRect();
-      return x.left < y.right + 2 && x.right + 2 > y.left && x.top < y.bottom + 2 && x.bottom + 2 > y.top;
+      return (
+        x.left < y.right + 2 &&
+        x.right + 2 > y.left &&
+        x.top < y.bottom + 2 &&
+        x.bottom + 2 > y.top
+      );
     };
     const axisCollisions: Array<{ text: string; other: string }> = [];
     axisText.forEach((a, index) => {
       [...axisText.slice(index + 1), ...obstacles].forEach((b) => {
         if (overlaps(a, b))
           axisCollisions.push({
-            text: a.textContent ?? '',
+            text: a.textContent ?? "",
             other:
               b.textContent ||
-              b.getAttribute('data-ink-text') ||
-              (b.hasAttribute('data-axis-tick') ? 'tick' : 'curve'),
+              b.getAttribute("data-ink-text") ||
+              (b.hasAttribute("data-axis-tick") ? "tick" : "curve"),
           });
       });
     });
     const root = container.getBoundingClientRect();
     const overflow = root
-      ? [...regions, ...Array.from(container.querySelectorAll('svg[data-region] text')).filter(visible)].some(
-          (el) => {
-            const r = el.getBoundingClientRect();
-            return (
-              r.left < root.left - 1 ||
-              r.top < root.top - 1 ||
-              r.right > root.right + 1 ||
-              r.bottom > root.bottom + 1
-            );
-          },
-        )
+      ? [
+          ...regions,
+          ...Array.from(
+            container.querySelectorAll("svg[data-region] text"),
+          ).filter(visible),
+        ].some((el) => {
+          const r = el.getBoundingClientRect();
+          return (
+            r.left < root.left - 1 ||
+            r.top < root.top - 1 ||
+            r.right > root.right + 1 ||
+            r.bottom > root.bottom + 1
+          );
+        })
       : true;
     setMeasurement(
       JSON.stringify({
         frame,
+        cyclist: (() => {
+          const element = container.querySelector("[data-cyclist-x]");
+          return element
+            ? {
+                x: Number(element.getAttribute("data-cyclist-x")),
+                wheelAngle: Number(element.getAttribute("data-wheel-angle")),
+                direction: Number(element.getAttribute("data-direction")),
+              }
+            : null;
+        })(),
+        traceTimes: Array.from(container.querySelectorAll("[data-trace-time]"))
+          .filter(visible)
+          .map((el) => Number(el.getAttribute("data-trace-time"))),
         regions: regions.length,
-        maxWords: Math.max(0, ...cards.map((c) => c.text.trim().split(/\s+/).length)),
+        maxWords: Math.max(
+          0,
+          ...cards.map((c) => c.text.trim().split(/\s+/).length),
+        ),
         cards: cards.map((c) => c.text),
         overflow,
         axisCollisions,
@@ -1603,20 +2168,22 @@ function useStillAudit(enabled: boolean, rootRef: React.RefObject<HTMLDivElement
         })),
         root: root?.toJSON(),
         bounds: regions.map((el) => ({
-          region: el.getAttribute('data-region'),
+          region: el.getAttribute("data-region"),
           ...el.getBoundingClientRect().toJSON(),
         })),
       }),
     );
   }, [frame, enabled]);
   return enabled && measurement ? (
-    <Artifact filename={`verify-travel-${String(frame).padStart(5, '0')}.json`} content={measurement} />
+    <Artifact
+      filename={`verify-travel-${String(frame).padStart(5, "0")}.json`}
+      content={measurement}
+    />
   ) : null;
 }
-export const MechanicsDrawingTravelGraphs: React.FC<MechanicsDrawingTravelGraphsProps> = ({
-  audioEnabled = true,
-  audit = false,
-}) => {
+export const MechanicsDrawingTravelGraphs: React.FC<
+  MechanicsDrawingTravelGraphsProps
+> = ({ audioEnabled = true, audit = false }) => {
   const { fps, width, height } = useVideoConfig();
   const rootRef = useRef<HTMLDivElement>(null);
   const auditArtifact = useStillAudit(audit, rootRef);
@@ -1624,7 +2191,13 @@ export const MechanicsDrawingTravelGraphs: React.FC<MechanicsDrawingTravelGraphs
     <AbsoluteFill
       ref={rootRef}
       data-travel-root="true"
-      style={{ background: T.bg, fontFamily: T.sans, overflow: 'hidden', width, height }}
+      style={{
+        background: T.bg,
+        fontFamily: T.sans,
+        overflow: "hidden",
+        width,
+        height,
+      }}
     >
       {auditArtifact}
       <TransitionSeries>
@@ -1641,13 +2214,18 @@ export const MechanicsDrawingTravelGraphs: React.FC<MechanicsDrawingTravelGraphs
               <TransitionSeries.Sequence
                 name={HEADERS[index]}
                 durationInFrames={
-                  Math.ceil(s.duration * fps) + (index < SCENES.length - 1 ? TRANSITION_FRAMES : 0)
+                  Math.ceil(s.duration * fps) +
+                  (index < SCENES.length - 1 ? TRANSITION_FRAMES : 0)
                 }
               >
                 <AbsoluteFill style={{ background: T.bg }}>
-                  {index !== 0 && <Header>{HEADERS[index]}</Header>}
+                  {index !== 0 && (
+                    <SceneHeader s={s} fallback={HEADERS[index]} />
+                  )}
                   <Content s={s} />
-                  {audioEnabled && <Audio src={staticFile(`audio/mechanics/${s.audio}`)} />}
+                  {audioEnabled && (
+                    <Audio src={staticFile(`audio/mechanics/${s.audio}`)} />
+                  )}
                 </AbsoluteFill>
               </TransitionSeries.Sequence>
             </React.Fragment>
