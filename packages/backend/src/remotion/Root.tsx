@@ -62,6 +62,7 @@ import { InkTutorTikTok, InkTutorTikTokProps, getInkTutorTikTokDuration } from '
 import { MechanicsSIUnits, MechanicsSIUnitsProps, getMechanicsSIUnitsDuration } from './compositions/MechanicsSIUnits';
 import { MechanicsScalarsVectors, MechanicsScalarsVectorsProps, getMechanicsScalarsVectorsDuration } from './compositions/MechanicsScalarsVectors';
 import { MechanicsDisplacementTimeGraphs, MechanicsDisplacementTimeGraphsProps, getMechanicsDisplacementTimeGraphsDuration } from './compositions/MechanicsDisplacementTimeGraphs';
+import { MechanicsVelocityTimeGraphs, MechanicsVelocityTimeGraphsProps, getMechanicsVelocityTimeGraphsDuration } from './compositions/MechanicsVelocityTimeGraphs';
 import { MechanicsDerivedUnits, MechanicsDerivedUnitsProps, getMechanicsDerivedUnitsDuration } from './compositions/MechanicsDerivedUnits';
 import { MechanicsTypesOfForces, MechanicsTypesOfForcesProps, getMechanicsTypesOfForcesDuration } from './compositions/MechanicsTypesOfForces';
 
@@ -109,6 +110,7 @@ export const RemotionRoot: React.FC = () => {
   const mechanicsSIUnitsDuration = getMechanicsSIUnitsDuration(fps);
   const mechanicsScalarsVectorsDuration = getMechanicsScalarsVectorsDuration(fps);
   const mechanicsDisplacementTimeGraphsDuration = getMechanicsDisplacementTimeGraphsDuration(fps);
+  const mechanicsVelocityTimeGraphsDuration = getMechanicsVelocityTimeGraphsDuration(fps);
   const mechanicsDerivedUnitsDuration = getMechanicsDerivedUnitsDuration(fps);
   const mechanicsTypesOfForcesDuration = getMechanicsTypesOfForcesDuration(fps);
 
@@ -174,6 +176,18 @@ export const RemotionRoot: React.FC = () => {
         defaultProps={{
           audioEnabled: true,
         } satisfies MechanicsDisplacementTimeGraphsProps}
+      />
+
+      <Composition
+        id="MechanicsVelocityTimeGraphs"
+        component={MechanicsVelocityTimeGraphs}
+        durationInFrames={mechanicsVelocityTimeGraphsDuration}
+        fps={fps}
+        width={1920}
+        height={1080}
+        defaultProps={{
+          audioEnabled: true,
+        } satisfies MechanicsVelocityTimeGraphsProps}
       />
 
       <Composition
