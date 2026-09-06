@@ -762,7 +762,7 @@ const Scene05: React.FC<{ scene: TranscriptScene }> = ({ scene }) => {
           <text x={538} y={583} fill={T.coral} fontFamily={T.mono} fontSize={28} fontWeight={900} textAnchor="middle" opacity={useCue(belowAt, 0.35).opacity}>6 CORAL TILES</text>
         </svg>
       </div>
-      <div style={{ position: 'absolute', right: 88, top: 230 }}><VelocityGauge value={velocity} min={-4} max={6} opacity={useCue(areaCueAt, 0.35).opacity} /></div>
+      <div style={{ position: 'absolute', right: 88, top: 195 }}><VelocityGauge value={velocity} min={-4} max={6} opacity={useCue(areaCueAt, 0.35).opacity} /></div>
       <Cued at={displacementAt} fromX={32} style={{ position: 'absolute', right: 80, top: 560, width: 660 }}>
         <WarmCard accent={displacement >= 0 ? T.teal : T.coral} style={{ padding: '24px 30px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
           <div>
