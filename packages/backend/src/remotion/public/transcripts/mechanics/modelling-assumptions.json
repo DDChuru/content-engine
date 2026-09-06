@@ -1,2842 +1,545 @@
 {
   "project": "mechanics-modelling-assumptions",
-  "sceneCount": 8,
-  "totalDuration": 382.014693,
-  "generatedAt": "2026-09-06T12:45:24.981048",
+  "sceneCount": 6,
+  "totalDuration": 276.924081,
+  "generatedAt": "2026-09-06T14:09:11.942513",
   "engine": "faster-whisper-small (local)",
   "scenes": [
     {
       "id": "s01",
       "audio": "modelling-assumptions-s01.mp3",
-      "duration": 20.035918,
-      "wordCount": 42,
-      "text": "Syllabus, use the model of a smooth contact. Solve simple problems which may be modelled... ...as the motion of connected particles. By the end you can... ...explain what modelling words let you ignore. Find acceleration and tension. Predict changes when assumptions fail.",
+      "duration": 27.036735,
+      "wordCount": 45,
+      "text": "Syllabus four point one, use the model of a smooth contact. By the end you can explain what modelling words let you ignore. List assumptions for a real situation and say why. And match modelling words to a described setup. Let's make those words useful.",
       "words": [
         {
-          "word": "Syllabus,",
-          "start": 0.02,
-          "end": 0.74
+          "word": "Syllabus",
+          "start": 0.05,
+          "end": 0.71
+        },
+        {
+          "word": "four",
+          "start": 0.71,
+          "end": 0.99
+        },
+        {
+          "word": "point",
+          "start": 0.99,
+          "end": 1.23
+        },
+        {
+          "word": "one,",
+          "start": 1.23,
+          "end": 1.63
         },
         {
           "word": "use",
-          "start": 1.14,
-          "end": 1.36
+          "start": 2.17,
+          "end": 2.79
         },
         {
           "word": "the",
-          "start": 1.36,
-          "end": 1.54
+          "start": 2.79,
+          "end": 2.95
         },
         {
           "word": "model",
-          "start": 1.54,
-          "end": 1.88
+          "start": 2.95,
+          "end": 3.27
         },
         {
           "word": "of",
-          "start": 1.88,
-          "end": 2.12
+          "start": 3.27,
+          "end": 3.89
         },
         {
           "word": "a",
-          "start": 2.12,
-          "end": 2.26
+          "start": 3.89,
+          "end": 4.01
         },
         {
           "word": "smooth",
-          "start": 2.26,
-          "end": 2.52
+          "start": 4.01,
+          "end": 4.21
         },
         {
           "word": "contact.",
-          "start": 2.52,
-          "end": 3.12
-        },
-        {
-          "word": "Solve",
-          "start": 3.46,
-          "end": 3.84
-        },
-        {
-          "word": "simple",
-          "start": 3.84,
-          "end": 4.1
-        },
-        {
-          "word": "problems",
-          "start": 4.1,
-          "end": 4.6
-        },
-        {
-          "word": "which",
-          "start": 4.6,
-          "end": 5.48
-        },
-        {
-          "word": "may",
-          "start": 5.48,
-          "end": 5.7
-        },
-        {
-          "word": "be",
-          "start": 5.7,
-          "end": 5.88
-        },
-        {
-          "word": "modelled...",
-          "start": 5.88,
-          "end": 7.4
-        },
-        {
-          "word": "...as",
-          "start": 7.4,
-          "end": 7.54
-        },
-        {
-          "word": "the",
-          "start": 7.54,
-          "end": 7.68
-        },
-        {
-          "word": "motion",
-          "start": 7.68,
-          "end": 7.98
-        },
-        {
-          "word": "of",
-          "start": 7.98,
-          "end": 8.22
-        },
-        {
-          "word": "connected",
-          "start": 8.22,
-          "end": 8.6
-        },
-        {
-          "word": "particles.",
-          "start": 8.6,
-          "end": 9.14
+          "start": 4.21,
+          "end": 4.71
         },
         {
           "word": "By",
-          "start": 9.62,
-          "end": 9.72
+          "start": 5.13,
+          "end": 5.97
         },
         {
           "word": "the",
-          "start": 9.72,
-          "end": 9.86
+          "start": 5.97,
+          "end": 6.11
         },
         {
           "word": "end",
-          "start": 9.86,
-          "end": 10.14
+          "start": 6.11,
+          "end": 6.45
         },
         {
           "word": "you",
-          "start": 10.14,
-          "end": 10.74
+          "start": 6.45,
+          "end": 6.77
         },
         {
-          "word": "can...",
-          "start": 10.74,
-          "end": 11.1
+          "word": "can",
+          "start": 6.77,
+          "end": 6.93
         },
         {
-          "word": "...explain",
-          "start": 11.76,
-          "end": 12.18
+          "word": "explain",
+          "start": 6.93,
+          "end": 7.35
         },
         {
           "word": "what",
-          "start": 12.18,
-          "end": 12.58
+          "start": 7.35,
+          "end": 7.59
         },
         {
           "word": "modelling",
-          "start": 12.58,
-          "end": 13.06
+          "start": 7.59,
+          "end": 8.01
         },
         {
           "word": "words",
-          "start": 13.06,
-          "end": 13.52
+          "start": 8.01,
+          "end": 8.51
         },
         {
           "word": "let",
-          "start": 13.52,
-          "end": 13.88
+          "start": 8.51,
+          "end": 9.17
         },
         {
           "word": "you",
-          "start": 13.88,
-          "end": 14.04
+          "start": 9.17,
+          "end": 9.39
         },
         {
           "word": "ignore.",
-          "start": 14.04,
-          "end": 14.4
+          "start": 9.39,
+          "end": 9.83
         },
         {
-          "word": "Find",
-          "start": 14.86,
-          "end": 14.96
-        },
-        {
-          "word": "acceleration",
-          "start": 14.96,
-          "end": 15.56
-        },
-        {
-          "word": "and",
-          "start": 15.56,
-          "end": 15.9
-        },
-        {
-          "word": "tension.",
-          "start": 15.9,
-          "end": 16.3
-        },
-        {
-          "word": "Predict",
-          "start": 16.64,
-          "end": 16.98
-        },
-        {
-          "word": "changes",
-          "start": 16.98,
-          "end": 17.44
-        },
-        {
-          "word": "when",
-          "start": 17.44,
-          "end": 17.8
+          "word": "List",
+          "start": 10.77,
+          "end": 11.39
         },
         {
           "word": "assumptions",
-          "start": 17.8,
-          "end": 18.3
+          "start": 11.39,
+          "end": 11.91
         },
         {
-          "word": "fail.",
-          "start": 18.3,
-          "end": 18.82
+          "word": "for",
+          "start": 11.91,
+          "end": 12.39
+        },
+        {
+          "word": "a",
+          "start": 12.39,
+          "end": 12.57
+        },
+        {
+          "word": "real",
+          "start": 12.57,
+          "end": 12.81
+        },
+        {
+          "word": "situation",
+          "start": 12.81,
+          "end": 13.43
+        },
+        {
+          "word": "and",
+          "start": 13.43,
+          "end": 14.71
+        },
+        {
+          "word": "say",
+          "start": 14.71,
+          "end": 14.99
+        },
+        {
+          "word": "why.",
+          "start": 14.99,
+          "end": 15.35
+        },
+        {
+          "word": "And",
+          "start": 16.41,
+          "end": 16.57
+        },
+        {
+          "word": "match",
+          "start": 16.57,
+          "end": 16.91
+        },
+        {
+          "word": "modelling",
+          "start": 16.91,
+          "end": 17.29
+        },
+        {
+          "word": "words",
+          "start": 17.29,
+          "end": 17.75
+        },
+        {
+          "word": "to",
+          "start": 17.75,
+          "end": 18.43
+        },
+        {
+          "word": "a",
+          "start": 18.43,
+          "end": 18.57
+        },
+        {
+          "word": "described",
+          "start": 18.57,
+          "end": 18.97
+        },
+        {
+          "word": "setup.",
+          "start": 18.97,
+          "end": 19.43
+        },
+        {
+          "word": "Let's",
+          "start": 20.29,
+          "end": 20.73
+        },
+        {
+          "word": "make",
+          "start": 20.73,
+          "end": 20.89
+        },
+        {
+          "word": "those",
+          "start": 20.89,
+          "end": 21.11
+        },
+        {
+          "word": "words",
+          "start": 21.11,
+          "end": 21.49
+        },
+        {
+          "word": "useful.",
+          "start": 21.49,
+          "end": 22.03
         }
       ],
       "cues": {
         "syllabus": 0.3,
-        "smooth": 1.14,
-        "connected": 3.46,
-        "continuation": 7.4,
-        "outcomes": 9.62,
-        "explain": 11.76,
-        "find": 14.86,
-        "predict": 16.64
+        "quote": 2.17,
+        "outcomes": 5.13,
+        "explain": 6.93,
+        "list": 10.77,
+        "match": 16.57
       },
-      "generatedAt": "2026-09-06T12:38:41.036344",
+      "generatedAt": "2026-09-06T14:01:25.604347",
       "engine": "faster-whisper-small (local)",
       "tempo": "brisk",
       "voiceSpeed": 1.0,
       "voiceId": "gYWKdgLtqjPO3D5uDrDP",
       "provider": "elevenlabs",
-      "audioSha256": "a26a1b285ebce5076d16792b15dc6268d2da2fa7f3eccd8117863ceb2a085ead",
+      "audioSha256": "d180facca4f40689b630f669f838eb486ef8a2efbd8e46bc256904593c2b35e3",
       "beats": [
         {
-          "text": "Syllabus: use the model of a smooth contact.",
+          "text": "Syllabus four point one: use the model of a smooth contact. By the end you can explain what modelling words let you ignore; list assumptions for a real situation and say why; and match modelling words to a described setup. Let's make those words useful.",
           "start": 0.3,
-          "end": 3.28
-        },
-        {
-          "text": "solve simple problems which may be modelled",
-          "start": 3.43,
-          "end": 6.55
-        },
-        {
-          "text": "as the motion of connected particles.",
-          "start": 7.4,
-          "end": 9.4
-        },
-        {
-          "text": "By the end you can",
-          "start": 9.55,
-          "end": 11.118956916099773
-        },
-        {
-          "text": "explain what modelling words let you ignore.",
-          "start": 11.468956916099772,
-          "end": 14.598956916099773
-        },
-        {
-          "text": "Find acceleration and tension.",
-          "start": 14.748956916099774,
-          "end": 16.42895691609977
-        },
-        {
-          "text": "Predict changes when assumptions fail.",
-          "start": 16.578956916099774,
-          "end": 19.028956916099773
+          "end": 22.27
         }
       ],
       "holds": [],
       "paragraphs": [
-        "Syllabus: use the model of a smooth contact.",
-        "solve simple problems which may be modelled...",
-        "...as the motion of connected particles.",
-        "By the end you can... explain what modelling words let you ignore.",
-        "Find acceleration and tension.",
-        "Predict changes when assumptions fail."
+        "Syllabus four point one: use the model of a smooth contact. By the end you can explain what modelling words let you ignore; list assumptions for a real situation and say why; and match modelling words to a described setup. Let's make those words useful."
       ]
     },
     {
       "id": "s02",
       "audio": "modelling-assumptions-s02.mp3",
-      "duration": 22.360816,
-      "wordCount": 43,
-      "text": "A hanging box pulls this box on the table through string over a pulley. A particle keeps mass but ignores size. We track translation. If it tips, size matters. Air resistance neglected means no drag. Include air resistance, and drag changes the resultant.",
+      "duration": 26.017959,
+      "wordCount": 47,
+      "text": "Start with a real problem. Choose assumptions. Leave out details so the problem becomes manageable. Use equations or a graph to describe the simplified situation. Check whether the answer is reasonable in real life. If it isn't, refine the assumptions and try again. That's the modelling cycle.",
       "words": [
         {
-          "word": "A",
-          "start": 0.18,
-          "end": 0.48
+          "word": "Start",
+          "start": 0.27,
+          "end": 0.79
         },
         {
-          "word": "hanging",
-          "start": 0.48,
-          "end": 0.86
-        },
-        {
-          "word": "box",
-          "start": 0.86,
-          "end": 1.32
-        },
-        {
-          "word": "pulls",
-          "start": 1.32,
-          "end": 2.16
-        },
-        {
-          "word": "this",
-          "start": 2.16,
-          "end": 2.5
-        },
-        {
-          "word": "box",
-          "start": 2.5,
-          "end": 3.0
-        },
-        {
-          "word": "on",
-          "start": 3.0,
-          "end": 3.74
-        },
-        {
-          "word": "the",
-          "start": 3.74,
-          "end": 3.88
-        },
-        {
-          "word": "table",
-          "start": 3.88,
-          "end": 4.2
-        },
-        {
-          "word": "through",
-          "start": 4.2,
-          "end": 4.82
-        },
-        {
-          "word": "string",
-          "start": 4.82,
-          "end": 5.26
-        },
-        {
-          "word": "over",
-          "start": 5.26,
-          "end": 5.8
+          "word": "with",
+          "start": 0.79,
+          "end": 1.13
         },
         {
           "word": "a",
-          "start": 5.8,
-          "end": 6.04
+          "start": 1.13,
+          "end": 1.27
         },
         {
-          "word": "pulley.",
-          "start": 6.04,
-          "end": 6.3
+          "word": "real",
+          "start": 1.27,
+          "end": 1.45
         },
         {
-          "word": "A",
-          "start": 6.86,
-          "end": 6.94
+          "word": "problem.",
+          "start": 1.45,
+          "end": 1.89
         },
         {
-          "word": "particle",
-          "start": 6.94,
-          "end": 7.36
+          "word": "Choose",
+          "start": 2.77,
+          "end": 3.21
         },
         {
-          "word": "keeps",
-          "start": 7.36,
-          "end": 7.66
+          "word": "assumptions.",
+          "start": 3.21,
+          "end": 3.75
         },
         {
-          "word": "mass",
-          "start": 7.66,
-          "end": 8.06
+          "word": "Leave",
+          "start": 4.83,
+          "end": 5.09
         },
         {
-          "word": "but",
-          "start": 8.06,
-          "end": 8.6
+          "word": "out",
+          "start": 5.09,
+          "end": 5.33
         },
         {
-          "word": "ignores",
-          "start": 8.6,
-          "end": 8.96
+          "word": "details",
+          "start": 5.33,
+          "end": 5.77
         },
         {
-          "word": "size.",
-          "start": 8.96,
-          "end": 9.44
-        },
-        {
-          "word": "We",
-          "start": 9.98,
-          "end": 10.02
-        },
-        {
-          "word": "track",
-          "start": 10.02,
-          "end": 10.34
-        },
-        {
-          "word": "translation.",
-          "start": 10.34,
-          "end": 11.0
-        },
-        {
-          "word": "If",
-          "start": 11.62,
-          "end": 11.7
-        },
-        {
-          "word": "it",
-          "start": 11.7,
-          "end": 11.84
-        },
-        {
-          "word": "tips,",
-          "start": 11.84,
-          "end": 12.16
-        },
-        {
-          "word": "size",
-          "start": 12.4,
-          "end": 12.74
-        },
-        {
-          "word": "matters.",
-          "start": 12.74,
-          "end": 13.14
-        },
-        {
-          "word": "Air",
-          "start": 13.78,
-          "end": 14.06
-        },
-        {
-          "word": "resistance",
-          "start": 14.06,
-          "end": 14.68
-        },
-        {
-          "word": "neglected",
-          "start": 14.68,
-          "end": 15.9
-        },
-        {
-          "word": "means",
-          "start": 15.9,
-          "end": 16.94
-        },
-        {
-          "word": "no",
-          "start": 16.94,
-          "end": 17.3
-        },
-        {
-          "word": "drag.",
-          "start": 17.3,
-          "end": 17.64
-        },
-        {
-          "word": "Include",
-          "start": 18.0,
-          "end": 18.4
-        },
-        {
-          "word": "air",
-          "start": 18.4,
-          "end": 18.66
-        },
-        {
-          "word": "resistance,",
-          "start": 18.66,
-          "end": 19.12
-        },
-        {
-          "word": "and",
-          "start": 19.76,
-          "end": 20.1
-        },
-        {
-          "word": "drag",
-          "start": 20.1,
-          "end": 20.42
-        },
-        {
-          "word": "changes",
-          "start": 20.42,
-          "end": 20.94
+          "word": "so",
+          "start": 5.77,
+          "end": 6.77
         },
         {
           "word": "the",
-          "start": 20.94,
-          "end": 21.16
+          "start": 6.77,
+          "end": 6.91
         },
         {
-          "word": "resultant.",
-          "start": 21.16,
-          "end": 21.72
+          "word": "problem",
+          "start": 6.91,
+          "end": 7.25
+        },
+        {
+          "word": "becomes",
+          "start": 7.25,
+          "end": 7.61
+        },
+        {
+          "word": "manageable.",
+          "start": 7.61,
+          "end": 8.15
+        },
+        {
+          "word": "Use",
+          "start": 9.21,
+          "end": 9.49
+        },
+        {
+          "word": "equations",
+          "start": 9.49,
+          "end": 10.05
+        },
+        {
+          "word": "or",
+          "start": 10.05,
+          "end": 10.57
+        },
+        {
+          "word": "a",
+          "start": 10.57,
+          "end": 10.71
+        },
+        {
+          "word": "graph",
+          "start": 10.71,
+          "end": 10.99
+        },
+        {
+          "word": "to",
+          "start": 10.99,
+          "end": 11.77
+        },
+        {
+          "word": "describe",
+          "start": 11.77,
+          "end": 12.23
+        },
+        {
+          "word": "the",
+          "start": 12.23,
+          "end": 12.43
+        },
+        {
+          "word": "simplified",
+          "start": 12.43,
+          "end": 12.89
+        },
+        {
+          "word": "situation.",
+          "start": 12.89,
+          "end": 13.53
+        },
+        {
+          "word": "Check",
+          "start": 14.35,
+          "end": 14.79
+        },
+        {
+          "word": "whether",
+          "start": 14.79,
+          "end": 15.41
+        },
+        {
+          "word": "the",
+          "start": 15.41,
+          "end": 15.61
+        },
+        {
+          "word": "answer",
+          "start": 15.61,
+          "end": 16.01
+        },
+        {
+          "word": "is",
+          "start": 16.01,
+          "end": 16.81
+        },
+        {
+          "word": "reasonable",
+          "start": 16.81,
+          "end": 17.23
+        },
+        {
+          "word": "in",
+          "start": 17.23,
+          "end": 17.51
+        },
+        {
+          "word": "real",
+          "start": 17.51,
+          "end": 17.73
+        },
+        {
+          "word": "life.",
+          "start": 17.73,
+          "end": 18.11
+        },
+        {
+          "word": "If",
+          "start": 19.03,
+          "end": 19.09
+        },
+        {
+          "word": "it",
+          "start": 19.09,
+          "end": 19.21
+        },
+        {
+          "word": "isn't,",
+          "start": 19.21,
+          "end": 19.55
+        },
+        {
+          "word": "refine",
+          "start": 20.53,
+          "end": 21.09
+        },
+        {
+          "word": "the",
+          "start": 21.09,
+          "end": 21.43
+        },
+        {
+          "word": "assumptions",
+          "start": 21.43,
+          "end": 21.95
+        },
+        {
+          "word": "and",
+          "start": 21.95,
+          "end": 22.39
+        },
+        {
+          "word": "try",
+          "start": 22.39,
+          "end": 22.69
+        },
+        {
+          "word": "again.",
+          "start": 22.69,
+          "end": 23.09
+        },
+        {
+          "word": "That's",
+          "start": 23.09,
+          "end": 24.43
+        },
+        {
+          "word": "the",
+          "start": 24.43,
+          "end": 24.55
+        },
+        {
+          "word": "modelling",
+          "start": 24.55,
+          "end": 24.93
+        },
+        {
+          "word": "cycle.",
+          "start": 24.93,
+          "end": 25.33
         }
       ],
       "cues": {
-        "hanging": 0.48,
-        "box": 2.16,
-        "table": 3.88,
-        "string": 4.82,
-        "pulley": 6.04,
-        "particle": 6.94,
-        "mass": 7.66,
-        "size": 8.6,
-        "tips": 11.84,
-        "air": 13.78,
-        "include": 18.0,
-        "drag": 20.1
+        "real": 1.27,
+        "assumptions": 2.77,
+        "equations": 9.49,
+        "check": 14.35,
+        "refine": 20.53
       },
-      "generatedAt": "2026-09-06T12:38:41.036344",
+      "generatedAt": "2026-09-06T14:01:25.604347",
       "engine": "faster-whisper-small (local)",
       "tempo": "brisk",
       "voiceSpeed": 1.0,
       "voiceId": "gYWKdgLtqjPO3D5uDrDP",
       "provider": "elevenlabs",
-      "audioSha256": "8d033c4f20a0b2670a41ef387b5a5e9855e69d1f21b6c4098a0bcc644ef99362",
+      "audioSha256": "01461df89748902e8abfb9f70c0e7faa69f1716eb2edec2b34f142c7db85efe3",
       "beats": [
         {
-          "text": "A hanging box pulls this box on the table through string over a pulley. A particle keeps mass but ignores size: we track translation. If it tips, size matters. Air resistance neglected means no drag. Include air resistance, and drag changes the resultant.",
+          "text": "Start with a real problem. Choose assumptions: leave out details so the problem becomes manageable. Use equations or a graph to describe the simplified situation. Check whether the answer is reasonable in real life. If it isn't, refine the assumptions and try again. That's the modelling cycle.",
           "start": 0.3,
-          "end": 21.88
+          "end": 25.53
         }
       ],
       "holds": [],
       "paragraphs": [
-        "A hanging box pulls this box on the table through string over a pulley. A particle keeps mass but ignores size: we track translation. If it tips, size matters. Air resistance neglected means no drag. Include air resistance, and drag changes the resultant."
+        "Start with a real problem. Choose assumptions: leave out details so the problem becomes manageable. Use equations or a graph to describe the simplified situation. Check whether the answer is reasonable in real life. If it isn't, refine the assumptions and try again. That's the modelling cycle."
       ]
     },
     {
       "id": "s03",
       "audio": "modelling-assumptions-s03.mp3",
-      "duration": 28.238367,
-      "wordCount": 48,
-      "text": "Light means negligible mass. A light string needs no force to accelerate itself. A heavy string does. A light pulley has negligible rotational inertia. A massive pulley resists spin changes. A smooth pulley has no friction. Together, these give equal tensions. A rough pulley can make them unequal.",
-      "words": [
-        {
-          "word": "Light",
-          "start": 0.0,
-          "end": 0.56
-        },
-        {
-          "word": "means",
-          "start": 0.56,
-          "end": 1.4
-        },
-        {
-          "word": "negligible",
-          "start": 1.4,
-          "end": 2.14
-        },
-        {
-          "word": "mass.",
-          "start": 2.14,
-          "end": 2.6
-        },
-        {
-          "word": "A",
-          "start": 3.42,
-          "end": 3.48
-        },
-        {
-          "word": "light",
-          "start": 3.48,
-          "end": 3.7
-        },
-        {
-          "word": "string",
-          "start": 3.7,
-          "end": 4.1
-        },
-        {
-          "word": "needs",
-          "start": 4.1,
-          "end": 4.84
-        },
-        {
-          "word": "no",
-          "start": 4.84,
-          "end": 5.12
-        },
-        {
-          "word": "force",
-          "start": 5.12,
-          "end": 5.48
-        },
-        {
-          "word": "to",
-          "start": 5.48,
-          "end": 5.84
-        },
-        {
-          "word": "accelerate",
-          "start": 5.84,
-          "end": 6.4
-        },
-        {
-          "word": "itself.",
-          "start": 6.4,
-          "end": 7.62
-        },
-        {
-          "word": "A",
-          "start": 8.1,
-          "end": 8.14
-        },
-        {
-          "word": "heavy",
-          "start": 8.14,
-          "end": 8.36
-        },
-        {
-          "word": "string",
-          "start": 8.36,
-          "end": 8.7
-        },
-        {
-          "word": "does.",
-          "start": 8.7,
-          "end": 9.02
-        },
-        {
-          "word": "A",
-          "start": 9.8,
-          "end": 9.92
-        },
-        {
-          "word": "light",
-          "start": 9.92,
-          "end": 10.22
-        },
-        {
-          "word": "pulley",
-          "start": 10.22,
-          "end": 10.48
-        },
-        {
-          "word": "has",
-          "start": 10.48,
-          "end": 11.24
-        },
-        {
-          "word": "negligible",
-          "start": 11.24,
-          "end": 12.02
-        },
-        {
-          "word": "rotational",
-          "start": 12.02,
-          "end": 12.86
-        },
-        {
-          "word": "inertia.",
-          "start": 12.86,
-          "end": 13.38
-        },
-        {
-          "word": "A",
-          "start": 14.2,
-          "end": 14.28
-        },
-        {
-          "word": "massive",
-          "start": 14.28,
-          "end": 14.76
-        },
-        {
-          "word": "pulley",
-          "start": 14.76,
-          "end": 15.44
-        },
-        {
-          "word": "resists",
-          "start": 15.44,
-          "end": 16.3
-        },
-        {
-          "word": "spin",
-          "start": 16.3,
-          "end": 16.8
-        },
-        {
-          "word": "changes.",
-          "start": 16.8,
-          "end": 17.26
-        },
-        {
-          "word": "A",
-          "start": 18.28,
-          "end": 18.38
-        },
-        {
-          "word": "smooth",
-          "start": 18.38,
-          "end": 18.78
-        },
-        {
-          "word": "pulley",
-          "start": 18.78,
-          "end": 19.18
-        },
-        {
-          "word": "has",
-          "start": 19.18,
-          "end": 19.88
-        },
-        {
-          "word": "no",
-          "start": 19.88,
-          "end": 20.12
-        },
-        {
-          "word": "friction.",
-          "start": 20.12,
-          "end": 20.48
-        },
-        {
-          "word": "Together,",
-          "start": 21.42,
-          "end": 22.02
-        },
-        {
-          "word": "these",
-          "start": 22.3,
-          "end": 22.92
-        },
-        {
-          "word": "give",
-          "start": 22.92,
-          "end": 23.18
-        },
-        {
-          "word": "equal",
-          "start": 23.18,
-          "end": 23.6
-        },
-        {
-          "word": "tensions.",
-          "start": 23.6,
-          "end": 24.04
-        },
-        {
-          "word": "A",
-          "start": 24.98,
-          "end": 25.12
-        },
-        {
-          "word": "rough",
-          "start": 25.12,
-          "end": 25.4
-        },
-        {
-          "word": "pulley",
-          "start": 25.4,
-          "end": 25.86
-        },
-        {
-          "word": "can",
-          "start": 25.86,
-          "end": 26.38
-        },
-        {
-          "word": "make",
-          "start": 26.38,
-          "end": 26.72
-        },
-        {
-          "word": "them",
-          "start": 26.72,
-          "end": 26.98
-        },
-        {
-          "word": "unequal.",
-          "start": 26.98,
-          "end": 27.6
-        }
-      ],
-      "cues": {
-        "light": 0.3,
-        "string": 3.48,
-        "heavy": 8.14,
-        "pulley": 9.92,
-        "massive": 14.28,
-        "spin": 15.44,
-        "smooth": 18.38,
-        "friction": 19.88,
-        "equal": 23.18,
-        "second-tension": 23.6,
-        "rough": 25.12,
-        "unequal": 26.98
-      },
-      "generatedAt": "2026-09-06T12:38:41.036344",
-      "engine": "faster-whisper-small (local)",
-      "tempo": "brisk",
-      "voiceSpeed": 1.0,
-      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
-      "provider": "elevenlabs",
-      "audioSha256": "41488522ba26bba58024485e179e70dd30d48d3b66700dada3d17112d2dfffef",
-      "beats": [
-        {
-          "text": "Light means negligible mass. A light string needs no force to accelerate itself; a heavy string does. A light pulley has negligible rotational inertia; a massive pulley resists spin changes. A smooth pulley has no friction. Together, these give equal tensions. A rough pulley can make them unequal.",
-          "start": 0.3,
-          "end": 27.76
-        }
-      ],
-      "holds": [],
-      "paragraphs": [
-        "Light means negligible mass. A light string needs no force to accelerate itself; a heavy string does. A light pulley has negligible rotational inertia; a massive pulley resists spin changes. A smooth pulley has no friction. Together, these give equal tensions. A rough pulley can make them unequal."
-      ]
-    },
-    {
-      "id": "s04",
-      "audio": "modelling-assumptions-s04.mp3",
-      "duration": 27.376327,
-      "wordCount": 47,
-      "text": "Inextensible means fixed length. While taut, any length gained here is lost there, so the boxes have equal speed and acceleration magnitudes, in different directions. An extensible string stretches, breaking that link. A slack string cannot pull or push, so it gives neither tension nor linked motion.",
-      "words": [
-        {
-          "word": "Inextensible",
-          "start": 0.0,
-          "end": 0.96
-        },
-        {
-          "word": "means",
-          "start": 0.96,
-          "end": 1.76
-        },
-        {
-          "word": "fixed",
-          "start": 1.76,
-          "end": 2.14
-        },
-        {
-          "word": "length.",
-          "start": 2.14,
-          "end": 2.62
-        },
-        {
-          "word": "While",
-          "start": 3.72,
-          "end": 3.86
-        },
-        {
-          "word": "taut,",
-          "start": 3.86,
-          "end": 4.34
-        },
-        {
-          "word": "any",
-          "start": 4.94,
-          "end": 5.28
-        },
-        {
-          "word": "length",
-          "start": 5.28,
-          "end": 5.62
-        },
-        {
-          "word": "gained",
-          "start": 5.62,
-          "end": 6.06
-        },
-        {
-          "word": "here",
-          "start": 6.06,
-          "end": 6.4
-        },
-        {
-          "word": "is",
-          "start": 6.4,
-          "end": 7.14
-        },
-        {
-          "word": "lost",
-          "start": 7.14,
-          "end": 7.46
-        },
-        {
-          "word": "there,",
-          "start": 7.46,
-          "end": 7.84
-        },
-        {
-          "word": "so",
-          "start": 8.46,
-          "end": 9.0
-        },
-        {
-          "word": "the",
-          "start": 9.0,
-          "end": 9.16
-        },
-        {
-          "word": "boxes",
-          "start": 9.16,
-          "end": 9.44
-        },
-        {
-          "word": "have",
-          "start": 9.44,
-          "end": 9.78
-        },
-        {
-          "word": "equal",
-          "start": 9.78,
-          "end": 10.16
-        },
-        {
-          "word": "speed",
-          "start": 10.16,
-          "end": 10.6
-        },
-        {
-          "word": "and",
-          "start": 10.6,
-          "end": 11.38
-        },
-        {
-          "word": "acceleration",
-          "start": 11.38,
-          "end": 11.88
-        },
-        {
-          "word": "magnitudes,",
-          "start": 11.88,
-          "end": 12.7
-        },
-        {
-          "word": "in",
-          "start": 13.36,
-          "end": 13.56
-        },
-        {
-          "word": "different",
-          "start": 13.56,
-          "end": 13.94
-        },
-        {
-          "word": "directions.",
-          "start": 13.94,
-          "end": 14.54
-        },
-        {
-          "word": "An",
-          "start": 15.36,
-          "end": 15.46
-        },
-        {
-          "word": "extensible",
-          "start": 15.46,
-          "end": 16.08
-        },
-        {
-          "word": "string",
-          "start": 16.08,
-          "end": 16.56
-        },
-        {
-          "word": "stretches,",
-          "start": 16.56,
-          "end": 17.06
-        },
-        {
-          "word": "breaking",
-          "start": 17.72,
-          "end": 18.2
-        },
-        {
-          "word": "that",
-          "start": 18.2,
-          "end": 18.5
-        },
-        {
-          "word": "link.",
-          "start": 18.5,
-          "end": 18.78
-        },
-        {
-          "word": "A",
-          "start": 19.78,
-          "end": 19.92
-        },
-        {
-          "word": "slack",
-          "start": 19.92,
-          "end": 20.28
-        },
-        {
-          "word": "string",
-          "start": 20.28,
-          "end": 20.8
-        },
-        {
-          "word": "cannot",
-          "start": 20.8,
-          "end": 21.3
-        },
-        {
-          "word": "pull",
-          "start": 21.3,
-          "end": 21.84
-        },
-        {
-          "word": "or",
-          "start": 21.84,
-          "end": 22.42
-        },
-        {
-          "word": "push,",
-          "start": 22.42,
-          "end": 22.88
-        },
-        {
-          "word": "so",
-          "start": 23.4,
-          "end": 23.68
-        },
-        {
-          "word": "it",
-          "start": 23.68,
-          "end": 23.84
-        },
-        {
-          "word": "gives",
-          "start": 23.84,
-          "end": 24.24
-        },
-        {
-          "word": "neither",
-          "start": 24.24,
-          "end": 24.6
-        },
-        {
-          "word": "tension",
-          "start": 24.6,
-          "end": 25.16
-        },
-        {
-          "word": "nor",
-          "start": 25.16,
-          "end": 25.84
-        },
-        {
-          "word": "linked",
-          "start": 25.84,
-          "end": 26.26
-        },
-        {
-          "word": "motion.",
-          "start": 26.26,
-          "end": 26.68
-        }
-      ],
-      "cues": {
-        "inextensible": 0.3,
-        "taut": 3.86,
-        "gained": 5.62,
-        "lost": 7.14,
-        "speed": 9.78,
-        "acceleration": 11.38,
-        "directions": 13.56,
-        "extensible": 15.36,
-        "stretch": 16.56,
-        "slack": 19.92,
-        "no-tension": 24.24,
-        "unlinked": 25.16
-      },
-      "generatedAt": "2026-09-06T12:38:41.036344",
-      "engine": "faster-whisper-small (local)",
-      "tempo": "brisk",
-      "voiceSpeed": 1.0,
-      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
-      "provider": "elevenlabs",
-      "audioSha256": "ce02ab18cfec6a373ff572663f9bd6bdb67c5539514cab6da24386ce47bcebb4",
-      "beats": [
-        {
-          "text": "Inextensible means fixed length. While taut, any length gained here is lost there, so the boxes have equal speed and acceleration magnitudes, in different directions. An extensible string stretches, breaking that link. A slack string cannot pull or push, so it gives neither tension nor linked motion.",
-          "start": 0.3,
-          "end": 26.88
-        }
-      ],
-      "holds": [],
-      "paragraphs": [
-        "Inextensible means fixed length. While taut, any length gained here is lost there, so the boxes have equal speed and acceleration magnitudes, in different directions. An extensible string stretches, breaking that link. A slack string cannot pull or push, so it gives neither tension nor linked motion."
-      ]
-    },
-    {
-      "id": "s05",
-      "audio": "modelling-assumptions-s05.mp3",
-      "duration": 98.742857,
-      "wordCount": 160,
-      "text": "These other words describe parts of our example. Paper Four treats bodies as particles. turning effects here are extra context. A rigid rod, like this brace, keeps its shape, so it can push or pull. A flexible brace bends. A light rod ignores its own mass. A heavy one adds weight. A beam keeps force positions because they affect turning. Uniform means evenly spread mass. A uniform rod balances at its midpoint. Uneven mass shifts that point. A lamina is a thin sheet, like this label. Ignore thickness. A thick plate needs depth. A uniform lamina balances at its area centroid. Uneven mass shifts it. A bead follows a wire's path. Detached, it can leave. The wire ignores thickness. A thick guide needs clearance. Smooth contact gives a perpendicular reaction. Rough contact adds friction. A fixed peg can replace the pulley. Moving it changes the path constraint. A smooth peg preserves tension with light string. A rough peg may not.",
-      "words": [
-        {
-          "word": "These",
-          "start": 0.02,
-          "end": 0.46
-        },
-        {
-          "word": "other",
-          "start": 0.46,
-          "end": 0.72
-        },
-        {
-          "word": "words",
-          "start": 0.72,
-          "end": 1.02
-        },
-        {
-          "word": "describe",
-          "start": 1.02,
-          "end": 1.52
-        },
-        {
-          "word": "parts",
-          "start": 1.52,
-          "end": 2.0
-        },
-        {
-          "word": "of",
-          "start": 2.0,
-          "end": 2.2
-        },
-        {
-          "word": "our",
-          "start": 2.2,
-          "end": 2.34
-        },
-        {
-          "word": "example.",
-          "start": 2.34,
-          "end": 2.82
-        },
-        {
-          "word": "Paper",
-          "start": 3.64,
-          "end": 4.1
-        },
-        {
-          "word": "Four",
-          "start": 4.1,
-          "end": 4.4
-        },
-        {
-          "word": "treats",
-          "start": 4.4,
-          "end": 4.84
-        },
-        {
-          "word": "bodies",
-          "start": 4.84,
-          "end": 5.18
-        },
-        {
-          "word": "as",
-          "start": 5.18,
-          "end": 5.52
-        },
-        {
-          "word": "particles.",
-          "start": 5.52,
-          "end": 6.1
-        },
-        {
-          "word": "turning",
-          "start": 6.6,
-          "end": 7.36
-        },
-        {
-          "word": "effects",
-          "start": 7.36,
-          "end": 7.92
-        },
-        {
-          "word": "here",
-          "start": 7.92,
-          "end": 8.34
-        },
-        {
-          "word": "are",
-          "start": 8.34,
-          "end": 8.54
-        },
-        {
-          "word": "extra",
-          "start": 8.54,
-          "end": 9.02
-        },
-        {
-          "word": "context.",
-          "start": 9.02,
-          "end": 9.42
-        },
-        {
-          "word": "A",
-          "start": 9.78,
-          "end": 9.88
-        },
-        {
-          "word": "rigid",
-          "start": 9.88,
-          "end": 10.18
-        },
-        {
-          "word": "rod,",
-          "start": 10.18,
-          "end": 10.62
-        },
-        {
-          "word": "like",
-          "start": 11.2,
-          "end": 11.52
-        },
-        {
-          "word": "this",
-          "start": 11.52,
-          "end": 11.84
-        },
-        {
-          "word": "brace,",
-          "start": 11.84,
-          "end": 12.22
-        },
-        {
-          "word": "keeps",
-          "start": 12.88,
-          "end": 13.08
-        },
-        {
-          "word": "its",
-          "start": 13.08,
-          "end": 13.3
-        },
-        {
-          "word": "shape,",
-          "start": 13.3,
-          "end": 13.82
-        },
-        {
-          "word": "so",
-          "start": 14.74,
-          "end": 14.94
-        },
-        {
-          "word": "it",
-          "start": 14.94,
-          "end": 15.12
-        },
-        {
-          "word": "can",
-          "start": 15.12,
-          "end": 15.3
-        },
-        {
-          "word": "push",
-          "start": 15.3,
-          "end": 15.84
-        },
-        {
-          "word": "or",
-          "start": 15.84,
-          "end": 16.42
-        },
-        {
-          "word": "pull.",
-          "start": 16.42,
-          "end": 16.8
-        },
-        {
-          "word": "A",
-          "start": 18.02,
-          "end": 18.18
-        },
-        {
-          "word": "flexible",
-          "start": 18.18,
-          "end": 18.76
-        },
-        {
-          "word": "brace",
-          "start": 18.76,
-          "end": 19.76
-        },
-        {
-          "word": "bends.",
-          "start": 19.76,
-          "end": 20.44
-        },
-        {
-          "word": "A",
-          "start": 21.04,
-          "end": 21.16
-        },
-        {
-          "word": "light",
-          "start": 21.16,
-          "end": 21.48
-        },
-        {
-          "word": "rod",
-          "start": 21.48,
-          "end": 21.84
-        },
-        {
-          "word": "ignores",
-          "start": 21.84,
-          "end": 22.58
-        },
-        {
-          "word": "its",
-          "start": 22.58,
-          "end": 23.12
-        },
-        {
-          "word": "own",
-          "start": 23.12,
-          "end": 23.44
-        },
-        {
-          "word": "mass.",
-          "start": 23.44,
-          "end": 23.8
-        },
-        {
-          "word": "A",
-          "start": 24.3,
-          "end": 24.44
-        },
-        {
-          "word": "heavy",
-          "start": 24.44,
-          "end": 24.68
-        },
-        {
-          "word": "one",
-          "start": 24.68,
-          "end": 25.02
-        },
-        {
-          "word": "adds",
-          "start": 25.02,
-          "end": 25.64
-        },
-        {
-          "word": "weight.",
-          "start": 25.64,
-          "end": 26.0
-        },
-        {
-          "word": "A",
-          "start": 26.72,
-          "end": 26.84
-        },
-        {
-          "word": "beam",
-          "start": 26.84,
-          "end": 27.2
-        },
-        {
-          "word": "keeps",
-          "start": 27.2,
-          "end": 27.6
-        },
-        {
-          "word": "force",
-          "start": 27.6,
-          "end": 28.1
-        },
-        {
-          "word": "positions",
-          "start": 28.1,
-          "end": 28.72
-        },
-        {
-          "word": "because",
-          "start": 29.18,
-          "end": 29.68
-        },
-        {
-          "word": "they",
-          "start": 29.68,
-          "end": 29.9
-        },
-        {
-          "word": "affect",
-          "start": 29.9,
-          "end": 30.4
-        },
-        {
-          "word": "turning.",
-          "start": 30.4,
-          "end": 30.96
-        },
-        {
-          "word": "Uniform",
-          "start": 31.44,
-          "end": 31.86
-        },
-        {
-          "word": "means",
-          "start": 31.86,
-          "end": 32.42
-        },
-        {
-          "word": "evenly",
-          "start": 32.42,
-          "end": 32.92
-        },
-        {
-          "word": "spread",
-          "start": 32.92,
-          "end": 33.28
-        },
-        {
-          "word": "mass.",
-          "start": 33.28,
-          "end": 33.78
-        },
-        {
-          "word": "A",
-          "start": 34.66,
-          "end": 34.86
-        },
-        {
-          "word": "uniform",
-          "start": 34.86,
-          "end": 35.24
-        },
-        {
-          "word": "rod",
-          "start": 35.24,
-          "end": 35.68
-        },
-        {
-          "word": "balances",
-          "start": 35.68,
-          "end": 36.28
-        },
-        {
-          "word": "at",
-          "start": 36.28,
-          "end": 37.24
-        },
-        {
-          "word": "its",
-          "start": 37.24,
-          "end": 37.38
-        },
-        {
-          "word": "midpoint.",
-          "start": 37.38,
-          "end": 37.98
-        },
-        {
-          "word": "Uneven",
-          "start": 38.82,
-          "end": 39.56
-        },
-        {
-          "word": "mass",
-          "start": 39.56,
-          "end": 40.0
-        },
-        {
-          "word": "shifts",
-          "start": 40.0,
-          "end": 40.5
-        },
-        {
-          "word": "that",
-          "start": 40.5,
-          "end": 41.04
-        },
-        {
-          "word": "point.",
-          "start": 41.04,
-          "end": 41.44
-        },
-        {
-          "word": "A",
-          "start": 41.84,
-          "end": 41.92
-        },
-        {
-          "word": "lamina",
-          "start": 41.92,
-          "end": 42.16
-        },
-        {
-          "word": "is",
-          "start": 42.16,
-          "end": 42.44
-        },
-        {
-          "word": "a",
-          "start": 42.44,
-          "end": 42.56
-        },
-        {
-          "word": "thin",
-          "start": 42.56,
-          "end": 43.12
-        },
-        {
-          "word": "sheet,",
-          "start": 43.12,
-          "end": 43.76
-        },
-        {
-          "word": "like",
-          "start": 44.16,
-          "end": 44.68
-        },
-        {
-          "word": "this",
-          "start": 44.68,
-          "end": 44.96
-        },
-        {
-          "word": "label.",
-          "start": 44.96,
-          "end": 45.28
-        },
-        {
-          "word": "Ignore",
-          "start": 46.18,
-          "end": 46.8
-        },
-        {
-          "word": "thickness.",
-          "start": 46.8,
-          "end": 47.72
-        },
-        {
-          "word": "A",
-          "start": 48.82,
-          "end": 48.94
-        },
-        {
-          "word": "thick",
-          "start": 48.94,
-          "end": 49.24
-        },
-        {
-          "word": "plate",
-          "start": 49.24,
-          "end": 49.6
-        },
-        {
-          "word": "needs",
-          "start": 49.6,
-          "end": 50.26
-        },
-        {
-          "word": "depth.",
-          "start": 50.26,
-          "end": 50.8
-        },
-        {
-          "word": "A",
-          "start": 52.0,
-          "end": 52.2
-        },
-        {
-          "word": "uniform",
-          "start": 52.2,
-          "end": 52.62
-        },
-        {
-          "word": "lamina",
-          "start": 52.62,
-          "end": 53.24
-        },
-        {
-          "word": "balances",
-          "start": 53.24,
-          "end": 54.26
-        },
-        {
-          "word": "at",
-          "start": 54.26,
-          "end": 54.78
-        },
-        {
-          "word": "its",
-          "start": 54.78,
-          "end": 54.98
-        },
-        {
-          "word": "area",
-          "start": 54.98,
-          "end": 55.56
-        },
-        {
-          "word": "centroid.",
-          "start": 56.36,
-          "end": 57.12
-        },
-        {
-          "word": "Uneven",
-          "start": 57.74,
-          "end": 58.48
-        },
-        {
-          "word": "mass",
-          "start": 58.48,
-          "end": 59.02
-        },
-        {
-          "word": "shifts",
-          "start": 59.02,
-          "end": 59.66
-        },
-        {
-          "word": "it.",
-          "start": 59.66,
-          "end": 60.18
-        },
-        {
-          "word": "A",
-          "start": 60.58,
-          "end": 60.7
-        },
-        {
-          "word": "bead",
-          "start": 60.7,
-          "end": 61.08
-        },
-        {
-          "word": "follows",
-          "start": 61.08,
-          "end": 61.5
-        },
-        {
-          "word": "a",
-          "start": 61.5,
-          "end": 61.76
-        },
-        {
-          "word": "wire's",
-          "start": 61.76,
-          "end": 62.26
-        },
-        {
-          "word": "path.",
-          "start": 62.26,
-          "end": 62.6
-        },
-        {
-          "word": "Detached,",
-          "start": 63.46,
-          "end": 64.04
-        },
-        {
-          "word": "it",
-          "start": 64.8,
-          "end": 64.9
-        },
-        {
-          "word": "can",
-          "start": 64.9,
-          "end": 65.08
-        },
-        {
-          "word": "leave.",
-          "start": 65.08,
-          "end": 65.38
-        },
-        {
-          "word": "The",
-          "start": 66.3,
-          "end": 66.62
-        },
-        {
-          "word": "wire",
-          "start": 66.62,
-          "end": 67.1
-        },
-        {
-          "word": "ignores",
-          "start": 67.1,
-          "end": 67.84
-        },
-        {
-          "word": "thickness.",
-          "start": 67.84,
-          "end": 68.54
-        },
-        {
-          "word": "A",
-          "start": 69.78,
-          "end": 69.9
-        },
-        {
-          "word": "thick",
-          "start": 69.9,
-          "end": 70.22
-        },
-        {
-          "word": "guide",
-          "start": 70.22,
-          "end": 70.68
-        },
-        {
-          "word": "needs",
-          "start": 70.68,
-          "end": 71.32
-        },
-        {
-          "word": "clearance.",
-          "start": 71.32,
-          "end": 71.86
-        },
-        {
-          "word": "Smooth",
-          "start": 72.9,
-          "end": 73.24
-        },
-        {
-          "word": "contact",
-          "start": 73.24,
-          "end": 73.78
-        },
-        {
-          "word": "gives",
-          "start": 73.78,
-          "end": 74.62
-        },
-        {
-          "word": "a",
-          "start": 74.62,
-          "end": 74.88
-        },
-        {
-          "word": "perpendicular",
-          "start": 74.88,
-          "end": 75.4
-        },
-        {
-          "word": "reaction.",
-          "start": 75.4,
-          "end": 76.42
-        },
-        {
-          "word": "Rough",
-          "start": 77.42,
-          "end": 77.78
-        },
-        {
-          "word": "contact",
-          "start": 77.78,
-          "end": 78.42
-        },
-        {
-          "word": "adds",
-          "start": 78.42,
-          "end": 79.3
-        },
-        {
-          "word": "friction.",
-          "start": 79.3,
-          "end": 79.82
-        },
-        {
-          "word": "A",
-          "start": 80.26,
-          "end": 80.38
-        },
-        {
-          "word": "fixed",
-          "start": 80.38,
-          "end": 80.92
-        },
-        {
-          "word": "peg",
-          "start": 80.92,
-          "end": 81.28
-        },
-        {
-          "word": "can",
-          "start": 81.28,
-          "end": 81.98
-        },
-        {
-          "word": "replace",
-          "start": 81.98,
-          "end": 82.54
-        },
-        {
-          "word": "the",
-          "start": 82.54,
-          "end": 82.94
-        },
-        {
-          "word": "pulley.",
-          "start": 82.94,
-          "end": 83.4
-        },
-        {
-          "word": "Moving",
-          "start": 84.32,
-          "end": 84.84
-        },
-        {
-          "word": "it",
-          "start": 84.84,
-          "end": 85.1
-        },
-        {
-          "word": "changes",
-          "start": 85.1,
-          "end": 85.68
-        },
-        {
-          "word": "the",
-          "start": 85.68,
-          "end": 86.44
-        },
-        {
-          "word": "path",
-          "start": 86.44,
-          "end": 86.78
-        },
-        {
-          "word": "constraint.",
-          "start": 86.78,
-          "end": 87.32
-        },
-        {
-          "word": "A",
-          "start": 88.68,
-          "end": 88.84
-        },
-        {
-          "word": "smooth",
-          "start": 88.84,
-          "end": 89.24
-        },
-        {
-          "word": "peg",
-          "start": 89.24,
-          "end": 89.76
-        },
-        {
-          "word": "preserves",
-          "start": 89.76,
-          "end": 90.94
-        },
-        {
-          "word": "tension",
-          "start": 90.94,
-          "end": 91.74
-        },
-        {
-          "word": "with",
-          "start": 91.74,
-          "end": 92.52
-        },
-        {
-          "word": "light",
-          "start": 92.52,
-          "end": 93.02
-        },
-        {
-          "word": "string.",
-          "start": 93.02,
-          "end": 94.1
-        },
-        {
-          "word": "A",
-          "start": 94.1,
-          "end": 95.62
-        },
-        {
-          "word": "rough",
-          "start": 95.62,
-          "end": 96.08
-        },
-        {
-          "word": "peg",
-          "start": 96.08,
-          "end": 96.44
-        },
-        {
-          "word": "may",
-          "start": 96.44,
-          "end": 97.58
-        },
-        {
-          "word": "not.",
-          "start": 97.58,
-          "end": 97.88
-        }
-      ],
-      "cues": {
-        "other": 0.46,
-        "rod": 9.88,
-        "push": 15.3,
-        "pull": 16.42,
-        "flexible": 18.18,
-        "bends": 19.76,
-        "light-rod": 21.16,
-        "heavy-rod": 24.44,
-        "weight": 25.02,
-        "beam": 26.84,
-        "positions": 27.6,
-        "turning": 29.9,
-        "uniform": 31.44,
-        "midpoint": 37.38,
-        "uneven-rod": 38.82,
-        "shift-rod": 40.0,
-        "lamina": 41.84,
-        "thickness": 46.18,
-        "plate": 48.94,
-        "uniform-lamina": 52.2,
-        "centroid": 56.36,
-        "uneven-lamina": 57.74,
-        "shift-lamina": 59.02,
-        "bead": 60.7,
-        "wire": 61.5,
-        "detached": 63.46,
-        "thin-wire": 66.3,
-        "guide": 69.9,
-        "normal": 74.88,
-        "wire-friction": 78.42,
-        "peg": 80.38,
-        "moving": 84.32,
-        "smooth-peg": 88.84,
-        "peg-tension": 89.76,
-        "rough-peg": 95.62,
-        "peg-unequal": 96.44
-      },
-      "generatedAt": "2026-09-06T12:38:41.036344",
-      "engine": "faster-whisper-small (local)",
-      "tempo": "slow",
-      "voiceSpeed": 0.9,
-      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
-      "provider": "elevenlabs",
-      "audioSha256": "4313f258474a16048d8e479bc5d0925bc64aab4c3a79e7ff71836f2accdf4b3f",
-      "beats": [
-        {
-          "text": "These other words describe parts of our example. Paper Four treats bodies as particles; turning effects here are extra context.",
-          "start": 0.3,
-          "end": 9.56
-        },
-        {
-          "text": "A rigid rod, like this brace, keeps its shape, so it can push or pull. A flexible brace bends.",
-          "start": 9.71,
-          "end": 20.85
-        },
-        {
-          "text": "A light rod ignores its own mass; a heavy one adds weight. A beam keeps force positions because they affect turning.",
-          "start": 21.0,
-          "end": 31.23
-        },
-        {
-          "text": "Uniform means evenly spread mass. A uniform rod balances at its midpoint. Uneven mass shifts that point.",
-          "start": 31.38,
-          "end": 41.61
-        },
-        {
-          "text": "A lamina is a thin sheet, like this label: ignore thickness. A thick plate needs depth. A uniform lamina balances at its area centroid; uneven mass shifts it.",
-          "start": 41.76,
-          "end": 60.36
-        },
-        {
-          "text": "A bead follows a wire's path; detached, it can leave. The wire ignores thickness. A thick guide needs clearance. Smooth contact gives a perpendicular reaction; rough contact adds friction.",
-          "start": 60.51,
-          "end": 80.02
-        },
-        {
-          "text": "A fixed peg can replace the pulley; moving it changes the path constraint. A smooth peg preserves tension with light string; a rough peg may not.",
-          "start": 80.17,
-          "end": 98.25
-        }
-      ],
-      "holds": [],
-      "paragraphs": [
-        "These other words describe parts of our example. Paper Four treats bodies as particles; turning effects here are extra context.",
-        "A rigid rod, like this brace, keeps its shape, so it can push or pull. A flexible brace bends.",
-        "A light rod ignores its own mass; a heavy one adds weight. A beam keeps force positions because they affect turning.",
-        "Uniform means evenly spread mass. A uniform rod balances at its midpoint. Uneven mass shifts that point.",
-        "A lamina is a thin sheet, like this label: ignore thickness. A thick plate needs depth. A uniform lamina balances at its area centroid; uneven mass shifts it.",
-        "A bead follows a wire's path; detached, it can leave. The wire ignores thickness. A thick guide needs clearance. Smooth contact gives a perpendicular reaction; rough contact adds friction.",
-        "A fixed peg can replace the pulley; moving it changes the path constraint. A smooth peg preserves tension with light string; a rough peg may not."
-      ]
-    },
-    {
-      "id": "s06",
-      "audio": "modelling-assumptions-s06.mp3",
-      "duration": 91.506939,
-      "wordCount": 132,
-      "text": "Let's find the acceleration and tension. The table box is three kilograms. Two kilograms hangs, its weight drives the motion. Use g equals ten metres per second squared, gravitational acceleration. The forces. Box weight down, reaction up, tension right. Hanging weight down, tension right. Hanging weight down, tension up. Vertical force is on the table box balance. Why this equation? Resultant force equals mass times acceleration. For the smooth table box, tension alone gives three a. For the hanging box, weight minus tension gives two a downward is positive. Add. Equal tensions cancel. Five kilograms is the total moving mass. What acceleration follows? Four metres per second squared. Each box gains four metres per second every second. And tension? Substitute into T equals three a. Twelve newtons. The pull on either box.",
-      "words": [
-        {
-          "word": "Let's",
-          "start": 0.0,
-          "end": 0.58
-        },
-        {
-          "word": "find",
-          "start": 0.58,
-          "end": 0.8
-        },
-        {
-          "word": "the",
-          "start": 0.8,
-          "end": 1.0
-        },
-        {
-          "word": "acceleration",
-          "start": 1.0,
-          "end": 1.64
-        },
-        {
-          "word": "and",
-          "start": 1.64,
-          "end": 1.9
-        },
-        {
-          "word": "tension.",
-          "start": 1.9,
-          "end": 2.42
-        },
-        {
-          "word": "The",
-          "start": 3.06,
-          "end": 3.6
-        },
-        {
-          "word": "table",
-          "start": 3.6,
-          "end": 3.96
-        },
-        {
-          "word": "box",
-          "start": 3.96,
-          "end": 4.34
-        },
-        {
-          "word": "is",
-          "start": 4.34,
-          "end": 4.72
-        },
-        {
-          "word": "three",
-          "start": 4.72,
-          "end": 5.12
-        },
-        {
-          "word": "kilograms.",
-          "start": 5.12,
-          "end": 5.68
-        },
-        {
-          "word": "Two",
-          "start": 8.19,
-          "end": 8.45
-        },
-        {
-          "word": "kilograms",
-          "start": 8.45,
-          "end": 8.91
-        },
-        {
-          "word": "hangs,",
-          "start": 8.91,
-          "end": 9.35
-        },
-        {
-          "word": "its",
-          "start": 10.29,
-          "end": 10.49
-        },
-        {
-          "word": "weight",
-          "start": 10.49,
-          "end": 10.79
-        },
-        {
-          "word": "drives",
-          "start": 10.79,
-          "end": 11.37
-        },
-        {
-          "word": "the",
-          "start": 11.37,
-          "end": 11.57
-        },
-        {
-          "word": "motion.",
-          "start": 11.57,
-          "end": 11.91
-        },
-        {
-          "word": "Use",
-          "start": 14.3,
-          "end": 14.58
-        },
-        {
-          "word": "g",
-          "start": 14.58,
-          "end": 14.96
-        },
-        {
-          "word": "equals",
-          "start": 14.96,
-          "end": 15.48
-        },
-        {
-          "word": "ten",
-          "start": 15.48,
-          "end": 15.82
-        },
-        {
-          "word": "metres",
-          "start": 15.82,
-          "end": 16.08
-        },
-        {
-          "word": "per",
-          "start": 16.08,
-          "end": 16.36
-        },
-        {
-          "word": "second",
-          "start": 16.36,
-          "end": 16.66
-        },
-        {
-          "word": "squared,",
-          "start": 16.66,
-          "end": 17.12
-        },
-        {
-          "word": "gravitational",
-          "start": 17.84,
-          "end": 18.52
-        },
-        {
-          "word": "acceleration.",
-          "start": 18.52,
-          "end": 19.46
-        },
-        {
-          "word": "The",
-          "start": 21.8,
-          "end": 22.0
-        },
-        {
-          "word": "forces.",
-          "start": 22.0,
-          "end": 22.4
-        },
-        {
-          "word": "Box",
-          "start": 23.68,
-          "end": 24.04
-        },
-        {
-          "word": "weight",
-          "start": 24.04,
-          "end": 24.98
-        },
-        {
-          "word": "down,",
-          "start": 24.98,
-          "end": 26.22
-        },
-        {
-          "word": "reaction",
-          "start": 27.08,
-          "end": 28.28
-        },
-        {
-          "word": "up,",
-          "start": 28.28,
-          "end": 28.82
-        },
-        {
-          "word": "tension",
-          "start": 29.56,
-          "end": 30.06
-        },
-        {
-          "word": "right.",
-          "start": 30.06,
-          "end": 30.54
-        },
-        {
-          "word": "Hanging",
-          "start": 31.84,
-          "end": 32.36
-        },
-        {
-          "word": "weight",
-          "start": 32.36,
-          "end": 32.74
-        },
-        {
-          "word": "down,",
-          "start": 32.74,
-          "end": 33.6
-        },
-        {
-          "word": "tension",
-          "start": 34.42,
-          "end": 34.78
-        },
-        {
-          "word": "right.",
-          "start": 34.78,
-          "end": 34.78
-        },
-        {
-          "word": "Hanging",
-          "start": 34.78,
-          "end": 34.78
-        },
-        {
-          "word": "weight",
-          "start": 34.78,
-          "end": 34.78
-        },
-        {
-          "word": "down,",
-          "start": 34.78,
-          "end": 34.78
-        },
-        {
-          "word": "tension",
-          "start": 34.78,
-          "end": 34.78
-        },
-        {
-          "word": "up.",
-          "start": 34.78,
-          "end": 34.78
-        },
-        {
-          "word": "Vertical",
-          "start": 37.04,
-          "end": 37.88
-        },
-        {
-          "word": "force",
-          "start": 37.88,
-          "end": 38.22
-        },
-        {
-          "word": "is",
-          "start": 38.22,
-          "end": 38.38
-        },
-        {
-          "word": "on",
-          "start": 38.38,
-          "end": 38.58
-        },
-        {
-          "word": "the",
-          "start": 38.58,
-          "end": 38.7
-        },
-        {
-          "word": "table",
-          "start": 38.7,
-          "end": 38.96
-        },
-        {
-          "word": "box",
-          "start": 38.96,
-          "end": 39.3
-        },
-        {
-          "word": "balance.",
-          "start": 39.3,
-          "end": 39.74
-        },
-        {
-          "word": "Why",
-          "start": 40.14,
-          "end": 40.44
-        },
-        {
-          "word": "this",
-          "start": 40.44,
-          "end": 40.76
-        },
-        {
-          "word": "equation?",
-          "start": 40.76,
-          "end": 41.26
-        },
-        {
-          "word": "Resultant",
-          "start": 42.48,
-          "end": 43.1
-        },
-        {
-          "word": "force",
-          "start": 43.1,
-          "end": 43.48
-        },
-        {
-          "word": "equals",
-          "start": 43.48,
-          "end": 44.34
-        },
-        {
-          "word": "mass",
-          "start": 44.34,
-          "end": 44.88
-        },
-        {
-          "word": "times",
-          "start": 44.88,
-          "end": 45.68
-        },
-        {
-          "word": "acceleration.",
-          "start": 45.68,
-          "end": 46.3
-        },
-        {
-          "word": "For",
-          "start": 47.28,
-          "end": 47.84
-        },
-        {
-          "word": "the",
-          "start": 47.84,
-          "end": 47.96
-        },
-        {
-          "word": "smooth",
-          "start": 47.96,
-          "end": 48.36
-        },
-        {
-          "word": "table",
-          "start": 48.36,
-          "end": 48.78
-        },
-        {
-          "word": "box,",
-          "start": 48.78,
-          "end": 49.26
-        },
-        {
-          "word": "tension",
-          "start": 49.92,
-          "end": 50.48
-        },
-        {
-          "word": "alone",
-          "start": 50.48,
-          "end": 50.94
-        },
-        {
-          "word": "gives",
-          "start": 50.94,
-          "end": 51.94
-        },
-        {
-          "word": "three",
-          "start": 51.94,
-          "end": 52.48
-        },
-        {
-          "word": "a.",
-          "start": 52.48,
-          "end": 52.88
-        },
-        {
-          "word": "For",
-          "start": 53.22,
-          "end": 53.36
-        },
-        {
-          "word": "the",
-          "start": 53.36,
-          "end": 53.52
-        },
-        {
-          "word": "hanging",
-          "start": 53.52,
-          "end": 53.74
-        },
-        {
-          "word": "box,",
-          "start": 53.74,
-          "end": 54.16
-        },
-        {
-          "word": "weight",
-          "start": 54.68,
-          "end": 54.9
-        },
-        {
-          "word": "minus",
-          "start": 54.9,
-          "end": 55.3
-        },
-        {
-          "word": "tension",
-          "start": 55.3,
-          "end": 56.0
-        },
-        {
-          "word": "gives",
-          "start": 56.0,
-          "end": 56.92
-        },
-        {
-          "word": "two",
-          "start": 56.92,
-          "end": 57.28
-        },
-        {
-          "word": "a",
-          "start": 57.28,
-          "end": 57.72
-        },
-        {
-          "word": "downward",
-          "start": 57.72,
-          "end": 58.46
-        },
-        {
-          "word": "is",
-          "start": 58.46,
-          "end": 59.06
-        },
-        {
-          "word": "positive.",
-          "start": 59.06,
-          "end": 59.46
-        },
-        {
-          "word": "Add.",
-          "start": 59.88,
-          "end": 60.06
-        },
-        {
-          "word": "Equal",
-          "start": 60.84,
-          "end": 61.6
-        },
-        {
-          "word": "tensions",
-          "start": 61.6,
-          "end": 61.98
-        },
-        {
-          "word": "cancel.",
-          "start": 61.98,
-          "end": 62.64
-        },
-        {
-          "word": "Five",
-          "start": 63.86,
-          "end": 64.3
-        },
-        {
-          "word": "kilograms",
-          "start": 64.3,
-          "end": 64.66
-        },
-        {
-          "word": "is",
-          "start": 64.66,
-          "end": 65.9
-        },
-        {
-          "word": "the",
-          "start": 65.9,
-          "end": 66.04
-        },
-        {
-          "word": "total",
-          "start": 66.04,
-          "end": 66.32
-        },
-        {
-          "word": "moving",
-          "start": 66.32,
-          "end": 66.7
-        },
-        {
-          "word": "mass.",
-          "start": 66.7,
-          "end": 67.06
-        },
-        {
-          "word": "What",
-          "start": 69.53,
-          "end": 69.65
-        },
-        {
-          "word": "acceleration",
-          "start": 69.65,
-          "end": 70.19
-        },
-        {
-          "word": "follows?",
-          "start": 70.19,
-          "end": 70.89
-        },
-        {
-          "word": "Four",
-          "start": 71.91,
-          "end": 72.51
-        },
-        {
-          "word": "metres",
-          "start": 72.51,
-          "end": 72.85
-        },
-        {
-          "word": "per",
-          "start": 72.85,
-          "end": 73.17
-        },
-        {
-          "word": "second",
-          "start": 73.17,
-          "end": 73.51
-        },
-        {
-          "word": "squared.",
-          "start": 73.51,
-          "end": 73.93
-        },
-        {
-          "word": "Each",
-          "start": 74.89,
-          "end": 75.19
-        },
-        {
-          "word": "box",
-          "start": 75.19,
-          "end": 75.51
-        },
-        {
-          "word": "gains",
-          "start": 75.51,
-          "end": 76.29
-        },
-        {
-          "word": "four",
-          "start": 76.29,
-          "end": 76.63
-        },
-        {
-          "word": "metres",
-          "start": 76.63,
-          "end": 76.85
-        },
-        {
-          "word": "per",
-          "start": 76.85,
-          "end": 77.11
-        },
-        {
-          "word": "second",
-          "start": 77.11,
-          "end": 77.43
-        },
-        {
-          "word": "every",
-          "start": 77.43,
-          "end": 77.71
-        },
-        {
-          "word": "second.",
-          "start": 77.71,
-          "end": 78.09
-        },
-        {
-          "word": "And",
-          "start": 80.39,
-          "end": 80.59
-        },
-        {
-          "word": "tension?",
-          "start": 80.59,
-          "end": 81.15
-        },
-        {
-          "word": "Substitute",
-          "start": 82.45,
-          "end": 83.01
-        },
-        {
-          "word": "into",
-          "start": 83.01,
-          "end": 83.31
-        },
-        {
-          "word": "T",
-          "start": 83.31,
-          "end": 83.63
-        },
-        {
-          "word": "equals",
-          "start": 83.63,
-          "end": 84.01
-        },
-        {
-          "word": "three",
-          "start": 84.01,
-          "end": 84.45
-        },
-        {
-          "word": "a.",
-          "start": 84.45,
-          "end": 84.87
-        },
-        {
-          "word": "Twelve",
-          "start": 85.25,
-          "end": 85.73
-        },
-        {
-          "word": "newtons.",
-          "start": 85.73,
-          "end": 86.43
-        },
-        {
-          "word": "The",
-          "start": 87.21,
-          "end": 87.45
-        },
-        {
-          "word": "pull",
-          "start": 87.45,
-          "end": 87.89
-        },
-        {
-          "word": "on",
-          "start": 87.89,
-          "end": 88.21
-        },
-        {
-          "word": "either",
-          "start": 88.21,
-          "end": 88.47
-        },
-        {
-          "word": "box.",
-          "start": 88.47,
-          "end": 88.81
-        }
-      ],
-      "cues": {
-        "find": 0.58,
-        "mass-three": 4.72,
-        "mass-two": 8.26,
-        "gravity": 14.31,
-        "ten": 15.48,
-        "forces": 21.86,
-        "box-weight": 23.68,
-        "reaction": 27.08,
-        "box-tension": 29.56,
-        "hanging-weight": 31.84,
-        "hanging-tension": 34.78,
-        "balance": 37.04,
-        "equations": 40.76,
-        "newton": 42.48,
-        "table-equation": 49.92,
-        "hanging-equation": 53.22,
-        "add": 59.88,
-        "five": 63.86,
-        "acceleration": 69.53,
-        "four": 72.22,
-        "tension": 80.41,
-        "substitute": 82.45,
-        "twelve": 85.25
-      },
-      "generatedAt": "2026-09-06T12:38:41.036344",
-      "engine": "faster-whisper-small (local)",
-      "tempo": "slow",
-      "voiceSpeed": 0.9,
-      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
-      "provider": "elevenlabs",
-      "audioSha256": "ae25cd0e018db8b86f1cf69b4734738c1e904bddac831301ef95ba31109d28bb",
-      "beats": [
-        {
-          "text": "Let's find the acceleration and tension. The table box is three kilograms.",
-          "start": 0.3,
-          "end": 6.11
-        },
-        {
-          "text": "Two kilograms hangs; its weight drives the motion.",
-          "start": 8.26,
-          "end": 12.16
-        },
-        {
-          "text": "Use g equals ten metres per second squared: gravitational acceleration.",
-          "start": 14.31,
-          "end": 19.71
-        },
-        {
-          "text": "The forces: box weight down, reaction up, tension right. Hanging weight down, tension up. Vertical forces on the table box balance.",
-          "start": 21.86,
-          "end": 40.02
-        },
-        {
-          "text": "Why these equations?",
-          "start": 40.17,
-          "end": 41.48
-        },
-        {
-          "text": "Resultant force equals mass times acceleration. For the smooth table box, tension alone gives three a.",
-          "start": 42.48,
-          "end": 53.07
-        },
-        {
-          "text": "For the hanging box, weight minus tension gives two a: downward is positive.",
-          "start": 53.22,
-          "end": 59.64
-        },
-        {
-          "text": "Add: equal tensions cancel. Five kilograms is the total moving mass.",
-          "start": 59.79,
-          "end": 67.3
-        },
-        {
-          "text": "What acceleration follows?",
-          "start": 69.45,
-          "end": 71.22
-        },
-        {
-          "text": "Four metres per second squared. Each box gains four metres per second every second.",
-          "start": 72.22,
-          "end": 78.26
-        },
-        {
-          "text": "And tension?",
-          "start": 80.41,
-          "end": 81.33
-        },
-        {
-          "text": "Substitute into T equals three a. Twelve newtons: the pull on either box.",
-          "start": 82.33,
-          "end": 89.03
-        }
-      ],
-      "holds": [
-        {
-          "kind": "hold",
-          "start": 6.11,
-          "end": 8.11,
-          "duration": 2
-        },
-        {
-          "kind": "hold",
-          "start": 12.16,
-          "end": 14.16,
-          "duration": 2
-        },
-        {
-          "kind": "hold",
-          "start": 19.71,
-          "end": 21.71,
-          "duration": 2
-        },
-        {
-          "kind": "pause",
-          "start": 41.48,
-          "end": 42.48,
-          "duration": 1
-        },
-        {
-          "kind": "hold",
-          "start": 67.3,
-          "end": 69.3,
-          "duration": 2
-        },
-        {
-          "kind": "pause",
-          "start": 71.22,
-          "end": 72.22,
-          "duration": 1
-        },
-        {
-          "kind": "hold",
-          "start": 78.26,
-          "end": 80.26,
-          "duration": 2
-        },
-        {
-          "kind": "pause",
-          "start": 81.33,
-          "end": 82.33,
-          "duration": 1
-        },
-        {
-          "kind": "hold",
-          "start": 89.03,
-          "end": 91.03,
-          "duration": 2
-        }
-      ],
-      "paragraphs": [
-        "Let's find the acceleration and tension. The table box is three kilograms. [hold 2 s]",
-        "Two kilograms hangs; its weight drives the motion. [hold 2 s]",
-        "Use g equals ten metres per second squared: gravitational acceleration. [hold 2 s]",
-        "The forces: box weight down, reaction up, tension right. Hanging weight down, tension up. Vertical forces on the table box balance.",
-        "Why these equations? [pause 1 s] Resultant force equals mass times acceleration. For the smooth table box, tension alone gives three a.",
-        "For the hanging box, weight minus tension gives two a: downward is positive.",
-        "Add: equal tensions cancel. Five kilograms is the total moving mass. [hold 2 s]",
-        "What acceleration follows? [pause 1 s] Four metres per second squared. Each box gains four metres per second every second. [hold 2 s]",
-        "And tension? [pause 1 s] Substitute into T equals three a. Twelve newtons: the pull on either box. [hold 2 s]"
-      ]
-    },
-    {
-      "id": "s07",
-      "audio": "modelling-assumptions-s07.mp3",
-      "duration": 72.85551,
-      "wordCount": 109,
-      "text": "A plane models our table as flat and rigid. On a curved or bending surface, the contact direction changes. Smooth means no friction, so contact gives only the perpendicular reaction. What changes if our table is rough? Rough allows friction. Our box slides right, so friction opposes that slide. Tension minus friction now accelerates the box. Add the unchanged hanging equation. two g minus F equals five a. Less driving force means less acceleration. Question. Does rough always mean F equals mu R? No. Below the limit, static friction adjusts. Equality needs limiting friction, or the stated sliding model. Choose, solve, interpret, check size, sign, units and plausibility. Refine.",
+      "duration": 76.042449,
+      "wordCount": 110,
+      "text": "A stone at a cliff. Two or three dimensional motion. Air and wind. Size, shape and spin. Gravity pulls down. Assume a vertical fall. Ignore air and wind. Use a particle. Omit dimensions. Keep gravity constant, simplifying height. Our model is h equals twenty minus five t squared, from zero to two seconds. At zero, height is twenty metres. At At one second, height is fifteen metres. Two seconds means the stone reaches the water. Is one metre at one second reasonable? No. That misreads this model, which gives fifteen. To improve realism, include air resistance. Keep the stone's size and mass, or allow motion in two or three dimensions.",
       "words": [
         {
           "word": "A",
@@ -2844,870 +547,1898 @@
           "end": 0.44
         },
         {
-          "word": "plane",
+          "word": "stone",
           "start": 0.44,
-          "end": 0.94
+          "end": 0.9
         },
         {
-          "word": "models",
-          "start": 0.94,
-          "end": 1.74
-        },
-        {
-          "word": "our",
-          "start": 1.74,
-          "end": 2.02
-        },
-        {
-          "word": "table",
-          "start": 2.02,
-          "end": 2.52
-        },
-        {
-          "word": "as",
-          "start": 2.52,
-          "end": 3.12
-        },
-        {
-          "word": "flat",
-          "start": 3.12,
-          "end": 3.42
-        },
-        {
-          "word": "and",
-          "start": 3.42,
-          "end": 3.66
-        },
-        {
-          "word": "rigid.",
-          "start": 3.66,
-          "end": 4.0
-        },
-        {
-          "word": "On",
-          "start": 4.62,
-          "end": 5.54
+          "word": "at",
+          "start": 0.9,
+          "end": 1.34
         },
         {
           "word": "a",
-          "start": 5.54,
-          "end": 5.7
+          "start": 1.34,
+          "end": 1.48
         },
         {
-          "word": "curved",
-          "start": 5.7,
-          "end": 6.16
+          "word": "cliff.",
+          "start": 1.48,
+          "end": 1.8
+        },
+        {
+          "word": "Two",
+          "start": 2.3,
+          "end": 3.14
         },
         {
           "word": "or",
-          "start": 6.16,
-          "end": 6.78
+          "start": 3.14,
+          "end": 3.44
         },
         {
-          "word": "bending",
-          "start": 6.78,
-          "end": 7.08
+          "word": "three",
+          "start": 3.44,
+          "end": 3.9
         },
         {
-          "word": "surface,",
-          "start": 7.08,
-          "end": 7.6
+          "word": "dimensional",
+          "start": 3.9,
+          "end": 4.48
         },
         {
-          "word": "the",
-          "start": 8.44,
-          "end": 8.48
+          "word": "motion.",
+          "start": 4.48,
+          "end": 4.92
         },
         {
-          "word": "contact",
-          "start": 8.48,
-          "end": 8.92
-        },
-        {
-          "word": "direction",
-          "start": 8.92,
-          "end": 9.66
-        },
-        {
-          "word": "changes.",
-          "start": 9.66,
-          "end": 10.24
-        },
-        {
-          "word": "Smooth",
-          "start": 11.56,
-          "end": 12.0
-        },
-        {
-          "word": "means",
-          "start": 12.0,
-          "end": 13.16
-        },
-        {
-          "word": "no",
-          "start": 13.16,
-          "end": 13.46
-        },
-        {
-          "word": "friction,",
-          "start": 13.46,
-          "end": 13.8
-        },
-        {
-          "word": "so",
-          "start": 14.42,
-          "end": 14.56
-        },
-        {
-          "word": "contact",
-          "start": 14.56,
-          "end": 14.92
-        },
-        {
-          "word": "gives",
-          "start": 14.92,
-          "end": 15.58
-        },
-        {
-          "word": "only",
-          "start": 15.58,
-          "end": 16.66
-        },
-        {
-          "word": "the",
-          "start": 16.66,
-          "end": 16.84
-        },
-        {
-          "word": "perpendicular",
-          "start": 16.84,
-          "end": 17.26
-        },
-        {
-          "word": "reaction.",
-          "start": 17.26,
-          "end": 18.04
-        },
-        {
-          "word": "What",
-          "start": 19.12,
-          "end": 19.3
-        },
-        {
-          "word": "changes",
-          "start": 19.3,
-          "end": 19.8
-        },
-        {
-          "word": "if",
-          "start": 19.8,
-          "end": 20.32
-        },
-        {
-          "word": "our",
-          "start": 20.32,
-          "end": 20.54
-        },
-        {
-          "word": "table",
-          "start": 20.54,
-          "end": 20.94
-        },
-        {
-          "word": "is",
-          "start": 20.94,
-          "end": 21.22
-        },
-        {
-          "word": "rough?",
-          "start": 21.22,
-          "end": 21.48
-        },
-        {
-          "word": "Rough",
-          "start": 21.48,
-          "end": 23.04
-        },
-        {
-          "word": "allows",
-          "start": 23.04,
-          "end": 23.98
-        },
-        {
-          "word": "friction.",
-          "start": 23.98,
-          "end": 24.5
-        },
-        {
-          "word": "Our",
-          "start": 25.36,
-          "end": 25.46
-        },
-        {
-          "word": "box",
-          "start": 25.46,
-          "end": 25.96
-        },
-        {
-          "word": "slides",
-          "start": 25.96,
-          "end": 26.98
-        },
-        {
-          "word": "right,",
-          "start": 26.98,
-          "end": 27.56
-        },
-        {
-          "word": "so",
-          "start": 28.38,
-          "end": 28.52
-        },
-        {
-          "word": "friction",
-          "start": 28.52,
-          "end": 28.88
-        },
-        {
-          "word": "opposes",
-          "start": 28.88,
-          "end": 29.56
-        },
-        {
-          "word": "that",
-          "start": 29.56,
-          "end": 30.12
-        },
-        {
-          "word": "slide.",
-          "start": 30.12,
-          "end": 30.66
-        },
-        {
-          "word": "Tension",
-          "start": 31.44,
-          "end": 32.06
-        },
-        {
-          "word": "minus",
-          "start": 32.06,
-          "end": 32.86
-        },
-        {
-          "word": "friction",
-          "start": 32.86,
-          "end": 33.38
-        },
-        {
-          "word": "now",
-          "start": 33.38,
-          "end": 33.72
-        },
-        {
-          "word": "accelerates",
-          "start": 33.72,
-          "end": 34.46
-        },
-        {
-          "word": "the",
-          "start": 34.46,
-          "end": 34.58
-        },
-        {
-          "word": "box.",
-          "start": 34.58,
-          "end": 34.88
-        },
-        {
-          "word": "Add",
-          "start": 35.16,
-          "end": 35.46
-        },
-        {
-          "word": "the",
-          "start": 35.46,
-          "end": 35.76
-        },
-        {
-          "word": "unchanged",
-          "start": 35.76,
-          "end": 36.38
-        },
-        {
-          "word": "hanging",
-          "start": 36.38,
-          "end": 36.88
-        },
-        {
-          "word": "equation.",
-          "start": 36.88,
-          "end": 37.66
-        },
-        {
-          "word": "two",
-          "start": 38.36,
-          "end": 39.12
-        },
-        {
-          "word": "g",
-          "start": 39.12,
-          "end": 39.44
-        },
-        {
-          "word": "minus",
-          "start": 39.44,
-          "end": 40.22
-        },
-        {
-          "word": "F",
-          "start": 40.22,
-          "end": 40.74
-        },
-        {
-          "word": "equals",
-          "start": 40.74,
-          "end": 41.64
-        },
-        {
-          "word": "five",
-          "start": 41.64,
-          "end": 42.0
-        },
-        {
-          "word": "a.",
-          "start": 42.0,
-          "end": 42.3
-        },
-        {
-          "word": "Less",
-          "start": 43.12,
-          "end": 43.4
-        },
-        {
-          "word": "driving",
-          "start": 43.4,
-          "end": 43.76
-        },
-        {
-          "word": "force",
-          "start": 43.76,
-          "end": 44.16
-        },
-        {
-          "word": "means",
-          "start": 44.16,
-          "end": 44.52
-        },
-        {
-          "word": "less",
-          "start": 44.52,
-          "end": 45.0
-        },
-        {
-          "word": "acceleration.",
-          "start": 45.0,
-          "end": 45.66
-        },
-        {
-          "word": "Question.",
-          "start": 45.66,
-          "end": 46.52
-        },
-        {
-          "word": "Does",
-          "start": 47.42,
-          "end": 47.42
-        },
-        {
-          "word": "rough",
-          "start": 47.42,
-          "end": 47.78
-        },
-        {
-          "word": "always",
-          "start": 47.78,
-          "end": 48.26
-        },
-        {
-          "word": "mean",
-          "start": 48.26,
-          "end": 48.52
-        },
-        {
-          "word": "F",
-          "start": 48.52,
-          "end": 48.96
-        },
-        {
-          "word": "equals",
-          "start": 48.96,
-          "end": 49.48
-        },
-        {
-          "word": "mu",
-          "start": 49.48,
-          "end": 49.84
-        },
-        {
-          "word": "R?",
-          "start": 49.84,
-          "end": 50.36
-        },
-        {
-          "word": "No.",
-          "start": 53.55,
-          "end": 53.75
-        },
-        {
-          "word": "Below",
-          "start": 54.79,
-          "end": 55.35
-        },
-        {
-          "word": "the",
-          "start": 55.35,
-          "end": 55.63
-        },
-        {
-          "word": "limit,",
-          "start": 55.63,
-          "end": 55.89
-        },
-        {
-          "word": "static",
-          "start": 56.79,
-          "end": 57.21
-        },
-        {
-          "word": "friction",
-          "start": 57.21,
-          "end": 57.67
-        },
-        {
-          "word": "adjusts.",
-          "start": 57.67,
-          "end": 59.23
-        },
-        {
-          "word": "Equality",
-          "start": 59.61,
-          "end": 60.17
-        },
-        {
-          "word": "needs",
-          "start": 60.17,
-          "end": 60.73
-        },
-        {
-          "word": "limiting",
-          "start": 60.73,
-          "end": 61.15
-        },
-        {
-          "word": "friction,",
-          "start": 61.15,
-          "end": 61.73
-        },
-        {
-          "word": "or",
-          "start": 62.51,
-          "end": 63.29
-        },
-        {
-          "word": "the",
-          "start": 63.29,
-          "end": 63.43
-        },
-        {
-          "word": "stated",
-          "start": 63.43,
-          "end": 63.97
-        },
-        {
-          "word": "sliding",
-          "start": 63.97,
-          "end": 64.47
-        },
-        {
-          "word": "model.",
-          "start": 64.47,
-          "end": 65.07
-        },
-        {
-          "word": "Choose,",
-          "start": 65.43,
-          "end": 65.71
-        },
-        {
-          "word": "solve,",
-          "start": 65.93,
-          "end": 66.35
-        },
-        {
-          "word": "interpret,",
-          "start": 66.75,
-          "end": 67.19
-        },
-        {
-          "word": "check",
-          "start": 67.67,
-          "end": 67.95
-        },
-        {
-          "word": "size,",
-          "start": 67.95,
-          "end": 68.41
-        },
-        {
-          "word": "sign,",
-          "start": 68.87,
-          "end": 69.35
-        },
-        {
-          "word": "units",
-          "start": 69.69,
-          "end": 69.95
+          "word": "Air",
+          "start": 5.82,
+          "end": 6.72
         },
         {
           "word": "and",
-          "start": 69.95,
-          "end": 70.27
+          "start": 6.72,
+          "end": 7.12
         },
         {
-          "word": "plausibility.",
-          "start": 70.27,
-          "end": 71.15
+          "word": "wind.",
+          "start": 7.12,
+          "end": 7.42
         },
         {
-          "word": "Refine.",
-          "start": 71.15,
-          "end": 72.21
+          "word": "Size,",
+          "start": 8.26,
+          "end": 9.1
+        },
+        {
+          "word": "shape",
+          "start": 9.82,
+          "end": 10.22
+        },
+        {
+          "word": "and",
+          "start": 10.22,
+          "end": 10.94
+        },
+        {
+          "word": "spin.",
+          "start": 10.94,
+          "end": 11.28
+        },
+        {
+          "word": "Gravity",
+          "start": 12.5,
+          "end": 13.22
+        },
+        {
+          "word": "pulls",
+          "start": 13.22,
+          "end": 13.6
+        },
+        {
+          "word": "down.",
+          "start": 13.6,
+          "end": 14.0
+        },
+        {
+          "word": "Assume",
+          "start": 14.98,
+          "end": 15.64
+        },
+        {
+          "word": "a",
+          "start": 15.64,
+          "end": 16.16
+        },
+        {
+          "word": "vertical",
+          "start": 16.16,
+          "end": 16.44
+        },
+        {
+          "word": "fall.",
+          "start": 16.44,
+          "end": 16.96
+        },
+        {
+          "word": "Ignore",
+          "start": 18.26,
+          "end": 18.86
+        },
+        {
+          "word": "air",
+          "start": 18.86,
+          "end": 19.38
+        },
+        {
+          "word": "and",
+          "start": 19.38,
+          "end": 19.8
+        },
+        {
+          "word": "wind.",
+          "start": 19.8,
+          "end": 20.1
+        },
+        {
+          "word": "Use",
+          "start": 21.1,
+          "end": 21.62
+        },
+        {
+          "word": "a",
+          "start": 21.62,
+          "end": 21.8
+        },
+        {
+          "word": "particle.",
+          "start": 21.8,
+          "end": 22.24
+        },
+        {
+          "word": "Omit",
+          "start": 22.88,
+          "end": 23.54
+        },
+        {
+          "word": "dimensions.",
+          "start": 23.54,
+          "end": 24.34
+        },
+        {
+          "word": "Keep",
+          "start": 25.26,
+          "end": 25.52
+        },
+        {
+          "word": "gravity",
+          "start": 25.52,
+          "end": 26.08
+        },
+        {
+          "word": "constant,",
+          "start": 26.08,
+          "end": 26.68
+        },
+        {
+          "word": "simplifying",
+          "start": 27.36,
+          "end": 28.1
+        },
+        {
+          "word": "height.",
+          "start": 28.1,
+          "end": 28.5
+        },
+        {
+          "word": "Our",
+          "start": 29.62,
+          "end": 29.78
+        },
+        {
+          "word": "model",
+          "start": 29.78,
+          "end": 30.26
+        },
+        {
+          "word": "is",
+          "start": 30.26,
+          "end": 31.08
+        },
+        {
+          "word": "h",
+          "start": 31.08,
+          "end": 31.58
+        },
+        {
+          "word": "equals",
+          "start": 31.58,
+          "end": 32.36
+        },
+        {
+          "word": "twenty",
+          "start": 32.36,
+          "end": 33.06
+        },
+        {
+          "word": "minus",
+          "start": 33.06,
+          "end": 33.36
+        },
+        {
+          "word": "five",
+          "start": 33.36,
+          "end": 33.72
+        },
+        {
+          "word": "t",
+          "start": 33.72,
+          "end": 33.9
+        },
+        {
+          "word": "squared,",
+          "start": 33.9,
+          "end": 34.24
+        },
+        {
+          "word": "from",
+          "start": 34.92,
+          "end": 35.28
+        },
+        {
+          "word": "zero",
+          "start": 35.28,
+          "end": 35.78
+        },
+        {
+          "word": "to",
+          "start": 35.78,
+          "end": 36.3
+        },
+        {
+          "word": "two",
+          "start": 36.3,
+          "end": 36.58
+        },
+        {
+          "word": "seconds.",
+          "start": 36.58,
+          "end": 37.04
+        },
+        {
+          "word": "At",
+          "start": 37.86,
+          "end": 38.26
+        },
+        {
+          "word": "zero,",
+          "start": 38.26,
+          "end": 38.74
+        },
+        {
+          "word": "height",
+          "start": 39.22,
+          "end": 39.54
+        },
+        {
+          "word": "is",
+          "start": 39.54,
+          "end": 39.8
+        },
+        {
+          "word": "twenty",
+          "start": 39.8,
+          "end": 40.12
+        },
+        {
+          "word": "metres.",
+          "start": 40.12,
+          "end": 40.42
+        },
+        {
+          "word": "At",
+          "start": 42.48,
+          "end": 42.88
+        },
+        {
+          "word": "At",
+          "start": 42.72,
+          "end": 42.9
+        },
+        {
+          "word": "one",
+          "start": 42.9,
+          "end": 43.2
+        },
+        {
+          "word": "second,",
+          "start": 43.2,
+          "end": 43.56
+        },
+        {
+          "word": "height",
+          "start": 43.76,
+          "end": 44.08
+        },
+        {
+          "word": "is",
+          "start": 44.08,
+          "end": 44.36
+        },
+        {
+          "word": "fifteen",
+          "start": 44.36,
+          "end": 44.66
+        },
+        {
+          "word": "metres.",
+          "start": 44.66,
+          "end": 44.98
+        },
+        {
+          "word": "Two",
+          "start": 47.35,
+          "end": 47.53
+        },
+        {
+          "word": "seconds",
+          "start": 47.53,
+          "end": 47.87
+        },
+        {
+          "word": "means",
+          "start": 47.87,
+          "end": 48.29
+        },
+        {
+          "word": "the",
+          "start": 48.29,
+          "end": 48.61
+        },
+        {
+          "word": "stone",
+          "start": 48.61,
+          "end": 48.93
+        },
+        {
+          "word": "reaches",
+          "start": 48.93,
+          "end": 49.23
+        },
+        {
+          "word": "the",
+          "start": 49.23,
+          "end": 49.49
+        },
+        {
+          "word": "water.",
+          "start": 49.49,
+          "end": 49.81
+        },
+        {
+          "word": "Is",
+          "start": 50.35,
+          "end": 50.59
+        },
+        {
+          "word": "one",
+          "start": 50.59,
+          "end": 50.93
+        },
+        {
+          "word": "metre",
+          "start": 50.93,
+          "end": 51.29
+        },
+        {
+          "word": "at",
+          "start": 51.29,
+          "end": 51.61
+        },
+        {
+          "word": "one",
+          "start": 51.61,
+          "end": 51.85
+        },
+        {
+          "word": "second",
+          "start": 51.85,
+          "end": 52.17
+        },
+        {
+          "word": "reasonable?",
+          "start": 52.17,
+          "end": 52.75
+        },
+        {
+          "word": "No.",
+          "start": 55.96,
+          "end": 56.26
+        },
+        {
+          "word": "That",
+          "start": 57.5,
+          "end": 57.78
+        },
+        {
+          "word": "misreads",
+          "start": 57.78,
+          "end": 58.68
+        },
+        {
+          "word": "this",
+          "start": 58.68,
+          "end": 58.86
+        },
+        {
+          "word": "model,",
+          "start": 58.86,
+          "end": 59.3
+        },
+        {
+          "word": "which",
+          "start": 59.92,
+          "end": 60.16
+        },
+        {
+          "word": "gives",
+          "start": 60.16,
+          "end": 60.5
+        },
+        {
+          "word": "fifteen.",
+          "start": 60.5,
+          "end": 61.06
+        },
+        {
+          "word": "To",
+          "start": 62.08,
+          "end": 62.26
+        },
+        {
+          "word": "improve",
+          "start": 62.26,
+          "end": 62.66
+        },
+        {
+          "word": "realism,",
+          "start": 62.66,
+          "end": 63.22
+        },
+        {
+          "word": "include",
+          "start": 63.78,
+          "end": 64.38
+        },
+        {
+          "word": "air",
+          "start": 64.38,
+          "end": 64.88
+        },
+        {
+          "word": "resistance.",
+          "start": 64.88,
+          "end": 65.44
+        },
+        {
+          "word": "Keep",
+          "start": 66.34,
+          "end": 66.48
+        },
+        {
+          "word": "the",
+          "start": 66.48,
+          "end": 66.78
+        },
+        {
+          "word": "stone's",
+          "start": 66.78,
+          "end": 67.36
+        },
+        {
+          "word": "size",
+          "start": 67.36,
+          "end": 67.8
+        },
+        {
+          "word": "and",
+          "start": 67.8,
+          "end": 68.3
+        },
+        {
+          "word": "mass,",
+          "start": 68.3,
+          "end": 68.7
+        },
+        {
+          "word": "or",
+          "start": 69.7,
+          "end": 69.76
+        },
+        {
+          "word": "allow",
+          "start": 69.76,
+          "end": 70.18
+        },
+        {
+          "word": "motion",
+          "start": 70.18,
+          "end": 71.0
+        },
+        {
+          "word": "in",
+          "start": 71.0,
+          "end": 71.5
+        },
+        {
+          "word": "two",
+          "start": 71.5,
+          "end": 71.88
+        },
+        {
+          "word": "or",
+          "start": 71.88,
+          "end": 72.28
+        },
+        {
+          "word": "three",
+          "start": 72.28,
+          "end": 72.74
+        },
+        {
+          "word": "dimensions.",
+          "start": 72.74,
+          "end": 73.24
         }
       ],
       "cues": {
-        "plane": 0.44,
-        "curved": 5.7,
-        "bending": 6.78,
-        "smooth": 11.61,
-        "normal": 16.84,
-        "change": 19.12,
-        "rough": 22.8,
-        "friction": 23.04,
-        "slide": 25.96,
-        "table-equation": 31.44,
-        "hanging-equation": 35.76,
-        "system-equation": 38.36,
-        "less": 43.12,
-        "question": 46.09,
-        "answer": 53.55,
-        "static": 54.79,
-        "equality": 59.61,
-        "limiting": 60.73,
-        "check": 65.43
+        "stone": 0.44,
+        "dimensions": 2.3,
+        "air": 5.82,
+        "size": 8.26,
+        "gravity": 12.5,
+        "vertical": 16.16,
+        "no-air": 18.26,
+        "particle": 21.1,
+        "constant": 25.26,
+        "model": 29.62,
+        "domain": 34.92,
+        "zero": 37.86,
+        "one": 42.72,
+        "water": 47.35,
+        "question": 50.35,
+        "answer": 56.03,
+        "refine-air": 63.78,
+        "refine-size": 66.34,
+        "refine-motion": 69.76,
+        "zero-value": 39.8,
+        "one-value": 44.36
       },
-      "generatedAt": "2026-09-06T12:38:41.036344",
+      "generatedAt": "2026-09-06T14:06:24.416776",
       "engine": "faster-whisper-small (local)",
       "tempo": "slow",
       "voiceSpeed": 0.9,
       "voiceId": "gYWKdgLtqjPO3D5uDrDP",
       "provider": "elevenlabs",
-      "audioSha256": "4afc99ff9ca6dd7b8ccbc0598755330721feb828ee736e7491e21ba5839c9631",
+      "audioSha256": "acc84c42b940444e328278a4d87707367d9088cedd30bcfe351387f2f7b63201",
       "beats": [
         {
-          "text": "A plane models our table as flat and rigid. On a curved or bending surface, the contact direction changes.",
+          "text": "A stone at a cliff: two or three dimensional motion; air and wind; size, shape and spin; gravity pulls down. Assume a vertical fall. Ignore air and wind. Use a particle: omit dimensions. Keep gravity constant, simplifying height. Our model is h equals twenty minus five t squared, from zero to two seconds. At zero, height is twenty metres.",
           "start": 0.3,
-          "end": 10.46
+          "end": 40.72
         },
         {
-          "text": "Smooth means no friction, so contact gives only the perpendicular reaction. What changes if our table is rough?",
-          "start": 11.61,
-          "end": 21.65
+          "text": "At one second, height is fifteen metres.",
+          "start": 42.72,
+          "end": 45.33
         },
         {
-          "text": "Rough allows friction. Our box slides right, so friction opposes that slide. Tension minus friction now accelerates the box.",
-          "start": 22.8,
-          "end": 35.06
+          "text": "Two seconds means the stone reaches the water. Is one metre at one second reasonable?",
+          "start": 47.33,
+          "end": 53.03
         },
         {
-          "text": "Add the unchanged hanging equation: two g minus F equals five a. Less driving force means less acceleration.",
-          "start": 35.21,
-          "end": 45.94
-        },
-        {
-          "text": "Question: does rough always mean F equals mu R?",
-          "start": 46.09,
-          "end": 50.48
-        },
-        {
-          "text": "No. Below the limit, static friction adjusts. Equality needs limiting friction, or the stated sliding model.",
-          "start": 53.48,
-          "end": 65.17
-        },
-        {
-          "text": "Choose, solve, interpret; check size, sign, units and plausibility; refine.",
-          "start": 65.32,
-          "end": 72.36
+          "text": "No: that misreads this model, which gives fifteen. To improve realism, include air resistance; keep the stone's size and mass; or allow motion in two or three dimensions.",
+          "start": 56.03,
+          "end": 73.67
         }
       ],
       "holds": [
         {
-          "kind": "pause",
-          "start": 10.46,
-          "end": 11.46,
-          "duration": 1
-        },
-        {
-          "kind": "pause",
-          "start": 21.65,
-          "end": 22.65,
-          "duration": 1
+          "kind": "hold",
+          "start": 40.72,
+          "end": 42.72,
+          "duration": 2
         },
         {
           "kind": "hold",
-          "start": 50.48,
-          "end": 53.48,
+          "start": 45.33,
+          "end": 47.33,
+          "duration": 2
+        },
+        {
+          "kind": "hold",
+          "start": 53.03,
+          "end": 56.03,
           "duration": 3
         }
       ],
       "paragraphs": [
-        "A plane models our table as flat and rigid. On a curved or bending surface, the contact direction changes. [pause 1 s]",
-        "Smooth means no friction, so contact gives only the perpendicular reaction. What changes if our table is rough? [pause 1 s]",
-        "Rough allows friction. Our box slides right, so friction opposes that slide. Tension minus friction now accelerates the box.",
-        "Add the unchanged hanging equation: two g minus F equals five a. Less driving force means less acceleration.",
-        "Question: does rough always mean F equals mu R? [hold 3 s] No. Below the limit, static friction adjusts. Equality needs limiting friction, or the stated sliding model.",
-        "Choose, solve, interpret; check size, sign, units and plausibility; refine."
+        "A stone at a cliff: two or three dimensional motion; air and wind; size, shape and spin; gravity pulls down. Assume a vertical fall. Ignore air and wind. Use a particle: omit dimensions. Keep gravity constant, simplifying height. Our model is h equals twenty minus five t squared, from zero to two seconds. At zero, height is twenty metres. [hold 2 s] At one second, height is fifteen metres. [hold 2 s] Two seconds means the stone reaches the water. Is one metre at one second reasonable? [hold 3 s] No: that misreads this model, which gives fifteen. To improve realism, include air resistance; keep the stone's size and mass; or allow motion in two or three dimensions."
       ]
     },
     {
-      "id": "s08",
-      "audio": "modelling-assumptions-s08.mp3",
-      "duration": 20.897959,
-      "wordCount": 37,
-      "text": "Explain what modelling words let you ignore. You can now give a reason. Find acceleration and tension. Each assumption justified part of our equations. Predict changes when assumptions fail. Rough contact added friction. Keep checking your model.",
+      "id": "s04",
+      "audio": "modelling-assumptions-s04.mp3",
+      "duration": 55.928163,
+      "wordCount": 75,
+      "text": "A particle ignores dimensions. Size is unimportant here. Smooth means no friction. Rough allows friction, opposing sliding. A rod or beam keeps length and rigid shape. Uniform means evenly spread mass. Weight acts at its centre. Uneven mass shifts it. Light means negligible mass. Omit string weight. A heavy string adds weight. Inextensible means no stretching. Taut over this fixed pulley, it links equal acceleration magnitudes in different directions. A stretching string breaks that link.",
       "words": [
         {
-          "word": "Explain",
+          "word": "A",
           "start": 0.0,
-          "end": 0.92
+          "end": 0.44
         },
         {
-          "word": "what",
-          "start": 0.92,
-          "end": 1.68
+          "word": "particle",
+          "start": 0.44,
+          "end": 0.78
         },
         {
-          "word": "modelling",
-          "start": 1.68,
-          "end": 2.2
+          "word": "ignores",
+          "start": 0.78,
+          "end": 1.44
         },
         {
-          "word": "words",
-          "start": 2.2,
-          "end": 2.72
+          "word": "dimensions.",
+          "start": 1.44,
+          "end": 2.28
         },
         {
-          "word": "let",
-          "start": 2.72,
-          "end": 3.1
+          "word": "Size",
+          "start": 3.3,
+          "end": 4.24
         },
         {
-          "word": "you",
-          "start": 3.1,
-          "end": 3.26
+          "word": "is",
+          "start": 4.24,
+          "end": 5.12
         },
         {
-          "word": "ignore.",
-          "start": 3.26,
-          "end": 3.62
+          "word": "unimportant",
+          "start": 5.12,
+          "end": 5.72
         },
         {
-          "word": "You",
-          "start": 4.62,
-          "end": 4.72
+          "word": "here.",
+          "start": 5.72,
+          "end": 6.14
         },
         {
-          "word": "can",
-          "start": 4.72,
-          "end": 4.88
+          "word": "Smooth",
+          "start": 7.2,
+          "end": 7.72
         },
         {
-          "word": "now",
-          "start": 4.88,
-          "end": 5.08
+          "word": "means",
+          "start": 7.72,
+          "end": 8.74
         },
         {
-          "word": "give",
-          "start": 5.08,
-          "end": 5.28
-        },
-        {
-          "word": "a",
-          "start": 5.28,
-          "end": 5.46
-        },
-        {
-          "word": "reason.",
-          "start": 5.46,
-          "end": 5.78
-        },
-        {
-          "word": "Find",
-          "start": 6.12,
-          "end": 6.3
-        },
-        {
-          "word": "acceleration",
-          "start": 6.3,
-          "end": 6.88
-        },
-        {
-          "word": "and",
-          "start": 6.88,
-          "end": 7.36
-        },
-        {
-          "word": "tension.",
-          "start": 7.36,
-          "end": 7.74
-        },
-        {
-          "word": "Each",
-          "start": 8.76,
-          "end": 8.92
-        },
-        {
-          "word": "assumption",
-          "start": 8.92,
-          "end": 9.38
-        },
-        {
-          "word": "justified",
-          "start": 9.38,
-          "end": 9.84
-        },
-        {
-          "word": "part",
-          "start": 9.84,
-          "end": 10.34
-        },
-        {
-          "word": "of",
-          "start": 10.34,
-          "end": 10.5
-        },
-        {
-          "word": "our",
-          "start": 10.5,
-          "end": 10.72
-        },
-        {
-          "word": "equations.",
-          "start": 10.72,
-          "end": 11.24
-        },
-        {
-          "word": "Predict",
-          "start": 11.78,
-          "end": 12.0
-        },
-        {
-          "word": "changes",
-          "start": 12.0,
-          "end": 12.54
-        },
-        {
-          "word": "when",
-          "start": 12.54,
-          "end": 13.62
-        },
-        {
-          "word": "assumptions",
-          "start": 13.62,
-          "end": 14.04
-        },
-        {
-          "word": "fail.",
-          "start": 14.04,
-          "end": 14.7
-        },
-        {
-          "word": "Rough",
-          "start": 15.6,
-          "end": 15.96
-        },
-        {
-          "word": "contact",
-          "start": 15.96,
-          "end": 16.48
-        },
-        {
-          "word": "added",
-          "start": 16.48,
-          "end": 17.22
+          "word": "no",
+          "start": 8.74,
+          "end": 9.16
         },
         {
           "word": "friction.",
-          "start": 17.22,
-          "end": 17.62
+          "start": 9.16,
+          "end": 9.54
         },
         {
-          "word": "Keep",
-          "start": 18.92,
-          "end": 19.38
+          "word": "Rough",
+          "start": 10.64,
+          "end": 10.76
         },
         {
-          "word": "checking",
-          "start": 19.38,
-          "end": 19.74
+          "word": "allows",
+          "start": 10.76,
+          "end": 11.58
         },
         {
-          "word": "your",
-          "start": 19.74,
-          "end": 19.98
+          "word": "friction,",
+          "start": 11.58,
+          "end": 12.06
         },
         {
-          "word": "model.",
-          "start": 19.98,
-          "end": 20.26
+          "word": "opposing",
+          "start": 12.5,
+          "end": 13.0
+        },
+        {
+          "word": "sliding.",
+          "start": 13.0,
+          "end": 13.46
+        },
+        {
+          "word": "A",
+          "start": 14.82,
+          "end": 15.0
+        },
+        {
+          "word": "rod",
+          "start": 15.0,
+          "end": 15.32
+        },
+        {
+          "word": "or",
+          "start": 15.32,
+          "end": 15.9
+        },
+        {
+          "word": "beam",
+          "start": 15.9,
+          "end": 16.26
+        },
+        {
+          "word": "keeps",
+          "start": 16.26,
+          "end": 16.9
+        },
+        {
+          "word": "length",
+          "start": 16.9,
+          "end": 17.46
+        },
+        {
+          "word": "and",
+          "start": 17.46,
+          "end": 18.28
+        },
+        {
+          "word": "rigid",
+          "start": 18.28,
+          "end": 18.58
+        },
+        {
+          "word": "shape.",
+          "start": 18.58,
+          "end": 19.08
+        },
+        {
+          "word": "Uniform",
+          "start": 19.92,
+          "end": 20.42
+        },
+        {
+          "word": "means",
+          "start": 20.42,
+          "end": 21.5
+        },
+        {
+          "word": "evenly",
+          "start": 21.5,
+          "end": 22.0
+        },
+        {
+          "word": "spread",
+          "start": 22.0,
+          "end": 22.4
+        },
+        {
+          "word": "mass.",
+          "start": 22.4,
+          "end": 23.14
+        },
+        {
+          "word": "Weight",
+          "start": 23.14,
+          "end": 24.64
+        },
+        {
+          "word": "acts",
+          "start": 24.64,
+          "end": 25.62
+        },
+        {
+          "word": "at",
+          "start": 25.62,
+          "end": 26.4
+        },
+        {
+          "word": "its",
+          "start": 26.4,
+          "end": 26.54
+        },
+        {
+          "word": "centre.",
+          "start": 26.54,
+          "end": 26.98
+        },
+        {
+          "word": "Uneven",
+          "start": 27.88,
+          "end": 28.54
+        },
+        {
+          "word": "mass",
+          "start": 28.54,
+          "end": 28.92
+        },
+        {
+          "word": "shifts",
+          "start": 28.92,
+          "end": 29.36
+        },
+        {
+          "word": "it.",
+          "start": 29.36,
+          "end": 29.74
+        },
+        {
+          "word": "Light",
+          "start": 30.84,
+          "end": 31.24
+        },
+        {
+          "word": "means",
+          "start": 31.24,
+          "end": 31.98
+        },
+        {
+          "word": "negligible",
+          "start": 31.98,
+          "end": 32.76
+        },
+        {
+          "word": "mass.",
+          "start": 32.76,
+          "end": 34.42
+        },
+        {
+          "word": "Omit",
+          "start": 35.3,
+          "end": 36.12
+        },
+        {
+          "word": "string",
+          "start": 36.12,
+          "end": 36.64
+        },
+        {
+          "word": "weight.",
+          "start": 36.64,
+          "end": 37.04
+        },
+        {
+          "word": "A",
+          "start": 38.34,
+          "end": 38.44
+        },
+        {
+          "word": "heavy",
+          "start": 38.44,
+          "end": 38.68
+        },
+        {
+          "word": "string",
+          "start": 38.68,
+          "end": 39.06
+        },
+        {
+          "word": "adds",
+          "start": 39.06,
+          "end": 39.3
+        },
+        {
+          "word": "weight.",
+          "start": 39.3,
+          "end": 39.68
+        },
+        {
+          "word": "Inextensible",
+          "start": 41.5,
+          "end": 42.6
+        },
+        {
+          "word": "means",
+          "start": 42.6,
+          "end": 43.7
+        },
+        {
+          "word": "no",
+          "start": 43.7,
+          "end": 44.02
+        },
+        {
+          "word": "stretching.",
+          "start": 44.02,
+          "end": 44.46
+        },
+        {
+          "word": "Taut",
+          "start": 45.78,
+          "end": 45.94
+        },
+        {
+          "word": "over",
+          "start": 45.94,
+          "end": 46.48
+        },
+        {
+          "word": "this",
+          "start": 46.48,
+          "end": 46.76
+        },
+        {
+          "word": "fixed",
+          "start": 46.76,
+          "end": 47.08
+        },
+        {
+          "word": "pulley,",
+          "start": 47.08,
+          "end": 47.4
+        },
+        {
+          "word": "it",
+          "start": 48.02,
+          "end": 48.14
+        },
+        {
+          "word": "links",
+          "start": 48.14,
+          "end": 48.56
+        },
+        {
+          "word": "equal",
+          "start": 48.56,
+          "end": 49.12
+        },
+        {
+          "word": "acceleration",
+          "start": 49.12,
+          "end": 49.76
+        },
+        {
+          "word": "magnitudes",
+          "start": 49.76,
+          "end": 50.5
+        },
+        {
+          "word": "in",
+          "start": 50.5,
+          "end": 51.4
+        },
+        {
+          "word": "different",
+          "start": 51.4,
+          "end": 51.74
+        },
+        {
+          "word": "directions.",
+          "start": 51.74,
+          "end": 52.32
+        },
+        {
+          "word": "A",
+          "start": 52.32,
+          "end": 53.44
+        },
+        {
+          "word": "stretching",
+          "start": 53.44,
+          "end": 53.98
+        },
+        {
+          "word": "string",
+          "start": 53.98,
+          "end": 54.36
+        },
+        {
+          "word": "breaks",
+          "start": 54.36,
+          "end": 54.72
+        },
+        {
+          "word": "that",
+          "start": 54.72,
+          "end": 55.02
+        },
+        {
+          "word": "link.",
+          "start": 55.02,
+          "end": 55.34
         }
       ],
       "cues": {
-        "explain": 0.3,
-        "tick-explain": 3.26,
-        "find": 6.12,
-        "tick-find": 7.36,
-        "predict": 11.78,
-        "tick-predict": 14.04
+        "particle": 0.3,
+        "smooth": 7.2,
+        "rough": 10.64,
+        "rod": 14.82,
+        "uniform": 19.92,
+        "centre": 25.62,
+        "uneven": 27.88,
+        "light": 30.84,
+        "heavy": 38.34,
+        "inextensible": 41.5,
+        "acceleration": 48.56,
+        "stretching": 52.32,
+        "direction": 51.4,
+        "friction": 12.5
       },
-      "generatedAt": "2026-09-06T12:38:41.036344",
+      "generatedAt": "2026-09-06T14:01:25.604347",
       "engine": "faster-whisper-small (local)",
       "tempo": "brisk",
       "voiceSpeed": 1.0,
       "voiceId": "gYWKdgLtqjPO3D5uDrDP",
       "provider": "elevenlabs",
-      "audioSha256": "6cf538f0df0e6b6b2da75376171729c5554abf6ad6d653c6a11e9c8390d4004f",
+      "audioSha256": "9dfd56f3981df8b598d35f7b1407ec1895e6fa41fc0c2f7d99c2c13584d6f027",
       "beats": [
         {
-          "text": "Explain what modelling words let you ignore. You can now give a reason.",
+          "text": "A particle ignores dimensions: size is unimportant here. Smooth means no friction. Rough allows friction, opposing sliding. A rod or beam keeps length and rigid shape. Uniform means evenly spread mass: weight acts at its centre; uneven mass shifts it. Light means negligible mass: omit string weight. A heavy string adds weight. Inextensible means no stretching. Taut over this fixed pulley, it links equal acceleration magnitudes in different directions. A stretching string breaks that link.",
           "start": 0.3,
-          "end": 5.9
-        },
-        {
-          "text": "Find acceleration and tension. Each assumption justified part of our equations.",
-          "start": 6.05,
-          "end": 11.53
-        },
-        {
-          "text": "Predict changes when assumptions fail. Rough contact added friction. Keep checking your model.",
-          "start": 11.68,
-          "end": 20.4
+          "end": 55.45
         }
       ],
       "holds": [],
       "paragraphs": [
-        "Explain what modelling words let you ignore. You can now give a reason.",
-        "Find acceleration and tension. Each assumption justified part of our equations.",
-        "Predict changes when assumptions fail. Rough contact added friction. Keep checking your model."
+        "A particle ignores dimensions: size is unimportant here. Smooth means no friction. Rough allows friction, opposing sliding. A rod or beam keeps length and rigid shape. Uniform means evenly spread mass: weight acts at its centre; uneven mass shifts it. Light means negligible mass: omit string weight. A heavy string adds weight. Inextensible means no stretching. Taut over this fixed pulley, it links equal acceleration magnitudes in different directions. A stretching string breaks that link."
+      ]
+    },
+    {
+      "id": "s05",
+      "audio": "modelling-assumptions-s05.mp3",
+      "duration": 66.977959,
+      "wordCount": 94,
+      "text": "A box on a desk connects over a pulley to a hanging sphere. Match five simplifications. Ignoring air resistance. Which body model is paired here? Particle. But neglecting air resistance is a separate assumption. A point model can still have drag. Ignore string mass. which word light because the strings mass is negligible same tension on both sides which pulley smooth pulley with our light string an ideal pulley ignore desk friction which surface smooth surface no friction same acceleration magnitude which string in extensible while taught because it's fixed length links the movements",
+      "words": [
+        {
+          "word": "A",
+          "start": 0.0,
+          "end": 0.44
+        },
+        {
+          "word": "box",
+          "start": 0.44,
+          "end": 0.84
+        },
+        {
+          "word": "on",
+          "start": 0.84,
+          "end": 1.18
+        },
+        {
+          "word": "a",
+          "start": 1.18,
+          "end": 1.3
+        },
+        {
+          "word": "desk",
+          "start": 1.3,
+          "end": 1.7
+        },
+        {
+          "word": "connects",
+          "start": 1.7,
+          "end": 2.42
+        },
+        {
+          "word": "over",
+          "start": 2.42,
+          "end": 3.2
+        },
+        {
+          "word": "a",
+          "start": 3.2,
+          "end": 3.5
+        },
+        {
+          "word": "pulley",
+          "start": 3.5,
+          "end": 3.72
+        },
+        {
+          "word": "to",
+          "start": 3.72,
+          "end": 4.28
+        },
+        {
+          "word": "a",
+          "start": 4.28,
+          "end": 4.46
+        },
+        {
+          "word": "hanging",
+          "start": 4.46,
+          "end": 4.7
+        },
+        {
+          "word": "sphere.",
+          "start": 4.7,
+          "end": 5.1
+        },
+        {
+          "word": "Match",
+          "start": 5.58,
+          "end": 5.96
+        },
+        {
+          "word": "five",
+          "start": 5.96,
+          "end": 6.28
+        },
+        {
+          "word": "simplifications.",
+          "start": 6.28,
+          "end": 7.26
+        },
+        {
+          "word": "Ignoring",
+          "start": 7.84,
+          "end": 8.4
+        },
+        {
+          "word": "air",
+          "start": 8.4,
+          "end": 8.74
+        },
+        {
+          "word": "resistance.",
+          "start": 8.74,
+          "end": 9.26
+        },
+        {
+          "word": "Which",
+          "start": 10.28,
+          "end": 10.58
+        },
+        {
+          "word": "body",
+          "start": 10.58,
+          "end": 11.0
+        },
+        {
+          "word": "model",
+          "start": 11.0,
+          "end": 11.36
+        },
+        {
+          "word": "is",
+          "start": 11.36,
+          "end": 11.62
+        },
+        {
+          "word": "paired",
+          "start": 11.62,
+          "end": 12.02
+        },
+        {
+          "word": "here?",
+          "start": 12.02,
+          "end": 12.36
+        },
+        {
+          "word": "Particle.",
+          "start": 14.48,
+          "end": 14.98
+        },
+        {
+          "word": "But",
+          "start": 15.96,
+          "end": 16.2
+        },
+        {
+          "word": "neglecting",
+          "start": 16.2,
+          "end": 16.8
+        },
+        {
+          "word": "air",
+          "start": 16.8,
+          "end": 17.04
+        },
+        {
+          "word": "resistance",
+          "start": 17.04,
+          "end": 17.52
+        },
+        {
+          "word": "is",
+          "start": 17.52,
+          "end": 18.0
+        },
+        {
+          "word": "a",
+          "start": 18.0,
+          "end": 18.18
+        },
+        {
+          "word": "separate",
+          "start": 18.18,
+          "end": 18.46
+        },
+        {
+          "word": "assumption.",
+          "start": 18.46,
+          "end": 18.98
+        },
+        {
+          "word": "A",
+          "start": 20.02,
+          "end": 20.52
+        },
+        {
+          "word": "point",
+          "start": 20.52,
+          "end": 20.9
+        },
+        {
+          "word": "model",
+          "start": 20.9,
+          "end": 21.54
+        },
+        {
+          "word": "can",
+          "start": 21.54,
+          "end": 22.42
+        },
+        {
+          "word": "still",
+          "start": 22.42,
+          "end": 22.78
+        },
+        {
+          "word": "have",
+          "start": 22.78,
+          "end": 22.96
+        },
+        {
+          "word": "drag.",
+          "start": 22.96,
+          "end": 23.3
+        },
+        {
+          "word": "Ignore",
+          "start": 24.68,
+          "end": 25.5
+        },
+        {
+          "word": "string",
+          "start": 25.5,
+          "end": 25.94
+        },
+        {
+          "word": "mass.",
+          "start": 25.94,
+          "end": 26.34
+        },
+        {
+          "word": "which",
+          "start": 26.34,
+          "end": 27.92
+        },
+        {
+          "word": "word",
+          "start": 27.92,
+          "end": 28.32
+        },
+        {
+          "word": "light",
+          "start": 29.63,
+          "end": 30.85
+        },
+        {
+          "word": "because",
+          "start": 30.85,
+          "end": 32.05
+        },
+        {
+          "word": "the",
+          "start": 32.05,
+          "end": 32.25
+        },
+        {
+          "word": "strings",
+          "start": 32.25,
+          "end": 32.67
+        },
+        {
+          "word": "mass",
+          "start": 32.67,
+          "end": 33.23
+        },
+        {
+          "word": "is",
+          "start": 33.23,
+          "end": 33.75
+        },
+        {
+          "word": "negligible",
+          "start": 33.75,
+          "end": 34.45
+        },
+        {
+          "word": "same",
+          "start": 34.45,
+          "end": 35.49
+        },
+        {
+          "word": "tension",
+          "start": 35.49,
+          "end": 35.93
+        },
+        {
+          "word": "on",
+          "start": 35.93,
+          "end": 36.29
+        },
+        {
+          "word": "both",
+          "start": 36.29,
+          "end": 36.63
+        },
+        {
+          "word": "sides",
+          "start": 36.63,
+          "end": 37.23
+        },
+        {
+          "word": "which",
+          "start": 37.23,
+          "end": 38.05
+        },
+        {
+          "word": "pulley",
+          "start": 38.05,
+          "end": 38.45
+        },
+        {
+          "word": "smooth",
+          "start": 39.76,
+          "end": 41.0
+        },
+        {
+          "word": "pulley",
+          "start": 41.0,
+          "end": 41.54
+        },
+        {
+          "word": "with",
+          "start": 41.54,
+          "end": 42.5
+        },
+        {
+          "word": "our",
+          "start": 42.5,
+          "end": 42.74
+        },
+        {
+          "word": "light",
+          "start": 42.74,
+          "end": 43.16
+        },
+        {
+          "word": "string",
+          "start": 43.16,
+          "end": 43.7
+        },
+        {
+          "word": "an",
+          "start": 43.7,
+          "end": 44.4
+        },
+        {
+          "word": "ideal",
+          "start": 44.4,
+          "end": 44.98
+        },
+        {
+          "word": "pulley",
+          "start": 44.98,
+          "end": 45.52
+        },
+        {
+          "word": "ignore",
+          "start": 45.52,
+          "end": 46.48
+        },
+        {
+          "word": "desk",
+          "start": 46.48,
+          "end": 47.08
+        },
+        {
+          "word": "friction",
+          "start": 47.08,
+          "end": 47.54
+        },
+        {
+          "word": "which",
+          "start": 47.54,
+          "end": 48.42
+        },
+        {
+          "word": "surface",
+          "start": 48.42,
+          "end": 48.92
+        },
+        {
+          "word": "smooth",
+          "start": 50.23,
+          "end": 51.43
+        },
+        {
+          "word": "surface",
+          "start": 51.43,
+          "end": 52.03
+        },
+        {
+          "word": "no",
+          "start": 52.03,
+          "end": 53.09
+        },
+        {
+          "word": "friction",
+          "start": 53.09,
+          "end": 53.47
+        },
+        {
+          "word": "same",
+          "start": 53.47,
+          "end": 54.67
+        },
+        {
+          "word": "acceleration",
+          "start": 54.67,
+          "end": 55.21
+        },
+        {
+          "word": "magnitude",
+          "start": 55.21,
+          "end": 55.95
+        },
+        {
+          "word": "which",
+          "start": 55.95,
+          "end": 57.11
+        },
+        {
+          "word": "string",
+          "start": 57.11,
+          "end": 57.53
+        },
+        {
+          "word": "in",
+          "start": 58.84,
+          "end": 59.84
+        },
+        {
+          "word": "extensible",
+          "start": 59.84,
+          "end": 60.54
+        },
+        {
+          "word": "while",
+          "start": 60.54,
+          "end": 61.62
+        },
+        {
+          "word": "taught",
+          "start": 61.62,
+          "end": 62.08
+        },
+        {
+          "word": "because",
+          "start": 62.08,
+          "end": 63.6
+        },
+        {
+          "word": "it's",
+          "start": 63.6,
+          "end": 63.92
+        },
+        {
+          "word": "fixed",
+          "start": 63.92,
+          "end": 64.24
+        },
+        {
+          "word": "length",
+          "start": 64.24,
+          "end": 64.72
+        },
+        {
+          "word": "links",
+          "start": 64.72,
+          "end": 65.52
+        },
+        {
+          "word": "the",
+          "start": 65.52,
+          "end": 65.76
+        },
+        {
+          "word": "movements",
+          "start": 65.76,
+          "end": 66.12
+        }
+      ],
+      "cues": {
+        "box": 0.3,
+        "desk": 1.18,
+        "pulley": 3.2,
+        "sphere": 4.46,
+        "exercise": 5.58,
+        "q-particle": 7.84,
+        "particle": 14.53,
+        "separate": 18.18,
+        "q-light": 24.68,
+        "light": 30.57,
+        "q-pulley": 34.45,
+        "smooth-pulley": 40.57,
+        "q-surface": 45.52,
+        "smooth-surface": 51.12,
+        "q-string": 53.47,
+        "inextensible": 59.69,
+        "tension-second": 42.5,
+        "acceleration-first": 63.92,
+        "acceleration-second": 65.76,
+        "connects": 1.7
+      },
+      "generatedAt": "2026-09-06T14:01:25.604347",
+      "engine": "faster-whisper-small (local)",
+      "tempo": "slow",
+      "voiceSpeed": 0.9,
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "provider": "elevenlabs",
+      "audioSha256": "e06b95d6f66ea83ebd0273e5e029b47b227a03d5fc43e5dcfd703bbc6e73202e",
+      "beats": [
+        {
+          "text": "A box on a desk connects over a pulley to a hanging sphere. Match five simplifications. Ignoring air resistance: which body model is paired here?",
+          "start": 0.3,
+          "end": 12.53
+        },
+        {
+          "text": "Particle. But neglecting air resistance is a separate assumption; a point model can still have drag. Ignore string mass: which word?",
+          "start": 14.53,
+          "end": 28.57
+        },
+        {
+          "text": "Light, because the string's mass is negligible. Same tension on both sides: which pulley?",
+          "start": 30.57,
+          "end": 38.57
+        },
+        {
+          "text": "Smooth pulley, with our light string and ideal pulley. Ignore desk friction: which surface?",
+          "start": 40.57,
+          "end": 49.12
+        },
+        {
+          "text": "Smooth surface: no friction. Same acceleration magnitudes: which string?",
+          "start": 51.12,
+          "end": 57.69
+        },
+        {
+          "text": "Inextensible, while taut, because its fixed length links the movements.",
+          "start": 59.69,
+          "end": 66.49
+        }
+      ],
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 12.53,
+          "end": 14.53,
+          "duration": 2
+        },
+        {
+          "kind": "hold",
+          "start": 28.57,
+          "end": 30.57,
+          "duration": 2
+        },
+        {
+          "kind": "hold",
+          "start": 38.57,
+          "end": 40.57,
+          "duration": 2
+        },
+        {
+          "kind": "hold",
+          "start": 49.12,
+          "end": 51.12,
+          "duration": 2
+        },
+        {
+          "kind": "hold",
+          "start": 57.69,
+          "end": 59.69,
+          "duration": 2
+        }
+      ],
+      "paragraphs": [
+        "A box on a desk connects over a pulley to a hanging sphere. Match five simplifications. Ignoring air resistance: which body model is paired here? [hold 2 s] Particle. But neglecting air resistance is a separate assumption; a point model can still have drag. Ignore string mass: which word? [hold 2 s] Light, because the string's mass is negligible. Same tension on both sides: which pulley? [hold 2 s] Smooth pulley, with our light string and ideal pulley. Ignore desk friction: which surface? [hold 2 s] Smooth surface: no friction. Same acceleration magnitudes: which string? [hold 2 s] Inextensible, while taut, because its fixed length links the movements."
+      ]
+    },
+    {
+      "id": "s06",
+      "audio": "modelling-assumptions-s06.mp3",
+      "duration": 24.920816,
+      "wordCount": 49,
+      "text": "You can explain what modelling words let you ignore. List assumptions for a real situation and say why. Match modelling words to a described setup. Remember the cycle. Simplify, describe, then check. If reality disagrees, reconsider the assumptions. A model is useful because you know what it leaves out.",
+      "words": [
+        {
+          "word": "You",
+          "start": 0.0,
+          "end": 0.44
+        },
+        {
+          "word": "can",
+          "start": 0.44,
+          "end": 0.56
+        },
+        {
+          "word": "explain",
+          "start": 0.56,
+          "end": 1.02
+        },
+        {
+          "word": "what",
+          "start": 1.02,
+          "end": 1.3
+        },
+        {
+          "word": "modelling",
+          "start": 1.3,
+          "end": 1.76
+        },
+        {
+          "word": "words",
+          "start": 1.76,
+          "end": 2.22
+        },
+        {
+          "word": "let",
+          "start": 2.22,
+          "end": 2.78
+        },
+        {
+          "word": "you",
+          "start": 2.78,
+          "end": 2.96
+        },
+        {
+          "word": "ignore.",
+          "start": 2.96,
+          "end": 3.32
+        },
+        {
+          "word": "List",
+          "start": 3.9,
+          "end": 4.38
+        },
+        {
+          "word": "assumptions",
+          "start": 4.38,
+          "end": 4.82
+        },
+        {
+          "word": "for",
+          "start": 4.82,
+          "end": 5.46
+        },
+        {
+          "word": "a",
+          "start": 5.46,
+          "end": 5.6
+        },
+        {
+          "word": "real",
+          "start": 5.6,
+          "end": 5.76
+        },
+        {
+          "word": "situation",
+          "start": 5.76,
+          "end": 6.3
+        },
+        {
+          "word": "and",
+          "start": 6.3,
+          "end": 6.74
+        },
+        {
+          "word": "say",
+          "start": 6.74,
+          "end": 7.0
+        },
+        {
+          "word": "why.",
+          "start": 7.0,
+          "end": 7.36
+        },
+        {
+          "word": "Match",
+          "start": 8.04,
+          "end": 8.38
+        },
+        {
+          "word": "modelling",
+          "start": 8.38,
+          "end": 8.84
+        },
+        {
+          "word": "words",
+          "start": 8.84,
+          "end": 9.24
+        },
+        {
+          "word": "to",
+          "start": 9.24,
+          "end": 9.9
+        },
+        {
+          "word": "a",
+          "start": 9.9,
+          "end": 10.08
+        },
+        {
+          "word": "described",
+          "start": 10.08,
+          "end": 10.5
+        },
+        {
+          "word": "setup.",
+          "start": 10.5,
+          "end": 11.0
+        },
+        {
+          "word": "Remember",
+          "start": 11.98,
+          "end": 12.08
+        },
+        {
+          "word": "the",
+          "start": 12.08,
+          "end": 12.38
+        },
+        {
+          "word": "cycle.",
+          "start": 12.38,
+          "end": 12.68
+        },
+        {
+          "word": "Simplify,",
+          "start": 13.42,
+          "end": 14.08
+        },
+        {
+          "word": "describe,",
+          "start": 14.7,
+          "end": 14.96
+        },
+        {
+          "word": "then",
+          "start": 14.96,
+          "end": 16.0
+        },
+        {
+          "word": "check.",
+          "start": 16.0,
+          "end": 16.28
+        },
+        {
+          "word": "If",
+          "start": 17.04,
+          "end": 17.34
+        },
+        {
+          "word": "reality",
+          "start": 17.34,
+          "end": 17.7
+        },
+        {
+          "word": "disagrees,",
+          "start": 17.7,
+          "end": 18.42
+        },
+        {
+          "word": "reconsider",
+          "start": 18.88,
+          "end": 19.24
+        },
+        {
+          "word": "the",
+          "start": 19.24,
+          "end": 19.62
+        },
+        {
+          "word": "assumptions.",
+          "start": 19.62,
+          "end": 19.98
+        },
+        {
+          "word": "A",
+          "start": 21.0,
+          "end": 21.12
+        },
+        {
+          "word": "model",
+          "start": 21.12,
+          "end": 21.36
+        },
+        {
+          "word": "is",
+          "start": 21.36,
+          "end": 21.64
+        },
+        {
+          "word": "useful",
+          "start": 21.64,
+          "end": 22.0
+        },
+        {
+          "word": "because",
+          "start": 22.0,
+          "end": 22.32
+        },
+        {
+          "word": "you",
+          "start": 22.32,
+          "end": 22.6
+        },
+        {
+          "word": "know",
+          "start": 22.6,
+          "end": 22.86
+        },
+        {
+          "word": "what",
+          "start": 22.86,
+          "end": 23.5
+        },
+        {
+          "word": "it",
+          "start": 23.5,
+          "end": 23.68
+        },
+        {
+          "word": "leaves",
+          "start": 23.68,
+          "end": 23.92
+        },
+        {
+          "word": "out.",
+          "start": 23.92,
+          "end": 24.22
+        }
+      ],
+      "cues": {
+        "explain": 0.56,
+        "tick-explain": 2.96,
+        "list": 3.9,
+        "tick-list": 7.0,
+        "match": 8.04,
+        "tick-match": 10.5
+      },
+      "generatedAt": "2026-09-06T14:01:25.604347",
+      "engine": "faster-whisper-small (local)",
+      "tempo": "brisk",
+      "voiceSpeed": 1.0,
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "provider": "elevenlabs",
+      "audioSha256": "26e690d4435f2de4443a2f0c2ab5515d4b7bbd820bbddeead78233fb4541ea6c",
+      "beats": [
+        {
+          "text": "You can explain what modelling words let you ignore. List assumptions for a real situation and say why. Match modelling words to a described setup. Remember the cycle: simplify, describe, then check. If reality disagrees, reconsider the assumptions. A model is useful because you know what it leaves out.",
+          "start": 0.3,
+          "end": 24.44
+        }
+      ],
+      "holds": [],
+      "paragraphs": [
+        "You can explain what modelling words let you ignore. List assumptions for a real situation and say why. Match modelling words to a described setup. Remember the cycle: simplify, describe, then check. If reality disagrees, reconsider the assumptions. A model is useful because you know what it leaves out."
       ]
     }
   ]

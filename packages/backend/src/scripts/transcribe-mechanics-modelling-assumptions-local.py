@@ -37,21 +37,9 @@ JOBS = [
                 ]
             },
             {
-                "id": "smooth",
+                "id": "quote",
                 "searchTerms": [
                     "use the model"
-                ]
-            },
-            {
-                "id": "connected",
-                "searchTerms": [
-                    "solve simple"
-                ]
-            },
-            {
-                "id": "continuation",
-                "searchTerms": [
-                    "as the motion"
                 ]
             },
             {
@@ -67,15 +55,16 @@ JOBS = [
                 ]
             },
             {
-                "id": "find",
+                "id": "list",
                 "searchTerms": [
-                    "find"
+                    "list assumptions"
                 ]
             },
             {
-                "id": "predict",
+                "id": "match",
                 "searchTerms": [
-                    "predict"
+                    "match modelling",
+                    "match modeling"
                 ]
             }
         ]
@@ -85,75 +74,33 @@ JOBS = [
         "audioFile": "modelling-assumptions-s02.mp3",
         "cues": [
             {
-                "id": "hanging",
+                "id": "real",
                 "searchTerms": [
-                    "hanging box"
+                    "real problem"
                 ]
             },
             {
-                "id": "box",
+                "id": "assumptions",
                 "searchTerms": [
-                    "this box"
+                    "choose assumptions"
                 ]
             },
             {
-                "id": "table",
+                "id": "equations",
                 "searchTerms": [
-                    "table"
+                    "equations"
                 ]
             },
             {
-                "id": "string",
+                "id": "check",
                 "searchTerms": [
-                    "string"
+                    "check whether"
                 ]
             },
             {
-                "id": "pulley",
+                "id": "refine",
                 "searchTerms": [
-                    "pulley"
-                ]
-            },
-            {
-                "id": "particle",
-                "searchTerms": [
-                    "particle"
-                ]
-            },
-            {
-                "id": "mass",
-                "searchTerms": [
-                    "mass"
-                ]
-            },
-            {
-                "id": "size",
-                "searchTerms": [
-                    "ignores size"
-                ]
-            },
-            {
-                "id": "tips",
-                "searchTerms": [
-                    "tips"
-                ]
-            },
-            {
-                "id": "air",
-                "searchTerms": [
-                    "air resistance neglected"
-                ]
-            },
-            {
-                "id": "include",
-                "searchTerms": [
-                    "include air"
-                ]
-            },
-            {
-                "id": "drag",
-                "searchTerms": [
-                    "drag changes"
+                    "refine"
                 ]
             }
         ]
@@ -163,77 +110,144 @@ JOBS = [
         "audioFile": "modelling-assumptions-s03.mp3",
         "cues": [
             {
-                "id": "light",
+                "id": "stone",
                 "searchTerms": [
-                    "light means"
+                    "stone at a cliff"
                 ]
             },
             {
-                "id": "string",
+                "id": "dimensions",
                 "searchTerms": [
-                    "light string"
+                    "two or three dimensional"
                 ]
             },
             {
-                "id": "heavy",
+                "id": "air",
                 "searchTerms": [
-                    "heavy string"
+                    "air and wind"
                 ]
             },
             {
-                "id": "pulley",
+                "id": "size",
                 "searchTerms": [
-                    "light pulley"
+                    "size shape and spin"
                 ]
             },
             {
-                "id": "massive",
+                "id": "gravity",
                 "searchTerms": [
-                    "massive pulley"
+                    "gravity pulls"
                 ]
             },
             {
-                "id": "spin",
+                "id": "vertical",
                 "searchTerms": [
-                    "resists spin"
+                    "vertical fall"
                 ]
             },
             {
-                "id": "smooth",
+                "id": "no-air",
                 "searchTerms": [
-                    "smooth pulley"
+                    "ignore air"
                 ]
             },
             {
-                "id": "friction",
+                "id": "particle",
                 "searchTerms": [
-                    "no friction"
+                    "use a particle"
                 ]
             },
             {
-                "id": "equal",
+                "id": "constant",
                 "searchTerms": [
-                    "equal tensions"
+                    "keep gravity constant"
                 ]
             },
             {
-                "id": "second-tension",
+                "id": "model",
                 "searchTerms": [
-                    "tensions"
+                    "our model"
                 ]
             },
             {
-                "id": "rough",
+                "id": "domain",
                 "searchTerms": [
-                    "rough pulley"
+                    "from zero"
                 ]
             },
             {
-                "id": "unequal",
+                "id": "zero",
                 "searchTerms": [
-                    "unequal"
+                    "at zero"
+                ]
+            },
+            {
+                "id": "one",
+                "searchTerms": [
+                    "at one second"
+                ]
+            },
+            {
+                "id": "water",
+                "searchTerms": [
+                    "two seconds means"
+                ]
+            },
+            {
+                "id": "question",
+                "searchTerms": [
+                    "is one metre",
+                    "is one meter",
+                    "is 1 metre",
+                    "is 1 meter"
+                ]
+            },
+            {
+                "id": "answer",
+                "searchTerms": [
+                    "no that misreads"
+                ]
+            },
+            {
+                "id": "refine-air",
+                "searchTerms": [
+                    "include air resistance"
+                ]
+            },
+            {
+                "id": "refine-size",
+                "searchTerms": [
+                    "keep the stone's",
+                    "keep the stones"
+                ]
+            },
+            {
+                "id": "refine-motion",
+                "searchTerms": [
+                    "allow motion"
+                ]
+            },
+            {
+                "id": "zero-value",
+                "searchTerms": [
+                    "twenty metres",
+                    "twenty meters",
+                    "20 metres",
+                    "20 meters"
+                ]
+            },
+            {
+                "id": "one-value",
+                "searchTerms": [
+                    "fifteen metres",
+                    "fifteen meters",
+                    "15 metres",
+                    "15 meters"
                 ]
             }
+        ],
+        "isolatedBeats": [
+            1
         ]
     },
     {
@@ -241,478 +255,9 @@ JOBS = [
         "audioFile": "modelling-assumptions-s04.mp3",
         "cues": [
             {
-                "id": "inextensible",
+                "id": "particle",
                 "searchTerms": [
-                    "inextensible"
-                ]
-            },
-            {
-                "id": "taut",
-                "searchTerms": [
-                    "taut"
-                ]
-            },
-            {
-                "id": "gained",
-                "searchTerms": [
-                    "gained"
-                ]
-            },
-            {
-                "id": "lost",
-                "searchTerms": [
-                    "lost"
-                ]
-            },
-            {
-                "id": "speed",
-                "searchTerms": [
-                    "equal speed"
-                ]
-            },
-            {
-                "id": "acceleration",
-                "searchTerms": [
-                    "acceleration"
-                ]
-            },
-            {
-                "id": "directions",
-                "searchTerms": [
-                    "different directions"
-                ]
-            },
-            {
-                "id": "extensible",
-                "searchTerms": [
-                    "an extensible"
-                ]
-            },
-            {
-                "id": "stretch",
-                "searchTerms": [
-                    "stretches"
-                ]
-            },
-            {
-                "id": "slack",
-                "searchTerms": [
-                    "slack"
-                ]
-            },
-            {
-                "id": "no-tension",
-                "searchTerms": [
-                    "neither tension"
-                ]
-            },
-            {
-                "id": "unlinked",
-                "searchTerms": [
-                    "nor linked"
-                ]
-            }
-        ]
-    },
-    {
-        "id": "s05",
-        "audioFile": "modelling-assumptions-s05.mp3",
-        "cues": [
-            {
-                "id": "other",
-                "searchTerms": [
-                    "other words"
-                ]
-            },
-            {
-                "id": "rod",
-                "searchTerms": [
-                    "rigid rod"
-                ]
-            },
-            {
-                "id": "push",
-                "searchTerms": [
-                    "push"
-                ]
-            },
-            {
-                "id": "pull",
-                "searchTerms": [
-                    "pull"
-                ]
-            },
-            {
-                "id": "flexible",
-                "searchTerms": [
-                    "flexible"
-                ]
-            },
-            {
-                "id": "bends",
-                "searchTerms": [
-                    "bends"
-                ]
-            },
-            {
-                "id": "light-rod",
-                "searchTerms": [
-                    "light rod"
-                ]
-            },
-            {
-                "id": "heavy-rod",
-                "searchTerms": [
-                    "heavy one"
-                ]
-            },
-            {
-                "id": "weight",
-                "searchTerms": [
-                    "adds weight"
-                ]
-            },
-            {
-                "id": "beam",
-                "searchTerms": [
-                    "beam"
-                ]
-            },
-            {
-                "id": "positions",
-                "searchTerms": [
-                    "force positions"
-                ]
-            },
-            {
-                "id": "turning",
-                "searchTerms": [
-                    "affect turning"
-                ]
-            },
-            {
-                "id": "uniform",
-                "searchTerms": [
-                    "uniform means"
-                ]
-            },
-            {
-                "id": "midpoint",
-                "searchTerms": [
-                    "midpoint"
-                ]
-            },
-            {
-                "id": "uneven-rod",
-                "searchTerms": [
-                    "uneven mass"
-                ]
-            },
-            {
-                "id": "shift-rod",
-                "searchTerms": [
-                    "shifts that"
-                ]
-            },
-            {
-                "id": "lamina",
-                "searchTerms": [
-                    "a lamina"
-                ]
-            },
-            {
-                "id": "thickness",
-                "searchTerms": [
-                    "ignore thickness"
-                ]
-            },
-            {
-                "id": "plate",
-                "searchTerms": [
-                    "thick plate"
-                ]
-            },
-            {
-                "id": "uniform-lamina",
-                "searchTerms": [
-                    "uniform lamina"
-                ]
-            },
-            {
-                "id": "centroid",
-                "searchTerms": [
-                    "centroid"
-                ]
-            },
-            {
-                "id": "uneven-lamina",
-                "searchTerms": [
-                    "uneven mass"
-                ],
-                "occurrence": 2
-            },
-            {
-                "id": "shift-lamina",
-                "searchTerms": [
-                    "shifts it"
-                ]
-            },
-            {
-                "id": "bead",
-                "searchTerms": [
-                    "bead"
-                ]
-            },
-            {
-                "id": "wire",
-                "searchTerms": [
-                    "a wire's", "a wires"
-                ]
-            },
-            {
-                "id": "detached",
-                "searchTerms": [
-                    "detached"
-                ]
-            },
-            {
-                "id": "thin-wire",
-                "searchTerms": [
-                    "the wire"
-                ]
-            },
-            {
-                "id": "guide",
-                "searchTerms": [
-                    "thick guide"
-                ]
-            },
-            {
-                "id": "normal",
-                "searchTerms": [
-                    "perpendicular"
-                ]
-            },
-            {
-                "id": "wire-friction",
-                "searchTerms": [
-                    "adds friction"
-                ]
-            },
-            {
-                "id": "peg",
-                "searchTerms": [
-                    "fixed peg"
-                ]
-            },
-            {
-                "id": "moving",
-                "searchTerms": [
-                    "moving it"
-                ]
-            },
-            {
-                "id": "smooth-peg",
-                "searchTerms": [
-                    "smooth peg"
-                ]
-            },
-            {
-                "id": "peg-tension",
-                "searchTerms": [
-                    "preserves tension"
-                ]
-            },
-            {
-                "id": "rough-peg",
-                "searchTerms": [
-                    "rough peg"
-                ]
-            },
-            {
-                "id": "peg-unequal",
-                "searchTerms": [
-                    "may not"
-                ]
-            }
-        ]
-    },
-    {
-        "id": "s06",
-        "audioFile": "modelling-assumptions-s06.mp3",
-        "cues": [
-            {
-                "id": "find",
-                "searchTerms": [
-                    "find"
-                ]
-            },
-            {
-                "id": "mass-three",
-                "searchTerms": [
-                    "three kilograms",
-                    "3 kilograms"
-                ]
-            },
-            {
-                "id": "mass-two",
-                "searchTerms": [
-                    "two kilograms",
-                    "2 kilograms"
-                ]
-            },
-            {
-                "id": "gravity",
-                "searchTerms": [
-                    "use g",
-                    "use G"
-                ]
-            },
-            {
-                "id": "ten",
-                "searchTerms": [
-                    "ten metres",
-                    "10 metres",
-                    "10 meters",
-                    "ten meters"
-                ]
-            },
-            {
-                "id": "forces",
-                "searchTerms": [
-                    "the forces"
-                ]
-            },
-            {
-                "id": "box-weight",
-                "searchTerms": [
-                    "box weight"
-                ]
-            },
-            {
-                "id": "reaction",
-                "searchTerms": [
-                    "reaction"
-                ]
-            },
-            {
-                "id": "box-tension",
-                "searchTerms": [
-                    "tension right"
-                ]
-            },
-            {
-                "id": "hanging-weight",
-                "searchTerms": [
-                    "hanging weight"
-                ]
-            },
-            {
-                "id": "hanging-tension",
-                "searchTerms": [
-                    "tension up"
-                ]
-            },
-            {
-                "id": "balance",
-                "searchTerms": [
-                    "vertical forces", "vertical force", "vertical"
-                ]
-            },
-            {
-                "id": "equations",
-                "searchTerms": [
-                    "why these equations", "equations", "equation"
-                ]
-            },
-            {
-                "id": "newton",
-                "searchTerms": [
-                    "resultant force"
-                ]
-            },
-            {
-                "id": "table-equation",
-                "searchTerms": [
-                    "tension alone"
-                ]
-            },
-            {
-                "id": "hanging-equation",
-                "searchTerms": [
-                    "for the hanging box"
-                ]
-            },
-            {
-                "id": "add",
-                "searchTerms": [
-                    "add"
-                ]
-            },
-            {
-                "id": "five",
-                "searchTerms": [
-                    "five kilograms",
-                    "5 kilograms"
-                ]
-            },
-            {
-                "id": "acceleration",
-                "searchTerms": [
-                    "what acceleration"
-                ]
-            },
-            {
-                "id": "four",
-                "searchTerms": [
-                    "four metres",
-                    "four meters",
-                    "4 metres",
-                    "4 meters"
-                ]
-            },
-            {
-                "id": "tension",
-                "searchTerms": [
-                    "and tension"
-                ],
-                "occurrence": 2
-            },
-            {
-                "id": "substitute",
-                "searchTerms": [
-                    "substitute"
-                ]
-            },
-            {
-                "id": "twelve",
-                "searchTerms": [
-                    "twelve newtons",
-                    "12 newtons"
-                ]
-            }
-        ]
-    },
-    {
-        "id": "s07",
-        "audioFile": "modelling-assumptions-s07.mp3",
-        "cues": [
-            {
-                "id": "plane",
-                "searchTerms": [
-                    "plane"
-                ]
-            },
-            {
-                "id": "curved",
-                "searchTerms": [
-                    "curved"
-                ]
-            },
-            {
-                "id": "bending",
-                "searchTerms": [
-                    "bending"
+                    "a particle"
                 ]
             },
             {
@@ -722,102 +267,210 @@ JOBS = [
                 ]
             },
             {
-                "id": "normal",
-                "searchTerms": [
-                    "perpendicular"
-                ]
-            },
-            {
-                "id": "change",
-                "searchTerms": [
-                    "what changes"
-                ]
-            },
-            {
                 "id": "rough",
                 "searchTerms": [
                     "rough allows"
                 ]
             },
             {
+                "id": "rod",
+                "searchTerms": [
+                    "a rod"
+                ]
+            },
+            {
+                "id": "uniform",
+                "searchTerms": [
+                    "uniform means"
+                ]
+            },
+            {
+                "id": "centre",
+                "searchTerms": [
+                    "at its centre",
+                    "at its center"
+                ]
+            },
+            {
+                "id": "uneven",
+                "searchTerms": [
+                    "uneven mass"
+                ]
+            },
+            {
+                "id": "light",
+                "searchTerms": [
+                    "light means"
+                ]
+            },
+            {
+                "id": "heavy",
+                "searchTerms": [
+                    "a heavy string"
+                ]
+            },
+            {
+                "id": "inextensible",
+                "searchTerms": [
+                    "inextensible means"
+                ]
+            },
+            {
+                "id": "acceleration",
+                "searchTerms": [
+                    "equal acceleration"
+                ]
+            },
+            {
+                "id": "stretching",
+                "searchTerms": [
+                    "a stretching string"
+                ]
+            },
+            {
+                "id": "direction",
+                "searchTerms": [
+                    "different directions"
+                ]
+            },
+            {
                 "id": "friction",
                 "searchTerms": [
-                    "allows friction"
-                ]
-            },
-            {
-                "id": "slide",
-                "searchTerms": [
-                    "slides right"
-                ]
-            },
-            {
-                "id": "table-equation",
-                "searchTerms": [
-                    "tension minus"
-                ]
-            },
-            {
-                "id": "hanging-equation",
-                "searchTerms": [
-                    "unchanged hanging"
-                ]
-            },
-            {
-                "id": "system-equation",
-                "searchTerms": [
-                    "two g minus",
-                    "2 g minus"
-                ]
-            },
-            {
-                "id": "less",
-                "searchTerms": [
-                    "less driving"
-                ]
-            },
-            {
-                "id": "question",
-                "searchTerms": [
-                    "question"
-                ]
-            },
-            {
-                "id": "answer",
-                "searchTerms": [
-                    "no below",
-                    "no"
-                ]
-            },
-            {
-                "id": "static",
-                "searchTerms": [
-                    "below the limit"
-                ]
-            },
-            {
-                "id": "equality",
-                "searchTerms": [
-                    "equality"
-                ]
-            },
-            {
-                "id": "limiting",
-                "searchTerms": [
-                    "limiting friction"
-                ]
-            },
-            {
-                "id": "check",
-                "searchTerms": [
-                    "choose"
+                    "opposing sliding"
                 ]
             }
         ]
     },
     {
-        "id": "s08",
-        "audioFile": "modelling-assumptions-s08.mp3",
+        "id": "s05",
+        "audioFile": "modelling-assumptions-s05.mp3",
+        "cues": [
+            {
+                "id": "box",
+                "searchTerms": [
+                    "a box"
+                ]
+            },
+            {
+                "id": "desk",
+                "searchTerms": [
+                    "a desk"
+                ]
+            },
+            {
+                "id": "pulley",
+                "searchTerms": [
+                    "a pulley"
+                ]
+            },
+            {
+                "id": "sphere",
+                "searchTerms": [
+                    "hanging sphere"
+                ]
+            },
+            {
+                "id": "exercise",
+                "searchTerms": [
+                    "match five"
+                ]
+            },
+            {
+                "id": "q-particle",
+                "searchTerms": [
+                    "ignoring air resistance"
+                ]
+            },
+            {
+                "id": "particle",
+                "searchTerms": [
+                    "particle"
+                ]
+            },
+            {
+                "id": "separate",
+                "searchTerms": [
+                    "separate assumption"
+                ]
+            },
+            {
+                "id": "q-light",
+                "searchTerms": [
+                    "ignore string mass"
+                ]
+            },
+            {
+                "id": "light",
+                "searchTerms": [
+                    "light because"
+                ]
+            },
+            {
+                "id": "q-pulley",
+                "searchTerms": [
+                    "same tension"
+                ]
+            },
+            {
+                "id": "smooth-pulley",
+                "searchTerms": [
+                    "smooth pulley"
+                ]
+            },
+            {
+                "id": "q-surface",
+                "searchTerms": [
+                    "ignore desk friction"
+                ]
+            },
+            {
+                "id": "smooth-surface",
+                "searchTerms": [
+                    "smooth surface"
+                ]
+            },
+            {
+                "id": "q-string",
+                "searchTerms": [
+                    "same acceleration"
+                ]
+            },
+            {
+                "id": "inextensible",
+                "searchTerms": [
+                    "inextensible",
+                    "in extensible"
+                ]
+            },
+            {
+                "id": "tension-second",
+                "searchTerms": [
+                    "our light string"
+                ]
+            },
+            {
+                "id": "acceleration-first",
+                "searchTerms": [
+                    "fixed length"
+                ]
+            },
+            {
+                "id": "acceleration-second",
+                "searchTerms": [
+                    "movements"
+                ]
+            },
+            {
+                "id": "connects",
+                "searchTerms": [
+                    "connects"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "s06",
+        "audioFile": "modelling-assumptions-s06.mp3",
         "cues": [
             {
                 "id": "explain",
@@ -832,27 +485,29 @@ JOBS = [
                 ]
             },
             {
-                "id": "find",
+                "id": "list",
                 "searchTerms": [
-                    "find"
+                    "list assumptions"
                 ]
             },
             {
-                "id": "tick-find",
+                "id": "tick-list",
                 "searchTerms": [
-                    "tension"
+                    "why"
                 ]
             },
             {
-                "id": "predict",
+                "id": "match",
                 "searchTerms": [
-                    "predict"
+                    "match modelling",
+                    "match modeling"
                 ]
             },
             {
-                "id": "tick-predict",
+                "id": "tick-match",
                 "searchTerms": [
-                    "fail"
+                    "setup",
+                    "set up"
                 ]
             }
         ]
@@ -938,6 +593,30 @@ def get_audio_duration(audio_path):
     return float(output.strip())
 
 
+def refine_readings(model, job, timing, words):
+    """Re-read isolated values without copying numbers from the preceding sentence."""
+    for index in job.get("isolatedBeats", []):
+        beat = timing["beats"][index]
+        segments, _ = model.transcribe(
+            str(AUDIO_DIR / job["audioFile"]), language="en",
+            word_timestamps=True, beam_size=5, vad_filter=False,
+            clip_timestamps=[beat["start"], beat["end"]],
+            initial_prompt=beat["text"], condition_on_previous_text=False,
+        )
+        replacement = [
+            {"word": word.word.strip(), "start": round(max(beat["start"], word.start), 2),
+             "end": round(min(beat["end"], word.end), 2)}
+            for segment in segments for word in (segment.words or [])
+            if word.start < beat["end"] and word.end > beat["start"]
+        ]
+        if not replacement:
+            raise RuntimeError(f"No isolated reading for {job['id']} beat {index}")
+        words = [word for word in words
+                 if not beat["start"] <= (word["start"] + word["end"]) / 2 < beat["end"]]
+        words = sorted(words + replacement, key=lambda word: word["start"])
+    return words
+
+
 def transcribe_job(model, job, generated_at, timing):
     """Transcribe a scene and return the canonical transcript object."""
     print(f"\n{'=' * 40} {job['id'].upper()} {'=' * 40}")
@@ -968,8 +647,9 @@ def transcribe_job(model, job, generated_at, timing):
                     }
                 )
 
+    words = refine_readings(model, job, timing, words)
     duration = get_audio_duration(audio_path)
-    full_text = " ".join(full_text_parts)
+    full_text = " ".join(word["word"] for word in words)
     print(full_text, flush=True)
     print(
         f"OK {duration:.6f}s MP3, {info.duration:.1f}s Whisper, "
@@ -1015,8 +695,8 @@ def main():
     print("Cost: $0.00 (local)\n")
 
     cue_count = sum(len(job["cues"]) for job in JOBS)
-    if len(JOBS) != 8:
-        raise RuntimeError("Expected eight narration scenes")
+    if len(JOBS) != 6:
+        raise RuntimeError("Expected six narration scenes")
 
     missing_audio = [
         job["audioFile"]
