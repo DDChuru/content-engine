@@ -64,6 +64,7 @@ import { MechanicsScalarsVectors, MechanicsScalarsVectorsProps, getMechanicsScal
 import { MechanicsDisplacementTimeGraphs, MechanicsDisplacementTimeGraphsProps, getMechanicsDisplacementTimeGraphsDuration } from './compositions/MechanicsDisplacementTimeGraphs';
 import { MechanicsVelocityTimeGraphs, MechanicsVelocityTimeGraphsProps, getMechanicsVelocityTimeGraphsDuration } from './compositions/MechanicsVelocityTimeGraphs';
 import { MechanicsModellingAssumptions, MechanicsModellingAssumptionsProps, getMechanicsModellingAssumptionsDuration } from './compositions/MechanicsModellingAssumptions';
+import { MechanicsDrawingTravelGraphs, MechanicsDrawingTravelGraphsProps, getMechanicsDrawingTravelGraphsDuration } from './compositions/MechanicsDrawingTravelGraphs';
 import { MechanicsDerivedUnits, MechanicsDerivedUnitsProps, getMechanicsDerivedUnitsDuration } from './compositions/MechanicsDerivedUnits';
 import { MechanicsTypesOfForces, MechanicsTypesOfForcesProps, getMechanicsTypesOfForcesDuration } from './compositions/MechanicsTypesOfForces';
 
@@ -113,6 +114,7 @@ export const RemotionRoot: React.FC = () => {
   const mechanicsDisplacementTimeGraphsDuration = getMechanicsDisplacementTimeGraphsDuration(fps);
   const mechanicsVelocityTimeGraphsDuration = getMechanicsVelocityTimeGraphsDuration(fps);
   const mechanicsModellingAssumptionsDuration = getMechanicsModellingAssumptionsDuration(fps);
+  const mechanicsDrawingTravelGraphsDuration = getMechanicsDrawingTravelGraphsDuration(fps);
   const mechanicsDerivedUnitsDuration = getMechanicsDerivedUnitsDuration(fps);
   const mechanicsTypesOfForcesDuration = getMechanicsTypesOfForcesDuration(fps);
 
@@ -196,12 +198,16 @@ export const RemotionRoot: React.FC = () => {
         id="MechanicsModellingAssumptions"
         component={MechanicsModellingAssumptions}
         durationInFrames={mechanicsModellingAssumptionsDuration}
+        id="MechanicsDrawingTravelGraphs"
+        component={MechanicsDrawingTravelGraphs}
+        durationInFrames={mechanicsDrawingTravelGraphsDuration}
         fps={fps}
         width={1920}
         height={1080}
         defaultProps={{
           audioEnabled: true,
         } satisfies MechanicsModellingAssumptionsProps}
+        } satisfies MechanicsDrawingTravelGraphsProps}
       />
 
       <Composition
