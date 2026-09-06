@@ -63,6 +63,7 @@ import { MechanicsSIUnits, MechanicsSIUnitsProps, getMechanicsSIUnitsDuration } 
 import { MechanicsScalarsVectors, MechanicsScalarsVectorsProps, getMechanicsScalarsVectorsDuration } from './compositions/MechanicsScalarsVectors';
 import { MechanicsDisplacementTimeGraphs, MechanicsDisplacementTimeGraphsProps, getMechanicsDisplacementTimeGraphsDuration } from './compositions/MechanicsDisplacementTimeGraphs';
 import { MechanicsVelocityTimeGraphs, MechanicsVelocityTimeGraphsProps, getMechanicsVelocityTimeGraphsDuration } from './compositions/MechanicsVelocityTimeGraphs';
+import { MechanicsModellingAssumptions, MechanicsModellingAssumptionsProps, getMechanicsModellingAssumptionsDuration } from './compositions/MechanicsModellingAssumptions';
 import { MechanicsDerivedUnits, MechanicsDerivedUnitsProps, getMechanicsDerivedUnitsDuration } from './compositions/MechanicsDerivedUnits';
 import { MechanicsTypesOfForces, MechanicsTypesOfForcesProps, getMechanicsTypesOfForcesDuration } from './compositions/MechanicsTypesOfForces';
 
@@ -111,6 +112,7 @@ export const RemotionRoot: React.FC = () => {
   const mechanicsScalarsVectorsDuration = getMechanicsScalarsVectorsDuration(fps);
   const mechanicsDisplacementTimeGraphsDuration = getMechanicsDisplacementTimeGraphsDuration(fps);
   const mechanicsVelocityTimeGraphsDuration = getMechanicsVelocityTimeGraphsDuration(fps);
+  const mechanicsModellingAssumptionsDuration = getMechanicsModellingAssumptionsDuration(fps);
   const mechanicsDerivedUnitsDuration = getMechanicsDerivedUnitsDuration(fps);
   const mechanicsTypesOfForcesDuration = getMechanicsTypesOfForcesDuration(fps);
 
@@ -188,6 +190,18 @@ export const RemotionRoot: React.FC = () => {
         defaultProps={{
           audioEnabled: true,
         } satisfies MechanicsVelocityTimeGraphsProps}
+      />
+
+      <Composition
+        id="MechanicsModellingAssumptions"
+        component={MechanicsModellingAssumptions}
+        durationInFrames={mechanicsModellingAssumptionsDuration}
+        fps={fps}
+        width={1920}
+        height={1080}
+        defaultProps={{
+          audioEnabled: true,
+        } satisfies MechanicsModellingAssumptionsProps}
       />
 
       <Composition
