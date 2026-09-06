@@ -198,6 +198,15 @@ export const RemotionRoot: React.FC = () => {
         id="MechanicsModellingAssumptions"
         component={MechanicsModellingAssumptions}
         durationInFrames={mechanicsModellingAssumptionsDuration}
+        fps={fps}
+        width={1920}
+        height={1080}
+        defaultProps={{
+          audioEnabled: true,
+        } satisfies MechanicsModellingAssumptionsProps}
+      />
+
+      <Composition
         id="MechanicsDrawingTravelGraphs"
         component={MechanicsDrawingTravelGraphs}
         durationInFrames={mechanicsDrawingTravelGraphsDuration}
@@ -206,7 +215,6 @@ export const RemotionRoot: React.FC = () => {
         height={1080}
         defaultProps={{
           audioEnabled: true,
-        } satisfies MechanicsModellingAssumptionsProps}
         } satisfies MechanicsDrawingTravelGraphsProps}
       />
 
