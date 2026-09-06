@@ -47,3 +47,18 @@ This standard sits on top of PACING.md (two tempos, holds, hand-written working)
 - [ ] two slow scenes per PACING.md, working hand-written, holds after key numbers
 - [ ] one "when it is not true" contrast and one "what would change if" beat
 - [ ] 3.5–5 min total; fewer scenes are fine
+
+## 6. Scope = the source lesson, not the whole syllabus (Durai, 2026-09-06, after the Astra Modelling Assumptions rebuild)
+
+Durai: "it went over and beyond what is in the syllabus; a good reference would have been the SaveMyExams video.
+I like the way it's structured but it seems too dense, too much information."
+
+- The SaveMyExams recording for the topic (FRAME-LOG.md) defines the CEILING of content. Cover what it covers,
+  in our own words and visuals, and nothing it does not. If the recording does not calculate something, we do not.
+- Do not pull forward material from later topics (e.g. F = μR, friction working, extended-body problems) to
+  "enrich" a foundations video. Later topics get their own video.
+- One worked example per video, of the SAME KIND as the recording's example (if theirs matches words to a
+  diagram, ours does too; it does not become a full calculation).
+- Vocabulary: only the terms the recording names. No extra glossary scenes.
+- Target 4–5 minutes; if narration runs over 5:30 the storyboard has too much in it. Cut scenes, not pauses.
+- Builder checklist addition: [ ] every scene maps to a FRAME-LOG.md section; nothing on screen lacks a source frame.
