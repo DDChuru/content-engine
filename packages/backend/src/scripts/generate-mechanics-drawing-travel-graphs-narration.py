@@ -30,6 +30,8 @@ def run(scene):
     return json.loads((WORK/f"{scene['id']}.json").read_text())
 
 def generate(scene):
+    os.environ["TTS_PROVIDER"] = "elevenlabs"
+    os.environ["ELEVENLABS_SPEED"] = str(scene["voiceSpeed"])
     sys.path.insert(0,str(ROOT/'packages/backend/src/chatterbox'))
     from narration_client import generate_narration
     chunks=[]; beats=[]; holds=[]; position=0; count=0
@@ -50,7 +52,8 @@ def generate(scene):
             if part=='...':
                 silence(0.35,'breath'); continue
             count+=1
-            target=WORK/f"{scene['id']}-{count:02d}-{hashlib.sha256(part.strip().encode()).hexdigest()[:10]}.mp3"
+            cache_key = f"elevenlabs|gYWKdgLtqjPO3D5uDrDP|{scene['voiceSpeed']}|{part.strip()}"
+            target=WORK/f"{scene['id']}-{count:02d}-{hashlib.sha256(cache_key.encode()).hexdigest()[:10]}.mp3"
             if not target.exists():
                 generate_narration(part.strip(),voice_id='gYWKdgLtqjPO3D5uDrDP',output_filename=str(target))
             pcm=subprocess.check_output(['ffmpeg','-v','error','-i',str(target),'-f','s16le','-ac','1','-ar',str(SAMPLE_RATE),'-'])

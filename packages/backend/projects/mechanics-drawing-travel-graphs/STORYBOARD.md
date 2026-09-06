@@ -1,6 +1,6 @@
 # Storyboard: Drawing travel graphs
 
-Original 16:9 explainer: **seven scenes, target 4:30–5:00**. All eight sections of `../mechanics-syllabus-map/TEACHING-STANDARD.md` apply, with `../mechanics-syllabus-map/PACING.md`. `FRAME-LOG.md` is the content ceiling. It confirms the cyclist journey only: the lift, ball and other journeys in the old NOTES/storyboard are outside that recording and are omitted. No gravity calculation is needed; the Paper 4 convention is g = 10 m s⁻², never 9.8.
+Original 16:9 explainer: **seven scenes, target 4:30–5:00**. All eight sections of `../mechanics-syllabus-map/TEACHING-STANDARD.md` apply, with `../mechanics-syllabus-map/PACING.md`. `FRAME-LOG.md` is the content ceiling. It confirms the cyclist journey only: the lift, ball and other journeys in the old NOTES/storyboard are outside that recording and are omitted. No gravity calculation is needed; the Paper 4 convention is g = 10 m s⁻².
 
 ## Syllabus and outcomes
 
