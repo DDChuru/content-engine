@@ -832,6 +832,128 @@
           "reviewNotes": [
             "scene 5 tile count vs 17.8 m readout reads inconsistently (polish)"
           ]
+        },
+        "mechanics-modelling-assumptions": {
+          "label": "Modelling assumptions",
+          "slug": "mechanics-modelling-assumptions",
+          "syllabus": "Cambridge 9709 Mechanics (Paper 4) \u00b7 Mechanics Toolkit",
+          "syllabusCode": "M0.4",
+          "status": "complete",
+          "createdAt": "2026-09-06",
+          "pacing": "PACING.md standard: 8 scenes, two slow scenes (hand-written working at pen pace, 2 s holds, ELEVENLABS_SPEED 0.9)",
+          "pipeline": "frame study \u2192 Sol notes/storyboard \u2192 Astra re-pace \u2192 Sol build on B \u2192 render on A \u2192 Fable review",
+          "source": {
+            "project": "projects/mechanics-modelling-assumptions/",
+            "recording": "~/Documents/9709/",
+            "pdf": "projects/mechanics-modelling-assumptions/source.pdf"
+          },
+          "formats": {
+            "landscape": {
+              "compositionId": "MechanicsModellingAssumptions",
+              "resolution": "1920x1080",
+              "durationS": 240.02,
+              "composition": "src/remotion/compositions/MechanicsModellingAssumptions.tsx",
+              "render": "output/mechanics/modelling-assumptions.mp4",
+              "contactSheet": "output/mechanics/modelling-assumptions-sheet.png"
+            }
+          },
+          "narration": {
+            "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+            "provider": "elevenlabs",
+            "scenes": 8,
+            "sceneDurations": [
+              19.9,
+              19.9,
+              19.9,
+              19.9,
+              14.9,
+              74.9,
+              49.9,
+              19.9
+            ],
+            "audio": [
+              "src/remotion/public/audio/mechanics/modelling-assumptions-s01.mp3",
+              "src/remotion/public/audio/mechanics/modelling-assumptions-s02.mp3",
+              "src/remotion/public/audio/mechanics/modelling-assumptions-s03.mp3",
+              "src/remotion/public/audio/mechanics/modelling-assumptions-s04.mp3",
+              "src/remotion/public/audio/mechanics/modelling-assumptions-s05.mp3",
+              "src/remotion/public/audio/mechanics/modelling-assumptions-s06.mp3",
+              "src/remotion/public/audio/mechanics/modelling-assumptions-s07.mp3",
+              "src/remotion/public/audio/mechanics/modelling-assumptions-s08.mp3"
+            ],
+            "transcript": "src/remotion/public/transcripts/mechanics/modelling-assumptions.json",
+            "cues": 30,
+            "transcribeScript": "src/scripts/transcribe-mechanics-modelling-assumptions-local.py"
+          },
+          "commits": {
+            "build": "9542f33",
+            "rootFix": "4988d10"
+          },
+          "app": {
+            "notesPage": "/notes/mechanics-modelling-assumptions",
+            "mapCode": "M0.4"
+          }
+        },
+        "mechanics-drawing-travel-graphs": {
+          "label": "Drawing travel graphs",
+          "slug": "mechanics-drawing-travel-graphs",
+          "syllabus": "Cambridge 9709 Mechanics (Paper 4) \u00b7 Kinematics",
+          "syllabusCode": "M4.2c",
+          "status": "complete",
+          "createdAt": "2026-09-06",
+          "pacing": "PACING.md standard: 8 scenes, two slow scenes (hand-written working at pen pace, 2 s holds, ELEVENLABS_SPEED 0.9)",
+          "pipeline": "frame study \u2192 Sol notes/storyboard \u2192 Astra re-pace \u2192 Sol build on B \u2192 render on A \u2192 Fable review",
+          "source": {
+            "project": "projects/mechanics-drawing-travel-graphs/",
+            "recording": "~/Documents/9709/",
+            "pdf": "projects/mechanics-drawing-travel-graphs/source.pdf"
+          },
+          "formats": {
+            "landscape": {
+              "compositionId": "MechanicsDrawingTravelGraphs",
+              "resolution": "1920x1080",
+              "durationS": 250.03,
+              "composition": "src/remotion/compositions/MechanicsDrawingTravelGraphs.tsx",
+              "render": "output/mechanics/drawing-travel-graphs.mp4",
+              "contactSheet": "output/mechanics/drawing-travel-graphs-sheet.png"
+            }
+          },
+          "narration": {
+            "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+            "provider": "elevenlabs",
+            "scenes": 8,
+            "sceneDurations": [
+              14.4,
+              18.2,
+              17.9,
+              74.0,
+              17.3,
+              64.9,
+              14.6,
+              18.4
+            ],
+            "audio": [
+              "src/remotion/public/audio/mechanics/drawing-travel-graphs-s01.mp3",
+              "src/remotion/public/audio/mechanics/drawing-travel-graphs-s02.mp3",
+              "src/remotion/public/audio/mechanics/drawing-travel-graphs-s03.mp3",
+              "src/remotion/public/audio/mechanics/drawing-travel-graphs-s04.mp3",
+              "src/remotion/public/audio/mechanics/drawing-travel-graphs-s05.mp3",
+              "src/remotion/public/audio/mechanics/drawing-travel-graphs-s06.mp3",
+              "src/remotion/public/audio/mechanics/drawing-travel-graphs-s07.mp3",
+              "src/remotion/public/audio/mechanics/drawing-travel-graphs-s08.mp3"
+            ],
+            "transcript": "src/remotion/public/transcripts/mechanics/drawing-travel-graphs.json",
+            "cues": 30,
+            "transcribeScript": "src/scripts/transcribe-mechanics-drawing-travel-graphs-local.py"
+          },
+          "commits": {
+            "build": "1dc49cb",
+            "rootFix": "4988d10"
+          },
+          "app": {
+            "notesPage": "/notes/mechanics-drawing-travel-graphs",
+            "mapCode": "M4.2c"
+          }
         }
       },
       "inkTutor": {
@@ -895,10 +1017,10 @@
     }
   },
   "summary": {
-    "totalTopics": 15,
+    "totalTopics": 17,
     "totalImages": 46,
-    "totalAudioFiles": 88,
-    "totalRenders": 25,
+    "totalAudioFiles": 104,
+    "totalRenders": 27,
     "totalCost": 5.78,
     "voiceId": "gYWKdgLtqjPO3D5uDrDP",
     "voiceNote": "ElevenLabs cloned voice \u2014 consistent across all biology content",
