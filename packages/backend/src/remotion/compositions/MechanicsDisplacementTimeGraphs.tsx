@@ -1312,6 +1312,7 @@ const Scene05: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
   const triangleLeftValue = displacement + velocity * (triangleLeftTime - time);
   const triangleRightValue = displacement + velocity * (triangleRightTime - time);
   const triangleLabelCenterX = scale.x(time) + 180 * Math.cos(Math.PI * pivot);
+  const triangleLabelOffsetY = -57 + 71 * Math.sin(Math.PI * pivot) ** 2;
   const curvePath = sampledPath(scale, 0, 8, curveValue, 96);
 
   return (
@@ -1408,7 +1409,7 @@ const Scene05: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
         <g opacity={gradientReveal.opacity}>
           <rect
             x={triangleLabelCenterX - 72}
-            y={scale.y(triangleLeftValue) - 57}
+            y={scale.y(triangleLeftValue) + triangleLabelOffsetY}
             width={144}
             height={43}
             rx={11}
@@ -1416,7 +1417,7 @@ const Scene05: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
           />
           <text
             x={triangleLabelCenterX}
-            y={scale.y(triangleLeftValue) - 26}
+            y={scale.y(triangleLeftValue) + triangleLabelOffsetY + 31}
             fill={T.card}
             textAnchor="middle"
             fontFamily={T.mono}

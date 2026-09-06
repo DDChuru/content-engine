@@ -106,6 +106,11 @@ function cueAt(scene: TranscriptScene, cueName: string): number {
   return match?.[1] ?? scene.duration + 1;
 }
 
+function wordAt(scene: TranscriptScene, word: string, fallback: number, occurrence = 1): number {
+  const matches = scene.words.filter((candidate) => normalize(candidate.word) === normalize(word));
+  return matches[occurrence - 1]?.start ?? fallback;
+}
+
 function getScene(id: string): TranscriptScene {
   const scene = TRANSCRIPT.scenes.find((candidate) => candidate.id === id);
   if (!scene) throw new Error(`Missing transcript scene: ${id}`);
@@ -1080,8 +1085,12 @@ const Scene07: React.FC<{ scene: TranscriptScene }> = ({ scene }) => {
   const shortcutAt = cueAt(scene, 'shortcut');
   const choicesAt = cueAt(scene, 'other-choices');
   const roughAt = cueAt(scene, 'rough-bench');
-  const shortcut = useCue(shortcutAt, 0.42);
-  const choices = useCue(choicesAt, 0.42);
+  const smoothMatch = useCue(wordAt(scene, 'smooth', shortcutAt), 0.42);
+  const tensionMatch = useCue(wordAt(scene, 'light', shortcutAt + 3), 0.42);
+  const inextensibleMatch = useCue(wordAt(scene, 'inextensible', choicesAt + 2), 0.42);
+  const uniformMatch = useCue(wordAt(scene, 'uniform', choicesAt + 8), 0.42);
+  const particleMatch = useCue(wordAt(scene, 'particle', choicesAt + 11), 0.42);
+  const dragRejection = useCue(wordAt(scene, 'nothing', choicesAt + 15), 0.42);
   const rough = useCue(roughAt, 0.42);
   const roughProgress = secondsProgress(frame, fps, roughAt, roughAt + 0.8);
 
@@ -1132,7 +1141,7 @@ const Scene07: React.FC<{ scene: TranscriptScene }> = ({ scene }) => {
           <text x="682" y="581" fill={T.amber} fontFamily={T.mono} fontSize="31" fontWeight="950" textAnchor="middle">2 kg</text>
           <line x1="370" y1="377" x2="475" y2="377" stroke={T.cyan} strokeWidth="7" markerEnd="url(#s07-cyan)" />
           <line x1="682" y1="632" x2="682" y2="715" stroke={T.amber} strokeWidth="7" markerEnd="url(#s07-amber)" />
-          <g opacity={choices.opacity}>
+          <g opacity={inextensibleMatch.opacity}>
             <line x1="390" y1="289" x2="505" y2="289" stroke={T.purple} strokeWidth="7" markerEnd="url(#s07-purple)" />
             <line x1="735" y1="448" x2="735" y2="535" stroke={T.purple} strokeWidth="7" markerEnd="url(#s07-purple)" />
             <text x="448" y="273" fill={T.purple} fontFamily={T.mono} fontSize="28" fontWeight="950">a</text>
@@ -1167,12 +1176,12 @@ const Scene07: React.FC<{ scene: TranscriptScene }> = ({ scene }) => {
             <text x="765" y="124" fill={darkInk(T.green)} fontFamily={T.mono} fontSize="28" fontWeight="950" textAnchor="middle">WORKED RESULT</text>
             <text x="765" y="165" fill={T.ink} fontSize="28" fontWeight="850" textAnchor="middle">kept for comparison</text>
             <text x="765" y="207" fill={darkInk(T.coral)} fontFamily={T.mono} fontSize="28" fontWeight="900" textAnchor="middle">MODEL-SPECIFIC</text>
-            <ConsequenceRow y={286} left="SMOOTH" right="NO FRICTION" color={T.cyan} opacity={shortcut.opacity} />
-            <ConsequenceRow y={360} left="LIGHT + SMOOTH" right="EQUAL TENSION" color={T.teal} opacity={shortcut.opacity} />
-            <ConsequenceRow y={434} left="TAUT + INEXT." right="EQUAL |a|" color={T.purple} opacity={choices.opacity} />
-            <ConsequenceRow y={508} left="UNIFORM ROD" right="MIDPOINT WEIGHT" color={T.amber} opacity={choices.opacity} />
-            <ConsequenceRow y={576} left="PARTICLE" right="ONE FORCE POINT" color={T.cyan} opacity={choices.opacity} />
-            <ConsequenceRow y={644} left="PARTICLE" right="NO DRAG" color={T.coral} opacity={choices.opacity} rejected />
+            <ConsequenceRow y={286} left="SMOOTH" right="NO FRICTION" color={T.cyan} opacity={smoothMatch.opacity} />
+            <ConsequenceRow y={360} left="LIGHT + SMOOTH" right="EQUAL TENSION" color={T.teal} opacity={tensionMatch.opacity} />
+            <ConsequenceRow y={434} left="TAUT + INEXT." right="EQUAL |a|" color={T.purple} opacity={inextensibleMatch.opacity} />
+            <ConsequenceRow y={508} left="UNIFORM ROD" right="MIDPOINT WEIGHT" color={T.amber} opacity={uniformMatch.opacity} />
+            <ConsequenceRow y={576} left="PARTICLE" right="ONE FORCE POINT" color={T.cyan} opacity={particleMatch.opacity} />
+            <ConsequenceRow y={644} left="PARTICLE" right="NO DRAG" color={T.coral} opacity={dragRejection.opacity} rejected />
             <InkPlayback strokes={revisedStrokes} frame={frame} />
           </RuledPaper>
         </g>
