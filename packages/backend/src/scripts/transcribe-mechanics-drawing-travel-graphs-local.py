@@ -69,14 +69,105 @@ JOBS = [
         ]
     },
     {
+        "id": "s08",
+        "audioFile": "drawing-travel-graphs-s08.mp3",
+        "cues": [
+            {
+                "id": "setup",
+                "searchTerms": [
+                    "consider a cyclist"
+                ]
+            },
+            {
+                "id": "cruise",
+                "searchTerms": [
+                    "already moving"
+                ]
+            },
+            {
+                "id": "six",
+                "searchTerms": [
+                    "six metres per second",
+                    "6 metres per second",
+                    "six meters per second",
+                    "6 meters per second"
+                ]
+            },
+            {
+                "id": "ten",
+                "searchTerms": [
+                    "first ten seconds",
+                    "first 10 seconds"
+                ]
+            },
+            {
+                "id": "slowing",
+                "searchTerms": [
+                    "gradually slows"
+                ]
+            },
+            {
+                "id": "stop",
+                "searchTerms": [
+                    "and stops"
+                ]
+            },
+            {
+                "id": "rest",
+                "searchTerms": [
+                    "he rests"
+                ]
+            },
+            {
+                "id": "turn",
+                "searchTerms": [
+                    "now he turns"
+                ]
+            },
+            {"id": "pedal", "searchTerms": ["pedals back"]},
+            {
+                "id": "accelerate",
+                "searchTerms": [
+                    "speeds up"
+                ]
+            },
+            {
+                "id": "four",
+                "searchTerms": [
+                    "four metres per second",
+                    "4 metres per second",
+                    "four meters per second",
+                    "4 meters per second"
+                ]
+            },
+            {
+                "id": "return",
+                "searchTerms": [
+                    "he keeps"
+                ]
+            },
+            {
+                "id": "home",
+                "searchTerms": [
+                    "home at a"
+                ]
+            },
+            {
+                "id": "close",
+                "searchTerms": [
+                    "picture the ride"
+                ]
+            }
+        ]
+    },
+    {
         "id": "s02",
         "audioFile": "drawing-travel-graphs-s02.mp3",
         "cues": [
             {
                 "id": "velocity",
                 "searchTerms": [
-                    "on velocity time",
-                    "on velocity-time"
+                    "now the velocity time graph"
                 ]
             },
             {
@@ -98,10 +189,15 @@ JOBS = [
                 ]
             },
             {
+                "id": "displacement-signpost",
+                "searchTerms": [
+                    "now the displacement time graph"
+                ]
+            },
+            {
                 "id": "displacement",
                 "searchTerms": [
-                    "on displacement time",
-                    "on displacement-time"
+                    "gradient gives velocity"
                 ]
             },
             {
@@ -117,9 +213,15 @@ JOBS = [
         "audioFile": "drawing-travel-graphs-s03.mp3",
         "cues": [
             {
+                "id": "signpost",
+                "searchTerms": [
+                    "now the velocity time graph"
+                ]
+            },
+            {
                 "id": "setup",
                 "searchTerms": [
-                    "a cyclist"
+                    "for our cyclist"
                 ]
             },
             {
@@ -350,6 +452,18 @@ JOBS = [
         "audioFile": "drawing-travel-graphs-s05.mp3",
         "cues": [
             {
+                "id": "signpost",
+                "searchTerms": [
+                    "now the displacement time graph"
+                ]
+            },
+            {
+                "id": "pair",
+                "searchTerms": [
+                    "one journey both graphs"
+                ]
+            },
+            {
                 "id": "straight",
                 "searchTerms": [
                     "constant velocity"
@@ -434,6 +548,12 @@ JOBS = [
         "id": "s07",
         "audioFile": "drawing-travel-graphs-s07.mp3",
         "cues": [
+            {
+                "id": "signpost",
+                "searchTerms": [
+                    "now the displacement time graph"
+                ]
+            },
             {
                 "id": "setup",
                 "searchTerms": [
@@ -800,8 +920,8 @@ def main():
     print("Cost: $0.00 (local)\n")
 
     cue_count = sum(len(job["cues"]) for job in JOBS)
-    if len(JOBS) != 7:
-        raise RuntimeError("Expected seven narration scenes")
+    if len(JOBS) != 8:
+        raise RuntimeError("Expected eight narration scenes")
 
     missing_audio = [
         job["audioFile"]

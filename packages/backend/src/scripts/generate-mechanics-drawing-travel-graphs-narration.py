@@ -44,11 +44,11 @@ def generate(scene):
     # Incoming transition is silent; the first spoken cue remains fully visible.
     silence(0.55,'lead')
     for paragraph in scene['paragraphs']:
-        for part in re.split(r'(\[(?:hold|pause) \d+ s\]|\.\.\.)',paragraph):
+        for part in re.split(r'(\[(?:hold|pause) \d+(?:\.\d+)? s\]|\.\.\.)',paragraph):
             if not part.strip(): continue
-            match=re.fullmatch(r'\[(hold|pause) (\d+) s\]',part)
+            match=re.fullmatch(r'\[(hold|pause) (\d+(?:\.\d+)?) s\]',part)
             if match:
-                silence(int(match[2]),match[1]); continue
+                silence(float(match[2]),match[1]); continue
             if part=='...':
                 silence(0.35,'breath'); continue
             count+=1

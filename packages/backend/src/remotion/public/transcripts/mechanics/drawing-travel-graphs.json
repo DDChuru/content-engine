@@ -1,8 +1,8 @@
 {
   "project": "mechanics-drawing-travel-graphs",
-  "sceneCount": 7,
-  "totalDuration": 272.065306,
-  "generatedAt": "2026-09-06T15:35:21.475833",
+  "sceneCount": 8,
+  "totalDuration": 310.334695,
+  "generatedAt": "2026-09-06T16:26:28.416428",
   "engine": "faster-whisper-small (local)",
   "scenes": [
     {
@@ -236,682 +236,994 @@
       ]
     },
     {
-      "id": "s02",
-      "audio": "drawing-travel-graphs-s02.mp3",
-      "duration": 31.137959,
-      "wordCount": 45,
-      "text": "On velocity time, gradient gives acceleration. A straight slope means a constant rate of change. Area gives displacement, because velocity accumulates over time. Below the axis, area is negative. On displacement time, gradient gives velocity. A falling line means returning, not a negative distance travelled.",
+      "id": "s08",
+      "audio": "drawing-travel-graphs-s08.mp3",
+      "duration": 38.034286,
+      "wordCount": 64,
+      "text": "Consider a cyclist passing point A, already moving at six metres per second. For the first ten seconds, he holds that speed. Then he gradually slows down and stops. He rests. Now he turns, pedals back the other way, and speeds up to four metres per second. He keeps that speed until he is home at A. Picture the ride before we draw it.",
       "words": [
         {
-          "word": "On",
-          "start": 0.37,
-          "end": 0.71
+          "word": "Consider",
+          "start": 0.21,
+          "end": 0.99
         },
         {
-          "word": "velocity",
-          "start": 0.71,
-          "end": 0.93
+          "word": "a",
+          "start": 0.99,
+          "end": 1.23
         },
         {
-          "word": "time,",
-          "start": 0.93,
-          "end": 1.67
+          "word": "cyclist",
+          "start": 1.23,
+          "end": 1.77
         },
         {
-          "word": "gradient",
+          "word": "passing",
+          "start": 1.77,
+          "end": 2.29
+        },
+        {
+          "word": "point",
+          "start": 2.29,
+          "end": 2.65
+        },
+        {
+          "word": "A,",
           "start": 2.65,
-          "end": 2.95
+          "end": 3.01
         },
         {
-          "word": "gives",
-          "start": 2.95,
-          "end": 3.49
+          "word": "already",
+          "start": 3.63,
+          "end": 4.03
         },
         {
-          "word": "acceleration.",
-          "start": 3.49,
-          "end": 4.29
+          "word": "moving",
+          "start": 4.03,
+          "end": 4.41
         },
         {
-          "word": "A",
-          "start": 5.53,
-          "end": 5.69
+          "word": "at",
+          "start": 4.41,
+          "end": 5.33
         },
         {
-          "word": "straight",
-          "start": 5.69,
+          "word": "six",
+          "start": 5.33,
+          "end": 5.67
+        },
+        {
+          "word": "metres",
+          "start": 5.67,
           "end": 6.01
         },
         {
-          "word": "slope",
+          "word": "per",
           "start": 6.01,
-          "end": 6.53
+          "end": 6.33
         },
         {
-          "word": "means",
-          "start": 6.53,
+          "word": "second.",
+          "start": 6.33,
+          "end": 6.73
+        },
+        {
+          "word": "For",
+          "start": 7.29,
           "end": 7.65
         },
         {
-          "word": "a",
+          "word": "the",
           "start": 7.65,
-          "end": 8.03
+          "end": 7.77
         },
         {
-          "word": "constant",
-          "start": 8.03,
-          "end": 8.35
+          "word": "first",
+          "start": 7.77,
+          "end": 8.01
         },
         {
-          "word": "rate",
-          "start": 8.35,
-          "end": 8.75
+          "word": "ten",
+          "start": 8.01,
+          "end": 8.23
         },
         {
-          "word": "of",
-          "start": 8.75,
-          "end": 9.49
+          "word": "seconds,",
+          "start": 8.23,
+          "end": 8.59
         },
         {
-          "word": "change.",
-          "start": 9.49,
-          "end": 9.81
+          "word": "he",
+          "start": 9.19,
+          "end": 9.29
         },
         {
-          "word": "Area",
-          "start": 10.67,
-          "end": 11.01
+          "word": "holds",
+          "start": 9.29,
+          "end": 9.65
         },
         {
-          "word": "gives",
-          "start": 11.01,
-          "end": 11.43
+          "word": "that",
+          "start": 9.65,
+          "end": 9.97
         },
         {
-          "word": "displacement,",
-          "start": 11.43,
-          "end": 11.95
+          "word": "speed.",
+          "start": 9.97,
+          "end": 10.25
         },
         {
-          "word": "because",
-          "start": 12.85,
-          "end": 13.07
+          "word": "Then",
+          "start": 11.17,
+          "end": 11.41
         },
         {
-          "word": "velocity",
-          "start": 13.07,
-          "end": 13.63
+          "word": "he",
+          "start": 11.41,
+          "end": 11.53
         },
         {
-          "word": "accumulates",
-          "start": 13.63,
-          "end": 14.63
+          "word": "gradually",
+          "start": 11.53,
+          "end": 12.05
         },
         {
-          "word": "over",
-          "start": 14.63,
-          "end": 14.87
+          "word": "slows",
+          "start": 12.05,
+          "end": 12.47
         },
         {
-          "word": "time.",
-          "start": 14.87,
-          "end": 15.29
+          "word": "down",
+          "start": 12.47,
+          "end": 12.93
         },
         {
-          "word": "Below",
-          "start": 16.37,
-          "end": 17.09
+          "word": "and",
+          "start": 12.93,
+          "end": 13.31
+        },
+        {
+          "word": "stops.",
+          "start": 13.31,
+          "end": 13.67
+        },
+        {
+          "word": "He",
+          "start": 14.85,
+          "end": 15.05
+        },
+        {
+          "word": "rests.",
+          "start": 15.05,
+          "end": 15.49
+        },
+        {
+          "word": "Now",
+          "start": 17.79,
+          "end": 18.03
+        },
+        {
+          "word": "he",
+          "start": 18.03,
+          "end": 18.21
+        },
+        {
+          "word": "turns,",
+          "start": 18.21,
+          "end": 18.65
+        },
+        {
+          "word": "pedals",
+          "start": 19.23,
+          "end": 19.39
+        },
+        {
+          "word": "back",
+          "start": 19.39,
+          "end": 19.77
         },
         {
           "word": "the",
-          "start": 17.09,
-          "end": 17.41
+          "start": 19.77,
+          "end": 20.27
         },
         {
-          "word": "axis,",
-          "start": 17.41,
-          "end": 17.83
+          "word": "other",
+          "start": 20.27,
+          "end": 20.49
         },
         {
-          "word": "area",
-          "start": 18.85,
-          "end": 19.23
+          "word": "way,",
+          "start": 20.49,
+          "end": 20.77
+        },
+        {
+          "word": "and",
+          "start": 21.63,
+          "end": 21.71
+        },
+        {
+          "word": "speeds",
+          "start": 21.71,
+          "end": 21.99
+        },
+        {
+          "word": "up",
+          "start": 21.99,
+          "end": 22.29
+        },
+        {
+          "word": "to",
+          "start": 22.29,
+          "end": 22.49
+        },
+        {
+          "word": "four",
+          "start": 22.49,
+          "end": 22.71
+        },
+        {
+          "word": "metres",
+          "start": 22.71,
+          "end": 22.93
+        },
+        {
+          "word": "per",
+          "start": 22.93,
+          "end": 23.21
+        },
+        {
+          "word": "second.",
+          "start": 23.21,
+          "end": 23.53
+        },
+        {
+          "word": "He",
+          "start": 24.43,
+          "end": 24.63
+        },
+        {
+          "word": "keeps",
+          "start": 24.63,
+          "end": 24.87
+        },
+        {
+          "word": "that",
+          "start": 24.87,
+          "end": 25.11
+        },
+        {
+          "word": "speed",
+          "start": 25.11,
+          "end": 25.47
+        },
+        {
+          "word": "until",
+          "start": 25.47,
+          "end": 26.15
+        },
+        {
+          "word": "he",
+          "start": 26.15,
+          "end": 26.39
         },
         {
           "word": "is",
-          "start": 19.23,
-          "end": 19.59
+          "start": 26.39,
+          "end": 26.49
         },
         {
-          "word": "negative.",
-          "start": 19.59,
-          "end": 19.97
+          "word": "home",
+          "start": 26.49,
+          "end": 26.85
         },
         {
-          "word": "On",
-          "start": 20.83,
-          "end": 20.93
+          "word": "at",
+          "start": 26.85,
+          "end": 27.33
         },
         {
-          "word": "displacement",
-          "start": 20.93,
-          "end": 21.39
+          "word": "A.",
+          "start": 27.33,
+          "end": 27.63
         },
         {
-          "word": "time,",
-          "start": 21.39,
-          "end": 21.97
+          "word": "Picture",
+          "start": 28.27,
+          "end": 28.91
         },
         {
-          "word": "gradient",
-          "start": 22.91,
-          "end": 23.59
-        },
-        {
-          "word": "gives",
-          "start": 23.59,
-          "end": 24.19
-        },
-        {
-          "word": "velocity.",
-          "start": 24.19,
-          "end": 24.85
-        },
-        {
-          "word": "A",
-          "start": 24.85,
-          "end": 26.09
-        },
-        {
-          "word": "falling",
-          "start": 26.09,
-          "end": 26.45
-        },
-        {
-          "word": "line",
-          "start": 26.45,
-          "end": 26.87
-        },
-        {
-          "word": "means",
-          "start": 26.87,
-          "end": 27.49
-        },
-        {
-          "word": "returning,",
-          "start": 27.49,
-          "end": 28.05
-        },
-        {
-          "word": "not",
-          "start": 28.57,
-          "end": 28.97
-        },
-        {
-          "word": "a",
-          "start": 28.97,
+          "word": "the",
+          "start": 28.91,
           "end": 29.17
         },
         {
-          "word": "negative",
+          "word": "ride",
           "start": 29.17,
-          "end": 29.45
+          "end": 29.51
         },
         {
-          "word": "distance",
-          "start": 29.45,
-          "end": 29.89
+          "word": "before",
+          "start": 29.51,
+          "end": 30.43
         },
         {
-          "word": "travelled.",
-          "start": 29.89,
-          "end": 30.65
+          "word": "we",
+          "start": 30.43,
+          "end": 30.67
+        },
+        {
+          "word": "draw",
+          "start": 30.67,
+          "end": 30.97
+        },
+        {
+          "word": "it.",
+          "start": 30.97,
+          "end": 31.23
+        }
+      ],
+      "cues": {
+        "setup": 0.55,
+        "cruise": 3.63,
+        "six": 5.33,
+        "ten": 7.77,
+        "slowing": 11.53,
+        "stop": 12.93,
+        "rest": 14.85,
+        "turn": 17.8,
+        "pedal": 19.23,
+        "accelerate": 21.71,
+        "four": 22.49,
+        "return": 24.43,
+        "home": 26.49,
+        "close": 28.27
+      },
+      "generatedAt": "2026-09-06T16:19:00.008596",
+      "engine": "faster-whisper-small (local)",
+      "tempo": "slow",
+      "voiceSpeed": 0.9,
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "provider": "elevenlabs",
+      "audioSha256": "6f722cebb038fa1831d833e3d99f06dfaecf1d463fa7dc154e00e40d642a25bc",
+      "beats": [
+        {
+          "text": "Consider a cyclist passing point A, already moving at six metres per second. For the first ten seconds, he holds that speed. Then he gradually slows down and stops. He rests.",
+          "start": 0.55,
+          "end": 15.8
+        },
+        {
+          "text": "Now he turns, pedals back the other way, and speeds up to four metres per second. He keeps that speed until he is home at A. Picture the ride before we draw it.",
+          "start": 17.8,
+          "end": 31.38
+        }
+      ],
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 15.8,
+          "end": 17.8,
+          "duration": 2.0
+        }
+      ],
+      "paragraphs": [
+        "Consider a cyclist passing point A, already moving at six metres per second. For the first ten seconds, he holds that speed. Then he gradually slows down and stops. He rests. [hold 2 s] Now he turns, pedals back the other way, and speeds up to four metres per second. He keeps that speed until he is home at A. Picture the ride before we draw it."
+      ]
+    },
+    {
+      "id": "s02",
+      "audio": "drawing-travel-graphs-s02.mp3",
+      "duration": 24.058776,
+      "wordCount": 35,
+      "text": "Now the velocity time graph. Gradient gives acceleration. Area gives displacement, because velocity accumulates over time. Below the axis, area is negative. Now the displacement time graph. Gradient gives velocity. A falling line means returning.",
+      "words": [
+        {
+          "word": "Now",
+          "start": 0.18,
+          "end": 0.72
+        },
+        {
+          "word": "the",
+          "start": 0.72,
+          "end": 0.9
+        },
+        {
+          "word": "velocity",
+          "start": 0.9,
+          "end": 1.44
+        },
+        {
+          "word": "time",
+          "start": 1.44,
+          "end": 1.8
+        },
+        {
+          "word": "graph.",
+          "start": 1.8,
+          "end": 2.2
+        },
+        {
+          "word": "Gradient",
+          "start": 3.42,
+          "end": 4.38
+        },
+        {
+          "word": "gives",
+          "start": 4.38,
+          "end": 4.66
+        },
+        {
+          "word": "acceleration.",
+          "start": 4.66,
+          "end": 5.4
+        },
+        {
+          "word": "Area",
+          "start": 6.4,
+          "end": 6.68
+        },
+        {
+          "word": "gives",
+          "start": 6.68,
+          "end": 7.14
+        },
+        {
+          "word": "displacement,",
+          "start": 7.14,
+          "end": 7.74
+        },
+        {
+          "word": "because",
+          "start": 8.46,
+          "end": 8.74
+        },
+        {
+          "word": "velocity",
+          "start": 8.74,
+          "end": 9.24
+        },
+        {
+          "word": "accumulates",
+          "start": 9.24,
+          "end": 9.96
+        },
+        {
+          "word": "over",
+          "start": 9.96,
+          "end": 10.64
+        },
+        {
+          "word": "time.",
+          "start": 10.64,
+          "end": 11.02
+        },
+        {
+          "word": "Below",
+          "start": 11.98,
+          "end": 12.22
+        },
+        {
+          "word": "the",
+          "start": 12.22,
+          "end": 12.54
+        },
+        {
+          "word": "axis,",
+          "start": 12.54,
+          "end": 12.96
+        },
+        {
+          "word": "area",
+          "start": 13.5,
+          "end": 13.76
+        },
+        {
+          "word": "is",
+          "start": 13.76,
+          "end": 14.0
+        },
+        {
+          "word": "negative.",
+          "start": 14.0,
+          "end": 14.34
+        },
+        {
+          "word": "Now",
+          "start": 15.48,
+          "end": 15.72
+        },
+        {
+          "word": "the",
+          "start": 15.72,
+          "end": 16.36
+        },
+        {
+          "word": "displacement",
+          "start": 16.36,
+          "end": 16.76
+        },
+        {
+          "word": "time",
+          "start": 16.76,
+          "end": 17.18
+        },
+        {
+          "word": "graph.",
+          "start": 17.18,
+          "end": 17.56
+        },
+        {
+          "word": "Gradient",
+          "start": 19.14,
+          "end": 19.72
+        },
+        {
+          "word": "gives",
+          "start": 19.72,
+          "end": 20.0
+        },
+        {
+          "word": "velocity.",
+          "start": 20.0,
+          "end": 20.6
+        },
+        {
+          "word": "A",
+          "start": 21.4,
+          "end": 21.48
+        },
+        {
+          "word": "falling",
+          "start": 21.48,
+          "end": 21.88
+        },
+        {
+          "word": "line",
+          "start": 21.88,
+          "end": 22.24
+        },
+        {
+          "word": "means",
+          "start": 22.24,
+          "end": 22.8
+        },
+        {
+          "word": "returning.",
+          "start": 22.8,
+          "end": 23.3
         }
       ],
       "cues": {
         "velocity": 0.55,
-        "slope": 2.65,
-        "area": 10.67,
-        "negative": 16.37,
-        "displacement": 20.83,
-        "return": 24.85
+        "slope": 3.88,
+        "area": 6.4,
+        "negative": 11.98,
+        "displacement-signpost": 15.48,
+        "displacement": 19.21,
+        "return": 21.4
       },
-      "generatedAt": "2026-09-06T15:29:03.230605",
+      "generatedAt": "2026-09-06T16:19:00.008596",
       "engine": "faster-whisper-small (local)",
       "tempo": "brisk",
       "voiceSpeed": 1.0,
       "voiceId": "gYWKdgLtqjPO3D5uDrDP",
       "provider": "elevenlabs",
-      "audioSha256": "fc185141128daade8f49bb55666d8ab6f50fd26ce0d695401b2317e1c79b7f00",
+      "audioSha256": "1c3eb478d83d8f4fdf648d89e8c69ecf681d0d4726dd91e04f2e704c5d68ea57",
       "beats": [
         {
-          "text": "On velocity time, gradient gives acceleration: a straight slope means a constant rate of change. Area gives displacement, because velocity accumulates over time. Below the axis, area is negative. On displacement time, gradient gives velocity. A falling line means returning, not a negative distance travelled.",
+          "text": "Now the velocity time graph.",
           "start": 0.55,
-          "end": 30.65
+          "end": 2.38
+        },
+        {
+          "text": "Gradient gives acceleration. Area gives displacement, because velocity accumulates over time. Below the axis, area is negative. Now the displacement time graph.",
+          "start": 3.88,
+          "end": 17.71
+        },
+        {
+          "text": "Gradient gives velocity. A falling line means returning.",
+          "start": 19.21,
+          "end": 23.56
         }
       ],
-      "holds": [],
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 2.38,
+          "end": 3.88,
+          "duration": 1.5
+        },
+        {
+          "kind": "hold",
+          "start": 17.71,
+          "end": 19.21,
+          "duration": 1.5
+        }
+      ],
       "paragraphs": [
-        "On velocity time, gradient gives acceleration: a straight slope means a constant rate of change. Area gives displacement, because velocity accumulates over time. Below the axis, area is negative. On displacement time, gradient gives velocity. A falling line means returning, not a negative distance travelled."
+        "Now the velocity time graph. [hold 1.5 s] Gradient gives acceleration. Area gives displacement, because velocity accumulates over time. Below the axis, area is negative. Now the displacement time graph. [hold 1.5 s] Gradient gives velocity. A falling line means returning."
       ]
     },
     {
       "id": "s03",
       "audio": "drawing-travel-graphs-s03.mp3",
-      "duration": 43.937959,
-      "wordCount": 75,
-      "text": "A cyclist passes O, rides out, stops, then returns. We'll draw velocity against time, taking outward as positive. Each phrase chooses a shape. Let's get drawing. Six metres per second for ten seconds, horizontal. Slowing uniformly over twelve seconds reaches rest at twenty -two, a straight fall. Resting five seconds takes us to twenty -seven. Accelerating backwards for four seconds reaches minus four at thirty -one. Keep minus four until returning to O at T.",
+      "duration": 38.844082,
+      "wordCount": 65,
+      "text": "Now the velocity time graph. For our cyclist, outward is positive. Each phrase chooses a shape. Let's get drawing. Six metres per second for ten seconds. Horizontal. Slowing uniformly over twelve seconds reaches rest at twenty -two. Resting five seconds takes us to twenty -seven. Accelerating backwards for four seconds reaches minus four at thirty -one. Keep minus four until returning to A at T.",
       "words": [
         {
-          "word": "A",
+          "word": "Now",
           "start": 0.21,
-          "end": 0.71
+          "end": 0.75
         },
         {
-          "word": "cyclist",
-          "start": 0.71,
-          "end": 1.19
-        },
-        {
-          "word": "passes",
-          "start": 1.19,
-          "end": 1.57
-        },
-        {
-          "word": "O,",
-          "start": 1.57,
-          "end": 1.99
-        },
-        {
-          "word": "rides",
-          "start": 2.59,
-          "end": 2.95
-        },
-        {
-          "word": "out,",
-          "start": 2.95,
-          "end": 3.33
-        },
-        {
-          "word": "stops,",
-          "start": 3.87,
-          "end": 4.33
-        },
-        {
-          "word": "then",
-          "start": 5.19,
-          "end": 5.29
-        },
-        {
-          "word": "returns.",
-          "start": 5.29,
-          "end": 5.75
-        },
-        {
-          "word": "We'll",
-          "start": 6.45,
-          "end": 7.11
-        },
-        {
-          "word": "draw",
-          "start": 7.11,
-          "end": 7.29
+          "word": "the",
+          "start": 0.75,
+          "end": 0.87
         },
         {
           "word": "velocity",
-          "start": 7.29,
-          "end": 7.77
+          "start": 0.87,
+          "end": 1.21
         },
         {
-          "word": "against",
-          "start": 7.77,
-          "end": 8.11
+          "word": "time",
+          "start": 1.21,
+          "end": 1.71
         },
         {
-          "word": "time,",
-          "start": 8.11,
-          "end": 8.55
+          "word": "graph.",
+          "start": 1.71,
+          "end": 2.05
         },
         {
-          "word": "taking",
-          "start": 8.85,
-          "end": 9.25
+          "word": "For",
+          "start": 3.09,
+          "end": 3.89
+        },
+        {
+          "word": "our",
+          "start": 3.89,
+          "end": 4.07
+        },
+        {
+          "word": "cyclist,",
+          "start": 4.07,
+          "end": 4.75
         },
         {
           "word": "outward",
-          "start": 9.25,
-          "end": 9.67
+          "start": 5.53,
+          "end": 5.83
         },
         {
-          "word": "as",
-          "start": 9.67,
-          "end": 10.01
+          "word": "is",
+          "start": 5.83,
+          "end": 6.23
         },
         {
           "word": "positive.",
-          "start": 10.01,
-          "end": 10.39
+          "start": 6.23,
+          "end": 6.63
         },
         {
           "word": "Each",
-          "start": 11.49,
-          "end": 11.95
+          "start": 7.91,
+          "end": 8.15
         },
         {
           "word": "phrase",
-          "start": 11.95,
-          "end": 12.33
+          "start": 8.15,
+          "end": 8.49
         },
         {
           "word": "chooses",
-          "start": 12.33,
-          "end": 12.83
+          "start": 8.49,
+          "end": 9.17
         },
         {
           "word": "a",
-          "start": 12.83,
-          "end": 13.05
+          "start": 9.17,
+          "end": 9.41
         },
         {
           "word": "shape.",
-          "start": 13.05,
-          "end": 13.33
+          "start": 9.41,
+          "end": 9.71
         },
         {
           "word": "Let's",
-          "start": 14.27,
-          "end": 14.55
+          "start": 10.79,
+          "end": 10.99
         },
         {
           "word": "get",
-          "start": 14.55,
-          "end": 14.71
+          "start": 10.99,
+          "end": 11.13
         },
         {
           "word": "drawing.",
-          "start": 14.71,
-          "end": 15.11
+          "start": 11.13,
+          "end": 11.51
         },
         {
           "word": "Six",
-          "start": 15.95,
-          "end": 16.09
+          "start": 12.73,
+          "end": 12.85
         },
         {
           "word": "metres",
-          "start": 16.09,
-          "end": 16.37
+          "start": 12.85,
+          "end": 13.13
         },
         {
           "word": "per",
-          "start": 16.37,
-          "end": 16.67
+          "start": 13.13,
+          "end": 13.35
         },
         {
           "word": "second",
-          "start": 16.67,
-          "end": 16.99
+          "start": 13.35,
+          "end": 13.69
         },
         {
           "word": "for",
-          "start": 16.99,
-          "end": 17.37
+          "start": 13.69,
+          "end": 14.11
         },
         {
           "word": "ten",
-          "start": 17.37,
-          "end": 17.61
+          "start": 14.11,
+          "end": 14.31
         },
         {
-          "word": "seconds,",
-          "start": 17.61,
-          "end": 18.01
+          "word": "seconds.",
+          "start": 14.31,
+          "end": 14.71
         },
         {
-          "word": "horizontal.",
-          "start": 18.47,
-          "end": 19.07
+          "word": "Horizontal.",
+          "start": 15.45,
+          "end": 16.11
         },
         {
           "word": "Slowing",
-          "start": 20.11,
-          "end": 20.87
+          "start": 16.89,
+          "end": 17.69
         },
         {
           "word": "uniformly",
-          "start": 20.87,
-          "end": 21.65
+          "start": 17.69,
+          "end": 18.47
         },
         {
           "word": "over",
-          "start": 21.65,
-          "end": 22.95
+          "start": 18.47,
+          "end": 19.75
         },
         {
           "word": "twelve",
-          "start": 22.95,
-          "end": 23.29
+          "start": 19.75,
+          "end": 20.07
         },
         {
           "word": "seconds",
-          "start": 23.29,
-          "end": 23.81
+          "start": 20.07,
+          "end": 20.57
         },
         {
           "word": "reaches",
-          "start": 23.81,
-          "end": 24.53
+          "start": 20.57,
+          "end": 21.05
         },
         {
           "word": "rest",
-          "start": 24.53,
-          "end": 25.11
+          "start": 21.05,
+          "end": 21.59
         },
         {
           "word": "at",
-          "start": 25.11,
-          "end": 25.47
+          "start": 21.59,
+          "end": 21.95
         },
         {
           "word": "twenty",
-          "start": 25.47,
-          "end": 25.85
+          "start": 21.95,
+          "end": 22.25
         },
         {
-          "word": "-two,",
-          "start": 25.85,
-          "end": 26.13
-        },
-        {
-          "word": "a",
-          "start": 26.81,
-          "end": 26.99
-        },
-        {
-          "word": "straight",
-          "start": 26.99,
-          "end": 27.19
-        },
-        {
-          "word": "fall.",
-          "start": 27.19,
-          "end": 27.53
+          "word": "-two.",
+          "start": 22.25,
+          "end": 22.49
         },
         {
           "word": "Resting",
-          "start": 28.49,
-          "end": 29.29
+          "start": 22.49,
+          "end": 24.07
         },
         {
           "word": "five",
-          "start": 29.29,
-          "end": 29.79
+          "start": 24.07,
+          "end": 24.33
         },
         {
           "word": "seconds",
-          "start": 29.79,
-          "end": 30.35
+          "start": 24.33,
+          "end": 24.89
         },
         {
           "word": "takes",
-          "start": 30.35,
-          "end": 31.33
+          "start": 24.89,
+          "end": 25.79
         },
         {
           "word": "us",
-          "start": 31.33,
-          "end": 31.57
+          "start": 25.79,
+          "end": 26.01
         },
         {
           "word": "to",
-          "start": 31.57,
-          "end": 31.77
+          "start": 26.01,
+          "end": 26.21
         },
         {
           "word": "twenty",
-          "start": 31.77,
-          "end": 32.15
+          "start": 26.21,
+          "end": 26.55
         },
         {
           "word": "-seven.",
-          "start": 32.15,
-          "end": 32.49
+          "start": 26.55,
+          "end": 26.89
         },
         {
           "word": "Accelerating",
-          "start": 33.47,
-          "end": 34.27
+          "start": 28.11,
+          "end": 28.81
         },
         {
           "word": "backwards",
-          "start": 34.27,
-          "end": 34.79
+          "start": 28.81,
+          "end": 29.23
         },
         {
           "word": "for",
-          "start": 34.79,
-          "end": 35.67
+          "start": 29.23,
+          "end": 30.07
         },
         {
           "word": "four",
-          "start": 35.67,
-          "end": 36.01
+          "start": 30.07,
+          "end": 30.37
         },
         {
           "word": "seconds",
-          "start": 36.01,
-          "end": 36.53
+          "start": 30.37,
+          "end": 30.87
         },
         {
           "word": "reaches",
-          "start": 36.53,
-          "end": 37.43
+          "start": 30.87,
+          "end": 31.65
         },
         {
           "word": "minus",
-          "start": 37.43,
-          "end": 37.89
+          "start": 31.65,
+          "end": 32.23
         },
         {
           "word": "four",
-          "start": 37.89,
-          "end": 38.37
+          "start": 32.23,
+          "end": 32.67
         },
         {
           "word": "at",
-          "start": 38.37,
-          "end": 39.15
+          "start": 32.67,
+          "end": 32.93
         },
         {
           "word": "thirty",
-          "start": 39.15,
-          "end": 39.37
+          "start": 32.93,
+          "end": 33.15
         },
         {
           "word": "-one.",
-          "start": 39.37,
-          "end": 39.59
+          "start": 33.15,
+          "end": 33.37
         },
         {
           "word": "Keep",
-          "start": 40.79,
-          "end": 41.13
+          "start": 34.13,
+          "end": 34.55
         },
         {
           "word": "minus",
-          "start": 41.13,
-          "end": 41.45
+          "start": 34.55,
+          "end": 34.95
         },
         {
           "word": "four",
-          "start": 41.45,
-          "end": 41.83
+          "start": 34.95,
+          "end": 35.37
         },
         {
           "word": "until",
-          "start": 41.83,
-          "end": 42.07
+          "start": 35.37,
+          "end": 36.41
         },
         {
           "word": "returning",
-          "start": 42.07,
-          "end": 42.47
+          "start": 36.41,
+          "end": 36.83
         },
         {
           "word": "to",
-          "start": 42.47,
-          "end": 42.67
+          "start": 36.83,
+          "end": 37.09
         },
         {
-          "word": "O",
-          "start": 42.67,
-          "end": 42.93
+          "word": "A",
+          "start": 37.09,
+          "end": 37.43
         },
         {
           "word": "at",
-          "start": 42.93,
-          "end": 43.09
+          "start": 37.43,
+          "end": 37.91
         },
         {
           "word": "T.",
-          "start": 43.09,
-          "end": 43.33
+          "start": 37.91,
+          "end": 38.23
         }
       ],
       "cues": {
-        "setup": 0.55,
-        "draw": 14.71,
-        "constant": 15.95,
-        "ten": 17.37,
-        "slowing": 20.11,
-        "twelve": 22.95,
-        "twentytwo": 25.47,
-        "rest": 28.49,
-        "twentyseven": 31.77,
-        "reverse": 33.47,
-        "four": 35.67,
-        "minusfour": 37.43,
-        "thirtyone": 39.15,
-        "return": 40.79,
-        "finish": 42.93
+        "signpost": 0.55,
+        "setup": 3.73,
+        "draw": 11.13,
+        "constant": 12.73,
+        "ten": 14.11,
+        "slowing": 16.89,
+        "twelve": 19.75,
+        "twentytwo": 21.95,
+        "rest": 22.49,
+        "twentyseven": 26.21,
+        "reverse": 28.11,
+        "four": 30.07,
+        "minusfour": 31.65,
+        "thirtyone": 32.93,
+        "return": 34.13,
+        "finish": 37.43
       },
-      "generatedAt": "2026-09-06T15:29:03.230605",
+      "generatedAt": "2026-09-06T16:19:00.008596",
       "engine": "faster-whisper-small (local)",
       "tempo": "brisk",
       "voiceSpeed": 1.0,
       "voiceId": "gYWKdgLtqjPO3D5uDrDP",
       "provider": "elevenlabs",
-      "audioSha256": "d7f2f92b375fa6fb091797d5bd04c52487e6808e644eb53a9ea0cc27818460a1",
+      "audioSha256": "1c5bd03e8b5a9fcd4ca6a6054225e17ae73fb9237cfbd4666b037734891bed1b",
       "beats": [
         {
-          "text": "A cyclist passes O, rides out, stops, then returns. We'll draw velocity against time, taking outward as positive; each phrase chooses a shape. Let's get drawing. Six metres per second for ten seconds: horizontal. Slowing uniformly over twelve seconds reaches rest at twenty-two: a straight fall. Resting five seconds takes us to twenty-seven. Accelerating backwards for four seconds reaches minus four at thirty-one. Keep minus four until returning to O at T.",
+          "text": "Now the velocity time graph.",
           "start": 0.55,
-          "end": 43.44
+          "end": 2.23
+        },
+        {
+          "text": "For our cyclist, outward is positive. Each phrase chooses a shape. Let's get drawing. Six metres per second for ten seconds: horizontal. Slowing uniformly over twelve seconds reaches rest at twenty-two. Resting five seconds takes us to twenty-seven. Accelerating backwards for four seconds reaches minus four at thirty-one. Keep minus four until returning to A at T.",
+          "start": 3.73,
+          "end": 38.35
         }
       ],
-      "holds": [],
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 2.23,
+          "end": 3.73,
+          "duration": 1.5
+        }
+      ],
       "paragraphs": [
-        "A cyclist passes O, rides out, stops, then returns. We'll draw velocity against time, taking outward as positive; each phrase chooses a shape. Let's get drawing. Six metres per second for ten seconds: horizontal. Slowing uniformly over twelve seconds reaches rest at twenty-two: a straight fall. Resting five seconds takes us to twenty-seven. Accelerating backwards for four seconds reaches minus four at thirty-one. Keep minus four until returning to O at T."
+        "Now the velocity time graph. [hold 1.5 s] For our cyclist, outward is positive. Each phrase chooses a shape. Let's get drawing. Six metres per second for ten seconds: horizontal. Slowing uniformly over twelve seconds reaches rest at twenty-two. Resting five seconds takes us to twenty-seven. Accelerating backwards for four seconds reaches minus four at thirty-one. Keep minus four until returning to A at T."
       ]
     },
     {
@@ -919,1546 +1231,1612 @@
       "audio": "drawing-travel-graphs-s04.mp3",
       "duration": 52.035918,
       "wordCount": 74,
-      "text": "For the same cyclist, find the return time. Returning to O means the outward and return areas match. Let's get drawing. The rectangle gives sixty metres. The triangle adds thirty -six metres. Together, ninety -six metres outward. The reverse triangle accounts for eight metres. That leaves eighty -eight metres to return. At four metres per second, that's twenty -two more seconds. Add the first thirty -one. T is fifty -three seconds. Back at O.",
+      "text": "For the same cyclist, find the return time. Returning to A means the outward and return areas match. Let's get drawing. The rectangle gives sixty metres. The triangle adds thirty -six metres. Together, ninety -six metres outward. The reverse triangle accounts for eight metres. That leaves eighty -eight metres to return. At four metres per second, that's twenty -two more seconds. Add the first thirty -one. T is fifty -three seconds. Back at A.",
       "words": [
         {
           "word": "For",
           "start": 0.27,
-          "end": 0.71
+          "end": 0.73
         },
         {
           "word": "the",
-          "start": 0.71,
-          "end": 0.87
+          "start": 0.73,
+          "end": 0.89
         },
         {
           "word": "same",
-          "start": 0.87,
-          "end": 1.13
+          "start": 0.89,
+          "end": 1.19
         },
         {
           "word": "cyclist,",
-          "start": 1.13,
-          "end": 1.83
+          "start": 1.19,
+          "end": 1.95
         },
         {
           "word": "find",
-          "start": 2.57,
-          "end": 3.13
+          "start": 2.45,
+          "end": 3.11
         },
         {
           "word": "the",
-          "start": 3.13,
-          "end": 3.35
+          "start": 3.11,
+          "end": 3.33
         },
         {
           "word": "return",
-          "start": 3.35,
-          "end": 3.73
+          "start": 3.33,
+          "end": 3.63
         },
         {
           "word": "time.",
-          "start": 3.73,
-          "end": 4.21
+          "start": 3.63,
+          "end": 4.03
         },
         {
           "word": "Returning",
-          "start": 5.29,
-          "end": 5.67
+          "start": 5.07,
+          "end": 5.43
         },
         {
           "word": "to",
-          "start": 5.67,
-          "end": 5.93
+          "start": 5.43,
+          "end": 5.67
         },
         {
-          "word": "O",
-          "start": 5.93,
-          "end": 6.25
+          "word": "A",
+          "start": 5.67,
+          "end": 6.03
         },
         {
           "word": "means",
-          "start": 6.25,
-          "end": 7.27
+          "start": 6.03,
+          "end": 6.81
         },
         {
           "word": "the",
-          "start": 7.27,
-          "end": 7.53
+          "start": 6.81,
+          "end": 7.07
         },
         {
           "word": "outward",
-          "start": 7.53,
-          "end": 7.87
+          "start": 7.07,
+          "end": 7.49
         },
         {
           "word": "and",
-          "start": 7.87,
-          "end": 8.35
+          "start": 7.49,
+          "end": 8.03
         },
         {
           "word": "return",
-          "start": 8.35,
-          "end": 8.83
+          "start": 8.03,
+          "end": 8.41
         },
         {
           "word": "areas",
-          "start": 8.83,
-          "end": 9.53
+          "start": 8.41,
+          "end": 8.91
         },
         {
           "word": "match.",
-          "start": 9.53,
-          "end": 10.05
+          "start": 8.91,
+          "end": 9.45
         },
         {
           "word": "Let's",
-          "start": 11.31,
-          "end": 11.51
+          "start": 10.45,
+          "end": 10.77
         },
         {
           "word": "get",
-          "start": 11.51,
-          "end": 11.63
+          "start": 10.77,
+          "end": 10.95
         },
         {
           "word": "drawing.",
-          "start": 11.63,
-          "end": 12.13
+          "start": 10.95,
+          "end": 11.35
         },
         {
           "word": "The",
-          "start": 14.5,
-          "end": 14.58
+          "start": 13.62,
+          "end": 13.68
         },
         {
           "word": "rectangle",
-          "start": 14.58,
-          "end": 15.24
+          "start": 13.68,
+          "end": 14.08
         },
         {
           "word": "gives",
-          "start": 15.24,
-          "end": 15.78
+          "start": 14.08,
+          "end": 14.86
         },
         {
           "word": "sixty",
-          "start": 15.78,
-          "end": 16.24
+          "start": 14.86,
+          "end": 15.34
         },
         {
           "word": "metres.",
-          "start": 16.24,
-          "end": 16.54
+          "start": 15.34,
+          "end": 15.66
         },
         {
           "word": "The",
-          "start": 18.92,
-          "end": 18.98
+          "start": 18.1,
+          "end": 18.18
         },
         {
           "word": "triangle",
-          "start": 18.98,
-          "end": 19.5
+          "start": 18.18,
+          "end": 18.78
         },
         {
           "word": "adds",
-          "start": 19.5,
-          "end": 20.28
+          "start": 18.78,
+          "end": 19.56
         },
         {
           "word": "thirty",
-          "start": 20.28,
-          "end": 20.6
+          "start": 19.56,
+          "end": 19.88
         },
         {
           "word": "-six",
-          "start": 20.6,
-          "end": 20.82
+          "start": 19.88,
+          "end": 20.14
         },
         {
           "word": "metres.",
-          "start": 20.82,
-          "end": 21.22
+          "start": 20.14,
+          "end": 20.62
         },
         {
           "word": "Together,",
-          "start": 23.5,
-          "end": 23.8
+          "start": 22.76,
+          "end": 23.16
         },
         {
           "word": "ninety",
-          "start": 24.36,
-          "end": 24.76
+          "start": 23.64,
+          "end": 23.94
         },
         {
           "word": "-six",
-          "start": 24.76,
-          "end": 25.12
+          "start": 23.94,
+          "end": 24.3
         },
         {
           "word": "metres",
-          "start": 25.12,
-          "end": 25.46
+          "start": 24.3,
+          "end": 24.7
         },
         {
           "word": "outward.",
-          "start": 25.46,
-          "end": 25.84
+          "start": 24.7,
+          "end": 25.2
         },
         {
           "word": "The",
-          "start": 28.08,
-          "end": 28.24
+          "start": 27.58,
+          "end": 27.72
         },
         {
           "word": "reverse",
-          "start": 28.24,
-          "end": 28.72
+          "start": 27.72,
+          "end": 28.08
         },
         {
           "word": "triangle",
-          "start": 28.72,
-          "end": 29.42
+          "start": 28.08,
+          "end": 28.78
         },
         {
           "word": "accounts",
-          "start": 29.42,
-          "end": 29.96
+          "start": 28.78,
+          "end": 29.72
         },
         {
           "word": "for",
-          "start": 29.96,
-          "end": 30.26
+          "start": 29.72,
+          "end": 30.06
         },
         {
           "word": "eight",
-          "start": 30.26,
-          "end": 30.54
+          "start": 30.06,
+          "end": 30.4
         },
         {
           "word": "metres.",
-          "start": 30.54,
-          "end": 30.92
+          "start": 30.4,
+          "end": 30.84
         },
         {
           "word": "That",
           "start": 32.96,
-          "end": 33.32
+          "end": 33.28
         },
         {
           "word": "leaves",
-          "start": 33.32,
-          "end": 33.66
+          "start": 33.28,
+          "end": 33.48
         },
         {
           "word": "eighty",
-          "start": 33.66,
-          "end": 34.1
+          "start": 33.48,
+          "end": 33.84
         },
         {
           "word": "-eight",
-          "start": 34.1,
-          "end": 34.32
+          "start": 33.84,
+          "end": 34.14
         },
         {
           "word": "metres",
-          "start": 34.32,
-          "end": 34.6
+          "start": 34.14,
+          "end": 34.44
         },
         {
           "word": "to",
-          "start": 34.6,
-          "end": 34.9
+          "start": 34.44,
+          "end": 34.64
         },
         {
           "word": "return.",
-          "start": 34.9,
-          "end": 35.38
+          "start": 34.64,
+          "end": 35.0
         },
         {
           "word": "At",
-          "start": 37.2,
-          "end": 37.72
+          "start": 36.34,
+          "end": 37.32
         },
         {
           "word": "four",
-          "start": 37.72,
-          "end": 37.96
+          "start": 37.32,
+          "end": 37.62
         },
         {
           "word": "metres",
-          "start": 37.96,
-          "end": 38.12
+          "start": 37.62,
+          "end": 37.9
         },
         {
           "word": "per",
-          "start": 38.12,
-          "end": 38.36
+          "start": 37.9,
+          "end": 38.18
         },
         {
           "word": "second,",
-          "start": 38.36,
-          "end": 38.72
+          "start": 38.18,
+          "end": 38.54
         },
         {
           "word": "that's",
-          "start": 39.12,
-          "end": 39.48
+          "start": 38.54,
+          "end": 39.12
         },
         {
           "word": "twenty",
-          "start": 39.48,
-          "end": 39.7
+          "start": 39.12,
+          "end": 39.34
         },
         {
           "word": "-two",
-          "start": 39.7,
-          "end": 39.86
+          "start": 39.34,
+          "end": 39.54
         },
         {
           "word": "more",
-          "start": 39.86,
-          "end": 40.06
+          "start": 39.54,
+          "end": 39.76
         },
         {
           "word": "seconds.",
-          "start": 40.06,
-          "end": 40.48
+          "start": 39.76,
+          "end": 40.16
         },
         {
           "word": "Add",
-          "start": 42.5,
-          "end": 42.96
+          "start": 42.28,
+          "end": 42.62
         },
         {
           "word": "the",
-          "start": 42.96,
-          "end": 43.16
+          "start": 42.62,
+          "end": 42.86
         },
         {
           "word": "first",
-          "start": 43.16,
-          "end": 43.52
+          "start": 42.86,
+          "end": 43.22
         },
         {
           "word": "thirty",
-          "start": 43.52,
-          "end": 43.96
+          "start": 43.22,
+          "end": 43.72
         },
         {
           "word": "-one.",
-          "start": 43.96,
-          "end": 44.26
+          "start": 43.72,
+          "end": 44.04
         },
         {
           "word": "T",
-          "start": 44.74,
-          "end": 45.14
+          "start": 44.62,
+          "end": 44.96
         },
         {
           "word": "is",
-          "start": 45.14,
-          "end": 45.92
+          "start": 44.96,
+          "end": 45.18
         },
         {
           "word": "fifty",
-          "start": 45.92,
-          "end": 46.24
+          "start": 45.18,
+          "end": 45.42
         },
         {
           "word": "-three",
-          "start": 46.24,
-          "end": 46.56
+          "start": 45.42,
+          "end": 45.72
         },
         {
           "word": "seconds.",
-          "start": 46.56,
-          "end": 46.94
+          "start": 45.72,
+          "end": 46.18
         },
         {
           "word": "Back",
-          "start": 47.34,
-          "end": 47.64
+          "start": 46.58,
+          "end": 46.84
         },
         {
           "word": "at",
-          "start": 47.64,
-          "end": 47.8
+          "start": 46.84,
+          "end": 47.04
         },
         {
-          "word": "O.",
-          "start": 47.8,
-          "end": 48.04
+          "word": "A.",
+          "start": 47.04,
+          "end": 47.22
         }
       ],
       "cues": {
         "setup": 0.55,
-        "draw": 11.63,
-        "rectangle": 14.5,
-        "sixty": 15.78,
-        "triangle": 18.92,
-        "thirtysix": 20.28,
-        "total": 23.5,
-        "ninetysix": 24.36,
-        "reverse": 28.11,
-        "eight": 30.26,
-        "remaining": 33.18,
-        "eightyeight": 33.66,
-        "duration": 37.57,
-        "twentytwo": 39.48,
-        "total-time": 42.73,
-        "fiftythree": 45.92
+        "draw": 10.95,
+        "rectangle": 13.62,
+        "sixty": 14.86,
+        "triangle": 18.1,
+        "thirtysix": 19.56,
+        "total": 22.85,
+        "ninetysix": 23.64,
+        "reverse": 27.58,
+        "eight": 30.06,
+        "remaining": 33.09,
+        "eightyeight": 33.48,
+        "duration": 37.11,
+        "twentytwo": 39.12,
+        "total-time": 42.39,
+        "fiftythree": 45.18
       },
-      "generatedAt": "2026-09-06T15:35:21.475833",
+      "generatedAt": "2026-09-06T16:19:00.008596",
       "engine": "faster-whisper-small (local)",
       "tempo": "slow",
       "voiceSpeed": 0.9,
       "voiceId": "gYWKdgLtqjPO3D5uDrDP",
       "provider": "elevenlabs",
-      "audioSha256": "a63810c6268373750c5de1c7d2cbc2c7a383ae9c2f736c699aa129da3a448cae",
+      "audioSha256": "b47ab80e2118679a93f0a69087d1d108e86f52481cba0d4442e1193744931500",
       "beats": [
         {
-          "text": "For the same cyclist, find the return time. Returning to O means the outward and return areas match. Let's get drawing.",
+          "text": "For the same cyclist, find the return time. Returning to A means the outward and return areas match. Let's get drawing.",
           "start": 0.55,
-          "end": 12.44
+          "end": 11.55
         },
         {
           "text": "The rectangle gives sixty metres.",
-          "start": 14.44,
-          "end": 16.86
+          "start": 13.55,
+          "end": 16.05
         },
         {
           "text": "The triangle adds thirty-six metres.",
-          "start": 18.86,
-          "end": 21.5
+          "start": 18.05,
+          "end": 20.85
         },
         {
           "text": "Together, ninety-six metres outward.",
-          "start": 23.5,
-          "end": 26.11
+          "start": 22.85,
+          "end": 25.54
         },
         {
           "text": "The reverse triangle accounts for eight metres.",
-          "start": 28.11,
-          "end": 31.18
+          "start": 27.54,
+          "end": 31.09
         },
         {
           "text": "That leaves eighty-eight metres to return.",
-          "start": 33.18,
-          "end": 35.57
+          "start": 33.09,
+          "end": 35.11
         },
         {
           "text": "At four metres per second, that's twenty-two more seconds.",
-          "start": 37.57,
-          "end": 40.73
+          "start": 37.11,
+          "end": 40.39
         },
         {
-          "text": "Add the first thirty-one: T is fifty-three seconds. Back at O.",
-          "start": 42.73,
-          "end": 48.2
+          "text": "Add the first thirty-one: T is fifty-three seconds. Back at A.",
+          "start": 42.39,
+          "end": 47.37
         }
       ],
       "holds": [
         {
           "kind": "pause",
-          "start": 12.44,
-          "end": 14.44,
-          "duration": 2
+          "start": 11.55,
+          "end": 13.55,
+          "duration": 2.0
         },
         {
           "kind": "hold",
-          "start": 16.86,
-          "end": 18.86,
-          "duration": 2
+          "start": 16.05,
+          "end": 18.05,
+          "duration": 2.0
         },
         {
           "kind": "hold",
-          "start": 21.5,
-          "end": 23.5,
-          "duration": 2
+          "start": 20.85,
+          "end": 22.85,
+          "duration": 2.0
         },
         {
           "kind": "hold",
-          "start": 26.11,
-          "end": 28.11,
-          "duration": 2
+          "start": 25.54,
+          "end": 27.54,
+          "duration": 2.0
         },
         {
           "kind": "hold",
-          "start": 31.18,
-          "end": 33.18,
-          "duration": 2
+          "start": 31.09,
+          "end": 33.09,
+          "duration": 2.0
         },
         {
           "kind": "hold",
-          "start": 35.57,
-          "end": 37.57,
-          "duration": 2
+          "start": 35.11,
+          "end": 37.11,
+          "duration": 2.0
         },
         {
           "kind": "hold",
-          "start": 40.73,
-          "end": 42.73,
-          "duration": 2
+          "start": 40.39,
+          "end": 42.39,
+          "duration": 2.0
         },
         {
           "kind": "hold",
-          "start": 48.2,
-          "end": 50.2,
-          "duration": 2
+          "start": 47.37,
+          "end": 49.37,
+          "duration": 2.0
         }
       ],
       "paragraphs": [
-        "For the same cyclist, find the return time. Returning to O means the outward and return areas match. Let's get drawing. [pause 2 s] The rectangle gives sixty metres. [hold 2 s] The triangle adds thirty-six metres. [hold 2 s] Together, ninety-six metres outward. [hold 2 s] The reverse triangle accounts for eight metres. [hold 2 s] That leaves eighty-eight metres to return. [hold 2 s] At four metres per second, that's twenty-two more seconds. [hold 2 s] Add the first thirty-one: T is fifty-three seconds. Back at O. [hold 2 s]"
+        "For the same cyclist, find the return time. Returning to A means the outward and return areas match. Let's get drawing. [pause 2 s] The rectangle gives sixty metres. [hold 2 s] The triangle adds thirty-six metres. [hold 2 s] Together, ninety-six metres outward. [hold 2 s] The reverse triangle accounts for eight metres. [hold 2 s] That leaves eighty-eight metres to return. [hold 2 s] At four metres per second, that's twenty-two more seconds. [hold 2 s] Add the first thirty-one: T is fifty-three seconds. Back at A. [hold 2 s]"
       ]
     },
     {
       "id": "s05",
       "audio": "drawing-travel-graphs-s05.mp3",
-      "duration": 18.050612,
-      "wordCount": 28,
-      "text": "Constant velocity gives a straight displacement line. Equal changes in equal times. Rest is horizontal. Changing velocity gives a curve. A straight join would hide its changing gradient.",
+      "duration": 25.991837,
+      "wordCount": 35,
+      "text": "Now the displacement time graph. One journey, both graphs. Constant velocity gives a straight displacement line. Equal changes in equal times. Rest is horizontal. Changing velocity gives a curve. A straight join hides that change.",
       "words": [
         {
-          "word": "Constant",
-          "start": 0.24,
-          "end": 0.9
+          "word": "Now",
+          "start": 0.18,
+          "end": 0.76
         },
         {
-          "word": "velocity",
-          "start": 0.9,
-          "end": 1.38
-        },
-        {
-          "word": "gives",
-          "start": 1.38,
-          "end": 2.14
-        },
-        {
-          "word": "a",
-          "start": 2.14,
-          "end": 2.32
-        },
-        {
-          "word": "straight",
-          "start": 2.32,
-          "end": 2.58
+          "word": "the",
+          "start": 0.76,
+          "end": 0.94
         },
         {
           "word": "displacement",
-          "start": 2.58,
-          "end": 3.06
+          "start": 0.94,
+          "end": 1.38
         },
         {
-          "word": "line.",
-          "start": 3.06,
-          "end": 3.68
+          "word": "time",
+          "start": 1.38,
+          "end": 1.84
         },
         {
-          "word": "Equal",
-          "start": 4.3,
-          "end": 4.86
+          "word": "graph.",
+          "start": 1.84,
+          "end": 2.16
         },
         {
-          "word": "changes",
-          "start": 4.86,
-          "end": 5.26
+          "word": "One",
+          "start": 3.24,
+          "end": 4.06
         },
         {
-          "word": "in",
-          "start": 5.26,
-          "end": 5.74
+          "word": "journey,",
+          "start": 4.06,
+          "end": 4.5
         },
         {
-          "word": "equal",
-          "start": 5.74,
-          "end": 6.0
+          "word": "both",
+          "start": 5.36,
+          "end": 5.68
         },
         {
-          "word": "times.",
-          "start": 6.0,
-          "end": 6.46
+          "word": "graphs.",
+          "start": 5.68,
+          "end": 6.24
         },
         {
-          "word": "Rest",
-          "start": 7.12,
-          "end": 7.44
-        },
-        {
-          "word": "is",
-          "start": 7.44,
-          "end": 7.8
-        },
-        {
-          "word": "horizontal.",
-          "start": 7.8,
-          "end": 8.34
-        },
-        {
-          "word": "Changing",
-          "start": 9.3,
-          "end": 9.52
+          "word": "Constant",
+          "start": 7.26,
+          "end": 7.7
         },
         {
           "word": "velocity",
-          "start": 9.52,
-          "end": 10.14
+          "start": 7.7,
+          "end": 8.26
         },
         {
           "word": "gives",
-          "start": 10.14,
-          "end": 10.92
+          "start": 8.26,
+          "end": 9.14
         },
         {
           "word": "a",
-          "start": 10.92,
-          "end": 11.1
-        },
-        {
-          "word": "curve.",
-          "start": 11.1,
-          "end": 11.42
-        },
-        {
-          "word": "A",
-          "start": 12.68,
-          "end": 12.8
+          "start": 9.14,
+          "end": 9.38
         },
         {
           "word": "straight",
-          "start": 12.8,
-          "end": 13.1
+          "start": 9.38,
+          "end": 9.74
+        },
+        {
+          "word": "displacement",
+          "start": 9.74,
+          "end": 10.54
+        },
+        {
+          "word": "line.",
+          "start": 10.54,
+          "end": 11.08
+        },
+        {
+          "word": "Equal",
+          "start": 11.96,
+          "end": 12.32
+        },
+        {
+          "word": "changes",
+          "start": 12.32,
+          "end": 12.72
+        },
+        {
+          "word": "in",
+          "start": 12.72,
+          "end": 13.58
+        },
+        {
+          "word": "equal",
+          "start": 13.58,
+          "end": 13.92
+        },
+        {
+          "word": "times.",
+          "start": 13.92,
+          "end": 14.38
+        },
+        {
+          "word": "Rest",
+          "start": 15.52,
+          "end": 15.96
+        },
+        {
+          "word": "is",
+          "start": 15.96,
+          "end": 16.7
+        },
+        {
+          "word": "horizontal.",
+          "start": 16.7,
+          "end": 17.28
+        },
+        {
+          "word": "Changing",
+          "start": 18.52,
+          "end": 18.76
+        },
+        {
+          "word": "velocity",
+          "start": 18.76,
+          "end": 19.36
+        },
+        {
+          "word": "gives",
+          "start": 19.36,
+          "end": 20.14
+        },
+        {
+          "word": "a",
+          "start": 20.14,
+          "end": 20.32
+        },
+        {
+          "word": "curve.",
+          "start": 20.32,
+          "end": 20.6
+        },
+        {
+          "word": "A",
+          "start": 21.98,
+          "end": 22.14
+        },
+        {
+          "word": "straight",
+          "start": 22.14,
+          "end": 22.6
         },
         {
           "word": "join",
-          "start": 13.1,
-          "end": 13.54
+          "start": 22.6,
+          "end": 23.48
         },
         {
-          "word": "would",
-          "start": 13.54,
-          "end": 14.22
+          "word": "hides",
+          "start": 23.48,
+          "end": 24.36
         },
         {
-          "word": "hide",
-          "start": 14.22,
-          "end": 14.62
+          "word": "that",
+          "start": 24.36,
+          "end": 25.02
         },
         {
-          "word": "its",
-          "start": 14.62,
-          "end": 14.94
-        },
-        {
-          "word": "changing",
-          "start": 14.94,
-          "end": 15.36
-        },
-        {
-          "word": "gradient.",
-          "start": 15.36,
-          "end": 15.84
+          "word": "change.",
+          "start": 25.02,
+          "end": 25.38
         }
       ],
       "cues": {
-        "straight": 0.55,
-        "rest": 7.12,
-        "curve": 9.3,
-        "chord": 12.68
+        "signpost": 0.55,
+        "pair": 3.8,
+        "straight": 7.26,
+        "rest": 15.52,
+        "curve": 18.52,
+        "chord": 21.98
       },
-      "generatedAt": "2026-09-06T15:35:21.475833",
+      "generatedAt": "2026-09-06T16:19:00.008596",
       "engine": "faster-whisper-small (local)",
       "tempo": "brisk",
       "voiceSpeed": 1.0,
       "voiceId": "gYWKdgLtqjPO3D5uDrDP",
       "provider": "elevenlabs",
-      "audioSha256": "be9a00a93caf1e4f644500078924a76826917c0a5b1fb310cc138b1c79682872",
+      "audioSha256": "fa593bee38d2c2bc577a81c5b6dfd69336f4f8671bbe30fcfe2387d5f15a6787",
       "beats": [
         {
-          "text": "Constant velocity gives a straight displacement line: equal changes in equal times. Rest is horizontal. Changing velocity gives a curve. A straight join would hide its changing gradient.",
+          "text": "Now the displacement time graph.",
           "start": 0.55,
-          "end": 16.08
+          "end": 2.3
+        },
+        {
+          "text": "One journey, both graphs. Constant velocity gives a straight displacement line: equal changes in equal times. Rest is horizontal. Changing velocity gives a curve. A straight join hides that change.",
+          "start": 3.8,
+          "end": 25.51
         }
       ],
-      "holds": [],
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 2.3,
+          "end": 3.8,
+          "duration": 1.5
+        }
+      ],
       "paragraphs": [
-        "Constant velocity gives a straight displacement line: equal changes in equal times. Rest is horizontal. Changing velocity gives a curve. A straight join would hide its changing gradient."
+        "Now the displacement time graph. [hold 1.5 s] One journey, both graphs. Constant velocity gives a straight displacement line: equal changes in equal times. Rest is horizontal. Changing velocity gives a curve. A straight join hides that change."
       ]
     },
     {
       "id": "s06",
       "audio": "drawing-travel-graphs-s06.mp3",
-      "duration": 26.801633,
+      "duration": 27.768163,
       "wordCount": 44,
-      "text": "If velocity is negative, must displacement be negative? No. Our returning cyclist stays beyond O until arriving back. You can turn journey descriptions into graph shapes. Use signed area to find displacement. And explain a journey using displacement time gradients. Now apply all three.",
+      "text": "If velocity is negative, must displacement be negative? No. Our returning cyclist stays beyond A until arriving back. You can turn journey descriptions into graph shapes. Use signed area to find displacement. And explain a journey using displacement time gradients. Now apply all three.",
       "words": [
         {
           "word": "If",
-          "start": 0.24,
-          "end": 0.74
+          "start": 0.21,
+          "end": 0.77
         },
         {
           "word": "velocity",
-          "start": 0.74,
-          "end": 1.06
+          "start": 0.77,
+          "end": 1.19
         },
         {
           "word": "is",
-          "start": 1.06,
-          "end": 1.28
+          "start": 1.19,
+          "end": 1.43
         },
         {
           "word": "negative,",
-          "start": 1.28,
-          "end": 1.62
+          "start": 1.43,
+          "end": 1.81
         },
         {
           "word": "must",
-          "start": 2.48,
-          "end": 2.7
+          "start": 2.73,
+          "end": 2.99
         },
         {
           "word": "displacement",
-          "start": 2.7,
-          "end": 3.18
+          "start": 2.99,
+          "end": 3.51
         },
         {
           "word": "be",
-          "start": 3.18,
-          "end": 3.5
+          "start": 3.51,
+          "end": 3.85
         },
         {
           "word": "negative?",
-          "start": 3.5,
-          "end": 3.88
+          "start": 3.85,
+          "end": 4.23
         },
         {
           "word": "No.",
-          "start": 7.12,
-          "end": 7.24
+          "start": 7.63,
+          "end": 7.79
         },
         {
           "word": "Our",
-          "start": 8.08,
-          "end": 8.28
+          "start": 8.81,
+          "end": 9.07
         },
         {
           "word": "returning",
-          "start": 8.28,
-          "end": 8.66
+          "start": 9.07,
+          "end": 9.53
         },
         {
           "word": "cyclist",
-          "start": 8.66,
-          "end": 9.3
+          "start": 9.53,
+          "end": 10.17
         },
         {
           "word": "stays",
-          "start": 9.3,
-          "end": 9.92
+          "start": 10.17,
+          "end": 11.05
         },
         {
           "word": "beyond",
-          "start": 9.92,
-          "end": 10.48
+          "start": 11.05,
+          "end": 11.43
         },
         {
-          "word": "O",
-          "start": 10.48,
-          "end": 10.82
+          "word": "A",
+          "start": 11.43,
+          "end": 11.87
         },
         {
           "word": "until",
-          "start": 10.82,
-          "end": 11.42
+          "start": 11.87,
+          "end": 12.59
         },
         {
           "word": "arriving",
-          "start": 11.42,
-          "end": 11.86
+          "start": 12.59,
+          "end": 12.97
         },
         {
           "word": "back.",
-          "start": 11.86,
-          "end": 12.24
+          "start": 12.97,
+          "end": 13.37
         },
         {
           "word": "You",
-          "start": 13.26,
-          "end": 13.38
+          "start": 14.33,
+          "end": 14.55
         },
         {
           "word": "can",
-          "start": 13.38,
-          "end": 13.54
+          "start": 14.55,
+          "end": 14.73
         },
         {
           "word": "turn",
-          "start": 13.54,
-          "end": 13.82
+          "start": 14.73,
+          "end": 14.99
         },
         {
           "word": "journey",
-          "start": 13.82,
-          "end": 14.18
+          "start": 14.99,
+          "end": 15.41
         },
         {
           "word": "descriptions",
-          "start": 14.18,
-          "end": 14.72
+          "start": 15.41,
+          "end": 15.93
         },
         {
           "word": "into",
-          "start": 14.72,
-          "end": 15.22
+          "start": 15.93,
+          "end": 16.37
         },
         {
           "word": "graph",
-          "start": 15.22,
-          "end": 15.54
+          "start": 16.37,
+          "end": 16.69
         },
         {
           "word": "shapes.",
-          "start": 15.54,
-          "end": 16.02
+          "start": 16.69,
+          "end": 17.15
         },
         {
           "word": "Use",
-          "start": 16.6,
-          "end": 16.98
+          "start": 17.63,
+          "end": 17.97
         },
         {
           "word": "signed",
-          "start": 16.98,
-          "end": 17.38
+          "start": 17.97,
+          "end": 18.41
         },
         {
           "word": "area",
-          "start": 17.38,
-          "end": 17.8
+          "start": 18.41,
+          "end": 18.85
         },
         {
           "word": "to",
-          "start": 17.8,
-          "end": 18.26
+          "start": 18.85,
+          "end": 19.69
         },
         {
           "word": "find",
-          "start": 18.26,
-          "end": 18.56
+          "start": 19.69,
+          "end": 20.01
         },
         {
           "word": "displacement.",
-          "start": 18.56,
-          "end": 19.18
+          "start": 20.01,
+          "end": 20.67
         },
         {
           "word": "And",
-          "start": 20.14,
-          "end": 20.3
+          "start": 21.75,
+          "end": 21.93
         },
         {
           "word": "explain",
-          "start": 20.3,
-          "end": 20.76
+          "start": 21.93,
+          "end": 22.43
         },
         {
           "word": "a",
-          "start": 20.76,
-          "end": 21.5
+          "start": 22.43,
+          "end": 23.21
         },
         {
           "word": "journey",
-          "start": 21.5,
-          "end": 21.76
+          "start": 23.21,
+          "end": 23.49
         },
         {
           "word": "using",
-          "start": 21.76,
-          "end": 22.14
+          "start": 23.49,
+          "end": 23.77
         },
         {
           "word": "displacement",
-          "start": 22.14,
-          "end": 22.88
+          "start": 23.77,
+          "end": 24.21
         },
         {
           "word": "time",
-          "start": 22.88,
-          "end": 23.34
+          "start": 24.21,
+          "end": 24.71
         },
         {
           "word": "gradients.",
-          "start": 23.34,
-          "end": 23.92
+          "start": 24.71,
+          "end": 25.29
         },
         {
           "word": "Now",
-          "start": 24.76,
-          "end": 24.86
+          "start": 26.13,
+          "end": 26.27
         },
         {
           "word": "apply",
-          "start": 24.86,
-          "end": 25.3
+          "start": 26.27,
+          "end": 26.61
         },
         {
           "word": "all",
-          "start": 25.3,
-          "end": 25.92
+          "start": 26.61,
+          "end": 26.89
         },
         {
           "word": "three.",
-          "start": 25.92,
-          "end": 26.16
+          "start": 26.89,
+          "end": 27.09
         }
       ],
       "cues": {
         "question": 0.55,
-        "answer": 7.12,
-        "shapes": 13.54,
-        "tick-shapes": 15.22,
-        "area": 16.6,
-        "tick-area": 18.26,
-        "gradients": 20.3,
-        "tick-gradients": 22.14
+        "answer": 7.63,
+        "shapes": 14.73,
+        "tick-shapes": 16.37,
+        "area": 17.63,
+        "tick-area": 19.69,
+        "gradients": 21.93,
+        "tick-gradients": 23.77
       },
-      "generatedAt": "2026-09-06T15:29:03.230605",
+      "generatedAt": "2026-09-06T16:19:00.008596",
       "engine": "faster-whisper-small (local)",
       "tempo": "brisk",
       "voiceSpeed": 1.0,
       "voiceId": "gYWKdgLtqjPO3D5uDrDP",
       "provider": "elevenlabs",
-      "audioSha256": "ca995c721044d1067efb23e856aa86000be2a85f90694a13f8f329420ba0cc8f",
+      "audioSha256": "060897e0196d0f4e57bafeb49c202764a3af7748578cf0d41c15a2b09563ee7b",
       "beats": [
         {
           "text": "If velocity is negative, must displacement be negative?",
           "start": 0.55,
-          "end": 4.0
+          "end": 4.55
         },
         {
-          "text": "No. Our returning cyclist stays beyond O until arriving back. You can turn journey descriptions into graph shapes; use signed area to find displacement; and explain a journey using displacement time gradients. Now apply all three.",
-          "start": 7.0,
-          "end": 26.3
+          "text": "No. Our returning cyclist stays beyond A until arriving back. You can turn journey descriptions into graph shapes; use signed area to find displacement; and explain a journey using displacement time gradients. Now apply all three.",
+          "start": 7.55,
+          "end": 27.28
         }
       ],
       "holds": [
         {
           "kind": "hold",
-          "start": 4.0,
-          "end": 7.0,
-          "duration": 3
+          "start": 4.55,
+          "end": 7.55,
+          "duration": 3.0
         }
       ],
       "paragraphs": [
-        "If velocity is negative, must displacement be negative? [hold 3 s] No. Our returning cyclist stays beyond O until arriving back. You can turn journey descriptions into graph shapes; use signed area to find displacement; and explain a journey using displacement time gradients. Now apply all three."
+        "If velocity is negative, must displacement be negative? [hold 3 s] No. Our returning cyclist stays beyond A until arriving back. You can turn journey descriptions into graph shapes; use signed area to find displacement; and explain a journey using displacement time gradients. Now apply all three."
       ]
     },
     {
       "id": "s07",
       "audio": "drawing-travel-graphs-s07.mp3",
-      "duration": 75.049796,
-      "wordCount": 100,
-      "text": "For our cyclist, draw displacement through the outward ride, stop and return. Slopes tell velocity. Let's get drawing. First leg? Sixty metres in ten seconds, six metres per second, positive and steady outward. Slowing? Thirty -six in twelve. Average velocity three, positive. The tangent falls from six to zero. Stopped? Zero change in five seconds. Zero velocity, stationary. Accelerating backwards? Minus eight in four. Average minus two, returning. The tangent falls from zero to minus four. Final leg? Minus eighty -eight in twenty -two. Minus four, constant return velocity. Zero displacement at fifty -three seconds completes the journey. The journey.",
+      "duration": 78.550204,
+      "wordCount": 101,
+      "text": "Now the displacement time graph. For our cyclist, draw the outward ride, stop and return. Slopes tell velocity. Let's get drawing. First leg? Sixty metres in ten seconds, six metres per second, positive and steady outward. Slowing? Thirty -six in twelve, average velocity three, positive. The tangent falls from six to zero. Stopped? Zero change in five seconds. Zero velocity, stationary. Accelerating backwards? Minus eight in four, average minus two, returning. The tangent falls from zero to minus four. Final leg? Minus eighty -eight in twenty -two, minus four, constant return velocity. Zero displacement at fifty -three seconds completes the journey.",
       "words": [
         {
+          "word": "Now",
+          "start": 0.21,
+          "end": 0.85
+        },
+        {
+          "word": "the",
+          "start": 0.85,
+          "end": 1.47
+        },
+        {
+          "word": "displacement",
+          "start": 1.47,
+          "end": 1.87
+        },
+        {
+          "word": "time",
+          "start": 1.87,
+          "end": 2.31
+        },
+        {
+          "word": "graph.",
+          "start": 2.31,
+          "end": 2.61
+        },
+        {
           "word": "For",
-          "start": 0.34,
-          "end": 0.8
+          "start": 3.63,
+          "end": 4.49
         },
         {
           "word": "our",
-          "start": 0.8,
-          "end": 1.02
+          "start": 4.49,
+          "end": 4.67
         },
         {
           "word": "cyclist,",
-          "start": 1.02,
-          "end": 1.7
+          "start": 4.67,
+          "end": 5.33
         },
         {
           "word": "draw",
-          "start": 2.1,
-          "end": 2.8
-        },
-        {
-          "word": "displacement",
-          "start": 2.8,
-          "end": 3.26
-        },
-        {
-          "word": "through",
-          "start": 3.26,
-          "end": 4.0
+          "start": 6.03,
+          "end": 6.81
         },
         {
           "word": "the",
-          "start": 4.0,
-          "end": 4.18
+          "start": 6.81,
+          "end": 6.99
         },
         {
           "word": "outward",
-          "start": 4.18,
-          "end": 4.5
+          "start": 6.99,
+          "end": 7.35
         },
         {
           "word": "ride,",
-          "start": 4.5,
-          "end": 5.04
+          "start": 7.35,
+          "end": 7.83
         },
         {
           "word": "stop",
-          "start": 5.42,
-          "end": 6.26
+          "start": 8.65,
+          "end": 9.01
         },
         {
           "word": "and",
-          "start": 6.26,
-          "end": 7.08
+          "start": 9.01,
+          "end": 10.13
         },
         {
           "word": "return.",
-          "start": 7.08,
-          "end": 7.56
+          "start": 10.13,
+          "end": 10.55
         },
         {
           "word": "Slopes",
-          "start": 8.54,
-          "end": 9.28
+          "start": 11.45,
+          "end": 12.29
         },
         {
           "word": "tell",
-          "start": 9.28,
-          "end": 9.6
+          "start": 12.29,
+          "end": 12.83
         },
         {
           "word": "velocity.",
-          "start": 9.6,
-          "end": 10.14
+          "start": 12.83,
+          "end": 13.37
         },
         {
           "word": "Let's",
-          "start": 11.42,
-          "end": 11.8
+          "start": 14.45,
+          "end": 15.03
         },
         {
           "word": "get",
-          "start": 11.8,
-          "end": 11.94
+          "start": 15.03,
+          "end": 15.27
         },
         {
           "word": "drawing.",
-          "start": 11.94,
-          "end": 12.32
+          "start": 15.27,
+          "end": 15.81
         },
         {
           "word": "First",
-          "start": 13.24,
-          "end": 13.88
+          "start": 16.83,
+          "end": 17.29
         },
         {
           "word": "leg?",
-          "start": 13.88,
-          "end": 14.22
+          "start": 17.29,
+          "end": 17.65
         },
         {
           "word": "Sixty",
-          "start": 15.68,
-          "end": 16.26
+          "start": 18.61,
+          "end": 19.33
         },
         {
           "word": "metres",
-          "start": 16.26,
-          "end": 16.48
+          "start": 19.33,
+          "end": 19.57
         },
         {
           "word": "in",
-          "start": 16.48,
-          "end": 16.74
+          "start": 19.57,
+          "end": 20.41
         },
         {
           "word": "ten",
-          "start": 16.74,
-          "end": 16.98
+          "start": 20.41,
+          "end": 20.69
         },
         {
           "word": "seconds,",
-          "start": 16.98,
-          "end": 17.5
+          "start": 20.69,
+          "end": 21.25
         },
         {
           "word": "six",
-          "start": 18.6,
-          "end": 19.14
+          "start": 22.35,
+          "end": 22.75
         },
         {
           "word": "metres",
-          "start": 19.14,
-          "end": 19.46
+          "start": 22.75,
+          "end": 23.11
         },
         {
           "word": "per",
-          "start": 19.46,
-          "end": 19.76
+          "start": 23.11,
+          "end": 23.41
         },
         {
           "word": "second,",
-          "start": 19.76,
-          "end": 20.18
+          "start": 23.41,
+          "end": 23.81
         },
         {
           "word": "positive",
-          "start": 20.86,
-          "end": 21.48
+          "start": 24.37,
+          "end": 25.33
         },
         {
           "word": "and",
-          "start": 21.48,
-          "end": 22.28
+          "start": 25.33,
+          "end": 25.63
         },
         {
           "word": "steady",
-          "start": 22.28,
-          "end": 22.5
+          "start": 25.63,
+          "end": 25.95
         },
         {
           "word": "outward.",
-          "start": 22.5,
-          "end": 23.0
+          "start": 25.95,
+          "end": 26.35
         },
         {
           "word": "Slowing?",
-          "start": 24.5,
-          "end": 25.98
+          "start": 27.72,
+          "end": 29.18
         },
         {
           "word": "Thirty",
-          "start": 26.44,
-          "end": 26.82
+          "start": 29.76,
+          "end": 30.14
         },
         {
           "word": "-six",
-          "start": 26.82,
-          "end": 27.18
+          "start": 30.14,
+          "end": 30.4
         },
         {
           "word": "in",
-          "start": 27.18,
-          "end": 27.36
+          "start": 30.4,
+          "end": 30.58
         },
         {
-          "word": "twelve.",
-          "start": 27.36,
-          "end": 27.74
+          "word": "twelve,",
+          "start": 30.58,
+          "end": 30.98
         },
         {
-          "word": "Average",
-          "start": 28.56,
-          "end": 29.06
+          "word": "average",
+          "start": 31.26,
+          "end": 32.6
         },
         {
           "word": "velocity",
-          "start": 29.06,
-          "end": 29.64
+          "start": 32.6,
+          "end": 33.18
         },
         {
           "word": "three,",
-          "start": 29.64,
-          "end": 30.26
+          "start": 33.18,
+          "end": 33.56
         },
         {
           "word": "positive.",
-          "start": 30.52,
-          "end": 30.84
+          "start": 33.76,
+          "end": 34.08
         },
         {
           "word": "The",
-          "start": 31.82,
-          "end": 32.02
+          "start": 35.4,
+          "end": 35.56
         },
         {
           "word": "tangent",
-          "start": 32.02,
-          "end": 32.56
+          "start": 35.56,
+          "end": 36.18
         },
         {
           "word": "falls",
-          "start": 32.56,
-          "end": 32.96
+          "start": 36.18,
+          "end": 36.66
         },
         {
           "word": "from",
-          "start": 32.96,
-          "end": 33.62
+          "start": 36.66,
+          "end": 37.28
         },
         {
           "word": "six",
-          "start": 33.62,
-          "end": 33.94
+          "start": 37.28,
+          "end": 37.56
         },
         {
           "word": "to",
-          "start": 33.94,
-          "end": 34.18
+          "start": 37.56,
+          "end": 37.78
         },
         {
           "word": "zero.",
-          "start": 34.18,
-          "end": 34.5
+          "start": 37.78,
+          "end": 38.08
         },
         {
           "word": "Stopped?",
-          "start": 36.52,
-          "end": 37.2
+          "start": 40.1,
+          "end": 40.88
         },
         {
           "word": "Zero",
-          "start": 38.04,
-          "end": 38.44
+          "start": 41.98,
+          "end": 42.42
         },
         {
           "word": "change",
-          "start": 38.44,
-          "end": 38.76
+          "start": 42.42,
+          "end": 42.7
         },
         {
           "word": "in",
-          "start": 38.76,
-          "end": 39.0
+          "start": 42.7,
+          "end": 42.88
         },
         {
           "word": "five",
-          "start": 39.0,
-          "end": 39.26
+          "start": 42.88,
+          "end": 43.18
         },
         {
           "word": "seconds.",
-          "start": 39.26,
-          "end": 39.72
+          "start": 43.18,
+          "end": 43.68
         },
         {
           "word": "Zero",
-          "start": 40.38,
-          "end": 40.76
+          "start": 44.64,
+          "end": 45.36
         },
         {
           "word": "velocity,",
-          "start": 40.76,
-          "end": 41.3
+          "start": 45.36,
+          "end": 45.86
         },
         {
           "word": "stationary.",
-          "start": 41.96,
-          "end": 42.72
+          "start": 46.54,
+          "end": 47.38
         },
         {
           "word": "Accelerating",
-          "start": 44.9,
-          "end": 45.66
+          "start": 49.66,
+          "end": 50.52
         },
         {
           "word": "backwards?",
-          "start": 45.66,
-          "end": 46.08
+          "start": 50.52,
+          "end": 50.96
         },
         {
           "word": "Minus",
-          "start": 47.22,
-          "end": 47.76
+          "start": 51.86,
+          "end": 52.48
         },
         {
           "word": "eight",
-          "start": 47.76,
-          "end": 48.08
+          "start": 52.48,
+          "end": 52.82
         },
         {
           "word": "in",
-          "start": 48.08,
-          "end": 48.26
-        },
-        {
-          "word": "four.",
-          "start": 48.26,
-          "end": 48.66
-        },
-        {
-          "word": "Average",
-          "start": 49.22,
-          "end": 49.7
-        },
-        {
-          "word": "minus",
-          "start": 49.7,
-          "end": 50.12
-        },
-        {
-          "word": "two,",
-          "start": 50.12,
-          "end": 50.6
-        },
-        {
-          "word": "returning.",
-          "start": 50.88,
-          "end": 51.2
-        },
-        {
-          "word": "The",
-          "start": 51.2,
-          "end": 51.98
-        },
-        {
-          "word": "tangent",
-          "start": 51.98,
-          "end": 52.56
-        },
-        {
-          "word": "falls",
-          "start": 52.56,
-          "end": 52.92
-        },
-        {
-          "word": "from",
-          "start": 52.92,
-          "end": 53.28
-        },
-        {
-          "word": "zero",
-          "start": 53.28,
-          "end": 53.74
-        },
-        {
-          "word": "to",
-          "start": 53.74,
-          "end": 54.24
-        },
-        {
-          "word": "minus",
-          "start": 54.24,
-          "end": 54.52
-        },
-        {
-          "word": "four.",
-          "start": 54.52,
-          "end": 54.98
-        },
-        {
-          "word": "Final",
-          "start": 56.97,
-          "end": 57.43
-        },
-        {
-          "word": "leg?",
-          "start": 57.43,
-          "end": 57.79
-        },
-        {
-          "word": "Minus",
-          "start": 58.77,
-          "end": 59.55
-        },
-        {
-          "word": "eighty",
-          "start": 59.55,
-          "end": 59.81
-        },
-        {
-          "word": "-eight",
-          "start": 59.81,
-          "end": 60.13
-        },
-        {
-          "word": "in",
-          "start": 60.13,
-          "end": 60.53
-        },
-        {
-          "word": "twenty",
-          "start": 60.53,
-          "end": 60.87
-        },
-        {
-          "word": "-two.",
-          "start": 60.87,
-          "end": 61.19
-        },
-        {
-          "word": "Minus",
-          "start": 61.79,
-          "end": 62.57
+          "start": 52.82,
+          "end": 53.02
         },
         {
           "word": "four,",
-          "start": 62.57,
-          "end": 62.89
+          "start": 53.02,
+          "end": 53.38
         },
         {
-          "word": "constant",
-          "start": 63.61,
-          "end": 64.09
+          "word": "average",
+          "start": 54.08,
+          "end": 54.48
         },
         {
-          "word": "return",
-          "start": 64.09,
-          "end": 64.51
+          "word": "minus",
+          "start": 54.48,
+          "end": 54.88
         },
         {
-          "word": "velocity.",
-          "start": 64.51,
-          "end": 65.11
+          "word": "two,",
+          "start": 54.88,
+          "end": 55.32
         },
         {
-          "word": "Zero",
-          "start": 66.27,
-          "end": 66.73
-        },
-        {
-          "word": "displacement",
-          "start": 66.73,
-          "end": 67.39
-        },
-        {
-          "word": "at",
-          "start": 67.39,
-          "end": 67.95
-        },
-        {
-          "word": "fifty",
-          "start": 67.95,
-          "end": 68.19
-        },
-        {
-          "word": "-three",
-          "start": 68.19,
-          "end": 68.53
-        },
-        {
-          "word": "seconds",
-          "start": 68.53,
-          "end": 69.05
-        },
-        {
-          "word": "completes",
-          "start": 69.05,
-          "end": 70.11
-        },
-        {
-          "word": "the",
-          "start": 70.11,
-          "end": 70.49
-        },
-        {
-          "word": "journey.",
-          "start": 70.49,
-          "end": 70.87
+          "word": "returning.",
+          "start": 55.56,
+          "end": 55.94
         },
         {
           "word": "The",
-          "start": 70.87,
-          "end": 71.35
+          "start": 57.0,
+          "end": 57.14
+        },
+        {
+          "word": "tangent",
+          "start": 57.14,
+          "end": 57.68
+        },
+        {
+          "word": "falls",
+          "start": 57.68,
+          "end": 58.08
+        },
+        {
+          "word": "from",
+          "start": 58.08,
+          "end": 58.38
+        },
+        {
+          "word": "zero",
+          "start": 58.38,
+          "end": 58.86
+        },
+        {
+          "word": "to",
+          "start": 58.86,
+          "end": 59.2
+        },
+        {
+          "word": "minus",
+          "start": 59.2,
+          "end": 59.54
+        },
+        {
+          "word": "four.",
+          "start": 59.54,
+          "end": 59.96
+        },
+        {
+          "word": "Final",
+          "start": 61.34,
+          "end": 62.44
+        },
+        {
+          "word": "leg?",
+          "start": 62.44,
+          "end": 62.82
+        },
+        {
+          "word": "Minus",
+          "start": 63.88,
+          "end": 64.64
+        },
+        {
+          "word": "eighty",
+          "start": 64.64,
+          "end": 64.9
+        },
+        {
+          "word": "-eight",
+          "start": 64.9,
+          "end": 65.18
+        },
+        {
+          "word": "in",
+          "start": 65.18,
+          "end": 65.38
+        },
+        {
+          "word": "twenty",
+          "start": 65.38,
+          "end": 65.7
+        },
+        {
+          "word": "-two,",
+          "start": 65.7,
+          "end": 66.0
+        },
+        {
+          "word": "minus",
+          "start": 66.22,
+          "end": 67.36
+        },
+        {
+          "word": "four,",
+          "start": 67.36,
+          "end": 67.88
+        },
+        {
+          "word": "constant",
+          "start": 68.64,
+          "end": 69.12
+        },
+        {
+          "word": "return",
+          "start": 69.12,
+          "end": 69.56
+        },
+        {
+          "word": "velocity.",
+          "start": 69.56,
+          "end": 70.22
+        },
+        {
+          "word": "Zero",
+          "start": 71.44,
+          "end": 72.12
+        },
+        {
+          "word": "displacement",
+          "start": 72.12,
+          "end": 72.82
+        },
+        {
+          "word": "at",
+          "start": 72.82,
+          "end": 73.3
+        },
+        {
+          "word": "fifty",
+          "start": 73.3,
+          "end": 73.68
+        },
+        {
+          "word": "-three",
+          "start": 73.68,
+          "end": 74.02
+        },
+        {
+          "word": "seconds",
+          "start": 74.02,
+          "end": 74.6
+        },
+        {
+          "word": "completes",
+          "start": 74.6,
+          "end": 75.2
+        },
+        {
+          "word": "the",
+          "start": 75.2,
+          "end": 75.52
         },
         {
           "word": "journey.",
-          "start": 71.35,
-          "end": 71.61
+          "start": 75.52,
+          "end": 75.84
         }
       ],
       "cues": {
-        "setup": 0.55,
-        "draw": 11.94,
-        "leg1": 13.24,
-        "ds1": 15.68,
-        "dt1": 16.74,
-        "v1": 18.6,
-        "meaning1": 20.86,
-        "leg2": 25.34,
-        "ds2": 26.44,
-        "dt2": 27.36,
-        "v2": 28.56,
-        "tangent2": 31.82,
-        "leg3": 36.68,
-        "ds3": 38.04,
-        "dt3": 39.0,
-        "v3": 40.38,
-        "leg4": 44.9,
-        "ds4": 47.22,
-        "dt4": 48.08,
-        "v4": 49.22,
-        "tangent4": 51.2,
-        "leg5": 57.09,
-        "ds5": 58.77,
-        "dt5": 60.53,
-        "v5": 61.79,
-        "complete": 67.95
+        "signpost": 0.55,
+        "setup": 4.3,
+        "draw": 15.27,
+        "leg1": 16.83,
+        "ds1": 18.61,
+        "dt1": 20.41,
+        "v1": 22.35,
+        "meaning1": 24.37,
+        "leg2": 28.52,
+        "ds2": 29.76,
+        "dt2": 30.58,
+        "v2": 31.26,
+        "tangent2": 35.4,
+        "leg3": 40.27,
+        "ds3": 41.98,
+        "dt3": 42.88,
+        "v3": 44.64,
+        "leg4": 49.68,
+        "ds4": 51.86,
+        "dt4": 52.82,
+        "v4": 54.08,
+        "tangent4": 57.0,
+        "leg5": 62.13,
+        "ds5": 63.88,
+        "dt5": 65.38,
+        "v5": 66.22,
+        "complete": 73.3
       },
-      "generatedAt": "2026-09-06T15:35:21.475833",
+      "generatedAt": "2026-09-06T16:19:00.008596",
       "engine": "faster-whisper-small (local)",
       "tempo": "slow",
       "voiceSpeed": 0.9,
       "voiceId": "gYWKdgLtqjPO3D5uDrDP",
       "provider": "elevenlabs",
-      "audioSha256": "1cd6a214b9b92612e3f09b70808383524c9ddeba89cb7163cf7eb40d200db614",
+      "audioSha256": "230b44f1fb925f0dadb9aa890ec47995502223f13aacc365060b485c3428d1ad",
       "beats": [
         {
-          "text": "For our cyclist, draw displacement through the outward ride, stop and return. Slopes tell velocity. Let's get drawing. First leg? Sixty metres in ten seconds: six metres per second, positive and steady outward.",
+          "text": "Now the displacement time graph.",
           "start": 0.55,
-          "end": 23.34
+          "end": 2.8
+        },
+        {
+          "text": "For our cyclist, draw the outward ride, stop and return. Slopes tell velocity. Let's get drawing. First leg? Sixty metres in ten seconds: six metres per second, positive and steady outward.",
+          "start": 4.3,
+          "end": 26.52
         },
         {
           "text": "Slowing? Thirty-six in twelve: average velocity three, positive. The tangent falls from six to zero.",
-          "start": 25.34,
-          "end": 34.68
+          "start": 28.52,
+          "end": 38.27
         },
         {
           "text": "Stopped? Zero change in five seconds: zero velocity, stationary.",
-          "start": 36.68,
-          "end": 42.88
+          "start": 40.27,
+          "end": 47.68
         },
         {
           "text": "Accelerating backwards? Minus eight in four: average minus two, returning. The tangent falls from zero to minus four.",
-          "start": 44.88,
-          "end": 55.09
+          "start": 49.68,
+          "end": 60.13
         },
         {
           "text": "Final leg? Minus eighty-eight in twenty-two: minus four, constant return velocity. Zero displacement at fifty-three seconds completes the journey.",
-          "start": 57.09,
-          "end": 71.82
+          "start": 62.13,
+          "end": 76.07
         }
       ],
       "holds": [
         {
           "kind": "hold",
-          "start": 23.34,
-          "end": 25.34,
-          "duration": 2
+          "start": 2.8,
+          "end": 4.3,
+          "duration": 1.5
         },
         {
           "kind": "hold",
-          "start": 34.68,
-          "end": 36.68,
-          "duration": 2
+          "start": 26.52,
+          "end": 28.52,
+          "duration": 2.0
         },
         {
           "kind": "hold",
-          "start": 42.88,
-          "end": 44.88,
-          "duration": 2
+          "start": 38.27,
+          "end": 40.27,
+          "duration": 2.0
         },
         {
           "kind": "hold",
-          "start": 55.09,
-          "end": 57.09,
-          "duration": 2
+          "start": 47.68,
+          "end": 49.68,
+          "duration": 2.0
         },
         {
           "kind": "hold",
-          "start": 71.82,
-          "end": 73.82,
-          "duration": 2
+          "start": 60.13,
+          "end": 62.13,
+          "duration": 2.0
+        },
+        {
+          "kind": "hold",
+          "start": 76.07,
+          "end": 78.07,
+          "duration": 2.0
         }
       ],
       "paragraphs": [
-        "For our cyclist, draw displacement through the outward ride, stop and return. Slopes tell velocity. Let's get drawing. First leg? Sixty metres in ten seconds: six metres per second, positive and steady outward. [hold 2 s] Slowing? Thirty-six in twelve: average velocity three, positive. The tangent falls from six to zero. [hold 2 s] Stopped? Zero change in five seconds: zero velocity, stationary. [hold 2 s] Accelerating backwards? Minus eight in four: average minus two, returning. The tangent falls from zero to minus four. [hold 2 s] Final leg? Minus eighty-eight in twenty-two: minus four, constant return velocity. Zero displacement at fifty-three seconds completes the journey. [hold 2 s]"
+        "Now the displacement time graph. [hold 1.5 s] For our cyclist, draw the outward ride, stop and return. Slopes tell velocity. Let's get drawing. First leg? Sixty metres in ten seconds: six metres per second, positive and steady outward. [hold 2 s] Slowing? Thirty-six in twelve: average velocity three, positive. The tangent falls from six to zero. [hold 2 s] Stopped? Zero change in five seconds: zero velocity, stationary. [hold 2 s] Accelerating backwards? Minus eight in four: average minus two, returning. The tangent falls from zero to minus four. [hold 2 s] Final leg? Minus eighty-eight in twenty-two: minus four, constant return velocity. Zero displacement at fifty-three seconds completes the journey. [hold 2 s]"
       ]
     }
   ]
