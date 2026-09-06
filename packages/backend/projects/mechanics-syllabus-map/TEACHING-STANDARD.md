@@ -62,3 +62,19 @@ I like the way it's structured but it seems too dense, too much information."
 - Vocabulary: only the terms the recording names. No extra glossary scenes.
 - Target 4–5 minutes; if narration runs over 5:30 the storyboard has too much in it. Cut scenes, not pauses.
 - Builder checklist addition: [ ] every scene maps to a FRAME-LOG.md section; nothing on screen lacks a source frame.
+
+## 7. Close with a journey question (Durai, 2026-09-06, reviewing Displacement-time graphs)
+
+Durai: "not too bad at all. How I would improve it: load a question at the end that really goes through a journey.
+Constant acceleration, annotate on the graph the change in displacement over change in time, take a moment to
+explain if it's positive, negative etc, go for constant speed etc, annotate on the graph, finish the journey.
+Paced for explanation."
+
+- For graph topics (and any topic where the source has a journey/scenario), the video ENDS with ONE full
+  journey worked on the graph: several legs (constant acceleration, constant speed, stationary, return...).
+- Each leg is annotated ON THE GRAPH by hand: mark Δs and Δt on the curve, write the gradient, say the sign
+  and what it means physically (positive = moving away, negative = returning, zero = stationary), then hold.
+- Pace it as a slow scene (PACING.md): pose the question for each leg before answering, 2 s hold after each
+  value, one annotation at a time. This journey scene is the video's main worked example.
+- Keep the existing brisk concept scenes; the improvement is ADDING the journey close, not restyling.
+- Applies to: displacement-time, velocity-time, drawing travel graphs, and later kinematics topics.
