@@ -918,7 +918,7 @@
           "syllabusCode": "M4.2c",
           "status": "complete",
           "createdAt": "2026-09-06",
-          "pacing": "TEACHING-STANDARD §1-8: 7 scenes, 2 slow (return-time area 52 s, annotated journey close 75 s), spoken set-ups, scope = recording (cyclist only)",
+          "pacing": "TEACHING-STANDARD §1-9: animated cyclist story scene, velocity/displacement signposts, restored shaded/linked graph visuals, annotated journey close",
           "pipeline": "frame study (Sol) -> Astra storyboard/narration/composition on B with syllabus + TEACHING-STANDARD -> render on A -> Fable contact-sheet review",
           "source": {
             "project": "projects/mechanics-drawing-travel-graphs/",
@@ -929,7 +929,7 @@
             "landscape": {
               "compositionId": "MechanicsDrawingTravelGraphs",
               "resolution": "1920x1080",
-              "durationS": 272.26,
+              "durationS": 310.53,
               "composition": "src/remotion/compositions/MechanicsDrawingTravelGraphs.tsx",
               "render": "output/mechanics/drawing-travel-graphs.mp4",
               "contactSheet": "output/mechanics/drawing-travel-graphs-sheet.png"
@@ -938,7 +938,7 @@
           "narration": {
             "voiceId": "gYWKdgLtqjPO3D5uDrDP",
             "provider": "elevenlabs",
-            "scenes": 7,
+            "scenes": 8,
             "sceneDurations": [
               25.05,
               31.14,
@@ -955,10 +955,11 @@
               "src/remotion/public/audio/mechanics/drawing-travel-graphs-s04.mp3",
               "src/remotion/public/audio/mechanics/drawing-travel-graphs-s05.mp3",
               "src/remotion/public/audio/mechanics/drawing-travel-graphs-s06.mp3",
-              "src/remotion/public/audio/mechanics/drawing-travel-graphs-s07.mp3"
+              "src/remotion/public/audio/mechanics/drawing-travel-graphs-s07.mp3",
+              "src/remotion/public/audio/mechanics/drawing-travel-graphs-s08.mp3"
             ],
             "transcript": "src/remotion/public/transcripts/mechanics/drawing-travel-graphs.json",
-            "cues": 81,
+            "cues": 100,
             "transcribeScript": "src/scripts/transcribe-mechanics-drawing-travel-graphs-local.py",
             "speed": {
               "brisk": 1.0,
@@ -969,7 +970,9 @@
             "build": "1dc49cb",
             "rootFix": "4988d10",
             "astraNarration": "da90e4b",
-            "astraBuild": "8e19ecf"
+            "astraBuild": "8e19ecf",
+            "revisionNarration": "dc3b1bc",
+            "revisionBuild": "e716f07"
           },
           "app": {
             "notesPage": "/notes/mechanics-drawing-travel-graphs",
@@ -977,7 +980,8 @@
           },
           "reviewNotes": [
             "2026-09-06 Durai: demonstration good but examples not clearly set up (needs spoken 'we will now look at…' + distance vs displacement idea before drawing); time-axis text collision ('6' over 't / s'); also lab chrome, g=9.8, 4 regions. Astra rebuild dispatched under TEACHING-STANDARD §1-8.",
-            "2026-09-06 Astra rebuild: 4:32, 81 cues, 115 audited stills, zero axis collisions, g=10. Ball example omitted (not in recording FRAME-LOG) — Durai to decide whether to add as exception. Fable contact-sheet review passed."
+            "2026-09-06 Astra rebuild: 4:32, 81 cues, 115 audited stills, zero axis collisions, g=10. Ball example omitted (not in recording FRAME-LOG) — Durai to decide whether to add as exception. Fable contact-sheet review passed.",
+            "2026-09-06 revision after Durai (§9): animated cyclist story before any maths, spoken signposts, Sol's shaded/linked graph visuals restored (no chrome), larger graphs. 5:10, 100 cues, 163 stills, zero axis collisions. Fable contact-sheet review passed."
           ]
         }
       },
