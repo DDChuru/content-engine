@@ -66,7 +66,7 @@
     "outputBytes": 572678979,
     "videoArtifactBytes": 539210559,
     "evidenceStillBytes": 33468420,
-    "signedOffFinals": 0
+    "signedOffFinals": 2
   },
   "entrypoints": [
     {
@@ -436,8 +436,8 @@
       ],
       "notes": [
         "The source overlays narrated illustrative figures on genuine captured ledger rows in beats 3, 8, and 11; proof compositions show composed material beside photographed originals.",
-        "Bill of Health client v2 suppresses the on-video 'Illustrative figures on real screens' disclosure because SHOW_PROVISIONAL is false. Daniel's disclosure decision is still open.",
-        "Storyboard instructions favor genuine counts and recapture, creating an explicit unresolved conflict with the current composed figures."
+        "Bill of Health client v2 suppresses the on-video 'Illustrative figures on real screens' disclosure because SHOW_PROVISIONAL is false. The composed-figures/disclosure issue will be revisited during Nicole-library preparation; it does not undo client v2 sign-off.",
+        "Storyboard instructions favor genuine counts and recapture, creating an explicit conflict with the current composed figures. The conflict remains recorded for revisit during Nicole-library preparation and does not undo current sign-off."
       ]
     },
     {
@@ -584,12 +584,13 @@
       "videoFrames": 9378,
       "videoDurationSeconds": 312.6,
       "containerDurationSeconds": 312.661333,
-      "statuses": {"technicalReview": "unreviewed", "humanSignOff": "pending", "deliverable": "candidate"},
+      "statuses": {"technicalReview": "unreviewed", "humanSignOff": "signed_off", "deliverable": "final"},
       "locations": [{"machine": "B", "path": "/home/durai/Documents/projects/content-engine/remotion-branding/output/boh-tutorial/bill-of-health-client-v2.mp4", "verification": "filesystem_size_sha256_ffprobe"}],
       "evidence": [
-        "Task-supplied current truth: candidate pending Daniel sign-off and composed-figures disclosure decision.",
+        "Prior inventory state before the 2026-09-06 clarification: candidate pending Daniel sign-off and composed-figures disclosure decision.",
         "No explicit technical-review verdict was found.",
-        "Beats 3, 8, and 11 place illustrative figures on real captured rows; the client cut does not show the optional disclosure."
+        "Beats 3, 8, and 11 place illustrative figures on real captured rows; the client cut does not show the optional disclosure.",
+        "2026-09-06: Daniel explicitly clarified that when he flags a reviewed video as 'okay', that is final approval, and that the team does not move to the next track without final approval. As the latest artifact in the completed Bill of Health track, boh-client-v2 (SHA-256 d81a4eedee73a184a4cd0b276633e4d73c7202491cd1ff620be91166feb9ef28) is therefore signed off and final. The known composed-figures/disclosure issue remains recorded and will be revisited during Nicole-library preparation; that follow-up does not undo sign-off."
       ]
     },
     {
@@ -742,15 +743,16 @@
       "videoFrames": 11559,
       "videoDurationSeconds": 385.3,
       "containerDurationSeconds": 385.344,
-      "statuses": {"technicalReview": "approved", "humanSignOff": "pending", "deliverable": "candidate"},
+      "statuses": {"technicalReview": "approved", "humanSignOff": "signed_off", "deliverable": "final"},
       "locations": [
         {"machine": "B", "path": "/home/durai/Documents/projects/content-engine/remotion-branding/output/ccv-refresh/ccv-refresh-client-v5.mp4", "verification": "filesystem_size_sha256_ffprobe"},
         {"machine": "A", "path": "/home/dachu/Documents/projects/content-engine/remotion-branding/output/ccv-refresh/ccv-refresh-client-v5.mp4", "verification": "task_supplied_known_truth_same_sha256"}
       ],
       "evidence": [
-        "Task-supplied current truth: technically approved candidate on A and B; Daniel is watching and human sign-off remains pending.",
+        "Prior inventory state before the 2026-09-06 clarification: technically approved candidate on A and B; Daniel was watching and human sign-off was recorded as pending.",
         "docs/ccv-client-v4-handoff.md and public/ccv-refresh/hunt/NOTES.md record genuine current-app normal-online capture provenance and full ffmpeg video/audio decode exit 0.",
-        "No publication or send was performed by this audit."
+        "No publication or send was performed by this audit.",
+        "2026-09-06: Daniel explicitly clarified that when he flags a reviewed video as 'okay', that is final approval, and that the team does not move to the next track without final approval. As the approved corrected genuine-current-app version and latest artifact in the completed CCV track, ccv-client-v5 (SHA-256 000581dbc02bb57fb085ee9a0c1a599c8433e8bdf9fb76f8c096cbc76ab67347) is therefore signed off and final."
       ]
     },
     {
@@ -861,7 +863,7 @@
         "verify-v5-route-handoff.png"
       ],
       "notes": [
-        "These retained files predate canonical v5 and are not bound to it by the handoff. Do not treat them as proof of the canonical candidate; the canonical encoded checkpoints were temporary and are not retained under output."
+        "These retained files predate canonical v5 and are not bound to it by the handoff. Do not treat them as proof of the canonical final; the canonical encoded checkpoints were temporary and are not retained under output."
       ]
     }
   ],
@@ -870,13 +872,13 @@
       "id": "ccv-handoff",
       "paths": ["docs/ccv-client-v4-handoff.md", "public/ccv-refresh/hunt/NOTES.md"],
       "scope": "CCV v3-v5 hashes/specs, genuine/composed/offline capture provenance, full-decode result, and next-capture environment.",
-      "finding": "Supports canonical-v5 technical approval supplied by this task, v4 supersession, and rejected-offline proof-only status; records no human sign-off."
+      "finding": "Supports canonical-v5 technical approval supplied by this task, v4 supersession, and rejected-offline proof-only status. Human sign-off derives from Daniel's 2026-09-06 approval-policy clarification recorded on the canonical artifact, not from these paths."
     },
     {
       "id": "boh-composition-disclosure",
       "paths": ["docs/bill-of-health-storyboard.html", "src/boh/boxes.json", "src/boh/BillOfHealthTutorial.tsx", "src/boh/RootBoh.tsx"],
       "scope": "Bill of Health source/capture truth, illustrative figure overlays, disclosure flag, and proof compositions.",
-      "finding": "Client v2 remains a candidate pending Daniel sign-off and a disclosure decision; no explicit technical verdict was found."
+      "finding": "Client v2 is signed off and final under Daniel's 2026-09-06 approval-policy clarification; no explicit technical verdict was found. The composed-figures/disclosure issue remains recorded and will be revisited during Nicole-library preparation."
     },
     {
       "id": "boh-alt-handoff",
@@ -909,7 +911,10 @@
       "finding": "Presence of review images is not a review verdict. The sibling ../output path is outside this inventory's output-file scope."
     }
   ],
-  "signedOffFinalArtifactIds": [],
+  "signedOffFinalArtifactIds": [
+    "boh-client-v2",
+    "ccv-client-v5"
+  ],
   "verification": {
     "sha256OneFile": "sha256sum -- \"$artifact_path\"",
     "sizeOneFile": "stat -c '%s' -- \"$artifact_path\"",
@@ -936,8 +941,8 @@
     ]
   },
   "uncertainties": [
-    "No repository evidence records human sign-off for any artifact; signed-off finals is therefore empty.",
-    "Bill of Health client v2 has no explicit technical-review verdict on disk. Its technical status remains unreviewed, and the composed-figures disclosure decision remains open.",
+    "Human sign-off for boh-client-v2 and ccv-client-v5 rests on the task-supplied 2026-09-06 Daniel approval-policy clarification rather than repository-file evidence; no human sign-off is recorded for other artifacts.",
+    "Bill of Health client v2 has no explicit technical-review verdict on disk. Its technical status remains unreviewed, and the composed-figures/disclosure issue remains recorded for revisit during Nicole-library preparation without undoing sign-off.",
     "CCV client v1-v3 and Bill of Health client v1 have no explicit deliverable or review classification; they remain unclassified/unreviewed rather than being guessed superseded.",
     "The nine top-level verify-v5 PNGs are not bound by the handoff to canonical v5; their proof association remains uncertain.",
     "Some documentation refers to sibling ../output artifacts outside this repository's local output tree; those files are evidence references, not counted output artifacts.",
