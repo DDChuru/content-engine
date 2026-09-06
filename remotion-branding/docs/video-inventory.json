@@ -1,0 +1,946 @@
+{
+  "schemaVersion": 1,
+  "schema": {
+    "purpose": "Durable inventory of registered Remotion work, rendered training-video artifacts, and review evidence.",
+    "compositionRecord": "Each unique stable Remotion id appears once under compositionFamilies[].compositions. entrypointRefs preserves duplicate registration across roots.",
+    "outputCoverage": "Every regular file under output is represented either by one videoArtifacts record or as a member of one evidenceStillCollections record.",
+    "evidenceCollectionRecord": "Collection bytes, image spec, integrity digest, and statuses apply to every listed member; member names provide complete output-file coverage without duplicating low-value per-image metadata.",
+    "statusVocabulary": {
+      "sourceStatus": {
+        "registered": "Registered source; this says nothing about review, approval, or whether a render exists.",
+        "registered_example": "Registered example, template, diagram, or generic parameterized composition.",
+        "registered_proof_only": "Registered specifically as a proof or experimental inspection surface.",
+        "registered_incomplete": "Registered, but evidence identifies missing inputs, provisional captures, or unfinished beats."
+      },
+      "technicalReview": {
+        "unreviewed": "No explicit technical-review verdict was found.",
+        "approved": "An explicit technical approval exists.",
+        "changes": "Evidence records a blocking technical defect or an unmet gate."
+      },
+      "humanSignOff": {
+        "pending": "No human sign-off has been recorded.",
+        "signed_off": "A human explicitly approved this exact artifact.",
+        "rejected": "The artifact is explicitly rejected.",
+        "superseded": "The artifact was overtaken by a later request or artifact."
+      },
+      "deliverable": {
+        "draft": "Named or documented as a draft.",
+        "candidate": "A review/sign-off candidate, not a final.",
+        "final": "A deliverable whose exact bytes have human signed_off status.",
+        "proof_only": "Retained only as proof or diagnostic evidence.",
+        "superseded": "No longer the current deliverable.",
+        "unclassified": "There is not enough evidence to classify it further."
+      }
+    },
+    "humanAuthorityRule": "Only a human may set humanSignOff to signed_off. Render success, validation, filenames, and automated or formal technical review are insufficient.",
+    "finalInvariant": "An artifact may be listed as deliverable=final only when the same record has humanSignOff=signed_off."
+  },
+  "lastVerifiedAt": "2026-09-06T07:22:33+02:00",
+  "repository": {
+    "machine": "B",
+    "name": "content-engine/remotion-branding",
+    "root": "/home/durai/Documents/projects/content-engine/remotion-branding",
+    "headAtAudit": "2d793d94f8e6ee0ca500b761c4b232ac9f5380b3",
+    "auditBasis": "Actual filesystem and registered source at the timestamp above; the worktree already contained unrelated changes.",
+    "scope": "Registered Remotion entrypoints/compositions, their source/assets/docs, and every regular artifact file under output.",
+    "publishedOrSentByThisAudit": false
+  },
+  "locations": {
+    "pathTemplates": {
+      "B": "/home/durai/Documents/projects/content-engine/remotion-branding/{relativePath}",
+      "A": "/home/dachu/Documents/projects/content-engine/remotion-branding/{relativePath}"
+    },
+    "templateMeaning": "A path template constructs a location only; it does not assert that the file is present. Verified or supplied-known copies are listed on each artifact.",
+    "canonicalCcvV5": {
+      "B": "/home/durai/Documents/projects/content-engine/remotion-branding/output/ccv-refresh/ccv-refresh-client-v5.mp4",
+      "A": "/home/dachu/Documents/projects/content-engine/remotion-branding/output/ccv-refresh/ccv-refresh-client-v5.mp4"
+    }
+  },
+  "counts": {
+    "entrypoints": 5,
+    "registrationRecords": 53,
+    "uniqueCompositionIds": 51,
+    "videoArtifacts": 16,
+    "evidenceStillArtifacts": 33,
+    "classifiedOutputFiles": 49,
+    "outputBytes": 572678979,
+    "videoArtifactBytes": 539210559,
+    "evidenceStillBytes": 33468420,
+    "signedOffFinals": 0
+  },
+  "entrypoints": [
+    {
+      "id": "main",
+      "path": "src/index.ts",
+      "root": "RemotionRoot",
+      "rootSource": "src/Root.tsx",
+      "registrationCount": 40,
+      "role": "Default Studio and package-script entrypoint."
+    },
+    {
+      "id": "boh",
+      "path": "src/index-boh.ts",
+      "root": "RootBoh",
+      "rootSource": "src/boh/RootBoh.tsx",
+      "registrationCount": 4,
+      "role": "Standalone Bill of Health delivery and proof root."
+    },
+    {
+      "id": "ccv2",
+      "path": "src/index-ccv2.ts",
+      "root": "RootCcv2",
+      "rootSource": "src/ccv2/RootCcv2.tsx",
+      "registrationCount": 3,
+      "role": "Standalone CCV refresh delivery and proof root."
+    },
+    {
+      "id": "boh_alt",
+      "path": "src/boh-alt/index-alt.ts",
+      "root": "AltRoot",
+      "rootSource": "src/boh-alt/index-alt.ts",
+      "registrationCount": 2,
+      "role": "Standalone alternate Bill of Health comparison root."
+    },
+    {
+      "id": "boh_reconstruct",
+      "path": "src/boh-alt/reconstruct/index-reconstruct.ts",
+      "root": "RootReconstruct",
+      "rootSource": "src/boh-alt/reconstruct/index-reconstruct.ts",
+      "registrationCount": 4,
+      "role": "Standalone reconstruction and composition-fidelity proof root."
+    }
+  ],
+  "compositionFamilies": [
+    {
+      "id": "iinm_chapters",
+      "label": "IINM chapter series",
+      "sourcePaths": [
+        "src/IinmCh0Intro.tsx",
+        "src/IinmCh1.tsx",
+        "src/IinmExpertChA.tsx",
+        "src/IinmCh2.tsx",
+        "src/IinmCh3.tsx",
+        "src/IinmCh4.tsx",
+        "src/IinmCh5.tsx",
+        "src/iinm/"
+      ],
+      "assetRoots": [
+        "public/iinm/"
+      ],
+      "documentation": [],
+      "compositions": [
+        {"id": "IinmCh0Intro", "entrypointRefs": ["main"], "componentSource": "src/IinmCh0Intro.tsx", "sourceStatus": "registered", "width": 1920, "height": 1080, "fps": 30, "frames": 1949},
+        {"id": "IinmCh1", "entrypointRefs": ["main"], "componentSource": "src/IinmCh1.tsx", "sourceStatus": "registered", "width": 1920, "height": 1080, "fps": 30, "frames": 1076},
+        {"id": "IinmExpertChA", "entrypointRefs": ["main"], "componentSource": "src/IinmExpertChA.tsx", "sourceStatus": "registered", "width": 1920, "height": 1080, "fps": 30, "frames": 4189},
+        {"id": "IinmCh2", "entrypointRefs": ["main"], "componentSource": "src/IinmCh2.tsx", "sourceStatus": "registered", "width": 1920, "height": 1080, "fps": 30, "frames": 820},
+        {"id": "IinmCh3", "entrypointRefs": ["main"], "componentSource": "src/IinmCh3.tsx", "sourceStatus": "registered", "width": 1920, "height": 1080, "fps": 30, "frames": 827},
+        {"id": "IinmCh4", "entrypointRefs": ["main"], "componentSource": "src/IinmCh4.tsx", "sourceStatus": "registered", "width": 1920, "height": 1080, "fps": 30, "frames": 881},
+        {"id": "IinmCh5", "entrypointRefs": ["main"], "componentSource": "src/IinmCh5.tsx", "sourceStatus": "registered", "width": 1920, "height": 1080, "fps": 30, "frames": 891}
+      ],
+      "notes": [
+        "Timing and box data live under src/iinm; no local output artifact or dedicated handoff was found."
+      ]
+    },
+    {
+      "id": "iinm_legacy_scenes",
+      "label": "Earlier IINM scenes",
+      "sourcePaths": [
+        "src/IinmModuleScene.tsx",
+        "src/IinmLifecycleScene.tsx",
+        "src/DigitisationIntro.tsx",
+        "src/IinmComplianceScene.tsx",
+        "src/IinmOversightScene.tsx",
+        "src/IinmSummaryScene.tsx"
+      ],
+      "assetRoots": [
+        "public/images/",
+        "public/scene1-narration.mp3",
+        "public/scene2-narration.mp3",
+        "public/scene3-narration.mp3",
+        "public/scene4-narration.mp3",
+        "public/scene5-narration.mp3",
+        "public/scene6-narration.mp3"
+      ],
+      "documentation": [
+        "STORYBOARD-scene2.md"
+      ],
+      "compositions": [
+        {"id": "IinmModuleScene", "entrypointRefs": ["main"], "componentSource": "src/IinmModuleScene.tsx", "sourceStatus": "registered", "width": 1920, "height": 1080, "fps": 30, "frames": 2670},
+        {"id": "IinmLifecycleScene", "entrypointRefs": ["main"], "componentSource": "src/IinmLifecycleScene.tsx", "sourceStatus": "registered", "width": 1920, "height": 1080, "fps": 30, "frames": 1230},
+        {"id": "DigitisationIntro", "entrypointRefs": ["main"], "componentSource": "src/DigitisationIntro.tsx", "sourceStatus": "registered", "width": 1920, "height": 1080, "fps": 30, "frames": 1230},
+        {"id": "IinmComplianceScene", "entrypointRefs": ["main"], "componentSource": "src/IinmComplianceScene.tsx", "sourceStatus": "registered", "width": 1920, "height": 1080, "fps": 30, "frames": 1110},
+        {"id": "IinmOversightScene", "entrypointRefs": ["main"], "componentSource": "src/IinmOversightScene.tsx", "sourceStatus": "registered", "width": 1920, "height": 1080, "fps": 30, "frames": 780},
+        {"id": "IinmSummaryScene", "entrypointRefs": ["main"], "componentSource": "src/IinmSummaryScene.tsx", "sourceStatus": "registered", "width": 1920, "height": 1080, "fps": 30, "frames": 600}
+      ],
+      "notes": [
+        "DigitisationIntro is registered at 1,230 frames; its component header still mentions 1,350 frames. Registration is authoritative for this inventory."
+      ]
+    },
+    {
+      "id": "brand_examples",
+      "label": "Brand intro/outro examples",
+      "sourcePaths": [
+        "src/Intro.tsx",
+        "src/Outro.tsx",
+        "src/IntroWithImage.tsx"
+      ],
+      "assetRoots": [
+        "public/images/"
+      ],
+      "documentation": [
+        "README.md",
+        "GETTING-STARTED.md",
+        "ADDING-VISUALS.md",
+        "public/images/README.md"
+      ],
+      "compositions": [
+        {"id": "Intro", "entrypointRefs": ["main"], "componentSource": "src/Intro.tsx", "sourceStatus": "registered_example", "width": 1920, "height": 1080, "fps": 30, "frames": 90},
+        {"id": "Outro", "entrypointRefs": ["main"], "componentSource": "src/Outro.tsx", "sourceStatus": "registered_example", "width": 1920, "height": 1080, "fps": 30, "frames": 150},
+        {"id": "SOPIntro", "entrypointRefs": ["main"], "componentSource": "src/Intro.tsx", "sourceStatus": "registered_example", "width": 1920, "height": 1080, "fps": 30, "frames": 90},
+        {"id": "TrainingOutro", "entrypointRefs": ["main"], "componentSource": "src/Outro.tsx", "sourceStatus": "registered_example", "width": 1920, "height": 1080, "fps": 30, "frames": 150},
+        {"id": "IntroWithImage", "entrypointRefs": ["main"], "componentSource": "src/IntroWithImage.tsx", "sourceStatus": "registered_incomplete", "width": 1920, "height": 1080, "fps": 30, "frames": 90}
+      ],
+      "notes": [
+        "IntroWithImage default props reference public/images/logo.png and public/images/background.jpg; both were absent at audit time."
+      ]
+    },
+    {
+      "id": "cleaning_verification",
+      "label": "Cleaning Verification V1-V3",
+      "sourcePaths": [
+        "src/cln/"
+      ],
+      "assetRoots": [
+        "public/cln-tutorial/",
+        "public/images/"
+      ],
+      "documentation": [
+        "docs/cln-verification-v3-brief.md",
+        "docs/cln-verification-v3-correction-manifest.md",
+        "docs/cln-verification-v3-refresh-brief.md",
+        "docs/module-tutorial-pattern.md"
+      ],
+      "externalArtifactReferences": [
+        {"path": "../output/cln-verification-tutorial/e-wizerinspection-v2-small.mp4", "evidence": "docs/cln-verification-v3-brief.md", "scope": "Referenced sibling output; not part of the audited local output tree."},
+        {"path": "../output/cln-verification-tutorial/e-wizerinspection-v3.mp4", "evidence": "docs/cln-verification-v3-brief.md", "scope": "Referenced sibling output; not part of the audited local output tree."},
+        {"path": "../output/cln-verification-tutorial/e-wizerinspection-v3-small.mp4", "evidence": "docs/cln-verification-v3-brief.md", "scope": "Referenced sibling output; not part of the audited local output tree."},
+        {"path": "../output/cln-verification-tutorial/e-wizerinspection-v3-branded.mp4", "evidence": "docs/cln-verification-v3-refresh-brief.md", "scope": "Referenced sibling output later identified as requiring corrections; not part of the audited local output tree."}
+      ],
+      "compositions": [
+        {"id": "CleaningVerificationTutorial", "entrypointRefs": ["main"], "componentSource": "src/cln/CleaningVerificationTutorial.tsx", "sourceStatus": "registered", "width": 1920, "height": 1080, "fps": 30, "frames": 5927},
+        {"id": "CleaningVerificationTutorialV2", "entrypointRefs": ["main"], "componentSource": "src/cln/CleaningVerificationTutorialV2.tsx", "sourceStatus": "registered", "width": 1920, "height": 1080, "fps": 30, "frames": 5927},
+        {"id": "CleaningVerificationTutorialV3", "entrypointRefs": ["main"], "componentSource": "src/cln/CleaningVerificationTutorialV2.tsx", "sourceStatus": "registered_incomplete", "width": 1920, "height": 1080, "fps": 30, "frames": 7222},
+        {"id": "CleaningVerificationTutorialV3Branded", "entrypointRefs": ["main"], "componentSource": "src/cln/CleaningVerificationBranded.tsx", "sourceStatus": "registered_incomplete", "width": 1920, "height": 1080, "fps": 30, "frames": 7552}
+      ],
+      "notes": [
+        "The refresh brief says the older branded cut needs hard re-shoot/re-narration corrections despite historical 'final cut' wording; no human sign-off was found.",
+        "Referenced sibling ../output paths are recorded above but are outside this repository's local output directory and are not counted as artifacts here."
+      ]
+    },
+    {
+      "id": "daily_hygiene",
+      "label": "Daily Hygiene checklist",
+      "sourcePaths": [
+        "src/hygiene/"
+      ],
+      "assetRoots": [
+        "public/daily-hygiene-tutorial/",
+        "public/images/"
+      ],
+      "documentation": [
+        "docs/daily-hygiene-checklist-brief.md",
+        "public/daily-hygiene-tutorial/review/"
+      ],
+      "compositions": [
+        {"id": "DailyHygieneTutorial", "entrypointRefs": ["main"], "componentSource": "src/hygiene/DailyHygieneTutorial.tsx", "sourceStatus": "registered", "width": 1920, "height": 1080, "fps": 30, "frames": 6614},
+        {"id": "DailyHygieneTutorialBranded", "entrypointRefs": ["main"], "componentSource": "src/hygiene/DailyHygieneTutorial.tsx", "sourceStatus": "registered", "width": 1920, "height": 1080, "fps": 30, "frames": 6944}
+      ],
+      "notes": [
+        "The brief explicitly calls this work a draft. Review contact sheets/stills exist, but no verdict was found."
+      ]
+    },
+    {
+      "id": "equipment_issue",
+      "label": "Equipment issue tutorial",
+      "sourcePaths": [
+        "src/equipment/",
+        "src/journeys/PhoneJourney.tsx",
+        "src/brand/EcowizeBookends.tsx"
+      ],
+      "assetRoots": [
+        "public/equipment-tutorial/",
+        "public/images/"
+      ],
+      "documentation": [],
+      "compositions": [
+        {"id": "EquipmentIssueTutorial", "entrypointRefs": ["main"], "componentSource": "src/equipment/EquipmentIssueTutorial.tsx", "sourceStatus": "registered_incomplete", "width": 1920, "height": 1080, "fps": 30, "frames": 2210},
+        {"id": "EquipmentIssueTutorialBranded", "entrypointRefs": ["main"], "componentSource": "src/equipment/EquipmentIssueTutorial.tsx", "sourceStatus": "registered_incomplete", "width": 1920, "height": 1080, "fps": 30, "frames": 2540}
+      ],
+      "notes": [
+        "All 10 referenced stills exist; all 10 timing-referenced narration MP3s and public/equipment-tutorial/audio/tutorial.mp3 were absent at audit time."
+      ]
+    },
+    {
+      "id": "ppe_issue",
+      "label": "PPE issue tutorial",
+      "sourcePaths": [
+        "src/ppe/",
+        "src/journeys/PhoneJourney.tsx",
+        "src/brand/EcowizeBookends.tsx"
+      ],
+      "assetRoots": [
+        "public/ppe-tutorial/",
+        "public/images/"
+      ],
+      "documentation": [],
+      "compositions": [
+        {"id": "PpeIssueTutorial", "entrypointRefs": ["main"], "componentSource": "src/ppe/PpeIssueTutorial.tsx", "sourceStatus": "registered_incomplete", "width": 1920, "height": 1080, "fps": 30, "frames": 1339},
+        {"id": "PpeIssueTutorialBranded", "entrypointRefs": ["main"], "componentSource": "src/ppe/PpeIssueTutorial.tsx", "sourceStatus": "registered_incomplete", "width": 1920, "height": 1080, "fps": 30, "frames": 1669}
+      ],
+      "notes": [
+        "All 8 referenced stills exist; all 8 timing-referenced narration MP3s and public/ppe-tutorial/audio/tutorial.mp3 were absent at audit time."
+      ]
+    },
+    {
+      "id": "schedule_preview",
+      "label": "Schedule Preview tutorial",
+      "sourcePaths": [
+        "src/schedule/"
+      ],
+      "assetRoots": [
+        "public/schedule-preview/",
+        "public/cln-tutorial/",
+        "public/images/"
+      ],
+      "documentation": [],
+      "compositions": [
+        {"id": "SchedulePreviewTutorial", "entrypointRefs": ["main"], "componentSource": "src/schedule/SchedulePreviewTutorial.tsx", "sourceStatus": "registered", "width": 1920, "height": 1080, "fps": 30, "frames": 4614},
+        {"id": "SchedulePreviewTutorialBranded", "entrypointRefs": ["main"], "componentSource": "src/schedule/SchedulePreviewTutorial.tsx", "sourceStatus": "registered", "width": 1920, "height": 1080, "fps": 30, "frames": 4944}
+      ],
+      "notes": [
+        "No dedicated handoff or local output artifact was found."
+      ]
+    },
+    {
+      "id": "legacy_ccv",
+      "label": "Earlier CCV and data-driven TutorialKit",
+      "sourcePaths": [
+        "src/ccv/",
+        "src/kit/"
+      ],
+      "assetRoots": [
+        "public/ccv-tutorial/",
+        "public/cln-tutorial/",
+        "public/images/"
+      ],
+      "documentation": [
+        "docs/module-tutorial-pattern.md"
+      ],
+      "compositions": [
+        {"id": "CcvSecondPairOfEyes", "entrypointRefs": ["main"], "componentSource": "src/ccv/CcvTutorial.tsx", "sourceStatus": "registered", "width": 1920, "height": 1080, "fps": 30, "frames": 8591},
+        {"id": "TutorialKit", "entrypointRefs": ["main"], "componentSource": "src/kit/TutorialKit.tsx", "sourceStatus": "registered_example", "width": 1920, "height": 1080, "fps": 30, "frames": 8490, "dataSource": "src/ccv/beats.json"}
+      ],
+      "notes": [
+        "No local output artifact or explicit review verdict was found for these registrations."
+      ]
+    },
+    {
+      "id": "iclean",
+      "label": "iClean First Inspection",
+      "sourcePaths": [
+        "src/kit/",
+        "src/iclean/beats.json"
+      ],
+      "assetRoots": [
+        "public/iclean-tutorial/",
+        "public/ccv-tutorial/fonts/"
+      ],
+      "documentation": [
+        "docs/module-tutorial-pattern.md"
+      ],
+      "compositions": [
+        {"id": "IcleanFirstInspection", "entrypointRefs": ["main"], "componentSource": "src/kit/TutorialKit.tsx", "sourceStatus": "registered_incomplete", "width": 1920, "height": 1080, "fps": 30, "frames": 5220, "dataSource": "src/iclean/beats.json"}
+      ],
+      "notes": [
+        "All 12 beats are explicitly pending with null still/audio values. Existing shot files are documented as capture aids rather than final inputs."
+      ]
+    },
+    {
+      "id": "tapdemo",
+      "label": "VidStud and annotated walkthroughs",
+      "sourcePaths": [
+        "src/tapdemo/",
+        "src/kit/",
+        "src/brand/EcowizeBookends.tsx"
+      ],
+      "assetRoots": [
+        "public/tapdemo/",
+        "public/images/"
+      ],
+      "documentation": [
+        "AGENTS.md",
+        "CLAUDE.md",
+        "tools/annotate.html",
+        "tools/studio.html"
+      ],
+      "compositions": [
+        {"id": "TapDemo", "entrypointRefs": ["main"], "componentSource": "src/tapdemo/TapDemo.tsx", "sourceStatus": "registered_proof_only", "width": 1920, "height": 1080, "fps": 30, "frames": 600},
+        {"id": "DailyHygieneWalkthrough", "entrypointRefs": ["main"], "componentSource": "src/tapdemo/AnnotatedWalkthrough.tsx", "sourceStatus": "registered", "width": 1920, "height": 1080, "fps": 30, "frames": 7544, "dataSource": "src/tapdemo/hygiene-walkthrough.json"},
+        {"id": "AnnotatedVideo", "entrypointRefs": ["main"], "componentSource": "src/tapdemo/AnnotatedVideo.tsx", "sourceStatus": "registered_example", "width": 1920, "height": 1080, "fps": 30, "frames": 7544, "dataSource": "src/tapdemo/active-project.json", "dynamicMetadata": true}
+      ],
+      "notes": [
+        "AnnotatedVideo duration is calculateMetadata-driven. The recorded 7,544 frames are its audit-time default, not a fixed duration for arbitrary props."
+      ]
+    },
+    {
+      "id": "utility_examples",
+      "label": "Diagram and handwritten-math examples",
+      "sourcePaths": [
+        "src/PipelineDiagram.tsx",
+        "src/kit/",
+        "src/math/demo.json"
+      ],
+      "assetRoots": [],
+      "documentation": [
+        "README.md"
+      ],
+      "compositions": [
+        {"id": "PipelineDiagram", "entrypointRefs": ["main"], "componentSource": "src/PipelineDiagram.tsx", "sourceStatus": "registered_example", "width": 1920, "height": 1080, "fps": 30, "frames": 300},
+        {"id": "HandwrittenMath", "entrypointRefs": ["main"], "componentSource": "src/kit/HandwrittenMath.tsx", "sourceStatus": "registered_example", "width": 1920, "height": 1080, "fps": 30, "frames": 490, "dataSource": "src/math/demo.json"}
+      ],
+      "notes": []
+    },
+    {
+      "id": "bill_of_health",
+      "label": "Bill of Health main tutorial and proofs",
+      "sourcePaths": [
+        "src/boh/",
+        "src/kit/",
+        "src/brand/EcowizeBookends.tsx"
+      ],
+      "assetRoots": [
+        "public/boh/",
+        "public/ccv-tutorial/fonts/",
+        "public/cln-tutorial/",
+        "public/images/"
+      ],
+      "documentation": [
+        "docs/bill-of-health-storyboard.html",
+        "src/boh/boxes.json"
+      ],
+      "compositions": [
+        {"id": "BillOfHealthTutorial", "entrypointRefs": ["main", "boh"], "componentSource": "src/boh/BillOfHealthTutorial.tsx", "sourceStatus": "registered", "width": 1920, "height": 1080, "fps": 30, "frames": 9048},
+        {"id": "BillOfHealthTutorialBranded", "entrypointRefs": ["main", "boh"], "componentSource": "src/boh/BillOfHealthTutorial.tsx", "sourceStatus": "registered", "width": 1920, "height": 1080, "fps": 30, "frames": 9378, "artifactRefs": ["boh-client-v1", "boh-client-v2", "boh-draft3", "boh-draft5", "boh-draft6", "boh-draft7"]},
+        {"id": "BohComposeProof", "entrypointRefs": ["boh"], "componentSource": "src/boh/BillOfHealthTutorial.tsx", "sourceStatus": "registered_proof_only", "width": 1920, "height": 1080, "fps": 30, "frames": 1},
+        {"id": "BohHeroProof", "entrypointRefs": ["boh"], "componentSource": "src/boh/BillOfHealthTutorial.tsx", "sourceStatus": "registered_proof_only", "width": 1920, "height": 1080, "fps": 30, "frames": 1}
+      ],
+      "notes": [
+        "The source overlays narrated illustrative figures on genuine captured ledger rows in beats 3, 8, and 11; proof compositions show composed material beside photographed originals.",
+        "Bill of Health client v2 suppresses the on-video 'Illustrative figures on real screens' disclosure because SHOW_PROVISIONAL is false. Daniel's disclosure decision is still open.",
+        "Storyboard instructions favor genuine counts and recapture, creating an explicit unresolved conflict with the current composed figures."
+      ]
+    },
+    {
+      "id": "ccv_refresh",
+      "label": "CCV refresh",
+      "sourcePaths": [
+        "src/ccv2/",
+        "src/ccv/ccvShared.tsx",
+        "src/kit/",
+        "src/brand/"
+      ],
+      "assetRoots": [
+        "public/ccv2/",
+        "public/ccv-refresh/hunt/",
+        "public/ccv-tutorial/fonts/",
+        "public/cln-tutorial/",
+        "public/images/"
+      ],
+      "documentation": [
+        "docs/ccv-client-v4-handoff.md",
+        "public/ccv-refresh/hunt/NOTES.md"
+      ],
+      "compositions": [
+        {"id": "CcvRefresh", "entrypointRefs": ["ccv2"], "componentSource": "src/ccv2/CcvRefresh.tsx", "sourceStatus": "registered", "width": 1920, "height": 1080, "fps": 30, "frames": 11229},
+        {"id": "CcvRefreshBranded", "entrypointRefs": ["ccv2"], "componentSource": "src/ccv2/CcvRefresh.tsx", "sourceStatus": "registered", "width": 1920, "height": 1080, "fps": 30, "frames": 11559, "artifactRefs": ["ccv-client-v1", "ccv-client-v2", "ccv-client-v3", "ccv-client-v4", "ccv-client-v5-rejected-offline", "ccv-client-v5", "ccv-draft1", "ccv-draft2"]},
+        {"id": "Ccv2ComposeProof", "entrypointRefs": ["ccv2"], "componentSource": "src/ccv2/CcvRefresh.tsx", "sourceStatus": "registered_proof_only", "width": 1920, "height": 1080, "fps": 30, "frames": 1}
+      ],
+      "captureEvidence": [
+        {"path": "public/ccv-refresh/hunt/bakery-demo/10-current-6999d8e-eco-san-sh12-form-unfilled.png", "sha256": "804ffc37294287c3d7eac1e85ae1b9c0ff5cecabb0b5c3e4cbd6f29b6e4d9b58", "provenance": "genuine_current_app"},
+        {"path": "public/ccv-refresh/hunt/bakery-demo/11-current-6999d8e-eco-san-sh12-filled-top.png", "sha256": "6ac5743b3a7f50361dbc66d4057cd1b1d0378e25cfee340ec989aa67b4b91e1b", "provenance": "genuine_current_app"},
+        {"path": "public/ccv-refresh/hunt/bakery-demo/12-current-6999d8e-eco-san-sh12-filled-computed.png", "sha256": "37ab6c496864019517c3bacf88e929eb63b4b8ad8e36cbee47275d630f559f72", "provenance": "genuine_current_app"},
+        {"path": "public/ccv-refresh/hunt/bakery-demo/13-current-6999d8e-eco-san-sh12-normal-online-success-dialog.png", "sha256": "4c0d22043801d677e1db1b2e6cad3b77452db6dab4c08e621f844f22b09da020", "provenance": "genuine_current_app_normal_online"},
+        {"path": "public/ccv-refresh/hunt/bakery-demo/03-manual-dilution-post-issue-verify-now-later-real.png", "sha256": "a239e5df1b77d2251f8e419753036182bb09fcba226ec7a24f5846360bdf32f4", "provenance": "rejected_offline_stale_app"},
+        {"path": "public/ccv-refresh/hunt/bakery-demo/09-rejected-attempt-a-eco-san-sh12-saved-offline.png", "sha256": "5402ed8fe78573b643675bdee2400f5ad430a7746d0469e1bc3cbeb84e70495a", "provenance": "rejected_offline_stale_app"}
+      ],
+      "notes": [
+        "Canonical v5 Beat 04 uses only the four genuine current-app Bakery Demo captures from mobile commit 6999d8eca52fc4f4fff69066dce365f54a609663.",
+        "The record is ECO-SAN SH12 (t570cnk57a27y28q0sgg82r25n89kjvy), LOT-20250905, Entire factory, manual dilution, 1 L chemical plus 50 L water, computed 2.0%, approved 0.5-5.0% in range, with the normal-online success dialog and both choices untouched.",
+        "Historical public/ccv2/shots/ccv-04.png contains composed v4 batch/lot and quantity text and is not canonical-v5 Beat 04 material. Rejected offline assets are quarantined and distinct.",
+        "Older 12,038-frame renders predate the current 11,559-frame registration; their artifact specs preserve the historical bytes."
+      ]
+    },
+    {
+      "id": "bill_of_health_alt",
+      "label": "Bill of Health alternate comparison",
+      "sourcePaths": [
+        "src/boh-alt/",
+        "src/brand/EcowizeBookends.tsx"
+      ],
+      "assetRoots": [
+        "public/boh/",
+        "public/boh-alt/",
+        "public/ccv-tutorial/fonts/",
+        "public/cln-tutorial/",
+        "public/images/"
+      ],
+      "documentation": [
+        "src/boh-alt/REGISTER.md"
+      ],
+      "compositions": [
+        {"id": "BillOfHealthAlt", "entrypointRefs": ["boh_alt"], "componentSource": "src/boh-alt/BillOfHealthAlt.tsx", "sourceStatus": "registered_incomplete", "width": 1920, "height": 1080, "fps": 30, "frames": 9048},
+        {"id": "BillOfHealthAltBranded", "entrypointRefs": ["boh_alt"], "componentSource": "src/boh-alt/BillOfHealthAlt.tsx", "sourceStatus": "registered_incomplete", "width": 1920, "height": 1080, "fps": 30, "frames": 9378, "artifactRefs": ["boh-alt-draft1"]}
+      ],
+      "notes": [
+        "Beats 3, 5, 8, and 11 retain explicit provisional notices pending real recaptures; the alternate source does not fabricate those values."
+      ]
+    },
+    {
+      "id": "bill_of_health_reconstruct",
+      "label": "Bill of Health reconstruction proofs",
+      "sourcePaths": [
+        "src/boh-alt/reconstruct/"
+      ],
+      "assetRoots": [
+        "public/boh-alt/reconstruct/",
+        "public/boh/",
+        "public/ccv-tutorial/fonts/"
+      ],
+      "documentation": [
+        "src/boh-alt/reconstruct/PROGRESS.md",
+        "src/boh-alt/reconstruct/verify-compose.json"
+      ],
+      "compositions": [
+        {"id": "LedgerReconstructDemo", "entrypointRefs": ["boh_reconstruct"], "componentSource": "src/boh-alt/reconstruct/LedgerReconstruct.tsx", "sourceStatus": "registered_proof_only", "width": 1920, "height": 1080, "fps": 30, "frames": 836, "artifactRefs": ["boh-ledger-reconstruct-demo"]},
+        {"id": "ComposeRowDemo", "entrypointRefs": ["boh_reconstruct"], "componentSource": "src/boh-alt/reconstruct/composeRow.tsx", "sourceStatus": "registered_proof_only", "width": 5440, "height": 420, "fps": 30, "frames": 90},
+        {"id": "LedgerReconstructPhone", "entrypointRefs": ["boh_reconstruct"], "componentSource": "src/boh-alt/reconstruct/LedgerReconstruct.tsx", "sourceStatus": "registered_proof_only", "width": 720, "height": 1600, "fps": 30, "frames": 836},
+        {"id": "ComposeRowFidelity", "entrypointRefs": ["boh_reconstruct"], "componentSource": "src/boh-alt/reconstruct/composeRow.tsx", "sourceStatus": "registered_proof_only", "width": 660, "height": 148, "fps": 30, "frames": 1}
+      ],
+      "notes": [
+        "Native phone endpoints are exact, but ComposeRowFidelity misses the <=1% exact-pixel gate at 4.086814%. These registrations remain experimental proof surfaces."
+      ]
+    }
+  ],
+  "mediaProfiles": {
+    "mp4-1080p30-h264-aac": {
+      "container": "MP4/MOV family",
+      "videoCodec": "H.264",
+      "videoProfile": "High",
+      "pixelFormat": "yuvj420p",
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "audioCodec": "AAC-LC",
+      "audioSampleRateHz": 48000,
+      "audioChannels": 2
+    }
+  },
+  "videoArtifacts": [
+    {
+      "id": "boh-alt-draft1",
+      "relativePath": "output/boh-tutorial/bill-of-health-alt-draft1.mp4",
+      "compositionId": "BillOfHealthAltBranded",
+      "bytes": 19933723,
+      "sha256": "e1eaa9f27d216cec16ae4e79f96139c8e11bce532c5f861d03a1394c41333166",
+      "mediaProfileRef": "mp4-1080p30-h264-aac",
+      "videoFrames": 9378,
+      "videoDurationSeconds": 312.6,
+      "containerDurationSeconds": 312.661333,
+      "statuses": {"technicalReview": "unreviewed", "humanSignOff": "pending", "deliverable": "draft"},
+      "locations": [{"machine": "B", "path": "/home/durai/Documents/projects/content-engine/remotion-branding/output/boh-tutorial/bill-of-health-alt-draft1.mp4", "verification": "filesystem_size_sha256_ffprobe"}],
+      "evidence": ["Filename identifies draft1; src/boh-alt/REGISTER.md records provisional captures."]
+    },
+    {
+      "id": "boh-client-v1",
+      "relativePath": "output/boh-tutorial/bill-of-health-client-v1.mp4",
+      "compositionId": "BillOfHealthTutorialBranded",
+      "bytes": 25487469,
+      "sha256": "3013287dd2975205da5b946623b88f615be8b7ac74a9944dcff4b5cbe646478d",
+      "mediaProfileRef": "mp4-1080p30-h264-aac",
+      "videoFrames": 9378,
+      "videoDurationSeconds": 312.6,
+      "containerDurationSeconds": 312.661333,
+      "statuses": {"technicalReview": "unreviewed", "humanSignOff": "pending", "deliverable": "unclassified"},
+      "locations": [{"machine": "B", "path": "/home/durai/Documents/projects/content-engine/remotion-branding/output/boh-tutorial/bill-of-health-client-v1.mp4", "verification": "filesystem_size_sha256_ffprobe"}],
+      "evidence": ["No explicit review or sign-off evidence found."]
+    },
+    {
+      "id": "boh-client-v2",
+      "relativePath": "output/boh-tutorial/bill-of-health-client-v2.mp4",
+      "compositionId": "BillOfHealthTutorialBranded",
+      "bytes": 25490171,
+      "sha256": "d81a4eedee73a184a4cd0b276633e4d73c7202491cd1ff620be91166feb9ef28",
+      "mediaProfileRef": "mp4-1080p30-h264-aac",
+      "videoFrames": 9378,
+      "videoDurationSeconds": 312.6,
+      "containerDurationSeconds": 312.661333,
+      "statuses": {"technicalReview": "unreviewed", "humanSignOff": "pending", "deliverable": "candidate"},
+      "locations": [{"machine": "B", "path": "/home/durai/Documents/projects/content-engine/remotion-branding/output/boh-tutorial/bill-of-health-client-v2.mp4", "verification": "filesystem_size_sha256_ffprobe"}],
+      "evidence": [
+        "Task-supplied current truth: candidate pending Daniel sign-off and composed-figures disclosure decision.",
+        "No explicit technical-review verdict was found.",
+        "Beats 3, 8, and 11 place illustrative figures on real captured rows; the client cut does not show the optional disclosure."
+      ]
+    },
+    {
+      "id": "boh-draft3",
+      "relativePath": "output/boh-tutorial/bill-of-health-draft3.mp4",
+      "compositionId": "BillOfHealthTutorialBranded",
+      "bytes": 24323169,
+      "sha256": "4ea3c7bda63b6dab47f27786d6a95cfb0e292e487ed002bc085e061a6e611b66",
+      "mediaProfileRef": "mp4-1080p30-h264-aac",
+      "videoFrames": 9378,
+      "videoDurationSeconds": 312.6,
+      "containerDurationSeconds": 312.661333,
+      "statuses": {"technicalReview": "unreviewed", "humanSignOff": "pending", "deliverable": "draft"},
+      "locations": [{"machine": "B", "path": "/home/durai/Documents/projects/content-engine/remotion-branding/output/boh-tutorial/bill-of-health-draft3.mp4", "verification": "filesystem_size_sha256_ffprobe"}],
+      "evidence": ["Filename identifies a draft; storyboard mentions Daniel's draft-3 review but records no verdict or sign-off."]
+    },
+    {
+      "id": "boh-draft5",
+      "relativePath": "output/boh-tutorial/bill-of-health-draft5.mp4",
+      "compositionId": "BillOfHealthTutorialBranded",
+      "bytes": 26259189,
+      "sha256": "b4a6e9b77d1eb022cc2df23ffbedf542a487f43ddfc0537b30a749e52b79152c",
+      "mediaProfileRef": "mp4-1080p30-h264-aac",
+      "videoFrames": 9378,
+      "videoDurationSeconds": 312.6,
+      "containerDurationSeconds": 312.661333,
+      "statuses": {"technicalReview": "unreviewed", "humanSignOff": "pending", "deliverable": "draft"},
+      "locations": [{"machine": "B", "path": "/home/durai/Documents/projects/content-engine/remotion-branding/output/boh-tutorial/bill-of-health-draft5.mp4", "verification": "filesystem_size_sha256_ffprobe"}],
+      "evidence": ["Filename identifies a draft; no explicit verdict found."]
+    },
+    {
+      "id": "boh-draft6",
+      "relativePath": "output/boh-tutorial/bill-of-health-draft6.mp4",
+      "compositionId": "BillOfHealthTutorialBranded",
+      "bytes": 25886775,
+      "sha256": "56bb8542472ac84741fb75bf36e98e1d9e80aa112bcf209c8133992143a522ea",
+      "mediaProfileRef": "mp4-1080p30-h264-aac",
+      "videoFrames": 9378,
+      "videoDurationSeconds": 312.6,
+      "containerDurationSeconds": 312.661333,
+      "statuses": {"technicalReview": "unreviewed", "humanSignOff": "pending", "deliverable": "draft"},
+      "locations": [{"machine": "B", "path": "/home/durai/Documents/projects/content-engine/remotion-branding/output/boh-tutorial/bill-of-health-draft6.mp4", "verification": "filesystem_size_sha256_ffprobe"}],
+      "evidence": ["Filename identifies a draft; no explicit verdict found."]
+    },
+    {
+      "id": "boh-draft7",
+      "relativePath": "output/boh-tutorial/bill-of-health-draft7.mp4",
+      "compositionId": "BillOfHealthTutorialBranded",
+      "bytes": 25926936,
+      "sha256": "7a3f1a78326c4be243142d4303d37c74dafaa3bfe018387cbef3cdc56a0d1e6a",
+      "mediaProfileRef": "mp4-1080p30-h264-aac",
+      "videoFrames": 9378,
+      "videoDurationSeconds": 312.6,
+      "containerDurationSeconds": 312.661333,
+      "statuses": {"technicalReview": "unreviewed", "humanSignOff": "pending", "deliverable": "draft"},
+      "locations": [{"machine": "B", "path": "/home/durai/Documents/projects/content-engine/remotion-branding/output/boh-tutorial/bill-of-health-draft7.mp4", "verification": "filesystem_size_sha256_ffprobe"}],
+      "evidence": ["Filename identifies a draft; no explicit verdict found."]
+    },
+    {
+      "id": "boh-ledger-reconstruct-demo",
+      "relativePath": "output/boh-tutorial/ledger-reconstruct-demo.mp4",
+      "compositionId": "LedgerReconstructDemo",
+      "bytes": 2271827,
+      "sha256": "b00aea02e2dbbb5971426bcddedaaa2b718c6e8a58fd3ccf1c0f6f27851a5b26",
+      "mediaProfileRef": "mp4-1080p30-h264-aac",
+      "videoFrames": 836,
+      "videoDurationSeconds": 27.866667,
+      "containerDurationSeconds": 27.882667,
+      "statuses": {"technicalReview": "changes", "humanSignOff": "pending", "deliverable": "proof_only"},
+      "locations": [{"machine": "B", "path": "/home/durai/Documents/projects/content-engine/remotion-branding/output/boh-tutorial/ledger-reconstruct-demo.mp4", "verification": "filesystem_size_sha256_ffprobe"}],
+      "evidence": ["PROGRESS.md and verify-compose.json record an unmet <=1% exact-pixel gate: 4.086814% differs."]
+    },
+    {
+      "id": "ccv-client-v1",
+      "relativePath": "output/ccv-refresh/ccv-refresh-client-v1.mp4",
+      "compositionId": "CcvRefreshBranded",
+      "bytes": 48457184,
+      "sha256": "548465cefeaa0cf4469d1aa44bf6cbfd075c0119a6e38e81c837ace54b2cb920",
+      "mediaProfileRef": "mp4-1080p30-h264-aac",
+      "videoFrames": 12038,
+      "videoDurationSeconds": 401.266667,
+      "containerDurationSeconds": 401.322667,
+      "statuses": {"technicalReview": "unreviewed", "humanSignOff": "pending", "deliverable": "unclassified"},
+      "locations": [{"machine": "B", "path": "/home/durai/Documents/projects/content-engine/remotion-branding/output/ccv-refresh/ccv-refresh-client-v1.mp4", "verification": "filesystem_size_sha256_ffprobe"}],
+      "evidence": ["No explicit review or sign-off evidence found."]
+    },
+    {
+      "id": "ccv-client-v2",
+      "relativePath": "output/ccv-refresh/ccv-refresh-client-v2.mp4",
+      "compositionId": "CcvRefreshBranded",
+      "bytes": 48467416,
+      "sha256": "7c4bc3e3fd12d3d1bb05bbe2de37e6ab7bb95c1a22525ed748c6158ef1a666a9",
+      "mediaProfileRef": "mp4-1080p30-h264-aac",
+      "videoFrames": 12038,
+      "videoDurationSeconds": 401.266667,
+      "containerDurationSeconds": 401.322667,
+      "statuses": {"technicalReview": "unreviewed", "humanSignOff": "pending", "deliverable": "unclassified"},
+      "locations": [{"machine": "B", "path": "/home/durai/Documents/projects/content-engine/remotion-branding/output/ccv-refresh/ccv-refresh-client-v2.mp4", "verification": "filesystem_size_sha256_ffprobe"}],
+      "evidence": ["No explicit review or sign-off evidence found."]
+    },
+    {
+      "id": "ccv-client-v3",
+      "relativePath": "output/ccv-refresh/ccv-refresh-client-v3.mp4",
+      "compositionId": "CcvRefreshBranded",
+      "bytes": 48404831,
+      "sha256": "fd796ef5dbc0808a453c0e691c55bbb8818b14c8128a9f5fa034c98f2accec06",
+      "mediaProfileRef": "mp4-1080p30-h264-aac",
+      "videoFrames": 12038,
+      "videoDurationSeconds": 401.266667,
+      "containerDurationSeconds": 401.322667,
+      "statuses": {"technicalReview": "unreviewed", "humanSignOff": "pending", "deliverable": "unclassified"},
+      "locations": [{"machine": "B", "path": "/home/durai/Documents/projects/content-engine/remotion-branding/output/ccv-refresh/ccv-refresh-client-v3.mp4", "verification": "filesystem_size_sha256_ffprobe"}],
+      "evidence": ["The CCV handoff records its hash but no explicit review verdict or sign-off."]
+    },
+    {
+      "id": "ccv-client-v4",
+      "relativePath": "output/ccv-refresh/ccv-refresh-client-v4.mp4",
+      "compositionId": "CcvRefreshBranded",
+      "bytes": 40679992,
+      "sha256": "3d8a3c9c8ba7b58697844e8b2a60e484fbaee83e1ca6b94fab862736fd211357",
+      "mediaProfileRef": "mp4-1080p30-h264-aac",
+      "videoFrames": 11559,
+      "videoDurationSeconds": 385.3,
+      "containerDurationSeconds": 385.344,
+      "statuses": {"technicalReview": "changes", "humanSignOff": "superseded", "deliverable": "superseded"},
+      "locations": [{"machine": "B", "path": "/home/durai/Documents/projects/content-engine/remotion-branding/output/ccv-refresh/ccv-refresh-client-v4.mp4", "verification": "filesystem_size_sha256_ffprobe"}],
+      "evidence": ["Superseded by the formal request for a genuine real-current-app Beat 04 capture; retained intact for historical proof."]
+    },
+    {
+      "id": "ccv-client-v5-rejected-offline",
+      "relativePath": "output/ccv-refresh/ccv-refresh-client-v5-rejected-offline.mp4",
+      "compositionId": "CcvRefreshBranded",
+      "bytes": 40770773,
+      "sha256": "3ae3aa224019f84291ec15bbc236a47ca30f1e49f211545d8f18884325493d8f",
+      "mediaProfileRef": "mp4-1080p30-h264-aac",
+      "videoFrames": 11559,
+      "videoDurationSeconds": 385.3,
+      "containerDurationSeconds": 385.344,
+      "statuses": {"technicalReview": "changes", "humanSignOff": "rejected", "deliverable": "proof_only"},
+      "locations": [{"machine": "B", "path": "/home/durai/Documents/projects/content-engine/remotion-branding/output/ccv-refresh/ccv-refresh-client-v5-rejected-offline.mp4", "verification": "filesystem_size_sha256_ffprobe"}],
+      "evidence": ["Explicitly rejected because the captured flow said Saved offline; quarantined and not canonical."]
+    },
+    {
+      "id": "ccv-client-v5",
+      "relativePath": "output/ccv-refresh/ccv-refresh-client-v5.mp4",
+      "compositionId": "CcvRefreshBranded",
+      "bytes": 41077756,
+      "sha256": "000581dbc02bb57fb085ee9a0c1a599c8433e8bdf9fb76f8c096cbc76ab67347",
+      "mediaProfileRef": "mp4-1080p30-h264-aac",
+      "videoFrames": 11559,
+      "videoDurationSeconds": 385.3,
+      "containerDurationSeconds": 385.344,
+      "statuses": {"technicalReview": "approved", "humanSignOff": "pending", "deliverable": "candidate"},
+      "locations": [
+        {"machine": "B", "path": "/home/durai/Documents/projects/content-engine/remotion-branding/output/ccv-refresh/ccv-refresh-client-v5.mp4", "verification": "filesystem_size_sha256_ffprobe"},
+        {"machine": "A", "path": "/home/dachu/Documents/projects/content-engine/remotion-branding/output/ccv-refresh/ccv-refresh-client-v5.mp4", "verification": "task_supplied_known_truth_same_sha256"}
+      ],
+      "evidence": [
+        "Task-supplied current truth: technically approved candidate on A and B; Daniel is watching and human sign-off remains pending.",
+        "docs/ccv-client-v4-handoff.md and public/ccv-refresh/hunt/NOTES.md record genuine current-app normal-online capture provenance and full ffmpeg video/audio decode exit 0.",
+        "No publication or send was performed by this audit."
+      ]
+    },
+    {
+      "id": "ccv-draft1",
+      "relativePath": "output/ccv-refresh/ccv-refresh-draft1.mp4",
+      "compositionId": "CcvRefreshBranded",
+      "bytes": 47463553,
+      "sha256": "3eaea8cc67dd4dc02fe104049ad231c9eac4ffacc06a9b1a9df838763509c336",
+      "mediaProfileRef": "mp4-1080p30-h264-aac",
+      "videoFrames": 12038,
+      "videoDurationSeconds": 401.266667,
+      "containerDurationSeconds": 401.322667,
+      "statuses": {"technicalReview": "unreviewed", "humanSignOff": "pending", "deliverable": "draft"},
+      "locations": [{"machine": "B", "path": "/home/durai/Documents/projects/content-engine/remotion-branding/output/ccv-refresh/ccv-refresh-draft1.mp4", "verification": "filesystem_size_sha256_ffprobe"}],
+      "evidence": ["Filename identifies a draft; no explicit verdict found."]
+    },
+    {
+      "id": "ccv-draft2",
+      "relativePath": "output/ccv-refresh/ccv-refresh-draft2.mp4",
+      "compositionId": "CcvRefreshBranded",
+      "bytes": 48309795,
+      "sha256": "29d47b3db0d4840ccf2a72b34e2515136c2131f4b036ee2b795bae8a8cbc282f",
+      "mediaProfileRef": "mp4-1080p30-h264-aac",
+      "videoFrames": 12038,
+      "videoDurationSeconds": 401.266667,
+      "containerDurationSeconds": 401.322667,
+      "statuses": {"technicalReview": "unreviewed", "humanSignOff": "pending", "deliverable": "draft"},
+      "locations": [{"machine": "B", "path": "/home/durai/Documents/projects/content-engine/remotion-branding/output/ccv-refresh/ccv-refresh-draft2.mp4", "verification": "filesystem_size_sha256_ffprobe"}],
+      "evidence": ["Filename identifies a draft; no explicit verdict found."]
+    }
+  ],
+  "evidenceStillCollections": [
+    {
+      "id": "ccv-v4-review-fixes",
+      "relativeRoot": "output/ccv-refresh/verify-v4-review-fixes",
+      "selection": "*.png",
+      "manifestFindCommandFromOutput": "find ccv-refresh/verify-v4-review-fixes -maxdepth 1 -type f -name '*.png' -print0",
+      "memberCount": 12,
+      "totalBytes": 12966551,
+      "imageSpec": {"format": "PNG", "width": 1920, "height": 1080},
+      "sha256OfSortedMemberManifest": "2ac6a7078d6f40064ddc44c8e89c00eaa8058245075fadb2486f36d5c7fdaf1f",
+      "statuses": {"technicalReview": "changes", "humanSignOff": "superseded", "deliverable": "proof_only"},
+      "members": [
+        "verify-awaiting-route-real.png",
+        "verify-corrective-action.png",
+        "verify-illustration-provenance.png",
+        "verify-in-spec-live.png",
+        "verify-issuing-manual-dialog-composed.png",
+        "verify-method-intermediate.png",
+        "verify-method-sheet.png",
+        "verify-opening-clean.png",
+        "verify-opening-complete.png",
+        "verify-out-of-spec-live.png",
+        "verify-pending-destination-crop-real.png",
+        "verify-retest-pass.png"
+      ],
+      "notes": [
+        "Historical selected v4 review evidence. The handoff explicitly labels the issue dialog composed; v4 is now superseded."
+      ]
+    },
+    {
+      "id": "ccv-v4-superseded-stills",
+      "relativeRoot": "output/ccv-refresh/verify-v4-stills",
+      "selection": "*.png",
+      "manifestFindCommandFromOutput": "find ccv-refresh/verify-v4-stills -maxdepth 1 -type f -name '*.png' -print0",
+      "memberCount": 12,
+      "totalBytes": 14255624,
+      "imageSpec": {"format": "PNG", "width": 1920, "height": 1080},
+      "sha256OfSortedMemberManifest": "d0932313e01519864a7265d5fe30526b23ee49f274d2fc8a3a1a49561c3a236d",
+      "statuses": {"technicalReview": "changes", "humanSignOff": "superseded", "deliverable": "superseded"},
+      "members": [
+        "verify-v4-drop-method.png",
+        "verify-v4-inspec.png",
+        "verify-v4-issue-awaiting-real.png",
+        "verify-v4-issue-computed.png",
+        "verify-v4-issue-manual-dialog.png",
+        "verify-v4-issue-periodic-due.png",
+        "verify-v4-issue-tied-verify-real.png",
+        "verify-v4-opening-clean.png",
+        "verify-v4-opening-final.png",
+        "verify-v4-outofspec.png",
+        "verify-v4-retest-failed.png",
+        "verify-v4-retest-pass.png"
+      ],
+      "notes": [
+        "The CCV handoff explicitly says this directory is superseded and retained but not for review."
+      ]
+    },
+    {
+      "id": "ccv-v5-named-stills",
+      "relativeRoot": "output/ccv-refresh",
+      "selection": "verify-v5-*.png",
+      "manifestFindCommandFromOutput": "find ccv-refresh -maxdepth 1 -type f -name 'verify-v5-*.png' -print0",
+      "memberCount": 9,
+      "totalBytes": 6246245,
+      "imageSpec": {"format": "PNG", "width": 1920, "height": 1080},
+      "sha256OfSortedMemberManifest": "ef5e762c42a003bd62d74fb512a947188f78b2febd3a57f9b9386966531d5898",
+      "statuses": {"technicalReview": "unreviewed", "humanSignOff": "pending", "deliverable": "proof_only"},
+      "members": [
+        "verify-v5-final-choice.png",
+        "verify-v5-final-enter.png",
+        "verify-v5-final-exit.png",
+        "verify-v5-final-handoff.png",
+        "verify-v5-manual-choice.png",
+        "verify-v5-manual-enter.png",
+        "verify-v5-manual-exit.png",
+        "verify-v5-provenance.png",
+        "verify-v5-route-handoff.png"
+      ],
+      "notes": [
+        "These retained files predate canonical v5 and are not bound to it by the handoff. Do not treat them as proof of the canonical candidate; the canonical encoded checkpoints were temporary and are not retained under output."
+      ]
+    }
+  ],
+  "reviewEvidence": [
+    {
+      "id": "ccv-handoff",
+      "paths": ["docs/ccv-client-v4-handoff.md", "public/ccv-refresh/hunt/NOTES.md"],
+      "scope": "CCV v3-v5 hashes/specs, genuine/composed/offline capture provenance, full-decode result, and next-capture environment.",
+      "finding": "Supports canonical-v5 technical approval supplied by this task, v4 supersession, and rejected-offline proof-only status; records no human sign-off."
+    },
+    {
+      "id": "boh-composition-disclosure",
+      "paths": ["docs/bill-of-health-storyboard.html", "src/boh/boxes.json", "src/boh/BillOfHealthTutorial.tsx", "src/boh/RootBoh.tsx"],
+      "scope": "Bill of Health source/capture truth, illustrative figure overlays, disclosure flag, and proof compositions.",
+      "finding": "Client v2 remains a candidate pending Daniel sign-off and a disclosure decision; no explicit technical verdict was found."
+    },
+    {
+      "id": "boh-alt-handoff",
+      "paths": ["src/boh-alt/REGISTER.md", "public/boh-alt/contact-rings.png"],
+      "scope": "Alternate registration, provisional real-capture gaps, ring proof, and limited render verification.",
+      "finding": "Technical evidence only; no approval or human sign-off."
+    },
+    {
+      "id": "boh-reconstruction-proof",
+      "paths": ["src/boh-alt/reconstruct/PROGRESS.md", "src/boh-alt/reconstruct/verify-compose.json"],
+      "scope": "Endpoint reconstruction and compose-row fidelity checks.",
+      "finding": "The <=1% exact fidelity gate was not met; measured difference is 4.086814%."
+    },
+    {
+      "id": "cleaning-v3-briefs",
+      "paths": ["docs/cln-verification-v3-brief.md", "docs/cln-verification-v3-refresh-brief.md", "docs/cln-verification-v3-correction-manifest.md"],
+      "scope": "Historical render notes and later required corrections.",
+      "finding": "Historical 'final cut' wording is not human sign-off and conflicts with a later correction brief."
+    },
+    {
+      "id": "daily-hygiene-review-material",
+      "paths": ["docs/daily-hygiene-checklist-brief.md", "public/daily-hygiene-tutorial/review/"],
+      "scope": "Draft brief and visual review material.",
+      "finding": "Draft evidence exists, but no explicit review verdict or human sign-off was found."
+    },
+    {
+      "id": "other-visual-evidence",
+      "paths": ["public/iinm/shots/ch4/review.png", "../output/review-frames/"],
+      "scope": "IINM and Equipment/PPE review images.",
+      "finding": "Presence of review images is not a review verdict. The sibling ../output path is outside this inventory's output-file scope."
+    }
+  ],
+  "signedOffFinalArtifactIds": [],
+  "verification": {
+    "sha256OneFile": "sha256sum -- \"$artifact_path\"",
+    "sizeOneFile": "stat -c '%s' -- \"$artifact_path\"",
+    "specOneVideo": "ffprobe -v error -show_entries format=duration,format_name:stream=index,codec_name,profile,pix_fmt,width,height,r_frame_rate,nb_frames,sample_rate,channels -of json -- \"$artifact_path\"",
+    "listOutputFiles": "find output -type f -printf '%P\\t%s\\n' | LC_ALL=C sort",
+    "stillManifest": "From output/: find <selection> -print0 | LC_ALL=C sort -z | xargs -0 sha256sum | sha256sum",
+    "validateJson": "jq empty docs/video-inventory.json",
+    "crossCheckCounts": [
+      "jq '[.compositionFamilies[].compositions[]] | length' docs/video-inventory.json",
+      "jq '[.compositionFamilies[].compositions[].entrypointRefs[]] | length' docs/video-inventory.json",
+      "jq '.videoArtifacts | length' docs/video-inventory.json",
+      "jq '[.evidenceStillCollections[].memberCount] | add' docs/video-inventory.json",
+      "jq '[.videoArtifacts[] | select(.statuses.humanSignOff == \"signed_off\" and .statuses.deliverable == \"final\")] | length' docs/video-inventory.json"
+    ],
+    "updateChecklist": [
+      "Enumerate every registerRoot entrypoint and every Composition id; update entrypointRefs, dimensions, fps, frames, source paths, asset roots, docs, and counts.",
+      "Enumerate all regular files under output and ensure each appears in videoArtifacts or an evidenceStillCollections member list.",
+      "For each new or changed video, record exact relative path, byte size, SHA-256, ffprobe stream/container spec, composition id, and verified machine locations.",
+      "Record sourceStatus independently from technicalReview, humanSignOff, and deliverable status; cite the evidence for every non-default classification.",
+      "After technical review, set only technicalReview to approved or changes and add its evidence; do not change humanSignOff.",
+      "After explicit human review, record the named human decision and exact artifact hash. Set signed_off only from that decision; use final only with signed_off.",
+      "After replacement, rejection, publication, send, or cross-machine copy, update status/location/distribution facts without inferring approval.",
+      "Refresh lastVerifiedAt and counts, run all JSON/count checks, then reconcile the concise Markdown tables and signed-off-finals section against this file."
+    ]
+  },
+  "uncertainties": [
+    "No repository evidence records human sign-off for any artifact; signed-off finals is therefore empty.",
+    "Bill of Health client v2 has no explicit technical-review verdict on disk. Its technical status remains unreviewed, and the composed-figures disclosure decision remains open.",
+    "CCV client v1-v3 and Bill of Health client v1 have no explicit deliverable or review classification; they remain unclassified/unreviewed rather than being guessed superseded.",
+    "The nine top-level verify-v5 PNGs are not bound by the handoff to canonical v5; their proof association remains uncertain.",
+    "Some documentation refers to sibling ../output artifacts outside this repository's local output tree; those files are evidence references, not counted output artifacts.",
+    "The audit used the actual dirty working tree at headAtAudit, so later source changes require a fresh registration and artifact audit."
+  ]
+}
