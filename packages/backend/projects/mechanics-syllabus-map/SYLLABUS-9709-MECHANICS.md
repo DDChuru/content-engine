@@ -2,7 +2,7 @@
 
 Source: [official 2026–2027 syllabus, version 4](https://www.cambridgeinternational.org/Images/697427-2026-2027-syllabus.pdf), accessed 6 September 2026. Printed pages and PDF page numbers coincide.
 
-**Status:** This is a concise reference summary, not the requested complete verbatim extraction. Full reproduction remains pending a user-provided PDF. Only the three blockquotes below are exact excerpts; do not present the other bullets as Cambridge quotations. The source was checked using `curl` and `pdftotext -layout`.
+**Status:** This is a concise reference summary, not the requested complete verbatim extraction. Full reproduction remains pending a user-provided PDF. Only the four blockquotes below are exact excerpts; do not present the other bullets as Cambridge quotations. The source was checked using `curl` and `pdftotext -layout`.
 
 ## 4.1 Forces and equilibrium
 
@@ -39,6 +39,10 @@ Exact opening excerpt (graph bullet; verified from the official PDF with `pdftot
 
 - Directional momentum, mv.
 - Collisions; joining included, impulse/restitution excluded.
+
+Exact collision statement (official PDF, p.32):
+
+> use conservation of linear momentum to solve problems that may be modelled as the direct impact of two bodies.
 
 ## 4.4 Newton’s laws of motion
 
