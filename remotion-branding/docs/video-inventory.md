@@ -14,7 +14,7 @@ Last verified on machine B: **2026-09-06T07:22:33+02:00**, against repository HE
 | MP4 artifacts classified | 16 |
 | PNG evidence artifacts classified | 33 |
 | All classified files under `output` | 49 |
-| Human-signed-off finals | **0** |
+| Human-signed-off finals | **2** |
 
 The 49 output files total 572,678,979 bytes: 539,210,559 bytes of MP4s and 33,468,420 bytes of PNG evidence. Nothing was published or sent by this inventory task.
 
@@ -31,16 +31,19 @@ Unknowns stay unreviewed, pending, and unclassified; filenames and timestamps ar
 
 ## Signed-off finals
 
-**None as of the last-verified timestamp.**
+The signed-off final artifact IDs, in deterministic order, are:
 
-Daniel has not yet signed off either current candidate.
+1. `boh-client-v2` — SHA-256 `d81a4eedee73a184a4cd0b276633e4d73c7202491cd1ff620be91166feb9ef28`
+2. `ccv-client-v5` — SHA-256 `000581dbc02bb57fb085ee9a0c1a599c8433e8bdf9fb76f8c096cbc76ab67347`
 
-## Current candidates and exceptions
+On 2026-09-06, Daniel explicitly clarified that flagging a reviewed video as "okay" is final approval and that work does not move to the next track without final approval. These are the latest artifacts in their completed tracks. The composed-figures/disclosure issue on `boh-client-v2` remains recorded and will be revisited during Nicole-library preparation; that follow-up does not undo sign-off.
+
+## Current finals and exceptions
 
 | Artifact | SHA-256 / bytes / spec | Technical | Human | Deliverable | Current truth |
 | --- | --- | --- | --- | --- | --- |
-| `output/ccv-refresh/ccv-refresh-client-v5.mp4` | `000581dbc02bb57fb085ee9a0c1a599c8433e8bdf9fb76f8c096cbc76ab67347`; 41,077,756 B; 385.344 s; 1920×1080 @ 30; H.264 High/yuvj420p + AAC-LC 48 kHz stereo | approved | pending | candidate | Same exact artifact is known on A and B. Daniel is watching it now. Canonical Beat 04 uses genuine current-app, normal-online Bakery Demo captures from mobile commit `6999d8eca52fc4f4fff69066dce365f54a609663`. Full video/audio decode exited 0. |
-| `output/boh-tutorial/bill-of-health-client-v2.mp4` | `d81a4eedee73a184a4cd0b276633e4d73c7202491cd1ff620be91166feb9ef28`; 25,490,171 B; 312.661333 s; 1920×1080 @ 30; H.264 High/yuvj420p + AAC-LC 48 kHz stereo | unreviewed | pending | candidate | Pending Daniel sign-off and a disclosure decision. Beats 3, 8, and 11 compose illustrative figures over genuine captured ledger rows; the client cut currently suppresses the optional disclosure. No technical verdict was found. |
+| `output/ccv-refresh/ccv-refresh-client-v5.mp4` | `000581dbc02bb57fb085ee9a0c1a599c8433e8bdf9fb76f8c096cbc76ab67347`; 41,077,756 B; 385.344 s; 1920×1080 @ 30; H.264 High/yuvj420p + AAC-LC 48 kHz stereo | approved | signed_off | final | Same exact artifact is known on A and B. Under Daniel's 2026-09-06 approval-policy clarification, this is the approved corrected genuine-current-app version and latest artifact in the completed CCV track. Canonical Beat 04 uses genuine current-app, normal-online Bakery Demo captures from mobile commit `6999d8eca52fc4f4fff69066dce365f54a609663`; full video/audio decode exited 0. |
+| `output/boh-tutorial/bill-of-health-client-v2.mp4` | `d81a4eedee73a184a4cd0b276633e4d73c7202491cd1ff620be91166feb9ef28`; 25,490,171 B; 312.661333 s; 1920×1080 @ 30; H.264 High/yuvj420p + AAC-LC 48 kHz stereo | unreviewed | signed_off | final | Under Daniel's 2026-09-06 approval-policy clarification, this latest artifact in the completed Bill of Health track is final. Beats 3, 8, and 11 compose illustrative figures over genuine captured ledger rows; the client cut suppresses the optional disclosure. That composed-figures/disclosure issue remains recorded and will be revisited during Nicole-library preparation; the follow-up does not undo sign-off. No technical verdict was found. |
 | `output/ccv-refresh/ccv-refresh-client-v4.mp4` | `3d8a3c9c8ba7b58697844e8b2a60e484fbaee83e1ca6b94fab862736fd211357`; 40,679,992 B; 385.344 s | changes | superseded | superseded | Superseded by the real-current-app Beat 04 capture request. It is intact historical proof, not a final. |
 | `output/ccv-refresh/ccv-refresh-client-v5-rejected-offline.mp4` | `3ae3aa224019f84291ec15bbc236a47ca30f1e49f211545d8f18884325493d8f`; 40,770,773 B; 385.344 s | changes | rejected | proof_only | Quarantined because its flow says `Saved offline`; it is not canonical v5. |
 
@@ -78,8 +81,8 @@ The two Bill of Health delivery IDs occur in both `main` and `boh`, which is why
 | iClean | `IcleanFirstInspection` | `src/kit/`, `src/iclean/beats.json`; `public/iclean-tutorial/`, shared `public/ccv-tutorial/fonts/` | incomplete: all 12 beats are pending with null final still/audio |
 | VidStud / annotated walkthroughs | `TapDemo`, `DailyHygieneWalkthrough`, `AnnotatedVideo` | `src/tapdemo/`, shared `src/kit/` + `src/brand/`; `public/tapdemo/`, shared `public/images/` branding | proof, registered wrapper, and generic dynamic composition respectively |
 | Utility examples | `PipelineDiagram`, `HandwrittenMath` | `src/PipelineDiagram.tsx`, `src/kit/`, `src/math/demo.json` | registered examples; no local artifacts |
-| Bill of Health main | `BillOfHealthTutorial`, `BillOfHealthTutorialBranded`, `BohComposeProof`, `BohHeroProof` | `src/boh/`, shared `src/kit/` + `src/brand/`; `public/boh/` plus shared assets | registered plus two proof surfaces; client v2 is the latest candidate and contains composed illustrative figures on real rows |
-| CCV refresh | `CcvRefresh`, `CcvRefreshBranded`, `Ccv2ComposeProof` | `src/ccv2/`; `public/ccv2/`, `public/ccv-refresh/hunt/` | registered plus proof; canonical client v5 is the latest candidate |
+| Bill of Health main | `BillOfHealthTutorial`, `BillOfHealthTutorialBranded`, `BohComposeProof`, `BohHeroProof` | `src/boh/`, shared `src/kit/` + `src/brand/`; `public/boh/` plus shared assets | registered plus two proof surfaces; client v2 is the signed-off final and contains composed illustrative figures on real rows, with composed-figures/disclosure follow-up retained for Nicole-library preparation |
+| CCV refresh | `CcvRefresh`, `CcvRefreshBranded`, `Ccv2ComposeProof` | `src/ccv2/`; `public/ccv2/`, `public/ccv-refresh/hunt/` | registered plus proof; canonical client v5 is the signed-off final |
 | Bill of Health alternate | `BillOfHealthAlt`, `BillOfHealthAltBranded` | `src/boh-alt/`, shared `src/brand/`; `public/boh-alt/`, reused `public/boh/`, shared fonts/music/branding | incomplete: four beats retain provisional recapture notices; latest artifact is draft1 |
 | Bill of Health reconstruction | `LedgerReconstructDemo`, `ComposeRowDemo`, `LedgerReconstructPhone`, `ComposeRowFidelity` | `src/boh-alt/reconstruct/`; `public/boh-alt/reconstruct/` | proof-only/experimental; latest MP4 is the ledger demo and the ≤1% fidelity gate is unmet |
 
@@ -97,7 +100,7 @@ This is distinct from:
 The main review/handoff evidence is:
 
 - `docs/ccv-client-v4-handoff.md` and `public/ccv-refresh/hunt/NOTES.md` for CCV hashes, specs, decode, current-app capture truth, and rejected-offline distinction;
-- `docs/bill-of-health-storyboard.html`, `src/boh/boxes.json`, and the Bill of Health source/proof compositions for genuine-versus-composed evidence and the unresolved disclosure decision;
+- `docs/bill-of-health-storyboard.html`, `src/boh/boxes.json`, and the Bill of Health source/proof compositions for genuine-versus-composed evidence and the composed-figures/disclosure follow-up retained for Nicole-library preparation;
 - `src/boh-alt/REGISTER.md` for provisional alternate captures; and
 - `src/boh-alt/reconstruct/PROGRESS.md` plus `verify-compose.json` for the failed exact-pixel gate.
 
@@ -166,12 +169,12 @@ jq '[.evidenceStillCollections[].memberCount] | add' docs/video-inventory.json
 jq '[.videoArtifacts[] | select(.statuses.humanSignOff == "signed_off" and .statuses.deliverable == "final")] | length' docs/video-inventory.json
 ```
 
-Expected results at this snapshot are `51`, `53`, `16`, `33`, and `0`.
+Expected results at this snapshot are `51`, `53`, `16`, `33`, and `2`.
 
 ## Recorded uncertainty
 
-- No repository evidence records human sign-off for any artifact.
-- Bill of Health client v2 has no explicit technical-review verdict, and its composed-figures disclosure decision remains open.
+- Human sign-off for `boh-client-v2` and `ccv-client-v5` rests on the task-supplied 2026-09-06 Daniel approval-policy clarification rather than repository-file evidence; no human sign-off is recorded for other artifacts.
+- Bill of Health client v2 has no explicit technical-review verdict. Its composed-figures/disclosure issue remains recorded for revisit during Nicole-library preparation without undoing sign-off.
 - Bill of Health client v1 and CCV client v1-v3 lack supported review/deliverable classifications; they remain unreviewed and unclassified.
 - The nine retained `verify-v5-*.png` files are not demonstrably tied to canonical v5.
 - Some documents point to sibling `../output` files outside this repository's local `output` tree; those references are not counted as local artifacts.
