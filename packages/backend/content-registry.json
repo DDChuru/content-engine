@@ -916,10 +916,10 @@
           "slug": "mechanics-drawing-travel-graphs",
           "syllabus": "Cambridge 9709 Mechanics (Paper 4) · Kinematics",
           "syllabusCode": "M4.2c",
-          "status": "rebuilding",
+          "status": "complete",
           "createdAt": "2026-09-06",
-          "pacing": "PACING.md standard: 8 scenes, two slow scenes (hand-written working at pen pace, 2 s holds, ELEVENLABS_SPEED 0.9)",
-          "pipeline": "frame study → Sol notes/storyboard → Astra re-pace → Sol build on B → render on A → Fable review",
+          "pacing": "TEACHING-STANDARD §1-8: 7 scenes, 2 slow (return-time area 52 s, annotated journey close 75 s), spoken set-ups, scope = recording (cyclist only)",
+          "pipeline": "frame study (Sol) -> Astra storyboard/narration/composition on B with syllabus + TEACHING-STANDARD -> render on A -> Fable contact-sheet review",
           "source": {
             "project": "projects/mechanics-drawing-travel-graphs/",
             "recording": "~/Documents/9709/",
@@ -929,7 +929,7 @@
             "landscape": {
               "compositionId": "MechanicsDrawingTravelGraphs",
               "resolution": "1920x1080",
-              "durationS": 250.03,
+              "durationS": 272.26,
               "composition": "src/remotion/compositions/MechanicsDrawingTravelGraphs.tsx",
               "render": "output/mechanics/drawing-travel-graphs.mp4",
               "contactSheet": "output/mechanics/drawing-travel-graphs-sheet.png"
@@ -938,16 +938,15 @@
           "narration": {
             "voiceId": "gYWKdgLtqjPO3D5uDrDP",
             "provider": "elevenlabs",
-            "scenes": 8,
+            "scenes": 7,
             "sceneDurations": [
-              14.4,
-              18.2,
-              17.9,
-              74.0,
-              17.3,
-              64.9,
-              14.6,
-              18.4
+              25.05,
+              31.14,
+              43.94,
+              52.04,
+              18.05,
+              26.8,
+              75.05
             ],
             "audio": [
               "src/remotion/public/audio/mechanics/drawing-travel-graphs-s01.mp3",
@@ -956,23 +955,29 @@
               "src/remotion/public/audio/mechanics/drawing-travel-graphs-s04.mp3",
               "src/remotion/public/audio/mechanics/drawing-travel-graphs-s05.mp3",
               "src/remotion/public/audio/mechanics/drawing-travel-graphs-s06.mp3",
-              "src/remotion/public/audio/mechanics/drawing-travel-graphs-s07.mp3",
-              "src/remotion/public/audio/mechanics/drawing-travel-graphs-s08.mp3"
+              "src/remotion/public/audio/mechanics/drawing-travel-graphs-s07.mp3"
             ],
             "transcript": "src/remotion/public/transcripts/mechanics/drawing-travel-graphs.json",
-            "cues": 30,
-            "transcribeScript": "src/scripts/transcribe-mechanics-drawing-travel-graphs-local.py"
+            "cues": 81,
+            "transcribeScript": "src/scripts/transcribe-mechanics-drawing-travel-graphs-local.py",
+            "speed": {
+              "brisk": 1.0,
+              "slow": 0.9
+            }
           },
           "commits": {
             "build": "1dc49cb",
-            "rootFix": "4988d10"
+            "rootFix": "4988d10",
+            "astraNarration": "da90e4b",
+            "astraBuild": "8e19ecf"
           },
           "app": {
             "notesPage": "/notes/mechanics-drawing-travel-graphs",
             "mapCode": "M4.2c"
           },
           "reviewNotes": [
-            "2026-09-06 Durai: demonstration good but examples not clearly set up (needs spoken 'we will now look at…' + distance vs displacement idea before drawing); time-axis text collision ('6' over 't / s'); also lab chrome, g=9.8, 4 regions. Astra rebuild dispatched under TEACHING-STANDARD §1-8."
+            "2026-09-06 Durai: demonstration good but examples not clearly set up (needs spoken 'we will now look at…' + distance vs displacement idea before drawing); time-axis text collision ('6' over 't / s'); also lab chrome, g=9.8, 4 regions. Astra rebuild dispatched under TEACHING-STANDARD §1-8.",
+            "2026-09-06 Astra rebuild: 4:32, 81 cues, 115 audited stills, zero axis collisions, g=10. Ball example omitted (not in recording FRAME-LOG) — Durai to decide whether to add as exception. Fable contact-sheet review passed."
           ]
         }
       },
