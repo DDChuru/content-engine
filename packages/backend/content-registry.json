@@ -726,6 +726,112 @@
             "video": "apps/student-learn/public/videos/mechanics-types-of-forces.mp4 (gitignored copy)",
             "mapCode": "M4.1"
           }
+        },
+        "mechanics-displacement-time-graphs": {
+          "label": "Displacement-time graphs",
+          "slug": "mechanics-displacement-time-graphs",
+          "syllabus": "Cambridge 9709 Mechanics (Paper 4) \u00b7 Kinematics",
+          "syllabusCode": "M4.2a",
+          "status": "complete",
+          "createdAt": "2026-09-06",
+          "pipeline": "1 fps frame study (2x recording) \u2192 Sol notes/storyboard \u2192 Sol build on B \u2192 render on A \u2192 Fable review",
+          "source": {
+            "project": "projects/mechanics-displacement-time-graphs/",
+            "recording": "~/Documents/9709/",
+            "pdf": "projects/mechanics-displacement-time-graphs/source.pdf"
+          },
+          "formats": {
+            "landscape": {
+              "compositionId": "MechanicsDisplacementTimeGraphs",
+              "resolution": "1920x1080",
+              "durationS": 161.92,
+              "composition": "src/remotion/compositions/MechanicsDisplacementTimeGraphs.tsx",
+              "render": "output/mechanics/displacement-time-graphs.mp4",
+              "contactSheet": "output/mechanics/displacement-time-graphs-sheet.png"
+            }
+          },
+          "narration": {
+            "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+            "provider": "elevenlabs",
+            "scenes": 10,
+            "audio": [
+              "src/remotion/public/audio/mechanics/displacement-time-graphs-s01.mp3",
+              "src/remotion/public/audio/mechanics/displacement-time-graphs-s02.mp3",
+              "src/remotion/public/audio/mechanics/displacement-time-graphs-s03.mp3",
+              "src/remotion/public/audio/mechanics/displacement-time-graphs-s04.mp3",
+              "src/remotion/public/audio/mechanics/displacement-time-graphs-s05.mp3",
+              "src/remotion/public/audio/mechanics/displacement-time-graphs-s06.mp3",
+              "src/remotion/public/audio/mechanics/displacement-time-graphs-s07.mp3",
+              "src/remotion/public/audio/mechanics/displacement-time-graphs-s08.mp3",
+              "src/remotion/public/audio/mechanics/displacement-time-graphs-s09.mp3",
+              "src/remotion/public/audio/mechanics/displacement-time-graphs-s10.mp3"
+            ],
+            "transcript": "src/remotion/public/transcripts/mechanics/displacement-time-graphs.json",
+            "cues": 49,
+            "transcribeScript": "src/scripts/transcribe-mechanics-displacement-time-graphs-local.py"
+          },
+          "commits": {
+            "build": "53e2d6b"
+          },
+          "app": {
+            "notesPage": "/notes/mechanics-displacement-time-graphs",
+            "mapCode": "M4.2a"
+          },
+          "reviewNotes": []
+        },
+        "mechanics-velocity-time-graphs": {
+          "label": "Velocity-time graphs",
+          "slug": "mechanics-velocity-time-graphs",
+          "syllabus": "Cambridge 9709 Mechanics (Paper 4) \u00b7 Kinematics",
+          "syllabusCode": "M4.2b",
+          "status": "complete",
+          "createdAt": "2026-09-06",
+          "pipeline": "1 fps frame study (2x recording) \u2192 Sol notes/storyboard \u2192 Sol build on B \u2192 render on A \u2192 Fable review",
+          "source": {
+            "project": "projects/mechanics-velocity-time-graphs/",
+            "recording": "~/Documents/9709/",
+            "pdf": "projects/mechanics-velocity-time-graphs/source.pdf"
+          },
+          "formats": {
+            "landscape": {
+              "compositionId": "MechanicsVelocityTimeGraphs",
+              "resolution": "1920x1080",
+              "durationS": 171.09,
+              "composition": "src/remotion/compositions/MechanicsVelocityTimeGraphs.tsx",
+              "render": "output/mechanics/velocity-time-graphs.mp4",
+              "contactSheet": "output/mechanics/velocity-time-graphs-sheet.png"
+            }
+          },
+          "narration": {
+            "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+            "provider": "elevenlabs",
+            "scenes": 10,
+            "audio": [
+              "src/remotion/public/audio/mechanics/velocity-time-graphs-s01.mp3",
+              "src/remotion/public/audio/mechanics/velocity-time-graphs-s02.mp3",
+              "src/remotion/public/audio/mechanics/velocity-time-graphs-s03.mp3",
+              "src/remotion/public/audio/mechanics/velocity-time-graphs-s04.mp3",
+              "src/remotion/public/audio/mechanics/velocity-time-graphs-s05.mp3",
+              "src/remotion/public/audio/mechanics/velocity-time-graphs-s06.mp3",
+              "src/remotion/public/audio/mechanics/velocity-time-graphs-s07.mp3",
+              "src/remotion/public/audio/mechanics/velocity-time-graphs-s08.mp3",
+              "src/remotion/public/audio/mechanics/velocity-time-graphs-s09.mp3",
+              "src/remotion/public/audio/mechanics/velocity-time-graphs-s10.mp3"
+            ],
+            "transcript": "src/remotion/public/transcripts/mechanics/velocity-time-graphs.json",
+            "cues": 51,
+            "transcribeScript": "src/scripts/transcribe-mechanics-velocity-time-graphs-local.py"
+          },
+          "commits": {
+            "build": "38b5b24"
+          },
+          "app": {
+            "notesPage": "/notes/mechanics-velocity-time-graphs",
+            "mapCode": "M4.2b"
+          },
+          "reviewNotes": [
+            "scene 5 tile count vs 17.8 m readout reads inconsistently (polish)"
+          ]
         }
       },
       "inkTutor": {
@@ -789,10 +895,10 @@
     }
   },
   "summary": {
-    "totalTopics": 13,
+    "totalTopics": 15,
     "totalImages": 46,
-    "totalAudioFiles": 68,
-    "totalRenders": 23,
+    "totalAudioFiles": 88,
+    "totalRenders": 25,
     "totalCost": 5.78,
     "voiceId": "gYWKdgLtqjPO3D5uDrDP",
     "voiceNote": "ElevenLabs cloned voice \u2014 consistent across all biology content",
