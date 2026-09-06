@@ -2,7 +2,7 @@
   "project": "mechanics-multiple-collisions",
   "sceneCount": 6,
   "totalDuration": 296.803265,
-  "generatedAt": "2026-09-06T17:01:56.676533",
+  "generatedAt": "2026-09-06T17:20:08.641178",
   "engine": "faster-whisper-small (local)",
   "scenes": [
     {
@@ -2043,7 +2043,10 @@
         "signed": 21.6,
         "diagram": 29.74,
         "carry": 33.7,
-        "decide": 39.44
+        "decide": 39.44,
+        "tick-diagram": 32.7,
+        "tick-carry": 37.94,
+        "tick-decide": 41.96
       },
       "generatedAt": "2026-09-06T16:54:11.695523",
       "engine": "faster-whisper-small (local)",

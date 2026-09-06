@@ -363,6 +363,27 @@ JOBS = [
                 "searchTerms": [
                     "decide whether"
                 ]
+            },
+            {
+                "id": "tick-diagram",
+                "searchTerms": [
+                    "for each collision"
+                ],
+                "edge": "end"
+            },
+            {
+                "id": "tick-carry",
+                "searchTerms": [
+                    "into the next collision"
+                ],
+                "edge": "end"
+            },
+            {
+                "id": "tick-decide",
+                "searchTerms": [
+                    "collide again"
+                ],
+                "edge": "end"
             }
         ]
     },
@@ -577,6 +598,8 @@ def resolve_cues(words, cue_keywords, beats=None):
                 start_index = matches[selected_occurrence - 1]
                 indices = range(start_index, start_index + len(term_words))
                 cue_map[cue["id"]] = round(max(words[start_index]["start"], expected["start"] if expected else 0), 2)
+                if cue.get("edge") == "end":
+                    cue_map[cue["id"]] = round(words[start_index + len(term_words) - 1]["end"], 2)
                 resolved = True
                 break
 
