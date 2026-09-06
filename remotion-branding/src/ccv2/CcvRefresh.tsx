@@ -11,6 +11,7 @@
  *   src/ccv2/timing.json    — measured voStart/duration per beat
  *   src/ccv2/boxes.json     — normalized ring rects measured on the stills
  *   public/ccv2/shots/ccv-NN.png — 720×1600 captures (I&J Blockbusters + Brito's)
+ *   public/ccv-refresh/hunt/bakery-demo/*.png — current-app Beat 04 captures (Bakery Demo)
  *   public/ccv2/audio/NN-id.mp3  — per-beat VO
  */
 import React, { useEffect, useState } from 'react';
@@ -70,6 +71,13 @@ const HERO_A = '#1A2330';
 const HERO_B = '#0B1219';
 
 const ASSET_BASE = 'ccv2';
+const CURRENT_ISSUE_SHOTS: Record<string, string> = {
+  'ccv-04-current-unfilled': 'ccv-refresh/hunt/bakery-demo/10-current-6999d8e-eco-san-sh12-form-unfilled.png',
+  'ccv-04-current-filled-top': 'ccv-refresh/hunt/bakery-demo/11-current-6999d8e-eco-san-sh12-filled-top.png',
+  'ccv-04-current-filled-computed': 'ccv-refresh/hunt/bakery-demo/12-current-6999d8e-eco-san-sh12-filled-computed.png',
+  'ccv-04-current-online-dialog': 'ccv-refresh/hunt/bakery-demo/13-current-6999d8e-eco-san-sh12-normal-online-success-dialog.png',
+};
+const resolveShotPath = (shot: string) => CURRENT_ISSUE_SHOTS[shot] ?? `${ASSET_BASE}/shots/${shot}.png`;
 const STILL_W = 720;
 const STILL_H = 1600;
 const CROP_TOP = 120; // status bar on the 720×1600 emulator capture (clock centred at y≈64; toolbar starts at 120)
@@ -118,7 +126,7 @@ const RING_PLAN: Record<string, RingStep[]> = {
     { box: 'issueType', cue: 'issue type' },
     { box: 'quantities', cue: 'enter both' },
     { box: 'awaitingIssue', cue: 'Awaiting verification' },
-  ], // the current blank form is composed with demonstration values; the later hub/Verify example uses real captures
+  ], // the current form and online completion dialog are one real Bakery Demo record; the later hub/Verify example is the existing Brito's capture
   '05-standard': [{ box: 'rangeCard', cue: 'The approved range' }, { box: 'calcLine', cue: 'The calculation' }],
   '07-baseline': [{ box: 'baselineCard', cue: 'So once a shift' }, { box: 'baselineButton', cue: 'One measurement, once' }],
   '08-inspec': [{ box: 'verdictPass', cue: 'In spec.' }],
@@ -131,8 +139,10 @@ const RING_PLAN: Record<string, RingStep[]> = {
 type ShotStep = { shot: string; cue?: string };
 const SHOT_PLAN: Record<string, ShotStep[]> = {
   '04-issue': [
-    { shot: 'ccv-04a-picker' },
-    { shot: 'ccv-04', cue: 'Then complete the form' },
+    { shot: 'ccv-04-current-unfilled' },
+    { shot: 'ccv-04-current-filled-top', cue: 'Then complete the form' },
+    { shot: 'ccv-04-current-filled-computed', cue: 'the app calculates' },
+    { shot: 'ccv-04-current-online-dialog', cue: 'Record the issue' },
     { shot: 'ccv-04c-awaiting', cue: 'On the Chemical hub' },
   ],
   '05-standard': [{ shot: 'ccv-05' }, { shot: 'ccv-05b-sheet', cue: 'How to test.' }],
@@ -224,8 +234,8 @@ type ComposePlan = { base: string; patches: TextPatch[]; panels?: PanelPatch[]; 
 const APP_INK = '#141A21';
 const APP_MUTED = '#939CA8';
 const COMPOSE_PLAN: Record<string, ComposePlan> = {
-  // The captured form is blank: batch/lot, chemical and water are set. The COMPUTED DILUTION value
-  // sits under the nav pill in this capture, so the column carries it (ComputedPanel).
+  // Legacy v4 proof only. The production Beat 04 path now uses the genuine current-app captures
+  // in CURRENT_ISSUE_SHOTS and never applies these composed values.
   '04-issue': {
     base: 'ccv-04',
     patches: [
@@ -240,10 +250,10 @@ const effectiveShot = (shot: string | null, beat: Beat) => (shot && COMPOSE_PLAN
 /** A real still drawn at still resolution and scaled into place, with any composed regions on top. */
 const ComposedStill: React.FC<{ still: string; left: number; top: number; scale: number; plan?: ComposePlan | null; opacity?: number }> = ({ still, left, top, scale, plan, opacity = 1 }) => (
   <div style={{ position: 'absolute', left, top, width: STILL_W, height: STILL_H, transform: `scale(${scale})`, transformOrigin: 'top left', opacity }}>
-    <Img src={staticFile(`${ASSET_BASE}/shots/${still}.png`)} style={{ position: 'absolute', left: 0, top: 0, width: STILL_W, height: STILL_H }} />
+    <Img src={staticFile(resolveShotPath(still))} style={{ position: 'absolute', left: 0, top: 0, width: STILL_W, height: STILL_H }} />
     {plan?.shifts?.map((sh, i) => (
       <div key={`s${i}`} style={{ position: 'absolute', left: 0, top: sh.from + sh.dy, width: STILL_W, height: sh.to - sh.from, overflow: 'hidden' }}>
-        <Img src={staticFile(`${ASSET_BASE}/shots/${still}.png`)} style={{ position: 'absolute', left: 0, top: -sh.from, width: STILL_W, height: STILL_H }} />
+        <Img src={staticFile(resolveShotPath(still))} style={{ position: 'absolute', left: 0, top: -sh.from, width: STILL_W, height: STILL_H }} />
       </div>
     ))}
     {plan ? (
@@ -303,7 +313,7 @@ const GuardedAudio: React.FC<{ src: string; volume: number }> = ({ src, volume }
   if (!exists) return null;
   return <Audio src={staticFile(src)} volume={volume} />;
 };
-const shotPath = (shot: string | null) => (shot ? `${ASSET_BASE}/shots/${shot}.png` : null);
+const shotPath = (shot: string | null) => (shot ? resolveShotPath(shot) : null);
 /** A July still (public/ccv-tutorial/shots) drawn only if it exists. */
 const GuardedImg: React.FC<{ path: string; style: React.CSSProperties }> = ({ path, style }) => {
   const exists = useAssetExists(path);
@@ -426,39 +436,35 @@ const IssueWalkPanel: React.FC<{ beat: Beat; sec: number; appear: number }> = ({
   );
 };
 
-/** Beat 4: the computed dilution the capture hides under its nav pill, drawn in the column as the app draws it. */
+/** Beat 4: genuine current-app quantities and computed dilution from the same pre-submit record. */
 const ComputedPanel: React.FC<{ beat: Beat; sec: number; appear: number }> = ({ beat, sec, appear }) => {
   const a = rise(sec, cueAt(beat, 'the app calculates'), 18) * (1 - rise(sec, cueAt(beat, 'Record the issue'), 18)) * appear;
+  const crop = { x: 30, y: 585, w: 660, h: 440, scale: 1.18 };
   return (
-    <div style={{ padding: '18px 24px', borderRadius: 18, border: `2px solid rgba(${hexToRgb(EMERALD)},0.7)`, opacity: a, transform: `translateY(${(1 - a) * 16}px)`, display: 'flex', alignItems: 'center', gap: 30 }}>
-      <div>
-        <div style={{ color: EMERALD, fontFamily: BODY, fontSize: 20, fontWeight: 700, letterSpacing: 2.6, textTransform: 'uppercase' }}>Computed dilution</div>
-        <div style={{ marginTop: 5, color: '#fff', fontFamily: DISPLAY, fontWeight: 700, fontSize: 66, lineHeight: 1, fontVariantNumeric: 'tabular-nums' }}>2.0 %</div>
-      </div>
-      <div style={{ color: 'rgba(255,255,255,0.75)', fontFamily: BODY, fontSize: 24, lineHeight: 1.3 }}>
-        1 L chemical · 50 L water
-        <br />
-        Approved 0.5–5.0 % · <span style={{ color: EMERALD, fontWeight: 700 }}>in range</span>
-        <br />
-        <span style={{ color: SKY, fontSize: 18, fontWeight: 700, letterSpacing: 2, textTransform: 'uppercase' }}>Composed form values · no live record</span>
+    <div style={{ opacity: a, transform: `translateY(${(1 - a) * 16}px)` }}>
+      <div style={{ color: EMERALD, fontFamily: BODY, fontSize: 17, fontWeight: 700, letterSpacing: 2.3, textTransform: 'uppercase' }}>Current app · same Bakery Demo record · pre-submit</div>
+      <div style={{ position: 'relative', width: crop.w * crop.scale, height: crop.h * crop.scale, marginTop: 9, overflow: 'hidden', borderRadius: 18, border: `2px solid rgba(${hexToRgb(EMERALD)},0.7)`, background: CANVAS }}>
+        <Img
+          src={staticFile(CURRENT_ISSUE_SHOTS['ccv-04-current-filled-computed'])}
+          style={{ position: 'absolute', left: -crop.x * crop.scale, top: -crop.y * crop.scale, width: STILL_W * crop.scale, height: STILL_H * crop.scale }}
+        />
       </div>
     </div>
   );
 };
 
-/** The current completion dialog was not safely capturable without creating a record. */
+/** Genuine normal-online choice after the same authorized Bakery Demo manual-dilution issue. */
 const ManualCompletionPanel: React.FC<{ beat: Beat; sec: number; appear: number }> = ({ beat, sec, appear }) => {
   const a = rise(sec, cueAt(beat, 'Record the issue'), 18) * (1 - rise(sec, cueAt(beat, 'On the Chemical hub'), 18)) * appear;
-  const now = rise(sec, cueAt(beat, 'normally choose Verify now'), 12);
+  const crop = { x: 40, y: 650, w: 640, h: 375, scale: 1.28 };
   return (
-    <div style={{ padding: '15px 20px', borderRadius: 18, border: `2px solid rgba(${hexToRgb(SKY)},0.62)`, background: 'rgba(255,255,255,0.04)', opacity: a, transform: `translateY(${(1 - a) * 16}px)` }}>
-      <div>
-        <div style={{ color: SKY, fontFamily: BODY, fontSize: 17, fontWeight: 700, letterSpacing: 2.3, textTransform: 'uppercase' }}>Composed illustration · manual dilution only</div>
-        <div style={{ marginTop: 4, color: '#fff', fontFamily: DISPLAY, fontSize: 34, fontWeight: 700 }}>Issue recorded. Verify it now?</div>
-      </div>
-      <div style={{ display: 'flex', gap: 14, marginTop: 13 }}>
-        <div style={{ flex: 1, borderRadius: 12, border: `2px solid rgba(${hexToRgb(SKY)},0.5)`, color: SKY, fontFamily: DISPLAY, fontWeight: 700, fontSize: 24, letterSpacing: 1.8, textAlign: 'center', padding: '10px 14px' }}>VERIFY LATER</div>
-        <div style={{ flex: 1, borderRadius: 12, background: now > 0.5 ? SKY : `rgba(${hexToRgb(SKY)},0.5)`, color: '#fff', fontFamily: DISPLAY, fontWeight: 700, fontSize: 24, letterSpacing: 1.8, textAlign: 'center', padding: '10px 14px' }}>VERIFY NOW</div>
+    <div style={{ opacity: a, transform: `translateY(${(1 - a) * 16}px)` }}>
+      <div style={{ color: SKY, fontFamily: BODY, fontSize: 17, fontWeight: 700, letterSpacing: 2.3, textTransform: 'uppercase' }}>Current app · same Bakery Demo record · normal online</div>
+      <div style={{ position: 'relative', width: crop.w * crop.scale, height: crop.h * crop.scale, marginTop: 9, overflow: 'hidden', borderRadius: 18, border: `2px solid rgba(${hexToRgb(SKY)},0.62)`, background: '#666' }}>
+        <Img
+          src={staticFile(CURRENT_ISSUE_SHOTS['ccv-04-current-online-dialog'])}
+          style={{ position: 'absolute', left: -crop.x * crop.scale, top: -crop.y * crop.scale, width: STILL_W * crop.scale, height: STILL_H * crop.scale }}
+        />
       </div>
     </div>
   );
@@ -481,7 +487,7 @@ const PendingRoutePanel: React.FC<{ beat: Beat; sec: number; appear: number }> =
         {item('Awaiting verification', 'includes pending issues from prior days', AMBER, pending)}
         {item('Find issue · tap VERIFY', 'continues that existing pending check', SKY, verify)}
       </div>
-      <div style={{ marginTop: 8, color: 'rgba(255,255,255,0.5)', fontFamily: BODY, fontSize: 16 }}>ECO-CLEAN FA15 is not the composed manual-dilution example shown earlier.</div>
+      <div style={{ marginTop: 8, color: 'rgba(255,255,255,0.5)', fontFamily: BODY, fontSize: 16 }}>ECO-CLEAN FA15 is a separate Brito's pending check, not the Bakery Demo manual-dilution issue shown earlier.</div>
     </div>
   );
 };
@@ -921,8 +927,8 @@ export const Ccv2ComposeProof: React.FC = () => {
       ))}
       <div style={{ position: 'absolute', left: 1000, top: 110, width: 820, padding: 34, borderRadius: 18, border: `2px solid rgba(${hexToRgb(SKY)},0.45)`, background: '#FFFFFF' }}>
         {label('04 · production disclosure')}
-        <div style={{ color: APP_INK, fontFamily: DISPLAY, fontWeight: 700, fontSize: 48, lineHeight: 1.05 }}>Form values and the manual completion dialog are composed illustrations.</div>
-        <div style={{ marginTop: 22, color: APP_MUTED, fontFamily: BODY, fontSize: 28, lineHeight: 1.45 }}>No live issue was submitted. Awaiting verification and its Verify destination are genuine current-build captures of a separate existing Brito's pending check.</div>
+        <div style={{ color: APP_INK, fontFamily: DISPLAY, fontWeight: 700, fontSize: 48, lineHeight: 1.05 }}>Legacy v4 compose proof — not used in the v5 Beat 04 cut.</div>
+        <div style={{ marginTop: 22, color: APP_MUTED, fontFamily: BODY, fontSize: 28, lineHeight: 1.45 }}>V5 uses genuine current-app captures of one Bakery Demo form and its normal-online Verify later / Verify now alert. This sheet retains the prior raw/composed comparison only. The later Awaiting verification route remains the separate existing Brito's pending check.</div>
       </div>
     </AbsoluteFill>
   );

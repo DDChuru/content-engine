@@ -1,6 +1,15 @@
 # CCV Client V4 Review Handoff
 
-**Status:** the Beat 04 footer-clearance correction is applied and its two review stills are refreshed; no full MP4 has been rendered. The full `client-v4.mp4` render remains gated on formal review.
+**Status:** the historical v4 is intact at `output/ccv-refresh/ccv-refresh-client-v4.mp4`, SHA-256 `3d8a3c9c8ba7b58697844e8b2a60e484fbaee83e1ca6b94fab862736fd211357`.
+
+> **V5 current-source correction (2026-09-06):** the replacement Beat 04 capture comes from `origin/dev` at exact mobile commit `6999d8eca52fc4f4fff69066dce365f54a609663`, checked out in the isolated worktree `/home/durai/Documents/projects/react-native/e-wizer-mobile-capture-dev` and run through the current development client with Metro. This source contains the required batch / lot UI and sends `batchNumber`. The v4 MP4 and its historical review stills remain unchanged.
+>
+> **Rejected offline v5:** the prior 40,770,773-byte render is quarantined as `output/ccv-refresh/ccv-refresh-client-v5-rejected-offline.mp4`, SHA-256 `3ae3aa224019f84291ec15bbc236a47ca30f1e49f211545d8f18884325493d8f`. Its historical validation was 1920×1080 / 30 fps, 11,559 H.264 High frames, AAC-LC 48 kHz stereo, and 385.344 seconds, but its offline capture is rejected and it is not canonical.
+> The rejected attempt came from the stale July checkout `/home/durai/Documents/projects/react-native/e-wizer-mobile` (`main` at `c1820fe`). Request ID `44c2641472fa1ded` failed with exactly `Batch / lot number is required.` This stale-client failure is not evidence about the current-source capture.
+>
+> **Canonical v5:** `output/ccv-refresh/ccv-refresh-client-v5.mp4`, 41,077,756 bytes, SHA-256 `000581dbc02bb57fb085ee9a0c1a599c8433e8bdf9fb76f8c096cbc76ab67347`. It is H.264 High / yuvj420p at 1920×1080, 30 fps, and 11,559 video frames, with AAC-LC 48 kHz stereo audio and a 385.344-second container duration. Full ffmpeg video-and-audio decode completed with exit 0.
+
+> **Next capture environment (current as of 2026-09-06):** `e_wizer_api36` is currently down. The current-source capture worktree remains clean at exact commit `6999d8eca52fc4f4fff69066dce365f54a609663`. Cleaning Verification must cold-start `emulator-5554`, restore the adb reverse for `tcp:8081`, start Metro from `/home/durai/Documents/projects/react-native/e-wizer-mobile-capture-dev`, and re-authenticate and sync Bakery Demo. The successful CCV dialog state is not preserved on-device; its evidence is the hashed asset `public/ccv-refresh/hunt/bakery-demo/13-current-6999d8e-eco-san-sh12-normal-online-success-dialog.png` on disk (SHA-256 `4c0d22043801d677e1db1b2e6cad3b77452db6dab4c08e621f844f22b09da020`).
 
 **Project:** `/home/durai/Documents/projects/content-engine/remotion-branding`
 
@@ -57,12 +66,19 @@ Narration remains the tutorial audio spine. The music bed remains under the intr
 
 ## Capture And Illustration Provenance
 
-All new form-state captures were made client-side in the existing safe Android emulator session (`emulator-5554`, SHEQ demo context). No Complete verification, Record, Record and Escalate, submission, or other production-writing action was pressed.
+The original v4 form-state captures were made client-side in the existing safe Android emulator session (`emulator-5554`, SHEQ demo context). No Complete verification, Record, Record and Escalate, submission, or other production-writing action was pressed during that v4 capture pass.
+
+The canonical-v5 replacement sequence was captured from Bakery Demo using `demo@sunbakebread.co.za` on the current development client/Metro session. It records station `ECO-SAN SH12` (`t570cnk57a27y28q0sgg82r25n89kjvy`), batch / lot `LOT-20250905`, Entire factory, manual dilution, `1 L` chemical plus `50 L` water, computed `2.0%`, and approved range `0.5–5.0%` in range. The normal-online write and master sync were validated. The untouched success dialog reads `Manual issue recorded` and `The dilution issue is logged. Verify now, or leave it pending for later.`, with `VERIFY LATER` and `VERIFY NOW`; neither action was pressed.
 
 | Asset | Provenance and state |
 | --- | --- |
-| `public/ccv2/shots/ccv-04.png` | Genuine blank issue-form capture used as the base. Batch/lot `LOT-20250905`, chemical `1`, and water `50` are composed values. The calculated 2.0% explanatory panel is composed. No issue was recorded. |
-| Beat 04 manual completion panel | Explicitly labeled composed illustration. It shows the manual-dilution-only Verify later / Verify now choice because safely capturing that dialog would require recording an issue. |
+| `public/ccv2/shots/ccv-04.png` | Historical v4 blank issue-form base with composed batch/lot and quantities. Retained for the v4 proof composition only; canonical v5 Beat 04 does not use it. |
+| `public/ccv-refresh/hunt/bakery-demo/10-current-6999d8e-eco-san-sh12-form-unfilled.png` | Current-source unfilled form for `ECO-SAN SH12`. SHA-256 `804ffc37294287c3d7eac1e85ae1b9c0ff5cecabb0b5c3e4cbd6f29b6e4d9b58`. |
+| `public/ccv-refresh/hunt/bakery-demo/11-current-6999d8e-eco-san-sh12-filled-top.png` | Current-source form showing `LOT-20250905`, Entire factory, manual dilution, `1 L` chemical, and `50 L` water. SHA-256 `6ac5743b3a7f50361dbc66d4057cd1b1d0378e25cfee340ec989aa67b4b91e1b`. |
+| `public/ccv-refresh/hunt/bakery-demo/12-current-6999d8e-eco-san-sh12-filled-computed.png` | Current-source computed state showing `2.0%` and approved `0.5–5.0% · in range`. SHA-256 `37ab6c496864019517c3bacf88e929eb63b4b8ad8e36cbee47275d630f559f72`. |
+| `public/ccv-refresh/hunt/bakery-demo/13-current-6999d8e-eco-san-sh12-normal-online-success-dialog.png` | Current-source, normal-online success dialog with no error toast. `VERIFY LATER` and `VERIFY NOW` remain untouched. SHA-256 `4c0d22043801d677e1db1b2e6cad3b77452db6dab4c08e621f844f22b09da020`. |
+| `public/ccv-refresh/hunt/bakery-demo/03-manual-dilution-post-issue-verify-now-later-real.png` | Historical rejected offline capture from the stale workflow. Quarantined; not canonical v5 source material. SHA-256 `a239e5df1b77d2251f8e419753036182bb09fcba226ec7a24f5846360bdf32f4`. |
+| `public/ccv-refresh/hunt/bakery-demo/09-rejected-attempt-a-eco-san-sh12-saved-offline.png` | Historical rejected `Saved offline` attempt. Quarantined; not canonical v5 source material. SHA-256 `5402ed8fe78573b643675bdee2400f5ad430a7746d0469e1bc3cbeb84e70495a`. |
 | `public/ccv2/shots/ccv-04c-awaiting.png` | Genuine current-build Brito's Chemical hub capture showing Awaiting verification, including earlier-day issues and a Verify action. This is a separate existing pending-check example. |
 | `public/ccv2/shots/ccv-04d-pending-verify.png` | Genuine destination after opening that separate Brito's ECO-CLEAN FA15 pending check. It is a conductivity-method screen; Beat 04 deliberately shows only the destination header/issue/range crop and excludes the baseline card. It is not the destination of the composed Sandrox manual example. |
 | `public/ccv2/shots/ccv-05.png` | Genuine unsaved intermediate client-side state: 20 drops entered, percentage empty, no verdict. SHA-256 `8f00edd62046e7a3e6c48b06cfb71bd88781b194a0817abde38e94671cea31ab`. |
@@ -77,9 +93,9 @@ The removed no-spec anomaly beat has no active narration, timing, shot, ring, zo
 - `public/ccv2/audio/06-06-lock.mp3`
 - `public/ccv2/shots/ccv-06.png`
 
-## Selected Review Stills
+## Historical V4 Selected Review Stills
 
-Current review directory: `/home/durai/Documents/projects/content-engine/remotion-branding/output/ccv-refresh/verify-v4-review-fixes`
+Historical v4 review directory: `/home/durai/Documents/projects/content-engine/remotion-branding/output/ccv-refresh/verify-v4-review-fixes`
 
 Superseded directory, retained but not for review: `/home/durai/Documents/projects/content-engine/remotion-branding/output/ccv-refresh/verify-v4-stills`
 
@@ -107,9 +123,11 @@ Formal-review correction: Beat 04 now uses an 18px information-band top margin, 
 - Cue anchors used by the revised shot, ring, zoom, and panel plans resolve exactly, including `Enter the reading`, `In spec.`, `What you did`, and `Then repeat the method`.
 - The stale issue-event implementation narration, optional drop-entry coaching, `Captured.`, and removed Beat 06 active references are absent.
 - The earlier client V3 is preserved at `/home/durai/Documents/projects/content-engine/remotion-branding/output/ccv-refresh/ccv-refresh-client-v3.mp4`, SHA-256 `fd796ef5dbc0808a453c0e691c55bbb8818b14c8128a9f5fa034c98f2accec06`.
-- No `client-v4.mp4` exists or was rendered in this pass.
+- The historical `output/ccv-refresh/ccv-refresh-client-v4.mp4` remains intact and was not re-rendered in this pass; SHA-256 `3d8a3c9c8ba7b58697844e8b2a60e484fbaee83e1ca6b94fab862736fd211357`.
+- The canonical `output/ccv-refresh/ccv-refresh-client-v5.mp4` is 41,077,756 bytes, SHA-256 `000581dbc02bb57fb085ee9a0c1a599c8433e8bdf9fb76f8c096cbc76ab67347`; its full ffmpeg video-and-audio decode exited 0.
+- Encoded v5 checkpoints at frames 3,050, 3,141, 3,470, 3,595, 3,747, 4,026, and 4,090 prove the matching ECO-SAN SH12 record and values, exact normal-online wording, both untouched verification buttons, absence of an error toast, and a legible transition to the explicitly labelled separate Brito's pending-check example.
 - Repository-wide TypeScript checking has known unrelated IINM/Root errors outside this standalone CCV entrypoint; those were not changed or suppressed.
-- No production records were created, no app logic was changed, and nothing was committed, pushed, published, deployed, mailed, or sent to shared docs.
+- The current-source capture created only the authorized Bakery Demo issue used to validate normal-online/master sync. No app or backend logic was changed, and nothing was committed, pushed, published, deployed, mailed, or sent to shared docs.
 
 ## Files Changed For The Consolidated Revision
 

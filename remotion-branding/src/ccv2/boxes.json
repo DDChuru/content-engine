@@ -1,6 +1,6 @@
 {
   "_readme": [
-    "MEASURED 2026-09-06 against the real captures in public/ccv2/shots (720x1600, I&J Blockbusters + Brito's, current build, sheq@poc).",
+    "MEASURED 2026-09-06 against real 720x1600 captures: the preserved I&J Blockbusters and Brito's states in public/ccv2/shots, plus current-app Bakery Demo Beat 04 states in public/ccv-refresh/hunt/bakery-demo.",
     "Each box = the target's pixel bounds plus a 10px margin, normalized 0..1 of the FULL still including the 120px status bar. color = sky | skyDeep | emerald | amber | coral. Re-measure: nx = px/720, ny = px/1600."
   ],
   "strip": {
@@ -49,13 +49,13 @@
     "note": "the 0 OUT-OF-SPEC tile (beat 11 closes on it)"
   },
   "pickerRow": {
-    "nx": 0.0417,
-    "ny": 0.3594,
-    "nw": 0.9306,
-    "nh": 0.0906,
+    "nx": 0.0306,
+    "ny": 0.1813,
+    "nw": 0.9389,
+    "nh": 0.1031,
     "color": "sky",
-    "still": "ccv-04a-picker",
-    "note": "first station row in the + picker (Extreme XF · Titration (drops) · 0.5–5.0 % · DUE NOW)"
+    "still": "ccv-04-current-unfilled",
+    "note": "current-app Bakery Demo station identity card (ECO-SAN SH12 · Manual dilution · 0.5–5.0 %)"
   },
   "batchField": {
     "nx": 0.0306,
@@ -63,8 +63,8 @@
     "nw": 0.9389,
     "nh": 0.0744,
     "color": "sky",
-    "still": "ccv-04",
-    "note": "BATCH / LOT NUMBER field (composed: LOT-20250905)"
+    "still": "ccv-04-current-filled-top",
+    "note": "current-app BATCH / LOT NUMBER field: LOT-20250905"
   },
   "scopeSeg": {
     "nx": 0.0306,
@@ -72,7 +72,7 @@
     "nw": 0.9375,
     "nh": 0.0694,
     "color": "sky",
-    "still": "ccv-04",
+    "still": "ccv-04-current-filled-top",
     "note": "ISSUE SCOPE segment: ENTIRE FACTORY / DEPARTMENT"
   },
   "issueType": {
@@ -81,7 +81,7 @@
     "nw": 0.9389,
     "nh": 0.1375,
     "color": "sky",
-    "still": "ccv-04",
+    "still": "ccv-04-current-filled-top",
     "note": "ISSUE TYPE segment: MANUAL DILUTION / DEPT-DOSING POINT"
   },
   "quantities": {
@@ -90,8 +90,8 @@
     "nw": 0.9389,
     "nh": 0.0956,
     "color": "sky",
-    "still": "ccv-04",
-    "note": "CHEMICAL (L · ml switch) + LITRES WATER fields (composed: 1 and 50)"
+    "still": "ccv-04-current-filled-top",
+    "note": "current-app CHEMICAL (L · ml switch) + LITRES WATER fields: 1 and 50"
   },
   "computedCard": {
     "nx": 0.0306,
