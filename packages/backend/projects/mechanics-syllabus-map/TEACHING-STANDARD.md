@@ -109,3 +109,16 @@ clear where we are doing velocity and where displacement. Some of the initial vi
 - A rebuild keeps what already worked. When a video is revised for narration/scope, reuse the original
   composition's strong visuals (diagrams, animations, graph builds) — do not replace them with plainer ones.
   Read the previous composition from git before rewriting; carry its good scenes forward.
+
+## 10. No text-only frames; cards are captions, not slides (Durai, 2026-09-07, on Multiple Collisions)
+
+Durai on a frame that was just a header + one cream card "Each collision changes the velocities": "I don't like this look."
+
+- A frame must always have something to LOOK AT: the diagram, the animation, the graph or the paper. A sentence
+  card is never the only content on screen (the syllabus card and outcome bullets at the very start/end are the
+  only exception, and even they sit with a small motif).
+- Cards are CAPTIONS beside or under the visual: compact, auto-width, muted paper tone, modest padding, ≤ 8 words.
+  Never a full-width cream slab centred on an empty background.
+- Prefer showing the idea on the diagram (label, arrow, highlight) over saying it on a card. If the narration
+  says it and the diagram shows it, no card is needed at all.
+- Keep the previous visual on screen while the caption changes; the visual never disappears to make room for text.
