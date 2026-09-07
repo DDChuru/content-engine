@@ -66,6 +66,7 @@ import { MechanicsVelocityTimeGraphs, MechanicsVelocityTimeGraphsProps, getMecha
 import { MechanicsModellingAssumptions, MechanicsModellingAssumptionsProps, getMechanicsModellingAssumptionsDuration } from './compositions/MechanicsModellingAssumptions';
 import { MechanicsDrawingTravelGraphs, MechanicsDrawingTravelGraphsProps, getMechanicsDrawingTravelGraphsDuration } from './compositions/MechanicsDrawingTravelGraphs';
 import { MechanicsMultipleCollisions, MechanicsMultipleCollisionsProps, getMechanicsMultipleCollisionsDuration } from './compositions/MechanicsMultipleCollisions';
+import { MechanicsUsingCalculusIn1D, MechanicsUsingCalculusIn1DProps, getMechanicsUsingCalculusIn1DDuration } from './compositions/MechanicsUsingCalculusIn1D';
 import { MechanicsDerivedUnits, MechanicsDerivedUnitsProps, getMechanicsDerivedUnitsDuration } from './compositions/MechanicsDerivedUnits';
 import { MechanicsTypesOfForces, MechanicsTypesOfForcesProps, getMechanicsTypesOfForcesDuration } from './compositions/MechanicsTypesOfForces';
 
@@ -1349,6 +1350,15 @@ export const RemotionRoot: React.FC = () => {
         width={1920}
         height={1080}
         defaultProps={{ audioEnabled: true } satisfies MechanicsMultipleCollisionsProps}
+      />
+      <Composition
+        id="MechanicsUsingCalculusIn1D"
+        component={MechanicsUsingCalculusIn1D}
+        durationInFrames={getMechanicsUsingCalculusIn1DDuration(30)}
+        fps={30}
+        width={1920}
+        height={1080}
+        defaultProps={{ audioEnabled: true } satisfies MechanicsUsingCalculusIn1DProps}
       />
     </>
   );
