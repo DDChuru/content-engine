@@ -529,8 +529,8 @@ FOCUS_PHRASES = {
     "s03": {"stone": ["stone", "particle", "size shape and spin"],
             "air": ["air and wind", "air resistance"], "gravity": ["gravity"],
             "trajectory": ["two or three dimensional", "vertical fall", "two or three dimensions"],
-            "zero-time": ["at zero"], "one-time": ["one second"], "water": ["two seconds", "water"],
-            "twenty": ["twenty metres", "20 metres", "twenty meters", "20 meters"],
+            "zero-time": ["at zero", "from zero"], "one-time": ["one second"], "water": ["two seconds", "water"],
+            "twenty": ["twenty", "20", "twenty metres", "20 metres", "twenty meters", "20 meters"],
             "fifteen": ["fifteen metres", "15 metres", "fifteen meters", "15 meters", "gives fifteen"],
             "question": ["is one metre", "is one meter"]},
     "s04": {"body": ["particle", "dimensions"], "surface": ["smooth", "rough", "friction"],
@@ -734,6 +734,7 @@ def transcribe_job(model, job, generated_at, timing):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--timing", type=Path, help="Generated narration timing; otherwise reuse matching transcript metadata")
+    parser.add_argument("--focus-only", action="store_true", help="Resolve emphasis from approved local word alignment without moving teaching cues")
     args = parser.parse_args()
     timing_data = json.loads((args.timing or TRANSCRIPT_PATH).read_text())
     timing_scenes = timing_data if isinstance(timing_data, list) else timing_data["scenes"]
@@ -742,6 +743,13 @@ def main():
         digest = hashlib.sha256((AUDIO_DIR / job["audioFile"]).read_bytes()).hexdigest()
         if timing_by_id[job["id"]]["audioSha256"] != digest:
             raise RuntimeError(f"Audio changed without timing metadata: {job['id']}")
+    if args.focus_only:
+        data = json.loads(TRANSCRIPT_PATH.read_text())
+        for scene in data["scenes"]:
+            scene["focus"] = resolve_focus(scene["id"], scene["words"], scene["holds"])
+        TRANSCRIPT_PATH.write_text(json.dumps(data, indent=2) + "\n")
+        print("Resolved focus from approved local words; narration and teaching cues unchanged.")
+        return
     print("Modelling Assumptions -- Local Whisper Transcription")
     print("=" * 58)
     print(f"Model: {MODEL_SIZE} (faster-whisper, CPU)")
