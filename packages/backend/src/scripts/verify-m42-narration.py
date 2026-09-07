@@ -73,7 +73,7 @@ def main():
     cues[b['id']]=local[0]['start'];b['cue']=local[0]['start'];b['penEnd']=max(b['cue']+.1,b['end']-.08)
     for w in local:
      i=len(words);words.append(w)
-     if b.get('target') and (re.search(r'\d',w['word']) or re.sub(r'[^a-z]','',w['word'].lower()) in {'zero','one','two','three','four','six','eight','nine','twelve','minus','positive','s','v','a','t','c','d'}):events.append(dict(id=f'word-{i}',wordIndex=i,word=w['word'],start=w['start'],target=b['target'],kind='spoken'))
+     if b.get('target') and (re.search(r'\d',w['word']) or re.sub(r'[^a-z]','',w['word'].lower()) in {'zero','one','two','three','four','six','eight','nine','twelve','minus','positive','s','v','u','you','a','t','c','d','half'}):events.append(dict(id=f'word-{i}',wordIndex=i,word=w['word'],start=w['start'],target=b['target'],kind='spoken'))
     if b.get('ink') and b.get('target'):events.append(dict(id=b['id']+'-substitution',start=b['cue'],end=b['penEnd'],target=b['target'],kind='substitution'))
    s.update(words=words,cues=cues,figureEvents=events,wordCount=len(words),text=' '.join(w['word'] for w in words),duration=float(subprocess.check_output(['ffprobe','-v','error','-show_entries','format=duration','-of','default=noprint_wrappers=1:nokey=1',str(A/s['audio'])])))
    assert len(cues)==len(s['beats']);print(s['id'],len(words),'words;',len(cues),'cues;',round(s['duration'],2),'seconds',flush=True)

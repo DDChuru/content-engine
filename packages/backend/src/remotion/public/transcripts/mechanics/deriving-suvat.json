@@ -1,0 +1,5057 @@
+{
+  "project": "mechanics-deriving-the-suvat-formulae",
+  "sceneCount": 8,
+  "scenes": [
+    {
+      "id": "s01",
+      "title": "Syllabus 4.2: constant acceleration",
+      "mode": "opening",
+      "source": "f007–f065; syllabus p.32",
+      "tempo": "brisk",
+      "voiceSpeed": 1.0,
+      "beats": [
+        {
+          "id": "quote1",
+          "text": "Syllabus four point two: use appropriate formulae for motion.",
+          "hold": 0,
+          "caption": "use appropriate formulae for motion",
+          "start": 0.4,
+          "speechEnd": 4.59,
+          "end": 4.79,
+          "cue": 0.4,
+          "penEnd": 4.71
+        },
+        {
+          "id": "quote2",
+          "text": "With constant acceleration in a straight line.",
+          "hold": 0,
+          "caption": "with constant acceleration in a straight line",
+          "start": 4.79,
+          "speechEnd": 7.43,
+          "end": 7.63,
+          "cue": 4.79,
+          "penEnd": 7.55
+        },
+        {
+          "id": "outcome1",
+          "text": "By the end you can derive from gradient and area.",
+          "hold": 0,
+          "caption": "Derive from gradient and area.",
+          "start": 7.63,
+          "speechEnd": 10.4,
+          "end": 10.6,
+          "cue": 7.71,
+          "penEnd": 10.52
+        },
+        {
+          "id": "outcome2",
+          "text": "Create the other equations.",
+          "hold": 0,
+          "caption": "Create the other equations.",
+          "start": 10.6,
+          "speechEnd": 12.18,
+          "end": 12.38,
+          "cue": 10.67,
+          "penEnd": 12.3
+        },
+        {
+          "id": "outcome3",
+          "text": "And choose an equation.",
+          "hold": 0,
+          "caption": "Choose an equation.",
+          "start": 12.38,
+          "speechEnd": 13.75,
+          "end": 13.95,
+          "cue": 12.47,
+          "penEnd": 13.87
+        }
+      ],
+      "holds": [],
+      "audio": "deriving-suvat-s01.mp3",
+      "audioSha256": "2fb0636d74b8783f5015f1c1d55602fa392d98f8808660853edad505391b05f2",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "provider": "elevenlabs",
+      "sampleDuration": 14.3,
+      "words": [
+        {
+          "word": "Syllabus",
+          "start": 0.4,
+          "end": 0.81
+        },
+        {
+          "word": "four",
+          "start": 0.81,
+          "end": 1.01
+        },
+        {
+          "word": "point",
+          "start": 1.01,
+          "end": 1.23
+        },
+        {
+          "word": "two.",
+          "start": 1.23,
+          "end": 1.59
+        },
+        {
+          "word": "Use",
+          "start": 2.15,
+          "end": 2.33
+        },
+        {
+          "word": "appropriate",
+          "start": 2.33,
+          "end": 2.83
+        },
+        {
+          "word": "formulae",
+          "start": 2.83,
+          "end": 3.53
+        },
+        {
+          "word": "for",
+          "start": 3.53,
+          "end": 3.81
+        },
+        {
+          "word": "motion.",
+          "start": 3.81,
+          "end": 4.37
+        },
+        {
+          "word": "With",
+          "start": 4.79,
+          "end": 4.99
+        },
+        {
+          "word": "constant",
+          "start": 4.99,
+          "end": 5.51
+        },
+        {
+          "word": "acceleration",
+          "start": 5.51,
+          "end": 6.11
+        },
+        {
+          "word": "in",
+          "start": 6.11,
+          "end": 6.59
+        },
+        {
+          "word": "a",
+          "start": 6.59,
+          "end": 6.71
+        },
+        {
+          "word": "straight",
+          "start": 6.71,
+          "end": 6.95
+        },
+        {
+          "word": "line.",
+          "start": 6.95,
+          "end": 7.37
+        },
+        {
+          "word": "By",
+          "start": 7.71,
+          "end": 7.77
+        },
+        {
+          "word": "the",
+          "start": 7.77,
+          "end": 7.89
+        },
+        {
+          "word": "end",
+          "start": 7.89,
+          "end": 8.15
+        },
+        {
+          "word": "you",
+          "start": 8.15,
+          "end": 8.29
+        },
+        {
+          "word": "can",
+          "start": 8.29,
+          "end": 8.45
+        },
+        {
+          "word": "derive",
+          "start": 8.45,
+          "end": 8.79
+        },
+        {
+          "word": "from",
+          "start": 8.79,
+          "end": 9.07
+        },
+        {
+          "word": "gradient",
+          "start": 9.07,
+          "end": 9.53
+        },
+        {
+          "word": "and",
+          "start": 9.53,
+          "end": 9.93
+        },
+        {
+          "word": "area.",
+          "start": 9.93,
+          "end": 10.25
+        },
+        {
+          "word": "Create",
+          "start": 10.67,
+          "end": 10.95
+        },
+        {
+          "word": "the",
+          "start": 10.95,
+          "end": 11.23
+        },
+        {
+          "word": "other",
+          "start": 11.23,
+          "end": 11.43
+        },
+        {
+          "word": "equations.",
+          "start": 11.43,
+          "end": 11.91
+        },
+        {
+          "word": "And",
+          "start": 12.47,
+          "end": 12.53
+        },
+        {
+          "word": "choose",
+          "start": 12.53,
+          "end": 12.83
+        },
+        {
+          "word": "an",
+          "start": 12.83,
+          "end": 13.05
+        },
+        {
+          "word": "equation.",
+          "start": 13.05,
+          "end": 13.37
+        }
+      ],
+      "cues": {
+        "quote1": 0.4,
+        "quote2": 4.79,
+        "outcome1": 7.71,
+        "outcome2": 10.67,
+        "outcome3": 12.47
+      },
+      "figureEvents": [],
+      "wordCount": 34,
+      "text": "Syllabus four point two. Use appropriate formulae for motion. With constant acceleration in a straight line. By the end you can derive from gradient and area. Create the other equations. And choose an equation.",
+      "duration": 14.341224
+    },
+    {
+      "id": "s02",
+      "title": "Picture constant acceleration",
+      "mode": "story",
+      "source": "f007–f023",
+      "tempo": "brisk",
+      "voiceSpeed": 1.0,
+      "beats": [
+        {
+          "id": "story",
+          "text": "Consider a trolley moving along a straight track. It is already moving, and gains the same amount of velocity each second.",
+          "hold": 0,
+          "start": 0.4,
+          "speechEnd": 7.95,
+          "end": 8.15,
+          "cue": 0.4,
+          "penEnd": 8.07
+        },
+        {
+          "id": "accelerate",
+          "text": "Watch it cover more ground in equal times. Its acceleration is constant.",
+          "hold": 0,
+          "start": 8.15,
+          "speechEnd": 12.94,
+          "end": 13.14,
+          "cue": 8.2,
+          "penEnd": 13.06
+        },
+        {
+          "id": "contrast",
+          "text": "If those velocity gains changed, the acceleration would vary. These formulae would no longer describe the whole interval.",
+          "hold": 0,
+          "caption": "Constant acceleration is essential.",
+          "start": 13.14,
+          "speechEnd": 21.71,
+          "end": 21.91,
+          "cue": 13.18,
+          "penEnd": 21.830000000000002
+        }
+      ],
+      "holds": [],
+      "audio": "deriving-suvat-s02.mp3",
+      "audioSha256": "e703f220d6ed5e22c6fcc6be1999bb45a72284282fa303967f4e144e2ebb6512",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "provider": "elevenlabs",
+      "sampleDuration": 22.26,
+      "words": [
+        {
+          "word": "Consider",
+          "start": 0.4,
+          "end": 0.86
+        },
+        {
+          "word": "a",
+          "start": 0.86,
+          "end": 1.12
+        },
+        {
+          "word": "trolley",
+          "start": 1.12,
+          "end": 1.44
+        },
+        {
+          "word": "moving",
+          "start": 1.44,
+          "end": 1.7
+        },
+        {
+          "word": "along",
+          "start": 1.7,
+          "end": 2.04
+        },
+        {
+          "word": "a",
+          "start": 2.04,
+          "end": 2.3
+        },
+        {
+          "word": "straight",
+          "start": 2.3,
+          "end": 2.54
+        },
+        {
+          "word": "track.",
+          "start": 2.54,
+          "end": 2.96
+        },
+        {
+          "word": "It",
+          "start": 3.6,
+          "end": 3.7
+        },
+        {
+          "word": "is",
+          "start": 3.7,
+          "end": 3.8
+        },
+        {
+          "word": "already",
+          "start": 3.8,
+          "end": 4.12
+        },
+        {
+          "word": "moving,",
+          "start": 4.12,
+          "end": 4.42
+        },
+        {
+          "word": "and",
+          "start": 4.76,
+          "end": 5.1
+        },
+        {
+          "word": "gains",
+          "start": 5.1,
+          "end": 5.36
+        },
+        {
+          "word": "the",
+          "start": 5.36,
+          "end": 5.62
+        },
+        {
+          "word": "same",
+          "start": 5.62,
+          "end": 5.94
+        },
+        {
+          "word": "amount",
+          "start": 5.94,
+          "end": 6.34
+        },
+        {
+          "word": "of",
+          "start": 6.34,
+          "end": 6.6
+        },
+        {
+          "word": "velocity",
+          "start": 6.6,
+          "end": 7.02
+        },
+        {
+          "word": "each",
+          "start": 7.02,
+          "end": 7.38
+        },
+        {
+          "word": "second.",
+          "start": 7.38,
+          "end": 7.8
+        },
+        {
+          "word": "Watch",
+          "start": 8.2,
+          "end": 8.38
+        },
+        {
+          "word": "it",
+          "start": 8.38,
+          "end": 8.58
+        },
+        {
+          "word": "cover",
+          "start": 8.58,
+          "end": 8.82
+        },
+        {
+          "word": "more",
+          "start": 8.82,
+          "end": 9.1
+        },
+        {
+          "word": "ground",
+          "start": 9.1,
+          "end": 9.56
+        },
+        {
+          "word": "in",
+          "start": 9.56,
+          "end": 10.1
+        },
+        {
+          "word": "equal",
+          "start": 10.1,
+          "end": 10.36
+        },
+        {
+          "word": "times.",
+          "start": 10.36,
+          "end": 10.84
+        },
+        {
+          "word": "Its",
+          "start": 11.28,
+          "end": 11.32
+        },
+        {
+          "word": "acceleration",
+          "start": 11.32,
+          "end": 11.74
+        },
+        {
+          "word": "is",
+          "start": 11.74,
+          "end": 12.16
+        },
+        {
+          "word": "constant.",
+          "start": 12.16,
+          "end": 12.58
+        },
+        {
+          "word": "If",
+          "start": 13.18,
+          "end": 13.28
+        },
+        {
+          "word": "those",
+          "start": 13.28,
+          "end": 13.52
+        },
+        {
+          "word": "velocity",
+          "start": 13.52,
+          "end": 14.0
+        },
+        {
+          "word": "gains",
+          "start": 14.0,
+          "end": 14.34
+        },
+        {
+          "word": "changed,",
+          "start": 14.34,
+          "end": 14.98
+        },
+        {
+          "word": "the",
+          "start": 15.72,
+          "end": 15.82
+        },
+        {
+          "word": "acceleration",
+          "start": 15.82,
+          "end": 16.26
+        },
+        {
+          "word": "would",
+          "start": 16.26,
+          "end": 16.64
+        },
+        {
+          "word": "vary.",
+          "start": 16.64,
+          "end": 17.0
+        },
+        {
+          "word": "These",
+          "start": 18.14,
+          "end": 18.32
+        },
+        {
+          "word": "formulae",
+          "start": 18.32,
+          "end": 19.12
+        },
+        {
+          "word": "would",
+          "start": 19.12,
+          "end": 19.36
+        },
+        {
+          "word": "no",
+          "start": 19.36,
+          "end": 19.7
+        },
+        {
+          "word": "longer",
+          "start": 19.7,
+          "end": 20.04
+        },
+        {
+          "word": "describe",
+          "start": 20.04,
+          "end": 20.54
+        },
+        {
+          "word": "the",
+          "start": 20.54,
+          "end": 20.86
+        },
+        {
+          "word": "whole",
+          "start": 20.86,
+          "end": 21.06
+        },
+        {
+          "word": "interval.",
+          "start": 21.06,
+          "end": 21.48
+        }
+      ],
+      "cues": {
+        "story": 0.4,
+        "accelerate": 8.2,
+        "contrast": 13.18
+      },
+      "figureEvents": [],
+      "wordCount": 51,
+      "text": "Consider a trolley moving along a straight track. It is already moving, and gains the same amount of velocity each second. Watch it cover more ground in equal times. Its acceleration is constant. If those velocity gains changed, the acceleration would vary. These formulae would no longer describe the whole interval.",
+      "duration": 22.308571
+    },
+    {
+      "id": "s03",
+      "title": "Derive velocity from gradient",
+      "mode": "gradient",
+      "source": "f026–f095",
+      "tempo": "slow",
+      "voiceSpeed": 0.9,
+      "beats": [
+        {
+          "id": "setup",
+          "text": "Now the velocity time graph: start at u, finish at v, after time t.",
+          "hold": 0,
+          "target": "endpoints",
+          "start": 0.4,
+          "speechEnd": 6.53,
+          "end": 6.73,
+          "cue": 0.64,
+          "penEnd": 6.65
+        },
+        {
+          "id": "givens",
+          "text": "Choose right as positive. Acceleration a is constant. Displacement s is the signed area. Derive the final velocity.",
+          "hold": 2,
+          "target": "acceleration",
+          "start": 6.73,
+          "speechEnd": 17.85,
+          "end": 18.05,
+          "cue": 6.82,
+          "penEnd": 17.970000000000002
+        },
+        {
+          "id": "formula",
+          "text": "Acceleration equals gradient: change in velocity divided by elapsed time.",
+          "hold": 0,
+          "ink": "a = Δv/Δt",
+          "page": 0,
+          "target": "rise-run",
+          "start": 20.05,
+          "speechEnd": 26.67,
+          "end": 26.87,
+          "cue": 20.09,
+          "penEnd": 26.790000000000003
+        },
+        {
+          "id": "rise",
+          "text": "The change in velocity is final minus initial: v minus u. The elapsed time is t.",
+          "hold": 0,
+          "ink": "a = (v - u)/t",
+          "page": 0,
+          "target": "rise-run",
+          "start": 26.87,
+          "speechEnd": 35.12,
+          "end": 35.32,
+          "cue": 27.01,
+          "penEnd": 35.24
+        },
+        {
+          "id": "multiply",
+          "text": "Multiply both sides by t. That gives a t equals v minus u.",
+          "hold": 2,
+          "ink": "at = v - u",
+          "page": 0,
+          "target": "rise-run",
+          "start": 35.32,
+          "speechEnd": 42.66,
+          "end": 42.86,
+          "cue": 35.37,
+          "penEnd": 42.78
+        },
+        {
+          "id": "result",
+          "text": "Add u. V equals u plus a t: initial velocity plus the change.",
+          "hold": 2,
+          "ink": "v = u + at",
+          "page": 0,
+          "target": "endpoints",
+          "start": 44.86,
+          "speechEnd": 52.05,
+          "end": 52.25,
+          "cue": 44.86,
+          "penEnd": 52.17
+        },
+        {
+          "id": "why",
+          "text": "A constant gradient is why the graph is straight. This equation tells us how much the velocity changes.",
+          "hold": 0,
+          "caption": "Constant gradient gives a straight line.",
+          "start": 54.25,
+          "speechEnd": 61.94,
+          "end": 62.14,
+          "cue": 54.4,
+          "penEnd": 62.06
+        }
+      ],
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 18.05,
+          "end": 20.05,
+          "duration": 2
+        },
+        {
+          "kind": "hold",
+          "start": 42.86,
+          "end": 44.86,
+          "duration": 2
+        },
+        {
+          "kind": "hold",
+          "start": 52.25,
+          "end": 54.25,
+          "duration": 2
+        }
+      ],
+      "audio": "deriving-suvat-s03.mp3",
+      "audioSha256": "b50fba1b531d9d84a99a9558c14c40dfb2279cf25a95d20360d5f264187a494b",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "provider": "elevenlabs",
+      "sampleDuration": 62.49,
+      "words": [
+        {
+          "word": "the",
+          "start": 0.64,
+          "end": 0.82
+        },
+        {
+          "word": "velocity",
+          "start": 0.82,
+          "end": 1.16
+        },
+        {
+          "word": "time",
+          "start": 1.16,
+          "end": 1.54
+        },
+        {
+          "word": "graph.",
+          "start": 1.54,
+          "end": 1.9
+        },
+        {
+          "word": "Start",
+          "start": 2.68,
+          "end": 3.2
+        },
+        {
+          "word": "at",
+          "start": 3.2,
+          "end": 3.46
+        },
+        {
+          "word": "u,",
+          "start": 3.46,
+          "end": 3.72
+        },
+        {
+          "word": "finish",
+          "start": 4.46,
+          "end": 4.54
+        },
+        {
+          "word": "at",
+          "start": 4.54,
+          "end": 4.76
+        },
+        {
+          "word": "v,",
+          "start": 4.76,
+          "end": 5.08
+        },
+        {
+          "word": "after",
+          "start": 5.4,
+          "end": 5.84
+        },
+        {
+          "word": "time",
+          "start": 5.84,
+          "end": 6.16
+        },
+        {
+          "word": "t.",
+          "start": 6.16,
+          "end": 6.38
+        },
+        {
+          "word": "Choose",
+          "start": 6.82,
+          "end": 7.1
+        },
+        {
+          "word": "right",
+          "start": 7.1,
+          "end": 7.54
+        },
+        {
+          "word": "as",
+          "start": 7.54,
+          "end": 7.82
+        },
+        {
+          "word": "positive.",
+          "start": 7.82,
+          "end": 8.4
+        },
+        {
+          "word": "Acceleration",
+          "start": 9.54,
+          "end": 9.98
+        },
+        {
+          "word": "a",
+          "start": 9.98,
+          "end": 10.58
+        },
+        {
+          "word": "is",
+          "start": 10.58,
+          "end": 10.92
+        },
+        {
+          "word": "constant.",
+          "start": 10.92,
+          "end": 11.42
+        },
+        {
+          "word": "Displacement",
+          "start": 12.26,
+          "end": 12.82
+        },
+        {
+          "word": "s",
+          "start": 12.82,
+          "end": 13.42
+        },
+        {
+          "word": "is",
+          "start": 13.42,
+          "end": 14.2
+        },
+        {
+          "word": "the",
+          "start": 14.2,
+          "end": 14.38
+        },
+        {
+          "word": "signed",
+          "start": 14.38,
+          "end": 14.76
+        },
+        {
+          "word": "area.",
+          "start": 14.76,
+          "end": 15.24
+        },
+        {
+          "word": "Derive",
+          "start": 15.7,
+          "end": 16.28
+        },
+        {
+          "word": "the",
+          "start": 16.28,
+          "end": 16.54
+        },
+        {
+          "word": "final",
+          "start": 16.54,
+          "end": 16.96
+        },
+        {
+          "word": "velocity.",
+          "start": 16.96,
+          "end": 17.72
+        },
+        {
+          "word": "Acceleration",
+          "start": 20.09,
+          "end": 20.51
+        },
+        {
+          "word": "equals",
+          "start": 20.51,
+          "end": 21.21
+        },
+        {
+          "word": "gradient.",
+          "start": 21.21,
+          "end": 21.89
+        },
+        {
+          "word": "Change",
+          "start": 23.03,
+          "end": 23.37
+        },
+        {
+          "word": "in",
+          "start": 23.37,
+          "end": 23.69
+        },
+        {
+          "word": "velocity",
+          "start": 23.69,
+          "end": 24.29
+        },
+        {
+          "word": "divided",
+          "start": 24.29,
+          "end": 25.27
+        },
+        {
+          "word": "by",
+          "start": 25.27,
+          "end": 25.73
+        },
+        {
+          "word": "elapsed",
+          "start": 25.73,
+          "end": 26.25
+        },
+        {
+          "word": "time.",
+          "start": 26.25,
+          "end": 26.55
+        },
+        {
+          "word": "change",
+          "start": 27.01,
+          "end": 27.49
+        },
+        {
+          "word": "in",
+          "start": 27.49,
+          "end": 27.79
+        },
+        {
+          "word": "velocity",
+          "start": 27.79,
+          "end": 28.35
+        },
+        {
+          "word": "is",
+          "start": 28.35,
+          "end": 29.67
+        },
+        {
+          "word": "final",
+          "start": 29.67,
+          "end": 30.15
+        },
+        {
+          "word": "minus",
+          "start": 30.15,
+          "end": 30.51
+        },
+        {
+          "word": "initial",
+          "start": 30.51,
+          "end": 31.15
+        },
+        {
+          "word": "v",
+          "start": 31.15,
+          "end": 31.97
+        },
+        {
+          "word": "minus",
+          "start": 31.97,
+          "end": 32.43
+        },
+        {
+          "word": "u.",
+          "start": 32.43,
+          "end": 32.89
+        },
+        {
+          "word": "The",
+          "start": 33.61,
+          "end": 33.75
+        },
+        {
+          "word": "elapsed",
+          "start": 33.75,
+          "end": 34.27
+        },
+        {
+          "word": "time",
+          "start": 34.27,
+          "end": 34.53
+        },
+        {
+          "word": "is",
+          "start": 34.53,
+          "end": 34.79
+        },
+        {
+          "word": "t.",
+          "start": 34.79,
+          "end": 35.05
+        },
+        {
+          "word": "Multiply",
+          "start": 35.37,
+          "end": 35.89
+        },
+        {
+          "word": "both",
+          "start": 35.89,
+          "end": 36.19
+        },
+        {
+          "word": "sides",
+          "start": 36.19,
+          "end": 36.73
+        },
+        {
+          "word": "by",
+          "start": 36.73,
+          "end": 37.37
+        },
+        {
+          "word": "t.",
+          "start": 37.37,
+          "end": 37.85
+        },
+        {
+          "word": "That",
+          "start": 38.79,
+          "end": 38.99
+        },
+        {
+          "word": "gives",
+          "start": 38.99,
+          "end": 39.25
+        },
+        {
+          "word": "a",
+          "start": 39.25,
+          "end": 39.43
+        },
+        {
+          "word": "t",
+          "start": 39.43,
+          "end": 39.83
+        },
+        {
+          "word": "equals",
+          "start": 39.83,
+          "end": 40.61
+        },
+        {
+          "word": "v",
+          "start": 40.61,
+          "end": 41.23
+        },
+        {
+          "word": "minus",
+          "start": 41.23,
+          "end": 41.99
+        },
+        {
+          "word": "u.",
+          "start": 41.99,
+          "end": 42.61
+        },
+        {
+          "word": "u",
+          "start": 44.86,
+          "end": 45.48
+        },
+        {
+          "word": "v",
+          "start": 45.48,
+          "end": 46.54
+        },
+        {
+          "word": "equals",
+          "start": 46.54,
+          "end": 47.06
+        },
+        {
+          "word": "u",
+          "start": 47.06,
+          "end": 47.62
+        },
+        {
+          "word": "plus",
+          "start": 47.62,
+          "end": 48.38
+        },
+        {
+          "word": "a",
+          "start": 48.38,
+          "end": 48.64
+        },
+        {
+          "word": "t.",
+          "start": 48.64,
+          "end": 48.86
+        },
+        {
+          "word": "Initial",
+          "start": 49.26,
+          "end": 49.86
+        },
+        {
+          "word": "velocity",
+          "start": 49.86,
+          "end": 50.36
+        },
+        {
+          "word": "plus",
+          "start": 50.36,
+          "end": 51.3
+        },
+        {
+          "word": "the",
+          "start": 51.3,
+          "end": 51.58
+        },
+        {
+          "word": "change.",
+          "start": 51.58,
+          "end": 51.9
+        },
+        {
+          "word": "constant",
+          "start": 54.4,
+          "end": 54.76
+        },
+        {
+          "word": "gradient",
+          "start": 54.76,
+          "end": 55.36
+        },
+        {
+          "word": "is",
+          "start": 55.36,
+          "end": 55.86
+        },
+        {
+          "word": "why",
+          "start": 55.86,
+          "end": 56.26
+        },
+        {
+          "word": "the",
+          "start": 56.26,
+          "end": 56.52
+        },
+        {
+          "word": "graph",
+          "start": 56.52,
+          "end": 56.82
+        },
+        {
+          "word": "is",
+          "start": 56.82,
+          "end": 57.42
+        },
+        {
+          "word": "straight.",
+          "start": 57.42,
+          "end": 57.76
+        },
+        {
+          "word": "This",
+          "start": 58.52,
+          "end": 59.08
+        },
+        {
+          "word": "equation",
+          "start": 59.08,
+          "end": 59.68
+        },
+        {
+          "word": "tells",
+          "start": 59.68,
+          "end": 60.04
+        },
+        {
+          "word": "us",
+          "start": 60.04,
+          "end": 60.26
+        },
+        {
+          "word": "how",
+          "start": 60.26,
+          "end": 60.42
+        },
+        {
+          "word": "much",
+          "start": 60.42,
+          "end": 60.6
+        },
+        {
+          "word": "the",
+          "start": 60.6,
+          "end": 60.74
+        },
+        {
+          "word": "velocity",
+          "start": 60.74,
+          "end": 61.14
+        },
+        {
+          "word": "changes.",
+          "start": 61.14,
+          "end": 61.72
+        }
+      ],
+      "cues": {
+        "setup": 0.64,
+        "givens": 6.82,
+        "formula": 20.09,
+        "rise": 27.01,
+        "multiply": 35.37,
+        "result": 44.86,
+        "why": 54.4
+      },
+      "figureEvents": [
+        {
+          "id": "word-6",
+          "wordIndex": 6,
+          "word": "u,",
+          "start": 3.46,
+          "target": "initial",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-9",
+          "wordIndex": 9,
+          "word": "v,",
+          "start": 4.76,
+          "target": "final",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-12",
+          "wordIndex": 12,
+          "word": "t.",
+          "start": 6.16,
+          "target": "time",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-16",
+          "wordIndex": 16,
+          "word": "positive.",
+          "start": 7.82,
+          "target": "acceleration",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-18",
+          "wordIndex": 18,
+          "word": "a",
+          "start": 9.98,
+          "target": "acceleration",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-22",
+          "wordIndex": 22,
+          "word": "s",
+          "start": 12.82,
+          "target": "area",
+          "kind": "spoken"
+        },
+        {
+          "id": "formula-substitution",
+          "start": 20.09,
+          "end": 26.790000000000003,
+          "target": "rise-run",
+          "kind": "substitution"
+        },
+        {
+          "id": "word-46",
+          "wordIndex": 46,
+          "word": "minus",
+          "start": 30.15,
+          "target": "rise-run",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-48",
+          "wordIndex": 48,
+          "word": "v",
+          "start": 31.15,
+          "target": "final",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-49",
+          "wordIndex": 49,
+          "word": "minus",
+          "start": 31.97,
+          "target": "rise-run",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-50",
+          "wordIndex": 50,
+          "word": "u.",
+          "start": 32.43,
+          "target": "initial",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-55",
+          "wordIndex": 55,
+          "word": "t.",
+          "start": 34.79,
+          "target": "time",
+          "kind": "spoken"
+        },
+        {
+          "id": "rise-substitution",
+          "start": 27.01,
+          "end": 35.24,
+          "target": "rise-run",
+          "kind": "substitution"
+        },
+        {
+          "id": "word-60",
+          "wordIndex": 60,
+          "word": "t.",
+          "start": 37.37,
+          "target": "time",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-63",
+          "wordIndex": 63,
+          "word": "a",
+          "start": 39.25,
+          "target": "acceleration",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-64",
+          "wordIndex": 64,
+          "word": "t",
+          "start": 39.43,
+          "target": "time",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-66",
+          "wordIndex": 66,
+          "word": "v",
+          "start": 40.61,
+          "target": "final",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-67",
+          "wordIndex": 67,
+          "word": "minus",
+          "start": 41.23,
+          "target": "rise-run",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-68",
+          "wordIndex": 68,
+          "word": "u.",
+          "start": 41.99,
+          "target": "initial",
+          "kind": "spoken"
+        },
+        {
+          "id": "multiply-substitution",
+          "start": 35.37,
+          "end": 42.78,
+          "target": "rise-run",
+          "kind": "substitution"
+        },
+        {
+          "id": "word-69",
+          "wordIndex": 69,
+          "word": "u",
+          "start": 44.86,
+          "target": "initial",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-70",
+          "wordIndex": 70,
+          "word": "v",
+          "start": 45.48,
+          "target": "final",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-72",
+          "wordIndex": 72,
+          "word": "u",
+          "start": 47.06,
+          "target": "initial",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-74",
+          "wordIndex": 74,
+          "word": "a",
+          "start": 48.38,
+          "target": "acceleration",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-75",
+          "wordIndex": 75,
+          "word": "t.",
+          "start": 48.64,
+          "target": "time",
+          "kind": "spoken"
+        },
+        {
+          "id": "result-substitution",
+          "start": 44.86,
+          "end": 52.17,
+          "target": "endpoints",
+          "kind": "substitution"
+        }
+      ],
+      "wordCount": 98,
+      "text": "the velocity time graph. Start at u, finish at v, after time t. Choose right as positive. Acceleration a is constant. Displacement s is the signed area. Derive the final velocity. Acceleration equals gradient. Change in velocity divided by elapsed time. change in velocity is final minus initial v minus u. The elapsed time is t. Multiply both sides by t. That gives a t equals v minus u. u v equals u plus a t. Initial velocity plus the change. constant gradient is why the graph is straight. This equation tells us how much the velocity changes.",
+      "duration": 62.537143
+    },
+    {
+      "id": "s04",
+      "title": "Derive displacement from area",
+      "mode": "area",
+      "source": "f096–f118",
+      "tempo": "slow",
+      "voiceSpeed": 0.9,
+      "beats": [
+        {
+          "id": "setup",
+          "text": "Now find the displacement over the same interval. Keep the endpoint velocities and time on the graph.",
+          "hold": 2,
+          "target": "endpoints",
+          "start": 0.4,
+          "speechEnd": 7.69,
+          "end": 7.89,
+          "cue": 0.63,
+          "penEnd": 7.81
+        },
+        {
+          "id": "area",
+          "text": "Displacement equals signed area under the velocity time graph. Here that shape is a trapezium.",
+          "hold": 0,
+          "ink": "s = signed area",
+          "page": 0,
+          "target": "area",
+          "start": 9.89,
+          "speechEnd": 18.73,
+          "end": 18.93,
+          "cue": 9.93,
+          "penEnd": 18.85
+        },
+        {
+          "id": "formula",
+          "text": "Trapezium area is half the sum of the parallel sides, multiplied by the perpendicular width.",
+          "hold": 0,
+          "ink": "area = ½(u + v)t",
+          "page": 0,
+          "target": "endpoints",
+          "start": 18.93,
+          "speechEnd": 26.04,
+          "end": 26.24,
+          "cue": 18.93,
+          "penEnd": 26.16
+        },
+        {
+          "id": "sides",
+          "text": "The parallel sides are u and v. The width between them is t. The sloping edge is not a parallel side.",
+          "hold": 2,
+          "target": "endpoints",
+          "start": 26.24,
+          "speechEnd": 34.89,
+          "end": 35.09,
+          "cue": 26.35,
+          "penEnd": 35.010000000000005
+        },
+        {
+          "id": "result",
+          "text": "So displacement equals half u plus v, multiplied by t.",
+          "hold": 2,
+          "ink": "s = ½(u + v)t",
+          "page": 0,
+          "target": "area",
+          "start": 37.09,
+          "speechEnd": 42.67,
+          "end": 42.87,
+          "cue": 37.2,
+          "penEnd": 42.79
+        },
+        {
+          "id": "meaning",
+          "text": "This is average velocity times time. If the graph goes below the time axis, that area contributes negative displacement.",
+          "hold": 0,
+          "caption": "Signed area gives displacement.",
+          "start": 44.87,
+          "speechEnd": 54.91,
+          "end": 55.11,
+          "cue": 44.87,
+          "penEnd": 55.03
+        }
+      ],
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 7.89,
+          "end": 9.89,
+          "duration": 2
+        },
+        {
+          "kind": "hold",
+          "start": 35.09,
+          "end": 37.09,
+          "duration": 2
+        },
+        {
+          "kind": "hold",
+          "start": 42.87,
+          "end": 44.87,
+          "duration": 2
+        }
+      ],
+      "audio": "deriving-suvat-s04.mp3",
+      "audioSha256": "cf0825a402e7c9fe1ad399738be0b93f39866cf081170be8ee470fdfffd51b62",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "provider": "elevenlabs",
+      "sampleDuration": 55.46,
+      "words": [
+        {
+          "word": "find",
+          "start": 0.63,
+          "end": 1.11
+        },
+        {
+          "word": "the",
+          "start": 1.11,
+          "end": 1.31
+        },
+        {
+          "word": "displacement",
+          "start": 1.31,
+          "end": 1.85
+        },
+        {
+          "word": "over",
+          "start": 1.85,
+          "end": 2.37
+        },
+        {
+          "word": "the",
+          "start": 2.37,
+          "end": 2.59
+        },
+        {
+          "word": "same",
+          "start": 2.59,
+          "end": 2.89
+        },
+        {
+          "word": "interval.",
+          "start": 2.89,
+          "end": 3.41
+        },
+        {
+          "word": "Keep",
+          "start": 3.87,
+          "end": 4.67
+        },
+        {
+          "word": "the",
+          "start": 4.67,
+          "end": 4.93
+        },
+        {
+          "word": "endpoint",
+          "start": 4.93,
+          "end": 5.43
+        },
+        {
+          "word": "velocities",
+          "start": 5.43,
+          "end": 6.37
+        },
+        {
+          "word": "and",
+          "start": 6.37,
+          "end": 6.61
+        },
+        {
+          "word": "time",
+          "start": 6.61,
+          "end": 6.99
+        },
+        {
+          "word": "on",
+          "start": 6.99,
+          "end": 7.23
+        },
+        {
+          "word": "the",
+          "start": 7.23,
+          "end": 7.35
+        },
+        {
+          "word": "graph.",
+          "start": 7.35,
+          "end": 7.63
+        },
+        {
+          "word": "Displacement",
+          "start": 9.93,
+          "end": 10.85
+        },
+        {
+          "word": "equals",
+          "start": 10.85,
+          "end": 11.71
+        },
+        {
+          "word": "signed",
+          "start": 11.71,
+          "end": 12.59
+        },
+        {
+          "word": "area",
+          "start": 12.59,
+          "end": 13.21
+        },
+        {
+          "word": "under",
+          "start": 13.21,
+          "end": 14.05
+        },
+        {
+          "word": "the",
+          "start": 14.05,
+          "end": 14.21
+        },
+        {
+          "word": "velocity",
+          "start": 14.21,
+          "end": 14.65
+        },
+        {
+          "word": "time",
+          "start": 14.65,
+          "end": 15.11
+        },
+        {
+          "word": "graph.",
+          "start": 15.11,
+          "end": 15.53
+        },
+        {
+          "word": "Here",
+          "start": 16.53,
+          "end": 16.83
+        },
+        {
+          "word": "that",
+          "start": 16.83,
+          "end": 17.35
+        },
+        {
+          "word": "shape",
+          "start": 17.35,
+          "end": 17.67
+        },
+        {
+          "word": "is",
+          "start": 17.67,
+          "end": 18.01
+        },
+        {
+          "word": "a",
+          "start": 18.01,
+          "end": 18.17
+        },
+        {
+          "word": "trapezium.",
+          "start": 18.17,
+          "end": 18.67
+        },
+        {
+          "word": "Trapezium",
+          "start": 18.93,
+          "end": 19.51
+        },
+        {
+          "word": "area",
+          "start": 19.51,
+          "end": 19.85
+        },
+        {
+          "word": "is",
+          "start": 19.85,
+          "end": 20.69
+        },
+        {
+          "word": "half",
+          "start": 20.69,
+          "end": 20.91
+        },
+        {
+          "word": "the",
+          "start": 20.91,
+          "end": 21.09
+        },
+        {
+          "word": "sum",
+          "start": 21.09,
+          "end": 21.43
+        },
+        {
+          "word": "of",
+          "start": 21.43,
+          "end": 21.71
+        },
+        {
+          "word": "the",
+          "start": 21.71,
+          "end": 21.83
+        },
+        {
+          "word": "parallel",
+          "start": 21.83,
+          "end": 22.21
+        },
+        {
+          "word": "sides,",
+          "start": 22.21,
+          "end": 22.81
+        },
+        {
+          "word": "multiplied",
+          "start": 23.01,
+          "end": 23.97
+        },
+        {
+          "word": "by",
+          "start": 23.97,
+          "end": 24.69
+        },
+        {
+          "word": "the",
+          "start": 24.69,
+          "end": 24.83
+        },
+        {
+          "word": "perpendicular",
+          "start": 24.83,
+          "end": 25.33
+        },
+        {
+          "word": "width.",
+          "start": 25.33,
+          "end": 25.79
+        },
+        {
+          "word": "parallel",
+          "start": 26.35,
+          "end": 26.69
+        },
+        {
+          "word": "sides",
+          "start": 26.69,
+          "end": 27.31
+        },
+        {
+          "word": "are",
+          "start": 27.31,
+          "end": 27.57
+        },
+        {
+          "word": "u",
+          "start": 27.57,
+          "end": 27.99
+        },
+        {
+          "word": "and",
+          "start": 27.99,
+          "end": 28.31
+        },
+        {
+          "word": "v.",
+          "start": 28.31,
+          "end": 28.61
+        },
+        {
+          "word": "The",
+          "start": 29.57,
+          "end": 29.71
+        },
+        {
+          "word": "width",
+          "start": 29.71,
+          "end": 30.03
+        },
+        {
+          "word": "between",
+          "start": 30.03,
+          "end": 30.41
+        },
+        {
+          "word": "them",
+          "start": 30.41,
+          "end": 30.65
+        },
+        {
+          "word": "is",
+          "start": 30.65,
+          "end": 30.93
+        },
+        {
+          "word": "t.",
+          "start": 30.93,
+          "end": 31.31
+        },
+        {
+          "word": "The",
+          "start": 31.99,
+          "end": 32.17
+        },
+        {
+          "word": "sloping",
+          "start": 32.17,
+          "end": 32.73
+        },
+        {
+          "word": "edge",
+          "start": 32.73,
+          "end": 33.15
+        },
+        {
+          "word": "is",
+          "start": 33.15,
+          "end": 33.41
+        },
+        {
+          "word": "not",
+          "start": 33.41,
+          "end": 33.63
+        },
+        {
+          "word": "a",
+          "start": 33.63,
+          "end": 33.81
+        },
+        {
+          "word": "parallel",
+          "start": 33.81,
+          "end": 34.09
+        },
+        {
+          "word": "side.",
+          "start": 34.09,
+          "end": 34.67
+        },
+        {
+          "word": "So",
+          "start": 37.2,
+          "end": 37.38
+        },
+        {
+          "word": "displacement",
+          "start": 37.38,
+          "end": 38.06
+        },
+        {
+          "word": "equals",
+          "start": 38.06,
+          "end": 38.8
+        },
+        {
+          "word": "half",
+          "start": 38.8,
+          "end": 39.38
+        },
+        {
+          "word": "u",
+          "start": 39.38,
+          "end": 39.76
+        },
+        {
+          "word": "plus",
+          "start": 39.76,
+          "end": 40.28
+        },
+        {
+          "word": "v",
+          "start": 40.28,
+          "end": 40.74
+        },
+        {
+          "word": "multiplied",
+          "start": 40.74,
+          "end": 41.48
+        },
+        {
+          "word": "by",
+          "start": 41.48,
+          "end": 42.04
+        },
+        {
+          "word": "t.",
+          "start": 42.04,
+          "end": 42.4
+        },
+        {
+          "word": "This",
+          "start": 44.87,
+          "end": 45.12
+        },
+        {
+          "word": "is",
+          "start": 45.12,
+          "end": 45.26
+        },
+        {
+          "word": "average",
+          "start": 45.26,
+          "end": 45.6
+        },
+        {
+          "word": "velocity",
+          "start": 45.6,
+          "end": 46.3
+        },
+        {
+          "word": "times",
+          "start": 46.3,
+          "end": 46.72
+        },
+        {
+          "word": "time.",
+          "start": 46.72,
+          "end": 47.18
+        },
+        {
+          "word": "If",
+          "start": 48.24,
+          "end": 48.38
+        },
+        {
+          "word": "the",
+          "start": 48.38,
+          "end": 48.58
+        },
+        {
+          "word": "graph",
+          "start": 48.58,
+          "end": 48.86
+        },
+        {
+          "word": "goes",
+          "start": 48.86,
+          "end": 49.48
+        },
+        {
+          "word": "below",
+          "start": 49.48,
+          "end": 49.94
+        },
+        {
+          "word": "the",
+          "start": 49.94,
+          "end": 50.2
+        },
+        {
+          "word": "time",
+          "start": 50.2,
+          "end": 50.48
+        },
+        {
+          "word": "axis,",
+          "start": 50.48,
+          "end": 50.92
+        },
+        {
+          "word": "that",
+          "start": 51.98,
+          "end": 52.1
+        },
+        {
+          "word": "area",
+          "start": 52.1,
+          "end": 52.46
+        },
+        {
+          "word": "contributes",
+          "start": 52.46,
+          "end": 53.3
+        },
+        {
+          "word": "negative",
+          "start": 53.3,
+          "end": 53.84
+        },
+        {
+          "word": "displacement.",
+          "start": 53.84,
+          "end": 54.54
+        }
+      ],
+      "cues": {
+        "setup": 0.63,
+        "area": 9.93,
+        "formula": 18.93,
+        "sides": 26.35,
+        "result": 37.2,
+        "meaning": 44.87,
+        "negative-graph": 48.24
+      },
+      "figureEvents": [
+        {
+          "id": "word-29",
+          "wordIndex": 29,
+          "word": "a",
+          "start": 18.01,
+          "target": "acceleration",
+          "kind": "spoken"
+        },
+        {
+          "id": "area-substitution",
+          "start": 9.93,
+          "end": 18.85,
+          "target": "area",
+          "kind": "substitution"
+        },
+        {
+          "id": "word-34",
+          "wordIndex": 34,
+          "word": "half",
+          "start": 20.69,
+          "target": "endpoints",
+          "kind": "spoken"
+        },
+        {
+          "id": "formula-substitution",
+          "start": 18.93,
+          "end": 26.16,
+          "target": "endpoints",
+          "kind": "substitution"
+        },
+        {
+          "id": "word-49",
+          "wordIndex": 49,
+          "word": "u",
+          "start": 27.57,
+          "target": "initial",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-51",
+          "wordIndex": 51,
+          "word": "v.",
+          "start": 28.31,
+          "target": "final",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-57",
+          "wordIndex": 57,
+          "word": "t.",
+          "start": 30.93,
+          "target": "time",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-63",
+          "wordIndex": 63,
+          "word": "a",
+          "start": 33.63,
+          "target": "acceleration",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-69",
+          "wordIndex": 69,
+          "word": "half",
+          "start": 38.8,
+          "target": "area",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-70",
+          "wordIndex": 70,
+          "word": "u",
+          "start": 39.38,
+          "target": "initial",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-72",
+          "wordIndex": 72,
+          "word": "v",
+          "start": 40.28,
+          "target": "final",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-75",
+          "wordIndex": 75,
+          "word": "t.",
+          "start": 42.04,
+          "target": "time",
+          "kind": "spoken"
+        },
+        {
+          "id": "result-substitution",
+          "start": 37.2,
+          "end": 42.79,
+          "target": "area",
+          "kind": "substitution"
+        }
+      ],
+      "wordCount": 95,
+      "text": "find the displacement over the same interval. Keep the endpoint velocities and time on the graph. Displacement equals signed area under the velocity time graph. Here that shape is a trapezium. Trapezium area is half the sum of the parallel sides, multiplied by the perpendicular width. parallel sides are u and v. The width between them is t. The sloping edge is not a parallel side. So displacement equals half u plus v multiplied by t. This is average velocity times time. If the graph goes below the time axis, that area contributes negative displacement.",
+      "duration": 55.510204
+    },
+    {
+      "id": "s05",
+      "title": "Remove final velocity",
+      "mode": "remove-v",
+      "source": "f119–f140",
+      "tempo": "slow",
+      "voiceSpeed": 0.9,
+      "beats": [
+        {
+          "id": "setup",
+          "text": "Now create the other equations. First, remove final velocity.",
+          "hold": 2,
+          "target": "known-formulas",
+          "start": 0.4,
+          "speechEnd": 5.5,
+          "end": 5.7,
+          "cue": 0.62,
+          "penEnd": 5.62
+        },
+        {
+          "id": "formula",
+          "text": "Start with displacement equals half u plus v, times t.",
+          "hold": 0,
+          "ink": "s = ½(u + v)t",
+          "page": 0,
+          "target": "area",
+          "start": 7.7,
+          "speechEnd": 11.93,
+          "end": 12.13,
+          "cue": 7.7,
+          "penEnd": 12.05
+        },
+        {
+          "id": "replace",
+          "text": "Replace v with u plus a t from the gradient equation. Keep the brackets.",
+          "hold": 0,
+          "ink": "s = ½(u + (u + at))t",
+          "page": 0,
+          "target": "known-formulas",
+          "start": 12.13,
+          "speechEnd": 18.97,
+          "end": 19.17,
+          "cue": 12.13,
+          "penEnd": 19.090000000000003
+        },
+        {
+          "id": "collect",
+          "text": "Collect the two u terms inside: half of two u plus a t, all multiplied by t.",
+          "hold": 2,
+          "ink": "s = ½(2u + at)t",
+          "page": 0,
+          "target": "known-formulas",
+          "start": 19.17,
+          "speechEnd": 25.9,
+          "end": 26.1,
+          "cue": 19.18,
+          "penEnd": 26.020000000000003
+        },
+        {
+          "id": "result",
+          "text": "Expand. Half times two u times t is u t. The other term is half a t squared.",
+          "hold": 2,
+          "ink": "s = ut + ½at²",
+          "page": 0,
+          "target": "area",
+          "start": 28.1,
+          "speechEnd": 36.25,
+          "end": 36.45,
+          "cue": 28.89,
+          "penEnd": 36.370000000000005
+        },
+        {
+          "id": "meaning",
+          "text": "Use this form when initial velocity, acceleration and time are known. You do not need final velocity.",
+          "hold": 0,
+          "caption": "No final velocity needed.",
+          "start": 38.45,
+          "speechEnd": 48.26,
+          "end": 48.46,
+          "cue": 38.67,
+          "penEnd": 48.38
+        }
+      ],
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 5.7,
+          "end": 7.7,
+          "duration": 2
+        },
+        {
+          "kind": "hold",
+          "start": 26.1,
+          "end": 28.1,
+          "duration": 2
+        },
+        {
+          "kind": "hold",
+          "start": 36.45,
+          "end": 38.45,
+          "duration": 2
+        }
+      ],
+      "audio": "deriving-suvat-s05.mp3",
+      "audioSha256": "e27f1ec57f25acb4a272aee84f038b12fd97b432f357e9e0c4631a59521e2ddb",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "provider": "elevenlabs",
+      "sampleDuration": 48.81,
+      "words": [
+        {
+          "word": "create",
+          "start": 0.62,
+          "end": 0.98
+        },
+        {
+          "word": "the",
+          "start": 0.98,
+          "end": 1.72
+        },
+        {
+          "word": "other",
+          "start": 1.72,
+          "end": 2.0
+        },
+        {
+          "word": "equations.",
+          "start": 2.0,
+          "end": 2.5
+        },
+        {
+          "word": "First,",
+          "start": 2.96,
+          "end": 3.36
+        },
+        {
+          "word": "remove",
+          "start": 3.74,
+          "end": 4.44
+        },
+        {
+          "word": "final",
+          "start": 4.44,
+          "end": 4.78
+        },
+        {
+          "word": "velocity.",
+          "start": 4.78,
+          "end": 5.38
+        },
+        {
+          "word": "Start",
+          "start": 7.7,
+          "end": 8.06
+        },
+        {
+          "word": "with",
+          "start": 8.06,
+          "end": 8.42
+        },
+        {
+          "word": "displacement",
+          "start": 8.42,
+          "end": 9.0
+        },
+        {
+          "word": "equals",
+          "start": 9.0,
+          "end": 9.66
+        },
+        {
+          "word": "half",
+          "start": 9.66,
+          "end": 10.06
+        },
+        {
+          "word": "u",
+          "start": 10.06,
+          "end": 10.32
+        },
+        {
+          "word": "plus",
+          "start": 10.32,
+          "end": 10.66
+        },
+        {
+          "word": "v",
+          "start": 10.66,
+          "end": 11.04
+        },
+        {
+          "word": "times",
+          "start": 11.04,
+          "end": 11.46
+        },
+        {
+          "word": "t.",
+          "start": 11.46,
+          "end": 11.82
+        },
+        {
+          "word": "Replace",
+          "start": 12.13,
+          "end": 12.6
+        },
+        {
+          "word": "v",
+          "start": 12.6,
+          "end": 13.44
+        },
+        {
+          "word": "with",
+          "start": 13.44,
+          "end": 14.02
+        },
+        {
+          "word": "u",
+          "start": 14.02,
+          "end": 14.32
+        },
+        {
+          "word": "plus",
+          "start": 14.32,
+          "end": 14.56
+        },
+        {
+          "word": "a",
+          "start": 14.56,
+          "end": 14.84
+        },
+        {
+          "word": "t",
+          "start": 14.84,
+          "end": 15.0
+        },
+        {
+          "word": "from",
+          "start": 15.0,
+          "end": 15.86
+        },
+        {
+          "word": "the",
+          "start": 15.86,
+          "end": 16.04
+        },
+        {
+          "word": "gradient",
+          "start": 16.04,
+          "end": 16.44
+        },
+        {
+          "word": "equation.",
+          "start": 16.44,
+          "end": 17.06
+        },
+        {
+          "word": "Keep",
+          "start": 17.86,
+          "end": 18.06
+        },
+        {
+          "word": "the",
+          "start": 18.06,
+          "end": 18.22
+        },
+        {
+          "word": "brackets.",
+          "start": 18.22,
+          "end": 18.58
+        },
+        {
+          "word": "Collect",
+          "start": 19.18,
+          "end": 19.4
+        },
+        {
+          "word": "the",
+          "start": 19.4,
+          "end": 19.64
+        },
+        {
+          "word": "two",
+          "start": 19.64,
+          "end": 19.86
+        },
+        {
+          "word": "u",
+          "start": 19.86,
+          "end": 20.16
+        },
+        {
+          "word": "terms",
+          "start": 20.16,
+          "end": 20.56
+        },
+        {
+          "word": "inside.",
+          "start": 20.56,
+          "end": 21.04
+        },
+        {
+          "word": "Half",
+          "start": 21.72,
+          "end": 21.9
+        },
+        {
+          "word": "of",
+          "start": 21.9,
+          "end": 22.12
+        },
+        {
+          "word": "two",
+          "start": 22.12,
+          "end": 22.4
+        },
+        {
+          "word": "u",
+          "start": 22.4,
+          "end": 22.74
+        },
+        {
+          "word": "plus",
+          "start": 22.74,
+          "end": 23.22
+        },
+        {
+          "word": "a",
+          "start": 23.22,
+          "end": 23.5
+        },
+        {
+          "word": "t,",
+          "start": 23.5,
+          "end": 23.82
+        },
+        {
+          "word": "all",
+          "start": 24.2,
+          "end": 24.54
+        },
+        {
+          "word": "multiplied",
+          "start": 24.54,
+          "end": 24.96
+        },
+        {
+          "word": "by",
+          "start": 24.96,
+          "end": 25.32
+        },
+        {
+          "word": "t.",
+          "start": 25.32,
+          "end": 25.72
+        },
+        {
+          "word": "half",
+          "start": 28.89,
+          "end": 29.67
+        },
+        {
+          "word": "times",
+          "start": 29.67,
+          "end": 30.23
+        },
+        {
+          "word": "2u",
+          "start": 30.23,
+          "end": 30.95
+        },
+        {
+          "word": "times",
+          "start": 30.95,
+          "end": 31.25
+        },
+        {
+          "word": "t",
+          "start": 31.25,
+          "end": 31.81
+        },
+        {
+          "word": "is",
+          "start": 31.81,
+          "end": 32.49
+        },
+        {
+          "word": "ut.",
+          "start": 32.49,
+          "end": 32.85
+        },
+        {
+          "word": "The",
+          "start": 33.67,
+          "end": 33.89
+        },
+        {
+          "word": "other",
+          "start": 33.89,
+          "end": 34.19
+        },
+        {
+          "word": "term",
+          "start": 34.19,
+          "end": 34.63
+        },
+        {
+          "word": "is",
+          "start": 34.63,
+          "end": 35.13
+        },
+        {
+          "word": "half",
+          "start": 35.13,
+          "end": 35.33
+        },
+        {
+          "word": "a",
+          "start": 35.33,
+          "end": 35.49
+        },
+        {
+          "word": "t",
+          "start": 35.49,
+          "end": 35.63
+        },
+        {
+          "word": "squared.",
+          "start": 35.63,
+          "end": 36.01
+        },
+        {
+          "word": "this",
+          "start": 38.67,
+          "end": 38.97
+        },
+        {
+          "word": "form",
+          "start": 38.97,
+          "end": 39.43
+        },
+        {
+          "word": "when",
+          "start": 39.43,
+          "end": 40.09
+        },
+        {
+          "word": "initial",
+          "start": 40.09,
+          "end": 40.61
+        },
+        {
+          "word": "velocity,",
+          "start": 40.61,
+          "end": 41.27
+        },
+        {
+          "word": "acceleration",
+          "start": 42.09,
+          "end": 42.67
+        },
+        {
+          "word": "and",
+          "start": 42.67,
+          "end": 43.25
+        },
+        {
+          "word": "time",
+          "start": 43.25,
+          "end": 43.77
+        },
+        {
+          "word": "are",
+          "start": 43.77,
+          "end": 44.29
+        },
+        {
+          "word": "normal.",
+          "start": 44.29,
+          "end": 44.61
+        },
+        {
+          "word": "You",
+          "start": 45.99,
+          "end": 46.35
+        },
+        {
+          "word": "do",
+          "start": 46.35,
+          "end": 46.55
+        },
+        {
+          "word": "not",
+          "start": 46.55,
+          "end": 46.71
+        },
+        {
+          "word": "need",
+          "start": 46.71,
+          "end": 47.09
+        },
+        {
+          "word": "final",
+          "start": 47.09,
+          "end": 47.45
+        },
+        {
+          "word": "velocity.",
+          "start": 47.45,
+          "end": 48.13
+        }
+      ],
+      "cues": {
+        "setup": 0.62,
+        "formula": 7.7,
+        "replace": 12.13,
+        "collect": 19.18,
+        "result": 28.89,
+        "meaning": 38.67
+      },
+      "figureEvents": [
+        {
+          "id": "word-12",
+          "wordIndex": 12,
+          "word": "half",
+          "start": 9.66,
+          "target": "area",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-13",
+          "wordIndex": 13,
+          "word": "u",
+          "start": 10.06,
+          "target": "initial",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-15",
+          "wordIndex": 15,
+          "word": "v",
+          "start": 10.66,
+          "target": "final",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-17",
+          "wordIndex": 17,
+          "word": "t.",
+          "start": 11.46,
+          "target": "time",
+          "kind": "spoken"
+        },
+        {
+          "id": "formula-substitution",
+          "start": 7.7,
+          "end": 12.05,
+          "target": "area",
+          "kind": "substitution"
+        },
+        {
+          "id": "word-19",
+          "wordIndex": 19,
+          "word": "v",
+          "start": 12.6,
+          "target": "final",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-21",
+          "wordIndex": 21,
+          "word": "u",
+          "start": 14.02,
+          "target": "initial",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-23",
+          "wordIndex": 23,
+          "word": "a",
+          "start": 14.56,
+          "target": "acceleration",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-24",
+          "wordIndex": 24,
+          "word": "t",
+          "start": 14.84,
+          "target": "time",
+          "kind": "spoken"
+        },
+        {
+          "id": "replace-substitution",
+          "start": 12.13,
+          "end": 19.090000000000003,
+          "target": "known-formulas",
+          "kind": "substitution"
+        },
+        {
+          "id": "word-34",
+          "wordIndex": 34,
+          "word": "two",
+          "start": 19.64,
+          "target": "known-formulas",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-35",
+          "wordIndex": 35,
+          "word": "u",
+          "start": 19.86,
+          "target": "initial",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-38",
+          "wordIndex": 38,
+          "word": "Half",
+          "start": 21.72,
+          "target": "known-formulas",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-40",
+          "wordIndex": 40,
+          "word": "two",
+          "start": 22.12,
+          "target": "known-formulas",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-41",
+          "wordIndex": 41,
+          "word": "u",
+          "start": 22.4,
+          "target": "initial",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-43",
+          "wordIndex": 43,
+          "word": "a",
+          "start": 23.22,
+          "target": "acceleration",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-44",
+          "wordIndex": 44,
+          "word": "t,",
+          "start": 23.5,
+          "target": "time",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-48",
+          "wordIndex": 48,
+          "word": "t.",
+          "start": 25.32,
+          "target": "time",
+          "kind": "spoken"
+        },
+        {
+          "id": "collect-substitution",
+          "start": 19.18,
+          "end": 26.020000000000003,
+          "target": "known-formulas",
+          "kind": "substitution"
+        },
+        {
+          "id": "word-49",
+          "wordIndex": 49,
+          "word": "half",
+          "start": 28.89,
+          "target": "area",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-51",
+          "wordIndex": 51,
+          "word": "2u",
+          "start": 30.23,
+          "target": "area",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-53",
+          "wordIndex": 53,
+          "word": "t",
+          "start": 31.25,
+          "target": "time",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-60",
+          "wordIndex": 60,
+          "word": "half",
+          "start": 35.13,
+          "target": "area",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-61",
+          "wordIndex": 61,
+          "word": "a",
+          "start": 35.33,
+          "target": "acceleration",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-62",
+          "wordIndex": 62,
+          "word": "t",
+          "start": 35.49,
+          "target": "time",
+          "kind": "spoken"
+        },
+        {
+          "id": "result-substitution",
+          "start": 28.89,
+          "end": 36.370000000000005,
+          "target": "area",
+          "kind": "substitution"
+        }
+      ],
+      "wordCount": 80,
+      "text": "create the other equations. First, remove final velocity. Start with displacement equals half u plus v times t. Replace v with u plus a t from the gradient equation. Keep the brackets. Collect the two u terms inside. Half of two u plus a t, all multiplied by t. half times 2u times t is ut. The other term is half a t squared. this form when initial velocity, acceleration and time are normal. You do not need final velocity.",
+      "duration": 48.84898
+    },
+    {
+      "id": "s06",
+      "title": "Remove initial velocity",
+      "mode": "remove-u",
+      "source": "f141–f153",
+      "tempo": "slow",
+      "voiceSpeed": 0.9,
+      "beats": [
+        {
+          "id": "setup",
+          "text": "If final velocity is known instead, remove initial velocity.",
+          "hold": 2,
+          "target": "known-formulas",
+          "start": 0.4,
+          "speechEnd": 5.09,
+          "end": 5.29,
+          "cue": 0.6,
+          "penEnd": 5.21
+        },
+        {
+          "id": "formula",
+          "text": "Begin again with the trapezium result.",
+          "hold": 0,
+          "ink": "s = ½(u + v)t",
+          "page": 0,
+          "target": "area",
+          "start": 7.29,
+          "speechEnd": 9.63,
+          "end": 9.83,
+          "cue": 7.29,
+          "penEnd": 9.75
+        },
+        {
+          "id": "rearrange",
+          "text": "Rearrange v equals u plus a t: u equals v minus a t.",
+          "hold": 0,
+          "ink": "u = v - at",
+          "page": 0,
+          "target": "known-formulas",
+          "start": 9.83,
+          "speechEnd": 15.2,
+          "end": 15.4,
+          "cue": 9.92,
+          "penEnd": 15.32
+        },
+        {
+          "id": "substitute",
+          "text": "Substitute that expression for u.",
+          "hold": 0,
+          "ink": "s = ½((v - at) + v)t",
+          "page": 0,
+          "target": "known-formulas",
+          "start": 15.4,
+          "speechEnd": 17.88,
+          "end": 18.08,
+          "cue": 15.4,
+          "penEnd": 18.0
+        },
+        {
+          "id": "collect",
+          "text": "Collect terms: half of two v minus a t, multiplied by t.",
+          "hold": 0,
+          "ink": "s = ½(2v - at)t",
+          "page": 0,
+          "target": "known-formulas",
+          "start": 18.08,
+          "speechEnd": 24.08,
+          "end": 24.28,
+          "cue": 18.1,
+          "penEnd": 24.200000000000003
+        },
+        {
+          "id": "result",
+          "text": "Expand to get v t minus half a t squared. The minus sign comes from replacing u by v minus a t.",
+          "hold": 2,
+          "ink": "s = vt - ½at²",
+          "page": 0,
+          "target": "area",
+          "start": 24.28,
+          "speechEnd": 33.77,
+          "end": 33.97,
+          "cue": 24.28,
+          "penEnd": 33.89
+        }
+      ],
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 5.29,
+          "end": 7.29,
+          "duration": 2
+        },
+        {
+          "kind": "hold",
+          "start": 33.97,
+          "end": 35.97,
+          "duration": 2
+        }
+      ],
+      "audio": "deriving-suvat-s06.mp3",
+      "audioSha256": "72c47743ee44d778b27d07281435340338128046c47313f557cd6e19e3c11f58",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "provider": "elevenlabs",
+      "sampleDuration": 36.32,
+      "words": [
+        {
+          "word": "final",
+          "start": 0.6,
+          "end": 0.98
+        },
+        {
+          "word": "velocity",
+          "start": 0.98,
+          "end": 1.52
+        },
+        {
+          "word": "is",
+          "start": 1.52,
+          "end": 1.8
+        },
+        {
+          "word": "known",
+          "start": 1.8,
+          "end": 2.04
+        },
+        {
+          "word": "instead,",
+          "start": 2.04,
+          "end": 2.56
+        },
+        {
+          "word": "remove",
+          "start": 3.22,
+          "end": 3.68
+        },
+        {
+          "word": "initial",
+          "start": 3.68,
+          "end": 4.28
+        },
+        {
+          "word": "velocity.",
+          "start": 4.28,
+          "end": 4.88
+        },
+        {
+          "word": "Begin",
+          "start": 7.29,
+          "end": 7.6
+        },
+        {
+          "word": "again",
+          "start": 7.6,
+          "end": 7.94
+        },
+        {
+          "word": "with",
+          "start": 7.94,
+          "end": 8.16
+        },
+        {
+          "word": "the",
+          "start": 8.16,
+          "end": 8.28
+        },
+        {
+          "word": "trapezium",
+          "start": 8.28,
+          "end": 8.9
+        },
+        {
+          "word": "result.",
+          "start": 8.9,
+          "end": 9.34
+        },
+        {
+          "word": "Rearrange",
+          "start": 9.92,
+          "end": 10.4
+        },
+        {
+          "word": "v",
+          "start": 10.4,
+          "end": 10.74
+        },
+        {
+          "word": "equals",
+          "start": 10.74,
+          "end": 11.26
+        },
+        {
+          "word": "u",
+          "start": 11.26,
+          "end": 11.68
+        },
+        {
+          "word": "plus",
+          "start": 11.68,
+          "end": 12.1
+        },
+        {
+          "word": "a",
+          "start": 12.1,
+          "end": 12.64
+        },
+        {
+          "word": "t.",
+          "start": 12.64,
+          "end": 12.78
+        },
+        {
+          "word": "u",
+          "start": 13.08,
+          "end": 13.2
+        },
+        {
+          "word": "equals",
+          "start": 13.2,
+          "end": 13.8
+        },
+        {
+          "word": "v",
+          "start": 13.8,
+          "end": 14.22
+        },
+        {
+          "word": "minus",
+          "start": 14.22,
+          "end": 14.54
+        },
+        {
+          "word": "a",
+          "start": 14.54,
+          "end": 14.94
+        },
+        {
+          "word": "t.",
+          "start": 14.94,
+          "end": 15.14
+        },
+        {
+          "word": "Substitute",
+          "start": 15.4,
+          "end": 16.04
+        },
+        {
+          "word": "that",
+          "start": 16.04,
+          "end": 16.28
+        },
+        {
+          "word": "expression",
+          "start": 16.28,
+          "end": 16.78
+        },
+        {
+          "word": "for",
+          "start": 16.78,
+          "end": 17.24
+        },
+        {
+          "word": "u.",
+          "start": 17.24,
+          "end": 17.76
+        },
+        {
+          "word": "Collect",
+          "start": 18.1,
+          "end": 18.34
+        },
+        {
+          "word": "terms.",
+          "start": 18.34,
+          "end": 18.94
+        },
+        {
+          "word": "Half",
+          "start": 19.88,
+          "end": 20.08
+        },
+        {
+          "word": "of",
+          "start": 20.08,
+          "end": 20.42
+        },
+        {
+          "word": "two",
+          "start": 20.42,
+          "end": 20.7
+        },
+        {
+          "word": "v",
+          "start": 20.7,
+          "end": 21.08
+        },
+        {
+          "word": "minus",
+          "start": 21.08,
+          "end": 21.68
+        },
+        {
+          "word": "a",
+          "start": 21.68,
+          "end": 21.96
+        },
+        {
+          "word": "t,",
+          "start": 21.96,
+          "end": 22.26
+        },
+        {
+          "word": "multiplied",
+          "start": 22.64,
+          "end": 23.0
+        },
+        {
+          "word": "by",
+          "start": 23.0,
+          "end": 23.64
+        },
+        {
+          "word": "t.",
+          "start": 23.64,
+          "end": 23.94
+        },
+        {
+          "word": "Expand",
+          "start": 24.28,
+          "end": 24.9
+        },
+        {
+          "word": "to",
+          "start": 24.9,
+          "end": 25.26
+        },
+        {
+          "word": "get",
+          "start": 25.26,
+          "end": 25.48
+        },
+        {
+          "word": "v",
+          "start": 25.48,
+          "end": 25.78
+        },
+        {
+          "word": "t",
+          "start": 25.78,
+          "end": 26.1
+        },
+        {
+          "word": "minus",
+          "start": 26.1,
+          "end": 26.66
+        },
+        {
+          "word": "half",
+          "start": 26.66,
+          "end": 27.04
+        },
+        {
+          "word": "a",
+          "start": 27.04,
+          "end": 27.26
+        },
+        {
+          "word": "t",
+          "start": 27.26,
+          "end": 27.42
+        },
+        {
+          "word": "squared.",
+          "start": 27.42,
+          "end": 27.78
+        },
+        {
+          "word": "The",
+          "start": 27.78,
+          "end": 28.96
+        },
+        {
+          "word": "minus",
+          "start": 28.96,
+          "end": 29.36
+        },
+        {
+          "word": "sign",
+          "start": 29.36,
+          "end": 29.82
+        },
+        {
+          "word": "comes",
+          "start": 29.82,
+          "end": 30.28
+        },
+        {
+          "word": "from",
+          "start": 30.28,
+          "end": 30.52
+        },
+        {
+          "word": "replacing",
+          "start": 30.52,
+          "end": 31.06
+        },
+        {
+          "word": "u",
+          "start": 31.06,
+          "end": 31.48
+        },
+        {
+          "word": "by",
+          "start": 31.48,
+          "end": 32.12
+        },
+        {
+          "word": "v",
+          "start": 32.12,
+          "end": 32.5
+        },
+        {
+          "word": "minus",
+          "start": 32.5,
+          "end": 33.2
+        },
+        {
+          "word": "at.",
+          "start": 33.2,
+          "end": 33.54
+        }
+      ],
+      "cues": {
+        "setup": 0.6,
+        "formula": 7.29,
+        "rearrange": 9.92,
+        "substitute": 15.4,
+        "collect": 18.1,
+        "result": 24.28
+      },
+      "figureEvents": [
+        {
+          "id": "formula-substitution",
+          "start": 7.29,
+          "end": 9.75,
+          "target": "area",
+          "kind": "substitution"
+        },
+        {
+          "id": "word-15",
+          "wordIndex": 15,
+          "word": "v",
+          "start": 10.4,
+          "target": "final",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-17",
+          "wordIndex": 17,
+          "word": "u",
+          "start": 11.26,
+          "target": "initial",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-19",
+          "wordIndex": 19,
+          "word": "a",
+          "start": 12.1,
+          "target": "acceleration",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-20",
+          "wordIndex": 20,
+          "word": "t.",
+          "start": 12.64,
+          "target": "time",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-21",
+          "wordIndex": 21,
+          "word": "u",
+          "start": 13.08,
+          "target": "initial",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-23",
+          "wordIndex": 23,
+          "word": "v",
+          "start": 13.8,
+          "target": "final",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-24",
+          "wordIndex": 24,
+          "word": "minus",
+          "start": 14.22,
+          "target": "known-formulas",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-25",
+          "wordIndex": 25,
+          "word": "a",
+          "start": 14.54,
+          "target": "acceleration",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-26",
+          "wordIndex": 26,
+          "word": "t.",
+          "start": 14.94,
+          "target": "time",
+          "kind": "spoken"
+        },
+        {
+          "id": "rearrange-substitution",
+          "start": 9.92,
+          "end": 15.32,
+          "target": "known-formulas",
+          "kind": "substitution"
+        },
+        {
+          "id": "word-31",
+          "wordIndex": 31,
+          "word": "u.",
+          "start": 17.24,
+          "target": "initial",
+          "kind": "spoken"
+        },
+        {
+          "id": "substitute-substitution",
+          "start": 15.4,
+          "end": 18.0,
+          "target": "known-formulas",
+          "kind": "substitution"
+        },
+        {
+          "id": "word-34",
+          "wordIndex": 34,
+          "word": "Half",
+          "start": 19.88,
+          "target": "known-formulas",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-36",
+          "wordIndex": 36,
+          "word": "two",
+          "start": 20.42,
+          "target": "known-formulas",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-37",
+          "wordIndex": 37,
+          "word": "v",
+          "start": 20.7,
+          "target": "final",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-38",
+          "wordIndex": 38,
+          "word": "minus",
+          "start": 21.08,
+          "target": "known-formulas",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-39",
+          "wordIndex": 39,
+          "word": "a",
+          "start": 21.68,
+          "target": "acceleration",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-40",
+          "wordIndex": 40,
+          "word": "t,",
+          "start": 21.96,
+          "target": "time",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-43",
+          "wordIndex": 43,
+          "word": "t.",
+          "start": 23.64,
+          "target": "time",
+          "kind": "spoken"
+        },
+        {
+          "id": "collect-substitution",
+          "start": 18.1,
+          "end": 24.200000000000003,
+          "target": "known-formulas",
+          "kind": "substitution"
+        },
+        {
+          "id": "word-47",
+          "wordIndex": 47,
+          "word": "v",
+          "start": 25.48,
+          "target": "final",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-48",
+          "wordIndex": 48,
+          "word": "t",
+          "start": 25.78,
+          "target": "time",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-49",
+          "wordIndex": 49,
+          "word": "minus",
+          "start": 26.1,
+          "target": "area",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-50",
+          "wordIndex": 50,
+          "word": "half",
+          "start": 26.66,
+          "target": "area",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-51",
+          "wordIndex": 51,
+          "word": "a",
+          "start": 27.04,
+          "target": "acceleration",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-52",
+          "wordIndex": 52,
+          "word": "t",
+          "start": 27.26,
+          "target": "time",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-55",
+          "wordIndex": 55,
+          "word": "minus",
+          "start": 28.96,
+          "target": "area",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-60",
+          "wordIndex": 60,
+          "word": "u",
+          "start": 31.06,
+          "target": "initial",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-62",
+          "wordIndex": 62,
+          "word": "v",
+          "start": 32.12,
+          "target": "final",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-63",
+          "wordIndex": 63,
+          "word": "minus",
+          "start": 32.5,
+          "target": "area",
+          "kind": "spoken"
+        },
+        {
+          "id": "result-substitution",
+          "start": 24.28,
+          "end": 33.89,
+          "target": "area",
+          "kind": "substitution"
+        }
+      ],
+      "wordCount": 65,
+      "text": "final velocity is known instead, remove initial velocity. Begin again with the trapezium result. Rearrange v equals u plus a t. u equals v minus a t. Substitute that expression for u. Collect terms. Half of two v minus a t, multiplied by t. Expand to get v t minus half a t squared. The minus sign comes from replacing u by v minus at.",
+      "duration": 36.362449
+    },
+    {
+      "id": "s07",
+      "title": "Remove time",
+      "mode": "remove-t",
+      "source": "f154–f176",
+      "tempo": "slow",
+      "voiceSpeed": 0.9,
+      "beats": [
+        {
+          "id": "setup",
+          "text": "To remove time, first assume acceleration is nonzero.",
+          "hold": 2,
+          "target": "condition",
+          "start": 0.4,
+          "speechEnd": 4.88,
+          "end": 5.08,
+          "cue": 0.56,
+          "penEnd": 5.0
+        },
+        {
+          "id": "formula",
+          "text": "Begin with the area formula.",
+          "hold": 0,
+          "ink": "s = ½(u + v)t",
+          "page": 0,
+          "target": "area",
+          "start": 7.08,
+          "speechEnd": 8.74,
+          "end": 8.94,
+          "cue": 7.08,
+          "penEnd": 8.86
+        },
+        {
+          "id": "time",
+          "text": "From v equals u plus a t, time equals v minus u divided by a.",
+          "hold": 0,
+          "ink": "t = (v - u)/a",
+          "page": 0,
+          "target": "known-formulas",
+          "start": 8.94,
+          "speechEnd": 16.65,
+          "end": 16.85,
+          "cue": 9.16,
+          "penEnd": 16.770000000000003
+        },
+        {
+          "id": "substitute",
+          "text": "Substitute that fraction for time in the area equation.",
+          "hold": 0,
+          "ink": "s = ½(u + v)(v - u)/a",
+          "page": 0,
+          "target": "known-formulas",
+          "start": 16.85,
+          "speechEnd": 21.24,
+          "end": 21.44,
+          "cue": 16.85,
+          "penEnd": 21.360000000000003
+        },
+        {
+          "id": "multiply",
+          "text": "Multiply both sides by two a.",
+          "hold": 0,
+          "ink": "2as = (u + v)(v - u)",
+          "page": 0,
+          "target": "known-formulas",
+          "start": 21.44,
+          "speechEnd": 23.39,
+          "end": 23.59,
+          "cue": 21.44,
+          "penEnd": 23.51
+        },
+        {
+          "id": "squares",
+          "text": "The product is a difference of squares: v squared minus u squared.",
+          "hold": 2,
+          "ink": "2as = v² - u²",
+          "page": 0,
+          "target": "endpoints",
+          "start": 23.59,
+          "speechEnd": 28.76,
+          "end": 28.96,
+          "cue": 23.6,
+          "penEnd": 28.880000000000003
+        },
+        {
+          "id": "result",
+          "text": "Add u squared. We obtain v squared equals u squared plus two a s.",
+          "hold": 2,
+          "ink": "v² = u² + 2as",
+          "page": 0,
+          "target": "endpoints",
+          "start": 30.96,
+          "speechEnd": 37.08,
+          "end": 37.28,
+          "cue": 31.14,
+          "penEnd": 37.2
+        },
+        {
+          "id": "zero",
+          "text": "If acceleration is zero, v equals u, so the final identity still holds. Only the division step required nonzero acceleration.",
+          "hold": 0,
+          "target": "zero-case",
+          "caption": "The final identity also covers a = 0.",
+          "start": 39.28,
+          "speechEnd": 52.97,
+          "end": 53.17,
+          "cue": 39.47,
+          "penEnd": 53.09
+        }
+      ],
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 5.08,
+          "end": 7.08,
+          "duration": 2
+        },
+        {
+          "kind": "hold",
+          "start": 28.96,
+          "end": 30.96,
+          "duration": 2
+        },
+        {
+          "kind": "hold",
+          "start": 37.28,
+          "end": 39.28,
+          "duration": 2
+        }
+      ],
+      "audio": "deriving-suvat-s07.mp3",
+      "audioSha256": "34b4b7fcabea9b612c91630366640f563296a408f66c34a237cf6120fede607a",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "provider": "elevenlabs",
+      "sampleDuration": 53.52,
+      "words": [
+        {
+          "word": "remove",
+          "start": 0.56,
+          "end": 0.94
+        },
+        {
+          "word": "time,",
+          "start": 0.94,
+          "end": 1.48
+        },
+        {
+          "word": "first",
+          "start": 1.9,
+          "end": 2.16
+        },
+        {
+          "word": "assume",
+          "start": 2.16,
+          "end": 2.76
+        },
+        {
+          "word": "acceleration",
+          "start": 2.76,
+          "end": 3.52
+        },
+        {
+          "word": "is",
+          "start": 3.52,
+          "end": 4.06
+        },
+        {
+          "word": "nonzero.",
+          "start": 4.06,
+          "end": 4.82
+        },
+        {
+          "word": "Begin",
+          "start": 7.08,
+          "end": 7.36
+        },
+        {
+          "word": "with",
+          "start": 7.36,
+          "end": 7.66
+        },
+        {
+          "word": "the",
+          "start": 7.66,
+          "end": 7.82
+        },
+        {
+          "word": "area",
+          "start": 7.82,
+          "end": 8.1
+        },
+        {
+          "word": "formula.",
+          "start": 8.1,
+          "end": 8.48
+        },
+        {
+          "word": "From",
+          "start": 9.16,
+          "end": 9.18
+        },
+        {
+          "word": "v",
+          "start": 9.18,
+          "end": 9.56
+        },
+        {
+          "word": "equals",
+          "start": 9.56,
+          "end": 10.06
+        },
+        {
+          "word": "u",
+          "start": 10.06,
+          "end": 10.88
+        },
+        {
+          "word": "plus",
+          "start": 10.88,
+          "end": 11.48
+        },
+        {
+          "word": "a",
+          "start": 11.48,
+          "end": 11.76
+        },
+        {
+          "word": "t,",
+          "start": 11.76,
+          "end": 12.06
+        },
+        {
+          "word": "time",
+          "start": 12.44,
+          "end": 13.32
+        },
+        {
+          "word": "equals",
+          "start": 13.32,
+          "end": 13.84
+        },
+        {
+          "word": "v",
+          "start": 13.84,
+          "end": 14.22
+        },
+        {
+          "word": "minus",
+          "start": 14.22,
+          "end": 14.52
+        },
+        {
+          "word": "u",
+          "start": 14.52,
+          "end": 15.08
+        },
+        {
+          "word": "divided",
+          "start": 15.08,
+          "end": 15.7
+        },
+        {
+          "word": "by",
+          "start": 15.7,
+          "end": 16.12
+        },
+        {
+          "word": "a.",
+          "start": 16.12,
+          "end": 16.54
+        },
+        {
+          "word": "Substitute",
+          "start": 16.85,
+          "end": 17.46
+        },
+        {
+          "word": "that",
+          "start": 17.46,
+          "end": 17.68
+        },
+        {
+          "word": "fraction",
+          "start": 17.68,
+          "end": 18.14
+        },
+        {
+          "word": "for",
+          "start": 18.14,
+          "end": 19.0
+        },
+        {
+          "word": "time",
+          "start": 19.0,
+          "end": 19.5
+        },
+        {
+          "word": "in",
+          "start": 19.5,
+          "end": 19.96
+        },
+        {
+          "word": "the",
+          "start": 19.96,
+          "end": 20.08
+        },
+        {
+          "word": "area",
+          "start": 20.08,
+          "end": 20.4
+        },
+        {
+          "word": "equation.",
+          "start": 20.4,
+          "end": 21.0
+        },
+        {
+          "word": "Multiply",
+          "start": 21.44,
+          "end": 21.94
+        },
+        {
+          "word": "both",
+          "start": 21.94,
+          "end": 22.16
+        },
+        {
+          "word": "sides",
+          "start": 22.16,
+          "end": 22.48
+        },
+        {
+          "word": "by",
+          "start": 22.48,
+          "end": 22.72
+        },
+        {
+          "word": "two",
+          "start": 22.72,
+          "end": 23.0
+        },
+        {
+          "word": "a.",
+          "start": 23.0,
+          "end": 23.28
+        },
+        {
+          "word": "The",
+          "start": 23.6,
+          "end": 23.74
+        },
+        {
+          "word": "product",
+          "start": 23.74,
+          "end": 24.26
+        },
+        {
+          "word": "is",
+          "start": 24.26,
+          "end": 24.64
+        },
+        {
+          "word": "a",
+          "start": 24.64,
+          "end": 24.8
+        },
+        {
+          "word": "difference",
+          "start": 24.8,
+          "end": 25.0
+        },
+        {
+          "word": "of",
+          "start": 25.0,
+          "end": 25.24
+        },
+        {
+          "word": "squares.",
+          "start": 25.24,
+          "end": 25.68
+        },
+        {
+          "word": "v",
+          "start": 25.68,
+          "end": 26.6
+        },
+        {
+          "word": "squared",
+          "start": 26.6,
+          "end": 27.02
+        },
+        {
+          "word": "minus",
+          "start": 27.02,
+          "end": 27.92
+        },
+        {
+          "word": "u",
+          "start": 27.92,
+          "end": 28.3
+        },
+        {
+          "word": "squared",
+          "start": 28.3,
+          "end": 28.76
+        },
+        {
+          "word": "u",
+          "start": 31.14,
+          "end": 31.36
+        },
+        {
+          "word": "squared",
+          "start": 31.36,
+          "end": 31.9
+        },
+        {
+          "word": "we",
+          "start": 31.9,
+          "end": 32.32
+        },
+        {
+          "word": "obtain",
+          "start": 32.32,
+          "end": 32.86
+        },
+        {
+          "word": "v",
+          "start": 32.86,
+          "end": 33.34
+        },
+        {
+          "word": "squared",
+          "start": 33.34,
+          "end": 33.8
+        },
+        {
+          "word": "equals",
+          "start": 33.8,
+          "end": 34.46
+        },
+        {
+          "word": "u",
+          "start": 34.46,
+          "end": 34.8
+        },
+        {
+          "word": "squared",
+          "start": 34.8,
+          "end": 35.18
+        },
+        {
+          "word": "plus",
+          "start": 35.18,
+          "end": 35.98
+        },
+        {
+          "word": "2",
+          "start": 35.98,
+          "end": 36.34
+        },
+        {
+          "word": "as",
+          "start": 36.34,
+          "end": 36.62
+        },
+        {
+          "word": "acceleration",
+          "start": 39.47,
+          "end": 39.87
+        },
+        {
+          "word": "is",
+          "start": 39.87,
+          "end": 40.29
+        },
+        {
+          "word": "zero",
+          "start": 40.29,
+          "end": 40.71
+        },
+        {
+          "word": "v",
+          "start": 40.71,
+          "end": 41.61
+        },
+        {
+          "word": "equals",
+          "start": 41.61,
+          "end": 42.11
+        },
+        {
+          "word": "u",
+          "start": 42.11,
+          "end": 42.63
+        },
+        {
+          "word": "so",
+          "start": 42.63,
+          "end": 43.75
+        },
+        {
+          "word": "the",
+          "start": 43.75,
+          "end": 43.91
+        },
+        {
+          "word": "final",
+          "start": 43.91,
+          "end": 44.17
+        },
+        {
+          "word": "identity",
+          "start": 44.17,
+          "end": 44.83
+        },
+        {
+          "word": "still",
+          "start": 44.83,
+          "end": 45.33
+        },
+        {
+          "word": "holds",
+          "start": 45.33,
+          "end": 45.87
+        },
+        {
+          "word": "only",
+          "start": 45.87,
+          "end": 47.23
+        },
+        {
+          "word": "the",
+          "start": 47.23,
+          "end": 47.39
+        },
+        {
+          "word": "division",
+          "start": 47.39,
+          "end": 47.85
+        },
+        {
+          "word": "step",
+          "start": 47.85,
+          "end": 48.39
+        },
+        {
+          "word": "required",
+          "start": 48.39,
+          "end": 49.67
+        },
+        {
+          "word": "non",
+          "start": 49.67,
+          "end": 50.49
+        },
+        {
+          "word": "-zero",
+          "start": 50.49,
+          "end": 50.95
+        },
+        {
+          "word": "acceleration",
+          "start": 50.95,
+          "end": 52.43
+        }
+      ],
+      "cues": {
+        "setup": 0.56,
+        "formula": 7.08,
+        "time": 9.16,
+        "substitute": 16.85,
+        "multiply": 21.44,
+        "squares": 23.6,
+        "result": 31.14,
+        "zero": 39.47
+      },
+      "figureEvents": [
+        {
+          "id": "formula-substitution",
+          "start": 7.08,
+          "end": 8.86,
+          "target": "area",
+          "kind": "substitution"
+        },
+        {
+          "id": "word-13",
+          "wordIndex": 13,
+          "word": "v",
+          "start": 9.18,
+          "target": "final",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-15",
+          "wordIndex": 15,
+          "word": "u",
+          "start": 10.06,
+          "target": "initial",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-17",
+          "wordIndex": 17,
+          "word": "a",
+          "start": 11.48,
+          "target": "acceleration",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-18",
+          "wordIndex": 18,
+          "word": "t,",
+          "start": 11.76,
+          "target": "time",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-21",
+          "wordIndex": 21,
+          "word": "v",
+          "start": 13.84,
+          "target": "final",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-22",
+          "wordIndex": 22,
+          "word": "minus",
+          "start": 14.22,
+          "target": "known-formulas",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-23",
+          "wordIndex": 23,
+          "word": "u",
+          "start": 14.52,
+          "target": "initial",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-26",
+          "wordIndex": 26,
+          "word": "a.",
+          "start": 16.12,
+          "target": "acceleration",
+          "kind": "spoken"
+        },
+        {
+          "id": "time-substitution",
+          "start": 9.16,
+          "end": 16.770000000000003,
+          "target": "known-formulas",
+          "kind": "substitution"
+        },
+        {
+          "id": "substitute-substitution",
+          "start": 16.85,
+          "end": 21.360000000000003,
+          "target": "known-formulas",
+          "kind": "substitution"
+        },
+        {
+          "id": "word-40",
+          "wordIndex": 40,
+          "word": "two",
+          "start": 22.72,
+          "target": "known-formulas",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-41",
+          "wordIndex": 41,
+          "word": "a.",
+          "start": 23.0,
+          "target": "acceleration",
+          "kind": "spoken"
+        },
+        {
+          "id": "multiply-substitution",
+          "start": 21.44,
+          "end": 23.51,
+          "target": "known-formulas",
+          "kind": "substitution"
+        },
+        {
+          "id": "word-45",
+          "wordIndex": 45,
+          "word": "a",
+          "start": 24.64,
+          "target": "acceleration",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-49",
+          "wordIndex": 49,
+          "word": "v",
+          "start": 25.68,
+          "target": "final",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-51",
+          "wordIndex": 51,
+          "word": "minus",
+          "start": 27.02,
+          "target": "endpoints",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-52",
+          "wordIndex": 52,
+          "word": "u",
+          "start": 27.92,
+          "target": "initial",
+          "kind": "spoken"
+        },
+        {
+          "id": "squares-substitution",
+          "start": 23.6,
+          "end": 28.880000000000003,
+          "target": "endpoints",
+          "kind": "substitution"
+        },
+        {
+          "id": "word-54",
+          "wordIndex": 54,
+          "word": "u",
+          "start": 31.14,
+          "target": "initial",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-58",
+          "wordIndex": 58,
+          "word": "v",
+          "start": 32.86,
+          "target": "final",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-61",
+          "wordIndex": 61,
+          "word": "u",
+          "start": 34.46,
+          "target": "initial",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-64",
+          "wordIndex": 64,
+          "word": "2",
+          "start": 35.98,
+          "target": "endpoints",
+          "kind": "spoken"
+        },
+        {
+          "id": "result-substitution",
+          "start": 31.14,
+          "end": 37.2,
+          "target": "endpoints",
+          "kind": "substitution"
+        },
+        {
+          "id": "word-68",
+          "wordIndex": 68,
+          "word": "zero",
+          "start": 40.29,
+          "target": "zero-case",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-69",
+          "wordIndex": 69,
+          "word": "v",
+          "start": 40.71,
+          "target": "final",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-71",
+          "wordIndex": 71,
+          "word": "u",
+          "start": 42.11,
+          "target": "initial",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-84",
+          "wordIndex": 84,
+          "word": "-zero",
+          "start": 50.49,
+          "target": "zero-case",
+          "kind": "spoken"
+        },
+        {
+          "id": "nonzero-6",
+          "wordIndex": 6,
+          "word": "nonzero.",
+          "start": 4.06,
+          "target": "condition",
+          "kind": "spoken"
+        }
+      ],
+      "wordCount": 86,
+      "text": "remove time, first assume acceleration is nonzero. Begin with the area formula. From v equals u plus a t, time equals v minus u divided by a. Substitute that fraction for time in the area equation. Multiply both sides by two a. The product is a difference of squares. v squared minus u squared u squared we obtain v squared equals u squared plus 2 as acceleration is zero v equals u so the final identity still holds only the division step required non -zero acceleration",
+      "duration": 53.55102
+    },
+    {
+      "id": "s08",
+      "title": "Choose the equation you need",
+      "mode": "choice",
+      "source": "f169–f176; f250–f272",
+      "tempo": "brisk",
+      "voiceSpeed": 1.0,
+      "beats": [
+        {
+          "id": "rule",
+          "text": "Choose the equation that omits the quantity you do not need.",
+          "hold": 0,
+          "caption": "Choose by the quantity omitted.",
+          "start": 0.4,
+          "speechEnd": 4.12,
+          "end": 4.32,
+          "cue": 0.4,
+          "penEnd": 4.24
+        },
+        {
+          "id": "missing-s",
+          "text": "No displacement? Use v equals u plus a t.",
+          "hold": 0,
+          "target": "omit-s",
+          "start": 4.32,
+          "speechEnd": 7.89,
+          "end": 8.09,
+          "cue": 4.34,
+          "penEnd": 8.01
+        },
+        {
+          "id": "missing-a",
+          "text": "No acceleration? Use the trapezium equation.",
+          "hold": 0,
+          "target": "omit-a",
+          "start": 8.09,
+          "speechEnd": 11.29,
+          "end": 11.49,
+          "cue": 8.1,
+          "penEnd": 11.41
+        },
+        {
+          "id": "missing-v",
+          "text": "No final velocity? Use u t plus half a t squared.",
+          "hold": 0,
+          "target": "omit-v",
+          "start": 11.49,
+          "speechEnd": 15.44,
+          "end": 15.64,
+          "cue": 11.49,
+          "penEnd": 15.56
+        },
+        {
+          "id": "missing-u",
+          "text": "No initial velocity? Use v t minus half a t squared.",
+          "hold": 0,
+          "target": "omit-u",
+          "start": 15.64,
+          "speechEnd": 19.38,
+          "end": 19.58,
+          "cue": 15.64,
+          "penEnd": 19.5
+        },
+        {
+          "id": "question",
+          "text": "Check: you know u, a and s. Find v without time. Which equation?",
+          "hold": 3,
+          "caption": "Which equation avoids finding time?",
+          "start": 19.58,
+          "speechEnd": 25.7,
+          "end": 25.9,
+          "cue": 19.62,
+          "penEnd": 25.82
+        },
+        {
+          "id": "answer",
+          "text": "V squared equals u squared plus two a s. Time is the missing letter.",
+          "hold": 2,
+          "target": "omit-t",
+          "start": 28.9,
+          "speechEnd": 34.29,
+          "end": 34.49,
+          "cue": 29.05,
+          "penEnd": 34.410000000000004
+        },
+        {
+          "id": "outcome1",
+          "text": "You can derive from gradient and area.",
+          "hold": 0,
+          "caption": "✓ Derive from gradient and area.",
+          "start": 36.49,
+          "speechEnd": 38.93,
+          "end": 39.13,
+          "cue": 36.65,
+          "penEnd": 39.050000000000004
+        },
+        {
+          "id": "outcome2",
+          "text": "Create the other equations.",
+          "hold": 0,
+          "caption": "✓ Create the other equations.",
+          "start": 39.13,
+          "speechEnd": 40.71,
+          "end": 40.91,
+          "cue": 39.47,
+          "penEnd": 40.83
+        },
+        {
+          "id": "outcome3",
+          "text": "And choose an equation.",
+          "hold": 0,
+          "caption": "✓ Choose an equation.",
+          "start": 40.91,
+          "speechEnd": 42.28,
+          "end": 42.48,
+          "cue": 41.07,
+          "penEnd": 42.4
+        }
+      ],
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 25.9,
+          "end": 28.9,
+          "duration": 3
+        },
+        {
+          "kind": "hold",
+          "start": 34.49,
+          "end": 36.49,
+          "duration": 2
+        }
+      ],
+      "audio": "deriving-suvat-s08.mp3",
+      "audioSha256": "c4860b470b534aae6eec0afd7580ce5082c3d2a36d74fe2a500efef6c3e86aeb",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "provider": "elevenlabs",
+      "sampleDuration": 42.83,
+      "words": [
+        {
+          "word": "Choose",
+          "start": 0.4,
+          "end": 0.72
+        },
+        {
+          "word": "the",
+          "start": 0.72,
+          "end": 0.94
+        },
+        {
+          "word": "equation",
+          "start": 0.94,
+          "end": 1.42
+        },
+        {
+          "word": "that",
+          "start": 1.42,
+          "end": 1.74
+        },
+        {
+          "word": "omits",
+          "start": 1.74,
+          "end": 2.14
+        },
+        {
+          "word": "the",
+          "start": 2.14,
+          "end": 2.46
+        },
+        {
+          "word": "quantity",
+          "start": 2.46,
+          "end": 2.84
+        },
+        {
+          "word": "you",
+          "start": 2.84,
+          "end": 3.24
+        },
+        {
+          "word": "do",
+          "start": 3.24,
+          "end": 3.38
+        },
+        {
+          "word": "not",
+          "start": 3.38,
+          "end": 3.64
+        },
+        {
+          "word": "need.",
+          "start": 3.64,
+          "end": 4.06
+        },
+        {
+          "word": "No",
+          "start": 4.34,
+          "end": 4.48
+        },
+        {
+          "word": "displacement?",
+          "start": 4.48,
+          "end": 4.92
+        },
+        {
+          "word": "Use",
+          "start": 5.5,
+          "end": 6.1
+        },
+        {
+          "word": "v",
+          "start": 6.1,
+          "end": 6.36
+        },
+        {
+          "word": "equals",
+          "start": 6.36,
+          "end": 6.78
+        },
+        {
+          "word": "u",
+          "start": 6.78,
+          "end": 7.12
+        },
+        {
+          "word": "plus",
+          "start": 7.12,
+          "end": 7.52
+        },
+        {
+          "word": "a",
+          "start": 7.52,
+          "end": 7.68
+        },
+        {
+          "word": "t.",
+          "start": 7.68,
+          "end": 7.82
+        },
+        {
+          "word": "No",
+          "start": 8.1,
+          "end": 8.28
+        },
+        {
+          "word": "acceleration?",
+          "start": 8.28,
+          "end": 8.68
+        },
+        {
+          "word": "Use",
+          "start": 9.56,
+          "end": 9.92
+        },
+        {
+          "word": "the",
+          "start": 9.92,
+          "end": 10.1
+        },
+        {
+          "word": "trapezium",
+          "start": 10.1,
+          "end": 10.62
+        },
+        {
+          "word": "equation.",
+          "start": 10.62,
+          "end": 11.02
+        },
+        {
+          "word": "No",
+          "start": 11.49,
+          "end": 11.66
+        },
+        {
+          "word": "final",
+          "start": 11.66,
+          "end": 11.88
+        },
+        {
+          "word": "velocity?",
+          "start": 11.88,
+          "end": 12.44
+        },
+        {
+          "word": "Use",
+          "start": 13.14,
+          "end": 13.42
+        },
+        {
+          "word": "u",
+          "start": 13.42,
+          "end": 13.58
+        },
+        {
+          "word": "t",
+          "start": 13.58,
+          "end": 13.78
+        },
+        {
+          "word": "plus",
+          "start": 13.78,
+          "end": 14.4
+        },
+        {
+          "word": "half",
+          "start": 14.4,
+          "end": 14.68
+        },
+        {
+          "word": "a",
+          "start": 14.68,
+          "end": 14.84
+        },
+        {
+          "word": "t",
+          "start": 14.84,
+          "end": 14.96
+        },
+        {
+          "word": "squared.",
+          "start": 14.96,
+          "end": 15.28
+        },
+        {
+          "word": "No",
+          "start": 15.64,
+          "end": 15.82
+        },
+        {
+          "word": "initial",
+          "start": 15.82,
+          "end": 16.22
+        },
+        {
+          "word": "velocity?",
+          "start": 16.22,
+          "end": 16.68
+        },
+        {
+          "word": "Use",
+          "start": 17.42,
+          "end": 17.74
+        },
+        {
+          "word": "v",
+          "start": 17.74,
+          "end": 18.0
+        },
+        {
+          "word": "t",
+          "start": 18.0,
+          "end": 18.1
+        },
+        {
+          "word": "minus",
+          "start": 18.1,
+          "end": 18.34
+        },
+        {
+          "word": "half",
+          "start": 18.34,
+          "end": 18.64
+        },
+        {
+          "word": "a",
+          "start": 18.64,
+          "end": 18.8
+        },
+        {
+          "word": "t",
+          "start": 18.8,
+          "end": 18.92
+        },
+        {
+          "word": "squared.",
+          "start": 18.92,
+          "end": 19.3
+        },
+        {
+          "word": "Check.",
+          "start": 19.62,
+          "end": 19.78
+        },
+        {
+          "word": "You",
+          "start": 20.4,
+          "end": 20.6
+        },
+        {
+          "word": "know",
+          "start": 20.6,
+          "end": 20.76
+        },
+        {
+          "word": "u,",
+          "start": 20.76,
+          "end": 21.14
+        },
+        {
+          "word": "a",
+          "start": 21.3,
+          "end": 21.58
+        },
+        {
+          "word": "and",
+          "start": 21.58,
+          "end": 21.82
+        },
+        {
+          "word": "s.",
+          "start": 21.82,
+          "end": 22.2
+        },
+        {
+          "word": "Find",
+          "start": 22.76,
+          "end": 23.0
+        },
+        {
+          "word": "v",
+          "start": 23.0,
+          "end": 23.4
+        },
+        {
+          "word": "without",
+          "start": 23.4,
+          "end": 23.96
+        },
+        {
+          "word": "time.",
+          "start": 23.96,
+          "end": 24.36
+        },
+        {
+          "word": "Which",
+          "start": 25.08,
+          "end": 25.26
+        },
+        {
+          "word": "equation?",
+          "start": 25.26,
+          "end": 25.54
+        },
+        {
+          "word": "squared",
+          "start": 29.05,
+          "end": 29.39
+        },
+        {
+          "word": "equals",
+          "start": 29.39,
+          "end": 29.77
+        },
+        {
+          "word": "u",
+          "start": 29.77,
+          "end": 30.15
+        },
+        {
+          "word": "squared",
+          "start": 30.15,
+          "end": 30.55
+        },
+        {
+          "word": "plus",
+          "start": 30.55,
+          "end": 31.23
+        },
+        {
+          "word": "2",
+          "start": 31.23,
+          "end": 31.61
+        },
+        {
+          "word": "as",
+          "start": 31.61,
+          "end": 31.95
+        },
+        {
+          "word": "time",
+          "start": 31.95,
+          "end": 33.13
+        },
+        {
+          "word": "is",
+          "start": 33.13,
+          "end": 33.39
+        },
+        {
+          "word": "the",
+          "start": 33.39,
+          "end": 33.55
+        },
+        {
+          "word": "missing",
+          "start": 33.55,
+          "end": 33.77
+        },
+        {
+          "word": "letter",
+          "start": 33.77,
+          "end": 34.11
+        },
+        {
+          "word": "can",
+          "start": 36.65,
+          "end": 36.81
+        },
+        {
+          "word": "derive",
+          "start": 36.81,
+          "end": 37.21
+        },
+        {
+          "word": "from",
+          "start": 37.21,
+          "end": 37.53
+        },
+        {
+          "word": "gradient",
+          "start": 37.53,
+          "end": 38.03
+        },
+        {
+          "word": "an",
+          "start": 38.03,
+          "end": 38.47
+        },
+        {
+          "word": "area",
+          "start": 38.47,
+          "end": 38.79
+        },
+        {
+          "word": "the",
+          "start": 39.47,
+          "end": 39.75
+        },
+        {
+          "word": "other",
+          "start": 39.75,
+          "end": 39.97
+        },
+        {
+          "word": "equations",
+          "start": 39.97,
+          "end": 40.49
+        },
+        {
+          "word": "choose",
+          "start": 41.07,
+          "end": 41.37
+        },
+        {
+          "word": "an",
+          "start": 41.37,
+          "end": 41.59
+        },
+        {
+          "word": "equation",
+          "start": 41.59,
+          "end": 41.97
+        }
+      ],
+      "cues": {
+        "rule": 0.4,
+        "missing-s": 4.34,
+        "missing-a": 8.1,
+        "missing-v": 11.49,
+        "missing-u": 15.64,
+        "question": 19.62,
+        "answer": 29.05,
+        "outcome1": 36.65,
+        "outcome2": 39.47,
+        "outcome3": 41.07
+      },
+      "figureEvents": [
+        {
+          "id": "word-14",
+          "wordIndex": 14,
+          "word": "v",
+          "start": 6.1,
+          "target": "omit-s",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-16",
+          "wordIndex": 16,
+          "word": "u",
+          "start": 6.78,
+          "target": "omit-s",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-18",
+          "wordIndex": 18,
+          "word": "a",
+          "start": 7.52,
+          "target": "omit-s",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-19",
+          "wordIndex": 19,
+          "word": "t.",
+          "start": 7.68,
+          "target": "omit-s",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-30",
+          "wordIndex": 30,
+          "word": "u",
+          "start": 13.42,
+          "target": "omit-v",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-31",
+          "wordIndex": 31,
+          "word": "t",
+          "start": 13.58,
+          "target": "omit-v",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-33",
+          "wordIndex": 33,
+          "word": "half",
+          "start": 14.4,
+          "target": "omit-v",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-34",
+          "wordIndex": 34,
+          "word": "a",
+          "start": 14.68,
+          "target": "omit-v",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-35",
+          "wordIndex": 35,
+          "word": "t",
+          "start": 14.84,
+          "target": "omit-v",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-41",
+          "wordIndex": 41,
+          "word": "v",
+          "start": 17.74,
+          "target": "omit-u",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-42",
+          "wordIndex": 42,
+          "word": "t",
+          "start": 18.0,
+          "target": "omit-u",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-43",
+          "wordIndex": 43,
+          "word": "minus",
+          "start": 18.1,
+          "target": "omit-u",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-44",
+          "wordIndex": 44,
+          "word": "half",
+          "start": 18.34,
+          "target": "omit-u",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-45",
+          "wordIndex": 45,
+          "word": "a",
+          "start": 18.64,
+          "target": "omit-u",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-46",
+          "wordIndex": 46,
+          "word": "t",
+          "start": 18.8,
+          "target": "omit-u",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-63",
+          "wordIndex": 63,
+          "word": "u",
+          "start": 29.77,
+          "target": "omit-t",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-66",
+          "wordIndex": 66,
+          "word": "2",
+          "start": 31.23,
+          "target": "omit-t",
+          "kind": "spoken"
+        }
+      ],
+      "wordCount": 85,
+      "text": "Choose the equation that omits the quantity you do not need. No displacement? Use v equals u plus a t. No acceleration? Use the trapezium equation. No final velocity? Use u t plus half a t squared. No initial velocity? Use v t minus half a t squared. Check. You know u, a and s. Find v without time. Which equation? squared equals u squared plus 2 as time is the missing letter can derive from gradient an area the other equations choose an equation",
+      "duration": 42.866939
+    }
+  ],
+  "totalDuration": 336.32653,
+  "engine": "faster-whisper-small (local CPU)",
+  "unresolvedCues": []
+}
