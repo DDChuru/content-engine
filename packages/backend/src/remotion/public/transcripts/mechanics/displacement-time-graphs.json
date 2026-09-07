@@ -1,10 +1,175 @@
 {
   "project": "mechanics-displacement-time-graphs",
-  "sceneCount": 10,
-  "totalDuration": 161.280001,
+  "sceneCount": 12,
+  "totalDuration": 326.896327,
   "generatedAt": "2026-09-06T09:22:24.902048",
   "engine": "faster-whisper-small (local)",
   "scenes": [
+    {
+      "id": "s00",
+      "paragraphs": [
+        "Our syllabus asks us to sketch and interpret displacement time graphs. Read position and gradient, use a tangent on a curve, and separate distance from displacement."
+      ],
+      "budget": 0,
+      "voiceSpeed": 1.0,
+      "tempo": "brisk",
+      "audio": "displacement-time-graphs-s00.mp3",
+      "audioSha256": "650af840cad924de7c7048cded03c867c246fd0b002e71dd4872522cd9d8ba20",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "provider": "elevenlabs",
+      "beats": [
+        {
+          "text": "Our syllabus asks us to sketch and interpret displacement time graphs. Read position and gradient, use a tangent on a curve, and separate distance from displacement.",
+          "start": 0.55,
+          "end": 12.35
+        }
+      ],
+      "holds": [],
+      "sampleDuration": 12.8,
+      "figureEvents": [],
+      "words": [
+        {
+          "word": "Our",
+          "start": 0.55,
+          "end": 0.75
+        },
+        {
+          "word": "syllabus",
+          "start": 0.75,
+          "end": 1.15
+        },
+        {
+          "word": "asks",
+          "start": 1.15,
+          "end": 1.65
+        },
+        {
+          "word": "us",
+          "start": 1.65,
+          "end": 2.03
+        },
+        {
+          "word": "to",
+          "start": 2.03,
+          "end": 2.61
+        },
+        {
+          "word": "sketch",
+          "start": 2.61,
+          "end": 2.97
+        },
+        {
+          "word": "and",
+          "start": 2.97,
+          "end": 3.33
+        },
+        {
+          "word": "interpret",
+          "start": 3.33,
+          "end": 3.75
+        },
+        {
+          "word": "displacement",
+          "start": 3.75,
+          "end": 4.41
+        },
+        {
+          "word": "time",
+          "start": 4.41,
+          "end": 4.95
+        },
+        {
+          "word": "graphs.",
+          "start": 4.95,
+          "end": 5.37
+        },
+        {
+          "word": "Read",
+          "start": 5.79,
+          "end": 6.33
+        },
+        {
+          "word": "position",
+          "start": 6.33,
+          "end": 6.81
+        },
+        {
+          "word": "and",
+          "start": 6.81,
+          "end": 7.07
+        },
+        {
+          "word": "gradient,",
+          "start": 7.07,
+          "end": 7.49
+        },
+        {
+          "word": "use",
+          "start": 8.05,
+          "end": 8.51
+        },
+        {
+          "word": "a",
+          "start": 8.51,
+          "end": 8.71
+        },
+        {
+          "word": "tangent",
+          "start": 8.71,
+          "end": 9.15
+        },
+        {
+          "word": "on",
+          "start": 9.15,
+          "end": 9.35
+        },
+        {
+          "word": "a",
+          "start": 9.35,
+          "end": 9.47
+        },
+        {
+          "word": "curve,",
+          "start": 9.47,
+          "end": 9.77
+        },
+        {
+          "word": "and",
+          "start": 10.33,
+          "end": 10.41
+        },
+        {
+          "word": "separate",
+          "start": 10.41,
+          "end": 10.75
+        },
+        {
+          "word": "distance",
+          "start": 10.75,
+          "end": 11.21
+        },
+        {
+          "word": "from",
+          "start": 11.21,
+          "end": 11.57
+        },
+        {
+          "word": "displacement.",
+          "start": 11.57,
+          "end": 12.01
+        }
+      ],
+      "text": "Our syllabus asks us to sketch and interpret displacement time graphs. Read position and gradient, use a tangent on a curve, and separate distance from displacement.",
+      "wordCount": 26,
+      "cues": {
+        "syllabus": 0.75,
+        "position": 5.79,
+        "tangent": 8.05,
+        "distance": 10.41
+      },
+      "duration": 12.826122,
+      "engine": "faster-whisper-small (local)"
+    },
     {
       "id": "s01",
       "audio": "displacement-time-graphs-s01.mp3",
@@ -134,7 +299,11 @@
         "origin": 5.84
       },
       "generatedAt": "2026-09-06T09:22:24.902048",
-      "engine": "faster-whisper-small (local)"
+      "engine": "faster-whisper-small (local)",
+      "audioSha256": "849991db5319236fda4f7e1928473d6496c7eb531f38169df89e41071df1a71c",
+      "reusedFrom": "b383a44",
+      "holds": [],
+      "beats": []
     },
     {
       "id": "s02",
@@ -296,7 +465,11 @@
         "matches": 10.76
       },
       "generatedAt": "2026-09-06T09:22:24.902048",
-      "engine": "faster-whisper-small (local)"
+      "engine": "faster-whisper-small (local)",
+      "audioSha256": "57f10634421c5aab3721373aa462e12b1335986104233fa00c741576078a09db",
+      "reusedFrom": "b383a44",
+      "holds": [],
+      "beats": []
     },
     {
       "id": "s03",
@@ -448,7 +621,11 @@
         "steeper": 7.96
       },
       "generatedAt": "2026-09-06T09:22:24.902048",
-      "engine": "faster-whisper-small (local)"
+      "engine": "faster-whisper-small (local)",
+      "audioSha256": "265bac28da08a67ac9c86f93b787ad856814f9604b30e99c637e00d6398d2564",
+      "reusedFrom": "b383a44",
+      "holds": [],
+      "beats": []
     },
     {
       "id": "s04",
@@ -630,7 +807,11 @@
         "changing": 12.9
       },
       "generatedAt": "2026-09-06T09:22:24.902048",
-      "engine": "faster-whisper-small (local)"
+      "engine": "faster-whisper-small (local)",
+      "audioSha256": "c775952cf698c60a3096e256f574c2674eaf085392a526c123f0c5fe3e6ee20e",
+      "reusedFrom": "b383a44",
+      "holds": [],
+      "beats": []
     },
     {
       "id": "s05",
@@ -812,7 +993,11 @@
         "pivots": 11.26
       },
       "generatedAt": "2026-09-06T09:22:24.902048",
-      "engine": "faster-whisper-small (local)"
+      "engine": "faster-whisper-small (local)",
+      "audioSha256": "38806604edb2aa20790ef487f8325eae02cb029811eb76c85821edd32533c477",
+      "reusedFrom": "b383a44",
+      "holds": [],
+      "beats": []
     },
     {
       "id": "s06",
@@ -1044,611 +1229,2045 @@
         "flips": 13.34
       },
       "generatedAt": "2026-09-06T09:22:24.902048",
-      "engine": "faster-whisper-small (local)"
+      "engine": "faster-whisper-small (local)",
+      "audioSha256": "849e5b91411aee44ee42ddbc97c1400ce2f528421292aab5c51ec7aeebb2e285",
+      "reusedFrom": "b383a44",
+      "holds": [],
+      "beats": []
     },
     {
       "id": "s07",
+      "paragraphs": [
+        "Consider a walker: from two metres, reach ten metres at four seconds; rest until six seconds; finish at minus six metres at ten seconds. [hold 2 s]",
+        "What is velocity? Gradient equals displacement change over time change. V equals delta s over delta t. [hold 2 s]",
+        "Let's draw. Start at two metres; reach ten metres after four seconds: two metres per second. [hold 2 s] Rest until six seconds. Reach minus six metres at ten seconds. Final velocity? Minus four metres per second. [hold 2 s]"
+      ],
+      "budget": 0,
+      "voiceSpeed": 0.9,
+      "tempo": "slow",
       "audio": "displacement-time-graphs-s07.mp3",
-      "duration": 18.416327,
-      "wordCount": 47,
-      "text": "Try one journey. The particle starts at 2 meters. It reaches 10 meters after 4 seconds. So its velocity is 2 meters per second. It rests until 6 seconds. Then it reaches minus 6 meters at 10 seconds. That final velocity is minus 4 meters per second.",
+      "audioSha256": "85936944b52833ac1b7d2050a788e58dc756c58af17bd012af5febe6a4cc8647",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "provider": "elevenlabs",
+      "beats": [
+        {
+          "text": "Consider a walker: from two metres, reach ten metres at four seconds; rest until six seconds; finish at minus six metres at ten seconds.",
+          "start": 0.55,
+          "end": 13.15
+        },
+        {
+          "text": "What is velocity? Gradient equals displacement change over time change. V equals delta s over delta t.",
+          "start": 15.3,
+          "end": 26.14
+        },
+        {
+          "text": "Let's draw. Start at two metres; reach ten metres after four seconds: two metres per second.",
+          "start": 28.29,
+          "end": 37.21
+        },
+        {
+          "text": "Rest until six seconds. Reach minus six metres at ten seconds. Final velocity? Minus four metres per second.",
+          "start": 39.21,
+          "end": 48.26
+        }
+      ],
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 13.15,
+          "end": 15.15,
+          "duration": 2.0
+        },
+        {
+          "kind": "hold",
+          "start": 26.14,
+          "end": 28.14,
+          "duration": 2.0
+        },
+        {
+          "kind": "hold",
+          "start": 37.21,
+          "end": 39.21,
+          "duration": 2.0
+        },
+        {
+          "kind": "hold",
+          "start": 48.26,
+          "end": 50.26,
+          "duration": 2.0
+        }
+      ],
+      "sampleDuration": 50.71,
+      "figureEvents": [
+        {
+          "id": "figure-4",
+          "word": "two",
+          "start": 2.79,
+          "end": 3.07,
+          "target": "pos2"
+        },
+        {
+          "id": "figure-7",
+          "word": "ten",
+          "start": 4.59,
+          "end": 4.89,
+          "target": "pos10"
+        },
+        {
+          "id": "figure-10",
+          "word": "four",
+          "start": 6.03,
+          "end": 6.33,
+          "target": "time4"
+        },
+        {
+          "id": "figure-14",
+          "word": "six",
+          "start": 8.69,
+          "end": 9.07,
+          "target": "time6"
+        },
+        {
+          "id": "figure-19",
+          "word": "six",
+          "start": 11.13,
+          "end": 11.57,
+          "target": "pos-6"
+        },
+        {
+          "id": "figure-22",
+          "word": "ten",
+          "start": 12.23,
+          "end": 12.47,
+          "target": "time10"
+        },
+        {
+          "id": "figure-45",
+          "word": "two",
+          "start": 30.73,
+          "end": 30.89,
+          "target": "pos2"
+        },
+        {
+          "id": "figure-48",
+          "word": "ten",
+          "start": 32.85,
+          "end": 33.13,
+          "target": "pos10"
+        },
+        {
+          "id": "figure-51",
+          "word": "four",
+          "start": 33.77,
+          "end": 34.05,
+          "target": "time4"
+        },
+        {
+          "id": "figure-53",
+          "word": "two",
+          "start": 35.13,
+          "end": 36.07,
+          "target": "speed2"
+        },
+        {
+          "id": "figure-59",
+          "word": "six",
+          "start": 39.83,
+          "end": 40.17,
+          "target": "time6"
+        },
+        {
+          "id": "figure-63",
+          "word": "six",
+          "start": 41.89,
+          "end": 42.29,
+          "target": "pos-6"
+        },
+        {
+          "id": "figure-66",
+          "word": "ten",
+          "start": 42.95,
+          "end": 43.21,
+          "target": "time10"
+        },
+        {
+          "id": "figure-71",
+          "word": "four",
+          "start": 47.05,
+          "end": 47.29,
+          "target": "speed-4"
+        }
+      ],
       "words": [
         {
-          "word": "Try",
-          "start": 0.0,
-          "end": 0.38
+          "word": "Consider",
+          "start": 0.55,
+          "end": 1.03
         },
         {
-          "word": "one",
-          "start": 0.38,
-          "end": 1.1
+          "word": "a",
+          "start": 1.03,
+          "end": 1.29
         },
         {
-          "word": "journey.",
-          "start": 1.1,
-          "end": 1.46
+          "word": "walker.",
+          "start": 1.29,
+          "end": 1.75
         },
         {
-          "word": "The",
-          "start": 2.32,
-          "end": 2.38
+          "word": "From",
+          "start": 2.73,
+          "end": 2.79
         },
         {
-          "word": "particle",
-          "start": 2.38,
-          "end": 2.76
+          "word": "two",
+          "start": 2.79,
+          "end": 3.07
         },
         {
-          "word": "starts",
-          "start": 2.76,
-          "end": 3.14
+          "word": "metres,",
+          "start": 3.07,
+          "end": 3.41
+        },
+        {
+          "word": "reach",
+          "start": 4.37,
+          "end": 4.59
+        },
+        {
+          "word": "ten",
+          "start": 4.59,
+          "end": 4.89
+        },
+        {
+          "word": "metres",
+          "start": 4.89,
+          "end": 5.21
         },
         {
           "word": "at",
-          "start": 3.14,
-          "end": 3.34
+          "start": 5.21,
+          "end": 6.03
         },
         {
-          "word": "2",
-          "start": 3.34,
-          "end": 3.56
+          "word": "four",
+          "start": 6.03,
+          "end": 6.33
         },
         {
-          "word": "meters.",
-          "start": 3.56,
-          "end": 3.76
+          "word": "seconds,",
+          "start": 6.33,
+          "end": 6.77
         },
         {
-          "word": "It",
-          "start": 4.46,
-          "end": 4.56
-        },
-        {
-          "word": "reaches",
-          "start": 4.56,
-          "end": 4.88
-        },
-        {
-          "word": "10",
-          "start": 4.88,
-          "end": 5.3
-        },
-        {
-          "word": "meters",
-          "start": 5.3,
-          "end": 5.72
-        },
-        {
-          "word": "after",
-          "start": 5.72,
-          "end": 6.4
-        },
-        {
-          "word": "4",
-          "start": 6.4,
-          "end": 6.68
-        },
-        {
-          "word": "seconds.",
-          "start": 6.68,
-          "end": 6.98
-        },
-        {
-          "word": "So",
-          "start": 7.68,
-          "end": 7.74
-        },
-        {
-          "word": "its",
-          "start": 7.74,
-          "end": 7.94
-        },
-        {
-          "word": "velocity",
-          "start": 7.94,
-          "end": 8.38
-        },
-        {
-          "word": "is",
-          "start": 8.38,
-          "end": 8.72
-        },
-        {
-          "word": "2",
-          "start": 8.72,
-          "end": 8.92
-        },
-        {
-          "word": "meters",
-          "start": 8.92,
-          "end": 9.06
-        },
-        {
-          "word": "per",
-          "start": 9.06,
-          "end": 9.28
-        },
-        {
-          "word": "second.",
-          "start": 9.28,
-          "end": 9.66
-        },
-        {
-          "word": "It",
-          "start": 10.1,
-          "end": 10.24
-        },
-        {
-          "word": "rests",
-          "start": 10.24,
-          "end": 10.62
+          "word": "rest",
+          "start": 7.63,
+          "end": 8.29
         },
         {
           "word": "until",
-          "start": 10.62,
-          "end": 10.9
+          "start": 8.29,
+          "end": 8.69
         },
         {
-          "word": "6",
-          "start": 10.9,
-          "end": 11.28
+          "word": "six",
+          "start": 8.69,
+          "end": 9.07
         },
         {
           "word": "seconds.",
-          "start": 11.28,
-          "end": 11.64
+          "start": 9.07,
+          "end": 9.45
         },
         {
-          "word": "Then",
-          "start": 12.32,
-          "end": 12.48
-        },
-        {
-          "word": "it",
-          "start": 12.48,
-          "end": 12.74
-        },
-        {
-          "word": "reaches",
-          "start": 12.74,
-          "end": 13.12
-        },
-        {
-          "word": "minus",
-          "start": 13.12,
-          "end": 13.36
-        },
-        {
-          "word": "6",
-          "start": 13.36,
-          "end": 13.72
-        },
-        {
-          "word": "meters",
-          "start": 13.72,
-          "end": 14.04
+          "word": "Finish",
+          "start": 10.07,
+          "end": 10.57
         },
         {
           "word": "at",
-          "start": 14.04,
-          "end": 14.26
-        },
-        {
-          "word": "10",
-          "start": 14.26,
-          "end": 14.48
-        },
-        {
-          "word": "seconds.",
-          "start": 14.48,
-          "end": 14.9
-        },
-        {
-          "word": "That",
-          "start": 15.5,
-          "end": 15.66
-        },
-        {
-          "word": "final",
-          "start": 15.66,
-          "end": 15.96
-        },
-        {
-          "word": "velocity",
-          "start": 15.96,
-          "end": 16.42
-        },
-        {
-          "word": "is",
-          "start": 16.42,
-          "end": 16.7
+          "start": 10.57,
+          "end": 10.75
         },
         {
           "word": "minus",
-          "start": 16.7,
-          "end": 16.94
+          "start": 10.75,
+          "end": 11.13
         },
         {
-          "word": "4",
-          "start": 16.94,
-          "end": 17.28
+          "word": "six",
+          "start": 11.13,
+          "end": 11.57
         },
         {
-          "word": "meters",
+          "word": "metres",
+          "start": 11.57,
+          "end": 11.95
+        },
+        {
+          "word": "at",
+          "start": 11.95,
+          "end": 12.23
+        },
+        {
+          "word": "ten",
+          "start": 12.23,
+          "end": 12.47
+        },
+        {
+          "word": "seconds.",
+          "start": 12.47,
+          "end": 12.89
+        },
+        {
+          "word": "What",
+          "start": 15.3,
+          "end": 15.62
+        },
+        {
+          "word": "is",
+          "start": 15.62,
+          "end": 15.8
+        },
+        {
+          "word": "velocity?",
+          "start": 15.8,
+          "end": 16.42
+        },
+        {
+          "word": "Gradient",
           "start": 17.28,
-          "end": 17.46
+          "end": 17.98
+        },
+        {
+          "word": "equals",
+          "start": 17.98,
+          "end": 18.48
+        },
+        {
+          "word": "displacement",
+          "start": 18.48,
+          "end": 19.38
+        },
+        {
+          "word": "change",
+          "start": 19.38,
+          "end": 20.5
+        },
+        {
+          "word": "over",
+          "start": 20.5,
+          "end": 20.98
+        },
+        {
+          "word": "time",
+          "start": 20.98,
+          "end": 21.36
+        },
+        {
+          "word": "change.",
+          "start": 21.36,
+          "end": 22.0
+        },
+        {
+          "word": "V",
+          "start": 22.3,
+          "end": 23.08
+        },
+        {
+          "word": "equals",
+          "start": 23.08,
+          "end": 23.6
+        },
+        {
+          "word": "delta",
+          "start": 23.6,
+          "end": 24.2
+        },
+        {
+          "word": "s",
+          "start": 24.2,
+          "end": 24.78
+        },
+        {
+          "word": "over",
+          "start": 24.78,
+          "end": 25.28
+        },
+        {
+          "word": "delta",
+          "start": 25.28,
+          "end": 25.6
+        },
+        {
+          "word": "t.",
+          "start": 25.6,
+          "end": 26.0
+        },
+        {
+          "word": "Let's",
+          "start": 28.29,
+          "end": 28.63
+        },
+        {
+          "word": "draw.",
+          "start": 28.63,
+          "end": 28.93
+        },
+        {
+          "word": "Start",
+          "start": 29.99,
+          "end": 30.55
+        },
+        {
+          "word": "at",
+          "start": 30.55,
+          "end": 30.73
+        },
+        {
+          "word": "two",
+          "start": 30.73,
+          "end": 30.89
+        },
+        {
+          "word": "metres,",
+          "start": 30.89,
+          "end": 31.15
+        },
+        {
+          "word": "reach",
+          "start": 32.57,
+          "end": 32.85
+        },
+        {
+          "word": "ten",
+          "start": 32.85,
+          "end": 33.13
+        },
+        {
+          "word": "metres",
+          "start": 33.13,
+          "end": 33.39
+        },
+        {
+          "word": "after",
+          "start": 33.39,
+          "end": 33.77
+        },
+        {
+          "word": "four",
+          "start": 33.77,
+          "end": 34.05
+        },
+        {
+          "word": "seconds,",
+          "start": 34.05,
+          "end": 34.45
+        },
+        {
+          "word": "two",
+          "start": 35.13,
+          "end": 36.07
+        },
+        {
+          "word": "metres",
+          "start": 36.07,
+          "end": 36.35
         },
         {
           "word": "per",
-          "start": 17.46,
-          "end": 17.72
+          "start": 36.35,
+          "end": 36.61
         },
         {
           "word": "second.",
-          "start": 17.72,
-          "end": 17.98
+          "start": 36.61,
+          "end": 36.95
+        },
+        {
+          "word": "Rest",
+          "start": 39.21,
+          "end": 39.57
+        },
+        {
+          "word": "until",
+          "start": 39.57,
+          "end": 39.83
+        },
+        {
+          "word": "six",
+          "start": 39.83,
+          "end": 40.17
+        },
+        {
+          "word": "seconds.",
+          "start": 40.17,
+          "end": 40.59
+        },
+        {
+          "word": "Reach",
+          "start": 41.15,
+          "end": 41.57
+        },
+        {
+          "word": "minus",
+          "start": 41.57,
+          "end": 41.89
+        },
+        {
+          "word": "six",
+          "start": 41.89,
+          "end": 42.29
+        },
+        {
+          "word": "metres",
+          "start": 42.29,
+          "end": 42.65
+        },
+        {
+          "word": "at",
+          "start": 42.65,
+          "end": 42.95
+        },
+        {
+          "word": "ten",
+          "start": 42.95,
+          "end": 43.21
+        },
+        {
+          "word": "seconds.",
+          "start": 43.21,
+          "end": 43.67
+        },
+        {
+          "word": "Final",
+          "start": 44.33,
+          "end": 45.05
+        },
+        {
+          "word": "velocity?",
+          "start": 45.05,
+          "end": 45.67
+        },
+        {
+          "word": "Minus",
+          "start": 46.41,
+          "end": 47.05
+        },
+        {
+          "word": "four",
+          "start": 47.05,
+          "end": 47.29
+        },
+        {
+          "word": "metres",
+          "start": 47.29,
+          "end": 47.51
+        },
+        {
+          "word": "per",
+          "start": 47.51,
+          "end": 47.75
+        },
+        {
+          "word": "second.",
+          "start": 47.75,
+          "end": 48.07
         }
       ],
+      "text": "Consider a walker. From two metres, reach ten metres at four seconds, rest until six seconds. Finish at minus six metres at ten seconds. What is velocity? Gradient equals displacement change over time change. V equals delta s over delta t. Let's draw. Start at two metres, reach ten metres after four seconds, two metres per second. Rest until six seconds. Reach minus six metres at ten seconds. Final velocity? Minus four metres per second.",
+      "wordCount": 75,
       "cues": {
-        "two-metres": 3.34,
-        "ten-metres": 4.88,
-        "four-seconds": 6.4,
-        "two-metres-per-second": 8.72,
-        "rests": 10.24,
-        "six-seconds": 10.9,
-        "minus-six-metres": 13.12,
-        "ten-seconds": 14.26,
-        "minus-four-metres-per-second": 16.7
+        "setup": 0.55,
+        "formula": 17.28,
+        "symbol": 22.3,
+        "build": 28.29,
+        "two-metres": 30.73,
+        "ten-metres": 32.85,
+        "four-seconds": 33.77,
+        "two-metres-per-second": 35.13,
+        "rests": 39.21,
+        "six-seconds": 39.83,
+        "minus-six-metres": 41.57,
+        "ten-seconds": 42.95,
+        "minus-four-metres-per-second": 46.41,
+        "figure-4": 2.79,
+        "figure-7": 4.59,
+        "figure-10": 6.03,
+        "figure-14": 8.69,
+        "figure-19": 11.13,
+        "figure-22": 12.23,
+        "figure-45": 30.73,
+        "figure-48": 32.85,
+        "figure-51": 33.77,
+        "figure-53": 35.13,
+        "figure-59": 39.83,
+        "figure-63": 41.89,
+        "figure-66": 42.95,
+        "figure-71": 47.05
       },
-      "generatedAt": "2026-09-06T09:22:24.902048",
+      "duration": 50.755918,
       "engine": "faster-whisper-small (local)"
     },
     {
       "id": "s08",
+      "paragraphs": [
+        "Displacement? Finish minus start: delta s equals final s minus initial s. Here, minus eight metres. [hold 2 s] Distance? Add absolute changes on every leg. D equals their sum. Eight metres out, sixteen metres back: twenty four metres. [hold 2 s]"
+      ],
+      "budget": 0,
+      "voiceSpeed": 0.9,
+      "tempo": "slow",
       "audio": "displacement-time-graphs-s08.mp3",
-      "duration": 14.628571,
-      "wordCount": 33,
-      "text": "Displacement compares the finish with the start. Here it is minus 8 meters. Distance adds the ground covered on every leg. 8 meters out, then 16 meters back, gives 24 meters in total.",
+      "audioSha256": "23a18693b7a4353b4d99bb8645697ebc4ef8d757a942a0f5490b48bf8d90a527",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "provider": "elevenlabs",
+      "beats": [
+        {
+          "text": "Displacement? Finish minus start: delta s equals final s minus initial s. Here, minus eight metres.",
+          "start": 0.55,
+          "end": 10.52
+        },
+        {
+          "text": "Distance? Add absolute changes on every leg. D equals their sum. Eight metres out, sixteen metres back: twenty four metres.",
+          "start": 12.52,
+          "end": 24.92
+        }
+      ],
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 10.52,
+          "end": 12.52,
+          "duration": 2.0
+        },
+        {
+          "kind": "hold",
+          "start": 24.92,
+          "end": 26.92,
+          "duration": 2.0
+        }
+      ],
+      "sampleDuration": 27.37,
+      "figureEvents": [
+        {
+          "id": "figure-14",
+          "word": "eight",
+          "start": 9.67,
+          "end": 9.99,
+          "target": "pos-8"
+        },
+        {
+          "id": "figure-27",
+          "word": "Eight",
+          "start": 19.6,
+          "end": 20.18,
+          "target": "pos8"
+        },
+        {
+          "id": "figure-30",
+          "word": "sixteen",
+          "start": 21.74,
+          "end": 22.2,
+          "target": "pos16"
+        },
+        {
+          "id": "figure-33",
+          "word": "twenty",
+          "start": 23.76,
+          "end": 23.96,
+          "target": "pos24"
+        },
+        {
+          "id": "figure-34",
+          "word": "four",
+          "start": 23.96,
+          "end": 24.32,
+          "target": "pos24"
+        }
+      ],
       "words": [
         {
-          "word": "Displacement",
-          "start": 0.0,
-          "end": 0.54
+          "word": "Displacement?",
+          "start": 0.55,
+          "end": 1.37
         },
         {
-          "word": "compares",
-          "start": 0.54,
-          "end": 0.92
-        },
-        {
-          "word": "the",
-          "start": 0.92,
-          "end": 1.16
-        },
-        {
-          "word": "finish",
-          "start": 1.16,
-          "end": 1.42
-        },
-        {
-          "word": "with",
-          "start": 1.42,
-          "end": 1.66
-        },
-        {
-          "word": "the",
-          "start": 1.66,
-          "end": 1.8
-        },
-        {
-          "word": "start.",
-          "start": 1.8,
-          "end": 2.08
-        },
-        {
-          "word": "Here",
-          "start": 2.92,
-          "end": 3.18
-        },
-        {
-          "word": "it",
-          "start": 3.18,
-          "end": 3.34
-        },
-        {
-          "word": "is",
-          "start": 3.34,
-          "end": 3.48
+          "word": "Finish",
+          "start": 2.27,
+          "end": 2.67
         },
         {
           "word": "minus",
-          "start": 3.48,
-          "end": 3.7
+          "start": 2.67,
+          "end": 2.95
         },
         {
-          "word": "8",
-          "start": 3.7,
-          "end": 4.04
+          "word": "start,",
+          "start": 2.95,
+          "end": 3.51
         },
         {
-          "word": "meters.",
-          "start": 4.04,
-          "end": 4.34
+          "word": "delta",
+          "start": 4.37,
+          "end": 4.77
         },
         {
-          "word": "Distance",
-          "start": 5.82,
-          "end": 6.26
+          "word": "s",
+          "start": 4.77,
+          "end": 5.13
         },
         {
-          "word": "adds",
-          "start": 6.26,
-          "end": 6.6
+          "word": "equals",
+          "start": 5.13,
+          "end": 5.55
         },
         {
-          "word": "the",
-          "start": 6.6,
-          "end": 7.06
+          "word": "final",
+          "start": 5.55,
+          "end": 6.07
         },
         {
-          "word": "ground",
-          "start": 7.06,
-          "end": 7.38
+          "word": "s",
+          "start": 6.07,
+          "end": 6.73
         },
         {
-          "word": "covered",
-          "start": 7.38,
-          "end": 7.72
+          "word": "minus",
+          "start": 6.73,
+          "end": 6.97
+        },
+        {
+          "word": "initial",
+          "start": 6.97,
+          "end": 7.55
+        },
+        {
+          "word": "s.",
+          "start": 7.55,
+          "end": 7.87
+        },
+        {
+          "word": "Here,",
+          "start": 8.27,
+          "end": 8.87
+        },
+        {
+          "word": "minus",
+          "start": 9.37,
+          "end": 9.67
+        },
+        {
+          "word": "eight",
+          "start": 9.67,
+          "end": 9.99
+        },
+        {
+          "word": "metres.",
+          "start": 9.99,
+          "end": 10.23
+        },
+        {
+          "word": "Distance?",
+          "start": 12.52,
+          "end": 13.14
+        },
+        {
+          "word": "Add",
+          "start": 13.82,
+          "end": 14.36
+        },
+        {
+          "word": "absolute",
+          "start": 14.36,
+          "end": 14.84
+        },
+        {
+          "word": "changes",
+          "start": 14.84,
+          "end": 15.38
         },
         {
           "word": "on",
-          "start": 7.72,
-          "end": 7.96
+          "start": 15.38,
+          "end": 15.86
         },
         {
           "word": "every",
-          "start": 7.96,
-          "end": 8.16
+          "start": 15.86,
+          "end": 16.2
         },
         {
           "word": "leg.",
-          "start": 8.16,
-          "end": 8.46
+          "start": 16.2,
+          "end": 16.58
         },
         {
-          "word": "8",
-          "start": 9.4,
-          "end": 9.72
+          "word": "D",
+          "start": 17.2,
+          "end": 17.6
         },
         {
-          "word": "meters",
-          "start": 9.72,
-          "end": 9.98
+          "word": "equals",
+          "start": 17.6,
+          "end": 17.92
+        },
+        {
+          "word": "their",
+          "start": 17.92,
+          "end": 18.38
+        },
+        {
+          "word": "sum.",
+          "start": 18.38,
+          "end": 18.58
+        },
+        {
+          "word": "Eight",
+          "start": 19.6,
+          "end": 20.18
+        },
+        {
+          "word": "metres",
+          "start": 20.18,
+          "end": 20.52
         },
         {
           "word": "out,",
-          "start": 9.98,
-          "end": 10.38
+          "start": 20.52,
+          "end": 21.04
         },
         {
-          "word": "then",
-          "start": 11.06,
-          "end": 11.22
+          "word": "sixteen",
+          "start": 21.74,
+          "end": 22.2
         },
         {
-          "word": "16",
-          "start": 11.22,
-          "end": 11.66
-        },
-        {
-          "word": "meters",
-          "start": 11.66,
-          "end": 12.02
+          "word": "metres",
+          "start": 22.2,
+          "end": 22.58
         },
         {
           "word": "back,",
-          "start": 12.02,
-          "end": 12.4
+          "start": 22.58,
+          "end": 23.0
         },
         {
-          "word": "gives",
-          "start": 12.74,
-          "end": 13.02
+          "word": "twenty",
+          "start": 23.76,
+          "end": 23.96
         },
         {
-          "word": "24",
-          "start": 13.02,
-          "end": 13.44
+          "word": "four",
+          "start": 23.96,
+          "end": 24.32
         },
         {
-          "word": "meters",
-          "start": 13.44,
-          "end": 13.76
-        },
-        {
-          "word": "in",
-          "start": 13.76,
-          "end": 13.96
-        },
-        {
-          "word": "total.",
-          "start": 13.96,
-          "end": 14.16
+          "word": "metres.",
+          "start": 24.32,
+          "end": 24.58
         }
       ],
+      "text": "Displacement? Finish minus start, delta s equals final s minus initial s. Here, minus eight metres. Distance? Add absolute changes on every leg. D equals their sum. Eight metres out, sixteen metres back, twenty four metres.",
+      "wordCount": 36,
       "cues": {
-        "finish": 1.16,
-        "minus-eight": 3.48,
-        "every-leg": 7.96,
-        "eight-metres-out": 9.4,
-        "sixteen-metres-back": 11.22,
-        "twenty-four": 13.02
+        "finish": 2.27,
+        "formula": 0.55,
+        "symbol": 4.37,
+        "minus-eight": 9.37,
+        "distance-formula": 12.52,
+        "distance-symbol": 17.2,
+        "every-leg": 15.86,
+        "eight-metres-out": 19.6,
+        "sixteen-metres-back": 21.74,
+        "twenty-four": 23.76,
+        "figure-14": 9.67,
+        "figure-27": 19.6,
+        "figure-30": 21.74,
+        "figure-33": 23.76,
+        "figure-34": 23.96
       },
-      "generatedAt": "2026-09-06T09:22:24.902048",
+      "duration": 27.402449,
       "engine": "faster-whisper-small (local)"
     },
     {
       "id": "s09",
+      "paragraphs": [
+        "Average velocity? Displacement over time: v bar equals delta s over delta t. Ten seconds gives minus zero point eight metres per second. [hold 2 s] Average speed? Distance over time: D over delta t gives two point four metres per second. [hold 2 s] Velocity keeps direction; speed uses total distance."
+      ],
+      "budget": 0,
+      "voiceSpeed": 0.9,
+      "tempo": "slow",
       "audio": "displacement-time-graphs-s09.mp3",
-      "duration": 14.053878,
-      "wordCount": 29,
-      "text": "Divide by 10 seconds, average velocity is minus 0.8 meters per second. Average speed is 2.4 meters per second. One keeps direction, the other uses total distance.",
+      "audioSha256": "1f22fdcb8ae7970b3f919601b80ee9ad1782d95e2bcce29c28a2290e2891671a",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "provider": "elevenlabs",
+      "beats": [
+        {
+          "text": "Average velocity? Displacement over time: v bar equals delta s over delta t. Ten seconds gives minus zero point eight metres per second.",
+          "start": 0.55,
+          "end": 15.79
+        },
+        {
+          "text": "Average speed? Distance over time: D over delta t gives two point four metres per second.",
+          "start": 17.79,
+          "end": 25.54
+        },
+        {
+          "text": "Velocity keeps direction; speed uses total distance.",
+          "start": 27.54,
+          "end": 31.43
+        }
+      ],
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 15.79,
+          "end": 17.79,
+          "duration": 2.0
+        },
+        {
+          "kind": "hold",
+          "start": 25.54,
+          "end": 27.54,
+          "duration": 2.0
+        }
+      ],
+      "sampleDuration": 31.88,
+      "figureEvents": [
+        {
+          "id": "figure-13",
+          "word": "Ten",
+          "start": 10.55,
+          "end": 11.15,
+          "target": "time10"
+        },
+        {
+          "id": "figure-17",
+          "word": "zero",
+          "start": 12.55,
+          "end": 13.07,
+          "target": "speed-0.8"
+        },
+        {
+          "id": "figure-19",
+          "word": "eight",
+          "start": 13.41,
+          "end": 13.87,
+          "target": "speed-0.8"
+        },
+        {
+          "id": "figure-33",
+          "word": "two",
+          "start": 23.67,
+          "end": 23.97,
+          "target": "speed2.4"
+        },
+        {
+          "id": "figure-35",
+          "word": "four",
+          "start": 24.21,
+          "end": 24.47,
+          "target": "speed2.4"
+        }
+      ],
       "words": [
         {
-          "word": "Divide",
-          "start": 0.0,
-          "end": 0.42
+          "word": "Average",
+          "start": 0.55,
+          "end": 1.13
         },
         {
-          "word": "by",
-          "start": 0.42,
-          "end": 0.54
+          "word": "velocity?",
+          "start": 1.13,
+          "end": 1.81
         },
         {
-          "word": "10",
-          "start": 0.54,
-          "end": 0.78
+          "word": "Displacement",
+          "start": 3.11,
+          "end": 3.99
         },
         {
-          "word": "seconds,",
-          "start": 0.78,
-          "end": 1.24
+          "word": "over",
+          "start": 3.99,
+          "end": 4.25
         },
         {
-          "word": "average",
-          "start": 1.9,
-          "end": 2.2
+          "word": "time.",
+          "start": 4.25,
+          "end": 4.73
         },
         {
-          "word": "velocity",
-          "start": 2.2,
-          "end": 2.72
+          "word": "v",
+          "start": 5.93,
+          "end": 6.31
         },
         {
-          "word": "is",
-          "start": 2.72,
-          "end": 3.56
+          "word": "bar",
+          "start": 6.31,
+          "end": 6.69
+        },
+        {
+          "word": "equals",
+          "start": 6.69,
+          "end": 7.39
+        },
+        {
+          "word": "delta",
+          "start": 7.39,
+          "end": 7.87
+        },
+        {
+          "word": "s",
+          "start": 7.87,
+          "end": 8.39
+        },
+        {
+          "word": "over",
+          "start": 8.39,
+          "end": 8.75
+        },
+        {
+          "word": "delta",
+          "start": 8.75,
+          "end": 9.15
+        },
+        {
+          "word": "t.",
+          "start": 9.15,
+          "end": 9.57
+        },
+        {
+          "word": "Ten",
+          "start": 10.55,
+          "end": 11.15
+        },
+        {
+          "word": "seconds",
+          "start": 11.15,
+          "end": 11.63
+        },
+        {
+          "word": "gives",
+          "start": 11.63,
+          "end": 11.95
         },
         {
           "word": "minus",
-          "start": 3.56,
-          "end": 3.8
+          "start": 11.95,
+          "end": 12.55
         },
         {
-          "word": "0",
-          "start": 3.8,
-          "end": 4.2
+          "word": "zero",
+          "start": 12.55,
+          "end": 13.07
         },
         {
-          "word": ".8",
-          "start": 4.2,
-          "end": 4.76
+          "word": "point",
+          "start": 13.07,
+          "end": 13.41
         },
         {
-          "word": "meters",
-          "start": 4.76,
-          "end": 5.02
+          "word": "eight",
+          "start": 13.41,
+          "end": 13.87
+        },
+        {
+          "word": "metres",
+          "start": 13.87,
+          "end": 14.75
         },
         {
           "word": "per",
-          "start": 5.02,
-          "end": 5.3
+          "start": 14.75,
+          "end": 15.19
         },
         {
           "word": "second.",
-          "start": 5.3,
-          "end": 5.74
+          "start": 15.19,
+          "end": 15.49
         },
         {
           "word": "Average",
-          "start": 6.02,
-          "end": 6.76
+          "start": 17.79,
+          "end": 18.23
         },
         {
-          "word": "speed",
-          "start": 6.76,
-          "end": 7.14
+          "word": "speed?",
+          "start": 18.23,
+          "end": 18.81
         },
         {
-          "word": "is",
-          "start": 7.14,
-          "end": 7.8
+          "word": "Distance",
+          "start": 19.61,
+          "end": 20.25
         },
         {
-          "word": "2",
-          "start": 7.8,
-          "end": 8.06
+          "word": "over",
+          "start": 20.25,
+          "end": 20.49
         },
         {
-          "word": ".4",
-          "start": 8.06,
-          "end": 8.56
+          "word": "time?",
+          "start": 20.49,
+          "end": 20.99
         },
         {
-          "word": "meters",
-          "start": 8.56,
-          "end": 8.78
+          "word": "D",
+          "start": 21.57,
+          "end": 21.91
+        },
+        {
+          "word": "over",
+          "start": 21.91,
+          "end": 22.23
+        },
+        {
+          "word": "delta",
+          "start": 22.23,
+          "end": 22.49
+        },
+        {
+          "word": "t",
+          "start": 22.49,
+          "end": 22.93
+        },
+        {
+          "word": "gives",
+          "start": 22.93,
+          "end": 23.67
+        },
+        {
+          "word": "two",
+          "start": 23.67,
+          "end": 23.97
+        },
+        {
+          "word": "point",
+          "start": 23.97,
+          "end": 24.21
+        },
+        {
+          "word": "four",
+          "start": 24.21,
+          "end": 24.47
+        },
+        {
+          "word": "metres",
+          "start": 24.47,
+          "end": 24.71
         },
         {
           "word": "per",
-          "start": 8.78,
-          "end": 9.06
+          "start": 24.71,
+          "end": 24.99
         },
         {
           "word": "second.",
-          "start": 9.06,
-          "end": 9.44
+          "start": 24.99,
+          "end": 25.29
         },
         {
-          "word": "One",
-          "start": 10.06,
-          "end": 10.26
+          "word": "Velocity",
+          "start": 27.54,
+          "end": 28.1
         },
         {
           "word": "keeps",
-          "start": 10.26,
-          "end": 10.5
+          "start": 28.1,
+          "end": 28.28
         },
         {
           "word": "direction,",
-          "start": 10.5,
-          "end": 10.96
+          "start": 28.28,
+          "end": 28.8
         },
         {
-          "word": "the",
-          "start": 11.58,
-          "end": 11.68
-        },
-        {
-          "word": "other",
-          "start": 11.68,
-          "end": 11.92
+          "word": "speed",
+          "start": 29.34,
+          "end": 29.82
         },
         {
           "word": "uses",
-          "start": 11.92,
-          "end": 12.22
+          "start": 29.82,
+          "end": 30.26
         },
         {
           "word": "total",
-          "start": 12.22,
-          "end": 12.64
+          "start": 30.26,
+          "end": 30.7
         },
         {
           "word": "distance.",
-          "start": 12.64,
-          "end": 13.46
+          "start": 30.7,
+          "end": 31.08
         }
       ],
+      "text": "Average velocity? Displacement over time. v bar equals delta s over delta t. Ten seconds gives minus zero point eight metres per second. Average speed? Distance over time? D over delta t gives two point four metres per second. Velocity keeps direction, speed uses total distance.",
+      "wordCount": 46,
       "cues": {
-        "ten-seconds": 0.54,
-        "average-velocity": 1.9,
-        "minus-zero-point-eight": 3.56,
-        "average-speed": 6.02,
-        "two-point-four": 7.8,
-        "direction": 10.5
+        "formula": 0.55,
+        "symbol": 5.93,
+        "ten-seconds": 10.55,
+        "average-velocity": 0.55,
+        "minus-zero-point-eight": 11.95,
+        "average-speed": 17.79,
+        "speed-symbol": 21.57,
+        "two-point-four": 23.67,
+        "direction": 28.28,
+        "figure-13": 10.55,
+        "figure-17": 12.55,
+        "figure-19": 13.41,
+        "figure-33": 23.67,
+        "figure-35": 24.21
       },
-      "generatedAt": "2026-09-06T09:22:24.902048",
+      "duration": 31.921633,
+      "engine": "faster-whisper-small (local)"
+    },
+    {
+      "id": "s11",
+      "paragraphs": [
+        "Consider a cyclist: from rest, accelerate at one metre per second squared for two seconds. Cruise at two metres per second for three seconds; rest two seconds; return at minus two for four seconds. [hold 2 s]",
+        "Let's draw. Gradient equals displacement change over time change. Delta s over delta t equals velocity.",
+        "Accelerating: what changes? Two metres over two seconds: chord gradient, positive one. Tangent velocity rises from zero to two. Positive: away. [hold 2 s]",
+        "Cruising: what slope? Six metres over three seconds: positive two, constant. [hold 2 s]",
+        "Resting: what slope? Zero over two: zero, stationary. [hold 2 s]",
+        "Returning: predict the sign. [pause 3 s] Minus eight metres over four seconds: negative two, returning. [hold 2 s]",
+        "What if returning slower? Less steep, arriving later."
+      ],
+      "budget": 80,
+      "voiceSpeed": 0.9,
+      "tempo": "slow",
+      "audio": "displacement-time-graphs-s11.mp3",
+      "audioSha256": "eff23db76521d6ebf2ee94664247569725299bc65556bbfb0295b6ef60eb72fe",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "provider": "elevenlabs",
+      "beats": [
+        {
+          "text": "Consider a cyclist: from rest, accelerate at one metre per second squared for two seconds. Cruise at two metres per second for three seconds; rest two seconds; return at minus two for four seconds.",
+          "start": 0.55,
+          "end": 20.54
+        },
+        {
+          "text": "Let's draw. Gradient equals displacement change over time change. Delta s over delta t equals velocity.",
+          "start": 22.59,
+          "end": 32.86
+        },
+        {
+          "text": "Accelerating: what changes? Two metres over two seconds: chord gradient, positive one. Tangent velocity rises from zero to two. Positive: away.",
+          "start": 32.91,
+          "end": 51.13
+        },
+        {
+          "text": "Cruising: what slope? Six metres over three seconds: positive two, constant.",
+          "start": 53.18,
+          "end": 60.85
+        },
+        {
+          "text": "Resting: what slope? Zero over two: zero, stationary.",
+          "start": 62.9,
+          "end": 69.64
+        },
+        {
+          "text": "Returning: predict the sign.",
+          "start": 71.69,
+          "end": 73.42
+        },
+        {
+          "text": "Minus eight metres over four seconds: negative two, returning.",
+          "start": 76.42,
+          "end": 82.64
+        },
+        {
+          "text": "What if returning slower? Less steep, arriving later.",
+          "start": 84.69,
+          "end": 89.41
+        }
+      ],
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 20.54,
+          "end": 22.54,
+          "duration": 2.0
+        },
+        {
+          "kind": "hold",
+          "start": 51.13,
+          "end": 53.13,
+          "duration": 2.0
+        },
+        {
+          "kind": "hold",
+          "start": 60.85,
+          "end": 62.85,
+          "duration": 2.0
+        },
+        {
+          "kind": "hold",
+          "start": 69.64,
+          "end": 71.64,
+          "duration": 2.0
+        },
+        {
+          "kind": "pause",
+          "start": 73.42,
+          "end": 76.42,
+          "duration": 3.0
+        },
+        {
+          "kind": "hold",
+          "start": 82.64,
+          "end": 84.64,
+          "duration": 2.0
+        }
+      ],
+      "sampleDuration": 89.76,
+      "figureEvents": [
+        {
+          "id": "figure-7",
+          "word": "one",
+          "start": 6.49,
+          "end": 6.75,
+          "target": "accel"
+        },
+        {
+          "id": "figure-13",
+          "word": "two",
+          "start": 8.65,
+          "end": 8.91,
+          "target": "time2"
+        },
+        {
+          "id": "figure-17",
+          "word": "two",
+          "start": 11.29,
+          "end": 11.45,
+          "target": "speed2"
+        },
+        {
+          "id": "figure-22",
+          "word": "three",
+          "start": 13.11,
+          "end": 13.41,
+          "target": "time3"
+        },
+        {
+          "id": "figure-25",
+          "word": "2",
+          "start": 15.71,
+          "end": 15.99,
+          "target": "rest2"
+        },
+        {
+          "id": "figure-30",
+          "word": "2",
+          "start": 18.73,
+          "end": 19.17,
+          "target": "speed-2"
+        },
+        {
+          "id": "figure-32",
+          "word": "4",
+          "start": 19.65,
+          "end": 19.93,
+          "target": "time4"
+        },
+        {
+          "id": "figure-53",
+          "word": "Two",
+          "start": 36.45,
+          "end": 36.75,
+          "target": "pos2"
+        },
+        {
+          "id": "figure-56",
+          "word": "two",
+          "start": 37.57,
+          "end": 37.87,
+          "target": "time2"
+        },
+        {
+          "id": "figure-61",
+          "word": "one.",
+          "start": 41.63,
+          "end": 42.19,
+          "target": "speed1"
+        },
+        {
+          "id": "figure-66",
+          "word": "zero",
+          "start": 46.43,
+          "end": 46.91,
+          "target": "speed0"
+        },
+        {
+          "id": "figure-68",
+          "word": "two.",
+          "start": 47.45,
+          "end": 47.83,
+          "target": "tangent2"
+        },
+        {
+          "id": "figure-74",
+          "word": "Six",
+          "start": 56.06,
+          "end": 56.22,
+          "target": "pos6"
+        },
+        {
+          "id": "figure-77",
+          "word": "three",
+          "start": 56.94,
+          "end": 57.26,
+          "target": "time3"
+        },
+        {
+          "id": "figure-80",
+          "word": "two,",
+          "start": 58.86,
+          "end": 59.32,
+          "target": "speed2"
+        },
+        {
+          "id": "figure-85",
+          "word": "Zero",
+          "start": 65.74,
+          "end": 66.0,
+          "target": "pos0"
+        },
+        {
+          "id": "figure-87",
+          "word": "two,",
+          "start": 66.6,
+          "end": 67.0,
+          "target": "rest2"
+        },
+        {
+          "id": "figure-88",
+          "word": "zero,",
+          "start": 67.6,
+          "end": 68.02,
+          "target": "speed0"
+        },
+        {
+          "id": "figure-95",
+          "word": "eight",
+          "start": 76.84,
+          "end": 77.06,
+          "target": "pos-8"
+        },
+        {
+          "id": "figure-98",
+          "word": "four",
+          "start": 78.16,
+          "end": 78.44,
+          "target": "time4"
+        },
+        {
+          "id": "figure-101",
+          "word": "two,",
+          "start": 80.66,
+          "end": 81.24,
+          "target": "speed-2"
+        }
+      ],
+      "words": [
+        {
+          "word": "Consider",
+          "start": 0.55,
+          "end": 0.99
+        },
+        {
+          "word": "a",
+          "start": 0.99,
+          "end": 1.25
+        },
+        {
+          "word": "cyclist.",
+          "start": 1.25,
+          "end": 1.87
+        },
+        {
+          "word": "From",
+          "start": 2.73,
+          "end": 3.17
+        },
+        {
+          "word": "rest,",
+          "start": 3.17,
+          "end": 3.69
+        },
+        {
+          "word": "accelerate",
+          "start": 4.47,
+          "end": 5.47
+        },
+        {
+          "word": "at",
+          "start": 5.47,
+          "end": 6.49
+        },
+        {
+          "word": "one",
+          "start": 6.49,
+          "end": 6.75
+        },
+        {
+          "word": "metre",
+          "start": 6.75,
+          "end": 7.01
+        },
+        {
+          "word": "per",
+          "start": 7.01,
+          "end": 7.23
+        },
+        {
+          "word": "second",
+          "start": 7.23,
+          "end": 7.63
+        },
+        {
+          "word": "squared",
+          "start": 7.63,
+          "end": 8.19
+        },
+        {
+          "word": "for",
+          "start": 8.19,
+          "end": 8.65
+        },
+        {
+          "word": "two",
+          "start": 8.65,
+          "end": 8.91
+        },
+        {
+          "word": "seconds.",
+          "start": 8.91,
+          "end": 9.37
+        },
+        {
+          "word": "Cruise",
+          "start": 10.51,
+          "end": 10.97
+        },
+        {
+          "word": "at",
+          "start": 10.97,
+          "end": 11.29
+        },
+        {
+          "word": "two",
+          "start": 11.29,
+          "end": 11.45
+        },
+        {
+          "word": "metres",
+          "start": 11.45,
+          "end": 11.67
+        },
+        {
+          "word": "per",
+          "start": 11.67,
+          "end": 11.93
+        },
+        {
+          "word": "second",
+          "start": 11.93,
+          "end": 12.41
+        },
+        {
+          "word": "for",
+          "start": 12.41,
+          "end": 13.11
+        },
+        {
+          "word": "three",
+          "start": 13.11,
+          "end": 13.41
+        },
+        {
+          "word": "seconds.",
+          "start": 13.41,
+          "end": 13.95
+        },
+        {
+          "word": "Rest",
+          "start": 15.01,
+          "end": 15.71
+        },
+        {
+          "word": "2",
+          "start": 15.71,
+          "end": 15.99
+        },
+        {
+          "word": "seconds,",
+          "start": 15.99,
+          "end": 16.47
+        },
+        {
+          "word": "return",
+          "start": 16.53,
+          "end": 18.21
+        },
+        {
+          "word": "at",
+          "start": 18.21,
+          "end": 18.39
+        },
+        {
+          "word": "minus",
+          "start": 18.39,
+          "end": 18.73
+        },
+        {
+          "word": "2",
+          "start": 18.73,
+          "end": 19.17
+        },
+        {
+          "word": "for",
+          "start": 19.17,
+          "end": 19.65
+        },
+        {
+          "word": "4",
+          "start": 19.65,
+          "end": 19.93
+        },
+        {
+          "word": "seconds.",
+          "start": 19.93,
+          "end": 20.29
+        },
+        {
+          "word": "Let's",
+          "start": 22.59,
+          "end": 22.95
+        },
+        {
+          "word": "draw.",
+          "start": 22.95,
+          "end": 23.27
+        },
+        {
+          "word": "Gradient",
+          "start": 24.37,
+          "end": 25.05
+        },
+        {
+          "word": "equals",
+          "start": 25.05,
+          "end": 25.41
+        },
+        {
+          "word": "displacement",
+          "start": 25.41,
+          "end": 25.97
+        },
+        {
+          "word": "change",
+          "start": 25.97,
+          "end": 26.55
+        },
+        {
+          "word": "over",
+          "start": 26.55,
+          "end": 26.87
+        },
+        {
+          "word": "time",
+          "start": 26.87,
+          "end": 27.17
+        },
+        {
+          "word": "change.",
+          "start": 27.17,
+          "end": 27.71
+        },
+        {
+          "word": "Delta",
+          "start": 28.53,
+          "end": 29.19
+        },
+        {
+          "word": "s",
+          "start": 29.19,
+          "end": 29.77
+        },
+        {
+          "word": "over",
+          "start": 29.77,
+          "end": 30.11
+        },
+        {
+          "word": "delta",
+          "start": 30.11,
+          "end": 30.47
+        },
+        {
+          "word": "t",
+          "start": 30.47,
+          "end": 31.11
+        },
+        {
+          "word": "equals",
+          "start": 31.11,
+          "end": 31.91
+        },
+        {
+          "word": "velocity.",
+          "start": 31.91,
+          "end": 32.51
+        },
+        {
+          "word": "Accelerating,",
+          "start": 32.91,
+          "end": 33.83
+        },
+        {
+          "word": "what",
+          "start": 34.45,
+          "end": 34.89
+        },
+        {
+          "word": "changes?",
+          "start": 34.89,
+          "end": 35.35
+        },
+        {
+          "word": "Two",
+          "start": 36.45,
+          "end": 36.75
+        },
+        {
+          "word": "metres",
+          "start": 36.75,
+          "end": 37.09
+        },
+        {
+          "word": "over",
+          "start": 37.09,
+          "end": 37.57
+        },
+        {
+          "word": "two",
+          "start": 37.57,
+          "end": 37.87
+        },
+        {
+          "word": "seconds,",
+          "start": 37.87,
+          "end": 38.41
+        },
+        {
+          "word": "chord",
+          "start": 38.73,
+          "end": 39.75
+        },
+        {
+          "word": "gradient,",
+          "start": 39.75,
+          "end": 40.29
+        },
+        {
+          "word": "positive",
+          "start": 41.11,
+          "end": 41.63
+        },
+        {
+          "word": "one.",
+          "start": 41.63,
+          "end": 42.19
+        },
+        {
+          "word": "Tangent",
+          "start": 43.57,
+          "end": 44.19
+        },
+        {
+          "word": "velocity",
+          "start": 44.19,
+          "end": 44.79
+        },
+        {
+          "word": "rises",
+          "start": 44.79,
+          "end": 46.07
+        },
+        {
+          "word": "from",
+          "start": 46.07,
+          "end": 46.43
+        },
+        {
+          "word": "zero",
+          "start": 46.43,
+          "end": 46.91
+        },
+        {
+          "word": "to",
+          "start": 46.91,
+          "end": 47.45
+        },
+        {
+          "word": "two.",
+          "start": 47.45,
+          "end": 47.83
+        },
+        {
+          "word": "Positive,",
+          "start": 48.75,
+          "end": 49.23
+        },
+        {
+          "word": "away.",
+          "start": 50.49,
+          "end": 50.91
+        },
+        {
+          "word": "Cruising,",
+          "start": 53.18,
+          "end": 53.76
+        },
+        {
+          "word": "what",
+          "start": 54.66,
+          "end": 54.82
+        },
+        {
+          "word": "slope?",
+          "start": 54.82,
+          "end": 55.22
+        },
+        {
+          "word": "Six",
+          "start": 56.06,
+          "end": 56.22
+        },
+        {
+          "word": "metres",
+          "start": 56.22,
+          "end": 56.58
+        },
+        {
+          "word": "over",
+          "start": 56.58,
+          "end": 56.94
+        },
+        {
+          "word": "three",
+          "start": 56.94,
+          "end": 57.26
+        },
+        {
+          "word": "seconds,",
+          "start": 57.26,
+          "end": 57.7
+        },
+        {
+          "word": "positive",
+          "start": 58.24,
+          "end": 58.86
+        },
+        {
+          "word": "two,",
+          "start": 58.86,
+          "end": 59.32
+        },
+        {
+          "word": "constant.",
+          "start": 59.98,
+          "end": 60.48
+        },
+        {
+          "word": "Resting,",
+          "start": 62.9,
+          "end": 63.48
+        },
+        {
+          "word": "what",
+          "start": 63.92,
+          "end": 64.28
+        },
+        {
+          "word": "slope?",
+          "start": 64.28,
+          "end": 64.74
+        },
+        {
+          "word": "Zero",
+          "start": 65.74,
+          "end": 66.0
+        },
+        {
+          "word": "over",
+          "start": 66.0,
+          "end": 66.6
+        },
+        {
+          "word": "two,",
+          "start": 66.6,
+          "end": 67.0
+        },
+        {
+          "word": "zero,",
+          "start": 67.6,
+          "end": 68.02
+        },
+        {
+          "word": "stationary.",
+          "start": 68.68,
+          "end": 69.22
+        },
+        {
+          "word": "Returning",
+          "start": 71.69,
+          "end": 72.17
+        },
+        {
+          "word": "predict",
+          "start": 72.17,
+          "end": 72.69
+        },
+        {
+          "word": "the",
+          "start": 72.69,
+          "end": 72.99
+        },
+        {
+          "word": "sign.",
+          "start": 72.99,
+          "end": 73.25
+        },
+        {
+          "word": "Minus",
+          "start": 76.42,
+          "end": 76.84
+        },
+        {
+          "word": "eight",
+          "start": 76.84,
+          "end": 77.06
+        },
+        {
+          "word": "metres",
+          "start": 77.06,
+          "end": 77.46
+        },
+        {
+          "word": "over",
+          "start": 77.46,
+          "end": 78.16
+        },
+        {
+          "word": "four",
+          "start": 78.16,
+          "end": 78.44
+        },
+        {
+          "word": "seconds,",
+          "start": 78.44,
+          "end": 78.82
+        },
+        {
+          "word": "negative",
+          "start": 79.22,
+          "end": 80.66
+        },
+        {
+          "word": "two,",
+          "start": 80.66,
+          "end": 81.24
+        },
+        {
+          "word": "returning.",
+          "start": 81.98,
+          "end": 82.4
+        },
+        {
+          "word": "What",
+          "start": 84.69,
+          "end": 84.87
+        },
+        {
+          "word": "if",
+          "start": 84.87,
+          "end": 85.03
+        },
+        {
+          "word": "returning",
+          "start": 85.03,
+          "end": 85.37
+        },
+        {
+          "word": "slower?",
+          "start": 85.37,
+          "end": 85.83
+        },
+        {
+          "word": "Less",
+          "start": 86.87,
+          "end": 87.07
+        },
+        {
+          "word": "steep,",
+          "start": 87.07,
+          "end": 87.51
+        },
+        {
+          "word": "arriving",
+          "start": 88.23,
+          "end": 88.73
+        },
+        {
+          "word": "later.",
+          "start": 88.73,
+          "end": 89.11
+        }
+      ],
+      "text": "Consider a cyclist. From rest, accelerate at one metre per second squared for two seconds. Cruise at two metres per second for three seconds. Rest 2 seconds, return at minus 2 for 4 seconds. Let's draw. Gradient equals displacement change over time change. Delta s over delta t equals velocity. Accelerating, what changes? Two metres over two seconds, chord gradient, positive one. Tangent velocity rises from zero to two. Positive, away. Cruising, what slope? Six metres over three seconds, positive two, constant. Resting, what slope? Zero over two, zero, stationary. Returning predict the sign. Minus eight metres over four seconds, negative two, returning. What if returning slower? Less steep, arriving later.",
+      "wordCount": 111,
+      "cues": {
+        "setup": 0.55,
+        "build": 22.59,
+        "formula": 24.37,
+        "symbol": 28.53,
+        "leg1": 32.91,
+        "leg2": 53.18,
+        "leg3": 62.9,
+        "leg4": 71.69,
+        "answer1": 36.45,
+        "answer2": 56.06,
+        "answer3": 65.74,
+        "answer4": 76.42,
+        "tangent": 43.57,
+        "what-if": 84.69,
+        "figure-7": 6.49,
+        "figure-13": 8.65,
+        "figure-17": 11.29,
+        "figure-22": 13.11,
+        "figure-25": 15.71,
+        "figure-30": 18.73,
+        "figure-32": 19.65,
+        "figure-53": 36.45,
+        "figure-56": 37.57,
+        "figure-61": 41.63,
+        "figure-66": 46.43,
+        "figure-68": 47.45,
+        "figure-74": 56.06,
+        "figure-77": 56.94,
+        "figure-80": 58.86,
+        "figure-85": 65.74,
+        "figure-87": 66.6,
+        "figure-88": 67.6,
+        "figure-95": 76.84,
+        "figure-98": 78.16,
+        "figure-101": 80.66
+      },
+      "duration": 89.80898,
       "engine": "faster-whisper-small (local)"
     },
     {
@@ -1902,7 +3521,11 @@
         "separate": 29.3
       },
       "generatedAt": "2026-09-06T09:22:24.902048",
-      "engine": "faster-whisper-small (local)"
+      "engine": "faster-whisper-small (local)",
+      "audioSha256": "d3f85f7e6de39adac1cf3d8e1312a41fe1a6addee2b0e9bc0dfe4c31136869ad",
+      "reusedFrom": "b383a44",
+      "holds": [],
+      "beats": []
     }
   ]
 }
