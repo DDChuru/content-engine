@@ -25,719 +25,95 @@ ENGINE = "faster-whisper-small (local)"
 
 # Cue IDs are stable composition keys. The occurrence selector disambiguates
 # repeated storyboard words without coupling resolution to generated timings.
-JOBS = [
-    {
-        "id": "s01",
-        "audioFile": "drawing-travel-graphs-s01.mp3",
-        "cues": [
-            {
-                "id": "syllabus",
-                "searchTerms": [
-                    "syllabus"
-                ]
-            },
-            {
-                "id": "quote",
-                "searchTerms": [
-                    "sketch and interpret"
-                ]
-            },
-            {
-                "id": "outcomes",
-                "searchTerms": [
-                    "by the end"
-                ]
-            },
-            {
-                "id": "shapes",
-                "searchTerms": [
-                    "turn journey"
-                ]
-            },
-            {
-                "id": "area",
-                "searchTerms": [
-                    "use signed area"
-                ]
-            },
-            {
-                "id": "gradients",
-                "searchTerms": [
-                    "explain a journey"
-                ]
-            }
-        ]
-    },
-    {
-        "id": "s08",
-        "audioFile": "drawing-travel-graphs-s08.mp3",
-        "cues": [
-            {
-                "id": "setup",
-                "searchTerms": [
-                    "consider a cyclist"
-                ]
-            },
-            {
-                "id": "cruise",
-                "searchTerms": [
-                    "already moving"
-                ]
-            },
-            {
-                "id": "six",
-                "searchTerms": [
-                    "six metres per second",
-                    "6 metres per second",
-                    "six meters per second",
-                    "6 meters per second"
-                ]
-            },
-            {
-                "id": "ten",
-                "searchTerms": [
-                    "first ten seconds",
-                    "first 10 seconds"
-                ]
-            },
-            {
-                "id": "slowing",
-                "searchTerms": [
-                    "gradually slows"
-                ]
-            },
-            {
-                "id": "stop",
-                "searchTerms": [
-                    "a stop"
-                ]
-            },
-            {
-                "id": "rest",
-                "searchTerms": [
-                    "he rests"
-                ]
-            },
-            {
-                "id": "turn",
-                "searchTerms": [
-                    "now he turns"
-                ]
-            },
-            {"id": "pedal", "searchTerms": ["pedals back"]},
-            {
-                "id": "accelerate",
-                "searchTerms": [
-                    "speeds up"
-                ]
-            },
-            {
-                "id": "four",
-                "searchTerms": [
-                    "four metres per second",
-                    "4 metres per second",
-                    "four meters per second",
-                    "4 meters per second"
-                ]
-            },
-            {
-                "id": "return",
-                "searchTerms": [
-                    "he keeps"
-                ]
-            },
-            {
-                "id": "home",
-                "searchTerms": [
-                    "home at a"
-                ]
-            },
-            {
-                "id": "close",
-                "searchTerms": [
-                    "picture the ride"
-                ]
-            }
-        ]
-    },
-    {
-        "id": "s02",
-        "audioFile": "drawing-travel-graphs-s02.mp3",
-        "cues": [
-            {
-                "id": "velocity",
-                "searchTerms": [
-                    "now the velocity time graph"
-                ]
-            },
-            {
-                "id": "slope",
-                "searchTerms": [
-                    "gradient gives acceleration"
-                ]
-            },
-            {
-                "id": "area",
-                "searchTerms": [
-                    "area gives displacement"
-                ]
-            },
-            {
-                "id": "negative",
-                "searchTerms": [
-                    "below the axis"
-                ]
-            },
-            {
-                "id": "displacement-signpost",
-                "searchTerms": [
-                    "now the displacement time graph"
-                ]
-            },
-            {
-                "id": "displacement",
-                "searchTerms": [
-                    "gradient gives velocity"
-                ]
-            },
-            {
-                "id": "return",
-                "searchTerms": [
-                    "a falling line"
-                ]
-            }
-        ]
-    },
-    {
-        "id": "s03",
-        "audioFile": "drawing-travel-graphs-s03.mp3",
-        "cues": [
-            {
-                "id": "signpost",
-                "searchTerms": [
-                    "now the velocity time graph"
-                ]
-            },
-            {
-                "id": "setup",
-                "searchTerms": [
-                    "for our cyclist"
-                ]
-            },
-            {
-                "id": "draw",
-                "searchTerms": [
-                    "drawing"
-                ]
-            },
-            {
-                "id": "constant",
-                "searchTerms": [
-                    "six metres per second",
-                    "six meters per second",
-                    "6 metres per second",
-                    "6 meters per second"
-                ]
-            },
-            {
-                "id": "ten",
-                "searchTerms": [
-                    "ten seconds",
-                    "10 seconds"
-                ]
-            },
-            {
-                "id": "slowing",
-                "searchTerms": [
-                    "slowing uniformly"
-                ]
-            },
-            {
-                "id": "twelve",
-                "searchTerms": [
-                    "twelve seconds",
-                    "12 seconds"
-                ]
-            },
-            {
-                "id": "twentytwo",
-                "searchTerms": [
-                    "twenty-two",
-                    "twenty two",
-                    "22"
-                ]
-            },
-            {
-                "id": "rest",
-                "searchTerms": [
-                    "resting five",
-                    "resting 5"
-                ]
-            },
-            {
-                "id": "twentyseven",
-                "searchTerms": [
-                    "twenty-seven",
-                    "twenty seven",
-                    "27"
-                ]
-            },
-            {
-                "id": "reverse",
-                "searchTerms": [
-                    "accelerating backwards"
-                ]
-            },
-            {
-                "id": "four",
-                "searchTerms": [
-                    "four seconds",
-                    "4 seconds"
-                ]
-            },
-            {
-                "id": "minusfour",
-                "searchTerms": [
-                    "minus four",
-                    "minus 4"
-                ]
-            },
-            {
-                "id": "thirtyone",
-                "searchTerms": [
-                    "thirty-one",
-                    "thirty one",
-                    "31"
-                ]
-            },
-            {
-                "id": "return",
-                "searchTerms": [
-                    "keep minus four",
-                    "keep minus 4"
-                ]
-            },
-            {
-                "id": "finish",
-                "searchTerms": [
-                    "at t"
-                ]
-            }
-        ]
-    },
-    {
-        "id": "s04",
-        "audioFile": "drawing-travel-graphs-s04.mp3",
-        "cues": [
-            {
-                "id": "setup",
-                "searchTerms": [
-                    "for the same cyclist"
-                ]
-            },
-            {
-                "id": "draw",
-                "searchTerms": [
-                    "drawing"
-                ]
-            },
-            {
-                "id": "rectangle",
-                "searchTerms": [
-                    "the rectangle"
-                ]
-            },
-            {
-                "id": "sixty",
-                "searchTerms": [
-                    "sixty metres",
-                    "sixty meters",
-                    "60 metres",
-                    "60 meters"
-                ]
-            },
-            {
-                "id": "triangle",
-                "searchTerms": [
-                    "the triangle"
-                ]
-            },
-            {
-                "id": "thirtysix",
-                "searchTerms": [
-                    "thirty-six metres",
-                    "thirty six metres",
-                    "36 metres",
-                    "36 meters"
-                ]
-            },
-            {
-                "id": "total",
-                "searchTerms": [
-                    "together"
-                ]
-            },
-            {
-                "id": "ninetysix",
-                "searchTerms": [
-                    "ninety-six",
-                    "ninety six",
-                    "96"
-                ]
-            },
-            {
-                "id": "reverse",
-                "searchTerms": [
-                    "the reverse triangle"
-                ]
-            },
-            {
-                "id": "eight",
-                "searchTerms": [
-                    "eight metres",
-                    "eight meters",
-                    "8 metres",
-                    "8 meters"
-                ]
-            },
-            {
-                "id": "remaining",
-                "searchTerms": [
-                    "that leaves"
-                ]
-            },
-            {
-                "id": "eightyeight",
-                "searchTerms": [
-                    "eighty-eight",
-                    "eighty eight",
-                    "88"
-                ]
-            },
-            {
-                "id": "duration",
-                "searchTerms": [
-                    "at four metres",
-                    "at four meters",
-                    "at 4 metres",
-                    "at 4 meters"
-                ]
-            },
-            {
-                "id": "twentytwo",
-                "searchTerms": [
-                    "twenty-two more",
-                    "twenty two more",
-                    "22 more"
-                ]
-            },
-            {
-                "id": "total-time",
-                "searchTerms": [
-                    "add the first"
-                ]
-            },
-            {
-                "id": "fiftythree",
-                "searchTerms": [
-                    "fifty-three seconds",
-                    "fifty three seconds",
-                    "53 seconds"
-                ]
-            }
-        ]
-    },
-    {
-        "id": "s05",
-        "audioFile": "drawing-travel-graphs-s05.mp3",
-        "cues": [
-            {
-                "id": "signpost",
-                "searchTerms": [
-                    "now the displacement time graph"
-                ]
-            },
-            {
-                "id": "pair",
-                "searchTerms": [
-                    "one journey both graphs"
-                ]
-            },
-            {
-                "id": "straight",
-                "searchTerms": [
-                    "constant velocity"
-                ]
-            },
-            {
-                "id": "rest",
-                "searchTerms": [
-                    "rest is horizontal"
-                ]
-            },
-            {
-                "id": "curve",
-                "searchTerms": [
-                    "changing velocity gives"
-                ]
-            },
-            {
-                "id": "chord",
-                "searchTerms": [
-                    "a straight join"
-                ]
-            }
-        ]
-    },
-    {
-        "id": "s06",
-        "audioFile": "drawing-travel-graphs-s06.mp3",
-        "cues": [
-            {
-                "id": "question",
-                "searchTerms": [
-                    "if velocity"
-                ]
-            },
-            {
-                "id": "answer",
-                "searchTerms": [
-                    "no"
-                ]
-            },
-            {
-                "id": "shapes",
-                "searchTerms": [
-                    "turn journey"
-                ]
-            },
-            {
-                "id": "tick-shapes",
-                "searchTerms": [
-                    "graph shapes"
-                ]
-            },
-            {
-                "id": "area",
-                "searchTerms": [
-                    "use signed area"
-                ]
-            },
-            {
-                "id": "tick-area",
-                "searchTerms": [
-                    "find displacement"
-                ]
-            },
-            {
-                "id": "gradients",
-                "searchTerms": [
-                    "explain a journey"
-                ]
-            },
-            {
-                "id": "tick-gradients",
-                "searchTerms": [
-                    "displacement time gradients",
-                    "displacement-time gradients"
-                ]
-            }
-        ]
-    },
-    {
-        "id": "s07",
-        "audioFile": "drawing-travel-graphs-s07.mp3",
-        "cues": [
-            {
-                "id": "signpost",
-                "searchTerms": [
-                    "now the displacement time graph"
-                ]
-            },
-            {
-                "id": "setup",
-                "searchTerms": [
-                    "for our cyclist"
-                ]
-            },
-            {
-                "id": "draw",
-                "searchTerms": [
-                    "drawing"
-                ]
-            },
-            {
-                "id": "leg1",
-                "searchTerms": [
-                    "first leg"
-                ]
-            },
-            {
-                "id": "ds1",
-                "searchTerms": [
-                    "sixty metres",
-                    "sixty meters",
-                    "60 metres",
-                    "60 meters"
-                ]
-            },
-            {
-                "id": "dt1",
-                "searchTerms": [
-                    "ten seconds",
-                    "10 seconds"
-                ]
-            },
-            {
-                "id": "v1",
-                "searchTerms": [
-                    "six metres per second",
-                    "six meters per second",
-                    "6 metres per second",
-                    "6 meters per second"
-                ]
-            },
-            {
-                "id": "meaning1",
-                "searchTerms": [
-                    "positive and steady"
-                ]
-            },
-            {
-                "id": "leg2",
-                "searchTerms": [
-                    "slowing"
-                ]
-            },
-            {
-                "id": "ds2",
-                "searchTerms": [
-                    "thirty-six",
-                    "thirty six",
-                    "36"
-                ]
-            },
-            {
-                "id": "dt2",
-                "searchTerms": [
-                    "twelve",
-                    "12"
-                ]
-            },
-            {
-                "id": "v2",
-                "searchTerms": [
-                    "average velocity three",
-                    "average velocity 3"
-                ]
-            },
-            {
-                "id": "tangent2",
-                "searchTerms": [
-                    "the tangent falls"
-                ]
-            },
-            {
-                "id": "leg3",
-                "searchTerms": [
-                    "stopped"
-                ]
-            },
-            {
-                "id": "ds3",
-                "searchTerms": [
-                    "zero change",
-                    "0 change"
-                ]
-            },
-            {
-                "id": "dt3",
-                "searchTerms": [
-                    "five seconds",
-                    "5 seconds"
-                ]
-            },
-            {
-                "id": "v3",
-                "searchTerms": [
-                    "zero velocity",
-                    "0 velocity"
-                ]
-            },
-            {
-                "id": "leg4",
-                "searchTerms": [
-                    "accelerating backwards"
-                ]
-            },
-            {
-                "id": "ds4",
-                "searchTerms": [
-                    "minus eight",
-                    "minus 8"
-                ]
-            },
-            {
-                "id": "dt4",
-                "searchTerms": [
-                    "in four",
-                    "in 4"
-                ]
-            },
-            {
-                "id": "v4",
-                "searchTerms": [
-                    "average minus two",
-                    "average minus 2"
-                ]
-            },
-            {
-                "id": "tangent4",
-                "searchTerms": [
-                    "the tangent falls"
-                ],
-                "occurrence": 2
-            },
-            {
-                "id": "leg5",
-                "searchTerms": [
-                    "final leg"
-                ]
-            },
-            {
-                "id": "ds5",
-                "searchTerms": [
-                    "minus eighty-eight",
-                    "minus eighty eight",
-                    "minus 88"
-                ]
-            },
-            {
-                "id": "dt5",
-                "searchTerms": [
-                    "twenty-two",
-                    "twenty two",
-                    "22"
-                ]
-            },
-            {
-                "id": "v5",
-                "searchTerms": [
-                    "minus four constant",
-                    "minus 4 constant"
-                ]
-            },
-            {
-                "id": "complete",
-                "searchTerms": [
-                    "fifty-three seconds",
-                    "fifty three seconds",
-                    "53 seconds"
-                ]
-            }
-        ]
-    }
-]
+JOBS = [{'id': 's01',
+  'audioFile': 'drawing-travel-graphs-s01.mp3',
+  'cues': [{'id': 'journey', 'searchTerms': ['A travel graph']},
+           {'id': 'positive', 'searchTerms': ['Choose positive']},
+           {'id': 'key-times', 'searchTerms': ['key times']},
+           {'id': 'axes-and-units', 'searchTerms': ['axes and units']}]},
+ {'id': 's02',
+  'audioFile': 'drawing-travel-graphs-s02.mp3',
+  'cues': [{'id': 'steadily', 'searchTerms': ['steadily']},
+           {'id': 'slows', 'searchTerms': ['slows']},
+           {'id': 'waits', 'searchTerms': ['waits']},
+           {'id': 'returns', 'searchTerms': ['returns']}]},
+ {'id': 's03',
+  'audioFile': 'drawing-travel-graphs-s03.mp3',
+  'cues': [{'id': 'gradient', 'searchTerms': ['gradient']},
+           {'id': 'same-instant', 'searchTerms': ['same instant']},
+           {'id': 'signed-areas', 'searchTerms': ['signed areas']},
+           {'id': 'bridge', 'searchTerms': ['bridge']}]},
+ {'id': 's04',
+  'audioFile': 'drawing-travel-graphs-s04.mp3',
+  'cues': [{'id': 'setup', 'searchTerms': ['Consider a lift']},
+           {'id': 'draw', 'searchTerms': ['get drawing']},
+           {'id': 'speed', 'searchTerms': ['What speed']},
+           {'id': 'formula-v', 'searchTerms': ['Velocity equals initial']},
+           {'id': 'symbol-v', 'searchTerms': ['V equals u']},
+           {'id': 'three', 'searchTerms': ['Three metres per second']},
+           {'id': 'six', 'searchTerms': ['Six seconds']},
+           {'id': 'eight', 'searchTerms': ['Eight seconds']},
+           {'id': 'area-formula', 'searchTerms': ['Displacement equals area']},
+           {'id': 'area-symbol', 'searchTerms': ['S equals half']},
+           {'id': 'triangle', 'searchTerms': ['First triangle']},
+           {'id': 'rectangle', 'searchTerms': ['The rectangle']},
+           {'id': 'height', 'searchTerms': ['Accumulated height']},
+           {'id': 'braking', 'searchTerms': ['Braking adds']},
+           {'id': 'finish', 'searchTerms': ['Where does it finish']}]},
+ {'id': 's05',
+  'audioFile': 'drawing-travel-graphs-s05.mp3',
+  'cues': [{'id': 'positive-velocity', 'searchTerms': ['positive velocity']},
+           {'id': 'zero-velocity', 'searchTerms': ['zero velocity']},
+           {'id': 'negative-velocity', 'searchTerms': ['negative velocity']},
+           {'id': 'reaches-the-start', 'searchTerms': ['reaches the start']}]},
+ {'id': 's06',
+  'audioFile': 'drawing-travel-graphs-s06.mp3',
+  'cues': [{'id': 'setup', 'searchTerms': ['Consider a ball']},
+           {'id': 'draw', 'searchTerms': ['get drawing']},
+           {'id': 'straight', 'searchTerms': ['Why a straight']},
+           {'id': 'formula-v', 'searchTerms': ['Velocity equals initial']},
+           {'id': 'symbol-v', 'searchTerms': ['V equals u']},
+           {'id': 'substitute', 'searchTerms': ['V equals fifteen']},
+           {'id': 'direction-change', 'searchTerms': ['Where does direction change']},
+           {'id': 'area-formula', 'searchTerms': ['Displacement equals area']},
+           {'id': 'area-symbol', 'searchTerms': ['S equals half']},
+           {'id': 'height', 'searchTerms': ['Eleven point two five']},
+           {'id': 'catch', 'searchTerms': ['When back']},
+           {'id': 'signed-areas', 'searchTerms': ['Equal signed areas']},
+           {'id': 'down', 'searchTerms': ['What velocity then']},
+           {'id': 'contrast', 'searchTerms': ['What if thrown faster']}],
+  'isolatedBeats': [12]},
+ {'id': 's07',
+  'audioFile': 'drawing-travel-graphs-s07.mp3',
+  'cues': [{'id': 'sketch', 'searchTerms': ['sketch']},
+           {'id': 'accurate-plot', 'searchTerms': ['accurate plot']},
+           {'id': 'labelled-axes', 'searchTerms': ['labelled axes']},
+           {'id': 'negative-region', 'searchTerms': ['negative region']}]},
+ {'id': 's09',
+  'audioFile': 'drawing-travel-graphs-s09.mp3',
+  'cues': [{'id': 'setup', 'searchTerms': ['Consider a cyclist']},
+           {'id': 'cruise-story', 'searchTerms': ['cruises away']},
+           {'id': 'slow-story', 'searchTerms': ['slows to a stop']},
+           {'id': 'rest-story', 'searchTerms': ['rests']},
+           {'id': 'return-story', 'searchTerms': ['then returns']},
+           {'id': 'displacement', 'searchTerms': ['Now the displacement']},
+           {'id': 'formula', 'searchTerms': ['Gradient equals']},
+           {'id': 'symbols', 'searchTerms': ['V equals delta']},
+           {'id': 'leg1', 'searchTerms': ['Cruising what slope']},
+           {'id': 'leg2', 'searchTerms': ['Slowing what changes', 'Slowing what change']},
+           {'id': 'leg3', 'searchTerms': ['Resting what slope']},
+           {'id': 'leg4', 'searchTerms': ['Returning what sign']},
+           {'id': 'velocity', 'searchTerms': ['Now the velocity']},
+           {'id': 'v1', 'searchTerms': ['Positive three horizontal']},
+           {'id': 'v2', 'searchTerms': ['Straight down to zero']},
+           {'id': 'v3', 'searchTerms': ['Zero along the axis']},
+           {'id': 'v4', 'searchTerms': ['Minus three below zero']}]},
+ {'id': 's08',
+  'audioFile': 'drawing-travel-graphs-s08.mp3',
+  'cues': [{'id': 'key-times', 'searchTerms': ['key times']},
+           {'id': 'gradient', 'searchTerms': ['gradient']},
+           {'id': 'signed-area', 'searchTerms': ['signed area']},
+           {'id': 'shape-check', 'searchTerms': ['shape check']}]}]
 
 
 def clean_token(value):
@@ -844,6 +220,12 @@ def refine_readings(model, job, timing, words):
 
 def transcribe_job(model, job, generated_at, timing):
     """Transcribe a scene and return the canonical transcript object."""
+    cache = Path('/tmp/verify-travel-v4-narration') / (job['id'] + '-transcribed.json')
+    if cache.exists():
+        cached = json.loads(cache.read_text())
+        if cached['audioSha256'] == timing['audioSha256']:
+            cached['cues'], missed = resolve_cues(cached['words'], job['cues'], timing['beats'])
+            return cached, missed
     print(f"\n{'=' * 40} {job['id'].upper()} {'=' * 40}")
     audio_path = AUDIO_DIR / job["audioFile"]
     print(f"Audio: {job['audioFile']} ({audio_path.stat().st_size // 1024} KB)")
@@ -873,6 +255,8 @@ def transcribe_job(model, job, generated_at, timing):
                 )
 
     words = refine_readings(model, job, timing, words)
+    # Whisper can hallucinate a credit in the silent tail. Keep only speech windows.
+    words = [w for w in words if any(w['start'] < beat['end'] and w['end'] > beat['start'] for beat in timing['beats'])]
     duration = get_audio_duration(audio_path)
     full_text = " ".join(word["word"] for word in words)
     print(full_text, flush=True)
@@ -900,6 +284,7 @@ def transcribe_job(model, job, generated_at, timing):
         "engine": ENGINE,
         **{key: timing[key] for key in ("tempo", "voiceSpeed", "voiceId", "provider", "audioSha256", "beats", "holds", "paragraphs")},
     }
+    cache.write_text(json.dumps(transcript, indent=2)+'\n')
     return transcript, missed
 
 
@@ -920,8 +305,8 @@ def main():
     print("Cost: $0.00 (local)\n")
 
     cue_count = sum(len(job["cues"]) for job in JOBS)
-    if len(JOBS) != 8:
-        raise RuntimeError("Expected eight narration scenes")
+    if len(JOBS) != 9:
+        raise RuntimeError("Expected nine narration scenes")
 
     missing_audio = [
         job["audioFile"]
@@ -941,7 +326,11 @@ def main():
     total_duration = 0.0
 
     for job in JOBS:
-        transcript, missed = transcribe_job(model, job, generated_at, timing_by_id[job["id"]])
+        timing = timing_by_id[job["id"]]
+        if timing.get("reusedFrom") == "1dc49cb":
+            transcript, missed = timing, []
+        else:
+            transcript, missed = transcribe_job(model, job, generated_at, timing)
         scenes.append(transcript)
         total_duration += transcript["duration"]
         all_missed.extend(f"{job['id']}:{cue_id}" for cue_id in missed)
