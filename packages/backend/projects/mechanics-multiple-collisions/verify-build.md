@@ -1,5 +1,29 @@
 # Verification: Multiple collisions
 
+## §14 composition-only figure accents
+
+Fast-forwarded `dev` to `03ef408` before this correction; the §13 composition and narration remain the baseline. First implementation pushed as `a86b07a`. No audio, transcript, existing cue, handwriting window, duration or Root registration changed: all seven MP3s and the transcript retain their SHA-256 hashes. The composition remains **12,011 frames / 400.367 s** at 30 fps.
+
+- **114 spoken figure references** use the existing Whisper word timestamps directly, with composition-local `scene:word-index` IDs. Bare sphere names point to A/B/C; mass and velocity references point to their corresponding before/after diagram values. The intentionally unchanged ASR “value B” / “VB” tokens are mapped to the existing velocity figures using their word timestamps.
+- Loose accent ellipses draw over about 0.4 s, hold for 1.5 s, then fade over 0.25 s. A repeated reference retraces the same target instead of stacking duplicate rings. Rings follow measured SVG text geometry, including units; mass labels moved 12 SVG units lower to preserve annotation clearance. Rings add no regions.
+- **16 source highlights** cover the four product terms in each collision. The same glyph lengths, character indices, gaps, scale and start/end frames used by the paper determine their timing. Both factors’ source figures are ringed as each product is written, including the unknown after-velocity where applicable.
+- The existing three-line problem card keeps its text and spacing. **13 phrase underline sweeps** follow the corresponding spoken word spans. Ring progress, underlines and fades use the existing held time. One explicit exception honours Whisper’s “A” at 100.22 s in S06, 0.13 s before the existing question hold ends: the question now shows A/B, and only A’s requested ring begins during those last four frames. The diagram and card remain frozen; no audio or cue was shifted.
+
+**603 fresh stills pass**: all 114 exact spoken-figure timestamps, all 16 source-highlight starts, completed-ring and hold samples, all phrase starts/midpoints/ends, and all 245 existing cue/transition/physics samples. The audit checks the target ID, numeric value, visible stroke progress and full ellipse enclosure at each word/pen cue. Full ring bounds are checked against every other visible printed text element (including units, cards and headers), and included in the frame-overflow check. The enclosed target itself is the intentional exception. Result: **zero missing figure cues, zero ring/text collisions, zero overflow, at most three regions**.
+
+Every captured image also passes the visual pixel check; two blank Chromium captures were rejected and recaptured. The still driver now retries blank captures automatically. The original verifier then replays all **245 physics, contact, pixel-presence, handwriting and setup checks** against those fresh images through its bundle/image-hash-validated cache. **11 hold pairs are byte-identical**. The remaining question hold has identical sphere/label geometry and identical pixels outside the explicitly cued A-ring bounds; the original hold test now checks that narrow annotation-only exception instead of ignoring the hold. Three contact checks still pass. The targeted strict TypeScript check, script syntax and `git diff --check` pass. No video render, deployment or file deletion was performed.
+
+Reviewed stills: [setup speed](verify-figure-setup.png), [collision 1 source factors](verify-figure-substitution-1.png), [collision 2 source factors](verify-figure-substitution-2.png), [the exact question A cue](verify-figure-question-cue.png). Full annotation measurements and unchanged asset hashes: [verify-figure-accents.json](verify-figure-accents.json). The existing report retains its historical §10–13 evidence and the fresh 245-frame baseline audit.
+
+From `packages/backend`, with nvm Node on PATH:
+
+```sh
+node src/scripts/verify-collisions-accents.cjs
+```
+
+This bundles only the composition (without copying public media), uses `renderStill` with audio disabled, audits every new figure/phrase cue, and runs the existing verifier against the captures. Local images and both measurement reports are in `out/verify-collisions-accent-stills`. The sections below describe the retained §13 baseline.
+
+
 Built 2026-09-06; §10 captions, §11 formula-led working and §13 full-problem setup verified 2026-09-07. **PASS — stopped before video render.** Composition `MechanicsMultipleCollisions`, 1920×1080, 30 fps, **12,011 frames (6:40.367)**. Seven narration files total **400.300 seconds (6:40.300)**; rounding each audio segment up to a frame covers every file. All **92** locally transcribed cues resolve against the final audio hashes.
 
 ## Content and teaching contract

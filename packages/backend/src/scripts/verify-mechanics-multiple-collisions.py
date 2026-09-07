@@ -2,7 +2,7 @@
 """Audit Multiple Collisions cue, hold, contact and motion stills; no video render."""
 import argparse, concurrent.futures, hashlib, json, math, re, subprocess
 from pathlib import Path
-from PIL import Image, ImageChops
+from PIL import Image, ImageChops, ImageDraw
 ROOT=Path(__file__).resolve().parents[2]
 TRANSCRIPT=ROOT/'src/remotion/public/transcripts/mechanics/multiple-collisions.json'
 ARTIFACTS=ROOT/'out/MechanicsMultipleCollisions'
@@ -144,10 +144,29 @@ def main():
     hashes=[]
     for start,end,duration in holds:
         first=hashlib.sha256((args.output/f'{start:05d}.png').read_bytes()).hexdigest();last=hashlib.sha256((args.output/f'{end:05d}.png').read_bytes()).hexdigest()
-        assert first==last,(start,end)
         row=next(row for row in rows if row['frame']==start)
+        end_row=next(row for row in rows if row['frame']==end)
+        annotation_only=False
+        if first!=last:
+            # A requested spoken ring may begin inside an existing question hold.
+            # Require every other pixel and all diagram geometry to remain frozen.
+            offsets={};offset=0
+            for scene in scenes:offsets[scene['id']]=offset;offset+=math.ceil(scene['duration']*30)
+            events=next(r for r in rows if r['frame']==0).get('figureSchedule',[])
+            targets={e['target'] for e in events if e['kind']=='spoken' and start<=offsets[e['scene']]+math.ceil(e['start']*30)<=end}
+            assert targets,('Hold moved without a spoken figure cue',start,end)
+            assert row['spheres']==end_row['spheres'] and row['labels']==end_row['labels'],('Underlying diagram moved',start,end)
+            with Image.open(args.output/f'{start:05d}.png') as a, Image.open(args.output/f'{end:05d}.png') as b:
+                images=[a.convert('RGB'),b.convert('RGB')]
+                scale=a.width/row['rootBounds']['width'];root=row['rootBounds']
+                for ring in row['figureRings']+end_row['figureRings']:
+                    if ring['target'] not in targets:continue
+                    r=ring['bounds'];box=tuple(round(v*scale) for v in (r['left']-root['left']-5,r['top']-root['top']-5,r['right']-root['left']+5,r['bottom']-root['top']+5))
+                    for image in images:ImageDraw.Draw(image).rectangle(box,fill='black')
+                assert ImageChops.difference(*images).getbbox() is None,('Non-annotation pixels moved',start,end)
+            annotation_only=True
         if duration==1.5:assert row['spheres'] and row['regions']==3,row
-        hashes.append({'start':start,'end':end,'frames':end-start+1,'sha256':first})
+        hashes.append({'start':start,'end':end,'frames':end-start+1,'sha256':first,'annotationOnly':annotation_only})
     labelled={label:row for row in rows for label in row['cueLabels']}
     for label,ids in [('s03:first',('A','B')),('s03:second',('B','C')),('s06:final-contact',('A','B'))]:
         row=labelled[label];a,b=[next(b for b in row['spheres'] if b['id']==id) for id in ids]
@@ -175,7 +194,7 @@ def main():
         normalize=lambda text:re.sub('[^a-z0-9]','',text.lower())
         assert normalize(spoken)==normalize(expected),(s['id'],spoken)
         if s['id']=='s06':assert written['notation']['text']=='vB = wB' and written['notation']['complete'],written
-    report={'workingGivenChecks':sum(bool({line['id'] for line in row['inkLines']}&{'principle','formula','equation','simplify','solve'}) for row in rows),'problemCardChecks':sum(bool(row['problemLines']) for row in rows),'stillCount':len(rows),'pixelCheckedStillCount':len(rows),'textOnlyCount':sum(r['textOnly'] for r in rows),'maxCaptionWords':max(r['maxCaptionWords'] for r in rows),'maxCaptionWidthRatio':max(r['maxCaptionWidthRatio'] for r in rows),'maxRegions':max(r['regions'] for r in rows),'maxWords':max(r['maxWords'] for r in rows),'textCollisionCount':sum(len(r['textCollisions']) for r in rows),'identicalHoldPairs':len(holds),'holdHashes':hashes,'contactChecks':3,'measurements':rows}
+    report={'workingGivenChecks':sum(bool({line['id'] for line in row['inkLines']}&{'principle','formula','equation','simplify','solve'}) for row in rows),'problemCardChecks':sum(bool(row['problemLines']) for row in rows),'stillCount':len(rows),'pixelCheckedStillCount':len(rows),'textOnlyCount':sum(r['textOnly'] for r in rows),'maxCaptionWords':max(r['maxCaptionWords'] for r in rows),'maxCaptionWidthRatio':max(r['maxCaptionWidthRatio'] for r in rows),'maxRegions':max(r['regions'] for r in rows),'maxWords':max(r['maxWords'] for r in rows),'textCollisionCount':sum(len(r['textCollisions']) for r in rows),'identicalHoldPairs':sum(not h['annotationOnly'] for h in hashes),'annotationOnlyHoldPairs':sum(h['annotationOnly'] for h in hashes),'holdHashes':hashes,'contactChecks':3,'measurements':rows}
     (args.output/'verify-measurements.json').write_text(json.dumps(report,indent=2)+'\n')
-    print(f"Passed {len(rows)} stills, {len(holds)} frozen holds, 3 contacts; {report['textOnlyCount']} text-only stills; max {report['maxRegions']} regions / {report['maxCaptionWords']} caption words.")
+    print(f"Passed {len(rows)} stills, {report['identicalHoldPairs']} identical holds + {report['annotationOnlyHoldPairs']} annotation-only holds, 3 contacts; {report['textOnlyCount']} text-only stills; max {report['maxRegions']} regions / {report['maxCaptionWords']} caption words.")
 if __name__=='__main__':main()

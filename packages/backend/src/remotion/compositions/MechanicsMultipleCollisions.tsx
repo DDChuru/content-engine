@@ -120,11 +120,16 @@ const FigureRings: React.FC = () => {
   const s = React.useContext(FigureContext);
   const {fps} = useVideoConfig();
   const frame = useCurrentFrame();
-  const t = s ? heldTime(s, frame/fps) : 0;
+  const rawTime=frame/fps;
+  const t = s ? heldTime(s, rawTime) : 0;
+  const hold=s?.holds.find(h=>h.kind==="hold"&&rawTime>=h.start&&rawTime<h.end);
+  // Whisper's first "A" in the final decision starts 0.13 s inside its existing
+  // question hold. Keep the diagram frozen, but honour that spoken ring onset.
+  const eventTime=(event:FigureCue)=>hold&&event.kind==="spoken"&&event.start>=hold.start&&event.start<hold.end?rawTime:t;
   const ref = useRef<SVGGElement>(null);
   const [boxes, setBoxes] = useState<Record<string, {x:number;y:number;width:number;height:number}>>({});
   const events = useMemo(() => s ? [...spokenFigureCues(s), ...substitutionFigureCues(s, fps)] : [], [s, fps]);
-  const active = events.filter(event => t >= event.start && t < (event.end ?? event.start + 1.9) + .25);
+  const active = events.filter(event => eventTime(event) >= event.start && eventTime(event) < (event.end ?? event.start + 1.9) + .25);
   useLayoutEffect(() => {
     const svg = ref.current?.ownerSVGElement;
     if (!svg) return;
@@ -148,8 +153,8 @@ const FigureRings: React.FC = () => {
         const wobble=1+.022*Math.sin(angle*3+.7);
         return [x+rx*Math.cos(angle)*wobble,y+ry*Math.sin(angle)*wobble];
       });
-      const progress=Math.min(1,Math.max(.06,(t-event.start+1/fps)/.4));
-      const opacity=1-clamp((t-(event.end ?? event.start+1.9))/.25);
+      const progress=Math.min(1,Math.max(.06,(eventTime(event)-event.start+1/fps)/.4));
+      const opacity=1-clamp((eventTime(event)-(event.end ?? event.start+1.9))/.25);
       return <path key={event.id} data-figure-ring={event.id} data-ring-target={event.target} data-ring-kind={event.kind}
         data-ring-start={event.start} data-ring-progress={progress} data-ring-word={event.wordIndex}
         d={points.map(([px,py],i)=>`${i?"L":"M"}${px} ${py}`).join(" ")}
@@ -1795,7 +1800,7 @@ const ProblemPhrase: React.FC<{s:Scene;text:string;first:number;last:number}> = 
   const t=heldTime(s,useCurrentFrame()/fps);
   const start=s.words[first].start,end=s.words[last].end;
   const active=t>=start&&t<end+.4;
-  return <span data-problem-phrase={`${s.id}:phrase-${first}`} data-phrase-start={start} data-phrase-end={end} style={{position:"relative",display:"inline-block"}}>
+  return <span data-problem-phrase={`${s.id}:phrase-${first}`} data-phrase-start={start} data-phrase-end={end} style={{position:"relative",display:"inline-block",whiteSpace:"pre"}}>
     {text}
     {active&&<svg data-problem-underline={`${s.id}:phrase-${first}`} width="100%" height="8" viewBox="0 0 100 8" preserveAspectRatio="none" style={{position:"absolute",left:0,bottom:6,overflow:"visible",opacity:1-clamp((t-end-.15)/.25)}}>
       <path d="M1 4 Q32 2 54 4 T99 3" fill="none" stroke={T.accent} strokeWidth={3} pathLength={1} strokeDasharray={1} strokeDashoffset={1-Math.max(.06,clamp((t-start+1/fps)/Math.max(.4,end-start)))} />
@@ -2091,7 +2096,7 @@ const LastCollision: React.FC<{ s: Scene }> = ({ s }) => {
   if (t < signpostEnd(s, "decision"))
     return (
       <>
-        <CollisionWorking s={s} which={2} t={t} />
+        <Track balls={[{id:"A",x:220,v:2,accent:true},{id:"B",x:430,v:1}]} />
         <Card text="Now: will they collide again?" />
       </>
     );
