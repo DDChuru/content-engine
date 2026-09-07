@@ -21,6 +21,33 @@ def assert_visible_pixels(row,path):
             if sum(difference.histogram()[16:])>100:return
     raise AssertionError(('Visual is blank or occluded',row['frame']))
 
+def assert_problem_givens(row):
+    givens={item['id']:item for item in row['givens']}
+    for item in givens.values():
+        assert str(item['value']) in re.findall(r'\d+',item['text']),item
+        assert ('kg' if item['id'].endswith('.mass') else 'm s⁻¹') in item['text'],item
+    if row['problemLines']:
+        assert len(row['problemLines'])==3 and all(line['fits'] for line in row['problemLines']),row
+        expected={'A.mass':1,'A.before':4,'B.mass':2,'B.before':3,'C.mass':3,'C.before':1,'A.after':2,'C.after':3}
+        assert {key:item['value'] for key,item in givens.items()}==expected,row
+    ink={line['id']:line for line in row['inkLines']}
+    if set(ink)&{'principle','formula','equation','simplify','solve'}:
+        first='A.mass' in givens
+        expected=({'A.mass':1,'A.before':4,'B.mass':2,'B.before':3,'A.after':2} if first else {'B.mass':2,'B.before':4,'C.mass':3,'C.before':1,'C.after':3})
+        # Every numeric operand in the substitution has its labelled source
+        # on the diagram, including initial velocities after results appear.
+        assert all(key in givens and givens[key]['value']==value for key,value in expected.items()),row
+        if 'equation' in ink:
+            value=lambda key:givens[key]['value']
+            equation=(f"{value('A.mass')}×{value('A.before')} + {value('B.mass')}×{value('B.before')} = {value('A.mass')}×{value('A.after')} + {value('B.mass')}vB" if first else f"{value('B.mass')}×{value('B.before')} + {value('C.mass')}×{value('C.before')} = {value('B.mass')}wB + {value('C.mass')}×{value('C.after')}")
+            assert ink['equation']['text']==equation,row
+        for sphere in ('A','B') if first else ('B','C'):
+            assert givens[sphere+'.before']['bounds']['bottom']<givens[sphere+'.mass']['bounds']['top'],row
+            if sphere+'.after' in givens:
+                assert givens[sphere+'.after']['bounds']['top']>givens[sphere+'.mass']['bounds']['bottom'],row
+        unknown='vB' if first else 'wB'
+        assert unknown in row['unknowns'] or givens.get('B.after',{}).get('value')==(4 if first else 1),row
+
 def audit_frames(scenes):
     frames={};holds=[];offset=0
     for s in scenes:
@@ -44,6 +71,7 @@ def audit_frames(scenes):
             add((s['cues']['principle']+s['cues']['principle-end'])/2,'principle-writing')
             add((s['cues']['formula']+s['cues']['formula-end'])/2,'formula-writing')
             add(s['cues']['equation']-.1,'before-substitution')
+        if s['id']=='s07':add(s['duration']/2,'complete-problem')
         if s['id']=='s03':
             for key in ('first','second'):
                 add(s['cues'][key]-.06,key+'-before')
@@ -94,11 +122,12 @@ def main():
         assert_visible_pixels(row,p)
         assert row['maxCaptionWords']<=8 and row['maxCaptionWidthRatio']<=.4,row
         assert not row['overflow'] and not row['textCollisions'],row
-        if any(k.endswith('setup-complete') for k in labels):assert not row['cards'] and row['regions']<=2,row
+        if any(k.endswith('setup-complete') for k in labels):assert not row['inkLines'] and row['regions']<=2 and all(b['region'] in ('header','diagram') for b in row['bounds']),row
         for arrow in row['arrows']:assert abs(arrow['length']-abs(arrow['speed'])*35)<.01,row
         spheres=row['spheres']
         for a,b in zip(spheres,spheres[1:]):assert b['x']-a['x']>=a['radius']+b['radius']-.1,row
         if any(k.startswith('s03:') and k.split(':')[1] not in ('transition','scene-start') for k in labels):assert not row['cards'],row
+        assert_problem_givens(row)
         ink={line['id']:line for line in row['inkLines']}
         if any(k.endswith('principle-writing') for k in labels):
             assert set(ink)=={'principle'} and not ink['principle']['complete'],row
@@ -129,6 +158,11 @@ def main():
     after=next(b for b in labelled['s02:velocity-changed']['spheres'] if b['id']=='B')
     assert before['velocity']!=after['velocity'],(before,after)
     assert {'vB','wB'}<={l['text'] for l in labelled['s02:unique']['labels']},labelled['s02:unique']
+    for scene_id,unknown,before,result in [('s04','vB',3,4),('s06','wB',4,1)]:
+        assert unknown in labelled[scene_id+':setup-complete']['unknowns'],labelled[scene_id+':setup-complete']
+        result_row=labelled[scene_id+':result']
+        values={item['id']:item['value'] for item in result_row['givens']}
+        assert values['B.before']==before and values['B.after']==result and not result_row['unknowns'],result_row
     for s in scenes:
         if s['id'] not in ('s04','s06'):continue
         c=s['cues'];assert c['principle']<c['principle-end']<c['formula']<c['formula-end']<c['equation'],s['id']
@@ -141,7 +175,7 @@ def main():
         normalize=lambda text:re.sub('[^a-z0-9]','',text.lower())
         assert normalize(spoken)==normalize(expected),(s['id'],spoken)
         if s['id']=='s06':assert written['notation']['text']=='vB = wB' and written['notation']['complete'],written
-    report={'stillCount':len(rows),'pixelCheckedStillCount':len(rows),'textOnlyCount':sum(r['textOnly'] for r in rows),'maxCaptionWords':max(r['maxCaptionWords'] for r in rows),'maxCaptionWidthRatio':max(r['maxCaptionWidthRatio'] for r in rows),'maxRegions':max(r['regions'] for r in rows),'maxWords':max(r['maxWords'] for r in rows),'textCollisionCount':sum(len(r['textCollisions']) for r in rows),'identicalHoldPairs':len(holds),'holdHashes':hashes,'contactChecks':3,'measurements':rows}
+    report={'workingGivenChecks':sum(bool({line['id'] for line in row['inkLines']}&{'principle','formula','equation','simplify','solve'}) for row in rows),'problemCardChecks':sum(bool(row['problemLines']) for row in rows),'stillCount':len(rows),'pixelCheckedStillCount':len(rows),'textOnlyCount':sum(r['textOnly'] for r in rows),'maxCaptionWords':max(r['maxCaptionWords'] for r in rows),'maxCaptionWidthRatio':max(r['maxCaptionWidthRatio'] for r in rows),'maxRegions':max(r['regions'] for r in rows),'maxWords':max(r['maxWords'] for r in rows),'textCollisionCount':sum(len(r['textCollisions']) for r in rows),'identicalHoldPairs':len(holds),'holdHashes':hashes,'contactChecks':3,'measurements':rows}
     (args.output/'verify-measurements.json').write_text(json.dumps(report,indent=2)+'\n')
     print(f"Passed {len(rows)} stills, {len(holds)} frozen holds, 3 contacts; {report['textOnlyCount']} text-only stills; max {report['maxRegions']} regions / {report['maxCaptionWords']} caption words.")
 if __name__=='__main__':main()
