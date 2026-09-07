@@ -1,0 +1,22 @@
+{
+  "provider": "ElevenLabs",
+  "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+  "requestHash": "ec29d78269ce5601d381d0b174ddcf7dd6f0b15e219b38c3d89099e3a3d5cd20",
+  "request": {
+    "text": "Now Pass all covers fifteen remaining Daily checks in Premix Area. The individual pass and three exceptions are excluded. Confirm only work checked clean.",
+    "model_id": "eleven_multilingual_v2",
+    "voice_settings": {
+      "stability": 0.55,
+      "similarity_boost": 0.8,
+      "style": 0.35,
+      "use_speaker_boost": true
+    }
+  },
+  "generatedAt": "2026-09-06T13:41:12.147Z",
+  "requestId": "7nuDS9WP0BGcJEQKufjr",
+  "audio": {
+    "path": "cln-tutorial/v4-audio/bulk-confirm-ec29d78269ce.mp3",
+    "bytes": 216546,
+    "sha256": "027bb6e625259db4f3ca7f9f48d2c243761ce267740fa9fb311e6428dd9386dd"
+  }
+}

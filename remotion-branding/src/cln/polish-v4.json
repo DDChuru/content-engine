@@ -1,0 +1,281 @@
+{
+  "schemaVersion": 1,
+  "fps": 30,
+  "totalFrames": 8295,
+  "scan": {
+    "homeBeat": "scan-entry",
+    "scannerBeat": "controlled-scan",
+    "homeCapture": "cln-tutorial/v4-current-6999d8e/01-bakery-home-bill-of-health-entry.png",
+    "scannerCapture": "cln-tutorial/v4-current-6999d8e/08-qr-check-in-scanner.png",
+    "choice": "Actual bottom-nav Scan: clear in the approved Home PNG; hero shortcut is outside this captured scroll position.",
+    "detailRect": {
+      "x": 0.04,
+      "y": 0.87,
+      "w": 0.9199999999999999,
+      "h": 0.105
+    }
+  },
+  "qr": {
+    "path": "cln-tutorial/v4-polish/bakery-demo-premix-training-qr.png",
+    "bytes": 2198,
+    "sha256": "a3f89be743011e7bf66d677ee5f57493b0b892c43a36a79e379bdd7b9f6102f6",
+    "width": 444,
+    "height": 444,
+    "payload": "kx75czmzd6hc5d7t4wct58tjm188ea8p",
+    "disclosure": "Bakery Demo training QR overlay",
+    "rect": {
+      "x": 0.2569444444444444,
+      "y": 0.40125,
+      "w": 0.4861111111111111,
+      "h": 0.21875
+    },
+    "viewport": {
+      "x": 0.15,
+      "y": 0.354375,
+      "w": 0.7,
+      "h": 0.31125
+    },
+    "encoder": {
+      "encoder": "python-qrcode",
+      "encoderVersion": "8.2",
+      "pillowVersion": "11.3.0",
+      "qrVersion": 3,
+      "errorCorrection": "M",
+      "quietZoneModules": 4,
+      "boxSize": 12
+    },
+    "decoder": {
+      "name": "ZXing-C++",
+      "version": "2.3.0",
+      "proofRef": "output/cln-verification-v4/verify-v2-polish/verify-qr.json"
+    }
+  },
+  "rings": [
+    {
+      "beat": "scan-entry",
+      "capturePath": "cln-tutorial/v4-current-6999d8e/01-bakery-home-bill-of-health-entry.png",
+      "captureSha256": "a05e7eac47e81a2277803ca9176cc2da63e4be205d455747f57fcac1e6376714",
+      "cueWords": "Scan",
+      "fromFrame": 61,
+      "durationInFrames": 48,
+      "target": "Home bottom-nav Scan",
+      "rect": {
+        "x": 0.5236111111111111,
+        "y": 0.88875,
+        "w": 0.15555555555555556,
+        "h": 0.07
+      },
+      "color": "#3CB6E0",
+      "shape": "circle"
+    },
+    {
+      "beat": "inspect-pass",
+      "capturePath": "cln-tutorial/v4-current-6999d8e/09-single-pass-inspection.png",
+      "captureSha256": "5fd082c40a85ee58680e83f0f68d9d1c3ce1066fd09ec2ee8001a4bde8e21a5a",
+      "cueWords": "green",
+      "fromFrame": 178,
+      "durationInFrames": 48,
+      "target": "Individual green Pass",
+      "rect": {
+        "x": 0.1,
+        "y": 0.68125,
+        "w": 0.12222222222222222,
+        "h": 0.055
+      },
+      "color": "#1F9C5A",
+      "shape": "circle"
+    },
+    {
+      "beat": "bulk-eligible",
+      "capturePath": "cln-tutorial/v4-current-6999d8e/11-frequency-pass-all-eligible.png",
+      "captureSha256": "c5b73704dc599e0b056c39aab0b4a1cf901bb479a69a457bc027a8101f6bb912",
+      "cueWords": "Daily Pass all",
+      "fromFrame": 0,
+      "durationInFrames": 48,
+      "target": "Daily Pass all (18) eligibility",
+      "rect": {
+        "x": 0.7375,
+        "y": 0.514375,
+        "w": 0.20694444444444443,
+        "h": 0.03375
+      },
+      "color": "#1F9C5A",
+      "shape": "pill"
+    },
+    {
+      "beat": "major-fields",
+      "capturePath": "cln-tutorial/v4-current-6999d8e/13-major-fail-grade-reason.png",
+      "captureSha256": "25196a2b2f77020135b5efb21fe3f316c2e9b4df2adf44f76a81d1cf6f475eb9",
+      "cueWords": "Major",
+      "fromFrame": 68,
+      "durationInFrames": 48,
+      "target": "Selected Major grade",
+      "rect": {
+        "x": 0.375,
+        "y": 0.35,
+        "w": 0.25,
+        "h": 0.050625
+      },
+      "color": "#E89A30",
+      "shape": "pill"
+    },
+    {
+      "beat": "critical-grade",
+      "capturePath": "cln-tutorial/v4-current-6999d8e/15-critical-ncr-grade.png",
+      "captureSha256": "6409de9383269af3ef03e0611183ae80eb50c9de512a7bb41bd2d188c58c5b5d",
+      "cueWords": "Critical",
+      "fromFrame": 62,
+      "durationInFrames": 48,
+      "target": "Selected Critical grade",
+      "rect": {
+        "x": 0.6472222222222223,
+        "y": 0.35,
+        "w": 0.25,
+        "h": 0.050625
+      },
+      "color": "#D6432F",
+      "shape": "pill"
+    },
+    {
+      "beat": "unavailable-reason",
+      "capturePath": "cln-tutorial/v4-current-6999d8e/17-couldnt-access-reason.png",
+      "captureSha256": "4706f86ce5f4bce20c44b9b7557cb940cf65c3c066078e8b64cdd5c8120bef72",
+      "cueWords": "why access",
+      "fromFrame": 114,
+      "durationInFrames": 48,
+      "target": "Required WHY UNAVAILABLE reason",
+      "rect": {
+        "x": 0.10277777777777777,
+        "y": 0.535,
+        "w": 0.7944444444444444,
+        "h": 0.0675
+      },
+      "color": "#E89A30",
+      "shape": "pill"
+    },
+    {
+      "beat": "bulk-confirm",
+      "capturePath": "cln-tutorial/v4-current-6999d8e/19-frequency-pass-all-confirmation.png",
+      "captureSha256": "688383fe150e4724ef0539fc34fe4629f5fc417a7f9fb8fa48988bf7e450d32d",
+      "cueWords": "Confirm only",
+      "fromFrame": 317,
+      "durationInFrames": 48,
+      "target": "CONFIRM 15 remaining Daily checks",
+      "rect": {
+        "x": 0.6847222222222222,
+        "y": 0.584375,
+        "w": 0.1875,
+        "h": 0.02375
+      },
+      "color": "#1F9C5A",
+      "shape": "pill"
+    },
+    {
+      "beat": "follow-queue",
+      "capturePath": "cln-tutorial/v4-current-6999d8e/22-follow-ups-close-open-item.png",
+      "captureSha256": "3a8e6c92435cf0b2392d9a81383db5830dd14186a66bc540f922b110ef82ce14",
+      "cueWords": "Follow-ups",
+      "fromFrame": 10,
+      "durationInFrames": 48,
+      "target": "Follow-ups page title",
+      "rect": {
+        "x": 0.17777777777777778,
+        "y": 0.099375,
+        "w": 0.6555555555555556,
+        "h": 0.058125
+      },
+      "color": "#3CB6E0",
+      "shape": "pill"
+    },
+    {
+      "beat": "follow-expand",
+      "capturePath": "cln-tutorial/v4-current-6999d8e/22-follow-ups-close-open-item.png",
+      "captureSha256": "3a8e6c92435cf0b2392d9a81383db5830dd14186a66bc540f922b110ef82ce14",
+      "cueWords": "Confirm Followed Up",
+      "fromFrame": 64,
+      "durationInFrames": 48,
+      "target": "CONFIRM FOLLOWED UP",
+      "rect": {
+        "x": 0.07777777777777778,
+        "y": 0.7025,
+        "w": 0.8444444444444444,
+        "h": 0.054375
+      },
+      "color": "#1F9C5A",
+      "shape": "pill"
+    },
+    {
+      "beat": "resolved-bands",
+      "capturePath": "cln-tutorial/v4-current-6999d8e/26-five-band-resolved-item.png",
+      "captureSha256": "b374e795b9baadd3a6ae79f54f0fbc1d32807c92031752e7b5c287a383fb4e87",
+      "cueWords": "resolved today",
+      "fromFrame": 383,
+      "durationInFrames": 48,
+      "target": "Resolved today label and subtitle",
+      "rect": {
+        "x": 0.12777777777777777,
+        "y": 0.58875,
+        "w": 0.31666666666666665,
+        "h": 0.045
+      },
+      "color": "#3CB6E0",
+      "shape": "pill"
+    }
+  ],
+  "ringStyle": {
+    "fadeInFrames": 6,
+    "fadeOutFrames": 10,
+    "strokeWidth": 2.4,
+    "innerPaddingSourcePixels": 6,
+    "outerPaddingSourcePixels": 14
+  },
+  "music": {
+    "path": "cln-tutorial/audio/tutorial.mp3",
+    "bytes": 3165053,
+    "sha256": "f1928a7b68b79b89c843af517583ddc636773e8c4a354e3b610d42611962d186",
+    "title": "Blue Sea",
+    "artist": "Swoop",
+    "sourceUrl": "https://uppbeat.io/music/tracks/swoop/blue-sea",
+    "reuseSource": "/home/durai/Documents/projects/content-engine/remotion-branding/public/cln-tutorial/audio/tutorial.mp3",
+    "seriesSourceRefs": [
+      "src/ccv2/CcvRefresh.tsx",
+      "src/boh/BillOfHealthTutorial.tsx"
+    ],
+    "license": "Existing approved CCV/BoH series reuse authorized by Daniel in this task. Original Uppbeat license receipt/code was not found in either worktree; requested from Daniel. No new license or client clearance is claimed.",
+    "sourceDurationSeconds": 74.03102,
+    "sampleRate": 44100,
+    "channels": 2,
+    "volume": 0.88,
+    "fadeInFrames": 24,
+    "fadeOutFrames": 28,
+    "segments": [
+      {
+        "beat": "intro",
+        "from": 0,
+        "durationInFrames": 150,
+        "trimBefore": 0,
+        "trimAfter": 150
+      },
+      {
+        "beat": "outro",
+        "from": 8115,
+        "durationInFrames": 180,
+        "trimBefore": 0,
+        "trimAfter": 180
+      }
+    ],
+    "narrationOverlapFrames": 0
+  },
+  "simulationBanner": {
+    "text": "SIMULATION",
+    "left": 1592,
+    "top": 28,
+    "width": 300,
+    "height": 56,
+    "background": "#FFC533",
+    "color": "#17222C",
+    "borderRadius": 14,
+    "fontSize": 28,
+    "fontWeight": 850
+  }
+}

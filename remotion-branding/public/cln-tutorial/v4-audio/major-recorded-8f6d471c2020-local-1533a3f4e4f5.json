@@ -1,0 +1,217 @@
+{
+  "audioSha256": "5418856ff6454f4adddaaa6d41ef6d0f220f6f214803e22b7999ba883cc8ceda",
+  "measuredAt": "2026-09-06T13:40:02.330620+00:00",
+  "transcription": {
+    "provider": "local-faster-whisper",
+    "model": "Systran/faster-whisper-small",
+    "modelPath": "/home/durai/.cache/huggingface/hub/models--Systran--faster-whisper-small/snapshots/536b0662742c02347bc0e980a01041f333bce120",
+    "modelRevision": "536b0662742c02347bc0e980a01041f333bce120",
+    "modelFiles": [
+      {
+        "name": "model.bin",
+        "bytes": 483546902,
+        "sha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671"
+      },
+      {
+        "name": "config.json",
+        "bytes": 2370,
+        "sha256": "b55496ac7940a7ae47d2c01eab40edfd8701feec1229d9cce3b40014383fb828"
+      },
+      {
+        "name": "tokenizer.json",
+        "bytes": 2203239,
+        "sha256": "fb7b63191e9bb045082c79fd742a3106a12c99513ab30df4a0d47fa6cb6fd0ab"
+      },
+      {
+        "name": "vocabulary.txt",
+        "bytes": 459861,
+        "sha256": "34ce3fe1c5041027b3f8d42912270993f986dbc4bb34cf27f951e34a1e453913"
+      }
+    ],
+    "versions": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.8.2",
+      "av": "18.1.0",
+      "tokenizers": "0.23.2"
+    },
+    "pythonVersion": "3.12.3",
+    "pythonExecutable": "/tmp/si-units-faster-whisper/bin/python",
+    "device": "cpu",
+    "computeType": "int8",
+    "cpuThreads": 4,
+    "numWorkers": 1,
+    "localFilesOnly": true,
+    "settings": {
+      "language": "en",
+      "word_timestamps": true,
+      "beam_size": 5,
+      "temperature": 0,
+      "condition_on_previous_text": false,
+      "vad_filter": false,
+      "hotwords": "Bakery Demo, Bill of Health, Premix Area, SSOP, NCR, Remedial, none captured, Still to do, Passed, Follow-up owed, Couldn't access, Resolved today, Pass all, Daily."
+    },
+    "helper": {
+      "name": "transcribe-cln-v4-local.py",
+      "bytes": 3747,
+      "sha256": "f9683a78e6d63afc976f3dbe4898d248fefa26ed86eb64e7f579dbdfa2d6eaf7"
+    },
+    "workflowRef": "../packages/backend/src/scripts/transcribe-mechanics-si-units-local.py"
+  },
+  "response": {
+    "language": "en",
+    "duration": 11.5635625,
+    "text": "Submit. Task completed confirms the capture. The due occurrence is recorded while the finding remains open in remedial and needs follow-up.",
+    "segments": [
+      {
+        "id": 1,
+        "start": 0,
+        "end": 7.58,
+        "text": " Submit. Task completed confirms the capture. The due occurrence is recorded while the finding",
+        "avg_logprob": -0.29065600308504974,
+        "no_speech_prob": 0.012178324162960052
+      },
+      {
+        "id": 2,
+        "start": 7.58,
+        "end": 11.18,
+        "text": " remains open in remedial and needs follow-up.",
+        "avg_logprob": -0.29065600308504974,
+        "no_speech_prob": 0.012178324162960052
+      }
+    ],
+    "words": [
+      {
+        "word": "Submit.",
+        "start": 0,
+        "end": 0.6,
+        "probability": 0.8219051659107208
+      },
+      {
+        "word": "Task",
+        "start": 1.3,
+        "end": 1.72,
+        "probability": 0.8034612536430359
+      },
+      {
+        "word": "completed",
+        "start": 1.72,
+        "end": 2.3,
+        "probability": 0.9462880492210388
+      },
+      {
+        "word": "confirms",
+        "start": 2.3,
+        "end": 3.02,
+        "probability": 0.9036189317703247
+      },
+      {
+        "word": "the",
+        "start": 3.02,
+        "end": 3.34,
+        "probability": 0.9958551526069641
+      },
+      {
+        "word": "capture.",
+        "start": 3.34,
+        "end": 3.62,
+        "probability": 0.9718030691146851
+      },
+      {
+        "word": "The",
+        "start": 4.5,
+        "end": 4.54,
+        "probability": 0.982626736164093
+      },
+      {
+        "word": "due",
+        "start": 4.54,
+        "end": 4.82,
+        "probability": 0.8211579322814941
+      },
+      {
+        "word": "occurrence",
+        "start": 4.82,
+        "end": 5.18,
+        "probability": 0.9930497407913208
+      },
+      {
+        "word": "is",
+        "start": 5.18,
+        "end": 5.76,
+        "probability": 0.9942417144775391
+      },
+      {
+        "word": "recorded",
+        "start": 5.76,
+        "end": 6.26,
+        "probability": 0.9948607087135315
+      },
+      {
+        "word": "while",
+        "start": 6.26,
+        "end": 7.04,
+        "probability": 0.8739705681800842
+      },
+      {
+        "word": "the",
+        "start": 7.04,
+        "end": 7.24,
+        "probability": 0.987055778503418
+      },
+      {
+        "word": "finding",
+        "start": 7.24,
+        "end": 7.58,
+        "probability": 0.9513477683067322
+      },
+      {
+        "word": "remains",
+        "start": 7.58,
+        "end": 8.02,
+        "probability": 0.997046172618866
+      },
+      {
+        "word": "open",
+        "start": 8.02,
+        "end": 8.52,
+        "probability": 0.9864848256111145
+      },
+      {
+        "word": "in",
+        "start": 8.52,
+        "end": 9.2,
+        "probability": 0.8954121470451355
+      },
+      {
+        "word": "remedial",
+        "start": 9.2,
+        "end": 9.8,
+        "probability": 0.9166929721832275
+      },
+      {
+        "word": "and",
+        "start": 9.8,
+        "end": 10.36,
+        "probability": 0.9191620945930481
+      },
+      {
+        "word": "needs",
+        "start": 10.36,
+        "end": 10.64,
+        "probability": 0.9882522225379944
+      },
+      {
+        "word": "follow",
+        "start": 10.64,
+        "end": 10.92,
+        "probability": 0.9817173480987549
+      },
+      {
+        "word": "-up.",
+        "start": 10.92,
+        "end": 11.18,
+        "probability": 0.713431254029274
+      }
+    ]
+  }
+}

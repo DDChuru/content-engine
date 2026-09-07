@@ -1,0 +1,22 @@
+{
+  "provider": "ElevenLabs",
+  "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+  "requestHash": "d0021e50a063a108b748afd7f7cc3692ba6201dfeccc3abd30e2cd9b6ba9ad79",
+  "request": {
+    "text": "Add an optional note or genuine photo, then select the inner Confirm.",
+    "model_id": "eleven_multilingual_v2",
+    "voice_settings": {
+      "stability": 0.55,
+      "similarity_boost": 0.8,
+      "style": 0.35,
+      "use_speaker_boost": true
+    }
+  },
+  "generatedAt": "2026-09-06T13:42:14.622Z",
+  "requestId": "j6Epab0nquniaa2MZrKJ",
+  "audio": {
+    "path": "cln-tutorial/v4-audio/follow-confirm-d0021e50a063.mp3",
+    "bytes": 80710,
+    "sha256": "3baa6defe93826fd6dbfe31dc9c5e1b5b73570cf84f515c2f20d4575f4f361f5"
+  }
+}

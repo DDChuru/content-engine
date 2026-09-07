@@ -1,0 +1,148 @@
+{
+  "audioSha256": "2e15e1f451d48739c1fd30461be09d90f78517385ca8282954e67001a25eba9a",
+  "measuredAt": "2026-09-06T13:50:19.165267+00:00",
+  "transcription": {
+    "provider": "local-faster-whisper",
+    "model": "Systran/faster-whisper-small",
+    "modelPath": "/home/durai/.cache/huggingface/hub/models--Systran--faster-whisper-small/snapshots/536b0662742c02347bc0e980a01041f333bce120",
+    "modelRevision": "536b0662742c02347bc0e980a01041f333bce120",
+    "modelFiles": [
+      {
+        "name": "model.bin",
+        "bytes": 483546902,
+        "sha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671"
+      },
+      {
+        "name": "config.json",
+        "bytes": 2370,
+        "sha256": "b55496ac7940a7ae47d2c01eab40edfd8701feec1229d9cce3b40014383fb828"
+      },
+      {
+        "name": "tokenizer.json",
+        "bytes": 2203239,
+        "sha256": "fb7b63191e9bb045082c79fd742a3106a12c99513ab30df4a0d47fa6cb6fd0ab"
+      },
+      {
+        "name": "vocabulary.txt",
+        "bytes": 459861,
+        "sha256": "34ce3fe1c5041027b3f8d42912270993f986dbc4bb34cf27f951e34a1e453913"
+      }
+    ],
+    "versions": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.8.2",
+      "av": "18.1.0",
+      "tokenizers": "0.23.2"
+    },
+    "pythonVersion": "3.12.3",
+    "pythonExecutable": "/tmp/si-units-faster-whisper/bin/python",
+    "device": "cpu",
+    "computeType": "int8",
+    "cpuThreads": 4,
+    "numWorkers": 1,
+    "localFilesOnly": true,
+    "settings": {
+      "language": "en",
+      "word_timestamps": true,
+      "beam_size": 5,
+      "temperature": 0,
+      "condition_on_previous_text": false,
+      "vad_filter": false,
+      "initial_prompt": "This separate Tables example is Critical. Submitting it raises an NCR."
+    },
+    "helper": {
+      "name": "transcribe-cln-v4-local.py",
+      "bytes": 4082,
+      "sha256": "8e2577ef433953c8a41775bb510e8edbb4694a45bebbfb290c4068474aca3a02"
+    },
+    "workflowRef": "../packages/backend/src/scripts/transcribe-mechanics-si-units-local.py"
+  },
+  "response": {
+    "language": "en",
+    "duration": 6.1300625,
+    "text": "This separate Tables example is Critical. Submitting it raises an NCR.",
+    "segments": [
+      {
+        "id": 1,
+        "start": 0,
+        "end": 5.6,
+        "text": " This separate Tables example is Critical. Submitting it raises an NCR.",
+        "avg_logprob": -0.2141587518155575,
+        "no_speech_prob": 0.023064030334353447
+      }
+    ],
+    "words": [
+      {
+        "word": "This",
+        "start": 0,
+        "end": 0.24,
+        "probability": 0.24475125968456268
+      },
+      {
+        "word": "separate",
+        "start": 0.24,
+        "end": 0.68,
+        "probability": 0.9759896993637085
+      },
+      {
+        "word": "Tables",
+        "start": 0.68,
+        "end": 1.32,
+        "probability": 0.09050918277353048
+      },
+      {
+        "word": "example",
+        "start": 1.32,
+        "end": 1.7,
+        "probability": 0.9046283960342407
+      },
+      {
+        "word": "is",
+        "start": 1.7,
+        "end": 2.08,
+        "probability": 0.9951203465461731
+      },
+      {
+        "word": "Critical.",
+        "start": 2.08,
+        "end": 2.52,
+        "probability": 0.0015674643218517303
+      },
+      {
+        "word": "Submitting",
+        "start": 3.16,
+        "end": 3.74,
+        "probability": 0.9735777974128723
+      },
+      {
+        "word": "it",
+        "start": 3.74,
+        "end": 4,
+        "probability": 0.9125468730926514
+      },
+      {
+        "word": "raises",
+        "start": 4,
+        "end": 4.72,
+        "probability": 0.9118291735649109
+      },
+      {
+        "word": "an",
+        "start": 4.72,
+        "end": 5.06,
+        "probability": 0.8635123372077942
+      },
+      {
+        "word": "NCR.",
+        "start": 5.06,
+        "end": 5.6,
+        "probability": 0.5321242734789848
+      }
+    ]
+  },
+  "firstAttempt": {
+    "path": "cln-tutorial/v4-audio/critical-grade-ddff4187e142-local-1533a3f4e4f5.json",
+    "bytes": 3981,
+    "sha256": "da5b55c22037d95b3bed768c7096fd022a2a0818211d0d1d83fcdbfb3923440e"
+  }
+}

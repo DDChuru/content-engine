@@ -1,0 +1,217 @@
+{
+  "audioSha256": "0088021120fa5728e0bc93b55471ae5fe7f4034b21d34576fbd1e15058957617",
+  "measuredAt": "2026-09-06T13:43:15.347844+00:00",
+  "transcription": {
+    "provider": "local-faster-whisper",
+    "model": "Systran/faster-whisper-small",
+    "modelPath": "/home/durai/.cache/huggingface/hub/models--Systran--faster-whisper-small/snapshots/536b0662742c02347bc0e980a01041f333bce120",
+    "modelRevision": "536b0662742c02347bc0e980a01041f333bce120",
+    "modelFiles": [
+      {
+        "name": "model.bin",
+        "bytes": 483546902,
+        "sha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671"
+      },
+      {
+        "name": "config.json",
+        "bytes": 2370,
+        "sha256": "b55496ac7940a7ae47d2c01eab40edfd8701feec1229d9cce3b40014383fb828"
+      },
+      {
+        "name": "tokenizer.json",
+        "bytes": 2203239,
+        "sha256": "fb7b63191e9bb045082c79fd742a3106a12c99513ab30df4a0d47fa6cb6fd0ab"
+      },
+      {
+        "name": "vocabulary.txt",
+        "bytes": 459861,
+        "sha256": "34ce3fe1c5041027b3f8d42912270993f986dbc4bb34cf27f951e34a1e453913"
+      }
+    ],
+    "versions": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.8.2",
+      "av": "18.1.0",
+      "tokenizers": "0.23.2"
+    },
+    "pythonVersion": "3.12.3",
+    "pythonExecutable": "/tmp/si-units-faster-whisper/bin/python",
+    "device": "cpu",
+    "computeType": "int8",
+    "cpuThreads": 4,
+    "numWorkers": 1,
+    "localFilesOnly": true,
+    "settings": {
+      "language": "en",
+      "word_timestamps": true,
+      "beam_size": 5,
+      "temperature": 0,
+      "condition_on_previous_text": false,
+      "vad_filter": false,
+      "hotwords": "Bakery Demo, Bill of Health, Premix Area, SSOP, NCR, Remedial, none captured, Still to do, Passed, Follow-up owed, Couldn't access, Resolved today, Pass all, Daily."
+    },
+    "helper": {
+      "name": "transcribe-cln-v4-local.py",
+      "bytes": 3747,
+      "sha256": "f9683a78e6d63afc976f3dbe4898d248fefa26ed86eb64e7f579dbdfa2d6eaf7"
+    },
+    "workflowRef": "../packages/backend/src/scripts/transcribe-mechanics-si-units-local.py"
+  },
+  "response": {
+    "language": "en",
+    "duration": 10.031,
+    "text": "That is the scheduled check, an immediate follow-up loop. The remedial video explains persistent findings and inspection remedials that carry over.",
+    "segments": [
+      {
+        "id": 1,
+        "start": 0,
+        "end": 3.3,
+        "text": " That is the scheduled check, an immediate follow-up loop.",
+        "avg_logprob": -0.240837270563299,
+        "no_speech_prob": 0.005377266090363264
+      },
+      {
+        "id": 2,
+        "start": 4.1,
+        "end": 9.6,
+        "text": " The remedial video explains persistent findings and inspection remedials that carry over.",
+        "avg_logprob": -0.240837270563299,
+        "no_speech_prob": 0.005377266090363264
+      }
+    ],
+    "words": [
+      {
+        "word": "That",
+        "start": 0,
+        "end": 0.28,
+        "probability": 0.5791663527488708
+      },
+      {
+        "word": "is",
+        "start": 0.28,
+        "end": 0.48,
+        "probability": 0.9752444624900818
+      },
+      {
+        "word": "the",
+        "start": 0.48,
+        "end": 0.64,
+        "probability": 0.9723402857780457
+      },
+      {
+        "word": "scheduled",
+        "start": 0.64,
+        "end": 0.94,
+        "probability": 0.8796547651290894
+      },
+      {
+        "word": "check,",
+        "start": 0.94,
+        "end": 1.34,
+        "probability": 0.9833190441131592
+      },
+      {
+        "word": "an",
+        "start": 1.88,
+        "end": 2.14,
+        "probability": 0.9330362677574158
+      },
+      {
+        "word": "immediate",
+        "start": 2.14,
+        "end": 2.48,
+        "probability": 0.9972767233848572
+      },
+      {
+        "word": "follow",
+        "start": 2.48,
+        "end": 2.82,
+        "probability": 0.993598222732544
+      },
+      {
+        "word": "-up",
+        "start": 2.82,
+        "end": 3.08,
+        "probability": 0.7972700297832489
+      },
+      {
+        "word": "loop.",
+        "start": 3.08,
+        "end": 3.3,
+        "probability": 0.9786579608917236
+      },
+      {
+        "word": "The",
+        "start": 4.1,
+        "end": 4.2,
+        "probability": 0.9842767715454102
+      },
+      {
+        "word": "remedial",
+        "start": 4.2,
+        "end": 4.62,
+        "probability": 0.9855680465698242
+      },
+      {
+        "word": "video",
+        "start": 4.62,
+        "end": 4.88,
+        "probability": 0.9966034889221191
+      },
+      {
+        "word": "explains",
+        "start": 4.88,
+        "end": 5.52,
+        "probability": 0.9960184693336487
+      },
+      {
+        "word": "persistent",
+        "start": 5.52,
+        "end": 6.3,
+        "probability": 0.9528667330741882
+      },
+      {
+        "word": "findings",
+        "start": 6.3,
+        "end": 6.9,
+        "probability": 0.988884449005127
+      },
+      {
+        "word": "and",
+        "start": 6.9,
+        "end": 7.26,
+        "probability": 0.9898137450218201
+      },
+      {
+        "word": "inspection",
+        "start": 7.26,
+        "end": 7.62,
+        "probability": 0.9884279370307922
+      },
+      {
+        "word": "remedials",
+        "start": 7.62,
+        "end": 8.36,
+        "probability": 0.8290322422981262
+      },
+      {
+        "word": "that",
+        "start": 8.36,
+        "end": 8.94,
+        "probability": 0.9698970913887024
+      },
+      {
+        "word": "carry",
+        "start": 8.94,
+        "end": 9.26,
+        "probability": 0.9955340623855591
+      },
+      {
+        "word": "over.",
+        "start": 9.26,
+        "end": 9.6,
+        "probability": 0.8297749161720276
+      }
+    ]
+  }
+}

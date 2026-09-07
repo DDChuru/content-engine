@@ -1,0 +1,137 @@
+{
+  "audioSha256": "6350c44fcfd6e8e4b40418d92bb14c4076a50f87149e9ed0e08ca86acdf48b8d",
+  "measuredAt": "2026-09-07T04:17:13.117644+00:00",
+  "transcription": {
+    "provider": "local-faster-whisper",
+    "model": "Systran/faster-whisper-small",
+    "modelPath": "/home/durai/.cache/huggingface/hub/models--Systran--faster-whisper-small/snapshots/536b0662742c02347bc0e980a01041f333bce120",
+    "modelRevision": "536b0662742c02347bc0e980a01041f333bce120",
+    "modelFiles": [
+      {
+        "name": "model.bin",
+        "bytes": 483546902,
+        "sha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671"
+      },
+      {
+        "name": "config.json",
+        "bytes": 2370,
+        "sha256": "b55496ac7940a7ae47d2c01eab40edfd8701feec1229d9cce3b40014383fb828"
+      },
+      {
+        "name": "tokenizer.json",
+        "bytes": 2203239,
+        "sha256": "fb7b63191e9bb045082c79fd742a3106a12c99513ab30df4a0d47fa6cb6fd0ab"
+      },
+      {
+        "name": "vocabulary.txt",
+        "bytes": 459861,
+        "sha256": "34ce3fe1c5041027b3f8d42912270993f986dbc4bb34cf27f951e34a1e453913"
+      }
+    ],
+    "versions": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.8.2",
+      "av": "18.1.0",
+      "tokenizers": "0.23.2"
+    },
+    "pythonVersion": "3.12.3",
+    "pythonExecutable": "/tmp/si-units-faster-whisper/bin/python",
+    "device": "cpu",
+    "computeType": "int8",
+    "cpuThreads": 4,
+    "numWorkers": 1,
+    "localFilesOnly": true,
+    "settings": {
+      "language": "en",
+      "word_timestamps": true,
+      "beam_size": 5,
+      "temperature": 0,
+      "condition_on_previous_text": false,
+      "vad_filter": false,
+      "hotwords": "Bakery Demo, Bill of Health, Premix Area, SSOP, NCR, Remedial, none captured, Still to do, Passed, Follow-up owed, Couldn't access, Resolved today, Pass all, Daily."
+    },
+    "helper": {
+      "name": "transcribe-cln-v4-local.py",
+      "bytes": 4483,
+      "sha256": "20f171356c11b09b96a919c2f3188920a47d908cf0e285930f0c2600d01745af"
+    },
+    "workflowRef": "../packages/backend/src/scripts/transcribe-mechanics-si-units-local.py"
+  },
+  "response": {
+    "language": "en",
+    "duration": 5.6656875,
+    "text": "Confirm premix area is unlocked. Inspect before recording a result.",
+    "segments": [
+      {
+        "id": 1,
+        "start": 0,
+        "end": 5.1,
+        "text": " Confirm premix area is unlocked. Inspect before recording a result.",
+        "avg_logprob": -0.3745102321400362,
+        "no_speech_prob": 0.003047137288376689
+      }
+    ],
+    "words": [
+      {
+        "word": "Confirm",
+        "start": 0,
+        "end": 0.5,
+        "probability": 0.8690397441387177
+      },
+      {
+        "word": "premix",
+        "start": 0.5,
+        "end": 0.96,
+        "probability": 0.6904457807540894
+      },
+      {
+        "word": "area",
+        "start": 0.96,
+        "end": 1.3,
+        "probability": 0.844950795173645
+      },
+      {
+        "word": "is",
+        "start": 1.3,
+        "end": 1.98,
+        "probability": 0.9734607338905334
+      },
+      {
+        "word": "unlocked.",
+        "start": 1.98,
+        "end": 2.42,
+        "probability": 0.9643415212631226
+      },
+      {
+        "word": "Inspect",
+        "start": 2.9,
+        "end": 3.28,
+        "probability": 0.9283649325370789
+      },
+      {
+        "word": "before",
+        "start": 3.28,
+        "end": 3.98,
+        "probability": 0.9720174670219421
+      },
+      {
+        "word": "recording",
+        "start": 3.98,
+        "end": 4.62,
+        "probability": 0.9773606061935425
+      },
+      {
+        "word": "a",
+        "start": 4.62,
+        "end": 4.82,
+        "probability": 0.9498314261436462
+      },
+      {
+        "word": "result.",
+        "start": 4.82,
+        "end": 5.1,
+        "probability": 0.9968343377113342
+      }
+    ]
+  }
+}

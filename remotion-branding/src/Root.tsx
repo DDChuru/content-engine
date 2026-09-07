@@ -1,5 +1,6 @@
 import React from 'react';
 import { Composition } from 'remotion';
+import { RootClnV4 } from './cln/RootClnV4';
 import { Intro } from './Intro';
 import { Outro } from './Outro';
 import { IntroWithImage } from './IntroWithImage';
@@ -65,6 +66,7 @@ import {
 export const RemotionRoot: React.FC = () => {
   return (
     <>
+      <RootClnV4 />
       {/* IINM User Guide — Chapter 0: Welcome / orientation (pyramid + §24 teaser).
           Built on the Codex conventions kit; duration + VO + caption sync all driven
           by ch0-timing.json (emitted from the measured ElevenLabs VO). */}

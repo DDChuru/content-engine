@@ -8,6 +8,7 @@ import { BrandIntro, BrandOutro } from '../brand/EcowizeBookends';
 import captureData from './captures.json';
 import narrationData from './narration.json';
 import auditData from './source-audit.json';
+import { SIMULATION_BADGE } from './candidate-presentation';
 import {
 	EXPLANATORY_LABEL, assertCaptureManifest, assertFinalReady, assertNarrationManifest,
 	buildTimeline, getMissingEvidence, verifyAssets,
@@ -71,13 +72,13 @@ export const VerifiedAssets: React.FC<{ children: React.ReactNode; verify?: () =
 	return ready ? <>{children}</> : null;
 };
 
-const GenuineCapture: React.FC<{ capture: Capture }> = ({ capture }) => (
+const GenuineCapture: React.FC<{ capture: Capture; candidate: boolean }> = ({ capture, candidate }) => (
 	<>
 		{/* Original full PNG. No inserted fields, status bars, buttons or overlays. */}
 		<div data-remedial-app style={{ position: 'absolute', left: 108, top: 108, width: 396, height: 880, boxShadow: '0 0 0 8px #152433, 0 0 0 10px #384B5C, 0 30px 70px #0008' }}>
 			<Img src={staticFile(capture.path)} style={{ width: '100%', height: '100%', display: 'block' }} />
 		</div>
-		<div style={{ position: 'absolute', left: 108, top: 1002, color: MUTED, fontSize: 17 }}>Genuine app capture · full original frame</div>
+		{!candidate ? <div style={{ position: 'absolute', left: 108, top: 1002, color: MUTED, fontSize: 17 }}>Genuine app capture · full original frame</div> : null}
 	</>
 );
 
@@ -103,7 +104,7 @@ const CaptureBlocker: React.FC<{ slot: string; proof: string }> = ({ slot, proof
 	</div>
 );
 
-const ScreenBeat: React.FC<{ beat: Beat; captures: CaptureManifest }> = ({ beat, captures }) => {
+const ScreenBeat: React.FC<{ beat: Beat; captures: CaptureManifest; candidate: boolean }> = ({ beat, captures, candidate }) => {
 	const frame = useCurrentFrame();
 	const cueIndex = beat.cues.reduce((active, cue, i) => frame >= cue.fromFrame ? i : active, 0);
 	const cue = beat.cues[cueIndex];
@@ -116,27 +117,27 @@ const ScreenBeat: React.FC<{ beat: Beat; captures: CaptureManifest }> = ({ beat,
 	const accent = beat.slot?.startsWith('inspection') ? AMBER : SKY;
 	return (
 		<AbsoluteFill>
-			{capture ? <GenuineCapture capture={capture} /> : <CaptureBlocker slot={beat.slot!} proof={cue.proof} />}
+			{capture ? <GenuineCapture capture={capture} candidate={candidate} /> : <CaptureBlocker slot={beat.slot!} proof={cue.proof} />}
 			<div data-remedial-copy style={{ position: 'absolute', left: 620, top: 102, width: 1180, opacity: textIn }}>
 				<div style={{ color: accent, fontSize: 22, fontWeight: 700, letterSpacing: 2, textTransform: 'uppercase' }}>{beat.chapter}</div>
 				<div style={{ fontFamily: DISPLAY, fontSize: 76, fontWeight: 700, lineHeight: 0.98, whiteSpace: 'pre-line', marginTop: 26 }}>{beat.headline}</div>
 			</div>
 			<div data-remedial-body style={{ position: 'absolute', left: 620, top: 330, width: 1160, color: MUTED, fontSize: 31, lineHeight: 1.35, opacity: textIn }}>{beat.body}</div>
 			<div data-remedial-emphasis style={{ position: 'absolute', left: 620, top: 458, width: 1160, borderLeft: `4px solid ${accent}`, paddingLeft: 24, boxSizing: 'border-box', fontSize: 31, lineHeight: 1.3, fontWeight: 700, opacity: emphasisIn, transform: `translateY(${8 * (1 - emphasisIn)}px)` }}>{beat.emphasis}</div>
-			<div style={{ position: 'absolute', left: 620, top: 570, color: capture ? accent : MUTED, fontSize: 18, letterSpacing: 1.6, fontWeight: 700 }}>{capture ? 'ENLARGED DETAIL · SAME GENUINE CAPTURE' : 'PLANNED TEACHING · AUTHENTIC EVIDENCE PENDING'}</div>
+			{!candidate ? <div style={{ position: 'absolute', left: 620, top: 570, color: capture ? accent : MUTED, fontSize: 18, letterSpacing: 1.6, fontWeight: 700 }}>{capture ? 'ENLARGED DETAIL · SAME GENUINE CAPTURE' : 'PLANNED TEACHING · AUTHENTIC EVIDENCE PENDING'}</div> : null}
 			{capture && rect ? <Detail capture={capture} rect={rect} opacity={detailIn} /> : null}
 			{!capture ? <div style={{ position: 'absolute', left: 620, top: 622, width: 1110, borderTop: '1px solid #344A5E', paddingTop: 30, color: MUTED, fontSize: 26, lineHeight: 1.55 }}>
 				<div style={{ color: '#EEF4F9', fontFamily: DISPLAY, fontSize: 39 }}>View {cueIndex + 1} of {beat.cues.length}: {cue.proof.replaceAll('-', ' ')}</div>
 				<div style={{ marginTop: 20 }}>Capture through the shipped app in Bakery Demo. Register the exact pixels, record identity and state before replacing this card.</div>
 				<div style={{ marginTop: 20, color: AMBER }}>No operational action is demonstrated by this placeholder.</div>
 			</div> : null}
-			<div data-remedial-note style={{ position: 'absolute', left: 620, top: 950, width: 1180, fontSize: 18, color: MUTED, lineHeight: 1.35 }}>{beat.note}</div>
-			{capture ? <div data-remedial-disclosure style={{ position: 'absolute', left: 620, top: 996, width: 1180, fontSize: 18, color: MUTED }}>{capture.disclosure}</div> : null}
+			{!candidate ? <div data-remedial-note style={{ position: 'absolute', left: 620, top: 950, width: 1180, fontSize: 18, color: MUTED, lineHeight: 1.35 }}>{beat.note}</div> : null}
+			{capture && !candidate ? <div data-remedial-disclosure style={{ position: 'absolute', left: 620, top: 996, width: 1180, fontSize: 18, color: MUTED }}>{capture.disclosure}</div> : null}
 		</AbsoluteFill>
 	);
 };
 
-const Explanation: React.FC<{ beat: Beat }> = ({ beat }) => {
+const Explanation: React.FC<{ beat: Beat; candidate: boolean }> = ({ beat, candidate }) => {
 	const frame = useCurrentFrame();
 	const reveal = interpolate(frame, [beat.emphasisAtFrame, beat.emphasisAtFrame + 18], [0, 1], clamp);
 	const age = beat.kind === 'age';
@@ -160,7 +161,7 @@ const Explanation: React.FC<{ beat: Beat }> = ({ beat }) => {
 				</div>)}
 			</div>
 			<div style={{ position: 'absolute', left: 120, top: 850, fontSize: 34, fontWeight: 700, opacity: reveal }}>{beat.emphasis}</div>
-			<div style={{ position: 'absolute', left: 120, top: 949, fontSize: 21, color: AMBER }}>{EXPLANATORY_LABEL}</div>
+			{!candidate ? <div style={{ position: 'absolute', left: 120, top: 949, fontSize: 21, color: AMBER }}>{EXPLANATORY_LABEL}</div> : null}
 		</AbsoluteFill>
 	);
 };
@@ -177,13 +178,13 @@ export const Timeline: React.FC<{ captures?: CaptureManifest; narration?: Narrat
 			{narration.beats.map((beat) => <Sequence key={beat.id} name={beat.id} from={beat.from} durationInFrames={beat.durationInFrames} premountFor={FPS}>
 				{beat.kind === 'intro' ? <BrandIntro title={beat.headline} tagline={beat.body} accentA={SKY} accentB={EMERALD} /> :
 					beat.kind === 'outro' ? <BrandOutro outroKicker="e-wizer field guide" outroHeadline={beat.headline} outroBody={beat.body} outroCards={[{ label: 'Record', color: SKY }, { label: 'Verify', color: AMBER }, { label: 'Follow up', color: EMERALD }]} accentA={SKY} accentB={EMERALD} /> :
-						beat.kind === 'screen' ? <ScreenBeat beat={beat} captures={captures} /> : <Explanation beat={beat} />}
+						beat.kind === 'screen' ? <ScreenBeat beat={beat} captures={captures} candidate={candidate} /> : <Explanation beat={beat} candidate={candidate} />}
 			</Sequence>)}
 			{/* Persisted, measured narration; original internal preview remains silent. */}
 			{narration.audio ? <Sequence from={0} durationInFrames={FRAMES} premountFor={FPS}><Audio src={staticFile(narration.audio.path)} onError={() => 'fail'} /></Sequence> : null}
 			{music ? narration.beats.filter((beat) => beat.kind === 'intro' || beat.kind === 'outro').map((beat) => <Sequence key={`music-${beat.id}`} from={beat.from} durationInFrames={beat.durationInFrames} premountFor={FPS}><Audio src={staticFile(music.path)} volume={(f) => music.volume * interpolate(f, [0, 24, beat.durationInFrames - 29, beat.durationInFrames - 1], [0, 1, 1, 0], clamp)} onError={() => 'fail'} /></Sequence>) : null}
 			{/* Candidate wrapper is guarded separately; original preview keeps its label. */}
-			<div data-remedial-preview-label style={{ position: 'absolute', inset: '0 0 auto', height: 44, display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#E1E7EC', color: INK, fontSize: 19, letterSpacing: 1.6, fontWeight: 700 }}>{candidate ? 'REVIEW CANDIDATE · BAKERY DEMO TRAINING · NOT APPROVED' : `INTERNAL PREVIEW · SILENT · PLANNED TIMING · ${getMissingEvidence(CAPTURES).length} AUTHENTIC VIEWS PENDING`}</div>
+			{candidate ? !['intro', 'outro'].includes(narration.beats[active].kind) ? <div data-remedial-simulation style={{ position: 'absolute', top: SIMULATION_BADGE.top, right: SIMULATION_BADGE.right, width: SIMULATION_BADGE.width, height: SIMULATION_BADGE.height, borderRadius: SIMULATION_BADGE.borderRadius, background: SIMULATION_BADGE.background, color: SIMULATION_BADGE.color, fontSize: SIMULATION_BADGE.fontSize, fontWeight: 700, letterSpacing: 1.5, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>{SIMULATION_BADGE.text}</div> : null : <div data-remedial-preview-label style={{ position: 'absolute', inset: '0 0 auto', height: 44, display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#E1E7EC', color: INK, fontSize: 19, letterSpacing: 1.6, fontWeight: 700 }}>{`INTERNAL PREVIEW · SILENT · PLANNED TIMING · ${getMissingEvidence(CAPTURES).length} AUTHENTIC VIEWS PENDING`}</div>}
 			<div style={{ position: 'absolute', left: 620, top: 1038, width: 1180, display: 'flex', justifyContent: 'space-between', fontSize: 16, color: MUTED, letterSpacing: 1 }}><span>e-wizer field guide · Remedial Action</span><span>{String(active + 1).padStart(2, '0')} / {narration.beats.length}</span></div>
 			<div style={{ position: 'absolute', bottom: 0, height: 5, left: 0, width: `${interpolate(frame, [0, FRAMES - 1], [0, 100], clamp)}%`, background: `linear-gradient(90deg, ${SKY}, ${EMERALD})` }} />
 		</AbsoluteFill>

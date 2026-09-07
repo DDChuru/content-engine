@@ -1,0 +1,240 @@
+{
+  "audioSha256": "a57ad5256ef91066ccf14f2ca081ba3704a72ca1bb1d39992b8edb453a5b7a03",
+  "model": "faster-whisper-small",
+  "modelRevision": "536b0662742c02347bc0e980a01041f333bce120",
+  "computeType": "int8",
+  "language": "en",
+  "initialPrompt": null,
+  "duration": 19.1796875,
+  "text": "Capture the before photo and record the severity category area and description. Save finding keeps a draft on the device. Complete, then sign and complete. Upload the findings and issues the inspection. Then check the Shade Open Queue.",
+  "words": [
+    {
+      "word": " Capture",
+      "start": 0.0,
+      "end": 0.42,
+      "probability": 0.8935776650905609
+    },
+    {
+      "word": " the",
+      "start": 0.42,
+      "end": 0.52,
+      "probability": 0.9892686009407043
+    },
+    {
+      "word": " before",
+      "start": 0.52,
+      "end": 0.9,
+      "probability": 0.6236890554428101
+    },
+    {
+      "word": " photo",
+      "start": 0.9,
+      "end": 1.38,
+      "probability": 0.963697075843811
+    },
+    {
+      "word": " and",
+      "start": 1.38,
+      "end": 1.98,
+      "probability": 0.8984667658805847
+    },
+    {
+      "word": " record",
+      "start": 1.98,
+      "end": 2.46,
+      "probability": 0.9800155758857727
+    },
+    {
+      "word": " the",
+      "start": 2.46,
+      "end": 2.74,
+      "probability": 0.9898285865783691
+    },
+    {
+      "word": " severity",
+      "start": 2.74,
+      "end": 3.16,
+      "probability": 0.9755821228027344
+    },
+    {
+      "word": " category",
+      "start": 3.16,
+      "end": 3.58,
+      "probability": 0.9631569981575012
+    },
+    {
+      "word": " area",
+      "start": 3.58,
+      "end": 4.38,
+      "probability": 0.589119017124176
+    },
+    {
+      "word": " and",
+      "start": 4.38,
+      "end": 5.16,
+      "probability": 0.6641685366630554
+    },
+    {
+      "word": " description.",
+      "start": 5.16,
+      "end": 5.62,
+      "probability": 0.9944250583648682
+    },
+    {
+      "word": " Save",
+      "start": 6.18,
+      "end": 6.5,
+      "probability": 0.44958651065826416
+    },
+    {
+      "word": " finding",
+      "start": 6.5,
+      "end": 7.02,
+      "probability": 0.6291840076446533
+    },
+    {
+      "word": " keeps",
+      "start": 7.02,
+      "end": 7.84,
+      "probability": 0.8661143183708191
+    },
+    {
+      "word": " a",
+      "start": 7.84,
+      "end": 8.06,
+      "probability": 0.895642876625061
+    },
+    {
+      "word": " draft",
+      "start": 8.06,
+      "end": 8.32,
+      "probability": 0.9813764691352844
+    },
+    {
+      "word": " on",
+      "start": 8.32,
+      "end": 8.82,
+      "probability": 0.9944915771484375
+    },
+    {
+      "word": " the",
+      "start": 8.82,
+      "end": 8.94,
+      "probability": 0.9975970387458801
+    },
+    {
+      "word": " device.",
+      "start": 8.94,
+      "end": 9.36,
+      "probability": 0.9982160925865173
+    },
+    {
+      "word": " Complete,",
+      "start": 9.78,
+      "end": 10.12,
+      "probability": 0.9621437191963196
+    },
+    {
+      "word": " then",
+      "start": 10.92,
+      "end": 11.06,
+      "probability": 0.9823542833328247
+    },
+    {
+      "word": " sign",
+      "start": 11.06,
+      "end": 11.5,
+      "probability": 0.8894152641296387
+    },
+    {
+      "word": " and",
+      "start": 11.5,
+      "end": 12.1,
+      "probability": 0.6952367424964905
+    },
+    {
+      "word": " complete.",
+      "start": 12.1,
+      "end": 12.48,
+      "probability": 0.9935466647148132
+    },
+    {
+      "word": " Upload",
+      "start": 13.14,
+      "end": 13.74,
+      "probability": 0.8941065271695455
+    },
+    {
+      "word": " the",
+      "start": 13.74,
+      "end": 14.52,
+      "probability": 0.8932549357414246
+    },
+    {
+      "word": " findings",
+      "start": 14.52,
+      "end": 14.98,
+      "probability": 0.9586604833602905
+    },
+    {
+      "word": " and",
+      "start": 14.98,
+      "end": 15.3,
+      "probability": 0.9834805130958557
+    },
+    {
+      "word": " issues",
+      "start": 15.3,
+      "end": 15.62,
+      "probability": 0.9373168349266052
+    },
+    {
+      "word": " the",
+      "start": 15.62,
+      "end": 15.88,
+      "probability": 0.9449716806411743
+    },
+    {
+      "word": " inspection.",
+      "start": 15.88,
+      "end": 16.32,
+      "probability": 0.9883736371994019
+    },
+    {
+      "word": " Then",
+      "start": 16.32,
+      "end": 17.22,
+      "probability": 0.5729260444641113
+    },
+    {
+      "word": " check",
+      "start": 17.22,
+      "end": 17.5,
+      "probability": 0.9105545878410339
+    },
+    {
+      "word": " the",
+      "start": 17.5,
+      "end": 17.7,
+      "probability": 0.9832377433776855
+    },
+    {
+      "word": " Shade",
+      "start": 17.7,
+      "end": 18.1,
+      "probability": 0.6395013332366943
+    },
+    {
+      "word": " Open",
+      "start": 18.1,
+      "end": 18.36,
+      "probability": 0.4887903332710266
+    },
+    {
+      "word": " Queue.",
+      "start": 18.36,
+      "end": 18.86,
+      "probability": 0.8101237714290619
+    }
+  ]
+}

@@ -1,0 +1,993 @@
+{
+  "schemaVersion": 1,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "totalFrames": 8295,
+  "timingStatus": "measured-transcript",
+  "audioStatus": "approved-recording",
+  "audio": {
+    "path": "cln-tutorial/v4-audio/narration-314e6621e1e7.wav",
+    "bytes": 26544078,
+    "sha256": "913f7fa7a9b112fffbed95950f01597ffc0c4af3089b64559568d1f59a446249",
+    "durationInFrames": 8295,
+    "transcriptRef": "public/cln-tutorial/v4-audio/narration-314e6621e1e7-measured.json",
+    "transcript": {
+      "path": "cln-tutorial/v4-audio/narration-314e6621e1e7-measured.json",
+      "bytes": 93965,
+      "sha256": "17e42c557c22912c3b4eae2fb76ed511653abf9b8ec8eaa78727e09ff1f3b0a8"
+    }
+  },
+  "narrationApprovalRef": "docs/verify-cln-v4-audio-revision-acceptance.json",
+  "wordTimingVerified": true,
+  "note": "V4 revision: Home Scan starts instruction; seven revised series-voice clips and 23 unchanged recordings. Measured word cues and exact PCM placement pass technical checks. Claude-2 and human review pending. No final approval claimed.",
+  "beats": [
+    {
+      "id": "intro",
+      "kind": "intro",
+      "durationInFrames": 150,
+      "overlapFromPrevious": 0,
+      "chapter": "Cleaning Verification",
+      "slot": null,
+      "proofs": [],
+      "headline": "Cleaning Verification",
+      "body": "Scheduled checks. Immediate follow-up.",
+      "emphasis": "Scan. Check. Record. Follow up.",
+      "narration": "",
+      "from": 0,
+      "voiceFromFrame": 0,
+      "voiceToFrame": 0,
+      "emphasisAtFrame": 0,
+      "focusAtFrame": 0,
+      "proofCueWords": [],
+      "proofFromFrames": []
+    },
+    {
+      "id": "scan-entry",
+      "kind": "screen",
+      "durationInFrames": 120,
+      "overlapFromPrevious": 0,
+      "chapter": "01 · Start from Home",
+      "slot": "home",
+      "proofs": [
+        "entry"
+      ],
+      "headline": "Start from Home. Tap Scan.",
+      "body": "Tap the blue Scan button in the bottom navigation to check in to your area.",
+      "emphasis": "Home → Scan → zone QR",
+      "narration": "From Home, tap the bottom Scan.",
+      "from": 150,
+      "voiceFromFrame": 18,
+      "voiceToFrame": 71,
+      "emphasisAtFrame": 24,
+      "focusAtFrame": 61,
+      "cueWords": {
+        "emphasis": "Home",
+        "focus": "Scan"
+      },
+      "auditRef": "docs/cln-verification-v4-builder-notes.md#narration-audit-and-audio-provenance",
+      "proofCueWords": [],
+      "proofFromFrames": [
+        0
+      ],
+      "plannedDurationInFrames": 120
+    },
+    {
+      "id": "controlled-scan",
+      "kind": "screen",
+      "durationInFrames": 229,
+      "overlapFromPrevious": 0,
+      "chapter": "01 · Start from Home",
+      "slot": "qr-check-in",
+      "proofs": [
+        "scanner"
+      ],
+      "headline": "Use the zone scanner.",
+      "body": "Point the scanner at the zone QR code for Premix Area.",
+      "emphasis": "Keep the zone QR inside the scan frame.",
+      "narration": "Point the scanner at the zone QR code. Check in to Premix Area.",
+      "from": 270,
+      "voiceFromFrame": 0,
+      "voiceToFrame": 112,
+      "emphasisAtFrame": 36,
+      "focusAtFrame": 12,
+      "cueWords": {
+        "emphasis": "zone QR code",
+        "focus": "scanner"
+      },
+      "auditRef": "docs/cln-verification-v4-builder-notes.md#narration-audit-and-audio-provenance",
+      "proofCueWords": [],
+      "proofFromFrames": [
+        0
+      ],
+      "plannedDurationInFrames": 150
+    },
+    {
+      "id": "unlocked",
+      "kind": "screen",
+      "durationInFrames": 200,
+      "overlapFromPrevious": 0,
+      "chapter": "01 · Start from Home",
+      "slot": "qr-check-in",
+      "proofs": [
+        "unlocked"
+      ],
+      "headline": "Check the unlocked area.",
+      "body": "Premix Area is unlocked with zero tasks completed. Check-in opens the area for inspection.",
+      "emphasis": "Confirm the area, then inspect.",
+      "narration": "Confirm Premix Area is unlocked. Inspect before recording a result.",
+      "from": 499,
+      "voiceFromFrame": 0,
+      "voiceToFrame": 153,
+      "emphasisAtFrame": 87,
+      "focusAtFrame": 15,
+      "cueWords": {
+        "emphasis": "Inspect",
+        "focus": "Premix Area"
+      },
+      "auditRef": "docs/cln-verification-v4-builder-notes.md#narration-audit-and-audio-provenance",
+      "proofCueWords": [],
+      "proofFromFrames": [
+        0
+      ],
+      "plannedDurationInFrames": 120
+    },
+    {
+      "id": "home",
+      "kind": "screen",
+      "durationInFrames": 273,
+      "overlapFromPrevious": 0,
+      "chapter": "02 · Review work before check-in",
+      "slot": "home",
+      "proofs": [
+        "entry"
+      ],
+      "headline": "Another route: Bill of Health.",
+      "body": "Review scheduled work before checking in: Home → Bill of Health → Cleaning Verification.",
+      "emphasis": "Review work before check-in.",
+      "narration": "To review scheduled work before checking in, open Bill of Health from Home.",
+      "from": 699,
+      "voiceFromFrame": 0,
+      "voiceToFrame": 146,
+      "emphasisAtFrame": 42,
+      "focusAtFrame": 99,
+      "cueWords": {
+        "emphasis": "before checking in",
+        "focus": "Bill of Health"
+      },
+      "auditRef": "docs/cln-verification-v4-builder-notes.md#narration-audit-and-audio-provenance",
+      "proofCueWords": [],
+      "proofFromFrames": [
+        0
+      ],
+      "plannedDurationInFrames": 180
+    },
+    {
+      "id": "boh",
+      "kind": "screen",
+      "durationInFrames": 229,
+      "overlapFromPrevious": 0,
+      "chapter": "02 · Review work before check-in",
+      "slot": "boh",
+      "proofs": [
+        "entry"
+      ],
+      "headline": "Open Cleaning Verification.",
+      "body": "This pillar tracks missing scheduled checks. Remedial tracks open findings.",
+      "emphasis": "Scheduled checks still missing",
+      "narration": "Choose Cleaning Verification for missing scheduled checks. Remedial tracks open findings.",
+      "from": 972,
+      "voiceFromFrame": 0,
+      "voiceToFrame": 186,
+      "emphasisAtFrame": 55,
+      "focusAtFrame": 10,
+      "cueWords": {
+        "emphasis": "missing scheduled checks",
+        "focus": "Cleaning Verification"
+      },
+      "auditRef": "docs/cln-verification-v4-builder-notes.md#narration-audit-and-audio-provenance",
+      "proofCueWords": [],
+      "proofFromFrames": [
+        0
+      ],
+      "plannedDurationInFrames": 210
+    },
+    {
+      "id": "baseline",
+      "kind": "screen",
+      "durationInFrames": 254,
+      "overlapFromPrevious": 0,
+      "chapter": "02 · Review work before check-in",
+      "slot": "summary",
+      "proofs": [
+        "baseline"
+      ],
+      "headline": "Read today's starting point.",
+      "body": "This Bakery Demo baseline has 235 still to do and zero captured.",
+      "emphasis": "Expand the area you will inspect.",
+      "narration": "The starting point is two hundred and thirty-five still to do, with none captured. Open the area.",
+      "from": 1201,
+      "voiceFromFrame": 0,
+      "voiceToFrame": 210,
+      "emphasisAtFrame": 99,
+      "focusAtFrame": 5,
+      "cueWords": {
+        "emphasis": "still to do",
+        "focus": "starting point"
+      },
+      "auditRef": "docs/cln-verification-v4-builder-notes.md#narration-audit-and-audio-provenance",
+      "proofCueWords": [],
+      "proofFromFrames": [
+        0
+      ],
+      "plannedDurationInFrames": 210
+    },
+    {
+      "id": "due",
+      "kind": "screen",
+      "durationInFrames": 221,
+      "overlapFromPrevious": 0,
+      "chapter": "02 · Review work before check-in",
+      "slot": "due",
+      "proofs": [
+        "due",
+        "scan-entry"
+      ],
+      "headline": "Review the Due list.",
+      "body": "Before check-in, Premix Area has 19 Daily checks due and completion is QR-locked.",
+      "emphasis": "Due = today's scheduled checks",
+      "narration": "Before check-in, Due lists nineteen Daily checks. Completion is locked.",
+      "from": 1455,
+      "voiceFromFrame": 0,
+      "voiceToFrame": 144,
+      "emphasisAtFrame": 69,
+      "focusAtFrame": 34,
+      "cueWords": {
+        "emphasis": "Daily checks",
+        "focus": "Due"
+      },
+      "auditRef": "docs/cln-verification-v4-builder-notes.md#narration-audit-and-audio-provenance",
+      "proofCueWords": [
+        "",
+        "Completion"
+      ],
+      "proofFromFrames": [
+        0,
+        112
+      ],
+      "plannedDurationInFrames": 180
+    },
+    {
+      "id": "ssop-link",
+      "kind": "screen",
+      "durationInFrames": 143,
+      "overlapFromPrevious": 0,
+      "chapter": "02 · Review work before check-in",
+      "slot": "due",
+      "proofs": [
+        "ssop-link"
+      ],
+      "headline": "Open the linked SSOP.",
+      "body": "Blue Covers links to SSOP47.",
+      "emphasis": "Use the reference before inspecting.",
+      "narration": "Open the linked SSOP for the item's inspection reference.",
+      "from": 1676,
+      "voiceFromFrame": 0,
+      "voiceToFrame": 94,
+      "emphasisAtFrame": 72,
+      "focusAtFrame": 14,
+      "cueWords": {
+        "emphasis": "inspection reference",
+        "focus": "linked SSOP"
+      },
+      "auditRef": "docs/cln-verification-v4-builder-notes.md#narration-audit-and-audio-provenance",
+      "proofCueWords": [],
+      "proofFromFrames": [
+        0
+      ],
+      "plannedDurationInFrames": 120
+    },
+    {
+      "id": "ssop-reference",
+      "kind": "screen",
+      "durationInFrames": 155,
+      "overlapFromPrevious": 0,
+      "chapter": "02 · Review work before check-in",
+      "slot": "ssop",
+      "proofs": [
+        "reference"
+      ],
+      "headline": "Read the reference as it is.",
+      "body": "SSOP47 has no inspection-point or Safety / LOTO photos here.",
+      "emphasis": "Reference viewed; no check recorded.",
+      "narration": "No photos are present. Viewing this reference records no check.",
+      "from": 1819,
+      "voiceFromFrame": 0,
+      "voiceToFrame": 110,
+      "emphasisAtFrame": 93,
+      "focusAtFrame": 0,
+      "cueWords": {
+        "emphasis": "no check",
+        "focus": "No photos"
+      },
+      "auditRef": "docs/cln-verification-v4-builder-notes.md#narration-audit-and-audio-provenance",
+      "proofCueWords": [],
+      "proofFromFrames": [
+        0
+      ],
+      "plannedDurationInFrames": 150
+    },
+    {
+      "id": "off-schedule",
+      "kind": "screen",
+      "durationInFrames": 313,
+      "overlapFromPrevious": 0,
+      "chapter": "02 · Review work before check-in",
+      "slot": "off-schedule",
+      "proofs": [
+        "catalogue"
+      ],
+      "headline": "Work outside today's schedule?",
+      "body": "Off-schedule shows 14 weekly items and their next due dates. This example leaves them untouched.",
+      "emphasis": "Capture only work actually done.",
+      "narration": "Off-schedule lists fourteen weekly items. Check the next due date. These items stay untouched here. Record only work actually done.",
+      "from": 1974,
+      "voiceFromFrame": 0,
+      "voiceToFrame": 270,
+      "emphasisAtFrame": 239,
+      "focusAtFrame": 0,
+      "cueWords": {
+        "emphasis": "work actually done",
+        "focus": "Off-schedule"
+      },
+      "auditRef": "docs/cln-verification-v4-builder-notes.md#narration-audit-and-audio-provenance",
+      "proofCueWords": [],
+      "proofFromFrames": [
+        0
+      ],
+      "plannedDurationInFrames": 240
+    },
+    {
+      "id": "inspect-pass",
+      "kind": "screen",
+      "durationInFrames": 273,
+      "overlapFromPrevious": 0,
+      "chapter": "03 · Inspect and record",
+      "slot": "single-pass",
+      "proofs": [
+        "inspection"
+      ],
+      "headline": "Inspect first. Then pass.",
+      "body": "After check-in, inspect the actual condition before using the green tick. Inspect 1 first is still shown.",
+      "emphasis": "Pass follows an inspection.",
+      "narration": "After check-in, inspect the item. If it meets the cleaning requirements, tap its green tick.",
+      "from": 2287,
+      "voiceFromFrame": 0,
+      "voiceToFrame": 194,
+      "emphasisAtFrame": 36,
+      "focusAtFrame": 178,
+      "cueWords": {
+        "emphasis": "inspect the item",
+        "focus": "green tick"
+      },
+      "auditRef": "docs/cln-verification-v4-builder-notes.md#narration-audit-and-audio-provenance",
+      "proofCueWords": [],
+      "proofFromFrames": [
+        0
+      ],
+      "plannedDurationInFrames": 180
+    },
+    {
+      "id": "pass-inline-saved",
+      "kind": "screen",
+      "durationInFrames": 160,
+      "overlapFromPrevious": 0,
+      "chapter": "03 · Inspect and record",
+      "slot": "single-pass",
+      "proofs": [
+        "confirmation"
+      ],
+      "headline": "The pass saves inline.",
+      "body": "Dispensers has a green status dot and UNDO after saving.",
+      "emphasis": "Saved in the row.",
+      "narration": "The pass saves inline, with a green status and Undo.",
+      "from": 2560,
+      "voiceFromFrame": 0,
+      "voiceToFrame": 112,
+      "emphasisAtFrame": 12,
+      "focusAtFrame": 63,
+      "cueWords": {
+        "emphasis": "saves inline",
+        "focus": "green status"
+      },
+      "auditRef": "docs/cln-verification-v4-builder-notes.md#narration-audit-and-audio-provenance",
+      "proofCueWords": [],
+      "proofFromFrames": [
+        0
+      ],
+      "plannedDurationInFrames": 90
+    },
+    {
+      "id": "passed-state",
+      "kind": "screen",
+      "durationInFrames": 91,
+      "overlapFromPrevious": 0,
+      "chapter": "03 · Inspect and record",
+      "slot": "single-pass",
+      "proofs": [
+        "passed"
+      ],
+      "headline": "One check captured.",
+      "body": "Progress now reads 1 of 19.",
+      "emphasis": "The saved result is a pass.",
+      "narration": "Progress is now one of nineteen.",
+      "from": 2720,
+      "voiceFromFrame": 0,
+      "voiceToFrame": 44,
+      "emphasisAtFrame": 24,
+      "focusAtFrame": 0,
+      "cueWords": {
+        "emphasis": "one of nineteen",
+        "focus": "Progress"
+      },
+      "auditRef": "docs/cln-verification-v4-builder-notes.md#narration-audit-and-audio-provenance",
+      "proofCueWords": [],
+      "proofFromFrames": [
+        0
+      ],
+      "plannedDurationInFrames": 90
+    },
+    {
+      "id": "bulk-eligible",
+      "kind": "screen",
+      "durationInFrames": 383,
+      "overlapFromPrevious": 0,
+      "chapter": "03 · Inspect and record",
+      "slot": "frequency-pass-all",
+      "proofs": [
+        "eligible"
+      ],
+      "headline": "Daily Pass all unlocks.",
+      "body": "After that first Daily inspection, Pass all (18) becomes available. Record exceptions before using it.",
+      "emphasis": "Same frequency. Inspect first.",
+      "narration": "Daily Pass all becomes eligible after that first inspection of the same frequency. Eighteen remain; record the exceptions first.",
+      "from": 2811,
+      "voiceFromFrame": 0,
+      "voiceToFrame": 336,
+      "emphasisAtFrame": 188,
+      "focusAtFrame": 0,
+      "cueWords": {
+        "emphasis": "same frequency",
+        "focus": "Daily Pass all"
+      },
+      "auditRef": "docs/cln-verification-v4-builder-notes.md#narration-audit-and-audio-provenance",
+      "proofCueWords": [],
+      "proofFromFrames": [
+        0
+      ],
+      "plannedDurationInFrames": 210
+    },
+    {
+      "id": "major-form",
+      "kind": "screen",
+      "durationInFrames": 173,
+      "overlapFromPrevious": 0,
+      "chapter": "04 · Record exceptions honestly",
+      "slot": "major-fail",
+      "proofs": [
+        "form"
+      ],
+      "headline": "Record a failed check.",
+      "body": "The red cross opens the Remedial Action form.",
+      "emphasis": "Record the finding at the check.",
+      "narration": "For a failed check, tap the red cross to open Remedial Action.",
+      "from": 3194,
+      "voiceFromFrame": 0,
+      "voiceToFrame": 128,
+      "emphasisAtFrame": 12,
+      "focusAtFrame": 99,
+      "cueWords": {
+        "emphasis": "failed check",
+        "focus": "Remedial Action"
+      },
+      "auditRef": "docs/cln-verification-v4-builder-notes.md#narration-audit-and-audio-provenance",
+      "proofCueWords": [],
+      "proofFromFrames": [
+        0
+      ],
+      "plannedDurationInFrames": 150
+    },
+    {
+      "id": "major-fields",
+      "kind": "screen",
+      "durationInFrames": 400,
+      "overlapFromPrevious": 0,
+      "chapter": "04 · Record exceptions honestly",
+      "slot": "major-fail",
+      "proofs": [
+        "grade-reason"
+      ],
+      "headline": "Grade it and give the reason.",
+      "body": "Major is selected for Blue Covers. Grade and reason are required; action and photo are optional.",
+      "emphasis": "Use the grade that fits the finding.",
+      "narration": "Choose the appropriate grade, Major here. Give the required failure reason. Action taken and a genuine photo are optional.",
+      "from": 3367,
+      "voiceFromFrame": 0,
+      "voiceToFrame": 278,
+      "emphasisAtFrame": 23,
+      "focusAtFrame": 68,
+      "cueWords": {
+        "emphasis": "appropriate grade",
+        "focus": "Major"
+      },
+      "auditRef": "docs/cln-verification-v4-builder-notes.md#narration-audit-and-audio-provenance",
+      "proofCueWords": [],
+      "proofFromFrames": [
+        0
+      ],
+      "plannedDurationInFrames": 270
+    },
+    {
+      "id": "major-recorded",
+      "kind": "screen",
+      "durationInFrames": 377,
+      "overlapFromPrevious": 0,
+      "chapter": "04 · Record exceptions honestly",
+      "slot": "major-fail",
+      "proofs": [
+        "recorded"
+      ],
+      "headline": "The check is captured.",
+      "body": "The due occurrence is recorded. The Major finding remains open in Remedial.",
+      "emphasis": "Captured check. Follow-up still owed.",
+      "narration": "Submit. Task Completed confirms the capture. The due occurrence is recorded, while the finding remains open in Remedial and needs follow-up.",
+      "from": 3767,
+      "voiceFromFrame": 0,
+      "voiceToFrame": 336,
+      "emphasisAtFrame": 227,
+      "focusAtFrame": 39,
+      "cueWords": {
+        "emphasis": "remains open",
+        "focus": "Task Completed"
+      },
+      "auditRef": "docs/cln-verification-v4-builder-notes.md#narration-audit-and-audio-provenance",
+      "proofCueWords": [],
+      "proofFromFrames": [
+        0
+      ],
+      "plannedDurationInFrames": 240
+    },
+    {
+      "id": "critical-grade",
+      "kind": "screen",
+      "durationInFrames": 214,
+      "overlapFromPrevious": 0,
+      "chapter": "04 · Record exceptions honestly",
+      "slot": "critical-ncr",
+      "proofs": [
+        "grade"
+      ],
+      "headline": "Critical raises an NCR.",
+      "body": "Tables is the separate Critical example.",
+      "emphasis": "Record the severity honestly.",
+      "narration": "This separate Tables example is Critical. Submitting it raises an NCR.",
+      "from": 4144,
+      "voiceFromFrame": 0,
+      "voiceToFrame": 168,
+      "emphasisAtFrame": 62,
+      "focusAtFrame": 62,
+      "cueWords": {
+        "emphasis": "Critical",
+        "focus": "Critical"
+      },
+      "auditRef": "docs/cln-verification-v4-builder-notes.md#narration-audit-and-audio-provenance",
+      "proofCueWords": [],
+      "proofFromFrames": [
+        0
+      ],
+      "plannedDurationInFrames": 150
+    },
+    {
+      "id": "critical-ncr",
+      "kind": "screen",
+      "durationInFrames": 198,
+      "overlapFromPrevious": 0,
+      "chapter": "04 · Record exceptions honestly",
+      "slot": "critical-ncr",
+      "proofs": [
+        "ncr-queued"
+      ],
+      "headline": "An NCR has been raised.",
+      "body": "The native acknowledgement confirms the NCR. Its linked record remains open.",
+      "emphasis": "The NCR has its own workflow.",
+      "narration": "The app confirms an NCR has been raised. Its linked record remains open.",
+      "from": 4358,
+      "voiceFromFrame": 0,
+      "voiceToFrame": 153,
+      "emphasisAtFrame": 99,
+      "focusAtFrame": 37,
+      "cueWords": {
+        "emphasis": "linked record",
+        "focus": "NCR has been raised"
+      },
+      "auditRef": "docs/cln-verification-v4-builder-notes.md#narration-audit-and-audio-provenance",
+      "proofCueWords": [],
+      "proofFromFrames": [
+        0
+      ],
+      "plannedDurationInFrames": 120
+    },
+    {
+      "id": "unavailable-reason",
+      "kind": "screen",
+      "durationInFrames": 300,
+      "overlapFromPrevious": 0,
+      "chapter": "04 · Record exceptions honestly",
+      "slot": "couldnt-access",
+      "proofs": [
+        "reason"
+      ],
+      "headline": "Couldn't access the item?",
+      "body": "Choose Unavailable. Give the required reason and an optional next step.",
+      "emphasis": "Record the access problem honestly.",
+      "narration": "For Mixing Bowls, choose Unavailable. Record why access was not possible and the next step, if useful.",
+      "from": 4556,
+      "voiceFromFrame": 0,
+      "voiceToFrame": 255,
+      "emphasisAtFrame": 114,
+      "focusAtFrame": 57,
+      "cueWords": {
+        "emphasis": "why access",
+        "focus": "Unavailable"
+      },
+      "auditRef": "docs/cln-verification-v4-builder-notes.md#narration-audit-and-audio-provenance",
+      "proofCueWords": [],
+      "proofFromFrames": [
+        0
+      ],
+      "plannedDurationInFrames": 180
+    },
+    {
+      "id": "unavailable-result",
+      "kind": "screen",
+      "durationInFrames": 182,
+      "overlapFromPrevious": 0,
+      "chapter": "04 · Record exceptions honestly",
+      "slot": "couldnt-access",
+      "proofs": [
+        "recorded"
+      ],
+      "headline": "Unavailable is recorded.",
+      "body": "The acknowledgement records an availability note for follow-up.",
+      "emphasis": "This outcome is not a pass.",
+      "narration": "Unavailable recorded confirms the access outcome. It is not a pass.",
+      "from": 4856,
+      "voiceFromFrame": 0,
+      "voiceToFrame": 136,
+      "emphasisAtFrame": 121,
+      "focusAtFrame": 0,
+      "cueWords": {
+        "emphasis": "not a pass",
+        "focus": "Unavailable recorded"
+      },
+      "auditRef": "docs/cln-verification-v4-builder-notes.md#narration-audit-and-audio-provenance",
+      "proofCueWords": [],
+      "proofFromFrames": [
+        0
+      ],
+      "plannedDurationInFrames": 120
+    },
+    {
+      "id": "bulk-confirm",
+      "kind": "screen",
+      "durationInFrames": 435,
+      "overlapFromPrevious": 0,
+      "chapter": "05 · Finish the same frequency",
+      "slot": "frequency-pass-all",
+      "proofs": [
+        "confirmation"
+      ],
+      "headline": "Confirm the 15 Daily checks.",
+      "body": "Premix Area only. The individual pass, Major, Critical and unavailable occurrences are excluded.",
+      "emphasis": "Confirm only work checked clean.",
+      "narration": "Now Pass all covers fifteen remaining Daily checks in Premix Area. The individual pass and three exceptions are excluded. Confirm only work checked clean.",
+      "from": 5038,
+      "voiceFromFrame": 0,
+      "voiceToFrame": 387,
+      "emphasisAtFrame": 57,
+      "focusAtFrame": 57,
+      "cueWords": {
+        "emphasis": "remaining Daily checks",
+        "focus": "remaining Daily checks"
+      },
+      "auditRef": "docs/cln-verification-v4-builder-notes.md#narration-audit-and-audio-provenance",
+      "proofCueWords": [],
+      "proofFromFrames": [
+        0
+      ],
+      "plannedDurationInFrames": 150
+    },
+    {
+      "id": "bulk-result",
+      "kind": "screen",
+      "durationInFrames": 361,
+      "overlapFromPrevious": 0,
+      "chapter": "05 · Finish the same frequency",
+      "slot": "frequency-pass-all",
+      "proofs": [
+        "result"
+      ],
+      "headline": "Completed keeps the exceptions.",
+      "body": "19 of 19 completed: 16 passes, 2 failures and 1 unavailable. Tables shows NCR raised.",
+      "emphasis": "Bulk pass leaves findings open.",
+      "narration": "Nineteen completed includes sixteen passes, two failures and one unavailable. Tables shows NCR raised; the findings stay open.",
+      "from": 5473,
+      "voiceFromFrame": 0,
+      "voiceToFrame": 318,
+      "emphasisAtFrame": 281,
+      "focusAtFrame": 201,
+      "cueWords": {
+        "emphasis": "findings stay open",
+        "focus": "Tables"
+      },
+      "auditRef": "docs/cln-verification-v4-builder-notes.md#narration-audit-and-audio-provenance",
+      "proofCueWords": [],
+      "proofFromFrames": [
+        0
+      ],
+      "plannedDurationInFrames": 150
+    },
+    {
+      "id": "open-bands",
+      "kind": "screen",
+      "durationInFrames": 460,
+      "overlapFromPrevious": 0,
+      "chapter": "06 · Follow through",
+      "slot": "four-band-open",
+      "proofs": [
+        "still-to-do",
+        "passed",
+        "follow-up-owed",
+        "couldnt-access"
+      ],
+      "headline": "Read the four bands.",
+      "body": "216 still to do · 16 passed · 2 follow-up owed · 1 couldn’t access",
+      "emphasis": "19 captured out of 235 scheduled.",
+      "narration": "Still to do is two hundred and sixteen. Passed is sixteen; follow-up owed is two; couldn't access is one. Nineteen scheduled checks are captured.",
+      "from": 5834,
+      "voiceFromFrame": 0,
+      "voiceToFrame": 413,
+      "emphasisAtFrame": 356,
+      "focusAtFrame": 0,
+      "cueWords": {
+        "emphasis": "scheduled checks",
+        "focus": "Still to do"
+      },
+      "auditRef": "docs/cln-verification-v4-builder-notes.md#narration-audit-and-audio-provenance",
+      "proofCueWords": [
+        "Still to do",
+        "Passed",
+        "follow-up owed",
+        "couldn't access"
+      ],
+      "proofFromFrames": [
+        0,
+        110,
+        169,
+        261
+      ],
+      "plannedDurationInFrames": 300
+    },
+    {
+      "id": "follow-queue",
+      "kind": "screen",
+      "durationInFrames": 263,
+      "overlapFromPrevious": 0,
+      "chapter": "06 · Follow through",
+      "slot": "follow-ups-close",
+      "proofs": [
+        "queue"
+      ],
+      "headline": "Find the Cleaning follow-up.",
+      "body": "Follow-ups shows the open Major finding, filtered to Blue Covers.",
+      "emphasis": "Review, correct, then recheck.",
+      "narration": "Open Follow-ups and find the Cleaning finding. Review the reason, arrange the correction, and recheck.",
+      "from": 6294,
+      "voiceFromFrame": 0,
+      "voiceToFrame": 217,
+      "emphasisAtFrame": 204,
+      "focusAtFrame": 64,
+      "cueWords": {
+        "emphasis": "recheck",
+        "focus": "Cleaning finding"
+      },
+      "auditRef": "docs/cln-verification-v4-builder-notes.md#narration-audit-and-audio-provenance",
+      "proofCueWords": [],
+      "proofFromFrames": [
+        0
+      ],
+      "plannedDurationInFrames": 180
+    },
+    {
+      "id": "follow-expand",
+      "kind": "screen",
+      "durationInFrames": 268,
+      "overlapFromPrevious": 0,
+      "chapter": "06 · Follow through",
+      "slot": "follow-ups-close",
+      "proofs": [
+        "confirm-followed-up"
+      ],
+      "headline": "Verify before closing.",
+      "body": "After correction and recheck, select CONFIRM FOLLOWED UP on the finding.",
+      "emphasis": "CONFIRM FOLLOWED UP",
+      "narration": "After correction and recheck, select Confirm Followed Up to close the finding.",
+      "from": 6557,
+      "voiceFromFrame": 0,
+      "voiceToFrame": 164,
+      "emphasisAtFrame": 64,
+      "focusAtFrame": 64,
+      "cueWords": {
+        "emphasis": "Confirm Followed Up",
+        "focus": "Confirm Followed Up"
+      },
+      "auditRef": "docs/cln-verification-v4-builder-notes.md#narration-audit-and-audio-provenance",
+      "proofCueWords": [],
+      "proofFromFrames": [
+        0
+      ],
+      "plannedDurationInFrames": 180
+    },
+    {
+      "id": "follow-confirm",
+      "kind": "screen",
+      "durationInFrames": 180,
+      "overlapFromPrevious": 0,
+      "chapter": "06 · Follow through",
+      "slot": "follow-ups-close",
+      "proofs": [
+        "confirmation"
+      ],
+      "headline": "Record the follow-up.",
+      "body": "Add an optional truthful note or genuine photo, then select the inner CONFIRM.",
+      "emphasis": "The sign-off follows the recheck.",
+      "narration": "Add an optional note or genuine photo, then select the inner Confirm.",
+      "from": 6825,
+      "voiceFromFrame": 0,
+      "voiceToFrame": 132,
+      "emphasisAtFrame": 115,
+      "focusAtFrame": 115,
+      "cueWords": {
+        "emphasis": "inner Confirm",
+        "focus": "inner Confirm"
+      },
+      "auditRef": "docs/cln-verification-v4-builder-notes.md#narration-audit-and-audio-provenance",
+      "proofCueWords": [],
+      "proofFromFrames": [
+        0
+      ],
+      "plannedDurationInFrames": 180
+    },
+    {
+      "id": "follow-result",
+      "kind": "screen",
+      "durationInFrames": 152,
+      "overlapFromPrevious": 0,
+      "chapter": "06 · Follow through",
+      "slot": "follow-ups-close",
+      "proofs": [
+        "closed-result"
+      ],
+      "headline": "Blue Covers leaves the queue.",
+      "body": "The Blue Covers search has no matches. Total open Cleaning findings falls from 4 to 3.",
+      "emphasis": "Closure removes this open finding.",
+      "narration": "Blue Covers leaves the open queue. The search now has no matches.",
+      "from": 7005,
+      "voiceFromFrame": 0,
+      "voiceToFrame": 105,
+      "emphasisAtFrame": 17,
+      "focusAtFrame": 92,
+      "cueWords": {
+        "emphasis": "leaves the open queue",
+        "focus": "no matches"
+      },
+      "auditRef": "docs/cln-verification-v4-builder-notes.md#narration-audit-and-audio-provenance",
+      "proofCueWords": [],
+      "proofFromFrames": [
+        0
+      ],
+      "plannedDurationInFrames": 120
+    },
+    {
+      "id": "resolved-bands",
+      "kind": "screen",
+      "durationInFrames": 627,
+      "overlapFromPrevious": 0,
+      "chapter": "06 · Follow through",
+      "slot": "five-band-resolved",
+      "proofs": [
+        "still-to-do",
+        "passed",
+        "follow-up-owed",
+        "couldnt-access",
+        "resolved-today"
+      ],
+      "headline": "Read the five bands.",
+      "body": "Still to do 216 · Passed 16 · Follow-up owed 1 · Couldn’t access 1 · Resolved today 1",
+      "emphasis": "19 captured and 216 outstanding stay unchanged.",
+      "narration": "Still to do stays at two hundred and sixteen. Passed stays sixteen; follow-up owed drops to one; couldn't access stays one. Blue Covers is resolved today. Its original fail and nineteen captured checks are unchanged.",
+      "from": 7157,
+      "voiceFromFrame": 0,
+      "voiceToFrame": 574,
+      "emphasisAtFrame": 558,
+      "focusAtFrame": 0,
+      "cueWords": {
+        "emphasis": "unchanged",
+        "focus": "Still to do"
+      },
+      "auditRef": "docs/cln-verification-v4-builder-notes.md#narration-audit-and-audio-provenance",
+      "proofCueWords": [
+        "Still to do",
+        "Passed",
+        "follow-up owed",
+        "couldn't access",
+        "Blue Covers"
+      ],
+      "proofFromFrames": [
+        0,
+        112,
+        190,
+        276,
+        361
+      ],
+      "plannedDurationInFrames": 360
+    },
+    {
+      "id": "handoff",
+      "kind": "handoff",
+      "durationInFrames": 331,
+      "overlapFromPrevious": 0,
+      "chapter": "Keep the loop moving",
+      "slot": null,
+      "proofs": [],
+      "headline": "Check. Record. Follow up.",
+      "body": "Cleaning covers scheduled checks and immediate follow-up.",
+      "emphasis": "Next: Remedial Action",
+      "narration": "That is the scheduled check and immediate follow-up loop. The Remedial video explains persistent findings and Inspection Remedials that carry over.",
+      "from": 7784,
+      "voiceFromFrame": 0,
+      "voiceToFrame": 288,
+      "emphasisAtFrame": 63,
+      "focusAtFrame": 126,
+      "cueWords": {
+        "emphasis": "immediate follow-up loop",
+        "focus": "Remedial video"
+      },
+      "auditRef": "docs/cln-verification-v4-builder-notes.md#narration-audit-and-audio-provenance",
+      "proofCueWords": [],
+      "proofFromFrames": [],
+      "plannedDurationInFrames": 210
+    },
+    {
+      "id": "outro",
+      "kind": "outro",
+      "durationInFrames": 180,
+      "overlapFromPrevious": 0,
+      "chapter": "Cleaning Verification",
+      "slot": null,
+      "proofs": [],
+      "headline": "Check. Record. Follow up.",
+      "body": "Keep the check honest. Follow the finding through.",
+      "emphasis": "e-wizer field guide",
+      "narration": "",
+      "from": 8115,
+      "voiceFromFrame": 0,
+      "voiceToFrame": 0,
+      "emphasisAtFrame": 0,
+      "focusAtFrame": 0,
+      "proofCueWords": [],
+      "proofFromFrames": []
+    }
+  ],
+  "audioPrepRef": "src/cln/audio-v4.json"
+}

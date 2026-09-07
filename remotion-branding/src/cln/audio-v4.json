@@ -1,0 +1,4185 @@
+{
+  "schemaVersion": 1,
+  "status": "approved-recording",
+  "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+  "voiceNameInSeries": "Daniel",
+  "provider": "ElevenLabs",
+  "model": "eleven_multilingual_v2",
+  "voiceSettings": {
+    "stability": 0.55,
+    "similarity_boost": 0.8,
+    "style": 0.35,
+    "use_speaker_boost": true
+  },
+  "voiceConfigRef": "src/cln/narration.json",
+  "workflowRef": "../packages/backend/scripts/generate-cln-tutorial-audio.ts",
+  "transcriptionWorkflowRef": "tools/transcribe-cln-v4-local.py",
+  "transcription": {
+    "provider": "local-faster-whisper",
+    "model": "Systran/faster-whisper-small",
+    "modelPath": "/home/durai/.cache/huggingface/hub/models--Systran--faster-whisper-small/snapshots/536b0662742c02347bc0e980a01041f333bce120",
+    "modelRevision": "536b0662742c02347bc0e980a01041f333bce120",
+    "modelFiles": [
+      {
+        "name": "model.bin",
+        "bytes": 483546902,
+        "sha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671"
+      },
+      {
+        "name": "config.json",
+        "bytes": 2370,
+        "sha256": "b55496ac7940a7ae47d2c01eab40edfd8701feec1229d9cce3b40014383fb828"
+      },
+      {
+        "name": "tokenizer.json",
+        "bytes": 2203239,
+        "sha256": "fb7b63191e9bb045082c79fd742a3106a12c99513ab30df4a0d47fa6cb6fd0ab"
+      },
+      {
+        "name": "vocabulary.txt",
+        "bytes": 459861,
+        "sha256": "34ce3fe1c5041027b3f8d42912270993f986dbc4bb34cf27f951e34a1e453913"
+      }
+    ],
+    "versions": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.8.2",
+      "av": "18.1.0",
+      "tokenizers": "0.23.2"
+    },
+    "pythonVersion": "3.12.3",
+    "pythonExecutable": "/tmp/si-units-faster-whisper/bin/python",
+    "device": "cpu",
+    "computeType": "int8",
+    "cpuThreads": 4,
+    "numWorkers": 1,
+    "localFilesOnly": true,
+    "settings": {
+      "language": "en",
+      "word_timestamps": true,
+      "beam_size": 5,
+      "temperature": 0,
+      "condition_on_previous_text": false,
+      "vad_filter": false,
+      "hotwords": "Bakery Demo, Bill of Health, Premix Area, SSOP, NCR, Remedial, none captured, Still to do, Passed, Follow-up owed, Couldn't access, Resolved today, Pass all, Daily."
+    },
+    "helper": {
+      "name": "transcribe-cln-v4-local.py",
+      "bytes": 4483,
+      "sha256": "20f171356c11b09b96a919c2f3188920a47d908cf0e285930f0c2600d01745af"
+    },
+    "workflowRef": "../packages/backend/src/scripts/transcribe-mechanics-si-units-local.py"
+  },
+  "leadFrames": 18,
+  "interBeatGapFrames": 29,
+  "transitionOverlapFrames": 0,
+  "note": "Established 0.6s lead and 0.95s gap, rounded up to whole frames. Persisted audio bytes and measured Whisper words drive playback; generation is never repeated during rendering. No approval is inferred from generation.",
+  "generatedClips": [
+    {
+      "id": "scan-entry",
+      "audio": {
+        "path": "cln-tutorial/v4-audio/scan-entry-57f696ed08c3.mp3",
+        "bytes": 36824,
+        "sha256": "2e7062bc23a504b6b0f2cd2e7d169e0b9c7bf37e3574cd45b70bb8405561416a"
+      },
+      "receipt": {
+        "path": "cln-tutorial/v4-audio/scan-entry-57f696ed08c3-provenance.json",
+        "bytes": 669,
+        "sha256": "f2198d3136340cf301b6f09709ae906980bf52eb96bcfd02e8193cfc85b1873b"
+      },
+      "durationSeconds": 2.272653
+    },
+    {
+      "id": "controlled-scan",
+      "audio": {
+        "path": "cln-tutorial/v4-audio/controlled-scan-b75e7f5f0d3b.mp3",
+        "bytes": 68589,
+        "sha256": "51220186234c59fcfc03946175d2d1aaaa9d3a56790159b045bc5d7fe02a0c88"
+      },
+      "receipt": {
+        "path": "cln-tutorial/v4-audio/controlled-scan-b75e7f5f0d3b-provenance.json",
+        "bytes": 706,
+        "sha256": "f4b9ac854d775064514984d30e5225a13da582bf2750b45442e8173a696c890f"
+      },
+      "durationSeconds": 4.257959
+    },
+    {
+      "id": "unlocked",
+      "audio": {
+        "path": "cln-tutorial/v4-audio/unlocked-cefe5ad97059.mp3",
+        "bytes": 91577,
+        "sha256": "6350c44fcfd6e8e4b40418d92bb14c4076a50f87149e9ed0e08ca86acdf48b8d"
+      },
+      "receipt": {
+        "path": "cln-tutorial/v4-audio/unlocked-cefe5ad97059-provenance.json",
+        "bytes": 703,
+        "sha256": "e31bc4e9bd285a0b5e94d28049be4d3917f316d24fc7b10f12bb3ea594c35b9d"
+      },
+      "durationSeconds": 5.694694
+    },
+    {
+      "id": "home",
+      "audio": {
+        "path": "cln-tutorial/v4-audio/home-124a31269b0d.mp3",
+        "bytes": 86561,
+        "sha256": "bbd92017b6106cf822eef028937ff17a5f7539f316f24236d1356ee5a5dbf4d0"
+      },
+      "receipt": {
+        "path": "cln-tutorial/v4-audio/home-124a31269b0d-provenance.json",
+        "bytes": 707,
+        "sha256": "fcba28f2561372a60812a5f81c0c8d489a20f9489ad8a71d06bd1df57fa3937c"
+      },
+      "durationSeconds": 5.381224
+    },
+    {
+      "id": "boh",
+      "audio": {
+        "path": "cln-tutorial/v4-audio/boh-54f73a26385c.mp3",
+        "bytes": 106623,
+        "sha256": "687a502c230adbbb102624f239d5b90a246af0027f07a9273b2213b016aefff6"
+      },
+      "receipt": {
+        "path": "cln-tutorial/v4-audio/boh-54f73a26385c-provenance.json",
+        "bytes": 721,
+        "sha256": "0b6b628f86bb2ad3cc6ef46dbf3007da17aff720a07a7cc6c84f0fc6abfffe7b"
+      },
+      "durationSeconds": 6.635102
+    },
+    {
+      "id": "baseline",
+      "audio": {
+        "path": "cln-tutorial/v4-audio/baseline-885c90ce4af4.mp3",
+        "bytes": 119998,
+        "sha256": "93cf0c46989c803c33452629e6c36a0933bd752017a52a339fe62a6b4f007f1c"
+      },
+      "receipt": {
+        "path": "cln-tutorial/v4-audio/baseline-885c90ce4af4-provenance.json",
+        "bytes": 734,
+        "sha256": "eca1d43fad530ecf3af39a2cd5f7d8e2578ae7fe49111621ec8184abc52ef4e2"
+      },
+      "durationSeconds": 7.47102
+    },
+    {
+      "id": "due",
+      "audio": {
+        "path": "cln-tutorial/v4-audio/due-7b9925b5e652.mp3",
+        "bytes": 85725,
+        "sha256": "98e9e864d8ecca7f50999616e2319651d34c8e35adfc5e9105df35640bb81523"
+      },
+      "receipt": {
+        "path": "cln-tutorial/v4-audio/due-7b9925b5e652-provenance.json",
+        "bytes": 702,
+        "sha256": "6ded4ad2b9b85a293b446ab4c4dc96856eed318e5b09547ee41db0e379d0c710"
+      },
+      "durationSeconds": 5.32898
+    },
+    {
+      "id": "ssop-link",
+      "audio": {
+        "path": "cln-tutorial/v4-audio/ssop-link-51e11e9cbfcc.mp3",
+        "bytes": 61066,
+        "sha256": "752d47ec8a7b6fa3aca09eb301935908bcf92dcc1f8987045b27dbf9956f7b45"
+      },
+      "receipt": {
+        "path": "cln-tutorial/v4-audio/ssop-link-51e11e9cbfcc-provenance.json",
+        "bytes": 694,
+        "sha256": "44c347d8c6a83f1c5636b579cdbfa835fbc4fc8e38e7561e32f0f6a0ce7f7b14"
+      },
+      "durationSeconds": 3.787755
+    },
+    {
+      "id": "ssop-reference",
+      "audio": {
+        "path": "cln-tutorial/v4-audio/ssop-reference-124058da3cdc.mp3",
+        "bytes": 67335,
+        "sha256": "379e5b210cb6d755fb05ec5e4017e3ea427da4db79376ff04337af11c59a57df"
+      },
+      "receipt": {
+        "path": "cln-tutorial/v4-audio/ssop-reference-124058da3cdc-provenance.json",
+        "bytes": 705,
+        "sha256": "958170c754124e0bd433e60115b8ba59f53a8231aa3d7cbb98463dc9fd369948"
+      },
+      "durationSeconds": 4.179592
+    },
+    {
+      "id": "off-schedule",
+      "audio": {
+        "path": "cln-tutorial/v4-audio/off-schedule-6dcd1d7ff71c.mp3",
+        "bytes": 151763,
+        "sha256": "48adad26cf87a4b04f5ae12cf85008dc0bc5ac5e5a7b5c16cc66a99b7dc33c61"
+      },
+      "receipt": {
+        "path": "cln-tutorial/v4-audio/off-schedule-6dcd1d7ff71c-provenance.json",
+        "bytes": 772,
+        "sha256": "07a7af7a30c44c667c315824a2122a13314b6d34b18df1157c4253eaa757320a"
+      },
+      "durationSeconds": 9.456327
+    },
+    {
+      "id": "inspect-pass",
+      "audio": {
+        "path": "cln-tutorial/v4-audio/inspect-pass-d2da1c883f50.mp3",
+        "bytes": 111639,
+        "sha256": "600f1474b13a1a37c91fad9e56a81339972547d0a520c9364cc1b8c67cb2b8b9"
+      },
+      "receipt": {
+        "path": "cln-tutorial/v4-audio/inspect-pass-d2da1c883f50-provenance.json",
+        "bytes": 733,
+        "sha256": "b528e9d15aaa740e2c24d1b25f970f30d632c67dfb25d981bb7e85f900cb127b"
+      },
+      "durationSeconds": 6.948571
+    },
+    {
+      "id": "pass-inline-saved",
+      "audio": {
+        "path": "cln-tutorial/v4-audio/pass-inline-saved-12d1162cc342.mp3",
+        "bytes": 70261,
+        "sha256": "3259600b027022d76811a099ce9b2c8f55b67537c50d31a172093271332dc885"
+      },
+      "receipt": {
+        "path": "cln-tutorial/v4-audio/pass-inline-saved-12d1162cc342-provenance.json",
+        "bytes": 697,
+        "sha256": "5491b92117bb12c3390711c08c56b2d80a6245f37d486d31b1f4843f658741f9"
+      },
+      "durationSeconds": 4.362449
+    },
+    {
+      "id": "passed-state",
+      "audio": {
+        "path": "cln-tutorial/v4-audio/passed-state-49137986cbe7.mp3",
+        "bytes": 33062,
+        "sha256": "d718f4e0b8608175cd4a88a017cdbab2dc829d082bc3d0ab900dddd4aab02aab"
+      },
+      "receipt": {
+        "path": "cln-tutorial/v4-audio/passed-state-49137986cbe7-provenance.json",
+        "bytes": 672,
+        "sha256": "01d3e236a0092813aee520d12e93fc99ad46c2d807f093a5c2182c894b454c8b"
+      },
+      "durationSeconds": 2.037551
+    },
+    {
+      "id": "bulk-eligible",
+      "audio": {
+        "path": "cln-tutorial/v4-audio/bulk-eligible-9fa29c40578e.mp3",
+        "bytes": 188961,
+        "sha256": "874b7aecdcfec48e71e3758a59e3556db27c12ece3fd082fe69c3593b22e0a74"
+      },
+      "receipt": {
+        "path": "cln-tutorial/v4-audio/bulk-eligible-9fa29c40578e-provenance.json",
+        "bytes": 770,
+        "sha256": "c41e04685497b765e005ffcd705893cd02d799484472c054a7dc2e75b7edf465"
+      },
+      "durationSeconds": 11.781224
+    },
+    {
+      "id": "major-form",
+      "audio": {
+        "path": "cln-tutorial/v4-audio/major-form-2ab25b2c0f10.mp3",
+        "bytes": 76948,
+        "sha256": "edcad6e150b9bca15da828ddaa75e51565de0a1235c046a3855cea32b199c3d6"
+      },
+      "receipt": {
+        "path": "cln-tutorial/v4-audio/major-form-2ab25b2c0f10-provenance.json",
+        "bytes": 700,
+        "sha256": "3df47754d2ebc2af634a26d5918ae82e281c7d9ab22ee61a54c79da13fc85c86"
+      },
+      "durationSeconds": 4.780408
+    },
+    {
+      "id": "major-fields",
+      "audio": {
+        "path": "cln-tutorial/v4-audio/major-fields-8060c2085930.mp3",
+        "bytes": 157196,
+        "sha256": "055c040c9e4a9ae861a72df19fa57ade968896054ac6981c6d4d9b0b3611a986"
+      },
+      "receipt": {
+        "path": "cln-tutorial/v4-audio/major-fields-8060c2085930-provenance.json",
+        "bytes": 763,
+        "sha256": "2a294a9aab18544f60f9d9febfec9ab0cbc7c61d951af44e2f388f33cd10ae90"
+      },
+      "durationSeconds": 9.795918
+    },
+    {
+      "id": "major-recorded",
+      "audio": {
+        "path": "cln-tutorial/v4-audio/major-recorded-8f6d471c2020.mp3",
+        "bytes": 186035,
+        "sha256": "5418856ff6454f4adddaaa6d41ef6d0f220f6f214803e22b7999ba883cc8ceda"
+      },
+      "receipt": {
+        "path": "cln-tutorial/v4-audio/major-recorded-8f6d471c2020-provenance.json",
+        "bytes": 783,
+        "sha256": "98fe222992f5fe6249f4cee02dab886dd6062045a724d9d72a96959858ac003e"
+      },
+      "durationSeconds": 11.598367
+    },
+    {
+      "id": "critical-grade",
+      "audio": {
+        "path": "cln-tutorial/v4-audio/critical-grade-ddff4187e142.mp3",
+        "bytes": 99100,
+        "sha256": "2e15e1f451d48739c1fd30461be09d90f78517385ca8282954e67001a25eba9a"
+      },
+      "receipt": {
+        "path": "cln-tutorial/v4-audio/critical-grade-ddff4187e142-provenance.json",
+        "bytes": 712,
+        "sha256": "2cecd2ed9b5120b42afcb02879f6ad49cee8608150c0552c5e5350825d45cd9f"
+      },
+      "durationSeconds": 6.164898
+    },
+    {
+      "id": "critical-ncr",
+      "audio": {
+        "path": "cln-tutorial/v4-audio/critical-ncr-21777d6c37f0.mp3",
+        "bytes": 90323,
+        "sha256": "da5cbdac14507ebbcbc794ffc63754be5b48fd518c200539308b0756944be8fb"
+      },
+      "receipt": {
+        "path": "cln-tutorial/v4-audio/critical-ncr-21777d6c37f0-provenance.json",
+        "bytes": 712,
+        "sha256": "af11cc5322ab07f18d75c99f3b763e9e81a0c835139b54ab37656d9e10ac22d9"
+      },
+      "durationSeconds": 5.616327
+    },
+    {
+      "id": "unavailable-reason",
+      "audio": {
+        "path": "cln-tutorial/v4-audio/unavailable-reason-1b930cd13bc5.mp3",
+        "bytes": 144657,
+        "sha256": "e2ac77a4361fe3a1dfe1f346c4025978b6a86b474562f01a10815ba5e3d1c9bc"
+      },
+      "receipt": {
+        "path": "cln-tutorial/v4-audio/unavailable-reason-1b930cd13bc5-provenance.json",
+        "bytes": 749,
+        "sha256": "41eab71563c36ee6dc8af1426b89aaa9281afa6f64cc5752880cf76c6319587d"
+      },
+      "durationSeconds": 9.012245
+    },
+    {
+      "id": "unavailable-result",
+      "audio": {
+        "path": "cln-tutorial/v4-audio/unavailable-result-830c6221ff16.mp3",
+        "bytes": 81964,
+        "sha256": "842e071b9c16f297d035203e089bc5c3f52c2c6b7a78094bc3ab2f3279919569"
+      },
+      "receipt": {
+        "path": "cln-tutorial/v4-audio/unavailable-result-830c6221ff16-provenance.json",
+        "bytes": 713,
+        "sha256": "3e5dbc19c6487929d5bb5ab9b76ffe3501edf0648d60a7cc5e86558864d02d95"
+      },
+      "durationSeconds": 5.093878
+    },
+    {
+      "id": "bulk-confirm",
+      "audio": {
+        "path": "cln-tutorial/v4-audio/bulk-confirm-ec29d78269ce.mp3",
+        "bytes": 216546,
+        "sha256": "027bb6e625259db4f3ca7f9f48d2c243761ce267740fa9fb311e6428dd9386dd"
+      },
+      "receipt": {
+        "path": "cln-tutorial/v4-audio/bulk-confirm-ec29d78269ce-provenance.json",
+        "bytes": 795,
+        "sha256": "c17660d5c30fc1f3ecf101506ca54f6765ce604b3c9cd0e62c77bd47509a99d7"
+      },
+      "durationSeconds": 13.505306
+    },
+    {
+      "id": "bulk-result",
+      "audio": {
+        "path": "cln-tutorial/v4-audio/bulk-result-435d9d1c0382.mp3",
+        "bytes": 177258,
+        "sha256": "91455eee6c59abcfcc5258827a6ca953c81c2bf4b7add944ac4e0b57a0e48683"
+      },
+      "receipt": {
+        "path": "cln-tutorial/v4-audio/bulk-result-435d9d1c0382-provenance.json",
+        "bytes": 766,
+        "sha256": "eb1fc1724a2209e374a1dfdbbe6f03ec184e220de03a7ef22e90cd7690e6007b"
+      },
+      "durationSeconds": 11.049796
+    },
+    {
+      "id": "open-bands",
+      "audio": {
+        "path": "cln-tutorial/v4-audio/open-bands-044f75c85510.mp3",
+        "bytes": 229921,
+        "sha256": "bf4fc42121084230b85571686231a36452d3a8aaf71a14c05f024c47e3ea4289"
+      },
+      "receipt": {
+        "path": "cln-tutorial/v4-audio/open-bands-044f75c85510-provenance.json",
+        "bytes": 784,
+        "sha256": "91fcf71db1c9f90e00cd9a824248517a88448d4775662788f36d4269cfaee64f"
+      },
+      "durationSeconds": 14.341224
+    },
+    {
+      "id": "follow-queue",
+      "audio": {
+        "path": "cln-tutorial/v4-audio/follow-queue-a01ccdb565ad.mp3",
+        "bytes": 125013,
+        "sha256": "c068aa580412af399dbcb9eed9ad529db155ddcf76005cc0284ca82750ff476a"
+      },
+      "receipt": {
+        "path": "cln-tutorial/v4-audio/follow-queue-a01ccdb565ad-provenance.json",
+        "bytes": 743,
+        "sha256": "5fa5d348fd6dfc775d8d4b0286705a2a23cfcf62d9474f536b2c705b4dcdfa4e"
+      },
+      "durationSeconds": 7.78449
+    },
+    {
+      "id": "follow-expand",
+      "audio": {
+        "path": "cln-tutorial/v4-audio/follow-expand-fca983ec0283.mp3",
+        "bytes": 96174,
+        "sha256": "7c4eecaf5b8276aaade8762da53f780bea7f3122a039b00d913f9359fbf7e649"
+      },
+      "receipt": {
+        "path": "cln-tutorial/v4-audio/follow-expand-fca983ec0283-provenance.json",
+        "bytes": 719,
+        "sha256": "0677dd7828fc7709563c140664e891a6845b94451777a245b50517c6b3aaf99b"
+      },
+      "durationSeconds": 5.982041
+    },
+    {
+      "id": "follow-confirm",
+      "audio": {
+        "path": "cln-tutorial/v4-audio/follow-confirm-d0021e50a063.mp3",
+        "bytes": 80710,
+        "sha256": "3baa6defe93826fd6dbfe31dc9c5e1b5b73570cf84f515c2f20d4575f4f361f5"
+      },
+      "receipt": {
+        "path": "cln-tutorial/v4-audio/follow-confirm-d0021e50a063-provenance.json",
+        "bytes": 711,
+        "sha256": "ef0b5ee6f54482b718451c725bf4453cb0c098bcf37caa7007f02c77fce2e912"
+      },
+      "durationSeconds": 5.01551
+    },
+    {
+      "id": "follow-result",
+      "audio": {
+        "path": "cln-tutorial/v4-audio/follow-result-d9dfde10db60.mp3",
+        "bytes": 65663,
+        "sha256": "8878e3c07fa6087143fccf6da4070c21ba57659d8e96faa4b3c6bf68e476d9c4"
+      },
+      "receipt": {
+        "path": "cln-tutorial/v4-audio/follow-result-d9dfde10db60-provenance.json",
+        "bytes": 706,
+        "sha256": "e3c2f13abd4c1b75b0f4b38f2d22daed849f29d333e08f00b613296275277bb4"
+      },
+      "durationSeconds": 4.075102
+    },
+    {
+      "id": "resolved-bands",
+      "audio": {
+        "path": "cln-tutorial/v4-audio/resolved-bands-aaa27ab09111.mp3",
+        "bytes": 318946,
+        "sha256": "cff7bb2e20f4c56a7cd4ef10a837f1068969bb536e810719e83e90b7aba84483"
+      },
+      "receipt": {
+        "path": "cln-tutorial/v4-audio/resolved-bands-aaa27ab09111-provenance.json",
+        "bytes": 859,
+        "sha256": "560a011a3fa8faac451566d9ab405ab4f62a062d537303aa2ea64cd24a43afb6"
+      },
+      "durationSeconds": 19.905306
+    },
+    {
+      "id": "handoff",
+      "audio": {
+        "path": "cln-tutorial/v4-audio/handoff-a31cfa42c5b7.mp3",
+        "bytes": 161376,
+        "sha256": "0088021120fa5728e0bc93b55471ae5fe7f4034b21d34576fbd1e15058957617"
+      },
+      "receipt": {
+        "path": "cln-tutorial/v4-audio/handoff-a31cfa42c5b7-provenance.json",
+        "bytes": 783,
+        "sha256": "2f48b13e7875f8ea1d6fdae9686cbda814ec032ac8e2ee3ad3587dbcbde167aa"
+      },
+      "durationSeconds": 10.057143
+    }
+  ],
+  "clips": [
+    {
+      "id": "scan-entry",
+      "script": "From Home, tap the bottom Scan.",
+      "requestHash": "57f696ed08c321055077c059564eb7e91de0c58f1da860ef1880ee33847c2122",
+      "audio": {
+        "path": "cln-tutorial/v4-audio/scan-entry-57f696ed08c3.mp3",
+        "bytes": 36824,
+        "sha256": "2e7062bc23a504b6b0f2cd2e7d169e0b9c7bf37e3574cd45b70bb8405561416a"
+      },
+      "receipt": {
+        "path": "cln-tutorial/v4-audio/scan-entry-57f696ed08c3-provenance.json",
+        "bytes": 669,
+        "sha256": "f2198d3136340cf301b6f09709ae906980bf52eb96bcfd02e8193cfc85b1873b"
+      },
+      "transcript": {
+        "path": "cln-tutorial/v4-audio/scan-entry-57f696ed08c3-local-f1bd5c8aabb8.json",
+        "bytes": 3257,
+        "sha256": "e6dce514bdc8239292d972b2d8f344a1b622021afee192044865d72e71fe8f94"
+      },
+      "transcriptionProvider": "local-faster-whisper",
+      "clipStartFrame": 18,
+      "durationSeconds": 2.272653,
+      "words": [
+        {
+          "word": "From",
+          "start": 0,
+          "end": 0.2,
+          "probability": 0.8282333016395569
+        },
+        {
+          "word": "home,",
+          "start": 0.2,
+          "end": 0.5,
+          "probability": 0.8314036726951599
+        },
+        {
+          "word": "tap",
+          "start": 0.8,
+          "end": 1.1,
+          "probability": 0.9813491702079773
+        },
+        {
+          "word": "the",
+          "start": 1.1,
+          "end": 1.24,
+          "probability": 0.9949304461479187
+        },
+        {
+          "word": "bottom",
+          "start": 1.24,
+          "end": 1.44,
+          "probability": 0.9119079113006592
+        },
+        {
+          "word": "scan.",
+          "start": 1.44,
+          "end": 1.74,
+          "probability": 0.9420526623725891
+        }
+      ]
+    },
+    {
+      "id": "controlled-scan",
+      "script": "Point the scanner at the zone QR code. Check in to Premix Area.",
+      "requestHash": "b75e7f5f0d3bb718201933f5d8eee38a468bf2e344f8b19f5ed0ddb01cd57e62",
+      "audio": {
+        "path": "cln-tutorial/v4-audio/controlled-scan-b75e7f5f0d3b.mp3",
+        "bytes": 68589,
+        "sha256": "51220186234c59fcfc03946175d2d1aaaa9d3a56790159b045bc5d7fe02a0c88"
+      },
+      "receipt": {
+        "path": "cln-tutorial/v4-audio/controlled-scan-b75e7f5f0d3b-provenance.json",
+        "bytes": 706,
+        "sha256": "f4b9ac854d775064514984d30e5225a13da582bf2750b45442e8173a696c890f"
+      },
+      "transcript": {
+        "path": "cln-tutorial/v4-audio/controlled-scan-b75e7f5f0d3b-local-f1bd5c8aabb8.json",
+        "bytes": 4209,
+        "sha256": "2ac99d5e5257373de4fea9079992be6c8687cdcad0bdf9b0512eec51ff2c0746"
+      },
+      "transcriptionProvider": "local-faster-whisper",
+      "clipStartFrame": 0,
+      "durationSeconds": 4.257959,
+      "words": [
+        {
+          "word": "Point",
+          "start": 0,
+          "end": 0.24,
+          "probability": 0.5780353546142578
+        },
+        {
+          "word": "the",
+          "start": 0.24,
+          "end": 0.42,
+          "probability": 0.9903392195701599
+        },
+        {
+          "word": "scanner",
+          "start": 0.42,
+          "end": 0.72,
+          "probability": 0.9886868000030518
+        },
+        {
+          "word": "at",
+          "start": 0.72,
+          "end": 1.12,
+          "probability": 0.9758641123771667
+        },
+        {
+          "word": "the",
+          "start": 1.12,
+          "end": 1.22,
+          "probability": 0.9854876399040222
+        },
+        {
+          "word": "zone",
+          "start": 1.22,
+          "end": 1.46,
+          "probability": 0.7883185744285583
+        },
+        {
+          "word": "QR",
+          "start": 1.46,
+          "end": 1.82,
+          "probability": 0.9579551219940186
+        },
+        {
+          "word": "code,",
+          "start": 1.82,
+          "end": 2.26,
+          "probability": 0.9795645475387573
+        },
+        {
+          "word": "check",
+          "start": 2.54,
+          "end": 2.78,
+          "probability": 0.9808714985847473
+        },
+        {
+          "word": "in",
+          "start": 2.78,
+          "end": 2.96,
+          "probability": 0.3437465727329254
+        },
+        {
+          "word": "to",
+          "start": 2.96,
+          "end": 3.1,
+          "probability": 0.955071210861206
+        },
+        {
+          "word": "premix",
+          "start": 3.1,
+          "end": 3.46,
+          "probability": 0.7690849602222443
+        },
+        {
+          "word": "area.",
+          "start": 3.46,
+          "end": 3.72,
+          "probability": 0.9515265822410583
+        }
+      ]
+    },
+    {
+      "id": "unlocked",
+      "script": "Confirm Premix Area is unlocked. Inspect before recording a result.",
+      "requestHash": "cefe5ad970599ccef6498c6a3944f276bf3a466893ea026ade22f0d625ef5508",
+      "audio": {
+        "path": "cln-tutorial/v4-audio/unlocked-cefe5ad97059.mp3",
+        "bytes": 91577,
+        "sha256": "6350c44fcfd6e8e4b40418d92bb14c4076a50f87149e9ed0e08ca86acdf48b8d"
+      },
+      "receipt": {
+        "path": "cln-tutorial/v4-audio/unlocked-cefe5ad97059-provenance.json",
+        "bytes": 703,
+        "sha256": "e31bc4e9bd285a0b5e94d28049be4d3917f316d24fc7b10f12bb3ea594c35b9d"
+      },
+      "transcript": {
+        "path": "cln-tutorial/v4-audio/unlocked-cefe5ad97059-local-f1bd5c8aabb8.json",
+        "bytes": 3851,
+        "sha256": "bdc1b7eae4c0903da86ed2b46857c60420eaaa25a94b7e74906ae404a5c88ef4"
+      },
+      "transcriptionProvider": "local-faster-whisper",
+      "clipStartFrame": 0,
+      "durationSeconds": 5.694694,
+      "words": [
+        {
+          "word": "Confirm",
+          "start": 0,
+          "end": 0.5,
+          "probability": 0.8690397441387177
+        },
+        {
+          "word": "premix",
+          "start": 0.5,
+          "end": 0.96,
+          "probability": 0.6904457807540894
+        },
+        {
+          "word": "area",
+          "start": 0.96,
+          "end": 1.3,
+          "probability": 0.844950795173645
+        },
+        {
+          "word": "is",
+          "start": 1.3,
+          "end": 1.98,
+          "probability": 0.9734607338905334
+        },
+        {
+          "word": "unlocked.",
+          "start": 1.98,
+          "end": 2.42,
+          "probability": 0.9643415212631226
+        },
+        {
+          "word": "Inspect",
+          "start": 2.9,
+          "end": 3.28,
+          "probability": 0.9283649325370789
+        },
+        {
+          "word": "before",
+          "start": 3.28,
+          "end": 3.98,
+          "probability": 0.9720174670219421
+        },
+        {
+          "word": "recording",
+          "start": 3.98,
+          "end": 4.62,
+          "probability": 0.9773606061935425
+        },
+        {
+          "word": "a",
+          "start": 4.62,
+          "end": 4.82,
+          "probability": 0.9498314261436462
+        },
+        {
+          "word": "result.",
+          "start": 4.82,
+          "end": 5.1,
+          "probability": 0.9968343377113342
+        }
+      ]
+    },
+    {
+      "id": "home",
+      "script": "To review scheduled work before checking in, open Bill of Health from Home.",
+      "requestHash": "124a31269b0da908d8a348d4f02a177d86af68719822c85dc29e877d4e5ad983",
+      "audio": {
+        "path": "cln-tutorial/v4-audio/home-124a31269b0d.mp3",
+        "bytes": 86561,
+        "sha256": "bbd92017b6106cf822eef028937ff17a5f7539f316f24236d1356ee5a5dbf4d0"
+      },
+      "receipt": {
+        "path": "cln-tutorial/v4-audio/home-124a31269b0d-provenance.json",
+        "bytes": 707,
+        "sha256": "fcba28f2561372a60812a5f81c0c8d489a20f9489ad8a71d06bd1df57fa3937c"
+      },
+      "transcript": {
+        "path": "cln-tutorial/v4-audio/home-124a31269b0d-local-f1bd5c8aabb8.json",
+        "bytes": 4240,
+        "sha256": "303411c40703748435e25a0b25bd7aa3313e5c2e6977479ac1ca9e4f8525b0a5"
+      },
+      "transcriptionProvider": "local-faster-whisper",
+      "clipStartFrame": 0,
+      "durationSeconds": 5.381224,
+      "words": [
+        {
+          "word": "To",
+          "start": 0,
+          "end": 0.18,
+          "probability": 0.15267249941825867
+        },
+        {
+          "word": "review",
+          "start": 0.18,
+          "end": 0.5,
+          "probability": 0.974590003490448
+        },
+        {
+          "word": "scheduled",
+          "start": 0.5,
+          "end": 0.84,
+          "probability": 0.9590535163879395
+        },
+        {
+          "word": "work",
+          "start": 0.84,
+          "end": 1.4,
+          "probability": 0.9840133786201477
+        },
+        {
+          "word": "before",
+          "start": 1.4,
+          "end": 1.76,
+          "probability": 0.8575547337532043
+        },
+        {
+          "word": "checking",
+          "start": 1.76,
+          "end": 2.1,
+          "probability": 0.9907393455505371
+        },
+        {
+          "word": "in,",
+          "start": 2.1,
+          "end": 2.36,
+          "probability": 0.8896883130073547
+        },
+        {
+          "word": "open",
+          "start": 2.92,
+          "end": 3.3,
+          "probability": 0.9569214582443237
+        },
+        {
+          "word": "Bill",
+          "start": 3.3,
+          "end": 3.58,
+          "probability": 0.5882091522216797
+        },
+        {
+          "word": "of",
+          "start": 3.58,
+          "end": 3.76,
+          "probability": 0.9728769063949585
+        },
+        {
+          "word": "Health",
+          "start": 3.76,
+          "end": 4.02,
+          "probability": 0.9949967861175537
+        },
+        {
+          "word": "from",
+          "start": 4.02,
+          "end": 4.62,
+          "probability": 0.8773618936538696
+        },
+        {
+          "word": "home.",
+          "start": 4.62,
+          "end": 4.84,
+          "probability": 0.8766610026359558
+        }
+      ]
+    },
+    {
+      "id": "boh",
+      "script": "Choose Cleaning Verification for missing scheduled checks. Remedial tracks open findings.",
+      "requestHash": "54f73a26385c4deba97dd084abea255e15bc8598f2dca79d6c1860ed8d619483",
+      "audio": {
+        "path": "cln-tutorial/v4-audio/boh-54f73a26385c.mp3",
+        "bytes": 106623,
+        "sha256": "687a502c230adbbb102624f239d5b90a246af0027f07a9273b2213b016aefff6"
+      },
+      "receipt": {
+        "path": "cln-tutorial/v4-audio/boh-54f73a26385c-provenance.json",
+        "bytes": 721,
+        "sha256": "0b6b628f86bb2ad3cc6ef46dbf3007da17aff720a07a7cc6c84f0fc6abfffe7b"
+      },
+      "transcript": {
+        "path": "cln-tutorial/v4-audio/boh-54f73a26385c-local-1533a3f4e4f5.json",
+        "bytes": 4036,
+        "sha256": "e1e714e5c788dc750790e0d42cfa34d72663e0a8b5d0c9cf035cf4b62a63d281"
+      },
+      "transcriptionProvider": "local-faster-whisper",
+      "clipStartFrame": 0,
+      "durationSeconds": 6.635102,
+      "words": [
+        {
+          "word": "Choose",
+          "start": 0,
+          "end": 0.36,
+          "probability": 0.8067995309829712
+        },
+        {
+          "word": "Cleaning",
+          "start": 0.36,
+          "end": 0.9,
+          "probability": 0.5330846905708313
+        },
+        {
+          "word": "Verification",
+          "start": 0.9,
+          "end": 1.56,
+          "probability": 0.8866874277591705
+        },
+        {
+          "word": "for",
+          "start": 1.56,
+          "end": 1.84,
+          "probability": 0.9353373050689697
+        },
+        {
+          "word": "Missing",
+          "start": 1.84,
+          "end": 2.34,
+          "probability": 0.85015007853508
+        },
+        {
+          "word": "Scheduled",
+          "start": 2.34,
+          "end": 2.86,
+          "probability": 0.9302015602588654
+        },
+        {
+          "word": "Checks,",
+          "start": 2.86,
+          "end": 3.54,
+          "probability": 0.8411643803119659
+        },
+        {
+          "word": "Remedial",
+          "start": 3.62,
+          "end": 4.4,
+          "probability": 0.7912699778874716
+        },
+        {
+          "word": "Tracks,",
+          "start": 4.4,
+          "end": 4.8,
+          "probability": 0.8928313553333282
+        },
+        {
+          "word": "Open",
+          "start": 5.3,
+          "end": 5.56,
+          "probability": 0.955707311630249
+        },
+        {
+          "word": "Findings.",
+          "start": 5.56,
+          "end": 6.2,
+          "probability": 0.8977337181568146
+        }
+      ]
+    },
+    {
+      "id": "baseline",
+      "script": "The starting point is two hundred and thirty-five still to do, with none captured. Open the area.",
+      "requestHash": "885c90ce4af47db4b5e00dd059116330f74b25d1536b715ffbea6f9d1c6d6b16",
+      "audio": {
+        "path": "cln-tutorial/v4-audio/baseline-885c90ce4af4.mp3",
+        "bytes": 119998,
+        "sha256": "93cf0c46989c803c33452629e6c36a0933bd752017a52a339fe62a6b4f007f1c"
+      },
+      "receipt": {
+        "path": "cln-tutorial/v4-audio/baseline-885c90ce4af4-provenance.json",
+        "bytes": 734,
+        "sha256": "eca1d43fad530ecf3af39a2cd5f7d8e2578ae7fe49111621ec8184abc52ef4e2"
+      },
+      "transcript": {
+        "path": "cln-tutorial/v4-audio/baseline-885c90ce4af4-local-1533a3f4e4f5.json",
+        "bytes": 4358,
+        "sha256": "0fdf45fbb3d52d4a74c412d9498e3bdac81ddfbec3c4e739c952d8f2009781b1"
+      },
+      "transcriptionProvider": "local-faster-whisper",
+      "clipStartFrame": 0,
+      "durationSeconds": 7.47102,
+      "words": [
+        {
+          "word": "The",
+          "start": 0,
+          "end": 0.18,
+          "probability": 0.8515520095825195
+        },
+        {
+          "word": "starting",
+          "start": 0.18,
+          "end": 0.48,
+          "probability": 0.9897603392601013
+        },
+        {
+          "word": "point",
+          "start": 0.48,
+          "end": 0.84,
+          "probability": 0.9914264678955078
+        },
+        {
+          "word": "is",
+          "start": 0.84,
+          "end": 1.18,
+          "probability": 0.9940424561500549
+        },
+        {
+          "word": "235,",
+          "start": 1.18,
+          "end": 2.9,
+          "probability": 0.8170788884162903
+        },
+        {
+          "word": "Still",
+          "start": 3.32,
+          "end": 3.9,
+          "probability": 0.02283567003905773
+        },
+        {
+          "word": "to",
+          "start": 3.9,
+          "end": 4.06,
+          "probability": 0.00024822799275625584
+        },
+        {
+          "word": "do,",
+          "start": 4.06,
+          "end": 4.28,
+          "probability": 0.8865788578987122
+        },
+        {
+          "word": "with",
+          "start": 4.8,
+          "end": 5,
+          "probability": 0.917517364025116
+        },
+        {
+          "word": "none",
+          "start": 5,
+          "end": 5.24,
+          "probability": 0.385668009519577
+        },
+        {
+          "word": "captured,",
+          "start": 5.24,
+          "end": 5.66,
+          "probability": 0.9291516542434692
+        },
+        {
+          "word": "Open",
+          "start": 6.3,
+          "end": 6.5,
+          "probability": 0.1469786912202835
+        },
+        {
+          "word": "the",
+          "start": 6.5,
+          "end": 6.72,
+          "probability": 0.9442331790924072
+        },
+        {
+          "word": "area.",
+          "start": 6.72,
+          "end": 6.98,
+          "probability": 0.9648257493972778
+        }
+      ]
+    },
+    {
+      "id": "due",
+      "script": "Before check-in, Due lists nineteen Daily checks. Completion is locked.",
+      "requestHash": "7b9925b5e65244ca8d0f50617e53b747473abffdcdd2189cb6565439143db308",
+      "audio": {
+        "path": "cln-tutorial/v4-audio/due-7b9925b5e652.mp3",
+        "bytes": 85725,
+        "sha256": "98e9e864d8ecca7f50999616e2319651d34c8e35adfc5e9105df35640bb81523"
+      },
+      "receipt": {
+        "path": "cln-tutorial/v4-audio/due-7b9925b5e652-provenance.json",
+        "bytes": 702,
+        "sha256": "6ded4ad2b9b85a293b446ab4c4dc96856eed318e5b09547ee41db0e379d0c710"
+      },
+      "transcript": {
+        "path": "cln-tutorial/v4-audio/due-7b9925b5e652-local-f1bd5c8aabb8.json",
+        "bytes": 3969,
+        "sha256": "a53328ba220345a016e07f619d7848f5837789002b8a209ba02bf777c470ba11"
+      },
+      "transcriptionProvider": "local-faster-whisper",
+      "clipStartFrame": 0,
+      "durationSeconds": 5.32898,
+      "words": [
+        {
+          "word": "Before",
+          "start": 0,
+          "end": 0.28,
+          "probability": 0.8355666399002075
+        },
+        {
+          "word": "check",
+          "start": 0.28,
+          "end": 0.52,
+          "probability": 0.1684475988149643
+        },
+        {
+          "word": "-in,",
+          "start": 0.52,
+          "end": 0.74,
+          "probability": 0.8608966767787933
+        },
+        {
+          "word": "due",
+          "start": 1.14,
+          "end": 1.42,
+          "probability": 0.4002622067928314
+        },
+        {
+          "word": "lists",
+          "start": 1.42,
+          "end": 1.76,
+          "probability": 0.776769757270813
+        },
+        {
+          "word": "19",
+          "start": 1.76,
+          "end": 2.32,
+          "probability": 0.9213426113128662
+        },
+        {
+          "word": "daily",
+          "start": 2.32,
+          "end": 2.76,
+          "probability": 0.9418033957481384
+        },
+        {
+          "word": "checks,",
+          "start": 2.76,
+          "end": 3.1,
+          "probability": 0.9671233892440796
+        },
+        {
+          "word": "completion",
+          "start": 3.76,
+          "end": 4.2,
+          "probability": 0.9249047040939331
+        },
+        {
+          "word": "is",
+          "start": 4.2,
+          "end": 4.52,
+          "probability": 0.9915810227394104
+        },
+        {
+          "word": "locked.",
+          "start": 4.52,
+          "end": 4.8,
+          "probability": 0.9542135000228882
+        }
+      ]
+    },
+    {
+      "id": "ssop-link",
+      "script": "Open the linked SSOP for the item's inspection reference.",
+      "requestHash": "51e11e9cbfcc0b46403dbc74cbc63cb48337032e4a1fd4ec53ce684f61da45a0",
+      "audio": {
+        "path": "cln-tutorial/v4-audio/ssop-link-51e11e9cbfcc.mp3",
+        "bytes": 61066,
+        "sha256": "752d47ec8a7b6fa3aca09eb301935908bcf92dcc1f8987045b27dbf9956f7b45"
+      },
+      "receipt": {
+        "path": "cln-tutorial/v4-audio/ssop-link-51e11e9cbfcc-provenance.json",
+        "bytes": 694,
+        "sha256": "44c347d8c6a83f1c5636b579cdbfa835fbc4fc8e38e7561e32f0f6a0ce7f7b14"
+      },
+      "transcript": {
+        "path": "cln-tutorial/v4-audio/ssop-link-51e11e9cbfcc-local-1533a3f4e4f5.json",
+        "bytes": 3696,
+        "sha256": "fce3db17b4376f67a8e6a6ab95c1c9722cd37b3a0c7db7f32c6f75c523a2a807"
+      },
+      "transcriptionProvider": "local-faster-whisper",
+      "clipStartFrame": 0,
+      "durationSeconds": 3.787755,
+      "words": [
+        {
+          "word": "Open",
+          "start": 0,
+          "end": 0.3,
+          "probability": 0.6091517806053162
+        },
+        {
+          "word": "the",
+          "start": 0.3,
+          "end": 0.48,
+          "probability": 0.983253538608551
+        },
+        {
+          "word": "linked",
+          "start": 0.48,
+          "end": 0.7,
+          "probability": 0.8775795102119446
+        },
+        {
+          "word": "SSOP",
+          "start": 0.7,
+          "end": 1.5,
+          "probability": 0.9504690170288086
+        },
+        {
+          "word": "for",
+          "start": 1.5,
+          "end": 1.82,
+          "probability": 0.9664074778556824
+        },
+        {
+          "word": "the",
+          "start": 1.82,
+          "end": 1.94,
+          "probability": 0.9437428116798401
+        },
+        {
+          "word": "item's",
+          "start": 1.94,
+          "end": 2.4,
+          "probability": 0.6246525198221207
+        },
+        {
+          "word": "inspection",
+          "start": 2.4,
+          "end": 2.78,
+          "probability": 0.9677199721336365
+        },
+        {
+          "word": "reference.",
+          "start": 2.78,
+          "end": 3.12,
+          "probability": 0.9620916843414307
+        }
+      ]
+    },
+    {
+      "id": "ssop-reference",
+      "script": "No photos are present. Viewing this reference records no check.",
+      "requestHash": "124058da3cdc3e2a925a00cce16bd42ba74130f56202c4d377e24e66ca6495b3",
+      "audio": {
+        "path": "cln-tutorial/v4-audio/ssop-reference-124058da3cdc.mp3",
+        "bytes": 67335,
+        "sha256": "379e5b210cb6d755fb05ec5e4017e3ea427da4db79376ff04337af11c59a57df"
+      },
+      "receipt": {
+        "path": "cln-tutorial/v4-audio/ssop-reference-124058da3cdc-provenance.json",
+        "bytes": 705,
+        "sha256": "958170c754124e0bd433e60115b8ba59f53a8231aa3d7cbb98463dc9fd369948"
+      },
+      "transcript": {
+        "path": "cln-tutorial/v4-audio/ssop-reference-124058da3cdc-local-1533a3f4e4f5.json",
+        "bytes": 3839,
+        "sha256": "d7b938646851acaa3dfac16529555b716ac76f49caf8b9c423cd98be4885ea20"
+      },
+      "transcriptionProvider": "local-faster-whisper",
+      "clipStartFrame": 0,
+      "durationSeconds": 4.179592,
+      "words": [
+        {
+          "word": "No",
+          "start": 0,
+          "end": 0.18,
+          "probability": 0.6988265514373779
+        },
+        {
+          "word": "photos",
+          "start": 0.18,
+          "end": 0.5,
+          "probability": 0.9856268763542175
+        },
+        {
+          "word": "are",
+          "start": 0.5,
+          "end": 0.72,
+          "probability": 0.9911612272262573
+        },
+        {
+          "word": "present,",
+          "start": 0.72,
+          "end": 1.08,
+          "probability": 0.9925684928894043
+        },
+        {
+          "word": "viewing",
+          "start": 1.54,
+          "end": 1.9,
+          "probability": 0.9723566174507141
+        },
+        {
+          "word": "this",
+          "start": 1.9,
+          "end": 2.2,
+          "probability": 0.984545111656189
+        },
+        {
+          "word": "reference",
+          "start": 2.2,
+          "end": 2.62,
+          "probability": 0.989531397819519
+        },
+        {
+          "word": "records",
+          "start": 2.62,
+          "end": 3.12,
+          "probability": 0.9946668148040771
+        },
+        {
+          "word": "no",
+          "start": 3.12,
+          "end": 3.44,
+          "probability": 0.9580363035202026
+        },
+        {
+          "word": "check.",
+          "start": 3.44,
+          "end": 3.64,
+          "probability": 0.9157919883728027
+        }
+      ]
+    },
+    {
+      "id": "off-schedule",
+      "script": "Off-schedule lists fourteen weekly items. Check the next due date. These items stay untouched here. Record only work actually done.",
+      "requestHash": "6dcd1d7ff71c8d5a1339326d30acd35c0404200fc6d4e9b504fd423b24c0c293",
+      "audio": {
+        "path": "cln-tutorial/v4-audio/off-schedule-6dcd1d7ff71c.mp3",
+        "bytes": 151763,
+        "sha256": "48adad26cf87a4b04f5ae12cf85008dc0bc5ac5e5a7b5c16cc66a99b7dc33c61"
+      },
+      "receipt": {
+        "path": "cln-tutorial/v4-audio/off-schedule-6dcd1d7ff71c-provenance.json",
+        "bytes": 772,
+        "sha256": "07a7af7a30c44c667c315824a2122a13314b6d34b18df1157c4253eaa757320a"
+      },
+      "transcript": {
+        "path": "cln-tutorial/v4-audio/off-schedule-6dcd1d7ff71c-local-e06d3f52c650.json",
+        "bytes": 6342,
+        "sha256": "4ace1613d83c6d4a5b6a773698d9c82f8345ff6bbea9d455568984f557e85001"
+      },
+      "transcriptionProvider": "local-faster-whisper",
+      "clipStartFrame": 0,
+      "durationSeconds": 9.456327,
+      "words": [
+        {
+          "word": "Off",
+          "start": 0,
+          "end": 0.24,
+          "probability": 0.7405398488044739
+        },
+        {
+          "word": "-schedule",
+          "start": 0.24,
+          "end": 0.66,
+          "probability": 0.6727479714900255
+        },
+        {
+          "word": "lists",
+          "start": 0.66,
+          "end": 0.96,
+          "probability": 0.2709476351737976
+        },
+        {
+          "word": "fourteen",
+          "start": 0.96,
+          "end": 1.46,
+          "probability": 0.018583616241812706
+        },
+        {
+          "word": "weekly",
+          "start": 1.46,
+          "end": 2.02,
+          "probability": 0.9774700403213501
+        },
+        {
+          "word": "items.",
+          "start": 2.02,
+          "end": 2.52,
+          "probability": 0.9917430281639099
+        },
+        {
+          "word": "Check",
+          "start": 3.18,
+          "end": 3.34,
+          "probability": 0.9894596338272095
+        },
+        {
+          "word": "the",
+          "start": 3.34,
+          "end": 3.54,
+          "probability": 0.0003865907214901654
+        },
+        {
+          "word": "next",
+          "start": 3.54,
+          "end": 3.7,
+          "probability": 0.9919456839561462
+        },
+        {
+          "word": "due",
+          "start": 3.7,
+          "end": 3.96,
+          "probability": 0.9216988682746887
+        },
+        {
+          "word": "date.",
+          "start": 3.96,
+          "end": 4.16,
+          "probability": 0.9980023503303528
+        },
+        {
+          "word": "These",
+          "start": 4.82,
+          "end": 5.04,
+          "probability": 0.7417919635772705
+        },
+        {
+          "word": "items",
+          "start": 5.04,
+          "end": 5.46,
+          "probability": 0.9844676852226257
+        },
+        {
+          "word": "stay",
+          "start": 5.46,
+          "end": 5.92,
+          "probability": 0.8930500745773315
+        },
+        {
+          "word": "untouched",
+          "start": 5.92,
+          "end": 6.56,
+          "probability": 0.9928298592567444
+        },
+        {
+          "word": "here.",
+          "start": 6.56,
+          "end": 6.9,
+          "probability": 0.9827964305877686
+        },
+        {
+          "word": "Record",
+          "start": 7.06,
+          "end": 7.68,
+          "probability": 0.12861542403697968
+        },
+        {
+          "word": "only",
+          "start": 7.68,
+          "end": 7.98,
+          "probability": 0.6340643763542175
+        },
+        {
+          "word": "work",
+          "start": 7.98,
+          "end": 8.28,
+          "probability": 0.864135205745697
+        },
+        {
+          "word": "actually",
+          "start": 8.28,
+          "end": 8.7,
+          "probability": 0.9325171113014221
+        },
+        {
+          "word": "done.",
+          "start": 8.7,
+          "end": 8.98,
+          "probability": 0.9942025542259216
+        }
+      ]
+    },
+    {
+      "id": "inspect-pass",
+      "script": "After check-in, inspect the item. If it meets the cleaning requirements, tap its green tick.",
+      "requestHash": "d2da1c883f50e9e8783beff0eb7751609c1811abb06b887979f430baaa6f8a63",
+      "audio": {
+        "path": "cln-tutorial/v4-audio/inspect-pass-d2da1c883f50.mp3",
+        "bytes": 111639,
+        "sha256": "600f1474b13a1a37c91fad9e56a81339972547d0a520c9364cc1b8c67cb2b8b9"
+      },
+      "receipt": {
+        "path": "cln-tutorial/v4-audio/inspect-pass-d2da1c883f50-provenance.json",
+        "bytes": 733,
+        "sha256": "b528e9d15aaa740e2c24d1b25f970f30d632c67dfb25d981bb7e85f900cb127b"
+      },
+      "transcript": {
+        "path": "cln-tutorial/v4-audio/inspect-pass-d2da1c883f50-local-f1bd5c8aabb8.json",
+        "bytes": 4850,
+        "sha256": "679c78aced8873cdb842c2a963f485e114c0b3a74308dd9895c312c59c94dc3d"
+      },
+      "transcriptionProvider": "local-faster-whisper",
+      "clipStartFrame": 0,
+      "durationSeconds": 6.948571,
+      "words": [
+        {
+          "word": "After",
+          "start": 0,
+          "end": 0.24,
+          "probability": 0.8540470600128174
+        },
+        {
+          "word": "check",
+          "start": 0.24,
+          "end": 0.5,
+          "probability": 0.19633591175079346
+        },
+        {
+          "word": "-in,",
+          "start": 0.5,
+          "end": 0.72,
+          "probability": 0.9314861297607422
+        },
+        {
+          "word": "inspect",
+          "start": 1.2,
+          "end": 1.52,
+          "probability": 0.9935759902000427
+        },
+        {
+          "word": "the",
+          "start": 1.52,
+          "end": 1.74,
+          "probability": 0.9927456974983215
+        },
+        {
+          "word": "item.",
+          "start": 1.74,
+          "end": 2.08,
+          "probability": 0.9595732688903809
+        },
+        {
+          "word": "If",
+          "start": 3.06,
+          "end": 3.18,
+          "probability": 0.9921408891677856
+        },
+        {
+          "word": "it",
+          "start": 3.18,
+          "end": 3.32,
+          "probability": 0.9887497425079346
+        },
+        {
+          "word": "meets",
+          "start": 3.32,
+          "end": 3.62,
+          "probability": 0.9984142780303955
+        },
+        {
+          "word": "the",
+          "start": 3.62,
+          "end": 3.9,
+          "probability": 0.993021547794342
+        },
+        {
+          "word": "cleaning",
+          "start": 3.9,
+          "end": 4.24,
+          "probability": 0.983120322227478
+        },
+        {
+          "word": "requirements,",
+          "start": 4.24,
+          "end": 5.02,
+          "probability": 0.9725119471549988
+        },
+        {
+          "word": "tap",
+          "start": 5.54,
+          "end": 5.72,
+          "probability": 0.9798240661621094
+        },
+        {
+          "word": "its",
+          "start": 5.72,
+          "end": 5.94,
+          "probability": 0.9180523753166199
+        },
+        {
+          "word": "green",
+          "start": 5.94,
+          "end": 6.18,
+          "probability": 0.9077860713005066
+        },
+        {
+          "word": "tick.",
+          "start": 6.18,
+          "end": 6.44,
+          "probability": 0.9800206422805786
+        }
+      ]
+    },
+    {
+      "id": "pass-inline-saved",
+      "script": "The pass saves inline, with a green status and Undo.",
+      "requestHash": "12d1162cc342871d09690cf3ea7be577b9493ba46ec33743cd46d6a3e86bbd66",
+      "audio": {
+        "path": "cln-tutorial/v4-audio/pass-inline-saved-12d1162cc342.mp3",
+        "bytes": 70261,
+        "sha256": "3259600b027022d76811a099ce9b2c8f55b67537c50d31a172093271332dc885"
+      },
+      "receipt": {
+        "path": "cln-tutorial/v4-audio/pass-inline-saved-12d1162cc342-provenance.json",
+        "bytes": 697,
+        "sha256": "5491b92117bb12c3390711c08c56b2d80a6245f37d486d31b1f4843f658741f9"
+      },
+      "transcript": {
+        "path": "cln-tutorial/v4-audio/pass-inline-saved-12d1162cc342-local-1533a3f4e4f5.json",
+        "bytes": 3937,
+        "sha256": "c80546dbc957065591edf7b9691f97985440a073822c49d21f0cb72ebd707a50"
+      },
+      "transcriptionProvider": "local-faster-whisper",
+      "clipStartFrame": 0,
+      "durationSeconds": 4.362449,
+      "words": [
+        {
+          "word": "The",
+          "start": 0,
+          "end": 0.16,
+          "probability": 0.45973530411720276
+        },
+        {
+          "word": "pass",
+          "start": 0.16,
+          "end": 0.42,
+          "probability": 0.5128100514411926
+        },
+        {
+          "word": "saves",
+          "start": 0.42,
+          "end": 0.72,
+          "probability": 0.9777210354804993
+        },
+        {
+          "word": "in",
+          "start": 0.72,
+          "end": 0.98,
+          "probability": 0.9627535939216614
+        },
+        {
+          "word": "line,",
+          "start": 0.98,
+          "end": 1.28,
+          "probability": 0.6677758097648621
+        },
+        {
+          "word": "with",
+          "start": 1.72,
+          "end": 1.98,
+          "probability": 0.9915560483932495
+        },
+        {
+          "word": "a",
+          "start": 1.98,
+          "end": 2.12,
+          "probability": 0.8644686341285706
+        },
+        {
+          "word": "green",
+          "start": 2.12,
+          "end": 2.3,
+          "probability": 0.9594323635101318
+        },
+        {
+          "word": "status",
+          "start": 2.3,
+          "end": 2.68,
+          "probability": 0.9912874102592468
+        },
+        {
+          "word": "and",
+          "start": 2.68,
+          "end": 3.4,
+          "probability": 0.8281423449516296
+        },
+        {
+          "word": "undo.",
+          "start": 3.4,
+          "end": 3.72,
+          "probability": 0.6470022201538086
+        }
+      ]
+    },
+    {
+      "id": "passed-state",
+      "script": "Progress is now one of nineteen.",
+      "requestHash": "49137986cbe7729b83b0d45567cf916b22a0c95a84c83fa61ae5b2d88b56ff80",
+      "audio": {
+        "path": "cln-tutorial/v4-audio/passed-state-49137986cbe7.mp3",
+        "bytes": 33062,
+        "sha256": "d718f4e0b8608175cd4a88a017cdbab2dc829d082bc3d0ab900dddd4aab02aab"
+      },
+      "receipt": {
+        "path": "cln-tutorial/v4-audio/passed-state-49137986cbe7-provenance.json",
+        "bytes": 672,
+        "sha256": "01d3e236a0092813aee520d12e93fc99ad46c2d807f093a5c2182c894b454c8b"
+      },
+      "transcript": {
+        "path": "cln-tutorial/v4-audio/passed-state-49137986cbe7-local-1533a3f4e4f5.json",
+        "bytes": 3241,
+        "sha256": "13ead8da25fb3920de13c72df3ace700f2e07df50629f6aac5b022c2d663d3db"
+      },
+      "transcriptionProvider": "local-faster-whisper",
+      "clipStartFrame": 0,
+      "durationSeconds": 2.037551,
+      "words": [
+        {
+          "word": "Progress",
+          "start": 0,
+          "end": 0.36,
+          "probability": 0.7427283525466919
+        },
+        {
+          "word": "is",
+          "start": 0.36,
+          "end": 0.64,
+          "probability": 0.9854112863540649
+        },
+        {
+          "word": "now",
+          "start": 0.64,
+          "end": 0.82,
+          "probability": 0.9870191812515259
+        },
+        {
+          "word": "1",
+          "start": 0.82,
+          "end": 1.04,
+          "probability": 0.406750351190567
+        },
+        {
+          "word": "of",
+          "start": 1.04,
+          "end": 1.16,
+          "probability": 0.6801733374595642
+        },
+        {
+          "word": "19.",
+          "start": 1.16,
+          "end": 1.44,
+          "probability": 0.9535312056541443
+        }
+      ]
+    },
+    {
+      "id": "bulk-eligible",
+      "script": "Daily Pass all becomes eligible after that first inspection of the same frequency. Eighteen remain; record the exceptions first.",
+      "requestHash": "9fa29c40578e1965fb9cadd793a308bfdc70e667c5536453a4cf0b49ce262702",
+      "audio": {
+        "path": "cln-tutorial/v4-audio/bulk-eligible-9fa29c40578e.mp3",
+        "bytes": 188961,
+        "sha256": "874b7aecdcfec48e71e3758a59e3556db27c12ece3fd082fe69c3593b22e0a74"
+      },
+      "receipt": {
+        "path": "cln-tutorial/v4-audio/bulk-eligible-9fa29c40578e-provenance.json",
+        "bytes": 770,
+        "sha256": "c41e04685497b765e005ffcd705893cd02d799484472c054a7dc2e75b7edf465"
+      },
+      "transcript": {
+        "path": "cln-tutorial/v4-audio/bulk-eligible-9fa29c40578e-local-1533a3f4e4f5.json",
+        "bytes": 5311,
+        "sha256": "03e185382631984afccb88b23c361ab7469faa7a84adb78b17caf64b25fbb36a"
+      },
+      "transcriptionProvider": "local-faster-whisper",
+      "clipStartFrame": 0,
+      "durationSeconds": 11.781224,
+      "words": [
+        {
+          "word": "Daily",
+          "start": 0,
+          "end": 0.34,
+          "probability": 0.3528529703617096
+        },
+        {
+          "word": "pass",
+          "start": 0.34,
+          "end": 0.7,
+          "probability": 0.8984917998313904
+        },
+        {
+          "word": "all",
+          "start": 0.7,
+          "end": 1.44,
+          "probability": 0.22379031777381897
+        },
+        {
+          "word": "becomes",
+          "start": 1.44,
+          "end": 1.9,
+          "probability": 0.964767575263977
+        },
+        {
+          "word": "eligible",
+          "start": 1.9,
+          "end": 2.44,
+          "probability": 0.9925779700279236
+        },
+        {
+          "word": "after",
+          "start": 2.44,
+          "end": 3.26,
+          "probability": 0.8314972519874573
+        },
+        {
+          "word": "that",
+          "start": 3.26,
+          "end": 3.46,
+          "probability": 0.8770403861999512
+        },
+        {
+          "word": "first",
+          "start": 3.46,
+          "end": 3.96,
+          "probability": 0.9663984179496765
+        },
+        {
+          "word": "inspection",
+          "start": 3.96,
+          "end": 5.36,
+          "probability": 0.9703879356384277
+        },
+        {
+          "word": "of",
+          "start": 5.36,
+          "end": 6.14,
+          "probability": 0.9747141003608704
+        },
+        {
+          "word": "the",
+          "start": 6.14,
+          "end": 6.28,
+          "probability": 0.9820807576179504
+        },
+        {
+          "word": "same",
+          "start": 6.28,
+          "end": 6.48,
+          "probability": 0.9943976402282715
+        },
+        {
+          "word": "frequency.",
+          "start": 6.48,
+          "end": 6.96,
+          "probability": 0.995984673500061
+        },
+        {
+          "word": "18",
+          "start": 7.82,
+          "end": 8.32,
+          "probability": 0.825677752494812
+        },
+        {
+          "word": "remain,",
+          "start": 8.32,
+          "end": 9.04,
+          "probability": 0.8640560507774353
+        },
+        {
+          "word": "record",
+          "start": 9.7,
+          "end": 10.12,
+          "probability": 0.9559449553489685
+        },
+        {
+          "word": "the",
+          "start": 10.12,
+          "end": 10.34,
+          "probability": 0.9864335060119629
+        },
+        {
+          "word": "exceptions",
+          "start": 10.34,
+          "end": 10.78,
+          "probability": 0.9259958863258362
+        },
+        {
+          "word": "first.",
+          "start": 10.78,
+          "end": 11.2,
+          "probability": 0.9842934012413025
+        }
+      ]
+    },
+    {
+      "id": "major-form",
+      "script": "For a failed check, tap the red cross to open Remedial Action.",
+      "requestHash": "2ab25b2c0f1032b2d04ca19a44196eed0b8ee783484b01139ec9085fd141cb21",
+      "audio": {
+        "path": "cln-tutorial/v4-audio/major-form-2ab25b2c0f10.mp3",
+        "bytes": 76948,
+        "sha256": "edcad6e150b9bca15da828ddaa75e51565de0a1235c046a3855cea32b199c3d6"
+      },
+      "receipt": {
+        "path": "cln-tutorial/v4-audio/major-form-2ab25b2c0f10-provenance.json",
+        "bytes": 700,
+        "sha256": "3df47754d2ebc2af634a26d5918ae82e281c7d9ab22ee61a54c79da13fc85c86"
+      },
+      "transcript": {
+        "path": "cln-tutorial/v4-audio/major-form-2ab25b2c0f10-local-1533a3f4e4f5.json",
+        "bytes": 4081,
+        "sha256": "f25ff1f5cd18fc584d18e97ec6fb75ce7a837086aef8804d922eeb618a0f82ba"
+      },
+      "transcriptionProvider": "local-faster-whisper",
+      "clipStartFrame": 0,
+      "durationSeconds": 4.780408,
+      "words": [
+        {
+          "word": "For",
+          "start": 0,
+          "end": 0.2,
+          "probability": 0.6448435187339783
+        },
+        {
+          "word": "a",
+          "start": 0.2,
+          "end": 0.4,
+          "probability": 0.9347378015518188
+        },
+        {
+          "word": "failed",
+          "start": 0.4,
+          "end": 0.64,
+          "probability": 0.765483558177948
+        },
+        {
+          "word": "check,",
+          "start": 0.64,
+          "end": 0.96,
+          "probability": 0.9835554957389832
+        },
+        {
+          "word": "tap",
+          "start": 1.34,
+          "end": 1.74,
+          "probability": 0.9859565496444702
+        },
+        {
+          "word": "the",
+          "start": 1.74,
+          "end": 1.94,
+          "probability": 0.9890604019165039
+        },
+        {
+          "word": "red",
+          "start": 1.94,
+          "end": 2.14,
+          "probability": 0.7899206280708313
+        },
+        {
+          "word": "cross",
+          "start": 2.14,
+          "end": 2.48,
+          "probability": 0.9808957576751709
+        },
+        {
+          "word": "to",
+          "start": 2.48,
+          "end": 2.94,
+          "probability": 0.9854732155799866
+        },
+        {
+          "word": "open",
+          "start": 2.94,
+          "end": 3.3,
+          "probability": 0.9916610717773438
+        },
+        {
+          "word": "remedial",
+          "start": 3.3,
+          "end": 3.96,
+          "probability": 0.9844238758087158
+        },
+        {
+          "word": "action.",
+          "start": 3.96,
+          "end": 4.26,
+          "probability": 0.9866902828216553
+        }
+      ]
+    },
+    {
+      "id": "major-fields",
+      "script": "Choose the appropriate grade, Major here. Give the required failure reason. Action taken and a genuine photo are optional.",
+      "requestHash": "8060c2085930ef402f9218e9b0609870af79e7061deff6325797b42e4cacf8e6",
+      "audio": {
+        "path": "cln-tutorial/v4-audio/major-fields-8060c2085930.mp3",
+        "bytes": 157196,
+        "sha256": "055c040c9e4a9ae861a72df19fa57ade968896054ac6981c6d4d9b0b3611a986"
+      },
+      "receipt": {
+        "path": "cln-tutorial/v4-audio/major-fields-8060c2085930-provenance.json",
+        "bytes": 763,
+        "sha256": "2a294a9aab18544f60f9d9febfec9ab0cbc7c61d951af44e2f388f33cd10ae90"
+      },
+      "transcript": {
+        "path": "cln-tutorial/v4-audio/major-fields-8060c2085930-local-f1bd5c8aabb8.json",
+        "bytes": 5302,
+        "sha256": "159c967f64aef82e98036f14df87c066a5be088da6593b3263962aaa8479cfae"
+      },
+      "transcriptionProvider": "local-faster-whisper",
+      "clipStartFrame": 0,
+      "durationSeconds": 9.795918,
+      "words": [
+        {
+          "word": "Choose",
+          "start": 0,
+          "end": 0.4,
+          "probability": 0.8677353858947754
+        },
+        {
+          "word": "the",
+          "start": 0.4,
+          "end": 0.78,
+          "probability": 0.9640092253684998
+        },
+        {
+          "word": "appropriate",
+          "start": 0.78,
+          "end": 1.22,
+          "probability": 0.9906326532363892
+        },
+        {
+          "word": "grade.",
+          "start": 1.22,
+          "end": 1.76,
+          "probability": 0.9698656797409058
+        },
+        {
+          "word": "Major",
+          "start": 2.28,
+          "end": 2.7,
+          "probability": 0.8559287786483765
+        },
+        {
+          "word": "here.",
+          "start": 2.7,
+          "end": 3.04,
+          "probability": 0.9804038405418396
+        },
+        {
+          "word": "Give",
+          "start": 3.74,
+          "end": 3.86,
+          "probability": 0.988462507724762
+        },
+        {
+          "word": "the",
+          "start": 3.86,
+          "end": 4.06,
+          "probability": 0.9910914301872253
+        },
+        {
+          "word": "required",
+          "start": 4.06,
+          "end": 4.52,
+          "probability": 0.9962525367736816
+        },
+        {
+          "word": "failure",
+          "start": 4.52,
+          "end": 4.86,
+          "probability": 0.9655121564865112
+        },
+        {
+          "word": "reason.",
+          "start": 4.86,
+          "end": 5.3,
+          "probability": 0.905051589012146
+        },
+        {
+          "word": "Action",
+          "start": 5.94,
+          "end": 6.26,
+          "probability": 0.9665705561637878
+        },
+        {
+          "word": "taken",
+          "start": 6.26,
+          "end": 6.66,
+          "probability": 0.9892975091934204
+        },
+        {
+          "word": "and",
+          "start": 6.66,
+          "end": 7.12,
+          "probability": 0.6615864634513855
+        },
+        {
+          "word": "a",
+          "start": 7.12,
+          "end": 7.24,
+          "probability": 0.4520289897918701
+        },
+        {
+          "word": "genuine",
+          "start": 7.24,
+          "end": 7.62,
+          "probability": 0.9957408905029297
+        },
+        {
+          "word": "photo",
+          "start": 7.62,
+          "end": 8.16,
+          "probability": 0.9952419996261597
+        },
+        {
+          "word": "are",
+          "start": 8.16,
+          "end": 8.84,
+          "probability": 0.9777446389198303
+        },
+        {
+          "word": "optional.",
+          "start": 8.84,
+          "end": 9.26,
+          "probability": 0.9985528588294983
+        }
+      ]
+    },
+    {
+      "id": "major-recorded",
+      "script": "Submit. Task Completed confirms the capture. The due occurrence is recorded, while the finding remains open in Remedial and needs follow-up.",
+      "requestHash": "8f6d471c2020d2edbba9251d156b0750b3266e6bd46cf05e735a7cc166a97c30",
+      "audio": {
+        "path": "cln-tutorial/v4-audio/major-recorded-8f6d471c2020.mp3",
+        "bytes": 186035,
+        "sha256": "5418856ff6454f4adddaaa6d41ef6d0f220f6f214803e22b7999ba883cc8ceda"
+      },
+      "receipt": {
+        "path": "cln-tutorial/v4-audio/major-recorded-8f6d471c2020-provenance.json",
+        "bytes": 783,
+        "sha256": "98fe222992f5fe6249f4cee02dab886dd6062045a724d9d72a96959858ac003e"
+      },
+      "transcript": {
+        "path": "cln-tutorial/v4-audio/major-recorded-8f6d471c2020-local-1533a3f4e4f5.json",
+        "bytes": 5727,
+        "sha256": "053a4a4fa2561c9e6f5ea82704cda43237973e1a09bb1b614b4d860d77ee17c0"
+      },
+      "transcriptionProvider": "local-faster-whisper",
+      "clipStartFrame": 0,
+      "durationSeconds": 11.598367,
+      "words": [
+        {
+          "word": "Submit.",
+          "start": 0,
+          "end": 0.6,
+          "probability": 0.8219051659107208
+        },
+        {
+          "word": "Task",
+          "start": 1.3,
+          "end": 1.72,
+          "probability": 0.8034612536430359
+        },
+        {
+          "word": "completed",
+          "start": 1.72,
+          "end": 2.3,
+          "probability": 0.9462880492210388
+        },
+        {
+          "word": "confirms",
+          "start": 2.3,
+          "end": 3.02,
+          "probability": 0.9036189317703247
+        },
+        {
+          "word": "the",
+          "start": 3.02,
+          "end": 3.34,
+          "probability": 0.9958551526069641
+        },
+        {
+          "word": "capture.",
+          "start": 3.34,
+          "end": 3.62,
+          "probability": 0.9718030691146851
+        },
+        {
+          "word": "The",
+          "start": 4.5,
+          "end": 4.54,
+          "probability": 0.982626736164093
+        },
+        {
+          "word": "due",
+          "start": 4.54,
+          "end": 4.82,
+          "probability": 0.8211579322814941
+        },
+        {
+          "word": "occurrence",
+          "start": 4.82,
+          "end": 5.18,
+          "probability": 0.9930497407913208
+        },
+        {
+          "word": "is",
+          "start": 5.18,
+          "end": 5.76,
+          "probability": 0.9942417144775391
+        },
+        {
+          "word": "recorded",
+          "start": 5.76,
+          "end": 6.26,
+          "probability": 0.9948607087135315
+        },
+        {
+          "word": "while",
+          "start": 6.26,
+          "end": 7.04,
+          "probability": 0.8739705681800842
+        },
+        {
+          "word": "the",
+          "start": 7.04,
+          "end": 7.24,
+          "probability": 0.987055778503418
+        },
+        {
+          "word": "finding",
+          "start": 7.24,
+          "end": 7.58,
+          "probability": 0.9513477683067322
+        },
+        {
+          "word": "remains",
+          "start": 7.58,
+          "end": 8.02,
+          "probability": 0.997046172618866
+        },
+        {
+          "word": "open",
+          "start": 8.02,
+          "end": 8.52,
+          "probability": 0.9864848256111145
+        },
+        {
+          "word": "in",
+          "start": 8.52,
+          "end": 9.2,
+          "probability": 0.8954121470451355
+        },
+        {
+          "word": "remedial",
+          "start": 9.2,
+          "end": 9.8,
+          "probability": 0.9166929721832275
+        },
+        {
+          "word": "and",
+          "start": 9.8,
+          "end": 10.36,
+          "probability": 0.9191620945930481
+        },
+        {
+          "word": "needs",
+          "start": 10.36,
+          "end": 10.64,
+          "probability": 0.9882522225379944
+        },
+        {
+          "word": "follow",
+          "start": 10.64,
+          "end": 10.92,
+          "probability": 0.9817173480987549
+        },
+        {
+          "word": "-up.",
+          "start": 10.92,
+          "end": 11.18,
+          "probability": 0.713431254029274
+        }
+      ]
+    },
+    {
+      "id": "critical-grade",
+      "script": "This separate Tables example is Critical. Submitting it raises an NCR.",
+      "requestHash": "ddff4187e14287317adb15e6e8b8f401021f0c3b202c50a5e3772346b833bc92",
+      "audio": {
+        "path": "cln-tutorial/v4-audio/critical-grade-ddff4187e142.mp3",
+        "bytes": 99100,
+        "sha256": "2e15e1f451d48739c1fd30461be09d90f78517385ca8282954e67001a25eba9a"
+      },
+      "receipt": {
+        "path": "cln-tutorial/v4-audio/critical-grade-ddff4187e142-provenance.json",
+        "bytes": 712,
+        "sha256": "2cecd2ed9b5120b42afcb02879f6ad49cee8608150c0552c5e5350825d45cd9f"
+      },
+      "transcript": {
+        "path": "cln-tutorial/v4-audio/critical-grade-ddff4187e142-local-7db57b88b1d4.json",
+        "bytes": 4111,
+        "sha256": "4a848120eaa3f4e0ce0e30112ad8d1d886d461a5fdab032fc648eaaa3f6d7983"
+      },
+      "transcriptionProvider": "local-faster-whisper",
+      "clipStartFrame": 0,
+      "durationSeconds": 6.164898,
+      "words": [
+        {
+          "word": "This",
+          "start": 0,
+          "end": 0.24,
+          "probability": 0.24475125968456268
+        },
+        {
+          "word": "separate",
+          "start": 0.24,
+          "end": 0.68,
+          "probability": 0.9759896993637085
+        },
+        {
+          "word": "Tables",
+          "start": 0.68,
+          "end": 1.32,
+          "probability": 0.09050918277353048
+        },
+        {
+          "word": "example",
+          "start": 1.32,
+          "end": 1.7,
+          "probability": 0.9046283960342407
+        },
+        {
+          "word": "is",
+          "start": 1.7,
+          "end": 2.08,
+          "probability": 0.9951203465461731
+        },
+        {
+          "word": "Critical.",
+          "start": 2.08,
+          "end": 2.52,
+          "probability": 0.0015674643218517303
+        },
+        {
+          "word": "Submitting",
+          "start": 3.16,
+          "end": 3.74,
+          "probability": 0.9735777974128723
+        },
+        {
+          "word": "it",
+          "start": 3.74,
+          "end": 4,
+          "probability": 0.9125468730926514
+        },
+        {
+          "word": "raises",
+          "start": 4,
+          "end": 4.72,
+          "probability": 0.9118291735649109
+        },
+        {
+          "word": "an",
+          "start": 4.72,
+          "end": 5.06,
+          "probability": 0.8635123372077942
+        },
+        {
+          "word": "NCR.",
+          "start": 5.06,
+          "end": 5.6,
+          "probability": 0.5321242734789848
+        }
+      ]
+    },
+    {
+      "id": "critical-ncr",
+      "script": "The app confirms an NCR has been raised. Its linked record remains open.",
+      "requestHash": "21777d6c37f0610621f9cf0223b2b1eb6cee3fdd5563b85cf040157bc9f1f49a",
+      "audio": {
+        "path": "cln-tutorial/v4-audio/critical-ncr-21777d6c37f0.mp3",
+        "bytes": 90323,
+        "sha256": "da5cbdac14507ebbcbc794ffc63754be5b48fd518c200539308b0756944be8fb"
+      },
+      "receipt": {
+        "path": "cln-tutorial/v4-audio/critical-ncr-21777d6c37f0-provenance.json",
+        "bytes": 712,
+        "sha256": "af11cc5322ab07f18d75c99f3b763e9e81a0c835139b54ab37656d9e10ac22d9"
+      },
+      "transcript": {
+        "path": "cln-tutorial/v4-audio/critical-ncr-21777d6c37f0-local-1533a3f4e4f5.json",
+        "bytes": 4234,
+        "sha256": "c29e630c88185d279190eac9a88978663f5ab204c101b3a70931ffdd3bdb82e2"
+      },
+      "transcriptionProvider": "local-faster-whisper",
+      "clipStartFrame": 0,
+      "durationSeconds": 5.616327,
+      "words": [
+        {
+          "word": "The",
+          "start": 0,
+          "end": 0.16,
+          "probability": 0.8020512461662292
+        },
+        {
+          "word": "app",
+          "start": 0.16,
+          "end": 0.5,
+          "probability": 0.976216733455658
+        },
+        {
+          "word": "confirms",
+          "start": 0.5,
+          "end": 1.04,
+          "probability": 0.9942533373832703
+        },
+        {
+          "word": "an",
+          "start": 1.04,
+          "end": 1.26,
+          "probability": 0.8114025592803955
+        },
+        {
+          "word": "NCR",
+          "start": 1.26,
+          "end": 1.7,
+          "probability": 0.5849971920251846
+        },
+        {
+          "word": "has",
+          "start": 1.7,
+          "end": 1.94,
+          "probability": 0.9910107851028442
+        },
+        {
+          "word": "been",
+          "start": 1.94,
+          "end": 2.12,
+          "probability": 0.9984618425369263
+        },
+        {
+          "word": "raised,",
+          "start": 2.12,
+          "end": 2.52,
+          "probability": 0.9770219922065735
+        },
+        {
+          "word": "its",
+          "start": 3.16,
+          "end": 3.32,
+          "probability": 0.8344905972480774
+        },
+        {
+          "word": "linked",
+          "start": 3.32,
+          "end": 3.6,
+          "probability": 0.9522461891174316
+        },
+        {
+          "word": "record",
+          "start": 3.6,
+          "end": 4.08,
+          "probability": 0.9910328984260559
+        },
+        {
+          "word": "remains",
+          "start": 4.08,
+          "end": 4.58,
+          "probability": 0.9957895874977112
+        },
+        {
+          "word": "open.",
+          "start": 4.58,
+          "end": 5.08,
+          "probability": 0.9937031865119934
+        }
+      ]
+    },
+    {
+      "id": "unavailable-reason",
+      "script": "For Mixing Bowls, choose Unavailable. Record why access was not possible and the next step, if useful.",
+      "requestHash": "1b930cd13bc54e87c0948991c8f2ee30c49cc27a512afeeae3b526b85f8aeab4",
+      "audio": {
+        "path": "cln-tutorial/v4-audio/unavailable-reason-1b930cd13bc5.mp3",
+        "bytes": 144657,
+        "sha256": "e2ac77a4361fe3a1dfe1f346c4025978b6a86b474562f01a10815ba5e3d1c9bc"
+      },
+      "receipt": {
+        "path": "cln-tutorial/v4-audio/unavailable-reason-1b930cd13bc5-provenance.json",
+        "bytes": 749,
+        "sha256": "41eab71563c36ee6dc8af1426b89aaa9281afa6f64cc5752880cf76c6319587d"
+      },
+      "transcript": {
+        "path": "cln-tutorial/v4-audio/unavailable-reason-1b930cd13bc5-local-471dd6d12b81.json",
+        "bytes": 4970,
+        "sha256": "26f95e0a11494112dd20d5f02c57738396dd76e96214cadc8ea9afd7d550a8c5"
+      },
+      "transcriptionProvider": "local-faster-whisper",
+      "clipStartFrame": 0,
+      "durationSeconds": 9.012245,
+      "words": [
+        {
+          "word": "For",
+          "start": 0,
+          "end": 0.2,
+          "probability": 0.8368667364120483
+        },
+        {
+          "word": "Mixing",
+          "start": 0.2,
+          "end": 0.7,
+          "probability": 0.5026669185608625
+        },
+        {
+          "word": "Bowls,",
+          "start": 0.7,
+          "end": 1.3,
+          "probability": 0.46138468384742737
+        },
+        {
+          "word": "choose",
+          "start": 1.62,
+          "end": 1.9,
+          "probability": 0.7767143249511719
+        },
+        {
+          "word": "Unavailable.",
+          "start": 1.9,
+          "end": 2.92,
+          "probability": 0.7468973298867544
+        },
+        {
+          "word": "Record",
+          "start": 3.66,
+          "end": 3.82,
+          "probability": 0.5591739416122437
+        },
+        {
+          "word": "why",
+          "start": 3.82,
+          "end": 4.2,
+          "probability": 0.49449482560157776
+        },
+        {
+          "word": "access",
+          "start": 4.2,
+          "end": 4.72,
+          "probability": 0.3043819069862366
+        },
+        {
+          "word": "was",
+          "start": 4.72,
+          "end": 5.2,
+          "probability": 0.9741699695587158
+        },
+        {
+          "word": "not",
+          "start": 5.2,
+          "end": 5.4,
+          "probability": 0.9930300116539001
+        },
+        {
+          "word": "possible",
+          "start": 5.4,
+          "end": 5.84,
+          "probability": 0.9954285621643066
+        },
+        {
+          "word": "and",
+          "start": 5.84,
+          "end": 6.72,
+          "probability": 0.010456738993525505
+        },
+        {
+          "word": "the",
+          "start": 6.72,
+          "end": 6.84,
+          "probability": 5.333787362360454e-05
+        },
+        {
+          "word": "next",
+          "start": 6.84,
+          "end": 7.14,
+          "probability": 0.9783915877342224
+        },
+        {
+          "word": "step,",
+          "start": 7.14,
+          "end": 7.58,
+          "probability": 0.9740193486213684
+        },
+        {
+          "word": "if",
+          "start": 8,
+          "end": 8.12,
+          "probability": 0.9671460390090942
+        },
+        {
+          "word": "useful.",
+          "start": 8.12,
+          "end": 8.5,
+          "probability": 0.9334646463394165
+        }
+      ]
+    },
+    {
+      "id": "unavailable-result",
+      "script": "Unavailable recorded confirms the access outcome. It is not a pass.",
+      "requestHash": "830c6221ff163b4c6cda62a571811268cd71f877d76d2f97fda9eabc77a56d19",
+      "audio": {
+        "path": "cln-tutorial/v4-audio/unavailable-result-830c6221ff16.mp3",
+        "bytes": 81964,
+        "sha256": "842e071b9c16f297d035203e089bc5c3f52c2c6b7a78094bc3ab2f3279919569"
+      },
+      "receipt": {
+        "path": "cln-tutorial/v4-audio/unavailable-result-830c6221ff16-provenance.json",
+        "bytes": 713,
+        "sha256": "3e5dbc19c6487929d5bb5ab9b76ffe3501edf0648d60a7cc5e86558864d02d95"
+      },
+      "transcript": {
+        "path": "cln-tutorial/v4-audio/unavailable-result-830c6221ff16-local-1533a3f4e4f5.json",
+        "bytes": 3978,
+        "sha256": "cc45561901c41190aff20d3fbd881f0f8ebabb757c57535385d510989bccd2d3"
+      },
+      "transcriptionProvider": "local-faster-whisper",
+      "clipStartFrame": 0,
+      "durationSeconds": 5.093878,
+      "words": [
+        {
+          "word": "Unavailable",
+          "start": 0,
+          "end": 0.58,
+          "probability": 0.7469141781330109
+        },
+        {
+          "word": "recorded",
+          "start": 0.58,
+          "end": 1.12,
+          "probability": 0.8283993601799011
+        },
+        {
+          "word": "confirms",
+          "start": 1.12,
+          "end": 1.82,
+          "probability": 0.990231454372406
+        },
+        {
+          "word": "the",
+          "start": 1.82,
+          "end": 2.14,
+          "probability": 0.9966335892677307
+        },
+        {
+          "word": "access",
+          "start": 2.14,
+          "end": 2.44,
+          "probability": 0.9018737077713013
+        },
+        {
+          "word": "outcome,",
+          "start": 2.44,
+          "end": 3.02,
+          "probability": 0.9853134751319885
+        },
+        {
+          "word": "it",
+          "start": 3.8,
+          "end": 3.94,
+          "probability": 0.9416902661323547
+        },
+        {
+          "word": "is",
+          "start": 3.94,
+          "end": 4.06,
+          "probability": 0.9710663557052612
+        },
+        {
+          "word": "not",
+          "start": 4.06,
+          "end": 4.22,
+          "probability": 0.9955638647079468
+        },
+        {
+          "word": "a",
+          "start": 4.22,
+          "end": 4.32,
+          "probability": 0.967523992061615
+        },
+        {
+          "word": "pass.",
+          "start": 4.32,
+          "end": 4.52,
+          "probability": 0.9837935566902161
+        }
+      ]
+    },
+    {
+      "id": "bulk-confirm",
+      "script": "Now Pass all covers fifteen remaining Daily checks in Premix Area. The individual pass and three exceptions are excluded. Confirm only work checked clean.",
+      "requestHash": "ec29d78269ce5601d381d0b174ddcf7dd6f0b15e219b38c3d89099e3a3d5cd20",
+      "audio": {
+        "path": "cln-tutorial/v4-audio/bulk-confirm-ec29d78269ce.mp3",
+        "bytes": 216546,
+        "sha256": "027bb6e625259db4f3ca7f9f48d2c243761ce267740fa9fb311e6428dd9386dd"
+      },
+      "receipt": {
+        "path": "cln-tutorial/v4-audio/bulk-confirm-ec29d78269ce-provenance.json",
+        "bytes": 795,
+        "sha256": "c17660d5c30fc1f3ecf101506ca54f6765ce604b3c9cd0e62c77bd47509a99d7"
+      },
+      "transcript": {
+        "path": "cln-tutorial/v4-audio/bulk-confirm-ec29d78269ce-local-1533a3f4e4f5.json",
+        "bytes": 6004,
+        "sha256": "ae6061fe7deab99e0d5dc51554478b493795daf14469a7dc29032456fd1c8ca0"
+      },
+      "transcriptionProvider": "local-faster-whisper",
+      "clipStartFrame": 0,
+      "durationSeconds": 13.505306,
+      "words": [
+        {
+          "word": "Now",
+          "start": 0,
+          "end": 0.22,
+          "probability": 0.597201943397522
+        },
+        {
+          "word": "pass",
+          "start": 0.22,
+          "end": 0.56,
+          "probability": 0.4073795676231384
+        },
+        {
+          "word": "all",
+          "start": 0.56,
+          "end": 0.96,
+          "probability": 0.650353193283081
+        },
+        {
+          "word": "covers",
+          "start": 0.96,
+          "end": 1.42,
+          "probability": 0.9207596182823181
+        },
+        {
+          "word": "15",
+          "start": 1.42,
+          "end": 1.92,
+          "probability": 0.9523730874061584
+        },
+        {
+          "word": "remaining",
+          "start": 1.92,
+          "end": 2.64,
+          "probability": 0.9929502010345459
+        },
+        {
+          "word": "daily",
+          "start": 2.64,
+          "end": 3.48,
+          "probability": 0.9737547636032104
+        },
+        {
+          "word": "checks",
+          "start": 3.48,
+          "end": 3.88,
+          "probability": 0.9940459728240967
+        },
+        {
+          "word": "in",
+          "start": 3.88,
+          "end": 4.68,
+          "probability": 0.9762291312217712
+        },
+        {
+          "word": "premix",
+          "start": 4.68,
+          "end": 5.12,
+          "probability": 0.5587202906608582
+        },
+        {
+          "word": "area.",
+          "start": 5.12,
+          "end": 5.52,
+          "probability": 0.9362044334411621
+        },
+        {
+          "word": "The",
+          "start": 6.42,
+          "end": 6.56,
+          "probability": 0.9381096363067627
+        },
+        {
+          "word": "individual",
+          "start": 6.56,
+          "end": 6.96,
+          "probability": 0.9906869530677795
+        },
+        {
+          "word": "pass",
+          "start": 6.96,
+          "end": 7.36,
+          "probability": 0.9658863544464111
+        },
+        {
+          "word": "and",
+          "start": 7.36,
+          "end": 8.2,
+          "probability": 0.9081839323043823
+        },
+        {
+          "word": "three",
+          "start": 8.2,
+          "end": 8.46,
+          "probability": 0.6205756068229675
+        },
+        {
+          "word": "exceptions",
+          "start": 8.46,
+          "end": 8.94,
+          "probability": 0.9950516819953918
+        },
+        {
+          "word": "are",
+          "start": 8.94,
+          "end": 9.42,
+          "probability": 0.9876818060874939
+        },
+        {
+          "word": "excluded,",
+          "start": 9.42,
+          "end": 10,
+          "probability": 0.993881344795227
+        },
+        {
+          "word": "confirm,",
+          "start": 10.58,
+          "end": 11.06,
+          "probability": 0.9359044432640076
+        },
+        {
+          "word": "only",
+          "start": 11.62,
+          "end": 11.92,
+          "probability": 0.9758711457252502
+        },
+        {
+          "word": "work",
+          "start": 11.92,
+          "end": 12.2,
+          "probability": 0.9008204936981201
+        },
+        {
+          "word": "checked",
+          "start": 12.2,
+          "end": 12.52,
+          "probability": 0.9749199748039246
+        },
+        {
+          "word": "clean.",
+          "start": 12.52,
+          "end": 12.9,
+          "probability": 0.9247446060180664
+        }
+      ]
+    },
+    {
+      "id": "bulk-result",
+      "script": "Nineteen completed includes sixteen passes, two failures and one unavailable. Tables shows NCR raised; the findings stay open.",
+      "requestHash": "435d9d1c038238cd0843837572efe6e8cb40badb9ff11ce44409b4ea646cb6b0",
+      "audio": {
+        "path": "cln-tutorial/v4-audio/bulk-result-435d9d1c0382.mp3",
+        "bytes": 177258,
+        "sha256": "91455eee6c59abcfcc5258827a6ca953c81c2bf4b7add944ac4e0b57a0e48683"
+      },
+      "receipt": {
+        "path": "cln-tutorial/v4-audio/bulk-result-435d9d1c0382-provenance.json",
+        "bytes": 766,
+        "sha256": "eb1fc1724a2209e374a1dfdbbe6f03ec184e220de03a7ef22e90cd7690e6007b"
+      },
+      "transcript": {
+        "path": "cln-tutorial/v4-audio/bulk-result-435d9d1c0382-local-1533a3f4e4f5.json",
+        "bytes": 5161,
+        "sha256": "1640cbc3e2ed5504307b70bed81fb32ed26b5c2197aed2366bb153fe7717face"
+      },
+      "transcriptionProvider": "local-faster-whisper",
+      "clipStartFrame": 0,
+      "durationSeconds": 11.049796,
+      "words": [
+        {
+          "word": "19",
+          "start": 0,
+          "end": 0.38,
+          "probability": 0.8660442233085632
+        },
+        {
+          "word": "completed",
+          "start": 0.38,
+          "end": 0.94,
+          "probability": 0.9688244462013245
+        },
+        {
+          "word": "includes",
+          "start": 0.94,
+          "end": 1.7,
+          "probability": 0.8834865093231201
+        },
+        {
+          "word": "16",
+          "start": 1.7,
+          "end": 2.42,
+          "probability": 0.9733313918113708
+        },
+        {
+          "word": "passes,",
+          "start": 2.42,
+          "end": 2.82,
+          "probability": 0.9921147227287292
+        },
+        {
+          "word": "two",
+          "start": 3.54,
+          "end": 3.82,
+          "probability": 0.5347565412521362
+        },
+        {
+          "word": "failures,",
+          "start": 3.82,
+          "end": 4.34,
+          "probability": 0.9947046637535095
+        },
+        {
+          "word": "and",
+          "start": 4.94,
+          "end": 5.16,
+          "probability": 0.972870409488678
+        },
+        {
+          "word": "one",
+          "start": 5.16,
+          "end": 5.36,
+          "probability": 0.964584231376648
+        },
+        {
+          "word": "unavailable.",
+          "start": 5.36,
+          "end": 6.06,
+          "probability": 0.9954243004322052
+        },
+        {
+          "word": "Tables",
+          "start": 6.7,
+          "end": 7.1,
+          "probability": 0.9527828097343445
+        },
+        {
+          "word": "shows",
+          "start": 7.1,
+          "end": 7.52,
+          "probability": 0.6182206273078918
+        },
+        {
+          "word": "NCR",
+          "start": 7.52,
+          "end": 8.2,
+          "probability": 0.5961417779326439
+        },
+        {
+          "word": "raised,",
+          "start": 8.2,
+          "end": 8.74,
+          "probability": 0.9490238428115845
+        },
+        {
+          "word": "the",
+          "start": 9.34,
+          "end": 9.38,
+          "probability": 0.9711799025535583
+        },
+        {
+          "word": "findings",
+          "start": 9.38,
+          "end": 9.86,
+          "probability": 0.994281530380249
+        },
+        {
+          "word": "stay",
+          "start": 9.86,
+          "end": 10.3,
+          "probability": 0.9659075736999512
+        },
+        {
+          "word": "open.",
+          "start": 10.3,
+          "end": 10.58,
+          "probability": 0.9876602292060852
+        }
+      ]
+    },
+    {
+      "id": "open-bands",
+      "script": "Still to do is two hundred and sixteen. Passed is sixteen; follow-up owed is two; couldn't access is one. Nineteen scheduled checks are captured.",
+      "requestHash": "044f75c85510a78b742b4f7315d73ed787c310c8e6a04cfd52e6f936286949af",
+      "audio": {
+        "path": "cln-tutorial/v4-audio/open-bands-044f75c85510.mp3",
+        "bytes": 229921,
+        "sha256": "bf4fc42121084230b85571686231a36452d3a8aaf71a14c05f024c47e3ea4289"
+      },
+      "receipt": {
+        "path": "cln-tutorial/v4-audio/open-bands-044f75c85510-provenance.json",
+        "bytes": 784,
+        "sha256": "91fcf71db1c9f90e00cd9a824248517a88448d4775662788f36d4269cfaee64f"
+      },
+      "transcript": {
+        "path": "cln-tutorial/v4-audio/open-bands-044f75c85510-local-1533a3f4e4f5.json",
+        "bytes": 5476,
+        "sha256": "5d5cb2ea12be3f939a4137479ac754c938c41cf0b7a1df3ed5d7c243e5daea8c"
+      },
+      "transcriptionProvider": "local-faster-whisper",
+      "clipStartFrame": 0,
+      "durationSeconds": 14.341224,
+      "words": [
+        {
+          "word": "Still",
+          "start": 0,
+          "end": 0.32,
+          "probability": 0.31084030866622925
+        },
+        {
+          "word": "to",
+          "start": 0.32,
+          "end": 0.52,
+          "probability": 0.002143620352057951
+        },
+        {
+          "word": "do,",
+          "start": 0.52,
+          "end": 0.76,
+          "probability": 0.94480299949646
+        },
+        {
+          "word": "is",
+          "start": 1.18,
+          "end": 1.66,
+          "probability": 0.8141310811042786
+        },
+        {
+          "word": "216,",
+          "start": 1.66,
+          "end": 3.06,
+          "probability": 0.8848004937171936
+        },
+        {
+          "word": "Passed,",
+          "start": 3.68,
+          "end": 4.38,
+          "probability": 0.48560872895177454
+        },
+        {
+          "word": "is",
+          "start": 4.46,
+          "end": 4.48,
+          "probability": 0.7933862209320068
+        },
+        {
+          "word": "16,",
+          "start": 4.48,
+          "end": 4.88,
+          "probability": 0.9685109257698059
+        },
+        {
+          "word": "Follow",
+          "start": 5.66,
+          "end": 5.92,
+          "probability": 0.92037034034729
+        },
+        {
+          "word": "-up",
+          "start": 5.92,
+          "end": 6.24,
+          "probability": 0.5339735895395279
+        },
+        {
+          "word": "owed,",
+          "start": 6.24,
+          "end": 6.72,
+          "probability": 0.0400598905980587
+        },
+        {
+          "word": "is",
+          "start": 7.28,
+          "end": 7.34,
+          "probability": 0.9628506302833557
+        },
+        {
+          "word": "2,",
+          "start": 7.34,
+          "end": 7.74,
+          "probability": 0.882688581943512
+        },
+        {
+          "word": "Couldn't",
+          "start": 8.7,
+          "end": 9.02,
+          "probability": 0.8396069705486298
+        },
+        {
+          "word": "access,",
+          "start": 9.02,
+          "end": 9.34,
+          "probability": 0.8550122976303101
+        },
+        {
+          "word": "is",
+          "start": 9.74,
+          "end": 9.8,
+          "probability": 0.9748641848564148
+        },
+        {
+          "word": "1,",
+          "start": 9.8,
+          "end": 10.08,
+          "probability": 0.9171463847160339
+        },
+        {
+          "word": "19,",
+          "start": 10.8,
+          "end": 11.28,
+          "probability": 0.9240014553070068
+        },
+        {
+          "word": "Scheduled",
+          "start": 11.88,
+          "end": 12.22,
+          "probability": 0.9384268820285797
+        },
+        {
+          "word": "checks,",
+          "start": 12.22,
+          "end": 12.64,
+          "probability": 0.9059062004089355
+        },
+        {
+          "word": "are",
+          "start": 13.22,
+          "end": 13.38,
+          "probability": 0.9787219166755676
+        },
+        {
+          "word": "captured.",
+          "start": 13.38,
+          "end": 13.76,
+          "probability": 0.9635775089263916
+        }
+      ]
+    },
+    {
+      "id": "follow-queue",
+      "script": "Open Follow-ups and find the Cleaning finding. Review the reason, arrange the correction, and recheck.",
+      "requestHash": "a01ccdb565ad33cd133d7e32b3058cf577d4de0b948f482febd883b47564d86f",
+      "audio": {
+        "path": "cln-tutorial/v4-audio/follow-queue-a01ccdb565ad.mp3",
+        "bytes": 125013,
+        "sha256": "c068aa580412af399dbcb9eed9ad529db155ddcf76005cc0284ca82750ff476a"
+      },
+      "receipt": {
+        "path": "cln-tutorial/v4-audio/follow-queue-a01ccdb565ad-provenance.json",
+        "bytes": 743,
+        "sha256": "5fa5d348fd6dfc775d8d4b0286705a2a23cfcf62d9474f536b2c705b4dcdfa4e"
+      },
+      "transcript": {
+        "path": "cln-tutorial/v4-audio/follow-queue-a01ccdb565ad-local-1533a3f4e4f5.json",
+        "bytes": 4873,
+        "sha256": "31cca807c7adfa1d3dcf32a7b5c7ae182890fffc93ba97fec41bf87b972b2ec8"
+      },
+      "transcriptionProvider": "local-faster-whisper",
+      "clipStartFrame": 0,
+      "durationSeconds": 7.78449,
+      "words": [
+        {
+          "word": "Open",
+          "start": 0,
+          "end": 0.36,
+          "probability": 0.7441385984420776
+        },
+        {
+          "word": "follow",
+          "start": 0.36,
+          "end": 0.68,
+          "probability": 0.9013616442680359
+        },
+        {
+          "word": "-ups",
+          "start": 0.68,
+          "end": 1.04,
+          "probability": 0.7098611444234848
+        },
+        {
+          "word": "and",
+          "start": 1.04,
+          "end": 1.64,
+          "probability": 0.864674985408783
+        },
+        {
+          "word": "find",
+          "start": 1.64,
+          "end": 1.94,
+          "probability": 0.9875398874282837
+        },
+        {
+          "word": "the",
+          "start": 1.94,
+          "end": 2.14,
+          "probability": 0.9797070026397705
+        },
+        {
+          "word": "cleaning",
+          "start": 2.14,
+          "end": 2.4,
+          "probability": 0.9798563718795776
+        },
+        {
+          "word": "finding.",
+          "start": 2.4,
+          "end": 2.88,
+          "probability": 0.8116968274116516
+        },
+        {
+          "word": "Review",
+          "start": 3.46,
+          "end": 3.84,
+          "probability": 0.9600405693054199
+        },
+        {
+          "word": "the",
+          "start": 3.84,
+          "end": 4.08,
+          "probability": 0.9967871904373169
+        },
+        {
+          "word": "reason,",
+          "start": 4.08,
+          "end": 4.42,
+          "probability": 0.9496915936470032
+        },
+        {
+          "word": "arrange",
+          "start": 5.02,
+          "end": 5.34,
+          "probability": 0.9705523252487183
+        },
+        {
+          "word": "the",
+          "start": 5.34,
+          "end": 5.7,
+          "probability": 0.991804838180542
+        },
+        {
+          "word": "correction",
+          "start": 5.7,
+          "end": 6.16,
+          "probability": 0.979730486869812
+        },
+        {
+          "word": "and",
+          "start": 6.16,
+          "end": 6.8,
+          "probability": 0.8060814738273621
+        },
+        {
+          "word": "recheck.",
+          "start": 6.8,
+          "end": 7.22,
+          "probability": 0.9102301895618439
+        }
+      ]
+    },
+    {
+      "id": "follow-expand",
+      "script": "After correction and recheck, select Confirm Followed Up to close the finding.",
+      "requestHash": "fca983ec0283066f8179fc7eded77f29270ff4f7dbf1a7a922ac62d84516c853",
+      "audio": {
+        "path": "cln-tutorial/v4-audio/follow-expand-fca983ec0283.mp3",
+        "bytes": 96174,
+        "sha256": "7c4eecaf5b8276aaade8762da53f780bea7f3122a039b00d913f9359fbf7e649"
+      },
+      "receipt": {
+        "path": "cln-tutorial/v4-audio/follow-expand-fca983ec0283-provenance.json",
+        "bytes": 719,
+        "sha256": "0677dd7828fc7709563c140664e891a6845b94451777a245b50517c6b3aaf99b"
+      },
+      "transcript": {
+        "path": "cln-tutorial/v4-audio/follow-expand-fca983ec0283-local-f1bd5c8aabb8.json",
+        "bytes": 4133,
+        "sha256": "ff7f30348c2d905a6ceda1a9def86d19f1385963b92597d50e08ebc5687dfe43"
+      },
+      "transcriptionProvider": "local-faster-whisper",
+      "clipStartFrame": 0,
+      "durationSeconds": 5.982041,
+      "words": [
+        {
+          "word": "After",
+          "start": 0,
+          "end": 0.24,
+          "probability": 0.9079248309135437
+        },
+        {
+          "word": "correction",
+          "start": 0.24,
+          "end": 0.62,
+          "probability": 0.9668739438056946
+        },
+        {
+          "word": "and",
+          "start": 0.62,
+          "end": 0.82,
+          "probability": 0.9431766867637634
+        },
+        {
+          "word": "recheck,",
+          "start": 0.82,
+          "end": 1.2,
+          "probability": 0.9255088269710541
+        },
+        {
+          "word": "select",
+          "start": 1.7,
+          "end": 2.16,
+          "probability": 0.8961696624755859
+        },
+        {
+          "word": "confirm,",
+          "start": 2.16,
+          "end": 2.82,
+          "probability": 0.6620204448699951
+        },
+        {
+          "word": "followed",
+          "start": 3.32,
+          "end": 3.7,
+          "probability": 0.9850471019744873
+        },
+        {
+          "word": "up",
+          "start": 3.7,
+          "end": 4.04,
+          "probability": 0.9520941972732544
+        },
+        {
+          "word": "to",
+          "start": 4.04,
+          "end": 4.5,
+          "probability": 0.953064501285553
+        },
+        {
+          "word": "close",
+          "start": 4.5,
+          "end": 4.84,
+          "probability": 0.9935956597328186
+        },
+        {
+          "word": "the",
+          "start": 4.84,
+          "end": 5.08,
+          "probability": 0.9895943403244019
+        },
+        {
+          "word": "finding.",
+          "start": 5.08,
+          "end": 5.44,
+          "probability": 0.9810131192207336
+        }
+      ]
+    },
+    {
+      "id": "follow-confirm",
+      "script": "Add an optional note or genuine photo, then select the inner Confirm.",
+      "requestHash": "d0021e50a063a108b748afd7f7cc3692ba6201dfeccc3abd30e2cd9b6ba9ad79",
+      "audio": {
+        "path": "cln-tutorial/v4-audio/follow-confirm-d0021e50a063.mp3",
+        "bytes": 80710,
+        "sha256": "3baa6defe93826fd6dbfe31dc9c5e1b5b73570cf84f515c2f20d4575f4f361f5"
+      },
+      "receipt": {
+        "path": "cln-tutorial/v4-audio/follow-confirm-d0021e50a063-provenance.json",
+        "bytes": 711,
+        "sha256": "ef0b5ee6f54482b718451c725bf4453cb0c098bcf37caa7007f02c77fce2e912"
+      },
+      "transcript": {
+        "path": "cln-tutorial/v4-audio/follow-confirm-d0021e50a063-local-1533a3f4e4f5.json",
+        "bytes": 4092,
+        "sha256": "ee80f91d416ebf440bebe0f3041fd2d073f57eb07380f1e3d052997903e22a31"
+      },
+      "transcriptionProvider": "local-faster-whisper",
+      "clipStartFrame": 0,
+      "durationSeconds": 5.01551,
+      "words": [
+        {
+          "word": "Add",
+          "start": 0,
+          "end": 0.24,
+          "probability": 0.5848603844642639
+        },
+        {
+          "word": "an",
+          "start": 0.24,
+          "end": 0.4,
+          "probability": 0.945384681224823
+        },
+        {
+          "word": "optional",
+          "start": 0.4,
+          "end": 0.8,
+          "probability": 0.9732503294944763
+        },
+        {
+          "word": "note",
+          "start": 0.8,
+          "end": 1.32,
+          "probability": 0.9001024961471558
+        },
+        {
+          "word": "or",
+          "start": 1.32,
+          "end": 1.7,
+          "probability": 0.9630357027053833
+        },
+        {
+          "word": "genuine",
+          "start": 1.7,
+          "end": 2.1,
+          "probability": 0.9473094344139099
+        },
+        {
+          "word": "photo,",
+          "start": 2.1,
+          "end": 2.64,
+          "probability": 0.9968611001968384
+        },
+        {
+          "word": "then",
+          "start": 3,
+          "end": 3.14,
+          "probability": 0.990509033203125
+        },
+        {
+          "word": "select",
+          "start": 3.14,
+          "end": 3.54,
+          "probability": 0.9839450716972351
+        },
+        {
+          "word": "the",
+          "start": 3.54,
+          "end": 3.84,
+          "probability": 0.9760063886642456
+        },
+        {
+          "word": "inner",
+          "start": 3.84,
+          "end": 4.02,
+          "probability": 0.8468188047409058
+        },
+        {
+          "word": "confirm.",
+          "start": 4.02,
+          "end": 4.4,
+          "probability": 0.9482684135437012
+        }
+      ]
+    },
+    {
+      "id": "follow-result",
+      "script": "Blue Covers leaves the open queue. The search now has no matches.",
+      "requestHash": "d9dfde10db602dd5162f9b475e574c3a5a3d3aaad95b1d8c791c8cc49b2017e0",
+      "audio": {
+        "path": "cln-tutorial/v4-audio/follow-result-d9dfde10db60.mp3",
+        "bytes": 65663,
+        "sha256": "8878e3c07fa6087143fccf6da4070c21ba57659d8e96faa4b3c6bf68e476d9c4"
+      },
+      "receipt": {
+        "path": "cln-tutorial/v4-audio/follow-result-d9dfde10db60-provenance.json",
+        "bytes": 706,
+        "sha256": "e3c2f13abd4c1b75b0f4b38f2d22daed849f29d333e08f00b613296275277bb4"
+      },
+      "transcript": {
+        "path": "cln-tutorial/v4-audio/follow-result-d9dfde10db60-local-1533a3f4e4f5.json",
+        "bytes": 4087,
+        "sha256": "ac49e2b55c3ea345861c4501feb20b4e43a17011813be868a692fbe2d3cf0c87"
+      },
+      "transcriptionProvider": "local-faster-whisper",
+      "clipStartFrame": 0,
+      "durationSeconds": 4.075102,
+      "words": [
+        {
+          "word": "Blue",
+          "start": 0,
+          "end": 0.26,
+          "probability": 0.5672975182533264
+        },
+        {
+          "word": "covers",
+          "start": 0.26,
+          "end": 0.58,
+          "probability": 0.772805392742157
+        },
+        {
+          "word": "leaves",
+          "start": 0.58,
+          "end": 0.92,
+          "probability": 0.882372260093689
+        },
+        {
+          "word": "the",
+          "start": 0.92,
+          "end": 1.1,
+          "probability": 0.9911327958106995
+        },
+        {
+          "word": "open",
+          "start": 1.1,
+          "end": 1.32,
+          "probability": 0.9707744717597961
+        },
+        {
+          "word": "queue,",
+          "start": 1.32,
+          "end": 1.68,
+          "probability": 0.9022566676139832
+        },
+        {
+          "word": "the",
+          "start": 2.14,
+          "end": 2.24,
+          "probability": 0.946099579334259
+        },
+        {
+          "word": "search",
+          "start": 2.24,
+          "end": 2.5,
+          "probability": 0.9646442532539368
+        },
+        {
+          "word": "now",
+          "start": 2.5,
+          "end": 2.84,
+          "probability": 0.9600276947021484
+        },
+        {
+          "word": "has",
+          "start": 2.84,
+          "end": 3.08,
+          "probability": 0.9941678047180176
+        },
+        {
+          "word": "no",
+          "start": 3.08,
+          "end": 3.24,
+          "probability": 0.9974258542060852
+        },
+        {
+          "word": "matches.",
+          "start": 3.24,
+          "end": 3.5,
+          "probability": 0.951265811920166
+        }
+      ]
+    },
+    {
+      "id": "resolved-bands",
+      "script": "Still to do stays at two hundred and sixteen. Passed stays sixteen; follow-up owed drops to one; couldn't access stays one. Blue Covers is resolved today. Its original fail and nineteen captured checks are unchanged.",
+      "requestHash": "aaa27ab09111a69151572ead4bda11fb88e67a976918b4b5c9bad96163a5d3ea",
+      "audio": {
+        "path": "cln-tutorial/v4-audio/resolved-bands-aaa27ab09111.mp3",
+        "bytes": 318946,
+        "sha256": "cff7bb2e20f4c56a7cd4ef10a837f1068969bb536e810719e83e90b7aba84483"
+      },
+      "receipt": {
+        "path": "cln-tutorial/v4-audio/resolved-bands-aaa27ab09111-provenance.json",
+        "bytes": 859,
+        "sha256": "560a011a3fa8faac451566d9ab405ab4f62a062d537303aa2ea64cd24a43afb6"
+      },
+      "transcript": {
+        "path": "cln-tutorial/v4-audio/resolved-bands-aaa27ab09111-local-58830a585609.json",
+        "bytes": 8163,
+        "sha256": "02484f94213a749186e9d743b9f9c548bc79dae8c77de7d301f87356103dc078"
+      },
+      "transcriptionProvider": "local-faster-whisper",
+      "clipStartFrame": 0,
+      "durationSeconds": 19.905306,
+      "words": [
+        {
+          "word": "Still",
+          "start": 0,
+          "end": 0.4,
+          "probability": 0.4296115040779114
+        },
+        {
+          "word": "to",
+          "start": 0.4,
+          "end": 0.62,
+          "probability": 0.0005781284414752008
+        },
+        {
+          "word": "do",
+          "start": 0.62,
+          "end": 0.88,
+          "probability": 0.8742942810058594
+        },
+        {
+          "word": "stays",
+          "start": 0.88,
+          "end": 1.38,
+          "probability": 0.5681352019309998
+        },
+        {
+          "word": "at",
+          "start": 1.38,
+          "end": 1.68,
+          "probability": 0.9733309745788574
+        },
+        {
+          "word": "two",
+          "start": 1.68,
+          "end": 1.94,
+          "probability": 0.008114746306091547
+        },
+        {
+          "word": "hundred",
+          "start": 1.94,
+          "end": 2.24,
+          "probability": 0.9836369156837463
+        },
+        {
+          "word": "and",
+          "start": 2.24,
+          "end": 2.8,
+          "probability": 0.8917315602302551
+        },
+        {
+          "word": "sixteen.",
+          "start": 2.8,
+          "end": 3.14,
+          "probability": 0.5497786402702332
+        },
+        {
+          "word": "Passed",
+          "start": 3.76,
+          "end": 4.38,
+          "probability": 0.5017053261399269
+        },
+        {
+          "word": "stays",
+          "start": 4.38,
+          "end": 4.64,
+          "probability": 0.9303979873657227
+        },
+        {
+          "word": "sixteen.",
+          "start": 4.64,
+          "end": 5.6,
+          "probability": 0.19372965395450592
+        },
+        {
+          "word": "Follow",
+          "start": 6.36,
+          "end": 6.72,
+          "probability": 0.9251015186309814
+        },
+        {
+          "word": "-up",
+          "start": 6.72,
+          "end": 7.12,
+          "probability": 0.6467612683773041
+        },
+        {
+          "word": "owed",
+          "start": 7.12,
+          "end": 7.68,
+          "probability": 0.039089709520339966
+        },
+        {
+          "word": "drops",
+          "start": 7.68,
+          "end": 8.06,
+          "probability": 0.9868762493133545
+        },
+        {
+          "word": "to",
+          "start": 8.06,
+          "end": 8.36,
+          "probability": 0.38514411821961403
+        },
+        {
+          "word": "one.",
+          "start": 8.36,
+          "end": 8.64,
+          "probability": 0.9273794293403625
+        },
+        {
+          "word": "Couldn't",
+          "start": 9.22,
+          "end": 9.68,
+          "probability": 0.9426602721214294
+        },
+        {
+          "word": "access",
+          "start": 9.68,
+          "end": 10.04,
+          "probability": 0.8294554352760315
+        },
+        {
+          "word": "stays",
+          "start": 10.04,
+          "end": 10.62,
+          "probability": 0.9753865599632263
+        },
+        {
+          "word": "one.",
+          "start": 10.62,
+          "end": 11.1,
+          "probability": 0.8810526728630066
+        },
+        {
+          "word": "Blue",
+          "start": 12.06,
+          "end": 12.18,
+          "probability": 0.8817743062973022
+        },
+        {
+          "word": "Covers",
+          "start": 12.18,
+          "end": 12.58,
+          "probability": 0.5185315124690533
+        },
+        {
+          "word": "is",
+          "start": 12.58,
+          "end": 12.78,
+          "probability": 0.6003149151802063
+        },
+        {
+          "word": "resolved",
+          "start": 12.78,
+          "end": 13.24,
+          "probability": 0.8137193322181702
+        },
+        {
+          "word": "today.",
+          "start": 13.24,
+          "end": 13.98,
+          "probability": 0.5545870270580053
+        },
+        {
+          "word": "Its",
+          "start": 14.6,
+          "end": 14.76,
+          "probability": 0.34835514426231384
+        },
+        {
+          "word": "original",
+          "start": 14.76,
+          "end": 15.06,
+          "probability": 0.8884903788566589
+        },
+        {
+          "word": "fail",
+          "start": 15.06,
+          "end": 15.48,
+          "probability": 0.7670683264732361
+        },
+        {
+          "word": "and",
+          "start": 15.48,
+          "end": 16.34,
+          "probability": 0.06721252202987671
+        },
+        {
+          "word": "nineteen",
+          "start": 16.34,
+          "end": 16.96,
+          "probability": 0.11935923993587494
+        },
+        {
+          "word": "captured",
+          "start": 16.96,
+          "end": 17.58,
+          "probability": 0.8387370705604553
+        },
+        {
+          "word": "checks",
+          "start": 17.58,
+          "end": 18,
+          "probability": 0.8360326886177063
+        },
+        {
+          "word": "are",
+          "start": 18,
+          "end": 18.62,
+          "probability": 0.9570249319076538
+        },
+        {
+          "word": "unchanged.",
+          "start": 18.62,
+          "end": 19.12,
+          "probability": 0.9583266377449036
+        }
+      ]
+    },
+    {
+      "id": "handoff",
+      "script": "That is the scheduled check and immediate follow-up loop. The Remedial video explains persistent findings and Inspection Remedials that carry over.",
+      "requestHash": "a31cfa42c5b7d694ab22f9ac20f5aa27c89a378613e80fa537fae0e8159ad007",
+      "audio": {
+        "path": "cln-tutorial/v4-audio/handoff-a31cfa42c5b7.mp3",
+        "bytes": 161376,
+        "sha256": "0088021120fa5728e0bc93b55471ae5fe7f4034b21d34576fbd1e15058957617"
+      },
+      "receipt": {
+        "path": "cln-tutorial/v4-audio/handoff-a31cfa42c5b7-provenance.json",
+        "bytes": 783,
+        "sha256": "2f48b13e7875f8ea1d6fdae9686cbda814ec032ac8e2ee3ad3587dbcbde167aa"
+      },
+      "transcript": {
+        "path": "cln-tutorial/v4-audio/handoff-a31cfa42c5b7-local-809c8fee3765.json",
+        "bytes": 5934,
+        "sha256": "d991265863756b1a20dff5b786869ec4981861dbdf44e5586b0a380ba9836c7f"
+      },
+      "transcriptionProvider": "local-faster-whisper",
+      "clipStartFrame": 0,
+      "durationSeconds": 10.057143,
+      "words": [
+        {
+          "word": "That",
+          "start": 0,
+          "end": 0.28,
+          "probability": 0.5791663527488708
+        },
+        {
+          "word": "is",
+          "start": 0.28,
+          "end": 0.46,
+          "probability": 0.9752444624900818
+        },
+        {
+          "word": "the",
+          "start": 0.46,
+          "end": 0.6,
+          "probability": 0.0004930187105784967
+        },
+        {
+          "word": "scheduled",
+          "start": 0.6,
+          "end": 0.94,
+          "probability": 0.8889520168304443
+        },
+        {
+          "word": "check",
+          "start": 0.94,
+          "end": 1.32,
+          "probability": 0.9758854508399963
+        },
+        {
+          "word": "and",
+          "start": 1.32,
+          "end": 2.12,
+          "probability": 0.1460687220096588
+        },
+        {
+          "word": "immediate",
+          "start": 2.12,
+          "end": 2.46,
+          "probability": 0.9776883125305176
+        },
+        {
+          "word": "follow",
+          "start": 2.46,
+          "end": 2.82,
+          "probability": 0.9858787655830383
+        },
+        {
+          "word": "-up",
+          "start": 2.82,
+          "end": 3.08,
+          "probability": 0.7988818287849426
+        },
+        {
+          "word": "loop.",
+          "start": 3.08,
+          "end": 3.3,
+          "probability": 0.9778092503547668
+        },
+        {
+          "word": "The",
+          "start": 4.08,
+          "end": 4.2,
+          "probability": 0.9798313975334167
+        },
+        {
+          "word": "Remedial",
+          "start": 4.2,
+          "end": 4.62,
+          "probability": 0.6511899270117283
+        },
+        {
+          "word": "video",
+          "start": 4.62,
+          "end": 4.88,
+          "probability": 0.6425235271453857
+        },
+        {
+          "word": "explains",
+          "start": 4.88,
+          "end": 5.52,
+          "probability": 0.994549572467804
+        },
+        {
+          "word": "persistent",
+          "start": 5.52,
+          "end": 6.3,
+          "probability": 0.9489235877990723
+        },
+        {
+          "word": "findings",
+          "start": 6.3,
+          "end": 6.92,
+          "probability": 0.9777777791023254
+        },
+        {
+          "word": "and",
+          "start": 6.92,
+          "end": 7.24,
+          "probability": 0.9894706010818481
+        },
+        {
+          "word": "Inspection",
+          "start": 7.24,
+          "end": 7.7,
+          "probability": 0.6621021058720847
+        },
+        {
+          "word": "Remedials",
+          "start": 7.7,
+          "end": 8.3,
+          "probability": 0.8443855047225952
+        },
+        {
+          "word": "that",
+          "start": 8.3,
+          "end": 8.94,
+          "probability": 0.1340184794535162
+        },
+        {
+          "word": "carry",
+          "start": 8.94,
+          "end": 9.26,
+          "probability": 0.9855954647064209
+        },
+        {
+          "word": "over.",
+          "start": 9.26,
+          "end": 9.6,
+          "probability": 0.6837323307991028
+        }
+      ]
+    }
+  ],
+  "blocker": null,
+  "credentialSource": "/home/durai/Documents/projects/content-engine/.env",
+  "previousBlocker": {
+    "blocker": "Whisper home: HTTP 429 (credit_balance_exhausted)",
+    "evidence": {
+      "logRef": "/tmp/verify-cln-v4-audio-prep.log",
+      "logBytes": 110,
+      "logSha256": "ab6a8ee64e14c651dd06073844ae1140bc23015518bab3963f096a02bc3095d6",
+      "logLines": [
+        "Generate established series voice: home",
+        "AUDIO PREP BLOCKED: Whisper home: HTTP 429 (credit_balance_exhausted)"
+      ],
+      "scriptRef": "tools/prepare-cln-v4-audio.cjs",
+      "failedOperation": "Whisper home",
+      "endpoint": "https://api.openai.com/v1/audio/transcriptions",
+      "httpStatus": 429,
+      "providerCode": "credit_balance_exhausted",
+      "cause": "The provider rejected the first home transcription. The script saves each MP3, receipt and generatedClips entry, then awaits whisper-1 transcription before advancing to the next beat. responseOrThrow throws on this non-OK response; the outer catch persists status blocked and exits 1 before boh, measured clips or master creation.",
+      "successfulGenerationRequestId": "BSHrALFqXp7lhNtBe0HZ",
+      "successfulGenerationAt": "2026-09-06T12:54:45.411Z",
+      "evidenceLimit": "The saved sanitized log establishes the reported provider error and the script establishes the stop path. No raw transcription response, transcription request ID or billing-project identity was retained; billing history and current balance cannot be established from this log.",
+      "diagnosticIfStillBlocked": "Identify the effective OPENAI_API_KEY project and check its credit/billing state. In a separately authorized transcription-only retry of the retained home MP3, capture sanitized HTTP status, error code and request ID without logging credentials."
+    }
+  },
+  "requestedTranscription": "local",
+  "providerVoiceName": "DC",
+  "providerVoiceCategory": "professional",
+  "audio": {
+    "path": "cln-tutorial/v4-audio/narration-314e6621e1e7.wav",
+    "bytes": 26544078,
+    "sha256": "913f7fa7a9b112fffbed95950f01597ffc0c4af3089b64559568d1f59a446249",
+    "durationInFrames": 8295,
+    "transcriptRef": "public/cln-tutorial/v4-audio/narration-314e6621e1e7-measured.json",
+    "transcript": {
+      "path": "cln-tutorial/v4-audio/narration-314e6621e1e7-measured.json",
+      "bytes": 93965,
+      "sha256": "17e42c557c22912c3b4eae2fb76ed511653abf9b8ec8eaa78727e09ff1f3b0a8"
+    }
+  },
+  "totalFrames": 8295,
+  "durationSeconds": 276.5,
+  "coverage": {
+    "timelineBeats": 32,
+    "spokenBeats": 30,
+    "measuredClips": 30,
+    "silentBookends": [
+      "intro",
+      "outro"
+    ]
+  },
+  "retainedUnusedRecordings": [
+    {
+      "requestId": "tKWP97rft3jkLpg4h7Yy",
+      "audio": {
+        "path": "cln-tutorial/v4-audio/controlled-scan-00781608a419.mp3",
+        "bytes": 106623,
+        "sha256": "f8316982cf331851edc3534e3f3b8e5bf0743031dd11338f16abe3300f0e1fe6"
+      },
+      "receipt": {
+        "path": "cln-tutorial/v4-audio/controlled-scan-00781608a419-provenance.json",
+        "bytes": 714,
+        "sha256": "63e4cf3c692c87c5e5ceae695ea169710372c371dfe3b79e058eb66d4bd5e6e4"
+      },
+      "script": "Scan the zone QR. This demonstration uses a controlled virtual camera."
+    },
+    {
+      "requestId": "MAPgLLdYrkJ58YqxASJv",
+      "audio": {
+        "path": "cln-tutorial/v4-audio/controlled-scan-f21175565ff9.mp3",
+        "bytes": 92413,
+        "sha256": "44f356825d9247c0bd2c4169ab302e4669febd6116ce85824541f57c0b0ad23e"
+      },
+      "receipt": {
+        "path": "cln-tutorial/v4-audio/controlled-scan-f21175565ff9-provenance.json",
+        "bytes": 711,
+        "sha256": "3228852ee490746fbc7b3222cbe03e6a5856e25cb53d25b57b54938e7de8c7a1"
+      },
+      "script": "This training QR represents Premix Area. No physical visit is shown."
+    },
+    {
+      "requestId": "hCkXDAXoQOZEkhGE2f92",
+      "audio": {
+        "path": "cln-tutorial/v4-audio/due-264f21e5399b.mp3",
+        "bytes": 102862,
+        "sha256": "dea8f8822d5de278f8b21470d6de06fa80d95b62eb96b60e42e2f2a1ad885da6"
+      },
+      "receipt": {
+        "path": "cln-tutorial/v4-audio/due-264f21e5399b-provenance.json",
+        "bytes": 707,
+        "sha256": "c6d55e2d5971bc5f2d4ea338dcb63f9faef2578fc5f6c60e9204896185571182"
+      },
+      "script": "Due lists nineteen Daily checks in Premix Area. Completion is still locked."
+    },
+    {
+      "requestId": "PNZuOsh6d1n3Qmjz07xV",
+      "audio": {
+        "path": "cln-tutorial/v4-audio/due-ad7ceee8d550.mp3",
+        "bytes": 104533,
+        "sha256": "b07050d268e52861a200d330237e6d88fe283517c1b9f40b668c79fd20203ff0"
+      },
+      "receipt": {
+        "path": "cln-tutorial/v4-audio/due-ad7ceee8d550-provenance.json",
+        "bytes": 718,
+        "sha256": "fe188e673f27f8eefa81526c6244627d44f5de3c522377e6b911f888233d48ed"
+      },
+      "script": "Before check-in, Due lists nineteen Daily checks in Premix Area. Completion is locked."
+    },
+    {
+      "requestId": "WV2Q8Fa7Hf56rzpiJKvk",
+      "audio": {
+        "path": "cln-tutorial/v4-audio/follow-expand-544378caa42f.mp3",
+        "bytes": 127521,
+        "sha256": "8460d8370c6b5cb441e5882d29c31a7ce9e0910200eff477f345bd379efe9d86"
+      },
+      "receipt": {
+        "path": "cln-tutorial/v4-audio/follow-expand-544378caa42f-provenance.json",
+        "bytes": 741,
+        "sha256": "48afcd57fa24e536998236d8d53b6558b6f728e21bdea2da3305805addd7d5de"
+      },
+      "script": "After correction and recheck, select Confirm Followed Up. This example records a simulated recheck."
+    },
+    {
+      "requestId": "BSHrALFqXp7lhNtBe0HZ",
+      "audio": {
+        "path": "cln-tutorial/v4-audio/home-ad6166646fa9.mp3",
+        "bytes": 120834,
+        "sha256": "cec82b495b552c31d810185412b33e87c58e4463b729f1a732344b5f84fde519"
+      },
+      "receipt": {
+        "path": "cln-tutorial/v4-audio/home-ad6166646fa9-provenance.json",
+        "bytes": 727,
+        "sha256": "1950468e082e5775c0e69702501ee22f53598fdcafd99142670105bf94c646cd"
+      },
+      "script": "This Bakery Demo tutorial uses simulated inspections and work. From Home, open Bill of Health."
+    },
+    {
+      "requestId": "o4RTBxJTdegvYa21qDXW",
+      "audio": {
+        "path": "cln-tutorial/v4-audio/inspect-pass-0429e8ef00db.mp3",
+        "bytes": 130447,
+        "sha256": "0c71d35b8d0d50e392c96754dad0c067f174217f4f6b88f9cb109b0fbd7aacf6"
+      },
+      "receipt": {
+        "path": "cln-tutorial/v4-audio/inspect-pass-0429e8ef00db-provenance.json",
+        "bytes": 750,
+        "sha256": "d0a015387671d562de619a77cfd2422c7c74f438fe5ef8d75c137760360e0b73"
+      },
+      "script": "Inspect the item. If it meets the cleaning requirements, tap its green tick. Here's the demo before that tap."
+    },
+    {
+      "requestId": "IJFj420m0ZzUUM3KoPLQ",
+      "audio": {
+        "path": "cln-tutorial/v4-audio/major-fields-3324965f3f7e.mp3",
+        "bytes": 198156,
+        "sha256": "abd738b0b60ffa804d2e3562f25d998fe69ac247118f54beb3cf227813816def"
+      },
+      "receipt": {
+        "path": "cln-tutorial/v4-audio/major-fields-3324965f3f7e-provenance.json",
+        "bytes": 783,
+        "sha256": "eaf3e531a1a0c2e6c122fd9b4395472e5d929862c7527576cf56b0caeb55ef5c"
+      },
+      "script": "Choose the appropriate grade, Major in this training example. Give the required failure reason. Action taken and a genuine photo are optional."
+    },
+    {
+      "requestId": "3t7zIpnJ1TVroK55kTw9",
+      "audio": {
+        "path": "cln-tutorial/v4-audio/major-fields-e5517139d507.mp3",
+        "bytes": 201082,
+        "sha256": "b0689678765920dd0c2d934b7333b804292ed2b826e2942c7b73f7cad291ea7b"
+      },
+      "receipt": {
+        "path": "cln-tutorial/v4-audio/major-fields-e5517139d507-provenance.json",
+        "bytes": 775,
+        "sha256": "c4099501c9a3fefd9223aec7a727484c35d83492f8305195a9ce6989a95f674a"
+      },
+      "script": "Choose the appropriate grade, Major for this finding. Give the required failure reason. Action taken and a genuine photo are optional."
+    },
+    {
+      "requestId": "c7jtCFiQ4oSJpgoFTIs6",
+      "audio": {
+        "path": "cln-tutorial/v4-audio/off-schedule-f7c3c2da32f0.mp3",
+        "bytes": 156360,
+        "sha256": "e37e879309c414210682acca7aa25c7862e40b2b559ded38106f9e28c20fd1d6"
+      },
+      "receipt": {
+        "path": "cln-tutorial/v4-audio/off-schedule-f7c3c2da32f0-provenance.json",
+        "bytes": 764,
+        "sha256": "1788fc1065ad1875dae63c4408fe34c4ef644ecd5fe4844a8c685dca27012631"
+      },
+      "script": "Off-schedule lists fourteen weekly items and their next due dates. They are untouched here; record only work actually done."
+    },
+    {
+      "requestId": "vIyK4WsAxpgsdA4Y7jKX",
+      "audio": {
+        "path": "cln-tutorial/v4-audio/scan-entry-e46944b8c771.mp3",
+        "bytes": 47273,
+        "sha256": "eb63b9f4fe820616fb9b6081298cb8536f02427084bd65b5baa9343ed69a441f"
+      },
+      "receipt": {
+        "path": "cln-tutorial/v4-audio/scan-entry-e46944b8c771-provenance.json",
+        "bytes": 681,
+        "sha256": "c82496e0e2cee44939a7cbb0407ea44dfa43ab9ff073bda0ea5d43fa1e73d47e"
+      },
+      "script": "Use Scan QR on the area screen to check in."
+    },
+    {
+      "requestId": "PJ8kwU7UOjm5SjZslCaz",
+      "audio": {
+        "path": "cln-tutorial/v4-audio/unlocked-52c7e7805f26.mp3",
+        "bytes": 91577,
+        "sha256": "e31973c28677a23d11fff4ffd58f3b54545d286cc048fa3db3f9b0d5de902c14"
+      },
+      "receipt": {
+        "path": "cln-tutorial/v4-audio/unlocked-52c7e7805f26-provenance.json",
+        "bytes": 723,
+        "sha256": "de383cf2d0142fd9b6f51306f627b93395ddcb456697c5a5062c4c58f3c4fdab"
+      },
+      "script": "Confirm the unlocked area before inspecting. This earlier capture shows zero completed."
+    },
+    {
+      "requestId": "TluqfmNGzJx6qfAyzurR",
+      "audio": {
+        "path": "cln-tutorial/v4-audio/unlocked-e770183ff535.mp3",
+        "bytes": 105787,
+        "sha256": "6988bcfb9c0e9fcee8555eb57ad6e087fc561eacd9d4d272d29f7851f7679312"
+      },
+      "receipt": {
+        "path": "cln-tutorial/v4-audio/unlocked-e770183ff535-provenance.json",
+        "bytes": 722,
+        "sha256": "c1cf500c3718a3e0c44108340c9e0aa8df38e3f28110faeb128feb55f1434f89"
+      },
+      "script": "Confirm Premix Area is unlocked before inspecting. No checks have been completed yet."
+    }
+  ],
+  "remainingGate": "Claude-2 review and human listening/visual review; no final approval claimed.",
+  "approvalRecord": {
+    "path": "docs/verify-cln-v4-audio-revision-acceptance.json",
+    "bytes": 32145,
+    "sha256": "ee141557fade3f503d3b5d306a67976af9909bc4d83b77c328ecd5186258a8b4"
+  }
+}

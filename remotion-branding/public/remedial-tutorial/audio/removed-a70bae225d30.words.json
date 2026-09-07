@@ -1,0 +1,162 @@
+{
+  "audioSha256": "c6377efd93804fdaad5dbbbdd30e92ce3a4c69cbe1a1d6a9acbcdc1465772607",
+  "model": "faster-whisper-small",
+  "modelRevision": "536b0662742c02347bc0e980a01041f333bce120",
+  "computeType": "int8",
+  "language": "en",
+  "initialPrompt": null,
+  "duration": 11.517125,
+  "text": "After confirmation, the same blue cover search returns, no matches. The finding has left the open queue and its original failure remains in the record.",
+  "words": [
+    {
+      "word": " After",
+      "start": 0.0,
+      "end": 0.22,
+      "probability": 0.9478362798690796
+    },
+    {
+      "word": " confirmation,",
+      "start": 0.22,
+      "end": 0.62,
+      "probability": 0.9735891819000244
+    },
+    {
+      "word": " the",
+      "start": 1.48,
+      "end": 1.54,
+      "probability": 0.958758533000946
+    },
+    {
+      "word": " same",
+      "start": 1.54,
+      "end": 1.88,
+      "probability": 0.9888870120048523
+    },
+    {
+      "word": " blue",
+      "start": 1.88,
+      "end": 2.24,
+      "probability": 0.9446778297424316
+    },
+    {
+      "word": " cover",
+      "start": 2.24,
+      "end": 2.58,
+      "probability": 0.7268282175064087
+    },
+    {
+      "word": " search",
+      "start": 2.58,
+      "end": 3.0,
+      "probability": 0.7510289549827576
+    },
+    {
+      "word": " returns,",
+      "start": 3.0,
+      "end": 3.7,
+      "probability": 0.9715202450752258
+    },
+    {
+      "word": " no",
+      "start": 4.58,
+      "end": 4.8,
+      "probability": 0.953914225101471
+    },
+    {
+      "word": " matches.",
+      "start": 4.8,
+      "end": 5.12,
+      "probability": 0.9580721855163574
+    },
+    {
+      "word": " The",
+      "start": 6.02,
+      "end": 6.16,
+      "probability": 0.9843802452087402
+    },
+    {
+      "word": " finding",
+      "start": 6.16,
+      "end": 6.64,
+      "probability": 0.9617719054222107
+    },
+    {
+      "word": " has",
+      "start": 6.64,
+      "end": 6.94,
+      "probability": 0.9713243842124939
+    },
+    {
+      "word": " left",
+      "start": 6.94,
+      "end": 7.26,
+      "probability": 0.9848047494888306
+    },
+    {
+      "word": " the",
+      "start": 7.26,
+      "end": 7.48,
+      "probability": 0.9849360585212708
+    },
+    {
+      "word": " open",
+      "start": 7.48,
+      "end": 7.78,
+      "probability": 0.9815413951873779
+    },
+    {
+      "word": " queue",
+      "start": 7.78,
+      "end": 8.1,
+      "probability": 0.9190738797187805
+    },
+    {
+      "word": " and",
+      "start": 8.1,
+      "end": 8.92,
+      "probability": 0.5846685767173767
+    },
+    {
+      "word": " its",
+      "start": 8.92,
+      "end": 9.08,
+      "probability": 0.8478088974952698
+    },
+    {
+      "word": " original",
+      "start": 9.08,
+      "end": 9.46,
+      "probability": 0.989569902420044
+    },
+    {
+      "word": " failure",
+      "start": 9.46,
+      "end": 9.9,
+      "probability": 0.9958209991455078
+    },
+    {
+      "word": " remains",
+      "start": 9.9,
+      "end": 10.42,
+      "probability": 0.9936931133270264
+    },
+    {
+      "word": " in",
+      "start": 10.42,
+      "end": 10.62,
+      "probability": 0.9877411723136902
+    },
+    {
+      "word": " the",
+      "start": 10.62,
+      "end": 10.72,
+      "probability": 0.9917323589324951
+    },
+    {
+      "word": " record.",
+      "start": 10.72,
+      "end": 10.96,
+      "probability": 0.9942341446876526
+    }
+  ]
+}

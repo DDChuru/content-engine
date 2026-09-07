@@ -1,0 +1,22 @@
+{
+  "provider": "ElevenLabs",
+  "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+  "requestHash": "a01ccdb565ad33cd133d7e32b3058cf577d4de0b948f482febd883b47564d86f",
+  "request": {
+    "text": "Open Follow-ups and find the Cleaning finding. Review the reason, arrange the correction, and recheck.",
+    "model_id": "eleven_multilingual_v2",
+    "voice_settings": {
+      "stability": 0.55,
+      "similarity_boost": 0.8,
+      "style": 0.35,
+      "use_speaker_boost": true
+    }
+  },
+  "generatedAt": "2026-09-06T13:41:51.027Z",
+  "requestId": "rJQOr2on6Tf39ZuwpyGI",
+  "audio": {
+    "path": "cln-tutorial/v4-audio/follow-queue-a01ccdb565ad.mp3",
+    "bytes": 125013,
+    "sha256": "c068aa580412af399dbcb9eed9ad529db155ddcf76005cc0284ca82750ff476a"
+  }
+}

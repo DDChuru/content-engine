@@ -1,0 +1,22 @@
+{
+  "provider": "ElevenLabs",
+  "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+  "requestHash": "2ab25b2c0f1032b2d04ca19a44196eed0b8ee783484b01139ec9085fd141cb21",
+  "request": {
+    "text": "For a failed check, tap the red cross to open Remedial Action.",
+    "model_id": "eleven_multilingual_v2",
+    "voice_settings": {
+      "stability": 0.55,
+      "similarity_boost": 0.8,
+      "style": 0.35,
+      "use_speaker_boost": true
+    }
+  },
+  "generatedAt": "2026-09-06T13:39:27.154Z",
+  "requestId": "62gyC4pkIuMYZueygTab",
+  "audio": {
+    "path": "cln-tutorial/v4-audio/major-form-2ab25b2c0f10.mp3",
+    "bytes": 76948,
+    "sha256": "edcad6e150b9bca15da828ddaa75e51565de0a1235c046a3855cea32b199c3d6"
+  }
+}

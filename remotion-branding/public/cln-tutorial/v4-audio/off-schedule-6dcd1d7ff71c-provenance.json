@@ -1,0 +1,22 @@
+{
+  "provider": "ElevenLabs",
+  "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+  "requestHash": "6dcd1d7ff71c8d5a1339326d30acd35c0404200fc6d4e9b504fd423b24c0c293",
+  "request": {
+    "text": "Off-schedule lists fourteen weekly items. Check the next due date. These items stay untouched here. Record only work actually done.",
+    "model_id": "eleven_multilingual_v2",
+    "voice_settings": {
+      "stability": 0.55,
+      "similarity_boost": 0.8,
+      "style": 0.35,
+      "use_speaker_boost": true
+    }
+  },
+  "generatedAt": "2026-09-06T13:46:40.313Z",
+  "requestId": "3B6M8pfXP8AkrvRrgxyx",
+  "audio": {
+    "path": "cln-tutorial/v4-audio/off-schedule-6dcd1d7ff71c.mp3",
+    "bytes": 151763,
+    "sha256": "48adad26cf87a4b04f5ae12cf85008dc0bc5ac5e5a7b5c16cc66a99b7dc33c61"
+  }
+}

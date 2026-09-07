@@ -1,0 +1,314 @@
+{
+  "audioSha256": "cff7bb2e20f4c56a7cd4ef10a837f1068969bb536e810719e83e90b7aba84483",
+  "measuredAt": "2026-09-06T13:50:56.748598+00:00",
+  "transcription": {
+    "provider": "local-faster-whisper",
+    "model": "Systran/faster-whisper-small",
+    "modelPath": "/home/durai/.cache/huggingface/hub/models--Systran--faster-whisper-small/snapshots/536b0662742c02347bc0e980a01041f333bce120",
+    "modelRevision": "536b0662742c02347bc0e980a01041f333bce120",
+    "modelFiles": [
+      {
+        "name": "model.bin",
+        "bytes": 483546902,
+        "sha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671"
+      },
+      {
+        "name": "config.json",
+        "bytes": 2370,
+        "sha256": "b55496ac7940a7ae47d2c01eab40edfd8701feec1229d9cce3b40014383fb828"
+      },
+      {
+        "name": "tokenizer.json",
+        "bytes": 2203239,
+        "sha256": "fb7b63191e9bb045082c79fd742a3106a12c99513ab30df4a0d47fa6cb6fd0ab"
+      },
+      {
+        "name": "vocabulary.txt",
+        "bytes": 459861,
+        "sha256": "34ce3fe1c5041027b3f8d42912270993f986dbc4bb34cf27f951e34a1e453913"
+      }
+    ],
+    "versions": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.8.2",
+      "av": "18.1.0",
+      "tokenizers": "0.23.2"
+    },
+    "pythonVersion": "3.12.3",
+    "pythonExecutable": "/tmp/si-units-faster-whisper/bin/python",
+    "device": "cpu",
+    "computeType": "int8",
+    "cpuThreads": 4,
+    "numWorkers": 1,
+    "localFilesOnly": true,
+    "settings": {
+      "language": "en",
+      "word_timestamps": true,
+      "beam_size": 5,
+      "temperature": 0,
+      "condition_on_previous_text": false,
+      "vad_filter": false,
+      "initial_prompt": "Still to do stays at two hundred and sixteen. Passed stays sixteen; follow-up owed drops to one; couldn't access stays one. Blue Covers is resolved today. Its original fail and nineteen captured checks are unchanged."
+    },
+    "helper": {
+      "name": "transcribe-cln-v4-local.py",
+      "bytes": 4082,
+      "sha256": "8e2577ef433953c8a41775bb510e8edbb4694a45bebbfb290c4068474aca3a02"
+    },
+    "workflowRef": "../packages/backend/src/scripts/transcribe-mechanics-si-units-local.py"
+  },
+  "response": {
+    "language": "en",
+    "duration": 19.8763125,
+    "text": "Still to do stays at two hundred and sixteen. Passed stays sixteen. Follow-up owed drops to one. Couldn't access stays one. Blue Covers is resolved today. Its original fail and nineteen captured checks are unchanged.",
+    "segments": [
+      {
+        "id": 1,
+        "start": 0,
+        "end": 5.6,
+        "text": " Still to do stays at two hundred and sixteen. Passed stays sixteen.",
+        "avg_logprob": -0.18318915518663698,
+        "no_speech_prob": 0.01735573820769787
+      },
+      {
+        "id": 2,
+        "start": 6.36,
+        "end": 11.1,
+        "text": " Follow-up owed drops to one. Couldn't access stays one.",
+        "avg_logprob": -0.18318915518663698,
+        "no_speech_prob": 0.01735573820769787
+      },
+      {
+        "id": 3,
+        "start": 12.06,
+        "end": 19.12,
+        "text": " Blue Covers is resolved today. Its original fail and nineteen captured checks are unchanged.",
+        "avg_logprob": -0.18318915518663698,
+        "no_speech_prob": 0.01735573820769787
+      }
+    ],
+    "words": [
+      {
+        "word": "Still",
+        "start": 0,
+        "end": 0.4,
+        "probability": 0.4296115040779114
+      },
+      {
+        "word": "to",
+        "start": 0.4,
+        "end": 0.62,
+        "probability": 0.0005781284414752008
+      },
+      {
+        "word": "do",
+        "start": 0.62,
+        "end": 0.88,
+        "probability": 0.8742942810058594
+      },
+      {
+        "word": "stays",
+        "start": 0.88,
+        "end": 1.38,
+        "probability": 0.5681352019309998
+      },
+      {
+        "word": "at",
+        "start": 1.38,
+        "end": 1.68,
+        "probability": 0.9733309745788574
+      },
+      {
+        "word": "two",
+        "start": 1.68,
+        "end": 1.94,
+        "probability": 0.008114746306091547
+      },
+      {
+        "word": "hundred",
+        "start": 1.94,
+        "end": 2.24,
+        "probability": 0.9836369156837463
+      },
+      {
+        "word": "and",
+        "start": 2.24,
+        "end": 2.8,
+        "probability": 0.8917315602302551
+      },
+      {
+        "word": "sixteen.",
+        "start": 2.8,
+        "end": 3.14,
+        "probability": 0.5497786402702332
+      },
+      {
+        "word": "Passed",
+        "start": 3.76,
+        "end": 4.38,
+        "probability": 0.5017053261399269
+      },
+      {
+        "word": "stays",
+        "start": 4.38,
+        "end": 4.64,
+        "probability": 0.9303979873657227
+      },
+      {
+        "word": "sixteen.",
+        "start": 4.64,
+        "end": 5.6,
+        "probability": 0.19372965395450592
+      },
+      {
+        "word": "Follow",
+        "start": 6.36,
+        "end": 6.72,
+        "probability": 0.9251015186309814
+      },
+      {
+        "word": "-up",
+        "start": 6.72,
+        "end": 7.12,
+        "probability": 0.6467612683773041
+      },
+      {
+        "word": "owed",
+        "start": 7.12,
+        "end": 7.68,
+        "probability": 0.039089709520339966
+      },
+      {
+        "word": "drops",
+        "start": 7.68,
+        "end": 8.06,
+        "probability": 0.9868762493133545
+      },
+      {
+        "word": "to",
+        "start": 8.06,
+        "end": 8.36,
+        "probability": 0.38514411821961403
+      },
+      {
+        "word": "one.",
+        "start": 8.36,
+        "end": 8.64,
+        "probability": 0.9273794293403625
+      },
+      {
+        "word": "Couldn't",
+        "start": 9.22,
+        "end": 9.68,
+        "probability": 0.9426602721214294
+      },
+      {
+        "word": "access",
+        "start": 9.68,
+        "end": 10.04,
+        "probability": 0.8294554352760315
+      },
+      {
+        "word": "stays",
+        "start": 10.04,
+        "end": 10.62,
+        "probability": 0.9753865599632263
+      },
+      {
+        "word": "one.",
+        "start": 10.62,
+        "end": 11.1,
+        "probability": 0.8810526728630066
+      },
+      {
+        "word": "Blue",
+        "start": 12.06,
+        "end": 12.18,
+        "probability": 0.8817743062973022
+      },
+      {
+        "word": "Covers",
+        "start": 12.18,
+        "end": 12.58,
+        "probability": 0.5185315124690533
+      },
+      {
+        "word": "is",
+        "start": 12.58,
+        "end": 12.78,
+        "probability": 0.6003149151802063
+      },
+      {
+        "word": "resolved",
+        "start": 12.78,
+        "end": 13.24,
+        "probability": 0.8137193322181702
+      },
+      {
+        "word": "today.",
+        "start": 13.24,
+        "end": 13.98,
+        "probability": 0.5545870270580053
+      },
+      {
+        "word": "Its",
+        "start": 14.6,
+        "end": 14.76,
+        "probability": 0.34835514426231384
+      },
+      {
+        "word": "original",
+        "start": 14.76,
+        "end": 15.06,
+        "probability": 0.8884903788566589
+      },
+      {
+        "word": "fail",
+        "start": 15.06,
+        "end": 15.48,
+        "probability": 0.7670683264732361
+      },
+      {
+        "word": "and",
+        "start": 15.48,
+        "end": 16.34,
+        "probability": 0.06721252202987671
+      },
+      {
+        "word": "nineteen",
+        "start": 16.34,
+        "end": 16.96,
+        "probability": 0.11935923993587494
+      },
+      {
+        "word": "captured",
+        "start": 16.96,
+        "end": 17.58,
+        "probability": 0.8387370705604553
+      },
+      {
+        "word": "checks",
+        "start": 17.58,
+        "end": 18,
+        "probability": 0.8360326886177063
+      },
+      {
+        "word": "are",
+        "start": 18,
+        "end": 18.62,
+        "probability": 0.9570249319076538
+      },
+      {
+        "word": "unchanged.",
+        "start": 18.62,
+        "end": 19.12,
+        "probability": 0.9583266377449036
+      }
+    ]
+  },
+  "firstAttempt": {
+    "path": "cln-tutorial/v4-audio/resolved-bands-aaa27ab09111-local-1533a3f4e4f5.json",
+    "bytes": 7420,
+    "sha256": "effe4537bde5a84da60850298bf0b608e7dd2d575046e309d706b105aad2f1a5"
+  }
+}

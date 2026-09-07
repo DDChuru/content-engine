@@ -1,0 +1,258 @@
+{
+  "audioSha256": "8f9d3bad4690245a0e054a4618f6788be79107a36575c10a9e895f9d867a977c",
+  "model": "faster-whisper-small",
+  "modelRevision": "536b0662742c02347bc0e980a01041f333bce120",
+  "computeType": "int8",
+  "language": "en",
+  "initialPrompt": null,
+  "duration": 20.48,
+  "text": "The record retains the original failure and its capture attribution, alongside the later verification attribution. Signing off the follow-up does not rewrite the failure as a pass. Attribution identifies who acted. It does not assign the finding to an owner.",
+  "words": [
+    {
+      "word": " The",
+      "start": 0.0,
+      "end": 0.18,
+      "probability": 0.8349634408950806
+    },
+    {
+      "word": " record",
+      "start": 0.18,
+      "end": 0.54,
+      "probability": 0.9103202223777771
+    },
+    {
+      "word": " retains",
+      "start": 0.54,
+      "end": 1.56,
+      "probability": 0.9842096865177155
+    },
+    {
+      "word": " the",
+      "start": 1.56,
+      "end": 1.76,
+      "probability": 0.9864003658294678
+    },
+    {
+      "word": " original",
+      "start": 1.76,
+      "end": 2.12,
+      "probability": 0.9957789182662964
+    },
+    {
+      "word": " failure",
+      "start": 2.12,
+      "end": 2.62,
+      "probability": 0.9908440709114075
+    },
+    {
+      "word": " and",
+      "start": 2.62,
+      "end": 3.12,
+      "probability": 0.8563327193260193
+    },
+    {
+      "word": " its",
+      "start": 3.12,
+      "end": 3.32,
+      "probability": 0.9368403553962708
+    },
+    {
+      "word": " capture",
+      "start": 3.32,
+      "end": 3.68,
+      "probability": 0.8065611124038696
+    },
+    {
+      "word": " attribution,",
+      "start": 3.68,
+      "end": 4.54,
+      "probability": 0.9584555327892303
+    },
+    {
+      "word": " alongside",
+      "start": 4.92,
+      "end": 5.34,
+      "probability": 0.9434444308280945
+    },
+    {
+      "word": " the",
+      "start": 5.34,
+      "end": 6.06,
+      "probability": 0.9876800775527954
+    },
+    {
+      "word": " later",
+      "start": 6.06,
+      "end": 6.46,
+      "probability": 0.9333772659301758
+    },
+    {
+      "word": " verification",
+      "start": 6.46,
+      "end": 7.12,
+      "probability": 0.9938758015632629
+    },
+    {
+      "word": " attribution.",
+      "start": 7.12,
+      "end": 8.36,
+      "probability": 0.9877120852470398
+    },
+    {
+      "word": " Signing",
+      "start": 8.9,
+      "end": 9.26,
+      "probability": 0.9715579748153687
+    },
+    {
+      "word": " off",
+      "start": 9.26,
+      "end": 9.66,
+      "probability": 0.9858119487762451
+    },
+    {
+      "word": " the",
+      "start": 9.66,
+      "end": 10.22,
+      "probability": 0.669947624206543
+    },
+    {
+      "word": " follow",
+      "start": 10.22,
+      "end": 10.58,
+      "probability": 0.9603528380393982
+    },
+    {
+      "word": "-up",
+      "start": 10.58,
+      "end": 11.0,
+      "probability": 0.7425215542316437
+    },
+    {
+      "word": " does",
+      "start": 11.0,
+      "end": 11.56,
+      "probability": 0.8825702667236328
+    },
+    {
+      "word": " not",
+      "start": 11.56,
+      "end": 11.82,
+      "probability": 0.998764157295227
+    },
+    {
+      "word": " rewrite",
+      "start": 11.82,
+      "end": 12.18,
+      "probability": 0.9736973643302917
+    },
+    {
+      "word": " the",
+      "start": 12.18,
+      "end": 12.6,
+      "probability": 0.9876509308815002
+    },
+    {
+      "word": " failure",
+      "start": 12.6,
+      "end": 13.04,
+      "probability": 0.9964272379875183
+    },
+    {
+      "word": " as",
+      "start": 13.04,
+      "end": 13.4,
+      "probability": 0.7343099117279053
+    },
+    {
+      "word": " a",
+      "start": 13.4,
+      "end": 13.54,
+      "probability": 0.9753397107124329
+    },
+    {
+      "word": " pass.",
+      "start": 13.54,
+      "end": 13.74,
+      "probability": 0.3753613233566284
+    },
+    {
+      "word": " Attribution",
+      "start": 14.48,
+      "end": 14.9,
+      "probability": 0.9141263961791992
+    },
+    {
+      "word": " identifies",
+      "start": 14.9,
+      "end": 15.66,
+      "probability": 0.9967417120933533
+    },
+    {
+      "word": " who",
+      "start": 15.66,
+      "end": 16.12,
+      "probability": 0.991243839263916
+    },
+    {
+      "word": " acted.",
+      "start": 16.12,
+      "end": 16.4,
+      "probability": 0.9863448143005371
+    },
+    {
+      "word": " It",
+      "start": 17.26,
+      "end": 17.42,
+      "probability": 0.9713653326034546
+    },
+    {
+      "word": " does",
+      "start": 17.42,
+      "end": 17.58,
+      "probability": 0.9940862655639648
+    },
+    {
+      "word": " not",
+      "start": 17.58,
+      "end": 17.78,
+      "probability": 0.9994378685951233
+    },
+    {
+      "word": " assign",
+      "start": 17.78,
+      "end": 18.06,
+      "probability": 0.9949619770050049
+    },
+    {
+      "word": " the",
+      "start": 18.06,
+      "end": 18.4,
+      "probability": 0.9929733276367188
+    },
+    {
+      "word": " finding",
+      "start": 18.4,
+      "end": 18.92,
+      "probability": 0.9764775633811951
+    },
+    {
+      "word": " to",
+      "start": 18.92,
+      "end": 19.58,
+      "probability": 0.9945077300071716
+    },
+    {
+      "word": " an",
+      "start": 19.58,
+      "end": 19.76,
+      "probability": 0.9790498614311218
+    },
+    {
+      "word": " owner.",
+      "start": 19.76,
+      "end": 19.98,
+      "probability": 0.9968616962432861
+    }
+  ]
+}

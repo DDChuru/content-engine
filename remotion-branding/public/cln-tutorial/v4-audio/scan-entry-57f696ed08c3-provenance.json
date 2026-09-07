@@ -1,0 +1,22 @@
+{
+  "provider": "ElevenLabs",
+  "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+  "requestHash": "57f696ed08c321055077c059564eb7e91de0c58f1da860ef1880ee33847c2122",
+  "request": {
+    "text": "From Home, tap the bottom Scan.",
+    "model_id": "eleven_multilingual_v2",
+    "voice_settings": {
+      "stability": 0.55,
+      "similarity_boost": 0.8,
+      "style": 0.35,
+      "use_speaker_boost": true
+    }
+  },
+  "generatedAt": "2026-09-06T15:23:30.406Z",
+  "requestId": "8EWvmE4ved9PZQ27j0rh",
+  "audio": {
+    "path": "cln-tutorial/v4-audio/scan-entry-57f696ed08c3.mp3",
+    "bytes": 36824,
+    "sha256": "2e7062bc23a504b6b0f2cd2e7d169e0b9c7bf37e3574cd45b70bb8405561416a"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "provider": "ElevenLabs",
+  "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+  "requestHash": "a31cfa42c5b7d694ab22f9ac20f5aa27c89a378613e80fa537fae0e8159ad007",
+  "request": {
+    "text": "That is the scheduled check and immediate follow-up loop. The Remedial video explains persistent findings and Inspection Remedials that carry over.",
+    "model_id": "eleven_multilingual_v2",
+    "voice_settings": {
+      "stability": 0.55,
+      "similarity_boost": 0.8,
+      "style": 0.35,
+      "use_speaker_boost": true
+    }
+  },
+  "generatedAt": "2026-09-06T13:43:04.033Z",
+  "requestId": "70HQJ3YMkG0kYKR9lHum",
+  "audio": {
+    "path": "cln-tutorial/v4-audio/handoff-a31cfa42c5b7.mp3",
+    "bytes": 161376,
+    "sha256": "0088021120fa5728e0bc93b55471ae5fe7f4034b21d34576fbd1e15058957617"
+  }
+}

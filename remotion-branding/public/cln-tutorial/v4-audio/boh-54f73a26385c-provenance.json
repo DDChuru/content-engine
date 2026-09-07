@@ -1,0 +1,22 @@
+{
+  "provider": "ElevenLabs",
+  "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+  "requestHash": "54f73a26385c4deba97dd084abea255e15bc8598f2dca79d6c1860ed8d619483",
+  "request": {
+    "text": "Choose Cleaning Verification for missing scheduled checks. Remedial tracks open findings.",
+    "model_id": "eleven_multilingual_v2",
+    "voice_settings": {
+      "stability": 0.55,
+      "similarity_boost": 0.8,
+      "style": 0.35,
+      "use_speaker_boost": true
+    }
+  },
+  "generatedAt": "2026-09-06T13:33:19.128Z",
+  "requestId": "yl0xWamqDnU3e8y16bov",
+  "audio": {
+    "path": "cln-tutorial/v4-audio/boh-54f73a26385c.mp3",
+    "bytes": 106623,
+    "sha256": "687a502c230adbbb102624f239d5b90a246af0027f07a9273b2213b016aefff6"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "provider": "ElevenLabs",
+  "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+  "requestHash": "044f75c85510a78b742b4f7315d73ed787c310c8e6a04cfd52e6f936286949af",
+  "request": {
+    "text": "Still to do is two hundred and sixteen. Passed is sixteen; follow-up owed is two; couldn't access is one. Nineteen scheduled checks are captured.",
+    "model_id": "eleven_multilingual_v2",
+    "voice_settings": {
+      "stability": 0.55,
+      "similarity_boost": 0.8,
+      "style": 0.35,
+      "use_speaker_boost": true
+    }
+  },
+  "generatedAt": "2026-09-06T13:41:38.004Z",
+  "requestId": "UCUbUhXuFT2yiyMz1xM3",
+  "audio": {
+    "path": "cln-tutorial/v4-audio/open-bands-044f75c85510.mp3",
+    "bytes": 229921,
+    "sha256": "bf4fc42121084230b85571686231a36452d3a8aaf71a14c05f024c47e3ea4289"
+  }
+}

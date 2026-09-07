@@ -1,0 +1,22 @@
+{
+  "provider": "ElevenLabs",
+  "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+  "requestHash": "435d9d1c038238cd0843837572efe6e8cb40badb9ff11ce44409b4ea646cb6b0",
+  "request": {
+    "text": "Nineteen completed includes sixteen passes, two failures and one unavailable. Tables shows NCR raised; the findings stay open.",
+    "model_id": "eleven_multilingual_v2",
+    "voice_settings": {
+      "stability": 0.55,
+      "similarity_boost": 0.8,
+      "style": 0.35,
+      "use_speaker_boost": true
+    }
+  },
+  "generatedAt": "2026-09-06T13:41:25.077Z",
+  "requestId": "5HbwZlmlFIglf8uFAswk",
+  "audio": {
+    "path": "cln-tutorial/v4-audio/bulk-result-435d9d1c0382.mp3",
+    "bytes": 177258,
+    "sha256": "91455eee6c59abcfcc5258827a6ca953c81c2bf4b7add944ac4e0b57a0e48683"
+  }
+}

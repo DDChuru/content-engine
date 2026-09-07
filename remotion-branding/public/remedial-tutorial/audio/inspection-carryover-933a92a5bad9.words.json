@@ -1,0 +1,306 @@
+{
+  "audioSha256": "80827a9ad7ae362a4bb835f5b77886d384120036de9a53d2da31d1e6c71d71f7",
+  "model": "faster-whisper-small",
+  "modelRevision": "536b0662742c02347bc0e980a01041f333bce120",
+  "computeType": "int8",
+  "language": "en",
+  "initialPrompt": null,
+  "duration": 23.684375,
+  "text": "Below carries over, open inspection remedials. In follow-ups, select inspections, then open verify flow. Open and remitted findings remain in the queue across inspection dates and statuses until their own decision closes or escalates them. Use the age page to see how long a finding has been open.",
+  "words": [
+    {
+      "word": " Below",
+      "start": 0.0,
+      "end": 0.36,
+      "probability": 0.921639084815979
+    },
+    {
+      "word": " carries",
+      "start": 0.36,
+      "end": 0.92,
+      "probability": 0.9300674796104431
+    },
+    {
+      "word": " over,",
+      "start": 0.92,
+      "end": 1.28,
+      "probability": 0.9670372605323792
+    },
+    {
+      "word": " open",
+      "start": 1.84,
+      "end": 2.0,
+      "probability": 0.700801432132721
+    },
+    {
+      "word": " inspection",
+      "start": 2.0,
+      "end": 2.44,
+      "probability": 0.9646211862564087
+    },
+    {
+      "word": " remedials.",
+      "start": 2.44,
+      "end": 3.04,
+      "probability": 0.7717966139316559
+    },
+    {
+      "word": " In",
+      "start": 3.96,
+      "end": 4.0,
+      "probability": 0.9732463955879211
+    },
+    {
+      "word": " follow",
+      "start": 4.0,
+      "end": 4.32,
+      "probability": 0.9306561350822449
+    },
+    {
+      "word": "-ups,",
+      "start": 4.32,
+      "end": 4.66,
+      "probability": 0.7301944494247437
+    },
+    {
+      "word": " select",
+      "start": 4.96,
+      "end": 5.3,
+      "probability": 0.993025541305542
+    },
+    {
+      "word": " inspections,",
+      "start": 5.3,
+      "end": 5.84,
+      "probability": 0.9447945952415466
+    },
+    {
+      "word": " then",
+      "start": 6.44,
+      "end": 6.66,
+      "probability": 0.9859144687652588
+    },
+    {
+      "word": " open",
+      "start": 6.66,
+      "end": 7.06,
+      "probability": 0.9676905870437622
+    },
+    {
+      "word": " verify",
+      "start": 7.06,
+      "end": 7.7,
+      "probability": 0.592875063419342
+    },
+    {
+      "word": " flow.",
+      "start": 7.7,
+      "end": 8.14,
+      "probability": 0.9838473200798035
+    },
+    {
+      "word": " Open",
+      "start": 8.9,
+      "end": 9.1,
+      "probability": 0.9956421852111816
+    },
+    {
+      "word": " and",
+      "start": 9.1,
+      "end": 9.4,
+      "probability": 0.991482138633728
+    },
+    {
+      "word": " remitted",
+      "start": 9.4,
+      "end": 9.84,
+      "probability": 0.7356635630130768
+    },
+    {
+      "word": " findings",
+      "start": 9.84,
+      "end": 10.34,
+      "probability": 0.9925178289413452
+    },
+    {
+      "word": " remain",
+      "start": 10.34,
+      "end": 10.84,
+      "probability": 0.9863882660865784
+    },
+    {
+      "word": " in",
+      "start": 10.84,
+      "end": 11.22,
+      "probability": 0.997626006603241
+    },
+    {
+      "word": " the",
+      "start": 11.22,
+      "end": 11.32,
+      "probability": 0.9930550456047058
+    },
+    {
+      "word": " queue",
+      "start": 11.32,
+      "end": 11.62,
+      "probability": 0.9938004612922668
+    },
+    {
+      "word": " across",
+      "start": 11.969999999999999,
+      "end": 12.36,
+      "probability": 0.9233168959617615
+    },
+    {
+      "word": " inspection",
+      "start": 12.36,
+      "end": 12.96,
+      "probability": 0.9953574538230896
+    },
+    {
+      "word": " dates",
+      "start": 12.96,
+      "end": 13.32,
+      "probability": 0.9921072125434875
+    },
+    {
+      "word": " and",
+      "start": 13.32,
+      "end": 13.98,
+      "probability": 0.957411527633667
+    },
+    {
+      "word": " statuses",
+      "start": 13.98,
+      "end": 14.68,
+      "probability": 0.9643632769584656
+    },
+    {
+      "word": " until",
+      "start": 14.68,
+      "end": 15.22,
+      "probability": 0.9483280181884766
+    },
+    {
+      "word": " their",
+      "start": 15.22,
+      "end": 15.46,
+      "probability": 0.7219842076301575
+    },
+    {
+      "word": " own",
+      "start": 15.46,
+      "end": 15.78,
+      "probability": 0.9969154596328735
+    },
+    {
+      "word": " decision",
+      "start": 15.78,
+      "end": 16.18,
+      "probability": 0.9919688105583191
+    },
+    {
+      "word": " closes",
+      "start": 16.18,
+      "end": 16.62,
+      "probability": 0.9975752234458923
+    },
+    {
+      "word": " or",
+      "start": 16.62,
+      "end": 17.3,
+      "probability": 0.7593170404434204
+    },
+    {
+      "word": " escalates",
+      "start": 17.3,
+      "end": 17.76,
+      "probability": 0.9854125380516052
+    },
+    {
+      "word": " them.",
+      "start": 17.76,
+      "end": 17.96,
+      "probability": 0.9932680726051331
+    },
+    {
+      "word": " Use",
+      "start": 18.7,
+      "end": 18.9,
+      "probability": 0.9933884143829346
+    },
+    {
+      "word": " the",
+      "start": 18.9,
+      "end": 19.08,
+      "probability": 0.9947410821914673
+    },
+    {
+      "word": " age",
+      "start": 19.08,
+      "end": 19.28,
+      "probability": 0.9057536125183105
+    },
+    {
+      "word": " page",
+      "start": 19.28,
+      "end": 19.56,
+      "probability": 0.4217848777770996
+    },
+    {
+      "word": " to",
+      "start": 19.56,
+      "end": 20.4,
+      "probability": 0.9933384656906128
+    },
+    {
+      "word": " see",
+      "start": 20.4,
+      "end": 20.7,
+      "probability": 0.9987242817878723
+    },
+    {
+      "word": " how",
+      "start": 20.7,
+      "end": 20.94,
+      "probability": 0.9974995255470276
+    },
+    {
+      "word": " long",
+      "start": 20.94,
+      "end": 21.36,
+      "probability": 0.9996225833892822
+    },
+    {
+      "word": " a",
+      "start": 21.36,
+      "end": 21.72,
+      "probability": 0.9900422096252441
+    },
+    {
+      "word": " finding",
+      "start": 21.72,
+      "end": 22.08,
+      "probability": 0.994675874710083
+    },
+    {
+      "word": " has",
+      "start": 22.08,
+      "end": 22.8,
+      "probability": 0.9968463778495789
+    },
+    {
+      "word": " been",
+      "start": 22.8,
+      "end": 22.96,
+      "probability": 0.998984158039093
+    },
+    {
+      "word": " open.",
+      "start": 22.96,
+      "end": 23.22,
+      "probability": 0.8093189597129822
+    }
+  ]
+}

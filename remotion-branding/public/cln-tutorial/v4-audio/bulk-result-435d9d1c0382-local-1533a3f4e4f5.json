@@ -1,0 +1,193 @@
+{
+  "audioSha256": "91455eee6c59abcfcc5258827a6ca953c81c2bf4b7add944ac4e0b57a0e48683",
+  "measuredAt": "2026-09-06T13:41:35.510522+00:00",
+  "transcription": {
+    "provider": "local-faster-whisper",
+    "model": "Systran/faster-whisper-small",
+    "modelPath": "/home/durai/.cache/huggingface/hub/models--Systran--faster-whisper-small/snapshots/536b0662742c02347bc0e980a01041f333bce120",
+    "modelRevision": "536b0662742c02347bc0e980a01041f333bce120",
+    "modelFiles": [
+      {
+        "name": "model.bin",
+        "bytes": 483546902,
+        "sha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671"
+      },
+      {
+        "name": "config.json",
+        "bytes": 2370,
+        "sha256": "b55496ac7940a7ae47d2c01eab40edfd8701feec1229d9cce3b40014383fb828"
+      },
+      {
+        "name": "tokenizer.json",
+        "bytes": 2203239,
+        "sha256": "fb7b63191e9bb045082c79fd742a3106a12c99513ab30df4a0d47fa6cb6fd0ab"
+      },
+      {
+        "name": "vocabulary.txt",
+        "bytes": 459861,
+        "sha256": "34ce3fe1c5041027b3f8d42912270993f986dbc4bb34cf27f951e34a1e453913"
+      }
+    ],
+    "versions": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.8.2",
+      "av": "18.1.0",
+      "tokenizers": "0.23.2"
+    },
+    "pythonVersion": "3.12.3",
+    "pythonExecutable": "/tmp/si-units-faster-whisper/bin/python",
+    "device": "cpu",
+    "computeType": "int8",
+    "cpuThreads": 4,
+    "numWorkers": 1,
+    "localFilesOnly": true,
+    "settings": {
+      "language": "en",
+      "word_timestamps": true,
+      "beam_size": 5,
+      "temperature": 0,
+      "condition_on_previous_text": false,
+      "vad_filter": false,
+      "hotwords": "Bakery Demo, Bill of Health, Premix Area, SSOP, NCR, Remedial, none captured, Still to do, Passed, Follow-up owed, Couldn't access, Resolved today, Pass all, Daily."
+    },
+    "helper": {
+      "name": "transcribe-cln-v4-local.py",
+      "bytes": 3747,
+      "sha256": "f9683a78e6d63afc976f3dbe4898d248fefa26ed86eb64e7f579dbdfa2d6eaf7"
+    },
+    "workflowRef": "../packages/backend/src/scripts/transcribe-mechanics-si-units-local.py"
+  },
+  "response": {
+    "language": "en",
+    "duration": 11.00625,
+    "text": "19 completed includes 16 passes, two failures, and one unavailable. Tables shows NCR raised, the findings stay open.",
+    "segments": [
+      {
+        "id": 1,
+        "start": 0,
+        "end": 6.06,
+        "text": " 19 completed includes 16 passes, two failures, and one unavailable.",
+        "avg_logprob": -0.2975644411579255,
+        "no_speech_prob": 0.001251542940735817
+      },
+      {
+        "id": 2,
+        "start": 6.7,
+        "end": 10.58,
+        "text": " Tables shows NCR raised, the findings stay open.",
+        "avg_logprob": -0.2975644411579255,
+        "no_speech_prob": 0.001251542940735817
+      }
+    ],
+    "words": [
+      {
+        "word": "19",
+        "start": 0,
+        "end": 0.38,
+        "probability": 0.8660442233085632
+      },
+      {
+        "word": "completed",
+        "start": 0.38,
+        "end": 0.94,
+        "probability": 0.9688244462013245
+      },
+      {
+        "word": "includes",
+        "start": 0.94,
+        "end": 1.7,
+        "probability": 0.8834865093231201
+      },
+      {
+        "word": "16",
+        "start": 1.7,
+        "end": 2.42,
+        "probability": 0.9733313918113708
+      },
+      {
+        "word": "passes,",
+        "start": 2.42,
+        "end": 2.82,
+        "probability": 0.9921147227287292
+      },
+      {
+        "word": "two",
+        "start": 3.54,
+        "end": 3.82,
+        "probability": 0.5347565412521362
+      },
+      {
+        "word": "failures,",
+        "start": 3.82,
+        "end": 4.34,
+        "probability": 0.9947046637535095
+      },
+      {
+        "word": "and",
+        "start": 4.94,
+        "end": 5.16,
+        "probability": 0.972870409488678
+      },
+      {
+        "word": "one",
+        "start": 5.16,
+        "end": 5.36,
+        "probability": 0.964584231376648
+      },
+      {
+        "word": "unavailable.",
+        "start": 5.36,
+        "end": 6.06,
+        "probability": 0.9954243004322052
+      },
+      {
+        "word": "Tables",
+        "start": 6.7,
+        "end": 7.1,
+        "probability": 0.9527828097343445
+      },
+      {
+        "word": "shows",
+        "start": 7.1,
+        "end": 7.52,
+        "probability": 0.6182206273078918
+      },
+      {
+        "word": "NCR",
+        "start": 7.52,
+        "end": 8.2,
+        "probability": 0.5961417779326439
+      },
+      {
+        "word": "raised,",
+        "start": 8.2,
+        "end": 8.74,
+        "probability": 0.9490238428115845
+      },
+      {
+        "word": "the",
+        "start": 9.34,
+        "end": 9.38,
+        "probability": 0.9711799025535583
+      },
+      {
+        "word": "findings",
+        "start": 9.38,
+        "end": 9.86,
+        "probability": 0.994281530380249
+      },
+      {
+        "word": "stay",
+        "start": 9.86,
+        "end": 10.3,
+        "probability": 0.9659075736999512
+      },
+      {
+        "word": "open.",
+        "start": 10.3,
+        "end": 10.58,
+        "probability": 0.9876602292060852
+      }
+    ]
+  }
+}

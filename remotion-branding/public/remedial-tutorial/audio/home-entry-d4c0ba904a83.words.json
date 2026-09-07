@@ -1,0 +1,186 @@
+{
+  "audioSha256": "f79e49f8807c4746f7c8b67382463434dcd1b52f1f8a4406a9c137307eb9767d",
+  "model": "faster-whisper-small",
+  "modelRevision": "536b0662742c02347bc0e980a01041f333bce120",
+  "computeType": "int8",
+  "language": "en",
+  "initialPrompt": null,
+  "duration": 14.3035,
+  "text": "On Home, Remedial Actions, Needing Follow-up, Appear. In the Remedial Actions, Awaiting Follow-up panel, select this panel to open follow-ups and return to the outstanding findings.",
+  "words": [
+    {
+      "word": " On",
+      "start": 0.0,
+      "end": 0.2,
+      "probability": 0.7850978970527649
+    },
+    {
+      "word": " Home,",
+      "start": 0.2,
+      "end": 0.54,
+      "probability": 0.37500905990600586
+    },
+    {
+      "word": " Remedial",
+      "start": 1.2,
+      "end": 1.68,
+      "probability": 0.8403613766034445
+    },
+    {
+      "word": " Actions,",
+      "start": 1.68,
+      "end": 2.2,
+      "probability": 0.8989656567573547
+    },
+    {
+      "word": " Needing",
+      "start": 2.26,
+      "end": 2.62,
+      "probability": 0.7064863294363022
+    },
+    {
+      "word": " Follow",
+      "start": 2.62,
+      "end": 2.92,
+      "probability": 0.8911706209182739
+    },
+    {
+      "word": "-up,",
+      "start": 2.92,
+      "end": 3.26,
+      "probability": 0.5150759071111679
+    },
+    {
+      "word": " Appear.",
+      "start": 3.74,
+      "end": 4.16,
+      "probability": 0.6007168367505074
+    },
+    {
+      "word": " In",
+      "start": 5.08,
+      "end": 5.48,
+      "probability": 0.9771768450737
+    },
+    {
+      "word": " the",
+      "start": 5.48,
+      "end": 5.6,
+      "probability": 0.9925372004508972
+    },
+    {
+      "word": " Remedial",
+      "start": 5.6,
+      "end": 6.06,
+      "probability": 0.9478147029876709
+    },
+    {
+      "word": " Actions,",
+      "start": 6.06,
+      "end": 6.6,
+      "probability": 0.9914083778858185
+    },
+    {
+      "word": " Awaiting",
+      "start": 6.7,
+      "end": 7.06,
+      "probability": 0.901884655157725
+    },
+    {
+      "word": " Follow",
+      "start": 7.06,
+      "end": 7.32,
+      "probability": 0.9589462876319885
+    },
+    {
+      "word": "-up",
+      "start": 7.32,
+      "end": 7.62,
+      "probability": 0.8697631359100342
+    },
+    {
+      "word": " panel,",
+      "start": 7.62,
+      "end": 7.86,
+      "probability": 0.5530913472175598
+    },
+    {
+      "word": " select",
+      "start": 8.66,
+      "end": 8.94,
+      "probability": 0.9299595355987549
+    },
+    {
+      "word": " this",
+      "start": 8.94,
+      "end": 9.24,
+      "probability": 0.983199954032898
+    },
+    {
+      "word": " panel",
+      "start": 9.24,
+      "end": 9.56,
+      "probability": 0.969971776008606
+    },
+    {
+      "word": " to",
+      "start": 9.56,
+      "end": 10.5,
+      "probability": 0.8720538020133972
+    },
+    {
+      "word": " open",
+      "start": 10.5,
+      "end": 10.86,
+      "probability": 0.8653973340988159
+    },
+    {
+      "word": " follow",
+      "start": 10.86,
+      "end": 11.2,
+      "probability": 0.48669153451919556
+    },
+    {
+      "word": "-ups",
+      "start": 11.2,
+      "end": 11.6,
+      "probability": 0.8711684048175812
+    },
+    {
+      "word": " and",
+      "start": 11.6,
+      "end": 11.96,
+      "probability": 0.9737057089805603
+    },
+    {
+      "word": " return",
+      "start": 11.96,
+      "end": 12.3,
+      "probability": 0.977471649646759
+    },
+    {
+      "word": " to",
+      "start": 12.3,
+      "end": 12.68,
+      "probability": 0.9920377731323242
+    },
+    {
+      "word": " the",
+      "start": 12.68,
+      "end": 12.82,
+      "probability": 0.9855726361274719
+    },
+    {
+      "word": " outstanding",
+      "start": 12.82,
+      "end": 13.28,
+      "probability": 0.5715561509132385
+    },
+    {
+      "word": " findings.",
+      "start": 13.28,
+      "end": 13.72,
+      "probability": 0.984717071056366
+    }
+  ]
+}

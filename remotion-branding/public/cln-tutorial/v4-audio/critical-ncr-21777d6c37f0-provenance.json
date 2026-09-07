@@ -1,0 +1,22 @@
+{
+  "provider": "ElevenLabs",
+  "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+  "requestHash": "21777d6c37f0610621f9cf0223b2b1eb6cee3fdd5563b85cf040157bc9f1f49a",
+  "request": {
+    "text": "The app confirms an NCR has been raised. Its linked record remains open.",
+    "model_id": "eleven_multilingual_v2",
+    "voice_settings": {
+      "stability": 0.55,
+      "similarity_boost": 0.8,
+      "style": 0.35,
+      "use_speaker_boost": true
+    }
+  },
+  "generatedAt": "2026-09-06T13:40:15.269Z",
+  "requestId": "LDh1e4YtL8xC128gOH4L",
+  "audio": {
+    "path": "cln-tutorial/v4-audio/critical-ncr-21777d6c37f0.mp3",
+    "bytes": 90323,
+    "sha256": "da5cbdac14507ebbcbc794ffc63754be5b48fd518c200539308b0756944be8fb"
+  }
+}
