@@ -1,0 +1,198 @@
+{
+  "audioSha256": "19ca23e3ca6b99d07567cb334a4409971fb880f01f9010f04024fba805a2e099",
+  "model": "faster-whisper-small",
+  "modelRevision": "536b0662742c02347bc0e980a01041f333bce120",
+  "computeType": "int8",
+  "language": "en",
+  "initialPrompt": null,
+  "duration": 14.1641875,
+  "text": "In Resolved Today, blue covers is recorded as failed and signed off. Verification has not turned the failure into a pass. Each remaining open finding still needs its own follow up.",
+  "words": [
+    {
+      "word": " In",
+      "start": 0.0,
+      "end": 0.16,
+      "probability": 0.8865830898284912
+    },
+    {
+      "word": " Resolved",
+      "start": 0.16,
+      "end": 0.62,
+      "probability": 0.8320628702640533
+    },
+    {
+      "word": " Today,",
+      "start": 0.62,
+      "end": 1.02,
+      "probability": 0.6671480536460876
+    },
+    {
+      "word": " blue",
+      "start": 1.54,
+      "end": 1.72,
+      "probability": 0.468744695186615
+    },
+    {
+      "word": " covers",
+      "start": 1.72,
+      "end": 2.14,
+      "probability": 0.936394214630127
+    },
+    {
+      "word": " is",
+      "start": 2.14,
+      "end": 2.82,
+      "probability": 0.6015928983688354
+    },
+    {
+      "word": " recorded",
+      "start": 2.82,
+      "end": 3.36,
+      "probability": 0.967462956905365
+    },
+    {
+      "word": " as",
+      "start": 3.36,
+      "end": 3.66,
+      "probability": 0.9925320744514465
+    },
+    {
+      "word": " failed",
+      "start": 3.66,
+      "end": 4.08,
+      "probability": 0.9121695160865784
+    },
+    {
+      "word": " and",
+      "start": 4.08,
+      "end": 4.28,
+      "probability": 0.9821158647537231
+    },
+    {
+      "word": " signed",
+      "start": 4.28,
+      "end": 4.56,
+      "probability": 0.9923458099365234
+    },
+    {
+      "word": " off.",
+      "start": 4.56,
+      "end": 4.86,
+      "probability": 0.9786328673362732
+    },
+    {
+      "word": " Verification",
+      "start": 5.66,
+      "end": 6.26,
+      "probability": 0.986883133649826
+    },
+    {
+      "word": " has",
+      "start": 6.26,
+      "end": 6.96,
+      "probability": 0.936892032623291
+    },
+    {
+      "word": " not",
+      "start": 6.96,
+      "end": 7.22,
+      "probability": 0.9914554953575134
+    },
+    {
+      "word": " turned",
+      "start": 7.22,
+      "end": 7.66,
+      "probability": 0.9948029518127441
+    },
+    {
+      "word": " the",
+      "start": 7.66,
+      "end": 7.94,
+      "probability": 0.8379523158073425
+    },
+    {
+      "word": " failure",
+      "start": 7.94,
+      "end": 8.3,
+      "probability": 0.9911730885505676
+    },
+    {
+      "word": " into",
+      "start": 8.3,
+      "end": 8.8,
+      "probability": 0.9915844202041626
+    },
+    {
+      "word": " a",
+      "start": 8.8,
+      "end": 8.96,
+      "probability": 0.9964828491210938
+    },
+    {
+      "word": " pass.",
+      "start": 8.96,
+      "end": 9.26,
+      "probability": 0.9837111830711365
+    },
+    {
+      "word": " Each",
+      "start": 9.94,
+      "end": 10.12,
+      "probability": 0.982521653175354
+    },
+    {
+      "word": " remaining",
+      "start": 10.12,
+      "end": 10.68,
+      "probability": 0.9982079267501831
+    },
+    {
+      "word": " open",
+      "start": 10.68,
+      "end": 11.0,
+      "probability": 0.9236190319061279
+    },
+    {
+      "word": " finding",
+      "start": 11.0,
+      "end": 11.46,
+      "probability": 0.9348817467689514
+    },
+    {
+      "word": " still",
+      "start": 11.46,
+      "end": 12.22,
+      "probability": 0.9798152446746826
+    },
+    {
+      "word": " needs",
+      "start": 12.22,
+      "end": 12.58,
+      "probability": 0.9968723654747009
+    },
+    {
+      "word": " its",
+      "start": 12.58,
+      "end": 12.8,
+      "probability": 0.9345850944519043
+    },
+    {
+      "word": " own",
+      "start": 12.8,
+      "end": 13.12,
+      "probability": 0.9986082911491394
+    },
+    {
+      "word": " follow",
+      "start": 13.12,
+      "end": 13.44,
+      "probability": 0.9930562376976013
+    },
+    {
+      "word": " up.",
+      "start": 13.44,
+      "end": 13.72,
+      "probability": 0.5210738778114319
+    }
+  ]
+}

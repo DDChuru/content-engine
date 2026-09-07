@@ -3,22 +3,22 @@
   "fps": 30,
   "width": 1920,
   "height": 1080,
-  "totalFrames": 11893,
+  "totalFrames": 9701,
   "timingStatus": "measured-recordings",
   "audioStatus": "generated-measured",
   "audio": {
-    "path": "remedial-tutorial/audio/candidate-narration-v2.wav",
-    "bytes": 38057678,
-    "sha256": "8d6d4473bef0fa34acb8c51db042a97b119992532e0b98ff8d0165e79fb41f56"
+    "path": "remedial-tutorial/audio/candidate-narration-v3.wav",
+    "bytes": 31043278,
+    "sha256": "980984bbaad0c24d2f4eb1b29ae965294ca08648761c363d989e51a8885399a8"
   },
   "measuredTranscript": {
-    "path": "remedial-tutorial/audio/candidate-measured-transcript-v2.json",
-    "bytes": 134008,
-    "sha256": "3176e0750e6f3181530180be49554055efbfa4d134f2786dccc7870977dbba96"
+    "path": "remedial-tutorial/audio/candidate-measured-transcript-v3.json",
+    "bytes": 109620,
+    "sha256": "d2ca36edf5200abd84c92ae451b4b9ebc2ed0f727f9070e15beb80b47814ccea"
   },
   "wordTimingVerified": true,
   "narrationApprovalRef": null,
-  "note": "Silent development timing only. Cue frames are editorial estimates, not Whisper measurements. Fresh narration, actual word timestamps and source/capture review are required in a later authorized wave. Every operational transition is a hard cut (zero overlap).",
+  "note": "Measured v3 recordings and retained word timestamps drive every operational cut. Existing-remedial closure only.",
   "beats": [
     {
       "id": "intro",
@@ -114,69 +114,6 @@
       "emphasisAtFrame": 200
     },
     {
-      "id": "two-outcomes",
-      "kind": "screen",
-      "chapter": "01 · Daily Cleaning",
-      "headline": "Recorded today.\nStill needs follow-up.",
-      "body": "A failed scheduled check satisfies its occurrence. The finding stays open.",
-      "emphasis": "Recording the failure clears today’s due occurrence. It does not clear the finding.",
-      "narration": "Recording the failure clears today's due occurrence. It does not clear the finding. The check has been recorded for today; now the finding needs its own follow-up.",
-      "claimIds": [
-        "cleaning-occurrence",
-        "demo-disclosure"
-      ],
-      "slot": "cleaning-open",
-      "cues": [
-        {
-          "proof": "summary",
-          "fromFrame": 0,
-          "focusAtFrame": 18,
-          "detail": null
-        }
-      ],
-      "note": "",
-      "durationInFrames": 396,
-      "overlapFromPrevious": 0,
-      "from": 1280,
-      "voiceFromFrame": 18,
-      "voiceToFrame": 366,
-      "emphasisAtFrame": 90
-    },
-    {
-      "id": "finding-origin",
-      "kind": "screen",
-      "chapter": "01 · Capture handoff",
-      "headline": "Keep the finding facts",
-      "body": "Grade and reason are required. Action taken and photo evidence are optional in this flow.",
-      "emphasis": "A record of what was found.",
-      "narration": "Keep the grade and failure reason from the original Cleaning check. Action taken and photo evidence are optional here. The acknowledgement confirms that the completion was recorded.",
-      "claimIds": [
-        "cleaning-fields"
-      ],
-      "slot": "cleaning-capture",
-      "cues": [
-        {
-          "proof": "fields",
-          "fromFrame": 0,
-          "focusAtFrame": 18,
-          "detail": null
-        },
-        {
-          "proof": "recorded",
-          "fromFrame": 313,
-          "focusAtFrame": 331,
-          "detail": null
-        }
-      ],
-      "note": "",
-      "durationInFrames": 445,
-      "overlapFromPrevious": 0,
-      "from": 1676,
-      "voiceFromFrame": 18,
-      "voiceToFrame": 415,
-      "emphasisAtFrame": 90
-    },
-    {
       "id": "cleaning-filter",
       "kind": "screen",
       "chapter": "02 · Select the queue",
@@ -199,7 +136,7 @@
       "note": "",
       "durationInFrames": 199,
       "overlapFromPrevious": 0,
-      "from": 2121,
+      "from": 1280,
       "voiceFromFrame": 18,
       "voiceToFrame": 169,
       "emphasisAtFrame": 90
@@ -208,12 +145,13 @@
       "id": "open-card",
       "kind": "screen",
       "chapter": "02 · Same finding",
-      "headline": "Find the original Cleaning check",
-      "body": "Blue Covers · Premix Area · Major. The source tag, finding reason and action identify the record.",
-      "emphasis": "Unresolved findings remain in Follow-ups across days.",
-      "narration": "Find the original Cleaning check. Here, the All bucket and a Blue Covers search locate the Major finding in Premix Area. Unresolved Cleaning findings remain in Follow-ups across days.",
+      "headline": "Read the existing finding",
+      "body": "Blue Covers · Premix Area · Major. Read the finding and check the correction before sign-off.",
+      "emphasis": "Already recorded. Open until the correction is verified.",
+      "narration": "The failed check is already recorded. The remedial remains open until the correction is verified. Here, the All bucket and a Blue Covers search locate the Major finding in Premix Area. Read the finding before checking the correction.",
       "claimIds": [
         "cleaning-queue",
+        "cleaning-occurrence",
         "demo-disclosure"
       ],
       "slot": "cleaning-followup",
@@ -226,11 +164,11 @@
         }
       ],
       "note": "",
-      "durationInFrames": 559,
+      "durationInFrames": 595,
       "overlapFromPrevious": 0,
-      "from": 2320,
+      "from": 1479,
       "voiceFromFrame": 18,
-      "voiceToFrame": 529,
+      "voiceToFrame": 565,
       "emphasisAtFrame": 90
     },
     {
@@ -257,7 +195,7 @@
       "note": "",
       "durationInFrames": 523,
       "overlapFromPrevious": 0,
-      "from": 2879,
+      "from": 2074,
       "voiceFromFrame": 18,
       "voiceToFrame": 493,
       "emphasisAtFrame": 90
@@ -291,7 +229,7 @@
       "note": "",
       "durationInFrames": 393,
       "overlapFromPrevious": 0,
-      "from": 3402,
+      "from": 2597,
       "voiceFromFrame": 18,
       "voiceToFrame": 363,
       "emphasisAtFrame": 90
@@ -319,7 +257,7 @@
       "note": "",
       "durationInFrames": 395,
       "overlapFromPrevious": 0,
-      "from": 3795,
+      "from": 2990,
       "voiceFromFrame": 18,
       "voiceToFrame": 365,
       "emphasisAtFrame": 90
@@ -329,9 +267,9 @@
       "kind": "screen",
       "chapter": "03 · Failed and signed off",
       "headline": "Now in “Resolved today”",
-      "body": "Follow-up owed moves from 2 to 1. Resolved moves from 0 to 1. The 19 captures stay recorded.",
+      "body": "Blue Covers is recorded as failed and signed off. Each remaining open finding needs its own follow-up.",
       "emphasis": "Signing off a failure does not turn it into a pass.",
-      "narration": "The summary now shows one resolved finding, with one still awaiting follow-up. All nineteen captured checks stay recorded. Expand Resolved today to find Blue Covers. The original failure has been signed off; it has not changed into a pass.",
+      "narration": "In Resolved today, Blue Covers is recorded as failed and signed off. Verification has not turned the failure into a pass. Each remaining open finding still needs its own follow-up.",
       "claimIds": [
         "cleaning-verification",
         "cleaning-audit"
@@ -339,24 +277,18 @@
       "slot": "cleaning-resolved",
       "cues": [
         {
-          "proof": "summary",
+          "proof": "item",
           "fromFrame": 0,
           "focusAtFrame": 18,
-          "detail": null
-        },
-        {
-          "proof": "item",
-          "fromFrame": 388,
-          "focusAtFrame": 406,
           "detail": null
         }
       ],
       "note": "",
-      "durationInFrames": 726,
+      "durationInFrames": 475,
       "overlapFromPrevious": 0,
-      "from": 4190,
+      "from": 3385,
       "voiceFromFrame": 18,
-      "voiceToFrame": 696,
+      "voiceToFrame": 445,
       "emphasisAtFrame": 90
     },
     {
@@ -383,37 +315,9 @@
       "note": "",
       "durationInFrames": 664,
       "overlapFromPrevious": 0,
-      "from": 4916,
+      "from": 3860,
       "voiceFromFrame": 18,
       "voiceToFrame": 634,
-      "emphasisAtFrame": 90
-    },
-    {
-      "id": "critical-handoff",
-      "kind": "screen",
-      "chapter": "Separate workflow · Critical / NCR",
-      "headline": "Critical has a formal handoff",
-      "body": "This separate Critical Cleaning case also raised an NCR.",
-      "emphasis": "The formal NCR continues in its own workflow.",
-      "narration": "This separate Critical Cleaning failure raised an NCR under the critical-only rule. A Major failure does not take that grade-triggered branch. The NCR continues in its own workflow.",
-      "claimIds": [
-        "critical-ncr"
-      ],
-      "slot": "cleaning-critical",
-      "cues": [
-        {
-          "proof": "ncr",
-          "fromFrame": 0,
-          "focusAtFrame": 18,
-          "detail": null
-        }
-      ],
-      "note": "",
-      "durationInFrames": 511,
-      "overlapFromPrevious": 0,
-      "from": 5580,
-      "voiceFromFrame": 18,
-      "voiceToFrame": 481,
       "emphasisAtFrame": 90
     },
     {
@@ -421,7 +325,7 @@
       "kind": "diagram",
       "chapter": "04 · Inspection Remedials",
       "headline": "A different origin.\nIts own closure.",
-      "body": "Daily Cleaning begins with a scheduled occurrence. Inspection Remedials begin with an inspection finding.",
+      "body": "Cleaning and Inspection findings each need their own verified decision.",
       "emphasis": "Both open findings require their own follow-up.",
       "narration": "Daily describes the Cleaning finding's scheduled origin, not an expiry. Inspection Remedials have a separate carry-over trail. Neither open finding is cleared just because a new day begins.",
       "claimIds": [
@@ -433,62 +337,16 @@
       "note": "",
       "durationInFrames": 538,
       "overlapFromPrevious": 0,
-      "from": 6091,
+      "from": 4524,
       "voiceFromFrame": 18,
       "voiceToFrame": 508,
-      "emphasisAtFrame": 90
-    },
-    {
-      "id": "inspection-capture",
-      "kind": "screen",
-      "chapter": "04 · Capture the Inspection finding",
-      "headline": "Capture, then complete the inspection",
-      "body": "Record before evidence, severity, category, section or area, and description.",
-      "emphasis": "SAVE FINDING is local; Sign & Complete uploads the findings.",
-      "narration": "Capture the before photo and record the severity, category, area and description. Save finding keeps a draft on the device. Complete, then Sign and Complete, uploads the findings and issues the inspection. Then check the shared open queue.",
-      "claimIds": [
-        "inspection-creation"
-      ],
-      "slot": "inspection-capture",
-      "cues": [
-        {
-          "proof": "form",
-          "fromFrame": 0,
-          "focusAtFrame": 18,
-          "detail": null
-        },
-        {
-          "proof": "local-saved",
-          "fromFrame": 203,
-          "focusAtFrame": 221,
-          "detail": null
-        },
-        {
-          "proof": "complete-issued",
-          "fromFrame": 311,
-          "focusAtFrame": 329,
-          "detail": null
-        },
-        {
-          "proof": "server-open",
-          "fromFrame": 508,
-          "focusAtFrame": 526,
-          "detail": null
-        }
-      ],
-      "note": "",
-      "durationInFrames": 625,
-      "overlapFromPrevious": 0,
-      "from": 6629,
-      "voiceFromFrame": 18,
-      "voiceToFrame": 595,
       "emphasisAtFrame": 90
     },
     {
       "id": "inspection-carryover",
       "kind": "screen",
       "chapter": "04 · Carry-over queue",
-      "headline": "Follow “CARRIES OVER”",
+      "headline": "Open existing Inspection findings",
       "body": "Bill of Health → Inspection Remedials → Follow-ups → INSPECTIONS → OPEN VERIFY FLOW.",
       "emphasis": "Open findings carry over until closed or escalated.",
       "narration": "Below Carries over, open Inspection Remedials. In Follow-ups, select Inspections, then Open verify flow. Open and remedied findings remain in the queue across inspection dates and statuses until their own decision closes or escalates them. Use the age badge to see how long a finding has been open.",
@@ -525,7 +383,7 @@
       "note": "",
       "durationInFrames": 760,
       "overlapFromPrevious": 0,
-      "from": 7254,
+      "from": 5062,
       "voiceFromFrame": 18,
       "voiceToFrame": 730,
       "emphasisAtFrame": 90
@@ -546,7 +404,7 @@
       "note": "",
       "durationInFrames": 610,
       "overlapFromPrevious": 0,
-      "from": 8014,
+      "from": 5822,
       "voiceFromFrame": 18,
       "voiceToFrame": 580,
       "emphasisAtFrame": 90
@@ -587,7 +445,7 @@
       "note": "",
       "durationInFrames": 722,
       "overlapFromPrevious": 0,
-      "from": 8624,
+      "from": 6432,
       "voiceFromFrame": 18,
       "voiceToFrame": 692,
       "emphasisAtFrame": 90
@@ -621,7 +479,7 @@
       "note": "",
       "durationInFrames": 581,
       "overlapFromPrevious": 0,
-      "from": 9346,
+      "from": 7154,
       "voiceFromFrame": 18,
       "voiceToFrame": 551,
       "emphasisAtFrame": 90
@@ -655,7 +513,7 @@
       "note": "",
       "durationInFrames": 482,
       "overlapFromPrevious": 0,
-      "from": 9927,
+      "from": 7735,
       "voiceFromFrame": 18,
       "voiceToFrame": 452,
       "emphasisAtFrame": 90
@@ -689,7 +547,7 @@
       "note": "",
       "durationInFrames": 626,
       "overlapFromPrevious": 0,
-      "from": 10409,
+      "from": 8217,
       "voiceFromFrame": 18,
       "voiceToFrame": 596,
       "emphasisAtFrame": 90
@@ -724,7 +582,7 @@
       "note": "",
       "durationInFrames": 678,
       "overlapFromPrevious": 0,
-      "from": 11035,
+      "from": 8843,
       "voiceFromFrame": 18,
       "voiceToFrame": 648,
       "emphasisAtFrame": 90
@@ -734,7 +592,7 @@
       "kind": "outro",
       "chapter": "Remedial Action",
       "headline": "Keep the finding\nuntil verified.",
-      "body": "Record the failure. Verify the correction. Preserve the trail.",
+      "body": "Review the finding. Verify the correction. Preserve the trail.",
       "emphasis": "",
       "narration": "",
       "claimIds": [],
@@ -743,7 +601,7 @@
       "note": "",
       "durationInFrames": 180,
       "overlapFromPrevious": 0,
-      "from": 11713,
+      "from": 9521,
       "voiceFromFrame": 0,
       "voiceToFrame": 0,
       "emphasisAtFrame": 0

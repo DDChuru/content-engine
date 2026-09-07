@@ -1019,48 +1019,6 @@
         "wordCount": 45
       },
       {
-        "id": "two-outcomes",
-        "audio": {
-          "path": "remedial-tutorial/audio/two-outcomes-d469712ed4a9.mp3",
-          "bytes": 186035,
-          "sha256": "9ca118db59d71b9209120750caa82c46f7fc22db2f1971b2b0d1de606e7af39e"
-        },
-        "receipt": {
-          "path": "remedial-tutorial/audio/two-outcomes-d469712ed4a9-provenance.json",
-          "bytes": 856,
-          "sha256": "a34872c49652d59019db68b28c8c3337d4faa564be9d3a28a40716184a6e43af"
-        },
-        "transcript": {
-          "path": "remedial-tutorial/audio/two-outcomes-d469712ed4a9.words.json",
-          "bytes": 3745,
-          "sha256": "0953e9e4de15b589dda407241d108d4d62d97fc72088e34b29e62737bc777f0d"
-        },
-        "durationSeconds": 11.598367,
-        "fromFrame": 1298,
-        "wordCount": 28
-      },
-      {
-        "id": "finding-origin",
-        "audio": {
-          "path": "remedial-tutorial/audio/finding-origin-353d127ac7c2.mp3",
-          "bytes": 211949,
-          "sha256": "83528f7431dcd5789da77095944e6376b88c186803d7d2a2c8e64b0896d2d761"
-        },
-        "receipt": {
-          "path": "remedial-tutorial/audio/finding-origin-353d127ac7c2-provenance.json",
-          "bytes": 876,
-          "sha256": "c2fe4d2801ce293217a57891fb05d9c702e2e274f85b27bcf620212951baa64d"
-        },
-        "transcript": {
-          "path": "remedial-tutorial/audio/finding-origin-353d127ac7c2.words.json",
-          "bytes": 3673,
-          "sha256": "b697ae80fdfef0b6c0af5cb95f66cb50f279650f873536f5e475d76dc37b158b"
-        },
-        "durationSeconds": 13.217959,
-        "fromFrame": 1694,
-        "wordCount": 27
-      },
-      {
         "id": "cleaning-filter",
         "audio": {
           "path": "remedial-tutorial/audio/cleaning-filter-5e8ba1498eb8.mp3",
@@ -1078,29 +1036,29 @@
           "sha256": "8776f750a1b97d4ea74a11ed2065d845b9f5577d99d7d5542387383c88c05a3e"
         },
         "durationSeconds": 5.01551,
-        "fromFrame": 2139,
+        "fromFrame": 1298,
         "wordCount": 12
       },
       {
         "id": "open-card",
         "audio": {
-          "path": "remedial-tutorial/audio/open-card-a142acfd7b02.mp3",
-          "bytes": 272971,
-          "sha256": "af73e38420d90ce7caae6664ecfa5ffe045b088145415d8dbea6ea2772d0df3d"
+          "path": "remedial-tutorial/audio/open-card-418bb5b4b166.mp3",
+          "bytes": 291779,
+          "sha256": "93d589f5b711a7645b2af38d981a49ba5ac2334f3741c991888bd498711eda28"
         },
         "receipt": {
-          "path": "remedial-tutorial/audio/open-card-a142acfd7b02-provenance.json",
-          "bytes": 873,
-          "sha256": "0be514a3f3f227509e85701a70d06350c8b8d47b74607998d4d11ae9d9470339"
+          "path": "remedial-tutorial/audio/open-card-418bb5b4b166-provenance.json",
+          "bytes": 923,
+          "sha256": "7dfd31ec85b339fcd46902524562c40bfdd8308efe4852fca96a07b24f35001f"
         },
         "transcript": {
-          "path": "remedial-tutorial/audio/open-card-a142acfd7b02.words.json",
-          "bytes": 4027,
-          "sha256": "c73631d0cb99e78f3b07055a007e01d9b8945f3eb5eca4662643435546b2a144"
+          "path": "remedial-tutorial/audio/open-card-418bb5b4b166.words.json",
+          "bytes": 5134,
+          "sha256": "d5bf0ea9ec6b159d90e5dd481bd75692d6942d21ced0892b149a7809d969c3b4"
         },
-        "durationSeconds": 17.031837,
-        "fromFrame": 2338,
-        "wordCount": 30
+        "durationSeconds": 18.207347,
+        "fromFrame": 1497,
+        "wordCount": 39
       },
       {
         "id": "recheck",
@@ -1120,7 +1078,7 @@
           "sha256": "32f487d11c57617c5add85961f2b63f8d449354b3a23135ffb6feb7c1fef7234"
         },
         "durationSeconds": 15.830204,
-        "fromFrame": 2897,
+        "fromFrame": 2092,
         "wordCount": 32
       },
       {
@@ -1141,7 +1099,7 @@
           "sha256": "d2f798f624c9e1aa31ebbc709d510310004b5521f48b88bbb5be24819d99f6a0"
         },
         "durationSeconds": 11.467755,
-        "fromFrame": 3420,
+        "fromFrame": 2615,
         "wordCount": 28
       },
       {
@@ -1162,29 +1120,29 @@
           "sha256": "511aae85d414f8d65ed728a0b620036357f071011eb000cacb148241f39b9a93"
         },
         "durationSeconds": 11.546122,
-        "fromFrame": 3813,
+        "fromFrame": 3008,
         "wordCount": 25
       },
       {
         "id": "resolved",
         "audio": {
-          "path": "remedial-tutorial/audio/resolved-1c80bce991c4.mp3",
-          "bytes": 361578,
-          "sha256": "e5e45b09699b5f4ea4415aea7a75831fdd31ab94d5dce0daa802aca59c44cf16"
+          "path": "remedial-tutorial/audio/resolved-d3379b7a863c.mp3",
+          "bytes": 227831,
+          "sha256": "19ca23e3ca6b99d07567cb334a4409971fb880f01f9010f04024fba805a2e099"
         },
         "receipt": {
-          "path": "remedial-tutorial/audio/resolved-1c80bce991c4-provenance.json",
-          "bytes": 928,
-          "sha256": "dd192b8479d7a9212f981bd6bd74e3418de5c7dc8b822ee5f02b1efca31aac98"
+          "path": "remedial-tutorial/audio/resolved-d3379b7a863c-provenance.json",
+          "bytes": 869,
+          "sha256": "a1a463b255b29df1f8964a5f082ba3924e23a4a3c595ce517558e28f1e4a1001"
         },
         "transcript": {
-          "path": "remedial-tutorial/audio/resolved-1c80bce991c4.words.json",
-          "bytes": 5235,
-          "sha256": "2714297acfddb79a915ff15655feb8799b40251cbce89475b8718b4f90f6e390"
+          "path": "remedial-tutorial/audio/resolved-d3379b7a863c.words.json",
+          "bytes": 4119,
+          "sha256": "5f7bbc0de3557304575ab745ec76724654f2d75092107da388fe789502f817c6"
         },
-        "durationSeconds": 22.569796,
-        "fromFrame": 4208,
-        "wordCount": 40
+        "durationSeconds": 14.210612,
+        "fromFrame": 3403,
+        "wordCount": 31
       },
       {
         "id": "audit-trail",
@@ -1204,29 +1162,8 @@
           "sha256": "0cc000f24d1f75a08cbb4e15ec57d835673fd556cda59511a7844e8d10453423"
         },
         "durationSeconds": 20.506122,
-        "fromFrame": 4934,
+        "fromFrame": 3878,
         "wordCount": 41
-      },
-      {
-        "id": "critical-handoff",
-        "audio": {
-          "path": "remedial-tutorial/audio/critical-handoff-2250c632b443.mp3",
-          "bytes": 247057,
-          "sha256": "7e2b003a4a41cb29f41208f478f7966620eb3815862c7a0fc89be7b1e6bf8b53"
-        },
-        "receipt": {
-          "path": "remedial-tutorial/audio/critical-handoff-2250c632b443-provenance.json",
-          "bytes": 878,
-          "sha256": "643e005a8a19df808f89cdf3e605eed9036b4bfead4635a9761f2b518bd17e56"
-        },
-        "transcript": {
-          "path": "remedial-tutorial/audio/critical-handoff-2250c632b443.words.json",
-          "bytes": 4008,
-          "sha256": "2ddd5a21334191a416e0a55cb37a55ed5fb7e311a3d44d44dd36dae24e846295"
-        },
-        "durationSeconds": 15.412245,
-        "fromFrame": 5598,
-        "wordCount": 30
       },
       {
         "id": "two-clocks",
@@ -1246,29 +1183,8 @@
           "sha256": "f13eb6ea812dcae775d5c8657294988986f400d968af3a4a679d6e89b0f1fc40"
         },
         "durationSeconds": 16.326531,
-        "fromFrame": 6109,
+        "fromFrame": 4542,
         "wordCount": 28
-      },
-      {
-        "id": "inspection-capture",
-        "audio": {
-          "path": "remedial-tutorial/audio/inspection-capture-e7e8f1a4244e.mp3",
-          "bytes": 308079,
-          "sha256": "a57ad5256ef91066ccf14f2ca081ba3704a72ca1bb1d39992b8edb453a5b7a03"
-        },
-        "receipt": {
-          "path": "remedial-tutorial/audio/inspection-capture-e7e8f1a4244e-provenance.json",
-          "bytes": 938,
-          "sha256": "a0d34fe1e877ea11e850dbd513063d9c8bd87975b6e694618cb091eb001b1871"
-        },
-        "transcript": {
-          "path": "remedial-tutorial/audio/inspection-capture-e7e8f1a4244e.words.json",
-          "bytes": 5018,
-          "sha256": "cea1ca9b49c8c0118a9ff035a103701558c79ad82196c8bc9028bd838845f5fd"
-        },
-        "durationSeconds": 19.226122,
-        "fromFrame": 6647,
-        "wordCount": 38
       },
       {
         "id": "inspection-carryover",
@@ -1288,7 +1204,7 @@
           "sha256": "876801cd6d3c84b471d06b98c0e4f23a297c347d208e76241975ad336fd4c088"
         },
         "durationSeconds": 23.719184,
-        "fromFrame": 7272,
+        "fromFrame": 5080,
         "wordCount": 49
       },
       {
@@ -1309,7 +1225,7 @@
           "sha256": "931ddac640fe80bc9c726324726e9abc61d91c0aea849955d752d2636c8d5ed3"
         },
         "durationSeconds": 18.703673,
-        "fromFrame": 8032,
+        "fromFrame": 5840,
         "wordCount": 37
       },
       {
@@ -1330,7 +1246,7 @@
           "sha256": "6df84cacc0b5c6e6b12685f721e3e984865a71f3e12ebee7b06cca122fb36132"
         },
         "durationSeconds": 22.465306,
-        "fromFrame": 8642,
+        "fromFrame": 6450,
         "wordCount": 42
       },
       {
@@ -1351,7 +1267,7 @@
           "sha256": "04bc794295688f0b6869bc772e53538fd6472c30eade0703e4927a0348b68eda"
         },
         "durationSeconds": 17.737143,
-        "fromFrame": 9364,
+        "fromFrame": 7172,
         "wordCount": 30
       },
       {
@@ -1372,7 +1288,7 @@
           "sha256": "174f4bec51d4efcedae1bfcd10f445bf6f8d9ac047bbd9a341edf92a220a3c4a"
         },
         "durationSeconds": 14.445714,
-        "fromFrame": 9945,
+        "fromFrame": 7753,
         "wordCount": 29
       },
       {
@@ -1393,7 +1309,7 @@
           "sha256": "779cc0e730e857eca9c92e9dc89ef14656c7f792d7b70269e451eb8254a694e5"
         },
         "durationSeconds": 19.252245,
-        "fromFrame": 10427,
+        "fromFrame": 8235,
         "wordCount": 34
       },
       {
@@ -1414,24 +1330,24 @@
           "sha256": "ff176dcf57533d20f2c925569e14512a2d7c5fedc0d6adc7dbd3e2beeebfac39"
         },
         "durationSeconds": 20.976327,
-        "fromFrame": 11053,
+        "fromFrame": 8861,
         "wordCount": 40
       }
     ],
     "master": {
-      "path": "remedial-tutorial/audio/candidate-narration-v2.wav",
-      "bytes": 38057678,
-      "sha256": "8d6d4473bef0fa34acb8c51db042a97b119992532e0b98ff8d0165e79fb41f56"
+      "path": "remedial-tutorial/audio/candidate-narration-v3.wav",
+      "bytes": 31043278,
+      "sha256": "980984bbaad0c24d2f4eb1b29ae965294ca08648761c363d989e51a8885399a8"
     },
     "transcript": {
-      "path": "remedial-tutorial/audio/candidate-measured-transcript-v2.json",
-      "bytes": 134008,
-      "sha256": "3176e0750e6f3181530180be49554055efbfa4d134f2786dccc7870977dbba96"
+      "path": "remedial-tutorial/audio/candidate-measured-transcript-v3.json",
+      "bytes": 109620,
+      "sha256": "d2ca36edf5200abd84c92ae451b4b9ebc2ed0f727f9070e15beb80b47814ccea"
     },
     "cueAlignment": {
-      "path": "remedial-tutorial/audio/candidate-cue-alignment-v2.json",
-      "bytes": 2752,
-      "sha256": "87291b6d0ce9793ad0a2f2cf35518d579c920ea4c6ea11fdb9b9a8558a6cd3ff"
+      "path": "remedial-tutorial/audio/candidate-cue-alignment-v3.json",
+      "bytes": 1852,
+      "sha256": "e2d1566013dfb2c1fcbc1f90efe1c914e81f2d5fa542a1fcf7cf0eab21d06dac"
     }
   },
   "music": {

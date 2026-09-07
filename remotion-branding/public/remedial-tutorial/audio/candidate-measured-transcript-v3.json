@@ -1,0 +1,4361 @@
+{
+  "schemaVersion": 1,
+  "clips": [
+    {
+      "id": "home-entry",
+      "audio": {
+        "path": "remedial-tutorial/audio/home-entry-d4c0ba904a83.mp3",
+        "bytes": 229921,
+        "sha256": "f79e49f8807c4746f7c8b67382463434dcd1b52f1f8a4406a9c137307eb9767d"
+      },
+      "receipt": {
+        "path": "remedial-tutorial/audio/home-entry-d4c0ba904a83-provenance.json",
+        "bytes": 870,
+        "sha256": "40e00e4aa841933b068a45a013eec6568cfe5a0e2c77fef6f5cd0d56822c5adb"
+      },
+      "transcript": {
+        "path": "remedial-tutorial/audio/home-entry-d4c0ba904a83.words.json",
+        "bytes": 3888,
+        "sha256": "ea209b38bcd069adf7d84b8087a0c42ee377fc102c0b4efc29d51ffb9fadda9a"
+      },
+      "durationSeconds": 14.341224,
+      "fromFrame": 168,
+      "wordCount": 29
+    },
+    {
+      "id": "bill-components",
+      "audio": {
+        "path": "remedial-tutorial/audio/bill-components-e3783cb9bc0d.mp3",
+        "bytes": 321872,
+        "sha256": "9a71c71892cda8017ae218f8c00062b17e35e5ad778d89929c4db78700d5bcbb"
+      },
+      "receipt": {
+        "path": "remedial-tutorial/audio/bill-components-e3783cb9bc0d-provenance.json",
+        "bytes": 949,
+        "sha256": "0d01f0a01a093b0ef9954c06c3990af80ae52c07a2a9035735672341dc60e05c"
+      },
+      "transcript": {
+        "path": "remedial-tutorial/audio/bill-components-e3783cb9bc0d.words.json",
+        "bytes": 5847,
+        "sha256": "58a9abd2939b865b74beed9203b39a8780f06b05e52f900079783e910a9dd87b"
+      },
+      "durationSeconds": 20.088163,
+      "fromFrame": 647,
+      "wordCount": 45
+    },
+    {
+      "id": "cleaning-filter",
+      "audio": {
+        "path": "remedial-tutorial/audio/cleaning-filter-5e8ba1498eb8.mp3",
+        "bytes": 80710,
+        "sha256": "b15ac39605768dc3413790cff2cf7ff51ed8a9a353ebe4e5212a6831bb90d974"
+      },
+      "receipt": {
+        "path": "remedial-tutorial/audio/cleaning-filter-5e8ba1498eb8-provenance.json",
+        "bytes": 766,
+        "sha256": "35552b603235b1212cd5f7b22059743054cc6cea7a63327569812d745124360f"
+      },
+      "transcript": {
+        "path": "remedial-tutorial/audio/cleaning-filter-5e8ba1498eb8.words.json",
+        "bytes": 1780,
+        "sha256": "8776f750a1b97d4ea74a11ed2065d845b9f5577d99d7d5542387383c88c05a3e"
+      },
+      "durationSeconds": 5.01551,
+      "fromFrame": 1298,
+      "wordCount": 12
+    },
+    {
+      "id": "open-card",
+      "audio": {
+        "path": "remedial-tutorial/audio/open-card-418bb5b4b166.mp3",
+        "bytes": 291779,
+        "sha256": "93d589f5b711a7645b2af38d981a49ba5ac2334f3741c991888bd498711eda28"
+      },
+      "receipt": {
+        "path": "remedial-tutorial/audio/open-card-418bb5b4b166-provenance.json",
+        "bytes": 923,
+        "sha256": "7dfd31ec85b339fcd46902524562c40bfdd8308efe4852fca96a07b24f35001f"
+      },
+      "transcript": {
+        "path": "remedial-tutorial/audio/open-card-418bb5b4b166.words.json",
+        "bytes": 5134,
+        "sha256": "d5bf0ea9ec6b159d90e5dd481bd75692d6942d21ced0892b149a7809d969c3b4"
+      },
+      "durationSeconds": 18.207347,
+      "fromFrame": 1497,
+      "wordCount": 39
+    },
+    {
+      "id": "recheck",
+      "audio": {
+        "path": "remedial-tutorial/audio/recheck-e0374e4a1d16.mp3",
+        "bytes": 253745,
+        "sha256": "a2977974ed3e24270cb3d99656822b3da00230f665b089c8fa6bf1341bd66513"
+      },
+      "receipt": {
+        "path": "remedial-tutorial/audio/recheck-e0374e4a1d16-provenance.json",
+        "bytes": 892,
+        "sha256": "1c7cb72f429cebf2881eabf8482a554134c2c53892db175b0f36e6cac77bb537"
+      },
+      "transcript": {
+        "path": "remedial-tutorial/audio/recheck-e0374e4a1d16.words.json",
+        "bytes": 4290,
+        "sha256": "32f487d11c57617c5add85961f2b63f8d449354b3a23135ffb6feb7c1fef7234"
+      },
+      "durationSeconds": 15.830204,
+      "fromFrame": 2092,
+      "wordCount": 32
+    },
+    {
+      "id": "confirm",
+      "audio": {
+        "path": "remedial-tutorial/audio/confirm-8eb153d14f8d.mp3",
+        "bytes": 183946,
+        "sha256": "4f84c3cbb42d1670b77a7b5cb643bf0b7a5750c635f33f26cf2aceebdd052ab1"
+      },
+      "receipt": {
+        "path": "remedial-tutorial/audio/confirm-8eb153d14f8d-provenance.json",
+        "bytes": 849,
+        "sha256": "95464cd1c81393086cec628076d1d3df0b985a7fab4f0039f582572bd871a0e3"
+      },
+      "transcript": {
+        "path": "remedial-tutorial/audio/confirm-8eb153d14f8d.words.json",
+        "bytes": 3726,
+        "sha256": "d2f798f624c9e1aa31ebbc709d510310004b5521f48b88bbb5be24819d99f6a0"
+      },
+      "durationSeconds": 11.467755,
+      "fromFrame": 2615,
+      "wordCount": 28
+    },
+    {
+      "id": "removed",
+      "audio": {
+        "path": "remedial-tutorial/audio/removed-a70bae225d30.mp3",
+        "bytes": 185199,
+        "sha256": "c6377efd93804fdaad5dbbbdd30e92ce3a4c69cbe1a1d6a9acbcdc1465772607"
+      },
+      "receipt": {
+        "path": "remedial-tutorial/audio/removed-a70bae225d30-provenance.json",
+        "bytes": 840,
+        "sha256": "2de5e3b60dbd8587330ae4c76e76439aa0e0818cc2505c56afd1617f082eef2a"
+      },
+      "transcript": {
+        "path": "remedial-tutorial/audio/removed-a70bae225d30.words.json",
+        "bytes": 3384,
+        "sha256": "511aae85d414f8d65ed728a0b620036357f071011eb000cacb148241f39b9a93"
+      },
+      "durationSeconds": 11.546122,
+      "fromFrame": 3008,
+      "wordCount": 25
+    },
+    {
+      "id": "resolved",
+      "audio": {
+        "path": "remedial-tutorial/audio/resolved-d3379b7a863c.mp3",
+        "bytes": 227831,
+        "sha256": "19ca23e3ca6b99d07567cb334a4409971fb880f01f9010f04024fba805a2e099"
+      },
+      "receipt": {
+        "path": "remedial-tutorial/audio/resolved-d3379b7a863c-provenance.json",
+        "bytes": 869,
+        "sha256": "a1a463b255b29df1f8964a5f082ba3924e23a4a3c595ce517558e28f1e4a1001"
+      },
+      "transcript": {
+        "path": "remedial-tutorial/audio/resolved-d3379b7a863c.words.json",
+        "bytes": 4119,
+        "sha256": "5f7bbc0de3557304575ab745ec76724654f2d75092107da388fe789502f817c6"
+      },
+      "durationSeconds": 14.210612,
+      "fromFrame": 3403,
+      "wordCount": 31
+    },
+    {
+      "id": "audit-trail",
+      "audio": {
+        "path": "remedial-tutorial/audio/audit-trail-104fd266d513.mp3",
+        "bytes": 328559,
+        "sha256": "8f9d3bad4690245a0e054a4618f6788be79107a36575c10a9e895f9d867a977c"
+      },
+      "receipt": {
+        "path": "remedial-tutorial/audio/audit-trail-104fd266d513-provenance.json",
+        "bytes": 949,
+        "sha256": "d3cee855fe570adb30d65f27f0d7f1bcad09af57ef7123ba6a90b2743ec4b9b0"
+      },
+      "transcript": {
+        "path": "remedial-tutorial/audio/audit-trail-104fd266d513.words.json",
+        "bytes": 5407,
+        "sha256": "0cc000f24d1f75a08cbb4e15ec57d835673fd556cda59511a7844e8d10453423"
+      },
+      "durationSeconds": 20.506122,
+      "fromFrame": 3878,
+      "wordCount": 41
+    },
+    {
+      "id": "two-clocks",
+      "audio": {
+        "path": "remedial-tutorial/audio/two-clocks-e0f0c9fae18d.mp3",
+        "bytes": 261686,
+        "sha256": "7204aa61331e7e441536fc26338c1a127de1ffc420e53d4f6d3c2c17ff69ca72"
+      },
+      "receipt": {
+        "path": "remedial-tutorial/audio/two-clocks-e0f0c9fae18d-provenance.json",
+        "bytes": 880,
+        "sha256": "b15d3ad84e89aa7c7d1f607d02340ad652713c4ea162f1a61a61820308770773"
+      },
+      "transcript": {
+        "path": "remedial-tutorial/audio/two-clocks-e0f0c9fae18d.words.json",
+        "bytes": 3798,
+        "sha256": "f13eb6ea812dcae775d5c8657294988986f400d968af3a4a679d6e89b0f1fc40"
+      },
+      "durationSeconds": 16.326531,
+      "fromFrame": 4542,
+      "wordCount": 28
+    },
+    {
+      "id": "inspection-carryover",
+      "audio": {
+        "path": "remedial-tutorial/audio/inspection-carryover-933a92a5bad9.mp3",
+        "bytes": 379968,
+        "sha256": "80827a9ad7ae362a4bb835f5b77886d384120036de9a53d2da31d1e6c71d71f7"
+      },
+      "receipt": {
+        "path": "remedial-tutorial/audio/inspection-carryover-933a92a5bad9-provenance.json",
+        "bytes": 999,
+        "sha256": "66d1be76cceea9866051a79c2ab98634d267edb4dcd126361ffa9c756baaa5a2"
+      },
+      "transcript": {
+        "path": "remedial-tutorial/audio/inspection-carryover-933a92a5bad9.words.json",
+        "bytes": 6386,
+        "sha256": "876801cd6d3c84b471d06b98c0e4f23a297c347d208e76241975ad336fd4c088"
+      },
+      "durationSeconds": 23.719184,
+      "fromFrame": 5080,
+      "wordCount": 49
+    },
+    {
+      "id": "inspection-age",
+      "audio": {
+        "path": "remedial-tutorial/audio/inspection-age-0cdeaeed5ad7.mp3",
+        "bytes": 299720,
+        "sha256": "bbf2775598ab9074def61c540474a7ac94678a24679a7b5f4056c27b3e71e7ed"
+      },
+      "receipt": {
+        "path": "remedial-tutorial/audio/inspection-age-0cdeaeed5ad7-provenance.json",
+        "bytes": 909,
+        "sha256": "d4d4c5af2ce630109a4f8c6707dad11430645bb5ed4e81b4981ddf741a43ea6d"
+      },
+      "transcript": {
+        "path": "remedial-tutorial/audio/inspection-age-0cdeaeed5ad7.words.json",
+        "bytes": 4861,
+        "sha256": "931ddac640fe80bc9c726324726e9abc61d91c0aea849955d752d2636c8d5ed3"
+      },
+      "durationSeconds": 18.703673,
+      "fromFrame": 5840,
+      "wordCount": 37
+    },
+    {
+      "id": "inspection-review",
+      "audio": {
+        "path": "remedial-tutorial/audio/inspection-review-80b9f5efdb2c.mp3",
+        "bytes": 359906,
+        "sha256": "4027e326607ada1aa30b876cbc0a460769454eec630494beea2c75bc3deb8493"
+      },
+      "receipt": {
+        "path": "remedial-tutorial/audio/inspection-review-80b9f5efdb2c-provenance.json",
+        "bytes": 953,
+        "sha256": "2fd63965a42b69ccf458bc3052f91d93a6585dc1906066e3ca500640831a5d7f"
+      },
+      "transcript": {
+        "path": "remedial-tutorial/audio/inspection-review-80b9f5efdb2c.words.json",
+        "bytes": 5505,
+        "sha256": "6df84cacc0b5c6e6b12685f721e3e984865a71f3e12ebee7b06cca122fb36132"
+      },
+      "durationSeconds": 22.465306,
+      "fromFrame": 6450,
+      "wordCount": 42
+    },
+    {
+      "id": "inspection-accept",
+      "audio": {
+        "path": "remedial-tutorial/audio/inspection-accept-3227b748f8a6.mp3",
+        "bytes": 284256,
+        "sha256": "7e58feeb2768776d878838e144dd476c2d8c07a57284b6a13fb5545be21c62c2"
+      },
+      "receipt": {
+        "path": "remedial-tutorial/audio/inspection-accept-3227b748f8a6-provenance.json",
+        "bytes": 892,
+        "sha256": "4e64ccf5165dc4b6239bc864e1bf691fb08bcaa48f21008a1ee30fbfb52170a9"
+      },
+      "transcript": {
+        "path": "remedial-tutorial/audio/inspection-accept-3227b748f8a6.words.json",
+        "bytes": 4031,
+        "sha256": "04bc794295688f0b6869bc772e53538fd6472c30eade0703e4927a0348b68eda"
+      },
+      "durationSeconds": 17.737143,
+      "fromFrame": 7172,
+      "wordCount": 30
+    },
+    {
+      "id": "inspection-reject",
+      "audio": {
+        "path": "remedial-tutorial/audio/inspection-reject-cff862642561.mp3",
+        "bytes": 231593,
+        "sha256": "5922ea232cdcdf3676d446313cf4e892e592527aa451eabac849683883b654ea"
+      },
+      "receipt": {
+        "path": "remedial-tutorial/audio/inspection-reject-cff862642561-provenance.json",
+        "bytes": 878,
+        "sha256": "1a7f09e7de8412fb71738307424d5b797c857a5dbd74d28b0848f7f9c412080b"
+      },
+      "transcript": {
+        "path": "remedial-tutorial/audio/inspection-reject-cff862642561.words.json",
+        "bytes": 3900,
+        "sha256": "174f4bec51d4efcedae1bfcd10f445bf6f8d9ac047bbd9a341edf92a220a3c4a"
+      },
+      "durationSeconds": 14.445714,
+      "fromFrame": 7753,
+      "wordCount": 29
+    },
+    {
+      "id": "inspection-ncr",
+      "audio": {
+        "path": "remedial-tutorial/audio/inspection-ncr-c65de8fafc45.mp3",
+        "bytes": 308497,
+        "sha256": "b40e91cbed7b0f83d57b13b38bd1b73882c0f32552adfb36f136d3aa5420a087"
+      },
+      "receipt": {
+        "path": "remedial-tutorial/audio/inspection-ncr-c65de8fafc45-provenance.json",
+        "bytes": 909,
+        "sha256": "5d7639d2bf09202fb011d4b4c244c312d44b5de749cdf0fb5340752a7addae95"
+      },
+      "transcript": {
+        "path": "remedial-tutorial/audio/inspection-ncr-c65de8fafc45.words.json",
+        "bytes": 4529,
+        "sha256": "779cc0e730e857eca9c92e9dc89ef14656c7f792d7b70269e451eb8254a694e5"
+      },
+      "durationSeconds": 19.252245,
+      "fromFrame": 8235,
+      "wordCount": 34
+    },
+    {
+      "id": "inspection-history",
+      "audio": {
+        "path": "remedial-tutorial/audio/inspection-history-e463333c844f.mp3",
+        "bytes": 336083,
+        "sha256": "8b2a48c0bedc399c972b8452bd300dce4db87baae51511dc61f55e3647314664"
+      },
+      "receipt": {
+        "path": "remedial-tutorial/audio/inspection-history-e463333c844f-provenance.json",
+        "bytes": 931,
+        "sha256": "50b4c4b67f6aeb17fb19209dff63674979e17d09670037aedb4994b9be95eec1"
+      },
+      "transcript": {
+        "path": "remedial-tutorial/audio/inspection-history-e463333c844f.words.json",
+        "bytes": 5227,
+        "sha256": "ff176dcf57533d20f2c925569e14512a2d7c5fedc0d6adc7dbd3e2beeebfac39"
+      },
+      "durationSeconds": 20.976327,
+      "fromFrame": 8861,
+      "wordCount": 40
+    }
+  ],
+  "words": [
+    {
+      "word": " On",
+      "start": 5.6,
+      "end": 5.8,
+      "probability": 0.7850978970527649,
+      "beat": "home-entry"
+    },
+    {
+      "word": " Home,",
+      "start": 5.8,
+      "end": 6.14,
+      "probability": 0.37500905990600586,
+      "beat": "home-entry"
+    },
+    {
+      "word": " Remedial",
+      "start": 6.8,
+      "end": 7.279999999999999,
+      "probability": 0.8403613766034445,
+      "beat": "home-entry"
+    },
+    {
+      "word": " Actions,",
+      "start": 7.279999999999999,
+      "end": 7.8,
+      "probability": 0.8989656567573547,
+      "beat": "home-entry"
+    },
+    {
+      "word": " Needing",
+      "start": 7.859999999999999,
+      "end": 8.219999999999999,
+      "probability": 0.7064863294363022,
+      "beat": "home-entry"
+    },
+    {
+      "word": " Follow",
+      "start": 8.219999999999999,
+      "end": 8.52,
+      "probability": 0.8911706209182739,
+      "beat": "home-entry"
+    },
+    {
+      "word": "-up,",
+      "start": 8.52,
+      "end": 8.86,
+      "probability": 0.5150759071111679,
+      "beat": "home-entry"
+    },
+    {
+      "word": " Appear.",
+      "start": 9.34,
+      "end": 9.76,
+      "probability": 0.6007168367505074,
+      "beat": "home-entry"
+    },
+    {
+      "word": " In",
+      "start": 10.68,
+      "end": 11.08,
+      "probability": 0.9771768450737,
+      "beat": "home-entry"
+    },
+    {
+      "word": " the",
+      "start": 11.08,
+      "end": 11.2,
+      "probability": 0.9925372004508972,
+      "beat": "home-entry"
+    },
+    {
+      "word": " Remedial",
+      "start": 11.2,
+      "end": 11.66,
+      "probability": 0.9478147029876709,
+      "beat": "home-entry"
+    },
+    {
+      "word": " Actions,",
+      "start": 11.66,
+      "end": 12.2,
+      "probability": 0.9914083778858185,
+      "beat": "home-entry"
+    },
+    {
+      "word": " Awaiting",
+      "start": 12.3,
+      "end": 12.66,
+      "probability": 0.901884655157725,
+      "beat": "home-entry"
+    },
+    {
+      "word": " Follow",
+      "start": 12.66,
+      "end": 12.92,
+      "probability": 0.9589462876319885,
+      "beat": "home-entry"
+    },
+    {
+      "word": "-up",
+      "start": 12.92,
+      "end": 13.219999999999999,
+      "probability": 0.8697631359100342,
+      "beat": "home-entry"
+    },
+    {
+      "word": " panel,",
+      "start": 13.219999999999999,
+      "end": 13.46,
+      "probability": 0.5530913472175598,
+      "beat": "home-entry"
+    },
+    {
+      "word": " select",
+      "start": 14.26,
+      "end": 14.54,
+      "probability": 0.9299595355987549,
+      "beat": "home-entry"
+    },
+    {
+      "word": " this",
+      "start": 14.54,
+      "end": 14.84,
+      "probability": 0.983199954032898,
+      "beat": "home-entry"
+    },
+    {
+      "word": " panel",
+      "start": 14.84,
+      "end": 15.16,
+      "probability": 0.969971776008606,
+      "beat": "home-entry"
+    },
+    {
+      "word": " to",
+      "start": 15.16,
+      "end": 16.1,
+      "probability": 0.8720538020133972,
+      "beat": "home-entry"
+    },
+    {
+      "word": " open",
+      "start": 16.1,
+      "end": 16.46,
+      "probability": 0.8653973340988159,
+      "beat": "home-entry"
+    },
+    {
+      "word": " follow",
+      "start": 16.46,
+      "end": 16.799999999999997,
+      "probability": 0.48669153451919556,
+      "beat": "home-entry"
+    },
+    {
+      "word": "-ups",
+      "start": 16.799999999999997,
+      "end": 17.2,
+      "probability": 0.8711684048175812,
+      "beat": "home-entry"
+    },
+    {
+      "word": " and",
+      "start": 17.2,
+      "end": 17.560000000000002,
+      "probability": 0.9737057089805603,
+      "beat": "home-entry"
+    },
+    {
+      "word": " return",
+      "start": 17.560000000000002,
+      "end": 17.9,
+      "probability": 0.977471649646759,
+      "beat": "home-entry"
+    },
+    {
+      "word": " to",
+      "start": 17.9,
+      "end": 18.28,
+      "probability": 0.9920377731323242,
+      "beat": "home-entry"
+    },
+    {
+      "word": " the",
+      "start": 18.28,
+      "end": 18.42,
+      "probability": 0.9855726361274719,
+      "beat": "home-entry"
+    },
+    {
+      "word": " outstanding",
+      "start": 18.42,
+      "end": 18.88,
+      "probability": 0.5715561509132385,
+      "beat": "home-entry"
+    },
+    {
+      "word": " findings.",
+      "start": 18.88,
+      "end": 19.32,
+      "probability": 0.984717071056366,
+      "beat": "home-entry"
+    },
+    {
+      "word": " You",
+      "start": 21.566666666666666,
+      "end": 21.746666666666666,
+      "probability": 0.9477234482765198,
+      "beat": "bill-components"
+    },
+    {
+      "word": " can",
+      "start": 21.746666666666666,
+      "end": 21.906666666666666,
+      "probability": 0.9965167045593262,
+      "beat": "bill-components"
+    },
+    {
+      "word": " also",
+      "start": 21.906666666666666,
+      "end": 22.206666666666667,
+      "probability": 0.996792733669281,
+      "beat": "bill-components"
+    },
+    {
+      "word": " enter",
+      "start": 22.206666666666667,
+      "end": 22.546666666666667,
+      "probability": 0.9963783621788025,
+      "beat": "bill-components"
+    },
+    {
+      "word": " through",
+      "start": 22.546666666666667,
+      "end": 22.806666666666665,
+      "probability": 0.967958390712738,
+      "beat": "bill-components"
+    },
+    {
+      "word": " bill",
+      "start": 22.806666666666665,
+      "end": 23.026666666666667,
+      "probability": 0.6125141382217407,
+      "beat": "bill-components"
+    },
+    {
+      "word": " of",
+      "start": 23.026666666666667,
+      "end": 23.246666666666666,
+      "probability": 0.9776157736778259,
+      "beat": "bill-components"
+    },
+    {
+      "word": " health.",
+      "start": 23.246666666666666,
+      "end": 23.566666666666666,
+      "probability": 0.953610897064209,
+      "beat": "bill-components"
+    },
+    {
+      "word": " Open",
+      "start": 24.28666666666667,
+      "end": 24.926666666666666,
+      "probability": 0.969860315322876,
+      "beat": "bill-components"
+    },
+    {
+      "word": " bill",
+      "start": 24.926666666666666,
+      "end": 25.186666666666667,
+      "probability": 0.9132918119430542,
+      "beat": "bill-components"
+    },
+    {
+      "word": " of",
+      "start": 25.186666666666667,
+      "end": 25.386666666666667,
+      "probability": 0.992954671382904,
+      "beat": "bill-components"
+    },
+    {
+      "word": " health",
+      "start": 25.386666666666667,
+      "end": 25.706666666666667,
+      "probability": 0.9891930222511292,
+      "beat": "bill-components"
+    },
+    {
+      "word": " from",
+      "start": 25.706666666666667,
+      "end": 26.066666666666666,
+      "probability": 0.9696878790855408,
+      "beat": "bill-components"
+    },
+    {
+      "word": " home.",
+      "start": 26.066666666666666,
+      "end": 26.426666666666666,
+      "probability": 0.9590632915496826,
+      "beat": "bill-components"
+    },
+    {
+      "word": " Then",
+      "start": 27.046666666666667,
+      "end": 27.366666666666667,
+      "probability": 0.9786427021026611,
+      "beat": "bill-components"
+    },
+    {
+      "word": " select",
+      "start": 27.366666666666667,
+      "end": 27.706666666666667,
+      "probability": 0.9403219223022461,
+      "beat": "bill-components"
+    },
+    {
+      "word": " the",
+      "start": 27.706666666666667,
+      "end": 28.006666666666668,
+      "probability": 0.9912350177764893,
+      "beat": "bill-components"
+    },
+    {
+      "word": " remedial",
+      "start": 28.006666666666668,
+      "end": 28.426666666666666,
+      "probability": 0.9880841076374054,
+      "beat": "bill-components"
+    },
+    {
+      "word": " row.",
+      "start": 28.426666666666666,
+      "end": 28.686666666666667,
+      "probability": 0.985808253288269,
+      "beat": "bill-components"
+    },
+    {
+      "word": " Read",
+      "start": 29.666666666666664,
+      "end": 30.126666666666665,
+      "probability": 0.9964029788970947,
+      "beat": "bill-components"
+    },
+    {
+      "word": " its",
+      "start": 30.126666666666665,
+      "end": 30.306666666666665,
+      "probability": 0.9560685157775879,
+      "beat": "bill-components"
+    },
+    {
+      "word": " components",
+      "start": 30.306666666666665,
+      "end": 30.726666666666667,
+      "probability": 0.8965900540351868,
+      "beat": "bill-components"
+    },
+    {
+      "word": " separately.",
+      "start": 30.726666666666667,
+      "end": 31.226666666666667,
+      "probability": 0.9905791878700256,
+      "beat": "bill-components"
+    },
+    {
+      "word": " Here,",
+      "start": 32.626666666666665,
+      "end": 32.906666666666666,
+      "probability": 0.9905809760093689,
+      "beat": "bill-components"
+    },
+    {
+      "word": " two",
+      "start": 33.52666666666667,
+      "end": 33.74666666666667,
+      "probability": 0.7697623372077942,
+      "beat": "bill-components"
+    },
+    {
+      "word": " cleaning",
+      "start": 33.74666666666667,
+      "end": 34.086666666666666,
+      "probability": 0.9880470037460327,
+      "beat": "bill-components"
+    },
+    {
+      "word": " remedials",
+      "start": 34.086666666666666,
+      "end": 34.68666666666667,
+      "probability": 0.807980090379715,
+      "beat": "bill-components"
+    },
+    {
+      "word": " are",
+      "start": 34.68666666666667,
+      "end": 34.96666666666667,
+      "probability": 0.9964140057563782,
+      "beat": "bill-components"
+    },
+    {
+      "word": " open",
+      "start": 34.96666666666667,
+      "end": 35.306666666666665,
+      "probability": 0.9714369773864746,
+      "beat": "bill-components"
+    },
+    {
+      "word": " and",
+      "start": 35.306666666666665,
+      "end": 35.846666666666664,
+      "probability": 0.7797483205795288,
+      "beat": "bill-components"
+    },
+    {
+      "word": " five",
+      "start": 35.846666666666664,
+      "end": 36.14666666666667,
+      "probability": 0.9332448840141296,
+      "beat": "bill-components"
+    },
+    {
+      "word": " kappa",
+      "start": 36.14666666666667,
+      "end": 36.56666666666666,
+      "probability": 0.7015523016452789,
+      "beat": "bill-components"
+    },
+    {
+      "word": " actions",
+      "start": 36.56666666666666,
+      "end": 37.02666666666667,
+      "probability": 0.9937953948974609,
+      "beat": "bill-components"
+    },
+    {
+      "word": " are",
+      "start": 37.02666666666667,
+      "end": 37.266666666666666,
+      "probability": 0.9890753030776978,
+      "beat": "bill-components"
+    },
+    {
+      "word": " due.",
+      "start": 37.266666666666666,
+      "end": 37.486666666666665,
+      "probability": 0.9987651109695435,
+      "beat": "bill-components"
+    },
+    {
+      "word": " The",
+      "start": 38.60666666666667,
+      "end": 38.846666666666664,
+      "probability": 0.9960290193557739,
+      "beat": "bill-components"
+    },
+    {
+      "word": " total",
+      "start": 38.846666666666664,
+      "end": 39.10666666666667,
+      "probability": 0.9958159327507019,
+      "beat": "bill-components"
+    },
+    {
+      "word": " of",
+      "start": 39.10666666666667,
+      "end": 39.32666666666667,
+      "probability": 0.9969685673713684,
+      "beat": "bill-components"
+    },
+    {
+      "word": " seven",
+      "start": 39.32666666666667,
+      "end": 39.66666666666667,
+      "probability": 0.7424424886703491,
+      "beat": "bill-components"
+    },
+    {
+      "word": " is",
+      "start": 39.66666666666667,
+      "end": 39.88666666666667,
+      "probability": 0.9942588806152344,
+      "beat": "bill-components"
+    },
+    {
+      "word": " not",
+      "start": 39.88666666666667,
+      "end": 40.06666666666666,
+      "probability": 0.9985163807868958,
+      "beat": "bill-components"
+    },
+    {
+      "word": " a",
+      "start": 40.06666666666666,
+      "end": 40.20666666666666,
+      "probability": 0.993956446647644,
+      "beat": "bill-components"
+    },
+    {
+      "word": " cleaning",
+      "start": 40.20666666666666,
+      "end": 40.46666666666667,
+      "probability": 0.989561140537262,
+      "beat": "bill-components"
+    },
+    {
+      "word": " only",
+      "start": 40.46666666666667,
+      "end": 40.82666666666667,
+      "probability": 0.8787195086479187,
+      "beat": "bill-components"
+    },
+    {
+      "word": " count.",
+      "start": 40.82666666666667,
+      "end": 41.14666666666666,
+      "probability": 0.9941068887710571,
+      "beat": "bill-components"
+    },
+    {
+      "word": " In",
+      "start": 43.266666666666666,
+      "end": 43.42666666666666,
+      "probability": 0.8373842239379883,
+      "beat": "cleaning-filter"
+    },
+    {
+      "word": " follow",
+      "start": 43.42666666666666,
+      "end": 43.74666666666666,
+      "probability": 0.8471670150756836,
+      "beat": "cleaning-filter"
+    },
+    {
+      "word": "-ups,",
+      "start": 43.74666666666666,
+      "end": 44.22666666666667,
+      "probability": 0.8307702839374542,
+      "beat": "cleaning-filter"
+    },
+    {
+      "word": " choose",
+      "start": 44.486666666666665,
+      "end": 44.82666666666667,
+      "probability": 0.9863647222518921,
+      "beat": "cleaning-filter"
+    },
+    {
+      "word": " cleaning",
+      "start": 44.82666666666667,
+      "end": 45.28666666666667,
+      "probability": 0.44311511516571045,
+      "beat": "cleaning-filter"
+    },
+    {
+      "word": " to",
+      "start": 45.28666666666667,
+      "end": 45.766666666666666,
+      "probability": 0.9832403063774109,
+      "beat": "cleaning-filter"
+    },
+    {
+      "word": " focus",
+      "start": 45.766666666666666,
+      "end": 46.166666666666664,
+      "probability": 0.9985994696617126,
+      "beat": "cleaning-filter"
+    },
+    {
+      "word": " on",
+      "start": 46.166666666666664,
+      "end": 46.586666666666666,
+      "probability": 0.9928754568099976,
+      "beat": "cleaning-filter"
+    },
+    {
+      "word": " the",
+      "start": 46.586666666666666,
+      "end": 46.70666666666666,
+      "probability": 0.9759959578514099,
+      "beat": "cleaning-filter"
+    },
+    {
+      "word": " cleaning",
+      "start": 46.70666666666666,
+      "end": 47.00666666666667,
+      "probability": 0.9833171963691711,
+      "beat": "cleaning-filter"
+    },
+    {
+      "word": " check",
+      "start": 47.00666666666667,
+      "end": 47.266666666666666,
+      "probability": 0.9896199107170105,
+      "beat": "cleaning-filter"
+    },
+    {
+      "word": " findings.",
+      "start": 47.266666666666666,
+      "end": 47.70666666666666,
+      "probability": 0.943748414516449,
+      "beat": "cleaning-filter"
+    },
+    {
+      "word": " The",
+      "start": 49.9,
+      "end": 50.08,
+      "probability": 0.7811763286590576,
+      "beat": "open-card"
+    },
+    {
+      "word": " failed",
+      "start": 50.08,
+      "end": 50.48,
+      "probability": 0.9705365896224976,
+      "beat": "open-card"
+    },
+    {
+      "word": " check",
+      "start": 50.48,
+      "end": 50.86,
+      "probability": 0.9923596978187561,
+      "beat": "open-card"
+    },
+    {
+      "word": " is",
+      "start": 50.86,
+      "end": 51.58,
+      "probability": 0.9797367453575134,
+      "beat": "open-card"
+    },
+    {
+      "word": " already",
+      "start": 51.58,
+      "end": 51.98,
+      "probability": 0.9869109392166138,
+      "beat": "open-card"
+    },
+    {
+      "word": " recorded.",
+      "start": 51.98,
+      "end": 52.46,
+      "probability": 0.9930580854415894,
+      "beat": "open-card"
+    },
+    {
+      "word": " The",
+      "start": 53.26,
+      "end": 53.4,
+      "probability": 0.9873024225234985,
+      "beat": "open-card"
+    },
+    {
+      "word": " remedial",
+      "start": 53.4,
+      "end": 53.96,
+      "probability": 0.9419043958187103,
+      "beat": "open-card"
+    },
+    {
+      "word": " remains",
+      "start": 53.96,
+      "end": 54.339999999999996,
+      "probability": 0.9861094355583191,
+      "beat": "open-card"
+    },
+    {
+      "word": " open",
+      "start": 54.339999999999996,
+      "end": 54.879999999999995,
+      "probability": 0.9737367630004883,
+      "beat": "open-card"
+    },
+    {
+      "word": " until",
+      "start": 54.879999999999995,
+      "end": 55.64,
+      "probability": 0.9652687311172485,
+      "beat": "open-card"
+    },
+    {
+      "word": " the",
+      "start": 55.64,
+      "end": 55.86,
+      "probability": 0.9946213960647583,
+      "beat": "open-card"
+    },
+    {
+      "word": " correction",
+      "start": 55.86,
+      "end": 56.199999999999996,
+      "probability": 0.9899691939353943,
+      "beat": "open-card"
+    },
+    {
+      "word": " is",
+      "start": 56.199999999999996,
+      "end": 56.48,
+      "probability": 0.9972496628761292,
+      "beat": "open-card"
+    },
+    {
+      "word": " verified.",
+      "start": 56.48,
+      "end": 57.019999999999996,
+      "probability": 0.9936892986297607,
+      "beat": "open-card"
+    },
+    {
+      "word": " Here,",
+      "start": 57.9,
+      "end": 58.099999999999994,
+      "probability": 0.7659600377082825,
+      "beat": "open-card"
+    },
+    {
+      "word": " hurry",
+      "start": 58.18,
+      "end": 58.4,
+      "probability": 0.22325646877288818,
+      "beat": "open-card"
+    },
+    {
+      "word": " the",
+      "start": 58.4,
+      "end": 58.739999999999995,
+      "probability": 0.7732345461845398,
+      "beat": "open-card"
+    },
+    {
+      "word": " old",
+      "start": 58.739999999999995,
+      "end": 59.08,
+      "probability": 0.38153570890426636,
+      "beat": "open-card"
+    },
+    {
+      "word": " bucket",
+      "start": 59.08,
+      "end": 59.54,
+      "probability": 0.9238634705543518,
+      "beat": "open-card"
+    },
+    {
+      "word": " and",
+      "start": 59.54,
+      "end": 60.2,
+      "probability": 0.6796118021011353,
+      "beat": "open-card"
+    },
+    {
+      "word": " the",
+      "start": 60.2,
+      "end": 60.32,
+      "probability": 0.6109132170677185,
+      "beat": "open-card"
+    },
+    {
+      "word": " blue",
+      "start": 60.32,
+      "end": 60.5,
+      "probability": 0.91756272315979,
+      "beat": "open-card"
+    },
+    {
+      "word": " cover",
+      "start": 60.5,
+      "end": 60.78,
+      "probability": 0.8723047971725464,
+      "beat": "open-card"
+    },
+    {
+      "word": " search",
+      "start": 60.78,
+      "end": 61.3,
+      "probability": 0.9864501357078552,
+      "beat": "open-card"
+    },
+    {
+      "word": " locate",
+      "start": 61.3,
+      "end": 61.8,
+      "probability": 0.7948335409164429,
+      "beat": "open-card"
+    },
+    {
+      "word": " the",
+      "start": 61.8,
+      "end": 62.08,
+      "probability": 0.991309642791748,
+      "beat": "open-card"
+    },
+    {
+      "word": " major",
+      "start": 62.08,
+      "end": 62.519999999999996,
+      "probability": 0.9723466634750366,
+      "beat": "open-card"
+    },
+    {
+      "word": " finding",
+      "start": 62.519999999999996,
+      "end": 63.08,
+      "probability": 0.9154425263404846,
+      "beat": "open-card"
+    },
+    {
+      "word": " in",
+      "start": 63.08,
+      "end": 63.54,
+      "probability": 0.9845430254936218,
+      "beat": "open-card"
+    },
+    {
+      "word": " premixed",
+      "start": 63.54,
+      "end": 64.02,
+      "probability": 0.4477783590555191,
+      "beat": "open-card"
+    },
+    {
+      "word": " area.",
+      "start": 64.02,
+      "end": 64.4,
+      "probability": 0.9604098796844482,
+      "beat": "open-card"
+    },
+    {
+      "word": " Read",
+      "start": 65.0,
+      "end": 65.22,
+      "probability": 0.9881414175033569,
+      "beat": "open-card"
+    },
+    {
+      "word": " the",
+      "start": 65.22,
+      "end": 65.44,
+      "probability": 0.9976372718811035,
+      "beat": "open-card"
+    },
+    {
+      "word": " finding",
+      "start": 65.44,
+      "end": 65.82,
+      "probability": 0.976065456867218,
+      "beat": "open-card"
+    },
+    {
+      "word": " before",
+      "start": 65.82,
+      "end": 66.4,
+      "probability": 0.9878692030906677,
+      "beat": "open-card"
+    },
+    {
+      "word": " checking",
+      "start": 66.4,
+      "end": 66.9,
+      "probability": 0.9957250356674194,
+      "beat": "open-card"
+    },
+    {
+      "word": " the",
+      "start": 66.9,
+      "end": 67.14,
+      "probability": 0.9974818825721741,
+      "beat": "open-card"
+    },
+    {
+      "word": " correction.",
+      "start": 67.14,
+      "end": 67.5,
+      "probability": 0.9907886385917664,
+      "beat": "open-card"
+    },
+    {
+      "word": " Before",
+      "start": 69.73333333333333,
+      "end": 70.03333333333333,
+      "probability": 0.9234290719032288,
+      "beat": "recheck"
+    },
+    {
+      "word": " signing",
+      "start": 70.03333333333333,
+      "end": 70.39333333333333,
+      "probability": 0.4143238067626953,
+      "beat": "recheck"
+    },
+    {
+      "word": " off,",
+      "start": 70.39333333333333,
+      "end": 70.71333333333334,
+      "probability": 0.9927036762237549,
+      "beat": "recheck"
+    },
+    {
+      "word": " a",
+      "start": 71.07333333333334,
+      "end": 71.19333333333333,
+      "probability": 0.9911237955093384,
+      "beat": "recheck"
+    },
+    {
+      "word": " responsible",
+      "start": 71.19333333333333,
+      "end": 71.59333333333333,
+      "probability": 0.9786222577095032,
+      "beat": "recheck"
+    },
+    {
+      "word": " person",
+      "start": 71.59333333333333,
+      "end": 72.07333333333334,
+      "probability": 0.9644920825958252,
+      "beat": "recheck"
+    },
+    {
+      "word": " must",
+      "start": 72.07333333333334,
+      "end": 72.37333333333333,
+      "probability": 0.994392991065979,
+      "beat": "recheck"
+    },
+    {
+      "word": " return",
+      "start": 72.37333333333333,
+      "end": 72.91333333333334,
+      "probability": 0.9924889802932739,
+      "beat": "recheck"
+    },
+    {
+      "word": " and",
+      "start": 72.91333333333334,
+      "end": 73.59333333333333,
+      "probability": 0.9827234745025635,
+      "beat": "recheck"
+    },
+    {
+      "word": " verify",
+      "start": 73.59333333333333,
+      "end": 74.03333333333333,
+      "probability": 0.9959121942520142,
+      "beat": "recheck"
+    },
+    {
+      "word": " the",
+      "start": 74.03333333333333,
+      "end": 74.35333333333334,
+      "probability": 0.9521732330322266,
+      "beat": "recheck"
+    },
+    {
+      "word": " correction.",
+      "start": 74.35333333333334,
+      "end": 74.79333333333334,
+      "probability": 0.9841620922088623,
+      "beat": "recheck"
+    },
+    {
+      "word": " A",
+      "start": 75.77333333333334,
+      "end": 75.91333333333333,
+      "probability": 0.9691693782806396,
+      "beat": "recheck"
+    },
+    {
+      "word": " site",
+      "start": 75.91333333333333,
+      "end": 76.15333333333334,
+      "probability": 0.8588106036186218,
+      "beat": "recheck"
+    },
+    {
+      "word": " manager",
+      "start": 76.15333333333334,
+      "end": 76.59333333333333,
+      "probability": 0.9983173608779907,
+      "beat": "recheck"
+    },
+    {
+      "word": " or",
+      "start": 76.59333333333333,
+      "end": 77.15333333333334,
+      "probability": 0.8610789775848389,
+      "beat": "recheck"
+    },
+    {
+      "word": " above",
+      "start": 77.15333333333334,
+      "end": 77.51333333333334,
+      "probability": 0.9733645915985107,
+      "beat": "recheck"
+    },
+    {
+      "word": " selects",
+      "start": 77.51333333333334,
+      "end": 78.21333333333334,
+      "probability": 0.9814428687095642,
+      "beat": "recheck"
+    },
+    {
+      "word": " confirm",
+      "start": 78.21333333333334,
+      "end": 78.61333333333333,
+      "probability": 0.6980481743812561,
+      "beat": "recheck"
+    },
+    {
+      "word": " followed",
+      "start": 78.61333333333333,
+      "end": 79.37333333333333,
+      "probability": 0.8806359767913818,
+      "beat": "recheck"
+    },
+    {
+      "word": " up.",
+      "start": 79.37333333333333,
+      "end": 79.69333333333333,
+      "probability": 0.8746955990791321,
+      "beat": "recheck"
+    },
+    {
+      "word": " The",
+      "start": 80.65333333333334,
+      "end": 80.77333333333334,
+      "probability": 0.9842334389686584,
+      "beat": "recheck"
+    },
+    {
+      "word": " button",
+      "start": 80.77333333333334,
+      "end": 81.05333333333334,
+      "probability": 0.9352257251739502,
+      "beat": "recheck"
+    },
+    {
+      "word": " records",
+      "start": 81.05333333333334,
+      "end": 81.49333333333334,
+      "probability": 0.9802899956703186,
+      "beat": "recheck"
+    },
+    {
+      "word": " acceptance.",
+      "start": 81.49333333333334,
+      "end": 82.01333333333334,
+      "probability": 0.970180332660675,
+      "beat": "recheck"
+    },
+    {
+      "word": " The",
+      "start": 82.95333333333333,
+      "end": 83.15333333333334,
+      "probability": 0.992012083530426,
+      "beat": "recheck"
+    },
+    {
+      "word": " person",
+      "start": 83.15333333333334,
+      "end": 83.41333333333333,
+      "probability": 0.876459538936615,
+      "beat": "recheck"
+    },
+    {
+      "word": " must",
+      "start": 83.41333333333333,
+      "end": 83.71333333333334,
+      "probability": 0.9982067346572876,
+      "beat": "recheck"
+    },
+    {
+      "word": " check",
+      "start": 83.71333333333334,
+      "end": 83.97333333333333,
+      "probability": 0.997597873210907,
+      "beat": "recheck"
+    },
+    {
+      "word": " the",
+      "start": 83.97333333333333,
+      "end": 84.21333333333334,
+      "probability": 0.9961108565330505,
+      "beat": "recheck"
+    },
+    {
+      "word": " actual",
+      "start": 84.21333333333334,
+      "end": 84.53333333333333,
+      "probability": 0.9979655742645264,
+      "beat": "recheck"
+    },
+    {
+      "word": " condition.",
+      "start": 84.53333333333333,
+      "end": 85.01333333333334,
+      "probability": 0.9960785508155823,
+      "beat": "recheck"
+    },
+    {
+      "word": " Confirm",
+      "start": 87.16666666666667,
+      "end": 87.60666666666667,
+      "probability": 0.8862956464290619,
+      "beat": "confirm"
+    },
+    {
+      "word": " followed",
+      "start": 87.60666666666667,
+      "end": 87.90666666666667,
+      "probability": 0.3971071243286133,
+      "beat": "confirm"
+    },
+    {
+      "word": " up",
+      "start": 87.90666666666667,
+      "end": 88.22666666666667,
+      "probability": 0.695775032043457,
+      "beat": "confirm"
+    },
+    {
+      "word": " opens",
+      "start": 88.22666666666667,
+      "end": 88.88666666666667,
+      "probability": 0.9306957125663757,
+      "beat": "confirm"
+    },
+    {
+      "word": " the",
+      "start": 88.88666666666667,
+      "end": 89.12666666666667,
+      "probability": 0.9942565560340881,
+      "beat": "confirm"
+    },
+    {
+      "word": " optional",
+      "start": 89.12666666666667,
+      "end": 89.42666666666668,
+      "probability": 0.9847976565361023,
+      "beat": "confirm"
+    },
+    {
+      "word": " note",
+      "start": 89.42666666666668,
+      "end": 89.88666666666667,
+      "probability": 0.7983448505401611,
+      "beat": "confirm"
+    },
+    {
+      "word": " in",
+      "start": 89.88666666666667,
+      "end": 90.36666666666667,
+      "probability": 0.9123542904853821,
+      "beat": "confirm"
+    },
+    {
+      "word": " photo",
+      "start": 90.36666666666667,
+      "end": 90.64666666666668,
+      "probability": 0.6379210948944092,
+      "beat": "confirm"
+    },
+    {
+      "word": " form.",
+      "start": 90.64666666666668,
+      "end": 91.10666666666667,
+      "probability": 0.8604653477668762,
+      "beat": "confirm"
+    },
+    {
+      "word": " Add",
+      "start": 91.44666666666667,
+      "end": 91.70666666666668,
+      "probability": 0.2865179479122162,
+      "beat": "confirm"
+    },
+    {
+      "word": " a",
+      "start": 91.70666666666668,
+      "end": 91.82666666666667,
+      "probability": 0.9423704743385315,
+      "beat": "confirm"
+    },
+    {
+      "word": " follow",
+      "start": 91.82666666666667,
+      "end": 92.08666666666667,
+      "probability": 0.9349831342697144,
+      "beat": "confirm"
+    },
+    {
+      "word": " up",
+      "start": 92.08666666666667,
+      "end": 92.38666666666667,
+      "probability": 0.6193850636482239,
+      "beat": "confirm"
+    },
+    {
+      "word": " note",
+      "start": 92.38666666666667,
+      "end": 92.74666666666667,
+      "probability": 0.9738278985023499,
+      "beat": "confirm"
+    },
+    {
+      "word": " in",
+      "start": 92.74666666666667,
+      "end": 93.20666666666668,
+      "probability": 0.7869096398353577,
+      "beat": "confirm"
+    },
+    {
+      "word": " photo",
+      "start": 93.20666666666668,
+      "end": 93.52666666666667,
+      "probability": 0.9547438621520996,
+      "beat": "confirm"
+    },
+    {
+      "word": " when",
+      "start": 93.52666666666667,
+      "end": 93.74666666666667,
+      "probability": 0.575587272644043,
+      "beat": "confirm"
+    },
+    {
+      "word": " useful,",
+      "start": 93.74666666666667,
+      "end": 94.12666666666667,
+      "probability": 0.9852472543716431,
+      "beat": "confirm"
+    },
+    {
+      "word": " then",
+      "start": 94.60666666666667,
+      "end": 94.86666666666667,
+      "probability": 0.9838860034942627,
+      "beat": "confirm"
+    },
+    {
+      "word": " select",
+      "start": 94.86666666666667,
+      "end": 95.24666666666667,
+      "probability": 0.9905427098274231,
+      "beat": "confirm"
+    },
+    {
+      "word": " the",
+      "start": 95.24666666666667,
+      "end": 95.50666666666667,
+      "probability": 0.9943137168884277,
+      "beat": "confirm"
+    },
+    {
+      "word": " inner",
+      "start": 95.50666666666667,
+      "end": 95.66666666666667,
+      "probability": 0.9566497206687927,
+      "beat": "confirm"
+    },
+    {
+      "word": " confirm",
+      "start": 95.66666666666667,
+      "end": 96.06666666666668,
+      "probability": 0.9756379127502441,
+      "beat": "confirm"
+    },
+    {
+      "word": " to",
+      "start": 96.06666666666668,
+      "end": 96.86666666666667,
+      "probability": 0.9494009017944336,
+      "beat": "confirm"
+    },
+    {
+      "word": " record",
+      "start": 96.86666666666667,
+      "end": 97.26666666666667,
+      "probability": 0.9877042770385742,
+      "beat": "confirm"
+    },
+    {
+      "word": " the",
+      "start": 97.26666666666667,
+      "end": 97.46666666666667,
+      "probability": 0.9944844841957092,
+      "beat": "confirm"
+    },
+    {
+      "word": " verification.",
+      "start": 97.46666666666667,
+      "end": 97.90666666666667,
+      "probability": 0.9962678551673889,
+      "beat": "confirm"
+    },
+    {
+      "word": " After",
+      "start": 100.26666666666667,
+      "end": 100.48666666666666,
+      "probability": 0.9478362798690796,
+      "beat": "removed"
+    },
+    {
+      "word": " confirmation,",
+      "start": 100.48666666666666,
+      "end": 100.88666666666667,
+      "probability": 0.9735891819000244,
+      "beat": "removed"
+    },
+    {
+      "word": " the",
+      "start": 101.74666666666667,
+      "end": 101.80666666666667,
+      "probability": 0.958758533000946,
+      "beat": "removed"
+    },
+    {
+      "word": " same",
+      "start": 101.80666666666667,
+      "end": 102.14666666666666,
+      "probability": 0.9888870120048523,
+      "beat": "removed"
+    },
+    {
+      "word": " blue",
+      "start": 102.14666666666666,
+      "end": 102.50666666666666,
+      "probability": 0.9446778297424316,
+      "beat": "removed"
+    },
+    {
+      "word": " cover",
+      "start": 102.50666666666666,
+      "end": 102.84666666666666,
+      "probability": 0.7268282175064087,
+      "beat": "removed"
+    },
+    {
+      "word": " search",
+      "start": 102.84666666666666,
+      "end": 103.26666666666667,
+      "probability": 0.7510289549827576,
+      "beat": "removed"
+    },
+    {
+      "word": " returns,",
+      "start": 103.26666666666667,
+      "end": 103.96666666666667,
+      "probability": 0.9715202450752258,
+      "beat": "removed"
+    },
+    {
+      "word": " no",
+      "start": 104.84666666666666,
+      "end": 105.06666666666666,
+      "probability": 0.953914225101471,
+      "beat": "removed"
+    },
+    {
+      "word": " matches.",
+      "start": 105.06666666666666,
+      "end": 105.38666666666667,
+      "probability": 0.9580721855163574,
+      "beat": "removed"
+    },
+    {
+      "word": " The",
+      "start": 106.28666666666666,
+      "end": 106.42666666666666,
+      "probability": 0.9843802452087402,
+      "beat": "removed"
+    },
+    {
+      "word": " finding",
+      "start": 106.42666666666666,
+      "end": 106.90666666666667,
+      "probability": 0.9617719054222107,
+      "beat": "removed"
+    },
+    {
+      "word": " has",
+      "start": 106.90666666666667,
+      "end": 107.20666666666666,
+      "probability": 0.9713243842124939,
+      "beat": "removed"
+    },
+    {
+      "word": " left",
+      "start": 107.20666666666666,
+      "end": 107.52666666666667,
+      "probability": 0.9848047494888306,
+      "beat": "removed"
+    },
+    {
+      "word": " the",
+      "start": 107.52666666666667,
+      "end": 107.74666666666667,
+      "probability": 0.9849360585212708,
+      "beat": "removed"
+    },
+    {
+      "word": " open",
+      "start": 107.74666666666667,
+      "end": 108.04666666666667,
+      "probability": 0.9815413951873779,
+      "beat": "removed"
+    },
+    {
+      "word": " queue",
+      "start": 108.04666666666667,
+      "end": 108.36666666666666,
+      "probability": 0.9190738797187805,
+      "beat": "removed"
+    },
+    {
+      "word": " and",
+      "start": 108.36666666666666,
+      "end": 109.18666666666667,
+      "probability": 0.5846685767173767,
+      "beat": "removed"
+    },
+    {
+      "word": " its",
+      "start": 109.18666666666667,
+      "end": 109.34666666666666,
+      "probability": 0.8478088974952698,
+      "beat": "removed"
+    },
+    {
+      "word": " original",
+      "start": 109.34666666666666,
+      "end": 109.72666666666666,
+      "probability": 0.989569902420044,
+      "beat": "removed"
+    },
+    {
+      "word": " failure",
+      "start": 109.72666666666666,
+      "end": 110.16666666666667,
+      "probability": 0.9958209991455078,
+      "beat": "removed"
+    },
+    {
+      "word": " remains",
+      "start": 110.16666666666667,
+      "end": 110.68666666666667,
+      "probability": 0.9936931133270264,
+      "beat": "removed"
+    },
+    {
+      "word": " in",
+      "start": 110.68666666666667,
+      "end": 110.88666666666667,
+      "probability": 0.9877411723136902,
+      "beat": "removed"
+    },
+    {
+      "word": " the",
+      "start": 110.88666666666667,
+      "end": 110.98666666666666,
+      "probability": 0.9917323589324951,
+      "beat": "removed"
+    },
+    {
+      "word": " record.",
+      "start": 110.98666666666666,
+      "end": 111.22666666666666,
+      "probability": 0.9942341446876526,
+      "beat": "removed"
+    },
+    {
+      "word": " In",
+      "start": 113.43333333333334,
+      "end": 113.59333333333333,
+      "probability": 0.8865830898284912,
+      "beat": "resolved"
+    },
+    {
+      "word": " Resolved",
+      "start": 113.59333333333333,
+      "end": 114.05333333333334,
+      "probability": 0.8320628702640533,
+      "beat": "resolved"
+    },
+    {
+      "word": " Today,",
+      "start": 114.05333333333334,
+      "end": 114.45333333333333,
+      "probability": 0.6671480536460876,
+      "beat": "resolved"
+    },
+    {
+      "word": " blue",
+      "start": 114.97333333333334,
+      "end": 115.15333333333334,
+      "probability": 0.468744695186615,
+      "beat": "resolved"
+    },
+    {
+      "word": " covers",
+      "start": 115.15333333333334,
+      "end": 115.57333333333334,
+      "probability": 0.936394214630127,
+      "beat": "resolved"
+    },
+    {
+      "word": " is",
+      "start": 115.57333333333334,
+      "end": 116.25333333333333,
+      "probability": 0.6015928983688354,
+      "beat": "resolved"
+    },
+    {
+      "word": " recorded",
+      "start": 116.25333333333333,
+      "end": 116.79333333333334,
+      "probability": 0.967462956905365,
+      "beat": "resolved"
+    },
+    {
+      "word": " as",
+      "start": 116.79333333333334,
+      "end": 117.09333333333333,
+      "probability": 0.9925320744514465,
+      "beat": "resolved"
+    },
+    {
+      "word": " failed",
+      "start": 117.09333333333333,
+      "end": 117.51333333333334,
+      "probability": 0.9121695160865784,
+      "beat": "resolved"
+    },
+    {
+      "word": " and",
+      "start": 117.51333333333334,
+      "end": 117.71333333333334,
+      "probability": 0.9821158647537231,
+      "beat": "resolved"
+    },
+    {
+      "word": " signed",
+      "start": 117.71333333333334,
+      "end": 117.99333333333334,
+      "probability": 0.9923458099365234,
+      "beat": "resolved"
+    },
+    {
+      "word": " off.",
+      "start": 117.99333333333334,
+      "end": 118.29333333333334,
+      "probability": 0.9786328673362732,
+      "beat": "resolved"
+    },
+    {
+      "word": " Verification",
+      "start": 119.09333333333333,
+      "end": 119.69333333333334,
+      "probability": 0.986883133649826,
+      "beat": "resolved"
+    },
+    {
+      "word": " has",
+      "start": 119.69333333333334,
+      "end": 120.39333333333333,
+      "probability": 0.936892032623291,
+      "beat": "resolved"
+    },
+    {
+      "word": " not",
+      "start": 120.39333333333333,
+      "end": 120.65333333333334,
+      "probability": 0.9914554953575134,
+      "beat": "resolved"
+    },
+    {
+      "word": " turned",
+      "start": 120.65333333333334,
+      "end": 121.09333333333333,
+      "probability": 0.9948029518127441,
+      "beat": "resolved"
+    },
+    {
+      "word": " the",
+      "start": 121.09333333333333,
+      "end": 121.37333333333333,
+      "probability": 0.8379523158073425,
+      "beat": "resolved"
+    },
+    {
+      "word": " failure",
+      "start": 121.37333333333333,
+      "end": 121.73333333333333,
+      "probability": 0.9911730885505676,
+      "beat": "resolved"
+    },
+    {
+      "word": " into",
+      "start": 121.73333333333333,
+      "end": 122.23333333333333,
+      "probability": 0.9915844202041626,
+      "beat": "resolved"
+    },
+    {
+      "word": " a",
+      "start": 122.23333333333333,
+      "end": 122.39333333333335,
+      "probability": 0.9964828491210938,
+      "beat": "resolved"
+    },
+    {
+      "word": " pass.",
+      "start": 122.39333333333335,
+      "end": 122.69333333333334,
+      "probability": 0.9837111830711365,
+      "beat": "resolved"
+    },
+    {
+      "word": " Each",
+      "start": 123.37333333333333,
+      "end": 123.55333333333334,
+      "probability": 0.982521653175354,
+      "beat": "resolved"
+    },
+    {
+      "word": " remaining",
+      "start": 123.55333333333334,
+      "end": 124.11333333333334,
+      "probability": 0.9982079267501831,
+      "beat": "resolved"
+    },
+    {
+      "word": " open",
+      "start": 124.11333333333334,
+      "end": 124.43333333333334,
+      "probability": 0.9236190319061279,
+      "beat": "resolved"
+    },
+    {
+      "word": " finding",
+      "start": 124.43333333333334,
+      "end": 124.89333333333335,
+      "probability": 0.9348817467689514,
+      "beat": "resolved"
+    },
+    {
+      "word": " still",
+      "start": 124.89333333333335,
+      "end": 125.65333333333334,
+      "probability": 0.9798152446746826,
+      "beat": "resolved"
+    },
+    {
+      "word": " needs",
+      "start": 125.65333333333334,
+      "end": 126.01333333333334,
+      "probability": 0.9968723654747009,
+      "beat": "resolved"
+    },
+    {
+      "word": " its",
+      "start": 126.01333333333334,
+      "end": 126.23333333333333,
+      "probability": 0.9345850944519043,
+      "beat": "resolved"
+    },
+    {
+      "word": " own",
+      "start": 126.23333333333333,
+      "end": 126.55333333333334,
+      "probability": 0.9986082911491394,
+      "beat": "resolved"
+    },
+    {
+      "word": " follow",
+      "start": 126.55333333333334,
+      "end": 126.87333333333333,
+      "probability": 0.9930562376976013,
+      "beat": "resolved"
+    },
+    {
+      "word": " up.",
+      "start": 126.87333333333333,
+      "end": 127.15333333333334,
+      "probability": 0.5210738778114319,
+      "beat": "resolved"
+    },
+    {
+      "word": " The",
+      "start": 129.26666666666668,
+      "end": 129.4466666666667,
+      "probability": 0.8349634408950806,
+      "beat": "audit-trail"
+    },
+    {
+      "word": " record",
+      "start": 129.4466666666667,
+      "end": 129.80666666666667,
+      "probability": 0.9103202223777771,
+      "beat": "audit-trail"
+    },
+    {
+      "word": " retains",
+      "start": 129.80666666666667,
+      "end": 130.82666666666668,
+      "probability": 0.9842096865177155,
+      "beat": "audit-trail"
+    },
+    {
+      "word": " the",
+      "start": 130.82666666666668,
+      "end": 131.02666666666667,
+      "probability": 0.9864003658294678,
+      "beat": "audit-trail"
+    },
+    {
+      "word": " original",
+      "start": 131.02666666666667,
+      "end": 131.38666666666668,
+      "probability": 0.9957789182662964,
+      "beat": "audit-trail"
+    },
+    {
+      "word": " failure",
+      "start": 131.38666666666668,
+      "end": 131.88666666666668,
+      "probability": 0.9908440709114075,
+      "beat": "audit-trail"
+    },
+    {
+      "word": " and",
+      "start": 131.88666666666668,
+      "end": 132.38666666666668,
+      "probability": 0.8563327193260193,
+      "beat": "audit-trail"
+    },
+    {
+      "word": " its",
+      "start": 132.38666666666668,
+      "end": 132.58666666666667,
+      "probability": 0.9368403553962708,
+      "beat": "audit-trail"
+    },
+    {
+      "word": " capture",
+      "start": 132.58666666666667,
+      "end": 132.9466666666667,
+      "probability": 0.8065611124038696,
+      "beat": "audit-trail"
+    },
+    {
+      "word": " attribution,",
+      "start": 132.9466666666667,
+      "end": 133.80666666666667,
+      "probability": 0.9584555327892303,
+      "beat": "audit-trail"
+    },
+    {
+      "word": " alongside",
+      "start": 134.18666666666667,
+      "end": 134.60666666666668,
+      "probability": 0.9434444308280945,
+      "beat": "audit-trail"
+    },
+    {
+      "word": " the",
+      "start": 134.60666666666668,
+      "end": 135.32666666666668,
+      "probability": 0.9876800775527954,
+      "beat": "audit-trail"
+    },
+    {
+      "word": " later",
+      "start": 135.32666666666668,
+      "end": 135.7266666666667,
+      "probability": 0.9333772659301758,
+      "beat": "audit-trail"
+    },
+    {
+      "word": " verification",
+      "start": 135.7266666666667,
+      "end": 136.38666666666668,
+      "probability": 0.9938758015632629,
+      "beat": "audit-trail"
+    },
+    {
+      "word": " attribution.",
+      "start": 136.38666666666668,
+      "end": 137.62666666666667,
+      "probability": 0.9877120852470398,
+      "beat": "audit-trail"
+    },
+    {
+      "word": " Signing",
+      "start": 138.16666666666669,
+      "end": 138.52666666666667,
+      "probability": 0.9715579748153687,
+      "beat": "audit-trail"
+    },
+    {
+      "word": " off",
+      "start": 138.52666666666667,
+      "end": 138.92666666666668,
+      "probability": 0.9858119487762451,
+      "beat": "audit-trail"
+    },
+    {
+      "word": " the",
+      "start": 138.92666666666668,
+      "end": 139.48666666666668,
+      "probability": 0.669947624206543,
+      "beat": "audit-trail"
+    },
+    {
+      "word": " follow",
+      "start": 139.48666666666668,
+      "end": 139.8466666666667,
+      "probability": 0.9603528380393982,
+      "beat": "audit-trail"
+    },
+    {
+      "word": "-up",
+      "start": 139.8466666666667,
+      "end": 140.26666666666668,
+      "probability": 0.7425215542316437,
+      "beat": "audit-trail"
+    },
+    {
+      "word": " does",
+      "start": 140.26666666666668,
+      "end": 140.82666666666668,
+      "probability": 0.8825702667236328,
+      "beat": "audit-trail"
+    },
+    {
+      "word": " not",
+      "start": 140.82666666666668,
+      "end": 141.08666666666667,
+      "probability": 0.998764157295227,
+      "beat": "audit-trail"
+    },
+    {
+      "word": " rewrite",
+      "start": 141.08666666666667,
+      "end": 141.4466666666667,
+      "probability": 0.9736973643302917,
+      "beat": "audit-trail"
+    },
+    {
+      "word": " the",
+      "start": 141.4466666666667,
+      "end": 141.86666666666667,
+      "probability": 0.9876509308815002,
+      "beat": "audit-trail"
+    },
+    {
+      "word": " failure",
+      "start": 141.86666666666667,
+      "end": 142.30666666666667,
+      "probability": 0.9964272379875183,
+      "beat": "audit-trail"
+    },
+    {
+      "word": " as",
+      "start": 142.30666666666667,
+      "end": 142.66666666666669,
+      "probability": 0.7343099117279053,
+      "beat": "audit-trail"
+    },
+    {
+      "word": " a",
+      "start": 142.66666666666669,
+      "end": 142.80666666666667,
+      "probability": 0.9753397107124329,
+      "beat": "audit-trail"
+    },
+    {
+      "word": " pass.",
+      "start": 142.80666666666667,
+      "end": 143.0066666666667,
+      "probability": 0.3753613233566284,
+      "beat": "audit-trail"
+    },
+    {
+      "word": " Attribution",
+      "start": 143.74666666666667,
+      "end": 144.16666666666669,
+      "probability": 0.9141263961791992,
+      "beat": "audit-trail"
+    },
+    {
+      "word": " identifies",
+      "start": 144.16666666666669,
+      "end": 144.92666666666668,
+      "probability": 0.9967417120933533,
+      "beat": "audit-trail"
+    },
+    {
+      "word": " who",
+      "start": 144.92666666666668,
+      "end": 145.38666666666668,
+      "probability": 0.991243839263916,
+      "beat": "audit-trail"
+    },
+    {
+      "word": " acted.",
+      "start": 145.38666666666668,
+      "end": 145.66666666666669,
+      "probability": 0.9863448143005371,
+      "beat": "audit-trail"
+    },
+    {
+      "word": " It",
+      "start": 146.52666666666667,
+      "end": 146.68666666666667,
+      "probability": 0.9713653326034546,
+      "beat": "audit-trail"
+    },
+    {
+      "word": " does",
+      "start": 146.68666666666667,
+      "end": 146.8466666666667,
+      "probability": 0.9940862655639648,
+      "beat": "audit-trail"
+    },
+    {
+      "word": " not",
+      "start": 146.8466666666667,
+      "end": 147.04666666666668,
+      "probability": 0.9994378685951233,
+      "beat": "audit-trail"
+    },
+    {
+      "word": " assign",
+      "start": 147.04666666666668,
+      "end": 147.32666666666668,
+      "probability": 0.9949619770050049,
+      "beat": "audit-trail"
+    },
+    {
+      "word": " the",
+      "start": 147.32666666666668,
+      "end": 147.66666666666669,
+      "probability": 0.9929733276367188,
+      "beat": "audit-trail"
+    },
+    {
+      "word": " finding",
+      "start": 147.66666666666669,
+      "end": 148.18666666666667,
+      "probability": 0.9764775633811951,
+      "beat": "audit-trail"
+    },
+    {
+      "word": " to",
+      "start": 148.18666666666667,
+      "end": 148.8466666666667,
+      "probability": 0.9945077300071716,
+      "beat": "audit-trail"
+    },
+    {
+      "word": " an",
+      "start": 148.8466666666667,
+      "end": 149.02666666666667,
+      "probability": 0.9790498614311218,
+      "beat": "audit-trail"
+    },
+    {
+      "word": " owner.",
+      "start": 149.02666666666667,
+      "end": 149.24666666666667,
+      "probability": 0.9968616962432861,
+      "beat": "audit-trail"
+    },
+    {
+      "word": " Daily",
+      "start": 151.4,
+      "end": 151.68,
+      "probability": 0.7581256031990051,
+      "beat": "two-clocks"
+    },
+    {
+      "word": " describes",
+      "start": 151.68,
+      "end": 152.32,
+      "probability": 0.973272442817688,
+      "beat": "two-clocks"
+    },
+    {
+      "word": " the",
+      "start": 152.32,
+      "end": 152.70000000000002,
+      "probability": 0.9723304510116577,
+      "beat": "two-clocks"
+    },
+    {
+      "word": " cleaning",
+      "start": 152.70000000000002,
+      "end": 153.08,
+      "probability": 0.9761773347854614,
+      "beat": "two-clocks"
+    },
+    {
+      "word": " findings",
+      "start": 153.08,
+      "end": 153.64000000000001,
+      "probability": 0.9380818009376526,
+      "beat": "two-clocks"
+    },
+    {
+      "word": " scheduled",
+      "start": 153.64000000000001,
+      "end": 154.3,
+      "probability": 0.9796934127807617,
+      "beat": "two-clocks"
+    },
+    {
+      "word": " origin,",
+      "start": 154.3,
+      "end": 155.18,
+      "probability": 0.8430666923522949,
+      "beat": "two-clocks"
+    },
+    {
+      "word": " not",
+      "start": 156.18,
+      "end": 156.48000000000002,
+      "probability": 0.9775936603546143,
+      "beat": "two-clocks"
+    },
+    {
+      "word": " an",
+      "start": 156.48000000000002,
+      "end": 156.68,
+      "probability": 0.9806437492370605,
+      "beat": "two-clocks"
+    },
+    {
+      "word": " expiry.",
+      "start": 156.68,
+      "end": 157.24,
+      "probability": 0.9922895431518555,
+      "beat": "two-clocks"
+    },
+    {
+      "word": " Inspection",
+      "start": 158.08,
+      "end": 158.70000000000002,
+      "probability": 0.9441595872243246,
+      "beat": "two-clocks"
+    },
+    {
+      "word": " remedials",
+      "start": 158.70000000000002,
+      "end": 159.38,
+      "probability": 0.7882267534732819,
+      "beat": "two-clocks"
+    },
+    {
+      "word": " have",
+      "start": 159.38,
+      "end": 159.74,
+      "probability": 0.9897038340568542,
+      "beat": "two-clocks"
+    },
+    {
+      "word": " a",
+      "start": 159.74,
+      "end": 159.86,
+      "probability": 0.9937493801116943,
+      "beat": "two-clocks"
+    },
+    {
+      "word": " separate",
+      "start": 159.86,
+      "end": 160.3,
+      "probability": 0.9969268441200256,
+      "beat": "two-clocks"
+    },
+    {
+      "word": " carryover",
+      "start": 160.3,
+      "end": 160.98000000000002,
+      "probability": 0.8283292055130005,
+      "beat": "two-clocks"
+    },
+    {
+      "word": " trail.",
+      "start": 160.98000000000002,
+      "end": 161.38,
+      "probability": 0.9887914657592773,
+      "beat": "two-clocks"
+    },
+    {
+      "word": " Neither",
+      "start": 162.54000000000002,
+      "end": 162.8,
+      "probability": 0.98023521900177,
+      "beat": "two-clocks"
+    },
+    {
+      "word": " open",
+      "start": 162.8,
+      "end": 163.16,
+      "probability": 0.9648330807685852,
+      "beat": "two-clocks"
+    },
+    {
+      "word": " finding",
+      "start": 163.16,
+      "end": 163.6,
+      "probability": 0.9681516289710999,
+      "beat": "two-clocks"
+    },
+    {
+      "word": " is",
+      "start": 163.6,
+      "end": 163.96,
+      "probability": 0.9972234964370728,
+      "beat": "two-clocks"
+    },
+    {
+      "word": " cleared",
+      "start": 163.96,
+      "end": 164.58,
+      "probability": 0.9696950912475586,
+      "beat": "two-clocks"
+    },
+    {
+      "word": " just",
+      "start": 164.58,
+      "end": 165.3,
+      "probability": 0.8516167998313904,
+      "beat": "two-clocks"
+    },
+    {
+      "word": " because",
+      "start": 165.3,
+      "end": 165.66,
+      "probability": 0.9970375299453735,
+      "beat": "two-clocks"
+    },
+    {
+      "word": " a",
+      "start": 165.66,
+      "end": 165.96,
+      "probability": 0.9851919412612915,
+      "beat": "two-clocks"
+    },
+    {
+      "word": " new",
+      "start": 165.96,
+      "end": 166.18,
+      "probability": 0.9957465529441833,
+      "beat": "two-clocks"
+    },
+    {
+      "word": " day",
+      "start": 166.18,
+      "end": 166.5,
+      "probability": 0.9970799088478088,
+      "beat": "two-clocks"
+    },
+    {
+      "word": " begins.",
+      "start": 166.5,
+      "end": 167.14000000000001,
+      "probability": 0.9946002960205078,
+      "beat": "two-clocks"
+    },
+    {
+      "word": " Below",
+      "start": 169.33333333333334,
+      "end": 169.69333333333336,
+      "probability": 0.921639084815979,
+      "beat": "inspection-carryover"
+    },
+    {
+      "word": " carries",
+      "start": 169.69333333333336,
+      "end": 170.25333333333333,
+      "probability": 0.9300674796104431,
+      "beat": "inspection-carryover"
+    },
+    {
+      "word": " over,",
+      "start": 170.25333333333333,
+      "end": 170.61333333333334,
+      "probability": 0.9670372605323792,
+      "beat": "inspection-carryover"
+    },
+    {
+      "word": " open",
+      "start": 171.17333333333335,
+      "end": 171.33333333333334,
+      "probability": 0.700801432132721,
+      "beat": "inspection-carryover"
+    },
+    {
+      "word": " inspection",
+      "start": 171.33333333333334,
+      "end": 171.77333333333334,
+      "probability": 0.9646211862564087,
+      "beat": "inspection-carryover"
+    },
+    {
+      "word": " remedials.",
+      "start": 171.77333333333334,
+      "end": 172.37333333333333,
+      "probability": 0.7717966139316559,
+      "beat": "inspection-carryover"
+    },
+    {
+      "word": " In",
+      "start": 173.29333333333335,
+      "end": 173.33333333333334,
+      "probability": 0.9732463955879211,
+      "beat": "inspection-carryover"
+    },
+    {
+      "word": " follow",
+      "start": 173.33333333333334,
+      "end": 173.65333333333334,
+      "probability": 0.9306561350822449,
+      "beat": "inspection-carryover"
+    },
+    {
+      "word": "-ups,",
+      "start": 173.65333333333334,
+      "end": 173.99333333333334,
+      "probability": 0.7301944494247437,
+      "beat": "inspection-carryover"
+    },
+    {
+      "word": " select",
+      "start": 174.29333333333335,
+      "end": 174.63333333333335,
+      "probability": 0.993025541305542,
+      "beat": "inspection-carryover"
+    },
+    {
+      "word": " inspections,",
+      "start": 174.63333333333335,
+      "end": 175.17333333333335,
+      "probability": 0.9447945952415466,
+      "beat": "inspection-carryover"
+    },
+    {
+      "word": " then",
+      "start": 175.77333333333334,
+      "end": 175.99333333333334,
+      "probability": 0.9859144687652588,
+      "beat": "inspection-carryover"
+    },
+    {
+      "word": " open",
+      "start": 175.99333333333334,
+      "end": 176.39333333333335,
+      "probability": 0.9676905870437622,
+      "beat": "inspection-carryover"
+    },
+    {
+      "word": " verify",
+      "start": 176.39333333333335,
+      "end": 177.03333333333333,
+      "probability": 0.592875063419342,
+      "beat": "inspection-carryover"
+    },
+    {
+      "word": " flow.",
+      "start": 177.03333333333333,
+      "end": 177.47333333333336,
+      "probability": 0.9838473200798035,
+      "beat": "inspection-carryover"
+    },
+    {
+      "word": " Open",
+      "start": 178.23333333333335,
+      "end": 178.43333333333334,
+      "probability": 0.9956421852111816,
+      "beat": "inspection-carryover"
+    },
+    {
+      "word": " and",
+      "start": 178.43333333333334,
+      "end": 178.73333333333335,
+      "probability": 0.991482138633728,
+      "beat": "inspection-carryover"
+    },
+    {
+      "word": " remitted",
+      "start": 178.73333333333335,
+      "end": 179.17333333333335,
+      "probability": 0.7356635630130768,
+      "beat": "inspection-carryover"
+    },
+    {
+      "word": " findings",
+      "start": 179.17333333333335,
+      "end": 179.67333333333335,
+      "probability": 0.9925178289413452,
+      "beat": "inspection-carryover"
+    },
+    {
+      "word": " remain",
+      "start": 179.67333333333335,
+      "end": 180.17333333333335,
+      "probability": 0.9863882660865784,
+      "beat": "inspection-carryover"
+    },
+    {
+      "word": " in",
+      "start": 180.17333333333335,
+      "end": 180.55333333333334,
+      "probability": 0.997626006603241,
+      "beat": "inspection-carryover"
+    },
+    {
+      "word": " the",
+      "start": 180.55333333333334,
+      "end": 180.65333333333334,
+      "probability": 0.9930550456047058,
+      "beat": "inspection-carryover"
+    },
+    {
+      "word": " queue",
+      "start": 180.65333333333334,
+      "end": 180.95333333333335,
+      "probability": 0.9938004612922668,
+      "beat": "inspection-carryover"
+    },
+    {
+      "word": " across",
+      "start": 181.30333333333334,
+      "end": 181.69333333333333,
+      "probability": 0.9233168959617615,
+      "beat": "inspection-carryover"
+    },
+    {
+      "word": " inspection",
+      "start": 181.69333333333333,
+      "end": 182.29333333333335,
+      "probability": 0.9953574538230896,
+      "beat": "inspection-carryover"
+    },
+    {
+      "word": " dates",
+      "start": 182.29333333333335,
+      "end": 182.65333333333334,
+      "probability": 0.9921072125434875,
+      "beat": "inspection-carryover"
+    },
+    {
+      "word": " and",
+      "start": 182.65333333333334,
+      "end": 183.31333333333333,
+      "probability": 0.957411527633667,
+      "beat": "inspection-carryover"
+    },
+    {
+      "word": " statuses",
+      "start": 183.31333333333333,
+      "end": 184.01333333333335,
+      "probability": 0.9643632769584656,
+      "beat": "inspection-carryover"
+    },
+    {
+      "word": " until",
+      "start": 184.01333333333335,
+      "end": 184.55333333333334,
+      "probability": 0.9483280181884766,
+      "beat": "inspection-carryover"
+    },
+    {
+      "word": " their",
+      "start": 184.55333333333334,
+      "end": 184.79333333333335,
+      "probability": 0.7219842076301575,
+      "beat": "inspection-carryover"
+    },
+    {
+      "word": " own",
+      "start": 184.79333333333335,
+      "end": 185.11333333333334,
+      "probability": 0.9969154596328735,
+      "beat": "inspection-carryover"
+    },
+    {
+      "word": " decision",
+      "start": 185.11333333333334,
+      "end": 185.51333333333335,
+      "probability": 0.9919688105583191,
+      "beat": "inspection-carryover"
+    },
+    {
+      "word": " closes",
+      "start": 185.51333333333335,
+      "end": 185.95333333333335,
+      "probability": 0.9975752234458923,
+      "beat": "inspection-carryover"
+    },
+    {
+      "word": " or",
+      "start": 185.95333333333335,
+      "end": 186.63333333333335,
+      "probability": 0.7593170404434204,
+      "beat": "inspection-carryover"
+    },
+    {
+      "word": " escalates",
+      "start": 186.63333333333335,
+      "end": 187.09333333333333,
+      "probability": 0.9854125380516052,
+      "beat": "inspection-carryover"
+    },
+    {
+      "word": " them.",
+      "start": 187.09333333333333,
+      "end": 187.29333333333335,
+      "probability": 0.9932680726051331,
+      "beat": "inspection-carryover"
+    },
+    {
+      "word": " Use",
+      "start": 188.03333333333333,
+      "end": 188.23333333333335,
+      "probability": 0.9933884143829346,
+      "beat": "inspection-carryover"
+    },
+    {
+      "word": " the",
+      "start": 188.23333333333335,
+      "end": 188.41333333333336,
+      "probability": 0.9947410821914673,
+      "beat": "inspection-carryover"
+    },
+    {
+      "word": " age",
+      "start": 188.41333333333336,
+      "end": 188.61333333333334,
+      "probability": 0.9057536125183105,
+      "beat": "inspection-carryover"
+    },
+    {
+      "word": " page",
+      "start": 188.61333333333334,
+      "end": 188.89333333333335,
+      "probability": 0.4217848777770996,
+      "beat": "inspection-carryover"
+    },
+    {
+      "word": " to",
+      "start": 188.89333333333335,
+      "end": 189.73333333333335,
+      "probability": 0.9933384656906128,
+      "beat": "inspection-carryover"
+    },
+    {
+      "word": " see",
+      "start": 189.73333333333335,
+      "end": 190.03333333333333,
+      "probability": 0.9987242817878723,
+      "beat": "inspection-carryover"
+    },
+    {
+      "word": " how",
+      "start": 190.03333333333333,
+      "end": 190.27333333333334,
+      "probability": 0.9974995255470276,
+      "beat": "inspection-carryover"
+    },
+    {
+      "word": " long",
+      "start": 190.27333333333334,
+      "end": 190.69333333333333,
+      "probability": 0.9996225833892822,
+      "beat": "inspection-carryover"
+    },
+    {
+      "word": " a",
+      "start": 190.69333333333333,
+      "end": 191.05333333333334,
+      "probability": 0.9900422096252441,
+      "beat": "inspection-carryover"
+    },
+    {
+      "word": " finding",
+      "start": 191.05333333333334,
+      "end": 191.41333333333336,
+      "probability": 0.994675874710083,
+      "beat": "inspection-carryover"
+    },
+    {
+      "word": " has",
+      "start": 191.41333333333336,
+      "end": 192.13333333333335,
+      "probability": 0.9968463778495789,
+      "beat": "inspection-carryover"
+    },
+    {
+      "word": " been",
+      "start": 192.13333333333335,
+      "end": 192.29333333333335,
+      "probability": 0.998984158039093,
+      "beat": "inspection-carryover"
+    },
+    {
+      "word": " open.",
+      "start": 192.29333333333335,
+      "end": 192.55333333333334,
+      "probability": 0.8093189597129822,
+      "beat": "inspection-carryover"
+    },
+    {
+      "word": " Within",
+      "start": 194.66666666666666,
+      "end": 194.94666666666666,
+      "probability": 0.4479738473892212,
+      "beat": "inspection-age"
+    },
+    {
+      "word": " each",
+      "start": 194.94666666666666,
+      "end": 195.18666666666667,
+      "probability": 0.9958136677742004,
+      "beat": "inspection-age"
+    },
+    {
+      "word": " area,",
+      "start": 195.18666666666667,
+      "end": 195.58666666666664,
+      "probability": 0.997441291809082,
+      "beat": "inspection-age"
+    },
+    {
+      "word": " findings",
+      "start": 195.94666666666666,
+      "end": 196.32666666666665,
+      "probability": 0.8098756670951843,
+      "beat": "inspection-age"
+    },
+    {
+      "word": " sought",
+      "start": 196.32666666666665,
+      "end": 196.70666666666665,
+      "probability": 0.9537292122840881,
+      "beat": "inspection-age"
+    },
+    {
+      "word": " by",
+      "start": 196.70666666666665,
+      "end": 196.96666666666667,
+      "probability": 0.993051290512085,
+      "beat": "inspection-age"
+    },
+    {
+      "word": " severity,",
+      "start": 196.96666666666667,
+      "end": 197.48666666666665,
+      "probability": 0.9936990737915039,
+      "beat": "inspection-age"
+    },
+    {
+      "word": " then",
+      "start": 197.92666666666665,
+      "end": 198.02666666666667,
+      "probability": 0.9769214987754822,
+      "beat": "inspection-age"
+    },
+    {
+      "word": " oldest.",
+      "start": 198.02666666666667,
+      "end": 198.38666666666666,
+      "probability": 0.5876781344413757,
+      "beat": "inspection-age"
+    },
+    {
+      "word": " Age",
+      "start": 199.14666666666665,
+      "end": 199.48666666666665,
+      "probability": 0.9866129159927368,
+      "beat": "inspection-age"
+    },
+    {
+      "word": " is",
+      "start": 199.48666666666665,
+      "end": 199.68666666666667,
+      "probability": 0.9943174719810486,
+      "beat": "inspection-age"
+    },
+    {
+      "word": " muted",
+      "start": 199.68666666666667,
+      "end": 200.04666666666665,
+      "probability": 0.8679376840591431,
+      "beat": "inspection-age"
+    },
+    {
+      "word": " through",
+      "start": 200.04666666666665,
+      "end": 200.88666666666666,
+      "probability": 0.7315775752067566,
+      "beat": "inspection-age"
+    },
+    {
+      "word": " seven",
+      "start": 200.88666666666666,
+      "end": 201.26666666666665,
+      "probability": 0.6589722037315369,
+      "beat": "inspection-age"
+    },
+    {
+      "word": " days,",
+      "start": 201.26666666666665,
+      "end": 201.70666666666665,
+      "probability": 0.9974353909492493,
+      "beat": "inspection-age"
+    },
+    {
+      "word": " amber",
+      "start": 202.10666666666665,
+      "end": 202.36666666666665,
+      "probability": 0.824701726436615,
+      "beat": "inspection-age"
+    },
+    {
+      "word": " after",
+      "start": 202.36666666666665,
+      "end": 203.30666666666667,
+      "probability": 0.8614552021026611,
+      "beat": "inspection-age"
+    },
+    {
+      "word": " seven",
+      "start": 203.30666666666667,
+      "end": 203.62666666666667,
+      "probability": 0.9525742530822754,
+      "beat": "inspection-age"
+    },
+    {
+      "word": " days,",
+      "start": 203.62666666666667,
+      "end": 204.02666666666664,
+      "probability": 0.9952653646469116,
+      "beat": "inspection-age"
+    },
+    {
+      "word": " and",
+      "start": 204.38666666666666,
+      "end": 204.38666666666666,
+      "probability": 0.9578969478607178,
+      "beat": "inspection-age"
+    },
+    {
+      "word": " coral",
+      "start": 204.38666666666666,
+      "end": 204.74666666666667,
+      "probability": 0.9957746863365173,
+      "beat": "inspection-age"
+    },
+    {
+      "word": " after",
+      "start": 204.74666666666667,
+      "end": 205.54666666666665,
+      "probability": 0.9882529377937317,
+      "beat": "inspection-age"
+    },
+    {
+      "word": " 30",
+      "start": 205.54666666666665,
+      "end": 205.82666666666665,
+      "probability": 0.8091014623641968,
+      "beat": "inspection-age"
+    },
+    {
+      "word": " days.",
+      "start": 205.82666666666665,
+      "end": 206.14666666666665,
+      "probability": 0.9942060708999634,
+      "beat": "inspection-age"
+    },
+    {
+      "word": " These",
+      "start": 206.98666666666665,
+      "end": 207.14666666666665,
+      "probability": 0.9903084635734558,
+      "beat": "inspection-age"
+    },
+    {
+      "word": " colors",
+      "start": 207.14666666666665,
+      "end": 207.44666666666666,
+      "probability": 0.8344669342041016,
+      "beat": "inspection-age"
+    },
+    {
+      "word": " do",
+      "start": 207.44666666666666,
+      "end": 207.76666666666665,
+      "probability": 0.9858174920082092,
+      "beat": "inspection-age"
+    },
+    {
+      "word": " not",
+      "start": 207.76666666666665,
+      "end": 207.94666666666666,
+      "probability": 0.9987831711769104,
+      "beat": "inspection-age"
+    },
+    {
+      "word": " set",
+      "start": 207.94666666666666,
+      "end": 208.32666666666665,
+      "probability": 0.9264594912528992,
+      "beat": "inspection-age"
+    },
+    {
+      "word": " in",
+      "start": 208.32666666666665,
+      "end": 208.58666666666664,
+      "probability": 0.9330798387527466,
+      "beat": "inspection-age"
+    },
+    {
+      "word": " SLA,",
+      "start": 208.58666666666664,
+      "end": 209.24666666666667,
+      "probability": 0.9735072553157806,
+      "beat": "inspection-age"
+    },
+    {
+      "word": " send",
+      "start": 209.98666666666665,
+      "end": 210.30666666666667,
+      "probability": 0.9642351865768433,
+      "beat": "inspection-age"
+    },
+    {
+      "word": " a",
+      "start": 210.30666666666667,
+      "end": 210.46666666666667,
+      "probability": 0.9456536769866943,
+      "beat": "inspection-age"
+    },
+    {
+      "word": " reminder",
+      "start": 210.46666666666667,
+      "end": 210.94666666666666,
+      "probability": 0.9944720268249512,
+      "beat": "inspection-age"
+    },
+    {
+      "word": " or",
+      "start": 210.94666666666666,
+      "end": 211.74666666666667,
+      "probability": 0.7237855792045593,
+      "beat": "inspection-age"
+    },
+    {
+      "word": " trigger",
+      "start": 211.74666666666667,
+      "end": 212.04666666666665,
+      "probability": 0.998725950717926,
+      "beat": "inspection-age"
+    },
+    {
+      "word": " escalation.",
+      "start": 212.04666666666665,
+      "end": 212.86666666666665,
+      "probability": 0.9879753589630127,
+      "beat": "inspection-age"
+    },
+    {
+      "word": " Review",
+      "start": 215.0,
+      "end": 215.48,
+      "probability": 0.8610830307006836,
+      "beat": "inspection-review"
+    },
+    {
+      "word": " the",
+      "start": 215.48,
+      "end": 215.88,
+      "probability": 0.9780696630477905,
+      "beat": "inspection-review"
+    },
+    {
+      "word": " before",
+      "start": 215.88,
+      "end": 216.14,
+      "probability": 0.5728495121002197,
+      "beat": "inspection-review"
+    },
+    {
+      "word": " evidence",
+      "start": 216.14,
+      "end": 216.6,
+      "probability": 0.7778859734535217,
+      "beat": "inspection-review"
+    },
+    {
+      "word": " in",
+      "start": 216.6,
+      "end": 217.22,
+      "probability": 0.8648802042007446,
+      "beat": "inspection-review"
+    },
+    {
+      "word": " description.",
+      "start": 217.22,
+      "end": 217.6,
+      "probability": 0.6987161636352539,
+      "beat": "inspection-review"
+    },
+    {
+      "word": " Read",
+      "start": 218.3,
+      "end": 218.7,
+      "probability": 0.9887794256210327,
+      "beat": "inspection-review"
+    },
+    {
+      "word": " any",
+      "start": 218.7,
+      "end": 219.02,
+      "probability": 0.9835927486419678,
+      "beat": "inspection-review"
+    },
+    {
+      "word": " remedial",
+      "start": 219.02,
+      "end": 219.56,
+      "probability": 0.9980230927467346,
+      "beat": "inspection-review"
+    },
+    {
+      "word": " action",
+      "start": 219.56,
+      "end": 219.88,
+      "probability": 0.9941558837890625,
+      "beat": "inspection-review"
+    },
+    {
+      "word": " logged",
+      "start": 219.88,
+      "end": 220.28,
+      "probability": 0.9750880002975464,
+      "beat": "inspection-review"
+    },
+    {
+      "word": " in",
+      "start": 220.28,
+      "end": 221.24,
+      "probability": 0.9587370753288269,
+      "beat": "inspection-review"
+    },
+    {
+      "word": " required",
+      "start": 221.24,
+      "end": 221.72,
+      "probability": 0.8580188751220703,
+      "beat": "inspection-review"
+    },
+    {
+      "word": " mode,",
+      "start": 221.72,
+      "end": 222.24,
+      "probability": 0.989075779914856,
+      "beat": "inspection-review"
+    },
+    {
+      "word": " except",
+      "start": 222.64,
+      "end": 222.98,
+      "probability": 0.8579156398773193,
+      "beat": "inspection-review"
+    },
+    {
+      "word": " ask",
+      "start": 222.98,
+      "end": 223.36,
+      "probability": 0.7425327301025391,
+      "beat": "inspection-review"
+    },
+    {
+      "word": " for",
+      "start": 223.36,
+      "end": 223.62,
+      "probability": 0.996087908744812,
+      "beat": "inspection-review"
+    },
+    {
+      "word": " an",
+      "start": 223.62,
+      "end": 223.78,
+      "probability": 0.9542824029922485,
+      "beat": "inspection-review"
+    },
+    {
+      "word": " after",
+      "start": 223.78,
+      "end": 224.02,
+      "probability": 0.9715307950973511,
+      "beat": "inspection-review"
+    },
+    {
+      "word": " photo.",
+      "start": 224.02,
+      "end": 224.36,
+      "probability": 0.8645480871200562,
+      "beat": "inspection-review"
+    },
+    {
+      "word": " Attach",
+      "start": 225.42,
+      "end": 225.92,
+      "probability": 0.9939205646514893,
+      "beat": "inspection-review"
+    },
+    {
+      "word": " the",
+      "start": 225.92,
+      "end": 226.12,
+      "probability": 0.9856270551681519,
+      "beat": "inspection-review"
+    },
+    {
+      "word": " after",
+      "start": 226.12,
+      "end": 226.4,
+      "probability": 0.9830741286277771,
+      "beat": "inspection-review"
+    },
+    {
+      "word": " evidence",
+      "start": 226.4,
+      "end": 226.88,
+      "probability": 0.9782031774520874,
+      "beat": "inspection-review"
+    },
+    {
+      "word": " before",
+      "start": 226.88,
+      "end": 227.68,
+      "probability": 0.9123166799545288,
+      "beat": "inspection-review"
+    },
+    {
+      "word": " acceptance.",
+      "start": 227.68,
+      "end": 228.2,
+      "probability": 0.9967387318611145,
+      "beat": "inspection-review"
+    },
+    {
+      "word": " Other",
+      "start": 229.34,
+      "end": 229.64,
+      "probability": 0.9970695376396179,
+      "beat": "inspection-review"
+    },
+    {
+      "word": " modes",
+      "start": 229.64,
+      "end": 229.98,
+      "probability": 0.9928185939788818,
+      "beat": "inspection-review"
+    },
+    {
+      "word": " do",
+      "start": 229.98,
+      "end": 230.22,
+      "probability": 0.9928049445152283,
+      "beat": "inspection-review"
+    },
+    {
+      "word": " not",
+      "start": 230.22,
+      "end": 230.46,
+      "probability": 0.9910628795623779,
+      "beat": "inspection-review"
+    },
+    {
+      "word": " impose",
+      "start": 230.46,
+      "end": 231.02,
+      "probability": 0.9932454228401184,
+      "beat": "inspection-review"
+    },
+    {
+      "word": " that",
+      "start": 231.02,
+      "end": 231.38,
+      "probability": 0.9544298648834229,
+      "beat": "inspection-review"
+    },
+    {
+      "word": " gate.",
+      "start": 231.38,
+      "end": 231.7,
+      "probability": 0.9471983909606934,
+      "beat": "inspection-review"
+    },
+    {
+      "word": " There",
+      "start": 232.54,
+      "end": 232.82,
+      "probability": 0.993552565574646,
+      "beat": "inspection-review"
+    },
+    {
+      "word": " is",
+      "start": 232.82,
+      "end": 232.92000000000002,
+      "probability": 0.988086462020874,
+      "beat": "inspection-review"
+    },
+    {
+      "word": " no",
+      "start": 232.92000000000002,
+      "end": 233.06,
+      "probability": 0.9926009774208069,
+      "beat": "inspection-review"
+    },
+    {
+      "word": " structured",
+      "start": 233.06,
+      "end": 233.38,
+      "probability": 0.970710039138794,
+      "beat": "inspection-review"
+    },
+    {
+      "word": " owner,",
+      "start": 233.38,
+      "end": 233.82,
+      "probability": 0.9670600891113281,
+      "beat": "inspection-review"
+    },
+    {
+      "word": " due",
+      "start": 234.38,
+      "end": 234.64,
+      "probability": 0.9950109720230103,
+      "beat": "inspection-review"
+    },
+    {
+      "word": " date,",
+      "start": 234.64,
+      "end": 234.94,
+      "probability": 0.99539715051651,
+      "beat": "inspection-review"
+    },
+    {
+      "word": " or",
+      "start": 235.74,
+      "end": 235.88,
+      "probability": 0.9959164261817932,
+      "beat": "inspection-review"
+    },
+    {
+      "word": " SLA.",
+      "start": 235.88,
+      "end": 236.88,
+      "probability": 0.5645206570625305,
+      "beat": "inspection-review"
+    },
+    {
+      "word": " Attach",
+      "start": 239.06666666666666,
+      "end": 239.52666666666667,
+      "probability": 0.9111174643039703,
+      "beat": "inspection-accept"
+    },
+    {
+      "word": " the",
+      "start": 239.52666666666667,
+      "end": 239.74666666666667,
+      "probability": 0.9897274374961853,
+      "beat": "inspection-accept"
+    },
+    {
+      "word": " required",
+      "start": 239.74666666666667,
+      "end": 240.24666666666667,
+      "probability": 0.9077255129814148,
+      "beat": "inspection-accept"
+    },
+    {
+      "word": " after",
+      "start": 240.24666666666667,
+      "end": 240.96666666666667,
+      "probability": 0.6051838994026184,
+      "beat": "inspection-accept"
+    },
+    {
+      "word": " photo.",
+      "start": 240.96666666666667,
+      "end": 241.32666666666665,
+      "probability": 0.8447374701499939,
+      "beat": "inspection-accept"
+    },
+    {
+      "word": " Record",
+      "start": 242.12666666666667,
+      "end": 242.66666666666666,
+      "probability": 0.9253720045089722,
+      "beat": "inspection-accept"
+    },
+    {
+      "word": " the",
+      "start": 242.66666666666666,
+      "end": 242.88666666666666,
+      "probability": 0.9935398697853088,
+      "beat": "inspection-accept"
+    },
+    {
+      "word": " action",
+      "start": 242.88666666666666,
+      "end": 243.12666666666667,
+      "probability": 0.9821903705596924,
+      "beat": "inspection-accept"
+    },
+    {
+      "word": " taken",
+      "start": 243.12666666666667,
+      "end": 243.52666666666667,
+      "probability": 0.9967467784881592,
+      "beat": "inspection-accept"
+    },
+    {
+      "word": " and",
+      "start": 243.52666666666667,
+      "end": 244.34666666666666,
+      "probability": 0.8587766885757446,
+      "beat": "inspection-accept"
+    },
+    {
+      "word": " verify",
+      "start": 244.34666666666666,
+      "end": 244.84666666666666,
+      "probability": 0.9919185042381287,
+      "beat": "inspection-accept"
+    },
+    {
+      "word": " the",
+      "start": 244.84666666666666,
+      "end": 245.34666666666666,
+      "probability": 0.9893581867218018,
+      "beat": "inspection-accept"
+    },
+    {
+      "word": " correction.",
+      "start": 245.34666666666666,
+      "end": 245.74666666666667,
+      "probability": 0.987434446811676,
+      "beat": "inspection-accept"
+    },
+    {
+      "word": " Accept",
+      "start": 246.56666666666666,
+      "end": 247.04666666666665,
+      "probability": 0.9314801096916199,
+      "beat": "inspection-accept"
+    },
+    {
+      "word": " closes",
+      "start": 247.04666666666665,
+      "end": 247.70666666666665,
+      "probability": 0.8681926131248474,
+      "beat": "inspection-accept"
+    },
+    {
+      "word": " the",
+      "start": 247.70666666666665,
+      "end": 247.96666666666667,
+      "probability": 0.9888450503349304,
+      "beat": "inspection-accept"
+    },
+    {
+      "word": " finding",
+      "start": 247.96666666666667,
+      "end": 248.34666666666666,
+      "probability": 0.9852702021598816,
+      "beat": "inspection-accept"
+    },
+    {
+      "word": " and",
+      "start": 248.34666666666666,
+      "end": 248.96666666666667,
+      "probability": 0.9312781691551208,
+      "beat": "inspection-accept"
+    },
+    {
+      "word": " records",
+      "start": 248.96666666666667,
+      "end": 249.52666666666667,
+      "probability": 0.9793047308921814,
+      "beat": "inspection-accept"
+    },
+    {
+      "word": " an",
+      "start": 249.52666666666667,
+      "end": 249.96666666666667,
+      "probability": 0.9222456216812134,
+      "beat": "inspection-accept"
+    },
+    {
+      "word": " accepted",
+      "start": 249.96666666666667,
+      "end": 250.52666666666667,
+      "probability": 0.9770952463150024,
+      "beat": "inspection-accept"
+    },
+    {
+      "word": " verification.",
+      "start": 250.52666666666667,
+      "end": 251.44666666666666,
+      "probability": 0.9923964142799377,
+      "beat": "inspection-accept"
+    },
+    {
+      "word": " The",
+      "start": 252.88666666666666,
+      "end": 253.10666666666665,
+      "probability": 0.9783620238304138,
+      "beat": "inspection-accept"
+    },
+    {
+      "word": " close",
+      "start": 253.10666666666665,
+      "end": 253.54666666666665,
+      "probability": 0.63570636510849,
+      "beat": "inspection-accept"
+    },
+    {
+      "word": " tab",
+      "start": 253.54666666666665,
+      "end": 254.02666666666667,
+      "probability": 0.9943194389343262,
+      "beat": "inspection-accept"
+    },
+    {
+      "word": " now",
+      "start": 254.02666666666667,
+      "end": 254.48666666666665,
+      "probability": 0.9840025305747986,
+      "beat": "inspection-accept"
+    },
+    {
+      "word": " shows",
+      "start": 254.48666666666665,
+      "end": 254.86666666666667,
+      "probability": 0.9886110424995422,
+      "beat": "inspection-accept"
+    },
+    {
+      "word": " the",
+      "start": 254.86666666666667,
+      "end": 255.32666666666665,
+      "probability": 0.9925565719604492,
+      "beat": "inspection-accept"
+    },
+    {
+      "word": " verified",
+      "start": 255.32666666666665,
+      "end": 255.76666666666665,
+      "probability": 0.9922469854354858,
+      "beat": "inspection-accept"
+    },
+    {
+      "word": " result.",
+      "start": 255.76666666666665,
+      "end": 256.2266666666667,
+      "probability": 0.9887456297874451,
+      "beat": "inspection-accept"
+    },
+    {
+      "word": " If",
+      "start": 258.43333333333334,
+      "end": 258.59333333333336,
+      "probability": 0.8929944038391113,
+      "beat": "inspection-reject"
+    },
+    {
+      "word": " the",
+      "start": 258.59333333333336,
+      "end": 258.73333333333335,
+      "probability": 0.9834114909172058,
+      "beat": "inspection-reject"
+    },
+    {
+      "word": " correction",
+      "start": 258.73333333333335,
+      "end": 259.0733333333333,
+      "probability": 0.9884013533592224,
+      "beat": "inspection-reject"
+    },
+    {
+      "word": " is",
+      "start": 259.0733333333333,
+      "end": 259.3933333333333,
+      "probability": 0.9946469664573669,
+      "beat": "inspection-reject"
+    },
+    {
+      "word": " not",
+      "start": 259.3933333333333,
+      "end": 259.55333333333334,
+      "probability": 0.9972085356712341,
+      "beat": "inspection-reject"
+    },
+    {
+      "word": " satisfactory,",
+      "start": 259.55333333333334,
+      "end": 260.11333333333334,
+      "probability": 0.9967576861381531,
+      "beat": "inspection-reject"
+    },
+    {
+      "word": " select",
+      "start": 260.67333333333335,
+      "end": 261.0133333333333,
+      "probability": 0.8857782483100891,
+      "beat": "inspection-reject"
+    },
+    {
+      "word": " reject.",
+      "start": 261.0133333333333,
+      "end": 261.53333333333336,
+      "probability": 0.7071752548217773,
+      "beat": "inspection-reject"
+    },
+    {
+      "word": " Add",
+      "start": 262.29333333333335,
+      "end": 262.67333333333335,
+      "probability": 0.8108932375907898,
+      "beat": "inspection-reject"
+    },
+    {
+      "word": " the",
+      "start": 262.67333333333335,
+      "end": 262.79333333333335,
+      "probability": 0.9441847801208496,
+      "beat": "inspection-reject"
+    },
+    {
+      "word": " optional",
+      "start": 262.79333333333335,
+      "end": 263.2133333333333,
+      "probability": 0.9655501246452332,
+      "beat": "inspection-reject"
+    },
+    {
+      "word": " reason,",
+      "start": 263.2133333333333,
+      "end": 263.67333333333335,
+      "probability": 0.9586023092269897,
+      "beat": "inspection-reject"
+    },
+    {
+      "word": " then",
+      "start": 264.2133333333333,
+      "end": 264.4533333333333,
+      "probability": 0.9821743965148926,
+      "beat": "inspection-reject"
+    },
+    {
+      "word": " confirm",
+      "start": 264.4533333333333,
+      "end": 265.0733333333333,
+      "probability": 0.9805294871330261,
+      "beat": "inspection-reject"
+    },
+    {
+      "word": " reject.",
+      "start": 265.0733333333333,
+      "end": 265.7733333333333,
+      "probability": 0.9703128933906555,
+      "beat": "inspection-reject"
+    },
+    {
+      "word": " The",
+      "start": 266.6933333333333,
+      "end": 266.79333333333335,
+      "probability": 0.9852036237716675,
+      "beat": "inspection-reject"
+    },
+    {
+      "word": " decision",
+      "start": 266.79333333333335,
+      "end": 267.17333333333335,
+      "probability": 0.996039867401123,
+      "beat": "inspection-reject"
+    },
+    {
+      "word": " is",
+      "start": 267.17333333333335,
+      "end": 267.5133333333333,
+      "probability": 0.9971838593482971,
+      "beat": "inspection-reject"
+    },
+    {
+      "word": " recorded",
+      "start": 267.5133333333333,
+      "end": 267.9533333333333,
+      "probability": 0.9960349202156067,
+      "beat": "inspection-reject"
+    },
+    {
+      "word": " and",
+      "start": 267.9533333333333,
+      "end": 268.7133333333333,
+      "probability": 0.5178565979003906,
+      "beat": "inspection-reject"
+    },
+    {
+      "word": " the",
+      "start": 268.7133333333333,
+      "end": 268.8333333333333,
+      "probability": 0.9766704440116882,
+      "beat": "inspection-reject"
+    },
+    {
+      "word": " finding",
+      "start": 268.8333333333333,
+      "end": 269.15333333333336,
+      "probability": 0.9854364991188049,
+      "beat": "inspection-reject"
+    },
+    {
+      "word": " returns",
+      "start": 269.15333333333336,
+      "end": 269.6933333333333,
+      "probability": 0.9536590576171875,
+      "beat": "inspection-reject"
+    },
+    {
+      "word": " to",
+      "start": 269.6933333333333,
+      "end": 269.91333333333336,
+      "probability": 0.99544757604599,
+      "beat": "inspection-reject"
+    },
+    {
+      "word": " open.",
+      "start": 269.91333333333336,
+      "end": 270.1933333333333,
+      "probability": 0.9876164793968201,
+      "beat": "inspection-reject"
+    },
+    {
+      "word": " Reject",
+      "start": 270.99333333333334,
+      "end": 271.4533333333333,
+      "probability": 0.8472079634666443,
+      "beat": "inspection-reject"
+    },
+    {
+      "word": " is",
+      "start": 271.4533333333333,
+      "end": 271.73333333333335,
+      "probability": 0.9932331442832947,
+      "beat": "inspection-reject"
+    },
+    {
+      "word": " not",
+      "start": 271.73333333333335,
+      "end": 271.9533333333333,
+      "probability": 0.9801166653633118,
+      "beat": "inspection-reject"
+    },
+    {
+      "word": " closure.",
+      "start": 271.9533333333333,
+      "end": 272.35333333333335,
+      "probability": 0.9011963605880737,
+      "beat": "inspection-reject"
+    },
+    {
+      "word": " For",
+      "start": 274.5,
+      "end": 274.72,
+      "probability": 0.8245757818222046,
+      "beat": "inspection-ncr"
+    },
+    {
+      "word": " a",
+      "start": 274.72,
+      "end": 274.88,
+      "probability": 0.9702272415161133,
+      "beat": "inspection-ncr"
+    },
+    {
+      "word": " finding",
+      "start": 274.88,
+      "end": 275.2,
+      "probability": 0.9816660284996033,
+      "beat": "inspection-ncr"
+    },
+    {
+      "word": " that",
+      "start": 275.2,
+      "end": 275.76,
+      "probability": 0.9780996441841125,
+      "beat": "inspection-ncr"
+    },
+    {
+      "word": " needs",
+      "start": 275.76,
+      "end": 276.12,
+      "probability": 0.9930471777915955,
+      "beat": "inspection-ncr"
+    },
+    {
+      "word": " formal",
+      "start": 276.12,
+      "end": 276.52,
+      "probability": 0.9894060492515564,
+      "beat": "inspection-ncr"
+    },
+    {
+      "word": " escalation,",
+      "start": 276.52,
+      "end": 277.32,
+      "probability": 0.9941685199737549,
+      "beat": "inspection-ncr"
+    },
+    {
+      "word": " select",
+      "start": 277.82,
+      "end": 278.26,
+      "probability": 0.9527341723442078,
+      "beat": "inspection-ncr"
+    },
+    {
+      "word": " NCR",
+      "start": 278.26,
+      "end": 278.9,
+      "probability": 0.7025305330753326,
+      "beat": "inspection-ncr"
+    },
+    {
+      "word": " to",
+      "start": 278.9,
+      "end": 279.72,
+      "probability": 0.9358168244361877,
+      "beat": "inspection-ncr"
+    },
+    {
+      "word": " open",
+      "start": 279.72,
+      "end": 280.16,
+      "probability": 0.9929618239402771,
+      "beat": "inspection-ncr"
+    },
+    {
+      "word": " the",
+      "start": 280.16,
+      "end": 280.62,
+      "probability": 0.9552227854728699,
+      "beat": "inspection-ncr"
+    },
+    {
+      "word": " escalate",
+      "start": 280.62,
+      "end": 281.1,
+      "probability": 0.8042837083339691,
+      "beat": "inspection-ncr"
+    },
+    {
+      "word": " to",
+      "start": 281.1,
+      "end": 281.28,
+      "probability": 0.8511849641799927,
+      "beat": "inspection-ncr"
+    },
+    {
+      "word": " NCR",
+      "start": 281.28,
+      "end": 281.8,
+      "probability": 0.9588132798671722,
+      "beat": "inspection-ncr"
+    },
+    {
+      "word": " dialogue.",
+      "start": 281.8,
+      "end": 282.26,
+      "probability": 0.4170699119567871,
+      "beat": "inspection-ncr"
+    },
+    {
+      "word": " Escalate",
+      "start": 283.14,
+      "end": 283.56,
+      "probability": 0.969631016254425,
+      "beat": "inspection-ncr"
+    },
+    {
+      "word": " creates",
+      "start": 283.56,
+      "end": 284.02,
+      "probability": 0.9726309180259705,
+      "beat": "inspection-ncr"
+    },
+    {
+      "word": " and",
+      "start": 284.02,
+      "end": 284.5,
+      "probability": 0.9443269968032837,
+      "beat": "inspection-ncr"
+    },
+    {
+      "word": " links",
+      "start": 284.5,
+      "end": 284.86,
+      "probability": 0.996813952922821,
+      "beat": "inspection-ncr"
+    },
+    {
+      "word": " a",
+      "start": 284.86,
+      "end": 285.44,
+      "probability": 0.8812827467918396,
+      "beat": "inspection-ncr"
+    },
+    {
+      "word": " formal",
+      "start": 285.44,
+      "end": 285.74,
+      "probability": 0.9945122003555298,
+      "beat": "inspection-ncr"
+    },
+    {
+      "word": " NCR",
+      "start": 285.74,
+      "end": 286.46,
+      "probability": 0.9847049415111542,
+      "beat": "inspection-ncr"
+    },
+    {
+      "word": " and",
+      "start": 286.46,
+      "end": 287.38,
+      "probability": 0.8456190824508667,
+      "beat": "inspection-ncr"
+    },
+    {
+      "word": " marks",
+      "start": 287.38,
+      "end": 287.7,
+      "probability": 0.9765220880508423,
+      "beat": "inspection-ncr"
+    },
+    {
+      "word": " the",
+      "start": 287.7,
+      "end": 287.92,
+      "probability": 0.9954761862754822,
+      "beat": "inspection-ncr"
+    },
+    {
+      "word": " finding",
+      "start": 287.92,
+      "end": 288.28,
+      "probability": 0.9752217531204224,
+      "beat": "inspection-ncr"
+    },
+    {
+      "word": " escalated.",
+      "start": 288.28,
+      "end": 289.48,
+      "probability": 0.9762732982635498,
+      "beat": "inspection-ncr"
+    },
+    {
+      "word": " Inspection",
+      "start": 289.48,
+      "end": 290.7,
+      "probability": 0.6890430226922035,
+      "beat": "inspection-ncr"
+    },
+    {
+      "word": " findings",
+      "start": 290.7,
+      "end": 291.14,
+      "probability": 0.9550926089286804,
+      "beat": "inspection-ncr"
+    },
+    {
+      "word": " do",
+      "start": 291.14,
+      "end": 291.64,
+      "probability": 0.9460471868515015,
+      "beat": "inspection-ncr"
+    },
+    {
+      "word": " not",
+      "start": 291.64,
+      "end": 291.84,
+      "probability": 0.9960399866104126,
+      "beat": "inspection-ncr"
+    },
+    {
+      "word": " escalate",
+      "start": 291.84,
+      "end": 292.62,
+      "probability": 0.994820773601532,
+      "beat": "inspection-ncr"
+    },
+    {
+      "word": " aromatically.",
+      "start": 292.62,
+      "end": 293.2,
+      "probability": 0.7692764103412628,
+      "beat": "inspection-ncr"
+    },
+    {
+      "word": " Use",
+      "start": 295.3666666666667,
+      "end": 295.64666666666665,
+      "probability": 0.7278226017951965,
+      "beat": "inspection-history"
+    },
+    {
+      "word": " the",
+      "start": 295.64666666666665,
+      "end": 295.9066666666667,
+      "probability": 0.9835513234138489,
+      "beat": "inspection-history"
+    },
+    {
+      "word": " recent",
+      "start": 295.9066666666667,
+      "end": 296.26666666666665,
+      "probability": 0.9743667840957642,
+      "beat": "inspection-history"
+    },
+    {
+      "word": " closed",
+      "start": 296.26666666666665,
+      "end": 296.68666666666667,
+      "probability": 0.973121702671051,
+      "beat": "inspection-history"
+    },
+    {
+      "word": " view",
+      "start": 296.68666666666667,
+      "end": 297.18666666666667,
+      "probability": 0.9630102515220642,
+      "beat": "inspection-history"
+    },
+    {
+      "word": " to",
+      "start": 297.18666666666667,
+      "end": 297.5866666666667,
+      "probability": 0.9941298961639404,
+      "beat": "inspection-history"
+    },
+    {
+      "word": " read",
+      "start": 297.5866666666667,
+      "end": 297.8666666666667,
+      "probability": 0.9975889921188354,
+      "beat": "inspection-history"
+    },
+    {
+      "word": " the",
+      "start": 297.8666666666667,
+      "end": 298.06666666666666,
+      "probability": 0.9907793998718262,
+      "beat": "inspection-history"
+    },
+    {
+      "word": " decision.",
+      "start": 298.06666666666666,
+      "end": 298.56666666666666,
+      "probability": 0.9816662669181824,
+      "beat": "inspection-history"
+    },
+    {
+      "word": " History",
+      "start": 299.5266666666667,
+      "end": 299.8466666666667,
+      "probability": 0.9201964139938354,
+      "beat": "inspection-history"
+    },
+    {
+      "word": " actor",
+      "start": 299.8466666666667,
+      "end": 300.3666666666667,
+      "probability": 0.790851354598999,
+      "beat": "inspection-history"
+    },
+    {
+      "word": " and",
+      "start": 300.3666666666667,
+      "end": 300.76666666666665,
+      "probability": 0.45748963952064514,
+      "beat": "inspection-history"
+    },
+    {
+      "word": " comment.",
+      "start": 300.76666666666665,
+      "end": 301.06666666666666,
+      "probability": 0.5976729989051819,
+      "beat": "inspection-history"
+    },
+    {
+      "word": " His",
+      "start": 302.1666666666667,
+      "end": 302.3066666666667,
+      "probability": 0.3689616620540619,
+      "beat": "inspection-history"
+    },
+    {
+      "word": " 30",
+      "start": 302.3066666666667,
+      "end": 302.62666666666667,
+      "probability": 0.9774348735809326,
+      "beat": "inspection-history"
+    },
+    {
+      "word": "-day",
+      "start": 302.62666666666667,
+      "end": 302.82666666666665,
+      "probability": 0.7403449565172195,
+      "beat": "inspection-history"
+    },
+    {
+      "word": " window",
+      "start": 302.82666666666665,
+      "end": 303.32666666666665,
+      "probability": 0.9982233643531799,
+      "beat": "inspection-history"
+    },
+    {
+      "word": " limits",
+      "start": 303.32666666666665,
+      "end": 304.1666666666667,
+      "probability": 0.9820464253425598,
+      "beat": "inspection-history"
+    },
+    {
+      "word": " this",
+      "start": 304.1666666666667,
+      "end": 304.5466666666667,
+      "probability": 0.9837825894355774,
+      "beat": "inspection-history"
+    },
+    {
+      "word": " view,",
+      "start": 304.5466666666667,
+      "end": 304.94666666666666,
+      "probability": 0.995926022529602,
+      "beat": "inspection-history"
+    },
+    {
+      "word": " not",
+      "start": 305.32666666666665,
+      "end": 305.62666666666667,
+      "probability": 0.9908384680747986,
+      "beat": "inspection-history"
+    },
+    {
+      "word": " stored",
+      "start": 305.62666666666667,
+      "end": 306.0266666666667,
+      "probability": 0.8343163728713989,
+      "beat": "inspection-history"
+    },
+    {
+      "word": " history.",
+      "start": 306.0266666666667,
+      "end": 306.44666666666666,
+      "probability": 0.9889968633651733,
+      "beat": "inspection-history"
+    },
+    {
+      "word": " The",
+      "start": 307.8066666666667,
+      "end": 307.94666666666666,
+      "probability": 0.9933943152427673,
+      "beat": "inspection-history"
+    },
+    {
+      "word": " final",
+      "start": 307.94666666666666,
+      "end": 308.2866666666667,
+      "probability": 0.9957603812217712,
+      "beat": "inspection-history"
+    },
+    {
+      "word": " bill",
+      "start": 308.2866666666667,
+      "end": 308.6066666666667,
+      "probability": 0.6055296659469604,
+      "beat": "inspection-history"
+    },
+    {
+      "word": " still",
+      "start": 308.6066666666667,
+      "end": 308.9066666666667,
+      "probability": 0.9939659237861633,
+      "beat": "inspection-history"
+    },
+    {
+      "word": " includes",
+      "start": 308.9066666666667,
+      "end": 309.4866666666667,
+      "probability": 0.9967034459114075,
+      "beat": "inspection-history"
+    },
+    {
+      "word": " the",
+      "start": 309.4866666666667,
+      "end": 309.8666666666667,
+      "probability": 0.9832413196563721,
+      "beat": "inspection-history"
+    },
+    {
+      "word": " rejected",
+      "start": 309.8666666666667,
+      "end": 310.32666666666665,
+      "probability": 0.9954734444618225,
+      "beat": "inspection-history"
+    },
+    {
+      "word": " finding.",
+      "start": 310.32666666666665,
+      "end": 310.7866666666667,
+      "probability": 0.9487566947937012,
+      "beat": "inspection-history"
+    },
+    {
+      "word": " It",
+      "start": 311.9266666666667,
+      "end": 312.2266666666667,
+      "probability": 0.9955731630325317,
+      "beat": "inspection-history"
+    },
+    {
+      "word": " remains",
+      "start": 312.2266666666667,
+      "end": 312.68666666666667,
+      "probability": 0.99832683801651,
+      "beat": "inspection-history"
+    },
+    {
+      "word": " open",
+      "start": 312.68666666666667,
+      "end": 313.18666666666667,
+      "probability": 0.9946789741516113,
+      "beat": "inspection-history"
+    },
+    {
+      "word": " and",
+      "start": 313.18666666666667,
+      "end": 313.9866666666667,
+      "probability": 0.8768320083618164,
+      "beat": "inspection-history"
+    },
+    {
+      "word": " needs",
+      "start": 313.9866666666667,
+      "end": 314.3066666666667,
+      "probability": 0.9888350367546082,
+      "beat": "inspection-history"
+    },
+    {
+      "word": " its",
+      "start": 314.3066666666667,
+      "end": 314.5466666666667,
+      "probability": 0.9796469211578369,
+      "beat": "inspection-history"
+    },
+    {
+      "word": " own",
+      "start": 314.5466666666667,
+      "end": 315.0466666666667,
+      "probability": 0.9991769194602966,
+      "beat": "inspection-history"
+    },
+    {
+      "word": " follow",
+      "start": 315.0466666666667,
+      "end": 315.62666666666667,
+      "probability": 0.9942042231559753,
+      "beat": "inspection-history"
+    },
+    {
+      "word": "-up.",
+      "start": 315.62666666666667,
+      "end": 315.9266666666667,
+      "probability": 0.7752675414085388,
+      "beat": "inspection-history"
+    }
+  ]
+}

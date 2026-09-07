@@ -8,15 +8,22 @@ import {
 	type FileIdentity, type NarrationManifest,
 } from './contract';
 
-export const CANDIDATE_ID = 'RemedialActionTutorial-REVIEW-CANDIDATE-V2';
-export const CANDIDATE_REQUIREMENTS = {
+export const CANDIDATE_ID = 'RemedialActionTutorial-REVIEW-CANDIDATE-V3';
+export const CANDIDATE_REQUIREMENTS: Record<string, readonly string[]> = {
 	...REQUIREMENTS,
 	// Daniel's v2 entry replaces the earlier Cleaning Verification detour.
 	'cleaning-baseline': ['home', 'bill'],
+	// Closing existing findings only. Original guards still verify omitted proofs.
+	'cleaning-capture': [],
+	'cleaning-open': [],
+	'cleaning-resolved': ['item'],
+	'cleaning-critical': [],
+	'inspection-capture': [],
 	// Explicit evidence-limited treatment authorized in the build instruction.
 	// This is real same-day evidence, never an alias for the absent later-day view.
 	'inspection-carryover': ['bill-row', 'followups', 'verify-open', 'age-current'],
 };
+const CANDIDATE_CLAIMS = REQUIRED_CLAIMS.filter((claim) => !['cleaning-fields', 'inspection-creation', 'critical-ncr'].includes(claim));
 export type Candidate = {
 	schemaVersion: number; status: string;
 	approvals: { daniel: null; independentReview: null };
@@ -31,7 +38,7 @@ export type Candidate = {
 const check = (condition: unknown, message: string): void => { if (!condition) throw new Error(`REMEDIAL CANDIDATE: ${message}`); };
 const same = (a: unknown, b: unknown) => JSON.stringify(a) === JSON.stringify(b);
 export const candidatePayload = (candidate: Candidate, narration: NarrationManifest) => JSON.stringify({ candidate, narration });
-export const CANDIDATE_SHA256 = '9ca4d93fa6e19711cbfb2c91d9a648ae444dcc45440a69552ec63e493233738e';
+export const CANDIDATE_SHA256 = 'c9fa610ef7587daa343490833232f0bc309df545dbcbca4bc5e8682af5d6cda1';
 export const EVIDENCE_SHA256 = '4168799073d974273d99c0aafe9e63f3c3c08c19763f5aea968a44bc4406e04d';
 
 export const candidateCaptures = (candidate: Candidate): CaptureManifest => {
@@ -69,10 +76,14 @@ export const assertCandidateReady = (candidate: Candidate, narration: NarrationM
 		const capture = merged.captures.find((c) => c.id === ref?.captureId);
 		check(capture && Object.hasOwn(capture.views, ref!.view), `missing capture/view ${slot}/${proof}`);
 	}
-	const order = ['intro', 'home-entry', 'bill-components', ...planned.beats.map((b) => b.id).filter((id) => !['intro', 'home-entry', 'bill-components', 'earlier-baseline'].includes(id))];
-	check(narration.beats.length === 23 && same(narration.beats.map((b) => b.id), order), 'Home banner first, Bill of Health second; no early due-check detour');
+	const omitted = ['two-outcomes', 'finding-origin', 'inspection-capture', 'critical-handoff'];
+	check(!narration.beats.some((beat) => omitted.includes(beat.id)), 'V3 excludes Daily backlog and creation lessons');
+	const order = ['intro', 'home-entry', 'bill-components', ...planned.beats.map((b) => b.id).filter((id) => !['intro', 'home-entry', 'bill-components', 'earlier-baseline', ...omitted].includes(id))];
+	check(narration.beats.length === 19 && same(narration.beats.map((b) => b.id), order), 'Home banner first, Bill of Health second; existing finding next');
 	check(narration.beats.every((b) => b.kind === planned.beats.find((p) => p.id === b.id)?.kind), 'original scene kinds required');
 	const home = narration.beats[1], bill = narration.beats[2];
+	const existing = narration.beats.find((b) => b.id === 'open-card')!;
+	check(existing.narration.startsWith('The failed check is already recorded. The remedial remains open until the correction is verified.') && existing.slot === 'cleaning-followup' && same(existing.cues.map((cue) => cue.proof), ['card']), 'existing finding bridge must use the real open card');
 	check(home.slot === 'cleaning-baseline' && home.cues.length === 1 && home.cues[0].proof === 'home' && same(home.cues[0].detail, { x: .045, y: .03, w: .91, h: .101 }), 'genuine Home follow-up banner must be emphasized');
 	check(home.narration.includes('Remedial actions awaiting follow-up banner') && home.narration.includes('open Follow-ups'), 'Home banner entry instruction required');
 	check(bill.slot === 'cleaning-baseline' && same(bill.cues.map((c) => c.proof), ['home', 'bill']) && bill.cues[0].detail === null && same(bill.cues[1].detail, { x: .043, y: .593, w: .914, h: .102 }), 'genuine Home Bill tile then Remedial row required');
@@ -89,6 +100,7 @@ export const assertCandidateReady = (candidate: Candidate, narration: NarrationM
 		const copy = [beat.chapter, beat.headline, beat.body, beat.emphasis, beat.note, beat.narration].join(' ');
 		check(!/simulat|emulator|android|test[ -]?scene|\bdemo\b|source.backed|source explanation|runtime audit|aged (?:record|inspection)|later.day comparison|review candidate|not approved|baseline|genuine capture|production/i.test(copy), `production commentary must remain internal: ${beat.id}`);
 		check(beat.note === '', 'editorial notes remain in provenance, outside the instructional composition');
+		check(!/submit remedial action|save finding|sign (?:and|&) complete|capture, then complete|216|nineteen captured|19 captures|still.to.do|daily cleaning/i.test(copy), 'no Daily backlog or finding-creation instruction in V3');
 		check(beat.from === timeline.entries[index].from && beat.overlapFromPrevious === 0, 'hard-cut timeline coverage required');
 		if (beat.narration) {
 			const clip = candidate.narration.clips.find((c) => c.id === beat.id);
@@ -97,6 +109,9 @@ export const assertCandidateReady = (candidate: Candidate, narration: NarrationM
 			check(beat.emphasisAtFrame >= beat.voiceFromFrame && beat.emphasisAtFrame + 12 < beat.voiceToFrame, 'emphasis outside narration');
 		} else check(beat.kind === 'intro' || beat.kind === 'outro', 'missing narration');
 		for (const [i, cue] of beat.cues.entries()) {
+			const ref = merged.slots[beat.slot!]?.[cue.proof];
+			check(ref && !['baseline', 'open-summary', 'resolved-summary', 'major-fields', 'major-recorded', 'critical-ncr', 'bakery-03-demo-b-form', 'bakery-04-demo-b-local-saved', 'bakery-08-demo-bc-issued', 'bakery-14-demo-b-server-open'].includes(ref.captureId), 'no Daily backlog or creation capture may appear in V3');
+			if (ref?.captureId === 'resolved-item') check(cue.detail === null, 'closed record uses only its registered resolved-today crop');
 			check(beat.slot && CANDIDATE_REQUIREMENTS[beat.slot as keyof typeof CANDIDATE_REQUIREMENTS]?.includes(cue.proof), 'unknown candidate cue');
 			check((i !== 0 || cue.fromFrame === 0) && (beat.cues[i + 1]?.fromFrame ?? beat.durationInFrames) - cue.fromFrame >= 60, `short or missing evidence hold ${beat.id}`);
 			check(cue.focusAtFrame >= cue.fromFrame && cue.focusAtFrame + 12 < (beat.cues[i + 1]?.fromFrame ?? beat.durationInFrames), 'focus crosses hard cut');
@@ -105,12 +120,12 @@ export const assertCandidateReady = (candidate: Candidate, narration: NarrationM
 		for (const claim of beat.claimIds) { check((REQUIRED_CLAIMS as readonly string[]).includes(claim), 'unregistered product claim'); claims.add(claim); }
 	}
 	for (const [slot, proofs] of Object.entries(CANDIDATE_REQUIREMENTS)) for (const proof of proofs) check(coverage.has(`${slot}/${proof}`), `required evidence omitted ${slot}/${proof}`);
-	for (const claim of REQUIRED_CLAIMS) check(claims.has(claim), `product boundary omitted ${claim}`);
+	for (const claim of CANDIDATE_CLAIMS) check(claims.has(claim), `product boundary omitted ${claim}`);
 	const carry = narration.beats.find((b) => b.id === 'inspection-carryover')!;
 	check(carry.narration.includes('remain in the queue across inspection dates and statuses') && carry.narration.includes('until their own decision closes or escalates them'), 'actual carry-over rule required');
 	check(!/filmed|days later|aged footage|backdat|automatic(?:ally)? closes/i.test(carry.narration), 'no invented filmed ageing or automatic closure');
 	check(candidate.limitations.laterDay.includes('no later-day comparison') && candidate.limitations.camera.includes('No physical presence'), 'internal factual limitations must be retained');
-	check(candidate.narration.clips.length === 21 && candidate.music.sha256 === 'f1928a7b68b79b89c843af517583ddc636773e8c4a354e3b610d42611962d186', 'established narration/bookend music required');
+	check(candidate.narration.clips.length === 17 && candidate.music.sha256 === 'f1928a7b68b79b89c843af517583ddc636773e8c4a354e3b610d42611962d186', 'established narration/bookend music required');
 };
 
 export const candidateFiles = (candidate: Candidate) => [candidate.evidenceRegister, ...candidate.captures, ...candidate.stateEvidence, ...candidate.supportingSetup, candidate.music, candidate.narration.master, candidate.narration.transcript, candidate.narration.cueAlignment, ...candidate.narration.clips.flatMap((c) => [c.audio, c.receipt, c.transcript])];
