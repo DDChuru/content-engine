@@ -99,20 +99,12 @@ function heldTime(s: Scene, t: number): number {
 type FadeProps = { background: string };
 const FadeThrough: React.FC<
   TransitionPresentationComponentProps<FadeProps>
-> = ({
-  children,
-  presentationDirection,
-  presentationProgress,
-}) => {
+> = ({ children, presentationDirection, presentationProgress }) => {
   const opacity =
     presentationDirection === "exiting"
       ? Number(presentationProgress < 0.5)
       : Number(presentationProgress >= 0.5);
-  return (
-    <AbsoluteFill style={{ opacity }}>
-      {children}
-    </AbsoluteFill>
-  );
+  return <AbsoluteFill style={{ opacity }}>{children}</AbsoluteFill>;
 };
 const fadeThroughGraphite: TransitionPresentation<FadeProps> = {
   component: FadeThrough,
@@ -628,6 +620,38 @@ const G: Record<string, Glyph> = {
 };
 
 Object.assign(G, {
+  M: [
+    [
+      [0, 16],
+      [0, 0],
+      [6, 8],
+      [12, 0],
+      [12, 16],
+    ],
+  ],
+  A: [
+    [
+      [0, 16],
+      [6, 0],
+      [12, 16],
+    ],
+    [
+      [3, 10],
+      [9, 10],
+    ],
+  ],
+  C: [
+    [
+      [12, 2],
+      [8, 0],
+      [3, 1],
+      [0, 6],
+      [0, 12],
+      [4, 16],
+      [9, 16],
+      [12, 13],
+    ],
+  ],
   v: [
     [
       [0, 6],
@@ -908,14 +932,15 @@ function makeInkLine(options: {
     if (!glyph) {
       throw new Error(`Missing handwriting glyph: ${char}`);
     }
+    const subscript = ["A", "B", "C"].includes(char);
     for (const segment of glyph) {
       const points = segment.map(
         ([px, py]) =>
           [
-            cursor + (px + py * 0.055) * scale * (char === "B" ? 0.65 : 1),
+            cursor + (px + py * 0.055) * scale * (subscript ? 0.65 : 1),
             y +
-              (char === "B" ? 11 * scale : 0) +
-              py * scale * (char === "B" ? 0.65 : 1),
+              (subscript ? 11 * scale : 0) +
+              py * scale * (subscript ? 0.65 : 1),
           ] as Point,
       );
       raw.push({ points, length: pointsLength(points) });
@@ -1029,6 +1054,7 @@ interface Line {
   exponent?: string;
   resultAt?: number;
   prefixEnd?: number;
+  maxScale?: number;
 }
 const Paper: React.FC<{
   lines: Line[];
@@ -1044,7 +1070,7 @@ const Paper: React.FC<{
         const width = line.text
           .split("")
           .reduce((n: number, c: string) => n + (GLYPH_ADVANCE[c] ?? 14), 0);
-        const scale = Math.min(2.8, 655 / width);
+        const scale = Math.min(line.maxScale ?? 2.8, 655 / width);
         const split =
           line.resultAt === undefined
             ? line.text.length
@@ -1137,6 +1163,10 @@ const Paper: React.FC<{
           <g
             key={line.id}
             data-ink-text={line.text + (line.exponent ? line.exponent : "")}
+            data-ink-line={line.id}
+            data-ink-start={line.start}
+            data-ink-end={line.end}
+            data-ink-complete={t >= line.end}
           >
             <InkPlayback strokes={strokes[i]} frame={t * fps} />
           </g>
@@ -1656,17 +1686,51 @@ const CollisionWorking: React.FC<{ s: Scene; which: 1 | 2; t: number }> = ({
     which === 1
       ? ["1×4 + 2×3 = 1×2 + 2vB", "10 = 2 + 2vB", "vB = 4 m s"]
       : ["2×4 + 3×1 = 2wB + 3×3", "11 = 2wB + 9", "wB = 1 m s"];
-  const lines: Line[] = texts.slice(0, active + 1).map((text, i) => ({
-    id: stages[i],
-    text,
-    start: cue(s, stages[i]),
-    end: results[i].start - 0.1,
-    y: 95 + i * 150,
-    ...(i === 2 ? { resultAt: cue(s, "result"), exponent: "-1" } : {}),
-  }));
+  const formulaLines: Line[] = [
+    {
+      id: "principle",
+      text: "Momentum before = momentum after",
+      start: cue(s, "principle"),
+      end: cue(s, "principle-end"),
+      y: 55,
+    },
+    {
+      id: "formula",
+      text:
+        which === 1
+          ? "mA uA + mB uB = mA vA + mB vB"
+          : "mB uB + mC uC = mB vB + mC vC",
+      start: cue(s, "formula"),
+      end: cue(s, "formula-end"),
+      y: 155,
+    },
+    ...(which === 2
+      ? [
+          {
+            id: "notation",
+            text: "vB = wB",
+            start: cue(s, "notation"),
+            end: cue(s, "notation-end"),
+            y: 230,
+            maxScale: 1.9,
+          },
+        ]
+      : []),
+  ];
+  const lines: Line[] = [
+    ...formulaLines.filter((line) => t >= line.start),
+    ...texts.slice(0, active + 1).map((text, i) => ({
+      id: stages[i],
+      text,
+      start: cue(s, stages[i]),
+      end: results[i].start - 0.1,
+      y: 310 + i * 105,
+      ...(i === 2 ? { resultAt: cue(s, "result"), exponent: "-1" } : {}),
+    })),
+  ];
   const ring =
     active >= 0 && t >= results[active].start && t < results[active].end
-      ? active
+      ? formulaLines.length + active
       : -1;
   const drawn = t > wordEnd(s, "draw");
   return (
@@ -1689,7 +1753,8 @@ const CollisionWorking: React.FC<{ s: Scene; which: 1 | 2; t: number }> = ({
             : undefined
         }
       />
-      {which === 2 && t >= cue(s, "decision") ? null : active >= 0 ? (
+      {which === 2 && t >= cue(s, "decision") ? null : t >=
+        cue(s, "principle") ? (
         <Paper lines={lines} t={t} ringLine={ring} />
       ) : t >= cue(s, "conserve") ? (
         <Card text="Momentum before = momentum after" />
@@ -1888,6 +1953,9 @@ function useStillAudit(
     const texts = Array.from(
       root.querySelectorAll("[data-diagram-text]"),
     ).filter(visible);
+    const inkLines = Array.from(
+      root.querySelectorAll("[data-ink-line]"),
+    ).filter(visible);
     const obstacles = Array.from(
       root.querySelectorAll("[data-arrow],[data-sphere]"),
     ).filter(visible);
@@ -1908,6 +1976,15 @@ function useStillAudit(
           collisions.push({
             text: a.textContent ?? "",
             other: b.textContent || b.getAttribute("data-id") || "arrow",
+          });
+      }),
+    );
+    inkLines.forEach((a, i) =>
+      inkLines.slice(i + 1).forEach((b) => {
+        if (overlap(a, b))
+          collisions.push({
+            text: a.getAttribute("data-ink-line")!,
+            other: b.getAttribute("data-ink-line")!,
           });
       }),
     );
@@ -1959,6 +2036,14 @@ function useStillAudit(
           ),
         ),
         cards: cardTexts,
+        inkLines: inkLines.map((el) => ({
+          id: el.getAttribute("data-ink-line"),
+          text: el.getAttribute("data-ink-text"),
+          start: Number(el.getAttribute("data-ink-start")),
+          end: Number(el.getAttribute("data-ink-end")),
+          complete: el.getAttribute("data-ink-complete") === "true",
+          bounds: el.getBoundingClientRect().toJSON(),
+        })),
         maxWords: Math.max(
           0,
           ...cardTexts.map((t) => t.trim().split(/\s+/).length),
