@@ -1,0 +1,204 @@
+{
+  "audioSha256": "a2977974ed3e24270cb3d99656822b3da00230f665b089c8fa6bf1341bd66513",
+  "model": "faster-whisper-small",
+  "modelRevision": "536b0662742c02347bc0e980a01041f333bce120",
+  "computeType": "int8",
+  "language": "en",
+  "initialPrompt": null,
+  "duration": 15.7895625,
+  "text": "Before signing off, a responsible person must return and verify the correction. A site manager or above selects confirm followed up. The button records acceptance. The person must check the actual condition.",
+  "words": [
+    {
+      "word": " Before",
+      "start": 0.0,
+      "end": 0.3,
+      "probability": 0.9234290719032288
+    },
+    {
+      "word": " signing",
+      "start": 0.3,
+      "end": 0.66,
+      "probability": 0.4143238067626953
+    },
+    {
+      "word": " off,",
+      "start": 0.66,
+      "end": 0.98,
+      "probability": 0.9927036762237549
+    },
+    {
+      "word": " a",
+      "start": 1.34,
+      "end": 1.46,
+      "probability": 0.9911237955093384
+    },
+    {
+      "word": " responsible",
+      "start": 1.46,
+      "end": 1.86,
+      "probability": 0.9786222577095032
+    },
+    {
+      "word": " person",
+      "start": 1.86,
+      "end": 2.34,
+      "probability": 0.9644920825958252
+    },
+    {
+      "word": " must",
+      "start": 2.34,
+      "end": 2.64,
+      "probability": 0.994392991065979
+    },
+    {
+      "word": " return",
+      "start": 2.64,
+      "end": 3.18,
+      "probability": 0.9924889802932739
+    },
+    {
+      "word": " and",
+      "start": 3.18,
+      "end": 3.86,
+      "probability": 0.9827234745025635
+    },
+    {
+      "word": " verify",
+      "start": 3.86,
+      "end": 4.3,
+      "probability": 0.9959121942520142
+    },
+    {
+      "word": " the",
+      "start": 4.3,
+      "end": 4.62,
+      "probability": 0.9521732330322266
+    },
+    {
+      "word": " correction.",
+      "start": 4.62,
+      "end": 5.06,
+      "probability": 0.9841620922088623
+    },
+    {
+      "word": " A",
+      "start": 6.04,
+      "end": 6.18,
+      "probability": 0.9691693782806396
+    },
+    {
+      "word": " site",
+      "start": 6.18,
+      "end": 6.42,
+      "probability": 0.8588106036186218
+    },
+    {
+      "word": " manager",
+      "start": 6.42,
+      "end": 6.86,
+      "probability": 0.9983173608779907
+    },
+    {
+      "word": " or",
+      "start": 6.86,
+      "end": 7.42,
+      "probability": 0.8610789775848389
+    },
+    {
+      "word": " above",
+      "start": 7.42,
+      "end": 7.78,
+      "probability": 0.9733645915985107
+    },
+    {
+      "word": " selects",
+      "start": 7.78,
+      "end": 8.48,
+      "probability": 0.9814428687095642
+    },
+    {
+      "word": " confirm",
+      "start": 8.48,
+      "end": 8.88,
+      "probability": 0.6980481743812561
+    },
+    {
+      "word": " followed",
+      "start": 8.88,
+      "end": 9.64,
+      "probability": 0.8806359767913818
+    },
+    {
+      "word": " up.",
+      "start": 9.64,
+      "end": 9.96,
+      "probability": 0.8746955990791321
+    },
+    {
+      "word": " The",
+      "start": 10.92,
+      "end": 11.04,
+      "probability": 0.9842334389686584
+    },
+    {
+      "word": " button",
+      "start": 11.04,
+      "end": 11.32,
+      "probability": 0.9352257251739502
+    },
+    {
+      "word": " records",
+      "start": 11.32,
+      "end": 11.76,
+      "probability": 0.9802899956703186
+    },
+    {
+      "word": " acceptance.",
+      "start": 11.76,
+      "end": 12.28,
+      "probability": 0.970180332660675
+    },
+    {
+      "word": " The",
+      "start": 13.22,
+      "end": 13.42,
+      "probability": 0.992012083530426
+    },
+    {
+      "word": " person",
+      "start": 13.42,
+      "end": 13.68,
+      "probability": 0.876459538936615
+    },
+    {
+      "word": " must",
+      "start": 13.68,
+      "end": 13.98,
+      "probability": 0.9982067346572876
+    },
+    {
+      "word": " check",
+      "start": 13.98,
+      "end": 14.24,
+      "probability": 0.997597873210907
+    },
+    {
+      "word": " the",
+      "start": 14.24,
+      "end": 14.48,
+      "probability": 0.9961108565330505
+    },
+    {
+      "word": " actual",
+      "start": 14.48,
+      "end": 14.8,
+      "probability": 0.9979655742645264
+    },
+    {
+      "word": " condition.",
+      "start": 14.8,
+      "end": 15.28,
+      "probability": 0.9960785508155823
+    }
+  ]
+}

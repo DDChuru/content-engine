@@ -1,0 +1,24 @@
+{
+  "provider": "ElevenLabs",
+  "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+  "providerName": "DC",
+  "seriesName": "Daniel",
+  "request": {
+    "text": "Keep the grade and failure reason from the original Cleaning check. Action taken and photo evidence are optional here. The acknowledgement confirms that the completion was recorded.",
+    "model_id": "eleven_multilingual_v2",
+    "voice_settings": {
+      "stability": 0.55,
+      "similarity_boost": 0.8,
+      "style": 0.35,
+      "use_speaker_boost": true
+    }
+  },
+  "requestHash": "353d127ac7c25845b50c3e39ab8a4e4681cc598f51c6d25bff739e918eb73035",
+  "generatedAt": "2026-09-07T04:15:47.496Z",
+  "requestId": "zZokf1T9GzZwyQvAJ37r",
+  "audio": {
+    "path": "remedial-tutorial/audio/finding-origin-353d127ac7c2.mp3",
+    "bytes": 211949,
+    "sha256": "83528f7431dcd5789da77095944e6376b88c186803d7d2a2c8e64b0896d2d761"
+  }
+}

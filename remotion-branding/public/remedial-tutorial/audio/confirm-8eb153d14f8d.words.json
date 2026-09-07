@@ -1,0 +1,180 @@
+{
+  "audioSha256": "4f84c3cbb42d1670b77a7b5cb643bf0b7a5750c635f33f26cf2aceebdd052ab1",
+  "model": "faster-whisper-small",
+  "modelRevision": "536b0662742c02347bc0e980a01041f333bce120",
+  "computeType": "int8",
+  "language": "en",
+  "initialPrompt": null,
+  "duration": 11.42425,
+  "text": "Confirm followed up opens the optional note in photo form. Add a follow up note in photo when useful, then select the inner confirm to record the verification.",
+  "words": [
+    {
+      "word": " Confirm",
+      "start": 0.0,
+      "end": 0.44,
+      "probability": 0.8862956464290619
+    },
+    {
+      "word": " followed",
+      "start": 0.44,
+      "end": 0.74,
+      "probability": 0.3971071243286133
+    },
+    {
+      "word": " up",
+      "start": 0.74,
+      "end": 1.06,
+      "probability": 0.695775032043457
+    },
+    {
+      "word": " opens",
+      "start": 1.06,
+      "end": 1.72,
+      "probability": 0.9306957125663757
+    },
+    {
+      "word": " the",
+      "start": 1.72,
+      "end": 1.96,
+      "probability": 0.9942565560340881
+    },
+    {
+      "word": " optional",
+      "start": 1.96,
+      "end": 2.26,
+      "probability": 0.9847976565361023
+    },
+    {
+      "word": " note",
+      "start": 2.26,
+      "end": 2.72,
+      "probability": 0.7983448505401611
+    },
+    {
+      "word": " in",
+      "start": 2.72,
+      "end": 3.2,
+      "probability": 0.9123542904853821
+    },
+    {
+      "word": " photo",
+      "start": 3.2,
+      "end": 3.48,
+      "probability": 0.6379210948944092
+    },
+    {
+      "word": " form.",
+      "start": 3.48,
+      "end": 3.94,
+      "probability": 0.8604653477668762
+    },
+    {
+      "word": " Add",
+      "start": 4.28,
+      "end": 4.54,
+      "probability": 0.2865179479122162
+    },
+    {
+      "word": " a",
+      "start": 4.54,
+      "end": 4.66,
+      "probability": 0.9423704743385315
+    },
+    {
+      "word": " follow",
+      "start": 4.66,
+      "end": 4.92,
+      "probability": 0.9349831342697144
+    },
+    {
+      "word": " up",
+      "start": 4.92,
+      "end": 5.22,
+      "probability": 0.6193850636482239
+    },
+    {
+      "word": " note",
+      "start": 5.22,
+      "end": 5.58,
+      "probability": 0.9738278985023499
+    },
+    {
+      "word": " in",
+      "start": 5.58,
+      "end": 6.04,
+      "probability": 0.7869096398353577
+    },
+    {
+      "word": " photo",
+      "start": 6.04,
+      "end": 6.36,
+      "probability": 0.9547438621520996
+    },
+    {
+      "word": " when",
+      "start": 6.36,
+      "end": 6.58,
+      "probability": 0.575587272644043
+    },
+    {
+      "word": " useful,",
+      "start": 6.58,
+      "end": 6.96,
+      "probability": 0.9852472543716431
+    },
+    {
+      "word": " then",
+      "start": 7.44,
+      "end": 7.7,
+      "probability": 0.9838860034942627
+    },
+    {
+      "word": " select",
+      "start": 7.7,
+      "end": 8.08,
+      "probability": 0.9905427098274231
+    },
+    {
+      "word": " the",
+      "start": 8.08,
+      "end": 8.34,
+      "probability": 0.9943137168884277
+    },
+    {
+      "word": " inner",
+      "start": 8.34,
+      "end": 8.5,
+      "probability": 0.9566497206687927
+    },
+    {
+      "word": " confirm",
+      "start": 8.5,
+      "end": 8.9,
+      "probability": 0.9756379127502441
+    },
+    {
+      "word": " to",
+      "start": 8.9,
+      "end": 9.7,
+      "probability": 0.9494009017944336
+    },
+    {
+      "word": " record",
+      "start": 9.7,
+      "end": 10.1,
+      "probability": 0.9877042770385742
+    },
+    {
+      "word": " the",
+      "start": 10.1,
+      "end": 10.3,
+      "probability": 0.9944844841957092
+    },
+    {
+      "word": " verification.",
+      "start": 10.3,
+      "end": 10.74,
+      "probability": 0.9962678551673889
+    }
+  ]
+}

@@ -1,0 +1,186 @@
+{
+  "audioSha256": "5922ea232cdcdf3676d446313cf4e892e592527aa451eabac849683883b654ea",
+  "model": "faster-whisper-small",
+  "modelRevision": "536b0662742c02347bc0e980a01041f333bce120",
+  "computeType": "int8",
+  "language": "en",
+  "initialPrompt": null,
+  "duration": 14.396375,
+  "text": "If the correction is not satisfactory, select reject. Add the optional reason, then confirm reject. The decision is recorded and the finding returns to open. Reject is not closure.",
+  "words": [
+    {
+      "word": " If",
+      "start": 0.0,
+      "end": 0.16,
+      "probability": 0.8929944038391113
+    },
+    {
+      "word": " the",
+      "start": 0.16,
+      "end": 0.3,
+      "probability": 0.9834114909172058
+    },
+    {
+      "word": " correction",
+      "start": 0.3,
+      "end": 0.64,
+      "probability": 0.9884013533592224
+    },
+    {
+      "word": " is",
+      "start": 0.64,
+      "end": 0.96,
+      "probability": 0.9946469664573669
+    },
+    {
+      "word": " not",
+      "start": 0.96,
+      "end": 1.12,
+      "probability": 0.9972085356712341
+    },
+    {
+      "word": " satisfactory,",
+      "start": 1.12,
+      "end": 1.68,
+      "probability": 0.9967576861381531
+    },
+    {
+      "word": " select",
+      "start": 2.24,
+      "end": 2.58,
+      "probability": 0.8857782483100891
+    },
+    {
+      "word": " reject.",
+      "start": 2.58,
+      "end": 3.1,
+      "probability": 0.7071752548217773
+    },
+    {
+      "word": " Add",
+      "start": 3.86,
+      "end": 4.24,
+      "probability": 0.8108932375907898
+    },
+    {
+      "word": " the",
+      "start": 4.24,
+      "end": 4.36,
+      "probability": 0.9441847801208496
+    },
+    {
+      "word": " optional",
+      "start": 4.36,
+      "end": 4.78,
+      "probability": 0.9655501246452332
+    },
+    {
+      "word": " reason,",
+      "start": 4.78,
+      "end": 5.24,
+      "probability": 0.9586023092269897
+    },
+    {
+      "word": " then",
+      "start": 5.78,
+      "end": 6.02,
+      "probability": 0.9821743965148926
+    },
+    {
+      "word": " confirm",
+      "start": 6.02,
+      "end": 6.64,
+      "probability": 0.9805294871330261
+    },
+    {
+      "word": " reject.",
+      "start": 6.64,
+      "end": 7.34,
+      "probability": 0.9703128933906555
+    },
+    {
+      "word": " The",
+      "start": 8.26,
+      "end": 8.36,
+      "probability": 0.9852036237716675
+    },
+    {
+      "word": " decision",
+      "start": 8.36,
+      "end": 8.74,
+      "probability": 0.996039867401123
+    },
+    {
+      "word": " is",
+      "start": 8.74,
+      "end": 9.08,
+      "probability": 0.9971838593482971
+    },
+    {
+      "word": " recorded",
+      "start": 9.08,
+      "end": 9.52,
+      "probability": 0.9960349202156067
+    },
+    {
+      "word": " and",
+      "start": 9.52,
+      "end": 10.28,
+      "probability": 0.5178565979003906
+    },
+    {
+      "word": " the",
+      "start": 10.28,
+      "end": 10.4,
+      "probability": 0.9766704440116882
+    },
+    {
+      "word": " finding",
+      "start": 10.4,
+      "end": 10.72,
+      "probability": 0.9854364991188049
+    },
+    {
+      "word": " returns",
+      "start": 10.72,
+      "end": 11.26,
+      "probability": 0.9536590576171875
+    },
+    {
+      "word": " to",
+      "start": 11.26,
+      "end": 11.48,
+      "probability": 0.99544757604599
+    },
+    {
+      "word": " open.",
+      "start": 11.48,
+      "end": 11.76,
+      "probability": 0.9876164793968201
+    },
+    {
+      "word": " Reject",
+      "start": 12.56,
+      "end": 13.02,
+      "probability": 0.8472079634666443
+    },
+    {
+      "word": " is",
+      "start": 13.02,
+      "end": 13.3,
+      "probability": 0.9932331442832947
+    },
+    {
+      "word": " not",
+      "start": 13.3,
+      "end": 13.52,
+      "probability": 0.9801166653633118
+    },
+    {
+      "word": " closure.",
+      "start": 13.52,
+      "end": 13.92,
+      "probability": 0.9011963605880737
+    }
+  ]
+}

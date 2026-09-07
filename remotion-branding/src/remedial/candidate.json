@@ -977,109 +977,88 @@
   "narration": {
     "clips": [
       {
-        "id": "two-outcomes",
-        "audio": {
-          "path": "remedial-tutorial/audio/two-outcomes-5457b1d53849.mp3",
-          "bytes": 299720,
-          "sha256": "a78daa603a3bbf7d54fc01a9400af88c8a399bf78a4bf12995a5140d2c383706"
-        },
-        "receipt": {
-          "path": "remedial-tutorial/audio/two-outcomes-5457b1d53849-provenance.json",
-          "bytes": 917,
-          "sha256": "5618119ce71cc180a020bd7e62a429668066106c85727fd0e53d8eef6fc7025b"
-        },
-        "transcript": {
-          "path": "remedial-tutorial/audio/two-outcomes-5457b1d53849.words.json",
-          "bytes": 4883,
-          "sha256": "88c931bd9734391b1120ff957d9f08828a1c556cd3b28d9d09e2ce1ff49ab717"
-        },
-        "durationSeconds": 18.703673,
-        "fromFrame": 168,
-        "wordCount": 37
-      },
-      {
-        "id": "earlier-baseline",
-        "audio": {
-          "path": "remedial-tutorial/audio/earlier-baseline-efb4836a1f21.mp3",
-          "bytes": 224906,
-          "sha256": "4d7880118cd638e1315253b12d0ddb37b06a501094c255cc5a40df1c1e00c57e"
-        },
-        "receipt": {
-          "path": "remedial-tutorial/audio/earlier-baseline-efb4836a1f21-provenance.json",
-          "bytes": 867,
-          "sha256": "3b2412ceb87096622d36b07ba7c139251c3b1d561b5518e25071b79ea5b02ee3"
-        },
-        "transcript": {
-          "path": "remedial-tutorial/audio/earlier-baseline-efb4836a1f21.words.json",
-          "bytes": 3394,
-          "sha256": "54da85da8f568dce618ae4e5089e6fe9a46107c6c9677837772ebe7d22ea3aeb"
-        },
-        "durationSeconds": 14.027755,
-        "fromFrame": 777,
-        "wordCount": 25
-      },
-      {
-        "id": "finding-origin",
-        "audio": {
-          "path": "remedial-tutorial/audio/finding-origin-ef3e62be2451.mp3",
-          "bytes": 244132,
-          "sha256": "7c7a545d4aaa5aa57efbf1fd851a4803e6b525978166c10c61b26c067d4d901e"
-        },
-        "receipt": {
-          "path": "remedial-tutorial/audio/finding-origin-ef3e62be2451-provenance.json",
-          "bytes": 891,
-          "sha256": "aeb516a3a1278a81ef0e148a3a1c850def5861b346decfc506f83d65e4d6db28"
-        },
-        "transcript": {
-          "path": "remedial-tutorial/audio/finding-origin-ef3e62be2451.words.json",
-          "bytes": 3933,
-          "sha256": "bca31207db77f756075c3cc043eccd13482f23d286c679b8a958d020c59b76de"
-        },
-        "durationSeconds": 15.229388,
-        "fromFrame": 1245,
-        "wordCount": 29
-      },
-      {
         "id": "home-entry",
         "audio": {
-          "path": "remedial-tutorial/audio/home-entry-f9f3e5097cff.mp3",
-          "bytes": 148001,
-          "sha256": "e166dfc7d91b8c676f1ab01d97860dd341d3f918598c6764393b1628b41eee99"
+          "path": "remedial-tutorial/audio/home-entry-d4c0ba904a83.mp3",
+          "bytes": 229921,
+          "sha256": "f79e49f8807c4746f7c8b67382463434dcd1b52f1f8a4406a9c137307eb9767d"
         },
         "receipt": {
-          "path": "remedial-tutorial/audio/home-entry-f9f3e5097cff-provenance.json",
-          "bytes": 820,
-          "sha256": "8484754c37af211694e9f998127d0ffc3d935b748a0a1c802b4c8513c9d20f68"
+          "path": "remedial-tutorial/audio/home-entry-d4c0ba904a83-provenance.json",
+          "bytes": 870,
+          "sha256": "40e00e4aa841933b068a45a013eec6568cfe5a0e2c77fef6f5cd0d56822c5adb"
         },
         "transcript": {
-          "path": "remedial-tutorial/audio/home-entry-f9f3e5097cff.words.json",
-          "bytes": 3006,
-          "sha256": "ca56f9c7e61c64f7de44cbc3864f3d0b9dcf6145f35e82101be4662a48aa9051"
+          "path": "remedial-tutorial/audio/home-entry-d4c0ba904a83.words.json",
+          "bytes": 3888,
+          "sha256": "ea209b38bcd069adf7d84b8087a0c42ee377fc102c0b4efc29d51ffb9fadda9a"
         },
-        "durationSeconds": 9.221224,
-        "fromFrame": 1749,
-        "wordCount": 22
+        "durationSeconds": 14.341224,
+        "fromFrame": 168,
+        "wordCount": 29
       },
       {
         "id": "bill-components",
         "audio": {
-          "path": "remedial-tutorial/audio/bill-components-61f7df7819f9.mp3",
-          "bytes": 244132,
-          "sha256": "260a990ce62d30dc3b611397b990ed779f5c85dc4a4ef985436200b1689026ec"
+          "path": "remedial-tutorial/audio/bill-components-e3783cb9bc0d.mp3",
+          "bytes": 321872,
+          "sha256": "9a71c71892cda8017ae218f8c00062b17e35e5ad778d89929c4db78700d5bcbb"
         },
         "receipt": {
-          "path": "remedial-tutorial/audio/bill-components-61f7df7819f9-provenance.json",
-          "bytes": 888,
-          "sha256": "08172070fdff6d16c837ebe8a0666346b683117bcc1c3137b0f6bc5cc9213372"
+          "path": "remedial-tutorial/audio/bill-components-e3783cb9bc0d-provenance.json",
+          "bytes": 949,
+          "sha256": "0d01f0a01a093b0ef9954c06c3990af80ae52c07a2a9035735672341dc60e05c"
         },
         "transcript": {
-          "path": "remedial-tutorial/audio/bill-components-61f7df7819f9.words.json",
-          "bytes": 4370,
-          "sha256": "aa2a51f2ebc9bc0234555579b8e88a745fd52b3f948900c4cbe3305b605f4410"
+          "path": "remedial-tutorial/audio/bill-components-e3783cb9bc0d.words.json",
+          "bytes": 5847,
+          "sha256": "58a9abd2939b865b74beed9203b39a8780f06b05e52f900079783e910a9dd87b"
         },
-        "durationSeconds": 15.229388,
-        "fromFrame": 2073,
-        "wordCount": 33
+        "durationSeconds": 20.088163,
+        "fromFrame": 647,
+        "wordCount": 45
+      },
+      {
+        "id": "two-outcomes",
+        "audio": {
+          "path": "remedial-tutorial/audio/two-outcomes-d469712ed4a9.mp3",
+          "bytes": 186035,
+          "sha256": "9ca118db59d71b9209120750caa82c46f7fc22db2f1971b2b0d1de606e7af39e"
+        },
+        "receipt": {
+          "path": "remedial-tutorial/audio/two-outcomes-d469712ed4a9-provenance.json",
+          "bytes": 856,
+          "sha256": "a34872c49652d59019db68b28c8c3337d4faa564be9d3a28a40716184a6e43af"
+        },
+        "transcript": {
+          "path": "remedial-tutorial/audio/two-outcomes-d469712ed4a9.words.json",
+          "bytes": 3745,
+          "sha256": "0953e9e4de15b589dda407241d108d4d62d97fc72088e34b29e62737bc777f0d"
+        },
+        "durationSeconds": 11.598367,
+        "fromFrame": 1298,
+        "wordCount": 28
+      },
+      {
+        "id": "finding-origin",
+        "audio": {
+          "path": "remedial-tutorial/audio/finding-origin-353d127ac7c2.mp3",
+          "bytes": 211949,
+          "sha256": "83528f7431dcd5789da77095944e6376b88c186803d7d2a2c8e64b0896d2d761"
+        },
+        "receipt": {
+          "path": "remedial-tutorial/audio/finding-origin-353d127ac7c2-provenance.json",
+          "bytes": 876,
+          "sha256": "c2fe4d2801ce293217a57891fb05d9c702e2e274f85b27bcf620212951baa64d"
+        },
+        "transcript": {
+          "path": "remedial-tutorial/audio/finding-origin-353d127ac7c2.words.json",
+          "bytes": 3673,
+          "sha256": "b697ae80fdfef0b6c0af5cb95f66cb50f279650f873536f5e475d76dc37b158b"
+        },
+        "durationSeconds": 13.217959,
+        "fromFrame": 1694,
+        "wordCount": 27
       },
       {
         "id": "cleaning-filter",
@@ -1099,7 +1078,7 @@
           "sha256": "8776f750a1b97d4ea74a11ed2065d845b9f5577d99d7d5542387383c88c05a3e"
         },
         "durationSeconds": 5.01551,
-        "fromFrame": 2577,
+        "fromFrame": 2139,
         "wordCount": 12
       },
       {
@@ -1120,70 +1099,70 @@
           "sha256": "c73631d0cb99e78f3b07055a007e01d9b8945f3eb5eca4662643435546b2a144"
         },
         "durationSeconds": 17.031837,
-        "fromFrame": 2775,
+        "fromFrame": 2338,
         "wordCount": 30
       },
       {
         "id": "recheck",
         "audio": {
-          "path": "remedial-tutorial/audio/recheck-b2dfa6360ead.mp3",
-          "bytes": 268373,
-          "sha256": "c64955a45fec3a6fbc0efefb3a76f816dbbcf339ad8463b0b567c633ede3cb82"
+          "path": "remedial-tutorial/audio/recheck-e0374e4a1d16.mp3",
+          "bytes": 253745,
+          "sha256": "a2977974ed3e24270cb3d99656822b3da00230f665b089c8fa6bf1341bd66513"
         },
         "receipt": {
-          "path": "remedial-tutorial/audio/recheck-b2dfa6360ead-provenance.json",
-          "bytes": 904,
-          "sha256": "3fcc64c5945b3f638152d2d800aa38948edeafec5afc26b912ead2537678d992"
+          "path": "remedial-tutorial/audio/recheck-e0374e4a1d16-provenance.json",
+          "bytes": 892,
+          "sha256": "1c7cb72f429cebf2881eabf8482a554134c2c53892db175b0f36e6cac77bb537"
         },
         "transcript": {
-          "path": "remedial-tutorial/audio/recheck-b2dfa6360ead.words.json",
-          "bytes": 4640,
-          "sha256": "6ec070cd88b651337121fab61bf3479b2aaf8bfbd968597dcbf4faddbae6ac42"
+          "path": "remedial-tutorial/audio/recheck-e0374e4a1d16.words.json",
+          "bytes": 4290,
+          "sha256": "32f487d11c57617c5add85961f2b63f8d449354b3a23135ffb6feb7c1fef7234"
         },
-        "durationSeconds": 16.74449,
-        "fromFrame": 3333,
-        "wordCount": 35
+        "durationSeconds": 15.830204,
+        "fromFrame": 2897,
+        "wordCount": 32
       },
       {
         "id": "confirm",
         "audio": {
-          "path": "remedial-tutorial/audio/confirm-8a2271159496.mp3",
-          "bytes": 277568,
-          "sha256": "e9ebe580190d8a3009482069b479556eeda3734aadb0fe5941fb0afb5ea8cb39"
+          "path": "remedial-tutorial/audio/confirm-8eb153d14f8d.mp3",
+          "bytes": 183946,
+          "sha256": "4f84c3cbb42d1670b77a7b5cb643bf0b7a5750c635f33f26cf2aceebdd052ab1"
         },
         "receipt": {
-          "path": "remedial-tutorial/audio/confirm-8a2271159496-provenance.json",
-          "bytes": 887,
-          "sha256": "610806cffb48499393f403a88c76c62e276561b6667f95c1c72156ac6c745cd4"
+          "path": "remedial-tutorial/audio/confirm-8eb153d14f8d-provenance.json",
+          "bytes": 849,
+          "sha256": "95464cd1c81393086cec628076d1d3df0b985a7fab4f0039f582572bd871a0e3"
         },
         "transcript": {
-          "path": "remedial-tutorial/audio/confirm-8a2271159496.words.json",
-          "bytes": 4052,
-          "sha256": "34121b29c0ae444ddd5570a200174cd805960f69e531601f153400a013be5296"
+          "path": "remedial-tutorial/audio/confirm-8eb153d14f8d.words.json",
+          "bytes": 3726,
+          "sha256": "d2f798f624c9e1aa31ebbc709d510310004b5521f48b88bbb5be24819d99f6a0"
         },
-        "durationSeconds": 17.319184,
-        "fromFrame": 3883,
-        "wordCount": 30
+        "durationSeconds": 11.467755,
+        "fromFrame": 3420,
+        "wordCount": 28
       },
       {
         "id": "removed",
         "audio": {
-          "path": "remedial-tutorial/audio/removed-49baf80e7ce1.mp3",
-          "bytes": 209023,
-          "sha256": "1cf6805ebb9077e0dd522c601ea932c4041fc1e2245c8ada1bb45e620d0b8788"
+          "path": "remedial-tutorial/audio/removed-a70bae225d30.mp3",
+          "bytes": 185199,
+          "sha256": "c6377efd93804fdaad5dbbbdd30e92ce3a4c69cbe1a1d6a9acbcdc1465772607"
         },
         "receipt": {
-          "path": "remedial-tutorial/audio/removed-49baf80e7ce1-provenance.json",
-          "bytes": 834,
-          "sha256": "c1f71da8d432a59f2dc585dd449b42c1f67fc03c4d8d31923b448b6db32fc51f"
+          "path": "remedial-tutorial/audio/removed-a70bae225d30-provenance.json",
+          "bytes": 840,
+          "sha256": "2de5e3b60dbd8587330ae4c76e76439aa0e0818cc2505c56afd1617f082eef2a"
         },
         "transcript": {
-          "path": "remedial-tutorial/audio/removed-49baf80e7ce1.words.json",
-          "bytes": 3375,
-          "sha256": "a40943bfc6b05063c28e396597efa8d21a22faac6c5a143c8e3ebc96c028bbcc"
+          "path": "remedial-tutorial/audio/removed-a70bae225d30.words.json",
+          "bytes": 3384,
+          "sha256": "511aae85d414f8d65ed728a0b620036357f071011eb000cacb148241f39b9a93"
         },
-        "durationSeconds": 13.035102,
-        "fromFrame": 4450,
+        "durationSeconds": 11.546122,
+        "fromFrame": 3813,
         "wordCount": 25
       },
       {
@@ -1204,28 +1183,28 @@
           "sha256": "2714297acfddb79a915ff15655feb8799b40251cbce89475b8718b4f90f6e390"
         },
         "durationSeconds": 22.569796,
-        "fromFrame": 4889,
+        "fromFrame": 4208,
         "wordCount": 40
       },
       {
         "id": "audit-trail",
         "audio": {
-          "path": "remedial-tutorial/audio/audit-trail-e6147b4070f4.mp3",
-          "bytes": 359071,
-          "sha256": "dc957f1a2291c57c8c1b2c511f246923e991c3b381be295d0192658589a2897b"
+          "path": "remedial-tutorial/audio/audit-trail-104fd266d513.mp3",
+          "bytes": 328559,
+          "sha256": "8f9d3bad4690245a0e054a4618f6788be79107a36575c10a9e895f9d867a977c"
         },
         "receipt": {
-          "path": "remedial-tutorial/audio/audit-trail-e6147b4070f4-provenance.json",
-          "bytes": 975,
-          "sha256": "c6f377951c9f493cb9f50e47c06a482cd65cb5f210bf77647adc06fcd7ce3fd1"
+          "path": "remedial-tutorial/audio/audit-trail-104fd266d513-provenance.json",
+          "bytes": 949,
+          "sha256": "d3cee855fe570adb30d65f27f0d7f1bcad09af57ef7123ba6a90b2743ec4b9b0"
         },
         "transcript": {
-          "path": "remedial-tutorial/audio/audit-trail-e6147b4070f4.words.json",
-          "bytes": 5453,
-          "sha256": "c9744d15b6ecb6865ebd863f8d625e71bfb2da709b087b8a338d5ed82a4aac88"
+          "path": "remedial-tutorial/audio/audit-trail-104fd266d513.words.json",
+          "bytes": 5407,
+          "sha256": "0cc000f24d1f75a08cbb4e15ec57d835673fd556cda59511a7844e8d10453423"
         },
-        "durationSeconds": 22.413061,
-        "fromFrame": 5614,
+        "durationSeconds": 20.506122,
+        "fromFrame": 4934,
         "wordCount": 41
       },
       {
@@ -1246,7 +1225,7 @@
           "sha256": "2ddd5a21334191a416e0a55cb37a55ed5fb7e311a3d44d44dd36dae24e846295"
         },
         "durationSeconds": 15.412245,
-        "fromFrame": 6334,
+        "fromFrame": 5598,
         "wordCount": 30
       },
       {
@@ -1267,50 +1246,50 @@
           "sha256": "f13eb6ea812dcae775d5c8657294988986f400d968af3a4a679d6e89b0f1fc40"
         },
         "durationSeconds": 16.326531,
-        "fromFrame": 6844,
+        "fromFrame": 6109,
         "wordCount": 28
       },
       {
         "id": "inspection-capture",
         "audio": {
-          "path": "remedial-tutorial/audio/inspection-capture-91c17ae636f1.mp3",
-          "bytes": 378715,
-          "sha256": "7fb05cf0dfbe6827758e7be810b30049cab4fc9c3bd105b40fde6b9c02213b96"
+          "path": "remedial-tutorial/audio/inspection-capture-e7e8f1a4244e.mp3",
+          "bytes": 308079,
+          "sha256": "a57ad5256ef91066ccf14f2ca081ba3704a72ca1bb1d39992b8edb453a5b7a03"
         },
         "receipt": {
-          "path": "remedial-tutorial/audio/inspection-capture-91c17ae636f1-provenance.json",
-          "bytes": 984,
-          "sha256": "ba066baac793524c7cc5f3bb1637c3311b763917b7891e06328b16bc8d80e78e"
+          "path": "remedial-tutorial/audio/inspection-capture-e7e8f1a4244e-provenance.json",
+          "bytes": 938,
+          "sha256": "a0d34fe1e877ea11e850dbd513063d9c8bd87975b6e694618cb091eb001b1871"
         },
         "transcript": {
-          "path": "remedial-tutorial/audio/inspection-capture-91c17ae636f1.words.json",
-          "bytes": 6122,
-          "sha256": "c5cab317aed32a944ba76b6eeef601b639df6a5509cc0f0d80d8a924af798bb6"
+          "path": "remedial-tutorial/audio/inspection-capture-e7e8f1a4244e.words.json",
+          "bytes": 5018,
+          "sha256": "cea1ca9b49c8c0118a9ff035a103701558c79ad82196c8bc9028bd838845f5fd"
         },
-        "durationSeconds": 23.640816,
-        "fromFrame": 7381,
-        "wordCount": 47
+        "durationSeconds": 19.226122,
+        "fromFrame": 6647,
+        "wordCount": 38
       },
       {
         "id": "inspection-carryover",
         "audio": {
-          "path": "remedial-tutorial/audio/inspection-carryover-efcfb36b3c1f.mp3",
+          "path": "remedial-tutorial/audio/inspection-carryover-933a92a5bad9.mp3",
           "bytes": 379968,
-          "sha256": "b8a3500e99d7d53376546986ed6af527dc06355f35272933dfb03e101b158631"
+          "sha256": "80827a9ad7ae362a4bb835f5b77886d384120036de9a53d2da31d1e6c71d71f7"
         },
         "receipt": {
-          "path": "remedial-tutorial/audio/inspection-carryover-efcfb36b3c1f-provenance.json",
-          "bytes": 957,
-          "sha256": "f33feab41bfca8a0ca07625f3aa72ad9432cc58c76db8507f69e808848276f5f"
+          "path": "remedial-tutorial/audio/inspection-carryover-933a92a5bad9-provenance.json",
+          "bytes": 999,
+          "sha256": "66d1be76cceea9866051a79c2ab98634d267edb4dcd126361ffa9c756baaa5a2"
         },
         "transcript": {
-          "path": "remedial-tutorial/audio/inspection-carryover-efcfb36b3c1f.words.json",
-          "bytes": 5296,
-          "sha256": "3ac27625b7c10ba3a917159686ccbb368ad3454e4da7c21adb1af16d82d78841"
+          "path": "remedial-tutorial/audio/inspection-carryover-933a92a5bad9.words.json",
+          "bytes": 6386,
+          "sha256": "876801cd6d3c84b471d06b98c0e4f23a297c347d208e76241975ad336fd4c088"
         },
         "durationSeconds": 23.719184,
-        "fromFrame": 8138,
-        "wordCount": 40
+        "fromFrame": 7272,
+        "wordCount": 49
       },
       {
         "id": "inspection-age",
@@ -1330,129 +1309,129 @@
           "sha256": "931ddac640fe80bc9c726324726e9abc61d91c0aea849955d752d2636c8d5ed3"
         },
         "durationSeconds": 18.703673,
-        "fromFrame": 8897,
+        "fromFrame": 8032,
         "wordCount": 37
       },
       {
         "id": "inspection-review",
         "audio": {
-          "path": "remedial-tutorial/audio/inspection-review-acc11b4583ca.mp3",
-          "bytes": 411315,
-          "sha256": "b2087e3f5cb0539d747a84f90b29a8cb9472a115c2350aafebf011e9a636345f"
+          "path": "remedial-tutorial/audio/inspection-review-80b9f5efdb2c.mp3",
+          "bytes": 359906,
+          "sha256": "4027e326607ada1aa30b876cbc0a460769454eec630494beea2c75bc3deb8493"
         },
         "receipt": {
-          "path": "remedial-tutorial/audio/inspection-review-acc11b4583ca-provenance.json",
-          "bytes": 1001,
-          "sha256": "621e70e2ae24a37d13be7da577cf151523de0b0173229ba16192a40563df29b5"
+          "path": "remedial-tutorial/audio/inspection-review-80b9f5efdb2c-provenance.json",
+          "bytes": 953,
+          "sha256": "2fd63965a42b69ccf458bc3052f91d93a6585dc1906066e3ca500640831a5d7f"
         },
         "transcript": {
-          "path": "remedial-tutorial/audio/inspection-review-acc11b4583ca.words.json",
-          "bytes": 6508,
-          "sha256": "274a934190bec978d00426daf609ed5d6aed8eef32d26ebbc3743737a3c823d5"
+          "path": "remedial-tutorial/audio/inspection-review-80b9f5efdb2c.words.json",
+          "bytes": 5505,
+          "sha256": "6df84cacc0b5c6e6b12685f721e3e984865a71f3e12ebee7b06cca122fb36132"
         },
-        "durationSeconds": 25.678367,
-        "fromFrame": 9506,
-        "wordCount": 50
+        "durationSeconds": 22.465306,
+        "fromFrame": 8642,
+        "wordCount": 42
       },
       {
         "id": "inspection-accept",
         "audio": {
-          "path": "remedial-tutorial/audio/inspection-accept-f99f6e95f170.mp3",
-          "bytes": 288017,
-          "sha256": "3ddc700f7c6be9d6058a36098b0beda41872eb048cc39fd4b4bf546f48d878ef"
+          "path": "remedial-tutorial/audio/inspection-accept-3227b748f8a6.mp3",
+          "bytes": 284256,
+          "sha256": "7e58feeb2768776d878838e144dd476c2d8c07a57284b6a13fb5545be21c62c2"
         },
         "receipt": {
-          "path": "remedial-tutorial/audio/inspection-accept-f99f6e95f170-provenance.json",
-          "bytes": 894,
-          "sha256": "0de53045305ae962b929561ebfbe3c38023facc4aac4390e6dff4aad9a1a74a3"
+          "path": "remedial-tutorial/audio/inspection-accept-3227b748f8a6-provenance.json",
+          "bytes": 892,
+          "sha256": "4e64ccf5165dc4b6239bc864e1bf691fb08bcaa48f21008a1ee30fbfb52170a9"
         },
         "transcript": {
-          "path": "remedial-tutorial/audio/inspection-accept-f99f6e95f170.words.json",
-          "bytes": 4284,
-          "sha256": "75c33ae3b81feaea6b7d2d53cfd24fd60dfdb3ec327742195843cc593ea1c69f"
+          "path": "remedial-tutorial/audio/inspection-accept-3227b748f8a6.words.json",
+          "bytes": 4031,
+          "sha256": "04bc794295688f0b6869bc772e53538fd6472c30eade0703e4927a0348b68eda"
         },
-        "durationSeconds": 17.972245,
-        "fromFrame": 10324,
-        "wordCount": 32
+        "durationSeconds": 17.737143,
+        "fromFrame": 9364,
+        "wordCount": 30
       },
       {
         "id": "inspection-reject",
         "audio": {
-          "path": "remedial-tutorial/audio/inspection-reject-7f8a57901f71.mp3",
-          "bytes": 226159,
-          "sha256": "fa0dc9a892265cccd43cb5dcd93f112e72a10a384259a9f5009fa473ad425982"
+          "path": "remedial-tutorial/audio/inspection-reject-cff862642561.mp3",
+          "bytes": 231593,
+          "sha256": "5922ea232cdcdf3676d446313cf4e892e592527aa451eabac849683883b654ea"
         },
         "receipt": {
-          "path": "remedial-tutorial/audio/inspection-reject-7f8a57901f71-provenance.json",
-          "bytes": 856,
-          "sha256": "f6ec5cd7316814b394906c20f30262d08479939858b20918b0fdb928ff6d8760"
+          "path": "remedial-tutorial/audio/inspection-reject-cff862642561-provenance.json",
+          "bytes": 878,
+          "sha256": "1a7f09e7de8412fb71738307424d5b797c857a5dbd74d28b0848f7f9c412080b"
         },
         "transcript": {
-          "path": "remedial-tutorial/audio/inspection-reject-7f8a57901f71.words.json",
-          "bytes": 3616,
-          "sha256": "9896c45991472669d09d58e59274e355a7addd772a29a701b1785b9ad2755c76"
+          "path": "remedial-tutorial/audio/inspection-reject-cff862642561.words.json",
+          "bytes": 3900,
+          "sha256": "174f4bec51d4efcedae1bfcd10f445bf6f8d9ac047bbd9a341edf92a220a3c4a"
         },
-        "durationSeconds": 14.106122,
-        "fromFrame": 10911,
-        "wordCount": 27
+        "durationSeconds": 14.445714,
+        "fromFrame": 9945,
+        "wordCount": 29
       },
       {
         "id": "inspection-ncr",
         "audio": {
-          "path": "remedial-tutorial/audio/inspection-ncr-86ce4b977fad.mp3",
-          "bytes": 258342,
-          "sha256": "9c068b6b9f1996863fdb6b40b50531fafd6a6282b0f3badda219da6ef4b2d608"
+          "path": "remedial-tutorial/audio/inspection-ncr-c65de8fafc45.mp3",
+          "bytes": 308497,
+          "sha256": "b40e91cbed7b0f83d57b13b38bd1b73882c0f32552adfb36f136d3aa5420a087"
         },
         "receipt": {
-          "path": "remedial-tutorial/audio/inspection-ncr-86ce4b977fad-provenance.json",
-          "bytes": 873,
-          "sha256": "26a28e9061e7943792bb3a68eb5b4b282fcca9764826b53c8ecea28e7587da25"
+          "path": "remedial-tutorial/audio/inspection-ncr-c65de8fafc45-provenance.json",
+          "bytes": 909,
+          "sha256": "5d7639d2bf09202fb011d4b4c244c312d44b5de749cdf0fb5340752a7addae95"
         },
         "transcript": {
-          "path": "remedial-tutorial/audio/inspection-ncr-86ce4b977fad.words.json",
-          "bytes": 3891,
-          "sha256": "7a80fa481cc04be70ce411b2ea8d50ba9306b507884649c34d287ab31369eacf"
+          "path": "remedial-tutorial/audio/inspection-ncr-c65de8fafc45.words.json",
+          "bytes": 4529,
+          "sha256": "779cc0e730e857eca9c92e9dc89ef14656c7f792d7b70269e451eb8254a694e5"
         },
-        "durationSeconds": 16.117551,
-        "fromFrame": 11382,
-        "wordCount": 29
+        "durationSeconds": 19.252245,
+        "fromFrame": 10427,
+        "wordCount": 34
       },
       {
         "id": "inspection-history",
         "audio": {
-          "path": "remedial-tutorial/audio/inspection-history-e7c5400a83fe.mp3",
-          "bytes": 351965,
-          "sha256": "e639b2312f08cfe1b10b60f4ec09ec4b12d3b6342956b33ef48a5b328c46ada4"
+          "path": "remedial-tutorial/audio/inspection-history-e463333c844f.mp3",
+          "bytes": 336083,
+          "sha256": "8b2a48c0bedc399c972b8452bd300dce4db87baae51511dc61f55e3647314664"
         },
         "receipt": {
-          "path": "remedial-tutorial/audio/inspection-history-e7c5400a83fe-provenance.json",
-          "bytes": 940,
-          "sha256": "50d71eb947c53fe96730a191e49893e33dbc24c3ef58da27a2cd93b22defd56b"
+          "path": "remedial-tutorial/audio/inspection-history-e463333c844f-provenance.json",
+          "bytes": 931,
+          "sha256": "50b4c4b67f6aeb17fb19209dff63674979e17d09670037aedb4994b9be95eec1"
         },
         "transcript": {
-          "path": "remedial-tutorial/audio/inspection-history-e7c5400a83fe.words.json",
-          "bytes": 5360,
-          "sha256": "fe4f33d5a802b235d27b0dd85fae278e2e14e56a45417b3ee119d026677e0d4a"
+          "path": "remedial-tutorial/audio/inspection-history-e463333c844f.words.json",
+          "bytes": 5227,
+          "sha256": "ff176dcf57533d20f2c925569e14512a2d7c5fedc0d6adc7dbd3e2beeebfac39"
         },
-        "durationSeconds": 21.96898,
-        "fromFrame": 11913,
-        "wordCount": 41
+        "durationSeconds": 20.976327,
+        "fromFrame": 11053,
+        "wordCount": 40
       }
     ],
     "master": {
-      "path": "remedial-tutorial/audio/candidate-narration-v1.wav",
-      "bytes": 40902478,
-      "sha256": "e73a326e3cd17b0fe1bb5d82a5554c4c5b58cbe8c2ce106bb3372a6b40ba5d0d"
+      "path": "remedial-tutorial/audio/candidate-narration-v2.wav",
+      "bytes": 38057678,
+      "sha256": "8d6d4473bef0fa34acb8c51db042a97b119992532e0b98ff8d0165e79fb41f56"
     },
     "transcript": {
-      "path": "remedial-tutorial/audio/candidate-measured-transcript.json",
-      "bytes": 138227,
-      "sha256": "36d3882693ee58f21d2d489ec98aa1d9df559966e45cde9af9c6556134c6e5bb"
+      "path": "remedial-tutorial/audio/candidate-measured-transcript-v2.json",
+      "bytes": 134008,
+      "sha256": "3176e0750e6f3181530180be49554055efbfa4d134f2786dccc7870977dbba96"
     },
     "cueAlignment": {
-      "path": "remedial-tutorial/audio/candidate-cue-alignment.json",
-      "bytes": 2580,
-      "sha256": "602a3832b89f1b8a96367ebd47a32a1c57c909c176f20186896e6289283bf7db"
+      "path": "remedial-tutorial/audio/candidate-cue-alignment-v2.json",
+      "bytes": 2752,
+      "sha256": "87291b6d0ce9793ad0a2f2cf35518d579c920ea4c6ea11fdb9b9a8558a6cd3ff"
     }
   },
   "music": {

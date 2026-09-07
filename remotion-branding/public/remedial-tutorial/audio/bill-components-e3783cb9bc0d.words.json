@@ -1,0 +1,282 @@
+{
+  "audioSha256": "9a71c71892cda8017ae218f8c00062b17e35e5ad778d89929c4db78700d5bcbb",
+  "model": "faster-whisper-small",
+  "modelRevision": "536b0662742c02347bc0e980a01041f333bce120",
+  "computeType": "int8",
+  "language": "en",
+  "initialPrompt": null,
+  "duration": 20.0620625,
+  "text": "You can also enter through bill of health. Open bill of health from home. Then select the remedial row. Read its components separately. Here, two cleaning remedials are open and five kappa actions are due. The total of seven is not a cleaning only count.",
+  "words": [
+    {
+      "word": " You",
+      "start": 0.0,
+      "end": 0.18,
+      "probability": 0.9477234482765198
+    },
+    {
+      "word": " can",
+      "start": 0.18,
+      "end": 0.34,
+      "probability": 0.9965167045593262
+    },
+    {
+      "word": " also",
+      "start": 0.34,
+      "end": 0.64,
+      "probability": 0.996792733669281
+    },
+    {
+      "word": " enter",
+      "start": 0.64,
+      "end": 0.98,
+      "probability": 0.9963783621788025
+    },
+    {
+      "word": " through",
+      "start": 0.98,
+      "end": 1.24,
+      "probability": 0.967958390712738
+    },
+    {
+      "word": " bill",
+      "start": 1.24,
+      "end": 1.46,
+      "probability": 0.6125141382217407
+    },
+    {
+      "word": " of",
+      "start": 1.46,
+      "end": 1.68,
+      "probability": 0.9776157736778259
+    },
+    {
+      "word": " health.",
+      "start": 1.68,
+      "end": 2.0,
+      "probability": 0.953610897064209
+    },
+    {
+      "word": " Open",
+      "start": 2.7200000000000006,
+      "end": 3.36,
+      "probability": 0.969860315322876
+    },
+    {
+      "word": " bill",
+      "start": 3.36,
+      "end": 3.62,
+      "probability": 0.9132918119430542
+    },
+    {
+      "word": " of",
+      "start": 3.62,
+      "end": 3.82,
+      "probability": 0.992954671382904
+    },
+    {
+      "word": " health",
+      "start": 3.82,
+      "end": 4.14,
+      "probability": 0.9891930222511292
+    },
+    {
+      "word": " from",
+      "start": 4.14,
+      "end": 4.5,
+      "probability": 0.9696878790855408
+    },
+    {
+      "word": " home.",
+      "start": 4.5,
+      "end": 4.86,
+      "probability": 0.9590632915496826
+    },
+    {
+      "word": " Then",
+      "start": 5.48,
+      "end": 5.8,
+      "probability": 0.9786427021026611
+    },
+    {
+      "word": " select",
+      "start": 5.8,
+      "end": 6.14,
+      "probability": 0.9403219223022461
+    },
+    {
+      "word": " the",
+      "start": 6.14,
+      "end": 6.44,
+      "probability": 0.9912350177764893
+    },
+    {
+      "word": " remedial",
+      "start": 6.44,
+      "end": 6.86,
+      "probability": 0.9880841076374054
+    },
+    {
+      "word": " row.",
+      "start": 6.86,
+      "end": 7.12,
+      "probability": 0.985808253288269
+    },
+    {
+      "word": " Read",
+      "start": 8.1,
+      "end": 8.56,
+      "probability": 0.9964029788970947
+    },
+    {
+      "word": " its",
+      "start": 8.56,
+      "end": 8.74,
+      "probability": 0.9560685157775879
+    },
+    {
+      "word": " components",
+      "start": 8.74,
+      "end": 9.16,
+      "probability": 0.8965900540351868
+    },
+    {
+      "word": " separately.",
+      "start": 9.16,
+      "end": 9.66,
+      "probability": 0.9905791878700256
+    },
+    {
+      "word": " Here,",
+      "start": 11.06,
+      "end": 11.34,
+      "probability": 0.9905809760093689
+    },
+    {
+      "word": " two",
+      "start": 11.96,
+      "end": 12.18,
+      "probability": 0.7697623372077942
+    },
+    {
+      "word": " cleaning",
+      "start": 12.18,
+      "end": 12.52,
+      "probability": 0.9880470037460327
+    },
+    {
+      "word": " remedials",
+      "start": 12.52,
+      "end": 13.12,
+      "probability": 0.807980090379715
+    },
+    {
+      "word": " are",
+      "start": 13.12,
+      "end": 13.4,
+      "probability": 0.9964140057563782
+    },
+    {
+      "word": " open",
+      "start": 13.4,
+      "end": 13.74,
+      "probability": 0.9714369773864746
+    },
+    {
+      "word": " and",
+      "start": 13.74,
+      "end": 14.28,
+      "probability": 0.7797483205795288
+    },
+    {
+      "word": " five",
+      "start": 14.28,
+      "end": 14.58,
+      "probability": 0.9332448840141296
+    },
+    {
+      "word": " kappa",
+      "start": 14.58,
+      "end": 15.0,
+      "probability": 0.7015523016452789
+    },
+    {
+      "word": " actions",
+      "start": 15.0,
+      "end": 15.46,
+      "probability": 0.9937953948974609
+    },
+    {
+      "word": " are",
+      "start": 15.46,
+      "end": 15.7,
+      "probability": 0.9890753030776978
+    },
+    {
+      "word": " due.",
+      "start": 15.7,
+      "end": 15.92,
+      "probability": 0.9987651109695435
+    },
+    {
+      "word": " The",
+      "start": 17.04,
+      "end": 17.28,
+      "probability": 0.9960290193557739
+    },
+    {
+      "word": " total",
+      "start": 17.28,
+      "end": 17.54,
+      "probability": 0.9958159327507019
+    },
+    {
+      "word": " of",
+      "start": 17.54,
+      "end": 17.76,
+      "probability": 0.9969685673713684
+    },
+    {
+      "word": " seven",
+      "start": 17.76,
+      "end": 18.1,
+      "probability": 0.7424424886703491
+    },
+    {
+      "word": " is",
+      "start": 18.1,
+      "end": 18.32,
+      "probability": 0.9942588806152344
+    },
+    {
+      "word": " not",
+      "start": 18.32,
+      "end": 18.5,
+      "probability": 0.9985163807868958
+    },
+    {
+      "word": " a",
+      "start": 18.5,
+      "end": 18.64,
+      "probability": 0.993956446647644
+    },
+    {
+      "word": " cleaning",
+      "start": 18.64,
+      "end": 18.9,
+      "probability": 0.989561140537262
+    },
+    {
+      "word": " only",
+      "start": 18.9,
+      "end": 19.26,
+      "probability": 0.8787195086479187
+    },
+    {
+      "word": " count.",
+      "start": 19.26,
+      "end": 19.58,
+      "probability": 0.9941068887710571
+    }
+  ]
+}

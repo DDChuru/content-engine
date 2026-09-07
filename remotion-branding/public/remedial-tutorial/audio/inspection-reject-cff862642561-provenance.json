@@ -1,0 +1,24 @@
+{
+  "provider": "ElevenLabs",
+  "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+  "providerName": "DC",
+  "seriesName": "Daniel",
+  "request": {
+    "text": "If the correction is not satisfactory, select Reject. Add the optional reason, then Confirm reject. The decision is recorded and the finding returns to open. Reject is not closure.",
+    "model_id": "eleven_multilingual_v2",
+    "voice_settings": {
+      "stability": 0.55,
+      "similarity_boost": 0.8,
+      "style": 0.35,
+      "use_speaker_boost": true
+    }
+  },
+  "requestHash": "cff8626425619c49dacc2bc5641223f5030b5230591ddc733c1f2fbd3653c926",
+  "generatedAt": "2026-09-07T04:16:12.963Z",
+  "requestId": "PM4EuW0yKisxkd09U09A",
+  "audio": {
+    "path": "remedial-tutorial/audio/inspection-reject-cff862642561.mp3",
+    "bytes": 231593,
+    "sha256": "5922ea232cdcdf3676d446313cf4e892e592527aa451eabac849683883b654ea"
+  }
+}

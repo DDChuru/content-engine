@@ -3,18 +3,18 @@
   "fps": 30,
   "width": 1920,
   "height": 1080,
-  "totalFrames": 12782,
+  "totalFrames": 11893,
   "timingStatus": "measured-recordings",
   "audioStatus": "generated-measured",
   "audio": {
-    "path": "remedial-tutorial/audio/candidate-narration-v1.wav",
-    "bytes": 40902478,
-    "sha256": "e73a326e3cd17b0fe1bb5d82a5554c4c5b58cbe8c2ce106bb3372a6b40ba5d0d"
+    "path": "remedial-tutorial/audio/candidate-narration-v2.wav",
+    "bytes": 38057678,
+    "sha256": "8d6d4473bef0fa34acb8c51db042a97b119992532e0b98ff8d0165e79fb41f56"
   },
   "measuredTranscript": {
-    "path": "remedial-tutorial/audio/candidate-measured-transcript.json",
-    "bytes": 138227,
-    "sha256": "36d3882693ee58f21d2d489ec98aa1d9df559966e45cde9af9c6556134c6e5bb"
+    "path": "remedial-tutorial/audio/candidate-measured-transcript-v2.json",
+    "bytes": 134008,
+    "sha256": "3176e0750e6f3181530180be49554055efbfa4d134f2786dccc7870977dbba96"
   },
   "wordTimingVerified": true,
   "narrationApprovalRef": null,
@@ -40,13 +40,87 @@
       "emphasisAtFrame": 0
     },
     {
+      "id": "home-entry",
+      "kind": "screen",
+      "chapter": "01 · START FROM HOME",
+      "headline": "Start with the Home banner",
+      "body": "Remedial actions needing follow-up appear on Home. Select the banner to open Follow-ups.",
+      "emphasis": "REMEDIAL ACTIONS AWAITING FOLLOW-UP",
+      "narration": "On Home, remedial actions needing follow-up appear in the Remedial actions awaiting follow-up banner. Select this banner to open Follow-ups and return to the outstanding findings.",
+      "claimIds": [
+        "cleaning-queue",
+        "baseline-context"
+      ],
+      "slot": "cleaning-baseline",
+      "cues": [
+        {
+          "proof": "home",
+          "fromFrame": 0,
+          "focusAtFrame": 18,
+          "detail": {
+            "x": 0.045,
+            "y": 0.03,
+            "w": 0.91,
+            "h": 0.101
+          }
+        }
+      ],
+      "note": "",
+      "durationInFrames": 479,
+      "overlapFromPrevious": 0,
+      "from": 150,
+      "voiceFromFrame": 18,
+      "voiceToFrame": 449,
+      "emphasisAtFrame": 90
+    },
+    {
+      "id": "bill-components",
+      "kind": "screen",
+      "chapter": "01 · SECOND ENTRY",
+      "headline": "Or use Bill of Health",
+      "body": "Home → Bill of Health → Remedial. Read Cleaning findings and CAPA actions separately.",
+      "emphasis": "2 Cleaning open + 5 CAPA due = 7 in this view.",
+      "narration": "You can also enter through Bill of Health. Open Bill of Health from Home, then select the Remedial row. Read its components separately: here, two cleaning remedials are open and five CAPA actions are due. The total of seven is not a Cleaning-only count.",
+      "claimIds": [
+        "bill-components",
+        "baseline-context"
+      ],
+      "slot": "cleaning-baseline",
+      "cues": [
+        {
+          "proof": "home",
+          "fromFrame": 0,
+          "focusAtFrame": 18,
+          "detail": null
+        },
+        {
+          "proof": "bill",
+          "fromFrame": 182,
+          "focusAtFrame": 200,
+          "detail": {
+            "x": 0.043,
+            "y": 0.593,
+            "w": 0.914,
+            "h": 0.102
+          }
+        }
+      ],
+      "note": "",
+      "durationInFrames": 651,
+      "overlapFromPrevious": 0,
+      "from": 629,
+      "voiceFromFrame": 18,
+      "voiceToFrame": 621,
+      "emphasisAtFrame": 200
+    },
+    {
       "id": "two-outcomes",
       "kind": "screen",
       "chapter": "01 · Daily Cleaning",
       "headline": "Recorded today.\nStill needs follow-up.",
       "body": "A failed scheduled check satisfies its occurrence. The finding stays open.",
       "emphasis": "Recording the failure clears today’s due occurrence. It does not clear the finding.",
-      "narration": "Recording the failure clears today's due occurrence. It does not clear the finding. The check has been recorded for today; now the finding needs its own follow-up. These Bakery Demo records use simulated inspection and work.",
+      "narration": "Recording the failure clears today's due occurrence. It does not clear the finding. The check has been recorded for today; now the finding needs its own follow-up.",
       "claimIds": [
         "cleaning-occurrence",
         "demo-disclosure"
@@ -60,41 +134,12 @@
           "detail": null
         }
       ],
-      "note": "After the full demo session: 19 captured includes 16 passes, 2 failures and 1 unavailable result.",
-      "durationInFrames": 609,
+      "note": "",
+      "durationInFrames": 396,
       "overlapFromPrevious": 0,
-      "from": 150,
+      "from": 1280,
       "voiceFromFrame": 18,
-      "voiceToFrame": 580,
-      "emphasisAtFrame": 90
-    },
-    {
-      "id": "earlier-baseline",
-      "kind": "screen",
-      "chapter": "01 · Earlier baseline",
-      "headline": "What “Still to do” means",
-      "body": "This earlier view has zero captures. A later failed submission counts as a captured occurrence.",
-      "emphasis": "Captured is different from passed.",
-      "narration": "This earlier baseline has zero captured checks. The later nineteen captures include sixteen passes, two failures and one unavailable result. They are not nineteen passes.",
-      "claimIds": [
-        "cleaning-occurrence",
-        "baseline-context"
-      ],
-      "slot": "cleaning-baseline",
-      "cues": [
-        {
-          "proof": "summary",
-          "fromFrame": 0,
-          "focusAtFrame": 18,
-          "detail": null
-        }
-      ],
-      "note": "EARLIER BASELINE · 6 Sept 2026 · before the training operations",
-      "durationInFrames": 468,
-      "overlapFromPrevious": 0,
-      "from": 759,
-      "voiceFromFrame": 18,
-      "voiceToFrame": 439,
+      "voiceToFrame": 366,
       "emphasisAtFrame": 90
     },
     {
@@ -104,7 +149,7 @@
       "headline": "Keep the finding facts",
       "body": "Grade and reason are required. Action taken and photo evidence are optional in this flow.",
       "emphasis": "A record of what was found.",
-      "narration": "The Cleaning tutorial covers this form. Keep the grade and failure reason. Action taken and photo evidence are optional here. The genuine acknowledgement confirms that the completion was recorded.",
+      "narration": "Keep the grade and failure reason from the original Cleaning check. Action taken and photo evidence are optional here. The acknowledgement confirms that the completion was recorded.",
       "claimIds": [
         "cleaning-fields"
       ],
@@ -118,80 +163,17 @@
         },
         {
           "proof": "recorded",
-          "fromFrame": 352,
-          "focusAtFrame": 370,
+          "fromFrame": 313,
+          "focusAtFrame": 331,
           "detail": null
         }
       ],
       "note": "",
-      "durationInFrames": 504,
+      "durationInFrames": 445,
       "overlapFromPrevious": 0,
-      "from": 1227,
+      "from": 1676,
       "voiceFromFrame": 18,
-      "voiceToFrame": 475,
-      "emphasisAtFrame": 90
-    },
-    {
-      "id": "home-entry",
-      "kind": "screen",
-      "chapter": "02 · Find the open finding",
-      "headline": "Return through Home",
-      "body": "The follow-up banner and Bill of Health lead back to outstanding remedials.",
-      "emphasis": "Return to the finding after correction.",
-      "narration": "Use the Home follow-up banner or Bill of Health to return to outstanding remedials. This is the earlier baseline navigation view.",
-      "claimIds": [
-        "cleaning-queue",
-        "baseline-context"
-      ],
-      "slot": "cleaning-baseline",
-      "cues": [
-        {
-          "proof": "home",
-          "fromFrame": 0,
-          "focusAtFrame": 18,
-          "detail": null
-        }
-      ],
-      "note": "EARLIER BASELINE · counts precede the new demo records",
-      "durationInFrames": 324,
-      "overlapFromPrevious": 0,
-      "from": 1731,
-      "voiceFromFrame": 18,
-      "voiceToFrame": 295,
-      "emphasisAtFrame": 90
-    },
-    {
-      "id": "bill-components",
-      "kind": "screen",
-      "chapter": "02 · Read the Bill of Health",
-      "headline": "Read both components",
-      "body": "The Remedial row combines Cleaning findings with CAPA actions due. Read each component separately.",
-      "emphasis": "2 Cleaning open + 5 CAPA due = 7 in this baseline.",
-      "narration": "The Remedial row can combine cleaning findings and CAPA actions due. This baseline shows two cleaning remedials open and five CAPA actions due. Its total of seven is not a Cleaning-only count.",
-      "claimIds": [
-        "bill-components",
-        "baseline-context"
-      ],
-      "slot": "cleaning-baseline",
-      "cues": [
-        {
-          "proof": "bill",
-          "fromFrame": 0,
-          "focusAtFrame": 18,
-          "detail": {
-            "x": 0.043,
-            "y": 0.593,
-            "w": 0.914,
-            "h": 0.102
-          }
-        }
-      ],
-      "note": "EARLIER BASELINE · CAPA follows its own formal workflow",
-      "durationInFrames": 504,
-      "overlapFromPrevious": 0,
-      "from": 2055,
-      "voiceFromFrame": 18,
-      "voiceToFrame": 475,
+      "voiceToFrame": 415,
       "emphasisAtFrame": 90
     },
     {
@@ -214,10 +196,10 @@
           "detail": null
         }
       ],
-      "note": "7 Sept 2026 · read-only queue view; separate from the 6 Sept Blue Covers example.",
-      "durationInFrames": 198,
+      "note": "",
+      "durationInFrames": 199,
       "overlapFromPrevious": 0,
-      "from": 2559,
+      "from": 2121,
       "voiceFromFrame": 18,
       "voiceToFrame": 169,
       "emphasisAtFrame": 90
@@ -243,10 +225,10 @@
           "detail": null
         }
       ],
-      "note": "Genuine capture uses ALL + Blue Covers search; CLEANING is not selected.",
-      "durationInFrames": 558,
+      "note": "",
+      "durationInFrames": 559,
       "overlapFromPrevious": 0,
-      "from": 2757,
+      "from": 2320,
       "voiceFromFrame": 18,
       "voiceToFrame": 529,
       "emphasisAtFrame": 90
@@ -258,7 +240,7 @@
       "headline": "Return. Observe. Verify.",
       "body": "The responsible person checks the corrected condition before signing off.",
       "emphasis": "The button records acceptance; the person supplies the honest recheck.",
-      "narration": "Before sign-off, a responsible person must return and verify the correction. A site manager or above selects Confirm followed up. The button does not enforce a physical recheck. This demo records simulated work only.",
+      "narration": "Before sign-off, a responsible person must return and verify the correction. A site manager or above selects Confirm followed up. The button records acceptance; the person must check the actual condition.",
       "claimIds": [
         "human-recheck",
         "demo-disclosure"
@@ -273,11 +255,11 @@
         }
       ],
       "note": "",
-      "durationInFrames": 550,
+      "durationInFrames": 523,
       "overlapFromPrevious": 0,
-      "from": 3315,
+      "from": 2879,
       "voiceFromFrame": 18,
-      "voiceToFrame": 521,
+      "voiceToFrame": 493,
       "emphasisAtFrame": 90
     },
     {
@@ -287,7 +269,7 @@
       "headline": "Confirm what you observed",
       "body": "Add a truthful follow-up note and a photo when useful. Both are optional.",
       "emphasis": "The inner CONFIRM records the verification.",
-      "narration": "Confirm followed up opens the optional note and photo form. Add truthful evidence when available, then select the inner Confirm. The demo note explicitly describes a simulated correction and recheck.",
+      "narration": "Confirm followed up opens the optional note and photo form. Add a follow-up note and photo when useful, then select the inner Confirm to record the verification.",
       "claimIds": [
         "cleaning-verification",
         "human-recheck"
@@ -307,11 +289,11 @@
         }
       ],
       "note": "",
-      "durationInFrames": 567,
+      "durationInFrames": 393,
       "overlapFromPrevious": 0,
-      "from": 3865,
+      "from": 3402,
       "voiceFromFrame": 18,
-      "voiceToFrame": 538,
+      "voiceToFrame": 363,
       "emphasisAtFrame": 90
     },
     {
@@ -320,8 +302,8 @@
       "chapter": "03 · Result of confirmation",
       "headline": "The open card leaves the queue",
       "body": "The same Blue Covers search now returns “No matches”.",
-      "emphasis": "No success dialog is shown in this flow.",
-      "narration": "After confirmation, the same Blue Covers search returns No matches. The finding has left the open queue; this flow does not show a success dialog.",
+      "emphasis": "The original failure stays in the record.",
+      "narration": "After confirmation, the same Blue Covers search returns No matches. The finding has left the open queue, and its original failure remains in the record.",
       "claimIds": [
         "cleaning-verification"
       ],
@@ -335,11 +317,11 @@
         }
       ],
       "note": "",
-      "durationInFrames": 439,
+      "durationInFrames": 395,
       "overlapFromPrevious": 0,
-      "from": 4432,
+      "from": 3795,
       "voiceFromFrame": 18,
-      "voiceToFrame": 410,
+      "voiceToFrame": 365,
       "emphasisAtFrame": 90
     },
     {
@@ -370,9 +352,9 @@
         }
       ],
       "note": "",
-      "durationInFrames": 725,
+      "durationInFrames": 726,
       "overlapFromPrevious": 0,
-      "from": 4871,
+      "from": 4190,
       "voiceFromFrame": 18,
       "voiceToFrame": 696,
       "emphasisAtFrame": 90
@@ -384,7 +366,7 @@
       "headline": "Two acts. One retained record.",
       "body": "Capture records the failure. Later verification records the sign-off.",
       "emphasis": "Attribution identifies the actor; it is not assignment.",
-      "narration": "The stored record retains the original failure and capture attribution alongside later verification attribution. This mobile screen does not display both people and timestamps together. Do not read that evidence into the green state. Attribution identifies an actor, not an assignee.",
+      "narration": "The record retains the original failure and its capture attribution alongside the later verification attribution. Signing off the follow-up does not rewrite the failure as a pass. Attribution identifies who acted; it does not assign the finding to an owner.",
       "claimIds": [
         "cleaning-audit",
         "no-assignment"
@@ -398,12 +380,12 @@
           "detail": null
         }
       ],
-      "note": "Source explanation only · no actor names or timestamps have been added to the app.",
-      "durationInFrames": 720,
+      "note": "",
+      "durationInFrames": 664,
       "overlapFromPrevious": 0,
-      "from": 5596,
+      "from": 4916,
       "voiceFromFrame": 18,
-      "voiceToFrame": 691,
+      "voiceToFrame": 634,
       "emphasisAtFrame": 90
     },
     {
@@ -427,9 +409,9 @@
         }
       ],
       "note": "",
-      "durationInFrames": 510,
+      "durationInFrames": 511,
       "overlapFromPrevious": 0,
-      "from": 6316,
+      "from": 5580,
       "voiceFromFrame": 18,
       "voiceToFrame": 481,
       "emphasisAtFrame": 90
@@ -449,9 +431,9 @@
       "slot": null,
       "cues": [],
       "note": "",
-      "durationInFrames": 537,
+      "durationInFrames": 538,
       "overlapFromPrevious": 0,
-      "from": 6826,
+      "from": 6091,
       "voiceFromFrame": 18,
       "voiceToFrame": 508,
       "emphasisAtFrame": 90
@@ -463,7 +445,7 @@
       "headline": "Capture, then complete the inspection",
       "body": "Record before evidence, severity, category, section or area, and description.",
       "emphasis": "SAVE FINDING is local; Sign & Complete uploads the findings.",
-      "narration": "Capture the before photo and finding facts. These labelled demo cases use the Android camera test scene, not a physical defect. Save finding keeps a draft on the device. Complete, then Sign and Complete, uploads the findings and issues the inspection. Then check the shared open queue.",
+      "narration": "Capture the before photo and record the severity, category, area and description. Save finding keeps a draft on the device. Complete, then Sign and Complete, uploads the findings and issues the inspection. Then check the shared open queue.",
       "claimIds": [
         "inspection-creation"
       ],
@@ -477,29 +459,29 @@
         },
         {
           "proof": "local-saved",
-          "fromFrame": 365,
-          "focusAtFrame": 383,
+          "fromFrame": 203,
+          "focusAtFrame": 221,
           "detail": null
         },
         {
           "proof": "complete-issued",
-          "fromFrame": 472,
-          "focusAtFrame": 490,
+          "fromFrame": 311,
+          "focusAtFrame": 329,
           "detail": null
         },
         {
           "proof": "server-open",
-          "fromFrame": 656,
-          "focusAtFrame": 674,
+          "fromFrame": 508,
+          "focusAtFrame": 526,
           "detail": null
         }
       ],
-      "note": "B and C: Optional mode · A: separate Required mode · literal DEMO signature; real account attribution retained.",
-      "durationInFrames": 757,
+      "note": "",
+      "durationInFrames": 625,
       "overlapFromPrevious": 0,
-      "from": 7363,
+      "from": 6629,
       "voiceFromFrame": 18,
-      "voiceToFrame": 728,
+      "voiceToFrame": 595,
       "emphasisAtFrame": 90
     },
     {
@@ -508,8 +490,8 @@
       "chapter": "04 · Carry-over queue",
       "headline": "Follow “CARRIES OVER”",
       "body": "Bill of Health → Inspection Remedials → Follow-ups → INSPECTIONS → OPEN VERIFY FLOW.",
-      "emphasis": "The real badge says “today”. No later-day comparison.",
-      "narration": "Below Carries over, open Inspection Remedials. In Follow-ups, select Inspections, then Open verify flow. Open and remedied findings count across inspection dates and statuses. These new demo findings are not a later-day comparison; their real age is shown.",
+      "emphasis": "Open findings carry over until closed or escalated.",
+      "narration": "Below Carries over, open Inspection Remedials. In Follow-ups, select Inspections, then Open verify flow. Open and remedied findings remain in the queue across inspection dates and statuses until their own decision closes or escalates them. Use the age badge to see how long a finding has been open.",
       "claimIds": [
         "inspection-persistence"
       ],
@@ -523,27 +505,27 @@
         },
         {
           "proof": "followups",
-          "fromFrame": 148,
-          "focusAtFrame": 166,
+          "fromFrame": 137,
+          "focusAtFrame": 155,
           "detail": null
         },
         {
           "proof": "verify-open",
-          "fromFrame": 250,
-          "focusAtFrame": 268,
+          "fromFrame": 211,
+          "focusAtFrame": 229,
           "detail": null
         },
         {
           "proof": "age-current",
-          "fromFrame": 542,
-          "focusAtFrame": 560,
+          "fromFrame": 579,
+          "focusAtFrame": 597,
           "detail": null
         }
       ],
-      "note": "No aged Inspection record was available. Same-day demo evidence; carry-over rule verified in source.",
-      "durationInFrames": 759,
+      "note": "",
+      "durationInFrames": 760,
       "overlapFromPrevious": 0,
-      "from": 8120,
+      "from": 7254,
       "voiceFromFrame": 18,
       "voiceToFrame": 730,
       "emphasisAtFrame": 90
@@ -562,9 +544,9 @@
       "slot": null,
       "cues": [],
       "note": "",
-      "durationInFrames": 609,
+      "durationInFrames": 610,
       "overlapFromPrevious": 0,
-      "from": 8879,
+      "from": 8014,
       "voiceFromFrame": 18,
       "voiceToFrame": 580,
       "emphasisAtFrame": 90
@@ -576,7 +558,7 @@
       "headline": "Before. Action. After.",
       "body": "Review what was found, what was done, and any after evidence.",
       "emphasis": "Required after evidence depends on the parent inspection’s photo mode.",
-      "narration": "Review the before evidence and description. Read any remedial action actually logged. In Required mode, Accept asks for an after photo. Attach the after evidence before acceptance; this demo uses the Android test scene. Other modes do not impose that gate. There is no structured owner, due date or SLA.",
+      "narration": "Review the before evidence and description. Read any remedial action logged. In Required mode, Accept asks for an after photo. Attach the after evidence before acceptance. Other modes do not impose that gate. There is no structured owner, due date or SLA.",
       "claimIds": [
         "inspection-evidence",
         "no-assignment"
@@ -591,33 +573,33 @@
         },
         {
           "proof": "after-required-alert",
-          "fromFrame": 242,
-          "focusAtFrame": 260,
+          "fromFrame": 176,
+          "focusAtFrame": 194,
           "detail": null
         },
         {
           "proof": "after-attached",
-          "fromFrame": 380,
-          "focusAtFrame": 398,
+          "fromFrame": 331,
+          "focusAtFrame": 349,
           "detail": null
         }
       ],
-      "note": "Case A uses Required mode despite the attachment control saying “optional”. All photos show the Android test scene.",
-      "durationInFrames": 818,
+      "note": "",
+      "durationInFrames": 722,
       "overlapFromPrevious": 0,
-      "from": 9488,
+      "from": 8624,
       "voiceFromFrame": 18,
-      "voiceToFrame": 789,
+      "voiceToFrame": 692,
       "emphasisAtFrame": 90
     },
     {
       "id": "inspection-accept",
       "kind": "screen",
-      "chapter": "05 · Explicit disposition · case A",
+      "chapter": "05 · ACCEPT THE CORRECTION",
       "headline": "ACCEPT closes the finding",
       "body": "Verify the correction and its evidence before accepting.",
       "emphasis": "Closed is an explicit decision.",
-      "narration": "On demo case A, attach the required after photo and record the simulated action taken. Accept closes the finding and records an accepted verification. The Closed tab now shows the verified result.",
+      "narration": "Attach the required after photo, record the action taken, and verify the correction. Accept closes the finding and records an accepted verification. The Closed tab now shows the verified result.",
       "claimIds": [
         "inspection-accept"
       ],
@@ -631,17 +613,17 @@
         },
         {
           "proof": "closed-accepted",
-          "fromFrame": 267,
-          "focusAtFrame": 285,
+          "fromFrame": 243,
+          "focusAtFrame": 261,
           "detail": null
         }
       ],
-      "note": "Case A · genuine accepted verification; simulated correction and recheck only.",
-      "durationInFrames": 587,
+      "note": "",
+      "durationInFrames": 581,
       "overlapFromPrevious": 0,
-      "from": 10306,
+      "from": 9346,
       "voiceFromFrame": 18,
-      "voiceToFrame": 558,
+      "voiceToFrame": 551,
       "emphasisAtFrame": 90
     },
     {
@@ -649,9 +631,9 @@
       "kind": "screen",
       "chapter": "05 · Explicit disposition · case B",
       "headline": "REJECT returns it to open",
-      "body": "Use a separate case. Enter a reason if useful, then CONFIRM REJECT.",
+      "body": "Reject an unsatisfactory correction. Enter a reason if useful, then CONFIRM REJECT.",
       "emphasis": "Rejected is still open for further work.",
-      "narration": "Use a separate case for Reject. Add the optional reason, then Confirm reject. The decision is recorded and the finding returns to open. Reject is not closure.",
+      "narration": "If the correction is not satisfactory, select Reject. Add the optional reason, then Confirm reject. The decision is recorded and the finding returns to open. Reject is not closure.",
       "claimIds": [
         "inspection-reject"
       ],
@@ -665,17 +647,17 @@
         },
         {
           "proof": "returned-open",
-          "fromFrame": 238,
-          "focusAtFrame": 256,
+          "fromFrame": 266,
+          "focusAtFrame": 284,
           "detail": null
         }
       ],
       "note": "",
-      "durationInFrames": 471,
+      "durationInFrames": 482,
       "overlapFromPrevious": 0,
-      "from": 10893,
+      "from": 9927,
       "voiceFromFrame": 18,
-      "voiceToFrame": 442,
+      "voiceToFrame": 452,
       "emphasisAtFrame": 90
     },
     {
@@ -683,9 +665,9 @@
       "kind": "screen",
       "chapter": "05 · Explicit disposition · case C",
       "headline": "NCR is a deliberate handoff",
-      "body": "Use a separate case for NCR → Escalate to NCR → Escalate.",
+      "body": "For formal escalation: NCR → Escalate to NCR → Escalate.",
       "emphasis": "A linked formal NCR now continues separately.",
-      "narration": "On a third case, NCR opens the Escalate to NCR dialog. Escalate creates and links a formal NCR and marks the finding escalated. Inspection findings do not escalate automatically.",
+      "narration": "For a finding that needs formal escalation, select NCR to open the Escalate to NCR dialog. Escalate creates and links a formal NCR and marks the finding escalated. Inspection findings do not escalate automatically.",
       "claimIds": [
         "inspection-ncr"
       ],
@@ -699,17 +681,17 @@
         },
         {
           "proof": "escalated-linked",
-          "fromFrame": 176,
-          "focusAtFrame": 194,
+          "fromFrame": 277,
+          "focusAtFrame": 295,
           "detail": null
         }
       ],
       "note": "",
-      "durationInFrames": 531,
+      "durationInFrames": 626,
       "overlapFromPrevious": 0,
-      "from": 11364,
+      "from": 10409,
       "voiceFromFrame": 18,
-      "voiceToFrame": 502,
+      "voiceToFrame": 596,
       "emphasisAtFrame": 90
     },
     {
@@ -718,8 +700,8 @@
       "chapter": "05 · Keep the history",
       "headline": "Read the decision trail",
       "body": "Recent Closed history preserves the decision and actor. The Bill still shows one Inspection finding open.",
-      "emphasis": "B remains open. C continues as NCR-2026-00044.",
-      "narration": "The recent Closed view shows decision history, actor and comment, but no event time. Its thirty-day window limits this view, not stored history. The final Bill still includes the rejected finding: it remains open and needs its own follow-up.",
+      "emphasis": "Rejected findings remain open. Linked NCRs continue separately.",
+      "narration": "Use the recent Closed view to read the decision history, actor and comment. Its thirty-day window limits this view, not stored history. The final Bill still includes the rejected finding: it remains open and needs its own follow-up.",
       "claimIds": [
         "inspection-history",
         "no-assignment"
@@ -734,17 +716,17 @@
         },
         {
           "proof": "bill-after",
-          "fromFrame": 424,
-          "focusAtFrame": 442,
+          "fromFrame": 391,
+          "focusAtFrame": 409,
           "detail": null
         }
       ],
-      "note": "No event time is displayed in this mobile history. Reopen is not demonstrated.",
-      "durationInFrames": 707,
+      "note": "",
+      "durationInFrames": 678,
       "overlapFromPrevious": 0,
-      "from": 11895,
+      "from": 11035,
       "voiceFromFrame": 18,
-      "voiceToFrame": 678,
+      "voiceToFrame": 648,
       "emphasisAtFrame": 90
     },
     {
@@ -761,7 +743,7 @@
       "note": "",
       "durationInFrames": 180,
       "overlapFromPrevious": 0,
-      "from": 12602,
+      "from": 11713,
       "voiceFromFrame": 0,
       "voiceToFrame": 0,
       "emphasisAtFrame": 0

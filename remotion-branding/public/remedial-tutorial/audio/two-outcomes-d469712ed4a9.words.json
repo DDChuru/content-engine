@@ -1,0 +1,180 @@
+{
+  "audioSha256": "9ca118db59d71b9209120750caa82c46f7fc22db2f1971b2b0d1de606e7af39e",
+  "model": "faster-whisper-small",
+  "modelRevision": "536b0662742c02347bc0e980a01041f333bce120",
+  "computeType": "int8",
+  "language": "en",
+  "initialPrompt": null,
+  "duration": 11.5635625,
+  "text": "Recording the failure clears today's due occurrence. It does not clear the finding. The check has been recorded for today. Now the finding needs its own follow-up.",
+  "words": [
+    {
+      "word": " Recording",
+      "start": 0.0,
+      "end": 0.46,
+      "probability": 0.8462969958782196
+    },
+    {
+      "word": " the",
+      "start": 0.46,
+      "end": 0.64,
+      "probability": 0.9892780780792236
+    },
+    {
+      "word": " failure",
+      "start": 0.64,
+      "end": 1.04,
+      "probability": 0.9888845682144165
+    },
+    {
+      "word": " clears",
+      "start": 1.04,
+      "end": 1.48,
+      "probability": 0.9865753054618835
+    },
+    {
+      "word": " today's",
+      "start": 1.48,
+      "end": 2.24,
+      "probability": 0.9156602621078491
+    },
+    {
+      "word": " due",
+      "start": 2.24,
+      "end": 2.44,
+      "probability": 0.7685521841049194
+    },
+    {
+      "word": " occurrence.",
+      "start": 2.44,
+      "end": 2.78,
+      "probability": 0.9823731184005737
+    },
+    {
+      "word": " It",
+      "start": 3.7,
+      "end": 3.78,
+      "probability": 0.9755775332450867
+    },
+    {
+      "word": " does",
+      "start": 3.78,
+      "end": 3.98,
+      "probability": 0.9892790913581848
+    },
+    {
+      "word": " not",
+      "start": 3.98,
+      "end": 4.14,
+      "probability": 0.9974902868270874
+    },
+    {
+      "word": " clear",
+      "start": 4.14,
+      "end": 4.42,
+      "probability": 0.9958980679512024
+    },
+    {
+      "word": " the",
+      "start": 4.42,
+      "end": 4.6,
+      "probability": 0.996503472328186
+    },
+    {
+      "word": " finding.",
+      "start": 4.6,
+      "end": 4.94,
+      "probability": 0.9690850973129272
+    },
+    {
+      "word": " The",
+      "start": 6.04,
+      "end": 6.24,
+      "probability": 0.9805980920791626
+    },
+    {
+      "word": " check",
+      "start": 6.24,
+      "end": 6.52,
+      "probability": 0.9477709531784058
+    },
+    {
+      "word": " has",
+      "start": 6.52,
+      "end": 6.84,
+      "probability": 0.9917985200881958
+    },
+    {
+      "word": " been",
+      "start": 6.84,
+      "end": 7.0,
+      "probability": 0.9991384744644165
+    },
+    {
+      "word": " recorded",
+      "start": 7.0,
+      "end": 7.44,
+      "probability": 0.9911215305328369
+    },
+    {
+      "word": " for",
+      "start": 7.44,
+      "end": 7.72,
+      "probability": 0.9901962280273438
+    },
+    {
+      "word": " today.",
+      "start": 7.72,
+      "end": 8.08,
+      "probability": 0.9925041198730469
+    },
+    {
+      "word": " Now",
+      "start": 8.96,
+      "end": 9.3,
+      "probability": 0.9909046292304993
+    },
+    {
+      "word": " the",
+      "start": 9.3,
+      "end": 9.48,
+      "probability": 0.8074752688407898
+    },
+    {
+      "word": " finding",
+      "start": 9.48,
+      "end": 9.84,
+      "probability": 0.9898754954338074
+    },
+    {
+      "word": " needs",
+      "start": 9.84,
+      "end": 10.18,
+      "probability": 0.9944846034049988
+    },
+    {
+      "word": " its",
+      "start": 10.18,
+      "end": 10.36,
+      "probability": 0.94902503490448
+    },
+    {
+      "word": " own",
+      "start": 10.36,
+      "end": 10.56,
+      "probability": 0.9973741769790649
+    },
+    {
+      "word": " follow",
+      "start": 10.56,
+      "end": 10.82,
+      "probability": 0.9953579306602478
+    },
+    {
+      "word": "-up.",
+      "start": 10.82,
+      "end": 11.1,
+      "probability": 0.7289215177297592
+    }
+  ]
+}

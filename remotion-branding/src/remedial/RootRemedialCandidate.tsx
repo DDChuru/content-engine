@@ -19,5 +19,5 @@ const RemedialReviewCandidate: React.FC = () => {
 };
 export const RootRemedialCandidate: React.FC = () => <Composition id={CANDIDATE_ID} component={RemedialReviewCandidate} durationInFrames={narration.totalFrames} fps={30} width={1920} height={1080} calculateMetadata={async () => {
 	await verify();
-	return { durationInFrames: narration.totalFrames, defaultOutName: 'remedial-action-review-candidate-v1' };
+	return { durationInFrames: narration.totalFrames, defaultOutName: 'remedial-action-review-candidate-v2' };
 }} />;

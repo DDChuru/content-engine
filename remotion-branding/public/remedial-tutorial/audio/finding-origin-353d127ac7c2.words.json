@@ -1,0 +1,174 @@
+{
+  "audioSha256": "83528f7431dcd5789da77095944e6376b88c186803d7d2a2c8e64b0896d2d761",
+  "model": "faster-whisper-small",
+  "modelRevision": "536b0662742c02347bc0e980a01041f333bce120",
+  "computeType": "int8",
+  "language": "en",
+  "initialPrompt": null,
+  "duration": 13.1889375,
+  "text": "Keep the grade and failure reason from the original cleaning check. Action taken in photo evidence are optional here. The acknowledgement confirms that the completion was recorded.",
+  "words": [
+    {
+      "word": " Keep",
+      "start": 0.0,
+      "end": 0.26,
+      "probability": 0.551345944404602
+    },
+    {
+      "word": " the",
+      "start": 0.26,
+      "end": 0.46,
+      "probability": 0.9902010560035706
+    },
+    {
+      "word": " grade",
+      "start": 0.46,
+      "end": 0.86,
+      "probability": 0.9684263467788696
+    },
+    {
+      "word": " and",
+      "start": 0.86,
+      "end": 1.14,
+      "probability": 0.9869360327720642
+    },
+    {
+      "word": " failure",
+      "start": 1.14,
+      "end": 1.48,
+      "probability": 0.9921684861183167
+    },
+    {
+      "word": " reason",
+      "start": 1.48,
+      "end": 1.94,
+      "probability": 0.9632211327552795
+    },
+    {
+      "word": " from",
+      "start": 1.94,
+      "end": 2.66,
+      "probability": 0.9717082977294922
+    },
+    {
+      "word": " the",
+      "start": 2.66,
+      "end": 2.84,
+      "probability": 0.9938524961471558
+    },
+    {
+      "word": " original",
+      "start": 2.84,
+      "end": 3.22,
+      "probability": 0.987433135509491
+    },
+    {
+      "word": " cleaning",
+      "start": 3.22,
+      "end": 3.66,
+      "probability": 0.9592834115028381
+    },
+    {
+      "word": " check.",
+      "start": 3.66,
+      "end": 4.0,
+      "probability": 0.9707391262054443
+    },
+    {
+      "word": " Action",
+      "start": 4.74,
+      "end": 5.38,
+      "probability": 0.9290274977684021
+    },
+    {
+      "word": " taken",
+      "start": 5.38,
+      "end": 5.82,
+      "probability": 0.9977124929428101
+    },
+    {
+      "word": " in",
+      "start": 5.82,
+      "end": 6.26,
+      "probability": 0.6737772822380066
+    },
+    {
+      "word": " photo",
+      "start": 6.26,
+      "end": 6.6,
+      "probability": 0.9616793990135193
+    },
+    {
+      "word": " evidence",
+      "start": 6.6,
+      "end": 7.14,
+      "probability": 0.9741964936256409
+    },
+    {
+      "word": " are",
+      "start": 7.14,
+      "end": 8.0,
+      "probability": 0.9711543321609497
+    },
+    {
+      "word": " optional",
+      "start": 8.0,
+      "end": 8.44,
+      "probability": 0.9961212277412415
+    },
+    {
+      "word": " here.",
+      "start": 8.44,
+      "end": 8.82,
+      "probability": 0.9855834245681763
+    },
+    {
+      "word": " The",
+      "start": 9.84,
+      "end": 9.98,
+      "probability": 0.9871487021446228
+    },
+    {
+      "word": " acknowledgement",
+      "start": 9.98,
+      "end": 10.42,
+      "probability": 0.7866844534873962
+    },
+    {
+      "word": " confirms",
+      "start": 10.42,
+      "end": 11.0,
+      "probability": 0.9964703321456909
+    },
+    {
+      "word": " that",
+      "start": 11.0,
+      "end": 11.44,
+      "probability": 0.9910839796066284
+    },
+    {
+      "word": " the",
+      "start": 11.44,
+      "end": 11.56,
+      "probability": 0.9789205193519592
+    },
+    {
+      "word": " completion",
+      "start": 11.56,
+      "end": 11.94,
+      "probability": 0.9942806959152222
+    },
+    {
+      "word": " was",
+      "start": 11.94,
+      "end": 12.24,
+      "probability": 0.9958481788635254
+    },
+    {
+      "word": " recorded.",
+      "start": 12.24,
+      "end": 12.72,
+      "probability": 0.994541347026825
+    }
+  ]
+}

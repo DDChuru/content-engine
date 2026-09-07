@@ -1,0 +1,216 @@
+{
+  "audioSha256": "b40e91cbed7b0f83d57b13b38bd1b73882c0f32552adfb36f136d3aa5420a087",
+  "model": "faster-whisper-small",
+  "modelRevision": "536b0662742c02347bc0e980a01041f333bce120",
+  "computeType": "int8",
+  "language": "en",
+  "initialPrompt": null,
+  "duration": 19.226125,
+  "text": "For a finding that needs formal escalation, select NCR to open the escalate to NCR dialogue. Escalate creates and links a formal NCR and marks the finding escalated. Inspection findings do not escalate aromatically.",
+  "words": [
+    {
+      "word": " For",
+      "start": 0.0,
+      "end": 0.22,
+      "probability": 0.8245757818222046
+    },
+    {
+      "word": " a",
+      "start": 0.22,
+      "end": 0.38,
+      "probability": 0.9702272415161133
+    },
+    {
+      "word": " finding",
+      "start": 0.38,
+      "end": 0.7,
+      "probability": 0.9816660284996033
+    },
+    {
+      "word": " that",
+      "start": 0.7,
+      "end": 1.26,
+      "probability": 0.9780996441841125
+    },
+    {
+      "word": " needs",
+      "start": 1.26,
+      "end": 1.62,
+      "probability": 0.9930471777915955
+    },
+    {
+      "word": " formal",
+      "start": 1.62,
+      "end": 2.02,
+      "probability": 0.9894060492515564
+    },
+    {
+      "word": " escalation,",
+      "start": 2.02,
+      "end": 2.82,
+      "probability": 0.9941685199737549
+    },
+    {
+      "word": " select",
+      "start": 3.32,
+      "end": 3.76,
+      "probability": 0.9527341723442078
+    },
+    {
+      "word": " NCR",
+      "start": 3.76,
+      "end": 4.4,
+      "probability": 0.7025305330753326
+    },
+    {
+      "word": " to",
+      "start": 4.4,
+      "end": 5.22,
+      "probability": 0.9358168244361877
+    },
+    {
+      "word": " open",
+      "start": 5.22,
+      "end": 5.66,
+      "probability": 0.9929618239402771
+    },
+    {
+      "word": " the",
+      "start": 5.66,
+      "end": 6.12,
+      "probability": 0.9552227854728699
+    },
+    {
+      "word": " escalate",
+      "start": 6.12,
+      "end": 6.6,
+      "probability": 0.8042837083339691
+    },
+    {
+      "word": " to",
+      "start": 6.6,
+      "end": 6.78,
+      "probability": 0.8511849641799927
+    },
+    {
+      "word": " NCR",
+      "start": 6.78,
+      "end": 7.3,
+      "probability": 0.9588132798671722
+    },
+    {
+      "word": " dialogue.",
+      "start": 7.3,
+      "end": 7.76,
+      "probability": 0.4170699119567871
+    },
+    {
+      "word": " Escalate",
+      "start": 8.64,
+      "end": 9.06,
+      "probability": 0.969631016254425
+    },
+    {
+      "word": " creates",
+      "start": 9.06,
+      "end": 9.52,
+      "probability": 0.9726309180259705
+    },
+    {
+      "word": " and",
+      "start": 9.52,
+      "end": 10.0,
+      "probability": 0.9443269968032837
+    },
+    {
+      "word": " links",
+      "start": 10.0,
+      "end": 10.36,
+      "probability": 0.996813952922821
+    },
+    {
+      "word": " a",
+      "start": 10.36,
+      "end": 10.94,
+      "probability": 0.8812827467918396
+    },
+    {
+      "word": " formal",
+      "start": 10.94,
+      "end": 11.24,
+      "probability": 0.9945122003555298
+    },
+    {
+      "word": " NCR",
+      "start": 11.24,
+      "end": 11.96,
+      "probability": 0.9847049415111542
+    },
+    {
+      "word": " and",
+      "start": 11.96,
+      "end": 12.88,
+      "probability": 0.8456190824508667
+    },
+    {
+      "word": " marks",
+      "start": 12.88,
+      "end": 13.2,
+      "probability": 0.9765220880508423
+    },
+    {
+      "word": " the",
+      "start": 13.2,
+      "end": 13.42,
+      "probability": 0.9954761862754822
+    },
+    {
+      "word": " finding",
+      "start": 13.42,
+      "end": 13.78,
+      "probability": 0.9752217531204224
+    },
+    {
+      "word": " escalated.",
+      "start": 13.78,
+      "end": 14.98,
+      "probability": 0.9762732982635498
+    },
+    {
+      "word": " Inspection",
+      "start": 14.98,
+      "end": 16.2,
+      "probability": 0.6890430226922035
+    },
+    {
+      "word": " findings",
+      "start": 16.2,
+      "end": 16.64,
+      "probability": 0.9550926089286804
+    },
+    {
+      "word": " do",
+      "start": 16.64,
+      "end": 17.14,
+      "probability": 0.9460471868515015
+    },
+    {
+      "word": " not",
+      "start": 17.14,
+      "end": 17.34,
+      "probability": 0.9960399866104126
+    },
+    {
+      "word": " escalate",
+      "start": 17.34,
+      "end": 18.12,
+      "probability": 0.994820773601532
+    },
+    {
+      "word": " aromatically.",
+      "start": 18.12,
+      "end": 18.7,
+      "probability": 0.7692764103412628
+    }
+  ]
+}

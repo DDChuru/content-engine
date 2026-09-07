@@ -1,0 +1,24 @@
+{
+  "provider": "ElevenLabs",
+  "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+  "providerName": "DC",
+  "seriesName": "Daniel",
+  "request": {
+    "text": "Recording the failure clears today's due occurrence. It does not clear the finding. The check has been recorded for today; now the finding needs its own follow-up.",
+    "model_id": "eleven_multilingual_v2",
+    "voice_settings": {
+      "stability": 0.55,
+      "similarity_boost": 0.8,
+      "style": 0.35,
+      "use_speaker_boost": true
+    }
+  },
+  "requestHash": "d469712ed4a9c1bd66b14d0c0c1cfbd274634f7b62dafbd995398b99adf4f064",
+  "generatedAt": "2026-09-07T04:15:45.347Z",
+  "requestId": "NgYRYrWIeua3HbLQPWvX",
+  "audio": {
+    "path": "remedial-tutorial/audio/two-outcomes-d469712ed4a9.mp3",
+    "bytes": 186035,
+    "sha256": "9ca118db59d71b9209120750caa82c46f7fc22db2f1971b2b0d1de606e7af39e"
+  }
+}
