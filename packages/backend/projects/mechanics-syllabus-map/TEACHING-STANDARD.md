@@ -122,3 +122,14 @@ Durai on a frame that was just a header + one cream card "Each collision changes
 - Prefer showing the idea on the diagram (label, arrow, highlight) over saying it on a card. If the narration
   says it and the diagram shows it, no card is needed at all.
 - Keep the previous visual on screen while the caption changes; the visual never disappears to make room for text.
+
+## 11. Lead with the formula (Durai, 2026-09-07, on Multiple Collisions working)
+
+Durai, on a paper panel that opened with "1×4 + 2×3 = 1×2 + 2v_B": "here we are almost never leading with the formulae."
+
+- Hand-written working ALWAYS starts with the general statement in words + symbols before any numbers:
+  e.g. "Momentum before = momentum after", then  m_A u_A + m_B u_B = m_A v_A + m_B v_B , THEN the substitution line.
+  Same for suvat, F = ma, area = displacement, gradient = Δs/Δt: symbol line first, numbers second.
+- Narration says the formula as it is written ("mass times velocity before equals mass times velocity after").
+- The formula line stays visible on the paper while the numbers are worked beneath it; ring the result as usual.
+- This is what the examiner marks: method marks come from the formula line.
