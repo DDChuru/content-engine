@@ -1,8 +1,8 @@
 {
   "project": "mechanics-multiple-collisions",
-  "sceneCount": 6,
-  "totalDuration": 344.163265,
-  "generatedAt": "2026-09-07T04:23:31.402660",
+  "sceneCount": 7,
+  "totalDuration": 400.300408,
+  "generatedAt": "2026-09-07T05:19:34.511525",
   "engine": "faster-whisper-small (local)",
   "scenes": [
     {
@@ -1036,11 +1036,401 @@
       ]
     },
     {
+      "id": "s07",
+      "audio": "multiple-collisions-s07.mp3",
+      "duration": 45.766531,
+      "wordCount": 67,
+      "text": "Ball A, one kilogram, rolling at four metres per second, is behind ball B, two kilograms, rolling at three. Same direction. Will A catch B? Yes, it's faster. So they collide. Ball C, three kilograms, rolls ahead at one metre per second. After A hits B, A moves at two metres per second. After B hits C, C moves at three. Will A and B collide again?",
+      "words": [
+        {
+          "word": "Ball",
+          "start": 0.34,
+          "end": 1.06
+        },
+        {
+          "word": "A,",
+          "start": 1.06,
+          "end": 1.92
+        },
+        {
+          "word": "one",
+          "start": 2.84,
+          "end": 3.12
+        },
+        {
+          "word": "kilogram,",
+          "start": 3.12,
+          "end": 3.6
+        },
+        {
+          "word": "rolling",
+          "start": 4.54,
+          "end": 5.0
+        },
+        {
+          "word": "at",
+          "start": 5.0,
+          "end": 5.24
+        },
+        {
+          "word": "four",
+          "start": 5.24,
+          "end": 5.54
+        },
+        {
+          "word": "metres",
+          "start": 5.54,
+          "end": 5.74
+        },
+        {
+          "word": "per",
+          "start": 5.74,
+          "end": 6.02
+        },
+        {
+          "word": "second,",
+          "start": 6.02,
+          "end": 6.5
+        },
+        {
+          "word": "is",
+          "start": 6.92,
+          "end": 7.56
+        },
+        {
+          "word": "behind",
+          "start": 7.56,
+          "end": 7.96
+        },
+        {
+          "word": "ball",
+          "start": 7.96,
+          "end": 8.3
+        },
+        {
+          "word": "B,",
+          "start": 8.3,
+          "end": 8.6
+        },
+        {
+          "word": "two",
+          "start": 9.28,
+          "end": 9.48
+        },
+        {
+          "word": "kilograms,",
+          "start": 9.48,
+          "end": 10.0
+        },
+        {
+          "word": "rolling",
+          "start": 10.98,
+          "end": 11.42
+        },
+        {
+          "word": "at",
+          "start": 11.42,
+          "end": 11.64
+        },
+        {
+          "word": "three.",
+          "start": 11.64,
+          "end": 11.92
+        },
+        {
+          "word": "Same",
+          "start": 13.24,
+          "end": 13.72
+        },
+        {
+          "word": "direction.",
+          "start": 13.72,
+          "end": 14.2
+        },
+        {
+          "word": "Will",
+          "start": 15.7,
+          "end": 16.02
+        },
+        {
+          "word": "A",
+          "start": 16.02,
+          "end": 16.24
+        },
+        {
+          "word": "catch",
+          "start": 16.24,
+          "end": 16.5
+        },
+        {
+          "word": "B?",
+          "start": 16.5,
+          "end": 16.8
+        },
+        {
+          "word": "Yes,",
+          "start": 17.88,
+          "end": 18.46
+        },
+        {
+          "word": "it's",
+          "start": 19.1,
+          "end": 19.84
+        },
+        {
+          "word": "faster.",
+          "start": 19.84,
+          "end": 20.34
+        },
+        {
+          "word": "So",
+          "start": 21.38,
+          "end": 21.88
+        },
+        {
+          "word": "they",
+          "start": 21.88,
+          "end": 22.1
+        },
+        {
+          "word": "collide.",
+          "start": 22.1,
+          "end": 22.34
+        },
+        {
+          "word": "Ball",
+          "start": 22.34,
+          "end": 23.56
+        },
+        {
+          "word": "C,",
+          "start": 23.56,
+          "end": 23.9
+        },
+        {
+          "word": "three",
+          "start": 24.88,
+          "end": 25.3
+        },
+        {
+          "word": "kilograms,",
+          "start": 25.3,
+          "end": 25.88
+        },
+        {
+          "word": "rolls",
+          "start": 26.82,
+          "end": 27.26
+        },
+        {
+          "word": "ahead",
+          "start": 27.26,
+          "end": 27.66
+        },
+        {
+          "word": "at",
+          "start": 27.66,
+          "end": 28.72
+        },
+        {
+          "word": "one",
+          "start": 28.72,
+          "end": 29.04
+        },
+        {
+          "word": "metre",
+          "start": 29.04,
+          "end": 29.32
+        },
+        {
+          "word": "per",
+          "start": 29.32,
+          "end": 29.56
+        },
+        {
+          "word": "second.",
+          "start": 29.56,
+          "end": 30.0
+        },
+        {
+          "word": "After",
+          "start": 30.6,
+          "end": 31.36
+        },
+        {
+          "word": "A",
+          "start": 31.36,
+          "end": 31.64
+        },
+        {
+          "word": "hits",
+          "start": 31.64,
+          "end": 31.88
+        },
+        {
+          "word": "B,",
+          "start": 31.88,
+          "end": 32.3
+        },
+        {
+          "word": "A",
+          "start": 33.42,
+          "end": 33.6
+        },
+        {
+          "word": "moves",
+          "start": 33.6,
+          "end": 33.9
+        },
+        {
+          "word": "at",
+          "start": 33.9,
+          "end": 34.16
+        },
+        {
+          "word": "two",
+          "start": 34.16,
+          "end": 34.44
+        },
+        {
+          "word": "metres",
+          "start": 34.44,
+          "end": 34.68
+        },
+        {
+          "word": "per",
+          "start": 34.68,
+          "end": 34.96
+        },
+        {
+          "word": "second.",
+          "start": 34.96,
+          "end": 35.34
+        },
+        {
+          "word": "After",
+          "start": 36.08,
+          "end": 36.78
+        },
+        {
+          "word": "B",
+          "start": 36.78,
+          "end": 37.08
+        },
+        {
+          "word": "hits",
+          "start": 37.08,
+          "end": 37.26
+        },
+        {
+          "word": "C,",
+          "start": 37.26,
+          "end": 37.68
+        },
+        {
+          "word": "C",
+          "start": 38.64,
+          "end": 38.88
+        },
+        {
+          "word": "moves",
+          "start": 38.88,
+          "end": 39.14
+        },
+        {
+          "word": "at",
+          "start": 39.14,
+          "end": 39.36
+        },
+        {
+          "word": "three.",
+          "start": 39.36,
+          "end": 39.66
+        },
+        {
+          "word": "Will",
+          "start": 40.7,
+          "end": 41.18
+        },
+        {
+          "word": "A",
+          "start": 41.18,
+          "end": 41.56
+        },
+        {
+          "word": "and",
+          "start": 41.56,
+          "end": 42.14
+        },
+        {
+          "word": "B",
+          "start": 42.14,
+          "end": 42.34
+        },
+        {
+          "word": "collide",
+          "start": 42.34,
+          "end": 42.62
+        },
+        {
+          "word": "again?",
+          "start": 42.62,
+          "end": 43.02
+        }
+      ],
+      "cues": {
+        "setup": 0.55,
+        "same": 13.24,
+        "catch": 15.7,
+        "faster": 17.88,
+        "third": 23.27,
+        "after-first": 30.6,
+        "after-second": 36.08,
+        "question": 40.7
+      },
+      "generatedAt": "2026-09-07T05:12:59.907414",
+      "engine": "faster-whisper-small (local)",
+      "tempo": "slow",
+      "voiceSpeed": 0.9,
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "provider": "elevenlabs",
+      "audioSha256": "4a9c8cacecdd2361187c09e0ce0135cfec8707115cd627b8c364837c49389c57",
+      "beats": [
+        {
+          "text": "Ball A, one kilogram, rolling at four metres per second, is behind ball B, two kilograms, rolling at three. Same direction. Will A catch B? Yes, it's faster. So they collide.",
+          "start": 0.55,
+          "end": 22.67
+        },
+        {
+          "text": "Ball C, three kilograms, rolls ahead at one metre per second. After A hits B, A moves at two metres per second. After B hits C, C moves at three. Will A and B collide again?",
+          "start": 23.27,
+          "end": 43.27
+        }
+      ],
+      "holds": [
+        {
+          "kind": "pause",
+          "start": 22.67,
+          "end": 23.27,
+          "duration": 0.6
+        },
+        {
+          "kind": "hold",
+          "start": 43.27,
+          "end": 45.27,
+          "duration": 2
+        }
+      ],
+      "paragraphs": [
+        "Ball A, one kilogram, rolling at four metres per second, is behind ball B, two kilograms, rolling at three. Same direction. Will A catch B? Yes, it's faster. So they collide. [pause 0.6 s] Ball C, three kilograms, rolls ahead at one metre per second. After A hits B, A moves at two metres per second. After B hits C, C moves at three. Will A and B collide again? [hold 2 s]"
+      ]
+    },
+    {
       "id": "s04",
       "audio": "multiple-collisions-s04.mp3",
-      "duration": 89.652245,
-      "wordCount": 141,
-      "text": "Now collision one. Find B's velocity after A hits it. Right is positive. Let's get drawing. A, one kilogram, four metres per second. B, two kilograms, three metres per second. Afterwards A moves at two metres per second. Call B's new velocity v B. The pair's momentum is conserved because no external force changes its total. Here u means before and v means after. Momentum before equals momentum after. Mass A times u A, plus mass B times u B, equals mass A times v A, plus mass B times v B. Substitute the values. One times four, plus two times three, equals one times two, plus two v B. Ten equals two plus two v B. Subtract two and divide by two. v B is four metres per second. Positive means right. Carry that four forward, not the original three.",
+      "duration": 94.798367,
+      "wordCount": 153,
+      "text": "Now collision one. Find B's velocity after A hits it. Right is positive. Let's get drawing. A, one kilogram, four metres per second. B, two kilograms, three metres per second. Afterwards A moves at two metres per second. Call B's new velocity v B. The pair's momentum is conserved because no external force changes its total. Here u means before and v means after. Momentum before equals momentum after. Mass A times u A, plus mass B times u B, equals mass A times v A, plus mass B times v B. the givens on our diagram. A is one kilogram times four, plus B's two kilograms times three, equals A's one kilogram times two, plus B's two kilograms times v B. Ten equals two plus two v B. Subtract two and divide by two, v B is four metres per second. Positive means right. Carry that four forward, not the original three.",
       "words": [
         {
           "word": "Now",
@@ -1055,7 +1445,7 @@
         {
           "word": "one.",
           "start": 1.17,
-          "end": 1.55
+          "end": 1.57
         },
         {
           "word": "Find",
@@ -1090,7 +1480,7 @@
         {
           "word": "it.",
           "start": 5.43,
-          "end": 5.77
+          "end": 5.79
         },
         {
           "word": "Right",
@@ -1109,7 +1499,7 @@
         },
         {
           "word": "Let's",
-          "start": 9.05,
+          "start": 8.95,
           "end": 9.57
         },
         {
@@ -1129,7 +1519,7 @@
         },
         {
           "word": "one",
-          "start": 12.57,
+          "start": 12.55,
           "end": 12.93
         },
         {
@@ -1139,7 +1529,7 @@
         },
         {
           "word": "four",
-          "start": 14.27,
+          "start": 14.25,
           "end": 14.49
         },
         {
@@ -1165,16 +1555,16 @@
         {
           "word": "two",
           "start": 17.57,
-          "end": 17.91
+          "end": 17.89
         },
         {
           "word": "kilograms,",
-          "start": 17.91,
+          "start": 17.89,
           "end": 18.53
         },
         {
           "word": "three",
-          "start": 19.49,
+          "start": 19.47,
           "end": 19.71
         },
         {
@@ -1250,11 +1640,11 @@
         {
           "word": "velocity",
           "start": 28.11,
-          "end": 28.69
+          "end": 28.67
         },
         {
           "word": "v",
-          "start": 28.69,
+          "start": 28.67,
           "end": 29.05
         },
         {
@@ -1275,21 +1665,21 @@
         {
           "word": "momentum",
           "start": 30.97,
-          "end": 31.51
+          "end": 31.53
         },
         {
           "word": "is",
-          "start": 31.51,
+          "start": 31.53,
           "end": 32.67
         },
         {
           "word": "conserved",
           "start": 32.67,
-          "end": 33.39
+          "end": 33.41
         },
         {
           "word": "because",
-          "start": 33.39,
+          "start": 33.41,
           "end": 34.77
         },
         {
@@ -1305,11 +1695,11 @@
         {
           "word": "force",
           "start": 35.65,
-          "end": 36.17
+          "end": 36.19
         },
         {
           "word": "changes",
-          "start": 36.17,
+          "start": 36.19,
           "end": 37.15
         },
         {
@@ -1364,28 +1754,28 @@
         },
         {
           "word": "Momentum",
-          "start": 43.89,
+          "start": 43.93,
           "end": 44.47
         },
         {
           "word": "before",
           "start": 44.47,
-          "end": 44.83
+          "end": 44.81
         },
         {
           "word": "equals",
-          "start": 44.83,
+          "start": 44.81,
           "end": 45.73
         },
         {
           "word": "momentum",
           "start": 45.73,
-          "end": 46.21
+          "end": 46.25
         },
         {
           "word": "after.",
-          "start": 46.21,
-          "end": 46.71
+          "start": 46.25,
+          "end": 46.73
         },
         {
           "word": "Mass",
@@ -1414,7 +1804,7 @@
         },
         {
           "word": "plus",
-          "start": 49.57,
+          "start": 49.59,
           "end": 49.97
         },
         {
@@ -1445,11 +1835,11 @@
         {
           "word": "equals",
           "start": 52.25,
-          "end": 52.83
+          "end": 52.81
         },
         {
           "word": "mass",
-          "start": 52.83,
+          "start": 52.81,
           "end": 53.27
         },
         {
@@ -1500,252 +1890,312 @@
         {
           "word": "B.",
           "start": 56.75,
-          "end": 56.99
-        },
-        {
-          "word": "Substitute",
-          "start": 57.57,
-          "end": 58.33
+          "end": 56.97
         },
         {
           "word": "the",
-          "start": 58.33,
-          "end": 59.35
+          "start": 57.71,
+          "end": 57.93
         },
         {
-          "word": "values.",
-          "start": 59.35,
-          "end": 59.83
+          "word": "givens",
+          "start": 57.93,
+          "end": 58.59
         },
         {
-          "word": "One",
-          "start": 60.77,
-          "end": 61.15
+          "word": "on",
+          "start": 58.59,
+          "end": 58.75
         },
         {
-          "word": "times",
-          "start": 61.15,
-          "end": 61.51
+          "word": "our",
+          "start": 58.75,
+          "end": 58.99
         },
         {
-          "word": "four,",
-          "start": 61.51,
-          "end": 61.99
+          "word": "diagram.",
+          "start": 58.99,
+          "end": 59.55
         },
         {
-          "word": "plus",
-          "start": 62.53,
-          "end": 62.87
-        },
-        {
-          "word": "two",
-          "start": 62.87,
-          "end": 63.17
-        },
-        {
-          "word": "times",
-          "start": 63.17,
-          "end": 63.59
-        },
-        {
-          "word": "three,",
-          "start": 63.59,
-          "end": 63.99
-        },
-        {
-          "word": "equals",
-          "start": 64.39,
-          "end": 65.27
-        },
-        {
-          "word": "one",
-          "start": 65.27,
-          "end": 65.63
-        },
-        {
-          "word": "times",
-          "start": 65.63,
-          "end": 66.01
-        },
-        {
-          "word": "two,",
-          "start": 66.01,
-          "end": 66.43
-        },
-        {
-          "word": "plus",
-          "start": 66.97,
-          "end": 67.45
-        },
-        {
-          "word": "two",
-          "start": 67.45,
-          "end": 67.81
-        },
-        {
-          "word": "v",
-          "start": 67.81,
-          "end": 68.11
-        },
-        {
-          "word": "B.",
-          "start": 68.11,
-          "end": 68.35
-        },
-        {
-          "word": "Ten",
-          "start": 70.34,
-          "end": 70.6
-        },
-        {
-          "word": "equals",
-          "start": 70.6,
-          "end": 70.92
-        },
-        {
-          "word": "two",
-          "start": 70.92,
-          "end": 71.3
-        },
-        {
-          "word": "plus",
-          "start": 71.3,
-          "end": 71.58
-        },
-        {
-          "word": "two",
-          "start": 71.58,
-          "end": 71.94
-        },
-        {
-          "word": "v",
-          "start": 71.94,
-          "end": 72.22
-        },
-        {
-          "word": "B.",
-          "start": 72.22,
-          "end": 72.5
-        },
-        {
-          "word": "Subtract",
-          "start": 73.82,
-          "end": 75.12
-        },
-        {
-          "word": "two",
-          "start": 75.12,
-          "end": 75.56
-        },
-        {
-          "word": "and",
-          "start": 75.56,
-          "end": 76.2
-        },
-        {
-          "word": "divide",
-          "start": 76.2,
-          "end": 76.66
-        },
-        {
-          "word": "by",
-          "start": 76.66,
-          "end": 76.94
-        },
-        {
-          "word": "two.",
-          "start": 76.94,
-          "end": 77.36
-        },
-        {
-          "word": "v",
-          "start": 77.88,
-          "end": 78.4
-        },
-        {
-          "word": "B",
-          "start": 78.4,
-          "end": 78.64
+          "word": "A",
+          "start": 60.13,
+          "end": 60.61
         },
         {
           "word": "is",
-          "start": 78.64,
-          "end": 78.96
+          "start": 60.61,
+          "end": 60.77
+        },
+        {
+          "word": "one",
+          "start": 60.77,
+          "end": 61.01
+        },
+        {
+          "word": "kilogram",
+          "start": 61.01,
+          "end": 61.43
+        },
+        {
+          "word": "times",
+          "start": 61.79,
+          "end": 62.47
+        },
+        {
+          "word": "four,",
+          "start": 62.47,
+          "end": 62.87
+        },
+        {
+          "word": "plus",
+          "start": 63.81,
+          "end": 64.17
+        },
+        {
+          "word": "B's",
+          "start": 64.17,
+          "end": 64.63
+        },
+        {
+          "word": "two",
+          "start": 64.63,
+          "end": 64.87
+        },
+        {
+          "word": "kilograms",
+          "start": 64.87,
+          "end": 65.31
+        },
+        {
+          "word": "times",
+          "start": 65.31,
+          "end": 65.95
+        },
+        {
+          "word": "three,",
+          "start": 65.95,
+          "end": 66.37
+        },
+        {
+          "word": "equals",
+          "start": 66.55,
+          "end": 67.69
+        },
+        {
+          "word": "A's",
+          "start": 67.69,
+          "end": 68.33
+        },
+        {
+          "word": "one",
+          "start": 68.33,
+          "end": 68.55
+        },
+        {
+          "word": "kilogram",
+          "start": 68.55,
+          "end": 69.05
+        },
+        {
+          "word": "times",
+          "start": 69.05,
+          "end": 69.61
+        },
+        {
+          "word": "two,",
+          "start": 69.61,
+          "end": 69.95
+        },
+        {
+          "word": "plus",
+          "start": 70.07,
+          "end": 71.15
+        },
+        {
+          "word": "B's",
+          "start": 71.15,
+          "end": 71.61
+        },
+        {
+          "word": "two",
+          "start": 71.61,
+          "end": 71.79
+        },
+        {
+          "word": "kilograms",
+          "start": 71.79,
+          "end": 72.29
+        },
+        {
+          "word": "times",
+          "start": 72.29,
+          "end": 72.89
+        },
+        {
+          "word": "v",
+          "start": 72.89,
+          "end": 73.13
+        },
+        {
+          "word": "B.",
+          "start": 73.13,
+          "end": 73.41
+        },
+        {
+          "word": "Ten",
+          "start": 75.5,
+          "end": 75.72
+        },
+        {
+          "word": "equals",
+          "start": 75.72,
+          "end": 76.06
+        },
+        {
+          "word": "two",
+          "start": 76.06,
+          "end": 76.44
+        },
+        {
+          "word": "plus",
+          "start": 76.44,
+          "end": 76.72
+        },
+        {
+          "word": "two",
+          "start": 76.72,
+          "end": 77.08
+        },
+        {
+          "word": "v",
+          "start": 77.08,
+          "end": 77.36
+        },
+        {
+          "word": "B.",
+          "start": 77.36,
+          "end": 77.72
+        },
+        {
+          "word": "Subtract",
+          "start": 79.67,
+          "end": 80.23
+        },
+        {
+          "word": "two",
+          "start": 80.23,
+          "end": 80.71
+        },
+        {
+          "word": "and",
+          "start": 80.71,
+          "end": 81.35
+        },
+        {
+          "word": "divide",
+          "start": 81.35,
+          "end": 81.79
+        },
+        {
+          "word": "by",
+          "start": 81.79,
+          "end": 82.09
+        },
+        {
+          "word": "two,",
+          "start": 82.09,
+          "end": 82.43
+        },
+        {
+          "word": "v",
+          "start": 83.09,
+          "end": 83.53
+        },
+        {
+          "word": "B",
+          "start": 83.53,
+          "end": 83.85
+        },
+        {
+          "word": "is",
+          "start": 83.85,
+          "end": 84.11
         },
         {
           "word": "four",
-          "start": 78.96,
-          "end": 79.26
+          "start": 84.11,
+          "end": 84.39
         },
         {
           "word": "metres",
-          "start": 79.26,
-          "end": 79.5
+          "start": 84.39,
+          "end": 84.63
         },
         {
           "word": "per",
-          "start": 79.5,
-          "end": 79.8
+          "start": 84.63,
+          "end": 84.93
         },
         {
           "word": "second.",
-          "start": 79.8,
-          "end": 80.14
+          "start": 84.93,
+          "end": 85.31
         },
         {
           "word": "Positive",
-          "start": 81.92,
-          "end": 82.6
+          "start": 87.35,
+          "end": 87.78
         },
         {
           "word": "means",
-          "start": 82.6,
-          "end": 83.0
+          "start": 87.78,
+          "end": 88.16
         },
         {
           "word": "right.",
-          "start": 83.0,
-          "end": 83.46
+          "start": 88.16,
+          "end": 88.58
         },
         {
           "word": "Carry",
-          "start": 84.36,
-          "end": 85.0
+          "start": 89.48,
+          "end": 90.16
         },
         {
           "word": "that",
-          "start": 85.0,
-          "end": 85.26
+          "start": 90.16,
+          "end": 90.4
         },
         {
           "word": "four",
-          "start": 85.26,
-          "end": 85.56
+          "start": 90.4,
+          "end": 90.7
         },
         {
           "word": "forward,",
-          "start": 85.56,
-          "end": 86.16
+          "start": 90.7,
+          "end": 91.22
         },
         {
           "word": "not",
-          "start": 86.76,
-          "end": 87.82
+          "start": 91.74,
+          "end": 92.96
         },
         {
           "word": "the",
-          "start": 87.82,
-          "end": 88.08
+          "start": 92.96,
+          "end": 93.26
         },
         {
           "word": "original",
-          "start": 88.08,
-          "end": 88.52
+          "start": 93.26,
+          "end": 93.68
         },
         {
           "word": "three.",
-          "start": 88.52,
-          "end": 88.96
+          "start": 93.68,
+          "end": 94.1
         }
       ],
       "cues": {
@@ -1753,32 +2203,32 @@
         "setup": 3.11,
         "right": 6.43,
         "draw": 9.73,
-        "mass-a": 12.57,
-        "speed-a": 14.27,
+        "mass-a": 12.55,
+        "speed-a": 14.25,
         "mass-b": 17.57,
-        "speed-b": 19.49,
+        "speed-b": 19.47,
         "after": 21.49,
         "after-a": 24.47,
-        "unknown": 28.69,
+        "unknown": 28.67,
         "conserve": 30.97,
-        "principle": 43.89,
-        "principle-end": 46.71,
+        "principle": 43.93,
+        "principle-end": 46.73,
         "formula": 47.17,
-        "formula-end": 56.99,
-        "equation": 60.77,
-        "simplify": 70.38,
-        "solve": 74.56,
-        "result": 78.96,
-        "positive": 82.21,
-        "carry": 84.36
+        "formula-end": 56.97,
+        "equation": 60.13,
+        "simplify": 75.52,
+        "solve": 79.7,
+        "result": 84.11,
+        "positive": 87.35,
+        "carry": 89.48
       },
-      "generatedAt": "2026-09-07T04:23:31.402660",
+      "generatedAt": "2026-09-07T05:12:59.907414",
       "engine": "faster-whisper-small (local)",
       "tempo": "slow",
       "voiceSpeed": 0.9,
       "voiceId": "gYWKdgLtqjPO3D5uDrDP",
       "provider": "elevenlabs",
-      "audioSha256": "8804b569f7e2778f822740b4e67a2971dae8373279a499daca3fc04d6e9a0aac",
+      "audioSha256": "e6c984c5bd166414b5702645871e05287126205464019101bf508133ed2312cf",
       "beats": [
         {
           "text": "Now collision one.",
@@ -1801,24 +2251,24 @@
           "end": 57.15
         },
         {
-          "text": "Substitute the values: one times four, plus two times three, equals one times two, plus two v B.",
+          "text": "Use the givens on our diagram: A's one kilogram times four, plus B's two kilograms times three, equals A's one kilogram times two, plus B's two kilograms times v B.",
           "start": 57.5,
-          "end": 68.38
+          "end": 73.52
         },
         {
           "text": "Ten equals two plus two v B.",
-          "start": 70.38,
-          "end": 72.56
+          "start": 75.52,
+          "end": 77.7
         },
         {
           "text": "Subtract two and divide by two: v B is four metres per second.",
-          "start": 74.56,
-          "end": 80.21
+          "start": 79.7,
+          "end": 85.35
         },
         {
           "text": "Positive means right. Carry that four forward, not the original three.",
-          "start": 82.21,
-          "end": 89.17
+          "start": 87.35,
+          "end": 94.31
         }
       ],
       "holds": [
@@ -1848,25 +2298,25 @@
         },
         {
           "kind": "hold",
-          "start": 68.38,
-          "end": 70.38,
-          "duration": 2.0
+          "start": 73.52,
+          "end": 75.52,
+          "duration": 2
         },
         {
           "kind": "hold",
-          "start": 72.56,
-          "end": 74.56,
-          "duration": 2.0
+          "start": 77.7,
+          "end": 79.7,
+          "duration": 2
         },
         {
           "kind": "hold",
-          "start": 80.21,
-          "end": 82.21,
-          "duration": 2.0
+          "start": 85.35,
+          "end": 87.35,
+          "duration": 2
         }
       ],
       "paragraphs": [
-        "Now collision one. [hold 1.5 s] Find B's velocity after A hits it. Right is positive. Let's get drawing. A: one kilogram, four metres per second. B: two kilograms, three metres per second. Afterwards A moves at two metres per second. Call B's new velocity v B. The pair's momentum is conserved because no external force changes its total. Here u means before, and v means after. [pause 0.3 s] Momentum before equals momentum after. [pause 0.35 s] Mass A times u A, plus mass B times u B, equals mass A times v A, plus mass B times v B. [pause 0.35 s] Substitute the values: one times four, plus two times three, equals one times two, plus two v B. [hold 2 s] Ten equals two plus two v B. [hold 2 s] Subtract two and divide by two: v B is four metres per second. [hold 2 s] Positive means right. Carry that four forward, not the original three."
+        "Now collision one. [hold 1.5 s] Find B's velocity after A hits it. Right is positive. Let's get drawing. A: one kilogram, four metres per second. B: two kilograms, three metres per second. Afterwards A moves at two metres per second. Call B's new velocity v B. The pair's momentum is conserved because no external force changes its total. Here u means before, and v means after. [pause 0.3 s] Momentum before equals momentum after. [pause 0.35 s] Mass A times u A, plus mass B times u B, equals mass A times v A, plus mass B times v B. [pause 0.35 s] Use the givens on our diagram: A's one kilogram times four, plus B's two kilograms times three, equals A's one kilogram times two, plus B's two kilograms times v B. [hold 2 s] Ten equals two plus two v B. [hold 2 s] Subtract two and divide by two: v B is four metres per second. [hold 2 s] Positive means right. Carry that four forward, not the original three."
       ]
     },
     {
@@ -2299,9 +2749,9 @@
     {
       "id": "s06",
       "audio": "multiple-collisions-s06.mp3",
-      "duration": 112.222041,
-      "wordCount": 179,
-      "text": "Now collision two. B hits C. Find B's new velocity. Use the result just found. Let's get drawing. B. Two kilograms, now four metres per second. C. Three kilograms, one metre per second. Afterward, C moves at 3 meters per second. Call B's new velocity, value B, VB belonged to the first collision. Concept this pair's momentum. Here U means before, and V means after this collision. Momentum before equals momentum after. Mass B times u B, plus mass C times u C, equals mass B times v B, plus mass C times v C. Here, VB is the new velocity we named WB. Substitute the values two times four, plus three times one, equals two w B, plus three times three. Eleven equals two WB plus nine. Subtract nine and divide by two. WB is one metre per second. Now, will they collide again? A is behind B. A moves right at two metres per second. B at one. Two is greater than one. The one behind is faster, so the gap closes. Yes, A catches B again.",
+      "duration": 117.446531,
+      "wordCount": 194,
+      "text": "Now collision two. B hits C. Find B's new velocity. Use the result just found. Let's get drawing. B. Two kilograms, now four metres per second. C. Three kilograms, one metre per second. Afterward, C moves at 3 meters per second. Call B's new velocity, value B, VB belongs to the first collision. Concept this pair's momentum. Here U means before, and V means after this collision. Momentum before equals momentum after. Mass B times u B, plus mass C times u C, equals mass B times v B, plus mass C times v C. v B is the new velocity we named w B. Use the givens on our diagram. B's two kilograms times four, plus C's three kilograms times one, equals B's two kilograms times w B, plus C's three kilograms times three. Eleven equals two w B plus nine. Subtract nine and divide by two. W B is one metre per second. Now, will they collide again? A is behind B. A moves right at two metres per second. B at one. Two is greater than one. The one behind is faster, so the gap closes. Yes. A catches B again.",
       "words": [
         {
           "word": "Now",
@@ -2316,7 +2766,7 @@
         {
           "word": "two.",
           "start": 1.11,
-          "end": 1.93
+          "end": 1.87
         },
         {
           "word": "B",
@@ -2380,7 +2830,7 @@
         },
         {
           "word": "Let's",
-          "start": 11.71,
+          "start": 11.75,
           "end": 11.99
         },
         {
@@ -2410,7 +2860,7 @@
         },
         {
           "word": "now",
-          "start": 17.25,
+          "start": 17.35,
           "end": 17.67
         },
         {
@@ -2431,7 +2881,7 @@
         {
           "word": "second.",
           "start": 18.55,
-          "end": 18.81
+          "end": 18.83
         },
         {
           "word": "C.",
@@ -2446,7 +2896,7 @@
         {
           "word": "kilograms,",
           "start": 22.05,
-          "end": 22.53
+          "end": 22.55
         },
         {
           "word": "one",
@@ -2496,11 +2946,11 @@
         {
           "word": "meters",
           "start": 28.63,
-          "end": 29.03
+          "end": 29.01
         },
         {
           "word": "per",
-          "start": 29.03,
+          "start": 29.01,
           "end": 29.35
         },
         {
@@ -2544,23 +2994,23 @@
           "end": 35.59
         },
         {
-          "word": "belonged",
+          "word": "belongs",
           "start": 35.59,
-          "end": 36.07
+          "end": 35.95
         },
         {
           "word": "to",
-          "start": 36.07,
+          "start": 35.95,
           "end": 36.97
         },
         {
           "word": "the",
           "start": 36.97,
-          "end": 37.13
+          "end": 37.11
         },
         {
           "word": "first",
-          "start": 37.13,
+          "start": 37.11,
           "end": 37.41
         },
         {
@@ -2570,7 +3020,7 @@
         },
         {
           "word": "Concept",
-          "start": 39.17,
+          "start": 39.15,
           "end": 39.83
         },
         {
@@ -2640,7 +3090,7 @@
         },
         {
           "word": "Momentum",
-          "start": 48.25,
+          "start": 48.35,
           "end": 48.89
         },
         {
@@ -2656,12 +3106,12 @@
         {
           "word": "momentum",
           "start": 49.73,
-          "end": 50.21
+          "end": 50.19
         },
         {
           "word": "after.",
-          "start": 50.21,
-          "end": 50.77
+          "start": 50.19,
+          "end": 50.79
         },
         {
           "word": "Mass",
@@ -2671,21 +3121,21 @@
         {
           "word": "B",
           "start": 51.62,
-          "end": 51.84
+          "end": 51.86
         },
         {
           "word": "times",
-          "start": 51.84,
+          "start": 51.86,
           "end": 52.3
         },
         {
           "word": "u",
           "start": 52.3,
-          "end": 52.58
+          "end": 52.56
         },
         {
           "word": "B,",
-          "start": 52.58,
+          "start": 52.56,
           "end": 52.8
         },
         {
@@ -2711,16 +3161,16 @@
         {
           "word": "u",
           "start": 54.84,
-          "end": 55.06
+          "end": 55.04
         },
         {
           "word": "C,",
-          "start": 55.06,
+          "start": 55.04,
           "end": 55.38
         },
         {
           "word": "equals",
-          "start": 55.58,
+          "start": 55.54,
           "end": 56.1
         },
         {
@@ -2750,7 +3200,7 @@
         },
         {
           "word": "plus",
-          "start": 58.08,
+          "start": 57.98,
           "end": 58.58
         },
         {
@@ -2776,427 +3226,502 @@
         {
           "word": "C.",
           "start": 59.84,
-          "end": 60.08
+          "end": 60.1
         },
         {
-          "word": "Here,",
-          "start": 60.59,
-          "end": 60.91
+          "word": "v",
+          "start": 60.89,
+          "end": 61.23
         },
         {
-          "word": "VB",
-          "start": 61.09,
+          "word": "B",
+          "start": 61.23,
           "end": 61.61
         },
         {
           "word": "is",
           "start": 61.61,
-          "end": 62.19
+          "end": 62.17
         },
         {
           "word": "the",
-          "start": 62.19,
-          "end": 62.31
+          "start": 62.17,
+          "end": 62.33
         },
         {
           "word": "new",
-          "start": 62.31,
+          "start": 62.33,
           "end": 62.51
         },
         {
           "word": "velocity",
           "start": 62.51,
-          "end": 63.09
+          "end": 63.07
         },
         {
           "word": "we",
-          "start": 63.09,
+          "start": 63.07,
           "end": 63.57
         },
         {
           "word": "named",
           "start": 63.57,
-          "end": 64.09
-        },
-        {
-          "word": "WB.",
-          "start": 64.09,
-          "end": 65.07
-        },
-        {
-          "word": "Substitute",
-          "start": 65.55,
-          "end": 66.19
-        },
-        {
-          "word": "the",
-          "start": 66.19,
-          "end": 66.35
-        },
-        {
-          "word": "values",
-          "start": 66.35,
-          "end": 66.71
-        },
-        {
-          "word": "two",
-          "start": 66.71,
-          "end": 68.09
-        },
-        {
-          "word": "times",
-          "start": 68.09,
-          "end": 68.53
-        },
-        {
-          "word": "four,",
-          "start": 68.53,
-          "end": 68.95
-        },
-        {
-          "word": "plus",
-          "start": 69.29,
-          "end": 70.15
-        },
-        {
-          "word": "three",
-          "start": 70.15,
-          "end": 70.59
-        },
-        {
-          "word": "times",
-          "start": 70.59,
-          "end": 71.03
-        },
-        {
-          "word": "one,",
-          "start": 71.03,
-          "end": 71.35
-        },
-        {
-          "word": "equals",
-          "start": 71.41,
-          "end": 72.57
-        },
-        {
-          "word": "two",
-          "start": 72.57,
-          "end": 73.09
+          "end": 64.07
         },
         {
           "word": "w",
-          "start": 73.09,
-          "end": 73.29
-        },
-        {
-          "word": "B,",
-          "start": 73.29,
-          "end": 73.59
-        },
-        {
-          "word": "plus",
-          "start": 74.51,
-          "end": 74.85
-        },
-        {
-          "word": "three",
-          "start": 74.85,
-          "end": 75.33
-        },
-        {
-          "word": "times",
-          "start": 75.33,
-          "end": 75.75
-        },
-        {
-          "word": "three.",
-          "start": 75.75,
-          "end": 76.05
-        },
-        {
-          "word": "Eleven",
-          "start": 78.1,
-          "end": 78.52
-        },
-        {
-          "word": "equals",
-          "start": 78.52,
-          "end": 78.98
-        },
-        {
-          "word": "two",
-          "start": 78.98,
-          "end": 79.34
-        },
-        {
-          "word": "WB",
-          "start": 79.34,
-          "end": 79.98
-        },
-        {
-          "word": "plus",
-          "start": 79.98,
-          "end": 80.3
-        },
-        {
-          "word": "nine.",
-          "start": 80.3,
-          "end": 80.7
-        },
-        {
-          "word": "Subtract",
-          "start": 82.04,
-          "end": 83.36
-        },
-        {
-          "word": "nine",
-          "start": 83.36,
-          "end": 83.86
-        },
-        {
-          "word": "and",
-          "start": 83.86,
-          "end": 84.64
-        },
-        {
-          "word": "divide",
-          "start": 84.64,
-          "end": 85.1
-        },
-        {
-          "word": "by",
-          "start": 85.1,
-          "end": 85.62
-        },
-        {
-          "word": "two.",
-          "start": 85.62,
-          "end": 86.02
-        },
-        {
-          "word": "WB",
-          "start": 86.88,
-          "end": 87.56
-        },
-        {
-          "word": "is",
-          "start": 87.56,
-          "end": 87.86
-        },
-        {
-          "word": "one",
-          "start": 87.86,
-          "end": 88.1
-        },
-        {
-          "word": "metre",
-          "start": 88.1,
-          "end": 88.32
-        },
-        {
-          "word": "per",
-          "start": 88.32,
-          "end": 88.88
-        },
-        {
-          "word": "second.",
-          "start": 88.88,
-          "end": 89.18
-        },
-        {
-          "word": "Now,",
-          "start": 91.13,
-          "end": 91.75
-        },
-        {
-          "word": "will",
-          "start": 92.27,
-          "end": 92.53
-        },
-        {
-          "word": "they",
-          "start": 92.53,
-          "end": 92.71
-        },
-        {
-          "word": "collide",
-          "start": 92.71,
-          "end": 93.01
-        },
-        {
-          "word": "again?",
-          "start": 93.01,
-          "end": 93.43
-        },
-        {
-          "word": "A",
-          "start": 95.05,
-          "end": 95.31
-        },
-        {
-          "word": "is",
-          "start": 95.31,
-          "end": 95.49
-        },
-        {
-          "word": "behind",
-          "start": 95.49,
-          "end": 95.87
+          "start": 64.07,
+          "end": 64.61
         },
         {
           "word": "B.",
-          "start": 95.87,
-          "end": 96.21
+          "start": 64.61,
+          "end": 65.07
         },
         {
-          "word": "A",
-          "start": 97.17,
-          "end": 97.29
-        },
-        {
-          "word": "moves",
-          "start": 97.29,
-          "end": 97.67
-        },
-        {
-          "word": "right",
-          "start": 97.67,
-          "end": 97.99
-        },
-        {
-          "word": "at",
-          "start": 97.99,
-          "end": 98.17
-        },
-        {
-          "word": "two",
-          "start": 98.17,
-          "end": 98.37
-        },
-        {
-          "word": "metres",
-          "start": 98.37,
-          "end": 98.61
-        },
-        {
-          "word": "per",
-          "start": 98.61,
-          "end": 98.85
-        },
-        {
-          "word": "second.",
-          "start": 98.85,
-          "end": 99.19
-        },
-        {
-          "word": "B",
-          "start": 99.53,
-          "end": 99.61
-        },
-        {
-          "word": "at",
-          "start": 99.61,
-          "end": 99.77
-        },
-        {
-          "word": "one.",
-          "start": 99.77,
-          "end": 100.03
-        },
-        {
-          "word": "Two",
-          "start": 100.37,
-          "end": 100.51
-        },
-        {
-          "word": "is",
-          "start": 100.51,
-          "end": 100.67
-        },
-        {
-          "word": "greater",
-          "start": 100.67,
-          "end": 100.93
-        },
-        {
-          "word": "than",
-          "start": 100.93,
-          "end": 101.15
-        },
-        {
-          "word": "one.",
-          "start": 101.15,
-          "end": 101.43
-        },
-        {
-          "word": "The",
-          "start": 103.46,
-          "end": 103.68
-        },
-        {
-          "word": "one",
-          "start": 103.68,
-          "end": 103.98
-        },
-        {
-          "word": "behind",
-          "start": 103.98,
-          "end": 104.36
-        },
-        {
-          "word": "is",
-          "start": 104.36,
-          "end": 104.78
-        },
-        {
-          "word": "faster,",
-          "start": 104.78,
-          "end": 105.38
-        },
-        {
-          "word": "so",
-          "start": 105.8,
-          "end": 106.36
+          "word": "Use",
+          "start": 65.55,
+          "end": 65.81
         },
         {
           "word": "the",
-          "start": 106.36,
-          "end": 106.52
+          "start": 65.81,
+          "end": 66.01
         },
         {
-          "word": "gap",
-          "start": 106.52,
-          "end": 106.84
+          "word": "givens",
+          "start": 66.01,
+          "end": 66.55
         },
         {
-          "word": "closes.",
-          "start": 106.84,
-          "end": 107.36
+          "word": "on",
+          "start": 66.55,
+          "end": 66.67
         },
         {
-          "word": "Yes,",
-          "start": 108.42,
-          "end": 108.72
+          "word": "our",
+          "start": 66.67,
+          "end": 66.89
         },
         {
-          "word": "A",
-          "start": 110.32,
-          "end": 110.44
+          "word": "diagram.",
+          "start": 66.89,
+          "end": 67.45
         },
         {
-          "word": "catches",
-          "start": 110.44,
-          "end": 110.82
+          "word": "B's",
+          "start": 67.97,
+          "end": 68.51
+        },
+        {
+          "word": "two",
+          "start": 68.51,
+          "end": 68.77
+        },
+        {
+          "word": "kilograms",
+          "start": 68.77,
+          "end": 69.33
+        },
+        {
+          "word": "times",
+          "start": 69.33,
+          "end": 70.05
+        },
+        {
+          "word": "four,",
+          "start": 70.05,
+          "end": 70.51
+        },
+        {
+          "word": "plus",
+          "start": 70.97,
+          "end": 71.21
+        },
+        {
+          "word": "C's",
+          "start": 71.21,
+          "end": 71.73
+        },
+        {
+          "word": "three",
+          "start": 71.73,
+          "end": 72.09
+        },
+        {
+          "word": "kilograms",
+          "start": 72.09,
+          "end": 72.71
+        },
+        {
+          "word": "times",
+          "start": 72.71,
+          "end": 73.31
+        },
+        {
+          "word": "one,",
+          "start": 73.31,
+          "end": 73.69
+        },
+        {
+          "word": "equals",
+          "start": 73.95,
+          "end": 74.87
+        },
+        {
+          "word": "B's",
+          "start": 74.87,
+          "end": 75.39
+        },
+        {
+          "word": "two",
+          "start": 75.39,
+          "end": 75.61
+        },
+        {
+          "word": "kilograms",
+          "start": 75.61,
+          "end": 76.27
+        },
+        {
+          "word": "times",
+          "start": 76.27,
+          "end": 77.67
+        },
+        {
+          "word": "w",
+          "start": 77.67,
+          "end": 78.05
+        },
+        {
+          "word": "B,",
+          "start": 78.05,
+          "end": 78.45
+        },
+        {
+          "word": "plus",
+          "start": 78.93,
+          "end": 79.31
+        },
+        {
+          "word": "C's",
+          "start": 79.31,
+          "end": 79.75
+        },
+        {
+          "word": "three",
+          "start": 79.75,
+          "end": 80.01
+        },
+        {
+          "word": "kilograms",
+          "start": 80.01,
+          "end": 80.51
+        },
+        {
+          "word": "times",
+          "start": 80.51,
+          "end": 81.05
+        },
+        {
+          "word": "three.",
+          "start": 81.05,
+          "end": 81.33
+        },
+        {
+          "word": "Eleven",
+          "start": 83.3,
+          "end": 83.76
+        },
+        {
+          "word": "equals",
+          "start": 83.76,
+          "end": 84.22
+        },
+        {
+          "word": "two",
+          "start": 84.22,
+          "end": 84.6
+        },
+        {
+          "word": "w",
+          "start": 84.6,
+          "end": 84.96
         },
         {
           "word": "B",
-          "start": 110.82,
-          "end": 111.16
+          "start": 84.96,
+          "end": 85.3
+        },
+        {
+          "word": "plus",
+          "start": 85.3,
+          "end": 85.56
+        },
+        {
+          "word": "nine.",
+          "start": 85.56,
+          "end": 86.0
+        },
+        {
+          "word": "Subtract",
+          "start": 87.94,
+          "end": 88.58
+        },
+        {
+          "word": "nine",
+          "start": 88.58,
+          "end": 89.12
+        },
+        {
+          "word": "and",
+          "start": 89.12,
+          "end": 89.88
+        },
+        {
+          "word": "divide",
+          "start": 89.88,
+          "end": 90.34
+        },
+        {
+          "word": "by",
+          "start": 90.34,
+          "end": 90.86
+        },
+        {
+          "word": "two.",
+          "start": 90.86,
+          "end": 91.24
+        },
+        {
+          "word": "W",
+          "start": 91.24,
+          "end": 92.42
+        },
+        {
+          "word": "B",
+          "start": 92.42,
+          "end": 92.82
+        },
+        {
+          "word": "is",
+          "start": 92.82,
+          "end": 93.12
+        },
+        {
+          "word": "one",
+          "start": 93.12,
+          "end": 93.34
+        },
+        {
+          "word": "metre",
+          "start": 93.34,
+          "end": 93.58
+        },
+        {
+          "word": "per",
+          "start": 93.58,
+          "end": 94.12
+        },
+        {
+          "word": "second.",
+          "start": 94.12,
+          "end": 94.44
+        },
+        {
+          "word": "Now,",
+          "start": 96.42,
+          "end": 97.0
+        },
+        {
+          "word": "will",
+          "start": 97.56,
+          "end": 97.78
+        },
+        {
+          "word": "they",
+          "start": 97.78,
+          "end": 97.96
+        },
+        {
+          "word": "collide",
+          "start": 97.96,
+          "end": 98.24
+        },
+        {
+          "word": "again?",
+          "start": 98.24,
+          "end": 98.66
+        },
+        {
+          "word": "A",
+          "start": 100.22,
+          "end": 100.56
+        },
+        {
+          "word": "is",
+          "start": 100.56,
+          "end": 100.74
+        },
+        {
+          "word": "behind",
+          "start": 100.74,
+          "end": 101.1
+        },
+        {
+          "word": "B.",
+          "start": 101.1,
+          "end": 101.46
+        },
+        {
+          "word": "A",
+          "start": 102.42,
+          "end": 102.54
+        },
+        {
+          "word": "moves",
+          "start": 102.54,
+          "end": 102.92
+        },
+        {
+          "word": "right",
+          "start": 102.92,
+          "end": 103.24
+        },
+        {
+          "word": "at",
+          "start": 103.24,
+          "end": 103.42
+        },
+        {
+          "word": "two",
+          "start": 103.42,
+          "end": 103.62
+        },
+        {
+          "word": "metres",
+          "start": 103.62,
+          "end": 103.84
+        },
+        {
+          "word": "per",
+          "start": 103.84,
+          "end": 104.1
+        },
+        {
+          "word": "second.",
+          "start": 104.1,
+          "end": 104.42
+        },
+        {
+          "word": "B",
+          "start": 104.8,
+          "end": 104.86
+        },
+        {
+          "word": "at",
+          "start": 104.86,
+          "end": 105.0
+        },
+        {
+          "word": "one.",
+          "start": 105.0,
+          "end": 105.26
+        },
+        {
+          "word": "Two",
+          "start": 105.62,
+          "end": 105.76
+        },
+        {
+          "word": "is",
+          "start": 105.76,
+          "end": 105.92
+        },
+        {
+          "word": "greater",
+          "start": 105.92,
+          "end": 106.18
+        },
+        {
+          "word": "than",
+          "start": 106.18,
+          "end": 106.4
+        },
+        {
+          "word": "one.",
+          "start": 106.4,
+          "end": 106.68
+        },
+        {
+          "word": "The",
+          "start": 108.81,
+          "end": 108.93
+        },
+        {
+          "word": "one",
+          "start": 108.93,
+          "end": 109.21
+        },
+        {
+          "word": "behind",
+          "start": 109.21,
+          "end": 109.61
+        },
+        {
+          "word": "is",
+          "start": 109.61,
+          "end": 110.03
+        },
+        {
+          "word": "faster,",
+          "start": 110.03,
+          "end": 110.63
+        },
+        {
+          "word": "so",
+          "start": 111.19,
+          "end": 111.61
+        },
+        {
+          "word": "the",
+          "start": 111.61,
+          "end": 111.75
+        },
+        {
+          "word": "gap",
+          "start": 111.75,
+          "end": 112.09
+        },
+        {
+          "word": "closes.",
+          "start": 112.09,
+          "end": 112.59
+        },
+        {
+          "word": "Yes.",
+          "start": 113.71,
+          "end": 113.97
+        },
+        {
+          "word": "A",
+          "start": 115.51,
+          "end": 115.69
+        },
+        {
+          "word": "catches",
+          "start": 115.69,
+          "end": 116.05
+        },
+        {
+          "word": "B",
+          "start": 116.05,
+          "end": 116.41
         },
         {
           "word": "again.",
-          "start": 111.16,
-          "end": 111.52
+          "start": 116.41,
+          "end": 116.79
         }
       ],
       "cues": {
@@ -3210,32 +3735,32 @@
         "after": 25.45,
         "after-c": 28.25,
         "unknown": 33.19,
-        "conserve": 39.17,
-        "principle": 48.27,
-        "principle-end": 50.77,
+        "conserve": 39.15,
+        "principle": 48.35,
+        "principle-end": 50.79,
         "formula": 51.34,
-        "formula-end": 60.08,
-        "notation": 60.62,
+        "formula-end": 60.1,
+        "notation": 60.89,
         "notation-end": 65.07,
-        "equation": 66.71,
-        "simplify": 78.16,
-        "solve": 82.82,
-        "result": 87.86,
-        "decision": 91.44,
-        "behind": 95.1,
-        "speed-a": 98.17,
-        "last-b": 99.53,
-        "compare": 100.37,
-        "closing": 103.55,
-        "catch": 108.42
+        "equation": 67.97,
+        "simplify": 83.41,
+        "solve": 88.07,
+        "result": 93.12,
+        "decision": 96.69,
+        "behind": 100.35,
+        "speed-a": 103.42,
+        "last-b": 104.8,
+        "compare": 105.62,
+        "closing": 108.81,
+        "catch": 113.71
       },
-      "generatedAt": "2026-09-07T04:23:31.402660",
+      "generatedAt": "2026-09-07T05:12:59.907414",
       "engine": "faster-whisper-small (local)",
       "tempo": "slow",
       "voiceSpeed": 0.9,
       "voiceId": "gYWKdgLtqjPO3D5uDrDP",
       "provider": "elevenlabs",
-      "audioSha256": "b3350c6329bb11b1da285e62fca343cd2b049b686f2844f1ad032508f90bfb15",
+      "audioSha256": "b7b37bba138629be6794a732a71ce6c38bb21c6e9128bcb29636f2dbe6e4fecc",
       "beats": [
         {
           "text": "Now collision two.",
@@ -3263,34 +3788,34 @@
           "end": 65.2
         },
         {
-          "text": "Substitute the values: two times four, plus three times one, equals two w B, plus three times three.",
+          "text": "Use the givens on our diagram: B's two kilograms times four, plus C's three kilograms times one, equals B's two kilograms times w B, plus C's three kilograms times three.",
           "start": 65.55,
-          "end": 76.16
+          "end": 81.41
         },
         {
           "text": "Eleven equals two w B plus nine.",
-          "start": 78.16,
-          "end": 80.82
+          "start": 83.41,
+          "end": 86.07
         },
         {
           "text": "Subtract nine and divide by two: w B is one metre per second.",
-          "start": 82.82,
-          "end": 89.44
+          "start": 88.07,
+          "end": 94.69
         },
         {
           "text": "Now: will they collide again?",
-          "start": 91.44,
-          "end": 93.6
+          "start": 96.69,
+          "end": 98.85
         },
         {
           "text": "A is behind B. A moves right at two metres per second; B at one. Two is greater than one.",
-          "start": 95.1,
-          "end": 101.55
+          "start": 100.35,
+          "end": 106.8
         },
         {
           "text": "The one behind is faster, so the gap closes. Yes, A catches B again.",
-          "start": 103.55,
-          "end": 111.72
+          "start": 108.8,
+          "end": 116.97
         }
       ],
       "holds": [
@@ -3326,37 +3851,37 @@
         },
         {
           "kind": "hold",
-          "start": 76.16,
-          "end": 78.16,
-          "duration": 2.0
+          "start": 81.41,
+          "end": 83.41,
+          "duration": 2
         },
         {
           "kind": "hold",
-          "start": 80.82,
-          "end": 82.82,
-          "duration": 2.0
+          "start": 86.07,
+          "end": 88.07,
+          "duration": 2
         },
         {
           "kind": "hold",
-          "start": 89.44,
-          "end": 91.44,
-          "duration": 2.0
+          "start": 94.69,
+          "end": 96.69,
+          "duration": 2
         },
         {
           "kind": "hold",
-          "start": 93.6,
-          "end": 95.1,
+          "start": 98.85,
+          "end": 100.35,
           "duration": 1.5
         },
         {
           "kind": "hold",
-          "start": 101.55,
-          "end": 103.55,
-          "duration": 2.0
+          "start": 106.8,
+          "end": 108.8,
+          "duration": 2
         }
       ],
       "paragraphs": [
-        "Now collision two. [hold 1.5 s] B hits C. Find B's new velocity; use the result just found. Let's get drawing. B: two kilograms, now four metres per second. C: three kilograms, one metre per second. Afterwards C moves at three metres per second. Call B's new velocity w B; v B belonged to the first collision. Conserve this pair's momentum. Here u means before, and v means after this collision. [pause 0.3 s] Momentum before equals momentum after. [pause 0.35 s] Mass B times u B, plus mass C times u C, equals mass B times v B, plus mass C times v C. [pause 0.35 s] Here v B is the new velocity we named w B. [pause 0.35 s] Substitute the values: two times four, plus three times one, equals two w B, plus three times three. [hold 2 s] Eleven equals two w B plus nine. [hold 2 s] Subtract nine and divide by two: w B is one metre per second. [hold 2 s] Now: will they collide again? [hold 1.5 s] A is behind B. A moves right at two metres per second; B at one. Two is greater than one. [hold 2 s] The one behind is faster, so the gap closes. Yes, A catches B again."
+        "Now collision two. [hold 1.5 s] B hits C. Find B's new velocity; use the result just found. Let's get drawing. B: two kilograms, now four metres per second. C: three kilograms, one metre per second. Afterwards C moves at three metres per second. Call B's new velocity w B; v B belonged to the first collision. Conserve this pair's momentum. Here u means before, and v means after this collision. [pause 0.3 s] Momentum before equals momentum after. [pause 0.35 s] Mass B times u B, plus mass C times u C, equals mass B times v B, plus mass C times v C. [pause 0.35 s] Here v B is the new velocity we named w B. [pause 0.35 s] Use the givens on our diagram: B's two kilograms times four, plus C's three kilograms times one, equals B's two kilograms times w B, plus C's three kilograms times three. [hold 2 s] Eleven equals two w B plus nine. [hold 2 s] Subtract nine and divide by two: w B is one metre per second. [hold 2 s] Now: will they collide again? [hold 1.5 s] A is behind B. A moves right at two metres per second; B at one. Two is greater than one. [hold 2 s] The one behind is faster, so the gap closes. Yes, A catches B again."
       ]
     }
   ]

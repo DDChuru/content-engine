@@ -185,6 +185,21 @@ JOBS = [
         ]
     },
     {
+        "id": "s07",
+        "finalQuestion": "Will A and B collide again",
+        "audioFile": "multiple-collisions-s07.mp3",
+        "cues": [
+            {"id": "setup", "searchTerms": ["ball a"]},
+            {"id": "same", "searchTerms": ["same direction"]},
+            {"id": "catch", "searchTerms": ["will a catch b"]},
+            {"id": "faster", "searchTerms": ["yes it's faster"]},
+            {"id": "third", "searchTerms": ["ball c"]},
+            {"id": "after-first", "searchTerms": ["after a hits b"]},
+            {"id": "after-second", "searchTerms": ["after b hits c"]},
+            {"id": "question", "searchTerms": ["will a and b collide again"]},
+        ],
+    },
+    {
         "id": "s04",
         "isolatedBeats": [1, 3],
         "audioFile": "multiple-collisions-s04.mp3",
@@ -298,7 +313,7 @@ JOBS = [
             },
             {
                 "id": "equation",
-                "searchTerms": ["one times four", "1 times 4"]
+                "searchTerms": ["a's one kilogram times four", "a is one kilogram times four", "a's 1 kilogram times 4"]
             },
             {
                 "id": "simplify",
@@ -528,7 +543,7 @@ JOBS = [
                 "id": "notation",
                 "searchTerms": [
                     "here v b",
-                    "here vb"
+                    "here vb", "v b is the new", "vb is the new"
                 ]
             },
             {
@@ -542,8 +557,8 @@ JOBS = [
             {
                 "id": "equation",
                 "searchTerms": [
-                    "two times four",
-                    "2 times 4"
+                    "b's two kilograms times four", "b is two kilograms times four",
+                    "b's 2 kilograms times 4"
                 ]
             },
             {
@@ -704,8 +719,14 @@ def get_audio_duration(audio_path):
 
 def refine_readings(model, job, timing, words):
     """Re-read isolated values without copying numbers from the preceding sentence."""
-    for index in job.get("isolatedBeats", []):
-        beat = timing["beats"][index]
+    readings = [timing["beats"][index] for index in job.get("isolatedBeats", [])]
+    if job.get("finalQuestion"):
+        # Isolate the closing question so a trailing breath is not read as a word.
+        question, missed = resolve_cues(words, [{"id": "question", "searchTerms": [job["finalQuestion"]]}], timing["beats"])
+        if missed:
+            raise RuntimeError(f"Missing final question in {job['id']}")
+        readings.append({"text": job["finalQuestion"] + "?", "start": max(timing["beats"][-1]["start"], question["question"] - .22), "end": timing["beats"][-1]["end"]})
+    for beat in readings:
         segments, _ = model.transcribe(
             str(AUDIO_DIR / job["audioFile"]), language="en",
             word_timestamps=True, beam_size=5, vad_filter=False,
@@ -719,7 +740,7 @@ def refine_readings(model, job, timing, words):
             if word.start < beat["end"] and word.end > beat["start"]
         ]
         if not replacement:
-            raise RuntimeError(f"No isolated reading for {job['id']} beat {index}")
+            raise RuntimeError(f"No isolated reading for {job['id']} at {beat['start']}")
         words = [word for word in words
                  if not (word["end"] > beat["start"] and word["start"] < beat["end"])]
         words = sorted(words + replacement, key=lambda word: word["start"])
@@ -757,6 +778,7 @@ def transcribe_job(model, job, generated_at, timing):
                 )
 
     words = refine_readings(model, job, timing, words)
+    words = [word for word in words if word["start"] < timing["beats"][-1]["end"]]
     duration = get_audio_duration(audio_path)
     full_text = " ".join(word["word"] for word in words)
     print(full_text, flush=True)
@@ -809,8 +831,8 @@ def main():
     print("Cost: $0.00 (local)\n")
 
     cue_count = sum(len(job["cues"]) for job in JOBS)
-    if len(JOBS) != 6:
-        raise RuntimeError("Expected six narration scenes")
+    if len(JOBS) != 7:
+        raise RuntimeError("Expected seven narration scenes")
 
     missing_audio = [
         job["audioFile"]
