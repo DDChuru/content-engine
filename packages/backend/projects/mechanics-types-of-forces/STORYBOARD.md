@@ -34,16 +34,17 @@ Format: 16:9 Remotion explainer, approximately 3 minutes 38 seconds. Original �
 
 ## S03 — Weight and reaction
 
-**Duration:** 26 seconds
+**Duration:** 25.678 seconds (measured MP3)
 
-**Viewer sees:** Return to the block on the bench. An amber weight arrow grows vertically down. The bench glows at the contact, then an amber reaction arrow grows perpendicular to it. The bench tilts briefly and the reaction rotates with the surface while weight stays vertical.
+**Viewer sees:** Return to the block on the bench. An amber weight arrow grows vertically down. The bench glows at the contact, then an amber reaction arrow grows perpendicular to it. The bench tilts briefly and the reaction rotates with the surface while weight stays vertical. Keep “W = mg” above a compact diagram label “g = 10 m s⁻² · Paper 4”, and ring 10 at its spoken cue.
 
-**Narration:** “Weight is gravity pulling the object vertically down. Its size is mass times gravity. The bench pushes back with a normal reaction. Normal means perpendicular to the surface. Tilt the surface, and the reaction tilts too. Weight still points straight down.”
+**Narration:** “Weight is gravity pulling the object vertically down. Its size is mass times gravity. For Cambridge Paper Four, use g equals ten metres per second squared. The bench pushes back with a normal reaction. Normal means perpendicular to the surface. Tilt the surface, and the reaction tilts too. Weight still points straight down.”
 
 **Cue keywords:**
 
 - “weight” — downward arrow appears
 - “mass times gravity” — compact formula card resolves
+- “ten metres” — ring the diagram’s gravity value
 - “normal reaction” — contact pulse launches upward arrow
 - “tilt” — bench rotates while arrows separate in direction
 
@@ -124,17 +125,24 @@ Format: 16:9 Remotion explainer, approximately 3 minutes 38 seconds. Original �
 
 ## S09 — From arrows to an equation
 
-**Duration:** 24 seconds
+**Duration:** 34.273 seconds (measured MP3)
 
-**Viewer sees:** The built diagram docks beside two balance rails. On the vertical rail, weight and reaction cancel. On the horizontal rail, a twenty-two-newton tension bar exceeds a fourteen-point-seven-newton friction bar. The difference becomes a rightward acceleration trace.
+**Viewer sees:** The built diagram docks beside two balance rails. On the vertical rail, weight and reaction cancel. On the horizontal rail, a twenty-two-newton tension bar exceeds a fifteen-newton friction bar. The difference is 7 N and becomes a rightward acceleration trace labelled 1.4 m/s². Lead the working with “R = W = mg”, “Fnet = T − F” and “Fnet = ma” before the substitutions. Keep the block, its givens and the balance bars visible. Ring each numerical source at its word cue, including repeated substitutions.
 
-**Narration:** “The diagram now writes the equations for us. Vertically, reaction balances weight. Horizontally, tension is twenty-two newtons and friction is fourteen point seven. The remaining force is seven point three newtons to the right, so the five-kilogram block accelerates at one point four six metres per second squared.”
+**Narration:** “The diagram now writes the equations for us. Vertically, reaction balances weight, which is mass times gravity. Five times ten gives fifty newtons. Horizontally, resultant force is tension minus friction. Tension is twenty-two newtons and friction is fifteen newtons. The remaining force is seven newtons to the right. Force equals mass times acceleration. So the five-kilogram block accelerates at one point four metres per second squared.”
 
 **Cue keywords:**
 
 - “Vertically” — vertical rail balances
 - “Horizontally” — force bars compare
+- “mass times gravity” — general weight formula
+- “five times”, “ten gives”, “fifty newtons” — weight substitution and source rings
+- “resultant force” — general horizontal formula
+- “twenty-two newtons”, “fifteen newtons” — tension and friction rings
 - “remaining force” — difference bar detaches
+- “seven newtons” — net-force result ring
+- “Force equals mass times acceleration” — general acceleration formula
+- “five-kilogram”, “one point four” — mass and acceleration rings
 - “accelerates” — block moves right
 
 ## S10 — Twenty-second recap
@@ -151,3 +159,7 @@ Format: 16:9 Remotion explainer, approximately 3 minutes 38 seconds. Original �
 - “Tension” — flip string and rod tile
 - “Friction” — flash resistive-force tiles
 - “one body” — resolve final card
+
+## Gravity correction voice settings
+
+S03 and S09: voice `gYWKdgLtqjPO3D5uDrDP`, model `eleven_turbo_v2_5`, speed **1.14**, matching their original ElevenLabs request history. All other scenes retain their original MP3s.

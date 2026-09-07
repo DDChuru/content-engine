@@ -16,7 +16,7 @@ Weight is the gravitational force on a body:
 
 \(W=mg\)
 
-It acts vertically down. Questions commonly use \(g=9.8\text{ m s}^{-2}\) or a supplied value. Mass is a scalar measured in kilograms; weight is a vector measured in newtons.
+It acts vertically down. Cambridge 9709 Paper 4 uses \(g=10\text{ m s}^{-2}\) unless the question supplies another value. Mass is a scalar measured in kilograms; weight is a vector measured in newtons.
 
 ### Normal reaction
 
@@ -56,7 +56,7 @@ A driving force propels a vehicle; a braking force opposes its motion. Air and w
 
 ### 1. Rough horizontal table and a string
 
-A \(5\text{ kg}\) block is pulled horizontally by a string with tension \(22\text{ N}\). The coefficient of friction is \(0.30\), and \(g=9.8\text{ m s}^{-2}\).
+A \(5\text{ kg}\) block is pulled horizontally by a string with tension \(22\text{ N}\). The coefficient of friction is \(0.30\), and \(g=10\text{ m s}^{-2}\).
 
 Force diagram in words: on the block, draw \(W\) down, \(R\) up, \(T\) right and \(F\) left. Do not include the block’s force on the table.
 
@@ -64,41 +64,55 @@ There is no vertical acceleration, so
 
 \(R-W=0\)
 
-\(R=mg=5(9.8)=49\text{ N}\)
+\(R=mg\)
+
+\(R=5(10)=50\text{ N}\)
 
 Limiting friction is
 
-\(\mu R=0.30(49)=14.7\text{ N}\)
+\(F_{\mathrm{lim}}=\mu R\)
 
-Since \(22>14.7\), the block moves. Using the simplified sliding model,
+\(F_{\mathrm{lim}}=0.30(50)=15\text{ N}\)
 
-\(F=14.7\text{ N}\)
+Since \(22>15\), the block moves. Using the simplified sliding model,
+
+\(F=15\text{ N}\)
 
 Horizontally,
 
-\(22-14.7=5a\)
+\(T-F=ma\)
 
-\(a=1.46\text{ m s}^{-2}\)
+\(22-15=5a\)
+
+The resultant force is \(7\text{ N}\) to the right.
+
+\(a=1.4\text{ m s}^{-2}\)
 
 Acceleration is to the right.
 
 ### 2. A book at rest on a rough slope
 
-A \(4\text{ kg}\) book rests on a plane inclined at \(30^\circ\). The coefficient of friction is \(0.70\), and \(g=9.8\text{ m s}^{-2}\).
+A \(4\text{ kg}\) book rests on a plane inclined at \(30^\circ\). The coefficient of friction is \(0.70\), and \(g=10\text{ m s}^{-2}\).
 
 Resolve weight perpendicular to the plane:
 
-\(R=mg\cos 30^\circ=4(9.8)\cos 30^\circ=33.9\text{ N}\)
+\(R=mg\cos\theta\)
+
+\(R=4(10)\cos 30^\circ=20\sqrt{3}\approx34.6\text{ N}\)
 
 The component trying to move the book down the plane is
 
-\(mg\sin 30^\circ=4(9.8)\sin 30^\circ=19.6\text{ N}\)
+\(W_{\parallel}=mg\sin\theta\)
 
-Equilibrium needs \(19.6\text{ N}\) of friction up the plane. Check the limit:
+\(W_{\parallel}=4(10)\sin 30^\circ=20\text{ N}\)
 
-\(\mu R=0.70(33.9)=23.7\text{ N}\)
+Equilibrium needs \(20\text{ N}\) of friction up the plane. Check the limit:
 
-Because \(19.6<23.7\), the book can rest. Friction is \(19.6\text{ N}\), not \(23.7\text{ N}\).
+\(F_{\mathrm{lim}}=\mu R\)
+
+\(F_{\mathrm{lim}}=0.70(20\sqrt{3})\approx24.2\text{ N}\)
+
+Because \(20<24.2\), the book can rest. Friction is \(20\text{ N}\), not \(24.2\text{ N}\).
 
 ### 3. A rod pushing a trolley
 

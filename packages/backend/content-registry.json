@@ -693,7 +693,7 @@
             "landscape": {
               "compositionId": "MechanicsTypesOfForces",
               "resolution": "1920x1080",
-              "durationS": 190.91,
+              "durationS": 205.433,
               "composition": "src/remotion/compositions/MechanicsTypesOfForces.tsx",
               "render": "output/mechanics/types-of-forces-v2.mp4",
               "contactSheet": "output/mechanics/types-of-forces-v2-sheet.png",
@@ -717,7 +717,7 @@
               "src/remotion/public/audio/mechanics/types-of-forces-s10.mp3"
             ],
             "transcript": "src/remotion/public/transcripts/mechanics/types-of-forces.json",
-            "cues": 48,
+            "cues": 60,
             "transcribeScript": "src/scripts/transcribe-mechanics-types-of-forces-local.py"
           },
           "commits": {
@@ -730,7 +730,7 @@
             "mapCode": "M4.1"
           },
           "reviewNotes": [
-            "syllabus check: 9709 Paper 4 uses g = 10 m/s^2; this video uses 9.8 — fix in a re-voice/re-build pass"
+            "Gravity corrected to 10 m/s^2 with weight/reaction 50 N, friction 15 N, resultant 7 N and acceleration 1.4 m/s^2. S03/S09 re-voiced at original speed 1.14, locally transcribed and still-audited. Existing video render predates this correction; no video rendered in this pass."
           ]
         },
         "mechanics-displacement-time-graphs": {

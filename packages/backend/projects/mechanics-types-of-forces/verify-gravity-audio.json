@@ -1,0 +1,73 @@
+{
+  "baselineCommit": "38039b2afada50c75cd6f5790d8b51ea49ffb2cd",
+  "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+  "model": "eleven_turbo_v2_5",
+  "speed": 1.14,
+  "speedSource": "Original scene requests in ElevenLabs history, 2026-09-05",
+  "changedScenes": [
+    "s03",
+    "s09"
+  ],
+  "beforeSha256": {
+    "types-of-forces-s01.mp3": "9e88fb2bab392e0f79f1a6420755c3040fae49bb342a3938e95c9ea3e887a05c",
+    "types-of-forces-s09.mp3": "709ddf8d86e1ae3f4229c81007d28d80c65951d51e5eff9b0ec7abca66c59052",
+    "types-of-forces-s06.mp3": "0deafdb881697ee8f252f051f99c71368f90f6a25ace9a3779254fdb3d8f58ce",
+    "types-of-forces-s05.mp3": "cfde7dac06d50d5837d82e019a4041aeb25811507dbd456ab4fc69c8f0167116",
+    "types-of-forces-s04.mp3": "1d6d759fae6740c6150fbd52f8d3130be82c28879e6fcde58919535225d81f22",
+    "types-of-forces-s07.mp3": "f1ef171a8852677a9caa5e18daf7c07f2f2cae13b4fac7fa82ae7acb63245408",
+    "types-of-forces-s02.mp3": "c3a1194fb7b093bd97de18bc82d68b426c7fbd00fc43d68f809e6f9f8a9558b9",
+    "types-of-forces-s08.mp3": "526b3ab1187822eab69f3bb351f81a1824885aa9b438dda92bf7c5377261abe2",
+    "types-of-forces-s03.mp3": "671b67a7eb557b24220888f89de3dedd5943eab7aa5712a7cbd2846b42e36f21",
+    "types-of-forces-s10.mp3": "db9fa57daf46ec6e8fd2aeeceb51e89b0c08e46eda6b2878a6e375fb0944fc7f"
+  },
+  "afterSha256": {
+    "types-of-forces-s01.mp3": "9e88fb2bab392e0f79f1a6420755c3040fae49bb342a3938e95c9ea3e887a05c",
+    "types-of-forces-s09.mp3": "5e317df1f1b473d6b3d9e881d91dff597e5098fa7166d1d3e4162b004027584b",
+    "types-of-forces-s06.mp3": "0deafdb881697ee8f252f051f99c71368f90f6a25ace9a3779254fdb3d8f58ce",
+    "types-of-forces-s05.mp3": "cfde7dac06d50d5837d82e019a4041aeb25811507dbd456ab4fc69c8f0167116",
+    "types-of-forces-s04.mp3": "1d6d759fae6740c6150fbd52f8d3130be82c28879e6fcde58919535225d81f22",
+    "types-of-forces-s07.mp3": "f1ef171a8852677a9caa5e18daf7c07f2f2cae13b4fac7fa82ae7acb63245408",
+    "types-of-forces-s02.mp3": "c3a1194fb7b093bd97de18bc82d68b426c7fbd00fc43d68f809e6f9f8a9558b9",
+    "types-of-forces-s08.mp3": "526b3ab1187822eab69f3bb351f81a1824885aa9b438dda92bf7c5377261abe2",
+    "types-of-forces-s03.mp3": "5d37e4fe02b1f4fc601fa8672854ae1f0878da4850b7d84d36b641f628f7ee0c",
+    "types-of-forces-s10.mp3": "db9fa57daf46ec6e8fd2aeeceb51e89b0c08e46eda6b2878a6e375fb0944fc7f"
+  },
+  "untouchedAudioByteIdentical": true,
+  "untouchedTranscriptObjectsIdentical": true,
+  "transcribedScenes": [
+    {
+      "id": "s03",
+      "duration": 25.678367,
+      "text": "Weight is gravity, pulling the object vertically down. Its size is mass times gravity. For Cambridge paper 4, use g equals 10 meters per second squared. The bench pushes back with a normal reaction. Normal means perpendicular to the surface. Tilt the surface and the reaction tilts too. Weight still points straight down.",
+      "cues": {
+        "weight": 0.0,
+        "mass-times-gravity": 5.94,
+        "ten-gravity": 11.16,
+        "normal-reaction": 15.48,
+        "tilt": 19.92
+      }
+    },
+    {
+      "id": "s09",
+      "duration": 34.272653,
+      "text": "The diagram now writes the equations for us. Vertically, reaction balance is weight, which is mass times gravity. 5 times 10 gives 50 Newtons. Horizontally, resultant force is tension minus friction. Tension is 22 Newtons and friction is 15 Newtons. The remaining force is 7 Newtons to the right. Force equals mass times acceleration. So the 5 kg block accelerates at 1.4 m per second squared.",
+      "cues": {
+        "vertically": 4.06,
+        "weight-formula": 7.72,
+        "five-times": 10.4,
+        "ten-substitution": 10.84,
+        "fifty-newtons": 11.8,
+        "horizontally": 13.46,
+        "horizontal-formula": 14.84,
+        "twenty-two-newtons": 18.7,
+        "fifteen-newtons": 20.92,
+        "seven-newtons": 23.98,
+        "force-formula": 26.18,
+        "five-kilogram": 29.46,
+        "one-point-four": 31.76,
+        "remaining-force": 22.72,
+        "accelerates": 30.46
+      }
+    }
+  ]
+}

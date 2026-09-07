@@ -48,6 +48,7 @@ interface Scene {
   holds: Hold[];
   tempo: string;
   voiceSpeed: number;
+  focus: { target: string; phrase: string; start: number; end: number }[];
 }
 const SCENES = transcriptJson.scenes as unknown as Scene[];
 const OUTCOMES = [
@@ -91,8 +92,8 @@ function heldTime(s: Scene, t: number): number {
   return hold ? hold.start : t;
 }
 
-// Same fade-through presentation as MechanicsVelocityTimeGraphs: the two
-// scenes never remain visible together. Audio runs outside the fade overlap.
+// Retain the overlap timing while switching between two complete diagrams.
+// Audio runs outside the visual tail overlap.
 type FadeProps = { background: string };
 const FadeThrough: React.FC<TransitionPresentationComponentProps<FadeProps>> = ({
   children,
@@ -100,17 +101,12 @@ const FadeThrough: React.FC<TransitionPresentationComponentProps<FadeProps>> = (
   presentationDirection,
   presentationProgress,
 }) => {
-  const opacity =
-    presentationDirection === 'exiting'
-      ? interpolate(presentationProgress, [0, 0.5], [1, 0], {
-          extrapolateLeft: 'clamp',
-          extrapolateRight: 'clamp',
-        })
-      : interpolate(presentationProgress, [0.5, 1], [0, 1], {
-          extrapolateLeft: 'clamp',
-          extrapolateRight: 'clamp',
-        });
-  return <AbsoluteFill style={{ background: passedProps.background, opacity }}>{children}</AbsoluteFill>;
+  // Replace the diagram at the midpoint without an empty graphite frame (§10).
+  const opacity = presentationDirection === 'exiting'
+    ? Number(presentationProgress < 0.5) : Number(presentationProgress >= 0.5);
+  // An opaque outer wrapper would cover the outgoing diagram even while its
+  // nested entering presentation is transparent (middle scenes have both).
+  return <AbsoluteFill style={{ opacity }}>{children}</AbsoluteFill>;
 };
 const fadeThroughGraphite: TransitionPresentation<FadeProps> = {
   component: FadeThrough,
@@ -125,30 +121,34 @@ const Header: React.FC<{ children: React.ReactNode }> = ({ children }) => (
     {children}
   </div>
 );
-const Card: React.FC<{ text: string; centre?: boolean; tick?: boolean }> = ({
+const Card: React.FC<{ text: string; centre?: boolean; tick?: boolean; start?: number; t?: number }> = ({
   text,
   centre = false,
   tick = false,
+  start = Infinity,
+  t = 0,
 }) => (
   <div
     data-region="card"
-    data-card="true"
+    data-card={centre ? 'outcome' : 'true'}
     style={{
       position: 'absolute',
-      left: centre ? 300 : 1050,
-      top: centre ? 330 : 370,
-      width: centre ? 1320 : 740,
-      minHeight: 230,
-      padding: '55px 58px',
+      left: 1050,
+      top: centre ? 400 : 370,
+      width: 'max-content',
+      maxWidth: 740,
+      padding: '22px 28px',
       boxSizing: 'border-box',
-      background: T.paper,
+      background: '#d9d9d0',
       color: T.ink,
-      fontSize: centre ? 62 : 52,
+      fontSize: centre ? 43 : 40,
       lineHeight: 1.35,
       borderRadius: 8,
     }}
   >
-    {text}
+    <span style={{ backgroundImage: `linear-gradient(${T.accent}, ${T.accent})`,
+      backgroundRepeat: 'no-repeat', backgroundPosition: 'left bottom',
+      backgroundSize: `${clamp((t - start) / 1.2) * 100}% 3px` }}>{text}</span>
     {tick && (
       <svg
         aria-hidden="true"
@@ -219,6 +219,40 @@ const Arrow: React.FC<{
 const Ring: React.FC<{ x: number; y: number; rx?: number }> = ({ x, y, rx = 65 }) => (
   <ellipse cx={x} cy={y} rx={rx} ry="40" fill="none" stroke={T.accent} strokeWidth="5" />
 );
+
+const SpokenRing: React.FC<{
+  s: Scene; t: number; target: string; x: number; y: number; rx?: number; ry?: number;
+}> = ({ s, t, target, x, y, rx = 65, ry = 42 }) => {
+  const event = s.focus.filter((e) => e.target === target && t >= e.start).at(-1);
+  if (!event || t > Math.max(event.end, event.start + 1.15) + 0.4) return null;
+  const progress = clamp((t - event.start + 1 / 30) / 0.4);
+  const opacity = interpolate(t, [Math.max(event.end, event.start + 1.15),
+    Math.max(event.end, event.start + 1.15) + 0.4], [1, 0], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' });
+  return <path data-ring={target} data-ring-start={event.start}
+    d={`M${x - rx} ${y + 3} C${x - rx - 8} ${y - ry},${x + rx - 5} ${y - ry - 8},${x + rx} ${y - 3}
+      C${x + rx + 9} ${y + ry},${x - rx + 4} ${y + ry + 8},${x - rx} ${y + 3}`}
+    fill="none" stroke={T.accent} strokeWidth="4" strokeLinecap="round"
+    pathLength="1" strokeDasharray="1" strokeDashoffset={1 - progress} opacity={opacity} />;
+};
+
+const PhraseUnderline: React.FC<{ s: Scene; t: number; target: string; x: number; y: number; width: number }> =
+  ({ s, t, target, x, y, width }) => {
+    const event = s.focus.filter((e) => e.target === target && t >= e.start).at(-1);
+    if (!event || t > event.end + 1.5) return null;
+    return <path data-underline={target} d={`M${x} ${y} Q${x + width / 2} ${y + 3} ${x + width} ${y - 1}`}
+      fill="none" stroke={T.accent} strokeWidth="3" strokeLinecap="round" pathLength="1"
+      strokeDasharray="1" strokeDashoffset={1 - clamp((t - event.start + 1 / 30) / Math.max(0.4, event.end - event.start))} />;
+  };
+
+const SpokenPhrase: React.FC<{ s: Scene; t: number; target: string; children: React.ReactNode }> =
+  ({ s, t, target, children }) => {
+    const event = s.focus.filter((e) => e.target === target && t >= e.start).at(-1);
+    const progress = event && t <= event.end + 1.5
+      ? clamp((t - event.start + 1 / 30) / Math.max(0.4, event.end - event.start)) : 0;
+    return <span style={{ backgroundImage: `linear-gradient(${T.accent}, ${T.accent})`,
+      backgroundRepeat: 'no-repeat', backgroundPosition: 'left bottom',
+      backgroundSize: `${progress * 100}% 3px` }}>{children}</span>;
+  };
 
 interface SystemProps {
   sphere?: boolean;
@@ -304,6 +338,8 @@ const System: React.FC<SystemProps> = ({
           d={
             slack
               ? `M${bx + 115} 320 Q465 435 620 320 A45 45 0 0 1 665 365 Q695 425 665 ${hy}`
+              : extensible
+                ? `M${bx + 115} 320 ${Array.from({ length: 9 }, (_, i) => `L${355 + i * 29} ${i % 2 ? 307 : 333}`).join(' ')} L620 320 A45 45 0 0 1 665 365 V${hy}`
               : `M${particle ? bx + 58 : bx + 115} 320 H620 A45 45 0 0 1 665 365 V${hy}`
           }
           stroke={heavyString || extensible ? T.accent : T.text}
@@ -369,6 +405,21 @@ const System: React.FC<SystemProps> = ({
     </g>
   );
 };
+
+const SystemFocus: React.FC<{ s: Scene; t: number; particle?: boolean }> = ({ s, t, particle }) => <>
+  <SpokenRing s={s} t={t} target="box" x={278} y={320} rx={77} ry={68} />
+  <SpokenRing s={s} t={t} target="body" x={278} y={320} rx={particle ? 32 : 77} ry={particle ? 32 : 68} />
+  <SpokenRing s={s} t={t} target="sphere" x={665} y={522} rx={68} ry={68} />
+  <SpokenRing s={s} t={t} target="body" x={665} y={particle ? 470 : 522} rx={particle ? 32 : 68} ry={particle ? 32 : 68} />
+  <SpokenRing s={s} t={t} target="surface" x={320} y={374} rx={240} ry={27} />
+  <SpokenRing s={s} t={t} target="pulley" x={620} y={365} rx={62} ry={64} />
+  <SpokenRing s={s} t={t} target="string" x={470} y={320} rx={125} ry={30} />
+  <SpokenRing s={s} t={t} target="air" x={665} y={522} rx={90} ry={86} />
+  <SpokenRing s={s} t={t} target="tension" x={470} y={320} rx={125} ry={30} />
+  <SpokenRing s={s} t={t} target="tension" x={665} y={427} rx={30} ry={48} />
+  <SpokenRing s={s} t={t} target="acceleration" x={278} y={320} rx={77} ry={68} />
+  <SpokenRing s={s} t={t} target="acceleration" x={665} y={522} rx={68} ry={68} />
+</>;
 
 type Point = readonly [number, number];
 type Glyph = Point[][];
@@ -1031,12 +1082,13 @@ interface Line {
   resultAt?: number;
   prefixEnd?: number;
 }
-const Paper: React.FC<{ lines: Line[]; t: number; ringLine?: number; prompt?: string; note?: string }> = ({
+const Paper: React.FC<{ lines: Line[]; t: number; ringLine?: number; prompt?: string; note?: string; children?: React.ReactNode }> = ({
   lines,
   t,
   ringLine = -1,
   prompt,
   note,
+  children,
 }) => {
   const { fps } = useVideoConfig();
   const strokes = useMemo(
@@ -1115,6 +1167,7 @@ const Paper: React.FC<{ lines: Line[]; t: number; ringLine?: number; prompt?: st
         <path key={i} d={`M30 ${70 + i * 48} H780`} fill="none" stroke={T.line} strokeWidth="1.5" />
       ))}
       <path d="M48 25 V635" stroke={T.line} strokeWidth="2" />
+      {children}
       {lines.map((line, i) =>
         t >= line.start ? (
           <g key={line.id} data-ink-text={line.text + (line.exponent ? line.exponent : '')}>
@@ -1154,13 +1207,14 @@ const Opening: React.FC<{ s: Scene }> = ({ s }) => {
   const outcome = ['explain', 'list', 'match'].indexOf(state);
   return (
     <>
+      <Diagram><System sphere /><SpokenRing s={s} t={t} target="surface" x={350} y={375} rx={220} ry={28} /></Diagram>
       <Header>
         {['outcomes', 'explain', 'list', 'match'].includes(state)
           ? 'By the end you can...'
           : 'Syllabus 4.1 · p.31 (excerpt)'}
       </Header>
-      {state === 'quote' && <Card text="use the model of a ‘smooth’ contact" centre />}
-      {outcome >= 0 && <Card text={OUTCOMES[outcome]} centre />}
+      {state === 'quote' && <Card text="use the model of a ‘smooth’ contact" centre t={t} start={cue(s, 'quote')} />}
+      {outcome >= 0 && <Card text={OUTCOMES[outcome]} centre t={t} start={cue(s, state)} />}
     </>
   );
 };
@@ -1188,9 +1242,10 @@ const ModellingCycle: React.FC<{ s: Scene }> = ({ s }) => {
       viewBox="0 0 1720 650"
       style={{ position: 'absolute', left: 100, top: 290 }}
     >
+      <g transform="translate(70 285) scale(0.48)"><System sphere /></g>
       {nodes.map(
         (n, i) =>
-          t >= cue(s, n.id) && (
+          (i === 0 || t >= cue(s, n.id)) && (
             <g key={n.id}>
               {i > 0 && (
                 <path
@@ -1236,6 +1291,7 @@ const ModellingCycle: React.FC<{ s: Scene }> = ({ s }) => {
                   strokeWidth="4"
                 />
               )}
+              <SpokenRing s={s} t={t} target={n.id} x={n.x + 197} y={n.y + 80} rx={183} ry={52} />
             </g>
           ),
       )}
@@ -1272,7 +1328,7 @@ const FallingStone: React.FC<{ s: Scene }> = ({ s }) => {
   const point = at('particle') && !at('refine-size');
   const vertical = at('vertical') && !at('refine-motion');
   const stoneY = refining ? 120 : at('water') ? 585 : at('one-value') ? 240 : 120;
-  const showAir = (at('air') && !at('no-air')) || refining;
+  const showAir = at('air') || refining;
   const words: Record<string, string> = {
     dimensions: 'Two or three dimensions',
     air: 'Air and wind',
@@ -1282,7 +1338,7 @@ const FallingStone: React.FC<{ s: Scene }> = ({ s }) => {
     'no-air': 'Ignore air and wind',
     particle: 'Particle: ignore dimensions',
     constant: 'Constant gravity',
-    question: 'Is 1 m at t = 1 reasonable?',
+    question: 'Is 1 m after one second reasonable?',
     answer: 'The model gives 15 m',
     'refine-air': 'Include air resistance',
     'refine-size': 'Keep size and mass',
@@ -1331,8 +1387,11 @@ const FallingStone: React.FC<{ s: Scene }> = ({ s }) => {
     t >= holds[1].start && t < holds[1].end ? 2 : t >= holds[0].start && t < holds[0].end ? 1 : -1;
   return (
     <>
-      {at('stone') && (
+      {(
         <Diagram>
+          <g transform={at('model') ? 'translate(0 180) scale(0.52)' : undefined}>
+          <path d="M50 120 H275 V590 H50 Z" fill="#333b3d" />
+          <path d="M80 170 l90 20 l-25 95 l100 65 M110 420 l125 40 l-40 95" fill="none" stroke="#515957" strokeWidth="3" />
           <path d="M50 120 H275 V590 H800" fill="none" stroke={T.muted} strokeWidth="5" />
           <path
             d="M300 608 Q330 595 360 608 T420 608 T480 608 T540 608 T600 608 T660 608 T720 608 T780 608"
@@ -1358,6 +1417,7 @@ const FallingStone: React.FC<{ s: Scene }> = ({ s }) => {
             />
           )}
           {showAir && (
+            <g opacity={at('no-air') && !refining ? 0.5 : 1}>
             <path
               d={
                 refining
@@ -1368,6 +1428,8 @@ const FallingStone: React.FC<{ s: Scene }> = ({ s }) => {
               stroke={state === 'air' || state === 'refine-air' ? T.accent : T.muted}
               strokeWidth="5"
             />
+            {at('no-air') && !refining && <path d="M445 130 L525 185" stroke={T.muted} strokeWidth="3" />}
+            </g>
           )}
           {at('gravity') && (
             <Arrow x={160} y={220} dx={0} dy={135} accent={state === 'gravity' || state === 'constant'} />
@@ -1395,12 +1457,41 @@ const FallingStone: React.FC<{ s: Scene }> = ({ s }) => {
               Water
             </text>
           )}
+          <SpokenRing s={s} t={t} target="stone" x={315} y={stoneY} rx={55} ry={48} />
+          <SpokenRing s={s} t={t} target="air" x={refining ? 450 : 485} y={refining ? 300 : 160} rx={75} ry={65} />
+          <SpokenRing s={s} t={t} target="gravity" x={160} y={285} rx={38} ry={95} />
+          <SpokenRing s={s} t={t} target="trajectory" x={vertical ? 315 : 485} y={350} rx={vertical ? 45 : 195} ry={260} />
+          </g>
+          {at('model') && <g transform="translate(440 70)">
+            <path d="M70 60 V510 H375" fill="none" stroke={T.muted} strokeWidth="3" />
+            <text x="70" y="28" fill={T.text} fontSize="28">Height (m)</text>
+            <text x="195" y="620" fill={T.text} fontSize="28">Time (s)</text>
+            <path d="M70 110 Q210 110 350 510 L70 510 Z" fill={`${T.accent}15`} />
+            <path d="M70 110 Q210 110 350 510" fill="none" stroke={T.accent} strokeWidth="4" />
+            {[{ value: '20', y: 110 }, { value: '15', y: 210 }, { value: '0', y: 510 }].map(({ value, y }) =>
+              <g key={value}><path d={`M62 ${y} H350`} stroke={T.muted} strokeWidth="1.5" strokeDasharray="5 7" />
+                <text x="48" y={y + 9} fill={T.text} textAnchor="end" fontSize="28">{value}</text></g>)}
+            {[0, 1, 2].map((value) => <g key={value}>
+              <path d={`M${70 + value * 140} 510 V540`} stroke={T.muted} strokeWidth="2" />
+              <text x={70 + value * 140} y="575" textAnchor="middle" fill={T.text} fontSize="28">{value}</text>
+            </g>)}
+            <circle cx={at('water') ? 350 : at('one-value') ? 210 : 70}
+              cy={at('water') ? 510 : at('one-value') ? 210 : 110} r="7" fill={T.text} />
+            <SpokenRing s={s} t={t} target="twenty" x={28} y={110} rx={32} ry={28} />
+            <SpokenRing s={s} t={t} target="fifteen" x={28} y={210} rx={32} ry={28} />
+            <SpokenRing s={s} t={t} target="zero-time" x={70} y={567} rx={29} ry={27} />
+            <SpokenRing s={s} t={t} target="one-time" x={210} y={567} rx={29} ry={27} />
+            <SpokenRing s={s} t={t} target="water" x={350}
+              y={s.focus.filter((e) => e.target === 'water' && t >= e.start).at(-1)?.phrase === 'water' ? 510 : 567}
+              rx={32} ry={29} />
+            <SpokenRing s={s} t={t} target="question" x={210} y={210} rx={30} ry={28} />
+          </g>}
         </Diagram>
       )}
       {at('model') && !at('question') ? (
         <Paper lines={lines} t={t} ringLine={ringLine} />
       ) : (
-        words[state] && <Card text={words[state]} />
+        words[state] && <Card text={words[state]} t={t} start={cue(s, state)} />
       )}
     </>
   );
@@ -1438,11 +1529,12 @@ const Vocabulary: React.FC<{ s: Scene }> = ({ s }) => {
   const centre = state === 'uneven' ? 560 : 420;
   return (
     <>
-      {state && (
+      {(
         <Diagram>
           {rod ? (
             <g stroke={T.text} fill="none" strokeWidth="5">
-              <path d="M150 350 H690" strokeWidth="6" />
+              <rect x="150" y="323" width="540" height="54" rx="12" fill={`${T.accent}15`} strokeWidth="4" />
+              <path d="M150 298 V310 M690 298 V310 M150 304 H690" stroke={T.muted} strokeWidth="3" />
               {at('uniform') &&
                 Array.from({ length: 10 }, (_, i) => (
                   <circle
@@ -1455,9 +1547,11 @@ const Vocabulary: React.FC<{ s: Scene }> = ({ s }) => {
                   />
                 ))}
               {at('centre') && <Arrow x={centre} y={365} dx={0} dy={140} label="Weight" accent />}
+              <SpokenRing s={s} t={t} target="rod" x={420} y={350} rx={285} ry={52} />
+              <SpokenRing s={s} t={t} target="centre" x={centre} y={350} rx={38} ry={46} />
             </g>
           ) : (
-            <System
+            <><System
               sphere
               particle={state === 'particle'}
               rough={state === 'rough'}
@@ -1467,11 +1561,11 @@ const Vocabulary: React.FC<{ s: Scene }> = ({ s }) => {
               motion={state === 'stretching' ? 30 : 0}
               travel={state === 'inextensible' ? (at('direction') ? 2 : at('acceleration') ? 1 : 0) : 0}
               acceleration
-            />
+            /><SystemFocus s={s} t={t} particle={state === 'particle'} /></>
           )}
         </Diagram>
       )}
-      {names[state] && <Card text={names[state]} />}
+      {names[state] && <Card text={names[state]} t={t} start={cue(s, state)} />}
     </>
   );
 };
@@ -1511,26 +1605,18 @@ const Matching: React.FC<{ s: Scene }> = ({ s }) => {
   );
   const lines: Line[] =
     pair && at(pair.answer)
-      ? [{ id: pair.answer, text: pair.word, start: answerStart, end: answerEnd, y: 240 }]
+      ? [{ id: pair.answer, text: pair.word, start: answerStart, end: answerEnd, y: 475 }]
       : [];
-  const parts = [
-    at('box') ? 'box' : '',
-    at('desk') ? 'table' : '',
-    at('pulley') ? 'pulley' : '',
-    at('sphere') ? 'hanging' : '',
-    at('connects') ? 'string' : '',
-  ];
   const note =
     pair?.answer === 'particle' && at('separate')
       ? 'Neglecting air resistance is a separate assumption'
       : undefined;
   return (
     <>
-      {at('box') && (
+      {(
         <Diagram>
           <System
             sphere
-            parts={parts}
             particle={pair?.answer === 'particle' && at('particle')}
             tensions={
               pair?.answer === 'smooth-pulley' && at('smooth-pulley') ? (at('tension-second') ? 2 : 1) : 0
@@ -1546,9 +1632,38 @@ const Matching: React.FC<{ s: Scene }> = ({ s }) => {
             }
             acceleration
           />
+          <g fill={T.text} fontSize="30">
+            <text x="278" y="245" textAnchor="middle">Box · 5 kg</text>
+            <text x="278" y="418" textAnchor="middle">Desk</text>
+            <text x="470" y="290" textAnchor="middle">String</text>
+            <text x="620" y="270" textAnchor="middle">Pulley</text>
+            <text x="665" y="630" textAnchor="middle">Sphere · 2 kg</text>
+          </g>
+          <SystemFocus s={s} t={t} particle={pair?.answer === 'particle' && at('particle')} />
         </Diagram>
       )}
-      {pair && <Paper lines={lines} t={t} prompt={pair.prompt} note={note} />}
+      <Paper lines={lines} t={t} note={note}>
+        <foreignObject x="65" y="26" width="690" height="125">
+          <div style={{ color: T.ink, fontSize: 29, lineHeight: '40px' }}>
+            <div data-card="problem" data-problem-line="true">A <SpokenPhrase s={s} t={t} target="box">5 kg box</SpokenPhrase> on a <SpokenPhrase s={s} t={t} target="surface">desk</SpokenPhrase> is connected</div>
+            <div data-card="problem" data-problem-line="true">by a <SpokenPhrase s={s} t={t} target="string">string</SpokenPhrase> over a <SpokenPhrase s={s} t={t} target="pulley">pulley</SpokenPhrase> to a hanging</div>
+            <div data-card="problem" data-problem-line="true"><SpokenPhrase s={s} t={t} target="sphere">2 kg sphere.</SpokenPhrase> State assumptions to allow:</div>
+          </div>
+        </foreignObject>
+        <g fill={T.ink} fontSize="29">
+          {pairs.map((p, i) => <g key={p.question}>
+            <text data-card="true" x="65" y={202 + i * 43}
+              fill={pair === p ? T.ink : '#60665f'}>
+              {i + 1}. {['Ignore air resistance', 'Ignore string mass', 'Same tension both sides',
+                'Ignore desk friction', 'Same acceleration magnitudes'][i]}
+            </text>
+            <PhraseUnderline s={s} t={t} target={p.question} x={98} y={211 + i * 43}
+              width={[252, 225, 292, 243, 385][i]} />
+            {pair === p && <path d={`M44 ${191 + i * 43} l9 7 l-9 7`} fill="none" stroke={T.accent} strokeWidth="3" />}
+          </g>)}
+        </g>
+        {pair && <text data-card="true" x="65" y="443" fill={T.ink} fontSize="29">{pair.prompt}</text>}
+      </Paper>
     </>
   );
 };
@@ -1558,7 +1673,18 @@ const Recap: React.FC<{ s: Scene }> = ({ s }) => {
   const t = useCurrentFrame() / fps;
   const index = t >= cue(s, 'match') ? 2 : t >= cue(s, 'list') ? 1 : 0;
   const tick = useCue(s, ['tick-explain', 'tick-list', 'tick-match'][index]);
-  return t >= cue(s, 'explain') ? <Card text={OUTCOMES[index]} centre tick={tick} /> : null;
+  return <>
+    <Diagram><System sphere />
+      <SpokenRing s={s} t={t} target="surface" x={350} y={375} rx={220} ry={28} />
+      <g transform="translate(170 95)" fill="none" stroke={T.muted} strokeWidth="3">
+        <path d="M20 0 H440 V80 H20 Z M160 0 V80 M300 0 V80 M440 80 V110 H20 V80" />
+        <path d="M80 42 h40 m-10 -8 l10 8 l-10 8 M220 42 h40 m-10 -8 l10 8 l-10 8" />
+        <SpokenRing s={s} t={t} target="cycle" x={230} y={40} rx={245} ry={62} />
+      </g>
+    </Diagram>
+    {t >= cue(s, 'explain') && <Card text={OUTCOMES[index]} centre tick={tick} t={t}
+      start={cue(s, ['explain', 'list', 'match'][index])} />}
+  </>;
 };
 const CONTENT = [Opening, ModellingCycle, FallingStone, Vocabulary, Matching, Recap];
 
@@ -1585,11 +1711,23 @@ function useStillAudit(enabled: boolean, rootRef: React.RefObject<HTMLDivElement
       .filter(visible)
       .map((el) => ({
         text: el.getAttribute('data-ink-text') ?? el.textContent ?? '',
+        kind: el.getAttribute('data-card') ?? 'ink',
         rect: el.getBoundingClientRect(),
       }));
     const root = container.getBoundingClientRect();
+    const diagram = regions.find((el) => el.getAttribute('data-region') === 'diagram');
+    const inkAndLabels = Array.from(container.querySelectorAll('svg[data-region] text, [data-ink-text], [data-problem-line]'))
+      .filter(visible);
+    const collisions: string[][] = [];
+    inkAndLabels.forEach((first, i) => inkAndLabels.slice(i + 1).forEach((second) => {
+      const a = first.getBoundingClientRect(), b = second.getBoundingClientRect();
+      if (Math.min(a.right, b.right) - Math.max(a.left, b.left) > 2 &&
+          Math.min(a.bottom, b.bottom) - Math.max(a.top, b.top) > 2)
+        collisions.push([first.getAttribute('data-ink-text') ?? first.textContent ?? '',
+          second.getAttribute('data-ink-text') ?? second.textContent ?? '']);
+    }));
     const overflow = root
-      ? [...regions, ...Array.from(container.querySelectorAll('svg[data-region] text')).filter(visible)].some(
+      ? [...regions, ...inkAndLabels].some(
           (el) => {
             const r = el.getBoundingClientRect();
             return (
@@ -1606,6 +1744,15 @@ function useStillAudit(enabled: boolean, rootRef: React.RefObject<HTMLDivElement
         frame,
         regions: regions.length,
         maxWords: Math.max(0, ...cards.map((c) => c.text.trim().split(/\s+/).length)),
+        maxCaptionWords: Math.max(0, ...cards.filter((c) => c.kind === 'true').map((c) => c.text.trim().split(/\s+/).length)),
+        visualPresent: !!diagram && Array.from(diagram.querySelectorAll('path,circle,rect')).some(visible),
+        diagramBounds: diagram?.getBoundingClientRect().toJSON(),
+        rings: Array.from(container.querySelectorAll('[data-ring]')).filter(visible).map((el) => ({
+          target: el.getAttribute('data-ring'), start: Number(el.getAttribute('data-ring-start')),
+          ...el.getBoundingClientRect().toJSON(),
+        })),
+        underlines: Array.from(container.querySelectorAll('[data-underline]')).filter(visible).map((el) => el.getAttribute('data-underline')),
+        collisions,
         cards: cards.map((c) => c.text),
         overflow,
         root: root?.toJSON(),

@@ -20,6 +20,7 @@ import { TransitionSeries, linearTiming } from '@remotion/transitions';
 import { fade } from '@remotion/transitions/fade';
 import transcriptJson from '../public/transcripts/mechanics/types-of-forces.json';
 import { useCue } from './ProjectComposition';
+import { SpokenFigure } from '../components/SpokenFigure';
 
 const TRANSITION_FRAMES = 15;
 
@@ -648,6 +649,8 @@ const Scene02: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
 const Scene03: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
   const weight = useSpringAt(cueAt(scene, 'weight'), 26);
   const formula = useCue(cueAt(scene, 'mass-times-gravity'), 0.4);
+  const gravityAt = cueAt(scene, 'ten-gravity');
+  const gravity = useCue(gravityAt, 0.4);
   const reaction = useSpringAt(cueAt(scene, 'normal-reaction'), 27);
   const tilt = useSpringAt(cueAt(scene, 'tilt'), 42);
   const angle = -13 * tilt;
@@ -662,6 +665,7 @@ const Scene03: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
       <SectionTitle kicker="contact forces">Forces at a surface</SectionTitle>
 
       <div
+        data-gravity-diagram="bench"
         style={{
           position: 'absolute',
           left: contactX - 610,
@@ -705,6 +709,9 @@ const Scene03: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
       <ForceArrow x={centerX} y={centerY} length={285} angle={90} progress={weight} label="WEIGHT" labelOffset={100} />
       <ForceArrow x={contactX} y={contactY} length={285} angle={angle - 90} progress={reaction} label="NORMAL REACTION" labelOffset={-205} labelAlong={0.9} />
       <RightAngle x={contactX} y={contactY} angle={angle} opacity={reaction} />
+      <div style={{ position: 'absolute', left: 390, top: 860, color: T.text, fontFamily: T.mono, fontSize: 30, fontWeight: 900, visibility: gravity.isActive ? 'visible' : 'hidden' }}>
+        g = <SpokenFigure id="forces-gravity-concept" cues={[gravityAt]}>10 m s⁻²</SpokenFigure> · Paper 4
+      </div>
 
       <WarmCard
         accent={T.amber}
@@ -712,9 +719,9 @@ const Scene03: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
           position: 'absolute',
           right: 110,
           top: 290,
-          width: 410,
-          height: 185,
-          padding: '28px 34px',
+          width: 360,
+          height: 160,
+          padding: '22px 28px',
           opacity: formula.opacity,
           transform: `translateX(${(1 - formula.opacity) * 30}px)`,
         }}
@@ -1265,8 +1272,23 @@ const Scene09: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
   const vertically = useSpringAt(cueAt(scene, 'vertically'), 27);
   const horizontally = useSpringAt(cueAt(scene, 'horizontally'), 27);
   const remaining = useSpringAt(cueAt(scene, 'remaining-force'), 27);
+  const weightFormulaAt = cueAt(scene, 'weight-formula');
+  const fiveTimesAt = cueAt(scene, 'five-times');
+  const tenAt = cueAt(scene, 'ten-substitution');
+  const fiftyAt = cueAt(scene, 'fifty-newtons');
+  const horizontalFormulaAt = cueAt(scene, 'horizontal-formula');
+  const tensionAt = cueAt(scene, 'twenty-two-newtons');
+  const frictionAt = cueAt(scene, 'fifteen-newtons');
+  const sevenAt = cueAt(scene, 'seven-newtons');
+  const forceFormulaAt = cueAt(scene, 'force-formula');
+  const massAt = cueAt(scene, 'five-kilogram');
+  const answerAt = cueAt(scene, 'one-point-four');
+  const frame = useCurrentFrame();
+  const { fps } = useVideoConfig();
+  const now = frame / fps;
+  const frictionWidth = 480 * 15 / 22;
+  const netWidth = 480 - frictionWidth;
   const acceleratesAt = cueAt(scene, 'accelerates');
-  const accelerates = useSpringAt(acceleratesAt, 27);
   const travel = useProgress(acceleratesAt, scene.duration - 0.35);
 
   return (
@@ -1274,15 +1296,22 @@ const Scene09: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
       <SectionTitle kicker="read the arrows">The diagram writes the equations</SectionTitle>
 
       <WarmCard accent={T.cyan} style={{ position: 'absolute', left: 90, top: 270, width: 650, height: 655, padding: '26px 30px' }}>
-        <div style={{ color: `var(--label-cyan, ${T.cyan})`, fontFamily: T.mono, fontSize: 28, fontWeight: 950, letterSpacing: 2 }}>DOCKED FORCE DIAGRAM</div>
-        <div style={{ position: 'absolute', left: 229, top: 225, width: 190, height: 155, borderRadius: 18, background: T.cardMuted, border: `4px solid ${T.ink}`, padding: '16px 12px', boxSizing: 'border-box', fontFamily: T.mono, fontSize: 28, fontWeight: 950 }}>5 kg</div>
+        <div style={{ color: `var(--label-cyan, ${T.cyan})`, fontFamily: T.mono, fontSize: 28, fontWeight: 950, letterSpacing: 2 }}>FORCE DIAGRAM</div>
+        <div data-gravity-diagram="force-block" style={{ position: 'absolute', left: 229, top: 225, width: 190, height: 155, borderRadius: 18, background: T.cardMuted, border: `4px solid ${T.ink}`, padding: '16px 12px', boxSizing: 'border-box', fontFamily: T.mono, fontSize: 28, fontWeight: 950 }}><SpokenFigure id="forces-mass" cues={[fiveTimesAt, massAt]} color="#925000">5 kg</SpokenFigure></div>
         <div style={{ position: 'absolute', left: 314, top: 292, width: 20, height: 20, borderRadius: '50%', background: T.amber, zIndex: 3 }} />
-        <div style={{ position: 'absolute', left: 94, right: 94, bottom: 44, borderRadius: 14, background: `${T.cyan}18`, padding: '16px 18px', textAlign: 'center', color: T.ink, fontSize: 28, fontWeight: 850 }}>four forces · one body</div>
+        <div style={{ position: 'absolute', left: 105, top: 90, color: T.ink, fontFamily: T.mono, fontSize: 28, fontWeight: 900 }}>
+          g = <SpokenFigure id="forces-gravity" cues={[tenAt]} color="#925000">10 m s⁻²</SpokenFigure>
+        </div>
+        <div style={{ position: 'absolute', left: 150, bottom: 75, color: T.ink, fontFamily: T.mono, fontSize: 30, fontWeight: 900, visibility: now >= fiftyAt ? 'visible' : 'hidden' }}>
+          R = W = <SpokenFigure id="forces-weight" cues={[fiftyAt]} color="#925000">50 N</SpokenFigure>
+        </div>
       </WarmCard>
       <ForceArrow x={414} y={573} length={145} angle={-90} progress={1} label="R" labelOffset={-30} labelAlong={0.66} />
       <ForceArrow x={414} y={573} length={145} angle={90} progress={1} label="W" labelOffset={-30} labelAlong={0.66} />
       <ForceArrow x={414} y={573} length={170} angle={0} progress={1} label="T" labelOffset={-31} labelAlong={0.72} />
       <ForceArrow x={414} y={573} length={150} angle={180} progress={1} label="F" labelOffset={31} labelAlong={0.72} />
+      <div style={{ position: 'absolute', left: 580, top: 510, color: T.ink, fontFamily: T.mono, fontSize: 28, fontWeight: 900 }}><SpokenFigure id="forces-tension" cues={[tensionAt]} color="#925000">22 N</SpokenFigure></div>
+      <div style={{ position: 'absolute', left: 170, top: 600, color: T.ink, fontFamily: T.mono, fontSize: 28, fontWeight: 900 }}><SpokenFigure id="forces-friction" cues={[frictionAt]} color="#925000">15 N</SpokenFigure></div>
 
       <WarmCard
         accent={T.cyan}
@@ -1296,13 +1325,15 @@ const Scene09: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
           opacity: vertically,
         }}
       >
-        <div style={{ color: `var(--label-cyan, ${T.cyan})`, fontFamily: T.mono, fontSize: 28, fontWeight: 950, letterSpacing: 2 }}>VERTICAL RAIL</div>
-        <div style={{ position: 'absolute', left: 68, right: 68, top: 110, height: 8, borderRadius: 8, background: `${T.ink}22` }} />
-        <div style={{ position: 'absolute', left: 100, top: 82, width: 330 * vertically, height: 28, borderRadius: 14, background: T.amber }} />
-        <div style={{ position: 'absolute', right: 100, top: 118, width: 330 * vertically, height: 28, borderRadius: 14, background: T.amber }} />
-        <div style={{ position: 'absolute', left: 125, top: 154, color: T.ink, fontFamily: T.mono, fontSize: 28, fontWeight: 950, opacity: vertically }}>R ↑</div>
-        <div style={{ position: 'absolute', right: 125, top: 154, color: T.ink, fontFamily: T.mono, fontSize: 28, fontWeight: 950, opacity: vertically }}>↓ W</div>
-        <div style={{ position: 'absolute', left: 432, top: 152, color: `var(--label-green, ${T.green})`, fontFamily: T.mono, fontSize: 32, fontWeight: 950, opacity: vertically }}>R = W</div>
+        <div style={{ color: `var(--label-cyan, ${T.cyan})`, fontFamily: T.mono, fontSize: 28, fontWeight: 950, letterSpacing: 2 }}>VERTICAL BALANCE</div>
+        <div data-gravity-formula style={{ position: 'absolute', left: 340, top: 62, color: T.ink, fontFamily: T.mono, fontSize: 32, fontWeight: 950, visibility: now >= weightFormulaAt ? 'visible' : 'hidden' }}>R = W = mg</div>
+        <div style={{ position: 'absolute', left: 100, top: 113, width: 330 * vertically, height: 22, borderRadius: 14, background: T.amber }} />
+        <div style={{ position: 'absolute', right: 100, top: 151, width: 330 * vertically, height: 22, borderRadius: 14, background: T.amber }} />
+        <div style={{ position: 'absolute', left: 50, top: 104, color: T.ink, fontFamily: T.mono, fontSize: 28, fontWeight: 950 }}>R</div>
+        <div style={{ position: 'absolute', right: 50, top: 142, color: T.ink, fontFamily: T.mono, fontSize: 28, fontWeight: 950 }}>W</div>
+        <div data-gravity-working style={{ position: 'absolute', left: 310, top: 192, color: T.ink, fontFamily: T.mono, fontSize: 30, fontWeight: 950, visibility: now >= fiveTimesAt ? 'visible' : 'hidden' }}>
+          R = 5<span style={{ visibility: now >= tenAt ? 'visible' : 'hidden' }}> × 10</span><span style={{ visibility: now >= fiftyAt ? 'visible' : 'hidden' }}> = 50 N</span>
+        </div>
       </WarmCard>
 
       <WarmCard
@@ -1317,20 +1348,21 @@ const Scene09: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
           opacity: horizontally,
         }}
       >
-        <div style={{ color: `var(--label-amber, ${T.amber})`, fontFamily: T.mono, fontSize: 28, fontWeight: 950, letterSpacing: 2 }}>HORIZONTAL RAIL</div>
-        <div style={{ position: 'absolute', left: 75, top: 93, color: T.ink, fontFamily: T.mono, fontSize: 28, fontWeight: 900 }}>TENSION</div>
-        <div style={{ position: 'absolute', left: 245, top: 94, width: 480 * horizontally, height: 31, borderRadius: 16, background: T.amber }} />
-        <div style={{ position: 'absolute', right: 65, top: 91, color: T.ink, fontFamily: T.mono, fontSize: 28, fontWeight: 950, opacity: horizontally }}>22 N</div>
-        <div style={{ position: 'absolute', left: 75, top: 151, color: T.ink, fontFamily: T.mono, fontSize: 28, fontWeight: 900 }}>FRICTION</div>
-        <div style={{ position: 'absolute', left: 245, top: 152, width: 321 * horizontally, height: 31, borderRadius: 16, background: `${T.amber}aa` }} />
-        <div style={{ position: 'absolute', left: 592, top: 148, color: T.ink, fontFamily: T.mono, fontSize: 28, fontWeight: 950, opacity: horizontally }}>14.7 N</div>
+        <div style={{ color: `var(--label-amber, ${T.amber})`, fontFamily: T.mono, fontSize: 28, fontWeight: 950, letterSpacing: 2 }}>HORIZONTAL RESULTANT</div>
+        <div data-gravity-formula style={{ position: 'absolute', left: 330, top: 62, color: T.ink, fontFamily: T.mono, fontSize: 30, fontWeight: 900, visibility: now >= horizontalFormulaAt ? 'visible' : 'hidden' }}>Fnet = T − F</div>
+        <div style={{ position: 'absolute', left: 75, top: 109, color: T.ink, fontFamily: T.mono, fontSize: 28, fontWeight: 900 }}>TENSION</div>
+        <div style={{ position: 'absolute', left: 245, top: 115, width: 480 * horizontally, height: 22, borderRadius: 16, background: T.amber }} />
+        <div style={{ position: 'absolute', right: 65, top: 109, color: T.ink, fontFamily: T.mono, fontSize: 28, fontWeight: 950, opacity: horizontally }}>22 N</div>
+        <div style={{ position: 'absolute', left: 75, top: 167, color: T.ink, fontFamily: T.mono, fontSize: 28, fontWeight: 900 }}>FRICTION</div>
+        <div style={{ position: 'absolute', left: 245, top: 173, width: frictionWidth * horizontally, height: 22, borderRadius: 16, background: `${T.amber}aa` }} />
+        <div style={{ position: 'absolute', left: 600, top: 167, color: T.ink, fontFamily: T.mono, fontSize: 28, fontWeight: 950, opacity: horizontally }}>15 N</div>
         <div
           style={{
             position: 'absolute',
-            left: 566,
-            top: 94,
-            width: 159,
-            height: 31,
+            left: 245 + frictionWidth,
+            top: 115,
+            width: netWidth,
+            height: 22,
             borderRadius: 16,
             background: T.green,
             boxShadow: `0 0 18px ${T.green}66`,
@@ -1338,9 +1370,9 @@ const Scene09: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
             transform: `translate(${189 * remaining}px, ${116 * remaining}px)`,
           }}
         >
-          <div style={{ position: 'absolute', left: -42, top: -40, width: 243, color: `var(--label-green, ${T.green})`, fontFamily: T.mono, fontSize: 28, fontWeight: 950, textAlign: 'center' }}>NET · 7.3 N</div>
+          <div style={{ position: 'absolute', left: -42, top: -40, width: 243, color: `var(--label-green, ${T.green})`, fontFamily: T.mono, fontSize: 28, fontWeight: 950, textAlign: 'center' }}>NET · <span style={{ visibility: now >= sevenAt ? 'visible' : 'hidden' }}><SpokenFigure id="forces-net" cues={[sevenAt, massAt]}>7 N</SpokenFigure></span></div>
         </div>
-        <div style={{ position: 'absolute', left: 190, bottom: 27, width: 510, textAlign: 'center', color: T.ink, fontFamily: T.mono, fontSize: 28, fontWeight: 950, opacity: remaining }}>22 − 14.7 = <span style={{ color: T.amber }}>7.3 N →</span></div>
+        <div data-gravity-working style={{ position: 'absolute', left: 190, bottom: 27, width: 510, textAlign: 'center', color: T.ink, fontFamily: T.mono, fontSize: 28, fontWeight: 950, visibility: now >= tensionAt ? 'visible' : 'hidden' }}>22<span style={{ visibility: now >= frictionAt ? 'visible' : 'hidden' }}> − 15</span><span style={{ color: '#925000', visibility: now >= sevenAt ? 'visible' : 'hidden' }}> = 7 N →</span></div>
       </WarmCard>
 
       <div
@@ -1349,13 +1381,17 @@ const Scene09: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
           left: 860,
           top: 870,
           width: 870,
-          height: 75,
-          opacity: accelerates,
+          height: 150,
+          visibility: now >= forceFormulaAt ? 'visible' : 'hidden',
         }}
       >
-        <div style={{ position: 'absolute', left: 0, right: 0, top: 83, height: 4, background: `${T.cyan}55` }} />
+        <div data-gravity-obstacle="motion track" style={{ position: 'absolute', left: 0, width: 590, top: 83, height: 4, background: `${T.cyan}55` }} />
         <div style={{ position: 'absolute', left: 40 + travel * travel * 390, top: 13, width: 115, height: 70, borderRadius: 12, background: T.card, border: `4px solid ${T.cyan}`, boxSizing: 'border-box' }} />
-        <div style={{ position: 'absolute', right: 24, top: 8, width: 340, color: `var(--label-green, ${T.green})`, fontFamily: T.mono, fontSize: 28, fontWeight: 950, textAlign: 'right' }}>a = 7.3 ÷ 5<br />= 1.46 m/s² →</div>
+        <div style={{ position: 'absolute', right: 24, top: -10, width: 480, color: T.text, fontFamily: T.mono, fontSize: 28, fontWeight: 950, textAlign: 'right', lineHeight: 1.4 }}>
+          <div data-gravity-formula>Fnet = ma · a = Fnet / m</div>
+          <div data-gravity-working style={{ visibility: now >= massAt ? 'visible' : 'hidden' }}>a = 7 ÷ 5<span style={{ visibility: now >= answerAt ? 'visible' : 'hidden' }}><br />= 1.4 m/s² →</span></div>
+        </div>
+        <div style={{ position: 'absolute', left: 40 + travel * travel * 390, top: 110, color: T.amber, fontFamily: T.mono, fontSize: 28, fontWeight: 950, visibility: now >= answerAt ? 'visible' : 'hidden' }}><SpokenFigure id="forces-acceleration" cues={[answerAt]}>1.4 m/s² →</SpokenFigure></div>
       </div>
     </SceneShell>
   );
