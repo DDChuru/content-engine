@@ -1,0 +1,2060 @@
+{
+  "topic": "derived-units",
+  "durationFrames": 5282,
+  "stillCount": 46,
+  "violations": [],
+  "measurements": [
+    {
+      "frame": 2194,
+      "scene": "s06",
+      "labels": [
+        "numerator"
+      ],
+      "expectedRings": [],
+      "text": [
+        "MEASUREMENT LAB",
+        "06",
+        "/ 10",
+        "worked conversion",
+        "Convert 72 km/h",
+        ".",
+        "72 km/h",
+        "72 km/h",
+        "NUMERATOR · DISTANCE",
+        "distance in m = distance in km × metres per km"
+      ],
+      "collisions": [],
+      "overflow": [],
+      "diagrams": [],
+      "formulas": [],
+      "working": [],
+      "rings": []
+    },
+    {
+      "frame": 2240,
+      "scene": "s06",
+      "labels": [
+        "seventy-two-times"
+      ],
+      "expectedRings": [],
+      "text": [
+        "MEASUREMENT LAB",
+        "06",
+        "/ 10",
+        "worked conversion",
+        "Convert 72 km/h",
+        ".",
+        "72 km/h",
+        "72 km/h",
+        "NUMERATOR · DISTANCE",
+        "distance in m = distance in km × metres per km",
+        "72",
+        "×"
+      ],
+      "collisions": [],
+      "overflow": [],
+      "diagrams": [],
+      "formulas": [],
+      "working": [],
+      "rings": []
+    },
+    {
+      "frame": 2408,
+      "scene": "s06",
+      "labels": [
+        "denominator"
+      ],
+      "expectedRings": [],
+      "text": [
+        "MEASUREMENT LAB",
+        "06",
+        "/ 10",
+        "worked conversion",
+        "Convert 72 km/h",
+        ".",
+        "72 km/h",
+        "72 km/h",
+        "NUMERATOR · DISTANCE",
+        "distance in m = distance in km × metres per km",
+        "72",
+        "×",
+        "1000",
+        "=",
+        "72 000",
+        "m/h",
+        "DENOMINATOR · CLOCK",
+        "speed = distance ÷ time"
+      ],
+      "collisions": [],
+      "overflow": [],
+      "diagrams": [],
+      "formulas": [],
+      "working": [],
+      "rings": []
+    },
+    {
+      "frame": 2545,
+      "scene": "s06",
+      "labels": [
+        "seventy-two-thousand-division"
+      ],
+      "expectedRings": [],
+      "text": [
+        "MEASUREMENT LAB",
+        "06",
+        "/ 10",
+        "worked conversion",
+        "Convert 72 km/h",
+        ".",
+        "72 km/h",
+        "72 km/h",
+        "NUMERATOR · DISTANCE",
+        "distance in m = distance in km × metres per km",
+        "72",
+        "×",
+        "1000",
+        "=",
+        "72 000",
+        "m/h",
+        "DENOMINATOR · CLOCK",
+        "speed = distance ÷ time",
+        "1 hour",
+        "=",
+        "3600 seconds",
+        "72 000"
+      ],
+      "collisions": [],
+      "overflow": [],
+      "diagrams": [],
+      "formulas": [],
+      "working": [],
+      "rings": []
+    },
+    {
+      "frame": 2645,
+      "scene": "s06",
+      "labels": [
+        "twenty-metres-per-second"
+      ],
+      "expectedRings": [],
+      "text": [
+        "MEASUREMENT LAB",
+        "06",
+        "/ 10",
+        "worked conversion",
+        "Convert 72 km/h",
+        ".",
+        "72 km/h",
+        "20 m/s",
+        "20 m/s",
+        "NUMERATOR · DISTANCE",
+        "distance in m = distance in km × metres per km",
+        "72",
+        "×",
+        "1000",
+        "=",
+        "72 000",
+        "m/h",
+        "DENOMINATOR · CLOCK",
+        "speed = distance ÷ time",
+        "1 hour",
+        "=",
+        "3600 seconds",
+        "72 000",
+        "÷",
+        "3600",
+        "=",
+        "20",
+        "m/s"
+      ],
+      "collisions": [],
+      "overflow": [],
+      "diagrams": [],
+      "formulas": [],
+      "working": [],
+      "rings": []
+    },
+    {
+      "frame": 3308,
+      "scene": "s08",
+      "labels": [
+        "opening"
+      ],
+      "expectedRings": [],
+      "text": [
+        "MEASUREMENT LAB",
+        "08",
+        "/ 10",
+        "mass vs weight",
+        "Weight depends on location",
+        ".",
+        "EARTH",
+        "1 kg",
+        "MASS",
+        "W"
+      ],
+      "collisions": [],
+      "overflow": [],
+      "diagrams": [
+        "EARTH"
+      ],
+      "formulas": [],
+      "working": [],
+      "rings": []
+    },
+    {
+      "frame": 3333,
+      "scene": "s08",
+      "labels": [
+        "weight+1.5"
+      ],
+      "expectedRings": [],
+      "text": [
+        "MEASUREMENT LAB",
+        "08",
+        "/ 10",
+        "mass vs weight",
+        "Weight depends on location",
+        ".",
+        "EARTH",
+        "1 kg",
+        "MASS",
+        "W"
+      ],
+      "collisions": [],
+      "overflow": [],
+      "diagrams": [
+        "EARTH"
+      ],
+      "formulas": [],
+      "working": [],
+      "rings": []
+    },
+    {
+      "frame": 3348,
+      "scene": "s08",
+      "labels": [
+        "dwell"
+      ],
+      "expectedRings": [],
+      "text": [
+        "MEASUREMENT LAB",
+        "08",
+        "/ 10",
+        "mass vs weight",
+        "Weight depends on location",
+        ".",
+        "EARTH",
+        "1 kg",
+        "MASS",
+        "W"
+      ],
+      "collisions": [],
+      "overflow": [],
+      "diagrams": [
+        "EARTH"
+      ],
+      "formulas": [],
+      "working": [],
+      "rings": []
+    },
+    {
+      "frame": 3393,
+      "scene": "s08",
+      "labels": [
+        "newtons+0"
+      ],
+      "expectedRings": [],
+      "text": [
+        "MEASUREMENT LAB",
+        "08",
+        "/ 10",
+        "mass vs weight",
+        "Weight depends on location",
+        ".",
+        "weight →",
+        "newtons (N)",
+        "EARTH",
+        "1 kg",
+        "MASS",
+        "W"
+      ],
+      "collisions": [],
+      "overflow": [],
+      "diagrams": [
+        "EARTH"
+      ],
+      "formulas": [],
+      "working": [],
+      "rings": []
+    },
+    {
+      "frame": 3405,
+      "scene": "s08",
+      "labels": [
+        "newtons+0.4"
+      ],
+      "expectedRings": [],
+      "text": [
+        "MEASUREMENT LAB",
+        "08",
+        "/ 10",
+        "mass vs weight",
+        "Weight depends on location",
+        ".",
+        "weight →",
+        "newtons (N)",
+        "EARTH",
+        "1 kg",
+        "MASS",
+        "W"
+      ],
+      "collisions": [],
+      "overflow": [],
+      "diagrams": [
+        "EARTH"
+      ],
+      "formulas": [],
+      "working": [],
+      "rings": []
+    },
+    {
+      "frame": 3408,
+      "scene": "s08",
+      "labels": [
+        "dwell"
+      ],
+      "expectedRings": [],
+      "text": [
+        "MEASUREMENT LAB",
+        "08",
+        "/ 10",
+        "mass vs weight",
+        "Weight depends on location",
+        ".",
+        "weight →",
+        "newtons (N)",
+        "EARTH",
+        "1 kg",
+        "MASS",
+        "W"
+      ],
+      "collisions": [],
+      "overflow": [],
+      "diagrams": [
+        "EARTH"
+      ],
+      "formulas": [],
+      "working": [],
+      "rings": []
+    },
+    {
+      "frame": 3438,
+      "scene": "s08",
+      "labels": [
+        "newtons+1.5"
+      ],
+      "expectedRings": [],
+      "text": [
+        "MEASUREMENT LAB",
+        "08",
+        "/ 10",
+        "mass vs weight",
+        "Weight depends on location",
+        ".",
+        "weight →",
+        "newtons (N)",
+        "EARTH",
+        "1 kg",
+        "MASS",
+        "W"
+      ],
+      "collisions": [],
+      "overflow": [],
+      "diagrams": [
+        "EARTH"
+      ],
+      "formulas": [],
+      "working": [],
+      "rings": []
+    },
+    {
+      "frame": 3468,
+      "scene": "s08",
+      "labels": [
+        "dwell"
+      ],
+      "expectedRings": [],
+      "text": [
+        "MEASUREMENT LAB",
+        "08",
+        "/ 10",
+        "mass vs weight",
+        "Weight depends on location",
+        ".",
+        "weight →",
+        "newtons (N)",
+        "EARTH",
+        "1 kg",
+        "MASS",
+        "W"
+      ],
+      "collisions": [],
+      "overflow": [],
+      "diagrams": [
+        "EARTH"
+      ],
+      "formulas": [],
+      "working": [],
+      "rings": []
+    },
+    {
+      "frame": 3507,
+      "scene": "s08",
+      "labels": [
+        "local-acceleration+0"
+      ],
+      "expectedRings": [],
+      "text": [
+        "MEASUREMENT LAB",
+        "08",
+        "/ 10",
+        "mass vs weight",
+        "Weight depends on location",
+        ".",
+        "weight →",
+        "newtons (N)",
+        "EARTH",
+        "1 kg",
+        "MASS",
+        "W"
+      ],
+      "collisions": [],
+      "overflow": [],
+      "diagrams": [
+        "EARTH"
+      ],
+      "formulas": [],
+      "working": [],
+      "rings": []
+    },
+    {
+      "frame": 3519,
+      "scene": "s08",
+      "labels": [
+        "local-acceleration+0.4"
+      ],
+      "expectedRings": [],
+      "text": [
+        "MEASUREMENT LAB",
+        "08",
+        "/ 10",
+        "mass vs weight",
+        "Weight depends on location",
+        ".",
+        "W",
+        "=",
+        "m",
+        "×",
+        "g",
+        "local",
+        "weight →",
+        "newtons (N)",
+        "EARTH",
+        "1 kg",
+        "MASS",
+        "W"
+      ],
+      "collisions": [],
+      "overflow": [],
+      "diagrams": [
+        "EARTH"
+      ],
+      "formulas": [
+        "W=m×glocal"
+      ],
+      "working": [],
+      "rings": []
+    },
+    {
+      "frame": 3528,
+      "scene": "s08",
+      "labels": [
+        "dwell"
+      ],
+      "expectedRings": [],
+      "text": [
+        "MEASUREMENT LAB",
+        "08",
+        "/ 10",
+        "mass vs weight",
+        "Weight depends on location",
+        ".",
+        "W",
+        "=",
+        "m",
+        "×",
+        "g",
+        "local",
+        "weight →",
+        "newtons (N)",
+        "EARTH",
+        "1 kg",
+        "MASS",
+        "W"
+      ],
+      "collisions": [],
+      "overflow": [],
+      "diagrams": [
+        "EARTH"
+      ],
+      "formulas": [
+        "W=m×glocal"
+      ],
+      "working": [],
+      "rings": []
+    },
+    {
+      "frame": 3552,
+      "scene": "s08",
+      "labels": [
+        "local-acceleration+1.5"
+      ],
+      "expectedRings": [],
+      "text": [
+        "MEASUREMENT LAB",
+        "08",
+        "/ 10",
+        "mass vs weight",
+        "Weight depends on location",
+        ".",
+        "W",
+        "=",
+        "m",
+        "×",
+        "g",
+        "local",
+        "weight →",
+        "newtons (N)",
+        "EARTH",
+        "1 kg",
+        "MASS",
+        "W"
+      ],
+      "collisions": [],
+      "overflow": [],
+      "diagrams": [
+        "EARTH"
+      ],
+      "formulas": [
+        "W=m×glocal"
+      ],
+      "working": [],
+      "rings": []
+    },
+    {
+      "frame": 3588,
+      "scene": "s08",
+      "labels": [
+        "dwell"
+      ],
+      "expectedRings": [],
+      "text": [
+        "MEASUREMENT LAB",
+        "08",
+        "/ 10",
+        "mass vs weight",
+        "Weight depends on location",
+        ".",
+        "W",
+        "=",
+        "m",
+        "×",
+        "g",
+        "local",
+        "weight →",
+        "newtons (N)",
+        "EARTH",
+        "1 kg",
+        "MASS",
+        "W"
+      ],
+      "collisions": [],
+      "overflow": [],
+      "diagrams": [
+        "EARTH"
+      ],
+      "formulas": [
+        "W=m×glocal"
+      ],
+      "working": [],
+      "rings": []
+    },
+    {
+      "frame": 3648,
+      "scene": "s08",
+      "labels": [
+        "dwell"
+      ],
+      "expectedRings": [],
+      "text": [
+        "MEASUREMENT LAB",
+        "08",
+        "/ 10",
+        "mass vs weight",
+        "Weight depends on location",
+        ".",
+        "W",
+        "=",
+        "m",
+        "×",
+        "g",
+        "local",
+        "weight →",
+        "newtons (N)",
+        "EARTH",
+        "1 kg",
+        "MASS",
+        "W"
+      ],
+      "collisions": [],
+      "overflow": [],
+      "diagrams": [
+        "EARTH"
+      ],
+      "formulas": [
+        "W=m×glocal"
+      ],
+      "working": [],
+      "rings": []
+    },
+    {
+      "frame": 3674,
+      "scene": "s08",
+      "labels": [
+        "ten-gravity+0"
+      ],
+      "expectedRings": [
+        "derived-gravity"
+      ],
+      "text": [
+        "MEASUREMENT LAB",
+        "08",
+        "/ 10",
+        "mass vs weight",
+        "Weight depends on location",
+        ".",
+        "W",
+        "=",
+        "m",
+        "×",
+        "g",
+        "local",
+        "weight →",
+        "newtons (N)",
+        "EARTH",
+        "g =",
+        "10 m s⁻²",
+        "· Paper 4",
+        "1 kg",
+        "MASS",
+        "W"
+      ],
+      "collisions": [],
+      "overflow": [],
+      "diagrams": [
+        "EARTH"
+      ],
+      "formulas": [
+        "W=m×glocal"
+      ],
+      "working": [],
+      "rings": [
+        {
+          "id": "derived-gravity",
+          "cue": 12.86,
+          "progress": 0.1000000000000026,
+          "encloses": true
+        }
+      ]
+    },
+    {
+      "frame": 3686,
+      "scene": "s08",
+      "labels": [
+        "ten-gravity+0.4"
+      ],
+      "expectedRings": [
+        "derived-gravity"
+      ],
+      "text": [
+        "MEASUREMENT LAB",
+        "08",
+        "/ 10",
+        "mass vs weight",
+        "Weight depends on location",
+        ".",
+        "W",
+        "=",
+        "m",
+        "×",
+        "g",
+        "local",
+        "weight →",
+        "newtons (N)",
+        "EARTH",
+        "g =",
+        "10 m s⁻²",
+        "· Paper 4",
+        "1 kg",
+        "MASS",
+        "W"
+      ],
+      "collisions": [],
+      "overflow": [],
+      "diagrams": [
+        "EARTH"
+      ],
+      "formulas": [
+        "W=m×glocal"
+      ],
+      "working": [],
+      "rings": [
+        {
+          "id": "derived-gravity",
+          "cue": 12.86,
+          "progress": 1,
+          "encloses": true
+        }
+      ]
+    },
+    {
+      "frame": 3708,
+      "scene": "s08",
+      "labels": [
+        "dwell"
+      ],
+      "expectedRings": [],
+      "text": [
+        "MEASUREMENT LAB",
+        "08",
+        "/ 10",
+        "mass vs weight",
+        "Weight depends on location",
+        ".",
+        "W",
+        "=",
+        "m",
+        "×",
+        "g",
+        "local",
+        "weight →",
+        "newtons (N)",
+        "EARTH",
+        "g =",
+        "10 m s⁻²",
+        "· Paper 4",
+        "1 kg",
+        "MASS",
+        "W"
+      ],
+      "collisions": [],
+      "overflow": [],
+      "diagrams": [
+        "EARTH"
+      ],
+      "formulas": [
+        "W=m×glocal"
+      ],
+      "working": [],
+      "rings": [
+        {
+          "id": "derived-gravity",
+          "cue": 12.86,
+          "progress": 1,
+          "encloses": true
+        }
+      ]
+    },
+    {
+      "frame": 3719,
+      "scene": "s08",
+      "labels": [
+        "ten-gravity+1.5"
+      ],
+      "expectedRings": [
+        "derived-gravity"
+      ],
+      "text": [
+        "MEASUREMENT LAB",
+        "08",
+        "/ 10",
+        "mass vs weight",
+        "Weight depends on location",
+        ".",
+        "W",
+        "=",
+        "m",
+        "×",
+        "g",
+        "local",
+        "weight →",
+        "newtons (N)",
+        "EARTH",
+        "g =",
+        "10 m s⁻²",
+        "· Paper 4",
+        "1 kg",
+        "MASS",
+        "W"
+      ],
+      "collisions": [],
+      "overflow": [],
+      "diagrams": [
+        "EARTH"
+      ],
+      "formulas": [
+        "W=m×glocal"
+      ],
+      "working": [],
+      "rings": [
+        {
+          "id": "derived-gravity",
+          "cue": 12.86,
+          "progress": 1,
+          "encloses": true
+        }
+      ]
+    },
+    {
+      "frame": 3768,
+      "scene": "s08",
+      "labels": [
+        "dwell"
+      ],
+      "expectedRings": [],
+      "text": [
+        "MEASUREMENT LAB",
+        "08",
+        "/ 10",
+        "mass vs weight",
+        "Weight depends on location",
+        ".",
+        "W",
+        "=",
+        "m",
+        "×",
+        "g",
+        "local",
+        "weight →",
+        "newtons (N)",
+        "EARTH",
+        "g =",
+        "10 m s⁻²",
+        "· Paper 4",
+        "1 kg",
+        "MASS",
+        "W"
+      ],
+      "collisions": [],
+      "overflow": [],
+      "diagrams": [
+        "EARTH"
+      ],
+      "formulas": [
+        "W=m×glocal"
+      ],
+      "working": [],
+      "rings": []
+    },
+    {
+      "frame": 3777,
+      "scene": "s08",
+      "labels": [
+        "one-kilogram+0"
+      ],
+      "expectedRings": [
+        "derived-mass"
+      ],
+      "text": [
+        "MEASUREMENT LAB",
+        "08",
+        "/ 10",
+        "mass vs weight",
+        "Weight depends on location",
+        ".",
+        "W",
+        "=",
+        "m",
+        "×",
+        "g",
+        "local",
+        "weight →",
+        "newtons (N)",
+        "EARTH",
+        "g =",
+        "10 m s⁻²",
+        "· Paper 4",
+        "1 kg",
+        "MASS",
+        "W"
+      ],
+      "collisions": [],
+      "overflow": [],
+      "diagrams": [
+        "EARTH"
+      ],
+      "formulas": [
+        "W=m×glocal"
+      ],
+      "working": [],
+      "rings": [
+        {
+          "id": "derived-mass",
+          "cue": 16.3,
+          "progress": 0.08333333333333333,
+          "encloses": true
+        }
+      ]
+    },
+    {
+      "frame": 3789,
+      "scene": "s08",
+      "labels": [
+        "one-kilogram+0.4"
+      ],
+      "expectedRings": [
+        "derived-mass"
+      ],
+      "text": [
+        "MEASUREMENT LAB",
+        "08",
+        "/ 10",
+        "mass vs weight",
+        "Weight depends on location",
+        ".",
+        "W",
+        "=",
+        "m",
+        "×",
+        "g",
+        "local",
+        "weight →",
+        "newtons (N)",
+        "EARTH",
+        "g =",
+        "10 m s⁻²",
+        "· Paper 4",
+        "1 kg",
+        "MASS",
+        "W"
+      ],
+      "collisions": [],
+      "overflow": [],
+      "diagrams": [
+        "EARTH"
+      ],
+      "formulas": [
+        "W=m×glocal"
+      ],
+      "working": [],
+      "rings": [
+        {
+          "id": "derived-mass",
+          "cue": 16.3,
+          "progress": 1,
+          "encloses": true
+        }
+      ]
+    },
+    {
+      "frame": 3822,
+      "scene": "s08",
+      "labels": [
+        "one-kilogram+1.5"
+      ],
+      "expectedRings": [
+        "derived-mass"
+      ],
+      "text": [
+        "MEASUREMENT LAB",
+        "08",
+        "/ 10",
+        "mass vs weight",
+        "Weight depends on location",
+        ".",
+        "W",
+        "=",
+        "m",
+        "×",
+        "g",
+        "local",
+        "weight →",
+        "newtons (N)",
+        "EARTH",
+        "g =",
+        "10 m s⁻²",
+        "· Paper 4",
+        "1 kg",
+        "MASS",
+        "W"
+      ],
+      "collisions": [],
+      "overflow": [],
+      "diagrams": [
+        "EARTH"
+      ],
+      "formulas": [
+        "W=m×glocal"
+      ],
+      "working": [],
+      "rings": [
+        {
+          "id": "derived-mass",
+          "cue": 16.3,
+          "progress": 1,
+          "encloses": true
+        }
+      ]
+    },
+    {
+      "frame": 3828,
+      "scene": "s08",
+      "labels": [
+        "dwell"
+      ],
+      "expectedRings": [],
+      "text": [
+        "MEASUREMENT LAB",
+        "08",
+        "/ 10",
+        "mass vs weight",
+        "Weight depends on location",
+        ".",
+        "W",
+        "=",
+        "m",
+        "×",
+        "g",
+        "local",
+        "weight →",
+        "newtons (N)",
+        "EARTH",
+        "g =",
+        "10 m s⁻²",
+        "· Paper 4",
+        "1 kg",
+        "MASS",
+        "W"
+      ],
+      "collisions": [],
+      "overflow": [],
+      "diagrams": [
+        "EARTH"
+      ],
+      "formulas": [
+        "W=m×glocal"
+      ],
+      "working": [],
+      "rings": [
+        {
+          "id": "derived-mass",
+          "cue": 16.3,
+          "progress": 1,
+          "encloses": true
+        }
+      ]
+    },
+    {
+      "frame": 3860,
+      "scene": "s08",
+      "labels": [
+        "one-times+0"
+      ],
+      "expectedRings": [
+        "derived-mass"
+      ],
+      "text": [
+        "MEASUREMENT LAB",
+        "08",
+        "/ 10",
+        "mass vs weight",
+        "Weight depends on location",
+        ".",
+        "W",
+        "=",
+        "m",
+        "×",
+        "g",
+        "local",
+        "Earth: W = 1",
+        "weight →",
+        "newtons (N)",
+        "EARTH",
+        "g =",
+        "10 m s⁻²",
+        "· Paper 4",
+        "1 kg",
+        "MASS",
+        "W"
+      ],
+      "collisions": [],
+      "overflow": [],
+      "diagrams": [
+        "EARTH"
+      ],
+      "formulas": [
+        "W=m×glocal"
+      ],
+      "working": [
+        "Earth: W = 1 × 10 = 10 N"
+      ],
+      "rings": [
+        {
+          "id": "derived-mass",
+          "cue": 19.06,
+          "progress": 0.1000000000000026,
+          "encloses": true
+        }
+      ]
+    },
+    {
+      "frame": 3872,
+      "scene": "s08",
+      "labels": [
+        "one-times+0.4"
+      ],
+      "expectedRings": [
+        "derived-mass"
+      ],
+      "text": [
+        "MEASUREMENT LAB",
+        "08",
+        "/ 10",
+        "mass vs weight",
+        "Weight depends on location",
+        ".",
+        "W",
+        "=",
+        "m",
+        "×",
+        "g",
+        "local",
+        "Earth: W = 1",
+        "weight →",
+        "newtons (N)",
+        "EARTH",
+        "g =",
+        "10 m s⁻²",
+        "· Paper 4",
+        "1 kg",
+        "MASS",
+        "W"
+      ],
+      "collisions": [],
+      "overflow": [],
+      "diagrams": [
+        "EARTH"
+      ],
+      "formulas": [
+        "W=m×glocal"
+      ],
+      "working": [
+        "Earth: W = 1 × 10 = 10 N"
+      ],
+      "rings": [
+        {
+          "id": "derived-mass",
+          "cue": 19.06,
+          "progress": 1,
+          "encloses": true
+        }
+      ]
+    },
+    {
+      "frame": 3874,
+      "scene": "s08",
+      "labels": [
+        "ten-substitution+0"
+      ],
+      "expectedRings": [
+        "derived-gravity"
+      ],
+      "text": [
+        "MEASUREMENT LAB",
+        "08",
+        "/ 10",
+        "mass vs weight",
+        "Weight depends on location",
+        ".",
+        "W",
+        "=",
+        "m",
+        "×",
+        "g",
+        "local",
+        "Earth: W = 1",
+        "× 10",
+        "weight →",
+        "newtons (N)",
+        "EARTH",
+        "g =",
+        "10 m s⁻²",
+        "· Paper 4",
+        "1 kg",
+        "MASS",
+        "W"
+      ],
+      "collisions": [],
+      "overflow": [],
+      "diagrams": [
+        "EARTH"
+      ],
+      "formulas": [
+        "W=m×glocal"
+      ],
+      "working": [
+        "Earth: W = 1 × 10 = 10 N"
+      ],
+      "rings": [
+        {
+          "id": "derived-gravity",
+          "cue": 19.52,
+          "progress": 0.11666666666667187,
+          "encloses": true
+        },
+        {
+          "id": "derived-mass",
+          "cue": 19.06,
+          "progress": 1,
+          "encloses": true
+        }
+      ]
+    },
+    {
+      "frame": 3886,
+      "scene": "s08",
+      "labels": [
+        "ten-substitution+0.4"
+      ],
+      "expectedRings": [
+        "derived-gravity"
+      ],
+      "text": [
+        "MEASUREMENT LAB",
+        "08",
+        "/ 10",
+        "mass vs weight",
+        "Weight depends on location",
+        ".",
+        "W",
+        "=",
+        "m",
+        "×",
+        "g",
+        "local",
+        "Earth: W = 1",
+        "× 10",
+        "weight →",
+        "newtons (N)",
+        "EARTH",
+        "g =",
+        "10 m s⁻²",
+        "· Paper 4",
+        "1 kg",
+        "MASS",
+        "W"
+      ],
+      "collisions": [],
+      "overflow": [],
+      "diagrams": [
+        "EARTH"
+      ],
+      "formulas": [
+        "W=m×glocal"
+      ],
+      "working": [
+        "Earth: W = 1 × 10 = 10 N"
+      ],
+      "rings": [
+        {
+          "id": "derived-gravity",
+          "cue": 19.52,
+          "progress": 1,
+          "encloses": true
+        },
+        {
+          "id": "derived-mass",
+          "cue": 19.06,
+          "progress": 1,
+          "encloses": true
+        }
+      ]
+    },
+    {
+      "frame": 3888,
+      "scene": "s08",
+      "labels": [
+        "dwell"
+      ],
+      "expectedRings": [],
+      "text": [
+        "MEASUREMENT LAB",
+        "08",
+        "/ 10",
+        "mass vs weight",
+        "Weight depends on location",
+        ".",
+        "W",
+        "=",
+        "m",
+        "×",
+        "g",
+        "local",
+        "Earth: W = 1",
+        "× 10",
+        "weight →",
+        "newtons (N)",
+        "EARTH",
+        "g =",
+        "10 m s⁻²",
+        "· Paper 4",
+        "1 kg",
+        "MASS",
+        "W"
+      ],
+      "collisions": [],
+      "overflow": [],
+      "diagrams": [
+        "EARTH"
+      ],
+      "formulas": [
+        "W=m×glocal"
+      ],
+      "working": [
+        "Earth: W = 1 × 10 = 10 N"
+      ],
+      "rings": [
+        {
+          "id": "derived-gravity",
+          "cue": 19.52,
+          "progress": 1,
+          "encloses": true
+        },
+        {
+          "id": "derived-mass",
+          "cue": 19.06,
+          "progress": 1,
+          "encloses": true
+        }
+      ]
+    },
+    {
+      "frame": 3905,
+      "scene": "s08",
+      "labels": [
+        "one-times+1.5"
+      ],
+      "expectedRings": [
+        "derived-mass"
+      ],
+      "text": [
+        "MEASUREMENT LAB",
+        "08",
+        "/ 10",
+        "mass vs weight",
+        "Weight depends on location",
+        ".",
+        "W",
+        "=",
+        "m",
+        "×",
+        "g",
+        "local",
+        "Earth: W = 1",
+        "× 10",
+        "weight →",
+        "newtons (N)",
+        "EARTH",
+        "g =",
+        "10 m s⁻²",
+        "· Paper 4",
+        "1 kg",
+        "MASS",
+        "W"
+      ],
+      "collisions": [],
+      "overflow": [],
+      "diagrams": [
+        "EARTH"
+      ],
+      "formulas": [
+        "W=m×glocal"
+      ],
+      "working": [
+        "Earth: W = 1 × 10 = 10 N"
+      ],
+      "rings": [
+        {
+          "id": "derived-gravity",
+          "cue": 19.52,
+          "progress": 1,
+          "encloses": true
+        },
+        {
+          "id": "derived-mass",
+          "cue": 19.06,
+          "progress": 1,
+          "encloses": true
+        }
+      ]
+    },
+    {
+      "frame": 3912,
+      "scene": "s08",
+      "labels": [
+        "ten-newtons+0"
+      ],
+      "expectedRings": [
+        "derived-weight"
+      ],
+      "text": [
+        "MEASUREMENT LAB",
+        "08",
+        "/ 10",
+        "mass vs weight",
+        "Weight depends on location",
+        ".",
+        "W",
+        "=",
+        "m",
+        "×",
+        "g",
+        "local",
+        "Earth: W = 1",
+        "× 10",
+        "= 10 N",
+        "weight →",
+        "newtons (N)",
+        "EARTH",
+        "g =",
+        "10 m s⁻²",
+        "· Paper 4",
+        "1 kg",
+        "MASS",
+        "W",
+        "10 N"
+      ],
+      "collisions": [],
+      "overflow": [],
+      "diagrams": [
+        "EARTH"
+      ],
+      "formulas": [
+        "W=m×glocal"
+      ],
+      "working": [
+        "Earth: W = 1 × 10 = 10 N"
+      ],
+      "rings": [
+        {
+          "id": "derived-gravity",
+          "cue": 19.52,
+          "progress": 1,
+          "encloses": true
+        },
+        {
+          "id": "derived-mass",
+          "cue": 19.06,
+          "progress": 1,
+          "encloses": true
+        },
+        {
+          "id": "derived-weight",
+          "cue": 20.78,
+          "progress": 0.13333333333333225,
+          "encloses": true
+        }
+      ]
+    },
+    {
+      "frame": 3919,
+      "scene": "s08",
+      "labels": [
+        "ten-substitution+1.5"
+      ],
+      "expectedRings": [
+        "derived-gravity"
+      ],
+      "text": [
+        "MEASUREMENT LAB",
+        "08",
+        "/ 10",
+        "mass vs weight",
+        "Weight depends on location",
+        ".",
+        "W",
+        "=",
+        "m",
+        "×",
+        "g",
+        "local",
+        "Earth: W = 1",
+        "× 10",
+        "= 10 N",
+        "weight →",
+        "newtons (N)",
+        "EARTH",
+        "g =",
+        "10 m s⁻²",
+        "· Paper 4",
+        "1 kg",
+        "MASS",
+        "W",
+        "10 N"
+      ],
+      "collisions": [],
+      "overflow": [],
+      "diagrams": [
+        "EARTH"
+      ],
+      "formulas": [
+        "W=m×glocal"
+      ],
+      "working": [
+        "Earth: W = 1 × 10 = 10 N"
+      ],
+      "rings": [
+        {
+          "id": "derived-gravity",
+          "cue": 19.52,
+          "progress": 1,
+          "encloses": true
+        },
+        {
+          "id": "derived-weight",
+          "cue": 20.78,
+          "progress": 0.7166666666666679,
+          "encloses": true
+        }
+      ]
+    },
+    {
+      "frame": 3924,
+      "scene": "s08",
+      "labels": [
+        "ten-newtons+0.4"
+      ],
+      "expectedRings": [
+        "derived-weight"
+      ],
+      "text": [
+        "MEASUREMENT LAB",
+        "08",
+        "/ 10",
+        "mass vs weight",
+        "Weight depends on location",
+        ".",
+        "W",
+        "=",
+        "m",
+        "×",
+        "g",
+        "local",
+        "Earth: W = 1",
+        "× 10",
+        "= 10 N",
+        "weight →",
+        "newtons (N)",
+        "EARTH",
+        "g =",
+        "10 m s⁻²",
+        "· Paper 4",
+        "1 kg",
+        "MASS",
+        "W",
+        "10 N"
+      ],
+      "collisions": [],
+      "overflow": [],
+      "diagrams": [
+        "EARTH"
+      ],
+      "formulas": [
+        "W=m×glocal"
+      ],
+      "working": [
+        "Earth: W = 1 × 10 = 10 N"
+      ],
+      "rings": [
+        {
+          "id": "derived-gravity",
+          "cue": 19.52,
+          "progress": 1,
+          "encloses": true
+        },
+        {
+          "id": "derived-weight",
+          "cue": 20.78,
+          "progress": 1,
+          "encloses": true
+        }
+      ]
+    },
+    {
+      "frame": 3948,
+      "scene": "s08",
+      "labels": [
+        "dwell"
+      ],
+      "expectedRings": [],
+      "text": [
+        "MEASUREMENT LAB",
+        "08",
+        "/ 10",
+        "mass vs weight",
+        "Weight depends on location",
+        ".",
+        "W",
+        "=",
+        "m",
+        "×",
+        "g",
+        "local",
+        "Earth: W = 1",
+        "× 10",
+        "= 10 N",
+        "weight →",
+        "newtons (N)",
+        "EARTH",
+        "g =",
+        "10 m s⁻²",
+        "· Paper 4",
+        "1 kg",
+        "MASS",
+        "W",
+        "10 N"
+      ],
+      "collisions": [],
+      "overflow": [],
+      "diagrams": [
+        "EARTH"
+      ],
+      "formulas": [
+        "W=m×glocal"
+      ],
+      "working": [
+        "Earth: W = 1 × 10 = 10 N"
+      ],
+      "rings": [
+        {
+          "id": "derived-weight",
+          "cue": 20.78,
+          "progress": 1,
+          "encloses": true
+        }
+      ]
+    },
+    {
+      "frame": 3957,
+      "scene": "s08",
+      "labels": [
+        "ten-newtons+1.5"
+      ],
+      "expectedRings": [
+        "derived-weight"
+      ],
+      "text": [
+        "MEASUREMENT LAB",
+        "08",
+        "/ 10",
+        "mass vs weight",
+        "Weight depends on location",
+        ".",
+        "W",
+        "=",
+        "m",
+        "×",
+        "g",
+        "local",
+        "Earth: W = 1",
+        "× 10",
+        "= 10 N",
+        "weight →",
+        "newtons (N)",
+        "EARTH",
+        "g =",
+        "10 m s⁻²",
+        "· Paper 4",
+        "1 kg",
+        "MASS",
+        "W",
+        "10 N"
+      ],
+      "collisions": [],
+      "overflow": [],
+      "diagrams": [
+        "EARTH"
+      ],
+      "formulas": [
+        "W=m×glocal"
+      ],
+      "working": [
+        "Earth: W = 1 × 10 = 10 N"
+      ],
+      "rings": [
+        {
+          "id": "derived-weight",
+          "cue": 20.78,
+          "progress": 1,
+          "encloses": true
+        }
+      ]
+    },
+    {
+      "frame": 3995,
+      "scene": "s08",
+      "labels": [
+        "moon+0"
+      ],
+      "expectedRings": [],
+      "text": [
+        "MEASUREMENT LAB",
+        "08",
+        "/ 10",
+        "mass vs weight",
+        "Weight depends on location",
+        ".",
+        "W",
+        "=",
+        "m",
+        "×",
+        "g",
+        "local",
+        "Earth: W = 1",
+        "× 10",
+        "= 10 N",
+        "weight →",
+        "newtons (N)",
+        "EARTH",
+        "MOON",
+        "g =",
+        "10 m s⁻²",
+        "· Paper 4",
+        "1 kg",
+        "MASS",
+        "W",
+        "same object · new gravity"
+      ],
+      "collisions": [],
+      "overflow": [],
+      "diagrams": [
+        "EARTH",
+        "MOON"
+      ],
+      "formulas": [
+        "W=m×glocal"
+      ],
+      "working": [
+        "Earth: W = 1 × 10 = 10 N"
+      ],
+      "rings": []
+    },
+    {
+      "frame": 4007,
+      "scene": "s08",
+      "labels": [
+        "moon+0.4"
+      ],
+      "expectedRings": [],
+      "text": [
+        "MEASUREMENT LAB",
+        "08",
+        "/ 10",
+        "mass vs weight",
+        "Weight depends on location",
+        ".",
+        "W",
+        "=",
+        "m",
+        "×",
+        "g",
+        "local",
+        "Earth: W = 1",
+        "× 10",
+        "= 10 N",
+        "weight →",
+        "newtons (N)",
+        "EARTH",
+        "MOON",
+        "g =",
+        "10 m s⁻²",
+        "· Paper 4",
+        "1 kg",
+        "MASS",
+        "W",
+        "same object · new gravity"
+      ],
+      "collisions": [],
+      "overflow": [],
+      "diagrams": [
+        "EARTH",
+        "MOON"
+      ],
+      "formulas": [
+        "W=m×glocal"
+      ],
+      "working": [
+        "Earth: W = 1 × 10 = 10 N"
+      ],
+      "rings": []
+    },
+    {
+      "frame": 4008,
+      "scene": "s08",
+      "labels": [
+        "dwell"
+      ],
+      "expectedRings": [],
+      "text": [
+        "MEASUREMENT LAB",
+        "08",
+        "/ 10",
+        "mass vs weight",
+        "Weight depends on location",
+        ".",
+        "W",
+        "=",
+        "m",
+        "×",
+        "g",
+        "local",
+        "Earth: W = 1",
+        "× 10",
+        "= 10 N",
+        "weight →",
+        "newtons (N)",
+        "EARTH",
+        "MOON",
+        "g =",
+        "10 m s⁻²",
+        "· Paper 4",
+        "1 kg",
+        "MASS",
+        "W",
+        "same object · new gravity"
+      ],
+      "collisions": [],
+      "overflow": [],
+      "diagrams": [
+        "EARTH",
+        "MOON"
+      ],
+      "formulas": [
+        "W=m×glocal"
+      ],
+      "working": [
+        "Earth: W = 1 × 10 = 10 N"
+      ],
+      "rings": []
+    },
+    {
+      "frame": 4040,
+      "scene": "s08",
+      "labels": [
+        "moon+1.5"
+      ],
+      "expectedRings": [],
+      "text": [
+        "MEASUREMENT LAB",
+        "08",
+        "/ 10",
+        "mass vs weight",
+        "Weight depends on location",
+        ".",
+        "W",
+        "=",
+        "m",
+        "×",
+        "g",
+        "local",
+        "Earth: W = 1",
+        "× 10",
+        "= 10 N",
+        "weight →",
+        "newtons (N)",
+        "EARTH",
+        "MOON",
+        "g =",
+        "10 m s⁻²",
+        "· Paper 4",
+        "1 kg",
+        "SAME MASS",
+        "W",
+        "same object · new gravity"
+      ],
+      "collisions": [],
+      "overflow": [],
+      "diagrams": [
+        "EARTH",
+        "MOON"
+      ],
+      "formulas": [
+        "W=m×glocal"
+      ],
+      "working": [
+        "Earth: W = 1 × 10 = 10 N"
+      ],
+      "rings": []
+    },
+    {
+      "frame": 4068,
+      "scene": "s08",
+      "labels": [
+        "dwell"
+      ],
+      "expectedRings": [],
+      "text": [
+        "MEASUREMENT LAB",
+        "08",
+        "/ 10",
+        "mass vs weight",
+        "Weight depends on location",
+        ".",
+        "W",
+        "=",
+        "m",
+        "×",
+        "g",
+        "local",
+        "Earth: W = 1",
+        "× 10",
+        "= 10 N",
+        "weight →",
+        "newtons (N)",
+        "EARTH",
+        "MOON",
+        "g =",
+        "10 m s⁻²",
+        "· Paper 4",
+        "1 kg",
+        "SAME MASS",
+        "W",
+        "same object · new gravity"
+      ],
+      "collisions": [],
+      "overflow": [],
+      "diagrams": [
+        "EARTH",
+        "MOON"
+      ],
+      "formulas": [
+        "W=m×glocal"
+      ],
+      "working": [
+        "Earth: W = 1 × 10 = 10 N"
+      ],
+      "rings": []
+    },
+    {
+      "frame": 4128,
+      "scene": "s08",
+      "labels": [
+        "dwell"
+      ],
+      "expectedRings": [],
+      "text": [
+        "MEASUREMENT LAB",
+        "08",
+        "/ 10",
+        "mass vs weight",
+        "Weight depends on location",
+        ".",
+        "W",
+        "=",
+        "m",
+        "×",
+        "g",
+        "local",
+        "Earth: W = 1",
+        "× 10",
+        "= 10 N",
+        "weight →",
+        "newtons (N)",
+        "EARTH",
+        "MOON",
+        "g =",
+        "10 m s⁻²",
+        "· Paper 4",
+        "1 kg",
+        "SAME MASS",
+        "W",
+        "same object · new gravity",
+        "mass unchanged · weight smaller"
+      ],
+      "collisions": [],
+      "overflow": [],
+      "diagrams": [
+        "EARTH",
+        "MOON"
+      ],
+      "formulas": [
+        "W=m×glocal"
+      ],
+      "working": [
+        "Earth: W = 1 × 10 = 10 N"
+      ],
+      "rings": []
+    },
+    {
+      "frame": 4167,
+      "scene": "s08",
+      "labels": [
+        "final-hold"
+      ],
+      "expectedRings": [],
+      "text": [
+        "MEASUREMENT LAB",
+        "08",
+        "/ 10",
+        "mass vs weight",
+        "Weight depends on location",
+        ".",
+        "W",
+        "=",
+        "m",
+        "×",
+        "g",
+        "local",
+        "Earth: W = 1",
+        "× 10",
+        "= 10 N",
+        "weight →",
+        "newtons (N)",
+        "EARTH",
+        "MOON",
+        "g =",
+        "10 m s⁻²",
+        "· Paper 4",
+        "1 kg",
+        "SAME MASS",
+        "W",
+        "same object · new gravity",
+        "mass unchanged · weight smaller"
+      ],
+      "collisions": [],
+      "overflow": [],
+      "diagrams": [
+        "EARTH",
+        "MOON"
+      ],
+      "formulas": [
+        "W=m×glocal"
+      ],
+      "working": [
+        "Earth: W = 1 × 10 = 10 N"
+      ],
+      "rings": []
+    }
+  ]
+}

@@ -50,7 +50,7 @@ Weight is the gravitational force on a mass:
 
 \(W=mg\).
 
-Weight is measured in newtons, \(\mathrm{N}\), not kilograms. Here \(g\) is the local acceleration due to gravity, commonly taken as \(9.8\,\mathrm{m\,s^{-2}}\) near Earth's surface unless the question supplies another value. Mass stays fixed when location changes, but weight changes when \(g\) changes.
+Weight is measured in newtons, \(\mathrm{N}\), not kilograms. Here \(g\) is the local acceleration due to gravity, taken as \(10\,\mathrm{m\,s^{-2}}\) for Cambridge 9709 Paper 4 unless the question supplies another value. Mass stays fixed when location changes, but weight changes when \(g\) changes.
 
 ## Converting compound units
 
@@ -108,13 +108,13 @@ Then use \(F=ma\):
 
 ### Example D — weight
 
-Find the weight of a \(2.4\,\mathrm{kg}\) object where \(g=9.8\,\mathrm{m\,s^{-2}}\).
+Find the weight of a \(2.4\,\mathrm{kg}\) object where \(g=10\,\mathrm{m\,s^{-2}}\).
 
 \(W=mg\)
 
-\(W=2.4\times9.8=23.52\,\mathrm{N}\).
+\(W=2.4\times10=24\,\mathrm{N}\).
 
-To a sensible number of significant figures, \(W=24\,\mathrm{N}\).
+With the Paper 4 value of gravity, \(W=24\,\mathrm{N}\).
 
 ## Quick self-check
 
@@ -126,8 +126,8 @@ To a sensible number of significant figures, \(W=24\,\mathrm{N}\).
   **Answer:** \(15\times\frac{18}{5}=54\,\mathrm{km\,h^{-1}}\).
 - **Question D:** Convert \(129.6\,\mathrm{km\,h^{-2}}\) to \(\mathrm{m\,s^{-2}}\).  
   **Answer:** \(\frac{129.6\times1000}{3600^2}=0.01\,\mathrm{m\,s^{-2}}\).
-- **Question E:** A mass of \(5\,\mathrm{kg}\) is in a field where \(g=9.8\,\mathrm{m\,s^{-2}}\). What is its weight?  
-  **Answer:** \(W=5\times9.8=49\,\mathrm{N}\).
+- **Question E:** A mass of \(5\,\mathrm{kg}\) is in a field where \(g=10\,\mathrm{m\,s^{-2}}\). What is its weight?\
+  **Answer:** \(W=mg=5\times10=50\,\mathrm{N}\).
 
 ## Common exam slips
 

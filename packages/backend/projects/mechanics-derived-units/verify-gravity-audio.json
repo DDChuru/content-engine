@@ -1,0 +1,54 @@
+{
+  "baselineCommit": "b0f14d14b6982976259957c18f1402438a05a01e",
+  "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+  "model": "eleven_turbo_v2_5",
+  "speed": 1.14,
+  "speedSource": "Original scene requests in ElevenLabs history, 2026-09-05",
+  "changedScenes": [
+    "s08"
+  ],
+  "beforeSha256": {
+    "derived-units-s04.mp3": "620aa73385de6e8d06a771ac9d12f8d937c4a048a5e7a9f52c4a5f6a12921e6f",
+    "derived-units-s05.mp3": "10efe9dae39b2ee589b8664d53d8e0aca3822969ca51fe051aa65d391cd01f49",
+    "derived-units-s08.mp3": "a6f3dd52ca588742359719e5396e51a11495bb362862b97a5f2e71a131c0d6bf",
+    "derived-units-s06.mp3": "1367cf654974af9dc2645c7327fb41d29667462b3beaded748b67598edbab5af",
+    "derived-units-s03.mp3": "b081b63fdff0fd4168773dab914dfe7da91ba13202cd6280eb256bf303c32393",
+    "derived-units-s02.mp3": "ffedf50f742278a6783d89317d12ba433c55e734c6d2bcf0b8105c5d29df44ac",
+    "derived-units-s01.mp3": "b267fa5a812aa3337f5ecc6949f1baddb2c78415a8c9a7b96ca71bab972bb81b",
+    "derived-units-s07.mp3": "c50ede445b947829fe0e85c77340e8b48531d62156d7a5522b3b8c6c2567e6ca",
+    "derived-units-s10.mp3": "4f2f563b549b5a4b5a1bb86f8b7ff9102beb99ae24f3e762b016a45f04baf412",
+    "derived-units-s09.mp3": "8b778d95b6c708bfa888dc678c937ec3b70e6d48490d874608770577a64352ad"
+  },
+  "afterSha256": {
+    "derived-units-s04.mp3": "620aa73385de6e8d06a771ac9d12f8d937c4a048a5e7a9f52c4a5f6a12921e6f",
+    "derived-units-s05.mp3": "10efe9dae39b2ee589b8664d53d8e0aca3822969ca51fe051aa65d391cd01f49",
+    "derived-units-s08.mp3": "fe468e159d773bce5158d67b6583583df2d224bf8ed698ab8a25f2c31aabb00c",
+    "derived-units-s06.mp3": "1367cf654974af9dc2645c7327fb41d29667462b3beaded748b67598edbab5af",
+    "derived-units-s03.mp3": "b081b63fdff0fd4168773dab914dfe7da91ba13202cd6280eb256bf303c32393",
+    "derived-units-s02.mp3": "ffedf50f742278a6783d89317d12ba433c55e734c6d2bcf0b8105c5d29df44ac",
+    "derived-units-s01.mp3": "b267fa5a812aa3337f5ecc6949f1baddb2c78415a8c9a7b96ca71bab972bb81b",
+    "derived-units-s07.mp3": "c50ede445b947829fe0e85c77340e8b48531d62156d7a5522b3b8c6c2567e6ca",
+    "derived-units-s10.mp3": "4f2f563b549b5a4b5a1bb86f8b7ff9102beb99ae24f3e762b016a45f04baf412",
+    "derived-units-s09.mp3": "8b778d95b6c708bfa888dc678c937ec3b70e6d48490d874608770577a64352ad"
+  },
+  "untouchedAudioByteIdentical": true,
+  "untouchedTranscriptObjectsIdentical": true,
+  "transcribedScenes": [
+    {
+      "id": "s08",
+      "duration": 29.33551,
+      "text": "Weight is a force, so we measure it in Newtons. It equals mass multiplied by the local acceleration due to gravity. For Cambridge paper 4, use G equals 10 meters per second squared. For this 1 kilogram mass, weight is 1 times 10, giving 10 new Newtons. Move the object to the moon. Its mass stays the same while its weight becomes smaller.",
+      "cues": {
+        "weight": 0.0,
+        "newtons": 3.48,
+        "local-acceleration": 7.3,
+        "ten-gravity": 12.86,
+        "one-kilogram": 16.3,
+        "one-times": 19.06,
+        "ten-substitution": 19.52,
+        "ten-newtons": 20.78,
+        "moon": 23.54
+      }
+    }
+  ]
+}

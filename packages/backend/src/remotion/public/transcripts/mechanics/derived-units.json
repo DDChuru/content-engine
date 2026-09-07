@@ -1,8 +1,8 @@
 {
   "project": "mechanics-derived-units",
   "sceneCount": 10,
-  "totalDuration": 163.004081,
-  "generatedAt": "2026-09-05T18:25:37.417631",
+  "totalDuration": 175.386122,
+  "generatedAt": "2026-09-07T13:22:56.193133",
   "engine": "faster-whisper-small (local)",
   "scenes": [
     {
@@ -1293,203 +1293,338 @@
     {
       "id": "s08",
       "audio": "derived-units-s08.mp3",
-      "duration": 16.953469,
-      "wordCount": 37,
-      "text": "Weight is a force so we measure it in Newton's. It equals mass multiplied by the local acceleration due to gravity. Move the object to the moon. Its mass stays the same while its weight becomes smaller.",
+      "duration": 29.33551,
+      "wordCount": 63,
+      "text": "Weight is a force, so we measure it in Newtons. It equals mass multiplied by the local acceleration due to gravity. For Cambridge paper 4, use G equals 10 meters per second squared. For this 1 kilogram mass, weight is 1 times 10, giving 10 new Newtons. Move the object to the moon. Its mass stays the same while its weight becomes smaller.",
       "words": [
         {
           "word": "Weight",
           "start": 0.0,
-          "end": 0.3
+          "end": 0.28
         },
         {
           "word": "is",
-          "start": 0.3,
-          "end": 0.84
+          "start": 0.28,
+          "end": 0.88
         },
         {
           "word": "a",
-          "start": 0.84,
-          "end": 0.98
+          "start": 0.88,
+          "end": 1.02
         },
         {
-          "word": "force",
-          "start": 0.98,
-          "end": 1.22
+          "word": "force,",
+          "start": 1.02,
+          "end": 1.24
         },
         {
           "word": "so",
-          "start": 1.22,
-          "end": 1.84
+          "start": 1.82,
+          "end": 1.88
         },
         {
           "word": "we",
-          "start": 1.84,
-          "end": 1.96
+          "start": 1.88,
+          "end": 2.02
         },
         {
           "word": "measure",
-          "start": 1.96,
+          "start": 2.02,
           "end": 2.42
         },
         {
           "word": "it",
           "start": 2.42,
-          "end": 2.82
+          "end": 2.76
         },
         {
           "word": "in",
-          "start": 2.82,
-          "end": 3.62
+          "start": 2.76,
+          "end": 3.48
         },
         {
-          "word": "Newton's.",
-          "start": 3.62,
-          "end": 4.2
+          "word": "Newtons.",
+          "start": 3.48,
+          "end": 3.92
         },
         {
           "word": "It",
-          "start": 4.92,
-          "end": 5.02
+          "start": 4.62,
+          "end": 4.72
         },
         {
           "word": "equals",
-          "start": 5.02,
-          "end": 5.36
+          "start": 4.72,
+          "end": 5.04
         },
         {
           "word": "mass",
-          "start": 5.36,
-          "end": 5.88
+          "start": 5.04,
+          "end": 5.62
         },
         {
           "word": "multiplied",
-          "start": 5.88,
-          "end": 6.7
+          "start": 5.62,
+          "end": 6.52
         },
         {
           "word": "by",
-          "start": 6.7,
-          "end": 7.24
+          "start": 6.52,
+          "end": 7.18
         },
         {
           "word": "the",
-          "start": 7.24,
-          "end": 7.38
+          "start": 7.18,
+          "end": 7.3
         },
         {
           "word": "local",
-          "start": 7.38,
-          "end": 7.56
+          "start": 7.3,
+          "end": 7.5
         },
         {
           "word": "acceleration",
-          "start": 7.56,
-          "end": 8.22
+          "start": 7.5,
+          "end": 8.12
         },
         {
           "word": "due",
-          "start": 8.22,
-          "end": 8.98
+          "start": 8.12,
+          "end": 8.44
         },
         {
           "word": "to",
-          "start": 8.98,
-          "end": 9.14
+          "start": 8.44,
+          "end": 8.6
         },
         {
           "word": "gravity.",
-          "start": 9.14,
-          "end": 9.5
+          "start": 8.6,
+          "end": 8.94
         },
         {
-          "word": "Move",
-          "start": 10.08,
-          "end": 10.44
+          "word": "For",
+          "start": 9.74,
+          "end": 9.94
         },
         {
-          "word": "the",
-          "start": 10.44,
-          "end": 10.64
+          "word": "Cambridge",
+          "start": 9.94,
+          "end": 10.24
         },
         {
-          "word": "object",
-          "start": 10.64,
-          "end": 10.96
+          "word": "paper",
+          "start": 10.24,
+          "end": 10.68
         },
         {
-          "word": "to",
-          "start": 10.96,
-          "end": 11.28
+          "word": "4,",
+          "start": 10.68,
+          "end": 11.0
         },
         {
-          "word": "the",
-          "start": 11.28,
-          "end": 11.38
+          "word": "use",
+          "start": 11.56,
+          "end": 11.8
         },
         {
-          "word": "moon.",
-          "start": 11.38,
-          "end": 11.62
+          "word": "G",
+          "start": 11.8,
+          "end": 12.2
         },
         {
-          "word": "Its",
-          "start": 12.54,
-          "end": 12.66
+          "word": "equals",
+          "start": 12.2,
+          "end": 12.86
         },
         {
-          "word": "mass",
-          "start": 12.66,
-          "end": 13.08
+          "word": "10",
+          "start": 12.86,
+          "end": 13.36
         },
         {
-          "word": "stays",
-          "start": 13.08,
-          "end": 13.66
+          "word": "meters",
+          "start": 13.36,
+          "end": 13.96
         },
         {
-          "word": "the",
-          "start": 13.66,
-          "end": 13.94
+          "word": "per",
+          "start": 13.96,
+          "end": 14.3
         },
         {
-          "word": "same",
-          "start": 13.94,
-          "end": 14.34
+          "word": "second",
+          "start": 14.3,
+          "end": 14.6
         },
         {
-          "word": "while",
-          "start": 14.34,
-          "end": 14.92
+          "word": "squared.",
+          "start": 14.6,
+          "end": 14.9
         },
         {
-          "word": "its",
-          "start": 14.92,
-          "end": 15.14
+          "word": "For",
+          "start": 15.86,
+          "end": 16.04
+        },
+        {
+          "word": "this",
+          "start": 16.04,
+          "end": 16.3
+        },
+        {
+          "word": "1",
+          "start": 16.3,
+          "end": 16.58
+        },
+        {
+          "word": "kilogram",
+          "start": 16.58,
+          "end": 16.78
+        },
+        {
+          "word": "mass,",
+          "start": 16.78,
+          "end": 17.48
         },
         {
           "word": "weight",
-          "start": 15.14,
-          "end": 15.52
+          "start": 18.26,
+          "end": 18.5
+        },
+        {
+          "word": "is",
+          "start": 18.5,
+          "end": 19.06
+        },
+        {
+          "word": "1",
+          "start": 19.06,
+          "end": 19.3
+        },
+        {
+          "word": "times",
+          "start": 19.3,
+          "end": 19.52
+        },
+        {
+          "word": "10,",
+          "start": 19.52,
+          "end": 19.9
+        },
+        {
+          "word": "giving",
+          "start": 20.5,
+          "end": 20.78
+        },
+        {
+          "word": "10",
+          "start": 20.78,
+          "end": 21.08
+        },
+        {
+          "word": "new",
+          "start": 21.08,
+          "end": 21.24
+        },
+        {
+          "word": "Newtons.",
+          "start": 21.24,
+          "end": 21.7
+        },
+        {
+          "word": "Move",
+          "start": 22.04,
+          "end": 22.48
+        },
+        {
+          "word": "the",
+          "start": 22.48,
+          "end": 22.7
+        },
+        {
+          "word": "object",
+          "start": 22.7,
+          "end": 23.06
+        },
+        {
+          "word": "to",
+          "start": 23.06,
+          "end": 23.44
+        },
+        {
+          "word": "the",
+          "start": 23.44,
+          "end": 23.54
+        },
+        {
+          "word": "moon.",
+          "start": 23.54,
+          "end": 23.76
+        },
+        {
+          "word": "Its",
+          "start": 24.92,
+          "end": 25.06
+        },
+        {
+          "word": "mass",
+          "start": 25.06,
+          "end": 25.34
+        },
+        {
+          "word": "stays",
+          "start": 25.34,
+          "end": 25.9
+        },
+        {
+          "word": "the",
+          "start": 25.9,
+          "end": 26.24
+        },
+        {
+          "word": "same",
+          "start": 26.24,
+          "end": 26.6
+        },
+        {
+          "word": "while",
+          "start": 26.6,
+          "end": 27.24
+        },
+        {
+          "word": "its",
+          "start": 27.24,
+          "end": 27.46
+        },
+        {
+          "word": "weight",
+          "start": 27.46,
+          "end": 27.78
         },
         {
           "word": "becomes",
-          "start": 15.52,
-          "end": 16.0
+          "start": 27.78,
+          "end": 28.4
         },
         {
           "word": "smaller.",
-          "start": 16.0,
-          "end": 16.4
+          "start": 28.4,
+          "end": 28.84
         }
       ],
       "cues": {
         "weight": 0.0,
-        "newtons": 3.62,
-        "local-acceleration": 7.38,
-        "moon": 11.38
+        "newtons": 3.48,
+        "local-acceleration": 7.3,
+        "ten-gravity": 12.86,
+        "one-kilogram": 16.3,
+        "one-times": 19.06,
+        "ten-substitution": 19.52,
+        "ten-newtons": 20.78,
+        "moon": 23.54
       },
-      "generatedAt": "2026-09-05T18:25:37.417631",
+      "generatedAt": "2026-09-07T13:22:56.193133",
       "engine": "faster-whisper-small (local)"
     },
     {

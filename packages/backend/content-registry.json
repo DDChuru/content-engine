@@ -634,7 +634,7 @@
             "landscape": {
               "compositionId": "MechanicsDerivedUnits",
               "resolution": "1920x1080",
-              "durationS": 163.69,
+              "durationS": 176.067,
               "composition": "src/remotion/compositions/MechanicsDerivedUnits.tsx",
               "render": "output/mechanics/derived-units-v2.mp4",
               "contactSheet": "output/mechanics/derived-units-v2-sheet.png",
@@ -658,7 +658,7 @@
               "src/remotion/public/audio/mechanics/derived-units-s10.mp3"
             ],
             "transcript": "src/remotion/public/transcripts/mechanics/derived-units.json",
-            "cues": 51,
+            "cues": 56,
             "transcribeScript": "src/scripts/transcribe-mechanics-derived-units-local.py"
           },
           "commits": {
@@ -671,7 +671,7 @@
             "mapCode": "M0.3"
           },
           "reviewNotes": [
-            "syllabus check: 9709 Paper 4 uses g = 10 m/s^2; this video uses 9.8 — fix in a re-voice/re-build pass"
+            "Gravity corrected to 10 m/s^2; S08 re-voiced at original speed 1.14, locally transcribed and still-audited. Existing video render predates this correction; no video rendered in this pass."
           ]
         },
         "mechanics-types-of-forces": {
