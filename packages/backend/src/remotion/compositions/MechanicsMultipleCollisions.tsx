@@ -3,6 +3,8 @@ import React, { useLayoutEffect, useMemo, useState, useRef } from "react";
 import {
   AbsoluteFill,
   Artifact,
+  delayRender,
+  continueRender,
   Audio,
   staticFile,
   useCurrentFrame,
@@ -94,6 +96,68 @@ function heldTime(s: Scene, t: number): number {
   );
   return hold ? hold.start : t;
 }
+
+interface FigureCue { id: string; target: string; start: number; end?: number; kind: "spoken" | "substitution"; wordIndex?: number }
+const FigureContext = React.createContext<Scene | null>(null);
+// Semantic references into the unchanged local Whisper word list, not new audio cues.
+const FIGURE_WORDS: Record<string, Record<number, string>> = {
+  s07: {2:"A.mass",6:"A.before",14:"B.mass",18:"B.before",33:"C.mass",38:"C.before",49:"A.after",60:"C.after"},
+  s04: {17:"A.mass",19:"A.before",24:"B.mass",26:"B.before",34:"A.after",99:"A.mass",102:"A.before",105:"B.mass",108:"B.before",111:"A.mass",114:"A.after",117:"B.mass",124:"A.after",126:"B.mass",130:"A.after",134:"B.mass",138:"B.after",147:"B.after",152:"B.before"},
+  s06: {19:"B.mass",22:"B.before",27:"C.mass",29:"C.before",37:"C.after",45:"B.after",47:"B.before",112:"B.mass",115:"B.before",118:"C.mass",121:"C.before",124:"B.mass",131:"C.mass",134:"C.after",137:"B.mass",147:"B.mass",151:"B.after",168:"A.before",174:"B.before",175:"A.before",179:"B.before"},
+};
+const cleanWord = (word: string) => word.toLowerCase().replace(/[^a-z0-9]/g, "");
+export function spokenFigureCues(s: Scene): FigureCue[] {
+  if (!FIGURE_WORDS[s.id]) return [];
+  return s.words.flatMap((word, index) => {
+    const label = cleanWord(word.word).match(/^([abc])s?$/)?.[1]?.toUpperCase();
+    const previous = cleanWord(s.words[index - 1]?.word ?? "");
+    const role = previous === "mass" ? "mass" : previous === "u" ? "before" : ["v", "w", "value"].includes(previous) ? "after" : "label";
+    const target = FIGURE_WORDS[s.id][index] ?? (label ? `${label}.${role}` : undefined);
+    return target ? [{id:`${s.id}:word-${index}`, target, start:word.start, kind:"spoken" as const, wordIndex:index}] : [];
+  });
+}
+const FigureRings: React.FC = () => {
+  const s = React.useContext(FigureContext);
+  const {fps} = useVideoConfig();
+  const frame = useCurrentFrame();
+  const t = s ? heldTime(s, frame/fps) : 0;
+  const ref = useRef<SVGGElement>(null);
+  const [boxes, setBoxes] = useState<Record<string, {x:number;y:number;width:number;height:number}>>({});
+  const events = useMemo(() => s ? [...spokenFigureCues(s), ...substitutionFigureCues(s, fps)] : [], [s, fps]);
+  const active = events.filter(event => t >= event.start && t < (event.end ?? event.start + 1.9) + .25);
+  useLayoutEffect(() => {
+    const svg = ref.current?.ownerSVGElement;
+    if (!svg) return;
+    const next: typeof boxes = {};
+    svg.querySelectorAll<SVGGraphicsElement>("[data-figure-id]").forEach(el => {
+      const b = el.getBBox();
+      next[el.getAttribute("data-figure-id")!] = {x:b.x,y:b.y,width:b.width,height:b.height};
+    });
+    setBoxes(next);
+  }, [t]);
+  return <g ref={ref} data-figure-layer="true">
+    {active.map(event => {
+      // Repeated references retrace one ellipse, never stack identical rings.
+      if (active.some(other => other.target === event.target && other.start > event.start)) return null;
+      const box = boxes[event.target];
+      if (!box) return null;
+      const x=box.x+box.width/2, y=box.y+box.height/2;
+      const rx=box.width*.85+14, ry=box.height*.57+2;
+      const points=Array.from({length:81},(_,i)=>{
+        const angle=i/80*Math.PI*2;
+        const wobble=1+.022*Math.sin(angle*3+.7);
+        return [x+rx*Math.cos(angle)*wobble,y+ry*Math.sin(angle)*wobble];
+      });
+      const progress=Math.min(1,Math.max(.06,(t-event.start+1/fps)/.4));
+      const opacity=1-clamp((t-(event.end ?? event.start+1.9))/.25);
+      return <path key={event.id} data-figure-ring={event.id} data-ring-target={event.target} data-ring-kind={event.kind}
+        data-ring-start={event.start} data-ring-progress={progress} data-ring-word={event.wordIndex}
+        d={points.map(([px,py],i)=>`${i?"L":"M"}${px} ${py}`).join(" ")}
+        fill="none" stroke={T.accent} strokeWidth={3} strokeLinecap="round" strokeLinejoin="round"
+        pathLength={1} strokeDasharray={1} strokeDashoffset={1-progress} opacity={opacity}/>;
+    })}
+  </g>;
+};
 
 // Cut the visuals at the midpoint of the existing overlap, keeping a diagram
 // visible on every frame. Sequence lengths and audio timing stay unchanged.
@@ -861,6 +925,7 @@ interface InkStroke {
   startFrame: number;
   durationFrames: number;
   length: number;
+  charIndex: number;
   color: string;
   width: number;
 }
@@ -922,9 +987,9 @@ function makeInkLine(options: {
     color = T.ink,
     width = 3.4,
   } = options;
-  const raw: Array<{ points: Point[]; length: number }> = [];
+  const raw: Array<{ points: Point[]; length: number; charIndex: number }> = [];
   let cursor = x;
-  for (const char of text) {
+  for (const [charIndex, char] of Array.from(text).entries()) {
     if (char === " ") {
       cursor += GLYPH_ADVANCE[" "] * scale;
       continue;
@@ -944,7 +1009,7 @@ function makeInkLine(options: {
               py * scale * (subscript ? 0.65 : 1),
           ] as Point,
       );
-      raw.push({ points, length: pointsLength(points) });
+      raw.push({ points, length: pointsLength(points), charIndex });
     }
     cursor += (GLYPH_ADVANCE[char] ?? 14) * scale;
   }
@@ -970,11 +1035,29 @@ function makeInkLine(options: {
       startFrame: nextFrame,
       durationFrames,
       length: stroke.length,
+      charIndex: stroke.charIndex,
       color,
       width,
     };
     nextFrame += durationFrames + gap;
     return result;
+  });
+}
+
+const COLLISION_EQUATIONS = {s04:"1×4 + 2×3 = 1×2 + 2vB",s06:"2×4 + 3×1 = 2wB + 3×3"};
+export function substitutionFigureCues(s: Scene, fps: number): FigureCue[] {
+  if (s.id !== "s04" && s.id !== "s06") return [];
+  const text=COLLISION_EQUATIONS[s.id];
+  const width=Array.from(text).reduce((n,c)=>n+(GLYPH_ADVANCE[c]??14),0);
+  const end=s.holds.find(h=>h.kind==="hold"&&h.duration===2)!.start-.1;
+  // Exactly the same glyph geometry, scale, gaps and timing as Paper's equation.
+  const strokes=makeInkLine({id:"equation",text,x:65,y:310,scale:Math.min(2.8,655/width),startFrame:cue(s,"equation")*fps,endFrame:end*fps});
+  const sources=s.id==="s04" ? [["A.mass","A.before"],["B.mass","B.before"],["A.mass","A.after"],["B.mass","B.after"]] : [["B.mass","B.before"],["C.mass","C.before"],["B.mass","B.after"],["C.mass","C.after"]];
+  return [...text.matchAll(/[1-4]×[1-4]|[1-4][vw]B/g)].flatMap((match,index)=>{
+    const term=strokes.filter(stroke=>stroke.charIndex>=match.index!&&stroke.charIndex<match.index!+match[0].length);
+    const start=term[0].startFrame/fps;
+    const finish=term.at(-1)!;
+    return sources[index].map(target=>({id:`${s.id}:sub-${index}-${target}`,target,start,end:(finish.startFrame+finish.durationFrames)/fps,kind:"substitution" as const}));
   });
 }
 
@@ -1297,6 +1380,7 @@ const Sphere: React.FC<{
       />
       <text
         data-diagram-text="true"
+        data-figure-id={`${ball.id}.label`}
         x={ball.x}
         y={y + 85}
         textAnchor="middle"
@@ -1309,7 +1393,8 @@ const Sphere: React.FC<{
         <text
           data-diagram-text="true"
           x={ball.x}
-          y={y + 138}
+          y={y + 150}
+          data-figure-id={`${ball.id}.mass`}
           data-given-id={ball.givens ? `${ball.id}.mass` : undefined}
           data-given-value={ball.mass}
           textAnchor="middle"
@@ -1345,6 +1430,7 @@ const Sphere: React.FC<{
               data-diagram-text="true"
               x={(start + end) / 2}
               y={arrowY - 22}
+              data-figure-id={`${ball.id}.before`}
               data-given-id={ball.givens ? `${ball.id}.before` : undefined}
               data-given-value={ball.v}
               textAnchor="middle"
@@ -1409,6 +1495,7 @@ const AfterVelocity: React.FC<{ ball: BallState }> = ({ ball }) => {
         />
         <text
           data-diagram-text="true"
+          data-figure-id={`${ball.id}.after`}
           data-given-id={ball.afterUnknown ? undefined : `${ball.id}.after`}
           data-given-value={ball.afterV}
           data-unknown={
@@ -1513,6 +1600,7 @@ const Track: React.FC<{
       />
     )}
     {children}
+    <FigureRings />
   </svg>
 );
 const SpheresMotif: React.FC = () => (
@@ -1697,7 +1785,24 @@ const Story: React.FC<{ s: Scene }> = ({ s }) => {
       : { x: (contact1.x[0] + contact1.x[1]) * 50 + 100, elapsed: t - first };
   return <Track wide numeric={false} balls={balls} flash={flash} />;
 };
-const ProblemSetup: React.FC<{ s: Scene }> = () => (
+const PROBLEM_PHRASES: Array<Array<[string,number,number]>> = [
+  [["Spheres ",0,0],["A (1 kg), ",1,3],["B (2 kg), ",13,15],["C (3 kg): ",32,34],["4, ",6,9],["3, ",18,18],["1 m s⁻¹ →; ",38,41],["A–B–C.",19,20]],
+  [["After A hits B: ",42,45],["A = 2 m s⁻¹. ",46,52],["After B hits C: ",53,56],["C = 3 m s⁻¹.",57,60]],
+  [["Will A and B collide again?",61,66]],
+];
+const ProblemPhrase: React.FC<{s:Scene;text:string;first:number;last:number}> = ({s,text,first,last}) => {
+  const {fps}=useVideoConfig();
+  const t=heldTime(s,useCurrentFrame()/fps);
+  const start=s.words[first].start,end=s.words[last].end;
+  const active=t>=start&&t<end+.4;
+  return <span data-problem-phrase={`${s.id}:phrase-${first}`} data-phrase-start={start} data-phrase-end={end} style={{position:"relative",display:"inline-block"}}>
+    {text}
+    {active&&<svg data-problem-underline={`${s.id}:phrase-${first}`} width="100%" height="8" viewBox="0 0 100 8" preserveAspectRatio="none" style={{position:"absolute",left:0,bottom:6,overflow:"visible",opacity:1-clamp((t-end-.15)/.25)}}>
+      <path d="M1 4 Q32 2 54 4 T99 3" fill="none" stroke={T.accent} strokeWidth={3} pathLength={1} strokeDasharray={1} strokeDashoffset={1-Math.max(.06,clamp((t-start+1/fps)/Math.max(.4,end-start)))} />
+    </svg>}
+  </span>;
+};
+const ProblemSetup: React.FC<{ s: Scene }> = ({s}) => (
   <>
     <Track
       positive
@@ -1752,17 +1857,9 @@ const ProblemSetup: React.FC<{ s: Scene }> = () => (
         borderRadius: 4,
       }}
     >
-      {[
-        "Spheres A (1 kg), B (2 kg), C (3 kg): 4, 3, 1 m s⁻¹ →; A–B–C.",
-        "After A hits B: A = 2 m s⁻¹. After B hits C: C = 3 m s⁻¹.",
-        "Will A and B collide again?",
-      ].map((line) => (
-        <div
-          key={line}
-          data-problem-line="true"
-          style={{ whiteSpace: "nowrap" }}
-        >
-          {line}
+      {PROBLEM_PHRASES.map((phrases,index) => (
+        <div key={index} data-problem-line="true" style={{whiteSpace:"nowrap"}}>
+          {phrases.map(([text,first,last])=><ProblemPhrase key={first} s={s} text={text} first={first} last={last}/>)}
         </div>
       ))}
     </div>
@@ -1830,8 +1927,8 @@ const CollisionWorking: React.FC<{ s: Scene; which: 1 | 2; t: number }> = ({
   const active = stages.filter((k) => t >= cue(s, k)).length - 1;
   const texts =
     which === 1
-      ? ["1×4 + 2×3 = 1×2 + 2vB", "10 = 2 + 2vB", "vB = 4 m s"]
-      : ["2×4 + 3×1 = 2wB + 3×3", "11 = 2wB + 9", "wB = 1 m s"];
+      ? [COLLISION_EQUATIONS.s04, "10 = 2 + 2vB", "vB = 4 m s"]
+      : [COLLISION_EQUATIONS.s06, "11 = 2wB + 9", "wB = 1 m s"];
   const formulaLines: Line[] = [
     {
       id: "principle",
@@ -2070,9 +2167,13 @@ function useStillAudit(
 ): React.ReactNode {
   const frame = useCurrentFrame();
   const [measurement, setMeasurement] = useState("");
+  const [auditHandle]=useState(()=>enabled?delayRender("Measure collision annotations after layout"):null);
   useLayoutEffect(() => {
+    let request=0;
+    const measure=()=>{
     if (!enabled || !ref.current) return;
     const root = ref.current;
+    if(root.getBoundingClientRect().width===0){request=requestAnimationFrame(measure);return;}
     const visible = (el: Element) => {
       let n: Element | null = el;
       while (n) {
@@ -2132,9 +2233,21 @@ function useStillAudit(
           });
       }),
     );
+    const figureRings=Array.from(root.querySelectorAll<SVGPathElement>("[data-figure-ring]")).filter(visible);
+    const allPrinted=Array.from(root.querySelectorAll("svg text,[data-problem-phrase],[data-region=header],[data-caption]")).filter(visible);
+    const ringChecks=figureRings.map(ring=>{
+      const targetId=ring.getAttribute("data-ring-target")!;
+      const target=ring.ownerSVGElement?.querySelector(`[data-figure-id="${targetId}"]`);
+      const r=ring.getBoundingClientRect(),b=target?.getBoundingClientRect();
+      const otherText=allPrinted.filter(text=>text!==target&&!target?.contains(text)&&!text.contains(target??ring)).filter(text=>overlap(ring,text)).map(text=>text.textContent??"");
+      otherText.forEach(text=>collisions.push({text:`ring:${targetId}`,other:text}));
+      return {id:ring.getAttribute("data-figure-ring"),target:targetId,kind:ring.getAttribute("data-ring-kind"),start:Number(ring.getAttribute("data-ring-start")),progress:Number(ring.getAttribute("data-ring-progress")),bounds:r.toJSON(),targetBounds:b?.toJSON(),targetText:target?.textContent,
+        encloses:!!b&&r.left<b.left&&r.right>b.right&&r.top<b.top&&r.bottom>b.bottom,otherText};
+    });
     const bounds = root.getBoundingClientRect();
     const overflow = [
       ...regions,
+      ...figureRings,
       ...texts,
       ...cards,
       ...Array.from(root.querySelectorAll("[data-problem-line]")).filter(
@@ -2170,6 +2283,10 @@ function useStillAudit(
     setMeasurement(
       JSON.stringify({
         frame,
+        figureRings:ringChecks,
+        figureSchedule:frame===0?SCENES.flatMap(s=>[...spokenFigureCues(s),...substitutionFigureCues(s,30)].map(event=>({...event,scene:s.id,word:event.wordIndex===undefined?undefined:s.words[event.wordIndex].word}))):undefined,
+        underlines:Array.from(root.querySelectorAll("[data-problem-underline]")).filter(visible).map(el=>el.getAttribute("data-problem-underline")),
+        phraseSchedule:frame===0?PROBLEM_PHRASES.flatMap(line=>line.map(([,first,last])=>({id:`s07:phrase-${first}`,start:SCENES.find(s=>s.id==="s07")!.words[first].start,end:SCENES.find(s=>s.id==="s07")!.words[last].end}))):undefined,
         rootBounds: bounds.toJSON(),
         regions: regions.length,
         visualCount: visuals.length,
@@ -2248,7 +2365,11 @@ function useStillAudit(
         })),
       }),
     );
-  }, [frame, enabled]);
+    if(auditHandle!==null)continueRender(auditHandle);
+    };
+    request=requestAnimationFrame(()=>{request=requestAnimationFrame(measure);});
+    return ()=>cancelAnimationFrame(request);
+  }, [frame, enabled, auditHandle]);
   return enabled && measurement ? (
     <Artifact
       filename={`verify-collisions-${String(frame).padStart(5, "0")}.json`}
@@ -2294,7 +2415,7 @@ export const MechanicsMultipleCollisions: React.FC<
               >
                 <AbsoluteFill style={{ background: T.bg }}>
                   {i > 0 && <SceneHeading s={s} index={i} />}
-                  <Content s={s} />
+                  <FigureContext.Provider value={s}><Content s={s} /></FigureContext.Provider>
                   {audioEnabled && (
                     <Audio src={staticFile(`audio/mechanics/${s.audio}`)} />
                   )}
