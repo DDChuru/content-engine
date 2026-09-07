@@ -1,0 +1,5291 @@
+{
+  "project": "mechanics-using-calculus-in-1d",
+  "sceneCount": 8,
+  "scenes": [
+    {
+      "id": "s01",
+      "title": "Syllabus 4.2: calculus in motion",
+      "mode": "opening",
+      "source": "f045–f080; syllabus p.32",
+      "tempo": "brisk",
+      "voiceSpeed": 1.0,
+      "beats": [
+        {
+          "id": "quote1",
+          "text": "Syllabus four point two: use differentiation and integration with respect to time.",
+          "hold": 0,
+          "caption": "use differentiation and integration with respect to time",
+          "start": 0.4,
+          "speechEnd": 5.77,
+          "end": 5.97,
+          "cue": 0.4,
+          "penEnd": 5.89
+        },
+        {
+          "id": "quote2",
+          "text": "To solve simple problems concerning displacement, velocity and acceleration.",
+          "hold": 0,
+          "caption": "to solve simple problems concerning displacement, velocity and acceleration",
+          "start": 5.97,
+          "speechEnd": 12.2,
+          "end": 12.4,
+          "cue": 5.97,
+          "penEnd": 12.32
+        },
+        {
+          "id": "outcome1",
+          "text": "By the end you can differentiate motion functions.",
+          "hold": 0,
+          "caption": "Differentiate motion functions.",
+          "start": 12.4,
+          "speechEnd": 15.78,
+          "end": 15.98,
+          "cue": 12.4,
+          "penEnd": 15.9
+        },
+        {
+          "id": "outcome2",
+          "text": "Find integration constants.",
+          "hold": 0,
+          "caption": "Find integration constants.",
+          "start": 15.98,
+          "speechEnd": 17.57,
+          "end": 17.77,
+          "cue": 15.98,
+          "penEnd": 17.69
+        },
+        {
+          "id": "outcome3",
+          "text": "And read a signed journey.",
+          "hold": 0,
+          "caption": "Read a signed journey.",
+          "start": 17.77,
+          "speechEnd": 20.16,
+          "end": 20.36,
+          "cue": 17.77,
+          "penEnd": 20.28
+        }
+      ],
+      "holds": [],
+      "audio": "using-calculus-in-1d-s01.mp3",
+      "audioSha256": "5d030edaa00a48767c2b787b858b849c6cae49bb98dc9701852a0f1dbf8f66fb",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "provider": "elevenlabs",
+      "sampleDuration": 20.71,
+      "words": [
+        {
+          "word": "Syllabus",
+          "start": 0.4,
+          "end": 0.82
+        },
+        {
+          "word": "four",
+          "start": 0.82,
+          "end": 1.14
+        },
+        {
+          "word": "point",
+          "start": 1.14,
+          "end": 1.44
+        },
+        {
+          "word": "two",
+          "start": 1.44,
+          "end": 1.82
+        },
+        {
+          "word": "use",
+          "start": 1.82,
+          "end": 2.44
+        },
+        {
+          "word": "differentiation",
+          "start": 2.44,
+          "end": 3.04
+        },
+        {
+          "word": "and",
+          "start": 3.04,
+          "end": 3.72
+        },
+        {
+          "word": "integration",
+          "start": 3.72,
+          "end": 4.3
+        },
+        {
+          "word": "with",
+          "start": 4.3,
+          "end": 4.7
+        },
+        {
+          "word": "respect",
+          "start": 4.7,
+          "end": 5.04
+        },
+        {
+          "word": "to",
+          "start": 5.04,
+          "end": 5.3
+        },
+        {
+          "word": "time.",
+          "start": 5.3,
+          "end": 5.58
+        },
+        {
+          "word": "To",
+          "start": 5.97,
+          "end": 6.11
+        },
+        {
+          "word": "solve",
+          "start": 6.11,
+          "end": 6.43
+        },
+        {
+          "word": "simple",
+          "start": 6.43,
+          "end": 6.79
+        },
+        {
+          "word": "problems",
+          "start": 6.79,
+          "end": 7.35
+        },
+        {
+          "word": "concerning",
+          "start": 7.35,
+          "end": 8.49
+        },
+        {
+          "word": "displacement,",
+          "start": 8.49,
+          "end": 9.17
+        },
+        {
+          "word": "velocity",
+          "start": 9.87,
+          "end": 10.41
+        },
+        {
+          "word": "and",
+          "start": 10.41,
+          "end": 11.47
+        },
+        {
+          "word": "acceleration.",
+          "start": 11.47,
+          "end": 11.89
+        },
+        {
+          "word": "By",
+          "start": 12.4,
+          "end": 12.54
+        },
+        {
+          "word": "the",
+          "start": 12.54,
+          "end": 12.68
+        },
+        {
+          "word": "end",
+          "start": 12.68,
+          "end": 12.92
+        },
+        {
+          "word": "you",
+          "start": 12.92,
+          "end": 13.5
+        },
+        {
+          "word": "can",
+          "start": 13.5,
+          "end": 13.62
+        },
+        {
+          "word": "differentiate",
+          "start": 13.62,
+          "end": 14.28
+        },
+        {
+          "word": "motion",
+          "start": 14.28,
+          "end": 15.04
+        },
+        {
+          "word": "functions.",
+          "start": 15.04,
+          "end": 15.46
+        },
+        {
+          "word": "Find",
+          "start": 15.98,
+          "end": 16.22
+        },
+        {
+          "word": "integration",
+          "start": 16.22,
+          "end": 16.76
+        },
+        {
+          "word": "constants.",
+          "start": 16.76,
+          "end": 17.2
+        },
+        {
+          "word": "And",
+          "start": 17.77,
+          "end": 17.93
+        },
+        {
+          "word": "read",
+          "start": 17.93,
+          "end": 18.27
+        },
+        {
+          "word": "a",
+          "start": 18.27,
+          "end": 18.77
+        },
+        {
+          "word": "signed",
+          "start": 18.77,
+          "end": 19.37
+        },
+        {
+          "word": "journey.",
+          "start": 19.37,
+          "end": 19.89
+        }
+      ],
+      "cues": {
+        "quote1": 0.4,
+        "quote2": 5.97,
+        "outcome1": 12.4,
+        "outcome2": 15.98,
+        "outcome3": 17.77
+      },
+      "figureEvents": [],
+      "wordCount": 37,
+      "text": "Syllabus four point two use differentiation and integration with respect to time. To solve simple problems concerning displacement, velocity and acceleration. By the end you can differentiate motion functions. Find integration constants. And read a signed journey.",
+      "duration": 20.741224
+    },
+    {
+      "id": "s02",
+      "title": "How calculus connects motion",
+      "mode": "chain",
+      "source": "f006–f080",
+      "tempo": "brisk",
+      "voiceSpeed": 1.0,
+      "beats": [
+        {
+          "id": "velocity",
+          "text": "Velocity is displacement changing with time: d s by d t.",
+          "hold": 0,
+          "ink": "v = ds/dt",
+          "page": 0,
+          "target": "chain",
+          "start": 0.4,
+          "speechEnd": 4.91,
+          "end": 5.11,
+          "cue": 0.4,
+          "penEnd": 5.03
+        },
+        {
+          "id": "acceleration",
+          "text": "Acceleration is velocity changing with time: d v by d t.",
+          "hold": 0,
+          "ink": "a = dv/dt",
+          "page": 0,
+          "target": "chain",
+          "start": 5.11,
+          "speechEnd": 10.12,
+          "end": 10.32,
+          "cue": 5.11,
+          "penEnd": 10.24
+        },
+        {
+          "id": "integrate",
+          "text": "Reverse by integration: integrate acceleration for velocity, velocity for displacement.",
+          "hold": 0,
+          "ink": "v = ∫a dt    s = ∫v dt",
+          "page": 0,
+          "target": "chain",
+          "start": 10.32,
+          "speechEnd": 16.62,
+          "end": 16.82,
+          "cue": 10.32,
+          "penEnd": 16.740000000000002
+        },
+        {
+          "id": "contrast",
+          "text": "A curved velocity graph has changing acceleration. Constant acceleration formulae fail.",
+          "hold": 0,
+          "caption": "Changing gradient means changing acceleration.",
+          "start": 16.82,
+          "speechEnd": 23.54,
+          "end": 23.74,
+          "cue": 16.82,
+          "penEnd": 23.66
+        }
+      ],
+      "holds": [],
+      "audio": "using-calculus-in-1d-s02.mp3",
+      "audioSha256": "b304cb741cbbcf5c74275be06338f144924a67eac7382f128e780eaca1d7f6a7",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "provider": "elevenlabs",
+      "sampleDuration": 24.09,
+      "words": [
+        {
+          "word": "Velocity",
+          "start": 0.4,
+          "end": 0.96
+        },
+        {
+          "word": "is",
+          "start": 0.96,
+          "end": 1.04
+        },
+        {
+          "word": "displacement",
+          "start": 1.04,
+          "end": 1.56
+        },
+        {
+          "word": "changing",
+          "start": 1.56,
+          "end": 2.1
+        },
+        {
+          "word": "with",
+          "start": 2.1,
+          "end": 2.42
+        },
+        {
+          "word": "time,",
+          "start": 2.42,
+          "end": 2.9
+        },
+        {
+          "word": "d",
+          "start": 3.3,
+          "end": 3.52
+        },
+        {
+          "word": "s",
+          "start": 3.52,
+          "end": 4.02
+        },
+        {
+          "word": "by",
+          "start": 4.02,
+          "end": 4.28
+        },
+        {
+          "word": "d",
+          "start": 4.28,
+          "end": 4.52
+        },
+        {
+          "word": "t.",
+          "start": 4.52,
+          "end": 4.72
+        },
+        {
+          "word": "Acceleration",
+          "start": 5.11,
+          "end": 5.77
+        },
+        {
+          "word": "is",
+          "start": 5.77,
+          "end": 6.45
+        },
+        {
+          "word": "velocity",
+          "start": 6.45,
+          "end": 6.83
+        },
+        {
+          "word": "changing",
+          "start": 6.83,
+          "end": 7.29
+        },
+        {
+          "word": "with",
+          "start": 7.29,
+          "end": 7.75
+        },
+        {
+          "word": "time,",
+          "start": 7.75,
+          "end": 8.17
+        },
+        {
+          "word": "d",
+          "start": 8.53,
+          "end": 8.73
+        },
+        {
+          "word": "v",
+          "start": 8.73,
+          "end": 9.03
+        },
+        {
+          "word": "by",
+          "start": 9.03,
+          "end": 9.53
+        },
+        {
+          "word": "d",
+          "start": 9.53,
+          "end": 9.77
+        },
+        {
+          "word": "t.",
+          "start": 9.77,
+          "end": 9.95
+        },
+        {
+          "word": "Reverse",
+          "start": 10.32,
+          "end": 10.86
+        },
+        {
+          "word": "by",
+          "start": 10.86,
+          "end": 11.04
+        },
+        {
+          "word": "integration,",
+          "start": 11.04,
+          "end": 11.68
+        },
+        {
+          "word": "integrate",
+          "start": 12.24,
+          "end": 12.72
+        },
+        {
+          "word": "acceleration",
+          "start": 12.72,
+          "end": 13.46
+        },
+        {
+          "word": "for",
+          "start": 13.46,
+          "end": 13.88
+        },
+        {
+          "word": "velocity,",
+          "start": 13.88,
+          "end": 14.52
+        },
+        {
+          "word": "velocity",
+          "start": 15.0,
+          "end": 15.46
+        },
+        {
+          "word": "for",
+          "start": 15.46,
+          "end": 15.76
+        },
+        {
+          "word": "displacement.",
+          "start": 15.76,
+          "end": 16.22
+        },
+        {
+          "word": "A",
+          "start": 16.82,
+          "end": 16.94
+        },
+        {
+          "word": "curved",
+          "start": 16.94,
+          "end": 17.24
+        },
+        {
+          "word": "velocity",
+          "start": 17.24,
+          "end": 17.74
+        },
+        {
+          "word": "graph",
+          "start": 17.74,
+          "end": 18.22
+        },
+        {
+          "word": "has",
+          "start": 18.22,
+          "end": 18.8
+        },
+        {
+          "word": "changing",
+          "start": 18.8,
+          "end": 19.2
+        },
+        {
+          "word": "acceleration.",
+          "start": 19.2,
+          "end": 19.92
+        },
+        {
+          "word": "Constant",
+          "start": 20.62,
+          "end": 21.26
+        },
+        {
+          "word": "acceleration",
+          "start": 21.26,
+          "end": 22.04
+        },
+        {
+          "word": "formulae",
+          "start": 22.04,
+          "end": 22.92
+        },
+        {
+          "word": "fail.",
+          "start": 22.92,
+          "end": 23.26
+        }
+      ],
+      "cues": {
+        "velocity": 0.4,
+        "acceleration": 5.11,
+        "integrate": 10.32,
+        "contrast": 16.82
+      },
+      "figureEvents": [
+        {
+          "id": "word-6",
+          "wordIndex": 6,
+          "word": "d",
+          "start": 3.3,
+          "target": "chain",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-7",
+          "wordIndex": 7,
+          "word": "s",
+          "start": 3.52,
+          "target": "chain",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-9",
+          "wordIndex": 9,
+          "word": "d",
+          "start": 4.28,
+          "target": "chain",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-10",
+          "wordIndex": 10,
+          "word": "t.",
+          "start": 4.52,
+          "target": "chain",
+          "kind": "spoken"
+        },
+        {
+          "id": "velocity-substitution",
+          "start": 0.4,
+          "end": 5.03,
+          "target": "chain",
+          "kind": "substitution"
+        },
+        {
+          "id": "word-17",
+          "wordIndex": 17,
+          "word": "d",
+          "start": 8.53,
+          "target": "chain",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-18",
+          "wordIndex": 18,
+          "word": "v",
+          "start": 8.73,
+          "target": "chain",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-20",
+          "wordIndex": 20,
+          "word": "d",
+          "start": 9.53,
+          "target": "chain",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-21",
+          "wordIndex": 21,
+          "word": "t.",
+          "start": 9.77,
+          "target": "chain",
+          "kind": "spoken"
+        },
+        {
+          "id": "acceleration-substitution",
+          "start": 5.11,
+          "end": 10.24,
+          "target": "chain",
+          "kind": "substitution"
+        },
+        {
+          "id": "integrate-substitution",
+          "start": 10.32,
+          "end": 16.740000000000002,
+          "target": "chain",
+          "kind": "substitution"
+        }
+      ],
+      "wordCount": 43,
+      "text": "Velocity is displacement changing with time, d s by d t. Acceleration is velocity changing with time, d v by d t. Reverse by integration, integrate acceleration for velocity, velocity for displacement. A curved velocity graph has changing acceleration. Constant acceleration formulae fail.",
+      "duration": 24.137143
+    },
+    {
+      "id": "s03",
+      "title": "Find both integration constants",
+      "mode": "constants",
+      "source": "f057–f124",
+      "tempo": "slow",
+      "voiceSpeed": 0.9,
+      "beats": [
+        {
+          "id": "story",
+          "text": "Consider a trolley speeding up to the right. Find its velocity and position.",
+          "hold": 0,
+          "start": 0.4,
+          "speechEnd": 6.83,
+          "end": 7.03,
+          "cue": 0.4,
+          "penEnd": 6.95
+        },
+        {
+          "id": "given-a",
+          "text": "Right is positive. Acceleration is six t plus two metres per second squared.",
+          "hold": 0,
+          "target": "given-a",
+          "start": 7.03,
+          "speechEnd": 13.44,
+          "end": 13.64,
+          "cue": 7.03,
+          "penEnd": 13.56
+        },
+        {
+          "id": "given-v",
+          "text": "Initially its velocity is four metres per second.",
+          "hold": 0,
+          "target": "given-v",
+          "start": 13.64,
+          "speechEnd": 16.77,
+          "end": 16.97,
+          "cue": 13.64,
+          "penEnd": 16.89
+        },
+        {
+          "id": "given-s",
+          "text": "It starts one metre right of the origin: s at zero is positive one.",
+          "hold": 2,
+          "target": "given-s",
+          "start": 16.97,
+          "speechEnd": 23.17,
+          "end": 23.37,
+          "cue": 16.97,
+          "penEnd": 23.290000000000003
+        },
+        {
+          "id": "formula-v",
+          "text": "Velocity is the integral of acceleration.",
+          "hold": 0,
+          "ink": "v = ∫a dt",
+          "page": 0,
+          "target": "given-a",
+          "start": 25.37,
+          "speechEnd": 28.16,
+          "end": 28.36,
+          "cue": 25.37,
+          "penEnd": 28.28
+        },
+        {
+          "id": "integral-v",
+          "text": "Integrating six t plus two gives three t squared plus two t plus C.",
+          "hold": 0,
+          "ink": "v = 3t² + 2t + C",
+          "page": 0,
+          "target": "given-a",
+          "start": 28.36,
+          "speechEnd": 34.88,
+          "end": 35.08,
+          "cue": 28.36,
+          "penEnd": 35.0
+        },
+        {
+          "id": "constant-v",
+          "text": "Use the initial velocity: four equals C.",
+          "hold": 2,
+          "ink": "4 = C",
+          "page": 0,
+          "target": "given-v",
+          "start": 35.08,
+          "speechEnd": 38.78,
+          "end": 38.98,
+          "cue": 35.08,
+          "penEnd": 38.9
+        },
+        {
+          "id": "formula-s",
+          "text": "Displacement is the integral of velocity.",
+          "hold": 0,
+          "ink": "s = ∫v dt",
+          "page": 1,
+          "target": "result-v",
+          "start": 40.98,
+          "speechEnd": 43.38,
+          "end": 43.58,
+          "cue": 40.98,
+          "penEnd": 43.5
+        },
+        {
+          "id": "integral-s",
+          "text": "Integrating gives t cubed plus t squared plus four t plus D.",
+          "hold": 0,
+          "ink": "s = t³ + t² + 4t + D",
+          "page": 1,
+          "target": "result-v",
+          "start": 43.58,
+          "speechEnd": 49.87,
+          "end": 50.07,
+          "cue": 43.6,
+          "penEnd": 49.99
+        },
+        {
+          "id": "constant-s",
+          "text": "At zero, s is positive one, so D equals one.",
+          "hold": 2,
+          "ink": "D = 1",
+          "page": 1,
+          "target": "given-s",
+          "start": 50.07,
+          "speechEnd": 53.72,
+          "end": 53.92,
+          "cue": 50.07,
+          "penEnd": 53.84
+        },
+        {
+          "id": "what-if",
+          "text": "Start on the negative side instead? D becomes minus one; velocity stays unchanged.",
+          "hold": 0,
+          "target": "given-s",
+          "caption": "Position needs a stated sign.",
+          "start": 55.92,
+          "speechEnd": 64.48,
+          "end": 64.68,
+          "cue": 55.92,
+          "penEnd": 64.60000000000001
+        }
+      ],
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 23.37,
+          "end": 25.37,
+          "duration": 2
+        },
+        {
+          "kind": "hold",
+          "start": 38.98,
+          "end": 40.98,
+          "duration": 2
+        },
+        {
+          "kind": "hold",
+          "start": 53.92,
+          "end": 55.92,
+          "duration": 2
+        }
+      ],
+      "audio": "using-calculus-in-1d-s03.mp3",
+      "audioSha256": "1b966f2a8fd09b8861506836aa51b889813a7e135491b9b1a86449d80f6c73e1",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "provider": "elevenlabs",
+      "sampleDuration": 65.03,
+      "words": [
+        {
+          "word": "Consider",
+          "start": 0.4,
+          "end": 0.9
+        },
+        {
+          "word": "a",
+          "start": 0.9,
+          "end": 1.14
+        },
+        {
+          "word": "trolley",
+          "start": 1.14,
+          "end": 1.66
+        },
+        {
+          "word": "speeding",
+          "start": 1.66,
+          "end": 2.38
+        },
+        {
+          "word": "up",
+          "start": 2.38,
+          "end": 2.72
+        },
+        {
+          "word": "to",
+          "start": 2.72,
+          "end": 2.9
+        },
+        {
+          "word": "the",
+          "start": 2.9,
+          "end": 3.02
+        },
+        {
+          "word": "right.",
+          "start": 3.02,
+          "end": 3.38
+        },
+        {
+          "word": "Find",
+          "start": 3.94,
+          "end": 4.44
+        },
+        {
+          "word": "its",
+          "start": 4.44,
+          "end": 4.72
+        },
+        {
+          "word": "velocity",
+          "start": 4.72,
+          "end": 5.36
+        },
+        {
+          "word": "and",
+          "start": 5.36,
+          "end": 6.06
+        },
+        {
+          "word": "position.",
+          "start": 6.06,
+          "end": 6.54
+        },
+        {
+          "word": "Right",
+          "start": 7.03,
+          "end": 7.29
+        },
+        {
+          "word": "is",
+          "start": 7.29,
+          "end": 7.53
+        },
+        {
+          "word": "positive.",
+          "start": 7.53,
+          "end": 8.01
+        },
+        {
+          "word": "Acceleration",
+          "start": 8.99,
+          "end": 9.67
+        },
+        {
+          "word": "is",
+          "start": 9.67,
+          "end": 10.43
+        },
+        {
+          "word": "six",
+          "start": 10.43,
+          "end": 10.77
+        },
+        {
+          "word": "t",
+          "start": 10.77,
+          "end": 11.17
+        },
+        {
+          "word": "plus",
+          "start": 11.17,
+          "end": 11.55
+        },
+        {
+          "word": "two",
+          "start": 11.55,
+          "end": 11.95
+        },
+        {
+          "word": "metres",
+          "start": 11.95,
+          "end": 12.21
+        },
+        {
+          "word": "per",
+          "start": 12.21,
+          "end": 12.51
+        },
+        {
+          "word": "second",
+          "start": 12.51,
+          "end": 12.83
+        },
+        {
+          "word": "squared.",
+          "start": 12.83,
+          "end": 13.17
+        },
+        {
+          "word": "Initially",
+          "start": 13.64,
+          "end": 14.1
+        },
+        {
+          "word": "its",
+          "start": 14.1,
+          "end": 14.36
+        },
+        {
+          "word": "velocity",
+          "start": 14.36,
+          "end": 14.86
+        },
+        {
+          "word": "is",
+          "start": 14.86,
+          "end": 15.26
+        },
+        {
+          "word": "four",
+          "start": 15.26,
+          "end": 15.58
+        },
+        {
+          "word": "metres",
+          "start": 15.58,
+          "end": 15.82
+        },
+        {
+          "word": "per",
+          "start": 15.82,
+          "end": 16.1
+        },
+        {
+          "word": "second.",
+          "start": 16.1,
+          "end": 16.42
+        },
+        {
+          "word": "It",
+          "start": 16.97,
+          "end": 17.13
+        },
+        {
+          "word": "starts",
+          "start": 17.13,
+          "end": 17.37
+        },
+        {
+          "word": "one",
+          "start": 17.37,
+          "end": 17.75
+        },
+        {
+          "word": "metre",
+          "start": 17.75,
+          "end": 18.13
+        },
+        {
+          "word": "right",
+          "start": 18.13,
+          "end": 18.61
+        },
+        {
+          "word": "of",
+          "start": 18.61,
+          "end": 19.21
+        },
+        {
+          "word": "the",
+          "start": 19.21,
+          "end": 19.35
+        },
+        {
+          "word": "origin.",
+          "start": 19.35,
+          "end": 19.87
+        },
+        {
+          "word": "s",
+          "start": 20.31,
+          "end": 20.79
+        },
+        {
+          "word": "at",
+          "start": 20.79,
+          "end": 21.03
+        },
+        {
+          "word": "zero",
+          "start": 21.03,
+          "end": 21.49
+        },
+        {
+          "word": "is",
+          "start": 21.49,
+          "end": 22.07
+        },
+        {
+          "word": "positive",
+          "start": 22.07,
+          "end": 22.59
+        },
+        {
+          "word": "one.",
+          "start": 22.59,
+          "end": 23.07
+        },
+        {
+          "word": "Velocity",
+          "start": 25.37,
+          "end": 26.07
+        },
+        {
+          "word": "is",
+          "start": 26.07,
+          "end": 26.23
+        },
+        {
+          "word": "the",
+          "start": 26.23,
+          "end": 26.37
+        },
+        {
+          "word": "integral",
+          "start": 26.37,
+          "end": 26.79
+        },
+        {
+          "word": "of",
+          "start": 26.79,
+          "end": 27.25
+        },
+        {
+          "word": "acceleration.",
+          "start": 27.25,
+          "end": 27.61
+        },
+        {
+          "word": "Integrating",
+          "start": 28.36,
+          "end": 29.16
+        },
+        {
+          "word": "six",
+          "start": 29.16,
+          "end": 29.6
+        },
+        {
+          "word": "t",
+          "start": 29.6,
+          "end": 29.84
+        },
+        {
+          "word": "plus",
+          "start": 29.84,
+          "end": 30.04
+        },
+        {
+          "word": "two",
+          "start": 30.04,
+          "end": 30.58
+        },
+        {
+          "word": "gives",
+          "start": 30.58,
+          "end": 31.58
+        },
+        {
+          "word": "three",
+          "start": 31.58,
+          "end": 32.08
+        },
+        {
+          "word": "t",
+          "start": 32.08,
+          "end": 32.28
+        },
+        {
+          "word": "squared",
+          "start": 32.28,
+          "end": 32.7
+        },
+        {
+          "word": "plus",
+          "start": 32.7,
+          "end": 33.5
+        },
+        {
+          "word": "two",
+          "start": 33.5,
+          "end": 33.84
+        },
+        {
+          "word": "t",
+          "start": 33.84,
+          "end": 34.0
+        },
+        {
+          "word": "plus",
+          "start": 34.0,
+          "end": 34.26
+        },
+        {
+          "word": "C.",
+          "start": 34.26,
+          "end": 34.74
+        },
+        {
+          "word": "Use",
+          "start": 35.08,
+          "end": 35.28
+        },
+        {
+          "word": "the",
+          "start": 35.28,
+          "end": 35.46
+        },
+        {
+          "word": "initial",
+          "start": 35.46,
+          "end": 35.82
+        },
+        {
+          "word": "velocity",
+          "start": 35.82,
+          "end": 36.46
+        },
+        {
+          "word": "four",
+          "start": 36.46,
+          "end": 37.7
+        },
+        {
+          "word": "equals",
+          "start": 37.7,
+          "end": 38.14
+        },
+        {
+          "word": "C.",
+          "start": 38.14,
+          "end": 38.62
+        },
+        {
+          "word": "Displacement",
+          "start": 40.98,
+          "end": 41.6
+        },
+        {
+          "word": "is",
+          "start": 41.6,
+          "end": 41.78
+        },
+        {
+          "word": "the",
+          "start": 41.78,
+          "end": 41.92
+        },
+        {
+          "word": "integral",
+          "start": 41.92,
+          "end": 42.34
+        },
+        {
+          "word": "of",
+          "start": 42.34,
+          "end": 42.7
+        },
+        {
+          "word": "velocity.",
+          "start": 42.7,
+          "end": 43.04
+        },
+        {
+          "word": "Integrating",
+          "start": 43.6,
+          "end": 44.42
+        },
+        {
+          "word": "gives",
+          "start": 44.42,
+          "end": 45.0
+        },
+        {
+          "word": "t",
+          "start": 45.0,
+          "end": 45.44
+        },
+        {
+          "word": "cubed",
+          "start": 45.44,
+          "end": 45.92
+        },
+        {
+          "word": "plus",
+          "start": 45.92,
+          "end": 46.6
+        },
+        {
+          "word": "t",
+          "start": 46.6,
+          "end": 47.02
+        },
+        {
+          "word": "squared",
+          "start": 47.02,
+          "end": 47.48
+        },
+        {
+          "word": "plus",
+          "start": 47.48,
+          "end": 48.18
+        },
+        {
+          "word": "4t",
+          "start": 48.18,
+          "end": 48.86
+        },
+        {
+          "word": "plus",
+          "start": 48.86,
+          "end": 49.46
+        },
+        {
+          "word": "d.",
+          "start": 49.46,
+          "end": 49.8
+        },
+        {
+          "word": "At",
+          "start": 50.07,
+          "end": 50.28
+        },
+        {
+          "word": "0,",
+          "start": 50.28,
+          "end": 50.58
+        },
+        {
+          "word": "s",
+          "start": 51.24,
+          "end": 51.44
+        },
+        {
+          "word": "is",
+          "start": 51.44,
+          "end": 51.64
+        },
+        {
+          "word": "positive",
+          "start": 51.64,
+          "end": 51.84
+        },
+        {
+          "word": "1",
+          "start": 51.84,
+          "end": 52.34
+        },
+        {
+          "word": "so",
+          "start": 52.34,
+          "end": 52.78
+        },
+        {
+          "word": "d",
+          "start": 52.78,
+          "end": 53.04
+        },
+        {
+          "word": "equals",
+          "start": 53.04,
+          "end": 53.28
+        },
+        {
+          "word": "1.",
+          "start": 53.28,
+          "end": 53.72
+        },
+        {
+          "word": "Start",
+          "start": 55.92,
+          "end": 56.33
+        },
+        {
+          "word": "on",
+          "start": 56.33,
+          "end": 56.59
+        },
+        {
+          "word": "the",
+          "start": 56.59,
+          "end": 56.69
+        },
+        {
+          "word": "negative",
+          "start": 56.69,
+          "end": 57.03
+        },
+        {
+          "word": "side",
+          "start": 57.03,
+          "end": 57.57
+        },
+        {
+          "word": "instead.",
+          "start": 57.57,
+          "end": 58.05
+        },
+        {
+          "word": "d",
+          "start": 58.05,
+          "end": 59.71
+        },
+        {
+          "word": "becomes",
+          "start": 59.71,
+          "end": 60.11
+        },
+        {
+          "word": "minus",
+          "start": 60.11,
+          "end": 60.49
+        },
+        {
+          "word": "1,",
+          "start": 60.49,
+          "end": 60.97
+        },
+        {
+          "word": "velocity",
+          "start": 62.05,
+          "end": 62.81
+        },
+        {
+          "word": "stays",
+          "start": 62.81,
+          "end": 63.35
+        },
+        {
+          "word": "unchanged.",
+          "start": 63.35,
+          "end": 63.93
+        }
+      ],
+      "cues": {
+        "story": 0.4,
+        "given-a": 7.03,
+        "given-v": 13.64,
+        "given-s": 16.97,
+        "formula-v": 25.37,
+        "integral-v": 28.36,
+        "constant-v": 35.08,
+        "formula-s": 40.98,
+        "integral-s": 43.6,
+        "constant-s": 50.07,
+        "what-if": 55.92
+      },
+      "figureEvents": [
+        {
+          "id": "word-15",
+          "wordIndex": 15,
+          "word": "positive.",
+          "start": 7.53,
+          "target": "given-a",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-18",
+          "wordIndex": 18,
+          "word": "six",
+          "start": 10.43,
+          "target": "given-a",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-19",
+          "wordIndex": 19,
+          "word": "t",
+          "start": 10.77,
+          "target": "given-a",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-21",
+          "wordIndex": 21,
+          "word": "two",
+          "start": 11.55,
+          "target": "given-a",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-30",
+          "wordIndex": 30,
+          "word": "four",
+          "start": 15.26,
+          "target": "given-v",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-36",
+          "wordIndex": 36,
+          "word": "one",
+          "start": 17.37,
+          "target": "given-s",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-42",
+          "wordIndex": 42,
+          "word": "s",
+          "start": 20.31,
+          "target": "given-s",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-44",
+          "wordIndex": 44,
+          "word": "zero",
+          "start": 21.03,
+          "target": "given-s",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-46",
+          "wordIndex": 46,
+          "word": "positive",
+          "start": 22.07,
+          "target": "given-s",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-47",
+          "wordIndex": 47,
+          "word": "one.",
+          "start": 22.59,
+          "target": "given-s",
+          "kind": "spoken"
+        },
+        {
+          "id": "formula-v-substitution",
+          "start": 25.37,
+          "end": 28.28,
+          "target": "given-a",
+          "kind": "substitution"
+        },
+        {
+          "id": "word-55",
+          "wordIndex": 55,
+          "word": "six",
+          "start": 29.16,
+          "target": "given-a",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-56",
+          "wordIndex": 56,
+          "word": "t",
+          "start": 29.6,
+          "target": "given-a",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-58",
+          "wordIndex": 58,
+          "word": "two",
+          "start": 30.04,
+          "target": "given-a",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-60",
+          "wordIndex": 60,
+          "word": "three",
+          "start": 31.58,
+          "target": "given-a",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-61",
+          "wordIndex": 61,
+          "word": "t",
+          "start": 32.08,
+          "target": "given-a",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-64",
+          "wordIndex": 64,
+          "word": "two",
+          "start": 33.5,
+          "target": "given-a",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-65",
+          "wordIndex": 65,
+          "word": "t",
+          "start": 33.84,
+          "target": "given-a",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-67",
+          "wordIndex": 67,
+          "word": "C.",
+          "start": 34.26,
+          "target": "given-a",
+          "kind": "spoken"
+        },
+        {
+          "id": "integral-v-substitution",
+          "start": 28.36,
+          "end": 35.0,
+          "target": "given-a",
+          "kind": "substitution"
+        },
+        {
+          "id": "word-72",
+          "wordIndex": 72,
+          "word": "four",
+          "start": 36.46,
+          "target": "given-v",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-74",
+          "wordIndex": 74,
+          "word": "C.",
+          "start": 38.14,
+          "target": "given-v",
+          "kind": "spoken"
+        },
+        {
+          "id": "constant-v-substitution",
+          "start": 35.08,
+          "end": 38.9,
+          "target": "given-v",
+          "kind": "substitution"
+        },
+        {
+          "id": "formula-s-substitution",
+          "start": 40.98,
+          "end": 43.5,
+          "target": "result-v",
+          "kind": "substitution"
+        },
+        {
+          "id": "word-83",
+          "wordIndex": 83,
+          "word": "t",
+          "start": 45.0,
+          "target": "result-v",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-86",
+          "wordIndex": 86,
+          "word": "t",
+          "start": 46.6,
+          "target": "result-v",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-89",
+          "wordIndex": 89,
+          "word": "4t",
+          "start": 48.18,
+          "target": "result-v",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-91",
+          "wordIndex": 91,
+          "word": "d.",
+          "start": 49.46,
+          "target": "result-v",
+          "kind": "spoken"
+        },
+        {
+          "id": "integral-s-substitution",
+          "start": 43.6,
+          "end": 49.99,
+          "target": "result-v",
+          "kind": "substitution"
+        },
+        {
+          "id": "word-93",
+          "wordIndex": 93,
+          "word": "0,",
+          "start": 50.28,
+          "target": "given-s",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-94",
+          "wordIndex": 94,
+          "word": "s",
+          "start": 51.24,
+          "target": "given-s",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-96",
+          "wordIndex": 96,
+          "word": "positive",
+          "start": 51.64,
+          "target": "given-s",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-97",
+          "wordIndex": 97,
+          "word": "1",
+          "start": 51.84,
+          "target": "given-s",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-99",
+          "wordIndex": 99,
+          "word": "d",
+          "start": 52.78,
+          "target": "given-s",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-101",
+          "wordIndex": 101,
+          "word": "1.",
+          "start": 53.28,
+          "target": "given-s",
+          "kind": "spoken"
+        },
+        {
+          "id": "constant-s-substitution",
+          "start": 50.07,
+          "end": 53.84,
+          "target": "given-s",
+          "kind": "substitution"
+        },
+        {
+          "id": "word-108",
+          "wordIndex": 108,
+          "word": "d",
+          "start": 58.05,
+          "target": "hypothetical",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-110",
+          "wordIndex": 110,
+          "word": "minus",
+          "start": 60.11,
+          "target": "hypothetical",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-111",
+          "wordIndex": 111,
+          "word": "1,",
+          "start": 60.49,
+          "target": "hypothetical",
+          "kind": "spoken"
+        }
+      ],
+      "wordCount": 115,
+      "text": "Consider a trolley speeding up to the right. Find its velocity and position. Right is positive. Acceleration is six t plus two metres per second squared. Initially its velocity is four metres per second. It starts one metre right of the origin. s at zero is positive one. Velocity is the integral of acceleration. Integrating six t plus two gives three t squared plus two t plus C. Use the initial velocity four equals C. Displacement is the integral of velocity. Integrating gives t cubed plus t squared plus 4t plus d. At 0, s is positive 1 so d equals 1. Start on the negative side instead. d becomes minus 1, velocity stays unchanged.",
+      "duration": 65.07102
+    },
+    {
+      "id": "s04",
+      "title": "Follow the particle first",
+      "mode": "story",
+      "source": "f236–f320",
+      "tempo": "brisk",
+      "voiceSpeed": 1.0,
+      "beats": [
+        {
+          "id": "outward",
+          "text": "Consider a particle leaving the origin, moving right. It slows down as it travels.",
+          "hold": 0,
+          "start": 0.4,
+          "speechEnd": 6.71,
+          "end": 6.91,
+          "cue": 0.4,
+          "penEnd": 6.83
+        },
+        {
+          "id": "turn",
+          "text": "It stops for an instant, then turns back. Its velocity becomes negative.",
+          "hold": 0,
+          "start": 6.91,
+          "speechEnd": 12.22,
+          "end": 12.42,
+          "cue": 6.97,
+          "penEnd": 12.34
+        },
+        {
+          "id": "return",
+          "text": "It returns to the origin and stops again. We will find when it turns, and how far it travels.",
+          "hold": 0,
+          "start": 12.42,
+          "speechEnd": 18.09,
+          "end": 18.29,
+          "cue": 12.47,
+          "penEnd": 18.21
+        }
+      ],
+      "holds": [],
+      "audio": "using-calculus-in-1d-s04.mp3",
+      "audioSha256": "00b2c9545c69e9158d73e15903440eff20d795bb486fa18f8b768f8790864965",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "provider": "elevenlabs",
+      "sampleDuration": 18.64,
+      "words": [
+        {
+          "word": "Consider",
+          "start": 0.4,
+          "end": 0.83
+        },
+        {
+          "word": "a",
+          "start": 0.83,
+          "end": 1.03
+        },
+        {
+          "word": "particle",
+          "start": 1.03,
+          "end": 1.37
+        },
+        {
+          "word": "leaving",
+          "start": 1.37,
+          "end": 2.13
+        },
+        {
+          "word": "the",
+          "start": 2.13,
+          "end": 2.39
+        },
+        {
+          "word": "origin,",
+          "start": 2.39,
+          "end": 2.83
+        },
+        {
+          "word": "moving",
+          "start": 3.51,
+          "end": 3.81
+        },
+        {
+          "word": "right.",
+          "start": 3.81,
+          "end": 4.17
+        },
+        {
+          "word": "It",
+          "start": 4.99,
+          "end": 5.11
+        },
+        {
+          "word": "slows",
+          "start": 5.11,
+          "end": 5.41
+        },
+        {
+          "word": "down",
+          "start": 5.41,
+          "end": 5.89
+        },
+        {
+          "word": "as",
+          "start": 5.89,
+          "end": 6.11
+        },
+        {
+          "word": "it",
+          "start": 6.11,
+          "end": 6.23
+        },
+        {
+          "word": "travels.",
+          "start": 6.23,
+          "end": 6.71
+        },
+        {
+          "word": "It",
+          "start": 6.97,
+          "end": 7.07
+        },
+        {
+          "word": "stops",
+          "start": 7.07,
+          "end": 7.31
+        },
+        {
+          "word": "for",
+          "start": 7.31,
+          "end": 7.61
+        },
+        {
+          "word": "an",
+          "start": 7.61,
+          "end": 7.71
+        },
+        {
+          "word": "instant,",
+          "start": 7.71,
+          "end": 8.13
+        },
+        {
+          "word": "then",
+          "start": 8.79,
+          "end": 8.99
+        },
+        {
+          "word": "turns",
+          "start": 8.99,
+          "end": 9.31
+        },
+        {
+          "word": "back.",
+          "start": 9.31,
+          "end": 9.55
+        },
+        {
+          "word": "Its",
+          "start": 10.55,
+          "end": 10.63
+        },
+        {
+          "word": "velocity",
+          "start": 10.63,
+          "end": 11.07
+        },
+        {
+          "word": "becomes",
+          "start": 11.07,
+          "end": 11.53
+        },
+        {
+          "word": "negative.",
+          "start": 11.53,
+          "end": 11.89
+        },
+        {
+          "word": "It",
+          "start": 12.47,
+          "end": 12.59
+        },
+        {
+          "word": "returns",
+          "start": 12.59,
+          "end": 12.93
+        },
+        {
+          "word": "to",
+          "start": 12.93,
+          "end": 13.15
+        },
+        {
+          "word": "the",
+          "start": 13.15,
+          "end": 13.27
+        },
+        {
+          "word": "origin",
+          "start": 13.27,
+          "end": 13.67
+        },
+        {
+          "word": "and",
+          "start": 13.67,
+          "end": 13.89
+        },
+        {
+          "word": "stops",
+          "start": 13.89,
+          "end": 14.13
+        },
+        {
+          "word": "again.",
+          "start": 14.13,
+          "end": 14.47
+        },
+        {
+          "word": "We",
+          "start": 15.07,
+          "end": 15.17
+        },
+        {
+          "word": "will",
+          "start": 15.17,
+          "end": 15.29
+        },
+        {
+          "word": "find",
+          "start": 15.29,
+          "end": 15.53
+        },
+        {
+          "word": "when",
+          "start": 15.53,
+          "end": 15.75
+        },
+        {
+          "word": "it",
+          "start": 15.75,
+          "end": 15.91
+        },
+        {
+          "word": "turns,",
+          "start": 15.91,
+          "end": 16.51
+        },
+        {
+          "word": "and",
+          "start": 16.67,
+          "end": 16.77
+        },
+        {
+          "word": "how",
+          "start": 16.77,
+          "end": 16.97
+        },
+        {
+          "word": "far",
+          "start": 16.97,
+          "end": 17.21
+        },
+        {
+          "word": "it",
+          "start": 17.21,
+          "end": 17.45
+        },
+        {
+          "word": "travels.",
+          "start": 17.45,
+          "end": 18.09
+        }
+      ],
+      "cues": {
+        "outward": 0.4,
+        "turn": 6.97,
+        "return": 12.47
+      },
+      "figureEvents": [],
+      "wordCount": 45,
+      "text": "Consider a particle leaving the origin, moving right. It slows down as it travels. It stops for an instant, then turns back. Its velocity becomes negative. It returns to the origin and stops again. We will find when it turns, and how far it travels.",
+      "duration": 18.677551
+    },
+    {
+      "id": "s05",
+      "title": "Rest and acceleration",
+      "mode": "rest",
+      "source": "f236–f262",
+      "tempo": "slow",
+      "voiceSpeed": 0.9,
+      "beats": [
+        {
+          "id": "given-poly",
+          "text": "Velocity is three t squared minus twelve t plus nine metres per second.",
+          "hold": 0,
+          "target": "given-poly",
+          "start": 0.4,
+          "speechEnd": 6.29,
+          "end": 6.49,
+          "cue": 0.4,
+          "penEnd": 6.41
+        },
+        {
+          "id": "given-range",
+          "text": "Use zero to three seconds.",
+          "hold": 0,
+          "target": "given-range",
+          "start": 6.49,
+          "speechEnd": 8.67,
+          "end": 8.87,
+          "cue": 6.49,
+          "penEnd": 8.79
+        },
+        {
+          "id": "given-origin",
+          "text": "Initially s is zero. Find the first rest time and acceleration.",
+          "hold": 2,
+          "target": "given-origin",
+          "start": 8.87,
+          "speechEnd": 14.41,
+          "end": 14.61,
+          "cue": 8.89,
+          "penEnd": 14.53
+        },
+        {
+          "id": "rest-formula",
+          "text": "Instantaneous rest means velocity equals zero.",
+          "hold": 0,
+          "ink": "v = 0",
+          "page": 0,
+          "target": "given-poly",
+          "start": 16.61,
+          "speechEnd": 20.42,
+          "end": 20.62,
+          "cue": 16.61,
+          "penEnd": 20.540000000000003
+        },
+        {
+          "id": "rest-sub",
+          "text": "Substitute the given velocity: three t squared minus twelve t plus nine equals zero.",
+          "hold": 0,
+          "ink": "3t² - 12t + 9 = 0",
+          "page": 0,
+          "target": "given-poly",
+          "start": 20.62,
+          "speechEnd": 27.52,
+          "end": 27.72,
+          "cue": 20.67,
+          "penEnd": 27.64
+        },
+        {
+          "id": "factor",
+          "text": "Factorise: three times t minus one times t minus three equals zero.",
+          "hold": 0,
+          "ink": "3(t - 1)(t - 3) = 0",
+          "page": 0,
+          "target": "given-poly",
+          "start": 27.72,
+          "speechEnd": 33.64,
+          "end": 33.84,
+          "cue": 27.79,
+          "penEnd": 33.760000000000005
+        },
+        {
+          "id": "roots",
+          "text": "Rest at one and three seconds; first at one.",
+          "hold": 2,
+          "ink": "t = 1 s  or  3 s",
+          "page": 0,
+          "target": "given-range",
+          "start": 33.84,
+          "speechEnd": 37.23,
+          "end": 37.43,
+          "cue": 33.84,
+          "penEnd": 37.35
+        },
+        {
+          "id": "accel-formula",
+          "text": "For acceleration, differentiate velocity. A equals d v by d t.",
+          "hold": 0,
+          "ink": "a = dv/dt",
+          "page": 1,
+          "target": "given-poly",
+          "start": 39.43,
+          "speechEnd": 47.67,
+          "end": 47.87,
+          "cue": 39.43,
+          "penEnd": 47.79
+        },
+        {
+          "id": "accel-result",
+          "text": "This gives six t minus twelve metres per second squared. Acceleration changes with time.",
+          "hold": 2,
+          "ink": "a = 6t - 12 m s⁻²",
+          "page": 1,
+          "target": "given-poly",
+          "start": 47.87,
+          "speechEnd": 54.52,
+          "end": 54.72,
+          "cue": 47.95,
+          "penEnd": 54.64
+        }
+      ],
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 14.61,
+          "end": 16.61,
+          "duration": 2
+        },
+        {
+          "kind": "hold",
+          "start": 37.43,
+          "end": 39.43,
+          "duration": 2
+        },
+        {
+          "kind": "hold",
+          "start": 54.72,
+          "end": 56.72,
+          "duration": 2
+        }
+      ],
+      "audio": "using-calculus-in-1d-s05.mp3",
+      "audioSha256": "45018b16a53835177ddc7aabb6826d8cac6ae48e0908a9eaaa03bdd7e049d240",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "provider": "elevenlabs",
+      "sampleDuration": 57.07,
+      "words": [
+        {
+          "word": "Velocity",
+          "start": 0.4,
+          "end": 1.05
+        },
+        {
+          "word": "is",
+          "start": 1.05,
+          "end": 1.21
+        },
+        {
+          "word": "three",
+          "start": 1.21,
+          "end": 1.51
+        },
+        {
+          "word": "t",
+          "start": 1.51,
+          "end": 1.75
+        },
+        {
+          "word": "squared",
+          "start": 1.75,
+          "end": 2.25
+        },
+        {
+          "word": "minus",
+          "start": 2.25,
+          "end": 3.05
+        },
+        {
+          "word": "twelve",
+          "start": 3.05,
+          "end": 3.79
+        },
+        {
+          "word": "t",
+          "start": 3.79,
+          "end": 4.17
+        },
+        {
+          "word": "plus",
+          "start": 4.17,
+          "end": 4.89
+        },
+        {
+          "word": "nine",
+          "start": 4.89,
+          "end": 5.25
+        },
+        {
+          "word": "metres",
+          "start": 5.25,
+          "end": 5.59
+        },
+        {
+          "word": "per",
+          "start": 5.59,
+          "end": 5.87
+        },
+        {
+          "word": "second.",
+          "start": 5.87,
+          "end": 6.23
+        },
+        {
+          "word": "Use",
+          "start": 6.49,
+          "end": 6.75
+        },
+        {
+          "word": "zero",
+          "start": 6.75,
+          "end": 7.35
+        },
+        {
+          "word": "to",
+          "start": 7.35,
+          "end": 7.73
+        },
+        {
+          "word": "three",
+          "start": 7.73,
+          "end": 8.03
+        },
+        {
+          "word": "seconds.",
+          "start": 8.03,
+          "end": 8.45
+        },
+        {
+          "word": "Initially",
+          "start": 8.89,
+          "end": 9.31
+        },
+        {
+          "word": "s",
+          "start": 9.31,
+          "end": 9.93
+        },
+        {
+          "word": "is",
+          "start": 9.93,
+          "end": 10.17
+        },
+        {
+          "word": "zero.",
+          "start": 10.17,
+          "end": 10.63
+        },
+        {
+          "word": "Find",
+          "start": 11.49,
+          "end": 11.85
+        },
+        {
+          "word": "the",
+          "start": 11.85,
+          "end": 12.07
+        },
+        {
+          "word": "first",
+          "start": 12.07,
+          "end": 12.33
+        },
+        {
+          "word": "rest",
+          "start": 12.33,
+          "end": 12.73
+        },
+        {
+          "word": "time",
+          "start": 12.73,
+          "end": 13.07
+        },
+        {
+          "word": "and",
+          "start": 13.07,
+          "end": 13.39
+        },
+        {
+          "word": "acceleration.",
+          "start": 13.39,
+          "end": 14.09
+        },
+        {
+          "word": "Instantaneous",
+          "start": 16.61,
+          "end": 17.25
+        },
+        {
+          "word": "rest",
+          "start": 17.25,
+          "end": 17.71
+        },
+        {
+          "word": "means",
+          "start": 17.71,
+          "end": 18.51
+        },
+        {
+          "word": "velocity",
+          "start": 18.51,
+          "end": 19.11
+        },
+        {
+          "word": "equals",
+          "start": 19.11,
+          "end": 19.61
+        },
+        {
+          "word": "zero.",
+          "start": 19.61,
+          "end": 20.25
+        },
+        {
+          "word": "Substitute",
+          "start": 20.67,
+          "end": 21.35
+        },
+        {
+          "word": "the",
+          "start": 21.35,
+          "end": 21.59
+        },
+        {
+          "word": "given",
+          "start": 21.59,
+          "end": 21.99
+        },
+        {
+          "word": "velocity",
+          "start": 21.99,
+          "end": 22.55
+        },
+        {
+          "word": "three",
+          "start": 22.55,
+          "end": 23.57
+        },
+        {
+          "word": "t",
+          "start": 23.57,
+          "end": 23.89
+        },
+        {
+          "word": "squared",
+          "start": 23.89,
+          "end": 24.43
+        },
+        {
+          "word": "minus",
+          "start": 24.43,
+          "end": 24.93
+        },
+        {
+          "word": "twelve",
+          "start": 24.93,
+          "end": 25.49
+        },
+        {
+          "word": "t",
+          "start": 25.49,
+          "end": 25.79
+        },
+        {
+          "word": "plus",
+          "start": 25.79,
+          "end": 26.17
+        },
+        {
+          "word": "nine",
+          "start": 26.17,
+          "end": 26.55
+        },
+        {
+          "word": "equals",
+          "start": 26.55,
+          "end": 26.95
+        },
+        {
+          "word": "zero.",
+          "start": 26.95,
+          "end": 27.41
+        },
+        {
+          "word": "Factorise.",
+          "start": 27.79,
+          "end": 28.63
+        },
+        {
+          "word": "3",
+          "start": 28.63,
+          "end": 29.49
+        },
+        {
+          "word": "times",
+          "start": 29.49,
+          "end": 29.89
+        },
+        {
+          "word": "t",
+          "start": 29.89,
+          "end": 30.23
+        },
+        {
+          "word": "minus",
+          "start": 30.23,
+          "end": 30.61
+        },
+        {
+          "word": "1",
+          "start": 30.61,
+          "end": 30.95
+        },
+        {
+          "word": "times",
+          "start": 30.95,
+          "end": 31.29
+        },
+        {
+          "word": "t",
+          "start": 31.29,
+          "end": 31.63
+        },
+        {
+          "word": "minus",
+          "start": 31.63,
+          "end": 31.91
+        },
+        {
+          "word": "3",
+          "start": 31.91,
+          "end": 32.41
+        },
+        {
+          "word": "equals",
+          "start": 32.41,
+          "end": 32.99
+        },
+        {
+          "word": "0.",
+          "start": 32.99,
+          "end": 33.49
+        },
+        {
+          "word": "Rest",
+          "start": 33.84,
+          "end": 34.27
+        },
+        {
+          "word": "at",
+          "start": 34.27,
+          "end": 34.51
+        },
+        {
+          "word": "1",
+          "start": 34.51,
+          "end": 34.75
+        },
+        {
+          "word": "in",
+          "start": 34.75,
+          "end": 34.97
+        },
+        {
+          "word": "3",
+          "start": 34.97,
+          "end": 35.27
+        },
+        {
+          "word": "seconds.",
+          "start": 35.27,
+          "end": 35.71
+        },
+        {
+          "word": "First",
+          "start": 36.19,
+          "end": 36.57
+        },
+        {
+          "word": "at",
+          "start": 36.57,
+          "end": 36.81
+        },
+        {
+          "word": "1.",
+          "start": 36.81,
+          "end": 37.15
+        },
+        {
+          "word": "For",
+          "start": 39.43,
+          "end": 39.67
+        },
+        {
+          "word": "acceleration,",
+          "start": 39.67,
+          "end": 40.23
+        },
+        {
+          "word": "differentiate",
+          "start": 40.97,
+          "end": 41.97
+        },
+        {
+          "word": "velocity.",
+          "start": 41.97,
+          "end": 43.13
+        },
+        {
+          "word": "a",
+          "start": 43.85,
+          "end": 44.15
+        },
+        {
+          "word": "equals",
+          "start": 44.15,
+          "end": 44.81
+        },
+        {
+          "word": "dv",
+          "start": 44.81,
+          "end": 45.65
+        },
+        {
+          "word": "a",
+          "start": 45.65,
+          "end": 46.09
+        },
+        {
+          "word": "by",
+          "start": 46.09,
+          "end": 46.41
+        },
+        {
+          "word": "dt.",
+          "start": 46.41,
+          "end": 47.23
+        },
+        {
+          "word": "This",
+          "start": 47.95,
+          "end": 48.09
+        },
+        {
+          "word": "gives",
+          "start": 48.09,
+          "end": 48.35
+        },
+        {
+          "word": "60",
+          "start": 48.35,
+          "end": 48.85
+        },
+        {
+          "word": "minus",
+          "start": 48.85,
+          "end": 49.27
+        },
+        {
+          "word": "12",
+          "start": 49.27,
+          "end": 49.91
+        },
+        {
+          "word": "meters",
+          "start": 49.91,
+          "end": 50.27
+        },
+        {
+          "word": "per",
+          "start": 50.27,
+          "end": 50.59
+        },
+        {
+          "word": "second",
+          "start": 50.59,
+          "end": 50.91
+        },
+        {
+          "word": "squared.",
+          "start": 50.91,
+          "end": 51.35
+        },
+        {
+          "word": "Acceleration",
+          "start": 52.07,
+          "end": 52.89
+        },
+        {
+          "word": "changes",
+          "start": 52.89,
+          "end": 53.61
+        },
+        {
+          "word": "with",
+          "start": 53.61,
+          "end": 54.03
+        },
+        {
+          "word": "time.",
+          "start": 54.03,
+          "end": 54.39
+        }
+      ],
+      "cues": {
+        "given-poly": 0.4,
+        "given-range": 6.49,
+        "given-origin": 8.89,
+        "rest-formula": 16.61,
+        "rest-sub": 20.67,
+        "factor": 27.79,
+        "roots": 33.84,
+        "accel-formula": 39.43,
+        "accel-result": 47.95
+      },
+      "figureEvents": [
+        {
+          "id": "word-2",
+          "wordIndex": 2,
+          "word": "three",
+          "start": 1.21,
+          "target": "given-poly",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-3",
+          "wordIndex": 3,
+          "word": "t",
+          "start": 1.51,
+          "target": "given-poly",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-5",
+          "wordIndex": 5,
+          "word": "minus",
+          "start": 2.25,
+          "target": "given-poly",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-6",
+          "wordIndex": 6,
+          "word": "twelve",
+          "start": 3.05,
+          "target": "given-poly",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-7",
+          "wordIndex": 7,
+          "word": "t",
+          "start": 3.79,
+          "target": "given-poly",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-9",
+          "wordIndex": 9,
+          "word": "nine",
+          "start": 4.89,
+          "target": "given-poly",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-14",
+          "wordIndex": 14,
+          "word": "zero",
+          "start": 6.75,
+          "target": "given-range",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-16",
+          "wordIndex": 16,
+          "word": "three",
+          "start": 7.73,
+          "target": "given-range",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-19",
+          "wordIndex": 19,
+          "word": "s",
+          "start": 9.31,
+          "target": "given-origin",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-21",
+          "wordIndex": 21,
+          "word": "zero.",
+          "start": 10.17,
+          "target": "given-origin",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-34",
+          "wordIndex": 34,
+          "word": "zero.",
+          "start": 19.61,
+          "target": "rest-condition",
+          "kind": "spoken"
+        },
+        {
+          "id": "rest-formula-substitution",
+          "start": 16.61,
+          "end": 20.540000000000003,
+          "target": "rest-condition",
+          "kind": "substitution"
+        },
+        {
+          "id": "word-39",
+          "wordIndex": 39,
+          "word": "three",
+          "start": 22.55,
+          "target": "given-poly",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-40",
+          "wordIndex": 40,
+          "word": "t",
+          "start": 23.57,
+          "target": "given-poly",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-42",
+          "wordIndex": 42,
+          "word": "minus",
+          "start": 24.43,
+          "target": "given-poly",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-43",
+          "wordIndex": 43,
+          "word": "twelve",
+          "start": 24.93,
+          "target": "given-poly",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-44",
+          "wordIndex": 44,
+          "word": "t",
+          "start": 25.49,
+          "target": "given-poly",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-46",
+          "wordIndex": 46,
+          "word": "nine",
+          "start": 26.17,
+          "target": "given-poly",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-48",
+          "wordIndex": 48,
+          "word": "zero.",
+          "start": 26.95,
+          "target": "given-poly",
+          "kind": "spoken"
+        },
+        {
+          "id": "rest-sub-substitution",
+          "start": 20.67,
+          "end": 27.64,
+          "target": "given-poly",
+          "kind": "substitution"
+        },
+        {
+          "id": "word-50",
+          "wordIndex": 50,
+          "word": "3",
+          "start": 28.63,
+          "target": "given-poly",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-52",
+          "wordIndex": 52,
+          "word": "t",
+          "start": 29.89,
+          "target": "given-poly",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-53",
+          "wordIndex": 53,
+          "word": "minus",
+          "start": 30.23,
+          "target": "given-poly",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-54",
+          "wordIndex": 54,
+          "word": "1",
+          "start": 30.61,
+          "target": "given-poly",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-56",
+          "wordIndex": 56,
+          "word": "t",
+          "start": 31.29,
+          "target": "given-poly",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-57",
+          "wordIndex": 57,
+          "word": "minus",
+          "start": 31.63,
+          "target": "given-poly",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-58",
+          "wordIndex": 58,
+          "word": "3",
+          "start": 31.91,
+          "target": "given-poly",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-60",
+          "wordIndex": 60,
+          "word": "0.",
+          "start": 32.99,
+          "target": "given-poly",
+          "kind": "spoken"
+        },
+        {
+          "id": "factor-substitution",
+          "start": 27.79,
+          "end": 33.760000000000005,
+          "target": "given-poly",
+          "kind": "substitution"
+        },
+        {
+          "id": "word-63",
+          "wordIndex": 63,
+          "word": "1",
+          "start": 34.51,
+          "target": "roots",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-65",
+          "wordIndex": 65,
+          "word": "3",
+          "start": 34.97,
+          "target": "roots",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-69",
+          "wordIndex": 69,
+          "word": "1.",
+          "start": 36.81,
+          "target": "roots",
+          "kind": "spoken"
+        },
+        {
+          "id": "roots-substitution",
+          "start": 33.84,
+          "end": 37.35,
+          "target": "roots",
+          "kind": "substitution"
+        },
+        {
+          "id": "word-74",
+          "wordIndex": 74,
+          "word": "a",
+          "start": 43.85,
+          "target": "given-poly",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-77",
+          "wordIndex": 77,
+          "word": "a",
+          "start": 45.65,
+          "target": "given-poly",
+          "kind": "spoken"
+        },
+        {
+          "id": "accel-formula-substitution",
+          "start": 39.43,
+          "end": 47.79,
+          "target": "given-poly",
+          "kind": "substitution"
+        },
+        {
+          "id": "word-82",
+          "wordIndex": 82,
+          "word": "60",
+          "start": 48.35,
+          "target": "given-poly",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-83",
+          "wordIndex": 83,
+          "word": "minus",
+          "start": 48.85,
+          "target": "given-poly",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-84",
+          "wordIndex": 84,
+          "word": "12",
+          "start": 49.27,
+          "target": "given-poly",
+          "kind": "spoken"
+        },
+        {
+          "id": "accel-result-substitution",
+          "start": 47.95,
+          "end": 54.64,
+          "target": "given-poly",
+          "kind": "substitution"
+        }
+      ],
+      "wordCount": 93,
+      "text": "Velocity is three t squared minus twelve t plus nine metres per second. Use zero to three seconds. Initially s is zero. Find the first rest time and acceleration. Instantaneous rest means velocity equals zero. Substitute the given velocity three t squared minus twelve t plus nine equals zero. Factorise. 3 times t minus 1 times t minus 3 equals 0. Rest at 1 in 3 seconds. First at 1. For acceleration, differentiate velocity. a equals dv a by dt. This gives 60 minus 12 meters per second squared. Acceleration changes with time.",
+      "duration": 57.103673
+    },
+    {
+      "id": "s06",
+      "title": "Displacement and its graph",
+      "mode": "displacement",
+      "source": "f263–f294",
+      "tempo": "slow",
+      "voiceSpeed": 0.9,
+      "beats": [
+        {
+          "id": "setup",
+          "text": "Find displacement and sketch its graph, using the same givens.",
+          "hold": 2,
+          "target": "given-origin",
+          "start": 0.4,
+          "speechEnd": 4.99,
+          "end": 5.19,
+          "cue": 0.4,
+          "penEnd": 5.11
+        },
+        {
+          "id": "formula",
+          "text": "Displacement is the integral of velocity.",
+          "hold": 0,
+          "ink": "s = ∫v dt",
+          "page": 0,
+          "target": "given-poly",
+          "start": 7.19,
+          "speechEnd": 9.59,
+          "end": 9.79,
+          "cue": 7.19,
+          "penEnd": 9.709999999999999
+        },
+        {
+          "id": "sub",
+          "text": "Substitute three t squared minus twelve t plus nine.",
+          "hold": 0,
+          "ink": "s = ∫(3t² - 12t + 9) dt",
+          "page": 0,
+          "target": "given-poly",
+          "start": 9.79,
+          "speechEnd": 14.93,
+          "end": 15.13,
+          "cue": 9.86,
+          "penEnd": 15.05
+        },
+        {
+          "id": "integral",
+          "text": "Integrating term by term gives t cubed minus six t squared plus nine t plus C.",
+          "hold": 0,
+          "ink": "s = t³ - 6t² + 9t + C",
+          "page": 0,
+          "target": "given-poly",
+          "start": 15.13,
+          "speechEnd": 22.58,
+          "end": 22.78,
+          "cue": 15.13,
+          "penEnd": 22.700000000000003
+        },
+        {
+          "id": "constant",
+          "text": "At time zero, displacement is zero, so C is zero. Show this step.",
+          "hold": 2,
+          "ink": "0 = C",
+          "page": 0,
+          "target": "given-origin",
+          "start": 22.78,
+          "speechEnd": 29.76,
+          "end": 29.96,
+          "cue": 22.82,
+          "penEnd": 29.880000000000003
+        },
+        {
+          "id": "graph-out",
+          "text": "Now the displacement time graph. It rises from zero to four metres as the particle moves right.",
+          "hold": 0,
+          "target": "s-four",
+          "start": 31.96,
+          "speechEnd": 39.55,
+          "end": 39.75,
+          "cue": 32.15,
+          "penEnd": 39.67
+        },
+        {
+          "id": "graph-back",
+          "text": "Then it falls to zero as the particle returns. The horizontal tangents mark the two instants of rest.",
+          "hold": 2,
+          "target": "s-zero",
+          "start": 39.75,
+          "speechEnd": 47.63,
+          "end": 47.83,
+          "cue": 39.75,
+          "penEnd": 47.75
+        }
+      ],
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 5.19,
+          "end": 7.19,
+          "duration": 2
+        },
+        {
+          "kind": "hold",
+          "start": 29.96,
+          "end": 31.96,
+          "duration": 2
+        },
+        {
+          "kind": "hold",
+          "start": 47.83,
+          "end": 49.83,
+          "duration": 2
+        }
+      ],
+      "audio": "using-calculus-in-1d-s06.mp3",
+      "audioSha256": "fd981e5d4923e4dbd4a1f45df9fe54a7d51c5e4fe6127992130e4e3cb715613a",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "provider": "elevenlabs",
+      "sampleDuration": 50.18,
+      "words": [
+        {
+          "word": "Find",
+          "start": 0.4,
+          "end": 0.71
+        },
+        {
+          "word": "displacement",
+          "start": 0.71,
+          "end": 1.25
+        },
+        {
+          "word": "and",
+          "start": 1.25,
+          "end": 1.75
+        },
+        {
+          "word": "sketch",
+          "start": 1.75,
+          "end": 2.13
+        },
+        {
+          "word": "its",
+          "start": 2.13,
+          "end": 2.49
+        },
+        {
+          "word": "graph,",
+          "start": 2.49,
+          "end": 2.89
+        },
+        {
+          "word": "using",
+          "start": 3.43,
+          "end": 3.97
+        },
+        {
+          "word": "the",
+          "start": 3.97,
+          "end": 4.17
+        },
+        {
+          "word": "same",
+          "start": 4.17,
+          "end": 4.43
+        },
+        {
+          "word": "givens.",
+          "start": 4.43,
+          "end": 4.99
+        },
+        {
+          "word": "Displacement",
+          "start": 7.19,
+          "end": 7.76
+        },
+        {
+          "word": "is",
+          "start": 7.76,
+          "end": 8.0
+        },
+        {
+          "word": "the",
+          "start": 8.0,
+          "end": 8.12
+        },
+        {
+          "word": "integral",
+          "start": 8.12,
+          "end": 8.54
+        },
+        {
+          "word": "of",
+          "start": 8.54,
+          "end": 8.92
+        },
+        {
+          "word": "velocity.",
+          "start": 8.92,
+          "end": 9.48
+        },
+        {
+          "word": "Substitute",
+          "start": 9.86,
+          "end": 10.42
+        },
+        {
+          "word": "three",
+          "start": 10.42,
+          "end": 11.02
+        },
+        {
+          "word": "t",
+          "start": 11.02,
+          "end": 11.28
+        },
+        {
+          "word": "squared",
+          "start": 11.28,
+          "end": 11.76
+        },
+        {
+          "word": "minus",
+          "start": 11.76,
+          "end": 12.66
+        },
+        {
+          "word": "twelve",
+          "start": 12.66,
+          "end": 13.34
+        },
+        {
+          "word": "t",
+          "start": 13.34,
+          "end": 13.72
+        },
+        {
+          "word": "plus",
+          "start": 13.72,
+          "end": 14.3
+        },
+        {
+          "word": "nine.",
+          "start": 14.3,
+          "end": 14.74
+        },
+        {
+          "word": "Integrating",
+          "start": 15.13,
+          "end": 15.82
+        },
+        {
+          "word": "term",
+          "start": 15.82,
+          "end": 16.24
+        },
+        {
+          "word": "by",
+          "start": 16.24,
+          "end": 16.62
+        },
+        {
+          "word": "term",
+          "start": 16.62,
+          "end": 17.02
+        },
+        {
+          "word": "gives",
+          "start": 17.02,
+          "end": 17.86
+        },
+        {
+          "word": "t",
+          "start": 17.86,
+          "end": 18.32
+        },
+        {
+          "word": "cubed",
+          "start": 18.32,
+          "end": 18.72
+        },
+        {
+          "word": "minus",
+          "start": 18.72,
+          "end": 19.1
+        },
+        {
+          "word": "six",
+          "start": 19.1,
+          "end": 19.5
+        },
+        {
+          "word": "t",
+          "start": 19.5,
+          "end": 19.78
+        },
+        {
+          "word": "squared",
+          "start": 19.78,
+          "end": 20.26
+        },
+        {
+          "word": "plus",
+          "start": 20.26,
+          "end": 21.06
+        },
+        {
+          "word": "nine",
+          "start": 21.06,
+          "end": 21.42
+        },
+        {
+          "word": "t",
+          "start": 21.42,
+          "end": 21.7
+        },
+        {
+          "word": "plus",
+          "start": 21.7,
+          "end": 22.1
+        },
+        {
+          "word": "C.",
+          "start": 22.1,
+          "end": 22.52
+        },
+        {
+          "word": "At",
+          "start": 22.82,
+          "end": 22.98
+        },
+        {
+          "word": "time",
+          "start": 22.98,
+          "end": 23.24
+        },
+        {
+          "word": "zero,",
+          "start": 23.24,
+          "end": 23.56
+        },
+        {
+          "word": "displacement",
+          "start": 24.26,
+          "end": 24.8
+        },
+        {
+          "word": "is",
+          "start": 24.8,
+          "end": 25.26
+        },
+        {
+          "word": "zero,",
+          "start": 25.26,
+          "end": 25.64
+        },
+        {
+          "word": "so",
+          "start": 26.26,
+          "end": 26.46
+        },
+        {
+          "word": "C",
+          "start": 26.46,
+          "end": 26.88
+        },
+        {
+          "word": "is",
+          "start": 26.88,
+          "end": 27.28
+        },
+        {
+          "word": "zero.",
+          "start": 27.28,
+          "end": 27.68
+        },
+        {
+          "word": "Show",
+          "start": 28.4,
+          "end": 28.9
+        },
+        {
+          "word": "this",
+          "start": 28.9,
+          "end": 29.14
+        },
+        {
+          "word": "step.",
+          "start": 29.14,
+          "end": 29.52
+        },
+        {
+          "word": "the",
+          "start": 32.15,
+          "end": 32.31
+        },
+        {
+          "word": "displacement",
+          "start": 32.31,
+          "end": 32.83
+        },
+        {
+          "word": "time",
+          "start": 32.83,
+          "end": 33.29
+        },
+        {
+          "word": "graph.",
+          "start": 33.29,
+          "end": 33.63
+        },
+        {
+          "word": "It",
+          "start": 34.69,
+          "end": 34.87
+        },
+        {
+          "word": "rises",
+          "start": 34.87,
+          "end": 35.31
+        },
+        {
+          "word": "from",
+          "start": 35.31,
+          "end": 35.67
+        },
+        {
+          "word": "0",
+          "start": 35.67,
+          "end": 36.09
+        },
+        {
+          "word": "to",
+          "start": 36.09,
+          "end": 36.33
+        },
+        {
+          "word": "4",
+          "start": 36.33,
+          "end": 36.63
+        },
+        {
+          "word": "meters",
+          "start": 36.63,
+          "end": 36.89
+        },
+        {
+          "word": "as",
+          "start": 36.89,
+          "end": 38.13
+        },
+        {
+          "word": "the",
+          "start": 38.13,
+          "end": 38.25
+        },
+        {
+          "word": "particle",
+          "start": 38.25,
+          "end": 38.53
+        },
+        {
+          "word": "moves",
+          "start": 38.53,
+          "end": 38.93
+        },
+        {
+          "word": "right.",
+          "start": 38.93,
+          "end": 39.35
+        },
+        {
+          "word": "Then",
+          "start": 39.75,
+          "end": 39.91
+        },
+        {
+          "word": "it",
+          "start": 39.91,
+          "end": 40.03
+        },
+        {
+          "word": "falls",
+          "start": 40.03,
+          "end": 40.25
+        },
+        {
+          "word": "to",
+          "start": 40.25,
+          "end": 40.49
+        },
+        {
+          "word": "0",
+          "start": 40.49,
+          "end": 40.85
+        },
+        {
+          "word": "as",
+          "start": 40.85,
+          "end": 41.71
+        },
+        {
+          "word": "the",
+          "start": 41.71,
+          "end": 41.85
+        },
+        {
+          "word": "particle",
+          "start": 41.85,
+          "end": 42.17
+        },
+        {
+          "word": "returns.",
+          "start": 42.17,
+          "end": 42.75
+        },
+        {
+          "word": "The",
+          "start": 43.81,
+          "end": 43.91
+        },
+        {
+          "word": "horizontal",
+          "start": 43.91,
+          "end": 44.27
+        },
+        {
+          "word": "tangents",
+          "start": 44.27,
+          "end": 45.09
+        },
+        {
+          "word": "mark",
+          "start": 45.09,
+          "end": 45.53
+        },
+        {
+          "word": "the",
+          "start": 45.53,
+          "end": 45.79
+        },
+        {
+          "word": "two",
+          "start": 45.79,
+          "end": 46.11
+        },
+        {
+          "word": "instants",
+          "start": 46.11,
+          "end": 46.83
+        },
+        {
+          "word": "of",
+          "start": 46.83,
+          "end": 47.05
+        },
+        {
+          "word": "rest.",
+          "start": 47.05,
+          "end": 47.45
+        }
+      ],
+      "cues": {
+        "setup": 0.4,
+        "formula": 7.19,
+        "sub": 9.86,
+        "integral": 15.13,
+        "constant": 22.82,
+        "graph-out": 32.15,
+        "graph-back": 39.75
+      },
+      "figureEvents": [
+        {
+          "id": "formula-substitution",
+          "start": 7.19,
+          "end": 9.709999999999999,
+          "target": "given-poly",
+          "kind": "substitution"
+        },
+        {
+          "id": "word-17",
+          "wordIndex": 17,
+          "word": "three",
+          "start": 10.42,
+          "target": "given-poly",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-18",
+          "wordIndex": 18,
+          "word": "t",
+          "start": 11.02,
+          "target": "given-poly",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-20",
+          "wordIndex": 20,
+          "word": "minus",
+          "start": 11.76,
+          "target": "given-poly",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-21",
+          "wordIndex": 21,
+          "word": "twelve",
+          "start": 12.66,
+          "target": "given-poly",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-22",
+          "wordIndex": 22,
+          "word": "t",
+          "start": 13.34,
+          "target": "given-poly",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-24",
+          "wordIndex": 24,
+          "word": "nine.",
+          "start": 14.3,
+          "target": "given-poly",
+          "kind": "spoken"
+        },
+        {
+          "id": "sub-substitution",
+          "start": 9.86,
+          "end": 15.05,
+          "target": "given-poly",
+          "kind": "substitution"
+        },
+        {
+          "id": "word-30",
+          "wordIndex": 30,
+          "word": "t",
+          "start": 17.86,
+          "target": "given-poly",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-32",
+          "wordIndex": 32,
+          "word": "minus",
+          "start": 18.72,
+          "target": "given-poly",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-33",
+          "wordIndex": 33,
+          "word": "six",
+          "start": 19.1,
+          "target": "given-poly",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-34",
+          "wordIndex": 34,
+          "word": "t",
+          "start": 19.5,
+          "target": "given-poly",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-37",
+          "wordIndex": 37,
+          "word": "nine",
+          "start": 21.06,
+          "target": "given-poly",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-38",
+          "wordIndex": 38,
+          "word": "t",
+          "start": 21.42,
+          "target": "given-poly",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-40",
+          "wordIndex": 40,
+          "word": "C.",
+          "start": 22.1,
+          "target": "given-poly",
+          "kind": "spoken"
+        },
+        {
+          "id": "integral-substitution",
+          "start": 15.13,
+          "end": 22.700000000000003,
+          "target": "given-poly",
+          "kind": "substitution"
+        },
+        {
+          "id": "word-43",
+          "wordIndex": 43,
+          "word": "zero,",
+          "start": 23.24,
+          "target": "given-origin",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-46",
+          "wordIndex": 46,
+          "word": "zero,",
+          "start": 25.26,
+          "target": "given-origin",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-48",
+          "wordIndex": 48,
+          "word": "C",
+          "start": 26.46,
+          "target": "given-origin",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-50",
+          "wordIndex": 50,
+          "word": "zero.",
+          "start": 27.28,
+          "target": "given-origin",
+          "kind": "spoken"
+        },
+        {
+          "id": "constant-substitution",
+          "start": 22.82,
+          "end": 29.880000000000003,
+          "target": "given-origin",
+          "kind": "substitution"
+        },
+        {
+          "id": "word-61",
+          "wordIndex": 61,
+          "word": "0",
+          "start": 35.67,
+          "target": "s-value-0",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-63",
+          "wordIndex": 63,
+          "word": "4",
+          "start": 36.33,
+          "target": "s-value-4",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-74",
+          "wordIndex": 74,
+          "word": "0",
+          "start": 40.49,
+          "target": "s-value-0",
+          "kind": "spoken"
+        }
+      ],
+      "wordCount": 88,
+      "text": "Find displacement and sketch its graph, using the same givens. Displacement is the integral of velocity. Substitute three t squared minus twelve t plus nine. Integrating term by term gives t cubed minus six t squared plus nine t plus C. At time zero, displacement is zero, so C is zero. Show this step. the displacement time graph. It rises from 0 to 4 meters as the particle moves right. Then it falls to 0 as the particle returns. The horizontal tangents mark the two instants of rest.",
+      "duration": 50.207347
+    },
+    {
+      "id": "s07",
+      "title": "Read velocity, then count both legs",
+      "mode": "distance",
+      "source": "f286–f320",
+      "tempo": "slow",
+      "voiceSpeed": 0.9,
+      "beats": [
+        {
+          "id": "velocity",
+          "text": "Now the velocity time graph: nine initially, zero at one second and three seconds.",
+          "hold": 0,
+          "target": "given-poly",
+          "start": 0.4,
+          "speechEnd": 7.49,
+          "end": 7.69,
+          "cue": 0.58,
+          "penEnd": 7.61
+        },
+        {
+          "id": "area-formula",
+          "text": "Signed displacement is the integral of velocity. Distance adds leg magnitudes.",
+          "hold": 0,
+          "ink": "Δs = ∫v dt",
+          "page": 0,
+          "target": "given-poly",
+          "start": 7.69,
+          "speechEnd": 14.63,
+          "end": 14.83,
+          "cue": 7.82,
+          "penEnd": 14.75
+        },
+        {
+          "id": "out-eval",
+          "text": "For the outward leg, evaluate t cubed minus six t squared plus nine t, from zero to one.",
+          "hold": 0,
+          "ink": "Δs₁ = [t³ - 6t² + 9t]₀¹",
+          "page": 0,
+          "target": "leg-out",
+          "start": 14.83,
+          "speechEnd": 24.19,
+          "end": 24.39,
+          "cue": 14.92,
+          "penEnd": 24.310000000000002
+        },
+        {
+          "id": "out-result",
+          "text": "That gives four metres out.",
+          "hold": 2,
+          "ink": "Δs₁ = 4 m",
+          "page": 0,
+          "target": "leg-out",
+          "start": 24.39,
+          "speechEnd": 26.03,
+          "end": 26.23,
+          "cue": 24.39,
+          "penEnd": 26.150000000000002
+        },
+        {
+          "id": "back-eval",
+          "text": "For the return leg, evaluate the same expression from one to three.",
+          "hold": 0,
+          "ink": "Δs₂ = [t³ - 6t² + 9t]₁³",
+          "page": 0,
+          "target": "leg-back",
+          "start": 28.23,
+          "speechEnd": 33.54,
+          "end": 33.74,
+          "cue": 28.4,
+          "penEnd": 33.660000000000004
+        },
+        {
+          "id": "back-result",
+          "text": "Minus four metres: the particle travels back.",
+          "hold": 2,
+          "ink": "Δs₂ = -4 m",
+          "page": 0,
+          "target": "leg-back",
+          "start": 33.74,
+          "speechEnd": 36.82,
+          "end": 37.02,
+          "cue": 33.9,
+          "penEnd": 36.940000000000005
+        },
+        {
+          "id": "distance-formula",
+          "text": "Distance equals the magnitude of the first displacement plus the magnitude of the second.",
+          "hold": 0,
+          "ink": "distance = |Δs₁| + |Δs₂|",
+          "page": 1,
+          "target": "areas",
+          "start": 39.02,
+          "speechEnd": 45.08,
+          "end": 45.28,
+          "cue": 39.02,
+          "penEnd": 45.2
+        },
+        {
+          "id": "distance-result",
+          "text": "Four plus the magnitude of minus four gives eight metres. Net displacement is zero.",
+          "hold": 2,
+          "ink": "distance = 4 + |-4| = 8 m",
+          "page": 1,
+          "target": "areas",
+          "start": 45.28,
+          "speechEnd": 52.76,
+          "end": 52.96,
+          "cue": 45.33,
+          "penEnd": 52.88
+        },
+        {
+          "id": "average-formula",
+          "text": "Average speed equals distance divided by time.",
+          "hold": 0,
+          "ink": "average speed = distance / time",
+          "page": 2,
+          "target": "areas",
+          "start": 54.96,
+          "speechEnd": 58.57,
+          "end": 58.77,
+          "cue": 55.03,
+          "penEnd": 58.690000000000005
+        },
+        {
+          "id": "average-result",
+          "text": "Eight divided by three is two point six seven metres per second.",
+          "hold": 2,
+          "ink": "8/3 = 2.67 m s⁻¹",
+          "page": 2,
+          "target": "areas",
+          "start": 58.77,
+          "speechEnd": 63.86,
+          "end": 64.06,
+          "cue": 59.11,
+          "penEnd": 63.980000000000004
+        },
+        {
+          "id": "average-velocity",
+          "text": "Average velocity uses displacement over time, so it is zero.",
+          "hold": 0,
+          "ink": "average velocity = Δs / time",
+          "page": 2,
+          "target": "s-zero",
+          "start": 66.06,
+          "speechEnd": 71.3,
+          "end": 71.5,
+          "cue": 66.46,
+          "penEnd": 71.42
+        }
+      ],
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 26.23,
+          "end": 28.23,
+          "duration": 2
+        },
+        {
+          "kind": "hold",
+          "start": 37.02,
+          "end": 39.02,
+          "duration": 2
+        },
+        {
+          "kind": "hold",
+          "start": 52.96,
+          "end": 54.96,
+          "duration": 2
+        },
+        {
+          "kind": "hold",
+          "start": 64.06,
+          "end": 66.06,
+          "duration": 2
+        }
+      ],
+      "audio": "using-calculus-in-1d-s07.mp3",
+      "audioSha256": "249611a3a5627d80598cc05658eb57e4c45402a8cb2ceb41b7f18decf9806bba",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "provider": "elevenlabs",
+      "sampleDuration": 71.85,
+      "words": [
+        {
+          "word": "the",
+          "start": 0.58,
+          "end": 0.74
+        },
+        {
+          "word": "velocity",
+          "start": 0.74,
+          "end": 1.1
+        },
+        {
+          "word": "time",
+          "start": 1.1,
+          "end": 1.64
+        },
+        {
+          "word": "graph,",
+          "start": 1.64,
+          "end": 1.96
+        },
+        {
+          "word": "nine",
+          "start": 2.44,
+          "end": 3.08
+        },
+        {
+          "word": "initially,",
+          "start": 3.08,
+          "end": 3.94
+        },
+        {
+          "word": "zero",
+          "start": 4.82,
+          "end": 5.1
+        },
+        {
+          "word": "at",
+          "start": 5.1,
+          "end": 5.38
+        },
+        {
+          "word": "one",
+          "start": 5.38,
+          "end": 5.6
+        },
+        {
+          "word": "second",
+          "start": 5.6,
+          "end": 5.98
+        },
+        {
+          "word": "and",
+          "start": 5.98,
+          "end": 6.78
+        },
+        {
+          "word": "three",
+          "start": 6.78,
+          "end": 7.06
+        },
+        {
+          "word": "seconds.",
+          "start": 7.06,
+          "end": 7.46
+        },
+        {
+          "word": "Signed",
+          "start": 7.82,
+          "end": 8.3
+        },
+        {
+          "word": "displacement",
+          "start": 8.3,
+          "end": 8.96
+        },
+        {
+          "word": "is",
+          "start": 8.96,
+          "end": 9.64
+        },
+        {
+          "word": "the",
+          "start": 9.64,
+          "end": 9.78
+        },
+        {
+          "word": "integral",
+          "start": 9.78,
+          "end": 10.24
+        },
+        {
+          "word": "of",
+          "start": 10.24,
+          "end": 10.62
+        },
+        {
+          "word": "velocity.",
+          "start": 10.62,
+          "end": 11.22
+        },
+        {
+          "word": "Distance",
+          "start": 12.16,
+          "end": 12.68
+        },
+        {
+          "word": "adds",
+          "start": 12.68,
+          "end": 13.18
+        },
+        {
+          "word": "leg",
+          "start": 13.18,
+          "end": 13.68
+        },
+        {
+          "word": "magnitudes.",
+          "start": 13.68,
+          "end": 14.36
+        },
+        {
+          "word": "For",
+          "start": 14.92,
+          "end": 15.04
+        },
+        {
+          "word": "the",
+          "start": 15.04,
+          "end": 15.16
+        },
+        {
+          "word": "outward",
+          "start": 15.16,
+          "end": 15.54
+        },
+        {
+          "word": "leg,",
+          "start": 15.54,
+          "end": 15.98
+        },
+        {
+          "word": "evaluate",
+          "start": 16.68,
+          "end": 17.34
+        },
+        {
+          "word": "t",
+          "start": 17.34,
+          "end": 18.2
+        },
+        {
+          "word": "cubed",
+          "start": 18.2,
+          "end": 18.84
+        },
+        {
+          "word": "minus",
+          "start": 18.84,
+          "end": 19.88
+        },
+        {
+          "word": "six",
+          "start": 19.88,
+          "end": 20.36
+        },
+        {
+          "word": "t",
+          "start": 20.36,
+          "end": 20.66
+        },
+        {
+          "word": "squared",
+          "start": 20.66,
+          "end": 21.06
+        },
+        {
+          "word": "plus",
+          "start": 21.06,
+          "end": 21.5
+        },
+        {
+          "word": "nine",
+          "start": 21.5,
+          "end": 21.86
+        },
+        {
+          "word": "t,",
+          "start": 21.86,
+          "end": 22.24
+        },
+        {
+          "word": "from",
+          "start": 22.7,
+          "end": 22.92
+        },
+        {
+          "word": "zero",
+          "start": 22.92,
+          "end": 23.4
+        },
+        {
+          "word": "to",
+          "start": 23.4,
+          "end": 23.78
+        },
+        {
+          "word": "one.",
+          "start": 23.78,
+          "end": 24.12
+        },
+        {
+          "word": "That",
+          "start": 24.39,
+          "end": 24.58
+        },
+        {
+          "word": "gives",
+          "start": 24.58,
+          "end": 24.8
+        },
+        {
+          "word": "four",
+          "start": 24.8,
+          "end": 25.14
+        },
+        {
+          "word": "metres",
+          "start": 25.14,
+          "end": 25.36
+        },
+        {
+          "word": "out.",
+          "start": 25.36,
+          "end": 25.8
+        },
+        {
+          "word": "the",
+          "start": 28.4,
+          "end": 28.58
+        },
+        {
+          "word": "return",
+          "start": 28.58,
+          "end": 28.98
+        },
+        {
+          "word": "leg,",
+          "start": 28.98,
+          "end": 29.36
+        },
+        {
+          "word": "evaluate",
+          "start": 29.94,
+          "end": 30.64
+        },
+        {
+          "word": "the",
+          "start": 30.64,
+          "end": 31.02
+        },
+        {
+          "word": "same",
+          "start": 31.02,
+          "end": 31.4
+        },
+        {
+          "word": "expression",
+          "start": 31.4,
+          "end": 32.04
+        },
+        {
+          "word": "from",
+          "start": 32.04,
+          "end": 32.56
+        },
+        {
+          "word": "1",
+          "start": 32.56,
+          "end": 32.92
+        },
+        {
+          "word": "to",
+          "start": 32.92,
+          "end": 33.12
+        },
+        {
+          "word": "3.",
+          "start": 33.12,
+          "end": 33.48
+        },
+        {
+          "word": "Minus",
+          "start": 33.9,
+          "end": 34.16
+        },
+        {
+          "word": "4",
+          "start": 34.16,
+          "end": 34.42
+        },
+        {
+          "word": "meters,",
+          "start": 34.42,
+          "end": 34.68
+        },
+        {
+          "word": "the",
+          "start": 35.6,
+          "end": 35.68
+        },
+        {
+          "word": "particle",
+          "start": 35.68,
+          "end": 35.94
+        },
+        {
+          "word": "travels",
+          "start": 35.94,
+          "end": 36.32
+        },
+        {
+          "word": "back.",
+          "start": 36.32,
+          "end": 36.72
+        },
+        {
+          "word": "Distance",
+          "start": 39.02,
+          "end": 39.49
+        },
+        {
+          "word": "equals",
+          "start": 39.49,
+          "end": 39.97
+        },
+        {
+          "word": "the",
+          "start": 39.97,
+          "end": 40.25
+        },
+        {
+          "word": "magnitude",
+          "start": 40.25,
+          "end": 40.69
+        },
+        {
+          "word": "of",
+          "start": 40.69,
+          "end": 41.19
+        },
+        {
+          "word": "the",
+          "start": 41.19,
+          "end": 41.33
+        },
+        {
+          "word": "first",
+          "start": 41.33,
+          "end": 41.63
+        },
+        {
+          "word": "displacement",
+          "start": 41.63,
+          "end": 42.31
+        },
+        {
+          "word": "plus",
+          "start": 42.31,
+          "end": 42.87
+        },
+        {
+          "word": "the",
+          "start": 42.87,
+          "end": 43.19
+        },
+        {
+          "word": "magnitude",
+          "start": 43.19,
+          "end": 43.69
+        },
+        {
+          "word": "of",
+          "start": 43.69,
+          "end": 44.31
+        },
+        {
+          "word": "the",
+          "start": 44.31,
+          "end": 44.51
+        },
+        {
+          "word": "second.",
+          "start": 44.51,
+          "end": 44.77
+        },
+        {
+          "word": "4",
+          "start": 45.33,
+          "end": 45.63
+        },
+        {
+          "word": "plus",
+          "start": 45.63,
+          "end": 46.11
+        },
+        {
+          "word": "the",
+          "start": 46.11,
+          "end": 46.37
+        },
+        {
+          "word": "magnitude",
+          "start": 46.37,
+          "end": 46.99
+        },
+        {
+          "word": "of",
+          "start": 46.99,
+          "end": 47.67
+        },
+        {
+          "word": "minus",
+          "start": 47.67,
+          "end": 48.01
+        },
+        {
+          "word": "4",
+          "start": 48.01,
+          "end": 48.53
+        },
+        {
+          "word": "gives",
+          "start": 48.53,
+          "end": 49.31
+        },
+        {
+          "word": "8",
+          "start": 49.31,
+          "end": 49.81
+        },
+        {
+          "word": "meters.",
+          "start": 49.81,
+          "end": 50.49
+        },
+        {
+          "word": "Net",
+          "start": 51.11,
+          "end": 51.31
+        },
+        {
+          "word": "displacement",
+          "start": 51.31,
+          "end": 51.77
+        },
+        {
+          "word": "is",
+          "start": 51.77,
+          "end": 52.23
+        },
+        {
+          "word": "0.",
+          "start": 52.23,
+          "end": 52.59
+        },
+        {
+          "word": "Average",
+          "start": 55.03,
+          "end": 55.33
+        },
+        {
+          "word": "speed",
+          "start": 55.33,
+          "end": 55.79
+        },
+        {
+          "word": "equals",
+          "start": 55.79,
+          "end": 56.41
+        },
+        {
+          "word": "distance",
+          "start": 56.41,
+          "end": 57.17
+        },
+        {
+          "word": "divided",
+          "start": 57.17,
+          "end": 57.61
+        },
+        {
+          "word": "by",
+          "start": 57.61,
+          "end": 58.01
+        },
+        {
+          "word": "time.",
+          "start": 58.01,
+          "end": 58.39
+        },
+        {
+          "word": "divided",
+          "start": 59.11,
+          "end": 59.83
+        },
+        {
+          "word": "by",
+          "start": 59.83,
+          "end": 60.21
+        },
+        {
+          "word": "3",
+          "start": 60.21,
+          "end": 60.79
+        },
+        {
+          "word": "is",
+          "start": 60.79,
+          "end": 61.69
+        },
+        {
+          "word": "2",
+          "start": 61.69,
+          "end": 61.89
+        },
+        {
+          "word": ".67",
+          "start": 61.89,
+          "end": 62.55
+        },
+        {
+          "word": "meters",
+          "start": 62.55,
+          "end": 63.11
+        },
+        {
+          "word": "per",
+          "start": 63.11,
+          "end": 63.43
+        },
+        {
+          "word": "second.",
+          "start": 63.43,
+          "end": 63.83
+        },
+        {
+          "word": "velocity",
+          "start": 66.46,
+          "end": 67.12
+        },
+        {
+          "word": "uses",
+          "start": 67.12,
+          "end": 67.96
+        },
+        {
+          "word": "displacement",
+          "start": 67.96,
+          "end": 68.54
+        },
+        {
+          "word": "over",
+          "start": 68.54,
+          "end": 69.0
+        },
+        {
+          "word": "time",
+          "start": 69.0,
+          "end": 69.4
+        },
+        {
+          "word": "so",
+          "start": 69.4,
+          "end": 70.3
+        },
+        {
+          "word": "it",
+          "start": 70.3,
+          "end": 70.52
+        },
+        {
+          "word": "is",
+          "start": 70.52,
+          "end": 70.72
+        },
+        {
+          "word": "0.",
+          "start": 70.72,
+          "end": 71.12
+        }
+      ],
+      "cues": {
+        "velocity": 0.58,
+        "area-formula": 7.82,
+        "out-eval": 14.92,
+        "out-result": 24.39,
+        "back-eval": 28.4,
+        "back-result": 33.9,
+        "distance-formula": 39.02,
+        "distance-result": 45.33,
+        "average-formula": 55.03,
+        "average-result": 59.11,
+        "average-velocity": 66.46
+      },
+      "figureEvents": [
+        {
+          "id": "word-4",
+          "wordIndex": 4,
+          "word": "nine",
+          "start": 2.44,
+          "target": "v-value-9",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-6",
+          "wordIndex": 6,
+          "word": "zero",
+          "start": 4.82,
+          "target": "v-value-0",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-8",
+          "wordIndex": 8,
+          "word": "one",
+          "start": 5.38,
+          "target": "v-time-1",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-11",
+          "wordIndex": 11,
+          "word": "three",
+          "start": 6.78,
+          "target": "v-time-3",
+          "kind": "spoken"
+        },
+        {
+          "id": "area-formula-substitution",
+          "start": 7.82,
+          "end": 14.75,
+          "target": "given-poly",
+          "kind": "substitution"
+        },
+        {
+          "id": "word-29",
+          "wordIndex": 29,
+          "word": "t",
+          "start": 17.34,
+          "target": "s-model",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-31",
+          "wordIndex": 31,
+          "word": "minus",
+          "start": 18.84,
+          "target": "s-model",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-32",
+          "wordIndex": 32,
+          "word": "six",
+          "start": 19.88,
+          "target": "s-model",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-33",
+          "wordIndex": 33,
+          "word": "t",
+          "start": 20.36,
+          "target": "s-model",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-36",
+          "wordIndex": 36,
+          "word": "nine",
+          "start": 21.5,
+          "target": "s-model",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-37",
+          "wordIndex": 37,
+          "word": "t,",
+          "start": 21.86,
+          "target": "s-model",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-39",
+          "wordIndex": 39,
+          "word": "zero",
+          "start": 22.92,
+          "target": "leg-out",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-41",
+          "wordIndex": 41,
+          "word": "one.",
+          "start": 23.78,
+          "target": "leg-out",
+          "kind": "spoken"
+        },
+        {
+          "id": "out-eval-substitution",
+          "start": 14.92,
+          "end": 24.310000000000002,
+          "target": "s-model",
+          "kind": "substitution"
+        },
+        {
+          "id": "word-44",
+          "wordIndex": 44,
+          "word": "four",
+          "start": 24.8,
+          "target": "leg-out",
+          "kind": "spoken"
+        },
+        {
+          "id": "out-result-substitution",
+          "start": 24.39,
+          "end": 26.150000000000002,
+          "target": "leg-out",
+          "kind": "substitution"
+        },
+        {
+          "id": "word-55",
+          "wordIndex": 55,
+          "word": "1",
+          "start": 32.56,
+          "target": "leg-back",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-57",
+          "wordIndex": 57,
+          "word": "3.",
+          "start": 33.12,
+          "target": "leg-back",
+          "kind": "spoken"
+        },
+        {
+          "id": "back-eval-substitution",
+          "start": 28.4,
+          "end": 33.660000000000004,
+          "target": "s-model",
+          "kind": "substitution"
+        },
+        {
+          "id": "word-58",
+          "wordIndex": 58,
+          "word": "Minus",
+          "start": 33.9,
+          "target": "leg-back",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-59",
+          "wordIndex": 59,
+          "word": "4",
+          "start": 34.16,
+          "target": "leg-back",
+          "kind": "spoken"
+        },
+        {
+          "id": "back-result-substitution",
+          "start": 33.9,
+          "end": 36.940000000000005,
+          "target": "leg-back",
+          "kind": "substitution"
+        },
+        {
+          "id": "distance-formula-substitution",
+          "start": 39.02,
+          "end": 45.2,
+          "target": "areas",
+          "kind": "substitution"
+        },
+        {
+          "id": "word-79",
+          "wordIndex": 79,
+          "word": "4",
+          "start": 45.33,
+          "target": "areas",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-84",
+          "wordIndex": 84,
+          "word": "minus",
+          "start": 47.67,
+          "target": "areas",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-85",
+          "wordIndex": 85,
+          "word": "4",
+          "start": 48.01,
+          "target": "areas",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-87",
+          "wordIndex": 87,
+          "word": "8",
+          "start": 49.31,
+          "target": "areas",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-92",
+          "wordIndex": 92,
+          "word": "0.",
+          "start": 52.23,
+          "target": "areas",
+          "kind": "spoken"
+        },
+        {
+          "id": "distance-result-substitution",
+          "start": 45.33,
+          "end": 52.88,
+          "target": "areas",
+          "kind": "substitution"
+        },
+        {
+          "id": "average-formula-substitution",
+          "start": 55.03,
+          "end": 58.690000000000005,
+          "target": "areas",
+          "kind": "substitution"
+        },
+        {
+          "id": "word-102",
+          "wordIndex": 102,
+          "word": "3",
+          "start": 60.21,
+          "target": "areas",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-104",
+          "wordIndex": 104,
+          "word": "2",
+          "start": 61.69,
+          "target": "areas",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-105",
+          "wordIndex": 105,
+          "word": ".67",
+          "start": 61.89,
+          "target": "areas",
+          "kind": "spoken"
+        },
+        {
+          "id": "average-result-substitution",
+          "start": 59.11,
+          "end": 63.980000000000004,
+          "target": "areas",
+          "kind": "substitution"
+        },
+        {
+          "id": "word-117",
+          "wordIndex": 117,
+          "word": "0.",
+          "start": 70.72,
+          "target": "s-value-0",
+          "kind": "spoken"
+        },
+        {
+          "id": "average-velocity-substitution",
+          "start": 66.46,
+          "end": 71.42,
+          "target": "s-value-0",
+          "kind": "substitution"
+        }
+      ],
+      "wordCount": 118,
+      "text": "the velocity time graph, nine initially, zero at one second and three seconds. Signed displacement is the integral of velocity. Distance adds leg magnitudes. For the outward leg, evaluate t cubed minus six t squared plus nine t, from zero to one. That gives four metres out. the return leg, evaluate the same expression from 1 to 3. Minus 4 meters, the particle travels back. Distance equals the magnitude of the first displacement plus the magnitude of the second. 4 plus the magnitude of minus 4 gives 8 meters. Net displacement is 0. Average speed equals distance divided by time. divided by 3 is 2 .67 meters per second. velocity uses displacement over time so it is 0.",
+      "duration": 71.88898
+    },
+    {
+      "id": "s08",
+      "title": "Check maximum speed",
+      "mode": "maximum",
+      "source": "f129–f175; f321–f345",
+      "tempo": "brisk",
+      "voiceSpeed": 1.0,
+      "beats": [
+        {
+          "id": "rule",
+          "text": "For maximum speed, compare velocity magnitudes at stationary velocity points and endpoints.",
+          "hold": 0,
+          "caption": "Compare |v|: stationary points and endpoints.",
+          "start": 0.4,
+          "speechEnd": 7.41,
+          "end": 7.61,
+          "cue": 0.57,
+          "penEnd": 7.53
+        },
+        {
+          "id": "stationary",
+          "text": "Here, acceleration equals zero at two seconds, where velocity is minus three.",
+          "hold": 0,
+          "target": "candidate-mid",
+          "start": 7.61,
+          "speechEnd": 13.52,
+          "end": 13.72,
+          "cue": 7.67,
+          "penEnd": 13.64
+        },
+        {
+          "id": "question",
+          "text": "Is that the maximum speed? Compare it with the endpoints.",
+          "hold": 3,
+          "caption": "Is the stationary value the maximum speed?",
+          "start": 13.72,
+          "speechEnd": 17.53,
+          "end": 17.73,
+          "cue": 13.77,
+          "penEnd": 17.650000000000002
+        },
+        {
+          "id": "answer",
+          "text": "No. Compare speeds: nine initially, three at the stationary point, zero finally. Maximum speed: nine metres per second.",
+          "hold": 2,
+          "target": "candidates",
+          "start": 20.73,
+          "speechEnd": 31.62,
+          "end": 31.82,
+          "cue": 20.73,
+          "penEnd": 31.740000000000002
+        },
+        {
+          "id": "outcome1",
+          "text": "You can now differentiate motion functions.",
+          "hold": 0,
+          "caption": "✓ Differentiate motion functions.",
+          "start": 33.82,
+          "speechEnd": 36.46,
+          "end": 36.66,
+          "cue": 33.96,
+          "penEnd": 36.58
+        },
+        {
+          "id": "outcome2",
+          "text": "Find integration constants.",
+          "hold": 0,
+          "caption": "✓ Find integration constants.",
+          "start": 36.66,
+          "speechEnd": 38.25,
+          "end": 38.45,
+          "cue": 36.7,
+          "penEnd": 38.370000000000005
+        },
+        {
+          "id": "outcome3",
+          "text": "And read a signed journey.",
+          "hold": 0,
+          "caption": "✓ Read a signed journey.",
+          "start": 38.45,
+          "speechEnd": 40.84,
+          "end": 41.04,
+          "cue": 38.45,
+          "penEnd": 40.96
+        }
+      ],
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 17.73,
+          "end": 20.73,
+          "duration": 3
+        },
+        {
+          "kind": "hold",
+          "start": 31.82,
+          "end": 33.82,
+          "duration": 2
+        }
+      ],
+      "audio": "using-calculus-in-1d-s08.mp3",
+      "audioSha256": "f929805a347aba1fa1bc30acf761b374409915c803dd6ec8ffb40d39de00dfe8",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "provider": "elevenlabs",
+      "sampleDuration": 41.39,
+      "words": [
+        {
+          "word": "maximum",
+          "start": 0.57,
+          "end": 0.97
+        },
+        {
+          "word": "speed,",
+          "start": 0.97,
+          "end": 1.57
+        },
+        {
+          "word": "compare",
+          "start": 2.03,
+          "end": 2.41
+        },
+        {
+          "word": "velocity",
+          "start": 2.41,
+          "end": 2.85
+        },
+        {
+          "word": "magnitudes",
+          "start": 2.85,
+          "end": 3.53
+        },
+        {
+          "word": "at",
+          "start": 3.53,
+          "end": 4.31
+        },
+        {
+          "word": "stationary",
+          "start": 4.31,
+          "end": 4.89
+        },
+        {
+          "word": "velocity",
+          "start": 4.89,
+          "end": 5.37
+        },
+        {
+          "word": "points",
+          "start": 5.37,
+          "end": 5.99
+        },
+        {
+          "word": "and",
+          "start": 5.99,
+          "end": 6.63
+        },
+        {
+          "word": "endpoints.",
+          "start": 6.63,
+          "end": 7.25
+        },
+        {
+          "word": "Here,",
+          "start": 7.67,
+          "end": 7.91
+        },
+        {
+          "word": "acceleration",
+          "start": 8.55,
+          "end": 8.97
+        },
+        {
+          "word": "equals",
+          "start": 8.97,
+          "end": 9.61
+        },
+        {
+          "word": "zero",
+          "start": 9.61,
+          "end": 10.17
+        },
+        {
+          "word": "at",
+          "start": 10.17,
+          "end": 10.79
+        },
+        {
+          "word": "two",
+          "start": 10.79,
+          "end": 11.01
+        },
+        {
+          "word": "seconds,",
+          "start": 11.01,
+          "end": 11.39
+        },
+        {
+          "word": "where",
+          "start": 11.79,
+          "end": 12.05
+        },
+        {
+          "word": "velocity",
+          "start": 12.05,
+          "end": 12.45
+        },
+        {
+          "word": "is",
+          "start": 12.45,
+          "end": 12.73
+        },
+        {
+          "word": "minus",
+          "start": 12.73,
+          "end": 12.97
+        },
+        {
+          "word": "three.",
+          "start": 12.97,
+          "end": 13.39
+        },
+        {
+          "word": "Is",
+          "start": 13.77,
+          "end": 13.89
+        },
+        {
+          "word": "that",
+          "start": 13.89,
+          "end": 14.03
+        },
+        {
+          "word": "the",
+          "start": 14.03,
+          "end": 14.15
+        },
+        {
+          "word": "maximum",
+          "start": 14.15,
+          "end": 14.51
+        },
+        {
+          "word": "speed?",
+          "start": 14.51,
+          "end": 15.03
+        },
+        {
+          "word": "Compare",
+          "start": 15.79,
+          "end": 16.27
+        },
+        {
+          "word": "it",
+          "start": 16.27,
+          "end": 16.47
+        },
+        {
+          "word": "with",
+          "start": 16.47,
+          "end": 16.65
+        },
+        {
+          "word": "the",
+          "start": 16.65,
+          "end": 16.75
+        },
+        {
+          "word": "endpoints.",
+          "start": 16.75,
+          "end": 17.31
+        },
+        {
+          "word": "No.",
+          "start": 20.73,
+          "end": 20.95
+        },
+        {
+          "word": "Compare",
+          "start": 21.59,
+          "end": 21.91
+        },
+        {
+          "word": "speeds.",
+          "start": 21.91,
+          "end": 22.27
+        },
+        {
+          "word": "Nine",
+          "start": 23.25,
+          "end": 23.75
+        },
+        {
+          "word": "initially,",
+          "start": 23.75,
+          "end": 24.27
+        },
+        {
+          "word": "three",
+          "start": 25.11,
+          "end": 25.33
+        },
+        {
+          "word": "at",
+          "start": 25.33,
+          "end": 25.55
+        },
+        {
+          "word": "the",
+          "start": 25.55,
+          "end": 25.67
+        },
+        {
+          "word": "stationary",
+          "start": 25.67,
+          "end": 26.05
+        },
+        {
+          "word": "point,",
+          "start": 26.05,
+          "end": 26.45
+        },
+        {
+          "word": "zero",
+          "start": 26.97,
+          "end": 27.29
+        },
+        {
+          "word": "finally.",
+          "start": 27.29,
+          "end": 27.67
+        },
+        {
+          "word": "Maximum",
+          "start": 28.45,
+          "end": 29.27
+        },
+        {
+          "word": "speed,",
+          "start": 29.27,
+          "end": 29.65
+        },
+        {
+          "word": "nine",
+          "start": 30.23,
+          "end": 30.51
+        },
+        {
+          "word": "metres",
+          "start": 30.51,
+          "end": 30.85
+        },
+        {
+          "word": "per",
+          "start": 30.85,
+          "end": 31.11
+        },
+        {
+          "word": "second.",
+          "start": 31.11,
+          "end": 31.43
+        },
+        {
+          "word": "can",
+          "start": 33.96,
+          "end": 34.14
+        },
+        {
+          "word": "now",
+          "start": 34.14,
+          "end": 34.46
+        },
+        {
+          "word": "differentiate",
+          "start": 34.46,
+          "end": 35.3
+        },
+        {
+          "word": "motion",
+          "start": 35.3,
+          "end": 35.86
+        },
+        {
+          "word": "functions,",
+          "start": 35.86,
+          "end": 36.38
+        },
+        {
+          "word": "find",
+          "start": 36.7,
+          "end": 36.88
+        },
+        {
+          "word": "integration",
+          "start": 36.88,
+          "end": 37.42
+        },
+        {
+          "word": "constants,",
+          "start": 37.42,
+          "end": 38.06
+        },
+        {
+          "word": "and",
+          "start": 38.45,
+          "end": 38.62
+        },
+        {
+          "word": "red",
+          "start": 38.62,
+          "end": 38.92
+        },
+        {
+          "word": "is",
+          "start": 38.92,
+          "end": 39.48
+        },
+        {
+          "word": "signed",
+          "start": 39.48,
+          "end": 39.98
+        },
+        {
+          "word": "journey.",
+          "start": 39.98,
+          "end": 40.66
+        }
+      ],
+      "cues": {
+        "rule": 0.57,
+        "stationary": 7.67,
+        "question": 13.77,
+        "answer": 20.73,
+        "outcome1": 33.96,
+        "outcome2": 36.7,
+        "outcome3": 38.45
+      },
+      "figureEvents": [
+        {
+          "id": "word-14",
+          "wordIndex": 14,
+          "word": "zero",
+          "start": 9.61,
+          "target": "candidate-mid",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-16",
+          "wordIndex": 16,
+          "word": "two",
+          "start": 10.79,
+          "target": "candidate-mid",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-21",
+          "wordIndex": 21,
+          "word": "minus",
+          "start": 12.73,
+          "target": "candidate-mid",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-22",
+          "wordIndex": 22,
+          "word": "three.",
+          "start": 12.97,
+          "target": "candidate-mid",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-36",
+          "wordIndex": 36,
+          "word": "Nine",
+          "start": 23.25,
+          "target": "candidates",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-38",
+          "wordIndex": 38,
+          "word": "three",
+          "start": 25.11,
+          "target": "candidates",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-43",
+          "wordIndex": 43,
+          "word": "zero",
+          "start": 26.97,
+          "target": "candidates",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-47",
+          "wordIndex": 47,
+          "word": "nine",
+          "start": 30.23,
+          "target": "candidates",
+          "kind": "spoken"
+        }
+      ],
+      "wordCount": 64,
+      "text": "maximum speed, compare velocity magnitudes at stationary velocity points and endpoints. Here, acceleration equals zero at two seconds, where velocity is minus three. Is that the maximum speed? Compare it with the endpoints. No. Compare speeds. Nine initially, three at the stationary point, zero finally. Maximum speed, nine metres per second. can now differentiate motion functions, find integration constants, and red is signed journey.",
+      "duration": 41.430204
+    }
+  ],
+  "totalDuration": 349.257142,
+  "engine": "faster-whisper-small (local CPU)",
+  "unresolvedCues": []
+}
