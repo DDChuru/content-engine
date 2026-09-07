@@ -520,6 +520,58 @@ def clean_token(value):
     return re.sub(r"[^a-z0-9]", "", value.lower())
 
 
+# Diagram emphasis is resolved from spoken words, including repeated mentions.
+# These are visual annotations only: the six approved narration files stay intact.
+FOCUS_PHRASES = {
+    "s01": {"surface": ["smooth contact"]},
+    "s02": {"real": ["real problem"], "assumptions": ["choose assumptions"],
+            "equations": ["equations", "graph"], "check": ["check whether"], "refine": ["refine"]},
+    "s03": {"stone": ["stone", "particle", "size shape and spin"],
+            "air": ["air and wind", "air resistance"], "gravity": ["gravity"],
+            "trajectory": ["two or three dimensional", "vertical fall", "two or three dimensions"],
+            "zero-time": ["at zero"], "one-time": ["one second"], "water": ["two seconds", "water"],
+            "twenty": ["twenty metres", "20 metres", "twenty meters", "20 meters"],
+            "fifteen": ["fifteen metres", "15 metres", "fifteen meters", "15 meters", "gives fifteen"],
+            "question": ["is one metre", "is one meter"]},
+    "s04": {"body": ["particle", "dimensions"], "surface": ["smooth", "rough", "friction"],
+            "rod": ["rod", "beam", "uniform", "uneven mass"], "centre": ["centre", "center"],
+            "string": ["light", "heavy string", "inextensible", "stretching string"],
+            "pulley": ["fixed pulley"], "acceleration": ["equal acceleration", "different directions"]},
+    "s05": {"box": ["box"], "surface": ["desk", "smooth surface"], "pulley": ["pulley", "smooth pulley"],
+            "sphere": ["hanging sphere"], "body": ["particle", "point model"],
+            "string": ["string", "light", "inextensible", "in extensible", "fixed length"],
+            "air": ["ignoring air resistance", "neglecting air resistance", "drag"],
+            "tension": ["same tension", "both sides"], "acceleration": ["same acceleration", "movements"],
+            "q-particle": ["ignoring air resistance"], "q-light": ["ignore string mass"],
+            "q-pulley": ["same tension on both sides"], "q-surface": ["ignore desk friction"],
+            "q-string": ["same acceleration magnitude", "same acceleration magnitudes"]},
+    "s06": {"surface": ["modelling words", "modeling words"], "cycle": ["cycle", "simplify", "check"]},
+}
+
+
+def resolve_focus(scene_id, words, holds=()):
+    normalized = [clean_token(word["word"]) for word in words]
+    events = []
+    for target, phrases in FOCUS_PHRASES[scene_id].items():
+        for phrase in phrases:
+            tokens = [clean_token(part) for part in phrase.split()]
+            for index in range(len(words) - len(tokens) + 1):
+                if normalized[index:index + len(tokens)] == tokens:
+                    start = words[index]["start"]
+                    # Whisper can place a word onset a few frames inside inserted
+                    # silence. Speech resumes at the known PCM beat boundary.
+                    start = next((hold["end"] for hold in holds
+                                  if hold["start"] < start < hold["end"]), start)
+                    events.append({"target": target, "phrase": phrase,
+                                   "start": start, "wordStart": words[index]["start"],
+                                   "end": words[index + len(tokens) - 1]["end"]})
+    return sorted([event for event in events if not any(
+        other is not event and other["target"] == event["target"]
+        and other["start"] <= event["start"] and other["end"] >= event["end"]
+        and len(other["phrase"]) > len(event["phrase"]) for other in events)],
+        key=lambda event: event["start"])
+
+
 def resolve_cues(words, cue_keywords, beats=None):
     """Resolve storyboard phrases to selected word timestamps (overlapping phrases are valid)."""
     cue_map = {}
@@ -671,6 +723,7 @@ def transcribe_job(model, job, generated_at, timing):
         "text": full_text,
         "words": words,
         "cues": cue_map,
+        "focus": resolve_focus(job["id"], words, timing["holds"]),
         "generatedAt": generated_at,
         "engine": ENGINE,
         **{key: timing[key] for key in ("tempo", "voiceSpeed", "voiceId", "provider", "audioSha256", "beats", "holds", "paragraphs")},
