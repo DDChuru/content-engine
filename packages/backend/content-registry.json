@@ -1045,7 +1045,8 @@
             "formulaNarration": "4e7f675",
             "formulaBuild": "2a7fc4b",
             "setupNarration": "444628f",
-            "setupBuild": "9df0a38"
+            "setupBuild": "9df0a38",
+            "rings": "dbe9104"
           },
           "app": {
             "notesPage": "/notes/mechanics-multiple-collisions",
@@ -1055,7 +1056,8 @@
           "reviewNotes": [
             "Source errors corrected: 'identical' spheres with different masses; magnitude-based catch-up test replaced by signed velocities. v_B=4, w_B=1 m/s, A catches B again. 112 audited stills ≤3 regions, zero text collisions. Fable contact-sheet review passed; awaiting Durai.",
             "2026-09-07 Durai: disliked text-only card frames (§10) and working not leading with the formula (§11). Fixed: 30→0 text-only frames, compact captions, 'Momentum before = momentum after' + symbol line before numbers (S04/S06 re-voiced). 5:44, 217 stills. Fable contact-sheet review passed.",
-            "2026-09-07 §13: 'The whole problem' set-up scene (question card + all givens on diagram, story narration); before-velocities above / after below on collision diagrams; results written back. 6:40, 245 stills, 15 negative controls. Fable review passed; nit: problem-card text small."
+            "2026-09-07 §13: 'The whole problem' set-up scene (question card + all givens on diagram, story narration); before-velocities above / after below on collision diagrams; results written back. 6:40, 245 stills, 15 negative controls. Fable review passed; nit: problem-card text small.",
+            "2026-09-07 §14: word-timed rings on spoken figures, substitution-source rings, problem-card underline sweep (114 refs, 16 substitutions, 603 stills). Fable review passed. B test render of this composition: 17 min vs 8 min on A."
           ]
         }
       },
