@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Audit Multiple Collisions cue, hold, contact and motion stills; no video render."""
-import argparse, concurrent.futures, hashlib, json, math, subprocess
+import argparse, concurrent.futures, hashlib, json, math, re, subprocess
 from pathlib import Path
 from PIL import Image, ImageChops
 ROOT=Path(__file__).resolve().parents[2]
@@ -41,6 +41,9 @@ def audit_frames(scenes):
         if s['id'] in ('s04','s06'):
             t=s['cues']['draw'];w=next(w for w in s['words'] if w['end']>=t and w['start']>=t-.08)
             frame=offset+math.floor(w['end']*30);frames.setdefault(frame,[]).append(s['id']+':setup-complete')
+            add((s['cues']['principle']+s['cues']['principle-end'])/2,'principle-writing')
+            add((s['cues']['formula']+s['cues']['formula-end'])/2,'formula-writing')
+            add(s['cues']['equation']-.1,'before-substitution')
         if s['id']=='s03':
             for key in ('first','second'):
                 add(s['cues'][key]-.06,key+'-before')
@@ -96,6 +99,17 @@ def main():
         spheres=row['spheres']
         for a,b in zip(spheres,spheres[1:]):assert b['x']-a['x']>=a['radius']+b['radius']-.1,row
         if any(k.startswith('s03:') and k.split(':')[1] not in ('transition','scene-start') for k in labels):assert not row['cards'],row
+        ink={line['id']:line for line in row['inkLines']}
+        if any(k.endswith('principle-writing') for k in labels):
+            assert set(ink)=={'principle'} and not ink['principle']['complete'],row
+        if any(k.endswith('formula-writing') for k in labels):
+            assert set(ink)=={'principle','formula'} and ink['principle']['complete'] and not ink['formula']['complete'],row
+        if set(ink)&{'equation','simplify','solve'} or any(k.endswith('before-substitution') for k in labels):
+            assert ink['principle']['complete'] and ink['formula']['complete'],row
+            assert ink['principle']['text']=='Momentum before = momentum after',row
+            assert ink['formula']['text'] in ('mA uA + mB uB = mA vA + mB vB','mB uB + mC uC = mB vB + mC vC'),row
+        for line in ink.values():
+            assert line['start']<line['end'],row
         return {'image':p.name,**row,'cueLabels':labels}
     with concurrent.futures.ThreadPoolExecutor(max_workers=args.workers) as pool:rows=list(pool.map(verify,sorted(frames.items())))
     hashes=[]
@@ -115,6 +129,18 @@ def main():
     after=next(b for b in labelled['s02:velocity-changed']['spheres'] if b['id']=='B')
     assert before['velocity']!=after['velocity'],(before,after)
     assert {'vB','wB'}<={l['text'] for l in labelled['s02:unique']['labels']},labelled['s02:unique']
+    for s in scenes:
+        if s['id'] not in ('s04','s06'):continue
+        c=s['cues'];assert c['principle']<c['principle-end']<c['formula']<c['formula-end']<c['equation'],s['id']
+        written={line['id']:line for line in labelled[s['id']+':before-substitution']['inkLines']}
+        for key in ('principle','formula'):
+            assert written[key]['start']==c[key] and written[key]['end']==c[key+'-end'],written
+        first,last=('a','b') if s['id']=='s04' else ('b','c')
+        expected=f'mass {first} times u {first} plus mass {last} times u {last} equals mass {first} times v {first} plus mass {last} times v {last}'
+        spoken=' '.join(w['word'] for w in s['words'] if w['end']>c['formula'] and w['start']<c['formula-end'])
+        normalize=lambda text:re.sub('[^a-z0-9]','',text.lower())
+        assert normalize(spoken)==normalize(expected),(s['id'],spoken)
+        if s['id']=='s06':assert written['notation']['text']=='vB = wB' and written['notation']['complete'],written
     report={'stillCount':len(rows),'pixelCheckedStillCount':len(rows),'textOnlyCount':sum(r['textOnly'] for r in rows),'maxCaptionWords':max(r['maxCaptionWords'] for r in rows),'maxCaptionWidthRatio':max(r['maxCaptionWidthRatio'] for r in rows),'maxRegions':max(r['regions'] for r in rows),'maxWords':max(r['maxWords'] for r in rows),'textCollisionCount':sum(len(r['textCollisions']) for r in rows),'identicalHoldPairs':len(holds),'holdHashes':hashes,'contactChecks':3,'measurements':rows}
     (args.output/'verify-measurements.json').write_text(json.dumps(report,indent=2)+'\n')
     print(f"Passed {len(rows)} stills, {len(holds)} frozen holds, 3 contacts; {report['textOnlyCount']} text-only stills; max {report['maxRegions']} regions / {report['maxCaptionWords']} caption words.")
