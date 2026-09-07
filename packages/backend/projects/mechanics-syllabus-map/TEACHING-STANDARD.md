@@ -133,3 +133,20 @@ Durai, on a paper panel that opened with "1×4 + 2×3 = 1×2 + 2v_B": "here we a
 - Narration says the formula as it is written ("mass times velocity before equals mass times velocity after").
 - The formula line stays visible on the paper while the numbers are worked beneath it; ring the result as usual.
 - This is what the examiner marks: method marks come from the formula line.
+
+## 12. Revisions start from the version Durai liked (Durai, 2026-09-07, after seeing Sol's original Drawing travel graphs again)
+
+Durai: "this was good; we just needed to tell the story well on the lift, because we get into it without mentioning
+what we are talking about — 'a lift travels...', 'a ball travels...' — before we get into it properly. Then at the end
+add 'consider a cyclist' and do the graph: first the full displacement, later the velocity on the side, without going
+back and forth, which was confusing. Do the graphs in the same style as Sol's original — I loved these graphs, and I
+think you removed them on the other tutorial too. It was just a matter of taking a pause, explaining the story visually,
+and pacing the explanation with the context of the problem in mind."
+
+- When Durai reviews a video, the fix is ADDITIVE to the version he reviewed: keep its scenes, its graph style and
+  its visuals; add the story set-up, the pause, the pacing. Do not restyle, re-scope or rebuild unless he says so.
+- Sol-style graphs (shaded areas, colour-linked segments, tracing dot, the lift/ball diagrams) are the house style
+  for kinematics. §2/§3 remove lab CHROME and micro-labels only; they never remove the graphs' richness.
+- Journey close: draw ONE graph completely (displacement-time), then bring in the velocity-time graph beside it
+  and read it leg by leg. Never alternate between the two graphs mid-leg.
+- Every example: "Consider a lift that..." / "Consider a ball thrown..." spoken over the bare diagram first (§8).
