@@ -31,7 +31,10 @@ for(const model of [physics.LIFT_MODEL,physics.BALL_MODEL,physics.WORD_MODEL])fo
    sceneOffsets[scene.id]=offset;
    add(offset+20,`${scene.id}:opening`,scene.id);
    if(scene.id==='s01')add(offset+150,'s01:outcomes',scene.id);
-   for(const [id,time] of Object.entries(scene.cues))add(offset+Math.ceil(time*30)+15,`${scene.id}:${id}`,scene.id);
+   for(const [id,time] of Object.entries(scene.cues)){
+     add(offset+Math.ceil(time*30),`${scene.id}:${id}:exact-cue`,scene.id);
+     add(offset+Math.ceil(time*30)+15,`${scene.id}:${id}`,scene.id);
+   }
    for(const h of scene.holds||[]){
      if(h.kind!=='hold')continue;
      const start=offset+Math.ceil(h.start*30),end=start+59;
@@ -47,7 +50,7 @@ for(const model of [physics.LIFT_MODEL,physics.BALL_MODEL,physics.WORD_MODEL])fo
  const items=[...frames.values()].sort((a,b)=>a.frame-b.frame);
  const measurements=[];
  // Reuse one browser; modest concurrency keeps host B responsive.
- let cursor=0;
+ const renderItems=async items=>{let cursor=0;
  await Promise.all(Array.from({length:2},async()=>{
    while(cursor<items.length){const item=items[cursor++];let measured;
      await renderStill({serveUrl,composition,inputProps,puppeteerInstance:browser,frame:item.frame,timeoutInMilliseconds:90000,scale:.5,imageFormat:'png',output:path.join(output,`${item.frame}.png`),onArtifact:artifact=>{measured=JSON.parse(Buffer.from(artifact.content).toString());}});
@@ -56,10 +59,21 @@ for(const model of [physics.LIFT_MODEL,physics.BALL_MODEL,physics.WORD_MODEL])fo
      fs.writeFileSync(path.join(output,`${item.frame}.json`),JSON.stringify(measured));
      console.log('Verified still',item.frame);
    }
- }));
+ }));};
+ await renderItems(items);
+ // Full cyclist audit: every individual pen-stroke completion, plus every line end.
+ // Other scenes are spot-checked at every cue and every complete handwritten line.
+ for(const row of measurements)for(const line of row.inkLayouts){
+   for(const end of [line.end,...(row.scene==='s09'?line.strokeEnds:[])]){
+     const frame=sceneOffsets[row.scene]+Math.ceil(end);
+     add(frame,`${row.scene}:pen-finish:${line.text}`,row.scene);
+   }
+ }
+ const measuredFrames=new Set(measurements.map(row=>row.frame));
+ await renderItems([...frames.values()].filter(item=>!measuredFrames.has(item.frame)).sort((a,b)=>a.frame-b.frame));
  const violations=[];
  for(const row of measurements){
-   if(row.axisCollisions.length||row.overflow)violations.push(row);
+   if(row.axisCollisions.length||row.inkCollisions.length||row.overflow)violations.push(row);
    const cap=['s04','s06','s01','s08'].includes(row.scene)?4:3;
    if(row.regions>cap)violations.push({...row,reason:'region count'});
    if(row.scene==='s09'&&row.labels.some(x=>x==='s09:displacement-complete'))assert.deepEqual(row.graphs,['displacement']);
@@ -67,6 +81,7 @@ for(const model of [physics.LIFT_MODEL,physics.BALL_MODEL,physics.WORD_MODEL])fo
  const closing=transcript.scenes.find(s=>s.id==='s09');
  for(const row of measurements.filter(r=>r.scene==='s09')) {
    assert(row.regions>=1,'Text-only cyclist frame');
+   assert(row.givens.some(text=>['0–4 s','4–6 s','6–9 s','9–14 s'].every(leg=>text.includes(leg))),'Missing cyclist givens');
    if(row.frame<sceneOffsets.s09+closing.cues.velocity*30)assert(!row.graphs.includes('velocity'),'Velocity appeared before displacement was finished');
  }
  const motion={};
@@ -90,9 +105,9 @@ for(const model of [physics.LIFT_MODEL,physics.BALL_MODEL,physics.WORD_MODEL])fo
    }
    holdResults.push({...h,retries,identical:hash(h.start)===hash(h.end)});
  }
- const report={motion,durationFrames:composition.durationInFrames,durationSeconds:composition.durationInFrames/30,stillCount:measurements.length,axisCollisionCount:measurements.reduce((n,r)=>n+r.axisCollisions.length,0),maxRegions:Math.max(...measurements.map(r=>r.regions)),holdResults,violations,measurements};
+ const report={inkCollisionCount:measurements.reduce((n,r)=>n+r.inkCollisions.length,0),inkOverflowCount:measurements.reduce((n,r)=>n+r.inkOverflow.length,0),penFinishFrames:measurements.filter(r=>r.labels.some(label=>label.includes(":pen-finish:"))).length,motion,durationFrames:composition.durationInFrames,durationSeconds:composition.durationInFrames/30,stillCount:measurements.length,axisCollisionCount:measurements.reduce((n,r)=>n+r.axisCollisions.length,0),maxRegions:Math.max(...measurements.map(r=>r.regions)),holdResults,violations,measurements};
  fs.writeFileSync(path.join(output,'verify-measurements.json'),JSON.stringify(report,null,2)+'\n');
- console.log(JSON.stringify({stills:report.stillCount,collisions:report.axisCollisionCount,violations:violations.length,movingHolds:holdResults.filter(h=>!h.identical).length}));
+ console.log(JSON.stringify({stills:report.stillCount,collisions:report.axisCollisionCount,inkCollisions:report.inkCollisionCount,inkOverflow:report.inkOverflowCount,penFinishFrames:report.penFinishFrames,violations:violations.length,movingHolds:holdResults.filter(h=>!h.identical).length}));
  assert.equal(violations.length,0,'See verify-measurements.json');
  assert(holdResults.every(h=>h.identical),'A silent hold moved');
  } finally {await browser.close({silent:true});}

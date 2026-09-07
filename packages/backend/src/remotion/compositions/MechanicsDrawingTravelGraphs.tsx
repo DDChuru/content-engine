@@ -412,13 +412,19 @@ const HandwrittenLine: React.FC<{
   y: number;
   size?: number;
   color?: string;
-}> = ({ text, frame, start, end, x, y, size = 29, color = T.blueInk }) => {
+  panel?: string;
+}> = ({ text, frame, start, end, x, y, size = 29, color = T.blueInk, panel = "working" }) => {
   if (end <= start) throw new Error(`Invalid handwriting window: ${text}`);
   const prepared = useMemo(() => prepareLine(text, size), [text, size]);
+  // Measure the entire final stroke geometry, including stroke width, even mid-write.
+  const points = prepared.strokes.flatMap(stroke => stroke.points);
+  const extent = {left: Math.min(...points.map(p => p[0])) - 1.55, top: Math.min(...points.map(p => p[1])) - 1.55,
+    right: Math.max(...points.map(p => p[0])) + 1.55, bottom: Math.max(...points.map(p => p[1])) + 1.55};
   const lineProgress = progressAt(frame, start, end);
   let tip: Point | null = null;
   return (
-    <g data-ink-text={text} data-ink-complete={frame>=end ? "true" : "false"} transform={`translate(${x} ${y})`} fill="none" strokeLinecap="round" strokeLinejoin="round">
+    <g data-ink-text={text} data-ink-panel-id={panel} data-ink-active={frame>start ? "true" : "false"} data-ink-end={end} data-ink-stroke-ends={JSON.stringify(prepared.strokes.map(stroke => start + stroke.end * (end-start)))} data-ink-complete={frame>=end ? "true" : "false"} transform={`translate(${x} ${y})`} fill="none" strokeLinecap="round" strokeLinejoin="round">
+      <rect data-ink-extent="true" x={extent.left} y={extent.top} width={extent.right-extent.left} height={extent.bottom-extent.top} fill="none" stroke="none"/>
       {prepared.strokes.map((stroke, index) => {
         const strokeProgress = clamp01((lineProgress - stroke.start) / Math.max(.0001, stroke.end - stroke.start));
         if (strokeProgress > 0 && strokeProgress < 1) tip = pointOnStroke(stroke.points, strokeProgress);
@@ -431,7 +437,7 @@ const HandwrittenLine: React.FC<{
 
 const PaperRules: React.FC<{ x: number; y: number; width: number; height: number }> = ({ x, y, width, height }) => (
   <g data-region="paper">
-    <rect x={x} y={y} width={width} height={height} rx={20} fill={T.paper} stroke={T.amber} strokeWidth={3} />
+    <rect data-ink-panel="working" x={x} y={y} width={width} height={height} rx={20} fill={T.paper} stroke={T.amber} strokeWidth={3} />
     {Array.from({ length: Math.floor(height / 54) }, (_, index) => y + 54 + index * 54).map((lineY) => <line key={lineY} x1={x} y1={lineY} x2={x + width} y2={lineY} stroke={T.rule} strokeWidth={1.4} opacity={.72} />)}
     <line x1={x + 34} y1={y} x2={x + 34} y2={y + height} stroke={T.margin} strokeWidth={2} />
   </g>
@@ -616,6 +622,10 @@ const Scene04: React.FC<{ scene: TranscriptScene }> = ({ scene }) => {
   const ringX = [1535,1435,1435,1510,1460,1500,1510,1500];
   if (rawFrame < buildStart(scene)) return <SceneShell scene={4} label="Lift journey" displayFrame={actualFrame}>
     <Title kicker="">Consider a lift travelling upwards</Title>
+    <WarmCard region="givens" accent={T.amber} style={{position:'absolute',left:1160,top:370,width:610,padding:'24px 28px'}}>
+      <div style={{fontFamily:T.mono,fontSize:30,fontWeight:950,color:'#925000'}}>Lift journey</div>
+      <div style={{fontSize:30,lineHeight:1.5,marginTop:12}}>↑ positive · starts from rest<br/>a = 1.5 m s⁻² for 2 s<br/>Cruise for 4 s<br/>Brake to rest in 2 s</div>
+    </WarmCard>
     <svg data-region="lift" width="1920" height="800" style={{position:'absolute',top:160}}><g transform="translate(520 -60) scale(1.2)"><Lift displacement={stateAt(LIFT_MODEL,8*progressAt(actualFrame,15,buildStart(scene)-60)).displacement}/></g></svg>
   </SceneShell>;
   return <SceneShell scene={4} label="worked lift" displayFrame={frame}>
@@ -724,6 +734,10 @@ const Scene06: React.FC<{ scene: TranscriptScene }> = ({ scene }) => {
   const inspectionTrace=progressAt(frame,1770,1900);
   if (rawFrame < buildStart(scene)) return <SceneShell scene={6} label="Ball journey" displayFrame={actualFrame}>
     <Title kicker="">Consider a ball thrown straight up</Title>
+    <WarmCard region="givens" accent={T.teal} style={{position:'absolute',left:1160,top:370,width:610,padding:'24px 28px'}}>
+      <div style={{fontFamily:T.mono,fontSize:30,fontWeight:950,color:'#14745f'}}>Ball launch</div>
+      <div style={{fontSize:30,lineHeight:1.5,marginTop:12}}>↑ positive · u = 15 m s⁻¹<br/>g = 10 m s⁻² downwards<br/>No air resistance<br/>Returns to its launch point</div>
+    </WarmCard>
     <svg data-region="ball" width="1920" height="820" style={{position:'absolute',top:170}}><g transform="translate(650 0)"><BallRig {...stateAt(BALL_MODEL,3*progressAt(actualFrame,15,buildStart(scene)-60))}/></g></svg>
   </SceneShell>;
   return <SceneShell scene={6} label="ball sign check" displayFrame={frame}>
@@ -829,24 +843,33 @@ const Scene09: React.FC<{scene: TranscriptScene}> = ({scene}) => {
   const sPlot:PlotSpec={x:100,y:215,width:650,height:310,xMax:14,yMin:0,yMax:18};
   const vPlot:PlotSpec={x:100,y:215,width:650,height:310,xMax:14,yMin:-4,yMax:4};
   const labels=[['Δs = 12 m','Δt = 4 s','v = +3 m s⁻¹'],['Δs = 3 m','Δt = 2 s','v: positive to 0'],['Δs = 0 m','Δt = 3 s','v = 0'],['Δs = −15 m','Δt = 5 s','v = −3 m s⁻¹']];
+  // Lay out the complete annotation as one measured row with a clear right margin.
+  const rowWidths=labels[active].map(text=>prepareLine(text,23).width);
+  const rowScale=Math.min(1,740/(rowWidths.reduce((a,b)=>a+b,0)+48));
+  const rowX=(i:number)=>50+rowScale*(rowWidths.slice(0,i).reduce((a,b)=>a+b,0)+24*i);
   const color=active===3?T.coral:active===2?T.amber:T.teal;
   const point=stateAt(WORD_MODEL,sUntil);
   return <SceneShell scene={9} label="Cyclist journey" displayFrame={frame}>
     <Title kicker="">{!showS?'Consider a cyclist leaving A':!showV?'Complete the displacement–time graph':'Now read velocity–time beside it'}</Title>
-    <svg data-region="track" width="1920" height="180" style={{position:'absolute',top:showS?190:410}}>
-      <line x1={180} y1={145} x2={1750} y2={145} stroke={T.muted} strokeWidth={5}/>
-      <text x={205} y={179} fill={T.text} fontSize={30}>A</text>
-      <g data-cyclist-x={cyclistX} data-wheel-angle={wheelAngle} data-direction={direction} transform={`translate(${cyclistX} 112) scale(${direction} 1)`}>
+    <svg data-region="track" width="1920" height="210" style={{position:'absolute',top:showS?155:410}}>
+      <line x1={140} y1={145} x2={1080} y2={145} stroke={T.muted} strokeWidth={5}/>
+      {[{x:164,label:'A · 0 s / 14 s'},{x:826.4,label:'4 s'},{x:992,label:'6 s / 9 s'}].map(marker=><g key={marker.label}><line x1={marker.x} y1={139} x2={marker.x} y2={156} stroke={T.amber} strokeWidth={3}/><text x={marker.x} y={190} textAnchor="middle" fill={T.text} fontSize={26}>{marker.label}</text></g>)}
+      <g data-givens="cyclist">
+        <rect x={1160} y={10} width={690} height={190} rx={18} fill={T.ivory} stroke={T.teal} strokeWidth={3}/>
+        <text x={1182} y={44} fill={T.ink} fontSize={27} fontWeight={850}>Cyclist journey · away from A is positive</text>
+        {['0–4 s: cruise at +3 m/s for 4 s','4–6 s: slow from +3 to 0 m/s in 2 s','6–9 s: rest for 3 s','9–14 s: return at −3 m/s for 5 s'].map((text,i)=><text key={text} x={1182} y={78+i*34} fill={T.ink} fontSize={25}>{text}</text>)}
+      </g>
+      <g data-cyclist-x={cyclistX} data-wheel-angle={wheelAngle} data-direction={direction} transform={`translate(${32+cyclistX*.6} 112) scale(${direction} 1)`}>
         {[-42,42].map(x=><g key={x} transform={`translate(${x} 0) rotate(${wheelAngle})`}><circle r={30} fill="none" stroke={T.ivory} strokeWidth={5}/><path d="M -27 0 H 27 M 0 -27 V 27" stroke={T.muted} strokeWidth={3}/></g>)}
         <path d="M -42 0 L -17 -43 L 7 0 Z M -17 -43 L 31 -43 L 7 0 M 31 -43 L 42 0 M 31 -43 L 28 -58 L 42 -58" fill="none" stroke={T.teal} strokeWidth={6} strokeLinejoin="round"/>
         <circle cx={8} cy={-95} r={13} fill={T.ivory}/><path d="M 1 -78 L -14 -47 L 5 -30 L 7 0 M 1 -78 L 26 -60" fill="none" stroke={T.amber} strokeWidth={9} strokeLinecap="round"/>
       </g>
     </svg>
     {showS&&<svg data-region="displacement" data-graph="displacement" width="860" height="690" style={{position:'absolute',left:55,top:370,overflow:'visible'}}>
-      <rect width={860} height={660} rx={24} fill={T.ivory} stroke={T.teal} strokeWidth={3}/>
+      <rect data-ink-panel="displacement" width={860} height={660} rx={24} fill={T.ivory} stroke={T.teal} strokeWidth={3}/>
       <text x={35} y={43} fill={T.ink} fontFamily={T.mono} fontSize={29}>Displacement–time</text>
-      <HandwrittenLine text="gradient = displacement change / time change" frame={frame} start={at('formula')*30} end={at('symbols')*30-2} x={40} y={65} size={18}/>
-      <HandwrittenLine text="v = Δs/Δt" frame={frame} start={at('symbols')*30} end={at('leg1')*30-3} x={40} y={102} size={27}/>
+      <HandwrittenLine panel="displacement" text="gradient = displacement change / time change" frame={frame} start={at('formula')*30} end={at('symbols')*30-2} x={40} y={65} size={18}/>
+      <HandwrittenLine panel="displacement" text="v = Δs/Δt" frame={frame} start={at('symbols')*30} end={at('leg1')*30-3} x={40} y={102} size={27}/>
       <PlotAxes plot={sPlot} kind="displacement" xTicks={[0,4,6,9,14]} yTicks={[0,12,15]} numericEnd/>
       {legs.map((id,i)=>{
         const a=stateAt(WORD_MODEL,bounds[i]);
@@ -858,22 +881,25 @@ const Scene09: React.FC<{scene: TranscriptScene}> = ({scene}) => {
       })}
       {seconds>=answers[active]/30&&<>
         <path d={`M ${xFor(sPlot,bounds[active])} ${yFor(sPlot,stateAt(WORD_MODEL,bounds[active]).displacement)} H ${xFor(sPlot,bounds[active+1])} V ${yFor(sPlot,stateAt(WORD_MODEL,bounds[active+1]).displacement)}`} stroke={color} strokeWidth={3} strokeDasharray="8 6" fill="none"/>
-        <HandwrittenLine text="Δt" frame={frame} start={answers[active]} end={answers[active]+25} x={(xFor(sPlot,bounds[active])+xFor(sPlot,bounds[active+1]))/2-15} y={yFor(sPlot,stateAt(WORD_MODEL,bounds[active]).displacement)+12} size={22}/>
-        <HandwrittenLine text="Δs" frame={frame} start={answers[active]+25} end={answers[active]+50} x={xFor(sPlot,bounds[active+1])-38} y={(yFor(sPlot,stateAt(WORD_MODEL,bounds[active]).displacement)+yFor(sPlot,stateAt(WORD_MODEL,bounds[active+1]).displacement))/2-24} size={22}/>
-        {labels[active].map((text,i)=><HandwrittenLine key={`${active}-${text}`} text={text} frame={frame} start={answers[active]+i*(holds[active][0]-answers[active])/3} end={answers[active]+(i+1)*(holds[active][0]-answers[active])/3-2} x={i===0?110:i===1?350:560} y={616} size={23} color={T.blueInk}/>)}
-        {active===1&&<text x={180} y={638} fill={T.ink} fontSize={25}>Chord: average velocity; tangent: changing velocity</text>}
+        <HandwrittenLine panel="displacement" text="Δt" frame={frame} start={answers[active]} end={answers[active]+25} x={(xFor(sPlot,bounds[active])+xFor(sPlot,bounds[active+1]))/2-15} y={yFor(sPlot,stateAt(WORD_MODEL,bounds[active]).displacement)+12} size={22}/>
+        <HandwrittenLine panel="displacement" text="Δs" frame={frame} start={answers[active]+25} end={answers[active]+50} x={xFor(sPlot,bounds[active+1])-38} y={(yFor(sPlot,stateAt(WORD_MODEL,bounds[active]).displacement)+yFor(sPlot,stateAt(WORD_MODEL,bounds[active+1]).displacement))/2-24} size={22}/>
+        <rect data-ink-panel="displacement-notes" x={30} y={605} width={800} height={46} rx={7} fill={T.paper} stroke={T.rule}/>
+        <line x1={45} y1={646} x2={815} y2={646} stroke={T.rule} strokeWidth={1.4}/>
+        {labels[active].map((text,i)=><HandwrittenLine panel="displacement-notes" key={`${active}-${text}`} text={text} frame={frame} start={answers[active]+i*(holds[active][0]-answers[active])/3} end={answers[active]+(i+1)*(holds[active][0]-answers[active])/3-2} x={rowX(i)} y={616} size={23*rowScale} color={T.blueInk}/>)}
         <circle cx={xFor(sPlot,sUntil)} cy={yFor(sPlot,point.displacement)} r={10} fill={color}/>
       </>}
     </svg>}
     {showV&&<svg data-region="velocity" data-graph="velocity" width="860" height="690" style={{position:'absolute',left:1005,top:370,overflow:'visible'}}>
-      <rect width={860} height={660} rx={24} fill={T.ivory} stroke={T.cyan} strokeWidth={3}/><text x={35} y={43} fill={T.ink} fontFamily={T.mono} fontSize={29}>Velocity–time</text>
+      <rect data-ink-panel="velocity" width={860} height={660} rx={24} fill={T.ivory} stroke={T.cyan} strokeWidth={3}/><text x={35} y={43} fill={T.ink} fontFamily={T.mono} fontSize={29}>Velocity–time</text>
       <PlotAxes plot={vPlot} kind="velocity" xTicks={[0,4,6,9,14]} yTicks={[-3,0,3]} numericEnd/>
       <g clipPath="url(#cyclist-area-clip)"><AreaRegions model={WORD_MODEL} plot={vPlot}/></g>
       <defs><clipPath id="cyclist-area-clip"><rect x={vPlot.x} y={vPlot.y} width={vPlot.width*vUntil/14} height={vPlot.height}/></clipPath></defs>
       {velocitySegments(WORD_MODEL,vPlot).map((d,i)=><Trace key={d} d={d} progress={clamp01((vUntil-bounds[i])/(bounds[i+1]-bounds[i]))} color={i===3?T.coral:i===2?T.amber:T.cyan} width={8}/>)}
       {vActive===3&&<line x1={xFor(vPlot,9)} x2={xFor(vPlot,9)} y1={yFor(vPlot,0)} y2={yFor(vPlot,-3)} stroke={T.coral} strokeWidth={4} strokeDasharray="8 7"/>}
       <circle cx={xFor(vPlot,vUntil)} cy={yFor(vPlot,stateAt(WORD_MODEL,vUntil).velocity)} r={10} fill={T.amber}/>
-      <HandwrittenLine text={['v = +3 m s⁻¹','v: +3 to 0','v = 0','v = −3 m s⁻¹'][vActive]} frame={frame} start={at(`v${vActive+1}`)*30} end={holds[vActive+4][0]} x={210} y={616} size={30}/>
+      <rect data-ink-panel="velocity-notes" x={30} y={605} width={800} height={46} rx={7} fill={T.paper} stroke={T.rule}/>
+      <line x1={45} y1={646} x2={815} y2={646} stroke={T.rule} strokeWidth={1.4}/>
+      <HandwrittenLine panel="velocity-notes" text={['v = +3 m s⁻¹','v: +3 to 0','v = 0','v = −3 m s⁻¹'][vActive]} frame={frame} start={at(`v${vActive+1}`)*30} end={holds[vActive+4][0]} x={50} y={614} size={28}/>
     </svg>}
   </SceneShell>;
 };
@@ -901,10 +927,35 @@ function useStillAudit(enabled:boolean,rootRef:React.RefObject<HTMLDivElement|nu
       if(x.left<y.right+1&&x.right+1>y.left&&x.top<y.bottom+1&&x.bottom+1>y.top)collisions.push({text:a.textContent??'',other:b.textContent??''});
     }));
     const bounds=root.getBoundingClientRect();
-    const ink=Array.from<Element>(root.querySelectorAll('[data-ink-complete="true"]')).filter(visible);
-    const overflow=[...labels,...ink].some(el=>{const r=el.getBoundingClientRect();const canvas=el.closest('[data-scene]')?.getBoundingClientRect() ?? bounds;return r.left<canvas.left-1||r.right>canvas.right+1||r.top<canvas.top-1||r.bottom>canvas.bottom+1;});
+    const overlaps=(a:DOMRect,b:DOMRect)=>a.left<b.right&&a.right>b.left&&a.top<b.bottom&&a.bottom>b.top;
+    const outside=(a:DOMRect,b:DOMRect)=>a.left<b.left-1||a.right>b.right+1||a.top<b.top-1||a.bottom>b.bottom+1;
+    // Text-node ranges avoid treating a whole caption container as printed glyphs.
+    const printed:{text:string;bounds:DOMRect}[]=[];
+    const walker=document.createTreeWalker(root,NodeFilter.SHOW_TEXT);
+    let node:Node|null;
+    while((node=walker.nextNode())){
+      const parent=node.parentElement;
+      if(!node.textContent?.trim()||!parent||!parent.closest('[data-scene]')||!visible(parent))continue;
+      const range=document.createRange();range.selectNodeContents(node);
+      for(const box of Array.from(range.getClientRects()))if(box.width&&box.height)printed.push({text:node.textContent.trim(),bounds:box});
+    }
+    const ink=Array.from<Element>(root.querySelectorAll('[data-ink-text]')).filter(visible);
+    const inkLayouts=ink.map(el=>{
+      const extent=el.querySelector('[data-ink-extent]')!.getBoundingClientRect();
+      const panelId=el.getAttribute('data-ink-panel-id');
+      const panel=el.closest('svg')?.querySelector(`[data-ink-panel="${panelId}"]`)?.getBoundingClientRect();
+      const active=el.getAttribute('data-ink-active')==='true';
+      return {text:el.getAttribute('data-ink-text'),active,complete:el.getAttribute('data-ink-complete')==='true',
+        bounds:extent.toJSON(),panel:panelId,panelBounds:panel?.toJSON(),
+        end:Number(el.getAttribute('data-ink-end')),strokeEnds:JSON.parse(el.getAttribute('data-ink-stroke-ends')??'[]') as number[],
+        overflow:active&&(!panel||outside(extent,panel)),
+        collisions:active?printed.filter(text=>overlaps(extent,text.bounds)).map(text=>text.text):[]};
+    });
+    const inkCollisions=inkLayouts.filter(line=>line.collisions.length);
+    const inkOverflow=inkLayouts.filter(line=>line.overflow);
+    const overflow=labels.some(el=>outside(el.getBoundingClientRect(),el.closest('[data-scene]')?.getBoundingClientRect()??bounds))||inkOverflow.length>0;
     const cyclist=root.querySelector('[data-cyclist-x]');
-    setMeasurement(JSON.stringify({frame,regions:regions.length,regionNames:regions.map(el=>el.getAttribute('data-region')),axisCollisions:collisions,axisText:labels.map(el=>({text:el.textContent,bounds:el.getBoundingClientRect().toJSON(),canvas:el.closest('[data-scene]')?.getBoundingClientRect().toJSON()})),overflow,inkText:ink.map(el=>el.getAttribute('data-ink-text')),graphs:Array.from<Element>(root.querySelectorAll('[data-graph]')).filter(visible).map(el=>el.getAttribute('data-graph')),cyclist:cyclist?{x:Number(cyclist.getAttribute('data-cyclist-x')),wheelAngle:Number(cyclist.getAttribute('data-wheel-angle')),direction:Number(cyclist.getAttribute('data-direction'))}:null}));
+    setMeasurement(JSON.stringify({frame,regions:regions.length,regionNames:regions.map(el=>el.getAttribute('data-region')),axisCollisions:collisions,axisText:labels.map(el=>({text:el.textContent,bounds:el.getBoundingClientRect().toJSON(),canvas:el.closest('[data-scene]')?.getBoundingClientRect().toJSON()})),overflow,inkLayouts,inkCollisions,inkOverflow,printedText:printed,inkText:inkLayouts.filter(line=>line.complete).map(line=>line.text),givens:Array.from(root.querySelectorAll('[data-givens], [data-region="givens"]')).filter(visible).map(el=>el.textContent),graphs:Array.from<Element>(root.querySelectorAll('[data-graph]')).filter(visible).map(el=>el.getAttribute('data-graph')),cyclist:cyclist?{x:Number(cyclist.getAttribute('data-cyclist-x')),wheelAngle:Number(cyclist.getAttribute('data-wheel-angle')),direction:Number(cyclist.getAttribute('data-direction'))}:null}));
     if(auditHandle!==null)continueRender(auditHandle);
     };
     request=requestAnimationFrame(measure);
