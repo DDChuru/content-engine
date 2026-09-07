@@ -1,0 +1,111 @@
+{
+  "audioSha256": "48adad26cf87a4b04f5ae12cf85008dc0bc5ac5e5a7b5c16cc66a99b7dc33c61",
+  "measuredAt": "2026-09-06T13:54:45.262974+00:00",
+  "transcription": {
+    "provider": "local-faster-whisper",
+    "model": "Systran/faster-whisper-small",
+    "modelPath": "/home/durai/.cache/huggingface/hub/models--Systran--faster-whisper-small/snapshots/536b0662742c02347bc0e980a01041f333bce120",
+    "modelRevision": "536b0662742c02347bc0e980a01041f333bce120",
+    "modelFiles": [
+      {
+        "name": "model.bin",
+        "bytes": 483546902,
+        "sha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671"
+      },
+      {
+        "name": "config.json",
+        "bytes": 2370,
+        "sha256": "b55496ac7940a7ae47d2c01eab40edfd8701feec1229d9cce3b40014383fb828"
+      },
+      {
+        "name": "tokenizer.json",
+        "bytes": 2203239,
+        "sha256": "fb7b63191e9bb045082c79fd742a3106a12c99513ab30df4a0d47fa6cb6fd0ab"
+      },
+      {
+        "name": "vocabulary.txt",
+        "bytes": 459861,
+        "sha256": "34ce3fe1c5041027b3f8d42912270993f986dbc4bb34cf27f951e34a1e453913"
+      }
+    ],
+    "versions": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.8.2",
+      "av": "18.1.0",
+      "tokenizers": "0.23.2"
+    },
+    "pythonVersion": "3.12.3",
+    "pythonExecutable": "/tmp/si-units-faster-whisper/bin/python",
+    "device": "cpu",
+    "computeType": "float32",
+    "cpuThreads": 4,
+    "numWorkers": 1,
+    "localFilesOnly": true,
+    "settings": {
+      "language": "en",
+      "word_timestamps": true,
+      "beam_size": 5,
+      "temperature": 0,
+      "condition_on_previous_text": false,
+      "vad_filter": false,
+      "initial_prompt": "Record only work actually done.",
+      "clip_timestamps": [
+        6.9,
+        9.456327
+      ]
+    },
+    "helper": {
+      "name": "transcribe-cln-v4-local.py",
+      "bytes": 4483,
+      "sha256": "20f171356c11b09b96a919c2f3188920a47d908cf0e285930f0c2600d01745af"
+    },
+    "workflowRef": "../packages/backend/src/scripts/transcribe-mechanics-si-units-local.py"
+  },
+  "response": {
+    "language": "en",
+    "duration": 9.4273125,
+    "text": "Record only work actually done.",
+    "segments": [
+      {
+        "id": 1,
+        "start": 7.06,
+        "end": 8.98,
+        "text": " Record only work actually done.",
+        "avg_logprob": -0.47681781980726456,
+        "no_speech_prob": 0.2118707299232483
+      }
+    ],
+    "words": [
+      {
+        "word": "Record",
+        "start": 7.06,
+        "end": 7.68,
+        "probability": 0.12861542403697968
+      },
+      {
+        "word": "only",
+        "start": 7.68,
+        "end": 7.98,
+        "probability": 0.6340643763542175
+      },
+      {
+        "word": "work",
+        "start": 7.98,
+        "end": 8.28,
+        "probability": 0.864135205745697
+      },
+      {
+        "word": "actually",
+        "start": 8.28,
+        "end": 8.7,
+        "probability": 0.9325171113014221
+      },
+      {
+        "word": "done.",
+        "start": 8.7,
+        "end": 8.98,
+        "probability": 0.9942025542259216
+      }
+    ]
+  }
+}

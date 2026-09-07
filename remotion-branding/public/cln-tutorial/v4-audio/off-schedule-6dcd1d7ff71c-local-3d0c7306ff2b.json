@@ -1,0 +1,216 @@
+{
+  "audioSha256": "48adad26cf87a4b04f5ae12cf85008dc0bc5ac5e5a7b5c16cc66a99b7dc33c61",
+  "measuredAt": "2026-09-06T13:48:11.137860+00:00",
+  "transcription": {
+    "provider": "local-faster-whisper",
+    "model": "Systran/faster-whisper-small",
+    "modelPath": "/home/durai/.cache/huggingface/hub/models--Systran--faster-whisper-small/snapshots/536b0662742c02347bc0e980a01041f333bce120",
+    "modelRevision": "536b0662742c02347bc0e980a01041f333bce120",
+    "modelFiles": [
+      {
+        "name": "model.bin",
+        "bytes": 483546902,
+        "sha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671"
+      },
+      {
+        "name": "config.json",
+        "bytes": 2370,
+        "sha256": "b55496ac7940a7ae47d2c01eab40edfd8701feec1229d9cce3b40014383fb828"
+      },
+      {
+        "name": "tokenizer.json",
+        "bytes": 2203239,
+        "sha256": "fb7b63191e9bb045082c79fd742a3106a12c99513ab30df4a0d47fa6cb6fd0ab"
+      },
+      {
+        "name": "vocabulary.txt",
+        "bytes": 459861,
+        "sha256": "34ce3fe1c5041027b3f8d42912270993f986dbc4bb34cf27f951e34a1e453913"
+      }
+    ],
+    "versions": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.8.2",
+      "av": "18.1.0",
+      "tokenizers": "0.23.2"
+    },
+    "pythonVersion": "3.12.3",
+    "pythonExecutable": "/tmp/si-units-faster-whisper/bin/python",
+    "device": "cpu",
+    "computeType": "int8",
+    "cpuThreads": 4,
+    "numWorkers": 1,
+    "localFilesOnly": true,
+    "settings": {
+      "language": "en",
+      "word_timestamps": true,
+      "beam_size": 5,
+      "temperature": 0,
+      "condition_on_previous_text": false,
+      "vad_filter": false,
+      "initial_prompt": "Off-schedule lists fourteen weekly items. Check the next due date. These items stay untouched here. Record only work actually done."
+    },
+    "helper": {
+      "name": "transcribe-cln-v4-local.py",
+      "bytes": 4082,
+      "sha256": "8e2577ef433953c8a41775bb510e8edbb4694a45bebbfb290c4068474aca3a02"
+    },
+    "workflowRef": "../packages/backend/src/scripts/transcribe-mechanics-si-units-local.py"
+  },
+  "response": {
+    "language": "en",
+    "duration": 9.4273125,
+    "text": "Off-schedule lists fourteen weekly items. Check the next due date. These items stay untouched here. Record only work actually done.",
+    "segments": [
+      {
+        "id": 1,
+        "start": 0,
+        "end": 4.16,
+        "text": " Off-schedule lists fourteen weekly items. Check the next due date.",
+        "avg_logprob": -0.23468779836382184,
+        "no_speech_prob": 0.05522945150732994
+      },
+      {
+        "id": 2,
+        "start": 4.82,
+        "end": 9,
+        "text": " These items stay untouched here. Record only work actually done.",
+        "avg_logprob": -0.23468779836382184,
+        "no_speech_prob": 0.05522945150732994
+      }
+    ],
+    "words": [
+      {
+        "word": "Off",
+        "start": 0,
+        "end": 0.24,
+        "probability": 0.7477622628211975
+      },
+      {
+        "word": "-schedule",
+        "start": 0.24,
+        "end": 0.66,
+        "probability": 0.6690005213022232
+      },
+      {
+        "word": "lists",
+        "start": 0.66,
+        "end": 0.96,
+        "probability": 0.2502860426902771
+      },
+      {
+        "word": "fourteen",
+        "start": 0.96,
+        "end": 1.46,
+        "probability": 0.020212195813655853
+      },
+      {
+        "word": "weekly",
+        "start": 1.46,
+        "end": 2.02,
+        "probability": 0.9739819765090942
+      },
+      {
+        "word": "items.",
+        "start": 2.02,
+        "end": 2.52,
+        "probability": 0.9924896359443665
+      },
+      {
+        "word": "Check",
+        "start": 3.16,
+        "end": 3.34,
+        "probability": 0.9902821779251099
+      },
+      {
+        "word": "the",
+        "start": 3.34,
+        "end": 3.54,
+        "probability": 0.0003298588515008305
+      },
+      {
+        "word": "next",
+        "start": 3.54,
+        "end": 3.7,
+        "probability": 0.9906187653541565
+      },
+      {
+        "word": "due",
+        "start": 3.7,
+        "end": 3.96,
+        "probability": 0.9052004814147949
+      },
+      {
+        "word": "date.",
+        "start": 3.96,
+        "end": 4.16,
+        "probability": 0.9978175163269043
+      },
+      {
+        "word": "These",
+        "start": 4.82,
+        "end": 5.04,
+        "probability": 0.7377752661705017
+      },
+      {
+        "word": "items",
+        "start": 5.04,
+        "end": 5.46,
+        "probability": 0.9872516393661499
+      },
+      {
+        "word": "stay",
+        "start": 5.46,
+        "end": 5.92,
+        "probability": 0.9040659070014954
+      },
+      {
+        "word": "untouched",
+        "start": 5.92,
+        "end": 6.56,
+        "probability": 0.9914918541908264
+      },
+      {
+        "word": "here.",
+        "start": 6.56,
+        "end": 6.88,
+        "probability": 0.9844561815261841
+      },
+      {
+        "word": "Record",
+        "start": 7.66,
+        "end": 7.66,
+        "probability": 0.822001039981842
+      },
+      {
+        "word": "only",
+        "start": 7.66,
+        "end": 8,
+        "probability": 0.8001331686973572
+      },
+      {
+        "word": "work",
+        "start": 8,
+        "end": 8.28,
+        "probability": 0.9681702852249146
+      },
+      {
+        "word": "actually",
+        "start": 8.28,
+        "end": 8.7,
+        "probability": 0.9020929336547852
+      },
+      {
+        "word": "done.",
+        "start": 8.7,
+        "end": 9,
+        "probability": 0.9897715449333191
+      }
+    ]
+  },
+  "firstAttempt": {
+    "path": "cln-tutorial/v4-audio/off-schedule-6dcd1d7ff71c-local-f1bd5c8aabb8.json",
+    "bytes": 5542,
+    "sha256": "1c58f8338c8eeb24045a9ca176f8f0340335e3ab899b27f3cf83112b79e1fa46"
+  }
+}

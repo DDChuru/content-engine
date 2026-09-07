@@ -1,0 +1,229 @@
+{
+  "audioSha256": "027bb6e625259db4f3ca7f9f48d2c243761ce267740fa9fb311e6428dd9386dd",
+  "measuredAt": "2026-09-06T13:41:22.914883+00:00",
+  "transcription": {
+    "provider": "local-faster-whisper",
+    "model": "Systran/faster-whisper-small",
+    "modelPath": "/home/durai/.cache/huggingface/hub/models--Systran--faster-whisper-small/snapshots/536b0662742c02347bc0e980a01041f333bce120",
+    "modelRevision": "536b0662742c02347bc0e980a01041f333bce120",
+    "modelFiles": [
+      {
+        "name": "model.bin",
+        "bytes": 483546902,
+        "sha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671"
+      },
+      {
+        "name": "config.json",
+        "bytes": 2370,
+        "sha256": "b55496ac7940a7ae47d2c01eab40edfd8701feec1229d9cce3b40014383fb828"
+      },
+      {
+        "name": "tokenizer.json",
+        "bytes": 2203239,
+        "sha256": "fb7b63191e9bb045082c79fd742a3106a12c99513ab30df4a0d47fa6cb6fd0ab"
+      },
+      {
+        "name": "vocabulary.txt",
+        "bytes": 459861,
+        "sha256": "34ce3fe1c5041027b3f8d42912270993f986dbc4bb34cf27f951e34a1e453913"
+      }
+    ],
+    "versions": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.8.2",
+      "av": "18.1.0",
+      "tokenizers": "0.23.2"
+    },
+    "pythonVersion": "3.12.3",
+    "pythonExecutable": "/tmp/si-units-faster-whisper/bin/python",
+    "device": "cpu",
+    "computeType": "int8",
+    "cpuThreads": 4,
+    "numWorkers": 1,
+    "localFilesOnly": true,
+    "settings": {
+      "language": "en",
+      "word_timestamps": true,
+      "beam_size": 5,
+      "temperature": 0,
+      "condition_on_previous_text": false,
+      "vad_filter": false,
+      "hotwords": "Bakery Demo, Bill of Health, Premix Area, SSOP, NCR, Remedial, none captured, Still to do, Passed, Follow-up owed, Couldn't access, Resolved today, Pass all, Daily."
+    },
+    "helper": {
+      "name": "transcribe-cln-v4-local.py",
+      "bytes": 3747,
+      "sha256": "f9683a78e6d63afc976f3dbe4898d248fefa26ed86eb64e7f579dbdfa2d6eaf7"
+    },
+    "workflowRef": "../packages/backend/src/scripts/transcribe-mechanics-si-units-local.py"
+  },
+  "response": {
+    "language": "en",
+    "duration": 13.4675625,
+    "text": "Now pass all covers 15 remaining daily checks in premix area. The individual pass and three exceptions are excluded, confirm, only work checked clean.",
+    "segments": [
+      {
+        "id": 1,
+        "start": 0,
+        "end": 5.52,
+        "text": " Now pass all covers 15 remaining daily checks in premix area.",
+        "avg_logprob": -0.4098593189435847,
+        "no_speech_prob": 0.00298313214443624
+      },
+      {
+        "id": 2,
+        "start": 6.42,
+        "end": 12.9,
+        "text": " The individual pass and three exceptions are excluded, confirm, only work checked clean.",
+        "avg_logprob": -0.4098593189435847,
+        "no_speech_prob": 0.00298313214443624
+      }
+    ],
+    "words": [
+      {
+        "word": "Now",
+        "start": 0,
+        "end": 0.22,
+        "probability": 0.597201943397522
+      },
+      {
+        "word": "pass",
+        "start": 0.22,
+        "end": 0.56,
+        "probability": 0.4073795676231384
+      },
+      {
+        "word": "all",
+        "start": 0.56,
+        "end": 0.96,
+        "probability": 0.650353193283081
+      },
+      {
+        "word": "covers",
+        "start": 0.96,
+        "end": 1.42,
+        "probability": 0.9207596182823181
+      },
+      {
+        "word": "15",
+        "start": 1.42,
+        "end": 1.92,
+        "probability": 0.9523730874061584
+      },
+      {
+        "word": "remaining",
+        "start": 1.92,
+        "end": 2.64,
+        "probability": 0.9929502010345459
+      },
+      {
+        "word": "daily",
+        "start": 2.64,
+        "end": 3.48,
+        "probability": 0.9737547636032104
+      },
+      {
+        "word": "checks",
+        "start": 3.48,
+        "end": 3.88,
+        "probability": 0.9940459728240967
+      },
+      {
+        "word": "in",
+        "start": 3.88,
+        "end": 4.68,
+        "probability": 0.9762291312217712
+      },
+      {
+        "word": "premix",
+        "start": 4.68,
+        "end": 5.12,
+        "probability": 0.5587202906608582
+      },
+      {
+        "word": "area.",
+        "start": 5.12,
+        "end": 5.52,
+        "probability": 0.9362044334411621
+      },
+      {
+        "word": "The",
+        "start": 6.42,
+        "end": 6.56,
+        "probability": 0.9381096363067627
+      },
+      {
+        "word": "individual",
+        "start": 6.56,
+        "end": 6.96,
+        "probability": 0.9906869530677795
+      },
+      {
+        "word": "pass",
+        "start": 6.96,
+        "end": 7.36,
+        "probability": 0.9658863544464111
+      },
+      {
+        "word": "and",
+        "start": 7.36,
+        "end": 8.2,
+        "probability": 0.9081839323043823
+      },
+      {
+        "word": "three",
+        "start": 8.2,
+        "end": 8.46,
+        "probability": 0.6205756068229675
+      },
+      {
+        "word": "exceptions",
+        "start": 8.46,
+        "end": 8.94,
+        "probability": 0.9950516819953918
+      },
+      {
+        "word": "are",
+        "start": 8.94,
+        "end": 9.42,
+        "probability": 0.9876818060874939
+      },
+      {
+        "word": "excluded,",
+        "start": 9.42,
+        "end": 10,
+        "probability": 0.993881344795227
+      },
+      {
+        "word": "confirm,",
+        "start": 10.58,
+        "end": 11.06,
+        "probability": 0.9359044432640076
+      },
+      {
+        "word": "only",
+        "start": 11.62,
+        "end": 11.92,
+        "probability": 0.9758711457252502
+      },
+      {
+        "word": "work",
+        "start": 11.92,
+        "end": 12.2,
+        "probability": 0.9008204936981201
+      },
+      {
+        "word": "checked",
+        "start": 12.2,
+        "end": 12.52,
+        "probability": 0.9749199748039246
+      },
+      {
+        "word": "clean.",
+        "start": 12.52,
+        "end": 12.9,
+        "probability": 0.9247446060180664
+      }
+    ]
+  }
+}

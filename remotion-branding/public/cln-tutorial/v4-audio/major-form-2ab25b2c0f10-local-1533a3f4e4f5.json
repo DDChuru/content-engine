@@ -1,0 +1,149 @@
+{
+  "audioSha256": "edcad6e150b9bca15da828ddaa75e51565de0a1235c046a3855cea32b199c3d6",
+  "measuredAt": "2026-09-06T13:39:36.954044+00:00",
+  "transcription": {
+    "provider": "local-faster-whisper",
+    "model": "Systran/faster-whisper-small",
+    "modelPath": "/home/durai/.cache/huggingface/hub/models--Systran--faster-whisper-small/snapshots/536b0662742c02347bc0e980a01041f333bce120",
+    "modelRevision": "536b0662742c02347bc0e980a01041f333bce120",
+    "modelFiles": [
+      {
+        "name": "model.bin",
+        "bytes": 483546902,
+        "sha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671"
+      },
+      {
+        "name": "config.json",
+        "bytes": 2370,
+        "sha256": "b55496ac7940a7ae47d2c01eab40edfd8701feec1229d9cce3b40014383fb828"
+      },
+      {
+        "name": "tokenizer.json",
+        "bytes": 2203239,
+        "sha256": "fb7b63191e9bb045082c79fd742a3106a12c99513ab30df4a0d47fa6cb6fd0ab"
+      },
+      {
+        "name": "vocabulary.txt",
+        "bytes": 459861,
+        "sha256": "34ce3fe1c5041027b3f8d42912270993f986dbc4bb34cf27f951e34a1e453913"
+      }
+    ],
+    "versions": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.8.2",
+      "av": "18.1.0",
+      "tokenizers": "0.23.2"
+    },
+    "pythonVersion": "3.12.3",
+    "pythonExecutable": "/tmp/si-units-faster-whisper/bin/python",
+    "device": "cpu",
+    "computeType": "int8",
+    "cpuThreads": 4,
+    "numWorkers": 1,
+    "localFilesOnly": true,
+    "settings": {
+      "language": "en",
+      "word_timestamps": true,
+      "beam_size": 5,
+      "temperature": 0,
+      "condition_on_previous_text": false,
+      "vad_filter": false,
+      "hotwords": "Bakery Demo, Bill of Health, Premix Area, SSOP, NCR, Remedial, none captured, Still to do, Passed, Follow-up owed, Couldn't access, Resolved today, Pass all, Daily."
+    },
+    "helper": {
+      "name": "transcribe-cln-v4-local.py",
+      "bytes": 3747,
+      "sha256": "f9683a78e6d63afc976f3dbe4898d248fefa26ed86eb64e7f579dbdfa2d6eaf7"
+    },
+    "workflowRef": "../packages/backend/src/scripts/transcribe-mechanics-si-units-local.py"
+  },
+  "response": {
+    "language": "en",
+    "duration": 4.736875,
+    "text": "For a failed check, tap the red cross to open remedial action.",
+    "segments": [
+      {
+        "id": 1,
+        "start": 0,
+        "end": 4.26,
+        "text": " For a failed check, tap the red cross to open remedial action.",
+        "avg_logprob": -0.23767868181069693,
+        "no_speech_prob": 0.008965589106082916
+      }
+    ],
+    "words": [
+      {
+        "word": "For",
+        "start": 0,
+        "end": 0.2,
+        "probability": 0.6448435187339783
+      },
+      {
+        "word": "a",
+        "start": 0.2,
+        "end": 0.4,
+        "probability": 0.9347378015518188
+      },
+      {
+        "word": "failed",
+        "start": 0.4,
+        "end": 0.64,
+        "probability": 0.765483558177948
+      },
+      {
+        "word": "check,",
+        "start": 0.64,
+        "end": 0.96,
+        "probability": 0.9835554957389832
+      },
+      {
+        "word": "tap",
+        "start": 1.34,
+        "end": 1.74,
+        "probability": 0.9859565496444702
+      },
+      {
+        "word": "the",
+        "start": 1.74,
+        "end": 1.94,
+        "probability": 0.9890604019165039
+      },
+      {
+        "word": "red",
+        "start": 1.94,
+        "end": 2.14,
+        "probability": 0.7899206280708313
+      },
+      {
+        "word": "cross",
+        "start": 2.14,
+        "end": 2.48,
+        "probability": 0.9808957576751709
+      },
+      {
+        "word": "to",
+        "start": 2.48,
+        "end": 2.94,
+        "probability": 0.9854732155799866
+      },
+      {
+        "word": "open",
+        "start": 2.94,
+        "end": 3.3,
+        "probability": 0.9916610717773438
+      },
+      {
+        "word": "remedial",
+        "start": 3.3,
+        "end": 3.96,
+        "probability": 0.9844238758087158
+      },
+      {
+        "word": "action.",
+        "start": 3.96,
+        "end": 4.26,
+        "probability": 0.9866902828216553
+      }
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "provider": "ElevenLabs",
+  "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+  "requestHash": "885c90ce4af47db4b5e00dd059116330f74b25d1536b715ffbea6f9d1c6d6b16",
+  "request": {
+    "text": "The starting point is two hundred and thirty-five still to do, with none captured. Open the area.",
+    "model_id": "eleven_multilingual_v2",
+    "voice_settings": {
+      "stability": 0.55,
+      "similarity_boost": 0.8,
+      "style": 0.35,
+      "use_speaker_boost": true
+    }
+  },
+  "generatedAt": "2026-09-06T13:33:30.053Z",
+  "requestId": "kX3XZK4RvmGGIMCV0NMK",
+  "audio": {
+    "path": "cln-tutorial/v4-audio/baseline-885c90ce4af4.mp3",
+    "bytes": 119998,
+    "sha256": "93cf0c46989c803c33452629e6c36a0933bd752017a52a339fe62a6b4f007f1c"
+  }
+}

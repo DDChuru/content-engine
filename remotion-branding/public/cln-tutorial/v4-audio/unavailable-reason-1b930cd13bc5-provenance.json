@@ -1,0 +1,22 @@
+{
+  "provider": "ElevenLabs",
+  "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+  "requestHash": "1b930cd13bc54e87c0948991c8f2ee30c49cc27a512afeeae3b526b85f8aeab4",
+  "request": {
+    "text": "For Mixing Bowls, choose Unavailable. Record why access was not possible and the next step, if useful.",
+    "model_id": "eleven_multilingual_v2",
+    "voice_settings": {
+      "stability": 0.55,
+      "similarity_boost": 0.8,
+      "style": 0.35,
+      "use_speaker_boost": true
+    }
+  },
+  "generatedAt": "2026-09-06T13:40:37.246Z",
+  "requestId": "eJNpCh71H4P16ZRoZXDA",
+  "audio": {
+    "path": "cln-tutorial/v4-audio/unavailable-reason-1b930cd13bc5.mp3",
+    "bytes": 144657,
+    "sha256": "e2ac77a4361fe3a1dfe1f346c4025978b6a86b474562f01a10815ba5e3d1c9bc"
+  }
+}

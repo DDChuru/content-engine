@@ -1,0 +1,22 @@
+{
+  "provider": "ElevenLabs",
+  "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+  "requestHash": "aaa27ab09111a69151572ead4bda11fb88e67a976918b4b5c9bad96163a5d3ea",
+  "request": {
+    "text": "Still to do stays at two hundred and sixteen. Passed stays sixteen; follow-up owed drops to one; couldn't access stays one. Blue Covers is resolved today. Its original fail and nineteen captured checks are unchanged.",
+    "model_id": "eleven_multilingual_v2",
+    "voice_settings": {
+      "stability": 0.55,
+      "similarity_boost": 0.8,
+      "style": 0.35,
+      "use_speaker_boost": true
+    }
+  },
+  "generatedAt": "2026-09-06T13:42:38.441Z",
+  "requestId": "XTpGcAu1BUyV8GAN8tfP",
+  "audio": {
+    "path": "cln-tutorial/v4-audio/resolved-bands-aaa27ab09111.mp3",
+    "bytes": 318946,
+    "sha256": "cff7bb2e20f4c56a7cd4ef10a837f1068969bb536e810719e83e90b7aba84483"
+  }
+}

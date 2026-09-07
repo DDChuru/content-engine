@@ -1,0 +1,113 @@
+{
+  "audioSha256": "2e7062bc23a504b6b0f2cd2e7d169e0b9c7bf37e3574cd45b70bb8405561416a",
+  "measuredAt": "2026-09-06T15:23:40.245216+00:00",
+  "transcription": {
+    "provider": "local-faster-whisper",
+    "model": "Systran/faster-whisper-small",
+    "modelPath": "/home/durai/.cache/huggingface/hub/models--Systran--faster-whisper-small/snapshots/536b0662742c02347bc0e980a01041f333bce120",
+    "modelRevision": "536b0662742c02347bc0e980a01041f333bce120",
+    "modelFiles": [
+      {
+        "name": "model.bin",
+        "bytes": 483546902,
+        "sha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671"
+      },
+      {
+        "name": "config.json",
+        "bytes": 2370,
+        "sha256": "b55496ac7940a7ae47d2c01eab40edfd8701feec1229d9cce3b40014383fb828"
+      },
+      {
+        "name": "tokenizer.json",
+        "bytes": 2203239,
+        "sha256": "fb7b63191e9bb045082c79fd742a3106a12c99513ab30df4a0d47fa6cb6fd0ab"
+      },
+      {
+        "name": "vocabulary.txt",
+        "bytes": 459861,
+        "sha256": "34ce3fe1c5041027b3f8d42912270993f986dbc4bb34cf27f951e34a1e453913"
+      }
+    ],
+    "versions": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.8.2",
+      "av": "18.1.0",
+      "tokenizers": "0.23.2"
+    },
+    "pythonVersion": "3.12.3",
+    "pythonExecutable": "/tmp/si-units-faster-whisper/bin/python",
+    "device": "cpu",
+    "computeType": "int8",
+    "cpuThreads": 4,
+    "numWorkers": 1,
+    "localFilesOnly": true,
+    "settings": {
+      "language": "en",
+      "word_timestamps": true,
+      "beam_size": 5,
+      "temperature": 0,
+      "condition_on_previous_text": false,
+      "vad_filter": false,
+      "hotwords": "Bakery Demo, Bill of Health, Premix Area, SSOP, NCR, Remedial, none captured, Still to do, Passed, Follow-up owed, Couldn't access, Resolved today, Pass all, Daily."
+    },
+    "helper": {
+      "name": "transcribe-cln-v4-local.py",
+      "bytes": 4483,
+      "sha256": "20f171356c11b09b96a919c2f3188920a47d908cf0e285930f0c2600d01745af"
+    },
+    "workflowRef": "../packages/backend/src/scripts/transcribe-mechanics-si-units-local.py"
+  },
+  "response": {
+    "language": "en",
+    "duration": 2.229125,
+    "text": "From home, tap the bottom scan.",
+    "segments": [
+      {
+        "id": 1,
+        "start": 0,
+        "end": 1.74,
+        "text": " From home, tap the bottom scan.",
+        "avg_logprob": -0.28966816988858307,
+        "no_speech_prob": 0.005502659361809492
+      }
+    ],
+    "words": [
+      {
+        "word": "From",
+        "start": 0,
+        "end": 0.2,
+        "probability": 0.8282333016395569
+      },
+      {
+        "word": "home,",
+        "start": 0.2,
+        "end": 0.5,
+        "probability": 0.8314036726951599
+      },
+      {
+        "word": "tap",
+        "start": 0.8,
+        "end": 1.1,
+        "probability": 0.9813491702079773
+      },
+      {
+        "word": "the",
+        "start": 1.1,
+        "end": 1.24,
+        "probability": 0.9949304461479187
+      },
+      {
+        "word": "bottom",
+        "start": 1.24,
+        "end": 1.44,
+        "probability": 0.9119079113006592
+      },
+      {
+        "word": "scan.",
+        "start": 1.44,
+        "end": 1.74,
+        "probability": 0.9420526623725891
+      }
+    ]
+  }
+}

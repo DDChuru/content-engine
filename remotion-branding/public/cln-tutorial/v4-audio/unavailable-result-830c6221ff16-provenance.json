@@ -1,0 +1,22 @@
+{
+  "provider": "ElevenLabs",
+  "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+  "requestHash": "830c6221ff163b4c6cda62a571811268cd71f877d76d2f97fda9eabc77a56d19",
+  "request": {
+    "text": "Unavailable recorded confirms the access outcome. It is not a pass.",
+    "model_id": "eleven_multilingual_v2",
+    "voice_settings": {
+      "stability": 0.55,
+      "similarity_boost": 0.8,
+      "style": 0.35,
+      "use_speaker_boost": true
+    }
+  },
+  "generatedAt": "2026-09-06T13:41:00.149Z",
+  "requestId": "znS3sl9QAs0zhc5XsxFN",
+  "audio": {
+    "path": "cln-tutorial/v4-audio/unavailable-result-830c6221ff16.mp3",
+    "bytes": 81964,
+    "sha256": "842e071b9c16f297d035203e089bc5c3f52c2c6b7a78094bc3ab2f3279919569"
+  }
+}

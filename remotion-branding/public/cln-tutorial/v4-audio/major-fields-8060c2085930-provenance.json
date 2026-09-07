@@ -1,0 +1,22 @@
+{
+  "provider": "ElevenLabs",
+  "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+  "requestHash": "8060c2085930ef402f9218e9b0609870af79e7061deff6325797b42e4cacf8e6",
+  "request": {
+    "text": "Choose the appropriate grade, Major here. Give the required failure reason. Action taken and a genuine photo are optional.",
+    "model_id": "eleven_multilingual_v2",
+    "voice_settings": {
+      "stability": 0.55,
+      "similarity_boost": 0.8,
+      "style": 0.35,
+      "use_speaker_boost": true
+    }
+  },
+  "generatedAt": "2026-09-07T04:20:54.856Z",
+  "requestId": "UrRpzycJJnXA66hcArgg",
+  "audio": {
+    "path": "cln-tutorial/v4-audio/major-fields-8060c2085930.mp3",
+    "bytes": 157196,
+    "sha256": "055c040c9e4a9ae861a72df19fa57ade968896054ac6981c6d4d9b0b3611a986"
+  }
+}

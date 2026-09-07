@@ -1,0 +1,22 @@
+{
+  "provider": "ElevenLabs",
+  "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+  "requestHash": "d2da1c883f50e9e8783beff0eb7751609c1811abb06b887979f430baaa6f8a63",
+  "request": {
+    "text": "After check-in, inspect the item. If it meets the cleaning requirements, tap its green tick.",
+    "model_id": "eleven_multilingual_v2",
+    "voice_settings": {
+      "stability": 0.55,
+      "similarity_boost": 0.8,
+      "style": 0.35,
+      "use_speaker_boost": true
+    }
+  },
+  "generatedAt": "2026-09-07T04:18:49.179Z",
+  "requestId": "Ij0M1R0xV9knn3hTujtH",
+  "audio": {
+    "path": "cln-tutorial/v4-audio/inspect-pass-d2da1c883f50.mp3",
+    "bytes": 111639,
+    "sha256": "600f1474b13a1a37c91fad9e56a81339972547d0a520c9364cc1b8c67cb2b8b9"
+  }
+}

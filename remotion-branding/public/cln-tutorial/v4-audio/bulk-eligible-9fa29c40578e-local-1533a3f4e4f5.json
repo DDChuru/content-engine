@@ -1,0 +1,199 @@
+{
+  "audioSha256": "874b7aecdcfec48e71e3758a59e3556db27c12ece3fd082fe69c3593b22e0a74",
+  "measuredAt": "2026-09-06T13:39:25.527269+00:00",
+  "transcription": {
+    "provider": "local-faster-whisper",
+    "model": "Systran/faster-whisper-small",
+    "modelPath": "/home/durai/.cache/huggingface/hub/models--Systran--faster-whisper-small/snapshots/536b0662742c02347bc0e980a01041f333bce120",
+    "modelRevision": "536b0662742c02347bc0e980a01041f333bce120",
+    "modelFiles": [
+      {
+        "name": "model.bin",
+        "bytes": 483546902,
+        "sha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671"
+      },
+      {
+        "name": "config.json",
+        "bytes": 2370,
+        "sha256": "b55496ac7940a7ae47d2c01eab40edfd8701feec1229d9cce3b40014383fb828"
+      },
+      {
+        "name": "tokenizer.json",
+        "bytes": 2203239,
+        "sha256": "fb7b63191e9bb045082c79fd742a3106a12c99513ab30df4a0d47fa6cb6fd0ab"
+      },
+      {
+        "name": "vocabulary.txt",
+        "bytes": 459861,
+        "sha256": "34ce3fe1c5041027b3f8d42912270993f986dbc4bb34cf27f951e34a1e453913"
+      }
+    ],
+    "versions": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.8.2",
+      "av": "18.1.0",
+      "tokenizers": "0.23.2"
+    },
+    "pythonVersion": "3.12.3",
+    "pythonExecutable": "/tmp/si-units-faster-whisper/bin/python",
+    "device": "cpu",
+    "computeType": "int8",
+    "cpuThreads": 4,
+    "numWorkers": 1,
+    "localFilesOnly": true,
+    "settings": {
+      "language": "en",
+      "word_timestamps": true,
+      "beam_size": 5,
+      "temperature": 0,
+      "condition_on_previous_text": false,
+      "vad_filter": false,
+      "hotwords": "Bakery Demo, Bill of Health, Premix Area, SSOP, NCR, Remedial, none captured, Still to do, Passed, Follow-up owed, Couldn't access, Resolved today, Pass all, Daily."
+    },
+    "helper": {
+      "name": "transcribe-cln-v4-local.py",
+      "bytes": 3747,
+      "sha256": "f9683a78e6d63afc976f3dbe4898d248fefa26ed86eb64e7f579dbdfa2d6eaf7"
+    },
+    "workflowRef": "../packages/backend/src/scripts/transcribe-mechanics-si-units-local.py"
+  },
+  "response": {
+    "language": "en",
+    "duration": 11.7493125,
+    "text": "Daily pass all becomes eligible after that first inspection of the same frequency. 18 remain, record the exceptions first.",
+    "segments": [
+      {
+        "id": 1,
+        "start": 0,
+        "end": 6.96,
+        "text": " Daily pass all becomes eligible after that first inspection of the same frequency.",
+        "avg_logprob": -0.4055165516005622,
+        "no_speech_prob": 0.006484785582870245
+      },
+      {
+        "id": 2,
+        "start": 7.82,
+        "end": 11.2,
+        "text": " 18 remain, record the exceptions first.",
+        "avg_logprob": -0.4055165516005622,
+        "no_speech_prob": 0.006484785582870245
+      }
+    ],
+    "words": [
+      {
+        "word": "Daily",
+        "start": 0,
+        "end": 0.34,
+        "probability": 0.3528529703617096
+      },
+      {
+        "word": "pass",
+        "start": 0.34,
+        "end": 0.7,
+        "probability": 0.8984917998313904
+      },
+      {
+        "word": "all",
+        "start": 0.7,
+        "end": 1.44,
+        "probability": 0.22379031777381897
+      },
+      {
+        "word": "becomes",
+        "start": 1.44,
+        "end": 1.9,
+        "probability": 0.964767575263977
+      },
+      {
+        "word": "eligible",
+        "start": 1.9,
+        "end": 2.44,
+        "probability": 0.9925779700279236
+      },
+      {
+        "word": "after",
+        "start": 2.44,
+        "end": 3.26,
+        "probability": 0.8314972519874573
+      },
+      {
+        "word": "that",
+        "start": 3.26,
+        "end": 3.46,
+        "probability": 0.8770403861999512
+      },
+      {
+        "word": "first",
+        "start": 3.46,
+        "end": 3.96,
+        "probability": 0.9663984179496765
+      },
+      {
+        "word": "inspection",
+        "start": 3.96,
+        "end": 5.36,
+        "probability": 0.9703879356384277
+      },
+      {
+        "word": "of",
+        "start": 5.36,
+        "end": 6.14,
+        "probability": 0.9747141003608704
+      },
+      {
+        "word": "the",
+        "start": 6.14,
+        "end": 6.28,
+        "probability": 0.9820807576179504
+      },
+      {
+        "word": "same",
+        "start": 6.28,
+        "end": 6.48,
+        "probability": 0.9943976402282715
+      },
+      {
+        "word": "frequency.",
+        "start": 6.48,
+        "end": 6.96,
+        "probability": 0.995984673500061
+      },
+      {
+        "word": "18",
+        "start": 7.82,
+        "end": 8.32,
+        "probability": 0.825677752494812
+      },
+      {
+        "word": "remain,",
+        "start": 8.32,
+        "end": 9.04,
+        "probability": 0.8640560507774353
+      },
+      {
+        "word": "record",
+        "start": 9.7,
+        "end": 10.12,
+        "probability": 0.9559449553489685
+      },
+      {
+        "word": "the",
+        "start": 10.12,
+        "end": 10.34,
+        "probability": 0.9864335060119629
+      },
+      {
+        "word": "exceptions",
+        "start": 10.34,
+        "end": 10.78,
+        "probability": 0.9259958863258362
+      },
+      {
+        "word": "first.",
+        "start": 10.78,
+        "end": 11.2,
+        "probability": 0.9842934012413025
+      }
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "provider": "ElevenLabs",
+  "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+  "requestHash": "9fa29c40578e1965fb9cadd793a308bfdc70e667c5536453a4cf0b49ce262702",
+  "request": {
+    "text": "Daily Pass all becomes eligible after that first inspection of the same frequency. Eighteen remain; record the exceptions first.",
+    "model_id": "eleven_multilingual_v2",
+    "voice_settings": {
+      "stability": 0.55,
+      "similarity_boost": 0.8,
+      "style": 0.35,
+      "use_speaker_boost": true
+    }
+  },
+  "generatedAt": "2026-09-06T13:39:15.381Z",
+  "requestId": "6smKNQRembe2a5toJsOC",
+  "audio": {
+    "path": "cln-tutorial/v4-audio/bulk-eligible-9fa29c40578e.mp3",
+    "bytes": 188961,
+    "sha256": "874b7aecdcfec48e71e3758a59e3556db27c12ece3fd082fe69c3593b22e0a74"
+  }
+}

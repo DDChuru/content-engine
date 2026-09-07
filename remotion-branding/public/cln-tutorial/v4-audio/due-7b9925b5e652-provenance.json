@@ -1,0 +1,22 @@
+{
+  "provider": "ElevenLabs",
+  "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+  "requestHash": "7b9925b5e65244ca8d0f50617e53b747473abffdcdd2189cb6565439143db308",
+  "request": {
+    "text": "Before check-in, Due lists nineteen Daily checks. Completion is locked.",
+    "model_id": "eleven_multilingual_v2",
+    "voice_settings": {
+      "stability": 0.55,
+      "similarity_boost": 0.8,
+      "style": 0.35,
+      "use_speaker_boost": true
+    }
+  },
+  "generatedAt": "2026-09-07T04:18:32.141Z",
+  "requestId": "VEYi21HTC1aBrY5SgjPb",
+  "audio": {
+    "path": "cln-tutorial/v4-audio/due-7b9925b5e652.mp3",
+    "bytes": 85725,
+    "sha256": "98e9e864d8ecca7f50999616e2319651d34c8e35adfc5e9105df35640bb81523"
+  }
+}

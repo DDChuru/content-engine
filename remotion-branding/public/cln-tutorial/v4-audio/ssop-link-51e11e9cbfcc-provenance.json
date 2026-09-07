@@ -1,0 +1,22 @@
+{
+  "provider": "ElevenLabs",
+  "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+  "requestHash": "51e11e9cbfcc0b46403dbc74cbc63cb48337032e4a1fd4ec53ce684f61da45a0",
+  "request": {
+    "text": "Open the linked SSOP for the item's inspection reference.",
+    "model_id": "eleven_multilingual_v2",
+    "voice_settings": {
+      "stability": 0.55,
+      "similarity_boost": 0.8,
+      "style": 0.35,
+      "use_speaker_boost": true
+    }
+  },
+  "generatedAt": "2026-09-06T13:37:32.888Z",
+  "requestId": "iXN0mjPKjL10OWq9U09a",
+  "audio": {
+    "path": "cln-tutorial/v4-audio/ssop-link-51e11e9cbfcc.mp3",
+    "bytes": 61066,
+    "sha256": "752d47ec8a7b6fa3aca09eb301935908bcf92dcc1f8987045b27dbf9956f7b45"
+  }
+}

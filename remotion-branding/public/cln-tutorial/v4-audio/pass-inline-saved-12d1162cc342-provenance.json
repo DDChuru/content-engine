@@ -1,0 +1,22 @@
+{
+  "provider": "ElevenLabs",
+  "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+  "requestHash": "12d1162cc342871d09690cf3ea7be577b9493ba46ec33743cd46d6a3e86bbd66",
+  "request": {
+    "text": "The pass saves inline, with a green status and Undo.",
+    "model_id": "eleven_multilingual_v2",
+    "voice_settings": {
+      "stability": 0.55,
+      "similarity_boost": 0.8,
+      "style": 0.35,
+      "use_speaker_boost": true
+    }
+  },
+  "generatedAt": "2026-09-06T13:38:51.823Z",
+  "requestId": "h5iwTUB38gkLwwKLiV18",
+  "audio": {
+    "path": "cln-tutorial/v4-audio/pass-inline-saved-12d1162cc342.mp3",
+    "bytes": 70261,
+    "sha256": "3259600b027022d76811a099ce9b2c8f55b67537c50d31a172093271332dc885"
+  }
+}

@@ -1,0 +1,951 @@
+{
+  "schemaVersion": 1,
+  "result": "pass",
+  "reviewKind": "automated audio and word-alignment audit",
+  "humanListeningReview": false,
+  "master": {
+    "path": "cln-tutorial/v4-audio/narration-314e6621e1e7.wav",
+    "bytes": 26544078,
+    "sha256": "913f7fa7a9b112fffbed95950f01597ffc0c4af3089b64559568d1f59a446249",
+    "durationInFrames": 8295,
+    "transcriptRef": "public/cln-tutorial/v4-audio/narration-314e6621e1e7-measured.json",
+    "transcript": {
+      "path": "cln-tutorial/v4-audio/narration-314e6621e1e7-measured.json",
+      "bytes": 93965,
+      "sha256": "17e42c557c22912c3b4eae2fb76ed511653abf9b8ec8eaa78727e09ff1f3b0a8"
+    }
+  },
+  "totalFrames": 8295,
+  "durationSeconds": 276.5,
+  "fps": 30,
+  "sampleRate": 48000,
+  "samples": 13272000,
+  "spokenBeats": 30,
+  "silentBookends": [
+    {
+      "id": "intro",
+      "from": 0,
+      "frames": 150
+    },
+    {
+      "id": "outro",
+      "from": 8115,
+      "frames": 180
+    }
+  ],
+  "transcription": {
+    "provider": "local-faster-whisper",
+    "model": "Systran/faster-whisper-small",
+    "modelPath": "/home/durai/.cache/huggingface/hub/models--Systran--faster-whisper-small/snapshots/536b0662742c02347bc0e980a01041f333bce120",
+    "modelRevision": "536b0662742c02347bc0e980a01041f333bce120",
+    "modelFiles": [
+      {
+        "name": "model.bin",
+        "bytes": 483546902,
+        "sha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671"
+      },
+      {
+        "name": "config.json",
+        "bytes": 2370,
+        "sha256": "b55496ac7940a7ae47d2c01eab40edfd8701feec1229d9cce3b40014383fb828"
+      },
+      {
+        "name": "tokenizer.json",
+        "bytes": 2203239,
+        "sha256": "fb7b63191e9bb045082c79fd742a3106a12c99513ab30df4a0d47fa6cb6fd0ab"
+      },
+      {
+        "name": "vocabulary.txt",
+        "bytes": 459861,
+        "sha256": "34ce3fe1c5041027b3f8d42912270993f986dbc4bb34cf27f951e34a1e453913"
+      }
+    ],
+    "versions": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.8.2",
+      "av": "18.1.0",
+      "tokenizers": "0.23.2"
+    },
+    "pythonVersion": "3.12.3",
+    "pythonExecutable": "/tmp/si-units-faster-whisper/bin/python",
+    "device": "cpu",
+    "computeType": "int8",
+    "cpuThreads": 4,
+    "numWorkers": 1,
+    "localFilesOnly": true,
+    "settings": {
+      "language": "en",
+      "word_timestamps": true,
+      "beam_size": 5,
+      "temperature": 0,
+      "condition_on_previous_text": false,
+      "vad_filter": false,
+      "hotwords": "Bakery Demo, Bill of Health, Premix Area, SSOP, NCR, Remedial, none captured, Still to do, Passed, Follow-up owed, Couldn't access, Resolved today, Pass all, Daily."
+    },
+    "helper": {
+      "name": "transcribe-cln-v4-local.py",
+      "bytes": 4483,
+      "sha256": "20f171356c11b09b96a919c2f3188920a47d908cf0e285930f0c2600d01745af"
+    },
+    "workflowRef": "../packages/backend/src/scripts/transcribe-mechanics-si-units-local.py"
+  },
+  "clips": [
+    {
+      "id": "scan-entry",
+      "requestId": "8EWvmE4ved9PZQ27j0rh",
+      "generatedAt": "2026-09-06T15:23:30.406Z",
+      "audio": {
+        "path": "cln-tutorial/v4-audio/scan-entry-57f696ed08c3.mp3",
+        "bytes": 36824,
+        "sha256": "2e7062bc23a504b6b0f2cd2e7d169e0b9c7bf37e3574cd45b70bb8405561416a"
+      },
+      "durationSeconds": 2.272653,
+      "measuredWords": 6,
+      "from": 150,
+      "frames": 120,
+      "plannedFrames": 120,
+      "pcmSamples": 106998,
+      "maxMasterSampleDelta": 0,
+      "peak": 22457,
+      "transcript": {
+        "path": "cln-tutorial/v4-audio/scan-entry-57f696ed08c3-local-f1bd5c8aabb8.json",
+        "bytes": 3257,
+        "sha256": "e6dce514bdc8239292d972b2d8f344a1b622021afee192044865d72e71fe8f94"
+      },
+      "computeType": "int8",
+      "scriptContextRetry": false,
+      "retainedPriorAttempts": [],
+      "windowRefinements": []
+    },
+    {
+      "id": "controlled-scan",
+      "requestId": "Us14NXJ6y9NvDMPXtsNd",
+      "generatedAt": "2026-09-07T04:15:59.339Z",
+      "audio": {
+        "path": "cln-tutorial/v4-audio/controlled-scan-b75e7f5f0d3b.mp3",
+        "bytes": 68589,
+        "sha256": "51220186234c59fcfc03946175d2d1aaaa9d3a56790159b045bc5d7fe02a0c88"
+      },
+      "durationSeconds": 4.257959,
+      "measuredWords": 13,
+      "from": 270,
+      "frames": 229,
+      "plannedFrames": 150,
+      "pcmSamples": 202850,
+      "maxMasterSampleDelta": 0,
+      "peak": 16224,
+      "transcript": {
+        "path": "cln-tutorial/v4-audio/controlled-scan-b75e7f5f0d3b-local-f1bd5c8aabb8.json",
+        "bytes": 4209,
+        "sha256": "2ac99d5e5257373de4fea9079992be6c8687cdcad0bdf9b0512eec51ff2c0746"
+      },
+      "computeType": "int8",
+      "scriptContextRetry": false,
+      "retainedPriorAttempts": [],
+      "windowRefinements": []
+    },
+    {
+      "id": "unlocked",
+      "requestId": "Tmc5tZcxaJx3ZQPfv14W",
+      "generatedAt": "2026-09-07T04:17:06.331Z",
+      "audio": {
+        "path": "cln-tutorial/v4-audio/unlocked-cefe5ad97059.mp3",
+        "bytes": 91577,
+        "sha256": "6350c44fcfd6e8e4b40418d92bb14c4076a50f87149e9ed0e08ca86acdf48b8d"
+      },
+      "durationSeconds": 5.694694,
+      "measuredWords": 10,
+      "from": 499,
+      "frames": 200,
+      "plannedFrames": 120,
+      "pcmSamples": 271953,
+      "maxMasterSampleDelta": 0,
+      "peak": 19496,
+      "transcript": {
+        "path": "cln-tutorial/v4-audio/unlocked-cefe5ad97059-local-f1bd5c8aabb8.json",
+        "bytes": 3851,
+        "sha256": "bdc1b7eae4c0903da86ed2b46857c60420eaaa25a94b7e74906ae404a5c88ef4"
+      },
+      "computeType": "int8",
+      "scriptContextRetry": false,
+      "retainedPriorAttempts": [],
+      "windowRefinements": []
+    },
+    {
+      "id": "home",
+      "requestId": "uluFvXaKgzjtGcqV60sk",
+      "generatedAt": "2026-09-07T04:17:14.872Z",
+      "audio": {
+        "path": "cln-tutorial/v4-audio/home-124a31269b0d.mp3",
+        "bytes": 86561,
+        "sha256": "bbd92017b6106cf822eef028937ff17a5f7539f316f24236d1356ee5a5dbf4d0"
+      },
+      "durationSeconds": 5.381224,
+      "measuredWords": 13,
+      "from": 699,
+      "frames": 273,
+      "plannedFrames": 180,
+      "pcmSamples": 256349,
+      "maxMasterSampleDelta": 0,
+      "peak": 23909,
+      "transcript": {
+        "path": "cln-tutorial/v4-audio/home-124a31269b0d-local-f1bd5c8aabb8.json",
+        "bytes": 4240,
+        "sha256": "303411c40703748435e25a0b25bd7aa3313e5c2e6977479ac1ca9e4f8525b0a5"
+      },
+      "computeType": "int8",
+      "scriptContextRetry": false,
+      "retainedPriorAttempts": [],
+      "windowRefinements": []
+    },
+    {
+      "id": "boh",
+      "requestId": "yl0xWamqDnU3e8y16bov",
+      "generatedAt": "2026-09-06T13:33:19.128Z",
+      "audio": {
+        "path": "cln-tutorial/v4-audio/boh-54f73a26385c.mp3",
+        "bytes": 106623,
+        "sha256": "687a502c230adbbb102624f239d5b90a246af0027f07a9273b2213b016aefff6"
+      },
+      "durationSeconds": 6.635102,
+      "measuredWords": 11,
+      "from": 972,
+      "frames": 229,
+      "plannedFrames": 210,
+      "pcmSamples": 316535,
+      "maxMasterSampleDelta": 0,
+      "peak": 21967,
+      "transcript": {
+        "path": "cln-tutorial/v4-audio/boh-54f73a26385c-local-1533a3f4e4f5.json",
+        "bytes": 4036,
+        "sha256": "e1e714e5c788dc750790e0d42cfa34d72663e0a8b5d0c9cf035cf4b62a63d281"
+      },
+      "computeType": "int8",
+      "scriptContextRetry": false,
+      "retainedPriorAttempts": [],
+      "windowRefinements": []
+    },
+    {
+      "id": "baseline",
+      "requestId": "kX3XZK4RvmGGIMCV0NMK",
+      "generatedAt": "2026-09-06T13:33:30.053Z",
+      "audio": {
+        "path": "cln-tutorial/v4-audio/baseline-885c90ce4af4.mp3",
+        "bytes": 119998,
+        "sha256": "93cf0c46989c803c33452629e6c36a0933bd752017a52a339fe62a6b4f007f1c"
+      },
+      "durationSeconds": 7.47102,
+      "measuredWords": 14,
+      "from": 1201,
+      "frames": 254,
+      "plannedFrames": 210,
+      "pcmSamples": 356659,
+      "maxMasterSampleDelta": 0,
+      "peak": 23341,
+      "transcript": {
+        "path": "cln-tutorial/v4-audio/baseline-885c90ce4af4-local-1533a3f4e4f5.json",
+        "bytes": 4358,
+        "sha256": "0fdf45fbb3d52d4a74c412d9498e3bdac81ddfbec3c4e739c952d8f2009781b1"
+      },
+      "computeType": "int8",
+      "scriptContextRetry": false,
+      "retainedPriorAttempts": [],
+      "windowRefinements": []
+    },
+    {
+      "id": "due",
+      "requestId": "VEYi21HTC1aBrY5SgjPb",
+      "generatedAt": "2026-09-07T04:18:32.141Z",
+      "audio": {
+        "path": "cln-tutorial/v4-audio/due-7b9925b5e652.mp3",
+        "bytes": 85725,
+        "sha256": "98e9e864d8ecca7f50999616e2319651d34c8e35adfc5e9105df35640bb81523"
+      },
+      "durationSeconds": 5.32898,
+      "measuredWords": 11,
+      "from": 1455,
+      "frames": 221,
+      "plannedFrames": 180,
+      "pcmSamples": 254120,
+      "maxMasterSampleDelta": 0,
+      "peak": 27442,
+      "transcript": {
+        "path": "cln-tutorial/v4-audio/due-7b9925b5e652-local-f1bd5c8aabb8.json",
+        "bytes": 3969,
+        "sha256": "a53328ba220345a016e07f619d7848f5837789002b8a209ba02bf777c470ba11"
+      },
+      "computeType": "int8",
+      "scriptContextRetry": false,
+      "retainedPriorAttempts": [],
+      "windowRefinements": []
+    },
+    {
+      "id": "ssop-link",
+      "requestId": "iXN0mjPKjL10OWq9U09a",
+      "generatedAt": "2026-09-06T13:37:32.888Z",
+      "audio": {
+        "path": "cln-tutorial/v4-audio/ssop-link-51e11e9cbfcc.mp3",
+        "bytes": 61066,
+        "sha256": "752d47ec8a7b6fa3aca09eb301935908bcf92dcc1f8987045b27dbf9956f7b45"
+      },
+      "durationSeconds": 3.787755,
+      "measuredWords": 9,
+      "from": 1676,
+      "frames": 143,
+      "plannedFrames": 120,
+      "pcmSamples": 180559,
+      "maxMasterSampleDelta": 0,
+      "peak": 26175,
+      "transcript": {
+        "path": "cln-tutorial/v4-audio/ssop-link-51e11e9cbfcc-local-1533a3f4e4f5.json",
+        "bytes": 3696,
+        "sha256": "fce3db17b4376f67a8e6a6ab95c1c9722cd37b3a0c7db7f32c6f75c523a2a807"
+      },
+      "computeType": "int8",
+      "scriptContextRetry": false,
+      "retainedPriorAttempts": [],
+      "windowRefinements": []
+    },
+    {
+      "id": "ssop-reference",
+      "requestId": "Dc8hY9BX91QfuKNl6LwA",
+      "generatedAt": "2026-09-06T13:37:43.665Z",
+      "audio": {
+        "path": "cln-tutorial/v4-audio/ssop-reference-124058da3cdc.mp3",
+        "bytes": 67335,
+        "sha256": "379e5b210cb6d755fb05ec5e4017e3ea427da4db79376ff04337af11c59a57df"
+      },
+      "durationSeconds": 4.179592,
+      "measuredWords": 10,
+      "from": 1819,
+      "frames": 155,
+      "plannedFrames": 150,
+      "pcmSamples": 198392,
+      "maxMasterSampleDelta": 0,
+      "peak": 24228,
+      "transcript": {
+        "path": "cln-tutorial/v4-audio/ssop-reference-124058da3cdc-local-1533a3f4e4f5.json",
+        "bytes": 3839,
+        "sha256": "d7b938646851acaa3dfac16529555b716ac76f49caf8b9c423cd98be4885ea20"
+      },
+      "computeType": "int8",
+      "scriptContextRetry": false,
+      "retainedPriorAttempts": [],
+      "windowRefinements": []
+    },
+    {
+      "id": "off-schedule",
+      "requestId": "3B6M8pfXP8AkrvRrgxyx",
+      "generatedAt": "2026-09-06T13:46:40.313Z",
+      "audio": {
+        "path": "cln-tutorial/v4-audio/off-schedule-6dcd1d7ff71c.mp3",
+        "bytes": 151763,
+        "sha256": "48adad26cf87a4b04f5ae12cf85008dc0bc5ac5e5a7b5c16cc66a99b7dc33c61"
+      },
+      "durationSeconds": 9.456327,
+      "measuredWords": 21,
+      "from": 1974,
+      "frames": 313,
+      "plannedFrames": 240,
+      "pcmSamples": 452511,
+      "maxMasterSampleDelta": 0,
+      "peak": 25777,
+      "transcript": {
+        "path": "cln-tutorial/v4-audio/off-schedule-6dcd1d7ff71c-local-e06d3f52c650.json",
+        "bytes": 6342,
+        "sha256": "4ace1613d83c6d4a5b6a773698d9c82f8345ff6bbea9d455568984f557e85001"
+      },
+      "computeType": "float32",
+      "scriptContextRetry": true,
+      "retainedPriorAttempts": [
+        "cln-tutorial/v4-audio/off-schedule-6dcd1d7ff71c-local-d2425348b6a8.json",
+        "cln-tutorial/v4-audio/off-schedule-6dcd1d7ff71c-local-3d0c7306ff2b.json",
+        "cln-tutorial/v4-audio/off-schedule-6dcd1d7ff71c-local-f1bd5c8aabb8.json"
+      ],
+      "windowRefinements": [
+        {
+          "fromWordIndex": 16,
+          "toWordIndex": 21,
+          "clipTimestamps": [
+            6.9,
+            9.456327
+          ],
+          "transcript": {
+            "path": "cln-tutorial/v4-audio/off-schedule-6dcd1d7ff71c-local-11e38ff9c475.json",
+            "bytes": 3086,
+            "sha256": "ee7c02554609ae8b104f629f805b013c6bbafb1aba0a306937c78423ceb32eee"
+          }
+        }
+      ]
+    },
+    {
+      "id": "inspect-pass",
+      "requestId": "Ij0M1R0xV9knn3hTujtH",
+      "generatedAt": "2026-09-07T04:18:49.179Z",
+      "audio": {
+        "path": "cln-tutorial/v4-audio/inspect-pass-d2da1c883f50.mp3",
+        "bytes": 111639,
+        "sha256": "600f1474b13a1a37c91fad9e56a81339972547d0a520c9364cc1b8c67cb2b8b9"
+      },
+      "durationSeconds": 6.948571,
+      "measuredWords": 16,
+      "from": 2287,
+      "frames": 273,
+      "plannedFrames": 180,
+      "pcmSamples": 332139,
+      "maxMasterSampleDelta": 0,
+      "peak": 19863,
+      "transcript": {
+        "path": "cln-tutorial/v4-audio/inspect-pass-d2da1c883f50-local-f1bd5c8aabb8.json",
+        "bytes": 4850,
+        "sha256": "679c78aced8873cdb842c2a963f485e114c0b3a74308dd9895c312c59c94dc3d"
+      },
+      "computeType": "int8",
+      "scriptContextRetry": false,
+      "retainedPriorAttempts": [],
+      "windowRefinements": []
+    },
+    {
+      "id": "pass-inline-saved",
+      "requestId": "h5iwTUB38gkLwwKLiV18",
+      "generatedAt": "2026-09-06T13:38:51.823Z",
+      "audio": {
+        "path": "cln-tutorial/v4-audio/pass-inline-saved-12d1162cc342.mp3",
+        "bytes": 70261,
+        "sha256": "3259600b027022d76811a099ce9b2c8f55b67537c50d31a172093271332dc885"
+      },
+      "durationSeconds": 4.362449,
+      "measuredWords": 11,
+      "from": 2560,
+      "frames": 160,
+      "plannedFrames": 90,
+      "pcmSamples": 207308,
+      "maxMasterSampleDelta": 0,
+      "peak": 18534,
+      "transcript": {
+        "path": "cln-tutorial/v4-audio/pass-inline-saved-12d1162cc342-local-1533a3f4e4f5.json",
+        "bytes": 3937,
+        "sha256": "c80546dbc957065591edf7b9691f97985440a073822c49d21f0cb72ebd707a50"
+      },
+      "computeType": "int8",
+      "scriptContextRetry": false,
+      "retainedPriorAttempts": [],
+      "windowRefinements": []
+    },
+    {
+      "id": "passed-state",
+      "requestId": "9tVohObOoplP4XFMYUeR",
+      "generatedAt": "2026-09-06T13:39:03.708Z",
+      "audio": {
+        "path": "cln-tutorial/v4-audio/passed-state-49137986cbe7.mp3",
+        "bytes": 33062,
+        "sha256": "d718f4e0b8608175cd4a88a017cdbab2dc829d082bc3d0ab900dddd4aab02aab"
+      },
+      "durationSeconds": 2.037551,
+      "measuredWords": 6,
+      "from": 2720,
+      "frames": 91,
+      "plannedFrames": 90,
+      "pcmSamples": 95852,
+      "maxMasterSampleDelta": 0,
+      "peak": 20736,
+      "transcript": {
+        "path": "cln-tutorial/v4-audio/passed-state-49137986cbe7-local-1533a3f4e4f5.json",
+        "bytes": 3241,
+        "sha256": "13ead8da25fb3920de13c72df3ace700f2e07df50629f6aac5b022c2d663d3db"
+      },
+      "computeType": "int8",
+      "scriptContextRetry": false,
+      "retainedPriorAttempts": [],
+      "windowRefinements": []
+    },
+    {
+      "id": "bulk-eligible",
+      "requestId": "6smKNQRembe2a5toJsOC",
+      "generatedAt": "2026-09-06T13:39:15.381Z",
+      "audio": {
+        "path": "cln-tutorial/v4-audio/bulk-eligible-9fa29c40578e.mp3",
+        "bytes": 188961,
+        "sha256": "874b7aecdcfec48e71e3758a59e3556db27c12ece3fd082fe69c3593b22e0a74"
+      },
+      "durationSeconds": 11.781224,
+      "measuredWords": 19,
+      "from": 2811,
+      "frames": 383,
+      "plannedFrames": 210,
+      "pcmSamples": 563967,
+      "maxMasterSampleDelta": 0,
+      "peak": 18624,
+      "transcript": {
+        "path": "cln-tutorial/v4-audio/bulk-eligible-9fa29c40578e-local-1533a3f4e4f5.json",
+        "bytes": 5311,
+        "sha256": "03e185382631984afccb88b23c361ab7469faa7a84adb78b17caf64b25fbb36a"
+      },
+      "computeType": "int8",
+      "scriptContextRetry": false,
+      "retainedPriorAttempts": [],
+      "windowRefinements": []
+    },
+    {
+      "id": "major-form",
+      "requestId": "62gyC4pkIuMYZueygTab",
+      "generatedAt": "2026-09-06T13:39:27.154Z",
+      "audio": {
+        "path": "cln-tutorial/v4-audio/major-form-2ab25b2c0f10.mp3",
+        "bytes": 76948,
+        "sha256": "edcad6e150b9bca15da828ddaa75e51565de0a1235c046a3855cea32b199c3d6"
+      },
+      "durationSeconds": 4.780408,
+      "measuredWords": 12,
+      "from": 3194,
+      "frames": 173,
+      "plannedFrames": 150,
+      "pcmSamples": 227370,
+      "maxMasterSampleDelta": 0,
+      "peak": 19888,
+      "transcript": {
+        "path": "cln-tutorial/v4-audio/major-form-2ab25b2c0f10-local-1533a3f4e4f5.json",
+        "bytes": 4081,
+        "sha256": "f25ff1f5cd18fc584d18e97ec6fb75ce7a837086aef8804d922eeb618a0f82ba"
+      },
+      "computeType": "int8",
+      "scriptContextRetry": false,
+      "retainedPriorAttempts": [],
+      "windowRefinements": []
+    },
+    {
+      "id": "major-fields",
+      "requestId": "UrRpzycJJnXA66hcArgg",
+      "generatedAt": "2026-09-07T04:20:54.856Z",
+      "audio": {
+        "path": "cln-tutorial/v4-audio/major-fields-8060c2085930.mp3",
+        "bytes": 157196,
+        "sha256": "055c040c9e4a9ae861a72df19fa57ade968896054ac6981c6d4d9b0b3611a986"
+      },
+      "durationSeconds": 9.795918,
+      "measuredWords": 19,
+      "from": 3367,
+      "frames": 400,
+      "plannedFrames": 270,
+      "pcmSamples": 468115,
+      "maxMasterSampleDelta": 0,
+      "peak": 20331,
+      "transcript": {
+        "path": "cln-tutorial/v4-audio/major-fields-8060c2085930-local-f1bd5c8aabb8.json",
+        "bytes": 5302,
+        "sha256": "159c967f64aef82e98036f14df87c066a5be088da6593b3263962aaa8479cfae"
+      },
+      "computeType": "int8",
+      "scriptContextRetry": false,
+      "retainedPriorAttempts": [],
+      "windowRefinements": []
+    },
+    {
+      "id": "major-recorded",
+      "requestId": "eq4APekVu6ojdrgDbsv9",
+      "generatedAt": "2026-09-06T13:39:51.738Z",
+      "audio": {
+        "path": "cln-tutorial/v4-audio/major-recorded-8f6d471c2020.mp3",
+        "bytes": 186035,
+        "sha256": "5418856ff6454f4adddaaa6d41ef6d0f220f6f214803e22b7999ba883cc8ceda"
+      },
+      "durationSeconds": 11.598367,
+      "measuredWords": 22,
+      "from": 3767,
+      "frames": 377,
+      "plannedFrames": 240,
+      "pcmSamples": 555050,
+      "maxMasterSampleDelta": 0,
+      "peak": 17026,
+      "transcript": {
+        "path": "cln-tutorial/v4-audio/major-recorded-8f6d471c2020-local-1533a3f4e4f5.json",
+        "bytes": 5727,
+        "sha256": "053a4a4fa2561c9e6f5ea82704cda43237973e1a09bb1b614b4d860d77ee17c0"
+      },
+      "computeType": "int8",
+      "scriptContextRetry": false,
+      "retainedPriorAttempts": [],
+      "windowRefinements": []
+    },
+    {
+      "id": "critical-grade",
+      "requestId": "AzP2aNs5bCbdDJtg46tZ",
+      "generatedAt": "2026-09-06T13:40:03.925Z",
+      "audio": {
+        "path": "cln-tutorial/v4-audio/critical-grade-ddff4187e142.mp3",
+        "bytes": 99100,
+        "sha256": "2e15e1f451d48739c1fd30461be09d90f78517385ca8282954e67001a25eba9a"
+      },
+      "durationSeconds": 6.164898,
+      "measuredWords": 11,
+      "from": 4144,
+      "frames": 214,
+      "plannedFrames": 150,
+      "pcmSamples": 294244,
+      "maxMasterSampleDelta": 0,
+      "peak": 25212,
+      "transcript": {
+        "path": "cln-tutorial/v4-audio/critical-grade-ddff4187e142-local-7db57b88b1d4.json",
+        "bytes": 4111,
+        "sha256": "4a848120eaa3f4e0ce0e30112ad8d1d886d461a5fdab032fc648eaaa3f6d7983"
+      },
+      "computeType": "int8",
+      "scriptContextRetry": true,
+      "retainedPriorAttempts": [
+        "cln-tutorial/v4-audio/critical-grade-ddff4187e142-local-1533a3f4e4f5.json"
+      ],
+      "windowRefinements": []
+    },
+    {
+      "id": "critical-ncr",
+      "requestId": "LDh1e4YtL8xC128gOH4L",
+      "generatedAt": "2026-09-06T13:40:15.269Z",
+      "audio": {
+        "path": "cln-tutorial/v4-audio/critical-ncr-21777d6c37f0.mp3",
+        "bytes": 90323,
+        "sha256": "da5cbdac14507ebbcbc794ffc63754be5b48fd518c200539308b0756944be8fb"
+      },
+      "durationSeconds": 5.616327,
+      "measuredWords": 13,
+      "from": 4358,
+      "frames": 198,
+      "plannedFrames": 120,
+      "pcmSamples": 267494,
+      "maxMasterSampleDelta": 0,
+      "peak": 19353,
+      "transcript": {
+        "path": "cln-tutorial/v4-audio/critical-ncr-21777d6c37f0-local-1533a3f4e4f5.json",
+        "bytes": 4234,
+        "sha256": "c29e630c88185d279190eac9a88978663f5ab204c101b3a70931ffdd3bdb82e2"
+      },
+      "computeType": "int8",
+      "scriptContextRetry": false,
+      "retainedPriorAttempts": [],
+      "windowRefinements": []
+    },
+    {
+      "id": "unavailable-reason",
+      "requestId": "eJNpCh71H4P16ZRoZXDA",
+      "generatedAt": "2026-09-06T13:40:37.246Z",
+      "audio": {
+        "path": "cln-tutorial/v4-audio/unavailable-reason-1b930cd13bc5.mp3",
+        "bytes": 144657,
+        "sha256": "e2ac77a4361fe3a1dfe1f346c4025978b6a86b474562f01a10815ba5e3d1c9bc"
+      },
+      "durationSeconds": 9.012245,
+      "measuredWords": 17,
+      "from": 4556,
+      "frames": 300,
+      "plannedFrames": 180,
+      "pcmSamples": 430220,
+      "maxMasterSampleDelta": 0,
+      "peak": 25681,
+      "transcript": {
+        "path": "cln-tutorial/v4-audio/unavailable-reason-1b930cd13bc5-local-471dd6d12b81.json",
+        "bytes": 4970,
+        "sha256": "26f95e0a11494112dd20d5f02c57738396dd76e96214cadc8ea9afd7d550a8c5"
+      },
+      "computeType": "int8",
+      "scriptContextRetry": true,
+      "retainedPriorAttempts": [
+        "cln-tutorial/v4-audio/unavailable-reason-1b930cd13bc5-local-1533a3f4e4f5.json"
+      ],
+      "windowRefinements": []
+    },
+    {
+      "id": "unavailable-result",
+      "requestId": "znS3sl9QAs0zhc5XsxFN",
+      "generatedAt": "2026-09-06T13:41:00.149Z",
+      "audio": {
+        "path": "cln-tutorial/v4-audio/unavailable-result-830c6221ff16.mp3",
+        "bytes": 81964,
+        "sha256": "842e071b9c16f297d035203e089bc5c3f52c2c6b7a78094bc3ab2f3279919569"
+      },
+      "durationSeconds": 5.093878,
+      "measuredWords": 11,
+      "from": 4856,
+      "frames": 182,
+      "plannedFrames": 120,
+      "pcmSamples": 242974,
+      "maxMasterSampleDelta": 0,
+      "peak": 20007,
+      "transcript": {
+        "path": "cln-tutorial/v4-audio/unavailable-result-830c6221ff16-local-1533a3f4e4f5.json",
+        "bytes": 3978,
+        "sha256": "cc45561901c41190aff20d3fbd881f0f8ebabb757c57535385d510989bccd2d3"
+      },
+      "computeType": "int8",
+      "scriptContextRetry": false,
+      "retainedPriorAttempts": [],
+      "windowRefinements": []
+    },
+    {
+      "id": "bulk-confirm",
+      "requestId": "7nuDS9WP0BGcJEQKufjr",
+      "generatedAt": "2026-09-06T13:41:12.147Z",
+      "audio": {
+        "path": "cln-tutorial/v4-audio/bulk-confirm-ec29d78269ce.mp3",
+        "bytes": 216546,
+        "sha256": "027bb6e625259db4f3ca7f9f48d2c243761ce267740fa9fb311e6428dd9386dd"
+      },
+      "durationSeconds": 13.505306,
+      "measuredWords": 24,
+      "from": 5038,
+      "frames": 435,
+      "plannedFrames": 150,
+      "pcmSamples": 646444,
+      "maxMasterSampleDelta": 0,
+      "peak": 25564,
+      "transcript": {
+        "path": "cln-tutorial/v4-audio/bulk-confirm-ec29d78269ce-local-1533a3f4e4f5.json",
+        "bytes": 6004,
+        "sha256": "ae6061fe7deab99e0d5dc51554478b493795daf14469a7dc29032456fd1c8ca0"
+      },
+      "computeType": "int8",
+      "scriptContextRetry": false,
+      "retainedPriorAttempts": [],
+      "windowRefinements": []
+    },
+    {
+      "id": "bulk-result",
+      "requestId": "5HbwZlmlFIglf8uFAswk",
+      "generatedAt": "2026-09-06T13:41:25.077Z",
+      "audio": {
+        "path": "cln-tutorial/v4-audio/bulk-result-435d9d1c0382.mp3",
+        "bytes": 177258,
+        "sha256": "91455eee6c59abcfcc5258827a6ca953c81c2bf4b7add944ac4e0b57a0e48683"
+      },
+      "durationSeconds": 11.049796,
+      "measuredWords": 18,
+      "from": 5473,
+      "frames": 361,
+      "plannedFrames": 150,
+      "pcmSamples": 528301,
+      "maxMasterSampleDelta": 0,
+      "peak": 16933,
+      "transcript": {
+        "path": "cln-tutorial/v4-audio/bulk-result-435d9d1c0382-local-1533a3f4e4f5.json",
+        "bytes": 5161,
+        "sha256": "1640cbc3e2ed5504307b70bed81fb32ed26b5c2197aed2366bb153fe7717face"
+      },
+      "computeType": "int8",
+      "scriptContextRetry": false,
+      "retainedPriorAttempts": [],
+      "windowRefinements": []
+    },
+    {
+      "id": "open-bands",
+      "requestId": "UCUbUhXuFT2yiyMz1xM3",
+      "generatedAt": "2026-09-06T13:41:38.004Z",
+      "audio": {
+        "path": "cln-tutorial/v4-audio/open-bands-044f75c85510.mp3",
+        "bytes": 229921,
+        "sha256": "bf4fc42121084230b85571686231a36452d3a8aaf71a14c05f024c47e3ea4289"
+      },
+      "durationSeconds": 14.341224,
+      "measuredWords": 22,
+      "from": 5834,
+      "frames": 460,
+      "plannedFrames": 300,
+      "pcmSamples": 686568,
+      "maxMasterSampleDelta": 0,
+      "peak": 23820,
+      "transcript": {
+        "path": "cln-tutorial/v4-audio/open-bands-044f75c85510-local-1533a3f4e4f5.json",
+        "bytes": 5476,
+        "sha256": "5d5cb2ea12be3f939a4137479ac754c938c41cf0b7a1df3ed5d7c243e5daea8c"
+      },
+      "computeType": "int8",
+      "scriptContextRetry": false,
+      "retainedPriorAttempts": [],
+      "windowRefinements": []
+    },
+    {
+      "id": "follow-queue",
+      "requestId": "rJQOr2on6Tf39ZuwpyGI",
+      "generatedAt": "2026-09-06T13:41:51.027Z",
+      "audio": {
+        "path": "cln-tutorial/v4-audio/follow-queue-a01ccdb565ad.mp3",
+        "bytes": 125013,
+        "sha256": "c068aa580412af399dbcb9eed9ad529db155ddcf76005cc0284ca82750ff476a"
+      },
+      "durationSeconds": 7.78449,
+      "measuredWords": 16,
+      "from": 6294,
+      "frames": 263,
+      "plannedFrames": 180,
+      "pcmSamples": 372263,
+      "maxMasterSampleDelta": 0,
+      "peak": 27007,
+      "transcript": {
+        "path": "cln-tutorial/v4-audio/follow-queue-a01ccdb565ad-local-1533a3f4e4f5.json",
+        "bytes": 4873,
+        "sha256": "31cca807c7adfa1d3dcf32a7b5c7ae182890fffc93ba97fec41bf87b972b2ec8"
+      },
+      "computeType": "int8",
+      "scriptContextRetry": false,
+      "retainedPriorAttempts": [],
+      "windowRefinements": []
+    },
+    {
+      "id": "follow-expand",
+      "requestId": "SDKc3TM9sOGwSdpq8621",
+      "generatedAt": "2026-09-07T04:21:05.238Z",
+      "audio": {
+        "path": "cln-tutorial/v4-audio/follow-expand-fca983ec0283.mp3",
+        "bytes": 96174,
+        "sha256": "7c4eecaf5b8276aaade8762da53f780bea7f3122a039b00d913f9359fbf7e649"
+      },
+      "durationSeconds": 5.982041,
+      "measuredWords": 12,
+      "from": 6557,
+      "frames": 268,
+      "plannedFrames": 180,
+      "pcmSamples": 285327,
+      "maxMasterSampleDelta": 0,
+      "peak": 23360,
+      "transcript": {
+        "path": "cln-tutorial/v4-audio/follow-expand-fca983ec0283-local-f1bd5c8aabb8.json",
+        "bytes": 4133,
+        "sha256": "ff7f30348c2d905a6ceda1a9def86d19f1385963b92597d50e08ebc5687dfe43"
+      },
+      "computeType": "int8",
+      "scriptContextRetry": false,
+      "retainedPriorAttempts": [],
+      "windowRefinements": []
+    },
+    {
+      "id": "follow-confirm",
+      "requestId": "j6Epab0nquniaa2MZrKJ",
+      "generatedAt": "2026-09-06T13:42:14.622Z",
+      "audio": {
+        "path": "cln-tutorial/v4-audio/follow-confirm-d0021e50a063.mp3",
+        "bytes": 80710,
+        "sha256": "3baa6defe93826fd6dbfe31dc9c5e1b5b73570cf84f515c2f20d4575f4f361f5"
+      },
+      "durationSeconds": 5.01551,
+      "measuredWords": 12,
+      "from": 6825,
+      "frames": 180,
+      "plannedFrames": 180,
+      "pcmSamples": 238516,
+      "maxMasterSampleDelta": 0,
+      "peak": 15878,
+      "transcript": {
+        "path": "cln-tutorial/v4-audio/follow-confirm-d0021e50a063-local-1533a3f4e4f5.json",
+        "bytes": 4092,
+        "sha256": "ee80f91d416ebf440bebe0f3041fd2d073f57eb07380f1e3d052997903e22a31"
+      },
+      "computeType": "int8",
+      "scriptContextRetry": false,
+      "retainedPriorAttempts": [],
+      "windowRefinements": []
+    },
+    {
+      "id": "follow-result",
+      "requestId": "QiACvAIsgbHQkrBRmWW7",
+      "generatedAt": "2026-09-06T13:42:25.649Z",
+      "audio": {
+        "path": "cln-tutorial/v4-audio/follow-result-d9dfde10db60.mp3",
+        "bytes": 65663,
+        "sha256": "8878e3c07fa6087143fccf6da4070c21ba57659d8e96faa4b3c6bf68e476d9c4"
+      },
+      "durationSeconds": 4.075102,
+      "measuredWords": 12,
+      "from": 7005,
+      "frames": 152,
+      "plannedFrames": 120,
+      "pcmSamples": 193934,
+      "maxMasterSampleDelta": 0,
+      "peak": 26414,
+      "transcript": {
+        "path": "cln-tutorial/v4-audio/follow-result-d9dfde10db60-local-1533a3f4e4f5.json",
+        "bytes": 4087,
+        "sha256": "ac49e2b55c3ea345861c4501feb20b4e43a17011813be868a692fbe2d3cf0c87"
+      },
+      "computeType": "int8",
+      "scriptContextRetry": false,
+      "retainedPriorAttempts": [],
+      "windowRefinements": []
+    },
+    {
+      "id": "resolved-bands",
+      "requestId": "XTpGcAu1BUyV8GAN8tfP",
+      "generatedAt": "2026-09-06T13:42:38.441Z",
+      "audio": {
+        "path": "cln-tutorial/v4-audio/resolved-bands-aaa27ab09111.mp3",
+        "bytes": 318946,
+        "sha256": "cff7bb2e20f4c56a7cd4ef10a837f1068969bb536e810719e83e90b7aba84483"
+      },
+      "durationSeconds": 19.905306,
+      "measuredWords": 36,
+      "from": 7157,
+      "frames": 627,
+      "plannedFrames": 360,
+      "pcmSamples": 954062,
+      "maxMasterSampleDelta": 0,
+      "peak": 22570,
+      "transcript": {
+        "path": "cln-tutorial/v4-audio/resolved-bands-aaa27ab09111-local-58830a585609.json",
+        "bytes": 8163,
+        "sha256": "02484f94213a749186e9d743b9f9c548bc79dae8c77de7d301f87356103dc078"
+      },
+      "computeType": "int8",
+      "scriptContextRetry": true,
+      "retainedPriorAttempts": [
+        "cln-tutorial/v4-audio/resolved-bands-aaa27ab09111-local-1533a3f4e4f5.json"
+      ],
+      "windowRefinements": []
+    },
+    {
+      "id": "handoff",
+      "requestId": "70HQJ3YMkG0kYKR9lHum",
+      "generatedAt": "2026-09-06T13:43:04.033Z",
+      "audio": {
+        "path": "cln-tutorial/v4-audio/handoff-a31cfa42c5b7.mp3",
+        "bytes": 161376,
+        "sha256": "0088021120fa5728e0bc93b55471ae5fe7f4034b21d34576fbd1e15058957617"
+      },
+      "durationSeconds": 10.057143,
+      "measuredWords": 22,
+      "from": 7784,
+      "frames": 331,
+      "plannedFrames": 210,
+      "pcmSamples": 481489,
+      "maxMasterSampleDelta": 0,
+      "peak": 16828,
+      "transcript": {
+        "path": "cln-tutorial/v4-audio/handoff-a31cfa42c5b7-local-809c8fee3765.json",
+        "bytes": 5934,
+        "sha256": "d991265863756b1a20dff5b786869ec4981861dbdf44e5586b0a380ba9836c7f"
+      },
+      "computeType": "int8",
+      "scriptContextRetry": true,
+      "retainedPriorAttempts": [
+        "cln-tutorial/v4-audio/handoff-a31cfa42c5b7-local-1533a3f4e4f5.json"
+      ],
+      "windowRefinements": []
+    }
+  ],
+  "acceptance": {
+    "kind": "user-authorized technical narration and timing acceptance for V4 revision",
+    "acceptedAt": "2026-09-07T04:22:36.332807+00:00",
+    "authorization": "Daniel requested revised copy, only changed narration, preflight, representative stills and a new V4 MP4. Existing technical gate is satisfied by the completed source/word/PCM audit; no human or final approval is inferred.",
+    "checks": {
+      "isolatedTypecheck": "pass",
+      "sourceChecks": 30,
+      "sourceAudioAudit": "pass",
+      "changedClips": [
+        "controlled-scan",
+        "unlocked",
+        "home",
+        "due",
+        "inspect-pass",
+        "major-fields",
+        "follow-expand"
+      ],
+      "reusedClips": 23
+    },
+    "scope": "Technical render readiness only. Claude-2 review and human listening remain pending. This is not final video approval."
+  }
+}

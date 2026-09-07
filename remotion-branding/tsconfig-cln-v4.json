@@ -1,0 +1,4 @@
+{
+  "extends": "./tsconfig.json",
+  "include": ["src/index-cln-v4.ts", "src/cln/*V4.tsx", "src/cln/v4-contract.ts"]
+}

@@ -1,0 +1,155 @@
+{
+  "audioSha256": "bbd92017b6106cf822eef028937ff17a5f7539f316f24236d1356ee5a5dbf4d0",
+  "measuredAt": "2026-09-07T04:17:22.279504+00:00",
+  "transcription": {
+    "provider": "local-faster-whisper",
+    "model": "Systran/faster-whisper-small",
+    "modelPath": "/home/durai/.cache/huggingface/hub/models--Systran--faster-whisper-small/snapshots/536b0662742c02347bc0e980a01041f333bce120",
+    "modelRevision": "536b0662742c02347bc0e980a01041f333bce120",
+    "modelFiles": [
+      {
+        "name": "model.bin",
+        "bytes": 483546902,
+        "sha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671"
+      },
+      {
+        "name": "config.json",
+        "bytes": 2370,
+        "sha256": "b55496ac7940a7ae47d2c01eab40edfd8701feec1229d9cce3b40014383fb828"
+      },
+      {
+        "name": "tokenizer.json",
+        "bytes": 2203239,
+        "sha256": "fb7b63191e9bb045082c79fd742a3106a12c99513ab30df4a0d47fa6cb6fd0ab"
+      },
+      {
+        "name": "vocabulary.txt",
+        "bytes": 459861,
+        "sha256": "34ce3fe1c5041027b3f8d42912270993f986dbc4bb34cf27f951e34a1e453913"
+      }
+    ],
+    "versions": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.8.2",
+      "av": "18.1.0",
+      "tokenizers": "0.23.2"
+    },
+    "pythonVersion": "3.12.3",
+    "pythonExecutable": "/tmp/si-units-faster-whisper/bin/python",
+    "device": "cpu",
+    "computeType": "int8",
+    "cpuThreads": 4,
+    "numWorkers": 1,
+    "localFilesOnly": true,
+    "settings": {
+      "language": "en",
+      "word_timestamps": true,
+      "beam_size": 5,
+      "temperature": 0,
+      "condition_on_previous_text": false,
+      "vad_filter": false,
+      "hotwords": "Bakery Demo, Bill of Health, Premix Area, SSOP, NCR, Remedial, none captured, Still to do, Passed, Follow-up owed, Couldn't access, Resolved today, Pass all, Daily."
+    },
+    "helper": {
+      "name": "transcribe-cln-v4-local.py",
+      "bytes": 4483,
+      "sha256": "20f171356c11b09b96a919c2f3188920a47d908cf0e285930f0c2600d01745af"
+    },
+    "workflowRef": "../packages/backend/src/scripts/transcribe-mechanics-si-units-local.py"
+  },
+  "response": {
+    "language": "en",
+    "duration": 5.340625,
+    "text": "To review scheduled work before checking in, open Bill of Health from home.",
+    "segments": [
+      {
+        "id": 1,
+        "start": 0,
+        "end": 4.84,
+        "text": " To review scheduled work before checking in, open Bill of Health from home.",
+        "avg_logprob": -0.26375361449188656,
+        "no_speech_prob": 0.08956527709960938
+      }
+    ],
+    "words": [
+      {
+        "word": "To",
+        "start": 0,
+        "end": 0.18,
+        "probability": 0.15267249941825867
+      },
+      {
+        "word": "review",
+        "start": 0.18,
+        "end": 0.5,
+        "probability": 0.974590003490448
+      },
+      {
+        "word": "scheduled",
+        "start": 0.5,
+        "end": 0.84,
+        "probability": 0.9590535163879395
+      },
+      {
+        "word": "work",
+        "start": 0.84,
+        "end": 1.4,
+        "probability": 0.9840133786201477
+      },
+      {
+        "word": "before",
+        "start": 1.4,
+        "end": 1.76,
+        "probability": 0.8575547337532043
+      },
+      {
+        "word": "checking",
+        "start": 1.76,
+        "end": 2.1,
+        "probability": 0.9907393455505371
+      },
+      {
+        "word": "in,",
+        "start": 2.1,
+        "end": 2.36,
+        "probability": 0.8896883130073547
+      },
+      {
+        "word": "open",
+        "start": 2.92,
+        "end": 3.3,
+        "probability": 0.9569214582443237
+      },
+      {
+        "word": "Bill",
+        "start": 3.3,
+        "end": 3.58,
+        "probability": 0.5882091522216797
+      },
+      {
+        "word": "of",
+        "start": 3.58,
+        "end": 3.76,
+        "probability": 0.9728769063949585
+      },
+      {
+        "word": "Health",
+        "start": 3.76,
+        "end": 4.02,
+        "probability": 0.9949967861175537
+      },
+      {
+        "word": "from",
+        "start": 4.02,
+        "end": 4.62,
+        "probability": 0.8773618936538696
+      },
+      {
+        "word": "home.",
+        "start": 4.62,
+        "end": 4.84,
+        "probability": 0.8766610026359558
+      }
+    ]
+  }
+}

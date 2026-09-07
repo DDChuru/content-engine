@@ -1,0 +1,22 @@
+{
+  "provider": "ElevenLabs",
+  "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+  "requestHash": "d9dfde10db602dd5162f9b475e574c3a5a3d3aaad95b1d8c791c8cc49b2017e0",
+  "request": {
+    "text": "Blue Covers leaves the open queue. The search now has no matches.",
+    "model_id": "eleven_multilingual_v2",
+    "voice_settings": {
+      "stability": 0.55,
+      "similarity_boost": 0.8,
+      "style": 0.35,
+      "use_speaker_boost": true
+    }
+  },
+  "generatedAt": "2026-09-06T13:42:25.649Z",
+  "requestId": "QiACvAIsgbHQkrBRmWW7",
+  "audio": {
+    "path": "cln-tutorial/v4-audio/follow-result-d9dfde10db60.mp3",
+    "bytes": 65663,
+    "sha256": "8878e3c07fa6087143fccf6da4070c21ba57659d8e96faa4b3c6bf68e476d9c4"
+  }
+}

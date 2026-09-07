@@ -1,0 +1,22 @@
+{
+  "provider": "ElevenLabs",
+  "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+  "requestHash": "49137986cbe7729b83b0d45567cf916b22a0c95a84c83fa61ae5b2d88b56ff80",
+  "request": {
+    "text": "Progress is now one of nineteen.",
+    "model_id": "eleven_multilingual_v2",
+    "voice_settings": {
+      "stability": 0.55,
+      "similarity_boost": 0.8,
+      "style": 0.35,
+      "use_speaker_boost": true
+    }
+  },
+  "generatedAt": "2026-09-06T13:39:03.708Z",
+  "requestId": "9tVohObOoplP4XFMYUeR",
+  "audio": {
+    "path": "cln-tutorial/v4-audio/passed-state-49137986cbe7.mp3",
+    "bytes": 33062,
+    "sha256": "d718f4e0b8608175cd4a88a017cdbab2dc829d082bc3d0ab900dddd4aab02aab"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "provider": "ElevenLabs",
+  "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+  "requestHash": "ddff4187e14287317adb15e6e8b8f401021f0c3b202c50a5e3772346b833bc92",
+  "request": {
+    "text": "This separate Tables example is Critical. Submitting it raises an NCR.",
+    "model_id": "eleven_multilingual_v2",
+    "voice_settings": {
+      "stability": 0.55,
+      "similarity_boost": 0.8,
+      "style": 0.35,
+      "use_speaker_boost": true
+    }
+  },
+  "generatedAt": "2026-09-06T13:40:03.925Z",
+  "requestId": "AzP2aNs5bCbdDJtg46tZ",
+  "audio": {
+    "path": "cln-tutorial/v4-audio/critical-grade-ddff4187e142.mp3",
+    "bytes": 99100,
+    "sha256": "2e15e1f451d48739c1fd30461be09d90f78517385ca8282954e67001a25eba9a"
+  }
+}

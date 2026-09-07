@@ -1,0 +1,22 @@
+{
+  "provider": "ElevenLabs",
+  "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+  "requestHash": "8f6d471c2020d2edbba9251d156b0750b3266e6bd46cf05e735a7cc166a97c30",
+  "request": {
+    "text": "Submit. Task Completed confirms the capture. The due occurrence is recorded, while the finding remains open in Remedial and needs follow-up.",
+    "model_id": "eleven_multilingual_v2",
+    "voice_settings": {
+      "stability": 0.55,
+      "similarity_boost": 0.8,
+      "style": 0.35,
+      "use_speaker_boost": true
+    }
+  },
+  "generatedAt": "2026-09-06T13:39:51.738Z",
+  "requestId": "eq4APekVu6ojdrgDbsv9",
+  "audio": {
+    "path": "cln-tutorial/v4-audio/major-recorded-8f6d471c2020.mp3",
+    "bytes": 186035,
+    "sha256": "5418856ff6454f4adddaaa6d41ef6d0f220f6f214803e22b7999ba883cc8ceda"
+  }
+}

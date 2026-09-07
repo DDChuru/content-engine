@@ -1,0 +1,143 @@
+{
+  "audioSha256": "98e9e864d8ecca7f50999616e2319651d34c8e35adfc5e9105df35640bb81523",
+  "measuredAt": "2026-09-07T04:18:46.395116+00:00",
+  "transcription": {
+    "provider": "local-faster-whisper",
+    "model": "Systran/faster-whisper-small",
+    "modelPath": "/home/durai/.cache/huggingface/hub/models--Systran--faster-whisper-small/snapshots/536b0662742c02347bc0e980a01041f333bce120",
+    "modelRevision": "536b0662742c02347bc0e980a01041f333bce120",
+    "modelFiles": [
+      {
+        "name": "model.bin",
+        "bytes": 483546902,
+        "sha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671"
+      },
+      {
+        "name": "config.json",
+        "bytes": 2370,
+        "sha256": "b55496ac7940a7ae47d2c01eab40edfd8701feec1229d9cce3b40014383fb828"
+      },
+      {
+        "name": "tokenizer.json",
+        "bytes": 2203239,
+        "sha256": "fb7b63191e9bb045082c79fd742a3106a12c99513ab30df4a0d47fa6cb6fd0ab"
+      },
+      {
+        "name": "vocabulary.txt",
+        "bytes": 459861,
+        "sha256": "34ce3fe1c5041027b3f8d42912270993f986dbc4bb34cf27f951e34a1e453913"
+      }
+    ],
+    "versions": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.8.2",
+      "av": "18.1.0",
+      "tokenizers": "0.23.2"
+    },
+    "pythonVersion": "3.12.3",
+    "pythonExecutable": "/tmp/si-units-faster-whisper/bin/python",
+    "device": "cpu",
+    "computeType": "int8",
+    "cpuThreads": 4,
+    "numWorkers": 1,
+    "localFilesOnly": true,
+    "settings": {
+      "language": "en",
+      "word_timestamps": true,
+      "beam_size": 5,
+      "temperature": 0,
+      "condition_on_previous_text": false,
+      "vad_filter": false,
+      "hotwords": "Bakery Demo, Bill of Health, Premix Area, SSOP, NCR, Remedial, none captured, Still to do, Passed, Follow-up owed, Couldn't access, Resolved today, Pass all, Daily."
+    },
+    "helper": {
+      "name": "transcribe-cln-v4-local.py",
+      "bytes": 4483,
+      "sha256": "20f171356c11b09b96a919c2f3188920a47d908cf0e285930f0c2600d01745af"
+    },
+    "workflowRef": "../packages/backend/src/scripts/transcribe-mechanics-si-units-local.py"
+  },
+  "response": {
+    "language": "en",
+    "duration": 5.2941875,
+    "text": "Before check-in, due lists 19 daily checks, completion is locked.",
+    "segments": [
+      {
+        "id": 1,
+        "start": 0,
+        "end": 4.8,
+        "text": " Before check-in, due lists 19 daily checks, completion is locked.",
+        "avg_logprob": -0.4390442603164249,
+        "no_speech_prob": 0.06229065731167793
+      }
+    ],
+    "words": [
+      {
+        "word": "Before",
+        "start": 0,
+        "end": 0.28,
+        "probability": 0.8355666399002075
+      },
+      {
+        "word": "check",
+        "start": 0.28,
+        "end": 0.52,
+        "probability": 0.1684475988149643
+      },
+      {
+        "word": "-in,",
+        "start": 0.52,
+        "end": 0.74,
+        "probability": 0.8608966767787933
+      },
+      {
+        "word": "due",
+        "start": 1.14,
+        "end": 1.42,
+        "probability": 0.4002622067928314
+      },
+      {
+        "word": "lists",
+        "start": 1.42,
+        "end": 1.76,
+        "probability": 0.776769757270813
+      },
+      {
+        "word": "19",
+        "start": 1.76,
+        "end": 2.32,
+        "probability": 0.9213426113128662
+      },
+      {
+        "word": "daily",
+        "start": 2.32,
+        "end": 2.76,
+        "probability": 0.9418033957481384
+      },
+      {
+        "word": "checks,",
+        "start": 2.76,
+        "end": 3.1,
+        "probability": 0.9671233892440796
+      },
+      {
+        "word": "completion",
+        "start": 3.76,
+        "end": 4.2,
+        "probability": 0.9249047040939331
+      },
+      {
+        "word": "is",
+        "start": 4.2,
+        "end": 4.52,
+        "probability": 0.9915810227394104
+      },
+      {
+        "word": "locked.",
+        "start": 4.52,
+        "end": 4.8,
+        "probability": 0.9542135000228882
+      }
+    ]
+  }
+}

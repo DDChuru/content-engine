@@ -3,6 +3,11 @@
   "version": "1.0.0",
   "description": "Content Engine Branded Intro/Outro Templates",
   "scripts": {
+    "validate:cln-v4": "tsc -p tsconfig-cln-v4.json && node tools/verify-cln-v4.cjs",
+    "preflight:cln-v4:final": "node tools/verify-cln-v4.cjs --final",
+    "smoke:cln-v4": "node tools/verify-cln-v4.cjs --smoke",
+    "render:cln-v4:internal-preview": "node tools/verify-cln-v4.cjs --render-preview",
+    "validate:cln-v4:polish": "node tools/verify-cln-v4-polish.cjs",
     "validate:remedial": "tsc -p tsconfig-remedial.json && node tools/verify-remedial.cjs",
     "preflight:remedial:final": "node tools/verify-remedial.cjs --final",
     "preflight:remedial:inventory": "node tools/verify-remedial.cjs --inventory",

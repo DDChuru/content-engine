@@ -1,0 +1,22 @@
+{
+  "provider": "ElevenLabs",
+  "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+  "requestHash": "124058da3cdc3e2a925a00cce16bd42ba74130f56202c4d377e24e66ca6495b3",
+  "request": {
+    "text": "No photos are present. Viewing this reference records no check.",
+    "model_id": "eleven_multilingual_v2",
+    "voice_settings": {
+      "stability": 0.55,
+      "similarity_boost": 0.8,
+      "style": 0.35,
+      "use_speaker_boost": true
+    }
+  },
+  "generatedAt": "2026-09-06T13:37:43.665Z",
+  "requestId": "Dc8hY9BX91QfuKNl6LwA",
+  "audio": {
+    "path": "cln-tutorial/v4-audio/ssop-reference-124058da3cdc.mp3",
+    "bytes": 67335,
+    "sha256": "379e5b210cb6d755fb05ec5e4017e3ea427da4db79376ff04337af11c59a57df"
+  }
+}
