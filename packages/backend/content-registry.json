@@ -1002,7 +1002,7 @@
             "landscape": {
               "compositionId": "MechanicsMultipleCollisions",
               "resolution": "1920x1080",
-              "durationS": 296.9,
+              "durationS": 344.26,
               "composition": "src/remotion/compositions/MechanicsMultipleCollisions.tsx",
               "render": "output/mechanics/multiple-collisions.mp4",
               "contactSheet": "output/mechanics/multiple-collisions-sheet.png"
@@ -1025,13 +1025,16 @@
               "src/remotion/public/audio/mechanics/multiple-collisions-s06.mp3"
             ],
             "transcript": "src/remotion/public/transcripts/mechanics/multiple-collisions.json",
-            "cues": 74
+            "cues": 84
           },
           "commits": {
             "study": "e9d4069",
             "astraNarration": "bfc910b",
             "astraCues": "444be16",
-            "astraBuild": "b616530"
+            "astraBuild": "b616530",
+            "captionFix": "6a676c5",
+            "formulaNarration": "4e7f675",
+            "formulaBuild": "2a7fc4b"
           },
           "app": {
             "notesPage": "/notes/mechanics-multiple-collisions",
@@ -1039,7 +1042,8 @@
           },
           "verification": "projects/mechanics-multiple-collisions/verify-build.md",
           "reviewNotes": [
-            "Source errors corrected: 'identical' spheres with different masses; magnitude-based catch-up test replaced by signed velocities. v_B=4, w_B=1 m/s, A catches B again. 112 audited stills ≤3 regions, zero text collisions. Fable contact-sheet review passed; awaiting Durai."
+            "Source errors corrected: 'identical' spheres with different masses; magnitude-based catch-up test replaced by signed velocities. v_B=4, w_B=1 m/s, A catches B again. 112 audited stills ≤3 regions, zero text collisions. Fable contact-sheet review passed; awaiting Durai.",
+            "2026-09-07 Durai: disliked text-only card frames (§10) and working not leading with the formula (§11). Fixed: 30→0 text-only frames, compact captions, 'Momentum before = momentum after' + symbol line before numbers (S04/S06 re-voiced). 5:44, 217 stills. Fable contact-sheet review passed."
           ]
         }
       },
