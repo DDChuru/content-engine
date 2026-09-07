@@ -2,9 +2,24 @@
 """Audit Multiple Collisions cue, hold, contact and motion stills; no video render."""
 import argparse, concurrent.futures, hashlib, json, math, subprocess
 from pathlib import Path
+from PIL import Image, ImageChops
 ROOT=Path(__file__).resolve().parents[2]
 TRANSCRIPT=ROOT/'src/remotion/public/transcripts/mechanics/multiple-collisions.json'
 ARTIFACTS=ROOT/'out/MechanicsMultipleCollisions'
+
+def assert_visual(row):
+    assert any(b['region'] in ('diagram','paper') for b in row['bounds']),('Text-only still: a card needs a visual',row)
+
+def assert_visible_pixels(row,path):
+    with Image.open(path) as image:
+        root=row['rootBounds'];scale=image.width/root['width']
+        for b in row['bounds']:
+            if b['region'] not in ('diagram','paper'):continue
+            box=tuple(round(v*scale) for v in (b['left']-root['left'],b['top']-root['top'],b['right']-root['left'],b['bottom']-root['top']))
+            crop=image.crop(box).convert('RGB')
+            difference=ImageChops.difference(crop,Image.new('RGB',crop.size,'#171c20')).convert('L')
+            if sum(difference.histogram()[16:])>100:return
+    raise AssertionError(('Visual is blank or occluded',row['frame']))
 
 def audit_frames(scenes):
     frames={};holds=[];offset=0
@@ -12,6 +27,11 @@ def audit_frames(scenes):
         def add(seconds,label):
             frame=offset+math.ceil(seconds*30)
             frames.setdefault(frame,[]).append(s['id']+':'+label)
+        add(0,'scene-start')
+        frames.setdefault(offset+math.ceil(s['duration']*30)-1,[]).append(s['id']+':scene-end')
+        if offset:
+            for frame in range(offset,offset+16):
+                frames.setdefault(frame,[]).append(s['id']+':transition')
         for key,t in s['cues'].items():add(t,key)
         for i,h in enumerate(s['holds']):
             if h['kind']!='hold':continue
@@ -27,6 +47,9 @@ def audit_frames(scenes):
                 add(s['cues'][key]+.12,key+'-flash')
                 add(s['cues'][key]+.6,key+'-after')
             for a,b in [('setup','first'),('first','second'),('second','question')]:add((s['cues'][a]+s['cues'][b])/2,a+'-moving')
+        if s['id']=='s02':
+            add(s['cues']['separate']+.3,'velocity-changing')
+            add(s['cues']['separate']+.6,'velocity-changed')
         if s['id']=='s05':
             add(s['cues']['rule']+4,'right-closing')
             add(s['cues']['answer']+4,'left-closing')
@@ -42,23 +65,37 @@ def main():
     parser.add_argument('--bundle',type=Path,default=ROOT/'build')
     parser.add_argument('--output',type=Path,default=ROOT/'out/verify-collisions-stills')
     parser.add_argument('--workers',type=int,default=3)
+    parser.add_argument('--reuse-stills',action='store_true',help='Resume interrupted captures only when bundle and image hashes match')
     args=parser.parse_args();args.output.mkdir(parents=True,exist_ok=True)
+    bundle_hash=hashlib.sha256()
+    for p in sorted(args.bundle.glob('*.js')):
+        bundle_hash.update(p.name.encode());bundle_hash.update(p.read_bytes())
+    bundle_hash=bundle_hash.hexdigest()
     scenes=json.loads(TRANSCRIPT.read_text())['scenes'];frames,holds=audit_frames(scenes)
     def verify(item):
         frame,labels=item;p=args.output/f'{frame:05d}.png';log=args.output/f'verify-{frame:05d}.log'
-        for attempt in range(3):
-            with log.open('w') as stream:
-                result=subprocess.run(['npx','remotion','still',str(args.bundle),'MechanicsMultipleCollisions',str(p),f'--frame={frame}','--scale=0.5','--props={"audioEnabled":false,"audit":true}','--log=error'],cwd=ROOT,stdout=stream,stderr=subprocess.STDOUT)
-            if result.returncode==0:break
-        else:raise RuntimeError(f'Still failed: {log}')
-        row=json.loads((ARTIFACTS/f'verify-collisions-{frame:05d}.json').read_text())
+        cache=args.output/f'verify-{frame:05d}.json'
+        saved=json.loads(cache.read_text()) if args.reuse_stills and cache.exists() and p.exists() else None
+        if saved and saved['bundleSha256']==bundle_hash and saved['imageSha256']==hashlib.sha256(p.read_bytes()).hexdigest():
+            row=saved['measurement']
+        else:
+            for attempt in range(3):
+                with log.open('w') as stream:
+                    result=subprocess.run(['npx','remotion','still',str(args.bundle),'MechanicsMultipleCollisions',str(p),f'--frame={frame}','--scale=0.5','--props={"audioEnabled":false,"audit":true}','--log=error'],cwd=ROOT,stdout=stream,stderr=subprocess.STDOUT)
+                if result.returncode==0:break
+            else:raise RuntimeError(f'Still failed: {log}')
+            row=json.loads((ARTIFACTS/f'verify-collisions-{frame:05d}.json').read_text())
+            cache.write_text(json.dumps({'bundleSha256':bundle_hash,'imageSha256':hashlib.sha256(p.read_bytes()).hexdigest(),'measurement':row})+'\n')
         assert row['frame']==frame and row['regions']<=3 and row['maxWords']<=12,row
+        assert_visual(row)
+        assert_visible_pixels(row,p)
+        assert row['maxCaptionWords']<=8 and row['maxCaptionWidthRatio']<=.4,row
         assert not row['overflow'] and not row['textCollisions'],row
         if any(k.endswith('setup-complete') for k in labels):assert not row['cards'] and row['regions']<=2,row
         for arrow in row['arrows']:assert abs(arrow['length']-abs(arrow['speed'])*35)<.01,row
         spheres=row['spheres']
         for a,b in zip(spheres,spheres[1:]):assert b['x']-a['x']>=a['radius']+b['radius']-.1,row
-        if any(k.startswith('s03:') for k in labels):assert not row['cards'],row
+        if any(k.startswith('s03:') and k.split(':')[1] not in ('transition','scene-start') for k in labels):assert not row['cards'],row
         return {'image':p.name,**row,'cueLabels':labels}
     with concurrent.futures.ThreadPoolExecutor(max_workers=args.workers) as pool:rows=list(pool.map(verify,sorted(frames.items())))
     hashes=[]
@@ -66,7 +103,7 @@ def main():
         first=hashlib.sha256((args.output/f'{start:05d}.png').read_bytes()).hexdigest();last=hashlib.sha256((args.output/f'{end:05d}.png').read_bytes()).hexdigest()
         assert first==last,(start,end)
         row=next(row for row in rows if row['frame']==start)
-        if duration==1.5:assert not row['spheres'] and row['regions']==2,row
+        if duration==1.5:assert row['spheres'] and row['regions']==3,row
         hashes.append({'start':start,'end':end,'frames':end-start+1,'sha256':first})
     labelled={label:row for row in rows for label in row['cueLabels']}
     for label,ids in [('s03:first',('A','B')),('s03:second',('B','C')),('s06:final-contact',('A','B'))]:
@@ -74,7 +111,11 @@ def main():
         assert abs(b['x']-a['x']-a['radius']-b['radius'])<2,row
         assert row['contactFlash'],row
     left=labelled['s05:left-closing']['spheres'];assert left[0]['velocity']>left[1]['velocity'] and left[0]['velocity']<0
-    report={'stillCount':len(rows),'maxRegions':max(r['regions'] for r in rows),'maxWords':max(r['maxWords'] for r in rows),'textCollisionCount':sum(len(r['textCollisions']) for r in rows),'identicalHoldPairs':len(holds),'holdHashes':hashes,'contactChecks':3,'measurements':rows}
+    before=next(b for b in labelled['s02:third']['spheres'] if b['id']=='B')
+    after=next(b for b in labelled['s02:velocity-changed']['spheres'] if b['id']=='B')
+    assert before['velocity']!=after['velocity'],(before,after)
+    assert {'vB','wB'}<={l['text'] for l in labelled['s02:unique']['labels']},labelled['s02:unique']
+    report={'stillCount':len(rows),'pixelCheckedStillCount':len(rows),'textOnlyCount':sum(r['textOnly'] for r in rows),'maxCaptionWords':max(r['maxCaptionWords'] for r in rows),'maxCaptionWidthRatio':max(r['maxCaptionWidthRatio'] for r in rows),'maxRegions':max(r['regions'] for r in rows),'maxWords':max(r['maxWords'] for r in rows),'textCollisionCount':sum(len(r['textCollisions']) for r in rows),'identicalHoldPairs':len(holds),'holdHashes':hashes,'contactChecks':3,'measurements':rows}
     (args.output/'verify-measurements.json').write_text(json.dumps(report,indent=2)+'\n')
-    print(f"Passed {len(rows)} stills, {len(holds)} frozen holds, 3 contacts; max {report['maxRegions']} regions / {report['maxWords']} words.")
+    print(f"Passed {len(rows)} stills, {len(holds)} frozen holds, 3 contacts; {report['textOnlyCount']} text-only stills; max {report['maxRegions']} regions / {report['maxCaptionWords']} caption words.")
 if __name__=='__main__':main()
