@@ -170,3 +170,15 @@ we go 'where did this come from?'"
 - Unknowns are drawn on the diagram (v_B with a dashed arrow) before they appear in the working.
 - Results go back onto the diagram (the value replaces the unknown) so the next collision's givens are on screen.
 - Applies to lift/ball/cyclist examples too: the givens (a, t, u, g) on a problem card and on the diagram first.
+
+## 14. Point at what you are saying: ring the figure as it is spoken (Durai, 2026-09-07, on the Multiple Collisions set-up)
+
+Durai: "whilst we are narrating we could circle, as an annotation, or highlight the figures in the diagrams."
+
+- Whenever the narration says a value that is on screen (a mass, a speed, a time, a label), a hand-drawn ring
+  or highlight appears on that figure in the diagram at the word's cue, and fades after ~1.5 s (or stays until
+  the next ring). Word-level Whisper timestamps drive it; one ring per spoken figure.
+- Same when the working substitutes a number: ring its source on the diagram as the pen writes it on the paper.
+- The ring is the accent colour, pen-drawn (stroke-dash, ~0.4 s), slightly loose, never a perfect box.
+- Problem cards: highlight the phrase being read (underline sweep) as it is spoken.
+- Applies to every set-up beat and every worked example; the still audit checks a ring exists at each spoken-figure cue.
