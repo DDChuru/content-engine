@@ -1,5 +1,7 @@
 # Modelling Assumptions re-cut — verification
 
+The current additive pass is documented in [the §§10–14 audit below](#additive-audit). The original re-cut report is retained as history.
+
 The six-scene re-cut replaces the previous eight-scene build. Narration is **276.924 seconds (4:36.924)**; the composition is **8,311 frames / 277.033 seconds at 30 fps**. No video render was run. The composition ID, exported names and Root registration are unchanged.
 
 ## Scene timings
@@ -54,3 +56,80 @@ The verifier runs `npx remotion still` at every cue, both hold boundaries, and c
 - `packages/backend/src/remotion/public/audio/mechanics/modelling-assumptions-s08.mp3` — obsolete eighth-scene recap audio; the replacement recap is s06.
 
 No other files or directories were deleted. Rendering remains for the other machine.
+
+<a id="additive-audit"></a>
+
+## Additive §10–14 audit — 2026-09-07
+
+Stage 1: `b0f14d1` (committed and pushed before composition work). The six approved
+scenes, all six MP3 SHA-256 hashes, narration paragraphs, 72 teaching cues, eight
+inserted holds and **8,311 frames / 277.033 seconds** are unchanged from `adcb394`.
+S05 already tells the box/desk/pulley/hanging-sphere story before matching, so no
+narration line required re-voicing. A fresh local faster-whisper-small CPU pass
+resolved all 72 cues; the reviewed word alignment was retained where re-transcription
+drifted. Emphasis onsets falling a few frames inside inserted PCM silence are
+clamped to the known end of that silence, with the original word onset preserved
+in `wordStart`. There are **84 word-derived focus events**.
+
+The visual changes are additive to the six-scene re-cut:
+
+- All scenes have a diagram from the start. Opening/outcomes and recap retain a
+  table/pulley motif. The modelling-cycle flowchart also has a small setup motif.
+- Captions use compact muted boxes, at most eight words except the unchanged
+  opening/recap outcomes and full problem wording. The same diagram remains
+  visible as captions change.
+- The source's 5 kg box and 2 kg hanging sphere, desk, string and pulley are
+  labelled before matching. A three-line setup and all five simplifications
+  remain on the paper throughout; each answer is written underneath them.
+  Problem phrases underline as read. The particle/air-resistance correction is
+  preserved, as are the taut-string and equal-magnitude qualifications.
+- The cliff and curved-to-vertical trajectory remain. A height graph adds the
+  source's 20 m and 15 m readings beside the cliff. The handwritten model stays
+  above `h(0) = 20 m` and `h(1) = 15 m`; no force calculation is introduced.
+- Loose, stroke-drawn rings start at the spoken word, draw over 0.4 seconds and
+  fade after about 1.5 seconds. They freeze with the rest of each inserted hold.
+- `9542f33` supplied the uniform-rod mass marks and zigzag stretching connector
+  used within the retained vocabulary scene. That revision contains no cliff
+  scene; the re-cut's cliff was preserved and given rock-face detail.
+- The transition midpoint switches directly between complete diagrams. The
+  pixel audit exposed an opaque nested transition wrapper that hid the outgoing
+  scene; removing that wrapper's background eliminates the blank boundary frames.
+
+Final checks passed:
+
+- **483 PNG stills**: every teaching cue, every focus onset and completed ring,
+  completed handwriting, both ends of all holds, every transition frame, and
+  visual-presence samples every two seconds.
+- Maximum **3 regions**, **7 words per caption**, and **9 words per problem/outcome/ink line**;
+  no measured text/handwriting collisions or overflow.
+- Every sampled frame has painted diagram content (minimum
+  **2,272 non-background pixels** at half resolution). Every requested
+  focus cue has its ring/underline; ring crops also contain painted accent pixels.
+- **8 byte-identical hold pairs**: seven 60-frame holds and one 90-frame hold.
+  Chrome produced sparse edge-pixel differences in some initial captures;
+  sequential re-captures resolved them. The exact PNG-hash assertion was retained;
+  no pixel tolerance was introduced.
+- Detailed still inspection covered the full matching setup, all five completed
+  handwritten answers, uniform/uneven rod, light-string and smooth-pulley rings,
+  the two stone readings, outcome motifs and transition boundaries.
+- Remotion bundle, strict targeted TypeScript, Python/Node syntax and the
+  unchanged-audio/cue/scope verifier pass. The focused type check uses the existing
+  temporary React declarations at `/tmp/verify-modelling-types`.
+
+[Per-frame pixel/geometry checks, audio hashes and exact hold hashes](verify-additive-build.json)
+record the final proof. Local PNGs are in `/tmp/verify-modelling-additive-stills`.
+The optional `VERIFY_STILL_WORKERS=1` setting captures stills sequentially.
+
+Repeat from `packages/backend`, with the requested nvm Node on `PATH`:
+
+```bash
+python3 src/scripts/verify-modelling-additive-cues.py
+npx remotion bundle src/remotion/Root.tsx --out-dir=/tmp/verify-modelling-additive-bundle
+python3 src/scripts/verify-mechanics-modelling-assumptions.py --prepare-only --output /tmp/verify-modelling-additive-stills
+node src/scripts/verify-modelling-additive-stills.mjs /tmp/verify-modelling-additive-bundle /tmp/verify-modelling-additive-stills
+python3 src/scripts/verify-mechanics-modelling-assumptions.py --reuse-stills --output /tmp/verify-modelling-additive-stills
+```
+
+The batch helper renders PNG stills only using a shared browser. The normal
+verifier's CLI-per-still mode remains available. No video render, deployment or
+file deletion was performed in this additive pass.

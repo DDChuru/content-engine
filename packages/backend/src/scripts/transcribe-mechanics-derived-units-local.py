@@ -8,6 +8,7 @@ mechanics explainers, with all ten scene transcripts collected in one JSON
 file for the Remotion composition.
 """
 
+import argparse
 import json
 import re
 import subprocess
@@ -164,6 +165,11 @@ JOBS = [
                 "id": "local-acceleration",
                 "searchTerms": ["local acceleration"],
             },
+            {"id": "ten-gravity", "searchTerms": ["ten metres", "10 meters", "10 metres"]},
+            {"id": "one-kilogram", "searchTerms": ["one-kilogram", "one kilogram", "1 kilogram", "1-kilogram"]},
+            {"id": "one-times", "searchTerms": ["one times", "1 times"]},
+            {"id": "ten-substitution", "searchTerms": ["ten giving", "10 giving"]},
+            {"id": "ten-newtons", "searchTerms": ["ten newtons", "10 newtons", "10 Newton's", "10 new Newtons"]},
             {"id": "moon", "searchTerms": ["Moon"]},
         ],
     },
@@ -319,6 +325,11 @@ def transcribe_job(model, job, generated_at):
 
 
 def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--scenes", nargs="+", choices=[job["id"] for job in JOBS])
+    args = parser.parse_args()
+    jobs = [job for job in JOBS if not args.scenes or job["id"] in args.scenes]
+    previous = json.loads(TRANSCRIPT_PATH.read_text()) if args.scenes else None
     print("Derived Units for Mechanics -- Local Whisper Transcription")
     print("=" * 65)
     print(f"Model: {MODEL_SIZE} (faster-whisper, CPU)")
@@ -326,7 +337,7 @@ def main():
 
     missing_audio = [
         job["audioFile"]
-        for job in JOBS
+        for job in jobs
         if not (AUDIO_DIR / job["audioFile"]).is_file()
     ]
     if missing_audio:
@@ -341,11 +352,16 @@ def main():
     all_missed = []
     total_duration = 0.0
 
-    for job in JOBS:
+    for job in jobs:
         transcript, missed = transcribe_job(model, job, generated_at)
         scenes.append(transcript)
         total_duration += transcript["duration"]
         all_missed.extend(f"{job['id']}:{cue_id}" for cue_id in missed)
+
+    if previous:
+        replacements = {scene["id"]: scene for scene in scenes}
+        scenes = [replacements.get(scene["id"], scene) for scene in previous["scenes"]]
+        total_duration = sum(scene["duration"] for scene in scenes)
 
     transcript_data = {
         "project": "mechanics-derived-units",
