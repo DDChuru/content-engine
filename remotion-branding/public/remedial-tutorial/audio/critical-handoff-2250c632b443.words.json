@@ -1,0 +1,192 @@
+{
+  "audioSha256": "7e2b003a4a41cb29f41208f478f7966620eb3815862c7a0fc89be7b1e6bf8b53",
+  "model": "faster-whisper-small",
+  "modelRevision": "536b0662742c02347bc0e980a01041f333bce120",
+  "computeType": "int8",
+  "language": "en",
+  "initialPrompt": null,
+  "duration": 15.371625,
+  "text": "This separate critical cleaning failure raised an NCR under the critical only rule. A major failure does not take that grade triggered branch. The NCR continues in its own workflow.",
+  "words": [
+    {
+      "word": " This",
+      "start": 0.0,
+      "end": 0.24,
+      "probability": 0.8802006840705872
+    },
+    {
+      "word": " separate",
+      "start": 0.24,
+      "end": 0.74,
+      "probability": 0.9405348896980286
+    },
+    {
+      "word": " critical",
+      "start": 0.74,
+      "end": 1.78,
+      "probability": 0.7858623266220093
+    },
+    {
+      "word": " cleaning",
+      "start": 1.78,
+      "end": 2.16,
+      "probability": 0.9906284213066101
+    },
+    {
+      "word": " failure",
+      "start": 2.16,
+      "end": 2.58,
+      "probability": 0.9989423155784607
+    },
+    {
+      "word": " raised",
+      "start": 2.58,
+      "end": 3.26,
+      "probability": 0.9327918291091919
+    },
+    {
+      "word": " an",
+      "start": 3.26,
+      "end": 3.52,
+      "probability": 0.8916572332382202
+    },
+    {
+      "word": " NCR",
+      "start": 3.52,
+      "end": 4.16,
+      "probability": 0.8882758319377899
+    },
+    {
+      "word": " under",
+      "start": 4.16,
+      "end": 5.18,
+      "probability": 0.9501196146011353
+    },
+    {
+      "word": " the",
+      "start": 5.18,
+      "end": 5.36,
+      "probability": 0.9860851764678955
+    },
+    {
+      "word": " critical",
+      "start": 5.36,
+      "end": 5.7,
+      "probability": 0.8852660655975342
+    },
+    {
+      "word": " only",
+      "start": 5.7,
+      "end": 6.12,
+      "probability": 0.8927133679389954
+    },
+    {
+      "word": " rule.",
+      "start": 6.12,
+      "end": 6.74,
+      "probability": 0.8426637649536133
+    },
+    {
+      "word": " A",
+      "start": 7.66,
+      "end": 7.76,
+      "probability": 0.981327474117279
+    },
+    {
+      "word": " major",
+      "start": 7.76,
+      "end": 8.04,
+      "probability": 0.9958487749099731
+    },
+    {
+      "word": " failure",
+      "start": 8.04,
+      "end": 8.46,
+      "probability": 0.9988411068916321
+    },
+    {
+      "word": " does",
+      "start": 8.46,
+      "end": 8.88,
+      "probability": 0.9908429384231567
+    },
+    {
+      "word": " not",
+      "start": 8.88,
+      "end": 9.06,
+      "probability": 0.9989897608757019
+    },
+    {
+      "word": " take",
+      "start": 9.06,
+      "end": 9.4,
+      "probability": 0.9971081614494324
+    },
+    {
+      "word": " that",
+      "start": 9.4,
+      "end": 9.7,
+      "probability": 0.9869875907897949
+    },
+    {
+      "word": " grade",
+      "start": 9.7,
+      "end": 10.14,
+      "probability": 0.94012850522995
+    },
+    {
+      "word": " triggered",
+      "start": 10.14,
+      "end": 10.52,
+      "probability": 0.7876443266868591
+    },
+    {
+      "word": " branch.",
+      "start": 10.52,
+      "end": 11.0,
+      "probability": 0.991530179977417
+    },
+    {
+      "word": " The",
+      "start": 11.82,
+      "end": 11.94,
+      "probability": 0.9586721062660217
+    },
+    {
+      "word": " NCR",
+      "start": 11.94,
+      "end": 12.58,
+      "probability": 0.9632430374622345
+    },
+    {
+      "word": " continues",
+      "start": 12.58,
+      "end": 13.2,
+      "probability": 0.9877665042877197
+    },
+    {
+      "word": " in",
+      "start": 13.2,
+      "end": 14.0,
+      "probability": 0.9732864499092102
+    },
+    {
+      "word": " its",
+      "start": 14.0,
+      "end": 14.16,
+      "probability": 0.9635374546051025
+    },
+    {
+      "word": " own",
+      "start": 14.16,
+      "end": 14.42,
+      "probability": 0.9908015131950378
+    },
+    {
+      "word": " workflow.",
+      "start": 14.42,
+      "end": 14.82,
+      "probability": 0.9468947649002075
+    }
+  ]
+}

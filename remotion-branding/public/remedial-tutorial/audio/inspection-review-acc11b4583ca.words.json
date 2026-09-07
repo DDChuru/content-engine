@@ -1,0 +1,312 @@
+{
+  "audioSha256": "b2087e3f5cb0539d747a84f90b29a8cb9472a115c2350aafebf011e9a636345f",
+  "model": "faster-whisper-small",
+  "modelRevision": "536b0662742c02347bc0e980a01041f333bce120",
+  "computeType": "int8",
+  "language": "en",
+  "initialPrompt": null,
+  "duration": 25.6348125,
+  "text": "Review the before evidence and description. Read any remedial action actually logged. In required mode, accept asks for an after photo. Attach the after evidence before acceptance. This demo uses the Android test scene. Other modes do not impose that gate. There is no structured owner due date or SLA.",
+  "words": [
+    {
+      "word": " Review",
+      "start": 0.0,
+      "end": 0.46,
+      "probability": 0.7773681879043579
+    },
+    {
+      "word": " the",
+      "start": 0.46,
+      "end": 0.98,
+      "probability": 0.9690335988998413
+    },
+    {
+      "word": " before",
+      "start": 0.98,
+      "end": 1.36,
+      "probability": 0.6671542525291443
+    },
+    {
+      "word": " evidence",
+      "start": 1.36,
+      "end": 1.92,
+      "probability": 0.7972950339317322
+    },
+    {
+      "word": " and",
+      "start": 1.92,
+      "end": 2.64,
+      "probability": 0.6764714121818542
+    },
+    {
+      "word": " description.",
+      "start": 2.64,
+      "end": 3.04,
+      "probability": 0.9898502826690674
+    },
+    {
+      "word": " Read",
+      "start": 3.8,
+      "end": 4.18,
+      "probability": 0.9928668737411499
+    },
+    {
+      "word": " any",
+      "start": 4.18,
+      "end": 4.48,
+      "probability": 0.9933684468269348
+    },
+    {
+      "word": " remedial",
+      "start": 4.48,
+      "end": 5.12,
+      "probability": 0.9984000325202942
+    },
+    {
+      "word": " action",
+      "start": 5.12,
+      "end": 5.56,
+      "probability": 0.9889350533485413
+    },
+    {
+      "word": " actually",
+      "start": 5.56,
+      "end": 6.2,
+      "probability": 0.9185429215431213
+    },
+    {
+      "word": " logged.",
+      "start": 6.2,
+      "end": 6.62,
+      "probability": 0.9915319085121155
+    },
+    {
+      "word": " In",
+      "start": 7.46,
+      "end": 7.86,
+      "probability": 0.9849236011505127
+    },
+    {
+      "word": " required",
+      "start": 7.86,
+      "end": 8.3,
+      "probability": 0.920578122138977
+    },
+    {
+      "word": " mode,",
+      "start": 8.3,
+      "end": 8.76,
+      "probability": 0.9947459697723389
+    },
+    {
+      "word": " accept",
+      "start": 9.26,
+      "end": 9.66,
+      "probability": 0.5801799893379211
+    },
+    {
+      "word": " asks",
+      "start": 9.66,
+      "end": 10.0,
+      "probability": 0.8951784372329712
+    },
+    {
+      "word": " for",
+      "start": 10.0,
+      "end": 10.26,
+      "probability": 0.9948798418045044
+    },
+    {
+      "word": " an",
+      "start": 10.26,
+      "end": 10.42,
+      "probability": 0.9849147796630859
+    },
+    {
+      "word": " after",
+      "start": 10.42,
+      "end": 10.58,
+      "probability": 0.9567158222198486
+    },
+    {
+      "word": " photo.",
+      "start": 10.58,
+      "end": 10.9,
+      "probability": 0.9283580183982849
+    },
+    {
+      "word": " Attach",
+      "start": 12.08,
+      "end": 12.42,
+      "probability": 0.9922177195549011
+    },
+    {
+      "word": " the",
+      "start": 12.42,
+      "end": 12.6,
+      "probability": 0.9940131306648254
+    },
+    {
+      "word": " after",
+      "start": 12.6,
+      "end": 12.82,
+      "probability": 0.9831479787826538
+    },
+    {
+      "word": " evidence",
+      "start": 12.82,
+      "end": 13.28,
+      "probability": 0.9784063100814819
+    },
+    {
+      "word": " before",
+      "start": 13.28,
+      "end": 14.04,
+      "probability": 0.9164018630981445
+    },
+    {
+      "word": " acceptance.",
+      "start": 14.04,
+      "end": 14.52,
+      "probability": 0.9939994812011719
+    },
+    {
+      "word": " This",
+      "start": 15.32,
+      "end": 15.46,
+      "probability": 0.9895639419555664
+    },
+    {
+      "word": " demo",
+      "start": 15.46,
+      "end": 15.72,
+      "probability": 0.9968582391738892
+    },
+    {
+      "word": " uses",
+      "start": 15.72,
+      "end": 16.0,
+      "probability": 0.9971858859062195
+    },
+    {
+      "word": " the",
+      "start": 16.0,
+      "end": 16.24,
+      "probability": 0.9930092096328735
+    },
+    {
+      "word": " Android",
+      "start": 16.24,
+      "end": 16.52,
+      "probability": 0.9190247654914856
+    },
+    {
+      "word": " test",
+      "start": 16.52,
+      "end": 16.86,
+      "probability": 0.7640917897224426
+    },
+    {
+      "word": " scene.",
+      "start": 16.86,
+      "end": 17.3,
+      "probability": 0.9663236141204834
+    },
+    {
+      "word": " Other",
+      "start": 18.1,
+      "end": 18.28,
+      "probability": 0.9852761626243591
+    },
+    {
+      "word": " modes",
+      "start": 18.28,
+      "end": 18.62,
+      "probability": 0.9871390461921692
+    },
+    {
+      "word": " do",
+      "start": 18.62,
+      "end": 19.2,
+      "probability": 0.9514826536178589
+    },
+    {
+      "word": " not",
+      "start": 19.2,
+      "end": 19.46,
+      "probability": 0.9983783960342407
+    },
+    {
+      "word": " impose",
+      "start": 19.46,
+      "end": 20.0,
+      "probability": 0.9905339479446411
+    },
+    {
+      "word": " that",
+      "start": 20.0,
+      "end": 20.24,
+      "probability": 0.9275458455085754
+    },
+    {
+      "word": " gate.",
+      "start": 20.24,
+      "end": 20.52,
+      "probability": 0.9646337032318115
+    },
+    {
+      "word": " There",
+      "start": 21.24,
+      "end": 21.46,
+      "probability": 0.9953405857086182
+    },
+    {
+      "word": " is",
+      "start": 21.46,
+      "end": 21.58,
+      "probability": 0.9963603615760803
+    },
+    {
+      "word": " no",
+      "start": 21.58,
+      "end": 21.72,
+      "probability": 0.99280846118927
+    },
+    {
+      "word": " structured",
+      "start": 21.72,
+      "end": 22.02,
+      "probability": 0.9925217032432556
+    },
+    {
+      "word": " owner",
+      "start": 22.02,
+      "end": 22.48,
+      "probability": 0.8633333444595337
+    },
+    {
+      "word": " due",
+      "start": 22.48,
+      "end": 23.5,
+      "probability": 0.7766345739364624
+    },
+    {
+      "word": " date",
+      "start": 23.5,
+      "end": 23.92,
+      "probability": 0.97944575548172
+    },
+    {
+      "word": " or",
+      "start": 23.92,
+      "end": 24.66,
+      "probability": 0.9717591404914856
+    },
+    {
+      "word": " SLA.",
+      "start": 24.66,
+      "end": 25.1,
+      "probability": 0.9580172300338745
+    }
+  ]
+}

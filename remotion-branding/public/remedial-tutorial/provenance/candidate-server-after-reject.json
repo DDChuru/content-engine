@@ -1,0 +1,71 @@
+{
+  "utc": "2026-09-07T02:17:14.882Z",
+  "siteId": "k57ae8hn0kgercz41hgy6s03mn88fzwd",
+  "rows": [
+    {
+      "beforeAfterMode": "before_after_optional",
+      "category": "operational_practices",
+      "createdAt": 1788746549613,
+      "description": "Demo C - explicit NCR. Android test-scene camera; simulated finding only. No real defect or physical inspection.",
+      "findingId": "8ff363de-b97f-4d25-88e8-4d4941e193d0",
+      "inspectionId": "hx7z5fqzx0exme1q8ybv7znrfd8dzk3k",
+      "inspectionTitle": "Bakery Demo training only - Remedial A B C",
+      "location": "Premix Area",
+      "ncrReference": null,
+      "remedialAction": null,
+      "severity": "major",
+      "status": "open",
+      "verificationDecision": null,
+      "verificationHistory": []
+    },
+    {
+      "beforeAfterMode": "before_after_required",
+      "category": "operational_practices",
+      "createdAt": 1788746984993,
+      "description": "Demo A - accept with required after photo. Android camera test scene. Simulated defect and correction only; no physical work claimed.",
+      "findingId": "d9b3b8db-9ec8-465e-8d90-7cbb4b90c719",
+      "inspectionId": "hx7z4ftsqymx4tjt0jjd0h1e798dzed4",
+      "inspectionTitle": "Bakery Demo training - A accept required",
+      "location": "Premix Area",
+      "ncrReference": null,
+      "remedialAction": "Training only: simulated correction and recheck. After photo is the Android camera test scene; no physical work claimed.",
+      "severity": "major",
+      "status": "closed",
+      "verificationDecision": "accepted",
+      "verificationHistory": [
+        {
+          "action": "verified",
+          "at": 1788747264583,
+          "by": "q57f3s9apf4x8vfkzx01896n2588xwqw",
+          "byName": "Bakery Demo Site Manager",
+          "decision": "accepted"
+        }
+      ]
+    },
+    {
+      "beforeAfterMode": "before_after_optional",
+      "category": "operational_practices",
+      "createdAt": 1788746546744,
+      "description": "Demo B - reject. Android test-scene camera; simulated finding and work only. No real defect or physical inspection.",
+      "findingId": "92c99484-4afd-47a3-8672-309eb561978b",
+      "inspectionId": "hx7z5fqzx0exme1q8ybv7znrfd8dzk3k",
+      "inspectionTitle": "Bakery Demo training only - Remedial A B C",
+      "location": "Premix Area",
+      "ncrReference": null,
+      "remedialAction": null,
+      "severity": "minor",
+      "status": "open",
+      "verificationDecision": "rejected",
+      "verificationHistory": [
+        {
+          "action": "verified",
+          "at": 1788747434680,
+          "by": "q57f3s9apf4x8vfkzx01896n2588xwqw",
+          "byName": "Bakery Demo Site Manager",
+          "comment": "Training only: simulated review rejected. Leave this demo finding open for follow-up; no real defect claimed.",
+          "decision": "rejected"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,186 @@
+{
+  "audioSha256": "7c7a545d4aaa5aa57efbf1fd851a4803e6b525978166c10c61b26c067d4d901e",
+  "model": "faster-whisper-small",
+  "modelRevision": "536b0662742c02347bc0e980a01041f333bce120",
+  "computeType": "int8",
+  "language": "en",
+  "initialPrompt": null,
+  "duration": 15.185875,
+  "text": "The cleaning tutorial covers this form. Keep the grade and failure reason. Action taken and photo evidence are optional here. The genuine acknowledgement confirms that the completion was recorded.",
+  "words": [
+    {
+      "word": " The",
+      "start": 0.0,
+      "end": 0.16,
+      "probability": 0.9224199652671814
+    },
+    {
+      "word": " cleaning",
+      "start": 0.16,
+      "end": 0.52,
+      "probability": 0.9100520014762878
+    },
+    {
+      "word": " tutorial",
+      "start": 0.52,
+      "end": 1.22,
+      "probability": 0.9952150583267212
+    },
+    {
+      "word": " covers",
+      "start": 1.22,
+      "end": 1.88,
+      "probability": 0.9882118105888367
+    },
+    {
+      "word": " this",
+      "start": 1.88,
+      "end": 2.18,
+      "probability": 0.9916332960128784
+    },
+    {
+      "word": " form.",
+      "start": 2.18,
+      "end": 2.52,
+      "probability": 0.9909279942512512
+    },
+    {
+      "word": " Keep",
+      "start": 3.5,
+      "end": 3.68,
+      "probability": 0.9647722840309143
+    },
+    {
+      "word": " the",
+      "start": 3.68,
+      "end": 3.9,
+      "probability": 0.9935190081596375
+    },
+    {
+      "word": " grade",
+      "start": 3.9,
+      "end": 4.3,
+      "probability": 0.9653302431106567
+    },
+    {
+      "word": " and",
+      "start": 4.3,
+      "end": 4.58,
+      "probability": 0.9815937876701355
+    },
+    {
+      "word": " failure",
+      "start": 4.58,
+      "end": 4.92,
+      "probability": 0.9832990765571594
+    },
+    {
+      "word": " reason.",
+      "start": 4.92,
+      "end": 5.32,
+      "probability": 0.9686050415039062
+    },
+    {
+      "word": " Action",
+      "start": 6.42,
+      "end": 6.82,
+      "probability": 0.9573789238929749
+    },
+    {
+      "word": " taken",
+      "start": 6.82,
+      "end": 7.26,
+      "probability": 0.9939513206481934
+    },
+    {
+      "word": " and",
+      "start": 7.26,
+      "end": 8.04,
+      "probability": 0.7812668085098267
+    },
+    {
+      "word": " photo",
+      "start": 8.04,
+      "end": 8.42,
+      "probability": 0.9906046986579895
+    },
+    {
+      "word": " evidence",
+      "start": 8.42,
+      "end": 8.92,
+      "probability": 0.9557417035102844
+    },
+    {
+      "word": " are",
+      "start": 8.92,
+      "end": 9.52,
+      "probability": 0.9831362366676331
+    },
+    {
+      "word": " optional",
+      "start": 9.52,
+      "end": 9.96,
+      "probability": 0.9949721097946167
+    },
+    {
+      "word": " here.",
+      "start": 9.96,
+      "end": 10.32,
+      "probability": 0.9873453974723816
+    },
+    {
+      "word": " The",
+      "start": 11.08,
+      "end": 11.12,
+      "probability": 0.9810605049133301
+    },
+    {
+      "word": " genuine",
+      "start": 11.12,
+      "end": 11.48,
+      "probability": 0.94938725233078
+    },
+    {
+      "word": " acknowledgement",
+      "start": 11.48,
+      "end": 12.2,
+      "probability": 0.8480335474014282
+    },
+    {
+      "word": " confirms",
+      "start": 12.2,
+      "end": 12.94,
+      "probability": 0.9971542358398438
+    },
+    {
+      "word": " that",
+      "start": 12.94,
+      "end": 13.42,
+      "probability": 0.9947998523712158
+    },
+    {
+      "word": " the",
+      "start": 13.42,
+      "end": 13.54,
+      "probability": 0.9920513033866882
+    },
+    {
+      "word": " completion",
+      "start": 13.54,
+      "end": 13.96,
+      "probability": 0.9954583644866943
+    },
+    {
+      "word": " was",
+      "start": 13.96,
+      "end": 14.26,
+      "probability": 0.9967244267463684
+    },
+    {
+      "word": " recorded.",
+      "start": 14.26,
+      "end": 14.76,
+      "probability": 0.9955251812934875
+    }
+  ]
+}

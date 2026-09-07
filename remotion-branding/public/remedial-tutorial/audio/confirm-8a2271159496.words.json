@@ -1,0 +1,192 @@
+{
+  "audioSha256": "e9ebe580190d8a3009482069b479556eeda3734aadb0fe5941fb0afb5ea8cb39",
+  "model": "faster-whisper-small",
+  "modelRevision": "536b0662742c02347bc0e980a01041f333bce120",
+  "computeType": "int8",
+  "language": "en",
+  "initialPrompt": null,
+  "duration": 17.2756875,
+  "text": "Confirm, followed up, opens the optional note in photo form. Add truthful evidence when available. Then select the inner, confirm. The demo note explicitly describes a simulated correction and recheck.",
+  "words": [
+    {
+      "word": " Confirm,",
+      "start": 0.0,
+      "end": 0.72,
+      "probability": 0.8364907801151276
+    },
+    {
+      "word": " followed",
+      "start": 1.18,
+      "end": 1.58,
+      "probability": 0.8420175909996033
+    },
+    {
+      "word": " up,",
+      "start": 1.58,
+      "end": 1.96,
+      "probability": 0.7942054867744446
+    },
+    {
+      "word": " opens",
+      "start": 2.38,
+      "end": 2.8,
+      "probability": 0.9831994771957397
+    },
+    {
+      "word": " the",
+      "start": 2.8,
+      "end": 3.0,
+      "probability": 0.9928398132324219
+    },
+    {
+      "word": " optional",
+      "start": 3.0,
+      "end": 3.38,
+      "probability": 0.9687508344650269
+    },
+    {
+      "word": " note",
+      "start": 3.38,
+      "end": 3.9,
+      "probability": 0.8884437084197998
+    },
+    {
+      "word": " in",
+      "start": 3.9,
+      "end": 4.34,
+      "probability": 0.9532203674316406
+    },
+    {
+      "word": " photo",
+      "start": 4.34,
+      "end": 4.64,
+      "probability": 0.40369343757629395
+    },
+    {
+      "word": " form.",
+      "start": 4.64,
+      "end": 5.1,
+      "probability": 0.9484466910362244
+    },
+    {
+      "word": " Add",
+      "start": 5.7,
+      "end": 6.12,
+      "probability": 0.977661669254303
+    },
+    {
+      "word": " truthful",
+      "start": 6.12,
+      "end": 6.5,
+      "probability": 0.7638846635818481
+    },
+    {
+      "word": " evidence",
+      "start": 6.5,
+      "end": 7.18,
+      "probability": 0.9780074954032898
+    },
+    {
+      "word": " when",
+      "start": 7.18,
+      "end": 7.66,
+      "probability": 0.9793195128440857
+    },
+    {
+      "word": " available.",
+      "start": 7.66,
+      "end": 8.14,
+      "probability": 0.9987425208091736
+    },
+    {
+      "word": " Then",
+      "start": 8.82,
+      "end": 9.02,
+      "probability": 0.9876691699028015
+    },
+    {
+      "word": " select",
+      "start": 9.02,
+      "end": 9.42,
+      "probability": 0.88194340467453
+    },
+    {
+      "word": " the",
+      "start": 9.42,
+      "end": 9.8,
+      "probability": 0.9791543483734131
+    },
+    {
+      "word": " inner,",
+      "start": 9.8,
+      "end": 10.04,
+      "probability": 0.6738719940185547
+    },
+    {
+      "word": " confirm.",
+      "start": 10.38,
+      "end": 10.68,
+      "probability": 0.9227541089057922
+    },
+    {
+      "word": " The",
+      "start": 11.68,
+      "end": 11.82,
+      "probability": 0.9902320504188538
+    },
+    {
+      "word": " demo",
+      "start": 11.82,
+      "end": 12.14,
+      "probability": 0.9774405360221863
+    },
+    {
+      "word": " note",
+      "start": 12.14,
+      "end": 12.64,
+      "probability": 0.990215539932251
+    },
+    {
+      "word": " explicitly",
+      "start": 12.64,
+      "end": 13.36,
+      "probability": 0.9945454597473145
+    },
+    {
+      "word": " describes",
+      "start": 13.36,
+      "end": 14.12,
+      "probability": 0.9901239275932312
+    },
+    {
+      "word": " a",
+      "start": 14.12,
+      "end": 14.42,
+      "probability": 0.8926838040351868
+    },
+    {
+      "word": " simulated",
+      "start": 14.42,
+      "end": 14.82,
+      "probability": 0.9985456466674805
+    },
+    {
+      "word": " correction",
+      "start": 14.82,
+      "end": 15.52,
+      "probability": 0.998119056224823
+    },
+    {
+      "word": " and",
+      "start": 15.92,
+      "end": 16.34,
+      "probability": 0.6310596466064453
+    },
+    {
+      "word": " recheck.",
+      "start": 16.34,
+      "end": 16.74,
+      "probability": 0.9305850565433502
+    }
+  ]
+}

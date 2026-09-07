@@ -1,0 +1,24 @@
+{
+  "provider": "ElevenLabs",
+  "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+  "providerName": "DC",
+  "seriesName": "Daniel",
+  "request": {
+    "text": "Within each area, findings sort by severity, then oldest. Age is muted through seven days, amber after seven days and coral after thirty days. These colours do not set an SLA, send a reminder or trigger escalation.",
+    "model_id": "eleven_multilingual_v2",
+    "voice_settings": {
+      "stability": 0.55,
+      "similarity_boost": 0.8,
+      "style": 0.35,
+      "use_speaker_boost": true
+    }
+  },
+  "requestHash": "0cdeaeed5ad7b5d6eb5d0692c1780fb05c387f933f78d3f1333e5904b97cd6cd",
+  "generatedAt": "2026-09-07T01:56:07.138Z",
+  "requestId": "vIK7FIDXBTAbmn28ks9w",
+  "audio": {
+    "path": "remedial-tutorial/audio/inspection-age-0cdeaeed5ad7.mp3",
+    "sha256": "bbf2775598ab9074def61c540474a7ac94678a24679a7b5f4056c27b3e71e7ed",
+    "bytes": 299720
+  }
+}

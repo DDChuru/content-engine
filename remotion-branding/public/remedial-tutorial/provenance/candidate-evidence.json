@@ -1,0 +1,1472 @@
+{
+  "schemaVersion": 1,
+  "status": "review-candidate-unapproved",
+  "siteId": "k57ae8hn0kgercz41hgy6s03mn88fzwd",
+  "captures": [
+    {
+      "path": "remedial-tutorial/inspection/01-cleaning-selected.png",
+      "bytes": 167322,
+      "sha256": "80f28d30fe6a57df56eb0780d477bc14fbf58e35d4ca2e08007b6dd5f020c9aa",
+      "id": "bakery-01-cleaning-selected",
+      "trail": "cleaning",
+      "siteId": "k57ae8hn0kgercz41hgy6s03mn88fzwd",
+      "width": 720,
+      "height": 1600,
+      "uncomposed": true,
+      "classification": "genuine-current-app",
+      "appCommit": "6999d8eca52fc4f4fff69066dce365f54a609663",
+      "capturedOn": "2026-09-07T01:45:10.892526+00:00",
+      "machine": "B",
+      "site": "Bakery Demo",
+      "account": "demo@sunbakebread.co.za",
+      "captureMethod": "unmodified adb exec-out screencap -p",
+      "authorizationRef": "Daniel task instruction: complete Bakery Demo examples through genuine app flows, 2026-09-07",
+      "reviewRef": "Pending Claude independent review and Daniel approval",
+      "recordRef": "hx7z5fqzx0exme1q8ybv7znrfd8dzk3k",
+      "scenario": "Read-only Cleaning bucket",
+      "eventOrder": 1,
+      "disclosure": "Genuine Bakery Demo queue · 7 Sept 2026 · observed records; no Cleaning mutation",
+      "observed": {
+        "slot": "cleaning-followup",
+        "proof": "bucket-cleaning"
+      },
+      "views": {
+        "bucket-cleaning": {
+          "x": 0.035,
+          "y": 0.17,
+          "w": 0.93,
+          "h": 0.095
+        }
+      },
+      "origin": {
+        "worktree": "/home/durai/Documents/projects/content-engine",
+        "head": "2d793d94f8e6ee0ca500b761c4b232ac9f5380b3",
+        "sourcePath": "remotion-branding/public/remedial-tutorial/inspection/01-cleaning-selected.png",
+        "sourceSlot": "cleaning-followup",
+        "manifest": "remedial-tutorial/provenance/candidate-evidence.json",
+        "register": "docs/remedial-action-candidate.md"
+      }
+    },
+    {
+      "path": "remedial-tutorial/inspection/03-demo-b-form.png",
+      "bytes": 108872,
+      "sha256": "945d4b04fd4d4a4bf561e9686e645ee2d23704dba8950005bb518a464be6cc10",
+      "id": "bakery-03-demo-b-form",
+      "trail": "inspection",
+      "siteId": "k57ae8hn0kgercz41hgy6s03mn88fzwd",
+      "width": 720,
+      "height": 1600,
+      "uncomposed": true,
+      "classification": "authorized-seeded-demonstration",
+      "appCommit": "6999d8eca52fc4f4fff69066dce365f54a609663",
+      "capturedOn": "2026-09-07T01:53:01.379068+00:00",
+      "machine": "B",
+      "site": "Bakery Demo",
+      "account": "demo@sunbakebread.co.za",
+      "captureMethod": "unmodified adb exec-out screencap -p",
+      "authorizationRef": "Daniel task instruction: complete Bakery Demo examples through genuine app flows, 2026-09-07",
+      "reviewRef": "Pending Claude independent review and Daniel approval",
+      "recordRef": "hx7z5fqzx0exme1q8ybv7znrfd8dzk3k",
+      "scenario": "Bakery Demo synthetic Inspection lifecycle",
+      "eventOrder": 3,
+      "disclosure": "Authorized seeded demonstration record · simulated inspection and work · Android camera test scene",
+      "observed": {
+        "slot": "inspection-capture",
+        "proof": "form"
+      },
+      "views": {
+        "form": {
+          "x": 0.055,
+          "y": 0.21,
+          "w": 0.89,
+          "h": 0.205
+        }
+      },
+      "origin": {
+        "worktree": "/home/durai/Documents/projects/content-engine",
+        "head": "2d793d94f8e6ee0ca500b761c4b232ac9f5380b3",
+        "sourcePath": "remotion-branding/public/remedial-tutorial/inspection/03-demo-b-form.png",
+        "sourceSlot": "inspection-capture",
+        "manifest": "remedial-tutorial/provenance/candidate-evidence.json",
+        "register": "docs/remedial-action-candidate.md"
+      }
+    },
+    {
+      "path": "remedial-tutorial/inspection/04-demo-b-local-saved.png",
+      "bytes": 95908,
+      "sha256": "150e70bc5e81e88f5df62dc915fbb17cf37c2f62258948e296c7feab4e6591bd",
+      "id": "bakery-04-demo-b-local-saved",
+      "trail": "inspection",
+      "siteId": "k57ae8hn0kgercz41hgy6s03mn88fzwd",
+      "width": 720,
+      "height": 1600,
+      "uncomposed": true,
+      "classification": "authorized-seeded-demonstration",
+      "appCommit": "6999d8eca52fc4f4fff69066dce365f54a609663",
+      "capturedOn": "2026-09-07T01:53:28.148233+00:00",
+      "machine": "B",
+      "site": "Bakery Demo",
+      "account": "demo@sunbakebread.co.za",
+      "captureMethod": "unmodified adb exec-out screencap -p",
+      "authorizationRef": "Daniel task instruction: complete Bakery Demo examples through genuine app flows, 2026-09-07",
+      "reviewRef": "Pending Claude independent review and Daniel approval",
+      "recordRef": "hx7z5fqzx0exme1q8ybv7znrfd8dzk3k",
+      "scenario": "Bakery Demo synthetic Inspection lifecycle",
+      "eventOrder": 4,
+      "disclosure": "Authorized seeded demonstration record · simulated inspection and work · Android camera test scene",
+      "observed": {
+        "slot": "inspection-capture",
+        "proof": "local-saved"
+      },
+      "views": {
+        "local-saved": {
+          "x": 0.045,
+          "y": 0.205,
+          "w": 0.91,
+          "h": 0.16
+        }
+      },
+      "origin": {
+        "worktree": "/home/durai/Documents/projects/content-engine",
+        "head": "2d793d94f8e6ee0ca500b761c4b232ac9f5380b3",
+        "sourcePath": "remotion-branding/public/remedial-tutorial/inspection/04-demo-b-local-saved.png",
+        "sourceSlot": "inspection-capture",
+        "manifest": "remedial-tutorial/provenance/candidate-evidence.json",
+        "register": "docs/remedial-action-candidate.md"
+      }
+    },
+    {
+      "path": "remedial-tutorial/inspection/08-demo-bc-issued.png",
+      "bytes": 108545,
+      "sha256": "39786fd31f842674974e4dc38d0d53d74a79e726d4ec890670968abf8447233e",
+      "id": "bakery-08-demo-bc-issued",
+      "trail": "inspection",
+      "siteId": "k57ae8hn0kgercz41hgy6s03mn88fzwd",
+      "width": 720,
+      "height": 1600,
+      "uncomposed": true,
+      "classification": "authorized-seeded-demonstration",
+      "appCommit": "6999d8eca52fc4f4fff69066dce365f54a609663",
+      "capturedOn": "2026-09-07T02:03:54.967711+00:00",
+      "machine": "B",
+      "site": "Bakery Demo",
+      "account": "demo@sunbakebread.co.za",
+      "captureMethod": "unmodified adb exec-out screencap -p",
+      "authorizationRef": "Daniel task instruction: complete Bakery Demo examples through genuine app flows, 2026-09-07",
+      "reviewRef": "Pending Claude independent review and Daniel approval",
+      "recordRef": "hx7z5fqzx0exme1q8ybv7znrfd8dzk3k",
+      "scenario": "Bakery Demo synthetic Inspection lifecycle",
+      "eventOrder": 8,
+      "disclosure": "Authorized seeded demonstration record · simulated inspection and work · Android camera test scene",
+      "observed": {
+        "slot": "inspection-capture",
+        "proof": "complete-issued"
+      },
+      "views": {
+        "complete-issued": {
+          "x": 0.045,
+          "y": 0.09,
+          "w": 0.91,
+          "h": 0.43
+        }
+      },
+      "origin": {
+        "worktree": "/home/durai/Documents/projects/content-engine",
+        "head": "2d793d94f8e6ee0ca500b761c4b232ac9f5380b3",
+        "sourcePath": "remotion-branding/public/remedial-tutorial/inspection/08-demo-bc-issued.png",
+        "sourceSlot": "inspection-capture",
+        "manifest": "remedial-tutorial/provenance/candidate-evidence.json",
+        "register": "docs/remedial-action-candidate.md"
+      }
+    },
+    {
+      "path": "remedial-tutorial/inspection/11-bill-inspection-three-open.png",
+      "bytes": 136876,
+      "sha256": "3643a0f8ec26f800b8662bdf202ece09a6baeb08b4ffe52f007279c5c36311ea",
+      "id": "bakery-11-bill-inspection-three-open",
+      "trail": "inspection",
+      "siteId": "k57ae8hn0kgercz41hgy6s03mn88fzwd",
+      "width": 720,
+      "height": 1600,
+      "uncomposed": true,
+      "classification": "authorized-seeded-demonstration",
+      "appCommit": "6999d8eca52fc4f4fff69066dce365f54a609663",
+      "capturedOn": "2026-09-07T02:10:57.553698+00:00",
+      "machine": "B",
+      "site": "Bakery Demo",
+      "account": "demo@sunbakebread.co.za",
+      "captureMethod": "unmodified adb exec-out screencap -p",
+      "authorizationRef": "Daniel task instruction: complete Bakery Demo examples through genuine app flows, 2026-09-07",
+      "reviewRef": "Pending Claude independent review and Daniel approval",
+      "recordRef": "hx7z5fqzx0exme1q8ybv7znrfd8dzk3k",
+      "scenario": "Bakery Demo synthetic Inspection lifecycle",
+      "eventOrder": 11,
+      "disclosure": "Authorized seeded demonstration record · simulated inspection and work · Android camera test scene",
+      "observed": {
+        "slot": "inspection-carryover",
+        "proof": "bill-row"
+      },
+      "views": {
+        "bill-row": {
+          "x": 0.04,
+          "y": 0.495,
+          "w": 0.92,
+          "h": 0.15
+        }
+      },
+      "origin": {
+        "worktree": "/home/durai/Documents/projects/content-engine",
+        "head": "2d793d94f8e6ee0ca500b761c4b232ac9f5380b3",
+        "sourcePath": "remotion-branding/public/remedial-tutorial/inspection/11-bill-inspection-three-open.png",
+        "sourceSlot": "inspection-carryover",
+        "manifest": "remedial-tutorial/provenance/candidate-evidence.json",
+        "register": "docs/remedial-action-candidate.md"
+      }
+    },
+    {
+      "path": "remedial-tutorial/inspection/12-followups-inspections.png",
+      "bytes": 181338,
+      "sha256": "182369491dc2c1646c57ca79dffcbe9a0721ade3e3e973c703d78975978e449c",
+      "id": "bakery-12-followups-inspections",
+      "trail": "inspection",
+      "siteId": "k57ae8hn0kgercz41hgy6s03mn88fzwd",
+      "width": 720,
+      "height": 1600,
+      "uncomposed": true,
+      "classification": "authorized-seeded-demonstration",
+      "appCommit": "6999d8eca52fc4f4fff69066dce365f54a609663",
+      "capturedOn": "2026-09-07T02:11:19.186887+00:00",
+      "machine": "B",
+      "site": "Bakery Demo",
+      "account": "demo@sunbakebread.co.za",
+      "captureMethod": "unmodified adb exec-out screencap -p",
+      "authorizationRef": "Daniel task instruction: complete Bakery Demo examples through genuine app flows, 2026-09-07",
+      "reviewRef": "Pending Claude independent review and Daniel approval",
+      "recordRef": "hx7z5fqzx0exme1q8ybv7znrfd8dzk3k",
+      "scenario": "Bakery Demo synthetic Inspection lifecycle",
+      "eventOrder": 12,
+      "disclosure": "Authorized seeded demonstration record · simulated inspection and work · Android camera test scene",
+      "observed": {
+        "slot": "inspection-carryover",
+        "proof": "followups"
+      },
+      "views": {
+        "followups": {
+          "x": 0.04,
+          "y": 0.17,
+          "w": 0.92,
+          "h": 0.1
+        }
+      },
+      "origin": {
+        "worktree": "/home/durai/Documents/projects/content-engine",
+        "head": "2d793d94f8e6ee0ca500b761c4b232ac9f5380b3",
+        "sourcePath": "remotion-branding/public/remedial-tutorial/inspection/12-followups-inspections.png",
+        "sourceSlot": "inspection-carryover",
+        "manifest": "remedial-tutorial/provenance/candidate-evidence.json",
+        "register": "docs/remedial-action-candidate.md"
+      }
+    },
+    {
+      "path": "remedial-tutorial/inspection/13-verify-three-open.png",
+      "bytes": 165453,
+      "sha256": "20964b12a04a45d88a2736d1ae9de6341aa04e00717734eea1bc4713b7f9e348",
+      "id": "bakery-13-verify-three-open",
+      "trail": "inspection",
+      "siteId": "k57ae8hn0kgercz41hgy6s03mn88fzwd",
+      "width": 720,
+      "height": 1600,
+      "uncomposed": true,
+      "classification": "authorized-seeded-demonstration",
+      "appCommit": "6999d8eca52fc4f4fff69066dce365f54a609663",
+      "capturedOn": "2026-09-07T02:11:36.423705+00:00",
+      "machine": "B",
+      "site": "Bakery Demo",
+      "account": "demo@sunbakebread.co.za",
+      "captureMethod": "unmodified adb exec-out screencap -p",
+      "authorizationRef": "Daniel task instruction: complete Bakery Demo examples through genuine app flows, 2026-09-07",
+      "reviewRef": "Pending Claude independent review and Daniel approval",
+      "recordRef": "hx7z5fqzx0exme1q8ybv7znrfd8dzk3k",
+      "scenario": "Bakery Demo synthetic Inspection lifecycle",
+      "eventOrder": 13,
+      "disclosure": "Authorized seeded demonstration record · simulated inspection and work · Android camera test scene",
+      "observed": {
+        "slot": "inspection-carryover",
+        "proof": "verify-open"
+      },
+      "views": {
+        "verify-open": {
+          "x": 0.04,
+          "y": 0.17,
+          "w": 0.92,
+          "h": 0.11
+        }
+      },
+      "origin": {
+        "worktree": "/home/durai/Documents/projects/content-engine",
+        "head": "2d793d94f8e6ee0ca500b761c4b232ac9f5380b3",
+        "sourcePath": "remotion-branding/public/remedial-tutorial/inspection/13-verify-three-open.png",
+        "sourceSlot": "inspection-carryover",
+        "manifest": "remedial-tutorial/provenance/candidate-evidence.json",
+        "register": "docs/remedial-action-candidate.md"
+      }
+    },
+    {
+      "path": "remedial-tutorial/inspection/14-demo-b-server-open.png",
+      "bytes": 153024,
+      "sha256": "450339964fa689300df45f48aa3ae554d67bab52d2db1d7f7cd5608207ddf688",
+      "id": "bakery-14-demo-b-server-open",
+      "trail": "inspection",
+      "siteId": "k57ae8hn0kgercz41hgy6s03mn88fzwd",
+      "width": 720,
+      "height": 1600,
+      "uncomposed": true,
+      "classification": "authorized-seeded-demonstration",
+      "appCommit": "6999d8eca52fc4f4fff69066dce365f54a609663",
+      "capturedOn": "2026-09-07T02:11:45.618680+00:00",
+      "machine": "B",
+      "site": "Bakery Demo",
+      "account": "demo@sunbakebread.co.za",
+      "captureMethod": "unmodified adb exec-out screencap -p",
+      "authorizationRef": "Daniel task instruction: complete Bakery Demo examples through genuine app flows, 2026-09-07",
+      "reviewRef": "Pending Claude independent review and Daniel approval",
+      "recordRef": "hx7z5fqzx0exme1q8ybv7znrfd8dzk3k",
+      "scenario": "Bakery Demo synthetic Inspection lifecycle",
+      "eventOrder": 14,
+      "disclosure": "Authorized seeded demonstration record · simulated inspection and work · Android camera test scene",
+      "observed": {
+        "slot": "inspection-capture",
+        "proof": "server-open"
+      },
+      "views": {
+        "server-open": {
+          "x": 0.04,
+          "y": 0.17,
+          "w": 0.92,
+          "h": 0.11
+        }
+      },
+      "origin": {
+        "worktree": "/home/durai/Documents/projects/content-engine",
+        "head": "2d793d94f8e6ee0ca500b761c4b232ac9f5380b3",
+        "sourcePath": "remotion-branding/public/remedial-tutorial/inspection/14-demo-b-server-open.png",
+        "sourceSlot": "inspection-capture",
+        "manifest": "remedial-tutorial/provenance/candidate-evidence.json",
+        "register": "docs/remedial-action-candidate.md"
+      }
+    },
+    {
+      "path": "remedial-tutorial/inspection/15-demo-a-before-detail.png",
+      "bytes": 160536,
+      "sha256": "d2ff2b6d1c14026307641358ab257534c3c694faf1874075155e1c9d27e9a11f",
+      "id": "bakery-15-demo-a-before-detail",
+      "trail": "inspection",
+      "siteId": "k57ae8hn0kgercz41hgy6s03mn88fzwd",
+      "width": 720,
+      "height": 1600,
+      "uncomposed": true,
+      "classification": "authorized-seeded-demonstration",
+      "appCommit": "6999d8eca52fc4f4fff69066dce365f54a609663",
+      "capturedOn": "2026-09-07T02:11:54.562648+00:00",
+      "machine": "B",
+      "site": "Bakery Demo",
+      "account": "demo@sunbakebread.co.za",
+      "captureMethod": "unmodified adb exec-out screencap -p",
+      "authorizationRef": "Daniel task instruction: complete Bakery Demo examples through genuine app flows, 2026-09-07",
+      "reviewRef": "Pending Claude independent review and Daniel approval",
+      "recordRef": "hx7z4ftsqymx4tjt0jjd0h1e798dzed4",
+      "scenario": "Bakery Demo synthetic Inspection lifecycle",
+      "eventOrder": 15,
+      "disclosure": "Authorized seeded demonstration record · simulated inspection and work · Android camera test scene",
+      "observed": {
+        "slot": "inspection-review",
+        "proof": "before-detail"
+      },
+      "views": {
+        "before-detail": {
+          "x": 0.07,
+          "y": 0.65,
+          "w": 0.86,
+          "h": 0.085
+        }
+      },
+      "origin": {
+        "worktree": "/home/durai/Documents/projects/content-engine",
+        "head": "2d793d94f8e6ee0ca500b761c4b232ac9f5380b3",
+        "sourcePath": "remotion-branding/public/remedial-tutorial/inspection/15-demo-a-before-detail.png",
+        "sourceSlot": "inspection-review",
+        "manifest": "remedial-tutorial/provenance/candidate-evidence.json",
+        "register": "docs/remedial-action-candidate.md"
+      }
+    },
+    {
+      "path": "remedial-tutorial/inspection/17-demo-a-required-alert-confirmed.png",
+      "bytes": 107201,
+      "sha256": "a705963bed913147f8595c5a8d34b434d49c34f9283b8c4e98321ce264ac9b2b",
+      "id": "bakery-17-demo-a-required-alert-confirmed",
+      "trail": "inspection",
+      "siteId": "k57ae8hn0kgercz41hgy6s03mn88fzwd",
+      "width": 720,
+      "height": 1600,
+      "uncomposed": true,
+      "classification": "authorized-seeded-demonstration",
+      "appCommit": "6999d8eca52fc4f4fff69066dce365f54a609663",
+      "capturedOn": "2026-09-07T02:12:45.199932+00:00",
+      "machine": "B",
+      "site": "Bakery Demo",
+      "account": "demo@sunbakebread.co.za",
+      "captureMethod": "unmodified adb exec-out screencap -p",
+      "authorizationRef": "Daniel task instruction: complete Bakery Demo examples through genuine app flows, 2026-09-07",
+      "reviewRef": "Pending Claude independent review and Daniel approval",
+      "recordRef": "hx7z4ftsqymx4tjt0jjd0h1e798dzed4",
+      "scenario": "Bakery Demo synthetic Inspection lifecycle",
+      "eventOrder": 17,
+      "disclosure": "Authorized seeded demonstration record · simulated inspection and work · Android camera test scene",
+      "observed": {
+        "slot": "inspection-review",
+        "proof": "after-required-alert"
+      },
+      "views": {
+        "after-required-alert": {
+          "x": 0.065,
+          "y": 0.435,
+          "w": 0.87,
+          "h": 0.19
+        }
+      },
+      "origin": {
+        "worktree": "/home/durai/Documents/projects/content-engine",
+        "head": "2d793d94f8e6ee0ca500b761c4b232ac9f5380b3",
+        "sourcePath": "remotion-branding/public/remedial-tutorial/inspection/17-demo-a-required-alert-confirmed.png",
+        "sourceSlot": "inspection-review",
+        "manifest": "remedial-tutorial/provenance/candidate-evidence.json",
+        "register": "docs/remedial-action-candidate.md"
+      }
+    },
+    {
+      "path": "remedial-tutorial/inspection/18-demo-a-after-attached.png",
+      "bytes": 169349,
+      "sha256": "3968d8f8c9e2cb18cd167f3ecc48e86b1ff4c30d45ae7380a763a4c25ce4497c",
+      "id": "bakery-18-demo-a-after-attached",
+      "trail": "inspection",
+      "siteId": "k57ae8hn0kgercz41hgy6s03mn88fzwd",
+      "width": 720,
+      "height": 1600,
+      "uncomposed": true,
+      "classification": "authorized-seeded-demonstration",
+      "appCommit": "6999d8eca52fc4f4fff69066dce365f54a609663",
+      "capturedOn": "2026-09-07T02:14:07.885818+00:00",
+      "machine": "B",
+      "site": "Bakery Demo",
+      "account": "demo@sunbakebread.co.za",
+      "captureMethod": "unmodified adb exec-out screencap -p",
+      "authorizationRef": "Daniel task instruction: complete Bakery Demo examples through genuine app flows, 2026-09-07",
+      "reviewRef": "Pending Claude independent review and Daniel approval",
+      "recordRef": "hx7z4ftsqymx4tjt0jjd0h1e798dzed4",
+      "scenario": "Bakery Demo synthetic Inspection lifecycle",
+      "eventOrder": 18,
+      "disclosure": "Authorized seeded demonstration record · simulated inspection and work · Android camera test scene",
+      "observed": {
+        "slot": "inspection-review",
+        "proof": "after-attached"
+      },
+      "views": {
+        "after-attached": {
+          "x": 0.07,
+          "y": 0.71,
+          "w": 0.86,
+          "h": 0.07
+        }
+      },
+      "origin": {
+        "worktree": "/home/durai/Documents/projects/content-engine",
+        "head": "2d793d94f8e6ee0ca500b761c4b232ac9f5380b3",
+        "sourcePath": "remotion-branding/public/remedial-tutorial/inspection/18-demo-a-after-attached.png",
+        "sourceSlot": "inspection-review",
+        "manifest": "remedial-tutorial/provenance/candidate-evidence.json",
+        "register": "docs/remedial-action-candidate.md"
+      }
+    },
+    {
+      "path": "remedial-tutorial/inspection/19-demo-a-accept-control.png",
+      "bytes": 170065,
+      "sha256": "e5ab6454a448a2004edd7a9d8f69f22ccd68fb8d8ea82f76b3a1fb10abc025bb",
+      "id": "bakery-19-demo-a-accept-control",
+      "trail": "inspection",
+      "siteId": "k57ae8hn0kgercz41hgy6s03mn88fzwd",
+      "width": 720,
+      "height": 1600,
+      "uncomposed": true,
+      "classification": "authorized-seeded-demonstration",
+      "appCommit": "6999d8eca52fc4f4fff69066dce365f54a609663",
+      "capturedOn": "2026-09-07T02:14:23.994820+00:00",
+      "machine": "B",
+      "site": "Bakery Demo",
+      "account": "demo@sunbakebread.co.za",
+      "captureMethod": "unmodified adb exec-out screencap -p",
+      "authorizationRef": "Daniel task instruction: complete Bakery Demo examples through genuine app flows, 2026-09-07",
+      "reviewRef": "Pending Claude independent review and Daniel approval",
+      "recordRef": "hx7z4ftsqymx4tjt0jjd0h1e798dzed4",
+      "scenario": "Bakery Demo synthetic Inspection lifecycle",
+      "eventOrder": 19,
+      "disclosure": "Authorized seeded demonstration record · simulated inspection and work · Android camera test scene",
+      "observed": {
+        "slot": "inspection-accept",
+        "proof": "accept-control"
+      },
+      "views": {
+        "accept-control": {
+          "x": 0.07,
+          "y": 0.55,
+          "w": 0.86,
+          "h": 0.225
+        }
+      },
+      "origin": {
+        "worktree": "/home/durai/Documents/projects/content-engine",
+        "head": "2d793d94f8e6ee0ca500b761c4b232ac9f5380b3",
+        "sourcePath": "remotion-branding/public/remedial-tutorial/inspection/19-demo-a-accept-control.png",
+        "sourceSlot": "inspection-accept",
+        "manifest": "remedial-tutorial/provenance/candidate-evidence.json",
+        "register": "docs/remedial-action-candidate.md"
+      }
+    },
+    {
+      "path": "remedial-tutorial/inspection/20-demo-a-closed-accepted.png",
+      "bytes": 164577,
+      "sha256": "0e4a0bd7c142d3a3778465914c79da15c988d98b634bac607ddf97462554f913",
+      "id": "bakery-20-demo-a-closed-accepted",
+      "trail": "inspection",
+      "siteId": "k57ae8hn0kgercz41hgy6s03mn88fzwd",
+      "width": 720,
+      "height": 1600,
+      "uncomposed": true,
+      "classification": "authorized-seeded-demonstration",
+      "appCommit": "6999d8eca52fc4f4fff69066dce365f54a609663",
+      "capturedOn": "2026-09-07T02:15:23.648043+00:00",
+      "machine": "B",
+      "site": "Bakery Demo",
+      "account": "demo@sunbakebread.co.za",
+      "captureMethod": "unmodified adb exec-out screencap -p",
+      "authorizationRef": "Daniel task instruction: complete Bakery Demo examples through genuine app flows, 2026-09-07",
+      "reviewRef": "Pending Claude independent review and Daniel approval",
+      "recordRef": "hx7z4ftsqymx4tjt0jjd0h1e798dzed4",
+      "scenario": "Bakery Demo synthetic Inspection lifecycle",
+      "eventOrder": 20,
+      "disclosure": "Authorized seeded demonstration record · simulated inspection and work · Android camera test scene",
+      "observed": {
+        "slot": "inspection-accept",
+        "proof": "closed-accepted"
+      },
+      "views": {
+        "closed-accepted": {
+          "x": 0.07,
+          "y": 0.715,
+          "w": 0.86,
+          "h": 0.08
+        }
+      },
+      "origin": {
+        "worktree": "/home/durai/Documents/projects/content-engine",
+        "head": "2d793d94f8e6ee0ca500b761c4b232ac9f5380b3",
+        "sourcePath": "remotion-branding/public/remedial-tutorial/inspection/20-demo-a-closed-accepted.png",
+        "sourceSlot": "inspection-accept",
+        "manifest": "remedial-tutorial/provenance/candidate-evidence.json",
+        "register": "docs/remedial-action-candidate.md"
+      }
+    },
+    {
+      "path": "remedial-tutorial/inspection/21-demo-b-reject-confirm.png",
+      "bytes": 144925,
+      "sha256": "e6b6607bbdd7ea0d24c8f6e1bc519ddee8285c19eb85c6a792269e395a8b50d4",
+      "id": "bakery-21-demo-b-reject-confirm",
+      "trail": "inspection",
+      "siteId": "k57ae8hn0kgercz41hgy6s03mn88fzwd",
+      "width": 720,
+      "height": 1600,
+      "uncomposed": true,
+      "classification": "authorized-seeded-demonstration",
+      "appCommit": "6999d8eca52fc4f4fff69066dce365f54a609663",
+      "capturedOn": "2026-09-07T02:17:07.363866+00:00",
+      "machine": "B",
+      "site": "Bakery Demo",
+      "account": "demo@sunbakebread.co.za",
+      "captureMethod": "unmodified adb exec-out screencap -p",
+      "authorizationRef": "Daniel task instruction: complete Bakery Demo examples through genuine app flows, 2026-09-07",
+      "reviewRef": "Pending Claude independent review and Daniel approval",
+      "recordRef": "hx7z5fqzx0exme1q8ybv7znrfd8dzk3k",
+      "scenario": "Bakery Demo synthetic Inspection lifecycle",
+      "eventOrder": 21,
+      "disclosure": "Authorized seeded demonstration record · simulated inspection and work · Android camera test scene",
+      "observed": {
+        "slot": "inspection-reject",
+        "proof": "reject-confirm"
+      },
+      "views": {
+        "reject-confirm": {
+          "x": 0.07,
+          "y": 0.61,
+          "w": 0.86,
+          "h": 0.18
+        }
+      },
+      "origin": {
+        "worktree": "/home/durai/Documents/projects/content-engine",
+        "head": "2d793d94f8e6ee0ca500b761c4b232ac9f5380b3",
+        "sourcePath": "remotion-branding/public/remedial-tutorial/inspection/21-demo-b-reject-confirm.png",
+        "sourceSlot": "inspection-reject",
+        "manifest": "remedial-tutorial/provenance/candidate-evidence.json",
+        "register": "docs/remedial-action-candidate.md"
+      }
+    },
+    {
+      "path": "remedial-tutorial/inspection/22-demo-b-returned-open.png",
+      "bytes": 150118,
+      "sha256": "e53d6e72170d60a50a5ca045bc77b7321f72bde1a345aa7c173e1a8d6ba90fe0",
+      "id": "bakery-22-demo-b-returned-open",
+      "trail": "inspection",
+      "siteId": "k57ae8hn0kgercz41hgy6s03mn88fzwd",
+      "width": 720,
+      "height": 1600,
+      "uncomposed": true,
+      "classification": "authorized-seeded-demonstration",
+      "appCommit": "6999d8eca52fc4f4fff69066dce365f54a609663",
+      "capturedOn": "2026-09-07T02:17:33.393752+00:00",
+      "machine": "B",
+      "site": "Bakery Demo",
+      "account": "demo@sunbakebread.co.za",
+      "captureMethod": "unmodified adb exec-out screencap -p",
+      "authorizationRef": "Daniel task instruction: complete Bakery Demo examples through genuine app flows, 2026-09-07",
+      "reviewRef": "Pending Claude independent review and Daniel approval",
+      "recordRef": "hx7z5fqzx0exme1q8ybv7znrfd8dzk3k",
+      "scenario": "Bakery Demo synthetic Inspection lifecycle",
+      "eventOrder": 22,
+      "disclosure": "Authorized seeded demonstration record · simulated inspection and work · Android camera test scene",
+      "observed": {
+        "slot": "inspection-reject",
+        "proof": "returned-open"
+      },
+      "views": {
+        "returned-open": {
+          "x": 0.04,
+          "y": 0.175,
+          "w": 0.92,
+          "h": 0.27
+        }
+      },
+      "origin": {
+        "worktree": "/home/durai/Documents/projects/content-engine",
+        "head": "2d793d94f8e6ee0ca500b761c4b232ac9f5380b3",
+        "sourcePath": "remotion-branding/public/remedial-tutorial/inspection/22-demo-b-returned-open.png",
+        "sourceSlot": "inspection-reject",
+        "manifest": "remedial-tutorial/provenance/candidate-evidence.json",
+        "register": "docs/remedial-action-candidate.md"
+      }
+    },
+    {
+      "path": "remedial-tutorial/inspection/23-demo-c-escalate-dialog.png",
+      "bytes": 111113,
+      "sha256": "c985089e57fd1093f470090980264eebe335467bf456708d8f1f9b8ce38414a0",
+      "id": "bakery-23-demo-c-escalate-dialog",
+      "trail": "inspection",
+      "siteId": "k57ae8hn0kgercz41hgy6s03mn88fzwd",
+      "width": 720,
+      "height": 1600,
+      "uncomposed": true,
+      "classification": "authorized-seeded-demonstration",
+      "appCommit": "6999d8eca52fc4f4fff69066dce365f54a609663",
+      "capturedOn": "2026-09-07T02:17:59.016336+00:00",
+      "machine": "B",
+      "site": "Bakery Demo",
+      "account": "demo@sunbakebread.co.za",
+      "captureMethod": "unmodified adb exec-out screencap -p",
+      "authorizationRef": "Daniel task instruction: complete Bakery Demo examples through genuine app flows, 2026-09-07",
+      "reviewRef": "Pending Claude independent review and Daniel approval",
+      "recordRef": "hx7z5fqzx0exme1q8ybv7znrfd8dzk3k",
+      "scenario": "Bakery Demo synthetic Inspection lifecycle",
+      "eventOrder": 23,
+      "disclosure": "Authorized seeded demonstration record · simulated inspection and work · Android camera test scene",
+      "observed": {
+        "slot": "inspection-ncr",
+        "proof": "escalate-dialog"
+      },
+      "views": {
+        "escalate-dialog": {
+          "x": 0.065,
+          "y": 0.435,
+          "w": 0.87,
+          "h": 0.19
+        }
+      },
+      "origin": {
+        "worktree": "/home/durai/Documents/projects/content-engine",
+        "head": "2d793d94f8e6ee0ca500b761c4b232ac9f5380b3",
+        "sourcePath": "remotion-branding/public/remedial-tutorial/inspection/23-demo-c-escalate-dialog.png",
+        "sourceSlot": "inspection-ncr",
+        "manifest": "remedial-tutorial/provenance/candidate-evidence.json",
+        "register": "docs/remedial-action-candidate.md"
+      }
+    },
+    {
+      "path": "remedial-tutorial/inspection/24-demo-c-escalated-linked.png",
+      "bytes": 152266,
+      "sha256": "202975757339b9d58bd30b1261e741d9c8db2543286793c45fefebd9270c775c",
+      "id": "bakery-24-demo-c-escalated-linked",
+      "trail": "inspection",
+      "siteId": "k57ae8hn0kgercz41hgy6s03mn88fzwd",
+      "width": 720,
+      "height": 1600,
+      "uncomposed": true,
+      "classification": "authorized-seeded-demonstration",
+      "appCommit": "6999d8eca52fc4f4fff69066dce365f54a609663",
+      "capturedOn": "2026-09-07T02:18:52.158795+00:00",
+      "machine": "B",
+      "site": "Bakery Demo",
+      "account": "demo@sunbakebread.co.za",
+      "captureMethod": "unmodified adb exec-out screencap -p",
+      "authorizationRef": "Daniel task instruction: complete Bakery Demo examples through genuine app flows, 2026-09-07",
+      "reviewRef": "Pending Claude independent review and Daniel approval",
+      "recordRef": "hx7z5fqzx0exme1q8ybv7znrfd8dzk3k",
+      "scenario": "Bakery Demo synthetic Inspection lifecycle",
+      "eventOrder": 24,
+      "disclosure": "Authorized seeded demonstration record · simulated inspection and work · Android camera test scene",
+      "observed": {
+        "slot": "inspection-ncr",
+        "proof": "escalated-linked"
+      },
+      "views": {
+        "escalated-linked": {
+          "x": 0.07,
+          "y": 0.74,
+          "w": 0.86,
+          "h": 0.09
+        }
+      },
+      "origin": {
+        "worktree": "/home/durai/Documents/projects/content-engine",
+        "head": "2d793d94f8e6ee0ca500b761c4b232ac9f5380b3",
+        "sourcePath": "remotion-branding/public/remedial-tutorial/inspection/24-demo-c-escalated-linked.png",
+        "sourceSlot": "inspection-ncr",
+        "manifest": "remedial-tutorial/provenance/candidate-evidence.json",
+        "register": "docs/remedial-action-candidate.md"
+      }
+    },
+    {
+      "path": "remedial-tutorial/inspection/25-closed-accepted-history.png",
+      "bytes": 164278,
+      "sha256": "d15a4dd477d1736b28699d992c243f866e3b73cdb8451fa4ed253e0a04fc5eaa",
+      "id": "bakery-25-closed-accepted-history",
+      "trail": "inspection",
+      "siteId": "k57ae8hn0kgercz41hgy6s03mn88fzwd",
+      "width": 720,
+      "height": 1600,
+      "uncomposed": true,
+      "classification": "authorized-seeded-demonstration",
+      "appCommit": "6999d8eca52fc4f4fff69066dce365f54a609663",
+      "capturedOn": "2026-09-07T02:19:22.572822+00:00",
+      "machine": "B",
+      "site": "Bakery Demo",
+      "account": "demo@sunbakebread.co.za",
+      "captureMethod": "unmodified adb exec-out screencap -p",
+      "authorizationRef": "Daniel task instruction: complete Bakery Demo examples through genuine app flows, 2026-09-07",
+      "reviewRef": "Pending Claude independent review and Daniel approval",
+      "recordRef": "hx7z4ftsqymx4tjt0jjd0h1e798dzed4",
+      "scenario": "Bakery Demo synthetic Inspection lifecycle",
+      "eventOrder": 25,
+      "disclosure": "Authorized seeded demonstration record · simulated inspection and work · Android camera test scene",
+      "observed": {
+        "slot": "inspection-history",
+        "proof": "closed-history"
+      },
+      "views": {
+        "closed-history": {
+          "x": 0.07,
+          "y": 0.715,
+          "w": 0.86,
+          "h": 0.09
+        }
+      },
+      "origin": {
+        "worktree": "/home/durai/Documents/projects/content-engine",
+        "head": "2d793d94f8e6ee0ca500b761c4b232ac9f5380b3",
+        "sourcePath": "remotion-branding/public/remedial-tutorial/inspection/25-closed-accepted-history.png",
+        "sourceSlot": "inspection-history",
+        "manifest": "remedial-tutorial/provenance/candidate-evidence.json",
+        "register": "docs/remedial-action-candidate.md"
+      }
+    },
+    {
+      "path": "remedial-tutorial/inspection/26-demo-b-real-age-today.png",
+      "bytes": 152564,
+      "sha256": "89ce1d5100fc5dd9a0493ae8e6fe1059917d28cdb5961195d4b87e3256b7f878",
+      "id": "bakery-26-demo-b-real-age-today",
+      "trail": "inspection",
+      "siteId": "k57ae8hn0kgercz41hgy6s03mn88fzwd",
+      "width": 720,
+      "height": 1600,
+      "uncomposed": true,
+      "classification": "authorized-seeded-demonstration",
+      "appCommit": "6999d8eca52fc4f4fff69066dce365f54a609663",
+      "capturedOn": "2026-09-07T02:19:31.984695+00:00",
+      "machine": "B",
+      "site": "Bakery Demo",
+      "account": "demo@sunbakebread.co.za",
+      "captureMethod": "unmodified adb exec-out screencap -p",
+      "authorizationRef": "Daniel task instruction: complete Bakery Demo examples through genuine app flows, 2026-09-07",
+      "reviewRef": "Pending Claude independent review and Daniel approval",
+      "recordRef": "hx7z5fqzx0exme1q8ybv7znrfd8dzk3k",
+      "scenario": "Bakery Demo synthetic Inspection lifecycle",
+      "eventOrder": 26,
+      "disclosure": "Authorized seeded demonstration record · simulated inspection and work · Android camera test scene",
+      "observed": {
+        "slot": "inspection-carryover",
+        "proof": "age-current"
+      },
+      "views": {
+        "age-current": {
+          "x": 0.045,
+          "y": 0.335,
+          "w": 0.91,
+          "h": 0.11
+        }
+      },
+      "origin": {
+        "worktree": "/home/durai/Documents/projects/content-engine",
+        "head": "2d793d94f8e6ee0ca500b761c4b232ac9f5380b3",
+        "sourcePath": "remotion-branding/public/remedial-tutorial/inspection/26-demo-b-real-age-today.png",
+        "sourceSlot": "inspection-carryover",
+        "manifest": "remedial-tutorial/provenance/candidate-evidence.json",
+        "register": "docs/remedial-action-candidate.md"
+      }
+    },
+    {
+      "path": "remedial-tutorial/inspection/27-bill-after-one-open.png",
+      "bytes": 135467,
+      "sha256": "47dceda2d36a83442eee4967fd5a1435f9c08bad421db02c6db57183695c30ef",
+      "id": "bakery-27-bill-after-one-open",
+      "trail": "inspection",
+      "siteId": "k57ae8hn0kgercz41hgy6s03mn88fzwd",
+      "width": 720,
+      "height": 1600,
+      "uncomposed": true,
+      "classification": "authorized-seeded-demonstration",
+      "appCommit": "6999d8eca52fc4f4fff69066dce365f54a609663",
+      "capturedOn": "2026-09-07T02:19:52.587323+00:00",
+      "machine": "B",
+      "site": "Bakery Demo",
+      "account": "demo@sunbakebread.co.za",
+      "captureMethod": "unmodified adb exec-out screencap -p",
+      "authorizationRef": "Daniel task instruction: complete Bakery Demo examples through genuine app flows, 2026-09-07",
+      "reviewRef": "Pending Claude independent review and Daniel approval",
+      "recordRef": "hx7z5fqzx0exme1q8ybv7znrfd8dzk3k",
+      "scenario": "Bakery Demo synthetic Inspection lifecycle",
+      "eventOrder": 27,
+      "disclosure": "Authorized seeded demonstration record · simulated inspection and work · Android camera test scene",
+      "observed": {
+        "slot": "inspection-history",
+        "proof": "bill-after"
+      },
+      "views": {
+        "bill-after": {
+          "x": 0.04,
+          "y": 0.495,
+          "w": 0.92,
+          "h": 0.15
+        }
+      },
+      "origin": {
+        "worktree": "/home/durai/Documents/projects/content-engine",
+        "head": "2d793d94f8e6ee0ca500b761c4b232ac9f5380b3",
+        "sourcePath": "remotion-branding/public/remedial-tutorial/inspection/27-bill-after-one-open.png",
+        "sourceSlot": "inspection-history",
+        "manifest": "remedial-tutorial/provenance/candidate-evidence.json",
+        "register": "docs/remedial-action-candidate.md"
+      }
+    }
+  ],
+  "bindings": {
+    "cleaning-followup/bucket-cleaning": {
+      "captureId": "bakery-01-cleaning-selected",
+      "view": "bucket-cleaning"
+    },
+    "inspection-capture/form": {
+      "captureId": "bakery-03-demo-b-form",
+      "view": "form"
+    },
+    "inspection-capture/local-saved": {
+      "captureId": "bakery-04-demo-b-local-saved",
+      "view": "local-saved"
+    },
+    "inspection-capture/complete-issued": {
+      "captureId": "bakery-08-demo-bc-issued",
+      "view": "complete-issued"
+    },
+    "inspection-carryover/bill-row": {
+      "captureId": "bakery-11-bill-inspection-three-open",
+      "view": "bill-row"
+    },
+    "inspection-carryover/followups": {
+      "captureId": "bakery-12-followups-inspections",
+      "view": "followups"
+    },
+    "inspection-carryover/verify-open": {
+      "captureId": "bakery-13-verify-three-open",
+      "view": "verify-open"
+    },
+    "inspection-capture/server-open": {
+      "captureId": "bakery-14-demo-b-server-open",
+      "view": "server-open"
+    },
+    "inspection-review/before-detail": {
+      "captureId": "bakery-15-demo-a-before-detail",
+      "view": "before-detail"
+    },
+    "inspection-review/after-required-alert": {
+      "captureId": "bakery-17-demo-a-required-alert-confirmed",
+      "view": "after-required-alert"
+    },
+    "inspection-review/after-attached": {
+      "captureId": "bakery-18-demo-a-after-attached",
+      "view": "after-attached"
+    },
+    "inspection-accept/accept-control": {
+      "captureId": "bakery-19-demo-a-accept-control",
+      "view": "accept-control"
+    },
+    "inspection-accept/closed-accepted": {
+      "captureId": "bakery-20-demo-a-closed-accepted",
+      "view": "closed-accepted"
+    },
+    "inspection-reject/reject-confirm": {
+      "captureId": "bakery-21-demo-b-reject-confirm",
+      "view": "reject-confirm"
+    },
+    "inspection-reject/returned-open": {
+      "captureId": "bakery-22-demo-b-returned-open",
+      "view": "returned-open"
+    },
+    "inspection-ncr/escalate-dialog": {
+      "captureId": "bakery-23-demo-c-escalate-dialog",
+      "view": "escalate-dialog"
+    },
+    "inspection-ncr/escalated-linked": {
+      "captureId": "bakery-24-demo-c-escalated-linked",
+      "view": "escalated-linked"
+    },
+    "inspection-history/closed-history": {
+      "captureId": "bakery-25-closed-accepted-history",
+      "view": "closed-history"
+    },
+    "inspection-carryover/age-current": {
+      "captureId": "bakery-26-demo-b-real-age-today",
+      "view": "age-current"
+    },
+    "inspection-history/bill-after": {
+      "captureId": "bakery-27-bill-after-one-open",
+      "view": "bill-after"
+    }
+  },
+  "stateEvidence": [
+    {
+      "path": "remedial-tutorial/provenance/candidate-scope.json",
+      "bytes": 6367,
+      "sha256": "0f91f1c274b1a8b6050c4c39cf5533727831ffd2b0b21396dd03f799b4623e67"
+    },
+    {
+      "path": "remedial-tutorial/provenance/candidate-actor-identity.json",
+      "bytes": 348,
+      "sha256": "b9c31c0f87ada6fde4c3dab4ce0763f8abe8ba1bd29e8d36868ae8c43a8c2767"
+    },
+    {
+      "path": "remedial-tutorial/provenance/candidate-pending-bc.json",
+      "bytes": 764,
+      "sha256": "22a1a920c6d4d3ef798021ead786d3f52de0f0b84be689b995c7018185f711e0"
+    },
+    {
+      "path": "remedial-tutorial/provenance/candidate-pending-a.json",
+      "bytes": 425,
+      "sha256": "ece0b756ff5f3fa5b9f882a7af852219f97163c249e3ed8d11f4662ef0ed5fd6"
+    },
+    {
+      "path": "remedial-tutorial/provenance/candidate-server-bc-open.json",
+      "bytes": 1457,
+      "sha256": "db6c62f88d1a62c8c04d6d0a14ecd9612bac51c49165eebf684b8a5ee6f134cb"
+    },
+    {
+      "path": "remedial-tutorial/provenance/candidate-server-abc-open.json",
+      "bytes": 2151,
+      "sha256": "d88e202ea23a87533be649008e2b53a62acf6adf57cb21a01544f8003dcbe858"
+    },
+    {
+      "path": "remedial-tutorial/provenance/candidate-server-after-accept.json",
+      "bytes": 2500,
+      "sha256": "24d95778e00cf0bcb986b120606e6be753e7d86aca9c76f5c3dac4597d5c2d2c"
+    },
+    {
+      "path": "remedial-tutorial/provenance/candidate-server-after-reject.json",
+      "bytes": 2863,
+      "sha256": "ce3f078ba9baf20af004343ad906b303fd584875cc5be115dc3034ff2792a526"
+    },
+    {
+      "path": "remedial-tutorial/provenance/candidate-server-after-escalate.json",
+      "bytes": 3109,
+      "sha256": "a34c8937566f87657479cfaf22a34cfa515d77beba9f013d1a2a6874a7247679"
+    },
+    {
+      "path": "remedial-tutorial/provenance/candidate-inspection-details-final.json",
+      "bytes": 5179,
+      "sha256": "8dd7fa93df527ee905271beaaae8a166ca9271085d5e369b9a8c4769033d5500"
+    },
+    {
+      "path": "remedial-tutorial/provenance/candidate-server-photo-identities.json",
+      "bytes": 2107,
+      "sha256": "c63eae0d727217d51315561b2ec6f1f9c7dcf514b4776543c35fac6763c609ea"
+    }
+  ],
+  "allCaptureReceipts": [
+    {
+      "filename": "01-cleaning-selected.png",
+      "slot": "cleaning-followup",
+      "proofs": [
+        "bucket-cleaning"
+      ],
+      "startedUtc": "2026-09-07T01:45:10.292435+00:00",
+      "finishedUtc": "2026-09-07T01:45:10.892526+00:00",
+      "bytes": 167322,
+      "sha256": "80f28d30fe6a57df56eb0780d477bc14fbf58e35d4ca2e08007b6dd5f020c9aa",
+      "width": 720,
+      "height": 1600,
+      "mode": "RGBA",
+      "method": "unmodified adb exec-out screencap -p"
+    },
+    {
+      "filename": "02-demo-create-required.png",
+      "slot": "inspection-setup",
+      "proofs": [
+        "photo-mode"
+      ],
+      "startedUtc": "2026-09-07T01:46:26.139985+00:00",
+      "finishedUtc": "2026-09-07T01:46:26.875993+00:00",
+      "bytes": 132190,
+      "sha256": "19b7cf04230641db064921d655ce9e23adfd5550160d401361bded55e223fb76",
+      "width": 720,
+      "height": 1600,
+      "mode": "RGBA",
+      "method": "unmodified adb exec-out screencap -p"
+    },
+    {
+      "filename": "03-demo-b-form.png",
+      "slot": "inspection-capture",
+      "proofs": [
+        "form"
+      ],
+      "startedUtc": "2026-09-07T01:53:01.069597+00:00",
+      "finishedUtc": "2026-09-07T01:53:01.379068+00:00",
+      "bytes": 108872,
+      "sha256": "945d4b04fd4d4a4bf561e9686e645ee2d23704dba8950005bb518a464be6cc10",
+      "width": 720,
+      "height": 1600,
+      "mode": "RGBA",
+      "method": "unmodified adb exec-out screencap -p"
+    },
+    {
+      "filename": "04-demo-b-local-saved.png",
+      "slot": "inspection-capture",
+      "proofs": [
+        "local-saved"
+      ],
+      "startedUtc": "2026-09-07T01:53:27.487233+00:00",
+      "finishedUtc": "2026-09-07T01:53:28.148233+00:00",
+      "bytes": 95908,
+      "sha256": "150e70bc5e81e88f5df62dc915fbb17cf37c2f62258948e296c7feab4e6591bd",
+      "width": 720,
+      "height": 1600,
+      "mode": "RGBA",
+      "method": "unmodified adb exec-out screencap -p"
+    },
+    {
+      "filename": "05-demo-c-form.png",
+      "slot": "inspection-setup",
+      "proofs": [
+        "c-form"
+      ],
+      "startedUtc": "2026-09-07T01:58:00.948679+00:00",
+      "finishedUtc": "2026-09-07T01:58:02.016475+00:00",
+      "bytes": 109168,
+      "sha256": "dc1017f433f2ed67c25d362216d4170f6f5ce5eea2cc79d41a7f6e2e7c9af6c9",
+      "width": 720,
+      "height": 1600,
+      "mode": "RGBA",
+      "method": "unmodified adb exec-out screencap -p"
+    },
+    {
+      "filename": "06-demo-bc-complete-boundary.png",
+      "slot": "inspection-setup",
+      "proofs": [
+        "completion-boundary"
+      ],
+      "startedUtc": "2026-09-07T01:59:46.213550+00:00",
+      "finishedUtc": "2026-09-07T01:59:46.672163+00:00",
+      "bytes": 131486,
+      "sha256": "1656b026837455ac9afb9c94f55831ec93a51f66001af248dbcf4a623128beca",
+      "width": 720,
+      "height": 1600,
+      "mode": "RGBA",
+      "method": "unmodified adb exec-out screencap -p"
+    },
+    {
+      "filename": "07-demo-bc-signature.png",
+      "slot": "inspection-setup",
+      "proofs": [
+        "demo-signature"
+      ],
+      "startedUtc": "2026-09-07T02:01:22.821289+00:00",
+      "finishedUtc": "2026-09-07T02:01:23.337045+00:00",
+      "bytes": 54115,
+      "sha256": "34d1c1aa537585ff6b89b87b6fe3d40c1802e6163ace85ffedd40fdc0282f85b",
+      "width": 720,
+      "height": 1600,
+      "mode": "RGBA",
+      "method": "unmodified adb exec-out screencap -p"
+    },
+    {
+      "filename": "08-demo-bc-issued.png",
+      "slot": "inspection-capture",
+      "proofs": [
+        "complete-issued"
+      ],
+      "startedUtc": "2026-09-07T02:03:54.100546+00:00",
+      "finishedUtc": "2026-09-07T02:03:54.967711+00:00",
+      "bytes": 108545,
+      "sha256": "39786fd31f842674974e4dc38d0d53d74a79e726d4ec890670968abf8447233e",
+      "width": 720,
+      "height": 1600,
+      "mode": "RGBA",
+      "method": "unmodified adb exec-out screencap -p"
+    },
+    {
+      "filename": "09-demo-a-required-mode.png",
+      "slot": "inspection-setup",
+      "proofs": [
+        "a-photo-mode"
+      ],
+      "startedUtc": "2026-09-07T02:04:58.479970+00:00",
+      "finishedUtc": "2026-09-07T02:04:59.299647+00:00",
+      "bytes": 134683,
+      "sha256": "df09dbfc691e09d662ae97cd543ae7142e27624f50c81851732bbf127c43b4ad",
+      "width": 720,
+      "height": 1600,
+      "mode": "RGBA",
+      "method": "unmodified adb exec-out screencap -p"
+    },
+    {
+      "filename": "10-demo-a-form.png",
+      "slot": "inspection-setup",
+      "proofs": [
+        "a-form"
+      ],
+      "startedUtc": "2026-09-07T02:08:16.891892+00:00",
+      "finishedUtc": "2026-09-07T02:08:17.383462+00:00",
+      "bytes": 114382,
+      "sha256": "08671c92e6e57a7e2e39c9ad421fa618d0bd14da27e6fcb75f47c51daa6de18d",
+      "width": 720,
+      "height": 1600,
+      "mode": "RGBA",
+      "method": "unmodified adb exec-out screencap -p"
+    },
+    {
+      "filename": "11-bill-inspection-three-open.png",
+      "slot": "inspection-carryover",
+      "proofs": [
+        "bill-row"
+      ],
+      "startedUtc": "2026-09-07T02:10:57.287257+00:00",
+      "finishedUtc": "2026-09-07T02:10:57.553698+00:00",
+      "bytes": 136876,
+      "sha256": "3643a0f8ec26f800b8662bdf202ece09a6baeb08b4ffe52f007279c5c36311ea",
+      "width": 720,
+      "height": 1600,
+      "mode": "RGBA",
+      "method": "unmodified adb exec-out screencap -p"
+    },
+    {
+      "filename": "12-followups-inspections.png",
+      "slot": "inspection-carryover",
+      "proofs": [
+        "followups"
+      ],
+      "startedUtc": "2026-09-07T02:11:18.876808+00:00",
+      "finishedUtc": "2026-09-07T02:11:19.186887+00:00",
+      "bytes": 181338,
+      "sha256": "182369491dc2c1646c57ca79dffcbe9a0721ade3e3e973c703d78975978e449c",
+      "width": 720,
+      "height": 1600,
+      "mode": "RGBA",
+      "method": "unmodified adb exec-out screencap -p"
+    },
+    {
+      "filename": "13-verify-three-open.png",
+      "slot": "inspection-carryover",
+      "proofs": [
+        "verify-open"
+      ],
+      "startedUtc": "2026-09-07T02:11:36.160074+00:00",
+      "finishedUtc": "2026-09-07T02:11:36.423705+00:00",
+      "bytes": 165453,
+      "sha256": "20964b12a04a45d88a2736d1ae9de6341aa04e00717734eea1bc4713b7f9e348",
+      "width": 720,
+      "height": 1600,
+      "mode": "RGBA",
+      "method": "unmodified adb exec-out screencap -p"
+    },
+    {
+      "filename": "14-demo-b-server-open.png",
+      "slot": "inspection-capture",
+      "proofs": [
+        "server-open"
+      ],
+      "startedUtc": "2026-09-07T02:11:45.351351+00:00",
+      "finishedUtc": "2026-09-07T02:11:45.618680+00:00",
+      "bytes": 153024,
+      "sha256": "450339964fa689300df45f48aa3ae554d67bab52d2db1d7f7cd5608207ddf688",
+      "width": 720,
+      "height": 1600,
+      "mode": "RGBA",
+      "method": "unmodified adb exec-out screencap -p"
+    },
+    {
+      "filename": "15-demo-a-before-detail.png",
+      "slot": "inspection-review",
+      "proofs": [
+        "before-detail"
+      ],
+      "startedUtc": "2026-09-07T02:11:54.285837+00:00",
+      "finishedUtc": "2026-09-07T02:11:54.562648+00:00",
+      "bytes": 160536,
+      "sha256": "d2ff2b6d1c14026307641358ab257534c3c694faf1874075155e1c9d27e9a11f",
+      "width": 720,
+      "height": 1600,
+      "mode": "RGBA",
+      "method": "unmodified adb exec-out screencap -p"
+    },
+    {
+      "filename": "16-demo-a-after-required-alert.png",
+      "slot": "inspection-review",
+      "proofs": [
+        "after-required-alert"
+      ],
+      "startedUtc": "2026-09-07T02:12:09.412314+00:00",
+      "finishedUtc": "2026-09-07T02:12:09.670613+00:00",
+      "bytes": 161096,
+      "sha256": "c99fc4564145d05d03ce398f2d12dfc9682f7aa9b5484fc8bdedf0de4ddccc57",
+      "width": 720,
+      "height": 1600,
+      "mode": "RGBA",
+      "method": "unmodified adb exec-out screencap -p"
+    },
+    {
+      "filename": "17-demo-a-required-alert-confirmed.png",
+      "slot": "inspection-review",
+      "proofs": [
+        "after-required-alert"
+      ],
+      "startedUtc": "2026-09-07T02:12:44.931440+00:00",
+      "finishedUtc": "2026-09-07T02:12:45.199932+00:00",
+      "bytes": 107201,
+      "sha256": "a705963bed913147f8595c5a8d34b434d49c34f9283b8c4e98321ce264ac9b2b",
+      "width": 720,
+      "height": 1600,
+      "mode": "RGBA",
+      "method": "unmodified adb exec-out screencap -p"
+    },
+    {
+      "filename": "18-demo-a-after-attached.png",
+      "slot": "inspection-review",
+      "proofs": [
+        "after-attached"
+      ],
+      "startedUtc": "2026-09-07T02:14:07.607248+00:00",
+      "finishedUtc": "2026-09-07T02:14:07.885818+00:00",
+      "bytes": 169349,
+      "sha256": "3968d8f8c9e2cb18cd167f3ecc48e86b1ff4c30d45ae7380a763a4c25ce4497c",
+      "width": 720,
+      "height": 1600,
+      "mode": "RGBA",
+      "method": "unmodified adb exec-out screencap -p"
+    },
+    {
+      "filename": "19-demo-a-accept-control.png",
+      "slot": "inspection-accept",
+      "proofs": [
+        "accept-control"
+      ],
+      "startedUtc": "2026-09-07T02:14:23.709770+00:00",
+      "finishedUtc": "2026-09-07T02:14:23.994820+00:00",
+      "bytes": 170065,
+      "sha256": "e5ab6454a448a2004edd7a9d8f69f22ccd68fb8d8ea82f76b3a1fb10abc025bb",
+      "width": 720,
+      "height": 1600,
+      "mode": "RGBA",
+      "method": "unmodified adb exec-out screencap -p"
+    },
+    {
+      "filename": "20-demo-a-closed-accepted.png",
+      "slot": "inspection-accept",
+      "proofs": [
+        "closed-accepted"
+      ],
+      "startedUtc": "2026-09-07T02:15:23.356782+00:00",
+      "finishedUtc": "2026-09-07T02:15:23.648043+00:00",
+      "bytes": 164577,
+      "sha256": "0e4a0bd7c142d3a3778465914c79da15c988d98b634bac607ddf97462554f913",
+      "width": 720,
+      "height": 1600,
+      "mode": "RGBA",
+      "method": "unmodified adb exec-out screencap -p"
+    },
+    {
+      "filename": "21-demo-b-reject-confirm.png",
+      "slot": "inspection-reject",
+      "proofs": [
+        "reject-confirm"
+      ],
+      "startedUtc": "2026-09-07T02:17:07.096516+00:00",
+      "finishedUtc": "2026-09-07T02:17:07.363866+00:00",
+      "bytes": 144925,
+      "sha256": "e6b6607bbdd7ea0d24c8f6e1bc519ddee8285c19eb85c6a792269e395a8b50d4",
+      "width": 720,
+      "height": 1600,
+      "mode": "RGBA",
+      "method": "unmodified adb exec-out screencap -p"
+    },
+    {
+      "filename": "22-demo-b-returned-open.png",
+      "slot": "inspection-reject",
+      "proofs": [
+        "returned-open"
+      ],
+      "startedUtc": "2026-09-07T02:17:33.117421+00:00",
+      "finishedUtc": "2026-09-07T02:17:33.393752+00:00",
+      "bytes": 150118,
+      "sha256": "e53d6e72170d60a50a5ca045bc77b7321f72bde1a345aa7c173e1a8d6ba90fe0",
+      "width": 720,
+      "height": 1600,
+      "mode": "RGBA",
+      "method": "unmodified adb exec-out screencap -p"
+    },
+    {
+      "filename": "23-demo-c-escalate-dialog.png",
+      "slot": "inspection-ncr",
+      "proofs": [
+        "escalate-dialog"
+      ],
+      "startedUtc": "2026-09-07T02:17:58.595882+00:00",
+      "finishedUtc": "2026-09-07T02:17:59.016336+00:00",
+      "bytes": 111113,
+      "sha256": "c985089e57fd1093f470090980264eebe335467bf456708d8f1f9b8ce38414a0",
+      "width": 720,
+      "height": 1600,
+      "mode": "RGBA",
+      "method": "unmodified adb exec-out screencap -p"
+    },
+    {
+      "filename": "24-demo-c-escalated-linked.png",
+      "slot": "inspection-ncr",
+      "proofs": [
+        "escalated-linked"
+      ],
+      "startedUtc": "2026-09-07T02:18:51.620874+00:00",
+      "finishedUtc": "2026-09-07T02:18:52.158795+00:00",
+      "bytes": 152266,
+      "sha256": "202975757339b9d58bd30b1261e741d9c8db2543286793c45fefebd9270c775c",
+      "width": 720,
+      "height": 1600,
+      "mode": "RGBA",
+      "method": "unmodified adb exec-out screencap -p"
+    },
+    {
+      "filename": "25-closed-accepted-history.png",
+      "slot": "inspection-history",
+      "proofs": [
+        "closed-history"
+      ],
+      "startedUtc": "2026-09-07T02:19:22.294810+00:00",
+      "finishedUtc": "2026-09-07T02:19:22.572822+00:00",
+      "bytes": 164278,
+      "sha256": "d15a4dd477d1736b28699d992c243f866e3b73cdb8451fa4ed253e0a04fc5eaa",
+      "width": 720,
+      "height": 1600,
+      "mode": "RGBA",
+      "method": "unmodified adb exec-out screencap -p"
+    },
+    {
+      "filename": "26-demo-b-real-age-today.png",
+      "slot": "inspection-carryover",
+      "proofs": [
+        "age-current"
+      ],
+      "startedUtc": "2026-09-07T02:19:31.705770+00:00",
+      "finishedUtc": "2026-09-07T02:19:31.984695+00:00",
+      "bytes": 152564,
+      "sha256": "89ce1d5100fc5dd9a0493ae8e6fe1059917d28cdb5961195d4b87e3256b7f878",
+      "width": 720,
+      "height": 1600,
+      "mode": "RGBA",
+      "method": "unmodified adb exec-out screencap -p"
+    },
+    {
+      "filename": "27-bill-after-one-open.png",
+      "slot": "inspection-history",
+      "proofs": [
+        "bill-after"
+      ],
+      "startedUtc": "2026-09-07T02:19:52.328694+00:00",
+      "finishedUtc": "2026-09-07T02:19:52.587323+00:00",
+      "bytes": 135467,
+      "sha256": "47dceda2d36a83442eee4967fd5a1435f9c08bad421db02c6db57183695c30ef",
+      "width": 720,
+      "height": 1600,
+      "mode": "RGBA",
+      "method": "unmodified adb exec-out screencap -p"
+    }
+  ],
+  "excludedAttempts": {
+    "02-demo-create-required.png": "Optional was selected; rejected as Required-mode proof. Retained unchanged. BC used Optional, A separately created Required.",
+    "16-demo-a-after-required-alert.png": "Bottom navigation intercepted tap; no alert. Rejected as gate proof; confirmed alert is capture 17."
+  },
+  "supportingSetup": [
+    {
+      "path": "remedial-tutorial/inspection/05-demo-c-form.png",
+      "bytes": 109168,
+      "sha256": "dc1017f433f2ed67c25d362216d4170f6f5ce5eea2cc79d41a7f6e2e7c9af6c9"
+    },
+    {
+      "path": "remedial-tutorial/inspection/06-demo-bc-complete-boundary.png",
+      "bytes": 131486,
+      "sha256": "1656b026837455ac9afb9c94f55831ec93a51f66001af248dbcf4a623128beca"
+    },
+    {
+      "path": "remedial-tutorial/inspection/07-demo-bc-signature.png",
+      "bytes": 54115,
+      "sha256": "34d1c1aa537585ff6b89b87b6fe3d40c1802e6163ace85ffedd40fdc0282f85b"
+    },
+    {
+      "path": "remedial-tutorial/inspection/09-demo-a-required-mode.png",
+      "bytes": 134683,
+      "sha256": "df09dbfc691e09d662ae97cd543ae7142e27624f50c81851732bbf127c43b4ad"
+    },
+    {
+      "path": "remedial-tutorial/inspection/10-demo-a-form.png",
+      "bytes": 114382,
+      "sha256": "08671c92e6e57a7e2e39c9ad421fa618d0bd14da27e6fcb75f47c51daa6de18d"
+    }
+  ],
+  "limitations": {
+    "laterDay": "No pre-existing open Inspection findings were available. The same-day today badge is shown honestly; no later-day comparison or aged Inspection UI is claimed. Carry-over semantics remain source-backed.",
+    "signature": "Normal signature pad used a literal DEMO mark under Bakery Demo training operator, not a named person signature. Backend inspector and verification actor remain Bakery Demo Site Manager.",
+    "camera": "Android emulator emulated back camera test scene; original camera bytes and app watermark/annotation flow. No physical presence, workplace defect or correction claimed.",
+    "listCount": "Inspection list displays 0 findings although detail and server show 2/1. Issued detail is used as proof.",
+    "attribution": "No actors/times added to app. Cleaning stored attribution is narration-only; product approval remains pending.",
+    "reopen": "Reopen not demonstrated; current site_admin role lacks oversight control."
+  }
+}

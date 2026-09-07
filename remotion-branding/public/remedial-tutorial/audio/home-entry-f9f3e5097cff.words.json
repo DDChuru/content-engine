@@ -1,0 +1,144 @@
+{
+  "audioSha256": "e166dfc7d91b8c676f1ab01d97860dd341d3f918598c6764393b1628b41eee99",
+  "model": "faster-whisper-small",
+  "modelRevision": "536b0662742c02347bc0e980a01041f333bce120",
+  "computeType": "int8",
+  "language": "en",
+  "initialPrompt": null,
+  "duration": 9.195125,
+  "text": "Use the home follow up banner, or bill of health, to return to outstanding remittals. This is the earlier baseline navigation view.",
+  "words": [
+    {
+      "word": " Use",
+      "start": 0.0,
+      "end": 0.26,
+      "probability": 0.5914639830589294
+    },
+    {
+      "word": " the",
+      "start": 0.26,
+      "end": 0.46,
+      "probability": 0.985503077507019
+    },
+    {
+      "word": " home",
+      "start": 0.46,
+      "end": 0.72,
+      "probability": 0.45550888776779175
+    },
+    {
+      "word": " follow",
+      "start": 0.72,
+      "end": 1.02,
+      "probability": 0.5351875424385071
+    },
+    {
+      "word": " up",
+      "start": 1.02,
+      "end": 1.4,
+      "probability": 0.5892146825790405
+    },
+    {
+      "word": " banner,",
+      "start": 1.4,
+      "end": 1.8,
+      "probability": 0.784992516040802
+    },
+    {
+      "word": " or",
+      "start": 2.18,
+      "end": 2.5,
+      "probability": 0.9516534209251404
+    },
+    {
+      "word": " bill",
+      "start": 2.5,
+      "end": 2.74,
+      "probability": 0.4886890649795532
+    },
+    {
+      "word": " of",
+      "start": 2.74,
+      "end": 2.94,
+      "probability": 0.9929764866828918
+    },
+    {
+      "word": " health,",
+      "start": 2.94,
+      "end": 3.24,
+      "probability": 0.9637949466705322
+    },
+    {
+      "word": " to",
+      "start": 3.56,
+      "end": 3.84,
+      "probability": 0.9973297119140625
+    },
+    {
+      "word": " return",
+      "start": 3.84,
+      "end": 4.24,
+      "probability": 0.9681628346443176
+    },
+    {
+      "word": " to",
+      "start": 4.24,
+      "end": 4.42,
+      "probability": 0.9968589544296265
+    },
+    {
+      "word": " outstanding",
+      "start": 4.42,
+      "end": 5.0,
+      "probability": 0.9494969248771667
+    },
+    {
+      "word": " remittals.",
+      "start": 5.0,
+      "end": 5.74,
+      "probability": 0.5629129211107889
+    },
+    {
+      "word": " This",
+      "start": 6.32,
+      "end": 6.52,
+      "probability": 0.9954053163528442
+    },
+    {
+      "word": " is",
+      "start": 6.52,
+      "end": 6.66,
+      "probability": 0.995936393737793
+    },
+    {
+      "word": " the",
+      "start": 6.66,
+      "end": 6.84,
+      "probability": 0.9903851747512817
+    },
+    {
+      "word": " earlier",
+      "start": 6.84,
+      "end": 7.08,
+      "probability": 0.3371298909187317
+    },
+    {
+      "word": " baseline",
+      "start": 7.08,
+      "end": 7.66,
+      "probability": 0.9540348649024963
+    },
+    {
+      "word": " navigation",
+      "start": 7.66,
+      "end": 8.24,
+      "probability": 0.9856857061386108
+    },
+    {
+      "word": " view.",
+      "start": 8.24,
+      "end": 8.76,
+      "probability": 0.9896335601806641
+    }
+  ]
+}

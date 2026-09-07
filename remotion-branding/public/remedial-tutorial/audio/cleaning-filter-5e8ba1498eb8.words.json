@@ -1,0 +1,84 @@
+{
+  "audioSha256": "b15ac39605768dc3413790cff2cf7ff51ed8a9a353ebe4e5212a6831bb90d974",
+  "model": "faster-whisper-small",
+  "modelRevision": "536b0662742c02347bc0e980a01041f333bce120",
+  "computeType": "int8",
+  "language": "en",
+  "initialPrompt": null,
+  "duration": 4.9690625,
+  "text": "In follow-ups, choose cleaning to focus on the cleaning check findings.",
+  "words": [
+    {
+      "word": " In",
+      "start": 0.0,
+      "end": 0.16,
+      "probability": 0.8373842239379883
+    },
+    {
+      "word": " follow",
+      "start": 0.16,
+      "end": 0.48,
+      "probability": 0.8471670150756836
+    },
+    {
+      "word": "-ups,",
+      "start": 0.48,
+      "end": 0.96,
+      "probability": 0.8307702839374542
+    },
+    {
+      "word": " choose",
+      "start": 1.22,
+      "end": 1.56,
+      "probability": 0.9863647222518921
+    },
+    {
+      "word": " cleaning",
+      "start": 1.56,
+      "end": 2.02,
+      "probability": 0.44311511516571045
+    },
+    {
+      "word": " to",
+      "start": 2.02,
+      "end": 2.5,
+      "probability": 0.9832403063774109
+    },
+    {
+      "word": " focus",
+      "start": 2.5,
+      "end": 2.9,
+      "probability": 0.9985994696617126
+    },
+    {
+      "word": " on",
+      "start": 2.9,
+      "end": 3.32,
+      "probability": 0.9928754568099976
+    },
+    {
+      "word": " the",
+      "start": 3.32,
+      "end": 3.44,
+      "probability": 0.9759959578514099
+    },
+    {
+      "word": " cleaning",
+      "start": 3.44,
+      "end": 3.74,
+      "probability": 0.9833171963691711
+    },
+    {
+      "word": " check",
+      "start": 3.74,
+      "end": 4.0,
+      "probability": 0.9896199107170105
+    },
+    {
+      "word": " findings.",
+      "start": 4.0,
+      "end": 4.44,
+      "probability": 0.943748414516449
+    }
+  ]
+}

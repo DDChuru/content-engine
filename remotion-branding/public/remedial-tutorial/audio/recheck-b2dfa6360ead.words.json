@@ -1,0 +1,222 @@
+{
+  "audioSha256": "c64955a45fec3a6fbc0efefb3a76f816dbbcf339ad8463b0b567c633ede3cb82",
+  "model": "faster-whisper-small",
+  "modelRevision": "536b0662742c02347bc0e980a01041f333bce120",
+  "computeType": "int8",
+  "language": "en",
+  "initialPrompt": null,
+  "duration": 16.718375,
+  "text": "Before signing off, a responsible person must return and verify the correction. A site manager or above selects confirm followed up. The button does not enforce a physical recheck. This demo records simulated work only.",
+  "words": [
+    {
+      "word": " Before",
+      "start": 0.0,
+      "end": 0.3,
+      "probability": 0.9268653988838196
+    },
+    {
+      "word": " signing",
+      "start": 0.3,
+      "end": 0.64,
+      "probability": 0.5067653059959412
+    },
+    {
+      "word": " off,",
+      "start": 0.64,
+      "end": 0.98,
+      "probability": 0.9868839383125305
+    },
+    {
+      "word": " a",
+      "start": 1.42,
+      "end": 1.54,
+      "probability": 0.9709599018096924
+    },
+    {
+      "word": " responsible",
+      "start": 1.54,
+      "end": 1.92,
+      "probability": 0.9674445390701294
+    },
+    {
+      "word": " person",
+      "start": 1.92,
+      "end": 2.42,
+      "probability": 0.985012412071228
+    },
+    {
+      "word": " must",
+      "start": 2.42,
+      "end": 2.68,
+      "probability": 0.9936029314994812
+    },
+    {
+      "word": " return",
+      "start": 2.68,
+      "end": 3.24,
+      "probability": 0.9781526923179626
+    },
+    {
+      "word": " and",
+      "start": 3.24,
+      "end": 3.8,
+      "probability": 0.981788158416748
+    },
+    {
+      "word": " verify",
+      "start": 3.8,
+      "end": 4.18,
+      "probability": 0.9968501925468445
+    },
+    {
+      "word": " the",
+      "start": 4.18,
+      "end": 4.44,
+      "probability": 0.7487919330596924
+    },
+    {
+      "word": " correction.",
+      "start": 4.44,
+      "end": 4.86,
+      "probability": 0.9849783182144165
+    },
+    {
+      "word": " A",
+      "start": 5.52,
+      "end": 5.66,
+      "probability": 0.968349039554596
+    },
+    {
+      "word": " site",
+      "start": 5.66,
+      "end": 5.9,
+      "probability": 0.8674152493476868
+    },
+    {
+      "word": " manager",
+      "start": 5.9,
+      "end": 6.34,
+      "probability": 0.9951553344726562
+    },
+    {
+      "word": " or",
+      "start": 6.34,
+      "end": 6.98,
+      "probability": 0.883367121219635
+    },
+    {
+      "word": " above",
+      "start": 6.98,
+      "end": 7.34,
+      "probability": 0.9474456310272217
+    },
+    {
+      "word": " selects",
+      "start": 7.34,
+      "end": 8.2,
+      "probability": 0.9826121628284454
+    },
+    {
+      "word": " confirm",
+      "start": 8.2,
+      "end": 9.3,
+      "probability": 0.6662696003913879
+    },
+    {
+      "word": " followed",
+      "start": 9.3,
+      "end": 10.14,
+      "probability": 0.9139229655265808
+    },
+    {
+      "word": " up.",
+      "start": 10.14,
+      "end": 10.46,
+      "probability": 0.900502622127533
+    },
+    {
+      "word": " The",
+      "start": 11.26,
+      "end": 11.38,
+      "probability": 0.9863329529762268
+    },
+    {
+      "word": " button",
+      "start": 11.38,
+      "end": 11.66,
+      "probability": 0.7378092408180237
+    },
+    {
+      "word": " does",
+      "start": 11.66,
+      "end": 11.9,
+      "probability": 0.9905632734298706
+    },
+    {
+      "word": " not",
+      "start": 11.9,
+      "end": 12.06,
+      "probability": 0.998960018157959
+    },
+    {
+      "word": " enforce",
+      "start": 12.06,
+      "end": 12.42,
+      "probability": 0.9898605942726135
+    },
+    {
+      "word": " a",
+      "start": 12.42,
+      "end": 12.6,
+      "probability": 0.9815714955329895
+    },
+    {
+      "word": " physical",
+      "start": 12.6,
+      "end": 12.92,
+      "probability": 0.9918212890625
+    },
+    {
+      "word": " recheck.",
+      "start": 12.92,
+      "end": 13.32,
+      "probability": 0.6152923256158829
+    },
+    {
+      "word": " This",
+      "start": 13.98,
+      "end": 14.22,
+      "probability": 0.9783477783203125
+    },
+    {
+      "word": " demo",
+      "start": 14.22,
+      "end": 14.5,
+      "probability": 0.9957935810089111
+    },
+    {
+      "word": " records",
+      "start": 14.5,
+      "end": 14.92,
+      "probability": 0.960288405418396
+    },
+    {
+      "word": " simulated",
+      "start": 14.92,
+      "end": 15.42,
+      "probability": 0.9948495030403137
+    },
+    {
+      "word": " work",
+      "start": 15.42,
+      "end": 15.96,
+      "probability": 0.9934564232826233
+    },
+    {
+      "word": " only.",
+      "start": 15.96,
+      "end": 16.28,
+      "probability": 0.9866201877593994
+    }
+  ]
+}

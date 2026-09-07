@@ -1,0 +1,162 @@
+{
+  "audioSha256": "1cf6805ebb9077e0dd522c601ea932c4041fc1e2245c8ada1bb45e620d0b8788",
+  "model": "faster-whisper-small",
+  "modelRevision": "536b0662742c02347bc0e980a01041f333bce120",
+  "computeType": "int8",
+  "language": "en",
+  "initialPrompt": null,
+  "duration": 13.0031875,
+  "text": "After confirmation, the same blue covers search returns. No matches. The finding has left the open queue. This flow does not show a success dialog.",
+  "words": [
+    {
+      "word": " After",
+      "start": 0.0,
+      "end": 0.24,
+      "probability": 0.9274178743362427
+    },
+    {
+      "word": " confirmation,",
+      "start": 0.24,
+      "end": 0.7,
+      "probability": 0.9834551811218262
+    },
+    {
+      "word": " the",
+      "start": 1.4,
+      "end": 1.44,
+      "probability": 0.970663845539093
+    },
+    {
+      "word": " same",
+      "start": 1.44,
+      "end": 1.74,
+      "probability": 0.9901061654090881
+    },
+    {
+      "word": " blue",
+      "start": 1.74,
+      "end": 2.0,
+      "probability": 0.7737741470336914
+    },
+    {
+      "word": " covers",
+      "start": 2.0,
+      "end": 2.34,
+      "probability": 0.4427465796470642
+    },
+    {
+      "word": " search",
+      "start": 2.34,
+      "end": 2.8,
+      "probability": 0.9318958520889282
+    },
+    {
+      "word": " returns.",
+      "start": 2.8,
+      "end": 3.52,
+      "probability": 0.9496331214904785
+    },
+    {
+      "word": " No",
+      "start": 4.58,
+      "end": 5.02,
+      "probability": 0.9442166686058044
+    },
+    {
+      "word": " matches.",
+      "start": 5.02,
+      "end": 5.3,
+      "probability": 0.9232921600341797
+    },
+    {
+      "word": " The",
+      "start": 6.34,
+      "end": 6.74,
+      "probability": 0.9805694818496704
+    },
+    {
+      "word": " finding",
+      "start": 6.74,
+      "end": 7.12,
+      "probability": 0.9754531979560852
+    },
+    {
+      "word": " has",
+      "start": 7.12,
+      "end": 7.96,
+      "probability": 0.9548308253288269
+    },
+    {
+      "word": " left",
+      "start": 7.96,
+      "end": 8.3,
+      "probability": 0.99320387840271
+    },
+    {
+      "word": " the",
+      "start": 8.3,
+      "end": 8.52,
+      "probability": 0.9843957424163818
+    },
+    {
+      "word": " open",
+      "start": 8.52,
+      "end": 8.8,
+      "probability": 0.9724713563919067
+    },
+    {
+      "word": " queue.",
+      "start": 8.8,
+      "end": 9.12,
+      "probability": 0.9787154197692871
+    },
+    {
+      "word": " This",
+      "start": 9.76,
+      "end": 9.92,
+      "probability": 0.9898359179496765
+    },
+    {
+      "word": " flow",
+      "start": 9.92,
+      "end": 10.26,
+      "probability": 0.9276835322380066
+    },
+    {
+      "word": " does",
+      "start": 10.26,
+      "end": 10.7,
+      "probability": 0.9771111607551575
+    },
+    {
+      "word": " not",
+      "start": 10.7,
+      "end": 10.88,
+      "probability": 0.9980477094650269
+    },
+    {
+      "word": " show",
+      "start": 10.88,
+      "end": 11.24,
+      "probability": 0.9940487146377563
+    },
+    {
+      "word": " a",
+      "start": 11.24,
+      "end": 11.5,
+      "probability": 0.9790974259376526
+    },
+    {
+      "word": " success",
+      "start": 11.5,
+      "end": 11.8,
+      "probability": 0.9492725729942322
+    },
+    {
+      "word": " dialog.",
+      "start": 11.8,
+      "end": 12.4,
+      "probability": 0.38666731119155884
+    }
+  ]
+}

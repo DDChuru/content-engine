@@ -1,0 +1,204 @@
+{
+  "audioSha256": "3ddc700f7c6be9d6058a36098b0beda41872eb048cc39fd4b4bf546f48d878ef",
+  "model": "faster-whisper-small",
+  "modelRevision": "536b0662742c02347bc0e980a01041f333bce120",
+  "computeType": "int8",
+  "language": "en",
+  "initialPrompt": null,
+  "duration": 17.9258125,
+  "text": "On demo case A, attach the required after photo and record the simulated action taken. Accept closes the finding and records an accepted verification. The closed tab now shows the verified result.",
+  "words": [
+    {
+      "word": " On",
+      "start": 0.0,
+      "end": 0.18,
+      "probability": 0.9493535757064819
+    },
+    {
+      "word": " demo",
+      "start": 0.18,
+      "end": 0.56,
+      "probability": 0.9011380672454834
+    },
+    {
+      "word": " case",
+      "start": 0.56,
+      "end": 1.08,
+      "probability": 0.9283102750778198
+    },
+    {
+      "word": " A,",
+      "start": 1.08,
+      "end": 1.84,
+      "probability": 0.36446452140808105
+    },
+    {
+      "word": " attach",
+      "start": 2.8,
+      "end": 2.8,
+      "probability": 0.9755083322525024
+    },
+    {
+      "word": " the",
+      "start": 2.8,
+      "end": 3.12,
+      "probability": 0.9943414926528931
+    },
+    {
+      "word": " required",
+      "start": 3.12,
+      "end": 3.64,
+      "probability": 0.9738950729370117
+    },
+    {
+      "word": " after",
+      "start": 3.64,
+      "end": 4.14,
+      "probability": 0.7086710929870605
+    },
+    {
+      "word": " photo",
+      "start": 4.14,
+      "end": 4.48,
+      "probability": 0.8345108032226562
+    },
+    {
+      "word": " and",
+      "start": 4.920000000000003,
+      "end": 5.38,
+      "probability": 0.7362715601921082
+    },
+    {
+      "word": " record",
+      "start": 5.38,
+      "end": 5.82,
+      "probability": 0.9924815893173218
+    },
+    {
+      "word": " the",
+      "start": 5.82,
+      "end": 6.04,
+      "probability": 0.9768269658088684
+    },
+    {
+      "word": " simulated",
+      "start": 6.04,
+      "end": 6.5,
+      "probability": 0.997506320476532
+    },
+    {
+      "word": " action",
+      "start": 6.5,
+      "end": 6.88,
+      "probability": 0.9924305081367493
+    },
+    {
+      "word": " taken.",
+      "start": 6.88,
+      "end": 7.26,
+      "probability": 0.9954177141189575
+    },
+    {
+      "word": " Accept",
+      "start": 8.3,
+      "end": 8.72,
+      "probability": 0.8998258113861084
+    },
+    {
+      "word": " closes",
+      "start": 8.72,
+      "end": 9.4,
+      "probability": 0.8381572365760803
+    },
+    {
+      "word": " the",
+      "start": 9.4,
+      "end": 9.68,
+      "probability": 0.9843458533287048
+    },
+    {
+      "word": " finding",
+      "start": 9.68,
+      "end": 10.08,
+      "probability": 0.9802249073982239
+    },
+    {
+      "word": " and",
+      "start": 10.08,
+      "end": 10.38,
+      "probability": 0.9711586236953735
+    },
+    {
+      "word": " records",
+      "start": 10.38,
+      "end": 10.96,
+      "probability": 0.9919726848602295
+    },
+    {
+      "word": " an",
+      "start": 10.96,
+      "end": 11.62,
+      "probability": 0.9290285706520081
+    },
+    {
+      "word": " accepted",
+      "start": 11.62,
+      "end": 12.08,
+      "probability": 0.9877490401268005
+    },
+    {
+      "word": " verification.",
+      "start": 12.08,
+      "end": 12.82,
+      "probability": 0.9970917701721191
+    },
+    {
+      "word": " The",
+      "start": 13.88,
+      "end": 14.16,
+      "probability": 0.9587334394454956
+    },
+    {
+      "word": " closed",
+      "start": 14.16,
+      "end": 14.7,
+      "probability": 0.8504458069801331
+    },
+    {
+      "word": " tab",
+      "start": 14.7,
+      "end": 15.02,
+      "probability": 0.9443693161010742
+    },
+    {
+      "word": " now",
+      "start": 15.02,
+      "end": 15.34,
+      "probability": 0.9877701997756958
+    },
+    {
+      "word": " shows",
+      "start": 15.34,
+      "end": 15.74,
+      "probability": 0.994115948677063
+    },
+    {
+      "word": " the",
+      "start": 15.74,
+      "end": 16.54,
+      "probability": 0.9787974953651428
+    },
+    {
+      "word": " verified",
+      "start": 16.54,
+      "end": 17.0,
+      "probability": 0.9922829270362854
+    },
+    {
+      "word": " result.",
+      "start": 17.0,
+      "end": 17.42,
+      "probability": 0.9941084384918213
+    }
+  ]
+}

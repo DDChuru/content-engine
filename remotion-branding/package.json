@@ -3,6 +3,11 @@
   "version": "1.0.0",
   "description": "Content Engine Branded Intro/Outro Templates",
   "scripts": {
+    "validate:remedial": "tsc -p tsconfig-remedial.json && node tools/verify-remedial.cjs",
+    "preflight:remedial:final": "node tools/verify-remedial.cjs --final",
+    "preflight:remedial:inventory": "node tools/verify-remedial.cjs --inventory",
+    "smoke:remedial": "node tools/verify-remedial.cjs --smoke",
+    "preview:remedial": "remotion studio src/index-remedial.ts --port 3218",
     "start": "remotion preview src/index.ts",
     "build": "remotion render src/index.ts Intro out/intro.mp4",
     "render:intro": "remotion render src/index.ts Intro out/intro.mp4",
@@ -19,6 +24,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@remotion/media": "^4.0.484",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "remotion": "^4.0.364"

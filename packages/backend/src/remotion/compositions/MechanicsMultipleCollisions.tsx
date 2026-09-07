@@ -59,6 +59,7 @@ const HEADERS = [
   "What you will learn",
   "One collision at a time",
   "Follow the three spheres",
+  "The whole problem",
   "Collision 1: A with B",
   "Check who is catching whom",
   "Collision 2: B with C",
@@ -1255,6 +1256,10 @@ interface BallState {
   showVelocity?: boolean;
   showMass?: boolean;
   accent?: boolean;
+  givens?: boolean;
+  afterV?: number;
+  afterUnknown?: "v" | "w";
+  afterCaption?: string;
 }
 const Sphere: React.FC<{
   ball: BallState;
@@ -1262,7 +1267,7 @@ const Sphere: React.FC<{
   y?: number;
   numeric?: boolean;
 }> = ({ ball, index, y = 390 - (ball.radius ?? 36), numeric = true }) => {
-  const arrowY = y - 120 - index * 85;
+  const arrowY = ball.givens ? 230 : y - 120 - index * 85;
   const length = ball.unknown ? 90 : Math.abs(ball.v) * 35;
   const direction = ball.v < 0 ? -1 : 1;
   const start = ball.x;
@@ -1305,6 +1310,8 @@ const Sphere: React.FC<{
           data-diagram-text="true"
           x={ball.x}
           y={y + 138}
+          data-given-id={ball.givens ? `${ball.id}.mass` : undefined}
+          data-given-value={ball.mass}
           textAnchor="middle"
           fill={T.text}
           fontSize={33}
@@ -1338,6 +1345,8 @@ const Sphere: React.FC<{
               data-diagram-text="true"
               x={(start + end) / 2}
               y={arrowY - 22}
+              data-given-id={ball.givens ? `${ball.id}.before` : undefined}
+              data-given-value={ball.v}
               textAnchor="middle"
               fill={T.text}
               fontSize={30}
@@ -1357,6 +1366,67 @@ const Sphere: React.FC<{
           )}
         </g>
       )}
+      {ball.afterV !== undefined && <AfterVelocity ball={ball} />}
+    </g>
+  );
+};
+const AfterVelocity: React.FC<{ ball: BallState }> = ({ ball }) => {
+  const length = ball.afterUnknown ? 90 : Math.abs(ball.afterV!) * 35;
+  const end = ball.x + length;
+  return (
+    <g>
+      {ball.afterCaption && (
+        <text
+          data-diagram-text="true"
+          x={ball.x}
+          y={550}
+          textAnchor="middle"
+          fill={T.muted}
+          fontSize={24}
+        >
+          {ball.afterCaption}
+        </text>
+      )}
+      <g
+        data-velocity-arrow={ball.afterUnknown ? "unknown" : "known"}
+        data-speed={ball.afterV}
+        data-length={length}
+      >
+        <path
+          data-arrow="true"
+          d={`M${ball.x} 630 H${end}`}
+          fill="none"
+          stroke={T.accent}
+          strokeWidth={4}
+          strokeDasharray={ball.afterUnknown ? "9 7" : undefined}
+        />
+        <path
+          data-arrow="true"
+          d={`M${end - 12} 622 L${end} 630 L${end - 12} 638`}
+          fill="none"
+          stroke={T.accent}
+          strokeWidth={4}
+        />
+        <text
+          data-diagram-text="true"
+          data-given-id={ball.afterUnknown ? undefined : `${ball.id}.after`}
+          data-given-value={ball.afterV}
+          data-unknown={
+            ball.afterUnknown ? `${ball.afterUnknown}${ball.id}` : undefined
+          }
+          x={(ball.x + end) / 2}
+          y={608}
+          textAnchor="middle"
+          fill={T.text}
+          fontSize={30}
+        >
+          {ball.afterUnknown ? (
+            <Subscript letter={ball.afterUnknown} sub={ball.id} />
+          ) : (
+            `+${ball.afterV} m s⁻¹`
+          )}
+        </text>
+      </g>
     </g>
   );
 };
@@ -1627,52 +1697,128 @@ const Story: React.FC<{ s: Scene }> = ({ s }) => {
       : { x: (contact1.x[0] + contact1.x[1]) * 50 + 100, elapsed: t - first };
   return <Track wide numeric={false} balls={balls} flash={flash} />;
 };
+const ProblemSetup: React.FC<{ s: Scene }> = () => (
+  <>
+    <Track
+      positive
+      label="Initially: A–B–C, moving right"
+      balls={[
+        {
+          id: "A",
+          x: 160,
+          v: 4,
+          mass: 1,
+          givens: true,
+          showMass: true,
+          showVelocity: true,
+          afterV: 2,
+          afterCaption: "After A–B",
+        },
+        {
+          id: "B",
+          x: 410,
+          v: 3,
+          mass: 2,
+          givens: true,
+          showMass: true,
+          showVelocity: true,
+        },
+        {
+          id: "C",
+          x: 660,
+          v: 1,
+          mass: 3,
+          givens: true,
+          showMass: true,
+          showVelocity: true,
+          afterV: 3,
+          afterCaption: "After B–C",
+        },
+      ]}
+    />
+    <div
+      data-region="problem"
+      style={{
+        position: "absolute",
+        left: 1070,
+        top: 380,
+        width: 810,
+        boxSizing: "border-box",
+        padding: "28px 22px",
+        background: T.caption,
+        color: T.ink,
+        fontSize: 24,
+        lineHeight: 2.2,
+        borderRadius: 4,
+      }}
+    >
+      {[
+        "Spheres A (1 kg), B (2 kg), C (3 kg): 4, 3, 1 m s⁻¹ →; A–B–C.",
+        "After A hits B: A = 2 m s⁻¹. After B hits C: C = 3 m s⁻¹.",
+        "Will A and B collide again?",
+      ].map((line) => (
+        <div
+          key={line}
+          data-problem-line="true"
+          style={{ whiteSpace: "nowrap" }}
+        >
+          {line}
+        </div>
+      ))}
+    </div>
+  </>
+);
 function collisionBalls(s: Scene, t: number, which: 1 | 2): BallState[] {
-  const after = t >= cue(s, "after");
   const solved = t >= cue(s, "result");
-  if (which === 1)
-    return [
-      {
-        id: "A",
-        x: 220,
-        v: after ? 2 : 4,
-        mass: 1,
-        showMass: t >= cue(s, "mass-a"),
-        showVelocity: t >= cue(s, after ? "after-a" : "speed-a"),
-        accent: !after,
-      },
-      {
-        id: "B",
-        x: 590,
-        v: after ? (solved ? 4 : 1) : 3,
-        mass: 2,
-        showMass: t >= cue(s, "mass-b"),
-        showVelocity: t >= cue(s, after ? "unknown" : "speed-b"),
-        unknown: after && !solved ? "v" : undefined,
-        accent: after,
-      },
-    ];
-  return [
-    {
-      id: "B",
-      x: 220,
-      v: after ? (solved ? 1 : 1) : 4,
-      mass: 2,
-      showMass: t >= cue(s, "mass-b"),
-      showVelocity: t >= cue(s, after ? "unknown" : "speed-b"),
-      unknown: after && !solved ? "w" : undefined,
-      accent: after,
-    },
-    {
-      id: "C",
-      x: 590,
-      v: after ? 3 : 1,
-      mass: 3,
-      showMass: t >= cue(s, "mass-c"),
-      showVelocity: t >= cue(s, after ? "after-c" : "speed-c"),
-      accent: !after,
-    },
-  ];
+  return which === 1
+    ? [
+        {
+          id: "A",
+          x: 220,
+          v: 4,
+          mass: 1,
+          showMass: true,
+          showVelocity: true,
+          givens: true,
+          afterV: 2,
+        },
+        {
+          id: "B",
+          x: 590,
+          v: 3,
+          mass: 2,
+          showMass: true,
+          showVelocity: true,
+          givens: true,
+          afterV: solved ? 4 : 1,
+          afterUnknown: solved ? undefined : "v",
+          accent: true,
+        },
+      ]
+    : [
+        {
+          id: "B",
+          x: 220,
+          v: 4,
+          mass: 2,
+          showMass: true,
+          showVelocity: true,
+          givens: true,
+          afterV: 1,
+          afterUnknown: solved ? undefined : "w",
+          accent: true,
+        },
+        {
+          id: "C",
+          x: 590,
+          v: 1,
+          mass: 3,
+          showMass: true,
+          showVelocity: true,
+          givens: true,
+          afterV: 3,
+        },
+      ];
 }
 const CollisionWorking: React.FC<{ s: Scene; which: 1 | 2; t: number }> = ({
   s,
@@ -1732,27 +1878,24 @@ const CollisionWorking: React.FC<{ s: Scene; which: 1 | 2; t: number }> = ({
     active >= 0 && t >= results[active].start && t < results[active].end
       ? formulaLines.length + active
       : -1;
-  const drawn = t > wordEnd(s, "draw");
   return (
     <>
       <Track
-        balls={
-          drawn
-            ? collisionBalls(s, t, which)
-            : [
-                { id: which === 1 ? "A" : "B", x: 220, v: 0 },
-                { id: which === 1 ? "B" : "C", x: 590, v: 0 },
-              ]
-        }
-        positive={drawn}
-        label={
-          drawn
-            ? t >= cue(s, "after")
-              ? "After collision " + which
-              : "Before collision " + which
-            : undefined
-        }
-      />
+        balls={collisionBalls(s, t, which)}
+        positive
+        label={`Before collision ${which}`}
+      >
+        <text
+          data-diagram-text="true"
+          x={450}
+          y={550}
+          textAnchor="middle"
+          fill={T.muted}
+          fontSize={32}
+        >
+          After collision {which}
+        </text>
+      </Track>
       {which === 2 && t >= cue(s, "decision") ? null : t >=
         cue(s, "principle") ? (
         <Paper lines={lines} t={t} ringLine={ring} />
@@ -1905,6 +2048,7 @@ const CONTENT = [
   Opening,
   Method,
   Story,
+  ProblemSetup,
   FirstCollision,
   DirectionCheck,
   LastCollision,
@@ -1989,7 +2133,14 @@ function useStillAudit(
       }),
     );
     const bounds = root.getBoundingClientRect();
-    const overflow = [...regions, ...texts, ...cards].some((el) => {
+    const overflow = [
+      ...regions,
+      ...texts,
+      ...cards,
+      ...Array.from(root.querySelectorAll("[data-problem-line]")).filter(
+        visible,
+      ),
+    ].some((el) => {
       const b = el.getBoundingClientRect();
       return (
         b.left < bounds.left - 1 ||
@@ -2036,6 +2187,24 @@ function useStillAudit(
           ),
         ),
         cards: cardTexts,
+        givens: Array.from(root.querySelectorAll("[data-given-id]"))
+          .filter(visible)
+          .map((el) => ({
+            id: el.getAttribute("data-given-id"),
+            value: Number(el.getAttribute("data-given-value")),
+            text: el.textContent,
+            bounds: el.getBoundingClientRect().toJSON(),
+          })),
+        unknowns: Array.from(root.querySelectorAll("[data-unknown]"))
+          .filter(visible)
+          .map((el) => el.getAttribute("data-unknown")),
+        problemLines: Array.from(root.querySelectorAll("[data-problem-line]"))
+          .filter(visible)
+          .map((el) => ({
+            text: el.textContent,
+            fits: el.scrollWidth <= el.clientWidth,
+            bounds: el.getBoundingClientRect().toJSON(),
+          })),
         inkLines: inkLines.map((el) => ({
           id: el.getAttribute("data-ink-line"),
           text: el.getAttribute("data-ink-text"),

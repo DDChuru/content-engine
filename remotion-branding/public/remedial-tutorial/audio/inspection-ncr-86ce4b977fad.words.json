@@ -1,0 +1,186 @@
+{
+  "audioSha256": "9c068b6b9f1996863fdb6b40b50531fafd6a6282b0f3badda219da6ef4b2d608",
+  "model": "faster-whisper-small",
+  "modelRevision": "536b0662742c02347bc0e980a01041f333bce120",
+  "computeType": "int8",
+  "language": "en",
+  "initialPrompt": null,
+  "duration": 16.06825,
+  "text": "On a third case, NCR opens the escalate to NCR dialog. Escalate creates and links a formal NCR and marks the finding escalated. Inspection findings do not escalate automatically.",
+  "words": [
+    {
+      "word": " On",
+      "start": 0.0,
+      "end": 0.18,
+      "probability": 0.7641099095344543
+    },
+    {
+      "word": " a",
+      "start": 0.18,
+      "end": 0.28,
+      "probability": 0.6408320069313049
+    },
+    {
+      "word": " third",
+      "start": 0.28,
+      "end": 0.44,
+      "probability": 0.9711441397666931
+    },
+    {
+      "word": " case,",
+      "start": 0.44,
+      "end": 0.76,
+      "probability": 0.9935842156410217
+    },
+    {
+      "word": " NCR",
+      "start": 1.28,
+      "end": 1.64,
+      "probability": 0.7346416860818863
+    },
+    {
+      "word": " opens",
+      "start": 1.64,
+      "end": 2.12,
+      "probability": 0.9880028963088989
+    },
+    {
+      "word": " the",
+      "start": 2.12,
+      "end": 2.36,
+      "probability": 0.991101861000061
+    },
+    {
+      "word": " escalate",
+      "start": 2.36,
+      "end": 2.94,
+      "probability": 0.8737598359584808
+    },
+    {
+      "word": " to",
+      "start": 2.94,
+      "end": 3.14,
+      "probability": 0.9750825762748718
+    },
+    {
+      "word": " NCR",
+      "start": 3.14,
+      "end": 3.74,
+      "probability": 0.9196304380893707
+    },
+    {
+      "word": " dialog.",
+      "start": 3.74,
+      "end": 4.14,
+      "probability": 0.5365772843360901
+    },
+    {
+      "word": " Escalate",
+      "start": 5.28,
+      "end": 5.82,
+      "probability": 0.961304505666097
+    },
+    {
+      "word": " creates",
+      "start": 5.82,
+      "end": 6.32,
+      "probability": 0.9817363023757935
+    },
+    {
+      "word": " and",
+      "start": 6.32,
+      "end": 6.9,
+      "probability": 0.9638583660125732
+    },
+    {
+      "word": " links",
+      "start": 6.9,
+      "end": 7.32,
+      "probability": 0.9962767958641052
+    },
+    {
+      "word": " a",
+      "start": 7.32,
+      "end": 7.84,
+      "probability": 0.9734525084495544
+    },
+    {
+      "word": " formal",
+      "start": 7.84,
+      "end": 8.24,
+      "probability": 0.8390063047409058
+    },
+    {
+      "word": " NCR",
+      "start": 8.24,
+      "end": 8.98,
+      "probability": 0.98845374584198
+    },
+    {
+      "word": " and",
+      "start": 8.98,
+      "end": 9.88,
+      "probability": 0.9295971989631653
+    },
+    {
+      "word": " marks",
+      "start": 9.88,
+      "end": 10.2,
+      "probability": 0.98479163646698
+    },
+    {
+      "word": " the",
+      "start": 10.2,
+      "end": 10.4,
+      "probability": 0.9957571625709534
+    },
+    {
+      "word": " finding",
+      "start": 10.4,
+      "end": 10.68,
+      "probability": 0.8951374888420105
+    },
+    {
+      "word": " escalated.",
+      "start": 10.68,
+      "end": 11.94,
+      "probability": 0.9732390940189362
+    },
+    {
+      "word": " Inspection",
+      "start": 11.94,
+      "end": 13.24,
+      "probability": 0.6879228229324023
+    },
+    {
+      "word": " findings",
+      "start": 13.24,
+      "end": 13.64,
+      "probability": 0.9727604985237122
+    },
+    {
+      "word": " do",
+      "start": 13.64,
+      "end": 14.1,
+      "probability": 0.9593563675880432
+    },
+    {
+      "word": " not",
+      "start": 14.1,
+      "end": 14.32,
+      "probability": 0.9933102130889893
+    },
+    {
+      "word": " escalate",
+      "start": 14.32,
+      "end": 14.98,
+      "probability": 0.9922505617141724
+    },
+    {
+      "word": " automatically.",
+      "start": 14.98,
+      "end": 15.46,
+      "probability": 0.9979960918426514
+    }
+  ]
+}

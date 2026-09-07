@@ -1,0 +1,252 @@
+{
+  "audioSha256": "b8a3500e99d7d53376546986ed6af527dc06355f35272933dfb03e101b158631",
+  "model": "faster-whisper-small",
+  "modelRevision": "536b0662742c02347bc0e980a01041f333bce120",
+  "computeType": "int8",
+  "language": "en",
+  "initialPrompt": null,
+  "duration": 23.684375,
+  "text": "Below carries over open inspection remedials. In follow ups, select inspections, then open verify flow. Open and remade findings count across inspection dates and statuses. These new demo findings are not a later day comparison. The real age is shown.",
+  "words": [
+    {
+      "word": " Below",
+      "start": 0.0,
+      "end": 0.36,
+      "probability": 0.8827890157699585
+    },
+    {
+      "word": " carries",
+      "start": 0.36,
+      "end": 0.78,
+      "probability": 0.9506420493125916
+    },
+    {
+      "word": " over",
+      "start": 0.78,
+      "end": 1.24,
+      "probability": 0.9446874260902405
+    },
+    {
+      "word": " open",
+      "start": 1.24,
+      "end": 1.98,
+      "probability": 0.2900354862213135
+    },
+    {
+      "word": " inspection",
+      "start": 1.98,
+      "end": 2.58,
+      "probability": 0.9448797106742859
+    },
+    {
+      "word": " remedials.",
+      "start": 2.58,
+      "end": 3.38,
+      "probability": 0.8610689342021942
+    },
+    {
+      "word": " In",
+      "start": 4.34,
+      "end": 4.4,
+      "probability": 0.9880453944206238
+    },
+    {
+      "word": " follow",
+      "start": 4.4,
+      "end": 4.82,
+      "probability": 0.9023302793502808
+    },
+    {
+      "word": " ups,",
+      "start": 4.82,
+      "end": 5.24,
+      "probability": 0.28470900654792786
+    },
+    {
+      "word": " select",
+      "start": 5.82,
+      "end": 6.3,
+      "probability": 0.9795008897781372
+    },
+    {
+      "word": " inspections,",
+      "start": 6.3,
+      "end": 6.98,
+      "probability": 0.896210253238678
+    },
+    {
+      "word": " then",
+      "start": 7.72,
+      "end": 7.98,
+      "probability": 0.9934473633766174
+    },
+    {
+      "word": " open",
+      "start": 7.98,
+      "end": 8.6,
+      "probability": 0.9410349726676941
+    },
+    {
+      "word": " verify",
+      "start": 8.6,
+      "end": 9.34,
+      "probability": 0.7710421681404114
+    },
+    {
+      "word": " flow.",
+      "start": 9.34,
+      "end": 9.8,
+      "probability": 0.9573224782943726
+    },
+    {
+      "word": " Open",
+      "start": 10.64,
+      "end": 11.1,
+      "probability": 0.9950584173202515
+    },
+    {
+      "word": " and",
+      "start": 11.1,
+      "end": 11.34,
+      "probability": 0.9915192723274231
+    },
+    {
+      "word": " remade",
+      "start": 11.34,
+      "end": 11.7,
+      "probability": 0.6830952167510986
+    },
+    {
+      "word": " findings",
+      "start": 11.7,
+      "end": 12.3,
+      "probability": 0.8311742544174194
+    },
+    {
+      "word": " count",
+      "start": 12.3,
+      "end": 12.8,
+      "probability": 0.6498048901557922
+    },
+    {
+      "word": " across",
+      "start": 12.8,
+      "end": 13.4,
+      "probability": 0.9560081362724304
+    },
+    {
+      "word": " inspection",
+      "start": 13.4,
+      "end": 14.66,
+      "probability": 0.993536651134491
+    },
+    {
+      "word": " dates",
+      "start": 14.66,
+      "end": 15.16,
+      "probability": 0.9866151213645935
+    },
+    {
+      "word": " and",
+      "start": 15.379999999999999,
+      "end": 15.84,
+      "probability": 0.9748731255531311
+    },
+    {
+      "word": " statuses.",
+      "start": 15.84,
+      "end": 16.5,
+      "probability": 0.9622786641120911
+    },
+    {
+      "word": " These",
+      "start": 17.46,
+      "end": 17.66,
+      "probability": 0.9634740352630615
+    },
+    {
+      "word": " new",
+      "start": 17.66,
+      "end": 17.96,
+      "probability": 0.9972087740898132
+    },
+    {
+      "word": " demo",
+      "start": 17.96,
+      "end": 18.32,
+      "probability": 0.9969568252563477
+    },
+    {
+      "word": " findings",
+      "start": 18.32,
+      "end": 18.78,
+      "probability": 0.9942680597305298
+    },
+    {
+      "word": " are",
+      "start": 18.78,
+      "end": 19.26,
+      "probability": 0.9898697733879089
+    },
+    {
+      "word": " not",
+      "start": 19.26,
+      "end": 19.58,
+      "probability": 0.9966398477554321
+    },
+    {
+      "word": " a",
+      "start": 19.58,
+      "end": 19.82,
+      "probability": 0.9888889789581299
+    },
+    {
+      "word": " later",
+      "start": 19.82,
+      "end": 20.22,
+      "probability": 0.963996410369873
+    },
+    {
+      "word": " day",
+      "start": 20.22,
+      "end": 20.52,
+      "probability": 0.8307362198829651
+    },
+    {
+      "word": " comparison.",
+      "start": 20.52,
+      "end": 21.08,
+      "probability": 0.9975664615631104
+    },
+    {
+      "word": " The",
+      "start": 22.02,
+      "end": 22.16,
+      "probability": 0.9718884229660034
+    },
+    {
+      "word": " real",
+      "start": 22.16,
+      "end": 22.42,
+      "probability": 0.9876603484153748
+    },
+    {
+      "word": " age",
+      "start": 22.42,
+      "end": 22.78,
+      "probability": 0.9835348129272461
+    },
+    {
+      "word": " is",
+      "start": 22.78,
+      "end": 22.94,
+      "probability": 0.9705802798271179
+    },
+    {
+      "word": " shown.",
+      "start": 22.94,
+      "end": 23.24,
+      "probability": 0.988262951374054
+    }
+  ]
+}

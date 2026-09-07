@@ -150,3 +150,23 @@ and pacing the explanation with the context of the problem in mind."
 - Journey close: draw ONE graph completely (displacement-time), then bring in the velocity-time graph beside it
   and read it leg by leg. Never alternate between the two graphs mid-leg.
 - Every example: "Consider a lift that..." / "Consider a ball thrown..." spoken over the bare diagram first (§8).
+
+## 13. Lay out the whole problem before working it (Durai, 2026-09-07, on Multiple Collisions collision 1)
+
+Durai: "there is something wrong about our approach where we don't speak to the scenario, lay out the details, and
+then start working through it. In the end we appear to be making up the numbers as we go. What is the story? Ball A
+is travelling at 4 m/s and weighs 1 kg, towards ball B that weighs 2 kg travelling at 3 m/s in the same direction —
+small talk — will A catch up to B? Yes, since it's travelling faster. The problem shows all the detail up front, in
+the visual and in the calculation. As it stands the initial velocity of 4 m/s only appears during the calculation and
+we go 'where did this come from?'"
+
+- Every worked example has a PROBLEM SET-UP beat before any working: the full question on screen (a plain
+  problem card, ≤ 3 short lines, the exam's wording), AND the diagram with EVERY given on it: masses, speeds,
+  directions, labels. Narrate it as a story ("Ball A, one kilogram, is rolling at four metres per second towards
+  ball B…"), with the small-talk reasoning ("will A catch B? yes, it's faster"), then a pause, then the working.
+- The givens stay visible while the working is written. Use the source's layout: BEFORE velocities above the
+  spheres, AFTER velocities below them, on the same diagram (or a before/after pair side by side). When a number
+  is substituted, it must already be on screen; if it isn't, the scene is wrong.
+- Unknowns are drawn on the diagram (v_B with a dashed arrow) before they appear in the working.
+- Results go back onto the diagram (the value replaces the unknown) so the next collision's givens are on screen.
+- Applies to lift/ball/cyclist examples too: the givens (a, t, u, g) on a problem card and on the diagram first.
