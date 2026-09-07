@@ -6,9 +6,13 @@
  * scene's duration.
  */
 
-import React from 'react';
+import React, {useMemo, useLayoutEffect, useRef, useState} from 'react';
 import {
   AbsoluteFill,
+  Artifact,
+  Freeze,
+  delayRender,
+  continueRender,
   Audio,
   interpolate,
   spring,
@@ -69,6 +73,8 @@ interface MechanicsTranscriptScene {
   text: string;
   words: TranscriptWord[];
   cues: Record<string, number>;
+  holds?: Array<{kind:string;start:number;end:number;duration:number}>;
+  figureEvents?: FigureEvent[];
 }
 
 interface MechanicsTranscript {
@@ -119,6 +125,8 @@ function spokenAt(
 function getScene(id: string): MechanicsTranscriptScene {
   const scene = TRANSCRIPT.scenes.find((candidate) => candidate.id === id);
   if (!scene) throw new Error(`Missing transcript scene: ${id}`);
+  if(!scene.figureEvents&&id==='s04')scene.figureEvents=[{id:'spoken-zero',word:'zero',start:scene.words.find(w=>normalize(w.word)==='zero')!.start,end:scene.words.find(w=>normalize(w.word)==='zero')!.end,target:'rest-zero'}];
+  if(!scene.figureEvents&&id==='s06')scene.figureEvents=[{id:'spoken-zero',word:'zero',start:scene.words.find(w=>normalize(w.word)==='zero')!.start,end:scene.words.find(w=>normalize(w.word)==='zero')!.end,target:'origin-zero'}];
   return scene;
 }
 
@@ -136,6 +144,7 @@ export function getMechanicsDisplacementTimeGraphsDuration(fps: number): number 
 
 export interface MechanicsDisplacementTimeGraphsProps {
   audioEnabled?: boolean;
+  audit?: boolean;
 }
 
 const clamp01 = (value: number): number => Math.max(0, Math.min(1, value));
@@ -212,7 +221,7 @@ const WarmCard: React.FC<{
   accent?: string;
   style?: React.CSSProperties;
 }> = ({ children, accent = T.cyan, style }) => (
-  <div
+  <div data-region="card"
     style={{
       borderRadius: 26,
       boxSizing: 'border-box',
@@ -249,9 +258,9 @@ const StepBadge: React.FC<{ scene: number; label: string }> = ({ scene, label })
     }}
   >
     <span style={{ color: T.cyan, fontWeight: 900 }}>
-      {String(scene).padStart(2, '0')} / 10
+      {''}
     </span>
-    <span>{label}</span>
+    <span>{''}</span>
   </div>
 );
 
@@ -263,7 +272,7 @@ const SceneShell: React.FC<{
   const frame = useCurrentFrame();
   const drift = Math.sin(frame / 76) * 9;
   return (
-    <AbsoluteFill
+    <AbsoluteFill data-scene={scene}
       style={{
         overflow: 'hidden',
         isolation: 'isolate',
@@ -295,9 +304,9 @@ const SceneShell: React.FC<{
           letterSpacing: 2.6,
         }}
       >
-        MECHANICS LAB
+        {''}
       </div>
-      <StepBadge scene={scene} label={label} />
+      <span />
       {children}
       <div
         style={{
@@ -330,7 +339,7 @@ const SectionTitle: React.FC<{
           textTransform: 'uppercase',
         }}
       >
-        {kicker}
+        {''}
       </div>
       <div style={{ color: T.text, fontSize: 52, fontWeight: 900, marginTop: 7 }}>
         {children}
@@ -406,9 +415,9 @@ const GraphAxes: React.FC<{
   const plotBottom = height - scale.bottom;
   const plotRight = width - scale.right;
   const zeroY = scale.y(Math.max(yMin, Math.min(yMax, 0)));
-  const tickFontSize = 28;
+  const tickFontSize = compact && height<300 ? 17 : compact ? 23 : 28;
   return (
-    <g>
+    <g data-region="graph">
       <defs>
         <clipPath id={`${id}-clip`}>
           <rect
@@ -448,9 +457,9 @@ const GraphAxes: React.FC<{
             strokeWidth={3}
             opacity={axisOpacity}
           />
-          <text
+          <text data-axis-text
             x={scale.x(tick)}
-            y={plotBottom + 34}
+            y={plotBottom + (compact ? 23 : 34)}
             fill={T.ink}
             textAnchor="middle"
             fontFamily={T.mono}
@@ -480,9 +489,9 @@ const GraphAxes: React.FC<{
             strokeWidth={3}
             opacity={axisOpacity}
           />
-          <text
+          <text data-axis-text data-figure={tick===0?(id==='s06'?'origin-zero':undefined):undefined}
             x={scale.left - 18}
-            y={scale.y(tick) + 9}
+            y={scale.y(tick) + (compact && height<300 ? tick===0?12:tick===2?3:9 :9)}
             fill={T.ink}
             textAnchor="end"
             fontFamily={T.mono}
@@ -521,30 +530,30 @@ const GraphAxes: React.FC<{
         fill={T.ink}
         opacity={axisOpacity}
       />
-      <text
+      <text data-axis-text
         x={(scale.left + plotRight) / 2}
-        y={height - 17}
+        y={height - (compact ? 7 : 17)}
         fill={cardInk(T.cyan)}
         textAnchor="middle"
         fontFamily={T.mono}
-        fontSize={28}
+        fontSize={compact?22:28}
         fontWeight={900}
         opacity={xLabelOpacity}
       >
         time, t / s
       </text>
-      <text
+      <text data-axis-text
         x={compact ? 24 : 30}
         y={(scale.top + plotBottom) / 2}
         fill={cardInk(T.cyan)}
         textAnchor="middle"
         fontFamily={T.mono}
-        fontSize={28}
+        fontSize={compact?22:28}
         fontWeight={900}
         opacity={yLabelOpacity}
         transform={`rotate(-90 ${compact ? 24 : 30} ${(scale.top + plotBottom) / 2})`}
       >
-        displacement, s / m
+        {compact ? 's / m' : 'displacement, s / m'}
       </text>
     </g>
   );
@@ -613,7 +622,7 @@ const TrackDiagram: React.FC<{
   displacementArrowOpacity = 1,
   direction = 0,
   directionOpacity = 1,
-  label = 'laboratory track / m',
+  label = 'position / m',
 }) => {
   const margin = 58;
   const lineY = 76;
@@ -624,7 +633,7 @@ const TrackDiagram: React.FC<{
   const directionStart = particleX + direction * 20;
   const directionEnd = Math.max(14, Math.min(width - 14, particleX + direction * 150));
   return (
-    <svg width={width} height={height}>
+    <svg data-region="track" width={width} height={height}>
       <rect x={1.5} y={1.5} width={width - 3} height={height - 3} rx={23} fill={`${T.panel}f2`} stroke={`${T.cyan}66`} strokeWidth={3} />
       <line x1={margin} y1={lineY} x2={width - margin} y2={lineY} stroke={T.card} strokeWidth={6} strokeLinecap="round" />
       {ticks.map((tick) => (
@@ -636,7 +645,7 @@ const TrackDiagram: React.FC<{
       {showOrigin && (
         <g opacity={originOpacity}>
           <line x1={originX} y1={lineY - 38} x2={originX} y2={lineY + 36} stroke={T.green} strokeWidth={5} />
-          <text x={originX} y={32} fill={T.green} textAnchor="middle" fontFamily={T.mono} fontSize={28} fontWeight={900}>ORIGIN</text>
+          <text x={originX} y={32} fill={T.green} textAnchor="middle" fontFamily={T.mono} fontSize={28} fontWeight={900}>Origin</text>
         </g>
       )}
       {displacementArrowPosition !== undefined && (
@@ -688,6 +697,230 @@ const sampledPath = (
 // S01 — POSITION LEAVES A TRACE
 // ─────────────────────────────────────────────────────────────────────────────
 
+// A tiny prepared single-stroke alphabet. Equations are SVG paths, never SVG text.
+type Point = readonly [number, number];
+interface Glyph { width: number; strokes: readonly (readonly Point[])[] }
+const G: Record<string, Glyph> = {
+  '0': { width: .72, strokes: [[[.16,.08],[.55,.03],[.68,.22],[.66,.78],[.52,.96],[.16,.91],[.04,.72],[.06,.25],[.16,.08]]] },
+  '1': { width: .52, strokes: [[[.08,.25],[.28,.06],[.29,.94]], [[.08,.94],[.48,.94]]] },
+  '2': { width: .7, strokes: [[[.05,.25],[.18,.06],[.53,.05],[.67,.23],[.61,.42],[.07,.91],[.67,.91]]] },
+  '3': { width: .68, strokes: [[[.05,.13],[.27,.04],[.58,.1],[.66,.28],[.56,.46],[.29,.5],[.57,.54],[.67,.74],[.56,.91],[.25,.97],[.04,.86]]] },
+  '4': { width: .72, strokes: [[[.53,.96],[.53,.04],[.04,.68],[.68,.68]]] },
+  '5': { width: .68, strokes: [[[.63,.07],[.13,.07],[.08,.48],[.47,.43],[.65,.58],[.61,.84],[.43,.96],[.14,.92],[.03,.81]]] },
+  '6': { width: .69, strokes: [[[.61,.15],[.46,.04],[.2,.1],[.06,.35],[.08,.78],[.24,.95],[.53,.91],[.66,.7],[.59,.49],[.34,.42],[.08,.54]]] },
+  '7': { width: .68, strokes: [[[.04,.08],[.66,.08],[.25,.96]]] },
+  '8': { width: .7, strokes: [[[.33,.49],[.12,.39],[.08,.18],[.23,.04],[.5,.07],[.64,.23],[.57,.43],[.33,.49],[.12,.57],[.06,.78],[.2,.94],[.49,.95],[.66,.78],[.59,.58],[.33,.49]]] },
+  '9': { width: .69, strokes: [[[.61,.48],[.36,.57],[.12,.47],[.06,.24],[.2,.06],[.5,.08],[.64,.29],[.59,.76],[.43,.95],[.15,.92]]] },
+  v: { width: .75, strokes: [[[.03,.28],[.27,.94],[.48,.55],[.69,.25]]] },
+  t: { width: .55, strokes: [[[.29,.08],[.25,.83],[.37,.95],[.51,.87]], [[.05,.34],[.52,.3]]] },
+  s: { width: .64, strokes: [[[.59,.27],[.45,.17],[.19,.2],[.08,.38],[.2,.5],[.48,.54],[.59,.69],[.51,.9],[.24,.96],[.05,.84]]] },
+  m: { width: 1.02, strokes: [[[.05,.93],[.09,.3],[.3,.19],[.44,.34],[.44,.92]], [[.44,.35],[.66,.19],[.83,.3],[.91,.93]]] },
+  h: { width: .72, strokes: [[[.08,.04],[.07,.94]], [[.08,.56],[.28,.27],[.54,.26],[.65,.43],[.63,.94]]] },
+  '=': { width: .7, strokes: [[[.08,.4],[.63,.4]], [[.06,.68],[.61,.67]]] },
+  '+': { width: .7, strokes: [[[.34,.2],[.34,.84]], [[.04,.52],[.65,.52]]] },
+  '-': { width: .65, strokes: [[[.06,.55],[.59,.53]]] },
+  '−': { width: .65, strokes: [[[.06,.55],[.59,.53]]] },
+  '×': { width: .7, strokes: [[[.08,.22],[.62,.82]], [[.61,.2],[.09,.84]]] },
+  '/': { width: .58, strokes: [[[.05,.94],[.53,.05]]] },
+  '.': { width: .3, strokes: [[[.13,.85],[.15,.88]]] },
+  '(': { width: .42, strokes: [[[.34,.04],[.16,.23],[.09,.51],[.17,.79],[.34,.96]]] },
+  ')': { width: .42, strokes: [[[.08,.04],[.27,.24],[.34,.51],[.26,.79],[.08,.96]]] },
+  '½': { width: 1.05, strokes: [[[.03,.21],[.17,.07],[.18,.46]], [[.03,.47],[.34,.47]], [[.2,.96],[.84,.04]], [[.58,.65],[.69,.53],[.9,.55],[.95,.67],[.61,.94],[.97,.94]]] },
+  '⁻': { width: .42, strokes: [[[.04,.22],[.37,.2]]] },
+  '¹': { width: .38, strokes: [[[.04,.17],[.18,.04],[.19,.43]], [[.04,.43],[.34,.43]]] },
+  '₁': { width: .38, strokes: [[[.04,.67],[.18,.53],[.19,.94]], [[.04,.94],[.34,.94]]] },
+  '₂': { width: .45, strokes: [[[.03,.66],[.13,.53],[.34,.54],[.41,.65],[.35,.76],[.04,.94],[.42,.94]]] },
+  '₃': { width: .45, strokes: [[[.03,.57],[.18,.52],[.37,.57],[.28,.72],[.4,.78],[.35,.92],[.15,.96],[.03,.9]]] },
+  "a": {width: .75, strokes: [[[0.6, 0.3], [0.3, 0.2], [0.1, 0.4], [0.1, 0.8], [0.3, 0.95], [0.6, 0.75], [0.6, 0.25], [0.6, 0.95]]]},
+  "b": {width: .75, strokes: [[[0.1, 0], [0.1, 0.95], [0.5, 0.95], [0.65, 0.7], [0.6, 0.4], [0.3, 0.3], [0.1, 0.5]]]},
+  "c": {width: .75, strokes: [[[0.6, 0.3], [0.35, 0.2], [0.1, 0.4], [0.1, 0.8], [0.35, 0.95], [0.6, 0.85]]]},
+  "d": {width: .75, strokes: [[[0.6, 0], [0.6, 0.95], [0.6, 0.3], [0.3, 0.2], [0.1, 0.4], [0.1, 0.8], [0.3, 0.95], [0.6, 0.75]]]},
+  "e": {width: .75, strokes: [[[0.1, 0.55], [0.6, 0.55], [0.55, 0.3], [0.3, 0.2], [0.1, 0.4], [0.1, 0.8], [0.3, 0.95], [0.6, 0.85]]]},
+  "f": {width: .75, strokes: [[[0.2, 0.95], [0.2, 0.2], [0.4, 0.05], [0.6, 0.1]], [[0.05, 0.4], [0.5, 0.4]]]},
+  "g": {width: .75, strokes: [[[0.6, 0.3], [0.3, 0.2], [0.1, 0.4], [0.1, 0.75], [0.3, 0.85], [0.6, 0.65], [0.6, 0.25], [0.6, 1.15], [0.3, 1.25], [0.1, 1.1]]]},
+  "i": {width: .75, strokes: [[[0.3, 0.3], [0.3, 0.95]], [[0.3, 0.1], [0.3, 0.12]]]},
+  "l": {width: .75, strokes: [[[0.2, 0], [0.2, 0.9], [0.4, 0.95]]]},
+  "n": {width: .75, strokes: [[[0.1, 0.95], [0.1, 0.25], [0.1, 0.5], [0.35, 0.25], [0.6, 0.4], [0.6, 0.95]]]},
+  "o": {width: .75, strokes: [[[0.3, 0.2], [0.1, 0.35], [0.1, 0.8], [0.3, 0.95], [0.6, 0.8], [0.6, 0.35], [0.3, 0.2]]]},
+  "p": {width: .75, strokes: [[[0.1, 1.2], [0.1, 0.25], [0.1, 0.45], [0.35, 0.25], [0.6, 0.35], [0.6, 0.7], [0.35, 0.85], [0.1, 0.7]]]},
+  "r": {width: .75, strokes: [[[0.1, 0.95], [0.1, 0.25], [0.1, 0.5], [0.35, 0.25], [0.6, 0.3]]]},
+  "u": {width: .75, strokes: [[[0.1, 0.25], [0.1, 0.8], [0.3, 0.95], [0.6, 0.75], [0.6, 0.25], [0.6, 0.95]]]},
+  "w": {width: .75, strokes: [[[0.05, 0.25], [0.2, 0.95], [0.4, 0.5], [0.6, 0.95], [0.8, 0.25]]]},
+  "y": {width: .75, strokes: [[[0.1, 0.25], [0.3, 0.8], [0.6, 0.25], [0.2, 1.2]]]},
+  "\u0394": {width: .75, strokes: [[[0.35, 0], [0.03, 0.95], [0.7, 0.95], [0.35, 0]]]},
+  ">": {width: .75, strokes: [[[0.1, 0.2], [0.6, 0.55], [0.1, 0.9]]]},
+  ":": {width: .75, strokes: [[[0.3, 0.3], [0.3, 0.32]], [[0.3, 0.8], [0.3, 0.82]]]},
+  ' ': { width: .36, strokes: [] },
+};
+
+interface PreparedStroke { d: string; length: number; points: Point[]; start: number; end: number }
+interface PreparedLine { strokes: PreparedStroke[]; width: number }
+function prepareLine(text: string, size: number): PreparedLine {
+  const raw: Array<{ d: string; length: number; points: Point[] }> = [];
+  let cursor = 0;
+  for (const character of text) {
+    const glyph = G[character];
+    if (!glyph) throw new Error(`Missing handwritten glyph: ${character}`);
+    for (const source of glyph.strokes) {
+      const points = source.map(([x, y]) => [cursor + x * size, y * size] as Point);
+      let length = 0;
+      for (let i = 1; i < points.length; i += 1) length += Math.hypot(points[i][0] - points[i - 1][0], points[i][1] - points[i - 1][1]);
+      const d = points.map(([x, y], index) => `${index === 0 ? 'M' : 'L'} ${x.toFixed(1)} ${y.toFixed(1)}`).join(' ');
+      raw.push({ d, length: Math.max(2, length), points });
+    }
+    cursor += (glyph.width + .16) * size;
+  }
+  const gap = size * .12;
+  const total = raw.reduce((sum, stroke) => sum + stroke.length + gap, 0);
+  let used = 0;
+  const strokes = raw.map((stroke) => {
+    const start = used / total;
+    const end = (used + stroke.length) / total;
+    used += stroke.length + gap;
+    return { ...stroke, start, end };
+  });
+  return { strokes, width: cursor };
+}
+
+function pointOnStroke(points: Point[], progress: number): Point {
+  const lengths = points.slice(1).map((point, index) => Math.hypot(point[0] - points[index][0], point[1] - points[index][1]));
+  const total = lengths.reduce((sum, length) => sum + length, 0);
+  let target = total * clamp01(progress);
+  for (let index = 0; index < lengths.length; index += 1) {
+    if (target <= lengths[index]) {
+      const p = target / Math.max(1, lengths[index]);
+      return [points[index][0]+(points[index+1][0]-points[index][0])*p, points[index][1]+(points[index+1][1]-points[index][1])*p];
+    }
+    target -= lengths[index];
+  }
+  return points[points.length - 1] ?? [0, 0];
+}
+
+const HandwrittenLine: React.FC<{
+  text: string;
+  frame: number;
+  start: number;
+  end: number;
+  x: number;
+  y: number;
+  size?: number;
+  color?: string;
+  panel?: string;
+}> = ({ text, frame, start, end, x, y, size = 29, color = T.ink, panel = "working" }) => {
+  if (end <= start) throw new Error(`Invalid handwriting window: ${text}`);
+  const prepared = useMemo(() => prepareLine(text, size), [text, size]);
+  // Measure the entire final stroke geometry, including stroke width, even mid-write.
+  const points = prepared.strokes.flatMap(stroke => stroke.points);
+  const extent = {left: Math.min(...points.map(p => p[0])) - 1.55, top: Math.min(...points.map(p => p[1])) - 1.55,
+    right: Math.max(...points.map(p => p[0])) + 1.55, bottom: Math.max(...points.map(p => p[1])) + 1.55};
+  const lineProgress = clamp01((frame-start)/(end-start));
+  let tip: Point | null = null;
+  return (
+    <g data-ink-text={text} data-ink-panel-id={panel} data-ink-active={frame>start ? "true" : "false"} data-ink-end={end} data-ink-stroke-ends={JSON.stringify(prepared.strokes.map(stroke => start + stroke.end * (end-start)))} data-ink-complete={frame>=end ? "true" : "false"} transform={`translate(${x} ${y})`} fill="none" strokeLinecap="round" strokeLinejoin="round">
+      <rect data-ink-extent="true" x={extent.left} y={extent.top} width={extent.right-extent.left} height={extent.bottom-extent.top} fill="none" stroke="none"/>
+      {prepared.strokes.map((stroke, index) => {
+        const strokeProgress = clamp01((lineProgress - stroke.start) / Math.max(.0001, stroke.end - stroke.start));
+        if (strokeProgress > 0 && strokeProgress < 1) tip = pointOnStroke(stroke.points, strokeProgress);
+        return <path key={index} d={stroke.d} stroke={color} strokeWidth={3.1} pathLength={1} strokeDasharray={1} strokeDashoffset={1 - strokeProgress} />;
+      })}
+      {tip && lineProgress < 1 && <g transform={`translate(${tip[0]} ${tip[1]}) rotate(-38)`}><rect x={-5} y={-34} width={10} height={35} rx={4} fill={T.amber} stroke={T.ink} strokeWidth={2} /><path d="M -5 0 L 0 10 L 5 0 Z" fill={T.ink} /></g>}
+    </g>
+  );
+};
+
+// Additive problem setups and journey, using the original plot and track language.
+const OUTCOMES=['Read position and gradient','Use a tangent on a curve','Separate distance from displacement'];
+const Figure:React.FC<{id:string;children:React.ReactNode}>=({id,children})=><span data-figure={id} style={{display:'inline-block',padding:'0 12px'}}>{children}</span>;
+const Givens:React.FC<{cyclist?:boolean;scene:MechanicsTranscriptScene;embedded?:boolean}>=({cyclist=false,scene,embedded=false})=>{
+ const frame=useCurrentFrame();const seconds=frame/30;
+ return <div data-region="story" data-givens style={{position:embedded?'relative':'absolute',left:embedded?0:1410,top:embedded?0:230,width:embedded?430:440}}>
+ <WarmCard style={{padding:22,fontSize:24,lineHeight:2.25}}>
+ <div style={{fontSize:30,fontWeight:850}}>{cyclist?'Cyclist journey':'Walker journey'}</div>
+ {cyclist?<>
+ <div><span data-phrase="acceleration">From rest: <Figure id="accel">1 m s⁻²</Figure>, <Figure id="time2">2 s</Figure></span></div>
+ <div><span data-phrase="cruise">Cruise: <Figure id="speed2">+2 m/s</Figure>, <Figure id="time3">3 s</Figure></span></div>
+ <div><span data-phrase="return">Rest <Figure id="rest2">2 s</Figure>; <Figure id="speed-2">−2 m/s</Figure>, <Figure id="time4">4 s</Figure></span></div>
+ </>:<>
+ <div><span data-phrase="start">Start <Figure id="pos2">2 m</Figure>; <Figure id="pos10">10 m</Figure> at <Figure id="time4">4 s</Figure></span></div>
+ <div><span data-phrase="rest">Rest until <Figure id="time6">6 s</Figure></span></div>
+ <div><span data-phrase="finish">Finish <Figure id="pos-6">−6 m</Figure> at <Figure id="time10">10 s</Figure></span></div>
+ </>}
+ </WarmCard>
+ {cyclist&&seconds>=cueAt(scene,'build')&&<WarmCard style={{padding:20,marginTop:22,fontSize:23,lineHeight:2.1}}>
+ <div>Leg changes on the track</div>
+ <div><Figure id="pos2">+2 m</Figure><Figure id="pos6">+6 m</Figure></div>
+ <div><Figure id="pos0">0 m</Figure><Figure id="pos-8">−8 m</Figure></div>
+ <div>Chord <Figure id="speed1">+1 m/s</Figure></div>
+ <div>{seconds<cueAt(scene,'leg3')?'Tangent':'Rest'} <Figure id="speed0">{seconds<cueAt(scene,'leg3')?'0':'0 m/s'}</Figure>{seconds<cueAt(scene,'leg3')&&<> to <Figure id="tangent2">2 m/s</Figure></>}</div>
+ </WarmCard>}
+ </div>;
+};
+const JourneyTrack:React.FC<{scene:MechanicsTranscriptScene;cyclist?:boolean;compact?:boolean;time?:number}>=({scene,cyclist=false,compact=false,time})=>{
+ const frame=useCurrentFrame();const sec=frame/30;const build=cueAt(scene,'build');
+ const refs=(scene.figureEvents??[]).map(e=>e.start);const knots=cyclist?[[0,0],[refs[0]??1,0],[refs[2]??8,2],[refs[4]??14,5],[refs[5]??17,7],[build-2,11]]:[[0,0],[refs[0]??2,0],[refs[2]??6,4],[refs[3]??9,6],[refs[5]??12,10],[build-2,10]];let storyTime=0;for(let i=0;i<knots.length-1;i++){if(sec>=knots[i][0])storyTime=knots[i][1]+(knots[i+1][1]-knots[i][1])*clamp01((sec-knots[i][0])/Math.max(.1,knots[i+1][0]-knots[i][0]));}const t=time??storyTime;
+ const pos=cyclist?(t<2?t*t/2:t<5?2+2*(t-2):t<7?8:8-2*(t-7)):(t<4?2+2*t:t<6?10:10-4*(t-6));
+ const w=compact?440:1280;const map=(s:number)=>65+(s+(cyclist?0:8))/(cyclist?10:20)*(w-130);const cy=compact?50:150;
+ return <svg data-region={compact?undefined:"track"} data-track width={w} height={compact?190:330} style={{position:'absolute',left:compact?1410:90,top:compact?820:370}}>
+ <rect width={w} height={compact?190:330} rx={25} fill={T.panel} stroke={T.cyan} strokeWidth={3}/>
+ <line x1={45} y1={cy+44} x2={w-35} y2={cy+44} stroke={T.textMuted} strokeWidth={5}/>
+ {(cyclist?[[0,'0, 11 s'],[2,'2 s'],[8,'5, 7 s']]:[[-6,'10 s'],[2,'0 s'],[10,'4, 6 s']]).map(([p,label])=><g key={String(p)}><line x1={map(Number(p))} x2={map(Number(p))} y1={cy+35} y2={cy+55} stroke={T.amber} strokeWidth={3}/><text x={map(Number(p))} y={cy+84} textAnchor="middle" fontSize={compact?19:27} fill={T.text}>{label}</text><text x={map(Number(p))} y={cy+122} textAnchor="middle" fontSize={compact?19:27} fill={T.cyan}>{p} m</text></g>)}
+ <g data-cyclist-x={pos} transform={`translate(${map(pos)} ${cy}) scale(${compact?.65:1})`} stroke={T.cyan} strokeWidth={5} fill="none" strokeLinecap="round" strokeLinejoin="round">
+ {cyclist?<><circle cx={-30} cy={20} r={21}/><circle cx={35} cy={20} r={21}/><path d="M -30 20 L -5 -14 L 14 20 Z M -5 -14 L 28 -14 L 35 20 M 14 20 L 28 -14 M -10 -35 L 12 -48 L 28 -14 M -10 -35 L 2 -4 L 14 20"/><circle cx={17} cy={-65} r={11} fill={T.card}/></>:<><circle cy={-54} r={15} fill={T.card}/><path d="M0 -37 V 5 M0 -25 L -24 -3 M0 -25 L 24 -10 M0 5 L -23 39 M0 5 L 23 39"/></>}
+ </g></svg>;
+};
+const Scene00:React.FC<{scene:MechanicsTranscriptScene}>=({scene})=><SceneShell scene={0} label="Syllabus"><SectionTitle kicker="">Displacement–time graphs</SectionTitle><div data-region="outcomes" style={{position:'absolute',left:95,top:270,width:900,color:T.text,fontSize:31,lineHeight:1.8}}><div style={{color:T.cyan}}>9709 · §4.2</div><div>“sketch and interpret displacement–time graphs<br/>and velocity–time graphs”</div><div style={{fontSize:24,marginTop:20}}>This lesson: displacement–time</div>{OUTCOMES.map(x=><div key={x} style={{fontSize:28}}>• {x}</div>)}</div><svg data-region="motif" width={670} height={470} style={{position:'absolute',left:1130,top:290}}><GraphAxes width={670} height={470} xMax={10} yMin={0} yMax={10} xTicks={[0,5,10]} yTicks={[0,5,10]} id="opening"/><path d="M112 378 L350 130 L440 130 L628 378" stroke={T.cyan} strokeWidth={9} fill="none"/></svg></SceneShell>;
+const Scene11:React.FC<{scene:MechanicsTranscriptScene}>=({scene})=>{
+ const frame=useCurrentFrame();const sec=frame/30;const at=(id:string)=>cueAt(scene,id);const draw=sec>=at('build');
+ const active=sec>=at('leg4')?3:sec>=at('leg3')?2:sec>=at('leg2')?1:0;
+ const times=[0,2,5,7,11],positions=[0,2,8,8,0],colors=[T.cyan,T.green,T.amber,T.red];
+ const answers=[1,2,3,4].map(i=>at(`answer${i}`));const resultHolds=(scene.holds??[]).filter(h=>h.kind==='hold').slice(1);
+ const progress=clamp01((sec-answers[active])/Math.max(1,(resultHolds[active]?.start??answers[active]+5)-answers[active]));
+ const time=times[active]+(times[active+1]-times[active])*progress;const value=(t:number)=>t<2?t*t/2:t<5?2+2*(t-2):t<7?8:8-2*(t-7);
+ const scale=makePlotScale(1280,500,11,0,10);const x=scale.x;const y=(s:number)=>scale.y(s)+130;
+ const lines=['Δs = 2 m   Δt = 2 s   v = +1 m/s average','Δs = 6 m   Δt = 3 s   v = +2 m/s','Δs = 0 m   Δt = 2 s   v = 0','Δs = −8 m   Δt = 4 s   v = −2 m/s'];
+ const start=answers[active]*30;const end=(resultHolds[active]?.start??answers[active]+5)*30-4;
+ return <SceneShell scene={11} label="Journey"><SectionTitle kicker="">{draw?'Complete the displacement–time graph':'Consider a cyclist'}</SectionTitle><Givens cyclist scene={scene}/>
+ <JourneyTrack scene={scene} cyclist compact={draw} time={draw?time:undefined}/>{draw&&<div style={{position:"absolute",left:1425,top:1020,color:colors[active],fontSize:sec>=at('what-if')?20:26,width:420,lineHeight:1.1,background:T.bg}}>{sec>=at('what-if')?"Slower return: less steep, arriving later":["Positive: moving away","Positive: constant motion away","Zero: stationary","Negative: returning"][active]}</div>}
+ {draw&&<svg data-region="graph" data-graph="displacement" width={1280} height={780} style={{position:'absolute',left:80,top:230}}>
+ <rect data-ink-panel="journey" x={0} y={0} width={1280} height={780} rx={25} fill={T.card} stroke={T.cyan} strokeWidth={3}/>
+ <HandwrittenLine text="gradient = displacement change / time change" panel="journey" frame={frame} start={at('formula')*30} end={at('symbol')*30-2} x={40} y={24} size={22}/>
+ <HandwrittenLine text="Δs/Δt = v" panel="journey" frame={frame} start={at('symbol')*30} end={at('leg1')*30-3} x={40} y={70} size={29}/>
+ <g transform="translate(0 130)"><GraphAxes width={1280} height={500} xMax={11} yMin={0} yMax={10} xTicks={[0,2,5,7,11]} yTicks={[0,2,8]} id="cyclist"/></g>
+ {times.slice(0,4).map((from,i)=>{const p=i<active?1:i===active?progress:0;const to=from+(times[i+1]-from)*p;return <g key={from}><path d={sampledPath({...scale,y},from,to,value,45)} stroke={colors[i]} strokeWidth={9} fill="none" strokeLinecap="round"/>{p>0&&<path d={`M${x(from)} ${y(positions[i])} H${x(to)} V${y(value(to))} Z`} fill={colors[i]} opacity={.12}/>}</g>;})}
+ {sec>=at('what-if')&&<path d={`M${x(7)} ${y(8)} L${x(11)} ${y(4)}`} stroke={T.purple} strokeWidth={5} strokeDasharray="12 9" fill="none" opacity={clamp01((sec-at('what-if'))/.7)}/>}
+ <circle cx={x(time)} cy={y(value(time))} r={11} fill={colors[active]} stroke={T.ink} strokeWidth={4}/>
+ {sec>=answers[active]&&<g><path d={`M${x(times[active])} ${y(positions[active])} H${x(times[active+1])} V${y(positions[active+1])}`} stroke={cardInk(colors[active])} strokeWidth={3} strokeDasharray="9 7" fill="none"/>
+ <HandwrittenLine text="Δt" panel="journey" frame={frame} start={start} end={start+22} x={(x(times[active])+x(times[active+1]))/2-14} y={y(positions[active])+14} size={21}/>
+ {active!==2&&<HandwrittenLine text="Δs" panel="journey" frame={frame} start={start+22} end={start+44} x={x(times[active+1])-42} y={(y(positions[active])+y(positions[active+1]))/2-20} size={21}/>}
+ </g>}
+ {active===0&&sec>=at('tangent')&&<g><line x1={x(Math.max(0,time-.6))} y1={y(Math.max(0,value(time)-time*.6))} x2={x(time+.7)} y2={y(value(time)+time*.7)} stroke={T.amber} strokeWidth={4}/></g>}
+ <rect data-ink-panel="leg-notes" x={24} y={647} width={1232} height={110} rx={12} fill="#f8efd8"/>
+ <line x1={40} y1={709} x2={1240} y2={709} stroke="#b9c9cd"/>
+ <g data-substitution={['pos2,time2','pos6,time3','pos0,rest2','pos-8,time4'][active]} data-start={(start+45)/30} data-end={end/30}><HandwrittenLine panel="leg-notes" text={lines[active]} frame={frame} start={start+45} end={end} x={45} y={673} size={26}/></g>
+ </svg>}
+ </SceneShell>;
+};
+function figureBounds(el:Element):DOMRect { if(el instanceof SVGElement)return el.getBoundingClientRect(); const range=document.createRange();range.selectNodeContents(el);return range.getBoundingClientRect();}
+type FigureEvent={id:string;word:string;start:number;end:number;target:string};
+function FigureAccents({scene,rootRef}:{scene:MechanicsTranscriptScene;rootRef:React.RefObject<HTMLDivElement|null>}){
+ const frame=useCurrentFrame();const [underlines,setUnderlines]=useState<Array<{x:number;y:number;width:number;start:number;id:string}>>([]);const [rings,setRings]=useState<Array<{event:FigureEvent;x:number;y:number;width:number;height:number;text:string}>>([]);
+ const seconds=frame/30;
+ useLayoutEffect(()=>{const root=rootRef.current;if(!root)return;
+ const selected=new Map<string,FigureEvent>();
+ for(const event of scene.figureEvents??[])if(seconds>=event.start&&seconds<event.start+2.2)selected.set(event.target,event);
+ // The source figures stay ringed while a handwritten numerical substitution is drawn.
+ for(const ink of Array.from(root.querySelectorAll('[data-substitution]'))){const a=Number(ink.getAttribute('data-start')),b=Number(ink.getAttribute('data-end'));if(seconds<a||seconds>b)continue;for(const target of (ink.getAttribute('data-substitution')??'').split(','))selected.set(target,{id:`substitution-${target}`,word:'substitution',target,start:a,end:b});}
+ const bounds=root.getBoundingClientRect();const factor=bounds.width/1920;
+ const phrases=new Map<string,{x:number;y:number;width:number;start:number;id:string}>();
+ const phrasePlan=scene.id==='s11'?[['acceleration',spokenAt(scene,'From rest')],['cruise',spokenAt(scene,'Cruise')],['return',spokenAt(scene,'Rest',2)]]:scene.id==='s07'?[['start',cueAt(scene,'setup')],['rest',spokenAt(scene,'rest until')],['finish',spokenAt(scene,'Finish')]]:[];
+ for(let i=0;i<phrasePlan.length;i++){const [id,begin]=phrasePlan[i];const end=Number(phrasePlan[i+1]?.[1]??cueAt(scene,'build'));if(seconds<Number(begin)||seconds>=end)continue;const el=root.querySelector(`[data-phrase="${id}"]`);if(!el)continue;const r=el.getBoundingClientRect();phrases.set(String(id),{id:String(id),x:(r.left-bounds.left)/factor,y:(r.bottom-bounds.top)/factor+1,width:r.width/factor,start:Number(begin)});}
+
+ for(const event of selected.values()){const el=root.querySelector(`[data-figure="${event.target}"]`)?.closest('[data-phrase]');if(!el||seconds>=cueAt(scene,'build'))continue;const r=el.getBoundingClientRect();const id=el.getAttribute('data-phrase')!;if(!phrases.has(id))phrases.set(id,{id,x:(r.left-bounds.left)/factor,y:(r.bottom-bounds.top)/factor+1,width:r.width/factor,start:event.start});}
+ setUnderlines([...phrases.values()]);
+ setRings([...selected.values()].flatMap(event=>{const target=Array.from(root.querySelectorAll(`[data-figure="${event.target}"]`)).find(el=>{let n:Element|null=el;while(n&&n!==root){if(Number(getComputedStyle(n).opacity)<.01)return false;n=n.parentElement;}return el.getBoundingClientRect().width>0;});if(!target)return [];const r=figureBounds(target);return [{event,x:(r.left-bounds.left)/factor-10,y:(r.top-bounds.top)/factor-8,width:r.width/factor+20,height:r.height/factor+16,text:target.textContent??''}];}));
+ },[frame,scene,rootRef,seconds]);
+ return <svg data-accents width={1920} height={1080} style={{position:'absolute',inset:0,pointerEvents:'none'}}>{underlines.map(u=><path key={u.id} data-underline={u.id} d={`M${u.x} ${u.y} Q${u.x+u.width/2} ${u.y+4} ${u.x+u.width} ${u.y}`} stroke={T.amber} strokeWidth={3} pathLength={1} strokeDasharray={1} strokeDashoffset={1-Math.max(.04,clamp01((seconds-u.start)/.5))} fill="none"/>)}{rings.map(({event,x,y,width,height,text})=>{const p=Math.max(.04,clamp01((seconds-event.start)/.4));const opacity=event.word==='substitution'?1:clamp01((event.start+2.2-seconds)/.35);const d=Array.from({length:81},(_,i)=>{const a=i/80*Math.PI*2;return `${i?'L':'M'} ${x+width/2+Math.cos(a)*width/2*(1+.015*Math.sin(3*a))} ${y+height/2+Math.sin(a)*height/2*(1+.025*Math.cos(5*a))}`;}).join(' ');return <path data-ring={event.id} data-ring-target={event.target} data-ring-text={text} data-progress={p} key={event.target} d={d} pathLength={1} strokeDasharray={1} strokeDashoffset={1-p} stroke={T.amber} strokeWidth={3} fill="none" opacity={opacity}/>;})}</svg>;
+}
 const Scene01: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
   const recordAt = cueAt(scene, 'record');
   const particleAt = cueAt(scene, 'particle');
@@ -787,7 +1020,7 @@ const Scene01: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
           letterSpacing: 2,
         }}
       >
-        POSITION RECORD
+        Position
       </Cued>
       <Cued
         at={originAt}
@@ -1090,7 +1323,7 @@ const Scene03: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
       <div style={{ position: 'absolute', left: 1395, top: 292, width: 430 }}>
         <WarmCard accent={steepActive ? T.green : negativeActive ? T.amber : T.cyan} style={{ padding: '30px 32px', minHeight: 355 }}>
           <div style={{ color: cardInk(steepActive ? T.green : negativeActive ? T.amber : T.cyan), fontFamily: T.mono, fontSize: 28, fontWeight: 950, letterSpacing: 2 }}>
-            INCLINOMETER
+            velocity = gradient
           </div>
           <div style={{ marginTop: 30, opacity: gradientReveal.opacity }}>
             <MathTeX tex={'v=\\frac{\\Delta s}{\\Delta t}'} color={T.ink} fontSize={48} />
@@ -1133,8 +1366,8 @@ const MotionSampleCard: React.FC<{
   endAt: number;
   accent: string;
 }> = ({ title, subtitle, mode, at, readoutAt, endAt, accent }) => {
-  const reveal = useCue(at, 0.4);
-  const readout = useCue(readoutAt, 0.35);
+  const reveal = useCue(mode === 'constant' ? -1 : at-2/30, 0.4);
+  const readout = useCue(readoutAt-2/30, 0.35);
   const progress = useProgress(at, endAt);
   const graphWidth = 498;
   const graphHeight = 350;
@@ -1220,7 +1453,7 @@ const MotionSampleCard: React.FC<{
             opacity: readout.opacity,
           }}
         >
-          v = {velocity.toFixed(1)} m/s
+          v = <span style={{marginLeft:12}} data-figure={mode==='rest'?'rest-zero':undefined}>{velocity.toFixed(1)} m/s</span>
         </div>
       </WarmCard>
     </div>
@@ -1430,8 +1663,8 @@ const Scene05: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
 
       <div style={{ position: 'absolute', left: 1440, top: 275, width: 400 }}>
         <WarmCard accent={T.amber} style={{ padding: '30px 28px', minHeight: 470 }}>
-          <div style={{ color: cardInk(T.amber), fontFamily: T.mono, fontSize: 28, fontWeight: 950, letterSpacing: 2 }}>
-            LIVE TANGENT
+          <div style={{ color: cardInk(T.amber), fontFamily: T.mono, fontSize: 23, fontWeight: 850, letterSpacing: 0 }}>
+            velocity = tangent gradient
           </div>
           <div style={{ marginTop: 26, opacity: pointReveal.opacity }}>
             <div style={{ color: T.ink, fontFamily: T.mono, fontSize: 28, fontWeight: 850 }}>instant</div>
@@ -1471,7 +1704,7 @@ const Scene05: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
 };
 
 // ─────────────────────────────────────────────────────────────────────────────
-// S06 — CROSSING THE ORIGIN
+// S06 — CROSSING THE Origin
 // ─────────────────────────────────────────────────────────────────────────────
 
 const Scene06: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
@@ -1600,7 +1833,7 @@ const Scene06: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
         </WarmCard>
         <div style={{ marginTop: 28, opacity: distanceReveal.opacity }}>
           <WarmCard accent={T.green} style={{ padding: '26px 30px', height: 218 }}>
-            <div style={{ color: cardInk(T.green), fontFamily: T.mono, fontSize: 28, fontWeight: 950, letterSpacing: 2 }}>DISTANCE ODOMETER</div>
+            <div style={{ color: cardInk(T.green), fontFamily: T.mono, fontSize: 28, fontWeight: 950, letterSpacing: 2 }}>DISTANCE Distance</div>
             <div style={{ color: T.ink, fontFamily: T.mono, fontSize: 52, fontWeight: 950, marginTop: 23, textAlign: 'center' }}>
               {distance.toFixed(1)} m
             </div>
@@ -1629,12 +1862,12 @@ const Scene07: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
   const startReveal = useCue(twoAt, 0.32);
   const tenReveal = useCue(tenAt, 0.32);
   const fourReveal = useCue(fourAt, 0.32);
-  const firstVelocityReveal = useCue(twoPerSecondAt, 0.32);
+  const firstVelocityReveal = useCue(twoPerSecondAt - 2/30, 0.32);
   const restsReveal = useCue(restsAt, 0.32);
   const sixReveal = useCue(sixAt, 0.32);
   const minusSixReveal = useCue(minusSixAt, 0.32);
   const tenSecondsReveal = useCue(tenSecondsAt, 0.32);
-  const finalVelocityReveal = useCue(minusFourAt, 0.32);
+  const finalVelocityReveal = useCue(minusFourAt - 2/30, 0.32);
   const firstLeg = useProgress(twoAt, fourAt);
   const restLeg = useProgress(restsAt, sixAt);
   const finalLeg = useProgress(sixAt, tenSecondsAt);
@@ -1649,6 +1882,8 @@ const Scene07: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
   const graphLeft = 70;
   const graphTop = 220;
   const scale = makePlotScale(graphWidth, graphHeight, 10, -8, 12);
+
+  if(frame < cueAt(scene,'build')*fps)return <SceneShell scene={7} label="Walker"><SectionTitle kicker="">Consider a walker</SectionTitle><Givens scene={scene}/><JourneyTrack scene={scene}/><svg data-region="formula" width={1280} height={190} style={{position:'absolute',left:90,top:760}}><rect data-ink-panel="setup" width={1280} height={190} rx={25} fill={T.card}/><HandwrittenLine panel="setup" text="gradient = displacement change / time change" frame={frame} start={cueAt(scene,'formula')*30} end={cueAt(scene,'symbol')*30-2} x={35} y={30} size={24}/><HandwrittenLine panel="setup" text="v = Δs/Δt" frame={frame} start={cueAt(scene,'symbol')*30} end={(scene.holds?.[1].start??cueAt(scene,'build'))*30-4} x={35} y={92} size={31}/></svg></SceneShell>;
 
   return (
     <SceneShell scene={7} label="worked journey">
@@ -1740,7 +1975,7 @@ const Scene07: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
 
         <g opacity={firstVelocityReveal.opacity}>
           <rect x={scale.x(1.3)} y={scale.y(7.3) - 60} width={218} height={48} rx={12} fill={T.cyan} />
-          <text x={scale.x(1.3) + 109} y={scale.y(7.3) - 26} fill={T.ink} textAnchor="middle" fontFamily={T.mono} fontSize={28} fontWeight={950}>v = +2 m/s</text>
+          <text data-figure="speed2" x={scale.x(1.3) + 109} y={scale.y(7.3) - 26} fill={T.ink} textAnchor="middle" fontFamily={T.mono} fontSize={28} fontWeight={950}>v = +2 m/s</text>
         </g>
         <g opacity={restsReveal.opacity}>
           <rect x={scale.x(4.25)} y={scale.y(10) + 18} width={180} height={48} rx={12} fill={T.amber} />
@@ -1748,7 +1983,7 @@ const Scene07: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
         </g>
         <g opacity={finalVelocityReveal.opacity}>
           <rect x={scale.x(7.25)} y={scale.y(10) + 18} width={230} height={48} rx={12} fill={T.red} />
-          <text x={scale.x(7.25) + 115} y={scale.y(10) + 52} fill={T.card} textAnchor="middle" fontFamily={T.mono} fontSize={28} fontWeight={950}>v = −4 m/s</text>
+          <text data-figure="speed-4" x={scale.x(7.25) + 115} y={scale.y(10) + 52} fill={T.card} textAnchor="middle" fontFamily={T.mono} fontSize={28} fontWeight={950}>v = −4 m/s</text>
         </g>
       </svg>
 
@@ -1775,20 +2010,20 @@ const Scene07: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
         />
       </div>
 
-      <div style={{ position: 'absolute', left: 1420, top: 300, width: 430, opacity: startReveal.opacity }}>
-        <WarmCard accent={returning ? T.red : resting ? T.amber : T.cyan} style={{ padding: '29px 28px', height: 300 }}>
-          <div style={{ color: cardInk(returning ? T.red : resting ? T.amber : T.cyan), fontFamily: T.mono, fontSize: 28, fontWeight: 950, letterSpacing: 2 }}>LIVE POSITION</div>
-          <div style={{ color: T.ink, fontFamily: T.mono, fontSize: 58, fontWeight: 950, textAlign: 'center', marginTop: 38 }}>
+      <div data-region="story-working" style={{ position: 'absolute', left: 1420, top: 230, width: 430, opacity: 1 }}><Givens scene={scene} embedded/><div style={{height:20}}/>
+        <WarmCard accent={returning ? T.red : resting ? T.amber : T.cyan} style={{ padding: '29px 28px', height: 225 }}>
+          <div style={{ color: cardInk(returning ? T.red : resting ? T.amber : T.cyan), fontFamily: T.mono, fontSize: 28, fontWeight: 950, letterSpacing: 2 }}>Position</div>
+          <div style={{ color: T.ink, fontFamily: T.mono, fontSize: 48, fontWeight: 950, textAlign: 'center', marginTop: 12 }}>
             {position < 0 ? '−' : ''}{Math.abs(position).toFixed(1)} m
           </div>
-          <div style={{ color: T.ink, fontSize: 28, fontWeight: 800, textAlign: 'center', marginTop: 22 }}>
+          <div style={{ color: T.ink, fontSize: 28, fontWeight: 800, textAlign: 'center', marginTop: 12 }}>
             {returning ? 'moving negative ←' : resting ? 'at rest' : 'moving positive →'}
           </div>
         </WarmCard>
-        <div style={{ marginTop: 30, opacity: finalVelocityReveal.opacity }}>
+        <div style={{ marginTop: 30, opacity: 1 }}>
           <WarmCard accent={T.green} style={{ padding: '25px 28px', height: 190 }}>
-            <div style={{ color: cardInk(T.green), fontFamily: T.mono, fontSize: 28, fontWeight: 950 }}>CHECK THE LAST SLOPE</div>
-            <MathTeX tex={'v=\\frac{-6-10}{10-6}=-4\\,\\mathrm{m/s}'} color={T.ink} fontSize={32} style={{ marginTop: 24 }} />
+            <div style={{color:T.ink,fontSize:22}}>velocity = gradient</div><div style={{color:T.ink,fontSize:26,marginTop:8}}>v = Δs/Δt</div>
+            <svg width={370} height={55} style={{marginTop:8}}><rect data-ink-panel="last-slope" width={370} height={55} fill="none"/><g data-substitution="pos-6,pos10,time10,time6" data-start={minusSixAt} data-end={minusFourAt+1}><HandwrittenLine panel="last-slope" text="v = (−6−10)/(10−6) = −4" frame={frame} start={minusSixAt*30} end={(scene.holds?.at(-1)?.start??minusFourAt+1)*30-4} x={4} y={8} size={17}/></g></svg>
           </WarmCard>
         </div>
       </div>
@@ -1803,18 +2038,18 @@ const Scene07: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
 const Scene08: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
   const finishAt = cueAt(scene, 'finish');
   const minusEightAt = cueAt(scene, 'minus-eight');
-  const distanceAt = spokenAt(scene, 'Distance');
+  const distanceAt = cueAt(scene, 'distance-formula');
   const everyLegAt = cueAt(scene, 'every-leg');
   const eightAt = cueAt(scene, 'eight-metres-out');
   const sixteenAt = cueAt(scene, 'sixteen-metres-back');
   const twentyFourAt = cueAt(scene, 'twenty-four');
   const finish = useCue(finishAt, 0.38);
-  const minusEight = useCue(minusEightAt, 0.34);
+  const minusEight = useCue(minusEightAt - 2/30, 0.34);
   const distance = useCue(distanceAt, 0.34);
   const everyLeg = useCue(everyLegAt, 0.38);
-  const eight = useCue(eightAt, 0.34);
-  const sixteen = useCue(sixteenAt, 0.34);
-  const twentyFour = useCue(twentyFourAt, 0.34);
+  const eight = useCue(eightAt - 2/30, 0.34);
+  const sixteen = useCue(sixteenAt - 2/30, 0.34);
+  const twentyFour = useCue(twentyFourAt - 2/30, 0.34);
   const graphPulseIn = useSpringAt(everyLegAt, 14);
   const graphPulseOut = useProgress(everyLegAt + 0.42, everyLegAt + 0.78);
   const graphPulse = graphPulseIn * (1 - graphPulseOut);
@@ -1863,9 +2098,9 @@ const Scene08: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
       </svg>
 
       <div style={{ position: 'absolute', left: 108, top: 505, opacity: finish.opacity }}>
-        <WarmCard accent={T.amber} style={{ width: 770, height: 405, padding: '26px 30px' }}>
-          <div style={{ color: cardInk(T.amber), fontFamily: T.mono, fontSize: 28, fontWeight: 950, letterSpacing: 2 }}>DISPLACEMENT • ENDPOINT CHANGE</div>
-          <svg width={trackWidth} height={158} style={{ marginTop: 15 }}>
+        <WarmCard accent={T.amber} style={{ width: 770, height: 425, padding: '26px 30px' }}>
+          <div style={{ color: cardInk(T.amber), fontFamily: T.mono, fontSize: 23, fontWeight: 850, letterSpacing: 0 }}>displacement = finish − start</div>
+          <div style={{fontSize:23,marginTop:5}}>Δs = s final − s initial</div><svg width={trackWidth} height={140} style={{ marginTop: 0 }}>
             <line x1={50} y1={80} x2={trackWidth - 50} y2={80} stroke={T.ink} strokeWidth={5} strokeLinecap="round" />
             {[-8, -4, 0, 4, 8, 12].map((tick) => (
               <g key={tick}>
@@ -1876,9 +2111,9 @@ const Scene08: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
             <AttachedArrow x1={trackMap(2)} x2={trackMap(-6)} y={48} color={T.amber} opacity={finish.opacity} />
             <circle cx={trackMap(2)} cy={80} r={15} fill={T.cyan} stroke={T.ink} strokeWidth={4} />
             <circle cx={trackMap(-6)} cy={80} r={15} fill={T.red} stroke={T.ink} strokeWidth={4} />
-            <text x={trackMap(2)} y={35} fill={cardInk(T.cyan)} textAnchor="middle" fontFamily={T.mono} fontSize={28} fontWeight={900}>START</text>
-            <text x={trackMap(-6)} y={35} fill={cardInk(T.red)} textAnchor="middle" fontFamily={T.mono} fontSize={28} fontWeight={900}>FINISH</text>
-          </svg>
+            <text data-figure="start2" x={trackMap(2)} y={35} fill={cardInk(T.cyan)} textAnchor="middle" fontFamily={T.mono} fontSize={28} fontWeight={900}>start: 2 m</text>
+            <text data-figure="finish-6" x={trackMap(-6)} y={35} fill={cardInk(T.red)} textAnchor="middle" fontFamily={T.mono} fontSize={28} fontWeight={900}>finish: −6 m</text>
+          <text data-figure="pos-8" x={450} y={60} fontSize={26} fill={T.ink} opacity={minusEight.opacity}>Δs = −8 m</text></svg>
           <div
             style={{
               borderRadius: 17,
@@ -1889,10 +2124,10 @@ const Scene08: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
               fontFamily: T.mono,
               fontSize: 35,
               fontWeight: 950,
-              opacity: minusEight.opacity,
+              opacity: 1,
             }}
           >
-            −6 − 2 = −8 m
+<svg width={650} height={48}><rect data-ink-panel="displacement-total" width={650} height={48} fill="none"/><g data-substitution="start2,finish-6" data-start={finishAt+1} data-end={minusEightAt+1}><HandwrittenLine panel="displacement-total" text="−6 − 2 = −8 m" frame={useCurrentFrame()} start={(cueAt(scene,'symbol')+1)*30} end={(scene.holds?.[0].start??minusEightAt+1)*30-3} x={130} y={4} size={28}/></g></svg>
           </div>
           <div style={{ color: T.ink, fontSize: 28, fontWeight: 750, textAlign: 'center', marginTop: 11, opacity: minusEight.opacity }}>
             signed • may be negative
@@ -1901,16 +2136,16 @@ const Scene08: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
       </div>
 
       <div style={{ position: 'absolute', left: 1042, top: 505, opacity: distance.opacity }}>
-        <WarmCard accent={T.cyan} style={{ width: 770, height: 405, padding: '26px 30px' }}>
-          <div style={{ color: cardInk(T.cyan), fontFamily: T.mono, fontSize: 28, fontWeight: 950, letterSpacing: 2 }}>DISTANCE • EVERY LEG</div>
-          <div style={{ display: 'flex', gap: 18, marginTop: 25 }}>
-            <div style={{ flex: 1, height: 90, borderRadius: 16, background: `${T.cyan}1f`, padding: '14px 18px', opacity: eight.opacity }}>
+        <WarmCard accent={T.cyan} style={{ width: 770, height: 425, padding: '26px 30px' }}>
+          <div style={{ color: cardInk(T.cyan), fontFamily: T.mono, fontSize: 23, fontWeight: 850, letterSpacing: 0 }}>distance = sum of absolute changes</div>
+          <div style={{fontSize:23,marginTop:5}}>D = Σ|Δs|</div><div style={{ display: 'flex', gap: 18, marginTop: 6 }}>
+            <div style={{ flex: 1, height: 90, borderRadius: 16, background: `${T.cyan}1f`, padding: '14px 18px', opacity: distance.opacity }}>
               <div style={{ color: cardInk(T.cyan), fontFamily: T.mono, fontSize: 28, fontWeight: 900 }}>OUT</div>
-              <div style={{ color: T.ink, fontFamily: T.mono, fontSize: 34, fontWeight: 950, marginTop: 3 }}>+8 m</div>
+              <div style={{ color: T.ink, fontFamily: T.mono, fontSize: 34, fontWeight: 950, marginTop: 15 }}><span data-figure="pos8">+8 m</span></div>
             </div>
-            <div style={{ flex: 1, height: 90, borderRadius: 16, background: `${T.red}1f`, padding: '14px 18px', opacity: sixteen.opacity }}>
+            <div style={{ flex: 1, height: 90, borderRadius: 16, background: `${T.red}1f`, padding: '14px 18px', opacity: distance.opacity }}>
               <div style={{ color: cardInk(T.red), fontFamily: T.mono, fontSize: 28, fontWeight: 900 }}>BACK</div>
-              <div style={{ color: T.ink, fontFamily: T.mono, fontSize: 34, fontWeight: 950, marginTop: 3 }}>+16 m</div>
+              <div style={{ color: T.ink, fontFamily: T.mono, fontSize: 34, fontWeight: 950, marginTop: 15 }}><span data-figure="pos16">+16 m</span></div>
             </div>
           </div>
           <div
@@ -1923,13 +2158,13 @@ const Scene08: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
               textAlign: 'center',
             }}
           >
-            <div style={{ color: T.ink, fontFamily: T.mono, fontSize: 28, fontWeight: 850 }}>ODOMETER</div>
-            <div style={{ color: T.ink, fontFamily: T.mono, fontSize: 56, fontWeight: 950, marginTop: 4 }}>
-              {odometerValue.toFixed(1)} m
+            <div style={{ color: T.ink, fontFamily: T.mono, fontSize: 28, fontWeight: 850 }}>Distance</div>
+            <div style={{ color: T.ink, fontFamily: T.mono, fontSize: 56, fontWeight: 950, marginTop: 16 }}>
+              <span data-figure="pos24">{odometerValue.toFixed(1)} m</span>
             </div>
           </div>
-          <div style={{ color: T.ink, fontSize: 28, fontWeight: 800, textAlign: 'center', marginTop: 10, opacity: twentyFour.opacity }}>
-            8 + 16 = 24 m total
+          <div style={{ color: T.ink, fontSize: 28, fontWeight: 800, textAlign: 'center', marginTop: 10, opacity: 1 }}>
+<svg width={650} height={45}><rect data-ink-panel="distance-total" width={650} height={45} fill="none"/><g data-substitution="pos8,pos16" data-start={eightAt} data-end={twentyFourAt+1}><HandwrittenLine panel="distance-total" text="8 + 16 = 24 m" frame={useCurrentFrame()} start={eightAt*30} end={(scene.holds?.[1].start??twentyFourAt+1)*30-3} x={150} y={3} size={28}/></g></svg>
           </div>
         </WarmCard>
       </div>
@@ -1951,9 +2186,9 @@ const Scene09: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
   const totalDistanceAt = spokenAt(scene, 'total distance');
   const clock = useCue(tenAt, 0.4);
   const velocity = useCue(velocityAt, 0.38);
-  const velocityResult = useCue(minusPointEightAt, 0.34);
+  const velocityResult = useCue(minusPointEightAt - 2/30, 0.34);
   const speed = useCue(speedAt, 0.38);
-  const speedResult = useCue(twoPointFourAt, 0.34);
+  const speedResult = useCue(twoPointFourAt - 2/30, 0.34);
   const totalDistance = useCue(totalDistanceAt, 0.34);
   const directionReveal = useCue(directionAt, 0.3);
   const directionPulseIn = useSpringAt(directionAt, 14);
@@ -1962,7 +2197,7 @@ const Scene09: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
 
   return (
     <SceneShell scene={9} label="average rates">
-      <SectionTitle kicker="one clock, two numerators" at={tenAt}>
+      <SectionTitle kicker="one clock, two numerators">
         Average velocity and average speed
       </SectionTitle>
 
@@ -1974,16 +2209,16 @@ const Scene09: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
       <div style={{ position: 'absolute', left: 95, top: 278, opacity: velocity.opacity }}>
         <WarmCard accent={T.amber} style={{ width: 650, height: 590, padding: '30px 30px' }}>
           <div style={{ color: cardInk(T.amber), fontFamily: T.mono, fontSize: 29, fontWeight: 950, letterSpacing: 2 }}>AVERAGE VELOCITY</div>
-          <div style={{ color: T.ink, fontSize: 28, fontWeight: 750, marginTop: 10 }}>endpoint change ÷ total time</div>
+          <div style={{ color: T.ink, fontSize: 28, fontWeight: 750, marginTop: 10 }}>average velocity = displacement ÷ time</div><svg width={580} height={65}><line x1={490} y1={24} x2={85} y2={24} stroke={T.amber} strokeWidth={5}/><path d="M85 24 L105 14 V34 Z" fill={T.amber}/><text data-figure="pos-8" x={290} y={59} textAnchor="middle" fill={T.ink} fontSize={24}>Δs = −8 m</text></svg>
           <MathTeX
-            tex={'\\bar v=\\frac{\\Delta s}{\\Delta t}=\\frac{-8\\,\\mathrm m}{10\\,\\mathrm s}'}
+            tex={'\\bar v=\\frac{\\Delta s}{\\Delta t}'}
             color={T.ink}
             fontSize={43}
-            style={{ marginTop: 55 }}
-          />
-          <svg width={586} height={118} style={{ marginTop: 40, overflow: 'visible' }}>
+            style={{ marginTop: 8 }}
+          /><svg width={580} height={50}><rect data-ink-panel="average-velocity" width={580} height={50} fill="none"/><g data-substitution="pos-8,time10" data-start={tenAt} data-end={scene.holds?.[0].start??minusPointEightAt+1}><HandwrittenLine panel="average-velocity" text="v = −8/10 = −0.8 m/s" frame={useCurrentFrame()} start={tenAt*30} end={(scene.holds?.[0].start??minusPointEightAt+1)*30-4} x={55} y={6} size={25}/></g></svg>
+          <svg width={586} height={118} style={{ marginTop: 5, overflow: 'visible' }}>
             <rect x={96} y={10} width={452} height={94} rx={18} fill={`${T.amber}22`} stroke={T.amber} strokeWidth={3} opacity={velocityResult.opacity} />
-            <text x={322} y={71} fill={T.ink} textAnchor="middle" fontFamily={T.mono} fontSize={41} fontWeight={950} opacity={velocityResult.opacity}>
+            <text data-figure="speed-0.8" x={322} y={71} fill={T.ink} textAnchor="middle" fontFamily={T.mono} fontSize={41} fontWeight={950} opacity={velocityResult.opacity}>
               −0.8 m/s
             </text>
             <g>
@@ -2024,11 +2259,11 @@ const Scene09: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
           top: 390,
           width: 300,
           height: 300,
-          opacity: clock.opacity,
-          transform: `scale(${0.84 + clock.opacity * 0.16})`,
+          opacity: 1,
+          transform: `scale(1)`,
         }}
       >
-        <svg width={300} height={300}>
+        <svg data-region="clock" width={300} height={300}>
           <circle cx={150} cy={150} r={126} fill={T.panel} stroke={T.cyan} strokeWidth={8} style={{ filter: `drop-shadow(0 0 17px ${T.cyan}77)` }} />
           {Array.from({ length: 10 }, (_, index) => {
             const angle = index / 10 * Math.PI * 2 - Math.PI / 2;
@@ -2046,27 +2281,27 @@ const Scene09: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
           })}
           <line x1={150} y1={150} x2={150} y2={58} stroke={T.amber} strokeWidth={7} strokeLinecap="round" />
           <circle cx={150} cy={150} r={12} fill={T.card} />
-          <text x={150} y={191} fill={T.card} textAnchor="middle" fontFamily={T.mono} fontSize={50} fontWeight={950}>10 s</text>
-          <text x={150} y={232} fill={T.textMuted} textAnchor="middle" fontFamily={T.mono} fontSize={28}>SAME TIME</text>
+          <text data-figure="time10" x={150} y={191} fill={T.card} textAnchor="middle" fontFamily={T.mono} fontSize={50} fontWeight={950}>10 s</text>
+          <text x={150} y={245} fill={T.textMuted} textAnchor="middle" fontFamily={T.mono} fontSize={28}>Total time</text>
         </svg>
       </div>
 
       <div style={{ position: 'absolute', left: 1175, top: 278, opacity: speed.opacity }}>
         <WarmCard accent={T.cyan} style={{ width: 650, height: 590, padding: '30px 30px' }}>
           <div style={{ color: cardInk(T.cyan), fontFamily: T.mono, fontSize: 29, fontWeight: 950, letterSpacing: 2 }}>AVERAGE SPEED</div>
-          <div style={{ color: T.ink, fontSize: 28, fontWeight: 750, marginTop: 10 }}>total distance ÷ total time</div>
+          <div style={{ color: T.ink, fontSize: 28, fontWeight: 750, marginTop: 10 }}>average speed = distance ÷ time</div><svg width={580} height={65}><path d="M85 15 H490 V32 H85" stroke={T.cyan} strokeWidth={4} fill="none"/><text data-figure="pos24" x={290} y={61} textAnchor="middle" fill={T.ink} fontSize={24}>D = 8 + 16 = 24 m</text></svg>
           <MathTeX
-            tex={'\\text{average speed}=\\frac{24\\,\\mathrm m}{10\\,\\mathrm s}'}
+            tex={'\\text{average speed}=D/\\Delta t'}
             color={T.ink}
             fontSize={40}
-            style={{ marginTop: 55 }}
-          />
+            style={{ marginTop: 8 }}
+          /><svg width={580} height={50}><rect data-ink-panel="average-speed" width={580} height={50} fill="none"/><g data-substitution="pos24,time10" data-start={cueAt(scene,'speed-symbol')} data-end={scene.holds?.[1].start??twoPointFourAt+1}><HandwrittenLine panel="average-speed" text="24/10 = 2.4 m/s" frame={useCurrentFrame()} start={cueAt(scene,'speed-symbol')*30} end={(scene.holds?.[1].start??twoPointFourAt+1)*30-4} x={100} y={6} size={25}/></g></svg>
           <div
             style={{
               width: 452,
               height: 94,
               boxSizing: 'border-box',
-              margin: '43px auto 0',
+              margin: '5px auto 0',
               borderRadius: 18,
               border: `3px solid ${T.cyan}`,
               background: `${T.cyan}22`,
@@ -2079,11 +2314,11 @@ const Scene09: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
               opacity: speedResult.opacity,
             }}
           >
-            2.4 m/s
+            <span data-figure="speed2.4">2.4 m/s</span>
           </div>
           <div
             style={{
-              marginTop: 45,
+              marginTop: 18,
               borderRadius: 15,
               background: `${T.cyan}18`,
               color: T.ink,
@@ -2135,7 +2370,7 @@ const RecapTile: React.FC<{
 };
 
 const Scene10: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
-  const graphAt = spokenAt(scene, 'displacement time graph');
+  const graphAt = -1;
   const gradientAt = cueAt(scene, 'gradient');
   const tangentAt = cueAt(scene, 'tangent');
   const distanceAt = cueAt(scene, 'distance');
@@ -2158,8 +2393,8 @@ const Scene10: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
 
   if (separate.isActive) {
     return (
-      <SceneShell scene={10} label="recap">
-        <SectionTitle kicker="twenty-second recap" at={separateAt}>
+      <SceneShell scene={10} label="recap"><div style={{position:"absolute",left:110,right:110,top:975,display:"flex",justifyContent:"space-between",color:T.text,fontSize:24}}>{OUTCOMES.map(x=><span key={x}>✓ {x}</span>)}</div>
+        <svg width={260} height={95} style={{position:"absolute",left:830,top:867}}><path d="M10 80 H250 M10 80 V5 M10 70 L85 10 H130 L250 80" stroke={T.cyan} strokeWidth={4} fill="none"/></svg><SectionTitle kicker="twenty-second recap" at={separateAt}>
           Keep the two averages separate
         </SectionTitle>
         <div style={{ position: 'absolute', left: 150, right: 150, top: 280, display: 'flex', gap: 54 }}>
@@ -2219,7 +2454,7 @@ const Scene10: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
   }
 
   return (
-    <SceneShell scene={10} label="recap">
+    <SceneShell scene={10} label="recap"><div style={{position:"absolute",left:110,right:110,top:975,display:"flex",justifyContent:"space-between",color:T.text,fontSize:24}}>{OUTCOMES.map(x=><span key={x}>✓ {x}</span>)}</div>
       <SectionTitle kicker="twenty-second recap" at={graphAt}>
         Four pictures to read any graph
       </SectionTitle>
@@ -2294,6 +2529,87 @@ const Scene10: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
   );
 };
 
+function useStillAudit(enabled:boolean,rootRef:React.RefObject<HTMLDivElement|null>) {
+  const frame=useCurrentFrame();
+  const [measurement,setMeasurement]=useState('');
+  const [auditHandle]=useState(()=>enabled?delayRender('Measure laid-out travel graph still'):null);
+  useLayoutEffect(()=>{
+    let request=0;
+    const measure=()=>{
+    const root=rootRef.current;
+    if(!enabled||!root)return;
+    if(!Array.from<Element>(root.querySelectorAll('[data-scene]')).some(el=>el.getBoundingClientRect().width>0)){request=requestAnimationFrame(measure);return;}
+    const visible=(el:Element):boolean=>{
+      let node:Element|null=el;
+      while(node&&node!==root){const style=getComputedStyle(node);if(style.display==='none'||style.visibility==='hidden'||Number(style.opacity)<.01)return false;node=node.parentElement;}
+      const r=el.getBoundingClientRect();return r.width>0&&r.height>0;
+    };
+    const regions=Array.from<Element>(root.querySelectorAll('[data-region]')).filter(visible).filter(el=>!el.parentElement?.closest('[data-region]'));
+    const labels=Array.from<Element>(root.querySelectorAll('[data-axis-text]')).filter(visible);
+    const collisions: {text:string;other:string}[]=[];
+    labels.forEach((a,i)=>labels.slice(i+1).forEach(b=>{
+      if(a.closest('[data-scene]')!==b.closest('[data-scene]'))return;
+      const x=a.getBoundingClientRect(),y=b.getBoundingClientRect();
+      if(x.left<y.right+1&&x.right+1>y.left&&x.top<y.bottom+1&&x.bottom+1>y.top)collisions.push({text:a.textContent??'',other:b.textContent??''});
+    }));
+    const bounds=root.getBoundingClientRect();
+    const overlaps=(a:DOMRect,b:DOMRect)=>a.left<b.right&&a.right>b.left&&a.top<b.bottom&&a.bottom>b.top;
+    const outside=(a:DOMRect,b:DOMRect)=>a.left<b.left-1||a.right>b.right+1||a.top<b.top-1||a.bottom>b.bottom+1;
+    // Text-node ranges avoid treating a whole caption container as printed glyphs.
+    const printed:{text:string;bounds:DOMRect}[]=[];
+    const walker=document.createTreeWalker(root,NodeFilter.SHOW_TEXT);
+    let node:Node|null;
+    while((node=walker.nextNode())){
+      const parent=node.parentElement;
+      if(!node.textContent?.trim()||!parent||parent.closest('.katex-mathml')||!parent.closest('[data-scene]')||!visible(parent))continue;
+      const range=document.createRange();range.selectNodeContents(node);
+      for(const box of Array.from(range.getClientRects()))if(box.width&&box.height)printed.push({text:node.textContent.trim(),bounds:box});
+    }
+    const ink=Array.from<Element>(root.querySelectorAll('[data-ink-text]')).filter(visible);
+    const inkLayouts=ink.map(el=>{
+      const extent=el.querySelector('[data-ink-extent]')!.getBoundingClientRect();
+      const panelId=el.getAttribute('data-ink-panel-id');
+      const panel=el.closest('svg')?.querySelector(`[data-ink-panel="${panelId}"]`)?.getBoundingClientRect();
+      const active=el.getAttribute('data-ink-active')==='true';
+      return {scene:`s${el.closest('[data-scene]')!.getAttribute('data-scene')!.padStart(2,'0')}`,text:el.getAttribute('data-ink-text'),active,complete:el.getAttribute('data-ink-complete')==='true',
+        bounds:extent.toJSON(),panel:panelId,panelBounds:panel?.toJSON(),
+        end:Number(el.getAttribute('data-ink-end')),strokeEnds:JSON.parse(el.getAttribute('data-ink-stroke-ends')??'[]') as number[],
+        overflow:active&&(!panel||outside(extent,panel)),
+        collisions:active?printed.filter(text=>overlaps(extent,text.bounds)).map(text=>text.text):[]};
+    });
+    const ringCollisions:{ring:string;other:string}[]=[];
+    const ringLayouts=Array.from<SVGPathElement>(root.querySelectorAll('[data-ring]')).filter(visible).map(el=>{
+      const targetId=el.getAttribute('data-ring-target');
+      const target=Array.from(root.querySelectorAll(`[data-figure="${targetId}"]`)).find(visible);
+      const targetBounds=target?figureBounds(target):undefined;
+      const r=el.getBoundingClientRect();
+      const own=(box:DOMRect)=>targetBounds&&box.left>=targetBounds.left-1&&box.right<=targetBounds.right+1&&box.top>=targetBounds.top-1&&box.bottom<=targetBounds.bottom+1;
+      for(const other of printed)if(!own(other.bounds)&&overlaps(r,other.bounds))ringCollisions.push({ring:targetId??'',other:other.text});
+      return {id:el.getAttribute('data-ring'),target:targetId,progress:Number(el.getAttribute('data-progress')),bounds:r.toJSON(),targetBounds:targetBounds?.toJSON(),encloses:!!targetBounds&&!outside(targetBounds,r)};
+    });
+    const textOverflow=printed.filter(t=>outside(t.bounds,bounds)&&t.bounds.width>2).map(t=>t.text);
+    const substitutions=Array.from(root.querySelectorAll('[data-substitution]')).filter(visible).flatMap(el=>{
+      const id=`s${el.closest('[data-scene]')?.getAttribute('data-scene')?.padStart(2,'0')}`;let offset=0;for(const scene of TRANSCRIPT.scenes){if(scene.id===id)break;offset+=Math.ceil(scene.duration*30);}const local=(frame-offset)/30;
+      if(local<Number(el.getAttribute('data-start'))||local>Number(el.getAttribute('data-end')))return [];
+      return (el.getAttribute('data-substitution')??'').split(',').map(target=>({target,visible:Array.from(root.querySelectorAll(`[data-figure="${target}"]`)).some(visible),ring:ringLayouts.some(r=>r.target===target)}));
+    });
+    const inkCollisions=inkLayouts.filter(line=>line.collisions.length);
+    const inkOverflow=inkLayouts.filter(line=>line.overflow);
+    const overflow=labels.some(el=>outside(el.getBoundingClientRect(),el.closest('[data-scene]')?.getBoundingClientRect()??bounds))||inkOverflow.length>0;
+    const cyclist=root.querySelector('[data-cyclist-x]');
+    const measured=JSON.stringify({frame,visibleScenes:Array.from<Element>(root.querySelectorAll('[data-scene]')).filter(visible).map(el=>`s${el.getAttribute('data-scene')!.padStart(2,'0')}`),regions:Math.max(0,...Array.from(root.querySelectorAll('[data-scene]')).filter(visible).map(scene=>regions.filter(el=>el.closest('[data-scene]')===scene).length)),regionNames:regions.map(el=>el.getAttribute('data-region')),axisCollisions:collisions,axisText:labels.map(el=>({text:el.textContent,bounds:el.getBoundingClientRect().toJSON(),canvas:el.closest('[data-scene]')?.getBoundingClientRect().toJSON()})),overflow,inkLayouts,inkCollisions,inkOverflow,printedText:printed,substitutions,figureRings:ringLayouts,ringCollisions,textOverflow,underlines:Array.from(root.querySelectorAll('[data-underline]')).filter(visible).map(el=>el.getAttribute('data-underline')),figureTargets:Array.from(root.querySelectorAll('[data-figure]')).filter(visible).map(el=>({id:el.getAttribute('data-figure'),text:el.textContent,bounds:el.getBoundingClientRect().toJSON()})),inkText:inkLayouts.filter(line=>line.complete).map(line=>line.text),givens:Array.from(root.querySelectorAll('[data-givens], [data-region="givens"]')).filter(visible).map(el=>el.textContent),graphs:Array.from<Element>(root.querySelectorAll('[data-graph]')).filter(visible).map(el=>el.getAttribute('data-graph')),cyclist:cyclist?{x:Number(cyclist.getAttribute('data-cyclist-x')),wheelAngle:Number(cyclist.getAttribute('data-wheel-angle')),direction:Number(cyclist.getAttribute('data-direction'))}:null});
+    setMeasurement(measured);
+    (window as Window & {__displacementAudit?:unknown}).__displacementAudit=JSON.parse(measured);
+    if(auditHandle!==null)continueRender(auditHandle);
+    };
+    request=requestAnimationFrame(()=>{request=requestAnimationFrame(measure);});
+    return ()=>cancelAnimationFrame(request);
+  },[frame,enabled,auditHandle]);
+  return enabled&&measurement?<Artifact filename={`verify-displacement-${String(frame).padStart(5,'0')}.json`} content={measurement}/>:null;
+}
+
+const S00 = getScene('s00');
+const S11 = getScene('s11');
 const S01 = getScene('s01');
 const S02 = getScene('s02');
 const S03 = getScene('s03');
@@ -2309,12 +2625,12 @@ const NarratedScene: React.FC<{
   scene: MechanicsTranscriptScene;
   audioEnabled: boolean;
   children: React.ReactNode;
-}> = ({ scene, audioEnabled, children }) => (
-  <AbsoluteFill>
-    {children}
-    {audioEnabled && <Audio src={staticFile(`audio/mechanics/${scene.audio}`)} volume={1} />}
-  </AbsoluteFill>
-);
+}> = ({ scene, audioEnabled, children }) => {
+ const frame=useCurrentFrame();const hold=scene.holds?.find(h=>frame>=Math.ceil(h.start*30)&&frame<Math.ceil(h.end*30));
+ const heldFrame=hold?Math.ceil(hold.start*30):frame;
+ return <AbsoluteFill><Freeze frame={heldFrame}><VisualScene scene={scene}>{children}</VisualScene></Freeze>{audioEnabled&&<Audio src={staticFile(`audio/mechanics/${scene.audio}`)} volume={1}/>}</AbsoluteFill>;
+};
+const VisualScene:React.FC<{scene:MechanicsTranscriptScene;children:React.ReactNode}>=({scene,children})=>{const ref=useRef<HTMLDivElement>(null);return <AbsoluteFill ref={ref}>{children}<FigureAccents scene={scene} rootRef={ref}/></AbsoluteFill>;};
 
 type PremountedTransitionSequenceProps = React.ComponentProps<typeof TransitionSeries.Sequence> & {
   premountFor?: number;
@@ -2324,7 +2640,10 @@ const PremountedTransitionSequence = TransitionSeries.Sequence as React.FC<Premo
 
 export const MechanicsDisplacementTimeGraphs: React.FC<MechanicsDisplacementTimeGraphsProps> = ({
   audioEnabled = true,
+  audit = false,
 }) => {
+  const rootRef=useRef<HTMLDivElement>(null);
+  const artifact=useStillAudit(audit,rootRef);
   const { fps } = useVideoConfig();
   const transition = (
     <TransitionSeries.Transition
@@ -2334,8 +2653,10 @@ export const MechanicsDisplacementTimeGraphs: React.FC<MechanicsDisplacementTime
   );
 
   return (
-    <AbsoluteFill style={{ background: T.bg }}>
+    <AbsoluteFill ref={rootRef} style={{ background: T.bg }}>{artifact}
       <TransitionSeries>
+        <PremountedTransitionSequence name="Syllabus" durationInFrames={sceneDurationInFrames(S00, fps)} premountFor={PREMOUNT_FRAMES}><NarratedScene scene={S00} audioEnabled={audioEnabled}><Scene00 scene={S00}/></NarratedScene></PremountedTransitionSequence>
+        {transition}
         <PremountedTransitionSequence name="Position leaves a trace" durationInFrames={sceneDurationInFrames(S01, fps)} premountFor={PREMOUNT_FRAMES}>
           <NarratedScene scene={S01} audioEnabled={audioEnabled}><Scene01 scene={S01} /></NarratedScene>
         </PremountedTransitionSequence>
@@ -2371,6 +2692,8 @@ export const MechanicsDisplacementTimeGraphs: React.FC<MechanicsDisplacementTime
         <PremountedTransitionSequence name="Two averages" durationInFrames={sceneDurationInFrames(S09, fps)} premountFor={PREMOUNT_FRAMES}>
           <NarratedScene scene={S09} audioEnabled={audioEnabled}><Scene09 scene={S09} /></NarratedScene>
         </PremountedTransitionSequence>
+        {transition}
+        <PremountedTransitionSequence name="Cyclist journey" durationInFrames={sceneDurationInFrames(S11, fps)} premountFor={PREMOUNT_FRAMES}><NarratedScene scene={S11} audioEnabled={audioEnabled}><Scene11 scene={S11}/></NarratedScene></PremountedTransitionSequence>
         {transition}
         <PremountedTransitionSequence name="Recap" durationInFrames={sceneDurationInFrames(S10, fps)} premountFor={PREMOUNT_FRAMES}>
           <NarratedScene scene={S10} audioEnabled={audioEnabled}><Scene10 scene={S10} /></NarratedScene>
