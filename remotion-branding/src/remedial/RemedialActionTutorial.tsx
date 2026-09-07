@@ -82,12 +82,12 @@ const GenuineCapture: React.FC<{ capture: Capture; candidate: boolean }> = ({ ca
 	</>
 );
 
-const Detail: React.FC<{ capture: Capture; rect: Rect; opacity: number }> = ({ capture, rect, opacity }) => {
+const Detail: React.FC<{ capture: Capture; rect: Rect; opacity: number; left?: number }> = ({ capture, rect, opacity, left = 620 }) => {
 	const cropWidth = capture.width * rect.w;
 	const cropHeight = capture.height * rect.h;
 	const scale = Math.min(1180 / cropWidth, 320 / cropHeight, 2);
 	return (
-		<div data-remedial-detail style={{ position: 'absolute', left: 620, top: 610, width: cropWidth * scale, height: cropHeight * scale, overflow: 'hidden', outline: '1px solid #6F8597', boxShadow: '0 20px 60px #0004', opacity }}>
+		<div data-remedial-detail style={{ position: 'absolute', left, top: 610, width: cropWidth * scale, height: cropHeight * scale, overflow: 'hidden', outline: '1px solid #6F8597', boxShadow: '0 20px 60px #0004', opacity }}>
 			<Img src={staticFile(capture.path)} style={{ position: 'absolute', left: -rect.x * capture.width * scale, top: -rect.y * capture.height * scale, width: capture.width * scale, height: capture.height * scale, maxWidth: 'none' }} />
 		</div>
 	);
@@ -110,6 +110,9 @@ const ScreenBeat: React.FC<{ beat: Beat; captures: CaptureManifest; candidate: b
 	const cue = beat.cues[cueIndex];
 	const ref = captures.slots[beat.slot!][cue.proof];
 	const capture = ref ? captures.captures.find((item) => item.id === ref.captureId) : undefined;
+	// V3 retains the genuine closed record without returning to its daily backlog.
+	const recordOnly = candidate && capture?.id === 'resolved-item';
+	const copyLeft = recordOnly ? 120 : 620;
 	const rect = cue.detail ?? (ref && capture?.views[ref.view]);
 	const textIn = interpolate(frame, [0, beat.voiceFromFrame], [0, 1], clamp);
 	const emphasisIn = interpolate(frame, [beat.emphasisAtFrame, beat.emphasisAtFrame + 12], [0, 1], clamp);
@@ -117,15 +120,15 @@ const ScreenBeat: React.FC<{ beat: Beat; captures: CaptureManifest; candidate: b
 	const accent = beat.slot?.startsWith('inspection') ? AMBER : SKY;
 	return (
 		<AbsoluteFill>
-			{capture ? <GenuineCapture capture={capture} candidate={candidate} /> : <CaptureBlocker slot={beat.slot!} proof={cue.proof} />}
-			<div data-remedial-copy style={{ position: 'absolute', left: 620, top: 102, width: 1180, opacity: textIn }}>
+			{capture ? !recordOnly ? <GenuineCapture capture={capture} candidate={candidate} /> : null : <CaptureBlocker slot={beat.slot!} proof={cue.proof} />}
+			<div data-remedial-copy style={{ position: 'absolute', left: copyLeft, top: 102, width: 1180, opacity: textIn }}>
 				<div style={{ color: accent, fontSize: 22, fontWeight: 700, letterSpacing: 2, textTransform: 'uppercase' }}>{beat.chapter}</div>
 				<div style={{ fontFamily: DISPLAY, fontSize: 76, fontWeight: 700, lineHeight: 0.98, whiteSpace: 'pre-line', marginTop: 26 }}>{beat.headline}</div>
 			</div>
-			<div data-remedial-body style={{ position: 'absolute', left: 620, top: 330, width: 1160, color: MUTED, fontSize: 31, lineHeight: 1.35, opacity: textIn }}>{beat.body}</div>
-			<div data-remedial-emphasis style={{ position: 'absolute', left: 620, top: 458, width: 1160, borderLeft: `4px solid ${accent}`, paddingLeft: 24, boxSizing: 'border-box', fontSize: 31, lineHeight: 1.3, fontWeight: 700, opacity: emphasisIn, transform: `translateY(${8 * (1 - emphasisIn)}px)` }}>{beat.emphasis}</div>
+			<div data-remedial-body style={{ position: 'absolute', left: copyLeft, top: 330, width: 1160, color: MUTED, fontSize: 31, lineHeight: 1.35, opacity: textIn }}>{beat.body}</div>
+			<div data-remedial-emphasis style={{ position: 'absolute', left: copyLeft, top: 458, width: 1160, borderLeft: `4px solid ${accent}`, paddingLeft: 24, boxSizing: 'border-box', fontSize: 31, lineHeight: 1.3, fontWeight: 700, opacity: emphasisIn, transform: `translateY(${8 * (1 - emphasisIn)}px)` }}>{beat.emphasis}</div>
 			{!candidate ? <div style={{ position: 'absolute', left: 620, top: 570, color: capture ? accent : MUTED, fontSize: 18, letterSpacing: 1.6, fontWeight: 700 }}>{capture ? 'ENLARGED DETAIL · SAME GENUINE CAPTURE' : 'PLANNED TEACHING · AUTHENTIC EVIDENCE PENDING'}</div> : null}
-			{capture && rect ? <Detail capture={capture} rect={rect} opacity={detailIn} /> : null}
+			{capture && rect ? <Detail capture={capture} rect={rect} opacity={detailIn} left={copyLeft} /> : null}
 			{!capture ? <div style={{ position: 'absolute', left: 620, top: 622, width: 1110, borderTop: '1px solid #344A5E', paddingTop: 30, color: MUTED, fontSize: 26, lineHeight: 1.55 }}>
 				<div style={{ color: '#EEF4F9', fontFamily: DISPLAY, fontSize: 39 }}>View {cueIndex + 1} of {beat.cues.length}: {cue.proof.replaceAll('-', ' ')}</div>
 				<div style={{ marginTop: 20 }}>Capture through the shipped app in Bakery Demo. Register the exact pixels, record identity and state before replacing this card.</div>
@@ -177,7 +180,7 @@ export const Timeline: React.FC<{ captures?: CaptureManifest; narration?: Narrat
 		<AbsoluteFill style={{ background: 'radial-gradient(ellipse at 16% 32%, #123749 0%, transparent 48%), linear-gradient(125deg, #10202D, #071018 68%)', color: '#F7FAFC', fontFamily: BODY }}>
 			{narration.beats.map((beat) => <Sequence key={beat.id} name={beat.id} from={beat.from} durationInFrames={beat.durationInFrames} premountFor={FPS}>
 				{beat.kind === 'intro' ? <BrandIntro title={beat.headline} tagline={beat.body} accentA={SKY} accentB={EMERALD} /> :
-					beat.kind === 'outro' ? <BrandOutro outroKicker="e-wizer field guide" outroHeadline={beat.headline} outroBody={beat.body} outroCards={[{ label: 'Record', color: SKY }, { label: 'Verify', color: AMBER }, { label: 'Follow up', color: EMERALD }]} accentA={SKY} accentB={EMERALD} /> :
+					beat.kind === 'outro' ? <BrandOutro outroKicker="e-wizer field guide" outroHeadline={beat.headline} outroBody={beat.body} outroCards={[{ label: candidate ? 'Review' : 'Record', color: SKY }, { label: 'Verify', color: AMBER }, { label: 'Follow up', color: EMERALD }]} accentA={SKY} accentB={EMERALD} /> :
 						beat.kind === 'screen' ? <ScreenBeat beat={beat} captures={captures} candidate={candidate} /> : <Explanation beat={beat} candidate={candidate} />}
 			</Sequence>)}
 			{/* Persisted, measured narration; original internal preview remains silent. */}

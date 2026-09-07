@@ -263,6 +263,15 @@
       "holds": [],
       "paragraphs": [
         "Syllabus four point one: use the model of a smooth contact. By the end you can explain what modelling words let you ignore; list assumptions for a real situation and say why; and match modelling words to a described setup. Let's make those words useful."
+      ],
+      "focus": [
+        {
+          "target": "surface",
+          "phrase": "smooth contact",
+          "start": 4.01,
+          "wordStart": 4.01,
+          "end": 4.71
+        }
       ]
     },
     {
@@ -532,6 +541,50 @@
       "holds": [],
       "paragraphs": [
         "Start with a real problem. Choose assumptions: leave out details so the problem becomes manageable. Use equations or a graph to describe the simplified situation. Check whether the answer is reasonable in real life. If it isn't, refine the assumptions and try again. That's the modelling cycle."
+      ],
+      "focus": [
+        {
+          "target": "real",
+          "phrase": "real problem",
+          "start": 1.27,
+          "wordStart": 1.27,
+          "end": 1.89
+        },
+        {
+          "target": "assumptions",
+          "phrase": "choose assumptions",
+          "start": 2.77,
+          "wordStart": 2.77,
+          "end": 3.75
+        },
+        {
+          "target": "equations",
+          "phrase": "equations",
+          "start": 9.49,
+          "wordStart": 9.49,
+          "end": 10.05
+        },
+        {
+          "target": "equations",
+          "phrase": "graph",
+          "start": 10.71,
+          "wordStart": 10.71,
+          "end": 10.99
+        },
+        {
+          "target": "check",
+          "phrase": "check whether",
+          "start": 14.35,
+          "wordStart": 14.35,
+          "end": 15.41
+        },
+        {
+          "target": "refine",
+          "phrase": "refine",
+          "start": 20.53,
+          "wordStart": 20.53,
+          "end": 21.09
+        }
       ]
     },
     {
@@ -1161,6 +1214,162 @@
       ],
       "paragraphs": [
         "A stone at a cliff: two or three dimensional motion; air and wind; size, shape and spin; gravity pulls down. Assume a vertical fall. Ignore air and wind. Use a particle: omit dimensions. Keep gravity constant, simplifying height. Our model is h equals twenty minus five t squared, from zero to two seconds. At zero, height is twenty metres. [hold 2 s] At one second, height is fifteen metres. [hold 2 s] Two seconds means the stone reaches the water. Is one metre at one second reasonable? [hold 3 s] No: that misreads this model, which gives fifteen. To improve realism, include air resistance; keep the stone's size and mass; or allow motion in two or three dimensions."
+      ],
+      "focus": [
+        {
+          "target": "stone",
+          "phrase": "stone",
+          "start": 0.44,
+          "wordStart": 0.44,
+          "end": 0.9
+        },
+        {
+          "target": "trajectory",
+          "phrase": "two or three dimensional",
+          "start": 2.3,
+          "wordStart": 2.3,
+          "end": 4.48
+        },
+        {
+          "target": "air",
+          "phrase": "air and wind",
+          "start": 5.82,
+          "wordStart": 5.82,
+          "end": 7.42
+        },
+        {
+          "target": "stone",
+          "phrase": "size shape and spin",
+          "start": 8.26,
+          "wordStart": 8.26,
+          "end": 11.28
+        },
+        {
+          "target": "gravity",
+          "phrase": "gravity",
+          "start": 12.5,
+          "wordStart": 12.5,
+          "end": 13.22
+        },
+        {
+          "target": "trajectory",
+          "phrase": "vertical fall",
+          "start": 16.16,
+          "wordStart": 16.16,
+          "end": 16.96
+        },
+        {
+          "target": "air",
+          "phrase": "air and wind",
+          "start": 18.86,
+          "wordStart": 18.86,
+          "end": 20.1
+        },
+        {
+          "target": "stone",
+          "phrase": "particle",
+          "start": 21.8,
+          "wordStart": 21.8,
+          "end": 22.24
+        },
+        {
+          "target": "gravity",
+          "phrase": "gravity",
+          "start": 25.52,
+          "wordStart": 25.52,
+          "end": 26.08
+        },
+        {
+          "target": "water",
+          "phrase": "two seconds",
+          "start": 36.3,
+          "wordStart": 36.3,
+          "end": 37.04
+        },
+        {
+          "target": "zero-time",
+          "phrase": "at zero",
+          "start": 37.86,
+          "wordStart": 37.86,
+          "end": 38.74
+        },
+        {
+          "target": "twenty",
+          "phrase": "twenty metres",
+          "start": 39.8,
+          "wordStart": 39.8,
+          "end": 40.42
+        },
+        {
+          "target": "one-time",
+          "phrase": "one second",
+          "start": 42.9,
+          "wordStart": 42.9,
+          "end": 43.56
+        },
+        {
+          "target": "fifteen",
+          "phrase": "fifteen metres",
+          "start": 44.36,
+          "wordStart": 44.36,
+          "end": 44.98
+        },
+        {
+          "target": "water",
+          "phrase": "two seconds",
+          "start": 47.35,
+          "wordStart": 47.35,
+          "end": 47.87
+        },
+        {
+          "target": "stone",
+          "phrase": "stone",
+          "start": 48.61,
+          "wordStart": 48.61,
+          "end": 48.93
+        },
+        {
+          "target": "water",
+          "phrase": "water",
+          "start": 49.49,
+          "wordStart": 49.49,
+          "end": 49.81
+        },
+        {
+          "target": "question",
+          "phrase": "is one metre",
+          "start": 50.35,
+          "wordStart": 50.35,
+          "end": 51.29
+        },
+        {
+          "target": "one-time",
+          "phrase": "one second",
+          "start": 51.61,
+          "wordStart": 51.61,
+          "end": 52.17
+        },
+        {
+          "target": "fifteen",
+          "phrase": "gives fifteen",
+          "start": 60.16,
+          "wordStart": 60.16,
+          "end": 61.06
+        },
+        {
+          "target": "air",
+          "phrase": "air resistance",
+          "start": 64.38,
+          "wordStart": 64.38,
+          "end": 65.44
+        },
+        {
+          "target": "trajectory",
+          "phrase": "two or three dimensions",
+          "start": 71.5,
+          "wordStart": 71.5,
+          "end": 73.24
+        }
       ]
     },
     {
@@ -1579,6 +1788,134 @@
       "holds": [],
       "paragraphs": [
         "A particle ignores dimensions: size is unimportant here. Smooth means no friction. Rough allows friction, opposing sliding. A rod or beam keeps length and rigid shape. Uniform means evenly spread mass: weight acts at its centre; uneven mass shifts it. Light means negligible mass: omit string weight. A heavy string adds weight. Inextensible means no stretching. Taut over this fixed pulley, it links equal acceleration magnitudes in different directions. A stretching string breaks that link."
+      ],
+      "focus": [
+        {
+          "target": "body",
+          "phrase": "particle",
+          "start": 0.44,
+          "wordStart": 0.44,
+          "end": 0.78
+        },
+        {
+          "target": "body",
+          "phrase": "dimensions",
+          "start": 1.44,
+          "wordStart": 1.44,
+          "end": 2.28
+        },
+        {
+          "target": "surface",
+          "phrase": "smooth",
+          "start": 7.2,
+          "wordStart": 7.2,
+          "end": 7.72
+        },
+        {
+          "target": "surface",
+          "phrase": "friction",
+          "start": 9.16,
+          "wordStart": 9.16,
+          "end": 9.54
+        },
+        {
+          "target": "surface",
+          "phrase": "rough",
+          "start": 10.64,
+          "wordStart": 10.64,
+          "end": 10.76
+        },
+        {
+          "target": "surface",
+          "phrase": "friction",
+          "start": 11.58,
+          "wordStart": 11.58,
+          "end": 12.06
+        },
+        {
+          "target": "rod",
+          "phrase": "rod",
+          "start": 15.0,
+          "wordStart": 15.0,
+          "end": 15.32
+        },
+        {
+          "target": "rod",
+          "phrase": "beam",
+          "start": 15.9,
+          "wordStart": 15.9,
+          "end": 16.26
+        },
+        {
+          "target": "rod",
+          "phrase": "uniform",
+          "start": 19.92,
+          "wordStart": 19.92,
+          "end": 20.42
+        },
+        {
+          "target": "centre",
+          "phrase": "centre",
+          "start": 26.54,
+          "wordStart": 26.54,
+          "end": 26.98
+        },
+        {
+          "target": "rod",
+          "phrase": "uneven mass",
+          "start": 27.88,
+          "wordStart": 27.88,
+          "end": 28.92
+        },
+        {
+          "target": "string",
+          "phrase": "light",
+          "start": 30.84,
+          "wordStart": 30.84,
+          "end": 31.24
+        },
+        {
+          "target": "string",
+          "phrase": "heavy string",
+          "start": 38.44,
+          "wordStart": 38.44,
+          "end": 39.06
+        },
+        {
+          "target": "string",
+          "phrase": "inextensible",
+          "start": 41.5,
+          "wordStart": 41.5,
+          "end": 42.6
+        },
+        {
+          "target": "pulley",
+          "phrase": "fixed pulley",
+          "start": 46.76,
+          "wordStart": 46.76,
+          "end": 47.4
+        },
+        {
+          "target": "acceleration",
+          "phrase": "equal acceleration",
+          "start": 48.56,
+          "wordStart": 48.56,
+          "end": 49.76
+        },
+        {
+          "target": "acceleration",
+          "phrase": "different directions",
+          "start": 51.4,
+          "wordStart": 51.4,
+          "end": 52.32
+        },
+        {
+          "target": "string",
+          "phrase": "stretching string",
+          "start": 53.44,
+          "wordStart": 53.44,
+          "end": 54.36
+        }
       ]
     },
     {
@@ -2154,6 +2491,218 @@
       ],
       "paragraphs": [
         "A box on a desk connects over a pulley to a hanging sphere. Match five simplifications. Ignoring air resistance: which body model is paired here? [hold 2 s] Particle. But neglecting air resistance is a separate assumption; a point model can still have drag. Ignore string mass: which word? [hold 2 s] Light, because the string's mass is negligible. Same tension on both sides: which pulley? [hold 2 s] Smooth pulley, with our light string and ideal pulley. Ignore desk friction: which surface? [hold 2 s] Smooth surface: no friction. Same acceleration magnitudes: which string? [hold 2 s] Inextensible, while taut, because its fixed length links the movements."
+      ],
+      "focus": [
+        {
+          "target": "box",
+          "phrase": "box",
+          "start": 0.44,
+          "wordStart": 0.44,
+          "end": 0.84
+        },
+        {
+          "target": "surface",
+          "phrase": "desk",
+          "start": 1.3,
+          "wordStart": 1.3,
+          "end": 1.7
+        },
+        {
+          "target": "pulley",
+          "phrase": "pulley",
+          "start": 3.5,
+          "wordStart": 3.5,
+          "end": 3.72
+        },
+        {
+          "target": "sphere",
+          "phrase": "hanging sphere",
+          "start": 4.46,
+          "wordStart": 4.46,
+          "end": 5.1
+        },
+        {
+          "target": "air",
+          "phrase": "ignoring air resistance",
+          "start": 7.84,
+          "wordStart": 7.84,
+          "end": 9.26
+        },
+        {
+          "target": "q-particle",
+          "phrase": "ignoring air resistance",
+          "start": 7.84,
+          "wordStart": 7.84,
+          "end": 9.26
+        },
+        {
+          "target": "body",
+          "phrase": "particle",
+          "start": 14.53,
+          "wordStart": 14.48,
+          "end": 14.98
+        },
+        {
+          "target": "air",
+          "phrase": "neglecting air resistance",
+          "start": 16.2,
+          "wordStart": 16.2,
+          "end": 17.52
+        },
+        {
+          "target": "body",
+          "phrase": "point model",
+          "start": 20.52,
+          "wordStart": 20.52,
+          "end": 21.54
+        },
+        {
+          "target": "air",
+          "phrase": "drag",
+          "start": 22.96,
+          "wordStart": 22.96,
+          "end": 23.3
+        },
+        {
+          "target": "q-light",
+          "phrase": "ignore string mass",
+          "start": 24.68,
+          "wordStart": 24.68,
+          "end": 26.34
+        },
+        {
+          "target": "string",
+          "phrase": "string",
+          "start": 25.5,
+          "wordStart": 25.5,
+          "end": 25.94
+        },
+        {
+          "target": "string",
+          "phrase": "light",
+          "start": 30.57,
+          "wordStart": 29.63,
+          "end": 30.85
+        },
+        {
+          "target": "tension",
+          "phrase": "same tension",
+          "start": 34.45,
+          "wordStart": 34.45,
+          "end": 35.93
+        },
+        {
+          "target": "q-pulley",
+          "phrase": "same tension on both sides",
+          "start": 34.45,
+          "wordStart": 34.45,
+          "end": 37.23
+        },
+        {
+          "target": "tension",
+          "phrase": "both sides",
+          "start": 36.29,
+          "wordStart": 36.29,
+          "end": 37.23
+        },
+        {
+          "target": "pulley",
+          "phrase": "pulley",
+          "start": 38.05,
+          "wordStart": 38.05,
+          "end": 38.45
+        },
+        {
+          "target": "pulley",
+          "phrase": "smooth pulley",
+          "start": 40.57,
+          "wordStart": 39.76,
+          "end": 41.54
+        },
+        {
+          "target": "string",
+          "phrase": "light",
+          "start": 42.74,
+          "wordStart": 42.74,
+          "end": 43.16
+        },
+        {
+          "target": "string",
+          "phrase": "string",
+          "start": 43.16,
+          "wordStart": 43.16,
+          "end": 43.7
+        },
+        {
+          "target": "pulley",
+          "phrase": "pulley",
+          "start": 44.98,
+          "wordStart": 44.98,
+          "end": 45.52
+        },
+        {
+          "target": "q-surface",
+          "phrase": "ignore desk friction",
+          "start": 45.52,
+          "wordStart": 45.52,
+          "end": 47.54
+        },
+        {
+          "target": "surface",
+          "phrase": "desk",
+          "start": 46.48,
+          "wordStart": 46.48,
+          "end": 47.08
+        },
+        {
+          "target": "surface",
+          "phrase": "smooth surface",
+          "start": 51.12,
+          "wordStart": 50.23,
+          "end": 52.03
+        },
+        {
+          "target": "acceleration",
+          "phrase": "same acceleration",
+          "start": 53.47,
+          "wordStart": 53.47,
+          "end": 55.21
+        },
+        {
+          "target": "q-string",
+          "phrase": "same acceleration magnitude",
+          "start": 53.47,
+          "wordStart": 53.47,
+          "end": 55.95
+        },
+        {
+          "target": "string",
+          "phrase": "string",
+          "start": 57.11,
+          "wordStart": 57.11,
+          "end": 57.53
+        },
+        {
+          "target": "string",
+          "phrase": "in extensible",
+          "start": 59.69,
+          "wordStart": 58.84,
+          "end": 60.54
+        },
+        {
+          "target": "string",
+          "phrase": "fixed length",
+          "start": 63.92,
+          "wordStart": 63.92,
+          "end": 64.72
+        },
+        {
+          "target": "acceleration",
+          "phrase": "movements",
+          "start": 65.76,
+          "wordStart": 65.76,
+          "end": 66.12
+        }
       ]
     },
     {
@@ -2434,6 +2983,43 @@
       "holds": [],
       "paragraphs": [
         "You can explain what modelling words let you ignore. List assumptions for a real situation and say why. Match modelling words to a described setup. Remember the cycle: simplify, describe, then check. If reality disagrees, reconsider the assumptions. A model is useful because you know what it leaves out."
+      ],
+      "focus": [
+        {
+          "target": "surface",
+          "phrase": "modelling words",
+          "start": 1.3,
+          "wordStart": 1.3,
+          "end": 2.22
+        },
+        {
+          "target": "surface",
+          "phrase": "modelling words",
+          "start": 8.38,
+          "wordStart": 8.38,
+          "end": 9.24
+        },
+        {
+          "target": "cycle",
+          "phrase": "cycle",
+          "start": 12.38,
+          "wordStart": 12.38,
+          "end": 12.68
+        },
+        {
+          "target": "cycle",
+          "phrase": "simplify",
+          "start": 13.42,
+          "wordStart": 13.42,
+          "end": 14.08
+        },
+        {
+          "target": "cycle",
+          "phrase": "check",
+          "start": 16.0,
+          "wordStart": 16.0,
+          "end": 16.28
+        }
       ]
     }
   ]

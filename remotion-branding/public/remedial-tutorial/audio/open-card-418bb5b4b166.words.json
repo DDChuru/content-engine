@@ -1,0 +1,246 @@
+{
+  "audioSha256": "93d589f5b711a7645b2af38d981a49ba5ac2334f3741c991888bd498711eda28",
+  "model": "faster-whisper-small",
+  "modelRevision": "536b0662742c02347bc0e980a01041f333bce120",
+  "computeType": "int8",
+  "language": "en",
+  "initialPrompt": null,
+  "duration": 18.158,
+  "text": "The failed check is already recorded. The remedial remains open until the correction is verified. Here, hurry the old bucket and the blue cover search locate the major finding in premixed area. Read the finding before checking the correction.",
+  "words": [
+    {
+      "word": " The",
+      "start": 0.0,
+      "end": 0.18,
+      "probability": 0.7811763286590576
+    },
+    {
+      "word": " failed",
+      "start": 0.18,
+      "end": 0.58,
+      "probability": 0.9705365896224976
+    },
+    {
+      "word": " check",
+      "start": 0.58,
+      "end": 0.96,
+      "probability": 0.9923596978187561
+    },
+    {
+      "word": " is",
+      "start": 0.96,
+      "end": 1.68,
+      "probability": 0.9797367453575134
+    },
+    {
+      "word": " already",
+      "start": 1.68,
+      "end": 2.08,
+      "probability": 0.9869109392166138
+    },
+    {
+      "word": " recorded.",
+      "start": 2.08,
+      "end": 2.56,
+      "probability": 0.9930580854415894
+    },
+    {
+      "word": " The",
+      "start": 3.36,
+      "end": 3.5,
+      "probability": 0.9873024225234985
+    },
+    {
+      "word": " remedial",
+      "start": 3.5,
+      "end": 4.06,
+      "probability": 0.9419043958187103
+    },
+    {
+      "word": " remains",
+      "start": 4.06,
+      "end": 4.44,
+      "probability": 0.9861094355583191
+    },
+    {
+      "word": " open",
+      "start": 4.44,
+      "end": 4.98,
+      "probability": 0.9737367630004883
+    },
+    {
+      "word": " until",
+      "start": 4.98,
+      "end": 5.74,
+      "probability": 0.9652687311172485
+    },
+    {
+      "word": " the",
+      "start": 5.74,
+      "end": 5.96,
+      "probability": 0.9946213960647583
+    },
+    {
+      "word": " correction",
+      "start": 5.96,
+      "end": 6.3,
+      "probability": 0.9899691939353943
+    },
+    {
+      "word": " is",
+      "start": 6.3,
+      "end": 6.58,
+      "probability": 0.9972496628761292
+    },
+    {
+      "word": " verified.",
+      "start": 6.58,
+      "end": 7.12,
+      "probability": 0.9936892986297607
+    },
+    {
+      "word": " Here,",
+      "start": 8.0,
+      "end": 8.2,
+      "probability": 0.7659600377082825
+    },
+    {
+      "word": " hurry",
+      "start": 8.28,
+      "end": 8.5,
+      "probability": 0.22325646877288818
+    },
+    {
+      "word": " the",
+      "start": 8.5,
+      "end": 8.84,
+      "probability": 0.7732345461845398
+    },
+    {
+      "word": " old",
+      "start": 8.84,
+      "end": 9.18,
+      "probability": 0.38153570890426636
+    },
+    {
+      "word": " bucket",
+      "start": 9.18,
+      "end": 9.64,
+      "probability": 0.9238634705543518
+    },
+    {
+      "word": " and",
+      "start": 9.64,
+      "end": 10.3,
+      "probability": 0.6796118021011353
+    },
+    {
+      "word": " the",
+      "start": 10.3,
+      "end": 10.42,
+      "probability": 0.6109132170677185
+    },
+    {
+      "word": " blue",
+      "start": 10.42,
+      "end": 10.6,
+      "probability": 0.91756272315979
+    },
+    {
+      "word": " cover",
+      "start": 10.6,
+      "end": 10.88,
+      "probability": 0.8723047971725464
+    },
+    {
+      "word": " search",
+      "start": 10.88,
+      "end": 11.4,
+      "probability": 0.9864501357078552
+    },
+    {
+      "word": " locate",
+      "start": 11.4,
+      "end": 11.9,
+      "probability": 0.7948335409164429
+    },
+    {
+      "word": " the",
+      "start": 11.9,
+      "end": 12.18,
+      "probability": 0.991309642791748
+    },
+    {
+      "word": " major",
+      "start": 12.18,
+      "end": 12.62,
+      "probability": 0.9723466634750366
+    },
+    {
+      "word": " finding",
+      "start": 12.62,
+      "end": 13.18,
+      "probability": 0.9154425263404846
+    },
+    {
+      "word": " in",
+      "start": 13.18,
+      "end": 13.64,
+      "probability": 0.9845430254936218
+    },
+    {
+      "word": " premixed",
+      "start": 13.64,
+      "end": 14.12,
+      "probability": 0.4477783590555191
+    },
+    {
+      "word": " area.",
+      "start": 14.12,
+      "end": 14.5,
+      "probability": 0.9604098796844482
+    },
+    {
+      "word": " Read",
+      "start": 15.1,
+      "end": 15.32,
+      "probability": 0.9881414175033569
+    },
+    {
+      "word": " the",
+      "start": 15.32,
+      "end": 15.54,
+      "probability": 0.9976372718811035
+    },
+    {
+      "word": " finding",
+      "start": 15.54,
+      "end": 15.92,
+      "probability": 0.976065456867218
+    },
+    {
+      "word": " before",
+      "start": 15.92,
+      "end": 16.5,
+      "probability": 0.9878692030906677
+    },
+    {
+      "word": " checking",
+      "start": 16.5,
+      "end": 17.0,
+      "probability": 0.9957250356674194
+    },
+    {
+      "word": " the",
+      "start": 17.0,
+      "end": 17.24,
+      "probability": 0.9974818825721741
+    },
+    {
+      "word": " correction.",
+      "start": 17.24,
+      "end": 17.6,
+      "probability": 0.9907886385917664
+    }
+  ]
+}

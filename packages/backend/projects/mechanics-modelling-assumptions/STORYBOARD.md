@@ -2,6 +2,29 @@
 
 Original 16:9 explainer: **4 minutes 37 seconds (277 seconds), six scenes**. Re-cut to the recording's scope ceiling in `FRAME-LOG.md`, under `../mechanics-syllabus-map/TEACHING-STANDARD.md` §6 and `../mechanics-syllabus-map/PACING.md`. Scene lengths below round the generated narration and inserted silences to whole seconds. Exact timings are in `verify-build.md`.
 
+## Additive pass (§§10–14, 2026-09-07)
+
+The six scenes and every narration line below are retained. S05 already tells the
+box/desk/pulley/hanging-sphere story before matching, so no speech is regenerated.
+Local faster-whisper rechecks the same six MP3s; `focus` events resolve diagram
+targets from individual spoken words, including repeated mentions. Existing
+silence and scene durations stay unchanged.
+
+The visual updates supersede the original visual directions below: diagrams are
+present from each scene's first frame, compact muted captions sit beside them,
+and opening/recap outcomes have a pulley/table motif. S05 displays the complete
+problem before matching: the source's 5 kg box, 2 kg sphere, connecting string,
+desk and pulley, plus all five desired simplifications. The givens remain visible
+through every answer. S03 retains the cliff and trajectory and adds the source's
+height graph beside it, with the model written before the zero/one-second readings.
+Word-timed loose rings point at diagram objects/readings; underlines follow the
+problem phrases as spoken. No new calculations or vocabulary are introduced.
+
+Original-visual reference checked: `9542f33` contains string/pulley/rod drawings,
+including the zigzag stretching connector and uniform-rod mass marks. Reuse those
+ideas inside S04 only, without its chrome or additional scenes. That revision has
+no cliff/stone scene; retain and enrich the cliff already present in this re-cut.
+
 ## Syllabus and outcomes
 
 Open with the exact 4.1 excerpt **“use the model of a ‘smooth’ contact”**, Cambridge 9709 (2026–2027), printed p.31, as recorded in `../mechanics-syllabus-map/SYLLABUS-9709-MECHANICS.md`. This is an excerpt, not the entire bullet. The source recording supplies the wider introductory modelling vocabulary; no connected-particle force calculation is taught here.
