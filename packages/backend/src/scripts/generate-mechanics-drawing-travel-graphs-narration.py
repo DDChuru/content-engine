@@ -4,7 +4,7 @@ import concurrent.futures, hashlib, json, os, re, subprocess, sys
 from pathlib import Path
 import numpy as np
 ROOT=Path(__file__).resolve().parents[4]
-WORK=Path('/tmp/verify-travel-narration'); WORK.mkdir(exist_ok=True)
+WORK=Path('/tmp/verify-travel-v4-narration'); WORK.mkdir(exist_ok=True)
 AUDIO=ROOT/'packages/backend/src/remotion/public/audio/mechanics'
 SAMPLE_RATE=44100
 
@@ -76,11 +76,24 @@ def generate(scene):
     print(scene['id'],round(position/SAMPLE_RATE,3),'seconds',flush=True)
 
 if __name__=='__main__':
-    jobs=scenes()
+    jobs=[s for s in scenes() if s['id'] in ('s04','s06','s09')]
     if len(sys.argv)>1:
         generate(next(s for s in jobs if s['id']==sys.argv[1]))
     else:
         with concurrent.futures.ThreadPoolExecutor(max_workers=3) as executor:
             result=list(executor.map(run,jobs))
+        original=json.loads(subprocess.check_output(['git','show','1dc49cb:packages/backend/src/remotion/public/transcripts/mechanics/drawing-travel-graphs.json'],cwd=ROOT))
+        for reused in original['scenes']:
+            if reused['id'] in ('s04','s06'): continue
+            target=AUDIO/reused['audio']
+            target.write_bytes(subprocess.check_output(['git','show','1dc49cb:'+str(target.relative_to(ROOT))],cwd=ROOT))
+            reused.update(reusedFrom='1dc49cb',audioSha256=hashlib.sha256(target.read_bytes()).hexdigest(),holds=[],beats=[],tempo='brisk',voiceSpeed=1.0)
+            if reused['id']=='s01':
+                reused['audioOffset']=8
+                reused['duration']+=8
+                reused['cues']={k:v+8 for k,v in reused['cues'].items()}
+                reused['words']=[{**w,'start':w['start']+8,'end':w['end']+8} for w in reused['words']]
+            result.append(reused)
+        result.sort(key=lambda s:['s01','s02','s03','s04','s05','s06','s07','s09','s08'].index(s['id']))
         (WORK/'timing.json').write_text(json.dumps(result,indent=2)+'\n')
-        print('TOTAL',sum(s['sampleDuration'] for s in result))
+        print('TOTAL',sum(s.get('sampleDuration',s.get('duration',0)) for s in result))

@@ -1,124 +1,173 @@
-# Storyboard: Drawing travel graphs
+# Storyboard: Drawing Travel Graphs — v4
 
-Original 16:9 explainer: **eight scenes, target at most 5:15**. All nine sections of `../mechanics-syllabus-map/TEACHING-STANDARD.md` apply, with `../mechanics-syllabus-map/PACING.md`. `FRAME-LOG.md` is the content ceiling. It confirms the cyclist journey only: the lift, ball and other journeys in the old NOTES/storyboard are outside that recording and are omitted. No gravity calculation is needed; the Paper 4 convention is g = 10 m s⁻².
+Base: Sol's original `1dc49cb`. Preserve recipe → segments → gradient/area bridge → lift → both graphs → ball → sketch/plot → NEW cyclist close → recap. Preserve shaded areas, colour-linked segments, tracing dots, lift/ball hardware and stroke-written paper. Plain headers replace lab words and step chips only.
 
-## Syllabus and outcomes
+Target 5:30–6:30. Slow scenes use voice gYWKdgLtqjPO3D5uDrDP at 0.9; brisk at 1.0. All bracketed pauses are inserted silence, never spoken. Every result hold freezes the entire scene for 2 s; question pauses precede answers. Audio S01/S02/S03/S05/S07/S08 is byte-identical to Sol. S01 adds an eight-second silent syllabus/outcome prelude over the original graph motif. S09 is inserted BEFORE S08 so all original audio names remain stable.
 
-Plain opening card, exact excerpt from Cambridge 9709 (2026–2027), 4.2, printed/PDF p.32:
+Outcomes (opening and recap, identical): Turn words into graphs; Use gradient and area; Check signs and shapes. Opening excerpt: Cambridge 9709 §4.2, “sketch and interpret displacement–time graphs and velocity–time graphs”. Small paired-graph motif accompanies the syllabus caption. Every other frame retains a diagram, graph or paper; compact captions only.
 
-> sketch and interpret displacement–time graphs and velocity–time graphs
+Source: original NOTES.md and FRAME-LOG.md; teaching additions specifically requested by Durai in TEACHING-STANDARD.md §§7–12. No expansion into other mechanics topics.
 
-Source: https://www.cambridgeinternational.org/Images/697427-2026-2027-syllabus.pdf, fetched with curl and extracted with pdftotext. This excerpt ends before the bullet's clauses on area and gradients. The source map now records the verified excerpt.
+## S01 — Recipe
 
-**By the end you can...**
-
-1. **Turn journey descriptions into graph shapes.**
-2. **Use signed area to find displacement.**
-3. **Explain a journey using displacement-time gradients.**
-
-These are O1–O3. Show each outcome separately. S06 repeats and ticks exactly these words before the final journey applies them.
-
-## Presentation and timing contract
-
-- Preserve the Modelling Assumptions visual system: graphite, ivory paper, neutral ink, one green accent, plain headers, graphite fade-through, handwritten SVG strokes and pen. No captions, decorative labels or interface chrome.
-- At most three regions including the header: one graph and one card or lined-paper panel. The requested paired view uses exactly three regions: header, velocity graph, displacement graph; no extra card or paper. At most twelve words per card or handwritten line. One new annotation or card per spoken cue; erase previous annotations between legs.
-- Each worked part begins over bare labelled axes with a conversational setup stating the situation, goal and governing idea, ending **“let's get drawing”**. Its graph and working start only after that phrase ends.
-- All visual changes follow locally transcribed words. Editorial durations below are budgets; final timings use encoded narration. Slow S04 and S07 use ElevenLabs speed 0.9; every other scene uses 1.0. The new story scene S08 is also slow, as explicitly requested in the revision.
-- Bracketed directions are inserted silence, never spoken. Finish each numerical result and its emphasis ring before its two-second hold; freeze all drawing and the pen. S06 has a three-second question hold.
-- The axis names sit beyond the final tick; time values sit below the whole plot, clear of negative-velocity sections. Stagger only if needed. Audit bounding boxes for axis text against other axis text, tick strokes, graph curves and handwritten annotations.
-- Use the source cyclist data: constant +6 m/s for 10 s; uniform deceleration to rest over 12 s; rest 5 s; uniform reverse acceleration to −4 m/s over 4 s; constant return to A. Key times 0,10,22,27,31,53; displacement 0,60,96,96,88,0.
-- On curved displacement sections, Δs/Δt is **average velocity**, the chord gradient. The tangent gradient changes; explicitly distinguish these. A zero or negative gradient refers to displacement-time, not velocity-time.
-
-## S01 — What you will learn
-
-**Duration:** 25 seconds
+**Duration:** 22.393 seconds
 tempo: brisk
 voiceSpeed: 1.0
-**Maps to:** O1, O2, O3. **Source:** f001–f003; Cambridge 4.2 opening required by §1.
 
-**Narration:** “Syllabus four point two: sketch and interpret displacement time graphs and velocity time graphs. By the end you can turn journey descriptions into graph shapes; use signed area to find displacement; and explain a journey using displacement time gradients.”
+**Viewer sees:** Original recipe layout and graph motif, preceded by syllabus and outcome captions. Plain header.
 
-**Viewer sees:** Plain syllabus card, then the three outcome cards separately. Header identifies `Syllabus 4.2 · p.32 (excerpt)`; change it to `By the end you can...` on those words.
+**Narration:** “A travel graph turns a journey into shapes. Choose positive. Split the story into phases and add their durations to mark key times. Choose each phase's shape, label axes and units, then mark key values and sign changes.”
 
-## S08 — Follow the cyclist
+**Cue keywords:** `journey` at 9.38 s; `positive` at 10.80 s; `key-times` at 15.22 s; `axes-and-units` at 18.28 s
 
-**Duration:** 38 seconds
+## S02 — Words become segments
+
+**Duration:** 18.233 seconds
+tempo: brisk
+voiceSpeed: 1.0
+
+**Viewer sees:** Original colour-linked velocity segments and scenario captions, cumulative times 0, 4, 6, 9, T.
+
+**Narration:** “Read the verbs as drawing instructions. Steadily gives a horizontal velocity line. Uniformly slows gives a straight slope to zero. Waits sits on the axis. Returns belongs below zero, because away is positive. Add durations; the phase times are cumulative.”
+
+**Cue keywords:** `steadily` at 2.14 s; `slows` at 5.72 s; `waits` at 9.20 s; `returns` at 11.30 s
+
+## S03 — Gradient and area bridge
+
+**Duration:** 17.868 seconds
+tempo: brisk
+voiceSpeed: 1.0
+
+**Viewer sees:** Original paired graphs, slope triangle, signed shaded areas and shared tracing dots. Do not introduce lift working here.
+
+**Narration:** “Displacement-time gradient gives velocity; steeper means faster. Velocity-time height must match that gradient at the same instant. Going back, accumulate signed areas from the starting displacement. Positive area adds; negative area subtracts. Now use that bridge to build both graphs for this lift.”
+
+**Cue keywords:** `gradient` at 0.90 s; `same-instant` at 7.04 s; `signed-areas` at 9.00 s; `bridge` at 15.02 s
+
+## S04 — Lift worked build
+
+**Duration:** 87.040 seconds
 tempo: slow
 voiceSpeed: 0.9
-**Maps to:** O1. **Source:** f015–f025, animated as required by §9.
 
-**Narration:** “Consider a cyclist passing point A, already moving at six metres per second. For the first ten seconds, he holds that speed. Then he gradually slows down. Watch him getting slower and slower, until he finally comes to a stop. He rests. [hold 2 s] Now he turns, pedals back the other way, and speeds up to four metres per second. He keeps that speed until he is home at A. Picture the ride before we draw it.”
+**Viewer sees:** Bare animated original lift through “get drawing” and the written two-second pause. Then original lift/stacked graphs/paper arrangement. Words and symbol formula lines remain above numerical working. v=0+1.5×2=3; t=2+4=6; t=6+2=8; s₁=½×2×3=3; s₂=4×3=12; s(6)=3+12=15; s₃=½×2×3=3; s=3+12+3=18. Complete each calculation before its graph segment. Ring every result for its actual inserted hold.
 
-**Viewer sees:** A large ordinary track, A at the starting position, and a simple cyclist with rotating wheels. Show the six-metre-per-second cruise, gradual braking, complete stop and two-second rest, turn, accelerating return, then constant return to A. Track markers appear at spoken leg changes. Show only numbers already spoken, on one replacing card. No axes or equations. The first ten seconds are constant speed as in the recording and all retained calculations; do not invent an initial acceleration from rest. The return acceleration supplies the visible speed-up. IDs stay stable: S08 plays immediately after S01, preserving unchanged audio filenames.
+**Narration:** “Consider a lift that starts from rest, accelerates at one point five metres per second squared for two seconds, cruises for four seconds, then brakes to a stop in two seconds. Upwards positive. Let's get drawing. [pause 2 s]”
 
-## S02 — Read the graph correctly
+**Narration:** “What speed? [pause 0.5 s] Velocity equals initial velocity plus acceleration times time. V equals u plus a t. Three metres per second. [hold 2 s]”
 
-**Duration:** 22 seconds
-tempo: brisk
-voiceSpeed: 1.0
-**Maps to:** O1, O2, O3. **Source:** f004–f013.
+**Narration:** “When does cruising end? [pause 0.5 s] Six seconds. [hold 2 s]”
 
-**Narration:** “Now the velocity time graph. [hold 1.5 s] Gradient gives acceleration. Area gives displacement, because velocity accumulates over time. Below the axis, area is negative. Now the displacement time graph. [hold 1.5 s] Gradient gives velocity. A falling line means returning.”
+**Narration:** “When does it stop? [pause 0.5 s] Eight seconds. [hold 2 s]”
 
-**Viewer sees:** Each exact spoken graph signpost appears on a plain card for its 1.5-second hold before its graph appears; the header switches with it. One abstract graph at a time, without numerical examples. Velocity-time: reveal a straight rising line, then its triangular area; replace with a below-axis region at negative. On displacement-time, replace the graph with a straight falling segment and one short card. Cards: `Gradient gives acceleration`, `Signed area gives displacement`, `Below-axis area is negative`, `Gradient gives velocity`, `Negative velocity means returning`.
+**Narration:** “What displacement does each area give? [pause 0.5 s] Displacement equals area under the velocity-time graph. S equals half u plus v, times t. First triangle: three metres. [hold 2 s]”
 
-## S03 — Velocity–time graph
+**Narration:** “The rectangle? [pause 0.5 s] Twelve metres. [hold 2 s]”
 
-**Duration:** 34 seconds
-tempo: brisk
-voiceSpeed: 1.0
-**Maps to:** O1. **Source:** f015–f039.
+**Narration:** “Accumulated height? [pause 0.5 s] Fifteen metres. [hold 2 s]”
 
-**Narration:** “Now the velocity time graph. [hold 1.5 s] For our cyclist, outward is positive. Each phrase chooses a shape. Let's get drawing. Six metres per second for ten seconds: horizontal. Slowing uniformly over twelve seconds reaches rest at twenty-two. Resting five seconds takes us to twenty-seven. Accelerating backwards for four seconds reaches minus four at thirty-one. Keep minus four until returning to A at T.”
+**Narration:** “Braking adds? [pause 0.5 s] Three metres, still upwards. [hold 2 s]”
 
-**Viewer sees:** Plain velocity-time signpost and 1.5-second hold, then bare velocity-time axes through the complete setup. Then draw five segments individually at their spoken phases. Reveal each endpoint time/value when said. Each short card replaces its predecessor: `Constant velocity`, `Uniform deceleration`, `At rest`, `Accelerating in reverse`, `Constant return velocity`. The final time label is T until the area calculation finds it. No working during setup.
+**Narration:** “Where does it finish? [pause 0.5 s] Eighteen metres above the start. [hold 2 s]”
 
-## S04 — Find when the cyclist returns
-
-**Duration:** 52 seconds
-tempo: slow
-voiceSpeed: 0.9
-**Maps to:** O2. **Source:** f040–f056.
-
-**Narration:** “For the same cyclist, find the return time. Returning to A means the outward and return areas match. Let's get drawing. [pause 2 s] The rectangle gives sixty metres. [hold 2 s] The triangle adds thirty-six metres. [hold 2 s] Together, ninety-six metres outward. [hold 2 s] The reverse triangle accounts for eight metres. [hold 2 s] That leaves eighty-eight metres to return. [hold 2 s] At four metres per second, that's twenty-two more seconds. [hold 2 s] Add the first thirty-one: T is fifty-three seconds. Back at A. [hold 2 s]”
-
-**Viewer sees:** Bare axes through setup, then redraw the established velocity graph before the first area is shaded. Lined paper writes `6 × 10 = 60 m`, `12 × 6 / 2 = 36 m`, `60 + 36 = 96 m`; move to fresh paper for `4 × 4 / 2 = 8 m`, `96 - 8 = 88 m`, `88 / 4 = 22 s`; then `T = 31 + 22 = 53 s`. At most three lines visible. Shade only the region currently discussed. Ring every result through its 60-frame hold. Change the T axis label to 53 only at the final result.
+**Cue keywords:** `setup` at 0.55 s; `draw` at 18.52 s; `speed` at 21.61 s; `formula-v` at 22.85 s; `symbol-v` at 29.09 s; `three` at 32.65 s; `six` at 38.67 s; `eight` at 43.34 s; `area-formula` at 49.22 s; `area-symbol` at 54.22 s; `triangle` at 59.60 s; `rectangle` at 64.46 s; `height` at 69.13 s; `braking` at 74.07 s; `finish` at 80.56 s
 
 ## S05 — One journey, both graphs
 
-**Duration:** 22 seconds
+**Duration:** 17.345 seconds
 tempo: brisk
 voiceSpeed: 1.0
-**Maps to:** O1, O3. **Source:** f008–f011, f066–f071.
 
-**Narration:** “Now the displacement time graph. [hold 1.5 s] One journey, both graphs. Constant velocity gives a straight displacement line: equal changes in equal times. Rest is horizontal. Changing velocity gives a curve. A straight join hides that change.”
+**Viewer sees:** Original side-by-side journey graphs; retain positive displacement during negative velocity, continuous displacement and dashed idealised velocity jump.
 
-**Viewer sees:** After the plain signpost, show the same cyclist velocity and displacement graphs side by side, filling two large regions. Link the currently explained leg with the same accent and tracing dots; other legs stay neutral. Shade the matching velocity area. Use the same constant, rest and changing-velocity phases as before. The header carries the current idea, with no fourth card region. At the straight-line mistake, show a dashed chord over the existing slowing curve; no new system or calculation.
+**Narration:** “Positive velocity makes displacement rise. Zero velocity makes it level. Negative velocity makes it fall. On the return, velocity is negative, but displacement remains positive until the traveller reaches the start. Keep the whole return leg; arriving back does not erase it.”
 
-## S06 — Check before the final journey
+**Cue keywords:** `positive-velocity` at 0.00 s; `zero-velocity` at 3.16 s; `negative-velocity` at 5.32 s; `reaches-the-start` at 12.48 s
 
-**Duration:** 24 seconds
-tempo: brisk
-voiceSpeed: 1.0
-**Maps to:** O1, O2, O3. **Source:** f012–f014, f074–f080.
+## S06 — Ball sign check
 
-**Narration:** “If velocity is negative, must displacement be negative? [hold 3 s] No. Our returning cyclist stays beyond A until arriving back. You can turn journey descriptions into graph shapes; use signed area to find displacement; and explain a journey using displacement time gradients. Now apply all three.”
-
-**Viewer sees:** Question card `Negative velocity: must displacement be negative?` stays unchanged for 90 frames. Answer card `Returning can still mean positive displacement`. Then repeat the three exact outcome cards and tick each after its spoken statement. The full journey follows; do not add a recap after it.
-
-## S07 — Displacement–time graph
-
-**Duration:** 75 seconds
+**Duration:** 86.831 seconds
 tempo: slow
 voiceSpeed: 0.9
-**Maps to:** O3, supported by O1 and O2. **Source:** f057–f073; annotations required by §7.
 
-**Narration:** “Now the displacement time graph. [hold 1.5 s] For our cyclist, draw the outward ride, stop and return. Slopes tell velocity. Let's get drawing. First leg? Sixty metres in ten seconds: six metres per second, positive and steady outward. [hold 2 s] Slowing? Thirty-six in twelve: average velocity three, positive. The tangent falls from six to zero. [hold 2 s] Stopped? Zero change in five seconds: zero velocity, stationary. [hold 2 s] Accelerating backwards? Minus eight in four: average minus two, returning. The tangent falls from zero to minus four. [hold 2 s] Final leg? Minus eighty-eight in twenty-two: minus four, constant return velocity. Zero displacement at fifty-three seconds completes the journey. [hold 2 s]”
+**Viewer sees:** Bare animated original ball through spoken setup and pause. g=10 throughout; u=15. Words + v=u+at before v=15−10t. At apex 0=15−10t, t=1.5 s. Words + s=½(u+v)t before h=½×1.5×15=11.25 m. Return t=3 s, v(3)=−15 m/s. Original concave-down arch, positive/negative shaded triangles, tracing dots, hardware and paper. Faster launch contrast retains same −10 gradient.
 
-**Viewer sees:** Plain displacement-time signpost and 1.5-second hold, then bare displacement-time axes until setup finishes. Build all five legs in order, retaining completed curve sections. Each leg: draw its curve; handwrite Δs, then Δt on its gradient triangle; then handwrite its gradient ON the graph. First `v = 60/10 = 6`; slowing `average v = 36/12 = 3`; stop `v = 0/5 = 0`; reverse acceleration `average v = -8/4 = -2`; return `v = -88/22 = -4`. All velocities are m/s. Curved legs use a dashed chord triangle and an `Average over this leg` card, with changing endpoint tangent directions. Other cards state positive/zero/negative physical meaning. Ring the gradient result before each 60-frame hold. Clear only the previous annotations at the next leg, retain the journey. End on the complete displacement graph, return annotation and final ring.
+**Narration:** “Consider a ball thrown straight up at fifteen metres per second. It goes up, stops, comes back down. Displacement is zero back at the start; distance counts up and down. Vector versus scalar. Okay, enough chatter, let's get drawing. [pause 2 s]”
 
-## Handoff
+**Narration:** “Why a straight velocity line? [pause 0.5 s] Velocity equals initial velocity plus acceleration times time. V equals u plus a t. Gravity is ten downwards. V equals fifteen minus ten t.”
 
-Playback order: S01, S08, S02, S03, S04, S05, S06, S07. Keep S01 audio byte-for-byte. Revoice only new/changed scenes; retain the source cyclist numbers and rename its origin A consistently. Signposts are spoken on plain cards, each followed by 1.5 seconds of inserted silence; graph headers explicitly identify velocity-time or displacement-time. The S08 story is an explicit third slow scene requested by the revision. Stage 1: storyboard, narration and resolved local transcript; commit and push. Stage 2: composition, still audit and verification report; commit and push. No video render.
+**Narration:** “Where does direction change? [pause 0.5 s] At zero velocity: one point five seconds. [hold 2 s]”
 
-Restore from 1dc49cb: phase polygons shaded under velocity; one shared accent on matching velocity/displacement legs; a moving trace dot; a side-by-side view of the same cyclist in S05. Keep only two graph regions and the header in that view. In single-graph scenes enlarge the graph region and its plot; preserve the handwritten paper and closing annotations. Audit every cue, every hold and representative movement frames, including axis text/tick/curve collisions and the motionless rest.
+**Narration:** “How high? [pause 0.5 s] Displacement equals area under the velocity-time graph. S equals half u plus v, times t. Eleven point two five metres. [hold 2 s]”
+
+**Narration:** “When back at hand height? [pause 0.5 s] Three seconds. Equal signed areas cancel. [hold 2 s]”
+
+**Narration:** “What velocity then? [pause 0.5 s] Minus fifteen metres per second. [hold 2 s]”
+
+**Narration:** “What if thrown faster? [pause 0.5 s] Higher, longer; same gradient.”
+
+**Cue keywords:** `setup` at 0.55 s; `draw` at 23.55 s; `straight` at 26.48 s; `formula-v` at 28.75 s; `symbol-v` at 34.53 s; `substitute` at 41.57 s; `direction-change` at 44.96 s; `area-formula` at 53.16 s; `area-symbol` at 57.22 s; `height` at 62.80 s; `catch` at 67.08 s; `signed-areas` at 70.80 s; `down` at 75.34 s; `contrast` at 80.92 s
+
+## S07 — Sketch versus plot
+
+**Duration:** 14.602 seconds
+tempo: brisk
+voiceSpeed: 1.0
+
+**Viewer sees:** Original sketch and accurate plot alongside compact checks; graphs remain visible from first frame.
+
+**Narration:** “A sketch needs correct shapes, signs and phase order. An accurate plot also needs calculated coordinates and consistent scales. Check both for labelled axes, units, key times and values. Show the negative region whenever motion reverses.”
+
+**Cue keywords:** `sketch` at 0.12 s; `accurate-plot` at 3.22 s; `labelled-axes` at 8.68 s; `negative-region` at 12.02 s
+
+## S09 — Cyclist journey close
+
+**Duration:** 87.249 seconds
+tempo: slow
+voiceSpeed: 0.9
+
+**Viewer sees:** Slow story on a bare track, cyclist visibly cruising, braking to stop, resting and returning. No axes or numbers until displacement signpost. Use original WORD_MODEL numerically: cruise (0,0)→(4,12); uniform braking →(6,15); rest →(9,15); constant return →(14,0). Draw displacement completely first. Handwrite Δs and Δt on each leg, then gradient +3, positive→0 (chord average +1.5), 0, −3, with 2 s holds. General words and v=Δs/Δt lead. Only after complete displacement bring velocity beside it; read all four velocity legs in sequence with shaded areas and tracing dot. Never alternate graphs within a leg. Three regions maximum: track, displacement panel, velocity panel. Annotations live inside the graphs.
+
+**Narration:** “Consider a cyclist who leaves A, cruises away, slows to a stop, rests, then returns to A. [pause 2 s]”
+
+**Narration:** “Now the displacement-time graph. Gradient equals displacement change over time change. V equals delta s over delta t.”
+
+**Narration:** “Cruising: what slope? [pause 0.5 s] Twelve metres in four seconds: positive three. [hold 2 s]”
+
+**Narration:** “Slowing: what changes? [pause 0.5 s] Three metres in two seconds; positive slope flattens. Chord: average velocity. [hold 2 s]”
+
+**Narration:** “Resting: what slope? [pause 0.5 s] Zero metres in three seconds: zero gradient. [hold 2 s]”
+
+**Narration:** “Returning: what sign? [pause 0.5 s] Minus fifteen metres in five seconds: negative three. [hold 2 s]”
+
+**Narration:** “Now the velocity-time graph.”
+
+**Narration:** “Cruising? [pause 0.5 s] Positive three, horizontal. [hold 2 s]”
+
+**Narration:** “Slowing? [pause 0.5 s] Straight down to zero. [hold 2 s]”
+
+**Narration:** “Resting? [pause 0.5 s] Zero along the axis. [hold 2 s]”
+
+**Narration:** “Returning? [pause 0.5 s] Minus three, below zero. The jump idealises turning. [hold 2 s]”
+
+**Cue keywords:** `setup` at 0.55 s; `cruise-story` at 3.55 s; `slow-story` at 4.93 s; `rest-story` at 6.71 s; `return-story` at 8.03 s; `displacement` at 11.20 s; `formula` at 14.04 s; `symbols` at 18.32 s; `leg1` at 21.82 s; `leg2` at 28.89 s; `leg3` at 43.18 s; `leg4` at 51.81 s; `velocity` at 60.16 s; `v1` at 63.75 s; `v2` at 68.99 s; `v3` at 73.88 s; `v4` at 79.91 s
+
+## S08 — Recap
+
+**Duration:** 18.390 seconds
+tempo: brisk
+voiceSpeed: 1.0
+
+**Viewer sees:** Original recap paired graphs and direction motif. Tick exactly the opening outcomes. Keep original recap narration.
+
+**Narration:** “Recap. Choose positive. Mark the key times. Turn each phrase into the right segment. On displacement-time, gradient gives velocity. On velocity-time, signed area gives displacement change. Label axes, units and key values. Show every stop and every sign change. Then run the examiner's shape check.”
+
+**Cue keywords:** `key-times` at 2.02 s; `gradient` at 6.54 s; `signed-area` at 9.24 s; `shape-check` at 17.64 s
+
+## Handoff and verification
+
+Resolve all cues from local Whisper timestamps before stage 1 commit/push. Stage 2 preserves composition ID, Root registration, transcript name and audio filename pattern. Duration follows actual audio plus minimal tails, never truncates words or holds. No video render or deployment.
+
+Still audit: capture every cue and both ends of every result hold plus story/graph boundaries; assert ≤3 regions on new frames. Document inherited Sol four-region frames separately. Check axis text bounding boxes pairwise, including 6 versus t / s and 15 versus 18; place time name beyond last tick and stagger close y labels. Check silent holds are pixel-identical. Save verify-build.md and machine measurements.
+
+Stage 1 measured duration: **369.953 seconds**. All 70 spoken cues resolved locally. S01 syllabus/outcomes use the explicitly silent 0–8 s prelude; they are not claimed as spoken cues.
