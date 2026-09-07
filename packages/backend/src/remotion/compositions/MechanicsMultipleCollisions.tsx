@@ -4,7 +4,6 @@ import {
   AbsoluteFill,
   Artifact,
   Audio,
-  interpolate,
   staticFile,
   useCurrentFrame,
   useVideoConfig,
@@ -21,6 +20,7 @@ const TRANSITION_FRAMES = 15;
 const T = {
   bg: "#171c20",
   paper: "#f6f3eb",
+  caption: "#b9bcb2",
   ink: "#273238",
   line: "#d8dad5",
   text: "#e9e7e0",
@@ -94,29 +94,22 @@ function heldTime(s: Scene, t: number): number {
   return hold ? hold.start : t;
 }
 
-// Same fade-through presentation as MechanicsVelocityTimeGraphs: the two
-// scenes never remain visible together. Audio runs outside the fade overlap.
+// Cut the visuals at the midpoint of the existing overlap, keeping a diagram
+// visible on every frame. Sequence lengths and audio timing stay unchanged.
 type FadeProps = { background: string };
 const FadeThrough: React.FC<
   TransitionPresentationComponentProps<FadeProps>
 > = ({
   children,
-  passedProps,
   presentationDirection,
   presentationProgress,
 }) => {
   const opacity =
     presentationDirection === "exiting"
-      ? interpolate(presentationProgress, [0, 0.5], [1, 0], {
-          extrapolateLeft: "clamp",
-          extrapolateRight: "clamp",
-        })
-      : interpolate(presentationProgress, [0.5, 1], [0, 1], {
-          extrapolateLeft: "clamp",
-          extrapolateRight: "clamp",
-        });
+      ? Number(presentationProgress < 0.5)
+      : Number(presentationProgress >= 0.5);
   return (
-    <AbsoluteFill style={{ background: passedProps.background, opacity }}>
+    <AbsoluteFill style={{ opacity }}>
       {children}
     </AbsoluteFill>
   );
@@ -143,23 +136,24 @@ const Header: React.FC<{ children: React.ReactNode }> = ({ children }) => (
 );
 const Card: React.FC<{
   text: React.ReactNode;
-  centre?: boolean;
+  syllabus?: boolean;
   tick?: boolean;
-}> = ({ text, centre = false, tick = false }) => (
+}> = ({ text, syllabus = false, tick = false }) => (
   <div
     data-region="card"
     data-card="true"
+    data-caption={syllabus ? undefined : "true"}
     style={{
       position: "absolute",
-      left: centre ? 300 : 1120,
-      top: centre ? 330 : 370,
-      width: centre ? 1320 : 730,
-      minHeight: 230,
-      padding: "55px 58px",
+      left: 1120,
+      top: 480,
+      width: "max-content",
+      maxWidth: 740,
+      padding: "22px 26px",
       boxSizing: "border-box",
-      background: T.paper,
+      background: T.caption,
       color: T.ink,
-      fontSize: centre ? 62 : 48,
+      fontSize: 34,
       lineHeight: 1.35,
       borderRadius: 8,
     }}
@@ -168,10 +162,10 @@ const Card: React.FC<{
     {tick && (
       <svg
         aria-hidden="true"
-        width="70"
-        height="60"
+        width="35"
+        height="30"
         viewBox="0 0 70 60"
-        style={{ display: "block", marginTop: 28 }}
+        style={{ display: "block", marginTop: 12 }}
       >
         <path
           d="M8 28 L27 47 L61 9"
@@ -1227,6 +1221,7 @@ interface BallState {
   radius?: number;
   mass?: number;
   unknown?: "v" | "w";
+  velocityLabel?: "v" | "w";
   showVelocity?: boolean;
   showMass?: boolean;
   accent?: boolean;
@@ -1308,7 +1303,7 @@ const Sphere: React.FC<{
             stroke={colour}
             strokeWidth={4}
           />
-          {numeric && (
+          {(numeric || ball.velocityLabel) && (
             <text
               data-diagram-text="true"
               x={(start + end) / 2}
@@ -1317,8 +1312,11 @@ const Sphere: React.FC<{
               fill={T.text}
               fontSize={30}
             >
-              {ball.unknown ? (
-                <Subscript letter={ball.unknown} sub="B" />
+              {ball.unknown || ball.velocityLabel ? (
+                <Subscript
+                  letter={(ball.unknown ?? ball.velocityLabel)!}
+                  sub="B"
+                />
               ) : (
                 <>
                   {ball.v > 0 ? "+" : "−"}
@@ -1417,6 +1415,25 @@ const Track: React.FC<{
     {children}
   </svg>
 );
+const SpheresMotif: React.FC = () => (
+  <svg
+    data-region="diagram"
+    width="600"
+    height="260"
+    viewBox="0 0 600 260"
+    style={{ position: "absolute", left: 240, top: 410 }}
+  >
+    <path d="M35 160 H565 M35 174 H565" stroke={T.muted} strokeWidth={2} />
+    {[130, 300, 470].map((x, i) => (
+      <Sphere
+        key={i}
+        ball={{ id: ["A", "B", "C"][i], x, v: 0 }}
+        index={i}
+        y={124}
+      />
+    ))}
+  </svg>
+);
 const Opening: React.FC<{ s: Scene }> = ({ s }) => {
   const { fps } = useVideoConfig();
   const t = useCurrentFrame() / fps;
@@ -1437,19 +1454,20 @@ const Opening: React.FC<{ s: Scene }> = ({ s }) => {
           ? "By the end you can..."
           : "Syllabus 4.3 · p.32"}
       </Header>
+      <SpheresMotif />
       {state === "quote1" && (
         <Card
-          centre
+          syllabus
           text="use conservation of linear momentum to solve problems"
         />
       )}
       {state === "quote2" && (
         <Card
-          centre
+          syllabus
           text="that may be modelled as the direct impact of two bodies."
         />
       )}
-      {i >= 0 && <Card centre text={OUTCOMES[i]} />}
+      {i >= 0 && <Card text={OUTCOMES[i]} />}
     </>
   );
 };
@@ -1472,36 +1490,69 @@ const Method: React.FC<{ s: Scene }> = ({ s }) => {
     unique: "Give each new velocity a unique name",
     rebound: "Use the given rebound information",
   };
-  if (cards[state]) return <Card centre text={cards[state]} />;
-  if (state === "wall") {
-    const p = clamp(
-      (t - cue(s, "wall")) / Math.max(0.1, cue(s, "third") - cue(s, "wall")),
-    );
-    return (
-      <Track
-        numeric={false}
-        balls={[
-          { id: "B", x: 280 + p * 350, v: 3, showVelocity: true, accent: true },
-        ]}
-      >
-        <path
-          d="M740 150 V390 M740 150 l35 -20 M740 200 l35 -20 M740 250 l35 -20 M740 300 l35 -20 M740 350 l35 -20"
-          stroke={T.text}
-          strokeWidth={5}
-        />
+  const wall = t < cue(s, "third");
+  const change = clamp((t - cue(s, "separate")) / 0.6);
+  const named = t >= cue(s, "unique");
+  const balls: BallState[] = wall
+    ? [
+        {
+          id: "B",
+          x:
+            280 +
+            350 *
+              clamp((t - cue(s, "wall")) / (cue(s, "third") - cue(s, "wall"))),
+          v: 3,
+          showVelocity: true,
+          accent: true,
+        },
+      ]
+    : [
+        { id: "A", x: 170, v: 4 - 2 * change, showVelocity: true },
+        {
+          id: "B",
+          x: 440,
+          v: 3 + change,
+          showVelocity: true,
+          accent: true,
+          velocityLabel: named ? "v" : undefined,
+        },
+        { id: "C", x: 700, v: 1, showVelocity: true },
+      ];
+  return (
+    <>
+      <Track numeric={false} balls={balls}>
+        {wall && (
+          <path
+            d="M740 150 V390 M740 150 l35 -20 M740 200 l35 -20 M740 250 l35 -20 M740 300 l35 -20 M740 350 l35 -20"
+            stroke={T.text}
+            strokeWidth={5}
+          />
+        )}
+        {named && (
+          <g>
+            <path
+              data-arrow="true"
+              d="M440 285 H475 M463 277 L475 285 L463 293"
+              stroke={T.accent}
+              strokeWidth={4}
+              fill="none"
+            />
+            <text
+              data-diagram-text="true"
+              x={457}
+              y={250}
+              textAnchor="middle"
+              fill={T.text}
+              fontSize={30}
+            >
+              <Subscript letter="w" sub="B" />
+            </text>
+          </g>
+        )}
       </Track>
-    );
-  }
-  return state === "third" ? (
-    <Track
-      numeric={false}
-      balls={[
-        { id: "A", x: 170, v: 4, showVelocity: true },
-        { id: "B", x: 440, v: 3, showVelocity: true },
-        { id: "C", x: 700, v: 1, showVelocity: true, accent: true },
-      ]}
-    />
-  ) : null;
+      {cards[state] && <Card text={cards[state]} />}
+    </>
+  );
 };
 // A physically continuous hard-sphere trajectory. Units here are metres; each
 // sphere has radius .3 m solely to make contact geometry explicit in the visual.
@@ -1638,7 +1689,7 @@ const CollisionWorking: React.FC<{ s: Scene; which: 1 | 2; t: number }> = ({
             : undefined
         }
       />
-      {active >= 0 ? (
+      {which === 2 && t >= cue(s, "decision") ? null : active >= 0 ? (
         <Paper lines={lines} t={t} ringLine={ring} />
       ) : t >= cue(s, "conserve") ? (
         <Card text="Momentum before = momentum after" />
@@ -1650,9 +1701,12 @@ const FirstCollision: React.FC<{ s: Scene }> = ({ s }) => {
   const { fps } = useVideoConfig();
   const t = heldTime(s, useCurrentFrame() / fps);
   if (t < signpostEnd(s, "signpost"))
-    return t >= cue(s, "signpost") ? (
-      <Card centre text="Now collision 1" />
-    ) : null;
+    return (
+      <>
+        <CollisionWorking s={s} which={1} t={t} />
+        {t >= cue(s, "signpost") && <Card text="Now collision 1" />}
+      </>
+    );
   return <CollisionWorking s={s} which={1} t={t} />;
 };
 const DirectionCheck: React.FC<{ s: Scene }> = ({ s }) => {
@@ -1669,16 +1723,10 @@ const DirectionCheck: React.FC<{ s: Scene }> = ({ s }) => {
     "decide",
   ]);
   const outcome = ["diagram", "carry", "decide"].indexOf(state);
-  if (outcome >= 0) {
-    const key = ["diagram", "carry", "decide"][outcome];
-    return (
-      <Card centre text={OUTCOMES[outcome]} tick={t >= cue(s, `tick-${key}`)} />
-    );
-  }
-  if (state === "question")
-    return <Card centre text="Both moving left: can they collide?" />;
-  if (!state) return null;
-  const left = ["answer", "negative", "signed"].includes(state);
+  const left =
+    state === "question" ||
+    ["answer", "negative", "signed"].includes(state) ||
+    outcome >= 0;
   const start = cue(s, left ? "answer" : "rule");
   const p = clamp((t - start) / 7);
   const balls: BallState[] = left
@@ -1692,22 +1740,35 @@ const DirectionCheck: React.FC<{ s: Scene }> = ({ s }) => {
       ];
   return (
     <>
-      <Track balls={balls} numeric={false} />
-      <Card
-        text={
-          state === "signed" ? (
-            <>
-              A left of B: v<sub>A</sub> &gt; w<sub>B</sub> closes the gap
-            </>
-          ) : state === "negative" ? (
-            "More negative means faster leftwards"
-          ) : left ? (
-            "B is behind when moving left"
-          ) : (
-            "Same direction: faster from behind means a collision"
-          )
-        }
+      <Track
+        balls={outcome >= 0 ? [...balls, { id: "C", x: 760, v: 0 }] : balls}
+        numeric={false}
       />
+      {state && (
+        <Card
+          tick={
+            outcome >= 0 &&
+            t >= cue(s, `tick-${["diagram", "carry", "decide"][outcome]}`)
+          }
+          text={
+            outcome >= 0 ? (
+              OUTCOMES[outcome]
+            ) : state === "question" ? (
+              "Both moving left: can they collide?"
+            ) : state === "signed" ? (
+              <>
+                v<sub>A</sub> &gt; w<sub>B</sub>: the gap closes
+              </>
+            ) : state === "negative" ? (
+              "More negative means faster leftwards"
+            ) : left ? (
+              "B is behind when moving left"
+            ) : (
+              "Same direction: faster from behind means a collision"
+            )
+          }
+        />
+      )}
     </>
   );
 };
@@ -1715,12 +1776,20 @@ const LastCollision: React.FC<{ s: Scene }> = ({ s }) => {
   const { fps } = useVideoConfig();
   const t = heldTime(s, useCurrentFrame() / fps);
   if (t < signpostEnd(s, "signpost"))
-    return t >= cue(s, "signpost") ? (
-      <Card centre text="Now collision 2" />
-    ) : null;
+    return (
+      <>
+        <CollisionWorking s={s} which={2} t={t} />
+        {t >= cue(s, "signpost") && <Card text="Now collision 2" />}
+      </>
+    );
   if (t < cue(s, "decision")) return <CollisionWorking s={s} which={2} t={t} />;
   if (t < signpostEnd(s, "decision"))
-    return <Card centre text="Now: will they collide again?" />;
+    return (
+      <>
+        <CollisionWorking s={s} which={2} t={t} />
+        <Card text="Now: will they collide again?" />
+      </>
+    );
   const movement = clamp(
     (t - cue(s, "closing")) /
       Math.max(0.1, cue(s, "catch") - cue(s, "closing")),
@@ -1855,10 +1924,40 @@ function useStillAudit(
     const cardTexts = cards.map(
       (el) => el.getAttribute("data-ink-text") ?? el.textContent ?? "",
     );
+    const captions = Array.from(root.querySelectorAll("[data-caption]")).filter(
+      visible,
+    );
+    const visuals = regions.filter((el) =>
+      ["diagram", "paper"].includes(el.getAttribute("data-region") ?? ""),
+    );
+    regions.forEach((a, i) =>
+      regions.slice(i + 1).forEach((b) => {
+        if (overlap(a, b))
+          collisions.push({
+            text: a.getAttribute("data-region")!,
+            other: b.getAttribute("data-region")!,
+          });
+      }),
+    );
     setMeasurement(
       JSON.stringify({
         frame,
+        rootBounds: bounds.toJSON(),
         regions: regions.length,
+        visualCount: visuals.length,
+        textOnly: visuals.length === 0,
+        maxCaptionWords: Math.max(
+          0,
+          ...captions.map(
+            (el) => (el.textContent ?? "").trim().split(/\s+/).length,
+          ),
+        ),
+        maxCaptionWidthRatio: Math.max(
+          0,
+          ...captions.map(
+            (el) => el.getBoundingClientRect().width / bounds.width,
+          ),
+        ),
         cards: cardTexts,
         maxWords: Math.max(
           0,

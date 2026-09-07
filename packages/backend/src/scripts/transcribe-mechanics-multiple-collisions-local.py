@@ -186,6 +186,7 @@ JOBS = [
     },
     {
         "id": "s04",
+        "isolatedBeats": [1, 3],
         "audioFile": "multiple-collisions-s04.mp3",
         "cues": [
             {
@@ -244,7 +245,7 @@ JOBS = [
             {
                 "id": "after",
                 "searchTerms": [
-                    "afterwards"
+                    "afterwards", "afterward"
                 ]
             },
             {
@@ -268,10 +269,36 @@ JOBS = [
                 ]
             },
             {
-                "id": "equation",
+                "id": "principle",
                 "searchTerms": [
-                    "before equals after"
+                    "momentum before equals momentum after"
                 ]
+            },
+            {
+                "id": "principle-end",
+                "searchTerms": [
+                    "momentum before equals momentum after"
+                ],
+                "edge": "end"
+            },
+            {
+                "id": "formula",
+                "searchTerms": [
+                    "mass a times u a", "mass a times ua",
+                    "mass a times you a"
+                ]
+            },
+            {
+                "id": "formula-end",
+                "searchTerms": [
+                    "mass b times v b",
+                    "mass b times vb"
+                ],
+                "edge": "end"
+            },
+            {
+                "id": "equation",
+                "searchTerms": ["one times four", "1 times 4"]
             },
             {
                 "id": "simplify",
@@ -389,6 +416,7 @@ JOBS = [
     },
     {
         "id": "s06",
+        "isolatedBeats": [1, 3, 5],
         "audioFile": "multiple-collisions-s06.mp3",
         "cues": [
             {
@@ -441,28 +469,75 @@ JOBS = [
             {
                 "id": "after",
                 "searchTerms": [
-                    "afterwards"
+                    "afterwards", "afterward"
                 ]
             },
             {
                 "id": "after-c",
                 "searchTerms": [
                     "three metres per second",
-                    "three meters per second"
+                    "three meters per second",
+                    "3 metres per second",
+                    "3 meters per second"
                 ]
             },
             {
                 "id": "unknown",
                 "searchTerms": [
                     "w b",
-                    "wb"
+                    "wb",
+                    "value b"
                 ]
             },
             {
                 "id": "conserve",
                 "searchTerms": [
-                    "conserve this pair's"
+                    "conserve this pair's",
+                    "concept this pair's"
                 ]
+            },
+            {
+                "id": "principle",
+                "searchTerms": [
+                    "momentum before equals momentum after"
+                ]
+            },
+            {
+                "id": "principle-end",
+                "searchTerms": [
+                    "momentum before equals momentum after"
+                ],
+                "edge": "end"
+            },
+            {
+                "id": "formula",
+                "searchTerms": [
+                    "mass b times u b", "mass b times ub",
+                    "mass b times you b"
+                ]
+            },
+            {
+                "id": "formula-end",
+                "searchTerms": [
+                    "mass c times v c",
+                    "mass c times vc"
+                ],
+                "edge": "end"
+            },
+            {
+                "id": "notation",
+                "searchTerms": [
+                    "here v b",
+                    "here vb"
+                ]
+            },
+            {
+                "id": "notation-end",
+                "searchTerms": [
+                    "we named w b",
+                    "we named wb"
+                ],
+                "edge": "end"
             },
             {
                 "id": "equation",
@@ -715,11 +790,16 @@ def transcribe_job(model, job, generated_at, timing):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--timing", type=Path, help="Generated narration timing; otherwise reuse matching transcript metadata")
+    parser.add_argument("--scenes", nargs="+", choices=[job["id"] for job in JOBS], help="Re-transcribe only these scenes, preserving all other transcript objects")
     args = parser.parse_args()
+    selected = set(args.scenes or [job["id"] for job in JOBS])
+    existing = json.loads(TRANSCRIPT_PATH.read_text()) if args.scenes else None
+    existing_by_id = {scene["id"]: scene for scene in existing["scenes"]} if existing else {}
+    jobs = [job for job in JOBS if job["id"] in selected]
     timing_data = json.loads((args.timing or TRANSCRIPT_PATH).read_text())
     timing_scenes = timing_data if isinstance(timing_data, list) else timing_data["scenes"]
     timing_by_id = {scene["id"]: scene for scene in timing_scenes}
-    for job in JOBS:
+    for job in jobs:
         digest = hashlib.sha256((AUDIO_DIR / job["audioFile"]).read_bytes()).hexdigest()
         if timing_by_id[job["id"]]["audioSha256"] != digest:
             raise RuntimeError(f"Audio changed without timing metadata: {job['id']}")
@@ -734,7 +814,7 @@ def main():
 
     missing_audio = [
         job["audioFile"]
-        for job in JOBS
+        for job in jobs
         if not (AUDIO_DIR / job["audioFile"]).is_file()
     ]
     if missing_audio:
@@ -750,7 +830,10 @@ def main():
     total_duration = 0.0
 
     for job in JOBS:
-        transcript, missed = transcribe_job(model, job, generated_at, timing_by_id[job["id"]])
+        if job["id"] in selected:
+            transcript, missed = transcribe_job(model, job, generated_at, timing_by_id[job["id"]])
+        else:
+            transcript, missed = existing_by_id[job["id"]], []
         scenes.append(transcript)
         total_duration += transcript["duration"]
         all_missed.extend(f"{job['id']}:{cue_id}" for cue_id in missed)
