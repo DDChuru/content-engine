@@ -1,0 +1,718 @@
+{
+  "schemaVersion": 1,
+  "register": "docs/remedial-action-build-wave-1.md",
+  "siteId": "k57ae8hn0kgercz41hgy6s03mn88fzwd",
+  "storyboard": {
+    "path": "remedial-tutorial/provenance/approved-storyboard.md",
+    "sha256": "d0d4490b7a571b99874867702266eb3e3d7f3bfa35b223f032df87f8a2a900ff",
+    "bytes": 25650
+  },
+  "provenance": [
+    {
+      "path": "remedial-tutorial/provenance/cleaning-v4-captures.json",
+      "sha256": "96aa3c3a8a3d151b0fb6d425b5acabce767feb4eb00d29ab027b15f120d4d935",
+      "bytes": 43617
+    },
+    {
+      "path": "remedial-tutorial/provenance/cleaning-v4-register.md",
+      "sha256": "0ad3895348a60da5c895478017c9440ef4ac86cc709ee007bc8dfecde34eb39f",
+      "bytes": 44432
+    }
+  ],
+  "brandAssets": [
+    {
+      "path": "images/ewizer-logo.png",
+      "sha256": "7ab3dcf75f9b8d66a6caf947abc4a63782812c6d568f8c1207e71fc327b4ced6",
+      "bytes": 55622
+    },
+    {
+      "path": "images/ecowize-logo.webp",
+      "sha256": "f7401f888d9b55e4b8ccb80aaf4f20a712abfab04ce83c5208cf8ddaa0362555",
+      "bytes": 24018
+    },
+    {
+      "path": "ccv-tutorial/fonts/BarlowCondensed_700Bold.ttf",
+      "sha256": "53550669f93c07de6221e051905462f862066459eb50148268b5628104a58a30",
+      "bytes": 104316
+    },
+    {
+      "path": "ccv-tutorial/fonts/DMSans_400Regular.ttf",
+      "sha256": "20ccb90498d8ca511bb0be31a74eccd5f29fbe1161852ef72781b703929e98ec",
+      "bytes": 56344
+    },
+    {
+      "path": "ccv-tutorial/fonts/DMSans_700Bold.ttf",
+      "sha256": "3764a2ce62fa95596c3315c1a0ca379e7cf827ed397c97fc036925b9b20b74dc",
+      "bytes": 56268
+    }
+  ],
+  "captures": [
+    {
+      "path": "remedial-tutorial/cleaning/01-bakery-home-bill-of-health-entry.png",
+      "sha256": "a05e7eac47e81a2277803ca9176cc2da63e4be205d455747f57fcac1e6376714",
+      "bytes": 169740,
+      "width": 720,
+      "height": 1600,
+      "classification": "genuine-current-app",
+      "uncomposed": true,
+      "appCommit": "6999d8eca52fc4f4fff69066dce365f54a609663",
+      "capturedOn": "2026-09-06",
+      "machine": "Machine B",
+      "site": "Bakery Demo",
+      "account": "demo@sunbakebread.co.za",
+      "captureMethod": "read-only-navigation",
+      "authorizationRef": "docs/cln-verification-v4-capture-register.md",
+      "reviewRef": "docs/cln-verification-v4-capture-register.md#validated-capture-manifest",
+      "scenario": "baseline-2026-09-06",
+      "eventOrder": 0,
+      "disclosure": "Bakery Demo · 6 Sept 2026 · baseline",
+      "views": {
+        "entry": {
+          "x": 0.025,
+          "y": 0.647,
+          "w": 0.32,
+          "h": 0.152
+        }
+      },
+      "id": "home",
+      "trail": "cleaning",
+      "siteId": "k57ae8hn0kgercz41hgy6s03mn88fzwd",
+      "origin": {
+        "worktree": "/home/durai/Documents/projects/content-engine-cleaning-v4",
+        "head": "d85e4c921373c2c551ebc1897a6a5cb926417086",
+        "sourcePath": "remotion-branding/public/cln-tutorial/v4-current-6999d8e/01-bakery-home-bill-of-health-entry.png",
+        "sourceSlot": "home",
+        "manifest": "remedial-tutorial/provenance/cleaning-v4-captures.json",
+        "register": "remedial-tutorial/provenance/cleaning-v4-register.md"
+      }
+    },
+    {
+      "path": "remedial-tutorial/cleaning/02-bill-of-health-cleaning-verification-entry.png",
+      "sha256": "57c737d81d71cfd5b294ea0acb9412e90391791c8bb7930600d68c92a461ce0e",
+      "bytes": 161532,
+      "width": 720,
+      "height": 1600,
+      "classification": "genuine-current-app",
+      "uncomposed": true,
+      "appCommit": "6999d8eca52fc4f4fff69066dce365f54a609663",
+      "capturedOn": "2026-09-06",
+      "machine": "Machine B",
+      "site": "Bakery Demo",
+      "account": "demo@sunbakebread.co.za",
+      "captureMethod": "read-only-navigation",
+      "authorizationRef": "docs/cln-verification-v4-capture-register.md",
+      "reviewRef": "docs/cln-verification-v4-capture-register.md#validated-capture-manifest",
+      "scenario": "baseline-2026-09-06",
+      "eventOrder": 0,
+      "disclosure": "Bakery Demo · 6 Sept 2026 · baseline",
+      "views": {
+        "entry": {
+          "x": 0.03,
+          "y": 0.407,
+          "w": 0.94,
+          "h": 0.108
+        }
+      },
+      "id": "bill",
+      "trail": "cleaning",
+      "siteId": "k57ae8hn0kgercz41hgy6s03mn88fzwd",
+      "origin": {
+        "worktree": "/home/durai/Documents/projects/content-engine-cleaning-v4",
+        "head": "d85e4c921373c2c551ebc1897a6a5cb926417086",
+        "sourcePath": "remotion-branding/public/cln-tutorial/v4-current-6999d8e/02-bill-of-health-cleaning-verification-entry.png",
+        "sourceSlot": "boh",
+        "manifest": "remedial-tutorial/provenance/cleaning-v4-captures.json",
+        "register": "remedial-tutorial/provenance/cleaning-v4-register.md"
+      }
+    },
+    {
+      "path": "remedial-tutorial/cleaning/03-cleaning-verification-live-baseline-summary.png",
+      "sha256": "720154a539390662e8ded098c2c0ecf2a0fecc1d48a1dcf594341cf60813564a",
+      "bytes": 130509,
+      "width": 720,
+      "height": 1600,
+      "classification": "genuine-current-app",
+      "uncomposed": true,
+      "appCommit": "6999d8eca52fc4f4fff69066dce365f54a609663",
+      "capturedOn": "2026-09-06",
+      "machine": "Machine B",
+      "site": "Bakery Demo",
+      "account": "demo@sunbakebread.co.za",
+      "captureMethod": "read-only-navigation",
+      "authorizationRef": "docs/cln-verification-v4-capture-register.md",
+      "reviewRef": "docs/cln-verification-v4-capture-register.md#validated-capture-manifest",
+      "scenario": "baseline-2026-09-06",
+      "eventOrder": 0,
+      "disclosure": "Bakery Demo · 6 Sept 2026 · baseline",
+      "views": {
+        "baseline": {
+          "x": 0.03,
+          "y": 0.132,
+          "w": 0.94,
+          "h": 0.2
+        }
+      },
+      "id": "baseline",
+      "trail": "cleaning",
+      "siteId": "k57ae8hn0kgercz41hgy6s03mn88fzwd",
+      "origin": {
+        "worktree": "/home/durai/Documents/projects/content-engine-cleaning-v4",
+        "head": "d85e4c921373c2c551ebc1897a6a5cb926417086",
+        "sourcePath": "remotion-branding/public/cln-tutorial/v4-current-6999d8e/03-cleaning-verification-live-baseline-summary.png",
+        "sourceSlot": "summary",
+        "manifest": "remedial-tutorial/provenance/cleaning-v4-captures.json",
+        "register": "remedial-tutorial/provenance/cleaning-v4-register.md"
+      }
+    },
+    {
+      "path": "remedial-tutorial/cleaning/13-major-fail-grade-reason.png",
+      "sha256": "25196a2b2f77020135b5efb21fe3f316c2e9b4df2adf44f76a81d1cf6f475eb9",
+      "bytes": 133766,
+      "width": 720,
+      "height": 1600,
+      "classification": "authorized-seeded-demonstration",
+      "uncomposed": true,
+      "appCommit": "6999d8eca52fc4f4fff69066dce365f54a609663",
+      "capturedOn": "2026-09-06T12:18:19.310139+00:00",
+      "machine": "Machine B",
+      "site": "Bakery Demo",
+      "account": "demo@sunbakebread.co.za",
+      "captureMethod": "authorized-app-operation",
+      "authorizationRef": "docs/cln-verification-v4-capture-register.md#authorized-bakery-demo-operational-evidence--2026-09-06",
+      "reviewRef": "docs/cln-verification-v4-capture-register.md#registered-operational-pngs",
+      "recordRef": "docs/cln-verification-v4-capture-register.md#exact-persisted-training-mutations",
+      "scenario": "bakery-demo-cleaning-v4-2026-09-06",
+      "eventOrder": 13,
+      "disclosure": "Bakery Demo · authorized seeded demonstration record · simulated inspection and work",
+      "views": {
+        "grade-reason": {
+          "x": 0.09,
+          "y": 0.323,
+          "w": 0.82,
+          "h": 0.253
+        }
+      },
+      "evidenceNote": "Major selected with the full truthful synthetic training reason and action, no photo, and submit control visible.",
+      "id": "major-fields",
+      "trail": "cleaning",
+      "siteId": "k57ae8hn0kgercz41hgy6s03mn88fzwd",
+      "origin": {
+        "worktree": "/home/durai/Documents/projects/content-engine-cleaning-v4",
+        "head": "d85e4c921373c2c551ebc1897a6a5cb926417086",
+        "sourcePath": "remotion-branding/public/cln-tutorial/v4-current-6999d8e/13-major-fail-grade-reason.png",
+        "sourceSlot": "major-fail",
+        "manifest": "remedial-tutorial/provenance/cleaning-v4-captures.json",
+        "register": "remedial-tutorial/provenance/cleaning-v4-register.md"
+      }
+    },
+    {
+      "path": "remedial-tutorial/cleaning/14-major-fail-recorded.png",
+      "sha256": "dbfbf8209296f3126bb8ec69460c91a3417b03b4850729a75ea6d602c55ba7d7",
+      "bytes": 113557,
+      "width": 720,
+      "height": 1600,
+      "classification": "authorized-seeded-demonstration",
+      "uncomposed": true,
+      "appCommit": "6999d8eca52fc4f4fff69066dce365f54a609663",
+      "capturedOn": "2026-09-06T12:18:53.165887+00:00",
+      "machine": "Machine B",
+      "site": "Bakery Demo",
+      "account": "demo@sunbakebread.co.za",
+      "captureMethod": "authorized-app-operation",
+      "authorizationRef": "docs/cln-verification-v4-capture-register.md#authorized-bakery-demo-operational-evidence--2026-09-06",
+      "reviewRef": "docs/cln-verification-v4-capture-register.md#registered-operational-pngs",
+      "recordRef": "docs/cln-verification-v4-capture-register.md#exact-persisted-training-mutations",
+      "scenario": "bakery-demo-cleaning-v4-2026-09-06",
+      "eventOrder": 14,
+      "disclosure": "Bakery Demo · authorized seeded demonstration record · simulated inspection and work",
+      "views": {
+        "recorded": {
+          "x": 0.069,
+          "y": 0.423,
+          "w": 0.862,
+          "h": 0.204
+        }
+      },
+      "evidenceNote": "Normal app Task Completed / Your completion has been recorded acknowledgement after submitting the Major failure.",
+      "id": "major-recorded",
+      "trail": "cleaning",
+      "siteId": "k57ae8hn0kgercz41hgy6s03mn88fzwd",
+      "origin": {
+        "worktree": "/home/durai/Documents/projects/content-engine-cleaning-v4",
+        "head": "d85e4c921373c2c551ebc1897a6a5cb926417086",
+        "sourcePath": "remotion-branding/public/cln-tutorial/v4-current-6999d8e/14-major-fail-recorded.png",
+        "sourceSlot": "major-fail",
+        "manifest": "remedial-tutorial/provenance/cleaning-v4-captures.json",
+        "register": "remedial-tutorial/provenance/cleaning-v4-register.md"
+      }
+    },
+    {
+      "path": "remedial-tutorial/cleaning/16-critical-ncr-created.png",
+      "sha256": "bff05b336a0b06fca864c3ce351258db3fa16bd50c56866adfa43dbf9830a60c",
+      "bytes": 119977,
+      "width": 720,
+      "height": 1600,
+      "classification": "authorized-seeded-demonstration",
+      "uncomposed": true,
+      "appCommit": "6999d8eca52fc4f4fff69066dce365f54a609663",
+      "capturedOn": "2026-09-06T12:21:04.747949+00:00",
+      "machine": "Machine B",
+      "site": "Bakery Demo",
+      "account": "demo@sunbakebread.co.za",
+      "captureMethod": "authorized-app-operation",
+      "authorizationRef": "docs/cln-verification-v4-capture-register.md#authorized-bakery-demo-operational-evidence--2026-09-06",
+      "reviewRef": "docs/cln-verification-v4-capture-register.md#registered-operational-pngs",
+      "recordRef": "docs/cln-verification-v4-capture-register.md#exact-persisted-training-mutations",
+      "scenario": "bakery-demo-cleaning-v4-2026-09-06",
+      "eventOrder": 16,
+      "disclosure": "Bakery Demo · authorized seeded demonstration record · simulated inspection and work",
+      "views": {
+        "ncr-queued": {
+          "x": 0.069,
+          "y": 0.423,
+          "w": 0.862,
+          "h": 0.204
+        }
+      },
+      "evidenceNote": "Critical finding recorded / An NCR has been raised for this critical finding. Created satisfies contract ncr-queued; later synced record contains the linked NCR ID.",
+      "observed": {
+        "ncrState": "raised",
+        "acknowledgement": "An NCR has been raised for this critical finding.",
+        "linkedNcrId": "rx7dgxae4cnc7rm2k7pqdvf30x8dw98r"
+      },
+      "id": "critical-ncr",
+      "trail": "cleaning",
+      "siteId": "k57ae8hn0kgercz41hgy6s03mn88fzwd",
+      "origin": {
+        "worktree": "/home/durai/Documents/projects/content-engine-cleaning-v4",
+        "head": "d85e4c921373c2c551ebc1897a6a5cb926417086",
+        "sourcePath": "remotion-branding/public/cln-tutorial/v4-current-6999d8e/16-critical-ncr-created.png",
+        "sourceSlot": "critical-ncr",
+        "manifest": "remedial-tutorial/provenance/cleaning-v4-captures.json",
+        "register": "remedial-tutorial/provenance/cleaning-v4-register.md"
+      }
+    },
+    {
+      "path": "remedial-tutorial/cleaning/21-four-band-open.png",
+      "sha256": "e492017102a9a0221d1dbc43434cdeaf5ec4408435eab38a6941cb1de73be0ce",
+      "bytes": 132943,
+      "width": 720,
+      "height": 1600,
+      "classification": "authorized-seeded-demonstration",
+      "uncomposed": true,
+      "appCommit": "6999d8eca52fc4f4fff69066dce365f54a609663",
+      "capturedOn": "2026-09-06T12:30:04.566165+00:00",
+      "machine": "Machine B",
+      "site": "Bakery Demo",
+      "account": "demo@sunbakebread.co.za",
+      "captureMethod": "authorized-app-operation",
+      "authorizationRef": "docs/cln-verification-v4-capture-register.md#authorized-bakery-demo-operational-evidence--2026-09-06",
+      "reviewRef": "docs/cln-verification-v4-capture-register.md#registered-operational-pngs",
+      "recordRef": "docs/cln-verification-v4-capture-register.md#exact-persisted-training-mutations",
+      "scenario": "bakery-demo-cleaning-v4-2026-09-06",
+      "eventOrder": 21,
+      "disclosure": "Bakery Demo · authorized seeded demonstration record · simulated inspection and work",
+      "views": {
+        "still-to-do": {
+          "x": 0.043,
+          "y": 0.14,
+          "w": 0.914,
+          "h": 0.225
+        },
+        "passed": {
+          "x": 0.043,
+          "y": 0.14,
+          "w": 0.914,
+          "h": 0.225
+        },
+        "follow-up-owed": {
+          "x": 0.043,
+          "y": 0.14,
+          "w": 0.914,
+          "h": 0.225
+        },
+        "couldnt-access": {
+          "x": 0.043,
+          "y": 0.14,
+          "w": 0.914,
+          "h": 0.225
+        }
+      },
+      "evidenceNote": "Bakery Demo dated summary before any closure: 216 still to do, 16 passed, 2 follow-up owed, 1 could not access; 19 of 235 across 1 of 32 sections.",
+      "observed": {
+        "stillToDo": 216,
+        "passed": 16,
+        "followUpOwed": 2,
+        "couldntAccess": 1,
+        "resolvedToday": 0,
+        "captured": 19,
+        "scheduled": 235
+      },
+      "id": "open-summary",
+      "trail": "cleaning",
+      "siteId": "k57ae8hn0kgercz41hgy6s03mn88fzwd",
+      "origin": {
+        "worktree": "/home/durai/Documents/projects/content-engine-cleaning-v4",
+        "head": "d85e4c921373c2c551ebc1897a6a5cb926417086",
+        "sourcePath": "remotion-branding/public/cln-tutorial/v4-current-6999d8e/21-four-band-open.png",
+        "sourceSlot": "four-band-open",
+        "manifest": "remedial-tutorial/provenance/cleaning-v4-captures.json",
+        "register": "remedial-tutorial/provenance/cleaning-v4-register.md"
+      }
+    },
+    {
+      "path": "remedial-tutorial/cleaning/22-follow-ups-close-open-item.png",
+      "sha256": "3a8e6c92435cf0b2392d9a81383db5830dd14186a66bc540f922b110ef82ce14",
+      "bytes": 135028,
+      "width": 720,
+      "height": 1600,
+      "classification": "authorized-seeded-demonstration",
+      "uncomposed": true,
+      "appCommit": "6999d8eca52fc4f4fff69066dce365f54a609663",
+      "capturedOn": "2026-09-06T12:30:49.164096+00:00",
+      "machine": "Machine B",
+      "site": "Bakery Demo",
+      "account": "demo@sunbakebread.co.za",
+      "captureMethod": "authorized-app-operation",
+      "authorizationRef": "docs/cln-verification-v4-capture-register.md#authorized-bakery-demo-operational-evidence--2026-09-06",
+      "reviewRef": "docs/cln-verification-v4-capture-register.md#registered-operational-pngs",
+      "recordRef": "docs/cln-verification-v4-capture-register.md#exact-persisted-training-mutations",
+      "scenario": "bakery-demo-cleaning-v4-2026-09-06",
+      "eventOrder": 22,
+      "disclosure": "Bakery Demo · authorized seeded demonstration record · simulated inspection and work",
+      "views": {
+        "queue": {
+          "x": 0.045,
+          "y": 0.455,
+          "w": 0.91,
+          "h": 0.14
+        },
+        "confirm-followed-up": {
+          "x": 0.07,
+          "y": 0.696,
+          "w": 0.86,
+          "h": 0.066
+        }
+      },
+      "evidenceNote": "Follow-ups Cleaning queue filtered to Blue Covers; Premix Major training finding remains open with its reason/action and CONFIRM FOLLOWED UP button. Four total open cleaning remedials include two pre-existing items.",
+      "observed": {
+        "openCleaning": 4,
+        "matchingItems": 1,
+        "search": "Blue Covers"
+      },
+      "id": "open-card",
+      "trail": "cleaning",
+      "siteId": "k57ae8hn0kgercz41hgy6s03mn88fzwd",
+      "origin": {
+        "worktree": "/home/durai/Documents/projects/content-engine-cleaning-v4",
+        "head": "d85e4c921373c2c551ebc1897a6a5cb926417086",
+        "sourcePath": "remotion-branding/public/cln-tutorial/v4-current-6999d8e/22-follow-ups-close-open-item.png",
+        "sourceSlot": "follow-ups-close",
+        "manifest": "remedial-tutorial/provenance/cleaning-v4-captures.json",
+        "register": "remedial-tutorial/provenance/cleaning-v4-register.md"
+      }
+    },
+    {
+      "path": "remedial-tutorial/cleaning/23-follow-ups-close-training-note.png",
+      "sha256": "12bdde3109384cbf840bbd08a4e7f092cdfa6e11aae19786add676a4cfb7d729",
+      "bytes": 149875,
+      "width": 720,
+      "height": 1600,
+      "classification": "authorized-seeded-demonstration",
+      "uncomposed": true,
+      "appCommit": "6999d8eca52fc4f4fff69066dce365f54a609663",
+      "capturedOn": "2026-09-06T12:31:34.008098+00:00",
+      "machine": "Machine B",
+      "site": "Bakery Demo",
+      "account": "demo@sunbakebread.co.za",
+      "captureMethod": "authorized-app-operation",
+      "authorizationRef": "docs/cln-verification-v4-capture-register.md#authorized-bakery-demo-operational-evidence--2026-09-06",
+      "reviewRef": "docs/cln-verification-v4-capture-register.md#registered-operational-pngs",
+      "recordRef": "docs/cln-verification-v4-capture-register.md#exact-persisted-training-mutations",
+      "scenario": "bakery-demo-cleaning-v4-2026-09-06",
+      "eventOrder": 23,
+      "disclosure": "Bakery Demo · authorized seeded demonstration record · simulated inspection and work",
+      "views": {
+        "confirmation": {
+          "x": 0.073,
+          "y": 0.719,
+          "w": 0.855,
+          "h": 0.078
+        }
+      },
+      "evidenceNote": "Actual optional follow-up training note and inner CONFIRM after selecting CONFIRM FOLLOWED UP. No photo supplied. Canonical contract confirmation view.",
+      "id": "confirm-note",
+      "trail": "cleaning",
+      "siteId": "k57ae8hn0kgercz41hgy6s03mn88fzwd",
+      "origin": {
+        "worktree": "/home/durai/Documents/projects/content-engine-cleaning-v4",
+        "head": "d85e4c921373c2c551ebc1897a6a5cb926417086",
+        "sourcePath": "remotion-branding/public/cln-tutorial/v4-current-6999d8e/23-follow-ups-close-training-note.png",
+        "sourceSlot": "follow-ups-close",
+        "manifest": "remedial-tutorial/provenance/cleaning-v4-captures.json",
+        "register": "remedial-tutorial/provenance/cleaning-v4-register.md"
+      }
+    },
+    {
+      "path": "remedial-tutorial/cleaning/24-follow-ups-close-confirmation.png",
+      "sha256": "cde5cc5cb8cb735d13c31603a6ac7fd9d8ee269a26d8fa5a26a2ac12a8a34640",
+      "bytes": 85017,
+      "width": 720,
+      "height": 1600,
+      "classification": "authorized-seeded-demonstration",
+      "uncomposed": true,
+      "appCommit": "6999d8eca52fc4f4fff69066dce365f54a609663",
+      "capturedOn": "2026-09-06T12:31:52.079090+00:00",
+      "machine": "Machine B",
+      "site": "Bakery Demo",
+      "account": "demo@sunbakebread.co.za",
+      "captureMethod": "authorized-app-operation",
+      "authorizationRef": "docs/cln-verification-v4-capture-register.md#authorized-bakery-demo-operational-evidence--2026-09-06",
+      "reviewRef": "docs/cln-verification-v4-capture-register.md#registered-operational-pngs",
+      "recordRef": "docs/cln-verification-v4-capture-register.md#exact-persisted-training-mutations",
+      "scenario": "bakery-demo-cleaning-v4-2026-09-06",
+      "eventOrder": 24,
+      "disclosure": "Bakery Demo · authorized seeded demonstration record · simulated inspection and work",
+      "views": {
+        "closed-result": {
+          "x": 0.045,
+          "y": 0.454,
+          "w": 0.91,
+          "h": 0.077
+        }
+      },
+      "evidenceNote": "Supplemental closed result: unchanged Blue Covers search now has No matches and total open cleaning remedials drops from 4 to 3. No success dialog exists in this flow.",
+      "observed": {
+        "openCleaning": 3,
+        "matchingItems": 0,
+        "search": "Blue Covers",
+        "successDialog": false
+      },
+      "id": "queue-empty",
+      "trail": "cleaning",
+      "siteId": "k57ae8hn0kgercz41hgy6s03mn88fzwd",
+      "origin": {
+        "worktree": "/home/durai/Documents/projects/content-engine-cleaning-v4",
+        "head": "d85e4c921373c2c551ebc1897a6a5cb926417086",
+        "sourcePath": "remotion-branding/public/cln-tutorial/v4-current-6999d8e/24-follow-ups-close-confirmation.png",
+        "sourceSlot": "follow-ups-close",
+        "manifest": "remedial-tutorial/provenance/cleaning-v4-captures.json",
+        "register": "remedial-tutorial/provenance/cleaning-v4-register.md"
+      }
+    },
+    {
+      "path": "remedial-tutorial/cleaning/25-five-band-resolved-today.png",
+      "sha256": "dfe081534596f143b10368bcf5f90729555334d49077a79dc27471b911e2194c",
+      "bytes": 133409,
+      "width": 720,
+      "height": 1600,
+      "classification": "authorized-seeded-demonstration",
+      "uncomposed": true,
+      "appCommit": "6999d8eca52fc4f4fff69066dce365f54a609663",
+      "capturedOn": "2026-09-06T12:32:10.790108+00:00",
+      "machine": "Machine B",
+      "site": "Bakery Demo",
+      "account": "demo@sunbakebread.co.za",
+      "captureMethod": "authorized-app-operation",
+      "authorizationRef": "docs/cln-verification-v4-capture-register.md#authorized-bakery-demo-operational-evidence--2026-09-06",
+      "reviewRef": "docs/cln-verification-v4-capture-register.md#registered-operational-pngs",
+      "recordRef": "docs/cln-verification-v4-capture-register.md#exact-persisted-training-mutations",
+      "scenario": "bakery-demo-cleaning-v4-2026-09-06",
+      "eventOrder": 25,
+      "disclosure": "Bakery Demo · authorized seeded demonstration record · simulated inspection and work",
+      "views": {
+        "still-to-do": {
+          "x": 0.043,
+          "y": 0.14,
+          "w": 0.914,
+          "h": 0.225
+        },
+        "passed": {
+          "x": 0.043,
+          "y": 0.14,
+          "w": 0.914,
+          "h": 0.225
+        },
+        "follow-up-owed": {
+          "x": 0.043,
+          "y": 0.14,
+          "w": 0.914,
+          "h": 0.225
+        },
+        "couldnt-access": {
+          "x": 0.043,
+          "y": 0.14,
+          "w": 0.914,
+          "h": 0.225
+        }
+      },
+      "evidenceNote": "Bakery Demo dated five-band summary after Major closure: 216 still to do, 16 passed, 1 follow-up owed, 1 could not access, 1 resolved; 19 of 235 remains unchanged.",
+      "observed": {
+        "stillToDo": 216,
+        "passed": 16,
+        "followUpOwed": 1,
+        "couldntAccess": 1,
+        "resolvedToday": 1,
+        "captured": 19,
+        "scheduled": 235
+      },
+      "id": "resolved-summary",
+      "trail": "cleaning",
+      "siteId": "k57ae8hn0kgercz41hgy6s03mn88fzwd",
+      "origin": {
+        "worktree": "/home/durai/Documents/projects/content-engine-cleaning-v4",
+        "head": "d85e4c921373c2c551ebc1897a6a5cb926417086",
+        "sourcePath": "remotion-branding/public/cln-tutorial/v4-current-6999d8e/25-five-band-resolved-today.png",
+        "sourceSlot": "five-band-resolved",
+        "manifest": "remedial-tutorial/provenance/cleaning-v4-captures.json",
+        "register": "remedial-tutorial/provenance/cleaning-v4-register.md"
+      }
+    },
+    {
+      "path": "remedial-tutorial/cleaning/26-five-band-resolved-item.png",
+      "sha256": "b374e795b9baadd3a6ae79f54f0fbc1d32807c92031752e7b5c287a383fb4e87",
+      "bytes": 119136,
+      "width": 720,
+      "height": 1600,
+      "classification": "authorized-seeded-demonstration",
+      "uncomposed": true,
+      "appCommit": "6999d8eca52fc4f4fff69066dce365f54a609663",
+      "capturedOn": "2026-09-06T12:33:18.445212+00:00",
+      "machine": "Machine B",
+      "site": "Bakery Demo",
+      "account": "demo@sunbakebread.co.za",
+      "captureMethod": "authorized-app-operation",
+      "authorizationRef": "docs/cln-verification-v4-capture-register.md#authorized-bakery-demo-operational-evidence--2026-09-06",
+      "reviewRef": "docs/cln-verification-v4-capture-register.md#registered-operational-pngs",
+      "recordRef": "docs/cln-verification-v4-capture-register.md#exact-persisted-training-mutations",
+      "scenario": "bakery-demo-cleaning-v4-2026-09-06",
+      "eventOrder": 26,
+      "disclosure": "Bakery Demo · authorized seeded demonstration record · simulated inspection and work",
+      "views": {
+        "resolved-today": {
+          "x": 0.043,
+          "y": 0.573,
+          "w": 0.914,
+          "h": 0.153
+        }
+      },
+      "evidenceNote": "Resolved today expanded: Blue Covers / Bread Plant / Premix Area / daily / SSOP47 under Failed and signed off; remaining 216, follow-up owed 1, could not access 1 and passed 16 remain visible.",
+      "observed": {
+        "item": "Blue Covers",
+        "originalResult": "fail",
+        "verificationResult": "accepted"
+      },
+      "id": "resolved-item",
+      "trail": "cleaning",
+      "siteId": "k57ae8hn0kgercz41hgy6s03mn88fzwd",
+      "origin": {
+        "worktree": "/home/durai/Documents/projects/content-engine-cleaning-v4",
+        "head": "d85e4c921373c2c551ebc1897a6a5cb926417086",
+        "sourcePath": "remotion-branding/public/cln-tutorial/v4-current-6999d8e/26-five-band-resolved-item.png",
+        "sourceSlot": "five-band-resolved",
+        "manifest": "remedial-tutorial/provenance/cleaning-v4-captures.json",
+        "register": "remedial-tutorial/provenance/cleaning-v4-register.md"
+      }
+    }
+  ],
+  "slots": {
+    "cleaning-baseline": {
+      "home": {
+        "captureId": "home",
+        "view": "entry"
+      },
+      "bill": {
+        "captureId": "bill",
+        "view": "entry"
+      },
+      "summary": {
+        "captureId": "baseline",
+        "view": "baseline"
+      }
+    },
+    "cleaning-capture": {
+      "fields": {
+        "captureId": "major-fields",
+        "view": "grade-reason"
+      },
+      "recorded": {
+        "captureId": "major-recorded",
+        "view": "recorded"
+      }
+    },
+    "cleaning-open": {
+      "summary": {
+        "captureId": "open-summary",
+        "view": "follow-up-owed"
+      }
+    },
+    "cleaning-followup": {
+      "bucket-cleaning": null,
+      "card": {
+        "captureId": "open-card",
+        "view": "queue"
+      },
+      "expand": {
+        "captureId": "open-card",
+        "view": "confirm-followed-up"
+      },
+      "confirm": {
+        "captureId": "confirm-note",
+        "view": "confirmation"
+      },
+      "removed": {
+        "captureId": "queue-empty",
+        "view": "closed-result"
+      }
+    },
+    "cleaning-resolved": {
+      "summary": {
+        "captureId": "resolved-summary",
+        "view": "still-to-do"
+      },
+      "item": {
+        "captureId": "resolved-item",
+        "view": "resolved-today"
+      }
+    },
+    "cleaning-critical": {
+      "ncr": {
+        "captureId": "critical-ncr",
+        "view": "ncr-queued"
+      }
+    },
+    "inspection-capture": {
+      "form": null,
+      "local-saved": null,
+      "complete-issued": null,
+      "server-open": null
+    },
+    "inspection-carryover": {
+      "bill-row": null,
+      "followups": null,
+      "verify-open": null,
+      "later-day": null
+    },
+    "inspection-review": {
+      "before-detail": null,
+      "after-required-alert": null,
+      "after-attached": null
+    },
+    "inspection-accept": {
+      "accept-control": null,
+      "closed-accepted": null
+    },
+    "inspection-reject": {
+      "reject-confirm": null,
+      "returned-open": null
+    },
+    "inspection-ncr": {
+      "escalate-dialog": null,
+      "escalated-linked": null
+    },
+    "inspection-history": {
+      "closed-history": null,
+      "bill-after": null
+    }
+  }
+}

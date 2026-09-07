@@ -1,0 +1,162 @@
+{
+  "audioSha256": "4d7880118cd638e1315253b12d0ddb37b06a501094c255cc5a40df1c1e00c57e",
+  "model": "faster-whisper-small",
+  "modelRevision": "536b0662742c02347bc0e980a01041f333bce120",
+  "computeType": "int8",
+  "language": "en",
+  "initialPrompt": null,
+  "duration": 13.9784375,
+  "text": "This earlier baseline has zero captured checks. The later 19 captures include 16 passes, two failures, and one unavailable result. They are not 19 passes.",
+  "words": [
+    {
+      "word": " This",
+      "start": 0.0,
+      "end": 0.28,
+      "probability": 0.84763503074646
+    },
+    {
+      "word": " earlier",
+      "start": 0.28,
+      "end": 0.74,
+      "probability": 0.9114111065864563
+    },
+    {
+      "word": " baseline",
+      "start": 0.74,
+      "end": 1.36,
+      "probability": 0.9762263894081116
+    },
+    {
+      "word": " has",
+      "start": 1.36,
+      "end": 1.8,
+      "probability": 0.9648369550704956
+    },
+    {
+      "word": " zero",
+      "start": 1.8,
+      "end": 2.22,
+      "probability": 0.8401830196380615
+    },
+    {
+      "word": " captured",
+      "start": 2.22,
+      "end": 2.62,
+      "probability": 0.6504931449890137
+    },
+    {
+      "word": " checks.",
+      "start": 2.62,
+      "end": 3.02,
+      "probability": 0.9880256056785583
+    },
+    {
+      "word": " The",
+      "start": 4.16,
+      "end": 4.3,
+      "probability": 0.9557709693908691
+    },
+    {
+      "word": " later",
+      "start": 4.3,
+      "end": 4.7,
+      "probability": 0.9727197885513306
+    },
+    {
+      "word": " 19",
+      "start": 4.7,
+      "end": 5.04,
+      "probability": 0.8932769298553467
+    },
+    {
+      "word": " captures",
+      "start": 5.04,
+      "end": 5.54,
+      "probability": 0.9510043859481812
+    },
+    {
+      "word": " include",
+      "start": 5.54,
+      "end": 6.44,
+      "probability": 0.9339930415153503
+    },
+    {
+      "word": " 16",
+      "start": 6.44,
+      "end": 7.1,
+      "probability": 0.9767091274261475
+    },
+    {
+      "word": " passes,",
+      "start": 7.1,
+      "end": 7.48,
+      "probability": 0.9690285921096802
+    },
+    {
+      "word": " two",
+      "start": 8.18,
+      "end": 8.44,
+      "probability": 0.6843405365943909
+    },
+    {
+      "word": " failures,",
+      "start": 8.44,
+      "end": 8.88,
+      "probability": 0.9968478083610535
+    },
+    {
+      "word": " and",
+      "start": 9.64,
+      "end": 9.72,
+      "probability": 0.9875261187553406
+    },
+    {
+      "word": " one",
+      "start": 9.72,
+      "end": 10.0,
+      "probability": 0.9791737794876099
+    },
+    {
+      "word": " unavailable",
+      "start": 10.0,
+      "end": 11.1,
+      "probability": 0.9897761344909668
+    },
+    {
+      "word": " result.",
+      "start": 11.1,
+      "end": 11.62,
+      "probability": 0.9948514103889465
+    },
+    {
+      "word": " They",
+      "start": 12.38,
+      "end": 12.5,
+      "probability": 0.9564231634140015
+    },
+    {
+      "word": " are",
+      "start": 12.5,
+      "end": 12.58,
+      "probability": 0.9571801424026489
+    },
+    {
+      "word": " not",
+      "start": 12.58,
+      "end": 12.72,
+      "probability": 0.993386447429657
+    },
+    {
+      "word": " 19",
+      "start": 12.72,
+      "end": 13.12,
+      "probability": 0.9862960577011108
+    },
+    {
+      "word": " passes.",
+      "start": 13.12,
+      "end": 13.42,
+      "probability": 0.9689168930053711
+    }
+  ]
+}

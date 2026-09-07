@@ -1,0 +1,180 @@
+{
+  "audioSha256": "7204aa61331e7e441536fc26338c1a127de1ffc420e53d4f6d3c2c17ff69ca72",
+  "model": "faster-whisper-small",
+  "modelRevision": "536b0662742c02347bc0e980a01041f333bce120",
+  "computeType": "int8",
+  "language": "en",
+  "initialPrompt": null,
+  "duration": 16.3004375,
+  "text": "Daily describes the cleaning findings scheduled origin, not an expiry. Inspection remedials have a separate carryover trail. Neither open finding is cleared just because a new day begins.",
+  "words": [
+    {
+      "word": " Daily",
+      "start": 0.0,
+      "end": 0.28,
+      "probability": 0.7581256031990051
+    },
+    {
+      "word": " describes",
+      "start": 0.28,
+      "end": 0.92,
+      "probability": 0.973272442817688
+    },
+    {
+      "word": " the",
+      "start": 0.92,
+      "end": 1.3,
+      "probability": 0.9723304510116577
+    },
+    {
+      "word": " cleaning",
+      "start": 1.3,
+      "end": 1.68,
+      "probability": 0.9761773347854614
+    },
+    {
+      "word": " findings",
+      "start": 1.68,
+      "end": 2.24,
+      "probability": 0.9380818009376526
+    },
+    {
+      "word": " scheduled",
+      "start": 2.24,
+      "end": 2.9,
+      "probability": 0.9796934127807617
+    },
+    {
+      "word": " origin,",
+      "start": 2.9,
+      "end": 3.78,
+      "probability": 0.8430666923522949
+    },
+    {
+      "word": " not",
+      "start": 4.78,
+      "end": 5.08,
+      "probability": 0.9775936603546143
+    },
+    {
+      "word": " an",
+      "start": 5.08,
+      "end": 5.28,
+      "probability": 0.9806437492370605
+    },
+    {
+      "word": " expiry.",
+      "start": 5.28,
+      "end": 5.84,
+      "probability": 0.9922895431518555
+    },
+    {
+      "word": " Inspection",
+      "start": 6.68,
+      "end": 7.3,
+      "probability": 0.9441595872243246
+    },
+    {
+      "word": " remedials",
+      "start": 7.3,
+      "end": 7.98,
+      "probability": 0.7882267534732819
+    },
+    {
+      "word": " have",
+      "start": 7.98,
+      "end": 8.34,
+      "probability": 0.9897038340568542
+    },
+    {
+      "word": " a",
+      "start": 8.34,
+      "end": 8.46,
+      "probability": 0.9937493801116943
+    },
+    {
+      "word": " separate",
+      "start": 8.46,
+      "end": 8.9,
+      "probability": 0.9969268441200256
+    },
+    {
+      "word": " carryover",
+      "start": 8.9,
+      "end": 9.58,
+      "probability": 0.8283292055130005
+    },
+    {
+      "word": " trail.",
+      "start": 9.58,
+      "end": 9.98,
+      "probability": 0.9887914657592773
+    },
+    {
+      "word": " Neither",
+      "start": 11.14,
+      "end": 11.4,
+      "probability": 0.98023521900177
+    },
+    {
+      "word": " open",
+      "start": 11.4,
+      "end": 11.76,
+      "probability": 0.9648330807685852
+    },
+    {
+      "word": " finding",
+      "start": 11.76,
+      "end": 12.2,
+      "probability": 0.9681516289710999
+    },
+    {
+      "word": " is",
+      "start": 12.2,
+      "end": 12.56,
+      "probability": 0.9972234964370728
+    },
+    {
+      "word": " cleared",
+      "start": 12.56,
+      "end": 13.18,
+      "probability": 0.9696950912475586
+    },
+    {
+      "word": " just",
+      "start": 13.18,
+      "end": 13.9,
+      "probability": 0.8516167998313904
+    },
+    {
+      "word": " because",
+      "start": 13.9,
+      "end": 14.26,
+      "probability": 0.9970375299453735
+    },
+    {
+      "word": " a",
+      "start": 14.26,
+      "end": 14.56,
+      "probability": 0.9851919412612915
+    },
+    {
+      "word": " new",
+      "start": 14.56,
+      "end": 14.78,
+      "probability": 0.9957465529441833
+    },
+    {
+      "word": " day",
+      "start": 14.78,
+      "end": 15.1,
+      "probability": 0.9970799088478088
+    },
+    {
+      "word": " begins.",
+      "start": 15.1,
+      "end": 15.74,
+      "probability": 0.9946002960205078
+    }
+  ]
+}

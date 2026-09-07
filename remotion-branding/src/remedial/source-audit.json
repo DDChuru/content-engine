@@ -1,0 +1,283 @@
+{
+  "schemaVersion": 1,
+  "mobileHead": "6999d8eca52fc4f4fff69066dce365f54a609663",
+  "backendWorkingHead": "977fb028973b7a9e02603c9b4651e57935dd119b",
+  "backendReference": "d44f26ab6d6ae823b8c38029d126e650a69f76c9",
+  "deploymentVerified": false,
+  "observedLiveInspectionRecords": null,
+  "sources": [
+    {
+      "repository": "/home/durai/Documents/projects/react-native/e-wizer-mobile-capture-dev",
+      "revision": "6999d8eca52fc4f4fff69066dce365f54a609663",
+      "path": "app/(app)/task/[id].tsx",
+      "sha256": "93cbe136343be5d03a86a98ac1287f7f41ef5683c89f1a63407ea72810a5d1de",
+      "bytes": 44188,
+      "readFrom": "working-tree-and-git"
+    },
+    {
+      "repository": "/home/durai/Documents/projects/react-native/e-wizer-mobile-capture-dev",
+      "revision": "6999d8eca52fc4f4fff69066dce365f54a609663",
+      "path": "app/(app)/cleaning-verification/index.tsx",
+      "sha256": "7392c62d6420a00ee1ab9dfaaa1acd0e5aa6a6253cd8eccf42ce3e1b953b9dbf",
+      "bytes": 36013,
+      "readFrom": "working-tree-and-git"
+    },
+    {
+      "repository": "/home/durai/Documents/projects/react-native/e-wizer-mobile-capture-dev",
+      "revision": "6999d8eca52fc4f4fff69066dce365f54a609663",
+      "path": "app/(app)/follow-ups.tsx",
+      "sha256": "9363d1b711c586972a9a9956746edb7f17eee0e50331f75fbcbf61733f8fbebb",
+      "bytes": 32215,
+      "readFrom": "working-tree-and-git"
+    },
+    {
+      "repository": "/home/durai/Documents/projects/react-native/e-wizer-mobile-capture-dev",
+      "revision": "6999d8eca52fc4f4fff69066dce365f54a609663",
+      "path": "app/(app)/current-status/index.tsx",
+      "sha256": "95192689eb8f4690730a727a1a55f4bd0d9930adaea0285d27dd14cd6c348c5b",
+      "bytes": 22785,
+      "readFrom": "working-tree-and-git"
+    },
+    {
+      "repository": "/home/durai/Documents/projects/react-native/e-wizer-mobile-capture-dev",
+      "revision": "6999d8eca52fc4f4fff69066dce365f54a609663",
+      "path": "app/(app)/inspections/index.tsx",
+      "sha256": "d143034a88f64b9c581f70e677d89e4a61c40695acc366287484e53783c650a2",
+      "bytes": 24761,
+      "readFrom": "working-tree-and-git"
+    },
+    {
+      "repository": "/home/durai/Documents/projects/react-native/e-wizer-mobile-capture-dev",
+      "revision": "6999d8eca52fc4f4fff69066dce365f54a609663",
+      "path": "app/(app)/inspections/[id].tsx",
+      "sha256": "0c4063f2a4fda9802d8ba008ed0e28bd25df22f344d631bef36f83ce0c4a5161",
+      "bytes": 73813,
+      "readFrom": "working-tree-and-git"
+    },
+    {
+      "repository": "/home/durai/Documents/projects/react-native/e-wizer-mobile-capture-dev",
+      "revision": "6999d8eca52fc4f4fff69066dce365f54a609663",
+      "path": "app/(app)/inspections/verify.tsx",
+      "sha256": "f95219eb88ef29f0c8fb9a79c0ad08b2591dd29427f046e358b97cd9968660e9",
+      "bytes": 40725,
+      "readFrom": "working-tree-and-git"
+    },
+    {
+      "repository": "/home/durai/Documents/projects/react-native/e-wizer-mobile-capture-dev",
+      "revision": "6999d8eca52fc4f4fff69066dce365f54a609663",
+      "path": "lib/scheduling.ts",
+      "sha256": "cadb89918ce8bd1d70a7232eca84877923b1dca9ea3351d92cc281bbfe1e0a55",
+      "bytes": 26442,
+      "readFrom": "working-tree-and-git"
+    },
+    {
+      "repository": "/home/durai/Documents/projects/react-native/e-wizer-mobile-capture-dev",
+      "revision": "6999d8eca52fc4f4fff69066dce365f54a609663",
+      "path": "lib/ncrEscalation.ts",
+      "sha256": "f51928442467a5157de617caffa19b56381c146bbf3c33253642c149fc1c6eaf",
+      "bytes": 346,
+      "readFrom": "working-tree-and-git"
+    },
+    {
+      "repository": "/home/durai/Documents/projects/react-native/e-wizer-mobile-capture-dev",
+      "revision": "6999d8eca52fc4f4fff69066dce365f54a609663",
+      "path": "lib/offline.ts",
+      "sha256": "c7b6f52e28c8375d8e44b209992732e9cdfb58a6ae70e513c73069f9df78861b",
+      "bytes": 52573,
+      "readFrom": "working-tree-and-git"
+    },
+    {
+      "repository": "/home/durai/Documents/projects/react-native/e-wizer-mobile-capture-dev",
+      "revision": "6999d8eca52fc4f4fff69066dce365f54a609663",
+      "path": "lib/testMode.ts",
+      "sha256": "be9be9365f178b912148abb02d320771c9ec5a1aae2f3872bb248540834e828a",
+      "bytes": 1747,
+      "readFrom": "working-tree-and-git"
+    },
+    {
+      "repository": "/home/durai/Documents/projects/react-native/e-wizer-mobile-capture-dev",
+      "revision": "6999d8eca52fc4f4fff69066dce365f54a609663",
+      "path": "contexts/AuthContext.tsx",
+      "sha256": "4cda9819afdad6486b207a91a142550046c6f45356c9b4b6467b20bc2c80d771",
+      "bytes": 7521,
+      "readFrom": "working-tree-and-git"
+    },
+    {
+      "repository": "/home/durai/Documents/projects/e-wizer",
+      "revision": "d44f26ab6d6ae823b8c38029d126e650a69f76c9",
+      "path": "convex/pictorialInspections.ts",
+      "sha256": "66591f12c08cdcfba631ff48fd4dda8d54dee7e812aa8b6f975c3cd2f42ce9f3",
+      "bytes": 41283,
+      "readFrom": "git-show-local-origin-dev"
+    },
+    {
+      "repository": "/home/durai/Documents/projects/e-wizer",
+      "revision": "d44f26ab6d6ae823b8c38029d126e650a69f76c9",
+      "path": "convex/followUps.ts",
+      "sha256": "d84e6d54a2b6dd86cb3d5ebeda6809992f6ebc7d1587226f31e70c661907f409",
+      "bytes": 12558,
+      "readFrom": "git-show-local-origin-dev"
+    },
+    {
+      "repository": "/home/durai/Documents/projects/e-wizer",
+      "revision": "d44f26ab6d6ae823b8c38029d126e650a69f76c9",
+      "path": "convex/pillarStatus.ts",
+      "sha256": "5e06f0e542fbd3ebd93190d41361331df65e65951579b0e792f2705658f114eb",
+      "bytes": 33458,
+      "readFrom": "git-show-local-origin-dev"
+    },
+    {
+      "repository": "/home/durai/Documents/projects/e-wizer",
+      "revision": "d44f26ab6d6ae823b8c38029d126e650a69f76c9",
+      "path": "convex/schema.ts",
+      "sha256": "b47bba5a3f087ec412bec99693a3a91064139d0c74105510c01974a71e9380ae",
+      "bytes": 252097,
+      "readFrom": "git-show-local-origin-dev"
+    },
+    {
+      "repository": "/home/durai/Documents/projects/e-wizer",
+      "revision": "d44f26ab6d6ae823b8c38029d126e650a69f76c9",
+      "path": "convex/auth/access.ts",
+      "sha256": "467a8f43879643e4babd21b838d962bf9f05a04e43a7cafe579d19b3753bd8c5",
+      "bytes": 31498,
+      "readFrom": "git-show-local-origin-dev"
+    }
+  ],
+  "claims": {
+    "cleaning-occurrence": {
+      "statement": "A failed scheduled check satisfies its occurrence; its finding stays open.",
+      "references": [
+        "mobile:lib/scheduling.ts:325-460",
+        "backend:convex/pillarStatus.ts:595-636"
+      ]
+    },
+    "demo-disclosure": {
+      "statement": "Authorized seeded demonstration records show simulated inspection and work; no physical correction or evidence photo is claimed.",
+      "references": [
+        "copied-cleaning-register:authorized-bakery-demo-operational-evidence"
+      ]
+    },
+    "baseline-context": {
+      "statement": "Baseline images predate the operations; 19 later captures comprise 16 passes, 2 failures and 1 unavailable.",
+      "references": [
+        "copied-cleaning-register:registered-operational-pngs"
+      ]
+    },
+    "cleaning-fields": {
+      "statement": "Finding grade and failure reason are required. Action taken and photos are optional in the demonstrated flow.",
+      "references": [
+        "mobile:app/(app)/task/[id].tsx:504-529,723-818"
+      ]
+    },
+    "cleaning-queue": {
+      "statement": "Unverified Cleaning failures are gathered all-time; the card is a follow-up control.",
+      "references": [
+        "backend:convex/followUps.ts:31-77",
+        "mobile:app/(app)/follow-ups.tsx:482-623"
+      ]
+    },
+    "bill-components": {
+      "statement": "The Remedial total combines Cleaning open with CAPA due, not Cleaning alone.",
+      "references": [
+        "backend:convex/pillarStatus.ts:705-741"
+      ]
+    },
+    "human-recheck": {
+      "statement": "A person verifies the correction before sign-off; the light-close UI does not enforce a physical recheck.",
+      "references": [
+        "mobile:app/(app)/follow-ups.tsx:316-340,550-623"
+      ]
+    },
+    "cleaning-verification": {
+      "statement": "Inner CONFIRM records accepted verification; original result fail remains.",
+      "references": [
+        "backend:convex/followUps.ts:210-235",
+        "copied-cleaning-register:exact-persisted-training-mutations"
+      ]
+    },
+    "cleaning-audit": {
+      "statement": "Original capture and later verification attribution are retained but are not rendered together in this mobile list.",
+      "references": [
+        "mobile:app/(app)/follow-ups.tsx:482-623",
+        "mobile:app/(app)/cleaning-verification/index.tsx:505-570"
+      ]
+    },
+    "no-assignment": {
+      "statement": "No structured remedial owner, assignee, due date, review date, recurrence frequency, SLA, reminder or automatic Inspection escalation is present. Attribution is not assignment.",
+      "references": [
+        "backend:convex/schema.ts:pictorialInspections",
+        "mobile:app/(app)/inspections/verify.tsx:91-148,579-735"
+      ]
+    },
+    "critical-ncr": {
+      "statement": "Critical Cleaning has a separate grade-triggered NCR handoff; do not merge formal NCR and remedial closure.",
+      "references": [
+        "mobile:lib/ncrEscalation.ts:1-7",
+        "mobile:app/(app)/task/[id].tsx:408-455"
+      ]
+    },
+    "inspection-creation": {
+      "statement": "SAVE FINDING is offline/local. Complete then Sign & Complete uploads the finding and issues the inspection. Backend creation stamps the shared open finding at upload.",
+      "references": [
+        "mobile:app/(app)/inspections/[id].tsx:445-475,675-775,1320-1415",
+        "mobile:lib/offline.ts:500-567",
+        "backend:convex/pictorialInspections.ts:342-398"
+      ]
+    },
+    "inspection-persistence": {
+      "statement": "Server open/remedied findings persist without a parent status/date gate; no day or cleaning cycle closes them.",
+      "references": [
+        "backend:convex/pillarStatus.ts:819-836",
+        "backend:convex/pictorialInspections.ts:194-258"
+      ]
+    },
+    "inspection-age": {
+      "statement": "Within area: severity then oldest. Age styling is muted through 7 days, amber >7, coral >30; no SLA or automation.",
+      "references": [
+        "mobile:app/(app)/inspections/verify.tsx:427-491"
+      ]
+    },
+    "inspection-evidence": {
+      "statement": "The mobile Accept handler gates after evidence only for before_after_required. The optional button label does not override that gate.",
+      "references": [
+        "mobile:app/(app)/inspections/verify.tsx:330-362,657-679"
+      ]
+    },
+    "inspection-accept": {
+      "statement": "Accepted verification closes the finding.",
+      "references": [
+        "backend:convex/pictorialInspections.ts:495-570"
+      ]
+    },
+    "inspection-reject": {
+      "statement": "Rejected verification returns the finding to open; reason is optional.",
+      "references": [
+        "backend:convex/pictorialInspections.ts:495-570",
+        "mobile:app/(app)/inspections/verify.tsx:364-380"
+      ]
+    },
+    "inspection-ncr": {
+      "statement": "Explicit escalation creates/links an NCR, marks the finding escalated and appends history.",
+      "references": [
+        "backend:convex/pictorialInspections.ts:738-849"
+      ]
+    },
+    "inspection-history": {
+      "statement": "Recent Closed uses (verifiedAt ?? createdAt) in a 30-day window. History survives. Eligible higher-role reopen requires a >=10-character comment and preserves prior verification fields/history; mobile history omits event time.",
+      "references": [
+        "backend:convex/pictorialInspections.ts:194-258,578-613",
+        "mobile:app/(app)/inspections/verify.tsx:382-398,605-646"
+      ]
+    }
+  },
+  "captureFeasibility": "source-inspected only; no emulator, app session or live query opened in this build wave",
+  "discrepancies": [
+    "Mobile SAVE FINDING does not make the shared queue: Complete, signature and upload are necessary.",
+    "Draft remedialAction updates only component state for local findings; it is absent from PendingInspectionFinding and the flush payload. Use ACTION TAKEN in verification for reliable persistence.",
+    "The current source uses direct launchCameraAsync for both Inspection before/after; test@ gallery helper is not called.",
+    "Local origin/dev Cleaning follow-up photo patch uses afterImageIds; approved storyboard historical source used imageIds. No photo was supplied in reused demo evidence.",
+    "Registered Cleaning follow-up images show ALL selected with Blue Covers search, not CLEANING selected. Missing selected-bucket proof stays explicit.",
+    "Current-status route comment claiming clearance on next high-level clean conflicts with lifecycle logic; excluded from teaching claims.",
+    "Closed Inspection query supplies neither after-photo URL nor remedialBy; current mobile history omits event time."
+  ]
+}

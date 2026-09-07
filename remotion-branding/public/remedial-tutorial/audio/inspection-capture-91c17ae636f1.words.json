@@ -1,0 +1,294 @@
+{
+  "audioSha256": "7fb05cf0dfbe6827758e7be810b30049cab4fc9c3bd105b40fde6b9c02213b96",
+  "model": "faster-whisper-small",
+  "modelRevision": "536b0662742c02347bc0e980a01041f333bce120",
+  "computeType": "int8",
+  "language": "en",
+  "initialPrompt": null,
+  "duration": 23.5915,
+  "text": "Capture the before photo in finding facts. These labeled demo cases use the Android camera test scene, not a physical defect. Save finding keeps a draft on the device. Complete, then sign, then complete. Uploads the findings and issues the inspection. Then check the shared open queue.",
+  "words": [
+    {
+      "word": " Capture",
+      "start": 0.0,
+      "end": 0.46,
+      "probability": 0.8371683657169342
+    },
+    {
+      "word": " the",
+      "start": 0.46,
+      "end": 0.6,
+      "probability": 0.9859457612037659
+    },
+    {
+      "word": " before",
+      "start": 0.6,
+      "end": 0.98,
+      "probability": 0.6636707782745361
+    },
+    {
+      "word": " photo",
+      "start": 0.98,
+      "end": 1.54,
+      "probability": 0.9513339996337891
+    },
+    {
+      "word": " in",
+      "start": 1.54,
+      "end": 1.92,
+      "probability": 0.9399963021278381
+    },
+    {
+      "word": " finding",
+      "start": 1.92,
+      "end": 2.22,
+      "probability": 0.5543094277381897
+    },
+    {
+      "word": " facts.",
+      "start": 2.22,
+      "end": 2.6,
+      "probability": 0.9618046283721924
+    },
+    {
+      "word": " These",
+      "start": 3.82,
+      "end": 4.26,
+      "probability": 0.9296852946281433
+    },
+    {
+      "word": " labeled",
+      "start": 4.26,
+      "end": 4.8,
+      "probability": 0.843174159526825
+    },
+    {
+      "word": " demo",
+      "start": 4.8,
+      "end": 5.52,
+      "probability": 0.9466826319694519
+    },
+    {
+      "word": " cases",
+      "start": 5.52,
+      "end": 6.0,
+      "probability": 0.9908578991889954
+    },
+    {
+      "word": " use",
+      "start": 6.0,
+      "end": 6.6,
+      "probability": 0.8666579723358154
+    },
+    {
+      "word": " the",
+      "start": 6.6,
+      "end": 6.86,
+      "probability": 0.9934267997741699
+    },
+    {
+      "word": " Android",
+      "start": 6.86,
+      "end": 7.34,
+      "probability": 0.8413049578666687
+    },
+    {
+      "word": " camera",
+      "start": 7.34,
+      "end": 7.8,
+      "probability": 0.8024685382843018
+    },
+    {
+      "word": " test",
+      "start": 7.8,
+      "end": 8.32,
+      "probability": 0.9317948222160339
+    },
+    {
+      "word": " scene,",
+      "start": 8.32,
+      "end": 9.08,
+      "probability": 0.816497802734375
+    },
+    {
+      "word": " not",
+      "start": 9.56,
+      "end": 9.84,
+      "probability": 0.9939861297607422
+    },
+    {
+      "word": " a",
+      "start": 9.84,
+      "end": 10.0,
+      "probability": 0.9949474334716797
+    },
+    {
+      "word": " physical",
+      "start": 10.0,
+      "end": 10.32,
+      "probability": 0.9963608384132385
+    },
+    {
+      "word": " defect.",
+      "start": 10.32,
+      "end": 10.76,
+      "probability": 0.99222332239151
+    },
+    {
+      "word": " Save",
+      "start": 11.58,
+      "end": 11.88,
+      "probability": 0.8662319779396057
+    },
+    {
+      "word": " finding",
+      "start": 11.88,
+      "end": 12.3,
+      "probability": 0.70851731300354
+    },
+    {
+      "word": " keeps",
+      "start": 12.3,
+      "end": 13.12,
+      "probability": 0.8576666712760925
+    },
+    {
+      "word": " a",
+      "start": 13.12,
+      "end": 13.26,
+      "probability": 0.9676477313041687
+    },
+    {
+      "word": " draft",
+      "start": 13.26,
+      "end": 13.48,
+      "probability": 0.9795951247215271
+    },
+    {
+      "word": " on",
+      "start": 13.48,
+      "end": 13.84,
+      "probability": 0.9967431426048279
+    },
+    {
+      "word": " the",
+      "start": 13.84,
+      "end": 13.94,
+      "probability": 0.996799111366272
+    },
+    {
+      "word": " device.",
+      "start": 13.94,
+      "end": 14.36,
+      "probability": 0.9979199767112732
+    },
+    {
+      "word": " Complete,",
+      "start": 15.12,
+      "end": 15.5,
+      "probability": 0.9568414688110352
+    },
+    {
+      "word": " then",
+      "start": 16.3,
+      "end": 16.38,
+      "probability": 0.9755774140357971
+    },
+    {
+      "word": " sign,",
+      "start": 16.38,
+      "end": 16.76,
+      "probability": 0.9234499335289001
+    },
+    {
+      "word": " then",
+      "start": 17.26,
+      "end": 17.36,
+      "probability": 0.5400274991989136
+    },
+    {
+      "word": " complete.",
+      "start": 17.36,
+      "end": 17.72,
+      "probability": 0.9940861463546753
+    },
+    {
+      "word": " Uploads",
+      "start": 18.42,
+      "end": 18.84,
+      "probability": 0.880432645479838
+    },
+    {
+      "word": " the",
+      "start": 18.84,
+      "end": 19.0,
+      "probability": 0.9952147006988525
+    },
+    {
+      "word": " findings",
+      "start": 19.0,
+      "end": 19.36,
+      "probability": 0.9894562363624573
+    },
+    {
+      "word": " and",
+      "start": 19.36,
+      "end": 19.7,
+      "probability": 0.9322906732559204
+    },
+    {
+      "word": " issues",
+      "start": 19.7,
+      "end": 20.0,
+      "probability": 0.9917709827423096
+    },
+    {
+      "word": " the",
+      "start": 20.0,
+      "end": 20.22,
+      "probability": 0.9962801337242126
+    },
+    {
+      "word": " inspection.",
+      "start": 20.22,
+      "end": 20.62,
+      "probability": 0.9931562542915344
+    },
+    {
+      "word": " Then",
+      "start": 21.26,
+      "end": 21.56,
+      "probability": 0.9798610210418701
+    },
+    {
+      "word": " check",
+      "start": 21.56,
+      "end": 21.82,
+      "probability": 0.9738754034042358
+    },
+    {
+      "word": " the",
+      "start": 21.82,
+      "end": 22.02,
+      "probability": 0.9833914041519165
+    },
+    {
+      "word": " shared",
+      "start": 22.02,
+      "end": 22.42,
+      "probability": 0.9575315117835999
+    },
+    {
+      "word": " open",
+      "start": 22.42,
+      "end": 22.78,
+      "probability": 0.9170683026313782
+    },
+    {
+      "word": " queue.",
+      "start": 22.78,
+      "end": 23.1,
+      "probability": 0.9218462109565735
+    }
+  ]
+}

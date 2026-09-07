@@ -1,0 +1,66 @@
+[
+  {
+    "case": "B",
+    "field": "photoUrl",
+    "findingId": "92c99484-4afd-47a3-8672-309eb561978b",
+    "file": "server-demo-b-photoUrl.bin",
+    "bytes": 142467,
+    "sha256": "aa4853e531ebd678a7d6d545bbc9e95b1a4b7f49f9dabf471e2b17777f6e1739"
+  },
+  {
+    "case": "B",
+    "field": "annotatedPhotoUrl",
+    "findingId": "92c99484-4afd-47a3-8672-309eb561978b",
+    "file": "server-demo-b-annotatedPhotoUrl.bin",
+    "bytes": 27854,
+    "sha256": "c998e2e7f5458dd7506281727e4dfc0901cb26bd812c457a06eff428c6bcad98"
+  },
+  {
+    "case": "C",
+    "field": "photoUrl",
+    "findingId": "8ff363de-b97f-4d25-88e8-4d4941e193d0",
+    "file": "server-demo-c-photoUrl.bin",
+    "bytes": 145237,
+    "sha256": "d8871cb0517bfd8e07129e16fd07e8bd44edb63710c2ed74aeb852f84b750166"
+  },
+  {
+    "case": "C",
+    "field": "annotatedPhotoUrl",
+    "findingId": "8ff363de-b97f-4d25-88e8-4d4941e193d0",
+    "file": "server-demo-c-annotatedPhotoUrl.bin",
+    "bytes": 28796,
+    "sha256": "6c5267a42558fadeae8c43b79ecce1ad6b019f9a23882952b34294dee615abfa"
+  },
+  {
+    "case": "A",
+    "field": "photoUrl",
+    "findingId": "d9b3b8db-9ec8-465e-8d90-7cbb4b90c719",
+    "file": "server-demo-a-photoUrl.bin",
+    "bytes": 143631,
+    "sha256": "c3ac26431c1c64daab8af09008372d8fae51b21d43e2819cc85c17103274521d"
+  },
+  {
+    "case": "A",
+    "field": "annotatedPhotoUrl",
+    "findingId": "d9b3b8db-9ec8-465e-8d90-7cbb4b90c719",
+    "file": "server-demo-a-annotatedPhotoUrl.bin",
+    "bytes": 28311,
+    "sha256": "3b009d85acd84d243ebe6bee1f2c7430dc9e133ba5d882925d7bedd7fa26e39b"
+  },
+  {
+    "case": "A",
+    "field": "afterPhotoUrl",
+    "findingId": "d9b3b8db-9ec8-465e-8d90-7cbb4b90c719",
+    "file": "server-demo-a-afterPhotoUrl.bin",
+    "bytes": 147974,
+    "sha256": "91d7cda9eab91ea8984d380e3f75b4c02366312ba5931978c8199188b530089b"
+  },
+  {
+    "case": "A",
+    "field": "annotatedAfterPhotoUrl",
+    "findingId": "d9b3b8db-9ec8-465e-8d90-7cbb4b90c719",
+    "file": "server-demo-a-annotatedAfterPhotoUrl.bin",
+    "bytes": 29004,
+    "sha256": "d303446ac8d5a1543d8cf92164d4322b1ffa73f80419a79f1e800e0dcceb8c04"
+  }
+]

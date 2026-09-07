@@ -1,0 +1,258 @@
+{
+  "audioSha256": "dc957f1a2291c57c8c1b2c511f246923e991c3b381be295d0192658589a2897b",
+  "model": "faster-whisper-small",
+  "modelRevision": "536b0662742c02347bc0e980a01041f333bce120",
+  "computeType": "int8",
+  "language": "en",
+  "initialPrompt": null,
+  "duration": 22.3840625,
+  "text": "The stored record retains the original failure and capture attribution, alongside later verification attribution. This mobile screen does not display both people and timestamps together. Do not read that evidence into the green state. Attribution identifies an actor, not an assignee.",
+  "words": [
+    {
+      "word": " The",
+      "start": 0.0,
+      "end": 0.2,
+      "probability": 0.8779451847076416
+    },
+    {
+      "word": " stored",
+      "start": 0.2,
+      "end": 0.52,
+      "probability": 0.9682788252830505
+    },
+    {
+      "word": " record",
+      "start": 0.52,
+      "end": 1.06,
+      "probability": 0.9863772392272949
+    },
+    {
+      "word": " retains",
+      "start": 1.06,
+      "end": 2.1,
+      "probability": 0.9866098463535309
+    },
+    {
+      "word": " the",
+      "start": 2.1,
+      "end": 2.28,
+      "probability": 0.8984439969062805
+    },
+    {
+      "word": " original",
+      "start": 2.28,
+      "end": 2.58,
+      "probability": 0.998333752155304
+    },
+    {
+      "word": " failure",
+      "start": 2.58,
+      "end": 3.04,
+      "probability": 0.9918810725212097
+    },
+    {
+      "word": " and",
+      "start": 3.04,
+      "end": 3.38,
+      "probability": 0.6531805396080017
+    },
+    {
+      "word": " capture",
+      "start": 3.38,
+      "end": 3.8,
+      "probability": 0.78241366147995
+    },
+    {
+      "word": " attribution,",
+      "start": 3.8,
+      "end": 4.66,
+      "probability": 0.9328636527061462
+    },
+    {
+      "word": " alongside",
+      "start": 4.92,
+      "end": 5.32,
+      "probability": 0.9729783535003662
+    },
+    {
+      "word": " later",
+      "start": 5.32,
+      "end": 5.98,
+      "probability": 0.8916186690330505
+    },
+    {
+      "word": " verification",
+      "start": 5.98,
+      "end": 6.76,
+      "probability": 0.9921581745147705
+    },
+    {
+      "word": " attribution.",
+      "start": 6.76,
+      "end": 7.88,
+      "probability": 0.9769816696643829
+    },
+    {
+      "word": " This",
+      "start": 8.6,
+      "end": 8.78,
+      "probability": 0.9808030128479004
+    },
+    {
+      "word": " mobile",
+      "start": 8.78,
+      "end": 9.16,
+      "probability": 0.9803184866905212
+    },
+    {
+      "word": " screen",
+      "start": 9.16,
+      "end": 9.68,
+      "probability": 0.9915566444396973
+    },
+    {
+      "word": " does",
+      "start": 9.68,
+      "end": 10.48,
+      "probability": 0.9886759519577026
+    },
+    {
+      "word": " not",
+      "start": 10.48,
+      "end": 10.76,
+      "probability": 0.9971745014190674
+    },
+    {
+      "word": " display",
+      "start": 10.76,
+      "end": 11.3,
+      "probability": 0.9984979629516602
+    },
+    {
+      "word": " both",
+      "start": 11.3,
+      "end": 11.8,
+      "probability": 0.9753751754760742
+    },
+    {
+      "word": " people",
+      "start": 11.8,
+      "end": 12.18,
+      "probability": 0.9932880997657776
+    },
+    {
+      "word": " and",
+      "start": 12.18,
+      "end": 12.9,
+      "probability": 0.7601764798164368
+    },
+    {
+      "word": " timestamps",
+      "start": 12.9,
+      "end": 13.4,
+      "probability": 0.8893253803253174
+    },
+    {
+      "word": " together.",
+      "start": 13.4,
+      "end": 13.8,
+      "probability": 0.967183530330658
+    },
+    {
+      "word": " Do",
+      "start": 14.52,
+      "end": 14.66,
+      "probability": 0.9736698865890503
+    },
+    {
+      "word": " not",
+      "start": 14.66,
+      "end": 14.88,
+      "probability": 0.9978366494178772
+    },
+    {
+      "word": " read",
+      "start": 14.88,
+      "end": 15.22,
+      "probability": 0.9975080490112305
+    },
+    {
+      "word": " that",
+      "start": 15.22,
+      "end": 15.52,
+      "probability": 0.9876783490180969
+    },
+    {
+      "word": " evidence",
+      "start": 15.52,
+      "end": 15.98,
+      "probability": 0.995163083076477
+    },
+    {
+      "word": " into",
+      "start": 15.98,
+      "end": 16.34,
+      "probability": 0.9706594944000244
+    },
+    {
+      "word": " the",
+      "start": 16.34,
+      "end": 16.52,
+      "probability": 0.9906185269355774
+    },
+    {
+      "word": " green",
+      "start": 16.52,
+      "end": 16.76,
+      "probability": 0.792332649230957
+    },
+    {
+      "word": " state.",
+      "start": 16.76,
+      "end": 17.1,
+      "probability": 0.9839580059051514
+    },
+    {
+      "word": " Attribution",
+      "start": 17.98,
+      "end": 18.5,
+      "probability": 0.9512416124343872
+    },
+    {
+      "word": " identifies",
+      "start": 18.5,
+      "end": 19.46,
+      "probability": 0.9893879890441895
+    },
+    {
+      "word": " an",
+      "start": 19.46,
+      "end": 19.78,
+      "probability": 0.9917144179344177
+    },
+    {
+      "word": " actor,",
+      "start": 19.78,
+      "end": 20.26,
+      "probability": 0.991581380367279
+    },
+    {
+      "word": " not",
+      "start": 20.38,
+      "end": 20.98,
+      "probability": 0.9882828593254089
+    },
+    {
+      "word": " an",
+      "start": 20.98,
+      "end": 21.32,
+      "probability": 0.9522086977958679
+    },
+    {
+      "word": " assignee.",
+      "start": 21.32,
+      "end": 22.02,
+      "probability": 0.9626581867535909
+    }
+  ]
+}

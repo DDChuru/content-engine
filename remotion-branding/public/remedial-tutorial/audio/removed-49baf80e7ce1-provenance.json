@@ -1,0 +1,24 @@
+{
+  "provider": "ElevenLabs",
+  "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+  "providerName": "DC",
+  "seriesName": "Daniel",
+  "request": {
+    "text": "After confirmation, the same Blue Covers search returns No matches. The finding has left the open queue; this flow does not show a success dialog.",
+    "model_id": "eleven_multilingual_v2",
+    "voice_settings": {
+      "stability": 0.55,
+      "similarity_boost": 0.8,
+      "style": 0.35,
+      "use_speaker_boost": true
+    }
+  },
+  "requestHash": "49baf80e7ce17fc68ea1b91d6d86e772ad549d4e8b4df656cbe83ebc561b0863",
+  "generatedAt": "2026-09-07T01:55:46.820Z",
+  "requestId": "chytnbTMJUK7RsBAs1sa",
+  "audio": {
+    "path": "remedial-tutorial/audio/removed-49baf80e7ce1.mp3",
+    "sha256": "1cf6805ebb9077e0dd522c601ea932c4041fc1e2245c8ada1bb45e620d0b8788",
+    "bytes": 209023
+  }
+}

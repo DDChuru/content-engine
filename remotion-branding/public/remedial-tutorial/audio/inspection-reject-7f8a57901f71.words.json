@@ -1,0 +1,174 @@
+{
+  "audioSha256": "fa0dc9a892265cccd43cb5dcd93f112e72a10a384259a9f5009fa473ad425982",
+  "model": "faster-whisper-small",
+  "modelRevision": "536b0662742c02347bc0e980a01041f333bce120",
+  "computeType": "int8",
+  "language": "en",
+  "initialPrompt": null,
+  "duration": 14.0713125,
+  "text": "Use a separate case for reject at the optional reason. Then confirm reject. The decision is recorded and the finding returns to open. Reject is not closure.",
+  "words": [
+    {
+      "word": " Use",
+      "start": 0.0,
+      "end": 0.3,
+      "probability": 0.581368625164032
+    },
+    {
+      "word": " a",
+      "start": 0.3,
+      "end": 0.64,
+      "probability": 0.9691267609596252
+    },
+    {
+      "word": " separate",
+      "start": 0.64,
+      "end": 0.92,
+      "probability": 0.9881168603897095
+    },
+    {
+      "word": " case",
+      "start": 0.92,
+      "end": 1.4,
+      "probability": 0.9963846206665039
+    },
+    {
+      "word": " for",
+      "start": 1.4,
+      "end": 1.8,
+      "probability": 0.9920335412025452
+    },
+    {
+      "word": " reject",
+      "start": 1.8,
+      "end": 2.14,
+      "probability": 0.957415759563446
+    },
+    {
+      "word": " at",
+      "start": 2.14,
+      "end": 3.42,
+      "probability": 0.7788968682289124
+    },
+    {
+      "word": " the",
+      "start": 3.42,
+      "end": 3.54,
+      "probability": 0.9945777654647827
+    },
+    {
+      "word": " optional",
+      "start": 3.54,
+      "end": 3.9,
+      "probability": 0.9877761602401733
+    },
+    {
+      "word": " reason.",
+      "start": 3.9,
+      "end": 4.36,
+      "probability": 0.9870612621307373
+    },
+    {
+      "word": " Then",
+      "start": 5.04,
+      "end": 5.24,
+      "probability": 0.9741435050964355
+    },
+    {
+      "word": " confirm",
+      "start": 5.24,
+      "end": 5.8,
+      "probability": 0.9527009129524231
+    },
+    {
+      "word": " reject.",
+      "start": 5.8,
+      "end": 6.56,
+      "probability": 0.9206979870796204
+    },
+    {
+      "word": " The",
+      "start": 7.34,
+      "end": 7.6,
+      "probability": 0.9924319982528687
+    },
+    {
+      "word": " decision",
+      "start": 7.6,
+      "end": 7.94,
+      "probability": 0.9990432858467102
+    },
+    {
+      "word": " is",
+      "start": 7.94,
+      "end": 8.22,
+      "probability": 0.9988006353378296
+    },
+    {
+      "word": " recorded",
+      "start": 8.22,
+      "end": 8.64,
+      "probability": 0.9956568479537964
+    },
+    {
+      "word": " and",
+      "start": 8.64,
+      "end": 9.48,
+      "probability": 0.7996712923049927
+    },
+    {
+      "word": " the",
+      "start": 9.48,
+      "end": 9.62,
+      "probability": 0.9921000599861145
+    },
+    {
+      "word": " finding",
+      "start": 9.62,
+      "end": 10.0,
+      "probability": 0.9906202554702759
+    },
+    {
+      "word": " returns",
+      "start": 10.0,
+      "end": 10.74,
+      "probability": 0.8888059854507446
+    },
+    {
+      "word": " to",
+      "start": 10.74,
+      "end": 11.0,
+      "probability": 0.9986353516578674
+    },
+    {
+      "word": " open.",
+      "start": 11.0,
+      "end": 11.28,
+      "probability": 0.9942386150360107
+    },
+    {
+      "word": " Reject",
+      "start": 11.98,
+      "end": 12.68,
+      "probability": 0.9638976156711578
+    },
+    {
+      "word": " is",
+      "start": 12.68,
+      "end": 12.94,
+      "probability": 0.990168571472168
+    },
+    {
+      "word": " not",
+      "start": 12.94,
+      "end": 13.14,
+      "probability": 0.9925721287727356
+    },
+    {
+      "word": " closure.",
+      "start": 13.14,
+      "end": 13.5,
+      "probability": 0.937834620475769
+    }
+  ]
+}

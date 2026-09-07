@@ -1,0 +1,24 @@
+{
+  "provider": "ElevenLabs",
+  "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+  "providerName": "DC",
+  "seriesName": "Daniel",
+  "request": {
+    "text": "Daily describes the Cleaning finding's scheduled origin, not an expiry. Inspection Remedials have a separate carry-over trail. Neither open finding is cleared just because a new day begins.",
+    "model_id": "eleven_multilingual_v2",
+    "voice_settings": {
+      "stability": 0.55,
+      "similarity_boost": 0.8,
+      "style": 0.35,
+      "use_speaker_boost": true
+    }
+  },
+  "requestHash": "e0f0c9fae18d2e5b2a3d26650df73e546efbb12c22bc36bc30f955f1b1075f82",
+  "generatedAt": "2026-09-07T01:55:57.734Z",
+  "requestId": "U6GNG10OopA5C4IngXGs",
+  "audio": {
+    "path": "remedial-tutorial/audio/two-clocks-e0f0c9fae18d.mp3",
+    "sha256": "7204aa61331e7e441536fc26338c1a127de1ffc420e53d4f6d3c2c17ff69ca72",
+    "bytes": 261686
+  }
+}

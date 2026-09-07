@@ -1,0 +1,234 @@
+{
+  "audioSha256": "bbf2775598ab9074def61c540474a7ac94678a24679a7b5f4056c27b3e71e7ed",
+  "model": "faster-whisper-small",
+  "modelRevision": "536b0662742c02347bc0e980a01041f333bce120",
+  "computeType": "int8",
+  "language": "en",
+  "initialPrompt": null,
+  "duration": 18.668875,
+  "text": "Within each area, findings sought by severity, then oldest. Age is muted through seven days, amber after seven days, and coral after 30 days. These colors do not set in SLA, send a reminder or trigger escalation.",
+  "words": [
+    {
+      "word": " Within",
+      "start": 0.0,
+      "end": 0.28,
+      "probability": 0.4479738473892212
+    },
+    {
+      "word": " each",
+      "start": 0.28,
+      "end": 0.52,
+      "probability": 0.9958136677742004
+    },
+    {
+      "word": " area,",
+      "start": 0.52,
+      "end": 0.92,
+      "probability": 0.997441291809082
+    },
+    {
+      "word": " findings",
+      "start": 1.28,
+      "end": 1.66,
+      "probability": 0.8098756670951843
+    },
+    {
+      "word": " sought",
+      "start": 1.66,
+      "end": 2.04,
+      "probability": 0.9537292122840881
+    },
+    {
+      "word": " by",
+      "start": 2.04,
+      "end": 2.3,
+      "probability": 0.993051290512085
+    },
+    {
+      "word": " severity,",
+      "start": 2.3,
+      "end": 2.82,
+      "probability": 0.9936990737915039
+    },
+    {
+      "word": " then",
+      "start": 3.26,
+      "end": 3.36,
+      "probability": 0.9769214987754822
+    },
+    {
+      "word": " oldest.",
+      "start": 3.36,
+      "end": 3.72,
+      "probability": 0.5876781344413757
+    },
+    {
+      "word": " Age",
+      "start": 4.48,
+      "end": 4.82,
+      "probability": 0.9866129159927368
+    },
+    {
+      "word": " is",
+      "start": 4.82,
+      "end": 5.02,
+      "probability": 0.9943174719810486
+    },
+    {
+      "word": " muted",
+      "start": 5.02,
+      "end": 5.38,
+      "probability": 0.8679376840591431
+    },
+    {
+      "word": " through",
+      "start": 5.38,
+      "end": 6.22,
+      "probability": 0.7315775752067566
+    },
+    {
+      "word": " seven",
+      "start": 6.22,
+      "end": 6.6,
+      "probability": 0.6589722037315369
+    },
+    {
+      "word": " days,",
+      "start": 6.6,
+      "end": 7.04,
+      "probability": 0.9974353909492493
+    },
+    {
+      "word": " amber",
+      "start": 7.44,
+      "end": 7.7,
+      "probability": 0.824701726436615
+    },
+    {
+      "word": " after",
+      "start": 7.7,
+      "end": 8.64,
+      "probability": 0.8614552021026611
+    },
+    {
+      "word": " seven",
+      "start": 8.64,
+      "end": 8.96,
+      "probability": 0.9525742530822754
+    },
+    {
+      "word": " days,",
+      "start": 8.96,
+      "end": 9.36,
+      "probability": 0.9952653646469116
+    },
+    {
+      "word": " and",
+      "start": 9.72,
+      "end": 9.72,
+      "probability": 0.9578969478607178
+    },
+    {
+      "word": " coral",
+      "start": 9.72,
+      "end": 10.08,
+      "probability": 0.9957746863365173
+    },
+    {
+      "word": " after",
+      "start": 10.08,
+      "end": 10.88,
+      "probability": 0.9882529377937317
+    },
+    {
+      "word": " 30",
+      "start": 10.88,
+      "end": 11.16,
+      "probability": 0.8091014623641968
+    },
+    {
+      "word": " days.",
+      "start": 11.16,
+      "end": 11.48,
+      "probability": 0.9942060708999634
+    },
+    {
+      "word": " These",
+      "start": 12.32,
+      "end": 12.48,
+      "probability": 0.9903084635734558
+    },
+    {
+      "word": " colors",
+      "start": 12.48,
+      "end": 12.78,
+      "probability": 0.8344669342041016
+    },
+    {
+      "word": " do",
+      "start": 12.78,
+      "end": 13.1,
+      "probability": 0.9858174920082092
+    },
+    {
+      "word": " not",
+      "start": 13.1,
+      "end": 13.28,
+      "probability": 0.9987831711769104
+    },
+    {
+      "word": " set",
+      "start": 13.28,
+      "end": 13.66,
+      "probability": 0.9264594912528992
+    },
+    {
+      "word": " in",
+      "start": 13.66,
+      "end": 13.92,
+      "probability": 0.9330798387527466
+    },
+    {
+      "word": " SLA,",
+      "start": 13.92,
+      "end": 14.58,
+      "probability": 0.9735072553157806
+    },
+    {
+      "word": " send",
+      "start": 15.32,
+      "end": 15.64,
+      "probability": 0.9642351865768433
+    },
+    {
+      "word": " a",
+      "start": 15.64,
+      "end": 15.8,
+      "probability": 0.9456536769866943
+    },
+    {
+      "word": " reminder",
+      "start": 15.8,
+      "end": 16.28,
+      "probability": 0.9944720268249512
+    },
+    {
+      "word": " or",
+      "start": 16.28,
+      "end": 17.08,
+      "probability": 0.7237855792045593
+    },
+    {
+      "word": " trigger",
+      "start": 17.08,
+      "end": 17.38,
+      "probability": 0.998725950717926
+    },
+    {
+      "word": " escalation.",
+      "start": 17.38,
+      "end": 18.2,
+      "probability": 0.9879753589630127
+    }
+  ]
+}

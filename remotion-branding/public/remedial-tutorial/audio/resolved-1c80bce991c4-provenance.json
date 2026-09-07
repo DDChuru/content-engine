@@ -1,0 +1,24 @@
+{
+  "provider": "ElevenLabs",
+  "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+  "providerName": "DC",
+  "seriesName": "Daniel",
+  "request": {
+    "text": "The summary now shows one resolved finding, with one still awaiting follow-up. All nineteen captured checks stay recorded. Expand Resolved today to find Blue Covers. The original failure has been signed off; it has not changed into a pass.",
+    "model_id": "eleven_multilingual_v2",
+    "voice_settings": {
+      "stability": 0.55,
+      "similarity_boost": 0.8,
+      "style": 0.35,
+      "use_speaker_boost": true
+    }
+  },
+  "requestHash": "1c80bce991c4548bc0da421a991edd1b51cfc82fb79f850ca57519c80ea8495c",
+  "generatedAt": "2026-09-07T02:13:19.799Z",
+  "requestId": "fdOynfM9dltIQwuGqDn4",
+  "audio": {
+    "path": "remedial-tutorial/audio/resolved-1c80bce991c4.mp3",
+    "sha256": "e5e45b09699b5f4ea4415aea7a75831fdd31ab94d5dce0daa802aca59c44cf16",
+    "bytes": 361578
+  }
+}

@@ -1,0 +1,234 @@
+{
+  "audioSha256": "a78daa603a3bbf7d54fc01a9400af88c8a399bf78a4bf12995a5140d2c383706",
+  "model": "faster-whisper-small",
+  "modelRevision": "536b0662742c02347bc0e980a01041f333bce120",
+  "computeType": "int8",
+  "language": "en",
+  "initialPrompt": null,
+  "duration": 18.668875,
+  "text": "Recording the failure clears today's due occurrence. It does not clear the finding. The check has been recorded for today. Now the finding needs its own follow-up. These bakery demo records use simulated inspection and work.",
+  "words": [
+    {
+      "word": " Recording",
+      "start": 0.0,
+      "end": 0.46,
+      "probability": 0.9337088763713837
+    },
+    {
+      "word": " the",
+      "start": 0.46,
+      "end": 0.66,
+      "probability": 0.9894551634788513
+    },
+    {
+      "word": " failure",
+      "start": 0.66,
+      "end": 1.06,
+      "probability": 0.9891123175621033
+    },
+    {
+      "word": " clears",
+      "start": 1.06,
+      "end": 1.84,
+      "probability": 0.9653398990631104
+    },
+    {
+      "word": " today's",
+      "start": 1.84,
+      "end": 2.6,
+      "probability": 0.9146085679531097
+    },
+    {
+      "word": " due",
+      "start": 2.6,
+      "end": 3.02,
+      "probability": 0.9485816359519958
+    },
+    {
+      "word": " occurrence.",
+      "start": 3.02,
+      "end": 3.5,
+      "probability": 0.971274197101593
+    },
+    {
+      "word": " It",
+      "start": 4.42,
+      "end": 4.52,
+      "probability": 0.9810475707054138
+    },
+    {
+      "word": " does",
+      "start": 4.52,
+      "end": 4.7,
+      "probability": 0.9882745742797852
+    },
+    {
+      "word": " not",
+      "start": 4.7,
+      "end": 4.86,
+      "probability": 0.9977371692657471
+    },
+    {
+      "word": " clear",
+      "start": 4.86,
+      "end": 5.14,
+      "probability": 0.996429979801178
+    },
+    {
+      "word": " the",
+      "start": 5.14,
+      "end": 5.32,
+      "probability": 0.996550440788269
+    },
+    {
+      "word": " finding.",
+      "start": 5.32,
+      "end": 5.64,
+      "probability": 0.9808192849159241
+    },
+    {
+      "word": " The",
+      "start": 6.88,
+      "end": 7.1,
+      "probability": 0.9843355417251587
+    },
+    {
+      "word": " check",
+      "start": 7.1,
+      "end": 7.36,
+      "probability": 0.9536566734313965
+    },
+    {
+      "word": " has",
+      "start": 7.36,
+      "end": 7.64,
+      "probability": 0.9946610331535339
+    },
+    {
+      "word": " been",
+      "start": 7.64,
+      "end": 7.82,
+      "probability": 0.9993529915809631
+    },
+    {
+      "word": " recorded",
+      "start": 7.82,
+      "end": 8.24,
+      "probability": 0.9959267377853394
+    },
+    {
+      "word": " for",
+      "start": 8.24,
+      "end": 8.54,
+      "probability": 0.9923112392425537
+    },
+    {
+      "word": " today.",
+      "start": 8.54,
+      "end": 8.94,
+      "probability": 0.9962466359138489
+    },
+    {
+      "word": " Now",
+      "start": 10.06,
+      "end": 10.36,
+      "probability": 0.9961777925491333
+    },
+    {
+      "word": " the",
+      "start": 10.36,
+      "end": 10.58,
+      "probability": 0.8226101398468018
+    },
+    {
+      "word": " finding",
+      "start": 10.58,
+      "end": 10.96,
+      "probability": 0.9902248978614807
+    },
+    {
+      "word": " needs",
+      "start": 10.96,
+      "end": 11.86,
+      "probability": 0.9893252849578857
+    },
+    {
+      "word": " its",
+      "start": 11.86,
+      "end": 12.08,
+      "probability": 0.9588457942008972
+    },
+    {
+      "word": " own",
+      "start": 12.08,
+      "end": 12.34,
+      "probability": 0.9982609152793884
+    },
+    {
+      "word": " follow",
+      "start": 12.34,
+      "end": 12.66,
+      "probability": 0.995642900466919
+    },
+    {
+      "word": "-up.",
+      "start": 12.66,
+      "end": 12.92,
+      "probability": 0.7045553475618362
+    },
+    {
+      "word": " These",
+      "start": 13.86,
+      "end": 14.1,
+      "probability": 0.9889666438102722
+    },
+    {
+      "word": " bakery",
+      "start": 14.1,
+      "end": 14.52,
+      "probability": 0.8261185884475708
+    },
+    {
+      "word": " demo",
+      "start": 14.52,
+      "end": 14.9,
+      "probability": 0.9922573566436768
+    },
+    {
+      "word": " records",
+      "start": 14.9,
+      "end": 15.46,
+      "probability": 0.9966919422149658
+    },
+    {
+      "word": " use",
+      "start": 15.46,
+      "end": 16.16,
+      "probability": 0.968495786190033
+    },
+    {
+      "word": " simulated",
+      "start": 16.16,
+      "end": 16.9,
+      "probability": 0.9942653775215149
+    },
+    {
+      "word": " inspection",
+      "start": 16.9,
+      "end": 17.62,
+      "probability": 0.9956948757171631
+    },
+    {
+      "word": " and",
+      "start": 17.62,
+      "end": 17.92,
+      "probability": 0.9840059280395508
+    },
+    {
+      "word": " work.",
+      "start": 17.92,
+      "end": 18.18,
+      "probability": 0.9987001419067383
+    }
+  ]
+}
