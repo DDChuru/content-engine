@@ -624,7 +624,7 @@ const Scene04: React.FC<{ scene: TranscriptScene }> = ({ scene }) => {
     <Title kicker="">Consider a lift travelling upwards</Title>
     <WarmCard region="givens" accent={T.amber} style={{position:'absolute',left:1160,top:370,width:610,padding:'24px 28px'}}>
       <div style={{fontFamily:T.mono,fontSize:30,fontWeight:950,color:'#925000'}}>Lift journey</div>
-      <div style={{fontSize:30,lineHeight:1.5,marginTop:12}}>↑ positive · starts from rest<br/>a = 1.5 m s⁻² for 2 s<br/>Cruise for 4 s<br/>Brake to rest in 2 s</div>
+      <div style={{fontSize:30,lineHeight:1.5,marginTop:12}}>↑ positive · starts from rest<br/>a = 1.5 m s⁻² for 2 s<br/>Cruise 4 s · brake to rest in 2 s</div>
     </WarmCard>
     <svg data-region="lift" width="1920" height="800" style={{position:'absolute',top:160}}><g transform="translate(520 -60) scale(1.2)"><Lift displacement={stateAt(LIFT_MODEL,8*progressAt(actualFrame,15,buildStart(scene)-60)).displacement}/></g></svg>
   </SceneShell>;
@@ -736,7 +736,7 @@ const Scene06: React.FC<{ scene: TranscriptScene }> = ({ scene }) => {
     <Title kicker="">Consider a ball thrown straight up</Title>
     <WarmCard region="givens" accent={T.teal} style={{position:'absolute',left:1160,top:370,width:610,padding:'24px 28px'}}>
       <div style={{fontFamily:T.mono,fontSize:30,fontWeight:950,color:'#14745f'}}>Ball launch</div>
-      <div style={{fontSize:30,lineHeight:1.5,marginTop:12}}>↑ positive · u = 15 m s⁻¹<br/>g = 10 m s⁻² downwards<br/>No air resistance<br/>Returns to its launch point</div>
+      <div style={{fontSize:30,lineHeight:1.5,marginTop:12}}>↑ positive · u = 15 m s⁻¹<br/>g = 10 m s⁻² downwards<br/>No air resistance · returns to start</div>
     </WarmCard>
     <svg data-region="ball" width="1920" height="820" style={{position:'absolute',top:170}}><g transform="translate(650 0)"><BallRig {...stateAt(BALL_MODEL,3*progressAt(actualFrame,15,buildStart(scene)-60))}/></g></svg>
   </SceneShell>;
@@ -857,7 +857,7 @@ const Scene09: React.FC<{scene: TranscriptScene}> = ({scene}) => {
       <g data-givens="cyclist">
         <rect x={1160} y={10} width={690} height={190} rx={18} fill={T.ivory} stroke={T.teal} strokeWidth={3}/>
         <text x={1182} y={44} fill={T.ink} fontSize={27} fontWeight={850}>Cyclist journey · away from A is positive</text>
-        {['0–4 s: cruise at +3 m/s for 4 s','4–6 s: slow from +3 to 0 m/s in 2 s','6–9 s: rest for 3 s','9–14 s: return at −3 m/s for 5 s'].map((text,i)=><text key={text} x={1182} y={78+i*34} fill={T.ink} fontSize={25}>{text}</text>)}
+        {['0–4 s: cruise at +3 m/s for 4 s','4–6 s: +3 → 0 m/s in 2 s; 6–9 s: rest 3 s','9–14 s: return at −3 m/s for 5 s'].map((text,i)=><text key={text} x={1182} y={82+i*46} fill={T.ink} fontSize={25}>{text}</text>)}
       </g>
       <g data-cyclist-x={cyclistX} data-wheel-angle={wheelAngle} data-direction={direction} transform={`translate(${32+cyclistX*.6} 112) scale(${direction} 1)`}>
         {[-42,42].map(x=><g key={x} transform={`translate(${x} 0) rotate(${wheelAngle})`}><circle r={30} fill="none" stroke={T.ivory} strokeWidth={5}/><path d="M -27 0 H 27 M 0 -27 V 27" stroke={T.muted} strokeWidth={3}/></g>)}
@@ -945,7 +945,7 @@ function useStillAudit(enabled:boolean,rootRef:React.RefObject<HTMLDivElement|nu
       const panelId=el.getAttribute('data-ink-panel-id');
       const panel=el.closest('svg')?.querySelector(`[data-ink-panel="${panelId}"]`)?.getBoundingClientRect();
       const active=el.getAttribute('data-ink-active')==='true';
-      return {text:el.getAttribute('data-ink-text'),active,complete:el.getAttribute('data-ink-complete')==='true',
+      return {scene:`s${el.closest('[data-scene]')!.getAttribute('data-scene')!.padStart(2,'0')}`,text:el.getAttribute('data-ink-text'),active,complete:el.getAttribute('data-ink-complete')==='true',
         bounds:extent.toJSON(),panel:panelId,panelBounds:panel?.toJSON(),
         end:Number(el.getAttribute('data-ink-end')),strokeEnds:JSON.parse(el.getAttribute('data-ink-stroke-ends')??'[]') as number[],
         overflow:active&&(!panel||outside(extent,panel)),
@@ -955,7 +955,7 @@ function useStillAudit(enabled:boolean,rootRef:React.RefObject<HTMLDivElement|nu
     const inkOverflow=inkLayouts.filter(line=>line.overflow);
     const overflow=labels.some(el=>outside(el.getBoundingClientRect(),el.closest('[data-scene]')?.getBoundingClientRect()??bounds))||inkOverflow.length>0;
     const cyclist=root.querySelector('[data-cyclist-x]');
-    setMeasurement(JSON.stringify({frame,regions:regions.length,regionNames:regions.map(el=>el.getAttribute('data-region')),axisCollisions:collisions,axisText:labels.map(el=>({text:el.textContent,bounds:el.getBoundingClientRect().toJSON(),canvas:el.closest('[data-scene]')?.getBoundingClientRect().toJSON()})),overflow,inkLayouts,inkCollisions,inkOverflow,printedText:printed,inkText:inkLayouts.filter(line=>line.complete).map(line=>line.text),givens:Array.from(root.querySelectorAll('[data-givens], [data-region="givens"]')).filter(visible).map(el=>el.textContent),graphs:Array.from<Element>(root.querySelectorAll('[data-graph]')).filter(visible).map(el=>el.getAttribute('data-graph')),cyclist:cyclist?{x:Number(cyclist.getAttribute('data-cyclist-x')),wheelAngle:Number(cyclist.getAttribute('data-wheel-angle')),direction:Number(cyclist.getAttribute('data-direction'))}:null}));
+    setMeasurement(JSON.stringify({frame,visibleScenes:Array.from<Element>(root.querySelectorAll('[data-scene]')).filter(visible).map(el=>`s${el.getAttribute('data-scene')!.padStart(2,'0')}`),regions:regions.length,regionNames:regions.map(el=>el.getAttribute('data-region')),axisCollisions:collisions,axisText:labels.map(el=>({text:el.textContent,bounds:el.getBoundingClientRect().toJSON(),canvas:el.closest('[data-scene]')?.getBoundingClientRect().toJSON()})),overflow,inkLayouts,inkCollisions,inkOverflow,printedText:printed,inkText:inkLayouts.filter(line=>line.complete).map(line=>line.text),givens:Array.from(root.querySelectorAll('[data-givens], [data-region="givens"]')).filter(visible).map(el=>el.textContent),graphs:Array.from<Element>(root.querySelectorAll('[data-graph]')).filter(visible).map(el=>el.getAttribute('data-graph')),cyclist:cyclist?{x:Number(cyclist.getAttribute('data-cyclist-x')),wheelAngle:Number(cyclist.getAttribute('data-wheel-angle')),direction:Number(cyclist.getAttribute('data-direction'))}:null}));
     if(auditHandle!==null)continueRender(auditHandle);
     };
     request=requestAnimationFrame(measure);

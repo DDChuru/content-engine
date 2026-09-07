@@ -2,7 +2,15 @@
 
 Built from Sol’s original `1dc49cb`, as requested in TEACHING-STANDARD.md §12. Stage 1 narration/storyboard commit: `83c48cf`, pushed with the unrelated remote changes merged in `68fc722`. The final three-second cyclist question pause and one-second lift/ball drawing pauses were added during verification; no words or original recordings changed in that refinement.
 
-## What changed
+## Composition-only correction after A-render review
+
+Baseline `06c51f1`; clone fast-forwarded to `67ab41b` before editing. First correction pushed as `30fde6c`.
+
+- Cyclist leg values now occupy one measured row in their own ruled paper strip. Changing legs clears the prior row. The duplicate chord/tangent caption was removed; the unchanged narration already explains it. The complete final stroke geometry, including stroke width, determines audit bounds; layout reserves space for the full text before writing begins.
+- The cyclist story has a three-line problem card beside the track, with each leg’s duration and speed, and track markers at 0/14 s, 4 s, and 6/9 s. These givens remain visible during both graph builds. Lift and ball now show their three-line givens cards during the bare-diagram setup as well; their existing working chips remain.
+- All nine MP3s and the transcript (including every cue and hold) are byte-for-byte identical to `06c51f1`. No narration, timing, composition ID, Root registration or duration changed.
+
+## What changed in v4
 
 - Restored Sol’s eight scenes, original palette, axes, shaded signed areas, colour-linked segments, tracing dots, lift/ball diagrams, and single-stroke handwritten working. Added S09 immediately before the original S08 recap.
 - Lift and ball each begin over their animated bare diagram, followed by two seconds of written silence before graphs or working appear. Each working paper leads with a words statement and symbol formula, spoken as it is written.
@@ -33,9 +41,9 @@ Voice `gYWKdgLtqjPO3D5uDrDP` through `narration_client.py`; `ELEVENLABS_SPEED=0.
 
 - Targeted TypeScript check passed for the production composition and still entry; Python compilation and `git diff --check` passed.
 - The audit evaluates the actual composition’s motion-model source: lift endpoints (2,3,3), (6,3,15), (8,0,18); ball apex/return; cyclist displacement 0,12,15,15,0; numerical displacement gradients match velocity inside every phase.
-- **133 stills**, including cue frames, scenario motion samples, displacement completion and both ends of all **20 two-second result holds**. All hold pairs are byte-identical. Chromium raster retries: 9; strict equality remains required.
-- **Zero axis-text collisions and zero text overflow.** Actual laid-out SVG text bounding boxes are checked pairwise, including time ticks versus axis names and the lift’s 15/18 labels. Completed handwriting is checked against the scene bounds. The audit waits for layout before measuring.
-- New cyclist frames use at most **three regions**: track, displacement graph, velocity graph. Bare setup frames use one. The original four-region lift/ball layouts (object, two graphs, paper) are deliberately retained under Durai’s §12 exception. Recipe/recap also retain their original four-region arrangement; scenario captions are attached to their visual region.
+- **442 stills**, including all 70 exact cue frames and cue +15 frames, scenario motion samples, displacement completion, and both ends of all **20 two-second result holds**. All hold pairs are byte-identical. Chromium raster retries: 12; strict equality remains required. **244 frames include pen-finish checks**: every individual cyclist stroke completion and every complete handwritten line in lift/ball. Cyclist coverage: 281 stills; the remaining scenes are spot-checked at cues and line ends.
+- **Zero axis-text collisions, zero handwriting-versus-print collisions, and zero handwriting panel overflow.** Full final stroke bounds (including 3.1 px stroke width) are checked against all visible printed text-node ranges and the owning paper/graph/annotation-strip bounds, including while writing. This no longer relies on the first visible strokes or the scene edge. The audit waits for layout, and assigns each pen schedule to its actual scene during transitions. An isolated regression fixture restores the overlapping caption row and moves the last value 20 px farther right to prove both caption collision and full-stroke panel overflow are rejected.
+- New cyclist frames use at most **three regions**: track, displacement graph, velocity graph. Cyclist setup uses one grouped track/problem-card region; lift/ball setup uses two. The original four-region lift/ball layouts (object, two graphs, paper) are deliberately retained under Durai’s §12 exception. Recipe/recap and outgoing lift/ball transition frames also retain their original four-region arrangement; scenario captions are attached to their visual region.
 - Motion samples verify steady outward travel, decreasing travel increments under braking, an unmoving rest, and steady negative return. Every sampled frame before the velocity signpost excludes the velocity graph; completed displacement remains visible beside velocity.
 
 Representative reviewed stills:
@@ -44,6 +52,10 @@ Representative reviewed stills:
 - [ball, frame 7664](verify-v4-ball.png)
 - [cyclist-both, frame 10962](verify-v4-cyclist-both.png)
 - [cyclist-displacement, frame 10171](verify-v4-cyclist-displacement.png)
+- [cyclist braking annotation, frame 9591](verify-v4-cyclist-braking.png)
+- [cyclist setup givens, frame 8305](verify-v4-cyclist-setup.png)
+- [lift setup givens, frame 1777](verify-v4-lift-setup.png)
+- [ball setup givens, frame 5141](verify-v4-ball-setup.png)
 
 Machine measurements are in `verify-build.json`. Full-size source is 1920×1080; audited PNGs are at half scale. Other stills remain in `packages/backend/out/verify-travel-v4-stills` and are reproducible on another host.
 
@@ -51,10 +63,11 @@ Run from `packages/backend` with nvm Node on PATH:
 
 ```sh
 python3 src/scripts/verify-mechanics-drawing-travel-graphs.py
+node src/scripts/verify-travel-ink-regression.cjs
 ```
 
-That command bundles only the composition code, renders stills through `renderStill`, and checks physics, layout, graph order, cyclist motion and holds. It never renders a video. For narration, load ELEVENLABS_API_KEY from the existing environment without printing it, run the generator, then run the local transcriber with `--timing /tmp/verify-travel-v4-narration/timing.json`.
+That command bundles only the composition code, renders stills through `renderStill`, and checks physics, layout, graph order, cyclist motion and holds. It never renders a video. The regression command uses an isolated fixture under `out/verify-travel-ink-regression`; it leaves production code untouched. Audio and transcription were not run for this correction.
 
 ## Handoff
 
-No deployment or video render was run. No files, tests or directories were deleted by this task; the initial non-destructive fast-forward and later merge brought in other builders’ existing changes. The original untracked `packages/backend/node_modules` symlink remains untouched. A full video render and human playback review remain for the designated render machine.
+No deployment or video render was run. No files, tests or directories were deleted by this correction. Work began with `git pull --ff-only origin dev`. The original untracked `packages/backend/node_modules` symlink remains untouched. A full video render and human playback review remain for the designated render machine.

@@ -64,9 +64,9 @@ for(const model of [physics.LIFT_MODEL,physics.BALL_MODEL,physics.WORD_MODEL])fo
  // Full cyclist audit: every individual pen-stroke completion, plus every line end.
  // Other scenes are spot-checked at every cue and every complete handwritten line.
  for(const row of measurements)for(const line of row.inkLayouts){
-   for(const end of [line.end,...(row.scene==='s09'?line.strokeEnds:[])]){
-     const frame=sceneOffsets[row.scene]+Math.ceil(end);
-     add(frame,`${row.scene}:pen-finish:${line.text}`,row.scene);
+   for(const end of [line.end,...(line.scene==='s09'?line.strokeEnds:[])]){
+     const frame=sceneOffsets[line.scene]+Math.ceil(end);
+     add(frame,`${line.scene}:pen-finish:${line.text}`,line.scene);
    }
  }
  const measuredFrames=new Set(measurements.map(row=>row.frame));
@@ -74,8 +74,9 @@ for(const model of [physics.LIFT_MODEL,physics.BALL_MODEL,physics.WORD_MODEL])fo
  const violations=[];
  for(const row of measurements){
    if(row.axisCollisions.length||row.inkCollisions.length||row.overflow)violations.push(row);
-   const cap=['s04','s06','s01','s08'].includes(row.scene)?4:3;
+   const cap=row.visibleScenes.some(scene=>['s04','s06','s01','s08'].includes(scene))?4:3;
    if(row.regions>cap)violations.push({...row,reason:'region count'});
+   if(['s04','s06'].includes(row.scene)&&row.labels.includes(`${row.scene}:opening`))assert(row.givens.some(text=>text.includes(row.scene==='s04'?'Lift journey':'Ball launch')),'Missing setup givens');
    if(row.scene==='s09'&&row.labels.some(x=>x==='s09:displacement-complete'))assert.deepEqual(row.graphs,['displacement']);
  }
  const closing=transcript.scenes.find(s=>s.id==='s09');
