@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Audit cue/hold stills without rendering a video. Build the Remotion bundle first."""
+"""Run the v4 still-only audit; retain the previous revision helpers for reference."""
 import argparse
 import concurrent.futures
 import hashlib
@@ -145,4 +145,4 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    subprocess.run(['node', str(ROOT / 'src/scripts/verify-travel-v4-stills.cjs')], cwd=ROOT, check=True)

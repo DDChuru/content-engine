@@ -1,8 +1,8 @@
 {
   "project": "mechanics-drawing-travel-graphs",
   "sceneCount": 9,
-  "totalDuration": 369.952652,
-  "generatedAt": "2026-09-07T04:56:58.308431",
+  "totalDuration": 384.163264,
+  "generatedAt": "2026-09-07T05:32:25.742394",
   "engine": "faster-whisper-small (local)",
   "scenes": [
     {
@@ -211,13 +211,13 @@
       },
       "generatedAt": "2026-09-06T11:01:32.949444",
       "engine": "faster-whisper-small (local)",
-      "audioOffset": 8,
       "reusedFrom": "1dc49cb",
       "audioSha256": "674b9a09596ddf739b14e508f7f14a1d6f171ff022f9e5578c27b412831cde31",
       "holds": [],
       "beats": [],
       "tempo": "brisk",
-      "voiceSpeed": 1.0
+      "voiceSpeed": 1.0,
+      "audioOffset": 8
     },
     {
       "id": "s02",
@@ -698,18 +698,18 @@
     {
       "id": "s04",
       "audio": "drawing-travel-graphs-s04.mp3",
-      "duration": 87.04,
+      "duration": 94.746122,
       "wordCount": 116,
-      "text": "Consider a lift that starts from rest. Accelerates at 1 .5 metres per second squared for two seconds, cruises for four seconds, then breaks to a stop in two seconds. Upwards positive. Let's get drawing. What speed? Velocity equals initial velocity plus acceleration times time. V equals u plus a t. Three metres per second. When does cruising end? Six seconds. When does it stop? Eight seconds. What displacement does each area give? Displacement equals area under the velocity -time graph. S equals half u plus v times t. First triangle? Three metres. The rectangle? Twelve metres. Accumulated height? Fifteen metres. Braking adds? Three metres. Still upwards. Where does it finish? Eighteen metres above the start.",
+      "text": "Consider a lift that starts from rest. Accelerates at 1 .5 metres per second squared for two seconds, cruises for four seconds, then breaks to a stop in two seconds. Upwards positive. Let's get drawing. What speed? Velocity equals initial velocity plus acceleration times time. V equals u plus a t. Three metres per second. When does cruising end? Six seconds. When does it stop? Eight seconds. What displacement does each area give? Displacement equals area under the velocity time graph. S equals half u plus v times t. First triangle? Three metres. The rectangle? Twelve metres. Accumulated height? Fifteen metres. Braking adds? Three metres. Still upwards. Where does it finish? Eighteen metres above the start.",
       "words": [
         {
           "word": "Consider",
           "start": 0.24,
-          "end": 0.94
+          "end": 0.96
         },
         {
           "word": "a",
-          "start": 0.94,
+          "start": 0.96,
           "end": 1.22
         },
         {
@@ -770,11 +770,11 @@
         {
           "word": "second",
           "start": 6.94,
-          "end": 7.3
+          "end": 7.32
         },
         {
           "word": "squared",
-          "start": 7.3,
+          "start": 7.32,
           "end": 7.7
         },
         {
@@ -814,7 +814,7 @@
         },
         {
           "word": "then",
-          "start": 12.1,
+          "start": 12.08,
           "end": 12.4
         },
         {
@@ -835,11 +835,11 @@
         {
           "word": "stop",
           "start": 13.28,
-          "end": 13.58
+          "end": 13.6
         },
         {
           "word": "in",
-          "start": 13.58,
+          "start": 13.6,
           "end": 14.54
         },
         {
@@ -860,7 +860,7 @@
         {
           "word": "positive.",
           "start": 16.88,
-          "end": 17.4
+          "end": 17.42
         },
         {
           "word": "Let's",
@@ -920,11 +920,11 @@
         {
           "word": "times",
           "start": 27.21,
-          "end": 27.91
+          "end": 27.93
         },
         {
           "word": "time.",
-          "start": 27.91,
+          "start": 27.93,
           "end": 28.37
         },
         {
@@ -979,308 +979,308 @@
         },
         {
           "word": "When",
-          "start": 36.27,
-          "end": 36.89
+          "start": 37.3,
+          "end": 37.9
         },
         {
           "word": "does",
-          "start": 36.89,
-          "end": 37.05
+          "start": 37.9,
+          "end": 38.06
         },
         {
           "word": "cruising",
-          "start": 37.05,
-          "end": 37.35
+          "start": 38.06,
+          "end": 38.36
         },
         {
           "word": "end?",
-          "start": 37.35,
-          "end": 37.87
+          "start": 38.36,
+          "end": 38.88
         },
         {
           "word": "Six",
-          "start": 38.67,
-          "end": 38.89
+          "start": 39.7,
+          "end": 39.92
         },
         {
           "word": "seconds.",
-          "start": 38.89,
-          "end": 39.35
+          "start": 39.92,
+          "end": 40.36
         },
         {
           "word": "When",
-          "start": 41.6,
-          "end": 41.98
+          "start": 43.72,
+          "end": 43.96
         },
         {
           "word": "does",
-          "start": 41.98,
-          "end": 42.18
+          "start": 43.96,
+          "end": 44.16
         },
         {
           "word": "it",
-          "start": 42.18,
-          "end": 42.3
+          "start": 44.16,
+          "end": 44.28
         },
         {
           "word": "stop?",
-          "start": 42.3,
-          "end": 42.56
+          "start": 44.28,
+          "end": 44.56
         },
         {
           "word": "Eight",
-          "start": 43.34,
-          "end": 43.56
+          "start": 45.34,
+          "end": 45.56
         },
         {
           "word": "seconds.",
-          "start": 43.56,
-          "end": 44.1
+          "start": 45.56,
+          "end": 46.1
         },
         {
           "word": "What",
-          "start": 44.1,
-          "end": 45.2
+          "start": 46.1,
+          "end": 47.16
         },
         {
           "word": "displacement",
-          "start": 46.64,
-          "end": 47.14
+          "start": 49.63,
+          "end": 50.11
         },
         {
           "word": "does",
-          "start": 47.14,
-          "end": 47.54
+          "start": 50.11,
+          "end": 50.55
         },
         {
           "word": "each",
-          "start": 47.54,
-          "end": 47.84
+          "start": 50.55,
+          "end": 50.85
         },
         {
           "word": "area",
-          "start": 47.84,
-          "end": 48.18
+          "start": 50.85,
+          "end": 51.19
         },
         {
           "word": "give?",
-          "start": 48.18,
-          "end": 48.56
+          "start": 51.19,
+          "end": 51.57
         },
         {
           "word": "Displacement",
-          "start": 49.22,
-          "end": 49.66
+          "start": 52.21,
+          "end": 52.67
         },
         {
           "word": "equals",
-          "start": 49.66,
-          "end": 50.08
+          "start": 52.67,
+          "end": 53.09
         },
         {
           "word": "area",
-          "start": 50.08,
-          "end": 50.74
+          "start": 53.09,
+          "end": 53.71
         },
         {
           "word": "under",
-          "start": 50.74,
-          "end": 51.7
+          "start": 53.71,
+          "end": 54.71
         },
         {
           "word": "the",
-          "start": 51.7,
-          "end": 51.88
+          "start": 54.71,
+          "end": 54.89
         },
         {
           "word": "velocity",
-          "start": 51.88,
-          "end": 52.36
+          "start": 54.89,
+          "end": 55.33
         },
         {
-          "word": "-time",
-          "start": 52.36,
-          "end": 52.76
+          "word": "time",
+          "start": 55.33,
+          "end": 55.77
         },
         {
           "word": "graph.",
-          "start": 52.76,
-          "end": 53.34
+          "start": 55.77,
+          "end": 56.35
         },
         {
           "word": "S",
-          "start": 54.22,
-          "end": 54.66
+          "start": 56.91,
+          "end": 57.65
         },
         {
           "word": "equals",
-          "start": 54.66,
-          "end": 55.16
+          "start": 57.65,
+          "end": 58.15
         },
         {
           "word": "half",
-          "start": 55.16,
-          "end": 55.8
+          "start": 58.15,
+          "end": 58.79
         },
         {
           "word": "u",
-          "start": 55.8,
-          "end": 56.18
+          "start": 58.79,
+          "end": 59.17
         },
         {
           "word": "plus",
-          "start": 56.18,
-          "end": 56.84
+          "start": 59.17,
+          "end": 59.83
         },
         {
           "word": "v",
-          "start": 56.84,
-          "end": 57.26
+          "start": 59.83,
+          "end": 60.25
         },
         {
           "word": "times",
-          "start": 57.26,
-          "end": 58.18
+          "start": 60.25,
+          "end": 61.17
         },
         {
           "word": "t.",
-          "start": 58.18,
-          "end": 58.64
+          "start": 61.17,
+          "end": 61.65
         },
         {
           "word": "First",
-          "start": 59.6,
-          "end": 60.06
+          "start": 62.45,
+          "end": 63.07
         },
         {
           "word": "triangle?",
-          "start": 60.06,
-          "end": 60.64
+          "start": 63.07,
+          "end": 63.65
         },
         {
           "word": "Three",
-          "start": 61.4,
-          "end": 61.6
+          "start": 64.31,
+          "end": 64.61
         },
         {
           "word": "metres.",
-          "start": 61.6,
-          "end": 61.94
+          "start": 64.61,
+          "end": 64.95
         },
         {
           "word": "The",
-          "start": 64.46,
-          "end": 64.6
+          "start": 68.47,
+          "end": 68.59
         },
         {
           "word": "rectangle?",
-          "start": 64.6,
-          "end": 64.98
+          "start": 68.59,
+          "end": 68.99
         },
         {
           "word": "Twelve",
-          "start": 66.04,
-          "end": 66.28
+          "start": 70.01,
+          "end": 70.29
         },
         {
           "word": "metres.",
-          "start": 66.28,
-          "end": 66.68
+          "start": 70.29,
+          "end": 70.69
         },
         {
           "word": "Accumulated",
-          "start": 69.13,
-          "end": 69.69
+          "start": 74.12,
+          "end": 74.7
         },
         {
           "word": "height?",
-          "start": 69.69,
-          "end": 70.13
+          "start": 74.7,
+          "end": 75.12
         },
         {
           "word": "Fifteen",
-          "start": 70.87,
-          "end": 71.35
+          "start": 75.88,
+          "end": 76.34
         },
         {
           "word": "metres.",
-          "start": 71.35,
-          "end": 71.69
+          "start": 76.34,
+          "end": 76.68
         },
         {
           "word": "Braking",
-          "start": 73.26,
-          "end": 74.54
+          "start": 79.28,
+          "end": 80.54
         },
         {
           "word": "adds?",
-          "start": 74.54,
-          "end": 74.94
+          "start": 80.54,
+          "end": 80.94
         },
         {
           "word": "Three",
-          "start": 75.64,
-          "end": 75.98
+          "start": 81.62,
+          "end": 81.98
         },
         {
           "word": "metres.",
-          "start": 75.98,
-          "end": 76.36
+          "start": 81.98,
+          "end": 82.36
         },
         {
           "word": "Still",
-          "start": 77.32,
-          "end": 77.62
+          "start": 83.32,
+          "end": 83.62
         },
         {
           "word": "upwards.",
-          "start": 77.62,
-          "end": 77.96
+          "start": 83.62,
+          "end": 83.98
         },
         {
           "word": "Where",
-          "start": 80.43,
-          "end": 80.81
+          "start": 87.44,
+          "end": 87.8
         },
         {
           "word": "does",
-          "start": 80.81,
-          "end": 81.01
+          "start": 87.8,
+          "end": 88.02
         },
         {
           "word": "it",
-          "start": 81.01,
-          "end": 81.17
+          "start": 88.02,
+          "end": 88.16
         },
         {
           "word": "finish?",
-          "start": 81.17,
-          "end": 81.51
+          "start": 88.16,
+          "end": 88.52
         },
         {
           "word": "Eighteen",
-          "start": 82.43,
-          "end": 82.87
+          "start": 89.44,
+          "end": 89.84
         },
         {
           "word": "metres",
-          "start": 82.87,
-          "end": 83.15
+          "start": 89.84,
+          "end": 90.12
         },
         {
           "word": "above",
-          "start": 83.15,
-          "end": 83.47
+          "start": 90.12,
+          "end": 90.44
         },
         {
           "word": "the",
-          "start": 83.47,
-          "end": 83.75
+          "start": 90.44,
+          "end": 90.72
         },
         {
           "word": "start.",
-          "start": 83.75,
-          "end": 83.99
+          "start": 90.72,
+          "end": 90.94
         }
       ],
       "cues": {
@@ -1290,23 +1290,23 @@
         "formula-v": 22.85,
         "symbol-v": 29.09,
         "three": 32.65,
-        "six": 38.67,
-        "eight": 43.34,
-        "area-formula": 49.22,
-        "area-symbol": 54.22,
-        "triangle": 59.6,
-        "rectangle": 64.46,
-        "height": 69.13,
-        "braking": 74.07,
-        "finish": 80.56
+        "six": 39.7,
+        "eight": 45.34,
+        "area-formula": 52.21,
+        "area-symbol": 56.91,
+        "triangle": 62.45,
+        "rectangle": 68.47,
+        "height": 74.12,
+        "braking": 80.07,
+        "finish": 87.56
       },
-      "generatedAt": "2026-09-07T04:51:42.956283",
+      "generatedAt": "2026-09-07T05:25:35.505064",
       "engine": "faster-whisper-small (local)",
       "tempo": "slow",
       "voiceSpeed": 0.9,
       "voiceId": "gYWKdgLtqjPO3D5uDrDP",
       "provider": "elevenlabs",
-      "audioSha256": "8e6bb861c02aa5aa8d1e55944e75b88db417a4dd6bc1cfd7152c05fdefdd88b5",
+      "audioSha256": "a428626a0e8e0e8db73f4d62db562d1986dfbcbdba91d98bb930a764e6df1a9b",
       "beats": [
         {
           "text": "Consider a lift that starts from rest, accelerates at one point five metres per second squared for two seconds, cruises for four seconds, then brakes to a stop in two seconds. Upwards positive. Let's get drawing.",
@@ -1325,73 +1325,73 @@
         },
         {
           "text": "When does cruising end?",
-          "start": 36.67,
-          "end": 38.17
+          "start": 37.67,
+          "end": 39.17
         },
         {
           "text": "Six seconds.",
-          "start": 38.67,
-          "end": 39.64
+          "start": 39.67,
+          "end": 40.64
         },
         {
           "text": "When does it stop?",
-          "start": 41.79,
-          "end": 42.81
+          "start": 43.79,
+          "end": 44.81
         },
         {
           "text": "Eight seconds.",
-          "start": 43.31,
-          "end": 44.33
+          "start": 45.31,
+          "end": 46.33
         },
         {
           "text": "What displacement does each area give?",
-          "start": 46.48,
-          "end": 48.59
+          "start": 49.48,
+          "end": 51.59
         },
         {
           "text": "Displacement equals area under the velocity-time graph. S equals half u plus v, times t. First triangle: three metres.",
-          "start": 49.09,
-          "end": 62.29
+          "start": 52.09,
+          "end": 65.29
         },
         {
           "text": "The rectangle?",
-          "start": 64.44,
-          "end": 65.54
+          "start": 68.44,
+          "end": 69.54
         },
         {
           "text": "Twelve metres.",
-          "start": 66.04,
-          "end": 66.95
+          "start": 70.04,
+          "end": 70.95
         },
         {
           "text": "Accumulated height?",
-          "start": 69.1,
-          "end": 70.39
+          "start": 74.1,
+          "end": 75.39
         },
         {
           "text": "Fifteen metres.",
-          "start": 70.89,
-          "end": 71.92
+          "start": 75.89,
+          "end": 76.92
         },
         {
           "text": "Braking adds?",
-          "start": 74.07,
-          "end": 75.15
+          "start": 80.07,
+          "end": 81.15
         },
         {
           "text": "Three metres, still upwards.",
-          "start": 75.65,
-          "end": 78.41
+          "start": 81.65,
+          "end": 84.41
         },
         {
           "text": "Where does it finish?",
-          "start": 80.56,
-          "end": 81.94
+          "start": 87.56,
+          "end": 88.94
         },
         {
           "text": "Eighteen metres above the start.",
-          "start": 82.44,
-          "end": 84.27
+          "start": 89.44,
+          "end": 91.27
         }
       ],
       "holds": [
@@ -1408,106 +1408,154 @@
           "duration": 0.5
         },
         {
-          "kind": "hold",
+          "kind": "pause",
           "start": 34.52,
-          "end": 36.52,
+          "end": 35.52,
+          "duration": 1.0
+        },
+        {
+          "kind": "hold",
+          "start": 35.52,
+          "end": 37.52,
           "duration": 2.0
         },
         {
           "kind": "pause",
-          "start": 38.17,
-          "end": 38.67,
+          "start": 39.17,
+          "end": 39.67,
           "duration": 0.5
         },
         {
-          "kind": "hold",
-          "start": 39.64,
+          "kind": "pause",
+          "start": 40.64,
           "end": 41.64,
+          "duration": 1.0
+        },
+        {
+          "kind": "hold",
+          "start": 41.64,
+          "end": 43.64,
           "duration": 2.0
         },
         {
           "kind": "pause",
-          "start": 42.81,
-          "end": 43.31,
+          "start": 44.81,
+          "end": 45.31,
           "duration": 0.5
         },
         {
+          "kind": "pause",
+          "start": 46.33,
+          "end": 47.33,
+          "duration": 1.0
+        },
+        {
           "kind": "hold",
-          "start": 44.33,
-          "end": 46.33,
+          "start": 47.33,
+          "end": 49.33,
           "duration": 2.0
         },
         {
           "kind": "pause",
-          "start": 48.59,
-          "end": 49.09,
+          "start": 51.59,
+          "end": 52.09,
           "duration": 0.5
         },
         {
+          "kind": "pause",
+          "start": 65.29,
+          "end": 66.29,
+          "duration": 1.0
+        },
+        {
           "kind": "hold",
-          "start": 62.29,
-          "end": 64.29,
+          "start": 66.29,
+          "end": 68.29,
           "duration": 2.0
         },
         {
           "kind": "pause",
-          "start": 65.54,
-          "end": 66.04,
+          "start": 69.54,
+          "end": 70.04,
           "duration": 0.5
         },
         {
+          "kind": "pause",
+          "start": 70.95,
+          "end": 71.95,
+          "duration": 1.0
+        },
+        {
           "kind": "hold",
-          "start": 66.95,
-          "end": 68.95,
+          "start": 71.95,
+          "end": 73.95,
           "duration": 2.0
         },
         {
           "kind": "pause",
-          "start": 70.39,
-          "end": 70.89,
+          "start": 75.39,
+          "end": 75.89,
           "duration": 0.5
         },
         {
+          "kind": "pause",
+          "start": 76.92,
+          "end": 77.92,
+          "duration": 1.0
+        },
+        {
           "kind": "hold",
-          "start": 71.92,
-          "end": 73.92,
+          "start": 77.92,
+          "end": 79.92,
           "duration": 2.0
         },
         {
           "kind": "pause",
-          "start": 75.15,
-          "end": 75.65,
+          "start": 81.15,
+          "end": 81.65,
           "duration": 0.5
         },
         {
+          "kind": "pause",
+          "start": 84.41,
+          "end": 85.41,
+          "duration": 1.0
+        },
+        {
           "kind": "hold",
-          "start": 78.41,
-          "end": 80.41,
+          "start": 85.41,
+          "end": 87.41,
           "duration": 2.0
         },
         {
           "kind": "pause",
-          "start": 81.94,
-          "end": 82.44,
+          "start": 88.94,
+          "end": 89.44,
           "duration": 0.5
         },
         {
+          "kind": "pause",
+          "start": 91.27,
+          "end": 92.27,
+          "duration": 1.0
+        },
+        {
           "kind": "hold",
-          "start": 84.27,
-          "end": 86.27,
+          "start": 92.27,
+          "end": 94.27,
           "duration": 2.0
         }
       ],
       "paragraphs": [
         "Consider a lift that starts from rest, accelerates at one point five metres per second squared for two seconds, cruises for four seconds, then brakes to a stop in two seconds. Upwards positive. Let's get drawing. [pause 2 s]",
-        "What speed? [pause 0.5 s] Velocity equals initial velocity plus acceleration times time. V equals u plus a t. Three metres per second. [hold 2 s]",
-        "When does cruising end? [pause 0.5 s] Six seconds. [hold 2 s]",
-        "When does it stop? [pause 0.5 s] Eight seconds. [hold 2 s]",
-        "What displacement does each area give? [pause 0.5 s] Displacement equals area under the velocity-time graph. S equals half u plus v, times t. First triangle: three metres. [hold 2 s]",
-        "The rectangle? [pause 0.5 s] Twelve metres. [hold 2 s]",
-        "Accumulated height? [pause 0.5 s] Fifteen metres. [hold 2 s]",
-        "Braking adds? [pause 0.5 s] Three metres, still upwards. [hold 2 s]",
-        "Where does it finish? [pause 0.5 s] Eighteen metres above the start. [hold 2 s]"
+        "What speed? [pause 0.5 s] Velocity equals initial velocity plus acceleration times time. V equals u plus a t. Three metres per second. [pause 1 s] [hold 2 s]",
+        "When does cruising end? [pause 0.5 s] Six seconds. [pause 1 s] [hold 2 s]",
+        "When does it stop? [pause 0.5 s] Eight seconds. [pause 1 s] [hold 2 s]",
+        "What displacement does each area give? [pause 0.5 s] Displacement equals area under the velocity-time graph. S equals half u plus v, times t. First triangle: three metres. [pause 1 s] [hold 2 s]",
+        "The rectangle? [pause 0.5 s] Twelve metres. [pause 1 s] [hold 2 s]",
+        "Accumulated height? [pause 0.5 s] Fifteen metres. [pause 1 s] [hold 2 s]",
+        "Braking adds? [pause 0.5 s] Three metres, still upwards. [pause 1 s] [hold 2 s]",
+        "Where does it finish? [pause 0.5 s] Eighteen metres above the start. [pause 1 s] [hold 2 s]"
       ]
     },
     {
@@ -1746,9 +1794,9 @@
     {
       "id": "s06",
       "audio": "drawing-travel-graphs-s06.mp3",
-      "duration": 86.83102,
+      "duration": 90.827755,
       "wordCount": 128,
-      "text": "Consider a ball thrown straight up at fifteen metres per second. It goes up, stops, comes back down. Displacement is zero back at the start. Distance counts up and down. Vector versus scalar. Okay, enough chatter, let's get drawing. Why a straight velocity line? Velocity equals initial velocity plus acceleration times time. V equals u plus t. Gravity is ten downwards. V equals fifteen minus ten t. Where does direction change? At zero velocity, one point five seconds. How high? Displacement equals area under the velocity -time graph. S equals half u plus v times t. Eleven point two five metres. When back at hand height? Three seconds. Equal signed areas cancel. What velocity then? Minus fifteen metres per second. What if thrown faster? Higher, longer, same gradient.",
+      "text": "Consider a ball thrown straight up at 15 metres per second. It goes up, stops, comes back down. Displacement is zero back at the start. Distance counts up and down. Vector versus scalar. Okay, enough chatter. Let's get drawing. Why a straight velocity line? Velocity equals initial velocity plus acceleration times time. V equals u plus a t. Gravity is ten downwards. V equals fifteen minus ten t. Where does direction change? At zero velocity, 1 .5 seconds. How high? Displacement equals area under the velocity -time graph. S equals half u plus v, times t. Eleven point two five metres. When back at hand height, three seconds equal signed areas cancel. What velocity then? Minus 15 metres per second. What if thrown faster? Higher, longer, same gradient.",
       "words": [
         {
           "word": "Consider",
@@ -1783,16 +1831,16 @@
         {
           "word": "at",
           "start": 3.23,
-          "end": 3.95
+          "end": 3.97
         },
         {
-          "word": "fifteen",
-          "start": 3.95,
-          "end": 4.39
+          "word": "15",
+          "start": 3.97,
+          "end": 4.41
         },
         {
           "word": "metres",
-          "start": 4.39,
+          "start": 4.41,
           "end": 4.75
         },
         {
@@ -1827,7 +1875,7 @@
         },
         {
           "word": "comes",
-          "start": 9.67,
+          "start": 9.59,
           "end": 10.03
         },
         {
@@ -1903,36 +1951,36 @@
         {
           "word": "Vector",
           "start": 18.61,
-          "end": 19.23
+          "end": 19.25
         },
         {
           "word": "versus",
-          "start": 19.23,
+          "start": 19.25,
           "end": 19.51
         },
         {
           "word": "scalar.",
           "start": 19.51,
-          "end": 20.05
+          "end": 20.03
         },
         {
           "word": "Okay,",
-          "start": 20.75,
+          "start": 20.79,
           "end": 21.09
         },
         {
           "word": "enough",
-          "start": 21.87,
+          "start": 21.89,
           "end": 22.21
         },
         {
-          "word": "chatter,",
+          "word": "chatter.",
           "start": 22.21,
           "end": 22.51
         },
         {
-          "word": "let's",
-          "start": 23.25,
+          "word": "Let's",
+          "start": 23.27,
           "end": 23.55
         },
         {
@@ -1947,42 +1995,42 @@
         },
         {
           "word": "Why",
-          "start": 26.29,
-          "end": 26.73
+          "start": 26.48,
+          "end": 26.74
         },
         {
           "word": "a",
-          "start": 26.73,
-          "end": 26.97
+          "start": 26.74,
+          "end": 26.9
         },
         {
           "word": "straight",
-          "start": 26.97,
-          "end": 27.21
+          "start": 26.9,
+          "end": 27.2
         },
         {
           "word": "velocity",
-          "start": 27.21,
-          "end": 27.75
+          "start": 27.2,
+          "end": 27.72
         },
         {
           "word": "line?",
-          "start": 27.75,
-          "end": 28.71
+          "start": 27.72,
+          "end": 28.1
         },
         {
           "word": "Velocity",
-          "start": 28.71,
-          "end": 29.41
+          "start": 28.75,
+          "end": 29.43
         },
         {
           "word": "equals",
-          "start": 29.41,
-          "end": 29.81
+          "start": 29.43,
+          "end": 29.83
         },
         {
           "word": "initial",
-          "start": 29.81,
+          "start": 29.83,
           "end": 30.47
         },
         {
@@ -1998,31 +2046,31 @@
         {
           "word": "acceleration",
           "start": 31.89,
-          "end": 32.49
+          "end": 32.43
         },
         {
           "word": "times",
-          "start": 32.49,
-          "end": 33.15
+          "start": 32.43,
+          "end": 33.23
         },
         {
           "word": "time.",
-          "start": 33.15,
-          "end": 33.59
+          "start": 33.23,
+          "end": 34.07
         },
         {
           "word": "V",
-          "start": 34.53,
+          "start": 34.33,
           "end": 34.93
         },
         {
           "word": "equals",
           "start": 34.93,
-          "end": 35.45
+          "end": 35.47
         },
         {
           "word": "u",
-          "start": 35.45,
+          "start": 35.47,
           "end": 36.01
         },
         {
@@ -2031,18 +2079,23 @@
           "end": 36.81
         },
         {
-          "word": "t.",
+          "word": "a",
           "start": 36.81,
+          "end": 37.07
+        },
+        {
+          "word": "t.",
+          "start": 37.07,
           "end": 37.23
         },
         {
           "word": "Gravity",
-          "start": 38.19,
-          "end": 39.01
+          "start": 38.27,
+          "end": 39.03
         },
         {
           "word": "is",
-          "start": 39.01,
+          "start": 39.03,
           "end": 39.29
         },
         {
@@ -2053,37 +2106,37 @@
         {
           "word": "downwards.",
           "start": 39.61,
-          "end": 40.17
+          "end": 40.15
         },
         {
           "word": "V",
-          "start": 41.57,
-          "end": 42.21
+          "start": 41.79,
+          "end": 42.23
         },
         {
           "word": "equals",
-          "start": 42.21,
+          "start": 42.23,
           "end": 42.75
         },
         {
           "word": "fifteen",
           "start": 42.75,
-          "end": 43.49
+          "end": 43.47
         },
         {
           "word": "minus",
-          "start": 43.49,
+          "start": 43.47,
           "end": 43.97
         },
         {
           "word": "ten",
           "start": 43.97,
-          "end": 44.35
+          "end": 44.39
         },
         {
           "word": "t.",
-          "start": 44.35,
-          "end": 44.67
+          "start": 44.39,
+          "end": 44.61
         },
         {
           "word": "Where",
@@ -2098,297 +2151,292 @@
         {
           "word": "direction",
           "start": 45.45,
-          "end": 45.85
+          "end": 45.83
         },
         {
           "word": "change?",
-          "start": 45.85,
-          "end": 46.31
+          "start": 45.83,
+          "end": 46.35
         },
         {
           "word": "At",
           "start": 47.07,
-          "end": 47.21
+          "end": 47.19
         },
         {
           "word": "zero",
-          "start": 47.21,
+          "start": 47.19,
           "end": 47.45
         },
         {
           "word": "velocity,",
           "start": 47.45,
-          "end": 48.01
+          "end": 48.05
         },
         {
-          "word": "one",
-          "start": 48.53,
-          "end": 48.73
+          "word": "1",
+          "start": 48.49,
+          "end": 48.75
         },
         {
-          "word": "point",
-          "start": 48.73,
-          "end": 48.93
-        },
-        {
-          "word": "five",
-          "start": 48.93,
-          "end": 49.21
+          "word": ".5",
+          "start": 48.75,
+          "end": 49.23
         },
         {
           "word": "seconds.",
-          "start": 49.21,
-          "end": 49.61
+          "start": 49.23,
+          "end": 49.59
         },
         {
           "word": "How",
-          "start": 51.86,
-          "end": 52.1
+          "start": 52.89,
+          "end": 53.09
         },
         {
           "word": "high?",
-          "start": 52.1,
-          "end": 52.48
+          "start": 53.09,
+          "end": 53.49
         },
         {
           "word": "Displacement",
-          "start": 53.16,
-          "end": 53.78
+          "start": 54.11,
+          "end": 54.77
         },
         {
           "word": "equals",
-          "start": 53.78,
-          "end": 54.26
+          "start": 54.77,
+          "end": 55.27
         },
         {
           "word": "area",
-          "start": 54.26,
-          "end": 54.9
+          "start": 55.27,
+          "end": 55.91
         },
         {
           "word": "under",
-          "start": 54.9,
-          "end": 55.76
+          "start": 55.91,
+          "end": 56.77
         },
         {
           "word": "the",
-          "start": 55.76,
-          "end": 55.96
+          "start": 56.77,
+          "end": 56.93
         },
         {
           "word": "velocity",
-          "start": 55.96,
-          "end": 56.4
+          "start": 56.93,
+          "end": 57.41
         },
         {
           "word": "-time",
-          "start": 56.4,
-          "end": 56.8
+          "start": 57.41,
+          "end": 57.79
         },
         {
           "word": "graph.",
-          "start": 56.8,
-          "end": 57.22
+          "start": 57.79,
+          "end": 58.31
         },
         {
           "word": "S",
-          "start": 57.22,
-          "end": 58.6
+          "start": 58.85,
+          "end": 59.61
         },
         {
           "word": "equals",
-          "start": 58.6,
-          "end": 59.06
+          "start": 59.61,
+          "end": 60.05
         },
         {
           "word": "half",
-          "start": 59.06,
-          "end": 59.64
+          "start": 60.05,
+          "end": 60.63
         },
         {
           "word": "u",
-          "start": 59.64,
-          "end": 59.88
+          "start": 60.63,
+          "end": 60.89
         },
         {
           "word": "plus",
-          "start": 59.88,
-          "end": 60.18
+          "start": 60.89,
+          "end": 61.19
         },
         {
-          "word": "v",
-          "start": 60.18,
-          "end": 60.64
+          "word": "v,",
+          "start": 61.19,
+          "end": 61.63
         },
         {
           "word": "times",
-          "start": 60.64,
-          "end": 61.44
+          "start": 61.63,
+          "end": 62.61
         },
         {
           "word": "t.",
-          "start": 61.44,
-          "end": 61.94
+          "start": 62.61,
+          "end": 62.89
         },
         {
           "word": "Eleven",
-          "start": 62.8,
-          "end": 63.46
+          "start": 63.63,
+          "end": 64.43
         },
         {
           "word": "point",
-          "start": 63.46,
-          "end": 63.82
+          "start": 64.43,
+          "end": 64.83
         },
         {
           "word": "two",
-          "start": 63.82,
-          "end": 64.1
+          "start": 64.83,
+          "end": 65.09
         },
         {
           "word": "five",
-          "start": 64.1,
-          "end": 64.32
+          "start": 65.09,
+          "end": 65.31
         },
         {
           "word": "metres.",
-          "start": 64.32,
-          "end": 64.66
+          "start": 65.31,
+          "end": 65.63
         },
         {
           "word": "When",
-          "start": 67.08,
-          "end": 67.14
+          "start": 69.08,
+          "end": 69.14
         },
         {
           "word": "back",
-          "start": 67.14,
-          "end": 67.54
+          "start": 69.14,
+          "end": 69.5
         },
         {
           "word": "at",
-          "start": 67.54,
-          "end": 67.8
+          "start": 69.5,
+          "end": 69.8
         },
         {
           "word": "hand",
-          "start": 67.8,
-          "end": 68.08
+          "start": 69.8,
+          "end": 70.08
         },
         {
-          "word": "height?",
-          "start": 68.08,
-          "end": 68.48
+          "word": "height,",
+          "start": 70.08,
+          "end": 70.48
         },
         {
-          "word": "Three",
-          "start": 69.1,
-          "end": 69.52
+          "word": "three",
+          "start": 71.16,
+          "end": 71.5
         },
         {
-          "word": "seconds.",
-          "start": 69.52,
-          "end": 70.12
+          "word": "seconds",
+          "start": 71.5,
+          "end": 72.12
         },
         {
-          "word": "Equal",
-          "start": 70.8,
-          "end": 71.22
+          "word": "equal",
+          "start": 72.12,
+          "end": 73.1
         },
         {
           "word": "signed",
-          "start": 71.22,
-          "end": 71.74
+          "start": 73.1,
+          "end": 73.74
         },
         {
           "word": "areas",
-          "start": 71.74,
-          "end": 72.32
+          "start": 73.74,
+          "end": 74.32
         },
         {
           "word": "cancel.",
-          "start": 72.32,
-          "end": 72.8
+          "start": 74.32,
+          "end": 74.82
         },
         {
           "word": "What",
-          "start": 75.31,
-          "end": 75.55
+          "start": 78.24,
+          "end": 78.56
         },
         {
           "word": "velocity",
-          "start": 75.55,
-          "end": 76.05
+          "start": 78.56,
+          "end": 79.02
         },
         {
           "word": "then?",
-          "start": 76.05,
-          "end": 76.39
+          "start": 79.02,
+          "end": 79.38
         },
         {
           "word": "Minus",
-          "start": 76.97,
-          "end": 77.43
+          "start": 80.16,
+          "end": 80.44
         },
         {
-          "word": "fifteen",
-          "start": 77.43,
-          "end": 77.67
+          "word": "15",
+          "start": 80.44,
+          "end": 80.7
         },
         {
           "word": "metres",
-          "start": 77.67,
-          "end": 78.01
+          "start": 80.7,
+          "end": 81.02
         },
         {
           "word": "per",
-          "start": 78.01,
-          "end": 78.27
+          "start": 81.02,
+          "end": 81.26
         },
         {
           "word": "second.",
-          "start": 78.27,
-          "end": 78.55
+          "start": 81.26,
+          "end": 81.56
         },
         {
           "word": "What",
-          "start": 80.74,
-          "end": 81.1
+          "start": 84.82,
+          "end": 85.12
         },
         {
           "word": "if",
-          "start": 81.1,
-          "end": 81.24
+          "start": 85.12,
+          "end": 85.26
         },
         {
           "word": "thrown",
-          "start": 81.24,
-          "end": 81.54
+          "start": 85.26,
+          "end": 85.56
         },
         {
           "word": "faster?",
-          "start": 81.54,
-          "end": 82.06
+          "start": 85.56,
+          "end": 86.04
         },
         {
           "word": "Higher,",
-          "start": 82.8,
-          "end": 83.24
+          "start": 86.8,
+          "end": 87.24
         },
         {
           "word": "longer,",
-          "start": 83.7,
-          "end": 84.22
+          "start": 87.7,
+          "end": 88.22
         },
         {
           "word": "same",
-          "start": 85.18,
-          "end": 85.48
+          "start": 89.18,
+          "end": 89.48
         },
         {
           "word": "gradient.",
-          "start": 85.48,
-          "end": 85.92
+          "start": 89.48,
+          "end": 89.94
         }
       ],
       "cues": {
@@ -2396,24 +2444,24 @@
         "draw": 23.55,
         "straight": 26.48,
         "formula-v": 28.75,
-        "symbol-v": 34.53,
-        "substitute": 41.57,
+        "symbol-v": 34.33,
+        "substitute": 41.79,
         "direction-change": 44.96,
-        "area-formula": 53.16,
-        "area-symbol": 57.22,
-        "height": 62.8,
-        "catch": 67.08,
-        "signed-areas": 70.8,
-        "down": 75.34,
-        "contrast": 80.92
+        "area-formula": 54.11,
+        "area-symbol": 58.85,
+        "height": 63.63,
+        "catch": 69.08,
+        "signed-areas": 72.12,
+        "down": 78.34,
+        "contrast": 84.92
       },
-      "generatedAt": "2026-09-07T04:51:42.956283",
+      "generatedAt": "2026-09-07T05:25:35.505064",
       "engine": "faster-whisper-small (local)",
       "tempo": "slow",
       "voiceSpeed": 0.9,
       "voiceId": "gYWKdgLtqjPO3D5uDrDP",
       "provider": "elevenlabs",
-      "audioSha256": "349dae24941ea7d13157f2043b7b599fc1662e47130f7d5a14af7598c36b5665",
+      "audioSha256": "24962707af327b1c0ff9cc815186e3623865451384ff6a30029f5e278961e223",
       "beats": [
         {
           "text": "Consider a ball thrown straight up at fifteen metres per second. It goes up, stops, comes back down. Displacement is zero back at the start; distance counts up and down. Vector versus scalar. Okay, enough chatter, let's get drawing.",
@@ -2442,43 +2490,43 @@
         },
         {
           "text": "How high?",
-          "start": 51.86,
-          "end": 52.61
+          "start": 52.86,
+          "end": 53.61
         },
         {
           "text": "Displacement equals area under the velocity-time graph. S equals half u plus v, times t. Eleven point two five metres.",
-          "start": 53.11,
-          "end": 64.83
+          "start": 54.11,
+          "end": 65.83
         },
         {
           "text": "When back at hand height?",
-          "start": 66.98,
-          "end": 68.67
+          "start": 68.98,
+          "end": 70.67
         },
         {
           "text": "Three seconds. Equal signed areas cancel.",
-          "start": 69.17,
-          "end": 73.19
+          "start": 71.17,
+          "end": 75.19
         },
         {
           "text": "What velocity then?",
-          "start": 75.34,
-          "end": 76.52
+          "start": 78.34,
+          "end": 79.52
         },
         {
           "text": "Minus fifteen metres per second.",
-          "start": 77.02,
-          "end": 78.77
+          "start": 80.02,
+          "end": 81.77
         },
         {
           "text": "What if thrown faster?",
-          "start": 80.92,
-          "end": 82.3
+          "start": 84.92,
+          "end": 86.3
         },
         {
           "text": "Higher, longer; same gradient.",
-          "start": 82.8,
-          "end": 86.35
+          "start": 86.8,
+          "end": 90.35
         }
       ],
       "holds": [
@@ -2501,61 +2549,85 @@
           "duration": 0.5
         },
         {
-          "kind": "hold",
+          "kind": "pause",
           "start": 49.71,
-          "end": 51.71,
+          "end": 50.71,
+          "duration": 1.0
+        },
+        {
+          "kind": "hold",
+          "start": 50.71,
+          "end": 52.71,
           "duration": 2.0
         },
         {
           "kind": "pause",
-          "start": 52.61,
-          "end": 53.11,
+          "start": 53.61,
+          "end": 54.11,
           "duration": 0.5
         },
         {
-          "kind": "hold",
-          "start": 64.83,
+          "kind": "pause",
+          "start": 65.83,
           "end": 66.83,
-          "duration": 2.0
-        },
-        {
-          "kind": "pause",
-          "start": 68.67,
-          "end": 69.17,
-          "duration": 0.5
+          "duration": 1.0
         },
         {
           "kind": "hold",
-          "start": 73.19,
-          "end": 75.19,
+          "start": 66.83,
+          "end": 68.83,
           "duration": 2.0
         },
         {
           "kind": "pause",
-          "start": 76.52,
-          "end": 77.02,
+          "start": 70.67,
+          "end": 71.17,
           "duration": 0.5
         },
         {
+          "kind": "pause",
+          "start": 75.19,
+          "end": 76.19,
+          "duration": 1.0
+        },
+        {
           "kind": "hold",
-          "start": 78.77,
-          "end": 80.77,
+          "start": 76.19,
+          "end": 78.19,
           "duration": 2.0
         },
         {
           "kind": "pause",
-          "start": 82.3,
-          "end": 82.8,
+          "start": 79.52,
+          "end": 80.02,
+          "duration": 0.5
+        },
+        {
+          "kind": "pause",
+          "start": 81.77,
+          "end": 82.77,
+          "duration": 1.0
+        },
+        {
+          "kind": "hold",
+          "start": 82.77,
+          "end": 84.77,
+          "duration": 2.0
+        },
+        {
+          "kind": "pause",
+          "start": 86.3,
+          "end": 86.8,
           "duration": 0.5
         }
       ],
       "paragraphs": [
         "Consider a ball thrown straight up at fifteen metres per second. It goes up, stops, comes back down. Displacement is zero back at the start; distance counts up and down. Vector versus scalar. Okay, enough chatter, let's get drawing. [pause 2 s]",
         "Why a straight velocity line? [pause 0.5 s] Velocity equals initial velocity plus acceleration times time. V equals u plus a t. Gravity is ten downwards. V equals fifteen minus ten t.",
-        "Where does direction change? [pause 0.5 s] At zero velocity: one point five seconds. [hold 2 s]",
-        "How high? [pause 0.5 s] Displacement equals area under the velocity-time graph. S equals half u plus v, times t. Eleven point two five metres. [hold 2 s]",
-        "When back at hand height? [pause 0.5 s] Three seconds. Equal signed areas cancel. [hold 2 s]",
-        "What velocity then? [pause 0.5 s] Minus fifteen metres per second. [hold 2 s]",
+        "Where does direction change? [pause 0.5 s] At zero velocity: one point five seconds. [pause 1 s] [hold 2 s]",
+        "How high? [pause 0.5 s] Displacement equals area under the velocity-time graph. S equals half u plus v, times t. Eleven point two five metres. [pause 1 s] [hold 2 s]",
+        "When back at hand height? [pause 0.5 s] Three seconds. Equal signed areas cancel. [pause 1 s] [hold 2 s]",
+        "What velocity then? [pause 0.5 s] Minus fifteen metres per second. [pause 1 s] [hold 2 s]",
         "What if thrown faster? [pause 0.5 s] Higher, longer; same gradient."
       ]
     },
@@ -2765,9 +2837,9 @@
     {
       "id": "s09",
       "audio": "drawing-travel-graphs-s09.mp3",
-      "duration": 87.24898,
+      "duration": 89.756735,
       "wordCount": 109,
-      "text": "Consider a cyclist who leaves a, cruises away, slows to a stop, rests, then returns to a. Now the displacement time graph. Gradient equals displacement change over time change. V equals delta s over delta t. Cruising? What slope? Twelve metres in four seconds, positive three. Slowing? What change? Three metres in two seconds, positive slope flattens, called average velocity. Resting? What slope? Zero metres in three seconds, zero gradient. Returning? What sign? Minus fifteen metres in five seconds, negative three. Now the velocity time graph. Cruising? Positive three, horizontal. Slowing? Straight down to zero. Resting? Zero along the axis. Returning? Minus three, below zero. The jump idealises turning.",
+      "text": "Consider a cyclist who leaves a, cruises away, slows to a stop, rests, then returns to a. Now the displacement time graph. Gradient equals displacement change over time change. V equals delta s over delta t. Cruising? What slope? 12 metres in four seconds, positive three. Slowing? What change? Three metres in two seconds. Positive slope flattens. Called? Average velocity. Resting? What slope? Zero metres in three seconds, zero gradient. Returning? What sign? Minus fifteen metres in five seconds. Negative three. Now the velocity time graph. Cruising? Positive three, horizontal. Slowing? Straight down to zero. Resting? Zero along the axis. Returning? Minus three, below zero. The jump idealises turning.",
       "words": [
         {
           "word": "Consider",
@@ -2827,16 +2899,16 @@
         {
           "word": "stop,",
           "start": 5.81,
-          "end": 6.09
+          "end": 6.11
         },
         {
           "word": "rests,",
-          "start": 6.71,
+          "start": 6.73,
           "end": 7.25
         },
         {
           "word": "then",
-          "start": 8.03,
+          "start": 8.09,
           "end": 8.35
         },
         {
@@ -2856,7 +2928,7 @@
         },
         {
           "word": "Now",
-          "start": 11.2,
+          "start": 11.26,
           "end": 11.68
         },
         {
@@ -2881,7 +2953,7 @@
         },
         {
           "word": "Gradient",
-          "start": 14.04,
+          "start": 14.02,
           "end": 14.6
         },
         {
@@ -2897,11 +2969,11 @@
         {
           "word": "change",
           "start": 15.7,
-          "end": 16.4
+          "end": 16.38
         },
         {
           "word": "over",
-          "start": 16.4,
+          "start": 16.38,
           "end": 16.74
         },
         {
@@ -2951,7 +3023,7 @@
         },
         {
           "word": "Cruising?",
-          "start": 21.82,
+          "start": 21.8,
           "end": 22.28
         },
         {
@@ -2965,382 +3037,382 @@
           "end": 22.9
         },
         {
-          "word": "Twelve",
-          "start": 23.64,
-          "end": 23.96
+          "word": "12",
+          "start": 25.93,
+          "end": 26.41
         },
         {
           "word": "metres",
-          "start": 23.96,
-          "end": 24.34
+          "start": 26.41,
+          "end": 26.85
         },
         {
           "word": "in",
-          "start": 24.34,
-          "end": 24.6
+          "start": 26.85,
+          "end": 27.11
         },
         {
           "word": "four",
-          "start": 24.6,
-          "end": 24.88
+          "start": 27.11,
+          "end": 27.39
         },
         {
           "word": "seconds,",
-          "start": 24.88,
-          "end": 25.34
+          "start": 27.39,
+          "end": 27.85
         },
         {
           "word": "positive",
-          "start": 25.68,
-          "end": 26.04
+          "start": 28.11,
+          "end": 28.55
         },
         {
           "word": "three.",
-          "start": 26.04,
-          "end": 26.62
+          "start": 28.55,
+          "end": 29.11
         },
         {
           "word": "Slowing?",
-          "start": 28.82,
-          "end": 29.46
+          "start": 31.17,
+          "end": 31.95
         },
         {
           "word": "What",
-          "start": 29.88,
-          "end": 30.42
+          "start": 32.61,
+          "end": 32.93
         },
         {
           "word": "change?",
-          "start": 30.42,
-          "end": 30.82
+          "start": 32.93,
+          "end": 33.31
         },
         {
           "word": "Three",
-          "start": 31.44,
-          "end": 31.9
+          "start": 33.89,
+          "end": 34.43
         },
         {
           "word": "metres",
-          "start": 31.9,
-          "end": 32.38
+          "start": 34.43,
+          "end": 34.91
         },
         {
           "word": "in",
-          "start": 32.38,
-          "end": 32.7
+          "start": 34.91,
+          "end": 35.21
         },
         {
           "word": "two",
-          "start": 32.7,
-          "end": 33.04
+          "start": 35.21,
+          "end": 35.55
         },
         {
-          "word": "seconds,",
-          "start": 33.04,
-          "end": 33.62
-        },
-        {
-          "word": "positive",
-          "start": 34.04,
-          "end": 35.4
-        },
-        {
-          "word": "slope",
-          "start": 35.4,
-          "end": 35.82
-        },
-        {
-          "word": "flattens,",
-          "start": 35.82,
-          "end": 36.56
-        },
-        {
-          "word": "called",
-          "start": 37.42,
-          "end": 38.12
-        },
-        {
-          "word": "average",
-          "start": 38.12,
-          "end": 40.0
-        },
-        {
-          "word": "velocity.",
-          "start": 40.0,
-          "end": 40.86
-        },
-        {
-          "word": "Resting?",
-          "start": 43.0,
-          "end": 43.72
-        },
-        {
-          "word": "What",
-          "start": 44.22,
-          "end": 44.32
-        },
-        {
-          "word": "slope?",
-          "start": 44.32,
-          "end": 44.74
-        },
-        {
-          "word": "Zero",
-          "start": 45.6,
-          "end": 45.9
-        },
-        {
-          "word": "metres",
-          "start": 45.9,
-          "end": 46.28
-        },
-        {
-          "word": "in",
-          "start": 46.28,
-          "end": 47.16
-        },
-        {
-          "word": "three",
-          "start": 47.16,
-          "end": 47.5
-        },
-        {
-          "word": "seconds,",
-          "start": 47.5,
-          "end": 47.98
-        },
-        {
-          "word": "zero",
-          "start": 48.48,
-          "end": 48.82
-        },
-        {
-          "word": "gradient.",
-          "start": 48.82,
-          "end": 49.32
-        },
-        {
-          "word": "Returning?",
-          "start": 51.55,
-          "end": 52.29
-        },
-        {
-          "word": "What",
-          "start": 52.87,
-          "end": 52.93
-        },
-        {
-          "word": "sign?",
-          "start": 52.93,
-          "end": 53.27
-        },
-        {
-          "word": "Minus",
-          "start": 53.97,
-          "end": 54.39
-        },
-        {
-          "word": "fifteen",
-          "start": 54.39,
-          "end": 54.69
-        },
-        {
-          "word": "metres",
-          "start": 54.69,
-          "end": 55.17
-        },
-        {
-          "word": "in",
-          "start": 55.17,
-          "end": 55.91
-        },
-        {
-          "word": "five",
-          "start": 55.91,
-          "end": 56.23
-        },
-        {
-          "word": "seconds,",
-          "start": 56.23,
-          "end": 56.71
-        },
-        {
-          "word": "negative",
-          "start": 57.35,
-          "end": 57.69
-        },
-        {
-          "word": "three.",
-          "start": 57.69,
-          "end": 58.21
-        },
-        {
-          "word": "Now",
-          "start": 60.16,
-          "end": 60.65
-        },
-        {
-          "word": "the",
-          "start": 60.65,
-          "end": 60.81
-        },
-        {
-          "word": "velocity",
-          "start": 60.81,
-          "end": 61.29
-        },
-        {
-          "word": "time",
-          "start": 61.29,
-          "end": 61.69
-        },
-        {
-          "word": "graph.",
-          "start": 61.69,
-          "end": 62.03
-        },
-        {
-          "word": "Cruising?",
-          "start": 62.57,
-          "end": 62.99
+          "word": "seconds.",
+          "start": 35.55,
+          "end": 36.11
         },
         {
           "word": "Positive",
-          "start": 63.75,
-          "end": 63.99
+          "start": 37.03,
+          "end": 37.89
         },
         {
-          "word": "three,",
-          "start": 63.99,
-          "end": 64.59
+          "word": "slope",
+          "start": 37.89,
+          "end": 38.35
         },
         {
-          "word": "horizontal.",
-          "start": 64.87,
-          "end": 65.19
+          "word": "flattens.",
+          "start": 38.35,
+          "end": 39.03
         },
         {
-          "word": "Slowing?",
-          "start": 67.57,
-          "end": 68.25
+          "word": "Called?",
+          "start": 39.83,
+          "end": 40.67
         },
         {
-          "word": "Straight",
-          "start": 68.95,
-          "end": 69.31
+          "word": "Average",
+          "start": 42.05,
+          "end": 42.53
         },
         {
-          "word": "down",
-          "start": 69.31,
-          "end": 69.69
-        },
-        {
-          "word": "to",
-          "start": 69.69,
-          "end": 69.89
-        },
-        {
-          "word": "zero.",
-          "start": 69.89,
-          "end": 70.35
+          "word": "velocity.",
+          "start": 42.53,
+          "end": 43.33
         },
         {
           "word": "Resting?",
-          "start": 72.46,
-          "end": 73.14
+          "start": 45.66,
+          "end": 46.22
+        },
+        {
+          "word": "What",
+          "start": 46.74,
+          "end": 46.84
+        },
+        {
+          "word": "slope?",
+          "start": 46.84,
+          "end": 47.22
         },
         {
           "word": "Zero",
-          "start": 73.8,
-          "end": 74.38
+          "start": 48.1,
+          "end": 48.4
         },
         {
-          "word": "along",
-          "start": 74.38,
-          "end": 75.34
+          "word": "metres",
+          "start": 48.4,
+          "end": 48.8
         },
         {
-          "word": "the",
-          "start": 75.34,
-          "end": 75.58
+          "word": "in",
+          "start": 48.8,
+          "end": 49.66
         },
         {
-          "word": "axis.",
-          "start": 75.58,
-          "end": 75.98
+          "word": "three",
+          "start": 49.66,
+          "end": 50.0
+        },
+        {
+          "word": "seconds,",
+          "start": 50.0,
+          "end": 50.48
+        },
+        {
+          "word": "zero",
+          "start": 50.98,
+          "end": 51.32
+        },
+        {
+          "word": "gradient.",
+          "start": 51.32,
+          "end": 51.8
         },
         {
           "word": "Returning?",
-          "start": 78.29,
-          "end": 79.23
+          "start": 54.13,
+          "end": 54.79
+        },
+        {
+          "word": "What",
+          "start": 55.37,
+          "end": 55.43
+        },
+        {
+          "word": "sign?",
+          "start": 55.43,
+          "end": 55.77
         },
         {
           "word": "Minus",
-          "start": 79.81,
-          "end": 80.31
+          "start": 56.49,
+          "end": 56.89
+        },
+        {
+          "word": "fifteen",
+          "start": 56.89,
+          "end": 57.21
+        },
+        {
+          "word": "metres",
+          "start": 57.21,
+          "end": 57.69
+        },
+        {
+          "word": "in",
+          "start": 57.69,
+          "end": 58.41
+        },
+        {
+          "word": "five",
+          "start": 58.41,
+          "end": 58.73
+        },
+        {
+          "word": "seconds.",
+          "start": 58.73,
+          "end": 59.21
+        },
+        {
+          "word": "Negative",
+          "start": 59.21,
+          "end": 60.19
+        },
+        {
+          "word": "three.",
+          "start": 60.19,
+          "end": 60.73
+        },
+        {
+          "word": "Now",
+          "start": 62.93,
+          "end": 63.15
+        },
+        {
+          "word": "the",
+          "start": 63.15,
+          "end": 63.31
+        },
+        {
+          "word": "velocity",
+          "start": 63.31,
+          "end": 63.77
+        },
+        {
+          "word": "time",
+          "start": 63.77,
+          "end": 64.17
+        },
+        {
+          "word": "graph.",
+          "start": 64.17,
+          "end": 64.53
+        },
+        {
+          "word": "Cruising?",
+          "start": 65.07,
+          "end": 65.47
+        },
+        {
+          "word": "Positive",
+          "start": 66.25,
+          "end": 66.51
         },
         {
           "word": "three,",
-          "start": 80.31,
-          "end": 80.69
+          "start": 66.51,
+          "end": 67.09
         },
         {
-          "word": "below",
-          "start": 80.99,
-          "end": 81.21
+          "word": "horizontal.",
+          "start": 67.35,
+          "end": 67.65
+        },
+        {
+          "word": "Slowing?",
+          "start": 70.11,
+          "end": 70.75
+        },
+        {
+          "word": "Straight",
+          "start": 71.41,
+          "end": 71.81
+        },
+        {
+          "word": "down",
+          "start": 71.81,
+          "end": 72.21
+        },
+        {
+          "word": "to",
+          "start": 72.21,
+          "end": 72.39
         },
         {
           "word": "zero.",
-          "start": 81.21,
-          "end": 81.65
+          "start": 72.39,
+          "end": 72.85
+        },
+        {
+          "word": "Resting?",
+          "start": 75.01,
+          "end": 75.63
+        },
+        {
+          "word": "Zero",
+          "start": 76.29,
+          "end": 76.89
+        },
+        {
+          "word": "along",
+          "start": 76.89,
+          "end": 77.85
+        },
+        {
+          "word": "the",
+          "start": 77.85,
+          "end": 78.09
+        },
+        {
+          "word": "axis.",
+          "start": 78.09,
+          "end": 78.47
+        },
+        {
+          "word": "Returning?",
+          "start": 80.84,
+          "end": 81.76
+        },
+        {
+          "word": "Minus",
+          "start": 82.36,
+          "end": 82.8
+        },
+        {
+          "word": "three,",
+          "start": 82.8,
+          "end": 83.18
+        },
+        {
+          "word": "below",
+          "start": 83.52,
+          "end": 83.7
+        },
+        {
+          "word": "zero.",
+          "start": 83.7,
+          "end": 84.16
         },
         {
           "word": "The",
-          "start": 82.61,
-          "end": 82.67
+          "start": 85.02,
+          "end": 85.18
         },
         {
           "word": "jump",
-          "start": 82.67,
-          "end": 83.09
+          "start": 85.18,
+          "end": 85.6
         },
         {
           "word": "idealises",
-          "start": 83.09,
-          "end": 83.97
+          "start": 85.6,
+          "end": 86.48
         },
         {
           "word": "turning.",
-          "start": 83.97,
-          "end": 84.49
+          "start": 86.48,
+          "end": 86.98
         }
       ],
       "cues": {
         "setup": 0.55,
         "cruise-story": 3.55,
         "slow-story": 4.93,
-        "rest-story": 6.71,
-        "return-story": 8.03,
-        "displacement": 11.2,
-        "formula": 14.04,
+        "rest-story": 6.73,
+        "return-story": 8.09,
+        "displacement": 11.26,
+        "formula": 14.02,
         "symbols": 18.32,
         "leg1": 21.82,
-        "leg2": 28.89,
-        "leg3": 43.18,
-        "leg4": 51.81,
-        "velocity": 60.16,
-        "v1": 63.75,
-        "v2": 68.99,
-        "v3": 73.88,
-        "v4": 79.91
+        "leg2": 31.39,
+        "leg3": 45.68,
+        "leg4": 54.31,
+        "velocity": 62.93,
+        "v1": 66.25,
+        "v2": 71.49,
+        "v3": 76.38,
+        "v4": 82.41
       },
-      "generatedAt": "2026-09-07T04:51:42.956283",
+      "generatedAt": "2026-09-07T05:12:26.479991",
       "engine": "faster-whisper-small (local)",
       "tempo": "slow",
       "voiceSpeed": 0.9,
       "voiceId": "gYWKdgLtqjPO3D5uDrDP",
       "provider": "elevenlabs",
-      "audioSha256": "1564bc6abbcc49b5479dbb59316e7fce8e829cc8bba8af3202396f1386c7660f",
+      "audioSha256": "1a5b9702f2cb492b8fdeb008b4eaecafdea9b14efcfff66ef28653f9c47dab25",
       "beats": [
         {
           "text": "Consider a cyclist who leaves A, cruises away, slows to a stop, rests, then returns to A.",
@@ -3359,83 +3431,83 @@
         },
         {
           "text": "Twelve metres in four seconds: positive three.",
-          "start": 23.64,
-          "end": 26.74
+          "start": 26.14,
+          "end": 29.24
         },
         {
           "text": "Slowing: what changes?",
-          "start": 28.89,
-          "end": 31.06
+          "start": 31.39,
+          "end": 33.56
         },
         {
           "text": "Three metres in two seconds; positive slope flattens. Chord: average velocity.",
-          "start": 31.56,
-          "end": 41.03
+          "start": 34.06,
+          "end": 43.53
         },
         {
           "text": "Resting: what slope?",
-          "start": 43.18,
-          "end": 45.09
+          "start": 45.68,
+          "end": 47.59
         },
         {
           "text": "Zero metres in three seconds: zero gradient.",
-          "start": 45.59,
-          "end": 49.66
+          "start": 48.09,
+          "end": 52.16
         },
         {
           "text": "Returning: what sign?",
-          "start": 51.81,
-          "end": 53.48
+          "start": 54.31,
+          "end": 55.98
         },
         {
           "text": "Minus fifteen metres in five seconds: negative three.",
-          "start": 53.98,
-          "end": 58.29
+          "start": 56.48,
+          "end": 60.79
         },
         {
           "text": "Now the velocity-time graph.",
-          "start": 60.44,
-          "end": 62.24
+          "start": 62.94,
+          "end": 64.74
         },
         {
           "text": "Cruising?",
-          "start": 62.39,
-          "end": 63.18
+          "start": 64.89,
+          "end": 65.68
         },
         {
           "text": "Positive three, horizontal.",
-          "start": 63.68,
-          "end": 65.58
+          "start": 66.18,
+          "end": 68.08
         },
         {
           "text": "Slowing?",
-          "start": 67.73,
-          "end": 68.49
+          "start": 70.23,
+          "end": 70.99
         },
         {
           "text": "Straight down to zero.",
-          "start": 68.99,
-          "end": 70.54
+          "start": 71.49,
+          "end": 73.04
         },
         {
           "text": "Resting?",
-          "start": 72.69,
-          "end": 73.38
+          "start": 75.19,
+          "end": 75.88
         },
         {
           "text": "Zero along the axis.",
-          "start": 73.88,
-          "end": 76.28
+          "start": 76.38,
+          "end": 78.78
         },
         {
           "text": "Returning?",
-          "start": 78.43,
-          "end": 79.40523809523809
+          "start": 80.93,
+          "end": 81.90523809523809
         },
         {
           "text": "Minus three, below zero. The jump idealises turning.",
-          "start": 79.90523809523809,
-          "end": 84.7552380952381
+          "start": 82.40523809523809,
+          "end": 87.2552380952381
         }
       ],
       "holds": [
@@ -3448,104 +3520,104 @@
         {
           "kind": "pause",
           "start": 23.14,
-          "end": 23.64,
-          "duration": 0.5
+          "end": 26.14,
+          "duration": 3.0
         },
         {
           "kind": "hold",
-          "start": 26.74,
-          "end": 28.74,
+          "start": 29.24,
+          "end": 31.24,
           "duration": 2.0
         },
         {
           "kind": "pause",
-          "start": 31.06,
-          "end": 31.56,
+          "start": 33.56,
+          "end": 34.06,
           "duration": 0.5
         },
         {
           "kind": "hold",
-          "start": 41.03,
-          "end": 43.03,
+          "start": 43.53,
+          "end": 45.53,
           "duration": 2.0
         },
         {
           "kind": "pause",
-          "start": 45.09,
-          "end": 45.59,
+          "start": 47.59,
+          "end": 48.09,
           "duration": 0.5
         },
         {
           "kind": "hold",
-          "start": 49.66,
-          "end": 51.66,
+          "start": 52.16,
+          "end": 54.16,
           "duration": 2.0
         },
         {
           "kind": "pause",
-          "start": 53.48,
-          "end": 53.98,
+          "start": 55.98,
+          "end": 56.48,
           "duration": 0.5
         },
         {
           "kind": "hold",
-          "start": 58.29,
-          "end": 60.29,
+          "start": 60.79,
+          "end": 62.79,
           "duration": 2.0
         },
         {
           "kind": "pause",
-          "start": 63.18,
-          "end": 63.68,
+          "start": 65.68,
+          "end": 66.18,
           "duration": 0.5
         },
         {
           "kind": "hold",
-          "start": 65.58,
-          "end": 67.58,
+          "start": 68.08,
+          "end": 70.08,
           "duration": 2.0
         },
         {
           "kind": "pause",
-          "start": 68.49,
-          "end": 68.99,
+          "start": 70.99,
+          "end": 71.49,
           "duration": 0.5
         },
         {
           "kind": "hold",
-          "start": 70.54,
-          "end": 72.54,
+          "start": 73.04,
+          "end": 75.04,
           "duration": 2.0
         },
         {
           "kind": "pause",
-          "start": 73.38,
-          "end": 73.88,
+          "start": 75.88,
+          "end": 76.38,
           "duration": 0.5
         },
         {
           "kind": "hold",
-          "start": 76.28,
-          "end": 78.28,
+          "start": 78.78,
+          "end": 80.78,
           "duration": 2.0
         },
         {
           "kind": "pause",
-          "start": 79.40523809523809,
-          "end": 79.90523809523809,
+          "start": 81.90523809523809,
+          "end": 82.40523809523809,
           "duration": 0.5
         },
         {
           "kind": "hold",
-          "start": 84.7552380952381,
-          "end": 86.7552380952381,
+          "start": 87.2552380952381,
+          "end": 89.2552380952381,
           "duration": 2.0
         }
       ],
       "paragraphs": [
         "Consider a cyclist who leaves A, cruises away, slows to a stop, rests, then returns to A. [pause 2 s]",
         "Now the displacement-time graph. Gradient equals displacement change over time change. V equals delta s over delta t.",
-        "Cruising: what slope? [pause 0.5 s] Twelve metres in four seconds: positive three. [hold 2 s]",
+        "Cruising: what slope? [pause 3 s] Twelve metres in four seconds: positive three. [hold 2 s]",
         "Slowing: what changes? [pause 0.5 s] Three metres in two seconds; positive slope flattens. Chord: average velocity. [hold 2 s]",
         "Resting: what slope? [pause 0.5 s] Zero metres in three seconds: zero gradient. [hold 2 s]",
         "Returning: what sign? [pause 0.5 s] Minus fifteen metres in five seconds: negative three. [hold 2 s]",

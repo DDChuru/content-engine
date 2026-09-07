@@ -46,7 +46,7 @@ voiceSpeed: 1.0
 
 ## S04 — Lift worked build
 
-**Duration:** 87.040 seconds
+**Duration:** 94.746 seconds
 tempo: slow
 voiceSpeed: 0.9
 
@@ -54,23 +54,23 @@ voiceSpeed: 0.9
 
 **Narration:** “Consider a lift that starts from rest, accelerates at one point five metres per second squared for two seconds, cruises for four seconds, then brakes to a stop in two seconds. Upwards positive. Let's get drawing. [pause 2 s]”
 
-**Narration:** “What speed? [pause 0.5 s] Velocity equals initial velocity plus acceleration times time. V equals u plus a t. Three metres per second. [hold 2 s]”
+**Narration:** “What speed? [pause 0.5 s] Velocity equals initial velocity plus acceleration times time. V equals u plus a t. Three metres per second. [pause 1 s] [hold 2 s]”
 
-**Narration:** “When does cruising end? [pause 0.5 s] Six seconds. [hold 2 s]”
+**Narration:** “When does cruising end? [pause 0.5 s] Six seconds. [pause 1 s] [hold 2 s]”
 
-**Narration:** “When does it stop? [pause 0.5 s] Eight seconds. [hold 2 s]”
+**Narration:** “When does it stop? [pause 0.5 s] Eight seconds. [pause 1 s] [hold 2 s]”
 
-**Narration:** “What displacement does each area give? [pause 0.5 s] Displacement equals area under the velocity-time graph. S equals half u plus v, times t. First triangle: three metres. [hold 2 s]”
+**Narration:** “What displacement does each area give? [pause 0.5 s] Displacement equals area under the velocity-time graph. S equals half u plus v, times t. First triangle: three metres. [pause 1 s] [hold 2 s]”
 
-**Narration:** “The rectangle? [pause 0.5 s] Twelve metres. [hold 2 s]”
+**Narration:** “The rectangle? [pause 0.5 s] Twelve metres. [pause 1 s] [hold 2 s]”
 
-**Narration:** “Accumulated height? [pause 0.5 s] Fifteen metres. [hold 2 s]”
+**Narration:** “Accumulated height? [pause 0.5 s] Fifteen metres. [pause 1 s] [hold 2 s]”
 
-**Narration:** “Braking adds? [pause 0.5 s] Three metres, still upwards. [hold 2 s]”
+**Narration:** “Braking adds? [pause 0.5 s] Three metres, still upwards. [pause 1 s] [hold 2 s]”
 
-**Narration:** “Where does it finish? [pause 0.5 s] Eighteen metres above the start. [hold 2 s]”
+**Narration:** “Where does it finish? [pause 0.5 s] Eighteen metres above the start. [pause 1 s] [hold 2 s]”
 
-**Cue keywords:** `setup` at 0.55 s; `draw` at 18.52 s; `speed` at 21.61 s; `formula-v` at 22.85 s; `symbol-v` at 29.09 s; `three` at 32.65 s; `six` at 38.67 s; `eight` at 43.34 s; `area-formula` at 49.22 s; `area-symbol` at 54.22 s; `triangle` at 59.60 s; `rectangle` at 64.46 s; `height` at 69.13 s; `braking` at 74.07 s; `finish` at 80.56 s
+**Cue keywords:** `setup` at 0.55 s; `draw` at 18.52 s; `speed` at 21.61 s; `formula-v` at 22.85 s; `symbol-v` at 29.09 s; `three` at 32.65 s; `six` at 39.70 s; `eight` at 45.34 s; `area-formula` at 52.21 s; `area-symbol` at 56.91 s; `triangle` at 62.45 s; `rectangle` at 68.47 s; `height` at 74.12 s; `braking` at 80.07 s; `finish` at 87.56 s
 
 ## S05 — One journey, both graphs
 
@@ -86,7 +86,7 @@ voiceSpeed: 1.0
 
 ## S06 — Ball sign check
 
-**Duration:** 86.831 seconds
+**Duration:** 90.828 seconds
 tempo: slow
 voiceSpeed: 0.9
 
@@ -96,17 +96,17 @@ voiceSpeed: 0.9
 
 **Narration:** “Why a straight velocity line? [pause 0.5 s] Velocity equals initial velocity plus acceleration times time. V equals u plus a t. Gravity is ten downwards. V equals fifteen minus ten t.”
 
-**Narration:** “Where does direction change? [pause 0.5 s] At zero velocity: one point five seconds. [hold 2 s]”
+**Narration:** “Where does direction change? [pause 0.5 s] At zero velocity: one point five seconds. [pause 1 s] [hold 2 s]”
 
-**Narration:** “How high? [pause 0.5 s] Displacement equals area under the velocity-time graph. S equals half u plus v, times t. Eleven point two five metres. [hold 2 s]”
+**Narration:** “How high? [pause 0.5 s] Displacement equals area under the velocity-time graph. S equals half u plus v, times t. Eleven point two five metres. [pause 1 s] [hold 2 s]”
 
-**Narration:** “When back at hand height? [pause 0.5 s] Three seconds. Equal signed areas cancel. [hold 2 s]”
+**Narration:** “When back at hand height? [pause 0.5 s] Three seconds. Equal signed areas cancel. [pause 1 s] [hold 2 s]”
 
-**Narration:** “What velocity then? [pause 0.5 s] Minus fifteen metres per second. [hold 2 s]”
+**Narration:** “What velocity then? [pause 0.5 s] Minus fifteen metres per second. [pause 1 s] [hold 2 s]”
 
 **Narration:** “What if thrown faster? [pause 0.5 s] Higher, longer; same gradient.”
 
-**Cue keywords:** `setup` at 0.55 s; `draw` at 23.55 s; `straight` at 26.48 s; `formula-v` at 28.75 s; `symbol-v` at 34.53 s; `substitute` at 41.57 s; `direction-change` at 44.96 s; `area-formula` at 53.16 s; `area-symbol` at 57.22 s; `height` at 62.80 s; `catch` at 67.08 s; `signed-areas` at 70.80 s; `down` at 75.34 s; `contrast` at 80.92 s
+**Cue keywords:** `setup` at 0.55 s; `draw` at 23.55 s; `straight` at 26.48 s; `formula-v` at 28.75 s; `symbol-v` at 34.33 s; `substitute` at 41.79 s; `direction-change` at 44.96 s; `area-formula` at 54.11 s; `area-symbol` at 58.85 s; `height` at 63.63 s; `catch` at 69.08 s; `signed-areas` at 72.12 s; `down` at 78.34 s; `contrast` at 84.92 s
 
 ## S07 — Sketch versus plot
 
@@ -122,7 +122,7 @@ voiceSpeed: 1.0
 
 ## S09 — Cyclist journey close
 
-**Duration:** 87.249 seconds
+**Duration:** 89.757 seconds
 tempo: slow
 voiceSpeed: 0.9
 
@@ -132,7 +132,7 @@ voiceSpeed: 0.9
 
 **Narration:** “Now the displacement-time graph. Gradient equals displacement change over time change. V equals delta s over delta t.”
 
-**Narration:** “Cruising: what slope? [pause 0.5 s] Twelve metres in four seconds: positive three. [hold 2 s]”
+**Narration:** “Cruising: what slope? [pause 3 s] Twelve metres in four seconds: positive three. [hold 2 s]”
 
 **Narration:** “Slowing: what changes? [pause 0.5 s] Three metres in two seconds; positive slope flattens. Chord: average velocity. [hold 2 s]”
 
@@ -150,7 +150,7 @@ voiceSpeed: 0.9
 
 **Narration:** “Returning? [pause 0.5 s] Minus three, below zero. The jump idealises turning. [hold 2 s]”
 
-**Cue keywords:** `setup` at 0.55 s; `cruise-story` at 3.55 s; `slow-story` at 4.93 s; `rest-story` at 6.71 s; `return-story` at 8.03 s; `displacement` at 11.20 s; `formula` at 14.04 s; `symbols` at 18.32 s; `leg1` at 21.82 s; `leg2` at 28.89 s; `leg3` at 43.18 s; `leg4` at 51.81 s; `velocity` at 60.16 s; `v1` at 63.75 s; `v2` at 68.99 s; `v3` at 73.88 s; `v4` at 79.91 s
+**Cue keywords:** `setup` at 0.55 s; `cruise-story` at 3.55 s; `slow-story` at 4.93 s; `rest-story` at 6.73 s; `return-story` at 8.09 s; `displacement` at 11.26 s; `formula` at 14.02 s; `symbols` at 18.32 s; `leg1` at 21.82 s; `leg2` at 31.39 s; `leg3` at 45.68 s; `leg4` at 54.31 s; `velocity` at 62.93 s; `v1` at 66.25 s; `v2` at 71.49 s; `v3` at 76.38 s; `v4` at 82.41 s
 
 ## S08 — Recap
 
@@ -170,4 +170,8 @@ Resolve all cues from local Whisper timestamps before stage 1 commit/push. Stage
 
 Still audit: capture every cue and both ends of every result hold plus story/graph boundaries; assert ≤3 regions on new frames. Document inherited Sol four-region frames separately. Check axis text bounding boxes pairwise, including 6 versus t / s and 15 versus 18; place time name beyond last tick and stagger close y labels. Check silent holds are pixel-identical. Save verify-build.md and machine measurements.
 
-Stage 1 measured duration: **369.953 seconds**. All 70 spoken cues resolved locally. S01 syllabus/outcomes use the explicitly silent 0–8 s prelude; they are not claimed as spoken cues.
+Final measured audio duration: **384.163 seconds**. All 70 spoken cues resolved locally. S01 syllabus/outcomes use the explicitly silent 0–8 s prelude; they are not claimed as spoken cues.
+
+Final pacing refinement: S09 first slope question has a three-second inserted thinking pause. Its four displacement legs finish before velocity appears; all twenty result holds remain two seconds.
+
+Lift and ball have an additional one-second drawing pause after each result sentence, before the two-second frozen hold. Finish the handwritten calculation before its graph segment; keep word and symbol lines above the numbers.
