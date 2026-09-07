@@ -74,13 +74,15 @@ Format: 16:9 Remotion explainer. Target duration: about 3 minutes 38 seconds. Th
 
 ## S08 — Weight changes with location
 
-**Duration:** 22 seconds
+**Duration:** 29.336 seconds (measured MP3)
 
-**What the viewer sees:** The same labelled mass stands first on an Earth platform and then on a Moon platform. Its mass card does not change. The downward amber weight arrow becomes shorter on the Moon, while a side card assembles “W = mg”.
+**What the viewer sees:** The same labelled mass stands first on an Earth platform and then on a Moon platform. Its mass card does not change. The downward amber weight arrow becomes shorter on the Moon, while a compact side card assembles “W = mg” before “W = 1 × 10 = 10 N”. The Earth platform carries “g = 10 m s⁻² (Paper 4)”. Ring 10, 1 kg, and 10 N at their spoken cues; retain both platforms throughout.
 
-**Narration:** “Weight is a force, so we measure it in newtons. It equals mass multiplied by the local acceleration due to gravity. Move the object to the Moon. Its mass stays the same, while its weight becomes smaller.”
+**Narration:** “Weight is a force, so we measure it in newtons. It equals mass multiplied by the local acceleration due to gravity. For Cambridge Paper Four, use g equals ten metres per second squared. For this one-kilogram mass, weight is one times ten, giving ten newtons. Move the object to the Moon. Its mass stays the same, while its weight becomes smaller.”
 
-**Cue keywords:** “Weight”; “newtons”; “local acceleration”; “Moon”
+**Cue keywords:** “Weight”; “newtons”; “local acceleration”; “ten metres”; “one-kilogram”; “one times”; “ten, giving”; “ten newtons”; “Moon”
+
+**Voice:** gYWKdgLtqjPO3D5uDrDP, eleven_turbo_v2_5, speed 1.14 (original ElevenLabs history).
 
 ## S09 — Powers are part of the unit
 

@@ -20,6 +20,7 @@ import { TransitionSeries, linearTiming } from '@remotion/transitions';
 import { fade } from '@remotion/transitions/fade';
 import transcriptJson from '../public/transcripts/mechanics/derived-units.json';
 import { useCue } from './ProjectComposition';
+import { SpokenFigure } from '../components/SpokenFigure';
 
 const TRANSITION_FRAMES = 15;
 
@@ -964,6 +965,7 @@ const Scene06: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
       <div style={{ position: 'absolute', ...CARD_INK, left: 628, top: 214, width: 1224, height: 704, borderRadius: 32, border: `2px solid ${T.cyan}55`, background: T.card, color: T.ink, boxShadow: '0 24px 62px #0008' }}>
         <Cued at={numeratorAt} fromX={-28} style={{ zIndex: 1, position: 'absolute', left: 40, right: 40, top: 38, height: 245, borderRadius: 23, background: `${T.cyan}14`, border: `2px solid ${T.cyan}88` }}>
           <div style={{ position: 'absolute', left: 28, top: 20, color: '#61757e', fontFamily: T.mono, fontSize: 28, letterSpacing: 2, fontWeight: 900 }}>NUMERATOR · DISTANCE</div>
+          <div style={{ position: 'absolute', left: 58, top: 65, color: T.ink, fontFamily: T.mono, fontSize: 26, fontWeight: 850 }}>distance in m = distance in km × metres per km</div>
           <EquationToken at={seventyTwoTimesAt} fromX={-475} fromY={340} style={{ position: 'absolute', left: 58, top: 111 }}>72</EquationToken>
           <EquationToken at={timesAt} color={T.cyan} style={{ position: 'absolute', left: 165, top: 111 }}>×</EquationToken>
           <EquationToken at={thousandAt} style={{ position: 'absolute', left: 235, top: 111 }}>1000</EquationToken>
@@ -973,6 +975,7 @@ const Scene06: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
 
         <Cued at={denominatorAt} fromX={28} style={{ zIndex: 2, position: 'absolute', left: 40, right: 40, top: 310, height: 345, borderRadius: 23, background: `${T.amber}12`, border: `2px solid ${T.amber}88` }}>
           <div style={{ position: 'absolute', left: 28, top: 20, color: '#61757e', fontFamily: T.mono, fontSize: 28, letterSpacing: 2, fontWeight: 900 }}>DENOMINATOR · CLOCK</div>
+          <div style={{ position: 'absolute', left: 58, top: 174, color: T.ink, fontFamily: T.mono, fontSize: 26, fontWeight: 850 }}>speed = distance ÷ time</div>
           <EquationToken at={oneHourAt} style={{ position: 'absolute', left: 58, top: 82, fontSize: 31 }}>1 hour</EquationToken>
           <EquationToken at={thirtySixHundredAt} color="#71818a" style={{ position: 'absolute', left: 206, top: 82, fontSize: 31 }}>=</EquationToken>
           <EquationToken at={thirtySixHundredAt} color={T.amber} style={{ position: 'absolute', left: 265, top: 82, fontSize: 31 }}>3600 seconds</EquationToken>
@@ -1092,7 +1095,7 @@ const PlanetPlatform: React.FC<{
   minimumOpacity?: number;
   craters?: boolean;
 }> = ({ left, label, color, active, minimumOpacity = 0.5, craters = false }) => (
-  <div style={{ position: 'absolute', left, top: 700, width: 630, height: 183, borderRadius: '50% 50% 18px 18px', background: `linear-gradient(${color}, ${color}88)`, border: `4px solid ${color}`, opacity: minimumOpacity + active * (1 - minimumOpacity), boxShadow: active > 0.2 ? `0 0 38px ${color}44` : undefined, overflow: 'hidden' }}>
+  <div data-gravity-diagram={label} style={{ position: 'absolute', left, top: 700, width: 630, height: 183, borderRadius: '50% 50% 18px 18px', background: `linear-gradient(${color}, ${color}88)`, border: `4px solid ${color}`, opacity: minimumOpacity + active * (1 - minimumOpacity), boxShadow: active > 0.2 ? `0 0 38px ${color}44` : undefined, overflow: 'hidden' }}>
     {craters && [
       { left: 95, top: 76, size: 42 },
       { left: 285, top: 41, size: 58 },
@@ -1109,6 +1112,14 @@ const Scene08: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
   const moonAt = spokenAt(scene, 'moon', ['Moon']);
   const massSameAt = spokenAt(scene, 'mass-stays-the-same', ['mass stays the same']);
   const smallerAt = spokenAt(scene, 'weight-becomes-smaller', ['weight becomes smaller']);
+  const gravityAt = spokenAt(scene, 'ten-gravity');
+  const oneKilogramAt = spokenAt(scene, 'one-kilogram');
+  const oneTimesAt = spokenAt(scene, 'one-times');
+  const tenSubstitutionAt = spokenAt(scene, 'ten-substitution');
+  const tenNewtonsAt = spokenAt(scene, 'ten-newtons');
+  const frame = useCurrentFrame();
+  const { fps } = useVideoConfig();
+  const now = frame / fps;
   const move = useCueProgress(moonAt, 1.0);
   const shrink = useCueProgress(smallerAt, 0.7);
   const massLock = useCue(massSameAt, 0.4);
@@ -1119,14 +1130,18 @@ const Scene08: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
     <LabBackground scene={8} label="mass vs weight">
       <SceneHeading at={weightAt}>Weight depends on location</SceneHeading>
 
-      <Cued at={localAccelerationAt} fromY={-22} style={{ position: 'absolute', left: 570, top: 198 }}>
-        <WarmCard accent={T.amber} style={{ width: 780, height: 166, display: 'grid', placeItems: 'center' }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 28, fontFamily: T.mono, fontSize: 48, fontWeight: 950 }}>
+      <Cued at={localAccelerationAt} fromY={-22} style={{ position: 'absolute', left: 690, top: 198 }}>
+        <WarmCard accent={T.amber} style={{ width: 540, padding: '22px 32px', display: 'grid', justifyItems: 'center', gap: 20 }}>
+          <div data-gravity-formula style={{ display: 'flex', alignItems: 'center', gap: 28, fontFamily: T.mono, fontSize: 48, fontWeight: 950 }}>
             <span style={{ color: labelColor(T.amber) }}>W</span>
             <span style={{ color: '#74838c' }}>=</span>
             <span style={{ color: T.ink }}>m</span>
             <span style={{ color: '#74838c' }}>×</span>
             <span style={{ color: labelColor(T.cyan) }}>g<sub style={{ fontSize: 28 }}>local</sub></span>
+          </div>
+          <div data-gravity-working style={{ fontFamily: T.mono, fontSize: 28, fontWeight: 900, visibility: now >= oneTimesAt ? 'visible' : 'hidden' }}>
+            Earth: W = 1<span style={{ visibility: now >= tenSubstitutionAt ? 'visible' : 'hidden' }}> × 10</span>
+            <span style={{ visibility: now >= tenNewtonsAt ? 'visible' : 'hidden' }}> = 10 N</span>
           </div>
         </WarmCard>
       </Cued>
@@ -1139,16 +1154,22 @@ const Scene08: React.FC<{ scene: MechanicsTranscriptScene }> = ({ scene }) => {
 
       <PlanetPlatform left={115} label="EARTH" color="#4c9d72" active={1 - move} />
       <PlanetPlatform left={1175} label="MOON" color={T.moon} active={move} minimumOpacity={0} craters />
+      <div style={{ position: 'absolute', left: 195, top: 815, color: T.bgDeep, fontFamily: T.mono, fontSize: 28, fontWeight: 900, visibility: now >= gravityAt ? 'visible' : 'hidden' }}>
+        g = <SpokenFigure id="derived-gravity" cues={[gravityAt, tenSubstitutionAt]}>10 m s⁻²</SpokenFigure> · Paper 4
+      </div>
 
       <div style={{ position: 'absolute', ...CARD_INK, left: objectX, top: 486, width: 214, height: 202, borderRadius: 24, background: T.card, border: `4px solid ${massLock.isActive ? T.green : T.cyan}`, boxShadow: '0 18px 45px #0009', display: 'grid', placeItems: 'center', zIndex: 5 }}>
         <div style={{ textAlign: 'center' }}>
-          <div style={{ color: T.ink, fontFamily: T.mono, fontSize: 50, fontWeight: 950 }}>1 kg</div>
-          <div style={{ color: massLock.isActive ? '#186d48' : '#526672', fontSize: 28, fontWeight: 900, marginTop: 8 }}>{massLock.isActive ? 'SAME MASS' : 'MASS'}</div>
+          <div style={{ color: T.ink, fontFamily: T.mono, fontSize: 50, fontWeight: 950 }}><SpokenFigure id="derived-mass" cues={[oneKilogramAt, oneTimesAt]} color="#925000">1 kg</SpokenFigure></div>
+          <div style={{ color: massLock.isActive ? '#186d48' : '#526672', fontSize: 28, fontWeight: 900, marginTop: 20 }}>{massLock.isActive ? 'SAME MASS' : 'MASS'}</div>
         </div>
       </div>
       <Cued at={weightAt} fromY={-20} style={{ position: 'absolute', left: objectX + 164, top: 555, zIndex: 6 }}>
         <DownArrow length={arrowLength} label="W" />
       </Cued>
+      <div style={{ position: 'absolute', left: 635, top: 638, color: T.amber, fontFamily: T.mono, fontSize: 32, fontWeight: 900, visibility: now >= tenNewtonsAt && now < moonAt ? 'visible' : 'hidden' }}>
+        <SpokenFigure id="derived-weight" cues={[tenNewtonsAt]}>10 N</SpokenFigure>
+      </div>
 
       <Cued at={moonAt} fromY={14} style={{ position: 'absolute', left: 1235, top: 405 }}>
         <div style={{ width: 500, borderRadius: 20, padding: '16px 24px', background: `${T.moon}14`, border: `2px solid ${T.moon}88`, color: T.text, fontFamily: T.mono, fontSize: 28, fontWeight: 900, textAlign: 'center' }}>same object · new gravity</div>
