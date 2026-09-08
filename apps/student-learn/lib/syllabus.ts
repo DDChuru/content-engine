@@ -42,6 +42,8 @@ export const UNITS: SyllabusUnit[] = [
       { code: 'M4.2a', title: 'Displacement-time graphs', live: true, kind: 'notes', href: '/notes/mechanics-displacement-time-graphs', hint: 'kinematics' },
       { code: 'M4.2b', title: 'Velocity-time graphs', live: true, kind: 'notes', href: '/notes/mechanics-velocity-time-graphs', hint: 'kinematics' },
       { code: 'M4.2c', title: 'Drawing travel graphs', live: true, kind: 'notes', href: '/notes/mechanics-drawing-travel-graphs', hint: 'kinematics' },
+      { code: 'M4.2d', title: 'Deriving the suvat formulae', live: true, kind: 'notes', href: '/notes/mechanics-deriving-suvat', hint: 'kinematics' },
+      { code: 'M4.2e', title: 'Using calculus in 1D', live: true, kind: 'notes', href: '/notes/mechanics-using-calculus-in-1d', hint: 'kinematics' },
       { code: 'M4.2', title: 'Kinematics of motion in a straight line', live: false, hint: 'more coming' },
       { code: 'M4.3', title: 'Momentum', live: false },
       { code: 'M4.3c', title: 'Multiple collisions', live: true, kind: 'notes', href: '/notes/mechanics-multiple-collisions', hint: 'momentum' },

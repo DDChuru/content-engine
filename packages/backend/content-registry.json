@@ -634,7 +634,7 @@
             "landscape": {
               "compositionId": "MechanicsDerivedUnits",
               "resolution": "1920x1080",
-              "durationS": 176.067,
+              "durationS": 176.0,
               "composition": "src/remotion/compositions/MechanicsDerivedUnits.tsx",
               "render": "output/mechanics/derived-units-v2.mp4",
               "contactSheet": "output/mechanics/derived-units-v2-sheet.png",
@@ -663,7 +663,8 @@
           },
           "commits": {
             "build": "0e2683d",
-            "polish": "30d01ab"
+            "polish": "30d01ab",
+            "g10": "6d060a4"
           },
           "app": {
             "notesPage": "/notes/mechanics-derived-units",
@@ -671,7 +672,8 @@
             "mapCode": "M0.3"
           },
           "reviewNotes": [
-            "Gravity corrected to 10 m/s^2; S08 re-voiced at original speed 1.14, locally transcribed and still-audited. Existing video render predates this correction; no video rendered in this pass."
+            "Gravity corrected to 10 m/s^2; S08 re-voiced at original speed 1.14, locally transcribed and still-audited. Existing video render predates this correction; no video rendered in this pass.",
+            "2026-09-07 g=10: 2.4 kg→24 N, 5 kg→50 N, 1 kg→10 N demo; S08 re-voiced; formula-first + rings in weight scene. Lab chrome remains (Sol build). Fable review passed."
           ]
         },
         "mechanics-types-of-forces": {
@@ -693,7 +695,7 @@
             "landscape": {
               "compositionId": "MechanicsTypesOfForces",
               "resolution": "1920x1080",
-              "durationS": 205.433,
+              "durationS": 205.0,
               "composition": "src/remotion/compositions/MechanicsTypesOfForces.tsx",
               "render": "output/mechanics/types-of-forces-v2.mp4",
               "contactSheet": "output/mechanics/types-of-forces-v2-sheet.png",
@@ -722,7 +724,8 @@
           },
           "commits": {
             "build": "4e0a4b4",
-            "polish": "21cb975"
+            "polish": "21cb975",
+            "g10": "bcb2872"
           },
           "app": {
             "notesPage": "/notes/mechanics-types-of-forces",
@@ -730,7 +733,8 @@
             "mapCode": "M4.1"
           },
           "reviewNotes": [
-            "Gravity corrected to 10 m/s^2 with weight/reaction 50 N, friction 15 N, resultant 7 N and acceleration 1.4 m/s^2. S03/S09 re-voiced at original speed 1.14, locally transcribed and still-audited. Existing video render predates this correction; no video rendered in this pass."
+            "Gravity corrected to 10 m/s^2 with weight/reaction 50 N, friction 15 N, resultant 7 N and acceleration 1.4 m/s^2. S03/S09 re-voiced at original speed 1.14, locally transcribed and still-audited. Existing video render predates this correction; no video rendered in this pass.",
+            "2026-09-07 g=10: W=R=50 N, friction 15 N, resultant 7 N, a=1.4 m/s²; S03/S09 re-voiced; formula-first + rings. Lab chrome remains (Sol build). Fable review passed."
           ]
         },
         "mechanics-displacement-time-graphs": {
@@ -750,7 +754,7 @@
             "landscape": {
               "compositionId": "MechanicsDisplacementTimeGraphs",
               "resolution": "1920x1080",
-              "durationS": 161.92,
+              "durationS": 327.0,
               "composition": "src/remotion/compositions/MechanicsDisplacementTimeGraphs.tsx",
               "render": "output/mechanics/displacement-time-graphs.mp4",
               "contactSheet": "output/mechanics/displacement-time-graphs-sheet.png"
@@ -777,14 +781,17 @@
             "transcribeScript": "src/scripts/transcribe-mechanics-displacement-time-graphs-local.py"
           },
           "commits": {
-            "build": "53e2d6b"
+            "build": "53e2d6b",
+            "additiveNarration": "e6c987c",
+            "additiveBuild": "9875152"
           },
           "app": {
             "notesPage": "/notes/mechanics-displacement-time-graphs",
             "mapCode": "M4.2a"
           },
           "reviewNotes": [
-            "2026-09-06 Durai: 'not too bad' — add a closing annotated journey question (TEACHING-STANDARD §7)"
+            "2026-09-06 Durai: 'not too bad' — add a closing annotated journey question (TEACHING-STANDARD §7)",
+            "2026-09-07 additive pass (§7-14): set-ups, paced cyclist journey close (displacement only), rings; Sol visuals kept. Fable review passed."
           ]
         },
         "mechanics-velocity-time-graphs": {
@@ -900,14 +907,17 @@
             "rootFix": "4988d10",
             "storyboard": "b51d8fb",
             "recutNarration": "6ab9f6b",
-            "recutBuild": "adcb394"
+            "recutBuild": "adcb394",
+            "additiveNarration": "b0f14d1",
+            "additiveBuild": "3c75719"
           },
           "app": {
             "notesPage": "/notes/mechanics-modelling-assumptions",
             "mapCode": "M0.4"
           },
           "reviewNotes": [
-            "2026-09-06 re-cut after Durai: 'structured well, too dense, beyond syllabus'. Scope now = FRAME-LOG (modelling cycle, stone-from-cliff critique, vocabulary, matching exercise). No a/T calculation, no friction. 4:37, 72 cues, 94 audited stills ≤3 regions. Fable contact-sheet review passed."
+            "2026-09-06 re-cut after Durai: 'structured well, too dense, beyond syllabus'. Scope now = FRAME-LOG (modelling cycle, stone-from-cliff critique, vocabulary, matching exercise). No a/T calculation, no friction. 4:37, 72 cues, 94 audited stills ≤3 regions. Fable contact-sheet review passed.",
+            "2026-09-07 additive pass (§10-14): diagrams persistent, compact captions, matching problem card + labelled givens, rings; Sol rod/string visuals back. 483 stills. Fable review passed."
           ],
           "verification": "projects/mechanics-modelling-assumptions/verify-build.md"
         },
@@ -1060,6 +1070,102 @@
             "2026-09-07 §14: word-timed rings on spoken figures, substitution-source rings, problem-card underline sweep (114 refs, 16 substitutions, 603 stills). Fable review passed. B test render of this composition: 17 min vs 8 min on A.",
             "2026-09-07 Durai: 'happy with the changes' — approved (§10-14)."
           ]
+        },
+        "mechanics-using-calculus-in-1d": {
+          "label": "Using calculus in 1D",
+          "slug": "mechanics-using-calculus-in-1d",
+          "syllabus": "Cambridge 9709 Mechanics (Paper 4) · Kinematics",
+          "syllabusCode": "M4.2e",
+          "status": "complete",
+          "createdAt": "2026-09-07",
+          "pacing": "TEACHING-STANDARD §1-14 (house style: syllabus card, story scene, problem card + givens, formula-first hand-written working, rings, holds)",
+          "pipeline": "frame study (Sol) -> Astra (gpt-6-astra) storyboard/narration/composition on B -> render on A -> Fable contact-sheet review",
+          "source": {
+            "project": "projects/mechanics-using-calculus-in-1d/",
+            "recording": "~/Documents/9709/",
+            "pdf": "projects/mechanics-using-calculus-in-1d/source.pdf"
+          },
+          "formats": {
+            "landscape": {
+              "compositionId": "MechanicsUsingCalculusIn1D",
+              "resolution": "1920x1080",
+              "durationS": 349.46,
+              "composition": "src/remotion/compositions/MechanicsUsingCalculusIn1D.tsx",
+              "render": "output/mechanics/using-calculus-in-1d.mp4",
+              "contactSheet": "output/mechanics/using-calculus-in-1d-sheet.png"
+            }
+          },
+          "narration": {
+            "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+            "provider": "elevenlabs",
+            "scenes": null,
+            "speed": {
+              "brisk": 1.0,
+              "slow": 0.9
+            },
+            "transcript": "src/remotion/public/transcripts/mechanics/using-calculus-in-1d.json"
+          },
+          "app": {
+            "notesPage": "/notes/mechanics-using-calculus-in-1d",
+            "mapCode": "M4.2e"
+          },
+          "verification": "projects/mechanics-using-calculus-in-1d/verify-build.md",
+          "reviewNotes": [
+            "Fable contact-sheet review passed; awaiting Durai."
+          ],
+          "commits": {
+            "study": "59e0170",
+            "narration": "21e8668",
+            "build": "73cf46f"
+          }
+        },
+        "mechanics-deriving-the-suvat-formulae": {
+          "label": "Deriving the suvat formulae",
+          "slug": "mechanics-deriving-the-suvat-formulae",
+          "syllabus": "Cambridge 9709 Mechanics (Paper 4) · Kinematics",
+          "syllabusCode": "M4.2d",
+          "status": "complete",
+          "createdAt": "2026-09-07",
+          "pacing": "TEACHING-STANDARD §1-14 (house style: syllabus card, story scene, problem card + givens, formula-first hand-written working, rings, holds)",
+          "pipeline": "frame study (Sol) -> Astra (gpt-6-astra) storyboard/narration/composition on B -> render on A -> Fable contact-sheet review",
+          "source": {
+            "project": "projects/mechanics-deriving-the-suvat-formulae/",
+            "recording": "~/Documents/9709/",
+            "pdf": "projects/mechanics-deriving-the-suvat-formulae/source.pdf"
+          },
+          "formats": {
+            "landscape": {
+              "compositionId": "MechanicsDerivingSuvat",
+              "resolution": "1920x1080",
+              "durationS": 336.51,
+              "composition": "src/remotion/compositions/MechanicsDerivingSuvat.tsx",
+              "render": "output/mechanics/deriving-suvat.mp4",
+              "contactSheet": "output/mechanics/deriving-suvat-sheet.png"
+            }
+          },
+          "narration": {
+            "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+            "provider": "elevenlabs",
+            "scenes": null,
+            "speed": {
+              "brisk": 1.0,
+              "slow": 0.9
+            },
+            "transcript": "src/remotion/public/transcripts/mechanics/deriving-suvat.json"
+          },
+          "app": {
+            "notesPage": "/notes/mechanics-deriving-suvat",
+            "mapCode": "M4.2d"
+          },
+          "verification": "projects/mechanics-deriving-the-suvat-formulae/verify-build.md",
+          "reviewNotes": [
+            "Fable contact-sheet review passed; awaiting Durai."
+          ],
+          "commits": {
+            "study": "4b24980",
+            "narration": "d54356b",
+            "build": "c392e6c"
+          }
         }
       },
       "inkTutor": {
