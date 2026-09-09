@@ -34,6 +34,7 @@ const Ground: React.FC<{sea?: boolean}> = ({sea}) => <g><path d="M50 680 H840" s
 const Motif: React.FC = () => <g><path d="M120 665 H780" stroke={T.muted} strokeWidth={4}/>{[170,225,320,455].map((y,i) => <circle key={y} cx={430} cy={y} r={12+i*2} fill={T.accent} opacity={.2+i*.2}/>)}<Stone x={430} y={620}/><Arrow x={540} y={270} end={565} accent/></g>;
 
 const QUESTIONS: Record<string, string[]> = {
+  symmetry: ['u = +12 m s⁻¹; back to launch height (s = 0)', 'a = −10 m s⁻²; no air resistance', 'Find v on return.'],
   drop: ['Stone dropped 15 m; no air resistance.', 'Find its velocity just before impact.', 'Take upward positive.'],
   'cliff-story': ['Projected upward at 8 m s⁻¹,', '20 m above sea, freely under gravity.', 'Find total time until impact.'],
   'cliff-time': ['Projected upward at 8 m s⁻¹,', '20 m above sea, freely under gravity.', 'Find total time until impact.'],
@@ -55,6 +56,17 @@ const ProblemLine: React.FC<{text: string; index: number; mark?: ProblemMark; t:
 const problemMark = (s: Scene, t: number): ProblemMark | undefined => {
   const b = currentBeat(s,t);
   if(!b) return;
+  if(s.mode === 'symmetry') {
+    if(b.id === 'story') {
+      if(t >= spokenWord(s,'story','no')) return {line:1,phrase:'no air resistance',start:spokenWord(s,'story','no')};
+      if(t >= valueAt(s,'story','displacement')) return {line:0,phrase:'back to launch height (s = 0)',start:valueAt(s,'story','displacement')};
+      return {line:0,phrase:'+12 m s⁻¹',start:valueAt(s,'story','initial')};
+    }
+    if(b.id === 'givens') return t >= spokenWord(s,'givens','find')
+      ? {line:2,phrase:'Find v on return.',start:spokenWord(s,'givens','find')}
+      : {line:1,phrase:'a = −10 m s⁻²',start:valueAt(s,'givens','acceleration')};
+    return;
+  }
   if(s.mode === 'drop') {
     if(b.id === 'height') return {line:0,phrase:'15 m',start:valueAt(s,'height','displacement')};
     if(b.id === 'initial') return {line:0,phrase:'no air resistance',start:spokenWord(s,'initial','ignore')};
@@ -141,30 +153,46 @@ const Cliff: React.FC<{s: Scene; t: number}> = ({s,t}) => {
 
 const Symmetry: React.FC<{s: Scene; t: number}> = ({s,t}) => {
   const graph = t >= at(s,'graph');
-  const returned = t >= at(s,'return');
-  const equal = t >= at(s,'equal');
-  const lower = t >= at(s,'lower');
-  const flight = graph ? (t < at(s,'top') ? .5*between(t,at(s,'graph'),at(s,'top')) : .5+.5*between(t,at(s,'top'),beat(s,'return').penEnd)) : between(t,at(s,'story'),beat(s,'story').penEnd);
+  const trianglesAt = spokenWord(s,'graph','triangles');
+  const equal = graph && t >= trianglesAt;
+  const lowerAt = spokenWord(s,'caveat','cliff');
+  const lower = t >= lowerAt;
+  const returned = t >= valueAt(s,'result','return');
+  const initial = t >= valueAt(s,'story','initial');
+  const sameHeight = t >= valueAt(s,'story','displacement');
+  const conditions = t >= spokenWord(s,'story','no');
+  const positive = t >= spokenWord(s,'story','positive');
+  const acceleration = t >= valueAt(s,'givens','acceleration');
+  const graphP = between(t,at(s,'graph'),trianglesAt);
+  const flight = graph ? graphP : between(t,storyWord(s,'up'),storyWord(s,'caught'));
   const y = 565-350*4*flight*(1-flight);
-  const graphP = Math.min(1,flight);
-  return <><Diagram centered={!graph}><path d="M120 565 H770" stroke={T.muted} strokeWidth={3}/><path d="M375 565 V215 M400 215 V565" stroke={T.muted} strokeWidth={2} strokeDasharray="7 7"/><Stone x={flight <= .5 ? 375 : 400} y={lower ? 565+85*between(t,at(s,'lower'),beat(s,'lower').penEnd) : y}/>
-    {t >= at(s,'initial') && <><Positive/><Figure id="initial" x={460} y={535} size={29}>u = 12 m s⁻¹</Figure></>}
-    {t >= at(s,'top') && <Figure id="top" x={465} y={225} size={29}>v = 0 m s⁻¹</Figure>}
-    {returned && <Figure id="return" x={460} y={610} size={29}>v = −12 m s⁻¹</Figure>}
-    <Caption text={currentBeat(s,t)?.caption} x={90} y={740}/>
-  </Diagram>{graph && <svg data-region="graph" data-visual="graph" width={790} height={730} style={{position:'absolute', left:1050, top:230}}>
+  const caption = lower ? 'Cliff landing: faster' : currentBeat(s,t)?.caption;
+  return <><Diagram>
+    <path d="M100 565 H810" stroke={T.muted} strokeWidth={3}/>
+    <text data-label="true" x={90} y={605} fill={T.muted} fontSize={27}>Launch / catch height</text>
+    <path d="M375 565 V215 M400 215 V565" stroke={T.muted} strokeWidth={2} strokeDasharray="7 7"/>
+    <Stone x={flight <= .5 ? 375 : 400} y={lower ? 565+85*between(t,lowerAt,beat(s,'caveat').penEnd) : y}/>
+    {positive && <Positive/>}
+    {conditions && <Figure id="conditions" x={90} y={175} size={29}>No air resistance</Figure>}
+    {initial && <><Arrow x={345} y={535} end={465}/><Figure id="initial" x={465} y={455} size={29}>u = +12 m s⁻¹</Figure></>}
+    {sameHeight && <Figure id="displacement" x={90} y={660} size={29}>s = 0 m</Figure>}
+    {acceleration && <><Arrow x={430} y={300} end={410} accent/><Figure id="acceleration" x={480} y={355} size={29}>a = −10 m s⁻²</Figure></>}
+    <Arrow x={440} y={485} end={565} dashed={!returned}/>
+    <Figure id="return" x={485} y={605} size={29}>{returned ? 'v = −12 m s⁻¹' : 'Return: v = ?'}</Figure>
+    <Caption text={caption} x={90} y={755}/>
+  </Diagram>{!graph ? <Working s={s} t={t}/> : <svg data-region="graph" data-visual="graph" width={790} height={730} style={{position:'absolute', left:1050, top:230}}>
     <rect width={790} height={730} rx={12} fill={T.paper}/><text data-label="true" x={35} y={50} fill={T.ink} fontSize={28}>Velocity / m s⁻¹</text>
     {[140,265,390,515,640].map(x => <path key={x} d={`M${x} 110 V575`} stroke={T.grid}/>)}
     {[150,250,350,450,550].map(y => <path key={y} d={`M140 ${y} H690`} stroke={T.grid}/>)}
     <path d="M140 100 V585 M125 350 H710" stroke={T.ink} strokeWidth={3} fill="none"/>
     {equal && <><path d="M140 350 V150 L390 350 Z" fill={T.accent} opacity={.3}/><path d="M390 350 L640 550 V350 Z" fill={T.accent} opacity={.18}/></>}
-    {lower && <path d={`M640 550 L${640+60*between(t,at(s,'lower'),beat(s,'lower').penEnd)} ${550+48*between(t,at(s,'lower'),beat(s,'lower').penEnd)}`} stroke={T.accent} strokeWidth={4} strokeDasharray="6 5" fill="none"/>}
+    {lower && <path d={`M640 550 L${640+60*between(t,lowerAt,beat(s,'caveat').penEnd)} ${550+48*between(t,lowerAt,beat(s,'caveat').penEnd)}`} stroke={T.accent} strokeWidth={4} strokeDasharray="6 5" fill="none"/>}
     <path d={`M140 150 L${140+500*graphP} ${150+400*graphP}`} stroke={T.accent} strokeWidth={6} fill="none"/><circle cx={140+500*graphP} cy={150+400*graphP} r={8} fill={T.accent}/>
-    <Figure id="initial" x={75} y={160} size={29} ink>12</Figure><Figure id="top" x={95} y={360} size={29} ink>0</Figure>
-    {returned && <Figure id="return" x={60} y={560} size={29} ink>−12</Figure>}
+    <Figure id="initial" x={75} y={160} size={29} ink>12</Figure><text data-label="true" x={95} y={360} fontSize={29} fill={T.ink}>0</text>
+    <Figure id="return" x={60} y={560} size={29} ink>−12</Figure>
     <text data-label="true" x={650} y={625} fill={T.ink} fontSize={27}>Time / s</text>
     <text data-label="true" x={106} y={625} fill={T.ink} fontSize={25}>Launch</text><text data-label="true" x={370} y={625} fill={T.ink} fontSize={25}>Top</text><text data-label="true" x={560} y={625} fill={T.ink} fontSize={25}>Return</text>
-    {equal && <><path d="M140 670 H390 M390 670 H640 M140 660 V680 M390 660 V680 M640 660 V680" stroke={T.accent} strokeWidth={3}/><Figure id="equal" x={225} y={710} size={27} ink>{lower ? 'Only to launch height' : 'Time up = time down'}</Figure></>}
+    {equal && <><path d="M140 670 H390 M390 670 H640 M140 660 V680 M390 660 V680 M640 660 V680" stroke={T.accent} strokeWidth={3}/><Figure id="displacement" x={225} y={710} size={27} ink>{lower ? 'Same-height result only' : 'Equal areas: s = 0'}</Figure></>}
   </svg>}</>;
 };
 
