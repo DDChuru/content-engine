@@ -1,0 +1,34 @@
+{
+  "passed": true,
+  "diagramStateChecks": [
+    "s03",
+    "s04",
+    "s05",
+    "s07",
+    "s08"
+  ],
+  "verticalWeights": true,
+  "normalReactionPerpendicular": true,
+  "frictionDownSlope": true,
+  "equalConnectedTensions": true,
+  "hangingWeightExceedsTension": true,
+  "brakingNotDoubleCounted": true,
+  "masslessPulleySupportDirection": true,
+  "checkQuestionHoldFrames": 90,
+  "checkAnswerForces": [
+    "friction",
+    "reaction",
+    "weight"
+  ],
+  "representativeStills": {
+    "verify-s02-writing.png": "s02:writing:weight",
+    "verify-s03-two-strings.png": "s03:pen-finish:right",
+    "verify-s04-driving.png": "s04:pen-finish:air",
+    "verify-s05-rough-slope.png": "s05:pen-finish:friction",
+    "verify-s06-pulley.png": "s06:pen-finish:support",
+    "verify-s07-tension.png": "s07:pen-finish:carT",
+    "verify-s07-thrust.png": "s07:pen-finish:carThrust",
+    "verify-s08-question.png": "s08:hold-start",
+    "verify-s08-weight-ring.png": "s08:ring:weight"
+  }
+}

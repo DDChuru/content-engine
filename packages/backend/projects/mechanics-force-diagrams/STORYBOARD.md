@@ -100,8 +100,7 @@ voiceSpeed: 0.9
 inextensible string over smooth, light pulley. Label all assumptions before
 arrows. Ask/hold. Draw m₁g down, R up, T right; m₂g down, T up, sequentially on
 separate bodies in the same system diagram. Dashed a markers right/down. On
-“pulley itself”, retain small system silhouette and enlarge isolated pulley
-within the same diagram region: left T, down T, support reaction Rₚ up-right.
+“pulley itself”, isolate and enlarge the pulley within the same diagram region: left T, down T, support reaction Rₚ up-right.
 Label light = massless. No invented pulley weight. Rough-table contrast returns
 to original system and adds F left while moving right.
 **Narration:** “Two particles: one slides right on a smooth table; one descends. A light, inextensible string joins them over a smooth, light pulley. Which forces act? [hold 2 s] Table particle: weight down, normal reaction up, tension right. Hanging particle: weight down, tension up. Draw separate diagrams. The light string and smooth pulley give equal tension. Inextensible string: equal accelerations, right and down. [pause 1 s] Isolate the pulley. Light means massless. Tension pulls left; tension pulls down. The support reaction balances both, upwards and right. [hold 2 s] What if the table is rough? Add friction left on the sliding particle. [hold 1 s]”
@@ -111,8 +110,9 @@ Source: f286–f344. Outcome: check changed assumptions.
 tempo: brisk
 voiceSpeed: 1.0
 **Duration:** 35 s
-**Visual:** Car right, trailer left linked by light rod; rolls then brakes. Dim
-vertical weight/reaction context remains; focus connector forces. Ask/hold.
+**Visual:** Car right, trailer left linked by light rod; rolls then brakes. An explicit
+“Connector forces only” caption identifies the scope of this comparison; weight
+and road reaction were established in S04. Ask about connector forces, then hold.
 Draw T right on trailer then T left on car. During braking replace with thrust:
 left from trailer, right from car. Every force starts at its particle, force
 arrow points in the direction of the push. Compressing connector is visibly
@@ -132,6 +132,8 @@ the completed diagram; no equations or numbers introduced.
 **Narration:** “Your turn. A block slides uphill on a rough thirty-degree slope after release. Complete its force diagram. [hold 3 s] Weight points down. Normal reaction is perpendicular to the slope. Friction points downhill. No continuing push; acceleration is not a force. [hold 2 s] Choose the forces. Draw and label arrows. Check changed assumptions. [hold 1 s]”
 
 ## Handoff
+Measured delivery: 354.899593 s of MP3 audio; scene-aligned composition 355 s.
+Scene duration figures above are generation budgets, not substituted cue times.
 Stage 1: storyboard, reproducible voice generation, inserted PCM silence, local
 Whisper transcript, all cues resolved against word edges, audio hash/hold proof;
 commit and push before composition work. Stage 2: composition, append Root entry,
