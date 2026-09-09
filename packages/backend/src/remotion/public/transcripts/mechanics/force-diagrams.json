@@ -1,0 +1,4108 @@
+{
+  "project": "mechanics-force-diagrams",
+  "engine": "faster-whisper-small (local, beat-isolated)",
+  "generatedAt": "2026-09-09T01:33:03.160279+00:00",
+  "sceneCount": 8,
+  "totalDuration": 354.899593,
+  "scenes": [
+    {
+      "id": "s01",
+      "tempo": "brisk",
+      "voiceSpeed": 1.0,
+      "budget": 19,
+      "paragraphs": [
+        "Syllabus four point one: identify the forces acting in a given situation. By the end, you can choose the forces, draw and label arrows, and check changed assumptions. We are learning to draw, not calculate. [hold 1 s]"
+      ],
+      "audio": "force-diagrams-s01.mp3",
+      "audioSha256": "a65d5b820caafd0dc0c453e6c6db2d744b043e5e5823b1c62a506230fb948e3d",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "provider": "elevenlabs",
+      "beats": [
+        {
+          "text": "Syllabus four point one: identify the forces acting in a given situation. By the end, you can choose the forces, draw and label arrows, and check changed assumptions. We are learning to draw, not calculate.",
+          "start": 0.55,
+          "end": 19.49
+        }
+      ],
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 19.49,
+          "end": 20.49,
+          "duration": 1.0
+        }
+      ],
+      "sampleDuration": 20.94,
+      "duration": 20.976327,
+      "words": [
+        {
+          "word": "Syllabus",
+          "start": 0.55,
+          "end": 1.05
+        },
+        {
+          "word": "four",
+          "start": 1.05,
+          "end": 1.81
+        },
+        {
+          "word": "point",
+          "start": 1.81,
+          "end": 2.11
+        },
+        {
+          "word": "one",
+          "start": 2.11,
+          "end": 2.51
+        },
+        {
+          "word": "identify",
+          "start": 2.51,
+          "end": 3.49
+        },
+        {
+          "word": "the",
+          "start": 3.49,
+          "end": 4.43
+        },
+        {
+          "word": "forces",
+          "start": 4.43,
+          "end": 4.83
+        },
+        {
+          "word": "acting",
+          "start": 4.83,
+          "end": 5.31
+        },
+        {
+          "word": "in",
+          "start": 5.31,
+          "end": 5.55
+        },
+        {
+          "word": "a",
+          "start": 5.55,
+          "end": 5.67
+        },
+        {
+          "word": "given",
+          "start": 5.67,
+          "end": 5.81
+        },
+        {
+          "word": "situation.",
+          "start": 5.81,
+          "end": 6.37
+        },
+        {
+          "word": "By",
+          "start": 7.15,
+          "end": 7.55
+        },
+        {
+          "word": "the",
+          "start": 7.55,
+          "end": 7.71
+        },
+        {
+          "word": "end,",
+          "start": 7.71,
+          "end": 8.07
+        },
+        {
+          "word": "you",
+          "start": 8.61,
+          "end": 8.79
+        },
+        {
+          "word": "can",
+          "start": 8.79,
+          "end": 8.95
+        },
+        {
+          "word": "choose",
+          "start": 8.95,
+          "end": 9.29
+        },
+        {
+          "word": "the",
+          "start": 9.29,
+          "end": 9.49
+        },
+        {
+          "word": "forces,",
+          "start": 9.49,
+          "end": 9.83
+        },
+        {
+          "word": "draw",
+          "start": 10.61,
+          "end": 11.07
+        },
+        {
+          "word": "and",
+          "start": 11.07,
+          "end": 11.41
+        },
+        {
+          "word": "label",
+          "start": 11.41,
+          "end": 11.75
+        },
+        {
+          "word": "arrows,",
+          "start": 11.75,
+          "end": 12.19
+        },
+        {
+          "word": "and",
+          "start": 12.99,
+          "end": 13.25
+        },
+        {
+          "word": "check",
+          "start": 13.25,
+          "end": 13.57
+        },
+        {
+          "word": "changed",
+          "start": 13.57,
+          "end": 14.17
+        },
+        {
+          "word": "assumptions.",
+          "start": 14.17,
+          "end": 14.81
+        },
+        {
+          "word": "We",
+          "start": 15.87,
+          "end": 16.21
+        },
+        {
+          "word": "are",
+          "start": 16.21,
+          "end": 16.39
+        },
+        {
+          "word": "learning",
+          "start": 16.39,
+          "end": 16.81
+        },
+        {
+          "word": "to",
+          "start": 16.81,
+          "end": 17.09
+        },
+        {
+          "word": "draw,",
+          "start": 17.09,
+          "end": 17.39
+        },
+        {
+          "word": "not",
+          "start": 18.19,
+          "end": 18.73
+        },
+        {
+          "word": "calculate.",
+          "start": 18.73,
+          "end": 19.15
+        }
+      ],
+      "wordCount": 35,
+      "text": "Syllabus four point one identify the forces acting in a given situation. By the end, you can choose the forces, draw and label arrows, and check changed assumptions. We are learning to draw, not calculate.",
+      "cues": {
+        "quote": 2.51,
+        "outcomes": 7.15,
+        "o1": 8.95,
+        "o2": 10.61,
+        "o3": 13.25
+      },
+      "cueEdges": {
+        "quote": {
+          "start": 2.51,
+          "end": 3.49,
+          "wordIndex": 4
+        },
+        "outcomes": {
+          "start": 7.15,
+          "end": 8.07,
+          "wordIndex": 12
+        },
+        "o1": {
+          "start": 8.95,
+          "end": 9.83,
+          "wordIndex": 17
+        },
+        "o2": {
+          "start": 10.61,
+          "end": 11.75,
+          "wordIndex": 20
+        },
+        "o3": {
+          "start": 13.25,
+          "end": 14.17,
+          "wordIndex": 25
+        }
+      },
+      "figures": []
+    },
+    {
+      "id": "s02",
+      "tempo": "slow",
+      "voiceSpeed": 0.9,
+      "budget": 39,
+      "paragraphs": [
+        "A string pulls a box right across a smooth table. Which forces act? [hold 2 s] Draw arrows from the particle. Weight equals mass times g: draw weight down, labelled m g. The normal reaction is perpendicular to the table. Tension pulls along the string. Label each force. Length roughly shows size; equal forces look equal. What if the table is rough? [hold 1 s] Friction opposes sliding. [hold 1 s]"
+      ],
+      "audio": "force-diagrams-s02.mp3",
+      "audioSha256": "cc2aed056f4bab39338824dfc06254c317576883aae4c9b84c59a6ec1f3ffbda",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "provider": "elevenlabs",
+      "beats": [
+        {
+          "text": "A string pulls a box right across a smooth table. Which forces act?",
+          "start": 0.55,
+          "end": 5.72
+        },
+        {
+          "text": "Draw arrows from the particle. Weight equals mass times g: draw weight down, labelled m g. The normal reaction is perpendicular to the table. Tension pulls along the string. Label each force. Length roughly shows size; equal forces look equal. What if the table is rough?",
+          "start": 7.72,
+          "end": 44.14
+        },
+        {
+          "text": "Friction opposes sliding.",
+          "start": 45.14,
+          "end": 46.75
+        }
+      ],
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 5.72,
+          "end": 7.72,
+          "duration": 2.0
+        },
+        {
+          "kind": "hold",
+          "start": 44.14,
+          "end": 45.14,
+          "duration": 1.0
+        },
+        {
+          "kind": "hold",
+          "start": 46.75,
+          "end": 47.75,
+          "duration": 1.0
+        }
+      ],
+      "sampleDuration": 48.2,
+      "duration": 48.248163,
+      "words": [
+        {
+          "word": "A",
+          "start": 0.55,
+          "end": 0.69
+        },
+        {
+          "word": "string",
+          "start": 0.69,
+          "end": 0.91
+        },
+        {
+          "word": "pulls",
+          "start": 0.91,
+          "end": 1.25
+        },
+        {
+          "word": "a",
+          "start": 1.25,
+          "end": 1.45
+        },
+        {
+          "word": "box",
+          "start": 1.45,
+          "end": 1.75
+        },
+        {
+          "word": "right",
+          "start": 1.75,
+          "end": 2.15
+        },
+        {
+          "word": "across",
+          "start": 2.15,
+          "end": 2.45
+        },
+        {
+          "word": "a",
+          "start": 2.45,
+          "end": 2.67
+        },
+        {
+          "word": "smooth",
+          "start": 2.67,
+          "end": 2.89
+        },
+        {
+          "word": "table.",
+          "start": 2.89,
+          "end": 3.43
+        },
+        {
+          "word": "Which",
+          "start": 4.47,
+          "end": 4.63
+        },
+        {
+          "word": "forces",
+          "start": 4.63,
+          "end": 5.03
+        },
+        {
+          "word": "act?",
+          "start": 5.03,
+          "end": 5.47
+        },
+        {
+          "word": "Draw",
+          "start": 7.72,
+          "end": 8.08
+        },
+        {
+          "word": "arrows",
+          "start": 8.08,
+          "end": 8.78
+        },
+        {
+          "word": "from",
+          "start": 8.78,
+          "end": 9.76
+        },
+        {
+          "word": "the",
+          "start": 9.76,
+          "end": 9.9
+        },
+        {
+          "word": "particle.",
+          "start": 9.9,
+          "end": 10.3
+        },
+        {
+          "word": "Weight",
+          "start": 11.54,
+          "end": 11.9
+        },
+        {
+          "word": "equals",
+          "start": 11.9,
+          "end": 12.94
+        },
+        {
+          "word": "mass",
+          "start": 12.94,
+          "end": 13.46
+        },
+        {
+          "word": "times",
+          "start": 13.46,
+          "end": 14.66
+        },
+        {
+          "word": "g.",
+          "start": 14.66,
+          "end": 15.0
+        },
+        {
+          "word": "Draw",
+          "start": 15.92,
+          "end": 16.76
+        },
+        {
+          "word": "weight",
+          "start": 16.76,
+          "end": 17.16
+        },
+        {
+          "word": "down,",
+          "start": 17.16,
+          "end": 17.98
+        },
+        {
+          "word": "labelled",
+          "start": 18.44,
+          "end": 19.9
+        },
+        {
+          "word": "m",
+          "start": 19.9,
+          "end": 20.24
+        },
+        {
+          "word": "m",
+          "start": 20.24,
+          "end": 20.62
+        },
+        {
+          "word": "g.",
+          "start": 20.62,
+          "end": 21.16
+        },
+        {
+          "word": "The",
+          "start": 22.7,
+          "end": 22.92
+        },
+        {
+          "word": "normal",
+          "start": 22.92,
+          "end": 23.28
+        },
+        {
+          "word": "reaction",
+          "start": 23.28,
+          "end": 23.9
+        },
+        {
+          "word": "is",
+          "start": 23.9,
+          "end": 25.46
+        },
+        {
+          "word": "perpendicular",
+          "start": 25.46,
+          "end": 25.84
+        },
+        {
+          "word": "to",
+          "start": 25.84,
+          "end": 26.64
+        },
+        {
+          "word": "the",
+          "start": 26.64,
+          "end": 26.76
+        },
+        {
+          "word": "table.",
+          "start": 26.76,
+          "end": 27.06
+        },
+        {
+          "word": "Tension",
+          "start": 28.56,
+          "end": 28.94
+        },
+        {
+          "word": "pulls",
+          "start": 28.94,
+          "end": 29.6
+        },
+        {
+          "word": "along",
+          "start": 29.6,
+          "end": 29.96
+        },
+        {
+          "word": "the",
+          "start": 29.96,
+          "end": 30.24
+        },
+        {
+          "word": "string.",
+          "start": 30.24,
+          "end": 30.58
+        },
+        {
+          "word": "Label",
+          "start": 31.5,
+          "end": 32.22
+        },
+        {
+          "word": "each",
+          "start": 32.22,
+          "end": 33.24
+        },
+        {
+          "word": "force.",
+          "start": 33.24,
+          "end": 33.64
+        },
+        {
+          "word": "length",
+          "start": 33.64,
+          "end": 35.1
+        },
+        {
+          "word": "roughly",
+          "start": 35.1,
+          "end": 36.0
+        },
+        {
+          "word": "shows",
+          "start": 36.0,
+          "end": 36.42
+        },
+        {
+          "word": "size",
+          "start": 36.42,
+          "end": 37.06
+        },
+        {
+          "word": "equal",
+          "start": 37.06,
+          "end": 38.92
+        },
+        {
+          "word": "forces",
+          "start": 38.92,
+          "end": 39.5
+        },
+        {
+          "word": "look",
+          "start": 39.5,
+          "end": 40.52
+        },
+        {
+          "word": "equal",
+          "start": 40.52,
+          "end": 41.04
+        },
+        {
+          "word": "what",
+          "start": 41.04,
+          "end": 42.72
+        },
+        {
+          "word": "if",
+          "start": 42.72,
+          "end": 42.92
+        },
+        {
+          "word": "the",
+          "start": 42.92,
+          "end": 43.08
+        },
+        {
+          "word": "table",
+          "start": 43.08,
+          "end": 43.38
+        },
+        {
+          "word": "is",
+          "start": 43.38,
+          "end": 43.62
+        },
+        {
+          "word": "rough",
+          "start": 43.62,
+          "end": 43.9
+        },
+        {
+          "word": "Friction",
+          "start": 45.14,
+          "end": 45.58
+        },
+        {
+          "word": "opposes",
+          "start": 45.58,
+          "end": 46.12
+        },
+        {
+          "word": "sliding.",
+          "start": 46.12,
+          "end": 46.48
+        }
+      ],
+      "wordCount": 63,
+      "text": "A string pulls a box right across a smooth table. Which forces act? Draw arrows from the particle. Weight equals mass times g. Draw weight down, labelled m m g. The normal reaction is perpendicular to the table. Tension pulls along the string. Label each force. length roughly shows size equal forces look equal what if the table is rough Friction opposes sliding.",
+      "cues": {
+        "story": 0.55,
+        "question": 4.47,
+        "particle": 7.72,
+        "formula": 11.54,
+        "weight": 15.92,
+        "reaction": 22.7,
+        "tension": 28.56,
+        "length": 33.64,
+        "whatif": 41.04,
+        "rough": 45.14
+      },
+      "cueEdges": {
+        "story": {
+          "start": 0.55,
+          "end": 0.91,
+          "wordIndex": 0
+        },
+        "question": {
+          "start": 4.47,
+          "end": 5.03,
+          "wordIndex": 10
+        },
+        "particle": {
+          "start": 7.72,
+          "end": 8.78,
+          "wordIndex": 13
+        },
+        "formula": {
+          "start": 11.54,
+          "end": 12.94,
+          "wordIndex": 18
+        },
+        "weight": {
+          "start": 15.92,
+          "end": 17.16,
+          "wordIndex": 23
+        },
+        "reaction": {
+          "start": 22.7,
+          "end": 23.9,
+          "wordIndex": 30
+        },
+        "tension": {
+          "start": 28.56,
+          "end": 29.6,
+          "wordIndex": 38
+        },
+        "length": {
+          "start": 33.64,
+          "end": 36.0,
+          "wordIndex": 46
+        },
+        "whatif": {
+          "start": 41.04,
+          "end": 42.92,
+          "wordIndex": 54
+        },
+        "rough": {
+          "start": 45.14,
+          "end": 46.12,
+          "wordIndex": 60
+        }
+      },
+      "figures": [
+        {
+          "id": "weight",
+          "target": "weight",
+          "start": 15.92,
+          "end": 17.16,
+          "wordIndex": 23,
+          "word": "Draw"
+        },
+        {
+          "id": "mg",
+          "target": "weight",
+          "start": 20.24,
+          "end": 21.16,
+          "wordIndex": 28,
+          "word": "m"
+        },
+        {
+          "id": "reaction",
+          "target": "reaction",
+          "start": 22.92,
+          "end": 23.9,
+          "wordIndex": 31,
+          "word": "normal"
+        },
+        {
+          "id": "tension",
+          "target": "tension",
+          "start": 28.56,
+          "end": 29.6,
+          "wordIndex": 38,
+          "word": "Tension"
+        },
+        {
+          "id": "friction",
+          "target": "friction",
+          "start": 45.14,
+          "end": 46.12,
+          "wordIndex": 60,
+          "word": "Friction"
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "tempo": "brisk",
+      "voiceSpeed": 1.0,
+      "budget": 33,
+      "paragraphs": [
+        "A body hangs at rest from strings at thirty and forty-five degrees to the horizontal. Which forces act? [hold 2 s] Weight acts down. Left tension follows its string. Right tension follows the other. No surface contact means no normal reaction. Questions will not tell you to add weight. What if one vertical string replaces both? [hold 1 s] Draw one upward tension. [hold 1 s]"
+      ],
+      "audio": "force-diagrams-s03.mp3",
+      "audioSha256": "a149b6af59f9d08da4563c2fcb5984b12a8e185532226bd2ba989cb9da9ea45f",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "provider": "elevenlabs",
+      "beats": [
+        {
+          "text": "A body hangs at rest from strings at thirty and forty-five degrees to the horizontal. Which forces act?",
+          "start": 0.55,
+          "end": 8.37
+        },
+        {
+          "text": "Weight acts down. Left tension follows its string. Right tension follows the other. No surface contact means no normal reaction. Questions will not tell you to add weight. What if one vertical string replaces both?",
+          "start": 10.37,
+          "end": 30.06
+        },
+        {
+          "text": "Draw one upward tension.",
+          "start": 31.06,
+          "end": 32.83
+        }
+      ],
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 8.37,
+          "end": 10.37,
+          "duration": 2.0
+        },
+        {
+          "kind": "hold",
+          "start": 30.06,
+          "end": 31.06,
+          "duration": 1.0
+        },
+        {
+          "kind": "hold",
+          "start": 32.83,
+          "end": 33.83,
+          "duration": 1.0
+        }
+      ],
+      "sampleDuration": 34.28,
+      "duration": 34.324898,
+      "words": [
+        {
+          "word": "A",
+          "start": 0.55,
+          "end": 0.69
+        },
+        {
+          "word": "body",
+          "start": 0.69,
+          "end": 1.03
+        },
+        {
+          "word": "hangs",
+          "start": 1.03,
+          "end": 1.45
+        },
+        {
+          "word": "at",
+          "start": 1.45,
+          "end": 1.75
+        },
+        {
+          "word": "rest",
+          "start": 1.75,
+          "end": 2.09
+        },
+        {
+          "word": "from",
+          "start": 2.09,
+          "end": 2.39
+        },
+        {
+          "word": "strings",
+          "start": 2.39,
+          "end": 2.89
+        },
+        {
+          "word": "at",
+          "start": 2.89,
+          "end": 3.61
+        },
+        {
+          "word": "thirty",
+          "start": 3.61,
+          "end": 4.07
+        },
+        {
+          "word": "and",
+          "start": 4.07,
+          "end": 4.25
+        },
+        {
+          "word": "forty",
+          "start": 4.25,
+          "end": 4.49
+        },
+        {
+          "word": "-five",
+          "start": 4.49,
+          "end": 4.83
+        },
+        {
+          "word": "degrees",
+          "start": 4.83,
+          "end": 5.13
+        },
+        {
+          "word": "to",
+          "start": 5.13,
+          "end": 5.87
+        },
+        {
+          "word": "the",
+          "start": 5.87,
+          "end": 6.05
+        },
+        {
+          "word": "horizontal.",
+          "start": 6.05,
+          "end": 6.51
+        },
+        {
+          "word": "Which",
+          "start": 7.21,
+          "end": 7.49
+        },
+        {
+          "word": "forces",
+          "start": 7.49,
+          "end": 7.83
+        },
+        {
+          "word": "act?",
+          "start": 7.83,
+          "end": 8.19
+        },
+        {
+          "word": "Weight",
+          "start": 10.37,
+          "end": 10.79
+        },
+        {
+          "word": "acts",
+          "start": 10.79,
+          "end": 11.51
+        },
+        {
+          "word": "down.",
+          "start": 11.51,
+          "end": 11.89
+        },
+        {
+          "word": "Left",
+          "start": 13.05,
+          "end": 13.17
+        },
+        {
+          "word": "tension",
+          "start": 13.17,
+          "end": 13.63
+        },
+        {
+          "word": "follows",
+          "start": 13.63,
+          "end": 14.27
+        },
+        {
+          "word": "its",
+          "start": 14.27,
+          "end": 15.21
+        },
+        {
+          "word": "string.",
+          "start": 15.21,
+          "end": 15.71
+        },
+        {
+          "word": "Right",
+          "start": 16.71,
+          "end": 17.11
+        },
+        {
+          "word": "tension",
+          "start": 17.11,
+          "end": 17.61
+        },
+        {
+          "word": "follows",
+          "start": 17.61,
+          "end": 18.21
+        },
+        {
+          "word": "the",
+          "start": 18.21,
+          "end": 18.53
+        },
+        {
+          "word": "other.",
+          "start": 18.53,
+          "end": 18.73
+        },
+        {
+          "word": "No",
+          "start": 19.85,
+          "end": 20.01
+        },
+        {
+          "word": "surface",
+          "start": 20.01,
+          "end": 20.37
+        },
+        {
+          "word": "contact",
+          "start": 20.37,
+          "end": 20.89
+        },
+        {
+          "word": "means",
+          "start": 20.89,
+          "end": 21.81
+        },
+        {
+          "word": "no",
+          "start": 21.81,
+          "end": 22.31
+        },
+        {
+          "word": "normal",
+          "start": 22.31,
+          "end": 22.59
+        },
+        {
+          "word": "reaction.",
+          "start": 22.59,
+          "end": 23.15
+        },
+        {
+          "word": "Questions",
+          "start": 23.97,
+          "end": 24.53
+        },
+        {
+          "word": "will",
+          "start": 24.53,
+          "end": 24.89
+        },
+        {
+          "word": "not",
+          "start": 24.89,
+          "end": 25.13
+        },
+        {
+          "word": "tell",
+          "start": 25.13,
+          "end": 25.51
+        },
+        {
+          "word": "you",
+          "start": 25.51,
+          "end": 25.69
+        },
+        {
+          "word": "to",
+          "start": 25.69,
+          "end": 26.17
+        },
+        {
+          "word": "add",
+          "start": 26.17,
+          "end": 26.45
+        },
+        {
+          "word": "weight.",
+          "start": 26.45,
+          "end": 26.71
+        },
+        {
+          "word": "What",
+          "start": 27.47,
+          "end": 27.67
+        },
+        {
+          "word": "if",
+          "start": 27.67,
+          "end": 27.81
+        },
+        {
+          "word": "one",
+          "start": 27.81,
+          "end": 28.07
+        },
+        {
+          "word": "vertical",
+          "start": 28.07,
+          "end": 28.71
+        },
+        {
+          "word": "string",
+          "start": 28.71,
+          "end": 29.13
+        },
+        {
+          "word": "replaces",
+          "start": 29.13,
+          "end": 29.57
+        },
+        {
+          "word": "both?",
+          "start": 29.57,
+          "end": 29.93
+        },
+        {
+          "word": "Draw",
+          "start": 31.06,
+          "end": 31.4
+        },
+        {
+          "word": "one",
+          "start": 31.4,
+          "end": 31.74
+        },
+        {
+          "word": "upward",
+          "start": 31.74,
+          "end": 32.06
+        },
+        {
+          "word": "tension.",
+          "start": 32.06,
+          "end": 32.58
+        }
+      ],
+      "wordCount": 58,
+      "text": "A body hangs at rest from strings at thirty and forty -five degrees to the horizontal. Which forces act? Weight acts down. Left tension follows its string. Right tension follows the other. No surface contact means no normal reaction. Questions will not tell you to add weight. What if one vertical string replaces both? Draw one upward tension.",
+      "cues": {
+        "story": 0.55,
+        "angle30": 3.61,
+        "angle45": 4.25,
+        "question": 7.21,
+        "weight": 10.37,
+        "left": 13.05,
+        "right": 16.71,
+        "contact": 19.85,
+        "remember": 23.97,
+        "whatif": 27.47,
+        "single": 31.06
+      },
+      "cueEdges": {
+        "story": {
+          "start": 0.55,
+          "end": 1.03,
+          "wordIndex": 0
+        },
+        "angle30": {
+          "start": 3.61,
+          "end": 4.07,
+          "wordIndex": 8
+        },
+        "angle45": {
+          "start": 4.25,
+          "end": 4.83,
+          "wordIndex": 10
+        },
+        "question": {
+          "start": 7.21,
+          "end": 7.83,
+          "wordIndex": 16
+        },
+        "weight": {
+          "start": 10.37,
+          "end": 11.51,
+          "wordIndex": 19
+        },
+        "left": {
+          "start": 13.05,
+          "end": 13.63,
+          "wordIndex": 22
+        },
+        "right": {
+          "start": 16.71,
+          "end": 17.61,
+          "wordIndex": 27
+        },
+        "contact": {
+          "start": 19.85,
+          "end": 20.37,
+          "wordIndex": 32
+        },
+        "remember": {
+          "start": 23.97,
+          "end": 24.89,
+          "wordIndex": 39
+        },
+        "whatif": {
+          "start": 27.47,
+          "end": 27.81,
+          "wordIndex": 47
+        },
+        "single": {
+          "start": 31.06,
+          "end": 31.74,
+          "wordIndex": 54
+        }
+      },
+      "figures": [
+        {
+          "id": "angle30",
+          "target": "angle30",
+          "start": 3.61,
+          "end": 4.07,
+          "wordIndex": 8,
+          "word": "thirty"
+        },
+        {
+          "id": "angle45",
+          "target": "angle45",
+          "start": 4.25,
+          "end": 4.83,
+          "wordIndex": 10,
+          "word": "forty"
+        },
+        {
+          "id": "weight",
+          "target": "weight",
+          "start": 10.37,
+          "end": 11.51,
+          "wordIndex": 19,
+          "word": "Weight"
+        },
+        {
+          "id": "left",
+          "target": "left",
+          "start": 13.05,
+          "end": 13.63,
+          "wordIndex": 22,
+          "word": "Left"
+        },
+        {
+          "id": "right",
+          "target": "right",
+          "start": 16.71,
+          "end": 17.61,
+          "wordIndex": 27,
+          "word": "Right"
+        },
+        {
+          "id": "single",
+          "target": "single",
+          "start": 31.74,
+          "end": 32.58,
+          "wordIndex": 56,
+          "word": "upward"
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "tempo": "slow",
+      "voiceSpeed": 0.9,
+      "budget": 49,
+      "paragraphs": [
+        "A car travels right on a level road, engine driving. Which forces act? [hold 2 s] Weight acts down. The normal reaction acts up. Driving force acts right. Air resistance acts left. At steady speed, these horizontal forces balance. Take right as positive. Now brake and stop driving. [pause 1 s] Remove the driving arrow. Add braking force left; air resistance remains. Braking includes tyre friction: do not count it twice. Draw acceleration separately, pointing left. It is negative because right is positive. [hold 2 s]"
+      ],
+      "audio": "force-diagrams-s04.mp3",
+      "audioSha256": "0668e678a529f62322b3023b36a3881f8836fdea09454778b7fccd4d350fdba6",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "provider": "elevenlabs",
+      "beats": [
+        {
+          "text": "A car travels right on a level road, engine driving. Which forces act?",
+          "start": 0.55,
+          "end": 6.88
+        },
+        {
+          "text": "Weight acts down. The normal reaction acts up. Driving force acts right. Air resistance acts left. At steady speed, these horizontal forces balance. Take right as positive. Now brake and stop driving.",
+          "start": 8.88,
+          "end": 30.8
+        },
+        {
+          "text": "Remove the driving arrow. Add braking force left; air resistance remains. Braking includes tyre friction: do not count it twice. Draw acceleration separately, pointing left. It is negative because right is positive.",
+          "start": 31.8,
+          "end": 56.22
+        }
+      ],
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 6.88,
+          "end": 8.88,
+          "duration": 2.0
+        },
+        {
+          "kind": "pause",
+          "start": 30.8,
+          "end": 31.8,
+          "duration": 1.0
+        },
+        {
+          "kind": "hold",
+          "start": 56.22,
+          "end": 58.22,
+          "duration": 2.0
+        }
+      ],
+      "sampleDuration": 58.67,
+      "duration": 58.697143,
+      "words": [
+        {
+          "word": "A",
+          "start": 0.55,
+          "end": 0.73
+        },
+        {
+          "word": "car",
+          "start": 0.73,
+          "end": 0.91
+        },
+        {
+          "word": "travels",
+          "start": 0.91,
+          "end": 1.61
+        },
+        {
+          "word": "right",
+          "start": 1.61,
+          "end": 1.89
+        },
+        {
+          "word": "on",
+          "start": 1.89,
+          "end": 2.17
+        },
+        {
+          "word": "a",
+          "start": 2.17,
+          "end": 2.29
+        },
+        {
+          "word": "level",
+          "start": 2.29,
+          "end": 2.47
+        },
+        {
+          "word": "road,",
+          "start": 2.47,
+          "end": 2.99
+        },
+        {
+          "word": "engine",
+          "start": 3.47,
+          "end": 3.97
+        },
+        {
+          "word": "driving.",
+          "start": 3.97,
+          "end": 4.47
+        },
+        {
+          "word": "Which",
+          "start": 5.67,
+          "end": 5.89
+        },
+        {
+          "word": "forces",
+          "start": 5.89,
+          "end": 6.23
+        },
+        {
+          "word": "act?",
+          "start": 6.23,
+          "end": 6.65
+        },
+        {
+          "word": "Weight",
+          "start": 8.88,
+          "end": 9.38
+        },
+        {
+          "word": "acts",
+          "start": 9.38,
+          "end": 10.3
+        },
+        {
+          "word": "down.",
+          "start": 10.3,
+          "end": 10.82
+        },
+        {
+          "word": "The",
+          "start": 11.68,
+          "end": 12.3
+        },
+        {
+          "word": "normal",
+          "start": 12.3,
+          "end": 12.7
+        },
+        {
+          "word": "reaction",
+          "start": 12.7,
+          "end": 13.3
+        },
+        {
+          "word": "acts",
+          "start": 13.3,
+          "end": 13.68
+        },
+        {
+          "word": "up.",
+          "start": 13.68,
+          "end": 13.94
+        },
+        {
+          "word": "Driving",
+          "start": 14.7,
+          "end": 15.2
+        },
+        {
+          "word": "force",
+          "start": 15.2,
+          "end": 15.62
+        },
+        {
+          "word": "acts",
+          "start": 15.62,
+          "end": 16.24
+        },
+        {
+          "word": "right.",
+          "start": 16.24,
+          "end": 16.72
+        },
+        {
+          "word": "Air",
+          "start": 17.7,
+          "end": 18.12
+        },
+        {
+          "word": "resistance",
+          "start": 18.12,
+          "end": 18.72
+        },
+        {
+          "word": "acts",
+          "start": 18.72,
+          "end": 19.44
+        },
+        {
+          "word": "left.",
+          "start": 19.44,
+          "end": 19.98
+        },
+        {
+          "word": "At",
+          "start": 21.32,
+          "end": 21.5
+        },
+        {
+          "word": "steady",
+          "start": 21.5,
+          "end": 21.9
+        },
+        {
+          "word": "speed,",
+          "start": 21.9,
+          "end": 22.38
+        },
+        {
+          "word": "these",
+          "start": 23.1,
+          "end": 23.24
+        },
+        {
+          "word": "horizontal",
+          "start": 23.24,
+          "end": 23.76
+        },
+        {
+          "word": "forces",
+          "start": 23.76,
+          "end": 24.28
+        },
+        {
+          "word": "balance.",
+          "start": 24.28,
+          "end": 24.84
+        },
+        {
+          "word": "Take",
+          "start": 25.9,
+          "end": 26.38
+        },
+        {
+          "word": "right",
+          "start": 26.38,
+          "end": 26.76
+        },
+        {
+          "word": "as",
+          "start": 26.76,
+          "end": 27.02
+        },
+        {
+          "word": "positive.",
+          "start": 27.02,
+          "end": 27.48
+        },
+        {
+          "word": "Now",
+          "start": 28.5,
+          "end": 28.74
+        },
+        {
+          "word": "brake",
+          "start": 28.74,
+          "end": 29.2
+        },
+        {
+          "word": "and",
+          "start": 29.2,
+          "end": 29.88
+        },
+        {
+          "word": "stop",
+          "start": 29.88,
+          "end": 30.16
+        },
+        {
+          "word": "driving.",
+          "start": 30.16,
+          "end": 30.56
+        },
+        {
+          "word": "Remove",
+          "start": 31.8,
+          "end": 32.2
+        },
+        {
+          "word": "the",
+          "start": 32.2,
+          "end": 32.42
+        },
+        {
+          "word": "driving",
+          "start": 32.42,
+          "end": 32.8
+        },
+        {
+          "word": "arrow.",
+          "start": 32.8,
+          "end": 33.2
+        },
+        {
+          "word": "Add",
+          "start": 33.98,
+          "end": 34.56
+        },
+        {
+          "word": "braking",
+          "start": 34.56,
+          "end": 34.92
+        },
+        {
+          "word": "force",
+          "start": 34.92,
+          "end": 35.38
+        },
+        {
+          "word": "left.",
+          "start": 35.38,
+          "end": 36.02
+        },
+        {
+          "word": "Air",
+          "start": 37.3,
+          "end": 38.12
+        },
+        {
+          "word": "resistance",
+          "start": 38.12,
+          "end": 38.8
+        },
+        {
+          "word": "remains.",
+          "start": 38.8,
+          "end": 40.36
+        },
+        {
+          "word": "Braking",
+          "start": 41.6,
+          "end": 42.3
+        },
+        {
+          "word": "includes",
+          "start": 42.3,
+          "end": 42.74
+        },
+        {
+          "word": "tyre",
+          "start": 42.74,
+          "end": 43.42
+        },
+        {
+          "word": "friction.",
+          "start": 43.42,
+          "end": 43.82
+        },
+        {
+          "word": "Do",
+          "start": 45.38,
+          "end": 45.6
+        },
+        {
+          "word": "not",
+          "start": 45.6,
+          "end": 45.92
+        },
+        {
+          "word": "count",
+          "start": 45.92,
+          "end": 46.3
+        },
+        {
+          "word": "it",
+          "start": 46.3,
+          "end": 46.5
+        },
+        {
+          "word": "twice.",
+          "start": 46.5,
+          "end": 46.92
+        },
+        {
+          "word": "Draw",
+          "start": 48.3,
+          "end": 48.64
+        },
+        {
+          "word": "acceleration",
+          "start": 48.64,
+          "end": 49.38
+        },
+        {
+          "word": "separately,",
+          "start": 49.38,
+          "end": 50.16
+        },
+        {
+          "word": "pointing",
+          "start": 51.06,
+          "end": 51.68
+        },
+        {
+          "word": "left.",
+          "start": 51.68,
+          "end": 52.16
+        },
+        {
+          "word": "it",
+          "start": 53.1,
+          "end": 53.9
+        },
+        {
+          "word": "is",
+          "start": 53.9,
+          "end": 54.04
+        },
+        {
+          "word": "negative",
+          "start": 54.04,
+          "end": 54.44
+        },
+        {
+          "word": "because",
+          "start": 54.44,
+          "end": 54.92
+        },
+        {
+          "word": "right",
+          "start": 54.92,
+          "end": 55.32
+        },
+        {
+          "word": "is",
+          "start": 55.32,
+          "end": 55.6
+        },
+        {
+          "word": "positive.",
+          "start": 55.6,
+          "end": 56.0
+        }
+      ],
+      "wordCount": 77,
+      "text": "A car travels right on a level road, engine driving. Which forces act? Weight acts down. The normal reaction acts up. Driving force acts right. Air resistance acts left. At steady speed, these horizontal forces balance. Take right as positive. Now brake and stop driving. Remove the driving arrow. Add braking force left. Air resistance remains. Braking includes tyre friction. Do not count it twice. Draw acceleration separately, pointing left. it is negative because right is positive.",
+      "cues": {
+        "story": 0.55,
+        "question": 5.67,
+        "weight": 8.88,
+        "reaction": 11.68,
+        "drive": 14.7,
+        "air": 17.7,
+        "steady": 21.32,
+        "positive": 25.9,
+        "brakeStory": 28.5,
+        "remove": 31.8,
+        "brake": 33.98,
+        "double": 41.6,
+        "acceleration": 48.3,
+        "negative": 53.1
+      },
+      "cueEdges": {
+        "story": {
+          "start": 0.55,
+          "end": 0.91,
+          "wordIndex": 0
+        },
+        "question": {
+          "start": 5.67,
+          "end": 6.23,
+          "wordIndex": 10
+        },
+        "weight": {
+          "start": 8.88,
+          "end": 10.3,
+          "wordIndex": 13
+        },
+        "reaction": {
+          "start": 11.68,
+          "end": 13.3,
+          "wordIndex": 16
+        },
+        "drive": {
+          "start": 14.7,
+          "end": 15.62,
+          "wordIndex": 21
+        },
+        "air": {
+          "start": 17.7,
+          "end": 18.72,
+          "wordIndex": 25
+        },
+        "steady": {
+          "start": 21.32,
+          "end": 21.9,
+          "wordIndex": 29
+        },
+        "positive": {
+          "start": 25.9,
+          "end": 26.76,
+          "wordIndex": 36
+        },
+        "brakeStory": {
+          "start": 28.5,
+          "end": 29.2,
+          "wordIndex": 40
+        },
+        "remove": {
+          "start": 31.8,
+          "end": 32.8,
+          "wordIndex": 45
+        },
+        "brake": {
+          "start": 33.98,
+          "end": 34.92,
+          "wordIndex": 49
+        },
+        "double": {
+          "start": 41.6,
+          "end": 42.74,
+          "wordIndex": 56
+        },
+        "acceleration": {
+          "start": 48.3,
+          "end": 49.38,
+          "wordIndex": 65
+        },
+        "negative": {
+          "start": 53.1,
+          "end": 54.44,
+          "wordIndex": 70
+        }
+      },
+      "figures": [
+        {
+          "id": "weight",
+          "target": "weight",
+          "start": 8.88,
+          "end": 10.3,
+          "wordIndex": 13,
+          "word": "Weight"
+        },
+        {
+          "id": "reaction",
+          "target": "reaction",
+          "start": 12.3,
+          "end": 13.3,
+          "wordIndex": 17,
+          "word": "normal"
+        },
+        {
+          "id": "drive",
+          "target": "drive",
+          "start": 14.7,
+          "end": 15.62,
+          "wordIndex": 21,
+          "word": "Driving"
+        },
+        {
+          "id": "air",
+          "target": "air",
+          "start": 17.7,
+          "end": 18.72,
+          "wordIndex": 25,
+          "word": "Air"
+        },
+        {
+          "id": "brake",
+          "target": "brake",
+          "start": 34.56,
+          "end": 35.38,
+          "wordIndex": 50,
+          "word": "braking"
+        },
+        {
+          "id": "air2",
+          "target": "air",
+          "start": 37.3,
+          "end": 38.8,
+          "wordIndex": 53,
+          "word": "Air"
+        },
+        {
+          "id": "acceleration",
+          "target": "acceleration",
+          "start": 48.64,
+          "end": 50.16,
+          "wordIndex": 66,
+          "word": "acceleration"
+        },
+        {
+          "id": "positive",
+          "target": "positive",
+          "start": 25.9,
+          "end": 26.76,
+          "wordIndex": 36,
+          "word": "Take"
+        },
+        {
+          "id": "negative",
+          "target": "acceleration",
+          "start": 53.1,
+          "end": 54.44,
+          "wordIndex": 70,
+          "word": "it"
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "tempo": "slow",
+      "voiceSpeed": 0.9,
+      "budget": 47,
+      "paragraphs": [
+        "A block is projected up a rough thirty-degree slope. The push ends; the block keeps sliding uphill. Which forces act now? [hold 2 s] Weight acts vertically down. The normal reaction is perpendicular to the slope. Friction points downhill, opposing the sliding. [pause 1 s] There is no continuing projection force. Choose uphill as positive. Draw acceleration separately, downhill: negative while the block slows. What if the slope is smooth? [hold 2 s] Remove friction; keep weight and the normal reaction. [hold 2 s]"
+      ],
+      "audio": "force-diagrams-s05.mp3",
+      "audioSha256": "c910c4c6ac408c447f2262ed36129fd27db3b7302f92f77cca309db765d38d6d",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "provider": "elevenlabs",
+      "beats": [
+        {
+          "text": "A block is projected up a rough thirty-degree slope. The push ends; the block keeps sliding uphill. Which forces act now?",
+          "start": 0.55,
+          "end": 11.74
+        },
+        {
+          "text": "Weight acts vertically down. The normal reaction is perpendicular to the slope. Friction points downhill, opposing the sliding.",
+          "start": 13.74,
+          "end": 23.74
+        },
+        {
+          "text": "There is no continuing projection force. Choose uphill as positive. Draw acceleration separately, downhill: negative while the block slows. What if the slope is smooth?",
+          "start": 24.74,
+          "end": 39.69
+        },
+        {
+          "text": "Remove friction; keep weight and the normal reaction.",
+          "start": 41.69,
+          "end": 45.69
+        }
+      ],
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 11.74,
+          "end": 13.74,
+          "duration": 2.0
+        },
+        {
+          "kind": "pause",
+          "start": 23.74,
+          "end": 24.74,
+          "duration": 1.0
+        },
+        {
+          "kind": "hold",
+          "start": 39.69,
+          "end": 41.69,
+          "duration": 2.0
+        },
+        {
+          "kind": "hold",
+          "start": 45.69,
+          "end": 47.69,
+          "duration": 2.0
+        }
+      ],
+      "sampleDuration": 48.14,
+      "duration": 48.169796,
+      "words": [
+        {
+          "word": "A",
+          "start": 0.55,
+          "end": 0.69
+        },
+        {
+          "word": "block",
+          "start": 0.69,
+          "end": 1.07
+        },
+        {
+          "word": "is",
+          "start": 1.07,
+          "end": 1.49
+        },
+        {
+          "word": "projected",
+          "start": 1.49,
+          "end": 2.03
+        },
+        {
+          "word": "up",
+          "start": 2.03,
+          "end": 2.45
+        },
+        {
+          "word": "a",
+          "start": 2.45,
+          "end": 2.71
+        },
+        {
+          "word": "rough",
+          "start": 2.71,
+          "end": 2.93
+        },
+        {
+          "word": "thirty",
+          "start": 2.93,
+          "end": 3.37
+        },
+        {
+          "word": "-degree",
+          "start": 3.37,
+          "end": 3.65
+        },
+        {
+          "word": "slope.",
+          "start": 3.65,
+          "end": 4.19
+        },
+        {
+          "word": "The",
+          "start": 5.21,
+          "end": 5.31
+        },
+        {
+          "word": "push",
+          "start": 5.31,
+          "end": 5.73
+        },
+        {
+          "word": "ends.",
+          "start": 5.73,
+          "end": 6.05
+        },
+        {
+          "word": "The",
+          "start": 7.07,
+          "end": 7.17
+        },
+        {
+          "word": "block",
+          "start": 7.17,
+          "end": 7.63
+        },
+        {
+          "word": "keeps",
+          "start": 7.63,
+          "end": 8.11
+        },
+        {
+          "word": "sliding",
+          "start": 8.11,
+          "end": 8.77
+        },
+        {
+          "word": "uphill.",
+          "start": 8.77,
+          "end": 9.23
+        },
+        {
+          "word": "Which",
+          "start": 10.23,
+          "end": 10.37
+        },
+        {
+          "word": "forces",
+          "start": 10.37,
+          "end": 10.69
+        },
+        {
+          "word": "act",
+          "start": 10.69,
+          "end": 11.13
+        },
+        {
+          "word": "now?",
+          "start": 11.13,
+          "end": 11.53
+        },
+        {
+          "word": "Weight",
+          "start": 13.74,
+          "end": 14.06
+        },
+        {
+          "word": "acts",
+          "start": 14.06,
+          "end": 14.58
+        },
+        {
+          "word": "vertically",
+          "start": 14.58,
+          "end": 15.0
+        },
+        {
+          "word": "down.",
+          "start": 15.0,
+          "end": 15.56
+        },
+        {
+          "word": "The",
+          "start": 16.64,
+          "end": 16.8
+        },
+        {
+          "word": "normal",
+          "start": 16.8,
+          "end": 17.18
+        },
+        {
+          "word": "reaction",
+          "start": 17.18,
+          "end": 17.88
+        },
+        {
+          "word": "is",
+          "start": 17.88,
+          "end": 18.36
+        },
+        {
+          "word": "perpendicular",
+          "start": 18.36,
+          "end": 18.64
+        },
+        {
+          "word": "to",
+          "start": 18.64,
+          "end": 19.26
+        },
+        {
+          "word": "the",
+          "start": 19.26,
+          "end": 19.4
+        },
+        {
+          "word": "slope.",
+          "start": 19.4,
+          "end": 19.82
+        },
+        {
+          "word": "Friction",
+          "start": 20.44,
+          "end": 20.82
+        },
+        {
+          "word": "points",
+          "start": 20.82,
+          "end": 21.28
+        },
+        {
+          "word": "downhill,",
+          "start": 21.28,
+          "end": 21.86
+        },
+        {
+          "word": "opposing",
+          "start": 22.24,
+          "end": 22.8
+        },
+        {
+          "word": "the",
+          "start": 22.8,
+          "end": 23.02
+        },
+        {
+          "word": "sliding.",
+          "start": 23.02,
+          "end": 23.44
+        },
+        {
+          "word": "There",
+          "start": 24.74,
+          "end": 24.9
+        },
+        {
+          "word": "is",
+          "start": 24.9,
+          "end": 25.0
+        },
+        {
+          "word": "no",
+          "start": 25.0,
+          "end": 25.26
+        },
+        {
+          "word": "continuing",
+          "start": 25.26,
+          "end": 26.04
+        },
+        {
+          "word": "projection",
+          "start": 26.04,
+          "end": 26.72
+        },
+        {
+          "word": "force.",
+          "start": 26.72,
+          "end": 27.18
+        },
+        {
+          "word": "Choose",
+          "start": 27.92,
+          "end": 28.34
+        },
+        {
+          "word": "uphill",
+          "start": 28.34,
+          "end": 28.84
+        },
+        {
+          "word": "as",
+          "start": 28.84,
+          "end": 29.12
+        },
+        {
+          "word": "positive.",
+          "start": 29.12,
+          "end": 29.66
+        },
+        {
+          "word": "Draw",
+          "start": 30.4,
+          "end": 30.64
+        },
+        {
+          "word": "acceleration",
+          "start": 30.64,
+          "end": 31.4
+        },
+        {
+          "word": "separately,",
+          "start": 31.4,
+          "end": 32.22
+        },
+        {
+          "word": "downhill,",
+          "start": 32.8,
+          "end": 33.32
+        },
+        {
+          "word": "negative,",
+          "start": 34.02,
+          "end": 34.56
+        },
+        {
+          "word": "while",
+          "start": 35.16,
+          "end": 35.68
+        },
+        {
+          "word": "the",
+          "start": 35.68,
+          "end": 35.88
+        },
+        {
+          "word": "block",
+          "start": 35.88,
+          "end": 36.2
+        },
+        {
+          "word": "slows.",
+          "start": 36.2,
+          "end": 36.72
+        },
+        {
+          "word": "What",
+          "start": 37.58,
+          "end": 37.78
+        },
+        {
+          "word": "if",
+          "start": 37.78,
+          "end": 37.96
+        },
+        {
+          "word": "the",
+          "start": 37.96,
+          "end": 38.14
+        },
+        {
+          "word": "slope",
+          "start": 38.14,
+          "end": 38.56
+        },
+        {
+          "word": "is",
+          "start": 38.56,
+          "end": 39.02
+        },
+        {
+          "word": "smooth?",
+          "start": 39.02,
+          "end": 39.42
+        },
+        {
+          "word": "Remove",
+          "start": 41.69,
+          "end": 42.05
+        },
+        {
+          "word": "friction,",
+          "start": 42.05,
+          "end": 42.49
+        },
+        {
+          "word": "keep",
+          "start": 43.07,
+          "end": 43.29
+        },
+        {
+          "word": "weight",
+          "start": 43.29,
+          "end": 43.67
+        },
+        {
+          "word": "and",
+          "start": 43.67,
+          "end": 44.09
+        },
+        {
+          "word": "the",
+          "start": 44.09,
+          "end": 44.23
+        },
+        {
+          "word": "normal",
+          "start": 44.23,
+          "end": 44.63
+        },
+        {
+          "word": "reaction.",
+          "start": 44.63,
+          "end": 45.37
+        }
+      ],
+      "wordCount": 73,
+      "text": "A block is projected up a rough thirty -degree slope. The push ends. The block keeps sliding uphill. Which forces act now? Weight acts vertically down. The normal reaction is perpendicular to the slope. Friction points downhill, opposing the sliding. There is no continuing projection force. Choose uphill as positive. Draw acceleration separately, downhill, negative, while the block slows. What if the slope is smooth? Remove friction, keep weight and the normal reaction.",
+      "cues": {
+        "story": 0.55,
+        "angle": 2.93,
+        "release": 5.21,
+        "question": 10.23,
+        "weight": 13.74,
+        "reaction": 16.64,
+        "friction": 20.44,
+        "push": 24.74,
+        "positive": 27.92,
+        "acceleration": 30.4,
+        "whatif": 37.58,
+        "smooth": 41.69,
+        "keepweight": 43.07,
+        "keepreaction": 44.23
+      },
+      "cueEdges": {
+        "story": {
+          "start": 0.55,
+          "end": 1.07,
+          "wordIndex": 0
+        },
+        "angle": {
+          "start": 2.93,
+          "end": 3.65,
+          "wordIndex": 7
+        },
+        "release": {
+          "start": 5.21,
+          "end": 6.05,
+          "wordIndex": 10
+        },
+        "question": {
+          "start": 10.23,
+          "end": 10.69,
+          "wordIndex": 18
+        },
+        "weight": {
+          "start": 13.74,
+          "end": 14.58,
+          "wordIndex": 22
+        },
+        "reaction": {
+          "start": 16.64,
+          "end": 17.88,
+          "wordIndex": 26
+        },
+        "friction": {
+          "start": 20.44,
+          "end": 21.28,
+          "wordIndex": 34
+        },
+        "push": {
+          "start": 24.74,
+          "end": 25.26,
+          "wordIndex": 40
+        },
+        "positive": {
+          "start": 27.92,
+          "end": 28.84,
+          "wordIndex": 46
+        },
+        "acceleration": {
+          "start": 30.4,
+          "end": 31.4,
+          "wordIndex": 50
+        },
+        "whatif": {
+          "start": 37.58,
+          "end": 37.96,
+          "wordIndex": 59
+        },
+        "smooth": {
+          "start": 41.69,
+          "end": 42.49,
+          "wordIndex": 65
+        },
+        "keepweight": {
+          "start": 43.07,
+          "end": 43.67,
+          "wordIndex": 67
+        },
+        "keepreaction": {
+          "start": 44.23,
+          "end": 45.37,
+          "wordIndex": 71
+        }
+      },
+      "figures": [
+        {
+          "id": "angle",
+          "target": "angle",
+          "start": 2.93,
+          "end": 3.65,
+          "wordIndex": 7,
+          "word": "thirty"
+        },
+        {
+          "id": "weight",
+          "target": "weight",
+          "start": 13.74,
+          "end": 14.58,
+          "wordIndex": 22,
+          "word": "Weight"
+        },
+        {
+          "id": "reaction",
+          "target": "reaction",
+          "start": 16.8,
+          "end": 17.88,
+          "wordIndex": 27,
+          "word": "normal"
+        },
+        {
+          "id": "friction",
+          "target": "friction",
+          "start": 20.44,
+          "end": 21.28,
+          "wordIndex": 34,
+          "word": "Friction"
+        },
+        {
+          "id": "acceleration",
+          "target": "acceleration",
+          "start": 30.64,
+          "end": 32.22,
+          "wordIndex": 51,
+          "word": "acceleration"
+        },
+        {
+          "id": "weight2",
+          "target": "weight",
+          "start": 43.07,
+          "end": 43.67,
+          "wordIndex": 67,
+          "word": "keep"
+        },
+        {
+          "id": "reaction2",
+          "target": "reaction",
+          "start": 44.23,
+          "end": 45.37,
+          "wordIndex": 71,
+          "word": "normal"
+        },
+        {
+          "id": "positive",
+          "target": "positive",
+          "start": 27.92,
+          "end": 28.84,
+          "wordIndex": 46,
+          "word": "Choose"
+        },
+        {
+          "id": "negative",
+          "target": "acceleration",
+          "start": 34.02,
+          "end": 35.68,
+          "wordIndex": 54,
+          "word": "negative,"
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "tempo": "slow",
+      "voiceSpeed": 0.9,
+      "budget": 64,
+      "paragraphs": [
+        "Two particles: one slides right on a smooth table; one descends. A light, inextensible string joins them over a smooth, light pulley. Which forces act? [hold 2 s] Table particle: weight down, normal reaction up, tension right. Hanging particle: weight down, tension up. Draw separate diagrams. The light string and smooth pulley give equal tension. Inextensible string: equal accelerations, right and down. [pause 1 s] Isolate the pulley. Light means massless. Tension pulls left; tension pulls down. The support reaction balances both, upwards and right. [hold 2 s] What if the table is rough? Add friction left on the sliding particle. [hold 1 s]"
+      ],
+      "audio": "force-diagrams-s06.mp3",
+      "audioSha256": "10c0c68ab167b0fbd97e1fb35c23b41fc7174ba219cb9b76e9a8d6e9578cefad",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "provider": "elevenlabs",
+      "beats": [
+        {
+          "text": "Two particles: one slides right on a smooth table; one descends. A light, inextensible string joins them over a smooth, light pulley. Which forces act?",
+          "start": 0.55,
+          "end": 17.82
+        },
+        {
+          "text": "Table particle: weight down, normal reaction up, tension right. Hanging particle: weight down, tension up. Draw separate diagrams. The light string and smooth pulley give equal tension. Inextensible string: equal accelerations, right and down.",
+          "start": 19.82,
+          "end": 47.6
+        },
+        {
+          "text": "Isolate the pulley. Light means massless. Tension pulls left; tension pulls down. The support reaction balances both, upwards and right.",
+          "start": 48.6,
+          "end": 64.55
+        },
+        {
+          "text": "What if the table is rough? Add friction left on the sliding particle.",
+          "start": 66.55,
+          "end": 71.11
+        }
+      ],
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 17.82,
+          "end": 19.82,
+          "duration": 2.0
+        },
+        {
+          "kind": "pause",
+          "start": 47.6,
+          "end": 48.6,
+          "duration": 1.0
+        },
+        {
+          "kind": "hold",
+          "start": 64.55,
+          "end": 66.55,
+          "duration": 2.0
+        },
+        {
+          "kind": "hold",
+          "start": 71.11,
+          "end": 72.11,
+          "duration": 1.0
+        }
+      ],
+      "sampleDuration": 72.56,
+      "duration": 72.594286,
+      "words": [
+        {
+          "word": "Two",
+          "start": 0.55,
+          "end": 0.73
+        },
+        {
+          "word": "particles,",
+          "start": 0.73,
+          "end": 1.13
+        },
+        {
+          "word": "one",
+          "start": 1.97,
+          "end": 2.33
+        },
+        {
+          "word": "slides",
+          "start": 2.33,
+          "end": 2.89
+        },
+        {
+          "word": "right",
+          "start": 2.89,
+          "end": 3.41
+        },
+        {
+          "word": "on",
+          "start": 3.41,
+          "end": 3.75
+        },
+        {
+          "word": "a",
+          "start": 3.75,
+          "end": 3.89
+        },
+        {
+          "word": "smooth",
+          "start": 3.89,
+          "end": 4.07
+        },
+        {
+          "word": "table,",
+          "start": 4.07,
+          "end": 4.59
+        },
+        {
+          "word": "one",
+          "start": 5.67,
+          "end": 5.83
+        },
+        {
+          "word": "descends.",
+          "start": 5.83,
+          "end": 6.55
+        },
+        {
+          "word": "A",
+          "start": 7.69,
+          "end": 7.83
+        },
+        {
+          "word": "light,",
+          "start": 7.83,
+          "end": 8.37
+        },
+        {
+          "word": "inextensible",
+          "start": 8.87,
+          "end": 10.01
+        },
+        {
+          "word": "string",
+          "start": 10.01,
+          "end": 11.07
+        },
+        {
+          "word": "joins",
+          "start": 11.07,
+          "end": 12.07
+        },
+        {
+          "word": "them",
+          "start": 12.07,
+          "end": 12.61
+        },
+        {
+          "word": "over",
+          "start": 12.61,
+          "end": 13.33
+        },
+        {
+          "word": "a",
+          "start": 13.33,
+          "end": 13.63
+        },
+        {
+          "word": "smooth,",
+          "start": 13.63,
+          "end": 14.19
+        },
+        {
+          "word": "light",
+          "start": 14.63,
+          "end": 15.17
+        },
+        {
+          "word": "pulley.",
+          "start": 15.17,
+          "end": 15.61
+        },
+        {
+          "word": "Which",
+          "start": 16.61,
+          "end": 16.77
+        },
+        {
+          "word": "forces",
+          "start": 16.77,
+          "end": 17.17
+        },
+        {
+          "word": "act?",
+          "start": 17.17,
+          "end": 17.57
+        },
+        {
+          "word": "Table",
+          "start": 19.82,
+          "end": 20.18
+        },
+        {
+          "word": "particle,",
+          "start": 20.18,
+          "end": 20.62
+        },
+        {
+          "word": "weight",
+          "start": 21.6,
+          "end": 21.78
+        },
+        {
+          "word": "down,",
+          "start": 21.78,
+          "end": 22.76
+        },
+        {
+          "word": "normal",
+          "start": 23.2,
+          "end": 24.24
+        },
+        {
+          "word": "reaction",
+          "start": 24.24,
+          "end": 25.4
+        },
+        {
+          "word": "up,",
+          "start": 25.4,
+          "end": 25.84
+        },
+        {
+          "word": "tension",
+          "start": 26.5,
+          "end": 26.88
+        },
+        {
+          "word": "right.",
+          "start": 26.88,
+          "end": 27.3
+        },
+        {
+          "word": "Hanging",
+          "start": 28.7,
+          "end": 28.78
+        },
+        {
+          "word": "particle,",
+          "start": 28.78,
+          "end": 29.2
+        },
+        {
+          "word": "weight",
+          "start": 30.06,
+          "end": 30.44
+        },
+        {
+          "word": "down,",
+          "start": 30.44,
+          "end": 30.9
+        },
+        {
+          "word": "tension",
+          "start": 31.78,
+          "end": 32.12
+        },
+        {
+          "word": "up.",
+          "start": 32.12,
+          "end": 32.54
+        },
+        {
+          "word": "Draw",
+          "start": 33.92,
+          "end": 34.38
+        },
+        {
+          "word": "separate",
+          "start": 34.38,
+          "end": 34.84
+        },
+        {
+          "word": "diagrams.",
+          "start": 34.84,
+          "end": 35.4
+        },
+        {
+          "word": "The",
+          "start": 37.16,
+          "end": 37.3
+        },
+        {
+          "word": "light",
+          "start": 37.3,
+          "end": 37.62
+        },
+        {
+          "word": "string",
+          "start": 37.62,
+          "end": 38.0
+        },
+        {
+          "word": "and",
+          "start": 38.0,
+          "end": 38.2
+        },
+        {
+          "word": "smooth",
+          "start": 38.2,
+          "end": 38.5
+        },
+        {
+          "word": "pulley",
+          "start": 38.5,
+          "end": 38.98
+        },
+        {
+          "word": "give",
+          "start": 38.98,
+          "end": 39.84
+        },
+        {
+          "word": "equal",
+          "start": 39.84,
+          "end": 40.26
+        },
+        {
+          "word": "tension.",
+          "start": 40.26,
+          "end": 40.8
+        },
+        {
+          "word": "Inextensible",
+          "start": 41.92,
+          "end": 42.72
+        },
+        {
+          "word": "string,",
+          "start": 42.72,
+          "end": 43.22
+        },
+        {
+          "word": "equal",
+          "start": 43.88,
+          "end": 44.38
+        },
+        {
+          "word": "accelerations,",
+          "start": 44.38,
+          "end": 45.32
+        },
+        {
+          "word": "right",
+          "start": 45.74,
+          "end": 46.06
+        },
+        {
+          "word": "and",
+          "start": 46.06,
+          "end": 46.98
+        },
+        {
+          "word": "down.",
+          "start": 46.98,
+          "end": 47.32
+        },
+        {
+          "word": "Isolate",
+          "start": 48.6,
+          "end": 49.22
+        },
+        {
+          "word": "the",
+          "start": 49.22,
+          "end": 50.06
+        },
+        {
+          "word": "pulley.",
+          "start": 50.06,
+          "end": 50.46
+        },
+        {
+          "word": "Light",
+          "start": 51.6,
+          "end": 52.1
+        },
+        {
+          "word": "means",
+          "start": 52.1,
+          "end": 52.84
+        },
+        {
+          "word": "massless.",
+          "start": 52.84,
+          "end": 53.76
+        },
+        {
+          "word": "Tension",
+          "start": 55.04,
+          "end": 55.52
+        },
+        {
+          "word": "pulls",
+          "start": 55.52,
+          "end": 56.06
+        },
+        {
+          "word": "left.",
+          "start": 56.06,
+          "end": 56.6
+        },
+        {
+          "word": "Tension",
+          "start": 57.4,
+          "end": 57.64
+        },
+        {
+          "word": "pulls",
+          "start": 57.64,
+          "end": 58.0
+        },
+        {
+          "word": "down.",
+          "start": 58.0,
+          "end": 58.36
+        },
+        {
+          "word": "The",
+          "start": 59.78,
+          "end": 59.88
+        },
+        {
+          "word": "support",
+          "start": 59.88,
+          "end": 60.26
+        },
+        {
+          "word": "reaction",
+          "start": 60.26,
+          "end": 60.88
+        },
+        {
+          "word": "balances",
+          "start": 60.88,
+          "end": 61.94
+        },
+        {
+          "word": "both,",
+          "start": 61.94,
+          "end": 62.4
+        },
+        {
+          "word": "upwards",
+          "start": 62.96,
+          "end": 63.36
+        },
+        {
+          "word": "and",
+          "start": 63.36,
+          "end": 63.94
+        },
+        {
+          "word": "right.",
+          "start": 63.94,
+          "end": 64.26
+        },
+        {
+          "word": "What",
+          "start": 66.55,
+          "end": 66.77
+        },
+        {
+          "word": "if",
+          "start": 66.77,
+          "end": 66.89
+        },
+        {
+          "word": "the",
+          "start": 66.89,
+          "end": 67.05
+        },
+        {
+          "word": "table",
+          "start": 67.05,
+          "end": 67.31
+        },
+        {
+          "word": "is",
+          "start": 67.31,
+          "end": 67.53
+        },
+        {
+          "word": "rough?",
+          "start": 67.53,
+          "end": 67.85
+        },
+        {
+          "word": "Add",
+          "start": 68.33,
+          "end": 68.61
+        },
+        {
+          "word": "friction",
+          "start": 68.61,
+          "end": 68.99
+        },
+        {
+          "word": "left",
+          "start": 68.99,
+          "end": 69.39
+        },
+        {
+          "word": "on",
+          "start": 69.39,
+          "end": 69.77
+        },
+        {
+          "word": "the",
+          "start": 69.77,
+          "end": 69.95
+        },
+        {
+          "word": "sliding",
+          "start": 69.95,
+          "end": 70.31
+        },
+        {
+          "word": "particle.",
+          "start": 70.31,
+          "end": 70.77
+        }
+      ],
+      "wordCount": 92,
+      "text": "Two particles, one slides right on a smooth table, one descends. A light, inextensible string joins them over a smooth, light pulley. Which forces act? Table particle, weight down, normal reaction up, tension right. Hanging particle, weight down, tension up. Draw separate diagrams. The light string and smooth pulley give equal tension. Inextensible string, equal accelerations, right and down. Isolate the pulley. Light means massless. Tension pulls left. Tension pulls down. The support reaction balances both, upwards and right. What if the table is rough? Add friction left on the sliding particle.",
+      "cues": {
+        "story": 0.55,
+        "first": 1.97,
+        "second": 5.67,
+        "string": 7.69,
+        "pulley": 13.63,
+        "question": 16.61,
+        "firstdiagram": 19.82,
+        "weight1": 21.6,
+        "reaction": 23.2,
+        "tension1": 26.5,
+        "seconddiagram": 28.7,
+        "weight2": 30.06,
+        "tension2": 31.78,
+        "equal": 39.84,
+        "acceleration": 43.88,
+        "isolate": 48.6,
+        "light": 51.6,
+        "left": 55.04,
+        "down": 57.4,
+        "support": 59.78,
+        "whatif": 66.55,
+        "rough": 68.33
+      },
+      "cueEdges": {
+        "story": {
+          "start": 0.55,
+          "end": 1.13,
+          "wordIndex": 0
+        },
+        "first": {
+          "start": 1.97,
+          "end": 2.89,
+          "wordIndex": 2
+        },
+        "second": {
+          "start": 5.67,
+          "end": 6.55,
+          "wordIndex": 9
+        },
+        "string": {
+          "start": 7.69,
+          "end": 8.37,
+          "wordIndex": 11
+        },
+        "pulley": {
+          "start": 13.63,
+          "end": 15.61,
+          "wordIndex": 19
+        },
+        "question": {
+          "start": 16.61,
+          "end": 17.17,
+          "wordIndex": 22
+        },
+        "firstdiagram": {
+          "start": 19.82,
+          "end": 20.62,
+          "wordIndex": 25
+        },
+        "weight1": {
+          "start": 21.6,
+          "end": 22.76,
+          "wordIndex": 27
+        },
+        "reaction": {
+          "start": 23.2,
+          "end": 25.4,
+          "wordIndex": 29
+        },
+        "tension1": {
+          "start": 26.5,
+          "end": 27.3,
+          "wordIndex": 32
+        },
+        "seconddiagram": {
+          "start": 28.7,
+          "end": 29.2,
+          "wordIndex": 34
+        },
+        "weight2": {
+          "start": 30.06,
+          "end": 30.9,
+          "wordIndex": 36
+        },
+        "tension2": {
+          "start": 31.78,
+          "end": 32.54,
+          "wordIndex": 38
+        },
+        "equal": {
+          "start": 39.84,
+          "end": 40.8,
+          "wordIndex": 50
+        },
+        "acceleration": {
+          "start": 43.88,
+          "end": 45.32,
+          "wordIndex": 54
+        },
+        "isolate": {
+          "start": 48.6,
+          "end": 50.46,
+          "wordIndex": 59
+        },
+        "light": {
+          "start": 51.6,
+          "end": 52.84,
+          "wordIndex": 62
+        },
+        "left": {
+          "start": 55.04,
+          "end": 56.6,
+          "wordIndex": 65
+        },
+        "down": {
+          "start": 57.4,
+          "end": 58.36,
+          "wordIndex": 68
+        },
+        "support": {
+          "start": 59.78,
+          "end": 60.88,
+          "wordIndex": 71
+        },
+        "whatif": {
+          "start": 66.55,
+          "end": 66.89,
+          "wordIndex": 79
+        },
+        "rough": {
+          "start": 68.33,
+          "end": 68.99,
+          "wordIndex": 85
+        }
+      },
+      "figures": [
+        {
+          "id": "first",
+          "target": "mass1",
+          "start": 1.97,
+          "end": 2.89,
+          "wordIndex": 2,
+          "word": "one"
+        },
+        {
+          "id": "second",
+          "target": "mass2",
+          "start": 5.67,
+          "end": 6.55,
+          "wordIndex": 9,
+          "word": "one"
+        },
+        {
+          "id": "weight1",
+          "target": "weight1",
+          "start": 21.6,
+          "end": 22.76,
+          "wordIndex": 27,
+          "word": "weight"
+        },
+        {
+          "id": "reaction",
+          "target": "reaction",
+          "start": 23.2,
+          "end": 25.4,
+          "wordIndex": 29,
+          "word": "normal"
+        },
+        {
+          "id": "tension1",
+          "target": "tension1",
+          "start": 26.5,
+          "end": 27.3,
+          "wordIndex": 32,
+          "word": "tension"
+        },
+        {
+          "id": "weight2",
+          "target": "weight2",
+          "start": 30.06,
+          "end": 30.9,
+          "wordIndex": 36,
+          "word": "weight"
+        },
+        {
+          "id": "tension2",
+          "target": "tension2",
+          "start": 31.78,
+          "end": 32.54,
+          "wordIndex": 38,
+          "word": "tension"
+        },
+        {
+          "id": "equal",
+          "target": "tension1",
+          "start": 39.84,
+          "end": 40.8,
+          "wordIndex": 50,
+          "word": "equal"
+        },
+        {
+          "id": "equal2",
+          "target": "tension2",
+          "start": 39.84,
+          "end": 40.8,
+          "wordIndex": 50,
+          "word": "equal"
+        },
+        {
+          "id": "a1",
+          "target": "a1",
+          "start": 45.74,
+          "end": 46.06,
+          "wordIndex": 56,
+          "word": "right"
+        },
+        {
+          "id": "a2",
+          "target": "a2",
+          "start": 46.98,
+          "end": 47.32,
+          "wordIndex": 58,
+          "word": "down."
+        },
+        {
+          "id": "string",
+          "target": "string",
+          "start": 7.69,
+          "end": 11.07,
+          "wordIndex": 11,
+          "word": "A"
+        },
+        {
+          "id": "pulley",
+          "target": "pulley",
+          "start": 48.6,
+          "end": 50.46,
+          "wordIndex": 59,
+          "word": "Isolate"
+        },
+        {
+          "id": "light",
+          "target": "light",
+          "start": 51.6,
+          "end": 53.76,
+          "wordIndex": 62,
+          "word": "Light"
+        },
+        {
+          "id": "left",
+          "target": "left",
+          "start": 55.04,
+          "end": 56.6,
+          "wordIndex": 65,
+          "word": "Tension"
+        },
+        {
+          "id": "down",
+          "target": "down",
+          "start": 57.4,
+          "end": 58.36,
+          "wordIndex": 68,
+          "word": "Tension"
+        },
+        {
+          "id": "support",
+          "target": "support",
+          "start": 59.88,
+          "end": 60.88,
+          "wordIndex": 72,
+          "word": "support"
+        },
+        {
+          "id": "rough",
+          "target": "friction",
+          "start": 68.61,
+          "end": 69.39,
+          "wordIndex": 86,
+          "word": "friction"
+        }
+      ]
+    },
+    {
+      "id": "s07",
+      "tempo": "brisk",
+      "voiceSpeed": 1.0,
+      "budget": 35,
+      "paragraphs": [
+        "A car pulls a trailer through a light rod. Which connector forces act? [hold 2 s] Tension pulls the trailer right, and the car left. Now the car brakes; the trailer compresses the rod. [pause 1 s] Thrust pushes the trailer left, and the car right. Thrust means compression. Both arrows still start at their particles. What if a string replaces the rod? [hold 1 s] A string cannot push: it goes slack. [hold 1 s]"
+      ],
+      "audio": "force-diagrams-s07.mp3",
+      "audioSha256": "27d8586bee7c5094ee5cc9d10fb7248e9b326850d1e1690b6833ff561a6cb6a7",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "provider": "elevenlabs",
+      "beats": [
+        {
+          "text": "A car pulls a trailer through a light rod. Which connector forces act?",
+          "start": 0.55,
+          "end": 5.69
+        },
+        {
+          "text": "Tension pulls the trailer right, and the car left. Now the car brakes; the trailer compresses the rod.",
+          "start": 7.69,
+          "end": 15.85
+        },
+        {
+          "text": "Thrust pushes the trailer left, and the car right. Thrust means compression. Both arrows still start at their particles. What if a string replaces the rod?",
+          "start": 16.85,
+          "end": 27.17
+        },
+        {
+          "text": "A string cannot push: it goes slack.",
+          "start": 28.17,
+          "end": 30.41
+        }
+      ],
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 5.69,
+          "end": 7.69,
+          "duration": 2.0
+        },
+        {
+          "kind": "pause",
+          "start": 15.85,
+          "end": 16.85,
+          "duration": 1.0
+        },
+        {
+          "kind": "hold",
+          "start": 27.17,
+          "end": 28.17,
+          "duration": 1.0
+        },
+        {
+          "kind": "hold",
+          "start": 30.41,
+          "end": 31.41,
+          "duration": 1.0
+        }
+      ],
+      "sampleDuration": 35.0,
+      "duration": 35.030204,
+      "words": [
+        {
+          "word": "A",
+          "start": 0.55,
+          "end": 0.73
+        },
+        {
+          "word": "car",
+          "start": 0.73,
+          "end": 0.89
+        },
+        {
+          "word": "pulls",
+          "start": 0.89,
+          "end": 1.19
+        },
+        {
+          "word": "a",
+          "start": 1.19,
+          "end": 1.39
+        },
+        {
+          "word": "trailer",
+          "start": 1.39,
+          "end": 1.75
+        },
+        {
+          "word": "through",
+          "start": 1.75,
+          "end": 2.39
+        },
+        {
+          "word": "a",
+          "start": 2.39,
+          "end": 2.57
+        },
+        {
+          "word": "light",
+          "start": 2.57,
+          "end": 2.81
+        },
+        {
+          "word": "rod.",
+          "start": 2.81,
+          "end": 3.13
+        },
+        {
+          "word": "Which",
+          "start": 3.91,
+          "end": 4.19
+        },
+        {
+          "word": "connector",
+          "start": 4.19,
+          "end": 4.65
+        },
+        {
+          "word": "forces",
+          "start": 4.65,
+          "end": 5.07
+        },
+        {
+          "word": "act?",
+          "start": 5.07,
+          "end": 5.47
+        },
+        {
+          "word": "Tension",
+          "start": 7.69,
+          "end": 8.07
+        },
+        {
+          "word": "pulls",
+          "start": 8.07,
+          "end": 8.41
+        },
+        {
+          "word": "the",
+          "start": 8.41,
+          "end": 8.65
+        },
+        {
+          "word": "trailer",
+          "start": 8.65,
+          "end": 8.95
+        },
+        {
+          "word": "right,",
+          "start": 8.95,
+          "end": 9.31
+        },
+        {
+          "word": "and",
+          "start": 9.61,
+          "end": 10.31
+        },
+        {
+          "word": "the",
+          "start": 10.31,
+          "end": 10.45
+        },
+        {
+          "word": "car",
+          "start": 10.45,
+          "end": 10.67
+        },
+        {
+          "word": "left.",
+          "start": 10.67,
+          "end": 11.07
+        },
+        {
+          "word": "Now",
+          "start": 12.11,
+          "end": 12.33
+        },
+        {
+          "word": "the",
+          "start": 12.33,
+          "end": 12.51
+        },
+        {
+          "word": "car",
+          "start": 12.51,
+          "end": 12.73
+        },
+        {
+          "word": "brakes.",
+          "start": 12.73,
+          "end": 13.01
+        },
+        {
+          "word": "The",
+          "start": 14.23,
+          "end": 14.37
+        },
+        {
+          "word": "trailer",
+          "start": 14.37,
+          "end": 14.73
+        },
+        {
+          "word": "compresses",
+          "start": 14.73,
+          "end": 15.31
+        },
+        {
+          "word": "the",
+          "start": 15.31,
+          "end": 15.43
+        },
+        {
+          "word": "rod.",
+          "start": 15.43,
+          "end": 15.63
+        },
+        {
+          "word": "Thrust",
+          "start": 16.85,
+          "end": 17.19
+        },
+        {
+          "word": "pushes",
+          "start": 17.19,
+          "end": 17.43
+        },
+        {
+          "word": "the",
+          "start": 17.43,
+          "end": 17.69
+        },
+        {
+          "word": "trailer",
+          "start": 17.69,
+          "end": 17.97
+        },
+        {
+          "word": "left",
+          "start": 17.97,
+          "end": 18.29
+        },
+        {
+          "word": "and",
+          "start": 18.29,
+          "end": 18.83
+        },
+        {
+          "word": "the",
+          "start": 18.83,
+          "end": 18.95
+        },
+        {
+          "word": "car",
+          "start": 18.95,
+          "end": 19.17
+        },
+        {
+          "word": "right.",
+          "start": 19.17,
+          "end": 19.51
+        },
+        {
+          "word": "Thrust",
+          "start": 20.17,
+          "end": 20.71
+        },
+        {
+          "word": "means",
+          "start": 20.71,
+          "end": 20.87
+        },
+        {
+          "word": "compression.",
+          "start": 20.87,
+          "end": 21.35
+        },
+        {
+          "word": "Both",
+          "start": 22.13,
+          "end": 22.31
+        },
+        {
+          "word": "arrows",
+          "start": 22.31,
+          "end": 22.73
+        },
+        {
+          "word": "still",
+          "start": 22.73,
+          "end": 23.31
+        },
+        {
+          "word": "start",
+          "start": 23.31,
+          "end": 23.69
+        },
+        {
+          "word": "at",
+          "start": 23.69,
+          "end": 23.91
+        },
+        {
+          "word": "their",
+          "start": 23.91,
+          "end": 24.05
+        },
+        {
+          "word": "particles.",
+          "start": 24.05,
+          "end": 24.37
+        },
+        {
+          "word": "What",
+          "start": 25.29,
+          "end": 25.45
+        },
+        {
+          "word": "if",
+          "start": 25.45,
+          "end": 25.57
+        },
+        {
+          "word": "a",
+          "start": 25.57,
+          "end": 25.69
+        },
+        {
+          "word": "string",
+          "start": 25.69,
+          "end": 25.97
+        },
+        {
+          "word": "replaces",
+          "start": 25.97,
+          "end": 26.45
+        },
+        {
+          "word": "the",
+          "start": 26.45,
+          "end": 26.73
+        },
+        {
+          "word": "rod?",
+          "start": 26.73,
+          "end": 26.93
+        },
+        {
+          "word": "A",
+          "start": 28.17,
+          "end": 28.29
+        },
+        {
+          "word": "string",
+          "start": 28.29,
+          "end": 28.53
+        },
+        {
+          "word": "cannot",
+          "start": 28.53,
+          "end": 28.79
+        },
+        {
+          "word": "push,",
+          "start": 28.79,
+          "end": 29.21
+        },
+        {
+          "word": "it",
+          "start": 29.59,
+          "end": 29.65
+        },
+        {
+          "word": "goes",
+          "start": 29.65,
+          "end": 29.83
+        },
+        {
+          "word": "slack.",
+          "start": 29.83,
+          "end": 30.17
+        }
+      ],
+      "wordCount": 64,
+      "text": "A car pulls a trailer through a light rod. Which connector forces act? Tension pulls the trailer right, and the car left. Now the car brakes. The trailer compresses the rod. Thrust pushes the trailer left and the car right. Thrust means compression. Both arrows still start at their particles. What if a string replaces the rod? A string cannot push, it goes slack.",
+      "cues": {
+        "story": 0.55,
+        "rod": 2.57,
+        "question": 3.91,
+        "trailerT": 7.69,
+        "carT": 9.61,
+        "brakeStory": 12.11,
+        "thrust": 16.85,
+        "carThrust": 18.29,
+        "compression": 20.17,
+        "whatif": 25.29,
+        "string": 28.17
+      },
+      "cueEdges": {
+        "story": {
+          "start": 0.55,
+          "end": 0.89,
+          "wordIndex": 0
+        },
+        "rod": {
+          "start": 2.57,
+          "end": 3.13,
+          "wordIndex": 7
+        },
+        "question": {
+          "start": 3.91,
+          "end": 4.65,
+          "wordIndex": 9
+        },
+        "trailerT": {
+          "start": 7.69,
+          "end": 8.41,
+          "wordIndex": 13
+        },
+        "carT": {
+          "start": 9.61,
+          "end": 11.07,
+          "wordIndex": 18
+        },
+        "brakeStory": {
+          "start": 12.11,
+          "end": 12.73,
+          "wordIndex": 22
+        },
+        "thrust": {
+          "start": 16.85,
+          "end": 17.43,
+          "wordIndex": 31
+        },
+        "carThrust": {
+          "start": 18.29,
+          "end": 19.51,
+          "wordIndex": 36
+        },
+        "compression": {
+          "start": 20.17,
+          "end": 20.87,
+          "wordIndex": 40
+        },
+        "whatif": {
+          "start": 25.29,
+          "end": 25.57,
+          "wordIndex": 50
+        },
+        "string": {
+          "start": 28.17,
+          "end": 28.79,
+          "wordIndex": 57
+        }
+      },
+      "figures": [
+        {
+          "id": "rod",
+          "target": "rod",
+          "start": 2.57,
+          "end": 3.13,
+          "wordIndex": 7,
+          "word": "light"
+        },
+        {
+          "id": "trailerT",
+          "target": "trailerT",
+          "start": 7.69,
+          "end": 8.41,
+          "wordIndex": 13,
+          "word": "Tension"
+        },
+        {
+          "id": "carT",
+          "target": "carT",
+          "start": 10.45,
+          "end": 11.07,
+          "wordIndex": 20,
+          "word": "car"
+        },
+        {
+          "id": "thrust",
+          "target": "trailerThrust",
+          "start": 16.85,
+          "end": 17.43,
+          "wordIndex": 31,
+          "word": "Thrust"
+        },
+        {
+          "id": "carThrust",
+          "target": "carThrust",
+          "start": 18.95,
+          "end": 19.51,
+          "wordIndex": 38,
+          "word": "car"
+        },
+        {
+          "id": "compression",
+          "target": "trailerThrust",
+          "start": 20.17,
+          "end": 20.87,
+          "wordIndex": 40,
+          "word": "Thrust"
+        }
+      ]
+    },
+    {
+      "id": "s08",
+      "tempo": "brisk",
+      "voiceSpeed": 1.0,
+      "budget": 34,
+      "paragraphs": [
+        "Your turn. A block slides uphill on a rough thirty-degree slope after release. Complete its force diagram. [hold 3 s] Weight points down. Normal reaction is perpendicular to the slope. Friction points downhill. No continuing push; acceleration is not a force. [hold 2 s] Choose the forces. Draw and label arrows. Check changed assumptions. [hold 1 s]"
+      ],
+      "audio": "force-diagrams-s08.mp3",
+      "audioSha256": "9d227efee152683b5d43205c5b6717f37a41661ecb720a2f85dae1bb4506284f",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "provider": "elevenlabs",
+      "beats": [
+        {
+          "text": "Your turn. A block slides uphill on a rough thirty-degree slope after release. Complete its force diagram.",
+          "start": 0.55,
+          "end": 9.71
+        },
+        {
+          "text": "Weight points down. Normal reaction is perpendicular to the slope. Friction points downhill. No continuing push; acceleration is not a force.",
+          "start": 12.71,
+          "end": 27.77
+        },
+        {
+          "text": "Choose the forces. Draw and label arrows. Check changed assumptions.",
+          "start": 29.77,
+          "end": 35.36
+        }
+      ],
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 9.71,
+          "end": 12.71,
+          "duration": 3.0
+        },
+        {
+          "kind": "hold",
+          "start": 27.77,
+          "end": 29.77,
+          "duration": 2.0
+        },
+        {
+          "kind": "hold",
+          "start": 35.36,
+          "end": 36.36,
+          "duration": 1.0
+        }
+      ],
+      "sampleDuration": 36.81,
+      "duration": 36.858776,
+      "words": [
+        {
+          "word": "Your",
+          "start": 0.55,
+          "end": 0.75
+        },
+        {
+          "word": "turn.",
+          "start": 0.75,
+          "end": 1.11
+        },
+        {
+          "word": "A",
+          "start": 1.97,
+          "end": 2.13
+        },
+        {
+          "word": "block",
+          "start": 2.13,
+          "end": 2.45
+        },
+        {
+          "word": "slides",
+          "start": 2.45,
+          "end": 2.89
+        },
+        {
+          "word": "uphill",
+          "start": 2.89,
+          "end": 3.47
+        },
+        {
+          "word": "on",
+          "start": 3.47,
+          "end": 4.13
+        },
+        {
+          "word": "a",
+          "start": 4.13,
+          "end": 4.27
+        },
+        {
+          "word": "rough",
+          "start": 4.27,
+          "end": 4.49
+        },
+        {
+          "word": "thirty",
+          "start": 4.49,
+          "end": 4.89
+        },
+        {
+          "word": "-degree",
+          "start": 4.89,
+          "end": 5.17
+        },
+        {
+          "word": "slope",
+          "start": 5.17,
+          "end": 5.71
+        },
+        {
+          "word": "after",
+          "start": 5.71,
+          "end": 6.67
+        },
+        {
+          "word": "release.",
+          "start": 6.67,
+          "end": 7.11
+        },
+        {
+          "word": "Complete",
+          "start": 7.89,
+          "end": 8.51
+        },
+        {
+          "word": "its",
+          "start": 8.51,
+          "end": 8.85
+        },
+        {
+          "word": "force",
+          "start": 8.85,
+          "end": 9.09
+        },
+        {
+          "word": "diagram.",
+          "start": 9.09,
+          "end": 9.47
+        },
+        {
+          "word": "Weight",
+          "start": 12.71,
+          "end": 12.99
+        },
+        {
+          "word": "points",
+          "start": 12.99,
+          "end": 13.31
+        },
+        {
+          "word": "down.",
+          "start": 13.31,
+          "end": 13.75
+        },
+        {
+          "word": "Normal",
+          "start": 14.49,
+          "end": 15.15
+        },
+        {
+          "word": "reaction",
+          "start": 15.15,
+          "end": 15.69
+        },
+        {
+          "word": "is",
+          "start": 15.69,
+          "end": 16.61
+        },
+        {
+          "word": "perpendicular",
+          "start": 16.61,
+          "end": 16.93
+        },
+        {
+          "word": "to",
+          "start": 16.93,
+          "end": 17.61
+        },
+        {
+          "word": "the",
+          "start": 17.61,
+          "end": 17.77
+        },
+        {
+          "word": "slope.",
+          "start": 17.77,
+          "end": 18.13
+        },
+        {
+          "word": "Friction",
+          "start": 18.91,
+          "end": 19.65
+        },
+        {
+          "word": "points",
+          "start": 19.65,
+          "end": 20.03
+        },
+        {
+          "word": "downhill.",
+          "start": 20.03,
+          "end": 20.53
+        },
+        {
+          "word": "No",
+          "start": 21.67,
+          "end": 22.11
+        },
+        {
+          "word": "continuing",
+          "start": 22.11,
+          "end": 22.75
+        },
+        {
+          "word": "push.",
+          "start": 22.75,
+          "end": 23.59
+        },
+        {
+          "word": "Acceleration",
+          "start": 25.19,
+          "end": 25.69
+        },
+        {
+          "word": "is",
+          "start": 25.69,
+          "end": 26.93
+        },
+        {
+          "word": "not",
+          "start": 26.93,
+          "end": 27.15
+        },
+        {
+          "word": "a",
+          "start": 27.15,
+          "end": 27.31
+        },
+        {
+          "word": "force.",
+          "start": 27.31,
+          "end": 27.51
+        },
+        {
+          "word": "Choose",
+          "start": 29.77,
+          "end": 30.05
+        },
+        {
+          "word": "the",
+          "start": 30.05,
+          "end": 30.29
+        },
+        {
+          "word": "forces.",
+          "start": 30.29,
+          "end": 30.65
+        },
+        {
+          "word": "Draw",
+          "start": 31.31,
+          "end": 31.89
+        },
+        {
+          "word": "and",
+          "start": 31.89,
+          "end": 32.19
+        },
+        {
+          "word": "label",
+          "start": 32.19,
+          "end": 32.49
+        },
+        {
+          "word": "arrows.",
+          "start": 32.49,
+          "end": 32.89
+        },
+        {
+          "word": "Check",
+          "start": 33.69,
+          "end": 34.01
+        },
+        {
+          "word": "changed",
+          "start": 34.01,
+          "end": 34.47
+        },
+        {
+          "word": "assumptions.",
+          "start": 34.47,
+          "end": 34.97
+        }
+      ],
+      "wordCount": 49,
+      "text": "Your turn. A block slides uphill on a rough thirty -degree slope after release. Complete its force diagram. Weight points down. Normal reaction is perpendicular to the slope. Friction points downhill. No continuing push. Acceleration is not a force. Choose the forces. Draw and label arrows. Check changed assumptions.",
+      "cues": {
+        "story": 0.55,
+        "angle": 4.49,
+        "question": 7.89,
+        "weight": 12.71,
+        "reaction": 14.49,
+        "friction": 18.91,
+        "push": 21.67,
+        "o1": 29.77,
+        "o2": 31.31,
+        "o3": 33.69
+      },
+      "cueEdges": {
+        "story": {
+          "start": 0.55,
+          "end": 1.11,
+          "wordIndex": 0
+        },
+        "angle": {
+          "start": 4.49,
+          "end": 5.17,
+          "wordIndex": 9
+        },
+        "question": {
+          "start": 7.89,
+          "end": 9.09,
+          "wordIndex": 14
+        },
+        "weight": {
+          "start": 12.71,
+          "end": 13.31,
+          "wordIndex": 18
+        },
+        "reaction": {
+          "start": 14.49,
+          "end": 15.69,
+          "wordIndex": 21
+        },
+        "friction": {
+          "start": 18.91,
+          "end": 20.03,
+          "wordIndex": 28
+        },
+        "push": {
+          "start": 21.67,
+          "end": 22.75,
+          "wordIndex": 31
+        },
+        "o1": {
+          "start": 29.77,
+          "end": 30.65,
+          "wordIndex": 39
+        },
+        "o2": {
+          "start": 31.31,
+          "end": 32.49,
+          "wordIndex": 42
+        },
+        "o3": {
+          "start": 33.69,
+          "end": 34.47,
+          "wordIndex": 46
+        }
+      },
+      "figures": [
+        {
+          "id": "angle",
+          "target": "angle",
+          "start": 4.49,
+          "end": 5.17,
+          "wordIndex": 9,
+          "word": "thirty"
+        },
+        {
+          "id": "weight",
+          "target": "weight",
+          "start": 12.71,
+          "end": 13.31,
+          "wordIndex": 18,
+          "word": "Weight"
+        },
+        {
+          "id": "reaction",
+          "target": "reaction",
+          "start": 14.49,
+          "end": 15.69,
+          "wordIndex": 21,
+          "word": "Normal"
+        },
+        {
+          "id": "friction",
+          "target": "friction",
+          "start": 18.91,
+          "end": 20.03,
+          "wordIndex": 28,
+          "word": "Friction"
+        }
+      ]
+    }
+  ]
+}
