@@ -68,6 +68,7 @@ import { MechanicsDrawingTravelGraphs, MechanicsDrawingTravelGraphsProps, getMec
 import { MechanicsMultipleCollisions, MechanicsMultipleCollisionsProps, getMechanicsMultipleCollisionsDuration } from './compositions/MechanicsMultipleCollisions';
 import { MechanicsUsingCalculusIn1D, MechanicsUsingCalculusIn1DProps, getMechanicsUsingCalculusIn1DDuration } from './compositions/MechanicsUsingCalculusIn1D';
 import { MechanicsDerivingSuvat, MechanicsDerivingSuvatProps, getMechanicsDerivingSuvatDuration } from './compositions/MechanicsDerivingSuvat';
+import { MechanicsSuvatIn1D, MechanicsSuvatIn1DProps, getMechanicsSuvatIn1DDuration } from './compositions/MechanicsSuvatIn1D';
 import { MechanicsDerivedUnits, MechanicsDerivedUnitsProps, getMechanicsDerivedUnitsDuration } from './compositions/MechanicsDerivedUnits';
 import { MechanicsTypesOfForces, MechanicsTypesOfForcesProps, getMechanicsTypesOfForcesDuration } from './compositions/MechanicsTypesOfForces';
 
@@ -1369,6 +1370,15 @@ export const RemotionRoot: React.FC = () => {
         width={1920}
         height={1080}
         defaultProps={{ audioEnabled: true } satisfies MechanicsDerivingSuvatProps}
+      />
+      <Composition
+        id="MechanicsSuvatIn1D"
+        component={MechanicsSuvatIn1D}
+        durationInFrames={getMechanicsSuvatIn1DDuration(30)}
+        fps={30}
+        width={1920}
+        height={1080}
+        defaultProps={{ audioEnabled: true } satisfies MechanicsSuvatIn1DProps}
       />
     </>
   );
