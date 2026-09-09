@@ -1,0 +1,180 @@
+{
+  "passed": true,
+  "durationSeconds": 267.02367300000003,
+  "frames30fps": 8014,
+  "scenes": [
+    {
+      "scene": "s01",
+      "duration": 25.051429,
+      "words": 46,
+      "cues": 6,
+      "figures": 0,
+      "holds": []
+    },
+    {
+      "scene": "s02",
+      "duration": 52.924082,
+      "words": 82,
+      "cues": 10,
+      "figures": 7,
+      "holds": [
+        {
+          "kind": "pause",
+          "start": 20.55,
+          "end": 21.15,
+          "duration": 0.6,
+          "rms": 0.0
+        },
+        {
+          "kind": "pause",
+          "start": 23.97,
+          "end": 24.97,
+          "duration": 1.0,
+          "rms": 0.0
+        },
+        {
+          "kind": "hold",
+          "start": 28.7,
+          "end": 30.7,
+          "duration": 2.0,
+          "rms": 0.0
+        },
+        {
+          "kind": "pause",
+          "start": 42.34,
+          "end": 43.14,
+          "duration": 0.8,
+          "rms": 0.0
+        },
+        {
+          "kind": "hold",
+          "start": 45.43,
+          "end": 47.43,
+          "duration": 2.0,
+          "rms": 0.0
+        }
+      ]
+    },
+    {
+      "scene": "s03",
+      "duration": 21.838367,
+      "words": 47,
+      "cues": 5,
+      "figures": 0,
+      "holds": []
+    },
+    {
+      "scene": "s04",
+      "duration": 29.048163,
+      "words": 55,
+      "cues": 9,
+      "figures": 5,
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 24.27,
+          "end": 26.27,
+          "duration": 2.0,
+          "rms": 0.0
+        }
+      ]
+    },
+    {
+      "scene": "s05",
+      "duration": 74.893061,
+      "words": 105,
+      "cues": 21,
+      "figures": 25,
+      "holds": [
+        {
+          "kind": "pause",
+          "start": 4.46,
+          "end": 6.46,
+          "duration": 2.0,
+          "rms": 0.0
+        },
+        {
+          "kind": "pause",
+          "start": 17.72,
+          "end": 19.72,
+          "duration": 2.0,
+          "rms": 0.0
+        },
+        {
+          "kind": "hold",
+          "start": 27.1,
+          "end": 29.1,
+          "duration": 2.0,
+          "rms": 0.0
+        },
+        {
+          "kind": "hold",
+          "start": 34.33,
+          "end": 36.33,
+          "duration": 2.0,
+          "rms": 0.0
+        },
+        {
+          "kind": "hold",
+          "start": 41.36,
+          "end": 43.36,
+          "duration": 2.0,
+          "rms": 0.0
+        },
+        {
+          "kind": "hold",
+          "start": 46.58,
+          "end": 48.58,
+          "duration": 2.0,
+          "rms": 0.0
+        },
+        {
+          "kind": "hold",
+          "start": 60.37,
+          "end": 62.37,
+          "duration": 2.0,
+          "rms": 0.0
+        },
+        {
+          "kind": "hold",
+          "start": 67.98,
+          "end": 69.98,
+          "duration": 2.0,
+          "rms": 0.0
+        }
+      ]
+    },
+    {
+      "scene": "s06",
+      "duration": 28.917551,
+      "words": 42,
+      "cues": 8,
+      "figures": 6,
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 23.81,
+          "end": 25.81,
+          "duration": 2.0,
+          "rms": 0.0
+        }
+      ]
+    },
+    {
+      "scene": "s07",
+      "duration": 34.35102,
+      "words": 51,
+      "cues": 8,
+      "figures": 1,
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 7.18,
+          "end": 10.18,
+          "duration": 3.0,
+          "rms": 0.0
+        }
+      ]
+    }
+  ]
+}
