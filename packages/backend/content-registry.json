@@ -1213,6 +1213,147 @@
           "reviewNotes": [
             "Fable contact-sheet review passed; awaiting Durai."
           ]
+        },
+        "mechanics-acceleration-due-to-gravity": {
+          "label": "Acceleration due to gravity",
+          "slug": "mechanics-acceleration-due-to-gravity",
+          "syllabus": "Cambridge 9709 Mechanics (Paper 4) · Kinematics",
+          "syllabusCode": "M4.2f",
+          "status": "complete",
+          "createdAt": "2026-09-09",
+          "pacing": "TEACHING-STANDARD §1-14 house style",
+          "pipeline": "frame study (Sol, own worktree) -> Astra (gpt-6-astra) on B -> render on A -> Fable contact-sheet review",
+          "source": {
+            "project": "projects/mechanics-acceleration-due-to-gravity/",
+            "recording": "~/Documents/9709/",
+            "pdf": "projects/mechanics-acceleration-due-to-gravity/source.pdf"
+          },
+          "formats": {
+            "landscape": {
+              "compositionId": "MechanicsAccelerationDueToGravity",
+              "resolution": "1920x1080",
+              "durationS": 311.0,
+              "composition": "src/remotion/compositions/MechanicsAccelerationDueToGravity.tsx",
+              "render": "output/mechanics/acceleration-due-to-gravity.mp4",
+              "contactSheet": "output/mechanics/acceleration-due-to-gravity-sheet.png"
+            }
+          },
+          "narration": {
+            "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+            "provider": "elevenlabs",
+            "speed": {
+              "brisk": 1.0,
+              "slow": 0.9
+            },
+            "transcript": "src/remotion/public/transcripts/mechanics/acceleration-due-to-gravity.json"
+          },
+          "commits": {
+            "study": "2ab3c86",
+            "narration": "4cb6a16",
+            "build": "4bf0414"
+          },
+          "app": {
+            "notesPage": "/notes/mechanics-acceleration-due-to-gravity",
+            "mapCode": "M4.2f"
+          },
+          "verification": "projects/mechanics-acceleration-due-to-gravity/verify-build.md",
+          "reviewNotes": [
+            "Fable contact-sheet review passed; awaiting Durai."
+          ]
+        },
+        "mechanics-suvat-in-1d": {
+          "label": "suvat in 1D",
+          "slug": "mechanics-suvat-in-1d",
+          "syllabus": "Cambridge 9709 Mechanics (Paper 4) · Kinematics",
+          "syllabusCode": "M4.2g",
+          "status": "complete",
+          "createdAt": "2026-09-09",
+          "pacing": "TEACHING-STANDARD §1-14 house style",
+          "pipeline": "frame study (Sol, own worktree) -> Astra (gpt-6-astra) on B -> render on A -> Fable contact-sheet review",
+          "source": {
+            "project": "projects/mechanics-suvat-in-1d/",
+            "recording": "~/Documents/9709/",
+            "pdf": "projects/mechanics-suvat-in-1d/source.pdf"
+          },
+          "formats": {
+            "landscape": {
+              "compositionId": "MechanicsSuvatIn1D",
+              "resolution": "1920x1080",
+              "durationS": 336.0,
+              "composition": "src/remotion/compositions/MechanicsSuvatIn1D.tsx",
+              "render": "output/mechanics/suvat-in-1d.mp4",
+              "contactSheet": "output/mechanics/suvat-in-1d-sheet.png"
+            }
+          },
+          "narration": {
+            "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+            "provider": "elevenlabs",
+            "speed": {
+              "brisk": 1.0,
+              "slow": 0.9
+            },
+            "transcript": "src/remotion/public/transcripts/mechanics/suvat-in-1d.json"
+          },
+          "commits": {
+            "study": "a05e215",
+            "narration": "3ff1186",
+            "build": "30cee6c"
+          },
+          "app": {
+            "notesPage": "/notes/mechanics-suvat-in-1d",
+            "mapCode": "M4.2g"
+          },
+          "verification": "projects/mechanics-suvat-in-1d/verify-build.md",
+          "reviewNotes": [
+            "Fable contact-sheet review passed; awaiting Durai."
+          ]
+        },
+        "mechanics-force-diagrams": {
+          "label": "Force diagrams",
+          "slug": "mechanics-force-diagrams",
+          "syllabus": "Cambridge 9709 Mechanics (Paper 4) · Forces and equilibrium",
+          "syllabusCode": "M4.1a",
+          "status": "complete",
+          "createdAt": "2026-09-09",
+          "pacing": "TEACHING-STANDARD §1-14 house style",
+          "pipeline": "frame study (Sol, own worktree) -> Astra (gpt-6-astra) on B -> render on A -> Fable contact-sheet review",
+          "source": {
+            "project": "projects/mechanics-force-diagrams/",
+            "recording": "~/Documents/9709/",
+            "pdf": "projects/mechanics-force-diagrams/source.pdf"
+          },
+          "formats": {
+            "landscape": {
+              "compositionId": "MechanicsForceDiagrams",
+              "resolution": "1920x1080",
+              "durationS": 355.0,
+              "composition": "src/remotion/compositions/MechanicsForceDiagrams.tsx",
+              "render": "output/mechanics/force-diagrams.mp4",
+              "contactSheet": "output/mechanics/force-diagrams-sheet.png"
+            }
+          },
+          "narration": {
+            "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+            "provider": "elevenlabs",
+            "speed": {
+              "brisk": 1.0,
+              "slow": 0.9
+            },
+            "transcript": "src/remotion/public/transcripts/mechanics/force-diagrams.json"
+          },
+          "commits": {
+            "study": "585c3a0",
+            "narration": "e604091",
+            "build": "2e46ffc"
+          },
+          "app": {
+            "notesPage": "/notes/mechanics-force-diagrams",
+            "mapCode": "M4.1a"
+          },
+          "verification": "projects/mechanics-force-diagrams/verify-build.md",
+          "reviewNotes": [
+            "Fable contact-sheet review passed; awaiting Durai."
+          ]
         }
       },
       "inkTutor": {
