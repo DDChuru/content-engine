@@ -1232,7 +1232,7 @@
             "landscape": {
               "compositionId": "MechanicsAccelerationDueToGravity",
               "resolution": "1920x1080",
-              "durationS": 311.0,
+              "durationS": 366.95,
               "composition": "src/remotion/compositions/MechanicsAccelerationDueToGravity.tsx",
               "render": "output/mechanics/acceleration-due-to-gravity.mp4",
               "contactSheet": "output/mechanics/acceleration-due-to-gravity-sheet.png"
@@ -1250,7 +1250,9 @@
           "commits": {
             "study": "2ab3c86",
             "narration": "4cb6a16",
-            "build": "4bf0414"
+            "build": "4bf0414",
+            "returnHeightFix": "98fa2e0",
+            "returnHeightNarration": "de056a6"
           },
           "app": {
             "notesPage": "/notes/mechanics-acceleration-due-to-gravity",
@@ -1258,7 +1260,8 @@
           },
           "verification": "projects/mechanics-acceleration-due-to-gravity/verify-build.md",
           "reviewNotes": [
-            "Fable contact-sheet review passed; awaiting Durai."
+            "Fable contact-sheet review passed; awaiting Durai.",
+            "2026-09-09 Durai challenged 'returns at same velocity': scene rebuilt per §15 — conditions first, v² = u² + 2as with s = 0 derived by hand → v = −12, then graph + cliff caveat. 6:07."
           ]
         },
         "mechanics-suvat-in-1d": {
