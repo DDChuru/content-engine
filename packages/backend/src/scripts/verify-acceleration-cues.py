@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Resolve gravity figure references from local words; prove values and silent holds."""
-import array,hashlib,json,math,re,subprocess
+import argparse,array,hashlib,json,math,re,subprocess
 from pathlib import Path
 R=Path(__file__).resolve().parents[2]
 P=R/'src/remotion/public/transcripts/mechanics/acceleration-due-to-gravity.json'
@@ -10,7 +10,16 @@ A=R/'src/remotion/public/audio/mechanics'
 TARGETS={
  's02':{'weight':{'weight':'weight','g':'gravity'},'gravity':{'ten':'gravity','10':'gravity','g':'gravity'},'sign':{'minus':'acceleration','ten':'acceleration','10':'acceleration'},'top':{'zero':'top'}},
  's03':{'height':{'fifteen':'displacement','15':'displacement','minus':'displacement'},'initial':{'zero':'initial','0':'initial','ten':'acceleration','10':'acceleration','minus':'acceleration'},'formula':{'final':'result','initial':'initial','acceleration':'acceleration','displacement':'displacement'},'substitute':{'0':'initial','zero':'initial','2':'ink-substitute','two':'ink-substitute','10':'acceleration','ten':'acceleration','15':'displacement','fifteen':'displacement'},'square':{'300':'ink-square','three':'ink-square','hundred':'ink-square'},'result':{'*':'result'},'change':{'initial':'changed-initial'}},
- 's04':{'initial':{'12':'initial','twelve':'initial'},'top':{'zero':'top','0':'top'},'return':{'minus':'return','twelve':'return','12':'return'},'equal':{'time':'equal'}},
+ 's04':{
+  'story':{'12':'initial','twelve':'initial','height':'displacement','no':'conditions'},
+  'givens':{'minus':'acceleration','ten':'acceleration','10':'acceleration'},
+  'formula':{'final':'return','initial':'initial','acceleration':'acceleration','displacement':'displacement'},
+  'substitute':{'twelve':'initial','12':'initial','two':'ink-substitute','2':'ink-substitute','ten':'acceleration','10':'acceleration','zero':'displacement','0':'displacement','s':'displacement'},
+  'square':{'*':'ink-square','forty':'ink-square','144':'ink-square'},
+  'roots':{'*':'ink-roots','plus':'ink-roots'},
+  'result':{'minus':'return','twelve':'return','12':'return'},
+  'graph':{'zero':'displacement','0':'displacement'},
+  'caveat':{'height':'displacement','no':'conditions'}},
  's05':{'initial':{'eight':'initial','8':'initial'},'height':{'twenty':'displacement','20':'displacement','minus':'displacement'},'acceleration':{'minus':'acceleration','ten':'acceleration','10':'acceleration'}},
  's06':{'setup':{'time':'time-result'},'formula':{'displacement':'displacement','initial':'initial','acceleration':'acceleration','time':'time-result'},'substitute':{'twenty':'displacement','20':'displacement','eight':'initial','8':'initial','ten':'acceleration','10':'acceleration','half':'ink-substitute'},'rearrange':{'*':'ink-rearrange'},'roots':{'*':'ink-roots'},'positive':{'positive':'ink-positive'},'result':{'2':'time-result','two':'time-result','.95':'time-result','2.95':'time-result'}},
  's07':{'top':{'zero':'top','0':'top','eight':'initial','8':'initial','ten':'acceleration','10':'acceleration'},'formula':{'final':'top','initial':'initial','acceleration':'acceleration','displacement':'rise'},'substitute':{'zero':'top','0':'top','eight':'initial','8':'initial','two':'ink-substitute','2':'ink-substitute','ten':'acceleration','10':'acceleration','s':'rise'},'simplify':{'*':'ink-simplify'},'rise':{'*':'rise'},'height-formula':{'cliff':'cliff-height','rise':'rise'},'result':{'20':'cliff-height','twenty':'cliff-height','3':'rise','three':'rise','3.2':'rise','23':'height-result','23.2':'height-result'}},
@@ -18,8 +27,10 @@ TARGETS={
 NUMBERS={'zero','one','two','three','four','five','six','seven','eight','nine','ten','twelve','fifteen','seventeen','twenty','hundred','sixty','point','minus'}
 def clean(w):return w.lower().strip('.,?!:;') if not w.startswith('.') else w.rstrip(',?!:;')
 def main():
+ parser=argparse.ArgumentParser();parser.add_argument('--scene');args=parser.parse_args()
  d=json.loads(P.read_text());events=0
  for s in d['scenes']:
+  if args.scene and s['id']!=args.scene:continue
   assert hashlib.sha256((A/s['audio']).read_bytes()).hexdigest()==s['audioSha256']
   assert s['voiceId']=='gYWKdgLtqjPO3D5uDrDP'
   assert s['voiceSpeed']==(.9 if s['tempo']=='slow' else 1.)
@@ -61,7 +72,10 @@ def main():
    raw=subprocess.check_output(['ffmpeg','-v','error','-ss',str(h['start']+.1),'-t',str(h['duration']-.2),'-i',str(A/s['audio']),'-f','s16le','-ac','1','-ar','8000','-'])
    values=array.array('h',raw);rms=math.sqrt(sum(v*v for v in values)/len(values));assert rms<5,(s['id'],h,rms)
   assert len(s['cues'])==len(s['beats'])
- assert 270<=d['totalDuration']<=330
+ # Durai's requested S04 derivation extends the original runtime; other scenes stay fixed.
+ assert abs(d['totalDuration']-sum(s['duration'] for s in d['scenes']))<1e-6
+ assert abs(sum(s['duration'] for s in d['scenes'] if s['id']!='s04')-272.509389)<1e-6
+ assert 12**2+2*(-10)*0==144 and (-12)**2==144
  assert abs((-math.sqrt(300))**2-2*(-10)*(-15))<1e-10
  t=(8+math.sqrt(464))/10
  assert abs(8*t-5*t*t+20)<1e-10 and round(t,2)==2.95

@@ -11,7 +11,7 @@ P=R/'packages/backend/src/remotion/public/transcripts/mechanics'
 SR=44100
 
 def main():
- parser=argparse.ArgumentParser();parser.add_argument('project');parser.add_argument('--transcribe',action='store_true');args=parser.parse_args()
+ parser=argparse.ArgumentParser();parser.add_argument('project');parser.add_argument('--transcribe',action='store_true');parser.add_argument('--scene');args=parser.parse_args()
  source=(R/'packages/backend/projects'/args.project/'STORYBOARD.md').read_text()
  plan=json.loads(re.search(r'```json\n(.*?)\n```',source,re.S)[1]);prefix=plan['prefix']
  work=Path('/tmp')/('verify-'+prefix+'-narration');work.mkdir(exist_ok=True)
@@ -47,13 +47,18 @@ def main():
    subprocess.run(['ffmpeg','-v','error','-y','-f','s16le','-ac','1','-ar',str(SR),'-i','-','-codec:a','libmp3lame','-b:a','128k',str(audio)],input=np.concatenate(chunks).tobytes(),check=True)
    result={**scene,'beats':beats,'holds':holds,'audio':audio.name,'audioSha256':hashlib.sha256(audio.read_bytes()).hexdigest(),'voiceId':'gYWKdgLtqjPO3D5uDrDP','provider':'elevenlabs','sampleDuration':position/SR}
    (work/(scene['id']+'.json')).write_text(json.dumps(result,indent=2)+'\n');print(scene['id'],round(position/SR,2),flush=True);return result
-  with concurrent.futures.ThreadPoolExecutor(max_workers=3) as pool:scenes=list(pool.map(generate,plan['scenes']))
+  with concurrent.futures.ThreadPoolExecutor(max_workers=3) as pool:scenes=list(pool.map(generate,[s for s in plan['scenes'] if not args.scene or s['id']==args.scene]))
+  if args.scene:
+   previous=json.loads((P/(prefix+'.json')).read_text())['scenes'];changed={s['id']:s for s in scenes}
+   assert args.scene in changed,'Unknown scene'
+   scenes=[changed.get(s['id'],s) for s in previous]
   (work/'timing.json').write_text(json.dumps(scenes,indent=2)+'\n');print('TOTAL',sum(s['sampleDuration'] for s in scenes),flush=True)
  else:
   from faster_whisper import WhisperModel
   model=WhisperModel('small',device='cpu',compute_type='int8',cpu_threads=4)
   scenes=json.loads((work/'timing.json').read_text())
   for s in scenes:
+   if args.scene and s['id']!=args.scene:continue
    words=[];cues={};events=[]
    full_cache=work/(s['id']+'-full-words.json')
    missing=not full_cache.exists() or json.loads(full_cache.read_text()).get('sha')!=s['audioSha256']
@@ -85,6 +90,7 @@ def main():
     if b.get('ink') and b.get('target'):events.append(dict(id=b['id']+'-substitution',start=b['cue'],end=b['penEnd'],target=b['target'],kind='substitution'))
    s.update(words=words,cues=cues,figureEvents=events,wordCount=len(words),text=' '.join(w['word'] for w in words),duration=float(subprocess.check_output(['ffprobe','-v','error','-show_entries','format=duration','-of','default=noprint_wrappers=1:nokey=1',str(A/s['audio'])])))
    assert len(cues)==len(s['beats']);print(s['id'],len(words),'words;',len(cues),'cues;',round(s['duration'],2),'seconds',flush=True)
-  result=dict(project=args.project,sceneCount=len(scenes),scenes=scenes,totalDuration=sum(s['duration'] for s in scenes),engine='faster-whisper-small (local CPU)',unresolvedCues=[])
+  previous=json.loads((P/(prefix+'.json')).read_text()) if args.scene else {}
+  result=dict(previous,project=args.project,sceneCount=len(scenes),scenes=scenes,totalDuration=sum(s['duration'] for s in scenes),engine='faster-whisper-small (local CPU)',unresolvedCues=[])
   (P/(prefix+'.json')).write_text(json.dumps(result,indent=2,ensure_ascii=False)+'\n');print('TOTAL',result['totalDuration'])
 if __name__=='__main__':main()

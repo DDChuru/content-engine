@@ -1,6 +1,6 @@
 # Acceleration due to gravity — storyboard
 
-M4.2 / mechanics-acceleration-due-to-gravity. Target 4:30–5:30. Teaching standard §§1–14 and PACING bind. User explicitly requests two examples; this overrides the usual one-example ceiling. No video render.
+M4.2 / mechanics-acceleration-due-to-gravity. Original target 4:30–5:30; the requested S04 derivation extends the runtime while all other scenes remain unchanged. Teaching standard §§1–14 and PACING bind. User explicitly requests two examples; this overrides the usual one-example ceiling. No video render.
 
 Exact syllabus excerpt, already verified in the preceding Deriving SUVAT project: “use appropriate formulae for motion with constant acceleration in a straight line”. Show in two successive caption lines beside a falling-ball motif. Outcomes: **Distinguish weight from acceleration. / Keep one positive direction. / Solve vertical motion problems.** Repeat exactly, ticked, at the close.
 
@@ -12,7 +12,7 @@ The recording's downward example uses u = 4 and a 15 m drop, followed by the dro
 
 Eight scenes. One header plus at most two body regions. Scenarios move before axes, numbers or working. Drop/cliff problem cards have at most three short lines; all givens and dashed unknowns sit on the diagrams before substitution and remain throughout working. Formula lines remain on the same paper page above substitutions. Draw with the approved stroke player and visible pen. Reserve pen-finish time, then freeze every visual during each inserted silent hold. Every spoken displayed figure and every substituted source has a local-Whisper word event and a loose accent ring. Problem-card phrases underline at their narration beat. Ring completed results on paper and copy them to the diagram after the pen finishes.
 
-S04 uses a shaded velocity–time graph, tracing dot, zero crossing and matching up/down areas beside the moving ball. Symmetry applies only to return to launch height. The below-launch contrast stays qualitative. S08 asks one question and holds three seconds before the answer. Captions are at most eight words and always accompany a diagram.
+S04 establishes same height and no air resistance, derives v = −12 on paper, THEN uses the existing shaded velocity–time graph, tracing dot and matching up/down areas beside the ball. Symmetry applies only to return to launch height. The below-launch contrast stays qualitative. S08 asks one question and holds three seconds before the answer. Captions are at most eight words and always accompany a diagram.
 
 Voice gYWKdgLtqjPO3D5uDrDP; ElevenLabs turbo v2.5, ELEVENLABS_SPEED / voice_settings.speed 0.9 for slow scenes and 1.0 for brisk scenes. Local faster-whisper-small transcription; no cloud transcription. Audio: acceleration-due-to-gravity-sNN.mp3. Transcript: acceleration-due-to-gravity.json. Audio sample durations determine sequence lengths, rounded upward to 30 fps frames.
 
@@ -52,15 +52,21 @@ tempo: slow; speed: 0.9; source: f150–f179; requested dropped variant of 15 m 
 
 ### s04 — Returning to the launch height
 
-tempo: brisk; speed: 1.0; source: f057–f147
+tempo: slow; speed: 0.9; source: f057–f147; Durai revision 2026-09-09
 
-- **story**: Picture a ball thrown up, turning, and returning.
-- **initial**: Launch velocity: twelve metres per second upward.
-- **graph**: Now the velocity time graph: constant acceleration, straight line.
-- **top**: At the top, velocity is zero; then negative. Up remains positive.
-- **return**: Returning velocity: minus twelve metres per second. Hold 2 s after pen finish.
-- **equal**: Areas cancel. Time up equals time down only when returning to launch height, without air resistance. Hold 2 s after pen finish.
-- **lower**: Landing lower takes longer. The cliff is not symmetric.
+Problem card (three lines): `u = +12 m s⁻¹; back to launch height (s = 0)` / `a = −10 m s⁻²; no air resistance` / `Find v on return.`
+
+Animate the ball up and back to a clearly labelled launch/catch height. Establish conditions before any claim. All givens remain on the diagram during the five formula-first handwritten lines. Ring 12, −10 and 0 at their local word cues and during substitution. Keep return velocity unknown until the sign has been selected. Only after the completed, ringed result and hold does the existing shaded v–t graph replace the paper. The caveat states the same-height/no-resistance rule and the cliff exception. No other scene or audio is revised.
+
+- **story**: Picture a ball thrown up at twelve metres per second, and caught back at the same height it left. No air resistance. Up is positive. Hold 2 s after pen finish.
+- **givens**: Acceleration is minus ten metres per second squared. Find velocity on return. Hold 2 s after pen finish.
+- **formula**: Final velocity squared equals initial velocity squared plus twice acceleration times displacement. Write `v² = u² + 2as`. Hold 2 s after pen finish.
+- **substitute**: Twelve squared, plus two times minus ten times zero. S is zero because it is back where it started. Write `v² = 12² + 2(−10)(0)`. Hold 2 s after pen finish.
+- **square**: So v squared equals u squared: one hundred and forty four. Write `v² = 144`. Hold 2 s after pen finish.
+- **roots**: Taking square roots gives v equals plus or minus twelve. Write `v = ±12`. Hold 2 s after pen finish.
+- **result**: It is coming down, so velocity is minus twelve metres per second. Same speed, opposite direction. Write `coming down: v = −12 m s⁻¹`. Hold 2 s after pen finish.
+- **graph**: Now the velocity time graph. These equal triangles have opposite signed areas. The total displacement is zero. Hold 2 s after pen finish.
+- **caveat**: This only works if it lands at the same height with no air resistance. Thrown from a cliff, it lands faster. Hold 2 s after pen finish.
 
 ### s05 — A stone thrown from a cliff
 
@@ -256,51 +262,62 @@ tempo: brisk; speed: 1.0; source: f076–f108; f271–f308
       "id": "s04",
       "title": "Returning to the launch height",
       "mode": "symmetry",
-      "tempo": "brisk",
-      "voiceSpeed": 1.0,
-      "source": "f057–f147",
+      "tempo": "slow",
+      "voiceSpeed": 0.9,
+      "source": "f057–f147; Durai requested formula-first derivation, 2026-09-09",
       "beats": [
         {
           "id": "story",
-          "text": "Picture a ball thrown up, turning, and returning.",
-          "hold": 0
+          "text": "Picture a ball thrown up at twelve metres per second, and caught back at the same height it left. No air resistance. Up is positive.",
+          "hold": 2
         },
         {
-          "id": "initial",
-          "text": "Launch velocity: twelve metres per second upward.",
-          "hold": 0,
-          "target": "initial"
+          "id": "givens",
+          "text": "Acceleration is minus ten metres per second squared. Find velocity on return.",
+          "hold": 2
+        },
+        {
+          "id": "formula",
+          "text": "Final velocity squared equals initial velocity squared plus twice acceleration times displacement.",
+          "hold": 2,
+          "ink": "v² = u² + 2as"
+        },
+        {
+          "id": "substitute",
+          "text": "Twelve squared, plus two times minus ten times zero. S is zero because it is back where it started.",
+          "hold": 2,
+          "ink": "v² = 12² + 2(−10)(0)"
+        },
+        {
+          "id": "square",
+          "text": "So v squared equals u squared: one hundred and forty four.",
+          "hold": 2,
+          "ink": "v² = 144"
+        },
+        {
+          "id": "roots",
+          "text": "Taking square roots gives v equals plus or minus twelve.",
+          "hold": 2,
+          "ink": "v = ±12"
+        },
+        {
+          "id": "result",
+          "text": "It is coming down, so velocity is minus twelve metres per second. Same speed, opposite direction.",
+          "hold": 2,
+          "ink": "coming down: v = −12 m s⁻¹",
+          "caption": "Same speed, opposite direction"
         },
         {
           "id": "graph",
-          "text": "Now the velocity time graph: constant acceleration, straight line.",
-          "hold": 0,
-          "caption": "Constant acceleration: a straight line"
-        },
-        {
-          "id": "top",
-          "text": "At the top, velocity is zero; then negative. Up remains positive.",
-          "hold": 0,
-          "target": "top"
-        },
-        {
-          "id": "return",
-          "text": "Returning velocity: minus twelve metres per second.",
+          "text": "Now the velocity time graph. These equal triangles have opposite signed areas. The total displacement is zero.",
           "hold": 2,
-          "target": "return"
+          "caption": "Equal areas; zero total displacement"
         },
         {
-          "id": "equal",
-          "text": "Areas cancel. Time up equals time down only when returning to launch height, without air resistance.",
+          "id": "caveat",
+          "text": "This only works if it lands at the same height with no air resistance. Thrown from a cliff, it lands faster.",
           "hold": 2,
-          "target": "equal",
-          "caption": "Equal times only to the same height"
-        },
-        {
-          "id": "lower",
-          "text": "Landing lower takes longer. The cliff is not symmetric.",
-          "hold": 0,
-          "caption": "Lower landing: more time coming down"
+          "caption": "Same height, no air resistance"
         }
       ]
     },
@@ -507,6 +524,10 @@ tempo: brisk; speed: 1.0; source: f076–f108; f271–f308
 }
 ```
 
-## Resolved narration verification
+## Original-build narration verification (superseded for S04 by this revision)
 
 Measured audio: 311.432 seconds (5:11.432), 9346 frames at 30 fps after per-scene rounding. All 49 beat cues resolved by local faster-whisper-small on isolated speech beats. 46 seconds of inserted silent holds, each checked against decoded audio. `verify-acceleration-cues.py` checks audio hashes, voice speed, cue bounds, silence and independent arithmetic. Word lists preserve raw local recognition; semantic figure targets are stored separately.
+
+## S04 revision narration verification
+
+Scene audio: 94.302 s. Total audio: 366.811 s; composition: 11008 frames / 366.933 s. All nine S04 cues resolved locally, including every spoken sign. Nine inserted two-second holds. The other seven MP3s and transcript scenes are byte/object-identical to reviewed build `4bf0414`, as checked in `verify-return-height-narration.json`.
