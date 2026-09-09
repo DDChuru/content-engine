@@ -1,5 +1,6 @@
 import React from 'react';
 import { Composition, registerRoot } from 'remotion';
+import { MechanicsEquilibriumIn1D, MechanicsEquilibriumIn1DProps, getMechanicsEquilibriumIn1DDuration } from './compositions/MechanicsEquilibriumIn1D';
 import { EducationalLesson } from './compositions/EducationalLesson';
 import { SetsLesson, getSetsLessonDuration } from './compositions/SetsLesson';
 import { EconetComplaintVideo } from './compositions/ConsumerComplaint';
@@ -1369,6 +1370,15 @@ export const RemotionRoot: React.FC = () => {
         width={1920}
         height={1080}
         defaultProps={{ audioEnabled: true } satisfies MechanicsDerivingSuvatProps}
+      />
+      <Composition
+        id="MechanicsEquilibriumIn1D"
+        component={MechanicsEquilibriumIn1D}
+        durationInFrames={getMechanicsEquilibriumIn1DDuration(30)}
+        fps={30}
+        width={1920}
+        height={1080}
+        defaultProps={{ audioEnabled: true } satisfies MechanicsEquilibriumIn1DProps}
       />
     </>
   );
