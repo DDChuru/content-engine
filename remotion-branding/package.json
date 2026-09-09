@@ -29,13 +29,15 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@remotion/media": "^4.0.484",
+    "@remotion/media": "4.0.484",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
-    "remotion": "^4.0.364"
+    "remotion": "4.0.484"
   },
   "devDependencies": {
-    "@remotion/cli": "^4.0.364",
+    "@remotion/bundler": "4.0.484",
+    "@remotion/cli": "4.0.484",
+    "@remotion/renderer": "4.0.484",
     "@types/react": "^18.3.26",
     "typescript": "^5.9.3"
   }
