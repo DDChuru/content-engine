@@ -1,0 +1,268 @@
+{
+  "passed": true,
+  "durationSeconds": 354.8995929999999,
+  "frames30fps": 10650,
+  "scenes": [
+    {
+      "scene": "s01",
+      "duration": 20.976327,
+      "words": 35,
+      "cues": 5,
+      "figures": 0,
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 19.49,
+          "end": 20.49,
+          "duration": 1.0,
+          "rms": 0.0
+        }
+      ],
+      "recognitionDifferences": []
+    },
+    {
+      "scene": "s02",
+      "duration": 48.248163,
+      "words": 63,
+      "cues": 10,
+      "figures": 5,
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 5.72,
+          "end": 7.72,
+          "duration": 2.0,
+          "rms": 0.0
+        },
+        {
+          "kind": "hold",
+          "start": 44.14,
+          "end": 45.14,
+          "duration": 1.0,
+          "rms": 0.0
+        },
+        {
+          "kind": "hold",
+          "start": 46.75,
+          "end": 47.75,
+          "duration": 1.0,
+          "rms": 0.0
+        }
+      ],
+      "recognitionDifferences": [
+        {
+          "kind": "insert",
+          "script": "",
+          "whisper": "m"
+        }
+      ]
+    },
+    {
+      "scene": "s03",
+      "duration": 34.324898,
+      "words": 58,
+      "cues": 11,
+      "figures": 6,
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 8.37,
+          "end": 10.37,
+          "duration": 2.0,
+          "rms": 0.0
+        },
+        {
+          "kind": "hold",
+          "start": 30.06,
+          "end": 31.06,
+          "duration": 1.0,
+          "rms": 0.0
+        },
+        {
+          "kind": "hold",
+          "start": 32.83,
+          "end": 33.83,
+          "duration": 1.0,
+          "rms": 0.0
+        }
+      ],
+      "recognitionDifferences": []
+    },
+    {
+      "scene": "s04",
+      "duration": 58.697143,
+      "words": 77,
+      "cues": 14,
+      "figures": 9,
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 6.88,
+          "end": 8.88,
+          "duration": 2.0,
+          "rms": 0.0
+        },
+        {
+          "kind": "pause",
+          "start": 30.8,
+          "end": 31.8,
+          "duration": 1.0,
+          "rms": 0.0
+        },
+        {
+          "kind": "hold",
+          "start": 56.22,
+          "end": 58.22,
+          "duration": 2.0,
+          "rms": 0.0
+        }
+      ],
+      "recognitionDifferences": []
+    },
+    {
+      "scene": "s05",
+      "duration": 48.169796,
+      "words": 73,
+      "cues": 14,
+      "figures": 9,
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 11.74,
+          "end": 13.74,
+          "duration": 2.0,
+          "rms": 0.0
+        },
+        {
+          "kind": "pause",
+          "start": 23.74,
+          "end": 24.74,
+          "duration": 1.0,
+          "rms": 0.0
+        },
+        {
+          "kind": "hold",
+          "start": 39.69,
+          "end": 41.69,
+          "duration": 2.0,
+          "rms": 0.0
+        },
+        {
+          "kind": "hold",
+          "start": 45.69,
+          "end": 47.69,
+          "duration": 2.0,
+          "rms": 0.0
+        }
+      ],
+      "recognitionDifferences": []
+    },
+    {
+      "scene": "s06",
+      "duration": 72.594286,
+      "words": 92,
+      "cues": 22,
+      "figures": 18,
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 17.82,
+          "end": 19.82,
+          "duration": 2.0,
+          "rms": 0.0
+        },
+        {
+          "kind": "pause",
+          "start": 47.6,
+          "end": 48.6,
+          "duration": 1.0,
+          "rms": 0.0
+        },
+        {
+          "kind": "hold",
+          "start": 64.55,
+          "end": 66.55,
+          "duration": 2.0,
+          "rms": 0.0
+        },
+        {
+          "kind": "hold",
+          "start": 71.11,
+          "end": 72.11,
+          "duration": 1.0,
+          "rms": 0.0
+        }
+      ],
+      "recognitionDifferences": []
+    },
+    {
+      "scene": "s07",
+      "duration": 35.030204,
+      "words": 64,
+      "cues": 11,
+      "figures": 6,
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 5.69,
+          "end": 7.69,
+          "duration": 2.0,
+          "rms": 0.0
+        },
+        {
+          "kind": "pause",
+          "start": 15.85,
+          "end": 16.85,
+          "duration": 1.0,
+          "rms": 0.0
+        },
+        {
+          "kind": "hold",
+          "start": 27.17,
+          "end": 28.17,
+          "duration": 1.0,
+          "rms": 0.0
+        },
+        {
+          "kind": "hold",
+          "start": 30.41,
+          "end": 31.41,
+          "duration": 1.0,
+          "rms": 0.0
+        }
+      ],
+      "recognitionDifferences": []
+    },
+    {
+      "scene": "s08",
+      "duration": 36.858776,
+      "words": 49,
+      "cues": 10,
+      "figures": 4,
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 9.71,
+          "end": 12.71,
+          "duration": 3.0,
+          "rms": 0.0
+        },
+        {
+          "kind": "hold",
+          "start": 27.77,
+          "end": 29.77,
+          "duration": 2.0,
+          "rms": 0.0
+        },
+        {
+          "kind": "hold",
+          "start": 35.36,
+          "end": 36.36,
+          "duration": 1.0,
+          "rms": 0.0
+        }
+      ],
+      "recognitionDifferences": []
+    }
+  ]
+}
