@@ -1,0 +1,3313 @@
+{
+  "project": "mechanics-equilibrium-in-1d",
+  "engine": "faster-whisper-small (local, beat-isolated)",
+  "generatedAt": "2026-09-09T01:12:11.300223+00:00",
+  "sceneCount": 7,
+  "totalDuration": 267.023673,
+  "scenes": [
+    {
+      "id": "s01",
+      "tempo": "brisk",
+      "voiceSpeed": 1.0,
+      "budget": 25,
+      "paragraphs": [
+        "Syllabus four point one: use the principle that, when a particle is in equilibrium, the vector sum of the forces acting is zero. By the end you can find the resultant along a line; balance forces to find an unknown; and explain why equilibrium allows motion."
+      ],
+      "audio": "equilibrium-in-1d-s01.mp3",
+      "audioSha256": "52ba6ed63f53f4ea8a0c6b8d664fa66f47786f31925b4519c8026e1fcc9ffb29",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "provider": "elevenlabs",
+      "beats": [
+        {
+          "text": "Syllabus four point one: use the principle that, when a particle is in equilibrium, the vector sum of the forces acting is zero. By the end you can find the resultant along a line; balance forces to find an unknown; and explain why equilibrium allows motion.",
+          "start": 0.55,
+          "end": 22.21
+        }
+      ],
+      "holds": [],
+      "sampleDuration": 25.0,
+      "duration": 25.051429,
+      "words": [
+        {
+          "word": "Syllabus",
+          "start": 0.55,
+          "end": 1.01
+        },
+        {
+          "word": "four",
+          "start": 1.01,
+          "end": 1.33
+        },
+        {
+          "word": "point",
+          "start": 1.33,
+          "end": 1.57
+        },
+        {
+          "word": "one",
+          "start": 1.57,
+          "end": 1.99
+        },
+        {
+          "word": "use",
+          "start": 1.99,
+          "end": 2.97
+        },
+        {
+          "word": "the",
+          "start": 2.97,
+          "end": 3.13
+        },
+        {
+          "word": "principle",
+          "start": 3.13,
+          "end": 3.57
+        },
+        {
+          "word": "that,",
+          "start": 3.57,
+          "end": 4.01
+        },
+        {
+          "word": "when",
+          "start": 4.17,
+          "end": 4.31
+        },
+        {
+          "word": "a",
+          "start": 4.31,
+          "end": 4.55
+        },
+        {
+          "word": "particle",
+          "start": 4.55,
+          "end": 4.87
+        },
+        {
+          "word": "is",
+          "start": 4.87,
+          "end": 5.21
+        },
+        {
+          "word": "in",
+          "start": 5.21,
+          "end": 5.33
+        },
+        {
+          "word": "equilibrium,",
+          "start": 5.33,
+          "end": 5.77
+        },
+        {
+          "word": "the",
+          "start": 6.51,
+          "end": 6.71
+        },
+        {
+          "word": "vector",
+          "start": 6.71,
+          "end": 7.11
+        },
+        {
+          "word": "sum",
+          "start": 7.11,
+          "end": 7.57
+        },
+        {
+          "word": "of",
+          "start": 7.57,
+          "end": 7.99
+        },
+        {
+          "word": "the",
+          "start": 7.99,
+          "end": 8.13
+        },
+        {
+          "word": "forces",
+          "start": 8.13,
+          "end": 8.47
+        },
+        {
+          "word": "acting",
+          "start": 8.47,
+          "end": 8.99
+        },
+        {
+          "word": "is",
+          "start": 8.99,
+          "end": 9.45
+        },
+        {
+          "word": "zero.",
+          "start": 9.45,
+          "end": 10.33
+        },
+        {
+          "word": "By",
+          "start": 11.31,
+          "end": 11.53
+        },
+        {
+          "word": "the",
+          "start": 11.53,
+          "end": 11.69
+        },
+        {
+          "word": "end",
+          "start": 11.69,
+          "end": 11.97
+        },
+        {
+          "word": "you",
+          "start": 11.97,
+          "end": 12.61
+        },
+        {
+          "word": "can",
+          "start": 12.61,
+          "end": 12.73
+        },
+        {
+          "word": "find",
+          "start": 12.73,
+          "end": 12.95
+        },
+        {
+          "word": "the",
+          "start": 12.95,
+          "end": 13.15
+        },
+        {
+          "word": "resultant",
+          "start": 13.15,
+          "end": 13.87
+        },
+        {
+          "word": "along",
+          "start": 13.87,
+          "end": 14.25
+        },
+        {
+          "word": "a",
+          "start": 14.25,
+          "end": 14.49
+        },
+        {
+          "word": "line,",
+          "start": 14.49,
+          "end": 14.79
+        },
+        {
+          "word": "balance",
+          "start": 14.79,
+          "end": 16.09
+        },
+        {
+          "word": "forces",
+          "start": 16.09,
+          "end": 16.59
+        },
+        {
+          "word": "to",
+          "start": 16.59,
+          "end": 17.11
+        },
+        {
+          "word": "find",
+          "start": 17.11,
+          "end": 17.43
+        },
+        {
+          "word": "an",
+          "start": 17.43,
+          "end": 17.61
+        },
+        {
+          "word": "unknown",
+          "start": 17.61,
+          "end": 17.99
+        },
+        {
+          "word": "and",
+          "start": 17.99,
+          "end": 19.21
+        },
+        {
+          "word": "explain",
+          "start": 19.21,
+          "end": 19.61
+        },
+        {
+          "word": "why",
+          "start": 19.61,
+          "end": 19.99
+        },
+        {
+          "word": "equilibrium",
+          "start": 19.99,
+          "end": 20.63
+        },
+        {
+          "word": "allows",
+          "start": 20.63,
+          "end": 21.49
+        },
+        {
+          "word": "motion.",
+          "start": 21.49,
+          "end": 21.97
+        }
+      ],
+      "wordCount": 46,
+      "text": "Syllabus four point one use the principle that, when a particle is in equilibrium, the vector sum of the forces acting is zero. By the end you can find the resultant along a line, balance forces to find an unknown and explain why equilibrium allows motion.",
+      "cues": {
+        "quote1": 1.99,
+        "quote2": 6.51,
+        "outcomes": 11.31,
+        "o1": 12.73,
+        "o2": 14.79,
+        "o3": 19.21
+      },
+      "cueEdges": {
+        "quote1": {
+          "start": 1.99,
+          "end": 3.57,
+          "wordIndex": 4
+        },
+        "quote2": {
+          "start": 6.51,
+          "end": 7.57,
+          "wordIndex": 14
+        },
+        "outcomes": {
+          "start": 11.31,
+          "end": 11.97,
+          "wordIndex": 23
+        },
+        "o1": {
+          "start": 12.73,
+          "end": 13.87,
+          "wordIndex": 28
+        },
+        "o2": {
+          "start": 14.79,
+          "end": 16.59,
+          "wordIndex": 34
+        },
+        "o3": {
+          "start": 19.21,
+          "end": 19.99,
+          "wordIndex": 41
+        }
+      },
+      "figures": []
+    },
+    {
+      "id": "s02",
+      "tempo": "slow",
+      "voiceSpeed": 0.9,
+      "budget": 49,
+      "paragraphs": [
+        "The resultant is the combined effect of all the forces. Along one line, direction matters. Choose right as positive. The rightward force is fifty newtons; the leftward force is twenty newtons. [pause 0.6 s] Write resultant equals right minus left. [pause 1 s] Fifty minus twenty gives thirty newtons, to the right. [hold 2 s] Draw that resultant separately. It replaces the pair; it is not a third force. Now make the opposing forces forty newtons each. [pause 0.8 s] Their resultant is zero newtons. [hold 2 s] This is equilibrium: forces act, but their effects balance."
+      ],
+      "audio": "equilibrium-in-1d-s02.mp3",
+      "audioSha256": "0f19cf932a218b5c9e96fd1f956c36bfd58cc899962451d4a09ebde1e47541e6",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "provider": "elevenlabs",
+      "beats": [
+        {
+          "text": "The resultant is the combined effect of all the forces. Along one line, direction matters. Choose right as positive. The rightward force is fifty newtons; the leftward force is twenty newtons.",
+          "start": 0.55,
+          "end": 20.55
+        },
+        {
+          "text": "Write resultant equals right minus left.",
+          "start": 21.15,
+          "end": 23.97
+        },
+        {
+          "text": "Fifty minus twenty gives thirty newtons, to the right.",
+          "start": 24.97,
+          "end": 28.7
+        },
+        {
+          "text": "Draw that resultant separately. It replaces the pair; it is not a third force. Now make the opposing forces forty newtons each.",
+          "start": 30.7,
+          "end": 42.34
+        },
+        {
+          "text": "Their resultant is zero newtons.",
+          "start": 43.14,
+          "end": 45.43
+        },
+        {
+          "text": "This is equilibrium: forces act, but their effects balance.",
+          "start": 47.43,
+          "end": 52.43
+        }
+      ],
+      "holds": [
+        {
+          "kind": "pause",
+          "start": 20.55,
+          "end": 21.15,
+          "duration": 0.6
+        },
+        {
+          "kind": "pause",
+          "start": 23.97,
+          "end": 24.97,
+          "duration": 1.0
+        },
+        {
+          "kind": "hold",
+          "start": 28.7,
+          "end": 30.7,
+          "duration": 2.0
+        },
+        {
+          "kind": "pause",
+          "start": 42.34,
+          "end": 43.14,
+          "duration": 0.8
+        },
+        {
+          "kind": "hold",
+          "start": 45.43,
+          "end": 47.43,
+          "duration": 2.0
+        }
+      ],
+      "sampleDuration": 52.88,
+      "duration": 52.924082,
+      "words": [
+        {
+          "word": "The",
+          "start": 0.55,
+          "end": 0.69
+        },
+        {
+          "word": "resultant",
+          "start": 0.69,
+          "end": 1.57
+        },
+        {
+          "word": "is",
+          "start": 1.57,
+          "end": 2.27
+        },
+        {
+          "word": "the",
+          "start": 2.27,
+          "end": 2.43
+        },
+        {
+          "word": "combined",
+          "start": 2.43,
+          "end": 2.89
+        },
+        {
+          "word": "effect",
+          "start": 2.89,
+          "end": 3.43
+        },
+        {
+          "word": "of",
+          "start": 3.43,
+          "end": 3.93
+        },
+        {
+          "word": "all",
+          "start": 3.93,
+          "end": 4.23
+        },
+        {
+          "word": "the",
+          "start": 4.23,
+          "end": 4.39
+        },
+        {
+          "word": "forces.",
+          "start": 4.39,
+          "end": 4.81
+        },
+        {
+          "word": "Along",
+          "start": 5.63,
+          "end": 6.11
+        },
+        {
+          "word": "one",
+          "start": 6.11,
+          "end": 6.45
+        },
+        {
+          "word": "line,",
+          "start": 6.45,
+          "end": 6.85
+        },
+        {
+          "word": "direction",
+          "start": 7.59,
+          "end": 8.05
+        },
+        {
+          "word": "matters.",
+          "start": 8.05,
+          "end": 8.57
+        },
+        {
+          "word": "Choose",
+          "start": 10.01,
+          "end": 10.39
+        },
+        {
+          "word": "right",
+          "start": 10.39,
+          "end": 10.79
+        },
+        {
+          "word": "as",
+          "start": 10.79,
+          "end": 11.57
+        },
+        {
+          "word": "positive.",
+          "start": 11.57,
+          "end": 12.09
+        },
+        {
+          "word": "The",
+          "start": 13.35,
+          "end": 13.41
+        },
+        {
+          "word": "rightward",
+          "start": 13.41,
+          "end": 13.99
+        },
+        {
+          "word": "force",
+          "start": 13.99,
+          "end": 14.51
+        },
+        {
+          "word": "is",
+          "start": 14.51,
+          "end": 15.05
+        },
+        {
+          "word": "fifty",
+          "start": 15.05,
+          "end": 15.51
+        },
+        {
+          "word": "newtons.",
+          "start": 15.51,
+          "end": 16.05
+        },
+        {
+          "word": "The",
+          "start": 17.61,
+          "end": 17.75
+        },
+        {
+          "word": "leftward",
+          "start": 17.75,
+          "end": 18.35
+        },
+        {
+          "word": "force",
+          "start": 18.35,
+          "end": 18.89
+        },
+        {
+          "word": "is",
+          "start": 18.89,
+          "end": 19.45
+        },
+        {
+          "word": "twenty",
+          "start": 19.45,
+          "end": 19.89
+        },
+        {
+          "word": "newtons.",
+          "start": 19.89,
+          "end": 20.37
+        },
+        {
+          "word": "Write",
+          "start": 21.15,
+          "end": 21.45
+        },
+        {
+          "word": "resultant",
+          "start": 21.45,
+          "end": 22.19
+        },
+        {
+          "word": "equals",
+          "start": 22.19,
+          "end": 22.53
+        },
+        {
+          "word": "right",
+          "start": 22.53,
+          "end": 22.95
+        },
+        {
+          "word": "minus",
+          "start": 22.95,
+          "end": 23.33
+        },
+        {
+          "word": "left.",
+          "start": 23.33,
+          "end": 23.67
+        },
+        {
+          "word": "Fifty",
+          "start": 24.97,
+          "end": 25.37
+        },
+        {
+          "word": "minus",
+          "start": 25.37,
+          "end": 25.59
+        },
+        {
+          "word": "twenty",
+          "start": 25.59,
+          "end": 26.09
+        },
+        {
+          "word": "gives",
+          "start": 26.09,
+          "end": 26.41
+        },
+        {
+          "word": "thirty",
+          "start": 26.41,
+          "end": 26.97
+        },
+        {
+          "word": "newtons,",
+          "start": 26.97,
+          "end": 27.51
+        },
+        {
+          "word": "to",
+          "start": 27.51,
+          "end": 27.99
+        },
+        {
+          "word": "the",
+          "start": 27.99,
+          "end": 28.17
+        },
+        {
+          "word": "right.",
+          "start": 28.17,
+          "end": 28.39
+        },
+        {
+          "word": "Draw",
+          "start": 30.7,
+          "end": 31.1
+        },
+        {
+          "word": "that",
+          "start": 31.1,
+          "end": 31.32
+        },
+        {
+          "word": "resultant",
+          "start": 31.32,
+          "end": 31.88
+        },
+        {
+          "word": "separately.",
+          "start": 31.88,
+          "end": 32.5
+        },
+        {
+          "word": "It",
+          "start": 33.56,
+          "end": 33.76
+        },
+        {
+          "word": "replaces",
+          "start": 33.76,
+          "end": 34.3
+        },
+        {
+          "word": "the",
+          "start": 34.3,
+          "end": 34.58
+        },
+        {
+          "word": "pair.",
+          "start": 34.58,
+          "end": 34.9
+        },
+        {
+          "word": "It",
+          "start": 35.86,
+          "end": 36.0
+        },
+        {
+          "word": "is",
+          "start": 36.0,
+          "end": 36.14
+        },
+        {
+          "word": "not",
+          "start": 36.14,
+          "end": 36.32
+        },
+        {
+          "word": "a",
+          "start": 36.32,
+          "end": 36.46
+        },
+        {
+          "word": "third",
+          "start": 36.46,
+          "end": 36.7
+        },
+        {
+          "word": "force.",
+          "start": 36.7,
+          "end": 36.98
+        },
+        {
+          "word": "Now",
+          "start": 38.14,
+          "end": 38.46
+        },
+        {
+          "word": "make",
+          "start": 38.46,
+          "end": 38.84
+        },
+        {
+          "word": "the",
+          "start": 38.84,
+          "end": 39.04
+        },
+        {
+          "word": "opposing",
+          "start": 39.04,
+          "end": 39.48
+        },
+        {
+          "word": "forces",
+          "start": 39.48,
+          "end": 40.0
+        },
+        {
+          "word": "forty",
+          "start": 40.0,
+          "end": 41.04
+        },
+        {
+          "word": "newtons",
+          "start": 41.04,
+          "end": 41.74
+        },
+        {
+          "word": "each.",
+          "start": 41.74,
+          "end": 42.06
+        },
+        {
+          "word": "Their",
+          "start": 43.14,
+          "end": 43.3
+        },
+        {
+          "word": "resultant",
+          "start": 43.3,
+          "end": 43.98
+        },
+        {
+          "word": "is",
+          "start": 43.98,
+          "end": 44.28
+        },
+        {
+          "word": "zero",
+          "start": 44.28,
+          "end": 44.58
+        },
+        {
+          "word": "newtons.",
+          "start": 44.58,
+          "end": 45.2
+        },
+        {
+          "word": "This",
+          "start": 47.43,
+          "end": 47.73
+        },
+        {
+          "word": "is",
+          "start": 47.73,
+          "end": 47.97
+        },
+        {
+          "word": "equilibrium,",
+          "start": 47.97,
+          "end": 48.67
+        },
+        {
+          "word": "forces",
+          "start": 49.21,
+          "end": 49.65
+        },
+        {
+          "word": "act,",
+          "start": 49.65,
+          "end": 50.09
+        },
+        {
+          "word": "but",
+          "start": 50.85,
+          "end": 50.95
+        },
+        {
+          "word": "their",
+          "start": 50.95,
+          "end": 51.17
+        },
+        {
+          "word": "effects",
+          "start": 51.17,
+          "end": 51.47
+        },
+        {
+          "word": "balance.",
+          "start": 51.47,
+          "end": 52.09
+        }
+      ],
+      "wordCount": 82,
+      "text": "The resultant is the combined effect of all the forces. Along one line, direction matters. Choose right as positive. The rightward force is fifty newtons. The leftward force is twenty newtons. Write resultant equals right minus left. Fifty minus twenty gives thirty newtons, to the right. Draw that resultant separately. It replaces the pair. It is not a third force. Now make the opposing forces forty newtons each. Their resultant is zero newtons. This is equilibrium, forces act, but their effects balance.",
+      "cues": {
+        "positive": 10.01,
+        "fifty": 15.05,
+        "twenty": 19.45,
+        "formula": 21.45,
+        "substitute": 24.97,
+        "thirty": 26.41,
+        "separate": 30.7,
+        "forty": 40.0,
+        "zero": 44.28,
+        "equilibrium": 47.43
+      },
+      "cueEdges": {
+        "positive": {
+          "start": 10.01,
+          "end": 10.79,
+          "wordIndex": 15
+        },
+        "fifty": {
+          "start": 15.05,
+          "end": 16.05,
+          "wordIndex": 23
+        },
+        "twenty": {
+          "start": 19.45,
+          "end": 20.37,
+          "wordIndex": 29
+        },
+        "formula": {
+          "start": 21.45,
+          "end": 23.67,
+          "wordIndex": 32
+        },
+        "substitute": {
+          "start": 24.97,
+          "end": 26.09,
+          "wordIndex": 37
+        },
+        "thirty": {
+          "start": 26.41,
+          "end": 27.51,
+          "wordIndex": 41
+        },
+        "separate": {
+          "start": 30.7,
+          "end": 32.5,
+          "wordIndex": 46
+        },
+        "forty": {
+          "start": 40.0,
+          "end": 41.74,
+          "wordIndex": 65
+        },
+        "zero": {
+          "start": 44.28,
+          "end": 45.2,
+          "wordIndex": 71
+        },
+        "equilibrium": {
+          "start": 47.43,
+          "end": 48.67,
+          "wordIndex": 73
+        }
+      },
+      "figures": [
+        {
+          "id": "fifty",
+          "target": "right",
+          "start": 15.05,
+          "end": 15.51,
+          "wordIndex": 23,
+          "word": "fifty"
+        },
+        {
+          "id": "twenty",
+          "target": "left",
+          "start": 19.45,
+          "end": 19.89,
+          "wordIndex": 29,
+          "word": "twenty"
+        },
+        {
+          "id": "sub50",
+          "target": "right",
+          "start": 24.97,
+          "end": 25.37,
+          "wordIndex": 37,
+          "word": "Fifty"
+        },
+        {
+          "id": "sub20",
+          "target": "left",
+          "start": 25.59,
+          "end": 26.09,
+          "wordIndex": 39,
+          "word": "twenty"
+        },
+        {
+          "id": "thirty",
+          "target": "answer30",
+          "start": 26.41,
+          "end": 26.97,
+          "wordIndex": 41,
+          "word": "thirty"
+        },
+        {
+          "id": "forty",
+          "target": "pair40",
+          "start": 40.0,
+          "end": 41.04,
+          "wordIndex": 65,
+          "word": "forty"
+        },
+        {
+          "id": "zero",
+          "target": "answer0",
+          "start": 44.28,
+          "end": 44.58,
+          "wordIndex": 71,
+          "word": "zero"
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "tempo": "brisk",
+      "voiceSpeed": 1.0,
+      "budget": 18,
+      "paragraphs": [
+        "Consider an object being pulled upward by two strings, while another force pulls downward. The pulls settle into balance and the object stays still. We will find an unknown in those forces. It is the upward total that must match the downward total. Let's draw the problem."
+      ],
+      "audio": "equilibrium-in-1d-s03.mp3",
+      "audioSha256": "d6893a86054930ff55eff4d3bba6c7c7b64a63b84d9650525889cf4ff44dc971",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "provider": "elevenlabs",
+      "beats": [
+        {
+          "text": "Consider an object being pulled upward by two strings, while another force pulls downward. The pulls settle into balance and the object stays still. We will find an unknown in those forces. It is the upward total that must match the downward total. Let's draw the problem.",
+          "start": 0.55,
+          "end": 21.34
+        }
+      ],
+      "holds": [],
+      "sampleDuration": 21.79,
+      "duration": 21.838367,
+      "words": [
+        {
+          "word": "Consider",
+          "start": 0.55,
+          "end": 0.91
+        },
+        {
+          "word": "an",
+          "start": 0.91,
+          "end": 1.11
+        },
+        {
+          "word": "object",
+          "start": 1.11,
+          "end": 1.45
+        },
+        {
+          "word": "being",
+          "start": 1.45,
+          "end": 1.83
+        },
+        {
+          "word": "pulled",
+          "start": 1.83,
+          "end": 2.27
+        },
+        {
+          "word": "upward",
+          "start": 2.27,
+          "end": 2.71
+        },
+        {
+          "word": "by",
+          "start": 2.71,
+          "end": 3.47
+        },
+        {
+          "word": "two",
+          "start": 3.47,
+          "end": 3.71
+        },
+        {
+          "word": "strings,",
+          "start": 3.71,
+          "end": 4.13
+        },
+        {
+          "word": "while",
+          "start": 4.37,
+          "end": 4.87
+        },
+        {
+          "word": "another",
+          "start": 4.87,
+          "end": 5.23
+        },
+        {
+          "word": "force",
+          "start": 5.23,
+          "end": 5.69
+        },
+        {
+          "word": "pulls",
+          "start": 5.69,
+          "end": 6.43
+        },
+        {
+          "word": "downward.",
+          "start": 6.43,
+          "end": 6.91
+        },
+        {
+          "word": "The",
+          "start": 8.09,
+          "end": 8.13
+        },
+        {
+          "word": "pulls",
+          "start": 8.13,
+          "end": 8.43
+        },
+        {
+          "word": "settle",
+          "start": 8.43,
+          "end": 8.77
+        },
+        {
+          "word": "into",
+          "start": 8.77,
+          "end": 9.27
+        },
+        {
+          "word": "balance",
+          "start": 9.27,
+          "end": 9.61
+        },
+        {
+          "word": "and",
+          "start": 9.61,
+          "end": 10.59
+        },
+        {
+          "word": "the",
+          "start": 10.59,
+          "end": 10.69
+        },
+        {
+          "word": "object",
+          "start": 10.69,
+          "end": 10.97
+        },
+        {
+          "word": "stays",
+          "start": 10.97,
+          "end": 11.39
+        },
+        {
+          "word": "still.",
+          "start": 11.39,
+          "end": 11.81
+        },
+        {
+          "word": "We",
+          "start": 12.93,
+          "end": 13.11
+        },
+        {
+          "word": "will",
+          "start": 13.11,
+          "end": 13.25
+        },
+        {
+          "word": "find",
+          "start": 13.25,
+          "end": 13.51
+        },
+        {
+          "word": "an",
+          "start": 13.51,
+          "end": 13.73
+        },
+        {
+          "word": "unknown",
+          "start": 13.73,
+          "end": 14.27
+        },
+        {
+          "word": "in",
+          "start": 14.27,
+          "end": 15.31
+        },
+        {
+          "word": "those",
+          "start": 15.31,
+          "end": 15.53
+        },
+        {
+          "word": "forces.",
+          "start": 15.53,
+          "end": 15.89
+        },
+        {
+          "word": "It",
+          "start": 16.39,
+          "end": 16.49
+        },
+        {
+          "word": "is",
+          "start": 16.49,
+          "end": 16.61
+        },
+        {
+          "word": "the",
+          "start": 16.61,
+          "end": 16.83
+        },
+        {
+          "word": "upward",
+          "start": 16.83,
+          "end": 17.09
+        },
+        {
+          "word": "total",
+          "start": 17.09,
+          "end": 17.71
+        },
+        {
+          "word": "that",
+          "start": 17.71,
+          "end": 18.13
+        },
+        {
+          "word": "must",
+          "start": 18.13,
+          "end": 18.39
+        },
+        {
+          "word": "match",
+          "start": 18.39,
+          "end": 18.77
+        },
+        {
+          "word": "the",
+          "start": 18.77,
+          "end": 18.97
+        },
+        {
+          "word": "downward",
+          "start": 18.97,
+          "end": 19.31
+        },
+        {
+          "word": "total.",
+          "start": 19.31,
+          "end": 19.73
+        },
+        {
+          "word": "Let's",
+          "start": 20.29,
+          "end": 20.55
+        },
+        {
+          "word": "draw",
+          "start": 20.55,
+          "end": 20.75
+        },
+        {
+          "word": "the",
+          "start": 20.75,
+          "end": 20.91
+        },
+        {
+          "word": "problem.",
+          "start": 20.91,
+          "end": 21.23
+        }
+      ],
+      "wordCount": 47,
+      "text": "Consider an object being pulled upward by two strings, while another force pulls downward. The pulls settle into balance and the object stays still. We will find an unknown in those forces. It is the upward total that must match the downward total. Let's draw the problem.",
+      "cues": {
+        "up": 1.83,
+        "down": 4.87,
+        "balance": 9.27,
+        "goal": 12.93,
+        "draw": 20.55
+      },
+      "cueEdges": {
+        "up": {
+          "start": 1.83,
+          "end": 2.71,
+          "wordIndex": 4
+        },
+        "down": {
+          "start": 4.87,
+          "end": 5.69,
+          "wordIndex": 10
+        },
+        "balance": {
+          "start": 9.27,
+          "end": 9.61,
+          "wordIndex": 18
+        },
+        "goal": {
+          "start": 12.93,
+          "end": 13.51,
+          "wordIndex": 24
+        },
+        "draw": {
+          "start": 20.55,
+          "end": 21.23,
+          "wordIndex": 44
+        }
+      },
+      "figures": []
+    },
+    {
+      "id": "s04",
+      "tempo": "brisk",
+      "voiceSpeed": 1.0,
+      "budget": 29,
+      "paragraphs": [
+        "The object is in equilibrium. Find x, and the magnitude of the resultant force. Upward, we have ten newtons and eighteen plus x newtons. Downward, we have five x newtons. All three forces are already in newtons. Take upward as positive, so the downward force enters with a minus sign. [hold 2 s] Now let's write the balance."
+      ],
+      "audio": "equilibrium-in-1d-s04.mp3",
+      "audioSha256": "432134a588b0a58091386ed5bdb2bb2c803b8d92d736568620d98584ed996dd9",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "provider": "elevenlabs",
+      "beats": [
+        {
+          "text": "The object is in equilibrium. Find x, and the magnitude of the resultant force. Upward, we have ten newtons and eighteen plus x newtons. Downward, we have five x newtons. All three forces are already in newtons. Take upward as positive, so the downward force enters with a minus sign.",
+          "start": 0.55,
+          "end": 24.27
+        },
+        {
+          "text": "Now let's write the balance.",
+          "start": 26.27,
+          "end": 27.69
+        }
+      ],
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 24.27,
+          "end": 26.27,
+          "duration": 2.0
+        }
+      ],
+      "sampleDuration": 29.0,
+      "duration": 29.048163,
+      "words": [
+        {
+          "word": "The",
+          "start": 0.55,
+          "end": 0.71
+        },
+        {
+          "word": "object",
+          "start": 0.71,
+          "end": 1.11
+        },
+        {
+          "word": "is",
+          "start": 1.11,
+          "end": 1.63
+        },
+        {
+          "word": "in",
+          "start": 1.63,
+          "end": 1.75
+        },
+        {
+          "word": "equilibrium.",
+          "start": 1.75,
+          "end": 2.33
+        },
+        {
+          "word": "Find",
+          "start": 3.05,
+          "end": 3.45
+        },
+        {
+          "word": "x,",
+          "start": 3.45,
+          "end": 3.99
+        },
+        {
+          "word": "and",
+          "start": 4.37,
+          "end": 4.73
+        },
+        {
+          "word": "the",
+          "start": 4.73,
+          "end": 4.87
+        },
+        {
+          "word": "magnitude",
+          "start": 4.87,
+          "end": 5.41
+        },
+        {
+          "word": "of",
+          "start": 5.41,
+          "end": 6.33
+        },
+        {
+          "word": "the",
+          "start": 6.33,
+          "end": 6.49
+        },
+        {
+          "word": "resultant",
+          "start": 6.49,
+          "end": 7.01
+        },
+        {
+          "word": "force.",
+          "start": 7.01,
+          "end": 7.33
+        },
+        {
+          "word": "Upward,",
+          "start": 7.97,
+          "end": 8.37
+        },
+        {
+          "word": "we",
+          "start": 9.09,
+          "end": 9.17
+        },
+        {
+          "word": "have",
+          "start": 9.17,
+          "end": 9.33
+        },
+        {
+          "word": "ten",
+          "start": 9.33,
+          "end": 9.61
+        },
+        {
+          "word": "newtons",
+          "start": 9.61,
+          "end": 10.19
+        },
+        {
+          "word": "and",
+          "start": 10.19,
+          "end": 10.57
+        },
+        {
+          "word": "eighteen",
+          "start": 10.57,
+          "end": 10.89
+        },
+        {
+          "word": "plus",
+          "start": 10.89,
+          "end": 11.23
+        },
+        {
+          "word": "x",
+          "start": 11.23,
+          "end": 11.75
+        },
+        {
+          "word": "newtons.",
+          "start": 11.75,
+          "end": 12.21
+        },
+        {
+          "word": "Downward,",
+          "start": 13.01,
+          "end": 13.57
+        },
+        {
+          "word": "we",
+          "start": 13.97,
+          "end": 14.07
+        },
+        {
+          "word": "have",
+          "start": 14.07,
+          "end": 14.21
+        },
+        {
+          "word": "five",
+          "start": 14.21,
+          "end": 14.43
+        },
+        {
+          "word": "x",
+          "start": 14.43,
+          "end": 14.77
+        },
+        {
+          "word": "newtons.",
+          "start": 14.77,
+          "end": 15.25
+        },
+        {
+          "word": "All",
+          "start": 16.05,
+          "end": 16.21
+        },
+        {
+          "word": "three",
+          "start": 16.21,
+          "end": 16.45
+        },
+        {
+          "word": "forces",
+          "start": 16.45,
+          "end": 16.81
+        },
+        {
+          "word": "are",
+          "start": 16.81,
+          "end": 17.11
+        },
+        {
+          "word": "already",
+          "start": 17.11,
+          "end": 17.47
+        },
+        {
+          "word": "in",
+          "start": 17.47,
+          "end": 17.69
+        },
+        {
+          "word": "newtons.",
+          "start": 17.69,
+          "end": 18.07
+        },
+        {
+          "word": "Take",
+          "start": 18.87,
+          "end": 19.01
+        },
+        {
+          "word": "upward",
+          "start": 19.01,
+          "end": 19.47
+        },
+        {
+          "word": "as",
+          "start": 19.47,
+          "end": 19.99
+        },
+        {
+          "word": "positive,",
+          "start": 19.99,
+          "end": 20.39
+        },
+        {
+          "word": "so",
+          "start": 21.03,
+          "end": 21.19
+        },
+        {
+          "word": "the",
+          "start": 21.19,
+          "end": 21.35
+        },
+        {
+          "word": "downward",
+          "start": 21.35,
+          "end": 21.67
+        },
+        {
+          "word": "force",
+          "start": 21.67,
+          "end": 22.07
+        },
+        {
+          "word": "enters",
+          "start": 22.07,
+          "end": 22.49
+        },
+        {
+          "word": "with",
+          "start": 22.49,
+          "end": 23.27
+        },
+        {
+          "word": "a",
+          "start": 23.27,
+          "end": 23.41
+        },
+        {
+          "word": "minus",
+          "start": 23.41,
+          "end": 23.69
+        },
+        {
+          "word": "sign.",
+          "start": 23.69,
+          "end": 24.07
+        },
+        {
+          "word": "Now",
+          "start": 26.27,
+          "end": 26.45
+        },
+        {
+          "word": "let's",
+          "start": 26.45,
+          "end": 26.73
+        },
+        {
+          "word": "write",
+          "start": 26.73,
+          "end": 26.89
+        },
+        {
+          "word": "the",
+          "start": 26.89,
+          "end": 27.07
+        },
+        {
+          "word": "balance.",
+          "start": 27.07,
+          "end": 27.33
+        }
+      ],
+      "wordCount": 55,
+      "text": "The object is in equilibrium. Find x, and the magnitude of the resultant force. Upward, we have ten newtons and eighteen plus x newtons. Downward, we have five x newtons. All three forces are already in newtons. Take upward as positive, so the downward force enters with a minus sign. Now let's write the balance.",
+      "cues": {
+        "problem": 0.55,
+        "find": 3.05,
+        "resultant": 4.73,
+        "ten": 9.33,
+        "eighteen": 10.57,
+        "five": 14.21,
+        "units": 17.11,
+        "positive": 18.87,
+        "write": 26.73
+      },
+      "cueEdges": {
+        "problem": {
+          "start": 0.55,
+          "end": 2.33,
+          "wordIndex": 0
+        },
+        "find": {
+          "start": 3.05,
+          "end": 3.99,
+          "wordIndex": 5
+        },
+        "resultant": {
+          "start": 4.73,
+          "end": 7.33,
+          "wordIndex": 8
+        },
+        "ten": {
+          "start": 9.33,
+          "end": 10.19,
+          "wordIndex": 17
+        },
+        "eighteen": {
+          "start": 10.57,
+          "end": 12.21,
+          "wordIndex": 20
+        },
+        "five": {
+          "start": 14.21,
+          "end": 15.25,
+          "wordIndex": 27
+        },
+        "units": {
+          "start": 17.11,
+          "end": 18.07,
+          "wordIndex": 34
+        },
+        "positive": {
+          "start": 18.87,
+          "end": 20.39,
+          "wordIndex": 37
+        },
+        "write": {
+          "start": 26.73,
+          "end": 27.33,
+          "wordIndex": 52
+        }
+      },
+      "figures": [
+        {
+          "id": "ten",
+          "target": "up10",
+          "start": 9.33,
+          "end": 9.61,
+          "wordIndex": 17,
+          "word": "ten"
+        },
+        {
+          "id": "eighteen",
+          "target": "up18",
+          "start": 10.57,
+          "end": 10.89,
+          "wordIndex": 20,
+          "word": "eighteen"
+        },
+        {
+          "id": "xup",
+          "target": "up18",
+          "start": 11.23,
+          "end": 12.21,
+          "wordIndex": 22,
+          "word": "x"
+        },
+        {
+          "id": "five",
+          "target": "down5",
+          "start": 14.21,
+          "end": 14.43,
+          "wordIndex": 27,
+          "word": "five"
+        },
+        {
+          "id": "xdown",
+          "target": "down5",
+          "start": 14.43,
+          "end": 15.25,
+          "wordIndex": 28,
+          "word": "x"
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "tempo": "slow",
+      "voiceSpeed": 0.9,
+      "budget": 67,
+      "paragraphs": [
+        "Start with the principle: resultant equals zero. [pause 2 s] In symbols, U minus D equals zero, so U equals D: total upward force equals total downward force. [pause 2 s] Substitute from the diagram. Ten plus, bracket, eighteen plus x, equals five x. [hold 2 s] Collect the constants: twenty eight plus x equals five x. [hold 2 s] Subtract x from both sides: twenty eight equals four x. [hold 2 s] Divide by four. x equals seven. [hold 2 s] The upward forces are now ten and twenty five newtons; together, thirty five. Downward is also thirty five newtons. [hold 2 s] The resultant is zero newtons. Equilibrium told us that immediately. [hold 2 s] What if the downward pull increased? The forces would no longer balance."
+      ],
+      "audio": "equilibrium-in-1d-s05.mp3",
+      "audioSha256": "829f450cbeec942371d7cff95801073f2c4486bc3fa6b1f4071c9e8e32da60bc",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "provider": "elevenlabs",
+      "beats": [
+        {
+          "text": "Start with the principle: resultant equals zero.",
+          "start": 0.55,
+          "end": 4.46
+        },
+        {
+          "text": "In symbols, U minus D equals zero, so U equals D: total upward force equals total downward force.",
+          "start": 6.46,
+          "end": 17.72
+        },
+        {
+          "text": "Substitute from the diagram. Ten plus, bracket, eighteen plus x, equals five x.",
+          "start": 19.72,
+          "end": 27.1
+        },
+        {
+          "text": "Collect the constants: twenty eight plus x equals five x.",
+          "start": 29.1,
+          "end": 34.33
+        },
+        {
+          "text": "Subtract x from both sides: twenty eight equals four x.",
+          "start": 36.33,
+          "end": 41.36
+        },
+        {
+          "text": "Divide by four. x equals seven.",
+          "start": 43.36,
+          "end": 46.58
+        },
+        {
+          "text": "The upward forces are now ten and twenty five newtons; together, thirty five. Downward is also thirty five newtons.",
+          "start": 48.58,
+          "end": 60.37
+        },
+        {
+          "text": "The resultant is zero newtons. Equilibrium told us that immediately.",
+          "start": 62.37,
+          "end": 67.98
+        },
+        {
+          "text": "What if the downward pull increased? The forces would no longer balance.",
+          "start": 69.98,
+          "end": 74.4
+        }
+      ],
+      "holds": [
+        {
+          "kind": "pause",
+          "start": 4.46,
+          "end": 6.46,
+          "duration": 2.0
+        },
+        {
+          "kind": "pause",
+          "start": 17.72,
+          "end": 19.72,
+          "duration": 2.0
+        },
+        {
+          "kind": "hold",
+          "start": 27.1,
+          "end": 29.1,
+          "duration": 2.0
+        },
+        {
+          "kind": "hold",
+          "start": 34.33,
+          "end": 36.33,
+          "duration": 2.0
+        },
+        {
+          "kind": "hold",
+          "start": 41.36,
+          "end": 43.36,
+          "duration": 2.0
+        },
+        {
+          "kind": "hold",
+          "start": 46.58,
+          "end": 48.58,
+          "duration": 2.0
+        },
+        {
+          "kind": "hold",
+          "start": 60.37,
+          "end": 62.37,
+          "duration": 2.0
+        },
+        {
+          "kind": "hold",
+          "start": 67.98,
+          "end": 69.98,
+          "duration": 2.0
+        }
+      ],
+      "sampleDuration": 74.85,
+      "duration": 74.893061,
+      "words": [
+        {
+          "word": "Start",
+          "start": 0.55,
+          "end": 0.91
+        },
+        {
+          "word": "with",
+          "start": 0.91,
+          "end": 1.15
+        },
+        {
+          "word": "the",
+          "start": 1.15,
+          "end": 1.25
+        },
+        {
+          "word": "principle",
+          "start": 1.25,
+          "end": 1.73
+        },
+        {
+          "word": "resultant",
+          "start": 1.73,
+          "end": 3.23
+        },
+        {
+          "word": "equals",
+          "start": 3.23,
+          "end": 3.65
+        },
+        {
+          "word": "zero.",
+          "start": 3.65,
+          "end": 4.25
+        },
+        {
+          "word": "In",
+          "start": 6.46,
+          "end": 6.66
+        },
+        {
+          "word": "symbols,",
+          "start": 6.66,
+          "end": 7.26
+        },
+        {
+          "word": "U",
+          "start": 7.88,
+          "end": 8.36
+        },
+        {
+          "word": "minus",
+          "start": 8.36,
+          "end": 8.88
+        },
+        {
+          "word": "D",
+          "start": 8.88,
+          "end": 9.3
+        },
+        {
+          "word": "equals",
+          "start": 9.3,
+          "end": 9.58
+        },
+        {
+          "word": "zero,",
+          "start": 9.58,
+          "end": 10.12
+        },
+        {
+          "word": "so",
+          "start": 11.0,
+          "end": 11.18
+        },
+        {
+          "word": "U",
+          "start": 11.18,
+          "end": 11.6
+        },
+        {
+          "word": "equals",
+          "start": 11.6,
+          "end": 12.12
+        },
+        {
+          "word": "D.",
+          "start": 12.12,
+          "end": 12.56
+        },
+        {
+          "word": "total",
+          "start": 13.1,
+          "end": 14.06
+        },
+        {
+          "word": "upward",
+          "start": 14.06,
+          "end": 14.42
+        },
+        {
+          "word": "force",
+          "start": 14.42,
+          "end": 15.1
+        },
+        {
+          "word": "equals",
+          "start": 15.1,
+          "end": 16.0
+        },
+        {
+          "word": "total",
+          "start": 16.0,
+          "end": 16.6
+        },
+        {
+          "word": "downward",
+          "start": 16.6,
+          "end": 16.98
+        },
+        {
+          "word": "force.",
+          "start": 16.98,
+          "end": 17.46
+        },
+        {
+          "word": "Substitute",
+          "start": 19.72,
+          "end": 20.48
+        },
+        {
+          "word": "from",
+          "start": 20.48,
+          "end": 21.02
+        },
+        {
+          "word": "the",
+          "start": 21.02,
+          "end": 21.2
+        },
+        {
+          "word": "diagram.",
+          "start": 21.2,
+          "end": 21.7
+        },
+        {
+          "word": "Ten",
+          "start": 22.24,
+          "end": 22.54
+        },
+        {
+          "word": "plus,",
+          "start": 22.54,
+          "end": 23.0
+        },
+        {
+          "word": "bracket,",
+          "start": 23.2,
+          "end": 23.54
+        },
+        {
+          "word": "eighteen",
+          "start": 23.84,
+          "end": 24.1
+        },
+        {
+          "word": "plus",
+          "start": 24.1,
+          "end": 24.48
+        },
+        {
+          "word": "x,",
+          "start": 24.48,
+          "end": 25.1
+        },
+        {
+          "word": "equals",
+          "start": 25.42,
+          "end": 25.78
+        },
+        {
+          "word": "five",
+          "start": 25.78,
+          "end": 26.3
+        },
+        {
+          "word": "x.",
+          "start": 26.3,
+          "end": 26.8
+        },
+        {
+          "word": "Collect",
+          "start": 29.1,
+          "end": 29.44
+        },
+        {
+          "word": "the",
+          "start": 29.44,
+          "end": 29.74
+        },
+        {
+          "word": "constants.",
+          "start": 29.74,
+          "end": 30.22
+        },
+        {
+          "word": "twenty",
+          "start": 30.9,
+          "end": 31.78
+        },
+        {
+          "word": "eight",
+          "start": 31.78,
+          "end": 32.0
+        },
+        {
+          "word": "plus",
+          "start": 32.0,
+          "end": 32.22
+        },
+        {
+          "word": "x",
+          "start": 32.22,
+          "end": 32.66
+        },
+        {
+          "word": "equals",
+          "start": 32.66,
+          "end": 33.16
+        },
+        {
+          "word": "five",
+          "start": 33.16,
+          "end": 33.64
+        },
+        {
+          "word": "x.",
+          "start": 33.64,
+          "end": 34.08
+        },
+        {
+          "word": "Subtract",
+          "start": 36.33,
+          "end": 36.95
+        },
+        {
+          "word": "x",
+          "start": 36.95,
+          "end": 37.37
+        },
+        {
+          "word": "from",
+          "start": 37.37,
+          "end": 38.15
+        },
+        {
+          "word": "both",
+          "start": 38.15,
+          "end": 38.41
+        },
+        {
+          "word": "sides",
+          "start": 38.41,
+          "end": 38.75
+        },
+        {
+          "word": "twenty",
+          "start": 38.75,
+          "end": 39.57
+        },
+        {
+          "word": "eight",
+          "start": 39.57,
+          "end": 39.79
+        },
+        {
+          "word": "equals",
+          "start": 39.79,
+          "end": 40.19
+        },
+        {
+          "word": "four",
+          "start": 40.19,
+          "end": 40.73
+        },
+        {
+          "word": "x.",
+          "start": 40.73,
+          "end": 41.07
+        },
+        {
+          "word": "Divide",
+          "start": 43.36,
+          "end": 43.8
+        },
+        {
+          "word": "by",
+          "start": 43.8,
+          "end": 43.94
+        },
+        {
+          "word": "four.",
+          "start": 43.94,
+          "end": 44.32
+        },
+        {
+          "word": "x",
+          "start": 44.9,
+          "end": 45.36
+        },
+        {
+          "word": "equals",
+          "start": 45.36,
+          "end": 45.88
+        },
+        {
+          "word": "seven.",
+          "start": 45.88,
+          "end": 46.4
+        },
+        {
+          "word": "The",
+          "start": 48.58,
+          "end": 48.72
+        },
+        {
+          "word": "upward",
+          "start": 48.72,
+          "end": 49.06
+        },
+        {
+          "word": "forces",
+          "start": 49.06,
+          "end": 49.74
+        },
+        {
+          "word": "are",
+          "start": 49.74,
+          "end": 50.68
+        },
+        {
+          "word": "now",
+          "start": 50.68,
+          "end": 51.06
+        },
+        {
+          "word": "ten",
+          "start": 51.06,
+          "end": 52.0
+        },
+        {
+          "word": "and",
+          "start": 52.0,
+          "end": 52.6
+        },
+        {
+          "word": "twenty",
+          "start": 52.6,
+          "end": 53.02
+        },
+        {
+          "word": "five",
+          "start": 53.02,
+          "end": 53.32
+        },
+        {
+          "word": "newtons,",
+          "start": 53.32,
+          "end": 53.98
+        },
+        {
+          "word": "together,",
+          "start": 54.04,
+          "end": 55.28
+        },
+        {
+          "word": "thirty",
+          "start": 55.9,
+          "end": 56.26
+        },
+        {
+          "word": "five.",
+          "start": 56.26,
+          "end": 56.56
+        },
+        {
+          "word": "Downward",
+          "start": 57.56,
+          "end": 58.24
+        },
+        {
+          "word": "is",
+          "start": 58.24,
+          "end": 58.98
+        },
+        {
+          "word": "also",
+          "start": 58.98,
+          "end": 59.22
+        },
+        {
+          "word": "thirty",
+          "start": 59.22,
+          "end": 59.56
+        },
+        {
+          "word": "five",
+          "start": 59.56,
+          "end": 59.78
+        },
+        {
+          "word": "newtons.",
+          "start": 59.78,
+          "end": 60.28
+        },
+        {
+          "word": "The",
+          "start": 62.37,
+          "end": 62.49
+        },
+        {
+          "word": "resultant",
+          "start": 62.49,
+          "end": 63.15
+        },
+        {
+          "word": "is",
+          "start": 63.15,
+          "end": 63.83
+        },
+        {
+          "word": "zero",
+          "start": 63.83,
+          "end": 64.27
+        },
+        {
+          "word": "newtons.",
+          "start": 64.27,
+          "end": 64.97
+        },
+        {
+          "word": "Equilibrium",
+          "start": 65.35,
+          "end": 66.23
+        },
+        {
+          "word": "told",
+          "start": 66.23,
+          "end": 66.85
+        },
+        {
+          "word": "us",
+          "start": 66.85,
+          "end": 66.93
+        },
+        {
+          "word": "that",
+          "start": 66.93,
+          "end": 67.09
+        },
+        {
+          "word": "immediately.",
+          "start": 67.09,
+          "end": 67.45
+        },
+        {
+          "word": "What",
+          "start": 69.98,
+          "end": 70.22
+        },
+        {
+          "word": "if",
+          "start": 70.22,
+          "end": 70.36
+        },
+        {
+          "word": "the",
+          "start": 70.36,
+          "end": 70.52
+        },
+        {
+          "word": "downward",
+          "start": 70.52,
+          "end": 70.82
+        },
+        {
+          "word": "pull",
+          "start": 70.82,
+          "end": 71.26
+        },
+        {
+          "word": "increased?",
+          "start": 71.26,
+          "end": 71.78
+        },
+        {
+          "word": "The",
+          "start": 72.26,
+          "end": 72.34
+        },
+        {
+          "word": "forces",
+          "start": 72.34,
+          "end": 72.64
+        },
+        {
+          "word": "would",
+          "start": 72.64,
+          "end": 72.96
+        },
+        {
+          "word": "no",
+          "start": 72.96,
+          "end": 73.3
+        },
+        {
+          "word": "longer",
+          "start": 73.3,
+          "end": 73.68
+        },
+        {
+          "word": "balance.",
+          "start": 73.68,
+          "end": 74.04
+        }
+      ],
+      "wordCount": 105,
+      "text": "Start with the principle resultant equals zero. In symbols, U minus D equals zero, so U equals D. total upward force equals total downward force. Substitute from the diagram. Ten plus, bracket, eighteen plus x, equals five x. Collect the constants. twenty eight plus x equals five x. Subtract x from both sides twenty eight equals four x. Divide by four. x equals seven. The upward forces are now ten and twenty five newtons, together, thirty five. Downward is also thirty five newtons. The resultant is zero newtons. Equilibrium told us that immediately. What if the downward pull increased? The forces would no longer balance.",
+      "cues": {
+        "principle": 1.73,
+        "symbols": 7.88,
+        "equal": 11.18,
+        "meaning": 13.1,
+        "equation": 22.24,
+        "eighteen": 23.84,
+        "five": 25.78,
+        "collect": 30.9,
+        "subtract": 36.33,
+        "four": 38.75,
+        "divide": 43.36,
+        "seven": 44.9,
+        "check": 48.58,
+        "checkten": 51.06,
+        "twentyfive": 52.6,
+        "up35": 54.04,
+        "down35": 58.98,
+        "zero": 62.37,
+        "whatif": 69.98,
+        "increase": 70.52,
+        "unbalanced": 72.96
+      },
+      "cueEdges": {
+        "principle": {
+          "start": 1.73,
+          "end": 4.25,
+          "wordIndex": 4
+        },
+        "symbols": {
+          "start": 7.88,
+          "end": 10.12,
+          "wordIndex": 9
+        },
+        "equal": {
+          "start": 11.18,
+          "end": 12.56,
+          "wordIndex": 15
+        },
+        "meaning": {
+          "start": 13.1,
+          "end": 17.46,
+          "wordIndex": 18
+        },
+        "equation": {
+          "start": 22.24,
+          "end": 23.0,
+          "wordIndex": 29
+        },
+        "eighteen": {
+          "start": 23.84,
+          "end": 25.1,
+          "wordIndex": 32
+        },
+        "five": {
+          "start": 25.78,
+          "end": 26.8,
+          "wordIndex": 36
+        },
+        "collect": {
+          "start": 30.9,
+          "end": 34.08,
+          "wordIndex": 41
+        },
+        "subtract": {
+          "start": 36.33,
+          "end": 37.37,
+          "wordIndex": 48
+        },
+        "four": {
+          "start": 38.75,
+          "end": 41.07,
+          "wordIndex": 53
+        },
+        "divide": {
+          "start": 43.36,
+          "end": 44.32,
+          "wordIndex": 58
+        },
+        "seven": {
+          "start": 44.9,
+          "end": 46.4,
+          "wordIndex": 61
+        },
+        "check": {
+          "start": 48.58,
+          "end": 51.06,
+          "wordIndex": 64
+        },
+        "checkten": {
+          "start": 51.06,
+          "end": 52.6,
+          "wordIndex": 69
+        },
+        "twentyfive": {
+          "start": 52.6,
+          "end": 53.98,
+          "wordIndex": 71
+        },
+        "up35": {
+          "start": 54.04,
+          "end": 56.56,
+          "wordIndex": 74
+        },
+        "down35": {
+          "start": 58.98,
+          "end": 60.28,
+          "wordIndex": 79
+        },
+        "zero": {
+          "start": 62.37,
+          "end": 64.97,
+          "wordIndex": 83
+        },
+        "whatif": {
+          "start": 69.98,
+          "end": 70.36,
+          "wordIndex": 93
+        },
+        "increase": {
+          "start": 70.52,
+          "end": 71.78,
+          "wordIndex": 96
+        },
+        "unbalanced": {
+          "start": 72.96,
+          "end": 74.04,
+          "wordIndex": 102
+        }
+      },
+      "figures": [
+        {
+          "id": "principle0",
+          "target": "principle",
+          "start": 3.65,
+          "end": 4.25,
+          "wordIndex": 6,
+          "word": "zero."
+        },
+        {
+          "id": "symbolU",
+          "target": "upgroup",
+          "start": 7.88,
+          "end": 8.36,
+          "wordIndex": 9,
+          "word": "U"
+        },
+        {
+          "id": "symbolD",
+          "target": "downgroup",
+          "start": 8.88,
+          "end": 9.3,
+          "wordIndex": 11,
+          "word": "D"
+        },
+        {
+          "id": "symbol0",
+          "target": "symbols",
+          "start": 9.58,
+          "end": 10.12,
+          "wordIndex": 13,
+          "word": "zero,"
+        },
+        {
+          "id": "equalU",
+          "target": "upgroup",
+          "start": 11.18,
+          "end": 11.6,
+          "wordIndex": 15,
+          "word": "U"
+        },
+        {
+          "id": "equalD",
+          "target": "downgroup",
+          "start": 12.12,
+          "end": 12.56,
+          "wordIndex": 17,
+          "word": "D."
+        },
+        {
+          "id": "ten",
+          "target": "up10",
+          "start": 22.24,
+          "end": 22.54,
+          "wordIndex": 29,
+          "word": "Ten"
+        },
+        {
+          "id": "eighteen",
+          "target": "up18",
+          "start": 23.84,
+          "end": 24.1,
+          "wordIndex": 32,
+          "word": "eighteen"
+        },
+        {
+          "id": "subx",
+          "target": "up18",
+          "start": 24.48,
+          "end": 25.1,
+          "wordIndex": 34,
+          "word": "x,"
+        },
+        {
+          "id": "five",
+          "target": "down5",
+          "start": 25.78,
+          "end": 26.3,
+          "wordIndex": 36,
+          "word": "five"
+        },
+        {
+          "id": "sub5x",
+          "target": "down5",
+          "start": 26.3,
+          "end": 26.8,
+          "wordIndex": 37,
+          "word": "x."
+        },
+        {
+          "id": "collect28",
+          "target": "collect",
+          "start": 30.9,
+          "end": 32.0,
+          "wordIndex": 41,
+          "word": "twenty"
+        },
+        {
+          "id": "collectx",
+          "target": "collect",
+          "start": 32.22,
+          "end": 32.66,
+          "wordIndex": 44,
+          "word": "x"
+        },
+        {
+          "id": "collect5",
+          "target": "down5",
+          "start": 33.16,
+          "end": 33.64,
+          "wordIndex": 46,
+          "word": "five"
+        },
+        {
+          "id": "collect5x",
+          "target": "down5",
+          "start": 33.64,
+          "end": 34.08,
+          "wordIndex": 47,
+          "word": "x."
+        },
+        {
+          "id": "subtractx",
+          "target": "collect",
+          "start": 36.95,
+          "end": 37.37,
+          "wordIndex": 49,
+          "word": "x"
+        },
+        {
+          "id": "four28",
+          "target": "four",
+          "start": 38.75,
+          "end": 39.79,
+          "wordIndex": 53,
+          "word": "twenty"
+        },
+        {
+          "id": "four",
+          "target": "four",
+          "start": 40.19,
+          "end": 41.07,
+          "wordIndex": 56,
+          "word": "four"
+        },
+        {
+          "id": "divide",
+          "target": "four",
+          "start": 43.94,
+          "end": 44.32,
+          "wordIndex": 60,
+          "word": "four."
+        },
+        {
+          "id": "seven",
+          "target": "seven",
+          "start": 45.88,
+          "end": 46.4,
+          "wordIndex": 63,
+          "word": "seven."
+        },
+        {
+          "id": "checkten",
+          "target": "up10",
+          "start": 51.06,
+          "end": 52.0,
+          "wordIndex": 69,
+          "word": "ten"
+        },
+        {
+          "id": "twentyfive",
+          "target": "up18",
+          "start": 52.6,
+          "end": 53.32,
+          "wordIndex": 71,
+          "word": "twenty"
+        },
+        {
+          "id": "up35",
+          "target": "uptotal",
+          "start": 55.9,
+          "end": 56.56,
+          "wordIndex": 75,
+          "word": "thirty"
+        },
+        {
+          "id": "down35",
+          "target": "downtotal",
+          "start": 59.22,
+          "end": 59.78,
+          "wordIndex": 80,
+          "word": "thirty"
+        },
+        {
+          "id": "zero",
+          "target": "answer0",
+          "start": 63.83,
+          "end": 64.27,
+          "wordIndex": 86,
+          "word": "zero"
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "tempo": "brisk",
+      "voiceSpeed": 1.0,
+      "budget": 24,
+      "paragraphs": [
+        "Given mass? Convert it to weight. Weight equals mass times g: W equals m g. Mass is in kilograms; weight acts downward, in newtons. Use g equals ten metres per second squared unless told otherwise. [hold 2 s] Our example already gave forces in newtons."
+      ],
+      "audio": "equilibrium-in-1d-s06.mp3",
+      "audioSha256": "02755ad4a20e2af0d5c116e0da4da1c50dfd92bbf439cbd7abfce15dda59ae06",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "provider": "elevenlabs",
+      "beats": [
+        {
+          "text": "Given mass? Convert it to weight. Weight equals mass times g: W equals m g. Mass is in kilograms; weight acts downward, in newtons. Use g equals ten metres per second squared unless told otherwise.",
+          "start": 0.55,
+          "end": 23.81
+        },
+        {
+          "text": "Our example already gave forces in newtons.",
+          "start": 25.81,
+          "end": 28.43
+        }
+      ],
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 23.81,
+          "end": 25.81,
+          "duration": 2.0
+        }
+      ],
+      "sampleDuration": 28.88,
+      "duration": 28.917551,
+      "words": [
+        {
+          "word": "Given",
+          "start": 0.55,
+          "end": 0.79
+        },
+        {
+          "word": "mass?",
+          "start": 0.79,
+          "end": 1.23
+        },
+        {
+          "word": "Convert",
+          "start": 2.29,
+          "end": 2.63
+        },
+        {
+          "word": "it",
+          "start": 2.63,
+          "end": 2.81
+        },
+        {
+          "word": "to",
+          "start": 2.81,
+          "end": 2.97
+        },
+        {
+          "word": "weight.",
+          "start": 2.97,
+          "end": 3.17
+        },
+        {
+          "word": "Weight",
+          "start": 4.21,
+          "end": 4.53
+        },
+        {
+          "word": "equals",
+          "start": 4.53,
+          "end": 5.19
+        },
+        {
+          "word": "mass",
+          "start": 5.19,
+          "end": 5.59
+        },
+        {
+          "word": "times",
+          "start": 5.59,
+          "end": 6.81
+        },
+        {
+          "word": "g",
+          "start": 6.81,
+          "end": 7.19
+        },
+        {
+          "word": "W",
+          "start": 7.19,
+          "end": 8.51
+        },
+        {
+          "word": "equals",
+          "start": 8.51,
+          "end": 9.05
+        },
+        {
+          "word": "m",
+          "start": 9.05,
+          "end": 9.33
+        },
+        {
+          "word": "g.",
+          "start": 9.33,
+          "end": 9.59
+        },
+        {
+          "word": "Mass",
+          "start": 10.45,
+          "end": 11.33
+        },
+        {
+          "word": "is",
+          "start": 11.33,
+          "end": 11.53
+        },
+        {
+          "word": "in",
+          "start": 11.53,
+          "end": 11.67
+        },
+        {
+          "word": "kilograms.",
+          "start": 11.67,
+          "end": 11.99
+        },
+        {
+          "word": "Weight",
+          "start": 13.41,
+          "end": 14.01
+        },
+        {
+          "word": "acts",
+          "start": 14.01,
+          "end": 14.81
+        },
+        {
+          "word": "downward,",
+          "start": 14.81,
+          "end": 15.39
+        },
+        {
+          "word": "in",
+          "start": 16.61,
+          "end": 17.05
+        },
+        {
+          "word": "newtons.",
+          "start": 17.05,
+          "end": 17.61
+        },
+        {
+          "word": "Use",
+          "start": 18.93,
+          "end": 19.41
+        },
+        {
+          "word": "g",
+          "start": 19.41,
+          "end": 19.83
+        },
+        {
+          "word": "equals",
+          "start": 19.83,
+          "end": 20.41
+        },
+        {
+          "word": "ten",
+          "start": 20.41,
+          "end": 20.73
+        },
+        {
+          "word": "metres",
+          "start": 20.73,
+          "end": 20.93
+        },
+        {
+          "word": "per",
+          "start": 20.93,
+          "end": 21.19
+        },
+        {
+          "word": "second",
+          "start": 21.19,
+          "end": 21.45
+        },
+        {
+          "word": "squared",
+          "start": 21.45,
+          "end": 21.89
+        },
+        {
+          "word": "unless",
+          "start": 21.89,
+          "end": 22.81
+        },
+        {
+          "word": "told",
+          "start": 22.81,
+          "end": 23.31
+        },
+        {
+          "word": "otherwise.",
+          "start": 23.31,
+          "end": 23.61
+        },
+        {
+          "word": "Our",
+          "start": 25.81,
+          "end": 25.97
+        },
+        {
+          "word": "example",
+          "start": 25.97,
+          "end": 26.39
+        },
+        {
+          "word": "already",
+          "start": 26.39,
+          "end": 26.85
+        },
+        {
+          "word": "gave",
+          "start": 26.85,
+          "end": 27.15
+        },
+        {
+          "word": "forces",
+          "start": 27.15,
+          "end": 27.53
+        },
+        {
+          "word": "in",
+          "start": 27.53,
+          "end": 27.79
+        },
+        {
+          "word": "newtons.",
+          "start": 27.79,
+          "end": 28.25
+        }
+      ],
+      "wordCount": 42,
+      "text": "Given mass? Convert it to weight. Weight equals mass times g W equals m g. Mass is in kilograms. Weight acts downward, in newtons. Use g equals ten metres per second squared unless told otherwise. Our example already gave forces in newtons.",
+      "cues": {
+        "mass": 0.79,
+        "formula": 4.21,
+        "symbols": 7.19,
+        "kg": 11.67,
+        "down": 13.41,
+        "g": 18.93,
+        "ten": 20.41,
+        "already": 26.39
+      },
+      "cueEdges": {
+        "mass": {
+          "start": 0.79,
+          "end": 1.23,
+          "wordIndex": 1
+        },
+        "formula": {
+          "start": 4.21,
+          "end": 7.19,
+          "wordIndex": 6
+        },
+        "symbols": {
+          "start": 7.19,
+          "end": 9.59,
+          "wordIndex": 11
+        },
+        "kg": {
+          "start": 11.67,
+          "end": 11.99,
+          "wordIndex": 18
+        },
+        "down": {
+          "start": 13.41,
+          "end": 15.39,
+          "wordIndex": 19
+        },
+        "g": {
+          "start": 18.93,
+          "end": 20.73,
+          "wordIndex": 24
+        },
+        "ten": {
+          "start": 20.41,
+          "end": 21.89,
+          "wordIndex": 27
+        },
+        "already": {
+          "start": 26.39,
+          "end": 27.53,
+          "wordIndex": 37
+        }
+      },
+      "figures": [
+        {
+          "id": "m",
+          "target": "mass",
+          "start": 5.19,
+          "end": 6.81,
+          "wordIndex": 8,
+          "word": "mass"
+        },
+        {
+          "id": "g",
+          "target": "gravity",
+          "start": 6.81,
+          "end": 7.19,
+          "wordIndex": 10,
+          "word": "g"
+        },
+        {
+          "id": "w",
+          "target": "weight",
+          "start": 7.19,
+          "end": 9.05,
+          "wordIndex": 11,
+          "word": "W"
+        },
+        {
+          "id": "mletter",
+          "target": "mass",
+          "start": 9.05,
+          "end": 9.59,
+          "wordIndex": 13,
+          "word": "m"
+        },
+        {
+          "id": "gletter",
+          "target": "gravity",
+          "start": 9.33,
+          "end": 9.59,
+          "wordIndex": 14,
+          "word": "g."
+        },
+        {
+          "id": "ten",
+          "target": "gravity",
+          "start": 20.41,
+          "end": 20.73,
+          "wordIndex": 27,
+          "word": "ten"
+        }
+      ]
+    },
+    {
+      "id": "s07",
+      "tempo": "brisk",
+      "voiceSpeed": 1.0,
+      "budget": 28,
+      "paragraphs": [
+        "One check. The resultant force is zero. Must the object be at rest? [hold 3 s] No. It can move with constant velocity: the same speed and direction. An object already at rest stays at rest. Remember: find the resultant along a line; balance forces to find an unknown; explain why equilibrium allows motion."
+      ],
+      "audio": "equilibrium-in-1d-s07.mp3",
+      "audioSha256": "c113121c982f782de80215b8755e5ce98c8fd47488a8552b17e766766ce2b311",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "provider": "elevenlabs",
+      "beats": [
+        {
+          "text": "One check. The resultant force is zero. Must the object be at rest?",
+          "start": 0.55,
+          "end": 7.18
+        },
+        {
+          "text": "No. It can move with constant velocity: the same speed and direction. An object already at rest stays at rest. Remember: find the resultant along a line; balance forces to find an unknown; explain why equilibrium allows motion.",
+          "start": 10.18,
+          "end": 33.85
+        }
+      ],
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 7.18,
+          "end": 10.18,
+          "duration": 3.0
+        }
+      ],
+      "sampleDuration": 34.3,
+      "duration": 34.35102,
+      "words": [
+        {
+          "word": "One",
+          "start": 0.55,
+          "end": 0.75
+        },
+        {
+          "word": "check.",
+          "start": 0.75,
+          "end": 1.07
+        },
+        {
+          "word": "The",
+          "start": 2.09,
+          "end": 2.53
+        },
+        {
+          "word": "resultant",
+          "start": 2.53,
+          "end": 3.17
+        },
+        {
+          "word": "force",
+          "start": 3.17,
+          "end": 3.47
+        },
+        {
+          "word": "is",
+          "start": 3.47,
+          "end": 3.93
+        },
+        {
+          "word": "zero.",
+          "start": 3.93,
+          "end": 4.33
+        },
+        {
+          "word": "Must",
+          "start": 5.29,
+          "end": 5.69
+        },
+        {
+          "word": "the",
+          "start": 5.69,
+          "end": 5.91
+        },
+        {
+          "word": "object",
+          "start": 5.91,
+          "end": 6.17
+        },
+        {
+          "word": "be",
+          "start": 6.17,
+          "end": 6.45
+        },
+        {
+          "word": "at",
+          "start": 6.45,
+          "end": 6.65
+        },
+        {
+          "word": "rest?",
+          "start": 6.65,
+          "end": 6.91
+        },
+        {
+          "word": "No.",
+          "start": 10.18,
+          "end": 10.48
+        },
+        {
+          "word": "It",
+          "start": 11.6,
+          "end": 11.84
+        },
+        {
+          "word": "can",
+          "start": 11.84,
+          "end": 11.98
+        },
+        {
+          "word": "move",
+          "start": 11.98,
+          "end": 12.4
+        },
+        {
+          "word": "with",
+          "start": 12.4,
+          "end": 12.88
+        },
+        {
+          "word": "constant",
+          "start": 12.88,
+          "end": 13.24
+        },
+        {
+          "word": "velocity.",
+          "start": 13.24,
+          "end": 13.8
+        },
+        {
+          "word": "The",
+          "start": 14.96,
+          "end": 15.1
+        },
+        {
+          "word": "same",
+          "start": 15.1,
+          "end": 15.44
+        },
+        {
+          "word": "speed",
+          "start": 15.44,
+          "end": 16.04
+        },
+        {
+          "word": "and",
+          "start": 16.04,
+          "end": 16.72
+        },
+        {
+          "word": "direction.",
+          "start": 16.72,
+          "end": 17.14
+        },
+        {
+          "word": "An",
+          "start": 18.32,
+          "end": 18.46
+        },
+        {
+          "word": "object",
+          "start": 18.46,
+          "end": 18.86
+        },
+        {
+          "word": "already",
+          "start": 18.86,
+          "end": 19.58
+        },
+        {
+          "word": "at",
+          "start": 19.58,
+          "end": 19.92
+        },
+        {
+          "word": "rest",
+          "start": 19.92,
+          "end": 20.24
+        },
+        {
+          "word": "stays",
+          "start": 20.24,
+          "end": 20.84
+        },
+        {
+          "word": "at",
+          "start": 20.84,
+          "end": 21.26
+        },
+        {
+          "word": "rest.",
+          "start": 21.26,
+          "end": 21.62
+        },
+        {
+          "word": "Remember,",
+          "start": 22.68,
+          "end": 23.22
+        },
+        {
+          "word": "find",
+          "start": 24.06,
+          "end": 24.7
+        },
+        {
+          "word": "the",
+          "start": 24.7,
+          "end": 24.96
+        },
+        {
+          "word": "resultant",
+          "start": 24.96,
+          "end": 25.5
+        },
+        {
+          "word": "along",
+          "start": 25.5,
+          "end": 25.74
+        },
+        {
+          "word": "a",
+          "start": 25.74,
+          "end": 25.96
+        },
+        {
+          "word": "line,",
+          "start": 25.96,
+          "end": 26.26
+        },
+        {
+          "word": "balance",
+          "start": 27.04,
+          "end": 27.46
+        },
+        {
+          "word": "forces",
+          "start": 27.46,
+          "end": 27.86
+        },
+        {
+          "word": "to",
+          "start": 27.86,
+          "end": 28.76
+        },
+        {
+          "word": "find",
+          "start": 28.76,
+          "end": 29.12
+        },
+        {
+          "word": "an",
+          "start": 29.12,
+          "end": 29.32
+        },
+        {
+          "word": "unknown.",
+          "start": 29.32,
+          "end": 29.68
+        },
+        {
+          "word": "Explain",
+          "start": 29.68,
+          "end": 31.04
+        },
+        {
+          "word": "why",
+          "start": 31.04,
+          "end": 31.68
+        },
+        {
+          "word": "equilibrium",
+          "start": 31.68,
+          "end": 32.32
+        },
+        {
+          "word": "allows",
+          "start": 32.32,
+          "end": 33.26
+        },
+        {
+          "word": "motion.",
+          "start": 33.26,
+          "end": 33.68
+        }
+      ],
+      "wordCount": 51,
+      "text": "One check. The resultant force is zero. Must the object be at rest? No. It can move with constant velocity. The same speed and direction. An object already at rest stays at rest. Remember, find the resultant along a line, balance forces to find an unknown. Explain why equilibrium allows motion.",
+      "cues": {
+        "zero": 3.93,
+        "question": 5.29,
+        "answer": 10.18,
+        "moving": 12.88,
+        "rest": 18.32,
+        "o1": 24.06,
+        "o2": 27.04,
+        "o3": 29.68
+      },
+      "cueEdges": {
+        "zero": {
+          "start": 3.93,
+          "end": 4.33,
+          "wordIndex": 6
+        },
+        "question": {
+          "start": 5.29,
+          "end": 6.91,
+          "wordIndex": 7
+        },
+        "answer": {
+          "start": 10.18,
+          "end": 10.48,
+          "wordIndex": 13
+        },
+        "moving": {
+          "start": 12.88,
+          "end": 13.8,
+          "wordIndex": 18
+        },
+        "rest": {
+          "start": 18.32,
+          "end": 20.24,
+          "wordIndex": 25
+        },
+        "o1": {
+          "start": 24.06,
+          "end": 25.5,
+          "wordIndex": 34
+        },
+        "o2": {
+          "start": 27.04,
+          "end": 27.86,
+          "wordIndex": 40
+        },
+        "o3": {
+          "start": 29.68,
+          "end": 31.68,
+          "wordIndex": 46
+        }
+      },
+      "figures": [
+        {
+          "id": "zero",
+          "target": "answer0",
+          "start": 3.93,
+          "end": 4.33,
+          "wordIndex": 6,
+          "word": "zero."
+        }
+      ]
+    }
+  ]
+}

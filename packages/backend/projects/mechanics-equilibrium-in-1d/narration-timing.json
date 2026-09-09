@@ -1,0 +1,337 @@
+[
+  {
+    "id": "s01",
+    "tempo": "brisk",
+    "voiceSpeed": 1.0,
+    "budget": 25,
+    "paragraphs": [
+      "Syllabus four point one: use the principle that, when a particle is in equilibrium, the vector sum of the forces acting is zero. By the end you can find the resultant along a line; balance forces to find an unknown; and explain why equilibrium allows motion."
+    ],
+    "audio": "equilibrium-in-1d-s01.mp3",
+    "audioSha256": "52ba6ed63f53f4ea8a0c6b8d664fa66f47786f31925b4519c8026e1fcc9ffb29",
+    "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+    "provider": "elevenlabs",
+    "beats": [
+      {
+        "text": "Syllabus four point one: use the principle that, when a particle is in equilibrium, the vector sum of the forces acting is zero. By the end you can find the resultant along a line; balance forces to find an unknown; and explain why equilibrium allows motion.",
+        "start": 0.55,
+        "end": 22.21
+      }
+    ],
+    "holds": [],
+    "sampleDuration": 25.0
+  },
+  {
+    "id": "s02",
+    "tempo": "slow",
+    "voiceSpeed": 0.9,
+    "budget": 49,
+    "paragraphs": [
+      "The resultant is the combined effect of all the forces. Along one line, direction matters. Choose right as positive. The rightward force is fifty newtons; the leftward force is twenty newtons. [pause 0.6 s] Write resultant equals right minus left. [pause 1 s] Fifty minus twenty gives thirty newtons, to the right. [hold 2 s] Draw that resultant separately. It replaces the pair; it is not a third force. Now make the opposing forces forty newtons each. [pause 0.8 s] Their resultant is zero newtons. [hold 2 s] This is equilibrium: forces act, but their effects balance."
+    ],
+    "audio": "equilibrium-in-1d-s02.mp3",
+    "audioSha256": "0f19cf932a218b5c9e96fd1f956c36bfd58cc899962451d4a09ebde1e47541e6",
+    "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+    "provider": "elevenlabs",
+    "beats": [
+      {
+        "text": "The resultant is the combined effect of all the forces. Along one line, direction matters. Choose right as positive. The rightward force is fifty newtons; the leftward force is twenty newtons.",
+        "start": 0.55,
+        "end": 20.55
+      },
+      {
+        "text": "Write resultant equals right minus left.",
+        "start": 21.15,
+        "end": 23.97
+      },
+      {
+        "text": "Fifty minus twenty gives thirty newtons, to the right.",
+        "start": 24.97,
+        "end": 28.7
+      },
+      {
+        "text": "Draw that resultant separately. It replaces the pair; it is not a third force. Now make the opposing forces forty newtons each.",
+        "start": 30.7,
+        "end": 42.34
+      },
+      {
+        "text": "Their resultant is zero newtons.",
+        "start": 43.14,
+        "end": 45.43
+      },
+      {
+        "text": "This is equilibrium: forces act, but their effects balance.",
+        "start": 47.43,
+        "end": 52.43
+      }
+    ],
+    "holds": [
+      {
+        "kind": "pause",
+        "start": 20.55,
+        "end": 21.15,
+        "duration": 0.6
+      },
+      {
+        "kind": "pause",
+        "start": 23.97,
+        "end": 24.97,
+        "duration": 1.0
+      },
+      {
+        "kind": "hold",
+        "start": 28.7,
+        "end": 30.7,
+        "duration": 2.0
+      },
+      {
+        "kind": "pause",
+        "start": 42.34,
+        "end": 43.14,
+        "duration": 0.8
+      },
+      {
+        "kind": "hold",
+        "start": 45.43,
+        "end": 47.43,
+        "duration": 2.0
+      }
+    ],
+    "sampleDuration": 52.88
+  },
+  {
+    "id": "s03",
+    "tempo": "brisk",
+    "voiceSpeed": 1.0,
+    "budget": 18,
+    "paragraphs": [
+      "Consider an object being pulled upward by two strings, while another force pulls downward. The pulls settle into balance and the object stays still. We will find an unknown in those forces. It is the upward total that must match the downward total. Let's draw the problem."
+    ],
+    "audio": "equilibrium-in-1d-s03.mp3",
+    "audioSha256": "d6893a86054930ff55eff4d3bba6c7c7b64a63b84d9650525889cf4ff44dc971",
+    "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+    "provider": "elevenlabs",
+    "beats": [
+      {
+        "text": "Consider an object being pulled upward by two strings, while another force pulls downward. The pulls settle into balance and the object stays still. We will find an unknown in those forces. It is the upward total that must match the downward total. Let's draw the problem.",
+        "start": 0.55,
+        "end": 21.34
+      }
+    ],
+    "holds": [],
+    "sampleDuration": 21.79
+  },
+  {
+    "id": "s04",
+    "tempo": "brisk",
+    "voiceSpeed": 1.0,
+    "budget": 29,
+    "paragraphs": [
+      "The object is in equilibrium. Find x, and the magnitude of the resultant force. Upward, we have ten newtons and eighteen plus x newtons. Downward, we have five x newtons. All three forces are already in newtons. Take upward as positive, so the downward force enters with a minus sign. [hold 2 s] Now let's write the balance."
+    ],
+    "audio": "equilibrium-in-1d-s04.mp3",
+    "audioSha256": "432134a588b0a58091386ed5bdb2bb2c803b8d92d736568620d98584ed996dd9",
+    "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+    "provider": "elevenlabs",
+    "beats": [
+      {
+        "text": "The object is in equilibrium. Find x, and the magnitude of the resultant force. Upward, we have ten newtons and eighteen plus x newtons. Downward, we have five x newtons. All three forces are already in newtons. Take upward as positive, so the downward force enters with a minus sign.",
+        "start": 0.55,
+        "end": 24.27
+      },
+      {
+        "text": "Now let's write the balance.",
+        "start": 26.27,
+        "end": 27.69
+      }
+    ],
+    "holds": [
+      {
+        "kind": "hold",
+        "start": 24.27,
+        "end": 26.27,
+        "duration": 2.0
+      }
+    ],
+    "sampleDuration": 29.0
+  },
+  {
+    "id": "s05",
+    "tempo": "slow",
+    "voiceSpeed": 0.9,
+    "budget": 67,
+    "paragraphs": [
+      "Start with the principle: resultant equals zero. [pause 2 s] In symbols, U minus D equals zero, so U equals D: total upward force equals total downward force. [pause 2 s] Substitute from the diagram. Ten plus, bracket, eighteen plus x, equals five x. [hold 2 s] Collect the constants: twenty eight plus x equals five x. [hold 2 s] Subtract x from both sides: twenty eight equals four x. [hold 2 s] Divide by four. x equals seven. [hold 2 s] The upward forces are now ten and twenty five newtons; together, thirty five. Downward is also thirty five newtons. [hold 2 s] The resultant is zero newtons. Equilibrium told us that immediately. [hold 2 s] What if the downward pull increased? The forces would no longer balance."
+    ],
+    "audio": "equilibrium-in-1d-s05.mp3",
+    "audioSha256": "829f450cbeec942371d7cff95801073f2c4486bc3fa6b1f4071c9e8e32da60bc",
+    "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+    "provider": "elevenlabs",
+    "beats": [
+      {
+        "text": "Start with the principle: resultant equals zero.",
+        "start": 0.55,
+        "end": 4.46
+      },
+      {
+        "text": "In symbols, U minus D equals zero, so U equals D: total upward force equals total downward force.",
+        "start": 6.46,
+        "end": 17.72
+      },
+      {
+        "text": "Substitute from the diagram. Ten plus, bracket, eighteen plus x, equals five x.",
+        "start": 19.72,
+        "end": 27.1
+      },
+      {
+        "text": "Collect the constants: twenty eight plus x equals five x.",
+        "start": 29.1,
+        "end": 34.33
+      },
+      {
+        "text": "Subtract x from both sides: twenty eight equals four x.",
+        "start": 36.33,
+        "end": 41.36
+      },
+      {
+        "text": "Divide by four. x equals seven.",
+        "start": 43.36,
+        "end": 46.58
+      },
+      {
+        "text": "The upward forces are now ten and twenty five newtons; together, thirty five. Downward is also thirty five newtons.",
+        "start": 48.58,
+        "end": 60.37
+      },
+      {
+        "text": "The resultant is zero newtons. Equilibrium told us that immediately.",
+        "start": 62.37,
+        "end": 67.98
+      },
+      {
+        "text": "What if the downward pull increased? The forces would no longer balance.",
+        "start": 69.98,
+        "end": 74.4
+      }
+    ],
+    "holds": [
+      {
+        "kind": "pause",
+        "start": 4.46,
+        "end": 6.46,
+        "duration": 2.0
+      },
+      {
+        "kind": "pause",
+        "start": 17.72,
+        "end": 19.72,
+        "duration": 2.0
+      },
+      {
+        "kind": "hold",
+        "start": 27.1,
+        "end": 29.1,
+        "duration": 2.0
+      },
+      {
+        "kind": "hold",
+        "start": 34.33,
+        "end": 36.33,
+        "duration": 2.0
+      },
+      {
+        "kind": "hold",
+        "start": 41.36,
+        "end": 43.36,
+        "duration": 2.0
+      },
+      {
+        "kind": "hold",
+        "start": 46.58,
+        "end": 48.58,
+        "duration": 2.0
+      },
+      {
+        "kind": "hold",
+        "start": 60.37,
+        "end": 62.37,
+        "duration": 2.0
+      },
+      {
+        "kind": "hold",
+        "start": 67.98,
+        "end": 69.98,
+        "duration": 2.0
+      }
+    ],
+    "sampleDuration": 74.85
+  },
+  {
+    "id": "s06",
+    "tempo": "brisk",
+    "voiceSpeed": 1.0,
+    "budget": 24,
+    "paragraphs": [
+      "Given mass? Convert it to weight. Weight equals mass times g: W equals m g. Mass is in kilograms; weight acts downward, in newtons. Use g equals ten metres per second squared unless told otherwise. [hold 2 s] Our example already gave forces in newtons."
+    ],
+    "audio": "equilibrium-in-1d-s06.mp3",
+    "audioSha256": "02755ad4a20e2af0d5c116e0da4da1c50dfd92bbf439cbd7abfce15dda59ae06",
+    "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+    "provider": "elevenlabs",
+    "beats": [
+      {
+        "text": "Given mass? Convert it to weight. Weight equals mass times g: W equals m g. Mass is in kilograms; weight acts downward, in newtons. Use g equals ten metres per second squared unless told otherwise.",
+        "start": 0.55,
+        "end": 23.81
+      },
+      {
+        "text": "Our example already gave forces in newtons.",
+        "start": 25.81,
+        "end": 28.43
+      }
+    ],
+    "holds": [
+      {
+        "kind": "hold",
+        "start": 23.81,
+        "end": 25.81,
+        "duration": 2.0
+      }
+    ],
+    "sampleDuration": 28.88
+  },
+  {
+    "id": "s07",
+    "tempo": "brisk",
+    "voiceSpeed": 1.0,
+    "budget": 28,
+    "paragraphs": [
+      "One check. The resultant force is zero. Must the object be at rest? [hold 3 s] No. It can move with constant velocity: the same speed and direction. An object already at rest stays at rest. Remember: find the resultant along a line; balance forces to find an unknown; explain why equilibrium allows motion."
+    ],
+    "audio": "equilibrium-in-1d-s07.mp3",
+    "audioSha256": "c113121c982f782de80215b8755e5ce98c8fd47488a8552b17e766766ce2b311",
+    "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+    "provider": "elevenlabs",
+    "beats": [
+      {
+        "text": "One check. The resultant force is zero. Must the object be at rest?",
+        "start": 0.55,
+        "end": 7.18
+      },
+      {
+        "text": "No. It can move with constant velocity: the same speed and direction. An object already at rest stays at rest. Remember: find the resultant along a line; balance forces to find an unknown; explain why equilibrium allows motion.",
+        "start": 10.18,
+        "end": 33.85
+      }
+    ],
+    "holds": [
+      {
+        "kind": "hold",
+        "start": 7.18,
+        "end": 10.18,
+        "duration": 3.0
+      }
+    ],
+    "sampleDuration": 34.3
+  }
+]
