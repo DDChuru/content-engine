@@ -56,7 +56,7 @@ def main():
   for s in scenes:
    words=[];cues={};events=[]
    full_cache=work/(s['id']+'-full-words.json')
-   missing=any(not (work/(s['id']+'-'+b['id']+'-words.json')).exists() for b in s['beats'])
+   missing=not full_cache.exists() or json.loads(full_cache.read_text()).get('sha')!=s['audioSha256']
    full=[]
    if missing:
     if full_cache.exists() and json.loads(full_cache.read_text())['sha']==s['audioSha256']:full=json.loads(full_cache.read_text())['words']
@@ -65,7 +65,7 @@ def main():
      full=[dict(word=w.word.strip(),start=round(w.start,3),end=round(w.end,3)) for seg in segs for w in (seg.words or [])]
      full_cache.write_text(json.dumps(dict(sha=s['audioSha256'],words=full),indent=2)+'\n')
    for b in s['beats']:
-    cache=work/(s['id']+'-'+b['id']+'-isolated-words.json')
+    cache=work/(s['id']+'-'+b['id']+'-'+s['audioSha256'][:12]+'-isolated-words.json')
     if cache.exists():local=json.loads(cache.read_text())
     else:
      pcm=subprocess.check_output(['ffmpeg','-v','error','-ss',str(b['start']),'-t',str(b['speechEnd']-b['start']),'-i',str(A/s['audio']),'-f','f32le','-ac','1','-ar','16000','-'])

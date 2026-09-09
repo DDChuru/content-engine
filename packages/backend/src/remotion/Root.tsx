@@ -68,6 +68,7 @@ import { MechanicsDrawingTravelGraphs, MechanicsDrawingTravelGraphsProps, getMec
 import { MechanicsMultipleCollisions, MechanicsMultipleCollisionsProps, getMechanicsMultipleCollisionsDuration } from './compositions/MechanicsMultipleCollisions';
 import { MechanicsUsingCalculusIn1D, MechanicsUsingCalculusIn1DProps, getMechanicsUsingCalculusIn1DDuration } from './compositions/MechanicsUsingCalculusIn1D';
 import { MechanicsDerivingSuvat, MechanicsDerivingSuvatProps, getMechanicsDerivingSuvatDuration } from './compositions/MechanicsDerivingSuvat';
+import { MechanicsAccelerationDueToGravity, MechanicsAccelerationDueToGravityProps, getMechanicsAccelerationDueToGravityDuration } from './compositions/MechanicsAccelerationDueToGravity';
 import { MechanicsDerivedUnits, MechanicsDerivedUnitsProps, getMechanicsDerivedUnitsDuration } from './compositions/MechanicsDerivedUnits';
 import { MechanicsTypesOfForces, MechanicsTypesOfForcesProps, getMechanicsTypesOfForcesDuration } from './compositions/MechanicsTypesOfForces';
 
@@ -1369,6 +1370,15 @@ export const RemotionRoot: React.FC = () => {
         width={1920}
         height={1080}
         defaultProps={{ audioEnabled: true } satisfies MechanicsDerivingSuvatProps}
+      />
+      <Composition
+        id="MechanicsAccelerationDueToGravity"
+        component={MechanicsAccelerationDueToGravity}
+        durationInFrames={getMechanicsAccelerationDueToGravityDuration(30)}
+        fps={30}
+        width={1920}
+        height={1080}
+        defaultProps={{ audioEnabled: true } satisfies MechanicsAccelerationDueToGravityProps}
       />
     </>
   );
