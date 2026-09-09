@@ -1,0 +1,421 @@
+[
+  {
+    "id": "s01",
+    "tempo": "brisk",
+    "voiceSpeed": 1.0,
+    "budget": 19,
+    "paragraphs": [
+      "Syllabus four point one: identify the forces acting in a given situation. By the end, you can choose the forces, draw and label arrows, and check changed assumptions. We are learning to draw, not calculate. [hold 1 s]"
+    ],
+    "audio": "force-diagrams-s01.mp3",
+    "audioSha256": "a65d5b820caafd0dc0c453e6c6db2d744b043e5e5823b1c62a506230fb948e3d",
+    "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+    "provider": "elevenlabs",
+    "beats": [
+      {
+        "text": "Syllabus four point one: identify the forces acting in a given situation. By the end, you can choose the forces, draw and label arrows, and check changed assumptions. We are learning to draw, not calculate.",
+        "start": 0.55,
+        "end": 19.49
+      }
+    ],
+    "holds": [
+      {
+        "kind": "hold",
+        "start": 19.49,
+        "end": 20.49,
+        "duration": 1.0
+      }
+    ],
+    "sampleDuration": 20.94
+  },
+  {
+    "id": "s02",
+    "tempo": "slow",
+    "voiceSpeed": 0.9,
+    "budget": 39,
+    "paragraphs": [
+      "A string pulls a box right across a smooth table. Which forces act? [hold 2 s] Draw arrows from the particle. Weight equals mass times g: draw weight down, labelled m g. The normal reaction is perpendicular to the table. Tension pulls along the string. Label each force. Length roughly shows size; equal forces look equal. What if the table is rough? [hold 1 s] Friction opposes sliding. [hold 1 s]"
+    ],
+    "audio": "force-diagrams-s02.mp3",
+    "audioSha256": "cc2aed056f4bab39338824dfc06254c317576883aae4c9b84c59a6ec1f3ffbda",
+    "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+    "provider": "elevenlabs",
+    "beats": [
+      {
+        "text": "A string pulls a box right across a smooth table. Which forces act?",
+        "start": 0.55,
+        "end": 5.72
+      },
+      {
+        "text": "Draw arrows from the particle. Weight equals mass times g: draw weight down, labelled m g. The normal reaction is perpendicular to the table. Tension pulls along the string. Label each force. Length roughly shows size; equal forces look equal. What if the table is rough?",
+        "start": 7.72,
+        "end": 44.14
+      },
+      {
+        "text": "Friction opposes sliding.",
+        "start": 45.14,
+        "end": 46.75
+      }
+    ],
+    "holds": [
+      {
+        "kind": "hold",
+        "start": 5.72,
+        "end": 7.72,
+        "duration": 2.0
+      },
+      {
+        "kind": "hold",
+        "start": 44.14,
+        "end": 45.14,
+        "duration": 1.0
+      },
+      {
+        "kind": "hold",
+        "start": 46.75,
+        "end": 47.75,
+        "duration": 1.0
+      }
+    ],
+    "sampleDuration": 48.2
+  },
+  {
+    "id": "s03",
+    "tempo": "brisk",
+    "voiceSpeed": 1.0,
+    "budget": 33,
+    "paragraphs": [
+      "A body hangs at rest from strings at thirty and forty-five degrees to the horizontal. Which forces act? [hold 2 s] Weight acts down. Left tension follows its string. Right tension follows the other. No surface contact means no normal reaction. Questions will not tell you to add weight. What if one vertical string replaces both? [hold 1 s] Draw one upward tension. [hold 1 s]"
+    ],
+    "audio": "force-diagrams-s03.mp3",
+    "audioSha256": "a149b6af59f9d08da4563c2fcb5984b12a8e185532226bd2ba989cb9da9ea45f",
+    "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+    "provider": "elevenlabs",
+    "beats": [
+      {
+        "text": "A body hangs at rest from strings at thirty and forty-five degrees to the horizontal. Which forces act?",
+        "start": 0.55,
+        "end": 8.37
+      },
+      {
+        "text": "Weight acts down. Left tension follows its string. Right tension follows the other. No surface contact means no normal reaction. Questions will not tell you to add weight. What if one vertical string replaces both?",
+        "start": 10.37,
+        "end": 30.06
+      },
+      {
+        "text": "Draw one upward tension.",
+        "start": 31.06,
+        "end": 32.83
+      }
+    ],
+    "holds": [
+      {
+        "kind": "hold",
+        "start": 8.37,
+        "end": 10.37,
+        "duration": 2.0
+      },
+      {
+        "kind": "hold",
+        "start": 30.06,
+        "end": 31.06,
+        "duration": 1.0
+      },
+      {
+        "kind": "hold",
+        "start": 32.83,
+        "end": 33.83,
+        "duration": 1.0
+      }
+    ],
+    "sampleDuration": 34.28
+  },
+  {
+    "id": "s04",
+    "tempo": "slow",
+    "voiceSpeed": 0.9,
+    "budget": 49,
+    "paragraphs": [
+      "A car travels right on a level road, engine driving. Which forces act? [hold 2 s] Weight acts down. The normal reaction acts up. Driving force acts right. Air resistance acts left. At steady speed, these horizontal forces balance. Take right as positive. Now brake and stop driving. [pause 1 s] Remove the driving arrow. Add braking force left; air resistance remains. Braking includes tyre friction: do not count it twice. Draw acceleration separately, pointing left. It is negative because right is positive. [hold 2 s]"
+    ],
+    "audio": "force-diagrams-s04.mp3",
+    "audioSha256": "0668e678a529f62322b3023b36a3881f8836fdea09454778b7fccd4d350fdba6",
+    "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+    "provider": "elevenlabs",
+    "beats": [
+      {
+        "text": "A car travels right on a level road, engine driving. Which forces act?",
+        "start": 0.55,
+        "end": 6.88
+      },
+      {
+        "text": "Weight acts down. The normal reaction acts up. Driving force acts right. Air resistance acts left. At steady speed, these horizontal forces balance. Take right as positive. Now brake and stop driving.",
+        "start": 8.88,
+        "end": 30.8
+      },
+      {
+        "text": "Remove the driving arrow. Add braking force left; air resistance remains. Braking includes tyre friction: do not count it twice. Draw acceleration separately, pointing left. It is negative because right is positive.",
+        "start": 31.8,
+        "end": 56.22
+      }
+    ],
+    "holds": [
+      {
+        "kind": "hold",
+        "start": 6.88,
+        "end": 8.88,
+        "duration": 2.0
+      },
+      {
+        "kind": "pause",
+        "start": 30.8,
+        "end": 31.8,
+        "duration": 1.0
+      },
+      {
+        "kind": "hold",
+        "start": 56.22,
+        "end": 58.22,
+        "duration": 2.0
+      }
+    ],
+    "sampleDuration": 58.67
+  },
+  {
+    "id": "s05",
+    "tempo": "slow",
+    "voiceSpeed": 0.9,
+    "budget": 47,
+    "paragraphs": [
+      "A block is projected up a rough thirty-degree slope. The push ends; the block keeps sliding uphill. Which forces act now? [hold 2 s] Weight acts vertically down. The normal reaction is perpendicular to the slope. Friction points downhill, opposing the sliding. [pause 1 s] There is no continuing projection force. Choose uphill as positive. Draw acceleration separately, downhill: negative while the block slows. What if the slope is smooth? [hold 2 s] Remove friction; keep weight and the normal reaction. [hold 2 s]"
+    ],
+    "audio": "force-diagrams-s05.mp3",
+    "audioSha256": "c910c4c6ac408c447f2262ed36129fd27db3b7302f92f77cca309db765d38d6d",
+    "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+    "provider": "elevenlabs",
+    "beats": [
+      {
+        "text": "A block is projected up a rough thirty-degree slope. The push ends; the block keeps sliding uphill. Which forces act now?",
+        "start": 0.55,
+        "end": 11.74
+      },
+      {
+        "text": "Weight acts vertically down. The normal reaction is perpendicular to the slope. Friction points downhill, opposing the sliding.",
+        "start": 13.74,
+        "end": 23.74
+      },
+      {
+        "text": "There is no continuing projection force. Choose uphill as positive. Draw acceleration separately, downhill: negative while the block slows. What if the slope is smooth?",
+        "start": 24.74,
+        "end": 39.69
+      },
+      {
+        "text": "Remove friction; keep weight and the normal reaction.",
+        "start": 41.69,
+        "end": 45.69
+      }
+    ],
+    "holds": [
+      {
+        "kind": "hold",
+        "start": 11.74,
+        "end": 13.74,
+        "duration": 2.0
+      },
+      {
+        "kind": "pause",
+        "start": 23.74,
+        "end": 24.74,
+        "duration": 1.0
+      },
+      {
+        "kind": "hold",
+        "start": 39.69,
+        "end": 41.69,
+        "duration": 2.0
+      },
+      {
+        "kind": "hold",
+        "start": 45.69,
+        "end": 47.69,
+        "duration": 2.0
+      }
+    ],
+    "sampleDuration": 48.14
+  },
+  {
+    "id": "s06",
+    "tempo": "slow",
+    "voiceSpeed": 0.9,
+    "budget": 64,
+    "paragraphs": [
+      "Two particles: one slides right on a smooth table; one descends. A light, inextensible string joins them over a smooth, light pulley. Which forces act? [hold 2 s] Table particle: weight down, normal reaction up, tension right. Hanging particle: weight down, tension up. Draw separate diagrams. The light string and smooth pulley give equal tension. Inextensible string: equal accelerations, right and down. [pause 1 s] Isolate the pulley. Light means massless. Tension pulls left; tension pulls down. The support reaction balances both, upwards and right. [hold 2 s] What if the table is rough? Add friction left on the sliding particle. [hold 1 s]"
+    ],
+    "audio": "force-diagrams-s06.mp3",
+    "audioSha256": "10c0c68ab167b0fbd97e1fb35c23b41fc7174ba219cb9b76e9a8d6e9578cefad",
+    "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+    "provider": "elevenlabs",
+    "beats": [
+      {
+        "text": "Two particles: one slides right on a smooth table; one descends. A light, inextensible string joins them over a smooth, light pulley. Which forces act?",
+        "start": 0.55,
+        "end": 17.82
+      },
+      {
+        "text": "Table particle: weight down, normal reaction up, tension right. Hanging particle: weight down, tension up. Draw separate diagrams. The light string and smooth pulley give equal tension. Inextensible string: equal accelerations, right and down.",
+        "start": 19.82,
+        "end": 47.6
+      },
+      {
+        "text": "Isolate the pulley. Light means massless. Tension pulls left; tension pulls down. The support reaction balances both, upwards and right.",
+        "start": 48.6,
+        "end": 64.55
+      },
+      {
+        "text": "What if the table is rough? Add friction left on the sliding particle.",
+        "start": 66.55,
+        "end": 71.11
+      }
+    ],
+    "holds": [
+      {
+        "kind": "hold",
+        "start": 17.82,
+        "end": 19.82,
+        "duration": 2.0
+      },
+      {
+        "kind": "pause",
+        "start": 47.6,
+        "end": 48.6,
+        "duration": 1.0
+      },
+      {
+        "kind": "hold",
+        "start": 64.55,
+        "end": 66.55,
+        "duration": 2.0
+      },
+      {
+        "kind": "hold",
+        "start": 71.11,
+        "end": 72.11,
+        "duration": 1.0
+      }
+    ],
+    "sampleDuration": 72.56
+  },
+  {
+    "id": "s07",
+    "tempo": "brisk",
+    "voiceSpeed": 1.0,
+    "budget": 35,
+    "paragraphs": [
+      "A car pulls a trailer through a light rod. Which connector forces act? [hold 2 s] Tension pulls the trailer right, and the car left. Now the car brakes; the trailer compresses the rod. [pause 1 s] Thrust pushes the trailer left, and the car right. Thrust means compression. Both arrows still start at their particles. What if a string replaces the rod? [hold 1 s] A string cannot push: it goes slack. [hold 1 s]"
+    ],
+    "audio": "force-diagrams-s07.mp3",
+    "audioSha256": "27d8586bee7c5094ee5cc9d10fb7248e9b326850d1e1690b6833ff561a6cb6a7",
+    "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+    "provider": "elevenlabs",
+    "beats": [
+      {
+        "text": "A car pulls a trailer through a light rod. Which connector forces act?",
+        "start": 0.55,
+        "end": 5.69
+      },
+      {
+        "text": "Tension pulls the trailer right, and the car left. Now the car brakes; the trailer compresses the rod.",
+        "start": 7.69,
+        "end": 15.85
+      },
+      {
+        "text": "Thrust pushes the trailer left, and the car right. Thrust means compression. Both arrows still start at their particles. What if a string replaces the rod?",
+        "start": 16.85,
+        "end": 27.17
+      },
+      {
+        "text": "A string cannot push: it goes slack.",
+        "start": 28.17,
+        "end": 30.41
+      }
+    ],
+    "holds": [
+      {
+        "kind": "hold",
+        "start": 5.69,
+        "end": 7.69,
+        "duration": 2.0
+      },
+      {
+        "kind": "pause",
+        "start": 15.85,
+        "end": 16.85,
+        "duration": 1.0
+      },
+      {
+        "kind": "hold",
+        "start": 27.17,
+        "end": 28.17,
+        "duration": 1.0
+      },
+      {
+        "kind": "hold",
+        "start": 30.41,
+        "end": 31.41,
+        "duration": 1.0
+      }
+    ],
+    "sampleDuration": 35.0
+  },
+  {
+    "id": "s08",
+    "tempo": "brisk",
+    "voiceSpeed": 1.0,
+    "budget": 34,
+    "paragraphs": [
+      "Your turn. A block slides uphill on a rough thirty-degree slope after release. Complete its force diagram. [hold 3 s] Weight points down. Normal reaction is perpendicular to the slope. Friction points downhill. No continuing push; acceleration is not a force. [hold 2 s] Choose the forces. Draw and label arrows. Check changed assumptions. [hold 1 s]"
+    ],
+    "audio": "force-diagrams-s08.mp3",
+    "audioSha256": "9d227efee152683b5d43205c5b6717f37a41661ecb720a2f85dae1bb4506284f",
+    "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+    "provider": "elevenlabs",
+    "beats": [
+      {
+        "text": "Your turn. A block slides uphill on a rough thirty-degree slope after release. Complete its force diagram.",
+        "start": 0.55,
+        "end": 9.71
+      },
+      {
+        "text": "Weight points down. Normal reaction is perpendicular to the slope. Friction points downhill. No continuing push; acceleration is not a force.",
+        "start": 12.71,
+        "end": 27.77
+      },
+      {
+        "text": "Choose the forces. Draw and label arrows. Check changed assumptions.",
+        "start": 29.77,
+        "end": 35.36
+      }
+    ],
+    "holds": [
+      {
+        "kind": "hold",
+        "start": 9.71,
+        "end": 12.71,
+        "duration": 3.0
+      },
+      {
+        "kind": "hold",
+        "start": 27.77,
+        "end": 29.77,
+        "duration": 2.0
+      },
+      {
+        "kind": "hold",
+        "start": 35.36,
+        "end": 36.36,
+        "duration": 1.0
+      }
+    ],
+    "sampleDuration": 36.81
+  }
+]

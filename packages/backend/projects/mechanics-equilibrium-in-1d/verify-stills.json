@@ -1,0 +1,187 @@
+{
+  "passed": true,
+  "durationFrames": 8014,
+  "seconds": 267.1333333333333,
+  "stillCount": 263,
+  "figureCount": 49,
+  "holds": [
+    {
+      "scene": "s02",
+      "start": 1614,
+      "end": 1672,
+      "duration": 2,
+      "captureRetries": 0,
+      "identical": true
+    },
+    {
+      "scene": "s02",
+      "start": 2116,
+      "end": 2173,
+      "duration": 2,
+      "captureRetries": 0,
+      "identical": true
+    },
+    {
+      "scene": "s04",
+      "start": 3726,
+      "end": 3783,
+      "duration": 2,
+      "captureRetries": 0,
+      "identical": true
+    },
+    {
+      "scene": "s05",
+      "start": 4682,
+      "end": 4740,
+      "duration": 2,
+      "captureRetries": 0,
+      "identical": true
+    },
+    {
+      "scene": "s05",
+      "start": 4899,
+      "end": 4956,
+      "duration": 2,
+      "captureRetries": 1,
+      "identical": true
+    },
+    {
+      "scene": "s05",
+      "start": 5110,
+      "end": 5167,
+      "duration": 2,
+      "captureRetries": 1,
+      "identical": true
+    },
+    {
+      "scene": "s05",
+      "start": 5267,
+      "end": 5324,
+      "duration": 2,
+      "captureRetries": 1,
+      "identical": true
+    },
+    {
+      "scene": "s05",
+      "start": 5681,
+      "end": 5738,
+      "duration": 2,
+      "captureRetries": 1,
+      "identical": true
+    },
+    {
+      "scene": "s05",
+      "start": 5909,
+      "end": 5966,
+      "duration": 2,
+      "captureRetries": 0,
+      "identical": true
+    },
+    {
+      "scene": "s06",
+      "start": 6831,
+      "end": 6888,
+      "duration": 2,
+      "captureRetries": 1,
+      "identical": true
+    },
+    {
+      "scene": "s07",
+      "start": 7200,
+      "end": 7287,
+      "duration": 3,
+      "captureRetries": 0,
+      "identical": true
+    }
+  ],
+  "violations": [],
+  "audioSeconds": 267.023673,
+  "wordCues": 67,
+  "spokenFigures": 44,
+  "substitutionRings": 5,
+  "finishedInkLines": [
+    {
+      "scene": "s02",
+      "line": "formula",
+      "text": "R = F(right) - F(left)",
+      "frame": 1500
+    },
+    {
+      "scene": "s02",
+      "line": "answer30",
+      "text": "50 - 20 = 30 N",
+      "frame": 1611
+    },
+    {
+      "scene": "s05",
+      "line": "principle",
+      "text": "Resultant = 0",
+      "frame": 4056
+    },
+    {
+      "scene": "s05",
+      "line": "symbols",
+      "text": "U - D = 0",
+      "frame": 4180
+    },
+    {
+      "scene": "s05",
+      "line": "symbols-equal",
+      "text": "; U = D",
+      "frame": 4253
+    },
+    {
+      "scene": "s05",
+      "line": "equation",
+      "text": "10 + (18 + x) = 5x",
+      "frame": 4680
+    },
+    {
+      "scene": "s05",
+      "line": "collect",
+      "text": "28 + x = 5x",
+      "frame": 4897
+    },
+    {
+      "scene": "s05",
+      "line": "four",
+      "text": "28 = 4x",
+      "frame": 5108
+    },
+    {
+      "scene": "s05",
+      "line": "seven",
+      "text": "x = 7",
+      "frame": 5264
+    },
+    {
+      "scene": "s05",
+      "line": "answer0",
+      "text": "R = 0 N",
+      "frame": 5825
+    },
+    {
+      "scene": "s06",
+      "line": "weight-formula",
+      "text": "W = mg",
+      "frame": 6405
+    }
+  ],
+  "completeGivensChecked": true,
+  "formulaBeforeSubstitution": true,
+  "questionUnderlinesChecked": true,
+  "ringsEncloseTargets": true,
+  "pixelCheckedEveryVisual": true,
+  "sourceEquationChecked": true,
+  "registrationChecked": true,
+  "contactFrames": [
+    0,
+    2093,
+    2667,
+    3288,
+    5825,
+    7382
+  ],
+  "artifactSha256": "936ded14e41c11e6f85c5b3b9f05c6e8fc3fe6a8e3e4bd4d1c7726ac05655f08",
+  "compositionSha256": "d1cabf8aec18579e8d8a56fcfa3a40c65395adf47278cca9c4b9c25296dcc53a"
+}
