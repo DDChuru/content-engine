@@ -1166,6 +1166,53 @@
             "narration": "d54356b",
             "build": "c392e6c"
           }
+        },
+        "mechanics-equilibrium-in-1d": {
+          "label": "Equilibrium in 1D",
+          "slug": "mechanics-equilibrium-in-1d",
+          "syllabus": "Cambridge 9709 Mechanics (Paper 4) · Forces and equilibrium",
+          "syllabusCode": "M4.1b",
+          "status": "complete",
+          "createdAt": "2026-09-09",
+          "pacing": "TEACHING-STANDARD §1-14 house style",
+          "pipeline": "frame study (Sol, own worktree) -> Astra (gpt-6-astra) on B -> render on A -> Fable contact-sheet review",
+          "source": {
+            "project": "projects/mechanics-equilibrium-in-1d/",
+            "recording": "~/Documents/9709/",
+            "pdf": "projects/mechanics-equilibrium-in-1d/source.pdf"
+          },
+          "formats": {
+            "landscape": {
+              "compositionId": "MechanicsEquilibriumIn1D",
+              "resolution": "1920x1080",
+              "durationS": 267.1,
+              "composition": "src/remotion/compositions/MechanicsEquilibriumIn1D.tsx",
+              "render": "output/mechanics/equilibrium-in-1d.mp4",
+              "contactSheet": "output/mechanics/equilibrium-in-1d-sheet.png"
+            }
+          },
+          "narration": {
+            "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+            "provider": "elevenlabs",
+            "speed": {
+              "brisk": 1.0,
+              "slow": 0.9
+            },
+            "transcript": "src/remotion/public/transcripts/mechanics/equilibrium-in-1d.json"
+          },
+          "commits": {
+            "study": "ed292df",
+            "narration": "4ad767c",
+            "build": "de39b8f"
+          },
+          "app": {
+            "notesPage": "/notes/mechanics-equilibrium-in-1d",
+            "mapCode": "M4.1b"
+          },
+          "verification": "projects/mechanics-equilibrium-in-1d/verify-build.md",
+          "reviewNotes": [
+            "Fable contact-sheet review passed; awaiting Durai."
+          ]
         }
       },
       "inkTutor": {
