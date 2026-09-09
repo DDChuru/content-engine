@@ -4,7 +4,8 @@ import argparse, concurrent.futures, hashlib, json, os, re, subprocess
 from pathlib import Path
 import numpy as np
 import requests
-R=Path(__file__).resolve().parents[4]
+BACKEND=Path(os.environ.get('CONTENT_ENGINE_BACKEND',Path(__file__).resolve().parents[2])).resolve()
+R=BACKEND.parents[1]
 A=R/'packages/backend/src/remotion/public/audio/mechanics'
 P=R/'packages/backend/src/remotion/public/transcripts/mechanics'
 SR=44100
@@ -15,7 +16,7 @@ def main():
  plan=json.loads(re.search(r'```json\n(.*?)\n```',source,re.S)[1]);prefix=plan['prefix']
  work=Path('/tmp')/('verify-'+prefix+'-narration');work.mkdir(exist_ok=True)
  if not args.transcribe:
-  for line in Path('/home/durai/Documents/projects/content-engine/.env').read_text().splitlines():
+  for line in (BACKEND.parents[1]/'.env').read_text().splitlines():
    if line.startswith('ELEVENLABS_API_KEY='):os.environ['ELEVENLABS_API_KEY']=line.split('=',1)[1].strip().strip('"').strip("'")
   def generate(scene):
    chunks=[];position=0;beats=[];holds=[]

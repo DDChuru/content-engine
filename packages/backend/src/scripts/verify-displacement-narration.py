@@ -3,7 +3,8 @@
 import concurrent.futures, hashlib, json, os, re, subprocess, sys
 from pathlib import Path
 import numpy as np
-ROOT=Path(__file__).resolve().parents[4]
+BACKEND=Path(os.environ.get('CONTENT_ENGINE_BACKEND',Path(__file__).resolve().parents[2])).resolve()
+ROOT=BACKEND.parents[1]
 WORK=Path('/tmp/verify-displacement-narration'); WORK.mkdir(exist_ok=True)
 AUDIO=ROOT/'packages/backend/src/remotion/public/audio/mechanics'
 SAMPLE_RATE=44100
@@ -70,7 +71,7 @@ def generate(scene):
     print(scene['id'],round(position/SAMPLE_RATE,3),'seconds',flush=True)
 
 if __name__=='__main__':
-    for line in Path('/home/durai/Documents/projects/content-engine/.env').read_text().splitlines():
+    for line in (BACKEND.parents[1]/'.env').read_text().splitlines():
         if '=' in line and not line.lstrip().startswith('#'):
             key,value=line.split('=',1)
             os.environ.setdefault(key.strip(), value.strip().strip(chr(34)).strip(chr(39)))

@@ -13,8 +13,10 @@ import {
 } from './CleaningVerificationTutorialV4';
 import { assertFinalReady } from './v4-contract';
 
-const previewMetadata: CalculateMetadataFunction<Record<string, unknown>> = async () => {
-	await verifyV4BrowserAssets();
+const previewMetadata: CalculateMetadataFunction<Record<string, unknown>> = async ({ isRendering }) => {
+	if (isRendering) {
+		await verifyV4BrowserAssets();
+	}
 	return { durationInFrames: CLN_V4_FRAMES, defaultOutName: 'cln-verification-v4-INTERNAL-PREVIEW' };
 };
 
