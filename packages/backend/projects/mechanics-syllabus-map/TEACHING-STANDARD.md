@@ -182,3 +182,15 @@ Durai: "whilst we are narrating we could circle, as an annotation, or highlight 
 - The ring is the accent colour, pen-drawn (stroke-dash, ~0.4 s), slightly loose, never a perfect box.
 - Problem cards: highlight the phrase being read (underline sweep) as it is spoken.
 - Applies to every set-up beat and every worked example; the still audit checks a ring exists at each spoken-figure cue.
+
+## 15. Conditions before the claim; derive, never assert (Durai, 2026-09-09, on Acceleration due to gravity)
+
+Durai challenged "a ball thrown up at 12 m/s… would hit the ground again at the same velocity". The physics was
+right (v = −12 back at LAUNCH HEIGHT, no air resistance) but the video said the number first and the conditions after,
+and never derived it.
+
+- Any result that depends on conditions states the conditions BEFORE the result ("same height, no air resistance,
+  so…"), in the problem card and in the narration.
+- Every stated numerical result is derived on the paper from the formula line (§11), even "obvious" ones like
+  v = −u; symmetry claims are shown from v² = u² + 2as with s = 0, not asserted.
+- The "what would change if…" beat names the case where the claim fails (thrown from a cliff → lands faster).
