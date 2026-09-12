@@ -14,7 +14,40 @@ The recording's brief separation/explosion illustration does not become an extra
 
 Every numerical trial has all masses, signed incoming velocities, specified outgoing velocity, conditions and unknowns before working. Right is positive throughout. The initial qualitative story uses dashed trial-direction arrows for unsolved outgoing motion. Concrete after labels replace the unknowns at the actual spoken result word. The before and after layouts stay visible during words → symbolic conservation → substitution → solution. The common after mass and velocity appear only when derived.
 
-The composition follows `MechanicsUsingCalculusIn1D.tsx` and the existing `mechanics-m42/Presentation.tsx` Lesson/Scene/Paper/Figure components. It uses the established `useCue` word-timestamp pattern. Two slow solution scenes use ElevenLabs speed 0.9, completed-result silence holds, and a three-second closing thinking hold.
+The composition follows `MechanicsUsingCalculusIn1D.tsx` and the existing `mechanics-m42/Presentation.tsx` Lesson/Scene/Paper/Figure components. It uses the established `useCue` word-timestamp pattern. Two slow solution scenes use ElevenLabs speed 0.9, completed-result silence holds, and a three-second closing thinking hold. The brief's local Remotion skill was absent on B; the existing composition, shared components and repository architecture documentation supplied the pipeline conventions.
+
+## Delivered files
+
+All paths below are relative to the repository root. Only Direct Collisions authoring files are added.
+
+- `packages/backend/src/remotion/compositions/MechanicsDirectCollisions.tsx`
+- `packages/backend/src/remotion/compositions/MechanicsDirectCollisions.entry.tsx`
+- `packages/backend/src/remotion/compositions/mechanics-direct-collisions/Motion.ts`
+- `packages/backend/src/remotion/public/transcripts/mechanics/direct-collisions.json` — genuine word-level Whisper transcript, 49 cue mappings and 26 spoken-figure events.
+- `packages/backend/src/remotion/public/audio/mechanics/direct-collisions-s01.mp3`
+- `packages/backend/src/remotion/public/audio/mechanics/direct-collisions-s02.mp3`
+- `packages/backend/src/remotion/public/audio/mechanics/direct-collisions-s03.mp3`
+- `packages/backend/src/remotion/public/audio/mechanics/direct-collisions-s04.mp3`
+- `packages/backend/src/remotion/public/audio/mechanics/direct-collisions-s05.mp3`
+- `packages/backend/src/remotion/public/audio/mechanics/direct-collisions-s06.mp3`
+- `packages/backend/src/remotion/public/audio/mechanics/direct-collisions-s07.mp3`
+- `apps/student-learn/public/notes/mechanics-direct-collisions.md`
+- This topic script directory: `README.md`, `SOURCE-STUDY.md`, `STORYBOARD.md`, `narration.json`, `narration-timing.json`, `generate-narration.py`, `verify-authoring.py`, `verify-authoring.json`, `verify-narration.py`, `verify-narration.json`, `verify-source-report.json`, `verify-tsconfig.json`, and `verify-build.md`.
+
+## Audio and checks
+
+The seven MP3s total **302.367347 seconds**. Rounding each scene independently at 30 fps gives **9,075 frames (302.5 seconds)**. The two slow worked scenes last 73.378 and 66.952 seconds. All seven inserted holds (15 seconds total) are real silence; they are not inferred pauses in a transcript.
+
+Generated with ElevenLabs voice `gYWKdgLtqjPO3D5uDrDP`, model `eleven_turbo_v2_5`, speed 1.0 / 0.9. Word timings came from **faster-whisper 1.2.1, Small, CPU int8, two threads**, using an existing uv-cached Python environment and cached model. No package installation was necessary. Each speech excerpt was cut from the decoded final scene MP3; original Whisper words and exact PCM-offset timestamp provenance are retained.
+
+Run existing-toolchain authoring checks with:
+
+```bash
+python3 packages/backend/src/scripts/mechanics-direct-collisions/verify-authoring.py
+python3 packages/backend/src/scripts/mechanics-direct-collisions/verify-narration.py
+```
+
+`verify-authoring.py` accepts `--backend-node-modules` and `--react-types` to select existing dependencies. It performs no installation and no rendering. To reproduce narration, use `generate-narration.py --generate` with the root ElevenLabs credential, then run `--transcribe` using a Python executable containing the specified local Whisper dependency and cached Small model. `--remap` supports cue-only changes without altering audio or inventing word timings.
 
 ## Machine A responsibilities
 

@@ -1,0 +1,169 @@
+{
+  "project": "mechanics-direct-collisions",
+  "audioPassed": true,
+  "transcriptPassed": true,
+  "model": "faster-whisper-small",
+  "totalDuration": 302.367347,
+  "totalHoldSeconds": 15.0,
+  "renderPerformed": false,
+  "scenes": [
+    {
+      "id": "s01",
+      "audio": "direct-collisions-s01.mp3",
+      "audioSha256": "03dcbd66f66dd251a80e69cf9d4d4c30994052bec2a5989c70bf78887e0d4514",
+      "duration": 18.573061,
+      "sampleDuration": 18.53,
+      "peak": 25274,
+      "clippedSamples": 0,
+      "holds": [],
+      "wordCount": 41,
+      "cueCount": 5,
+      "figureCount": 0
+    },
+    {
+      "id": "s02",
+      "audio": "direct-collisions-s02.mp3",
+      "audioSha256": "5823baa7857192902d90a6ffb4c6ba17d5b2a754efc8fbccdc27cf6b85b3a956",
+      "duration": 32.548571,
+      "sampleDuration": 32.52,
+      "peak": 24962,
+      "clippedSamples": 0,
+      "holds": [],
+      "wordCount": 74,
+      "cueCount": 9,
+      "figureCount": 0
+    },
+    {
+      "id": "s03",
+      "audio": "direct-collisions-s03.mp3",
+      "audioSha256": "fadb3d1b11ecb228df4c8ddabc108c5b6a3dbc54065f47c0a2a57531d79933e9",
+      "duration": 40.594286,
+      "sampleDuration": 40.55,
+      "peak": 27011,
+      "clippedSamples": 0,
+      "holds": [
+        {
+          "start": 38.0,
+          "end": 40.0,
+          "kind": "result",
+          "duration": 2.0,
+          "nativePcmRms": 0.0,
+          "nativePcmPeak": 0,
+          "edgeExclusionSeconds": 0.08
+        }
+      ],
+      "wordCount": 85,
+      "cueCount": 7,
+      "figureCount": 5
+    },
+    {
+      "id": "s04",
+      "audio": "direct-collisions-s04.mp3",
+      "audioSha256": "2475b56424bf00d6f41cb9a1de758fb91f447055f3744d310b9716213dfcd9f4",
+      "duration": 32.914286,
+      "sampleDuration": 32.88,
+      "peak": 26136,
+      "clippedSamples": 0,
+      "holds": [],
+      "wordCount": 60,
+      "cueCount": 4,
+      "figureCount": 0
+    },
+    {
+      "id": "s05",
+      "audio": "direct-collisions-s05.mp3",
+      "audioSha256": "5e974483f5d774cb08329472919176b84ee27697b94670a22aabbe24c0218c41",
+      "duration": 73.377959,
+      "sampleDuration": 73.33,
+      "peak": 25765,
+      "clippedSamples": 0,
+      "holds": [
+        {
+          "start": 43.08,
+          "end": 45.08,
+          "kind": "result",
+          "duration": 2.0,
+          "nativePcmRms": 0.0,
+          "nativePcmPeak": 0,
+          "edgeExclusionSeconds": 0.08
+        },
+        {
+          "start": 48.81,
+          "end": 50.81,
+          "kind": "result",
+          "duration": 2.0,
+          "nativePcmRms": 0.0,
+          "nativePcmPeak": 0,
+          "edgeExclusionSeconds": 0.08
+        },
+        {
+          "start": 61.24,
+          "end": 63.24,
+          "kind": "result",
+          "duration": 2.0,
+          "nativePcmRms": 0.0,
+          "nativePcmPeak": 0,
+          "edgeExclusionSeconds": 0.08
+        }
+      ],
+      "wordCount": 124,
+      "cueCount": 9,
+      "figureCount": 12
+    },
+    {
+      "id": "s06",
+      "audio": "direct-collisions-s06.mp3",
+      "audioSha256": "4014fb079739e26c1ca6b983ba423a5414996450fc8c734a13f769b6f0e19e19",
+      "duration": 66.951837,
+      "sampleDuration": 66.91,
+      "peak": 25850,
+      "clippedSamples": 0,
+      "holds": [
+        {
+          "start": 43.11,
+          "end": 45.11,
+          "kind": "result",
+          "duration": 2.0,
+          "nativePcmRms": 0.0,
+          "nativePcmPeak": 0,
+          "edgeExclusionSeconds": 0.08
+        },
+        {
+          "start": 55.75,
+          "end": 57.75,
+          "kind": "result",
+          "duration": 2.0,
+          "nativePcmRms": 0.0,
+          "nativePcmPeak": 0,
+          "edgeExclusionSeconds": 0.08
+        }
+      ],
+      "wordCount": 118,
+      "cueCount": 9,
+      "figureCount": 9
+    },
+    {
+      "id": "s07",
+      "audio": "direct-collisions-s07.mp3",
+      "audioSha256": "66ecb17f436a6db804f443152c25e694b552f21cfd546c3fbf15e2468317fed5",
+      "duration": 37.407347,
+      "sampleDuration": 37.36,
+      "peak": 26014,
+      "clippedSamples": 0,
+      "holds": [
+        {
+          "start": 20.78,
+          "end": 23.78,
+          "kind": "thinking",
+          "duration": 3.0,
+          "nativePcmRms": 0.0,
+          "nativePcmPeak": 0,
+          "edgeExclusionSeconds": 0.08
+        }
+      ],
+      "wordCount": 65,
+      "cueCount": 6,
+      "figureCount": 0
+    }
+  ]
+}
