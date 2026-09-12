@@ -1,0 +1,86 @@
+{
+  "project": "mechanics-direct-collisions",
+  "compositionId": "MechanicsDirectCollisions",
+  "mapCode": "M4.3b",
+  "source": "directCollisions.mp4, 0–210 s at 1 s intervals; MomentumandCollisions.pdf pp.4–7",
+  "outcomes": ["Choose signed velocities.", "Conserve the pair's momentum.", "Solve separate and sticking outcomes."],
+  "scenes": [
+    {
+      "id": "s01", "title": "Syllabus 4.3: direct collisions", "mode": "opening", "tempo": "brisk",
+      "beats": [
+        {"id": "quote1", "text": "Syllabus four point three: use conservation of linear momentum to solve problems", "caption": "use conservation of linear momentum to solve problems"},
+        {"id": "quote2", "text": "that may be modelled as the direct impact of two bodies.", "caption": "that may be modelled as the direct impact of two bodies."},
+        {"id": "outcome1", "text": "By the end you can choose signed velocities.", "caption": "Choose signed velocities."},
+        {"id": "outcome2", "text": "Conserve the pair's momentum.", "caption": "Conserve the pair's momentum."},
+        {"id": "outcome3", "text": "And solve separate and sticking outcomes.", "caption": "Solve separate and sticking outcomes."}
+      ]
+    },
+    {
+      "id": "s02", "title": "Two alternative collision trials", "mode": "story", "tempo": "brisk",
+      "beats": [
+        {"id": "approach", "text": "Consider two particles moving towards each other along the same straight line on a smooth horizontal surface.", "caption": "Same straight line"},
+        {"id": "contact1", "text": "They meet. In the first trial, A rebounds and the particles separate.", "caption": "Trial 1: separate", "extraCues": [{"id":"separate", "phrase":"rebounds"}]},
+        {"id": "tentative", "text": "B's dashed arrow is a trial direction. The calculation will decide its signed velocity.", "caption": "Dashed means an assumed direction"},
+        {"id": "reset", "text": "Now reset to the original approach. This is a separate trial, with the same initial conditions.", "caption": "Reset: same initial conditions"},
+        {"id": "contact2", "text": "This time they meet and stick together, moving as one pair. We will find their common velocity.", "caption": "Trial 2: stick together", "extraCues": [{"id":"stick", "phrase":"stick together"}]}
+      ]
+    },
+    {
+      "id": "s03", "title": "The complete question", "mode": "setup", "tempo": "brisk",
+      "beats": [
+        {"id": "conditions", "text": "Both trials use a smooth horizontal surface. External horizontal force is negligible during impact. Take right as positive."},
+        {"id": "mass-a", "text": "Particle A has mass two kilograms", "figures": [{"phrase":"two", "target":"A.mass", "value":"2"}]},
+        {"id": "before-a", "text": "and moves right at four metres per second.", "figures": [{"phrase":"four", "target":"A.before", "value":"4"}]},
+        {"id": "mass-b", "text": "Particle B has mass three kilograms", "figures": [{"phrase":"three", "target":"B.mass", "value":"3"}]},
+        {"id": "before-b", "text": "and moves left at one metre per second.", "figures": [{"phrase":"one", "target":"B.before", "value":"1"}]},
+        {"id": "after-a", "text": "In trial one, A rebounds left at two metres per second. Find B's final speed and direction.", "figures": [{"phrase":"two", "target":"A.after", "value":"2"}]},
+        {"id": "together", "text": "In the separate sticking trial, find the common velocity. Both questions use the original before diagram. Take a moment to read them.", "hold": 2}
+      ]
+    },
+    {
+      "id": "s04", "title": "Why we conserve the pair's momentum", "mode": "system", "tempo": "brisk",
+      "beats": [
+        {"id": "system", "text": "Choose A and B together as our system. Weight and normal reaction balance vertically; external horizontal force is negligible during impact.", "caption": "System: A and B together"},
+        {"id": "internal", "text": "Their contact forces are equal and opposite, and internal to this pair. They change the individual momenta in opposite ways.", "caption": "Equal and opposite internal forces"},
+        {"id": "conserve", "text": "The changes cancel for the pair, so total momentum before equals total momentum after.", "caption": "Total momentum stays the same"},
+        {"id": "signs", "text": "Use signed velocities throughout: right is positive, left negative. The minus sign describes direction, never a negative mass.", "caption": "Right positive; left negative"}
+      ]
+    },
+    {
+      "id": "s05", "title": "Trial 1: find B's velocity", "mode": "separate", "tempo": "slow",
+      "beats": [
+        {"id": "goal", "text": "What is B's velocity after this impact? Keep the before and after diagrams beside the working."},
+        {"id": "principle", "text": "With negligible external horizontal force, momentum before equals momentum after.", "cuePhrase":"momentum before", "ink":"momentum before = momentum after"},
+        {"id": "formula", "text": "Mass A times u A, plus mass B times u B, equals mass A times v A, plus mass B times v B.", "ink":"mA uA + mB uB = mA vA + mB vB"},
+        {"id": "substitute", "text": "Substitute: two times four, plus three times negative one, equals two times negative two, plus three v B.", "ink":"2×4 + 3×(−1) = 2×(−2) + 3vB", "figures": [{"phrase":"two", "target":"A.mass", "value":"2"}, {"phrase":"four", "target":"A.before", "value":"4"}, {"phrase":"three", "target":"B.mass", "value":"3"}, {"phrase":"one", "target":"B.before", "value":"1"}, {"phrase":"two", "occurrence":2, "target":"A.mass", "value":"2"}, {"phrase":"two", "occurrence":3, "target":"A.after", "value":"2"}, {"phrase":"three", "occurrence":2, "target":"B.mass", "value":"3"}]},
+        {"id": "simplify", "text": "Eight minus three gives five on the left. A's final momentum is negative four, leaving three v B.", "ink":"5 = −4 + 3vB", "hold":2},
+        {"id": "rearrange", "text": "Add four to both sides: nine equals three v B.", "ink":"9 = 3vB", "hold":2},
+        {"id": "result", "text": "Divide by three. B's velocity is positive three metres per second: a speed of three, to the right.", "ink":"vB = 9/3 = +3 m/s", "extraCues":[{"id":"result-value", "phrase":"three metres"}], "figures":[{"phrase":"three metres", "target":"B.after", "value":"3"}, {"phrase":"three to", "target":"B.after", "value":"3"}], "hold":2},
+        {"id": "interpret", "text": "The positive answer confirms our assumed arrow. A moves left, B moves right, and the particles separate."}
+      ]
+    },
+    {
+      "id": "s06", "title": "Trial 2: they stick together", "mode": "together", "tempo": "slow",
+      "beats": [
+        {"id": "reset", "text": "Reset again. These are the original incoming particles, not the results of trial one. This time they stick."},
+        {"id": "principle", "text": "The same external force condition holds, so momentum before equals momentum after.", "cuePhrase":"momentum before", "ink":"momentum before = momentum after"},
+        {"id": "formula", "text": "After sticking, both have velocity v. Mass A times u A, plus mass B times u B, equals the sum of the masses, times v.", "ink":"mA uA + mB uB = (mA + mB)v"},
+        {"id": "substitute", "text": "Two times four, plus three times negative one, equals two plus three, all multiplied by v.", "ink":"2×4 + 3×(−1) = (2 + 3)v", "figures":[{"phrase":"two", "target":"A.mass", "value":"2"}, {"phrase":"four", "target":"A.before", "value":"4"}, {"phrase":"three", "target":"B.mass", "value":"3"}, {"phrase":"one", "target":"B.before", "value":"1"}, {"phrase":"two", "occurrence":2, "target":"A.mass", "value":"2"}, {"phrase":"three", "occurrence":2, "target":"B.mass", "value":"3"}]},
+        {"id": "simplify", "text": "The initial momentum is five. The combined mass is five kilograms, so five equals five v.", "ink":"5 = 5v", "extraCues":[{"id":"combined-mass", "phrase":"five kilograms"}], "figures":[{"phrase":"five kilograms", "target":"pair.mass", "value":"5"}], "hold":2},
+        {"id": "result", "text": "Divide by the combined mass. Their common velocity is positive one metre per second, so both move right together.", "ink":"v = 5/5 = +1 m/s", "extraCues":[{"id":"result-value", "phrase":"one metre"}], "figures":[{"phrase":"one metre", "target":"pair.after", "value":"1"}], "hold":2},
+        {"id": "interpret", "text": "One common velocity replaces two separate after velocities. The particles remain in contact; their masses still add."}
+      ]
+    },
+    {
+      "id": "s07", "title": "Check the system and the direction", "mode": "closing", "tempo": "brisk",
+      "beats": [
+        {"id": "contrast", "text": "What would change if an external horizontal push mattered during impact? The pair could gain momentum: we could not simply equate its before and after totals.", "caption":"External push: total momentum can change"},
+        {"id": "question", "text": "Return to our original negligible force condition. A reverses direction. Does that mean the pair's total momentum is not conserved?", "caption":"A reverses. Is total momentum still conserved?", "hold":3},
+        {"id": "answer", "text": "No. A's own momentum changes, but the other particle has the opposite change. The pair's total is conserved.", "caption":"Individual changes; conserved total"},
+        {"id": "outcome1", "text": "Choose signed velocities.", "caption":"Choose signed velocities."},
+        {"id": "outcome2", "text": "Conserve the pair's momentum.", "caption":"Conserve the pair's momentum."},
+        {"id": "outcome3", "text": "Solve separate and sticking outcomes.", "caption":"Solve separate and sticking outcomes."}
+      ]
+    }
+  ]
+}
