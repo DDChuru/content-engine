@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "lib": ["ES2022", "DOM"],
+    "jsx": "react",
+    "moduleResolution": "node",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "noEmit": true,
+    "types": ["react"]
+  },
+  "files": [
+    "../../remotion/compositions/MechanicsDirectCollisions.tsx",
+    "../../remotion/compositions/MechanicsDirectCollisions.entry.tsx"
+  ]
+}

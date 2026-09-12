@@ -1,0 +1,5611 @@
+{
+  "project": "mechanics-direct-collisions",
+  "compositionId": "MechanicsDirectCollisions",
+  "sceneCount": 7,
+  "totalDuration": 302.367347,
+  "generatedAt": "2026-09-12T10:42:40.109074+00:00",
+  "engine": "faster-whisper-small (local, CPU int8, 2 threads)",
+  "modelSize": "small",
+  "cpuThreads": 2,
+  "planSha256": "0da628f67fe2ff19c3a08106524dc465a5e06fa0767d966a07d7cbfac6bfaefa",
+  "scenes": [
+    {
+      "id": "s01",
+      "title": "Syllabus 4.3: direct collisions",
+      "mode": "opening",
+      "tempo": "brisk",
+      "beats": [
+        {
+          "id": "quote1",
+          "text": "Syllabus four point three: use conservation of linear momentum to solve problems",
+          "start": 0.55,
+          "speechEnd": 6.77,
+          "end": 6.77,
+          "hold": 0.0,
+          "providerAudioSha256": "b6823f261c21e89f62c173b7d2ae33d159a148584a87e79aa9cd997408603049",
+          "providerTrimStart": 0.0,
+          "providerTrimEnd": 6.22,
+          "caption": "use conservation of linear momentum to solve problems",
+          "cue": 0.55,
+          "penEnd": 6.6899999999999995
+        },
+        {
+          "id": "quote2",
+          "text": "that may be modelled as the direct impact of two bodies.",
+          "start": 6.92,
+          "speechEnd": 10.35,
+          "end": 10.35,
+          "hold": 0.0,
+          "providerAudioSha256": "7617cd556e43784cd5d279542f3e65c6fb39ff6693a3d335db6eaff2c6c8c7a6",
+          "providerTrimStart": 0.04,
+          "providerTrimEnd": 3.47,
+          "caption": "that may be modelled as the direct impact of two bodies.",
+          "cue": 6.92,
+          "penEnd": 10.27
+        },
+        {
+          "id": "outcome1",
+          "text": "By the end you can choose signed velocities.",
+          "start": 10.5,
+          "speechEnd": 13.6,
+          "end": 13.6,
+          "hold": 0.0,
+          "providerAudioSha256": "18d3cda0ae17bc132cda4b498cc838b1bf949207ad1f9354a3f76c4145e9fad7",
+          "providerTrimStart": 0.02,
+          "providerTrimEnd": 3.12,
+          "caption": "Choose signed velocities.",
+          "cue": 10.5,
+          "penEnd": 13.52
+        },
+        {
+          "id": "outcome2",
+          "text": "Conserve the pair's momentum.",
+          "start": 13.75,
+          "speechEnd": 15.47,
+          "end": 15.47,
+          "hold": 0.0,
+          "providerAudioSha256": "b11da9f452c62e32830feef8588a7593d9431d73c4c73a534f1dd47903adc8ab",
+          "providerTrimStart": 0.02,
+          "providerTrimEnd": 1.74,
+          "caption": "Conserve the pair's momentum.",
+          "cue": 13.75,
+          "penEnd": 15.39
+        },
+        {
+          "id": "outcome3",
+          "text": "And solve separate and sticking outcomes.",
+          "start": 15.62,
+          "speechEnd": 17.98,
+          "end": 17.98,
+          "hold": 0.0,
+          "providerAudioSha256": "46f411a2f42dc452c1e7dea29f9bb7e912b9e148a8f85720a12be2e404216e22",
+          "providerTrimStart": 0.01,
+          "providerTrimEnd": 2.37,
+          "caption": "Solve separate and sticking outcomes.",
+          "cue": 15.62,
+          "penEnd": 17.900000000000002
+        }
+      ],
+      "audio": "direct-collisions-s01.mp3",
+      "duration": 18.573061,
+      "sampleDuration": 18.53,
+      "holds": [],
+      "audioSha256": "03dcbd66f66dd251a80e69cf9d4d4c30994052bec2a5989c70bf78887e0d4514",
+      "provider": "elevenlabs",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "voiceSpeed": 1.0,
+      "modelId": "eleven_turbo_v2_5",
+      "sampleRate": 44100,
+      "words": [
+        {
+          "word": " Syllabus",
+          "start": 0.55,
+          "end": 0.99,
+          "probability": 0.5725621779759725,
+          "beatId": "quote1"
+        },
+        {
+          "word": " four",
+          "start": 0.99,
+          "end": 1.25,
+          "probability": 0.002743371995165944,
+          "beatId": "quote1"
+        },
+        {
+          "word": " point",
+          "start": 1.25,
+          "end": 1.51,
+          "probability": 0.942997395992279,
+          "beatId": "quote1"
+        },
+        {
+          "word": " three",
+          "start": 1.51,
+          "end": 1.99,
+          "probability": 0.0011390690822850047,
+          "beatId": "quote1"
+        },
+        {
+          "word": " use",
+          "start": 1.99,
+          "end": 2.91,
+          "probability": 0.6789151430130005,
+          "beatId": "quote1"
+        },
+        {
+          "word": " conservation",
+          "start": 2.91,
+          "end": 3.47,
+          "probability": 0.9938957095146179,
+          "beatId": "quote1"
+        },
+        {
+          "word": " of",
+          "start": 3.47,
+          "end": 3.97,
+          "probability": 0.9863985180854797,
+          "beatId": "quote1"
+        },
+        {
+          "word": " linear",
+          "start": 3.97,
+          "end": 4.35,
+          "probability": 0.9915000796318054,
+          "beatId": "quote1"
+        },
+        {
+          "word": " momentum",
+          "start": 4.35,
+          "end": 4.73,
+          "probability": 0.9991913437843323,
+          "beatId": "quote1"
+        },
+        {
+          "word": " to",
+          "start": 4.73,
+          "end": 5.71,
+          "probability": 0.0009815511875785887,
+          "beatId": "quote1"
+        },
+        {
+          "word": " solve",
+          "start": 5.71,
+          "end": 6.03,
+          "probability": 0.9961819648742676,
+          "beatId": "quote1"
+        },
+        {
+          "word": " problems",
+          "start": 6.03,
+          "end": 6.49,
+          "probability": 0.9701289534568787,
+          "beatId": "quote1"
+        },
+        {
+          "word": " that",
+          "start": 6.92,
+          "end": 7.1,
+          "probability": 0.0030277711236976756,
+          "beatId": "quote2"
+        },
+        {
+          "word": " may",
+          "start": 7.1,
+          "end": 7.36,
+          "probability": 0.9838321208953857,
+          "beatId": "quote2"
+        },
+        {
+          "word": " be",
+          "start": 7.36,
+          "end": 7.54,
+          "probability": 0.9956744313240051,
+          "beatId": "quote2"
+        },
+        {
+          "word": " modelled",
+          "start": 7.54,
+          "end": 8.0,
+          "probability": 0.5931750014424324,
+          "beatId": "quote2"
+        },
+        {
+          "word": " as",
+          "start": 8.0,
+          "end": 8.2,
+          "probability": 0.9791024327278137,
+          "beatId": "quote2"
+        },
+        {
+          "word": " the",
+          "start": 8.2,
+          "end": 8.34,
+          "probability": 0.009045889048138633,
+          "beatId": "quote2"
+        },
+        {
+          "word": " direct",
+          "start": 8.34,
+          "end": 8.68,
+          "probability": 0.9432320594787598,
+          "beatId": "quote2"
+        },
+        {
+          "word": " impact",
+          "start": 8.68,
+          "end": 9.1,
+          "probability": 0.9747868180274963,
+          "beatId": "quote2"
+        },
+        {
+          "word": " of",
+          "start": 9.1,
+          "end": 9.64,
+          "probability": 0.975658118724823,
+          "beatId": "quote2"
+        },
+        {
+          "word": " two",
+          "start": 9.64,
+          "end": 9.84,
+          "probability": 0.12449511140584946,
+          "beatId": "quote2"
+        },
+        {
+          "word": " bodies.",
+          "start": 9.84,
+          "end": 10.08,
+          "probability": 0.9740288257598877,
+          "beatId": "quote2"
+        },
+        {
+          "word": " By",
+          "start": 10.5,
+          "end": 10.66,
+          "probability": 0.553610622882843,
+          "beatId": "outcome1"
+        },
+        {
+          "word": " the",
+          "start": 10.66,
+          "end": 10.8,
+          "probability": 0.00010782826342392582,
+          "beatId": "outcome1"
+        },
+        {
+          "word": " end",
+          "start": 10.8,
+          "end": 11.16,
+          "probability": 0.9626666903495789,
+          "beatId": "outcome1"
+        },
+        {
+          "word": " you",
+          "start": 11.16,
+          "end": 11.84,
+          "probability": 0.16871145367622375,
+          "beatId": "outcome1"
+        },
+        {
+          "word": " can",
+          "start": 11.84,
+          "end": 11.98,
+          "probability": 0.993910551071167,
+          "beatId": "outcome1"
+        },
+        {
+          "word": " choose",
+          "start": 11.98,
+          "end": 12.26,
+          "probability": 0.9766982197761536,
+          "beatId": "outcome1"
+        },
+        {
+          "word": " signed",
+          "start": 12.26,
+          "end": 12.7,
+          "probability": 0.9438129663467407,
+          "beatId": "outcome1"
+        },
+        {
+          "word": " velocities.",
+          "start": 12.7,
+          "end": 13.4,
+          "probability": 0.9941561818122864,
+          "beatId": "outcome1"
+        },
+        {
+          "word": " Conserve",
+          "start": 13.75,
+          "end": 14.27,
+          "probability": 0.48237740248441696,
+          "beatId": "outcome2"
+        },
+        {
+          "word": " the",
+          "start": 14.27,
+          "end": 14.43,
+          "probability": 0.0001340049823568279,
+          "beatId": "outcome2"
+        },
+        {
+          "word": " pair's",
+          "start": 14.43,
+          "end": 14.79,
+          "probability": 0.6024656817317009,
+          "beatId": "outcome2"
+        },
+        {
+          "word": " momentum.",
+          "start": 14.79,
+          "end": 15.01,
+          "probability": 0.9975087642669678,
+          "beatId": "outcome2"
+        },
+        {
+          "word": " And",
+          "start": 15.62,
+          "end": 15.78,
+          "probability": 0.026541098952293396,
+          "beatId": "outcome3"
+        },
+        {
+          "word": " solve",
+          "start": 15.78,
+          "end": 16.02,
+          "probability": 0.9720182418823242,
+          "beatId": "outcome3"
+        },
+        {
+          "word": " separate",
+          "start": 16.02,
+          "end": 16.5,
+          "probability": 0.8800678849220276,
+          "beatId": "outcome3"
+        },
+        {
+          "word": " and",
+          "start": 16.5,
+          "end": 17.02,
+          "probability": 0.6071531772613525,
+          "beatId": "outcome3"
+        },
+        {
+          "word": " sticking",
+          "start": 17.02,
+          "end": 17.28,
+          "probability": 0.9703033566474915,
+          "beatId": "outcome3"
+        },
+        {
+          "word": " outcomes.",
+          "start": 17.28,
+          "end": 17.7,
+          "probability": 0.9425623416900635,
+          "beatId": "outcome3"
+        }
+      ],
+      "wordCount": 41,
+      "text": "Syllabus four point three use conservation of linear momentum to solve problems that may be modelled as the direct impact of two bodies. By the end you can choose signed velocities. Conserve the pair's momentum. And solve separate and sticking outcomes.",
+      "cues": {
+        "quote1": 0.55,
+        "quote2": 6.92,
+        "outcome1": 10.5,
+        "outcome2": 13.75,
+        "outcome3": 15.62
+      },
+      "figureEvents": [],
+      "cueEvidence": [
+        {
+          "id": "quote1",
+          "phrase": " Syllabus",
+          "wordIndex": 0,
+          "edge": "start",
+          "time": 0.55
+        },
+        {
+          "id": "quote2",
+          "phrase": " that",
+          "wordIndex": 12,
+          "edge": "start",
+          "time": 6.92
+        },
+        {
+          "id": "outcome1",
+          "phrase": " By",
+          "wordIndex": 23,
+          "edge": "start",
+          "time": 10.5
+        },
+        {
+          "id": "outcome2",
+          "phrase": " Conserve",
+          "wordIndex": 31,
+          "edge": "start",
+          "time": 13.75
+        },
+        {
+          "id": "outcome3",
+          "phrase": " And",
+          "wordIndex": 35,
+          "edge": "start",
+          "time": 15.62
+        }
+      ],
+      "engine": "faster-whisper-small (local, CPU int8, 2 threads)",
+      "transcriptionMethod": "Separate beat excerpts of decoded final scene MP3; word timestamps shifted by exact PCM excerpt offsets."
+    },
+    {
+      "id": "s02",
+      "title": "Two alternative collision trials",
+      "mode": "story",
+      "tempo": "brisk",
+      "beats": [
+        {
+          "id": "approach",
+          "text": "Consider two particles moving towards each other along the same straight line on a smooth horizontal surface.",
+          "start": 0.55,
+          "speechEnd": 8.12,
+          "end": 8.12,
+          "hold": 0.0,
+          "providerAudioSha256": "fe53272c7c6006841a619fd686a207c58a4a825aba6a84a708a9888b62558529",
+          "providerTrimStart": 0.02,
+          "providerTrimEnd": 7.59,
+          "caption": "Same straight line",
+          "cue": 0.55,
+          "penEnd": 8.04
+        },
+        {
+          "id": "contact1",
+          "text": "They meet. In the first trial, A rebounds and the particles separate.",
+          "start": 8.27,
+          "speechEnd": 13.9,
+          "end": 13.9,
+          "hold": 0.0,
+          "providerAudioSha256": "5ab86242b363bcbd358936d15e1e2ef45f244b49330aa37ba36918c0dfc12040",
+          "providerTrimStart": 0.03,
+          "providerTrimEnd": 5.66,
+          "extraCues": [
+            {
+              "id": "separate",
+              "phrase": "rebounds"
+            },
+            {
+              "id": "impact1",
+              "phrase": "meet"
+            }
+          ],
+          "caption": "Trial 1: separate",
+          "cue": 8.27,
+          "penEnd": 13.82
+        },
+        {
+          "id": "tentative",
+          "text": "B's dashed arrow is a trial direction. The calculation will decide its signed velocity.",
+          "start": 14.05,
+          "speechEnd": 19.84,
+          "end": 19.84,
+          "hold": 0.0,
+          "providerAudioSha256": "07b42346a3f5d57efa7d8437f548882a53404f267d71777d7122bc47eba36c06",
+          "providerTrimStart": 0.0,
+          "providerTrimEnd": 5.79,
+          "caption": "Dashed means an assumed direction",
+          "cue": 14.05,
+          "penEnd": 19.76
+        },
+        {
+          "id": "reset",
+          "text": "Now reset to the original approach. This is a separate trial, with the same initial conditions.",
+          "start": 19.99,
+          "speechEnd": 26.15,
+          "end": 26.15,
+          "hold": 0.0,
+          "providerAudioSha256": "7dacf762a752ec68083824489f52d7b9f25675e40cd27cecd00e793580454e2c",
+          "providerTrimStart": 0.0,
+          "providerTrimEnd": 6.16,
+          "caption": "Reset: same initial conditions",
+          "cue": 19.99,
+          "penEnd": 26.07
+        },
+        {
+          "id": "contact2",
+          "text": "This time they meet and stick together, or coalesce. We will find their common velocity.",
+          "start": 26.3,
+          "speechEnd": 31.97,
+          "end": 31.97,
+          "hold": 0.0,
+          "providerAudioSha256": "dfb3f4eb3c447fa732eac7e65997f2fde3ad3e51b3520239087b87bfb0524a56",
+          "providerTrimStart": 0.04,
+          "providerTrimEnd": 5.71,
+          "extraCues": [
+            {
+              "id": "stick",
+              "phrase": "stick together"
+            },
+            {
+              "id": "impact2",
+              "phrase": "meet"
+            }
+          ],
+          "caption": "Trial 2: stick together",
+          "cue": 26.3,
+          "penEnd": 31.89
+        }
+      ],
+      "audio": "direct-collisions-s02.mp3",
+      "duration": 32.548571,
+      "sampleDuration": 32.52,
+      "holds": [],
+      "audioSha256": "5823baa7857192902d90a6ffb4c6ba17d5b2a754efc8fbccdc27cf6b85b3a956",
+      "provider": "elevenlabs",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "voiceSpeed": 1.0,
+      "modelId": "eleven_turbo_v2_5",
+      "sampleRate": 44100,
+      "words": [
+        {
+          "word": " Consider",
+          "start": 0.55,
+          "end": 0.85,
+          "probability": 0.812375009059906,
+          "beatId": "approach"
+        },
+        {
+          "word": " two",
+          "start": 0.85,
+          "end": 1.17,
+          "probability": 0.0006688111997021906,
+          "beatId": "approach"
+        },
+        {
+          "word": " particles",
+          "start": 1.17,
+          "end": 1.63,
+          "probability": 0.9833214282989502,
+          "beatId": "approach"
+        },
+        {
+          "word": " moving",
+          "start": 1.63,
+          "end": 2.13,
+          "probability": 0.9865478873252869,
+          "beatId": "approach"
+        },
+        {
+          "word": " towards",
+          "start": 2.13,
+          "end": 2.71,
+          "probability": 0.48596791838645004,
+          "beatId": "approach"
+        },
+        {
+          "word": " each",
+          "start": 2.71,
+          "end": 2.95,
+          "probability": 0.924014151096344,
+          "beatId": "approach"
+        },
+        {
+          "word": " other",
+          "start": 2.95,
+          "end": 3.33,
+          "probability": 0.9945914149284363,
+          "beatId": "approach"
+        },
+        {
+          "word": " along",
+          "start": 3.33,
+          "end": 4.17,
+          "probability": 0.8692339062690735,
+          "beatId": "approach"
+        },
+        {
+          "word": " the",
+          "start": 4.17,
+          "end": 4.45,
+          "probability": 0.48548953980207443,
+          "beatId": "approach"
+        },
+        {
+          "word": " same",
+          "start": 4.45,
+          "end": 4.83,
+          "probability": 0.9130971431732178,
+          "beatId": "approach"
+        },
+        {
+          "word": " straight",
+          "start": 4.83,
+          "end": 5.35,
+          "probability": 0.8651518821716309,
+          "beatId": "approach"
+        },
+        {
+          "word": " line",
+          "start": 5.35,
+          "end": 5.97,
+          "probability": 0.9873616695404053,
+          "beatId": "approach"
+        },
+        {
+          "word": " on",
+          "start": 5.97,
+          "end": 6.41,
+          "probability": 0.9120851755142212,
+          "beatId": "approach"
+        },
+        {
+          "word": " a",
+          "start": 6.41,
+          "end": 6.59,
+          "probability": 0.9073513746261597,
+          "beatId": "approach"
+        },
+        {
+          "word": " smooth",
+          "start": 6.59,
+          "end": 6.83,
+          "probability": 0.9214110374450684,
+          "beatId": "approach"
+        },
+        {
+          "word": " horizontal",
+          "start": 6.83,
+          "end": 7.41,
+          "probability": 0.7705316543579102,
+          "beatId": "approach"
+        },
+        {
+          "word": " surface.",
+          "start": 7.41,
+          "end": 7.87,
+          "probability": 0.9464731812477112,
+          "beatId": "approach"
+        },
+        {
+          "word": " They",
+          "start": 8.27,
+          "end": 8.45,
+          "probability": 0.2857966125011444,
+          "beatId": "contact1"
+        },
+        {
+          "word": " meet.",
+          "start": 8.45,
+          "end": 8.69,
+          "probability": 0.964837372303009,
+          "beatId": "contact1"
+        },
+        {
+          "word": " In",
+          "start": 9.11,
+          "end": 9.43,
+          "probability": 0.9212656021118164,
+          "beatId": "contact1"
+        },
+        {
+          "word": " the",
+          "start": 9.43,
+          "end": 9.53,
+          "probability": 0.0009022773956530727,
+          "beatId": "contact1"
+        },
+        {
+          "word": " first",
+          "start": 9.53,
+          "end": 9.79,
+          "probability": 0.976225733757019,
+          "beatId": "contact1"
+        },
+        {
+          "word": " trial,",
+          "start": 9.79,
+          "end": 10.29,
+          "probability": 0.3160373825424661,
+          "beatId": "contact1"
+        },
+        {
+          "word": " A",
+          "start": 10.79,
+          "end": 10.99,
+          "probability": 0.2866261303424835,
+          "beatId": "contact1"
+        },
+        {
+          "word": " rebounds",
+          "start": 10.99,
+          "end": 11.61,
+          "probability": 0.9334222674369812,
+          "beatId": "contact1"
+        },
+        {
+          "word": " and",
+          "start": 11.61,
+          "end": 12.41,
+          "probability": 0.559568464756012,
+          "beatId": "contact1"
+        },
+        {
+          "word": " the",
+          "start": 12.41,
+          "end": 12.53,
+          "probability": 0.4556465223431587,
+          "beatId": "contact1"
+        },
+        {
+          "word": " particles",
+          "start": 12.53,
+          "end": 13.01,
+          "probability": 0.9142722487449646,
+          "beatId": "contact1"
+        },
+        {
+          "word": " separate.",
+          "start": 13.01,
+          "end": 13.49,
+          "probability": 0.8942500948905945,
+          "beatId": "contact1"
+        },
+        {
+          "word": " B's",
+          "start": 14.05,
+          "end": 14.41,
+          "probability": 0.5983063280582428,
+          "beatId": "tentative"
+        },
+        {
+          "word": " dashed",
+          "start": 14.41,
+          "end": 14.87,
+          "probability": 0.8599151074886322,
+          "beatId": "tentative"
+        },
+        {
+          "word": " arrow",
+          "start": 14.87,
+          "end": 15.13,
+          "probability": 0.9642671942710876,
+          "beatId": "tentative"
+        },
+        {
+          "word": " is",
+          "start": 15.13,
+          "end": 15.87,
+          "probability": 0.9802916049957275,
+          "beatId": "tentative"
+        },
+        {
+          "word": " a",
+          "start": 15.87,
+          "end": 15.99,
+          "probability": 0.9385243058204651,
+          "beatId": "tentative"
+        },
+        {
+          "word": " trial",
+          "start": 15.99,
+          "end": 16.25,
+          "probability": 0.2240876343127335,
+          "beatId": "tentative"
+        },
+        {
+          "word": " direction.",
+          "start": 16.25,
+          "end": 16.73,
+          "probability": 0.9880440831184387,
+          "beatId": "tentative"
+        },
+        {
+          "word": " The",
+          "start": 17.23,
+          "end": 17.31,
+          "probability": 0.9572418332099915,
+          "beatId": "tentative"
+        },
+        {
+          "word": " calculation",
+          "start": 17.31,
+          "end": 17.71,
+          "probability": 0.9922549724578857,
+          "beatId": "tentative"
+        },
+        {
+          "word": " will",
+          "start": 17.71,
+          "end": 18.07,
+          "probability": 0.3132339119911194,
+          "beatId": "tentative"
+        },
+        {
+          "word": " decide",
+          "start": 18.07,
+          "end": 18.47,
+          "probability": 0.9868993759155273,
+          "beatId": "tentative"
+        },
+        {
+          "word": " its",
+          "start": 18.47,
+          "end": 18.77,
+          "probability": 0.9580546021461487,
+          "beatId": "tentative"
+        },
+        {
+          "word": " signed",
+          "start": 18.77,
+          "end": 19.13,
+          "probability": 0.8667494058609009,
+          "beatId": "tentative"
+        },
+        {
+          "word": " velocity.",
+          "start": 19.13,
+          "end": 19.57,
+          "probability": 0.9967047572135925,
+          "beatId": "tentative"
+        },
+        {
+          "word": " Now",
+          "start": 19.99,
+          "end": 20.19,
+          "probability": 0.8075710535049438,
+          "beatId": "reset"
+        },
+        {
+          "word": " reset",
+          "start": 20.19,
+          "end": 20.53,
+          "probability": 0.8064172863960266,
+          "beatId": "reset"
+        },
+        {
+          "word": " to",
+          "start": 20.53,
+          "end": 21.03,
+          "probability": 0.0002178141182866966,
+          "beatId": "reset"
+        },
+        {
+          "word": " the",
+          "start": 21.03,
+          "end": 21.15,
+          "probability": 0.1969915817026049,
+          "beatId": "reset"
+        },
+        {
+          "word": " original",
+          "start": 21.15,
+          "end": 21.55,
+          "probability": 0.9194620251655579,
+          "beatId": "reset"
+        },
+        {
+          "word": " approach.",
+          "start": 21.55,
+          "end": 22.01,
+          "probability": 0.9673205018043518,
+          "beatId": "reset"
+        },
+        {
+          "word": " This",
+          "start": 22.75,
+          "end": 22.91,
+          "probability": 0.9460561275482178,
+          "beatId": "reset"
+        },
+        {
+          "word": " is",
+          "start": 22.91,
+          "end": 23.05,
+          "probability": 0.7853212952613831,
+          "beatId": "reset"
+        },
+        {
+          "word": " a",
+          "start": 23.05,
+          "end": 23.25,
+          "probability": 0.9581313729286194,
+          "beatId": "reset"
+        },
+        {
+          "word": " separate",
+          "start": 23.25,
+          "end": 23.53,
+          "probability": 0.9702571034431458,
+          "beatId": "reset"
+        },
+        {
+          "word": " trial,",
+          "start": 23.53,
+          "end": 24.09,
+          "probability": 0.3517089296753208,
+          "beatId": "reset"
+        },
+        {
+          "word": " with",
+          "start": 24.55,
+          "end": 24.69,
+          "probability": 0.9732956886291504,
+          "beatId": "reset"
+        },
+        {
+          "word": " the",
+          "start": 24.69,
+          "end": 24.87,
+          "probability": 0.36475479416549206,
+          "beatId": "reset"
+        },
+        {
+          "word": " same",
+          "start": 24.87,
+          "end": 25.11,
+          "probability": 0.9547880291938782,
+          "beatId": "reset"
+        },
+        {
+          "word": " initial",
+          "start": 25.11,
+          "end": 25.53,
+          "probability": 0.6200293898582458,
+          "beatId": "reset"
+        },
+        {
+          "word": " conditions.",
+          "start": 25.53,
+          "end": 25.87,
+          "probability": 0.10291042923927307,
+          "beatId": "reset"
+        },
+        {
+          "word": " This",
+          "start": 26.3,
+          "end": 26.48,
+          "probability": 0.6736798286437988,
+          "beatId": "contact2"
+        },
+        {
+          "word": " time",
+          "start": 26.48,
+          "end": 26.74,
+          "probability": 7.97049884226908e-05,
+          "beatId": "contact2"
+        },
+        {
+          "word": " they",
+          "start": 26.74,
+          "end": 26.9,
+          "probability": 0.10696831217501312,
+          "beatId": "contact2"
+        },
+        {
+          "word": " meet",
+          "start": 26.9,
+          "end": 27.28,
+          "probability": 0.9721428751945496,
+          "beatId": "contact2"
+        },
+        {
+          "word": " and",
+          "start": 27.28,
+          "end": 27.48,
+          "probability": 0.7772530913352966,
+          "beatId": "contact2"
+        },
+        {
+          "word": " stick",
+          "start": 27.48,
+          "end": 27.72,
+          "probability": 0.9625316858291626,
+          "beatId": "contact2"
+        },
+        {
+          "word": " together,",
+          "start": 27.72,
+          "end": 28.14,
+          "probability": 0.49635069631040096,
+          "beatId": "contact2"
+        },
+        {
+          "word": " or",
+          "start": 28.48,
+          "end": 28.84,
+          "probability": 0.9112352132797241,
+          "beatId": "contact2"
+        },
+        {
+          "word": " coalesce.",
+          "start": 28.84,
+          "end": 29.96,
+          "probability": 0.894131620724996,
+          "beatId": "contact2"
+        },
+        {
+          "word": " We",
+          "start": 29.96,
+          "end": 30.08,
+          "probability": 0.805988609790802,
+          "beatId": "contact2"
+        },
+        {
+          "word": " will",
+          "start": 30.08,
+          "end": 30.24,
+          "probability": 0.8073211312294006,
+          "beatId": "contact2"
+        },
+        {
+          "word": " find",
+          "start": 30.24,
+          "end": 30.5,
+          "probability": 0.7637041807174683,
+          "beatId": "contact2"
+        },
+        {
+          "word": " their",
+          "start": 30.5,
+          "end": 30.86,
+          "probability": 0.6178861359755198,
+          "beatId": "contact2"
+        },
+        {
+          "word": " common",
+          "start": 30.86,
+          "end": 31.12,
+          "probability": 0.908979058265686,
+          "beatId": "contact2"
+        },
+        {
+          "word": " velocity.",
+          "start": 31.12,
+          "end": 31.66,
+          "probability": 0.9624930024147034,
+          "beatId": "contact2"
+        }
+      ],
+      "wordCount": 74,
+      "text": "Consider two particles moving towards each other along the same straight line on a smooth horizontal surface. They meet. In the first trial, A rebounds and the particles separate. B's dashed arrow is a trial direction. The calculation will decide its signed velocity. Now reset to the original approach. This is a separate trial, with the same initial conditions. This time they meet and stick together, or coalesce. We will find their common velocity.",
+      "cues": {
+        "approach": 0.55,
+        "contact1": 8.27,
+        "separate": 10.99,
+        "impact1": 8.45,
+        "tentative": 14.05,
+        "reset": 19.99,
+        "contact2": 26.3,
+        "stick": 27.48,
+        "impact2": 26.9
+      },
+      "figureEvents": [],
+      "cueEvidence": [
+        {
+          "id": "approach",
+          "phrase": " Consider",
+          "wordIndex": 0,
+          "edge": "start",
+          "time": 0.55
+        },
+        {
+          "id": "contact1",
+          "phrase": " They",
+          "wordIndex": 17,
+          "edge": "start",
+          "time": 8.27
+        },
+        {
+          "id": "separate",
+          "phrase": "rebounds",
+          "wordIndex": 24,
+          "edge": "start",
+          "time": 10.99
+        },
+        {
+          "id": "impact1",
+          "phrase": "meet",
+          "wordIndex": 18,
+          "edge": "start",
+          "time": 8.45
+        },
+        {
+          "id": "tentative",
+          "phrase": " B's",
+          "wordIndex": 29,
+          "edge": "start",
+          "time": 14.05
+        },
+        {
+          "id": "reset",
+          "phrase": " Now",
+          "wordIndex": 43,
+          "edge": "start",
+          "time": 19.99
+        },
+        {
+          "id": "contact2",
+          "phrase": " This",
+          "wordIndex": 59,
+          "edge": "start",
+          "time": 26.3
+        },
+        {
+          "id": "stick",
+          "phrase": "stick together",
+          "wordIndex": 64,
+          "edge": "start",
+          "time": 27.48
+        },
+        {
+          "id": "impact2",
+          "phrase": "meet",
+          "wordIndex": 62,
+          "edge": "start",
+          "time": 26.9
+        }
+      ],
+      "engine": "faster-whisper-small (local, CPU int8, 2 threads)",
+      "transcriptionMethod": "Separate beat excerpts of decoded final scene MP3; word timestamps shifted by exact PCM excerpt offsets."
+    },
+    {
+      "id": "s03",
+      "title": "The complete question",
+      "mode": "setup",
+      "tempo": "brisk",
+      "beats": [
+        {
+          "id": "conditions",
+          "text": "Both trials use a smooth horizontal surface. External horizontal force is negligible during impact. Take right as positive.",
+          "start": 0.55,
+          "speechEnd": 9.89,
+          "end": 9.89,
+          "hold": 0.0,
+          "providerAudioSha256": "32a1620b2a9a00e54c6d247d0651e663a589ea4f02d76793b3779f7cb50cd952",
+          "providerTrimStart": 0.0,
+          "providerTrimEnd": 9.34,
+          "cue": 0.55,
+          "penEnd": 9.81
+        },
+        {
+          "id": "mass-a",
+          "text": "Particle A has mass two kilograms",
+          "start": 10.04,
+          "speechEnd": 12.54,
+          "end": 12.54,
+          "hold": 0.0,
+          "providerAudioSha256": "cb8726a88bb0cebf1b2fc3a0b4048de3e7dc3861ac6fc98427be69274c42c40e",
+          "providerTrimStart": 0.04,
+          "providerTrimEnd": 2.54,
+          "figures": [
+            {
+              "phrase": "two",
+              "target": "A.mass",
+              "value": "2"
+            }
+          ],
+          "cue": 10.04,
+          "penEnd": 12.459999999999999
+        },
+        {
+          "id": "before-a",
+          "text": "and moves right at four metres per second.",
+          "start": 12.69,
+          "speechEnd": 14.92,
+          "end": 14.92,
+          "hold": 0.0,
+          "providerAudioSha256": "4966967be65e1cf837b35a14f559b8c327c78d27c671a2e00de6311f96bc71d1",
+          "providerTrimStart": 0.0,
+          "providerTrimEnd": 2.23,
+          "figures": [
+            {
+              "phrase": "four",
+              "target": "A.before",
+              "value": "4"
+            }
+          ],
+          "cue": 12.69,
+          "penEnd": 14.84
+        },
+        {
+          "id": "mass-b",
+          "text": "Particle B has mass three kilograms",
+          "start": 15.07,
+          "speechEnd": 17.33,
+          "end": 17.33,
+          "hold": 0.0,
+          "providerAudioSha256": "f6c200c8df7e751e865153711dc4f9e75e381c6731c31bd8ca7e904ae193303e",
+          "providerTrimStart": 0.03,
+          "providerTrimEnd": 2.29,
+          "figures": [
+            {
+              "phrase": "three",
+              "target": "B.mass",
+              "value": "3"
+            }
+          ],
+          "cue": 15.07,
+          "penEnd": 17.25
+        },
+        {
+          "id": "before-b",
+          "text": "and moves left at one metre per second.",
+          "start": 17.48,
+          "speechEnd": 19.55,
+          "end": 19.55,
+          "hold": 0.0,
+          "providerAudioSha256": "cb1e855c77cc21a701e121a77285ee6a0854c3f8706ed58e73056f837ae1711b",
+          "providerTrimStart": 0.01,
+          "providerTrimEnd": 2.08,
+          "figures": [
+            {
+              "phrase": "one",
+              "target": "B.before",
+              "value": "1"
+            }
+          ],
+          "cue": 17.48,
+          "penEnd": 19.470000000000002
+        },
+        {
+          "id": "after-a",
+          "text": "In trial one, A rebounds left at two metres per second. Find B's final speed and direction.",
+          "start": 19.7,
+          "speechEnd": 26.8,
+          "end": 26.8,
+          "hold": 0.0,
+          "providerAudioSha256": "7afb3b9b8e2c809ce90b264b35df5ccce0827be471d7998c9ea0735981b0037e",
+          "providerTrimStart": 0.0,
+          "providerTrimEnd": 7.1,
+          "figures": [
+            {
+              "phrase": "two",
+              "target": "A.after",
+              "value": "2"
+            }
+          ],
+          "cue": 19.7,
+          "penEnd": 26.720000000000002
+        },
+        {
+          "id": "together",
+          "text": "In the separate sticking trial, find the common velocity. Both questions use the original before diagram. Take a moment to read them.",
+          "hold": 2.0,
+          "start": 26.95,
+          "speechEnd": 38.0,
+          "end": 40.0,
+          "providerAudioSha256": "4a620cfa617ded26b0c54cd2febdb0aa05ef61b922f1829f6a288f5954045eb5",
+          "providerTrimStart": 0.01,
+          "providerTrimEnd": 11.06,
+          "cue": 26.95,
+          "penEnd": 37.92
+        }
+      ],
+      "audio": "direct-collisions-s03.mp3",
+      "duration": 40.594286,
+      "sampleDuration": 40.55,
+      "holds": [
+        {
+          "start": 38.0,
+          "end": 40.0,
+          "kind": "result",
+          "duration": 2.0
+        }
+      ],
+      "audioSha256": "fadb3d1b11ecb228df4c8ddabc108c5b6a3dbc54065f47c0a2a57531d79933e9",
+      "provider": "elevenlabs",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "voiceSpeed": 1.0,
+      "modelId": "eleven_turbo_v2_5",
+      "sampleRate": 44100,
+      "words": [
+        {
+          "word": " Both",
+          "start": 0.55,
+          "end": 0.77,
+          "probability": 0.9438202381134033,
+          "beatId": "conditions"
+        },
+        {
+          "word": " trials",
+          "start": 0.77,
+          "end": 1.39,
+          "probability": 0.4886523875215971,
+          "beatId": "conditions"
+        },
+        {
+          "word": " use",
+          "start": 1.39,
+          "end": 1.87,
+          "probability": 0.964572012424469,
+          "beatId": "conditions"
+        },
+        {
+          "word": " a",
+          "start": 1.87,
+          "end": 2.03,
+          "probability": 0.9686664938926697,
+          "beatId": "conditions"
+        },
+        {
+          "word": " smooth",
+          "start": 2.03,
+          "end": 2.35,
+          "probability": 0.9970406889915466,
+          "beatId": "conditions"
+        },
+        {
+          "word": " horizontal",
+          "start": 2.35,
+          "end": 2.87,
+          "probability": 0.9667847752571106,
+          "beatId": "conditions"
+        },
+        {
+          "word": " surface.",
+          "start": 2.87,
+          "end": 3.47,
+          "probability": 0.9938386082649231,
+          "beatId": "conditions"
+        },
+        {
+          "word": " External",
+          "start": 3.95,
+          "end": 4.45,
+          "probability": 0.33532094955444336,
+          "beatId": "conditions"
+        },
+        {
+          "word": " horizontal",
+          "start": 4.45,
+          "end": 4.89,
+          "probability": 0.9700846076011658,
+          "beatId": "conditions"
+        },
+        {
+          "word": " force",
+          "start": 4.89,
+          "end": 5.53,
+          "probability": 0.9948270916938782,
+          "beatId": "conditions"
+        },
+        {
+          "word": " is",
+          "start": 5.53,
+          "end": 6.31,
+          "probability": 0.9755051732063293,
+          "beatId": "conditions"
+        },
+        {
+          "word": " negligible",
+          "start": 6.31,
+          "end": 7.01,
+          "probability": 0.9908928275108337,
+          "beatId": "conditions"
+        },
+        {
+          "word": " during",
+          "start": 7.01,
+          "end": 7.25,
+          "probability": 0.981673002243042,
+          "beatId": "conditions"
+        },
+        {
+          "word": " impact.",
+          "start": 7.25,
+          "end": 7.87,
+          "probability": 0.9845991134643555,
+          "beatId": "conditions"
+        },
+        {
+          "word": " Take",
+          "start": 8.37,
+          "end": 8.67,
+          "probability": 0.973034679889679,
+          "beatId": "conditions"
+        },
+        {
+          "word": " right",
+          "start": 8.67,
+          "end": 8.99,
+          "probability": 0.8372863531112671,
+          "beatId": "conditions"
+        },
+        {
+          "word": " as",
+          "start": 8.99,
+          "end": 9.23,
+          "probability": 0.9934241771697998,
+          "beatId": "conditions"
+        },
+        {
+          "word": " positive.",
+          "start": 9.23,
+          "end": 9.59,
+          "probability": 0.9361724853515625,
+          "beatId": "conditions"
+        },
+        {
+          "word": " Particle",
+          "start": 10.04,
+          "end": 10.46,
+          "probability": 0.07887271419167519,
+          "beatId": "mass-a"
+        },
+        {
+          "word": " A",
+          "start": 10.46,
+          "end": 10.7,
+          "probability": 0.04478522390127182,
+          "beatId": "mass-a"
+        },
+        {
+          "word": " has",
+          "start": 10.7,
+          "end": 11.12,
+          "probability": 0.9430436491966248,
+          "beatId": "mass-a"
+        },
+        {
+          "word": " mass",
+          "start": 11.12,
+          "end": 11.42,
+          "probability": 0.18400909006595612,
+          "beatId": "mass-a"
+        },
+        {
+          "word": " two",
+          "start": 11.42,
+          "end": 11.74,
+          "probability": 9.614232055810135e-05,
+          "beatId": "mass-a"
+        },
+        {
+          "word": " kilograms",
+          "start": 11.74,
+          "end": 12.1,
+          "probability": 0.8433247804641724,
+          "beatId": "mass-a"
+        },
+        {
+          "word": " and",
+          "start": 12.69,
+          "end": 12.85,
+          "probability": 0.4829917848110199,
+          "beatId": "before-a"
+        },
+        {
+          "word": " moves",
+          "start": 12.85,
+          "end": 13.15,
+          "probability": 0.8905719518661499,
+          "beatId": "before-a"
+        },
+        {
+          "word": " right",
+          "start": 13.15,
+          "end": 13.47,
+          "probability": 0.9556184411048889,
+          "beatId": "before-a"
+        },
+        {
+          "word": " at",
+          "start": 13.47,
+          "end": 13.71,
+          "probability": 0.9840187430381775,
+          "beatId": "before-a"
+        },
+        {
+          "word": " four",
+          "start": 13.71,
+          "end": 13.99,
+          "probability": 0.2724190950393677,
+          "beatId": "before-a"
+        },
+        {
+          "word": " metres",
+          "start": 13.99,
+          "end": 14.23,
+          "probability": 0.1323002427816391,
+          "beatId": "before-a"
+        },
+        {
+          "word": " per",
+          "start": 14.23,
+          "end": 14.51,
+          "probability": 0.9903019070625305,
+          "beatId": "before-a"
+        },
+        {
+          "word": " second.",
+          "start": 14.51,
+          "end": 14.77,
+          "probability": 0.9958270192146301,
+          "beatId": "before-a"
+        },
+        {
+          "word": " Particle",
+          "start": 15.07,
+          "end": 15.47,
+          "probability": 0.7631002962589264,
+          "beatId": "mass-b"
+        },
+        {
+          "word": " B",
+          "start": 15.47,
+          "end": 15.71,
+          "probability": 0.9435964226722717,
+          "beatId": "mass-b"
+        },
+        {
+          "word": " has",
+          "start": 15.71,
+          "end": 15.93,
+          "probability": 0.9847804307937622,
+          "beatId": "mass-b"
+        },
+        {
+          "word": " mass",
+          "start": 15.93,
+          "end": 16.17,
+          "probability": 0.08533527702093124,
+          "beatId": "mass-b"
+        },
+        {
+          "word": " three",
+          "start": 16.17,
+          "end": 16.51,
+          "probability": 5.121138124053459e-05,
+          "beatId": "mass-b"
+        },
+        {
+          "word": " kilograms",
+          "start": 16.51,
+          "end": 16.89,
+          "probability": 0.9468297958374023,
+          "beatId": "mass-b"
+        },
+        {
+          "word": " and",
+          "start": 17.48,
+          "end": 17.64,
+          "probability": 0.6592748761177063,
+          "beatId": "before-b"
+        },
+        {
+          "word": " moves",
+          "start": 17.64,
+          "end": 17.96,
+          "probability": 0.7839751839637756,
+          "beatId": "before-b"
+        },
+        {
+          "word": " left",
+          "start": 17.96,
+          "end": 18.3,
+          "probability": 0.9399969577789307,
+          "beatId": "before-b"
+        },
+        {
+          "word": " at",
+          "start": 18.3,
+          "end": 18.52,
+          "probability": 0.9567937850952148,
+          "beatId": "before-b"
+        },
+        {
+          "word": " one",
+          "start": 18.52,
+          "end": 18.74,
+          "probability": 0.12433724105358124,
+          "beatId": "before-b"
+        },
+        {
+          "word": " metre",
+          "start": 18.74,
+          "end": 18.98,
+          "probability": 0.043319590389728546,
+          "beatId": "before-b"
+        },
+        {
+          "word": " per",
+          "start": 18.98,
+          "end": 19.18,
+          "probability": 0.9685958623886108,
+          "beatId": "before-b"
+        },
+        {
+          "word": " second.",
+          "start": 19.18,
+          "end": 19.44,
+          "probability": 0.990886926651001,
+          "beatId": "before-b"
+        },
+        {
+          "word": " In",
+          "start": 19.7,
+          "end": 19.86,
+          "probability": 0.789915144443512,
+          "beatId": "after-a"
+        },
+        {
+          "word": " trial",
+          "start": 19.86,
+          "end": 20.08,
+          "probability": 0.07857424590838491,
+          "beatId": "after-a"
+        },
+        {
+          "word": " one,",
+          "start": 20.08,
+          "end": 20.42,
+          "probability": 0.3355141878128052,
+          "beatId": "after-a"
+        },
+        {
+          "word": " A",
+          "start": 21.22,
+          "end": 21.42,
+          "probability": 0.030836569145321846,
+          "beatId": "after-a"
+        },
+        {
+          "word": " rebounds",
+          "start": 21.42,
+          "end": 21.94,
+          "probability": 0.7157823443412781,
+          "beatId": "after-a"
+        },
+        {
+          "word": " left",
+          "start": 21.94,
+          "end": 22.24,
+          "probability": 0.9665085673332214,
+          "beatId": "after-a"
+        },
+        {
+          "word": " at",
+          "start": 22.24,
+          "end": 22.48,
+          "probability": 0.7910587191581726,
+          "beatId": "after-a"
+        },
+        {
+          "word": " two",
+          "start": 22.48,
+          "end": 22.68,
+          "probability": 0.0009807344467844814,
+          "beatId": "after-a"
+        },
+        {
+          "word": " metres",
+          "start": 22.68,
+          "end": 22.86,
+          "probability": 0.04692666232585907,
+          "beatId": "after-a"
+        },
+        {
+          "word": " per",
+          "start": 22.86,
+          "end": 23.08,
+          "probability": 0.9793242812156677,
+          "beatId": "after-a"
+        },
+        {
+          "word": " second.",
+          "start": 23.08,
+          "end": 23.46,
+          "probability": 0.9660596251487732,
+          "beatId": "after-a"
+        },
+        {
+          "word": " Find",
+          "start": 24.28,
+          "end": 24.88,
+          "probability": 0.5861529111862183,
+          "beatId": "after-a"
+        },
+        {
+          "word": " B's",
+          "start": 24.88,
+          "end": 25.2,
+          "probability": 0.7369863986968994,
+          "beatId": "after-a"
+        },
+        {
+          "word": " final",
+          "start": 25.2,
+          "end": 25.5,
+          "probability": 0.9918825030326843,
+          "beatId": "after-a"
+        },
+        {
+          "word": " speed",
+          "start": 25.5,
+          "end": 25.84,
+          "probability": 0.9418330192565918,
+          "beatId": "after-a"
+        },
+        {
+          "word": " and",
+          "start": 25.84,
+          "end": 26.02,
+          "probability": 0.9816837906837463,
+          "beatId": "after-a"
+        },
+        {
+          "word": " direction.",
+          "start": 26.02,
+          "end": 26.48,
+          "probability": 0.9886729121208191,
+          "beatId": "after-a"
+        },
+        {
+          "word": " In",
+          "start": 26.95,
+          "end": 27.11,
+          "probability": 0.9121206998825073,
+          "beatId": "together"
+        },
+        {
+          "word": " the",
+          "start": 27.11,
+          "end": 27.25,
+          "probability": 0.0018633817199713576,
+          "beatId": "together"
+        },
+        {
+          "word": " separate",
+          "start": 27.25,
+          "end": 27.53,
+          "probability": 0.9200776219367981,
+          "beatId": "together"
+        },
+        {
+          "word": " sticking",
+          "start": 27.53,
+          "end": 27.89,
+          "probability": 0.7709618210792542,
+          "beatId": "together"
+        },
+        {
+          "word": " trial,",
+          "start": 27.89,
+          "end": 28.33,
+          "probability": 0.3279749369248748,
+          "beatId": "together"
+        },
+        {
+          "word": " find",
+          "start": 28.87,
+          "end": 29.25,
+          "probability": 0.9340455532073975,
+          "beatId": "together"
+        },
+        {
+          "word": " the",
+          "start": 29.25,
+          "end": 29.77,
+          "probability": 0.13642156310379505,
+          "beatId": "together"
+        },
+        {
+          "word": " common",
+          "start": 29.77,
+          "end": 30.05,
+          "probability": 0.9708731174468994,
+          "beatId": "together"
+        },
+        {
+          "word": " velocity.",
+          "start": 30.05,
+          "end": 30.65,
+          "probability": 0.989915132522583,
+          "beatId": "together"
+        },
+        {
+          "word": " Both",
+          "start": 31.67,
+          "end": 31.95,
+          "probability": 0.9426533579826355,
+          "beatId": "together"
+        },
+        {
+          "word": " questions",
+          "start": 31.95,
+          "end": 32.53,
+          "probability": 0.7462742924690247,
+          "beatId": "together"
+        },
+        {
+          "word": " use",
+          "start": 32.53,
+          "end": 33.41,
+          "probability": 0.7416394352912903,
+          "beatId": "together"
+        },
+        {
+          "word": " the",
+          "start": 33.41,
+          "end": 33.61,
+          "probability": 0.5172664150595665,
+          "beatId": "together"
+        },
+        {
+          "word": " original",
+          "start": 33.61,
+          "end": 34.13,
+          "probability": 0.9449832439422607,
+          "beatId": "together"
+        },
+        {
+          "word": " before",
+          "start": 34.13,
+          "end": 35.09,
+          "probability": 0.8714166879653931,
+          "beatId": "together"
+        },
+        {
+          "word": " diagram.",
+          "start": 35.09,
+          "end": 35.61,
+          "probability": 0.8263442516326904,
+          "beatId": "together"
+        },
+        {
+          "word": " Take",
+          "start": 36.47,
+          "end": 36.79,
+          "probability": 0.9514744877815247,
+          "beatId": "together"
+        },
+        {
+          "word": " a",
+          "start": 36.79,
+          "end": 36.95,
+          "probability": 0.9535288214683533,
+          "beatId": "together"
+        },
+        {
+          "word": " moment",
+          "start": 36.95,
+          "end": 37.19,
+          "probability": 0.9711102843284607,
+          "beatId": "together"
+        },
+        {
+          "word": " to",
+          "start": 37.19,
+          "end": 37.47,
+          "probability": 0.15073886513710022,
+          "beatId": "together"
+        },
+        {
+          "word": " read",
+          "start": 37.47,
+          "end": 37.69,
+          "probability": 0.978743851184845,
+          "beatId": "together"
+        },
+        {
+          "word": " them.",
+          "start": 37.69,
+          "end": 37.85,
+          "probability": 0.5111620556563139,
+          "beatId": "together"
+        }
+      ],
+      "wordCount": 85,
+      "text": "Both trials use a smooth horizontal surface. External horizontal force is negligible during impact. Take right as positive. Particle A has mass two kilograms and moves right at four metres per second. Particle B has mass three kilograms and moves left at one metre per second. In trial one, A rebounds left at two metres per second. Find B's final speed and direction. In the separate sticking trial, find the common velocity. Both questions use the original before diagram. Take a moment to read them.",
+      "cues": {
+        "conditions": 0.55,
+        "mass-a": 10.04,
+        "before-a": 12.69,
+        "mass-b": 15.07,
+        "before-b": 17.48,
+        "after-a": 19.7,
+        "together": 26.95
+      },
+      "figureEvents": [
+        {
+          "id": "mass-a-figure-1",
+          "start": 11.42,
+          "target": "A.mass",
+          "kind": "spoken",
+          "word": "2",
+          "wordIndex": 22
+        },
+        {
+          "id": "before-a-figure-1",
+          "start": 13.71,
+          "target": "A.before",
+          "kind": "spoken",
+          "word": "4",
+          "wordIndex": 28
+        },
+        {
+          "id": "mass-b-figure-1",
+          "start": 16.17,
+          "target": "B.mass",
+          "kind": "spoken",
+          "word": "3",
+          "wordIndex": 36
+        },
+        {
+          "id": "before-b-figure-1",
+          "start": 18.52,
+          "target": "B.before",
+          "kind": "spoken",
+          "word": "1",
+          "wordIndex": 42
+        },
+        {
+          "id": "after-a-figure-1",
+          "start": 22.48,
+          "target": "A.after",
+          "kind": "spoken",
+          "word": "2",
+          "wordIndex": 53
+        }
+      ],
+      "cueEvidence": [
+        {
+          "id": "conditions",
+          "phrase": " Both",
+          "wordIndex": 0,
+          "edge": "start",
+          "time": 0.55
+        },
+        {
+          "id": "mass-a",
+          "phrase": " Particle",
+          "wordIndex": 18,
+          "edge": "start",
+          "time": 10.04
+        },
+        {
+          "id": "before-a",
+          "phrase": " and",
+          "wordIndex": 24,
+          "edge": "start",
+          "time": 12.69
+        },
+        {
+          "id": "mass-b",
+          "phrase": " Particle",
+          "wordIndex": 32,
+          "edge": "start",
+          "time": 15.07
+        },
+        {
+          "id": "before-b",
+          "phrase": " and",
+          "wordIndex": 38,
+          "edge": "start",
+          "time": 17.48
+        },
+        {
+          "id": "after-a",
+          "phrase": " In",
+          "wordIndex": 46,
+          "edge": "start",
+          "time": 19.7
+        },
+        {
+          "id": "together",
+          "phrase": " In",
+          "wordIndex": 63,
+          "edge": "start",
+          "time": 26.95
+        }
+      ],
+      "engine": "faster-whisper-small (local, CPU int8, 2 threads)",
+      "transcriptionMethod": "Separate beat excerpts of decoded final scene MP3; word timestamps shifted by exact PCM excerpt offsets."
+    },
+    {
+      "id": "s04",
+      "title": "Why we conserve the pair's momentum",
+      "mode": "system",
+      "tempo": "brisk",
+      "beats": [
+        {
+          "id": "system",
+          "text": "Our system is A and B. Weight balances normal reaction; external horizontal force is negligible during impact.",
+          "start": 0.55,
+          "speechEnd": 10.22,
+          "end": 10.22,
+          "hold": 0.0,
+          "providerAudioSha256": "530cbc25a3585e4032746c4af5590ddc4a9ce6066675883d3d2688fd51370129",
+          "providerTrimStart": 0.0,
+          "providerTrimEnd": 9.67,
+          "caption": "System: A and B together",
+          "cue": 0.55,
+          "penEnd": 10.14
+        },
+        {
+          "id": "internal",
+          "text": "Equal and opposite contact forces are internal. They change the individual momenta in opposite ways.",
+          "start": 10.37,
+          "speechEnd": 16.86,
+          "end": 16.86,
+          "hold": 0.0,
+          "providerAudioSha256": "7ec1ac523dd2cd34ce3a3859d65935b6facee421bae9b71440f5a614f0b6f39c",
+          "providerTrimStart": 0.0,
+          "providerTrimEnd": 6.49,
+          "caption": "Equal and opposite internal forces",
+          "cue": 10.37,
+          "penEnd": 16.78
+        },
+        {
+          "id": "conserve",
+          "text": "The changes cancel for the pair, so total momentum before equals total momentum after.",
+          "start": 17.01,
+          "speechEnd": 23.1,
+          "end": 23.1,
+          "hold": 0.0,
+          "providerAudioSha256": "92eb32e5023fcfb431d57a21c561cd311a141e5a3b444c3f20e26b4af64eb8b7",
+          "providerTrimStart": 0.05,
+          "providerTrimEnd": 6.14,
+          "caption": "Total momentum stays the same",
+          "cue": 17.01,
+          "penEnd": 23.020000000000003
+        },
+        {
+          "id": "signs",
+          "text": "Use signed velocities: right positive, left negative. The minus sign describes direction, not mass.",
+          "start": 23.25,
+          "speechEnd": 32.33,
+          "end": 32.33,
+          "hold": 0.0,
+          "providerAudioSha256": "a15d0cd212274d1ddb801590fbd13b7e46c0bef04b6a1850c7cb8939e7612791",
+          "providerTrimStart": 0.0,
+          "providerTrimEnd": 9.08,
+          "caption": "Right positive; left negative",
+          "cue": 23.25,
+          "penEnd": 32.25
+        }
+      ],
+      "audio": "direct-collisions-s04.mp3",
+      "duration": 32.914286,
+      "sampleDuration": 32.88,
+      "holds": [],
+      "audioSha256": "2475b56424bf00d6f41cb9a1de758fb91f447055f3744d310b9716213dfcd9f4",
+      "provider": "elevenlabs",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "voiceSpeed": 1.0,
+      "modelId": "eleven_turbo_v2_5",
+      "sampleRate": 44100,
+      "words": [
+        {
+          "word": " Our",
+          "start": 0.55,
+          "end": 0.73,
+          "probability": 0.7631072998046875,
+          "beatId": "system"
+        },
+        {
+          "word": " system",
+          "start": 0.73,
+          "end": 1.17,
+          "probability": 0.9830787181854248,
+          "beatId": "system"
+        },
+        {
+          "word": " is",
+          "start": 1.17,
+          "end": 1.79,
+          "probability": 0.9791930913925171,
+          "beatId": "system"
+        },
+        {
+          "word": " A",
+          "start": 1.79,
+          "end": 2.19,
+          "probability": 0.8056586384773254,
+          "beatId": "system"
+        },
+        {
+          "word": " and",
+          "start": 2.19,
+          "end": 2.55,
+          "probability": 0.9422373175621033,
+          "beatId": "system"
+        },
+        {
+          "word": " B.",
+          "start": 2.55,
+          "end": 2.79,
+          "probability": 0.996425211429596,
+          "beatId": "system"
+        },
+        {
+          "word": " Weight",
+          "start": 3.57,
+          "end": 3.89,
+          "probability": 0.9776813983917236,
+          "beatId": "system"
+        },
+        {
+          "word": " balances",
+          "start": 3.89,
+          "end": 4.41,
+          "probability": 0.8241312503814697,
+          "beatId": "system"
+        },
+        {
+          "word": " normal",
+          "start": 4.41,
+          "end": 5.23,
+          "probability": 0.13400456309318542,
+          "beatId": "system"
+        },
+        {
+          "word": " reaction,",
+          "start": 5.23,
+          "end": 5.91,
+          "probability": 0.8559743762016296,
+          "beatId": "system"
+        },
+        {
+          "word": " external",
+          "start": 6.49,
+          "end": 6.91,
+          "probability": 0.9412409067153931,
+          "beatId": "system"
+        },
+        {
+          "word": " horizontal",
+          "start": 6.91,
+          "end": 7.39,
+          "probability": 0.965456485748291,
+          "beatId": "system"
+        },
+        {
+          "word": " force",
+          "start": 7.39,
+          "end": 7.95,
+          "probability": 0.9957881569862366,
+          "beatId": "system"
+        },
+        {
+          "word": " is",
+          "start": 7.95,
+          "end": 8.35,
+          "probability": 0.8797212243080139,
+          "beatId": "system"
+        },
+        {
+          "word": " negligible",
+          "start": 8.35,
+          "end": 9.09,
+          "probability": 0.9984430372714996,
+          "beatId": "system"
+        },
+        {
+          "word": " during",
+          "start": 9.09,
+          "end": 9.55,
+          "probability": 0.9795023798942566,
+          "beatId": "system"
+        },
+        {
+          "word": " impact.",
+          "start": 9.55,
+          "end": 9.97,
+          "probability": 0.9943747520446777,
+          "beatId": "system"
+        },
+        {
+          "word": " Equal",
+          "start": 10.37,
+          "end": 10.83,
+          "probability": 0.4121199604123831,
+          "beatId": "internal"
+        },
+        {
+          "word": " and",
+          "start": 10.83,
+          "end": 10.93,
+          "probability": 0.9607269167900085,
+          "beatId": "internal"
+        },
+        {
+          "word": " opposite",
+          "start": 10.93,
+          "end": 11.19,
+          "probability": 0.8825371265411377,
+          "beatId": "internal"
+        },
+        {
+          "word": " contact",
+          "start": 11.19,
+          "end": 11.91,
+          "probability": 0.9429773688316345,
+          "beatId": "internal"
+        },
+        {
+          "word": " forces",
+          "start": 11.91,
+          "end": 12.41,
+          "probability": 0.9853042960166931,
+          "beatId": "internal"
+        },
+        {
+          "word": " are",
+          "start": 12.41,
+          "end": 12.81,
+          "probability": 0.9926232099533081,
+          "beatId": "internal"
+        },
+        {
+          "word": " internal.",
+          "start": 12.81,
+          "end": 13.25,
+          "probability": 0.9740545153617859,
+          "beatId": "internal"
+        },
+        {
+          "word": " They",
+          "start": 13.75,
+          "end": 13.87,
+          "probability": 0.9759203195571899,
+          "beatId": "internal"
+        },
+        {
+          "word": " change",
+          "start": 13.87,
+          "end": 14.19,
+          "probability": 0.9887836575508118,
+          "beatId": "internal"
+        },
+        {
+          "word": " the",
+          "start": 14.19,
+          "end": 14.39,
+          "probability": 0.0019379246002166894,
+          "beatId": "internal"
+        },
+        {
+          "word": " individual",
+          "start": 14.39,
+          "end": 14.87,
+          "probability": 0.9793338179588318,
+          "beatId": "internal"
+        },
+        {
+          "word": " momenta",
+          "start": 14.87,
+          "end": 15.57,
+          "probability": 0.8124361634254456,
+          "beatId": "internal"
+        },
+        {
+          "word": " in",
+          "start": 15.57,
+          "end": 15.81,
+          "probability": 0.9621706604957581,
+          "beatId": "internal"
+        },
+        {
+          "word": " opposite",
+          "start": 15.81,
+          "end": 16.17,
+          "probability": 0.9274292588233948,
+          "beatId": "internal"
+        },
+        {
+          "word": " ways.",
+          "start": 16.17,
+          "end": 16.55,
+          "probability": 0.9524304270744324,
+          "beatId": "internal"
+        },
+        {
+          "word": " The",
+          "start": 17.01,
+          "end": 17.13,
+          "probability": 0.44771310687065125,
+          "beatId": "conserve"
+        },
+        {
+          "word": " changes",
+          "start": 17.13,
+          "end": 17.39,
+          "probability": 0.7286375761032104,
+          "beatId": "conserve"
+        },
+        {
+          "word": " cancel",
+          "start": 17.39,
+          "end": 17.73,
+          "probability": 0.2127932608127594,
+          "beatId": "conserve"
+        },
+        {
+          "word": " for",
+          "start": 17.73,
+          "end": 18.13,
+          "probability": 0.9116270542144775,
+          "beatId": "conserve"
+        },
+        {
+          "word": " the",
+          "start": 18.13,
+          "end": 18.23,
+          "probability": 0.00013200174475969106,
+          "beatId": "conserve"
+        },
+        {
+          "word": " pair,",
+          "start": 18.23,
+          "end": 18.57,
+          "probability": 0.8090329766273499,
+          "beatId": "conserve"
+        },
+        {
+          "word": " so",
+          "start": 19.17,
+          "end": 19.35,
+          "probability": 0.8967075943946838,
+          "beatId": "conserve"
+        },
+        {
+          "word": " total",
+          "start": 19.35,
+          "end": 19.65,
+          "probability": 0.34076278253148,
+          "beatId": "conserve"
+        },
+        {
+          "word": " momentum",
+          "start": 19.65,
+          "end": 19.99,
+          "probability": 0.9852077960968018,
+          "beatId": "conserve"
+        },
+        {
+          "word": " before",
+          "start": 19.99,
+          "end": 21.05,
+          "probability": 0.7244141101837158,
+          "beatId": "conserve"
+        },
+        {
+          "word": " equals",
+          "start": 21.05,
+          "end": 21.55,
+          "probability": 0.5051971077919006,
+          "beatId": "conserve"
+        },
+        {
+          "word": " total",
+          "start": 21.55,
+          "end": 22.05,
+          "probability": 0.5612412045399348,
+          "beatId": "conserve"
+        },
+        {
+          "word": " momentum",
+          "start": 22.05,
+          "end": 22.49,
+          "probability": 0.9977443218231201,
+          "beatId": "conserve"
+        },
+        {
+          "word": " after.",
+          "start": 22.49,
+          "end": 22.89,
+          "probability": 0.9781137704849243,
+          "beatId": "conserve"
+        },
+        {
+          "word": " Use",
+          "start": 23.25,
+          "end": 23.49,
+          "probability": 0.6892707943916321,
+          "beatId": "signs"
+        },
+        {
+          "word": " signed",
+          "start": 23.49,
+          "end": 23.97,
+          "probability": 0.7559643983840942,
+          "beatId": "signs"
+        },
+        {
+          "word": " velocity,",
+          "start": 23.97,
+          "end": 24.65,
+          "probability": 0.9896354079246521,
+          "beatId": "signs"
+        },
+        {
+          "word": " right",
+          "start": 25.43,
+          "end": 25.91,
+          "probability": 0.8509305715560913,
+          "beatId": "signs"
+        },
+        {
+          "word": " positive,",
+          "start": 25.91,
+          "end": 26.39,
+          "probability": 0.9120156764984131,
+          "beatId": "signs"
+        },
+        {
+          "word": " left",
+          "start": 26.85,
+          "end": 27.27,
+          "probability": 0.9845733046531677,
+          "beatId": "signs"
+        },
+        {
+          "word": " negative.",
+          "start": 27.27,
+          "end": 27.83,
+          "probability": 0.9932858347892761,
+          "beatId": "signs"
+        },
+        {
+          "word": " The",
+          "start": 28.79,
+          "end": 28.93,
+          "probability": 0.9802342057228088,
+          "beatId": "signs"
+        },
+        {
+          "word": " minus",
+          "start": 28.93,
+          "end": 29.27,
+          "probability": 0.9367356300354004,
+          "beatId": "signs"
+        },
+        {
+          "word": " sign",
+          "start": 29.27,
+          "end": 29.77,
+          "probability": 0.997733473777771,
+          "beatId": "signs"
+        },
+        {
+          "word": " describes",
+          "start": 29.77,
+          "end": 30.41,
+          "probability": 0.9705151319503784,
+          "beatId": "signs"
+        },
+        {
+          "word": " direction,",
+          "start": 30.41,
+          "end": 31.15,
+          "probability": 0.91463702917099,
+          "beatId": "signs"
+        },
+        {
+          "word": " not",
+          "start": 31.61,
+          "end": 31.87,
+          "probability": 0.9677844047546387,
+          "beatId": "signs"
+        },
+        {
+          "word": " mass.",
+          "start": 31.87,
+          "end": 32.13,
+          "probability": 0.5714786648750305,
+          "beatId": "signs"
+        }
+      ],
+      "wordCount": 60,
+      "text": "Our system is A and B. Weight balances normal reaction, external horizontal force is negligible during impact. Equal and opposite contact forces are internal. They change the individual momenta in opposite ways. The changes cancel for the pair, so total momentum before equals total momentum after. Use signed velocity, right positive, left negative. The minus sign describes direction, not mass.",
+      "cues": {
+        "system": 0.55,
+        "internal": 10.37,
+        "conserve": 17.01,
+        "signs": 23.25
+      },
+      "figureEvents": [],
+      "cueEvidence": [
+        {
+          "id": "system",
+          "phrase": " Our",
+          "wordIndex": 0,
+          "edge": "start",
+          "time": 0.55
+        },
+        {
+          "id": "internal",
+          "phrase": " Equal",
+          "wordIndex": 17,
+          "edge": "start",
+          "time": 10.37
+        },
+        {
+          "id": "conserve",
+          "phrase": " The",
+          "wordIndex": 32,
+          "edge": "start",
+          "time": 17.01
+        },
+        {
+          "id": "signs",
+          "phrase": " Use",
+          "wordIndex": 46,
+          "edge": "start",
+          "time": 23.25
+        }
+      ],
+      "engine": "faster-whisper-small (local, CPU int8, 2 threads)",
+      "transcriptionMethod": "Separate beat excerpts of decoded final scene MP3; word timestamps shifted by exact PCM excerpt offsets."
+    },
+    {
+      "id": "s05",
+      "title": "Trial 1: find B's velocity",
+      "mode": "separate",
+      "tempo": "slow",
+      "beats": [
+        {
+          "id": "goal",
+          "text": "Find B's final velocity. Keep both diagrams beside the working.",
+          "start": 0.55,
+          "speechEnd": 6.14,
+          "end": 6.14,
+          "hold": 0.0,
+          "providerAudioSha256": "bcacbb54b1950ad21dc8070d17c2015cebf3475548c3a8424150e5a6c82db411",
+          "providerTrimStart": 0.0,
+          "providerTrimEnd": 5.59,
+          "cue": 0.55,
+          "penEnd": 6.06
+        },
+        {
+          "id": "principle",
+          "text": "With negligible external horizontal force, momentum before equals momentum after.",
+          "start": 6.29,
+          "speechEnd": 13.76,
+          "end": 13.76,
+          "hold": 0.0,
+          "providerAudioSha256": "03d4c3b62faf5e50d8513ba019fc7845744d84e1bd2cc3149205eaed1f16bc12",
+          "providerTrimStart": 0.03,
+          "providerTrimEnd": 7.5,
+          "cuePhrase": "momentum before",
+          "ink": "momentum before = momentum after",
+          "cue": 10.17,
+          "penEnd": 13.68
+        },
+        {
+          "id": "formula",
+          "text": "Mass A times u A, plus mass B times u B, equals mass A times v A, plus mass B times v B.",
+          "start": 13.91,
+          "speechEnd": 23.16,
+          "end": 23.16,
+          "hold": 0.0,
+          "providerAudioSha256": "800ce9f1039c5dd9fbf2027b1a79928d6531721ec06102466be1fbf06393d364",
+          "providerTrimStart": 0.0,
+          "providerTrimEnd": 9.25,
+          "ink": "mA uA + mB uB = mA vA + mB vB",
+          "cue": 13.91,
+          "penEnd": 23.080000000000002
+        },
+        {
+          "id": "substitute",
+          "text": "Substitute: two times four, plus three times negative one, equals two times negative two, plus three v B.",
+          "start": 23.31,
+          "speechEnd": 33.67,
+          "end": 33.67,
+          "hold": 0.0,
+          "providerAudioSha256": "4b1c297b34b6f897526135191b361f695da0ea414544ff7515c863e67916b9dd",
+          "providerTrimStart": 0.0,
+          "providerTrimEnd": 10.36,
+          "figures": [
+            {
+              "phrase": "two",
+              "target": "A.mass",
+              "value": "2"
+            },
+            {
+              "phrase": "four",
+              "target": "A.before",
+              "value": "4"
+            },
+            {
+              "phrase": "three",
+              "target": "B.mass",
+              "value": "3"
+            },
+            {
+              "phrase": "one",
+              "target": "B.before",
+              "value": "1"
+            },
+            {
+              "phrase": "two",
+              "occurrence": 2,
+              "target": "A.mass",
+              "value": "2"
+            },
+            {
+              "phrase": "two",
+              "occurrence": 3,
+              "target": "A.after",
+              "value": "2"
+            },
+            {
+              "phrase": "three",
+              "occurrence": 2,
+              "target": "B.mass",
+              "value": "3"
+            }
+          ],
+          "ink": "2×4 + 3×(−1) = 2×(−2) + 3vB",
+          "cue": 23.31,
+          "penEnd": 33.59
+        },
+        {
+          "id": "simplify",
+          "text": "Eight minus three gives five on the left. A's final momentum is negative four, leaving three v B.",
+          "hold": 2.0,
+          "start": 33.82,
+          "speechEnd": 43.08,
+          "end": 45.08,
+          "providerAudioSha256": "6367886659b5e8b487ce2fe5a056cabe7c4c61347869ef9a6b3faa4069a38d83",
+          "providerTrimStart": 0.01,
+          "providerTrimEnd": 9.27,
+          "figures": [
+            {
+              "phrase": "three v B",
+              "target": "B.mass",
+              "value": "3"
+            }
+          ],
+          "ink": "5 = −4 + 3vB",
+          "cue": 33.82,
+          "penEnd": 43.0
+        },
+        {
+          "id": "rearrange",
+          "text": "Add four to both sides: nine equals three v B.",
+          "hold": 2.0,
+          "start": 45.23,
+          "speechEnd": 48.81,
+          "end": 50.81,
+          "providerAudioSha256": "e918a2df77ccc6cfc8f1eaa89d3de14ae6fcd3f2f2bc6acd926203ffb032e537",
+          "providerTrimStart": 0.0,
+          "providerTrimEnd": 3.58,
+          "figures": [
+            {
+              "phrase": "three v B",
+              "target": "B.mass",
+              "value": "3"
+            }
+          ],
+          "ink": "9 = 3vB",
+          "cue": 45.23,
+          "penEnd": 48.730000000000004
+        },
+        {
+          "id": "result",
+          "text": "Divide by three. B's velocity is positive three metres per second: a speed of three, to the right.",
+          "hold": 2.0,
+          "start": 50.96,
+          "speechEnd": 61.24,
+          "end": 63.24,
+          "providerAudioSha256": "185454403a9bde0183eb175c79c592fe152e8bed27d9e3d9253f924ec22cf412",
+          "providerTrimStart": 0.0,
+          "providerTrimEnd": 10.28,
+          "extraCues": [
+            {
+              "id": "result-value",
+              "phrase": "three metres"
+            }
+          ],
+          "figures": [
+            {
+              "phrase": "three metres",
+              "target": "B.after",
+              "value": "3"
+            },
+            {
+              "phrase": "three to",
+              "target": "B.after",
+              "value": "3"
+            },
+            {
+              "phrase": "three",
+              "occurrence": 1,
+              "target": "B.mass",
+              "value": "3"
+            }
+          ],
+          "ink": "vB = 9/3 = +3 m/s",
+          "cue": 50.96,
+          "penEnd": 61.160000000000004
+        },
+        {
+          "id": "interpret",
+          "text": "The positive answer confirms our assumed arrow. A moves left, B moves right, and the particles separate.",
+          "start": 63.39,
+          "speechEnd": 72.78,
+          "end": 72.78,
+          "hold": 0.0,
+          "providerAudioSha256": "22990ff7e2c2d83fe326970d6e9fb05842ff98839b5e19fe5f436e6994f7c716",
+          "providerTrimStart": 0.05,
+          "providerTrimEnd": 9.44,
+          "cue": 63.39,
+          "penEnd": 72.7
+        }
+      ],
+      "audio": "direct-collisions-s05.mp3",
+      "duration": 73.377959,
+      "sampleDuration": 73.33,
+      "holds": [
+        {
+          "start": 43.08,
+          "end": 45.08,
+          "kind": "result",
+          "duration": 2.0
+        },
+        {
+          "start": 48.81,
+          "end": 50.81,
+          "kind": "result",
+          "duration": 2.0
+        },
+        {
+          "start": 61.24,
+          "end": 63.24,
+          "kind": "result",
+          "duration": 2.0
+        }
+      ],
+      "audioSha256": "5e974483f5d774cb08329472919176b84ee27697b94670a22aabbe24c0218c41",
+      "provider": "elevenlabs",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "voiceSpeed": 0.9,
+      "modelId": "eleven_turbo_v2_5",
+      "sampleRate": 44100,
+      "words": [
+        {
+          "word": " Find",
+          "start": 0.55,
+          "end": 0.89,
+          "probability": 0.7772694230079651,
+          "beatId": "goal"
+        },
+        {
+          "word": " B's",
+          "start": 0.89,
+          "end": 1.29,
+          "probability": 0.33647362887859344,
+          "beatId": "goal"
+        },
+        {
+          "word": " final",
+          "start": 1.29,
+          "end": 1.61,
+          "probability": 0.9352026581764221,
+          "beatId": "goal"
+        },
+        {
+          "word": " velocity.",
+          "start": 1.61,
+          "end": 2.27,
+          "probability": 0.9990426898002625,
+          "beatId": "goal"
+        },
+        {
+          "word": " Keep",
+          "start": 3.15,
+          "end": 3.71,
+          "probability": 0.9836626052856445,
+          "beatId": "goal"
+        },
+        {
+          "word": " both",
+          "start": 3.71,
+          "end": 4.15,
+          "probability": 0.9967087507247925,
+          "beatId": "goal"
+        },
+        {
+          "word": " diagrams",
+          "start": 4.15,
+          "end": 4.81,
+          "probability": 0.9924405813217163,
+          "beatId": "goal"
+        },
+        {
+          "word": " beside",
+          "start": 4.81,
+          "end": 5.35,
+          "probability": 0.9864562749862671,
+          "beatId": "goal"
+        },
+        {
+          "word": " the",
+          "start": 5.35,
+          "end": 5.59,
+          "probability": 0.9901496171951294,
+          "beatId": "goal"
+        },
+        {
+          "word": " working.",
+          "start": 5.59,
+          "end": 5.85,
+          "probability": 0.9855604767799377,
+          "beatId": "goal"
+        },
+        {
+          "word": " With",
+          "start": 6.29,
+          "end": 6.51,
+          "probability": 0.03111341781914234,
+          "beatId": "principle"
+        },
+        {
+          "word": " negligible",
+          "start": 6.51,
+          "end": 7.47,
+          "probability": 0.9649612903594971,
+          "beatId": "principle"
+        },
+        {
+          "word": " external",
+          "start": 7.47,
+          "end": 8.23,
+          "probability": 0.7970559597015381,
+          "beatId": "principle"
+        },
+        {
+          "word": " horizontal",
+          "start": 8.23,
+          "end": 8.83,
+          "probability": 0.9443579316139221,
+          "beatId": "principle"
+        },
+        {
+          "word": " force,",
+          "start": 8.83,
+          "end": 9.59,
+          "probability": 0.987649142742157,
+          "beatId": "principle"
+        },
+        {
+          "word": " momentum",
+          "start": 10.17,
+          "end": 10.83,
+          "probability": 0.9753130674362183,
+          "beatId": "principle"
+        },
+        {
+          "word": " before",
+          "start": 10.83,
+          "end": 11.77,
+          "probability": 0.8710238933563232,
+          "beatId": "principle"
+        },
+        {
+          "word": " equals",
+          "start": 11.77,
+          "end": 12.45,
+          "probability": 0.8194904327392578,
+          "beatId": "principle"
+        },
+        {
+          "word": " momentum",
+          "start": 12.45,
+          "end": 13.05,
+          "probability": 0.997715950012207,
+          "beatId": "principle"
+        },
+        {
+          "word": " after.",
+          "start": 13.05,
+          "end": 13.55,
+          "probability": 0.9973282814025879,
+          "beatId": "principle"
+        },
+        {
+          "word": " Mass",
+          "start": 13.91,
+          "end": 14.23,
+          "probability": 0.025711623951792717,
+          "beatId": "formula"
+        },
+        {
+          "word": " A",
+          "start": 14.23,
+          "end": 14.59,
+          "probability": 0.024742545560002327,
+          "beatId": "formula"
+        },
+        {
+          "word": " times",
+          "start": 14.59,
+          "end": 14.89,
+          "probability": 0.3134253647285732,
+          "beatId": "formula"
+        },
+        {
+          "word": " u",
+          "start": 14.89,
+          "end": 15.15,
+          "probability": 0.6082790493965149,
+          "beatId": "formula"
+        },
+        {
+          "word": " A,",
+          "start": 15.15,
+          "end": 15.47,
+          "probability": 0.09680989384651184,
+          "beatId": "formula"
+        },
+        {
+          "word": " plus",
+          "start": 16.07,
+          "end": 16.35,
+          "probability": 0.7485480308532715,
+          "beatId": "formula"
+        },
+        {
+          "word": " mass",
+          "start": 16.35,
+          "end": 16.65,
+          "probability": 0.9227487444877625,
+          "beatId": "formula"
+        },
+        {
+          "word": " B",
+          "start": 16.65,
+          "end": 16.97,
+          "probability": 0.8862943053245544,
+          "beatId": "formula"
+        },
+        {
+          "word": " times",
+          "start": 16.97,
+          "end": 17.25,
+          "probability": 0.6379576524098715,
+          "beatId": "formula"
+        },
+        {
+          "word": " u",
+          "start": 17.25,
+          "end": 17.61,
+          "probability": 0.91133052110672,
+          "beatId": "formula"
+        },
+        {
+          "word": " B,",
+          "start": 17.61,
+          "end": 17.89,
+          "probability": 0.7664656043052673,
+          "beatId": "formula"
+        },
+        {
+          "word": " equals",
+          "start": 18.01,
+          "end": 18.85,
+          "probability": 0.982532262802124,
+          "beatId": "formula"
+        },
+        {
+          "word": " mass",
+          "start": 18.85,
+          "end": 19.39,
+          "probability": 0.9964489936828613,
+          "beatId": "formula"
+        },
+        {
+          "word": " A",
+          "start": 19.39,
+          "end": 19.99,
+          "probability": 0.9719803333282471,
+          "beatId": "formula"
+        },
+        {
+          "word": " times",
+          "start": 19.99,
+          "end": 20.31,
+          "probability": 0.7440975407759348,
+          "beatId": "formula"
+        },
+        {
+          "word": " v",
+          "start": 20.31,
+          "end": 20.57,
+          "probability": 0.8459922671318054,
+          "beatId": "formula"
+        },
+        {
+          "word": " A,",
+          "start": 20.57,
+          "end": 20.91,
+          "probability": 0.7873746752738953,
+          "beatId": "formula"
+        },
+        {
+          "word": " plus",
+          "start": 21.25,
+          "end": 21.69,
+          "probability": 0.9978603720664978,
+          "beatId": "formula"
+        },
+        {
+          "word": " mass",
+          "start": 21.69,
+          "end": 22.01,
+          "probability": 0.9991254210472107,
+          "beatId": "formula"
+        },
+        {
+          "word": " B",
+          "start": 22.01,
+          "end": 22.29,
+          "probability": 0.9916552305221558,
+          "beatId": "formula"
+        },
+        {
+          "word": " times",
+          "start": 22.29,
+          "end": 22.55,
+          "probability": 0.9221336046854655,
+          "beatId": "formula"
+        },
+        {
+          "word": " v",
+          "start": 22.55,
+          "end": 22.85,
+          "probability": 0.9968447685241699,
+          "beatId": "formula"
+        },
+        {
+          "word": " B.",
+          "start": 22.85,
+          "end": 23.05,
+          "probability": 0.965064287185669,
+          "beatId": "formula"
+        },
+        {
+          "word": " Substitute",
+          "start": 23.31,
+          "end": 24.03,
+          "probability": 0.8419395387172699,
+          "beatId": "substitute"
+        },
+        {
+          "word": " two",
+          "start": 24.03,
+          "end": 25.17,
+          "probability": 2.5336094495287398e-05,
+          "beatId": "substitute"
+        },
+        {
+          "word": " times",
+          "start": 25.17,
+          "end": 25.55,
+          "probability": 0.32900144851009827,
+          "beatId": "substitute"
+        },
+        {
+          "word": " four,",
+          "start": 25.55,
+          "end": 25.91,
+          "probability": 0.8237475752830505,
+          "beatId": "substitute"
+        },
+        {
+          "word": " plus",
+          "start": 26.37,
+          "end": 26.87,
+          "probability": 0.9250802397727966,
+          "beatId": "substitute"
+        },
+        {
+          "word": " three",
+          "start": 26.87,
+          "end": 27.35,
+          "probability": 0.3758900389075279,
+          "beatId": "substitute"
+        },
+        {
+          "word": " times",
+          "start": 27.35,
+          "end": 27.81,
+          "probability": 0.6582343478997549,
+          "beatId": "substitute"
+        },
+        {
+          "word": " negative",
+          "start": 27.81,
+          "end": 28.07,
+          "probability": 0.9173731803894043,
+          "beatId": "substitute"
+        },
+        {
+          "word": " one,",
+          "start": 28.07,
+          "end": 28.69,
+          "probability": 0.9884088635444641,
+          "beatId": "substitute"
+        },
+        {
+          "word": " equals",
+          "start": 28.79,
+          "end": 29.91,
+          "probability": 0.9647793769836426,
+          "beatId": "substitute"
+        },
+        {
+          "word": " two",
+          "start": 29.91,
+          "end": 30.29,
+          "probability": 0.8261292278766632,
+          "beatId": "substitute"
+        },
+        {
+          "word": " times",
+          "start": 30.29,
+          "end": 30.69,
+          "probability": 0.8449597557385763,
+          "beatId": "substitute"
+        },
+        {
+          "word": " negative",
+          "start": 30.69,
+          "end": 31.03,
+          "probability": 0.9951357245445251,
+          "beatId": "substitute"
+        },
+        {
+          "word": " two,",
+          "start": 31.03,
+          "end": 31.61,
+          "probability": 0.9921700358390808,
+          "beatId": "substitute"
+        },
+        {
+          "word": " plus",
+          "start": 31.77,
+          "end": 32.67,
+          "probability": 0.9960035681724548,
+          "beatId": "substitute"
+        },
+        {
+          "word": " three",
+          "start": 32.67,
+          "end": 33.09,
+          "probability": 0.7740957140922546,
+          "beatId": "substitute"
+        },
+        {
+          "word": " v",
+          "start": 33.09,
+          "end": 33.37,
+          "probability": 0.5414379239082336,
+          "beatId": "substitute"
+        },
+        {
+          "word": " B.",
+          "start": 33.37,
+          "end": 33.53,
+          "probability": 0.0027109014336019754,
+          "beatId": "substitute"
+        },
+        {
+          "word": " Eight",
+          "start": 33.82,
+          "end": 34.06,
+          "probability": 0.032717831432819366,
+          "beatId": "simplify"
+        },
+        {
+          "word": " minus",
+          "start": 34.06,
+          "end": 34.4,
+          "probability": 0.9286428093910217,
+          "beatId": "simplify"
+        },
+        {
+          "word": " three",
+          "start": 34.4,
+          "end": 34.88,
+          "probability": 0.0005793176117787624,
+          "beatId": "simplify"
+        },
+        {
+          "word": " gives",
+          "start": 34.88,
+          "end": 35.22,
+          "probability": 0.962369441986084,
+          "beatId": "simplify"
+        },
+        {
+          "word": " five",
+          "start": 35.22,
+          "end": 35.66,
+          "probability": 0.9386475682258606,
+          "beatId": "simplify"
+        },
+        {
+          "word": " on",
+          "start": 35.66,
+          "end": 35.96,
+          "probability": 0.9799073934555054,
+          "beatId": "simplify"
+        },
+        {
+          "word": " the",
+          "start": 35.96,
+          "end": 36.08,
+          "probability": 0.1183372623854666,
+          "beatId": "simplify"
+        },
+        {
+          "word": " left.",
+          "start": 36.08,
+          "end": 36.38,
+          "probability": 0.986510694026947,
+          "beatId": "simplify"
+        },
+        {
+          "word": " A's",
+          "start": 37.1,
+          "end": 37.78,
+          "probability": 0.7746683061122894,
+          "beatId": "simplify"
+        },
+        {
+          "word": " final",
+          "start": 37.78,
+          "end": 38.12,
+          "probability": 0.9897786974906921,
+          "beatId": "simplify"
+        },
+        {
+          "word": " momentum",
+          "start": 38.12,
+          "end": 38.8,
+          "probability": 0.9905951023101807,
+          "beatId": "simplify"
+        },
+        {
+          "word": " is",
+          "start": 38.8,
+          "end": 39.8,
+          "probability": 0.8655785322189331,
+          "beatId": "simplify"
+        },
+        {
+          "word": " negative",
+          "start": 39.8,
+          "end": 40.12,
+          "probability": 0.8728447556495667,
+          "beatId": "simplify"
+        },
+        {
+          "word": " four,",
+          "start": 40.12,
+          "end": 40.72,
+          "probability": 0.8416823744773865,
+          "beatId": "simplify"
+        },
+        {
+          "word": " leaving",
+          "start": 41.28,
+          "end": 41.86,
+          "probability": 0.9919148683547974,
+          "beatId": "simplify"
+        },
+        {
+          "word": " three",
+          "start": 41.86,
+          "end": 42.42,
+          "probability": 0.26900046318769455,
+          "beatId": "simplify"
+        },
+        {
+          "word": " v",
+          "start": 42.42,
+          "end": 42.72,
+          "probability": 0.47199639678001404,
+          "beatId": "simplify"
+        },
+        {
+          "word": " B.",
+          "start": 42.72,
+          "end": 42.92,
+          "probability": 0.025957869365811348,
+          "beatId": "simplify"
+        },
+        {
+          "word": " Add",
+          "start": 45.23,
+          "end": 45.43,
+          "probability": 0.09080810844898224,
+          "beatId": "rearrange"
+        },
+        {
+          "word": " four",
+          "start": 45.43,
+          "end": 45.73,
+          "probability": 0.08523517102003098,
+          "beatId": "rearrange"
+        },
+        {
+          "word": " to",
+          "start": 45.73,
+          "end": 45.91,
+          "probability": 0.00014115164276518044,
+          "beatId": "rearrange"
+        },
+        {
+          "word": " both",
+          "start": 45.91,
+          "end": 46.13,
+          "probability": 0.9931765198707581,
+          "beatId": "rearrange"
+        },
+        {
+          "word": " sides,",
+          "start": 46.13,
+          "end": 46.53,
+          "probability": 0.9838592410087585,
+          "beatId": "rearrange"
+        },
+        {
+          "word": " nine",
+          "start": 47.01,
+          "end": 47.39,
+          "probability": 0.522999107837677,
+          "beatId": "rearrange"
+        },
+        {
+          "word": " equals",
+          "start": 47.39,
+          "end": 47.85,
+          "probability": 0.8991262912750244,
+          "beatId": "rearrange"
+        },
+        {
+          "word": " three",
+          "start": 47.85,
+          "end": 48.33,
+          "probability": 0.0202973410487175,
+          "beatId": "rearrange"
+        },
+        {
+          "word": " v",
+          "start": 48.33,
+          "end": 48.49,
+          "probability": 0.39364761114120483,
+          "beatId": "rearrange"
+        },
+        {
+          "word": " B.",
+          "start": 48.49,
+          "end": 48.65,
+          "probability": 0.0002771829313132912,
+          "beatId": "rearrange"
+        },
+        {
+          "word": " Divide",
+          "start": 50.96,
+          "end": 51.68,
+          "probability": 0.6115636602044106,
+          "beatId": "result"
+        },
+        {
+          "word": " by",
+          "start": 51.68,
+          "end": 52.0,
+          "probability": 0.9864436388015747,
+          "beatId": "result"
+        },
+        {
+          "word": " three.",
+          "start": 52.0,
+          "end": 52.48,
+          "probability": 7.540043986864475e-05,
+          "beatId": "result"
+        },
+        {
+          "word": " B's",
+          "start": 53.5,
+          "end": 53.84,
+          "probability": 0.7141625136137009,
+          "beatId": "result"
+        },
+        {
+          "word": " velocity",
+          "start": 53.84,
+          "end": 54.44,
+          "probability": 0.991357684135437,
+          "beatId": "result"
+        },
+        {
+          "word": " is",
+          "start": 54.44,
+          "end": 55.78,
+          "probability": 0.9619067311286926,
+          "beatId": "result"
+        },
+        {
+          "word": " positive",
+          "start": 55.78,
+          "end": 56.08,
+          "probability": 0.42591702938079834,
+          "beatId": "result"
+        },
+        {
+          "word": " three",
+          "start": 56.08,
+          "end": 56.66,
+          "probability": 0.019452633801847696,
+          "beatId": "result"
+        },
+        {
+          "word": " metres",
+          "start": 56.66,
+          "end": 56.94,
+          "probability": 0.08502323925495148,
+          "beatId": "result"
+        },
+        {
+          "word": " per",
+          "start": 56.94,
+          "end": 57.24,
+          "probability": 0.9835229516029358,
+          "beatId": "result"
+        },
+        {
+          "word": " second,",
+          "start": 57.24,
+          "end": 57.64,
+          "probability": 0.985673725605011,
+          "beatId": "result"
+        },
+        {
+          "word": " a",
+          "start": 58.4,
+          "end": 59.02,
+          "probability": 0.7513254880905151,
+          "beatId": "result"
+        },
+        {
+          "word": " speed",
+          "start": 59.02,
+          "end": 59.22,
+          "probability": 0.9952227473258972,
+          "beatId": "result"
+        },
+        {
+          "word": " of",
+          "start": 59.22,
+          "end": 59.48,
+          "probability": 0.9972238540649414,
+          "beatId": "result"
+        },
+        {
+          "word": " three,",
+          "start": 59.48,
+          "end": 59.84,
+          "probability": 0.46251530200242996,
+          "beatId": "result"
+        },
+        {
+          "word": " to",
+          "start": 60.18,
+          "end": 60.64,
+          "probability": 0.010285953874699771,
+          "beatId": "result"
+        },
+        {
+          "word": " the",
+          "start": 60.64,
+          "end": 60.78,
+          "probability": 0.9966825842857361,
+          "beatId": "result"
+        },
+        {
+          "word": " right.",
+          "start": 60.78,
+          "end": 61.04,
+          "probability": 0.9965433478355408,
+          "beatId": "result"
+        },
+        {
+          "word": " The",
+          "start": 63.39,
+          "end": 63.53,
+          "probability": 0.8071396350860596,
+          "beatId": "interpret"
+        },
+        {
+          "word": " positive",
+          "start": 63.53,
+          "end": 63.87,
+          "probability": 0.9896283149719238,
+          "beatId": "interpret"
+        },
+        {
+          "word": " answer",
+          "start": 63.87,
+          "end": 64.51,
+          "probability": 0.9982171654701233,
+          "beatId": "interpret"
+        },
+        {
+          "word": " confirms",
+          "start": 64.51,
+          "end": 65.53,
+          "probability": 0.9955260157585144,
+          "beatId": "interpret"
+        },
+        {
+          "word": " our",
+          "start": 65.53,
+          "end": 65.93,
+          "probability": 0.9918841123580933,
+          "beatId": "interpret"
+        },
+        {
+          "word": " assumed",
+          "start": 65.93,
+          "end": 66.39,
+          "probability": 0.9960779547691345,
+          "beatId": "interpret"
+        },
+        {
+          "word": " arrow.",
+          "start": 66.39,
+          "end": 66.77,
+          "probability": 0.16449856758117676,
+          "beatId": "interpret"
+        },
+        {
+          "word": " A",
+          "start": 67.81,
+          "end": 67.97,
+          "probability": 0.7767689824104309,
+          "beatId": "interpret"
+        },
+        {
+          "word": " moves",
+          "start": 67.97,
+          "end": 68.29,
+          "probability": 0.4528687298297882,
+          "beatId": "interpret"
+        },
+        {
+          "word": " left,",
+          "start": 68.29,
+          "end": 68.79,
+          "probability": 0.9942359328269958,
+          "beatId": "interpret"
+        },
+        {
+          "word": " B",
+          "start": 69.43,
+          "end": 69.59,
+          "probability": 0.8007036447525024,
+          "beatId": "interpret"
+        },
+        {
+          "word": " moves",
+          "start": 69.59,
+          "end": 69.87,
+          "probability": 0.9906575679779053,
+          "beatId": "interpret"
+        },
+        {
+          "word": " right,",
+          "start": 69.87,
+          "end": 70.27,
+          "probability": 0.9982380867004395,
+          "beatId": "interpret"
+        },
+        {
+          "word": " and",
+          "start": 70.61,
+          "end": 71.29,
+          "probability": 0.975860059261322,
+          "beatId": "interpret"
+        },
+        {
+          "word": " the",
+          "start": 71.29,
+          "end": 71.39,
+          "probability": 0.0006842145737380179,
+          "beatId": "interpret"
+        },
+        {
+          "word": " particles",
+          "start": 71.39,
+          "end": 71.89,
+          "probability": 0.9589900374412537,
+          "beatId": "interpret"
+        },
+        {
+          "word": " separate.",
+          "start": 71.89,
+          "end": 72.41,
+          "probability": 0.9694832563400269,
+          "beatId": "interpret"
+        }
+      ],
+      "wordCount": 124,
+      "text": "Find B's final velocity. Keep both diagrams beside the working. With negligible external horizontal force, momentum before equals momentum after. Mass A times u A, plus mass B times u B, equals mass A times v A, plus mass B times v B. Substitute two times four, plus three times negative one, equals two times negative two, plus three v B. Eight minus three gives five on the left. A's final momentum is negative four, leaving three v B. Add four to both sides, nine equals three v B. Divide by three. B's velocity is positive three metres per second, a speed of three, to the right. The positive answer confirms our assumed arrow. A moves left, B moves right, and the particles separate.",
+      "cues": {
+        "goal": 0.55,
+        "principle": 10.17,
+        "formula": 13.91,
+        "substitute": 23.31,
+        "simplify": 33.82,
+        "rearrange": 45.23,
+        "result": 50.96,
+        "result-value": 56.08,
+        "interpret": 63.39
+      },
+      "figureEvents": [
+        {
+          "id": "substitute-figure-1",
+          "start": 24.03,
+          "target": "A.mass",
+          "kind": "spoken",
+          "word": "2",
+          "wordIndex": 44
+        },
+        {
+          "id": "substitute-figure-2",
+          "start": 25.55,
+          "target": "A.before",
+          "kind": "spoken",
+          "word": "4",
+          "wordIndex": 46
+        },
+        {
+          "id": "substitute-figure-3",
+          "start": 26.87,
+          "target": "B.mass",
+          "kind": "spoken",
+          "word": "3",
+          "wordIndex": 48
+        },
+        {
+          "id": "substitute-figure-4",
+          "start": 28.07,
+          "target": "B.before",
+          "kind": "spoken",
+          "word": "1",
+          "wordIndex": 51
+        },
+        {
+          "id": "substitute-figure-5",
+          "start": 29.91,
+          "target": "A.mass",
+          "kind": "spoken",
+          "word": "2",
+          "wordIndex": 53
+        },
+        {
+          "id": "substitute-figure-6",
+          "start": 31.03,
+          "target": "A.after",
+          "kind": "spoken",
+          "word": "2",
+          "wordIndex": 56
+        },
+        {
+          "id": "substitute-figure-7",
+          "start": 32.67,
+          "target": "B.mass",
+          "kind": "spoken",
+          "word": "3",
+          "wordIndex": 58
+        },
+        {
+          "id": "simplify-figure-1",
+          "start": 41.86,
+          "target": "B.mass",
+          "kind": "spoken",
+          "word": "3",
+          "wordIndex": 76
+        },
+        {
+          "id": "rearrange-figure-1",
+          "start": 47.85,
+          "target": "B.mass",
+          "kind": "spoken",
+          "word": "3",
+          "wordIndex": 86
+        },
+        {
+          "id": "result-figure-1",
+          "start": 56.08,
+          "target": "B.after",
+          "kind": "spoken",
+          "word": "3",
+          "wordIndex": 96
+        },
+        {
+          "id": "result-figure-2",
+          "start": 59.48,
+          "target": "B.after",
+          "kind": "spoken",
+          "word": "3",
+          "wordIndex": 103
+        },
+        {
+          "id": "result-figure-3",
+          "start": 52.0,
+          "target": "B.mass",
+          "kind": "spoken",
+          "word": "3",
+          "wordIndex": 91
+        }
+      ],
+      "cueEvidence": [
+        {
+          "id": "goal",
+          "phrase": " Find",
+          "wordIndex": 0,
+          "edge": "start",
+          "time": 0.55
+        },
+        {
+          "id": "principle",
+          "phrase": "momentum before",
+          "wordIndex": 15,
+          "edge": "start",
+          "time": 10.17
+        },
+        {
+          "id": "formula",
+          "phrase": " Mass",
+          "wordIndex": 20,
+          "edge": "start",
+          "time": 13.91
+        },
+        {
+          "id": "substitute",
+          "phrase": " Substitute",
+          "wordIndex": 43,
+          "edge": "start",
+          "time": 23.31
+        },
+        {
+          "id": "simplify",
+          "phrase": " Eight",
+          "wordIndex": 61,
+          "edge": "start",
+          "time": 33.82
+        },
+        {
+          "id": "rearrange",
+          "phrase": " Add",
+          "wordIndex": 79,
+          "edge": "start",
+          "time": 45.23
+        },
+        {
+          "id": "result",
+          "phrase": " Divide",
+          "wordIndex": 89,
+          "edge": "start",
+          "time": 50.96
+        },
+        {
+          "id": "result-value",
+          "phrase": "three metres",
+          "wordIndex": 96,
+          "edge": "start",
+          "time": 56.08
+        },
+        {
+          "id": "interpret",
+          "phrase": " The",
+          "wordIndex": 107,
+          "edge": "start",
+          "time": 63.39
+        }
+      ],
+      "engine": "faster-whisper-small (local, CPU int8, 2 threads)",
+      "transcriptionMethod": "Separate beat excerpts of decoded final scene MP3; word timestamps shifted by exact PCM excerpt offsets."
+    },
+    {
+      "id": "s06",
+      "title": "Trial 2: they stick together",
+      "mode": "together",
+      "tempo": "slow",
+      "beats": [
+        {
+          "id": "reset",
+          "text": "Reset to the original incoming particles. This independent trial ends with them sticking.",
+          "start": 0.55,
+          "speechEnd": 7.41,
+          "end": 7.41,
+          "hold": 0.0,
+          "providerAudioSha256": "ad00c8232b0b5e0096d8b6e75974e846301ee2ef25d7c5ee44645fc1296b916d",
+          "providerTrimStart": 0.0,
+          "providerTrimEnd": 6.86,
+          "cue": 0.55,
+          "penEnd": 7.33
+        },
+        {
+          "id": "principle",
+          "text": "The same external force condition holds, so momentum before equals momentum after.",
+          "start": 7.56,
+          "speechEnd": 14.21,
+          "end": 14.21,
+          "hold": 0.0,
+          "providerAudioSha256": "5e67c60d220e40f19540c006e9885e374a866b1f3432b6d1ad49ea3efecff9fe",
+          "providerTrimStart": 0.03,
+          "providerTrimEnd": 6.68,
+          "cuePhrase": "momentum before",
+          "ink": "momentum before = momentum after",
+          "cue": 10.78,
+          "penEnd": 14.13
+        },
+        {
+          "id": "formula",
+          "text": "After sticking, both have velocity v. Mass A times u A, plus mass B times u B, equals the sum of the masses, times v.",
+          "start": 14.36,
+          "speechEnd": 27.42,
+          "end": 27.42,
+          "hold": 0.0,
+          "providerAudioSha256": "19a63b0b8915d3cdd4c8e0d4791f7f842f4bbe03490436a6af6933387e379d5e",
+          "providerTrimStart": 0.0,
+          "providerTrimEnd": 13.06,
+          "ink": "mA uA + mB uB = (mA + mB)v",
+          "cue": 14.36,
+          "penEnd": 27.340000000000003
+        },
+        {
+          "id": "substitute",
+          "text": "Two times four, plus three times negative one, equals two plus three, all multiplied by v.",
+          "start": 27.57,
+          "speechEnd": 34.67,
+          "end": 34.67,
+          "hold": 0.0,
+          "providerAudioSha256": "8554014389fb93bb284a86b8bbfc2ed58937772045f9d38f66c6a74df6597cef",
+          "providerTrimStart": 0.05,
+          "providerTrimEnd": 7.15,
+          "figures": [
+            {
+              "phrase": "two",
+              "target": "A.mass",
+              "value": "2"
+            },
+            {
+              "phrase": "four",
+              "target": "A.before",
+              "value": "4"
+            },
+            {
+              "phrase": "three",
+              "target": "B.mass",
+              "value": "3"
+            },
+            {
+              "phrase": "one",
+              "target": "B.before",
+              "value": "1"
+            },
+            {
+              "phrase": "two",
+              "occurrence": 2,
+              "target": "A.mass",
+              "value": "2"
+            },
+            {
+              "phrase": "three",
+              "occurrence": 2,
+              "target": "B.mass",
+              "value": "3"
+            }
+          ],
+          "ink": "2×4 + 3×(−1) = (2 + 3)v",
+          "cue": 27.57,
+          "penEnd": 34.59
+        },
+        {
+          "id": "simplify",
+          "text": "The initial momentum is five. The combined mass is five kilograms, so five equals five v.",
+          "hold": 2.0,
+          "start": 34.82,
+          "speechEnd": 43.11,
+          "end": 45.11,
+          "providerAudioSha256": "3d4113bdd24c18a4bd5e08f634d31622f273604bc8f4591419e90e503524cca9",
+          "providerTrimStart": 0.05,
+          "providerTrimEnd": 8.34,
+          "extraCues": [
+            {
+              "id": "combined-mass",
+              "phrase": "five kilograms"
+            }
+          ],
+          "figures": [
+            {
+              "phrase": "five kilograms",
+              "target": "pair.mass",
+              "value": "5"
+            },
+            {
+              "phrase": "five v",
+              "target": "pair.mass",
+              "value": "5"
+            }
+          ],
+          "ink": "5 = 5v",
+          "cue": 34.82,
+          "penEnd": 43.03
+        },
+        {
+          "id": "result",
+          "text": "Divide by the combined mass. Their common velocity is positive one metre per second, so both move right together.",
+          "hold": 2.0,
+          "start": 45.26,
+          "speechEnd": 55.75,
+          "end": 57.75,
+          "providerAudioSha256": "768f67e7167171be0d0936d730c9cc6f66bf4f0851038d2c03d444d3b966787f",
+          "providerTrimStart": 0.03,
+          "providerTrimEnd": 10.52,
+          "extraCues": [
+            {
+              "id": "result-value",
+              "phrase": "one metre"
+            }
+          ],
+          "figures": [
+            {
+              "phrase": "one metre",
+              "target": "pair.after",
+              "value": "1"
+            }
+          ],
+          "ink": "v = 5/5 = +1 m/s",
+          "cue": 45.26,
+          "penEnd": 55.67
+        },
+        {
+          "id": "interpret",
+          "text": "One common velocity replaces two separate after velocities. The particles remain in contact; their masses still add.",
+          "start": 57.9,
+          "speechEnd": 66.36,
+          "end": 66.36,
+          "hold": 0.0,
+          "providerAudioSha256": "5ed5cfd81fcd848b34a0b09180e92ea6acf76e77ed607cca199f11abccc68bc0",
+          "providerTrimStart": 0.0,
+          "providerTrimEnd": 8.46,
+          "cue": 57.9,
+          "penEnd": 66.28
+        }
+      ],
+      "audio": "direct-collisions-s06.mp3",
+      "duration": 66.951837,
+      "sampleDuration": 66.91,
+      "holds": [
+        {
+          "start": 43.11,
+          "end": 45.11,
+          "kind": "result",
+          "duration": 2.0
+        },
+        {
+          "start": 55.75,
+          "end": 57.75,
+          "kind": "result",
+          "duration": 2.0
+        }
+      ],
+      "audioSha256": "4014fb079739e26c1ca6b983ba423a5414996450fc8c734a13f769b6f0e19e19",
+      "provider": "elevenlabs",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "voiceSpeed": 0.9,
+      "modelId": "eleven_turbo_v2_5",
+      "sampleRate": 44100,
+      "words": [
+        {
+          "word": " Reset",
+          "start": 0.55,
+          "end": 1.21,
+          "probability": 0.6846118867397308,
+          "beatId": "reset"
+        },
+        {
+          "word": " to",
+          "start": 1.21,
+          "end": 1.75,
+          "probability": 4.016246930405032e-05,
+          "beatId": "reset"
+        },
+        {
+          "word": " the",
+          "start": 1.75,
+          "end": 1.93,
+          "probability": 0.3708281391300261,
+          "beatId": "reset"
+        },
+        {
+          "word": " original",
+          "start": 1.93,
+          "end": 2.39,
+          "probability": 0.8360245823860168,
+          "beatId": "reset"
+        },
+        {
+          "word": " incoming",
+          "start": 2.39,
+          "end": 2.91,
+          "probability": 0.9059682488441467,
+          "beatId": "reset"
+        },
+        {
+          "word": " particles.",
+          "start": 2.91,
+          "end": 3.47,
+          "probability": 0.9802600741386414,
+          "beatId": "reset"
+        },
+        {
+          "word": " This",
+          "start": 4.39,
+          "end": 4.59,
+          "probability": 0.897614598274231,
+          "beatId": "reset"
+        },
+        {
+          "word": " independent",
+          "start": 4.59,
+          "end": 5.15,
+          "probability": 0.7255584001541138,
+          "beatId": "reset"
+        },
+        {
+          "word": " trial",
+          "start": 5.15,
+          "end": 5.71,
+          "probability": 0.34659480994256836,
+          "beatId": "reset"
+        },
+        {
+          "word": " ends",
+          "start": 5.71,
+          "end": 6.39,
+          "probability": 0.8532829284667969,
+          "beatId": "reset"
+        },
+        {
+          "word": " with",
+          "start": 6.39,
+          "end": 6.65,
+          "probability": 0.907976508140564,
+          "beatId": "reset"
+        },
+        {
+          "word": " them",
+          "start": 6.65,
+          "end": 6.85,
+          "probability": 0.6385804116725922,
+          "beatId": "reset"
+        },
+        {
+          "word": " sticking.",
+          "start": 6.85,
+          "end": 7.19,
+          "probability": 0.7839011549949646,
+          "beatId": "reset"
+        },
+        {
+          "word": " The",
+          "start": 7.56,
+          "end": 7.74,
+          "probability": 0.27632907032966614,
+          "beatId": "principle"
+        },
+        {
+          "word": " same",
+          "start": 7.74,
+          "end": 8.06,
+          "probability": 0.9955471754074097,
+          "beatId": "principle"
+        },
+        {
+          "word": " external",
+          "start": 8.06,
+          "end": 8.5,
+          "probability": 0.9815152883529663,
+          "beatId": "principle"
+        },
+        {
+          "word": " force",
+          "start": 8.5,
+          "end": 8.8,
+          "probability": 0.993756890296936,
+          "beatId": "principle"
+        },
+        {
+          "word": " condition",
+          "start": 8.8,
+          "end": 9.26,
+          "probability": 0.9628998041152954,
+          "beatId": "principle"
+        },
+        {
+          "word": " holds,",
+          "start": 9.26,
+          "end": 9.78,
+          "probability": 0.9953118562698364,
+          "beatId": "principle"
+        },
+        {
+          "word": " so",
+          "start": 10.24,
+          "end": 10.78,
+          "probability": 0.9660811424255371,
+          "beatId": "principle"
+        },
+        {
+          "word": " momentum",
+          "start": 10.78,
+          "end": 11.38,
+          "probability": 0.989938497543335,
+          "beatId": "principle"
+        },
+        {
+          "word": " before",
+          "start": 11.38,
+          "end": 12.42,
+          "probability": 0.7480954527854919,
+          "beatId": "principle"
+        },
+        {
+          "word": " equals",
+          "start": 12.42,
+          "end": 13.02,
+          "probability": 0.8833484649658203,
+          "beatId": "principle"
+        },
+        {
+          "word": " momentum",
+          "start": 13.02,
+          "end": 13.62,
+          "probability": 0.9980707764625549,
+          "beatId": "principle"
+        },
+        {
+          "word": " after.",
+          "start": 13.62,
+          "end": 14.04,
+          "probability": 0.9951794147491455,
+          "beatId": "principle"
+        },
+        {
+          "word": " After",
+          "start": 14.36,
+          "end": 14.66,
+          "probability": 0.5892217755317688,
+          "beatId": "formula"
+        },
+        {
+          "word": " sticking,",
+          "start": 14.66,
+          "end": 15.0,
+          "probability": 0.9749192595481873,
+          "beatId": "formula"
+        },
+        {
+          "word": " both",
+          "start": 15.9,
+          "end": 16.42,
+          "probability": 0.9072577953338623,
+          "beatId": "formula"
+        },
+        {
+          "word": " have",
+          "start": 16.42,
+          "end": 16.64,
+          "probability": 0.9761655330657959,
+          "beatId": "formula"
+        },
+        {
+          "word": " velocity",
+          "start": 16.64,
+          "end": 17.44,
+          "probability": 0.9187462329864502,
+          "beatId": "formula"
+        },
+        {
+          "word": " v.",
+          "start": 17.44,
+          "end": 17.88,
+          "probability": 0.8364896774291992,
+          "beatId": "formula"
+        },
+        {
+          "word": " Mass",
+          "start": 18.54,
+          "end": 19.0,
+          "probability": 0.16512933373451233,
+          "beatId": "formula"
+        },
+        {
+          "word": " A",
+          "start": 19.0,
+          "end": 20.16,
+          "probability": 0.10943304747343063,
+          "beatId": "formula"
+        },
+        {
+          "word": " times",
+          "start": 20.16,
+          "end": 20.56,
+          "probability": 0.3246892973541738,
+          "beatId": "formula"
+        },
+        {
+          "word": " u",
+          "start": 20.56,
+          "end": 20.88,
+          "probability": 0.4382847547531128,
+          "beatId": "formula"
+        },
+        {
+          "word": " A,",
+          "start": 20.88,
+          "end": 21.34,
+          "probability": 0.05593496188521385,
+          "beatId": "formula"
+        },
+        {
+          "word": " plus",
+          "start": 22.02,
+          "end": 22.32,
+          "probability": 0.7452506422996521,
+          "beatId": "formula"
+        },
+        {
+          "word": " mass",
+          "start": 22.32,
+          "end": 22.7,
+          "probability": 0.9006347060203552,
+          "beatId": "formula"
+        },
+        {
+          "word": " B",
+          "start": 22.7,
+          "end": 23.0,
+          "probability": 0.8362174034118652,
+          "beatId": "formula"
+        },
+        {
+          "word": " times",
+          "start": 23.0,
+          "end": 23.28,
+          "probability": 0.6345759530862173,
+          "beatId": "formula"
+        },
+        {
+          "word": " u",
+          "start": 23.28,
+          "end": 23.56,
+          "probability": 0.8484771251678467,
+          "beatId": "formula"
+        },
+        {
+          "word": " B,",
+          "start": 23.56,
+          "end": 23.98,
+          "probability": 0.8295709490776062,
+          "beatId": "formula"
+        },
+        {
+          "word": " equals",
+          "start": 24.14,
+          "end": 24.74,
+          "probability": 0.9753597378730774,
+          "beatId": "formula"
+        },
+        {
+          "word": " the",
+          "start": 24.74,
+          "end": 25.02,
+          "probability": 0.014783922292735951,
+          "beatId": "formula"
+        },
+        {
+          "word": " sum",
+          "start": 25.02,
+          "end": 25.36,
+          "probability": 0.9927943348884583,
+          "beatId": "formula"
+        },
+        {
+          "word": " of",
+          "start": 25.36,
+          "end": 25.52,
+          "probability": 0.9951961636543274,
+          "beatId": "formula"
+        },
+        {
+          "word": " the",
+          "start": 25.52,
+          "end": 25.66,
+          "probability": 0.5564022064208984,
+          "beatId": "formula"
+        },
+        {
+          "word": " masses",
+          "start": 25.66,
+          "end": 26.04,
+          "probability": 0.42638468742370605,
+          "beatId": "formula"
+        },
+        {
+          "word": " times",
+          "start": 26.04,
+          "end": 26.86,
+          "probability": 0.7217925190925598,
+          "beatId": "formula"
+        },
+        {
+          "word": " V",
+          "start": 26.86,
+          "end": 27.26,
+          "probability": 0.5446258187294006,
+          "beatId": "formula"
+        },
+        {
+          "word": " Two",
+          "start": 27.57,
+          "end": 27.73,
+          "probability": 0.05188140645623207,
+          "beatId": "substitute"
+        },
+        {
+          "word": " times",
+          "start": 27.73,
+          "end": 28.03,
+          "probability": 0.332290868911817,
+          "beatId": "substitute"
+        },
+        {
+          "word": " four,",
+          "start": 28.03,
+          "end": 28.35,
+          "probability": 0.8655734062194824,
+          "beatId": "substitute"
+        },
+        {
+          "word": " plus",
+          "start": 28.87,
+          "end": 29.15,
+          "probability": 0.9668273329734802,
+          "beatId": "substitute"
+        },
+        {
+          "word": " three",
+          "start": 29.15,
+          "end": 29.55,
+          "probability": 0.011892457900103182,
+          "beatId": "substitute"
+        },
+        {
+          "word": " times",
+          "start": 29.55,
+          "end": 29.95,
+          "probability": 0.42896224310000736,
+          "beatId": "substitute"
+        },
+        {
+          "word": " negative",
+          "start": 29.95,
+          "end": 30.21,
+          "probability": 0.9500166177749634,
+          "beatId": "substitute"
+        },
+        {
+          "word": " one,",
+          "start": 30.21,
+          "end": 30.75,
+          "probability": 0.9877386093139648,
+          "beatId": "substitute"
+        },
+        {
+          "word": " equals",
+          "start": 30.93,
+          "end": 31.57,
+          "probability": 0.9712718725204468,
+          "beatId": "substitute"
+        },
+        {
+          "word": " two",
+          "start": 31.57,
+          "end": 31.93,
+          "probability": 0.5060407351702452,
+          "beatId": "substitute"
+        },
+        {
+          "word": " plus",
+          "start": 31.93,
+          "end": 32.15,
+          "probability": 0.8645620942115784,
+          "beatId": "substitute"
+        },
+        {
+          "word": " three,",
+          "start": 32.15,
+          "end": 32.53,
+          "probability": 0.5675488710403442,
+          "beatId": "substitute"
+        },
+        {
+          "word": " all",
+          "start": 32.89,
+          "end": 33.17,
+          "probability": 0.6442477703094482,
+          "beatId": "substitute"
+        },
+        {
+          "word": " multiplied",
+          "start": 33.17,
+          "end": 33.67,
+          "probability": 0.9941835999488831,
+          "beatId": "substitute"
+        },
+        {
+          "word": " by",
+          "start": 33.67,
+          "end": 34.09,
+          "probability": 0.9935448169708252,
+          "beatId": "substitute"
+        },
+        {
+          "word": " v.",
+          "start": 34.09,
+          "end": 34.45,
+          "probability": 0.5203453898429871,
+          "beatId": "substitute"
+        },
+        {
+          "word": " The",
+          "start": 34.82,
+          "end": 34.96,
+          "probability": 0.6971064209938049,
+          "beatId": "simplify"
+        },
+        {
+          "word": " initial",
+          "start": 34.96,
+          "end": 35.34,
+          "probability": 0.9918016791343689,
+          "beatId": "simplify"
+        },
+        {
+          "word": " momentum",
+          "start": 35.34,
+          "end": 35.84,
+          "probability": 0.9972814321517944,
+          "beatId": "simplify"
+        },
+        {
+          "word": " is",
+          "start": 35.84,
+          "end": 36.26,
+          "probability": 0.9894383549690247,
+          "beatId": "simplify"
+        },
+        {
+          "word": " five.",
+          "start": 36.26,
+          "end": 36.64,
+          "probability": 0.09475424140691757,
+          "beatId": "simplify"
+        },
+        {
+          "word": " The",
+          "start": 37.36,
+          "end": 37.52,
+          "probability": 0.9551990628242493,
+          "beatId": "simplify"
+        },
+        {
+          "word": " combined",
+          "start": 37.52,
+          "end": 38.12,
+          "probability": 0.9910769462585449,
+          "beatId": "simplify"
+        },
+        {
+          "word": " mass",
+          "start": 38.12,
+          "end": 38.58,
+          "probability": 0.8754281997680664,
+          "beatId": "simplify"
+        },
+        {
+          "word": " is",
+          "start": 38.58,
+          "end": 38.96,
+          "probability": 0.995470404624939,
+          "beatId": "simplify"
+        },
+        {
+          "word": " five",
+          "start": 38.96,
+          "end": 39.46,
+          "probability": 0.6314095258712769,
+          "beatId": "simplify"
+        },
+        {
+          "word": " kilograms,",
+          "start": 39.46,
+          "end": 40.08,
+          "probability": 0.9233943223953247,
+          "beatId": "simplify"
+        },
+        {
+          "word": " so",
+          "start": 40.64,
+          "end": 40.84,
+          "probability": 0.9699364900588989,
+          "beatId": "simplify"
+        },
+        {
+          "word": " five",
+          "start": 40.84,
+          "end": 41.2,
+          "probability": 0.6619155406951904,
+          "beatId": "simplify"
+        },
+        {
+          "word": " equals",
+          "start": 41.2,
+          "end": 41.64,
+          "probability": 0.9705289602279663,
+          "beatId": "simplify"
+        },
+        {
+          "word": " five",
+          "start": 41.64,
+          "end": 42.3,
+          "probability": 0.49705320596694946,
+          "beatId": "simplify"
+        },
+        {
+          "word": " v.",
+          "start": 42.3,
+          "end": 42.92,
+          "probability": 0.5649552941322327,
+          "beatId": "simplify"
+        },
+        {
+          "word": " Divide",
+          "start": 45.26,
+          "end": 46.0,
+          "probability": 0.7868291735649109,
+          "beatId": "result"
+        },
+        {
+          "word": " by",
+          "start": 46.0,
+          "end": 46.32,
+          "probability": 0.9903367757797241,
+          "beatId": "result"
+        },
+        {
+          "word": " the",
+          "start": 46.32,
+          "end": 46.46,
+          "probability": 0.00035693119268387363,
+          "beatId": "result"
+        },
+        {
+          "word": " combined",
+          "start": 46.46,
+          "end": 46.94,
+          "probability": 0.9709212183952332,
+          "beatId": "result"
+        },
+        {
+          "word": " mass.",
+          "start": 46.94,
+          "end": 47.48,
+          "probability": 0.8986204266548157,
+          "beatId": "result"
+        },
+        {
+          "word": " Their",
+          "start": 48.88,
+          "end": 48.98,
+          "probability": 0.8229842185974121,
+          "beatId": "result"
+        },
+        {
+          "word": " common",
+          "start": 48.98,
+          "end": 49.32,
+          "probability": 0.9590309262275696,
+          "beatId": "result"
+        },
+        {
+          "word": " velocity",
+          "start": 49.32,
+          "end": 50.1,
+          "probability": 0.9957429766654968,
+          "beatId": "result"
+        },
+        {
+          "word": " is",
+          "start": 50.1,
+          "end": 51.08,
+          "probability": 0.9530876874923706,
+          "beatId": "result"
+        },
+        {
+          "word": " positive",
+          "start": 51.08,
+          "end": 51.52,
+          "probability": 0.4463861286640167,
+          "beatId": "result"
+        },
+        {
+          "word": " one",
+          "start": 51.52,
+          "end": 52.04,
+          "probability": 0.3628710210323334,
+          "beatId": "result"
+        },
+        {
+          "word": " metre",
+          "start": 52.04,
+          "end": 52.32,
+          "probability": 0.0903637632727623,
+          "beatId": "result"
+        },
+        {
+          "word": " per",
+          "start": 52.32,
+          "end": 52.94,
+          "probability": 0.9880556464195251,
+          "beatId": "result"
+        },
+        {
+          "word": " second,",
+          "start": 52.94,
+          "end": 53.38,
+          "probability": 0.9895415306091309,
+          "beatId": "result"
+        },
+        {
+          "word": " so",
+          "start": 53.72,
+          "end": 54.22,
+          "probability": 0.9792007207870483,
+          "beatId": "result"
+        },
+        {
+          "word": " both",
+          "start": 54.22,
+          "end": 54.54,
+          "probability": 0.9785271286964417,
+          "beatId": "result"
+        },
+        {
+          "word": " move",
+          "start": 54.54,
+          "end": 54.8,
+          "probability": 0.9946258664131165,
+          "beatId": "result"
+        },
+        {
+          "word": " right",
+          "start": 54.8,
+          "end": 55.1,
+          "probability": 0.9775010347366333,
+          "beatId": "result"
+        },
+        {
+          "word": " together.",
+          "start": 55.1,
+          "end": 55.48,
+          "probability": 0.9946883916854858,
+          "beatId": "result"
+        },
+        {
+          "word": " One",
+          "start": 57.9,
+          "end": 58.1,
+          "probability": 0.8084883093833923,
+          "beatId": "interpret"
+        },
+        {
+          "word": " common",
+          "start": 58.1,
+          "end": 58.36,
+          "probability": 0.9836155772209167,
+          "beatId": "interpret"
+        },
+        {
+          "word": " velocity",
+          "start": 58.36,
+          "end": 58.88,
+          "probability": 0.998630702495575,
+          "beatId": "interpret"
+        },
+        {
+          "word": " replaces",
+          "start": 58.88,
+          "end": 59.4,
+          "probability": 0.9876276254653931,
+          "beatId": "interpret"
+        },
+        {
+          "word": " two",
+          "start": 59.4,
+          "end": 60.1,
+          "probability": 0.0010528481202243256,
+          "beatId": "interpret"
+        },
+        {
+          "word": " separate",
+          "start": 60.1,
+          "end": 60.56,
+          "probability": 0.9638562798500061,
+          "beatId": "interpret"
+        },
+        {
+          "word": " after",
+          "start": 60.56,
+          "end": 60.92,
+          "probability": 0.9348716735839844,
+          "beatId": "interpret"
+        },
+        {
+          "word": " velocities.",
+          "start": 60.92,
+          "end": 61.64,
+          "probability": 0.9605216383934021,
+          "beatId": "interpret"
+        },
+        {
+          "word": " The",
+          "start": 62.16,
+          "end": 62.28,
+          "probability": 0.9601351618766785,
+          "beatId": "interpret"
+        },
+        {
+          "word": " particles",
+          "start": 62.28,
+          "end": 62.68,
+          "probability": 0.9827966690063477,
+          "beatId": "interpret"
+        },
+        {
+          "word": " remain",
+          "start": 62.68,
+          "end": 63.1,
+          "probability": 0.9669507145881653,
+          "beatId": "interpret"
+        },
+        {
+          "word": " in",
+          "start": 63.1,
+          "end": 63.36,
+          "probability": 0.9935206770896912,
+          "beatId": "interpret"
+        },
+        {
+          "word": " contact,",
+          "start": 63.36,
+          "end": 63.84,
+          "probability": 0.9950369000434875,
+          "beatId": "interpret"
+        },
+        {
+          "word": " their",
+          "start": 64.44,
+          "end": 64.62,
+          "probability": 0.3972496328642592,
+          "beatId": "interpret"
+        },
+        {
+          "word": " masses",
+          "start": 64.62,
+          "end": 65.1,
+          "probability": 0.09738801419734955,
+          "beatId": "interpret"
+        },
+        {
+          "word": " still",
+          "start": 65.1,
+          "end": 65.78,
+          "probability": 0.9710268974304199,
+          "beatId": "interpret"
+        },
+        {
+          "word": " add.",
+          "start": 65.78,
+          "end": 66.14,
+          "probability": 0.9468633532524109,
+          "beatId": "interpret"
+        }
+      ],
+      "wordCount": 118,
+      "text": "Reset to the original incoming particles. This independent trial ends with them sticking. The same external force condition holds, so momentum before equals momentum after. After sticking, both have velocity v. Mass A times u A, plus mass B times u B, equals the sum of the masses times V Two times four, plus three times negative one, equals two plus three, all multiplied by v. The initial momentum is five. The combined mass is five kilograms, so five equals five v. Divide by the combined mass. Their common velocity is positive one metre per second, so both move right together. One common velocity replaces two separate after velocities. The particles remain in contact, their masses still add.",
+      "cues": {
+        "reset": 0.55,
+        "principle": 10.78,
+        "formula": 14.36,
+        "substitute": 27.57,
+        "simplify": 34.82,
+        "combined-mass": 38.96,
+        "result": 45.26,
+        "result-value": 51.52,
+        "interpret": 57.9
+      },
+      "figureEvents": [
+        {
+          "id": "substitute-figure-1",
+          "start": 27.57,
+          "target": "A.mass",
+          "kind": "spoken",
+          "word": "2",
+          "wordIndex": 50
+        },
+        {
+          "id": "substitute-figure-2",
+          "start": 28.03,
+          "target": "A.before",
+          "kind": "spoken",
+          "word": "4",
+          "wordIndex": 52
+        },
+        {
+          "id": "substitute-figure-3",
+          "start": 29.15,
+          "target": "B.mass",
+          "kind": "spoken",
+          "word": "3",
+          "wordIndex": 54
+        },
+        {
+          "id": "substitute-figure-4",
+          "start": 30.21,
+          "target": "B.before",
+          "kind": "spoken",
+          "word": "1",
+          "wordIndex": 57
+        },
+        {
+          "id": "substitute-figure-5",
+          "start": 31.57,
+          "target": "A.mass",
+          "kind": "spoken",
+          "word": "2",
+          "wordIndex": 59
+        },
+        {
+          "id": "substitute-figure-6",
+          "start": 32.15,
+          "target": "B.mass",
+          "kind": "spoken",
+          "word": "3",
+          "wordIndex": 61
+        },
+        {
+          "id": "simplify-figure-1",
+          "start": 38.96,
+          "target": "pair.mass",
+          "kind": "spoken",
+          "word": "5",
+          "wordIndex": 75
+        },
+        {
+          "id": "simplify-figure-2",
+          "start": 41.64,
+          "target": "pair.mass",
+          "kind": "spoken",
+          "word": "5",
+          "wordIndex": 80
+        },
+        {
+          "id": "result-figure-1",
+          "start": 51.52,
+          "target": "pair.after",
+          "kind": "spoken",
+          "word": "1",
+          "wordIndex": 92
+        }
+      ],
+      "cueEvidence": [
+        {
+          "id": "reset",
+          "phrase": " Reset",
+          "wordIndex": 0,
+          "edge": "start",
+          "time": 0.55
+        },
+        {
+          "id": "principle",
+          "phrase": "momentum before",
+          "wordIndex": 20,
+          "edge": "start",
+          "time": 10.78
+        },
+        {
+          "id": "formula",
+          "phrase": " After",
+          "wordIndex": 25,
+          "edge": "start",
+          "time": 14.36
+        },
+        {
+          "id": "substitute",
+          "phrase": " Two",
+          "wordIndex": 50,
+          "edge": "start",
+          "time": 27.57
+        },
+        {
+          "id": "simplify",
+          "phrase": " The",
+          "wordIndex": 66,
+          "edge": "start",
+          "time": 34.82
+        },
+        {
+          "id": "combined-mass",
+          "phrase": "five kilograms",
+          "wordIndex": 75,
+          "edge": "start",
+          "time": 38.96
+        },
+        {
+          "id": "result",
+          "phrase": " Divide",
+          "wordIndex": 82,
+          "edge": "start",
+          "time": 45.26
+        },
+        {
+          "id": "result-value",
+          "phrase": "one metre",
+          "wordIndex": 92,
+          "edge": "start",
+          "time": 51.52
+        },
+        {
+          "id": "interpret",
+          "phrase": " One",
+          "wordIndex": 101,
+          "edge": "start",
+          "time": 57.9
+        }
+      ],
+      "engine": "faster-whisper-small (local, CPU int8, 2 threads)",
+      "transcriptionMethod": "Separate beat excerpts of decoded final scene MP3; word timestamps shifted by exact PCM excerpt offsets."
+    },
+    {
+      "id": "s07",
+      "title": "Check the system and the direction",
+      "mode": "closing",
+      "tempo": "brisk",
+      "beats": [
+        {
+          "id": "contrast",
+          "text": "What if an external horizontal push mattered during impact? The pair could gain momentum; we could no longer equate the totals.",
+          "start": 0.55,
+          "speechEnd": 10.16,
+          "end": 10.16,
+          "hold": 0.0,
+          "providerAudioSha256": "41371b6555ae561a8462d974ea850e86cdd7ee89590183de4903a10444f40073",
+          "providerTrimStart": 0.01,
+          "providerTrimEnd": 9.62,
+          "caption": "External push: total momentum can change",
+          "cue": 0.55,
+          "penEnd": 10.08
+        },
+        {
+          "id": "question",
+          "text": "Return to our original negligible force condition. A reverses direction. Does that mean the pair's total momentum is not conserved?",
+          "hold": 3.0,
+          "start": 10.31,
+          "speechEnd": 20.78,
+          "end": 23.78,
+          "providerAudioSha256": "b657a622a7fcaa422dcec81027d01d168254663a9e15d59f274ab6faffe3d1c1",
+          "providerTrimStart": 0.0,
+          "providerTrimEnd": 10.47,
+          "caption": "Does reversal break total momentum conservation?",
+          "cue": 10.31,
+          "penEnd": 20.700000000000003
+        },
+        {
+          "id": "answer",
+          "text": "No. The individual momentum changes are opposite; the pair's total remains conserved.",
+          "start": 23.93,
+          "speechEnd": 30.62,
+          "end": 30.62,
+          "hold": 0.0,
+          "providerAudioSha256": "d93373f2b64a354eeaced102a4635bafdd186f19aa1d801aa7b2386283873cff",
+          "providerTrimStart": 0.01,
+          "providerTrimEnd": 6.7,
+          "caption": "Individual changes; conserved total",
+          "cue": 23.93,
+          "penEnd": 30.540000000000003
+        },
+        {
+          "id": "outcome1",
+          "text": "Choose signed velocities.",
+          "start": 30.77,
+          "speechEnd": 32.48,
+          "end": 32.48,
+          "hold": 0.0,
+          "providerAudioSha256": "c7abec55eeda0ad91925798496dffcb406011cb71abca1dfb8ad3689d088825f",
+          "providerTrimStart": 0.01,
+          "providerTrimEnd": 1.72,
+          "caption": "Choose signed velocities.",
+          "cue": 30.77,
+          "penEnd": 32.4
+        },
+        {
+          "id": "outcome2",
+          "text": "Conserve the pair's momentum.",
+          "start": 32.63,
+          "speechEnd": 34.33,
+          "end": 34.33,
+          "hold": 0.0,
+          "providerAudioSha256": "8eed612c557cdcff5a2e18317fe06a865f1963ca339089cf0bc94aa4d05deb84",
+          "providerTrimStart": 0.02,
+          "providerTrimEnd": 1.72,
+          "caption": "Conserve the pair's momentum.",
+          "cue": 32.63,
+          "penEnd": 34.25
+        },
+        {
+          "id": "outcome3",
+          "text": "Solve separate and sticking outcomes.",
+          "start": 34.48,
+          "speechEnd": 36.81,
+          "end": 36.81,
+          "hold": 0.0,
+          "providerAudioSha256": "2990b43a92941a4b99af1598b15d1f9a822eb17940b7f090b87a018b794c0c73",
+          "providerTrimStart": 0.0,
+          "providerTrimEnd": 2.33,
+          "caption": "Solve separate and sticking outcomes.",
+          "cue": 34.48,
+          "penEnd": 36.730000000000004
+        }
+      ],
+      "audio": "direct-collisions-s07.mp3",
+      "duration": 37.407347,
+      "sampleDuration": 37.36,
+      "holds": [
+        {
+          "start": 20.78,
+          "end": 23.78,
+          "kind": "thinking",
+          "duration": 3.0
+        }
+      ],
+      "audioSha256": "66ecb17f436a6db804f443152c25e694b552f21cfd546c3fbf15e2468317fed5",
+      "provider": "elevenlabs",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "voiceSpeed": 1.0,
+      "modelId": "eleven_turbo_v2_5",
+      "sampleRate": 44100,
+      "words": [
+        {
+          "word": " What",
+          "start": 0.55,
+          "end": 0.75,
+          "probability": 0.8150220513343811,
+          "beatId": "contrast"
+        },
+        {
+          "word": " if",
+          "start": 0.75,
+          "end": 0.91,
+          "probability": 0.9579288959503174,
+          "beatId": "contrast"
+        },
+        {
+          "word": " an",
+          "start": 0.91,
+          "end": 1.03,
+          "probability": 0.9645775556564331,
+          "beatId": "contrast"
+        },
+        {
+          "word": " external",
+          "start": 1.03,
+          "end": 1.39,
+          "probability": 0.9762232303619385,
+          "beatId": "contrast"
+        },
+        {
+          "word": " horizontal",
+          "start": 1.39,
+          "end": 1.85,
+          "probability": 0.9744467735290527,
+          "beatId": "contrast"
+        },
+        {
+          "word": " push",
+          "start": 1.85,
+          "end": 2.39,
+          "probability": 0.9893858432769775,
+          "beatId": "contrast"
+        },
+        {
+          "word": " mattered",
+          "start": 2.39,
+          "end": 3.11,
+          "probability": 0.34902432560920715,
+          "beatId": "contrast"
+        },
+        {
+          "word": " during",
+          "start": 3.11,
+          "end": 3.67,
+          "probability": 0.9845000505447388,
+          "beatId": "contrast"
+        },
+        {
+          "word": " impact?",
+          "start": 3.67,
+          "end": 4.19,
+          "probability": 0.9910029172897339,
+          "beatId": "contrast"
+        },
+        {
+          "word": " The",
+          "start": 5.03,
+          "end": 5.11,
+          "probability": 0.9566652178764343,
+          "beatId": "contrast"
+        },
+        {
+          "word": " pair",
+          "start": 5.11,
+          "end": 5.41,
+          "probability": 0.9777936339378357,
+          "beatId": "contrast"
+        },
+        {
+          "word": " could",
+          "start": 5.41,
+          "end": 5.67,
+          "probability": 0.9900873303413391,
+          "beatId": "contrast"
+        },
+        {
+          "word": " gain",
+          "start": 5.67,
+          "end": 5.97,
+          "probability": 0.9944572448730469,
+          "beatId": "contrast"
+        },
+        {
+          "word": " momentum.",
+          "start": 5.97,
+          "end": 6.55,
+          "probability": 0.999213695526123,
+          "beatId": "contrast"
+        },
+        {
+          "word": " We",
+          "start": 7.25,
+          "end": 7.49,
+          "probability": 0.9884876608848572,
+          "beatId": "contrast"
+        },
+        {
+          "word": " could",
+          "start": 7.49,
+          "end": 7.71,
+          "probability": 0.9883397817611694,
+          "beatId": "contrast"
+        },
+        {
+          "word": " no",
+          "start": 7.71,
+          "end": 7.95,
+          "probability": 0.9943422079086304,
+          "beatId": "contrast"
+        },
+        {
+          "word": " longer",
+          "start": 7.95,
+          "end": 8.35,
+          "probability": 0.998530387878418,
+          "beatId": "contrast"
+        },
+        {
+          "word": " equate",
+          "start": 8.35,
+          "end": 8.97,
+          "probability": 0.9981591999530792,
+          "beatId": "contrast"
+        },
+        {
+          "word": " the",
+          "start": 8.97,
+          "end": 9.49,
+          "probability": 2.484640117472736e-05,
+          "beatId": "contrast"
+        },
+        {
+          "word": " totals.",
+          "start": 9.49,
+          "end": 10.05,
+          "probability": 0.491693441523239,
+          "beatId": "contrast"
+        },
+        {
+          "word": " Return",
+          "start": 10.31,
+          "end": 10.59,
+          "probability": 0.6222636699676514,
+          "beatId": "question"
+        },
+        {
+          "word": " to",
+          "start": 10.59,
+          "end": 10.85,
+          "probability": 0.0008265520937129622,
+          "beatId": "question"
+        },
+        {
+          "word": " our",
+          "start": 10.85,
+          "end": 11.07,
+          "probability": 0.9446030855178833,
+          "beatId": "question"
+        },
+        {
+          "word": " original",
+          "start": 11.07,
+          "end": 11.63,
+          "probability": 0.9702267646789551,
+          "beatId": "question"
+        },
+        {
+          "word": " negligible",
+          "start": 11.63,
+          "end": 12.83,
+          "probability": 0.9066989123821259,
+          "beatId": "question"
+        },
+        {
+          "word": " force",
+          "start": 12.83,
+          "end": 13.09,
+          "probability": 0.9490920305252075,
+          "beatId": "question"
+        },
+        {
+          "word": " condition.",
+          "start": 13.09,
+          "end": 13.57,
+          "probability": 0.984149158000946,
+          "beatId": "question"
+        },
+        {
+          "word": " A",
+          "start": 14.49,
+          "end": 14.57,
+          "probability": 0.7216877341270447,
+          "beatId": "question"
+        },
+        {
+          "word": " reverses",
+          "start": 14.57,
+          "end": 15.13,
+          "probability": 0.5146275758743286,
+          "beatId": "question"
+        },
+        {
+          "word": " direction.",
+          "start": 15.13,
+          "end": 15.55,
+          "probability": 0.9469534754753113,
+          "beatId": "question"
+        },
+        {
+          "word": " Does",
+          "start": 16.49,
+          "end": 16.87,
+          "probability": 0.9632105231285095,
+          "beatId": "question"
+        },
+        {
+          "word": " that",
+          "start": 16.87,
+          "end": 17.09,
+          "probability": 0.10570253932382911,
+          "beatId": "question"
+        },
+        {
+          "word": " mean",
+          "start": 17.09,
+          "end": 17.33,
+          "probability": 0.9772524237632751,
+          "beatId": "question"
+        },
+        {
+          "word": " the",
+          "start": 17.33,
+          "end": 17.57,
+          "probability": 0.3372567407786846,
+          "beatId": "question"
+        },
+        {
+          "word": " pair's",
+          "start": 17.57,
+          "end": 18.09,
+          "probability": 0.7551066875457764,
+          "beatId": "question"
+        },
+        {
+          "word": " total",
+          "start": 18.09,
+          "end": 18.41,
+          "probability": 0.3366872873157263,
+          "beatId": "question"
+        },
+        {
+          "word": " momentum",
+          "start": 18.41,
+          "end": 19.05,
+          "probability": 0.9948660135269165,
+          "beatId": "question"
+        },
+        {
+          "word": " is",
+          "start": 19.05,
+          "end": 19.87,
+          "probability": 0.7658855319023132,
+          "beatId": "question"
+        },
+        {
+          "word": " not",
+          "start": 19.87,
+          "end": 20.07,
+          "probability": 0.9545184373855591,
+          "beatId": "question"
+        },
+        {
+          "word": " conserved?",
+          "start": 20.07,
+          "end": 20.55,
+          "probability": 0.8979431092739105,
+          "beatId": "question"
+        },
+        {
+          "word": " No.",
+          "start": 23.93,
+          "end": 24.17,
+          "probability": 0.7349106073379517,
+          "beatId": "answer"
+        },
+        {
+          "word": " The",
+          "start": 25.05,
+          "end": 25.19,
+          "probability": 0.9464550614356995,
+          "beatId": "answer"
+        },
+        {
+          "word": " individual",
+          "start": 25.19,
+          "end": 25.61,
+          "probability": 0.9933969974517822,
+          "beatId": "answer"
+        },
+        {
+          "word": " momentum",
+          "start": 25.61,
+          "end": 25.97,
+          "probability": 0.9848598837852478,
+          "beatId": "answer"
+        },
+        {
+          "word": " changes",
+          "start": 25.97,
+          "end": 26.61,
+          "probability": 0.9927443265914917,
+          "beatId": "answer"
+        },
+        {
+          "word": " are",
+          "start": 26.61,
+          "end": 26.85,
+          "probability": 0.9837245941162109,
+          "beatId": "answer"
+        },
+        {
+          "word": " opposite.",
+          "start": 26.85,
+          "end": 27.25,
+          "probability": 0.9548318982124329,
+          "beatId": "answer"
+        },
+        {
+          "word": " The",
+          "start": 28.07,
+          "end": 28.11,
+          "probability": 0.964611291885376,
+          "beatId": "answer"
+        },
+        {
+          "word": " pair's",
+          "start": 28.11,
+          "end": 28.59,
+          "probability": 0.730432540178299,
+          "beatId": "answer"
+        },
+        {
+          "word": " total",
+          "start": 28.59,
+          "end": 29.05,
+          "probability": 0.33209855603638516,
+          "beatId": "answer"
+        },
+        {
+          "word": " remains",
+          "start": 29.05,
+          "end": 29.77,
+          "probability": 0.9680952429771423,
+          "beatId": "answer"
+        },
+        {
+          "word": " conserved.",
+          "start": 29.77,
+          "end": 30.51,
+          "probability": 0.9745549261569977,
+          "beatId": "answer"
+        },
+        {
+          "word": " Choose",
+          "start": 30.77,
+          "end": 31.05,
+          "probability": 0.7387017011642456,
+          "beatId": "outcome1"
+        },
+        {
+          "word": " signed",
+          "start": 31.05,
+          "end": 31.47,
+          "probability": 0.9003534913063049,
+          "beatId": "outcome1"
+        },
+        {
+          "word": " velocities.",
+          "start": 31.47,
+          "end": 32.25,
+          "probability": 0.992070347070694,
+          "beatId": "outcome1"
+        },
+        {
+          "word": " Conserve",
+          "start": 32.63,
+          "end": 33.13,
+          "probability": 0.5031206393614411,
+          "beatId": "outcome2"
+        },
+        {
+          "word": " the",
+          "start": 33.13,
+          "end": 33.29,
+          "probability": 0.00032037587953936963,
+          "beatId": "outcome2"
+        },
+        {
+          "word": " pair's",
+          "start": 33.29,
+          "end": 33.71,
+          "probability": 0.5337097831070423,
+          "beatId": "outcome2"
+        },
+        {
+          "word": " momentum.",
+          "start": 33.71,
+          "end": 33.93,
+          "probability": 0.9978216886520386,
+          "beatId": "outcome2"
+        },
+        {
+          "word": " Solve",
+          "start": 34.48,
+          "end": 34.9,
+          "probability": 0.675772562623024,
+          "beatId": "outcome3"
+        },
+        {
+          "word": " separate",
+          "start": 34.9,
+          "end": 35.26,
+          "probability": 0.8085026741027832,
+          "beatId": "outcome3"
+        },
+        {
+          "word": " and",
+          "start": 35.26,
+          "end": 35.78,
+          "probability": 0.9470502138137817,
+          "beatId": "outcome3"
+        },
+        {
+          "word": " sticking",
+          "start": 35.78,
+          "end": 36.06,
+          "probability": 0.9358216524124146,
+          "beatId": "outcome3"
+        },
+        {
+          "word": " outcomes.",
+          "start": 36.06,
+          "end": 36.44,
+          "probability": 0.8427488803863525,
+          "beatId": "outcome3"
+        }
+      ],
+      "wordCount": 65,
+      "text": "What if an external horizontal push mattered during impact? The pair could gain momentum. We could no longer equate the totals. Return to our original negligible force condition. A reverses direction. Does that mean the pair's total momentum is not conserved? No. The individual momentum changes are opposite. The pair's total remains conserved. Choose signed velocities. Conserve the pair's momentum. Solve separate and sticking outcomes.",
+      "cues": {
+        "contrast": 0.55,
+        "question": 10.31,
+        "answer": 23.93,
+        "outcome1": 30.77,
+        "outcome2": 32.63,
+        "outcome3": 34.48
+      },
+      "figureEvents": [],
+      "cueEvidence": [
+        {
+          "id": "contrast",
+          "phrase": " What",
+          "wordIndex": 0,
+          "edge": "start",
+          "time": 0.55
+        },
+        {
+          "id": "question",
+          "phrase": " Return",
+          "wordIndex": 21,
+          "edge": "start",
+          "time": 10.31
+        },
+        {
+          "id": "answer",
+          "phrase": " No.",
+          "wordIndex": 41,
+          "edge": "start",
+          "time": 23.93
+        },
+        {
+          "id": "outcome1",
+          "phrase": " Choose",
+          "wordIndex": 53,
+          "edge": "start",
+          "time": 30.77
+        },
+        {
+          "id": "outcome2",
+          "phrase": " Conserve",
+          "wordIndex": 56,
+          "edge": "start",
+          "time": 32.63
+        },
+        {
+          "id": "outcome3",
+          "phrase": " Solve",
+          "wordIndex": 60,
+          "edge": "start",
+          "time": 34.48
+        }
+      ],
+      "engine": "faster-whisper-small (local, CPU int8, 2 threads)",
+      "transcriptionMethod": "Separate beat excerpts of decoded final scene MP3; word timestamps shifted by exact PCM excerpt offsets."
+    }
+  ]
+}

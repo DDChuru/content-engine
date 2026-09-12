@@ -1,0 +1,233 @@
+{
+  "project": "mechanics-direct-collisions",
+  "arithmetic": {
+    "beforeMomentum": "5",
+    "BVelocity": "3",
+    "commonVelocity": "1",
+    "method": "independent exact rational arithmetic"
+  },
+  "actualSourceHelpers": {
+    "motionSamples": 1602,
+    "holdClockSamples": 481,
+    "handwrittenLines": [
+      {
+        "text": "momentum before = momentum after",
+        "widthAtUnitSize": 28.53,
+        "strokes": 40
+      },
+      {
+        "text": "mA uA + mB uB = mA vA + mB vB",
+        "widthAtUnitSize": 23.82,
+        "strokes": 34
+      },
+      {
+        "text": "2×4 + 3×(−1) = 2×(−2) + 3vB",
+        "widthAtUnitSize": 19.909999999999997,
+        "strokes": 29
+      },
+      {
+        "text": "5 = −4 + 3vB",
+        "widthAtUnitSize": 9.040000000000003,
+        "strokes": 11
+      },
+      {
+        "text": "9 = 3vB",
+        "widthAtUnitSize": 5.46,
+        "strokes": 7
+      },
+      {
+        "text": "vB = 9/3 = +3 m/s",
+        "widthAtUnitSize": 13.040000000000001,
+        "strokes": 17
+      },
+      {
+        "text": "momentum before = momentum after",
+        "widthAtUnitSize": 28.53,
+        "strokes": 40
+      },
+      {
+        "text": "mA uA + mB uB = (mA + mB)v",
+        "widthAtUnitSize": 21.11,
+        "strokes": 31
+      },
+      {
+        "text": "2×4 + 3×(−1) = (2 + 3)v",
+        "widthAtUnitSize": 16.419999999999995,
+        "strokes": 23
+      },
+      {
+        "text": "5 = 5v",
+        "widthAtUnitSize": 4.49,
+        "strokes": 5
+      },
+      {
+        "text": "v = 5/5 = +1 m/s",
+        "widthAtUnitSize": 11.910000000000002,
+        "strokes": 16
+      }
+    ]
+  },
+  "transcript": {
+    "wordCount": 567,
+    "exactCues": 49,
+    "spokenFigureEvents": 26,
+    "localRawWhisperCacheBeatsChecked": 42,
+    "rawCacheAvailability": "Optional ignored generation evidence; mapped word provenance checked everywhere"
+  },
+  "audio": [
+    {
+      "id": "s01",
+      "sha256": "03dcbd66f66dd251a80e69cf9d4d4c30994052bec2a5989c70bf78887e0d4514",
+      "duration": 18.573061,
+      "sampleRate": 44100,
+      "channels": 1,
+      "nativePcmPeak": 25274,
+      "holds": []
+    },
+    {
+      "id": "s02",
+      "sha256": "5823baa7857192902d90a6ffb4c6ba17d5b2a754efc8fbccdc27cf6b85b3a956",
+      "duration": 32.548571,
+      "sampleRate": 44100,
+      "channels": 1,
+      "nativePcmPeak": 24962,
+      "holds": []
+    },
+    {
+      "id": "s03",
+      "sha256": "fadb3d1b11ecb228df4c8ddabc108c5b6a3dbc54065f47c0a2a57531d79933e9",
+      "duration": 40.594286,
+      "sampleRate": 44100,
+      "channels": 1,
+      "nativePcmPeak": 27011,
+      "holds": [
+        {
+          "start": 38.0,
+          "end": 40.0,
+          "kind": "result",
+          "duration": 2.0,
+          "edgeExclusionSeconds": 0.08,
+          "nativePcmPeak": 0
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "sha256": "2475b56424bf00d6f41cb9a1de758fb91f447055f3744d310b9716213dfcd9f4",
+      "duration": 32.914286,
+      "sampleRate": 44100,
+      "channels": 1,
+      "nativePcmPeak": 26136,
+      "holds": []
+    },
+    {
+      "id": "s05",
+      "sha256": "5e974483f5d774cb08329472919176b84ee27697b94670a22aabbe24c0218c41",
+      "duration": 73.377959,
+      "sampleRate": 44100,
+      "channels": 1,
+      "nativePcmPeak": 25765,
+      "holds": [
+        {
+          "start": 43.08,
+          "end": 45.08,
+          "kind": "result",
+          "duration": 2.0,
+          "edgeExclusionSeconds": 0.08,
+          "nativePcmPeak": 0
+        },
+        {
+          "start": 48.81,
+          "end": 50.81,
+          "kind": "result",
+          "duration": 2.0,
+          "edgeExclusionSeconds": 0.08,
+          "nativePcmPeak": 0
+        },
+        {
+          "start": 61.24,
+          "end": 63.24,
+          "kind": "result",
+          "duration": 2.0,
+          "edgeExclusionSeconds": 0.08,
+          "nativePcmPeak": 0
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "sha256": "4014fb079739e26c1ca6b983ba423a5414996450fc8c734a13f769b6f0e19e19",
+      "duration": 66.951837,
+      "sampleRate": 44100,
+      "channels": 1,
+      "nativePcmPeak": 25850,
+      "holds": [
+        {
+          "start": 43.11,
+          "end": 45.11,
+          "kind": "result",
+          "duration": 2.0,
+          "edgeExclusionSeconds": 0.08,
+          "nativePcmPeak": 0
+        },
+        {
+          "start": 55.75,
+          "end": 57.75,
+          "kind": "result",
+          "duration": 2.0,
+          "edgeExclusionSeconds": 0.08,
+          "nativePcmPeak": 0
+        }
+      ]
+    },
+    {
+      "id": "s07",
+      "sha256": "66ecb17f436a6db804f443152c25e694b552f21cfd546c3fbf15e2468317fed5",
+      "duration": 37.407347,
+      "sampleRate": 44100,
+      "channels": 1,
+      "nativePcmPeak": 26014,
+      "holds": [
+        {
+          "start": 20.78,
+          "end": 23.78,
+          "kind": "thinking",
+          "duration": 3.0,
+          "edgeExclusionSeconds": 0.08,
+          "nativePcmPeak": 0
+        }
+      ]
+    }
+  ],
+  "durationSeconds": 302.367347,
+  "durationFrames30fps": 9075,
+  "composition": {
+    "scopedTypeScript": "passed",
+    "actualCueHook": {
+      "hookBoundarySamples": 147,
+      "resultBoundaries": [
+        {
+          "scene": "s05",
+          "wordSeconds": 56.08,
+          "firstVisibleFrame": 1683
+        },
+        {
+          "scene": "s06",
+          "wordSeconds": 51.52,
+          "firstVisibleFrame": 1546
+        }
+      ],
+      "exportedDurationFrames30fps": 9075,
+      "method": "Actual useCue function evaluated with controlled frame inputs; no React or Remotion rendering"
+    },
+    "backendNodeModules": "/home/durai/Documents/projects/content-engine/packages/backend/node_modules",
+    "reactDeclarations": "/home/durai/Documents/projects/content-engine/remotion-branding/node_modules/@types/react",
+    "installedOrRendered": false
+  },
+  "status": "passed authoring checks; preview review remains on machine A",
+  "limitations": [
+    "No Remotion render or browser layout measurement was performed.",
+    "Machine A must inspect complete scene previews, exact numeric ring geometry, before/after result-word frames, diagram contact/arrow visibility, and frozen holds.",
+    "No encoded final video exists; AAC alignment and encoded ink checks are pending rendering."
+  ]
+}

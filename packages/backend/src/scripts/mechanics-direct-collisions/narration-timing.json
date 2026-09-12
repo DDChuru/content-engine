@@ -1,0 +1,872 @@
+{
+  "project": "mechanics-direct-collisions",
+  "planSha256": "0da628f67fe2ff19c3a08106524dc465a5e06fa0767d966a07d7cbfac6bfaefa",
+  "scenes": [
+    {
+      "id": "s01",
+      "title": "Syllabus 4.3: direct collisions",
+      "mode": "opening",
+      "tempo": "brisk",
+      "beats": [
+        {
+          "id": "quote1",
+          "text": "Syllabus four point three: use conservation of linear momentum to solve problems",
+          "start": 0.55,
+          "speechEnd": 6.77,
+          "end": 6.77,
+          "hold": 0.0,
+          "providerAudioSha256": "b6823f261c21e89f62c173b7d2ae33d159a148584a87e79aa9cd997408603049",
+          "providerTrimStart": 0.0,
+          "providerTrimEnd": 6.22,
+          "caption": "use conservation of linear momentum to solve problems"
+        },
+        {
+          "id": "quote2",
+          "text": "that may be modelled as the direct impact of two bodies.",
+          "start": 6.92,
+          "speechEnd": 10.35,
+          "end": 10.35,
+          "hold": 0.0,
+          "providerAudioSha256": "7617cd556e43784cd5d279542f3e65c6fb39ff6693a3d335db6eaff2c6c8c7a6",
+          "providerTrimStart": 0.04,
+          "providerTrimEnd": 3.47,
+          "caption": "that may be modelled as the direct impact of two bodies."
+        },
+        {
+          "id": "outcome1",
+          "text": "By the end you can choose signed velocities.",
+          "start": 10.5,
+          "speechEnd": 13.6,
+          "end": 13.6,
+          "hold": 0.0,
+          "providerAudioSha256": "18d3cda0ae17bc132cda4b498cc838b1bf949207ad1f9354a3f76c4145e9fad7",
+          "providerTrimStart": 0.02,
+          "providerTrimEnd": 3.12,
+          "caption": "Choose signed velocities."
+        },
+        {
+          "id": "outcome2",
+          "text": "Conserve the pair's momentum.",
+          "start": 13.75,
+          "speechEnd": 15.47,
+          "end": 15.47,
+          "hold": 0.0,
+          "providerAudioSha256": "b11da9f452c62e32830feef8588a7593d9431d73c4c73a534f1dd47903adc8ab",
+          "providerTrimStart": 0.02,
+          "providerTrimEnd": 1.74,
+          "caption": "Conserve the pair's momentum."
+        },
+        {
+          "id": "outcome3",
+          "text": "And solve separate and sticking outcomes.",
+          "start": 15.62,
+          "speechEnd": 17.98,
+          "end": 17.98,
+          "hold": 0.0,
+          "providerAudioSha256": "46f411a2f42dc452c1e7dea29f9bb7e912b9e148a8f85720a12be2e404216e22",
+          "providerTrimStart": 0.01,
+          "providerTrimEnd": 2.37,
+          "caption": "Solve separate and sticking outcomes."
+        }
+      ],
+      "audio": "direct-collisions-s01.mp3",
+      "duration": 18.573061,
+      "sampleDuration": 18.53,
+      "holds": [],
+      "audioSha256": "03dcbd66f66dd251a80e69cf9d4d4c30994052bec2a5989c70bf78887e0d4514",
+      "provider": "elevenlabs",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "voiceSpeed": 1.0,
+      "modelId": "eleven_turbo_v2_5",
+      "sampleRate": 44100
+    },
+    {
+      "id": "s02",
+      "title": "Two alternative collision trials",
+      "mode": "story",
+      "tempo": "brisk",
+      "beats": [
+        {
+          "id": "approach",
+          "text": "Consider two particles moving towards each other along the same straight line on a smooth horizontal surface.",
+          "start": 0.55,
+          "speechEnd": 8.12,
+          "end": 8.12,
+          "hold": 0.0,
+          "providerAudioSha256": "fe53272c7c6006841a619fd686a207c58a4a825aba6a84a708a9888b62558529",
+          "providerTrimStart": 0.02,
+          "providerTrimEnd": 7.59,
+          "caption": "Same straight line"
+        },
+        {
+          "id": "contact1",
+          "text": "They meet. In the first trial, A rebounds and the particles separate.",
+          "start": 8.27,
+          "speechEnd": 13.9,
+          "end": 13.9,
+          "hold": 0.0,
+          "providerAudioSha256": "5ab86242b363bcbd358936d15e1e2ef45f244b49330aa37ba36918c0dfc12040",
+          "providerTrimStart": 0.03,
+          "providerTrimEnd": 5.66,
+          "extraCues": [
+            {
+              "id": "separate",
+              "phrase": "rebounds"
+            },
+            {
+              "id": "impact1",
+              "phrase": "meet"
+            }
+          ],
+          "caption": "Trial 1: separate"
+        },
+        {
+          "id": "tentative",
+          "text": "B's dashed arrow is a trial direction. The calculation will decide its signed velocity.",
+          "start": 14.05,
+          "speechEnd": 19.84,
+          "end": 19.84,
+          "hold": 0.0,
+          "providerAudioSha256": "07b42346a3f5d57efa7d8437f548882a53404f267d71777d7122bc47eba36c06",
+          "providerTrimStart": 0.0,
+          "providerTrimEnd": 5.79,
+          "caption": "Dashed means an assumed direction"
+        },
+        {
+          "id": "reset",
+          "text": "Now reset to the original approach. This is a separate trial, with the same initial conditions.",
+          "start": 19.99,
+          "speechEnd": 26.15,
+          "end": 26.15,
+          "hold": 0.0,
+          "providerAudioSha256": "7dacf762a752ec68083824489f52d7b9f25675e40cd27cecd00e793580454e2c",
+          "providerTrimStart": 0.0,
+          "providerTrimEnd": 6.16,
+          "caption": "Reset: same initial conditions"
+        },
+        {
+          "id": "contact2",
+          "text": "This time they meet and stick together, or coalesce. We will find their common velocity.",
+          "start": 26.3,
+          "speechEnd": 31.97,
+          "end": 31.97,
+          "hold": 0.0,
+          "providerAudioSha256": "dfb3f4eb3c447fa732eac7e65997f2fde3ad3e51b3520239087b87bfb0524a56",
+          "providerTrimStart": 0.04,
+          "providerTrimEnd": 5.71,
+          "extraCues": [
+            {
+              "id": "stick",
+              "phrase": "stick together"
+            },
+            {
+              "id": "impact2",
+              "phrase": "meet"
+            }
+          ],
+          "caption": "Trial 2: stick together"
+        }
+      ],
+      "audio": "direct-collisions-s02.mp3",
+      "duration": 32.548571,
+      "sampleDuration": 32.52,
+      "holds": [],
+      "audioSha256": "5823baa7857192902d90a6ffb4c6ba17d5b2a754efc8fbccdc27cf6b85b3a956",
+      "provider": "elevenlabs",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "voiceSpeed": 1.0,
+      "modelId": "eleven_turbo_v2_5",
+      "sampleRate": 44100
+    },
+    {
+      "id": "s03",
+      "title": "The complete question",
+      "mode": "setup",
+      "tempo": "brisk",
+      "beats": [
+        {
+          "id": "conditions",
+          "text": "Both trials use a smooth horizontal surface. External horizontal force is negligible during impact. Take right as positive.",
+          "start": 0.55,
+          "speechEnd": 9.89,
+          "end": 9.89,
+          "hold": 0.0,
+          "providerAudioSha256": "32a1620b2a9a00e54c6d247d0651e663a589ea4f02d76793b3779f7cb50cd952",
+          "providerTrimStart": 0.0,
+          "providerTrimEnd": 9.34
+        },
+        {
+          "id": "mass-a",
+          "text": "Particle A has mass two kilograms",
+          "start": 10.04,
+          "speechEnd": 12.54,
+          "end": 12.54,
+          "hold": 0.0,
+          "providerAudioSha256": "cb8726a88bb0cebf1b2fc3a0b4048de3e7dc3861ac6fc98427be69274c42c40e",
+          "providerTrimStart": 0.04,
+          "providerTrimEnd": 2.54,
+          "figures": [
+            {
+              "phrase": "two",
+              "target": "A.mass",
+              "value": "2"
+            }
+          ]
+        },
+        {
+          "id": "before-a",
+          "text": "and moves right at four metres per second.",
+          "start": 12.69,
+          "speechEnd": 14.92,
+          "end": 14.92,
+          "hold": 0.0,
+          "providerAudioSha256": "4966967be65e1cf837b35a14f559b8c327c78d27c671a2e00de6311f96bc71d1",
+          "providerTrimStart": 0.0,
+          "providerTrimEnd": 2.23,
+          "figures": [
+            {
+              "phrase": "four",
+              "target": "A.before",
+              "value": "4"
+            }
+          ]
+        },
+        {
+          "id": "mass-b",
+          "text": "Particle B has mass three kilograms",
+          "start": 15.07,
+          "speechEnd": 17.33,
+          "end": 17.33,
+          "hold": 0.0,
+          "providerAudioSha256": "f6c200c8df7e751e865153711dc4f9e75e381c6731c31bd8ca7e904ae193303e",
+          "providerTrimStart": 0.03,
+          "providerTrimEnd": 2.29,
+          "figures": [
+            {
+              "phrase": "three",
+              "target": "B.mass",
+              "value": "3"
+            }
+          ]
+        },
+        {
+          "id": "before-b",
+          "text": "and moves left at one metre per second.",
+          "start": 17.48,
+          "speechEnd": 19.55,
+          "end": 19.55,
+          "hold": 0.0,
+          "providerAudioSha256": "cb1e855c77cc21a701e121a77285ee6a0854c3f8706ed58e73056f837ae1711b",
+          "providerTrimStart": 0.01,
+          "providerTrimEnd": 2.08,
+          "figures": [
+            {
+              "phrase": "one",
+              "target": "B.before",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "id": "after-a",
+          "text": "In trial one, A rebounds left at two metres per second. Find B's final speed and direction.",
+          "start": 19.7,
+          "speechEnd": 26.8,
+          "end": 26.8,
+          "hold": 0.0,
+          "providerAudioSha256": "7afb3b9b8e2c809ce90b264b35df5ccce0827be471d7998c9ea0735981b0037e",
+          "providerTrimStart": 0.0,
+          "providerTrimEnd": 7.1,
+          "figures": [
+            {
+              "phrase": "two",
+              "target": "A.after",
+              "value": "2"
+            }
+          ]
+        },
+        {
+          "id": "together",
+          "text": "In the separate sticking trial, find the common velocity. Both questions use the original before diagram. Take a moment to read them.",
+          "hold": 2.0,
+          "start": 26.95,
+          "speechEnd": 38.0,
+          "end": 40.0,
+          "providerAudioSha256": "4a620cfa617ded26b0c54cd2febdb0aa05ef61b922f1829f6a288f5954045eb5",
+          "providerTrimStart": 0.01,
+          "providerTrimEnd": 11.06
+        }
+      ],
+      "audio": "direct-collisions-s03.mp3",
+      "duration": 40.594286,
+      "sampleDuration": 40.55,
+      "holds": [
+        {
+          "start": 38.0,
+          "end": 40.0,
+          "kind": "result",
+          "duration": 2.0
+        }
+      ],
+      "audioSha256": "fadb3d1b11ecb228df4c8ddabc108c5b6a3dbc54065f47c0a2a57531d79933e9",
+      "provider": "elevenlabs",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "voiceSpeed": 1.0,
+      "modelId": "eleven_turbo_v2_5",
+      "sampleRate": 44100
+    },
+    {
+      "id": "s04",
+      "title": "Why we conserve the pair's momentum",
+      "mode": "system",
+      "tempo": "brisk",
+      "beats": [
+        {
+          "id": "system",
+          "text": "Our system is A and B. Weight balances normal reaction; external horizontal force is negligible during impact.",
+          "start": 0.55,
+          "speechEnd": 10.22,
+          "end": 10.22,
+          "hold": 0.0,
+          "providerAudioSha256": "530cbc25a3585e4032746c4af5590ddc4a9ce6066675883d3d2688fd51370129",
+          "providerTrimStart": 0.0,
+          "providerTrimEnd": 9.67,
+          "caption": "System: A and B together"
+        },
+        {
+          "id": "internal",
+          "text": "Equal and opposite contact forces are internal. They change the individual momenta in opposite ways.",
+          "start": 10.37,
+          "speechEnd": 16.86,
+          "end": 16.86,
+          "hold": 0.0,
+          "providerAudioSha256": "7ec1ac523dd2cd34ce3a3859d65935b6facee421bae9b71440f5a614f0b6f39c",
+          "providerTrimStart": 0.0,
+          "providerTrimEnd": 6.49,
+          "caption": "Equal and opposite internal forces"
+        },
+        {
+          "id": "conserve",
+          "text": "The changes cancel for the pair, so total momentum before equals total momentum after.",
+          "start": 17.01,
+          "speechEnd": 23.1,
+          "end": 23.1,
+          "hold": 0.0,
+          "providerAudioSha256": "92eb32e5023fcfb431d57a21c561cd311a141e5a3b444c3f20e26b4af64eb8b7",
+          "providerTrimStart": 0.05,
+          "providerTrimEnd": 6.14,
+          "caption": "Total momentum stays the same"
+        },
+        {
+          "id": "signs",
+          "text": "Use signed velocities: right positive, left negative. The minus sign describes direction, not mass.",
+          "start": 23.25,
+          "speechEnd": 32.33,
+          "end": 32.33,
+          "hold": 0.0,
+          "providerAudioSha256": "a15d0cd212274d1ddb801590fbd13b7e46c0bef04b6a1850c7cb8939e7612791",
+          "providerTrimStart": 0.0,
+          "providerTrimEnd": 9.08,
+          "caption": "Right positive; left negative"
+        }
+      ],
+      "audio": "direct-collisions-s04.mp3",
+      "duration": 32.914286,
+      "sampleDuration": 32.88,
+      "holds": [],
+      "audioSha256": "2475b56424bf00d6f41cb9a1de758fb91f447055f3744d310b9716213dfcd9f4",
+      "provider": "elevenlabs",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "voiceSpeed": 1.0,
+      "modelId": "eleven_turbo_v2_5",
+      "sampleRate": 44100
+    },
+    {
+      "id": "s05",
+      "title": "Trial 1: find B's velocity",
+      "mode": "separate",
+      "tempo": "slow",
+      "beats": [
+        {
+          "id": "goal",
+          "text": "Find B's final velocity. Keep both diagrams beside the working.",
+          "start": 0.55,
+          "speechEnd": 6.14,
+          "end": 6.14,
+          "hold": 0.0,
+          "providerAudioSha256": "bcacbb54b1950ad21dc8070d17c2015cebf3475548c3a8424150e5a6c82db411",
+          "providerTrimStart": 0.0,
+          "providerTrimEnd": 5.59
+        },
+        {
+          "id": "principle",
+          "text": "With negligible external horizontal force, momentum before equals momentum after.",
+          "start": 6.29,
+          "speechEnd": 13.76,
+          "end": 13.76,
+          "hold": 0.0,
+          "providerAudioSha256": "03d4c3b62faf5e50d8513ba019fc7845744d84e1bd2cc3149205eaed1f16bc12",
+          "providerTrimStart": 0.03,
+          "providerTrimEnd": 7.5,
+          "cuePhrase": "momentum before",
+          "ink": "momentum before = momentum after"
+        },
+        {
+          "id": "formula",
+          "text": "Mass A times u A, plus mass B times u B, equals mass A times v A, plus mass B times v B.",
+          "start": 13.91,
+          "speechEnd": 23.16,
+          "end": 23.16,
+          "hold": 0.0,
+          "providerAudioSha256": "800ce9f1039c5dd9fbf2027b1a79928d6531721ec06102466be1fbf06393d364",
+          "providerTrimStart": 0.0,
+          "providerTrimEnd": 9.25,
+          "ink": "mA uA + mB uB = mA vA + mB vB"
+        },
+        {
+          "id": "substitute",
+          "text": "Substitute: two times four, plus three times negative one, equals two times negative two, plus three v B.",
+          "start": 23.31,
+          "speechEnd": 33.67,
+          "end": 33.67,
+          "hold": 0.0,
+          "providerAudioSha256": "4b1c297b34b6f897526135191b361f695da0ea414544ff7515c863e67916b9dd",
+          "providerTrimStart": 0.0,
+          "providerTrimEnd": 10.36,
+          "figures": [
+            {
+              "phrase": "two",
+              "target": "A.mass",
+              "value": "2"
+            },
+            {
+              "phrase": "four",
+              "target": "A.before",
+              "value": "4"
+            },
+            {
+              "phrase": "three",
+              "target": "B.mass",
+              "value": "3"
+            },
+            {
+              "phrase": "one",
+              "target": "B.before",
+              "value": "1"
+            },
+            {
+              "phrase": "two",
+              "occurrence": 2,
+              "target": "A.mass",
+              "value": "2"
+            },
+            {
+              "phrase": "two",
+              "occurrence": 3,
+              "target": "A.after",
+              "value": "2"
+            },
+            {
+              "phrase": "three",
+              "occurrence": 2,
+              "target": "B.mass",
+              "value": "3"
+            }
+          ],
+          "ink": "2×4 + 3×(−1) = 2×(−2) + 3vB"
+        },
+        {
+          "id": "simplify",
+          "text": "Eight minus three gives five on the left. A's final momentum is negative four, leaving three v B.",
+          "hold": 2.0,
+          "start": 33.82,
+          "speechEnd": 43.08,
+          "end": 45.08,
+          "providerAudioSha256": "6367886659b5e8b487ce2fe5a056cabe7c4c61347869ef9a6b3faa4069a38d83",
+          "providerTrimStart": 0.01,
+          "providerTrimEnd": 9.27,
+          "figures": [
+            {
+              "phrase": "three v B",
+              "target": "B.mass",
+              "value": "3"
+            }
+          ],
+          "ink": "5 = −4 + 3vB"
+        },
+        {
+          "id": "rearrange",
+          "text": "Add four to both sides: nine equals three v B.",
+          "hold": 2.0,
+          "start": 45.23,
+          "speechEnd": 48.81,
+          "end": 50.81,
+          "providerAudioSha256": "e918a2df77ccc6cfc8f1eaa89d3de14ae6fcd3f2f2bc6acd926203ffb032e537",
+          "providerTrimStart": 0.0,
+          "providerTrimEnd": 3.58,
+          "figures": [
+            {
+              "phrase": "three v B",
+              "target": "B.mass",
+              "value": "3"
+            }
+          ],
+          "ink": "9 = 3vB"
+        },
+        {
+          "id": "result",
+          "text": "Divide by three. B's velocity is positive three metres per second: a speed of three, to the right.",
+          "hold": 2.0,
+          "start": 50.96,
+          "speechEnd": 61.24,
+          "end": 63.24,
+          "providerAudioSha256": "185454403a9bde0183eb175c79c592fe152e8bed27d9e3d9253f924ec22cf412",
+          "providerTrimStart": 0.0,
+          "providerTrimEnd": 10.28,
+          "extraCues": [
+            {
+              "id": "result-value",
+              "phrase": "three metres"
+            }
+          ],
+          "figures": [
+            {
+              "phrase": "three metres",
+              "target": "B.after",
+              "value": "3"
+            },
+            {
+              "phrase": "three to",
+              "target": "B.after",
+              "value": "3"
+            },
+            {
+              "phrase": "three",
+              "occurrence": 1,
+              "target": "B.mass",
+              "value": "3"
+            }
+          ],
+          "ink": "vB = 9/3 = +3 m/s"
+        },
+        {
+          "id": "interpret",
+          "text": "The positive answer confirms our assumed arrow. A moves left, B moves right, and the particles separate.",
+          "start": 63.39,
+          "speechEnd": 72.78,
+          "end": 72.78,
+          "hold": 0.0,
+          "providerAudioSha256": "22990ff7e2c2d83fe326970d6e9fb05842ff98839b5e19fe5f436e6994f7c716",
+          "providerTrimStart": 0.05,
+          "providerTrimEnd": 9.44
+        }
+      ],
+      "audio": "direct-collisions-s05.mp3",
+      "duration": 73.377959,
+      "sampleDuration": 73.33,
+      "holds": [
+        {
+          "start": 43.08,
+          "end": 45.08,
+          "kind": "result",
+          "duration": 2.0
+        },
+        {
+          "start": 48.81,
+          "end": 50.81,
+          "kind": "result",
+          "duration": 2.0
+        },
+        {
+          "start": 61.24,
+          "end": 63.24,
+          "kind": "result",
+          "duration": 2.0
+        }
+      ],
+      "audioSha256": "5e974483f5d774cb08329472919176b84ee27697b94670a22aabbe24c0218c41",
+      "provider": "elevenlabs",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "voiceSpeed": 0.9,
+      "modelId": "eleven_turbo_v2_5",
+      "sampleRate": 44100
+    },
+    {
+      "id": "s06",
+      "title": "Trial 2: they stick together",
+      "mode": "together",
+      "tempo": "slow",
+      "beats": [
+        {
+          "id": "reset",
+          "text": "Reset to the original incoming particles. This independent trial ends with them sticking.",
+          "start": 0.55,
+          "speechEnd": 7.41,
+          "end": 7.41,
+          "hold": 0.0,
+          "providerAudioSha256": "ad00c8232b0b5e0096d8b6e75974e846301ee2ef25d7c5ee44645fc1296b916d",
+          "providerTrimStart": 0.0,
+          "providerTrimEnd": 6.86
+        },
+        {
+          "id": "principle",
+          "text": "The same external force condition holds, so momentum before equals momentum after.",
+          "start": 7.56,
+          "speechEnd": 14.21,
+          "end": 14.21,
+          "hold": 0.0,
+          "providerAudioSha256": "5e67c60d220e40f19540c006e9885e374a866b1f3432b6d1ad49ea3efecff9fe",
+          "providerTrimStart": 0.03,
+          "providerTrimEnd": 6.68,
+          "cuePhrase": "momentum before",
+          "ink": "momentum before = momentum after"
+        },
+        {
+          "id": "formula",
+          "text": "After sticking, both have velocity v. Mass A times u A, plus mass B times u B, equals the sum of the masses, times v.",
+          "start": 14.36,
+          "speechEnd": 27.42,
+          "end": 27.42,
+          "hold": 0.0,
+          "providerAudioSha256": "19a63b0b8915d3cdd4c8e0d4791f7f842f4bbe03490436a6af6933387e379d5e",
+          "providerTrimStart": 0.0,
+          "providerTrimEnd": 13.06,
+          "ink": "mA uA + mB uB = (mA + mB)v"
+        },
+        {
+          "id": "substitute",
+          "text": "Two times four, plus three times negative one, equals two plus three, all multiplied by v.",
+          "start": 27.57,
+          "speechEnd": 34.67,
+          "end": 34.67,
+          "hold": 0.0,
+          "providerAudioSha256": "8554014389fb93bb284a86b8bbfc2ed58937772045f9d38f66c6a74df6597cef",
+          "providerTrimStart": 0.05,
+          "providerTrimEnd": 7.15,
+          "figures": [
+            {
+              "phrase": "two",
+              "target": "A.mass",
+              "value": "2"
+            },
+            {
+              "phrase": "four",
+              "target": "A.before",
+              "value": "4"
+            },
+            {
+              "phrase": "three",
+              "target": "B.mass",
+              "value": "3"
+            },
+            {
+              "phrase": "one",
+              "target": "B.before",
+              "value": "1"
+            },
+            {
+              "phrase": "two",
+              "occurrence": 2,
+              "target": "A.mass",
+              "value": "2"
+            },
+            {
+              "phrase": "three",
+              "occurrence": 2,
+              "target": "B.mass",
+              "value": "3"
+            }
+          ],
+          "ink": "2×4 + 3×(−1) = (2 + 3)v"
+        },
+        {
+          "id": "simplify",
+          "text": "The initial momentum is five. The combined mass is five kilograms, so five equals five v.",
+          "hold": 2.0,
+          "start": 34.82,
+          "speechEnd": 43.11,
+          "end": 45.11,
+          "providerAudioSha256": "3d4113bdd24c18a4bd5e08f634d31622f273604bc8f4591419e90e503524cca9",
+          "providerTrimStart": 0.05,
+          "providerTrimEnd": 8.34,
+          "extraCues": [
+            {
+              "id": "combined-mass",
+              "phrase": "five kilograms"
+            }
+          ],
+          "figures": [
+            {
+              "phrase": "five kilograms",
+              "target": "pair.mass",
+              "value": "5"
+            },
+            {
+              "phrase": "five v",
+              "target": "pair.mass",
+              "value": "5"
+            }
+          ],
+          "ink": "5 = 5v"
+        },
+        {
+          "id": "result",
+          "text": "Divide by the combined mass. Their common velocity is positive one metre per second, so both move right together.",
+          "hold": 2.0,
+          "start": 45.26,
+          "speechEnd": 55.75,
+          "end": 57.75,
+          "providerAudioSha256": "768f67e7167171be0d0936d730c9cc6f66bf4f0851038d2c03d444d3b966787f",
+          "providerTrimStart": 0.03,
+          "providerTrimEnd": 10.52,
+          "extraCues": [
+            {
+              "id": "result-value",
+              "phrase": "one metre"
+            }
+          ],
+          "figures": [
+            {
+              "phrase": "one metre",
+              "target": "pair.after",
+              "value": "1"
+            }
+          ],
+          "ink": "v = 5/5 = +1 m/s"
+        },
+        {
+          "id": "interpret",
+          "text": "One common velocity replaces two separate after velocities. The particles remain in contact; their masses still add.",
+          "start": 57.9,
+          "speechEnd": 66.36,
+          "end": 66.36,
+          "hold": 0.0,
+          "providerAudioSha256": "5ed5cfd81fcd848b34a0b09180e92ea6acf76e77ed607cca199f11abccc68bc0",
+          "providerTrimStart": 0.0,
+          "providerTrimEnd": 8.46
+        }
+      ],
+      "audio": "direct-collisions-s06.mp3",
+      "duration": 66.951837,
+      "sampleDuration": 66.91,
+      "holds": [
+        {
+          "start": 43.11,
+          "end": 45.11,
+          "kind": "result",
+          "duration": 2.0
+        },
+        {
+          "start": 55.75,
+          "end": 57.75,
+          "kind": "result",
+          "duration": 2.0
+        }
+      ],
+      "audioSha256": "4014fb079739e26c1ca6b983ba423a5414996450fc8c734a13f769b6f0e19e19",
+      "provider": "elevenlabs",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "voiceSpeed": 0.9,
+      "modelId": "eleven_turbo_v2_5",
+      "sampleRate": 44100
+    },
+    {
+      "id": "s07",
+      "title": "Check the system and the direction",
+      "mode": "closing",
+      "tempo": "brisk",
+      "beats": [
+        {
+          "id": "contrast",
+          "text": "What if an external horizontal push mattered during impact? The pair could gain momentum; we could no longer equate the totals.",
+          "start": 0.55,
+          "speechEnd": 10.16,
+          "end": 10.16,
+          "hold": 0.0,
+          "providerAudioSha256": "41371b6555ae561a8462d974ea850e86cdd7ee89590183de4903a10444f40073",
+          "providerTrimStart": 0.01,
+          "providerTrimEnd": 9.62,
+          "caption": "External push: total momentum can change"
+        },
+        {
+          "id": "question",
+          "text": "Return to our original negligible force condition. A reverses direction. Does that mean the pair's total momentum is not conserved?",
+          "hold": 3.0,
+          "start": 10.31,
+          "speechEnd": 20.78,
+          "end": 23.78,
+          "providerAudioSha256": "b657a622a7fcaa422dcec81027d01d168254663a9e15d59f274ab6faffe3d1c1",
+          "providerTrimStart": 0.0,
+          "providerTrimEnd": 10.47,
+          "caption": "Does reversal break total momentum conservation?"
+        },
+        {
+          "id": "answer",
+          "text": "No. The individual momentum changes are opposite; the pair's total remains conserved.",
+          "start": 23.93,
+          "speechEnd": 30.62,
+          "end": 30.62,
+          "hold": 0.0,
+          "providerAudioSha256": "d93373f2b64a354eeaced102a4635bafdd186f19aa1d801aa7b2386283873cff",
+          "providerTrimStart": 0.01,
+          "providerTrimEnd": 6.7,
+          "caption": "Individual changes; conserved total"
+        },
+        {
+          "id": "outcome1",
+          "text": "Choose signed velocities.",
+          "start": 30.77,
+          "speechEnd": 32.48,
+          "end": 32.48,
+          "hold": 0.0,
+          "providerAudioSha256": "c7abec55eeda0ad91925798496dffcb406011cb71abca1dfb8ad3689d088825f",
+          "providerTrimStart": 0.01,
+          "providerTrimEnd": 1.72,
+          "caption": "Choose signed velocities."
+        },
+        {
+          "id": "outcome2",
+          "text": "Conserve the pair's momentum.",
+          "start": 32.63,
+          "speechEnd": 34.33,
+          "end": 34.33,
+          "hold": 0.0,
+          "providerAudioSha256": "8eed612c557cdcff5a2e18317fe06a865f1963ca339089cf0bc94aa4d05deb84",
+          "providerTrimStart": 0.02,
+          "providerTrimEnd": 1.72,
+          "caption": "Conserve the pair's momentum."
+        },
+        {
+          "id": "outcome3",
+          "text": "Solve separate and sticking outcomes.",
+          "start": 34.48,
+          "speechEnd": 36.81,
+          "end": 36.81,
+          "hold": 0.0,
+          "providerAudioSha256": "2990b43a92941a4b99af1598b15d1f9a822eb17940b7f090b87a018b794c0c73",
+          "providerTrimStart": 0.0,
+          "providerTrimEnd": 2.33,
+          "caption": "Solve separate and sticking outcomes."
+        }
+      ],
+      "audio": "direct-collisions-s07.mp3",
+      "duration": 37.407347,
+      "sampleDuration": 37.36,
+      "holds": [
+        {
+          "start": 20.78,
+          "end": 23.78,
+          "kind": "thinking",
+          "duration": 3.0
+        }
+      ],
+      "audioSha256": "66ecb17f436a6db804f443152c25e694b552f21cfd546c3fbf15e2468317fed5",
+      "provider": "elevenlabs",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "voiceSpeed": 1.0,
+      "modelId": "eleven_turbo_v2_5",
+      "sampleRate": 44100
+    }
+  ],
+  "generationComplete": true
+}
