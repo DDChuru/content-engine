@@ -2,64 +2,544 @@
   "project": "mechanics-momentum",
   "composition": "MechanicsMomentum",
   "mapCode": "M4.3a",
-  "outcomes": ["Calculate momentum.", "Use momentum's units.", "Interpret momentum's direction."],
+  "outcomes": [
+    "Calculate momentum.",
+    "Use momentum's units.",
+    "Interpret momentum's direction."
+  ],
   "scenes": [
-    {"id":"s01","title":"Syllabus 4.3: momentum","mode":"opening","tempo":"brisk","source":"Recording 2–25s; official syllabus p.32","beats":[
-      {"id":"quote","text":"Syllabus four point three. Here is the excerpt: use the definition of linear momentum.","caption":"use the definition of linear momentum"},
-      {"id":"outcome1","text":"By the end you can calculate momentum.","caption":"Calculate momentum."},
-      {"id":"outcome2","text":"Use momentum's units.","caption":"Use momentum's units."},
-      {"id":"outcome3","text":"And interpret momentum's direction.","caption":"Interpret momentum's direction."}
-    ]},
-    {"id":"s02","title":"Mass times velocity","mode":"definition","tempo":"brisk","source":"Recording 2–25s; PDF p.2, definition only","beats":[
-      {"id":"words","text":"For a moving trolley, momentum equals mass times velocity.","ink":"momentum = mass × velocity"},
-      {"id":"formula","text":"In symbols, p equals m v. The mass is m, and the velocity is v.","ink":"p = m v"},
-      {"id":"units","text":"Multiply kilograms by metres per second. That gives momentum in kilogram metres per second.","ink":"kg × m/s = kg m/s"},
-      {"id":"vector","text":"Velocity includes direction, so momentum does too. Its arrow points the same way as the trolley's velocity.","caption":"Momentum has magnitude and direction."}
-    ]},
-    {"id":"s03","title":"Two trolleys on separate tracks","mode":"story","tempo":"brisk","source":"Recording 26–45s; original comparison","beats":[
-      {"id":"story","text":"Consider two trolleys on separate parallel tracks. Trolley A travels to the right, while trolley B travels to the left."},
-      {"id":"compare-speed","text":"Watch their motion. A is moving faster. The separate tracks mean they pass without colliding."},
-      {"id":"snapshot","text":"Now freeze this picture so we can label the whole question.","caption":"Snapshot for calculation."}
-    ]},
-    {"id":"s04","title":"The whole question","mode":"setup","tempo":"brisk","source":"Recording 26–45s; original givens","beats":[
-      {"id":"given-a","text":"Trolley A has mass two kilograms and moves right at six metres per second.","figures":[{"phrase":"two","target":"mass-a","value":"2"},{"phrase":"six","target":"speed-a","value":"6"}]},
-      {"id":"given-b","text":"Trolley B has mass three kilograms and moves left at four metres per second.","figures":[{"phrase":"three","target":"mass-b","value":"3"},{"phrase":"four","target":"speed-b","value":"4"}]},
-      {"id":"positive","text":"The tracks are separate. Take right as positive."},
-      {"id":"question","text":"Find each signed momentum, then compare their magnitudes and directions. All the information is here before we calculate.","hold":2}
-    ]},
-    {"id":"s05","title":"Trolley A: choose the sign first","mode":"work-a","tempo":"slow","source":"Recording 33–38s; same signed-product method","beats":[
-      {"id":"reason","text":"Let's find trolley A's momentum. Why choose a direction before doing the arithmetic? Right is positive, and A moves right."},
-      {"id":"words","text":"Start with the rule in words: momentum equals mass times velocity.","ink":"momentum = mass × velocity"},
-      {"id":"formula","text":"In symbols, p equals m v. It is velocity that carries the sign.","ink":"p = m v"},
-      {"id":"velocity","text":"The speed is six metres per second. Because right is positive, the velocity is plus six metres per second.","ink":"v = +6 m/s","figures":[{"phrase":"six","target":"speed-a","value":"6"},{"phrase":"six","occurrence":2,"target":"velocity-a","value":"6"}],"markers":[{"id":"signed-a","phrase":"plus six"}]},
-      {"id":"substitution","text":"The mass is two kilograms. Substitute two times plus six into the formula.","ink":"p = 2 × (+6)","figures":[{"phrase":"two","target":"mass-a","value":"2"},{"phrase":"two","occurrence":2,"target":"mass-a","value":"2"},{"phrase":"six","target":"velocity-a","value":"6"}]},
-      {"id":"answer","text":"That gives plus twelve kilogram metres per second.","ink":"p = +12 kg m/s","hold":2,"markers":[{"id":"result-a","phrase":"twelve"}],"figures":[{"phrase":"twelve","target":"momentum-a","value":"12"}]},
-      {"id":"meaning","text":"The positive sign means rightwards. Keep that direction with the answer; the number alone does not give the whole vector.","caption":"Positive momentum points right."}
-    ]},
-    {"id":"s06","title":"Trolley B: a negative momentum","mode":"work-b","tempo":"slow","source":"Recording 39–45s; signed result and comparison","beats":[
-      {"id":"reason","text":"Now consider trolley B. Keep right positive. This trolley moves left, so its velocity must carry a minus sign. Its mass stays positive."},
-      {"id":"words","text":"Again, momentum equals mass times velocity.","ink":"momentum = mass × velocity"},
-      {"id":"formula","text":"Write p equals m v before putting in the numbers.","ink":"p = m v"},
-      {"id":"velocity","text":"Its speed is four metres per second. Because left is negative, write the velocity as minus four metres per second.","ink":"v = −4 m/s","figures":[{"phrase":"four","target":"speed-b","value":"4"},{"phrase":"four","occurrence":2,"target":"velocity-b","value":"4"}],"markers":[{"id":"signed-b","phrase":"minus four"}]},
-      {"id":"substitution","text":"Use the mass, three kilograms: three times minus four.","ink":"p = 3 × (−4)","figures":[{"phrase":"three","target":"mass-b","value":"3"},{"phrase":"three","occurrence":2,"target":"mass-b","value":"3"},{"phrase":"four","target":"velocity-b","value":"4"}]},
-      {"id":"answer","text":"The momentum is minus twelve kilogram metres per second.","ink":"p = −12 kg m/s","hold":2,"markers":[{"id":"result-b","phrase":"twelve"}],"figures":[{"phrase":"twelve","target":"momentum-b","value":"12"}]},
-      {"id":"meaning","text":"The minus sign tells us left, not a negative mass."},
-      {"id":"contrast","text":"Compare both results. Their magnitudes are equal, but their momentum arrows point in opposite directions. Equal magnitude alone does not mean equal momentum.","caption":"Equal magnitudes; opposite directions."}
-    ]},
-    {"id":"s07","title":"What if left becomes positive?","mode":"check","tempo":"slow","source":"Recording 19–25s and 33–45s; sign-convention application","beats":[
-      {"id":"question","text":"Keep the same masses and actual motion. What would change if we chose left as positive? Find both signed momenta. Does either trolley turn around?","hold":3},
-      {"id":"words","text":"Only our sign convention changes. Momentum still equals mass times velocity.","ink":"momentum = mass × velocity"},
-      {"id":"formula","text":"Write p equals m v.","ink":"p = m v"},
-      {"id":"sub-a","text":"A still moves right, now negative. Use two times minus six.","ink":"p A = 2 × (−6)","figures":[{"phrase":"two","target":"mass-a","value":"2"},{"phrase":"six","target":"velocity-a","value":"6"}],"markers":[{"id":"signed-a","phrase":"negative"}]},
-      {"id":"answer-a","text":"A's momentum is minus twelve kilogram metres per second.","ink":"p A = −12 kg m/s","hold":2,"markers":[{"id":"result-a","phrase":"twelve"}],"figures":[{"phrase":"twelve","target":"momentum-a","value":"12"}]},
-      {"id":"sub-b","text":"B still moves left, now positive. Use three times plus four.","ink":"p B = 3 × (+4)","figures":[{"phrase":"three","target":"mass-b","value":"3"},{"phrase":"four","target":"velocity-b","value":"4"}],"markers":[{"id":"signed-b","phrase":"positive"}]},
-      {"id":"answer-b","text":"B's momentum is plus twelve kilogram metres per second.","ink":"p B = +12 kg m/s","hold":2,"markers":[{"id":"result-b","phrase":"twelve"}],"figures":[{"phrase":"twelve","target":"momentum-b","value":"12"}]},
-      {"id":"meaning","text":"Neither trolley turns around. Changing which direction we call positive changes the signs, while the physical directions stay the same.","caption":"New signs; unchanged physical directions."}
-    ]},
-    {"id":"s08","title":"Momentum: what you can now do","mode":"recap","tempo":"brisk","source":"Recording 46–59s","beats":[
-      {"id":"outcome1","text":"You can now calculate momentum: mass times velocity.","caption":"Calculate momentum."},
-      {"id":"outcome2","text":"Use momentum's units: kilogram metres per second.","caption":"Use momentum's units."},
-      {"id":"outcome3","text":"And interpret momentum's direction. Choose a positive direction, use signed velocity, and explain what the sign means.","caption":"Interpret momentum's direction."}
-    ]}
+    {
+      "id": "s01",
+      "title": "Syllabus 4.3: momentum",
+      "mode": "opening",
+      "tempo": "brisk",
+      "source": "Recording 2–25s; official syllabus p.32",
+      "beats": [
+        {
+          "id": "quote",
+          "text": "Syllabus four point three. Here is the excerpt: use the definition of linear momentum.",
+          "caption": "use the definition of linear momentum"
+        },
+        {
+          "id": "outcome1",
+          "text": "By the end you can calculate momentum.",
+          "caption": "Calculate momentum."
+        },
+        {
+          "id": "outcome2",
+          "text": "Use momentum's units.",
+          "caption": "Use momentum's units."
+        },
+        {
+          "id": "outcome3",
+          "text": "And interpret momentum's direction.",
+          "caption": "Interpret momentum's direction."
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "title": "Mass times velocity",
+      "mode": "definition",
+      "tempo": "brisk",
+      "source": "Recording 2–25s; PDF p.2, definition only",
+      "beats": [
+        {
+          "id": "words",
+          "text": "For a moving trolley, momentum equals mass times velocity.",
+          "ink": "momentum = mass × velocity"
+        },
+        {
+          "id": "formula",
+          "text": "In symbols, p equals m v. The mass is m, and the velocity is v.",
+          "ink": "p = m v",
+          "figures": [
+            {
+              "phrase": "m",
+              "occurrence": 1,
+              "target": "symbol-mass",
+              "value": "m"
+            },
+            {
+              "phrase": "v",
+              "occurrence": 1,
+              "target": "symbol-velocity",
+              "value": "v"
+            },
+            {
+              "phrase": "m",
+              "occurrence": 2,
+              "target": "symbol-mass",
+              "value": "m"
+            },
+            {
+              "phrase": "v",
+              "occurrence": 2,
+              "target": "symbol-velocity",
+              "value": "v"
+            }
+          ]
+        },
+        {
+          "id": "units",
+          "text": "Multiply kilograms by metres per second. That gives momentum in kilogram metres per second.",
+          "ink": "kg × m/s = kg m/s"
+        },
+        {
+          "id": "vector",
+          "text": "Velocity includes direction, so momentum does too. Mass is positive, so momentum's arrow points the same way as velocity.",
+          "caption": "Momentum has magnitude and direction.",
+          "markers": [
+            {
+              "id": "momentum-direction",
+              "phrase": "momentum's arrow"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "title": "Two trolleys on separate tracks",
+      "mode": "story",
+      "tempo": "brisk",
+      "source": "Recording 26–45s; original comparison",
+      "beats": [
+        {
+          "id": "story",
+          "text": "Consider two trolleys on separate parallel tracks. Trolley A travels to the right, while trolley B travels to the left."
+        },
+        {
+          "id": "compare-speed",
+          "text": "Watch their motion. A is moving faster. The separate tracks mean they pass without colliding.",
+          "markers": [
+            {
+              "id": "pass",
+              "phrase": "pass"
+            }
+          ]
+        },
+        {
+          "id": "snapshot",
+          "text": "Now freeze this picture so we can label the whole question.",
+          "caption": "Snapshot for calculation.",
+          "markers": [
+            {
+              "id": "freeze",
+              "phrase": "freeze"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "title": "The whole question",
+      "mode": "setup",
+      "tempo": "brisk",
+      "source": "Recording 26–45s; original givens",
+      "beats": [
+        {
+          "id": "given-a",
+          "text": "Trolley A has mass two kilograms and moves right at six metres per second.",
+          "figures": [
+            {
+              "phrase": "two",
+              "target": "mass-a",
+              "value": "2"
+            },
+            {
+              "phrase": "six",
+              "target": "speed-a",
+              "value": "6"
+            }
+          ]
+        },
+        {
+          "id": "given-b",
+          "text": "Trolley B has mass three kilograms and moves left at four metres per second.",
+          "figures": [
+            {
+              "phrase": "three",
+              "target": "mass-b",
+              "value": "3"
+            },
+            {
+              "phrase": "four",
+              "target": "speed-b",
+              "value": "4"
+            }
+          ]
+        },
+        {
+          "id": "positive",
+          "text": "The tracks are separate. Take right as positive.",
+          "markers": [
+            {
+              "id": "condition-line",
+              "phrase": "Take"
+            }
+          ]
+        },
+        {
+          "id": "question",
+          "text": "Find each signed momentum, then compare their magnitudes and directions. All the information is here before we calculate.",
+          "hold": 2,
+          "markers": [
+            {
+              "id": "ask-line",
+              "phrase": "Find"
+            },
+            {
+              "id": "compare-line",
+              "phrase": "compare"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "title": "Trolley A: choose the sign first",
+      "mode": "work-a",
+      "tempo": "slow",
+      "source": "Recording 33–38s; same signed-product method",
+      "beats": [
+        {
+          "id": "reason",
+          "text": "Let's find trolley A's momentum. Why choose a direction before doing the arithmetic? Right is positive, and A moves right."
+        },
+        {
+          "id": "words",
+          "text": "Start with the rule in words: momentum equals mass times velocity.",
+          "ink": "momentum = mass × velocity"
+        },
+        {
+          "id": "formula",
+          "text": "In symbols, p equals m v. It is velocity that carries the sign.",
+          "ink": "p = m v"
+        },
+        {
+          "id": "velocity",
+          "text": "The speed is six metres per second. Because right is positive, the velocity is plus six metres per second.",
+          "ink": "v = +6 m/s",
+          "figures": [
+            {
+              "phrase": "six",
+              "target": "speed-a",
+              "value": "6"
+            },
+            {
+              "phrase": "six",
+              "occurrence": 2,
+              "target": "velocity-a",
+              "value": "6"
+            }
+          ],
+          "markers": [
+            {
+              "id": "signed-a",
+              "phrase": "plus six"
+            }
+          ]
+        },
+        {
+          "id": "substitution",
+          "text": "The mass is two kilograms. Substitute two times plus six into the formula.",
+          "ink": "p = 2 × (+6)",
+          "figures": [
+            {
+              "phrase": "two",
+              "target": "mass-a",
+              "value": "2"
+            },
+            {
+              "phrase": "two",
+              "occurrence": 2,
+              "target": "mass-a",
+              "value": "2"
+            },
+            {
+              "phrase": "six",
+              "target": "velocity-a",
+              "value": "6"
+            }
+          ]
+        },
+        {
+          "id": "answer",
+          "text": "That gives plus twelve kilogram metres per second.",
+          "ink": "p = +12 kg m/s",
+          "hold": 2,
+          "markers": [
+            {
+              "id": "result-a",
+              "phrase": "twelve"
+            }
+          ],
+          "figures": [
+            {
+              "phrase": "twelve",
+              "target": "momentum-a",
+              "value": "12"
+            }
+          ]
+        },
+        {
+          "id": "meaning",
+          "text": "The positive sign means rightwards. Keep that direction with the answer; the number alone does not give the whole vector.",
+          "caption": "Positive momentum points right."
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "title": "Trolley B: a negative momentum",
+      "mode": "work-b",
+      "tempo": "slow",
+      "source": "Recording 39–45s; signed result and comparison",
+      "beats": [
+        {
+          "id": "reason",
+          "text": "Now consider trolley B. Keep right positive. This trolley moves left, so its velocity must carry a minus sign. Its mass stays positive."
+        },
+        {
+          "id": "words",
+          "text": "Again, momentum equals mass times velocity.",
+          "ink": "momentum = mass × velocity"
+        },
+        {
+          "id": "formula",
+          "text": "Write p equals m v before putting in the numbers.",
+          "ink": "p = m v"
+        },
+        {
+          "id": "velocity",
+          "text": "Its speed is four metres per second. Because left is negative, write the velocity as minus four metres per second.",
+          "ink": "v = −4 m/s",
+          "figures": [
+            {
+              "phrase": "four",
+              "target": "speed-b",
+              "value": "4"
+            },
+            {
+              "phrase": "four",
+              "occurrence": 2,
+              "target": "velocity-b",
+              "value": "4"
+            }
+          ],
+          "markers": [
+            {
+              "id": "signed-b",
+              "phrase": "minus four"
+            }
+          ]
+        },
+        {
+          "id": "substitution",
+          "text": "Use the mass, three kilograms: three times minus four.",
+          "ink": "p = 3 × (−4)",
+          "figures": [
+            {
+              "phrase": "three",
+              "target": "mass-b",
+              "value": "3"
+            },
+            {
+              "phrase": "three",
+              "occurrence": 2,
+              "target": "mass-b",
+              "value": "3"
+            },
+            {
+              "phrase": "four",
+              "target": "velocity-b",
+              "value": "4"
+            }
+          ]
+        },
+        {
+          "id": "answer",
+          "text": "The momentum is minus twelve kilogram metres per second.",
+          "ink": "p = −12 kg m/s",
+          "hold": 2,
+          "markers": [
+            {
+              "id": "result-b",
+              "phrase": "twelve"
+            }
+          ],
+          "figures": [
+            {
+              "phrase": "twelve",
+              "target": "momentum-b",
+              "value": "12"
+            }
+          ]
+        },
+        {
+          "id": "meaning",
+          "text": "The minus sign tells us left, not a negative mass."
+        },
+        {
+          "id": "contrast",
+          "text": "Compare both results. Their magnitudes are equal, but their momentum arrows point in opposite directions. Equal magnitude alone does not mean equal momentum.",
+          "caption": "Equal magnitudes; opposite directions."
+        }
+      ]
+    },
+    {
+      "id": "s07",
+      "title": "What if left becomes positive?",
+      "mode": "check",
+      "tempo": "slow",
+      "source": "Recording 19–25s and 33–45s; sign-convention application",
+      "beats": [
+        {
+          "id": "question",
+          "text": "Keep the same masses and actual motion. What would change if we chose left as positive? Find both signed momenta. Does either trolley turn around?",
+          "hold": 3,
+          "markers": [
+            {
+              "id": "condition-line",
+              "phrase": "left"
+            },
+            {
+              "id": "ask-line",
+              "phrase": "Find"
+            },
+            {
+              "id": "compare-line",
+              "phrase": "Does"
+            }
+          ]
+        },
+        {
+          "id": "words",
+          "text": "Only our sign convention changes. Momentum still equals mass times velocity.",
+          "ink": "momentum = mass × velocity"
+        },
+        {
+          "id": "formula",
+          "text": "Write p equals m v.",
+          "ink": "p = m v"
+        },
+        {
+          "id": "sub-a",
+          "text": "A still moves right, now negative. Use two times minus six.",
+          "ink": "p A = 2 × (−6)",
+          "figures": [
+            {
+              "phrase": "two",
+              "target": "mass-a",
+              "value": "2"
+            },
+            {
+              "phrase": "six",
+              "target": "velocity-a",
+              "value": "6"
+            }
+          ],
+          "markers": [
+            {
+              "id": "signed-a",
+              "phrase": "negative"
+            }
+          ]
+        },
+        {
+          "id": "answer-a",
+          "text": "A's momentum is minus twelve kilogram metres per second.",
+          "ink": "p A = −12 kg m/s",
+          "hold": 2,
+          "markers": [
+            {
+              "id": "result-a",
+              "phrase": "twelve"
+            }
+          ],
+          "figures": [
+            {
+              "phrase": "twelve",
+              "target": "momentum-a",
+              "value": "12"
+            }
+          ]
+        },
+        {
+          "id": "sub-b",
+          "text": "B still moves left, now positive. Use three times plus four.",
+          "ink": "p B = 3 × (+4)",
+          "figures": [
+            {
+              "phrase": "three",
+              "target": "mass-b",
+              "value": "3"
+            },
+            {
+              "phrase": "four",
+              "target": "velocity-b",
+              "value": "4"
+            }
+          ],
+          "markers": [
+            {
+              "id": "signed-b",
+              "phrase": "positive"
+            }
+          ]
+        },
+        {
+          "id": "answer-b",
+          "text": "B's momentum is plus twelve kilogram metres per second.",
+          "ink": "p B = +12 kg m/s",
+          "hold": 2,
+          "markers": [
+            {
+              "id": "result-b",
+              "phrase": "twelve"
+            }
+          ],
+          "figures": [
+            {
+              "phrase": "twelve",
+              "target": "momentum-b",
+              "value": "12"
+            }
+          ]
+        },
+        {
+          "id": "meaning",
+          "text": "Neither trolley turns around. Changing which direction we call positive changes the signs, while the physical directions stay the same.",
+          "caption": "New signs; unchanged physical directions."
+        }
+      ]
+    },
+    {
+      "id": "s08",
+      "title": "Momentum: what you can now do",
+      "mode": "recap",
+      "tempo": "brisk",
+      "source": "Recording 46–59s",
+      "beats": [
+        {
+          "id": "outcome1",
+          "text": "You can now calculate momentum: mass times velocity.",
+          "caption": "Calculate momentum."
+        },
+        {
+          "id": "outcome2",
+          "text": "Use momentum's units: kilogram metres per second.",
+          "caption": "Use momentum's units."
+        },
+        {
+          "id": "outcome3",
+          "text": "And interpret momentum's direction. Choose a positive direction, use signed velocity, and explain what the sign means.",
+          "caption": "Interpret momentum's direction."
+        }
+      ]
+    }
   ]
 }

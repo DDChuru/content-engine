@@ -1,0 +1,801 @@
+{
+  "project": "mechanics-momentum",
+  "timingSource": "momentum.json word-level Whisper transcript",
+  "scenes": [
+    {
+      "id": "s01",
+      "audio": "momentum-s01.mp3",
+      "audioSha256": "4f32d9e83ddf2ed327bae13373ef27f805575f444bdca29f6de024ad2ba70415",
+      "bindings": [
+        {
+          "id": "quote",
+          "beat": "quote",
+          "wordIndex": 0,
+          "word": "Syllabus",
+          "start": 0.4
+        },
+        {
+          "id": "outcome1",
+          "beat": "outcome1",
+          "wordIndex": 14,
+          "word": "By",
+          "start": 6.69
+        },
+        {
+          "id": "outcome2",
+          "beat": "outcome2",
+          "wordIndex": 21,
+          "word": "Use",
+          "start": 8.82
+        },
+        {
+          "id": "outcome3",
+          "beat": "outcome3",
+          "wordIndex": 24,
+          "word": "and",
+          "start": 10.3
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "audio": "momentum-s02.mp3",
+      "audioSha256": "2dbacd5e38179f47475896d2219b5362ee4c9d20860909ab8a6cd9dbf7388a9c",
+      "bindings": [
+        {
+          "id": "words",
+          "beat": "words",
+          "wordIndex": 0,
+          "word": "For",
+          "start": 0.4
+        },
+        {
+          "id": "formula",
+          "beat": "formula",
+          "wordIndex": 9,
+          "word": "In",
+          "start": 4.7
+        },
+        {
+          "id": "formula-figure-1",
+          "beat": "formula",
+          "selector": "m",
+          "wordIndex": 13,
+          "word": "m",
+          "start": 6.62
+        },
+        {
+          "id": "formula-figure-2",
+          "beat": "formula",
+          "selector": "v",
+          "wordIndex": 14,
+          "word": "v.",
+          "start": 7.04
+        },
+        {
+          "id": "formula-figure-3",
+          "beat": "formula",
+          "selector": "m",
+          "wordIndex": 18,
+          "word": "m,",
+          "start": 8.76
+        },
+        {
+          "id": "formula-figure-4",
+          "beat": "formula",
+          "selector": "v",
+          "wordIndex": 23,
+          "word": "v.",
+          "start": 10.48
+        },
+        {
+          "id": "units",
+          "beat": "units",
+          "wordIndex": 24,
+          "word": "Multiply",
+          "start": 11.02
+        },
+        {
+          "id": "vector",
+          "beat": "vector",
+          "wordIndex": 38,
+          "word": "Velocity",
+          "start": 17.93
+        },
+        {
+          "id": "momentum-direction",
+          "beat": "vector",
+          "selector": "momentum's arrow",
+          "wordIndex": 49,
+          "word": "momentum's",
+          "start": 23.75
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "audio": "momentum-s03.mp3",
+      "audioSha256": "d816dcd1d4d73ee2ccd0151b4c32040d9ca1c7b5c22354549a784acaf674855a",
+      "bindings": [
+        {
+          "id": "story",
+          "beat": "story",
+          "wordIndex": 0,
+          "word": "Consider",
+          "start": 0.4
+        },
+        {
+          "id": "story-label-1",
+          "beat": "story",
+          "selector": "script label A",
+          "alignment": "matching script/transcript token block",
+          "wordIndex": 8,
+          "word": "A",
+          "start": 4.52
+        },
+        {
+          "id": "story-label-2",
+          "beat": "story",
+          "selector": "script label B",
+          "alignment": "matching script/transcript token block",
+          "wordIndex": 15,
+          "word": "B",
+          "start": 7.42
+        },
+        {
+          "id": "compare-speed",
+          "beat": "compare-speed",
+          "wordIndex": 20,
+          "word": "Watch",
+          "start": 9.12
+        },
+        {
+          "id": "pass",
+          "beat": "compare-speed",
+          "selector": "pass",
+          "wordIndex": 32,
+          "word": "pass",
+          "start": 15.2
+        },
+        {
+          "id": "compare-speed-label-1",
+          "beat": "compare-speed",
+          "selector": "script label A",
+          "alignment": "matching script/transcript token block",
+          "wordIndex": 23,
+          "word": "A",
+          "start": 11.12
+        },
+        {
+          "id": "snapshot",
+          "beat": "snapshot",
+          "wordIndex": 35,
+          "word": "Now",
+          "start": 16.9
+        },
+        {
+          "id": "freeze",
+          "beat": "snapshot",
+          "selector": "freeze",
+          "wordIndex": 36,
+          "word": "freeze",
+          "start": 17.06
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "audio": "momentum-s04.mp3",
+      "audioSha256": "24cc529129f65312a538cc00a90787fd3d189bed76a69f1bd297d780b07c1609",
+      "bindings": [
+        {
+          "id": "given-a",
+          "beat": "given-a",
+          "wordIndex": 0,
+          "word": "Trolley",
+          "start": 0.4
+        },
+        {
+          "id": "given-a-figure-1",
+          "beat": "given-a",
+          "selector": "two",
+          "wordIndex": 4,
+          "word": "two",
+          "start": 1.78
+        },
+        {
+          "id": "given-a-figure-2",
+          "beat": "given-a",
+          "selector": "six",
+          "wordIndex": 10,
+          "word": "six",
+          "start": 4.76
+        },
+        {
+          "id": "given-a-label-1",
+          "beat": "given-a",
+          "selector": "script label A",
+          "alignment": "matching script/transcript token block",
+          "wordIndex": 1,
+          "word": "A",
+          "start": 0.82
+        },
+        {
+          "id": "given-b",
+          "beat": "given-b",
+          "wordIndex": 14,
+          "word": "Trolley",
+          "start": 6.34
+        },
+        {
+          "id": "given-b-figure-1",
+          "beat": "given-b",
+          "selector": "three",
+          "wordIndex": 18,
+          "word": "three",
+          "start": 7.42
+        },
+        {
+          "id": "given-b-figure-2",
+          "beat": "given-b",
+          "selector": "four",
+          "wordIndex": 24,
+          "word": "four",
+          "start": 10.1
+        },
+        {
+          "id": "given-b-label-1",
+          "beat": "given-b",
+          "selector": "script label B",
+          "alignment": "matching script/transcript token block",
+          "wordIndex": 15,
+          "word": "B",
+          "start": 6.72
+        },
+        {
+          "id": "positive",
+          "beat": "positive",
+          "wordIndex": 28,
+          "word": "The",
+          "start": 11.53
+        },
+        {
+          "id": "condition-line",
+          "beat": "positive",
+          "selector": "Take",
+          "wordIndex": 32,
+          "word": "Take",
+          "start": 13.19
+        },
+        {
+          "id": "question",
+          "beat": "question",
+          "wordIndex": 36,
+          "word": "Find",
+          "start": 14.77
+        },
+        {
+          "id": "ask-line",
+          "beat": "question",
+          "selector": "Find",
+          "wordIndex": 36,
+          "word": "Find",
+          "start": 14.77
+        },
+        {
+          "id": "compare-line",
+          "beat": "question",
+          "selector": "compare",
+          "wordIndex": 41,
+          "word": "compare",
+          "start": 16.85
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "audio": "momentum-s05.mp3",
+      "audioSha256": "951e1a4309c5bed9ea7ed0cf00b92f26a24aa68d5cbbf739a5bb065997aaa4c4",
+      "bindings": [
+        {
+          "id": "reason",
+          "beat": "reason",
+          "wordIndex": 0,
+          "word": "Let's",
+          "start": 0.4
+        },
+        {
+          "id": "reason-label-1",
+          "beat": "reason",
+          "selector": "script label A",
+          "alignment": "matching script/transcript token block",
+          "wordIndex": 3,
+          "word": "A's",
+          "start": 1.24
+        },
+        {
+          "id": "reason-label-2",
+          "beat": "reason",
+          "selector": "script label A",
+          "alignment": "matching script/transcript token block",
+          "wordIndex": 17,
+          "word": "A",
+          "start": 9.9
+        },
+        {
+          "id": "words",
+          "beat": "words",
+          "wordIndex": 20,
+          "word": "Start",
+          "start": 11.93
+        },
+        {
+          "id": "formula",
+          "beat": "formula",
+          "wordIndex": 31,
+          "word": "In",
+          "start": 18.42
+        },
+        {
+          "id": "velocity",
+          "beat": "velocity",
+          "wordIndex": 44,
+          "word": "The",
+          "start": 26.0
+        },
+        {
+          "id": "signed-a",
+          "beat": "velocity",
+          "selector": "plus six",
+          "wordIndex": 58,
+          "word": "plus",
+          "start": 32.42
+        },
+        {
+          "id": "velocity-figure-1",
+          "beat": "velocity",
+          "selector": "six",
+          "wordIndex": 47,
+          "word": "six",
+          "start": 26.88
+        },
+        {
+          "id": "velocity-figure-2",
+          "beat": "velocity",
+          "selector": "six",
+          "wordIndex": 59,
+          "word": "six",
+          "start": 32.68
+        },
+        {
+          "id": "substitution",
+          "beat": "substitution",
+          "wordIndex": 63,
+          "word": "The",
+          "start": 34.58
+        },
+        {
+          "id": "substitution-figure-1",
+          "beat": "substitution",
+          "selector": "two",
+          "wordIndex": 66,
+          "word": "two",
+          "start": 35.62
+        },
+        {
+          "id": "substitution-figure-2",
+          "beat": "substitution",
+          "selector": "two",
+          "wordIndex": 69,
+          "word": "two",
+          "start": 38.32
+        },
+        {
+          "id": "substitution-figure-3",
+          "beat": "substitution",
+          "selector": "six",
+          "wordIndex": 72,
+          "word": "six",
+          "start": 39.46
+        },
+        {
+          "id": "answer",
+          "beat": "answer",
+          "wordIndex": 76,
+          "word": "That",
+          "start": 41.99
+        },
+        {
+          "id": "result-a",
+          "beat": "answer",
+          "selector": "twelve",
+          "wordIndex": 79,
+          "word": "twelve",
+          "start": 42.77
+        },
+        {
+          "id": "answer-figure-1",
+          "beat": "answer",
+          "selector": "twelve",
+          "wordIndex": 79,
+          "word": "twelve",
+          "start": 42.77
+        },
+        {
+          "id": "meaning",
+          "beat": "meaning",
+          "wordIndex": 84,
+          "word": "The",
+          "start": 47.54
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "audio": "momentum-s06.mp3",
+      "audioSha256": "77ae66fdb60475b495edd75209ea4fa669e416ca08a3baee69e7a119fa7fc9f0",
+      "bindings": [
+        {
+          "id": "reason",
+          "beat": "reason",
+          "wordIndex": 0,
+          "word": "Now",
+          "start": 0.4
+        },
+        {
+          "id": "reason-label-1",
+          "beat": "reason",
+          "selector": "script label B",
+          "alignment": "matching script/transcript token block",
+          "wordIndex": 3,
+          "word": "B.",
+          "start": 1.38
+        },
+        {
+          "id": "words",
+          "beat": "words",
+          "wordIndex": 23,
+          "word": "Again,",
+          "start": 12.4
+        },
+        {
+          "id": "formula",
+          "beat": "formula",
+          "wordIndex": 29,
+          "word": "Write",
+          "start": 15.91
+        },
+        {
+          "id": "velocity",
+          "beat": "velocity",
+          "wordIndex": 39,
+          "word": "Its",
+          "start": 20.16
+        },
+        {
+          "id": "signed-b",
+          "beat": "velocity",
+          "selector": "minus four",
+          "wordIndex": 54,
+          "word": "minus",
+          "start": 26.7
+        },
+        {
+          "id": "velocity-figure-1",
+          "beat": "velocity",
+          "selector": "four",
+          "wordIndex": 42,
+          "word": "four",
+          "start": 21.08
+        },
+        {
+          "id": "velocity-figure-2",
+          "beat": "velocity",
+          "selector": "four",
+          "wordIndex": 55,
+          "word": "four",
+          "start": 26.96
+        },
+        {
+          "id": "substitution",
+          "beat": "substitution",
+          "wordIndex": 59,
+          "word": "Use",
+          "start": 28.58
+        },
+        {
+          "id": "substitution-figure-1",
+          "beat": "substitution",
+          "selector": "three",
+          "wordIndex": 62,
+          "word": "three",
+          "start": 29.24
+        },
+        {
+          "id": "substitution-figure-2",
+          "beat": "substitution",
+          "selector": "three",
+          "wordIndex": 64,
+          "word": "three",
+          "start": 31.74
+        },
+        {
+          "id": "substitution-figure-3",
+          "beat": "substitution",
+          "selector": "four",
+          "wordIndex": 67,
+          "word": "four.",
+          "start": 32.74
+        },
+        {
+          "id": "answer",
+          "beat": "answer",
+          "wordIndex": 68,
+          "word": "The",
+          "start": 33.53
+        },
+        {
+          "id": "result-b",
+          "beat": "answer",
+          "selector": "twelve",
+          "wordIndex": 72,
+          "word": "twelve",
+          "start": 35.21
+        },
+        {
+          "id": "answer-figure-1",
+          "beat": "answer",
+          "selector": "twelve",
+          "wordIndex": 72,
+          "word": "twelve",
+          "start": 35.21
+        },
+        {
+          "id": "meaning",
+          "beat": "meaning",
+          "wordIndex": 77,
+          "word": "The",
+          "start": 40.15
+        },
+        {
+          "id": "contrast",
+          "beat": "contrast",
+          "wordIndex": 87,
+          "word": "Compare",
+          "start": 45.56
+        }
+      ]
+    },
+    {
+      "id": "s07",
+      "audio": "momentum-s07.mp3",
+      "audioSha256": "423ea543999688a84c8f60bc22804657bbb05cd6c76b114b3dbf4e25b18a91ff",
+      "bindings": [
+        {
+          "id": "question",
+          "beat": "question",
+          "wordIndex": 0,
+          "word": "Keep",
+          "start": 0.4
+        },
+        {
+          "id": "condition-line",
+          "beat": "question",
+          "selector": "left",
+          "wordIndex": 13,
+          "word": "left",
+          "start": 5.3
+        },
+        {
+          "id": "ask-line",
+          "beat": "question",
+          "selector": "Find",
+          "wordIndex": 16,
+          "word": "Find",
+          "start": 7.4
+        },
+        {
+          "id": "compare-line",
+          "beat": "question",
+          "selector": "Does",
+          "wordIndex": 20,
+          "word": "Does",
+          "start": 10.42
+        },
+        {
+          "id": "words",
+          "beat": "words",
+          "wordIndex": 25,
+          "word": "Only",
+          "start": 15.68
+        },
+        {
+          "id": "formula",
+          "beat": "formula",
+          "wordIndex": 36,
+          "word": "Write",
+          "start": 22.13
+        },
+        {
+          "id": "sub-a",
+          "beat": "sub-a",
+          "wordIndex": 41,
+          "word": "A",
+          "start": 24.36
+        },
+        {
+          "id": "signed-a",
+          "beat": "sub-a",
+          "selector": "negative",
+          "wordIndex": 46,
+          "word": "negative.",
+          "start": 26.62
+        },
+        {
+          "id": "sub-a-figure-1",
+          "beat": "sub-a",
+          "selector": "two",
+          "wordIndex": 48,
+          "word": "two",
+          "start": 28.54
+        },
+        {
+          "id": "sub-a-figure-2",
+          "beat": "sub-a",
+          "selector": "six",
+          "wordIndex": 51,
+          "word": "six.",
+          "start": 29.58
+        },
+        {
+          "id": "sub-a-label-1",
+          "beat": "sub-a",
+          "selector": "script label A",
+          "alignment": "matching script/transcript token block",
+          "wordIndex": 41,
+          "word": "A",
+          "start": 24.36
+        },
+        {
+          "id": "answer-a",
+          "beat": "answer-a",
+          "wordIndex": 52,
+          "word": "A's",
+          "start": 30.46
+        },
+        {
+          "id": "result-a",
+          "beat": "answer-a",
+          "selector": "twelve",
+          "wordIndex": 56,
+          "word": "twelve",
+          "start": 31.82
+        },
+        {
+          "id": "answer-a-figure-1",
+          "beat": "answer-a",
+          "selector": "twelve",
+          "wordIndex": 56,
+          "word": "twelve",
+          "start": 31.82
+        },
+        {
+          "id": "answer-a-label-1",
+          "beat": "answer-a",
+          "selector": "script label A",
+          "alignment": "matching script/transcript token block",
+          "wordIndex": 52,
+          "word": "A's",
+          "start": 30.46
+        },
+        {
+          "id": "sub-b",
+          "beat": "sub-b",
+          "wordIndex": 61,
+          "word": "B",
+          "start": 36.61
+        },
+        {
+          "id": "signed-b",
+          "beat": "sub-b",
+          "selector": "positive",
+          "wordIndex": 66,
+          "word": "positive.",
+          "start": 38.99
+        },
+        {
+          "id": "sub-b-figure-1",
+          "beat": "sub-b",
+          "selector": "three",
+          "wordIndex": 68,
+          "word": "three",
+          "start": 40.75
+        },
+        {
+          "id": "sub-b-figure-2",
+          "beat": "sub-b",
+          "selector": "four",
+          "wordIndex": 71,
+          "word": "four.",
+          "start": 41.75
+        },
+        {
+          "id": "sub-b-label-1",
+          "beat": "sub-b",
+          "selector": "script label B",
+          "alignment": "matching script/transcript token block",
+          "wordIndex": 61,
+          "word": "B",
+          "start": 36.61
+        },
+        {
+          "id": "answer-b",
+          "beat": "answer-b",
+          "wordIndex": 72,
+          "word": "B's",
+          "start": 42.45
+        },
+        {
+          "id": "result-b",
+          "beat": "answer-b",
+          "selector": "twelve",
+          "wordIndex": 76,
+          "word": "twelve",
+          "start": 43.89
+        },
+        {
+          "id": "answer-b-figure-1",
+          "beat": "answer-b",
+          "selector": "twelve",
+          "wordIndex": 76,
+          "word": "twelve",
+          "start": 43.89
+        },
+        {
+          "id": "answer-b-label-1",
+          "beat": "answer-b",
+          "selector": "script label B",
+          "alignment": "matching script/transcript token block",
+          "wordIndex": 72,
+          "word": "B's",
+          "start": 42.45
+        },
+        {
+          "id": "meaning",
+          "beat": "meaning",
+          "wordIndex": 81,
+          "word": "Neither",
+          "start": 48.51
+        }
+      ]
+    },
+    {
+      "id": "s08",
+      "audio": "momentum-s08.mp3",
+      "audioSha256": "c500ac3c749fa17c0b6532dd0faccc652e196396ea77230466e4cde8dcfa4e31",
+      "bindings": [
+        {
+          "id": "outcome1",
+          "beat": "outcome1",
+          "wordIndex": 0,
+          "word": "You",
+          "start": 0.4
+        },
+        {
+          "id": "outcome2",
+          "beat": "outcome2",
+          "wordIndex": 8,
+          "word": "Use",
+          "start": 4.49
+        },
+        {
+          "id": "outcome3",
+          "beat": "outcome3",
+          "wordIndex": 15,
+          "word": "And",
+          "start": 8.16
+        }
+      ]
+    }
+  ]
+}

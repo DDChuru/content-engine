@@ -1,0 +1,561 @@
+{
+  "checkedAt": "2026-09-12T10:50:51.213Z",
+  "mode": "authored-source-only",
+  "typescript": {
+    "version": "5.9.3",
+    "path": "/home/durai/Documents/projects/content-engine/packages/backend/node_modules/typescript/lib/typescript.js",
+    "dependencyBackend": "/home/durai/Documents/projects/content-engine/packages/backend"
+  },
+  "checks": [
+    {
+      "name": "topic TS/TSX syntax and transpilation",
+      "status": "pass",
+      "files": [
+        {
+          "path": "packages/backend/src/remotion/compositions/MechanicsMomentum.tsx",
+          "sha256": "50fd105eeeddb576c4289ae192a9bd31a3e4893760c45ca168a4913856f8cf59"
+        },
+        {
+          "path": "packages/backend/src/remotion/compositions/MechanicsMomentum.entry.tsx",
+          "sha256": "f4d7c0a6b6f63dca0ef5c9bceb37af499e7d1fe93c7773b9eeb01d6dfcef489d"
+        },
+        {
+          "path": "packages/backend/src/remotion/compositions/mechanics-momentum/Diagram.tsx",
+          "sha256": "17b4c888db48dfe1d1a89711fd1ee7929f9721b138da1bfdd12fc0e40625a11d"
+        },
+        {
+          "path": "packages/backend/src/remotion/compositions/mechanics-momentum/motion.ts",
+          "sha256": "ea3c1e59ea84e4d8756adae3941b6edbabdcd61c1f32ec937d128f603264b034"
+        }
+      ]
+    },
+    {
+      "name": "all planned handwritten glyphs and complete Paper extents",
+      "status": "pass",
+      "inkModule": "packages/backend/src/remotion/compositions/mechanics-m42/Ink.tsx",
+      "sha256": "7e31abd5b11a7d12a4454c6f244bfcd0b9b8a5f1b00b2339459c460b3f443551",
+      "count": 19,
+      "lines": [
+        {
+          "scene": "s02",
+          "beat": "words",
+          "text": "momentum = mass × velocity",
+          "page": 0,
+          "index": 0,
+          "size": 31.38913624220837,
+          "width": 704.9999999999999,
+          "strokeCount": 31,
+          "extent": {
+            "left": 42.01945681211042,
+            "right": 738.8193677649152,
+            "top": 58.45,
+            "bottom": 99.21696349065003
+          }
+        },
+        {
+          "scene": "s02",
+          "beat": "formula",
+          "text": "p = m v",
+          "page": 0,
+          "index": 1,
+          "size": 34,
+          "width": 184.28,
+          "strokeCount": 6,
+          "extent": {
+            "left": 43.85,
+            "right": 220.35000000000002,
+            "top": 169.91,
+            "bottom": 207.35000000000002
+          }
+        },
+        {
+          "scene": "s02",
+          "beat": "units",
+          "text": "kg × m/s = kg m/s",
+          "page": 0,
+          "index": 2,
+          "size": 34,
+          "width": 455.6,
+          "strokeCount": 18,
+          "extent": {
+            "left": 43.85,
+            "right": 492.01000000000005,
+            "top": 269.13,
+            "bottom": 314.05
+          }
+        },
+        {
+          "scene": "s05",
+          "beat": "words",
+          "text": "momentum = mass × velocity",
+          "page": 0,
+          "index": 0,
+          "size": 31.38913624220837,
+          "width": 704.9999999999999,
+          "strokeCount": 31,
+          "extent": {
+            "left": 42.01945681211042,
+            "right": 738.8193677649152,
+            "top": 58.45,
+            "bottom": 99.21696349065003
+          }
+        },
+        {
+          "scene": "s05",
+          "beat": "formula",
+          "text": "p = m v",
+          "page": 0,
+          "index": 1,
+          "size": 34,
+          "width": 184.28,
+          "strokeCount": 6,
+          "extent": {
+            "left": 43.85,
+            "right": 220.35000000000002,
+            "top": 169.91,
+            "bottom": 207.35000000000002
+          }
+        },
+        {
+          "scene": "s05",
+          "beat": "velocity",
+          "text": "v = +6 m/s",
+          "page": 0,
+          "index": 2,
+          "size": 34,
+          "width": 263.84,
+          "strokeCount": 10,
+          "extent": {
+            "left": 41.470000000000006,
+            "right": 300.25,
+            "top": 269.81,
+            "bottom": 304.19
+          }
+        },
+        {
+          "scene": "s05",
+          "beat": "substitution",
+          "text": "p = 2 × (+6)",
+          "page": 0,
+          "index": 3,
+          "size": 34,
+          "width": 286.96000000000004,
+          "strokeCount": 11,
+          "extent": {
+            "left": 43.85,
+            "right": 322.35,
+            "top": 374.81,
+            "bottom": 417.35
+          }
+        },
+        {
+          "scene": "s05",
+          "beat": "answer",
+          "text": "p = +12 kg m/s",
+          "page": 0,
+          "index": 4,
+          "size": 34,
+          "width": 366.86,
+          "strokeCount": 15,
+          "extent": {
+            "left": 43.85,
+            "right": 403.27000000000004,
+            "top": 479.13,
+            "bottom": 524.05
+          }
+        },
+        {
+          "scene": "s06",
+          "beat": "words",
+          "text": "momentum = mass × velocity",
+          "page": 0,
+          "index": 0,
+          "size": 31.38913624220837,
+          "width": 704.9999999999999,
+          "strokeCount": 31,
+          "extent": {
+            "left": 42.01945681211042,
+            "right": 738.8193677649152,
+            "top": 58.45,
+            "bottom": 99.21696349065003
+          }
+        },
+        {
+          "scene": "s06",
+          "beat": "formula",
+          "text": "p = m v",
+          "page": 0,
+          "index": 1,
+          "size": 34,
+          "width": 184.28,
+          "strokeCount": 6,
+          "extent": {
+            "left": 43.85,
+            "right": 220.35000000000002,
+            "top": 169.91,
+            "bottom": 207.35000000000002
+          }
+        },
+        {
+          "scene": "s06",
+          "beat": "velocity",
+          "text": "v = −4 m/s",
+          "page": 0,
+          "index": 2,
+          "size": 34,
+          "width": 263.16,
+          "strokeCount": 9,
+          "extent": {
+            "left": 41.470000000000006,
+            "right": 299.57,
+            "top": 269.81,
+            "bottom": 304.19
+          }
+        },
+        {
+          "scene": "s06",
+          "beat": "substitution",
+          "text": "p = 3 × (−4)",
+          "page": 0,
+          "index": 3,
+          "size": 34,
+          "width": 285.6,
+          "strokeCount": 10,
+          "extent": {
+            "left": 43.85,
+            "right": 320.99,
+            "top": 374.81,
+            "bottom": 417.35
+          }
+        },
+        {
+          "scene": "s06",
+          "beat": "answer",
+          "text": "p = −12 kg m/s",
+          "page": 0,
+          "index": 4,
+          "size": 34,
+          "width": 365.16,
+          "strokeCount": 14,
+          "extent": {
+            "left": 43.85,
+            "right": 401.57000000000005,
+            "top": 479.13,
+            "bottom": 524.05
+          }
+        },
+        {
+          "scene": "s07",
+          "beat": "words",
+          "text": "momentum = mass × velocity",
+          "page": 0,
+          "index": 0,
+          "size": 31.38913624220837,
+          "width": 704.9999999999999,
+          "strokeCount": 31,
+          "extent": {
+            "left": 42.01945681211042,
+            "right": 738.8193677649152,
+            "top": 58.45,
+            "bottom": 99.21696349065003
+          }
+        },
+        {
+          "scene": "s07",
+          "beat": "formula",
+          "text": "p = m v",
+          "page": 0,
+          "index": 1,
+          "size": 34,
+          "width": 184.28,
+          "strokeCount": 6,
+          "extent": {
+            "left": 43.85,
+            "right": 220.35000000000002,
+            "top": 169.91,
+            "bottom": 207.35000000000002
+          }
+        },
+        {
+          "scene": "s07",
+          "beat": "sub-a",
+          "text": "p A = 2 × (−6)",
+          "page": 0,
+          "index": 2,
+          "size": 34,
+          "width": 335.58000000000004,
+          "strokeCount": 12,
+          "extent": {
+            "left": 43.85,
+            "right": 370.9700000000001,
+            "top": 269.81,
+            "bottom": 312.35
+          }
+        },
+        {
+          "scene": "s07",
+          "beat": "answer-a",
+          "text": "p A = −12 kg m/s",
+          "page": 0,
+          "index": 3,
+          "size": 34,
+          "width": 415.4800000000001,
+          "strokeCount": 16,
+          "extent": {
+            "left": 43.85,
+            "right": 451.8900000000001,
+            "top": 374.13,
+            "bottom": 419.05
+          }
+        },
+        {
+          "scene": "s07",
+          "beat": "sub-b",
+          "text": "p B = 3 × (+4)",
+          "page": 0,
+          "index": 4,
+          "size": 34,
+          "width": 337.62,
+          "strokeCount": 13,
+          "extent": {
+            "left": 43.85,
+            "right": 373.01000000000005,
+            "top": 479.81,
+            "bottom": 522.3499999999999
+          }
+        },
+        {
+          "scene": "s07",
+          "beat": "answer-b",
+          "text": "p B = +12 kg m/s",
+          "page": 0,
+          "index": 5,
+          "size": 34,
+          "width": 417.18000000000006,
+          "strokeCount": 17,
+          "extent": {
+            "left": 43.85,
+            "right": 453.5900000000001,
+            "top": 584.13,
+            "bottom": 629.05
+          }
+        }
+      ]
+    },
+    {
+      "name": "actual motion direction, speed ratio, hold continuity and snapshot",
+      "status": "pass",
+      "source": "packages/backend/src/remotion/compositions/mechanics-momentum/motion.ts",
+      "sha256": "ea3c1e59ea84e4d8756adae3941b6edbabdcd61c1f32ec937d128f603264b034",
+      "scenarios": [
+        {
+          "name": "unheld",
+          "start": 2,
+          "pass": 13,
+          "snapshot": 25,
+          "holds": [],
+          "sampledFrames": 750,
+          "first": {
+            "xA": 318,
+            "xB": 538
+          },
+          "last": {
+            "xA": 594,
+            "xB": 354
+          },
+          "crossing": {
+            "xA": 450,
+            "xB": 450
+          },
+          "speedRatio": 1.5
+        },
+        {
+          "name": "two true pauses",
+          "start": 2,
+          "pass": 23,
+          "snapshot": 31,
+          "holds": [
+            {
+              "start": 6,
+              "end": 8
+            },
+            {
+              "start": 16,
+              "end": 19
+            }
+          ],
+          "sampledFrames": 930,
+          "first": {
+            "xA": 263.33333333333337,
+            "xB": 574.4444444444445
+          },
+          "last": {
+            "xA": 543.3333333333334,
+            "xB": 387.77777777777777
+          },
+          "crossing": {
+            "xA": 450,
+            "xB": 450
+          },
+          "speedRatio": 1.5
+        },
+        {
+          "name": "long camera scale",
+          "start": 0,
+          "pass": 72,
+          "snapshot": 120,
+          "holds": [
+            {
+              "start": 55,
+              "end": 59
+            }
+          ],
+          "sampledFrames": 3661,
+          "first": {
+            "xA": 285.8620689655172,
+            "xB": 559.4252873563219
+          },
+          "last": {
+            "xA": 565.8620689655172,
+            "xB": 372.7586206896552
+          },
+          "crossing": {
+            "xA": 450,
+            "xB": 450
+          },
+          "speedRatio": 1.5
+        },
+        {
+          "name": "actual story transcript",
+          "start": 0.4,
+          "pass": 15.2,
+          "snapshot": 17.06,
+          "holds": [],
+          "sampledFrames": 560,
+          "first": {
+            "xA": 272.4,
+            "xB": 568.4
+          },
+          "last": {
+            "xA": 472.32,
+            "xB": 435.12
+          },
+          "crossing": {
+            "xA": 450,
+            "xB": 450
+          },
+          "speedRatio": 1.5
+        }
+      ]
+    },
+    {
+      "name": "wheel contact from actual Diagram source geometry",
+      "status": "pass",
+      "source": "packages/backend/src/remotion/compositions/mechanics-momentum/Diagram.tsx",
+      "geometry": {
+        "cy": -14,
+        "radius": 14
+      },
+      "contacts": [
+        {
+          "id": "A",
+          "rail": 300,
+          "wheelBottom": 300,
+          "wheelOffsets": [
+            -30,
+            30
+          ]
+        },
+        {
+          "id": "B",
+          "rail": 620,
+          "wheelBottom": 620,
+          "wheelOffsets": [
+            -30,
+            30
+          ]
+        }
+      ],
+      "method": "source geometry only; no DOM/render measurement"
+    },
+    {
+      "name": "runtime transcript plan, ink, beat/marker cues and diagram figures",
+      "status": "pass",
+      "path": "packages/backend/src/remotion/public/transcripts/mechanics/momentum.json",
+      "sha256": "4db976817074626931d0f43183058911daea0162e93a8aae8e13d888a6526dc9",
+      "counts": {
+        "scenes": 8,
+        "beats": 41,
+        "ink": 19,
+        "markers": 17,
+        "figures": 38
+      },
+      "figureTargetsFromActualSource": [
+        "label-a",
+        "label-b",
+        "mass-a",
+        "mass-b",
+        "momentum-a",
+        "momentum-b",
+        "speed-a",
+        "speed-b",
+        "symbol-mass",
+        "symbol-momentum",
+        "symbol-velocity",
+        "velocity-a",
+        "velocity-b"
+      ]
+    },
+    {
+      "name": "composition exports and narration cue references",
+      "status": "pass",
+      "exports": [
+        "MechanicsMomentum",
+        "MechanicsMomentumProps",
+        "getMechanicsMomentumDuration"
+      ],
+      "literalCueReferences": [
+        "freeze",
+        "momentum-direction",
+        "pass",
+        "story"
+      ],
+      "limitation": "Literal cue existence only; scene-specific dynamic routing requires A preview."
+    },
+    {
+      "name": "actual exported duration follows rounded scene audio durations",
+      "status": "pass",
+      "durations": [
+        {
+          "fps": 24,
+          "frames": 6746,
+          "seconds": 281.0833333333333
+        },
+        {
+          "fps": 25,
+          "frames": 7027,
+          "seconds": 281.08
+        },
+        {
+          "fps": 30,
+          "frames": 8434,
+          "seconds": 281.1333333333333
+        },
+        {
+          "fps": 60,
+          "frames": 16862,
+          "seconds": 281.03333333333336
+        }
+      ],
+      "method": "Load actual composition and shared modules against installed React/Remotion; invoke duration function only."
+    }
+  ],
+  "limitations": [
+    "transpileModule diagnostics verify syntax/transpilation, not a complete TypeScript semantic build.",
+    "No Remotion render, browser, DOM/font measurement, encoded video or preview was produced.",
+    "Prepared pen geometry and source-derived wheel contact do not substitute for rendered frame inspection.",
+    "Machine A must inspect complete setup, all number rings, result before/after frames, finished ink, motion extremes, holds and sign-axis reversal.",
+    "Audio decoding, source narration matching and word-level Whisper provenance are verified by the separate narration verifier."
+  ],
+  "status": "pass"
+}

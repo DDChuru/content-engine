@@ -9,6 +9,7 @@ Per-beat generation caches live beside this script in the ignored .audio-cache.
 from __future__ import annotations
 
 import concurrent.futures
+import difflib
 import hashlib
 import json
 import os
@@ -110,17 +111,27 @@ def prepare_beat(scene: dict, beat: dict, whisper: WhisperModel) -> tuple[np.nda
             output.writeframes(values.tobytes())
     with wave.open(str(wav_path), 'rb') as source:
         values = np.frombuffer(source.readframes(source.getnframes()), dtype=np.int16).copy()
-    if transcript_path.exists():
-        words = json.loads(transcript_path.read_text())
-    else:
-        segments, _ = whisper.transcribe(
-            str(wav_path), language='en', beam_size=5, word_timestamps=True,
-            vad_filter=False, condition_on_previous_text=False, initial_prompt=beat['text'],
-        )
-        words = [{'word': word.word.strip(), 'start': round(word.start, 4), 'end': round(word.end, 4)}
-                 for segment in segments for word in segment.words]
-        if not words:
-            raise RuntimeError(f'Whisper returned no words: {scene["id"]}/{beat["id"]}')
+    words = json.loads(transcript_path.read_text()) if transcript_path.exists() else []
+    def faithful(candidate: list[dict]) -> bool:
+        expected = tokens(beat['text'])
+        actual = tokens(' '.join(word['word'] for word in candidate))
+        numbers = lambda sequence: [token for token in sequence if re.fullmatch(r'\d+(?:\.\d+)?', token)]
+        return (difflib.SequenceMatcher(None, expected, actual).ratio() >= 0.85
+                and numbers(expected) == numbers(actual))
+    if not faithful(words):
+        # Short clips can provoke Whisper's generic closing-phrase hallucination.
+        # Retry the same real audio; never manufacture text or word timestamps.
+        for prompt in (None, beat['text']):
+            segments, _ = whisper.transcribe(
+                str(wav_path), language='en', beam_size=5, word_timestamps=True,
+                vad_filter=True, condition_on_previous_text=False, initial_prompt=prompt,
+            )
+            words = [{'word': word.word.strip(), 'start': round(float(word.start), 4), 'end': round(float(word.end), 4)}
+                     for segment in segments for word in segment.words]
+            if faithful(words):
+                break
+        if not faithful(words):
+            raise RuntimeError(f'Whisper transcript failed script-fidelity check: {scene["id"]}/{beat["id"]}: {words}')
         transcript_path.write_text(json.dumps(words, indent=2) + '\n')
         print(f"Whisper {scene['id']}/{beat['id']}: {len(words)} words", flush=True)
     return values, words
@@ -175,6 +186,23 @@ def match_word(words: list[dict], binding: dict) -> int:
     return ordered[occurrence - 1]
 
 
+def spoken_labels(text: str, words: list[dict]) -> list[dict]:
+    """Align the script's case-sensitive A/B labels to actual Whisper words."""
+    expected = tokens(text)
+    flattened = [(token, index) for index, word in enumerate(words) for token in tokens(word['word'])]
+    actual = [token for token, _ in flattened]
+    alignment = difflib.SequenceMatcher(None, expected, actual, autojunk=False).get_matching_blocks()
+    result = []
+    for mention in re.finditer(r"\b([AB])(?:['’]s)?\b", text):
+        script_index = len(tokens(text[:mention.start()]))
+        block = next((block for block in alignment if block.a <= script_index < block.a + block.size), None)
+        if block is None:
+            raise RuntimeError(f'Whisper did not align spoken trolley label {mention[0]} in: {text}')
+        actual_index = block.b + script_index - block.a
+        result.append({'wordIndex': flattened[actual_index][1], 'label': mention[1]})
+    return result
+
+
 def compose_scene(scene: dict, whisper: WhisperModel) -> tuple[dict, list[dict]]:
     chunks: list[np.ndarray] = []
     position = 0
@@ -222,6 +250,16 @@ def compose_scene(scene: dict, whisper: WhisperModel) -> tuple[dict, list[dict]]
                 events.append({'id': binding['id'], 'wordIndex': index,
                                'word': binding.get('word', word['word']), 'start': word['start'],
                                'target': binding['target'], 'kind': 'spoken'})
+        for label_number, label in enumerate(spoken_labels(beat['text'], local_words), 1):
+            index = first_index + label['wordIndex']
+            word = words[index]
+            event_id = f"{beat['id']}-label-{label_number}"
+            cues[event_id] = word['start']
+            mapping.append({'id': event_id, 'beat': beat['id'], 'selector': f"script label {label['label']}",
+                            'alignment': 'matching script/transcript token block', 'wordIndex': index,
+                            'word': word['word'], 'start': word['start']})
+            events.append({'id': event_id, 'wordIndex': index, 'word': label['label'],
+                           'start': word['start'], 'target': f"label-{label['label'].lower()}", 'kind': 'spoken'})
         if hold:
             hold_start = position / SAMPLE_RATE
             silence(hold)
@@ -267,7 +305,10 @@ def main() -> None:
         mapping.append({'id': scene['id'], 'audio': data['audio'], 'audioSha256': data['audioSha256'], 'bindings': cue_data})
     (TRANSCRIPTS / 'momentum.json').write_text(json.dumps({
         'project': 'mechanics-momentum', 'sceneCount': len(output),
+        'totalDuration': round(sum(scene['duration'] for scene in output), 6),
+        'engine': 'faster-whisper small', 'unresolvedCues': [],
         'transcriber': {'engine': 'faster-whisper', 'model': 'small', 'wordTimestamps': True,
+                        'device': 'cpu', 'computeType': 'int8', 'cpuThreads': 2,
                         'alignment': 'per-beat Whisper timestamps offset by composed PCM sample positions'},
         'scenes': output,
     }, indent=2, ensure_ascii=False) + '\n')
