@@ -1,3 +1,23 @@
+import { MechanicsCoefficientOfFrictionHarderProblemsFable, MechanicsCoefficientOfFrictionHarderProblemsFableProps, getMechanicsCoefficientOfFrictionHarderProblemsFableDuration } from './compositions/MechanicsCoefficientOfFrictionHarderProblemsFable';
+import { MechanicsCoefficientOfFrictionAndInclinedPlanesFable, MechanicsCoefficientOfFrictionAndInclinedPlanesFableProps, getMechanicsCoefficientOfFrictionAndInclinedPlanesFableDuration } from './compositions/MechanicsCoefficientOfFrictionAndInclinedPlanesFable';
+import { MechanicsPower, MechanicsPowerProps, getMechanicsPowerDuration } from './compositions/MechanicsPower';
+import { MechanicsEnergyPrinciples, MechanicsEnergyPrinciplesProps, getMechanicsEnergyPrinciplesDuration } from './compositions/MechanicsEnergyPrinciples';
+import { MechanicsEnergy, MechanicsEnergyProps, getMechanicsEnergyDuration } from './compositions/MechanicsEnergy';
+import { MechanicsWork, MechanicsWorkProps, getMechanicsWorkDuration } from './compositions/MechanicsWork';
+import { MechanicsCoefficientOfFrictionHarderProblems, MechanicsCoefficientOfFrictionHarderProblemsProps, getMechanicsCoefficientOfFrictionHarderProblemsDuration } from './compositions/MechanicsCoefficientOfFrictionHarderProblems';
+import { MechanicsCoefficientOfFrictionAndInclinedPlanes, MechanicsCoefficientOfFrictionAndInclinedPlanesProps, getMechanicsCoefficientOfFrictionAndInclinedPlanesDuration } from './compositions/MechanicsCoefficientOfFrictionAndInclinedPlanes';
+import { MechanicsCoefficientOfFrictionFEqualsMaFable, MechanicsCoefficientOfFrictionFEqualsMaFableProps, getMechanicsCoefficientOfFrictionFEqualsMaFableDuration } from './compositions/MechanicsCoefficientOfFrictionFEqualsMaFable';
+import { MechanicsCoefficientOfFrictionFable, MechanicsCoefficientOfFrictionFableProps, getMechanicsCoefficientOfFrictionFableDuration } from './compositions/MechanicsCoefficientOfFrictionFable';
+import { MechanicsResolvingForcesAndInclinedPlanesFable, MechanicsResolvingForcesAndInclinedPlanesFableProps, getMechanicsResolvingForcesAndInclinedPlanesFableDuration } from './compositions/MechanicsResolvingForcesAndInclinedPlanesFable';
+import { MechanicsConnectedBodiesPulleysFable, MechanicsConnectedBodiesPulleysFableProps, getMechanicsConnectedBodiesPulleysFableDuration } from './compositions/MechanicsConnectedBodiesPulleysFable';
+import { MechanicsCoefficientOfFrictionFEqualsMa, MechanicsCoefficientOfFrictionFEqualsMaProps, getMechanicsCoefficientOfFrictionFEqualsMaDuration } from './compositions/MechanicsCoefficientOfFrictionFEqualsMa';
+import { MechanicsCoefficientOfFriction, MechanicsCoefficientOfFrictionProps, getMechanicsCoefficientOfFrictionDuration } from './compositions/MechanicsCoefficientOfFriction';
+import { MechanicsResolvingForcesAndInclinedPlanes, MechanicsResolvingForcesAndInclinedPlanesProps, getMechanicsResolvingForcesAndInclinedPlanesDuration } from './compositions/MechanicsResolvingForcesAndInclinedPlanes';
+import { MechanicsConnectedBodiesPulleys, MechanicsConnectedBodiesPulleysProps, getMechanicsConnectedBodiesPulleysDuration } from './compositions/MechanicsConnectedBodiesPulleys';
+import { MechanicsConnectedBodiesLifts, MechanicsConnectedBodiesLiftsProps, getMechanicsConnectedBodiesLiftsDuration } from './compositions/MechanicsConnectedBodiesLifts';
+import { MechanicsConnectedBodiesRopesAndTowBars, MechanicsConnectedBodiesRopesAndTowBarsProps, getMechanicsConnectedBodiesRopesAndTowBarsDuration } from './compositions/MechanicsConnectedBodiesRopesAndTowBars';
+import { MechanicsFEqualsMa, MechanicsFEqualsMaProps, getMechanicsFEqualsMaDuration } from './compositions/MechanicsFEqualsMa';
+import { MechanicsEquilibriumIn2D, MechanicsEquilibriumIn2DProps, getMechanicsEquilibriumIn2DDuration } from './compositions/MechanicsEquilibriumIn2D';
 import React from 'react';
 import { Composition, registerRoot } from 'remotion';
 import { MechanicsEquilibriumIn1D, MechanicsEquilibriumIn1DProps, getMechanicsEquilibriumIn1DDuration } from './compositions/MechanicsEquilibriumIn1D';
@@ -67,6 +87,8 @@ import { MechanicsVelocityTimeGraphs, MechanicsVelocityTimeGraphsProps, getMecha
 import { MechanicsModellingAssumptions, MechanicsModellingAssumptionsProps, getMechanicsModellingAssumptionsDuration } from './compositions/MechanicsModellingAssumptions';
 import { MechanicsDrawingTravelGraphs, MechanicsDrawingTravelGraphsProps, getMechanicsDrawingTravelGraphsDuration } from './compositions/MechanicsDrawingTravelGraphs';
 import { MechanicsMultipleCollisions, MechanicsMultipleCollisionsProps, getMechanicsMultipleCollisionsDuration } from './compositions/MechanicsMultipleCollisions';
+import { MechanicsMomentum, MechanicsMomentumProps, getMechanicsMomentumDuration } from './compositions/MechanicsMomentum';
+import { MechanicsDirectCollisions, MechanicsDirectCollisionsProps, getMechanicsDirectCollisionsDuration } from './compositions/MechanicsDirectCollisions';
 import { MechanicsUsingCalculusIn1D, MechanicsUsingCalculusIn1DProps, getMechanicsUsingCalculusIn1DDuration } from './compositions/MechanicsUsingCalculusIn1D';
 import { MechanicsDerivingSuvat, MechanicsDerivingSuvatProps, getMechanicsDerivingSuvatDuration } from './compositions/MechanicsDerivingSuvat';
 import { MechanicsSuvatIn1D, MechanicsSuvatIn1DProps, getMechanicsSuvatIn1DDuration } from './compositions/MechanicsSuvatIn1D';
@@ -1357,6 +1379,24 @@ export const RemotionRoot: React.FC = () => {
         defaultProps={{ audioEnabled: true } satisfies MechanicsMultipleCollisionsProps}
       />
       <Composition
+        id="MechanicsMomentum"
+        component={MechanicsMomentum}
+        durationInFrames={getMechanicsMomentumDuration(fps)}
+        fps={30}
+        width={1920}
+        height={1080}
+        defaultProps={{ audioEnabled: true } satisfies MechanicsMomentumProps}
+      />
+      <Composition
+        id="MechanicsDirectCollisions"
+        component={MechanicsDirectCollisions}
+        durationInFrames={getMechanicsDirectCollisionsDuration(fps)}
+        fps={30}
+        width={1920}
+        height={1080}
+        defaultProps={{ audioEnabled: true } satisfies MechanicsDirectCollisionsProps}
+      />
+      <Composition
         id="MechanicsUsingCalculusIn1D"
         component={MechanicsUsingCalculusIn1D}
         durationInFrames={getMechanicsUsingCalculusIn1DDuration(30)}
@@ -1409,6 +1449,186 @@ export const RemotionRoot: React.FC = () => {
         width={1920}
         height={1080}
         defaultProps={{ audioEnabled: true } satisfies MechanicsForceDiagramsProps}
+      />
+      <Composition
+        id="MechanicsEquilibriumIn2D"
+        component={MechanicsEquilibriumIn2D}
+        durationInFrames={getMechanicsEquilibriumIn2DDuration(30)}
+        fps={30}
+        width={1920}
+        height={1080}
+        defaultProps={{ audioEnabled: true } satisfies MechanicsEquilibriumIn2DProps}
+      />
+      <Composition
+        id="MechanicsFEqualsMa"
+        component={MechanicsFEqualsMa}
+        durationInFrames={getMechanicsFEqualsMaDuration(30)}
+        fps={30}
+        width={1920}
+        height={1080}
+        defaultProps={{ audioEnabled: true } satisfies MechanicsFEqualsMaProps}
+      />
+      <Composition
+        id="MechanicsConnectedBodiesRopesAndTowBars"
+        component={MechanicsConnectedBodiesRopesAndTowBars}
+        durationInFrames={getMechanicsConnectedBodiesRopesAndTowBarsDuration(30)}
+        fps={30}
+        width={1920}
+        height={1080}
+        defaultProps={{ audioEnabled: true } satisfies MechanicsConnectedBodiesRopesAndTowBarsProps}
+      />
+      <Composition
+        id="MechanicsConnectedBodiesLifts"
+        component={MechanicsConnectedBodiesLifts}
+        durationInFrames={getMechanicsConnectedBodiesLiftsDuration(30)}
+        fps={30}
+        width={1920}
+        height={1080}
+        defaultProps={{ audioEnabled: true } satisfies MechanicsConnectedBodiesLiftsProps}
+      />
+      <Composition
+        id="MechanicsConnectedBodiesPulleys"
+        component={MechanicsConnectedBodiesPulleys}
+        durationInFrames={getMechanicsConnectedBodiesPulleysDuration(30)}
+        fps={30}
+        width={1920}
+        height={1080}
+        defaultProps={{ audioEnabled: true } satisfies MechanicsConnectedBodiesPulleysProps}
+      />
+      <Composition
+        id="MechanicsResolvingForcesAndInclinedPlanes"
+        component={MechanicsResolvingForcesAndInclinedPlanes}
+        durationInFrames={getMechanicsResolvingForcesAndInclinedPlanesDuration(30)}
+        fps={30}
+        width={1920}
+        height={1080}
+        defaultProps={{ audioEnabled: true } satisfies MechanicsResolvingForcesAndInclinedPlanesProps}
+      />
+      <Composition
+        id="MechanicsCoefficientOfFriction"
+        component={MechanicsCoefficientOfFriction}
+        durationInFrames={getMechanicsCoefficientOfFrictionDuration(30)}
+        fps={30}
+        width={1920}
+        height={1080}
+        defaultProps={{ audioEnabled: true } satisfies MechanicsCoefficientOfFrictionProps}
+      />
+      <Composition
+        id="MechanicsCoefficientOfFrictionFEqualsMa"
+        component={MechanicsCoefficientOfFrictionFEqualsMa}
+        durationInFrames={getMechanicsCoefficientOfFrictionFEqualsMaDuration(30)}
+        fps={30}
+        width={1920}
+        height={1080}
+        defaultProps={{ audioEnabled: true } satisfies MechanicsCoefficientOfFrictionFEqualsMaProps}
+      />
+      <Composition
+        id="MechanicsConnectedBodiesPulleysFable"
+        component={MechanicsConnectedBodiesPulleysFable}
+        durationInFrames={getMechanicsConnectedBodiesPulleysFableDuration(30)}
+        fps={30}
+        width={1920}
+        height={1080}
+        defaultProps={{ audioEnabled: true } satisfies MechanicsConnectedBodiesPulleysFableProps}
+      />
+      <Composition
+        id="MechanicsResolvingForcesAndInclinedPlanesFable"
+        component={MechanicsResolvingForcesAndInclinedPlanesFable}
+        durationInFrames={getMechanicsResolvingForcesAndInclinedPlanesFableDuration(30)}
+        fps={30}
+        width={1920}
+        height={1080}
+        defaultProps={{ audioEnabled: true } satisfies MechanicsResolvingForcesAndInclinedPlanesFableProps}
+      />
+      <Composition
+        id="MechanicsCoefficientOfFrictionFable"
+        component={MechanicsCoefficientOfFrictionFable}
+        durationInFrames={getMechanicsCoefficientOfFrictionFableDuration(30)}
+        fps={30}
+        width={1920}
+        height={1080}
+        defaultProps={{ audioEnabled: true } satisfies MechanicsCoefficientOfFrictionFableProps}
+      />
+      <Composition
+        id="MechanicsCoefficientOfFrictionFEqualsMaFable"
+        component={MechanicsCoefficientOfFrictionFEqualsMaFable}
+        durationInFrames={getMechanicsCoefficientOfFrictionFEqualsMaFableDuration(30)}
+        fps={30}
+        width={1920}
+        height={1080}
+        defaultProps={{ audioEnabled: true } satisfies MechanicsCoefficientOfFrictionFEqualsMaFableProps}
+      />
+      <Composition
+        id="MechanicsCoefficientOfFrictionAndInclinedPlanes"
+        component={MechanicsCoefficientOfFrictionAndInclinedPlanes}
+        durationInFrames={getMechanicsCoefficientOfFrictionAndInclinedPlanesDuration(30)}
+        fps={30}
+        width={1920}
+        height={1080}
+        defaultProps={{ audioEnabled: true } satisfies MechanicsCoefficientOfFrictionAndInclinedPlanesProps}
+      />
+      <Composition
+        id="MechanicsCoefficientOfFrictionHarderProblems"
+        component={MechanicsCoefficientOfFrictionHarderProblems}
+        durationInFrames={getMechanicsCoefficientOfFrictionHarderProblemsDuration(30)}
+        fps={30}
+        width={1920}
+        height={1080}
+        defaultProps={{ audioEnabled: true } satisfies MechanicsCoefficientOfFrictionHarderProblemsProps}
+      />
+      <Composition
+        id="MechanicsWork"
+        component={MechanicsWork}
+        durationInFrames={getMechanicsWorkDuration(30)}
+        fps={30}
+        width={1920}
+        height={1080}
+        defaultProps={{ audioEnabled: true } satisfies MechanicsWorkProps}
+      />
+      <Composition
+        id="MechanicsEnergy"
+        component={MechanicsEnergy}
+        durationInFrames={getMechanicsEnergyDuration(30)}
+        fps={30}
+        width={1920}
+        height={1080}
+        defaultProps={{ audioEnabled: true } satisfies MechanicsEnergyProps}
+      />
+      <Composition
+        id="MechanicsEnergyPrinciples"
+        component={MechanicsEnergyPrinciples}
+        durationInFrames={getMechanicsEnergyPrinciplesDuration(30)}
+        fps={30}
+        width={1920}
+        height={1080}
+        defaultProps={{ audioEnabled: true } satisfies MechanicsEnergyPrinciplesProps}
+      />
+      <Composition
+        id="MechanicsPower"
+        component={MechanicsPower}
+        durationInFrames={getMechanicsPowerDuration(30)}
+        fps={30}
+        width={1920}
+        height={1080}
+        defaultProps={{ audioEnabled: true } satisfies MechanicsPowerProps}
+      />
+      <Composition
+        id="MechanicsCoefficientOfFrictionAndInclinedPlanesFable"
+        component={MechanicsCoefficientOfFrictionAndInclinedPlanesFable}
+        durationInFrames={getMechanicsCoefficientOfFrictionAndInclinedPlanesFableDuration(30)}
+        fps={30}
+        width={1920}
+        height={1080}
+        defaultProps={{ audioEnabled: true } satisfies MechanicsCoefficientOfFrictionAndInclinedPlanesFableProps}
+      />
+      <Composition
+        id="MechanicsCoefficientOfFrictionHarderProblemsFable"
+        component={MechanicsCoefficientOfFrictionHarderProblemsFable}
+        durationInFrames={getMechanicsCoefficientOfFrictionHarderProblemsFableDuration(30)}
+        fps={30}
+        width={1920}
+        height={1080}
+        defaultProps={{ audioEnabled: true } satisfies MechanicsCoefficientOfFrictionHarderProblemsFableProps}
       />
     </>
   );

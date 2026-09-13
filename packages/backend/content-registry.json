@@ -1,7 +1,7 @@
 {
   "$schema": "Content Registry — indexes all generated educational content for discovery and reuse.",
   "version": "1.0.0",
-  "updatedAt": "2026-09-06",
+  "updatedAt": "2026-09-11",
   "subjects": {
     "biology": {
       "label": "Cambridge A-Level Biology 9700",
@@ -1356,6 +1356,985 @@
           "verification": "projects/mechanics-force-diagrams/verify-build.md",
           "reviewNotes": [
             "Fable contact-sheet review passed; awaiting Durai."
+          ]
+        },
+        "mechanics-equilibrium-in-2d": {
+          "label": "Equilibrium in 2D",
+          "slug": "mechanics-equilibrium-in-2d",
+          "syllabus": "Cambridge 9709 Mechanics (Paper 4) · Forces and equilibrium",
+          "syllabusCode": "M4.1c",
+          "status": "complete",
+          "createdAt": "2026-09-11",
+          "pipeline": "Astra source study, storyboard, narration, composition and render; parent mathematical/visual and full-decode review",
+          "source": {
+            "project": "projects/mechanics-equilibrium-in-2d/",
+            "recording": "/home/dachu/Documents/9709/Equilibrumin2d.mp4",
+            "pdf": "/home/dachu/Documents/9709/Forces.pdf"
+          },
+          "formats": {
+            "landscape": {
+              "compositionId": "MechanicsEquilibriumIn2D",
+              "resolution": "1920x1080",
+              "fps": 30,
+              "durationS": 296.448,
+              "composition": "src/remotion/compositions/MechanicsEquilibriumIn2D.tsx",
+              "render": "../../apps/student-learn/public/videos/mechanics-equilibrium-in-2d.mp4"
+            }
+          },
+          "narration": {
+            "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+            "provider": "elevenlabs",
+            "speed": {
+              "brisk": 1.0,
+              "slow": 0.9
+            },
+            "transcript": "src/remotion/public/transcripts/mechanics/equilibrium-in-2d.json"
+          },
+          "app": {
+            "notesPage": "/notes/mechanics-equilibrium-in-2d",
+            "mapCode": "M4.1c"
+          },
+          "verification": "projects/mechanics-equilibrium-in-2d/verify-build.md",
+          "reviewNotes": [
+            "Parent review: projects/mechanics-equilibrium-in-2d/parent-review.md",
+            "Media evidence: projects/mechanics-equilibrium-in-2d/parent-media-check.json",
+            "Produced and technically reviewed; human playback sign-off not recorded."
+          ]
+        },
+        "mechanics-f-equals-ma": {
+          "label": "F = ma",
+          "slug": "mechanics-f-equals-ma",
+          "syllabus": "Cambridge 9709 Mechanics (Paper 4) · Newton's laws",
+          "syllabusCode": "M4.4a",
+          "status": "complete",
+          "createdAt": "2026-09-11",
+          "pipeline": "Astra source study, storyboard, narration, composition and render; parent mathematical/visual and full-decode review",
+          "source": {
+            "project": "projects/mechanics-f-equals-ma/",
+            "recording": "/home/dachu/Documents/9709/f=ma.mp4",
+            "pdf": "/home/dachu/Documents/9709/NewtonSecondlaw.pdf"
+          },
+          "formats": {
+            "landscape": {
+              "compositionId": "MechanicsFEqualsMa",
+              "resolution": "1920x1080",
+              "fps": 30,
+              "durationS": 327.957333,
+              "composition": "src/remotion/compositions/MechanicsFEqualsMa.tsx",
+              "render": "../../apps/student-learn/public/videos/mechanics-f-equals-ma.mp4"
+            }
+          },
+          "narration": {
+            "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+            "provider": "elevenlabs",
+            "speed": {
+              "brisk": 1.0,
+              "slow": 0.9
+            },
+            "transcript": "src/remotion/public/transcripts/mechanics/f-equals-ma.json"
+          },
+          "app": {
+            "notesPage": "/notes/mechanics-f-equals-ma",
+            "mapCode": "M4.4a"
+          },
+          "verification": "projects/mechanics-f-equals-ma/verify-build.md",
+          "reviewNotes": [
+            "Parent review: projects/mechanics-f-equals-ma/parent-review.md",
+            "Media evidence: projects/mechanics-f-equals-ma/parent-media-check.json",
+            "Produced and technically reviewed; human playback sign-off not recorded."
+          ]
+        },
+        "mechanics-connected-bodies-ropes-and-tow-bars": {
+          "label": "Connected Bodies (Ropes & Tow Bars)",
+          "slug": "mechanics-connected-bodies-ropes-and-tow-bars",
+          "syllabus": "Cambridge 9709 Mechanics (Paper 4) · Newton's laws",
+          "syllabusCode": "M4.4b",
+          "status": "complete",
+          "createdAt": "2026-09-11",
+          "pipeline": "Astra source study, storyboard, narration, composition and render; parent mathematical/visual and full-decode review",
+          "source": {
+            "project": "projects/mechanics-connected-bodies-ropes-and-tow-bars/",
+            "recording": "/home/dachu/Documents/9709/ConnectedBodiesRopesandTowBars.mp4",
+            "pdf": "/home/dachu/Documents/9709/NewtonSecondlaw.pdf"
+          },
+          "formats": {
+            "landscape": {
+              "compositionId": "MechanicsConnectedBodiesRopesAndTowBars",
+              "resolution": "1920x1080",
+              "fps": 30,
+              "durationS": 364.693333,
+              "composition": "src/remotion/compositions/MechanicsConnectedBodiesRopesAndTowBars.tsx",
+              "render": "../../apps/student-learn/public/videos/mechanics-connected-bodies-ropes-and-tow-bars.mp4"
+            }
+          },
+          "narration": {
+            "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+            "provider": "elevenlabs",
+            "speed": {
+              "brisk": 1.0,
+              "slow": 0.9
+            },
+            "transcript": "src/remotion/public/transcripts/mechanics/connected-bodies-ropes-and-tow-bars.json"
+          },
+          "app": {
+            "notesPage": "/notes/mechanics-connected-bodies-ropes-and-tow-bars",
+            "mapCode": "M4.4b"
+          },
+          "verification": "projects/mechanics-connected-bodies-ropes-and-tow-bars/verify-build.md",
+          "reviewNotes": [
+            "Parent review: projects/mechanics-connected-bodies-ropes-and-tow-bars/parent-review.md",
+            "Media evidence: projects/mechanics-connected-bodies-ropes-and-tow-bars/parent-media-check.json",
+            "Produced and technically reviewed; human playback sign-off not recorded."
+          ]
+        },
+        "mechanics-connected-bodies-lifts": {
+          "label": "Connected Bodies (Lifts)",
+          "slug": "mechanics-connected-bodies-lifts",
+          "syllabus": "Cambridge 9709 Mechanics (Paper 4) · Newton's laws",
+          "syllabusCode": "M4.4c",
+          "status": "complete",
+          "createdAt": "2026-09-11",
+          "pipeline": "Astra source study, storyboard, narration, composition and render; parent mathematical/visual and full-decode review",
+          "source": {
+            "project": "projects/mechanics-connected-bodies-lifts/",
+            "recording": "/home/dachu/Documents/9709/ConnectedBodiesLifts.mp4",
+            "pdf": "/home/dachu/Documents/9709/NewtonSecondlaw.pdf"
+          },
+          "formats": {
+            "landscape": {
+              "compositionId": "MechanicsConnectedBodiesLifts",
+              "resolution": "1920x1080",
+              "fps": 30,
+              "durationS": 368.725333,
+              "composition": "src/remotion/compositions/MechanicsConnectedBodiesLifts.tsx",
+              "render": "../../apps/student-learn/public/videos/mechanics-connected-bodies-lifts.mp4"
+            }
+          },
+          "narration": {
+            "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+            "provider": "elevenlabs",
+            "speed": {
+              "brisk": 1.0,
+              "slow": 0.9
+            },
+            "transcript": "src/remotion/public/transcripts/mechanics/connected-bodies-lifts.json"
+          },
+          "app": {
+            "notesPage": "/notes/mechanics-connected-bodies-lifts",
+            "mapCode": "M4.4c"
+          },
+          "verification": "projects/mechanics-connected-bodies-lifts/verify-build.md",
+          "reviewNotes": [
+            "Parent review: projects/mechanics-connected-bodies-lifts/parent-review.md",
+            "Media evidence: projects/mechanics-connected-bodies-lifts/parent-media-check.json",
+            "Produced and technically reviewed; human playback sign-off not recorded."
+          ]
+        },
+        "mechanics-connected-bodies-pulleys": {
+          "label": "Connected Bodies (Pulleys)",
+          "slug": "mechanics-connected-bodies-pulleys",
+          "syllabus": "Cambridge 9709 Mechanics (Paper 4) · Newton's laws",
+          "syllabusCode": "M4.4d",
+          "status": "complete",
+          "createdAt": "2026-09-11",
+          "pipeline": "Astra source study, storyboard, narration, composition and render; parent mathematical/visual and full-decode review",
+          "source": {
+            "project": "projects/mechanics-connected-bodies-pulleys/",
+            "recording": "/home/dachu/Documents/9709/ConnectedBodiesPullies.mp4",
+            "pdf": "/home/dachu/Documents/9709/NewtonSecondlaw.pdf"
+          },
+          "formats": {
+            "landscape": {
+              "compositionId": "MechanicsConnectedBodiesPulleys",
+              "resolution": "1920x1080",
+              "fps": 30,
+              "durationS": 443.413333,
+              "composition": "src/remotion/compositions/MechanicsConnectedBodiesPulleys.tsx",
+              "render": "../../apps/student-learn/public/videos/mechanics-connected-bodies-pulleys.mp4"
+            }
+          },
+          "narration": {
+            "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+            "provider": "elevenlabs",
+            "speed": {
+              "brisk": 1.0,
+              "slow": 0.9
+            },
+            "transcript": "src/remotion/public/transcripts/mechanics/connected-bodies-pulleys.json"
+          },
+          "app": {
+            "notesPage": "/notes/mechanics-connected-bodies-pulleys",
+            "mapCode": "M4.4d"
+          },
+          "verification": "projects/mechanics-connected-bodies-pulleys/verify-build.md",
+          "reviewNotes": [
+            "Parent review: projects/mechanics-connected-bodies-pulleys/parent-review.md",
+            "Media evidence: projects/mechanics-connected-bodies-pulleys/parent-media-check.json",
+            "Produced and technically reviewed; human playback sign-off not recorded."
+          ]
+        },
+        "mechanics-resolving-forces-and-inclined-planes": {
+          "label": "Resolving Forces & Inclined Planes",
+          "slug": "mechanics-resolving-forces-and-inclined-planes",
+          "syllabus": "Cambridge 9709 Mechanics (Paper 4) · Forces and equilibrium",
+          "syllabusCode": "M4.1d",
+          "status": "complete",
+          "createdAt": "2026-09-11",
+          "pipeline": "Astra source study, storyboard, narration, composition and render; parent mathematical/visual and full-decode review",
+          "source": {
+            "project": "projects/mechanics-resolving-forces-and-inclined-planes/",
+            "recording": "/home/dachu/Documents/9709/resolvingforcesandinclineproblems.mp4",
+            "pdf": "/home/dachu/Documents/9709/ResolvingForcesInclinedPlanesandFriction.pdf"
+          },
+          "formats": {
+            "landscape": {
+              "compositionId": "MechanicsResolvingForcesAndInclinedPlanes",
+              "resolution": "1920x1080",
+              "fps": 30,
+              "durationS": 393.856,
+              "composition": "src/remotion/compositions/MechanicsResolvingForcesAndInclinedPlanes.tsx",
+              "render": "../../apps/student-learn/public/videos/mechanics-resolving-forces-and-inclined-planes.mp4"
+            }
+          },
+          "narration": {
+            "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+            "provider": "elevenlabs",
+            "speed": {
+              "brisk": 1.0,
+              "slow": 0.9
+            },
+            "transcript": "src/remotion/public/transcripts/mechanics/resolving-forces-and-inclined-planes.json"
+          },
+          "app": {
+            "notesPage": "/notes/mechanics-resolving-forces-and-inclined-planes",
+            "mapCode": "M4.1d"
+          },
+          "verification": "projects/mechanics-resolving-forces-and-inclined-planes/verify-build.md",
+          "reviewNotes": [
+            "Parent review: projects/mechanics-resolving-forces-and-inclined-planes/parent-review.md",
+            "Media evidence: projects/mechanics-resolving-forces-and-inclined-planes/parent-media-check.json",
+            "Produced and technically reviewed; human playback sign-off not recorded."
+          ]
+        },
+        "mechanics-coefficient-of-friction": {
+          "label": "Coefficient of Friction",
+          "slug": "mechanics-coefficient-of-friction",
+          "syllabus": "Cambridge 9709 Mechanics (Paper 4) · Forces and equilibrium",
+          "syllabusCode": "M4.1e",
+          "status": "complete",
+          "createdAt": "2026-09-11",
+          "pipeline": "Astra source study, storyboard, narration, composition and render; parent mathematical/visual and full-decode review",
+          "source": {
+            "project": "projects/mechanics-coefficient-of-friction/",
+            "recording": "/home/dachu/Videos/Screencasts/coefficientofFriction.mp4",
+            "pdf": "/home/dachu/Documents/9709/ResolvingForcesInclinedPlanesandFriction.pdf"
+          },
+          "formats": {
+            "landscape": {
+              "compositionId": "MechanicsCoefficientOfFriction",
+              "resolution": "1920x1080",
+              "fps": 30,
+              "durationS": 454.314667,
+              "composition": "src/remotion/compositions/MechanicsCoefficientOfFriction.tsx",
+              "render": "../../apps/student-learn/public/videos/mechanics-coefficient-of-friction.mp4"
+            }
+          },
+          "narration": {
+            "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+            "provider": "elevenlabs",
+            "speed": {
+              "brisk": 1.0,
+              "slow": 0.9
+            },
+            "transcript": "src/remotion/public/transcripts/mechanics/coefficient-of-friction.json"
+          },
+          "app": {
+            "notesPage": "/notes/mechanics-coefficient-of-friction",
+            "mapCode": "M4.1e"
+          },
+          "verification": "projects/mechanics-coefficient-of-friction/verify-build.md",
+          "reviewNotes": [
+            "Parent review: projects/mechanics-coefficient-of-friction/parent-review.md",
+            "Media evidence: projects/mechanics-coefficient-of-friction/parent-media-check.json",
+            "Produced and technically reviewed; human playback sign-off not recorded."
+          ]
+        },
+        "mechanics-coefficient-of-friction-f-equals-ma": {
+          "label": "Coefficient of Friction - F = ma",
+          "slug": "mechanics-coefficient-of-friction-f-equals-ma",
+          "syllabus": "Cambridge 9709 Mechanics (Paper 4) · Newton's laws",
+          "syllabusCode": "M4.4e",
+          "status": "complete",
+          "createdAt": "2026-09-11",
+          "pipeline": "Astra source study, storyboard, narration, composition and render; parent mathematical/visual and full-decode review",
+          "source": {
+            "project": "projects/mechanics-coefficient-of-friction-f-equals-ma/",
+            "recording": "/home/dachu/Documents/9709/coefficientofFrictionF=ma.mp4",
+            "pdf": "/home/dachu/Documents/9709/ResolvingForcesInclinedPlanesandFriction.pdf"
+          },
+          "formats": {
+            "landscape": {
+              "compositionId": "MechanicsCoefficientOfFrictionFEqualsMa",
+              "resolution": "1920x1080",
+              "fps": 30,
+              "durationS": 411.818667,
+              "composition": "src/remotion/compositions/MechanicsCoefficientOfFrictionFEqualsMa.tsx",
+              "render": "../../apps/student-learn/public/videos/mechanics-coefficient-of-friction-f-equals-ma.mp4"
+            }
+          },
+          "narration": {
+            "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+            "provider": "elevenlabs",
+            "speed": {
+              "brisk": 1.0,
+              "slow": 0.9
+            },
+            "transcript": "src/remotion/public/transcripts/mechanics/coefficient-of-friction-f-equals-ma.json"
+          },
+          "app": {
+            "notesPage": "/notes/mechanics-coefficient-of-friction-f-equals-ma",
+            "mapCode": "M4.4e"
+          },
+          "verification": "projects/mechanics-coefficient-of-friction-f-equals-ma/verify-build.md",
+          "reviewNotes": [
+            "Parent review: projects/mechanics-coefficient-of-friction-f-equals-ma/parent-review.md",
+            "Media evidence: projects/mechanics-coefficient-of-friction-f-equals-ma/parent-media-check.json",
+            "Produced and technically reviewed; human playback sign-off not recorded."
+          ]
+        },
+        "mechanics-connected-bodies-pulleys-fable": {
+          "label": "Connected Bodies (Pulleys) (Fable)",
+          "slug": "mechanics-connected-bodies-pulleys-fable",
+          "syllabus": "Cambridge 9709 Mechanics (Paper 4) · Newton's laws",
+          "syllabusCode": "M4.4d",
+          "status": "complete",
+          "createdAt": "2026-09-11",
+          "pipeline": "Fable 5.1 source study, storyboard, narration, composition and render; parent mathematical/visual and full-decode review",
+          "source": {
+            "project": "projects/mechanics-connected-bodies-pulleys-fable/",
+            "recording": "/home/dachu/Documents/9709/ConnectedBodiesPullies.mp4",
+            "pdf": "/home/dachu/Documents/9709/NewtonSecondlaw.pdf"
+          },
+          "formats": {
+            "landscape": {
+              "compositionId": "MechanicsConnectedBodiesPulleysFable",
+              "resolution": "1920x1080",
+              "fps": 30,
+              "durationS": 384.981333,
+              "composition": "src/remotion/compositions/MechanicsConnectedBodiesPulleysFable.tsx",
+              "render": "../../apps/student-learn/public/videos/mechanics-connected-bodies-pulleys-fable.mp4"
+            }
+          },
+          "narration": {
+            "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+            "provider": "elevenlabs",
+            "speed": {
+              "brisk": 1.0,
+              "slow": 0.9
+            },
+            "transcript": "src/remotion/public/transcripts/mechanics/connected-bodies-pulleys-fable.json"
+          },
+          "app": {
+            "notesPage": "/notes/mechanics-connected-bodies-pulleys-fable",
+            "mapCode": "M4.4d"
+          },
+          "verification": "projects/mechanics-connected-bodies-pulleys-fable/verify-build.md",
+          "reviewNotes": [
+            "Parent review: projects/mechanics-connected-bodies-pulleys-fable/parent-review.md",
+            "Media evidence: projects/mechanics-connected-bodies-pulleys-fable/parent-media-check.json",
+            "Produced and technically reviewed; human playback sign-off not recorded."
+          ]
+        },
+        "mechanics-resolving-forces-and-inclined-planes-fable": {
+          "label": "Resolving Forces & Inclined Planes (Fable)",
+          "slug": "mechanics-resolving-forces-and-inclined-planes-fable",
+          "syllabus": "Cambridge 9709 Mechanics (Paper 4) · Forces and equilibrium",
+          "syllabusCode": "M4.1d",
+          "status": "complete",
+          "createdAt": "2026-09-11",
+          "pipeline": "Fable 5.1 source study, storyboard, narration, composition and render; parent mathematical/visual and full-decode review",
+          "source": {
+            "project": "projects/mechanics-resolving-forces-and-inclined-planes-fable/",
+            "recording": "/home/dachu/Documents/9709/resolvingforcesandinclineproblems.mp4",
+            "pdf": "/home/dachu/Documents/9709/ResolvingForcesInclinedPlanesandFriction.pdf"
+          },
+          "formats": {
+            "landscape": {
+              "compositionId": "MechanicsResolvingForcesAndInclinedPlanesFable",
+              "resolution": "1920x1080",
+              "fps": 30,
+              "durationS": 392.832,
+              "composition": "src/remotion/compositions/MechanicsResolvingForcesAndInclinedPlanesFable.tsx",
+              "render": "../../apps/student-learn/public/videos/mechanics-resolving-forces-and-inclined-planes-fable.mp4"
+            }
+          },
+          "narration": {
+            "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+            "provider": "elevenlabs",
+            "speed": {
+              "brisk": 1.0,
+              "slow": 0.9
+            },
+            "transcript": "src/remotion/public/transcripts/mechanics/resolving-forces-and-inclined-planes-fable.json"
+          },
+          "app": {
+            "notesPage": "/notes/mechanics-resolving-forces-and-inclined-planes-fable",
+            "mapCode": "M4.1d"
+          },
+          "verification": "projects/mechanics-resolving-forces-and-inclined-planes-fable/verify-build.md",
+          "reviewNotes": [
+            "Parent review: projects/mechanics-resolving-forces-and-inclined-planes-fable/parent-review.md",
+            "Media evidence: projects/mechanics-resolving-forces-and-inclined-planes-fable/parent-media-check.json",
+            "Produced and technically reviewed; human playback sign-off not recorded."
+          ]
+        },
+        "mechanics-coefficient-of-friction-fable": {
+          "label": "Coefficient of Friction (Fable)",
+          "slug": "mechanics-coefficient-of-friction-fable",
+          "syllabus": "Cambridge 9709 Mechanics (Paper 4) · Forces and equilibrium",
+          "syllabusCode": "M4.1e",
+          "status": "complete",
+          "createdAt": "2026-09-11",
+          "pipeline": "Fable 5.1 source study, storyboard, narration, composition and render; parent mathematical/visual and full-decode review",
+          "source": {
+            "project": "projects/mechanics-coefficient-of-friction-fable/",
+            "recording": "/home/dachu/Videos/Screencasts/coefficientofFriction.mp4",
+            "pdf": "/home/dachu/Documents/9709/ResolvingForcesInclinedPlanesandFriction.pdf"
+          },
+          "formats": {
+            "landscape": {
+              "compositionId": "MechanicsCoefficientOfFrictionFable",
+              "resolution": "1920x1080",
+              "fps": 30,
+              "durationS": 395.050667,
+              "composition": "src/remotion/compositions/MechanicsCoefficientOfFrictionFable.tsx",
+              "render": "../../apps/student-learn/public/videos/mechanics-coefficient-of-friction-fable.mp4"
+            }
+          },
+          "narration": {
+            "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+            "provider": "elevenlabs",
+            "speed": {
+              "brisk": 1.0,
+              "slow": 0.9
+            },
+            "transcript": "src/remotion/public/transcripts/mechanics/coefficient-of-friction-fable.json"
+          },
+          "app": {
+            "notesPage": "/notes/mechanics-coefficient-of-friction-fable",
+            "mapCode": "M4.1e"
+          },
+          "verification": "projects/mechanics-coefficient-of-friction-fable/verify-build.md",
+          "reviewNotes": [
+            "Parent review: projects/mechanics-coefficient-of-friction-fable/parent-review.md",
+            "Media evidence: projects/mechanics-coefficient-of-friction-fable/parent-media-check.json",
+            "Produced and technically reviewed; human playback sign-off not recorded."
+          ]
+        },
+        "mechanics-coefficient-of-friction-f-equals-ma-fable": {
+          "label": "Coefficient of Friction - F = ma (Fable)",
+          "slug": "mechanics-coefficient-of-friction-f-equals-ma-fable",
+          "syllabus": "Cambridge 9709 Mechanics (Paper 4) · Newton's laws",
+          "syllabusCode": "M4.4e",
+          "status": "complete",
+          "createdAt": "2026-09-11",
+          "pipeline": "Fable 5.1 source study, storyboard, narration, composition and render; parent mathematical/visual and full-decode review",
+          "source": {
+            "project": "projects/mechanics-coefficient-of-friction-f-equals-ma-fable/",
+            "recording": "/home/dachu/Documents/9709/coefficientofFrictionF=ma.mp4",
+            "pdf": "/home/dachu/Documents/9709/ResolvingForcesInclinedPlanesandFriction.pdf"
+          },
+          "formats": {
+            "landscape": {
+              "compositionId": "MechanicsCoefficientOfFrictionFEqualsMaFable",
+              "resolution": "1920x1080",
+              "fps": 30,
+              "durationS": 375.296,
+              "composition": "src/remotion/compositions/MechanicsCoefficientOfFrictionFEqualsMaFable.tsx",
+              "render": "../../apps/student-learn/public/videos/mechanics-coefficient-of-friction-f-equals-ma-fable.mp4"
+            }
+          },
+          "narration": {
+            "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+            "provider": "elevenlabs",
+            "speed": {
+              "brisk": 1.0,
+              "slow": 0.9
+            },
+            "transcript": "src/remotion/public/transcripts/mechanics/coefficient-of-friction-f-equals-ma-fable.json"
+          },
+          "app": {
+            "notesPage": "/notes/mechanics-coefficient-of-friction-f-equals-ma-fable",
+            "mapCode": "M4.4e"
+          },
+          "verification": "projects/mechanics-coefficient-of-friction-f-equals-ma-fable/verify-build.md",
+          "reviewNotes": [
+            "Parent review: projects/mechanics-coefficient-of-friction-f-equals-ma-fable/parent-review.md",
+            "Media evidence: projects/mechanics-coefficient-of-friction-f-equals-ma-fable/parent-media-check.json",
+            "Produced and technically reviewed; human playback sign-off not recorded."
+          ]
+        },
+        "mechanics-coefficient-of-friction-and-inclined-planes": {
+          "label": "Coefficient of Friction & Inclined Planes",
+          "slug": "mechanics-coefficient-of-friction-and-inclined-planes",
+          "syllabus": "Cambridge 9709 Mechanics (Paper 4) · Forces and equilibrium",
+          "syllabusCode": "M4.1f",
+          "status": "complete",
+          "createdAt": "2026-09-11",
+          "pipeline": "Astra source study, storyboard, narration, composition and render; parent mathematical/visual and full-decode review",
+          "source": {
+            "project": "projects/mechanics-coefficient-of-friction-and-inclined-planes/",
+            "recording": "/home/dachu/Documents/9709/coefficientofFrictionandinclineproblems.mp4",
+            "pdf": "/home/dachu/Documents/9709/ResolvingForcesInclinedPlanesandFriction.pdf"
+          },
+          "formats": {
+            "landscape": {
+              "compositionId": "MechanicsCoefficientOfFrictionAndInclinedPlanes",
+              "resolution": "1920x1080",
+              "fps": 30,
+              "durationS": 480.733333,
+              "composition": "src/remotion/compositions/MechanicsCoefficientOfFrictionAndInclinedPlanes.tsx",
+              "render": "../../apps/student-learn/public/videos/mechanics-coefficient-of-friction-and-inclined-planes.mp4"
+            }
+          },
+          "narration": {
+            "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+            "provider": "elevenlabs",
+            "speed": {
+              "brisk": 1.0,
+              "slow": 0.9
+            },
+            "transcript": "src/remotion/public/transcripts/mechanics/coefficient-of-friction-and-inclined-planes.json"
+          },
+          "app": {
+            "notesPage": "/notes/mechanics-coefficient-of-friction-and-inclined-planes",
+            "mapCode": "M4.1f"
+          },
+          "verification": "projects/mechanics-coefficient-of-friction-and-inclined-planes/verify-build.md",
+          "reviewNotes": [
+            "Parent review: projects/mechanics-coefficient-of-friction-and-inclined-planes/parent-review.md",
+            "Media evidence: projects/mechanics-coefficient-of-friction-and-inclined-planes/parent-media-check.json",
+            "Produced and technically reviewed; human playback sign-off not recorded."
+          ]
+        },
+        "mechanics-coefficient-of-friction-harder-problems": {
+          "label": "Coefficient of Friction (Harder Problems)",
+          "slug": "mechanics-coefficient-of-friction-harder-problems",
+          "syllabus": "Cambridge 9709 Mechanics (Paper 4) · Forces and equilibrium",
+          "syllabusCode": "M4.1g",
+          "status": "complete",
+          "createdAt": "2026-09-11",
+          "pipeline": "Astra source study, storyboard, narration, composition and render; parent mathematical/visual and full-decode review",
+          "source": {
+            "project": "projects/mechanics-coefficient-of-friction-harder-problems/",
+            "recording": "/home/dachu/Documents/9709/coefficientoffrictionequilibrum.mp4",
+            "pdf": "/home/dachu/Documents/9709/ResolvingForcesInclinedPlanesandFriction.pdf"
+          },
+          "formats": {
+            "landscape": {
+              "compositionId": "MechanicsCoefficientOfFrictionHarderProblems",
+              "resolution": "1920x1080",
+              "fps": 30,
+              "durationS": 397.733333,
+              "composition": "src/remotion/compositions/MechanicsCoefficientOfFrictionHarderProblems.tsx",
+              "render": "../../apps/student-learn/public/videos/mechanics-coefficient-of-friction-harder-problems.mp4"
+            }
+          },
+          "narration": {
+            "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+            "provider": "elevenlabs",
+            "speed": {
+              "brisk": 1.0,
+              "slow": 0.9
+            },
+            "transcript": "src/remotion/public/transcripts/mechanics/coefficient-of-friction-harder-problems.json"
+          },
+          "app": {
+            "notesPage": "/notes/mechanics-coefficient-of-friction-harder-problems",
+            "mapCode": "M4.1g"
+          },
+          "verification": "projects/mechanics-coefficient-of-friction-harder-problems/verify-build.md",
+          "reviewNotes": [
+            "Parent review: projects/mechanics-coefficient-of-friction-harder-problems/parent-review.md",
+            "Media evidence: projects/mechanics-coefficient-of-friction-harder-problems/parent-media-check.json",
+            "Produced and technically reviewed; human playback sign-off not recorded."
+          ]
+        },
+        "mechanics-work": {
+          "label": "Work",
+          "slug": "mechanics-work",
+          "syllabus": "Cambridge 9709 Mechanics (Paper 4) · Energy, work and power",
+          "syllabusCode": "M4.5a",
+          "status": "complete",
+          "createdAt": "2026-09-11",
+          "pipeline": "Astra source study, storyboard, narration, composition and render; parent mathematical/visual and full-decode review",
+          "source": {
+            "project": "projects/mechanics-work/",
+            "recording": "/home/dachu/Documents/9709/work.mp4",
+            "pdf": "/home/dachu/Documents/9709/workandenergy.pdf"
+          },
+          "formats": {
+            "landscape": {
+              "compositionId": "MechanicsWork",
+              "resolution": "1920x1080",
+              "fps": 30,
+              "durationS": 397.533333,
+              "composition": "src/remotion/compositions/MechanicsWork.tsx",
+              "render": "../../apps/student-learn/public/videos/mechanics-work.mp4"
+            }
+          },
+          "narration": {
+            "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+            "provider": "elevenlabs",
+            "speed": {
+              "brisk": 1.0,
+              "slow": 0.9
+            },
+            "transcript": "src/remotion/public/transcripts/mechanics/work.json"
+          },
+          "app": {
+            "notesPage": "/notes/mechanics-work",
+            "mapCode": "M4.5a"
+          },
+          "verification": "projects/mechanics-work/verify-build.md",
+          "reviewNotes": [
+            "Parent review: projects/mechanics-work/parent-review.md",
+            "Media evidence: projects/mechanics-work/parent-media-check.json",
+            "Produced and technically reviewed; human playback sign-off not recorded."
+          ]
+        },
+        "mechanics-energy": {
+          "label": "Energy",
+          "slug": "mechanics-energy",
+          "syllabus": "Cambridge 9709 Mechanics (Paper 4) · Energy, work and power",
+          "syllabusCode": "M4.5b",
+          "status": "complete",
+          "createdAt": "2026-09-11",
+          "pipeline": "Astra source study, storyboard, narration, composition and render; parent mathematical/visual and full-decode review",
+          "source": {
+            "project": "projects/mechanics-energy/",
+            "recording": "/home/dachu/Documents/9709/KineticEnergy.mp4",
+            "pdf": "/home/dachu/Documents/9709/workandenergy.pdf"
+          },
+          "formats": {
+            "landscape": {
+              "compositionId": "MechanicsEnergy",
+              "resolution": "1920x1080",
+              "fps": 30,
+              "durationS": 482.5,
+              "composition": "src/remotion/compositions/MechanicsEnergy.tsx",
+              "render": "../../apps/student-learn/public/videos/mechanics-energy.mp4"
+            }
+          },
+          "narration": {
+            "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+            "provider": "elevenlabs",
+            "speed": {
+              "brisk": 1.0,
+              "slow": 0.9
+            },
+            "transcript": "src/remotion/public/transcripts/mechanics/energy.json"
+          },
+          "app": {
+            "notesPage": "/notes/mechanics-energy",
+            "mapCode": "M4.5b"
+          },
+          "verification": "projects/mechanics-energy/verify-build.md",
+          "reviewNotes": [
+            "Parent review: projects/mechanics-energy/parent-review.md",
+            "Media evidence: projects/mechanics-energy/parent-media-check.json",
+            "Produced and technically reviewed; human playback sign-off not recorded."
+          ]
+        },
+        "mechanics-energy-principles": {
+          "label": "Energy Principles",
+          "slug": "mechanics-energy-principles",
+          "syllabus": "Cambridge 9709 Mechanics (Paper 4) · Energy, work and power",
+          "syllabusCode": "M4.5c",
+          "status": "complete",
+          "createdAt": "2026-09-11",
+          "pipeline": "Astra source study, storyboard, narration, composition and render; parent mathematical/visual and full-decode review",
+          "source": {
+            "project": "projects/mechanics-energy-principles/",
+            "recording": "/home/dachu/Documents/9709/energyprinciples.mp4",
+            "pdf": "/home/dachu/Documents/9709/workandenergy.pdf"
+          },
+          "formats": {
+            "landscape": {
+              "compositionId": "MechanicsEnergyPrinciples",
+              "resolution": "1920x1080",
+              "fps": 30,
+              "durationS": 487.6,
+              "composition": "src/remotion/compositions/MechanicsEnergyPrinciples.tsx",
+              "render": "../../apps/student-learn/public/videos/mechanics-energy-principles.mp4"
+            }
+          },
+          "narration": {
+            "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+            "provider": "elevenlabs",
+            "speed": {
+              "brisk": 1.0,
+              "slow": 0.9
+            },
+            "transcript": "src/remotion/public/transcripts/mechanics/energy-principles.json"
+          },
+          "app": {
+            "notesPage": "/notes/mechanics-energy-principles",
+            "mapCode": "M4.5c"
+          },
+          "verification": "projects/mechanics-energy-principles/verify-build.md",
+          "reviewNotes": [
+            "Parent review: projects/mechanics-energy-principles/parent-review.md",
+            "Media evidence: projects/mechanics-energy-principles/parent-media-check.json",
+            "Produced and technically reviewed; human playback sign-off not recorded."
+          ]
+        },
+        "mechanics-power": {
+          "label": "Power",
+          "slug": "mechanics-power",
+          "syllabus": "Cambridge 9709 Mechanics (Paper 4) · Energy, work and power",
+          "syllabusCode": "M4.5d",
+          "status": "complete",
+          "createdAt": "2026-09-11",
+          "pipeline": "Astra source study, storyboard, narration, composition and render; parent mathematical/visual and full-decode review",
+          "source": {
+            "project": "projects/mechanics-power/",
+            "recording": "/home/dachu/Documents/9709/Power.mp4",
+            "pdf": "/home/dachu/Documents/9709/power.pdf"
+          },
+          "formats": {
+            "landscape": {
+              "compositionId": "MechanicsPower",
+              "resolution": "1920x1080",
+              "fps": 30,
+              "durationS": 462.466667,
+              "composition": "src/remotion/compositions/MechanicsPower.tsx",
+              "render": "../../apps/student-learn/public/videos/mechanics-power.mp4"
+            }
+          },
+          "narration": {
+            "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+            "provider": "elevenlabs",
+            "speed": {
+              "brisk": 1.0,
+              "slow": 0.9
+            },
+            "transcript": "src/remotion/public/transcripts/mechanics/power.json"
+          },
+          "app": {
+            "notesPage": "/notes/mechanics-power",
+            "mapCode": "M4.5d"
+          },
+          "verification": "projects/mechanics-power/verify-build.md",
+          "reviewNotes": [
+            "Parent review: projects/mechanics-power/parent-review.md",
+            "Media evidence: projects/mechanics-power/parent-media-check.json",
+            "Produced and technically reviewed; human playback sign-off not recorded."
+          ]
+        },
+        "mechanics-coefficient-of-friction-and-inclined-planes-fable": {
+          "label": "Coefficient of Friction & Inclined Planes (Fable)",
+          "slug": "mechanics-coefficient-of-friction-and-inclined-planes-fable",
+          "syllabus": "Cambridge 9709 Mechanics (Paper 4) · Forces and equilibrium",
+          "syllabusCode": "M4.1f",
+          "status": "complete",
+          "createdAt": "2026-09-11",
+          "pipeline": "Fable 5.1 source study, storyboard, narration, composition and render; parent mathematical/visual and full-decode review",
+          "source": {
+            "project": "projects/mechanics-coefficient-of-friction-and-inclined-planes-fable/",
+            "recording": "/home/dachu/Documents/9709/coefficientofFrictionandinclineproblems.mp4",
+            "pdf": "/home/dachu/Documents/9709/ResolvingForcesInclinedPlanesandFriction.pdf"
+          },
+          "formats": {
+            "landscape": {
+              "compositionId": "MechanicsCoefficientOfFrictionAndInclinedPlanesFable",
+              "resolution": "1920x1080",
+              "fps": 30,
+              "durationS": 394.666667,
+              "composition": "src/remotion/compositions/MechanicsCoefficientOfFrictionAndInclinedPlanesFable.tsx",
+              "render": "../../apps/student-learn/public/videos/mechanics-coefficient-of-friction-and-inclined-planes-fable.mp4"
+            }
+          },
+          "narration": {
+            "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+            "provider": "elevenlabs",
+            "speed": {
+              "brisk": 1.0,
+              "slow": 0.9
+            },
+            "transcript": "src/remotion/public/transcripts/mechanics/coefficient-of-friction-and-inclined-planes-fable.json"
+          },
+          "app": {
+            "notesPage": "/notes/mechanics-coefficient-of-friction-and-inclined-planes-fable",
+            "mapCode": "M4.1f"
+          },
+          "verification": "projects/mechanics-coefficient-of-friction-and-inclined-planes-fable/verify-build.md",
+          "reviewNotes": [
+            "Parent review: projects/mechanics-coefficient-of-friction-and-inclined-planes-fable/parent-review.md",
+            "Media evidence: projects/mechanics-coefficient-of-friction-and-inclined-planes-fable/parent-media-check.json",
+            "Produced and technically reviewed; human playback sign-off not recorded."
+          ]
+        },
+        "mechanics-coefficient-of-friction-harder-problems-fable": {
+          "label": "Coefficient of Friction (Harder Problems) (Fable)",
+          "slug": "mechanics-coefficient-of-friction-harder-problems-fable",
+          "syllabus": "Cambridge 9709 Mechanics (Paper 4) · Forces and equilibrium",
+          "syllabusCode": "M4.1g",
+          "status": "complete",
+          "createdAt": "2026-09-11",
+          "pipeline": "Fable 5.1 source study, storyboard, narration, composition and render; parent mathematical/visual and full-decode review",
+          "source": {
+            "project": "projects/mechanics-coefficient-of-friction-harder-problems-fable/",
+            "recording": "/home/dachu/Documents/9709/coefficientoffrictionequilibrum.mp4",
+            "pdf": "/home/dachu/Documents/9709/ResolvingForcesInclinedPlanesandFriction.pdf"
+          },
+          "formats": {
+            "landscape": {
+              "compositionId": "MechanicsCoefficientOfFrictionHarderProblemsFable",
+              "resolution": "1920x1080",
+              "fps": 30,
+              "durationS": 392.533333,
+              "composition": "src/remotion/compositions/MechanicsCoefficientOfFrictionHarderProblemsFable.tsx",
+              "render": "../../apps/student-learn/public/videos/mechanics-coefficient-of-friction-harder-problems-fable.mp4"
+            }
+          },
+          "narration": {
+            "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+            "provider": "elevenlabs",
+            "speed": {
+              "brisk": 1.0,
+              "slow": 0.9
+            },
+            "transcript": "src/remotion/public/transcripts/mechanics/coefficient-of-friction-harder-problems-fable.json"
+          },
+          "app": {
+            "notesPage": "/notes/mechanics-coefficient-of-friction-harder-problems-fable",
+            "mapCode": "M4.1g"
+          },
+          "verification": "projects/mechanics-coefficient-of-friction-harder-problems-fable/verify-build.md",
+          "reviewNotes": [
+            "Parent review: projects/mechanics-coefficient-of-friction-harder-problems-fable/parent-review.md",
+            "Media evidence: projects/mechanics-coefficient-of-friction-harder-problems-fable/parent-media-check.json",
+            "Produced and technically reviewed; human playback sign-off not recorded."
+          ]
+        },
+        "mechanics-momentum": {
+          "label": "Momentum",
+          "slug": "mechanics-momentum",
+          "syllabus": "Cambridge 9709 Mechanics (Paper 4) · Momentum",
+          "syllabusCode": "M4.3a",
+          "status": "approved",
+          "createdAt": "2026-09-12",
+          "pacing": "TEACHING-STANDARD §1-15: 8 scenes, two trolleys on separate tracks (1.5 speed ratio) animated before equations, full question and givens before working, formula-first hand-written calculation, signed-momentum comparison and sign-convention check",
+          "pipeline": "frame study + Astra storyboard/narration/composition on B (astra, ultra) -> render on A -> Durai preview review",
+          "source": {
+            "project": "projects/mechanics-momentum/",
+            "recording": "~/Documents/9709/Momentum.mp4",
+            "pdf": "~/Documents/9709/MomentumandCollisions.pdf"
+          },
+          "formats": {
+            "landscape": {
+              "compositionId": "MechanicsMomentum",
+              "resolution": "1920x1080",
+              "durationS": 281.15,
+              "composition": "src/remotion/compositions/MechanicsMomentum.tsx",
+              "render": "output/mechanics/momentum.mp4"
+            }
+          },
+          "narration": {
+            "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+            "provider": "elevenlabs",
+            "scenes": 8,
+            "speed": {
+              "brisk": 1.0,
+              "slow": 0.9
+            },
+            "audio": [
+              "src/remotion/public/audio/mechanics/momentum-s01.mp3",
+              "src/remotion/public/audio/mechanics/momentum-s02.mp3",
+              "src/remotion/public/audio/mechanics/momentum-s03.mp3",
+              "src/remotion/public/audio/mechanics/momentum-s04.mp3",
+              "src/remotion/public/audio/mechanics/momentum-s05.mp3",
+              "src/remotion/public/audio/mechanics/momentum-s06.mp3",
+              "src/remotion/public/audio/mechanics/momentum-s07.mp3",
+              "src/remotion/public/audio/mechanics/momentum-s08.mp3"
+            ],
+            "transcript": "src/remotion/public/transcripts/mechanics/momentum.json",
+            "transcriber": "faster-whisper small, word timestamps"
+          },
+          "commits": {
+            "astraBuild": "fc23b70",
+            "narrationCues": "9f23e4e",
+            "rings": "1d9f95a",
+            "sync": "f640cfa"
+          },
+          "app": {
+            "notesPage": "/notes/mechanics-momentum",
+            "mapCode": "M4.3a"
+          },
+          "verification": "src/scripts/mechanics-momentum/verify-build.md",
+          "reviewNotes": [
+            "Scope: retained the separate-track signed-momentum comparison and its changed-sign-convention check; excluded PDF-only contact-transfer material and collision laws (reserved for Direct Collisions). Syllabus excerpt quoted on screen is the verified p.32 fragment 'use the definition of linear momentum'.",
+            "2026-09-12 Durai: approved from half-scale preview; no changes requested."
+          ]
+        },
+        "mechanics-direct-collisions": {
+          "label": "Direct collisions",
+          "slug": "mechanics-direct-collisions",
+          "syllabus": "Cambridge 9709 Mechanics (Paper 4) · Momentum",
+          "syllabusCode": "M4.3b",
+          "status": "approved",
+          "createdAt": "2026-09-12",
+          "pacing": "TEACHING-STANDARD §1-15: 7 scenes, one question with two explicit trials (rebound, then coalescence) from identical initial conditions, signed before/after diagrams with the sign convention on screen, formula-first hand-written working",
+          "pipeline": "frame study + Astra storyboard/narration/composition on B (astra, ultra) -> render on A -> Durai preview review",
+          "source": {
+            "project": "projects/mechanics-direct-collisions/",
+            "recording": "~/Documents/9709/directCollisions.mp4",
+            "pdf": "~/Documents/9709/MomentumandCollisions.pdf"
+          },
+          "formats": {
+            "landscape": {
+              "compositionId": "MechanicsDirectCollisions",
+              "resolution": "1920x1080",
+              "durationS": 302.53,
+              "composition": "src/remotion/compositions/MechanicsDirectCollisions.tsx",
+              "render": "output/mechanics/direct-collisions.mp4"
+            }
+          },
+          "narration": {
+            "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+            "provider": "elevenlabs",
+            "scenes": 7,
+            "speed": {
+              "brisk": 1.0,
+              "slow": 0.9
+            },
+            "audio": [
+              "src/remotion/public/audio/mechanics/direct-collisions-s01.mp3",
+              "src/remotion/public/audio/mechanics/direct-collisions-s02.mp3",
+              "src/remotion/public/audio/mechanics/direct-collisions-s03.mp3",
+              "src/remotion/public/audio/mechanics/direct-collisions-s04.mp3",
+              "src/remotion/public/audio/mechanics/direct-collisions-s05.mp3",
+              "src/remotion/public/audio/mechanics/direct-collisions-s06.mp3",
+              "src/remotion/public/audio/mechanics/direct-collisions-s07.mp3"
+            ],
+            "transcript": "src/remotion/public/transcripts/mechanics/direct-collisions.json",
+            "transcriber": "faster-whisper small, word timestamps"
+          },
+          "commits": {
+            "astraBuild": "ce5651d",
+            "narrationCues": "d2f17e7",
+            "fixes": "e79d699",
+            "sync": "1d12d12"
+          },
+          "app": {
+            "notesPage": "/notes/mechanics-direct-collisions",
+            "mapCode": "M4.3b"
+          },
+          "verification": "src/scripts/mechanics-direct-collisions/verify-build.md",
+          "reviewNotes": [
+            "Scope: followed the handoff's two independent trials; adapted the source's coalescing unknown-mass example to finding common velocity, covering joining without entering Multiple Collisions. Syllabus excerpt quoted on screen is the verified p.32 statement on conservation of linear momentum for direct impact.",
+            "2026-09-12 Durai: approved from half-scale preview; no changes requested."
           ]
         }
       },
