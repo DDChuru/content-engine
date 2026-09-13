@@ -1,0 +1,5312 @@
+{
+  "project": "mechanics-energy-principles",
+  "sceneCount": 8,
+  "scenes": [
+    {
+      "id": "s01",
+      "title": "Energy principles",
+      "mode": "opening",
+      "source": "Recording4–41; syllabus4.5 p33",
+      "voiceSpeed": 1,
+      "tempo": "brisk",
+      "beats": [
+        {
+          "id": "syllabus",
+          "text": "Our syllabus excerpt is conservation of energy. We will use the work energy principle, and see when mechanical energy is conserved.",
+          "hold": 0,
+          "start": 0.4,
+          "speechEnd": 9.72,
+          "end": 9.92,
+          "cue": 0.4,
+          "penEnd": 9.84
+        },
+        {
+          "id": "outcome1",
+          "text": "By the end, you can build a signed energy balance.",
+          "hold": 0,
+          "caption": "Build a signed energy balance",
+          "start": 9.92,
+          "speechEnd": 13.64,
+          "end": 13.84,
+          "cue": 9.92,
+          "penEnd": 13.76
+        },
+        {
+          "id": "outcome2",
+          "text": "Use it to find a resistance.",
+          "hold": 0,
+          "caption": "Find a resistance using energy",
+          "start": 13.84,
+          "speechEnd": 15.35,
+          "end": 15.55,
+          "cue": 13.84,
+          "penEnd": 15.47
+        },
+        {
+          "id": "outcome3",
+          "text": "And explain when mechanical energy is conserved.",
+          "hold": 0,
+          "caption": "Explain when mechanical energy is conserved",
+          "start": 15.55,
+          "speechEnd": 18.74,
+          "end": 18.94,
+          "cue": 15.55,
+          "penEnd": 18.860000000000003
+        }
+      ],
+      "holds": [],
+      "audio": "energy-principles-s01.mp3",
+      "audioSha256": "2aa435d85e5d9007778eb45b633988a9a11d52e0c4bd4e390c2724d56441451e",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "provider": "elevenlabs",
+      "sampleDuration": 19.29,
+      "words": [
+        {
+          "word": "Our",
+          "start": 0.4,
+          "end": 0.6
+        },
+        {
+          "word": "syllabus",
+          "start": 0.6,
+          "end": 1.0
+        },
+        {
+          "word": "excerpt",
+          "start": 1.0,
+          "end": 2.02
+        },
+        {
+          "word": "is",
+          "start": 2.02,
+          "end": 2.22
+        },
+        {
+          "word": "conservation",
+          "start": 2.22,
+          "end": 2.62
+        },
+        {
+          "word": "of",
+          "start": 2.62,
+          "end": 2.98
+        },
+        {
+          "word": "energy.",
+          "start": 2.98,
+          "end": 3.3
+        },
+        {
+          "word": "We",
+          "start": 4.3,
+          "end": 4.48
+        },
+        {
+          "word": "will",
+          "start": 4.48,
+          "end": 4.58
+        },
+        {
+          "word": "use",
+          "start": 4.58,
+          "end": 4.76
+        },
+        {
+          "word": "the",
+          "start": 4.76,
+          "end": 4.88
+        },
+        {
+          "word": "work",
+          "start": 4.88,
+          "end": 5.1
+        },
+        {
+          "word": "energy",
+          "start": 5.1,
+          "end": 5.44
+        },
+        {
+          "word": "principle,",
+          "start": 5.44,
+          "end": 5.98
+        },
+        {
+          "word": "and",
+          "start": 6.42,
+          "end": 7.02
+        },
+        {
+          "word": "see",
+          "start": 7.02,
+          "end": 7.28
+        },
+        {
+          "word": "when",
+          "start": 7.28,
+          "end": 7.52
+        },
+        {
+          "word": "mechanical",
+          "start": 7.52,
+          "end": 7.94
+        },
+        {
+          "word": "energy",
+          "start": 7.94,
+          "end": 8.46
+        },
+        {
+          "word": "is",
+          "start": 8.46,
+          "end": 9.16
+        },
+        {
+          "word": "conserved.",
+          "start": 9.16,
+          "end": 9.54
+        },
+        {
+          "word": "By",
+          "start": 9.92,
+          "end": 10.08
+        },
+        {
+          "word": "the",
+          "start": 10.08,
+          "end": 10.24
+        },
+        {
+          "word": "end,",
+          "start": 10.24,
+          "end": 10.58
+        },
+        {
+          "word": "you",
+          "start": 11.18,
+          "end": 11.3
+        },
+        {
+          "word": "can",
+          "start": 11.3,
+          "end": 11.48
+        },
+        {
+          "word": "build",
+          "start": 11.48,
+          "end": 11.74
+        },
+        {
+          "word": "a",
+          "start": 11.74,
+          "end": 11.96
+        },
+        {
+          "word": "signed",
+          "start": 11.96,
+          "end": 12.4
+        },
+        {
+          "word": "energy",
+          "start": 12.4,
+          "end": 12.98
+        },
+        {
+          "word": "balance.",
+          "start": 12.98,
+          "end": 13.36
+        },
+        {
+          "word": "Use",
+          "start": 13.84,
+          "end": 14.06
+        },
+        {
+          "word": "it",
+          "start": 14.06,
+          "end": 14.2
+        },
+        {
+          "word": "to",
+          "start": 14.2,
+          "end": 14.32
+        },
+        {
+          "word": "find",
+          "start": 14.32,
+          "end": 14.54
+        },
+        {
+          "word": "a",
+          "start": 14.54,
+          "end": 14.68
+        },
+        {
+          "word": "resistance.",
+          "start": 14.68,
+          "end": 15.06
+        },
+        {
+          "word": "And",
+          "start": 15.55,
+          "end": 15.69
+        },
+        {
+          "word": "explain",
+          "start": 15.69,
+          "end": 16.11
+        },
+        {
+          "word": "when",
+          "start": 16.11,
+          "end": 16.83
+        },
+        {
+          "word": "mechanical",
+          "start": 16.83,
+          "end": 17.25
+        },
+        {
+          "word": "energy",
+          "start": 17.25,
+          "end": 17.83
+        },
+        {
+          "word": "is",
+          "start": 17.83,
+          "end": 18.01
+        },
+        {
+          "word": "conserved.",
+          "start": 18.01,
+          "end": 18.55
+        }
+      ],
+      "cues": {
+        "syllabus": 0.4,
+        "outcome1": 9.92,
+        "outcome2": 13.84,
+        "outcome3": 15.55
+      },
+      "figureEvents": [],
+      "wordCount": 44,
+      "text": "Our syllabus excerpt is conservation of energy. We will use the work energy principle, and see when mechanical energy is conserved. By the end, you can build a signed energy balance. Use it to find a resistance. And explain when mechanical energy is conserved.",
+      "duration": 19.330612
+    },
+    {
+      "id": "s02",
+      "title": "A car coasts downhill",
+      "mode": "story",
+      "source": "Recording97–111 original descent scenario",
+      "voiceSpeed": 1,
+      "tempo": "brisk",
+      "beats": [
+        {
+          "id": "story",
+          "text": "Consider a car already moving down a straight hill. The driver lets it coast, with no driving force from the engine. Watch it travel towards the marked lower point, gaining speed as it descends.",
+          "hold": 0,
+          "start": 0.4,
+          "speechEnd": 14.36,
+          "end": 14.56,
+          "cue": 0.4,
+          "penEnd": 14.48
+        },
+        {
+          "id": "snapshot",
+          "text": "Here is a snapshot as it passes the lower point. The car is still moving. Resistance has opposed the motion throughout; nevertheless, the car has gained speed.",
+          "hold": 0,
+          "start": 14.56,
+          "speechEnd": 28.84,
+          "end": 29.04,
+          "cue": 14.56,
+          "penEnd": 28.96
+        },
+        {
+          "id": "question",
+          "text": "We will use its energy change to find that resistance. First, the whole question.",
+          "hold": 2,
+          "start": 29.04,
+          "speechEnd": 35.58,
+          "end": 35.78,
+          "cue": 29.04,
+          "penEnd": 35.7
+        }
+      ],
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 35.78,
+          "end": 37.78,
+          "duration": 2
+        }
+      ],
+      "audio": "energy-principles-s02.mp3",
+      "audioSha256": "8ff3fcf89956581c6e5539c9a546fe8e86ca562392ab57b2dfad48987298fddc",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "provider": "elevenlabs",
+      "sampleDuration": 38.13,
+      "words": [
+        {
+          "word": "Consider",
+          "start": 0.4,
+          "end": 0.76
+        },
+        {
+          "word": "a",
+          "start": 0.76,
+          "end": 1.02
+        },
+        {
+          "word": "car",
+          "start": 1.02,
+          "end": 1.18
+        },
+        {
+          "word": "already",
+          "start": 1.18,
+          "end": 1.6
+        },
+        {
+          "word": "moving",
+          "start": 1.6,
+          "end": 1.9
+        },
+        {
+          "word": "down",
+          "start": 1.9,
+          "end": 2.22
+        },
+        {
+          "word": "a",
+          "start": 2.22,
+          "end": 2.66
+        },
+        {
+          "word": "straight",
+          "start": 2.66,
+          "end": 2.86
+        },
+        {
+          "word": "hill.",
+          "start": 2.86,
+          "end": 3.16
+        },
+        {
+          "word": "The",
+          "start": 4.14,
+          "end": 4.16
+        },
+        {
+          "word": "driver",
+          "start": 4.16,
+          "end": 4.54
+        },
+        {
+          "word": "lets",
+          "start": 4.54,
+          "end": 4.78
+        },
+        {
+          "word": "it",
+          "start": 4.78,
+          "end": 4.94
+        },
+        {
+          "word": "coast,",
+          "start": 4.94,
+          "end": 5.26
+        },
+        {
+          "word": "with",
+          "start": 6.0,
+          "end": 6.16
+        },
+        {
+          "word": "no",
+          "start": 6.16,
+          "end": 6.48
+        },
+        {
+          "word": "driving",
+          "start": 6.48,
+          "end": 6.92
+        },
+        {
+          "word": "force",
+          "start": 6.92,
+          "end": 7.34
+        },
+        {
+          "word": "from",
+          "start": 7.34,
+          "end": 7.84
+        },
+        {
+          "word": "the",
+          "start": 7.84,
+          "end": 7.96
+        },
+        {
+          "word": "engine.",
+          "start": 7.96,
+          "end": 8.28
+        },
+        {
+          "word": "Watch",
+          "start": 8.88,
+          "end": 9.3
+        },
+        {
+          "word": "it",
+          "start": 9.3,
+          "end": 9.48
+        },
+        {
+          "word": "travel",
+          "start": 9.48,
+          "end": 9.82
+        },
+        {
+          "word": "towards",
+          "start": 9.82,
+          "end": 10.3
+        },
+        {
+          "word": "the",
+          "start": 10.3,
+          "end": 10.56
+        },
+        {
+          "word": "marked",
+          "start": 10.56,
+          "end": 10.88
+        },
+        {
+          "word": "lower",
+          "start": 10.88,
+          "end": 11.18
+        },
+        {
+          "word": "point,",
+          "start": 11.18,
+          "end": 11.6
+        },
+        {
+          "word": "gaining",
+          "start": 12.08,
+          "end": 12.4
+        },
+        {
+          "word": "speed",
+          "start": 12.4,
+          "end": 12.92
+        },
+        {
+          "word": "as",
+          "start": 12.92,
+          "end": 13.76
+        },
+        {
+          "word": "it",
+          "start": 13.76,
+          "end": 13.9
+        },
+        {
+          "word": "descends.",
+          "start": 13.9,
+          "end": 14.36
+        },
+        {
+          "word": "Here",
+          "start": 14.56,
+          "end": 14.8
+        },
+        {
+          "word": "is",
+          "start": 14.8,
+          "end": 15.0
+        },
+        {
+          "word": "a",
+          "start": 15.0,
+          "end": 15.14
+        },
+        {
+          "word": "snapshot",
+          "start": 15.14,
+          "end": 15.48
+        },
+        {
+          "word": "as",
+          "start": 15.48,
+          "end": 16.42
+        },
+        {
+          "word": "it",
+          "start": 16.42,
+          "end": 16.52
+        },
+        {
+          "word": "passes",
+          "start": 16.52,
+          "end": 16.78
+        },
+        {
+          "word": "the",
+          "start": 16.78,
+          "end": 17.02
+        },
+        {
+          "word": "lower",
+          "start": 17.02,
+          "end": 17.24
+        },
+        {
+          "word": "point.",
+          "start": 17.24,
+          "end": 17.68
+        },
+        {
+          "word": "The",
+          "start": 18.96,
+          "end": 19.0
+        },
+        {
+          "word": "car",
+          "start": 19.0,
+          "end": 19.4
+        },
+        {
+          "word": "is",
+          "start": 19.4,
+          "end": 19.66
+        },
+        {
+          "word": "still",
+          "start": 19.66,
+          "end": 19.86
+        },
+        {
+          "word": "moving.",
+          "start": 19.86,
+          "end": 20.16
+        },
+        {
+          "word": "Resistance",
+          "start": 21.1,
+          "end": 21.64
+        },
+        {
+          "word": "has",
+          "start": 21.64,
+          "end": 22.12
+        },
+        {
+          "word": "opposed",
+          "start": 22.12,
+          "end": 22.7
+        },
+        {
+          "word": "the",
+          "start": 22.7,
+          "end": 23.14
+        },
+        {
+          "word": "motion",
+          "start": 23.14,
+          "end": 23.54
+        },
+        {
+          "word": "throughout.",
+          "start": 23.54,
+          "end": 24.04
+        },
+        {
+          "word": "Nevertheless,",
+          "start": 25.3,
+          "end": 25.66
+        },
+        {
+          "word": "the",
+          "start": 26.44,
+          "end": 26.92
+        },
+        {
+          "word": "car",
+          "start": 26.92,
+          "end": 27.26
+        },
+        {
+          "word": "has",
+          "start": 27.26,
+          "end": 27.48
+        },
+        {
+          "word": "gained",
+          "start": 27.48,
+          "end": 27.92
+        },
+        {
+          "word": "speed.",
+          "start": 27.92,
+          "end": 28.56
+        },
+        {
+          "word": "We",
+          "start": 29.04,
+          "end": 29.2
+        },
+        {
+          "word": "will",
+          "start": 29.2,
+          "end": 29.36
+        },
+        {
+          "word": "use",
+          "start": 29.36,
+          "end": 29.6
+        },
+        {
+          "word": "its",
+          "start": 29.6,
+          "end": 29.78
+        },
+        {
+          "word": "energy",
+          "start": 29.78,
+          "end": 30.18
+        },
+        {
+          "word": "change",
+          "start": 30.18,
+          "end": 30.56
+        },
+        {
+          "word": "to",
+          "start": 30.56,
+          "end": 31.1
+        },
+        {
+          "word": "find",
+          "start": 31.1,
+          "end": 31.48
+        },
+        {
+          "word": "that",
+          "start": 31.48,
+          "end": 31.74
+        },
+        {
+          "word": "resistance.",
+          "start": 31.74,
+          "end": 32.3
+        },
+        {
+          "word": "First,",
+          "start": 33.16,
+          "end": 33.62
+        },
+        {
+          "word": "the",
+          "start": 34.32,
+          "end": 34.7
+        },
+        {
+          "word": "whole",
+          "start": 34.7,
+          "end": 34.96
+        },
+        {
+          "word": "question.",
+          "start": 34.96,
+          "end": 35.36
+        }
+      ],
+      "cues": {
+        "story": 0.4,
+        "snapshot": 14.56,
+        "question": 29.04
+      },
+      "figureEvents": [],
+      "wordCount": 75,
+      "text": "Consider a car already moving down a straight hill. The driver lets it coast, with no driving force from the engine. Watch it travel towards the marked lower point, gaining speed as it descends. Here is a snapshot as it passes the lower point. The car is still moving. Resistance has opposed the motion throughout. Nevertheless, the car has gained speed. We will use its energy change to find that resistance. First, the whole question.",
+      "duration": 38.164898
+    },
+    {
+      "id": "s03",
+      "title": "The complete question",
+      "mode": "problem",
+      "source": "Recording97–111; PDF13 incline guidance",
+      "voiceSpeed": 0.9,
+      "tempo": "slow",
+      "beats": [
+        {
+          "id": "mass",
+          "text": "A car of mass eight hundred kilograms coasts from A to B.",
+          "hold": 0,
+          "start": 0.4,
+          "speechEnd": 5.32,
+          "end": 5.52,
+          "cue": 0.4,
+          "penEnd": 5.4399999999999995
+        },
+        {
+          "id": "distance",
+          "text": "It travels one hundred metres along a straight slope, inclined at thirty degrees to the horizontal.",
+          "hold": 0,
+          "start": 5.52,
+          "speechEnd": 13.58,
+          "end": 13.78,
+          "cue": 5.52,
+          "penEnd": 13.7
+        },
+        {
+          "id": "initial",
+          "text": "Its speed at A is ten metres per second.",
+          "hold": 0,
+          "start": 13.78,
+          "speechEnd": 16.76,
+          "end": 16.96,
+          "cue": 13.78,
+          "penEnd": 16.880000000000003
+        },
+        {
+          "id": "final",
+          "text": "Its speed at B is twenty metres per second.",
+          "hold": 0,
+          "start": 16.96,
+          "speechEnd": 19.78,
+          "end": 19.98,
+          "cue": 16.96,
+          "penEnd": 19.900000000000002
+        },
+        {
+          "id": "conditions",
+          "text": "There is no driving force. A constant resistance, F, acts uphill, opposite the motion. Model the car as a particle.",
+          "hold": 0,
+          "start": 19.98,
+          "speechEnd": 30.82,
+          "end": 31.02,
+          "cue": 19.98,
+          "penEnd": 30.94
+        },
+        {
+          "id": "gravity",
+          "text": "Take g as ten metres per second squared. Choose the lower point B as the zero height datum.",
+          "hold": 0,
+          "start": 31.02,
+          "speechEnd": 38.42,
+          "end": 38.62,
+          "cue": 31.02,
+          "penEnd": 38.54
+        },
+        {
+          "id": "unknown",
+          "text": "Use energy to find F. All the givens are now on the diagram. Pause and read them before we begin.",
+          "hold": 3,
+          "start": 38.62,
+          "speechEnd": 47.23,
+          "end": 47.43,
+          "cue": 38.62,
+          "penEnd": 47.35
+        }
+      ],
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 47.43,
+          "end": 50.43,
+          "duration": 3
+        }
+      ],
+      "audio": "energy-principles-s03.mp3",
+      "audioSha256": "4bd315e2ed2eccbc2f7d9e5adb7ce8c9daee07c30d37a378a7ec2ff3b284d211",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "provider": "elevenlabs",
+      "sampleDuration": 50.78,
+      "words": [
+        {
+          "word": "A",
+          "start": 0.4,
+          "end": 0.54
+        },
+        {
+          "word": "car",
+          "start": 0.54,
+          "end": 0.94
+        },
+        {
+          "word": "of",
+          "start": 0.94,
+          "end": 1.24
+        },
+        {
+          "word": "mass",
+          "start": 1.24,
+          "end": 1.74
+        },
+        {
+          "word": "eight",
+          "start": 1.74,
+          "end": 2.44
+        },
+        {
+          "word": "hundred",
+          "start": 2.44,
+          "end": 2.76
+        },
+        {
+          "word": "kilograms",
+          "start": 2.76,
+          "end": 3.32
+        },
+        {
+          "word": "coasts",
+          "start": 3.32,
+          "end": 4.18
+        },
+        {
+          "word": "from",
+          "start": 4.18,
+          "end": 4.28
+        },
+        {
+          "word": "A",
+          "start": 4.28,
+          "end": 4.62
+        },
+        {
+          "word": "to",
+          "start": 4.62,
+          "end": 4.98
+        },
+        {
+          "word": "B.",
+          "start": 4.98,
+          "end": 5.26
+        },
+        {
+          "word": "It",
+          "start": 5.52,
+          "end": 5.66
+        },
+        {
+          "word": "travels",
+          "start": 5.66,
+          "end": 6.04
+        },
+        {
+          "word": "one",
+          "start": 6.04,
+          "end": 6.18
+        },
+        {
+          "word": "hundred",
+          "start": 6.18,
+          "end": 6.54
+        },
+        {
+          "word": "metres",
+          "start": 6.54,
+          "end": 6.98
+        },
+        {
+          "word": "along",
+          "start": 6.98,
+          "end": 8.14
+        },
+        {
+          "word": "a",
+          "start": 8.14,
+          "end": 8.44
+        },
+        {
+          "word": "straight",
+          "start": 8.44,
+          "end": 8.7
+        },
+        {
+          "word": "slope,",
+          "start": 8.7,
+          "end": 9.26
+        },
+        {
+          "word": "inclined",
+          "start": 9.88,
+          "end": 10.5
+        },
+        {
+          "word": "at",
+          "start": 10.5,
+          "end": 10.86
+        },
+        {
+          "word": "thirty",
+          "start": 10.86,
+          "end": 11.22
+        },
+        {
+          "word": "degrees",
+          "start": 11.22,
+          "end": 11.6
+        },
+        {
+          "word": "to",
+          "start": 11.6,
+          "end": 12.52
+        },
+        {
+          "word": "the",
+          "start": 12.52,
+          "end": 12.68
+        },
+        {
+          "word": "horizontal.",
+          "start": 12.68,
+          "end": 13.16
+        },
+        {
+          "word": "Its",
+          "start": 13.78,
+          "end": 13.98
+        },
+        {
+          "word": "speed",
+          "start": 13.98,
+          "end": 14.38
+        },
+        {
+          "word": "at",
+          "start": 14.38,
+          "end": 14.58
+        },
+        {
+          "word": "A",
+          "start": 14.58,
+          "end": 14.9
+        },
+        {
+          "word": "is",
+          "start": 14.9,
+          "end": 15.22
+        },
+        {
+          "word": "ten",
+          "start": 15.22,
+          "end": 15.54
+        },
+        {
+          "word": "metres",
+          "start": 15.54,
+          "end": 15.82
+        },
+        {
+          "word": "per",
+          "start": 15.82,
+          "end": 16.1
+        },
+        {
+          "word": "second.",
+          "start": 16.1,
+          "end": 16.5
+        },
+        {
+          "word": "Its",
+          "start": 16.96,
+          "end": 17.16
+        },
+        {
+          "word": "speed",
+          "start": 17.16,
+          "end": 17.54
+        },
+        {
+          "word": "at",
+          "start": 17.54,
+          "end": 17.7
+        },
+        {
+          "word": "B",
+          "start": 17.7,
+          "end": 18.0
+        },
+        {
+          "word": "is",
+          "start": 18.0,
+          "end": 18.14
+        },
+        {
+          "word": "twenty",
+          "start": 18.14,
+          "end": 18.64
+        },
+        {
+          "word": "metres",
+          "start": 18.64,
+          "end": 18.9
+        },
+        {
+          "word": "per",
+          "start": 18.9,
+          "end": 19.18
+        },
+        {
+          "word": "second.",
+          "start": 19.18,
+          "end": 19.54
+        },
+        {
+          "word": "There",
+          "start": 19.98,
+          "end": 20.12
+        },
+        {
+          "word": "is",
+          "start": 20.12,
+          "end": 20.24
+        },
+        {
+          "word": "no",
+          "start": 20.24,
+          "end": 20.44
+        },
+        {
+          "word": "driving",
+          "start": 20.44,
+          "end": 20.94
+        },
+        {
+          "word": "force.",
+          "start": 20.94,
+          "end": 21.36
+        },
+        {
+          "word": "A",
+          "start": 22.1,
+          "end": 22.18
+        },
+        {
+          "word": "constant",
+          "start": 22.18,
+          "end": 22.64
+        },
+        {
+          "word": "resistance,",
+          "start": 22.64,
+          "end": 23.4
+        },
+        {
+          "word": "F,",
+          "start": 23.98,
+          "end": 24.28
+        },
+        {
+          "word": "acts",
+          "start": 25.0,
+          "end": 25.44
+        },
+        {
+          "word": "uphill,",
+          "start": 25.44,
+          "end": 25.9
+        },
+        {
+          "word": "opposite",
+          "start": 26.5,
+          "end": 26.96
+        },
+        {
+          "word": "the",
+          "start": 26.96,
+          "end": 27.2
+        },
+        {
+          "word": "motion.",
+          "start": 27.2,
+          "end": 27.54
+        },
+        {
+          "word": "Model",
+          "start": 28.32,
+          "end": 28.88
+        },
+        {
+          "word": "the",
+          "start": 28.88,
+          "end": 29.12
+        },
+        {
+          "word": "car",
+          "start": 29.12,
+          "end": 29.46
+        },
+        {
+          "word": "as",
+          "start": 29.46,
+          "end": 30.16
+        },
+        {
+          "word": "a",
+          "start": 30.16,
+          "end": 30.28
+        },
+        {
+          "word": "particle.",
+          "start": 30.28,
+          "end": 30.56
+        },
+        {
+          "word": "Take",
+          "start": 31.02,
+          "end": 31.26
+        },
+        {
+          "word": "g",
+          "start": 31.26,
+          "end": 31.66
+        },
+        {
+          "word": "as",
+          "start": 31.66,
+          "end": 32.06
+        },
+        {
+          "word": "ten",
+          "start": 32.06,
+          "end": 32.4
+        },
+        {
+          "word": "metres",
+          "start": 32.4,
+          "end": 32.74
+        },
+        {
+          "word": "per",
+          "start": 32.74,
+          "end": 33.04
+        },
+        {
+          "word": "second",
+          "start": 33.04,
+          "end": 33.34
+        },
+        {
+          "word": "squared.",
+          "start": 33.34,
+          "end": 33.84
+        },
+        {
+          "word": "Choose",
+          "start": 34.42,
+          "end": 35.14
+        },
+        {
+          "word": "the",
+          "start": 35.14,
+          "end": 35.42
+        },
+        {
+          "word": "lower",
+          "start": 35.42,
+          "end": 35.68
+        },
+        {
+          "word": "point",
+          "start": 35.68,
+          "end": 36.06
+        },
+        {
+          "word": "B",
+          "start": 36.06,
+          "end": 36.46
+        },
+        {
+          "word": "as",
+          "start": 36.46,
+          "end": 37.02
+        },
+        {
+          "word": "the",
+          "start": 37.02,
+          "end": 37.26
+        },
+        {
+          "word": "zero",
+          "start": 37.26,
+          "end": 37.48
+        },
+        {
+          "word": "height",
+          "start": 37.48,
+          "end": 37.78
+        },
+        {
+          "word": "datum.",
+          "start": 37.78,
+          "end": 38.36
+        },
+        {
+          "word": "Use",
+          "start": 38.62,
+          "end": 38.84
+        },
+        {
+          "word": "energy",
+          "start": 38.84,
+          "end": 39.3
+        },
+        {
+          "word": "to",
+          "start": 39.3,
+          "end": 39.74
+        },
+        {
+          "word": "find",
+          "start": 39.74,
+          "end": 40.04
+        },
+        {
+          "word": "F.",
+          "start": 40.04,
+          "end": 40.42
+        },
+        {
+          "word": "All",
+          "start": 41.5,
+          "end": 41.8
+        },
+        {
+          "word": "the",
+          "start": 41.8,
+          "end": 41.96
+        },
+        {
+          "word": "givens",
+          "start": 41.96,
+          "end": 42.5
+        },
+        {
+          "word": "are",
+          "start": 42.5,
+          "end": 42.68
+        },
+        {
+          "word": "now",
+          "start": 42.68,
+          "end": 43.08
+        },
+        {
+          "word": "on",
+          "start": 43.08,
+          "end": 43.64
+        },
+        {
+          "word": "the",
+          "start": 43.64,
+          "end": 43.76
+        },
+        {
+          "word": "diagram.",
+          "start": 43.76,
+          "end": 44.22
+        },
+        {
+          "word": "Pause",
+          "start": 44.64,
+          "end": 45.18
+        },
+        {
+          "word": "and",
+          "start": 45.18,
+          "end": 45.68
+        },
+        {
+          "word": "read",
+          "start": 45.68,
+          "end": 45.9
+        },
+        {
+          "word": "them",
+          "start": 45.9,
+          "end": 46.22
+        },
+        {
+          "word": "before",
+          "start": 46.22,
+          "end": 46.5
+        },
+        {
+          "word": "we",
+          "start": 46.5,
+          "end": 46.72
+        },
+        {
+          "word": "begin.",
+          "start": 46.72,
+          "end": 47.02
+        }
+      ],
+      "cues": {
+        "mass": 0.4,
+        "distance": 5.52,
+        "initial": 13.78,
+        "final": 16.96,
+        "conditions": 19.98,
+        "gravity": 31.02,
+        "unknown": 38.62
+      },
+      "figureEvents": [
+        {
+          "id": "number-4",
+          "wordIndex": 4,
+          "word": "800",
+          "spokenPhrase": "eight hundred",
+          "start": 1.74,
+          "target": "mass",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-14",
+          "wordIndex": 14,
+          "word": "100",
+          "spokenPhrase": "one hundred",
+          "start": 6.04,
+          "target": "distance",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-23",
+          "wordIndex": 23,
+          "word": "30",
+          "spokenPhrase": "thirty",
+          "start": 10.86,
+          "target": "angle",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-33",
+          "wordIndex": 33,
+          "word": "10",
+          "spokenPhrase": "ten",
+          "start": 15.22,
+          "target": "initial",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-42",
+          "wordIndex": 42,
+          "word": "20",
+          "spokenPhrase": "twenty",
+          "start": 18.14,
+          "target": "final",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-69",
+          "wordIndex": 69,
+          "word": "10",
+          "spokenPhrase": "ten",
+          "start": 32.06,
+          "target": "gravity",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-81",
+          "wordIndex": 81,
+          "word": "0",
+          "spokenPhrase": "zero",
+          "start": 37.26,
+          "target": "zero",
+          "kind": "spoken"
+        }
+      ],
+      "wordCount": 104,
+      "text": "A car of mass eight hundred kilograms coasts from A to B. It travels one hundred metres along a straight slope, inclined at thirty degrees to the horizontal. Its speed at A is ten metres per second. Its speed at B is twenty metres per second. There is no driving force. A constant resistance, F, acts uphill, opposite the motion. Model the car as a particle. Take g as ten metres per second squared. Choose the lower point B as the zero height datum. Use energy to find F. All the givens are now on the diagram. Pause and read them before we begin.",
+      "duration": 50.808163
+    },
+    {
+      "id": "s04",
+      "title": "Vertical height and potential energy",
+      "mode": "height",
+      "source": "Recording117–130; PDF12–14",
+      "voiceSpeed": 0.9,
+      "tempo": "slow",
+      "beats": [
+        {
+          "id": "heightwhy",
+          "text": "We need vertical height for gravitational potential energy. The road distance is the hypotenuse of this triangle; the height drop is opposite the slope angle.",
+          "hold": 0,
+          "start": 0.4,
+          "speechEnd": 16.55,
+          "end": 16.75,
+          "cue": 0.4,
+          "penEnd": 16.67
+        },
+        {
+          "id": "heightformula",
+          "text": "So the vertical height equals distance along the slope times sine of the angle.",
+          "hold": 2,
+          "ink": "h = d sin θ",
+          "start": 16.75,
+          "speechEnd": 22.63,
+          "end": 22.83,
+          "cue": 16.75,
+          "penEnd": 22.75
+        },
+        {
+          "id": "heightsub",
+          "text": "Substitute one hundred metres and thirty degrees.",
+          "hold": 0,
+          "ink": "h = 100 sin 30°",
+          "start": 24.83,
+          "speechEnd": 28.03,
+          "end": 28.23,
+          "cue": 24.83,
+          "penEnd": 28.150000000000002
+        },
+        {
+          "id": "heightanswer",
+          "text": "This gives fifty metres. Put that height on the diagram.",
+          "hold": 2,
+          "ink": "h = 50 m",
+          "start": 28.23,
+          "speechEnd": 32.54,
+          "end": 32.74,
+          "cue": 28.23,
+          "penEnd": 32.660000000000004
+        },
+        {
+          "id": "gpeformula",
+          "text": "Gravitational potential energy equals mass times g times height above our datum.",
+          "hold": 2,
+          "ink": "GPE = mgh",
+          "start": 34.74,
+          "speechEnd": 40.86,
+          "end": 41.06,
+          "cue": 34.74,
+          "penEnd": 40.980000000000004
+        },
+        {
+          "id": "gpesub",
+          "text": "At A, substitute eight hundred, ten, and fifty.",
+          "hold": 0,
+          "ink": "GPE(A) = 800 × 10 × 50",
+          "start": 43.06,
+          "speechEnd": 48.12,
+          "end": 48.32,
+          "cue": 43.06,
+          "penEnd": 48.24
+        },
+        {
+          "id": "gpeanswer",
+          "text": "The initial gravitational potential energy is four hundred thousand joules.",
+          "hold": 2,
+          "ink": "GPE(A) = 400000 J",
+          "start": 48.32,
+          "speechEnd": 53.79,
+          "end": 53.99,
+          "cue": 48.32,
+          "penEnd": 53.910000000000004
+        },
+        {
+          "id": "bottom",
+          "text": "At B, height is zero. Mass times g times zero gives zero gravitational potential energy. This depends on our chosen datum.",
+          "hold": 2,
+          "ink": "GPE(B) = mg × 0 = 0 J",
+          "start": 55.99,
+          "speechEnd": 69.3,
+          "end": 69.5,
+          "cue": 55.99,
+          "penEnd": 69.42
+        }
+      ],
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 22.83,
+          "end": 24.83,
+          "duration": 2
+        },
+        {
+          "kind": "hold",
+          "start": 32.74,
+          "end": 34.74,
+          "duration": 2
+        },
+        {
+          "kind": "hold",
+          "start": 41.06,
+          "end": 43.06,
+          "duration": 2
+        },
+        {
+          "kind": "hold",
+          "start": 53.99,
+          "end": 55.99,
+          "duration": 2
+        },
+        {
+          "kind": "hold",
+          "start": 69.5,
+          "end": 71.5,
+          "duration": 2
+        }
+      ],
+      "audio": "energy-principles-s04.mp3",
+      "audioSha256": "4325cc6d4497136ac73d002d6e6ac33abaa02522c8fbf5e3a70c605bad59cb2e",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "provider": "elevenlabs",
+      "sampleDuration": 71.85,
+      "words": [
+        {
+          "word": "We",
+          "start": 0.4,
+          "end": 0.56
+        },
+        {
+          "word": "need",
+          "start": 0.56,
+          "end": 0.96
+        },
+        {
+          "word": "vertical",
+          "start": 0.96,
+          "end": 1.62
+        },
+        {
+          "word": "height",
+          "start": 1.62,
+          "end": 2.12
+        },
+        {
+          "word": "for",
+          "start": 2.12,
+          "end": 2.76
+        },
+        {
+          "word": "gravitational",
+          "start": 2.76,
+          "end": 3.46
+        },
+        {
+          "word": "potential",
+          "start": 3.46,
+          "end": 4.32
+        },
+        {
+          "word": "energy.",
+          "start": 4.32,
+          "end": 5.02
+        },
+        {
+          "word": "The",
+          "start": 6.04,
+          "end": 6.54
+        },
+        {
+          "word": "road",
+          "start": 6.54,
+          "end": 7.0
+        },
+        {
+          "word": "distance",
+          "start": 7.0,
+          "end": 8.06
+        },
+        {
+          "word": "is",
+          "start": 8.06,
+          "end": 8.96
+        },
+        {
+          "word": "the",
+          "start": 8.96,
+          "end": 9.1
+        },
+        {
+          "word": "hypotenuse",
+          "start": 9.1,
+          "end": 10.08
+        },
+        {
+          "word": "of",
+          "start": 10.08,
+          "end": 10.88
+        },
+        {
+          "word": "this",
+          "start": 10.88,
+          "end": 11.12
+        },
+        {
+          "word": "triangle.",
+          "start": 11.12,
+          "end": 11.72
+        },
+        {
+          "word": "The",
+          "start": 13.08,
+          "end": 13.22
+        },
+        {
+          "word": "height",
+          "start": 13.22,
+          "end": 13.52
+        },
+        {
+          "word": "drop",
+          "start": 13.52,
+          "end": 13.9
+        },
+        {
+          "word": "is",
+          "start": 13.9,
+          "end": 14.52
+        },
+        {
+          "word": "opposite",
+          "start": 14.52,
+          "end": 15.16
+        },
+        {
+          "word": "the",
+          "start": 15.16,
+          "end": 15.36
+        },
+        {
+          "word": "slope",
+          "start": 15.36,
+          "end": 15.7
+        },
+        {
+          "word": "angle.",
+          "start": 15.7,
+          "end": 16.36
+        },
+        {
+          "word": "So",
+          "start": 16.75,
+          "end": 16.91
+        },
+        {
+          "word": "the",
+          "start": 16.91,
+          "end": 17.09
+        },
+        {
+          "word": "vertical",
+          "start": 17.09,
+          "end": 17.47
+        },
+        {
+          "word": "height",
+          "start": 17.47,
+          "end": 18.03
+        },
+        {
+          "word": "equals",
+          "start": 18.03,
+          "end": 18.83
+        },
+        {
+          "word": "distance",
+          "start": 18.83,
+          "end": 19.43
+        },
+        {
+          "word": "along",
+          "start": 19.43,
+          "end": 19.91
+        },
+        {
+          "word": "the",
+          "start": 19.91,
+          "end": 20.29
+        },
+        {
+          "word": "slope",
+          "start": 20.29,
+          "end": 20.65
+        },
+        {
+          "word": "times",
+          "start": 20.65,
+          "end": 21.37
+        },
+        {
+          "word": "sine",
+          "start": 21.37,
+          "end": 21.73
+        },
+        {
+          "word": "of",
+          "start": 21.73,
+          "end": 21.95
+        },
+        {
+          "word": "the",
+          "start": 21.95,
+          "end": 22.09
+        },
+        {
+          "word": "angle.",
+          "start": 22.09,
+          "end": 22.41
+        },
+        {
+          "word": "Substitute",
+          "start": 24.83,
+          "end": 25.57
+        },
+        {
+          "word": "one",
+          "start": 25.57,
+          "end": 25.79
+        },
+        {
+          "word": "hundred",
+          "start": 25.79,
+          "end": 26.09
+        },
+        {
+          "word": "metres",
+          "start": 26.09,
+          "end": 26.61
+        },
+        {
+          "word": "and",
+          "start": 26.61,
+          "end": 26.99
+        },
+        {
+          "word": "thirty",
+          "start": 26.99,
+          "end": 27.37
+        },
+        {
+          "word": "degrees.",
+          "start": 27.37,
+          "end": 27.69
+        },
+        {
+          "word": "This",
+          "start": 28.23,
+          "end": 28.45
+        },
+        {
+          "word": "gives",
+          "start": 28.45,
+          "end": 28.71
+        },
+        {
+          "word": "fifty",
+          "start": 28.71,
+          "end": 29.13
+        },
+        {
+          "word": "metres.",
+          "start": 29.13,
+          "end": 29.59
+        },
+        {
+          "word": "Put",
+          "start": 30.61,
+          "end": 31.01
+        },
+        {
+          "word": "that",
+          "start": 31.01,
+          "end": 31.25
+        },
+        {
+          "word": "height",
+          "start": 31.25,
+          "end": 31.51
+        },
+        {
+          "word": "on",
+          "start": 31.51,
+          "end": 31.71
+        },
+        {
+          "word": "the",
+          "start": 31.71,
+          "end": 31.83
+        },
+        {
+          "word": "diagram.",
+          "start": 31.83,
+          "end": 32.23
+        },
+        {
+          "word": "Gravitational",
+          "start": 34.74,
+          "end": 35.48
+        },
+        {
+          "word": "potential",
+          "start": 35.48,
+          "end": 35.8
+        },
+        {
+          "word": "energy",
+          "start": 35.8,
+          "end": 36.6
+        },
+        {
+          "word": "equals",
+          "start": 36.6,
+          "end": 37.32
+        },
+        {
+          "word": "mass",
+          "start": 37.32,
+          "end": 37.8
+        },
+        {
+          "word": "times",
+          "start": 37.8,
+          "end": 38.62
+        },
+        {
+          "word": "g",
+          "start": 38.62,
+          "end": 39.02
+        },
+        {
+          "word": "times",
+          "start": 39.02,
+          "end": 39.48
+        },
+        {
+          "word": "height",
+          "start": 39.48,
+          "end": 39.7
+        },
+        {
+          "word": "above",
+          "start": 39.7,
+          "end": 40.04
+        },
+        {
+          "word": "our",
+          "start": 40.04,
+          "end": 40.34
+        },
+        {
+          "word": "datum.",
+          "start": 40.34,
+          "end": 40.84
+        },
+        {
+          "word": "At",
+          "start": 43.06,
+          "end": 43.26
+        },
+        {
+          "word": "A,",
+          "start": 43.26,
+          "end": 43.64
+        },
+        {
+          "word": "substitute",
+          "start": 44.22,
+          "end": 44.86
+        },
+        {
+          "word": "eight",
+          "start": 44.86,
+          "end": 45.4
+        },
+        {
+          "word": "hundred,",
+          "start": 45.4,
+          "end": 45.8
+        },
+        {
+          "word": "ten,",
+          "start": 46.2,
+          "end": 46.76
+        },
+        {
+          "word": "and",
+          "start": 47.28,
+          "end": 47.46
+        },
+        {
+          "word": "fifty.",
+          "start": 47.46,
+          "end": 47.8
+        },
+        {
+          "word": "The",
+          "start": 48.32,
+          "end": 48.48
+        },
+        {
+          "word": "initial",
+          "start": 48.48,
+          "end": 48.94
+        },
+        {
+          "word": "gravitational",
+          "start": 48.94,
+          "end": 49.54
+        },
+        {
+          "word": "potential",
+          "start": 49.54,
+          "end": 50.12
+        },
+        {
+          "word": "energy",
+          "start": 50.12,
+          "end": 50.88
+        },
+        {
+          "word": "is",
+          "start": 50.88,
+          "end": 51.68
+        },
+        {
+          "word": "four",
+          "start": 51.68,
+          "end": 51.98
+        },
+        {
+          "word": "hundred",
+          "start": 51.98,
+          "end": 52.28
+        },
+        {
+          "word": "thousand",
+          "start": 52.28,
+          "end": 52.96
+        },
+        {
+          "word": "joules.",
+          "start": 52.96,
+          "end": 53.72
+        },
+        {
+          "word": "At",
+          "start": 55.99,
+          "end": 56.19
+        },
+        {
+          "word": "B,",
+          "start": 56.19,
+          "end": 56.47
+        },
+        {
+          "word": "height",
+          "start": 57.01,
+          "end": 57.39
+        },
+        {
+          "word": "is",
+          "start": 57.39,
+          "end": 57.93
+        },
+        {
+          "word": "zero.",
+          "start": 57.93,
+          "end": 58.33
+        },
+        {
+          "word": "Mass",
+          "start": 59.55,
+          "end": 59.69
+        },
+        {
+          "word": "times",
+          "start": 59.69,
+          "end": 60.37
+        },
+        {
+          "word": "g",
+          "start": 60.37,
+          "end": 60.95
+        },
+        {
+          "word": "times",
+          "start": 60.95,
+          "end": 61.85
+        },
+        {
+          "word": "zero",
+          "start": 61.85,
+          "end": 62.29
+        },
+        {
+          "word": "gives",
+          "start": 62.29,
+          "end": 63.33
+        },
+        {
+          "word": "zero",
+          "start": 63.33,
+          "end": 63.95
+        },
+        {
+          "word": "gravitational",
+          "start": 63.95,
+          "end": 64.87
+        },
+        {
+          "word": "potential",
+          "start": 64.87,
+          "end": 65.51
+        },
+        {
+          "word": "energy.",
+          "start": 65.51,
+          "end": 66.13
+        },
+        {
+          "word": "This",
+          "start": 67.25,
+          "end": 67.37
+        },
+        {
+          "word": "depends",
+          "start": 67.37,
+          "end": 67.81
+        },
+        {
+          "word": "on",
+          "start": 67.81,
+          "end": 68.13
+        },
+        {
+          "word": "our",
+          "start": 68.13,
+          "end": 68.29
+        },
+        {
+          "word": "chosen",
+          "start": 68.29,
+          "end": 68.63
+        },
+        {
+          "word": "datum.",
+          "start": 68.63,
+          "end": 69.19
+        }
+      ],
+      "cues": {
+        "heightwhy": 0.4,
+        "heightformula": 16.75,
+        "heightsub": 24.83,
+        "heightanswer": 28.23,
+        "gpeformula": 34.74,
+        "gpesub": 43.06,
+        "gpeanswer": 48.32,
+        "bottom": 55.99,
+        "heightResult": 28.71,
+        "initialGPEResult": 51.68,
+        "finalGPEResult": 63.33
+      },
+      "figureEvents": [
+        {
+          "id": "number-40",
+          "wordIndex": 40,
+          "word": "100",
+          "spokenPhrase": "one hundred",
+          "start": 25.57,
+          "target": "distance",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-44",
+          "wordIndex": 44,
+          "word": "30",
+          "spokenPhrase": "thirty",
+          "start": 26.99,
+          "target": "angle",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-48",
+          "wordIndex": 48,
+          "word": "50",
+          "spokenPhrase": "fifty",
+          "start": 28.71,
+          "target": "height",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-71",
+          "wordIndex": 71,
+          "word": "800",
+          "spokenPhrase": "eight hundred,",
+          "start": 44.86,
+          "target": "mass",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-73",
+          "wordIndex": 73,
+          "word": "10",
+          "spokenPhrase": "ten,",
+          "start": 46.2,
+          "target": "gravity",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-75",
+          "wordIndex": 75,
+          "word": "50",
+          "spokenPhrase": "fifty.",
+          "start": 47.46,
+          "target": "height",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-82",
+          "wordIndex": 82,
+          "word": "400000",
+          "spokenPhrase": "four hundred thousand",
+          "start": 51.68,
+          "target": "initialGPE",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-90",
+          "wordIndex": 90,
+          "word": "0",
+          "spokenPhrase": "zero.",
+          "start": 57.93,
+          "target": "zero",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-95",
+          "wordIndex": 95,
+          "word": "0",
+          "spokenPhrase": "zero",
+          "start": 61.85,
+          "target": "zero",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-97",
+          "wordIndex": 97,
+          "word": "0",
+          "spokenPhrase": "zero",
+          "start": 63.33,
+          "target": "finalGPE",
+          "kind": "spoken"
+        }
+      ],
+      "wordCount": 107,
+      "text": "We need vertical height for gravitational potential energy. The road distance is the hypotenuse of this triangle. The height drop is opposite the slope angle. So the vertical height equals distance along the slope times sine of the angle. Substitute one hundred metres and thirty degrees. This gives fifty metres. Put that height on the diagram. Gravitational potential energy equals mass times g times height above our datum. At A, substitute eight hundred, ten, and fifty. The initial gravitational potential energy is four hundred thousand joules. At B, height is zero. Mass times g times zero gives zero gravitational potential energy. This depends on our chosen datum.",
+      "duration": 71.88898
+    },
+    {
+      "id": "s05",
+      "title": "Kinetic energy at both endpoints",
+      "mode": "kinetic",
+      "source": "Recording112–117,131–136; PDF12–14",
+      "voiceSpeed": 0.9,
+      "tempo": "slow",
+      "beats": [
+        {
+          "id": "formula",
+          "text": "Now calculate the energy associated with motion. Kinetic energy equals one half mass times speed squared.",
+          "hold": 2,
+          "ink": "KE = ½mv²",
+          "start": 0.4,
+          "speechEnd": 9.52,
+          "end": 9.72,
+          "cue": 0.4,
+          "penEnd": 9.64
+        },
+        {
+          "id": "initialsub",
+          "text": "At A, the mass is eight hundred kilograms and the speed is ten metres per second. Square the speed first.",
+          "hold": 0,
+          "ink": "KE(A) = ½ × 800 × 10²",
+          "start": 11.72,
+          "speechEnd": 21.14,
+          "end": 21.34,
+          "cue": 11.72,
+          "penEnd": 21.26
+        },
+        {
+          "id": "initialanswer",
+          "text": "The initial kinetic energy is forty thousand joules.",
+          "hold": 2,
+          "ink": "KE(A) = 40000 J",
+          "start": 21.34,
+          "speechEnd": 25.06,
+          "end": 25.26,
+          "cue": 21.34,
+          "penEnd": 25.180000000000003
+        },
+        {
+          "id": "finalsub",
+          "text": "At B, the same mass is moving at twenty metres per second.",
+          "hold": 0,
+          "ink": "KE(B) = ½ × 800 × 20²",
+          "start": 27.26,
+          "speechEnd": 31.35,
+          "end": 31.55,
+          "cue": 27.26,
+          "penEnd": 31.470000000000002
+        },
+        {
+          "id": "finalanswer",
+          "text": "The final kinetic energy is one hundred and sixty thousand joules.",
+          "hold": 2,
+          "ink": "KE(B) = 160000 J",
+          "start": 31.55,
+          "speechEnd": 36.4,
+          "end": 36.6,
+          "cue": 31.55,
+          "penEnd": 36.52
+        },
+        {
+          "id": "meaning",
+          "text": "The car has gained kinetic energy while losing gravitational potential energy. But resistance also transfers energy away. We must account for both effects, rather than equating the two energy changes.",
+          "hold": 2,
+          "start": 38.6,
+          "speechEnd": 55.64,
+          "end": 55.84,
+          "cue": 38.6,
+          "penEnd": 55.760000000000005
+        }
+      ],
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 9.72,
+          "end": 11.72,
+          "duration": 2
+        },
+        {
+          "kind": "hold",
+          "start": 25.26,
+          "end": 27.26,
+          "duration": 2
+        },
+        {
+          "kind": "hold",
+          "start": 36.6,
+          "end": 38.6,
+          "duration": 2
+        },
+        {
+          "kind": "hold",
+          "start": 55.84,
+          "end": 57.84,
+          "duration": 2
+        }
+      ],
+      "audio": "energy-principles-s05.mp3",
+      "audioSha256": "819b8689a0d66332d3079dbbad79ec37ce6ce173ee20b2f89b9211deffff509b",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "provider": "elevenlabs",
+      "sampleDuration": 58.19,
+      "words": [
+        {
+          "word": "Now",
+          "start": 0.4,
+          "end": 0.62
+        },
+        {
+          "word": "calculate",
+          "start": 0.62,
+          "end": 1.1
+        },
+        {
+          "word": "the",
+          "start": 1.1,
+          "end": 1.78
+        },
+        {
+          "word": "energy",
+          "start": 1.78,
+          "end": 2.22
+        },
+        {
+          "word": "associated",
+          "start": 2.22,
+          "end": 2.86
+        },
+        {
+          "word": "with",
+          "start": 2.86,
+          "end": 3.16
+        },
+        {
+          "word": "motion.",
+          "start": 3.16,
+          "end": 3.52
+        },
+        {
+          "word": "Kinetic",
+          "start": 4.22,
+          "end": 4.9
+        },
+        {
+          "word": "energy",
+          "start": 4.9,
+          "end": 5.38
+        },
+        {
+          "word": "equals",
+          "start": 5.38,
+          "end": 6.4
+        },
+        {
+          "word": "one",
+          "start": 6.4,
+          "end": 7.04
+        },
+        {
+          "word": "half",
+          "start": 7.04,
+          "end": 7.32
+        },
+        {
+          "word": "mass",
+          "start": 7.32,
+          "end": 7.64
+        },
+        {
+          "word": "times",
+          "start": 7.64,
+          "end": 8.34
+        },
+        {
+          "word": "speed",
+          "start": 8.34,
+          "end": 8.86
+        },
+        {
+          "word": "squared.",
+          "start": 8.86,
+          "end": 9.32
+        },
+        {
+          "word": "At",
+          "start": 11.72,
+          "end": 11.9
+        },
+        {
+          "word": "A,",
+          "start": 11.9,
+          "end": 12.28
+        },
+        {
+          "word": "the",
+          "start": 12.94,
+          "end": 13.06
+        },
+        {
+          "word": "mass",
+          "start": 13.06,
+          "end": 13.54
+        },
+        {
+          "word": "is",
+          "start": 13.54,
+          "end": 13.9
+        },
+        {
+          "word": "eight",
+          "start": 13.9,
+          "end": 14.22
+        },
+        {
+          "word": "hundred",
+          "start": 14.22,
+          "end": 14.52
+        },
+        {
+          "word": "kilograms",
+          "start": 14.52,
+          "end": 15.12
+        },
+        {
+          "word": "and",
+          "start": 15.12,
+          "end": 16.42
+        },
+        {
+          "word": "the",
+          "start": 16.42,
+          "end": 16.56
+        },
+        {
+          "word": "speed",
+          "start": 16.56,
+          "end": 17.0
+        },
+        {
+          "word": "is",
+          "start": 17.0,
+          "end": 17.32
+        },
+        {
+          "word": "ten",
+          "start": 17.32,
+          "end": 17.68
+        },
+        {
+          "word": "metres",
+          "start": 17.68,
+          "end": 17.98
+        },
+        {
+          "word": "per",
+          "start": 17.98,
+          "end": 18.26
+        },
+        {
+          "word": "second.",
+          "start": 18.26,
+          "end": 18.7
+        },
+        {
+          "word": "Square",
+          "start": 19.3,
+          "end": 20.02
+        },
+        {
+          "word": "the",
+          "start": 20.02,
+          "end": 20.24
+        },
+        {
+          "word": "speed",
+          "start": 20.24,
+          "end": 20.6
+        },
+        {
+          "word": "first.",
+          "start": 20.6,
+          "end": 20.96
+        },
+        {
+          "word": "The",
+          "start": 21.34,
+          "end": 21.46
+        },
+        {
+          "word": "initial",
+          "start": 21.46,
+          "end": 21.98
+        },
+        {
+          "word": "kinetic",
+          "start": 21.98,
+          "end": 22.42
+        },
+        {
+          "word": "energy",
+          "start": 22.42,
+          "end": 23.0
+        },
+        {
+          "word": "is",
+          "start": 23.0,
+          "end": 23.48
+        },
+        {
+          "word": "forty",
+          "start": 23.48,
+          "end": 23.74
+        },
+        {
+          "word": "thousand",
+          "start": 23.74,
+          "end": 24.32
+        },
+        {
+          "word": "joules.",
+          "start": 24.32,
+          "end": 24.96
+        },
+        {
+          "word": "At",
+          "start": 27.26,
+          "end": 27.46
+        },
+        {
+          "word": "B,",
+          "start": 27.46,
+          "end": 27.76
+        },
+        {
+          "word": "the",
+          "start": 28.42,
+          "end": 28.44
+        },
+        {
+          "word": "same",
+          "start": 28.44,
+          "end": 28.8
+        },
+        {
+          "word": "mass",
+          "start": 28.8,
+          "end": 29.06
+        },
+        {
+          "word": "is",
+          "start": 29.06,
+          "end": 29.36
+        },
+        {
+          "word": "moving",
+          "start": 29.36,
+          "end": 29.7
+        },
+        {
+          "word": "at",
+          "start": 29.7,
+          "end": 29.9
+        },
+        {
+          "word": "twenty",
+          "start": 29.9,
+          "end": 30.3
+        },
+        {
+          "word": "metres",
+          "start": 30.3,
+          "end": 30.58
+        },
+        {
+          "word": "per",
+          "start": 30.58,
+          "end": 30.82
+        },
+        {
+          "word": "second.",
+          "start": 30.82,
+          "end": 31.12
+        },
+        {
+          "word": "The",
+          "start": 31.55,
+          "end": 31.69
+        },
+        {
+          "word": "final",
+          "start": 31.69,
+          "end": 32.11
+        },
+        {
+          "word": "kinetic",
+          "start": 32.11,
+          "end": 32.55
+        },
+        {
+          "word": "energy",
+          "start": 32.55,
+          "end": 33.11
+        },
+        {
+          "word": "is",
+          "start": 33.11,
+          "end": 33.93
+        },
+        {
+          "word": "one",
+          "start": 33.93,
+          "end": 34.19
+        },
+        {
+          "word": "hundred",
+          "start": 34.19,
+          "end": 34.55
+        },
+        {
+          "word": "and",
+          "start": 34.55,
+          "end": 34.81
+        },
+        {
+          "word": "sixty",
+          "start": 34.81,
+          "end": 35.11
+        },
+        {
+          "word": "thousand",
+          "start": 35.11,
+          "end": 35.73
+        },
+        {
+          "word": "joules.",
+          "start": 35.73,
+          "end": 36.29
+        },
+        {
+          "word": "The",
+          "start": 38.6,
+          "end": 38.76
+        },
+        {
+          "word": "car",
+          "start": 38.76,
+          "end": 39.18
+        },
+        {
+          "word": "has",
+          "start": 39.18,
+          "end": 39.62
+        },
+        {
+          "word": "gained",
+          "start": 39.62,
+          "end": 40.2
+        },
+        {
+          "word": "kinetic",
+          "start": 40.2,
+          "end": 40.64
+        },
+        {
+          "word": "energy",
+          "start": 40.64,
+          "end": 41.22
+        },
+        {
+          "word": "while",
+          "start": 41.22,
+          "end": 42.16
+        },
+        {
+          "word": "losing",
+          "start": 42.16,
+          "end": 42.7
+        },
+        {
+          "word": "gravitational",
+          "start": 42.7,
+          "end": 43.92
+        },
+        {
+          "word": "potential",
+          "start": 43.92,
+          "end": 44.46
+        },
+        {
+          "word": "energy.",
+          "start": 44.46,
+          "end": 45.22
+        },
+        {
+          "word": "But",
+          "start": 46.12,
+          "end": 46.2
+        },
+        {
+          "word": "resistance",
+          "start": 46.2,
+          "end": 46.8
+        },
+        {
+          "word": "also",
+          "start": 46.8,
+          "end": 47.8
+        },
+        {
+          "word": "transfers",
+          "start": 47.8,
+          "end": 48.56
+        },
+        {
+          "word": "energy",
+          "start": 48.56,
+          "end": 49.08
+        },
+        {
+          "word": "away.",
+          "start": 49.08,
+          "end": 49.5
+        },
+        {
+          "word": "We",
+          "start": 50.34,
+          "end": 50.44
+        },
+        {
+          "word": "must",
+          "start": 50.44,
+          "end": 50.7
+        },
+        {
+          "word": "account",
+          "start": 50.7,
+          "end": 51.2
+        },
+        {
+          "word": "for",
+          "start": 51.2,
+          "end": 51.5
+        },
+        {
+          "word": "both",
+          "start": 51.5,
+          "end": 51.74
+        },
+        {
+          "word": "effects,",
+          "start": 51.74,
+          "end": 52.3
+        },
+        {
+          "word": "rather",
+          "start": 52.66,
+          "end": 53.12
+        },
+        {
+          "word": "than",
+          "start": 53.12,
+          "end": 53.46
+        },
+        {
+          "word": "equating",
+          "start": 53.46,
+          "end": 54.1
+        },
+        {
+          "word": "the",
+          "start": 54.1,
+          "end": 54.32
+        },
+        {
+          "word": "two",
+          "start": 54.32,
+          "end": 54.52
+        },
+        {
+          "word": "energy",
+          "start": 54.52,
+          "end": 54.96
+        },
+        {
+          "word": "changes.",
+          "start": 54.96,
+          "end": 55.44
+        }
+      ],
+      "cues": {
+        "formula": 0.4,
+        "initialsub": 11.72,
+        "initialanswer": 21.34,
+        "finalsub": 27.26,
+        "finalanswer": 31.55,
+        "meaning": 38.6,
+        "initialKEResult": 23.48,
+        "finalKEResult": 33.93
+      },
+      "figureEvents": [
+        {
+          "id": "number-21",
+          "wordIndex": 21,
+          "word": "800",
+          "spokenPhrase": "eight hundred",
+          "start": 13.9,
+          "target": "mass",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-28",
+          "wordIndex": 28,
+          "word": "10",
+          "spokenPhrase": "ten",
+          "start": 17.32,
+          "target": "initial",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-41",
+          "wordIndex": 41,
+          "word": "40000",
+          "spokenPhrase": "forty thousand",
+          "start": 23.48,
+          "target": "initialKE",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-52",
+          "wordIndex": 52,
+          "word": "20",
+          "spokenPhrase": "twenty",
+          "start": 29.9,
+          "target": "final",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-61",
+          "wordIndex": 61,
+          "word": "160000",
+          "spokenPhrase": "one hundred and sixty thousand",
+          "start": 33.93,
+          "target": "finalKE",
+          "kind": "spoken"
+        }
+      ],
+      "wordCount": 97,
+      "text": "Now calculate the energy associated with motion. Kinetic energy equals one half mass times speed squared. At A, the mass is eight hundred kilograms and the speed is ten metres per second. Square the speed first. The initial kinetic energy is forty thousand joules. At B, the same mass is moving at twenty metres per second. The final kinetic energy is one hundred and sixty thousand joules. The car has gained kinetic energy while losing gravitational potential energy. But resistance also transfers energy away. We must account for both effects, rather than equating the two energy changes.",
+      "duration": 58.226939
+    },
+    {
+      "id": "s06",
+      "title": "Build the energy balance",
+      "mode": "balance",
+      "source": "Recording4–41,137–159; PDF12–13",
+      "voiceSpeed": 0.9,
+      "tempo": "slow",
+      "beats": [
+        {
+          "id": "general",
+          "text": "Write the general principle first. Initial mechanical energy plus signed work by non gravitational forces equals final mechanical energy.",
+          "hold": 2,
+          "ink": "E(A) + W = E(B)",
+          "start": 0.4,
+          "speechEnd": 12.85,
+          "end": 13.05,
+          "cue": 0.4,
+          "penEnd": 12.97
+        },
+        {
+          "id": "define",
+          "text": "Here E means kinetic plus gravitational potential energy. W excludes gravity, because gravity is already accounted for by the potential energy.",
+          "hold": 2,
+          "ink": "E = KE + GPE",
+          "start": 15.05,
+          "speechEnd": 27.56,
+          "end": 27.76,
+          "cue": 15.05,
+          "penEnd": 27.680000000000003
+        },
+        {
+          "id": "sign",
+          "text": "There is no driving work. Resistance is opposite the motion, so its work is negative F times distance along the road. The stationary road reaction is perpendicular to motion and does no work.",
+          "hold": 2,
+          "ink": "W = −Fd",
+          "start": 29.76,
+          "speechEnd": 47.24,
+          "end": 47.44,
+          "cue": 29.76,
+          "penEnd": 47.36
+        },
+        {
+          "id": "symbolic",
+          "text": "Therefore initial kinetic energy plus initial potential energy, minus F d, equals final kinetic energy plus final potential energy.",
+          "hold": 2,
+          "ink": "KE(A) + GPE(A) − Fd = KE(B) + GPE(B)",
+          "start": 49.44,
+          "speechEnd": 59.24,
+          "end": 59.44,
+          "cue": 49.44,
+          "penEnd": 59.36
+        },
+        {
+          "id": "sub",
+          "text": "Substitute forty thousand, four hundred thousand, the road distance of one hundred, final kinetic energy of one hundred and sixty thousand, and zero final potential energy.",
+          "hold": 2,
+          "ink": "40000 + 400000 − 100F = 160000 + 0",
+          "start": 61.44,
+          "speechEnd": 75.76,
+          "end": 75.96,
+          "cue": 61.44,
+          "penEnd": 75.88
+        },
+        {
+          "id": "simplify",
+          "text": "Combine the initial energies, then rearrange: one hundred F equals four hundred and forty thousand minus one hundred and sixty thousand.",
+          "hold": 2,
+          "ink": "100F = 440000 − 160000",
+          "start": 77.96,
+          "speechEnd": 89.67,
+          "end": 89.87,
+          "cue": 77.96,
+          "penEnd": 89.79
+        },
+        {
+          "id": "answer",
+          "text": "Divide by one hundred. The resistance is two thousand eight hundred newtons, acting uphill.",
+          "hold": 2,
+          "ink": "F = 280000/100 = 2800 N",
+          "start": 91.87,
+          "speechEnd": 98.6,
+          "end": 98.8,
+          "cue": 91.87,
+          "penEnd": 98.72
+        },
+        {
+          "id": "bars",
+          "text": "These bars now show the calculated amounts on one scale. Initially there are four hundred and forty thousand joules. Finally, one hundred and sixty thousand remain as mechanical energy.",
+          "hold": 0,
+          "start": 100.8,
+          "speechEnd": 115.43,
+          "end": 115.63,
+          "cue": 100.8,
+          "penEnd": 115.55
+        },
+        {
+          "id": "loss",
+          "text": "The difference is transferred to other forms, such as thermal energy. Energy has not been destroyed. The bars account for the same total.",
+          "hold": 2,
+          "caption": "Energy transferred, never destroyed",
+          "start": 115.63,
+          "speechEnd": 125.9,
+          "end": 126.1,
+          "cue": 115.63,
+          "penEnd": 126.02
+        }
+      ],
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 13.05,
+          "end": 15.05,
+          "duration": 2
+        },
+        {
+          "kind": "hold",
+          "start": 27.76,
+          "end": 29.76,
+          "duration": 2
+        },
+        {
+          "kind": "hold",
+          "start": 47.44,
+          "end": 49.44,
+          "duration": 2
+        },
+        {
+          "kind": "hold",
+          "start": 59.44,
+          "end": 61.44,
+          "duration": 2
+        },
+        {
+          "kind": "hold",
+          "start": 75.96,
+          "end": 77.96,
+          "duration": 2
+        },
+        {
+          "kind": "hold",
+          "start": 89.87,
+          "end": 91.87,
+          "duration": 2
+        },
+        {
+          "kind": "hold",
+          "start": 98.8,
+          "end": 100.8,
+          "duration": 2
+        },
+        {
+          "kind": "hold",
+          "start": 126.1,
+          "end": 128.1,
+          "duration": 2
+        }
+      ],
+      "audio": "energy-principles-s06.mp3",
+      "audioSha256": "b7c57f3022719773b4b7becc5ef1b221a0fd143fd6b2ae72713ee555ca8b596b",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "provider": "elevenlabs",
+      "sampleDuration": 128.45,
+      "words": [
+        {
+          "word": "Write",
+          "start": 0.4,
+          "end": 0.7
+        },
+        {
+          "word": "the",
+          "start": 0.7,
+          "end": 1.0
+        },
+        {
+          "word": "general",
+          "start": 1.0,
+          "end": 1.44
+        },
+        {
+          "word": "principle",
+          "start": 1.44,
+          "end": 1.96
+        },
+        {
+          "word": "first.",
+          "start": 1.96,
+          "end": 2.66
+        },
+        {
+          "word": "Initial",
+          "start": 3.48,
+          "end": 3.9
+        },
+        {
+          "word": "mechanical",
+          "start": 3.9,
+          "end": 4.2
+        },
+        {
+          "word": "energy",
+          "start": 4.2,
+          "end": 4.96
+        },
+        {
+          "word": "plus",
+          "start": 4.96,
+          "end": 5.7
+        },
+        {
+          "word": "signed",
+          "start": 5.7,
+          "end": 6.3
+        },
+        {
+          "word": "work",
+          "start": 6.3,
+          "end": 6.78
+        },
+        {
+          "word": "by",
+          "start": 6.78,
+          "end": 7.44
+        },
+        {
+          "word": "non",
+          "start": 7.44,
+          "end": 7.84
+        },
+        {
+          "word": "gravitational",
+          "start": 7.84,
+          "end": 8.56
+        },
+        {
+          "word": "forces",
+          "start": 8.56,
+          "end": 9.42
+        },
+        {
+          "word": "equals",
+          "start": 9.42,
+          "end": 10.54
+        },
+        {
+          "word": "final",
+          "start": 10.54,
+          "end": 11.44
+        },
+        {
+          "word": "mechanical",
+          "start": 11.44,
+          "end": 12.18
+        },
+        {
+          "word": "energy.",
+          "start": 12.18,
+          "end": 12.74
+        },
+        {
+          "word": "Here,",
+          "start": 15.05,
+          "end": 15.41
+        },
+        {
+          "word": "E",
+          "start": 16.05,
+          "end": 16.37
+        },
+        {
+          "word": "means",
+          "start": 16.37,
+          "end": 16.71
+        },
+        {
+          "word": "kinetic",
+          "start": 16.71,
+          "end": 17.23
+        },
+        {
+          "word": "plus",
+          "start": 17.23,
+          "end": 17.69
+        },
+        {
+          "word": "gravitational",
+          "start": 17.69,
+          "end": 18.55
+        },
+        {
+          "word": "potential",
+          "start": 18.55,
+          "end": 19.09
+        },
+        {
+          "word": "energy.",
+          "start": 19.09,
+          "end": 19.73
+        },
+        {
+          "word": "W",
+          "start": 20.45,
+          "end": 21.03
+        },
+        {
+          "word": "excludes",
+          "start": 21.03,
+          "end": 21.95
+        },
+        {
+          "word": "gravity,",
+          "start": 21.95,
+          "end": 22.31
+        },
+        {
+          "word": "because",
+          "start": 23.07,
+          "end": 23.33
+        },
+        {
+          "word": "gravity",
+          "start": 23.33,
+          "end": 23.81
+        },
+        {
+          "word": "is",
+          "start": 23.81,
+          "end": 24.09
+        },
+        {
+          "word": "already",
+          "start": 24.09,
+          "end": 24.43
+        },
+        {
+          "word": "accounted",
+          "start": 24.43,
+          "end": 25.03
+        },
+        {
+          "word": "for",
+          "start": 25.03,
+          "end": 25.87
+        },
+        {
+          "word": "by",
+          "start": 25.87,
+          "end": 26.13
+        },
+        {
+          "word": "the",
+          "start": 26.13,
+          "end": 26.27
+        },
+        {
+          "word": "potential",
+          "start": 26.27,
+          "end": 26.77
+        },
+        {
+          "word": "energy.",
+          "start": 26.77,
+          "end": 27.33
+        },
+        {
+          "word": "There",
+          "start": 29.76,
+          "end": 29.96
+        },
+        {
+          "word": "is",
+          "start": 29.96,
+          "end": 30.06
+        },
+        {
+          "word": "no",
+          "start": 30.06,
+          "end": 30.3
+        },
+        {
+          "word": "driving",
+          "start": 30.3,
+          "end": 30.74
+        },
+        {
+          "word": "work.",
+          "start": 30.74,
+          "end": 31.22
+        },
+        {
+          "word": "Resistance",
+          "start": 32.08,
+          "end": 32.64
+        },
+        {
+          "word": "is",
+          "start": 32.64,
+          "end": 33.1
+        },
+        {
+          "word": "opposite",
+          "start": 33.1,
+          "end": 33.52
+        },
+        {
+          "word": "the",
+          "start": 33.52,
+          "end": 33.98
+        },
+        {
+          "word": "motion,",
+          "start": 33.98,
+          "end": 34.36
+        },
+        {
+          "word": "so",
+          "start": 35.02,
+          "end": 35.44
+        },
+        {
+          "word": "its",
+          "start": 35.44,
+          "end": 35.74
+        },
+        {
+          "word": "work",
+          "start": 35.74,
+          "end": 36.1
+        },
+        {
+          "word": "is",
+          "start": 36.1,
+          "end": 36.32
+        },
+        {
+          "word": "negative",
+          "start": 36.32,
+          "end": 36.8
+        },
+        {
+          "word": "F",
+          "start": 36.8,
+          "end": 37.76
+        },
+        {
+          "word": "times",
+          "start": 37.76,
+          "end": 38.2
+        },
+        {
+          "word": "distance",
+          "start": 38.2,
+          "end": 38.66
+        },
+        {
+          "word": "along",
+          "start": 38.66,
+          "end": 39.44
+        },
+        {
+          "word": "the",
+          "start": 39.44,
+          "end": 39.66
+        },
+        {
+          "word": "road.",
+          "start": 39.66,
+          "end": 39.96
+        },
+        {
+          "word": "The",
+          "start": 40.92,
+          "end": 41.14
+        },
+        {
+          "word": "stationary",
+          "start": 41.14,
+          "end": 41.62
+        },
+        {
+          "word": "road",
+          "start": 41.62,
+          "end": 42.14
+        },
+        {
+          "word": "reaction",
+          "start": 42.14,
+          "end": 42.86
+        },
+        {
+          "word": "is",
+          "start": 42.86,
+          "end": 43.88
+        },
+        {
+          "word": "perpendicular",
+          "start": 43.88,
+          "end": 44.44
+        },
+        {
+          "word": "to",
+          "start": 44.44,
+          "end": 44.98
+        },
+        {
+          "word": "motion",
+          "start": 44.98,
+          "end": 45.38
+        },
+        {
+          "word": "and",
+          "start": 45.38,
+          "end": 46.18
+        },
+        {
+          "word": "does",
+          "start": 46.18,
+          "end": 46.44
+        },
+        {
+          "word": "no",
+          "start": 46.44,
+          "end": 46.72
+        },
+        {
+          "word": "work.",
+          "start": 46.72,
+          "end": 47.08
+        },
+        {
+          "word": "Therefore",
+          "start": 49.44,
+          "end": 49.78
+        },
+        {
+          "word": "initial",
+          "start": 49.78,
+          "end": 50.48
+        },
+        {
+          "word": "kinetic",
+          "start": 50.48,
+          "end": 50.82
+        },
+        {
+          "word": "energy",
+          "start": 50.82,
+          "end": 51.48
+        },
+        {
+          "word": "plus",
+          "start": 51.48,
+          "end": 52.12
+        },
+        {
+          "word": "initial",
+          "start": 52.12,
+          "end": 52.6
+        },
+        {
+          "word": "potential",
+          "start": 52.6,
+          "end": 52.9
+        },
+        {
+          "word": "energy,",
+          "start": 52.9,
+          "end": 53.52
+        },
+        {
+          "word": "minus",
+          "start": 53.68,
+          "end": 53.92
+        },
+        {
+          "word": "F",
+          "start": 53.92,
+          "end": 54.3
+        },
+        {
+          "word": "d,",
+          "start": 54.3,
+          "end": 54.62
+        },
+        {
+          "word": "equals",
+          "start": 54.8,
+          "end": 55.62
+        },
+        {
+          "word": "final",
+          "start": 55.62,
+          "end": 56.12
+        },
+        {
+          "word": "kinetic",
+          "start": 56.12,
+          "end": 56.5
+        },
+        {
+          "word": "energy",
+          "start": 56.5,
+          "end": 57.08
+        },
+        {
+          "word": "plus",
+          "start": 57.08,
+          "end": 57.78
+        },
+        {
+          "word": "final",
+          "start": 57.78,
+          "end": 58.26
+        },
+        {
+          "word": "potential",
+          "start": 58.26,
+          "end": 58.62
+        },
+        {
+          "word": "energy.",
+          "start": 58.62,
+          "end": 59.12
+        },
+        {
+          "word": "Substitute",
+          "start": 61.44,
+          "end": 62.16
+        },
+        {
+          "word": "forty",
+          "start": 62.16,
+          "end": 62.42
+        },
+        {
+          "word": "thousand,",
+          "start": 62.42,
+          "end": 63.12
+        },
+        {
+          "word": "four",
+          "start": 63.9,
+          "end": 64.22
+        },
+        {
+          "word": "hundred",
+          "start": 64.22,
+          "end": 64.5
+        },
+        {
+          "word": "thousand,",
+          "start": 64.5,
+          "end": 65.26
+        },
+        {
+          "word": "the",
+          "start": 65.92,
+          "end": 66.14
+        },
+        {
+          "word": "road",
+          "start": 66.14,
+          "end": 66.46
+        },
+        {
+          "word": "distance",
+          "start": 66.46,
+          "end": 66.98
+        },
+        {
+          "word": "of",
+          "start": 66.98,
+          "end": 67.38
+        },
+        {
+          "word": "one",
+          "start": 67.38,
+          "end": 67.64
+        },
+        {
+          "word": "hundred,",
+          "start": 67.64,
+          "end": 68.04
+        },
+        {
+          "word": "final",
+          "start": 68.82,
+          "end": 69.3
+        },
+        {
+          "word": "kinetic",
+          "start": 69.3,
+          "end": 69.72
+        },
+        {
+          "word": "energy",
+          "start": 69.72,
+          "end": 70.2
+        },
+        {
+          "word": "of",
+          "start": 70.2,
+          "end": 71.08
+        },
+        {
+          "word": "one",
+          "start": 71.08,
+          "end": 71.32
+        },
+        {
+          "word": "hundred",
+          "start": 71.32,
+          "end": 71.6
+        },
+        {
+          "word": "and",
+          "start": 71.6,
+          "end": 71.9
+        },
+        {
+          "word": "sixty",
+          "start": 71.9,
+          "end": 72.2
+        },
+        {
+          "word": "thousand,",
+          "start": 72.2,
+          "end": 73.02
+        },
+        {
+          "word": "and",
+          "start": 73.72,
+          "end": 73.78
+        },
+        {
+          "word": "zero",
+          "start": 73.78,
+          "end": 74.22
+        },
+        {
+          "word": "final",
+          "start": 74.22,
+          "end": 74.64
+        },
+        {
+          "word": "potential",
+          "start": 74.64,
+          "end": 75.08
+        },
+        {
+          "word": "energy.",
+          "start": 75.08,
+          "end": 75.6
+        },
+        {
+          "word": "Combine",
+          "start": 77.96,
+          "end": 78.42
+        },
+        {
+          "word": "the",
+          "start": 78.42,
+          "end": 78.56
+        },
+        {
+          "word": "initial",
+          "start": 78.56,
+          "end": 78.9
+        },
+        {
+          "word": "energies,",
+          "start": 78.9,
+          "end": 79.32
+        },
+        {
+          "word": "then",
+          "start": 79.32,
+          "end": 80.58
+        },
+        {
+          "word": "rearrange,",
+          "start": 80.58,
+          "end": 81.06
+        },
+        {
+          "word": "one",
+          "start": 82.14,
+          "end": 82.46
+        },
+        {
+          "word": "hundred",
+          "start": 82.46,
+          "end": 82.8
+        },
+        {
+          "word": "F",
+          "start": 82.8,
+          "end": 83.22
+        },
+        {
+          "word": "equals",
+          "start": 83.22,
+          "end": 84.0
+        },
+        {
+          "word": "four",
+          "start": 84.0,
+          "end": 84.54
+        },
+        {
+          "word": "hundred",
+          "start": 84.54,
+          "end": 84.88
+        },
+        {
+          "word": "and",
+          "start": 84.88,
+          "end": 85.68
+        },
+        {
+          "word": "forty",
+          "start": 85.68,
+          "end": 85.92
+        },
+        {
+          "word": "thousand",
+          "start": 85.92,
+          "end": 86.48
+        },
+        {
+          "word": "minus",
+          "start": 86.48,
+          "end": 87.56
+        },
+        {
+          "word": "one",
+          "start": 87.56,
+          "end": 87.94
+        },
+        {
+          "word": "hundred",
+          "start": 87.94,
+          "end": 88.24
+        },
+        {
+          "word": "and",
+          "start": 88.24,
+          "end": 88.9
+        },
+        {
+          "word": "sixty",
+          "start": 88.9,
+          "end": 89.16
+        },
+        {
+          "word": "thousand.",
+          "start": 89.16,
+          "end": 89.64
+        },
+        {
+          "word": "Divide",
+          "start": 91.87,
+          "end": 92.39
+        },
+        {
+          "word": "by",
+          "start": 92.39,
+          "end": 92.55
+        },
+        {
+          "word": "one",
+          "start": 92.55,
+          "end": 92.81
+        },
+        {
+          "word": "hundred.",
+          "start": 92.81,
+          "end": 93.23
+        },
+        {
+          "word": "The",
+          "start": 93.97,
+          "end": 94.19
+        },
+        {
+          "word": "resistance",
+          "start": 94.19,
+          "end": 94.63
+        },
+        {
+          "word": "is",
+          "start": 94.63,
+          "end": 95.01
+        },
+        {
+          "word": "two",
+          "start": 95.01,
+          "end": 95.27
+        },
+        {
+          "word": "thousand",
+          "start": 95.27,
+          "end": 95.71
+        },
+        {
+          "word": "eight",
+          "start": 95.71,
+          "end": 96.03
+        },
+        {
+          "word": "hundred",
+          "start": 96.03,
+          "end": 96.33
+        },
+        {
+          "word": "newtons,",
+          "start": 96.33,
+          "end": 97.07
+        },
+        {
+          "word": "acting",
+          "start": 97.27,
+          "end": 97.79
+        },
+        {
+          "word": "uphill.",
+          "start": 97.79,
+          "end": 98.23
+        },
+        {
+          "word": "These",
+          "start": 100.8,
+          "end": 101.0
+        },
+        {
+          "word": "bars",
+          "start": 101.0,
+          "end": 101.3
+        },
+        {
+          "word": "now",
+          "start": 101.3,
+          "end": 101.68
+        },
+        {
+          "word": "show",
+          "start": 101.68,
+          "end": 102.2
+        },
+        {
+          "word": "the",
+          "start": 102.2,
+          "end": 102.46
+        },
+        {
+          "word": "calculated",
+          "start": 102.46,
+          "end": 102.98
+        },
+        {
+          "word": "amounts",
+          "start": 102.98,
+          "end": 103.72
+        },
+        {
+          "word": "on",
+          "start": 103.72,
+          "end": 104.72
+        },
+        {
+          "word": "one",
+          "start": 104.72,
+          "end": 105.0
+        },
+        {
+          "word": "scale.",
+          "start": 105.0,
+          "end": 105.42
+        },
+        {
+          "word": "Initially",
+          "start": 106.32,
+          "end": 106.68
+        },
+        {
+          "word": "there",
+          "start": 106.68,
+          "end": 107.14
+        },
+        {
+          "word": "are",
+          "start": 107.14,
+          "end": 107.32
+        },
+        {
+          "word": "four",
+          "start": 107.32,
+          "end": 107.58
+        },
+        {
+          "word": "hundred",
+          "start": 107.58,
+          "end": 107.86
+        },
+        {
+          "word": "and",
+          "start": 107.86,
+          "end": 108.1
+        },
+        {
+          "word": "forty",
+          "start": 108.1,
+          "end": 108.4
+        },
+        {
+          "word": "thousand",
+          "start": 108.4,
+          "end": 108.92
+        },
+        {
+          "word": "joules.",
+          "start": 108.92,
+          "end": 109.52
+        },
+        {
+          "word": "Finally,",
+          "start": 110.08,
+          "end": 110.6
+        },
+        {
+          "word": "one",
+          "start": 111.26,
+          "end": 111.4
+        },
+        {
+          "word": "hundred",
+          "start": 111.4,
+          "end": 111.68
+        },
+        {
+          "word": "and",
+          "start": 111.68,
+          "end": 111.88
+        },
+        {
+          "word": "sixty",
+          "start": 111.88,
+          "end": 112.18
+        },
+        {
+          "word": "thousand",
+          "start": 112.18,
+          "end": 112.94
+        },
+        {
+          "word": "remain",
+          "start": 112.94,
+          "end": 113.8
+        },
+        {
+          "word": "as",
+          "start": 113.8,
+          "end": 114.16
+        },
+        {
+          "word": "mechanical",
+          "start": 114.16,
+          "end": 114.62
+        },
+        {
+          "word": "energy.",
+          "start": 114.62,
+          "end": 115.18
+        },
+        {
+          "word": "The",
+          "start": 115.63,
+          "end": 115.75
+        },
+        {
+          "word": "difference",
+          "start": 115.75,
+          "end": 116.03
+        },
+        {
+          "word": "is",
+          "start": 116.03,
+          "end": 116.23
+        },
+        {
+          "word": "transferred",
+          "start": 116.23,
+          "end": 116.75
+        },
+        {
+          "word": "to",
+          "start": 116.75,
+          "end": 116.85
+        },
+        {
+          "word": "other",
+          "start": 116.85,
+          "end": 117.07
+        },
+        {
+          "word": "forms,",
+          "start": 117.07,
+          "end": 117.47
+        },
+        {
+          "word": "such",
+          "start": 117.95,
+          "end": 118.17
+        },
+        {
+          "word": "as",
+          "start": 118.17,
+          "end": 118.33
+        },
+        {
+          "word": "thermal",
+          "start": 118.33,
+          "end": 118.91
+        },
+        {
+          "word": "energy.",
+          "start": 118.91,
+          "end": 119.29
+        },
+        {
+          "word": "Energy",
+          "start": 120.69,
+          "end": 120.95
+        },
+        {
+          "word": "has",
+          "start": 120.95,
+          "end": 121.23
+        },
+        {
+          "word": "not",
+          "start": 121.23,
+          "end": 121.51
+        },
+        {
+          "word": "been",
+          "start": 121.51,
+          "end": 121.75
+        },
+        {
+          "word": "destroyed.",
+          "start": 121.75,
+          "end": 122.25
+        },
+        {
+          "word": "The",
+          "start": 123.19,
+          "end": 123.27
+        },
+        {
+          "word": "bars",
+          "start": 123.27,
+          "end": 123.75
+        },
+        {
+          "word": "account",
+          "start": 123.75,
+          "end": 124.35
+        },
+        {
+          "word": "for",
+          "start": 124.35,
+          "end": 124.63
+        },
+        {
+          "word": "the",
+          "start": 124.63,
+          "end": 124.77
+        },
+        {
+          "word": "same",
+          "start": 124.77,
+          "end": 125.15
+        },
+        {
+          "word": "total.",
+          "start": 125.15,
+          "end": 125.65
+        }
+      ],
+      "cues": {
+        "general": 0.4,
+        "define": 15.05,
+        "sign": 29.76,
+        "symbolic": 49.44,
+        "sub": 61.44,
+        "simplify": 77.96,
+        "answer": 91.87,
+        "bars": 100.8,
+        "loss": 115.63,
+        "totalResult": 84.0,
+        "forceResult": 95.01
+      },
+      "figureEvents": [
+        {
+          "id": "number-93",
+          "wordIndex": 93,
+          "word": "40000",
+          "spokenPhrase": "forty thousand,",
+          "start": 62.16,
+          "target": "initialKE",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-95",
+          "wordIndex": 95,
+          "word": "400000",
+          "spokenPhrase": "four hundred thousand,",
+          "start": 63.9,
+          "target": "initialGPE",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-102",
+          "wordIndex": 102,
+          "word": "100",
+          "spokenPhrase": "one hundred,",
+          "start": 67.38,
+          "target": "distance",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-108",
+          "wordIndex": 108,
+          "word": "160000",
+          "spokenPhrase": "one hundred and sixty thousand,",
+          "start": 71.08,
+          "target": "finalKE",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-114",
+          "wordIndex": 114,
+          "word": "0",
+          "spokenPhrase": "zero",
+          "start": 73.78,
+          "target": "finalGPE",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-124",
+          "wordIndex": 124,
+          "word": "100",
+          "spokenPhrase": "one hundred",
+          "start": 82.14,
+          "target": "distance",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-128",
+          "wordIndex": 128,
+          "word": "440000",
+          "spokenPhrase": "four hundred and forty thousand",
+          "start": 84.0,
+          "target": "total",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-134",
+          "wordIndex": 134,
+          "word": "160000",
+          "spokenPhrase": "one hundred and sixty thousand.",
+          "start": 87.56,
+          "target": "finalKE",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-141",
+          "wordIndex": 141,
+          "word": "100",
+          "spokenPhrase": "one hundred.",
+          "start": 92.55,
+          "target": "distance",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-146",
+          "wordIndex": 146,
+          "word": "2800",
+          "spokenPhrase": "two thousand eight hundred",
+          "start": 95.01,
+          "target": "resistance",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-166",
+          "wordIndex": 166,
+          "word": "440000",
+          "spokenPhrase": "four hundred and forty thousand",
+          "start": 107.32,
+          "target": "total",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-173",
+          "wordIndex": 173,
+          "word": "160000",
+          "spokenPhrase": "one hundred and sixty thousand",
+          "start": 111.26,
+          "target": "finalKE",
+          "kind": "spoken"
+        }
+      ],
+      "wordCount": 205,
+      "text": "Write the general principle first. Initial mechanical energy plus signed work by non gravitational forces equals final mechanical energy. Here, E means kinetic plus gravitational potential energy. W excludes gravity, because gravity is already accounted for by the potential energy. There is no driving work. Resistance is opposite the motion, so its work is negative F times distance along the road. The stationary road reaction is perpendicular to motion and does no work. Therefore initial kinetic energy plus initial potential energy, minus F d, equals final kinetic energy plus final potential energy. Substitute forty thousand, four hundred thousand, the road distance of one hundred, final kinetic energy of one hundred and sixty thousand, and zero final potential energy. Combine the initial energies, then rearrange, one hundred F equals four hundred and forty thousand minus one hundred and sixty thousand. Divide by one hundred. The resistance is two thousand eight hundred newtons, acting uphill. These bars now show the calculated amounts on one scale. Initially there are four hundred and forty thousand joules. Finally, one hundred and sixty thousand remain as mechanical energy. The difference is transferred to other forms, such as thermal energy. Energy has not been destroyed. The bars account for the same total.",
+      "duration": 128.496327
+    },
+    {
+      "id": "s07",
+      "title": "When is mechanical energy conserved?",
+      "mode": "conservation",
+      "source": "Recording42–96 curved-track context; explicit PDF15–16 conservation bridge",
+      "voiceSpeed": 0.9,
+      "tempo": "slow",
+      "beats": [
+        {
+          "id": "conditions",
+          "text": "What would change with no resistance and no driving force? Consider a particle sliding on a smooth, stationary curved track.",
+          "hold": 0,
+          "start": 0.4,
+          "speechEnd": 11.02,
+          "end": 11.22,
+          "cue": 0.4,
+          "penEnd": 11.14
+        },
+        {
+          "id": "reaction",
+          "text": "The normal reaction is perpendicular to its motion at each point, so it does no work. Thus the total work by non gravitational forces is zero.",
+          "hold": 2,
+          "ink": "W = 0",
+          "start": 11.22,
+          "speechEnd": 24.98,
+          "end": 25.18,
+          "cue": 11.22,
+          "penEnd": 25.1
+        },
+        {
+          "id": "general",
+          "text": "Use the same energy principle: initial energy plus that work equals final energy.",
+          "hold": 0,
+          "ink": "E(A) + W = E(B)",
+          "start": 27.18,
+          "speechEnd": 34.22,
+          "end": 34.42,
+          "cue": 27.18,
+          "penEnd": 34.34
+        },
+        {
+          "id": "constant",
+          "text": "With zero work, initial kinetic plus potential energy equals final kinetic plus potential energy. Mechanical energy is conserved.",
+          "hold": 2,
+          "ink": "KE(A) + GPE(A) = KE(B) + GPE(B)",
+          "start": 34.42,
+          "speechEnd": 45.87,
+          "end": 46.07,
+          "cue": 34.42,
+          "penEnd": 45.99
+        },
+        {
+          "id": "curve",
+          "text": "The track can curve. Potential energy depends on endpoint heights, not the length or shape of the route. On descending, potential energy decreases as kinetic energy increases.",
+          "hold": 0,
+          "start": 48.07,
+          "speechEnd": 64.48,
+          "end": 64.68,
+          "cue": 48.07,
+          "penEnd": 64.60000000000001
+        },
+        {
+          "id": "question",
+          "text": "Return to our resisting car. Is its mechanical energy conserved merely because there is no engine driving force? Think about the resistance.",
+          "hold": 3,
+          "caption": "No engine: is mechanical energy conserved?",
+          "start": 64.68,
+          "speechEnd": 77.76,
+          "end": 77.96,
+          "cue": 64.68,
+          "penEnd": 77.88
+        },
+        {
+          "id": "answer",
+          "text": "No. Resistance does negative work, transferring mechanical energy to other forms. No driving force alone is not enough.",
+          "hold": 2,
+          "caption": "Resistance transfers mechanical energy away",
+          "start": 80.96,
+          "speechEnd": 92.18,
+          "end": 92.38,
+          "cue": 80.96,
+          "penEnd": 92.3
+        }
+      ],
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 25.18,
+          "end": 27.18,
+          "duration": 2
+        },
+        {
+          "kind": "hold",
+          "start": 46.07,
+          "end": 48.07,
+          "duration": 2
+        },
+        {
+          "kind": "hold",
+          "start": 77.96,
+          "end": 80.96,
+          "duration": 3
+        },
+        {
+          "kind": "hold",
+          "start": 92.38,
+          "end": 94.38,
+          "duration": 2
+        }
+      ],
+      "audio": "energy-principles-s07.mp3",
+      "audioSha256": "deb9b34941179115d99ff1f68b2ac66259c7630e5e7bbd1b5c048c8d88a7b715",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "provider": "elevenlabs",
+      "sampleDuration": 94.73,
+      "words": [
+        {
+          "word": "What",
+          "start": 0.4,
+          "end": 0.58
+        },
+        {
+          "word": "would",
+          "start": 0.58,
+          "end": 0.74
+        },
+        {
+          "word": "change",
+          "start": 0.74,
+          "end": 1.16
+        },
+        {
+          "word": "with",
+          "start": 1.16,
+          "end": 1.58
+        },
+        {
+          "word": "no",
+          "start": 1.58,
+          "end": 1.92
+        },
+        {
+          "word": "resistance",
+          "start": 1.92,
+          "end": 2.44
+        },
+        {
+          "word": "and",
+          "start": 2.44,
+          "end": 3.18
+        },
+        {
+          "word": "no",
+          "start": 3.18,
+          "end": 3.4
+        },
+        {
+          "word": "driving",
+          "start": 3.4,
+          "end": 3.78
+        },
+        {
+          "word": "force?",
+          "start": 3.78,
+          "end": 4.24
+        },
+        {
+          "word": "Consider",
+          "start": 4.68,
+          "end": 5.3
+        },
+        {
+          "word": "a",
+          "start": 5.3,
+          "end": 5.66
+        },
+        {
+          "word": "particle",
+          "start": 5.66,
+          "end": 6.12
+        },
+        {
+          "word": "sliding",
+          "start": 7.08,
+          "end": 7.52
+        },
+        {
+          "word": "on",
+          "start": 7.52,
+          "end": 8.1
+        },
+        {
+          "word": "a",
+          "start": 8.1,
+          "end": 8.24
+        },
+        {
+          "word": "smooth,",
+          "start": 8.24,
+          "end": 8.68
+        },
+        {
+          "word": "stationary",
+          "start": 8.84,
+          "end": 9.84
+        },
+        {
+          "word": "curved",
+          "start": 9.84,
+          "end": 10.28
+        },
+        {
+          "word": "track.",
+          "start": 10.28,
+          "end": 10.88
+        },
+        {
+          "word": "The",
+          "start": 11.22,
+          "end": 11.34
+        },
+        {
+          "word": "normal",
+          "start": 11.34,
+          "end": 11.68
+        },
+        {
+          "word": "reaction",
+          "start": 11.68,
+          "end": 12.4
+        },
+        {
+          "word": "is",
+          "start": 12.4,
+          "end": 13.62
+        },
+        {
+          "word": "perpendicular",
+          "start": 13.62,
+          "end": 13.9
+        },
+        {
+          "word": "to",
+          "start": 13.9,
+          "end": 14.46
+        },
+        {
+          "word": "its",
+          "start": 14.46,
+          "end": 14.64
+        },
+        {
+          "word": "motion",
+          "start": 14.64,
+          "end": 15.22
+        },
+        {
+          "word": "at",
+          "start": 15.22,
+          "end": 15.92
+        },
+        {
+          "word": "each",
+          "start": 15.92,
+          "end": 16.08
+        },
+        {
+          "word": "point,",
+          "start": 16.08,
+          "end": 16.46
+        },
+        {
+          "word": "so",
+          "start": 16.74,
+          "end": 17.38
+        },
+        {
+          "word": "it",
+          "start": 17.38,
+          "end": 17.56
+        },
+        {
+          "word": "does",
+          "start": 17.56,
+          "end": 17.78
+        },
+        {
+          "word": "no",
+          "start": 17.78,
+          "end": 18.02
+        },
+        {
+          "word": "work.",
+          "start": 18.02,
+          "end": 18.46
+        },
+        {
+          "word": "Thus",
+          "start": 19.14,
+          "end": 19.7
+        },
+        {
+          "word": "the",
+          "start": 19.7,
+          "end": 19.86
+        },
+        {
+          "word": "total",
+          "start": 19.86,
+          "end": 20.2
+        },
+        {
+          "word": "work",
+          "start": 20.2,
+          "end": 20.62
+        },
+        {
+          "word": "by",
+          "start": 20.62,
+          "end": 21.4
+        },
+        {
+          "word": "non",
+          "start": 21.4,
+          "end": 21.72
+        },
+        {
+          "word": "gravitational",
+          "start": 21.72,
+          "end": 22.48
+        },
+        {
+          "word": "forces",
+          "start": 22.48,
+          "end": 23.26
+        },
+        {
+          "word": "is",
+          "start": 23.26,
+          "end": 24.38
+        },
+        {
+          "word": "zero.",
+          "start": 24.38,
+          "end": 24.8
+        },
+        {
+          "word": "Use",
+          "start": 27.18,
+          "end": 27.4
+        },
+        {
+          "word": "the",
+          "start": 27.4,
+          "end": 27.62
+        },
+        {
+          "word": "same",
+          "start": 27.62,
+          "end": 28.02
+        },
+        {
+          "word": "energy",
+          "start": 28.02,
+          "end": 28.4
+        },
+        {
+          "word": "principle,",
+          "start": 28.4,
+          "end": 28.96
+        },
+        {
+          "word": "initial",
+          "start": 29.24,
+          "end": 30.26
+        },
+        {
+          "word": "energy",
+          "start": 30.26,
+          "end": 30.86
+        },
+        {
+          "word": "plus",
+          "start": 30.86,
+          "end": 31.56
+        },
+        {
+          "word": "that",
+          "start": 31.56,
+          "end": 31.96
+        },
+        {
+          "word": "work",
+          "start": 31.96,
+          "end": 32.28
+        },
+        {
+          "word": "equals",
+          "start": 32.28,
+          "end": 33.04
+        },
+        {
+          "word": "final",
+          "start": 33.04,
+          "end": 33.54
+        },
+        {
+          "word": "energy.",
+          "start": 33.54,
+          "end": 34.08
+        },
+        {
+          "word": "With",
+          "start": 34.42,
+          "end": 34.64
+        },
+        {
+          "word": "zero",
+          "start": 34.64,
+          "end": 35.08
+        },
+        {
+          "word": "work,",
+          "start": 35.08,
+          "end": 35.6
+        },
+        {
+          "word": "initial",
+          "start": 36.46,
+          "end": 36.82
+        },
+        {
+          "word": "kinetic",
+          "start": 36.82,
+          "end": 37.3
+        },
+        {
+          "word": "plus",
+          "start": 37.3,
+          "end": 37.82
+        },
+        {
+          "word": "potential",
+          "start": 37.82,
+          "end": 38.5
+        },
+        {
+          "word": "energy",
+          "start": 38.5,
+          "end": 39.1
+        },
+        {
+          "word": "equals",
+          "start": 39.1,
+          "end": 40.18
+        },
+        {
+          "word": "final",
+          "start": 40.18,
+          "end": 40.78
+        },
+        {
+          "word": "kinetic",
+          "start": 40.78,
+          "end": 41.26
+        },
+        {
+          "word": "plus",
+          "start": 41.26,
+          "end": 41.72
+        },
+        {
+          "word": "potential",
+          "start": 41.72,
+          "end": 42.4
+        },
+        {
+          "word": "energy.",
+          "start": 42.4,
+          "end": 42.94
+        },
+        {
+          "word": "Mechanical",
+          "start": 43.7,
+          "end": 44.36
+        },
+        {
+          "word": "energy",
+          "start": 44.36,
+          "end": 44.76
+        },
+        {
+          "word": "is",
+          "start": 44.76,
+          "end": 45.0
+        },
+        {
+          "word": "conserved.",
+          "start": 45.0,
+          "end": 45.64
+        },
+        {
+          "word": "The",
+          "start": 48.07,
+          "end": 48.21
+        },
+        {
+          "word": "track",
+          "start": 48.21,
+          "end": 48.53
+        },
+        {
+          "word": "can",
+          "start": 48.53,
+          "end": 48.81
+        },
+        {
+          "word": "curve.",
+          "start": 48.81,
+          "end": 49.27
+        },
+        {
+          "word": "Potential",
+          "start": 50.21,
+          "end": 50.83
+        },
+        {
+          "word": "energy",
+          "start": 50.83,
+          "end": 51.27
+        },
+        {
+          "word": "depends",
+          "start": 51.27,
+          "end": 51.73
+        },
+        {
+          "word": "on",
+          "start": 51.73,
+          "end": 52.27
+        },
+        {
+          "word": "endpoint",
+          "start": 52.27,
+          "end": 52.91
+        },
+        {
+          "word": "heights,",
+          "start": 52.91,
+          "end": 53.47
+        },
+        {
+          "word": "not",
+          "start": 54.39,
+          "end": 54.57
+        },
+        {
+          "word": "the",
+          "start": 54.57,
+          "end": 54.77
+        },
+        {
+          "word": "length",
+          "start": 54.77,
+          "end": 55.15
+        },
+        {
+          "word": "or",
+          "start": 55.15,
+          "end": 55.47
+        },
+        {
+          "word": "shape",
+          "start": 55.47,
+          "end": 55.93
+        },
+        {
+          "word": "of",
+          "start": 55.93,
+          "end": 56.17
+        },
+        {
+          "word": "the",
+          "start": 56.17,
+          "end": 56.29
+        },
+        {
+          "word": "route.",
+          "start": 56.29,
+          "end": 56.59
+        },
+        {
+          "word": "On",
+          "start": 57.43,
+          "end": 57.81
+        },
+        {
+          "word": "descending,",
+          "start": 57.81,
+          "end": 58.23
+        },
+        {
+          "word": "potential",
+          "start": 59.09,
+          "end": 59.51
+        },
+        {
+          "word": "energy",
+          "start": 59.51,
+          "end": 60.15
+        },
+        {
+          "word": "decreases",
+          "start": 60.15,
+          "end": 60.93
+        },
+        {
+          "word": "as",
+          "start": 60.93,
+          "end": 62.01
+        },
+        {
+          "word": "kinetic",
+          "start": 62.01,
+          "end": 62.51
+        },
+        {
+          "word": "energy",
+          "start": 62.51,
+          "end": 63.25
+        },
+        {
+          "word": "increases.",
+          "start": 63.25,
+          "end": 64.15
+        },
+        {
+          "word": "Return",
+          "start": 64.68,
+          "end": 65.12
+        },
+        {
+          "word": "to",
+          "start": 65.12,
+          "end": 65.36
+        },
+        {
+          "word": "our",
+          "start": 65.36,
+          "end": 65.58
+        },
+        {
+          "word": "resisting",
+          "start": 65.58,
+          "end": 66.06
+        },
+        {
+          "word": "car.",
+          "start": 66.06,
+          "end": 66.5
+        },
+        {
+          "word": "Is",
+          "start": 67.18,
+          "end": 67.8
+        },
+        {
+          "word": "its",
+          "start": 67.8,
+          "end": 67.96
+        },
+        {
+          "word": "mechanical",
+          "start": 67.96,
+          "end": 68.36
+        },
+        {
+          "word": "energy",
+          "start": 68.36,
+          "end": 68.98
+        },
+        {
+          "word": "conserved",
+          "start": 68.98,
+          "end": 70.62
+        },
+        {
+          "word": "merely",
+          "start": 70.62,
+          "end": 71.76
+        },
+        {
+          "word": "because",
+          "start": 71.76,
+          "end": 72.22
+        },
+        {
+          "word": "there",
+          "start": 72.22,
+          "end": 72.54
+        },
+        {
+          "word": "is",
+          "start": 72.54,
+          "end": 72.7
+        },
+        {
+          "word": "no",
+          "start": 72.7,
+          "end": 73.02
+        },
+        {
+          "word": "engine",
+          "start": 73.02,
+          "end": 73.66
+        },
+        {
+          "word": "driving",
+          "start": 73.66,
+          "end": 74.58
+        },
+        {
+          "word": "force?",
+          "start": 74.58,
+          "end": 75.1
+        },
+        {
+          "word": "Think",
+          "start": 76.12,
+          "end": 76.48
+        },
+        {
+          "word": "about",
+          "start": 76.48,
+          "end": 76.78
+        },
+        {
+          "word": "the",
+          "start": 76.78,
+          "end": 76.98
+        },
+        {
+          "word": "resistance.",
+          "start": 76.98,
+          "end": 77.38
+        },
+        {
+          "word": "No.",
+          "start": 80.96,
+          "end": 81.22
+        },
+        {
+          "word": "Resistance",
+          "start": 82.12,
+          "end": 82.8
+        },
+        {
+          "word": "does",
+          "start": 82.8,
+          "end": 83.24
+        },
+        {
+          "word": "negative",
+          "start": 83.24,
+          "end": 83.62
+        },
+        {
+          "word": "work,",
+          "start": 83.62,
+          "end": 84.1
+        },
+        {
+          "word": "transferring",
+          "start": 84.1,
+          "end": 85.56
+        },
+        {
+          "word": "mechanical",
+          "start": 85.56,
+          "end": 85.96
+        },
+        {
+          "word": "energy",
+          "start": 85.96,
+          "end": 86.54
+        },
+        {
+          "word": "to",
+          "start": 86.54,
+          "end": 87.48
+        },
+        {
+          "word": "other",
+          "start": 87.48,
+          "end": 87.76
+        },
+        {
+          "word": "forms.",
+          "start": 87.76,
+          "end": 88.14
+        },
+        {
+          "word": "No",
+          "start": 89.18,
+          "end": 89.38
+        },
+        {
+          "word": "driving",
+          "start": 89.38,
+          "end": 89.8
+        },
+        {
+          "word": "force",
+          "start": 89.8,
+          "end": 90.22
+        },
+        {
+          "word": "alone",
+          "start": 90.22,
+          "end": 90.74
+        },
+        {
+          "word": "is",
+          "start": 90.74,
+          "end": 91.52
+        },
+        {
+          "word": "not",
+          "start": 91.52,
+          "end": 91.72
+        },
+        {
+          "word": "enough.",
+          "start": 91.72,
+          "end": 92.02
+        }
+      ],
+      "cues": {
+        "conditions": 0.4,
+        "reaction": 11.22,
+        "general": 27.18,
+        "constant": 34.42,
+        "curve": 48.07,
+        "question": 64.68,
+        "answer": 80.96
+      },
+      "figureEvents": [],
+      "wordCount": 144,
+      "text": "What would change with no resistance and no driving force? Consider a particle sliding on a smooth, stationary curved track. The normal reaction is perpendicular to its motion at each point, so it does no work. Thus the total work by non gravitational forces is zero. Use the same energy principle, initial energy plus that work equals final energy. With zero work, initial kinetic plus potential energy equals final kinetic plus potential energy. Mechanical energy is conserved. The track can curve. Potential energy depends on endpoint heights, not the length or shape of the route. On descending, potential energy decreases as kinetic energy increases. Return to our resisting car. Is its mechanical energy conserved merely because there is no engine driving force? Think about the resistance. No. Resistance does negative work, transferring mechanical energy to other forms. No driving force alone is not enough.",
+      "duration": 94.772245
+    },
+    {
+      "id": "s08",
+      "title": "What you can now do",
+      "mode": "closing",
+      "source": "Recording160–174; PDF15–16",
+      "voiceSpeed": 1,
+      "tempo": "brisk",
+      "beats": [
+        {
+          "id": "outcome1",
+          "text": "You can build a signed energy balance: account for gravity once, through potential energy.",
+          "hold": 0,
+          "caption": "Build a signed energy balance",
+          "start": 0.4,
+          "speechEnd": 5.81,
+          "end": 6.01,
+          "cue": 0.4,
+          "penEnd": 5.93
+        },
+        {
+          "id": "outcome2",
+          "text": "Find a resistance using energy: road distance for its work, vertical height for potential energy.",
+          "hold": 0,
+          "caption": "Find a resistance using energy",
+          "start": 6.01,
+          "speechEnd": 16.28,
+          "end": 16.48,
+          "cue": 6.01,
+          "penEnd": 16.400000000000002
+        },
+        {
+          "id": "outcome3",
+          "text": "And explain when mechanical energy is conserved: zero total work by non gravitational forces.",
+          "hold": 2,
+          "caption": "Explain when mechanical energy is conserved",
+          "start": 16.48,
+          "speechEnd": 23.21,
+          "end": 23.41,
+          "cue": 16.48,
+          "penEnd": 23.330000000000002
+        }
+      ],
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 23.41,
+          "end": 25.41,
+          "duration": 2
+        }
+      ],
+      "audio": "energy-principles-s08.mp3",
+      "audioSha256": "90edd0776332619ba2c03fdaa2a2c18fe9f88e58c29db04284103e2f3d722369",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "provider": "elevenlabs",
+      "sampleDuration": 25.76,
+      "words": [
+        {
+          "word": "You",
+          "start": 0.4,
+          "end": 0.52
+        },
+        {
+          "word": "can",
+          "start": 0.52,
+          "end": 0.66
+        },
+        {
+          "word": "build",
+          "start": 0.66,
+          "end": 0.9
+        },
+        {
+          "word": "a",
+          "start": 0.9,
+          "end": 1.06
+        },
+        {
+          "word": "signed",
+          "start": 1.06,
+          "end": 1.4
+        },
+        {
+          "word": "energy",
+          "start": 1.4,
+          "end": 1.9
+        },
+        {
+          "word": "balance,",
+          "start": 1.9,
+          "end": 2.48
+        },
+        {
+          "word": "account",
+          "start": 2.66,
+          "end": 3.44
+        },
+        {
+          "word": "for",
+          "start": 3.44,
+          "end": 3.72
+        },
+        {
+          "word": "gravity",
+          "start": 3.72,
+          "end": 4.04
+        },
+        {
+          "word": "once,",
+          "start": 4.04,
+          "end": 4.34
+        },
+        {
+          "word": "through",
+          "start": 4.34,
+          "end": 4.86
+        },
+        {
+          "word": "potential",
+          "start": 4.86,
+          "end": 5.28
+        },
+        {
+          "word": "energy.",
+          "start": 5.28,
+          "end": 5.7
+        },
+        {
+          "word": "Find",
+          "start": 6.01,
+          "end": 6.25
+        },
+        {
+          "word": "a",
+          "start": 6.25,
+          "end": 6.43
+        },
+        {
+          "word": "resistance",
+          "start": 6.43,
+          "end": 7.07
+        },
+        {
+          "word": "using",
+          "start": 7.07,
+          "end": 7.97
+        },
+        {
+          "word": "energy,",
+          "start": 7.97,
+          "end": 8.47
+        },
+        {
+          "word": "road",
+          "start": 9.03,
+          "end": 9.79
+        },
+        {
+          "word": "distance",
+          "start": 9.79,
+          "end": 10.61
+        },
+        {
+          "word": "for",
+          "start": 10.61,
+          "end": 11.57
+        },
+        {
+          "word": "its",
+          "start": 11.57,
+          "end": 11.75
+        },
+        {
+          "word": "work,",
+          "start": 11.75,
+          "end": 12.09
+        },
+        {
+          "word": "vertical",
+          "start": 12.93,
+          "end": 13.67
+        },
+        {
+          "word": "height",
+          "start": 13.67,
+          "end": 14.15
+        },
+        {
+          "word": "for",
+          "start": 14.15,
+          "end": 15.17
+        },
+        {
+          "word": "potential",
+          "start": 15.17,
+          "end": 15.65
+        },
+        {
+          "word": "energy.",
+          "start": 15.65,
+          "end": 16.22
+        },
+        {
+          "word": "And",
+          "start": 16.48,
+          "end": 16.62
+        },
+        {
+          "word": "explain",
+          "start": 16.62,
+          "end": 16.94
+        },
+        {
+          "word": "when",
+          "start": 16.94,
+          "end": 17.18
+        },
+        {
+          "word": "mechanical",
+          "start": 17.18,
+          "end": 17.64
+        },
+        {
+          "word": "energy",
+          "start": 17.64,
+          "end": 18.12
+        },
+        {
+          "word": "is",
+          "start": 18.12,
+          "end": 18.28
+        },
+        {
+          "word": "conserved,",
+          "start": 18.28,
+          "end": 18.84
+        },
+        {
+          "word": "zero",
+          "start": 19.48,
+          "end": 19.88
+        },
+        {
+          "word": "total",
+          "start": 19.88,
+          "end": 20.32
+        },
+        {
+          "word": "work",
+          "start": 20.32,
+          "end": 20.7
+        },
+        {
+          "word": "by",
+          "start": 20.7,
+          "end": 21.42
+        },
+        {
+          "word": "non",
+          "start": 21.42,
+          "end": 21.76
+        },
+        {
+          "word": "gravitational",
+          "start": 21.76,
+          "end": 22.52
+        },
+        {
+          "word": "forces.",
+          "start": 22.52,
+          "end": 23.04
+        }
+      ],
+      "cues": {
+        "outcome1": 0.4,
+        "outcome2": 6.01,
+        "outcome3": 16.48
+      },
+      "figureEvents": [],
+      "wordCount": 43,
+      "text": "You can build a signed energy balance, account for gravity once, through potential energy. Find a resistance using energy, road distance for its work, vertical height for potential energy. And explain when mechanical energy is conserved, zero total work by non gravitational forces.",
+      "duration": 25.80898
+    }
+  ],
+  "totalDuration": 487.497144,
+  "engine": "faster-whisper-small (local CPU)",
+  "unresolvedCues": []
+}

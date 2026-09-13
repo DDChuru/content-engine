@@ -1,0 +1,4208 @@
+{
+  "project": "mechanics-f-equals-ma",
+  "sceneCount": 8,
+  "scenes": [
+    {
+      "id": "s01",
+      "title": "F = ma",
+      "mode": "opening",
+      "voiceSpeed": 1,
+      "tempo": "brisk",
+      "beats": [
+        {
+          "id": "syllabus",
+          "text": "Syllabus four point four: apply Newton’s laws of motion to the linear motion of a particle of constant mass.",
+          "hold": 0.7,
+          "start": 0.4,
+          "speechEnd": 7.87,
+          "end": 8.07,
+          "cue": 0.4,
+          "penEnd": 7.99
+        },
+        {
+          "id": "outcome1",
+          "text": "By the end, you can use the resultant force.",
+          "hold": 0.3,
+          "caption": "Use the resultant force.",
+          "start": 8.77,
+          "speechEnd": 11.42,
+          "end": 11.62,
+          "cue": 8.95,
+          "penEnd": 11.54
+        },
+        {
+          "id": "outcome2",
+          "text": "Choose signs for acceleration.",
+          "hold": 0.3,
+          "caption": "Choose signs for acceleration.",
+          "start": 11.92,
+          "speechEnd": 13.85,
+          "end": 14.05,
+          "cue": 11.97,
+          "penEnd": 13.97
+        },
+        {
+          "id": "outcome3",
+          "text": "And link forces to distance travelled.",
+          "hold": 0.5,
+          "caption": "Link forces to distance travelled.",
+          "start": 14.35,
+          "speechEnd": 16.53,
+          "end": 16.73,
+          "cue": 14.35,
+          "penEnd": 16.650000000000002
+        }
+      ],
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 8.07,
+          "end": 8.77,
+          "duration": 0.7
+        },
+        {
+          "kind": "hold",
+          "start": 11.62,
+          "end": 11.92,
+          "duration": 0.3
+        },
+        {
+          "kind": "hold",
+          "start": 14.05,
+          "end": 14.35,
+          "duration": 0.3
+        },
+        {
+          "kind": "hold",
+          "start": 16.73,
+          "end": 17.23,
+          "duration": 0.5
+        }
+      ],
+      "audio": "f-equals-ma-s01.mp3",
+      "audioSha256": "b8ee5c74c27395b433f80b611ccbabe1334a6041b4916ea5546085097f5e44e5",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "provider": "elevenlabs",
+      "sampleDuration": 17.58,
+      "words": [
+        {
+          "word": "Syllabus",
+          "start": 0.4,
+          "end": 0.81
+        },
+        {
+          "word": "four",
+          "start": 0.81,
+          "end": 1.13
+        },
+        {
+          "word": "point",
+          "start": 1.13,
+          "end": 1.35
+        },
+        {
+          "word": "four",
+          "start": 1.35,
+          "end": 1.77
+        },
+        {
+          "word": "apply",
+          "start": 1.77,
+          "end": 2.79
+        },
+        {
+          "word": "Newton’s",
+          "start": 2.79,
+          "end": 3.89
+        },
+        {
+          "word": "laws",
+          "start": 3.89,
+          "end": 4.07
+        },
+        {
+          "word": "of",
+          "start": 4.07,
+          "end": 4.29
+        },
+        {
+          "word": "motion",
+          "start": 4.29,
+          "end": 4.63
+        },
+        {
+          "word": "to",
+          "start": 4.63,
+          "end": 5.03
+        },
+        {
+          "word": "the",
+          "start": 5.03,
+          "end": 5.15
+        },
+        {
+          "word": "linear",
+          "start": 5.15,
+          "end": 5.49
+        },
+        {
+          "word": "motion",
+          "start": 5.49,
+          "end": 5.83
+        },
+        {
+          "word": "of",
+          "start": 5.83,
+          "end": 6.11
+        },
+        {
+          "word": "a",
+          "start": 6.11,
+          "end": 6.23
+        },
+        {
+          "word": "particle",
+          "start": 6.23,
+          "end": 6.57
+        },
+        {
+          "word": "of",
+          "start": 6.57,
+          "end": 6.79
+        },
+        {
+          "word": "constant",
+          "start": 6.79,
+          "end": 7.13
+        },
+        {
+          "word": "mass.",
+          "start": 7.13,
+          "end": 7.61
+        },
+        {
+          "word": "the",
+          "start": 8.95,
+          "end": 9.09
+        },
+        {
+          "word": "end,",
+          "start": 9.09,
+          "end": 9.41
+        },
+        {
+          "word": "you",
+          "start": 9.85,
+          "end": 9.97
+        },
+        {
+          "word": "can",
+          "start": 9.97,
+          "end": 10.15
+        },
+        {
+          "word": "use",
+          "start": 10.15,
+          "end": 10.35
+        },
+        {
+          "word": "the",
+          "start": 10.35,
+          "end": 10.51
+        },
+        {
+          "word": "resultant",
+          "start": 10.51,
+          "end": 10.97
+        },
+        {
+          "word": "force.",
+          "start": 10.97,
+          "end": 11.27
+        },
+        {
+          "word": "Choose",
+          "start": 11.97,
+          "end": 12.19
+        },
+        {
+          "word": "signs",
+          "start": 12.19,
+          "end": 12.61
+        },
+        {
+          "word": "for",
+          "start": 12.61,
+          "end": 12.91
+        },
+        {
+          "word": "acceleration.",
+          "start": 12.91,
+          "end": 13.57
+        },
+        {
+          "word": "And",
+          "start": 14.35,
+          "end": 14.49
+        },
+        {
+          "word": "link",
+          "start": 14.49,
+          "end": 14.81
+        },
+        {
+          "word": "forces",
+          "start": 14.81,
+          "end": 15.19
+        },
+        {
+          "word": "to",
+          "start": 15.19,
+          "end": 15.51
+        },
+        {
+          "word": "distance",
+          "start": 15.51,
+          "end": 15.85
+        },
+        {
+          "word": "travelled.",
+          "start": 15.85,
+          "end": 16.45
+        }
+      ],
+      "cues": {
+        "syllabus": 0.4,
+        "outcome1": 8.95,
+        "outcome2": 11.97,
+        "outcome3": 14.35
+      },
+      "figureEvents": [],
+      "wordCount": 37,
+      "text": "Syllabus four point four apply Newton’s laws of motion to the linear motion of a particle of constant mass. the end, you can use the resultant force. Choose signs for acceleration. And link forces to distance travelled.",
+      "duration": 17.606531
+    },
+    {
+      "id": "s02",
+      "title": "What F = ma means",
+      "mode": "concept",
+      "voiceSpeed": 1,
+      "tempo": "brisk",
+      "beats": [
+        {
+          "id": "formula",
+          "text": "Newton’s second law says: resultant force equals mass times acceleration.",
+          "hold": 1,
+          "ink": "F = ma",
+          "start": 0.4,
+          "speechEnd": 6.04,
+          "end": 6.24,
+          "cue": 0.4,
+          "penEnd": 6.16
+        },
+        {
+          "id": "units",
+          "text": "Use force in newtons, mass in kilograms, and acceleration in metres per second squared.",
+          "hold": 0.4,
+          "start": 7.24,
+          "speechEnd": 13.17,
+          "end": 13.37,
+          "cue": 7.43,
+          "penEnd": 13.29
+        },
+        {
+          "id": "net",
+          "text": "F means the combined effect of all the forces on this one body. Opposing forces subtract.",
+          "hold": 0.5,
+          "ink": "F = D - R",
+          "start": 13.77,
+          "speechEnd": 20.72,
+          "end": 20.92,
+          "cue": 13.77,
+          "penEnd": 20.840000000000003
+        },
+        {
+          "id": "balanced",
+          "text": "If they balance, the resultant is zero, so acceleration is zero. A moving car keeps a constant velocity.",
+          "hold": 1,
+          "ink": "F = 0    a = 0",
+          "start": 21.42,
+          "speechEnd": 30.33,
+          "end": 30.53,
+          "cue": 21.42,
+          "penEnd": 30.450000000000003
+        },
+        {
+          "id": "third",
+          "text": "Newton’s third law pairs forces on different bodies. They do not cancel on this car’s force diagram.",
+          "hold": 0.5,
+          "start": 31.53,
+          "speechEnd": 38.87,
+          "end": 39.07,
+          "cue": 31.53,
+          "penEnd": 38.99
+        }
+      ],
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 6.24,
+          "end": 7.24,
+          "duration": 1
+        },
+        {
+          "kind": "hold",
+          "start": 13.37,
+          "end": 13.77,
+          "duration": 0.4
+        },
+        {
+          "kind": "hold",
+          "start": 20.92,
+          "end": 21.42,
+          "duration": 0.5
+        },
+        {
+          "kind": "hold",
+          "start": 30.53,
+          "end": 31.53,
+          "duration": 1
+        },
+        {
+          "kind": "hold",
+          "start": 39.07,
+          "end": 39.57,
+          "duration": 0.5
+        }
+      ],
+      "audio": "f-equals-ma-s02.mp3",
+      "audioSha256": "f0e3fa899ad8a07482a99421e5f49996407a049b1f6ec10f55ba5eb995eb6511",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "provider": "elevenlabs",
+      "sampleDuration": 39.92,
+      "words": [
+        {
+          "word": "Newton’s",
+          "start": 0.4,
+          "end": 0.97
+        },
+        {
+          "word": "second",
+          "start": 0.97,
+          "end": 1.21
+        },
+        {
+          "word": "law",
+          "start": 1.21,
+          "end": 1.51
+        },
+        {
+          "word": "says",
+          "start": 1.51,
+          "end": 2.01
+        },
+        {
+          "word": "resultant",
+          "start": 2.01,
+          "end": 3.45
+        },
+        {
+          "word": "force",
+          "start": 3.45,
+          "end": 3.77
+        },
+        {
+          "word": "equals",
+          "start": 3.77,
+          "end": 4.35
+        },
+        {
+          "word": "mass",
+          "start": 4.35,
+          "end": 4.77
+        },
+        {
+          "word": "times",
+          "start": 4.77,
+          "end": 5.23
+        },
+        {
+          "word": "acceleration.",
+          "start": 5.23,
+          "end": 5.75
+        },
+        {
+          "word": "force",
+          "start": 7.43,
+          "end": 7.71
+        },
+        {
+          "word": "in",
+          "start": 7.71,
+          "end": 7.95
+        },
+        {
+          "word": "newtons,",
+          "start": 7.95,
+          "end": 8.47
+        },
+        {
+          "word": "mass",
+          "start": 8.85,
+          "end": 9.17
+        },
+        {
+          "word": "in",
+          "start": 9.17,
+          "end": 9.53
+        },
+        {
+          "word": "kilograms,",
+          "start": 9.53,
+          "end": 10.01
+        },
+        {
+          "word": "and",
+          "start": 10.77,
+          "end": 10.87
+        },
+        {
+          "word": "acceleration",
+          "start": 10.87,
+          "end": 11.27
+        },
+        {
+          "word": "in",
+          "start": 11.27,
+          "end": 11.67
+        },
+        {
+          "word": "metres",
+          "start": 11.67,
+          "end": 12.03
+        },
+        {
+          "word": "per",
+          "start": 12.03,
+          "end": 12.31
+        },
+        {
+          "word": "second",
+          "start": 12.31,
+          "end": 12.57
+        },
+        {
+          "word": "squared.",
+          "start": 12.57,
+          "end": 12.95
+        },
+        {
+          "word": "F",
+          "start": 13.77,
+          "end": 13.95
+        },
+        {
+          "word": "means",
+          "start": 13.95,
+          "end": 14.31
+        },
+        {
+          "word": "the",
+          "start": 14.31,
+          "end": 14.69
+        },
+        {
+          "word": "combined",
+          "start": 14.69,
+          "end": 15.13
+        },
+        {
+          "word": "effect",
+          "start": 15.13,
+          "end": 15.63
+        },
+        {
+          "word": "of",
+          "start": 15.63,
+          "end": 16.33
+        },
+        {
+          "word": "all",
+          "start": 16.33,
+          "end": 16.63
+        },
+        {
+          "word": "the",
+          "start": 16.63,
+          "end": 16.77
+        },
+        {
+          "word": "forces",
+          "start": 16.77,
+          "end": 17.13
+        },
+        {
+          "word": "on",
+          "start": 17.13,
+          "end": 17.45
+        },
+        {
+          "word": "this",
+          "start": 17.45,
+          "end": 17.73
+        },
+        {
+          "word": "one",
+          "start": 17.73,
+          "end": 17.99
+        },
+        {
+          "word": "body.",
+          "start": 17.99,
+          "end": 18.33
+        },
+        {
+          "word": "Opposing",
+          "start": 18.85,
+          "end": 19.37
+        },
+        {
+          "word": "forces",
+          "start": 19.37,
+          "end": 19.81
+        },
+        {
+          "word": "subtract.",
+          "start": 19.81,
+          "end": 20.31
+        },
+        {
+          "word": "If",
+          "start": 21.42,
+          "end": 21.59
+        },
+        {
+          "word": "they",
+          "start": 21.59,
+          "end": 21.75
+        },
+        {
+          "word": "balance,",
+          "start": 21.75,
+          "end": 22.17
+        },
+        {
+          "word": "the",
+          "start": 23.05,
+          "end": 23.19
+        },
+        {
+          "word": "resultant",
+          "start": 23.19,
+          "end": 23.77
+        },
+        {
+          "word": "is",
+          "start": 23.77,
+          "end": 23.93
+        },
+        {
+          "word": "zero,",
+          "start": 23.93,
+          "end": 24.35
+        },
+        {
+          "word": "so",
+          "start": 25.23,
+          "end": 25.35
+        },
+        {
+          "word": "acceleration",
+          "start": 25.35,
+          "end": 25.75
+        },
+        {
+          "word": "is",
+          "start": 25.75,
+          "end": 26.31
+        },
+        {
+          "word": "zero.",
+          "start": 26.31,
+          "end": 26.61
+        },
+        {
+          "word": "A",
+          "start": 26.61,
+          "end": 27.57
+        },
+        {
+          "word": "moving",
+          "start": 27.57,
+          "end": 27.89
+        },
+        {
+          "word": "car",
+          "start": 27.89,
+          "end": 28.31
+        },
+        {
+          "word": "keeps",
+          "start": 28.31,
+          "end": 28.85
+        },
+        {
+          "word": "a",
+          "start": 28.85,
+          "end": 29.01
+        },
+        {
+          "word": "constant",
+          "start": 29.01,
+          "end": 29.51
+        },
+        {
+          "word": "velocity.",
+          "start": 29.51,
+          "end": 30.21
+        },
+        {
+          "word": "Newton's",
+          "start": 31.53,
+          "end": 32.09
+        },
+        {
+          "word": "third",
+          "start": 32.09,
+          "end": 32.27
+        },
+        {
+          "word": "law",
+          "start": 32.27,
+          "end": 32.55
+        },
+        {
+          "word": "pairs",
+          "start": 32.55,
+          "end": 32.93
+        },
+        {
+          "word": "forces",
+          "start": 32.93,
+          "end": 33.57
+        },
+        {
+          "word": "on",
+          "start": 33.57,
+          "end": 33.89
+        },
+        {
+          "word": "different",
+          "start": 33.89,
+          "end": 34.23
+        },
+        {
+          "word": "bodies.",
+          "start": 34.23,
+          "end": 34.75
+        },
+        {
+          "word": "They",
+          "start": 35.77,
+          "end": 35.99
+        },
+        {
+          "word": "do",
+          "start": 35.99,
+          "end": 36.13
+        },
+        {
+          "word": "not",
+          "start": 36.13,
+          "end": 36.29
+        },
+        {
+          "word": "cancel",
+          "start": 36.29,
+          "end": 36.77
+        },
+        {
+          "word": "on",
+          "start": 36.77,
+          "end": 37.13
+        },
+        {
+          "word": "this",
+          "start": 37.13,
+          "end": 37.31
+        },
+        {
+          "word": "car's",
+          "start": 37.31,
+          "end": 37.85
+        },
+        {
+          "word": "force",
+          "start": 37.85,
+          "end": 38.23
+        },
+        {
+          "word": "diagram.",
+          "start": 38.23,
+          "end": 38.63
+        }
+      ],
+      "cues": {
+        "formula": 0.4,
+        "units": 7.43,
+        "net": 13.77,
+        "balanced": 21.42,
+        "third": 31.53
+      },
+      "figureEvents": [],
+      "wordCount": 74,
+      "text": "Newton’s second law says resultant force equals mass times acceleration. force in newtons, mass in kilograms, and acceleration in metres per second squared. F means the combined effect of all the forces on this one body. Opposing forces subtract. If they balance, the resultant is zero, so acceleration is zero. A moving car keeps a constant velocity. Newton's third law pairs forces on different bodies. They do not cancel on this car's force diagram.",
+      "duration": 39.967347
+    },
+    {
+      "id": "s03",
+      "title": "Direction and weight",
+      "mode": "direction",
+      "voiceSpeed": 1,
+      "tempo": "brisk",
+      "beats": [
+        {
+          "id": "right",
+          "text": "Take right as positive. This car moves right, but braking slows it down.",
+          "hold": 0.4,
+          "start": 0.4,
+          "speechEnd": 6.16,
+          "end": 6.36,
+          "cue": 0.4,
+          "penEnd": 6.28
+        },
+        {
+          "id": "negative",
+          "text": "Acceleration points left, so it is negative, even while the car moves right.",
+          "hold": 1,
+          "start": 6.76,
+          "speechEnd": 13.09,
+          "end": 13.29,
+          "cue": 6.78,
+          "penEnd": 13.209999999999999
+        },
+        {
+          "id": "weight",
+          "text": "Mass is not weight. Weight is the downward force of gravity: W equals m g.",
+          "hold": 0.5,
+          "ink": "W = mg",
+          "start": 14.29,
+          "speechEnd": 20.6,
+          "end": 20.8,
+          "cue": 14.5,
+          "penEnd": 20.720000000000002
+        },
+        {
+          "id": "vertical",
+          "text": "Now consider a particle hanging from a taut string, accelerating upwards. Take up as positive: tension acts up and weight acts down.",
+          "hold": 0.5,
+          "start": 21.3,
+          "speechEnd": 32.07,
+          "end": 32.27,
+          "cue": 21.32,
+          "penEnd": 32.190000000000005
+        },
+        {
+          "id": "separate",
+          "text": "Apply the law upwards: tension minus m g equals m a.",
+          "hold": 1,
+          "ink": "T - mg = ma",
+          "start": 32.77,
+          "speechEnd": 37.83,
+          "end": 38.03,
+          "cue": 33.06,
+          "penEnd": 37.95
+        },
+        {
+          "id": "balance",
+          "text": "At constant velocity, a is zero, so tension equals weight. With upward acceleration, tension must be greater than weight.",
+          "hold": 1,
+          "start": 39.03,
+          "speechEnd": 48.74,
+          "end": 48.94,
+          "cue": 39.2,
+          "penEnd": 48.86
+        }
+      ],
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 6.36,
+          "end": 6.76,
+          "duration": 0.4
+        },
+        {
+          "kind": "hold",
+          "start": 13.29,
+          "end": 14.29,
+          "duration": 1
+        },
+        {
+          "kind": "hold",
+          "start": 20.8,
+          "end": 21.3,
+          "duration": 0.5
+        },
+        {
+          "kind": "hold",
+          "start": 32.27,
+          "end": 32.77,
+          "duration": 0.5
+        },
+        {
+          "kind": "hold",
+          "start": 38.03,
+          "end": 39.03,
+          "duration": 1
+        },
+        {
+          "kind": "hold",
+          "start": 48.94,
+          "end": 49.94,
+          "duration": 1
+        }
+      ],
+      "audio": "f-equals-ma-s03.mp3",
+      "audioSha256": "0fa2ec9fe7df32c96c0e0ffb63363a8a709822f9fbc8c07a71e9a634f51f4c4c",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "provider": "elevenlabs",
+      "sampleDuration": 50.29,
+      "words": [
+        {
+          "word": "Take",
+          "start": 0.4,
+          "end": 0.68
+        },
+        {
+          "word": "right",
+          "start": 0.68,
+          "end": 1.0
+        },
+        {
+          "word": "as",
+          "start": 1.0,
+          "end": 1.2
+        },
+        {
+          "word": "positive.",
+          "start": 1.2,
+          "end": 1.64
+        },
+        {
+          "word": "This",
+          "start": 2.74,
+          "end": 2.84
+        },
+        {
+          "word": "car",
+          "start": 2.84,
+          "end": 3.14
+        },
+        {
+          "word": "moves",
+          "start": 3.14,
+          "end": 3.46
+        },
+        {
+          "word": "right,",
+          "start": 3.46,
+          "end": 3.84
+        },
+        {
+          "word": "but",
+          "start": 4.34,
+          "end": 4.72
+        },
+        {
+          "word": "braking",
+          "start": 4.72,
+          "end": 5.18
+        },
+        {
+          "word": "slows",
+          "start": 5.18,
+          "end": 5.5
+        },
+        {
+          "word": "it",
+          "start": 5.5,
+          "end": 5.76
+        },
+        {
+          "word": "down.",
+          "start": 5.76,
+          "end": 6.1
+        },
+        {
+          "word": "Acceleration",
+          "start": 6.78,
+          "end": 7.18
+        },
+        {
+          "word": "points",
+          "start": 7.18,
+          "end": 7.72
+        },
+        {
+          "word": "left,",
+          "start": 7.72,
+          "end": 8.18
+        },
+        {
+          "word": "so",
+          "start": 8.8,
+          "end": 9.3
+        },
+        {
+          "word": "it",
+          "start": 9.3,
+          "end": 9.46
+        },
+        {
+          "word": "is",
+          "start": 9.46,
+          "end": 9.58
+        },
+        {
+          "word": "negative,",
+          "start": 9.58,
+          "end": 10.0
+        },
+        {
+          "word": "even",
+          "start": 10.48,
+          "end": 11.22
+        },
+        {
+          "word": "while",
+          "start": 11.22,
+          "end": 11.54
+        },
+        {
+          "word": "the",
+          "start": 11.54,
+          "end": 11.76
+        },
+        {
+          "word": "car",
+          "start": 11.76,
+          "end": 12.0
+        },
+        {
+          "word": "moves",
+          "start": 12.0,
+          "end": 12.36
+        },
+        {
+          "word": "right.",
+          "start": 12.36,
+          "end": 12.86
+        },
+        {
+          "word": "is",
+          "start": 14.5,
+          "end": 14.7
+        },
+        {
+          "word": "not",
+          "start": 14.7,
+          "end": 14.86
+        },
+        {
+          "word": "weight.",
+          "start": 14.86,
+          "end": 15.26
+        },
+        {
+          "word": "Weight",
+          "start": 16.16,
+          "end": 16.56
+        },
+        {
+          "word": "is",
+          "start": 16.56,
+          "end": 17.24
+        },
+        {
+          "word": "the",
+          "start": 17.24,
+          "end": 17.38
+        },
+        {
+          "word": "downward",
+          "start": 17.38,
+          "end": 17.64
+        },
+        {
+          "word": "force",
+          "start": 17.64,
+          "end": 18.04
+        },
+        {
+          "word": "of",
+          "start": 18.04,
+          "end": 18.22
+        },
+        {
+          "word": "gravity.",
+          "start": 18.22,
+          "end": 18.66
+        },
+        {
+          "word": "W",
+          "start": 19.12,
+          "end": 19.42
+        },
+        {
+          "word": "equals",
+          "start": 19.42,
+          "end": 19.96
+        },
+        {
+          "word": "m",
+          "start": 19.96,
+          "end": 20.28
+        },
+        {
+          "word": "g.",
+          "start": 20.28,
+          "end": 20.52
+        },
+        {
+          "word": "Now",
+          "start": 21.32,
+          "end": 21.46
+        },
+        {
+          "word": "consider",
+          "start": 21.46,
+          "end": 21.8
+        },
+        {
+          "word": "a",
+          "start": 21.8,
+          "end": 22.02
+        },
+        {
+          "word": "particle",
+          "start": 22.02,
+          "end": 22.36
+        },
+        {
+          "word": "hanging",
+          "start": 22.36,
+          "end": 22.88
+        },
+        {
+          "word": "from",
+          "start": 22.88,
+          "end": 23.14
+        },
+        {
+          "word": "a",
+          "start": 23.14,
+          "end": 23.36
+        },
+        {
+          "word": "taut",
+          "start": 23.36,
+          "end": 23.56
+        },
+        {
+          "word": "string,",
+          "start": 23.56,
+          "end": 24.0
+        },
+        {
+          "word": "accelerating",
+          "start": 24.78,
+          "end": 25.26
+        },
+        {
+          "word": "upwards.",
+          "start": 25.26,
+          "end": 25.82
+        },
+        {
+          "word": "Take",
+          "start": 26.7,
+          "end": 27.04
+        },
+        {
+          "word": "up",
+          "start": 27.04,
+          "end": 27.26
+        },
+        {
+          "word": "as",
+          "start": 27.26,
+          "end": 27.44
+        },
+        {
+          "word": "positive.",
+          "start": 27.44,
+          "end": 27.92
+        },
+        {
+          "word": "Tension",
+          "start": 27.92,
+          "end": 29.34
+        },
+        {
+          "word": "acts",
+          "start": 29.34,
+          "end": 29.82
+        },
+        {
+          "word": "up",
+          "start": 29.82,
+          "end": 30.2
+        },
+        {
+          "word": "and",
+          "start": 30.2,
+          "end": 30.88
+        },
+        {
+          "word": "weight",
+          "start": 30.88,
+          "end": 31.16
+        },
+        {
+          "word": "acts",
+          "start": 31.16,
+          "end": 31.6
+        },
+        {
+          "word": "down.",
+          "start": 31.6,
+          "end": 32.04
+        },
+        {
+          "word": "the",
+          "start": 33.06,
+          "end": 33.28
+        },
+        {
+          "word": "law",
+          "start": 33.28,
+          "end": 33.56
+        },
+        {
+          "word": "upwards.",
+          "start": 33.56,
+          "end": 34.08
+        },
+        {
+          "word": "Tension",
+          "start": 34.74,
+          "end": 35.2
+        },
+        {
+          "word": "minus",
+          "start": 35.2,
+          "end": 35.8
+        },
+        {
+          "word": "mg",
+          "start": 35.8,
+          "end": 36.42
+        },
+        {
+          "word": "equals",
+          "start": 36.42,
+          "end": 37.1
+        },
+        {
+          "word": "ma.",
+          "start": 37.1,
+          "end": 37.48
+        },
+        {
+          "word": "constant",
+          "start": 39.2,
+          "end": 39.52
+        },
+        {
+          "word": "velocity,",
+          "start": 39.52,
+          "end": 40.04
+        },
+        {
+          "word": "a",
+          "start": 41.02,
+          "end": 41.38
+        },
+        {
+          "word": "is",
+          "start": 41.38,
+          "end": 41.74
+        },
+        {
+          "word": "zero,",
+          "start": 41.74,
+          "end": 42.16
+        },
+        {
+          "word": "so",
+          "start": 42.84,
+          "end": 42.94
+        },
+        {
+          "word": "tension",
+          "start": 42.94,
+          "end": 43.32
+        },
+        {
+          "word": "equals",
+          "start": 43.32,
+          "end": 43.74
+        },
+        {
+          "word": "weight.",
+          "start": 43.74,
+          "end": 44.18
+        },
+        {
+          "word": "With",
+          "start": 44.78,
+          "end": 44.92
+        },
+        {
+          "word": "upward",
+          "start": 44.92,
+          "end": 45.3
+        },
+        {
+          "word": "acceleration,",
+          "start": 45.3,
+          "end": 46.08
+        },
+        {
+          "word": "tension",
+          "start": 46.54,
+          "end": 46.9
+        },
+        {
+          "word": "must",
+          "start": 46.9,
+          "end": 47.24
+        },
+        {
+          "word": "be",
+          "start": 47.24,
+          "end": 47.48
+        },
+        {
+          "word": "greater",
+          "start": 47.48,
+          "end": 47.94
+        },
+        {
+          "word": "than",
+          "start": 47.94,
+          "end": 48.18
+        },
+        {
+          "word": "weight.",
+          "start": 48.18,
+          "end": 48.54
+        }
+      ],
+      "cues": {
+        "right": 0.4,
+        "negative": 6.78,
+        "weight": 14.5,
+        "vertical": 21.32,
+        "separate": 33.06,
+        "balance": 39.2,
+        "upcase": 44.78
+      },
+      "figureEvents": [],
+      "wordCount": 88,
+      "text": "Take right as positive. This car moves right, but braking slows it down. Acceleration points left, so it is negative, even while the car moves right. is not weight. Weight is the downward force of gravity. W equals m g. Now consider a particle hanging from a taut string, accelerating upwards. Take up as positive. Tension acts up and weight acts down. the law upwards. Tension minus mg equals ma. constant velocity, a is zero, so tension equals weight. With upward acceleration, tension must be greater than weight.",
+      "duration": 50.337959
+    },
+    {
+      "id": "s04",
+      "title": "Picture the whole journey",
+      "mode": "story",
+      "voiceSpeed": 0.9,
+      "tempo": "slow",
+      "beats": [
+        {
+          "id": "rest",
+          "text": "Consider a car waiting on a straight, horizontal road.",
+          "hold": 0.8,
+          "start": 0.4,
+          "speechEnd": 3.76,
+          "end": 3.96,
+          "cue": 0.4,
+          "penEnd": 3.88
+        },
+        {
+          "id": "move",
+          "text": "It starts from rest. The engine drives it forward, while resistance acts backwards.",
+          "hold": 0.4,
+          "start": 4.76,
+          "speechEnd": 11.92,
+          "end": 12.12,
+          "cue": 4.76,
+          "penEnd": 12.04
+        },
+        {
+          "id": "speedup",
+          "text": "The forward force is larger. Watch it speed up, covering more ground in equal times.",
+          "hold": 0.8,
+          "start": 12.52,
+          "speechEnd": 19.88,
+          "end": 20.08,
+          "cue": 12.55,
+          "penEnd": 20.0
+        },
+        {
+          "id": "goal",
+          "text": "We will find its acceleration, then how far it travels during the first few seconds.",
+          "hold": 0.5,
+          "start": 20.88,
+          "speechEnd": 27.02,
+          "end": 27.22,
+          "cue": 20.88,
+          "penEnd": 27.14
+        }
+      ],
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 3.96,
+          "end": 4.76,
+          "duration": 0.8
+        },
+        {
+          "kind": "hold",
+          "start": 12.12,
+          "end": 12.52,
+          "duration": 0.4
+        },
+        {
+          "kind": "hold",
+          "start": 20.08,
+          "end": 20.88,
+          "duration": 0.8
+        },
+        {
+          "kind": "hold",
+          "start": 27.22,
+          "end": 27.72,
+          "duration": 0.5
+        }
+      ],
+      "audio": "f-equals-ma-s04.mp3",
+      "audioSha256": "e787525586f9ecf7a18b1cc96f63d3c7bf7ec2886ac57b4d24c6ca9396dbb411",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "provider": "elevenlabs",
+      "sampleDuration": 28.07,
+      "words": [
+        {
+          "word": "Consider",
+          "start": 0.4,
+          "end": 0.81
+        },
+        {
+          "word": "a",
+          "start": 0.81,
+          "end": 1.09
+        },
+        {
+          "word": "car",
+          "start": 1.09,
+          "end": 1.33
+        },
+        {
+          "word": "waiting",
+          "start": 1.33,
+          "end": 1.87
+        },
+        {
+          "word": "on",
+          "start": 1.87,
+          "end": 2.11
+        },
+        {
+          "word": "a",
+          "start": 2.11,
+          "end": 2.27
+        },
+        {
+          "word": "straight,",
+          "start": 2.27,
+          "end": 2.49
+        },
+        {
+          "word": "horizontal",
+          "start": 2.59,
+          "end": 3.09
+        },
+        {
+          "word": "road.",
+          "start": 3.09,
+          "end": 3.55
+        },
+        {
+          "word": "It",
+          "start": 4.76,
+          "end": 4.97
+        },
+        {
+          "word": "starts",
+          "start": 4.97,
+          "end": 5.33
+        },
+        {
+          "word": "from",
+          "start": 5.33,
+          "end": 5.69
+        },
+        {
+          "word": "rest.",
+          "start": 5.69,
+          "end": 6.09
+        },
+        {
+          "word": "The",
+          "start": 7.17,
+          "end": 7.35
+        },
+        {
+          "word": "engine",
+          "start": 7.35,
+          "end": 7.81
+        },
+        {
+          "word": "drives",
+          "start": 7.81,
+          "end": 8.29
+        },
+        {
+          "word": "it",
+          "start": 8.29,
+          "end": 8.49
+        },
+        {
+          "word": "forward,",
+          "start": 8.49,
+          "end": 8.91
+        },
+        {
+          "word": "while",
+          "start": 9.67,
+          "end": 9.97
+        },
+        {
+          "word": "resistance",
+          "start": 9.97,
+          "end": 10.55
+        },
+        {
+          "word": "acts",
+          "start": 10.55,
+          "end": 11.03
+        },
+        {
+          "word": "backwards.",
+          "start": 11.03,
+          "end": 11.57
+        },
+        {
+          "word": "The",
+          "start": 12.55,
+          "end": 12.65
+        },
+        {
+          "word": "forward",
+          "start": 12.65,
+          "end": 12.99
+        },
+        {
+          "word": "force",
+          "start": 12.99,
+          "end": 13.39
+        },
+        {
+          "word": "is",
+          "start": 13.39,
+          "end": 13.95
+        },
+        {
+          "word": "larger.",
+          "start": 13.95,
+          "end": 14.33
+        },
+        {
+          "word": "Watch",
+          "start": 15.25,
+          "end": 15.61
+        },
+        {
+          "word": "it",
+          "start": 15.61,
+          "end": 15.83
+        },
+        {
+          "word": "speed",
+          "start": 15.83,
+          "end": 16.11
+        },
+        {
+          "word": "up,",
+          "start": 16.11,
+          "end": 16.47
+        },
+        {
+          "word": "covering",
+          "start": 17.09,
+          "end": 17.47
+        },
+        {
+          "word": "more",
+          "start": 17.47,
+          "end": 17.83
+        },
+        {
+          "word": "ground",
+          "start": 17.83,
+          "end": 18.31
+        },
+        {
+          "word": "in",
+          "start": 18.31,
+          "end": 19.11
+        },
+        {
+          "word": "equal",
+          "start": 19.11,
+          "end": 19.41
+        },
+        {
+          "word": "times.",
+          "start": 19.41,
+          "end": 19.81
+        },
+        {
+          "word": "We",
+          "start": 20.88,
+          "end": 21.05
+        },
+        {
+          "word": "will",
+          "start": 21.05,
+          "end": 21.21
+        },
+        {
+          "word": "find",
+          "start": 21.21,
+          "end": 21.47
+        },
+        {
+          "word": "its",
+          "start": 21.47,
+          "end": 21.69
+        },
+        {
+          "word": "acceleration,",
+          "start": 21.69,
+          "end": 22.35
+        },
+        {
+          "word": "then",
+          "start": 23.35,
+          "end": 23.53
+        },
+        {
+          "word": "how",
+          "start": 23.53,
+          "end": 23.89
+        },
+        {
+          "word": "far",
+          "start": 23.89,
+          "end": 24.23
+        },
+        {
+          "word": "it",
+          "start": 24.23,
+          "end": 24.47
+        },
+        {
+          "word": "travels",
+          "start": 24.47,
+          "end": 25.07
+        },
+        {
+          "word": "during",
+          "start": 25.07,
+          "end": 25.43
+        },
+        {
+          "word": "the",
+          "start": 25.43,
+          "end": 25.67
+        },
+        {
+          "word": "first",
+          "start": 25.67,
+          "end": 25.99
+        },
+        {
+          "word": "few",
+          "start": 25.99,
+          "end": 26.29
+        },
+        {
+          "word": "seconds.",
+          "start": 26.29,
+          "end": 26.71
+        }
+      ],
+      "cues": {
+        "rest": 0.4,
+        "move": 4.76,
+        "speedup": 12.55,
+        "goal": 20.88
+      },
+      "figureEvents": [],
+      "wordCount": 52,
+      "text": "Consider a car waiting on a straight, horizontal road. It starts from rest. The engine drives it forward, while resistance acts backwards. The forward force is larger. Watch it speed up, covering more ground in equal times. We will find its acceleration, then how far it travels during the first few seconds.",
+      "duration": 28.107755
+    },
+    {
+      "id": "s05",
+      "title": "The whole question",
+      "mode": "problem",
+      "voiceSpeed": 0.9,
+      "tempo": "slow",
+      "beats": [
+        {
+          "id": "mass",
+          "text": "Model the car as a particle of constant mass, twelve hundred kilograms.",
+          "hold": 0.3,
+          "target": "mass",
+          "start": 0.4,
+          "speechEnd": 6.81,
+          "end": 7.01,
+          "cue": 0.71,
+          "penEnd": 6.93
+        },
+        {
+          "id": "drive",
+          "text": "Its constant driving force is three thousand newtons to the right.",
+          "hold": 0.3,
+          "target": "drive",
+          "start": 7.31,
+          "speechEnd": 11.48,
+          "end": 11.68,
+          "cue": 7.33,
+          "penEnd": 11.6
+        },
+        {
+          "id": "resistance",
+          "text": "The total resistance is a constant six hundred newtons to the left.",
+          "hold": 0.3,
+          "target": "resistance",
+          "start": 11.98,
+          "speechEnd": 17.5,
+          "end": 17.7,
+          "cue": 12.03,
+          "penEnd": 17.62
+        },
+        {
+          "id": "initial",
+          "text": "It starts from rest: initial velocity, u, is zero.",
+          "hold": 0.3,
+          "target": "initial",
+          "start": 18.0,
+          "speechEnd": 23.77,
+          "end": 23.97,
+          "cue": 18.05,
+          "penEnd": 23.89
+        },
+        {
+          "id": "time",
+          "text": "We consider the first four seconds on the straight, horizontal road.",
+          "hold": 0.3,
+          "target": "time",
+          "start": 24.27,
+          "speechEnd": 28.21,
+          "end": 28.41,
+          "cue": 24.27,
+          "penEnd": 28.330000000000002
+        },
+        {
+          "id": "unknown",
+          "text": "Find the acceleration, a, and the distance travelled, s.",
+          "hold": 2,
+          "caption": "Find a and s.",
+          "start": 28.71,
+          "speechEnd": 34.52,
+          "end": 34.72,
+          "cue": 29.01,
+          "penEnd": 34.64
+        }
+      ],
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 7.01,
+          "end": 7.31,
+          "duration": 0.3
+        },
+        {
+          "kind": "hold",
+          "start": 11.68,
+          "end": 11.98,
+          "duration": 0.3
+        },
+        {
+          "kind": "hold",
+          "start": 17.7,
+          "end": 18.0,
+          "duration": 0.3
+        },
+        {
+          "kind": "hold",
+          "start": 23.97,
+          "end": 24.27,
+          "duration": 0.3
+        },
+        {
+          "kind": "hold",
+          "start": 28.41,
+          "end": 28.71,
+          "duration": 0.3
+        },
+        {
+          "kind": "hold",
+          "start": 34.72,
+          "end": 36.72,
+          "duration": 2
+        }
+      ],
+      "audio": "f-equals-ma-s05.mp3",
+      "audioSha256": "578793bb9bdc597ed64e9900b0185af7c16631e21c35866a3041d10323361d3b",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "provider": "elevenlabs",
+      "sampleDuration": 37.07,
+      "words": [
+        {
+          "word": "the",
+          "start": 0.71,
+          "end": 0.95
+        },
+        {
+          "word": "car",
+          "start": 0.95,
+          "end": 1.27
+        },
+        {
+          "word": "as",
+          "start": 1.27,
+          "end": 2.29
+        },
+        {
+          "word": "a",
+          "start": 2.29,
+          "end": 2.41
+        },
+        {
+          "word": "particle",
+          "start": 2.41,
+          "end": 2.77
+        },
+        {
+          "word": "of",
+          "start": 2.77,
+          "end": 3.19
+        },
+        {
+          "word": "constant",
+          "start": 3.19,
+          "end": 3.61
+        },
+        {
+          "word": "mass,",
+          "start": 3.61,
+          "end": 4.07
+        },
+        {
+          "word": "twelve",
+          "start": 4.35,
+          "end": 5.31
+        },
+        {
+          "word": "hundred",
+          "start": 5.31,
+          "end": 5.79
+        },
+        {
+          "word": "kilograms.",
+          "start": 5.79,
+          "end": 6.21
+        },
+        {
+          "word": "Its",
+          "start": 7.33,
+          "end": 7.49
+        },
+        {
+          "word": "constant",
+          "start": 7.49,
+          "end": 7.87
+        },
+        {
+          "word": "driving",
+          "start": 7.87,
+          "end": 8.25
+        },
+        {
+          "word": "force",
+          "start": 8.25,
+          "end": 8.73
+        },
+        {
+          "word": "is",
+          "start": 8.73,
+          "end": 9.29
+        },
+        {
+          "word": "three",
+          "start": 9.29,
+          "end": 9.51
+        },
+        {
+          "word": "thousand",
+          "start": 9.51,
+          "end": 10.05
+        },
+        {
+          "word": "newtons",
+          "start": 10.05,
+          "end": 10.59
+        },
+        {
+          "word": "to",
+          "start": 10.59,
+          "end": 10.79
+        },
+        {
+          "word": "the",
+          "start": 10.79,
+          "end": 10.93
+        },
+        {
+          "word": "right.",
+          "start": 10.93,
+          "end": 11.23
+        },
+        {
+          "word": "The",
+          "start": 12.03,
+          "end": 12.13
+        },
+        {
+          "word": "total",
+          "start": 12.13,
+          "end": 12.53
+        },
+        {
+          "word": "resistance",
+          "start": 12.53,
+          "end": 13.11
+        },
+        {
+          "word": "is",
+          "start": 13.11,
+          "end": 14.19
+        },
+        {
+          "word": "a",
+          "start": 14.19,
+          "end": 14.31
+        },
+        {
+          "word": "constant",
+          "start": 14.31,
+          "end": 14.79
+        },
+        {
+          "word": "six",
+          "start": 14.79,
+          "end": 15.23
+        },
+        {
+          "word": "hundred",
+          "start": 15.23,
+          "end": 15.55
+        },
+        {
+          "word": "newtons",
+          "start": 15.55,
+          "end": 16.27
+        },
+        {
+          "word": "to",
+          "start": 16.27,
+          "end": 16.85
+        },
+        {
+          "word": "the",
+          "start": 16.85,
+          "end": 17.01
+        },
+        {
+          "word": "left.",
+          "start": 17.01,
+          "end": 17.27
+        },
+        {
+          "word": "It",
+          "start": 18.05,
+          "end": 18.19
+        },
+        {
+          "word": "starts",
+          "start": 18.19,
+          "end": 18.43
+        },
+        {
+          "word": "from",
+          "start": 18.43,
+          "end": 18.75
+        },
+        {
+          "word": "rest,",
+          "start": 18.75,
+          "end": 19.21
+        },
+        {
+          "word": "initial",
+          "start": 19.75,
+          "end": 20.63
+        },
+        {
+          "word": "velocity,",
+          "start": 20.63,
+          "end": 21.35
+        },
+        {
+          "word": "u,",
+          "start": 21.97,
+          "end": 22.35
+        },
+        {
+          "word": "is",
+          "start": 22.93,
+          "end": 23.11
+        },
+        {
+          "word": "zero.",
+          "start": 23.11,
+          "end": 23.51
+        },
+        {
+          "word": "We",
+          "start": 24.27,
+          "end": 24.41
+        },
+        {
+          "word": "consider",
+          "start": 24.41,
+          "end": 24.79
+        },
+        {
+          "word": "the",
+          "start": 24.79,
+          "end": 24.95
+        },
+        {
+          "word": "first",
+          "start": 24.95,
+          "end": 25.19
+        },
+        {
+          "word": "four",
+          "start": 25.19,
+          "end": 25.49
+        },
+        {
+          "word": "seconds",
+          "start": 25.49,
+          "end": 25.85
+        },
+        {
+          "word": "on",
+          "start": 25.85,
+          "end": 26.17
+        },
+        {
+          "word": "the",
+          "start": 26.17,
+          "end": 26.29
+        },
+        {
+          "word": "straight,",
+          "start": 26.29,
+          "end": 26.69
+        },
+        {
+          "word": "horizontal",
+          "start": 26.73,
+          "end": 27.47
+        },
+        {
+          "word": "road.",
+          "start": 27.47,
+          "end": 28.13
+        },
+        {
+          "word": "the",
+          "start": 29.01,
+          "end": 29.25
+        },
+        {
+          "word": "acceleration",
+          "start": 29.25,
+          "end": 29.99
+        },
+        {
+          "word": "a",
+          "start": 29.99,
+          "end": 31.13
+        },
+        {
+          "word": "and",
+          "start": 31.13,
+          "end": 32.03
+        },
+        {
+          "word": "the",
+          "start": 32.03,
+          "end": 32.15
+        },
+        {
+          "word": "distance",
+          "start": 32.15,
+          "end": 32.53
+        },
+        {
+          "word": "traveled",
+          "start": 32.53,
+          "end": 33.11
+        },
+        {
+          "word": "s",
+          "start": 33.11,
+          "end": 34.07
+        }
+      ],
+      "cues": {
+        "mass": 0.71,
+        "drive": 7.33,
+        "resistance": 12.03,
+        "initial": 18.05,
+        "time": 24.27,
+        "unknown": 29.01
+      },
+      "figureEvents": [
+        {
+          "id": "word-3",
+          "wordIndex": 3,
+          "word": "a",
+          "start": 2.29,
+          "target": "mass",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-8",
+          "wordIndex": 8,
+          "word": "twelve",
+          "start": 4.35,
+          "target": "mass",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-9",
+          "wordIndex": 9,
+          "word": "hundred",
+          "start": 5.31,
+          "target": "mass",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-16",
+          "wordIndex": 16,
+          "word": "three",
+          "start": 9.29,
+          "target": "drive",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-17",
+          "wordIndex": 17,
+          "word": "thousand",
+          "start": 9.51,
+          "target": "drive",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-26",
+          "wordIndex": 26,
+          "word": "a",
+          "start": 14.19,
+          "target": "resistance",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-28",
+          "wordIndex": 28,
+          "word": "six",
+          "start": 14.79,
+          "target": "resistance",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-29",
+          "wordIndex": 29,
+          "word": "hundred",
+          "start": 15.23,
+          "target": "resistance",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-40",
+          "wordIndex": 40,
+          "word": "u,",
+          "start": 21.97,
+          "target": "initial",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-42",
+          "wordIndex": 42,
+          "word": "zero.",
+          "start": 23.11,
+          "target": "initial",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-47",
+          "wordIndex": 47,
+          "word": "four",
+          "start": 25.19,
+          "target": "time",
+          "kind": "spoken"
+        }
+      ],
+      "wordCount": 62,
+      "text": "the car as a particle of constant mass, twelve hundred kilograms. Its constant driving force is three thousand newtons to the right. The total resistance is a constant six hundred newtons to the left. It starts from rest, initial velocity, u, is zero. We consider the first four seconds on the straight, horizontal road. the acceleration a and the distance traveled s",
+      "duration": 37.12
+    },
+    {
+      "id": "s06",
+      "title": "First, find the acceleration",
+      "mode": "working",
+      "voiceSpeed": 0.9,
+      "tempo": "slow",
+      "beats": [
+        {
+          "id": "positive",
+          "text": "Choose right as positive. The forces are constant, so the acceleration will be constant too.",
+          "hold": 0.5,
+          "start": 0.4,
+          "speechEnd": 7.63,
+          "end": 7.83,
+          "cue": 0.4,
+          "penEnd": 7.75
+        },
+        {
+          "id": "formula",
+          "text": "Start with the law: resultant force equals mass times acceleration.",
+          "hold": 1,
+          "ink": "F = ma",
+          "start": 8.33,
+          "speechEnd": 13.49,
+          "end": 13.69,
+          "cue": 8.33,
+          "penEnd": 13.61
+        },
+        {
+          "id": "forces",
+          "text": "Driving force minus resistance equals mass times acceleration. We subtract because the forces oppose each other.",
+          "hold": 0.6,
+          "ink": "D - R = ma",
+          "start": 14.69,
+          "speechEnd": 25.32,
+          "end": 25.52,
+          "cue": 15.06,
+          "penEnd": 25.44
+        },
+        {
+          "id": "drive",
+          "text": "The driving force is three thousand newtons.",
+          "hold": 0.2,
+          "target": "drive",
+          "ink": "3000",
+          "start": 26.12,
+          "speechEnd": 28.71,
+          "end": 28.91,
+          "cue": 26.12,
+          "penEnd": 28.830000000000002
+        },
+        {
+          "id": "resist",
+          "text": "Subtract six hundred newtons of resistance.",
+          "hold": 0.2,
+          "target": "resistance",
+          "ink": "- 600",
+          "start": 29.11,
+          "speechEnd": 32.13,
+          "end": 32.33,
+          "cue": 29.11,
+          "penEnd": 32.25
+        },
+        {
+          "id": "mass",
+          "text": "Set that equal to twelve hundred times a.",
+          "hold": 0.6,
+          "target": "mass",
+          "ink": "= 1200a",
+          "start": 32.53,
+          "speechEnd": 34.98,
+          "end": 35.18,
+          "cue": 32.53,
+          "penEnd": 35.1
+        },
+        {
+          "id": "net",
+          "text": "The resultant is twenty-four hundred newtons to the right.",
+          "hold": 2,
+          "ink": "2400 = 1200a",
+          "target": "net",
+          "start": 35.78,
+          "speechEnd": 39.45,
+          "end": 39.65,
+          "cue": 35.94,
+          "penEnd": 39.57
+        },
+        {
+          "id": "divide",
+          "text": "Divide by the mass to isolate acceleration: twenty-four hundred divided by twelve hundred.",
+          "hold": 0.4,
+          "ink": "a = 2400 / 1200",
+          "start": 41.65,
+          "speechEnd": 48.42,
+          "end": 48.62,
+          "cue": 41.65,
+          "penEnd": 48.54
+        },
+        {
+          "id": "answer",
+          "text": "So a equals two metres per second squared, to the right.",
+          "hold": 2,
+          "ink": "a = 2 m s⁻²",
+          "target": "acceleration",
+          "start": 49.02,
+          "speechEnd": 52.17,
+          "end": 52.37,
+          "cue": 49.02,
+          "penEnd": 52.29
+        },
+        {
+          "id": "meaning",
+          "text": "Each second, the velocity increases by two metres per second. This is a change in velocity, not the velocity itself.",
+          "hold": 0.5,
+          "target": "acceleration",
+          "start": 54.37,
+          "speechEnd": 63.85,
+          "end": 64.05,
+          "cue": 54.37,
+          "penEnd": 63.97
+        }
+      ],
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 7.83,
+          "end": 8.33,
+          "duration": 0.5
+        },
+        {
+          "kind": "hold",
+          "start": 13.69,
+          "end": 14.69,
+          "duration": 1
+        },
+        {
+          "kind": "hold",
+          "start": 25.52,
+          "end": 26.12,
+          "duration": 0.6
+        },
+        {
+          "kind": "hold",
+          "start": 28.91,
+          "end": 29.11,
+          "duration": 0.2
+        },
+        {
+          "kind": "hold",
+          "start": 32.33,
+          "end": 32.53,
+          "duration": 0.2
+        },
+        {
+          "kind": "hold",
+          "start": 35.18,
+          "end": 35.78,
+          "duration": 0.6
+        },
+        {
+          "kind": "hold",
+          "start": 39.65,
+          "end": 41.65,
+          "duration": 2
+        },
+        {
+          "kind": "hold",
+          "start": 48.62,
+          "end": 49.02,
+          "duration": 0.4
+        },
+        {
+          "kind": "hold",
+          "start": 52.37,
+          "end": 54.37,
+          "duration": 2
+        },
+        {
+          "kind": "hold",
+          "start": 64.05,
+          "end": 64.55,
+          "duration": 0.5
+        }
+      ],
+      "audio": "f-equals-ma-s06.mp3",
+      "audioSha256": "b9c22edbf7f83b87784a6c981a9fcb60e6750047b1e04e750fafa3e9169eb389",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "provider": "elevenlabs",
+      "sampleDuration": 64.9,
+      "words": [
+        {
+          "word": "Choose",
+          "start": 0.4,
+          "end": 0.74
+        },
+        {
+          "word": "right",
+          "start": 0.74,
+          "end": 1.12
+        },
+        {
+          "word": "as",
+          "start": 1.12,
+          "end": 1.34
+        },
+        {
+          "word": "positive.",
+          "start": 1.34,
+          "end": 1.84
+        },
+        {
+          "word": "The",
+          "start": 2.72,
+          "end": 2.96
+        },
+        {
+          "word": "forces",
+          "start": 2.96,
+          "end": 3.42
+        },
+        {
+          "word": "are",
+          "start": 3.42,
+          "end": 3.64
+        },
+        {
+          "word": "constant,",
+          "start": 3.64,
+          "end": 4.14
+        },
+        {
+          "word": "so",
+          "start": 4.66,
+          "end": 5.4
+        },
+        {
+          "word": "the",
+          "start": 5.4,
+          "end": 5.56
+        },
+        {
+          "word": "acceleration",
+          "start": 5.56,
+          "end": 6.18
+        },
+        {
+          "word": "will",
+          "start": 6.18,
+          "end": 6.56
+        },
+        {
+          "word": "be",
+          "start": 6.56,
+          "end": 6.72
+        },
+        {
+          "word": "constant",
+          "start": 6.72,
+          "end": 7.1
+        },
+        {
+          "word": "too.",
+          "start": 7.1,
+          "end": 7.48
+        },
+        {
+          "word": "Start",
+          "start": 8.33,
+          "end": 8.6
+        },
+        {
+          "word": "with",
+          "start": 8.6,
+          "end": 8.86
+        },
+        {
+          "word": "the",
+          "start": 8.86,
+          "end": 9.0
+        },
+        {
+          "word": "law.",
+          "start": 9.0,
+          "end": 9.22
+        },
+        {
+          "word": "Resultant",
+          "start": 10.06,
+          "end": 10.6
+        },
+        {
+          "word": "force",
+          "start": 10.6,
+          "end": 10.92
+        },
+        {
+          "word": "equals",
+          "start": 10.92,
+          "end": 11.34
+        },
+        {
+          "word": "mass",
+          "start": 11.34,
+          "end": 11.84
+        },
+        {
+          "word": "times",
+          "start": 11.84,
+          "end": 12.34
+        },
+        {
+          "word": "acceleration.",
+          "start": 12.34,
+          "end": 12.98
+        },
+        {
+          "word": "force",
+          "start": 15.06,
+          "end": 15.56
+        },
+        {
+          "word": "minus",
+          "start": 15.56,
+          "end": 16.24
+        },
+        {
+          "word": "resistance",
+          "start": 16.24,
+          "end": 17.06
+        },
+        {
+          "word": "equals",
+          "start": 17.06,
+          "end": 18.24
+        },
+        {
+          "word": "mass",
+          "start": 18.24,
+          "end": 18.88
+        },
+        {
+          "word": "times",
+          "start": 18.88,
+          "end": 19.48
+        },
+        {
+          "word": "acceleration.",
+          "start": 19.48,
+          "end": 20.44
+        },
+        {
+          "word": "We",
+          "start": 21.46,
+          "end": 22.04
+        },
+        {
+          "word": "subtract",
+          "start": 22.04,
+          "end": 22.5
+        },
+        {
+          "word": "because",
+          "start": 22.5,
+          "end": 23.3
+        },
+        {
+          "word": "the",
+          "start": 23.3,
+          "end": 23.54
+        },
+        {
+          "word": "forces",
+          "start": 23.54,
+          "end": 23.94
+        },
+        {
+          "word": "oppose",
+          "start": 23.94,
+          "end": 24.4
+        },
+        {
+          "word": "each",
+          "start": 24.4,
+          "end": 24.74
+        },
+        {
+          "word": "other.",
+          "start": 24.74,
+          "end": 25.08
+        },
+        {
+          "word": "The",
+          "start": 26.12,
+          "end": 26.24
+        },
+        {
+          "word": "driving",
+          "start": 26.24,
+          "end": 26.58
+        },
+        {
+          "word": "force",
+          "start": 26.58,
+          "end": 26.94
+        },
+        {
+          "word": "is",
+          "start": 26.94,
+          "end": 27.16
+        },
+        {
+          "word": "three",
+          "start": 27.16,
+          "end": 27.44
+        },
+        {
+          "word": "thousand",
+          "start": 27.44,
+          "end": 27.82
+        },
+        {
+          "word": "newtons.",
+          "start": 27.82,
+          "end": 28.58
+        },
+        {
+          "word": "subtract",
+          "start": 29.11,
+          "end": 29.66
+        },
+        {
+          "word": "600",
+          "start": 29.66,
+          "end": 30.42
+        },
+        {
+          "word": "N",
+          "start": 30.42,
+          "end": 30.9
+        },
+        {
+          "word": "of",
+          "start": 30.9,
+          "end": 31.34
+        },
+        {
+          "word": "resistance,",
+          "start": 31.34,
+          "end": 31.84
+        },
+        {
+          "word": "set",
+          "start": 32.53,
+          "end": 32.78
+        },
+        {
+          "word": "that",
+          "start": 32.78,
+          "end": 32.98
+        },
+        {
+          "word": "equal",
+          "start": 32.98,
+          "end": 33.34
+        },
+        {
+          "word": "to",
+          "start": 33.34,
+          "end": 33.6
+        },
+        {
+          "word": "1200",
+          "start": 33.6,
+          "end": 34.12
+        },
+        {
+          "word": "times",
+          "start": 34.12,
+          "end": 34.6
+        },
+        {
+          "word": "a.",
+          "start": 34.6,
+          "end": 34.84
+        },
+        {
+          "word": "resultant",
+          "start": 35.94,
+          "end": 36.6
+        },
+        {
+          "word": "is",
+          "start": 36.6,
+          "end": 37.36
+        },
+        {
+          "word": "2400",
+          "start": 37.36,
+          "end": 38.14
+        },
+        {
+          "word": "N",
+          "start": 38.14,
+          "end": 38.52
+        },
+        {
+          "word": "to",
+          "start": 38.52,
+          "end": 38.84
+        },
+        {
+          "word": "the",
+          "start": 38.84,
+          "end": 38.98
+        },
+        {
+          "word": "right,",
+          "start": 38.98,
+          "end": 39.32
+        },
+        {
+          "word": "divide",
+          "start": 41.65,
+          "end": 41.98
+        },
+        {
+          "word": "by",
+          "start": 41.98,
+          "end": 42.28
+        },
+        {
+          "word": "the",
+          "start": 42.28,
+          "end": 42.46
+        },
+        {
+          "word": "mass",
+          "start": 42.46,
+          "end": 42.86
+        },
+        {
+          "word": "to",
+          "start": 42.86,
+          "end": 43.58
+        },
+        {
+          "word": "isolate",
+          "start": 43.58,
+          "end": 44.2
+        },
+        {
+          "word": "acceleration",
+          "start": 44.2,
+          "end": 45.12
+        },
+        {
+          "word": "2400",
+          "start": 45.12,
+          "end": 46.62
+        },
+        {
+          "word": "divided",
+          "start": 46.62,
+          "end": 47.06
+        },
+        {
+          "word": "by",
+          "start": 47.06,
+          "end": 47.5
+        },
+        {
+          "word": "1200.",
+          "start": 47.5,
+          "end": 48.14
+        },
+        {
+          "word": "So",
+          "start": 49.02,
+          "end": 49.26
+        },
+        {
+          "word": "a",
+          "start": 49.26,
+          "end": 49.46
+        },
+        {
+          "word": "equals",
+          "start": 49.46,
+          "end": 49.8
+        },
+        {
+          "word": "2",
+          "start": 49.8,
+          "end": 50.14
+        },
+        {
+          "word": "meters",
+          "start": 50.14,
+          "end": 50.32
+        },
+        {
+          "word": "per",
+          "start": 50.32,
+          "end": 50.64
+        },
+        {
+          "word": "second",
+          "start": 50.64,
+          "end": 50.9
+        },
+        {
+          "word": "squared",
+          "start": 50.9,
+          "end": 51.3
+        },
+        {
+          "word": "to",
+          "start": 51.3,
+          "end": 51.66
+        },
+        {
+          "word": "the",
+          "start": 51.66,
+          "end": 51.78
+        },
+        {
+          "word": "right.",
+          "start": 51.78,
+          "end": 52.02
+        },
+        {
+          "word": "Each",
+          "start": 54.37,
+          "end": 54.6
+        },
+        {
+          "word": "second,",
+          "start": 54.6,
+          "end": 55.06
+        },
+        {
+          "word": "the",
+          "start": 55.64,
+          "end": 56.02
+        },
+        {
+          "word": "velocity",
+          "start": 56.02,
+          "end": 56.44
+        },
+        {
+          "word": "increases",
+          "start": 56.44,
+          "end": 57.02
+        },
+        {
+          "word": "by",
+          "start": 57.02,
+          "end": 57.3
+        },
+        {
+          "word": "2",
+          "start": 57.3,
+          "end": 57.54
+        },
+        {
+          "word": "meters",
+          "start": 57.54,
+          "end": 57.84
+        },
+        {
+          "word": "per",
+          "start": 57.84,
+          "end": 58.12
+        },
+        {
+          "word": "second.",
+          "start": 58.12,
+          "end": 58.48
+        },
+        {
+          "word": "This",
+          "start": 58.48,
+          "end": 59.62
+        },
+        {
+          "word": "is",
+          "start": 59.62,
+          "end": 59.78
+        },
+        {
+          "word": "a",
+          "start": 59.78,
+          "end": 59.92
+        },
+        {
+          "word": "change",
+          "start": 59.92,
+          "end": 60.42
+        },
+        {
+          "word": "in",
+          "start": 60.42,
+          "end": 60.72
+        },
+        {
+          "word": "velocity,",
+          "start": 60.72,
+          "end": 61.36
+        },
+        {
+          "word": "not",
+          "start": 61.66,
+          "end": 62.36
+        },
+        {
+          "word": "the",
+          "start": 62.36,
+          "end": 62.6
+        },
+        {
+          "word": "velocity",
+          "start": 62.6,
+          "end": 63.14
+        },
+        {
+          "word": "itself.",
+          "start": 63.14,
+          "end": 63.58
+        }
+      ],
+      "cues": {
+        "positive": 0.4,
+        "formula": 8.33,
+        "forces": 15.06,
+        "drive": 26.12,
+        "resist": 29.11,
+        "mass": 32.53,
+        "net": 35.94,
+        "divide": 41.65,
+        "answer": 49.02,
+        "meaning": 54.37
+      },
+      "figureEvents": [
+        {
+          "id": "word-44",
+          "wordIndex": 44,
+          "word": "three",
+          "start": 27.16,
+          "target": "drive",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-45",
+          "wordIndex": 45,
+          "word": "thousand",
+          "start": 27.44,
+          "target": "drive",
+          "kind": "spoken"
+        },
+        {
+          "id": "drive-substitution",
+          "start": 26.12,
+          "end": 28.830000000000002,
+          "target": "drive",
+          "kind": "substitution"
+        },
+        {
+          "id": "word-48",
+          "wordIndex": 48,
+          "word": "600",
+          "start": 29.66,
+          "target": "resistance",
+          "kind": "spoken"
+        },
+        {
+          "id": "resist-substitution",
+          "start": 29.11,
+          "end": 32.25,
+          "target": "resistance",
+          "kind": "substitution"
+        },
+        {
+          "id": "word-56",
+          "wordIndex": 56,
+          "word": "1200",
+          "start": 33.6,
+          "target": "mass",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-58",
+          "wordIndex": 58,
+          "word": "a.",
+          "start": 34.6,
+          "target": "mass",
+          "kind": "spoken"
+        },
+        {
+          "id": "mass-substitution",
+          "start": 32.53,
+          "end": 35.1,
+          "target": "mass",
+          "kind": "substitution"
+        },
+        {
+          "id": "word-61",
+          "wordIndex": 61,
+          "word": "2400",
+          "start": 37.36,
+          "target": "net",
+          "kind": "spoken"
+        },
+        {
+          "id": "net-substitution",
+          "start": 35.94,
+          "end": 39.57,
+          "target": "net",
+          "kind": "substitution"
+        },
+        {
+          "id": "word-78",
+          "wordIndex": 78,
+          "word": "a",
+          "start": 49.26,
+          "target": "acceleration",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-80",
+          "wordIndex": 80,
+          "word": "2",
+          "start": 49.8,
+          "target": "acceleration",
+          "kind": "spoken"
+        },
+        {
+          "id": "answer-substitution",
+          "start": 49.02,
+          "end": 52.29,
+          "target": "acceleration",
+          "kind": "substitution"
+        },
+        {
+          "id": "word-94",
+          "wordIndex": 94,
+          "word": "2",
+          "start": 57.3,
+          "target": "acceleration",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-100",
+          "wordIndex": 100,
+          "word": "a",
+          "start": 59.78,
+          "target": "acceleration",
+          "kind": "spoken"
+        },
+        {
+          "id": "extra-73",
+          "wordIndex": 73,
+          "word": "2400",
+          "start": 45.12,
+          "target": "net",
+          "kind": "spoken"
+        },
+        {
+          "id": "extra-76",
+          "wordIndex": 76,
+          "word": "1200.",
+          "start": 47.5,
+          "target": "mass",
+          "kind": "spoken"
+        }
+      ],
+      "wordCount": 108,
+      "text": "Choose right as positive. The forces are constant, so the acceleration will be constant too. Start with the law. Resultant force equals mass times acceleration. force minus resistance equals mass times acceleration. We subtract because the forces oppose each other. The driving force is three thousand newtons. subtract 600 N of resistance, set that equal to 1200 times a. resultant is 2400 N to the right, divide by the mass to isolate acceleration 2400 divided by 1200. So a equals 2 meters per second squared to the right. Each second, the velocity increases by 2 meters per second. This is a change in velocity, not the velocity itself.",
+      "duration": 64.940408
+    },
+    {
+      "id": "s07",
+      "title": "Then, find the distance",
+      "mode": "distance",
+      "voiceSpeed": 0.9,
+      "tempo": "slow",
+      "beats": [
+        {
+          "id": "link",
+          "text": "Acceleration links Newton’s second law to suvat, for the same four seconds.",
+          "hold": 0.5,
+          "target": "time",
+          "start": 0.4,
+          "speechEnd": 6.35,
+          "end": 6.55,
+          "cue": 0.4,
+          "penEnd": 6.47
+        },
+        {
+          "id": "choose",
+          "text": "To find distance from u, a and t, choose s equals u t plus one half a t squared.",
+          "hold": 1,
+          "ink": "s = ut + ½at²",
+          "start": 7.05,
+          "speechEnd": 15.33,
+          "end": 15.53,
+          "cue": 7.2,
+          "penEnd": 15.45
+        },
+        {
+          "id": "u",
+          "text": "From rest, initial velocity is zero.",
+          "hold": 0.3,
+          "target": "initial",
+          "start": 16.53,
+          "speechEnd": 19.9,
+          "end": 20.1,
+          "cue": 16.76,
+          "penEnd": 20.020000000000003
+        },
+        {
+          "id": "time",
+          "text": "Time is four seconds.",
+          "hold": 0.3,
+          "target": "time",
+          "start": 20.4,
+          "speechEnd": 21.88,
+          "end": 22.08,
+          "cue": 20.6,
+          "penEnd": 22.0
+        },
+        {
+          "id": "acceleration",
+          "text": "And acceleration is two metres per second squared.",
+          "hold": 0.3,
+          "target": "acceleration",
+          "start": 22.38,
+          "speechEnd": 25.73,
+          "end": 25.93,
+          "cue": 22.4,
+          "penEnd": 25.85
+        },
+        {
+          "id": "substitute",
+          "text": "Substitute: zero times four, plus one half times two times four squared.",
+          "hold": 1,
+          "ink": "s = 0×4 + ½×2×4²",
+          "start": 26.23,
+          "speechEnd": 32.45,
+          "end": 32.65,
+          "cue": 26.94,
+          "penEnd": 32.57
+        },
+        {
+          "id": "square",
+          "text": "Four squared is sixteen; one half times two is one.",
+          "hold": 1,
+          "ink": "s = 0 + 1×16",
+          "start": 33.65,
+          "speechEnd": 37.28,
+          "end": 37.48,
+          "cue": 33.92,
+          "penEnd": 37.4
+        },
+        {
+          "id": "answer",
+          "text": "The distance travelled is sixteen metres.",
+          "hold": 2,
+          "ink": "s = 16 m",
+          "target": "distance",
+          "start": 38.48,
+          "speechEnd": 40.78,
+          "end": 40.98,
+          "cue": 38.48,
+          "penEnd": 40.9
+        },
+        {
+          "id": "interpret",
+          "text": "Since the car moves only right, distance equals positive displacement.",
+          "hold": 0.5,
+          "start": 42.98,
+          "speechEnd": 48.99,
+          "end": 49.19,
+          "cue": 42.98,
+          "penEnd": 49.11
+        },
+        {
+          "id": "whatif",
+          "text": "Increase resistance, keeping it below the same driving force: what changes? The smaller resultant gives less acceleration and less distance.",
+          "hold": 0.5,
+          "start": 49.69,
+          "speechEnd": 62.14,
+          "end": 62.34,
+          "cue": 49.69,
+          "penEnd": 62.260000000000005
+        }
+      ],
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 6.55,
+          "end": 7.05,
+          "duration": 0.5
+        },
+        {
+          "kind": "hold",
+          "start": 15.53,
+          "end": 16.53,
+          "duration": 1
+        },
+        {
+          "kind": "hold",
+          "start": 20.1,
+          "end": 20.4,
+          "duration": 0.3
+        },
+        {
+          "kind": "hold",
+          "start": 22.08,
+          "end": 22.38,
+          "duration": 0.3
+        },
+        {
+          "kind": "hold",
+          "start": 25.93,
+          "end": 26.23,
+          "duration": 0.3
+        },
+        {
+          "kind": "hold",
+          "start": 32.65,
+          "end": 33.65,
+          "duration": 1
+        },
+        {
+          "kind": "hold",
+          "start": 37.48,
+          "end": 38.48,
+          "duration": 1
+        },
+        {
+          "kind": "hold",
+          "start": 40.98,
+          "end": 42.98,
+          "duration": 2
+        },
+        {
+          "kind": "hold",
+          "start": 49.19,
+          "end": 49.69,
+          "duration": 0.5
+        },
+        {
+          "kind": "hold",
+          "start": 62.34,
+          "end": 62.84,
+          "duration": 0.5
+        }
+      ],
+      "audio": "f-equals-ma-s07.mp3",
+      "audioSha256": "cac0631f36bf39148433bd1fd9b8a7ed7cc84ed0c37193655c98889e9fcccb08",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "provider": "elevenlabs",
+      "sampleDuration": 63.19,
+      "words": [
+        {
+          "word": "Acceleration",
+          "start": 0.4,
+          "end": 0.86
+        },
+        {
+          "word": "links",
+          "start": 0.86,
+          "end": 1.6
+        },
+        {
+          "word": "Newton’s",
+          "start": 1.6,
+          "end": 2.42
+        },
+        {
+          "word": "second",
+          "start": 2.42,
+          "end": 2.7
+        },
+        {
+          "word": "law",
+          "start": 2.7,
+          "end": 3.06
+        },
+        {
+          "word": "to",
+          "start": 3.06,
+          "end": 3.46
+        },
+        {
+          "word": "suvat,",
+          "start": 3.46,
+          "end": 3.84
+        },
+        {
+          "word": "for",
+          "start": 4.56,
+          "end": 4.86
+        },
+        {
+          "word": "the",
+          "start": 4.86,
+          "end": 5.02
+        },
+        {
+          "word": "same",
+          "start": 5.02,
+          "end": 5.32
+        },
+        {
+          "word": "four",
+          "start": 5.32,
+          "end": 5.62
+        },
+        {
+          "word": "seconds.",
+          "start": 5.62,
+          "end": 6.1
+        },
+        {
+          "word": "find",
+          "start": 7.2,
+          "end": 7.54
+        },
+        {
+          "word": "distance",
+          "start": 7.54,
+          "end": 8.08
+        },
+        {
+          "word": "from",
+          "start": 8.08,
+          "end": 8.46
+        },
+        {
+          "word": "u,",
+          "start": 8.46,
+          "end": 8.86
+        },
+        {
+          "word": "a",
+          "start": 9.5,
+          "end": 9.74
+        },
+        {
+          "word": "and",
+          "start": 9.74,
+          "end": 9.94
+        },
+        {
+          "word": "t,",
+          "start": 9.94,
+          "end": 10.32
+        },
+        {
+          "word": "choose",
+          "start": 10.74,
+          "end": 11.06
+        },
+        {
+          "word": "s",
+          "start": 11.06,
+          "end": 11.78
+        },
+        {
+          "word": "equals",
+          "start": 11.78,
+          "end": 12.32
+        },
+        {
+          "word": "u",
+          "start": 12.32,
+          "end": 12.72
+        },
+        {
+          "word": "t",
+          "start": 12.72,
+          "end": 13.02
+        },
+        {
+          "word": "plus",
+          "start": 13.02,
+          "end": 13.62
+        },
+        {
+          "word": "one",
+          "start": 13.62,
+          "end": 13.94
+        },
+        {
+          "word": "half",
+          "start": 13.94,
+          "end": 14.2
+        },
+        {
+          "word": "a",
+          "start": 14.2,
+          "end": 14.38
+        },
+        {
+          "word": "t",
+          "start": 14.38,
+          "end": 14.62
+        },
+        {
+          "word": "squared.",
+          "start": 14.62,
+          "end": 15.0
+        },
+        {
+          "word": "rest,",
+          "start": 16.76,
+          "end": 17.24
+        },
+        {
+          "word": "initial",
+          "start": 17.9,
+          "end": 18.28
+        },
+        {
+          "word": "velocity",
+          "start": 18.28,
+          "end": 18.92
+        },
+        {
+          "word": "is",
+          "start": 18.92,
+          "end": 19.36
+        },
+        {
+          "word": "zero.",
+          "start": 19.36,
+          "end": 19.8
+        },
+        {
+          "word": "Time",
+          "start": 20.6,
+          "end": 20.66
+        },
+        {
+          "word": "is",
+          "start": 20.66,
+          "end": 20.88
+        },
+        {
+          "word": "four",
+          "start": 20.88,
+          "end": 21.14
+        },
+        {
+          "word": "seconds.",
+          "start": 21.14,
+          "end": 21.56
+        },
+        {
+          "word": "And",
+          "start": 22.4,
+          "end": 22.56
+        },
+        {
+          "word": "acceleration",
+          "start": 22.56,
+          "end": 23.02
+        },
+        {
+          "word": "is",
+          "start": 23.02,
+          "end": 24.08
+        },
+        {
+          "word": "two",
+          "start": 24.08,
+          "end": 24.32
+        },
+        {
+          "word": "metres",
+          "start": 24.32,
+          "end": 24.48
+        },
+        {
+          "word": "per",
+          "start": 24.48,
+          "end": 24.78
+        },
+        {
+          "word": "second",
+          "start": 24.78,
+          "end": 25.08
+        },
+        {
+          "word": "squared.",
+          "start": 25.08,
+          "end": 25.46
+        },
+        {
+          "word": "0",
+          "start": 26.94,
+          "end": 27.98
+        },
+        {
+          "word": "times",
+          "start": 27.98,
+          "end": 28.28
+        },
+        {
+          "word": "4",
+          "start": 28.28,
+          "end": 28.78
+        },
+        {
+          "word": "plus",
+          "start": 28.78,
+          "end": 29.56
+        },
+        {
+          "word": "1",
+          "start": 29.56,
+          "end": 29.94
+        },
+        {
+          "word": "half",
+          "start": 29.94,
+          "end": 30.14
+        },
+        {
+          "word": "times",
+          "start": 30.14,
+          "end": 30.54
+        },
+        {
+          "word": "2",
+          "start": 30.54,
+          "end": 30.84
+        },
+        {
+          "word": "times",
+          "start": 30.84,
+          "end": 31.18
+        },
+        {
+          "word": "4",
+          "start": 31.18,
+          "end": 31.62
+        },
+        {
+          "word": "squared.",
+          "start": 31.62,
+          "end": 32.2
+        },
+        {
+          "word": "squared",
+          "start": 33.92,
+          "end": 34.28
+        },
+        {
+          "word": "is",
+          "start": 34.28,
+          "end": 34.68
+        },
+        {
+          "word": "16,",
+          "start": 34.68,
+          "end": 35.18
+        },
+        {
+          "word": "1",
+          "start": 35.8,
+          "end": 35.9
+        },
+        {
+          "word": "half",
+          "start": 35.9,
+          "end": 36.12
+        },
+        {
+          "word": "times",
+          "start": 36.12,
+          "end": 36.38
+        },
+        {
+          "word": "2",
+          "start": 36.38,
+          "end": 36.7
+        },
+        {
+          "word": "is",
+          "start": 36.7,
+          "end": 36.84
+        },
+        {
+          "word": "1.",
+          "start": 36.84,
+          "end": 37.16
+        },
+        {
+          "word": "The",
+          "start": 38.48,
+          "end": 38.64
+        },
+        {
+          "word": "distance",
+          "start": 38.64,
+          "end": 38.98
+        },
+        {
+          "word": "traveled",
+          "start": 38.98,
+          "end": 39.42
+        },
+        {
+          "word": "is",
+          "start": 39.42,
+          "end": 39.68
+        },
+        {
+          "word": "16",
+          "start": 39.68,
+          "end": 40.1
+        },
+        {
+          "word": "meters.",
+          "start": 40.1,
+          "end": 40.44
+        },
+        {
+          "word": "Since",
+          "start": 42.98,
+          "end": 43.19
+        },
+        {
+          "word": "the",
+          "start": 43.19,
+          "end": 43.37
+        },
+        {
+          "word": "car",
+          "start": 43.37,
+          "end": 43.57
+        },
+        {
+          "word": "moves",
+          "start": 43.57,
+          "end": 44.19
+        },
+        {
+          "word": "only",
+          "start": 44.19,
+          "end": 44.77
+        },
+        {
+          "word": "right,",
+          "start": 44.77,
+          "end": 45.27
+        },
+        {
+          "word": "distance",
+          "start": 46.05,
+          "end": 46.53
+        },
+        {
+          "word": "equals",
+          "start": 46.53,
+          "end": 47.11
+        },
+        {
+          "word": "positive",
+          "start": 47.11,
+          "end": 47.87
+        },
+        {
+          "word": "displacement.",
+          "start": 47.87,
+          "end": 48.65
+        },
+        {
+          "word": "Increase",
+          "start": 49.69,
+          "end": 50.15
+        },
+        {
+          "word": "resistance?",
+          "start": 50.15,
+          "end": 50.71
+        },
+        {
+          "word": "Keeping",
+          "start": 51.79,
+          "end": 52.31
+        },
+        {
+          "word": "it",
+          "start": 52.31,
+          "end": 52.57
+        },
+        {
+          "word": "below",
+          "start": 52.57,
+          "end": 52.83
+        },
+        {
+          "word": "the",
+          "start": 52.83,
+          "end": 53.11
+        },
+        {
+          "word": "same",
+          "start": 53.11,
+          "end": 53.35
+        },
+        {
+          "word": "driving",
+          "start": 53.35,
+          "end": 53.81
+        },
+        {
+          "word": "force.",
+          "start": 53.81,
+          "end": 54.23
+        },
+        {
+          "word": "What",
+          "start": 54.23,
+          "end": 55.33
+        },
+        {
+          "word": "change?",
+          "start": 55.33,
+          "end": 55.79
+        },
+        {
+          "word": "The",
+          "start": 56.83,
+          "end": 57.15
+        },
+        {
+          "word": "smaller",
+          "start": 57.15,
+          "end": 57.49
+        },
+        {
+          "word": "resultant",
+          "start": 57.49,
+          "end": 58.41
+        },
+        {
+          "word": "gives",
+          "start": 58.41,
+          "end": 59.11
+        },
+        {
+          "word": "less",
+          "start": 59.11,
+          "end": 59.47
+        },
+        {
+          "word": "acceleration",
+          "start": 59.47,
+          "end": 60.25
+        },
+        {
+          "word": "and",
+          "start": 60.25,
+          "end": 61.03
+        },
+        {
+          "word": "less",
+          "start": 61.03,
+          "end": 61.35
+        },
+        {
+          "word": "distance.",
+          "start": 61.35,
+          "end": 61.85
+        }
+      ],
+      "cues": {
+        "link": 0.4,
+        "choose": 7.2,
+        "u": 16.76,
+        "time": 20.6,
+        "acceleration": 22.4,
+        "substitute": 26.94,
+        "square": 33.92,
+        "answer": 38.48,
+        "interpret": 42.98,
+        "whatif": 49.69
+      },
+      "figureEvents": [
+        {
+          "id": "word-10",
+          "wordIndex": 10,
+          "word": "four",
+          "start": 5.32,
+          "target": "time",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-34",
+          "wordIndex": 34,
+          "word": "zero.",
+          "start": 19.36,
+          "target": "initial",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-37",
+          "wordIndex": 37,
+          "word": "four",
+          "start": 20.88,
+          "target": "time",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-42",
+          "wordIndex": 42,
+          "word": "two",
+          "start": 24.08,
+          "target": "acceleration",
+          "kind": "spoken"
+        },
+        {
+          "id": "word-71",
+          "wordIndex": 71,
+          "word": "16",
+          "start": 39.68,
+          "target": "distance",
+          "kind": "spoken"
+        },
+        {
+          "id": "answer-substitution",
+          "start": 38.48,
+          "end": 40.9,
+          "target": "distance",
+          "kind": "substitution"
+        },
+        {
+          "id": "extra-47",
+          "wordIndex": 47,
+          "word": "0",
+          "start": 26.94,
+          "target": "initial",
+          "kind": "spoken"
+        },
+        {
+          "id": "extra-49",
+          "wordIndex": 49,
+          "word": "4",
+          "start": 28.28,
+          "target": "time",
+          "kind": "spoken"
+        },
+        {
+          "id": "extra-54",
+          "wordIndex": 54,
+          "word": "2",
+          "start": 30.54,
+          "target": "acceleration",
+          "kind": "spoken"
+        },
+        {
+          "id": "extra-56",
+          "wordIndex": 56,
+          "word": "4",
+          "start": 31.18,
+          "target": "time",
+          "kind": "spoken"
+        }
+      ],
+      "wordCount": 103,
+      "text": "Acceleration links Newton’s second law to suvat, for the same four seconds. find distance from u, a and t, choose s equals u t plus one half a t squared. rest, initial velocity is zero. Time is four seconds. And acceleration is two metres per second squared. 0 times 4 plus 1 half times 2 times 4 squared. squared is 16, 1 half times 2 is 1. The distance traveled is 16 meters. Since the car moves only right, distance equals positive displacement. Increase resistance? Keeping it below the same driving force. What change? The smaller resultant gives less acceleration and less distance.",
+      "duration": 63.216327
+    },
+    {
+      "id": "s08",
+      "title": "Check your understanding",
+      "mode": "closing",
+      "voiceSpeed": 1,
+      "tempo": "brisk",
+      "beats": [
+        {
+          "id": "question",
+          "text": "A moving car now has equal forward and backward forces. Must it stop? Take a moment.",
+          "hold": 3,
+          "start": 0.4,
+          "speechEnd": 7.44,
+          "end": 7.64,
+          "cue": 0.54,
+          "penEnd": 7.56
+        },
+        {
+          "id": "answer",
+          "text": "No. Zero resultant means zero acceleration, so its existing velocity stays constant.",
+          "hold": 1,
+          "start": 10.64,
+          "speechEnd": 17.45,
+          "end": 17.65,
+          "cue": 10.65,
+          "penEnd": 17.57
+        },
+        {
+          "id": "outcome1",
+          "text": "Use the resultant force.",
+          "hold": 0.2,
+          "caption": "Use the resultant force.",
+          "start": 18.65,
+          "speechEnd": 19.97,
+          "end": 20.17,
+          "cue": 18.85,
+          "penEnd": 20.090000000000003
+        },
+        {
+          "id": "outcome2",
+          "text": "Choose signs for acceleration.",
+          "hold": 0.2,
+          "caption": "Choose signs for acceleration.",
+          "start": 20.37,
+          "speechEnd": 22.3,
+          "end": 22.5,
+          "cue": 20.37,
+          "penEnd": 22.42
+        },
+        {
+          "id": "outcome3",
+          "text": "And link forces to distance travelled.",
+          "hold": 1,
+          "caption": "Link forces to distance travelled.",
+          "start": 22.7,
+          "speechEnd": 24.88,
+          "end": 25.08,
+          "cue": 22.87,
+          "penEnd": 25.0
+        }
+      ],
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 7.64,
+          "end": 10.64,
+          "duration": 3
+        },
+        {
+          "kind": "hold",
+          "start": 17.65,
+          "end": 18.65,
+          "duration": 1
+        },
+        {
+          "kind": "hold",
+          "start": 20.17,
+          "end": 20.37,
+          "duration": 0.2
+        },
+        {
+          "kind": "hold",
+          "start": 22.5,
+          "end": 22.7,
+          "duration": 0.2
+        },
+        {
+          "kind": "hold",
+          "start": 25.08,
+          "end": 26.08,
+          "duration": 1
+        }
+      ],
+      "audio": "f-equals-ma-s08.mp3",
+      "audioSha256": "d2297bff7248efaface12059d89755c0a4eb6a8f311fd850973e7ecdbc09869b",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "provider": "elevenlabs",
+      "sampleDuration": 26.43,
+      "words": [
+        {
+          "word": "moving",
+          "start": 0.54,
+          "end": 0.72
+        },
+        {
+          "word": "car",
+          "start": 0.72,
+          "end": 1.0
+        },
+        {
+          "word": "now",
+          "start": 1.0,
+          "end": 1.36
+        },
+        {
+          "word": "has",
+          "start": 1.36,
+          "end": 1.68
+        },
+        {
+          "word": "equal",
+          "start": 1.68,
+          "end": 2.06
+        },
+        {
+          "word": "forward",
+          "start": 2.06,
+          "end": 2.5
+        },
+        {
+          "word": "and",
+          "start": 2.5,
+          "end": 3.28
+        },
+        {
+          "word": "backward",
+          "start": 3.28,
+          "end": 3.72
+        },
+        {
+          "word": "forces.",
+          "start": 3.72,
+          "end": 4.24
+        },
+        {
+          "word": "Must",
+          "start": 5.2,
+          "end": 5.38
+        },
+        {
+          "word": "it",
+          "start": 5.38,
+          "end": 5.56
+        },
+        {
+          "word": "stop?",
+          "start": 5.56,
+          "end": 5.86
+        },
+        {
+          "word": "Take",
+          "start": 6.64,
+          "end": 6.9
+        },
+        {
+          "word": "a",
+          "start": 6.9,
+          "end": 7.04
+        },
+        {
+          "word": "moment.",
+          "start": 7.04,
+          "end": 7.3
+        },
+        {
+          "word": "No.",
+          "start": 10.65,
+          "end": 10.91
+        },
+        {
+          "word": "Zero",
+          "start": 11.81,
+          "end": 12.17
+        },
+        {
+          "word": "resultant",
+          "start": 12.17,
+          "end": 12.97
+        },
+        {
+          "word": "means",
+          "start": 12.97,
+          "end": 13.57
+        },
+        {
+          "word": "zero",
+          "start": 13.57,
+          "end": 13.99
+        },
+        {
+          "word": "acceleration,",
+          "start": 13.99,
+          "end": 14.57
+        },
+        {
+          "word": "so",
+          "start": 15.33,
+          "end": 15.43
+        },
+        {
+          "word": "its",
+          "start": 15.43,
+          "end": 15.57
+        },
+        {
+          "word": "existing",
+          "start": 15.57,
+          "end": 16.01
+        },
+        {
+          "word": "velocity",
+          "start": 16.01,
+          "end": 16.43
+        },
+        {
+          "word": "stays",
+          "start": 16.43,
+          "end": 16.81
+        },
+        {
+          "word": "constant.",
+          "start": 16.81,
+          "end": 17.27
+        },
+        {
+          "word": "the",
+          "start": 18.85,
+          "end": 19.01
+        },
+        {
+          "word": "resultant",
+          "start": 19.01,
+          "end": 19.47
+        },
+        {
+          "word": "force.",
+          "start": 19.47,
+          "end": 19.71
+        },
+        {
+          "word": "Choose",
+          "start": 20.37,
+          "end": 20.67
+        },
+        {
+          "word": "signs",
+          "start": 20.67,
+          "end": 21.07
+        },
+        {
+          "word": "for",
+          "start": 21.07,
+          "end": 21.37
+        },
+        {
+          "word": "acceleration.",
+          "start": 21.37,
+          "end": 22.03
+        },
+        {
+          "word": "link",
+          "start": 22.87,
+          "end": 23.17
+        },
+        {
+          "word": "forces",
+          "start": 23.17,
+          "end": 23.53
+        },
+        {
+          "word": "to",
+          "start": 23.53,
+          "end": 23.87
+        },
+        {
+          "word": "distance",
+          "start": 23.87,
+          "end": 24.23
+        },
+        {
+          "word": "travelled.",
+          "start": 24.23,
+          "end": 24.79
+        }
+      ],
+      "cues": {
+        "question": 0.54,
+        "answer": 10.65,
+        "outcome1": 18.85,
+        "outcome2": 20.37,
+        "outcome3": 22.87
+      },
+      "figureEvents": [],
+      "wordCount": 39,
+      "text": "moving car now has equal forward and backward forces. Must it stop? Take a moment. No. Zero resultant means zero acceleration, so its existing velocity stays constant. the resultant force. Choose signs for acceleration. link forces to distance travelled.",
+      "duration": 26.462041
+    }
+  ],
+  "totalDuration": 327.758368,
+  "engine": "faster-whisper-small (local CPU)",
+  "unresolvedCues": []
+}

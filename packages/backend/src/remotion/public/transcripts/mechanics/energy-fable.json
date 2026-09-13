@@ -1,0 +1,4390 @@
+{
+  "project": "mechanics-energy-fable",
+  "sceneCount": 9,
+  "scenes": [
+    {
+      "id": "s01",
+      "title": "Energy",
+      "mode": "opening",
+      "voiceSpeed": 1,
+      "tempo": "brisk",
+      "beats": [
+        {
+          "id": "syllabus",
+          "text": "Syllabus four point five: gravitational potential energy. This lesson covers kinetic energy as well: the two forms of mechanical energy.",
+          "hold": 0.5,
+          "start": 0.4,
+          "speechEnd": 9.51,
+          "end": 9.71,
+          "cue": 0.4,
+          "penEnd": 9.63
+        },
+        {
+          "id": "outcome1",
+          "text": "By the end, you can calculate kinetic energy, a half m v squared, in joules.",
+          "hold": 0.3,
+          "caption": "Kinetic energy: ½ m v² in joules.",
+          "start": 10.21,
+          "speechEnd": 16.67,
+          "end": 16.87,
+          "cue": 10.41,
+          "penEnd": 16.790000000000003
+        },
+        {
+          "id": "outcome2",
+          "text": "Use the change in kinetic energy: a half m, times v squared minus u squared.",
+          "hold": 0.3,
+          "caption": "Change in KE: ½ m (v² − u²).",
+          "start": 17.17,
+          "speechEnd": 24.08,
+          "end": 24.28,
+          "cue": 17.17,
+          "penEnd": 24.200000000000003
+        },
+        {
+          "id": "outcome3",
+          "text": "And calculate gravitational potential energy, m g h, from a chosen level.",
+          "hold": 0.5,
+          "caption": "GPE = mgh from a chosen level.",
+          "start": 24.58,
+          "speechEnd": 29.71,
+          "end": 29.91,
+          "cue": 25.05,
+          "penEnd": 29.830000000000002
+        }
+      ],
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 9.71,
+          "end": 10.21,
+          "duration": 0.5
+        },
+        {
+          "kind": "hold",
+          "start": 16.87,
+          "end": 17.17,
+          "duration": 0.3
+        },
+        {
+          "kind": "hold",
+          "start": 24.28,
+          "end": 24.58,
+          "duration": 0.3
+        },
+        {
+          "kind": "hold",
+          "start": 29.91,
+          "end": 30.41,
+          "duration": 0.5
+        }
+      ],
+      "audio": "energy-fable-s01.mp3",
+      "audioSha256": "16106ae00e9113b5b74affa05ca3251b46aa0bcf9ebef06f902d70a435461620",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "provider": "elevenlabs",
+      "sampleDuration": 30.76,
+      "words": [
+        {
+          "word": "Syllabus",
+          "start": 0.4,
+          "end": 0.81
+        },
+        {
+          "word": "four",
+          "start": 0.81,
+          "end": 1.11
+        },
+        {
+          "word": "point",
+          "start": 1.11,
+          "end": 1.31
+        },
+        {
+          "word": "five,",
+          "start": 1.31,
+          "end": 1.73
+        },
+        {
+          "word": "gravitational",
+          "start": 2.51,
+          "end": 2.99
+        },
+        {
+          "word": "potential",
+          "start": 2.99,
+          "end": 3.53
+        },
+        {
+          "word": "energy.",
+          "start": 3.53,
+          "end": 4.09
+        },
+        {
+          "word": "This",
+          "start": 4.51,
+          "end": 4.79
+        },
+        {
+          "word": "lesson",
+          "start": 4.79,
+          "end": 5.15
+        },
+        {
+          "word": "covers",
+          "start": 5.15,
+          "end": 5.51
+        },
+        {
+          "word": "kinetic",
+          "start": 5.51,
+          "end": 5.91
+        },
+        {
+          "word": "energy",
+          "start": 5.91,
+          "end": 6.51
+        },
+        {
+          "word": "as",
+          "start": 6.51,
+          "end": 6.71
+        },
+        {
+          "word": "well,",
+          "start": 6.71,
+          "end": 7.01
+        },
+        {
+          "word": "the",
+          "start": 7.45,
+          "end": 7.61
+        },
+        {
+          "word": "two",
+          "start": 7.61,
+          "end": 7.87
+        },
+        {
+          "word": "forms",
+          "start": 7.87,
+          "end": 8.19
+        },
+        {
+          "word": "of",
+          "start": 8.19,
+          "end": 8.39
+        },
+        {
+          "word": "mechanical",
+          "start": 8.39,
+          "end": 8.83
+        },
+        {
+          "word": "energy.",
+          "start": 8.83,
+          "end": 9.39
+        },
+        {
+          "word": "the",
+          "start": 10.41,
+          "end": 10.59
+        },
+        {
+          "word": "end,",
+          "start": 10.59,
+          "end": 10.89
+        },
+        {
+          "word": "you",
+          "start": 11.49,
+          "end": 11.57
+        },
+        {
+          "word": "can",
+          "start": 11.57,
+          "end": 11.73
+        },
+        {
+          "word": "calculate",
+          "start": 11.73,
+          "end": 12.15
+        },
+        {
+          "word": "kinetic",
+          "start": 12.15,
+          "end": 12.55
+        },
+        {
+          "word": "energy,",
+          "start": 12.55,
+          "end": 13.05
+        },
+        {
+          "word": "a",
+          "start": 13.71,
+          "end": 13.91
+        },
+        {
+          "word": "half",
+          "start": 13.91,
+          "end": 14.23
+        },
+        {
+          "word": "m",
+          "start": 14.23,
+          "end": 14.55
+        },
+        {
+          "word": "d",
+          "start": 14.55,
+          "end": 14.69
+        },
+        {
+          "word": "v",
+          "start": 14.69,
+          "end": 14.91
+        },
+        {
+          "word": "squared,",
+          "start": 14.91,
+          "end": 15.33
+        },
+        {
+          "word": "in",
+          "start": 15.87,
+          "end": 16.17
+        },
+        {
+          "word": "joules.",
+          "start": 16.17,
+          "end": 16.67
+        },
+        {
+          "word": "Use",
+          "start": 17.17,
+          "end": 17.35
+        },
+        {
+          "word": "the",
+          "start": 17.35,
+          "end": 17.53
+        },
+        {
+          "word": "change",
+          "start": 17.53,
+          "end": 17.91
+        },
+        {
+          "word": "in",
+          "start": 17.91,
+          "end": 18.19
+        },
+        {
+          "word": "kinetic",
+          "start": 18.19,
+          "end": 18.57
+        },
+        {
+          "word": "energy,",
+          "start": 18.57,
+          "end": 19.11
+        },
+        {
+          "word": "a",
+          "start": 19.69,
+          "end": 19.79
+        },
+        {
+          "word": "half",
+          "start": 19.79,
+          "end": 20.03
+        },
+        {
+          "word": "m,",
+          "start": 20.03,
+          "end": 20.35
+        },
+        {
+          "word": "times",
+          "start": 20.89,
+          "end": 21.21
+        },
+        {
+          "word": "v",
+          "start": 21.21,
+          "end": 21.73
+        },
+        {
+          "word": "squared",
+          "start": 21.73,
+          "end": 22.41
+        },
+        {
+          "word": "and",
+          "start": 22.41,
+          "end": 24.01
+        },
+        {
+          "word": "gravitational",
+          "start": 25.05,
+          "end": 25.83
+        },
+        {
+          "word": "potential",
+          "start": 25.83,
+          "end": 26.21
+        },
+        {
+          "word": "energy",
+          "start": 26.21,
+          "end": 26.89
+        },
+        {
+          "word": "MGH",
+          "start": 26.89,
+          "end": 27.85
+        },
+        {
+          "word": "from",
+          "start": 27.85,
+          "end": 28.69
+        },
+        {
+          "word": "a",
+          "start": 28.69,
+          "end": 28.87
+        },
+        {
+          "word": "chosen",
+          "start": 28.87,
+          "end": 29.15
+        },
+        {
+          "word": "level.",
+          "start": 29.15,
+          "end": 29.55
+        }
+      ],
+      "cues": {
+        "syllabus": 0.4,
+        "outcome1": 10.41,
+        "outcome2": 17.17,
+        "outcome3": 25.05
+      },
+      "figureEvents": [],
+      "wordCount": 56,
+      "text": "Syllabus four point five, gravitational potential energy. This lesson covers kinetic energy as well, the two forms of mechanical energy. the end, you can calculate kinetic energy, a half m d v squared, in joules. Use the change in kinetic energy, a half m, times v squared and gravitational potential energy MGH from a chosen level.",
+      "duration": 30.798367
+    },
+    {
+      "id": "s02",
+      "title": "Watch the whole journey first",
+      "mode": "story",
+      "voiceSpeed": 0.9,
+      "tempo": "slow",
+      "beats": [
+        {
+          "id": "flat",
+          "text": "Consider a cyclist riding along a flat road. She is moving, so she has energy of motion... kinetic energy.",
+          "hold": 0.6,
+          "start": 0.4,
+          "speechEnd": 9.46,
+          "end": 9.66,
+          "cue": 0.4,
+          "penEnd": 9.58
+        },
+        {
+          "id": "climb",
+          "text": "Now the road climbs a hill. She pushes hard on the pedals and, as she climbs, she actually gets faster.",
+          "hold": 0.6,
+          "start": 10.26,
+          "speechEnd": 19.16,
+          "end": 19.36,
+          "cue": 10.26,
+          "penEnd": 19.28
+        },
+        {
+          "id": "top",
+          "text": "At the top she is higher than before... and moving faster than before. Two things changed at once.",
+          "hold": 0.6,
+          "start": 19.96,
+          "speechEnd": 28.11,
+          "end": 28.31,
+          "cue": 19.96,
+          "penEnd": 28.23
+        },
+        {
+          "id": "question",
+          "text": "Her height went up, so her gravitational potential energy went up. Her speed went up, so her kinetic energy went up too. Today we measure both.",
+          "hold": 0.8,
+          "start": 28.91,
+          "speechEnd": 42.34,
+          "end": 42.54,
+          "cue": 29.03,
+          "penEnd": 42.46
+        }
+      ],
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 9.66,
+          "end": 10.26,
+          "duration": 0.6
+        },
+        {
+          "kind": "hold",
+          "start": 19.36,
+          "end": 19.96,
+          "duration": 0.6
+        },
+        {
+          "kind": "hold",
+          "start": 28.31,
+          "end": 28.91,
+          "duration": 0.6
+        },
+        {
+          "kind": "hold",
+          "start": 42.54,
+          "end": 43.34,
+          "duration": 0.8
+        }
+      ],
+      "audio": "energy-fable-s02.mp3",
+      "audioSha256": "2334355559b36220ae13e5673b973f90cddead6a4c7cdecaac72911ac4782ffe",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "provider": "elevenlabs",
+      "sampleDuration": 43.69,
+      "words": [
+        {
+          "word": "Consider",
+          "start": 0.4,
+          "end": 0.81
+        },
+        {
+          "word": "a",
+          "start": 0.81,
+          "end": 1.07
+        },
+        {
+          "word": "cyclist",
+          "start": 1.07,
+          "end": 1.59
+        },
+        {
+          "word": "riding",
+          "start": 1.59,
+          "end": 1.99
+        },
+        {
+          "word": "along",
+          "start": 1.99,
+          "end": 2.41
+        },
+        {
+          "word": "a",
+          "start": 2.41,
+          "end": 2.61
+        },
+        {
+          "word": "flat",
+          "start": 2.61,
+          "end": 2.83
+        },
+        {
+          "word": "road.",
+          "start": 2.83,
+          "end": 3.33
+        },
+        {
+          "word": "She",
+          "start": 4.29,
+          "end": 4.57
+        },
+        {
+          "word": "is",
+          "start": 4.57,
+          "end": 4.69
+        },
+        {
+          "word": "moving,",
+          "start": 4.69,
+          "end": 5.17
+        },
+        {
+          "word": "so",
+          "start": 5.81,
+          "end": 6.15
+        },
+        {
+          "word": "she",
+          "start": 6.15,
+          "end": 6.35
+        },
+        {
+          "word": "has",
+          "start": 6.35,
+          "end": 6.55
+        },
+        {
+          "word": "energy",
+          "start": 6.55,
+          "end": 7.01
+        },
+        {
+          "word": "of",
+          "start": 7.01,
+          "end": 7.27
+        },
+        {
+          "word": "motion...",
+          "start": 7.27,
+          "end": 8.39
+        },
+        {
+          "word": "kinetic",
+          "start": 8.39,
+          "end": 8.67
+        },
+        {
+          "word": "energy.",
+          "start": 8.67,
+          "end": 9.35
+        },
+        {
+          "word": "Now",
+          "start": 10.26,
+          "end": 10.51
+        },
+        {
+          "word": "the",
+          "start": 10.51,
+          "end": 10.69
+        },
+        {
+          "word": "road",
+          "start": 10.69,
+          "end": 11.11
+        },
+        {
+          "word": "climbs",
+          "start": 11.11,
+          "end": 11.87
+        },
+        {
+          "word": "a",
+          "start": 11.87,
+          "end": 12.13
+        },
+        {
+          "word": "hill.",
+          "start": 12.13,
+          "end": 12.35
+        },
+        {
+          "word": "She",
+          "start": 13.57,
+          "end": 13.67
+        },
+        {
+          "word": "pushes",
+          "start": 13.67,
+          "end": 14.09
+        },
+        {
+          "word": "hard",
+          "start": 14.09,
+          "end": 14.47
+        },
+        {
+          "word": "on",
+          "start": 14.47,
+          "end": 14.63
+        },
+        {
+          "word": "the",
+          "start": 14.63,
+          "end": 14.75
+        },
+        {
+          "word": "pedals",
+          "start": 14.75,
+          "end": 15.09
+        },
+        {
+          "word": "and,",
+          "start": 15.09,
+          "end": 15.71
+        },
+        {
+          "word": "as",
+          "start": 15.87,
+          "end": 16.05
+        },
+        {
+          "word": "she",
+          "start": 16.05,
+          "end": 16.23
+        },
+        {
+          "word": "climbs,",
+          "start": 16.23,
+          "end": 16.75
+        },
+        {
+          "word": "she",
+          "start": 17.65,
+          "end": 17.79
+        },
+        {
+          "word": "actually",
+          "start": 17.79,
+          "end": 18.17
+        },
+        {
+          "word": "gets",
+          "start": 18.17,
+          "end": 18.43
+        },
+        {
+          "word": "faster.",
+          "start": 18.43,
+          "end": 18.99
+        },
+        {
+          "word": "At",
+          "start": 19.96,
+          "end": 20.11
+        },
+        {
+          "word": "the",
+          "start": 20.11,
+          "end": 20.23
+        },
+        {
+          "word": "top",
+          "start": 20.23,
+          "end": 20.53
+        },
+        {
+          "word": "she",
+          "start": 20.53,
+          "end": 21.35
+        },
+        {
+          "word": "is",
+          "start": 21.35,
+          "end": 21.49
+        },
+        {
+          "word": "higher",
+          "start": 21.49,
+          "end": 21.77
+        },
+        {
+          "word": "than",
+          "start": 21.77,
+          "end": 21.99
+        },
+        {
+          "word": "before",
+          "start": 21.99,
+          "end": 22.47
+        },
+        {
+          "word": "and",
+          "start": 22.47,
+          "end": 23.63
+        },
+        {
+          "word": "moving",
+          "start": 23.63,
+          "end": 24.09
+        },
+        {
+          "word": "faster",
+          "start": 24.09,
+          "end": 24.47
+        },
+        {
+          "word": "than",
+          "start": 24.47,
+          "end": 24.75
+        },
+        {
+          "word": "before.",
+          "start": 24.75,
+          "end": 25.21
+        },
+        {
+          "word": "Two",
+          "start": 26.01,
+          "end": 26.27
+        },
+        {
+          "word": "things",
+          "start": 26.27,
+          "end": 26.69
+        },
+        {
+          "word": "changed",
+          "start": 26.69,
+          "end": 26.99
+        },
+        {
+          "word": "at",
+          "start": 26.99,
+          "end": 27.49
+        },
+        {
+          "word": "once.",
+          "start": 27.49,
+          "end": 27.87
+        },
+        {
+          "word": "height",
+          "start": 29.03,
+          "end": 29.33
+        },
+        {
+          "word": "went",
+          "start": 29.33,
+          "end": 29.51
+        },
+        {
+          "word": "up",
+          "start": 29.51,
+          "end": 29.83
+        },
+        {
+          "word": "so",
+          "start": 29.83,
+          "end": 30.99
+        },
+        {
+          "word": "her",
+          "start": 30.99,
+          "end": 31.17
+        },
+        {
+          "word": "gravitational",
+          "start": 31.17,
+          "end": 31.69
+        },
+        {
+          "word": "potential",
+          "start": 31.69,
+          "end": 32.19
+        },
+        {
+          "word": "energy",
+          "start": 32.19,
+          "end": 32.89
+        },
+        {
+          "word": "went",
+          "start": 32.89,
+          "end": 33.93
+        },
+        {
+          "word": "up",
+          "start": 33.93,
+          "end": 34.29
+        },
+        {
+          "word": "her",
+          "start": 35.02,
+          "end": 35.41
+        },
+        {
+          "word": "speed",
+          "start": 35.41,
+          "end": 35.69
+        },
+        {
+          "word": "went",
+          "start": 35.69,
+          "end": 35.97
+        },
+        {
+          "word": "up",
+          "start": 35.97,
+          "end": 36.39
+        },
+        {
+          "word": "so",
+          "start": 36.39,
+          "end": 37.43
+        },
+        {
+          "word": "her",
+          "start": 37.43,
+          "end": 37.63
+        },
+        {
+          "word": "kinetic",
+          "start": 37.63,
+          "end": 37.89
+        },
+        {
+          "word": "energy",
+          "start": 37.89,
+          "end": 38.49
+        },
+        {
+          "word": "went",
+          "start": 38.49,
+          "end": 39.23
+        },
+        {
+          "word": "up",
+          "start": 39.23,
+          "end": 39.41
+        },
+        {
+          "word": "too",
+          "start": 39.41,
+          "end": 39.63
+        },
+        {
+          "word": "today",
+          "start": 40.68,
+          "end": 41.07
+        },
+        {
+          "word": "we",
+          "start": 41.07,
+          "end": 41.29
+        },
+        {
+          "word": "measure",
+          "start": 41.29,
+          "end": 41.71
+        },
+        {
+          "word": "both",
+          "start": 41.71,
+          "end": 42.05
+        }
+      ],
+      "cues": {
+        "flat": 0.4,
+        "climb": 10.26,
+        "top": 19.96,
+        "question": 29.03
+      },
+      "figureEvents": [],
+      "wordCount": 82,
+      "text": "Consider a cyclist riding along a flat road. She is moving, so she has energy of motion... kinetic energy. Now the road climbs a hill. She pushes hard on the pedals and, as she climbs, she actually gets faster. At the top she is higher than before and moving faster than before. Two things changed at once. height went up so her gravitational potential energy went up her speed went up so her kinetic energy went up too today we measure both",
+      "duration": 43.72898
+    },
+    {
+      "id": "s03",
+      "title": "Kinetic energy: the energy of motion",
+      "mode": "ke",
+      "voiceSpeed": 1,
+      "tempo": "brisk",
+      "beats": [
+        {
+          "id": "car",
+          "text": "Start with a moving car. Mass fifteen hundred kilograms, travelling at twenty metres per second.",
+          "hold": 0.5,
+          "start": 0.4,
+          "speechEnd": 8.85,
+          "end": 9.05,
+          "cue": 0.4,
+          "penEnd": 8.97
+        },
+        {
+          "id": "formula",
+          "text": "Kinetic energy equals a half, times mass, times speed squared.",
+          "hold": 0.8,
+          "ink": "K E = ½ m v²",
+          "start": 9.55,
+          "speechEnd": 14.54,
+          "end": 14.74,
+          "cue": 9.56,
+          "penEnd": 14.66
+        },
+        {
+          "id": "substitute",
+          "text": "A half, times fifteen hundred, times twenty squared.",
+          "hold": 0.8,
+          "ink": "K E = ½ × 1500 × 20²",
+          "start": 15.54,
+          "speechEnd": 19.11,
+          "end": 19.31,
+          "cue": 15.54,
+          "penEnd": 19.23
+        },
+        {
+          "id": "answer",
+          "text": "That is three hundred thousand joules. Three hundred kilojoules.",
+          "hold": 1.5,
+          "ink": "K E = 300 000 J",
+          "start": 20.11,
+          "speechEnd": 23.77,
+          "end": 23.97,
+          "cue": 20.26,
+          "penEnd": 23.89
+        },
+        {
+          "id": "scalar",
+          "text": "Kinetic energy is a scalar. It has size but no direction, and it can never be negative. A parked car has none at all.",
+          "hold": 0.6,
+          "start": 25.47,
+          "speechEnd": 35.09,
+          "end": 35.29,
+          "cue": 25.47,
+          "penEnd": 35.21
+        },
+        {
+          "id": "square",
+          "text": "Because the speed is squared, doubling the speed gives four times the kinetic energy. Speed matters a lot.",
+          "hold": 0.8,
+          "start": 35.89,
+          "speechEnd": 43.04,
+          "end": 43.24,
+          "cue": 35.89,
+          "penEnd": 43.160000000000004
+        }
+      ],
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 9.05,
+          "end": 9.55,
+          "duration": 0.5
+        },
+        {
+          "kind": "hold",
+          "start": 14.74,
+          "end": 15.54,
+          "duration": 0.8
+        },
+        {
+          "kind": "hold",
+          "start": 19.31,
+          "end": 20.11,
+          "duration": 0.8
+        },
+        {
+          "kind": "hold",
+          "start": 23.97,
+          "end": 25.47,
+          "duration": 1.5
+        },
+        {
+          "kind": "hold",
+          "start": 35.29,
+          "end": 35.89,
+          "duration": 0.6
+        },
+        {
+          "kind": "hold",
+          "start": 43.24,
+          "end": 44.04,
+          "duration": 0.8
+        }
+      ],
+      "audio": "energy-fable-s03.mp3",
+      "audioSha256": "5db645f93d6c287fe423fad043391d345f42e8eff41fdf14c4de263d4e96b6c4",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "provider": "elevenlabs",
+      "sampleDuration": 44.39,
+      "words": [
+        {
+          "word": "Start",
+          "start": 0.4,
+          "end": 0.86
+        },
+        {
+          "word": "with",
+          "start": 0.86,
+          "end": 1.48
+        },
+        {
+          "word": "a",
+          "start": 1.48,
+          "end": 1.62
+        },
+        {
+          "word": "moving",
+          "start": 1.62,
+          "end": 1.82
+        },
+        {
+          "word": "car.",
+          "start": 1.82,
+          "end": 2.24
+        },
+        {
+          "word": "Mass",
+          "start": 2.84,
+          "end": 3.54
+        },
+        {
+          "word": "fifteen",
+          "start": 3.54,
+          "end": 4.12
+        },
+        {
+          "word": "hundred",
+          "start": 4.12,
+          "end": 4.58
+        },
+        {
+          "word": "kilograms,",
+          "start": 4.58,
+          "end": 5.34
+        },
+        {
+          "word": "travelling",
+          "start": 5.96,
+          "end": 7.14
+        },
+        {
+          "word": "at",
+          "start": 7.14,
+          "end": 7.32
+        },
+        {
+          "word": "twenty",
+          "start": 7.32,
+          "end": 7.72
+        },
+        {
+          "word": "metres",
+          "start": 7.72,
+          "end": 8.0
+        },
+        {
+          "word": "per",
+          "start": 8.0,
+          "end": 8.3
+        },
+        {
+          "word": "second.",
+          "start": 8.3,
+          "end": 8.76
+        },
+        {
+          "word": "Kinetic",
+          "start": 9.56,
+          "end": 9.98
+        },
+        {
+          "word": "energy",
+          "start": 9.98,
+          "end": 10.46
+        },
+        {
+          "word": "equals",
+          "start": 10.46,
+          "end": 11.18
+        },
+        {
+          "word": "a",
+          "start": 11.18,
+          "end": 11.42
+        },
+        {
+          "word": "half,",
+          "start": 11.42,
+          "end": 11.78
+        },
+        {
+          "word": "times",
+          "start": 12.08,
+          "end": 12.4
+        },
+        {
+          "word": "mass,",
+          "start": 12.4,
+          "end": 12.76
+        },
+        {
+          "word": "times",
+          "start": 13.34,
+          "end": 13.56
+        },
+        {
+          "word": "speed",
+          "start": 13.56,
+          "end": 13.92
+        },
+        {
+          "word": "squared.",
+          "start": 13.92,
+          "end": 14.32
+        },
+        {
+          "word": "A",
+          "start": 15.54,
+          "end": 15.7
+        },
+        {
+          "word": "half,",
+          "start": 15.7,
+          "end": 16.12
+        },
+        {
+          "word": "times",
+          "start": 16.3,
+          "end": 17.02
+        },
+        {
+          "word": "fifteen",
+          "start": 17.02,
+          "end": 17.28
+        },
+        {
+          "word": "hundred,",
+          "start": 17.28,
+          "end": 17.7
+        },
+        {
+          "word": "times",
+          "start": 17.88,
+          "end": 18.18
+        },
+        {
+          "word": "twenty",
+          "start": 18.18,
+          "end": 18.54
+        },
+        {
+          "word": "squared.",
+          "start": 18.54,
+          "end": 18.92
+        },
+        {
+          "word": "is",
+          "start": 20.26,
+          "end": 20.4
+        },
+        {
+          "word": "three",
+          "start": 20.4,
+          "end": 20.68
+        },
+        {
+          "word": "hundred",
+          "start": 20.68,
+          "end": 20.94
+        },
+        {
+          "word": "thousand",
+          "start": 20.94,
+          "end": 21.4
+        },
+        {
+          "word": "joules.",
+          "start": 21.4,
+          "end": 21.9
+        },
+        {
+          "word": "Three",
+          "start": 22.64,
+          "end": 22.82
+        },
+        {
+          "word": "hundred",
+          "start": 22.82,
+          "end": 23.06
+        },
+        {
+          "word": "kilojoules.",
+          "start": 23.06,
+          "end": 23.76
+        },
+        {
+          "word": "Kinetic",
+          "start": 25.47,
+          "end": 25.94
+        },
+        {
+          "word": "energy",
+          "start": 25.94,
+          "end": 26.34
+        },
+        {
+          "word": "is",
+          "start": 26.34,
+          "end": 26.58
+        },
+        {
+          "word": "a",
+          "start": 26.58,
+          "end": 26.72
+        },
+        {
+          "word": "scalar.",
+          "start": 26.72,
+          "end": 27.08
+        },
+        {
+          "word": "It",
+          "start": 27.88,
+          "end": 27.9
+        },
+        {
+          "word": "has",
+          "start": 27.9,
+          "end": 28.04
+        },
+        {
+          "word": "size",
+          "start": 28.04,
+          "end": 28.48
+        },
+        {
+          "word": "but",
+          "start": 28.48,
+          "end": 28.72
+        },
+        {
+          "word": "no",
+          "start": 28.72,
+          "end": 29.04
+        },
+        {
+          "word": "direction.",
+          "start": 29.04,
+          "end": 29.54
+        },
+        {
+          "word": "And",
+          "start": 30.26,
+          "end": 30.52
+        },
+        {
+          "word": "it",
+          "start": 30.52,
+          "end": 30.66
+        },
+        {
+          "word": "can",
+          "start": 30.66,
+          "end": 30.8
+        },
+        {
+          "word": "never",
+          "start": 30.8,
+          "end": 31.2
+        },
+        {
+          "word": "be",
+          "start": 31.2,
+          "end": 31.38
+        },
+        {
+          "word": "negative.",
+          "start": 31.38,
+          "end": 31.76
+        },
+        {
+          "word": "A",
+          "start": 32.72,
+          "end": 32.8
+        },
+        {
+          "word": "parked",
+          "start": 32.8,
+          "end": 33.18
+        },
+        {
+          "word": "car",
+          "start": 33.18,
+          "end": 33.58
+        },
+        {
+          "word": "has",
+          "start": 33.58,
+          "end": 33.94
+        },
+        {
+          "word": "none",
+          "start": 33.94,
+          "end": 34.36
+        },
+        {
+          "word": "at",
+          "start": 34.36,
+          "end": 34.72
+        },
+        {
+          "word": "all.",
+          "start": 34.72,
+          "end": 35.0
+        },
+        {
+          "word": "Because",
+          "start": 35.89,
+          "end": 36.14
+        },
+        {
+          "word": "the",
+          "start": 36.14,
+          "end": 36.34
+        },
+        {
+          "word": "speed",
+          "start": 36.34,
+          "end": 36.6
+        },
+        {
+          "word": "is",
+          "start": 36.6,
+          "end": 36.78
+        },
+        {
+          "word": "squared,",
+          "start": 36.78,
+          "end": 37.3
+        },
+        {
+          "word": "doubling",
+          "start": 37.98,
+          "end": 38.32
+        },
+        {
+          "word": "the",
+          "start": 38.32,
+          "end": 38.56
+        },
+        {
+          "word": "speed",
+          "start": 38.56,
+          "end": 38.92
+        },
+        {
+          "word": "gives",
+          "start": 38.92,
+          "end": 39.3
+        },
+        {
+          "word": "four",
+          "start": 39.3,
+          "end": 39.58
+        },
+        {
+          "word": "times",
+          "start": 39.58,
+          "end": 39.86
+        },
+        {
+          "word": "the",
+          "start": 39.86,
+          "end": 40.06
+        },
+        {
+          "word": "kinetic",
+          "start": 40.06,
+          "end": 40.38
+        },
+        {
+          "word": "energy.",
+          "start": 40.38,
+          "end": 40.92
+        },
+        {
+          "word": "Speed",
+          "start": 41.66,
+          "end": 42.16
+        },
+        {
+          "word": "matters",
+          "start": 42.16,
+          "end": 42.48
+        },
+        {
+          "word": "a",
+          "start": 42.48,
+          "end": 42.68
+        },
+        {
+          "word": "lot.",
+          "start": 42.68,
+          "end": 42.86
+        }
+      ],
+      "cues": {
+        "car": 0.4,
+        "formula": 9.56,
+        "substitute": 15.54,
+        "answer": 20.26,
+        "scalar": 25.47,
+        "square": 35.89
+      },
+      "figureEvents": [
+        {
+          "id": "number-6",
+          "wordIndex": 6,
+          "word": "1500",
+          "spokenPhrase": "fifteen hundred",
+          "start": 3.54,
+          "target": "carMass",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-11",
+          "wordIndex": 11,
+          "word": "20",
+          "spokenPhrase": "twenty",
+          "start": 7.32,
+          "target": "carV",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-28",
+          "wordIndex": 28,
+          "word": "1500",
+          "spokenPhrase": "fifteen hundred,",
+          "start": 17.02,
+          "target": "carMass",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-31",
+          "wordIndex": 31,
+          "word": "20",
+          "spokenPhrase": "twenty",
+          "start": 18.18,
+          "target": "carV",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-34",
+          "wordIndex": 34,
+          "word": "300000",
+          "spokenPhrase": "three hundred thousand",
+          "start": 20.4,
+          "target": "carKE",
+          "kind": "spoken"
+        }
+      ],
+      "wordCount": 83,
+      "text": "Start with a moving car. Mass fifteen hundred kilograms, travelling at twenty metres per second. Kinetic energy equals a half, times mass, times speed squared. A half, times fifteen hundred, times twenty squared. is three hundred thousand joules. Three hundred kilojoules. Kinetic energy is a scalar. It has size but no direction. And it can never be negative. A parked car has none at all. Because the speed is squared, doubling the speed gives four times the kinetic energy. Speed matters a lot.",
+      "duration": 44.434286
+    },
+    {
+      "id": "s04",
+      "title": "The change in kinetic energy",
+      "mode": "delta",
+      "voiceSpeed": 1,
+      "tempo": "brisk",
+      "beats": [
+        {
+          "id": "change",
+          "text": "When the speed changes from u to v, the kinetic energy changes. The change is final minus initial.",
+          "hold": 0.6,
+          "ink": "Δ K E = ½ m v² − ½ m u²",
+          "start": 0.4,
+          "speechEnd": 8.35,
+          "end": 8.55,
+          "cue": 0.56,
+          "penEnd": 8.47
+        },
+        {
+          "id": "factor",
+          "text": "Take out the half m. The change in kinetic energy is a half m, times v squared minus u squared.",
+          "hold": 0.8,
+          "ink": "Δ K E = ½ m (v² − u²)",
+          "start": 9.15,
+          "speechEnd": 17.81,
+          "end": 18.01,
+          "cue": 9.15,
+          "penEnd": 17.930000000000003
+        },
+        {
+          "id": "warning",
+          "text": "Careful: it is the difference of the squares, not the square of the difference. Square each speed first, then subtract.",
+          "hold": 0.8,
+          "ink": "not ½ m (v − u)²",
+          "start": 18.81,
+          "speechEnd": 27.55,
+          "end": 27.75,
+          "cue": 19.98,
+          "penEnd": 27.67
+        },
+        {
+          "id": "sign",
+          "text": "If the object slows down, v is less than u, and the change is negative: kinetic energy was lost.",
+          "hold": 0.6,
+          "start": 28.55,
+          "speechEnd": 37.32,
+          "end": 37.52,
+          "cue": 28.66,
+          "penEnd": 37.440000000000005
+        }
+      ],
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 8.55,
+          "end": 9.15,
+          "duration": 0.6
+        },
+        {
+          "kind": "hold",
+          "start": 18.01,
+          "end": 18.81,
+          "duration": 0.8
+        },
+        {
+          "kind": "hold",
+          "start": 27.75,
+          "end": 28.55,
+          "duration": 0.8
+        },
+        {
+          "kind": "hold",
+          "start": 37.52,
+          "end": 38.12,
+          "duration": 0.6
+        }
+      ],
+      "audio": "energy-fable-s04.mp3",
+      "audioSha256": "795f920905dc3e7c12632dec485b2dd7d8ca518695be7a86c8a73b8d9896c79e",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "provider": "elevenlabs",
+      "sampleDuration": 38.47,
+      "words": [
+        {
+          "word": "the",
+          "start": 0.56,
+          "end": 0.7
+        },
+        {
+          "word": "speed",
+          "start": 0.7,
+          "end": 0.96
+        },
+        {
+          "word": "changes",
+          "start": 0.96,
+          "end": 1.28
+        },
+        {
+          "word": "from",
+          "start": 1.28,
+          "end": 1.56
+        },
+        {
+          "word": "u",
+          "start": 1.56,
+          "end": 1.9
+        },
+        {
+          "word": "to",
+          "start": 1.9,
+          "end": 2.14
+        },
+        {
+          "word": "v,",
+          "start": 2.14,
+          "end": 2.46
+        },
+        {
+          "word": "the",
+          "start": 3.1,
+          "end": 3.32
+        },
+        {
+          "word": "kinetic",
+          "start": 3.32,
+          "end": 3.68
+        },
+        {
+          "word": "energy",
+          "start": 3.68,
+          "end": 4.18
+        },
+        {
+          "word": "changes.",
+          "start": 4.18,
+          "end": 4.8
+        },
+        {
+          "word": "The",
+          "start": 5.74,
+          "end": 5.9
+        },
+        {
+          "word": "change",
+          "start": 5.9,
+          "end": 6.26
+        },
+        {
+          "word": "is",
+          "start": 6.26,
+          "end": 6.46
+        },
+        {
+          "word": "final",
+          "start": 6.46,
+          "end": 6.82
+        },
+        {
+          "word": "minus",
+          "start": 6.82,
+          "end": 7.56
+        },
+        {
+          "word": "initial.",
+          "start": 7.56,
+          "end": 8.16
+        },
+        {
+          "word": "Take",
+          "start": 9.15,
+          "end": 9.38
+        },
+        {
+          "word": "out",
+          "start": 9.38,
+          "end": 9.78
+        },
+        {
+          "word": "the",
+          "start": 9.78,
+          "end": 10.1
+        },
+        {
+          "word": "half",
+          "start": 10.1,
+          "end": 10.36
+        },
+        {
+          "word": "m.",
+          "start": 10.36,
+          "end": 10.68
+        },
+        {
+          "word": "The",
+          "start": 11.56,
+          "end": 11.7
+        },
+        {
+          "word": "change",
+          "start": 11.7,
+          "end": 12.12
+        },
+        {
+          "word": "in",
+          "start": 12.12,
+          "end": 12.48
+        },
+        {
+          "word": "kinetic",
+          "start": 12.48,
+          "end": 12.9
+        },
+        {
+          "word": "energy",
+          "start": 12.9,
+          "end": 13.44
+        },
+        {
+          "word": "is",
+          "start": 13.44,
+          "end": 14.2
+        },
+        {
+          "word": "a",
+          "start": 14.2,
+          "end": 14.32
+        },
+        {
+          "word": "half",
+          "start": 14.32,
+          "end": 14.48
+        },
+        {
+          "word": "m,",
+          "start": 14.48,
+          "end": 14.82
+        },
+        {
+          "word": "times",
+          "start": 14.88,
+          "end": 15.4
+        },
+        {
+          "word": "v",
+          "start": 15.4,
+          "end": 15.76
+        },
+        {
+          "word": "squared",
+          "start": 15.76,
+          "end": 16.52
+        },
+        {
+          "word": "minus",
+          "start": 16.52,
+          "end": 17.0
+        },
+        {
+          "word": "u",
+          "start": 17.0,
+          "end": 17.3
+        },
+        {
+          "word": "squared.",
+          "start": 17.3,
+          "end": 17.62
+        },
+        {
+          "word": "it",
+          "start": 19.98,
+          "end": 20.14
+        },
+        {
+          "word": "is",
+          "start": 20.14,
+          "end": 20.26
+        },
+        {
+          "word": "the",
+          "start": 20.26,
+          "end": 20.38
+        },
+        {
+          "word": "difference",
+          "start": 20.38,
+          "end": 20.74
+        },
+        {
+          "word": "of",
+          "start": 20.74,
+          "end": 20.98
+        },
+        {
+          "word": "the",
+          "start": 20.98,
+          "end": 21.16
+        },
+        {
+          "word": "squares,",
+          "start": 21.16,
+          "end": 21.5
+        },
+        {
+          "word": "not",
+          "start": 22.24,
+          "end": 22.48
+        },
+        {
+          "word": "the",
+          "start": 22.48,
+          "end": 22.72
+        },
+        {
+          "word": "square",
+          "start": 22.72,
+          "end": 22.98
+        },
+        {
+          "word": "of",
+          "start": 22.98,
+          "end": 23.24
+        },
+        {
+          "word": "the",
+          "start": 23.24,
+          "end": 23.36
+        },
+        {
+          "word": "difference.",
+          "start": 23.36,
+          "end": 23.76
+        },
+        {
+          "word": "Square",
+          "start": 24.24,
+          "end": 24.74
+        },
+        {
+          "word": "each",
+          "start": 24.74,
+          "end": 25.16
+        },
+        {
+          "word": "speed",
+          "start": 25.16,
+          "end": 25.48
+        },
+        {
+          "word": "first,",
+          "start": 25.48,
+          "end": 25.88
+        },
+        {
+          "word": "then",
+          "start": 26.48,
+          "end": 26.76
+        },
+        {
+          "word": "subtract.",
+          "start": 26.76,
+          "end": 27.14
+        },
+        {
+          "word": "the",
+          "start": 28.66,
+          "end": 28.82
+        },
+        {
+          "word": "object",
+          "start": 28.82,
+          "end": 29.02
+        },
+        {
+          "word": "slows",
+          "start": 29.02,
+          "end": 29.4
+        },
+        {
+          "word": "down,",
+          "start": 29.4,
+          "end": 29.86
+        },
+        {
+          "word": "V",
+          "start": 30.78,
+          "end": 31.0
+        },
+        {
+          "word": "is",
+          "start": 31.0,
+          "end": 31.5
+        },
+        {
+          "word": "less",
+          "start": 31.5,
+          "end": 31.76
+        },
+        {
+          "word": "than",
+          "start": 31.76,
+          "end": 31.98
+        },
+        {
+          "word": "U,",
+          "start": 31.98,
+          "end": 32.26
+        },
+        {
+          "word": "the",
+          "start": 33.08,
+          "end": 33.12
+        },
+        {
+          "word": "change",
+          "start": 33.12,
+          "end": 33.42
+        },
+        {
+          "word": "is",
+          "start": 33.42,
+          "end": 33.58
+        },
+        {
+          "word": "negative.",
+          "start": 33.58,
+          "end": 33.92
+        },
+        {
+          "word": "Kinetic",
+          "start": 35.1,
+          "end": 35.82
+        },
+        {
+          "word": "energy",
+          "start": 35.82,
+          "end": 36.26
+        },
+        {
+          "word": "was",
+          "start": 36.26,
+          "end": 36.78
+        },
+        {
+          "word": "lost.",
+          "start": 36.78,
+          "end": 37.1
+        }
+      ],
+      "cues": {
+        "change": 0.56,
+        "factor": 9.15,
+        "warning": 19.98,
+        "sign": 28.66
+      },
+      "figureEvents": [],
+      "wordCount": 73,
+      "text": "the speed changes from u to v, the kinetic energy changes. The change is final minus initial. Take out the half m. The change in kinetic energy is a half m, times v squared minus u squared. it is the difference of the squares, not the square of the difference. Square each speed first, then subtract. the object slows down, V is less than U, the change is negative. Kinetic energy was lost.",
+      "duration": 38.50449
+    },
+    {
+      "id": "s05",
+      "title": "Gravitational potential energy: the energy of height",
+      "mode": "gpe",
+      "voiceSpeed": 1,
+      "tempo": "brisk",
+      "beats": [
+        {
+          "id": "lift",
+          "text": "Lift a box slowly to a height h above the floor. The force needed is its weight, m g, and it moves through h.",
+          "hold": 0.6,
+          "start": 0.4,
+          "speechEnd": 10.59,
+          "end": 10.79,
+          "cue": 0.61,
+          "penEnd": 10.709999999999999
+        },
+        {
+          "id": "formula",
+          "text": "Gravitational potential energy equals m g h: weight times vertical height above the level you chose.",
+          "hold": 0.8,
+          "ink": "G P E = m g h",
+          "start": 11.39,
+          "speechEnd": 20.07,
+          "end": 20.27,
+          "cue": 11.39,
+          "penEnd": 20.19
+        },
+        {
+          "id": "level",
+          "text": "You choose the level where the potential energy is zero, usually the ground. Height is measured from there.",
+          "hold": 0.6,
+          "start": 21.07,
+          "speechEnd": 28.61,
+          "end": 28.81,
+          "cue": 21.07,
+          "penEnd": 28.73
+        },
+        {
+          "id": "both",
+          "text": "Moving up gains potential energy... moving down loses it. And a moving object at a height has both kinds at once, like our cyclist.",
+          "hold": 0.8,
+          "start": 29.41,
+          "speechEnd": 41.49,
+          "end": 41.69,
+          "cue": 29.69,
+          "penEnd": 41.61
+        }
+      ],
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 10.79,
+          "end": 11.39,
+          "duration": 0.6
+        },
+        {
+          "kind": "hold",
+          "start": 20.27,
+          "end": 21.07,
+          "duration": 0.8
+        },
+        {
+          "kind": "hold",
+          "start": 28.81,
+          "end": 29.41,
+          "duration": 0.6
+        },
+        {
+          "kind": "hold",
+          "start": 41.69,
+          "end": 42.49,
+          "duration": 0.8
+        }
+      ],
+      "audio": "energy-fable-s05.mp3",
+      "audioSha256": "d4183c20cc30545329f9f529e80f29352becaf4d08d5ec118f7d20320f9c1c18",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "provider": "elevenlabs",
+      "sampleDuration": 42.84,
+      "words": [
+        {
+          "word": "a",
+          "start": 0.61,
+          "end": 0.85
+        },
+        {
+          "word": "box",
+          "start": 0.85,
+          "end": 1.01
+        },
+        {
+          "word": "slowly",
+          "start": 1.01,
+          "end": 1.43
+        },
+        {
+          "word": "to",
+          "start": 1.43,
+          "end": 1.91
+        },
+        {
+          "word": "a",
+          "start": 1.91,
+          "end": 2.11
+        },
+        {
+          "word": "height",
+          "start": 2.11,
+          "end": 2.35
+        },
+        {
+          "word": "h",
+          "start": 2.35,
+          "end": 2.93
+        },
+        {
+          "word": "above",
+          "start": 2.93,
+          "end": 3.49
+        },
+        {
+          "word": "the",
+          "start": 3.49,
+          "end": 3.69
+        },
+        {
+          "word": "floor.",
+          "start": 3.69,
+          "end": 3.99
+        },
+        {
+          "word": "The",
+          "start": 4.81,
+          "end": 4.91
+        },
+        {
+          "word": "force",
+          "start": 4.91,
+          "end": 5.27
+        },
+        {
+          "word": "needed",
+          "start": 5.27,
+          "end": 5.65
+        },
+        {
+          "word": "is",
+          "start": 5.65,
+          "end": 6.15
+        },
+        {
+          "word": "its",
+          "start": 6.15,
+          "end": 6.35
+        },
+        {
+          "word": "weight,",
+          "start": 6.35,
+          "end": 6.71
+        },
+        {
+          "word": "m",
+          "start": 7.47,
+          "end": 7.79
+        },
+        {
+          "word": "g,",
+          "start": 7.79,
+          "end": 8.27
+        },
+        {
+          "word": "and",
+          "start": 9.01,
+          "end": 9.19
+        },
+        {
+          "word": "it",
+          "start": 9.19,
+          "end": 9.31
+        },
+        {
+          "word": "moves",
+          "start": 9.31,
+          "end": 9.63
+        },
+        {
+          "word": "through",
+          "start": 9.63,
+          "end": 10.01
+        },
+        {
+          "word": "h.",
+          "start": 10.01,
+          "end": 10.35
+        },
+        {
+          "word": "Gravitational",
+          "start": 11.39,
+          "end": 12.11
+        },
+        {
+          "word": "potential",
+          "start": 12.11,
+          "end": 12.41
+        },
+        {
+          "word": "energy",
+          "start": 12.41,
+          "end": 13.11
+        },
+        {
+          "word": "equals",
+          "start": 13.11,
+          "end": 14.05
+        },
+        {
+          "word": "m",
+          "start": 14.05,
+          "end": 14.49
+        },
+        {
+          "word": "g",
+          "start": 14.49,
+          "end": 14.69
+        },
+        {
+          "word": "h.",
+          "start": 14.69,
+          "end": 15.07
+        },
+        {
+          "word": "Weight",
+          "start": 15.77,
+          "end": 16.23
+        },
+        {
+          "word": "times",
+          "start": 16.23,
+          "end": 17.15
+        },
+        {
+          "word": "vertical",
+          "start": 17.15,
+          "end": 17.57
+        },
+        {
+          "word": "height",
+          "start": 17.57,
+          "end": 18.07
+        },
+        {
+          "word": "above",
+          "start": 18.07,
+          "end": 18.91
+        },
+        {
+          "word": "the",
+          "start": 18.91,
+          "end": 19.21
+        },
+        {
+          "word": "level",
+          "start": 19.21,
+          "end": 19.49
+        },
+        {
+          "word": "you",
+          "start": 19.49,
+          "end": 19.69
+        },
+        {
+          "word": "chose.",
+          "start": 19.69,
+          "end": 19.95
+        },
+        {
+          "word": "You",
+          "start": 21.07,
+          "end": 21.23
+        },
+        {
+          "word": "choose",
+          "start": 21.23,
+          "end": 21.55
+        },
+        {
+          "word": "the",
+          "start": 21.55,
+          "end": 21.79
+        },
+        {
+          "word": "level",
+          "start": 21.79,
+          "end": 22.07
+        },
+        {
+          "word": "where",
+          "start": 22.07,
+          "end": 22.35
+        },
+        {
+          "word": "the",
+          "start": 22.35,
+          "end": 22.49
+        },
+        {
+          "word": "potential",
+          "start": 22.49,
+          "end": 22.89
+        },
+        {
+          "word": "energy",
+          "start": 22.89,
+          "end": 23.37
+        },
+        {
+          "word": "is",
+          "start": 23.37,
+          "end": 23.75
+        },
+        {
+          "word": "zero,",
+          "start": 23.75,
+          "end": 24.19
+        },
+        {
+          "word": "usually",
+          "start": 24.69,
+          "end": 25.05
+        },
+        {
+          "word": "the",
+          "start": 25.05,
+          "end": 25.29
+        },
+        {
+          "word": "ground.",
+          "start": 25.29,
+          "end": 25.59
+        },
+        {
+          "word": "Height",
+          "start": 26.47,
+          "end": 26.95
+        },
+        {
+          "word": "is",
+          "start": 26.95,
+          "end": 27.51
+        },
+        {
+          "word": "measured",
+          "start": 27.51,
+          "end": 27.85
+        },
+        {
+          "word": "from",
+          "start": 27.85,
+          "end": 28.11
+        },
+        {
+          "word": "there.",
+          "start": 28.11,
+          "end": 28.43
+        },
+        {
+          "word": "up",
+          "start": 29.69,
+          "end": 30.03
+        },
+        {
+          "word": "gains",
+          "start": 30.03,
+          "end": 30.99
+        },
+        {
+          "word": "potential",
+          "start": 30.99,
+          "end": 31.51
+        },
+        {
+          "word": "energy.",
+          "start": 31.51,
+          "end": 31.99
+        },
+        {
+          "word": "Moving",
+          "start": 32.81,
+          "end": 33.55
+        },
+        {
+          "word": "down",
+          "start": 33.55,
+          "end": 34.05
+        },
+        {
+          "word": "loses",
+          "start": 34.05,
+          "end": 34.63
+        },
+        {
+          "word": "it.",
+          "start": 34.63,
+          "end": 34.91
+        },
+        {
+          "word": "In",
+          "start": 35.89,
+          "end": 36.31
+        },
+        {
+          "word": "a",
+          "start": 36.31,
+          "end": 36.41
+        },
+        {
+          "word": "moving",
+          "start": 36.41,
+          "end": 36.69
+        },
+        {
+          "word": "object",
+          "start": 36.69,
+          "end": 37.15
+        },
+        {
+          "word": "at",
+          "start": 37.15,
+          "end": 37.55
+        },
+        {
+          "word": "a",
+          "start": 37.55,
+          "end": 37.65
+        },
+        {
+          "word": "height,",
+          "start": 37.65,
+          "end": 37.95
+        },
+        {
+          "word": "it",
+          "start": 38.07,
+          "end": 38.07
+        },
+        {
+          "word": "has",
+          "start": 38.07,
+          "end": 38.69
+        },
+        {
+          "word": "both",
+          "start": 38.69,
+          "end": 39.01
+        },
+        {
+          "word": "kinds",
+          "start": 39.01,
+          "end": 39.29
+        },
+        {
+          "word": "at",
+          "start": 39.29,
+          "end": 39.53
+        },
+        {
+          "word": "once,",
+          "start": 39.53,
+          "end": 39.83
+        },
+        {
+          "word": "like",
+          "start": 40.33,
+          "end": 40.63
+        },
+        {
+          "word": "our",
+          "start": 40.63,
+          "end": 40.83
+        },
+        {
+          "word": "sight",
+          "start": 40.83,
+          "end": 41.05
+        },
+        {
+          "word": "list.",
+          "start": 41.05,
+          "end": 41.27
+        }
+      ],
+      "cues": {
+        "lift": 0.61,
+        "formula": 11.39,
+        "level": 21.07,
+        "both": 29.69
+      },
+      "figureEvents": [],
+      "wordCount": 82,
+      "text": "a box slowly to a height h above the floor. The force needed is its weight, m g, and it moves through h. Gravitational potential energy equals m g h. Weight times vertical height above the level you chose. You choose the level where the potential energy is zero, usually the ground. Height is measured from there. up gains potential energy. Moving down loses it. In a moving object at a height, it has both kinds at once, like our sight list.",
+      "duration": 42.866939
+    },
+    {
+      "id": "s06",
+      "title": "The whole question",
+      "mode": "problem",
+      "voiceSpeed": 0.9,
+      "tempo": "slow",
+      "beats": [
+        {
+          "id": "who",
+          "text": "The full question. A cyclist and her bicycle together have mass m, unknown. On the flat, she rides at four metres per second.",
+          "hold": 0.4,
+          "start": 0.4,
+          "speechEnd": 13.5,
+          "end": 13.7,
+          "cue": 0.52,
+          "penEnd": 13.62
+        },
+        {
+          "id": "hill",
+          "text": "She climbs a hill three metres high, and reaches the top at eight metres per second. Her kinetic energy increased by two point four kilojoules.",
+          "hold": 0.4,
+          "start": 14.1,
+          "speechEnd": 28.07,
+          "end": 28.27,
+          "cue": 14.1,
+          "penEnd": 28.19
+        },
+        {
+          "id": "find",
+          "text": "Take g as ten. Find the total mass, and the gain in gravitational potential energy.",
+          "hold": 0.4,
+          "start": 28.67,
+          "speechEnd": 35.84,
+          "end": 36.04,
+          "cue": 28.67,
+          "penEnd": 35.96
+        },
+        {
+          "id": "think",
+          "text": "Before we start: which formula has the unknown mass in it, with everything else known? Take a moment.",
+          "hold": 2,
+          "start": 36.44,
+          "speechEnd": 45.08,
+          "end": 45.28,
+          "cue": 36.44,
+          "penEnd": 45.2
+        }
+      ],
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 13.7,
+          "end": 14.1,
+          "duration": 0.4
+        },
+        {
+          "kind": "hold",
+          "start": 28.27,
+          "end": 28.67,
+          "duration": 0.4
+        },
+        {
+          "kind": "hold",
+          "start": 36.04,
+          "end": 36.44,
+          "duration": 0.4
+        },
+        {
+          "kind": "hold",
+          "start": 45.28,
+          "end": 47.28,
+          "duration": 2
+        }
+      ],
+      "audio": "energy-fable-s06.mp3",
+      "audioSha256": "64604b31e5cfa911e16c77303d98c8d43898ddea19571e679ab6af765f7ec6fc",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "provider": "elevenlabs",
+      "sampleDuration": 47.63,
+      "words": [
+        {
+          "word": "full",
+          "start": 0.52,
+          "end": 0.84
+        },
+        {
+          "word": "question.",
+          "start": 0.84,
+          "end": 1.24
+        },
+        {
+          "word": "A",
+          "start": 2.32,
+          "end": 2.5
+        },
+        {
+          "word": "cyclist",
+          "start": 2.5,
+          "end": 3.26
+        },
+        {
+          "word": "and",
+          "start": 3.26,
+          "end": 3.62
+        },
+        {
+          "word": "her",
+          "start": 3.62,
+          "end": 3.8
+        },
+        {
+          "word": "bicycle",
+          "start": 3.8,
+          "end": 4.22
+        },
+        {
+          "word": "together",
+          "start": 4.22,
+          "end": 5.72
+        },
+        {
+          "word": "have",
+          "start": 5.72,
+          "end": 6.26
+        },
+        {
+          "word": "mass",
+          "start": 6.26,
+          "end": 6.88
+        },
+        {
+          "word": "m,",
+          "start": 6.88,
+          "end": 7.28
+        },
+        {
+          "word": "unknown.",
+          "start": 8.0,
+          "end": 8.56
+        },
+        {
+          "word": "On",
+          "start": 10.04,
+          "end": 10.3
+        },
+        {
+          "word": "the",
+          "start": 10.3,
+          "end": 10.42
+        },
+        {
+          "word": "flat,",
+          "start": 10.42,
+          "end": 10.84
+        },
+        {
+          "word": "she",
+          "start": 11.3,
+          "end": 11.42
+        },
+        {
+          "word": "rides",
+          "start": 11.42,
+          "end": 11.8
+        },
+        {
+          "word": "at",
+          "start": 11.8,
+          "end": 12.14
+        },
+        {
+          "word": "four",
+          "start": 12.14,
+          "end": 12.42
+        },
+        {
+          "word": "metres",
+          "start": 12.42,
+          "end": 12.62
+        },
+        {
+          "word": "per",
+          "start": 12.62,
+          "end": 12.9
+        },
+        {
+          "word": "second.",
+          "start": 12.9,
+          "end": 13.24
+        },
+        {
+          "word": "She",
+          "start": 14.1,
+          "end": 14.28
+        },
+        {
+          "word": "climbs",
+          "start": 14.28,
+          "end": 14.7
+        },
+        {
+          "word": "a",
+          "start": 14.7,
+          "end": 15.06
+        },
+        {
+          "word": "hill",
+          "start": 15.06,
+          "end": 15.32
+        },
+        {
+          "word": "three",
+          "start": 15.32,
+          "end": 16.26
+        },
+        {
+          "word": "metres",
+          "start": 16.26,
+          "end": 16.6
+        },
+        {
+          "word": "high,",
+          "start": 16.6,
+          "end": 17.1
+        },
+        {
+          "word": "and",
+          "start": 17.46,
+          "end": 17.92
+        },
+        {
+          "word": "reaches",
+          "start": 17.92,
+          "end": 18.26
+        },
+        {
+          "word": "the",
+          "start": 18.26,
+          "end": 18.52
+        },
+        {
+          "word": "top",
+          "start": 18.52,
+          "end": 18.86
+        },
+        {
+          "word": "at",
+          "start": 18.86,
+          "end": 19.22
+        },
+        {
+          "word": "eight",
+          "start": 19.22,
+          "end": 19.56
+        },
+        {
+          "word": "metres",
+          "start": 19.56,
+          "end": 19.98
+        },
+        {
+          "word": "per",
+          "start": 19.98,
+          "end": 20.6
+        },
+        {
+          "word": "second.",
+          "start": 20.6,
+          "end": 21.08
+        },
+        {
+          "word": "A",
+          "start": 21.08,
+          "end": 22.64
+        },
+        {
+          "word": "kinetic",
+          "start": 22.64,
+          "end": 23.0
+        },
+        {
+          "word": "energy",
+          "start": 23.0,
+          "end": 23.56
+        },
+        {
+          "word": "increased",
+          "start": 23.56,
+          "end": 24.78
+        },
+        {
+          "word": "by",
+          "start": 24.78,
+          "end": 25.62
+        },
+        {
+          "word": "2",
+          "start": 25.62,
+          "end": 26.04
+        },
+        {
+          "word": ".4",
+          "start": 26.04,
+          "end": 26.84
+        },
+        {
+          "word": "kJ.",
+          "start": 26.84,
+          "end": 27.64
+        },
+        {
+          "word": "Take",
+          "start": 28.67,
+          "end": 28.9
+        },
+        {
+          "word": "GS10.",
+          "start": 28.9,
+          "end": 29.76
+        },
+        {
+          "word": "Find",
+          "start": 30.56,
+          "end": 30.94
+        },
+        {
+          "word": "the",
+          "start": 30.94,
+          "end": 31.18
+        },
+        {
+          "word": "total",
+          "start": 31.18,
+          "end": 31.44
+        },
+        {
+          "word": "mass",
+          "start": 31.44,
+          "end": 31.82
+        },
+        {
+          "word": "and",
+          "start": 31.82,
+          "end": 32.64
+        },
+        {
+          "word": "the",
+          "start": 32.64,
+          "end": 32.8
+        },
+        {
+          "word": "gain",
+          "start": 32.8,
+          "end": 33.34
+        },
+        {
+          "word": "in",
+          "start": 33.34,
+          "end": 33.96
+        },
+        {
+          "word": "gravitational",
+          "start": 33.96,
+          "end": 34.48
+        },
+        {
+          "word": "potential",
+          "start": 34.48,
+          "end": 35.1
+        },
+        {
+          "word": "energy.",
+          "start": 35.1,
+          "end": 35.74
+        },
+        {
+          "word": "Before",
+          "start": 36.44,
+          "end": 36.74
+        },
+        {
+          "word": "we",
+          "start": 36.74,
+          "end": 36.96
+        },
+        {
+          "word": "start,",
+          "start": 36.96,
+          "end": 37.24
+        },
+        {
+          "word": "which",
+          "start": 38.16,
+          "end": 38.42
+        },
+        {
+          "word": "formula",
+          "start": 38.42,
+          "end": 38.76
+        },
+        {
+          "word": "has",
+          "start": 38.76,
+          "end": 39.06
+        },
+        {
+          "word": "the",
+          "start": 39.06,
+          "end": 39.2
+        },
+        {
+          "word": "unknown",
+          "start": 39.2,
+          "end": 39.46
+        },
+        {
+          "word": "mass",
+          "start": 39.46,
+          "end": 40.02
+        },
+        {
+          "word": "in",
+          "start": 40.02,
+          "end": 40.42
+        },
+        {
+          "word": "it",
+          "start": 40.42,
+          "end": 40.66
+        },
+        {
+          "word": "with",
+          "start": 40.66,
+          "end": 41.64
+        },
+        {
+          "word": "everything",
+          "start": 41.64,
+          "end": 42.08
+        },
+        {
+          "word": "else",
+          "start": 42.08,
+          "end": 42.42
+        },
+        {
+          "word": "known?",
+          "start": 42.42,
+          "end": 42.86
+        },
+        {
+          "word": "Take",
+          "start": 43.98,
+          "end": 44.42
+        },
+        {
+          "word": "a",
+          "start": 44.42,
+          "end": 44.56
+        },
+        {
+          "word": "moment.",
+          "start": 44.56,
+          "end": 44.82
+        }
+      ],
+      "cues": {
+        "who": 0.52,
+        "hill": 14.1,
+        "find": 28.67,
+        "think": 36.44
+      },
+      "figureEvents": [
+        {
+          "id": "number-18",
+          "wordIndex": 18,
+          "word": "4",
+          "spokenPhrase": "four",
+          "start": 12.14,
+          "target": "uFig",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-26",
+          "wordIndex": 26,
+          "word": "3",
+          "spokenPhrase": "three",
+          "start": 15.32,
+          "target": "hFig",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-34",
+          "wordIndex": 34,
+          "word": "8",
+          "spokenPhrase": "eight",
+          "start": 19.22,
+          "target": "vFig",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-43",
+          "wordIndex": 43,
+          "word": "2.4",
+          "spokenPhrase": "2 .4",
+          "start": 25.62,
+          "target": "keFig",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-47",
+          "wordIndex": 47,
+          "word": "10",
+          "spokenPhrase": "GS10.",
+          "start": 28.9,
+          "target": "gravity",
+          "kind": "spoken"
+        }
+      ],
+      "wordCount": 77,
+      "text": "full question. A cyclist and her bicycle together have mass m, unknown. On the flat, she rides at four metres per second. She climbs a hill three metres high, and reaches the top at eight metres per second. A kinetic energy increased by 2 .4 kJ. Take GS10. Find the total mass and the gain in gravitational potential energy. Before we start, which formula has the unknown mass in it with everything else known? Take a moment.",
+      "duration": 47.673469
+    },
+    {
+      "id": "s07",
+      "title": "First, find the mass",
+      "mode": "mass",
+      "voiceSpeed": 0.9,
+      "tempo": "slow",
+      "beats": [
+        {
+          "id": "formula",
+          "text": "The change in kinetic energy is a half m, times v squared minus u squared.",
+          "hold": 0.8,
+          "ink": "Δ K E = ½ m (v² − u²)",
+          "start": 0.4,
+          "speechEnd": 7.09,
+          "end": 7.29,
+          "cue": 0.54,
+          "penEnd": 7.21
+        },
+        {
+          "id": "convert",
+          "text": "Two point four kilojoules is two thousand four hundred joules. Convert before you substitute.",
+          "hold": 0.8,
+          "ink": "2.4 k J = 2400 J",
+          "start": 8.09,
+          "speechEnd": 15.09,
+          "end": 15.29,
+          "cue": 8.28,
+          "penEnd": 15.209999999999999
+        },
+        {
+          "id": "substitute",
+          "text": "So two thousand four hundred equals a half m, times eight squared minus four squared.",
+          "hold": 1,
+          "ink": "2400 = ½ m (8² − 4²)",
+          "start": 16.09,
+          "speechEnd": 22.15,
+          "end": 22.35,
+          "cue": 16.09,
+          "penEnd": 22.270000000000003
+        },
+        {
+          "id": "squares",
+          "text": "Eight squared is sixty-four, four squared is sixteen. Sixty-four minus sixteen is forty-eight.",
+          "hold": 1,
+          "ink": "2400 = ½ m × 48",
+          "start": 23.35,
+          "speechEnd": 32.51,
+          "end": 32.71,
+          "cue": 23.6,
+          "penEnd": 32.63
+        },
+        {
+          "id": "simplify",
+          "text": "Half of forty-eight is twenty-four. So two thousand four hundred equals twenty-four m.",
+          "hold": 1,
+          "ink": "2400 = 24 m",
+          "start": 33.71,
+          "speechEnd": 38.91,
+          "end": 39.11,
+          "cue": 34.06,
+          "penEnd": 39.03
+        },
+        {
+          "id": "answer",
+          "text": "Divide by twenty-four. The mass is one hundred kilograms.",
+          "hold": 2,
+          "ink": "m = 100 k g",
+          "start": 40.11,
+          "speechEnd": 44.3,
+          "end": 44.5,
+          "cue": 40.11,
+          "penEnd": 44.42
+        }
+      ],
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 7.29,
+          "end": 8.09,
+          "duration": 0.8
+        },
+        {
+          "kind": "hold",
+          "start": 15.29,
+          "end": 16.09,
+          "duration": 0.8
+        },
+        {
+          "kind": "hold",
+          "start": 22.35,
+          "end": 23.35,
+          "duration": 1
+        },
+        {
+          "kind": "hold",
+          "start": 32.71,
+          "end": 33.71,
+          "duration": 1
+        },
+        {
+          "kind": "hold",
+          "start": 39.11,
+          "end": 40.11,
+          "duration": 1
+        },
+        {
+          "kind": "hold",
+          "start": 44.5,
+          "end": 46.5,
+          "duration": 2
+        }
+      ],
+      "audio": "energy-fable-s07.mp3",
+      "audioSha256": "dea3b1c5ead4f280a5b7260fadfc81970470cd6255c8b9767ead387929070d01",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "provider": "elevenlabs",
+      "sampleDuration": 46.85,
+      "words": [
+        {
+          "word": "change",
+          "start": 0.54,
+          "end": 1.0
+        },
+        {
+          "word": "in",
+          "start": 1.0,
+          "end": 1.3
+        },
+        {
+          "word": "kinetic",
+          "start": 1.3,
+          "end": 1.74
+        },
+        {
+          "word": "energy",
+          "start": 1.74,
+          "end": 2.32
+        },
+        {
+          "word": "is",
+          "start": 2.32,
+          "end": 3.0
+        },
+        {
+          "word": "a",
+          "start": 3.0,
+          "end": 3.14
+        },
+        {
+          "word": "half",
+          "start": 3.14,
+          "end": 3.38
+        },
+        {
+          "word": "m,",
+          "start": 3.38,
+          "end": 3.7
+        },
+        {
+          "word": "times",
+          "start": 3.74,
+          "end": 4.56
+        },
+        {
+          "word": "v",
+          "start": 4.56,
+          "end": 5.0
+        },
+        {
+          "word": "squared",
+          "start": 5.0,
+          "end": 5.42
+        },
+        {
+          "word": "minus",
+          "start": 5.42,
+          "end": 6.2
+        },
+        {
+          "word": "u",
+          "start": 6.2,
+          "end": 6.62
+        },
+        {
+          "word": "squared.",
+          "start": 6.62,
+          "end": 7.04
+        },
+        {
+          "word": "point",
+          "start": 8.28,
+          "end": 8.5
+        },
+        {
+          "word": "four",
+          "start": 8.5,
+          "end": 8.76
+        },
+        {
+          "word": "kilojoules",
+          "start": 8.76,
+          "end": 9.66
+        },
+        {
+          "word": "is",
+          "start": 9.66,
+          "end": 10.36
+        },
+        {
+          "word": "two",
+          "start": 10.36,
+          "end": 10.56
+        },
+        {
+          "word": "thousand",
+          "start": 10.56,
+          "end": 11.06
+        },
+        {
+          "word": "four",
+          "start": 11.06,
+          "end": 11.4
+        },
+        {
+          "word": "hundred",
+          "start": 11.4,
+          "end": 11.66
+        },
+        {
+          "word": "joules.",
+          "start": 11.66,
+          "end": 12.32
+        },
+        {
+          "word": "Convert",
+          "start": 12.82,
+          "end": 13.48
+        },
+        {
+          "word": "before",
+          "start": 13.48,
+          "end": 13.88
+        },
+        {
+          "word": "you",
+          "start": 13.88,
+          "end": 14.06
+        },
+        {
+          "word": "substitute.",
+          "start": 14.06,
+          "end": 14.74
+        },
+        {
+          "word": "So",
+          "start": 16.09,
+          "end": 16.3
+        },
+        {
+          "word": "two",
+          "start": 16.3,
+          "end": 16.52
+        },
+        {
+          "word": "thousand",
+          "start": 16.52,
+          "end": 16.98
+        },
+        {
+          "word": "four",
+          "start": 16.98,
+          "end": 17.22
+        },
+        {
+          "word": "hundred",
+          "start": 17.22,
+          "end": 17.56
+        },
+        {
+          "word": "equals",
+          "start": 17.56,
+          "end": 18.04
+        },
+        {
+          "word": "a",
+          "start": 18.04,
+          "end": 18.34
+        },
+        {
+          "word": "half",
+          "start": 18.34,
+          "end": 18.58
+        },
+        {
+          "word": "m,",
+          "start": 18.58,
+          "end": 19.02
+        },
+        {
+          "word": "times",
+          "start": 19.1,
+          "end": 20.04
+        },
+        {
+          "word": "eight",
+          "start": 20.04,
+          "end": 20.34
+        },
+        {
+          "word": "squared",
+          "start": 20.34,
+          "end": 20.7
+        },
+        {
+          "word": "minus",
+          "start": 20.7,
+          "end": 21.2
+        },
+        {
+          "word": "four",
+          "start": 21.2,
+          "end": 21.56
+        },
+        {
+          "word": "squared.",
+          "start": 21.56,
+          "end": 21.92
+        },
+        {
+          "word": "squared",
+          "start": 23.6,
+          "end": 23.98
+        },
+        {
+          "word": "is",
+          "start": 23.98,
+          "end": 24.8
+        },
+        {
+          "word": "sixty",
+          "start": 24.8,
+          "end": 25.06
+        },
+        {
+          "word": "-four,",
+          "start": 25.06,
+          "end": 25.46
+        },
+        {
+          "word": "four",
+          "start": 26.24,
+          "end": 26.58
+        },
+        {
+          "word": "squared",
+          "start": 26.58,
+          "end": 27.12
+        },
+        {
+          "word": "is",
+          "start": 27.12,
+          "end": 27.7
+        },
+        {
+          "word": "sixteen.",
+          "start": 27.7,
+          "end": 28.22
+        },
+        {
+          "word": "64",
+          "start": 28.22,
+          "end": 29.66
+        },
+        {
+          "word": "minus",
+          "start": 29.66,
+          "end": 30.7
+        },
+        {
+          "word": "16",
+          "start": 30.7,
+          "end": 31.32
+        },
+        {
+          "word": "is",
+          "start": 31.32,
+          "end": 31.66
+        },
+        {
+          "word": "48.",
+          "start": 31.66,
+          "end": 32.16
+        },
+        {
+          "word": "of",
+          "start": 34.06,
+          "end": 34.42
+        },
+        {
+          "word": "48",
+          "start": 34.42,
+          "end": 34.98
+        },
+        {
+          "word": "is",
+          "start": 34.98,
+          "end": 35.66
+        },
+        {
+          "word": "24",
+          "start": 35.66,
+          "end": 36.14
+        },
+        {
+          "word": "so",
+          "start": 36.14,
+          "end": 36.32
+        },
+        {
+          "word": "2400",
+          "start": 36.32,
+          "end": 37.42
+        },
+        {
+          "word": "equals",
+          "start": 37.42,
+          "end": 37.78
+        },
+        {
+          "word": "24m.",
+          "start": 37.78,
+          "end": 38.7
+        },
+        {
+          "word": "Divide",
+          "start": 40.11,
+          "end": 40.62
+        },
+        {
+          "word": "by",
+          "start": 40.62,
+          "end": 40.8
+        },
+        {
+          "word": "24",
+          "start": 40.8,
+          "end": 41.4
+        },
+        {
+          "word": "the",
+          "start": 41.4,
+          "end": 42.16
+        },
+        {
+          "word": "mass",
+          "start": 42.16,
+          "end": 42.56
+        },
+        {
+          "word": "is",
+          "start": 42.56,
+          "end": 42.84
+        },
+        {
+          "word": "100kg.",
+          "start": 42.84,
+          "end": 43.68
+        }
+      ],
+      "cues": {
+        "formula": 0.54,
+        "convert": 8.28,
+        "substitute": 16.09,
+        "squares": 23.6,
+        "simplify": 34.06,
+        "answer": 40.11
+      },
+      "figureEvents": [
+        {
+          "id": "number-18",
+          "wordIndex": 18,
+          "word": "2400",
+          "spokenPhrase": "two thousand four hundred",
+          "start": 10.36,
+          "target": "keFig",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-28",
+          "wordIndex": 28,
+          "word": "2400",
+          "spokenPhrase": "two thousand four hundred",
+          "start": 16.3,
+          "target": "keFig",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-37",
+          "wordIndex": 37,
+          "word": "8",
+          "spokenPhrase": "eight",
+          "start": 20.04,
+          "target": "vFig",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-40",
+          "wordIndex": 40,
+          "word": "4",
+          "spokenPhrase": "four",
+          "start": 21.2,
+          "target": "uFig",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-60",
+          "wordIndex": 60,
+          "word": "2400",
+          "spokenPhrase": "2400",
+          "start": 36.32,
+          "target": "keFig",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-69",
+          "wordIndex": 69,
+          "word": "100",
+          "spokenPhrase": "100kg.",
+          "start": 42.84,
+          "target": "mFig",
+          "kind": "spoken"
+        }
+      ],
+      "wordCount": 70,
+      "text": "change in kinetic energy is a half m, times v squared minus u squared. point four kilojoules is two thousand four hundred joules. Convert before you substitute. So two thousand four hundred equals a half m, times eight squared minus four squared. squared is sixty -four, four squared is sixteen. 64 minus 16 is 48. of 48 is 24 so 2400 equals 24m. Divide by 24 the mass is 100kg.",
+      "duration": 46.889796
+    },
+    {
+      "id": "s08",
+      "title": "Then, the gain in potential energy",
+      "mode": "gpework",
+      "voiceSpeed": 0.9,
+      "tempo": "slow",
+      "beats": [
+        {
+          "id": "formula",
+          "text": "Gain in gravitational potential energy is m g, times the gain in height.",
+          "hold": 0.8,
+          "ink": "Δ G P E = m g Δ h",
+          "start": 0.4,
+          "speechEnd": 7.31,
+          "end": 7.51,
+          "cue": 0.4,
+          "penEnd": 7.43
+        },
+        {
+          "id": "substitute",
+          "text": "One hundred, times ten, times three.",
+          "hold": 1,
+          "ink": "Δ G P E = 100 × 10 × 3",
+          "start": 8.31,
+          "speechEnd": 10.65,
+          "end": 10.85,
+          "cue": 8.31,
+          "penEnd": 10.77
+        },
+        {
+          "id": "answer",
+          "text": "Three thousand joules. Three kilojoules gained.",
+          "hold": 2,
+          "ink": "Δ G P E = 3000 J",
+          "start": 11.85,
+          "speechEnd": 15.92,
+          "end": 16.12,
+          "cue": 11.85,
+          "penEnd": 16.040000000000003
+        },
+        {
+          "id": "meaning",
+          "text": "So at the top she has three thousand more joules of potential energy, and two thousand four hundred more joules of kinetic energy. Both, at the same time.",
+          "hold": 1,
+          "start": 18.12,
+          "speechEnd": 30.81,
+          "end": 31.01,
+          "cue": 18.14,
+          "penEnd": 30.930000000000003
+        }
+      ],
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 7.51,
+          "end": 8.31,
+          "duration": 0.8
+        },
+        {
+          "kind": "hold",
+          "start": 10.85,
+          "end": 11.85,
+          "duration": 1
+        },
+        {
+          "kind": "hold",
+          "start": 16.12,
+          "end": 18.12,
+          "duration": 2
+        },
+        {
+          "kind": "hold",
+          "start": 31.01,
+          "end": 32.01,
+          "duration": 1
+        }
+      ],
+      "audio": "energy-fable-s08.mp3",
+      "audioSha256": "9e5e0667dc4312ff21a721fd42f0e4d56dd5ba4b92e6e67713a23ee6de4bfe66",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "provider": "elevenlabs",
+      "sampleDuration": 32.36,
+      "words": [
+        {
+          "word": "Gain",
+          "start": 0.4,
+          "end": 0.82
+        },
+        {
+          "word": "in",
+          "start": 0.82,
+          "end": 1.16
+        },
+        {
+          "word": "gravitational",
+          "start": 1.16,
+          "end": 1.7
+        },
+        {
+          "word": "potential",
+          "start": 1.7,
+          "end": 2.34
+        },
+        {
+          "word": "energy",
+          "start": 2.34,
+          "end": 3.0
+        },
+        {
+          "word": "is",
+          "start": 3.0,
+          "end": 3.74
+        },
+        {
+          "word": "m",
+          "start": 3.74,
+          "end": 3.98
+        },
+        {
+          "word": "g,",
+          "start": 3.98,
+          "end": 4.28
+        },
+        {
+          "word": "times",
+          "start": 4.3,
+          "end": 5.54
+        },
+        {
+          "word": "the",
+          "start": 5.54,
+          "end": 5.78
+        },
+        {
+          "word": "gain",
+          "start": 5.78,
+          "end": 6.1
+        },
+        {
+          "word": "in",
+          "start": 6.1,
+          "end": 6.76
+        },
+        {
+          "word": "height.",
+          "start": 6.76,
+          "end": 7.2
+        },
+        {
+          "word": "One",
+          "start": 8.31,
+          "end": 8.46
+        },
+        {
+          "word": "hundred,",
+          "start": 8.46,
+          "end": 8.84
+        },
+        {
+          "word": "times",
+          "start": 9.0,
+          "end": 9.28
+        },
+        {
+          "word": "ten,",
+          "start": 9.28,
+          "end": 9.64
+        },
+        {
+          "word": "times",
+          "start": 9.8,
+          "end": 10.22
+        },
+        {
+          "word": "three.",
+          "start": 10.22,
+          "end": 10.58
+        },
+        {
+          "word": "Three",
+          "start": 11.85,
+          "end": 12.16
+        },
+        {
+          "word": "thousand",
+          "start": 12.16,
+          "end": 12.56
+        },
+        {
+          "word": "joules.",
+          "start": 12.56,
+          "end": 13.22
+        },
+        {
+          "word": "Three",
+          "start": 13.66,
+          "end": 13.9
+        },
+        {
+          "word": "kilojoules",
+          "start": 13.9,
+          "end": 14.84
+        },
+        {
+          "word": "gained.",
+          "start": 14.84,
+          "end": 15.5
+        },
+        {
+          "word": "So",
+          "start": 18.14,
+          "end": 18.34
+        },
+        {
+          "word": "at",
+          "start": 18.34,
+          "end": 18.52
+        },
+        {
+          "word": "the",
+          "start": 18.52,
+          "end": 18.6
+        },
+        {
+          "word": "top",
+          "start": 18.6,
+          "end": 18.92
+        },
+        {
+          "word": "she",
+          "start": 18.92,
+          "end": 19.72
+        },
+        {
+          "word": "has",
+          "start": 19.72,
+          "end": 19.94
+        },
+        {
+          "word": "three",
+          "start": 19.94,
+          "end": 20.24
+        },
+        {
+          "word": "thousand",
+          "start": 20.24,
+          "end": 20.86
+        },
+        {
+          "word": "more",
+          "start": 20.86,
+          "end": 21.16
+        },
+        {
+          "word": "joules",
+          "start": 21.16,
+          "end": 21.8
+        },
+        {
+          "word": "of",
+          "start": 21.8,
+          "end": 22.52
+        },
+        {
+          "word": "potential",
+          "start": 22.52,
+          "end": 22.92
+        },
+        {
+          "word": "energy,",
+          "start": 22.92,
+          "end": 23.5
+        },
+        {
+          "word": "and",
+          "start": 24.12,
+          "end": 24.32
+        },
+        {
+          "word": "two",
+          "start": 24.32,
+          "end": 24.58
+        },
+        {
+          "word": "thousand",
+          "start": 24.58,
+          "end": 25.14
+        },
+        {
+          "word": "four",
+          "start": 25.14,
+          "end": 25.5
+        },
+        {
+          "word": "hundred",
+          "start": 25.5,
+          "end": 25.82
+        },
+        {
+          "word": "more",
+          "start": 25.82,
+          "end": 26.2
+        },
+        {
+          "word": "joules",
+          "start": 26.2,
+          "end": 26.94
+        },
+        {
+          "word": "of",
+          "start": 26.94,
+          "end": 27.56
+        },
+        {
+          "word": "kinetic",
+          "start": 27.56,
+          "end": 28.0
+        },
+        {
+          "word": "energy.",
+          "start": 28.0,
+          "end": 28.62
+        },
+        {
+          "word": "Both",
+          "start": 28.62,
+          "end": 29.34
+        },
+        {
+          "word": "at",
+          "start": 29.34,
+          "end": 30.04
+        },
+        {
+          "word": "the",
+          "start": 30.04,
+          "end": 30.16
+        },
+        {
+          "word": "same",
+          "start": 30.16,
+          "end": 30.36
+        },
+        {
+          "word": "time.",
+          "start": 30.36,
+          "end": 30.64
+        }
+      ],
+      "cues": {
+        "formula": 0.4,
+        "substitute": 8.31,
+        "answer": 11.85,
+        "meaning": 18.14
+      },
+      "figureEvents": [
+        {
+          "id": "number-13",
+          "wordIndex": 13,
+          "word": "100",
+          "spokenPhrase": "One hundred,",
+          "start": 8.31,
+          "target": "mFig",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-16",
+          "wordIndex": 16,
+          "word": "10",
+          "spokenPhrase": "ten,",
+          "start": 9.28,
+          "target": "gravity",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-18",
+          "wordIndex": 18,
+          "word": "3",
+          "spokenPhrase": "three.",
+          "start": 10.22,
+          "target": "hFig",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-19",
+          "wordIndex": 19,
+          "word": "3000",
+          "spokenPhrase": "Three thousand",
+          "start": 11.85,
+          "target": "gpeFig",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-31",
+          "wordIndex": 31,
+          "word": "3000",
+          "spokenPhrase": "three thousand",
+          "start": 19.94,
+          "target": "gpeFig",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-39",
+          "wordIndex": 39,
+          "word": "2400",
+          "spokenPhrase": "two thousand four hundred",
+          "start": 24.32,
+          "target": "keFig",
+          "kind": "spoken"
+        }
+      ],
+      "wordCount": 53,
+      "text": "Gain in gravitational potential energy is m g, times the gain in height. One hundred, times ten, times three. Three thousand joules. Three kilojoules gained. So at the top she has three thousand more joules of potential energy, and two thousand four hundred more joules of kinetic energy. Both at the same time.",
+      "duration": 32.391837
+    },
+    {
+      "id": "s09",
+      "title": "What would change on the way down?",
+      "mode": "closing",
+      "voiceSpeed": 1,
+      "tempo": "brisk",
+      "beats": [
+        {
+          "id": "whatif",
+          "text": "What if she now rolls back down the same three metres? The height change is minus three, so the change in potential energy is one hundred, times ten, times minus three: minus three thousand joules. A loss.",
+          "hold": 1,
+          "ink": "Δ G P E = 100 × 10 × (−3) = −3000 J",
+          "start": 0.4,
+          "speechEnd": 15.31,
+          "end": 15.51,
+          "cue": 0.6,
+          "penEnd": 15.43
+        },
+        {
+          "id": "outcome1",
+          "text": "Kinetic energy: a half m v squared, in joules.",
+          "hold": 0.3,
+          "caption": "Kinetic energy: ½ m v² in joules.",
+          "start": 16.51,
+          "speechEnd": 20.45,
+          "end": 20.65,
+          "cue": 16.51,
+          "penEnd": 20.57
+        },
+        {
+          "id": "outcome2",
+          "text": "Change in kinetic energy: a half m, v squared minus u squared.",
+          "hold": 0.3,
+          "caption": "Change in KE: ½ m (v² − u²).",
+          "start": 20.95,
+          "speechEnd": 26.6,
+          "end": 26.8,
+          "cue": 21.0,
+          "penEnd": 26.720000000000002
+        },
+        {
+          "id": "outcome3",
+          "text": "Gravitational potential energy, m g h, from a chosen level.",
+          "hold": 1,
+          "caption": "GPE = mgh from a chosen level.",
+          "start": 27.1,
+          "speechEnd": 31.27,
+          "end": 31.47,
+          "cue": 27.18,
+          "penEnd": 31.39
+        }
+      ],
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 15.51,
+          "end": 16.51,
+          "duration": 1
+        },
+        {
+          "kind": "hold",
+          "start": 20.65,
+          "end": 20.95,
+          "duration": 0.3
+        },
+        {
+          "kind": "hold",
+          "start": 26.8,
+          "end": 27.1,
+          "duration": 0.3
+        },
+        {
+          "kind": "hold",
+          "start": 31.47,
+          "end": 32.47,
+          "duration": 1
+        }
+      ],
+      "audio": "energy-fable-s09.mp3",
+      "audioSha256": "e576c4a85cea565b9fd4310e65d3f025ce07a60d772dd8d9944689d19d6f72f0",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "provider": "elevenlabs",
+      "sampleDuration": 32.82,
+      "words": [
+        {
+          "word": "if",
+          "start": 0.6,
+          "end": 0.8
+        },
+        {
+          "word": "she",
+          "start": 0.8,
+          "end": 0.98
+        },
+        {
+          "word": "now",
+          "start": 0.98,
+          "end": 1.28
+        },
+        {
+          "word": "rolls",
+          "start": 1.28,
+          "end": 1.78
+        },
+        {
+          "word": "back",
+          "start": 1.78,
+          "end": 2.16
+        },
+        {
+          "word": "down",
+          "start": 2.16,
+          "end": 2.6
+        },
+        {
+          "word": "the",
+          "start": 2.6,
+          "end": 3.02
+        },
+        {
+          "word": "same",
+          "start": 3.02,
+          "end": 3.3
+        },
+        {
+          "word": "three",
+          "start": 3.3,
+          "end": 3.56
+        },
+        {
+          "word": "metres?",
+          "start": 3.56,
+          "end": 3.9
+        },
+        {
+          "word": "The",
+          "start": 4.88,
+          "end": 4.98
+        },
+        {
+          "word": "height",
+          "start": 4.98,
+          "end": 5.24
+        },
+        {
+          "word": "change",
+          "start": 5.24,
+          "end": 5.7
+        },
+        {
+          "word": "is",
+          "start": 5.7,
+          "end": 5.96
+        },
+        {
+          "word": "minus",
+          "start": 5.96,
+          "end": 6.3
+        },
+        {
+          "word": "three,",
+          "start": 6.3,
+          "end": 6.78
+        },
+        {
+          "word": "so",
+          "start": 6.92,
+          "end": 7.52
+        },
+        {
+          "word": "the",
+          "start": 7.52,
+          "end": 7.66
+        },
+        {
+          "word": "change",
+          "start": 7.66,
+          "end": 8.12
+        },
+        {
+          "word": "in",
+          "start": 8.12,
+          "end": 8.34
+        },
+        {
+          "word": "potential",
+          "start": 8.34,
+          "end": 8.66
+        },
+        {
+          "word": "energy",
+          "start": 8.66,
+          "end": 9.14
+        },
+        {
+          "word": "is",
+          "start": 9.14,
+          "end": 9.42
+        },
+        {
+          "word": "one",
+          "start": 9.42,
+          "end": 9.6
+        },
+        {
+          "word": "hundred,",
+          "start": 9.6,
+          "end": 9.96
+        },
+        {
+          "word": "times",
+          "start": 10.26,
+          "end": 10.44
+        },
+        {
+          "word": "ten,",
+          "start": 10.44,
+          "end": 10.78
+        },
+        {
+          "word": "times",
+          "start": 11.12,
+          "end": 11.3
+        },
+        {
+          "word": "minus",
+          "start": 11.3,
+          "end": 11.6
+        },
+        {
+          "word": "three,",
+          "start": 11.6,
+          "end": 12.04
+        },
+        {
+          "word": "minus",
+          "start": 12.42,
+          "end": 12.68
+        },
+        {
+          "word": "three",
+          "start": 12.68,
+          "end": 13.08
+        },
+        {
+          "word": "thousand",
+          "start": 13.08,
+          "end": 13.5
+        },
+        {
+          "word": "joules.",
+          "start": 13.5,
+          "end": 14.26
+        },
+        {
+          "word": "A",
+          "start": 14.6,
+          "end": 14.76
+        },
+        {
+          "word": "loss.",
+          "start": 14.76,
+          "end": 15.16
+        },
+        {
+          "word": "Kinetic",
+          "start": 16.51,
+          "end": 16.88
+        },
+        {
+          "word": "energy,",
+          "start": 16.88,
+          "end": 17.26
+        },
+        {
+          "word": "a",
+          "start": 17.96,
+          "end": 18.18
+        },
+        {
+          "word": "half",
+          "start": 18.18,
+          "end": 18.44
+        },
+        {
+          "word": "m",
+          "start": 18.44,
+          "end": 18.62
+        },
+        {
+          "word": "v",
+          "start": 18.62,
+          "end": 18.86
+        },
+        {
+          "word": "squared,",
+          "start": 18.86,
+          "end": 19.24
+        },
+        {
+          "word": "in",
+          "start": 19.8,
+          "end": 19.94
+        },
+        {
+          "word": "joules.",
+          "start": 19.94,
+          "end": 20.4
+        },
+        {
+          "word": "Change",
+          "start": 21.0,
+          "end": 21.28
+        },
+        {
+          "word": "in",
+          "start": 21.28,
+          "end": 21.64
+        },
+        {
+          "word": "kinetic",
+          "start": 21.64,
+          "end": 22.04
+        },
+        {
+          "word": "energy,",
+          "start": 22.04,
+          "end": 22.56
+        },
+        {
+          "word": "a",
+          "start": 23.16,
+          "end": 23.3
+        },
+        {
+          "word": "half",
+          "start": 23.3,
+          "end": 23.6
+        },
+        {
+          "word": "m,",
+          "start": 23.6,
+          "end": 24.0
+        },
+        {
+          "word": "v",
+          "start": 24.38,
+          "end": 24.78
+        },
+        {
+          "word": "squared",
+          "start": 24.78,
+          "end": 25.32
+        },
+        {
+          "word": "minus",
+          "start": 25.32,
+          "end": 25.64
+        },
+        {
+          "word": "u",
+          "start": 25.64,
+          "end": 26.02
+        },
+        {
+          "word": "squared.",
+          "start": 26.02,
+          "end": 26.46
+        },
+        {
+          "word": "Gravitational",
+          "start": 27.18,
+          "end": 27.72
+        },
+        {
+          "word": "potential",
+          "start": 27.72,
+          "end": 28.06
+        },
+        {
+          "word": "energy,",
+          "start": 28.06,
+          "end": 28.78
+        },
+        {
+          "word": "MGH",
+          "start": 28.78,
+          "end": 29.9
+        },
+        {
+          "word": "from",
+          "start": 29.9,
+          "end": 30.28
+        },
+        {
+          "word": "a",
+          "start": 30.28,
+          "end": 30.48
+        },
+        {
+          "word": "chosen",
+          "start": 30.48,
+          "end": 30.72
+        },
+        {
+          "word": "level.",
+          "start": 30.72,
+          "end": 31.12
+        }
+      ],
+      "cues": {
+        "whatif": 0.6,
+        "outcome1": 16.51,
+        "outcome2": 21.0,
+        "outcome3": 27.18
+      },
+      "figureEvents": [
+        {
+          "id": "number-8",
+          "wordIndex": 8,
+          "word": "3",
+          "spokenPhrase": "three",
+          "start": 3.3,
+          "target": "hFig",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-15",
+          "wordIndex": 15,
+          "word": "3",
+          "spokenPhrase": "three,",
+          "start": 6.3,
+          "target": "hFig",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-23",
+          "wordIndex": 23,
+          "word": "100",
+          "spokenPhrase": "one hundred,",
+          "start": 9.42,
+          "target": "mFig",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-26",
+          "wordIndex": 26,
+          "word": "10",
+          "spokenPhrase": "ten,",
+          "start": 10.44,
+          "target": "gravity",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-29",
+          "wordIndex": 29,
+          "word": "3",
+          "spokenPhrase": "three,",
+          "start": 11.6,
+          "target": "hFig",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-31",
+          "wordIndex": 31,
+          "word": "3000",
+          "spokenPhrase": "three thousand",
+          "start": 12.68,
+          "target": "gpeFig",
+          "kind": "spoken"
+        }
+      ],
+      "wordCount": 65,
+      "text": "if she now rolls back down the same three metres? The height change is minus three, so the change in potential energy is one hundred, times ten, times minus three, minus three thousand joules. A loss. Kinetic energy, a half m v squared, in joules. Change in kinetic energy, a half m, v squared minus u squared. Gravitational potential energy, MGH from a chosen level.",
+      "duration": 32.862041
+    }
+  ],
+  "totalDuration": 360.15020499999997,
+  "engine": "faster-whisper-small (local CPU)",
+  "unresolvedCues": []
+}

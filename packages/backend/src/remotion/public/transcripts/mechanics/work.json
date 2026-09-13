@@ -1,0 +1,4472 @@
+{
+  "project": "mechanics-work",
+  "sceneCount": 8,
+  "scenes": [
+    {
+      "id": "s01",
+      "title": "Work",
+      "mode": "opening",
+      "voiceSpeed": 1,
+      "tempo": "brisk",
+      "beats": [
+        {
+          "id": "syllabus",
+          "text": "Syllabus four point five includes work done by a force.",
+          "hold": 0,
+          "start": 0.4,
+          "speechEnd": 3.71,
+          "end": 3.91,
+          "cue": 0.4,
+          "penEnd": 3.83
+        },
+        {
+          "id": "outcome1",
+          "text": "By the end, you can calculate work from a force and a displacement.",
+          "hold": 0,
+          "caption": "Calculate work from force and displacement",
+          "start": 3.91,
+          "speechEnd": 8.82,
+          "end": 9.02,
+          "cue": 4.0,
+          "penEnd": 8.94
+        },
+        {
+          "id": "outcome2",
+          "text": "And calculate work against friction and gravity.",
+          "hold": 0,
+          "caption": "Calculate work against friction and gravity",
+          "start": 9.02,
+          "speechEnd": 12.42,
+          "end": 12.62,
+          "cue": 9.02,
+          "penEnd": 12.54
+        }
+      ],
+      "holds": [],
+      "audio": "work-s01.mp3",
+      "audioSha256": "268c6dd308f7b037807d65f10b0749e4bf7030fb7aa953b11401d6fa9e056538",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "provider": "elevenlabs",
+      "sampleDuration": 12.97,
+      "words": [
+        {
+          "word": "Syllabus",
+          "start": 0.4,
+          "end": 0.8
+        },
+        {
+          "word": "four",
+          "start": 0.8,
+          "end": 1.08
+        },
+        {
+          "word": "point",
+          "start": 1.08,
+          "end": 1.3
+        },
+        {
+          "word": "five",
+          "start": 1.3,
+          "end": 1.64
+        },
+        {
+          "word": "includes",
+          "start": 1.64,
+          "end": 2.04
+        },
+        {
+          "word": "work",
+          "start": 2.04,
+          "end": 2.44
+        },
+        {
+          "word": "done",
+          "start": 2.44,
+          "end": 2.72
+        },
+        {
+          "word": "by",
+          "start": 2.72,
+          "end": 2.98
+        },
+        {
+          "word": "a",
+          "start": 2.98,
+          "end": 3.1
+        },
+        {
+          "word": "force.",
+          "start": 3.1,
+          "end": 3.46
+        },
+        {
+          "word": "By",
+          "start": 4.0,
+          "end": 4.06
+        },
+        {
+          "word": "the",
+          "start": 4.06,
+          "end": 4.16
+        },
+        {
+          "word": "end,",
+          "start": 4.16,
+          "end": 4.44
+        },
+        {
+          "word": "you",
+          "start": 5.24,
+          "end": 5.3
+        },
+        {
+          "word": "can",
+          "start": 5.3,
+          "end": 5.46
+        },
+        {
+          "word": "calculate",
+          "start": 5.46,
+          "end": 5.88
+        },
+        {
+          "word": "work",
+          "start": 5.88,
+          "end": 6.48
+        },
+        {
+          "word": "from",
+          "start": 6.48,
+          "end": 6.76
+        },
+        {
+          "word": "a",
+          "start": 6.76,
+          "end": 6.94
+        },
+        {
+          "word": "force",
+          "start": 6.94,
+          "end": 7.26
+        },
+        {
+          "word": "and",
+          "start": 7.26,
+          "end": 7.94
+        },
+        {
+          "word": "a",
+          "start": 7.94,
+          "end": 8.06
+        },
+        {
+          "word": "displacement.",
+          "start": 8.06,
+          "end": 8.52
+        },
+        {
+          "word": "And",
+          "start": 9.02,
+          "end": 9.16
+        },
+        {
+          "word": "calculate",
+          "start": 9.16,
+          "end": 9.52
+        },
+        {
+          "word": "work",
+          "start": 9.52,
+          "end": 9.98
+        },
+        {
+          "word": "against",
+          "start": 9.98,
+          "end": 11.12
+        },
+        {
+          "word": "friction",
+          "start": 11.12,
+          "end": 11.58
+        },
+        {
+          "word": "and",
+          "start": 11.58,
+          "end": 11.8
+        },
+        {
+          "word": "gravity.",
+          "start": 11.8,
+          "end": 12.14
+        }
+      ],
+      "cues": {
+        "syllabus": 0.4,
+        "outcome1": 4.0,
+        "outcome2": 9.02
+      },
+      "figureEvents": [],
+      "wordCount": 30,
+      "text": "Syllabus four point five includes work done by a force. By the end, you can calculate work from a force and a displacement. And calculate work against friction and gravity.",
+      "duration": 13.00898
+    },
+    {
+      "id": "s02",
+      "title": "A crate travels uphill",
+      "mode": "story",
+      "voiceSpeed": 1,
+      "tempo": "brisk",
+      "beats": [
+        {
+          "id": "story",
+          "text": "Consider a crate being pulled steadily up a rough ramp. It slides along the slope without speeding up or slowing down.",
+          "hold": 0,
+          "start": 0.4,
+          "speechEnd": 10.27,
+          "end": 10.47,
+          "cue": 0.4,
+          "penEnd": 10.39
+        },
+        {
+          "id": "resistance",
+          "text": "The pull must overcome friction and the downhill effect of gravity. We will find how much work is needed against each resistance.",
+          "hold": 1,
+          "start": 10.47,
+          "speechEnd": 19.94,
+          "end": 20.14,
+          "cue": 10.56,
+          "penEnd": 20.060000000000002
+        }
+      ],
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 20.14,
+          "end": 21.14,
+          "duration": 1
+        }
+      ],
+      "audio": "work-s02.mp3",
+      "audioSha256": "31bcef538cef176eea4f92e158356b705af2f7b3cb03ed10fa2d83a5f18cf4a0",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "provider": "elevenlabs",
+      "sampleDuration": 21.49,
+      "words": [
+        {
+          "word": "Consider",
+          "start": 0.4,
+          "end": 0.78
+        },
+        {
+          "word": "a",
+          "start": 0.78,
+          "end": 1.06
+        },
+        {
+          "word": "crate",
+          "start": 1.06,
+          "end": 1.32
+        },
+        {
+          "word": "being",
+          "start": 1.32,
+          "end": 1.86
+        },
+        {
+          "word": "pulled",
+          "start": 1.86,
+          "end": 2.34
+        },
+        {
+          "word": "steadily",
+          "start": 2.34,
+          "end": 3.14
+        },
+        {
+          "word": "up",
+          "start": 3.14,
+          "end": 3.52
+        },
+        {
+          "word": "a",
+          "start": 3.52,
+          "end": 3.72
+        },
+        {
+          "word": "rough",
+          "start": 3.72,
+          "end": 4.0
+        },
+        {
+          "word": "ramp.",
+          "start": 4.0,
+          "end": 4.34
+        },
+        {
+          "word": "It",
+          "start": 5.24,
+          "end": 5.42
+        },
+        {
+          "word": "slides",
+          "start": 5.42,
+          "end": 5.86
+        },
+        {
+          "word": "along",
+          "start": 5.86,
+          "end": 6.24
+        },
+        {
+          "word": "the",
+          "start": 6.24,
+          "end": 6.54
+        },
+        {
+          "word": "slope",
+          "start": 6.54,
+          "end": 6.84
+        },
+        {
+          "word": "without",
+          "start": 6.84,
+          "end": 7.74
+        },
+        {
+          "word": "speeding",
+          "start": 7.74,
+          "end": 8.1
+        },
+        {
+          "word": "up",
+          "start": 8.1,
+          "end": 8.52
+        },
+        {
+          "word": "or",
+          "start": 8.52,
+          "end": 9.28
+        },
+        {
+          "word": "slowing",
+          "start": 9.28,
+          "end": 9.68
+        },
+        {
+          "word": "down.",
+          "start": 9.68,
+          "end": 10.1
+        },
+        {
+          "word": "The",
+          "start": 10.56,
+          "end": 10.64
+        },
+        {
+          "word": "pull",
+          "start": 10.64,
+          "end": 10.98
+        },
+        {
+          "word": "must",
+          "start": 10.98,
+          "end": 11.24
+        },
+        {
+          "word": "overcome",
+          "start": 11.24,
+          "end": 11.66
+        },
+        {
+          "word": "friction",
+          "start": 11.66,
+          "end": 12.18
+        },
+        {
+          "word": "and",
+          "start": 12.18,
+          "end": 13.12
+        },
+        {
+          "word": "the",
+          "start": 13.12,
+          "end": 13.26
+        },
+        {
+          "word": "downhill",
+          "start": 13.26,
+          "end": 13.66
+        },
+        {
+          "word": "effect",
+          "start": 13.66,
+          "end": 14.24
+        },
+        {
+          "word": "of",
+          "start": 14.24,
+          "end": 14.6
+        },
+        {
+          "word": "gravity.",
+          "start": 14.6,
+          "end": 15.06
+        },
+        {
+          "word": "We",
+          "start": 15.9,
+          "end": 16.18
+        },
+        {
+          "word": "will",
+          "start": 16.18,
+          "end": 16.32
+        },
+        {
+          "word": "find",
+          "start": 16.32,
+          "end": 16.56
+        },
+        {
+          "word": "how",
+          "start": 16.56,
+          "end": 16.8
+        },
+        {
+          "word": "much",
+          "start": 16.8,
+          "end": 17.02
+        },
+        {
+          "word": "work",
+          "start": 17.02,
+          "end": 17.26
+        },
+        {
+          "word": "is",
+          "start": 17.26,
+          "end": 17.44
+        },
+        {
+          "word": "needed",
+          "start": 17.44,
+          "end": 17.76
+        },
+        {
+          "word": "against",
+          "start": 17.76,
+          "end": 18.38
+        },
+        {
+          "word": "each",
+          "start": 18.38,
+          "end": 19.06
+        },
+        {
+          "word": "resistance.",
+          "start": 19.06,
+          "end": 19.62
+        }
+      ],
+      "cues": {
+        "story": 0.4,
+        "resistance": 10.56
+      },
+      "figureEvents": [],
+      "wordCount": 43,
+      "text": "Consider a crate being pulled steadily up a rough ramp. It slides along the slope without speeding up or slowing down. The pull must overcome friction and the downhill effect of gravity. We will find how much work is needed against each resistance.",
+      "duration": 21.524898
+    },
+    {
+      "id": "s03",
+      "title": "The full question",
+      "mode": "problem",
+      "voiceSpeed": 0.9,
+      "tempo": "slow",
+      "beats": [
+        {
+          "id": "mass",
+          "text": "Our crate has mass four kilograms.",
+          "hold": 0,
+          "start": 0.4,
+          "speechEnd": 2.84,
+          "end": 3.04,
+          "cue": 0.6,
+          "penEnd": 2.96
+        },
+        {
+          "id": "distance",
+          "text": "It travels five metres up the line of greatest slope.",
+          "hold": 0,
+          "start": 3.04,
+          "speechEnd": 7.25,
+          "end": 7.45,
+          "cue": 3.06,
+          "penEnd": 7.37
+        },
+        {
+          "id": "angle",
+          "text": "The ramp is thirty degrees above horizontal.",
+          "hold": 0,
+          "start": 7.45,
+          "speechEnd": 10.44,
+          "end": 10.64,
+          "cue": 7.54,
+          "penEnd": 10.56
+        },
+        {
+          "id": "friction",
+          "text": "The coefficient of friction is zero point two five.",
+          "hold": 0,
+          "start": 10.64,
+          "speechEnd": 14.03,
+          "end": 14.23,
+          "cue": 10.66,
+          "penEnd": 14.15
+        },
+        {
+          "id": "gravity",
+          "text": "Take g as ten metres per second squared.",
+          "hold": 0,
+          "start": 14.23,
+          "speechEnd": 16.87,
+          "end": 17.07,
+          "cue": 14.28,
+          "penEnd": 16.990000000000002
+        },
+        {
+          "id": "conditions",
+          "text": "The pull is parallel to the slope. Speed is constant and contact is maintained. Only weight, pull, reaction and sliding friction act. Use the sliding model f equals mu R.",
+          "hold": 0,
+          "start": 17.07,
+          "speechEnd": 34.63,
+          "end": 34.83,
+          "cue": 17.14,
+          "penEnd": 34.75
+        },
+        {
+          "id": "unknown",
+          "text": "Find the work done against friction, and the work done against gravity. All the information is now on the diagram. Pause and picture the journey.",
+          "hold": 2,
+          "start": 34.83,
+          "speechEnd": 47.55,
+          "end": 47.75,
+          "cue": 34.96,
+          "penEnd": 47.67
+        }
+      ],
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 47.75,
+          "end": 49.75,
+          "duration": 2
+        }
+      ],
+      "audio": "work-s03.mp3",
+      "audioSha256": "93f75a9fb194ef6c33d0eb2c9b10ca30bca90d5c18cd8326417d230942e06e25",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "provider": "elevenlabs",
+      "sampleDuration": 50.1,
+      "words": [
+        {
+          "word": "crate",
+          "start": 0.6,
+          "end": 0.9
+        },
+        {
+          "word": "has",
+          "start": 0.9,
+          "end": 1.2
+        },
+        {
+          "word": "mass",
+          "start": 1.2,
+          "end": 1.54
+        },
+        {
+          "word": "four",
+          "start": 1.54,
+          "end": 2.0
+        },
+        {
+          "word": "kilograms.",
+          "start": 2.0,
+          "end": 2.28
+        },
+        {
+          "word": "It",
+          "start": 3.06,
+          "end": 3.2
+        },
+        {
+          "word": "travels",
+          "start": 3.2,
+          "end": 3.82
+        },
+        {
+          "word": "five",
+          "start": 3.82,
+          "end": 4.06
+        },
+        {
+          "word": "metres",
+          "start": 4.06,
+          "end": 4.44
+        },
+        {
+          "word": "up",
+          "start": 4.44,
+          "end": 5.2
+        },
+        {
+          "word": "the",
+          "start": 5.2,
+          "end": 5.34
+        },
+        {
+          "word": "line",
+          "start": 5.34,
+          "end": 5.72
+        },
+        {
+          "word": "of",
+          "start": 5.72,
+          "end": 6.08
+        },
+        {
+          "word": "greatest",
+          "start": 6.08,
+          "end": 6.44
+        },
+        {
+          "word": "slope.",
+          "start": 6.44,
+          "end": 7.04
+        },
+        {
+          "word": "The",
+          "start": 7.54,
+          "end": 7.6
+        },
+        {
+          "word": "ramp",
+          "start": 7.6,
+          "end": 7.94
+        },
+        {
+          "word": "is",
+          "start": 7.94,
+          "end": 8.24
+        },
+        {
+          "word": "thirty",
+          "start": 8.24,
+          "end": 8.56
+        },
+        {
+          "word": "degrees",
+          "start": 8.56,
+          "end": 8.96
+        },
+        {
+          "word": "above",
+          "start": 8.96,
+          "end": 9.32
+        },
+        {
+          "word": "horizontal.",
+          "start": 9.32,
+          "end": 9.96
+        },
+        {
+          "word": "The",
+          "start": 10.66,
+          "end": 10.76
+        },
+        {
+          "word": "coefficient",
+          "start": 10.76,
+          "end": 11.18
+        },
+        {
+          "word": "of",
+          "start": 11.18,
+          "end": 11.72
+        },
+        {
+          "word": "friction",
+          "start": 11.72,
+          "end": 12.08
+        },
+        {
+          "word": "is",
+          "start": 12.08,
+          "end": 12.64
+        },
+        {
+          "word": "zero",
+          "start": 12.64,
+          "end": 13.1
+        },
+        {
+          "word": "point",
+          "start": 13.1,
+          "end": 13.4
+        },
+        {
+          "word": "two",
+          "start": 13.4,
+          "end": 13.66
+        },
+        {
+          "word": "five.",
+          "start": 13.66,
+          "end": 13.9
+        },
+        {
+          "word": "Take",
+          "start": 14.28,
+          "end": 14.5
+        },
+        {
+          "word": "g",
+          "start": 14.5,
+          "end": 14.88
+        },
+        {
+          "word": "as",
+          "start": 14.88,
+          "end": 15.26
+        },
+        {
+          "word": "ten",
+          "start": 15.26,
+          "end": 15.5
+        },
+        {
+          "word": "metres",
+          "start": 15.5,
+          "end": 15.8
+        },
+        {
+          "word": "per",
+          "start": 15.8,
+          "end": 16.06
+        },
+        {
+          "word": "second",
+          "start": 16.06,
+          "end": 16.3
+        },
+        {
+          "word": "squared.",
+          "start": 16.3,
+          "end": 16.7
+        },
+        {
+          "word": "The",
+          "start": 17.14,
+          "end": 17.24
+        },
+        {
+          "word": "pull",
+          "start": 17.24,
+          "end": 17.6
+        },
+        {
+          "word": "is",
+          "start": 17.6,
+          "end": 18.02
+        },
+        {
+          "word": "parallel",
+          "start": 18.02,
+          "end": 18.38
+        },
+        {
+          "word": "to",
+          "start": 18.38,
+          "end": 18.68
+        },
+        {
+          "word": "the",
+          "start": 18.68,
+          "end": 18.86
+        },
+        {
+          "word": "slope.",
+          "start": 18.86,
+          "end": 19.2
+        },
+        {
+          "word": "Speed",
+          "start": 19.96,
+          "end": 20.28
+        },
+        {
+          "word": "is",
+          "start": 20.28,
+          "end": 21.14
+        },
+        {
+          "word": "constant",
+          "start": 21.14,
+          "end": 21.52
+        },
+        {
+          "word": "and",
+          "start": 21.52,
+          "end": 21.86
+        },
+        {
+          "word": "contact",
+          "start": 21.86,
+          "end": 22.34
+        },
+        {
+          "word": "is",
+          "start": 22.34,
+          "end": 22.82
+        },
+        {
+          "word": "maintained.",
+          "start": 22.82,
+          "end": 23.24
+        },
+        {
+          "word": "Only",
+          "start": 24.12,
+          "end": 24.64
+        },
+        {
+          "word": "weight,",
+          "start": 24.64,
+          "end": 25.04
+        },
+        {
+          "word": "pull,",
+          "start": 25.76,
+          "end": 26.08
+        },
+        {
+          "word": "reaction",
+          "start": 26.24,
+          "end": 26.68
+        },
+        {
+          "word": "and",
+          "start": 26.68,
+          "end": 27.84
+        },
+        {
+          "word": "sliding",
+          "start": 27.84,
+          "end": 28.24
+        },
+        {
+          "word": "friction",
+          "start": 28.24,
+          "end": 28.62
+        },
+        {
+          "word": "act.",
+          "start": 28.62,
+          "end": 29.08
+        },
+        {
+          "word": "use",
+          "start": 29.08,
+          "end": 30.38
+        },
+        {
+          "word": "this",
+          "start": 30.38,
+          "end": 30.7
+        },
+        {
+          "word": "sliding",
+          "start": 30.7,
+          "end": 31.12
+        },
+        {
+          "word": "model",
+          "start": 31.12,
+          "end": 31.52
+        },
+        {
+          "word": "f",
+          "start": 31.52,
+          "end": 32.46
+        },
+        {
+          "word": "equals",
+          "start": 32.46,
+          "end": 33.22
+        },
+        {
+          "word": "mu",
+          "start": 33.22,
+          "end": 33.78
+        },
+        {
+          "word": "rr.",
+          "start": 33.78,
+          "end": 34.58
+        },
+        {
+          "word": "Find",
+          "start": 34.96,
+          "end": 35.16
+        },
+        {
+          "word": "the",
+          "start": 35.16,
+          "end": 35.38
+        },
+        {
+          "word": "work",
+          "start": 35.38,
+          "end": 35.6
+        },
+        {
+          "word": "done",
+          "start": 35.6,
+          "end": 35.9
+        },
+        {
+          "word": "against",
+          "start": 35.9,
+          "end": 36.64
+        },
+        {
+          "word": "friction",
+          "start": 36.64,
+          "end": 37.22
+        },
+        {
+          "word": "and",
+          "start": 37.22,
+          "end": 38.04
+        },
+        {
+          "word": "the",
+          "start": 38.04,
+          "end": 38.18
+        },
+        {
+          "word": "work",
+          "start": 38.18,
+          "end": 38.42
+        },
+        {
+          "word": "done",
+          "start": 38.42,
+          "end": 38.74
+        },
+        {
+          "word": "against",
+          "start": 38.74,
+          "end": 39.54
+        },
+        {
+          "word": "gravity.",
+          "start": 39.54,
+          "end": 40.12
+        },
+        {
+          "word": "All",
+          "start": 40.94,
+          "end": 41.5
+        },
+        {
+          "word": "the",
+          "start": 41.5,
+          "end": 41.64
+        },
+        {
+          "word": "information",
+          "start": 41.64,
+          "end": 41.98
+        },
+        {
+          "word": "is",
+          "start": 41.98,
+          "end": 42.4
+        },
+        {
+          "word": "now",
+          "start": 42.4,
+          "end": 42.72
+        },
+        {
+          "word": "on",
+          "start": 42.72,
+          "end": 42.92
+        },
+        {
+          "word": "the",
+          "start": 42.92,
+          "end": 43.0
+        },
+        {
+          "word": "diagram.",
+          "start": 43.0,
+          "end": 43.48
+        },
+        {
+          "word": "Pause",
+          "start": 44.18,
+          "end": 44.72
+        },
+        {
+          "word": "and",
+          "start": 44.72,
+          "end": 45.4
+        },
+        {
+          "word": "picture",
+          "start": 45.4,
+          "end": 45.8
+        },
+        {
+          "word": "the",
+          "start": 45.8,
+          "end": 46.0
+        },
+        {
+          "word": "journey.",
+          "start": 46.0,
+          "end": 46.38
+        }
+      ],
+      "cues": {
+        "mass": 0.6,
+        "distance": 3.06,
+        "angle": 7.54,
+        "friction": 10.66,
+        "gravity": 14.28,
+        "conditions": 17.14,
+        "unknown": 34.96
+      },
+      "figureEvents": [
+        {
+          "id": "number-3",
+          "wordIndex": 3,
+          "word": "4",
+          "spokenPhrase": "four",
+          "start": 1.54,
+          "target": "mass",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-7",
+          "wordIndex": 7,
+          "word": "5",
+          "spokenPhrase": "five",
+          "start": 3.82,
+          "target": "distance",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-18",
+          "wordIndex": 18,
+          "word": "30",
+          "spokenPhrase": "thirty",
+          "start": 8.24,
+          "target": "angle",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-27",
+          "wordIndex": 27,
+          "word": "0.25",
+          "spokenPhrase": "zero",
+          "start": 12.64,
+          "target": "mu",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-34",
+          "wordIndex": 34,
+          "word": "10",
+          "spokenPhrase": "ten",
+          "start": 15.26,
+          "target": "gravity",
+          "kind": "spoken"
+        }
+      ],
+      "wordCount": 94,
+      "text": "crate has mass four kilograms. It travels five metres up the line of greatest slope. The ramp is thirty degrees above horizontal. The coefficient of friction is zero point two five. Take g as ten metres per second squared. The pull is parallel to the slope. Speed is constant and contact is maintained. Only weight, pull, reaction and sliding friction act. use this sliding model f equals mu rr. Find the work done against friction and the work done against gravity. All the information is now on the diagram. Pause and picture the journey.",
+      "duration": 50.12898
+    },
+    {
+      "id": "s04",
+      "title": "Only the parallel component does work",
+      "mode": "component",
+      "voiceSpeed": 0.9,
+      "tempo": "slow",
+      "beats": [
+        {
+          "id": "meaning",
+          "text": "Work measures the energy transferred by a force through a displacement. For a constant force, start with the general formula.",
+          "hold": 0,
+          "start": 0.4,
+          "speechEnd": 11.04,
+          "end": 11.24,
+          "cue": 0.4,
+          "penEnd": 11.16
+        },
+        {
+          "id": "formula",
+          "text": "W equals F d cosine alpha. Alpha is the angle between the force and the displacement.",
+          "ink": "W = Fd cos α",
+          "hold": 0,
+          "start": 11.24,
+          "speechEnd": 19.05,
+          "end": 19.25,
+          "cue": 11.34,
+          "penEnd": 19.17
+        },
+        {
+          "id": "resolve",
+          "text": "Here is an angled force. Replace it by its components. Only F cosine alpha acts along the displacement.",
+          "ink": "W = (F cos α)d",
+          "hold": 0,
+          "start": 19.25,
+          "speechEnd": 29.48,
+          "end": 29.68,
+          "cue": 19.3,
+          "penEnd": 29.6
+        },
+        {
+          "id": "perpendicular",
+          "text": "The perpendicular component has no displacement in its own direction, so it contributes no work. The normal reaction on our ramp does no work for exactly this reason.",
+          "hold": 2,
+          "start": 29.68,
+          "speechEnd": 44.9,
+          "end": 45.1,
+          "cue": 29.8,
+          "penEnd": 45.02
+        },
+        {
+          "id": "parallel",
+          "text": "Our pull is parallel to the slope, so its work is force times slope distance.",
+          "ink": "W = Fd",
+          "hold": 0,
+          "start": 47.1,
+          "speechEnd": 52.83,
+          "end": 53.03,
+          "cue": 47.13,
+          "penEnd": 52.95
+        },
+        {
+          "id": "units",
+          "text": "Work is a scalar, measured in joules: newtons multiplied by metres.",
+          "ink": "J = N m",
+          "hold": 0,
+          "start": 53.03,
+          "speechEnd": 59.61,
+          "end": 59.81,
+          "cue": 53.05,
+          "penEnd": 59.730000000000004
+        },
+        {
+          "id": "stationary",
+          "text": "If the crate does not move, displacement is zero and mechanical work is zero, even if maintaining the force feels tiring.",
+          "hold": 2,
+          "start": 59.81,
+          "speechEnd": 70.78,
+          "end": 70.98,
+          "cue": 59.97,
+          "penEnd": 70.9
+        }
+      ],
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 45.1,
+          "end": 47.1,
+          "duration": 2
+        },
+        {
+          "kind": "hold",
+          "start": 70.98,
+          "end": 72.98,
+          "duration": 2
+        }
+      ],
+      "audio": "work-s04.mp3",
+      "audioSha256": "efd968c517878ee7b3dccbb21b6206b6264417ee49cae75c16bba223b970e236",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "provider": "elevenlabs",
+      "sampleDuration": 73.33,
+      "words": [
+        {
+          "word": "Work",
+          "start": 0.4,
+          "end": 0.84
+        },
+        {
+          "word": "measures",
+          "start": 0.84,
+          "end": 1.6
+        },
+        {
+          "word": "the",
+          "start": 1.6,
+          "end": 1.82
+        },
+        {
+          "word": "energy",
+          "start": 1.82,
+          "end": 2.36
+        },
+        {
+          "word": "transferred",
+          "start": 2.36,
+          "end": 3.7
+        },
+        {
+          "word": "by",
+          "start": 3.7,
+          "end": 4.3
+        },
+        {
+          "word": "a",
+          "start": 4.3,
+          "end": 4.44
+        },
+        {
+          "word": "force",
+          "start": 4.44,
+          "end": 4.88
+        },
+        {
+          "word": "through",
+          "start": 4.88,
+          "end": 5.52
+        },
+        {
+          "word": "a",
+          "start": 5.52,
+          "end": 5.7
+        },
+        {
+          "word": "displacement.",
+          "start": 5.7,
+          "end": 6.38
+        },
+        {
+          "word": "For",
+          "start": 7.16,
+          "end": 7.62
+        },
+        {
+          "word": "a",
+          "start": 7.62,
+          "end": 7.82
+        },
+        {
+          "word": "constant",
+          "start": 7.82,
+          "end": 8.08
+        },
+        {
+          "word": "force,",
+          "start": 8.08,
+          "end": 8.54
+        },
+        {
+          "word": "start",
+          "start": 9.0,
+          "end": 9.46
+        },
+        {
+          "word": "with",
+          "start": 9.46,
+          "end": 9.78
+        },
+        {
+          "word": "the",
+          "start": 9.78,
+          "end": 9.92
+        },
+        {
+          "word": "general",
+          "start": 9.92,
+          "end": 10.3
+        },
+        {
+          "word": "formula.",
+          "start": 10.3,
+          "end": 10.84
+        },
+        {
+          "word": "W",
+          "start": 11.34,
+          "end": 11.46
+        },
+        {
+          "word": "equals",
+          "start": 11.46,
+          "end": 11.82
+        },
+        {
+          "word": "F",
+          "start": 11.82,
+          "end": 12.2
+        },
+        {
+          "word": "d",
+          "start": 12.2,
+          "end": 12.46
+        },
+        {
+          "word": "cosine",
+          "start": 12.46,
+          "end": 13.16
+        },
+        {
+          "word": "alpha.",
+          "start": 13.16,
+          "end": 13.82
+        },
+        {
+          "word": "Alpha",
+          "start": 14.64,
+          "end": 15.2
+        },
+        {
+          "word": "is",
+          "start": 15.2,
+          "end": 16.02
+        },
+        {
+          "word": "the",
+          "start": 16.02,
+          "end": 16.16
+        },
+        {
+          "word": "angle",
+          "start": 16.16,
+          "end": 16.5
+        },
+        {
+          "word": "between",
+          "start": 16.5,
+          "end": 16.84
+        },
+        {
+          "word": "the",
+          "start": 16.84,
+          "end": 17.1
+        },
+        {
+          "word": "force",
+          "start": 17.1,
+          "end": 17.42
+        },
+        {
+          "word": "and",
+          "start": 17.42,
+          "end": 18.16
+        },
+        {
+          "word": "the",
+          "start": 18.16,
+          "end": 18.26
+        },
+        {
+          "word": "displacement.",
+          "start": 18.26,
+          "end": 18.7
+        },
+        {
+          "word": "Here",
+          "start": 19.3,
+          "end": 19.5
+        },
+        {
+          "word": "is",
+          "start": 19.5,
+          "end": 19.62
+        },
+        {
+          "word": "an",
+          "start": 19.62,
+          "end": 19.8
+        },
+        {
+          "word": "angled",
+          "start": 19.8,
+          "end": 20.14
+        },
+        {
+          "word": "force.",
+          "start": 20.14,
+          "end": 20.56
+        },
+        {
+          "word": "Replace",
+          "start": 21.64,
+          "end": 22.22
+        },
+        {
+          "word": "it",
+          "start": 22.22,
+          "end": 22.7
+        },
+        {
+          "word": "by",
+          "start": 22.7,
+          "end": 23.62
+        },
+        {
+          "word": "its",
+          "start": 23.62,
+          "end": 23.86
+        },
+        {
+          "word": "components.",
+          "start": 23.86,
+          "end": 24.38
+        },
+        {
+          "word": "Only",
+          "start": 25.58,
+          "end": 26.1
+        },
+        {
+          "word": "F",
+          "start": 26.1,
+          "end": 26.42
+        },
+        {
+          "word": "cosine",
+          "start": 26.42,
+          "end": 26.82
+        },
+        {
+          "word": "alpha",
+          "start": 26.82,
+          "end": 27.34
+        },
+        {
+          "word": "acts",
+          "start": 27.34,
+          "end": 27.92
+        },
+        {
+          "word": "along",
+          "start": 27.92,
+          "end": 28.42
+        },
+        {
+          "word": "the",
+          "start": 28.42,
+          "end": 28.6
+        },
+        {
+          "word": "displacement.",
+          "start": 28.6,
+          "end": 29.12
+        },
+        {
+          "word": "The",
+          "start": 29.12,
+          "end": 29.48
+        },
+        {
+          "word": "perpendicular",
+          "start": 29.8,
+          "end": 30.38
+        },
+        {
+          "word": "component",
+          "start": 30.38,
+          "end": 31.18
+        },
+        {
+          "word": "has",
+          "start": 31.18,
+          "end": 32.2
+        },
+        {
+          "word": "no",
+          "start": 32.2,
+          "end": 32.58
+        },
+        {
+          "word": "displacement",
+          "start": 32.58,
+          "end": 33.22
+        },
+        {
+          "word": "in",
+          "start": 33.22,
+          "end": 34.28
+        },
+        {
+          "word": "its",
+          "start": 34.28,
+          "end": 34.44
+        },
+        {
+          "word": "own",
+          "start": 34.44,
+          "end": 34.7
+        },
+        {
+          "word": "direction",
+          "start": 34.7,
+          "end": 35.18
+        },
+        {
+          "word": "so",
+          "start": 35.18,
+          "end": 36.44
+        },
+        {
+          "word": "it",
+          "start": 36.44,
+          "end": 36.58
+        },
+        {
+          "word": "contributes",
+          "start": 36.58,
+          "end": 37.12
+        },
+        {
+          "word": "no",
+          "start": 37.12,
+          "end": 37.4
+        },
+        {
+          "word": "work.",
+          "start": 37.4,
+          "end": 37.84
+        },
+        {
+          "word": "The",
+          "start": 38.64,
+          "end": 39.06
+        },
+        {
+          "word": "normal",
+          "start": 39.06,
+          "end": 39.4
+        },
+        {
+          "word": "reaction",
+          "start": 39.4,
+          "end": 40.02
+        },
+        {
+          "word": "on",
+          "start": 40.02,
+          "end": 40.56
+        },
+        {
+          "word": "our",
+          "start": 40.56,
+          "end": 40.74
+        },
+        {
+          "word": "ramp",
+          "start": 40.74,
+          "end": 41.22
+        },
+        {
+          "word": "does",
+          "start": 41.22,
+          "end": 42.02
+        },
+        {
+          "word": "no",
+          "start": 42.02,
+          "end": 42.3
+        },
+        {
+          "word": "work",
+          "start": 42.3,
+          "end": 42.76
+        },
+        {
+          "word": "for",
+          "start": 42.76,
+          "end": 43.5
+        },
+        {
+          "word": "exactly",
+          "start": 43.5,
+          "end": 44.06
+        },
+        {
+          "word": "this",
+          "start": 44.06,
+          "end": 44.36
+        },
+        {
+          "word": "reason.",
+          "start": 44.36,
+          "end": 44.82
+        },
+        {
+          "word": "Our",
+          "start": 47.13,
+          "end": 47.31
+        },
+        {
+          "word": "pool",
+          "start": 47.31,
+          "end": 47.67
+        },
+        {
+          "word": "is",
+          "start": 47.67,
+          "end": 47.93
+        },
+        {
+          "word": "parallel",
+          "start": 47.93,
+          "end": 48.29
+        },
+        {
+          "word": "to",
+          "start": 48.29,
+          "end": 48.63
+        },
+        {
+          "word": "the",
+          "start": 48.63,
+          "end": 48.79
+        },
+        {
+          "word": "slope",
+          "start": 48.79,
+          "end": 49.15
+        },
+        {
+          "word": "so",
+          "start": 49.15,
+          "end": 50.23
+        },
+        {
+          "word": "its",
+          "start": 50.23,
+          "end": 50.49
+        },
+        {
+          "word": "work",
+          "start": 50.49,
+          "end": 50.87
+        },
+        {
+          "word": "is",
+          "start": 50.87,
+          "end": 51.23
+        },
+        {
+          "word": "force",
+          "start": 51.23,
+          "end": 51.49
+        },
+        {
+          "word": "times",
+          "start": 51.49,
+          "end": 51.83
+        },
+        {
+          "word": "slope",
+          "start": 51.83,
+          "end": 52.25
+        },
+        {
+          "word": "distance.",
+          "start": 52.25,
+          "end": 52.69
+        },
+        {
+          "word": "Work",
+          "start": 53.05,
+          "end": 53.27
+        },
+        {
+          "word": "is",
+          "start": 53.27,
+          "end": 53.47
+        },
+        {
+          "word": "a",
+          "start": 53.47,
+          "end": 53.63
+        },
+        {
+          "word": "scalar",
+          "start": 53.63,
+          "end": 54.07
+        },
+        {
+          "word": "measured",
+          "start": 54.07,
+          "end": 55.35
+        },
+        {
+          "word": "in",
+          "start": 55.35,
+          "end": 55.67
+        },
+        {
+          "word": "joules,",
+          "start": 55.67,
+          "end": 56.45
+        },
+        {
+          "word": "newtons",
+          "start": 57.03,
+          "end": 57.79
+        },
+        {
+          "word": "multiplied",
+          "start": 57.79,
+          "end": 58.41
+        },
+        {
+          "word": "by",
+          "start": 58.41,
+          "end": 58.99
+        },
+        {
+          "word": "meters.",
+          "start": 58.99,
+          "end": 59.35
+        },
+        {
+          "word": "the",
+          "start": 59.97,
+          "end": 60.15
+        },
+        {
+          "word": "crate",
+          "start": 60.15,
+          "end": 60.47
+        },
+        {
+          "word": "does",
+          "start": 60.47,
+          "end": 61.57
+        },
+        {
+          "word": "not",
+          "start": 61.57,
+          "end": 61.77
+        },
+        {
+          "word": "move,",
+          "start": 61.77,
+          "end": 62.21
+        },
+        {
+          "word": "displacement",
+          "start": 62.83,
+          "end": 63.39
+        },
+        {
+          "word": "is",
+          "start": 63.39,
+          "end": 63.93
+        },
+        {
+          "word": "zero",
+          "start": 63.93,
+          "end": 64.41
+        },
+        {
+          "word": "and",
+          "start": 64.41,
+          "end": 65.39
+        },
+        {
+          "word": "mechanical",
+          "start": 65.39,
+          "end": 65.83
+        },
+        {
+          "word": "work",
+          "start": 65.83,
+          "end": 66.29
+        },
+        {
+          "word": "is",
+          "start": 66.29,
+          "end": 67.13
+        },
+        {
+          "word": "zero,",
+          "start": 67.13,
+          "end": 67.61
+        },
+        {
+          "word": "even",
+          "start": 67.73,
+          "end": 68.35
+        },
+        {
+          "word": "if",
+          "start": 68.35,
+          "end": 68.53
+        },
+        {
+          "word": "maintaining",
+          "start": 68.53,
+          "end": 68.97
+        },
+        {
+          "word": "the",
+          "start": 68.97,
+          "end": 69.21
+        },
+        {
+          "word": "force",
+          "start": 69.21,
+          "end": 69.61
+        },
+        {
+          "word": "feels",
+          "start": 69.61,
+          "end": 70.01
+        },
+        {
+          "word": "tiring.",
+          "start": 70.01,
+          "end": 70.55
+        }
+      ],
+      "cues": {
+        "meaning": 0.4,
+        "formula": 11.34,
+        "resolve": 19.3,
+        "perpendicular": 29.8,
+        "parallel": 47.13,
+        "units": 53.05,
+        "stationary": 59.97
+      },
+      "figureEvents": [],
+      "wordCount": 128,
+      "text": "Work measures the energy transferred by a force through a displacement. For a constant force, start with the general formula. W equals F d cosine alpha. Alpha is the angle between the force and the displacement. Here is an angled force. Replace it by its components. Only F cosine alpha acts along the displacement. The perpendicular component has no displacement in its own direction so it contributes no work. The normal reaction on our ramp does no work for exactly this reason. Our pool is parallel to the slope so its work is force times slope distance. Work is a scalar measured in joules, newtons multiplied by meters. the crate does not move, displacement is zero and mechanical work is zero, even if maintaining the force feels tiring.",
+      "duration": 73.377959
+    },
+    {
+      "id": "s05",
+      "title": "Work against friction",
+      "mode": "friction",
+      "voiceSpeed": 0.9,
+      "tempo": "slow",
+      "beats": [
+        {
+          "id": "why",
+          "text": "Return to our moving crate. First find the normal reaction. The pull has no perpendicular component, and the crate stays in contact, so reaction balances the perpendicular weight component.",
+          "hold": 0,
+          "start": 0.4,
+          "speechEnd": 17.83,
+          "end": 18.03,
+          "cue": 0.4,
+          "penEnd": 17.950000000000003
+        },
+        {
+          "id": "reactionFormula",
+          "text": "R equals m g cosine theta.",
+          "ink": "R = mg cos θ",
+          "hold": 0,
+          "start": 18.03,
+          "speechEnd": 23.68,
+          "end": 23.88,
+          "cue": 18.03,
+          "penEnd": 23.8
+        },
+        {
+          "id": "reactionSub",
+          "text": "Substitute four times ten times cosine thirty degrees.",
+          "ink": "R = 4 × 10 cos 30°",
+          "hold": 0,
+          "start": 23.88,
+          "speechEnd": 27.7,
+          "end": 27.9,
+          "cue": 23.94,
+          "penEnd": 27.82
+        },
+        {
+          "id": "reactionAnswer",
+          "text": "The reaction is twenty root three newtons.",
+          "ink": "R = 20√3 N",
+          "hold": 2,
+          "start": 27.9,
+          "speechEnd": 30.88,
+          "end": 31.08,
+          "cue": 28.08,
+          "penEnd": 31.0
+        },
+        {
+          "id": "frictionFormula",
+          "text": "For sliding contact, friction f equals mu R.",
+          "ink": "f = μR",
+          "hold": 0,
+          "start": 33.08,
+          "speechEnd": 37.47,
+          "end": 37.67,
+          "cue": 33.24,
+          "penEnd": 37.59
+        },
+        {
+          "id": "frictionSub",
+          "text": "So zero point two five times twenty root three gives five root three newtons.",
+          "ink": "f = 0.25 × 20√3 = 5√3 N",
+          "hold": 2,
+          "start": 37.67,
+          "speechEnd": 44.1,
+          "end": 44.3,
+          "cue": 37.86,
+          "penEnd": 44.22
+        },
+        {
+          "id": "workFormula",
+          "text": "Work against friction equals friction times distance. This is the positive amount needed to overcome friction along the whole slope.",
+          "ink": "Wf = fd",
+          "hold": 0,
+          "start": 46.3,
+          "speechEnd": 56.84,
+          "end": 57.04,
+          "cue": 46.55,
+          "penEnd": 56.96
+        },
+        {
+          "id": "workSub",
+          "text": "Multiply five root three by five.",
+          "ink": "Wf = 5√3 × 5",
+          "hold": 0,
+          "start": 57.04,
+          "speechEnd": 59.6,
+          "end": 59.8,
+          "cue": 57.04,
+          "penEnd": 59.72
+        },
+        {
+          "id": "workAnswer",
+          "text": "That is twenty five root three joules, approximately forty three point three joules.",
+          "ink": "Wf = 25√3 ≈ 43.3 J",
+          "hold": 2,
+          "start": 59.8,
+          "speechEnd": 64.87,
+          "end": 65.07,
+          "cue": 59.97,
+          "penEnd": 64.99
+        }
+      ],
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 31.08,
+          "end": 33.08,
+          "duration": 2
+        },
+        {
+          "kind": "hold",
+          "start": 44.3,
+          "end": 46.3,
+          "duration": 2
+        },
+        {
+          "kind": "hold",
+          "start": 65.07,
+          "end": 67.07,
+          "duration": 2
+        }
+      ],
+      "audio": "work-s05.mp3",
+      "audioSha256": "66e4883cf783012c79f505f6a2924644c459a611653f1c198dda4f83171ad65a",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "provider": "elevenlabs",
+      "sampleDuration": 67.42,
+      "words": [
+        {
+          "word": "Return",
+          "start": 0.4,
+          "end": 0.77
+        },
+        {
+          "word": "to",
+          "start": 0.77,
+          "end": 0.97
+        },
+        {
+          "word": "our",
+          "start": 0.97,
+          "end": 1.19
+        },
+        {
+          "word": "moving",
+          "start": 1.19,
+          "end": 1.53
+        },
+        {
+          "word": "crate.",
+          "start": 1.53,
+          "end": 1.87
+        },
+        {
+          "word": "First",
+          "start": 2.97,
+          "end": 3.47
+        },
+        {
+          "word": "find",
+          "start": 3.47,
+          "end": 4.11
+        },
+        {
+          "word": "the",
+          "start": 4.11,
+          "end": 4.47
+        },
+        {
+          "word": "normal",
+          "start": 4.47,
+          "end": 4.79
+        },
+        {
+          "word": "reaction.",
+          "start": 4.79,
+          "end": 5.39
+        },
+        {
+          "word": "The",
+          "start": 6.65,
+          "end": 6.73
+        },
+        {
+          "word": "pull",
+          "start": 6.73,
+          "end": 7.11
+        },
+        {
+          "word": "has",
+          "start": 7.11,
+          "end": 7.41
+        },
+        {
+          "word": "no",
+          "start": 7.41,
+          "end": 7.71
+        },
+        {
+          "word": "perpendicular",
+          "start": 7.71,
+          "end": 8.27
+        },
+        {
+          "word": "component,",
+          "start": 8.27,
+          "end": 9.31
+        },
+        {
+          "word": "and",
+          "start": 9.91,
+          "end": 10.59
+        },
+        {
+          "word": "the",
+          "start": 10.59,
+          "end": 10.69
+        },
+        {
+          "word": "crate",
+          "start": 10.69,
+          "end": 11.07
+        },
+        {
+          "word": "stays",
+          "start": 11.07,
+          "end": 11.87
+        },
+        {
+          "word": "in",
+          "start": 11.87,
+          "end": 12.35
+        },
+        {
+          "word": "contact,",
+          "start": 12.35,
+          "end": 12.83
+        },
+        {
+          "word": "so",
+          "start": 13.53,
+          "end": 13.89
+        },
+        {
+          "word": "reaction",
+          "start": 13.89,
+          "end": 14.35
+        },
+        {
+          "word": "balances",
+          "start": 14.35,
+          "end": 15.09
+        },
+        {
+          "word": "the",
+          "start": 15.09,
+          "end": 15.81
+        },
+        {
+          "word": "perpendicular",
+          "start": 15.81,
+          "end": 16.37
+        },
+        {
+          "word": "weight",
+          "start": 16.37,
+          "end": 16.87
+        },
+        {
+          "word": "component.",
+          "start": 16.87,
+          "end": 17.49
+        },
+        {
+          "word": "R",
+          "start": 18.03,
+          "end": 18.43
+        },
+        {
+          "word": "equals",
+          "start": 18.43,
+          "end": 19.29
+        },
+        {
+          "word": "m",
+          "start": 19.29,
+          "end": 19.65
+        },
+        {
+          "word": "g.",
+          "start": 19.65,
+          "end": 19.83
+        },
+        {
+          "word": "m",
+          "start": 22.06,
+          "end": 22.58
+        },
+        {
+          "word": "g",
+          "start": 22.58,
+          "end": 22.76
+        },
+        {
+          "word": "cosine",
+          "start": 22.76,
+          "end": 23.1
+        },
+        {
+          "word": "theta.",
+          "start": 23.1,
+          "end": 23.58
+        },
+        {
+          "word": "Substitute",
+          "start": 23.94,
+          "end": 24.6
+        },
+        {
+          "word": "four",
+          "start": 24.6,
+          "end": 24.96
+        },
+        {
+          "word": "times",
+          "start": 24.96,
+          "end": 25.4
+        },
+        {
+          "word": "ten",
+          "start": 25.4,
+          "end": 25.7
+        },
+        {
+          "word": "times",
+          "start": 25.7,
+          "end": 26.06
+        },
+        {
+          "word": "cosine",
+          "start": 26.06,
+          "end": 26.4
+        },
+        {
+          "word": "thirty",
+          "start": 26.4,
+          "end": 27.02
+        },
+        {
+          "word": "degrees.",
+          "start": 27.02,
+          "end": 27.4
+        },
+        {
+          "word": "reaction",
+          "start": 28.08,
+          "end": 28.44
+        },
+        {
+          "word": "is",
+          "start": 28.44,
+          "end": 28.7
+        },
+        {
+          "word": "20",
+          "start": 28.7,
+          "end": 29.24
+        },
+        {
+          "word": "root",
+          "start": 29.24,
+          "end": 29.52
+        },
+        {
+          "word": "3",
+          "start": 29.52,
+          "end": 30.08
+        },
+        {
+          "word": "Newton.",
+          "start": 30.08,
+          "end": 30.44
+        },
+        {
+          "word": "sliding",
+          "start": 33.24,
+          "end": 33.66
+        },
+        {
+          "word": "contact",
+          "start": 33.66,
+          "end": 34.2
+        },
+        {
+          "word": "friction",
+          "start": 34.2,
+          "end": 35.36
+        },
+        {
+          "word": "F",
+          "start": 35.36,
+          "end": 35.78
+        },
+        {
+          "word": "equals",
+          "start": 35.78,
+          "end": 36.36
+        },
+        {
+          "word": "MU",
+          "start": 36.36,
+          "end": 36.82
+        },
+        {
+          "word": "air",
+          "start": 36.82,
+          "end": 37.38
+        },
+        {
+          "word": "0",
+          "start": 37.86,
+          "end": 38.34
+        },
+        {
+          "word": ".25",
+          "start": 38.34,
+          "end": 39.08
+        },
+        {
+          "word": "times",
+          "start": 39.08,
+          "end": 39.84
+        },
+        {
+          "word": "20",
+          "start": 39.84,
+          "end": 40.72
+        },
+        {
+          "word": "root",
+          "start": 40.72,
+          "end": 41.08
+        },
+        {
+          "word": "3",
+          "start": 41.08,
+          "end": 41.54
+        },
+        {
+          "word": "gives",
+          "start": 41.54,
+          "end": 42.24
+        },
+        {
+          "word": "5",
+          "start": 42.24,
+          "end": 42.66
+        },
+        {
+          "word": "root",
+          "start": 42.66,
+          "end": 43.04
+        },
+        {
+          "word": "3",
+          "start": 43.04,
+          "end": 43.48
+        },
+        {
+          "word": "Newton.",
+          "start": 43.48,
+          "end": 43.92
+        },
+        {
+          "word": "against",
+          "start": 46.55,
+          "end": 46.91
+        },
+        {
+          "word": "friction",
+          "start": 46.91,
+          "end": 47.41
+        },
+        {
+          "word": "equals",
+          "start": 47.41,
+          "end": 48.27
+        },
+        {
+          "word": "friction",
+          "start": 48.27,
+          "end": 48.95
+        },
+        {
+          "word": "times",
+          "start": 48.95,
+          "end": 49.53
+        },
+        {
+          "word": "distance.",
+          "start": 49.53,
+          "end": 50.11
+        },
+        {
+          "word": "This",
+          "start": 50.79,
+          "end": 51.37
+        },
+        {
+          "word": "is",
+          "start": 51.37,
+          "end": 51.49
+        },
+        {
+          "word": "the",
+          "start": 51.49,
+          "end": 51.59
+        },
+        {
+          "word": "positive",
+          "start": 51.59,
+          "end": 52.05
+        },
+        {
+          "word": "amount",
+          "start": 52.05,
+          "end": 52.41
+        },
+        {
+          "word": "needed",
+          "start": 52.41,
+          "end": 53.39
+        },
+        {
+          "word": "to",
+          "start": 53.39,
+          "end": 53.69
+        },
+        {
+          "word": "overcome",
+          "start": 53.69,
+          "end": 54.09
+        },
+        {
+          "word": "friction",
+          "start": 54.09,
+          "end": 54.59
+        },
+        {
+          "word": "along",
+          "start": 54.59,
+          "end": 55.67
+        },
+        {
+          "word": "the",
+          "start": 55.67,
+          "end": 56.01
+        },
+        {
+          "word": "whole",
+          "start": 56.01,
+          "end": 56.25
+        },
+        {
+          "word": "slope.",
+          "start": 56.25,
+          "end": 56.67
+        },
+        {
+          "word": "Multiply",
+          "start": 57.04,
+          "end": 57.65
+        },
+        {
+          "word": "5",
+          "start": 57.65,
+          "end": 57.97
+        },
+        {
+          "word": "root",
+          "start": 57.97,
+          "end": 58.29
+        },
+        {
+          "word": "3",
+          "start": 58.29,
+          "end": 58.79
+        },
+        {
+          "word": "by",
+          "start": 58.79,
+          "end": 59.03
+        },
+        {
+          "word": "5",
+          "start": 59.03,
+          "end": 59.47
+        },
+        {
+          "word": "is",
+          "start": 59.97,
+          "end": 60.15
+        },
+        {
+          "word": "25",
+          "start": 60.15,
+          "end": 60.75
+        },
+        {
+          "word": "root",
+          "start": 60.75,
+          "end": 61.15
+        },
+        {
+          "word": "3",
+          "start": 61.15,
+          "end": 61.69
+        },
+        {
+          "word": "joules",
+          "start": 61.69,
+          "end": 62.49
+        },
+        {
+          "word": "approximately",
+          "start": 62.49,
+          "end": 62.91
+        },
+        {
+          "word": "43",
+          "start": 62.91,
+          "end": 63.81
+        },
+        {
+          "word": ".3",
+          "start": 63.81,
+          "end": 64.41
+        },
+        {
+          "word": "joules",
+          "start": 64.41,
+          "end": 64.87
+        }
+      ],
+      "cues": {
+        "why": 0.4,
+        "reactionFormula": 18.03,
+        "reactionSub": 23.94,
+        "reactionAnswer": 28.08,
+        "frictionFormula": 33.24,
+        "frictionSub": 37.86,
+        "workFormula": 46.55,
+        "workSub": 57.04,
+        "workAnswer": 59.97,
+        "reactionResult": 28.7,
+        "frictionResult": 42.24,
+        "workExactResult": 60.15,
+        "workApproxResult": 62.91
+      },
+      "figureEvents": [
+        {
+          "id": "number-38",
+          "wordIndex": 38,
+          "word": "4",
+          "spokenPhrase": "four",
+          "start": 24.6,
+          "target": "mass",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-40",
+          "wordIndex": 40,
+          "word": "10",
+          "spokenPhrase": "ten",
+          "start": 25.4,
+          "target": "gravity",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-43",
+          "wordIndex": 43,
+          "word": "30",
+          "spokenPhrase": "thirty",
+          "start": 26.4,
+          "target": "angle",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-47",
+          "wordIndex": 47,
+          "word": "20√3",
+          "spokenPhrase": "20",
+          "start": 28.7,
+          "target": "reaction",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-58",
+          "wordIndex": 58,
+          "word": "0.25",
+          "spokenPhrase": "0",
+          "start": 37.86,
+          "target": "mu",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-61",
+          "wordIndex": 61,
+          "word": "20√3",
+          "spokenPhrase": "20",
+          "start": 39.84,
+          "target": "reaction",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-65",
+          "wordIndex": 65,
+          "word": "5√3",
+          "spokenPhrase": "5",
+          "start": 42.24,
+          "target": "friction",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-89",
+          "wordIndex": 89,
+          "word": "5√3",
+          "spokenPhrase": "5",
+          "start": 57.65,
+          "target": "friction",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-93",
+          "wordIndex": 93,
+          "word": "5",
+          "spokenPhrase": "5",
+          "start": 59.03,
+          "target": "distance",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-95",
+          "wordIndex": 95,
+          "word": "25√3",
+          "spokenPhrase": "25",
+          "start": 60.15,
+          "target": "frictionWork",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-100",
+          "wordIndex": 100,
+          "word": "43.3",
+          "spokenPhrase": "43",
+          "start": 62.91,
+          "target": "frictionWork",
+          "kind": "spoken"
+        }
+      ],
+      "wordCount": 103,
+      "text": "Return to our moving crate. First find the normal reaction. The pull has no perpendicular component, and the crate stays in contact, so reaction balances the perpendicular weight component. R equals m g. m g cosine theta. Substitute four times ten times cosine thirty degrees. reaction is 20 root 3 Newton. sliding contact friction F equals MU air 0 .25 times 20 root 3 gives 5 root 3 Newton. against friction equals friction times distance. This is the positive amount needed to overcome friction along the whole slope. Multiply 5 root 3 by 5 is 25 root 3 joules approximately 43 .3 joules",
+      "duration": 67.448163
+    },
+    {
+      "id": "s06",
+      "title": "Work against gravity",
+      "mode": "gravity",
+      "voiceSpeed": 0.9,
+      "tempo": "slow",
+      "beats": [
+        {
+          "id": "why",
+          "text": "Gravity acts vertically. The distance paired with weight must therefore be the vertical rise, not the distance along the ramp. Look at the right angled triangle.",
+          "hold": 0,
+          "start": 0.4,
+          "speechEnd": 12.61,
+          "end": 12.81,
+          "cue": 0.4,
+          "penEnd": 12.73
+        },
+        {
+          "id": "heightFormula",
+          "text": "Height equals slope distance times sine theta.",
+          "ink": "h = d sin θ",
+          "hold": 0,
+          "start": 12.81,
+          "speechEnd": 16.46,
+          "end": 16.66,
+          "cue": 12.89,
+          "penEnd": 16.580000000000002
+        },
+        {
+          "id": "heightSub",
+          "text": "So five times sine thirty degrees gives two point five metres vertically.",
+          "ink": "h = 5 sin 30° = 2.5 m",
+          "hold": 2,
+          "start": 16.66,
+          "speechEnd": 22.14,
+          "end": 22.34,
+          "cue": 16.75,
+          "penEnd": 22.26
+        },
+        {
+          "id": "workFormula",
+          "text": "Work against gravity equals m g h. It is the weight multiplied by the upward vertical displacement.",
+          "ink": "Wg = mgh",
+          "hold": 0,
+          "start": 24.34,
+          "speechEnd": 32.0,
+          "end": 32.2,
+          "cue": 24.61,
+          "penEnd": 32.120000000000005
+        },
+        {
+          "id": "workSub",
+          "text": "Substitute four times ten times two point five.",
+          "ink": "Wg = 4 × 10 × 2.5",
+          "hold": 0,
+          "start": 32.2,
+          "speechEnd": 35.17,
+          "end": 35.37,
+          "cue": 32.2,
+          "penEnd": 35.29
+        },
+        {
+          "id": "workAnswer",
+          "text": "The work against gravity is one hundred joules.",
+          "ink": "Wg = 100 J",
+          "hold": 2,
+          "start": 35.37,
+          "speechEnd": 38.93,
+          "end": 39.13,
+          "cue": 35.39,
+          "penEnd": 39.050000000000004
+        },
+        {
+          "id": "distanceWhy",
+          "text": "The five metres belongs in the friction calculation because friction acts along the slope. The two point five metres belongs here because gravity is vertical. The direction of the force decides which distance to use.",
+          "hold": 2,
+          "start": 41.13,
+          "speechEnd": 58.84,
+          "end": 59.04,
+          "cue": 41.22,
+          "penEnd": 58.96
+        }
+      ],
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 22.34,
+          "end": 24.34,
+          "duration": 2
+        },
+        {
+          "kind": "hold",
+          "start": 39.13,
+          "end": 41.13,
+          "duration": 2
+        },
+        {
+          "kind": "hold",
+          "start": 59.04,
+          "end": 61.04,
+          "duration": 2
+        }
+      ],
+      "audio": "work-s06.mp3",
+      "audioSha256": "817773a231fa8359ec40880b747ec553dd270937dcfd3cf633e9267c5c3f9ee0",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "provider": "elevenlabs",
+      "sampleDuration": 61.39,
+      "words": [
+        {
+          "word": "Gravity",
+          "start": 0.4,
+          "end": 0.91
+        },
+        {
+          "word": "acts",
+          "start": 0.91,
+          "end": 1.39
+        },
+        {
+          "word": "vertically.",
+          "start": 1.39,
+          "end": 1.95
+        },
+        {
+          "word": "The",
+          "start": 2.77,
+          "end": 2.85
+        },
+        {
+          "word": "distance",
+          "start": 2.85,
+          "end": 3.35
+        },
+        {
+          "word": "paired",
+          "start": 3.35,
+          "end": 3.81
+        },
+        {
+          "word": "with",
+          "start": 3.81,
+          "end": 4.05
+        },
+        {
+          "word": "weight",
+          "start": 4.05,
+          "end": 4.49
+        },
+        {
+          "word": "must",
+          "start": 4.49,
+          "end": 5.25
+        },
+        {
+          "word": "therefore",
+          "start": 5.25,
+          "end": 5.71
+        },
+        {
+          "word": "be",
+          "start": 5.71,
+          "end": 6.01
+        },
+        {
+          "word": "the",
+          "start": 6.01,
+          "end": 6.17
+        },
+        {
+          "word": "vertical",
+          "start": 6.17,
+          "end": 6.59
+        },
+        {
+          "word": "rise,",
+          "start": 6.59,
+          "end": 7.15
+        },
+        {
+          "word": "not",
+          "start": 7.91,
+          "end": 8.21
+        },
+        {
+          "word": "the",
+          "start": 8.21,
+          "end": 8.43
+        },
+        {
+          "word": "distance",
+          "start": 8.43,
+          "end": 8.83
+        },
+        {
+          "word": "along",
+          "start": 8.83,
+          "end": 9.13
+        },
+        {
+          "word": "the",
+          "start": 9.13,
+          "end": 9.37
+        },
+        {
+          "word": "ramp.",
+          "start": 9.37,
+          "end": 9.65
+        },
+        {
+          "word": "Look",
+          "start": 10.43,
+          "end": 10.69
+        },
+        {
+          "word": "at",
+          "start": 10.69,
+          "end": 10.89
+        },
+        {
+          "word": "the",
+          "start": 10.89,
+          "end": 11.05
+        },
+        {
+          "word": "right",
+          "start": 11.05,
+          "end": 11.27
+        },
+        {
+          "word": "angle",
+          "start": 11.27,
+          "end": 11.77
+        },
+        {
+          "word": "triangle.",
+          "start": 11.77,
+          "end": 12.43
+        },
+        {
+          "word": "Height",
+          "start": 12.89,
+          "end": 13.29
+        },
+        {
+          "word": "equals",
+          "start": 13.29,
+          "end": 14.07
+        },
+        {
+          "word": "slope",
+          "start": 14.07,
+          "end": 14.55
+        },
+        {
+          "word": "distance",
+          "start": 14.55,
+          "end": 14.95
+        },
+        {
+          "word": "times",
+          "start": 14.95,
+          "end": 15.61
+        },
+        {
+          "word": "sine",
+          "start": 15.61,
+          "end": 15.89
+        },
+        {
+          "word": "theta.",
+          "start": 15.89,
+          "end": 16.39
+        },
+        {
+          "word": "So",
+          "start": 16.75,
+          "end": 16.85
+        },
+        {
+          "word": "five",
+          "start": 16.85,
+          "end": 17.17
+        },
+        {
+          "word": "times",
+          "start": 17.17,
+          "end": 17.71
+        },
+        {
+          "word": "sine",
+          "start": 17.71,
+          "end": 18.13
+        },
+        {
+          "word": "thirty",
+          "start": 18.13,
+          "end": 18.71
+        },
+        {
+          "word": "degrees",
+          "start": 18.71,
+          "end": 19.17
+        },
+        {
+          "word": "gives",
+          "start": 19.17,
+          "end": 20.07
+        },
+        {
+          "word": "two",
+          "start": 20.07,
+          "end": 20.37
+        },
+        {
+          "word": "point",
+          "start": 20.37,
+          "end": 20.61
+        },
+        {
+          "word": "five",
+          "start": 20.61,
+          "end": 20.93
+        },
+        {
+          "word": "metres",
+          "start": 20.93,
+          "end": 21.33
+        },
+        {
+          "word": "vertically.",
+          "start": 21.33,
+          "end": 21.77
+        },
+        {
+          "word": "against",
+          "start": 24.61,
+          "end": 24.97
+        },
+        {
+          "word": "gravity",
+          "start": 24.97,
+          "end": 25.57
+        },
+        {
+          "word": "equals",
+          "start": 25.57,
+          "end": 26.05
+        },
+        {
+          "word": "mgh.",
+          "start": 26.05,
+          "end": 26.81
+        },
+        {
+          "word": "It",
+          "start": 27.67,
+          "end": 27.81
+        },
+        {
+          "word": "is",
+          "start": 27.81,
+          "end": 27.93
+        },
+        {
+          "word": "the",
+          "start": 27.93,
+          "end": 28.05
+        },
+        {
+          "word": "weight",
+          "start": 28.05,
+          "end": 28.47
+        },
+        {
+          "word": "multiplied",
+          "start": 28.47,
+          "end": 29.25
+        },
+        {
+          "word": "by",
+          "start": 29.25,
+          "end": 29.81
+        },
+        {
+          "word": "the",
+          "start": 29.81,
+          "end": 29.95
+        },
+        {
+          "word": "upward",
+          "start": 29.95,
+          "end": 30.33
+        },
+        {
+          "word": "vertical",
+          "start": 30.33,
+          "end": 30.95
+        },
+        {
+          "word": "displacement.",
+          "start": 30.95,
+          "end": 31.71
+        },
+        {
+          "word": "Substitute",
+          "start": 32.2,
+          "end": 32.77
+        },
+        {
+          "word": "4",
+          "start": 32.77,
+          "end": 33.03
+        },
+        {
+          "word": "times",
+          "start": 33.03,
+          "end": 33.45
+        },
+        {
+          "word": "10",
+          "start": 33.45,
+          "end": 33.71
+        },
+        {
+          "word": "times",
+          "start": 33.71,
+          "end": 34.13
+        },
+        {
+          "word": "2",
+          "start": 34.13,
+          "end": 34.39
+        },
+        {
+          "word": ".5.",
+          "start": 34.39,
+          "end": 35.07
+        },
+        {
+          "word": "The",
+          "start": 35.39,
+          "end": 35.51
+        },
+        {
+          "word": "work",
+          "start": 35.51,
+          "end": 35.85
+        },
+        {
+          "word": "against",
+          "start": 35.85,
+          "end": 36.21
+        },
+        {
+          "word": "gravity",
+          "start": 36.21,
+          "end": 36.79
+        },
+        {
+          "word": "is",
+          "start": 36.79,
+          "end": 37.63
+        },
+        {
+          "word": "100",
+          "start": 37.63,
+          "end": 38.21
+        },
+        {
+          "word": "joules.",
+          "start": 38.21,
+          "end": 38.89
+        },
+        {
+          "word": "The",
+          "start": 41.22,
+          "end": 41.3
+        },
+        {
+          "word": "5",
+          "start": 41.3,
+          "end": 41.72
+        },
+        {
+          "word": "meters",
+          "start": 41.72,
+          "end": 42.1
+        },
+        {
+          "word": "belongs",
+          "start": 42.1,
+          "end": 43.24
+        },
+        {
+          "word": "in",
+          "start": 43.24,
+          "end": 43.64
+        },
+        {
+          "word": "the",
+          "start": 43.64,
+          "end": 43.78
+        },
+        {
+          "word": "friction",
+          "start": 43.78,
+          "end": 44.14
+        },
+        {
+          "word": "calculation",
+          "start": 44.14,
+          "end": 44.84
+        },
+        {
+          "word": "because",
+          "start": 44.84,
+          "end": 45.84
+        },
+        {
+          "word": "friction",
+          "start": 45.84,
+          "end": 46.34
+        },
+        {
+          "word": "acts",
+          "start": 46.34,
+          "end": 46.82
+        },
+        {
+          "word": "along",
+          "start": 46.82,
+          "end": 47.36
+        },
+        {
+          "word": "the",
+          "start": 47.36,
+          "end": 47.58
+        },
+        {
+          "word": "slope.",
+          "start": 47.58,
+          "end": 47.88
+        },
+        {
+          "word": "The",
+          "start": 48.96,
+          "end": 49.22
+        },
+        {
+          "word": "2",
+          "start": 49.22,
+          "end": 49.52
+        },
+        {
+          "word": ".5",
+          "start": 49.52,
+          "end": 50.08
+        },
+        {
+          "word": "meters",
+          "start": 50.08,
+          "end": 50.56
+        },
+        {
+          "word": "belongs",
+          "start": 50.56,
+          "end": 51.64
+        },
+        {
+          "word": "here",
+          "start": 51.64,
+          "end": 52.02
+        },
+        {
+          "word": "because",
+          "start": 52.02,
+          "end": 52.6
+        },
+        {
+          "word": "gravity",
+          "start": 52.6,
+          "end": 53.06
+        },
+        {
+          "word": "is",
+          "start": 53.06,
+          "end": 53.34
+        },
+        {
+          "word": "vertical.",
+          "start": 53.34,
+          "end": 53.74
+        },
+        {
+          "word": "The",
+          "start": 54.74,
+          "end": 54.82
+        },
+        {
+          "word": "direction",
+          "start": 54.82,
+          "end": 55.3
+        },
+        {
+          "word": "of",
+          "start": 55.3,
+          "end": 55.56
+        },
+        {
+          "word": "the",
+          "start": 55.56,
+          "end": 55.7
+        },
+        {
+          "word": "force",
+          "start": 55.7,
+          "end": 56.18
+        },
+        {
+          "word": "decides",
+          "start": 56.18,
+          "end": 57.22
+        },
+        {
+          "word": "which",
+          "start": 57.22,
+          "end": 57.7
+        },
+        {
+          "word": "distance",
+          "start": 57.7,
+          "end": 58.16
+        },
+        {
+          "word": "to",
+          "start": 58.16,
+          "end": 58.48
+        },
+        {
+          "word": "use.",
+          "start": 58.48,
+          "end": 58.74
+        }
+      ],
+      "cues": {
+        "why": 0.4,
+        "heightFormula": 12.89,
+        "heightSub": 16.75,
+        "workFormula": 24.61,
+        "workSub": 32.2,
+        "workAnswer": 35.39,
+        "distanceWhy": 41.22,
+        "heightResult": 20.07,
+        "gravityResult": 37.63
+      },
+      "figureEvents": [
+        {
+          "id": "number-34",
+          "wordIndex": 34,
+          "word": "5",
+          "spokenPhrase": "five",
+          "start": 16.85,
+          "target": "slopeDistance",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-37",
+          "wordIndex": 37,
+          "word": "30",
+          "spokenPhrase": "thirty",
+          "start": 18.13,
+          "target": "angle",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-40",
+          "wordIndex": 40,
+          "word": "2.5",
+          "spokenPhrase": "two",
+          "start": 20.07,
+          "target": "height",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-60",
+          "wordIndex": 60,
+          "word": "4",
+          "spokenPhrase": "4",
+          "start": 32.77,
+          "target": "mass",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-62",
+          "wordIndex": 62,
+          "word": "10",
+          "spokenPhrase": "10",
+          "start": 33.45,
+          "target": "gravity",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-64",
+          "wordIndex": 64,
+          "word": "2.5",
+          "spokenPhrase": "2",
+          "start": 34.13,
+          "target": "height",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-71",
+          "wordIndex": 71,
+          "word": "100",
+          "spokenPhrase": "100",
+          "start": 37.63,
+          "target": "gravityWork",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-74",
+          "wordIndex": 74,
+          "word": "5",
+          "spokenPhrase": "5",
+          "start": 41.3,
+          "target": "slopeDistance",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-88",
+          "wordIndex": 88,
+          "word": "2.5",
+          "spokenPhrase": "2",
+          "start": 49.22,
+          "target": "height",
+          "kind": "spoken"
+        }
+      ],
+      "wordCount": 107,
+      "text": "Gravity acts vertically. The distance paired with weight must therefore be the vertical rise, not the distance along the ramp. Look at the right angle triangle. Height equals slope distance times sine theta. So five times sine thirty degrees gives two point five metres vertically. against gravity equals mgh. It is the weight multiplied by the upward vertical displacement. Substitute 4 times 10 times 2 .5. The work against gravity is 100 joules. The 5 meters belongs in the friction calculation because friction acts along the slope. The 2 .5 meters belongs here because gravity is vertical. The direction of the force decides which distance to use.",
+      "duration": 61.44
+    },
+    {
+      "id": "s07",
+      "title": "By a force, or against it?",
+      "mode": "signs",
+      "voiceSpeed": 0.9,
+      "tempo": "slow",
+      "beats": [
+        {
+          "id": "against",
+          "text": "Our answers are work against resistance: positive energy requirements. Work done by friction on the uphill crate has the opposite sign.",
+          "ink": "W(by f) = −fd",
+          "hold": 0,
+          "start": 0.4,
+          "speechEnd": 12.03,
+          "end": 12.23,
+          "cue": 0.61,
+          "penEnd": 12.15
+        },
+        {
+          "id": "gravitySign",
+          "text": "Work done by gravity during the climb is also negative.",
+          "ink": "W(by g) = −mgh",
+          "hold": 0,
+          "start": 12.23,
+          "speechEnd": 16.33,
+          "end": 16.53,
+          "cue": 12.31,
+          "penEnd": 16.450000000000003
+        },
+        {
+          "id": "check",
+          "text": "Here is the check. The speed is constant. Does that mean every force does zero work?",
+          "hold": 3,
+          "start": 16.53,
+          "speechEnd": 23.33,
+          "end": 23.53,
+          "cue": 16.61,
+          "penEnd": 23.450000000000003
+        },
+        {
+          "id": "answer",
+          "text": "No. Constant speed along this straight slope means the forces balance: pull minus friction minus m g sine theta equals zero.",
+          "ink": "P − f − mg sin θ = 0",
+          "hold": 0,
+          "start": 26.53,
+          "speechEnd": 39.64,
+          "end": 39.84,
+          "cue": 26.53,
+          "penEnd": 39.760000000000005
+        },
+        {
+          "id": "multiply",
+          "text": "Multiply by slope distance d. Pulling work is P d, and d sine theta is h. So positive pulling work cancels the negative resisting work.",
+          "ink": "Wpull − fd − mgh = 0",
+          "hold": 2,
+          "start": 39.84,
+          "speechEnd": 56.23,
+          "end": 56.43,
+          "cue": 39.84,
+          "penEnd": 56.35
+        },
+        {
+          "id": "net",
+          "text": "The total work is zero, although the individual works are not. Reaction alone contributes no work because it is perpendicular.",
+          "hold": 0,
+          "start": 58.43,
+          "speechEnd": 68.26,
+          "end": 68.46,
+          "cue": 58.43,
+          "penEnd": 68.38
+        },
+        {
+          "id": "whatif",
+          "text": "What would change if the same path were travelled downhill? Friction would still oppose motion, so its work stays negative. Gravity would now help the motion, so its work becomes positive.",
+          "hold": 2,
+          "start": 68.46,
+          "speechEnd": 84.09,
+          "end": 84.29,
+          "cue": 68.53,
+          "penEnd": 84.21000000000001
+        }
+      ],
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 23.53,
+          "end": 26.53,
+          "duration": 3
+        },
+        {
+          "kind": "hold",
+          "start": 56.43,
+          "end": 58.43,
+          "duration": 2
+        },
+        {
+          "kind": "hold",
+          "start": 84.29,
+          "end": 86.29,
+          "duration": 2
+        }
+      ],
+      "audio": "work-s07.mp3",
+      "audioSha256": "30be7f44545d1a1b4b293a3f1e3461f0e698a5133ece7ce48b32704d9723ccff",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "provider": "elevenlabs",
+      "sampleDuration": 86.64,
+      "words": [
+        {
+          "word": "answers",
+          "start": 0.61,
+          "end": 1.09
+        },
+        {
+          "word": "are",
+          "start": 1.09,
+          "end": 1.65
+        },
+        {
+          "word": "work",
+          "start": 1.65,
+          "end": 1.93
+        },
+        {
+          "word": "against",
+          "start": 1.93,
+          "end": 2.43
+        },
+        {
+          "word": "resistance,",
+          "start": 2.43,
+          "end": 3.27
+        },
+        {
+          "word": "positive",
+          "start": 3.87,
+          "end": 4.55
+        },
+        {
+          "word": "energy",
+          "start": 4.55,
+          "end": 5.07
+        },
+        {
+          "word": "requirements.",
+          "start": 5.07,
+          "end": 5.85
+        },
+        {
+          "word": "Work",
+          "start": 6.83,
+          "end": 7.19
+        },
+        {
+          "word": "done",
+          "start": 7.19,
+          "end": 7.61
+        },
+        {
+          "word": "by",
+          "start": 7.61,
+          "end": 8.23
+        },
+        {
+          "word": "friction",
+          "start": 8.23,
+          "end": 8.73
+        },
+        {
+          "word": "on",
+          "start": 8.73,
+          "end": 9.29
+        },
+        {
+          "word": "the",
+          "start": 9.29,
+          "end": 9.45
+        },
+        {
+          "word": "uphill",
+          "start": 9.45,
+          "end": 9.71
+        },
+        {
+          "word": "crate",
+          "start": 9.71,
+          "end": 10.23
+        },
+        {
+          "word": "has",
+          "start": 10.23,
+          "end": 10.85
+        },
+        {
+          "word": "the",
+          "start": 10.85,
+          "end": 10.99
+        },
+        {
+          "word": "opposite",
+          "start": 10.99,
+          "end": 11.35
+        },
+        {
+          "word": "sign.",
+          "start": 11.35,
+          "end": 11.85
+        },
+        {
+          "word": "Work",
+          "start": 12.31,
+          "end": 12.47
+        },
+        {
+          "word": "done",
+          "start": 12.47,
+          "end": 12.87
+        },
+        {
+          "word": "by",
+          "start": 12.87,
+          "end": 13.59
+        },
+        {
+          "word": "gravity",
+          "start": 13.59,
+          "end": 14.13
+        },
+        {
+          "word": "during",
+          "start": 14.13,
+          "end": 14.43
+        },
+        {
+          "word": "the",
+          "start": 14.43,
+          "end": 14.63
+        },
+        {
+          "word": "climb",
+          "start": 14.63,
+          "end": 14.97
+        },
+        {
+          "word": "is",
+          "start": 14.97,
+          "end": 15.37
+        },
+        {
+          "word": "also",
+          "start": 15.37,
+          "end": 15.73
+        },
+        {
+          "word": "negative.",
+          "start": 15.73,
+          "end": 16.07
+        },
+        {
+          "word": "Here",
+          "start": 16.61,
+          "end": 16.77
+        },
+        {
+          "word": "is",
+          "start": 16.77,
+          "end": 16.95
+        },
+        {
+          "word": "the",
+          "start": 16.95,
+          "end": 17.11
+        },
+        {
+          "word": "check.",
+          "start": 17.11,
+          "end": 17.41
+        },
+        {
+          "word": "The",
+          "start": 18.95,
+          "end": 19.11
+        },
+        {
+          "word": "speed",
+          "start": 19.11,
+          "end": 19.35
+        },
+        {
+          "word": "is",
+          "start": 19.35,
+          "end": 19.57
+        },
+        {
+          "word": "constant.",
+          "start": 19.57,
+          "end": 19.95
+        },
+        {
+          "word": "Does",
+          "start": 20.79,
+          "end": 20.97
+        },
+        {
+          "word": "that",
+          "start": 20.97,
+          "end": 21.13
+        },
+        {
+          "word": "mean",
+          "start": 21.13,
+          "end": 21.41
+        },
+        {
+          "word": "every",
+          "start": 21.41,
+          "end": 21.75
+        },
+        {
+          "word": "force",
+          "start": 21.75,
+          "end": 22.09
+        },
+        {
+          "word": "does",
+          "start": 22.09,
+          "end": 22.35
+        },
+        {
+          "word": "zero",
+          "start": 22.35,
+          "end": 22.71
+        },
+        {
+          "word": "work?",
+          "start": 22.71,
+          "end": 23.17
+        },
+        {
+          "word": "No.",
+          "start": 26.53,
+          "end": 26.82
+        },
+        {
+          "word": "constant",
+          "start": 26.82,
+          "end": 28.5
+        },
+        {
+          "word": "speed",
+          "start": 28.5,
+          "end": 29.0
+        },
+        {
+          "word": "along",
+          "start": 29.0,
+          "end": 29.52
+        },
+        {
+          "word": "this",
+          "start": 29.52,
+          "end": 29.88
+        },
+        {
+          "word": "straight",
+          "start": 29.88,
+          "end": 30.18
+        },
+        {
+          "word": "slope",
+          "start": 30.18,
+          "end": 30.58
+        },
+        {
+          "word": "means",
+          "start": 30.58,
+          "end": 31.52
+        },
+        {
+          "word": "the",
+          "start": 31.52,
+          "end": 31.78
+        },
+        {
+          "word": "forces",
+          "start": 31.78,
+          "end": 32.14
+        },
+        {
+          "word": "balance.",
+          "start": 32.14,
+          "end": 32.84
+        },
+        {
+          "word": "Pull",
+          "start": 33.06,
+          "end": 33.98
+        },
+        {
+          "word": "minus",
+          "start": 33.98,
+          "end": 34.94
+        },
+        {
+          "word": "friction",
+          "start": 34.94,
+          "end": 35.5
+        },
+        {
+          "word": "minus",
+          "start": 35.5,
+          "end": 36.52
+        },
+        {
+          "word": "mg",
+          "start": 36.52,
+          "end": 37.06
+        },
+        {
+          "word": "sin",
+          "start": 37.06,
+          "end": 37.36
+        },
+        {
+          "word": "theta",
+          "start": 37.36,
+          "end": 37.74
+        },
+        {
+          "word": "equals",
+          "start": 37.74,
+          "end": 38.76
+        },
+        {
+          "word": "zero,",
+          "start": 38.76,
+          "end": 39.46
+        },
+        {
+          "word": "multiply",
+          "start": 39.84,
+          "end": 40.42
+        },
+        {
+          "word": "by",
+          "start": 40.42,
+          "end": 41.72
+        },
+        {
+          "word": "slope",
+          "start": 41.72,
+          "end": 41.98
+        },
+        {
+          "word": "distance.",
+          "start": 41.98,
+          "end": 42.46
+        },
+        {
+          "word": "Pulling",
+          "start": 44.92,
+          "end": 45.62
+        },
+        {
+          "word": "work",
+          "start": 45.62,
+          "end": 45.96
+        },
+        {
+          "word": "is",
+          "start": 45.96,
+          "end": 46.86
+        },
+        {
+          "word": "Pd",
+          "start": 46.86,
+          "end": 47.44
+        },
+        {
+          "word": "and",
+          "start": 47.44,
+          "end": 48.42
+        },
+        {
+          "word": "the",
+          "start": 48.42,
+          "end": 48.66
+        },
+        {
+          "word": "d",
+          "start": 48.66,
+          "end": 49.04
+        },
+        {
+          "word": "sin",
+          "start": 49.04,
+          "end": 49.34
+        },
+        {
+          "word": "theta",
+          "start": 49.34,
+          "end": 49.78
+        },
+        {
+          "word": "is",
+          "start": 49.78,
+          "end": 50.1
+        },
+        {
+          "word": "h.",
+          "start": 50.1,
+          "end": 50.62
+        },
+        {
+          "word": "So",
+          "start": 51.7,
+          "end": 51.96
+        },
+        {
+          "word": "positive",
+          "start": 51.96,
+          "end": 52.38
+        },
+        {
+          "word": "pulling",
+          "start": 52.38,
+          "end": 52.8
+        },
+        {
+          "word": "work",
+          "start": 52.8,
+          "end": 53.34
+        },
+        {
+          "word": "cancels",
+          "start": 53.34,
+          "end": 54.28
+        },
+        {
+          "word": "the",
+          "start": 54.28,
+          "end": 54.5
+        },
+        {
+          "word": "negative",
+          "start": 54.5,
+          "end": 55.02
+        },
+        {
+          "word": "resisting",
+          "start": 55.02,
+          "end": 55.62
+        },
+        {
+          "word": "work.",
+          "start": 55.62,
+          "end": 56.0
+        },
+        {
+          "word": "The",
+          "start": 58.43,
+          "end": 58.57
+        },
+        {
+          "word": "total",
+          "start": 58.57,
+          "end": 58.81
+        },
+        {
+          "word": "work",
+          "start": 58.81,
+          "end": 59.09
+        },
+        {
+          "word": "is",
+          "start": 59.09,
+          "end": 59.31
+        },
+        {
+          "word": "zero,",
+          "start": 59.31,
+          "end": 59.63
+        },
+        {
+          "word": "although",
+          "start": 60.43,
+          "end": 60.69
+        },
+        {
+          "word": "the",
+          "start": 60.69,
+          "end": 60.89
+        },
+        {
+          "word": "individual",
+          "start": 60.89,
+          "end": 61.39
+        },
+        {
+          "word": "works",
+          "start": 61.39,
+          "end": 61.79
+        },
+        {
+          "word": "are",
+          "start": 61.79,
+          "end": 61.99
+        },
+        {
+          "word": "not.",
+          "start": 61.99,
+          "end": 62.21
+        },
+        {
+          "word": "Reaction",
+          "start": 63.27,
+          "end": 63.99
+        },
+        {
+          "word": "alone",
+          "start": 63.99,
+          "end": 64.49
+        },
+        {
+          "word": "contributes",
+          "start": 64.49,
+          "end": 65.47
+        },
+        {
+          "word": "no",
+          "start": 65.47,
+          "end": 65.91
+        },
+        {
+          "word": "work",
+          "start": 65.91,
+          "end": 66.33
+        },
+        {
+          "word": "because",
+          "start": 66.33,
+          "end": 66.99
+        },
+        {
+          "word": "it",
+          "start": 66.99,
+          "end": 67.17
+        },
+        {
+          "word": "is",
+          "start": 67.17,
+          "end": 67.29
+        },
+        {
+          "word": "perpendicular.",
+          "start": 67.29,
+          "end": 67.79
+        },
+        {
+          "word": "What",
+          "start": 68.53,
+          "end": 68.71
+        },
+        {
+          "word": "would",
+          "start": 68.71,
+          "end": 68.99
+        },
+        {
+          "word": "change",
+          "start": 68.99,
+          "end": 69.51
+        },
+        {
+          "word": "if",
+          "start": 69.51,
+          "end": 69.83
+        },
+        {
+          "word": "the",
+          "start": 69.83,
+          "end": 70.01
+        },
+        {
+          "word": "same",
+          "start": 70.01,
+          "end": 70.39
+        },
+        {
+          "word": "path",
+          "start": 70.39,
+          "end": 70.77
+        },
+        {
+          "word": "were",
+          "start": 70.77,
+          "end": 71.09
+        },
+        {
+          "word": "traveled",
+          "start": 71.09,
+          "end": 71.47
+        },
+        {
+          "word": "downhill?",
+          "start": 71.47,
+          "end": 72.17
+        },
+        {
+          "word": "Friction",
+          "start": 73.09,
+          "end": 73.65
+        },
+        {
+          "word": "would",
+          "start": 73.65,
+          "end": 73.97
+        },
+        {
+          "word": "still",
+          "start": 73.97,
+          "end": 74.33
+        },
+        {
+          "word": "oppose",
+          "start": 74.33,
+          "end": 74.71
+        },
+        {
+          "word": "motion,",
+          "start": 74.71,
+          "end": 75.19
+        },
+        {
+          "word": "so",
+          "start": 75.71,
+          "end": 75.93
+        },
+        {
+          "word": "its",
+          "start": 75.93,
+          "end": 76.19
+        },
+        {
+          "word": "work",
+          "start": 76.19,
+          "end": 76.55
+        },
+        {
+          "word": "stays",
+          "start": 76.55,
+          "end": 76.91
+        },
+        {
+          "word": "negative.",
+          "start": 76.91,
+          "end": 77.45
+        },
+        {
+          "word": "Gravity",
+          "start": 78.45,
+          "end": 78.99
+        },
+        {
+          "word": "would",
+          "start": 78.99,
+          "end": 79.33
+        },
+        {
+          "word": "now",
+          "start": 79.33,
+          "end": 79.63
+        },
+        {
+          "word": "help",
+          "start": 79.63,
+          "end": 80.03
+        },
+        {
+          "word": "the",
+          "start": 80.03,
+          "end": 80.31
+        },
+        {
+          "word": "motion,",
+          "start": 80.31,
+          "end": 80.67
+        },
+        {
+          "word": "so",
+          "start": 81.05,
+          "end": 81.47
+        },
+        {
+          "word": "its",
+          "start": 81.47,
+          "end": 81.71
+        },
+        {
+          "word": "work",
+          "start": 81.71,
+          "end": 82.17
+        },
+        {
+          "word": "becomes",
+          "start": 82.17,
+          "end": 83.33
+        },
+        {
+          "word": "positive.",
+          "start": 83.33,
+          "end": 83.95
+        }
+      ],
+      "cues": {
+        "against": 0.61,
+        "gravitySign": 12.31,
+        "check": 16.61,
+        "answer": 26.53,
+        "multiply": 39.84,
+        "net": 58.43,
+        "whatif": 68.53
+      },
+      "figureEvents": [],
+      "wordCount": 141,
+      "text": "answers are work against resistance, positive energy requirements. Work done by friction on the uphill crate has the opposite sign. Work done by gravity during the climb is also negative. Here is the check. The speed is constant. Does that mean every force does zero work? No. constant speed along this straight slope means the forces balance. Pull minus friction minus mg sin theta equals zero, multiply by slope distance. Pulling work is Pd and the d sin theta is h. So positive pulling work cancels the negative resisting work. The total work is zero, although the individual works are not. Reaction alone contributes no work because it is perpendicular. What would change if the same path were traveled downhill? Friction would still oppose motion, so its work stays negative. Gravity would now help the motion, so its work becomes positive.",
+      "duration": 86.674286
+    },
+    {
+      "id": "s08",
+      "title": "What to remember",
+      "mode": "recap",
+      "voiceSpeed": 1,
+      "tempo": "brisk",
+      "beats": [
+        {
+          "id": "outcome1",
+          "text": "You can now calculate work from force and displacement: use the component parallel to the motion.",
+          "hold": 0,
+          "caption": "✓ Calculate work from force and displacement",
+          "start": 0.4,
+          "speechEnd": 6.47,
+          "end": 6.67,
+          "cue": 0.54,
+          "penEnd": 6.59
+        },
+        {
+          "id": "outcome2",
+          "text": "And calculate work against friction and gravity. Match friction with slope distance, and weight with vertical height. Always state whether work is by a force, or against it.",
+          "hold": 2,
+          "caption": "✓ Calculate work against friction and gravity",
+          "start": 6.67,
+          "speechEnd": 21.18,
+          "end": 21.38,
+          "cue": 6.72,
+          "penEnd": 21.3
+        }
+      ],
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 21.38,
+          "end": 23.38,
+          "duration": 2
+        }
+      ],
+      "audio": "work-s08.mp3",
+      "audioSha256": "8724ac82f75939ba9909dca1f0ce314d3742146f19b18fe880c3d091519aa94c",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "provider": "elevenlabs",
+      "sampleDuration": 23.73,
+      "words": [
+        {
+          "word": "can",
+          "start": 0.54,
+          "end": 0.7
+        },
+        {
+          "word": "now",
+          "start": 0.7,
+          "end": 0.84
+        },
+        {
+          "word": "calculate",
+          "start": 0.84,
+          "end": 1.18
+        },
+        {
+          "word": "work",
+          "start": 1.18,
+          "end": 1.62
+        },
+        {
+          "word": "from",
+          "start": 1.62,
+          "end": 1.92
+        },
+        {
+          "word": "force",
+          "start": 1.92,
+          "end": 2.32
+        },
+        {
+          "word": "and",
+          "start": 2.32,
+          "end": 2.54
+        },
+        {
+          "word": "displacement.",
+          "start": 2.54,
+          "end": 3.2
+        },
+        {
+          "word": "Use",
+          "start": 3.7,
+          "end": 4.3
+        },
+        {
+          "word": "the",
+          "start": 4.3,
+          "end": 4.5
+        },
+        {
+          "word": "component",
+          "start": 4.5,
+          "end": 4.92
+        },
+        {
+          "word": "parallel",
+          "start": 4.92,
+          "end": 5.32
+        },
+        {
+          "word": "to",
+          "start": 5.32,
+          "end": 5.7
+        },
+        {
+          "word": "the",
+          "start": 5.7,
+          "end": 5.84
+        },
+        {
+          "word": "motion.",
+          "start": 5.84,
+          "end": 6.18
+        },
+        {
+          "word": "And",
+          "start": 6.72,
+          "end": 6.8
+        },
+        {
+          "word": "calculate",
+          "start": 6.8,
+          "end": 7.12
+        },
+        {
+          "word": "work",
+          "start": 7.12,
+          "end": 7.62
+        },
+        {
+          "word": "against",
+          "start": 7.62,
+          "end": 8.46
+        },
+        {
+          "word": "friction",
+          "start": 8.46,
+          "end": 8.88
+        },
+        {
+          "word": "and",
+          "start": 8.88,
+          "end": 9.1
+        },
+        {
+          "word": "gravity.",
+          "start": 9.1,
+          "end": 9.48
+        },
+        {
+          "word": "Match",
+          "start": 10.12,
+          "end": 10.66
+        },
+        {
+          "word": "friction",
+          "start": 10.66,
+          "end": 11.22
+        },
+        {
+          "word": "with",
+          "start": 11.22,
+          "end": 12.26
+        },
+        {
+          "word": "slope",
+          "start": 12.26,
+          "end": 12.6
+        },
+        {
+          "word": "distance,",
+          "start": 12.6,
+          "end": 13.06
+        },
+        {
+          "word": "and",
+          "start": 13.54,
+          "end": 13.76
+        },
+        {
+          "word": "weight",
+          "start": 13.76,
+          "end": 14.08
+        },
+        {
+          "word": "with",
+          "start": 14.08,
+          "end": 14.96
+        },
+        {
+          "word": "vertical",
+          "start": 14.96,
+          "end": 15.3
+        },
+        {
+          "word": "height.",
+          "start": 15.3,
+          "end": 15.72
+        },
+        {
+          "word": "Always",
+          "start": 16.46,
+          "end": 16.92
+        },
+        {
+          "word": "state",
+          "start": 16.92,
+          "end": 17.36
+        },
+        {
+          "word": "whether",
+          "start": 17.36,
+          "end": 18.1
+        },
+        {
+          "word": "work",
+          "start": 18.1,
+          "end": 18.52
+        },
+        {
+          "word": "is",
+          "start": 18.52,
+          "end": 19.2
+        },
+        {
+          "word": "by",
+          "start": 19.2,
+          "end": 19.4
+        },
+        {
+          "word": "a",
+          "start": 19.4,
+          "end": 19.5
+        },
+        {
+          "word": "force,",
+          "start": 19.5,
+          "end": 19.9
+        },
+        {
+          "word": "or",
+          "start": 20.18,
+          "end": 20.38
+        },
+        {
+          "word": "against",
+          "start": 20.38,
+          "end": 20.76
+        },
+        {
+          "word": "it.",
+          "start": 20.76,
+          "end": 21.04
+        }
+      ],
+      "cues": {
+        "outcome1": 0.54,
+        "outcome2": 6.72
+      },
+      "figureEvents": [],
+      "wordCount": 43,
+      "text": "can now calculate work from force and displacement. Use the component parallel to the motion. And calculate work against friction and gravity. Match friction with slope distance, and weight with vertical height. Always state whether work is by a force, or against it.",
+      "duration": 23.771429
+    }
+  ],
+  "totalDuration": 397.374695,
+  "engine": "faster-whisper-small (local CPU)",
+  "unresolvedCues": []
+}

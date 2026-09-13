@@ -1,0 +1,5310 @@
+{
+  "project": "mechanics-coefficient-of-friction",
+  "sceneCount": 8,
+  "scenes": [
+    {
+      "id": "s01",
+      "title": "Coefficient of friction",
+      "mode": "opening",
+      "voiceSpeed": 1,
+      "tempo": "brisk",
+      "beats": [
+        {
+          "id": "syllabus",
+          "text": "Syllabus four point one, excerpt: limiting friction and limiting equilibrium.",
+          "hold": 0.4,
+          "start": 0.4,
+          "speechEnd": 6.1,
+          "end": 6.3,
+          "cue": 0.4,
+          "penEnd": 6.22
+        },
+        {
+          "id": "outcome1",
+          "text": "By the end, you can distinguish actual friction from its limit.",
+          "hold": 0.3,
+          "caption": "Distinguish actual friction from its limit.",
+          "start": 6.7,
+          "speechEnd": 10.51,
+          "end": 10.71,
+          "cue": 6.85,
+          "penEnd": 10.63
+        },
+        {
+          "id": "outcome2",
+          "text": "And find friction and acceleration in three trials.",
+          "hold": 0.4,
+          "caption": "Find friction and acceleration in three trials.",
+          "start": 11.01,
+          "speechEnd": 13.92,
+          "end": 14.12,
+          "cue": 11.15,
+          "penEnd": 14.04
+        }
+      ],
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 6.3,
+          "end": 6.7,
+          "duration": 0.4
+        },
+        {
+          "kind": "hold",
+          "start": 10.71,
+          "end": 11.01,
+          "duration": 0.3
+        },
+        {
+          "kind": "hold",
+          "start": 14.12,
+          "end": 14.52,
+          "duration": 0.4
+        }
+      ],
+      "audio": "coefficient-of-friction-s01.mp3",
+      "audioSha256": "2e30bc967cc3ed782a8c30b1bc711bd4624607852facce693691864a4a9a84c8",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "provider": "elevenlabs",
+      "sampleDuration": 14.87,
+      "words": [
+        {
+          "word": "Syllabus",
+          "start": 0.4,
+          "end": 0.79
+        },
+        {
+          "word": "four",
+          "start": 0.79,
+          "end": 1.07
+        },
+        {
+          "word": "point",
+          "start": 1.07,
+          "end": 1.29
+        },
+        {
+          "word": "one,",
+          "start": 1.29,
+          "end": 1.73
+        },
+        {
+          "word": "excerpt",
+          "start": 2.15,
+          "end": 2.77
+        },
+        {
+          "word": "limiting",
+          "start": 2.77,
+          "end": 3.41
+        },
+        {
+          "word": "friction",
+          "start": 3.41,
+          "end": 3.91
+        },
+        {
+          "word": "and",
+          "start": 3.91,
+          "end": 4.67
+        },
+        {
+          "word": "limiting",
+          "start": 4.67,
+          "end": 5.11
+        },
+        {
+          "word": "equilibrium.",
+          "start": 5.11,
+          "end": 5.81
+        },
+        {
+          "word": "the",
+          "start": 6.85,
+          "end": 6.97
+        },
+        {
+          "word": "end,",
+          "start": 6.97,
+          "end": 7.29
+        },
+        {
+          "word": "you",
+          "start": 8.13,
+          "end": 8.21
+        },
+        {
+          "word": "can",
+          "start": 8.21,
+          "end": 8.35
+        },
+        {
+          "word": "distinguish",
+          "start": 8.35,
+          "end": 8.83
+        },
+        {
+          "word": "actual",
+          "start": 8.83,
+          "end": 9.17
+        },
+        {
+          "word": "friction",
+          "start": 9.17,
+          "end": 9.55
+        },
+        {
+          "word": "from",
+          "start": 9.55,
+          "end": 9.81
+        },
+        {
+          "word": "its",
+          "start": 9.81,
+          "end": 10.01
+        },
+        {
+          "word": "limit.",
+          "start": 10.01,
+          "end": 10.33
+        },
+        {
+          "word": "find",
+          "start": 11.15,
+          "end": 11.43
+        },
+        {
+          "word": "friction",
+          "start": 11.43,
+          "end": 11.81
+        },
+        {
+          "word": "and",
+          "start": 11.81,
+          "end": 12.03
+        },
+        {
+          "word": "acceleration",
+          "start": 12.03,
+          "end": 12.51
+        },
+        {
+          "word": "in",
+          "start": 12.51,
+          "end": 12.87
+        },
+        {
+          "word": "three",
+          "start": 12.87,
+          "end": 13.21
+        },
+        {
+          "word": "trials.",
+          "start": 13.21,
+          "end": 13.83
+        }
+      ],
+      "cues": {
+        "syllabus": 0.4,
+        "outcome1": 6.85,
+        "outcome2": 11.15
+      },
+      "figureEvents": [],
+      "wordCount": 27,
+      "text": "Syllabus four point one, excerpt limiting friction and limiting equilibrium. the end, you can distinguish actual friction from its limit. find friction and acceleration in three trials.",
+      "duration": 14.915918
+    },
+    {
+      "id": "s02",
+      "title": "One box, three separate trials",
+      "mode": "story",
+      "voiceSpeed": 1,
+      "tempo": "brisk",
+      "beats": [
+        {
+          "id": "story",
+          "text": "Consider a box at rest on a rough, level floor. We pull it horizontally to the right, in three separate trials.",
+          "hold": 0.2,
+          "start": 0.4,
+          "speechEnd": 9.72,
+          "end": 9.92,
+          "cue": 0.4,
+          "penEnd": 9.84
+        },
+        {
+          "id": "trialA",
+          "text": "In the first trial, a gentle pull leaves the box at rest.",
+          "hold": 0.2,
+          "start": 10.12,
+          "speechEnd": 14.07,
+          "end": 14.27,
+          "cue": 10.12,
+          "penEnd": 14.19
+        },
+        {
+          "id": "resetB",
+          "text": "Reset the box to rest for the second trial. A stronger pull brings it to the point of moving, but it still stays put.",
+          "hold": 0.2,
+          "start": 14.47,
+          "speechEnd": 22.73,
+          "end": 22.93,
+          "cue": 14.47,
+          "penEnd": 22.85
+        },
+        {
+          "id": "resetC",
+          "text": "Reset to rest again. In the third trial, a still stronger pull makes the box slide and speed up to the right.",
+          "hold": 0,
+          "start": 23.13,
+          "speechEnd": 31.52,
+          "end": 31.72,
+          "cue": 23.18,
+          "penEnd": 31.64
+        },
+        {
+          "id": "goal",
+          "text": "Why does friction balance some pulls, but not all? Here are the details for all three trials.",
+          "hold": 0,
+          "start": 31.72,
+          "speechEnd": 39.21,
+          "end": 39.41,
+          "cue": 31.74,
+          "penEnd": 39.33
+        }
+      ],
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 9.92,
+          "end": 10.12,
+          "duration": 0.2
+        },
+        {
+          "kind": "hold",
+          "start": 14.27,
+          "end": 14.47,
+          "duration": 0.2
+        },
+        {
+          "kind": "hold",
+          "start": 22.93,
+          "end": 23.13,
+          "duration": 0.2
+        }
+      ],
+      "audio": "coefficient-of-friction-s02.mp3",
+      "audioSha256": "29845b926823af7f5ea9c89d6d7229e1bf85d7e5c2c92da5363f19f0898f4856",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "provider": "elevenlabs",
+      "sampleDuration": 39.76,
+      "words": [
+        {
+          "word": "Consider",
+          "start": 0.4,
+          "end": 0.84
+        },
+        {
+          "word": "a",
+          "start": 0.84,
+          "end": 1.1
+        },
+        {
+          "word": "box",
+          "start": 1.1,
+          "end": 1.32
+        },
+        {
+          "word": "at",
+          "start": 1.32,
+          "end": 2.06
+        },
+        {
+          "word": "rest",
+          "start": 2.06,
+          "end": 2.5
+        },
+        {
+          "word": "on",
+          "start": 2.5,
+          "end": 3.16
+        },
+        {
+          "word": "a",
+          "start": 3.16,
+          "end": 3.3
+        },
+        {
+          "word": "rough,",
+          "start": 3.3,
+          "end": 3.6
+        },
+        {
+          "word": "level",
+          "start": 3.78,
+          "end": 4.1
+        },
+        {
+          "word": "floor.",
+          "start": 4.1,
+          "end": 4.52
+        },
+        {
+          "word": "We",
+          "start": 5.24,
+          "end": 5.42
+        },
+        {
+          "word": "pull",
+          "start": 5.42,
+          "end": 5.74
+        },
+        {
+          "word": "it",
+          "start": 5.74,
+          "end": 5.96
+        },
+        {
+          "word": "horizontally",
+          "start": 5.96,
+          "end": 6.56
+        },
+        {
+          "word": "to",
+          "start": 6.56,
+          "end": 6.98
+        },
+        {
+          "word": "the",
+          "start": 6.98,
+          "end": 7.08
+        },
+        {
+          "word": "right,",
+          "start": 7.08,
+          "end": 7.38
+        },
+        {
+          "word": "in",
+          "start": 7.8,
+          "end": 8.26
+        },
+        {
+          "word": "three",
+          "start": 8.26,
+          "end": 8.6
+        },
+        {
+          "word": "separate",
+          "start": 8.6,
+          "end": 9.18
+        },
+        {
+          "word": "trials.",
+          "start": 9.18,
+          "end": 9.72
+        },
+        {
+          "word": "In",
+          "start": 10.12,
+          "end": 10.26
+        },
+        {
+          "word": "the",
+          "start": 10.26,
+          "end": 10.36
+        },
+        {
+          "word": "first",
+          "start": 10.36,
+          "end": 10.58
+        },
+        {
+          "word": "trial,",
+          "start": 10.58,
+          "end": 10.92
+        },
+        {
+          "word": "a",
+          "start": 11.48,
+          "end": 11.66
+        },
+        {
+          "word": "gentle",
+          "start": 11.66,
+          "end": 11.92
+        },
+        {
+          "word": "pull",
+          "start": 11.92,
+          "end": 12.24
+        },
+        {
+          "word": "leaves",
+          "start": 12.24,
+          "end": 12.6
+        },
+        {
+          "word": "the",
+          "start": 12.6,
+          "end": 13.06
+        },
+        {
+          "word": "box",
+          "start": 13.06,
+          "end": 13.34
+        },
+        {
+          "word": "at",
+          "start": 13.34,
+          "end": 13.6
+        },
+        {
+          "word": "rest.",
+          "start": 13.6,
+          "end": 13.92
+        },
+        {
+          "word": "Reset",
+          "start": 14.47,
+          "end": 14.92
+        },
+        {
+          "word": "the",
+          "start": 14.92,
+          "end": 15.06
+        },
+        {
+          "word": "box",
+          "start": 15.06,
+          "end": 15.26
+        },
+        {
+          "word": "to",
+          "start": 15.26,
+          "end": 15.48
+        },
+        {
+          "word": "rest",
+          "start": 15.48,
+          "end": 15.74
+        },
+        {
+          "word": "for",
+          "start": 15.74,
+          "end": 15.96
+        },
+        {
+          "word": "the",
+          "start": 15.96,
+          "end": 16.1
+        },
+        {
+          "word": "second",
+          "start": 16.1,
+          "end": 16.42
+        },
+        {
+          "word": "trial.",
+          "start": 16.42,
+          "end": 16.82
+        },
+        {
+          "word": "A",
+          "start": 17.54,
+          "end": 17.72
+        },
+        {
+          "word": "stronger",
+          "start": 17.72,
+          "end": 18.04
+        },
+        {
+          "word": "pull",
+          "start": 18.04,
+          "end": 18.44
+        },
+        {
+          "word": "brings",
+          "start": 18.44,
+          "end": 19.0
+        },
+        {
+          "word": "it",
+          "start": 19.0,
+          "end": 19.24
+        },
+        {
+          "word": "to",
+          "start": 19.24,
+          "end": 19.46
+        },
+        {
+          "word": "the",
+          "start": 19.46,
+          "end": 19.58
+        },
+        {
+          "word": "point",
+          "start": 19.58,
+          "end": 19.9
+        },
+        {
+          "word": "of",
+          "start": 19.9,
+          "end": 20.16
+        },
+        {
+          "word": "moving,",
+          "start": 20.16,
+          "end": 20.5
+        },
+        {
+          "word": "but",
+          "start": 21.02,
+          "end": 21.32
+        },
+        {
+          "word": "it",
+          "start": 21.32,
+          "end": 21.48
+        },
+        {
+          "word": "still",
+          "start": 21.48,
+          "end": 21.76
+        },
+        {
+          "word": "stays",
+          "start": 21.76,
+          "end": 22.06
+        },
+        {
+          "word": "put.",
+          "start": 22.06,
+          "end": 22.48
+        },
+        {
+          "word": "Reset",
+          "start": 23.18,
+          "end": 23.68
+        },
+        {
+          "word": "to",
+          "start": 23.68,
+          "end": 24.02
+        },
+        {
+          "word": "rest",
+          "start": 24.02,
+          "end": 24.24
+        },
+        {
+          "word": "again.",
+          "start": 24.24,
+          "end": 24.54
+        },
+        {
+          "word": "In",
+          "start": 24.54,
+          "end": 25.5
+        },
+        {
+          "word": "the",
+          "start": 25.5,
+          "end": 25.6
+        },
+        {
+          "word": "third",
+          "start": 25.6,
+          "end": 25.84
+        },
+        {
+          "word": "trial,",
+          "start": 25.84,
+          "end": 26.22
+        },
+        {
+          "word": "a",
+          "start": 26.8,
+          "end": 26.86
+        },
+        {
+          "word": "still",
+          "start": 26.86,
+          "end": 27.14
+        },
+        {
+          "word": "stronger",
+          "start": 27.14,
+          "end": 27.56
+        },
+        {
+          "word": "pull",
+          "start": 27.56,
+          "end": 27.96
+        },
+        {
+          "word": "makes",
+          "start": 27.96,
+          "end": 28.82
+        },
+        {
+          "word": "the",
+          "start": 28.82,
+          "end": 29.06
+        },
+        {
+          "word": "box",
+          "start": 29.06,
+          "end": 29.32
+        },
+        {
+          "word": "slide",
+          "start": 29.32,
+          "end": 29.8
+        },
+        {
+          "word": "and",
+          "start": 29.8,
+          "end": 30.38
+        },
+        {
+          "word": "speed",
+          "start": 30.38,
+          "end": 30.64
+        },
+        {
+          "word": "up",
+          "start": 30.64,
+          "end": 30.88
+        },
+        {
+          "word": "to",
+          "start": 30.88,
+          "end": 31.0
+        },
+        {
+          "word": "the",
+          "start": 31.0,
+          "end": 31.1
+        },
+        {
+          "word": "right.",
+          "start": 31.1,
+          "end": 31.36
+        },
+        {
+          "word": "Why",
+          "start": 31.74,
+          "end": 32.04
+        },
+        {
+          "word": "does",
+          "start": 32.04,
+          "end": 32.32
+        },
+        {
+          "word": "friction",
+          "start": 32.32,
+          "end": 32.62
+        },
+        {
+          "word": "balance",
+          "start": 32.62,
+          "end": 33.02
+        },
+        {
+          "word": "some",
+          "start": 33.02,
+          "end": 33.34
+        },
+        {
+          "word": "pulls",
+          "start": 33.34,
+          "end": 33.76
+        },
+        {
+          "word": "but",
+          "start": 33.76,
+          "end": 34.22
+        },
+        {
+          "word": "not",
+          "start": 34.22,
+          "end": 34.42
+        },
+        {
+          "word": "all?",
+          "start": 34.42,
+          "end": 34.82
+        },
+        {
+          "word": "Here",
+          "start": 36.0,
+          "end": 36.32
+        },
+        {
+          "word": "are",
+          "start": 36.32,
+          "end": 36.56
+        },
+        {
+          "word": "the",
+          "start": 36.56,
+          "end": 36.66
+        },
+        {
+          "word": "details",
+          "start": 36.66,
+          "end": 37.2
+        },
+        {
+          "word": "for",
+          "start": 37.2,
+          "end": 37.96
+        },
+        {
+          "word": "all",
+          "start": 37.96,
+          "end": 38.26
+        },
+        {
+          "word": "three",
+          "start": 38.26,
+          "end": 38.54
+        },
+        {
+          "word": "trials.",
+          "start": 38.54,
+          "end": 39.0
+        }
+      ],
+      "cues": {
+        "story": 0.4,
+        "trialA": 10.12,
+        "resetB": 14.47,
+        "resetC": 23.18,
+        "goal": 31.74,
+        "slide": 29.32
+      },
+      "figureEvents": [],
+      "wordCount": 96,
+      "text": "Consider a box at rest on a rough, level floor. We pull it horizontally to the right, in three separate trials. In the first trial, a gentle pull leaves the box at rest. Reset the box to rest for the second trial. A stronger pull brings it to the point of moving, but it still stays put. Reset to rest again. In the third trial, a still stronger pull makes the box slide and speed up to the right. Why does friction balance some pulls but not all? Here are the details for all three trials.",
+      "duration": 39.810612
+    },
+    {
+      "id": "s03",
+      "title": "The whole question",
+      "mode": "problem",
+      "voiceSpeed": 0.9,
+      "tempo": "slow",
+      "beats": [
+        {
+          "id": "mass",
+          "text": "The box has mass five kilograms.",
+          "hold": 0.3,
+          "start": 0.4,
+          "speechEnd": 2.78,
+          "end": 2.98,
+          "cue": 0.4,
+          "penEnd": 2.9
+        },
+        {
+          "id": "mu",
+          "text": "The coefficient of friction between box and floor is zero point four.",
+          "hold": 0.3,
+          "start": 3.28,
+          "speechEnd": 9.46,
+          "end": 9.66,
+          "cue": 3.3,
+          "penEnd": 9.58
+        },
+        {
+          "id": "gravity",
+          "text": "Take g as ten metres per second squared.",
+          "hold": 0.3,
+          "start": 9.96,
+          "speechEnd": 12.78,
+          "end": 12.98,
+          "cue": 9.96,
+          "penEnd": 12.9
+        },
+        {
+          "id": "pulls",
+          "text": "The independent pulls are twelve newtons in trial A, twenty newtons in trial B, and twenty five newtons in trial C.",
+          "hold": 0.5,
+          "start": 13.28,
+          "speechEnd": 22.5,
+          "end": 22.7,
+          "cue": 13.3,
+          "penEnd": 22.62
+        },
+        {
+          "id": "conditions",
+          "text": "Each trial starts from rest on the rough horizontal floor. Contact is maintained, and each pull stays constant. Use the ideal model: sliding friction equals limiting friction.",
+          "hold": 0.4,
+          "start": 23.2,
+          "speechEnd": 39.25,
+          "end": 39.45,
+          "cue": 23.2,
+          "penEnd": 39.370000000000005
+        },
+        {
+          "id": "unknown",
+          "text": "Find the normal reaction and the limiting friction. Then find actual friction and acceleration in each trial. First, what does the coefficient tell us?",
+          "hold": 3,
+          "start": 39.85,
+          "speechEnd": 52.97,
+          "end": 53.17,
+          "cue": 39.85,
+          "penEnd": 53.09
+        }
+      ],
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 2.98,
+          "end": 3.28,
+          "duration": 0.3
+        },
+        {
+          "kind": "hold",
+          "start": 9.66,
+          "end": 9.96,
+          "duration": 0.3
+        },
+        {
+          "kind": "hold",
+          "start": 12.98,
+          "end": 13.28,
+          "duration": 0.3
+        },
+        {
+          "kind": "hold",
+          "start": 22.7,
+          "end": 23.2,
+          "duration": 0.5
+        },
+        {
+          "kind": "hold",
+          "start": 39.45,
+          "end": 39.85,
+          "duration": 0.4
+        },
+        {
+          "kind": "hold",
+          "start": 53.17,
+          "end": 56.17,
+          "duration": 3
+        }
+      ],
+      "audio": "coefficient-of-friction-s03.mp3",
+      "audioSha256": "7745dfed9c81b455ecbffbcbe044630b2aede368b14706e2e6b678b22f4c13f2",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "provider": "elevenlabs",
+      "sampleDuration": 56.52,
+      "words": [
+        {
+          "word": "The",
+          "start": 0.4,
+          "end": 0.52
+        },
+        {
+          "word": "box",
+          "start": 0.52,
+          "end": 0.76
+        },
+        {
+          "word": "has",
+          "start": 0.76,
+          "end": 1.06
+        },
+        {
+          "word": "mass",
+          "start": 1.06,
+          "end": 1.48
+        },
+        {
+          "word": "five",
+          "start": 1.48,
+          "end": 1.88
+        },
+        {
+          "word": "kilograms.",
+          "start": 1.88,
+          "end": 2.26
+        },
+        {
+          "word": "The",
+          "start": 3.3,
+          "end": 3.4
+        },
+        {
+          "word": "coefficient",
+          "start": 3.4,
+          "end": 3.9
+        },
+        {
+          "word": "of",
+          "start": 3.9,
+          "end": 4.52
+        },
+        {
+          "word": "friction",
+          "start": 4.52,
+          "end": 4.98
+        },
+        {
+          "word": "between",
+          "start": 4.98,
+          "end": 5.44
+        },
+        {
+          "word": "box",
+          "start": 5.44,
+          "end": 6.48
+        },
+        {
+          "word": "and",
+          "start": 6.48,
+          "end": 6.92
+        },
+        {
+          "word": "floor",
+          "start": 6.92,
+          "end": 7.3
+        },
+        {
+          "word": "is",
+          "start": 7.3,
+          "end": 8.24
+        },
+        {
+          "word": "zero",
+          "start": 8.24,
+          "end": 8.66
+        },
+        {
+          "word": "point",
+          "start": 8.66,
+          "end": 8.98
+        },
+        {
+          "word": "four.",
+          "start": 8.98,
+          "end": 9.32
+        },
+        {
+          "word": "Take",
+          "start": 9.96,
+          "end": 10.22
+        },
+        {
+          "word": "g",
+          "start": 10.22,
+          "end": 10.66
+        },
+        {
+          "word": "as",
+          "start": 10.66,
+          "end": 11.16
+        },
+        {
+          "word": "ten",
+          "start": 11.16,
+          "end": 11.36
+        },
+        {
+          "word": "metres",
+          "start": 11.36,
+          "end": 11.6
+        },
+        {
+          "word": "per",
+          "start": 11.6,
+          "end": 11.9
+        },
+        {
+          "word": "second",
+          "start": 11.9,
+          "end": 12.18
+        },
+        {
+          "word": "squared.",
+          "start": 12.18,
+          "end": 12.62
+        },
+        {
+          "word": "The",
+          "start": 13.3,
+          "end": 13.4
+        },
+        {
+          "word": "independent",
+          "start": 13.4,
+          "end": 13.94
+        },
+        {
+          "word": "pulls",
+          "start": 13.94,
+          "end": 14.38
+        },
+        {
+          "word": "are",
+          "start": 14.38,
+          "end": 14.62
+        },
+        {
+          "word": "twelve",
+          "start": 14.62,
+          "end": 15.06
+        },
+        {
+          "word": "newtons",
+          "start": 15.06,
+          "end": 15.64
+        },
+        {
+          "word": "in",
+          "start": 15.64,
+          "end": 15.92
+        },
+        {
+          "word": "trial",
+          "start": 15.92,
+          "end": 16.38
+        },
+        {
+          "word": "A,",
+          "start": 16.38,
+          "end": 16.74
+        },
+        {
+          "word": "twenty",
+          "start": 17.28,
+          "end": 17.66
+        },
+        {
+          "word": "newtons",
+          "start": 17.66,
+          "end": 18.1
+        },
+        {
+          "word": "in",
+          "start": 18.1,
+          "end": 18.3
+        },
+        {
+          "word": "trial",
+          "start": 18.3,
+          "end": 18.56
+        },
+        {
+          "word": "B,",
+          "start": 18.56,
+          "end": 18.88
+        },
+        {
+          "word": "and",
+          "start": 19.46,
+          "end": 19.54
+        },
+        {
+          "word": "twenty",
+          "start": 19.54,
+          "end": 19.94
+        },
+        {
+          "word": "five",
+          "start": 19.94,
+          "end": 20.24
+        },
+        {
+          "word": "newtons",
+          "start": 20.24,
+          "end": 20.86
+        },
+        {
+          "word": "in",
+          "start": 20.86,
+          "end": 21.56
+        },
+        {
+          "word": "trial",
+          "start": 21.56,
+          "end": 21.88
+        },
+        {
+          "word": "C.",
+          "start": 21.88,
+          "end": 22.32
+        },
+        {
+          "word": "Each",
+          "start": 23.2,
+          "end": 23.4
+        },
+        {
+          "word": "trial",
+          "start": 23.4,
+          "end": 23.86
+        },
+        {
+          "word": "starts",
+          "start": 23.86,
+          "end": 24.2
+        },
+        {
+          "word": "from",
+          "start": 24.2,
+          "end": 24.74
+        },
+        {
+          "word": "rest",
+          "start": 24.74,
+          "end": 25.22
+        },
+        {
+          "word": "on",
+          "start": 25.22,
+          "end": 25.62
+        },
+        {
+          "word": "the",
+          "start": 25.62,
+          "end": 25.72
+        },
+        {
+          "word": "rough",
+          "start": 25.72,
+          "end": 25.9
+        },
+        {
+          "word": "horizontal",
+          "start": 25.9,
+          "end": 26.48
+        },
+        {
+          "word": "floor.",
+          "start": 26.48,
+          "end": 27.84
+        },
+        {
+          "word": "Contact",
+          "start": 28.76,
+          "end": 29.32
+        },
+        {
+          "word": "is",
+          "start": 29.32,
+          "end": 29.74
+        },
+        {
+          "word": "maintained,",
+          "start": 29.74,
+          "end": 30.2
+        },
+        {
+          "word": "and",
+          "start": 31.22,
+          "end": 31.38
+        },
+        {
+          "word": "each",
+          "start": 31.38,
+          "end": 31.56
+        },
+        {
+          "word": "pull",
+          "start": 31.56,
+          "end": 31.84
+        },
+        {
+          "word": "stays",
+          "start": 31.84,
+          "end": 32.26
+        },
+        {
+          "word": "constant.",
+          "start": 32.26,
+          "end": 33.12
+        },
+        {
+          "word": "Use",
+          "start": 34.12,
+          "end": 34.46
+        },
+        {
+          "word": "the",
+          "start": 34.46,
+          "end": 34.64
+        },
+        {
+          "word": "ideal",
+          "start": 34.64,
+          "end": 35.02
+        },
+        {
+          "word": "model.",
+          "start": 35.02,
+          "end": 35.4
+        },
+        {
+          "word": "Sliding",
+          "start": 36.48,
+          "end": 36.8
+        },
+        {
+          "word": "friction",
+          "start": 36.8,
+          "end": 37.18
+        },
+        {
+          "word": "equals",
+          "start": 37.18,
+          "end": 37.86
+        },
+        {
+          "word": "limiting",
+          "start": 37.86,
+          "end": 38.56
+        },
+        {
+          "word": "friction.",
+          "start": 38.56,
+          "end": 39.0
+        },
+        {
+          "word": "Find",
+          "start": 39.85,
+          "end": 40.14
+        },
+        {
+          "word": "the",
+          "start": 40.14,
+          "end": 40.4
+        },
+        {
+          "word": "normal",
+          "start": 40.4,
+          "end": 40.68
+        },
+        {
+          "word": "reaction",
+          "start": 40.68,
+          "end": 41.3
+        },
+        {
+          "word": "and",
+          "start": 41.3,
+          "end": 42.1
+        },
+        {
+          "word": "the",
+          "start": 42.1,
+          "end": 42.22
+        },
+        {
+          "word": "limiting",
+          "start": 42.22,
+          "end": 42.54
+        },
+        {
+          "word": "friction.",
+          "start": 42.54,
+          "end": 43.1
+        },
+        {
+          "word": "Then",
+          "start": 43.9,
+          "end": 44.3
+        },
+        {
+          "word": "find",
+          "start": 44.3,
+          "end": 44.7
+        },
+        {
+          "word": "actual",
+          "start": 44.7,
+          "end": 45.16
+        },
+        {
+          "word": "friction",
+          "start": 45.16,
+          "end": 45.62
+        },
+        {
+          "word": "and",
+          "start": 45.94,
+          "end": 46.4
+        },
+        {
+          "word": "acceleration",
+          "start": 46.4,
+          "end": 46.88
+        },
+        {
+          "word": "in",
+          "start": 46.88,
+          "end": 47.5
+        },
+        {
+          "word": "each",
+          "start": 47.5,
+          "end": 47.82
+        },
+        {
+          "word": "trial.",
+          "start": 47.82,
+          "end": 48.22
+        },
+        {
+          "word": "First,",
+          "start": 49.24,
+          "end": 49.9
+        },
+        {
+          "word": "what",
+          "start": 50.76,
+          "end": 51.0
+        },
+        {
+          "word": "does",
+          "start": 51.0,
+          "end": 51.28
+        },
+        {
+          "word": "the",
+          "start": 51.28,
+          "end": 51.48
+        },
+        {
+          "word": "coefficient",
+          "start": 51.48,
+          "end": 51.94
+        },
+        {
+          "word": "tell",
+          "start": 51.94,
+          "end": 52.46
+        },
+        {
+          "word": "us?",
+          "start": 52.46,
+          "end": 52.8
+        }
+      ],
+      "cues": {
+        "mass": 0.4,
+        "mu": 3.3,
+        "gravity": 9.96,
+        "pulls": 13.3,
+        "conditions": 23.2,
+        "unknown": 39.85
+      },
+      "figureEvents": [
+        {
+          "id": "number-4",
+          "wordIndex": 4,
+          "word": "5",
+          "spokenPhrase": "five",
+          "start": 1.48,
+          "target": "mass",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-15",
+          "wordIndex": 15,
+          "word": "0.4",
+          "spokenPhrase": "zero point four.",
+          "start": 8.24,
+          "target": "mu",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-21",
+          "wordIndex": 21,
+          "word": "10",
+          "spokenPhrase": "ten",
+          "start": 11.16,
+          "target": "gravity",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-30",
+          "wordIndex": 30,
+          "word": "12",
+          "spokenPhrase": "twelve",
+          "start": 14.62,
+          "target": "pullA",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-35",
+          "wordIndex": 35,
+          "word": "20",
+          "spokenPhrase": "twenty",
+          "start": 17.28,
+          "target": "pullB",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-41",
+          "wordIndex": 41,
+          "word": "25",
+          "spokenPhrase": "twenty five",
+          "start": 19.54,
+          "target": "pullC",
+          "kind": "spoken"
+        }
+      ],
+      "wordCount": 98,
+      "text": "The box has mass five kilograms. The coefficient of friction between box and floor is zero point four. Take g as ten metres per second squared. The independent pulls are twelve newtons in trial A, twenty newtons in trial B, and twenty five newtons in trial C. Each trial starts from rest on the rough horizontal floor. Contact is maintained, and each pull stays constant. Use the ideal model. Sliding friction equals limiting friction. Find the normal reaction and the limiting friction. Then find actual friction and acceleration in each trial. First, what does the coefficient tell us?",
+      "duration": 56.555102
+    },
+    {
+      "id": "s04",
+      "title": "Actual friction can be below its limit",
+      "mode": "concept",
+      "voiceSpeed": 0.9,
+      "tempo": "slow",
+      "beats": [
+        {
+          "id": "direction",
+          "text": "Friction acts along the contact surface. Here it points left, opposing the box’s tendency to slide right, or its actual sliding to the right.",
+          "hold": 0.4,
+          "start": 0.4,
+          "speechEnd": 12.72,
+          "end": 12.92,
+          "cue": 0.4,
+          "penEnd": 12.84
+        },
+        {
+          "id": "coefficient",
+          "text": "The coefficient, mu, depends on the two materials in contact. It has no units. Together with the normal reaction, it sets a limit.",
+          "hold": 0.4,
+          "start": 13.32,
+          "speechEnd": 26.27,
+          "end": 26.47,
+          "cue": 13.32,
+          "penEnd": 26.39
+        },
+        {
+          "id": "limit",
+          "text": "The general rule is: actual friction f is less than or equal to mu R.",
+          "hold": 1,
+          "ink": "f ≤ μR",
+          "start": 26.87,
+          "speechEnd": 34.01,
+          "end": 34.21,
+          "cue": 27.0,
+          "penEnd": 34.13
+        },
+        {
+          "id": "cap",
+          "text": "The maximum possible friction, f max, equals mu R. This is a ceiling, not the friction in every situation.",
+          "hold": 1,
+          "ink": "f max = μR",
+          "start": 35.21,
+          "speechEnd": 45.45,
+          "end": 45.65,
+          "cue": 35.21,
+          "penEnd": 45.57
+        },
+        {
+          "id": "zero",
+          "text": "For example, before any pull, the box is at rest with only weight and reaction acting. There is no horizontal tendency to slide. Actual friction is zero.",
+          "hold": 2,
+          "ink": "f = 0 N",
+          "start": 46.65,
+          "speechEnd": 59.12,
+          "end": 59.32,
+          "cue": 46.84,
+          "penEnd": 59.24
+        },
+        {
+          "id": "match",
+          "text": "As the pull grows, friction matches what is needed to keep the box at rest, up to its limit. Let’s calculate that limit.",
+          "hold": 0.4,
+          "start": 61.32,
+          "speechEnd": 71.66,
+          "end": 71.86,
+          "cue": 61.32,
+          "penEnd": 71.78
+        }
+      ],
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 12.92,
+          "end": 13.32,
+          "duration": 0.4
+        },
+        {
+          "kind": "hold",
+          "start": 26.47,
+          "end": 26.87,
+          "duration": 0.4
+        },
+        {
+          "kind": "hold",
+          "start": 34.21,
+          "end": 35.21,
+          "duration": 1
+        },
+        {
+          "kind": "hold",
+          "start": 45.65,
+          "end": 46.65,
+          "duration": 1
+        },
+        {
+          "kind": "hold",
+          "start": 59.32,
+          "end": 61.32,
+          "duration": 2
+        },
+        {
+          "kind": "hold",
+          "start": 71.86,
+          "end": 72.26,
+          "duration": 0.4
+        }
+      ],
+      "audio": "coefficient-of-friction-s04.mp3",
+      "audioSha256": "f5d1e11577a0347f93ebc60936641c547cc5c80625cbe50b6e222261d6f27cfe",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "provider": "elevenlabs",
+      "sampleDuration": 72.61,
+      "words": [
+        {
+          "word": "Friction",
+          "start": 0.4,
+          "end": 0.88
+        },
+        {
+          "word": "acts",
+          "start": 0.88,
+          "end": 1.3
+        },
+        {
+          "word": "along",
+          "start": 1.3,
+          "end": 1.68
+        },
+        {
+          "word": "the",
+          "start": 1.68,
+          "end": 2.12
+        },
+        {
+          "word": "contact",
+          "start": 2.12,
+          "end": 2.46
+        },
+        {
+          "word": "surface.",
+          "start": 2.46,
+          "end": 3.02
+        },
+        {
+          "word": "Here",
+          "start": 4.0,
+          "end": 4.24
+        },
+        {
+          "word": "it",
+          "start": 4.24,
+          "end": 4.5
+        },
+        {
+          "word": "points",
+          "start": 4.5,
+          "end": 4.86
+        },
+        {
+          "word": "left,",
+          "start": 4.86,
+          "end": 5.5
+        },
+        {
+          "word": "opposing",
+          "start": 6.1,
+          "end": 6.6
+        },
+        {
+          "word": "the",
+          "start": 6.6,
+          "end": 7.32
+        },
+        {
+          "word": "box’s",
+          "start": 7.32,
+          "end": 7.92
+        },
+        {
+          "word": "tendency",
+          "start": 7.92,
+          "end": 8.48
+        },
+        {
+          "word": "to",
+          "start": 8.48,
+          "end": 9.46
+        },
+        {
+          "word": "slide",
+          "start": 9.46,
+          "end": 9.82
+        },
+        {
+          "word": "right,",
+          "start": 9.82,
+          "end": 10.2
+        },
+        {
+          "word": "or",
+          "start": 10.44,
+          "end": 10.56
+        },
+        {
+          "word": "its",
+          "start": 10.56,
+          "end": 10.74
+        },
+        {
+          "word": "actual",
+          "start": 10.74,
+          "end": 11.26
+        },
+        {
+          "word": "sliding",
+          "start": 11.26,
+          "end": 11.94
+        },
+        {
+          "word": "to",
+          "start": 11.94,
+          "end": 12.18
+        },
+        {
+          "word": "the",
+          "start": 12.18,
+          "end": 12.3
+        },
+        {
+          "word": "right.",
+          "start": 12.3,
+          "end": 12.58
+        },
+        {
+          "word": "The",
+          "start": 13.32,
+          "end": 13.46
+        },
+        {
+          "word": "coefficient,",
+          "start": 13.46,
+          "end": 13.9
+        },
+        {
+          "word": "mu,",
+          "start": 14.64,
+          "end": 15.02
+        },
+        {
+          "word": "depends",
+          "start": 15.86,
+          "end": 16.16
+        },
+        {
+          "word": "on",
+          "start": 16.16,
+          "end": 16.42
+        },
+        {
+          "word": "the",
+          "start": 16.42,
+          "end": 16.5
+        },
+        {
+          "word": "two",
+          "start": 16.5,
+          "end": 16.64
+        },
+        {
+          "word": "materials",
+          "start": 16.64,
+          "end": 17.22
+        },
+        {
+          "word": "in",
+          "start": 17.22,
+          "end": 18.28
+        },
+        {
+          "word": "contact.",
+          "start": 18.28,
+          "end": 18.72
+        },
+        {
+          "word": "It",
+          "start": 19.76,
+          "end": 19.9
+        },
+        {
+          "word": "has",
+          "start": 19.9,
+          "end": 20.08
+        },
+        {
+          "word": "no",
+          "start": 20.08,
+          "end": 20.28
+        },
+        {
+          "word": "units.",
+          "start": 20.28,
+          "end": 20.72
+        },
+        {
+          "word": "Together",
+          "start": 21.8,
+          "end": 22.22
+        },
+        {
+          "word": "with",
+          "start": 22.22,
+          "end": 22.78
+        },
+        {
+          "word": "the",
+          "start": 22.78,
+          "end": 22.92
+        },
+        {
+          "word": "normal",
+          "start": 22.92,
+          "end": 23.12
+        },
+        {
+          "word": "reaction,",
+          "start": 23.12,
+          "end": 23.66
+        },
+        {
+          "word": "it",
+          "start": 24.44,
+          "end": 24.64
+        },
+        {
+          "word": "sets",
+          "start": 24.64,
+          "end": 24.78
+        },
+        {
+          "word": "a",
+          "start": 24.78,
+          "end": 25.04
+        },
+        {
+          "word": "limit.",
+          "start": 25.04,
+          "end": 25.96
+        },
+        {
+          "word": "general",
+          "start": 27.0,
+          "end": 27.4
+        },
+        {
+          "word": "rule",
+          "start": 27.4,
+          "end": 27.84
+        },
+        {
+          "word": "is",
+          "start": 27.84,
+          "end": 28.3
+        },
+        {
+          "word": "actual",
+          "start": 28.3,
+          "end": 29.36
+        },
+        {
+          "word": "friction",
+          "start": 29.36,
+          "end": 29.8
+        },
+        {
+          "word": "f",
+          "start": 29.8,
+          "end": 30.42
+        },
+        {
+          "word": "is",
+          "start": 30.42,
+          "end": 30.8
+        },
+        {
+          "word": "less",
+          "start": 30.8,
+          "end": 31.1
+        },
+        {
+          "word": "than",
+          "start": 31.1,
+          "end": 31.36
+        },
+        {
+          "word": "or",
+          "start": 31.36,
+          "end": 32.02
+        },
+        {
+          "word": "equal",
+          "start": 32.02,
+          "end": 32.48
+        },
+        {
+          "word": "to",
+          "start": 32.48,
+          "end": 32.82
+        },
+        {
+          "word": "MUR.",
+          "start": 32.82,
+          "end": 33.58
+        },
+        {
+          "word": "The",
+          "start": 35.21,
+          "end": 35.34
+        },
+        {
+          "word": "maximum",
+          "start": 35.34,
+          "end": 35.92
+        },
+        {
+          "word": "possible",
+          "start": 35.92,
+          "end": 36.3
+        },
+        {
+          "word": "friction,",
+          "start": 36.3,
+          "end": 37.0
+        },
+        {
+          "word": "fmax",
+          "start": 37.7,
+          "end": 38.36
+        },
+        {
+          "word": "equals",
+          "start": 38.36,
+          "end": 39.56
+        },
+        {
+          "word": "muR.",
+          "start": 39.56,
+          "end": 40.72
+        },
+        {
+          "word": "This",
+          "start": 41.58,
+          "end": 41.88
+        },
+        {
+          "word": "is",
+          "start": 41.88,
+          "end": 42.04
+        },
+        {
+          "word": "a",
+          "start": 42.04,
+          "end": 42.3
+        },
+        {
+          "word": "ceiling,",
+          "start": 42.3,
+          "end": 42.64
+        },
+        {
+          "word": "not",
+          "start": 43.18,
+          "end": 43.5
+        },
+        {
+          "word": "the",
+          "start": 43.5,
+          "end": 43.76
+        },
+        {
+          "word": "friction",
+          "start": 43.76,
+          "end": 44.06
+        },
+        {
+          "word": "in",
+          "start": 44.06,
+          "end": 44.36
+        },
+        {
+          "word": "every",
+          "start": 44.36,
+          "end": 44.66
+        },
+        {
+          "word": "situation.",
+          "start": 44.66,
+          "end": 45.24
+        },
+        {
+          "word": "example,",
+          "start": 46.84,
+          "end": 47.26
+        },
+        {
+          "word": "before",
+          "start": 47.56,
+          "end": 47.78
+        },
+        {
+          "word": "any",
+          "start": 47.78,
+          "end": 48.14
+        },
+        {
+          "word": "pull,",
+          "start": 48.14,
+          "end": 48.42
+        },
+        {
+          "word": "the",
+          "start": 49.0,
+          "end": 49.1
+        },
+        {
+          "word": "box",
+          "start": 49.1,
+          "end": 49.54
+        },
+        {
+          "word": "is",
+          "start": 49.54,
+          "end": 49.82
+        },
+        {
+          "word": "at",
+          "start": 49.82,
+          "end": 49.96
+        },
+        {
+          "word": "rest",
+          "start": 49.96,
+          "end": 50.36
+        },
+        {
+          "word": "with",
+          "start": 50.36,
+          "end": 50.62
+        },
+        {
+          "word": "only",
+          "start": 50.62,
+          "end": 51.12
+        },
+        {
+          "word": "weight",
+          "start": 51.12,
+          "end": 51.92
+        },
+        {
+          "word": "and",
+          "start": 51.92,
+          "end": 52.76
+        },
+        {
+          "word": "reaction",
+          "start": 52.76,
+          "end": 53.34
+        },
+        {
+          "word": "acting.",
+          "start": 53.34,
+          "end": 53.82
+        },
+        {
+          "word": "There",
+          "start": 53.82,
+          "end": 54.66
+        },
+        {
+          "word": "is",
+          "start": 54.66,
+          "end": 54.8
+        },
+        {
+          "word": "no",
+          "start": 54.8,
+          "end": 55.04
+        },
+        {
+          "word": "horizontal",
+          "start": 55.04,
+          "end": 55.64
+        },
+        {
+          "word": "tendency",
+          "start": 55.64,
+          "end": 56.18
+        },
+        {
+          "word": "to",
+          "start": 56.18,
+          "end": 56.52
+        },
+        {
+          "word": "slide.",
+          "start": 56.52,
+          "end": 56.96
+        },
+        {
+          "word": "Actual",
+          "start": 57.52,
+          "end": 57.92
+        },
+        {
+          "word": "friction",
+          "start": 57.92,
+          "end": 58.28
+        },
+        {
+          "word": "is",
+          "start": 58.28,
+          "end": 58.58
+        },
+        {
+          "word": "zero.",
+          "start": 58.58,
+          "end": 58.96
+        },
+        {
+          "word": "As",
+          "start": 61.32,
+          "end": 61.49
+        },
+        {
+          "word": "the",
+          "start": 61.49,
+          "end": 61.63
+        },
+        {
+          "word": "pool",
+          "start": 61.63,
+          "end": 61.87
+        },
+        {
+          "word": "grows,",
+          "start": 61.87,
+          "end": 62.47
+        },
+        {
+          "word": "friction",
+          "start": 63.15,
+          "end": 63.61
+        },
+        {
+          "word": "matches",
+          "start": 63.61,
+          "end": 64.27
+        },
+        {
+          "word": "what",
+          "start": 64.27,
+          "end": 64.53
+        },
+        {
+          "word": "is",
+          "start": 64.53,
+          "end": 64.73
+        },
+        {
+          "word": "needed",
+          "start": 64.73,
+          "end": 65.15
+        },
+        {
+          "word": "to",
+          "start": 65.15,
+          "end": 65.41
+        },
+        {
+          "word": "keep",
+          "start": 65.41,
+          "end": 65.81
+        },
+        {
+          "word": "the",
+          "start": 65.81,
+          "end": 66.07
+        },
+        {
+          "word": "box",
+          "start": 66.07,
+          "end": 66.39
+        },
+        {
+          "word": "at",
+          "start": 66.39,
+          "end": 66.59
+        },
+        {
+          "word": "rest,",
+          "start": 66.59,
+          "end": 67.05
+        },
+        {
+          "word": "up",
+          "start": 67.45,
+          "end": 67.93
+        },
+        {
+          "word": "to",
+          "start": 67.93,
+          "end": 68.11
+        },
+        {
+          "word": "its",
+          "start": 68.11,
+          "end": 68.23
+        },
+        {
+          "word": "limit.",
+          "start": 68.23,
+          "end": 68.49
+        },
+        {
+          "word": "Let's",
+          "start": 69.45,
+          "end": 69.83
+        },
+        {
+          "word": "calculate",
+          "start": 69.83,
+          "end": 70.21
+        },
+        {
+          "word": "that",
+          "start": 70.21,
+          "end": 71.05
+        },
+        {
+          "word": "limit.",
+          "start": 71.05,
+          "end": 71.39
+        }
+      ],
+      "cues": {
+        "direction": 0.4,
+        "coefficient": 13.32,
+        "limit": 27.0,
+        "cap": 35.21,
+        "zero": 46.84,
+        "match": 61.32,
+        "zeroResult": 58.58
+      },
+      "figureEvents": [
+        {
+          "id": "number-102",
+          "wordIndex": 102,
+          "word": "0",
+          "spokenPhrase": "zero.",
+          "start": 58.58,
+          "target": "friction",
+          "kind": "spoken"
+        }
+      ],
+      "wordCount": 126,
+      "text": "Friction acts along the contact surface. Here it points left, opposing the box’s tendency to slide right, or its actual sliding to the right. The coefficient, mu, depends on the two materials in contact. It has no units. Together with the normal reaction, it sets a limit. general rule is actual friction f is less than or equal to MUR. The maximum possible friction, fmax equals muR. This is a ceiling, not the friction in every situation. example, before any pull, the box is at rest with only weight and reaction acting. There is no horizontal tendency to slide. Actual friction is zero. As the pool grows, friction matches what is needed to keep the box at rest, up to its limit. Let's calculate that limit.",
+      "duration": 72.646531
+    },
+    {
+      "id": "s05",
+      "title": "First find the reaction and friction limit",
+      "mode": "reaction",
+      "voiceSpeed": 0.9,
+      "tempo": "slow",
+      "beats": [
+        {
+          "id": "vertical",
+          "text": "The pull is horizontal, and the box stays on the floor. Its vertical acceleration is zero, so the upward and downward forces balance.",
+          "hold": 0.5,
+          "start": 0.4,
+          "speechEnd": 12.07,
+          "end": 12.27,
+          "cue": 0.4,
+          "penEnd": 12.19
+        },
+        {
+          "id": "formula",
+          "text": "Vertical resultant equals zero: reaction minus weight equals zero.",
+          "hold": 1,
+          "ink": "R - mg = 0",
+          "start": 12.77,
+          "speechEnd": 19.06,
+          "end": 19.26,
+          "cue": 12.78,
+          "penEnd": 19.180000000000003
+        },
+        {
+          "id": "rearrange",
+          "text": "Therefore, reaction equals mass times g.",
+          "hold": 0.6,
+          "ink": "R = mg",
+          "start": 20.26,
+          "speechEnd": 23.11,
+          "end": 23.31,
+          "cue": 20.26,
+          "penEnd": 23.23
+        },
+        {
+          "id": "sub",
+          "text": "Substitute mass five and g ten. Reaction equals five times ten, which is fifty newtons.",
+          "hold": 2,
+          "ink": "R = 5×10 = 50 N",
+          "start": 23.91,
+          "speechEnd": 31.19,
+          "end": 31.39,
+          "cue": 23.91,
+          "penEnd": 31.310000000000002
+        },
+        {
+          "id": "capformula",
+          "text": "Now use the limiting friction formula: f max equals mu R.",
+          "hold": 0.6,
+          "ink": "f max = μR",
+          "start": 33.39,
+          "speechEnd": 39.07,
+          "end": 39.27,
+          "cue": 33.39,
+          "penEnd": 39.190000000000005
+        },
+        {
+          "id": "capsub",
+          "text": "Zero point four times fifty gives a limiting friction of twenty newtons.",
+          "hold": 2,
+          "ink": "f max = 0.4×50 = 20 N",
+          "start": 39.87,
+          "speechEnd": 44.91,
+          "end": 45.11,
+          "cue": 39.87,
+          "penEnd": 45.03
+        },
+        {
+          "id": "meaning",
+          "text": "The floor can supply up to that much friction. It need not supply all of it. This same limit applies in every trial because the mass, surfaces and vertical forces stay the same.",
+          "hold": 0.5,
+          "start": 47.11,
+          "speechEnd": 63.13,
+          "end": 63.33,
+          "cue": 47.26,
+          "penEnd": 63.25
+        }
+      ],
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 12.27,
+          "end": 12.77,
+          "duration": 0.5
+        },
+        {
+          "kind": "hold",
+          "start": 19.26,
+          "end": 20.26,
+          "duration": 1
+        },
+        {
+          "kind": "hold",
+          "start": 23.31,
+          "end": 23.91,
+          "duration": 0.6
+        },
+        {
+          "kind": "hold",
+          "start": 31.39,
+          "end": 33.39,
+          "duration": 2
+        },
+        {
+          "kind": "hold",
+          "start": 39.27,
+          "end": 39.87,
+          "duration": 0.6
+        },
+        {
+          "kind": "hold",
+          "start": 45.11,
+          "end": 47.11,
+          "duration": 2
+        },
+        {
+          "kind": "hold",
+          "start": 63.33,
+          "end": 63.83,
+          "duration": 0.5
+        }
+      ],
+      "audio": "coefficient-of-friction-s05.mp3",
+      "audioSha256": "312b7488e5f422d3a0aa8405459255194a4a0433f7121376a4824c9187ccf62c",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "provider": "elevenlabs",
+      "sampleDuration": 64.18,
+      "words": [
+        {
+          "word": "The",
+          "start": 0.4,
+          "end": 0.54
+        },
+        {
+          "word": "pull",
+          "start": 0.54,
+          "end": 0.9
+        },
+        {
+          "word": "is",
+          "start": 0.9,
+          "end": 1.12
+        },
+        {
+          "word": "horizontal,",
+          "start": 1.12,
+          "end": 1.74
+        },
+        {
+          "word": "and",
+          "start": 2.4,
+          "end": 3.16
+        },
+        {
+          "word": "the",
+          "start": 3.16,
+          "end": 3.26
+        },
+        {
+          "word": "box",
+          "start": 3.26,
+          "end": 3.64
+        },
+        {
+          "word": "stays",
+          "start": 3.64,
+          "end": 4.14
+        },
+        {
+          "word": "on",
+          "start": 4.14,
+          "end": 4.6
+        },
+        {
+          "word": "the",
+          "start": 4.6,
+          "end": 4.7
+        },
+        {
+          "word": "floor.",
+          "start": 4.7,
+          "end": 5.02
+        },
+        {
+          "word": "Its",
+          "start": 6.06,
+          "end": 6.22
+        },
+        {
+          "word": "vertical",
+          "start": 6.22,
+          "end": 6.66
+        },
+        {
+          "word": "acceleration",
+          "start": 6.66,
+          "end": 7.46
+        },
+        {
+          "word": "is",
+          "start": 7.46,
+          "end": 7.88
+        },
+        {
+          "word": "zero,",
+          "start": 7.88,
+          "end": 8.36
+        },
+        {
+          "word": "so",
+          "start": 9.16,
+          "end": 9.36
+        },
+        {
+          "word": "the",
+          "start": 9.36,
+          "end": 9.52
+        },
+        {
+          "word": "upward",
+          "start": 9.52,
+          "end": 9.96
+        },
+        {
+          "word": "and",
+          "start": 9.96,
+          "end": 10.58
+        },
+        {
+          "word": "downward",
+          "start": 10.58,
+          "end": 10.98
+        },
+        {
+          "word": "forces",
+          "start": 10.98,
+          "end": 11.48
+        },
+        {
+          "word": "balance.",
+          "start": 11.48,
+          "end": 11.94
+        },
+        {
+          "word": "Vertical",
+          "start": 12.78,
+          "end": 13.22
+        },
+        {
+          "word": "resultant",
+          "start": 13.22,
+          "end": 13.98
+        },
+        {
+          "word": "equals",
+          "start": 13.98,
+          "end": 14.64
+        },
+        {
+          "word": "zero.",
+          "start": 14.64,
+          "end": 15.14
+        },
+        {
+          "word": "Reaction",
+          "start": 16.2,
+          "end": 16.7
+        },
+        {
+          "word": "minus",
+          "start": 16.7,
+          "end": 17.08
+        },
+        {
+          "word": "weight",
+          "start": 17.08,
+          "end": 17.52
+        },
+        {
+          "word": "equals",
+          "start": 17.52,
+          "end": 18.46
+        },
+        {
+          "word": "zero.",
+          "start": 18.46,
+          "end": 18.88
+        },
+        {
+          "word": "Therefore,",
+          "start": 20.26,
+          "end": 20.6
+        },
+        {
+          "word": "reaction",
+          "start": 20.74,
+          "end": 21.32
+        },
+        {
+          "word": "equals",
+          "start": 21.32,
+          "end": 21.82
+        },
+        {
+          "word": "mass",
+          "start": 21.82,
+          "end": 22.24
+        },
+        {
+          "word": "times",
+          "start": 22.24,
+          "end": 22.64
+        },
+        {
+          "word": "g.",
+          "start": 22.64,
+          "end": 23.02
+        },
+        {
+          "word": "Substitute",
+          "start": 23.91,
+          "end": 24.6
+        },
+        {
+          "word": "mass",
+          "start": 24.6,
+          "end": 25.0
+        },
+        {
+          "word": "five",
+          "start": 25.0,
+          "end": 25.44
+        },
+        {
+          "word": "and",
+          "start": 25.44,
+          "end": 25.84
+        },
+        {
+          "word": "g",
+          "start": 25.84,
+          "end": 26.08
+        },
+        {
+          "word": "ten.",
+          "start": 26.08,
+          "end": 26.3
+        },
+        {
+          "word": "Reaction",
+          "start": 26.98,
+          "end": 27.54
+        },
+        {
+          "word": "equals",
+          "start": 27.54,
+          "end": 28.04
+        },
+        {
+          "word": "5",
+          "start": 28.04,
+          "end": 28.78
+        },
+        {
+          "word": "times",
+          "start": 28.78,
+          "end": 29.1
+        },
+        {
+          "word": "10",
+          "start": 29.1,
+          "end": 29.58
+        },
+        {
+          "word": "which",
+          "start": 29.58,
+          "end": 29.98
+        },
+        {
+          "word": "is",
+          "start": 29.98,
+          "end": 30.14
+        },
+        {
+          "word": "50",
+          "start": 30.14,
+          "end": 30.48
+        },
+        {
+          "word": "Newtons.",
+          "start": 30.48,
+          "end": 31.08
+        },
+        {
+          "word": "Now",
+          "start": 33.39,
+          "end": 33.78
+        },
+        {
+          "word": "use",
+          "start": 33.78,
+          "end": 34.62
+        },
+        {
+          "word": "the",
+          "start": 34.62,
+          "end": 34.78
+        },
+        {
+          "word": "limiting",
+          "start": 34.78,
+          "end": 35.06
+        },
+        {
+          "word": "friction",
+          "start": 35.06,
+          "end": 35.46
+        },
+        {
+          "word": "formula",
+          "start": 35.46,
+          "end": 36.04
+        },
+        {
+          "word": "f",
+          "start": 36.04,
+          "end": 37.0
+        },
+        {
+          "word": "max",
+          "start": 37.0,
+          "end": 37.3
+        },
+        {
+          "word": "equals",
+          "start": 37.3,
+          "end": 37.88
+        },
+        {
+          "word": "MUR.",
+          "start": 37.88,
+          "end": 38.7
+        },
+        {
+          "word": "0",
+          "start": 39.87,
+          "end": 40.18
+        },
+        {
+          "word": ".4",
+          "start": 40.18,
+          "end": 40.8
+        },
+        {
+          "word": "times",
+          "start": 40.8,
+          "end": 41.04
+        },
+        {
+          "word": "50",
+          "start": 41.04,
+          "end": 41.52
+        },
+        {
+          "word": "gives",
+          "start": 41.52,
+          "end": 42.34
+        },
+        {
+          "word": "a",
+          "start": 42.34,
+          "end": 42.54
+        },
+        {
+          "word": "limiting",
+          "start": 42.54,
+          "end": 42.92
+        },
+        {
+          "word": "friction",
+          "start": 42.92,
+          "end": 43.38
+        },
+        {
+          "word": "of",
+          "start": 43.38,
+          "end": 43.7
+        },
+        {
+          "word": "20",
+          "start": 43.7,
+          "end": 44.14
+        },
+        {
+          "word": "Newtons.",
+          "start": 44.14,
+          "end": 44.76
+        },
+        {
+          "word": "flow",
+          "start": 47.26,
+          "end": 47.52
+        },
+        {
+          "word": "can",
+          "start": 47.52,
+          "end": 47.76
+        },
+        {
+          "word": "supply",
+          "start": 47.76,
+          "end": 48.22
+        },
+        {
+          "word": "up",
+          "start": 48.22,
+          "end": 48.68
+        },
+        {
+          "word": "to",
+          "start": 48.68,
+          "end": 48.84
+        },
+        {
+          "word": "that",
+          "start": 48.84,
+          "end": 49.16
+        },
+        {
+          "word": "much",
+          "start": 49.16,
+          "end": 49.5
+        },
+        {
+          "word": "friction.",
+          "start": 49.5,
+          "end": 49.96
+        },
+        {
+          "word": "It",
+          "start": 50.62,
+          "end": 51.06
+        },
+        {
+          "word": "need",
+          "start": 51.06,
+          "end": 51.34
+        },
+        {
+          "word": "not",
+          "start": 51.34,
+          "end": 51.6
+        },
+        {
+          "word": "supply",
+          "start": 51.6,
+          "end": 52.24
+        },
+        {
+          "word": "all",
+          "start": 52.24,
+          "end": 52.76
+        },
+        {
+          "word": "of",
+          "start": 52.76,
+          "end": 52.94
+        },
+        {
+          "word": "it.",
+          "start": 52.94,
+          "end": 53.14
+        },
+        {
+          "word": "This",
+          "start": 54.34,
+          "end": 54.86
+        },
+        {
+          "word": "same",
+          "start": 54.86,
+          "end": 55.16
+        },
+        {
+          "word": "limit",
+          "start": 55.16,
+          "end": 55.5
+        },
+        {
+          "word": "applies",
+          "start": 55.5,
+          "end": 56.18
+        },
+        {
+          "word": "in",
+          "start": 56.18,
+          "end": 57.04
+        },
+        {
+          "word": "every",
+          "start": 57.04,
+          "end": 57.32
+        },
+        {
+          "word": "trial",
+          "start": 57.32,
+          "end": 57.68
+        },
+        {
+          "word": "because",
+          "start": 57.68,
+          "end": 58.06
+        },
+        {
+          "word": "the",
+          "start": 58.06,
+          "end": 58.38
+        },
+        {
+          "word": "mass",
+          "start": 58.38,
+          "end": 58.84
+        },
+        {
+          "word": "surfaces",
+          "start": 58.84,
+          "end": 59.54
+        },
+        {
+          "word": "and",
+          "start": 59.54,
+          "end": 60.62
+        },
+        {
+          "word": "vertical",
+          "start": 60.62,
+          "end": 61.04
+        },
+        {
+          "word": "forces",
+          "start": 61.04,
+          "end": 61.62
+        },
+        {
+          "word": "stay",
+          "start": 61.62,
+          "end": 62.46
+        },
+        {
+          "word": "the",
+          "start": 62.46,
+          "end": 62.66
+        },
+        {
+          "word": "same.",
+          "start": 62.66,
+          "end": 63.04
+        }
+      ],
+      "cues": {
+        "vertical": 0.4,
+        "formula": 12.78,
+        "rearrange": 20.26,
+        "sub": 23.91,
+        "capformula": 33.39,
+        "capsub": 39.87,
+        "meaning": 47.26,
+        "reactionResult": 30.14,
+        "capResult": 43.7
+      },
+      "figureEvents": [
+        {
+          "id": "number-15",
+          "wordIndex": 15,
+          "word": "0",
+          "spokenPhrase": "zero,",
+          "start": 7.88,
+          "target": "verticalzero",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-26",
+          "wordIndex": 26,
+          "word": "0",
+          "spokenPhrase": "zero.",
+          "start": 14.64,
+          "target": "verticalzero",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-31",
+          "wordIndex": 31,
+          "word": "0",
+          "spokenPhrase": "zero.",
+          "start": 18.46,
+          "target": "verticalzero",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-40",
+          "wordIndex": 40,
+          "word": "5",
+          "spokenPhrase": "five",
+          "start": 25.0,
+          "target": "mass",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-43",
+          "wordIndex": 43,
+          "word": "10",
+          "spokenPhrase": "ten.",
+          "start": 26.08,
+          "target": "gravity",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-46",
+          "wordIndex": 46,
+          "word": "5",
+          "spokenPhrase": "5",
+          "start": 28.04,
+          "target": "mass",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-48",
+          "wordIndex": 48,
+          "word": "10",
+          "spokenPhrase": "10",
+          "start": 29.1,
+          "target": "gravity",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-51",
+          "wordIndex": 51,
+          "word": "50",
+          "spokenPhrase": "50",
+          "start": 30.14,
+          "target": "reaction",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-63",
+          "wordIndex": 63,
+          "word": "0.4",
+          "spokenPhrase": "0 .4",
+          "start": 39.87,
+          "target": "mu",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-66",
+          "wordIndex": 66,
+          "word": "50",
+          "spokenPhrase": "50",
+          "start": 41.04,
+          "target": "reaction",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-72",
+          "wordIndex": 72,
+          "word": "20",
+          "spokenPhrase": "20",
+          "start": 43.7,
+          "target": "cap",
+          "kind": "spoken"
+        }
+      ],
+      "wordCount": 106,
+      "text": "The pull is horizontal, and the box stays on the floor. Its vertical acceleration is zero, so the upward and downward forces balance. Vertical resultant equals zero. Reaction minus weight equals zero. Therefore, reaction equals mass times g. Substitute mass five and g ten. Reaction equals 5 times 10 which is 50 Newtons. Now use the limiting friction formula f max equals MUR. 0 .4 times 50 gives a limiting friction of 20 Newtons. flow can supply up to that much friction. It need not supply all of it. This same limit applies in every trial because the mass surfaces and vertical forces stay the same.",
+      "duration": 64.20898
+    },
+    {
+      "id": "s06",
+      "title": "Trials A and B: the box stays at rest",
+      "mode": "stationary",
+      "voiceSpeed": 0.9,
+      "tempo": "slow",
+      "beats": [
+        {
+          "id": "trialA",
+          "text": "Start trial A from rest. The twelve newton pull is below the twenty newton limit, so friction can balance the pull.",
+          "hold": 0.6,
+          "start": 0.4,
+          "speechEnd": 10.75,
+          "end": 10.95,
+          "cue": 0.4,
+          "penEnd": 10.87
+        },
+        {
+          "id": "balanceA",
+          "text": "For equilibrium, pull minus friction equals zero.",
+          "hold": 0.6,
+          "ink": "P - f = 0",
+          "page": 0,
+          "start": 11.55,
+          "speechEnd": 15.11,
+          "end": 15.31,
+          "cue": 11.55,
+          "penEnd": 15.23
+        },
+        {
+          "id": "frictionA",
+          "text": "So actual friction equals the pull: twelve newtons to the left.",
+          "hold": 2,
+          "ink": "f = P = 12 N",
+          "page": 0,
+          "start": 15.91,
+          "speechEnd": 20.54,
+          "end": 20.74,
+          "cue": 15.95,
+          "penEnd": 20.66
+        },
+        {
+          "id": "newtonA",
+          "text": "To find acceleration, use resultant force equals mass times acceleration.",
+          "hold": 0.6,
+          "ink": "Resultant = ma",
+          "page": 0,
+          "start": 22.74,
+          "speechEnd": 29.28,
+          "end": 29.48,
+          "cue": 22.89,
+          "penEnd": 29.400000000000002
+        },
+        {
+          "id": "accelA",
+          "text": "Twelve minus twelve equals five a. Hence a is zero. Equal opposing forces give no acceleration.",
+          "hold": 2,
+          "ink": "a = (12 - 12) / 5 = 0",
+          "page": 0,
+          "start": 30.08,
+          "speechEnd": 40.66,
+          "end": 40.86,
+          "cue": 30.15,
+          "penEnd": 40.78
+        },
+        {
+          "id": "trialB",
+          "text": "Reset to rest for trial B. The twenty newton pull exactly equals the twenty newton friction limit.",
+          "hold": 0.6,
+          "start": 42.86,
+          "speechEnd": 51.84,
+          "end": 52.04,
+          "cue": 42.86,
+          "penEnd": 51.96
+        },
+        {
+          "id": "frictionB",
+          "text": "This is limiting equilibrium: friction equals mu R, which is twenty newtons. The box is on the point of moving.",
+          "hold": 2,
+          "ink": "f = μR = 20 N",
+          "page": 1,
+          "start": 52.64,
+          "speechEnd": 63.14,
+          "end": 63.34,
+          "cue": 52.79,
+          "penEnd": 63.260000000000005
+        },
+        {
+          "id": "newtonB",
+          "text": "Again, resultant force equals mass times acceleration.",
+          "hold": 0.6,
+          "ink": "Resultant = ma",
+          "page": 1,
+          "start": 65.34,
+          "speechEnd": 69.64,
+          "end": 69.84,
+          "cue": 65.35,
+          "penEnd": 69.76
+        },
+        {
+          "id": "accelB",
+          "text": "Twenty minus twenty equals five a, giving zero acceleration. Starting from rest, the box remains at rest, even at the limit.",
+          "hold": 2,
+          "ink": "a = (20 - 20) / 5 = 0",
+          "page": 1,
+          "start": 70.44,
+          "speechEnd": 81.87,
+          "end": 82.07,
+          "cue": 70.47,
+          "penEnd": 81.99
+        },
+        {
+          "id": "meaning",
+          "text": "Reaching the limit does not itself produce an unbalanced force. The pull must exceed it to start the box sliding.",
+          "hold": 0.5,
+          "start": 84.07,
+          "speechEnd": 93.0,
+          "end": 93.2,
+          "cue": 84.08,
+          "penEnd": 93.12
+        }
+      ],
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 10.95,
+          "end": 11.55,
+          "duration": 0.6
+        },
+        {
+          "kind": "hold",
+          "start": 15.31,
+          "end": 15.91,
+          "duration": 0.6
+        },
+        {
+          "kind": "hold",
+          "start": 20.74,
+          "end": 22.74,
+          "duration": 2
+        },
+        {
+          "kind": "hold",
+          "start": 29.48,
+          "end": 30.08,
+          "duration": 0.6
+        },
+        {
+          "kind": "hold",
+          "start": 40.86,
+          "end": 42.86,
+          "duration": 2
+        },
+        {
+          "kind": "hold",
+          "start": 52.04,
+          "end": 52.64,
+          "duration": 0.6
+        },
+        {
+          "kind": "hold",
+          "start": 63.34,
+          "end": 65.34,
+          "duration": 2
+        },
+        {
+          "kind": "hold",
+          "start": 69.84,
+          "end": 70.44,
+          "duration": 0.6
+        },
+        {
+          "kind": "hold",
+          "start": 82.07,
+          "end": 84.07,
+          "duration": 2
+        },
+        {
+          "kind": "hold",
+          "start": 93.2,
+          "end": 93.7,
+          "duration": 0.5
+        }
+      ],
+      "audio": "coefficient-of-friction-s06.mp3",
+      "audioSha256": "86198f6b73c7e1b4b9bbebeea3f49755c0eccca769287a269c48edc45466c231",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "provider": "elevenlabs",
+      "sampleDuration": 94.05,
+      "words": [
+        {
+          "word": "Start",
+          "start": 0.4,
+          "end": 0.71
+        },
+        {
+          "word": "trial",
+          "start": 0.71,
+          "end": 1.25
+        },
+        {
+          "word": "A",
+          "start": 1.25,
+          "end": 2.13
+        },
+        {
+          "word": "from",
+          "start": 2.13,
+          "end": 2.87
+        },
+        {
+          "word": "rest.",
+          "start": 2.87,
+          "end": 3.31
+        },
+        {
+          "word": "The",
+          "start": 3.65,
+          "end": 4.13
+        },
+        {
+          "word": "twelve",
+          "start": 4.13,
+          "end": 4.55
+        },
+        {
+          "word": "newton",
+          "start": 4.55,
+          "end": 4.99
+        },
+        {
+          "word": "pull",
+          "start": 4.99,
+          "end": 5.35
+        },
+        {
+          "word": "is",
+          "start": 5.35,
+          "end": 6.15
+        },
+        {
+          "word": "below",
+          "start": 6.15,
+          "end": 6.45
+        },
+        {
+          "word": "the",
+          "start": 6.45,
+          "end": 6.69
+        },
+        {
+          "word": "twenty",
+          "start": 6.69,
+          "end": 7.11
+        },
+        {
+          "word": "newton",
+          "start": 7.11,
+          "end": 7.55
+        },
+        {
+          "word": "limit,",
+          "start": 7.55,
+          "end": 7.87
+        },
+        {
+          "word": "so",
+          "start": 8.17,
+          "end": 8.67
+        },
+        {
+          "word": "friction",
+          "start": 8.67,
+          "end": 9.13
+        },
+        {
+          "word": "can",
+          "start": 9.13,
+          "end": 9.43
+        },
+        {
+          "word": "balance",
+          "start": 9.43,
+          "end": 9.99
+        },
+        {
+          "word": "the",
+          "start": 9.99,
+          "end": 10.23
+        },
+        {
+          "word": "pull.",
+          "start": 10.23,
+          "end": 10.57
+        },
+        {
+          "word": "For",
+          "start": 11.55,
+          "end": 11.73
+        },
+        {
+          "word": "equilibrium,",
+          "start": 11.73,
+          "end": 12.27
+        },
+        {
+          "word": "pull",
+          "start": 12.95,
+          "end": 13.15
+        },
+        {
+          "word": "minus",
+          "start": 13.15,
+          "end": 13.43
+        },
+        {
+          "word": "friction",
+          "start": 13.43,
+          "end": 13.87
+        },
+        {
+          "word": "equals",
+          "start": 13.87,
+          "end": 14.35
+        },
+        {
+          "word": "zero.",
+          "start": 14.35,
+          "end": 14.91
+        },
+        {
+          "word": "So",
+          "start": 15.95,
+          "end": 16.07
+        },
+        {
+          "word": "actual",
+          "start": 16.07,
+          "end": 16.45
+        },
+        {
+          "word": "friction",
+          "start": 16.45,
+          "end": 16.89
+        },
+        {
+          "word": "equals",
+          "start": 16.89,
+          "end": 17.37
+        },
+        {
+          "word": "the",
+          "start": 17.37,
+          "end": 17.65
+        },
+        {
+          "word": "pull,",
+          "start": 17.65,
+          "end": 17.95
+        },
+        {
+          "word": "twelve",
+          "start": 18.51,
+          "end": 18.81
+        },
+        {
+          "word": "newtons",
+          "start": 18.81,
+          "end": 19.39
+        },
+        {
+          "word": "to",
+          "start": 19.39,
+          "end": 19.87
+        },
+        {
+          "word": "the",
+          "start": 19.87,
+          "end": 20.01
+        },
+        {
+          "word": "left.",
+          "start": 20.01,
+          "end": 20.33
+        },
+        {
+          "word": "find",
+          "start": 22.89,
+          "end": 23.27
+        },
+        {
+          "word": "acceleration,",
+          "start": 23.27,
+          "end": 24.09
+        },
+        {
+          "word": "use",
+          "start": 24.63,
+          "end": 25.03
+        },
+        {
+          "word": "resultant",
+          "start": 25.03,
+          "end": 25.73
+        },
+        {
+          "word": "force",
+          "start": 25.73,
+          "end": 26.09
+        },
+        {
+          "word": "equals",
+          "start": 26.09,
+          "end": 27.13
+        },
+        {
+          "word": "mass",
+          "start": 27.13,
+          "end": 27.53
+        },
+        {
+          "word": "times",
+          "start": 27.53,
+          "end": 28.01
+        },
+        {
+          "word": "acceleration.",
+          "start": 28.01,
+          "end": 28.77
+        },
+        {
+          "word": "12",
+          "start": 30.15,
+          "end": 30.49
+        },
+        {
+          "word": "minus",
+          "start": 30.49,
+          "end": 30.93
+        },
+        {
+          "word": "12",
+          "start": 30.93,
+          "end": 31.51
+        },
+        {
+          "word": "equals",
+          "start": 31.51,
+          "end": 32.23
+        },
+        {
+          "word": "5a.",
+          "start": 32.23,
+          "end": 32.97
+        },
+        {
+          "word": "Hence,",
+          "start": 33.97,
+          "end": 34.37
+        },
+        {
+          "word": "a",
+          "start": 34.79,
+          "end": 35.11
+        },
+        {
+          "word": "is",
+          "start": 35.11,
+          "end": 35.83
+        },
+        {
+          "word": "0.",
+          "start": 35.83,
+          "end": 36.21
+        },
+        {
+          "word": "Equal",
+          "start": 37.05,
+          "end": 37.45
+        },
+        {
+          "word": "opposing",
+          "start": 37.45,
+          "end": 37.85
+        },
+        {
+          "word": "forces",
+          "start": 37.85,
+          "end": 38.39
+        },
+        {
+          "word": "give",
+          "start": 38.39,
+          "end": 39.33
+        },
+        {
+          "word": "no",
+          "start": 39.33,
+          "end": 39.69
+        },
+        {
+          "word": "acceleration.",
+          "start": 39.69,
+          "end": 40.41
+        },
+        {
+          "word": "Reset",
+          "start": 42.86,
+          "end": 43.33
+        },
+        {
+          "word": "to",
+          "start": 43.33,
+          "end": 43.53
+        },
+        {
+          "word": "rest",
+          "start": 43.53,
+          "end": 43.89
+        },
+        {
+          "word": "for",
+          "start": 43.89,
+          "end": 44.31
+        },
+        {
+          "word": "trial",
+          "start": 44.31,
+          "end": 44.71
+        },
+        {
+          "word": "b.",
+          "start": 44.71,
+          "end": 45.17
+        },
+        {
+          "word": "The",
+          "start": 46.33,
+          "end": 46.51
+        },
+        {
+          "word": "20N",
+          "start": 46.51,
+          "end": 47.27
+        },
+        {
+          "word": "pool",
+          "start": 47.27,
+          "end": 47.81
+        },
+        {
+          "word": "exactly",
+          "start": 47.81,
+          "end": 48.83
+        },
+        {
+          "word": "equals",
+          "start": 48.83,
+          "end": 49.53
+        },
+        {
+          "word": "the",
+          "start": 49.53,
+          "end": 50.01
+        },
+        {
+          "word": "20N",
+          "start": 50.01,
+          "end": 50.77
+        },
+        {
+          "word": "friction",
+          "start": 50.77,
+          "end": 51.17
+        },
+        {
+          "word": "limit.",
+          "start": 51.17,
+          "end": 51.63
+        },
+        {
+          "word": "is",
+          "start": 52.79,
+          "end": 52.97
+        },
+        {
+          "word": "limiting",
+          "start": 52.97,
+          "end": 53.39
+        },
+        {
+          "word": "equilibrium.",
+          "start": 53.39,
+          "end": 54.31
+        },
+        {
+          "word": "Friction",
+          "start": 55.43,
+          "end": 55.91
+        },
+        {
+          "word": "equals",
+          "start": 55.91,
+          "end": 56.73
+        },
+        {
+          "word": "mu",
+          "start": 56.73,
+          "end": 57.25
+        },
+        {
+          "word": "R",
+          "start": 57.25,
+          "end": 57.73
+        },
+        {
+          "word": "which",
+          "start": 57.73,
+          "end": 58.63
+        },
+        {
+          "word": "is",
+          "start": 58.63,
+          "end": 58.79
+        },
+        {
+          "word": "20",
+          "start": 58.79,
+          "end": 59.21
+        },
+        {
+          "word": "Newtons.",
+          "start": 59.21,
+          "end": 59.81
+        },
+        {
+          "word": "The",
+          "start": 60.51,
+          "end": 60.61
+        },
+        {
+          "word": "box",
+          "start": 60.61,
+          "end": 60.99
+        },
+        {
+          "word": "is",
+          "start": 60.99,
+          "end": 61.79
+        },
+        {
+          "word": "on",
+          "start": 61.79,
+          "end": 61.95
+        },
+        {
+          "word": "the",
+          "start": 61.95,
+          "end": 62.03
+        },
+        {
+          "word": "point",
+          "start": 62.03,
+          "end": 62.31
+        },
+        {
+          "word": "of",
+          "start": 62.31,
+          "end": 62.49
+        },
+        {
+          "word": "moving.",
+          "start": 62.49,
+          "end": 62.93
+        },
+        {
+          "word": "Again",
+          "start": 65.35,
+          "end": 65.75
+        },
+        {
+          "word": "resultant",
+          "start": 65.75,
+          "end": 66.55
+        },
+        {
+          "word": "force",
+          "start": 66.55,
+          "end": 66.89
+        },
+        {
+          "word": "equals",
+          "start": 66.89,
+          "end": 67.49
+        },
+        {
+          "word": "mass",
+          "start": 67.49,
+          "end": 67.91
+        },
+        {
+          "word": "times",
+          "start": 67.91,
+          "end": 68.53
+        },
+        {
+          "word": "acceleration.",
+          "start": 68.53,
+          "end": 69.23
+        },
+        {
+          "word": "20",
+          "start": 70.47,
+          "end": 70.85
+        },
+        {
+          "word": "minus",
+          "start": 70.85,
+          "end": 71.13
+        },
+        {
+          "word": "20",
+          "start": 71.13,
+          "end": 71.63
+        },
+        {
+          "word": "equals",
+          "start": 71.63,
+          "end": 72.07
+        },
+        {
+          "word": "5A",
+          "start": 72.07,
+          "end": 72.79
+        },
+        {
+          "word": "giving",
+          "start": 72.79,
+          "end": 73.91
+        },
+        {
+          "word": "zero",
+          "start": 73.91,
+          "end": 74.37
+        },
+        {
+          "word": "acceleration.",
+          "start": 74.37,
+          "end": 75.19
+        },
+        {
+          "word": "Starting",
+          "start": 75.19,
+          "end": 76.71
+        },
+        {
+          "word": "from",
+          "start": 76.71,
+          "end": 77.03
+        },
+        {
+          "word": "rest,",
+          "start": 77.03,
+          "end": 77.43
+        },
+        {
+          "word": "the",
+          "start": 78.41,
+          "end": 78.45
+        },
+        {
+          "word": "box",
+          "start": 78.45,
+          "end": 78.81
+        },
+        {
+          "word": "remains",
+          "start": 78.81,
+          "end": 79.35
+        },
+        {
+          "word": "at",
+          "start": 79.35,
+          "end": 79.61
+        },
+        {
+          "word": "rest,",
+          "start": 79.61,
+          "end": 80.11
+        },
+        {
+          "word": "even",
+          "start": 80.57,
+          "end": 81.03
+        },
+        {
+          "word": "at",
+          "start": 81.03,
+          "end": 81.25
+        },
+        {
+          "word": "the",
+          "start": 81.25,
+          "end": 81.35
+        },
+        {
+          "word": "limit.",
+          "start": 81.35,
+          "end": 81.71
+        },
+        {
+          "word": "Reaching",
+          "start": 84.08,
+          "end": 84.4
+        },
+        {
+          "word": "the",
+          "start": 84.4,
+          "end": 84.6
+        },
+        {
+          "word": "limit",
+          "start": 84.6,
+          "end": 84.94
+        },
+        {
+          "word": "does",
+          "start": 84.94,
+          "end": 85.3
+        },
+        {
+          "word": "not",
+          "start": 85.3,
+          "end": 85.62
+        },
+        {
+          "word": "itself",
+          "start": 85.62,
+          "end": 86.1
+        },
+        {
+          "word": "produce",
+          "start": 86.1,
+          "end": 86.64
+        },
+        {
+          "word": "an",
+          "start": 86.64,
+          "end": 87.0
+        },
+        {
+          "word": "unbalanced",
+          "start": 87.0,
+          "end": 87.64
+        },
+        {
+          "word": "force.",
+          "start": 87.64,
+          "end": 88.14
+        },
+        {
+          "word": "The",
+          "start": 89.06,
+          "end": 89.18
+        },
+        {
+          "word": "pool",
+          "start": 89.18,
+          "end": 89.62
+        },
+        {
+          "word": "must",
+          "start": 89.62,
+          "end": 90.06
+        },
+        {
+          "word": "exceed",
+          "start": 90.06,
+          "end": 90.54
+        },
+        {
+          "word": "it",
+          "start": 90.54,
+          "end": 90.86
+        },
+        {
+          "word": "to",
+          "start": 90.86,
+          "end": 91.46
+        },
+        {
+          "word": "start",
+          "start": 91.46,
+          "end": 91.82
+        },
+        {
+          "word": "the",
+          "start": 91.82,
+          "end": 92.04
+        },
+        {
+          "word": "box",
+          "start": 92.04,
+          "end": 92.36
+        },
+        {
+          "word": "sliding.",
+          "start": 92.36,
+          "end": 92.8
+        }
+      ],
+      "cues": {
+        "trialA": 0.4,
+        "balanceA": 11.55,
+        "frictionA": 15.95,
+        "newtonA": 22.89,
+        "accelA": 30.15,
+        "trialB": 42.86,
+        "frictionB": 52.79,
+        "newtonB": 65.35,
+        "accelB": 70.47,
+        "meaning": 84.08,
+        "frictionAResult": 18.51,
+        "accelAResult": 35.83,
+        "frictionBResult": 58.79,
+        "accelBResult": 73.91
+      },
+      "figureEvents": [
+        {
+          "id": "number-6",
+          "wordIndex": 6,
+          "word": "12",
+          "spokenPhrase": "twelve",
+          "start": 4.13,
+          "target": "pullA",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-12",
+          "wordIndex": 12,
+          "word": "20",
+          "spokenPhrase": "twenty",
+          "start": 6.69,
+          "target": "cap",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-34",
+          "wordIndex": 34,
+          "word": "12",
+          "spokenPhrase": "twelve",
+          "start": 18.51,
+          "target": "friction",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-48",
+          "wordIndex": 48,
+          "word": "12",
+          "spokenPhrase": "12",
+          "start": 30.15,
+          "target": "pullA",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-50",
+          "wordIndex": 50,
+          "word": "12",
+          "spokenPhrase": "12",
+          "start": 30.93,
+          "target": "friction",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-52",
+          "wordIndex": 52,
+          "word": "5",
+          "spokenPhrase": "5a.",
+          "start": 32.23,
+          "target": "mass",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-56",
+          "wordIndex": 56,
+          "word": "0",
+          "spokenPhrase": "0.",
+          "start": 35.83,
+          "target": "accel",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-70",
+          "wordIndex": 70,
+          "word": "20",
+          "spokenPhrase": "20N",
+          "start": 46.51,
+          "target": "pullB",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-75",
+          "wordIndex": 75,
+          "word": "20",
+          "spokenPhrase": "20N",
+          "start": 50.01,
+          "target": "cap",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-87",
+          "wordIndex": 87,
+          "word": "20",
+          "spokenPhrase": "20",
+          "start": 58.79,
+          "target": "friction",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-104",
+          "wordIndex": 104,
+          "word": "20",
+          "spokenPhrase": "20",
+          "start": 70.47,
+          "target": "pullB",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-106",
+          "wordIndex": 106,
+          "word": "20",
+          "spokenPhrase": "20",
+          "start": 71.13,
+          "target": "friction",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-108",
+          "wordIndex": 108,
+          "word": "5",
+          "spokenPhrase": "5A",
+          "start": 72.07,
+          "target": "mass",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-110",
+          "wordIndex": 110,
+          "word": "0",
+          "spokenPhrase": "zero",
+          "start": 73.91,
+          "target": "accel",
+          "kind": "spoken"
+        }
+      ],
+      "wordCount": 144,
+      "text": "Start trial A from rest. The twelve newton pull is below the twenty newton limit, so friction can balance the pull. For equilibrium, pull minus friction equals zero. So actual friction equals the pull, twelve newtons to the left. find acceleration, use resultant force equals mass times acceleration. 12 minus 12 equals 5a. Hence, a is 0. Equal opposing forces give no acceleration. Reset to rest for trial b. The 20N pool exactly equals the 20N friction limit. is limiting equilibrium. Friction equals mu R which is 20 Newtons. The box is on the point of moving. Again resultant force equals mass times acceleration. 20 minus 20 equals 5A giving zero acceleration. Starting from rest, the box remains at rest, even at the limit. Reaching the limit does not itself produce an unbalanced force. The pool must exceed it to start the box sliding.",
+      "duration": 94.093061
+    },
+    {
+      "id": "s07",
+      "title": "Trial C: the pull exceeds the limit",
+      "mode": "sliding",
+      "voiceSpeed": 0.9,
+      "tempo": "slow",
+      "beats": [
+        {
+          "id": "reset",
+          "text": "Reset the box to rest for trial C. Twenty five newtons exceeds the twenty newton limit. Friction cannot balance this pull.",
+          "hold": 0.5,
+          "start": 0.4,
+          "speechEnd": 11.7,
+          "end": 11.9,
+          "cue": 0.4,
+          "penEnd": 11.82
+        },
+        {
+          "id": "friction",
+          "text": "The box begins sliding right. Under our model, friction now equals its limiting value: twenty newtons to the left.",
+          "hold": 2,
+          "ink": "f = μR = 20 N",
+          "start": 12.4,
+          "speechEnd": 21.61,
+          "end": 21.81,
+          "cue": 12.4,
+          "penEnd": 21.73
+        },
+        {
+          "id": "formula",
+          "text": "Take right as positive. Newton’s second law is resultant force equals mass times acceleration.",
+          "hold": 0.6,
+          "ink": "Resultant = ma",
+          "start": 23.81,
+          "speechEnd": 32.62,
+          "end": 32.82,
+          "cue": 23.81,
+          "penEnd": 32.74
+        },
+        {
+          "id": "forces",
+          "text": "The horizontal resultant is pull minus friction, so P minus f equals m a.",
+          "hold": 0.6,
+          "ink": "P - f = ma",
+          "start": 33.42,
+          "speechEnd": 40.38,
+          "end": 40.58,
+          "cue": 33.55,
+          "penEnd": 40.5
+        },
+        {
+          "id": "sub",
+          "text": "Substitute the pull, twenty five, friction, twenty, and mass, five.",
+          "hold": 0.6,
+          "ink": "25 - 20 = 5a",
+          "start": 41.18,
+          "speechEnd": 48.54,
+          "end": 48.74,
+          "cue": 41.18,
+          "penEnd": 48.660000000000004
+        },
+        {
+          "id": "answer",
+          "text": "The resultant is five newtons right. Dividing by five kilograms gives acceleration one metre per second squared, to the right.",
+          "hold": 2,
+          "ink": "a = 5 / 5 = 1 m s⁻²",
+          "start": 49.34,
+          "speechEnd": 60.15,
+          "end": 60.35,
+          "cue": 49.49,
+          "penEnd": 60.27
+        },
+        {
+          "id": "motion",
+          "text": "Watch the box start from rest and cover more ground each second. The pull and friction remain constant, so its acceleration remains constant.",
+          "hold": 0,
+          "start": 62.35,
+          "speechEnd": 75.53,
+          "end": 75.73,
+          "cue": 62.35,
+          "penEnd": 75.65
+        }
+      ],
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 11.9,
+          "end": 12.4,
+          "duration": 0.5
+        },
+        {
+          "kind": "hold",
+          "start": 21.81,
+          "end": 23.81,
+          "duration": 2
+        },
+        {
+          "kind": "hold",
+          "start": 32.82,
+          "end": 33.42,
+          "duration": 0.6
+        },
+        {
+          "kind": "hold",
+          "start": 40.58,
+          "end": 41.18,
+          "duration": 0.6
+        },
+        {
+          "kind": "hold",
+          "start": 48.74,
+          "end": 49.34,
+          "duration": 0.6
+        },
+        {
+          "kind": "hold",
+          "start": 60.35,
+          "end": 62.35,
+          "duration": 2
+        }
+      ],
+      "audio": "coefficient-of-friction-s07.mp3",
+      "audioSha256": "e9190ff95faaa215f93a15ba1d33f9e827343aa12af9557a87df2378ab977c0e",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "provider": "elevenlabs",
+      "sampleDuration": 76.08,
+      "words": [
+        {
+          "word": "Reset",
+          "start": 0.4,
+          "end": 0.84
+        },
+        {
+          "word": "the",
+          "start": 0.84,
+          "end": 0.94
+        },
+        {
+          "word": "box",
+          "start": 0.94,
+          "end": 1.24
+        },
+        {
+          "word": "to",
+          "start": 1.24,
+          "end": 2.0
+        },
+        {
+          "word": "rest",
+          "start": 2.0,
+          "end": 2.32
+        },
+        {
+          "word": "for",
+          "start": 2.32,
+          "end": 2.54
+        },
+        {
+          "word": "trial",
+          "start": 2.54,
+          "end": 2.86
+        },
+        {
+          "word": "C.",
+          "start": 2.86,
+          "end": 3.74
+        },
+        {
+          "word": "Twenty",
+          "start": 4.38,
+          "end": 4.74
+        },
+        {
+          "word": "five",
+          "start": 4.74,
+          "end": 5.12
+        },
+        {
+          "word": "newtons",
+          "start": 5.12,
+          "end": 5.76
+        },
+        {
+          "word": "exceeds",
+          "start": 5.76,
+          "end": 6.68
+        },
+        {
+          "word": "the",
+          "start": 6.68,
+          "end": 7.14
+        },
+        {
+          "word": "twenty",
+          "start": 7.14,
+          "end": 7.56
+        },
+        {
+          "word": "newton",
+          "start": 7.56,
+          "end": 8.0
+        },
+        {
+          "word": "limit.",
+          "start": 8.0,
+          "end": 8.3
+        },
+        {
+          "word": "Friction",
+          "start": 9.18,
+          "end": 9.94
+        },
+        {
+          "word": "cannot",
+          "start": 9.94,
+          "end": 10.28
+        },
+        {
+          "word": "balance",
+          "start": 10.28,
+          "end": 10.84
+        },
+        {
+          "word": "this",
+          "start": 10.84,
+          "end": 11.16
+        },
+        {
+          "word": "pull.",
+          "start": 11.16,
+          "end": 11.52
+        },
+        {
+          "word": "The",
+          "start": 12.4,
+          "end": 12.52
+        },
+        {
+          "word": "box",
+          "start": 12.52,
+          "end": 12.9
+        },
+        {
+          "word": "begins",
+          "start": 12.9,
+          "end": 13.3
+        },
+        {
+          "word": "sliding",
+          "start": 13.3,
+          "end": 13.78
+        },
+        {
+          "word": "right.",
+          "start": 13.78,
+          "end": 14.16
+        },
+        {
+          "word": "Under",
+          "start": 14.62,
+          "end": 14.92
+        },
+        {
+          "word": "our",
+          "start": 14.92,
+          "end": 15.18
+        },
+        {
+          "word": "model,",
+          "start": 15.18,
+          "end": 15.62
+        },
+        {
+          "word": "friction",
+          "start": 16.54,
+          "end": 16.98
+        },
+        {
+          "word": "now",
+          "start": 16.98,
+          "end": 17.38
+        },
+        {
+          "word": "equals",
+          "start": 17.38,
+          "end": 17.78
+        },
+        {
+          "word": "its",
+          "start": 17.78,
+          "end": 18.08
+        },
+        {
+          "word": "limiting",
+          "start": 18.08,
+          "end": 18.54
+        },
+        {
+          "word": "value.",
+          "start": 18.54,
+          "end": 19.06
+        },
+        {
+          "word": "twenty",
+          "start": 19.92,
+          "end": 20.34
+        },
+        {
+          "word": "newtons",
+          "start": 20.34,
+          "end": 20.78
+        },
+        {
+          "word": "to",
+          "start": 20.78,
+          "end": 20.96
+        },
+        {
+          "word": "the",
+          "start": 20.96,
+          "end": 21.08
+        },
+        {
+          "word": "left.",
+          "start": 21.08,
+          "end": 21.38
+        },
+        {
+          "word": "Take",
+          "start": 23.81,
+          "end": 24.05
+        },
+        {
+          "word": "right",
+          "start": 24.05,
+          "end": 24.47
+        },
+        {
+          "word": "as",
+          "start": 24.47,
+          "end": 25.31
+        },
+        {
+          "word": "positive.",
+          "start": 25.31,
+          "end": 25.71
+        },
+        {
+          "word": "Newton’s",
+          "start": 26.49,
+          "end": 27.33
+        },
+        {
+          "word": "second",
+          "start": 27.33,
+          "end": 27.55
+        },
+        {
+          "word": "law",
+          "start": 27.55,
+          "end": 27.95
+        },
+        {
+          "word": "is",
+          "start": 27.95,
+          "end": 28.71
+        },
+        {
+          "word": "resultant",
+          "start": 28.71,
+          "end": 29.29
+        },
+        {
+          "word": "force",
+          "start": 29.29,
+          "end": 29.59
+        },
+        {
+          "word": "equals",
+          "start": 29.59,
+          "end": 30.33
+        },
+        {
+          "word": "mass",
+          "start": 30.33,
+          "end": 30.85
+        },
+        {
+          "word": "times",
+          "start": 30.85,
+          "end": 31.49
+        },
+        {
+          "word": "acceleration.",
+          "start": 31.49,
+          "end": 32.03
+        },
+        {
+          "word": "horizontal",
+          "start": 33.55,
+          "end": 34.11
+        },
+        {
+          "word": "resultant",
+          "start": 34.11,
+          "end": 35.07
+        },
+        {
+          "word": "is",
+          "start": 35.07,
+          "end": 35.39
+        },
+        {
+          "word": "pull",
+          "start": 35.39,
+          "end": 35.71
+        },
+        {
+          "word": "minus",
+          "start": 35.71,
+          "end": 36.17
+        },
+        {
+          "word": "friction",
+          "start": 36.17,
+          "end": 36.81
+        },
+        {
+          "word": "so",
+          "start": 36.81,
+          "end": 37.77
+        },
+        {
+          "word": "p",
+          "start": 37.77,
+          "end": 38.15
+        },
+        {
+          "word": "minus",
+          "start": 38.15,
+          "end": 38.63
+        },
+        {
+          "word": "f",
+          "start": 38.63,
+          "end": 39.09
+        },
+        {
+          "word": "equals",
+          "start": 39.09,
+          "end": 39.65
+        },
+        {
+          "word": "ma.",
+          "start": 39.65,
+          "end": 40.09
+        },
+        {
+          "word": "Substitute",
+          "start": 41.18,
+          "end": 41.75
+        },
+        {
+          "word": "the",
+          "start": 41.75,
+          "end": 41.89
+        },
+        {
+          "word": "pull",
+          "start": 41.89,
+          "end": 42.23
+        },
+        {
+          "word": "25",
+          "start": 42.23,
+          "end": 43.29
+        },
+        {
+          "word": "friction",
+          "start": 43.29,
+          "end": 44.95
+        },
+        {
+          "word": "20",
+          "start": 44.95,
+          "end": 46.01
+        },
+        {
+          "word": "and",
+          "start": 46.01,
+          "end": 46.77
+        },
+        {
+          "word": "mess",
+          "start": 46.77,
+          "end": 47.19
+        },
+        {
+          "word": "5.",
+          "start": 47.19,
+          "end": 48.45
+        },
+        {
+          "word": "resultant",
+          "start": 49.49,
+          "end": 50.23
+        },
+        {
+          "word": "is",
+          "start": 50.23,
+          "end": 50.91
+        },
+        {
+          "word": "5",
+          "start": 50.91,
+          "end": 51.25
+        },
+        {
+          "word": "newtons",
+          "start": 51.25,
+          "end": 51.95
+        },
+        {
+          "word": "right?",
+          "start": 51.95,
+          "end": 52.43
+        },
+        {
+          "word": "Dividing",
+          "start": 53.37,
+          "end": 54.01
+        },
+        {
+          "word": "by",
+          "start": 54.01,
+          "end": 54.19
+        },
+        {
+          "word": "5",
+          "start": 54.19,
+          "end": 54.47
+        },
+        {
+          "word": "kilograms",
+          "start": 54.47,
+          "end": 54.97
+        },
+        {
+          "word": "gives",
+          "start": 54.97,
+          "end": 55.95
+        },
+        {
+          "word": "acceleration",
+          "start": 55.95,
+          "end": 56.73
+        },
+        {
+          "word": "one",
+          "start": 56.73,
+          "end": 57.27
+        },
+        {
+          "word": "meter",
+          "start": 57.27,
+          "end": 57.59
+        },
+        {
+          "word": "per",
+          "start": 57.59,
+          "end": 57.85
+        },
+        {
+          "word": "second",
+          "start": 57.85,
+          "end": 58.15
+        },
+        {
+          "word": "squared",
+          "start": 58.15,
+          "end": 58.65
+        },
+        {
+          "word": "to",
+          "start": 58.65,
+          "end": 59.51
+        },
+        {
+          "word": "the",
+          "start": 59.51,
+          "end": 59.67
+        },
+        {
+          "word": "right.",
+          "start": 59.67,
+          "end": 59.99
+        },
+        {
+          "word": "Watch",
+          "start": 62.35,
+          "end": 62.66
+        },
+        {
+          "word": "the",
+          "start": 62.66,
+          "end": 62.98
+        },
+        {
+          "word": "box",
+          "start": 62.98,
+          "end": 63.54
+        },
+        {
+          "word": "start",
+          "start": 63.54,
+          "end": 64.6
+        },
+        {
+          "word": "from",
+          "start": 64.6,
+          "end": 65.4
+        },
+        {
+          "word": "rest",
+          "start": 65.4,
+          "end": 65.94
+        },
+        {
+          "word": "and",
+          "start": 65.94,
+          "end": 66.24
+        },
+        {
+          "word": "cover",
+          "start": 66.24,
+          "end": 66.52
+        },
+        {
+          "word": "more",
+          "start": 66.52,
+          "end": 66.84
+        },
+        {
+          "word": "ground",
+          "start": 66.84,
+          "end": 67.4
+        },
+        {
+          "word": "each",
+          "start": 67.4,
+          "end": 68.1
+        },
+        {
+          "word": "second.",
+          "start": 68.1,
+          "end": 68.56
+        },
+        {
+          "word": "The",
+          "start": 69.42,
+          "end": 69.54
+        },
+        {
+          "word": "pull",
+          "start": 69.54,
+          "end": 69.98
+        },
+        {
+          "word": "and",
+          "start": 69.98,
+          "end": 70.22
+        },
+        {
+          "word": "friction",
+          "start": 70.22,
+          "end": 70.54
+        },
+        {
+          "word": "remain",
+          "start": 70.54,
+          "end": 71.0
+        },
+        {
+          "word": "constant",
+          "start": 71.0,
+          "end": 71.6
+        },
+        {
+          "word": "so",
+          "start": 71.6,
+          "end": 72.48
+        },
+        {
+          "word": "its",
+          "start": 72.48,
+          "end": 72.68
+        },
+        {
+          "word": "acceleration",
+          "start": 72.68,
+          "end": 73.46
+        },
+        {
+          "word": "remains",
+          "start": 73.46,
+          "end": 74.62
+        },
+        {
+          "word": "constant.",
+          "start": 74.62,
+          "end": 75.2
+        }
+      ],
+      "cues": {
+        "reset": 0.4,
+        "friction": 12.4,
+        "formula": 23.81,
+        "forces": 33.55,
+        "sub": 41.18,
+        "answer": 49.49,
+        "motion": 62.35,
+        "frictionResult": 19.92,
+        "resultantResult": 50.91,
+        "accelResult": 56.73
+      },
+      "figureEvents": [
+        {
+          "id": "number-8",
+          "wordIndex": 8,
+          "word": "25",
+          "spokenPhrase": "Twenty five",
+          "start": 4.38,
+          "target": "pullC",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-13",
+          "wordIndex": 13,
+          "word": "20",
+          "spokenPhrase": "twenty",
+          "start": 7.14,
+          "target": "cap",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-35",
+          "wordIndex": 35,
+          "word": "20",
+          "spokenPhrase": "twenty",
+          "start": 19.92,
+          "target": "friction",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-69",
+          "wordIndex": 69,
+          "word": "25",
+          "spokenPhrase": "25",
+          "start": 42.23,
+          "target": "pullC",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-71",
+          "wordIndex": 71,
+          "word": "20",
+          "spokenPhrase": "20",
+          "start": 44.95,
+          "target": "friction",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-74",
+          "wordIndex": 74,
+          "word": "5",
+          "spokenPhrase": "5.",
+          "start": 47.19,
+          "target": "mass",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-77",
+          "wordIndex": 77,
+          "word": "5",
+          "spokenPhrase": "5",
+          "start": 50.91,
+          "target": "resultant",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-82",
+          "wordIndex": 82,
+          "word": "5",
+          "spokenPhrase": "5",
+          "start": 54.19,
+          "target": "mass",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-86",
+          "wordIndex": 86,
+          "word": "1",
+          "spokenPhrase": "one",
+          "start": 56.73,
+          "target": "accel",
+          "kind": "spoken"
+        }
+      ],
+      "wordCount": 117,
+      "text": "Reset the box to rest for trial C. Twenty five newtons exceeds the twenty newton limit. Friction cannot balance this pull. The box begins sliding right. Under our model, friction now equals its limiting value. twenty newtons to the left. Take right as positive. Newton’s second law is resultant force equals mass times acceleration. horizontal resultant is pull minus friction so p minus f equals ma. Substitute the pull 25 friction 20 and mess 5. resultant is 5 newtons right? Dividing by 5 kilograms gives acceleration one meter per second squared to the right. Watch the box start from rest and cover more ground each second. The pull and friction remain constant so its acceleration remains constant.",
+      "duration": 76.120816
+    },
+    {
+      "id": "s08",
+      "title": "Check: rough does not mean maximum friction",
+      "mode": "closing",
+      "voiceSpeed": 1,
+      "tempo": "brisk",
+      "beats": [
+        {
+          "id": "question",
+          "text": "Return to trial A, starting from rest. What would change if we removed the pull altogether? Would friction still equal the twenty newton limit?",
+          "hold": 3,
+          "start": 0.4,
+          "speechEnd": 11.81,
+          "end": 12.01,
+          "cue": 0.4,
+          "penEnd": 11.93
+        },
+        {
+          "id": "answer",
+          "text": "No. Actual friction would be zero. With no horizontal force tending to move the box, no friction is needed. The limit is still available.",
+          "hold": 2,
+          "start": 15.01,
+          "speechEnd": 26.99,
+          "end": 27.19,
+          "cue": 15.01,
+          "penEnd": 27.110000000000003
+        },
+        {
+          "id": "outcome1",
+          "text": "Distinguish actual friction from its limit.",
+          "hold": 0.3,
+          "caption": "Distinguish actual friction from its limit.",
+          "start": 29.19,
+          "speechEnd": 31.54,
+          "end": 31.74,
+          "cue": 29.19,
+          "penEnd": 31.66
+        },
+        {
+          "id": "outcome2",
+          "text": "Find friction and acceleration in three trials.",
+          "hold": 0.5,
+          "caption": "Find friction and acceleration in three trials.",
+          "start": 32.04,
+          "speechEnd": 34.73,
+          "end": 34.93,
+          "cue": 32.04,
+          "penEnd": 34.85
+        }
+      ],
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 12.01,
+          "end": 15.01,
+          "duration": 3
+        },
+        {
+          "kind": "hold",
+          "start": 27.19,
+          "end": 29.19,
+          "duration": 2
+        },
+        {
+          "kind": "hold",
+          "start": 31.74,
+          "end": 32.04,
+          "duration": 0.3
+        },
+        {
+          "kind": "hold",
+          "start": 34.93,
+          "end": 35.43,
+          "duration": 0.5
+        }
+      ],
+      "audio": "coefficient-of-friction-s08.mp3",
+      "audioSha256": "e599de6f3346e7cde94811eb77fb72b2a4e20f8db522169caf07fc0962133c11",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "provider": "elevenlabs",
+      "sampleDuration": 35.78,
+      "words": [
+        {
+          "word": "Return",
+          "start": 0.4,
+          "end": 0.74
+        },
+        {
+          "word": "to",
+          "start": 0.74,
+          "end": 0.94
+        },
+        {
+          "word": "trial",
+          "start": 0.94,
+          "end": 1.24
+        },
+        {
+          "word": "A,",
+          "start": 1.24,
+          "end": 1.6
+        },
+        {
+          "word": "starting",
+          "start": 2.24,
+          "end": 2.56
+        },
+        {
+          "word": "from",
+          "start": 2.56,
+          "end": 2.82
+        },
+        {
+          "word": "rest.",
+          "start": 2.82,
+          "end": 3.2
+        },
+        {
+          "word": "What",
+          "start": 3.9,
+          "end": 4.34
+        },
+        {
+          "word": "would",
+          "start": 4.34,
+          "end": 4.56
+        },
+        {
+          "word": "change",
+          "start": 4.56,
+          "end": 5.08
+        },
+        {
+          "word": "if",
+          "start": 5.08,
+          "end": 5.94
+        },
+        {
+          "word": "we",
+          "start": 5.94,
+          "end": 6.1
+        },
+        {
+          "word": "removed",
+          "start": 6.1,
+          "end": 6.5
+        },
+        {
+          "word": "the",
+          "start": 6.5,
+          "end": 6.82
+        },
+        {
+          "word": "pull",
+          "start": 6.82,
+          "end": 7.16
+        },
+        {
+          "word": "altogether?",
+          "start": 7.16,
+          "end": 7.64
+        },
+        {
+          "word": "Would",
+          "start": 8.7,
+          "end": 8.86
+        },
+        {
+          "word": "friction",
+          "start": 8.86,
+          "end": 9.3
+        },
+        {
+          "word": "still",
+          "start": 9.3,
+          "end": 9.66
+        },
+        {
+          "word": "equal",
+          "start": 9.66,
+          "end": 10.02
+        },
+        {
+          "word": "the",
+          "start": 10.02,
+          "end": 10.54
+        },
+        {
+          "word": "twenty",
+          "start": 10.54,
+          "end": 10.9
+        },
+        {
+          "word": "newton",
+          "start": 10.9,
+          "end": 11.28
+        },
+        {
+          "word": "limit?",
+          "start": 11.28,
+          "end": 11.52
+        },
+        {
+          "word": "No.",
+          "start": 15.01,
+          "end": 15.27
+        },
+        {
+          "word": "Actual",
+          "start": 16.39,
+          "end": 16.99
+        },
+        {
+          "word": "friction",
+          "start": 16.99,
+          "end": 17.29
+        },
+        {
+          "word": "would",
+          "start": 17.29,
+          "end": 17.65
+        },
+        {
+          "word": "be",
+          "start": 17.65,
+          "end": 17.89
+        },
+        {
+          "word": "zero.",
+          "start": 17.89,
+          "end": 18.31
+        },
+        {
+          "word": "With",
+          "start": 19.39,
+          "end": 19.53
+        },
+        {
+          "word": "no",
+          "start": 19.53,
+          "end": 19.81
+        },
+        {
+          "word": "horizontal",
+          "start": 19.81,
+          "end": 20.23
+        },
+        {
+          "word": "force",
+          "start": 20.23,
+          "end": 20.67
+        },
+        {
+          "word": "tending",
+          "start": 20.67,
+          "end": 21.73
+        },
+        {
+          "word": "to",
+          "start": 21.73,
+          "end": 22.01
+        },
+        {
+          "word": "move",
+          "start": 22.01,
+          "end": 22.19
+        },
+        {
+          "word": "the",
+          "start": 22.19,
+          "end": 22.35
+        },
+        {
+          "word": "box,",
+          "start": 22.35,
+          "end": 22.59
+        },
+        {
+          "word": "no",
+          "start": 23.33,
+          "end": 23.45
+        },
+        {
+          "word": "friction",
+          "start": 23.45,
+          "end": 23.85
+        },
+        {
+          "word": "is",
+          "start": 23.85,
+          "end": 24.13
+        },
+        {
+          "word": "needed.",
+          "start": 24.13,
+          "end": 24.49
+        },
+        {
+          "word": "The",
+          "start": 25.45,
+          "end": 25.57
+        },
+        {
+          "word": "limit",
+          "start": 25.57,
+          "end": 25.87
+        },
+        {
+          "word": "is",
+          "start": 25.87,
+          "end": 26.15
+        },
+        {
+          "word": "still",
+          "start": 26.15,
+          "end": 26.35
+        },
+        {
+          "word": "available.",
+          "start": 26.35,
+          "end": 26.65
+        },
+        {
+          "word": "Distinguish",
+          "start": 29.19,
+          "end": 29.77
+        },
+        {
+          "word": "actual",
+          "start": 29.77,
+          "end": 30.07
+        },
+        {
+          "word": "friction",
+          "start": 30.07,
+          "end": 30.45
+        },
+        {
+          "word": "from",
+          "start": 30.45,
+          "end": 30.75
+        },
+        {
+          "word": "its",
+          "start": 30.75,
+          "end": 30.95
+        },
+        {
+          "word": "limit.",
+          "start": 30.95,
+          "end": 31.27
+        },
+        {
+          "word": "Find",
+          "start": 32.04,
+          "end": 32.3
+        },
+        {
+          "word": "friction",
+          "start": 32.3,
+          "end": 32.64
+        },
+        {
+          "word": "and",
+          "start": 32.64,
+          "end": 32.86
+        },
+        {
+          "word": "acceleration",
+          "start": 32.86,
+          "end": 33.42
+        },
+        {
+          "word": "in",
+          "start": 33.42,
+          "end": 33.7
+        },
+        {
+          "word": "three",
+          "start": 33.7,
+          "end": 34.04
+        },
+        {
+          "word": "trials.",
+          "start": 34.04,
+          "end": 34.58
+        }
+      ],
+      "cues": {
+        "question": 0.4,
+        "answer": 15.01,
+        "outcome1": 29.19,
+        "outcome2": 32.04,
+        "zeroResult": 17.89
+      },
+      "figureEvents": [
+        {
+          "id": "number-21",
+          "wordIndex": 21,
+          "word": "20",
+          "spokenPhrase": "twenty",
+          "start": 10.54,
+          "target": "cap",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-29",
+          "wordIndex": 29,
+          "word": "0",
+          "spokenPhrase": "zero.",
+          "start": 17.89,
+          "target": "friction",
+          "kind": "spoken"
+        }
+      ],
+      "wordCount": 61,
+      "text": "Return to trial A, starting from rest. What would change if we removed the pull altogether? Would friction still equal the twenty newton limit? No. Actual friction would be zero. With no horizontal force tending to move the box, no friction is needed. The limit is still available. Distinguish actual friction from its limit. Find friction and acceleration in three trials.",
+      "duration": 35.813878
+    }
+  ],
+  "totalDuration": 454.164898,
+  "engine": "faster-whisper-small (local CPU)",
+  "unresolvedCues": []
+}

@@ -10,16 +10,24 @@ export const between=(t:number,a:number,b:number)=>clamp((t-a)/Math.max(.01,b-a)
 export const held=(s:Scene,t:number)=>s.holds.find(h=>t>=h.start&&t<h.end)?.start??t;
 export const currentBeat=(s:Scene,t:number)=>s.beats.filter(b=>t>=b.cue).at(-1);
 const Context=React.createContext<{s:Scene;t:number}|null>(null);
+export function spokenFigureNumber(word?:string){
+ const numbers:Record<string,string>={zero:'0',one:'1',two:'2',three:'3',four:'4',six:'6',eight:'8',nine:'9',ten:'10',twelve:'12',thirty:'30'};
+ // Keep decimal points inside values while accepting sentence punctuation.
+ const spoken=word?.toLowerCase().replace(/[^a-z0-9.√]/g,'').replace(/\.+$/,'')??'';
+ return numbers[spoken]??(/^(?:\d+(?:\.\d+)?(?:√\d+(?:\.\d+)?)?|√\d+(?:\.\d+)?)$/.test(spoken)?spoken:undefined);
+}
+export function figureNumberMatch(label:string,word?:string){
+ const value=spokenFigureNumber(word);
+ // Match complete values:4 must not select part of4√3 or0.4.
+ return value?Array.from(label.matchAll(/−?(?:\d+(?:\.\d+)?(?:√\d+(?:\.\d+)?)?|√\d+(?:\.\d+)?)/g)).find(m=>m[0].replace('−','')===value):undefined;
+}
 export const Figure:React.FC<{id:string;x:number;y:number;children:string;size?:number;ink?:boolean}>=({id,x,y,children,size=30,ink=false})=>{
  const context=React.useContext(Context);const ref=useRef<SVGTextElement>(null);const [box,setBox]=useState({x:0,width:children.length*size*.56});
  const events=context?.s.figureEvents.filter(e=>e.target===id&&context.t>=e.start&&context.t<(e.end??e.start+1.5)+.2)??[];
  const event=events.filter(e=>e.kind==='spoken').at(-1)??events.at(-1);
  useLayoutEffect(()=>{
   const text=ref.current;if(!text)return;
-  const numbers:Record<string,string>={zero:'0',one:'1',two:'2',three:'3',four:'4',six:'6',eight:'8',nine:'9',twelve:'12'};
-  const spoken=event?.word?.toLowerCase().replace(/[^a-z0-9]/g,'')??'';
-  const value=numbers[spoken]??(/^\d+$/.test(spoken)?spoken:undefined);
-  const match=value?Array.from<RegExpMatchArray>(String(children).matchAll(/−?\d+(?:\.\d+)?/g)).find(m=>m[0].replace('−','')===value):undefined;
+  const match=figureNumberMatch(String(children),event?.word);
   setBox(match?{x:text.getSubStringLength(0,match.index!),width:text.getSubStringLength(match.index!,match[0].length)}:{x:0,width:text.getComputedTextLength()});
  },[children,size,event?.id]);
  const width=box.width,ringX=x+box.x;

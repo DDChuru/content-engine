@@ -1,0 +1,4843 @@
+{
+  "project": "mechanics-coefficient-of-friction-harder-problems-fable",
+  "sceneCount": 8,
+  "scenes": [
+    {
+      "id": "s01",
+      "title": "Friction: harder problems",
+      "mode": "opening",
+      "voiceSpeed": 1,
+      "tempo": "brisk",
+      "beats": [
+        {
+          "id": "syllabus",
+          "text": "Syllabus four point one: limiting friction and limiting equilibrium. Today, a block that is held still on a slope... and the two ways it could start to slip.",
+          "hold": 0.5,
+          "start": 0.4,
+          "speechEnd": 13.7,
+          "end": 13.9,
+          "cue": 0.4,
+          "penEnd": 13.82
+        },
+        {
+          "id": "outcome1",
+          "text": "By the end, you can say when friction is at its limit, and when it is not.",
+          "hold": 0.3,
+          "caption": "Know when friction is at its limit.",
+          "start": 14.4,
+          "speechEnd": 19.76,
+          "end": 19.96,
+          "cue": 14.54,
+          "penEnd": 19.880000000000003
+        },
+        {
+          "id": "outcome2",
+          "text": "Choose the direction of friction from the way the block is about to slip.",
+          "hold": 0.3,
+          "caption": "Friction opposes the impending slip.",
+          "start": 20.26,
+          "speechEnd": 24.7,
+          "end": 24.9,
+          "cue": 20.26,
+          "penEnd": 24.82
+        },
+        {
+          "id": "outcome3",
+          "text": "And find the least and the greatest push that keep the block still.",
+          "hold": 0.5,
+          "caption": "Find the least and greatest P.",
+          "start": 25.2,
+          "speechEnd": 29.71,
+          "end": 29.91,
+          "cue": 25.34,
+          "penEnd": 29.830000000000002
+        }
+      ],
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 13.9,
+          "end": 14.4,
+          "duration": 0.5
+        },
+        {
+          "kind": "hold",
+          "start": 19.96,
+          "end": 20.26,
+          "duration": 0.3
+        },
+        {
+          "kind": "hold",
+          "start": 24.9,
+          "end": 25.2,
+          "duration": 0.3
+        },
+        {
+          "kind": "hold",
+          "start": 29.91,
+          "end": 30.41,
+          "duration": 0.5
+        }
+      ],
+      "audio": "coefficient-of-friction-harder-problems-fable-s01.mp3",
+      "audioSha256": "462934d87c5922a41b5a17e9c94fa14eb5b08f499b9a8585c4aa2e000fc7c15b",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "provider": "elevenlabs",
+      "sampleDuration": 30.76,
+      "words": [
+        {
+          "word": "syllabus",
+          "start": 0.4,
+          "end": 0.82
+        },
+        {
+          "word": "4",
+          "start": 0.82,
+          "end": 1.42
+        },
+        {
+          "word": ".1,",
+          "start": 1.42,
+          "end": 2.02
+        },
+        {
+          "word": "limiting",
+          "start": 2.84,
+          "end": 3.18
+        },
+        {
+          "word": "friction",
+          "start": 3.18,
+          "end": 3.66
+        },
+        {
+          "word": "and",
+          "start": 3.66,
+          "end": 4.76
+        },
+        {
+          "word": "limiting",
+          "start": 4.76,
+          "end": 5.18
+        },
+        {
+          "word": "equilibrium.",
+          "start": 5.18,
+          "end": 5.82
+        },
+        {
+          "word": "Today,",
+          "start": 6.68,
+          "end": 7.08
+        },
+        {
+          "word": "a",
+          "start": 7.64,
+          "end": 7.86
+        },
+        {
+          "word": "block",
+          "start": 7.86,
+          "end": 8.2
+        },
+        {
+          "word": "that",
+          "start": 8.2,
+          "end": 8.94
+        },
+        {
+          "word": "is",
+          "start": 8.94,
+          "end": 9.08
+        },
+        {
+          "word": "held",
+          "start": 9.08,
+          "end": 9.38
+        },
+        {
+          "word": "still",
+          "start": 9.38,
+          "end": 9.7
+        },
+        {
+          "word": "on",
+          "start": 9.7,
+          "end": 9.88
+        },
+        {
+          "word": "a",
+          "start": 9.88,
+          "end": 9.98
+        },
+        {
+          "word": "slope",
+          "start": 9.98,
+          "end": 10.3
+        },
+        {
+          "word": "and",
+          "start": 10.3,
+          "end": 10.98
+        },
+        {
+          "word": "the",
+          "start": 10.98,
+          "end": 11.12
+        },
+        {
+          "word": "two",
+          "start": 11.12,
+          "end": 11.38
+        },
+        {
+          "word": "ways",
+          "start": 11.38,
+          "end": 11.86
+        },
+        {
+          "word": "it",
+          "start": 11.86,
+          "end": 12.52
+        },
+        {
+          "word": "could",
+          "start": 12.52,
+          "end": 12.68
+        },
+        {
+          "word": "start",
+          "start": 12.68,
+          "end": 13.0
+        },
+        {
+          "word": "to",
+          "start": 13.0,
+          "end": 13.24
+        },
+        {
+          "word": "slip.",
+          "start": 13.24,
+          "end": 13.54
+        },
+        {
+          "word": "the",
+          "start": 14.54,
+          "end": 14.66
+        },
+        {
+          "word": "end,",
+          "start": 14.66,
+          "end": 15.06
+        },
+        {
+          "word": "you",
+          "start": 15.7,
+          "end": 15.78
+        },
+        {
+          "word": "can",
+          "start": 15.78,
+          "end": 15.92
+        },
+        {
+          "word": "say",
+          "start": 15.92,
+          "end": 16.2
+        },
+        {
+          "word": "when",
+          "start": 16.2,
+          "end": 16.4
+        },
+        {
+          "word": "friction",
+          "start": 16.4,
+          "end": 16.76
+        },
+        {
+          "word": "is",
+          "start": 16.76,
+          "end": 17.02
+        },
+        {
+          "word": "at",
+          "start": 17.02,
+          "end": 17.22
+        },
+        {
+          "word": "its",
+          "start": 17.22,
+          "end": 17.4
+        },
+        {
+          "word": "limit",
+          "start": 17.4,
+          "end": 17.72
+        },
+        {
+          "word": "and",
+          "start": 17.72,
+          "end": 18.68
+        },
+        {
+          "word": "when",
+          "start": 18.68,
+          "end": 18.88
+        },
+        {
+          "word": "it",
+          "start": 18.88,
+          "end": 19.08
+        },
+        {
+          "word": "is",
+          "start": 19.08,
+          "end": 19.24
+        },
+        {
+          "word": "not.",
+          "start": 19.24,
+          "end": 19.54
+        },
+        {
+          "word": "Choose",
+          "start": 20.26,
+          "end": 20.56
+        },
+        {
+          "word": "the",
+          "start": 20.56,
+          "end": 20.84
+        },
+        {
+          "word": "direction",
+          "start": 20.84,
+          "end": 21.18
+        },
+        {
+          "word": "of",
+          "start": 21.18,
+          "end": 21.46
+        },
+        {
+          "word": "friction",
+          "start": 21.46,
+          "end": 21.84
+        },
+        {
+          "word": "from",
+          "start": 21.84,
+          "end": 22.6
+        },
+        {
+          "word": "the",
+          "start": 22.6,
+          "end": 22.8
+        },
+        {
+          "word": "way",
+          "start": 22.8,
+          "end": 23.12
+        },
+        {
+          "word": "the",
+          "start": 23.12,
+          "end": 23.4
+        },
+        {
+          "word": "block",
+          "start": 23.4,
+          "end": 23.72
+        },
+        {
+          "word": "is",
+          "start": 23.72,
+          "end": 23.94
+        },
+        {
+          "word": "about",
+          "start": 23.94,
+          "end": 24.16
+        },
+        {
+          "word": "to",
+          "start": 24.16,
+          "end": 24.34
+        },
+        {
+          "word": "slip",
+          "start": 24.34,
+          "end": 24.68
+        },
+        {
+          "word": "find",
+          "start": 25.34,
+          "end": 25.66
+        },
+        {
+          "word": "the",
+          "start": 25.66,
+          "end": 25.92
+        },
+        {
+          "word": "least",
+          "start": 25.92,
+          "end": 26.38
+        },
+        {
+          "word": "and",
+          "start": 26.38,
+          "end": 26.72
+        },
+        {
+          "word": "the",
+          "start": 26.72,
+          "end": 26.86
+        },
+        {
+          "word": "greatest",
+          "start": 26.86,
+          "end": 27.24
+        },
+        {
+          "word": "push",
+          "start": 27.24,
+          "end": 27.68
+        },
+        {
+          "word": "that",
+          "start": 27.68,
+          "end": 28.24
+        },
+        {
+          "word": "keep",
+          "start": 28.24,
+          "end": 28.54
+        },
+        {
+          "word": "the",
+          "start": 28.54,
+          "end": 28.72
+        },
+        {
+          "word": "blocks",
+          "start": 28.72,
+          "end": 29.18
+        },
+        {
+          "word": "to",
+          "start": 29.18,
+          "end": 29.48
+        },
+        {
+          "word": "you.",
+          "start": 29.48,
+          "end": 29.71
+        }
+      ],
+      "cues": {
+        "syllabus": 0.4,
+        "outcome1": 14.54,
+        "outcome2": 20.26,
+        "outcome3": 25.34
+      },
+      "figureEvents": [],
+      "wordCount": 70,
+      "text": "syllabus 4 .1, limiting friction and limiting equilibrium. Today, a block that is held still on a slope and the two ways it could start to slip. the end, you can say when friction is at its limit and when it is not. Choose the direction of friction from the way the block is about to slip find the least and the greatest push that keep the blocks to you.",
+      "duration": 30.798367
+    },
+    {
+      "id": "s02",
+      "title": "Watch the whole story first",
+      "mode": "story",
+      "voiceSpeed": 0.9,
+      "tempo": "slow",
+      "beats": [
+        {
+          "id": "scene",
+          "text": "Consider a heavy box resting on a rough ramp. A worker pushes it up the slope with a force P, along the ramp... but the box stays exactly where it is.",
+          "hold": 0.6,
+          "start": 0.4,
+          "speechEnd": 13.28,
+          "end": 13.48,
+          "cue": 0.4,
+          "penEnd": 13.4
+        },
+        {
+          "id": "gentle",
+          "text": "Push gently, and the box wants to slip down. Friction grips it, acting up the slope, and holds it still.",
+          "hold": 0.6,
+          "start": 14.08,
+          "speechEnd": 23.24,
+          "end": 23.44,
+          "cue": 14.08,
+          "penEnd": 23.360000000000003
+        },
+        {
+          "id": "harder",
+          "text": "Push harder. The box still does not move... but now it wants to slip up. So friction has switched, and acts down the slope.",
+          "hold": 0.6,
+          "start": 24.04,
+          "speechEnd": 35.7,
+          "end": 35.9,
+          "cue": 24.04,
+          "penEnd": 35.82
+        },
+        {
+          "id": "limit",
+          "text": "Push harder still, and the box is on the very point of sliding up. Friction is at its maximum. Any more, and it moves.",
+          "hold": 0.7,
+          "start": 36.5,
+          "speechEnd": 47.33,
+          "end": 47.53,
+          "cue": 36.5,
+          "penEnd": 47.45
+        },
+        {
+          "id": "question",
+          "text": "So there is a smallest push, and a largest push, that keep the box still. Those two numbers are today’s question.",
+          "hold": 0.6,
+          "start": 48.23,
+          "speechEnd": 57.43,
+          "end": 57.63,
+          "cue": 48.51,
+          "penEnd": 57.550000000000004
+        }
+      ],
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 13.48,
+          "end": 14.08,
+          "duration": 0.6
+        },
+        {
+          "kind": "hold",
+          "start": 23.44,
+          "end": 24.04,
+          "duration": 0.6
+        },
+        {
+          "kind": "hold",
+          "start": 35.9,
+          "end": 36.5,
+          "duration": 0.6
+        },
+        {
+          "kind": "hold",
+          "start": 47.53,
+          "end": 48.23,
+          "duration": 0.7
+        },
+        {
+          "kind": "hold",
+          "start": 57.63,
+          "end": 58.23,
+          "duration": 0.6
+        }
+      ],
+      "audio": "coefficient-of-friction-harder-problems-fable-s02.mp3",
+      "audioSha256": "3a68bf35331fdb235362f576646da101adceff6452a231979aa30ed51623da33",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "provider": "elevenlabs",
+      "sampleDuration": 58.58,
+      "words": [
+        {
+          "word": "Consider",
+          "start": 0.4,
+          "end": 0.85
+        },
+        {
+          "word": "a",
+          "start": 0.85,
+          "end": 1.13
+        },
+        {
+          "word": "heavy",
+          "start": 1.13,
+          "end": 1.35
+        },
+        {
+          "word": "box",
+          "start": 1.35,
+          "end": 1.73
+        },
+        {
+          "word": "resting",
+          "start": 1.73,
+          "end": 2.65
+        },
+        {
+          "word": "on",
+          "start": 2.65,
+          "end": 3.05
+        },
+        {
+          "word": "a",
+          "start": 3.05,
+          "end": 3.19
+        },
+        {
+          "word": "rough",
+          "start": 3.19,
+          "end": 3.57
+        },
+        {
+          "word": "ramp.",
+          "start": 3.57,
+          "end": 3.91
+        },
+        {
+          "word": "A",
+          "start": 4.77,
+          "end": 4.85
+        },
+        {
+          "word": "worker",
+          "start": 4.85,
+          "end": 5.25
+        },
+        {
+          "word": "pushes",
+          "start": 5.25,
+          "end": 6.03
+        },
+        {
+          "word": "it",
+          "start": 6.03,
+          "end": 6.27
+        },
+        {
+          "word": "up",
+          "start": 6.27,
+          "end": 6.47
+        },
+        {
+          "word": "the",
+          "start": 6.47,
+          "end": 6.61
+        },
+        {
+          "word": "slope",
+          "start": 6.61,
+          "end": 6.85
+        },
+        {
+          "word": "with",
+          "start": 6.85,
+          "end": 7.59
+        },
+        {
+          "word": "a",
+          "start": 7.59,
+          "end": 7.77
+        },
+        {
+          "word": "force",
+          "start": 7.77,
+          "end": 7.93
+        },
+        {
+          "word": "P,",
+          "start": 7.93,
+          "end": 8.23
+        },
+        {
+          "word": "along",
+          "start": 8.97,
+          "end": 9.21
+        },
+        {
+          "word": "the",
+          "start": 9.21,
+          "end": 9.41
+        },
+        {
+          "word": "ramp...",
+          "start": 9.41,
+          "end": 10.33
+        },
+        {
+          "word": "but",
+          "start": 10.33,
+          "end": 10.35
+        },
+        {
+          "word": "the",
+          "start": 10.35,
+          "end": 10.49
+        },
+        {
+          "word": "box",
+          "start": 10.49,
+          "end": 10.89
+        },
+        {
+          "word": "stays",
+          "start": 10.89,
+          "end": 11.79
+        },
+        {
+          "word": "exactly",
+          "start": 11.79,
+          "end": 12.33
+        },
+        {
+          "word": "where",
+          "start": 12.33,
+          "end": 12.67
+        },
+        {
+          "word": "it",
+          "start": 12.67,
+          "end": 12.85
+        },
+        {
+          "word": "is.",
+          "start": 12.85,
+          "end": 13.15
+        },
+        {
+          "word": "Push",
+          "start": 14.08,
+          "end": 14.31
+        },
+        {
+          "word": "gently,",
+          "start": 14.31,
+          "end": 14.83
+        },
+        {
+          "word": "and",
+          "start": 15.47,
+          "end": 15.81
+        },
+        {
+          "word": "the",
+          "start": 15.81,
+          "end": 15.91
+        },
+        {
+          "word": "box",
+          "start": 15.91,
+          "end": 16.27
+        },
+        {
+          "word": "wants",
+          "start": 16.27,
+          "end": 16.53
+        },
+        {
+          "word": "to",
+          "start": 16.53,
+          "end": 16.73
+        },
+        {
+          "word": "slip",
+          "start": 16.73,
+          "end": 16.95
+        },
+        {
+          "word": "down.",
+          "start": 16.95,
+          "end": 17.37
+        },
+        {
+          "word": "Friction",
+          "start": 18.25,
+          "end": 18.71
+        },
+        {
+          "word": "grips",
+          "start": 18.71,
+          "end": 19.09
+        },
+        {
+          "word": "it,",
+          "start": 19.09,
+          "end": 19.51
+        },
+        {
+          "word": "acting",
+          "start": 20.09,
+          "end": 20.41
+        },
+        {
+          "word": "up",
+          "start": 20.41,
+          "end": 20.67
+        },
+        {
+          "word": "the",
+          "start": 20.67,
+          "end": 20.81
+        },
+        {
+          "word": "slope,",
+          "start": 20.81,
+          "end": 21.29
+        },
+        {
+          "word": "and",
+          "start": 22.01,
+          "end": 22.09
+        },
+        {
+          "word": "holds",
+          "start": 22.09,
+          "end": 22.43
+        },
+        {
+          "word": "it",
+          "start": 22.43,
+          "end": 22.63
+        },
+        {
+          "word": "still.",
+          "start": 22.63,
+          "end": 22.99
+        },
+        {
+          "word": "Push",
+          "start": 24.04,
+          "end": 24.33
+        },
+        {
+          "word": "harder.",
+          "start": 24.33,
+          "end": 24.65
+        },
+        {
+          "word": "The",
+          "start": 25.61,
+          "end": 26.33
+        },
+        {
+          "word": "box",
+          "start": 26.33,
+          "end": 26.67
+        },
+        {
+          "word": "still",
+          "start": 26.67,
+          "end": 27.03
+        },
+        {
+          "word": "does",
+          "start": 27.03,
+          "end": 27.25
+        },
+        {
+          "word": "not",
+          "start": 27.25,
+          "end": 27.41
+        },
+        {
+          "word": "move",
+          "start": 27.41,
+          "end": 27.81
+        },
+        {
+          "word": "but",
+          "start": 27.81,
+          "end": 28.51
+        },
+        {
+          "word": "now",
+          "start": 28.51,
+          "end": 29.05
+        },
+        {
+          "word": "it",
+          "start": 29.05,
+          "end": 29.71
+        },
+        {
+          "word": "wants",
+          "start": 29.71,
+          "end": 29.93
+        },
+        {
+          "word": "to",
+          "start": 29.93,
+          "end": 30.09
+        },
+        {
+          "word": "slip",
+          "start": 30.09,
+          "end": 30.29
+        },
+        {
+          "word": "up.",
+          "start": 30.29,
+          "end": 30.57
+        },
+        {
+          "word": "So",
+          "start": 31.43,
+          "end": 31.69
+        },
+        {
+          "word": "friction",
+          "start": 31.69,
+          "end": 32.17
+        },
+        {
+          "word": "has",
+          "start": 32.17,
+          "end": 32.49
+        },
+        {
+          "word": "switched",
+          "start": 32.49,
+          "end": 32.95
+        },
+        {
+          "word": "and",
+          "start": 32.95,
+          "end": 33.91
+        },
+        {
+          "word": "acts",
+          "start": 33.91,
+          "end": 34.29
+        },
+        {
+          "word": "down",
+          "start": 34.29,
+          "end": 34.73
+        },
+        {
+          "word": "the",
+          "start": 34.73,
+          "end": 35.17
+        },
+        {
+          "word": "slope.",
+          "start": 35.17,
+          "end": 35.53
+        },
+        {
+          "word": "Push",
+          "start": 36.5,
+          "end": 36.77
+        },
+        {
+          "word": "harder",
+          "start": 36.77,
+          "end": 37.07
+        },
+        {
+          "word": "still",
+          "start": 37.07,
+          "end": 37.43
+        },
+        {
+          "word": "and",
+          "start": 37.43,
+          "end": 38.49
+        },
+        {
+          "word": "the",
+          "start": 38.49,
+          "end": 38.61
+        },
+        {
+          "word": "box",
+          "start": 38.61,
+          "end": 38.93
+        },
+        {
+          "word": "is",
+          "start": 38.93,
+          "end": 39.21
+        },
+        {
+          "word": "on",
+          "start": 39.21,
+          "end": 39.39
+        },
+        {
+          "word": "the",
+          "start": 39.39,
+          "end": 39.57
+        },
+        {
+          "word": "very",
+          "start": 39.57,
+          "end": 39.85
+        },
+        {
+          "word": "point",
+          "start": 39.85,
+          "end": 40.19
+        },
+        {
+          "word": "of",
+          "start": 40.19,
+          "end": 40.35
+        },
+        {
+          "word": "sliding",
+          "start": 40.35,
+          "end": 40.81
+        },
+        {
+          "word": "up.",
+          "start": 40.81,
+          "end": 41.19
+        },
+        {
+          "word": "Friction",
+          "start": 42.17,
+          "end": 42.89
+        },
+        {
+          "word": "is",
+          "start": 42.89,
+          "end": 43.47
+        },
+        {
+          "word": "at",
+          "start": 43.47,
+          "end": 43.75
+        },
+        {
+          "word": "its",
+          "start": 43.75,
+          "end": 43.99
+        },
+        {
+          "word": "maximum",
+          "start": 43.99,
+          "end": 44.65
+        },
+        {
+          "word": "anymore",
+          "start": 44.65,
+          "end": 45.91
+        },
+        {
+          "word": "and",
+          "start": 45.91,
+          "end": 46.81
+        },
+        {
+          "word": "it",
+          "start": 46.81,
+          "end": 46.93
+        },
+        {
+          "word": "moves.",
+          "start": 46.93,
+          "end": 47.23
+        },
+        {
+          "word": "there",
+          "start": 48.51,
+          "end": 48.63
+        },
+        {
+          "word": "is",
+          "start": 48.63,
+          "end": 48.73
+        },
+        {
+          "word": "a",
+          "start": 48.73,
+          "end": 48.89
+        },
+        {
+          "word": "smallest",
+          "start": 48.89,
+          "end": 49.23
+        },
+        {
+          "word": "push",
+          "start": 49.23,
+          "end": 49.71
+        },
+        {
+          "word": "and",
+          "start": 49.71,
+          "end": 50.73
+        },
+        {
+          "word": "the",
+          "start": 50.73,
+          "end": 50.83
+        },
+        {
+          "word": "largest",
+          "start": 50.83,
+          "end": 51.23
+        },
+        {
+          "word": "push",
+          "start": 51.23,
+          "end": 51.67
+        },
+        {
+          "word": "that",
+          "start": 51.67,
+          "end": 52.45
+        },
+        {
+          "word": "keep",
+          "start": 52.45,
+          "end": 52.77
+        },
+        {
+          "word": "the",
+          "start": 52.77,
+          "end": 52.97
+        },
+        {
+          "word": "box",
+          "start": 52.97,
+          "end": 53.25
+        },
+        {
+          "word": "still.",
+          "start": 53.25,
+          "end": 53.65
+        },
+        {
+          "word": "Those",
+          "start": 54.67,
+          "end": 54.93
+        },
+        {
+          "word": "two",
+          "start": 54.93,
+          "end": 55.17
+        },
+        {
+          "word": "numbers",
+          "start": 55.17,
+          "end": 55.67
+        },
+        {
+          "word": "are",
+          "start": 55.67,
+          "end": 56.39
+        },
+        {
+          "word": "today's",
+          "start": 56.39,
+          "end": 56.83
+        },
+        {
+          "word": "question.",
+          "start": 56.83,
+          "end": 57.19
+        }
+      ],
+      "cues": {
+        "scene": 0.4,
+        "gentle": 14.08,
+        "harder": 24.04,
+        "limit": 36.5,
+        "question": 48.51
+      },
+      "figureEvents": [],
+      "wordCount": 118,
+      "text": "Consider a heavy box resting on a rough ramp. A worker pushes it up the slope with a force P, along the ramp... but the box stays exactly where it is. Push gently, and the box wants to slip down. Friction grips it, acting up the slope, and holds it still. Push harder. The box still does not move but now it wants to slip up. So friction has switched and acts down the slope. Push harder still and the box is on the very point of sliding up. Friction is at its maximum anymore and it moves. there is a smallest push and the largest push that keep the box still. Those two numbers are today's question.",
+      "duration": 58.618776
+    },
+    {
+      "id": "s03",
+      "title": "When is friction at its limit?",
+      "mode": "concept",
+      "voiceSpeed": 1,
+      "tempo": "brisk",
+      "beats": [
+        {
+          "id": "rest",
+          "text": "Back on a flat floor for a moment. No push, no friction: the block simply sits.",
+          "hold": 0.5,
+          "start": 0.4,
+          "speechEnd": 8.43,
+          "end": 8.63,
+          "cue": 0.56,
+          "penEnd": 8.55
+        },
+        {
+          "id": "match",
+          "text": "Push with twenty newtons, and friction pushes back with exactly twenty. It matches the demand, so the block stays still.",
+          "hold": 0.6,
+          "ink": "at rest: f = demand",
+          "start": 9.13,
+          "speechEnd": 18.89,
+          "end": 19.09,
+          "cue": 9.13,
+          "penEnd": 19.01
+        },
+        {
+          "id": "rule",
+          "text": "Friction can only grow up to a limit: f is less than or equal to mu R.",
+          "hold": 0.6,
+          "ink": "f ≤ μR",
+          "start": 19.69,
+          "speechEnd": 25.09,
+          "end": 25.29,
+          "cue": 19.69,
+          "penEnd": 25.21
+        },
+        {
+          "id": "limit",
+          "text": "When the push reaches that limit, the block is on the point of sliding. That is limiting equilibrium, and only then is f equal to mu R.",
+          "hold": 0.7,
+          "ink": "on the point of sliding: f = μR",
+          "start": 25.89,
+          "speechEnd": 37.37,
+          "end": 37.57,
+          "cue": 26.06,
+          "penEnd": 37.49
+        },
+        {
+          "id": "warn",
+          "text": "So a block at rest does not always have maximum friction. Only write f equals mu R when the block is about to slip.",
+          "hold": 0.7,
+          "start": 38.27,
+          "speechEnd": 46.9,
+          "end": 47.1,
+          "cue": 38.27,
+          "penEnd": 47.02
+        }
+      ],
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 8.63,
+          "end": 9.13,
+          "duration": 0.5
+        },
+        {
+          "kind": "hold",
+          "start": 19.09,
+          "end": 19.69,
+          "duration": 0.6
+        },
+        {
+          "kind": "hold",
+          "start": 25.29,
+          "end": 25.89,
+          "duration": 0.6
+        },
+        {
+          "kind": "hold",
+          "start": 37.57,
+          "end": 38.27,
+          "duration": 0.7
+        },
+        {
+          "kind": "hold",
+          "start": 47.1,
+          "end": 47.8,
+          "duration": 0.7
+        }
+      ],
+      "audio": "coefficient-of-friction-harder-problems-fable-s03.mp3",
+      "audioSha256": "c9d1bbd594a808ef275f416985024226dd8f5fc51c35f7444185d1e800febf70",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "provider": "elevenlabs",
+      "sampleDuration": 48.15,
+      "words": [
+        {
+          "word": "on",
+          "start": 0.56,
+          "end": 0.7
+        },
+        {
+          "word": "a",
+          "start": 0.7,
+          "end": 0.82
+        },
+        {
+          "word": "flat",
+          "start": 0.82,
+          "end": 1.04
+        },
+        {
+          "word": "floor",
+          "start": 1.04,
+          "end": 1.38
+        },
+        {
+          "word": "for",
+          "start": 1.38,
+          "end": 1.72
+        },
+        {
+          "word": "a",
+          "start": 1.72,
+          "end": 1.86
+        },
+        {
+          "word": "moment.",
+          "start": 1.86,
+          "end": 2.16
+        },
+        {
+          "word": "No",
+          "start": 3.14,
+          "end": 3.74
+        },
+        {
+          "word": "push,",
+          "start": 3.74,
+          "end": 4.14
+        },
+        {
+          "word": "no",
+          "start": 4.7,
+          "end": 5.28
+        },
+        {
+          "word": "friction.",
+          "start": 5.28,
+          "end": 5.74
+        },
+        {
+          "word": "The",
+          "start": 6.92,
+          "end": 7.16
+        },
+        {
+          "word": "block",
+          "start": 7.16,
+          "end": 7.42
+        },
+        {
+          "word": "simply",
+          "start": 7.42,
+          "end": 7.8
+        },
+        {
+          "word": "sits.",
+          "start": 7.8,
+          "end": 8.26
+        },
+        {
+          "word": "Push",
+          "start": 9.13,
+          "end": 9.34
+        },
+        {
+          "word": "with",
+          "start": 9.34,
+          "end": 9.68
+        },
+        {
+          "word": "twenty",
+          "start": 9.68,
+          "end": 10.06
+        },
+        {
+          "word": "newtons,",
+          "start": 10.06,
+          "end": 10.64
+        },
+        {
+          "word": "and",
+          "start": 11.18,
+          "end": 11.54
+        },
+        {
+          "word": "friction",
+          "start": 11.54,
+          "end": 11.98
+        },
+        {
+          "word": "pushes",
+          "start": 11.98,
+          "end": 12.56
+        },
+        {
+          "word": "back",
+          "start": 12.56,
+          "end": 12.98
+        },
+        {
+          "word": "with",
+          "start": 12.98,
+          "end": 13.64
+        },
+        {
+          "word": "exactly",
+          "start": 13.64,
+          "end": 13.98
+        },
+        {
+          "word": "twenty.",
+          "start": 13.98,
+          "end": 14.4
+        },
+        {
+          "word": "It",
+          "start": 15.32,
+          "end": 15.52
+        },
+        {
+          "word": "matches",
+          "start": 15.52,
+          "end": 15.92
+        },
+        {
+          "word": "the",
+          "start": 15.92,
+          "end": 16.18
+        },
+        {
+          "word": "demand,",
+          "start": 16.18,
+          "end": 16.58
+        },
+        {
+          "word": "so",
+          "start": 16.86,
+          "end": 17.48
+        },
+        {
+          "word": "the",
+          "start": 17.48,
+          "end": 17.64
+        },
+        {
+          "word": "block",
+          "start": 17.64,
+          "end": 17.94
+        },
+        {
+          "word": "stays",
+          "start": 17.94,
+          "end": 18.24
+        },
+        {
+          "word": "still.",
+          "start": 18.24,
+          "end": 18.74
+        },
+        {
+          "word": "Friction",
+          "start": 19.69,
+          "end": 20.02
+        },
+        {
+          "word": "can",
+          "start": 20.02,
+          "end": 20.28
+        },
+        {
+          "word": "only",
+          "start": 20.28,
+          "end": 20.64
+        },
+        {
+          "word": "grow",
+          "start": 20.64,
+          "end": 20.86
+        },
+        {
+          "word": "up",
+          "start": 20.86,
+          "end": 21.04
+        },
+        {
+          "word": "to",
+          "start": 21.04,
+          "end": 21.2
+        },
+        {
+          "word": "a",
+          "start": 21.2,
+          "end": 21.3
+        },
+        {
+          "word": "limit.",
+          "start": 21.3,
+          "end": 21.5
+        },
+        {
+          "word": "f",
+          "start": 22.26,
+          "end": 22.42
+        },
+        {
+          "word": "is",
+          "start": 22.42,
+          "end": 22.86
+        },
+        {
+          "word": "less",
+          "start": 22.86,
+          "end": 23.08
+        },
+        {
+          "word": "than",
+          "start": 23.08,
+          "end": 23.36
+        },
+        {
+          "word": "or",
+          "start": 23.36,
+          "end": 24.0
+        },
+        {
+          "word": "equal",
+          "start": 24.0,
+          "end": 24.26
+        },
+        {
+          "word": "to",
+          "start": 24.26,
+          "end": 24.48
+        },
+        {
+          "word": "mu",
+          "start": 24.48,
+          "end": 24.7
+        },
+        {
+          "word": "R.",
+          "start": 24.7,
+          "end": 24.98
+        },
+        {
+          "word": "the",
+          "start": 26.06,
+          "end": 26.24
+        },
+        {
+          "word": "push",
+          "start": 26.24,
+          "end": 26.56
+        },
+        {
+          "word": "reaches",
+          "start": 26.56,
+          "end": 27.04
+        },
+        {
+          "word": "that",
+          "start": 27.04,
+          "end": 27.32
+        },
+        {
+          "word": "limit,",
+          "start": 27.32,
+          "end": 27.62
+        },
+        {
+          "word": "the",
+          "start": 28.48,
+          "end": 28.52
+        },
+        {
+          "word": "block",
+          "start": 28.52,
+          "end": 28.9
+        },
+        {
+          "word": "is",
+          "start": 28.9,
+          "end": 29.74
+        },
+        {
+          "word": "on",
+          "start": 29.74,
+          "end": 29.88
+        },
+        {
+          "word": "the",
+          "start": 29.88,
+          "end": 29.96
+        },
+        {
+          "word": "point",
+          "start": 29.96,
+          "end": 30.26
+        },
+        {
+          "word": "of",
+          "start": 30.26,
+          "end": 30.44
+        },
+        {
+          "word": "sliding.",
+          "start": 30.44,
+          "end": 31.0
+        },
+        {
+          "word": "That",
+          "start": 31.8,
+          "end": 32.18
+        },
+        {
+          "word": "is",
+          "start": 32.18,
+          "end": 32.34
+        },
+        {
+          "word": "limiting",
+          "start": 32.34,
+          "end": 32.76
+        },
+        {
+          "word": "equilibrium.",
+          "start": 32.76,
+          "end": 33.48
+        },
+        {
+          "word": "And",
+          "start": 34.28,
+          "end": 34.46
+        },
+        {
+          "word": "only",
+          "start": 34.46,
+          "end": 34.7
+        },
+        {
+          "word": "then",
+          "start": 34.7,
+          "end": 34.92
+        },
+        {
+          "word": "is",
+          "start": 34.92,
+          "end": 35.14
+        },
+        {
+          "word": "f",
+          "start": 35.14,
+          "end": 35.58
+        },
+        {
+          "word": "equal",
+          "start": 35.58,
+          "end": 36.18
+        },
+        {
+          "word": "to",
+          "start": 36.18,
+          "end": 36.4
+        },
+        {
+          "word": "MuR.",
+          "start": 36.4,
+          "end": 37.28
+        },
+        {
+          "word": "So",
+          "start": 38.27,
+          "end": 38.44
+        },
+        {
+          "word": "a",
+          "start": 38.44,
+          "end": 38.62
+        },
+        {
+          "word": "block",
+          "start": 38.62,
+          "end": 38.92
+        },
+        {
+          "word": "at",
+          "start": 38.92,
+          "end": 39.32
+        },
+        {
+          "word": "rest",
+          "start": 39.32,
+          "end": 39.72
+        },
+        {
+          "word": "does",
+          "start": 39.72,
+          "end": 40.04
+        },
+        {
+          "word": "not",
+          "start": 40.04,
+          "end": 40.24
+        },
+        {
+          "word": "always",
+          "start": 40.24,
+          "end": 40.56
+        },
+        {
+          "word": "have",
+          "start": 40.56,
+          "end": 40.78
+        },
+        {
+          "word": "maximum",
+          "start": 40.78,
+          "end": 41.3
+        },
+        {
+          "word": "friction.",
+          "start": 41.3,
+          "end": 41.78
+        },
+        {
+          "word": "Only",
+          "start": 42.5,
+          "end": 42.96
+        },
+        {
+          "word": "write",
+          "start": 42.96,
+          "end": 43.2
+        },
+        {
+          "word": "f",
+          "start": 43.2,
+          "end": 43.58
+        },
+        {
+          "word": "equals",
+          "start": 43.58,
+          "end": 43.96
+        },
+        {
+          "word": "MuR",
+          "start": 43.96,
+          "end": 44.96
+        },
+        {
+          "word": "when",
+          "start": 44.96,
+          "end": 45.54
+        },
+        {
+          "word": "the",
+          "start": 45.54,
+          "end": 45.68
+        },
+        {
+          "word": "block",
+          "start": 45.68,
+          "end": 45.94
+        },
+        {
+          "word": "is",
+          "start": 45.94,
+          "end": 46.16
+        },
+        {
+          "word": "about",
+          "start": 46.16,
+          "end": 46.36
+        },
+        {
+          "word": "to",
+          "start": 46.36,
+          "end": 46.56
+        },
+        {
+          "word": "slip.",
+          "start": 46.56,
+          "end": 46.82
+        }
+      ],
+      "cues": {
+        "rest": 0.56,
+        "match": 9.13,
+        "rule": 19.69,
+        "limit": 26.06,
+        "warn": 38.27
+      },
+      "figureEvents": [
+        {
+          "id": "number-17",
+          "wordIndex": 17,
+          "word": "20",
+          "spokenPhrase": "twenty",
+          "start": 9.68,
+          "target": "push20",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-25",
+          "wordIndex": 25,
+          "word": "20",
+          "spokenPhrase": "twenty.",
+          "start": 13.98,
+          "target": "f20",
+          "kind": "spoken"
+        }
+      ],
+      "wordCount": 100,
+      "text": "on a flat floor for a moment. No push, no friction. The block simply sits. Push with twenty newtons, and friction pushes back with exactly twenty. It matches the demand, so the block stays still. Friction can only grow up to a limit. f is less than or equal to mu R. the push reaches that limit, the block is on the point of sliding. That is limiting equilibrium. And only then is f equal to MuR. So a block at rest does not always have maximum friction. Only write f equals MuR when the block is about to slip.",
+      "duration": 48.195918
+    },
+    {
+      "id": "s04",
+      "title": "The whole question",
+      "mode": "problem",
+      "voiceSpeed": 0.9,
+      "tempo": "slow",
+      "beats": [
+        {
+          "id": "block",
+          "text": "The full question. A block of mass four kilograms rests on a rough plane inclined at thirty degrees to the horizontal. The coefficient of friction is zero point two five. Take g as ten.",
+          "hold": 0.3,
+          "start": 0.4,
+          "speechEnd": 18.7,
+          "end": 18.9,
+          "cue": 0.56,
+          "penEnd": 18.82
+        },
+        {
+          "id": "push",
+          "text": "A force P acts on the block up the plane, along the line of greatest slope. The block is in equilibrium.",
+          "hold": 0.3,
+          "start": 19.2,
+          "speechEnd": 27.89,
+          "end": 28.09,
+          "cue": 19.22,
+          "penEnd": 28.01
+        },
+        {
+          "id": "find",
+          "text": "Find the least value of P, and the greatest value of P, for which the block stays at rest.",
+          "hold": 0.4,
+          "start": 28.39,
+          "speechEnd": 34.53,
+          "end": 34.73,
+          "cue": 28.39,
+          "penEnd": 34.65
+        },
+        {
+          "id": "think",
+          "text": "Before any working: for the least push, which way is the block about to slip... and which way does friction act? Take a moment.",
+          "hold": 2.5,
+          "start": 35.13,
+          "speechEnd": 45.68,
+          "end": 45.88,
+          "cue": 35.13,
+          "penEnd": 45.800000000000004
+        }
+      ],
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 18.9,
+          "end": 19.2,
+          "duration": 0.3
+        },
+        {
+          "kind": "hold",
+          "start": 28.09,
+          "end": 28.39,
+          "duration": 0.3
+        },
+        {
+          "kind": "hold",
+          "start": 34.73,
+          "end": 35.13,
+          "duration": 0.4
+        },
+        {
+          "kind": "hold",
+          "start": 45.88,
+          "end": 48.38,
+          "duration": 2.5
+        }
+      ],
+      "audio": "coefficient-of-friction-harder-problems-fable-s04.mp3",
+      "audioSha256": "b6f95327d866771896a57f389f8e7ef03581714c072a88d945d2d8a532b651d6",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "provider": "elevenlabs",
+      "sampleDuration": 48.73,
+      "words": [
+        {
+          "word": "full",
+          "start": 0.56,
+          "end": 0.82
+        },
+        {
+          "word": "question.",
+          "start": 0.82,
+          "end": 1.22
+        },
+        {
+          "word": "A",
+          "start": 2.38,
+          "end": 2.6
+        },
+        {
+          "word": "block",
+          "start": 2.6,
+          "end": 2.98
+        },
+        {
+          "word": "of",
+          "start": 2.98,
+          "end": 3.28
+        },
+        {
+          "word": "mass",
+          "start": 3.28,
+          "end": 3.72
+        },
+        {
+          "word": "four",
+          "start": 3.72,
+          "end": 4.68
+        },
+        {
+          "word": "kilograms",
+          "start": 4.68,
+          "end": 5.26
+        },
+        {
+          "word": "rests",
+          "start": 5.26,
+          "end": 6.62
+        },
+        {
+          "word": "on",
+          "start": 6.62,
+          "end": 7.2
+        },
+        {
+          "word": "a",
+          "start": 7.2,
+          "end": 7.32
+        },
+        {
+          "word": "rough",
+          "start": 7.32,
+          "end": 7.6
+        },
+        {
+          "word": "plane",
+          "start": 7.6,
+          "end": 8.06
+        },
+        {
+          "word": "inclined",
+          "start": 8.06,
+          "end": 9.26
+        },
+        {
+          "word": "at",
+          "start": 9.26,
+          "end": 9.72
+        },
+        {
+          "word": "thirty",
+          "start": 9.72,
+          "end": 10.08
+        },
+        {
+          "word": "degrees",
+          "start": 10.08,
+          "end": 10.4
+        },
+        {
+          "word": "to",
+          "start": 10.4,
+          "end": 11.32
+        },
+        {
+          "word": "the",
+          "start": 11.32,
+          "end": 11.5
+        },
+        {
+          "word": "horizontal.",
+          "start": 11.5,
+          "end": 12.0
+        },
+        {
+          "word": "The",
+          "start": 13.04,
+          "end": 13.26
+        },
+        {
+          "word": "coefficient",
+          "start": 13.26,
+          "end": 13.78
+        },
+        {
+          "word": "of",
+          "start": 13.78,
+          "end": 14.18
+        },
+        {
+          "word": "friction",
+          "start": 14.18,
+          "end": 14.52
+        },
+        {
+          "word": "is",
+          "start": 14.52,
+          "end": 14.9
+        },
+        {
+          "word": "zero",
+          "start": 14.9,
+          "end": 15.38
+        },
+        {
+          "word": "point",
+          "start": 15.38,
+          "end": 15.68
+        },
+        {
+          "word": "two",
+          "start": 15.68,
+          "end": 15.92
+        },
+        {
+          "word": "five.",
+          "start": 15.92,
+          "end": 16.16
+        },
+        {
+          "word": "Take",
+          "start": 16.72,
+          "end": 17.06
+        },
+        {
+          "word": "g",
+          "start": 17.06,
+          "end": 17.52
+        },
+        {
+          "word": "as",
+          "start": 17.52,
+          "end": 18.24
+        },
+        {
+          "word": "ten.",
+          "start": 18.24,
+          "end": 18.5
+        },
+        {
+          "word": "A",
+          "start": 19.22,
+          "end": 19.38
+        },
+        {
+          "word": "force",
+          "start": 19.38,
+          "end": 19.62
+        },
+        {
+          "word": "P",
+          "start": 19.62,
+          "end": 19.9
+        },
+        {
+          "word": "acts",
+          "start": 19.9,
+          "end": 20.3
+        },
+        {
+          "word": "on",
+          "start": 20.3,
+          "end": 20.62
+        },
+        {
+          "word": "the",
+          "start": 20.62,
+          "end": 20.82
+        },
+        {
+          "word": "block",
+          "start": 20.82,
+          "end": 21.28
+        },
+        {
+          "word": "up",
+          "start": 21.28,
+          "end": 21.84
+        },
+        {
+          "word": "the",
+          "start": 21.84,
+          "end": 22.0
+        },
+        {
+          "word": "plane,",
+          "start": 22.0,
+          "end": 22.4
+        },
+        {
+          "word": "along",
+          "start": 22.98,
+          "end": 23.34
+        },
+        {
+          "word": "the",
+          "start": 23.34,
+          "end": 23.6
+        },
+        {
+          "word": "line",
+          "start": 23.6,
+          "end": 23.84
+        },
+        {
+          "word": "of",
+          "start": 23.84,
+          "end": 24.14
+        },
+        {
+          "word": "greatest",
+          "start": 24.14,
+          "end": 24.6
+        },
+        {
+          "word": "slope.",
+          "start": 24.6,
+          "end": 25.24
+        },
+        {
+          "word": "The",
+          "start": 25.24,
+          "end": 26.34
+        },
+        {
+          "word": "block",
+          "start": 26.34,
+          "end": 26.78
+        },
+        {
+          "word": "is",
+          "start": 26.78,
+          "end": 27.06
+        },
+        {
+          "word": "in",
+          "start": 27.06,
+          "end": 27.18
+        },
+        {
+          "word": "equilibrium.",
+          "start": 27.18,
+          "end": 27.72
+        },
+        {
+          "word": "Find",
+          "start": 28.39,
+          "end": 28.66
+        },
+        {
+          "word": "the",
+          "start": 28.66,
+          "end": 28.96
+        },
+        {
+          "word": "least",
+          "start": 28.96,
+          "end": 29.34
+        },
+        {
+          "word": "value",
+          "start": 29.34,
+          "end": 29.88
+        },
+        {
+          "word": "of",
+          "start": 29.88,
+          "end": 30.18
+        },
+        {
+          "word": "p",
+          "start": 30.18,
+          "end": 30.48
+        },
+        {
+          "word": "and",
+          "start": 30.48,
+          "end": 30.7
+        },
+        {
+          "word": "the",
+          "start": 30.7,
+          "end": 30.86
+        },
+        {
+          "word": "greatest",
+          "start": 30.86,
+          "end": 31.08
+        },
+        {
+          "word": "value",
+          "start": 31.08,
+          "end": 31.48
+        },
+        {
+          "word": "of",
+          "start": 31.48,
+          "end": 31.7
+        },
+        {
+          "word": "p",
+          "start": 31.7,
+          "end": 32.02
+        },
+        {
+          "word": "for",
+          "start": 32.02,
+          "end": 32.66
+        },
+        {
+          "word": "which",
+          "start": 32.66,
+          "end": 32.84
+        },
+        {
+          "word": "the",
+          "start": 32.84,
+          "end": 33.0
+        },
+        {
+          "word": "block",
+          "start": 33.0,
+          "end": 33.3
+        },
+        {
+          "word": "stays",
+          "start": 33.3,
+          "end": 33.66
+        },
+        {
+          "word": "at",
+          "start": 33.66,
+          "end": 33.88
+        },
+        {
+          "word": "rest.",
+          "start": 33.88,
+          "end": 34.32
+        },
+        {
+          "word": "Before",
+          "start": 35.13,
+          "end": 35.5
+        },
+        {
+          "word": "any",
+          "start": 35.5,
+          "end": 35.8
+        },
+        {
+          "word": "working",
+          "start": 35.8,
+          "end": 36.16
+        },
+        {
+          "word": "for",
+          "start": 36.16,
+          "end": 37.06
+        },
+        {
+          "word": "the",
+          "start": 37.06,
+          "end": 37.22
+        },
+        {
+          "word": "least",
+          "start": 37.22,
+          "end": 37.54
+        },
+        {
+          "word": "push,",
+          "start": 37.54,
+          "end": 37.96
+        },
+        {
+          "word": "which",
+          "start": 38.66,
+          "end": 39.0
+        },
+        {
+          "word": "way",
+          "start": 39.0,
+          "end": 39.42
+        },
+        {
+          "word": "is",
+          "start": 39.42,
+          "end": 39.74
+        },
+        {
+          "word": "the",
+          "start": 39.74,
+          "end": 39.88
+        },
+        {
+          "word": "block",
+          "start": 39.88,
+          "end": 40.22
+        },
+        {
+          "word": "about",
+          "start": 40.22,
+          "end": 40.6
+        },
+        {
+          "word": "to",
+          "start": 40.6,
+          "end": 40.82
+        },
+        {
+          "word": "slip",
+          "start": 40.82,
+          "end": 41.12
+        },
+        {
+          "word": "and",
+          "start": 41.12,
+          "end": 42.3
+        },
+        {
+          "word": "which",
+          "start": 42.3,
+          "end": 42.56
+        },
+        {
+          "word": "way",
+          "start": 42.56,
+          "end": 42.84
+        },
+        {
+          "word": "does",
+          "start": 42.84,
+          "end": 43.04
+        },
+        {
+          "word": "friction",
+          "start": 43.04,
+          "end": 43.46
+        },
+        {
+          "word": "act?",
+          "start": 43.46,
+          "end": 43.92
+        },
+        {
+          "word": "Take",
+          "start": 44.72,
+          "end": 45.02
+        },
+        {
+          "word": "a",
+          "start": 45.02,
+          "end": 45.18
+        },
+        {
+          "word": "moment.",
+          "start": 45.18,
+          "end": 45.44
+        }
+      ],
+      "cues": {
+        "block": 0.56,
+        "push": 19.22,
+        "find": 28.39,
+        "think": 35.13
+      },
+      "figureEvents": [
+        {
+          "id": "number-6",
+          "wordIndex": 6,
+          "word": "4",
+          "spokenPhrase": "four",
+          "start": 3.72,
+          "target": "mass",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-15",
+          "wordIndex": 15,
+          "word": "30",
+          "spokenPhrase": "thirty",
+          "start": 9.72,
+          "target": "angle",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-25",
+          "wordIndex": 25,
+          "word": "0.25",
+          "spokenPhrase": "zero point two five.",
+          "start": 14.9,
+          "target": "mu",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-32",
+          "wordIndex": 32,
+          "word": "10",
+          "spokenPhrase": "ten.",
+          "start": 18.24,
+          "target": "gravity",
+          "kind": "spoken"
+        }
+      ],
+      "wordCount": 97,
+      "text": "full question. A block of mass four kilograms rests on a rough plane inclined at thirty degrees to the horizontal. The coefficient of friction is zero point two five. Take g as ten. A force P acts on the block up the plane, along the line of greatest slope. The block is in equilibrium. Find the least value of p and the greatest value of p for which the block stays at rest. Before any working for the least push, which way is the block about to slip and which way does friction act? Take a moment.",
+      "duration": 48.770612
+    },
+    {
+      "id": "s05",
+      "title": "Resolve, then the friction limit",
+      "mode": "resolve",
+      "voiceSpeed": 0.9,
+      "tempo": "slow",
+      "beats": [
+        {
+          "id": "weight",
+          "text": "First the weight: four times ten, forty newtons, straight down. Draw its triangle against the slope.",
+          "hold": 0.6,
+          "ink": "mg = 4 × 10 = 40 N",
+          "start": 0.4,
+          "speechEnd": 12.2,
+          "end": 12.4,
+          "cue": 0.69,
+          "penEnd": 12.32
+        },
+        {
+          "id": "into",
+          "text": "Into the slope: m g cos theta. Forty cos thirty is twenty root three, about thirty-four point six newtons.",
+          "hold": 1,
+          "ink": "mg cos 30° = 20√3 ≈ 34.6 N",
+          "start": 13.0,
+          "speechEnd": 21.74,
+          "end": 21.94,
+          "cue": 13.0,
+          "penEnd": 21.860000000000003
+        },
+        {
+          "id": "along",
+          "text": "Down the slope: m g sine theta. Forty sine thirty is twenty newtons.",
+          "hold": 1,
+          "ink": "mg sin 30° = 20 N",
+          "start": 22.94,
+          "speechEnd": 31.26,
+          "end": 31.46,
+          "cue": 23.21,
+          "penEnd": 31.380000000000003
+        },
+        {
+          "id": "balance",
+          "text": "Perpendicular to the slope nothing moves, and P has no part that way. So R minus m g cos theta equals zero.",
+          "hold": 0.6,
+          "ink": "R − mg cos 30° = 0",
+          "start": 32.46,
+          "speechEnd": 45.39,
+          "end": 45.59,
+          "cue": 32.46,
+          "penEnd": 45.510000000000005
+        },
+        {
+          "id": "subR",
+          "text": "R is twenty root three, about thirty-four point six newtons.",
+          "hold": 1,
+          "ink": "R = 20√3 ≈ 34.6 N",
+          "start": 46.19,
+          "speechEnd": 51.31,
+          "end": 51.51,
+          "cue": 46.19,
+          "penEnd": 51.43
+        },
+        {
+          "id": "formula",
+          "text": "The most friction the plane can give: f max equals mu R.",
+          "hold": 0.5,
+          "ink": "f max = μR",
+          "start": 52.51,
+          "speechEnd": 57.3,
+          "end": 57.5,
+          "cue": 52.61,
+          "penEnd": 57.42
+        },
+        {
+          "id": "sublimit",
+          "text": "Zero point two five times thirty-four point six... about eight point six six newtons. Keep that number; both answers use it.",
+          "hold": 1.2,
+          "ink": "f max = 0.25 × 34.6 ≈ 8.66 N",
+          "start": 58.0,
+          "speechEnd": 67.6,
+          "end": 67.8,
+          "cue": 58.0,
+          "penEnd": 67.72
+        }
+      ],
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 12.4,
+          "end": 13.0,
+          "duration": 0.6
+        },
+        {
+          "kind": "hold",
+          "start": 21.94,
+          "end": 22.94,
+          "duration": 1
+        },
+        {
+          "kind": "hold",
+          "start": 31.46,
+          "end": 32.46,
+          "duration": 1
+        },
+        {
+          "kind": "hold",
+          "start": 45.59,
+          "end": 46.19,
+          "duration": 0.6
+        },
+        {
+          "kind": "hold",
+          "start": 51.51,
+          "end": 52.51,
+          "duration": 1
+        },
+        {
+          "kind": "hold",
+          "start": 57.5,
+          "end": 58.0,
+          "duration": 0.5
+        },
+        {
+          "kind": "hold",
+          "start": 67.8,
+          "end": 69.0,
+          "duration": 1.2
+        }
+      ],
+      "audio": "coefficient-of-friction-harder-problems-fable-s05.mp3",
+      "audioSha256": "b967e5e3e343f05362715b246d927bf0a9be7fcc64379bae9f9bc9b02515ddda",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "provider": "elevenlabs",
+      "sampleDuration": 69.35,
+      "words": [
+        {
+          "word": "the",
+          "start": 0.69,
+          "end": 1.21
+        },
+        {
+          "word": "weight...",
+          "start": 1.21,
+          "end": 2.11
+        },
+        {
+          "word": "four",
+          "start": 2.89,
+          "end": 3.15
+        },
+        {
+          "word": "times",
+          "start": 3.15,
+          "end": 3.57
+        },
+        {
+          "word": "ten...",
+          "start": 3.57,
+          "end": 4.59
+        },
+        {
+          "word": "forty",
+          "start": 5.23,
+          "end": 5.71
+        },
+        {
+          "word": "newtons,",
+          "start": 5.71,
+          "end": 6.43
+        },
+        {
+          "word": "straight",
+          "start": 6.69,
+          "end": 7.49
+        },
+        {
+          "word": "down.",
+          "start": 7.49,
+          "end": 7.93
+        },
+        {
+          "word": "Draw",
+          "start": 8.77,
+          "end": 9.57
+        },
+        {
+          "word": "its",
+          "start": 9.57,
+          "end": 9.81
+        },
+        {
+          "word": "triangle",
+          "start": 9.81,
+          "end": 10.35
+        },
+        {
+          "word": "against",
+          "start": 10.35,
+          "end": 11.41
+        },
+        {
+          "word": "the",
+          "start": 11.41,
+          "end": 11.63
+        },
+        {
+          "word": "slope.",
+          "start": 11.63,
+          "end": 12.03
+        },
+        {
+          "word": "Into",
+          "start": 13.0,
+          "end": 13.23
+        },
+        {
+          "word": "the",
+          "start": 13.23,
+          "end": 13.39
+        },
+        {
+          "word": "slope",
+          "start": 13.39,
+          "end": 13.67
+        },
+        {
+          "word": "m",
+          "start": 13.67,
+          "end": 14.59
+        },
+        {
+          "word": "g",
+          "start": 14.59,
+          "end": 14.85
+        },
+        {
+          "word": "cos",
+          "start": 14.85,
+          "end": 15.07
+        },
+        {
+          "word": "theta.",
+          "start": 15.07,
+          "end": 15.49
+        },
+        {
+          "word": "Forty",
+          "start": 16.51,
+          "end": 17.03
+        },
+        {
+          "word": "cos",
+          "start": 17.03,
+          "end": 17.25
+        },
+        {
+          "word": "thirty",
+          "start": 17.25,
+          "end": 17.79
+        },
+        {
+          "word": "is",
+          "start": 17.79,
+          "end": 18.03
+        },
+        {
+          "word": "twenty",
+          "start": 18.03,
+          "end": 18.39
+        },
+        {
+          "word": "root",
+          "start": 18.39,
+          "end": 18.65
+        },
+        {
+          "word": "three,",
+          "start": 18.65,
+          "end": 19.03
+        },
+        {
+          "word": "about",
+          "start": 19.63,
+          "end": 19.91
+        },
+        {
+          "word": "thirty",
+          "start": 19.91,
+          "end": 20.19
+        },
+        {
+          "word": "-four",
+          "start": 20.19,
+          "end": 20.43
+        },
+        {
+          "word": "point",
+          "start": 20.43,
+          "end": 20.67
+        },
+        {
+          "word": "six",
+          "start": 20.67,
+          "end": 20.99
+        },
+        {
+          "word": "newtons.",
+          "start": 20.99,
+          "end": 21.55
+        },
+        {
+          "word": "the",
+          "start": 23.21,
+          "end": 23.41
+        },
+        {
+          "word": "slope",
+          "start": 23.41,
+          "end": 23.81
+        },
+        {
+          "word": "m",
+          "start": 24.71,
+          "end": 25.23
+        },
+        {
+          "word": "g",
+          "start": 25.23,
+          "end": 25.77
+        },
+        {
+          "word": "sine",
+          "start": 25.77,
+          "end": 26.47
+        },
+        {
+          "word": "theta.",
+          "start": 26.47,
+          "end": 27.15
+        },
+        {
+          "word": "40",
+          "start": 27.15,
+          "end": 28.49
+        },
+        {
+          "word": "sin",
+          "start": 28.49,
+          "end": 28.83
+        },
+        {
+          "word": "30",
+          "start": 28.83,
+          "end": 29.25
+        },
+        {
+          "word": "is",
+          "start": 29.25,
+          "end": 30.03
+        },
+        {
+          "word": "20",
+          "start": 30.03,
+          "end": 30.55
+        },
+        {
+          "word": "Newtons.",
+          "start": 30.55,
+          "end": 31.19
+        },
+        {
+          "word": "Perpendicular",
+          "start": 32.46,
+          "end": 33.25
+        },
+        {
+          "word": "to",
+          "start": 33.25,
+          "end": 33.77
+        },
+        {
+          "word": "the",
+          "start": 33.77,
+          "end": 33.93
+        },
+        {
+          "word": "slope,",
+          "start": 33.93,
+          "end": 34.31
+        },
+        {
+          "word": "nothing",
+          "start": 35.05,
+          "end": 35.47
+        },
+        {
+          "word": "moves.",
+          "start": 35.47,
+          "end": 35.97
+        },
+        {
+          "word": "And",
+          "start": 36.81,
+          "end": 36.91
+        },
+        {
+          "word": "P",
+          "start": 36.91,
+          "end": 37.27
+        },
+        {
+          "word": "has",
+          "start": 37.27,
+          "end": 38.11
+        },
+        {
+          "word": "no",
+          "start": 38.11,
+          "end": 38.43
+        },
+        {
+          "word": "part",
+          "start": 38.43,
+          "end": 38.73
+        },
+        {
+          "word": "that",
+          "start": 38.73,
+          "end": 39.01
+        },
+        {
+          "word": "way.",
+          "start": 39.01,
+          "end": 39.31
+        },
+        {
+          "word": "So",
+          "start": 40.37,
+          "end": 40.55
+        },
+        {
+          "word": "R",
+          "start": 40.55,
+          "end": 40.99
+        },
+        {
+          "word": "minus",
+          "start": 40.99,
+          "end": 42.07
+        },
+        {
+          "word": "mg",
+          "start": 42.07,
+          "end": 42.75
+        },
+        {
+          "word": "cos",
+          "start": 42.75,
+          "end": 43.75
+        },
+        {
+          "word": "theta",
+          "start": 43.75,
+          "end": 44.09
+        },
+        {
+          "word": "equals",
+          "start": 44.09,
+          "end": 44.59
+        },
+        {
+          "word": "0.",
+          "start": 44.59,
+          "end": 45.21
+        },
+        {
+          "word": "R",
+          "start": 46.19,
+          "end": 46.51
+        },
+        {
+          "word": "is",
+          "start": 46.51,
+          "end": 46.79
+        },
+        {
+          "word": "20",
+          "start": 46.79,
+          "end": 47.23
+        },
+        {
+          "word": "root",
+          "start": 47.23,
+          "end": 47.55
+        },
+        {
+          "word": "3,",
+          "start": 47.55,
+          "end": 48.07
+        },
+        {
+          "word": "about",
+          "start": 49.03,
+          "end": 49.29
+        },
+        {
+          "word": "34",
+          "start": 49.29,
+          "end": 49.81
+        },
+        {
+          "word": ".6",
+          "start": 49.81,
+          "end": 50.49
+        },
+        {
+          "word": "Newtons.",
+          "start": 50.49,
+          "end": 51.13
+        },
+        {
+          "word": "most",
+          "start": 52.61,
+          "end": 52.79
+        },
+        {
+          "word": "friction",
+          "start": 52.79,
+          "end": 53.19
+        },
+        {
+          "word": "the",
+          "start": 53.19,
+          "end": 53.39
+        },
+        {
+          "word": "plane",
+          "start": 53.39,
+          "end": 53.63
+        },
+        {
+          "word": "can",
+          "start": 53.63,
+          "end": 53.87
+        },
+        {
+          "word": "give,",
+          "start": 53.87,
+          "end": 54.31
+        },
+        {
+          "word": "f",
+          "start": 54.91,
+          "end": 55.17
+        },
+        {
+          "word": "max",
+          "start": 55.17,
+          "end": 55.47
+        },
+        {
+          "word": "equals",
+          "start": 55.47,
+          "end": 56.01
+        },
+        {
+          "word": "mu",
+          "start": 56.01,
+          "end": 56.51
+        },
+        {
+          "word": "r,",
+          "start": 56.51,
+          "end": 57.19
+        },
+        {
+          "word": "0",
+          "start": 58.0,
+          "end": 58.35
+        },
+        {
+          "word": ".25",
+          "start": 58.35,
+          "end": 59.51
+        },
+        {
+          "word": "times",
+          "start": 59.51,
+          "end": 60.27
+        },
+        {
+          "word": "34",
+          "start": 60.27,
+          "end": 60.77
+        },
+        {
+          "word": ".6,",
+          "start": 60.77,
+          "end": 61.65
+        },
+        {
+          "word": "about",
+          "start": 62.21,
+          "end": 62.49
+        },
+        {
+          "word": "8",
+          "start": 62.49,
+          "end": 62.83
+        },
+        {
+          "word": ".66",
+          "start": 62.83,
+          "end": 63.63
+        },
+        {
+          "word": "6",
+          "start": 63.63,
+          "end": 63.87
+        },
+        {
+          "word": "Newtons.",
+          "start": 63.87,
+          "end": 64.39
+        },
+        {
+          "word": "Keep",
+          "start": 64.85,
+          "end": 65.07
+        },
+        {
+          "word": "that",
+          "start": 65.07,
+          "end": 65.29
+        },
+        {
+          "word": "number.",
+          "start": 65.29,
+          "end": 65.61
+        },
+        {
+          "word": "Both",
+          "start": 66.15,
+          "end": 66.45
+        },
+        {
+          "word": "answers",
+          "start": 66.45,
+          "end": 66.85
+        },
+        {
+          "word": "use",
+          "start": 66.85,
+          "end": 67.21
+        },
+        {
+          "word": "it.",
+          "start": 67.21,
+          "end": 67.45
+        }
+      ],
+      "cues": {
+        "weight": 0.69,
+        "into": 13.0,
+        "along": 23.21,
+        "balance": 32.46,
+        "subR": 46.19,
+        "formula": 52.61,
+        "sublimit": 58.0
+      },
+      "figureEvents": [
+        {
+          "id": "number-2",
+          "wordIndex": 2,
+          "word": "4",
+          "spokenPhrase": "four",
+          "start": 2.89,
+          "target": "mass",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-4",
+          "wordIndex": 4,
+          "word": "10",
+          "spokenPhrase": "ten...",
+          "start": 3.57,
+          "target": "gravity",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-5",
+          "wordIndex": 5,
+          "word": "40",
+          "spokenPhrase": "forty",
+          "start": 5.23,
+          "target": "weightFigRow",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-22",
+          "wordIndex": 22,
+          "word": "40",
+          "spokenPhrase": "Forty",
+          "start": 16.51,
+          "target": "weightFigRow",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-24",
+          "wordIndex": 24,
+          "word": "30",
+          "spokenPhrase": "thirty",
+          "start": 17.25,
+          "target": "angle",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-30",
+          "wordIndex": 30,
+          "word": "34.6",
+          "spokenPhrase": "thirty -four point six",
+          "start": 19.91,
+          "target": "cosComp",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-41",
+          "wordIndex": 41,
+          "word": "40",
+          "spokenPhrase": "40",
+          "start": 27.15,
+          "target": "weightFigRow",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-43",
+          "wordIndex": 43,
+          "word": "30",
+          "spokenPhrase": "30",
+          "start": 28.83,
+          "target": "angle",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-45",
+          "wordIndex": 45,
+          "word": "20",
+          "spokenPhrase": "20",
+          "start": 30.03,
+          "target": "sinComp",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-74",
+          "wordIndex": 74,
+          "word": "34.6",
+          "spokenPhrase": "34 .6",
+          "start": 49.29,
+          "target": "R",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-88",
+          "wordIndex": 88,
+          "word": "0.25",
+          "spokenPhrase": "0 .25",
+          "start": 58.0,
+          "target": "mu",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-91",
+          "wordIndex": 91,
+          "word": "34.6",
+          "spokenPhrase": "34 .6,",
+          "start": 60.27,
+          "target": "R",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-94",
+          "wordIndex": 94,
+          "word": "8.66",
+          "spokenPhrase": "8 .66",
+          "start": 62.49,
+          "target": "fmax",
+          "kind": "spoken"
+        }
+      ],
+      "wordCount": 105,
+      "text": "the weight... four times ten... forty newtons, straight down. Draw its triangle against the slope. Into the slope m g cos theta. Forty cos thirty is twenty root three, about thirty -four point six newtons. the slope m g sine theta. 40 sin 30 is 20 Newtons. Perpendicular to the slope, nothing moves. And P has no part that way. So R minus mg cos theta equals 0. R is 20 root 3, about 34 .6 Newtons. most friction the plane can give, f max equals mu r, 0 .25 times 34 .6, about 8 .66 6 Newtons. Keep that number. Both answers use it.",
+      "duration": 69.381224
+    },
+    {
+      "id": "s06",
+      "title": "The least push",
+      "mode": "minimum",
+      "voiceSpeed": 0.9,
+      "tempo": "slow",
+      "beats": [
+        {
+          "id": "direction",
+          "text": "The least push. The block is on the point of sliding down, so friction acts up the slope... at its maximum, eight point six six.",
+          "hold": 0.8,
+          "start": 0.4,
+          "speechEnd": 11.82,
+          "end": 12.02,
+          "cue": 0.56,
+          "penEnd": 11.94
+        },
+        {
+          "id": "law",
+          "text": "Along the slope the forces balance. Up the slope: P plus f max. Down the slope: m g sine theta.",
+          "hold": 0.6,
+          "ink": "P + f max − mg sin 30° = 0",
+          "start": 12.82,
+          "speechEnd": 25.85,
+          "end": 26.05,
+          "cue": 13.12,
+          "penEnd": 25.970000000000002
+        },
+        {
+          "id": "substitute",
+          "text": "So P plus eight point six six minus twenty equals zero.",
+          "hold": 0.8,
+          "ink": "P + 8.66 − 20 = 0",
+          "start": 26.65,
+          "speechEnd": 31.11,
+          "end": 31.31,
+          "cue": 26.84,
+          "penEnd": 31.23
+        },
+        {
+          "id": "answer",
+          "text": "The least push is twenty minus eight point six six: about eleven point three newtons.",
+          "hold": 1.5,
+          "ink": "P min = 20 − 8.66 ≈ 11.3 N",
+          "start": 32.11,
+          "speechEnd": 38.82,
+          "end": 39.02,
+          "cue": 32.2,
+          "penEnd": 38.940000000000005
+        },
+        {
+          "id": "meaning",
+          "text": "Friction helps here: it carries eight point six six, so the push can be smaller.",
+          "hold": 0.5,
+          "start": 40.52,
+          "speechEnd": 46.6,
+          "end": 46.8,
+          "cue": 40.52,
+          "penEnd": 46.72
+        }
+      ],
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 12.02,
+          "end": 12.82,
+          "duration": 0.8
+        },
+        {
+          "kind": "hold",
+          "start": 26.05,
+          "end": 26.65,
+          "duration": 0.6
+        },
+        {
+          "kind": "hold",
+          "start": 31.31,
+          "end": 32.11,
+          "duration": 0.8
+        },
+        {
+          "kind": "hold",
+          "start": 39.02,
+          "end": 40.52,
+          "duration": 1.5
+        },
+        {
+          "kind": "hold",
+          "start": 46.8,
+          "end": 47.3,
+          "duration": 0.5
+        }
+      ],
+      "audio": "coefficient-of-friction-harder-problems-fable-s06.mp3",
+      "audioSha256": "a44d9f93d55d80003c1fbf786eb6b81e89f103bd61d85165920e8486ea2dcef8",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "provider": "elevenlabs",
+      "sampleDuration": 47.65,
+      "words": [
+        {
+          "word": "least",
+          "start": 0.56,
+          "end": 0.92
+        },
+        {
+          "word": "push.",
+          "start": 0.92,
+          "end": 1.34
+        },
+        {
+          "word": "The",
+          "start": 2.62,
+          "end": 2.86
+        },
+        {
+          "word": "block",
+          "start": 2.86,
+          "end": 3.26
+        },
+        {
+          "word": "is",
+          "start": 3.26,
+          "end": 3.48
+        },
+        {
+          "word": "on",
+          "start": 3.48,
+          "end": 3.62
+        },
+        {
+          "word": "the",
+          "start": 3.62,
+          "end": 3.7
+        },
+        {
+          "word": "point",
+          "start": 3.7,
+          "end": 4.0
+        },
+        {
+          "word": "of",
+          "start": 4.0,
+          "end": 4.16
+        },
+        {
+          "word": "sliding",
+          "start": 4.16,
+          "end": 4.58
+        },
+        {
+          "word": "down,",
+          "start": 4.58,
+          "end": 4.98
+        },
+        {
+          "word": "so",
+          "start": 5.4,
+          "end": 5.8
+        },
+        {
+          "word": "friction",
+          "start": 5.8,
+          "end": 6.26
+        },
+        {
+          "word": "acts",
+          "start": 6.26,
+          "end": 6.62
+        },
+        {
+          "word": "up",
+          "start": 6.62,
+          "end": 6.98
+        },
+        {
+          "word": "the",
+          "start": 6.98,
+          "end": 7.4
+        },
+        {
+          "word": "slope",
+          "start": 7.4,
+          "end": 7.7
+        },
+        {
+          "word": "at",
+          "start": 7.7,
+          "end": 8.74
+        },
+        {
+          "word": "its",
+          "start": 8.74,
+          "end": 8.9
+        },
+        {
+          "word": "maximum,",
+          "start": 8.9,
+          "end": 9.54
+        },
+        {
+          "word": "eight",
+          "start": 10.16,
+          "end": 10.48
+        },
+        {
+          "word": "point",
+          "start": 10.48,
+          "end": 10.78
+        },
+        {
+          "word": "six",
+          "start": 10.78,
+          "end": 11.16
+        },
+        {
+          "word": "six.",
+          "start": 11.16,
+          "end": 11.52
+        },
+        {
+          "word": "the",
+          "start": 13.12,
+          "end": 13.4
+        },
+        {
+          "word": "slope",
+          "start": 13.4,
+          "end": 13.82
+        },
+        {
+          "word": "the",
+          "start": 13.82,
+          "end": 14.46
+        },
+        {
+          "word": "forces",
+          "start": 14.46,
+          "end": 14.96
+        },
+        {
+          "word": "balance.",
+          "start": 14.96,
+          "end": 15.56
+        },
+        {
+          "word": "Up",
+          "start": 16.42,
+          "end": 16.68
+        },
+        {
+          "word": "the",
+          "start": 16.68,
+          "end": 16.88
+        },
+        {
+          "word": "slope",
+          "start": 16.88,
+          "end": 17.34
+        },
+        {
+          "word": "P",
+          "start": 17.34,
+          "end": 18.5
+        },
+        {
+          "word": "plus",
+          "start": 18.5,
+          "end": 19.22
+        },
+        {
+          "word": "f",
+          "start": 19.22,
+          "end": 19.6
+        },
+        {
+          "word": "max.",
+          "start": 19.6,
+          "end": 20.0
+        },
+        {
+          "word": "Down",
+          "start": 20.86,
+          "end": 21.38
+        },
+        {
+          "word": "the",
+          "start": 21.38,
+          "end": 21.58
+        },
+        {
+          "word": "slope.",
+          "start": 21.58,
+          "end": 22.08
+        },
+        {
+          "word": "m",
+          "start": 22.7,
+          "end": 23.14
+        },
+        {
+          "word": "g",
+          "start": 23.14,
+          "end": 23.9
+        },
+        {
+          "word": "sine",
+          "start": 23.9,
+          "end": 24.94
+        },
+        {
+          "word": "theta.",
+          "start": 24.94,
+          "end": 25.7
+        },
+        {
+          "word": "P",
+          "start": 26.84,
+          "end": 27.1
+        },
+        {
+          "word": "plus",
+          "start": 27.1,
+          "end": 27.32
+        },
+        {
+          "word": "8",
+          "start": 27.32,
+          "end": 27.86
+        },
+        {
+          "word": ".66",
+          "start": 27.86,
+          "end": 29.04
+        },
+        {
+          "word": "minus",
+          "start": 29.04,
+          "end": 29.52
+        },
+        {
+          "word": "20",
+          "start": 29.52,
+          "end": 30.08
+        },
+        {
+          "word": "equals",
+          "start": 30.08,
+          "end": 30.5
+        },
+        {
+          "word": "0.",
+          "start": 30.5,
+          "end": 30.94
+        },
+        {
+          "word": "The",
+          "start": 32.2,
+          "end": 32.26
+        },
+        {
+          "word": "least",
+          "start": 32.26,
+          "end": 32.64
+        },
+        {
+          "word": "push",
+          "start": 32.64,
+          "end": 33.0
+        },
+        {
+          "word": "is",
+          "start": 33.0,
+          "end": 33.36
+        },
+        {
+          "word": "20",
+          "start": 33.36,
+          "end": 33.84
+        },
+        {
+          "word": "minus",
+          "start": 33.84,
+          "end": 34.26
+        },
+        {
+          "word": "8",
+          "start": 34.26,
+          "end": 34.78
+        },
+        {
+          "word": ".66,",
+          "start": 34.78,
+          "end": 35.68
+        },
+        {
+          "word": "about",
+          "start": 35.94,
+          "end": 36.32
+        },
+        {
+          "word": "11",
+          "start": 36.32,
+          "end": 36.78
+        },
+        {
+          "word": ".3",
+          "start": 36.78,
+          "end": 37.94
+        },
+        {
+          "word": "newtons.",
+          "start": 37.94,
+          "end": 38.66
+        },
+        {
+          "word": "Friction",
+          "start": 40.52,
+          "end": 40.88
+        },
+        {
+          "word": "helps",
+          "start": 40.88,
+          "end": 41.24
+        },
+        {
+          "word": "here.",
+          "start": 41.24,
+          "end": 41.7
+        },
+        {
+          "word": "It",
+          "start": 41.7,
+          "end": 42.52
+        },
+        {
+          "word": "carries",
+          "start": 42.52,
+          "end": 42.86
+        },
+        {
+          "word": "8",
+          "start": 42.86,
+          "end": 43.28
+        },
+        {
+          "word": ".66",
+          "start": 43.28,
+          "end": 44.08
+        },
+        {
+          "word": "so",
+          "start": 44.08,
+          "end": 45.02
+        },
+        {
+          "word": "the",
+          "start": 45.02,
+          "end": 45.18
+        },
+        {
+          "word": "push",
+          "start": 45.18,
+          "end": 45.52
+        },
+        {
+          "word": "can",
+          "start": 45.52,
+          "end": 45.78
+        },
+        {
+          "word": "be",
+          "start": 45.78,
+          "end": 45.92
+        },
+        {
+          "word": "smaller.",
+          "start": 45.92,
+          "end": 46.36
+        }
+      ],
+      "cues": {
+        "direction": 0.56,
+        "law": 13.12,
+        "substitute": 26.84,
+        "answer": 32.2,
+        "meaning": 40.52
+      },
+      "figureEvents": [
+        {
+          "id": "number-20",
+          "wordIndex": 20,
+          "word": "8.66",
+          "spokenPhrase": "eight point six six.",
+          "start": 10.16,
+          "target": "fmax",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-45",
+          "wordIndex": 45,
+          "word": "8.66",
+          "spokenPhrase": "8 .66",
+          "start": 27.32,
+          "target": "fmax",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-48",
+          "wordIndex": 48,
+          "word": "20",
+          "spokenPhrase": "20",
+          "start": 29.52,
+          "target": "sinComp",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-55",
+          "wordIndex": 55,
+          "word": "20",
+          "spokenPhrase": "20",
+          "start": 33.36,
+          "target": "sinComp",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-57",
+          "wordIndex": 57,
+          "word": "8.66",
+          "spokenPhrase": "8 .66,",
+          "start": 34.26,
+          "target": "fmax",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-60",
+          "wordIndex": 60,
+          "word": "11.3",
+          "spokenPhrase": "11 .3",
+          "start": 36.32,
+          "target": "Pmin",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-68",
+          "wordIndex": 68,
+          "word": "8.66",
+          "spokenPhrase": "8 .66",
+          "start": 42.86,
+          "target": "fmax",
+          "kind": "spoken"
+        }
+      ],
+      "wordCount": 76,
+      "text": "least push. The block is on the point of sliding down, so friction acts up the slope at its maximum, eight point six six. the slope the forces balance. Up the slope P plus f max. Down the slope. m g sine theta. P plus 8 .66 minus 20 equals 0. The least push is 20 minus 8 .66, about 11 .3 newtons. Friction helps here. It carries 8 .66 so the push can be smaller.",
+      "duration": 47.699592
+    },
+    {
+      "id": "s07",
+      "title": "The greatest push",
+      "mode": "maximum",
+      "voiceSpeed": 0.9,
+      "tempo": "slow",
+      "beats": [
+        {
+          "id": "direction",
+          "text": "Now the greatest push. The block is on the point of sliding up, so friction switches and acts down the slope, still at eight point six six.",
+          "hold": 0.8,
+          "start": 0.4,
+          "speechEnd": 11.36,
+          "end": 11.56,
+          "cue": 0.62,
+          "penEnd": 11.48
+        },
+        {
+          "id": "law",
+          "text": "Balance along the slope again. Up: P. Down: friction, plus m g sine theta.",
+          "hold": 0.6,
+          "ink": "P − f max − mg sin 30° = 0",
+          "start": 12.36,
+          "speechEnd": 20.17,
+          "end": 20.37,
+          "cue": 12.68,
+          "penEnd": 20.290000000000003
+        },
+        {
+          "id": "substitute",
+          "text": "P minus eight point six six minus twenty equals zero.",
+          "hold": 0.8,
+          "ink": "P − 8.66 − 20 = 0",
+          "start": 20.97,
+          "speechEnd": 26.06,
+          "end": 26.26,
+          "cue": 21.24,
+          "penEnd": 26.180000000000003
+        },
+        {
+          "id": "answer",
+          "text": "The greatest push is twenty plus eight point six six: about twenty-eight point seven newtons.",
+          "hold": 1.5,
+          "ink": "P max = 20 + 8.66 ≈ 28.7 N",
+          "start": 27.06,
+          "speechEnd": 34.21,
+          "end": 34.41,
+          "cue": 27.2,
+          "penEnd": 34.33
+        },
+        {
+          "id": "meaning",
+          "text": "Same block, same limit. Only the friction direction changed, and the answer moved from eleven point three to twenty-eight point seven.",
+          "hold": 0.6,
+          "start": 35.91,
+          "speechEnd": 47.67,
+          "end": 47.87,
+          "cue": 35.91,
+          "penEnd": 47.79
+        }
+      ],
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 11.56,
+          "end": 12.36,
+          "duration": 0.8
+        },
+        {
+          "kind": "hold",
+          "start": 20.37,
+          "end": 20.97,
+          "duration": 0.6
+        },
+        {
+          "kind": "hold",
+          "start": 26.26,
+          "end": 27.06,
+          "duration": 0.8
+        },
+        {
+          "kind": "hold",
+          "start": 34.41,
+          "end": 35.91,
+          "duration": 1.5
+        },
+        {
+          "kind": "hold",
+          "start": 47.87,
+          "end": 48.47,
+          "duration": 0.6
+        }
+      ],
+      "audio": "coefficient-of-friction-harder-problems-fable-s07.mp3",
+      "audioSha256": "02d9f8cb4be2c2247ac995ac40d7ec425b2337c74a0180bd49cf11e9a50b2fa1",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "provider": "elevenlabs",
+      "sampleDuration": 48.82,
+      "words": [
+        {
+          "word": "the",
+          "start": 0.62,
+          "end": 0.8
+        },
+        {
+          "word": "greatest",
+          "start": 0.8,
+          "end": 1.12
+        },
+        {
+          "word": "push.",
+          "start": 1.12,
+          "end": 1.58
+        },
+        {
+          "word": "The",
+          "start": 2.6,
+          "end": 2.7
+        },
+        {
+          "word": "block",
+          "start": 2.7,
+          "end": 3.1
+        },
+        {
+          "word": "is",
+          "start": 3.1,
+          "end": 3.44
+        },
+        {
+          "word": "on",
+          "start": 3.44,
+          "end": 3.6
+        },
+        {
+          "word": "the",
+          "start": 3.6,
+          "end": 3.68
+        },
+        {
+          "word": "point",
+          "start": 3.68,
+          "end": 3.96
+        },
+        {
+          "word": "of",
+          "start": 3.96,
+          "end": 4.14
+        },
+        {
+          "word": "sliding",
+          "start": 4.14,
+          "end": 4.54
+        },
+        {
+          "word": "up,",
+          "start": 4.54,
+          "end": 4.96
+        },
+        {
+          "word": "so",
+          "start": 5.08,
+          "end": 5.8
+        },
+        {
+          "word": "friction",
+          "start": 5.8,
+          "end": 6.28
+        },
+        {
+          "word": "switches",
+          "start": 6.28,
+          "end": 6.88
+        },
+        {
+          "word": "and",
+          "start": 6.88,
+          "end": 7.14
+        },
+        {
+          "word": "acts",
+          "start": 7.14,
+          "end": 7.52
+        },
+        {
+          "word": "down",
+          "start": 7.52,
+          "end": 7.92
+        },
+        {
+          "word": "the",
+          "start": 7.92,
+          "end": 8.18
+        },
+        {
+          "word": "slope,",
+          "start": 8.18,
+          "end": 8.62
+        },
+        {
+          "word": "still",
+          "start": 9.16,
+          "end": 9.6
+        },
+        {
+          "word": "at",
+          "start": 9.6,
+          "end": 9.82
+        },
+        {
+          "word": "eight",
+          "start": 9.82,
+          "end": 10.1
+        },
+        {
+          "word": "point",
+          "start": 10.1,
+          "end": 10.42
+        },
+        {
+          "word": "six",
+          "start": 10.42,
+          "end": 10.78
+        },
+        {
+          "word": "six.",
+          "start": 10.78,
+          "end": 11.18
+        },
+        {
+          "word": "along",
+          "start": 12.68,
+          "end": 13.04
+        },
+        {
+          "word": "the",
+          "start": 13.04,
+          "end": 13.26
+        },
+        {
+          "word": "slope",
+          "start": 13.26,
+          "end": 13.56
+        },
+        {
+          "word": "again.",
+          "start": 13.56,
+          "end": 13.94
+        },
+        {
+          "word": "Up",
+          "start": 14.58,
+          "end": 14.76
+        },
+        {
+          "word": "P.",
+          "start": 14.76,
+          "end": 15.38
+        },
+        {
+          "word": "Down.",
+          "start": 15.82,
+          "end": 16.26
+        },
+        {
+          "word": "Friction.",
+          "start": 16.62,
+          "end": 17.22
+        },
+        {
+          "word": "Plus",
+          "start": 17.76,
+          "end": 18.38
+        },
+        {
+          "word": "m",
+          "start": 18.38,
+          "end": 18.72
+        },
+        {
+          "word": "g",
+          "start": 18.72,
+          "end": 19.06
+        },
+        {
+          "word": "sine",
+          "start": 19.06,
+          "end": 19.58
+        },
+        {
+          "word": "theta.",
+          "start": 19.58,
+          "end": 20.06
+        },
+        {
+          "word": "minus",
+          "start": 21.24,
+          "end": 21.82
+        },
+        {
+          "word": "8",
+          "start": 21.82,
+          "end": 22.28
+        },
+        {
+          "word": ".6,",
+          "start": 22.28,
+          "end": 23.04
+        },
+        {
+          "word": "6",
+          "start": 23.36,
+          "end": 23.9
+        },
+        {
+          "word": "minus",
+          "start": 23.9,
+          "end": 24.18
+        },
+        {
+          "word": "20",
+          "start": 24.18,
+          "end": 24.78
+        },
+        {
+          "word": "equals",
+          "start": 24.78,
+          "end": 25.24
+        },
+        {
+          "word": "0.",
+          "start": 25.24,
+          "end": 25.9
+        },
+        {
+          "word": "greatest",
+          "start": 27.2,
+          "end": 27.64
+        },
+        {
+          "word": "push",
+          "start": 27.64,
+          "end": 28.04
+        },
+        {
+          "word": "is",
+          "start": 28.04,
+          "end": 28.94
+        },
+        {
+          "word": "20",
+          "start": 28.94,
+          "end": 29.44
+        },
+        {
+          "word": "plus",
+          "start": 29.44,
+          "end": 29.72
+        },
+        {
+          "word": "8",
+          "start": 29.72,
+          "end": 30.04
+        },
+        {
+          "word": ".66,",
+          "start": 30.04,
+          "end": 30.82
+        },
+        {
+          "word": "about",
+          "start": 31.5,
+          "end": 31.84
+        },
+        {
+          "word": "28",
+          "start": 31.84,
+          "end": 32.48
+        },
+        {
+          "word": ".7",
+          "start": 32.48,
+          "end": 33.56
+        },
+        {
+          "word": "N.",
+          "start": 33.56,
+          "end": 33.86
+        },
+        {
+          "word": "Same",
+          "start": 35.91,
+          "end": 36.16
+        },
+        {
+          "word": "block,",
+          "start": 36.16,
+          "end": 36.52
+        },
+        {
+          "word": "same",
+          "start": 37.46,
+          "end": 37.82
+        },
+        {
+          "word": "limit.",
+          "start": 37.82,
+          "end": 38.26
+        },
+        {
+          "word": "Only",
+          "start": 39.72,
+          "end": 40.02
+        },
+        {
+          "word": "the",
+          "start": 40.02,
+          "end": 40.2
+        },
+        {
+          "word": "friction",
+          "start": 40.2,
+          "end": 40.5
+        },
+        {
+          "word": "direction",
+          "start": 40.5,
+          "end": 40.8
+        },
+        {
+          "word": "changed,",
+          "start": 40.8,
+          "end": 41.62
+        },
+        {
+          "word": "and",
+          "start": 42.34,
+          "end": 42.66
+        },
+        {
+          "word": "the",
+          "start": 42.66,
+          "end": 42.76
+        },
+        {
+          "word": "answer",
+          "start": 42.76,
+          "end": 43.06
+        },
+        {
+          "word": "moved",
+          "start": 43.06,
+          "end": 43.48
+        },
+        {
+          "word": "from",
+          "start": 43.48,
+          "end": 44.34
+        },
+        {
+          "word": "11",
+          "start": 44.34,
+          "end": 44.72
+        },
+        {
+          "word": ".3",
+          "start": 44.72,
+          "end": 45.48
+        },
+        {
+          "word": "to",
+          "start": 45.48,
+          "end": 46.3
+        },
+        {
+          "word": "28",
+          "start": 46.3,
+          "end": 46.8
+        },
+        {
+          "word": ".7.",
+          "start": 46.8,
+          "end": 47.48
+        }
+      ],
+      "cues": {
+        "direction": 0.62,
+        "law": 12.68,
+        "substitute": 21.24,
+        "answer": 27.2,
+        "meaning": 35.91
+      },
+      "figureEvents": [
+        {
+          "id": "number-22",
+          "wordIndex": 22,
+          "word": "8.66",
+          "spokenPhrase": "eight point six six.",
+          "start": 9.82,
+          "target": "fmax",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-44",
+          "wordIndex": 44,
+          "word": "20",
+          "spokenPhrase": "20",
+          "start": 24.18,
+          "target": "sinComp",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-50",
+          "wordIndex": 50,
+          "word": "20",
+          "spokenPhrase": "20",
+          "start": 28.94,
+          "target": "sinComp",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-52",
+          "wordIndex": 52,
+          "word": "8.66",
+          "spokenPhrase": "8 .66,",
+          "start": 29.72,
+          "target": "fmax",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-55",
+          "wordIndex": 55,
+          "word": "28.7",
+          "spokenPhrase": "28 .7",
+          "start": 31.84,
+          "target": "Pmax",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-72",
+          "wordIndex": 72,
+          "word": "11.3",
+          "spokenPhrase": "11 .3",
+          "start": 44.34,
+          "target": "Pmin",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-75",
+          "wordIndex": 75,
+          "word": "28.7",
+          "spokenPhrase": "28 .7.",
+          "start": 46.3,
+          "target": "Pmax",
+          "kind": "spoken"
+        }
+      ],
+      "wordCount": 77,
+      "text": "the greatest push. The block is on the point of sliding up, so friction switches and acts down the slope, still at eight point six six. along the slope again. Up P. Down. Friction. Plus m g sine theta. minus 8 .6, 6 minus 20 equals 0. greatest push is 20 plus 8 .66, about 28 .7 N. Same block, same limit. Only the friction direction changed, and the answer moved from 11 .3 to 28 .7.",
+      "duration": 48.84898
+    },
+    {
+      "id": "s08",
+      "title": "Between the two limits",
+      "mode": "closing",
+      "voiceSpeed": 1,
+      "tempo": "brisk",
+      "beats": [
+        {
+          "id": "range",
+          "text": "Any push between eleven point three and twenty-eight point seven newtons holds the block. In that range friction is less than its maximum, so never write f equals mu R there.",
+          "hold": 0.8,
+          "ink": "11.3 N ≤ P ≤ 28.7 N",
+          "start": 0.4,
+          "speechEnd": 14.98,
+          "end": 15.18,
+          "cue": 0.62,
+          "penEnd": 15.1
+        },
+        {
+          "id": "whatif",
+          "text": "What if P were exactly twenty newtons? Along the slope, P minus m g sine theta equals f. Twenty minus twenty... friction is zero. The push alone balances the weight.",
+          "hold": 1,
+          "ink": "P = 20 N: 20 − 20 = f, so f = 0",
+          "start": 15.98,
+          "speechEnd": 30.51,
+          "end": 30.71,
+          "cue": 16.24,
+          "penEnd": 30.630000000000003
+        },
+        {
+          "id": "outcome1",
+          "text": "Know when friction is at its limit.",
+          "hold": 0.3,
+          "caption": "Know when friction is at its limit.",
+          "start": 31.71,
+          "speechEnd": 33.73,
+          "end": 33.93,
+          "cue": 32.02,
+          "penEnd": 33.85
+        },
+        {
+          "id": "outcome2",
+          "text": "Friction opposes the impending slip.",
+          "hold": 0.3,
+          "caption": "Friction opposes the impending slip.",
+          "start": 34.23,
+          "speechEnd": 36.25,
+          "end": 36.45,
+          "cue": 34.56,
+          "penEnd": 36.370000000000005
+        },
+        {
+          "id": "outcome3",
+          "text": "Find the least and greatest P.",
+          "hold": 1,
+          "caption": "Find the least and greatest P.",
+          "start": 36.75,
+          "speechEnd": 38.51,
+          "end": 38.71,
+          "cue": 37.0,
+          "penEnd": 38.63
+        }
+      ],
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 15.18,
+          "end": 15.98,
+          "duration": 0.8
+        },
+        {
+          "kind": "hold",
+          "start": 30.71,
+          "end": 31.71,
+          "duration": 1
+        },
+        {
+          "kind": "hold",
+          "start": 33.93,
+          "end": 34.23,
+          "duration": 0.3
+        },
+        {
+          "kind": "hold",
+          "start": 36.45,
+          "end": 36.75,
+          "duration": 0.3
+        },
+        {
+          "kind": "hold",
+          "start": 38.71,
+          "end": 39.71,
+          "duration": 1
+        }
+      ],
+      "audio": "coefficient-of-friction-harder-problems-fable-s08.mp3",
+      "audioSha256": "dd903f656bbc49cf7ff59d9781cd9074db1e1cceb5298b33659f55c65a33df46",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "provider": "elevenlabs",
+      "sampleDuration": 40.06,
+      "words": [
+        {
+          "word": "push",
+          "start": 0.62,
+          "end": 0.88
+        },
+        {
+          "word": "between",
+          "start": 0.88,
+          "end": 1.46
+        },
+        {
+          "word": "eleven",
+          "start": 1.82,
+          "end": 1.98
+        },
+        {
+          "word": "point",
+          "start": 1.98,
+          "end": 2.54
+        },
+        {
+          "word": "three",
+          "start": 2.54,
+          "end": 3.04
+        },
+        {
+          "word": "and",
+          "start": 3.04,
+          "end": 3.58
+        },
+        {
+          "word": "twenty",
+          "start": 3.58,
+          "end": 3.98
+        },
+        {
+          "word": "-eight",
+          "start": 3.98,
+          "end": 4.18
+        },
+        {
+          "word": "point",
+          "start": 4.18,
+          "end": 4.38
+        },
+        {
+          "word": "seven",
+          "start": 4.38,
+          "end": 4.7
+        },
+        {
+          "word": "newtons",
+          "start": 4.7,
+          "end": 5.26
+        },
+        {
+          "word": "holds",
+          "start": 5.26,
+          "end": 6.02
+        },
+        {
+          "word": "the",
+          "start": 6.02,
+          "end": 6.28
+        },
+        {
+          "word": "block.",
+          "start": 6.28,
+          "end": 6.58
+        },
+        {
+          "word": "In",
+          "start": 7.28,
+          "end": 7.76
+        },
+        {
+          "word": "that",
+          "start": 7.76,
+          "end": 7.96
+        },
+        {
+          "word": "range,",
+          "start": 7.96,
+          "end": 8.42
+        },
+        {
+          "word": "friction",
+          "start": 8.76,
+          "end": 9.1
+        },
+        {
+          "word": "is",
+          "start": 9.1,
+          "end": 9.48
+        },
+        {
+          "word": "less",
+          "start": 9.48,
+          "end": 9.84
+        },
+        {
+          "word": "than",
+          "start": 9.84,
+          "end": 10.08
+        },
+        {
+          "word": "its",
+          "start": 10.08,
+          "end": 10.3
+        },
+        {
+          "word": "maximum,",
+          "start": 10.3,
+          "end": 10.84
+        },
+        {
+          "word": "so",
+          "start": 11.42,
+          "end": 11.68
+        },
+        {
+          "word": "never",
+          "start": 11.68,
+          "end": 12.02
+        },
+        {
+          "word": "write",
+          "start": 12.02,
+          "end": 12.36
+        },
+        {
+          "word": "f",
+          "start": 12.36,
+          "end": 12.8
+        },
+        {
+          "word": "equals",
+          "start": 12.8,
+          "end": 13.58
+        },
+        {
+          "word": "mu",
+          "start": 13.58,
+          "end": 13.98
+        },
+        {
+          "word": "R",
+          "start": 13.98,
+          "end": 14.54
+        },
+        {
+          "word": "there.",
+          "start": 14.54,
+          "end": 14.84
+        },
+        {
+          "word": "if",
+          "start": 16.24,
+          "end": 16.44
+        },
+        {
+          "word": "P",
+          "start": 16.44,
+          "end": 16.7
+        },
+        {
+          "word": "were",
+          "start": 16.7,
+          "end": 16.86
+        },
+        {
+          "word": "exactly",
+          "start": 16.86,
+          "end": 17.28
+        },
+        {
+          "word": "twenty",
+          "start": 17.28,
+          "end": 17.72
+        },
+        {
+          "word": "newtons?",
+          "start": 17.72,
+          "end": 18.26
+        },
+        {
+          "word": "Along",
+          "start": 18.78,
+          "end": 19.02
+        },
+        {
+          "word": "the",
+          "start": 19.02,
+          "end": 19.22
+        },
+        {
+          "word": "slope,",
+          "start": 19.22,
+          "end": 19.54
+        },
+        {
+          "word": "P",
+          "start": 20.28,
+          "end": 20.42
+        },
+        {
+          "word": "minus",
+          "start": 20.42,
+          "end": 20.64
+        },
+        {
+          "word": "m",
+          "start": 20.64,
+          "end": 21.02
+        },
+        {
+          "word": "g",
+          "start": 21.02,
+          "end": 21.22
+        },
+        {
+          "word": "sine",
+          "start": 21.22,
+          "end": 21.66
+        },
+        {
+          "word": "theta",
+          "start": 21.66,
+          "end": 22.02
+        },
+        {
+          "word": "equals",
+          "start": 22.02,
+          "end": 22.34
+        },
+        {
+          "word": "f.",
+          "start": 22.34,
+          "end": 22.82
+        },
+        {
+          "word": "Twenty",
+          "start": 23.72,
+          "end": 24.06
+        },
+        {
+          "word": "minus",
+          "start": 24.06,
+          "end": 24.36
+        },
+        {
+          "word": "twenty...",
+          "start": 24.36,
+          "end": 25.88
+        },
+        {
+          "word": "friction",
+          "start": 25.88,
+          "end": 26.36
+        },
+        {
+          "word": "is",
+          "start": 26.36,
+          "end": 26.64
+        },
+        {
+          "word": "zero.",
+          "start": 26.64,
+          "end": 26.9
+        },
+        {
+          "word": "the",
+          "start": 26.9,
+          "end": 28.24
+        },
+        {
+          "word": "push",
+          "start": 28.24,
+          "end": 28.56
+        },
+        {
+          "word": "alone",
+          "start": 28.56,
+          "end": 28.92
+        },
+        {
+          "word": "balances",
+          "start": 28.92,
+          "end": 29.74
+        },
+        {
+          "word": "the",
+          "start": 29.74,
+          "end": 30.0
+        },
+        {
+          "word": "weight",
+          "start": 30.0,
+          "end": 30.51
+        },
+        {
+          "word": "when",
+          "start": 32.02,
+          "end": 32.4
+        },
+        {
+          "word": "friction",
+          "start": 32.4,
+          "end": 32.72
+        },
+        {
+          "word": "is",
+          "start": 32.72,
+          "end": 32.98
+        },
+        {
+          "word": "at",
+          "start": 32.98,
+          "end": 33.12
+        },
+        {
+          "word": "its",
+          "start": 33.12,
+          "end": 33.26
+        },
+        {
+          "word": "limit",
+          "start": 33.26,
+          "end": 33.56
+        },
+        {
+          "word": "opposes",
+          "start": 34.56,
+          "end": 35.16
+        },
+        {
+          "word": "the",
+          "start": 35.16,
+          "end": 35.36
+        },
+        {
+          "word": "impending",
+          "start": 35.36,
+          "end": 35.78
+        },
+        {
+          "word": "slip",
+          "start": 35.78,
+          "end": 36.18
+        },
+        {
+          "word": "the",
+          "start": 37.0,
+          "end": 37.22
+        },
+        {
+          "word": "least",
+          "start": 37.22,
+          "end": 37.52
+        },
+        {
+          "word": "and",
+          "start": 37.52,
+          "end": 37.82
+        },
+        {
+          "word": "greatest",
+          "start": 37.82,
+          "end": 38.1
+        },
+        {
+          "word": "P",
+          "start": 38.1,
+          "end": 38.48
+        }
+      ],
+      "cues": {
+        "range": 0.62,
+        "whatif": 16.24,
+        "outcome1": 32.02,
+        "outcome2": 34.56,
+        "outcome3": 37.0
+      },
+      "figureEvents": [
+        {
+          "id": "number-2",
+          "wordIndex": 2,
+          "word": "11.3",
+          "spokenPhrase": "eleven point three",
+          "start": 1.82,
+          "target": "Pmin",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-6",
+          "wordIndex": 6,
+          "word": "28.7",
+          "spokenPhrase": "twenty -eight point seven",
+          "start": 3.58,
+          "target": "Pmax",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-35",
+          "wordIndex": 35,
+          "word": "20",
+          "spokenPhrase": "twenty",
+          "start": 17.28,
+          "target": "pushFig",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-48",
+          "wordIndex": 48,
+          "word": "20",
+          "spokenPhrase": "Twenty",
+          "start": 23.72,
+          "target": "pushFig",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-50",
+          "wordIndex": 50,
+          "word": "20",
+          "spokenPhrase": "twenty...",
+          "start": 24.36,
+          "target": "sinComp",
+          "kind": "spoken"
+        }
+      ],
+      "wordCount": 75,
+      "text": "push between eleven point three and twenty -eight point seven newtons holds the block. In that range, friction is less than its maximum, so never write f equals mu R there. if P were exactly twenty newtons? Along the slope, P minus m g sine theta equals f. Twenty minus twenty... friction is zero. the push alone balances the weight when friction is at its limit opposes the impending slip the least and greatest P",
+      "duration": 40.097959
+    }
+  ],
+  "totalDuration": 392.411428,
+  "engine": "faster-whisper-small (local CPU)",
+  "unresolvedCues": []
+}

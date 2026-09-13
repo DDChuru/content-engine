@@ -1,0 +1,3758 @@
+{
+  "project": "mechanics-equilibrium-in-2d",
+  "engine": "faster-whisper-small beat-isolated local",
+  "totalDuration": 296.254693,
+  "scenes": [
+    {
+      "id": "s01",
+      "title": "What you will learn",
+      "mode": "opening",
+      "tempo": "brisk",
+      "voiceSpeed": 1.0,
+      "budget": 26,
+      "beats": [
+        {
+          "id": "quote1",
+          "text": "Syllabus four point one: use the principle that, when a particle is in equilibrium,",
+          "hold": 0,
+          "figures": [],
+          "cuePhrase": "use the principle",
+          "start": 0.55,
+          "speechEnd": 6.2,
+          "end": 6.4,
+          "cue": 2.09,
+          "penEnd": 6.08
+        },
+        {
+          "id": "quote2",
+          "text": "the vector sum of the forces acting is zero.",
+          "hold": 0,
+          "figures": [],
+          "cuePhrase": "the vector sum",
+          "start": 6.4,
+          "speechEnd": 9.73,
+          "end": 9.93,
+          "cue": 6.4,
+          "penEnd": 9.610000000000001
+        },
+        {
+          "id": "outcome1",
+          "text": "By the end you can check equilibrium in two directions.",
+          "hold": 0,
+          "figures": [],
+          "start": 9.93,
+          "speechEnd": 13.23,
+          "end": 13.43,
+          "cue": 9.93,
+          "penEnd": 13.110000000000001
+        },
+        {
+          "id": "outcome2",
+          "text": "Use two balances to find unknown forces.",
+          "hold": 0,
+          "figures": [],
+          "start": 13.43,
+          "speechEnd": 16.46,
+          "end": 16.66,
+          "cue": 13.43,
+          "penEnd": 16.34
+        },
+        {
+          "id": "outcome3",
+          "text": "And explain why balancing one direction is not enough.",
+          "hold": 0,
+          "figures": [],
+          "start": 16.66,
+          "speechEnd": 19.82,
+          "end": 20.02,
+          "cue": 16.66,
+          "penEnd": 19.7
+        }
+      ],
+      "holds": [],
+      "audio": "equilibrium-in-2d-s01.mp3",
+      "duration": 26.044082,
+      "audioSha256": "1c8feb8466d8398a0763963c536c270f3a12196b238a33e7127d8df8d229dd5a",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "words": [
+        {
+          "word": "Syllabus",
+          "start": 0.55,
+          "end": 1.05
+        },
+        {
+          "word": "four",
+          "start": 1.05,
+          "end": 1.39
+        },
+        {
+          "word": "point",
+          "start": 1.39,
+          "end": 1.69
+        },
+        {
+          "word": "one",
+          "start": 1.69,
+          "end": 2.09
+        },
+        {
+          "word": "use",
+          "start": 2.09,
+          "end": 2.75
+        },
+        {
+          "word": "the",
+          "start": 2.75,
+          "end": 2.91
+        },
+        {
+          "word": "principle",
+          "start": 2.91,
+          "end": 3.35
+        },
+        {
+          "word": "that,",
+          "start": 3.35,
+          "end": 3.85
+        },
+        {
+          "word": "when",
+          "start": 4.03,
+          "end": 4.39
+        },
+        {
+          "word": "a",
+          "start": 4.39,
+          "end": 4.49
+        },
+        {
+          "word": "particle",
+          "start": 4.49,
+          "end": 4.81
+        },
+        {
+          "word": "is",
+          "start": 4.81,
+          "end": 5.17
+        },
+        {
+          "word": "in",
+          "start": 5.17,
+          "end": 5.29
+        },
+        {
+          "word": "equilibrium,",
+          "start": 5.29,
+          "end": 5.71
+        },
+        {
+          "word": "The",
+          "start": 6.4,
+          "end": 6.54
+        },
+        {
+          "word": "vector",
+          "start": 6.54,
+          "end": 6.88
+        },
+        {
+          "word": "sum",
+          "start": 6.88,
+          "end": 7.3
+        },
+        {
+          "word": "of",
+          "start": 7.3,
+          "end": 7.92
+        },
+        {
+          "word": "the",
+          "start": 7.92,
+          "end": 8.06
+        },
+        {
+          "word": "forces",
+          "start": 8.06,
+          "end": 8.36
+        },
+        {
+          "word": "acting",
+          "start": 8.36,
+          "end": 8.86
+        },
+        {
+          "word": "is",
+          "start": 8.86,
+          "end": 9.32
+        },
+        {
+          "word": "zero.",
+          "start": 9.32,
+          "end": 9.58
+        },
+        {
+          "word": "By",
+          "start": 9.93,
+          "end": 10.09
+        },
+        {
+          "word": "the",
+          "start": 10.09,
+          "end": 10.27
+        },
+        {
+          "word": "end",
+          "start": 10.27,
+          "end": 10.63
+        },
+        {
+          "word": "you",
+          "start": 10.63,
+          "end": 10.99
+        },
+        {
+          "word": "can",
+          "start": 10.99,
+          "end": 11.13
+        },
+        {
+          "word": "check",
+          "start": 11.13,
+          "end": 11.41
+        },
+        {
+          "word": "equilibrium",
+          "start": 11.41,
+          "end": 12.09
+        },
+        {
+          "word": "in",
+          "start": 12.09,
+          "end": 12.35
+        },
+        {
+          "word": "two",
+          "start": 12.35,
+          "end": 12.59
+        },
+        {
+          "word": "directions.",
+          "start": 12.59,
+          "end": 12.87
+        },
+        {
+          "word": "Use",
+          "start": 13.43,
+          "end": 13.59
+        },
+        {
+          "word": "two",
+          "start": 13.59,
+          "end": 13.83
+        },
+        {
+          "word": "balances",
+          "start": 13.83,
+          "end": 14.21
+        },
+        {
+          "word": "to",
+          "start": 14.21,
+          "end": 15.15
+        },
+        {
+          "word": "find",
+          "start": 15.15,
+          "end": 15.47
+        },
+        {
+          "word": "unknown",
+          "start": 15.47,
+          "end": 15.77
+        },
+        {
+          "word": "forces.",
+          "start": 15.77,
+          "end": 16.19
+        },
+        {
+          "word": "And",
+          "start": 16.66,
+          "end": 16.82
+        },
+        {
+          "word": "explain",
+          "start": 16.82,
+          "end": 17.14
+        },
+        {
+          "word": "why",
+          "start": 17.14,
+          "end": 17.42
+        },
+        {
+          "word": "balancing",
+          "start": 17.42,
+          "end": 17.9
+        },
+        {
+          "word": "one",
+          "start": 17.9,
+          "end": 18.3
+        },
+        {
+          "word": "direction",
+          "start": 18.3,
+          "end": 18.68
+        },
+        {
+          "word": "is",
+          "start": 18.68,
+          "end": 18.96
+        },
+        {
+          "word": "not",
+          "start": 18.96,
+          "end": 19.18
+        },
+        {
+          "word": "enough.",
+          "start": 19.18,
+          "end": 19.52
+        }
+      ],
+      "cues": {
+        "quote1": 2.09,
+        "quote2": 6.4,
+        "outcome1": 9.93,
+        "outcome2": 13.43,
+        "outcome3": 16.66
+      },
+      "figureEvents": []
+    },
+    {
+      "id": "s02",
+      "title": "Balance both directions",
+      "mode": "concept",
+      "tempo": "slow",
+      "voiceSpeed": 0.9,
+      "budget": 43,
+      "beats": [
+        {
+          "id": "axes",
+          "text": "We consider two perpendicular directions: horizontal and vertical.",
+          "hold": 0,
+          "figures": [],
+          "start": 0.55,
+          "speechEnd": 6.1,
+          "end": 6.3,
+          "cue": 0.55,
+          "penEnd": 5.9799999999999995
+        },
+        {
+          "id": "horizontal",
+          "text": "Look at the sideways forces. Equal pulls to the left and right cancel each other.",
+          "hold": 0,
+          "figures": [],
+          "start": 6.3,
+          "speechEnd": 13.01,
+          "end": 13.21,
+          "cue": 6.3,
+          "penEnd": 12.89
+        },
+        {
+          "id": "unbalanced",
+          "text": "The upward pull is larger, leaving a resultant upward. Sideways balance alone is not equilibrium.",
+          "hold": 0,
+          "figures": [],
+          "start": 13.21,
+          "speechEnd": 21.34,
+          "end": 21.54,
+          "cue": 13.21,
+          "penEnd": 21.22
+        },
+        {
+          "id": "vertical",
+          "text": "Now make the upward and downward pulls equal. They cancel too.",
+          "hold": 0,
+          "figures": [],
+          "start": 21.54,
+          "speechEnd": 26.26,
+          "end": 26.46,
+          "cue": 21.54,
+          "penEnd": 26.14
+        },
+        {
+          "id": "zero",
+          "text": "The resultant is zero in each direction. That is equilibrium in two dimensions.",
+          "hold": 2,
+          "figures": [],
+          "start": 26.46,
+          "speechEnd": 32.35,
+          "end": 34.55,
+          "cue": 26.46,
+          "penEnd": 32.230000000000004
+        },
+        {
+          "id": "different",
+          "text": "The vertical pair can be stronger than the horizontal pair. Compare opposite forces along the same direction.",
+          "hold": 2,
+          "figures": [],
+          "start": 34.55,
+          "speechEnd": 42.44,
+          "end": 44.64,
+          "cue": 34.55,
+          "penEnd": 42.32
+        }
+      ],
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 32.35,
+          "end": 34.35,
+          "duration": 2
+        },
+        {
+          "kind": "hold",
+          "start": 42.44,
+          "end": 44.44,
+          "duration": 2
+        }
+      ],
+      "audio": "equilibrium-in-2d-s02.mp3",
+      "duration": 45.087347,
+      "audioSha256": "9da657b062bd2af3d1bf86b8e90a14642b32a5b3b973effb1241895df2ec0033",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "words": [
+        {
+          "word": "We",
+          "start": 0.55,
+          "end": 0.69
+        },
+        {
+          "word": "consider",
+          "start": 0.69,
+          "end": 1.09
+        },
+        {
+          "word": "two",
+          "start": 1.09,
+          "end": 1.55
+        },
+        {
+          "word": "perpendicular",
+          "start": 1.55,
+          "end": 2.25
+        },
+        {
+          "word": "directions",
+          "start": 2.25,
+          "end": 3.01
+        },
+        {
+          "word": "horizontal",
+          "start": 3.01,
+          "end": 4.31
+        },
+        {
+          "word": "and",
+          "start": 4.31,
+          "end": 5.37
+        },
+        {
+          "word": "vertical.",
+          "start": 5.37,
+          "end": 5.71
+        },
+        {
+          "word": "Look",
+          "start": 6.3,
+          "end": 6.5
+        },
+        {
+          "word": "at",
+          "start": 6.5,
+          "end": 6.64
+        },
+        {
+          "word": "the",
+          "start": 6.64,
+          "end": 6.78
+        },
+        {
+          "word": "sideways",
+          "start": 6.78,
+          "end": 7.24
+        },
+        {
+          "word": "forces.",
+          "start": 7.24,
+          "end": 8.04
+        },
+        {
+          "word": "Equal",
+          "start": 8.86,
+          "end": 9.4
+        },
+        {
+          "word": "pulls",
+          "start": 9.4,
+          "end": 9.7
+        },
+        {
+          "word": "to",
+          "start": 9.7,
+          "end": 10.22
+        },
+        {
+          "word": "the",
+          "start": 10.22,
+          "end": 10.38
+        },
+        {
+          "word": "left",
+          "start": 10.38,
+          "end": 10.66
+        },
+        {
+          "word": "and",
+          "start": 10.66,
+          "end": 11.08
+        },
+        {
+          "word": "right",
+          "start": 11.08,
+          "end": 11.52
+        },
+        {
+          "word": "cancel",
+          "start": 11.52,
+          "end": 12.14
+        },
+        {
+          "word": "each",
+          "start": 12.14,
+          "end": 12.52
+        },
+        {
+          "word": "other.",
+          "start": 12.52,
+          "end": 12.82
+        },
+        {
+          "word": "The",
+          "start": 13.21,
+          "end": 13.35
+        },
+        {
+          "word": "upward",
+          "start": 13.35,
+          "end": 13.75
+        },
+        {
+          "word": "pull",
+          "start": 13.75,
+          "end": 14.17
+        },
+        {
+          "word": "is",
+          "start": 14.17,
+          "end": 14.41
+        },
+        {
+          "word": "larger,",
+          "start": 14.41,
+          "end": 14.85
+        },
+        {
+          "word": "leaving",
+          "start": 15.39,
+          "end": 15.81
+        },
+        {
+          "word": "a",
+          "start": 15.81,
+          "end": 16.07
+        },
+        {
+          "word": "resultant",
+          "start": 16.07,
+          "end": 16.69
+        },
+        {
+          "word": "upward.",
+          "start": 16.69,
+          "end": 16.99
+        },
+        {
+          "word": "Sideways",
+          "start": 17.83,
+          "end": 18.45
+        },
+        {
+          "word": "balance",
+          "start": 18.45,
+          "end": 18.91
+        },
+        {
+          "word": "alone",
+          "start": 18.91,
+          "end": 19.41
+        },
+        {
+          "word": "is",
+          "start": 19.41,
+          "end": 20.23
+        },
+        {
+          "word": "not",
+          "start": 20.23,
+          "end": 20.41
+        },
+        {
+          "word": "equilibrium.",
+          "start": 20.41,
+          "end": 20.89
+        },
+        {
+          "word": "Now",
+          "start": 21.54,
+          "end": 21.7
+        },
+        {
+          "word": "make",
+          "start": 21.7,
+          "end": 21.88
+        },
+        {
+          "word": "the",
+          "start": 21.88,
+          "end": 22.04
+        },
+        {
+          "word": "upward",
+          "start": 22.04,
+          "end": 22.4
+        },
+        {
+          "word": "and",
+          "start": 22.4,
+          "end": 23.2
+        },
+        {
+          "word": "downward",
+          "start": 23.2,
+          "end": 23.58
+        },
+        {
+          "word": "pulls",
+          "start": 23.58,
+          "end": 24.04
+        },
+        {
+          "word": "equal.",
+          "start": 24.04,
+          "end": 24.38
+        },
+        {
+          "word": "They",
+          "start": 25.18,
+          "end": 25.3
+        },
+        {
+          "word": "cancel",
+          "start": 25.3,
+          "end": 25.68
+        },
+        {
+          "word": "too.",
+          "start": 25.68,
+          "end": 26.04
+        },
+        {
+          "word": "The",
+          "start": 26.46,
+          "end": 26.6
+        },
+        {
+          "word": "resultant",
+          "start": 26.6,
+          "end": 27.1
+        },
+        {
+          "word": "is",
+          "start": 27.1,
+          "end": 27.34
+        },
+        {
+          "word": "zero",
+          "start": 27.34,
+          "end": 27.78
+        },
+        {
+          "word": "in",
+          "start": 27.78,
+          "end": 28.58
+        },
+        {
+          "word": "each",
+          "start": 28.58,
+          "end": 28.86
+        },
+        {
+          "word": "direction.",
+          "start": 28.86,
+          "end": 29.44
+        },
+        {
+          "word": "That",
+          "start": 29.74,
+          "end": 30.0
+        },
+        {
+          "word": "is",
+          "start": 30.0,
+          "end": 30.18
+        },
+        {
+          "word": "equilibrium",
+          "start": 30.18,
+          "end": 30.78
+        },
+        {
+          "word": "in",
+          "start": 30.78,
+          "end": 31.16
+        },
+        {
+          "word": "two",
+          "start": 31.16,
+          "end": 31.44
+        },
+        {
+          "word": "dimensions.",
+          "start": 31.44,
+          "end": 31.8
+        },
+        {
+          "word": "The",
+          "start": 34.55,
+          "end": 34.69
+        },
+        {
+          "word": "vertical",
+          "start": 34.69,
+          "end": 35.19
+        },
+        {
+          "word": "pair",
+          "start": 35.19,
+          "end": 35.65
+        },
+        {
+          "word": "can",
+          "start": 35.65,
+          "end": 36.13
+        },
+        {
+          "word": "be",
+          "start": 36.13,
+          "end": 36.29
+        },
+        {
+          "word": "stronger",
+          "start": 36.29,
+          "end": 36.63
+        },
+        {
+          "word": "than",
+          "start": 36.63,
+          "end": 37.03
+        },
+        {
+          "word": "the",
+          "start": 37.03,
+          "end": 37.21
+        },
+        {
+          "word": "horizontal",
+          "start": 37.21,
+          "end": 37.73
+        },
+        {
+          "word": "pair.",
+          "start": 37.73,
+          "end": 38.27
+        },
+        {
+          "word": "Compare",
+          "start": 38.75,
+          "end": 39.55
+        },
+        {
+          "word": "opposite",
+          "start": 39.55,
+          "end": 40.15
+        },
+        {
+          "word": "forces",
+          "start": 40.15,
+          "end": 40.71
+        },
+        {
+          "word": "along",
+          "start": 40.71,
+          "end": 41.09
+        },
+        {
+          "word": "the",
+          "start": 41.09,
+          "end": 41.43
+        },
+        {
+          "word": "same",
+          "start": 41.43,
+          "end": 41.71
+        },
+        {
+          "word": "direction.",
+          "start": 41.71,
+          "end": 42.13
+        }
+      ],
+      "cues": {
+        "axes": 0.55,
+        "horizontal": 6.3,
+        "unbalanced": 13.21,
+        "vertical": 21.54,
+        "zero": 26.46,
+        "different": 34.55
+      },
+      "figureEvents": []
+    },
+    {
+      "id": "s03",
+      "title": "Picture the object first",
+      "mode": "story",
+      "tempo": "brisk",
+      "voiceSpeed": 1.0,
+      "budget": 22,
+      "beats": [
+        {
+          "id": "object",
+          "text": "Consider a small object being held in place by several pulls.",
+          "hold": 0,
+          "figures": [],
+          "start": 0.55,
+          "speechEnd": 4.35,
+          "end": 4.55,
+          "cue": 0.55,
+          "penEnd": 4.2299999999999995
+        },
+        {
+          "id": "sideways",
+          "text": "Two pulls act to the left, while one acts to the right.",
+          "hold": 0,
+          "figures": [],
+          "start": 4.55,
+          "speechEnd": 8.07,
+          "end": 8.27,
+          "cue": 4.55,
+          "penEnd": 7.95
+        },
+        {
+          "id": "updown",
+          "text": "Another pulls upward, and one pulls downward. Together they keep the object still.",
+          "hold": 0,
+          "figures": [],
+          "start": 8.27,
+          "speechEnd": 13.88,
+          "end": 14.08,
+          "cue": 8.27,
+          "penEnd": 13.760000000000002
+        },
+        {
+          "id": "goal",
+          "text": "We will use the sideways balance first, then the vertical balance, to find the unknown downward force. Here is the whole question.",
+          "hold": 0,
+          "figures": [],
+          "start": 14.08,
+          "speechEnd": 23.93,
+          "end": 24.13,
+          "cue": 14.08,
+          "penEnd": 23.81
+        }
+      ],
+      "holds": [],
+      "audio": "equilibrium-in-2d-s03.mp3",
+      "duration": 24.581224,
+      "audioSha256": "ce01c04a60c71e27ccd62423f3095da63967625364eb659351761134f884551b",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "words": [
+        {
+          "word": "Consider",
+          "start": 0.55,
+          "end": 0.87
+        },
+        {
+          "word": "a",
+          "start": 0.87,
+          "end": 1.09
+        },
+        {
+          "word": "small",
+          "start": 1.09,
+          "end": 1.29
+        },
+        {
+          "word": "object",
+          "start": 1.29,
+          "end": 1.77
+        },
+        {
+          "word": "being",
+          "start": 1.77,
+          "end": 2.41
+        },
+        {
+          "word": "held",
+          "start": 2.41,
+          "end": 2.67
+        },
+        {
+          "word": "in",
+          "start": 2.67,
+          "end": 2.89
+        },
+        {
+          "word": "place",
+          "start": 2.89,
+          "end": 3.09
+        },
+        {
+          "word": "by",
+          "start": 3.09,
+          "end": 3.35
+        },
+        {
+          "word": "several",
+          "start": 3.35,
+          "end": 3.71
+        },
+        {
+          "word": "pulls.",
+          "start": 3.71,
+          "end": 4.07
+        },
+        {
+          "word": "Two",
+          "start": 4.55,
+          "end": 4.75
+        },
+        {
+          "word": "pulls",
+          "start": 4.75,
+          "end": 5.17
+        },
+        {
+          "word": "act",
+          "start": 5.17,
+          "end": 5.49
+        },
+        {
+          "word": "to",
+          "start": 5.49,
+          "end": 5.77
+        },
+        {
+          "word": "the",
+          "start": 5.77,
+          "end": 5.91
+        },
+        {
+          "word": "left,",
+          "start": 5.91,
+          "end": 6.11
+        },
+        {
+          "word": "while",
+          "start": 6.53,
+          "end": 6.71
+        },
+        {
+          "word": "one",
+          "start": 6.71,
+          "end": 6.95
+        },
+        {
+          "word": "acts",
+          "start": 6.95,
+          "end": 7.25
+        },
+        {
+          "word": "to",
+          "start": 7.25,
+          "end": 7.53
+        },
+        {
+          "word": "the",
+          "start": 7.53,
+          "end": 7.65
+        },
+        {
+          "word": "right.",
+          "start": 7.65,
+          "end": 7.81
+        },
+        {
+          "word": "Another",
+          "start": 8.27,
+          "end": 8.57
+        },
+        {
+          "word": "pulls",
+          "start": 8.57,
+          "end": 8.87
+        },
+        {
+          "word": "upward,",
+          "start": 8.87,
+          "end": 9.27
+        },
+        {
+          "word": "and",
+          "start": 9.63,
+          "end": 10.23
+        },
+        {
+          "word": "one",
+          "start": 10.23,
+          "end": 10.45
+        },
+        {
+          "word": "pulls",
+          "start": 10.45,
+          "end": 10.79
+        },
+        {
+          "word": "downward.",
+          "start": 10.79,
+          "end": 11.25
+        },
+        {
+          "word": "Together",
+          "start": 11.65,
+          "end": 12.09
+        },
+        {
+          "word": "they",
+          "start": 12.09,
+          "end": 12.45
+        },
+        {
+          "word": "keep",
+          "start": 12.45,
+          "end": 12.69
+        },
+        {
+          "word": "the",
+          "start": 12.69,
+          "end": 12.89
+        },
+        {
+          "word": "object",
+          "start": 12.89,
+          "end": 13.29
+        },
+        {
+          "word": "still.",
+          "start": 13.29,
+          "end": 13.65
+        },
+        {
+          "word": "We",
+          "start": 14.08,
+          "end": 14.28
+        },
+        {
+          "word": "will",
+          "start": 14.28,
+          "end": 14.46
+        },
+        {
+          "word": "use",
+          "start": 14.46,
+          "end": 14.74
+        },
+        {
+          "word": "the",
+          "start": 14.74,
+          "end": 14.96
+        },
+        {
+          "word": "sideways",
+          "start": 14.96,
+          "end": 15.44
+        },
+        {
+          "word": "balance",
+          "start": 15.44,
+          "end": 16.06
+        },
+        {
+          "word": "first,",
+          "start": 16.06,
+          "end": 16.5
+        },
+        {
+          "word": "then",
+          "start": 16.5,
+          "end": 17.66
+        },
+        {
+          "word": "the",
+          "start": 17.66,
+          "end": 17.82
+        },
+        {
+          "word": "vertical",
+          "start": 17.82,
+          "end": 18.2
+        },
+        {
+          "word": "balance,",
+          "start": 18.2,
+          "end": 18.64
+        },
+        {
+          "word": "to",
+          "start": 19.24,
+          "end": 19.48
+        },
+        {
+          "word": "find",
+          "start": 19.48,
+          "end": 19.88
+        },
+        {
+          "word": "the",
+          "start": 19.88,
+          "end": 20.1
+        },
+        {
+          "word": "unknown",
+          "start": 20.1,
+          "end": 20.66
+        },
+        {
+          "word": "downward",
+          "start": 20.66,
+          "end": 21.38
+        },
+        {
+          "word": "force.",
+          "start": 21.38,
+          "end": 21.94
+        },
+        {
+          "word": "Here",
+          "start": 22.66,
+          "end": 22.84
+        },
+        {
+          "word": "is",
+          "start": 22.84,
+          "end": 23.02
+        },
+        {
+          "word": "the",
+          "start": 23.02,
+          "end": 23.16
+        },
+        {
+          "word": "whole",
+          "start": 23.16,
+          "end": 23.34
+        },
+        {
+          "word": "question.",
+          "start": 23.34,
+          "end": 23.68
+        }
+      ],
+      "cues": {
+        "object": 0.55,
+        "sideways": 4.55,
+        "updown": 8.27,
+        "goal": 14.08
+      },
+      "figureEvents": []
+    },
+    {
+      "id": "s04",
+      "title": "The whole problem",
+      "mode": "setup",
+      "tempo": "brisk",
+      "voiceSpeed": 1.0,
+      "budget": 37,
+      "beats": [
+        {
+          "id": "problem",
+          "text": "The object is modelled as a particle in equilibrium. Find Q.",
+          "hold": 0,
+          "figures": [],
+          "start": 0.55,
+          "speechEnd": 5.76,
+          "end": 5.96,
+          "cue": 0.55,
+          "penEnd": 5.64
+        },
+        {
+          "id": "left",
+          "text": "To the left act P newtons and twenty newtons.",
+          "hold": 0,
+          "figures": [
+            [
+              "P",
+              "p"
+            ],
+            [
+              "twenty",
+              "left20"
+            ]
+          ],
+          "start": 5.96,
+          "speechEnd": 9.33,
+          "end": 9.53,
+          "cue": 5.96,
+          "penEnd": 9.21
+        },
+        {
+          "id": "right",
+          "text": "To the right act thirty two newtons.",
+          "hold": 0,
+          "figures": [
+            [
+              "thirty two",
+              "right32"
+            ]
+          ],
+          "start": 9.53,
+          "speechEnd": 11.56,
+          "end": 11.76,
+          "cue": 9.53,
+          "penEnd": 11.440000000000001
+        },
+        {
+          "id": "up",
+          "text": "Upward act two P newtons, and downward act Q newtons.",
+          "hold": 0,
+          "figures": [
+            [
+              "two P",
+              "up2p"
+            ],
+            [
+              "Q",
+              "q"
+            ]
+          ],
+          "start": 11.76,
+          "speechEnd": 16.56,
+          "end": 16.76,
+          "cue": 11.76,
+          "penEnd": 16.439999999999998
+        },
+        {
+          "id": "same",
+          "text": "The same P appears in two different forces. The upward force is twice the leftward P force.",
+          "hold": 0,
+          "figures": [
+            [
+              "P",
+              "p"
+            ],
+            [
+              "twice",
+              "up2p"
+            ]
+          ],
+          "start": 16.76,
+          "speechEnd": 23.62,
+          "end": 23.82,
+          "cue": 16.76,
+          "penEnd": 23.5
+        },
+        {
+          "id": "units",
+          "text": "All the arrows already represent forces in newtons. There is no mass to convert.",
+          "hold": 0,
+          "figures": [],
+          "start": 23.82,
+          "speechEnd": 29.54,
+          "end": 29.74,
+          "cue": 23.82,
+          "penEnd": 29.419999999999998
+        },
+        {
+          "id": "think",
+          "text": "Which direction lets us find P first? Take a moment.",
+          "hold": 3.5,
+          "figures": [],
+          "start": 29.74,
+          "speechEnd": 33.17,
+          "end": 36.87,
+          "cue": 29.74,
+          "penEnd": 33.050000000000004
+        }
+      ],
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 33.17,
+          "end": 36.67,
+          "duration": 3.5
+        }
+      ],
+      "audio": "equilibrium-in-2d-s04.mp3",
+      "duration": 37.302857,
+      "audioSha256": "2400f516eb0eff1653cca54ad50c69c3b9679a68471aed754e23fc26964ab1f0",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "words": [
+        {
+          "word": "The",
+          "start": 0.55,
+          "end": 0.67
+        },
+        {
+          "word": "object",
+          "start": 0.67,
+          "end": 1.17
+        },
+        {
+          "word": "is",
+          "start": 1.17,
+          "end": 1.71
+        },
+        {
+          "word": "modelled",
+          "start": 1.71,
+          "end": 2.47
+        },
+        {
+          "word": "as",
+          "start": 2.47,
+          "end": 2.75
+        },
+        {
+          "word": "a",
+          "start": 2.75,
+          "end": 2.89
+        },
+        {
+          "word": "particle",
+          "start": 2.89,
+          "end": 3.23
+        },
+        {
+          "word": "in",
+          "start": 3.23,
+          "end": 3.73
+        },
+        {
+          "word": "equilibrium.",
+          "start": 3.73,
+          "end": 4.33
+        },
+        {
+          "word": "Find",
+          "start": 4.87,
+          "end": 5.35
+        },
+        {
+          "word": "Q.",
+          "start": 5.35,
+          "end": 5.65
+        },
+        {
+          "word": "To",
+          "start": 5.96,
+          "end": 6.1
+        },
+        {
+          "word": "the",
+          "start": 6.1,
+          "end": 6.22
+        },
+        {
+          "word": "left",
+          "start": 6.22,
+          "end": 6.42
+        },
+        {
+          "word": "act",
+          "start": 6.42,
+          "end": 6.72
+        },
+        {
+          "word": "P",
+          "start": 6.72,
+          "end": 7.38
+        },
+        {
+          "word": "newtons",
+          "start": 7.38,
+          "end": 7.92
+        },
+        {
+          "word": "and",
+          "start": 7.92,
+          "end": 8.48
+        },
+        {
+          "word": "twenty",
+          "start": 8.48,
+          "end": 8.76
+        },
+        {
+          "word": "newtons.",
+          "start": 8.76,
+          "end": 9.14
+        },
+        {
+          "word": "To",
+          "start": 9.53,
+          "end": 9.65
+        },
+        {
+          "word": "the",
+          "start": 9.65,
+          "end": 9.77
+        },
+        {
+          "word": "right",
+          "start": 9.77,
+          "end": 9.97
+        },
+        {
+          "word": "act",
+          "start": 9.97,
+          "end": 10.27
+        },
+        {
+          "word": "thirty",
+          "start": 10.27,
+          "end": 10.71
+        },
+        {
+          "word": "two",
+          "start": 10.71,
+          "end": 10.87
+        },
+        {
+          "word": "newtons.",
+          "start": 10.87,
+          "end": 11.35
+        },
+        {
+          "word": "Upward",
+          "start": 11.76,
+          "end": 12.28
+        },
+        {
+          "word": "act",
+          "start": 12.28,
+          "end": 12.74
+        },
+        {
+          "word": "two",
+          "start": 12.74,
+          "end": 13.14
+        },
+        {
+          "word": "P",
+          "start": 13.14,
+          "end": 13.3
+        },
+        {
+          "word": "newtons,",
+          "start": 13.3,
+          "end": 13.94
+        },
+        {
+          "word": "and",
+          "start": 13.98,
+          "end": 14.44
+        },
+        {
+          "word": "downward",
+          "start": 14.44,
+          "end": 14.98
+        },
+        {
+          "word": "act",
+          "start": 14.98,
+          "end": 15.62
+        },
+        {
+          "word": "Q",
+          "start": 15.62,
+          "end": 15.88
+        },
+        {
+          "word": "newtons.",
+          "start": 15.88,
+          "end": 16.36
+        },
+        {
+          "word": "The",
+          "start": 16.76,
+          "end": 16.9
+        },
+        {
+          "word": "same",
+          "start": 16.9,
+          "end": 17.14
+        },
+        {
+          "word": "P",
+          "start": 17.14,
+          "end": 17.4
+        },
+        {
+          "word": "appears",
+          "start": 17.4,
+          "end": 17.9
+        },
+        {
+          "word": "in",
+          "start": 17.9,
+          "end": 18.5
+        },
+        {
+          "word": "two",
+          "start": 18.5,
+          "end": 18.8
+        },
+        {
+          "word": "different",
+          "start": 18.8,
+          "end": 19.08
+        },
+        {
+          "word": "forces.",
+          "start": 19.08,
+          "end": 19.52
+        },
+        {
+          "word": "The",
+          "start": 20.24,
+          "end": 20.32
+        },
+        {
+          "word": "upward",
+          "start": 20.32,
+          "end": 20.66
+        },
+        {
+          "word": "force",
+          "start": 20.66,
+          "end": 21.14
+        },
+        {
+          "word": "is",
+          "start": 21.14,
+          "end": 21.7
+        },
+        {
+          "word": "twice",
+          "start": 21.7,
+          "end": 22.06
+        },
+        {
+          "word": "the",
+          "start": 22.06,
+          "end": 22.2
+        },
+        {
+          "word": "leftward",
+          "start": 22.2,
+          "end": 22.84
+        },
+        {
+          "word": "P",
+          "start": 22.84,
+          "end": 23.14
+        },
+        {
+          "word": "force.",
+          "start": 23.14,
+          "end": 23.36
+        },
+        {
+          "word": "All",
+          "start": 23.82,
+          "end": 24.02
+        },
+        {
+          "word": "the",
+          "start": 24.02,
+          "end": 24.18
+        },
+        {
+          "word": "arrows",
+          "start": 24.18,
+          "end": 24.54
+        },
+        {
+          "word": "already",
+          "start": 24.54,
+          "end": 25.16
+        },
+        {
+          "word": "represent",
+          "start": 25.16,
+          "end": 25.66
+        },
+        {
+          "word": "forces",
+          "start": 25.66,
+          "end": 26.18
+        },
+        {
+          "word": "in",
+          "start": 26.18,
+          "end": 26.4
+        },
+        {
+          "word": "newtons.",
+          "start": 26.4,
+          "end": 27.04
+        },
+        {
+          "word": "There",
+          "start": 27.68,
+          "end": 27.96
+        },
+        {
+          "word": "is",
+          "start": 27.96,
+          "end": 28.1
+        },
+        {
+          "word": "no",
+          "start": 28.1,
+          "end": 28.32
+        },
+        {
+          "word": "mass",
+          "start": 28.32,
+          "end": 28.56
+        },
+        {
+          "word": "to",
+          "start": 28.56,
+          "end": 28.9
+        },
+        {
+          "word": "convert.",
+          "start": 28.9,
+          "end": 29.2
+        },
+        {
+          "word": "Which",
+          "start": 29.74,
+          "end": 29.94
+        },
+        {
+          "word": "direction",
+          "start": 29.94,
+          "end": 30.48
+        },
+        {
+          "word": "lets",
+          "start": 30.48,
+          "end": 30.82
+        },
+        {
+          "word": "us",
+          "start": 30.82,
+          "end": 31.0
+        },
+        {
+          "word": "find",
+          "start": 31.0,
+          "end": 31.26
+        },
+        {
+          "word": "P",
+          "start": 31.26,
+          "end": 31.5
+        },
+        {
+          "word": "first?",
+          "start": 31.5,
+          "end": 31.78
+        },
+        {
+          "word": "Take",
+          "start": 32.4,
+          "end": 32.66
+        },
+        {
+          "word": "a",
+          "start": 32.66,
+          "end": 32.82
+        },
+        {
+          "word": "moment.",
+          "start": 32.82,
+          "end": 33.06
+        }
+      ],
+      "cues": {
+        "problem": 0.55,
+        "left": 5.96,
+        "right": 9.53,
+        "up": 11.76,
+        "same": 16.76,
+        "units": 23.82,
+        "think": 29.74
+      },
+      "figureEvents": [
+        {
+          "id": "left-p-0",
+          "start": 6.72,
+          "end": 8.68,
+          "target": "p",
+          "kind": "spoken",
+          "word": "P",
+          "wordIndex": 15
+        },
+        {
+          "id": "left-left20-0",
+          "start": 8.48,
+          "end": 10.06,
+          "target": "left20",
+          "kind": "spoken",
+          "word": "twenty",
+          "wordIndex": 18
+        },
+        {
+          "id": "right-right32-0",
+          "start": 10.27,
+          "end": 12.17,
+          "target": "right32",
+          "kind": "spoken",
+          "word": "thirty",
+          "wordIndex": 24
+        },
+        {
+          "id": "up-up2p-0",
+          "start": 12.74,
+          "end": 14.600000000000001,
+          "target": "up2p",
+          "kind": "spoken",
+          "word": "two",
+          "wordIndex": 29
+        },
+        {
+          "id": "up-q-0",
+          "start": 15.62,
+          "end": 17.18,
+          "target": "q",
+          "kind": "spoken",
+          "word": "Q",
+          "wordIndex": 35
+        },
+        {
+          "id": "same-p-0",
+          "start": 17.14,
+          "end": 18.7,
+          "target": "p",
+          "kind": "spoken",
+          "word": "P",
+          "wordIndex": 39
+        },
+        {
+          "id": "same-p-1",
+          "start": 22.84,
+          "end": 24.44,
+          "target": "p",
+          "kind": "spoken",
+          "word": "P",
+          "wordIndex": 52
+        },
+        {
+          "id": "same-up2p-0",
+          "start": 21.7,
+          "end": 23.36,
+          "target": "up2p",
+          "kind": "spoken",
+          "word": "twice",
+          "wordIndex": 49
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "title": "First, the horizontal balance",
+      "mode": "horizontal",
+      "tempo": "slow",
+      "voiceSpeed": 0.9,
+      "budget": 55,
+      "beats": [
+        {
+          "id": "why",
+          "text": "Horizontal has only one unknown, P. Vertically, both P and Q are unknown.",
+          "hold": 0,
+          "figures": [
+            [
+              "P",
+              "p"
+            ],
+            [
+              "Q",
+              "q"
+            ]
+          ],
+          "start": 0.55,
+          "speechEnd": 6.97,
+          "end": 7.17,
+          "cue": 0.55,
+          "penEnd": 6.85
+        },
+        {
+          "id": "formula",
+          "text": "Take right as positive. Rightward force minus leftward force equals zero, because the particle is in equilibrium.",
+          "ink": "F(right) - F(left) = 0",
+          "hold": 1,
+          "figures": [],
+          "cuePhrase": "rightward force",
+          "start": 7.17,
+          "speechEnd": 17.47,
+          "end": 18.67,
+          "cue": 9.71,
+          "penEnd": 17.349999999999998
+        },
+        {
+          "id": "sub",
+          "text": "From the diagram, thirty two minus the total in brackets, P plus twenty, equals zero. Both leftward pulls belong inside those brackets.",
+          "ink": "32 - (P + 20) = 0",
+          "hold": 2,
+          "figures": [
+            [
+              "thirty two",
+              "right32"
+            ],
+            [
+              "P",
+              "p"
+            ],
+            [
+              "twenty",
+              "left20"
+            ]
+          ],
+          "cuePhrase": "thirty two",
+          "start": 18.67,
+          "speechEnd": 32.9,
+          "end": 35.1,
+          "cue": 19.91,
+          "penEnd": 27.49
+        },
+        {
+          "id": "balance",
+          "text": "Equivalently, P plus twenty equals thirty two. Total left equals total right.",
+          "ink": "P + 20 = 32",
+          "hold": 2,
+          "figures": [
+            [
+              "P",
+              "p"
+            ],
+            [
+              "twenty",
+              "left20"
+            ],
+            [
+              "thirty two",
+              "right32"
+            ]
+          ],
+          "start": 35.1,
+          "speechEnd": 41.81,
+          "end": 44.01,
+          "cue": 35.1,
+          "penEnd": 39.14
+        },
+        {
+          "id": "subtract",
+          "text": "Subtract twenty from both sides. P equals thirty two minus twenty.",
+          "ink": "P = 32 - 20",
+          "hold": 1,
+          "figures": [
+            [
+              "twenty",
+              "left20"
+            ],
+            [
+              "thirty two",
+              "right32"
+            ]
+          ],
+          "cuePhrase": "P equals",
+          "start": 44.01,
+          "speechEnd": 50.17,
+          "end": 51.37,
+          "cue": 47.17,
+          "penEnd": 50.050000000000004
+        },
+        {
+          "id": "answer",
+          "text": "P equals twelve. So the leftward force labelled P newtons is twelve newtons. Keep that value on the diagram.",
+          "ink": "P = 12",
+          "hold": 2,
+          "figures": [
+            [
+              "twelve",
+              "p"
+            ]
+          ],
+          "start": 51.37,
+          "speechEnd": 61.96,
+          "end": 64.16,
+          "cue": 51.37,
+          "penEnd": 53.01
+        }
+      ],
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 17.47,
+          "end": 18.47,
+          "duration": 1
+        },
+        {
+          "kind": "hold",
+          "start": 32.9,
+          "end": 34.9,
+          "duration": 2
+        },
+        {
+          "kind": "hold",
+          "start": 41.81,
+          "end": 43.81,
+          "duration": 2
+        },
+        {
+          "kind": "hold",
+          "start": 50.17,
+          "end": 51.17,
+          "duration": 1
+        },
+        {
+          "kind": "hold",
+          "start": 61.96,
+          "end": 63.96,
+          "duration": 2
+        }
+      ],
+      "audio": "equilibrium-in-2d-s05.mp3",
+      "duration": 64.600816,
+      "audioSha256": "922762aa9ef2e1ea1ddff8b9f8d219f07fda89dae920f9c55a1b56417b35fe62",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "words": [
+        {
+          "word": "Horizontal",
+          "start": 0.55,
+          "end": 1.49
+        },
+        {
+          "word": "has",
+          "start": 1.49,
+          "end": 2.17
+        },
+        {
+          "word": "only",
+          "start": 2.17,
+          "end": 2.49
+        },
+        {
+          "word": "one",
+          "start": 2.49,
+          "end": 2.69
+        },
+        {
+          "word": "unknown,",
+          "start": 2.69,
+          "end": 3.19
+        },
+        {
+          "word": "P.",
+          "start": 3.85,
+          "end": 4.11
+        },
+        {
+          "word": "Vertically,",
+          "start": 4.29,
+          "end": 4.85
+        },
+        {
+          "word": "both",
+          "start": 5.45,
+          "end": 5.61
+        },
+        {
+          "word": "P",
+          "start": 5.61,
+          "end": 5.87
+        },
+        {
+          "word": "and",
+          "start": 5.87,
+          "end": 6.01
+        },
+        {
+          "word": "Q",
+          "start": 6.01,
+          "end": 6.29
+        },
+        {
+          "word": "are",
+          "start": 6.29,
+          "end": 6.43
+        },
+        {
+          "word": "unknown.",
+          "start": 6.43,
+          "end": 6.77
+        },
+        {
+          "word": "Take",
+          "start": 7.17,
+          "end": 7.45
+        },
+        {
+          "word": "right",
+          "start": 7.45,
+          "end": 7.73
+        },
+        {
+          "word": "as",
+          "start": 7.73,
+          "end": 7.93
+        },
+        {
+          "word": "positive.",
+          "start": 7.93,
+          "end": 8.43
+        },
+        {
+          "word": "Rightward",
+          "start": 9.71,
+          "end": 10.15
+        },
+        {
+          "word": "force",
+          "start": 10.15,
+          "end": 10.63
+        },
+        {
+          "word": "minus",
+          "start": 10.63,
+          "end": 11.49
+        },
+        {
+          "word": "leftward",
+          "start": 11.49,
+          "end": 12.19
+        },
+        {
+          "word": "force",
+          "start": 12.19,
+          "end": 12.75
+        },
+        {
+          "word": "equals",
+          "start": 12.75,
+          "end": 13.57
+        },
+        {
+          "word": "zero,",
+          "start": 13.57,
+          "end": 14.15
+        },
+        {
+          "word": "because",
+          "start": 14.87,
+          "end": 15.41
+        },
+        {
+          "word": "the",
+          "start": 15.41,
+          "end": 15.59
+        },
+        {
+          "word": "particle",
+          "start": 15.59,
+          "end": 15.99
+        },
+        {
+          "word": "is",
+          "start": 15.99,
+          "end": 16.33
+        },
+        {
+          "word": "in",
+          "start": 16.33,
+          "end": 16.49
+        },
+        {
+          "word": "equilibrium.",
+          "start": 16.49,
+          "end": 16.85
+        },
+        {
+          "word": "From",
+          "start": 18.67,
+          "end": 18.89
+        },
+        {
+          "word": "the",
+          "start": 18.89,
+          "end": 19.07
+        },
+        {
+          "word": "diagram,",
+          "start": 19.07,
+          "end": 19.59
+        },
+        {
+          "word": "thirty",
+          "start": 19.91,
+          "end": 20.87
+        },
+        {
+          "word": "two",
+          "start": 20.87,
+          "end": 21.07
+        },
+        {
+          "word": "minus",
+          "start": 21.07,
+          "end": 21.41
+        },
+        {
+          "word": "the",
+          "start": 21.41,
+          "end": 21.97
+        },
+        {
+          "word": "total",
+          "start": 21.97,
+          "end": 22.35
+        },
+        {
+          "word": "in",
+          "start": 22.35,
+          "end": 22.63
+        },
+        {
+          "word": "brackets,",
+          "start": 22.63,
+          "end": 23.03
+        },
+        {
+          "word": "P",
+          "start": 23.97,
+          "end": 24.33
+        },
+        {
+          "word": "plus",
+          "start": 24.33,
+          "end": 25.07
+        },
+        {
+          "word": "twenty,",
+          "start": 25.07,
+          "end": 25.71
+        },
+        {
+          "word": "equals",
+          "start": 25.93,
+          "end": 26.81
+        },
+        {
+          "word": "zero.",
+          "start": 26.81,
+          "end": 27.31
+        },
+        {
+          "word": "Both",
+          "start": 28.75,
+          "end": 29.11
+        },
+        {
+          "word": "leftward",
+          "start": 29.11,
+          "end": 29.99
+        },
+        {
+          "word": "pulls",
+          "start": 29.99,
+          "end": 30.37
+        },
+        {
+          "word": "belong",
+          "start": 30.37,
+          "end": 31.17
+        },
+        {
+          "word": "inside",
+          "start": 31.17,
+          "end": 31.73
+        },
+        {
+          "word": "those",
+          "start": 31.73,
+          "end": 32.15
+        },
+        {
+          "word": "brackets.",
+          "start": 32.15,
+          "end": 32.53
+        },
+        {
+          "word": "Equivalently,",
+          "start": 35.1,
+          "end": 36.14
+        },
+        {
+          "word": "P",
+          "start": 36.46,
+          "end": 37.0
+        },
+        {
+          "word": "plus",
+          "start": 37.0,
+          "end": 37.24
+        },
+        {
+          "word": "twenty",
+          "start": 37.24,
+          "end": 37.86
+        },
+        {
+          "word": "equals",
+          "start": 37.86,
+          "end": 38.2
+        },
+        {
+          "word": "thirty",
+          "start": 38.2,
+          "end": 38.68
+        },
+        {
+          "word": "two.",
+          "start": 38.68,
+          "end": 38.96
+        },
+        {
+          "word": "Total",
+          "start": 39.52,
+          "end": 39.92
+        },
+        {
+          "word": "left",
+          "start": 39.92,
+          "end": 40.34
+        },
+        {
+          "word": "equals",
+          "start": 40.34,
+          "end": 40.76
+        },
+        {
+          "word": "total",
+          "start": 40.76,
+          "end": 41.18
+        },
+        {
+          "word": "right.",
+          "start": 41.18,
+          "end": 41.5
+        },
+        {
+          "word": "Subtract",
+          "start": 44.01,
+          "end": 44.65
+        },
+        {
+          "word": "twenty",
+          "start": 44.65,
+          "end": 45.33
+        },
+        {
+          "word": "from",
+          "start": 45.33,
+          "end": 45.59
+        },
+        {
+          "word": "both",
+          "start": 45.59,
+          "end": 45.81
+        },
+        {
+          "word": "sides.",
+          "start": 45.81,
+          "end": 46.39
+        },
+        {
+          "word": "P",
+          "start": 47.17,
+          "end": 47.45
+        },
+        {
+          "word": "equals",
+          "start": 47.45,
+          "end": 48.33
+        },
+        {
+          "word": "thirty",
+          "start": 48.33,
+          "end": 48.89
+        },
+        {
+          "word": "two",
+          "start": 48.89,
+          "end": 49.15
+        },
+        {
+          "word": "minus",
+          "start": 49.15,
+          "end": 49.45
+        },
+        {
+          "word": "twenty.",
+          "start": 49.45,
+          "end": 50.05
+        },
+        {
+          "word": "P",
+          "start": 51.37,
+          "end": 51.67
+        },
+        {
+          "word": "equals",
+          "start": 51.67,
+          "end": 52.25
+        },
+        {
+          "word": "twelve.",
+          "start": 52.25,
+          "end": 52.83
+        },
+        {
+          "word": "So",
+          "start": 53.97,
+          "end": 54.09
+        },
+        {
+          "word": "the",
+          "start": 54.09,
+          "end": 54.23
+        },
+        {
+          "word": "leftward",
+          "start": 54.23,
+          "end": 54.73
+        },
+        {
+          "word": "force",
+          "start": 54.73,
+          "end": 55.15
+        },
+        {
+          "word": "labelled",
+          "start": 55.15,
+          "end": 56.03
+        },
+        {
+          "word": "P",
+          "start": 56.03,
+          "end": 56.27
+        },
+        {
+          "word": "newtons",
+          "start": 56.27,
+          "end": 56.87
+        },
+        {
+          "word": "is",
+          "start": 56.87,
+          "end": 57.71
+        },
+        {
+          "word": "twelve",
+          "start": 57.71,
+          "end": 58.13
+        },
+        {
+          "word": "newtons.",
+          "start": 58.13,
+          "end": 58.71
+        },
+        {
+          "word": "Keep",
+          "start": 59.45,
+          "end": 59.91
+        },
+        {
+          "word": "that",
+          "start": 59.91,
+          "end": 60.15
+        },
+        {
+          "word": "value",
+          "start": 60.15,
+          "end": 60.63
+        },
+        {
+          "word": "on",
+          "start": 60.63,
+          "end": 61.11
+        },
+        {
+          "word": "the",
+          "start": 61.11,
+          "end": 61.23
+        },
+        {
+          "word": "diagram.",
+          "start": 61.23,
+          "end": 61.65
+        }
+      ],
+      "cues": {
+        "why": 0.55,
+        "formula": 9.71,
+        "sub": 19.91,
+        "balance": 35.1,
+        "subtract": 47.17,
+        "answer": 51.37
+      },
+      "figureEvents": [
+        {
+          "id": "why-p-0",
+          "start": 3.85,
+          "end": 5.41,
+          "target": "p",
+          "kind": "spoken",
+          "word": "P.",
+          "wordIndex": 5
+        },
+        {
+          "id": "why-p-1",
+          "start": 5.61,
+          "end": 7.17,
+          "target": "p",
+          "kind": "spoken",
+          "word": "P",
+          "wordIndex": 8
+        },
+        {
+          "id": "why-q-0",
+          "start": 6.01,
+          "end": 7.59,
+          "target": "q",
+          "kind": "spoken",
+          "word": "Q",
+          "wordIndex": 10
+        },
+        {
+          "id": "sub-right32-0",
+          "start": 19.91,
+          "end": 22.37,
+          "target": "right32",
+          "kind": "spoken",
+          "word": "thirty",
+          "wordIndex": 33
+        },
+        {
+          "id": "sub-p-0",
+          "start": 23.97,
+          "end": 25.63,
+          "target": "p",
+          "kind": "spoken",
+          "word": "P",
+          "wordIndex": 40
+        },
+        {
+          "id": "sub-left20-0",
+          "start": 25.07,
+          "end": 27.01,
+          "target": "left20",
+          "kind": "spoken",
+          "word": "twenty,",
+          "wordIndex": 42
+        },
+        {
+          "id": "balance-p-0",
+          "start": 36.46,
+          "end": 38.3,
+          "target": "p",
+          "kind": "spoken",
+          "word": "P",
+          "wordIndex": 53
+        },
+        {
+          "id": "balance-left20-0",
+          "start": 37.24,
+          "end": 39.16,
+          "target": "left20",
+          "kind": "spoken",
+          "word": "twenty",
+          "wordIndex": 55
+        },
+        {
+          "id": "balance-right32-0",
+          "start": 38.2,
+          "end": 40.26,
+          "target": "right32",
+          "kind": "spoken",
+          "word": "thirty",
+          "wordIndex": 57
+        },
+        {
+          "id": "subtract-left20-0",
+          "start": 44.65,
+          "end": 46.629999999999995,
+          "target": "left20",
+          "kind": "spoken",
+          "word": "twenty",
+          "wordIndex": 65
+        },
+        {
+          "id": "subtract-left20-1",
+          "start": 49.45,
+          "end": 51.349999999999994,
+          "target": "left20",
+          "kind": "spoken",
+          "word": "twenty.",
+          "wordIndex": 74
+        },
+        {
+          "id": "subtract-right32-0",
+          "start": 48.33,
+          "end": 50.449999999999996,
+          "target": "right32",
+          "kind": "spoken",
+          "word": "thirty",
+          "wordIndex": 71
+        },
+        {
+          "id": "answer-p-0",
+          "start": 52.25,
+          "end": 54.129999999999995,
+          "target": "p",
+          "kind": "spoken",
+          "word": "twelve.",
+          "wordIndex": 77
+        },
+        {
+          "id": "answer-p-1",
+          "start": 57.71,
+          "end": 59.43,
+          "target": "p",
+          "kind": "spoken",
+          "word": "twelve",
+          "wordIndex": 86
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "title": "Now, the vertical balance",
+      "mode": "vertical",
+      "tempo": "slow",
+      "voiceSpeed": 0.9,
+      "budget": 52,
+      "beats": [
+        {
+          "id": "why",
+          "text": "Now look vertically. The sideways forces have no vertical effect. Only the upward and downward forces enter this equation.",
+          "hold": 0,
+          "figures": [],
+          "start": 0.55,
+          "speechEnd": 10.76,
+          "end": 10.96,
+          "cue": 0.55,
+          "penEnd": 10.64
+        },
+        {
+          "id": "formula",
+          "text": "Take up as positive. Upward force minus downward force equals zero.",
+          "ink": "F(up) - F(down) = 0",
+          "hold": 1,
+          "figures": [],
+          "cuePhrase": "upward force",
+          "start": 10.96,
+          "speechEnd": 17.53,
+          "end": 18.73,
+          "cue": 13.06,
+          "penEnd": 17.48
+        },
+        {
+          "id": "sub",
+          "text": "Substitute the labels: two P minus Q equals zero.",
+          "ink": "2P - Q = 0",
+          "hold": 2,
+          "figures": [
+            [
+              "two P",
+              "up2p"
+            ],
+            [
+              "Q",
+              "q"
+            ]
+          ],
+          "cuePhrase": "two P",
+          "start": 18.73,
+          "speechEnd": 23.42,
+          "end": 25.62,
+          "cue": 20.23,
+          "penEnd": 23.37
+        },
+        {
+          "id": "balance",
+          "text": "So Q equals two P. The downward pull must match the upward pull.",
+          "ink": "Q = 2P",
+          "hold": 2,
+          "figures": [
+            [
+              "Q",
+              "q"
+            ],
+            [
+              "two P",
+              "up2p"
+            ]
+          ],
+          "start": 25.62,
+          "speechEnd": 31.24,
+          "end": 33.44,
+          "cue": 25.62,
+          "penEnd": 27.34
+        },
+        {
+          "id": "calculate",
+          "text": "We found P equals twelve. Therefore Q equals two times twelve.",
+          "ink": "Q = 2 \u00d7 12",
+          "hold": 2,
+          "figures": [
+            [
+              "twelve",
+              "p"
+            ],
+            [
+              "two",
+              "up2p"
+            ]
+          ],
+          "cuePhrase": "Q equals",
+          "start": 33.44,
+          "speechEnd": 37.55,
+          "end": 39.75,
+          "cue": 35.74,
+          "penEnd": 37.5
+        },
+        {
+          "id": "answer",
+          "text": "Q equals twenty four. The unknown downward force is twenty four newtons.",
+          "ink": "Q = 24",
+          "hold": 2,
+          "figures": [
+            [
+              "twenty four",
+              "q"
+            ]
+          ],
+          "start": 39.75,
+          "speechEnd": 45.97,
+          "end": 48.17,
+          "cue": 39.75,
+          "penEnd": 41.61
+        },
+        {
+          "id": "check",
+          "text": "Put it back on the diagram. Upward is also twenty four newtons. Leftward, twelve plus twenty balances thirty two to the right. Both directions balance.",
+          "hold": 2,
+          "figures": [
+            [
+              "twenty four",
+              "up2p"
+            ],
+            [
+              "twelve",
+              "p"
+            ],
+            [
+              "twenty",
+              "left20"
+            ],
+            [
+              "thirty two",
+              "right32"
+            ]
+          ],
+          "start": 48.17,
+          "speechEnd": 61.97,
+          "end": 64.17,
+          "cue": 48.17,
+          "penEnd": 61.85
+        }
+      ],
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 17.53,
+          "end": 18.53,
+          "duration": 1
+        },
+        {
+          "kind": "hold",
+          "start": 23.42,
+          "end": 25.42,
+          "duration": 2
+        },
+        {
+          "kind": "hold",
+          "start": 31.24,
+          "end": 33.24,
+          "duration": 2
+        },
+        {
+          "kind": "hold",
+          "start": 37.55,
+          "end": 39.55,
+          "duration": 2
+        },
+        {
+          "kind": "hold",
+          "start": 45.97,
+          "end": 47.97,
+          "duration": 2
+        },
+        {
+          "kind": "hold",
+          "start": 61.97,
+          "end": 63.97,
+          "duration": 2
+        }
+      ],
+      "audio": "equilibrium-in-2d-s06.mp3",
+      "duration": 64.600816,
+      "audioSha256": "f80bfdb82bd3fd7c61bde6b5108676e7b6b2b42d3f02db15250bc08432a75b53",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "words": [
+        {
+          "word": "Now",
+          "start": 0.55,
+          "end": 0.79
+        },
+        {
+          "word": "look",
+          "start": 0.79,
+          "end": 1.05
+        },
+        {
+          "word": "vertically.",
+          "start": 1.05,
+          "end": 1.57
+        },
+        {
+          "word": "The",
+          "start": 2.45,
+          "end": 2.57
+        },
+        {
+          "word": "sideways",
+          "start": 2.57,
+          "end": 3.09
+        },
+        {
+          "word": "forces",
+          "start": 3.09,
+          "end": 3.69
+        },
+        {
+          "word": "have",
+          "start": 3.69,
+          "end": 4.07
+        },
+        {
+          "word": "no",
+          "start": 4.07,
+          "end": 4.37
+        },
+        {
+          "word": "vertical",
+          "start": 4.37,
+          "end": 4.93
+        },
+        {
+          "word": "effect.",
+          "start": 4.93,
+          "end": 5.51
+        },
+        {
+          "word": "Only",
+          "start": 6.11,
+          "end": 6.49
+        },
+        {
+          "word": "the",
+          "start": 6.49,
+          "end": 6.69
+        },
+        {
+          "word": "upward",
+          "start": 6.69,
+          "end": 7.05
+        },
+        {
+          "word": "and",
+          "start": 7.05,
+          "end": 7.77
+        },
+        {
+          "word": "downward",
+          "start": 7.77,
+          "end": 8.21
+        },
+        {
+          "word": "forces",
+          "start": 8.21,
+          "end": 8.79
+        },
+        {
+          "word": "enter",
+          "start": 8.79,
+          "end": 9.75
+        },
+        {
+          "word": "this",
+          "start": 9.75,
+          "end": 10.03
+        },
+        {
+          "word": "equation.",
+          "start": 10.03,
+          "end": 10.41
+        },
+        {
+          "word": "Take",
+          "start": 10.96,
+          "end": 11.18
+        },
+        {
+          "word": "up",
+          "start": 11.18,
+          "end": 11.38
+        },
+        {
+          "word": "as",
+          "start": 11.38,
+          "end": 11.5
+        },
+        {
+          "word": "positive.",
+          "start": 11.5,
+          "end": 12.02
+        },
+        {
+          "word": "Upward",
+          "start": 13.06,
+          "end": 13.44
+        },
+        {
+          "word": "force",
+          "start": 13.44,
+          "end": 13.9
+        },
+        {
+          "word": "minus",
+          "start": 13.9,
+          "end": 14.86
+        },
+        {
+          "word": "downward",
+          "start": 14.86,
+          "end": 15.32
+        },
+        {
+          "word": "force",
+          "start": 15.32,
+          "end": 16.08
+        },
+        {
+          "word": "equals",
+          "start": 16.08,
+          "end": 16.82
+        },
+        {
+          "word": "zero.",
+          "start": 16.82,
+          "end": 17.3
+        },
+        {
+          "word": "Substitute",
+          "start": 18.73,
+          "end": 19.49
+        },
+        {
+          "word": "the",
+          "start": 19.49,
+          "end": 19.79
+        },
+        {
+          "word": "labels",
+          "start": 19.79,
+          "end": 20.23
+        },
+        {
+          "word": "two",
+          "start": 20.23,
+          "end": 21.09
+        },
+        {
+          "word": "P",
+          "start": 21.09,
+          "end": 21.35
+        },
+        {
+          "word": "minus",
+          "start": 21.35,
+          "end": 21.71
+        },
+        {
+          "word": "Q",
+          "start": 21.71,
+          "end": 22.17
+        },
+        {
+          "word": "equals",
+          "start": 22.17,
+          "end": 22.69
+        },
+        {
+          "word": "zero.",
+          "start": 22.69,
+          "end": 23.19
+        },
+        {
+          "word": "So",
+          "start": 25.62,
+          "end": 25.82
+        },
+        {
+          "word": "Q",
+          "start": 25.82,
+          "end": 26.14
+        },
+        {
+          "word": "equals",
+          "start": 26.14,
+          "end": 26.58
+        },
+        {
+          "word": "two",
+          "start": 26.58,
+          "end": 26.94
+        },
+        {
+          "word": "P.",
+          "start": 26.94,
+          "end": 27.16
+        },
+        {
+          "word": "The",
+          "start": 27.8,
+          "end": 27.96
+        },
+        {
+          "word": "downward",
+          "start": 27.96,
+          "end": 28.42
+        },
+        {
+          "word": "pull",
+          "start": 28.42,
+          "end": 28.98
+        },
+        {
+          "word": "must",
+          "start": 28.98,
+          "end": 29.74
+        },
+        {
+          "word": "match",
+          "start": 29.74,
+          "end": 30.06
+        },
+        {
+          "word": "the",
+          "start": 30.06,
+          "end": 30.3
+        },
+        {
+          "word": "upward",
+          "start": 30.3,
+          "end": 30.64
+        },
+        {
+          "word": "pull.",
+          "start": 30.64,
+          "end": 31.02
+        },
+        {
+          "word": "We",
+          "start": 33.44,
+          "end": 33.6
+        },
+        {
+          "word": "found",
+          "start": 33.6,
+          "end": 33.84
+        },
+        {
+          "word": "P",
+          "start": 33.84,
+          "end": 34.12
+        },
+        {
+          "word": "equals",
+          "start": 34.12,
+          "end": 34.38
+        },
+        {
+          "word": "twelve.",
+          "start": 34.38,
+          "end": 34.98
+        },
+        {
+          "word": "Therefore",
+          "start": 35.62,
+          "end": 35.74
+        },
+        {
+          "word": "Q",
+          "start": 35.74,
+          "end": 36.22
+        },
+        {
+          "word": "equals",
+          "start": 36.22,
+          "end": 36.6
+        },
+        {
+          "word": "two",
+          "start": 36.6,
+          "end": 36.86
+        },
+        {
+          "word": "times",
+          "start": 36.86,
+          "end": 37.1
+        },
+        {
+          "word": "twelve.",
+          "start": 37.1,
+          "end": 37.4
+        },
+        {
+          "word": "Q",
+          "start": 39.75,
+          "end": 40.03
+        },
+        {
+          "word": "equals",
+          "start": 40.03,
+          "end": 40.61
+        },
+        {
+          "word": "twenty",
+          "start": 40.61,
+          "end": 41.15
+        },
+        {
+          "word": "four.",
+          "start": 41.15,
+          "end": 41.43
+        },
+        {
+          "word": "The",
+          "start": 41.99,
+          "end": 42.09
+        },
+        {
+          "word": "unknown",
+          "start": 42.09,
+          "end": 42.85
+        },
+        {
+          "word": "downward",
+          "start": 42.85,
+          "end": 43.37
+        },
+        {
+          "word": "force",
+          "start": 43.37,
+          "end": 43.99
+        },
+        {
+          "word": "is",
+          "start": 43.99,
+          "end": 44.53
+        },
+        {
+          "word": "twenty",
+          "start": 44.53,
+          "end": 44.93
+        },
+        {
+          "word": "four",
+          "start": 44.93,
+          "end": 45.19
+        },
+        {
+          "word": "newtons.",
+          "start": 45.19,
+          "end": 45.77
+        },
+        {
+          "word": "Put",
+          "start": 48.17,
+          "end": 48.35
+        },
+        {
+          "word": "it",
+          "start": 48.35,
+          "end": 48.45
+        },
+        {
+          "word": "back",
+          "start": 48.45,
+          "end": 48.63
+        },
+        {
+          "word": "on",
+          "start": 48.63,
+          "end": 48.79
+        },
+        {
+          "word": "the",
+          "start": 48.79,
+          "end": 48.89
+        },
+        {
+          "word": "diagram.",
+          "start": 48.89,
+          "end": 49.35
+        },
+        {
+          "word": "Upward",
+          "start": 50.01,
+          "end": 50.77
+        },
+        {
+          "word": "is",
+          "start": 50.77,
+          "end": 50.97
+        },
+        {
+          "word": "also",
+          "start": 50.97,
+          "end": 51.29
+        },
+        {
+          "word": "twenty",
+          "start": 51.29,
+          "end": 51.59
+        },
+        {
+          "word": "four",
+          "start": 51.59,
+          "end": 51.85
+        },
+        {
+          "word": "newtons.",
+          "start": 51.85,
+          "end": 52.41
+        },
+        {
+          "word": "Leftward,",
+          "start": 53.55,
+          "end": 54.23
+        },
+        {
+          "word": "twelve",
+          "start": 54.87,
+          "end": 55.43
+        },
+        {
+          "word": "plus",
+          "start": 55.43,
+          "end": 55.73
+        },
+        {
+          "word": "twenty",
+          "start": 55.73,
+          "end": 56.31
+        },
+        {
+          "word": "balances",
+          "start": 56.31,
+          "end": 56.91
+        },
+        {
+          "word": "thirty",
+          "start": 56.91,
+          "end": 58.07
+        },
+        {
+          "word": "two",
+          "start": 58.07,
+          "end": 58.35
+        },
+        {
+          "word": "to",
+          "start": 58.35,
+          "end": 58.53
+        },
+        {
+          "word": "the",
+          "start": 58.53,
+          "end": 58.65
+        },
+        {
+          "word": "right.",
+          "start": 58.65,
+          "end": 58.97
+        },
+        {
+          "word": "Both",
+          "start": 60.19,
+          "end": 60.61
+        },
+        {
+          "word": "directions",
+          "start": 60.61,
+          "end": 61.05
+        },
+        {
+          "word": "balance.",
+          "start": 61.05,
+          "end": 61.61
+        }
+      ],
+      "cues": {
+        "why": 0.55,
+        "formula": 13.06,
+        "sub": 20.23,
+        "balance": 25.62,
+        "calculate": 35.74,
+        "answer": 39.75,
+        "check": 48.17
+      },
+      "figureEvents": [
+        {
+          "id": "sub-up2p-0",
+          "start": 20.23,
+          "end": 22.650000000000002,
+          "target": "up2p",
+          "kind": "spoken",
+          "word": "two",
+          "wordIndex": 33
+        },
+        {
+          "id": "sub-q-0",
+          "start": 21.71,
+          "end": 23.470000000000002,
+          "target": "q",
+          "kind": "spoken",
+          "word": "Q",
+          "wordIndex": 36
+        },
+        {
+          "id": "balance-q-0",
+          "start": 25.82,
+          "end": 27.44,
+          "target": "q",
+          "kind": "spoken",
+          "word": "Q",
+          "wordIndex": 40
+        },
+        {
+          "id": "balance-up2p-0",
+          "start": 26.58,
+          "end": 28.46,
+          "target": "up2p",
+          "kind": "spoken",
+          "word": "two",
+          "wordIndex": 42
+        },
+        {
+          "id": "calculate-p-0",
+          "start": 34.38,
+          "end": 36.279999999999994,
+          "target": "p",
+          "kind": "spoken",
+          "word": "twelve.",
+          "wordIndex": 56
+        },
+        {
+          "id": "calculate-p-1",
+          "start": 37.1,
+          "end": 38.699999999999996,
+          "target": "p",
+          "kind": "spoken",
+          "word": "twelve.",
+          "wordIndex": 62
+        },
+        {
+          "id": "calculate-up2p-0",
+          "start": 36.6,
+          "end": 38.16,
+          "target": "up2p",
+          "kind": "spoken",
+          "word": "two",
+          "wordIndex": 60
+        },
+        {
+          "id": "answer-q-0",
+          "start": 40.61,
+          "end": 42.73,
+          "target": "q",
+          "kind": "spoken",
+          "word": "twenty",
+          "wordIndex": 65
+        },
+        {
+          "id": "answer-q-1",
+          "start": 44.53,
+          "end": 46.489999999999995,
+          "target": "q",
+          "kind": "spoken",
+          "word": "twenty",
+          "wordIndex": 72
+        },
+        {
+          "id": "check-up2p-0",
+          "start": 51.29,
+          "end": 53.15,
+          "target": "up2p",
+          "kind": "spoken",
+          "word": "twenty",
+          "wordIndex": 84
+        },
+        {
+          "id": "check-p-0",
+          "start": 54.87,
+          "end": 56.73,
+          "target": "p",
+          "kind": "spoken",
+          "word": "twelve",
+          "wordIndex": 88
+        },
+        {
+          "id": "check-left20-0",
+          "start": 55.73,
+          "end": 57.61,
+          "target": "left20",
+          "kind": "spoken",
+          "word": "twenty",
+          "wordIndex": 90
+        },
+        {
+          "id": "check-right32-0",
+          "start": 56.91,
+          "end": 59.65,
+          "target": "right32",
+          "kind": "spoken",
+          "word": "thirty",
+          "wordIndex": 92
+        }
+      ]
+    },
+    {
+      "id": "s07",
+      "title": "Check your understanding",
+      "mode": "recap",
+      "tempo": "brisk",
+      "voiceSpeed": 1.0,
+      "budget": 34,
+      "beats": [
+        {
+          "id": "question",
+          "text": "Keep the horizontal forces unchanged. If only the downward pull becomes larger, is the particle still in equilibrium?",
+          "hold": 3.5,
+          "figures": [],
+          "start": 0.55,
+          "speechEnd": 7.99,
+          "end": 11.69,
+          "cue": 0.55,
+          "penEnd": 7.87
+        },
+        {
+          "id": "answer",
+          "text": "No. Horizontal balance survives, but the vertical resultant is downward. Both directions must balance.",
+          "hold": 0,
+          "figures": [],
+          "start": 11.69,
+          "speechEnd": 21.35,
+          "end": 21.55,
+          "cue": 11.69,
+          "penEnd": 21.23
+        },
+        {
+          "id": "outcome1",
+          "text": "You can now check equilibrium in two directions.",
+          "hold": 0,
+          "figures": [],
+          "start": 21.55,
+          "speechEnd": 24.73,
+          "end": 24.93,
+          "cue": 21.55,
+          "penEnd": 24.61
+        },
+        {
+          "id": "outcome2",
+          "text": "Use two balances to find unknown forces.",
+          "hold": 0,
+          "figures": [],
+          "start": 24.93,
+          "speechEnd": 27.86,
+          "end": 28.06,
+          "cue": 24.93,
+          "penEnd": 27.74
+        },
+        {
+          "id": "outcome3",
+          "text": "And explain why balancing one direction is not enough.",
+          "hold": 0,
+          "figures": [],
+          "start": 28.06,
+          "speechEnd": 31.03,
+          "end": 31.23,
+          "cue": 28.06,
+          "penEnd": 30.91
+        }
+      ],
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 7.99,
+          "end": 11.49,
+          "duration": 3.5
+        }
+      ],
+      "audio": "equilibrium-in-2d-s07.mp3",
+      "duration": 34.037551,
+      "audioSha256": "2f90f08ccb07ea36a5603f069e768051a028a4a4ee15e740c997c3b80c2323b5",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "words": [
+        {
+          "word": "Keep",
+          "start": 0.55,
+          "end": 0.73
+        },
+        {
+          "word": "the",
+          "start": 0.73,
+          "end": 0.87
+        },
+        {
+          "word": "horizontal",
+          "start": 0.87,
+          "end": 1.23
+        },
+        {
+          "word": "forces",
+          "start": 1.23,
+          "end": 1.69
+        },
+        {
+          "word": "unchanged.",
+          "start": 1.69,
+          "end": 2.21
+        },
+        {
+          "word": "If",
+          "start": 3.23,
+          "end": 3.35
+        },
+        {
+          "word": "only",
+          "start": 3.35,
+          "end": 3.53
+        },
+        {
+          "word": "the",
+          "start": 3.53,
+          "end": 3.73
+        },
+        {
+          "word": "downward",
+          "start": 3.73,
+          "end": 4.11
+        },
+        {
+          "word": "pull",
+          "start": 4.11,
+          "end": 4.55
+        },
+        {
+          "word": "becomes",
+          "start": 4.55,
+          "end": 4.99
+        },
+        {
+          "word": "larger,",
+          "start": 4.99,
+          "end": 5.49
+        },
+        {
+          "word": "is",
+          "start": 6.11,
+          "end": 6.23
+        },
+        {
+          "word": "the",
+          "start": 6.23,
+          "end": 6.37
+        },
+        {
+          "word": "particle",
+          "start": 6.37,
+          "end": 6.67
+        },
+        {
+          "word": "still",
+          "start": 6.67,
+          "end": 7.05
+        },
+        {
+          "word": "in",
+          "start": 7.05,
+          "end": 7.19
+        },
+        {
+          "word": "equilibrium?",
+          "start": 7.19,
+          "end": 7.49
+        },
+        {
+          "word": "No.",
+          "start": 11.69,
+          "end": 11.95
+        },
+        {
+          "word": "Horizontal",
+          "start": 12.99,
+          "end": 13.79
+        },
+        {
+          "word": "balance",
+          "start": 13.79,
+          "end": 14.07
+        },
+        {
+          "word": "survives,",
+          "start": 14.07,
+          "end": 14.61
+        },
+        {
+          "word": "but",
+          "start": 15.47,
+          "end": 15.65
+        },
+        {
+          "word": "the",
+          "start": 15.65,
+          "end": 15.79
+        },
+        {
+          "word": "vertical",
+          "start": 15.79,
+          "end": 16.17
+        },
+        {
+          "word": "resultant",
+          "start": 16.17,
+          "end": 16.85
+        },
+        {
+          "word": "is",
+          "start": 16.85,
+          "end": 17.07
+        },
+        {
+          "word": "downward.",
+          "start": 17.07,
+          "end": 17.59
+        },
+        {
+          "word": "Both",
+          "start": 18.73,
+          "end": 19.05
+        },
+        {
+          "word": "directions",
+          "start": 19.05,
+          "end": 19.61
+        },
+        {
+          "word": "must",
+          "start": 19.61,
+          "end": 20.41
+        },
+        {
+          "word": "balance.",
+          "start": 20.41,
+          "end": 21.01
+        },
+        {
+          "word": "You",
+          "start": 21.55,
+          "end": 21.69
+        },
+        {
+          "word": "can",
+          "start": 21.69,
+          "end": 21.87
+        },
+        {
+          "word": "now",
+          "start": 21.87,
+          "end": 22.17
+        },
+        {
+          "word": "check",
+          "start": 22.17,
+          "end": 22.57
+        },
+        {
+          "word": "equilibrium",
+          "start": 22.57,
+          "end": 23.29
+        },
+        {
+          "word": "in",
+          "start": 23.29,
+          "end": 23.73
+        },
+        {
+          "word": "two",
+          "start": 23.73,
+          "end": 23.99
+        },
+        {
+          "word": "directions.",
+          "start": 23.99,
+          "end": 24.33
+        },
+        {
+          "word": "Use",
+          "start": 24.93,
+          "end": 25.11
+        },
+        {
+          "word": "two",
+          "start": 25.11,
+          "end": 25.37
+        },
+        {
+          "word": "balances",
+          "start": 25.37,
+          "end": 25.75
+        },
+        {
+          "word": "to",
+          "start": 25.75,
+          "end": 26.55
+        },
+        {
+          "word": "find",
+          "start": 26.55,
+          "end": 26.89
+        },
+        {
+          "word": "unknown",
+          "start": 26.89,
+          "end": 27.25
+        },
+        {
+          "word": "forces.",
+          "start": 27.25,
+          "end": 27.63
+        },
+        {
+          "word": "And",
+          "start": 28.06,
+          "end": 28.2
+        },
+        {
+          "word": "explain",
+          "start": 28.2,
+          "end": 28.48
+        },
+        {
+          "word": "why",
+          "start": 28.48,
+          "end": 28.72
+        },
+        {
+          "word": "balancing",
+          "start": 28.72,
+          "end": 29.14
+        },
+        {
+          "word": "one",
+          "start": 29.14,
+          "end": 29.46
+        },
+        {
+          "word": "direction",
+          "start": 29.46,
+          "end": 29.88
+        },
+        {
+          "word": "is",
+          "start": 29.88,
+          "end": 30.18
+        },
+        {
+          "word": "not",
+          "start": 30.18,
+          "end": 30.4
+        },
+        {
+          "word": "enough.",
+          "start": 30.4,
+          "end": 30.72
+        }
+      ],
+      "cues": {
+        "question": 0.55,
+        "answer": 11.69,
+        "outcome1": 21.55,
+        "outcome2": 24.93,
+        "outcome3": 28.06
+      },
+      "figureEvents": []
+    }
+  ]
+}

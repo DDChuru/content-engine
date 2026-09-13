@@ -1,15 +1,16 @@
 import React from 'react';
-import { MathText } from '@/components/math-text';
+import { MathBlock, MathText } from '@/components/math-text';
 
 /**
  * Renders the small markdown subset our topic notes use: headings, paragraphs,
- * bullet lists, bold, and inline maths via \( \) (handled by MathText).
+ * bullet lists, bold, inline maths, and standalone \[ \] or $$ formulas.
  * Deliberately tiny: notes are authored in-house, so we don't need a full parser.
  */
 
 type Block =
   | { type: 'h'; level: number; text: string }
   | { type: 'p'; text: string }
+  | { type: 'math'; tex: string }
   | { type: 'ul'; items: string[] }
   | { type: 'ol'; items: string[] }
   | { type: 'table'; header: string[]; rows: string[][] };
@@ -37,8 +38,27 @@ function parse(md: string): Block[] {
       table = [];
     }
   };
-  for (const raw of lines) {
+  for (let index = 0; index < lines.length; index += 1) {
+    const raw = lines[index];
     const line = raw.trimEnd();
+    const opening = line.trim().match(/^(\\\[|\$\$)(.*)$/);
+    if (opening) {
+      const closing = opening[1] === '$$' ? '$$' : '\\]';
+      const formula = [opening[2]];
+      let end = index;
+      while (!formula[formula.length - 1].trimEnd().endsWith(closing) && end + 1 < lines.length) {
+        formula.push(lines[++end]);
+      }
+      const last = formula[formula.length - 1].trimEnd();
+      if (last.endsWith(closing)) {
+        formula[formula.length - 1] = last.slice(0, -closing.length);
+        flush();
+        blocks.push({ type: 'math', tex: formula.join('\n').trim() });
+        index = end;
+        continue;
+      }
+      // Preserve ordinary parsing if a display delimiter was never closed.
+    }
     const h = line.match(/^(#{1,4})\s+(.*)$/);
     if (h) {
       flush();
@@ -97,6 +117,7 @@ export function NotesMarkdown({ markdown }: { markdown: string }) {
   return (
     <div className="space-y-4 text-[15px] leading-relaxed text-ink">
       {blocks.map((b, i) => {
+        if (b.type === 'math') return <MathBlock key={i} tex={b.tex} />;
         if (b.type === 'h') {
           if (b.level === 1) return <h1 key={i} className="font-heading text-3xl mt-2">{<Inline text={b.text} />}</h1>;
           if (b.level === 2) return <h2 key={i} className="font-heading text-xl mt-8 border-b border-grid-line pb-1">{<Inline text={b.text} />}</h2>;

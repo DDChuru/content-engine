@@ -1,0 +1,5337 @@
+{
+  "project": "mechanics-connected-bodies-pulleys",
+  "sceneCount": 8,
+  "scenes": [
+    {
+      "id": "s01",
+      "title": "Connected bodies: pulleys",
+      "mode": "opening",
+      "voiceSpeed": 1,
+      "beats": [
+        {
+          "id": "syllabus",
+          "text": "Syllabus four point four: solve simple problems which may be modelled as the motion of connected particles.",
+          "hold": 0,
+          "start": 0.4,
+          "speechEnd": 7.34,
+          "end": 7.54,
+          "cue": 0.4,
+          "penEnd": 7.46
+        },
+        {
+          "id": "outcome1",
+          "text": "By the end, you can use the string conditions.",
+          "hold": 0,
+          "caption": "Use the string conditions",
+          "start": 7.54,
+          "speechEnd": 10.2,
+          "end": 10.4,
+          "cue": 7.62,
+          "penEnd": 10.32
+        },
+        {
+          "id": "outcome2",
+          "text": "Write an equation for each particle.",
+          "hold": 0,
+          "caption": "Write an equation for each particle",
+          "start": 10.4,
+          "speechEnd": 12.44,
+          "end": 12.64,
+          "cue": 10.46,
+          "penEnd": 12.56
+        },
+        {
+          "id": "outcome3",
+          "text": "And follow the motion when the string goes slack.",
+          "hold": 0,
+          "caption": "Follow motion when the string goes slack",
+          "start": 12.64,
+          "speechEnd": 15.84,
+          "end": 16.04,
+          "cue": 12.74,
+          "penEnd": 15.959999999999999
+        }
+      ],
+      "holds": [],
+      "audio": "connected-bodies-pulleys-s01.mp3",
+      "audioSha256": "7f089d43e29ea8b015e5d1efc2ef4b49e54a7a3dcb8d85f742fafd3a025189ef",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "provider": "elevenlabs",
+      "sampleDuration": 16.39,
+      "words": [
+        {
+          "word": "Syllabus",
+          "start": 0.4,
+          "end": 0.84
+        },
+        {
+          "word": "four",
+          "start": 0.84,
+          "end": 1.2
+        },
+        {
+          "word": "point",
+          "start": 1.2,
+          "end": 1.44
+        },
+        {
+          "word": "four",
+          "start": 1.44,
+          "end": 1.86
+        },
+        {
+          "word": "solve",
+          "start": 1.86,
+          "end": 2.7
+        },
+        {
+          "word": "simple",
+          "start": 2.7,
+          "end": 3.12
+        },
+        {
+          "word": "problems",
+          "start": 3.12,
+          "end": 3.62
+        },
+        {
+          "word": "which",
+          "start": 3.62,
+          "end": 4.3
+        },
+        {
+          "word": "may",
+          "start": 4.3,
+          "end": 4.54
+        },
+        {
+          "word": "be",
+          "start": 4.54,
+          "end": 4.68
+        },
+        {
+          "word": "modelled",
+          "start": 4.68,
+          "end": 5.16
+        },
+        {
+          "word": "as",
+          "start": 5.16,
+          "end": 5.42
+        },
+        {
+          "word": "the",
+          "start": 5.42,
+          "end": 5.56
+        },
+        {
+          "word": "motion",
+          "start": 5.56,
+          "end": 5.84
+        },
+        {
+          "word": "of",
+          "start": 5.84,
+          "end": 6.1
+        },
+        {
+          "word": "connected",
+          "start": 6.1,
+          "end": 6.52
+        },
+        {
+          "word": "particles.",
+          "start": 6.52,
+          "end": 7.04
+        },
+        {
+          "word": "By",
+          "start": 7.62,
+          "end": 7.72
+        },
+        {
+          "word": "the",
+          "start": 7.72,
+          "end": 7.86
+        },
+        {
+          "word": "end,",
+          "start": 7.86,
+          "end": 8.2
+        },
+        {
+          "word": "you",
+          "start": 8.72,
+          "end": 8.82
+        },
+        {
+          "word": "can",
+          "start": 8.82,
+          "end": 8.96
+        },
+        {
+          "word": "use",
+          "start": 8.96,
+          "end": 9.14
+        },
+        {
+          "word": "the",
+          "start": 9.14,
+          "end": 9.3
+        },
+        {
+          "word": "string",
+          "start": 9.3,
+          "end": 9.54
+        },
+        {
+          "word": "conditions.",
+          "start": 9.54,
+          "end": 10.06
+        },
+        {
+          "word": "Write",
+          "start": 10.46,
+          "end": 10.64
+        },
+        {
+          "word": "an",
+          "start": 10.64,
+          "end": 10.9
+        },
+        {
+          "word": "equation",
+          "start": 10.9,
+          "end": 11.22
+        },
+        {
+          "word": "for",
+          "start": 11.22,
+          "end": 11.58
+        },
+        {
+          "word": "each",
+          "start": 11.58,
+          "end": 11.82
+        },
+        {
+          "word": "particle.",
+          "start": 11.82,
+          "end": 12.28
+        },
+        {
+          "word": "And",
+          "start": 12.74,
+          "end": 12.78
+        },
+        {
+          "word": "follow",
+          "start": 12.78,
+          "end": 13.04
+        },
+        {
+          "word": "the",
+          "start": 13.04,
+          "end": 13.22
+        },
+        {
+          "word": "motion",
+          "start": 13.22,
+          "end": 13.58
+        },
+        {
+          "word": "when",
+          "start": 13.58,
+          "end": 14.38
+        },
+        {
+          "word": "the",
+          "start": 14.38,
+          "end": 14.54
+        },
+        {
+          "word": "string",
+          "start": 14.54,
+          "end": 14.86
+        },
+        {
+          "word": "goes",
+          "start": 14.86,
+          "end": 15.18
+        },
+        {
+          "word": "slack.",
+          "start": 15.18,
+          "end": 15.72
+        }
+      ],
+      "cues": {
+        "syllabus": 0.4,
+        "outcome1": 7.62,
+        "outcome2": 10.46,
+        "outcome3": 12.74
+      },
+      "figureEvents": [],
+      "wordCount": 41,
+      "text": "Syllabus four point four solve simple problems which may be modelled as the motion of connected particles. By the end, you can use the string conditions. Write an equation for each particle. And follow the motion when the string goes slack.",
+      "duration": 16.43102
+    },
+    {
+      "id": "s02",
+      "title": "Watch the whole motion first",
+      "mode": "story",
+      "voiceSpeed": 1,
+      "beats": [
+        {
+          "id": "intro",
+          "text": "Consider two particles hanging from a string over a pulley. The heavier particle, P, starts lower than Q.",
+          "hold": 0,
+          "start": 0.4,
+          "speechEnd": 7.57,
+          "end": 7.77,
+          "cue": 0.68,
+          "penEnd": 7.6899999999999995
+        },
+        {
+          "id": "release",
+          "text": "Release them. P speeds up downwards, pulling Q upwards. The pulley turns as the string passes over it.",
+          "hold": 0,
+          "start": 7.77,
+          "speechEnd": 18.61,
+          "end": 18.81,
+          "cue": 7.8,
+          "penEnd": 18.73
+        },
+        {
+          "id": "impact",
+          "text": "P lands. The string slackens.",
+          "hold": 0,
+          "start": 18.81,
+          "speechEnd": 21.96,
+          "end": 23.25,
+          "cue": 19.1,
+          "penEnd": 22.080000000000002
+        },
+        {
+          "id": "coast",
+          "text": "Gravity slows Q, and it stops. How high did Q get?",
+          "hold": 2,
+          "start": 23.25,
+          "speechEnd": 26.95,
+          "end": 27.15,
+          "cue": 23.33,
+          "penEnd": 27.07
+        }
+      ],
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 27.15,
+          "end": 29.15,
+          "duration": 2
+        }
+      ],
+      "audio": "connected-bodies-pulleys-s02.mp3",
+      "audioSha256": "3332d5f21b9c8ec923bdb4824bf544250a9a49576ebf60ac26e9b87011c1719c",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "provider": "elevenlabs",
+      "sampleDuration": 29.5,
+      "words": [
+        {
+          "word": "two",
+          "start": 0.68,
+          "end": 1.0
+        },
+        {
+          "word": "particles",
+          "start": 1.0,
+          "end": 1.38
+        },
+        {
+          "word": "hanging",
+          "start": 1.38,
+          "end": 1.92
+        },
+        {
+          "word": "from",
+          "start": 1.92,
+          "end": 2.2
+        },
+        {
+          "word": "a",
+          "start": 2.2,
+          "end": 2.4
+        },
+        {
+          "word": "string",
+          "start": 2.4,
+          "end": 2.68
+        },
+        {
+          "word": "over",
+          "start": 2.68,
+          "end": 3.28
+        },
+        {
+          "word": "a",
+          "start": 3.28,
+          "end": 3.5
+        },
+        {
+          "word": "pulley.",
+          "start": 3.5,
+          "end": 3.72
+        },
+        {
+          "word": "The",
+          "start": 4.46,
+          "end": 4.52
+        },
+        {
+          "word": "heavier",
+          "start": 4.52,
+          "end": 4.8
+        },
+        {
+          "word": "particle,",
+          "start": 4.8,
+          "end": 5.24
+        },
+        {
+          "word": "P,",
+          "start": 5.6,
+          "end": 5.76
+        },
+        {
+          "word": "starts",
+          "start": 6.26,
+          "end": 6.58
+        },
+        {
+          "word": "lower",
+          "start": 6.58,
+          "end": 6.96
+        },
+        {
+          "word": "than",
+          "start": 6.96,
+          "end": 7.18
+        },
+        {
+          "word": "Q.",
+          "start": 7.18,
+          "end": 7.42
+        },
+        {
+          "word": "Release",
+          "start": 7.8,
+          "end": 8.04
+        },
+        {
+          "word": "them.",
+          "start": 8.04,
+          "end": 8.28
+        },
+        {
+          "word": "P",
+          "start": 9.5,
+          "end": 9.74
+        },
+        {
+          "word": "speeds",
+          "start": 9.74,
+          "end": 10.38
+        },
+        {
+          "word": "up",
+          "start": 10.38,
+          "end": 10.82
+        },
+        {
+          "word": "downwards,",
+          "start": 10.82,
+          "end": 11.64
+        },
+        {
+          "word": "pulling",
+          "start": 12.18,
+          "end": 12.92
+        },
+        {
+          "word": "Q",
+          "start": 12.92,
+          "end": 13.42
+        },
+        {
+          "word": "upwards.",
+          "start": 13.42,
+          "end": 14.22
+        },
+        {
+          "word": "The",
+          "start": 15.94,
+          "end": 16.18
+        },
+        {
+          "word": "pulley",
+          "start": 16.18,
+          "end": 16.48
+        },
+        {
+          "word": "turns",
+          "start": 16.48,
+          "end": 17.0
+        },
+        {
+          "word": "as",
+          "start": 17.0,
+          "end": 17.12
+        },
+        {
+          "word": "the",
+          "start": 17.12,
+          "end": 17.26
+        },
+        {
+          "word": "string",
+          "start": 17.26,
+          "end": 17.54
+        },
+        {
+          "word": "passes",
+          "start": 17.54,
+          "end": 17.84
+        },
+        {
+          "word": "over",
+          "start": 17.84,
+          "end": 18.18
+        },
+        {
+          "word": "it.",
+          "start": 18.18,
+          "end": 18.46
+        },
+        {
+          "word": "P",
+          "start": 18.84,
+          "end": 19.1
+        },
+        {
+          "word": "lands.",
+          "start": 19.1,
+          "end": 19.84
+        },
+        {
+          "word": "The",
+          "start": 20.98,
+          "end": 21.08
+        },
+        {
+          "word": "string",
+          "start": 21.08,
+          "end": 21.42
+        },
+        {
+          "word": "slackens.",
+          "start": 21.42,
+          "end": 21.9
+        },
+        {
+          "word": "Gravity",
+          "start": 23.33,
+          "end": 23.65
+        },
+        {
+          "word": "slows",
+          "start": 23.65,
+          "end": 23.97
+        },
+        {
+          "word": "Q,",
+          "start": 23.97,
+          "end": 24.41
+        },
+        {
+          "word": "and",
+          "start": 24.61,
+          "end": 24.61
+        },
+        {
+          "word": "it",
+          "start": 24.61,
+          "end": 24.75
+        },
+        {
+          "word": "stops.",
+          "start": 24.75,
+          "end": 25.11
+        },
+        {
+          "word": "How",
+          "start": 25.65,
+          "end": 25.81
+        },
+        {
+          "word": "high",
+          "start": 25.81,
+          "end": 26.13
+        },
+        {
+          "word": "did",
+          "start": 26.13,
+          "end": 26.29
+        },
+        {
+          "word": "Q",
+          "start": 26.29,
+          "end": 26.57
+        },
+        {
+          "word": "get?",
+          "start": 26.57,
+          "end": 26.79
+        }
+      ],
+      "cues": {
+        "intro": 0.68,
+        "release": 7.8,
+        "impact": 19.1,
+        "coast": 23.33,
+        "peak": 24.75
+      },
+      "figureEvents": [],
+      "wordCount": 51,
+      "text": "two particles hanging from a string over a pulley. The heavier particle, P, starts lower than Q. Release them. P speeds up downwards, pulling Q upwards. The pulley turns as the string passes over it. P lands. The string slackens. Gravity slows Q, and it stops. How high did Q get?",
+      "duration": 29.54449,
+      "physicalStoryAlignment": {
+        "originalAudioSha256": "69e6a59701ad218ece49c99b4c5bbe35ddf968ef9bae747d17aff746156a3ada",
+        "breathStart": 22.16,
+        "breathSeconds": 1.09,
+        "releaseCue": 7.8,
+        "landingCue": 19.1,
+        "apexCue": 24.75,
+        "method": "A short silent breath inserted before Gravity; all existing Whisper words shifted by exact sample duration. No motion hold. Taut duration is twice free-rise duration."
+      }
+    },
+    {
+      "id": "s03",
+      "title": "The complete question",
+      "mode": "problem",
+      "voiceSpeed": 0.9,
+      "beats": [
+        {
+          "id": "massP",
+          "text": "Here is the full problem. P has mass three kilograms.",
+          "hold": 0,
+          "start": 0.4,
+          "speechEnd": 4.44,
+          "end": 4.64,
+          "cue": 0.61,
+          "penEnd": 4.56
+        },
+        {
+          "id": "massQ",
+          "text": "Q has mass one kilogram.",
+          "hold": 0,
+          "start": 4.64,
+          "speechEnd": 6.23,
+          "end": 6.43,
+          "cue": 4.64,
+          "penEnd": 6.35
+        },
+        {
+          "id": "heightP",
+          "text": "Initially, P is zero point eight metres above the floor.",
+          "hold": 0,
+          "start": 6.43,
+          "speechEnd": 10.37,
+          "end": 10.57,
+          "cue": 6.47,
+          "penEnd": 10.49
+        },
+        {
+          "id": "heightQ",
+          "text": "Q is one metre above the floor.",
+          "hold": 0,
+          "start": 10.57,
+          "speechEnd": 12.42,
+          "end": 12.62,
+          "cue": 10.57,
+          "penEnd": 12.54
+        },
+        {
+          "id": "rest",
+          "text": "Both are released from rest. Take g as ten metres per second squared.",
+          "hold": 0,
+          "start": 12.62,
+          "speechEnd": 19.16,
+          "end": 19.36,
+          "cue": 12.67,
+          "penEnd": 19.28
+        },
+        {
+          "id": "conditions",
+          "text": "The string is light and inextensible, initially taut, over a fixed smooth light pulley. Ignore air resistance.",
+          "hold": 0,
+          "start": 19.36,
+          "speechEnd": 29.47,
+          "end": 29.67,
+          "cue": 19.41,
+          "penEnd": 29.590000000000003
+        },
+        {
+          "id": "floor",
+          "text": "P stays on the floor without rebounding. Q has clearance below the pulley. The string goes slack after P lands.",
+          "hold": 0,
+          "start": 29.67,
+          "speechEnd": 38.52,
+          "end": 38.72,
+          "cue": 29.75,
+          "penEnd": 38.64
+        },
+        {
+          "id": "unknown",
+          "text": "Find the maximum height of Q above the floor. We will find acceleration, tension, and the speed at impact along the way. Read the givens before we start.",
+          "hold": 3,
+          "start": 38.72,
+          "speechEnd": 54.16,
+          "end": 54.36,
+          "cue": 38.79,
+          "penEnd": 54.28
+        }
+      ],
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 54.36,
+          "end": 57.36,
+          "duration": 3
+        }
+      ],
+      "audio": "connected-bodies-pulleys-s03.mp3",
+      "audioSha256": "1ece86845ff63b014fe65bde9d0cb50405634288a7491e4cb7980217bd5527af",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "provider": "elevenlabs",
+      "sampleDuration": 57.71,
+      "words": [
+        {
+          "word": "is",
+          "start": 0.61,
+          "end": 0.83
+        },
+        {
+          "word": "the",
+          "start": 0.83,
+          "end": 0.95
+        },
+        {
+          "word": "full",
+          "start": 0.95,
+          "end": 1.17
+        },
+        {
+          "word": "problem.",
+          "start": 1.17,
+          "end": 1.59
+        },
+        {
+          "word": "P",
+          "start": 2.35,
+          "end": 2.67
+        },
+        {
+          "word": "has",
+          "start": 2.67,
+          "end": 2.99
+        },
+        {
+          "word": "mass",
+          "start": 2.99,
+          "end": 3.31
+        },
+        {
+          "word": "three",
+          "start": 3.31,
+          "end": 3.65
+        },
+        {
+          "word": "kilograms.",
+          "start": 3.65,
+          "end": 4.09
+        },
+        {
+          "word": "Q",
+          "start": 4.64,
+          "end": 4.83
+        },
+        {
+          "word": "has",
+          "start": 4.83,
+          "end": 5.07
+        },
+        {
+          "word": "mass",
+          "start": 5.07,
+          "end": 5.31
+        },
+        {
+          "word": "one",
+          "start": 5.31,
+          "end": 5.59
+        },
+        {
+          "word": "kilogram.",
+          "start": 5.59,
+          "end": 5.99
+        },
+        {
+          "word": "Initially,",
+          "start": 6.47,
+          "end": 6.89
+        },
+        {
+          "word": "P",
+          "start": 7.25,
+          "end": 7.39
+        },
+        {
+          "word": "is",
+          "start": 7.39,
+          "end": 7.73
+        },
+        {
+          "word": "zero",
+          "start": 7.73,
+          "end": 8.11
+        },
+        {
+          "word": "point",
+          "start": 8.11,
+          "end": 8.43
+        },
+        {
+          "word": "eight",
+          "start": 8.43,
+          "end": 8.77
+        },
+        {
+          "word": "metres",
+          "start": 8.77,
+          "end": 9.17
+        },
+        {
+          "word": "above",
+          "start": 9.17,
+          "end": 9.73
+        },
+        {
+          "word": "the",
+          "start": 9.73,
+          "end": 9.95
+        },
+        {
+          "word": "floor.",
+          "start": 9.95,
+          "end": 10.19
+        },
+        {
+          "word": "Q",
+          "start": 10.57,
+          "end": 10.79
+        },
+        {
+          "word": "is",
+          "start": 10.79,
+          "end": 10.93
+        },
+        {
+          "word": "one",
+          "start": 10.93,
+          "end": 11.17
+        },
+        {
+          "word": "metre",
+          "start": 11.17,
+          "end": 11.41
+        },
+        {
+          "word": "above",
+          "start": 11.41,
+          "end": 11.75
+        },
+        {
+          "word": "the",
+          "start": 11.75,
+          "end": 11.97
+        },
+        {
+          "word": "floor.",
+          "start": 11.97,
+          "end": 12.25
+        },
+        {
+          "word": "Both",
+          "start": 12.67,
+          "end": 12.89
+        },
+        {
+          "word": "are",
+          "start": 12.89,
+          "end": 13.09
+        },
+        {
+          "word": "released",
+          "start": 13.09,
+          "end": 13.37
+        },
+        {
+          "word": "from",
+          "start": 13.37,
+          "end": 13.65
+        },
+        {
+          "word": "rest.",
+          "start": 13.65,
+          "end": 14.11
+        },
+        {
+          "word": "Take",
+          "start": 15.09,
+          "end": 15.49
+        },
+        {
+          "word": "g",
+          "start": 15.49,
+          "end": 16.01
+        },
+        {
+          "word": "as",
+          "start": 16.01,
+          "end": 16.75
+        },
+        {
+          "word": "ten",
+          "start": 16.75,
+          "end": 17.09
+        },
+        {
+          "word": "metres",
+          "start": 17.09,
+          "end": 17.51
+        },
+        {
+          "word": "per",
+          "start": 17.51,
+          "end": 18.07
+        },
+        {
+          "word": "second",
+          "start": 18.07,
+          "end": 18.45
+        },
+        {
+          "word": "squared.",
+          "start": 18.45,
+          "end": 18.87
+        },
+        {
+          "word": "The",
+          "start": 19.41,
+          "end": 19.51
+        },
+        {
+          "word": "string",
+          "start": 19.51,
+          "end": 19.87
+        },
+        {
+          "word": "is",
+          "start": 19.87,
+          "end": 20.13
+        },
+        {
+          "word": "light",
+          "start": 20.13,
+          "end": 20.57
+        },
+        {
+          "word": "and",
+          "start": 20.57,
+          "end": 20.93
+        },
+        {
+          "word": "inextensible,",
+          "start": 20.93,
+          "end": 21.73
+        },
+        {
+          "word": "initially",
+          "start": 22.21,
+          "end": 22.95
+        },
+        {
+          "word": "taut,",
+          "start": 22.95,
+          "end": 23.67
+        },
+        {
+          "word": "over",
+          "start": 24.01,
+          "end": 24.47
+        },
+        {
+          "word": "a",
+          "start": 24.47,
+          "end": 24.85
+        },
+        {
+          "word": "fixed",
+          "start": 24.85,
+          "end": 25.07
+        },
+        {
+          "word": "smooth",
+          "start": 25.07,
+          "end": 25.67
+        },
+        {
+          "word": "light",
+          "start": 25.67,
+          "end": 26.07
+        },
+        {
+          "word": "pulley.",
+          "start": 26.07,
+          "end": 26.49
+        },
+        {
+          "word": "Ignore",
+          "start": 27.43,
+          "end": 28.23
+        },
+        {
+          "word": "air",
+          "start": 28.23,
+          "end": 28.55
+        },
+        {
+          "word": "resistance.",
+          "start": 28.55,
+          "end": 29.11
+        },
+        {
+          "word": "P",
+          "start": 29.75,
+          "end": 29.89
+        },
+        {
+          "word": "stays",
+          "start": 29.89,
+          "end": 30.57
+        },
+        {
+          "word": "on",
+          "start": 30.57,
+          "end": 30.79
+        },
+        {
+          "word": "the",
+          "start": 30.79,
+          "end": 30.89
+        },
+        {
+          "word": "floor",
+          "start": 30.89,
+          "end": 31.17
+        },
+        {
+          "word": "without",
+          "start": 31.17,
+          "end": 31.73
+        },
+        {
+          "word": "rebounding.",
+          "start": 31.73,
+          "end": 32.35
+        },
+        {
+          "word": "Q",
+          "start": 33.17,
+          "end": 33.41
+        },
+        {
+          "word": "has",
+          "start": 33.41,
+          "end": 33.63
+        },
+        {
+          "word": "clearance",
+          "start": 33.63,
+          "end": 34.05
+        },
+        {
+          "word": "below",
+          "start": 34.05,
+          "end": 34.45
+        },
+        {
+          "word": "the",
+          "start": 34.45,
+          "end": 34.67
+        },
+        {
+          "word": "pulley.",
+          "start": 34.67,
+          "end": 34.97
+        },
+        {
+          "word": "The",
+          "start": 35.97,
+          "end": 36.15
+        },
+        {
+          "word": "string",
+          "start": 36.15,
+          "end": 36.41
+        },
+        {
+          "word": "goes",
+          "start": 36.41,
+          "end": 36.65
+        },
+        {
+          "word": "slack",
+          "start": 36.65,
+          "end": 37.15
+        },
+        {
+          "word": "after",
+          "start": 37.15,
+          "end": 37.73
+        },
+        {
+          "word": "P",
+          "start": 37.73,
+          "end": 38.01
+        },
+        {
+          "word": "lands.",
+          "start": 38.01,
+          "end": 38.27
+        },
+        {
+          "word": "Find",
+          "start": 38.79,
+          "end": 39.01
+        },
+        {
+          "word": "the",
+          "start": 39.01,
+          "end": 39.25
+        },
+        {
+          "word": "maximum",
+          "start": 39.25,
+          "end": 39.67
+        },
+        {
+          "word": "height",
+          "start": 39.67,
+          "end": 40.25
+        },
+        {
+          "word": "of",
+          "start": 40.25,
+          "end": 41.01
+        },
+        {
+          "word": "Q",
+          "start": 41.01,
+          "end": 41.41
+        },
+        {
+          "word": "above",
+          "start": 41.41,
+          "end": 42.39
+        },
+        {
+          "word": "the",
+          "start": 42.39,
+          "end": 42.63
+        },
+        {
+          "word": "floor.",
+          "start": 42.63,
+          "end": 42.97
+        },
+        {
+          "word": "We",
+          "start": 43.77,
+          "end": 44.13
+        },
+        {
+          "word": "will",
+          "start": 44.13,
+          "end": 44.29
+        },
+        {
+          "word": "find",
+          "start": 44.29,
+          "end": 44.65
+        },
+        {
+          "word": "acceleration,",
+          "start": 44.65,
+          "end": 45.43
+        },
+        {
+          "word": "tension",
+          "start": 46.25,
+          "end": 46.77
+        },
+        {
+          "word": "and",
+          "start": 46.77,
+          "end": 47.65
+        },
+        {
+          "word": "the",
+          "start": 47.65,
+          "end": 47.81
+        },
+        {
+          "word": "speeded",
+          "start": 47.81,
+          "end": 48.31
+        },
+        {
+          "word": "impact",
+          "start": 48.31,
+          "end": 48.77
+        },
+        {
+          "word": "along",
+          "start": 48.77,
+          "end": 49.71
+        },
+        {
+          "word": "the",
+          "start": 49.71,
+          "end": 50.01
+        },
+        {
+          "word": "way.",
+          "start": 50.01,
+          "end": 50.29
+        },
+        {
+          "word": "Read",
+          "start": 51.21,
+          "end": 51.61
+        },
+        {
+          "word": "the",
+          "start": 51.61,
+          "end": 51.83
+        },
+        {
+          "word": "givens",
+          "start": 51.83,
+          "end": 53.03
+        },
+        {
+          "word": "before",
+          "start": 53.03,
+          "end": 53.33
+        },
+        {
+          "word": "we",
+          "start": 53.33,
+          "end": 53.55
+        },
+        {
+          "word": "start.",
+          "start": 53.55,
+          "end": 53.83
+        }
+      ],
+      "cues": {
+        "massP": 0.61,
+        "massQ": 4.64,
+        "heightP": 6.47,
+        "heightQ": 10.57,
+        "rest": 12.67,
+        "conditions": 19.41,
+        "floor": 29.75,
+        "unknown": 38.79
+      },
+      "figureEvents": [
+        {
+          "id": "number-7",
+          "wordIndex": 7,
+          "word": "3",
+          "spokenPhrase": "three",
+          "start": 3.31,
+          "target": "massP",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-12",
+          "wordIndex": 12,
+          "word": "1",
+          "spokenPhrase": "one",
+          "start": 5.31,
+          "target": "massQ",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-17",
+          "wordIndex": 17,
+          "word": "0.8",
+          "spokenPhrase": "zero point eight",
+          "start": 7.73,
+          "target": "heightP",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-26",
+          "wordIndex": 26,
+          "word": "1",
+          "spokenPhrase": "one",
+          "start": 10.93,
+          "target": "heightQ",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-35",
+          "wordIndex": 35,
+          "word": "0",
+          "spokenPhrase": "rest.",
+          "start": 13.65,
+          "target": "initial",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-39",
+          "wordIndex": 39,
+          "word": "10",
+          "spokenPhrase": "ten",
+          "start": 16.75,
+          "target": "gravity",
+          "kind": "spoken"
+        }
+      ],
+      "wordCount": 108,
+      "text": "is the full problem. P has mass three kilograms. Q has mass one kilogram. Initially, P is zero point eight metres above the floor. Q is one metre above the floor. Both are released from rest. Take g as ten metres per second squared. The string is light and inextensible, initially taut, over a fixed smooth light pulley. Ignore air resistance. P stays on the floor without rebounding. Q has clearance below the pulley. The string goes slack after P lands. Find the maximum height of Q above the floor. We will find acceleration, tension and the speeded impact along the way. Read the givens before we start.",
+      "duration": 57.756735
+    },
+    {
+      "id": "s04",
+      "title": "What the string conditions tell us",
+      "mode": "model",
+      "voiceSpeed": 1,
+      "beats": [
+        {
+          "id": "taut",
+          "text": "While the inextensible string is taut, each length gained on one side is lost on the other. P falls as far as Q rises.",
+          "hold": 0,
+          "start": 0.4,
+          "speechEnd": 10.66,
+          "end": 10.86,
+          "cue": 0.67,
+          "penEnd": 10.78
+        },
+        {
+          "id": "accel",
+          "text": "Their speeds and acceleration magnitudes are equal. Their acceleration vectors point in opposite directions.",
+          "hold": 0,
+          "start": 10.86,
+          "speechEnd": 18.14,
+          "end": 18.34,
+          "cue": 10.93,
+          "penEnd": 18.26
+        },
+        {
+          "id": "tension",
+          "text": "Because the string is light and the pulley smooth, the tension has the same magnitude on both sides. It pulls each particle upwards.",
+          "hold": 0,
+          "start": 18.34,
+          "speechEnd": 28.24,
+          "end": 28.44,
+          "cue": 18.41,
+          "penEnd": 28.360000000000003
+        },
+        {
+          "id": "isolate",
+          "text": "Equal tensions do not mean balanced forces on either particle. Isolate each body. Choose down positive for P and up positive for Q.",
+          "hold": 0,
+          "start": 28.44,
+          "speechEnd": 40.2,
+          "end": 40.4,
+          "cue": 28.45,
+          "penEnd": 40.32
+        },
+        {
+          "id": "question",
+          "text": "Which particle has weight greater than tension?",
+          "hold": 3,
+          "start": 40.4,
+          "speechEnd": 43.31,
+          "end": 43.51,
+          "cue": 40.49,
+          "penEnd": 43.43
+        },
+        {
+          "id": "answer",
+          "text": "P does: its resultant and acceleration are downwards. For Q, tension exceeds weight, giving an upward resultant.",
+          "hold": 2,
+          "start": 46.51,
+          "speechEnd": 56.22,
+          "end": 56.42,
+          "cue": 46.51,
+          "penEnd": 56.34
+        }
+      ],
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 43.51,
+          "end": 46.51,
+          "duration": 3
+        },
+        {
+          "kind": "hold",
+          "start": 56.42,
+          "end": 58.42,
+          "duration": 2
+        }
+      ],
+      "audio": "connected-bodies-pulleys-s04.mp3",
+      "audioSha256": "4bce277d39177fb2d00492558bccd7bde1bc8e2b4e538415892363d100f19b63",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "provider": "elevenlabs",
+      "sampleDuration": 58.77,
+      "words": [
+        {
+          "word": "the",
+          "start": 0.67,
+          "end": 0.89
+        },
+        {
+          "word": "inextensible",
+          "start": 0.89,
+          "end": 1.63
+        },
+        {
+          "word": "string",
+          "start": 1.63,
+          "end": 2.07
+        },
+        {
+          "word": "is",
+          "start": 2.07,
+          "end": 2.45
+        },
+        {
+          "word": "taut,",
+          "start": 2.45,
+          "end": 2.95
+        },
+        {
+          "word": "each",
+          "start": 3.51,
+          "end": 3.95
+        },
+        {
+          "word": "length",
+          "start": 3.95,
+          "end": 4.39
+        },
+        {
+          "word": "gained",
+          "start": 4.39,
+          "end": 5.13
+        },
+        {
+          "word": "on",
+          "start": 5.13,
+          "end": 5.47
+        },
+        {
+          "word": "one",
+          "start": 5.47,
+          "end": 5.65
+        },
+        {
+          "word": "side",
+          "start": 5.65,
+          "end": 6.01
+        },
+        {
+          "word": "is",
+          "start": 6.01,
+          "end": 6.27
+        },
+        {
+          "word": "lost",
+          "start": 6.27,
+          "end": 6.55
+        },
+        {
+          "word": "on",
+          "start": 6.55,
+          "end": 6.83
+        },
+        {
+          "word": "the",
+          "start": 6.83,
+          "end": 6.99
+        },
+        {
+          "word": "other.",
+          "start": 6.99,
+          "end": 7.27
+        },
+        {
+          "word": "P",
+          "start": 8.21,
+          "end": 8.49
+        },
+        {
+          "word": "falls",
+          "start": 8.49,
+          "end": 8.91
+        },
+        {
+          "word": "as",
+          "start": 8.91,
+          "end": 9.23
+        },
+        {
+          "word": "far",
+          "start": 9.23,
+          "end": 9.55
+        },
+        {
+          "word": "as",
+          "start": 9.55,
+          "end": 9.79
+        },
+        {
+          "word": "Q",
+          "start": 9.79,
+          "end": 9.99
+        },
+        {
+          "word": "rises.",
+          "start": 9.99,
+          "end": 10.41
+        },
+        {
+          "word": "Their",
+          "start": 10.93,
+          "end": 11.03
+        },
+        {
+          "word": "speeds",
+          "start": 11.03,
+          "end": 11.47
+        },
+        {
+          "word": "and",
+          "start": 11.47,
+          "end": 11.71
+        },
+        {
+          "word": "acceleration",
+          "start": 11.71,
+          "end": 12.09
+        },
+        {
+          "word": "magnitudes",
+          "start": 12.09,
+          "end": 12.91
+        },
+        {
+          "word": "are",
+          "start": 12.91,
+          "end": 13.59
+        },
+        {
+          "word": "equal.",
+          "start": 13.59,
+          "end": 13.97
+        },
+        {
+          "word": "The",
+          "start": 15.09,
+          "end": 15.21
+        },
+        {
+          "word": "acceleration",
+          "start": 15.21,
+          "end": 15.59
+        },
+        {
+          "word": "vectors",
+          "start": 15.59,
+          "end": 16.01
+        },
+        {
+          "word": "point",
+          "start": 16.01,
+          "end": 16.59
+        },
+        {
+          "word": "in",
+          "start": 16.59,
+          "end": 17.01
+        },
+        {
+          "word": "opposite",
+          "start": 17.01,
+          "end": 17.41
+        },
+        {
+          "word": "directions.",
+          "start": 17.41,
+          "end": 17.97
+        },
+        {
+          "word": "Because",
+          "start": 18.41,
+          "end": 18.65
+        },
+        {
+          "word": "the",
+          "start": 18.65,
+          "end": 18.91
+        },
+        {
+          "word": "string",
+          "start": 18.91,
+          "end": 19.23
+        },
+        {
+          "word": "is",
+          "start": 19.23,
+          "end": 19.43
+        },
+        {
+          "word": "light",
+          "start": 19.43,
+          "end": 19.77
+        },
+        {
+          "word": "and",
+          "start": 19.77,
+          "end": 20.11
+        },
+        {
+          "word": "the",
+          "start": 20.11,
+          "end": 20.21
+        },
+        {
+          "word": "pulley",
+          "start": 20.21,
+          "end": 20.53
+        },
+        {
+          "word": "smooth,",
+          "start": 20.53,
+          "end": 21.01
+        },
+        {
+          "word": "the",
+          "start": 21.71,
+          "end": 21.95
+        },
+        {
+          "word": "tension",
+          "start": 21.95,
+          "end": 22.37
+        },
+        {
+          "word": "has",
+          "start": 22.37,
+          "end": 22.71
+        },
+        {
+          "word": "the",
+          "start": 22.71,
+          "end": 22.87
+        },
+        {
+          "word": "same",
+          "start": 22.87,
+          "end": 23.21
+        },
+        {
+          "word": "magnitude",
+          "start": 23.21,
+          "end": 23.73
+        },
+        {
+          "word": "on",
+          "start": 23.73,
+          "end": 24.13
+        },
+        {
+          "word": "both",
+          "start": 24.13,
+          "end": 24.43
+        },
+        {
+          "word": "sides.",
+          "start": 24.43,
+          "end": 24.93
+        },
+        {
+          "word": "it",
+          "start": 24.93,
+          "end": 26.03
+        },
+        {
+          "word": "pulls",
+          "start": 26.03,
+          "end": 26.45
+        },
+        {
+          "word": "each",
+          "start": 26.45,
+          "end": 26.91
+        },
+        {
+          "word": "particle",
+          "start": 26.91,
+          "end": 27.23
+        },
+        {
+          "word": "upwards.",
+          "start": 27.23,
+          "end": 27.93
+        },
+        {
+          "word": "Equal",
+          "start": 28.45,
+          "end": 28.81
+        },
+        {
+          "word": "tensions",
+          "start": 28.81,
+          "end": 29.23
+        },
+        {
+          "word": "do",
+          "start": 29.23,
+          "end": 30.17
+        },
+        {
+          "word": "not",
+          "start": 30.17,
+          "end": 30.33
+        },
+        {
+          "word": "mean",
+          "start": 30.33,
+          "end": 30.61
+        },
+        {
+          "word": "balanced",
+          "start": 30.61,
+          "end": 31.03
+        },
+        {
+          "word": "forces",
+          "start": 31.03,
+          "end": 31.61
+        },
+        {
+          "word": "on",
+          "start": 31.61,
+          "end": 32.33
+        },
+        {
+          "word": "either",
+          "start": 32.33,
+          "end": 32.61
+        },
+        {
+          "word": "particle.",
+          "start": 32.61,
+          "end": 33.07
+        },
+        {
+          "word": "Isolate",
+          "start": 33.89,
+          "end": 34.59
+        },
+        {
+          "word": "each",
+          "start": 34.59,
+          "end": 34.91
+        },
+        {
+          "word": "body.",
+          "start": 34.91,
+          "end": 35.19
+        },
+        {
+          "word": "Choose",
+          "start": 35.99,
+          "end": 36.15
+        },
+        {
+          "word": "down",
+          "start": 36.15,
+          "end": 36.55
+        },
+        {
+          "word": "positive",
+          "start": 36.55,
+          "end": 37.35
+        },
+        {
+          "word": "for",
+          "start": 37.35,
+          "end": 37.75
+        },
+        {
+          "word": "P",
+          "start": 37.75,
+          "end": 37.99
+        },
+        {
+          "word": "and",
+          "start": 37.99,
+          "end": 38.89
+        },
+        {
+          "word": "up",
+          "start": 38.89,
+          "end": 39.13
+        },
+        {
+          "word": "positive",
+          "start": 39.13,
+          "end": 39.39
+        },
+        {
+          "word": "for",
+          "start": 39.39,
+          "end": 39.77
+        },
+        {
+          "word": "Q.",
+          "start": 39.77,
+          "end": 40.03
+        },
+        {
+          "word": "Which",
+          "start": 40.49,
+          "end": 40.61
+        },
+        {
+          "word": "particle",
+          "start": 40.61,
+          "end": 40.93
+        },
+        {
+          "word": "has",
+          "start": 40.93,
+          "end": 41.37
+        },
+        {
+          "word": "weight",
+          "start": 41.37,
+          "end": 41.79
+        },
+        {
+          "word": "greater",
+          "start": 41.79,
+          "end": 42.51
+        },
+        {
+          "word": "than",
+          "start": 42.51,
+          "end": 42.75
+        },
+        {
+          "word": "tension?",
+          "start": 42.75,
+          "end": 43.09
+        },
+        {
+          "word": "P",
+          "start": 46.51,
+          "end": 46.7
+        },
+        {
+          "word": "does.",
+          "start": 46.7,
+          "end": 46.92
+        },
+        {
+          "word": "Its",
+          "start": 48.02,
+          "end": 48.18
+        },
+        {
+          "word": "resultant",
+          "start": 48.18,
+          "end": 48.82
+        },
+        {
+          "word": "and",
+          "start": 48.82,
+          "end": 49.06
+        },
+        {
+          "word": "acceleration",
+          "start": 49.06,
+          "end": 49.64
+        },
+        {
+          "word": "are",
+          "start": 49.64,
+          "end": 50.22
+        },
+        {
+          "word": "downwards.",
+          "start": 50.22,
+          "end": 50.58
+        },
+        {
+          "word": "For",
+          "start": 51.64,
+          "end": 51.84
+        },
+        {
+          "word": "Q,",
+          "start": 51.84,
+          "end": 52.12
+        },
+        {
+          "word": "tension",
+          "start": 52.76,
+          "end": 52.86
+        },
+        {
+          "word": "exceeds",
+          "start": 52.86,
+          "end": 53.26
+        },
+        {
+          "word": "weight,",
+          "start": 53.26,
+          "end": 53.8
+        },
+        {
+          "word": "giving",
+          "start": 54.2,
+          "end": 54.72
+        },
+        {
+          "word": "an",
+          "start": 54.72,
+          "end": 54.94
+        },
+        {
+          "word": "upward",
+          "start": 54.94,
+          "end": 55.18
+        },
+        {
+          "word": "resultant.",
+          "start": 55.18,
+          "end": 56.1
+        }
+      ],
+      "cues": {
+        "taut": 0.67,
+        "accel": 10.93,
+        "tension": 18.41,
+        "isolate": 28.45,
+        "question": 40.49,
+        "answer": 46.51
+      },
+      "figureEvents": [],
+      "wordCount": 107,
+      "text": "the inextensible string is taut, each length gained on one side is lost on the other. P falls as far as Q rises. Their speeds and acceleration magnitudes are equal. The acceleration vectors point in opposite directions. Because the string is light and the pulley smooth, the tension has the same magnitude on both sides. it pulls each particle upwards. Equal tensions do not mean balanced forces on either particle. Isolate each body. Choose down positive for P and up positive for Q. Which particle has weight greater than tension? P does. Its resultant and acceleration are downwards. For Q, tension exceeds weight, giving an upward resultant.",
+      "duration": 58.801633
+    },
+    {
+      "id": "s05",
+      "title": "Stage 1: acceleration and tension",
+      "mode": "forces",
+      "voiceSpeed": 0.9,
+      "beats": [
+        {
+          "id": "formula",
+          "text": "Start with Newton's second law: resultant force equals mass times acceleration.",
+          "hold": 0,
+          "ink": "F = ma",
+          "start": 0.4,
+          "speechEnd": 6.68,
+          "end": 6.88,
+          "cue": 0.4,
+          "penEnd": 6.8
+        },
+        {
+          "id": "pformula",
+          "text": "For P, down is positive. Weight minus tension equals its mass times acceleration.",
+          "hold": 0,
+          "ink": "m₁g - T = m₁a",
+          "start": 6.88,
+          "speechEnd": 15.4,
+          "end": 15.6,
+          "cue": 6.93,
+          "penEnd": 15.52
+        },
+        {
+          "id": "psub",
+          "text": "Substitute three for the mass and ten for g. Thirty minus T equals three a.",
+          "hold": 0,
+          "ink": "30 - T = 3a",
+          "start": 15.6,
+          "speechEnd": 21.4,
+          "end": 21.6,
+          "cue": 15.6,
+          "penEnd": 21.520000000000003
+        },
+        {
+          "id": "qformula",
+          "text": "For Q, up is positive. Tension minus weight equals mass times acceleration.",
+          "hold": 0,
+          "ink": "T - m₂g = m₂a",
+          "start": 21.6,
+          "speechEnd": 28.24,
+          "end": 28.44,
+          "cue": 21.69,
+          "penEnd": 28.360000000000003
+        },
+        {
+          "id": "qsub",
+          "text": "Its mass is one, and g is ten. So T minus ten equals a.",
+          "hold": 0,
+          "ink": "T - 10 = a",
+          "start": 28.44,
+          "speechEnd": 34.67,
+          "end": 34.87,
+          "cue": 28.65,
+          "penEnd": 34.79
+        },
+        {
+          "id": "add",
+          "text": "Add these scalar equations, with their own positive directions. The tensions cancel algebraically. Twenty equals four a.",
+          "hold": 0,
+          "ink": "20 = 4a",
+          "start": 34.87,
+          "speechEnd": 46.51,
+          "end": 46.71,
+          "cue": 34.87,
+          "penEnd": 46.63
+        },
+        {
+          "id": "answer",
+          "text": "Divide both sides by four. The common acceleration magnitude is five metres per second squared. P down, Q up.",
+          "hold": 2,
+          "ink": "a = 5 m s⁻²",
+          "start": 46.71,
+          "speechEnd": 57.05,
+          "end": 57.25,
+          "cue": 46.71,
+          "penEnd": 57.17
+        },
+        {
+          "id": "tformula",
+          "text": "Now use Q's equation to find tension. T equals its mass multiplied by the sum of g and a.",
+          "hold": 0,
+          "ink": "T = m₂(g + a)",
+          "start": 59.25,
+          "speechEnd": 67.66,
+          "end": 67.86,
+          "cue": 59.29,
+          "penEnd": 67.78
+        },
+        {
+          "id": "tsub",
+          "text": "One times ten plus five gives a tension of fifteen newtons.",
+          "hold": 2,
+          "ink": "T = 1(10 + 5) = 15 N",
+          "start": 67.86,
+          "speechEnd": 71.52,
+          "end": 71.72,
+          "cue": 67.86,
+          "penEnd": 71.64
+        }
+      ],
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 57.25,
+          "end": 59.25,
+          "duration": 2
+        },
+        {
+          "kind": "hold",
+          "start": 71.72,
+          "end": 73.72,
+          "duration": 2
+        }
+      ],
+      "audio": "connected-bodies-pulleys-s05.mp3",
+      "audioSha256": "74f96185be2c9ead04c50b481b09ff8624257af30c96e006a71d2a625bf5d6ed",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "provider": "elevenlabs",
+      "sampleDuration": 74.07,
+      "words": [
+        {
+          "word": "Start",
+          "start": 0.4,
+          "end": 0.81
+        },
+        {
+          "word": "with",
+          "start": 0.81,
+          "end": 1.09
+        },
+        {
+          "word": "Newton's",
+          "start": 1.09,
+          "end": 1.77
+        },
+        {
+          "word": "second",
+          "start": 1.77,
+          "end": 2.13
+        },
+        {
+          "word": "law.",
+          "start": 2.13,
+          "end": 2.57
+        },
+        {
+          "word": "Resultant",
+          "start": 3.15,
+          "end": 3.73
+        },
+        {
+          "word": "force",
+          "start": 3.73,
+          "end": 4.03
+        },
+        {
+          "word": "equals",
+          "start": 4.03,
+          "end": 4.75
+        },
+        {
+          "word": "mass",
+          "start": 4.75,
+          "end": 5.15
+        },
+        {
+          "word": "times",
+          "start": 5.15,
+          "end": 5.63
+        },
+        {
+          "word": "acceleration.",
+          "start": 5.63,
+          "end": 6.13
+        },
+        {
+          "word": "For",
+          "start": 6.93,
+          "end": 7.07
+        },
+        {
+          "word": "P,",
+          "start": 7.07,
+          "end": 7.37
+        },
+        {
+          "word": "down",
+          "start": 7.93,
+          "end": 8.15
+        },
+        {
+          "word": "is",
+          "start": 8.15,
+          "end": 8.39
+        },
+        {
+          "word": "positive.",
+          "start": 8.39,
+          "end": 8.83
+        },
+        {
+          "word": "Weight",
+          "start": 10.03,
+          "end": 10.33
+        },
+        {
+          "word": "minus",
+          "start": 10.33,
+          "end": 11.23
+        },
+        {
+          "word": "tension",
+          "start": 11.23,
+          "end": 11.95
+        },
+        {
+          "word": "equals",
+          "start": 11.95,
+          "end": 12.77
+        },
+        {
+          "word": "its",
+          "start": 12.77,
+          "end": 13.07
+        },
+        {
+          "word": "mass",
+          "start": 13.07,
+          "end": 13.37
+        },
+        {
+          "word": "times",
+          "start": 13.37,
+          "end": 13.93
+        },
+        {
+          "word": "acceleration.",
+          "start": 13.93,
+          "end": 14.83
+        },
+        {
+          "word": "Substitute",
+          "start": 15.6,
+          "end": 16.19
+        },
+        {
+          "word": "three",
+          "start": 16.19,
+          "end": 16.65
+        },
+        {
+          "word": "for",
+          "start": 16.65,
+          "end": 16.91
+        },
+        {
+          "word": "the",
+          "start": 16.91,
+          "end": 17.07
+        },
+        {
+          "word": "mass",
+          "start": 17.07,
+          "end": 17.37
+        },
+        {
+          "word": "and",
+          "start": 17.37,
+          "end": 17.89
+        },
+        {
+          "word": "ten",
+          "start": 17.89,
+          "end": 18.09
+        },
+        {
+          "word": "for",
+          "start": 18.09,
+          "end": 18.41
+        },
+        {
+          "word": "g.",
+          "start": 18.41,
+          "end": 18.77
+        },
+        {
+          "word": "Thirty",
+          "start": 19.29,
+          "end": 19.55
+        },
+        {
+          "word": "minus",
+          "start": 19.55,
+          "end": 19.83
+        },
+        {
+          "word": "T",
+          "start": 19.83,
+          "end": 20.25
+        },
+        {
+          "word": "equals",
+          "start": 20.25,
+          "end": 20.59
+        },
+        {
+          "word": "three",
+          "start": 20.59,
+          "end": 21.01
+        },
+        {
+          "word": "a.",
+          "start": 21.01,
+          "end": 21.27
+        },
+        {
+          "word": "For",
+          "start": 21.69,
+          "end": 21.79
+        },
+        {
+          "word": "Q,",
+          "start": 21.79,
+          "end": 22.11
+        },
+        {
+          "word": "up",
+          "start": 22.69,
+          "end": 22.83
+        },
+        {
+          "word": "is",
+          "start": 22.83,
+          "end": 22.99
+        },
+        {
+          "word": "positive.",
+          "start": 22.99,
+          "end": 23.41
+        },
+        {
+          "word": "Tension",
+          "start": 24.19,
+          "end": 24.47
+        },
+        {
+          "word": "minus",
+          "start": 24.47,
+          "end": 24.83
+        },
+        {
+          "word": "weight",
+          "start": 24.83,
+          "end": 25.33
+        },
+        {
+          "word": "equals",
+          "start": 25.33,
+          "end": 26.05
+        },
+        {
+          "word": "mass",
+          "start": 26.05,
+          "end": 26.47
+        },
+        {
+          "word": "times",
+          "start": 26.47,
+          "end": 27.05
+        },
+        {
+          "word": "acceleration.",
+          "start": 27.05,
+          "end": 27.81
+        },
+        {
+          "word": "its",
+          "start": 27.81,
+          "end": 28.24
+        },
+        {
+          "word": "mass",
+          "start": 28.65,
+          "end": 28.99
+        },
+        {
+          "word": "is",
+          "start": 28.99,
+          "end": 29.29
+        },
+        {
+          "word": "1",
+          "start": 29.29,
+          "end": 29.65
+        },
+        {
+          "word": "and",
+          "start": 29.65,
+          "end": 30.49
+        },
+        {
+          "word": "g",
+          "start": 30.49,
+          "end": 30.87
+        },
+        {
+          "word": "is",
+          "start": 30.87,
+          "end": 31.41
+        },
+        {
+          "word": "10",
+          "start": 31.41,
+          "end": 31.69
+        },
+        {
+          "word": "so",
+          "start": 31.69,
+          "end": 32.67
+        },
+        {
+          "word": "t",
+          "start": 32.67,
+          "end": 32.97
+        },
+        {
+          "word": "-10",
+          "start": 32.97,
+          "end": 33.69
+        },
+        {
+          "word": "equals",
+          "start": 33.69,
+          "end": 34.21
+        },
+        {
+          "word": "a.",
+          "start": 34.21,
+          "end": 34.63
+        },
+        {
+          "word": "Add",
+          "start": 34.87,
+          "end": 35.13
+        },
+        {
+          "word": "these",
+          "start": 35.13,
+          "end": 35.55
+        },
+        {
+          "word": "scalar",
+          "start": 35.55,
+          "end": 36.01
+        },
+        {
+          "word": "equations",
+          "start": 36.01,
+          "end": 36.79
+        },
+        {
+          "word": "with",
+          "start": 36.79,
+          "end": 37.97
+        },
+        {
+          "word": "their",
+          "start": 37.97,
+          "end": 38.21
+        },
+        {
+          "word": "own",
+          "start": 38.21,
+          "end": 38.49
+        },
+        {
+          "word": "positive",
+          "start": 38.49,
+          "end": 38.95
+        },
+        {
+          "word": "directions.",
+          "start": 38.95,
+          "end": 39.71
+        },
+        {
+          "word": "The",
+          "start": 40.47,
+          "end": 40.89
+        },
+        {
+          "word": "tensions",
+          "start": 40.89,
+          "end": 41.43
+        },
+        {
+          "word": "cancel",
+          "start": 41.43,
+          "end": 42.35
+        },
+        {
+          "word": "algebraically.",
+          "start": 42.35,
+          "end": 43.49
+        },
+        {
+          "word": "20",
+          "start": 44.41,
+          "end": 44.91
+        },
+        {
+          "word": "equals",
+          "start": 44.91,
+          "end": 45.35
+        },
+        {
+          "word": "4a.",
+          "start": 45.35,
+          "end": 46.31
+        },
+        {
+          "word": "Divide",
+          "start": 46.71,
+          "end": 47.17
+        },
+        {
+          "word": "both",
+          "start": 47.17,
+          "end": 47.43
+        },
+        {
+          "word": "sides",
+          "start": 47.43,
+          "end": 47.83
+        },
+        {
+          "word": "by",
+          "start": 47.83,
+          "end": 48.23
+        },
+        {
+          "word": "4.",
+          "start": 48.23,
+          "end": 48.67
+        },
+        {
+          "word": "The",
+          "start": 49.57,
+          "end": 49.75
+        },
+        {
+          "word": "common",
+          "start": 49.75,
+          "end": 50.15
+        },
+        {
+          "word": "acceleration",
+          "start": 50.15,
+          "end": 50.85
+        },
+        {
+          "word": "magnitude",
+          "start": 50.85,
+          "end": 51.69
+        },
+        {
+          "word": "is",
+          "start": 51.69,
+          "end": 52.43
+        },
+        {
+          "word": "5",
+          "start": 52.43,
+          "end": 52.77
+        },
+        {
+          "word": "meters",
+          "start": 52.77,
+          "end": 53.05
+        },
+        {
+          "word": "per",
+          "start": 53.05,
+          "end": 53.35
+        },
+        {
+          "word": "second",
+          "start": 53.35,
+          "end": 53.67
+        },
+        {
+          "word": "squared.",
+          "start": 53.67,
+          "end": 54.21
+        },
+        {
+          "word": "p",
+          "start": 54.21,
+          "end": 55.45
+        },
+        {
+          "word": "down,",
+          "start": 55.45,
+          "end": 55.91
+        },
+        {
+          "word": "q",
+          "start": 56.43,
+          "end": 56.61
+        },
+        {
+          "word": "up.",
+          "start": 56.61,
+          "end": 56.93
+        },
+        {
+          "word": "Now",
+          "start": 59.29,
+          "end": 59.51
+        },
+        {
+          "word": "use",
+          "start": 59.51,
+          "end": 59.81
+        },
+        {
+          "word": "Q's",
+          "start": 59.81,
+          "end": 60.21
+        },
+        {
+          "word": "equation",
+          "start": 60.21,
+          "end": 60.65
+        },
+        {
+          "word": "to",
+          "start": 60.65,
+          "end": 60.89
+        },
+        {
+          "word": "find",
+          "start": 60.89,
+          "end": 61.17
+        },
+        {
+          "word": "tension.",
+          "start": 61.17,
+          "end": 61.65
+        },
+        {
+          "word": "T",
+          "start": 62.57,
+          "end": 62.91
+        },
+        {
+          "word": "equals",
+          "start": 62.91,
+          "end": 63.37
+        },
+        {
+          "word": "its",
+          "start": 63.37,
+          "end": 63.77
+        },
+        {
+          "word": "mass",
+          "start": 63.77,
+          "end": 64.23
+        },
+        {
+          "word": "multiplied",
+          "start": 64.23,
+          "end": 64.97
+        },
+        {
+          "word": "by",
+          "start": 64.97,
+          "end": 65.79
+        },
+        {
+          "word": "the",
+          "start": 65.79,
+          "end": 65.95
+        },
+        {
+          "word": "sum",
+          "start": 65.95,
+          "end": 66.39
+        },
+        {
+          "word": "of",
+          "start": 66.39,
+          "end": 66.61
+        },
+        {
+          "word": "g",
+          "start": 66.61,
+          "end": 66.97
+        },
+        {
+          "word": "and",
+          "start": 66.97,
+          "end": 67.17
+        },
+        {
+          "word": "a.",
+          "start": 67.17,
+          "end": 67.53
+        },
+        {
+          "word": "One",
+          "start": 67.86,
+          "end": 68.05
+        },
+        {
+          "word": "times",
+          "start": 68.05,
+          "end": 68.31
+        },
+        {
+          "word": "10",
+          "start": 68.31,
+          "end": 68.61
+        },
+        {
+          "word": "plus",
+          "start": 68.61,
+          "end": 68.83
+        },
+        {
+          "word": "5",
+          "start": 68.83,
+          "end": 69.23
+        },
+        {
+          "word": "gives",
+          "start": 69.23,
+          "end": 69.51
+        },
+        {
+          "word": "a",
+          "start": 69.51,
+          "end": 69.67
+        },
+        {
+          "word": "tension",
+          "start": 69.67,
+          "end": 69.99
+        },
+        {
+          "word": "of",
+          "start": 69.99,
+          "end": 70.23
+        },
+        {
+          "word": "15",
+          "start": 70.23,
+          "end": 70.69
+        },
+        {
+          "word": "Newtons.",
+          "start": 70.69,
+          "end": 71.33
+        }
+      ],
+      "cues": {
+        "formula": 0.4,
+        "pformula": 6.93,
+        "psub": 15.6,
+        "qformula": 21.69,
+        "qsub": 28.65,
+        "add": 34.87,
+        "answer": 46.71,
+        "tformula": 59.29,
+        "tsub": 67.86
+      },
+      "figureEvents": [
+        {
+          "id": "number-25",
+          "wordIndex": 25,
+          "word": "3",
+          "spokenPhrase": "three",
+          "start": 16.19,
+          "target": "massP",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-30",
+          "wordIndex": 30,
+          "word": "10",
+          "spokenPhrase": "ten",
+          "start": 17.89,
+          "target": "gravity",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-33",
+          "wordIndex": 33,
+          "word": "30",
+          "spokenPhrase": "Thirty",
+          "start": 19.29,
+          "target": "wp",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-37",
+          "wordIndex": 37,
+          "word": "3",
+          "spokenPhrase": "three",
+          "start": 20.59,
+          "target": "massP",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-54",
+          "wordIndex": 54,
+          "word": "1",
+          "spokenPhrase": "1",
+          "start": 29.29,
+          "target": "massQ",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-58",
+          "wordIndex": 58,
+          "word": "10",
+          "spokenPhrase": "10",
+          "start": 31.41,
+          "target": "gravity",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-61",
+          "wordIndex": 61,
+          "word": "10",
+          "spokenPhrase": "-10",
+          "start": 32.97,
+          "target": "wq",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-77",
+          "wordIndex": 77,
+          "word": "20",
+          "spokenPhrase": "20",
+          "start": 44.41,
+          "target": "ink-add",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-79",
+          "wordIndex": 79,
+          "word": "4",
+          "spokenPhrase": "4a.",
+          "start": 45.35,
+          "target": "ink-add",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-84",
+          "wordIndex": 84,
+          "word": "4",
+          "spokenPhrase": "4.",
+          "start": 48.23,
+          "target": "ink-add",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-90",
+          "wordIndex": 90,
+          "word": "5",
+          "spokenPhrase": "5",
+          "start": 52.43,
+          "target": "acceleration",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-118",
+          "wordIndex": 118,
+          "word": "1",
+          "spokenPhrase": "One",
+          "start": 67.86,
+          "target": "massQ",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-120",
+          "wordIndex": 120,
+          "word": "10",
+          "spokenPhrase": "10",
+          "start": 68.31,
+          "target": "gravity",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-122",
+          "wordIndex": 122,
+          "word": "5",
+          "spokenPhrase": "5",
+          "start": 68.83,
+          "target": "acceleration",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-127",
+          "wordIndex": 127,
+          "word": "15",
+          "spokenPhrase": "15",
+          "start": 70.23,
+          "target": "tension",
+          "kind": "spoken"
+        }
+      ],
+      "wordCount": 129,
+      "text": "Start with Newton's second law. Resultant force equals mass times acceleration. For P, down is positive. Weight minus tension equals its mass times acceleration. Substitute three for the mass and ten for g. Thirty minus T equals three a. For Q, up is positive. Tension minus weight equals mass times acceleration. its mass is 1 and g is 10 so t -10 equals a. Add these scalar equations with their own positive directions. The tensions cancel algebraically. 20 equals 4a. Divide both sides by 4. The common acceleration magnitude is 5 meters per second squared. p down, q up. Now use Q's equation to find tension. T equals its mass multiplied by the sum of g and a. One times 10 plus 5 gives a tension of 15 Newtons.",
+      "duration": 74.109388
+    },
+    {
+      "id": "s06",
+      "title": "Stage 1: speed as P hits the floor",
+      "mode": "speed",
+      "voiceSpeed": 0.9,
+      "beats": [
+        {
+          "id": "distance",
+          "text": "P falls zero point eight metres to the floor. While the string is taut, Q rises the same zero point eight metres.",
+          "hold": 0,
+          "start": 0.4,
+          "speechEnd": 10.82,
+          "end": 11.02,
+          "cue": 0.64,
+          "penEnd": 10.94
+        },
+        {
+          "id": "question",
+          "text": "What speed has Q gained? Use its upward motion, starting from rest.",
+          "hold": 3,
+          "start": 11.02,
+          "speechEnd": 17.13,
+          "end": 17.33,
+          "cue": 11.02,
+          "penEnd": 17.25
+        },
+        {
+          "id": "formula",
+          "text": "The constant acceleration formula is v squared equals u squared plus two a s.",
+          "hold": 0,
+          "ink": "v² = u² + 2as",
+          "start": 20.33,
+          "speechEnd": 27.62,
+          "end": 27.82,
+          "cue": 20.34,
+          "penEnd": 27.740000000000002
+        },
+        {
+          "id": "sub",
+          "text": "The initial speed is zero, acceleration five, and upward displacement zero point eight.",
+          "hold": 0,
+          "ink": "v² = 0² + 2 × 5 × 0.8",
+          "start": 27.82,
+          "speechEnd": 35.5,
+          "end": 35.7,
+          "cue": 27.96,
+          "penEnd": 35.620000000000005
+        },
+        {
+          "id": "answer",
+          "text": "Therefore v squared is eight square metres per square second. Keep this squared speed: it passes directly into the next stage.",
+          "hold": 2,
+          "ink": "v² = 8 m² s⁻²",
+          "start": 35.7,
+          "speechEnd": 43.91,
+          "end": 44.11,
+          "cue": 35.7,
+          "penEnd": 44.03
+        },
+        {
+          "id": "root",
+          "text": "Taking the positive square root, the speed is square root eight metres per second. Keeping v squared as eight avoids rounding in stage two.",
+          "hold": 2,
+          "ink": "v = √8 m s⁻¹",
+          "start": 46.11,
+          "speechEnd": 58.49,
+          "end": 58.69,
+          "cue": 46.11,
+          "penEnd": 58.61
+        },
+        {
+          "id": "heightformula",
+          "text": "Q's height at impact is its initial height plus this rise.",
+          "hold": 0,
+          "ink": "h = h₀ + s",
+          "start": 60.69,
+          "speechEnd": 65.53,
+          "end": 65.73,
+          "cue": 60.69,
+          "penEnd": 65.65
+        },
+        {
+          "id": "heightsub",
+          "text": "One plus zero point eight is one point eight metres above the floor. This is not yet the maximum.",
+          "hold": 2,
+          "ink": "h = 1 + 0.8 = 1.8 m",
+          "start": 65.73,
+          "speechEnd": 73.34,
+          "end": 73.54,
+          "cue": 65.74,
+          "penEnd": 73.46000000000001
+        }
+      ],
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 17.33,
+          "end": 20.33,
+          "duration": 3
+        },
+        {
+          "kind": "hold",
+          "start": 44.11,
+          "end": 46.11,
+          "duration": 2
+        },
+        {
+          "kind": "hold",
+          "start": 58.69,
+          "end": 60.69,
+          "duration": 2
+        },
+        {
+          "kind": "hold",
+          "start": 73.54,
+          "end": 75.54,
+          "duration": 2
+        }
+      ],
+      "audio": "connected-bodies-pulleys-s06.mp3",
+      "audioSha256": "16ff37c8175ee7d644480b218b9ac5782b8f9b72e889f7b5746b0146a5b1d4cd",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "provider": "elevenlabs",
+      "sampleDuration": 75.89,
+      "words": [
+        {
+          "word": "falls",
+          "start": 0.64,
+          "end": 1.52
+        },
+        {
+          "word": "zero",
+          "start": 1.52,
+          "end": 1.94
+        },
+        {
+          "word": "point",
+          "start": 1.94,
+          "end": 2.34
+        },
+        {
+          "word": "eight",
+          "start": 2.34,
+          "end": 3.12
+        },
+        {
+          "word": "metres",
+          "start": 3.12,
+          "end": 3.48
+        },
+        {
+          "word": "to",
+          "start": 3.48,
+          "end": 3.7
+        },
+        {
+          "word": "the",
+          "start": 3.7,
+          "end": 3.82
+        },
+        {
+          "word": "floor.",
+          "start": 3.82,
+          "end": 4.08
+        },
+        {
+          "word": "While",
+          "start": 4.84,
+          "end": 5.64
+        },
+        {
+          "word": "the",
+          "start": 5.64,
+          "end": 5.8
+        },
+        {
+          "word": "string",
+          "start": 5.8,
+          "end": 6.08
+        },
+        {
+          "word": "is",
+          "start": 6.08,
+          "end": 6.3
+        },
+        {
+          "word": "taut,",
+          "start": 6.3,
+          "end": 6.7
+        },
+        {
+          "word": "Q",
+          "start": 7.2,
+          "end": 7.64
+        },
+        {
+          "word": "rises",
+          "start": 7.64,
+          "end": 8.6
+        },
+        {
+          "word": "the",
+          "start": 8.6,
+          "end": 8.92
+        },
+        {
+          "word": "same",
+          "start": 8.92,
+          "end": 9.24
+        },
+        {
+          "word": "zero",
+          "start": 9.24,
+          "end": 9.62
+        },
+        {
+          "word": "point",
+          "start": 9.62,
+          "end": 9.96
+        },
+        {
+          "word": "eight",
+          "start": 9.96,
+          "end": 10.28
+        },
+        {
+          "word": "metres.",
+          "start": 10.28,
+          "end": 10.62
+        },
+        {
+          "word": "What",
+          "start": 11.02,
+          "end": 11.28
+        },
+        {
+          "word": "speed",
+          "start": 11.28,
+          "end": 11.62
+        },
+        {
+          "word": "has",
+          "start": 11.62,
+          "end": 11.88
+        },
+        {
+          "word": "Q",
+          "start": 11.88,
+          "end": 12.14
+        },
+        {
+          "word": "gained?",
+          "start": 12.14,
+          "end": 12.48
+        },
+        {
+          "word": "Use",
+          "start": 13.22,
+          "end": 13.66
+        },
+        {
+          "word": "its",
+          "start": 13.66,
+          "end": 13.98
+        },
+        {
+          "word": "upward",
+          "start": 13.98,
+          "end": 14.4
+        },
+        {
+          "word": "motion,",
+          "start": 14.4,
+          "end": 15.08
+        },
+        {
+          "word": "starting",
+          "start": 15.64,
+          "end": 16.14
+        },
+        {
+          "word": "from",
+          "start": 16.14,
+          "end": 16.42
+        },
+        {
+          "word": "rest.",
+          "start": 16.42,
+          "end": 16.88
+        },
+        {
+          "word": "The",
+          "start": 20.34,
+          "end": 20.5
+        },
+        {
+          "word": "constant",
+          "start": 20.5,
+          "end": 20.82
+        },
+        {
+          "word": "acceleration",
+          "start": 20.82,
+          "end": 21.46
+        },
+        {
+          "word": "formula",
+          "start": 21.46,
+          "end": 22.2
+        },
+        {
+          "word": "is",
+          "start": 22.2,
+          "end": 23.08
+        },
+        {
+          "word": "v",
+          "start": 23.08,
+          "end": 23.46
+        },
+        {
+          "word": "squared",
+          "start": 23.46,
+          "end": 23.94
+        },
+        {
+          "word": "equals",
+          "start": 23.94,
+          "end": 24.72
+        },
+        {
+          "word": "u",
+          "start": 24.72,
+          "end": 25.22
+        },
+        {
+          "word": "squared",
+          "start": 25.22,
+          "end": 25.72
+        },
+        {
+          "word": "plus",
+          "start": 25.72,
+          "end": 26.4
+        },
+        {
+          "word": "two",
+          "start": 26.4,
+          "end": 26.82
+        },
+        {
+          "word": "a",
+          "start": 26.82,
+          "end": 27.1
+        },
+        {
+          "word": "s.",
+          "start": 27.1,
+          "end": 27.48
+        },
+        {
+          "word": "initial",
+          "start": 27.96,
+          "end": 28.44
+        },
+        {
+          "word": "speed",
+          "start": 28.44,
+          "end": 28.84
+        },
+        {
+          "word": "is",
+          "start": 28.84,
+          "end": 29.1
+        },
+        {
+          "word": "0,",
+          "start": 29.1,
+          "end": 29.54
+        },
+        {
+          "word": "acceleration",
+          "start": 30.36,
+          "end": 30.84
+        },
+        {
+          "word": "5",
+          "start": 30.84,
+          "end": 31.62
+        },
+        {
+          "word": "and",
+          "start": 31.62,
+          "end": 32.6
+        },
+        {
+          "word": "upwards,",
+          "start": 32.6,
+          "end": 33.06
+        },
+        {
+          "word": "displacement",
+          "start": 33.4,
+          "end": 34.1
+        },
+        {
+          "word": "0",
+          "start": 34.1,
+          "end": 34.64
+        },
+        {
+          "word": ".8.",
+          "start": 34.64,
+          "end": 35.28
+        },
+        {
+          "word": "Therefore",
+          "start": 35.7,
+          "end": 36.0
+        },
+        {
+          "word": "V",
+          "start": 36.0,
+          "end": 36.38
+        },
+        {
+          "word": "squared",
+          "start": 36.38,
+          "end": 36.68
+        },
+        {
+          "word": "is",
+          "start": 36.68,
+          "end": 37.5
+        },
+        {
+          "word": "8",
+          "start": 37.5,
+          "end": 37.82
+        },
+        {
+          "word": "square",
+          "start": 37.82,
+          "end": 38.02
+        },
+        {
+          "word": "meters",
+          "start": 38.02,
+          "end": 38.26
+        },
+        {
+          "word": "per",
+          "start": 38.26,
+          "end": 38.6
+        },
+        {
+          "word": "square",
+          "start": 38.6,
+          "end": 38.82
+        },
+        {
+          "word": "second.",
+          "start": 38.82,
+          "end": 39.34
+        },
+        {
+          "word": "Keep",
+          "start": 39.78,
+          "end": 40.16
+        },
+        {
+          "word": "the",
+          "start": 40.16,
+          "end": 40.42
+        },
+        {
+          "word": "squared",
+          "start": 40.42,
+          "end": 40.78
+        },
+        {
+          "word": "speed,",
+          "start": 40.78,
+          "end": 41.22
+        },
+        {
+          "word": "it",
+          "start": 41.48,
+          "end": 41.62
+        },
+        {
+          "word": "passes",
+          "start": 41.62,
+          "end": 42.02
+        },
+        {
+          "word": "directly",
+          "start": 42.02,
+          "end": 42.72
+        },
+        {
+          "word": "into",
+          "start": 42.72,
+          "end": 43.02
+        },
+        {
+          "word": "the",
+          "start": 43.02,
+          "end": 43.18
+        },
+        {
+          "word": "next",
+          "start": 43.18,
+          "end": 43.46
+        },
+        {
+          "word": "state.",
+          "start": 43.46,
+          "end": 43.82
+        },
+        {
+          "word": "Taking",
+          "start": 46.11,
+          "end": 46.41
+        },
+        {
+          "word": "the",
+          "start": 46.41,
+          "end": 46.63
+        },
+        {
+          "word": "positive",
+          "start": 46.63,
+          "end": 46.99
+        },
+        {
+          "word": "square",
+          "start": 46.99,
+          "end": 47.45
+        },
+        {
+          "word": "root,",
+          "start": 47.45,
+          "end": 47.85
+        },
+        {
+          "word": "the",
+          "start": 48.49,
+          "end": 48.63
+        },
+        {
+          "word": "speed",
+          "start": 48.63,
+          "end": 48.99
+        },
+        {
+          "word": "is",
+          "start": 48.99,
+          "end": 49.27
+        },
+        {
+          "word": "square",
+          "start": 49.27,
+          "end": 49.65
+        },
+        {
+          "word": "root",
+          "start": 49.65,
+          "end": 50.07
+        },
+        {
+          "word": "8",
+          "start": 50.07,
+          "end": 50.85
+        },
+        {
+          "word": "meters",
+          "start": 50.85,
+          "end": 51.21
+        },
+        {
+          "word": "per",
+          "start": 51.21,
+          "end": 51.51
+        },
+        {
+          "word": "second.",
+          "start": 51.51,
+          "end": 51.97
+        },
+        {
+          "word": "Keeping",
+          "start": 51.97,
+          "end": 53.21
+        },
+        {
+          "word": "v",
+          "start": 53.21,
+          "end": 53.71
+        },
+        {
+          "word": "squared",
+          "start": 53.71,
+          "end": 54.19
+        },
+        {
+          "word": "as",
+          "start": 54.19,
+          "end": 55.03
+        },
+        {
+          "word": "8",
+          "start": 55.03,
+          "end": 55.45
+        },
+        {
+          "word": "avoids",
+          "start": 55.45,
+          "end": 56.37
+        },
+        {
+          "word": "rounding",
+          "start": 56.37,
+          "end": 56.95
+        },
+        {
+          "word": "in",
+          "start": 56.95,
+          "end": 57.65
+        },
+        {
+          "word": "stage",
+          "start": 57.65,
+          "end": 57.89
+        },
+        {
+          "word": "2.",
+          "start": 57.89,
+          "end": 58.29
+        },
+        {
+          "word": "Q's",
+          "start": 60.69,
+          "end": 61.12
+        },
+        {
+          "word": "height",
+          "start": 61.12,
+          "end": 61.46
+        },
+        {
+          "word": "at",
+          "start": 61.46,
+          "end": 61.72
+        },
+        {
+          "word": "impact",
+          "start": 61.72,
+          "end": 62.18
+        },
+        {
+          "word": "is",
+          "start": 62.18,
+          "end": 63.18
+        },
+        {
+          "word": "its",
+          "start": 63.18,
+          "end": 63.32
+        },
+        {
+          "word": "initial",
+          "start": 63.32,
+          "end": 63.66
+        },
+        {
+          "word": "height",
+          "start": 63.66,
+          "end": 64.04
+        },
+        {
+          "word": "plus",
+          "start": 64.04,
+          "end": 64.66
+        },
+        {
+          "word": "this",
+          "start": 64.66,
+          "end": 65.06
+        },
+        {
+          "word": "right.",
+          "start": 65.06,
+          "end": 65.4
+        },
+        {
+          "word": "1",
+          "start": 65.74,
+          "end": 65.9
+        },
+        {
+          "word": "plus",
+          "start": 65.9,
+          "end": 66.16
+        },
+        {
+          "word": "0",
+          "start": 66.16,
+          "end": 66.6
+        },
+        {
+          "word": ".8",
+          "start": 66.6,
+          "end": 67.28
+        },
+        {
+          "word": "is",
+          "start": 67.28,
+          "end": 68.08
+        },
+        {
+          "word": "1",
+          "start": 68.08,
+          "end": 68.38
+        },
+        {
+          "word": ".8",
+          "start": 68.38,
+          "end": 69.2
+        },
+        {
+          "word": "meters",
+          "start": 69.2,
+          "end": 69.56
+        },
+        {
+          "word": "above",
+          "start": 69.56,
+          "end": 69.92
+        },
+        {
+          "word": "the",
+          "start": 69.92,
+          "end": 70.16
+        },
+        {
+          "word": "floor.",
+          "start": 70.16,
+          "end": 70.48
+        },
+        {
+          "word": "This",
+          "start": 71.16,
+          "end": 71.6
+        },
+        {
+          "word": "is",
+          "start": 71.6,
+          "end": 71.74
+        },
+        {
+          "word": "not",
+          "start": 71.74,
+          "end": 71.98
+        },
+        {
+          "word": "yet",
+          "start": 71.98,
+          "end": 72.3
+        },
+        {
+          "word": "the",
+          "start": 72.3,
+          "end": 72.66
+        },
+        {
+          "word": "maximum.",
+          "start": 72.66,
+          "end": 73.04
+        }
+      ],
+      "cues": {
+        "distance": 0.64,
+        "question": 11.02,
+        "formula": 20.34,
+        "sub": 27.96,
+        "answer": 35.7,
+        "root": 46.11,
+        "heightformula": 60.69,
+        "heightsub": 65.74
+      },
+      "figureEvents": [
+        {
+          "id": "number-1",
+          "wordIndex": 1,
+          "word": "0.8",
+          "spokenPhrase": "zero point eight",
+          "start": 1.52,
+          "target": "heightP",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-17",
+          "wordIndex": 17,
+          "word": "0.8",
+          "spokenPhrase": "zero point eight",
+          "start": 9.24,
+          "target": "heightP",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-32",
+          "wordIndex": 32,
+          "word": "0",
+          "spokenPhrase": "rest.",
+          "start": 16.42,
+          "target": "initial",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-50",
+          "wordIndex": 50,
+          "word": "0",
+          "spokenPhrase": "0,",
+          "start": 29.1,
+          "target": "initial",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-52",
+          "wordIndex": 52,
+          "word": "5",
+          "spokenPhrase": "5",
+          "start": 30.84,
+          "target": "acceleration",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-56",
+          "wordIndex": 56,
+          "word": "0.8",
+          "spokenPhrase": "0 .8.",
+          "start": 34.1,
+          "target": "rise",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-62",
+          "wordIndex": 62,
+          "word": "8",
+          "spokenPhrase": "8",
+          "start": 37.5,
+          "target": "speed",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-89",
+          "wordIndex": 89,
+          "word": "8",
+          "spokenPhrase": "8",
+          "start": 50.07,
+          "target": "speed",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-97",
+          "wordIndex": 97,
+          "word": "8",
+          "spokenPhrase": "8",
+          "start": 55.03,
+          "target": "speed",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-114",
+          "wordIndex": 114,
+          "word": "1",
+          "spokenPhrase": "1",
+          "start": 65.74,
+          "target": "heightQ",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-116",
+          "wordIndex": 116,
+          "word": "0.8",
+          "spokenPhrase": "0 .8",
+          "start": 66.16,
+          "target": "rise",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-119",
+          "wordIndex": 119,
+          "word": "1.8",
+          "spokenPhrase": "1 .8",
+          "start": 68.08,
+          "target": "impactHeight",
+          "kind": "spoken"
+        }
+      ],
+      "wordCount": 131,
+      "text": "falls zero point eight metres to the floor. While the string is taut, Q rises the same zero point eight metres. What speed has Q gained? Use its upward motion, starting from rest. The constant acceleration formula is v squared equals u squared plus two a s. initial speed is 0, acceleration 5 and upwards, displacement 0 .8. Therefore V squared is 8 square meters per square second. Keep the squared speed, it passes directly into the next state. Taking the positive square root, the speed is square root 8 meters per second. Keeping v squared as 8 avoids rounding in stage 2. Q's height at impact is its initial height plus this right. 1 plus 0 .8 is 1 .8 meters above the floor. This is not yet the maximum.",
+      "duration": 75.937959
+    },
+    {
+      "id": "s07",
+      "title": "Stage 2: the string is slack",
+      "mode": "height",
+      "voiceSpeed": 0.9,
+      "beats": [
+        {
+          "id": "slack",
+          "text": "Now P is on the floor. Q continues upwards, leaving slack string. The tension is zero: a string cannot push.",
+          "hold": 0,
+          "start": 0.4,
+          "speechEnd": 11.33,
+          "end": 11.53,
+          "cue": 0.58,
+          "penEnd": 11.45
+        },
+        {
+          "id": "gravity",
+          "text": "For Q, up remains positive. Weight is now its only force, so acceleration is minus g. The old common acceleration no longer applies.",
+          "hold": 0,
+          "ink": "-mg = ma   a = -g",
+          "start": 11.53,
+          "speechEnd": 24.47,
+          "end": 24.67,
+          "cue": 11.64,
+          "penEnd": 24.590000000000003
+        },
+        {
+          "id": "givens",
+          "text": "Its initial squared speed for this stage is eight. At maximum height its speed is zero. Let the extra rise be d.",
+          "hold": 0,
+          "start": 24.67,
+          "speechEnd": 35.85,
+          "end": 36.05,
+          "cue": 24.7,
+          "penEnd": 35.97
+        },
+        {
+          "id": "formula",
+          "text": "Again, v squared equals u squared plus two a s.",
+          "hold": 0,
+          "ink": "v² = u² + 2as",
+          "start": 36.05,
+          "speechEnd": 41.14,
+          "end": 41.34,
+          "cue": 36.1,
+          "penEnd": 41.260000000000005
+        },
+        {
+          "id": "sub",
+          "text": "Substitute zero for the final speed, eight for the initial squared speed, and minus ten for acceleration.",
+          "hold": 0,
+          "ink": "0 = 8 + 2 × (-10) × d",
+          "start": 41.34,
+          "speechEnd": 50.26,
+          "end": 50.46,
+          "cue": 41.34,
+          "penEnd": 50.38
+        },
+        {
+          "id": "rearrange",
+          "text": "Move twenty d to the left. Twenty d equals eight.",
+          "hold": 0,
+          "ink": "20d = 8",
+          "start": 50.46,
+          "speechEnd": 54.98,
+          "end": 55.18,
+          "cue": 50.46,
+          "penEnd": 55.1
+        },
+        {
+          "id": "answer",
+          "text": "Divide by twenty. The extra rise is zero point four metres.",
+          "hold": 2,
+          "ink": "d = 0.4 m",
+          "start": 55.18,
+          "speechEnd": 60.72,
+          "end": 60.92,
+          "cue": 55.18,
+          "penEnd": 60.84
+        },
+        {
+          "id": "heightformula",
+          "text": "Maximum height equals initial height, plus the rise while taut, plus the extra rise.",
+          "hold": 0,
+          "ink": "h = h₀ + s + d",
+          "start": 62.92,
+          "speechEnd": 70.5,
+          "end": 70.7,
+          "cue": 63.02,
+          "penEnd": 70.62
+        },
+        {
+          "id": "heightsub",
+          "text": "One plus zero point eight plus zero point four gives two point two metres above the floor.",
+          "hold": 2,
+          "ink": "h = 1 + 0.8 + 0.4 = 2.2 m",
+          "start": 70.7,
+          "speechEnd": 76.76,
+          "end": 76.96,
+          "cue": 70.7,
+          "penEnd": 76.88
+        }
+      ],
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 60.92,
+          "end": 62.92,
+          "duration": 2
+        },
+        {
+          "kind": "hold",
+          "start": 76.96,
+          "end": 78.96,
+          "duration": 2
+        }
+      ],
+      "audio": "connected-bodies-pulleys-s07.mp3",
+      "audioSha256": "5acf4445bbc4375d241c58936e7932a430c49dabb79f7ed39957b1b54b60ed73",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "provider": "elevenlabs",
+      "sampleDuration": 79.31,
+      "words": [
+        {
+          "word": "P",
+          "start": 0.58,
+          "end": 1.02
+        },
+        {
+          "word": "is",
+          "start": 1.02,
+          "end": 1.32
+        },
+        {
+          "word": "on",
+          "start": 1.32,
+          "end": 1.46
+        },
+        {
+          "word": "the",
+          "start": 1.46,
+          "end": 1.58
+        },
+        {
+          "word": "floor.",
+          "start": 1.58,
+          "end": 1.86
+        },
+        {
+          "word": "Q",
+          "start": 2.76,
+          "end": 3.12
+        },
+        {
+          "word": "continues",
+          "start": 3.12,
+          "end": 3.7
+        },
+        {
+          "word": "upwards,",
+          "start": 3.7,
+          "end": 4.16
+        },
+        {
+          "word": "leaving",
+          "start": 4.9,
+          "end": 5.42
+        },
+        {
+          "word": "slack",
+          "start": 5.42,
+          "end": 5.84
+        },
+        {
+          "word": "string.",
+          "start": 5.84,
+          "end": 6.28
+        },
+        {
+          "word": "The",
+          "start": 7.14,
+          "end": 7.32
+        },
+        {
+          "word": "tension",
+          "start": 7.32,
+          "end": 7.76
+        },
+        {
+          "word": "is",
+          "start": 7.76,
+          "end": 8.06
+        },
+        {
+          "word": "zero.",
+          "start": 8.06,
+          "end": 8.58
+        },
+        {
+          "word": "A",
+          "start": 9.42,
+          "end": 9.54
+        },
+        {
+          "word": "string",
+          "start": 9.54,
+          "end": 9.92
+        },
+        {
+          "word": "cannot",
+          "start": 9.92,
+          "end": 10.62
+        },
+        {
+          "word": "push.",
+          "start": 10.62,
+          "end": 11.08
+        },
+        {
+          "word": "For",
+          "start": 11.64,
+          "end": 11.72
+        },
+        {
+          "word": "Q,",
+          "start": 11.72,
+          "end": 12.0
+        },
+        {
+          "word": "up",
+          "start": 12.52,
+          "end": 12.9
+        },
+        {
+          "word": "remains",
+          "start": 12.9,
+          "end": 13.88
+        },
+        {
+          "word": "positive.",
+          "start": 13.88,
+          "end": 14.56
+        },
+        {
+          "word": "Weight",
+          "start": 15.32,
+          "end": 15.66
+        },
+        {
+          "word": "is",
+          "start": 15.66,
+          "end": 16.36
+        },
+        {
+          "word": "now",
+          "start": 16.36,
+          "end": 16.56
+        },
+        {
+          "word": "its",
+          "start": 16.56,
+          "end": 16.76
+        },
+        {
+          "word": "only",
+          "start": 16.76,
+          "end": 17.06
+        },
+        {
+          "word": "force,",
+          "start": 17.06,
+          "end": 17.46
+        },
+        {
+          "word": "so",
+          "start": 18.1,
+          "end": 18.38
+        },
+        {
+          "word": "acceleration",
+          "start": 18.38,
+          "end": 18.82
+        },
+        {
+          "word": "is",
+          "start": 18.82,
+          "end": 19.44
+        },
+        {
+          "word": "minus",
+          "start": 19.44,
+          "end": 19.78
+        },
+        {
+          "word": "g.",
+          "start": 19.78,
+          "end": 20.22
+        },
+        {
+          "word": "The",
+          "start": 21.1,
+          "end": 21.26
+        },
+        {
+          "word": "old",
+          "start": 21.26,
+          "end": 21.6
+        },
+        {
+          "word": "common",
+          "start": 21.6,
+          "end": 21.86
+        },
+        {
+          "word": "acceleration",
+          "start": 21.86,
+          "end": 22.56
+        },
+        {
+          "word": "no",
+          "start": 22.56,
+          "end": 23.42
+        },
+        {
+          "word": "longer",
+          "start": 23.42,
+          "end": 23.7
+        },
+        {
+          "word": "applies.",
+          "start": 23.7,
+          "end": 24.18
+        },
+        {
+          "word": "Its",
+          "start": 24.7,
+          "end": 24.9
+        },
+        {
+          "word": "initial",
+          "start": 24.9,
+          "end": 25.2
+        },
+        {
+          "word": "squared",
+          "start": 25.2,
+          "end": 25.66
+        },
+        {
+          "word": "speed",
+          "start": 25.66,
+          "end": 26.22
+        },
+        {
+          "word": "for",
+          "start": 26.22,
+          "end": 27.04
+        },
+        {
+          "word": "this",
+          "start": 27.04,
+          "end": 27.32
+        },
+        {
+          "word": "stage",
+          "start": 27.32,
+          "end": 27.66
+        },
+        {
+          "word": "is",
+          "start": 27.66,
+          "end": 27.9
+        },
+        {
+          "word": "eight.",
+          "start": 27.9,
+          "end": 28.3
+        },
+        {
+          "word": "At",
+          "start": 28.3,
+          "end": 29.56
+        },
+        {
+          "word": "maximum",
+          "start": 29.56,
+          "end": 30.08
+        },
+        {
+          "word": "height,",
+          "start": 30.08,
+          "end": 30.74
+        },
+        {
+          "word": "its",
+          "start": 31.36,
+          "end": 31.5
+        },
+        {
+          "word": "speed",
+          "start": 31.5,
+          "end": 32.08
+        },
+        {
+          "word": "is",
+          "start": 32.08,
+          "end": 32.46
+        },
+        {
+          "word": "zero.",
+          "start": 32.46,
+          "end": 32.94
+        },
+        {
+          "word": "Let",
+          "start": 33.86,
+          "end": 34.06
+        },
+        {
+          "word": "the",
+          "start": 34.06,
+          "end": 34.3
+        },
+        {
+          "word": "extra",
+          "start": 34.3,
+          "end": 34.7
+        },
+        {
+          "word": "rise",
+          "start": 34.7,
+          "end": 35.16
+        },
+        {
+          "word": "be",
+          "start": 35.16,
+          "end": 35.38
+        },
+        {
+          "word": "D.",
+          "start": 35.38,
+          "end": 35.72
+        },
+        {
+          "word": "Again,",
+          "start": 36.1,
+          "end": 36.44
+        },
+        {
+          "word": "V",
+          "start": 36.9,
+          "end": 37.24
+        },
+        {
+          "word": "squared",
+          "start": 37.24,
+          "end": 37.62
+        },
+        {
+          "word": "equals",
+          "start": 37.62,
+          "end": 38.4
+        },
+        {
+          "word": "U",
+          "start": 38.4,
+          "end": 38.8
+        },
+        {
+          "word": "squared",
+          "start": 38.8,
+          "end": 39.22
+        },
+        {
+          "word": "plus",
+          "start": 39.22,
+          "end": 39.94
+        },
+        {
+          "word": "2",
+          "start": 39.94,
+          "end": 40.36
+        },
+        {
+          "word": "AS.",
+          "start": 40.36,
+          "end": 40.74
+        },
+        {
+          "word": "Substitute",
+          "start": 41.34,
+          "end": 41.98
+        },
+        {
+          "word": "zero",
+          "start": 41.98,
+          "end": 42.46
+        },
+        {
+          "word": "for",
+          "start": 42.46,
+          "end": 43.34
+        },
+        {
+          "word": "the",
+          "start": 43.34,
+          "end": 43.5
+        },
+        {
+          "word": "final",
+          "start": 43.5,
+          "end": 43.72
+        },
+        {
+          "word": "speed,",
+          "start": 43.72,
+          "end": 44.22
+        },
+        {
+          "word": "eight",
+          "start": 44.78,
+          "end": 45.06
+        },
+        {
+          "word": "for",
+          "start": 45.06,
+          "end": 45.9
+        },
+        {
+          "word": "the",
+          "start": 45.9,
+          "end": 46.08
+        },
+        {
+          "word": "initial",
+          "start": 46.08,
+          "end": 46.44
+        },
+        {
+          "word": "squared",
+          "start": 46.44,
+          "end": 46.86
+        },
+        {
+          "word": "speed",
+          "start": 46.86,
+          "end": 47.36
+        },
+        {
+          "word": "and",
+          "start": 47.36,
+          "end": 48.3
+        },
+        {
+          "word": "minus",
+          "start": 48.3,
+          "end": 48.62
+        },
+        {
+          "word": "10",
+          "start": 48.62,
+          "end": 49.04
+        },
+        {
+          "word": "for",
+          "start": 49.04,
+          "end": 49.3
+        },
+        {
+          "word": "acceleration.",
+          "start": 49.3,
+          "end": 50.0
+        },
+        {
+          "word": "Move",
+          "start": 50.46,
+          "end": 50.68
+        },
+        {
+          "word": "20",
+          "start": 50.68,
+          "end": 51.16
+        },
+        {
+          "word": "D",
+          "start": 51.16,
+          "end": 51.48
+        },
+        {
+          "word": "to",
+          "start": 51.48,
+          "end": 51.8
+        },
+        {
+          "word": "the",
+          "start": 51.8,
+          "end": 51.94
+        },
+        {
+          "word": "left.",
+          "start": 51.94,
+          "end": 52.24
+        },
+        {
+          "word": "20",
+          "start": 52.94,
+          "end": 53.2
+        },
+        {
+          "word": "D",
+          "start": 53.2,
+          "end": 53.62
+        },
+        {
+          "word": "equals",
+          "start": 53.62,
+          "end": 54.26
+        },
+        {
+          "word": "8.",
+          "start": 54.26,
+          "end": 54.8
+        },
+        {
+          "word": "Divide",
+          "start": 55.18,
+          "end": 55.72
+        },
+        {
+          "word": "by",
+          "start": 55.72,
+          "end": 55.86
+        },
+        {
+          "word": "twenty.",
+          "start": 55.86,
+          "end": 56.26
+        },
+        {
+          "word": "The",
+          "start": 57.46,
+          "end": 57.58
+        },
+        {
+          "word": "extra",
+          "start": 57.58,
+          "end": 57.98
+        },
+        {
+          "word": "rise",
+          "start": 57.98,
+          "end": 58.46
+        },
+        {
+          "word": "is",
+          "start": 58.46,
+          "end": 59.18
+        },
+        {
+          "word": "zero",
+          "start": 59.18,
+          "end": 59.6
+        },
+        {
+          "word": "point",
+          "start": 59.6,
+          "end": 59.92
+        },
+        {
+          "word": "four",
+          "start": 59.92,
+          "end": 60.16
+        },
+        {
+          "word": "metres.",
+          "start": 60.16,
+          "end": 60.42
+        },
+        {
+          "word": "Maximum",
+          "start": 63.02,
+          "end": 63.54
+        },
+        {
+          "word": "height",
+          "start": 63.54,
+          "end": 63.94
+        },
+        {
+          "word": "equals",
+          "start": 63.94,
+          "end": 64.68
+        },
+        {
+          "word": "initial",
+          "start": 64.68,
+          "end": 65.38
+        },
+        {
+          "word": "height",
+          "start": 65.38,
+          "end": 65.96
+        },
+        {
+          "word": "plus",
+          "start": 65.96,
+          "end": 66.86
+        },
+        {
+          "word": "the",
+          "start": 66.86,
+          "end": 67.24
+        },
+        {
+          "word": "rise",
+          "start": 67.24,
+          "end": 67.56
+        },
+        {
+          "word": "while",
+          "start": 67.56,
+          "end": 67.88
+        },
+        {
+          "word": "taught",
+          "start": 67.88,
+          "end": 68.34
+        },
+        {
+          "word": "plus",
+          "start": 68.34,
+          "end": 69.2
+        },
+        {
+          "word": "the",
+          "start": 69.2,
+          "end": 69.48
+        },
+        {
+          "word": "extra",
+          "start": 69.48,
+          "end": 69.82
+        },
+        {
+          "word": "rise.",
+          "start": 69.82,
+          "end": 70.38
+        },
+        {
+          "word": "1",
+          "start": 70.7,
+          "end": 70.9
+        },
+        {
+          "word": "plus",
+          "start": 70.9,
+          "end": 71.18
+        },
+        {
+          "word": "0",
+          "start": 71.18,
+          "end": 71.64
+        },
+        {
+          "word": ".8",
+          "start": 71.64,
+          "end": 72.36
+        },
+        {
+          "word": "plus",
+          "start": 72.36,
+          "end": 72.68
+        },
+        {
+          "word": "0",
+          "start": 72.68,
+          "end": 73.12
+        },
+        {
+          "word": ".4",
+          "start": 73.12,
+          "end": 73.88
+        },
+        {
+          "word": "gives",
+          "start": 73.88,
+          "end": 74.7
+        },
+        {
+          "word": "2",
+          "start": 74.7,
+          "end": 75.02
+        },
+        {
+          "word": ".2",
+          "start": 75.02,
+          "end": 75.44
+        },
+        {
+          "word": "meters",
+          "start": 75.44,
+          "end": 75.72
+        },
+        {
+          "word": "above",
+          "start": 75.72,
+          "end": 76.08
+        },
+        {
+          "word": "the",
+          "start": 76.08,
+          "end": 76.34
+        },
+        {
+          "word": "floor.",
+          "start": 76.34,
+          "end": 76.64
+        }
+      ],
+      "cues": {
+        "slack": 0.58,
+        "gravity": 11.64,
+        "givens": 24.7,
+        "formula": 36.1,
+        "sub": 41.34,
+        "rearrange": 50.46,
+        "answer": 55.18,
+        "heightformula": 63.02,
+        "heightsub": 70.7
+      },
+      "figureEvents": [
+        {
+          "id": "number-14",
+          "wordIndex": 14,
+          "word": "0",
+          "spokenPhrase": "zero.",
+          "start": 8.06,
+          "target": "zeroT",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-50",
+          "wordIndex": 50,
+          "word": "8",
+          "spokenPhrase": "eight.",
+          "start": 27.9,
+          "target": "speed",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-57",
+          "wordIndex": 57,
+          "word": "0",
+          "spokenPhrase": "zero.",
+          "start": 32.46,
+          "target": "topSpeed",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-74",
+          "wordIndex": 74,
+          "word": "0",
+          "spokenPhrase": "zero",
+          "start": 41.98,
+          "target": "topSpeed",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-79",
+          "wordIndex": 79,
+          "word": "8",
+          "spokenPhrase": "eight",
+          "start": 44.78,
+          "target": "speed",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-87",
+          "wordIndex": 87,
+          "word": "10",
+          "spokenPhrase": "10",
+          "start": 48.62,
+          "target": "negativeG",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-91",
+          "wordIndex": 91,
+          "word": "20",
+          "spokenPhrase": "20",
+          "start": 50.68,
+          "target": "ink-rearrange",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-96",
+          "wordIndex": 96,
+          "word": "20",
+          "spokenPhrase": "20",
+          "start": 52.94,
+          "target": "ink-rearrange",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-99",
+          "wordIndex": 99,
+          "word": "8",
+          "spokenPhrase": "8.",
+          "start": 54.26,
+          "target": "speed",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-102",
+          "wordIndex": 102,
+          "word": "20",
+          "spokenPhrase": "twenty.",
+          "start": 55.86,
+          "target": "ink-rearrange",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-107",
+          "wordIndex": 107,
+          "word": "0.4",
+          "spokenPhrase": "zero point four",
+          "start": 59.18,
+          "target": "extra",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-125",
+          "wordIndex": 125,
+          "word": "1",
+          "spokenPhrase": "1",
+          "start": 70.7,
+          "target": "heightQ",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-127",
+          "wordIndex": 127,
+          "word": "0.8",
+          "spokenPhrase": "0 .8",
+          "start": 71.18,
+          "target": "heightP",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-130",
+          "wordIndex": 130,
+          "word": "0.4",
+          "spokenPhrase": "0 .4",
+          "start": 72.68,
+          "target": "extra",
+          "kind": "spoken"
+        },
+        {
+          "id": "number-133",
+          "wordIndex": 133,
+          "word": "2.2",
+          "spokenPhrase": "2 .2",
+          "start": 74.7,
+          "target": "maximum",
+          "kind": "spoken"
+        }
+      ],
+      "wordCount": 139,
+      "text": "P is on the floor. Q continues upwards, leaving slack string. The tension is zero. A string cannot push. For Q, up remains positive. Weight is now its only force, so acceleration is minus g. The old common acceleration no longer applies. Its initial squared speed for this stage is eight. At maximum height, its speed is zero. Let the extra rise be D. Again, V squared equals U squared plus 2 AS. Substitute zero for the final speed, eight for the initial squared speed and minus 10 for acceleration. Move 20 D to the left. 20 D equals 8. Divide by twenty. The extra rise is zero point four metres. Maximum height equals initial height plus the rise while taught plus the extra rise. 1 plus 0 .8 plus 0 .4 gives 2 .2 meters above the floor.",
+      "duration": 79.36
+    },
+    {
+      "id": "s08",
+      "title": "Use the conditions at each stage",
+      "mode": "recap",
+      "voiceSpeed": 1,
+      "beats": [
+        {
+          "id": "contrast",
+          "text": "What changes with a smooth table? A horizontal block and a hanging block still have equal acceleration magnitudes while connected. The directions are now right and down.",
+          "hold": 0,
+          "start": 0.4,
+          "speechEnd": 13.67,
+          "end": 13.87,
+          "cue": 0.62,
+          "penEnd": 13.79
+        },
+        {
+          "id": "table",
+          "text": "For the table block, vertical weight and reaction balance. Tension is its horizontal resultant. Apply Newton's law separately to each body.",
+          "hold": 0,
+          "start": 13.87,
+          "speechEnd": 26.33,
+          "end": 26.53,
+          "cue": 14.04,
+          "penEnd": 26.450000000000003
+        },
+        {
+          "id": "outcome1",
+          "text": "Use the string conditions. Light string and smooth pulley give equal tension; taut and inextensible gives the linked motion.",
+          "hold": 0,
+          "caption": "Use the string conditions",
+          "start": 26.53,
+          "speechEnd": 36.39,
+          "end": 36.59,
+          "cue": 26.58,
+          "penEnd": 36.510000000000005
+        },
+        {
+          "id": "outcome2",
+          "text": "Write an equation for each particle, with its own positive direction.",
+          "hold": 0,
+          "caption": "Write an equation for each particle",
+          "start": 36.59,
+          "speechEnd": 41.36,
+          "end": 41.56,
+          "cue": 36.68,
+          "penEnd": 41.480000000000004
+        },
+        {
+          "id": "outcome3",
+          "text": "Follow motion when the string goes slack. Carry the speed into the next stage, but replace the force diagram.",
+          "hold": 2,
+          "caption": "Follow motion when the string goes slack",
+          "start": 41.56,
+          "speechEnd": 48.75,
+          "end": 48.95,
+          "cue": 41.58,
+          "penEnd": 48.870000000000005
+        }
+      ],
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 48.95,
+          "end": 50.95,
+          "duration": 2
+        }
+      ],
+      "audio": "connected-bodies-pulleys-s08.mp3",
+      "audioSha256": "b6f8e711d3901a68111af29c7ffa395221d77ca14cd0d4a1ba5e2f1aebd58ff9",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "provider": "elevenlabs",
+      "sampleDuration": 51.3,
+      "words": [
+        {
+          "word": "changes",
+          "start": 0.62,
+          "end": 1.02
+        },
+        {
+          "word": "with",
+          "start": 1.02,
+          "end": 1.34
+        },
+        {
+          "word": "a",
+          "start": 1.34,
+          "end": 1.52
+        },
+        {
+          "word": "smooth",
+          "start": 1.52,
+          "end": 1.76
+        },
+        {
+          "word": "table?",
+          "start": 1.76,
+          "end": 2.28
+        },
+        {
+          "word": "A",
+          "start": 3.32,
+          "end": 3.4
+        },
+        {
+          "word": "horizontal",
+          "start": 3.4,
+          "end": 3.8
+        },
+        {
+          "word": "block",
+          "start": 3.8,
+          "end": 4.34
+        },
+        {
+          "word": "and",
+          "start": 4.34,
+          "end": 5.24
+        },
+        {
+          "word": "a",
+          "start": 5.24,
+          "end": 5.4
+        },
+        {
+          "word": "hanging",
+          "start": 5.4,
+          "end": 5.64
+        },
+        {
+          "word": "block",
+          "start": 5.64,
+          "end": 6.04
+        },
+        {
+          "word": "still",
+          "start": 6.04,
+          "end": 6.86
+        },
+        {
+          "word": "have",
+          "start": 6.86,
+          "end": 7.1
+        },
+        {
+          "word": "equal",
+          "start": 7.1,
+          "end": 7.54
+        },
+        {
+          "word": "acceleration",
+          "start": 7.54,
+          "end": 8.24
+        },
+        {
+          "word": "magnitudes",
+          "start": 8.24,
+          "end": 9.38
+        },
+        {
+          "word": "while",
+          "start": 9.38,
+          "end": 9.88
+        },
+        {
+          "word": "connected.",
+          "start": 9.88,
+          "end": 10.42
+        },
+        {
+          "word": "The",
+          "start": 11.32,
+          "end": 11.66
+        },
+        {
+          "word": "directions",
+          "start": 11.66,
+          "end": 12.1
+        },
+        {
+          "word": "are",
+          "start": 12.1,
+          "end": 12.5
+        },
+        {
+          "word": "now",
+          "start": 12.5,
+          "end": 12.66
+        },
+        {
+          "word": "right",
+          "start": 12.66,
+          "end": 13.04
+        },
+        {
+          "word": "and",
+          "start": 13.04,
+          "end": 13.26
+        },
+        {
+          "word": "down.",
+          "start": 13.26,
+          "end": 13.58
+        },
+        {
+          "word": "For",
+          "start": 14.04,
+          "end": 14.06
+        },
+        {
+          "word": "the",
+          "start": 14.06,
+          "end": 14.2
+        },
+        {
+          "word": "table",
+          "start": 14.2,
+          "end": 14.5
+        },
+        {
+          "word": "block,",
+          "start": 14.5,
+          "end": 14.84
+        },
+        {
+          "word": "vertical",
+          "start": 15.32,
+          "end": 16.08
+        },
+        {
+          "word": "weight",
+          "start": 16.08,
+          "end": 16.54
+        },
+        {
+          "word": "and",
+          "start": 16.54,
+          "end": 17.22
+        },
+        {
+          "word": "reaction",
+          "start": 17.22,
+          "end": 17.6
+        },
+        {
+          "word": "balance.",
+          "start": 17.6,
+          "end": 18.16
+        },
+        {
+          "word": "Tension",
+          "start": 19.12,
+          "end": 20.04
+        },
+        {
+          "word": "is",
+          "start": 20.04,
+          "end": 20.54
+        },
+        {
+          "word": "its",
+          "start": 20.54,
+          "end": 20.7
+        },
+        {
+          "word": "horizontal",
+          "start": 20.7,
+          "end": 21.2
+        },
+        {
+          "word": "resultant.",
+          "start": 21.2,
+          "end": 22.06
+        },
+        {
+          "word": "Apply",
+          "start": 22.62,
+          "end": 23.48
+        },
+        {
+          "word": "Newton's",
+          "start": 23.48,
+          "end": 24.18
+        },
+        {
+          "word": "law",
+          "start": 24.18,
+          "end": 24.48
+        },
+        {
+          "word": "separately",
+          "start": 24.48,
+          "end": 25.22
+        },
+        {
+          "word": "to",
+          "start": 25.22,
+          "end": 25.58
+        },
+        {
+          "word": "each",
+          "start": 25.58,
+          "end": 25.82
+        },
+        {
+          "word": "body.",
+          "start": 25.82,
+          "end": 26.14
+        },
+        {
+          "word": "Use",
+          "start": 26.58,
+          "end": 26.72
+        },
+        {
+          "word": "the",
+          "start": 26.72,
+          "end": 26.9
+        },
+        {
+          "word": "string",
+          "start": 26.9,
+          "end": 27.2
+        },
+        {
+          "word": "conditions.",
+          "start": 27.2,
+          "end": 27.76
+        },
+        {
+          "word": "Light",
+          "start": 28.4,
+          "end": 28.72
+        },
+        {
+          "word": "string",
+          "start": 28.72,
+          "end": 29.12
+        },
+        {
+          "word": "and",
+          "start": 29.12,
+          "end": 29.8
+        },
+        {
+          "word": "smooth",
+          "start": 29.8,
+          "end": 30.08
+        },
+        {
+          "word": "pulley",
+          "start": 30.08,
+          "end": 30.44
+        },
+        {
+          "word": "give",
+          "start": 30.44,
+          "end": 31.1
+        },
+        {
+          "word": "equal",
+          "start": 31.1,
+          "end": 31.5
+        },
+        {
+          "word": "tension.",
+          "start": 31.5,
+          "end": 31.96
+        },
+        {
+          "word": "Tart",
+          "start": 32.74,
+          "end": 32.96
+        },
+        {
+          "word": "and",
+          "start": 32.96,
+          "end": 33.66
+        },
+        {
+          "word": "inextensible",
+          "start": 33.66,
+          "end": 34.38
+        },
+        {
+          "word": "gives",
+          "start": 34.38,
+          "end": 35.06
+        },
+        {
+          "word": "the",
+          "start": 35.06,
+          "end": 35.3
+        },
+        {
+          "word": "linked",
+          "start": 35.3,
+          "end": 35.64
+        },
+        {
+          "word": "motion.",
+          "start": 35.64,
+          "end": 36.22
+        },
+        {
+          "word": "Write",
+          "start": 36.68,
+          "end": 36.82
+        },
+        {
+          "word": "an",
+          "start": 36.82,
+          "end": 37.06
+        },
+        {
+          "word": "equation",
+          "start": 37.06,
+          "end": 37.4
+        },
+        {
+          "word": "for",
+          "start": 37.4,
+          "end": 38.0
+        },
+        {
+          "word": "each",
+          "start": 38.0,
+          "end": 38.32
+        },
+        {
+          "word": "particle",
+          "start": 38.32,
+          "end": 38.72
+        },
+        {
+          "word": "with",
+          "start": 38.72,
+          "end": 39.5
+        },
+        {
+          "word": "its",
+          "start": 39.5,
+          "end": 39.7
+        },
+        {
+          "word": "own",
+          "start": 39.7,
+          "end": 40.04
+        },
+        {
+          "word": "positive",
+          "start": 40.04,
+          "end": 40.54
+        },
+        {
+          "word": "direction.",
+          "start": 40.54,
+          "end": 41.18
+        },
+        {
+          "word": "Follow",
+          "start": 41.58,
+          "end": 41.8
+        },
+        {
+          "word": "motion",
+          "start": 41.8,
+          "end": 42.18
+        },
+        {
+          "word": "when",
+          "start": 42.18,
+          "end": 42.5
+        },
+        {
+          "word": "the",
+          "start": 42.5,
+          "end": 42.68
+        },
+        {
+          "word": "string",
+          "start": 42.68,
+          "end": 42.94
+        },
+        {
+          "word": "goes",
+          "start": 42.94,
+          "end": 43.2
+        },
+        {
+          "word": "slack.",
+          "start": 43.2,
+          "end": 43.7
+        },
+        {
+          "word": "Carry",
+          "start": 44.32,
+          "end": 44.5
+        },
+        {
+          "word": "the",
+          "start": 44.5,
+          "end": 44.68
+        },
+        {
+          "word": "speed",
+          "start": 44.68,
+          "end": 45.06
+        },
+        {
+          "word": "into",
+          "start": 45.06,
+          "end": 45.64
+        },
+        {
+          "word": "the",
+          "start": 45.64,
+          "end": 45.8
+        },
+        {
+          "word": "next",
+          "start": 45.8,
+          "end": 45.98
+        },
+        {
+          "word": "stage",
+          "start": 45.98,
+          "end": 46.5
+        },
+        {
+          "word": "but",
+          "start": 46.5,
+          "end": 46.88
+        },
+        {
+          "word": "replace",
+          "start": 46.88,
+          "end": 47.32
+        },
+        {
+          "word": "the",
+          "start": 47.32,
+          "end": 47.64
+        },
+        {
+          "word": "first",
+          "start": 47.64,
+          "end": 47.9
+        },
+        {
+          "word": "diagram.",
+          "start": 47.9,
+          "end": 48.44
+        }
+      ],
+      "cues": {
+        "contrast": 0.62,
+        "table": 14.04,
+        "outcome1": 26.58,
+        "outcome2": 36.68,
+        "outcome3": 41.58
+      },
+      "figureEvents": [],
+      "wordCount": 96,
+      "text": "changes with a smooth table? A horizontal block and a hanging block still have equal acceleration magnitudes while connected. The directions are now right and down. For the table block, vertical weight and reaction balance. Tension is its horizontal resultant. Apply Newton's law separately to each body. Use the string conditions. Light string and smooth pulley give equal tension. Tart and inextensible gives the linked motion. Write an equation for each particle with its own positive direction. Follow motion when the string goes slack. Carry the speed into the next stage but replace the first diagram.",
+      "duration": 51.330612
+    }
+  ],
+  "totalDuration": 443.271837,
+  "engine": "faster-whisper-small (local CPU)",
+  "unresolvedCues": []
+}

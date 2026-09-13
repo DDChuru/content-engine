@@ -1,0 +1,4529 @@
+{
+  "project": "mechanics-connected-bodies-ropes-and-tow-bars",
+  "sceneCount": 8,
+  "scenes": [
+    {
+      "id": "s01",
+      "title": "Connected bodies: ropes and tow bars",
+      "mode": "opening",
+      "voiceSpeed": 1,
+      "tempo": "brisk",
+      "beats": [
+        {
+          "id": "syllabus",
+          "text": "Syllabus four point four: solve simple problems which may be modelled as the motion of connected particles.",
+          "hold": 0.5,
+          "start": 0.4,
+          "speechEnd": 8.24,
+          "end": 8.44,
+          "cue": 0.4,
+          "penEnd": 8.36
+        },
+        {
+          "id": "outcome1",
+          "text": "By the end, you can explain a shared acceleration.",
+          "hold": 0.3,
+          "caption": "Explain a shared acceleration.",
+          "start": 8.94,
+          "speechEnd": 11.65,
+          "end": 11.85,
+          "cue": 8.94,
+          "penEnd": 11.77
+        },
+        {
+          "id": "outcome2",
+          "text": "Choose the whole system or one body.",
+          "hold": 0.3,
+          "caption": "Choose the system or one body.",
+          "start": 12.15,
+          "speechEnd": 14.44,
+          "end": 14.64,
+          "cue": 12.15,
+          "penEnd": 14.56
+        },
+        {
+          "id": "outcome3",
+          "text": "And find the force in the connection.",
+          "hold": 0.5,
+          "caption": "Find the force in the connection.",
+          "start": 14.94,
+          "speechEnd": 17.04,
+          "end": 17.24,
+          "cue": 15.0,
+          "penEnd": 17.16
+        }
+      ],
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 8.44,
+          "end": 8.94,
+          "duration": 0.5
+        },
+        {
+          "kind": "hold",
+          "start": 11.85,
+          "end": 12.15,
+          "duration": 0.3
+        },
+        {
+          "kind": "hold",
+          "start": 14.64,
+          "end": 14.94,
+          "duration": 0.3
+        },
+        {
+          "kind": "hold",
+          "start": 17.24,
+          "end": 17.74,
+          "duration": 0.5
+        }
+      ],
+      "audio": "connected-bodies-ropes-and-tow-bars-s01.mp3",
+      "audioSha256": "a72ef796f72a8c6cfb01724acf2f20363ebc6a60e9d275bd6042ed90411e9dcb",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "provider": "elevenlabs",
+      "sampleDuration": 18.09,
+      "words": [
+        {
+          "word": "Syllabus",
+          "start": 0.4,
+          "end": 0.82
+        },
+        {
+          "word": "four",
+          "start": 0.82,
+          "end": 1.1
+        },
+        {
+          "word": "point",
+          "start": 1.1,
+          "end": 1.34
+        },
+        {
+          "word": "four",
+          "start": 1.34,
+          "end": 1.74
+        },
+        {
+          "word": "solve",
+          "start": 1.74,
+          "end": 2.78
+        },
+        {
+          "word": "simple",
+          "start": 2.78,
+          "end": 3.48
+        },
+        {
+          "word": "problems",
+          "start": 3.48,
+          "end": 4.02
+        },
+        {
+          "word": "which",
+          "start": 4.02,
+          "end": 4.86
+        },
+        {
+          "word": "may",
+          "start": 4.86,
+          "end": 5.12
+        },
+        {
+          "word": "be",
+          "start": 5.12,
+          "end": 5.24
+        },
+        {
+          "word": "modelled",
+          "start": 5.24,
+          "end": 5.84
+        },
+        {
+          "word": "as",
+          "start": 5.84,
+          "end": 6.36
+        },
+        {
+          "word": "the",
+          "start": 6.36,
+          "end": 6.52
+        },
+        {
+          "word": "motion",
+          "start": 6.52,
+          "end": 6.8
+        },
+        {
+          "word": "of",
+          "start": 6.8,
+          "end": 7.12
+        },
+        {
+          "word": "connected",
+          "start": 7.12,
+          "end": 7.54
+        },
+        {
+          "word": "particles.",
+          "start": 7.54,
+          "end": 8.1
+        },
+        {
+          "word": "By",
+          "start": 8.94,
+          "end": 9.08
+        },
+        {
+          "word": "the",
+          "start": 9.08,
+          "end": 9.22
+        },
+        {
+          "word": "end,",
+          "start": 9.22,
+          "end": 9.5
+        },
+        {
+          "word": "you",
+          "start": 9.6,
+          "end": 9.68
+        },
+        {
+          "word": "can",
+          "start": 9.68,
+          "end": 9.82
+        },
+        {
+          "word": "explain",
+          "start": 9.82,
+          "end": 10.24
+        },
+        {
+          "word": "a",
+          "start": 10.24,
+          "end": 10.42
+        },
+        {
+          "word": "shared",
+          "start": 10.42,
+          "end": 10.68
+        },
+        {
+          "word": "acceleration.",
+          "start": 10.68,
+          "end": 11.44
+        },
+        {
+          "word": "Choose",
+          "start": 12.15,
+          "end": 12.42
+        },
+        {
+          "word": "the",
+          "start": 12.42,
+          "end": 12.68
+        },
+        {
+          "word": "whole",
+          "start": 12.68,
+          "end": 12.88
+        },
+        {
+          "word": "system",
+          "start": 12.88,
+          "end": 13.34
+        },
+        {
+          "word": "or",
+          "start": 13.34,
+          "end": 13.74
+        },
+        {
+          "word": "one",
+          "start": 13.74,
+          "end": 14.02
+        },
+        {
+          "word": "body.",
+          "start": 14.02,
+          "end": 14.38
+        },
+        {
+          "word": "And",
+          "start": 15.0,
+          "end": 15.1
+        },
+        {
+          "word": "find",
+          "start": 15.1,
+          "end": 15.42
+        },
+        {
+          "word": "the",
+          "start": 15.42,
+          "end": 15.66
+        },
+        {
+          "word": "force",
+          "start": 15.66,
+          "end": 15.98
+        },
+        {
+          "word": "in",
+          "start": 15.98,
+          "end": 16.32
+        },
+        {
+          "word": "the",
+          "start": 16.32,
+          "end": 16.44
+        },
+        {
+          "word": "connection.",
+          "start": 16.44,
+          "end": 16.78
+        }
+      ],
+      "cues": {
+        "syllabus": 0.4,
+        "outcome1": 8.94,
+        "outcome2": 12.15,
+        "outcome3": 15.0
+      },
+      "figureEvents": [],
+      "wordCount": 40,
+      "text": "Syllabus four point four solve simple problems which may be modelled as the motion of connected particles. By the end, you can explain a shared acceleration. Choose the whole system or one body. And find the force in the connection.",
+      "duration": 18.12898
+    },
+    {
+      "id": "s02",
+      "title": "What the connection allows",
+      "mode": "concept",
+      "voiceSpeed": 1,
+      "tempo": "brisk",
+      "beats": [
+        {
+          "id": "taut",
+          "text": "A taut, inextensible rope fixes the separation. Along a straight road, both bodies therefore share an acceleration.",
+          "hold": 0.5,
+          "start": 0.4,
+          "speechEnd": 8.49,
+          "end": 8.69,
+          "cue": 0.58,
+          "penEnd": 8.61
+        },
+        {
+          "id": "light",
+          "text": "Light means negligible mass. Accelerating the rope needs no resultant force, so its end tensions are equal.",
+          "hold": 0.5,
+          "start": 9.19,
+          "speechEnd": 17.73,
+          "end": 17.93,
+          "cue": 9.19,
+          "penEnd": 17.85
+        },
+        {
+          "id": "pull",
+          "text": "A rope pulls each body towards the other. It can carry tension, but cannot push.",
+          "hold": 0.5,
+          "start": 18.43,
+          "speechEnd": 24.07,
+          "end": 24.27,
+          "cue": 18.48,
+          "penEnd": 24.19
+        },
+        {
+          "id": "brake",
+          "text": "Consider a braking car and a trailer with negligible resistance. A rigid tow bar pushes the trailer backwards, slowing it: thrust, or compression.",
+          "hold": 0.5,
+          "start": 24.77,
+          "speechEnd": 37.48,
+          "end": 37.68,
+          "cue": 25.12,
+          "penEnd": 37.6
+        },
+        {
+          "id": "slack",
+          "text": "With a rope, the trailer approaches the car. The rope goes slack: zero tension, and acceleration need not be shared.",
+          "hold": 0.7,
+          "start": 38.18,
+          "speechEnd": 46.82,
+          "end": 47.02,
+          "cue": 38.26,
+          "penEnd": 46.940000000000005
+        }
+      ],
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 8.69,
+          "end": 9.19,
+          "duration": 0.5
+        },
+        {
+          "kind": "hold",
+          "start": 17.93,
+          "end": 18.43,
+          "duration": 0.5
+        },
+        {
+          "kind": "hold",
+          "start": 24.27,
+          "end": 24.77,
+          "duration": 0.5
+        },
+        {
+          "kind": "hold",
+          "start": 37.68,
+          "end": 38.18,
+          "duration": 0.5
+        },
+        {
+          "kind": "hold",
+          "start": 47.02,
+          "end": 47.72,
+          "duration": 0.7
+        }
+      ],
+      "audio": "connected-bodies-ropes-and-tow-bars-s02.mp3",
+      "audioSha256": "1bd1b0e83ebeadb744c31562f189a949b2ec09ce2d7b93bd48d605c9b6a9aad5",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "provider": "elevenlabs",
+      "sampleDuration": 48.07,
+      "words": [
+        {
+          "word": "taut,",
+          "start": 0.58,
+          "end": 0.98
+        },
+        {
+          "word": "inextensible",
+          "start": 1.08,
+          "end": 1.66
+        },
+        {
+          "word": "rope",
+          "start": 1.66,
+          "end": 2.14
+        },
+        {
+          "word": "fixes",
+          "start": 2.14,
+          "end": 2.86
+        },
+        {
+          "word": "the",
+          "start": 2.86,
+          "end": 3.06
+        },
+        {
+          "word": "separation.",
+          "start": 3.06,
+          "end": 3.6
+        },
+        {
+          "word": "Along",
+          "start": 4.34,
+          "end": 4.56
+        },
+        {
+          "word": "a",
+          "start": 4.56,
+          "end": 4.78
+        },
+        {
+          "word": "straight",
+          "start": 4.78,
+          "end": 4.94
+        },
+        {
+          "word": "road,",
+          "start": 4.94,
+          "end": 5.32
+        },
+        {
+          "word": "both",
+          "start": 5.88,
+          "end": 6.12
+        },
+        {
+          "word": "bodies",
+          "start": 6.12,
+          "end": 6.5
+        },
+        {
+          "word": "therefore",
+          "start": 6.5,
+          "end": 7.12
+        },
+        {
+          "word": "share",
+          "start": 7.12,
+          "end": 7.46
+        },
+        {
+          "word": "an",
+          "start": 7.46,
+          "end": 7.66
+        },
+        {
+          "word": "acceleration.",
+          "start": 7.66,
+          "end": 8.02
+        },
+        {
+          "word": "Light",
+          "start": 9.19,
+          "end": 9.46
+        },
+        {
+          "word": "means",
+          "start": 9.46,
+          "end": 9.9
+        },
+        {
+          "word": "negligible",
+          "start": 9.9,
+          "end": 10.6
+        },
+        {
+          "word": "mass.",
+          "start": 10.6,
+          "end": 10.96
+        },
+        {
+          "word": "Accelerating",
+          "start": 12.0,
+          "end": 12.44
+        },
+        {
+          "word": "the",
+          "start": 12.44,
+          "end": 12.62
+        },
+        {
+          "word": "rope",
+          "start": 12.62,
+          "end": 12.9
+        },
+        {
+          "word": "needs",
+          "start": 12.9,
+          "end": 13.76
+        },
+        {
+          "word": "no",
+          "start": 13.76,
+          "end": 14.18
+        },
+        {
+          "word": "resultant",
+          "start": 14.18,
+          "end": 14.76
+        },
+        {
+          "word": "force,",
+          "start": 14.76,
+          "end": 15.08
+        },
+        {
+          "word": "so",
+          "start": 15.58,
+          "end": 15.84
+        },
+        {
+          "word": "its",
+          "start": 15.84,
+          "end": 16.0
+        },
+        {
+          "word": "end",
+          "start": 16.0,
+          "end": 16.34
+        },
+        {
+          "word": "tensions",
+          "start": 16.34,
+          "end": 16.86
+        },
+        {
+          "word": "are",
+          "start": 16.86,
+          "end": 17.2
+        },
+        {
+          "word": "equal.",
+          "start": 17.2,
+          "end": 17.54
+        },
+        {
+          "word": "A",
+          "start": 18.48,
+          "end": 18.6
+        },
+        {
+          "word": "rope",
+          "start": 18.6,
+          "end": 18.84
+        },
+        {
+          "word": "pulls",
+          "start": 18.84,
+          "end": 19.24
+        },
+        {
+          "word": "each",
+          "start": 19.24,
+          "end": 19.56
+        },
+        {
+          "word": "body",
+          "start": 19.56,
+          "end": 19.8
+        },
+        {
+          "word": "towards",
+          "start": 19.8,
+          "end": 20.22
+        },
+        {
+          "word": "the",
+          "start": 20.22,
+          "end": 20.36
+        },
+        {
+          "word": "other.",
+          "start": 20.36,
+          "end": 20.66
+        },
+        {
+          "word": "It",
+          "start": 21.48,
+          "end": 21.62
+        },
+        {
+          "word": "can",
+          "start": 21.62,
+          "end": 21.78
+        },
+        {
+          "word": "carry",
+          "start": 21.78,
+          "end": 22.04
+        },
+        {
+          "word": "tension,",
+          "start": 22.04,
+          "end": 22.56
+        },
+        {
+          "word": "but",
+          "start": 22.86,
+          "end": 23.0
+        },
+        {
+          "word": "cannot",
+          "start": 23.0,
+          "end": 23.42
+        },
+        {
+          "word": "push.",
+          "start": 23.42,
+          "end": 23.84
+        },
+        {
+          "word": "a",
+          "start": 25.12,
+          "end": 25.36
+        },
+        {
+          "word": "braking",
+          "start": 25.36,
+          "end": 25.6
+        },
+        {
+          "word": "car",
+          "start": 25.6,
+          "end": 26.02
+        },
+        {
+          "word": "and",
+          "start": 26.02,
+          "end": 26.78
+        },
+        {
+          "word": "a",
+          "start": 26.78,
+          "end": 26.94
+        },
+        {
+          "word": "trailer",
+          "start": 26.94,
+          "end": 27.22
+        },
+        {
+          "word": "with",
+          "start": 27.22,
+          "end": 27.98
+        },
+        {
+          "word": "negligible",
+          "start": 27.98,
+          "end": 28.66
+        },
+        {
+          "word": "resistance.",
+          "start": 28.66,
+          "end": 29.48
+        },
+        {
+          "word": "A",
+          "start": 30.92,
+          "end": 31.34
+        },
+        {
+          "word": "rigid",
+          "start": 31.34,
+          "end": 31.68
+        },
+        {
+          "word": "tow",
+          "start": 31.68,
+          "end": 32.02
+        },
+        {
+          "word": "bar",
+          "start": 32.02,
+          "end": 32.32
+        },
+        {
+          "word": "pushes",
+          "start": 32.32,
+          "end": 33.02
+        },
+        {
+          "word": "the",
+          "start": 33.02,
+          "end": 33.26
+        },
+        {
+          "word": "trailer",
+          "start": 33.26,
+          "end": 33.54
+        },
+        {
+          "word": "backwards,",
+          "start": 33.54,
+          "end": 34.2
+        },
+        {
+          "word": "slowing",
+          "start": 34.48,
+          "end": 34.92
+        },
+        {
+          "word": "it",
+          "start": 34.92,
+          "end": 35.22
+        },
+        {
+          "word": "thrust",
+          "start": 35.22,
+          "end": 36.06
+        },
+        {
+          "word": "or",
+          "start": 36.06,
+          "end": 36.84
+        },
+        {
+          "word": "compression.",
+          "start": 36.84,
+          "end": 37.26
+        },
+        {
+          "word": "With",
+          "start": 38.26,
+          "end": 38.38
+        },
+        {
+          "word": "a",
+          "start": 38.38,
+          "end": 38.5
+        },
+        {
+          "word": "rope",
+          "start": 38.5,
+          "end": 38.84
+        },
+        {
+          "word": "the",
+          "start": 38.84,
+          "end": 39.52
+        },
+        {
+          "word": "trailer",
+          "start": 39.52,
+          "end": 39.82
+        },
+        {
+          "word": "approaches",
+          "start": 39.82,
+          "end": 40.3
+        },
+        {
+          "word": "the",
+          "start": 40.3,
+          "end": 40.56
+        },
+        {
+          "word": "car.",
+          "start": 40.56,
+          "end": 40.84
+        },
+        {
+          "word": "The",
+          "start": 41.68,
+          "end": 41.86
+        },
+        {
+          "word": "rope",
+          "start": 41.86,
+          "end": 42.1
+        },
+        {
+          "word": "goes",
+          "start": 42.1,
+          "end": 42.34
+        },
+        {
+          "word": "slack,",
+          "start": 42.34,
+          "end": 42.82
+        },
+        {
+          "word": "zero",
+          "start": 43.48,
+          "end": 43.9
+        },
+        {
+          "word": "tension",
+          "start": 43.9,
+          "end": 44.32
+        },
+        {
+          "word": "and",
+          "start": 44.32,
+          "end": 45.1
+        },
+        {
+          "word": "acceleration",
+          "start": 45.1,
+          "end": 45.56
+        },
+        {
+          "word": "need",
+          "start": 45.56,
+          "end": 46.02
+        },
+        {
+          "word": "not",
+          "start": 46.02,
+          "end": 46.2
+        },
+        {
+          "word": "be",
+          "start": 46.2,
+          "end": 46.38
+        },
+        {
+          "word": "shared.",
+          "start": 46.38,
+          "end": 46.72
+        }
+      ],
+      "cues": {
+        "taut": 0.58,
+        "light": 9.19,
+        "pull": 18.48,
+        "brake": 25.12,
+        "slack": 38.26
+      },
+      "figureEvents": [],
+      "wordCount": 90,
+      "text": "taut, inextensible rope fixes the separation. Along a straight road, both bodies therefore share an acceleration. Light means negligible mass. Accelerating the rope needs no resultant force, so its end tensions are equal. A rope pulls each body towards the other. It can carry tension, but cannot push. a braking car and a trailer with negligible resistance. A rigid tow bar pushes the trailer backwards, slowing it thrust or compression. With a rope the trailer approaches the car. The rope goes slack, zero tension and acceleration need not be shared.",
+      "duration": 48.117551
+    },
+    {
+      "id": "s03",
+      "title": "Picture the towing journey",
+      "mode": "story",
+      "voiceSpeed": 0.9,
+      "tempo": "slow",
+      "beats": [
+        {
+          "id": "start",
+          "text": "Consider a car towing a trailer along a straight, level road, joined by a light rigid tow bar.",
+          "hold": 0.6,
+          "start": 0.4,
+          "speechEnd": 9.31,
+          "end": 9.51,
+          "cue": 0.4,
+          "penEnd": 9.43
+        },
+        {
+          "id": "move",
+          "text": "Driving force exceeds resistance, so both vehicles speed up together.",
+          "hold": 0.6,
+          "start": 10.11,
+          "speechEnd": 16.46,
+          "end": 16.66,
+          "cue": 10.11,
+          "penEnd": 16.580000000000002
+        },
+        {
+          "id": "goal",
+          "text": "Find their common acceleration and tow-bar tension. Here is the complete question.",
+          "hold": 0.5,
+          "start": 17.26,
+          "speechEnd": 23.81,
+          "end": 24.01,
+          "cue": 17.29,
+          "penEnd": 23.930000000000003
+        }
+      ],
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 9.51,
+          "end": 10.11,
+          "duration": 0.6
+        },
+        {
+          "kind": "hold",
+          "start": 16.66,
+          "end": 17.26,
+          "duration": 0.6
+        },
+        {
+          "kind": "hold",
+          "start": 24.01,
+          "end": 24.51,
+          "duration": 0.5
+        }
+      ],
+      "audio": "connected-bodies-ropes-and-tow-bars-s03.mp3",
+      "audioSha256": "69d0c30ff3969b1e269876c49047f108c538098b42ec8ff42d61da22818ef266",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "provider": "elevenlabs",
+      "sampleDuration": 24.86,
+      "words": [
+        {
+          "word": "Consider",
+          "start": 0.4,
+          "end": 0.83
+        },
+        {
+          "word": "a",
+          "start": 0.83,
+          "end": 1.09
+        },
+        {
+          "word": "car",
+          "start": 1.09,
+          "end": 1.29
+        },
+        {
+          "word": "towing",
+          "start": 1.29,
+          "end": 1.65
+        },
+        {
+          "word": "a",
+          "start": 1.65,
+          "end": 1.83
+        },
+        {
+          "word": "trailer",
+          "start": 1.83,
+          "end": 2.29
+        },
+        {
+          "word": "along",
+          "start": 2.29,
+          "end": 3.19
+        },
+        {
+          "word": "a",
+          "start": 3.19,
+          "end": 3.43
+        },
+        {
+          "word": "straight,",
+          "start": 3.43,
+          "end": 3.89
+        },
+        {
+          "word": "level",
+          "start": 4.19,
+          "end": 4.99
+        },
+        {
+          "word": "road,",
+          "start": 4.99,
+          "end": 5.69
+        },
+        {
+          "word": "joined",
+          "start": 5.73,
+          "end": 6.55
+        },
+        {
+          "word": "by",
+          "start": 6.55,
+          "end": 7.39
+        },
+        {
+          "word": "a",
+          "start": 7.39,
+          "end": 7.49
+        },
+        {
+          "word": "light",
+          "start": 7.49,
+          "end": 7.89
+        },
+        {
+          "word": "rigid",
+          "start": 7.89,
+          "end": 8.37
+        },
+        {
+          "word": "tow",
+          "start": 8.37,
+          "end": 8.83
+        },
+        {
+          "word": "-bar.",
+          "start": 8.83,
+          "end": 9.11
+        },
+        {
+          "word": "Driving",
+          "start": 10.11,
+          "end": 10.53
+        },
+        {
+          "word": "force",
+          "start": 10.53,
+          "end": 10.97
+        },
+        {
+          "word": "exceeds",
+          "start": 10.97,
+          "end": 11.77
+        },
+        {
+          "word": "resistance,",
+          "start": 11.77,
+          "end": 12.63
+        },
+        {
+          "word": "so",
+          "start": 13.49,
+          "end": 13.83
+        },
+        {
+          "word": "both",
+          "start": 13.83,
+          "end": 14.25
+        },
+        {
+          "word": "vehicles",
+          "start": 14.25,
+          "end": 14.71
+        },
+        {
+          "word": "speed",
+          "start": 14.71,
+          "end": 15.51
+        },
+        {
+          "word": "up",
+          "start": 15.51,
+          "end": 15.81
+        },
+        {
+          "word": "together.",
+          "start": 15.81,
+          "end": 16.33
+        },
+        {
+          "word": "Find",
+          "start": 17.29,
+          "end": 17.57
+        },
+        {
+          "word": "their",
+          "start": 17.57,
+          "end": 17.91
+        },
+        {
+          "word": "common",
+          "start": 17.91,
+          "end": 18.11
+        },
+        {
+          "word": "acceleration",
+          "start": 18.11,
+          "end": 19.01
+        },
+        {
+          "word": "and",
+          "start": 19.01,
+          "end": 20.15
+        },
+        {
+          "word": "tow",
+          "start": 20.15,
+          "end": 20.41
+        },
+        {
+          "word": "-bar",
+          "start": 20.41,
+          "end": 20.61
+        },
+        {
+          "word": "tension.",
+          "start": 20.61,
+          "end": 21.15
+        },
+        {
+          "word": "Here",
+          "start": 22.15,
+          "end": 22.55
+        },
+        {
+          "word": "is",
+          "start": 22.55,
+          "end": 22.69
+        },
+        {
+          "word": "the",
+          "start": 22.69,
+          "end": 22.81
+        },
+        {
+          "word": "complete",
+          "start": 22.81,
+          "end": 23.07
+        },
+        {
+          "word": "question.",
+          "start": 23.07,
+          "end": 23.57
+        }
+      ],
+      "cues": {
+        "start": 0.4,
+        "move": 10.11,
+        "goal": 17.29
+      },
+      "figureEvents": [],
+      "wordCount": 41,
+      "text": "Consider a car towing a trailer along a straight, level road, joined by a light rigid tow -bar. Driving force exceeds resistance, so both vehicles speed up together. Find their common acceleration and tow -bar tension. Here is the complete question.",
+      "duration": 24.894694
+    },
+    {
+      "id": "s04",
+      "title": "The whole question",
+      "mode": "problem",
+      "voiceSpeed": 0.9,
+      "tempo": "slow",
+      "beats": [
+        {
+          "id": "car",
+          "text": "The car has mass eight hundred kilograms.",
+          "hold": 0.3,
+          "target": "carMass",
+          "start": 0.4,
+          "speechEnd": 2.94,
+          "end": 3.14,
+          "cue": 0.54,
+          "penEnd": 3.06
+        },
+        {
+          "id": "trailer",
+          "text": "The trailer has mass two hundred kilograms.",
+          "hold": 0.3,
+          "target": "trailerMass",
+          "start": 3.44,
+          "speechEnd": 5.64,
+          "end": 5.84,
+          "cue": 3.48,
+          "penEnd": 5.76
+        },
+        {
+          "id": "drive",
+          "text": "The engine provides a constant fifteen hundred newtons to the right.",
+          "hold": 0.3,
+          "target": "drive",
+          "start": 6.14,
+          "speechEnd": 11.11,
+          "end": 11.31,
+          "cue": 6.16,
+          "penEnd": 11.23
+        },
+        {
+          "id": "carRes",
+          "text": "Constant resistance on the car is three hundred newtons to the left.",
+          "hold": 0.3,
+          "target": "carRes",
+          "start": 11.61,
+          "speechEnd": 16.85,
+          "end": 17.05,
+          "cue": 11.61,
+          "penEnd": 16.970000000000002
+        },
+        {
+          "id": "trailerRes",
+          "text": "Constant resistance on the trailer is two hundred newtons to the left.",
+          "hold": 0.3,
+          "target": "trailerRes",
+          "start": 17.35,
+          "speechEnd": 22.6,
+          "end": 22.8,
+          "cue": 17.35,
+          "penEnd": 22.720000000000002
+        },
+        {
+          "id": "conditions",
+          "text": "The road is straight and level. Model both vehicles as particles and the tow bar as light and inextensible.",
+          "hold": 0.3,
+          "start": 23.1,
+          "speechEnd": 32.65,
+          "end": 32.85,
+          "cue": 23.18,
+          "penEnd": 32.77
+        },
+        {
+          "id": "unknown",
+          "text": "Find their common acceleration, a, and the tension, T, in the tow bar.",
+          "hold": 2,
+          "start": 33.15,
+          "speechEnd": 39.35,
+          "end": 39.55,
+          "cue": 33.15,
+          "penEnd": 39.47
+        }
+      ],
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 3.14,
+          "end": 3.44,
+          "duration": 0.3
+        },
+        {
+          "kind": "hold",
+          "start": 5.84,
+          "end": 6.14,
+          "duration": 0.3
+        },
+        {
+          "kind": "hold",
+          "start": 11.31,
+          "end": 11.61,
+          "duration": 0.3
+        },
+        {
+          "kind": "hold",
+          "start": 17.05,
+          "end": 17.35,
+          "duration": 0.3
+        },
+        {
+          "kind": "hold",
+          "start": 22.8,
+          "end": 23.1,
+          "duration": 0.3
+        },
+        {
+          "kind": "hold",
+          "start": 32.85,
+          "end": 33.15,
+          "duration": 0.3
+        },
+        {
+          "kind": "hold",
+          "start": 39.55,
+          "end": 41.55,
+          "duration": 2
+        }
+      ],
+      "audio": "connected-bodies-ropes-and-tow-bars-s04.mp3",
+      "audioSha256": "8cb56d4e438f9557869ea948defdcb4fd2833daecaac950da4459f5c2ea4bbe3",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "provider": "elevenlabs",
+      "sampleDuration": 41.9,
+      "words": [
+        {
+          "word": "car",
+          "start": 0.54,
+          "end": 0.76
+        },
+        {
+          "word": "has",
+          "start": 0.76,
+          "end": 1.04
+        },
+        {
+          "word": "mass",
+          "start": 1.04,
+          "end": 1.4
+        },
+        {
+          "word": "eight",
+          "start": 1.4,
+          "end": 1.82
+        },
+        {
+          "word": "hundred",
+          "start": 1.82,
+          "end": 2.08
+        },
+        {
+          "word": "kilograms.",
+          "start": 2.08,
+          "end": 2.36
+        },
+        {
+          "word": "The",
+          "start": 3.48,
+          "end": 3.58
+        },
+        {
+          "word": "trailer",
+          "start": 3.58,
+          "end": 3.84
+        },
+        {
+          "word": "has",
+          "start": 3.84,
+          "end": 4.08
+        },
+        {
+          "word": "mass",
+          "start": 4.08,
+          "end": 4.4
+        },
+        {
+          "word": "two",
+          "start": 4.4,
+          "end": 4.62
+        },
+        {
+          "word": "hundred",
+          "start": 4.62,
+          "end": 4.82
+        },
+        {
+          "word": "kilograms.",
+          "start": 4.82,
+          "end": 5.3
+        },
+        {
+          "word": "The",
+          "start": 6.16,
+          "end": 6.28
+        },
+        {
+          "word": "engine",
+          "start": 6.28,
+          "end": 6.62
+        },
+        {
+          "word": "provides",
+          "start": 6.62,
+          "end": 7.22
+        },
+        {
+          "word": "a",
+          "start": 7.22,
+          "end": 7.76
+        },
+        {
+          "word": "constant",
+          "start": 7.76,
+          "end": 8.22
+        },
+        {
+          "word": "fifteen",
+          "start": 8.22,
+          "end": 8.66
+        },
+        {
+          "word": "hundred",
+          "start": 8.66,
+          "end": 9.08
+        },
+        {
+          "word": "newtons",
+          "start": 9.08,
+          "end": 9.68
+        },
+        {
+          "word": "to",
+          "start": 9.68,
+          "end": 10.44
+        },
+        {
+          "word": "the",
+          "start": 10.44,
+          "end": 10.58
+        },
+        {
+          "word": "right.",
+          "start": 10.58,
+          "end": 10.9
+        },
+        {
+          "word": "Constant",
+          "start": 11.61,
+          "end": 11.96
+        },
+        {
+          "word": "resistance",
+          "start": 11.96,
+          "end": 12.48
+        },
+        {
+          "word": "on",
+          "start": 12.48,
+          "end": 13.3
+        },
+        {
+          "word": "the",
+          "start": 13.3,
+          "end": 13.4
+        },
+        {
+          "word": "car",
+          "start": 13.4,
+          "end": 13.62
+        },
+        {
+          "word": "is",
+          "start": 13.62,
+          "end": 14.16
+        },
+        {
+          "word": "three",
+          "start": 14.16,
+          "end": 14.5
+        },
+        {
+          "word": "hundred",
+          "start": 14.5,
+          "end": 14.9
+        },
+        {
+          "word": "newtons",
+          "start": 14.9,
+          "end": 15.58
+        },
+        {
+          "word": "to",
+          "start": 15.58,
+          "end": 16.22
+        },
+        {
+          "word": "the",
+          "start": 16.22,
+          "end": 16.38
+        },
+        {
+          "word": "left.",
+          "start": 16.38,
+          "end": 16.6
+        },
+        {
+          "word": "Constant",
+          "start": 17.35,
+          "end": 17.7
+        },
+        {
+          "word": "resistance",
+          "start": 17.7,
+          "end": 18.3
+        },
+        {
+          "word": "on",
+          "start": 18.3,
+          "end": 18.78
+        },
+        {
+          "word": "the",
+          "start": 18.78,
+          "end": 18.88
+        },
+        {
+          "word": "trailer",
+          "start": 18.88,
+          "end": 19.34
+        },
+        {
+          "word": "is",
+          "start": 19.34,
+          "end": 20.08
+        },
+        {
+          "word": "two",
+          "start": 20.08,
+          "end": 20.3
+        },
+        {
+          "word": "hundred",
+          "start": 20.3,
+          "end": 20.62
+        },
+        {
+          "word": "newtons",
+          "start": 20.62,
+          "end": 21.54
+        },
+        {
+          "word": "to",
+          "start": 21.54,
+          "end": 22.02
+        },
+        {
+          "word": "the",
+          "start": 22.02,
+          "end": 22.16
+        },
+        {
+          "word": "left.",
+          "start": 22.16,
+          "end": 22.42
+        },
+        {
+          "word": "The",
+          "start": 23.18,
+          "end": 23.22
+        },
+        {
+          "word": "road",
+          "start": 23.22,
+          "end": 23.42
+        },
+        {
+          "word": "is",
+          "start": 23.42,
+          "end": 23.7
+        },
+        {
+          "word": "straight",
+          "start": 23.7,
+          "end": 23.98
+        },
+        {
+          "word": "and",
+          "start": 23.98,
+          "end": 24.32
+        },
+        {
+          "word": "level.",
+          "start": 24.32,
+          "end": 24.62
+        },
+        {
+          "word": "Model",
+          "start": 25.6,
+          "end": 26.12
+        },
+        {
+          "word": "both",
+          "start": 26.12,
+          "end": 26.66
+        },
+        {
+          "word": "vehicles",
+          "start": 26.66,
+          "end": 27.46
+        },
+        {
+          "word": "as",
+          "start": 27.46,
+          "end": 27.88
+        },
+        {
+          "word": "particles",
+          "start": 27.88,
+          "end": 28.34
+        },
+        {
+          "word": "and",
+          "start": 28.34,
+          "end": 29.44
+        },
+        {
+          "word": "the",
+          "start": 29.44,
+          "end": 29.66
+        },
+        {
+          "word": "tow",
+          "start": 29.66,
+          "end": 29.84
+        },
+        {
+          "word": "bar",
+          "start": 29.84,
+          "end": 30.16
+        },
+        {
+          "word": "is",
+          "start": 30.16,
+          "end": 30.66
+        },
+        {
+          "word": "light",
+          "start": 30.66,
+          "end": 31.1
+        },
+        {
+          "word": "and",
+          "start": 31.1,
+          "end": 31.52
+        },
+        {
+          "word": "inextensible.",
+          "start": 31.52,
+          "end": 32.42
+        },
+        {
+          "word": "Find",
+          "start": 33.15,
+          "end": 33.46
+        },
+        {
+          "word": "their",
+          "start": 33.46,
+          "end": 33.7
+        },
+        {
+          "word": "common",
+          "start": 33.7,
+          "end": 34.0
+        },
+        {
+          "word": "acceleration",
+          "start": 34.0,
+          "end": 34.8
+        },
+        {
+          "word": "a",
+          "start": 34.8,
+          "end": 35.78
+        },
+        {
+          "word": "and",
+          "start": 35.78,
+          "end": 36.08
+        },
+        {
+          "word": "the",
+          "start": 36.08,
+          "end": 36.2
+        },
+        {
+          "word": "tension",
+          "start": 36.2,
+          "end": 36.58
+        },
+        {
+          "word": "t",
+          "start": 36.58,
+          "end": 37.74
+        },
+        {
+          "word": "in",
+          "start": 37.74,
+          "end": 38.62
+        },
+        {
+          "word": "the",
+          "start": 38.62,
+          "end": 38.74
+        },
+        {
+          "word": "tow",
+          "start": 38.74,
+          "end": 38.96
+        },
+        {
+          "word": "Bye.",
+          "start": 38.96,
+          "end": 39.35
+        }
+      ],
+      "cues": {
+        "car": 0.54,
+        "trailer": 3.48,
+        "drive": 6.16,
+        "carRes": 11.61,
+        "trailerRes": 17.35,
+        "conditions": 23.18,
+        "unknown": 33.15
+      },
+      "figureEvents": [
+        {
+          "id": "spoken-3-carMass",
+          "wordIndex": 3,
+          "word": "800",
+          "spokenPhrase": "eight",
+          "start": 1.4,
+          "target": "carMass",
+          "kind": "spoken"
+        },
+        {
+          "id": "spoken-10-trailerMass",
+          "wordIndex": 10,
+          "word": "200",
+          "spokenPhrase": "two",
+          "start": 4.4,
+          "target": "trailerMass",
+          "kind": "spoken"
+        },
+        {
+          "id": "spoken-18-drive",
+          "wordIndex": 18,
+          "word": "1500",
+          "spokenPhrase": "fifteen",
+          "start": 8.22,
+          "target": "drive",
+          "kind": "spoken"
+        },
+        {
+          "id": "spoken-30-carRes",
+          "wordIndex": 30,
+          "word": "300",
+          "spokenPhrase": "three",
+          "start": 14.16,
+          "target": "carRes",
+          "kind": "spoken"
+        },
+        {
+          "id": "spoken-42-trailerRes",
+          "wordIndex": 42,
+          "word": "200",
+          "spokenPhrase": "two",
+          "start": 20.08,
+          "target": "trailerRes",
+          "kind": "spoken"
+        }
+      ],
+      "wordCount": 80,
+      "text": "car has mass eight hundred kilograms. The trailer has mass two hundred kilograms. The engine provides a constant fifteen hundred newtons to the right. Constant resistance on the car is three hundred newtons to the left. Constant resistance on the trailer is two hundred newtons to the left. The road is straight and level. Model both vehicles as particles and the tow bar is light and inextensible. Find their common acceleration a and the tension t in the tow Bye.",
+      "duration": 41.926531
+    },
+    {
+      "id": "s05",
+      "title": "Choose which body to study",
+      "mode": "forces",
+      "voiceSpeed": 0.9,
+      "tempo": "slow",
+      "beats": [
+        {
+          "id": "positive",
+          "text": "Right is positive. Weight and normal reaction balance vertically; consider horizontal forces.",
+          "hold": 0.4,
+          "start": 0.4,
+          "speechEnd": 7.99,
+          "end": 8.19,
+          "cue": 0.66,
+          "penEnd": 8.11
+        },
+        {
+          "id": "trailer",
+          "text": "On the trailer, tension pulls right and resistance acts left. Engine force acts only on the car.",
+          "hold": 0.5,
+          "start": 8.59,
+          "speechEnd": 16.85,
+          "end": 17.05,
+          "cue": 8.62,
+          "penEnd": 16.970000000000002
+        },
+        {
+          "id": "car",
+          "text": "On the car, tension and resistance act left; driving force acts right.",
+          "hold": 0.5,
+          "start": 17.55,
+          "speechEnd": 24.23,
+          "end": 24.43,
+          "cue": 17.55,
+          "penEnd": 24.35
+        },
+        {
+          "id": "formula",
+          "text": "Start with Newton’s law: resultant force equals mass times acceleration.",
+          "hold": 0.5,
+          "ink": "F = ma",
+          "start": 24.93,
+          "speechEnd": 31.38,
+          "end": 31.58,
+          "cue": 25.22,
+          "penEnd": 31.5
+        },
+        {
+          "id": "both",
+          "text": "Enclose both vehicles. The connection forces are internal: equal and opposite.",
+          "hold": 0.5,
+          "start": 32.08,
+          "speechEnd": 38.27,
+          "end": 38.47,
+          "cue": 32.08,
+          "penEnd": 38.39
+        },
+        {
+          "id": "cancel",
+          "text": "Adding forces cancels plus T with minus T. They remain on individual vehicles, but vanish from the combined equation.",
+          "hold": 0.7,
+          "ink": "T - T = 0",
+          "start": 38.97,
+          "speechEnd": 49.19,
+          "end": 49.39,
+          "cue": 39.26,
+          "penEnd": 49.31
+        },
+        {
+          "id": "mass",
+          "text": "With shared acceleration, the system mass is the sum of both masses.",
+          "hold": 0.5,
+          "ink": "m = m₁ + m₂",
+          "start": 50.09,
+          "speechEnd": 55.43,
+          "end": 55.63,
+          "cue": 50.09,
+          "penEnd": 55.550000000000004
+        }
+      ],
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 8.19,
+          "end": 8.59,
+          "duration": 0.4
+        },
+        {
+          "kind": "hold",
+          "start": 17.05,
+          "end": 17.55,
+          "duration": 0.5
+        },
+        {
+          "kind": "hold",
+          "start": 24.43,
+          "end": 24.93,
+          "duration": 0.5
+        },
+        {
+          "kind": "hold",
+          "start": 31.58,
+          "end": 32.08,
+          "duration": 0.5
+        },
+        {
+          "kind": "hold",
+          "start": 38.47,
+          "end": 38.97,
+          "duration": 0.5
+        },
+        {
+          "kind": "hold",
+          "start": 49.39,
+          "end": 50.09,
+          "duration": 0.7
+        },
+        {
+          "kind": "hold",
+          "start": 55.63,
+          "end": 56.13,
+          "duration": 0.5
+        }
+      ],
+      "audio": "connected-bodies-ropes-and-tow-bars-s05.mp3",
+      "audioSha256": "8aa71c9da883ef9e4c49626dd8348a8f4534624935458396209f61ab29c54b86",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "provider": "elevenlabs",
+      "sampleDuration": 56.48,
+      "words": [
+        {
+          "word": "is",
+          "start": 0.66,
+          "end": 1.1
+        },
+        {
+          "word": "positive.",
+          "start": 1.1,
+          "end": 1.66
+        },
+        {
+          "word": "Weight",
+          "start": 2.32,
+          "end": 2.76
+        },
+        {
+          "word": "and",
+          "start": 2.76,
+          "end": 3.38
+        },
+        {
+          "word": "normal",
+          "start": 3.38,
+          "end": 3.66
+        },
+        {
+          "word": "reaction",
+          "start": 3.66,
+          "end": 4.22
+        },
+        {
+          "word": "balance",
+          "start": 4.22,
+          "end": 4.66
+        },
+        {
+          "word": "vertically.",
+          "start": 4.66,
+          "end": 5.34
+        },
+        {
+          "word": "Consider",
+          "start": 6.08,
+          "end": 6.6
+        },
+        {
+          "word": "horizontal",
+          "start": 6.6,
+          "end": 7.16
+        },
+        {
+          "word": "forces.",
+          "start": 7.16,
+          "end": 7.74
+        },
+        {
+          "word": "On",
+          "start": 8.62,
+          "end": 8.76
+        },
+        {
+          "word": "the",
+          "start": 8.76,
+          "end": 8.9
+        },
+        {
+          "word": "trailer,",
+          "start": 8.9,
+          "end": 9.26
+        },
+        {
+          "word": "tension",
+          "start": 9.76,
+          "end": 10.4
+        },
+        {
+          "word": "pulls",
+          "start": 10.4,
+          "end": 10.76
+        },
+        {
+          "word": "right",
+          "start": 10.76,
+          "end": 11.2
+        },
+        {
+          "word": "and",
+          "start": 11.2,
+          "end": 11.84
+        },
+        {
+          "word": "resistance",
+          "start": 11.84,
+          "end": 12.34
+        },
+        {
+          "word": "acts",
+          "start": 12.34,
+          "end": 12.84
+        },
+        {
+          "word": "left.",
+          "start": 12.84,
+          "end": 13.38
+        },
+        {
+          "word": "Engine",
+          "start": 14.14,
+          "end": 14.9
+        },
+        {
+          "word": "force",
+          "start": 14.9,
+          "end": 15.26
+        },
+        {
+          "word": "acts",
+          "start": 15.26,
+          "end": 15.8
+        },
+        {
+          "word": "only",
+          "start": 15.8,
+          "end": 16.1
+        },
+        {
+          "word": "on",
+          "start": 16.1,
+          "end": 16.32
+        },
+        {
+          "word": "the",
+          "start": 16.32,
+          "end": 16.42
+        },
+        {
+          "word": "car.",
+          "start": 16.42,
+          "end": 16.72
+        },
+        {
+          "word": "On",
+          "start": 17.55,
+          "end": 17.7
+        },
+        {
+          "word": "the",
+          "start": 17.7,
+          "end": 17.82
+        },
+        {
+          "word": "car,",
+          "start": 17.82,
+          "end": 18.1
+        },
+        {
+          "word": "tension",
+          "start": 18.86,
+          "end": 19.14
+        },
+        {
+          "word": "and",
+          "start": 19.14,
+          "end": 19.4
+        },
+        {
+          "word": "resistance",
+          "start": 19.4,
+          "end": 19.84
+        },
+        {
+          "word": "act",
+          "start": 19.84,
+          "end": 20.46
+        },
+        {
+          "word": "left.",
+          "start": 20.46,
+          "end": 21.0
+        },
+        {
+          "word": "Driving",
+          "start": 22.18,
+          "end": 22.64
+        },
+        {
+          "word": "force",
+          "start": 22.64,
+          "end": 23.1
+        },
+        {
+          "word": "acts",
+          "start": 23.1,
+          "end": 23.54
+        },
+        {
+          "word": "right.",
+          "start": 23.54,
+          "end": 24.0
+        },
+        {
+          "word": "with",
+          "start": 25.22,
+          "end": 25.56
+        },
+        {
+          "word": "Newton's",
+          "start": 25.56,
+          "end": 26.24
+        },
+        {
+          "word": "law.",
+          "start": 26.24,
+          "end": 26.52
+        },
+        {
+          "word": "Resultant",
+          "start": 27.46,
+          "end": 28.18
+        },
+        {
+          "word": "force",
+          "start": 28.18,
+          "end": 28.54
+        },
+        {
+          "word": "equals",
+          "start": 28.54,
+          "end": 29.36
+        },
+        {
+          "word": "mass",
+          "start": 29.36,
+          "end": 29.76
+        },
+        {
+          "word": "times",
+          "start": 29.76,
+          "end": 30.22
+        },
+        {
+          "word": "acceleration.",
+          "start": 30.22,
+          "end": 30.94
+        },
+        {
+          "word": "Enclose",
+          "start": 32.08,
+          "end": 32.56
+        },
+        {
+          "word": "both",
+          "start": 32.56,
+          "end": 32.84
+        },
+        {
+          "word": "vehicles.",
+          "start": 32.84,
+          "end": 33.32
+        },
+        {
+          "word": "The",
+          "start": 34.44,
+          "end": 34.56
+        },
+        {
+          "word": "connection",
+          "start": 34.56,
+          "end": 35.0
+        },
+        {
+          "word": "forces",
+          "start": 35.0,
+          "end": 35.52
+        },
+        {
+          "word": "are",
+          "start": 35.52,
+          "end": 35.92
+        },
+        {
+          "word": "internal",
+          "start": 35.92,
+          "end": 36.36
+        },
+        {
+          "word": "equal",
+          "start": 36.36,
+          "end": 37.3
+        },
+        {
+          "word": "and",
+          "start": 37.3,
+          "end": 37.58
+        },
+        {
+          "word": "opposite.",
+          "start": 37.58,
+          "end": 37.94
+        },
+        {
+          "word": "forces",
+          "start": 39.26,
+          "end": 39.66
+        },
+        {
+          "word": "cancels",
+          "start": 39.66,
+          "end": 40.56
+        },
+        {
+          "word": "plus",
+          "start": 40.56,
+          "end": 41.28
+        },
+        {
+          "word": "t",
+          "start": 41.28,
+          "end": 41.78
+        },
+        {
+          "word": "with",
+          "start": 41.78,
+          "end": 42.3
+        },
+        {
+          "word": "minus",
+          "start": 42.3,
+          "end": 42.62
+        },
+        {
+          "word": "t.",
+          "start": 42.62,
+          "end": 43.06
+        },
+        {
+          "word": "They",
+          "start": 44.0,
+          "end": 44.26
+        },
+        {
+          "word": "remain",
+          "start": 44.26,
+          "end": 44.52
+        },
+        {
+          "word": "on",
+          "start": 44.52,
+          "end": 44.72
+        },
+        {
+          "word": "individual",
+          "start": 44.72,
+          "end": 45.16
+        },
+        {
+          "word": "vehicles",
+          "start": 45.16,
+          "end": 45.86
+        },
+        {
+          "word": "but",
+          "start": 45.86,
+          "end": 46.68
+        },
+        {
+          "word": "vanish",
+          "start": 46.68,
+          "end": 47.28
+        },
+        {
+          "word": "from",
+          "start": 47.28,
+          "end": 47.66
+        },
+        {
+          "word": "the",
+          "start": 47.66,
+          "end": 47.82
+        },
+        {
+          "word": "combined",
+          "start": 47.82,
+          "end": 48.32
+        },
+        {
+          "word": "equation.",
+          "start": 48.32,
+          "end": 48.94
+        },
+        {
+          "word": "With",
+          "start": 50.09,
+          "end": 50.32
+        },
+        {
+          "word": "shared",
+          "start": 50.32,
+          "end": 50.74
+        },
+        {
+          "word": "acceleration,",
+          "start": 50.74,
+          "end": 51.6
+        },
+        {
+          "word": "the",
+          "start": 52.44,
+          "end": 52.62
+        },
+        {
+          "word": "system",
+          "start": 52.62,
+          "end": 53.06
+        },
+        {
+          "word": "mass",
+          "start": 53.06,
+          "end": 53.48
+        },
+        {
+          "word": "is",
+          "start": 53.48,
+          "end": 53.82
+        },
+        {
+          "word": "the",
+          "start": 53.82,
+          "end": 53.94
+        },
+        {
+          "word": "sum",
+          "start": 53.94,
+          "end": 54.26
+        },
+        {
+          "word": "of",
+          "start": 54.26,
+          "end": 54.44
+        },
+        {
+          "word": "both",
+          "start": 54.44,
+          "end": 54.74
+        },
+        {
+          "word": "masses.",
+          "start": 54.74,
+          "end": 55.16
+        }
+      ],
+      "cues": {
+        "positive": 0.66,
+        "trailer": 8.62,
+        "car": 17.55,
+        "formula": 25.22,
+        "both": 32.08,
+        "cancel": 39.26,
+        "mass": 50.09
+      },
+      "figureEvents": [],
+      "wordCount": 90,
+      "text": "is positive. Weight and normal reaction balance vertically. Consider horizontal forces. On the trailer, tension pulls right and resistance acts left. Engine force acts only on the car. On the car, tension and resistance act left. Driving force acts right. with Newton's law. Resultant force equals mass times acceleration. Enclose both vehicles. The connection forces are internal equal and opposite. forces cancels plus t with minus t. They remain on individual vehicles but vanish from the combined equation. With shared acceleration, the system mass is the sum of both masses.",
+      "duration": 56.52898
+    },
+    {
+      "id": "s06",
+      "title": "Find the common acceleration",
+      "mode": "acceleration",
+      "voiceSpeed": 0.9,
+      "tempo": "slow",
+      "beats": [
+        {
+          "id": "formula",
+          "text": "For the whole system, resultant force equals total mass times acceleration.",
+          "hold": 0.5,
+          "ink": "F = ma",
+          "start": 0.4,
+          "speechEnd": 6.68,
+          "end": 6.88,
+          "cue": 0.4,
+          "penEnd": 6.8
+        },
+        {
+          "id": "symbols",
+          "text": "Driving force minus both resistances equals the sum of the masses times a.",
+          "hold": 0.5,
+          "ink": "D - R₁ - R₂ = (m₁ + m₂)a",
+          "start": 7.38,
+          "speechEnd": 16.27,
+          "end": 16.47,
+          "cue": 7.38,
+          "penEnd": 16.39
+        },
+        {
+          "id": "drive",
+          "text": "Substitute fifteen hundred for the driving force.",
+          "hold": 0.2,
+          "target": "drive",
+          "ink": "1500",
+          "start": 16.97,
+          "speechEnd": 20.24,
+          "end": 20.44,
+          "cue": 16.97,
+          "penEnd": 20.360000000000003
+        },
+        {
+          "id": "carRes",
+          "text": "Subtract three hundred for car resistance.",
+          "hold": 0.2,
+          "target": "carRes",
+          "ink": "- 300",
+          "start": 20.64,
+          "speechEnd": 23.81,
+          "end": 24.01,
+          "cue": 20.64,
+          "penEnd": 23.930000000000003
+        },
+        {
+          "id": "trailerRes",
+          "text": "Subtract two hundred for trailer resistance.",
+          "hold": 0.2,
+          "target": "trailerRes",
+          "ink": "- 200",
+          "start": 24.21,
+          "speechEnd": 27.05,
+          "end": 27.25,
+          "cue": 24.6,
+          "penEnd": 27.17
+        },
+        {
+          "id": "carMass",
+          "text": "The car contributes eight hundred kilograms.",
+          "hold": 0.2,
+          "target": "carMass",
+          "ink": "= (800",
+          "start": 27.45,
+          "speechEnd": 30.03,
+          "end": 30.23,
+          "cue": 27.46,
+          "penEnd": 30.150000000000002
+        },
+        {
+          "id": "trailerMass",
+          "text": "Add two hundred kilograms for the trailer, then multiply by a.",
+          "hold": 0.5,
+          "target": "trailerMass",
+          "ink": "+ 200)a",
+          "start": 30.43,
+          "speechEnd": 35.46,
+          "end": 35.66,
+          "cue": 30.43,
+          "penEnd": 35.58
+        },
+        {
+          "id": "simplify",
+          "text": "The resultant is one thousand newtons and the total mass is one thousand kilograms.",
+          "hold": 0.5,
+          "ink": "1000 = 1000a",
+          "start": 36.16,
+          "speechEnd": 42.48,
+          "end": 42.68,
+          "cue": 36.3,
+          "penEnd": 42.6
+        },
+        {
+          "id": "divide",
+          "text": "Divide both sides by the total mass.",
+          "hold": 0.5,
+          "ink": "a = 1000 / 1000",
+          "start": 43.18,
+          "speechEnd": 45.58,
+          "end": 45.78,
+          "cue": 43.18,
+          "penEnd": 45.7
+        },
+        {
+          "id": "answer",
+          "text": "The acceleration is one metre per second squared, to the right.",
+          "hold": 2,
+          "target": "acceleration",
+          "ink": "a = 1 m s⁻²",
+          "start": 46.28,
+          "speechEnd": 50.76,
+          "end": 50.96,
+          "cue": 46.44,
+          "penEnd": 50.88
+        },
+        {
+          "id": "meaning",
+          "text": "Both gain the same velocity each second, keeping the separation fixed.",
+          "hold": 0.5,
+          "start": 52.96,
+          "speechEnd": 58.58,
+          "end": 58.78,
+          "cue": 53.19,
+          "penEnd": 58.7
+        }
+      ],
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 6.88,
+          "end": 7.38,
+          "duration": 0.5
+        },
+        {
+          "kind": "hold",
+          "start": 16.47,
+          "end": 16.97,
+          "duration": 0.5
+        },
+        {
+          "kind": "hold",
+          "start": 20.44,
+          "end": 20.64,
+          "duration": 0.2
+        },
+        {
+          "kind": "hold",
+          "start": 24.01,
+          "end": 24.21,
+          "duration": 0.2
+        },
+        {
+          "kind": "hold",
+          "start": 27.25,
+          "end": 27.45,
+          "duration": 0.2
+        },
+        {
+          "kind": "hold",
+          "start": 30.23,
+          "end": 30.43,
+          "duration": 0.2
+        },
+        {
+          "kind": "hold",
+          "start": 35.66,
+          "end": 36.16,
+          "duration": 0.5
+        },
+        {
+          "kind": "hold",
+          "start": 42.68,
+          "end": 43.18,
+          "duration": 0.5
+        },
+        {
+          "kind": "hold",
+          "start": 45.78,
+          "end": 46.28,
+          "duration": 0.5
+        },
+        {
+          "kind": "hold",
+          "start": 50.96,
+          "end": 52.96,
+          "duration": 2
+        },
+        {
+          "kind": "hold",
+          "start": 58.78,
+          "end": 59.28,
+          "duration": 0.5
+        }
+      ],
+      "audio": "connected-bodies-ropes-and-tow-bars-s06.mp3",
+      "audioSha256": "403c6b344f9c0686b27f34b8ed9a331d16addc3be07f44b1dbc395bba91d01ad",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "provider": "elevenlabs",
+      "sampleDuration": 59.63,
+      "words": [
+        {
+          "word": "For",
+          "start": 0.4,
+          "end": 0.62
+        },
+        {
+          "word": "the",
+          "start": 0.62,
+          "end": 0.74
+        },
+        {
+          "word": "whole",
+          "start": 0.74,
+          "end": 1.06
+        },
+        {
+          "word": "system,",
+          "start": 1.06,
+          "end": 1.56
+        },
+        {
+          "word": "resultant",
+          "start": 2.32,
+          "end": 3.0
+        },
+        {
+          "word": "force",
+          "start": 3.0,
+          "end": 3.32
+        },
+        {
+          "word": "equals",
+          "start": 3.32,
+          "end": 4.04
+        },
+        {
+          "word": "total",
+          "start": 4.04,
+          "end": 4.58
+        },
+        {
+          "word": "mass",
+          "start": 4.58,
+          "end": 4.86
+        },
+        {
+          "word": "times",
+          "start": 4.86,
+          "end": 5.34
+        },
+        {
+          "word": "acceleration.",
+          "start": 5.34,
+          "end": 6.1
+        },
+        {
+          "word": "Driving",
+          "start": 7.38,
+          "end": 7.78
+        },
+        {
+          "word": "force",
+          "start": 7.78,
+          "end": 8.38
+        },
+        {
+          "word": "minus",
+          "start": 8.38,
+          "end": 9.64
+        },
+        {
+          "word": "both",
+          "start": 9.64,
+          "end": 10.34
+        },
+        {
+          "word": "resistances",
+          "start": 10.34,
+          "end": 11.92
+        },
+        {
+          "word": "equals",
+          "start": 11.92,
+          "end": 12.8
+        },
+        {
+          "word": "the",
+          "start": 12.8,
+          "end": 13.24
+        },
+        {
+          "word": "sum",
+          "start": 13.24,
+          "end": 13.68
+        },
+        {
+          "word": "of",
+          "start": 13.68,
+          "end": 13.98
+        },
+        {
+          "word": "the",
+          "start": 13.98,
+          "end": 14.12
+        },
+        {
+          "word": "masses",
+          "start": 14.12,
+          "end": 14.52
+        },
+        {
+          "word": "times",
+          "start": 14.52,
+          "end": 15.68
+        },
+        {
+          "word": "a.",
+          "start": 15.68,
+          "end": 16.12
+        },
+        {
+          "word": "Substitute",
+          "start": 16.97,
+          "end": 17.54
+        },
+        {
+          "word": "fifteen",
+          "start": 17.54,
+          "end": 17.78
+        },
+        {
+          "word": "hundred",
+          "start": 17.78,
+          "end": 18.32
+        },
+        {
+          "word": "for",
+          "start": 18.32,
+          "end": 19.06
+        },
+        {
+          "word": "the",
+          "start": 19.06,
+          "end": 19.2
+        },
+        {
+          "word": "driving",
+          "start": 19.2,
+          "end": 19.56
+        },
+        {
+          "word": "force.",
+          "start": 19.56,
+          "end": 20.1
+        },
+        {
+          "word": "Subtract",
+          "start": 20.64,
+          "end": 21.24
+        },
+        {
+          "word": "three",
+          "start": 21.24,
+          "end": 21.78
+        },
+        {
+          "word": "hundred",
+          "start": 21.78,
+          "end": 22.12
+        },
+        {
+          "word": "for",
+          "start": 22.12,
+          "end": 22.62
+        },
+        {
+          "word": "car",
+          "start": 22.62,
+          "end": 22.9
+        },
+        {
+          "word": "resistance.",
+          "start": 22.9,
+          "end": 23.44
+        },
+        {
+          "word": "200",
+          "start": 24.6,
+          "end": 25.3
+        },
+        {
+          "word": "for",
+          "start": 25.3,
+          "end": 25.66
+        },
+        {
+          "word": "trailer",
+          "start": 25.66,
+          "end": 26.12
+        },
+        {
+          "word": "resistance.",
+          "start": 26.12,
+          "end": 26.68
+        },
+        {
+          "word": "The",
+          "start": 27.46,
+          "end": 27.62
+        },
+        {
+          "word": "car",
+          "start": 27.62,
+          "end": 27.84
+        },
+        {
+          "word": "contributes",
+          "start": 27.84,
+          "end": 28.42
+        },
+        {
+          "word": "800",
+          "start": 28.42,
+          "end": 29.08
+        },
+        {
+          "word": "kilograms.",
+          "start": 29.08,
+          "end": 29.42
+        },
+        {
+          "word": "Add",
+          "start": 30.43,
+          "end": 30.66
+        },
+        {
+          "word": "200",
+          "start": 30.66,
+          "end": 31.2
+        },
+        {
+          "word": "kilograms",
+          "start": 31.2,
+          "end": 31.78
+        },
+        {
+          "word": "for",
+          "start": 31.78,
+          "end": 32.82
+        },
+        {
+          "word": "the",
+          "start": 32.82,
+          "end": 32.96
+        },
+        {
+          "word": "trailer",
+          "start": 32.96,
+          "end": 33.36
+        },
+        {
+          "word": "then",
+          "start": 33.36,
+          "end": 34.0
+        },
+        {
+          "word": "multiply",
+          "start": 34.0,
+          "end": 34.52
+        },
+        {
+          "word": "by",
+          "start": 34.52,
+          "end": 34.86
+        },
+        {
+          "word": "a.",
+          "start": 34.86,
+          "end": 35.24
+        },
+        {
+          "word": "resultant",
+          "start": 36.3,
+          "end": 36.96
+        },
+        {
+          "word": "is",
+          "start": 36.96,
+          "end": 37.38
+        },
+        {
+          "word": "1000",
+          "start": 37.38,
+          "end": 38.06
+        },
+        {
+          "word": "Newtons",
+          "start": 38.06,
+          "end": 39.0
+        },
+        {
+          "word": "and",
+          "start": 39.0,
+          "end": 39.82
+        },
+        {
+          "word": "the",
+          "start": 39.82,
+          "end": 39.92
+        },
+        {
+          "word": "total",
+          "start": 39.92,
+          "end": 40.14
+        },
+        {
+          "word": "mass",
+          "start": 40.14,
+          "end": 40.48
+        },
+        {
+          "word": "is",
+          "start": 40.48,
+          "end": 41.12
+        },
+        {
+          "word": "1000",
+          "start": 41.12,
+          "end": 41.76
+        },
+        {
+          "word": "kilograms.",
+          "start": 41.76,
+          "end": 42.34
+        },
+        {
+          "word": "Divide",
+          "start": 43.18,
+          "end": 43.62
+        },
+        {
+          "word": "both",
+          "start": 43.62,
+          "end": 43.88
+        },
+        {
+          "word": "sides",
+          "start": 43.88,
+          "end": 44.26
+        },
+        {
+          "word": "by",
+          "start": 44.26,
+          "end": 44.56
+        },
+        {
+          "word": "the",
+          "start": 44.56,
+          "end": 44.7
+        },
+        {
+          "word": "total",
+          "start": 44.7,
+          "end": 44.92
+        },
+        {
+          "word": "mass.",
+          "start": 44.92,
+          "end": 45.28
+        },
+        {
+          "word": "acceleration",
+          "start": 46.44,
+          "end": 46.92
+        },
+        {
+          "word": "is",
+          "start": 46.92,
+          "end": 47.92
+        },
+        {
+          "word": "1",
+          "start": 47.92,
+          "end": 48.28
+        },
+        {
+          "word": "meter",
+          "start": 48.28,
+          "end": 48.54
+        },
+        {
+          "word": "per",
+          "start": 48.54,
+          "end": 48.76
+        },
+        {
+          "word": "second",
+          "start": 48.76,
+          "end": 49.06
+        },
+        {
+          "word": "squared",
+          "start": 49.06,
+          "end": 49.54
+        },
+        {
+          "word": "to",
+          "start": 49.54,
+          "end": 50.08
+        },
+        {
+          "word": "the",
+          "start": 50.08,
+          "end": 50.24
+        },
+        {
+          "word": "right.",
+          "start": 50.24,
+          "end": 50.58
+        },
+        {
+          "word": "gain",
+          "start": 53.19,
+          "end": 53.47
+        },
+        {
+          "word": "the",
+          "start": 53.47,
+          "end": 53.71
+        },
+        {
+          "word": "same",
+          "start": 53.71,
+          "end": 53.97
+        },
+        {
+          "word": "velocity",
+          "start": 53.97,
+          "end": 54.67
+        },
+        {
+          "word": "each",
+          "start": 54.67,
+          "end": 55.63
+        },
+        {
+          "word": "second",
+          "start": 55.63,
+          "end": 56.15
+        },
+        {
+          "word": "keeping",
+          "start": 56.15,
+          "end": 57.19
+        },
+        {
+          "word": "the",
+          "start": 57.19,
+          "end": 57.45
+        },
+        {
+          "word": "separation",
+          "start": 57.45,
+          "end": 57.91
+        },
+        {
+          "word": "fixed.",
+          "start": 57.91,
+          "end": 58.41
+        }
+      ],
+      "cues": {
+        "formula": 0.4,
+        "symbols": 7.38,
+        "drive": 16.97,
+        "carRes": 20.64,
+        "trailerRes": 24.6,
+        "carMass": 27.46,
+        "trailerMass": 30.43,
+        "simplify": 36.3,
+        "divide": 43.18,
+        "answer": 46.44,
+        "meaning": 53.19
+      },
+      "figureEvents": [
+        {
+          "id": "spoken-25-drive",
+          "wordIndex": 25,
+          "word": "1500",
+          "spokenPhrase": "fifteen",
+          "start": 17.54,
+          "target": "drive",
+          "kind": "spoken"
+        },
+        {
+          "id": "drive-substitution",
+          "word": "1500",
+          "start": 16.97,
+          "end": 20.360000000000003,
+          "target": "drive",
+          "kind": "substitution"
+        },
+        {
+          "id": "spoken-32-carRes",
+          "wordIndex": 32,
+          "word": "300",
+          "spokenPhrase": "three",
+          "start": 21.24,
+          "target": "carRes",
+          "kind": "spoken"
+        },
+        {
+          "id": "carRes-substitution",
+          "word": "300",
+          "start": 20.64,
+          "end": 23.930000000000003,
+          "target": "carRes",
+          "kind": "substitution"
+        },
+        {
+          "id": "spoken-37-trailerRes",
+          "wordIndex": 37,
+          "word": "200",
+          "spokenPhrase": "200",
+          "start": 24.6,
+          "target": "trailerRes",
+          "kind": "spoken"
+        },
+        {
+          "id": "trailerRes-substitution",
+          "word": "200",
+          "start": 24.6,
+          "end": 27.17,
+          "target": "trailerRes",
+          "kind": "substitution"
+        },
+        {
+          "id": "spoken-44-carMass",
+          "wordIndex": 44,
+          "word": "800",
+          "spokenPhrase": "800",
+          "start": 28.42,
+          "target": "carMass",
+          "kind": "spoken"
+        },
+        {
+          "id": "carMass-substitution",
+          "word": "800",
+          "start": 27.46,
+          "end": 30.150000000000002,
+          "target": "carMass",
+          "kind": "substitution"
+        },
+        {
+          "id": "spoken-47-trailerMass",
+          "wordIndex": 47,
+          "word": "200",
+          "spokenPhrase": "200",
+          "start": 30.66,
+          "target": "trailerMass",
+          "kind": "spoken"
+        },
+        {
+          "id": "trailerMass-substitution",
+          "word": "200",
+          "start": 30.43,
+          "end": 35.58,
+          "target": "trailerMass",
+          "kind": "substitution"
+        },
+        {
+          "id": "spoken-58-net",
+          "wordIndex": 58,
+          "word": "1000",
+          "spokenPhrase": "1000",
+          "start": 37.38,
+          "target": "net",
+          "kind": "spoken"
+        },
+        {
+          "id": "spoken-65-totalMass",
+          "wordIndex": 65,
+          "word": "1000",
+          "spokenPhrase": "1000",
+          "start": 41.12,
+          "target": "totalMass",
+          "kind": "spoken"
+        },
+        {
+          "id": "spoken-76-acceleration",
+          "wordIndex": 76,
+          "word": "1",
+          "spokenPhrase": "1",
+          "start": 47.92,
+          "target": "acceleration",
+          "kind": "spoken"
+        },
+        {
+          "id": "answer-substitution",
+          "word": "1",
+          "start": 46.44,
+          "end": 50.88,
+          "target": "acceleration",
+          "kind": "substitution"
+        }
+      ],
+      "wordCount": 94,
+      "text": "For the whole system, resultant force equals total mass times acceleration. Driving force minus both resistances equals the sum of the masses times a. Substitute fifteen hundred for the driving force. Subtract three hundred for car resistance. 200 for trailer resistance. The car contributes 800 kilograms. Add 200 kilograms for the trailer then multiply by a. resultant is 1000 Newtons and the total mass is 1000 kilograms. Divide both sides by the total mass. acceleration is 1 meter per second squared to the right. gain the same velocity each second keeping the separation fixed.",
+      "duration": 59.663673
+    },
+    {
+      "id": "s07",
+      "title": "Find the tension using the trailer",
+      "mode": "tension",
+      "voiceSpeed": 0.9,
+      "tempo": "slow",
+      "beats": [
+        {
+          "id": "choose",
+          "text": "To find tension, isolate the trailer. Its force equation contains T; the whole-system equation does not.",
+          "hold": 0.5,
+          "start": 0.4,
+          "speechEnd": 10.18,
+          "end": 10.38,
+          "cue": 0.54,
+          "penEnd": 10.3
+        },
+        {
+          "id": "formula",
+          "text": "Start again: resultant force equals mass times acceleration.",
+          "hold": 0.5,
+          "ink": "F = ma",
+          "start": 10.88,
+          "speechEnd": 15.84,
+          "end": 16.04,
+          "cue": 10.88,
+          "penEnd": 15.959999999999999
+        },
+        {
+          "id": "symbols",
+          "text": "Tension minus trailer resistance equals trailer mass times the shared acceleration.",
+          "hold": 0.5,
+          "ink": "T - R₂ = m₂a",
+          "start": 16.54,
+          "speechEnd": 22.79,
+          "end": 22.99,
+          "cue": 16.54,
+          "penEnd": 22.91
+        },
+        {
+          "id": "resistance",
+          "text": "Subtract the trailer’s two hundred newtons of resistance from T.",
+          "hold": 0.3,
+          "target": "trailerRes",
+          "ink": "T - 200",
+          "start": 23.49,
+          "speechEnd": 27.77,
+          "end": 27.97,
+          "cue": 23.88,
+          "penEnd": 27.89
+        },
+        {
+          "id": "mass",
+          "text": "Use its mass of two hundred kilograms.",
+          "hold": 0.3,
+          "target": "trailerMass",
+          "ink": "= 200",
+          "start": 28.27,
+          "speechEnd": 31.12,
+          "end": 31.32,
+          "cue": 28.27,
+          "penEnd": 31.240000000000002
+        },
+        {
+          "id": "acceleration",
+          "text": "Multiply by the acceleration, one metre per second squared.",
+          "hold": 0.5,
+          "target": "acceleration",
+          "ink": "× 1",
+          "start": 31.62,
+          "speechEnd": 35.08,
+          "end": 35.28,
+          "cue": 31.62,
+          "penEnd": 35.2
+        },
+        {
+          "id": "rearrange",
+          "text": "Add the resistance to both sides. Tension supplies the resultant and overcomes the resistance.",
+          "hold": 0.5,
+          "ink": "T = 200 + 200",
+          "start": 35.78,
+          "speechEnd": 43.8,
+          "end": 44.0,
+          "cue": 36.0,
+          "penEnd": 43.92
+        },
+        {
+          "id": "answer",
+          "text": "The tension is four hundred newtons.",
+          "hold": 2,
+          "target": "tensionTrailer",
+          "ink": "T = 400 N",
+          "start": 44.5,
+          "speechEnd": 46.86,
+          "end": 47.06,
+          "cue": 44.5,
+          "penEnd": 46.980000000000004
+        },
+        {
+          "id": "interpret",
+          "text": "That force pulls the trailer right and the car left. Equal forces do not mean equal resultants, because each vehicle has other forces.",
+          "hold": 0.5,
+          "start": 49.06,
+          "speechEnd": 60.24,
+          "end": 60.44,
+          "cue": 49.06,
+          "penEnd": 60.36
+        },
+        {
+          "id": "check",
+          "text": "Check the car separately: driving force minus resistance minus tension equals car mass times acceleration.",
+          "hold": 0.4,
+          "ink": "D - R₁ - T = m₁a",
+          "page": 1,
+          "start": 60.94,
+          "speechEnd": 70.25,
+          "end": 70.45,
+          "cue": 61.15,
+          "penEnd": 70.37
+        },
+        {
+          "id": "checksub",
+          "text": "Fifteen hundred, minus three hundred, minus four hundred, equals eight hundred times one. Both sides agree.",
+          "hold": 1,
+          "ink": "1500 - 300 - 400 = 800×1",
+          "page": 1,
+          "start": 70.85,
+          "speechEnd": 79.3,
+          "end": 79.5,
+          "cue": 70.85,
+          "penEnd": 79.42
+        }
+      ],
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 10.38,
+          "end": 10.88,
+          "duration": 0.5
+        },
+        {
+          "kind": "hold",
+          "start": 16.04,
+          "end": 16.54,
+          "duration": 0.5
+        },
+        {
+          "kind": "hold",
+          "start": 22.99,
+          "end": 23.49,
+          "duration": 0.5
+        },
+        {
+          "kind": "hold",
+          "start": 27.97,
+          "end": 28.27,
+          "duration": 0.3
+        },
+        {
+          "kind": "hold",
+          "start": 31.32,
+          "end": 31.62,
+          "duration": 0.3
+        },
+        {
+          "kind": "hold",
+          "start": 35.28,
+          "end": 35.78,
+          "duration": 0.5
+        },
+        {
+          "kind": "hold",
+          "start": 44.0,
+          "end": 44.5,
+          "duration": 0.5
+        },
+        {
+          "kind": "hold",
+          "start": 47.06,
+          "end": 49.06,
+          "duration": 2
+        },
+        {
+          "kind": "hold",
+          "start": 60.44,
+          "end": 60.94,
+          "duration": 0.5
+        },
+        {
+          "kind": "hold",
+          "start": 70.45,
+          "end": 70.85,
+          "duration": 0.4
+        },
+        {
+          "kind": "hold",
+          "start": 79.5,
+          "end": 80.5,
+          "duration": 1
+        }
+      ],
+      "audio": "connected-bodies-ropes-and-tow-bars-s07.mp3",
+      "audioSha256": "6a28fc3550da53861ace76d4e77a6992fde8659ae602c6d9f58e8ef96a23616e",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "provider": "elevenlabs",
+      "sampleDuration": 80.85,
+      "words": [
+        {
+          "word": "find",
+          "start": 0.54,
+          "end": 0.8
+        },
+        {
+          "word": "tension,",
+          "start": 0.8,
+          "end": 1.28
+        },
+        {
+          "word": "isolate",
+          "start": 1.68,
+          "end": 2.28
+        },
+        {
+          "word": "the",
+          "start": 2.28,
+          "end": 2.52
+        },
+        {
+          "word": "trailer.",
+          "start": 2.52,
+          "end": 2.86
+        },
+        {
+          "word": "Its",
+          "start": 3.3,
+          "end": 4.12
+        },
+        {
+          "word": "force",
+          "start": 4.12,
+          "end": 4.4
+        },
+        {
+          "word": "equation",
+          "start": 4.4,
+          "end": 5.28
+        },
+        {
+          "word": "contains",
+          "start": 5.28,
+          "end": 6.0
+        },
+        {
+          "word": "T.",
+          "start": 6.0,
+          "end": 6.74
+        },
+        {
+          "word": "The",
+          "start": 7.74,
+          "end": 7.88
+        },
+        {
+          "word": "whole",
+          "start": 7.88,
+          "end": 8.2
+        },
+        {
+          "word": "system",
+          "start": 8.2,
+          "end": 8.6
+        },
+        {
+          "word": "equation",
+          "start": 8.6,
+          "end": 9.2
+        },
+        {
+          "word": "does",
+          "start": 9.2,
+          "end": 9.72
+        },
+        {
+          "word": "not.",
+          "start": 9.72,
+          "end": 9.96
+        },
+        {
+          "word": "Start",
+          "start": 10.88,
+          "end": 11.18
+        },
+        {
+          "word": "again.",
+          "start": 11.18,
+          "end": 11.48
+        },
+        {
+          "word": "Resultant",
+          "start": 12.26,
+          "end": 12.76
+        },
+        {
+          "word": "force",
+          "start": 12.76,
+          "end": 13.1
+        },
+        {
+          "word": "equals",
+          "start": 13.1,
+          "end": 13.7
+        },
+        {
+          "word": "mass",
+          "start": 13.7,
+          "end": 14.22
+        },
+        {
+          "word": "times",
+          "start": 14.22,
+          "end": 14.66
+        },
+        {
+          "word": "acceleration.",
+          "start": 14.66,
+          "end": 15.22
+        },
+        {
+          "word": "Tension",
+          "start": 16.54,
+          "end": 16.98
+        },
+        {
+          "word": "minus",
+          "start": 16.98,
+          "end": 17.4
+        },
+        {
+          "word": "trailer",
+          "start": 17.4,
+          "end": 18.06
+        },
+        {
+          "word": "resistance",
+          "start": 18.06,
+          "end": 18.76
+        },
+        {
+          "word": "equals",
+          "start": 18.76,
+          "end": 19.56
+        },
+        {
+          "word": "trailer",
+          "start": 19.56,
+          "end": 20.08
+        },
+        {
+          "word": "mass",
+          "start": 20.08,
+          "end": 20.26
+        },
+        {
+          "word": "times",
+          "start": 20.26,
+          "end": 20.86
+        },
+        {
+          "word": "the",
+          "start": 20.86,
+          "end": 21.34
+        },
+        {
+          "word": "shared",
+          "start": 21.34,
+          "end": 21.72
+        },
+        {
+          "word": "acceleration.",
+          "start": 21.72,
+          "end": 22.54
+        },
+        {
+          "word": "the",
+          "start": 23.88,
+          "end": 24.5
+        },
+        {
+          "word": "trailer's",
+          "start": 24.5,
+          "end": 25.04
+        },
+        {
+          "word": "200",
+          "start": 25.04,
+          "end": 25.32
+        },
+        {
+          "word": "newtons",
+          "start": 25.32,
+          "end": 26.2
+        },
+        {
+          "word": "of",
+          "start": 26.2,
+          "end": 26.46
+        },
+        {
+          "word": "resistance",
+          "start": 26.46,
+          "end": 26.94
+        },
+        {
+          "word": "from",
+          "start": 26.94,
+          "end": 27.34
+        },
+        {
+          "word": "T,",
+          "start": 27.34,
+          "end": 27.68
+        },
+        {
+          "word": "use",
+          "start": 28.27,
+          "end": 28.52
+        },
+        {
+          "word": "its",
+          "start": 28.52,
+          "end": 28.94
+        },
+        {
+          "word": "mass",
+          "start": 28.94,
+          "end": 29.28
+        },
+        {
+          "word": "of",
+          "start": 29.28,
+          "end": 29.62
+        },
+        {
+          "word": "200",
+          "start": 29.62,
+          "end": 30.16
+        },
+        {
+          "word": "kilograms.",
+          "start": 30.16,
+          "end": 30.74
+        },
+        {
+          "word": "Multiply",
+          "start": 31.62,
+          "end": 32.18
+        },
+        {
+          "word": "by",
+          "start": 32.18,
+          "end": 32.4
+        },
+        {
+          "word": "the",
+          "start": 32.4,
+          "end": 32.54
+        },
+        {
+          "word": "acceleration,",
+          "start": 32.54,
+          "end": 33.1
+        },
+        {
+          "word": "1",
+          "start": 33.68,
+          "end": 33.84
+        },
+        {
+          "word": "meter",
+          "start": 33.84,
+          "end": 34.04
+        },
+        {
+          "word": "per",
+          "start": 34.04,
+          "end": 34.26
+        },
+        {
+          "word": "second",
+          "start": 34.26,
+          "end": 34.52
+        },
+        {
+          "word": "squared.",
+          "start": 34.52,
+          "end": 34.96
+        },
+        {
+          "word": "the",
+          "start": 36.0,
+          "end": 36.22
+        },
+        {
+          "word": "resistance",
+          "start": 36.22,
+          "end": 36.76
+        },
+        {
+          "word": "to",
+          "start": 36.76,
+          "end": 37.04
+        },
+        {
+          "word": "both",
+          "start": 37.04,
+          "end": 37.36
+        },
+        {
+          "word": "sides.",
+          "start": 37.36,
+          "end": 37.84
+        },
+        {
+          "word": "Tension",
+          "start": 38.86,
+          "end": 39.48
+        },
+        {
+          "word": "supplies",
+          "start": 39.48,
+          "end": 40.02
+        },
+        {
+          "word": "the",
+          "start": 40.02,
+          "end": 40.44
+        },
+        {
+          "word": "resultant",
+          "start": 40.44,
+          "end": 41.22
+        },
+        {
+          "word": "and",
+          "start": 41.22,
+          "end": 42.08
+        },
+        {
+          "word": "overcomes",
+          "start": 42.08,
+          "end": 42.78
+        },
+        {
+          "word": "the",
+          "start": 42.78,
+          "end": 43.0
+        },
+        {
+          "word": "resistance.",
+          "start": 43.0,
+          "end": 43.56
+        },
+        {
+          "word": "The",
+          "start": 44.5,
+          "end": 44.64
+        },
+        {
+          "word": "tension",
+          "start": 44.64,
+          "end": 45.06
+        },
+        {
+          "word": "is",
+          "start": 45.06,
+          "end": 45.32
+        },
+        {
+          "word": "400",
+          "start": 45.32,
+          "end": 45.92
+        },
+        {
+          "word": "newtons.",
+          "start": 45.92,
+          "end": 46.7
+        },
+        {
+          "word": "That",
+          "start": 49.06,
+          "end": 49.27
+        },
+        {
+          "word": "force",
+          "start": 49.27,
+          "end": 49.63
+        },
+        {
+          "word": "pulls",
+          "start": 49.63,
+          "end": 49.97
+        },
+        {
+          "word": "the",
+          "start": 49.97,
+          "end": 50.17
+        },
+        {
+          "word": "trailer",
+          "start": 50.17,
+          "end": 50.45
+        },
+        {
+          "word": "right",
+          "start": 50.45,
+          "end": 50.91
+        },
+        {
+          "word": "and",
+          "start": 50.91,
+          "end": 51.63
+        },
+        {
+          "word": "the",
+          "start": 51.63,
+          "end": 51.75
+        },
+        {
+          "word": "car",
+          "start": 51.75,
+          "end": 52.03
+        },
+        {
+          "word": "left.",
+          "start": 52.03,
+          "end": 52.53
+        },
+        {
+          "word": "Equal",
+          "start": 52.53,
+          "end": 53.83
+        },
+        {
+          "word": "forces",
+          "start": 53.83,
+          "end": 54.27
+        },
+        {
+          "word": "do",
+          "start": 54.27,
+          "end": 55.25
+        },
+        {
+          "word": "not",
+          "start": 55.25,
+          "end": 55.45
+        },
+        {
+          "word": "mean",
+          "start": 55.45,
+          "end": 55.69
+        },
+        {
+          "word": "equal",
+          "start": 55.69,
+          "end": 56.05
+        },
+        {
+          "word": "resultants",
+          "start": 56.05,
+          "end": 56.91
+        },
+        {
+          "word": "because",
+          "start": 56.91,
+          "end": 57.93
+        },
+        {
+          "word": "each",
+          "start": 57.93,
+          "end": 58.31
+        },
+        {
+          "word": "vehicle",
+          "start": 58.31,
+          "end": 58.65
+        },
+        {
+          "word": "has",
+          "start": 58.65,
+          "end": 59.15
+        },
+        {
+          "word": "other",
+          "start": 59.15,
+          "end": 59.55
+        },
+        {
+          "word": "forces.",
+          "start": 59.55,
+          "end": 59.97
+        },
+        {
+          "word": "the",
+          "start": 61.15,
+          "end": 61.31
+        },
+        {
+          "word": "car",
+          "start": 61.31,
+          "end": 61.49
+        },
+        {
+          "word": "separately.",
+          "start": 61.49,
+          "end": 62.11
+        },
+        {
+          "word": "Driving",
+          "start": 62.87,
+          "end": 63.41
+        },
+        {
+          "word": "force",
+          "start": 63.41,
+          "end": 63.83
+        },
+        {
+          "word": "minus",
+          "start": 63.83,
+          "end": 64.63
+        },
+        {
+          "word": "resistance",
+          "start": 64.63,
+          "end": 65.35
+        },
+        {
+          "word": "minus",
+          "start": 65.35,
+          "end": 66.01
+        },
+        {
+          "word": "tension",
+          "start": 66.01,
+          "end": 66.59
+        },
+        {
+          "word": "equals",
+          "start": 66.59,
+          "end": 67.57
+        },
+        {
+          "word": "car",
+          "start": 67.57,
+          "end": 68.11
+        },
+        {
+          "word": "mass",
+          "start": 68.11,
+          "end": 68.57
+        },
+        {
+          "word": "times",
+          "start": 68.57,
+          "end": 69.03
+        },
+        {
+          "word": "acceleration.",
+          "start": 69.03,
+          "end": 69.99
+        },
+        {
+          "word": "1500",
+          "start": 70.85,
+          "end": 71.31
+        },
+        {
+          "word": "minus",
+          "start": 71.31,
+          "end": 72.57
+        },
+        {
+          "word": "300",
+          "start": 72.57,
+          "end": 73.07
+        },
+        {
+          "word": "minus",
+          "start": 73.07,
+          "end": 74.15
+        },
+        {
+          "word": "400",
+          "start": 74.15,
+          "end": 74.77
+        },
+        {
+          "word": "equals",
+          "start": 74.77,
+          "end": 75.93
+        },
+        {
+          "word": "800",
+          "start": 75.93,
+          "end": 76.47
+        },
+        {
+          "word": "times",
+          "start": 76.47,
+          "end": 76.99
+        },
+        {
+          "word": "1.",
+          "start": 76.99,
+          "end": 77.39
+        },
+        {
+          "word": "Both",
+          "start": 77.39,
+          "end": 78.37
+        },
+        {
+          "word": "sides",
+          "start": 78.37,
+          "end": 78.73
+        },
+        {
+          "word": "agree.",
+          "start": 78.73,
+          "end": 79.11
+        }
+      ],
+      "cues": {
+        "choose": 0.54,
+        "formula": 10.88,
+        "symbols": 16.54,
+        "resistance": 23.88,
+        "mass": 28.27,
+        "acceleration": 31.62,
+        "rearrange": 36.0,
+        "answer": 44.5,
+        "interpret": 49.06,
+        "check": 61.15,
+        "checksub": 70.85
+      },
+      "figureEvents": [
+        {
+          "id": "spoken-37-trailerRes",
+          "wordIndex": 37,
+          "word": "200",
+          "spokenPhrase": "200",
+          "start": 25.04,
+          "target": "trailerRes",
+          "kind": "spoken"
+        },
+        {
+          "id": "resistance-substitution",
+          "word": "200",
+          "start": 23.88,
+          "end": 27.89,
+          "target": "trailerRes",
+          "kind": "substitution"
+        },
+        {
+          "id": "spoken-47-trailerMass",
+          "wordIndex": 47,
+          "word": "200",
+          "spokenPhrase": "200",
+          "start": 29.62,
+          "target": "trailerMass",
+          "kind": "spoken"
+        },
+        {
+          "id": "mass-substitution",
+          "word": "200",
+          "start": 28.27,
+          "end": 31.240000000000002,
+          "target": "trailerMass",
+          "kind": "substitution"
+        },
+        {
+          "id": "spoken-53-acceleration",
+          "wordIndex": 53,
+          "word": "1",
+          "spokenPhrase": "1",
+          "start": 33.68,
+          "target": "acceleration",
+          "kind": "spoken"
+        },
+        {
+          "id": "acceleration-substitution",
+          "word": "1",
+          "start": 31.62,
+          "end": 35.2,
+          "target": "acceleration",
+          "kind": "substitution"
+        },
+        {
+          "id": "spoken-74-tensionTrailer",
+          "wordIndex": 74,
+          "word": "400",
+          "spokenPhrase": "400",
+          "start": 45.32,
+          "target": "tensionTrailer",
+          "kind": "spoken"
+        },
+        {
+          "id": "spoken-74-tensionCar",
+          "wordIndex": 74,
+          "word": "400",
+          "spokenPhrase": "400",
+          "start": 45.32,
+          "target": "tensionCar",
+          "kind": "spoken"
+        },
+        {
+          "id": "answer-substitution",
+          "word": "400",
+          "start": 44.5,
+          "end": 46.980000000000004,
+          "target": "tensionTrailer",
+          "kind": "substitution"
+        },
+        {
+          "id": "spoken-113-drive",
+          "wordIndex": 113,
+          "word": "1500",
+          "spokenPhrase": "1500",
+          "start": 70.85,
+          "target": "drive",
+          "kind": "spoken"
+        },
+        {
+          "id": "spoken-115-carRes",
+          "wordIndex": 115,
+          "word": "300",
+          "spokenPhrase": "300",
+          "start": 72.57,
+          "target": "carRes",
+          "kind": "spoken"
+        },
+        {
+          "id": "spoken-117-tensionCar",
+          "wordIndex": 117,
+          "word": "400",
+          "spokenPhrase": "400",
+          "start": 74.15,
+          "target": "tensionCar",
+          "kind": "spoken"
+        },
+        {
+          "id": "spoken-119-carMass",
+          "wordIndex": 119,
+          "word": "800",
+          "spokenPhrase": "800",
+          "start": 75.93,
+          "target": "carMass",
+          "kind": "spoken"
+        },
+        {
+          "id": "spoken-121-acceleration",
+          "wordIndex": 121,
+          "word": "1",
+          "spokenPhrase": "1.",
+          "start": 76.99,
+          "target": "acceleration",
+          "kind": "spoken"
+        }
+      ],
+      "wordCount": 125,
+      "text": "find tension, isolate the trailer. Its force equation contains T. The whole system equation does not. Start again. Resultant force equals mass times acceleration. Tension minus trailer resistance equals trailer mass times the shared acceleration. the trailer's 200 newtons of resistance from T, use its mass of 200 kilograms. Multiply by the acceleration, 1 meter per second squared. the resistance to both sides. Tension supplies the resultant and overcomes the resistance. The tension is 400 newtons. That force pulls the trailer right and the car left. Equal forces do not mean equal resultants because each vehicle has other forces. the car separately. Driving force minus resistance minus tension equals car mass times acceleration. 1500 minus 300 minus 400 equals 800 times 1. Both sides agree.",
+      "duration": 80.901224
+    },
+    {
+      "id": "s08",
+      "title": "Check your understanding",
+      "mode": "closing",
+      "voiceSpeed": 1,
+      "tempo": "brisk",
+      "beats": [
+        {
+          "id": "question",
+          "text": "Can we cancel tension when studying the trailer alone? Take a moment.",
+          "hold": 3,
+          "start": 0.4,
+          "speechEnd": 5.06,
+          "end": 5.26,
+          "cue": 0.57,
+          "penEnd": 5.18
+        },
+        {
+          "id": "answer",
+          "text": "No. The opposite tension acts on the car, outside the trailer’s boundary.",
+          "hold": 0.7,
+          "start": 8.26,
+          "speechEnd": 13.27,
+          "end": 13.47,
+          "cue": 8.28,
+          "penEnd": 13.39
+        },
+        {
+          "id": "whatif",
+          "text": "Increase trailer resistance, keeping engine force and masses unchanged. The smaller forward resultant means smaller acceleration.",
+          "hold": 0.5,
+          "start": 14.17,
+          "speechEnd": 24.96,
+          "end": 25.16,
+          "cue": 14.17,
+          "penEnd": 25.080000000000002
+        },
+        {
+          "id": "outcome1",
+          "text": "Explain a shared acceleration.",
+          "hold": 0.2,
+          "caption": "Explain a shared acceleration.",
+          "start": 25.66,
+          "speechEnd": 28.13,
+          "end": 28.33,
+          "cue": 25.66,
+          "penEnd": 28.25
+        },
+        {
+          "id": "outcome2",
+          "text": "Choose the system or one body.",
+          "hold": 0.2,
+          "caption": "Choose the system or one body.",
+          "start": 28.53,
+          "speechEnd": 30.63,
+          "end": 30.83,
+          "cue": 28.6,
+          "penEnd": 30.75
+        },
+        {
+          "id": "outcome3",
+          "text": "And find the force in the connection.",
+          "hold": 0.7,
+          "caption": "Find the force in the connection.",
+          "start": 31.03,
+          "speechEnd": 33.13,
+          "end": 33.33,
+          "cue": 31.18,
+          "penEnd": 33.25
+        }
+      ],
+      "holds": [
+        {
+          "kind": "hold",
+          "start": 5.26,
+          "end": 8.26,
+          "duration": 3
+        },
+        {
+          "kind": "hold",
+          "start": 13.47,
+          "end": 14.17,
+          "duration": 0.7
+        },
+        {
+          "kind": "hold",
+          "start": 25.16,
+          "end": 25.66,
+          "duration": 0.5
+        },
+        {
+          "kind": "hold",
+          "start": 28.33,
+          "end": 28.53,
+          "duration": 0.2
+        },
+        {
+          "kind": "hold",
+          "start": 30.83,
+          "end": 31.03,
+          "duration": 0.2
+        },
+        {
+          "kind": "hold",
+          "start": 33.33,
+          "end": 34.03,
+          "duration": 0.7
+        }
+      ],
+      "audio": "connected-bodies-ropes-and-tow-bars-s08.mp3",
+      "audioSha256": "525e23a0de0fd1ff5d0e189341af3df1ed91757fb28d71bdcb8e37fcbe8e5536",
+      "voiceId": "gYWKdgLtqjPO3D5uDrDP",
+      "provider": "elevenlabs",
+      "sampleDuration": 34.38,
+      "words": [
+        {
+          "word": "we",
+          "start": 0.57,
+          "end": 0.71
+        },
+        {
+          "word": "cancel",
+          "start": 0.71,
+          "end": 0.99
+        },
+        {
+          "word": "tension",
+          "start": 0.99,
+          "end": 1.49
+        },
+        {
+          "word": "when",
+          "start": 1.49,
+          "end": 2.25
+        },
+        {
+          "word": "studying",
+          "start": 2.25,
+          "end": 2.61
+        },
+        {
+          "word": "the",
+          "start": 2.61,
+          "end": 2.81
+        },
+        {
+          "word": "trailer",
+          "start": 2.81,
+          "end": 3.09
+        },
+        {
+          "word": "alone?",
+          "start": 3.09,
+          "end": 3.41
+        },
+        {
+          "word": "Take",
+          "start": 4.17,
+          "end": 4.45
+        },
+        {
+          "word": "a",
+          "start": 4.45,
+          "end": 4.61
+        },
+        {
+          "word": "moment.",
+          "start": 4.61,
+          "end": 4.87
+        },
+        {
+          "word": "No.",
+          "start": 8.28,
+          "end": 8.46
+        },
+        {
+          "word": "The",
+          "start": 9.04,
+          "end": 9.12
+        },
+        {
+          "word": "opposite",
+          "start": 9.12,
+          "end": 9.44
+        },
+        {
+          "word": "tension",
+          "start": 9.44,
+          "end": 10.08
+        },
+        {
+          "word": "acts",
+          "start": 10.08,
+          "end": 10.5
+        },
+        {
+          "word": "on",
+          "start": 10.5,
+          "end": 10.72
+        },
+        {
+          "word": "the",
+          "start": 10.72,
+          "end": 10.82
+        },
+        {
+          "word": "car,",
+          "start": 10.82,
+          "end": 11.1
+        },
+        {
+          "word": "outside",
+          "start": 11.6,
+          "end": 12.02
+        },
+        {
+          "word": "the",
+          "start": 12.02,
+          "end": 12.32
+        },
+        {
+          "word": "trailer’s",
+          "start": 12.32,
+          "end": 13.22
+        },
+        {
+          "word": "boundary.",
+          "start": 13.22,
+          "end": 13.22
+        },
+        {
+          "word": "Increase",
+          "start": 14.17,
+          "end": 14.6
+        },
+        {
+          "word": "trailer",
+          "start": 14.6,
+          "end": 14.9
+        },
+        {
+          "word": "resistance,",
+          "start": 14.9,
+          "end": 15.36
+        },
+        {
+          "word": "keeping",
+          "start": 16.44,
+          "end": 16.68
+        },
+        {
+          "word": "engine",
+          "start": 16.68,
+          "end": 17.18
+        },
+        {
+          "word": "force",
+          "start": 17.18,
+          "end": 17.66
+        },
+        {
+          "word": "and",
+          "start": 17.66,
+          "end": 18.6
+        },
+        {
+          "word": "masses",
+          "start": 18.6,
+          "end": 19.06
+        },
+        {
+          "word": "unchanged.",
+          "start": 19.06,
+          "end": 19.68
+        },
+        {
+          "word": "The",
+          "start": 20.82,
+          "end": 20.94
+        },
+        {
+          "word": "smaller",
+          "start": 20.94,
+          "end": 21.32
+        },
+        {
+          "word": "forward",
+          "start": 21.32,
+          "end": 21.68
+        },
+        {
+          "word": "resultant",
+          "start": 21.68,
+          "end": 22.88
+        },
+        {
+          "word": "means",
+          "start": 22.88,
+          "end": 23.3
+        },
+        {
+          "word": "smaller",
+          "start": 23.3,
+          "end": 24.04
+        },
+        {
+          "word": "acceleration.",
+          "start": 24.04,
+          "end": 24.84
+        },
+        {
+          "word": "Explain",
+          "start": 25.66,
+          "end": 26.22
+        },
+        {
+          "word": "a",
+          "start": 26.22,
+          "end": 26.66
+        },
+        {
+          "word": "shared",
+          "start": 26.66,
+          "end": 27.1
+        },
+        {
+          "word": "acceleration.",
+          "start": 27.1,
+          "end": 27.88
+        },
+        {
+          "word": "Choose",
+          "start": 28.6,
+          "end": 28.74
+        },
+        {
+          "word": "the",
+          "start": 28.74,
+          "end": 28.92
+        },
+        {
+          "word": "system",
+          "start": 28.92,
+          "end": 29.34
+        },
+        {
+          "word": "or",
+          "start": 29.34,
+          "end": 29.82
+        },
+        {
+          "word": "one",
+          "start": 29.82,
+          "end": 30.1
+        },
+        {
+          "word": "body.",
+          "start": 30.1,
+          "end": 30.44
+        },
+        {
+          "word": "find",
+          "start": 31.18,
+          "end": 31.52
+        },
+        {
+          "word": "the",
+          "start": 31.52,
+          "end": 31.76
+        },
+        {
+          "word": "force",
+          "start": 31.76,
+          "end": 32.12
+        },
+        {
+          "word": "in",
+          "start": 32.12,
+          "end": 32.4
+        },
+        {
+          "word": "the",
+          "start": 32.4,
+          "end": 32.52
+        },
+        {
+          "word": "connection.",
+          "start": 32.52,
+          "end": 32.9
+        }
+      ],
+      "cues": {
+        "question": 0.57,
+        "answer": 8.28,
+        "whatif": 14.17,
+        "outcome1": 25.66,
+        "outcome2": 28.6,
+        "outcome3": 31.18
+      },
+      "figureEvents": [],
+      "wordCount": 55,
+      "text": "we cancel tension when studying the trailer alone? Take a moment. No. The opposite tension acts on the car, outside the trailer’s boundary. Increase trailer resistance, keeping engine force and masses unchanged. The smaller forward resultant means smaller acceleration. Explain a shared acceleration. Choose the system or one body. find the force in the connection.",
+      "duration": 34.429388
+    }
+  ],
+  "totalDuration": 364.591021,
+  "engine": "faster-whisper-small (local CPU)",
+  "unresolvedCues": []
+}
