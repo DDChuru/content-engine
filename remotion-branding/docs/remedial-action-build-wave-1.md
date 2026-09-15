@@ -70,7 +70,9 @@ Shared immutable-by-hash assets are referenced in this worktree, without copying
 
 | Existing public path | SHA-256 |
 | --- | --- |
-| `images/ewizer-logo.png` | `7ab3dcf75f9b8d66a6caf947abc4a63782812c6d568f8c1207e71fc327b4ced6` |
+| `images/ewizer-logo.png` | `e015af27d20cd72f59b8d089113173526ecced17c149a31e0e01db95287f99bb` |
+| `images/ewizer-condensed.png` | `a687c3d7d5dd6d14dbd4de60b9851b05b25f4de4a4d5dd2944a238edc195e476` |
+| `images/ewizer-wordmark.png` | `711da7ec013403f06074a092f0019111d28fb3f82aaaa6c6de5b70e3956d62b8` |
 | `images/ecowize-logo.webp` | `f7401f888d9b55e4b8ccb80aaf4f20a712abfab04ce83c5208cf8ddaa0362555` |
 | `ccv-tutorial/fonts/BarlowCondensed_700Bold.ttf` | `53550669f93c07de6221e051905462f862066459eb50148268b5628104a58a30` |
 | `ccv-tutorial/fonts/DMSans_400Regular.ttf` | `20ccb90498d8ca511bb0be31a74eccd5f29fbe1161852ef72781b703929e98ec` |

@@ -236,7 +236,7 @@ async function browserProofs(renderPreview) {
 	const scratch = fs.mkdtempSync(path.join(os.tmpdir(), 'verify-cln-v4-'));
 	const proofDir = fs.mkdtempSync(path.join(root, 'out', 'verify-cln-v4-INTERNAL-PREVIEW-'));
 	const publicDir = path.join(scratch, 'public');
-	const publicFiles = [...manifest.slots.flatMap((item) => item.captures.map((capture) => capture.path)), 'images/ewizer-logo.png', 'images/ecowize-logo.webp'];
+	const publicFiles = [...manifest.slots.flatMap((item) => item.captures.map((capture) => capture.path)), 'images/ewizer-condensed.png', 'images/ecowize-logo.webp'];
 	const polish = require(path.join(source, 'polish-v4.json'));
 	publicFiles.push(polish.qr.path, polish.music.path);
 	if (timing.audio) publicFiles.push(timing.audio.path);

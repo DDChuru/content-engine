@@ -11,8 +11,7 @@ import {
 
 /**
  * EcowizeBookends — the shared branded intro/outro for the e-wizer field-guide
- * series, extracted from the copies in cln/CleaningVerificationBranded.tsx and
- * hygiene/DailyHygieneTutorial.tsx (those keep their local copies untouched).
+ * series, extracted from the original journey-specific copies.
  * Parameterized so each journey video sets its own title/tagline/accents while
  * the logo lockup, ink background and drifting grid stay series-constant.
  */
@@ -93,9 +92,9 @@ export const LogoLockup: React.FC<{
 					width: 276,
 					height: 276,
 					borderRadius: 44,
-					background: 'rgba(255,255,255,0.05)',
-					border: '1px solid rgba(255,255,255,0.14)',
-					boxShadow: `0 0 ${36 + split * 32}px rgba(${rgbA},0.28)`,
+					background: '#F7FAFC',
+					border: '1px solid rgba(255,255,255,0.26)',
+					boxShadow: '0 22px 54px rgba(0,0,0,0.28)',
 					display: 'flex',
 					alignItems: 'center',
 					justifyContent: 'center',
@@ -104,12 +103,11 @@ export const LogoLockup: React.FC<{
 				}}
 			>
 				<Img
-					src={staticFile('images/ewizer-logo.png')}
+					src={staticFile('images/ewizer-condensed.png')}
 					style={{
-						width: 214,
-						height: 214,
+						width: 228,
+						height: 228,
 						objectFit: 'contain',
-						filter: 'drop-shadow(0 18px 34px rgba(0,0,0,0.42))',
 					}}
 				/>
 			</div>

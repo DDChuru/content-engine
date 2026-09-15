@@ -125,7 +125,9 @@ const SOURCE_SNAPSHOTS: Record<string, string> = {
 	'remedial-tutorial/provenance/cleaning-v4-register.md': '0ad3895348a60da5c895478017c9440ef4ac86cc709ee007bc8dfecde34eb39f',
 };
 const BRAND_HASHES: Record<string, string> = {
-	'images/ewizer-logo.png': '7ab3dcf75f9b8d66a6caf947abc4a63782812c6d568f8c1207e71fc327b4ced6',
+	'images/ewizer-logo.png': 'e015af27d20cd72f59b8d089113173526ecced17c149a31e0e01db95287f99bb',
+	'images/ewizer-condensed.png': 'a687c3d7d5dd6d14dbd4de60b9851b05b25f4de4a4d5dd2944a238edc195e476',
+	'images/ewizer-wordmark.png': '711da7ec013403f06074a092f0019111d28fb3f82aaaa6c6de5b70e3956d62b8',
 	'images/ecowize-logo.webp': 'f7401f888d9b55e4b8ccb80aaf4f20a712abfab04ce83c5208cf8ddaa0362555',
 	'ccv-tutorial/fonts/BarlowCondensed_700Bold.ttf': '53550669f93c07de6221e051905462f862066459eb50148268b5628104a58a30',
 	'ccv-tutorial/fonts/DMSans_400Regular.ttf': '20ccb90498d8ca511bb0be31a74eccd5f29fbe1161852ef72781b703929e98ec',
@@ -166,7 +168,7 @@ export const assertRect = (rect: Rect) => requireValue(
 	'crop must remain inside the genuine image',
 );
 export const assertFileIdentity = (file: FileIdentity) => {
-	requireValue(/^(remedial-tutorial\/[a-zA-Z0-9/_-]+\.(png|json|md)|images\/(ewizer-logo\.png|ecowize-logo\.webp)|ccv-tutorial\/fonts\/[a-zA-Z0-9_]+\.ttf)$/.test(file.path), `unsafe asset path: ${file.path}`);
+	requireValue(/^(remedial-tutorial\/[a-zA-Z0-9/_-]+\.(png|json|md)|images\/(ewizer-(logo|condensed|wordmark)\.png|ecowize-logo\.webp)|ccv-tutorial\/fonts\/[a-zA-Z0-9_]+\.ttf)$/.test(file.path), `unsafe asset path: ${file.path}`);
 	requireValue(/^[a-f0-9]{64}$/.test(file.sha256) && Number.isInteger(file.bytes) && file.bytes > 0, `file identity required: ${file.path}`);
 };
 
@@ -176,7 +178,7 @@ export const assertCaptureManifest = (manifest: CaptureManifest) => {
 	requireValue(manifest.storyboard.sha256 === STORYBOARD_SHA256 && manifest.storyboard.path === 'remedial-tutorial/provenance/approved-storyboard.md', 'approved storyboard identity changed');
 	requireValue(manifest.provenance.length === 2 && new Set(manifest.provenance.map((file) => file.path)).size === 2, 'both independent provenance snapshots required');
 	for (const file of manifest.provenance) requireValue(file.sha256 === SOURCE_SNAPSHOTS[file.path], 'independent source provenance hash mismatch');
-	requireValue(manifest.brandAssets.length === 5 && new Set(manifest.brandAssets.map((file) => file.path)).size === 5, 'all shared brand assets must be verified');
+	requireValue(manifest.brandAssets.length === 7 && new Set(manifest.brandAssets.map((file) => file.path)).size === 7, 'all shared brand assets must be verified');
 	for (const file of manifest.brandAssets) requireValue(file.sha256 === BRAND_HASHES[file.path], 'shared brand asset identity changed');
 	const identities = [...manifest.provenance, manifest.storyboard, ...manifest.brandAssets, ...manifest.captures];
 	for (const file of identities) assertFileIdentity(file);
