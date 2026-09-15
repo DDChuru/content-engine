@@ -88,7 +88,7 @@ const BrandOutro: React.FC = () => {
 					transform: `translateY(${interpolate(reveal, [0, 1], [28, 0])}px)`,
 				}}
 			>
-				<LogoLockup intro={false} accentA={SKY} accentB={LIME} />
+				<LogoLockup intro={false} accentA={SKY} accentB={LIME} left={20} />
 			</div>
 
 			<div

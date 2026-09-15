@@ -63,7 +63,8 @@ export const LogoLockup: React.FC<{
 	intro: boolean;
 	accentA: string;
 	accentB: string;
-}> = ({ intro, accentA, accentB }) => {
+	left?: number;
+}> = ({ intro, accentA, accentB, left = 170 }) => {
 	const frame = useCurrentFrame();
 	const { fps } = useVideoConfig();
 	const rgbA = hexToRgb(accentA);
@@ -78,7 +79,7 @@ export const LogoLockup: React.FC<{
 		<div
 			style={{
 				position: 'absolute',
-				left: intro ? 170 : 20,
+				left,
 				top: intro ? 168 : 154,
 				width: 610,
 				height: 520,
@@ -292,7 +293,7 @@ export const BrandOutro: React.FC<{
 					transform: `translateY(${interpolate(reveal, [0, 1], [28, 0])}px)`,
 				}}
 			>
-				<LogoLockup intro={false} accentA={accentA} accentB={accentB} />
+				<LogoLockup intro={false} accentA={accentA} accentB={accentB} left={20} />
 			</div>
 
 			<div
