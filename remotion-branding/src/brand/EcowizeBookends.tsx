@@ -78,7 +78,7 @@ export const LogoLockup: React.FC<{
 		<div
 			style={{
 				position: 'absolute',
-				left: 170,
+				left: intro ? 170 : 20,
 				top: intro ? 168 : 154,
 				width: 610,
 				height: 520,
