@@ -35,7 +35,7 @@
     "humanAuthorityRule": "Only a human may set humanSignOff to signed_off. Render success, validation, filenames, and automated or formal technical review are insufficient.",
     "finalInvariant": "An artifact may be listed as deliverable=final only when the same record has humanSignOff=signed_off."
   },
-  "lastVerifiedAt": "2026-09-16T00:19:24.357820+00:00",
+  "lastVerifiedAt": "2026-09-09T06:49:50.341463+00:00",
   "repository": {
     "machine": "B",
     "name": "content-engine/remotion-branding",
@@ -63,11 +63,11 @@
     "entrypoints": 5,
     "registrationRecords": 53,
     "uniqueCompositionIds": 51,
-    "videoArtifacts": 44,
+    "videoArtifacts": 34,
     "evidenceStillArtifacts": 33,
-    "classifiedOutputFiles": 76,
-    "outputBytes": 937914823,
-    "videoArtifactBytes": 928335732,
+    "classifiedOutputFiles": 66,
+    "outputBytes": 803808153,
+    "videoArtifactBytes": 794229062,
     "evidenceStillBytes": 33468420,
     "signedOffFinals": 8
   },
@@ -1814,8 +1814,7 @@
         "/home/dachu/Documents/projects/e-wizer/demo-assets/equipment-tutorial-astra-v1/output/verification.json",
         "/home/dachu/Documents/projects/e-wizer/demo-assets/equipment-ppe-production-20260909/README.md",
         "DC voice, no burned-in captions, music only in bookends; genuine app stills and labelled illustrative continuation.",
-        "User approved both delivered Equipment and PPE cuts in the active conversation: \u201cAwesome approved\u201d.",
-        "output/verification.json at this path was overwritten 2026-09-15 by the logo-refresh finish; approved hashes preserved in output/intro-fix-finish.log + approval.json"
+        "User approved both delivered Equipment and PPE cuts in the active conversation: \u201cAwesome approved\u201d."
       ],
       "approvedAt": "2026-09-09T04:52:08.978114+02:00"
     },
@@ -1856,8 +1855,7 @@
         "/home/dachu/Documents/projects/e-wizer/demo-assets/equipment-tutorial-astra-v1/output/verification.json",
         "/home/dachu/Documents/projects/e-wizer/demo-assets/equipment-ppe-production-20260909/README.md",
         "DC voice, no burned-in captions, music only in bookends; genuine app stills and labelled illustrative continuation.",
-        "User approved both delivered Equipment and PPE cuts in the active conversation: \u201cAwesome approved\u201d.",
-        "output/verification.json at this path was overwritten 2026-09-15 by the logo-refresh finish; approved hashes preserved in output/intro-fix-finish.log + approval.json"
+        "User approved both delivered Equipment and PPE cuts in the active conversation: \u201cAwesome approved\u201d."
       ],
       "approvedAt": "2026-09-09T04:52:08.978114+02:00"
     },
@@ -1898,8 +1896,7 @@
         "/home/dachu/Documents/projects/e-wizer/demo-assets/ppe-tutorial-astra-v1/output/verification.json",
         "/home/dachu/Documents/projects/e-wizer/demo-assets/equipment-ppe-production-20260909/README.md",
         "DC voice, no burned-in captions, music only in bookends; genuine app stills and labelled illustrative continuation.",
-        "User approved both delivered Equipment and PPE cuts in the active conversation: \u201cAwesome approved\u201d.",
-        "output/verification.json at this path was overwritten 2026-09-15 by the logo-refresh finish; approved hashes preserved in output/finish.log + approval.json"
+        "User approved both delivered Equipment and PPE cuts in the active conversation: \u201cAwesome approved\u201d."
       ],
       "approvedAt": "2026-09-09T04:52:08.978114+02:00"
     },
@@ -1940,8 +1937,7 @@
         "/home/dachu/Documents/projects/e-wizer/demo-assets/ppe-tutorial-astra-v1/output/verification.json",
         "/home/dachu/Documents/projects/e-wizer/demo-assets/equipment-ppe-production-20260909/README.md",
         "DC voice, no burned-in captions, music only in bookends; genuine app stills and labelled illustrative continuation.",
-        "User approved both delivered Equipment and PPE cuts in the active conversation: \u201cAwesome approved\u201d.",
-        "output/verification.json at this path was overwritten 2026-09-15 by the logo-refresh finish; approved hashes preserved in output/finish.log + approval.json"
+        "User approved both delivered Equipment and PPE cuts in the active conversation: \u201cAwesome approved\u201d."
       ],
       "approvedAt": "2026-09-09T04:52:08.978114+02:00"
     },
@@ -2145,8 +2141,7 @@
         "/home/dachu/Documents/projects/e-wizer/demo-assets/handover-tutorial-astra-v2/pronunciation-fix.json",
         "/home/dachu/Documents/projects/e-wizer/demo-assets/handover-tutorial-astra-v2/output/verification.json",
         "/home/dachu/Documents/projects/e-wizer/demo-assets/handover-tutorial-astra-v2/README.md",
-        "User requested correction of Ecowize lead pronunciation. Two sentence-only speech patches; identical video stream and chapter timing.",
-        "output/verification.json at this path was overwritten 2026-09-15 by the logo-refresh finish; approved hashes preserved in artifact-manifest.json + remotion-branding/docs/video-inventory.json"
+        "User requested correction of Ecowize lead pronunciation. Two sentence-only speech patches; identical video stream and chapter timing."
       ]
     },
     {
@@ -2185,8 +2180,7 @@
         "/home/dachu/Documents/projects/e-wizer/demo-assets/handover-tutorial-astra-v2/pronunciation-fix.json",
         "/home/dachu/Documents/projects/e-wizer/demo-assets/handover-tutorial-astra-v2/output/verification.json",
         "/home/dachu/Documents/projects/e-wizer/demo-assets/handover-tutorial-astra-v2/README.md",
-        "User requested correction of Ecowize lead pronunciation. Two sentence-only speech patches; identical video stream and chapter timing.",
-        "output/verification.json at this path was overwritten 2026-09-15 by the logo-refresh finish; approved hashes preserved in artifact-manifest.json + remotion-branding/docs/video-inventory.json"
+        "User requested correction of Ecowize lead pronunciation. Two sentence-only speech patches; identical video stream and chapter timing."
       ]
     },
     {
@@ -2305,8 +2299,7 @@
         "/home/dachu/Documents/projects/e-wizer/demo-assets/hygiene-tutorial-astra-v3/output/verification.json",
         "/home/dachu/Documents/projects/e-wizer/demo-assets/hygiene-tutorial-astra-v3/README.md",
         "/home/dachu/Documents/projects/e-wizer/demo-assets/handover-hygiene-production-20260909/review-notes.md",
-        "User clarified Start of shift and During shift are alternative timing choices, typically Start of shift during pre-start checks; sign the completed record as the standard process. Revised narration and stills independently reviewed; exact rendered cut awaits playback review.",
-        "output/verification.json at this path was overwritten 2026-09-15 by the logo-refresh finish; approved hashes preserved in output/finish.log"
+        "User clarified Start of shift and During shift are alternative timing choices, typically Start of shift during pre-start checks; sign the completed record as the standard process. Revised narration and stills independently reviewed; exact rendered cut awaits playback review."
       ]
     },
     {
@@ -2345,378 +2338,7 @@
         "/home/dachu/Documents/projects/e-wizer/demo-assets/hygiene-tutorial-astra-v3/output/verification.json",
         "/home/dachu/Documents/projects/e-wizer/demo-assets/hygiene-tutorial-astra-v3/README.md",
         "/home/dachu/Documents/projects/e-wizer/demo-assets/handover-hygiene-production-20260909/review-notes.md",
-        "User clarified Start of shift and During shift are alternative timing choices, typically Start of shift during pre-start checks; sign the completed record as the standard process. Revised narration and stills independently reviewed; exact rendered cut awaits playback review.",
-        "output/verification.json at this path was overwritten 2026-09-15 by the logo-refresh finish; approved hashes preserved in output/finish.log"
-      ]
-    },
-    {
-      "id": "equipment-journey-astra-v1-logo-refresh",
-      "relativePath": "output/equipment-tutorial/equipment-logo-refresh.mp4",
-      "compositionId": "EquipmentTutorial",
-      "sourceEntrypoint": "/home/dachu/Documents/projects/e-wizer/demo-assets/equipment-tutorial-astra-v1/src/index.tsx",
-      "sourceRepository": "External standalone Astra composition; not registered in repository root",
-      "bytes": 12954817,
-      "sha256": "df7e6799f43f72caf710a3d60d3a75c98f2238898aa69cc0f4722d3bc20483f3",
-      "mediaProfileRef": "mp4-astra-1080p30",
-      "videoFrames": 8154,
-      "videoDurationSeconds": 271.8,
-      "containerDurationSeconds": 271.8,
-      "statuses": {
-        "technicalReview": "unreviewed",
-        "humanSignOff": "pending",
-        "deliverable": "candidate"
-      },
-      "currentForTrack": false,
-      "track": "equipment",
-      "variant": "master",
-      "locations": [
-        {
-          "machine": "A",
-          "path": "/home/dachu/Documents/projects/content-engine/remotion-branding/output/equipment-tutorial/equipment-logo-refresh.mp4",
-          "verification": "filesystem_size_sha256_ffprobe"
-        },
-        {
-          "machine": "A",
-          "path": "/home/dachu/Documents/projects/e-wizer/demo-assets/equipment-tutorial-astra-v1/output/equipment-logo-refresh.mp4",
-          "verification": "filesystem_size_sha256_ffprobe"
-        }
-      ],
-      "evidence": [
-        "/home/dachu/Documents/projects/e-wizer/demo-assets/equipment-tutorial-astra-v1/output/equipment-logo-refresh-verification.json",
-        "Logo refresh 2026-09-16: new eWizer mark, animated two-logo lockup"
-      ]
-    },
-    {
-      "id": "equipment-journey-astra-v1-logo-refresh-small",
-      "relativePath": "output/equipment-tutorial/equipment-logo-refresh-small.mp4",
-      "compositionId": "EquipmentTutorial",
-      "sourceEntrypoint": "/home/dachu/Documents/projects/e-wizer/demo-assets/equipment-tutorial-astra-v1/src/index.tsx",
-      "sourceRepository": "External standalone Astra composition; not registered in repository root",
-      "bytes": 6256059,
-      "sha256": "01b92de1f738878bd38fb5c3a57f138aa220ce2d260050f9870b67da237d3ca7",
-      "mediaProfileRef": "mp4-astra-720p30",
-      "videoFrames": 8154,
-      "videoDurationSeconds": 271.8,
-      "containerDurationSeconds": 271.808,
-      "statuses": {
-        "technicalReview": "unreviewed",
-        "humanSignOff": "pending",
-        "deliverable": "candidate"
-      },
-      "currentForTrack": false,
-      "track": "equipment",
-      "variant": "sharing",
-      "locations": [
-        {
-          "machine": "A",
-          "path": "/home/dachu/Documents/projects/content-engine/remotion-branding/output/equipment-tutorial/equipment-logo-refresh-small.mp4",
-          "verification": "filesystem_size_sha256_ffprobe"
-        },
-        {
-          "machine": "A",
-          "path": "/home/dachu/Documents/projects/e-wizer/demo-assets/equipment-tutorial-astra-v1/output/equipment-logo-refresh-small.mp4",
-          "verification": "filesystem_size_sha256_ffprobe"
-        }
-      ],
-      "evidence": [
-        "/home/dachu/Documents/projects/e-wizer/demo-assets/equipment-tutorial-astra-v1/output/equipment-logo-refresh-verification.json",
-        "Logo refresh 2026-09-16: new eWizer mark, animated two-logo lockup"
-      ]
-    },
-    {
-      "id": "ppe-journey-astra-v1-logo-refresh",
-      "relativePath": "output/ppe-tutorial/ppe-logo-refresh.mp4",
-      "compositionId": "PpeJourney",
-      "sourceEntrypoint": "/home/dachu/Documents/projects/e-wizer/demo-assets/ppe-tutorial-astra-v1/src/index.tsx",
-      "sourceRepository": "External standalone Astra composition; not registered in repository root",
-      "bytes": 21288048,
-      "sha256": "153d9c9ff9c8941a793fa9711f8844eb6e2d17691c7330726555b767eeaa1caa",
-      "mediaProfileRef": "mp4-astra-1080p30",
-      "videoFrames": 11209,
-      "videoDurationSeconds": 373.6333333333333,
-      "containerDurationSeconds": 373.633333,
-      "statuses": {
-        "technicalReview": "unreviewed",
-        "humanSignOff": "pending",
-        "deliverable": "candidate"
-      },
-      "currentForTrack": false,
-      "track": "ppe",
-      "variant": "master",
-      "locations": [
-        {
-          "machine": "A",
-          "path": "/home/dachu/Documents/projects/content-engine/remotion-branding/output/ppe-tutorial/ppe-logo-refresh.mp4",
-          "verification": "filesystem_size_sha256_ffprobe"
-        },
-        {
-          "machine": "A",
-          "path": "/home/dachu/Documents/projects/e-wizer/demo-assets/ppe-tutorial-astra-v1/output/ppe-logo-refresh.mp4",
-          "verification": "filesystem_size_sha256_ffprobe"
-        }
-      ],
-      "evidence": [
-        "/home/dachu/Documents/projects/e-wizer/demo-assets/ppe-tutorial-astra-v1/output/ppe-logo-refresh-verification.json",
-        "Logo refresh 2026-09-16: new eWizer mark, animated two-logo lockup"
-      ]
-    },
-    {
-      "id": "ppe-journey-astra-v1-logo-refresh-small",
-      "relativePath": "output/ppe-tutorial/ppe-logo-refresh-small.mp4",
-      "compositionId": "PpeJourney",
-      "sourceEntrypoint": "/home/dachu/Documents/projects/e-wizer/demo-assets/ppe-tutorial-astra-v1/src/index.tsx",
-      "sourceRepository": "External standalone Astra composition; not registered in repository root",
-      "bytes": 9722898,
-      "sha256": "de3cfedc739f820d7153c03a55da45e48a0593770fddf011eced811311a0ce14",
-      "mediaProfileRef": "mp4-astra-720p30",
-      "videoFrames": 11209,
-      "videoDurationSeconds": 373.6333333333333,
-      "containerDurationSeconds": 373.634,
-      "statuses": {
-        "technicalReview": "unreviewed",
-        "humanSignOff": "pending",
-        "deliverable": "candidate"
-      },
-      "currentForTrack": false,
-      "track": "ppe",
-      "variant": "sharing",
-      "locations": [
-        {
-          "machine": "A",
-          "path": "/home/dachu/Documents/projects/content-engine/remotion-branding/output/ppe-tutorial/ppe-logo-refresh-small.mp4",
-          "verification": "filesystem_size_sha256_ffprobe"
-        },
-        {
-          "machine": "A",
-          "path": "/home/dachu/Documents/projects/e-wizer/demo-assets/ppe-tutorial-astra-v1/output/ppe-logo-refresh-small.mp4",
-          "verification": "filesystem_size_sha256_ffprobe"
-        }
-      ],
-      "evidence": [
-        "/home/dachu/Documents/projects/e-wizer/demo-assets/ppe-tutorial-astra-v1/output/ppe-logo-refresh-verification.json",
-        "Logo refresh 2026-09-16: new eWizer mark, animated two-logo lockup"
-      ]
-    },
-    {
-      "id": "handover-journey-astra-v2-logo-refresh",
-      "relativePath": "output/handover-tutorial/handover-logo-refresh.mp4",
-      "compositionId": "HandoverTutorial",
-      "sourceEntrypoint": "/home/dachu/Documents/projects/e-wizer/demo-assets/handover-tutorial-astra-v2/src/index.tsx",
-      "sourceRepository": "Standalone Astra composition in e-wizer demo-assets; not registered in repository root",
-      "bytes": 14163759,
-      "sha256": "7c6ba7620dd166a43573b97d108877bb6059bff26ce9378f1b9ed40b6e9cbc13",
-      "mediaProfileRef": "mp4-astra-1080p30",
-      "videoFrames": 9425,
-      "videoDurationSeconds": 314.1666666666667,
-      "containerDurationSeconds": 314.166667,
-      "statuses": {
-        "technicalReview": "unreviewed",
-        "humanSignOff": "pending",
-        "deliverable": "candidate"
-      },
-      "currentForTrack": false,
-      "track": "handover",
-      "variant": "master",
-      "locations": [
-        {
-          "machine": "A",
-          "path": "/home/dachu/Documents/projects/content-engine/remotion-branding/output/handover-tutorial/handover-logo-refresh.mp4",
-          "verification": "filesystem_size_sha256_ffprobe"
-        },
-        {
-          "machine": "A",
-          "path": "/home/dachu/Documents/projects/e-wizer/demo-assets/handover-tutorial-astra-v2/output/handover-logo-refresh.mp4",
-          "verification": "filesystem_size_sha256_ffprobe"
-        }
-      ],
-      "evidence": [
-        "/home/dachu/Documents/projects/e-wizer/demo-assets/handover-tutorial-astra-v2/output/handover-logo-refresh-verification.json",
-        "Logo refresh 2026-09-16: new eWizer mark, animated two-logo lockup"
-      ]
-    },
-    {
-      "id": "handover-journey-astra-v2-logo-refresh-small",
-      "relativePath": "output/handover-tutorial/handover-logo-refresh-small.mp4",
-      "compositionId": "HandoverTutorial",
-      "sourceEntrypoint": "/home/dachu/Documents/projects/e-wizer/demo-assets/handover-tutorial-astra-v2/src/index.tsx",
-      "sourceRepository": "Standalone Astra composition in e-wizer demo-assets; not registered in repository root",
-      "bytes": 6975621,
-      "sha256": "646471d2c1d28ed01d3e08a006b336498d7ba68faaf74773db1ca74f139d0764",
-      "mediaProfileRef": "mp4-astra-720p30",
-      "videoFrames": 9425,
-      "videoDurationSeconds": 314.1666666666667,
-      "containerDurationSeconds": 314.166667,
-      "statuses": {
-        "technicalReview": "unreviewed",
-        "humanSignOff": "pending",
-        "deliverable": "candidate"
-      },
-      "currentForTrack": false,
-      "track": "handover",
-      "variant": "sharing",
-      "locations": [
-        {
-          "machine": "A",
-          "path": "/home/dachu/Documents/projects/content-engine/remotion-branding/output/handover-tutorial/handover-logo-refresh-small.mp4",
-          "verification": "filesystem_size_sha256_ffprobe"
-        },
-        {
-          "machine": "A",
-          "path": "/home/dachu/Documents/projects/e-wizer/demo-assets/handover-tutorial-astra-v2/output/handover-logo-refresh-small.mp4",
-          "verification": "filesystem_size_sha256_ffprobe"
-        }
-      ],
-      "evidence": [
-        "/home/dachu/Documents/projects/e-wizer/demo-assets/handover-tutorial-astra-v2/output/handover-logo-refresh-verification.json",
-        "Logo refresh 2026-09-16: new eWizer mark, animated two-logo lockup"
-      ]
-    },
-    {
-      "id": "hygiene-journey-astra-v3-logo-refresh",
-      "relativePath": "output/hygiene-tutorial/hygiene-logo-refresh.mp4",
-      "compositionId": "HygieneTutorial",
-      "sourceEntrypoint": "/home/dachu/Documents/projects/e-wizer/demo-assets/hygiene-tutorial-astra-v3/src/index.tsx",
-      "sourceRepository": "Standalone Astra composition in e-wizer demo-assets; not registered in repository root",
-      "bytes": 18095290,
-      "sha256": "539fc1632e6f3f7d76923591cc8226bf171bfbb591688e0ae56bbf38c22aa7e2",
-      "mediaProfileRef": "mp4-astra-1080p30",
-      "videoFrames": 12355,
-      "videoDurationSeconds": 411.8333333333333,
-      "containerDurationSeconds": 411.833333,
-      "statuses": {
-        "technicalReview": "unreviewed",
-        "humanSignOff": "pending",
-        "deliverable": "candidate"
-      },
-      "currentForTrack": false,
-      "track": "hygiene",
-      "variant": "master",
-      "locations": [
-        {
-          "machine": "A",
-          "path": "/home/dachu/Documents/projects/content-engine/remotion-branding/output/hygiene-tutorial/hygiene-logo-refresh.mp4",
-          "verification": "filesystem_size_sha256_ffprobe"
-        },
-        {
-          "machine": "A",
-          "path": "/home/dachu/Documents/projects/e-wizer/demo-assets/hygiene-tutorial-astra-v3/output/hygiene-logo-refresh.mp4",
-          "verification": "filesystem_size_sha256_ffprobe"
-        }
-      ],
-      "evidence": [
-        "/home/dachu/Documents/projects/e-wizer/demo-assets/hygiene-tutorial-astra-v3/output/hygiene-logo-refresh-verification.json",
-        "Logo refresh 2026-09-16: new eWizer mark, animated two-logo lockup"
-      ]
-    },
-    {
-      "id": "hygiene-journey-astra-v3-logo-refresh-small",
-      "relativePath": "output/hygiene-tutorial/hygiene-logo-refresh-small.mp4",
-      "compositionId": "HygieneTutorial",
-      "sourceEntrypoint": "/home/dachu/Documents/projects/e-wizer/demo-assets/hygiene-tutorial-astra-v3/src/index.tsx",
-      "sourceRepository": "Standalone Astra composition in e-wizer demo-assets; not registered in repository root",
-      "bytes": 9109978,
-      "sha256": "e93c8b0c4d19ae41022fac8bf6842fdd14764fbc073159d27397e2acf325c360",
-      "mediaProfileRef": "mp4-astra-720p30",
-      "videoFrames": 12355,
-      "videoDurationSeconds": 411.8333333333333,
-      "containerDurationSeconds": 411.833333,
-      "statuses": {
-        "technicalReview": "unreviewed",
-        "humanSignOff": "pending",
-        "deliverable": "candidate"
-      },
-      "currentForTrack": false,
-      "track": "hygiene",
-      "variant": "sharing",
-      "locations": [
-        {
-          "machine": "A",
-          "path": "/home/dachu/Documents/projects/content-engine/remotion-branding/output/hygiene-tutorial/hygiene-logo-refresh-small.mp4",
-          "verification": "filesystem_size_sha256_ffprobe"
-        },
-        {
-          "machine": "A",
-          "path": "/home/dachu/Documents/projects/e-wizer/demo-assets/hygiene-tutorial-astra-v3/output/hygiene-logo-refresh-small.mp4",
-          "verification": "filesystem_size_sha256_ffprobe"
-        }
-      ],
-      "evidence": [
-        "/home/dachu/Documents/projects/e-wizer/demo-assets/hygiene-tutorial-astra-v3/output/hygiene-logo-refresh-verification.json",
-        "Logo refresh 2026-09-16: new eWizer mark, animated two-logo lockup"
-      ]
-    },
-    {
-      "id": "boh-astra-merged-v3-final-logo-refresh",
-      "relativePath": "output/boh-tutorial/boh-logo-refresh.mp4",
-      "compositionId": "MobileBillOfHealth",
-      "sourceEntrypoint": "/home/dachu/Documents/projects/e-wizer/demo-assets/mobile-boh-merged-v3/src/index.tsx",
-      "sourceRepository": "external standalone Astra composition; not registered in this repository root",
-      "bytes": 21657352,
-      "sha256": "2e4a0e3c7d2431a6e4f8bb5161d8bb1d79d0c8898b300824dc01b946fd7509f5",
-      "mediaProfileRef": "mp4-astra-1080p30",
-      "videoFrames": 13726,
-      "videoDurationSeconds": 457.533333,
-      "containerDurationSeconds": 457.533333,
-      "statuses": {
-        "technicalReview": "unreviewed",
-        "humanSignOff": "pending",
-        "deliverable": "candidate"
-      },
-      "currentForTrack": false,
-      "track": "bill-of-health",
-      "variant": "master",
-      "locations": [
-        {
-          "machine": "A",
-          "path": "/home/dachu/Documents/projects/content-engine/remotion-branding/output/boh-tutorial/boh-logo-refresh.mp4",
-          "verification": "filesystem_size_sha256_ffprobe"
-        },
-        {
-          "machine": "A",
-          "path": "/home/dachu/Documents/projects/e-wizer/demo-assets/mobile-boh-merged-v3/output/boh-logo-refresh.mp4",
-          "verification": "filesystem_size_sha256_ffprobe"
-        }
-      ],
-      "evidence": [
-        "/home/dachu/Documents/projects/e-wizer/demo-assets/mobile-boh-merged-v3/output/boh-logo-refresh-final-cut-verification.json",
-        "Logo refresh 2026-09-16: new eWizer mark, animated two-logo lockup"
-      ]
-    },
-    {
-      "id": "boh-astra-merged-v3-final-logo-refresh-small",
-      "relativePath": "output/boh-tutorial/boh-logo-refresh-small.mp4",
-      "compositionId": "MobileBillOfHealth",
-      "sourceEntrypoint": "/home/dachu/Documents/projects/e-wizer/demo-assets/mobile-boh-merged-v3/src/index.tsx",
-      "sourceRepository": "external standalone Astra composition; not registered in this repository root",
-      "bytes": 13882848,
-      "sha256": "7105d1f8faca99cd532c8464b1b791abbe5f0f1810d10962ceb3a8944cc0239b",
-      "mediaProfileRef": "mp4-astra-720p30",
-      "videoFrames": 13726,
-      "videoDurationSeconds": 457.533333,
-      "containerDurationSeconds": 457.533333,
-      "statuses": {
-        "technicalReview": "unreviewed",
-        "humanSignOff": "pending",
-        "deliverable": "candidate"
-      },
-      "currentForTrack": false,
-      "track": "bill-of-health",
-      "variant": "sharing",
-      "locations": [
-        {
-          "machine": "A",
-          "path": "/home/dachu/Documents/projects/content-engine/remotion-branding/output/boh-tutorial/boh-logo-refresh-small.mp4",
-          "verification": "filesystem_size_sha256_ffprobe"
-        },
-        {
-          "machine": "A",
-          "path": "/home/dachu/Documents/projects/e-wizer/demo-assets/mobile-boh-merged-v3/output/boh-logo-refresh-small.mp4",
-          "verification": "filesystem_size_sha256_ffprobe"
-        }
-      ],
-      "evidence": [
-        "/home/dachu/Documents/projects/e-wizer/demo-assets/mobile-boh-merged-v3/output/boh-logo-refresh-final-cut-verification.json",
-        "Logo refresh 2026-09-16: new eWizer mark, animated two-logo lockup"
+        "User clarified Start of shift and During shift are alternative timing choices, typically Start of shift during pre-start checks; sign the completed record as the standard process. Revised narration and stills independently reviewed; exact rendered cut awaits playback review."
       ]
     }
   ],
@@ -2992,18 +2614,10 @@
       "at": "2026-09-09T06:49:50.341463+00:00",
       "machine": "A",
       "scope": "Daily Hygiene v3: Start of shift OR During shift are alternative timing choices; typical pre-start check, single completed Start of shift example and signed-record completion process. Prior v2 retained as superseded. Handover v2 unchanged. Playback review pending."
-    },
-    {
-      "at": "2026-09-16T00:19:24.357820+00:00",
-      "machine": "A",
-      "scope": "Logo refresh 2026-09-16: registered Equipment, PPE, Handover, Hygiene, and Bill of Health master and small review candidates with the new eWizer mark and animated two-logo lockup. Prior statuses, final selectors, sign-off, and approval files preserved."
     }
   ],
   "currentCandidateByTrack": {
-    "handover": "handover-journey-astra-v2-logo-refresh",
-    "hygiene": "hygiene-journey-astra-v3-logo-refresh",
-    "equipment": "equipment-journey-astra-v1-logo-refresh",
-    "ppe": "ppe-journey-astra-v1-logo-refresh",
-    "bill-of-health": "boh-astra-merged-v3-final-logo-refresh"
+    "handover": "handover-journey-astra-v2",
+    "hygiene": "hygiene-journey-astra-v3"
   }
 }

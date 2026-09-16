@@ -16,12 +16,12 @@ Last verified on machine B: **2026-09-06T07:22:33+02:00**, against repository HE
 | Registered entrypoints | 5 |
 | Registration records | 53 |
 | Unique stable composition IDs | 51 |
-| MP4 artifacts classified | 44 |
+| MP4 artifacts classified | 34 |
 | PNG evidence artifacts classified | 33 |
-| All classified files under `output` | 76 |
+| All classified files under `output` | 66 |
 | Human-signed-off final artifacts (including historical / sharing variants) | **8** |
 
-The current recorded output coverage is 76 files and 937,914,823 bytes. Registration counts retain the prior audit; the Astra source is an external standalone composition. This amendment did not re-audit other tracks. Nothing was published or sent.
+The current recorded output coverage is 66 files and 803,808,153 bytes. Registration counts retain the prior audit; the Astra source is an external standalone composition. This amendment did not re-audit other tracks. Nothing was published or sent.
 
 ## Track status — amended 2026-09-09
 
@@ -241,16 +241,3 @@ Current review candidate: `output/hygiene-tutorial/hygiene-journey-astra-v2.mp4`
 ## Daily Hygiene revision 3
 
 Current review candidate: `output/hygiene-tutorial/hygiene-journey-astra-v3.mp4` and `-small.mp4`, 6:52. Start of shift and During shift are alternative timing choices; the check is typically done at the start of shift during pre-start checks. The closing example shows one completed Start of shift checklist with 91 clear. Signing is taught as the completion process, with no unsigned alternative. Four-outcome dialogue and medication exception example retained. Same DC voice, no burned-in captions, music only in intro/outro. V2 retained as superseded; exact revised cut awaits human playback review. Handover v2 and approved finals unchanged.
-
-## Logo refresh — review candidates (2026-09-16)
-
-- `equipment-journey-astra-v1-logo-refresh` — `output/equipment-tutorial/equipment-logo-refresh.mp4` — SHA-256 `df7e6799f43f72caf710a3d60d3a75c98f2238898aa69cc0f4722d3bc20483f3`
-- `equipment-journey-astra-v1-logo-refresh-small` — `output/equipment-tutorial/equipment-logo-refresh-small.mp4` — SHA-256 `01b92de1f738878bd38fb5c3a57f138aa220ce2d260050f9870b67da237d3ca7`
-- `ppe-journey-astra-v1-logo-refresh` — `output/ppe-tutorial/ppe-logo-refresh.mp4` — SHA-256 `153d9c9ff9c8941a793fa9711f8844eb6e2d17691c7330726555b767eeaa1caa`
-- `ppe-journey-astra-v1-logo-refresh-small` — `output/ppe-tutorial/ppe-logo-refresh-small.mp4` — SHA-256 `de3cfedc739f820d7153c03a55da45e48a0593770fddf011eced811311a0ce14`
-- `handover-journey-astra-v2-logo-refresh` — `output/handover-tutorial/handover-logo-refresh.mp4` — SHA-256 `7c6ba7620dd166a43573b97d108877bb6059bff26ce9378f1b9ed40b6e9cbc13`
-- `handover-journey-astra-v2-logo-refresh-small` — `output/handover-tutorial/handover-logo-refresh-small.mp4` — SHA-256 `646471d2c1d28ed01d3e08a006b336498d7ba68faaf74773db1ca74f139d0764`
-- `hygiene-journey-astra-v3-logo-refresh` — `output/hygiene-tutorial/hygiene-logo-refresh.mp4` — SHA-256 `539fc1632e6f3f7d76923591cc8226bf171bfbb591688e0ae56bbf38c22aa7e2`
-- `hygiene-journey-astra-v3-logo-refresh-small` — `output/hygiene-tutorial/hygiene-logo-refresh-small.mp4` — SHA-256 `e93c8b0c4d19ae41022fac8bf6842fdd14764fbc073159d27397e2acf325c360`
-- `boh-astra-merged-v3-final-logo-refresh` — `output/boh-tutorial/boh-logo-refresh.mp4` — SHA-256 `2e4a0e3c7d2431a6e4f8bb5161d8bb1d79d0c8898b300824dc01b946fd7509f5`
-- `boh-astra-merged-v3-final-logo-refresh-small` — `output/boh-tutorial/boh-logo-refresh-small.mp4` — SHA-256 `7105d1f8faca99cd532c8464b1b791abbe5f0f1810d10962ceb3a8944cc0239b`
