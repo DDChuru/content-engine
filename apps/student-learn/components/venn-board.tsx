@@ -258,7 +258,7 @@ export function VennBoard({ universe, setA, setB, onComplete }: VennBoardProps) 
               fontSize="20"
               fontStyle="italic"
               fill="var(--ink)"
-              style={{ fontFamily: 'var(--font-fraunces), Georgia, serif' }}
+              style={{ fontFamily: 'KaTeX_Math, "Cambria Math", serif' }}
             >
               ξ
             </text>
@@ -268,7 +268,7 @@ export function VennBoard({ universe, setA, setB, onComplete }: VennBoardProps) 
               fontSize="20"
               fontStyle="italic"
               fill="var(--ink)"
-              style={{ fontFamily: 'var(--font-fraunces), Georgia, serif' }}
+              style={{ fontFamily: 'KaTeX_Math, "Cambria Math", serif' }}
             >
               {setA.label}
             </text>
@@ -278,7 +278,7 @@ export function VennBoard({ universe, setA, setB, onComplete }: VennBoardProps) 
               fontSize="20"
               fontStyle="italic"
               fill="var(--ink)"
-              style={{ fontFamily: 'var(--font-fraunces), Georgia, serif' }}
+              style={{ fontFamily: 'KaTeX_Math, "Cambria Math", serif' }}
             >
               {setB.label}
             </text>

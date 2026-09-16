@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 112 112" role="img" aria-labelledby="title desc">
+  <title id="title">Stem 4 Life — microscope, refined</title>
+  <desc id="desc">The original microscope refined with aligned tube joints, consistent diagonal terminals, a shorter base and optically centered proportions.</desc>
+  <!-- Transparent. Automatic dark palette; inline overrides: data-theme="light", "dark", "mono". -->
+  <style>
+    .scope-lit-mark { fill: #B64A30; }
+    @media (prefers-color-scheme: dark) { .scope-lit-mark { fill: #FFAC8F; } }
+    svg[data-theme="light"] .scope-lit-mark { fill: #B64A30; }
+    svg[data-theme="dark"] .scope-lit-mark { fill: #FFAC8F; }
+    svg[data-theme="mono"] .scope-lit-mark { fill: currentColor; }
+  </style>
+  <g class="scope-lit-mark">
+    <!-- Eleven-unit arm; its entry follows the tube's 3:4 incline. -->
+    <path d="M44.8 32.8 C73 32.8 93 45 93 64 C93 78 85 88 75 92 H93 L86 103 H20 L27 92 H58 C72 92 82 80 82 65 C82 51 68 43.8 53.05 43.8 Z"/>
+    <!-- Parallel 3:4 tube edges; eleven-unit eyepiece and optical tube. -->
+    <path d="M18 26 L40.4 9.2 L47 18 L39 24 L58.2 49.6 L49.4 56.2 L30.2 30.6 L24.6 34.8 Z"/>
+    <!-- Stage and foot share their left alignment and 7:11 terminal cut. -->
+    <path d="M27 68 H64 L57 79 H27 Z"/>
+  </g>
+</svg>

@@ -2,27 +2,53 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Inherited switches let BrandLogo auto follow the nearest themed surface. */
+:root,
+[data-theme="light"] {
+  --s4l-logo-light-display: block;
+  --s4l-logo-dark-display: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]):not([data-theme="dark"]) {
+    --s4l-logo-light-display: none;
+    --s4l-logo-dark-display: block;
+  }
+}
+
+[data-theme="dark"] {
+  --s4l-logo-light-display: none;
+  --s4l-logo-dark-display: block;
+}
+
 :root {
-  --paper: oklch(0.97 0.005 250); /* app background */
-  --paper-raised: oklch(0.99 0.003 250); /* cards/panels */
-  --grid-line: oklch(0.92 0.008 250); /* hairlines, graph rules */
+  /* Study paper stays light in both system themes; --s4l-* owns brand themes.
+     Keep the original lightness/chroma, warming only the paper/rule hue. */
+  --paper: oklch(0.97 0.005 85); /* app background */
+  --paper-raised: oklch(0.99 0.003 85); /* cards/panels */
+  --grid-line: oklch(0.92 0.008 85); /* hairlines, graph rules */
   --ink: oklch(0.25 0.03 260); /* body text */
   --ink-muted: oklch(0.48 0.02 260); /* secondary text */
-  --accent: oklch(0.42 0.11 255); /* ink-blue: links, primary actions */
-  --accent-pressed: oklch(0.36 0.11 255);
+  --accent: #B64A30; /* brand terracotta on study paper */
+  --accent-pressed: #953923;
   --secure: oklch(0.55 0.1 155); /* examiner's green tick */
   --developing: oklch(0.65 0.12 75); /* amber pencil */
 }
 
 body {
+  color-scheme: light; /* native controls belong to the light study surface */
   background-color: var(--paper);
   /* graph-paper texture: 8px grid of --grid-line at low opacity */
   background-image: linear-gradient(
       to right,
-      oklch(0.92 0.008 250 / 0.4) 1px,
+      color-mix(in oklch, var(--grid-line) 40%, transparent) 1px,
       transparent 1px
     ),
-    linear-gradient(to bottom, oklch(0.92 0.008 250 / 0.4) 1px, transparent 1px);
+    linear-gradient(
+      to bottom,
+      color-mix(in oklch, var(--grid-line) 40%, transparent) 1px,
+      transparent 1px
+    );
   background-size: 8px 8px;
   color: var(--ink);
 }
@@ -33,7 +59,7 @@ body {
 }
 
 ::selection {
-  background: oklch(0.42 0.11 255 / 0.16);
+  background: color-mix(in srgb, var(--accent) 16%, transparent);
 }
 
 @media (prefers-reduced-motion: reduce) {

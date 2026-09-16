@@ -1,0 +1,28 @@
+.logo {
+  display: inline-block;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+.logo[data-logo-theme="light"] {
+  --s4l-logo-light-display: block;
+  --s4l-logo-dark-display: none;
+}
+
+.logo[data-logo-theme="dark"] {
+  --s4l-logo-light-display: none;
+  --s4l-logo-dark-display: block;
+}
+
+.logo img {
+  width: 100%;
+  height: auto;
+}
+
+.light {
+  display: var(--s4l-logo-light-display);
+}
+
+.dark {
+  display: var(--s4l-logo-dark-display);
+}

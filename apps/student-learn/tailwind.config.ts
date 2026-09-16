@@ -25,8 +25,8 @@ const config: Config = {
         developing: 'var(--developing)',
       },
       fontFamily: {
-        sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],
-        heading: ['var(--font-fraunces)', 'Georgia', 'serif'],
+        sans: ['var(--s4l-font-body)'],
+        heading: ['var(--s4l-font-display)'],
       },
       transitionTimingFunction: {
         'out-quart': 'cubic-bezier(0.25, 1, 0.5, 1)',

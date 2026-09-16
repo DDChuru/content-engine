@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { BrandLogo } from '@/components/brand-logo';
 import { MasteryBadge } from '@/components/mastery-badge';
 import { progress, type SkillState } from '@/lib/progress';
 import { COURSE, FUTURE_UNITS, UNITS, liveTopics, type SyllabusTopic } from '@/lib/syllabus';
@@ -64,6 +65,7 @@ export function SyllabusMap({ hasIllustration }: { hasIllustration: boolean }) {
   return (
     <main className="mx-auto max-w-2xl px-5 pb-24 pt-12 sm:pt-16">
       <header className="mb-10">
+        <BrandLogo variant="wordmark" theme="light" className="mb-4" />
         <p className="text-xs font-medium uppercase tracking-[0.18em] text-ink-muted">{COURSE.title}</p>
         <h1 className="mt-3 font-heading text-4xl font-semibold leading-tight sm:text-5xl">
           Learn it topic by topic.

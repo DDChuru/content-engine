@@ -1,0 +1,118 @@
+/* Stem 4 Life — semantic brand tokens.
+   Default: light; system dark unless explicitly overridden.
+   Set data-theme="light" or "dark" on <html> or a themed subtree.
+   Fonts are declared separately in ../fonts/fonts.css.
+   Text/spacing use rem; no global font-size reset or element styling.
+   In dark mode surface-warm means the raised surface (#253247).
+   Primary/accent intentionally share peach in dark mode.
+   Pair coloured fills with on-primary / on-accent / on-dark. */
+:root {
+  color-scheme: light;
+  --s4l-ink: #253247;
+  --s4l-surface: #FFFFFF;
+  --s4l-primary: #B64A30;
+  --s4l-accent: #FFAC8F;
+  --s4l-surface-warm: #F6F3EB;
+  --s4l-surface-dark: #182230;
+  --s4l-on-primary: #FFFFFF;
+  --s4l-on-accent: #253247;
+  --s4l-on-dark: #F6F3EB;
+  --s4l-font-display: "Manrope", "Segoe UI", "Arial", sans-serif;
+  --s4l-font-body: "Source Sans 3", "Segoe UI", "Roboto", "Arial", sans-serif;
+  --s4l-weight-regular: 400;
+  --s4l-weight-medium: 500;
+  --s4l-weight-semibold: 600;
+  --s4l-weight-bold: 700;
+  --s4l-text-display: 3rem;
+  --s4l-leading-display: 1.125;
+  --s4l-type-weight-display: 700;
+  --s4l-type-font-display: "Manrope", "Segoe UI", "Arial", sans-serif;
+  --s4l-text-heading-1: 2.5rem;
+  --s4l-leading-heading-1: 1.2;
+  --s4l-type-weight-heading-1: 600;
+  --s4l-type-font-heading-1: "Manrope", "Segoe UI", "Arial", sans-serif;
+  --s4l-text-heading-2: 2rem;
+  --s4l-leading-heading-2: 1.25;
+  --s4l-type-weight-heading-2: 600;
+  --s4l-type-font-heading-2: "Manrope", "Segoe UI", "Arial", sans-serif;
+  --s4l-text-heading-3: 1.5rem;
+  --s4l-leading-heading-3: 1.333333;
+  --s4l-type-weight-heading-3: 500;
+  --s4l-type-font-heading-3: "Manrope", "Segoe UI", "Arial", sans-serif;
+  --s4l-text-lead: 1.25rem;
+  --s4l-leading-lead: 1.5;
+  --s4l-type-weight-lead: 400;
+  --s4l-type-font-lead: "Source Sans 3", "Segoe UI", "Roboto", "Arial", sans-serif;
+  --s4l-text-body: 1rem;
+  --s4l-leading-body: 1.5;
+  --s4l-type-weight-body: 400;
+  --s4l-type-font-body: "Source Sans 3", "Segoe UI", "Roboto", "Arial", sans-serif;
+  --s4l-text-small: 0.875rem;
+  --s4l-leading-small: 1.428571;
+  --s4l-type-weight-small: 500;
+  --s4l-type-font-small: "Source Sans 3", "Segoe UI", "Roboto", "Arial", sans-serif;
+  --s4l-text-caption: 0.75rem;
+  --s4l-leading-caption: 1.333333;
+  --s4l-type-weight-caption: 600;
+  --s4l-type-font-caption: "Source Sans 3", "Segoe UI", "Roboto", "Arial", sans-serif;
+  --s4l-space-0: 0rem;
+  --s4l-space-1: 0.25rem;
+  --s4l-space-2: 0.5rem;
+  --s4l-space-3: 0.75rem;
+  --s4l-space-4: 1rem;
+  --s4l-space-5: 1.25rem;
+  --s4l-space-6: 1.5rem;
+  --s4l-space-8: 2rem;
+  --s4l-space-10: 2.5rem;
+  --s4l-space-12: 3rem;
+  --s4l-space-16: 4rem;
+  --s4l-space-20: 5rem;
+  --s4l-space-24: 6rem;
+  --s4l-radius-none: 0rem;
+  --s4l-radius-sm: 0.25rem;
+  --s4l-radius-md: 0.5rem;
+  --s4l-radius-lg: 0.75rem;
+  --s4l-radius-xl: 1rem;
+  --s4l-radius-pill: 9999px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]):not([data-theme="dark"]) {
+    color-scheme: dark;
+    --s4l-ink: #F6F3EB;
+    --s4l-surface: #182230;
+    --s4l-primary: #FFAC8F;
+    --s4l-accent: #FFAC8F;
+    --s4l-surface-warm: #253247;
+    --s4l-surface-dark: #182230;
+    --s4l-on-primary: #182230;
+    --s4l-on-accent: #253247;
+    --s4l-on-dark: #F6F3EB;
+  }
+}
+
+[data-theme="light"] {
+  color-scheme: light;
+  --s4l-ink: #253247;
+  --s4l-surface: #FFFFFF;
+  --s4l-primary: #B64A30;
+  --s4l-accent: #FFAC8F;
+  --s4l-surface-warm: #F6F3EB;
+  --s4l-surface-dark: #182230;
+  --s4l-on-primary: #FFFFFF;
+  --s4l-on-accent: #253247;
+  --s4l-on-dark: #F6F3EB;
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+  --s4l-ink: #F6F3EB;
+  --s4l-surface: #182230;
+  --s4l-primary: #FFAC8F;
+  --s4l-accent: #FFAC8F;
+  --s4l-surface-warm: #253247;
+  --s4l-surface-dark: #182230;
+  --s4l-on-primary: #182230;
+  --s4l-on-accent: #253247;
+  --s4l-on-dark: #F6F3EB;
+}
