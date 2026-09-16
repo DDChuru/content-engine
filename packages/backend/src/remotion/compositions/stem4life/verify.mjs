@@ -26,7 +26,8 @@ const contactSheet = async (name, files) => {
 };
 
 for (const variant of ['a', 'b', 'c']) {
-  await contactSheet(`intro-${variant}-frames.png`, [20, 60, 100, 149].map((f) => [`intro-${variant}-${f}.png`, `INTRO ${variant.toUpperCase()} / FRAME ${f}`]));
+  const frames = variant === 'b' ? [20, 45, 72, 88, 105, 120, 149] : [20, 60, 100, 149];
+  await contactSheet(`intro-${variant}-frames.png`, frames.map((f) => [`intro-${variant}-${f}.png`, `INTRO ${variant.toUpperCase()} / FRAME ${f}`]));
 }
 await contactSheet('outro-frames.png', [20, 60, 100, 150, 179].map((f) => [`outro-${f}.png`, `OUTRO C / FRAME ${f}`]));
 await contactSheet('outro-variants.png', [['outro-a-100.png', 'OUTRO A / FRAME 100'], ['outro-b-100.png', 'OUTRO B / FRAME 100']]);

@@ -1,6 +1,6 @@
 import React from 'react';
 import {AbsoluteFill, useCurrentFrame, useVideoConfig} from 'remotion';
-import {Lockup, Wordmark} from './Artwork';
+import {InstrumentIntroLockup, Lockup, Wordmark} from './Artwork';
 import {BODY, DISPLAY, useBrandFonts} from './fonts';
 import {BRAND} from './palette';
 import {progress, settle} from './timing';
@@ -50,11 +50,11 @@ const Intro: React.FC<BookendProps & {aesthetic: BookendAesthetic}> = ({title, s
   if (!fontsReady) return null;
   const color = palette(aesthetic, accentA, accentB);
   const paper = aesthetic === 'C';
-  const titleReveal = settle(frame, fps, aesthetic === 'B' ? 2.35 : 2.0, 0.72);
-  const footer = settle(frame, fps, 2.5, 0.65);
+  const titleReveal = settle(frame, fps, aesthetic === 'B' ? 100 / fps : 2.0, aesthetic === 'B' ? 18 / fps : 0.72);
+  const footer = settle(frame, fps, aesthetic === 'B' ? 104 / fps : 2.5, aesthetic === 'B' ? 14 / fps : 0.65);
   const paperLogo = paper ? settle(frame, fps, 0.68, 0.9) : 1;
-  const guide = aesthetic === 'B' ? 1 - progress(frame, fps, 1.05, 0.65) : 0;
-  const rule = progress(frame, fps, 1.6, 0.72);
+  const guide = aesthetic === 'B' ? progress(frame, fps, 0.2, 0.35) * (1 - progress(frame, fps, 72 / fps, 16 / fps)) : 0;
+  const rule = progress(frame, fps, aesthetic === 'B' ? 100 / fps : 1.6, aesthetic === 'B' ? 18 / fps : 0.72);
   const titleSize = fitTitle(title, 1480, 68);
   return <AbsoluteFill style={{backgroundColor: color.background, color: color.ink, fontFamily: BODY, fontSynthesis: 'none'}}>
     {paper && <GraphPaper frame={frame} fps={fps} accent={color.accent}/>}
@@ -62,13 +62,14 @@ const Intro: React.FC<BookendProps & {aesthetic: BookendAesthetic}> = ({title, s
       {aesthetic === 'A' ? 'STEM THAT STAYS WITH YOU' : aesthetic === 'B' ? 'LOOK CLOSELY. UNDERSTAND MORE.' : 'UNDERSTAND IT. WORK IT THROUGH.'}
     </div>
     {aesthetic === 'B' && <svg viewBox="0 0 1920 1080" style={{position: 'absolute', inset: 0, width: '100%', height: '100%', opacity: guide * 0.45}} aria-hidden="true">
-      <path d="M805 325H775V355 M1115 325H1145V355 M775 515V545H805 M1115 545H1145V515" fill="none" stroke={color.accent} strokeWidth="2"/>
+      <path d="M610 210H560V260 M1310 210H1360V260 M560 820V870H610 M1310 870H1360V820" fill="none" stroke={color.accent} strokeWidth="2"/>
     </svg>}
     <div style={{position: 'absolute', left: aesthetic === 'A' ? 310 : 300, top: 304,
       width: aesthetic === 'A' ? 1300 : 1320, opacity: paperLogo,
       transform: `translateY(${paper ? 24 * (1 - paperLogo) : 0}px)`}}>
       {aesthetic === 'A' ? <Wordmark frame={frame} fps={fps} ink={color.ink} accent={color.accent} assemble/>
-        : <Lockup frame={frame} fps={fps} ink={color.ink} accent={color.accent} instrument={aesthetic === 'B'}/>}
+        : aesthetic === 'B' ? <InstrumentIntroLockup frame={frame} fps={fps} ink={color.ink} accent={color.accent}/>
+          : <Lockup frame={frame} fps={fps} ink={color.ink} accent={color.accent}/>}
     </div>
     <div style={{position: 'absolute', left: 960 - 68 * rule, top: 607, width: 136 * rule, height: 3, backgroundColor: color.accent}}/>
     <div style={{position: 'absolute', left: 220, top: 657, width: 1480, textAlign: 'center', opacity: titleReveal,
@@ -77,6 +78,7 @@ const Intro: React.FC<BookendProps & {aesthetic: BookendAesthetic}> = ({title, s
       {subtitle && <div style={{marginTop: 22, fontSize: 32, fontWeight: 400, lineHeight: 1.25, opacity: 0.78}}>{subtitle}</div>}
     </div>
     <div style={{position: 'absolute', bottom: 100, left: 0, width: '100%', textAlign: 'center', fontSize: 34, fontWeight: 600, opacity: footer}}>stem4life.com</div>
+    {aesthetic === 'B' && <div aria-hidden="true" style={{position: 'absolute', inset: 0, backgroundColor: '#000000', opacity: 1 - progress(frame, fps, 0, 12 / fps)}}/>}
   </AbsoluteFill>;
 };
 
