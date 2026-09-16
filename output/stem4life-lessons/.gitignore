@@ -1,0 +1,8 @@
+# Generated delivery media and reproducible per-lesson inspection stills are
+# intentionally kept out of git. verification.json and contact-sheet.png are
+# the compact review evidence committed with the renderer script.
+*.mp4
+/.bundle/
+/.render-public/
+/.work/
+/stills/
