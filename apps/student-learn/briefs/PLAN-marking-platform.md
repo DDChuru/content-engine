@@ -643,3 +643,54 @@ people who cannot be attracted any other way.
 - Whether a partner can run more than one cohort.
 - Interaction with the §9 coverage gate: a partner recruiting into a syllabus area with no
   library is selling something that does not exist.
+
+### A.3 Recruiting the incumbent tutors (OPEN — for later stewing)
+
+**The idea.** Target tutors already running in-person extra lessons and offer them an
+additional, platform-supplied pool of students they never meet in person.
+
+**Why they are the right target.** An in-person tutor is hard-capped by hours and geography.
+Ten to twenty students is the ceiling because every one needs a physical slot and travel;
+income tops out around $400–800/month and doubling it means doubling hours they do not have.
+They cannot reach the student in another city, the one who cannot afford $40, or the one
+whose timetable does not fit. **The platform sells them volume they structurally cannot
+generate themselves**, asynchronously, at any hour, with zero acquisition effort on their part.
+
+**The strategic move underneath it: this converts the competitor into the channel.** The
+$30–50/month extra-lessons market is what we are undercutting (§12 pricing discussion).
+Recruiting its practitioners turns incumbent competitors into supply — and they arrive
+pre-qualified: proven competence, proven willingness to teach for money, existing knowledge
+of the syllabus and the market, and self-selected. Tutor-side acquisition cost is near zero.
+
+**Why the $6/hour objection weakens here.** For an established tutor, marking will never beat
+their $25–33/hour in-person rate — but it is not competing with it. It is *additive* income
+in dead time, filling the hours their in-person model cannot monetise. Same "monetised dead
+time" framing as A.1, and it is even more true for this pool.
+
+#### Variant worth considering: tutor as reseller
+
+Rather than only marking, let a tutor bundle platform access into their own offer — they
+charge their usual $40 for lessons and include marking between sessions. Their product gets
+better, the platform gains a student, and the tutor becomes a distribution channel. This is
+the complement play: we are not a substitute for the parent already paying $40, we are the
+thing that makes their $40 go further.
+
+#### Tensions to resolve
+
+1. **Cannibalisation fear.** A tutor with a $40/month book has an obvious reason not to feed
+   a $12 platform. The pitch must be explicitly *"this does not touch your existing
+   students"* — the platform pool is people they could never have reached.
+2. **Disintermediation is sharpest with this group**, because unlike a university student
+   they have an existing business to feed and a direct commercial motive to convert a
+   platform student into a private one. **§4 blinding is the protection and it is
+   load-bearing here** — they cannot poach someone they cannot identify. This pool is the
+   strongest argument for the blinding design, not a reason to relax it.
+3. **Availability may be worse, not better.** An in-person tutor has *less* dead time than a
+   university student, and their free hours are the same after-school hours when submissions
+   peak. Do not assume this pool solves the capacity problem in A.1; it may compete with it.
+4. **Resistance to the structured diagnosis.** An experienced tutor may resist picking from
+   a catalogue ("I know how to teach"). Same rubric, same paid trial, no exemption — the
+   catalogue is what makes §8 aggregation possible and it is not negotiable for seniority.
+5. **Open:** whether tutor-resellers get a margin or a referral fee; whether a tutor may mark
+   at all if they also resell; how this interacts with the A.2 partner tier (is a
+   high-volume tutor-reseller simply a partner by another name?).
