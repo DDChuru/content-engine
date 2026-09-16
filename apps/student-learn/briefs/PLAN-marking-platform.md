@@ -694,3 +694,28 @@ thing that makes their $40 go further.
 5. **Open:** whether tutor-resellers get a margin or a referral fee; whether a tutor may mark
    at all if they also resell; how this interacts with the A.2 partner tier (is a
    high-volume tutor-reseller simply a partner by another name?).
+
+#### The evergreen advantage (both sides of the market)
+
+In-person extra lessons are **episodic by construction**. They require tutor and student
+co-located at a mutually free hour, which collapses to a narrow after-school window, and
+dies entirely during school holidays when families disperse and students travel. The
+incumbent's offer is effectively *"I'll run extra lessons during the holiday"* — a bounded
+block, not a continuous service. The platform has none of those constraints: a student on
+holiday in Bulawayo submits at 10pm and is marked by morning.
+
+**Demand side — this is the wedge, not just a convenience.** Study leave and the holiday
+immediately before a paper are *peak intent* and the moment in-person tutoring is hardest
+to arrange. The incumbent model structurally cannot serve the highest-intent window in the
+whole calendar. That is the gap to sell into.
+
+*Caveat, so this is not over-claimed:* long disengaged holidays remain genuine demand
+troughs. Evergreen describes **delivery** being unconstrained, not demand being flat. The
+seasonality warning in §12 still stands.
+
+**Supply side — it is also a recruitment argument for A.3.** A tutor's income collapses in
+the holidays; the platform pays them through exactly their worst period. And it fits the
+A.1 calendar problem neatly: school holidays are when tutors are most free, while university
+markers are most free *outside* their June/November exams. **The two pools are
+counter-cyclical to each other**, so a deliberately mixed bench covers more of the year than
+either pool alone.
