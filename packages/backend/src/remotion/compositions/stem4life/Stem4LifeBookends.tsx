@@ -8,6 +8,7 @@ import {progress, settle} from './timing';
 export {INTRO_FRAMES, OUTRO_FRAMES, FPS, URL_SETTLED_FRAME} from './timing';
 export type BookendAesthetic = 'A' | 'B' | 'C';
 export type BookendProps = {title: string; subtitle?: string; accentA?: string; accentB?: string};
+export type IntroBProps = BookendProps & {heroHeight?: number};
 export type Stem4LifeBookendProps = BookendProps & {aesthetic?: BookendAesthetic};
 
 const palette = (aesthetic: BookendAesthetic, accentA?: string, accentB?: string) => ({
@@ -44,7 +45,16 @@ const fitTitle = (text: string, width: number, max: number, maxLines = 2) => {
   return 28;
 };
 
-const Intro: React.FC<BookendProps & {aesthetic: BookendAesthetic}> = ({title, subtitle, accentA, accentB, aesthetic}) => {
+const focusGuidePath = (heroHeight: number) => {
+  const left = Math.round(960 - heroHeight / 2);
+  const right = Math.round(960 + heroHeight / 2);
+  const top = Math.round(540 - heroHeight * 0.825 / 2);
+  const bottom = Math.round(540 + heroHeight * 0.825 / 2);
+  const corner = Math.round(Math.max(36, heroHeight * 0.0625));
+  return `M${left + corner} ${top}H${left}V${top + corner} M${right - corner} ${top}H${right}V${top + corner} M${left} ${bottom - corner}V${bottom}H${left + corner} M${right - corner} ${bottom}H${right}V${bottom - corner}`;
+};
+
+const Intro: React.FC<BookendProps & {aesthetic: BookendAesthetic; heroHeight?: number}> = ({title, subtitle, accentA, accentB, aesthetic, heroHeight = 800}) => {
   const frame = useCurrentFrame(); const {fps} = useVideoConfig();
   const fontsReady = useBrandFonts();
   if (!fontsReady) return null;
@@ -62,13 +72,13 @@ const Intro: React.FC<BookendProps & {aesthetic: BookendAesthetic}> = ({title, s
       {aesthetic === 'A' ? 'STEM THAT STAYS WITH YOU' : aesthetic === 'B' ? 'LOOK CLOSELY. UNDERSTAND MORE.' : 'UNDERSTAND IT. WORK IT THROUGH.'}
     </div>
     {aesthetic === 'B' && <svg viewBox="0 0 1920 1080" style={{position: 'absolute', inset: 0, width: '100%', height: '100%', opacity: guide * 0.45}} aria-hidden="true">
-      <path d="M610 210H560V260 M1310 210H1360V260 M560 820V870H610 M1310 870H1360V820" fill="none" stroke={color.accent} strokeWidth="2"/>
+      <path d={focusGuidePath(heroHeight)} fill="none" stroke={color.accent} strokeWidth="2"/>
     </svg>}
     <div style={{position: 'absolute', left: aesthetic === 'A' ? 310 : 300, top: 304,
       width: aesthetic === 'A' ? 1300 : 1320, opacity: paperLogo,
       transform: `translateY(${paper ? 24 * (1 - paperLogo) : 0}px)`}}>
       {aesthetic === 'A' ? <Wordmark frame={frame} fps={fps} ink={color.ink} accent={color.accent} assemble/>
-        : aesthetic === 'B' ? <InstrumentIntroLockup frame={frame} fps={fps} ink={color.ink} accent={color.accent}/>
+        : aesthetic === 'B' ? <InstrumentIntroLockup frame={frame} fps={fps} ink={color.ink} accent={color.accent} heroHeight={heroHeight}/>
           : <Lockup frame={frame} fps={fps} ink={color.ink} accent={color.accent}/>}
     </div>
     <div style={{position: 'absolute', left: 960 - 68 * rule, top: 607, width: 136 * rule, height: 3, backgroundColor: color.accent}}/>
@@ -83,7 +93,7 @@ const Intro: React.FC<BookendProps & {aesthetic: BookendAesthetic}> = ({title, s
 };
 
 export const IntroA: React.FC<BookendProps> = (props) => <Intro {...props} aesthetic="A"/>;
-export const IntroB: React.FC<BookendProps> = (props) => <Intro {...props} aesthetic="B"/>;
+export const IntroB: React.FC<IntroBProps> = (props) => <Intro {...props} aesthetic="B"/>;
 export const IntroC: React.FC<BookendProps> = (props) => <Intro {...props} aesthetic="C"/>;
 
 /** Recommended default is the app's paper aesthetic; each variant is also exported. */

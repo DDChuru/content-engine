@@ -62,14 +62,14 @@ export const Lockup: React.FC<ArtworkProps & {instrument?: boolean}> = ({frame, 
 
 // Intro B gets a dedicated hero choreography so the shared/static lockup used
 // by Intro C and every outro remains untouched. In the 1320px-wide placement,
-// the approved microscope is 84 SVG units tall. The exact fitted scale below
-// makes its visible hero height 800px before it docks at the canonical scale.
+// the approved microscope is 84 SVG units tall. The fitted scale below maps
+// each requested comparison height exactly before docking at canonical scale.
 // Its visible artwork is filled path geometry, so there is no display stroke
 // to compensate during the scale change; the reveal-mask stroke is gone by f72.
-export const InstrumentIntroLockup: React.FC<ArtworkProps> = ({frame, fps, ink, accent}) => {
+export const InstrumentIntroLockup: React.FC<ArtworkProps & {heroHeight?: number}> = ({frame, fps, ink, accent, heroHeight = 800}) => {
   const dock = settle(frame, fps, 88 / fps, 30 / fps);
   const words = settle(frame, fps, 100 / fps, 18 / fps);
-  const heroScale = 800 / (84 * (1320 / 660.164));
+  const heroScale = heroHeight / (84 * (1320 / 660.164));
   const centerX = 330 + (55.58 - 330) * dock;
   const centerY = 118 + (64 - 118) * dock;
   const scale = heroScale + (1 - heroScale) * dock;

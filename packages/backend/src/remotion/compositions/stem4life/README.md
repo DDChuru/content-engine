@@ -20,12 +20,12 @@ import {Stem4LifeIntro, Stem4LifeOutro, IntroA, IntroB, IntroC} from './Stem4Lif
 <Stem4LifeOutro title="Force, mass & acceleration" aesthetic="C" />
 ```
 
-All components accept `{title, subtitle?, accentA?, accentB?}`. The two generic bookends also accept `aesthetic?: 'A' | 'B' | 'C'` and default to C. The three named intros choose their own treatment. `accentA` overrides the light terracotta accent; `accentB` overrides the dark peach accent. Keep the defaults for normal brand use. Composition schemas expose these props in Studio. Titles are measured in the loaded display font and fitted to two lines without truncation.
+All components accept `{title, subtitle?, accentA?, accentB?}`. The two generic bookends also accept `aesthetic?: 'A' | 'B' | 'C'` and default to C. The three named intros choose their own treatment; `IntroB` additionally accepts `heroHeight?` in rendered pixels. `accentA` overrides the light terracotta accent; `accentB` overrides the dark peach accent. Keep the defaults for normal brand use. Composition schemas expose these props in Studio. Titles are measured in the loaded display font and fitted to two lines without truncation.
 
 ## Timing and editing
 
 - A: letters enter from 0.14s; the 4 enters at 1.22s and is settled at 1.88s.
-- B: after a 12-frame fade, the microscope draws at an exact 800px visible height during frames 12–72, holds large through frame 88, then uses an overshoot-clamped spring to dock during frames 88–118. The wordmark enters during frames 100–118. The title, rule and website also finish by frame 118, leaving the approved lockup static for the final 32 frames.
+- B: after a 12-frame fade, the microscope draws at the supplied `heroHeight` during frames 12–72, holds large through frame 88, then uses an overshoot-clamped spring to dock during frames 88–118. The wordmark enters during frames 100–118. The title, rule and website also finish by frame 118, leaving the approved lockup static for the final 32 frames. The default remains 800px; the review renderer produces 800, 648, 518 and 410px comparisons without changing the settled state.
 - C: graph rules enter during the first 1.5s; the complete lockup settles at 1.58s.
 - Lesson information and the small intro website settle by 3.15s. Final intro frames hold for a clean editorial cut.
 - Outro: the 108px URL enters at 0.85s and is completely settled by 1.8s. All motion has ended before frame 60. **Frames 60–179 provide four uninterrupted seconds with the URL fully opaque and stationary.** There is no end fade that erodes this hold.
@@ -49,12 +49,12 @@ node src/remotion/compositions/stem4life/render.mjs --stills-only
 node src/remotion/compositions/stem4life/render.mjs
 node src/remotion/compositions/stem4life/verify.mjs
 
-# Intro B selection revision only
+# Intro B size comparison only
 node src/remotion/compositions/stem4life/render-intro-b.mjs --preview
 node src/remotion/compositions/stem4life/render-intro-b.mjs
 ```
 
-The render script bundles only this entry and stages only the required fonts. Output goes to the repository's `output/stem4life-bookends/`. Set `CHROME_BIN` if Chrome is installed elsewhere. The normal render makes all four MP4s, probes their frame count/duration/format, extracts full-resolution stills from the encoded videos, exercises alternative outro props and a long title, and saves `verification.json`. The verifier makes labelled contact sheets and checks that lossless outro frames 60 and 179 are pixel-identical. Temporary bundles and previews are ignored within that output directory.
+The render script bundles only this entry and stages only the required fonts. Output goes to the repository's `output/stem4life-bookends/`. Set `CHROME_BIN` if Chrome is installed elsewhere. The normal render makes all four MP4s, probes their frame count/duration/format, extracts full-resolution stills from the encoded videos, exercises alternative outro props and a long title, and saves `verification.json`. The Intro B comparison renderer preserves the committed 800px file as `intro-b-74.mp4`, renders the three smaller sizes, verifies their lossless source endpoints against one another, and writes `intro-b-sizes.png`. The verifier makes labelled contact sheets and checks that lossless outro frames 60 and 179 are pixel-identical. Temporary bundles and previews are ignored within that output directory.
 
 For interactive preview:
 

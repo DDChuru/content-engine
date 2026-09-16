@@ -1,34 +1,14 @@
 {
-  "render": {
-    "file": "intro-b.mp4",
+  "composition": {
     "width": 1920,
     "height": 1080,
     "frames": 150,
-    "fps": "30/1",
-    "duration": "5.000000",
-    "codec": "h264",
-    "pixelFormat": "yuv420p",
-    "colorSpace": "bt709",
-    "colorRange": "tv",
-    "audio": {
-      "codec": "aac",
-      "channels": 2,
-      "sampleRate": "48000"
-    }
+    "fps": 30
   },
-  "preservedRender": "intro-b-preshrink.mp4",
-  "requestedInspectionFrames": [
-    20,
-    45,
+  "inspectionFrames": [
     72,
-    88,
     105,
-    120,
     149
-  ],
-  "additionalExtractedFrames": [
-    60,
-    100
   ],
   "choreography": {
     "fade": [
@@ -47,12 +27,180 @@
       88,
       118
     ],
+    "wordmark": [
+      100,
+      118
+    ],
     "settled": [
       118,
       149
-    ],
-    "heroVisibleHeightPx": 800
+    ]
   },
+  "approvedEndpoint": "lossless Remotion frame 149 for intro-b-74",
+  "pixelIdentityBasis": "Lossless renderStill pixels; MP4 inspection frames are independently H.264-compressed.",
+  "variants": [
+    {
+      "percentage": 74,
+      "targetHeroHeightPx": 800,
+      "measuredHeroBounds": {
+        "x": 642,
+        "y": 141,
+        "width": 637,
+        "height": 799
+      },
+      "focusBracket": {
+        "width": 800,
+        "height": 660,
+        "corner": 50
+      },
+      "springAdjusted": false,
+      "settledSourceFramePixelIdentical": true,
+      "encodedInspectionFrames": [
+        72,
+        105,
+        149
+      ],
+      "probe": {
+        "file": "intro-b-74.mp4",
+        "width": 1920,
+        "height": 1080,
+        "frames": 150,
+        "fps": "30/1",
+        "duration": "5.000000",
+        "codec": "h264",
+        "profile": "High",
+        "pixelFormat": "yuv420p",
+        "colorSpace": "bt709",
+        "colorRange": "tv",
+        "audio": {
+          "codec": "aac",
+          "channels": 2,
+          "sampleRate": "48000"
+        }
+      }
+    },
+    {
+      "percentage": 60,
+      "targetHeroHeightPx": 648,
+      "measuredHeroBounds": {
+        "x": 702,
+        "y": 217,
+        "width": 516,
+        "height": 647
+      },
+      "focusBracket": {
+        "width": 648,
+        "height": 535,
+        "corner": 41
+      },
+      "springAdjusted": false,
+      "settledSourceFramePixelIdentical": true,
+      "encodedInspectionFrames": [
+        72,
+        105,
+        149
+      ],
+      "probe": {
+        "file": "intro-b-60.mp4",
+        "width": 1920,
+        "height": 1080,
+        "frames": 150,
+        "fps": "30/1",
+        "duration": "5.000000",
+        "codec": "h264",
+        "profile": "High",
+        "pixelFormat": "yuv420p",
+        "colorSpace": "bt709",
+        "colorRange": "tv",
+        "audio": {
+          "codec": "aac",
+          "channels": 2,
+          "sampleRate": "48000"
+        }
+      }
+    },
+    {
+      "percentage": 48,
+      "targetHeroHeightPx": 518,
+      "measuredHeroBounds": {
+        "x": 754,
+        "y": 282,
+        "width": 413,
+        "height": 517
+      },
+      "focusBracket": {
+        "width": 518,
+        "height": 427,
+        "corner": 36
+      },
+      "springAdjusted": false,
+      "settledSourceFramePixelIdentical": true,
+      "encodedInspectionFrames": [
+        72,
+        105,
+        149
+      ],
+      "probe": {
+        "file": "intro-b-48.mp4",
+        "width": 1920,
+        "height": 1080,
+        "frames": 150,
+        "fps": "30/1",
+        "duration": "5.000000",
+        "codec": "h264",
+        "profile": "High",
+        "pixelFormat": "yuv420p",
+        "colorSpace": "bt709",
+        "colorRange": "tv",
+        "audio": {
+          "codec": "aac",
+          "channels": 2,
+          "sampleRate": "48000"
+        }
+      }
+    },
+    {
+      "percentage": 38,
+      "targetHeroHeightPx": 410,
+      "measuredHeroBounds": {
+        "x": 798,
+        "y": 336,
+        "width": 325,
+        "height": 409
+      },
+      "focusBracket": {
+        "width": 410,
+        "height": 338,
+        "corner": 36
+      },
+      "springAdjusted": false,
+      "settledSourceFramePixelIdentical": true,
+      "encodedInspectionFrames": [
+        72,
+        105,
+        149
+      ],
+      "probe": {
+        "file": "intro-b-38.mp4",
+        "width": 1920,
+        "height": 1080,
+        "frames": 150,
+        "fps": "30/1",
+        "duration": "5.000000",
+        "codec": "h264",
+        "profile": "High",
+        "pixelFormat": "yuv420p",
+        "colorSpace": "bt709",
+        "colorRange": "tv",
+        "audio": {
+          "codec": "aac",
+          "channels": 2,
+          "sampleRate": "48000"
+        }
+      }
+    }
+  ],
+  "contactSheet": "intro-b-sizes.png",
   "fontEvidence": [
     "[Stem4Life fonts] Loaded Manrope 500–700 and Source Sans 3 400–700; all four local WOFF2 subsets ready."
   ]
