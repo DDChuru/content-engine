@@ -246,3 +246,116 @@ export interface LessonResponse {
   /** Present ⇒ legacy-shaped lesson. */
   schemaWarnings?: string[];
 }
+
+// ---------------------------------------------------------------------------
+// Exercise questions (the marking-platform question bank)
+// ---------------------------------------------------------------------------
+//
+// These are ORIGINAL items modelled on the style of exam questions. They are
+// never described as "past papers" and never reproduce Cambridge question text
+// (see briefs/PLAN-marking-platform.md §9 — the copyright question is open).
+//
+// Shape rule: `ExerciseQuestion extends FreeResponseQuestion`, so an item is
+// already a valid `Question` and the existing `gradeAnswer()` in
+// components/question-card.tsx auto-marks the typed final answer with no
+// adapter. Everything the marking platform needs (marks, mark scheme,
+// provenance) is additive on top.
+//
+// Banks live in content/questions/<cluster>.json and are generated + gated by
+// scripts/build-exercise-questions.py. Do not hand-edit a bank: edit the
+// authoring source and re-run the gate.
+
+/** A mark-scheme line. Cambridge tariff letters, kept deliberately. */
+export type MarkType =
+  /** Method: correct approach, follow-through allowed on an earlier slip. */
+  | 'M'
+  /** Accuracy: depends on the M mark above it being earned. */
+  | 'A'
+  /** Independent: awarded on its own (a stated result, a correct diagram). */
+  | 'B';
+
+export interface MarkSchemeStep {
+  /** Stable within the item, e.g. "1a" — what a teacher ticks. */
+  id: string;
+  type: MarkType;
+  marks: number;
+  /** What earns it, in the teacher's words. */
+  description: string;
+  /** The working that earns it, LaTeX. Rendered to the marker, not the student. */
+  latex?: string;
+  /** M-step this A-step is conditional on. */
+  dependsOn?: string;
+}
+
+export interface ExerciseAnswer {
+  /** Exact value as authored, for the machine gate: "13/5", "2", "sqrt(2)/2". */
+  exact: string;
+  /** Decimal to the item's stated precision — what the student types. */
+  value: string;
+  /** Rendered form, LaTeX, e.g. "2.4\\ \\text{m s}^{-2}". */
+  latex: string;
+  unit?: string;
+  /** Significant figures the answer is quoted to. */
+  sigFigs?: number;
+}
+
+/** How this item came to exist, and who is accountable for it being right. */
+export interface ExerciseProvenance {
+  /** Free text: the syllabus skill and question style it was modelled on. */
+  modelledOn: string;
+  /** Author of the item — model id or a person. */
+  generatedBy: string;
+  generatedAt: string;
+  /** The §14 solve gate result. Written only by the build script. */
+  solveGate: {
+    /** Labels of the independent solution routes that agreed. */
+    routes: string[];
+    /** true once SymPy confirmed the route agreement symbolically. */
+    symbolicCheck: boolean;
+    /** Significant figures the routes were compared to. Always 3. */
+    agreedToSigFigs: number;
+    checkedAt: string;
+  };
+  /**
+   * Human sign-off. The pipeline NEVER writes this on its own authority —
+   * it is stamped only by `--approve --by "<name>"`. Absent ⇒ not approved,
+   * and the item must not be served.
+   */
+  approvedBy?: string;
+  approvedAt?: string;
+}
+
+export interface ExerciseFigure {
+  /** Path under /public, or a generator id once diagrams exist. */
+  src?: string;
+  /** Required whenever a figure is present. */
+  alt: string;
+  caption?: string;
+}
+
+export interface ExerciseQuestion extends FreeResponseQuestion {
+  /** Syllabus topic code from lib/syllabus.ts, e.g. "M4.4a". */
+  topicCode: string;
+  /** Marks available for the whole item. Must equal sum of markScheme marks. */
+  marks: number;
+  markScheme: MarkSchemeStep[];
+  answer: ExerciseAnswer;
+  /** Realistic working time, minutes. */
+  estimatedMinutes: number;
+  figure?: ExerciseFigure;
+  /** Misconception codes this item is diagnostic for, e.g. "M4.4a-X01". */
+  diagnosticFor?: string[];
+  provenance: ExerciseProvenance;
+}
+
+/** content/questions/<cluster>.json */
+export interface ExerciseBank {
+  /** Schema version — bump on any breaking field change. */
+  schemaVersion: 1;
+  cluster: string;
+  title: string;
+  /** Topic codes covered, for the §9 coverage check. */
+  topicCodes: string[];
+  generatedAt: string;
+  questions: ExerciseQuestion[];
+}
