@@ -54,7 +54,7 @@ const focusGuidePath = (heroHeight: number) => {
   return `M${left + corner} ${top}H${left}V${top + corner} M${right - corner} ${top}H${right}V${top + corner} M${left} ${bottom - corner}V${bottom}H${left + corner} M${right - corner} ${bottom}H${right}V${bottom - corner}`;
 };
 
-const Intro: React.FC<BookendProps & {aesthetic: BookendAesthetic; heroHeight?: number}> = ({title, subtitle, accentA, accentB, aesthetic, heroHeight = 800}) => {
+const Intro: React.FC<BookendProps & {aesthetic: BookendAesthetic; heroHeight?: number}> = ({title, subtitle, accentA, accentB, aesthetic, heroHeight = 518}) => {
   const frame = useCurrentFrame(); const {fps} = useVideoConfig();
   const fontsReady = useBrandFonts();
   if (!fontsReady) return null;

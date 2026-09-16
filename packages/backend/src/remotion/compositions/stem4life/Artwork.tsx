@@ -66,7 +66,7 @@ export const Lockup: React.FC<ArtworkProps & {instrument?: boolean}> = ({frame, 
 // each requested comparison height exactly before docking at canonical scale.
 // Its visible artwork is filled path geometry, so there is no display stroke
 // to compensate during the scale change; the reveal-mask stroke is gone by f72.
-export const InstrumentIntroLockup: React.FC<ArtworkProps & {heroHeight?: number}> = ({frame, fps, ink, accent, heroHeight = 800}) => {
+export const InstrumentIntroLockup: React.FC<ArtworkProps & {heroHeight?: number}> = ({frame, fps, ink, accent, heroHeight = 518}) => {
   const dock = settle(frame, fps, 88 / fps, 30 / fps);
   const words = settle(frame, fps, 100 / fps, 18 / fps);
   const heroScale = heroHeight / (84 * (1320 / 660.164));

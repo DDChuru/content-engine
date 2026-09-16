@@ -18,7 +18,7 @@ const outroSchema = schema.extend({aesthetic: z.enum(['A', 'B', 'C']).optional()
 
 export const Stem4LifeCompositions: React.FC = () => <>
   <Composition<typeof schema, BookendProps> id="Stem4LifeIntroA" component={IntroA} durationInFrames={INTRO_FRAMES} {...size} schema={schema} defaultProps={defaultProps}/>
-  <Composition<typeof introBSchema, IntroBProps> id="Stem4LifeIntroB" component={IntroB} durationInFrames={INTRO_FRAMES} {...size} schema={introBSchema} defaultProps={{...defaultProps, heroHeight: 800}}/>
+  <Composition<typeof introBSchema, IntroBProps> id="Stem4LifeIntroB" component={IntroB} durationInFrames={INTRO_FRAMES} {...size} schema={introBSchema} defaultProps={{...defaultProps, heroHeight: 518}}/>
   <Composition<typeof schema, BookendProps> id="Stem4LifeIntroC" component={IntroC} durationInFrames={INTRO_FRAMES} {...size} schema={schema} defaultProps={defaultProps}/>
   <Composition<typeof outroSchema, Stem4LifeBookendProps> id="Stem4LifeOutro" component={Stem4LifeOutro} durationInFrames={OUTRO_FRAMES} {...size}
     schema={outroSchema} defaultProps={{...defaultProps, aesthetic: 'C'}}/>

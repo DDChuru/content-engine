@@ -25,7 +25,7 @@ All components accept `{title, subtitle?, accentA?, accentB?}`. The two generic 
 ## Timing and editing
 
 - A: letters enter from 0.14s; the 4 enters at 1.22s and is settled at 1.88s.
-- B: after a 12-frame fade, the microscope draws at the supplied `heroHeight` during frames 12–72, holds large through frame 88, then uses an overshoot-clamped spring to dock during frames 88–118. The wordmark enters during frames 100–118. The title, rule and website also finish by frame 118, leaving the approved lockup static for the final 32 frames. The default remains 800px; the review renderer produces 800, 648, 518 and 410px comparisons without changing the settled state.
+- B: after a 12-frame fade, the microscope draws at the supplied `heroHeight` during frames 12–72, holds large through frame 88, then uses an overshoot-clamped spring to dock during frames 88–118. The wordmark enters during frames 100–118. The title, rule and website also finish by frame 118, leaving the approved lockup static for the final 32 frames. The default is 518px (48% of frame height) — chosen by Durai on 2026-09-16 after reviewing 800/648/518/410px comparisons; the review renderer still produces all four without changing the settled state.
 - C: graph rules enter during the first 1.5s; the complete lockup settles at 1.58s.
 - Lesson information and the small intro website settle by 3.15s. Final intro frames hold for a clean editorial cut.
 - Outro: the 108px URL enters at 0.85s and is completely settled by 1.8s. All motion has ended before frame 60. **Frames 60–179 provide four uninterrupted seconds with the URL fully opaque and stationary.** There is no end fade that erodes this hold.
