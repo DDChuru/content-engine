@@ -9,6 +9,56 @@ is **on hold** pending the legal question in §9.
 
 ---
 
+## 0. Amendments from the first build (2026-09-16)
+
+Seven corrections surfaced while building the question layer (`fbc2e08`) and the schema
+(`a630ef3`). **These supersede the sections named.** The originals are left in place below
+so the reasoning that produced them is still readable.
+
+**A. §4 / §6 — guardian consent arrives too late. (Highest priority.)**
+As written, a 13-17 student registers and the guardian consent row is only created when the
+guardian redeems the link — possibly after the student has already submitted work and paid.
+Free anonymous study needs no guardian. **Taking money and a photograph of a child's work
+does.** Paid submission must be gated on a redeemed guardian link. Not yet implemented;
+it changes the §6 submit path.
+
+**B. §11.5 — "never delete, retain 3 years" collides with the right to erasure.**
+POPIA and the ZW DPA both grant a deletion right; the plan asserted append-only without
+resolving the conflict. Resolution: scrub the `users` row in place and keep the
+candidate-code-keyed rows; **never** scrub `auditLog` or `deanonymisations`; give image
+*originals* the shortest life (12 months), since they carry the real risk.
+
+**C. §4 — registration needs two more fields than "first name and year".**
+`ageBand` and `country`, both self-declared and unverified. A guardian-consent rule cannot be
+applied to minors without knowing who is one, and POPIA vs ZW DPA is not derivable from
+anything else held. Verifying a child's age means collecting a child's ID — a larger harm
+than it prevents.
+
+**D. §4 — teacher context must be scoped to the same topic.**
+An unscoped cross-topic profile lets a teacher who claims two items recognise the same
+learner, undoing per-submission codes from the other end. Context returns counts and
+*catalogue* text only — never a previous teacher's free-text `encouragement`, which can carry
+a name the filter missed.
+
+**E. §14 — the mark scheme is what human sign-off is actually for.**
+The plan machine-checks the *answer* and never mentions the mark scheme. The answer is the
+cheap part; `gradeAnswer` handles it. The mark scheme is what a teacher applies and what
+§10's consistency-flagging compares against, and nothing checks it. **That is where the
+~40 items/hour of review time actually goes, and §14.5 should say so.**
+
+**F. §14.3 — "reject non-terminating decimals" is stricter than real exams.**
+Cambridge asks for answers "to 3 significant figures" precisely because they recur. As
+written the gate discards legitimate items and biases the bank toward contrived numbers,
+which students notice. Add a per-item `allowRecurring` escape that requires the stem to say
+"to 3 significant figures", and have the gate verify the stem actually says it.
+
+**G. §9 — the coverage gate over-counts against `lib/syllabus.ts`.**
+The Mechanics unit has 37 topic entries, six of which are `-fable` duplicates of real topics.
+At 3 questions each that invents an 18-question obligation against topics that do not exist.
+Merge or exclude the `-fable` rows before computing coverage.
+
+---
+
 ## 1. The model, in one paragraph
 
 Students study free and anonymously. The paid product is **blind diagnostic marking**:
