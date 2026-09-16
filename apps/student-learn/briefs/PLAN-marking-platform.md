@@ -329,6 +329,11 @@ join from submission to student in any UI query. The only path is one mutation,
 
 ## 12. Unit economics
 
+> **Superseded in part — see Appendix A.** The flat $0.70 marker assumed below is being
+> replaced by a tiered junior/senior workforce, and the senior retainer by a partner
+> cohort revenue share. Appendix A is not finalised; the numbers here still stand as the
+> baseline.
+
 Marking costs real teacher time per submission. This is **not** a zero-marginal-cost
 product, and that is the single most important fact when buying traffic.
 
@@ -369,7 +374,8 @@ tutor, not a queue.
 
 ## 13. Teacher supply
 
-**Teachers author nothing.** Material is generated. They mark and guide. This is a much
+**Teachers author nothing.** Material is generated. They mark and guide.
+(Workforce structure is being revised — see Appendix A.) This is a much
 larger recruitment pool than content creators, a lower bar to verify, and it decouples
 teacher supply from content production entirely.
 
@@ -524,3 +530,116 @@ Automated payouts, teacher choice, Pure papers, referrals, a $5 library-only dow
 7. **Payment rail friction** — mobile money failure rates are materially worse than card;
    expect 10–20% of early checkouts to need manual rescue.
 8. **Tag drift** quietly turning the content roadmap into a popularity contest (§8).
+
+---
+
+## Appendix A — OPEN: tiered markers and the partner cohort model
+
+**Status: not decided.** Raised 2026-09-16. §12 and §13 above still describe a flat
+workforce of equal markers at $0.70. This appendix supersedes that thinking but the
+numbers are not finalised and nothing here should be built against yet.
+
+### A.1 Tiered marker workforce (direction settled, rates open)
+
+The flat model has a supply problem: $0.70 per mark is ~$6/hour, and an established
+teacher earns $25–33/hour tutoring. Marking will never win their prime time.
+
+Split the role:
+
+- **Junior markers** — vetted university maths students who have demonstrated competence.
+  For them $6/hour is at or above the going rate and they have no competing tutoring
+  business to protect. Abundant, flexible, motivated partly by the experience.
+- **Senior markers** — qualified teachers. Sample-check juniors, take the hard escalations,
+  oversee the misconception catalogue and how the marking works.
+
+This is the Cambridge examiner hierarchy (assistant examiners under team leaders who
+sample-check). Rebuilding a proven structure, not inventing one.
+
+**Indicative at 500 students / 2,000 marks per month — roughly cost-neutral against the
+flat model. Tiering buys quality and supply, not margin:**
+
+| | Flat: 5 equal markers | Tiered: 1 senior + 5 juniors |
+|---|---|---|
+| Junior pay each | — | $160/mo for ~37h |
+| Senior pay | — | $630/mo incl. oversight retainer |
+| Total people cost | $1,400 | $1,430 |
+
+Build in:
+- **Competence is not pedagogy.** A strong undergraduate solves the question but has never
+  taught. The §7 diagnosis picker rescues this — it makes them do *recognition* against a
+  catalogue rather than invent feedback. The two design decisions fit together better than
+  either was designed to.
+- **Taper the check rate, do not fix it.** New marker: everything checked. As measured
+  agreement with the senior rises, sampling falls. Quality control and a progression ladder
+  at once — being checked less is a status reward that costs nothing.
+- **Calendar collision.** ZW/SA university exams sit in June and November; Cambridge exams
+  sit in May–June and October–November. Student markers vanish exactly when submission
+  volume peaks and the SLA is most exposed. **Retired teachers are counter-cyclical ballast
+  — deliberately mixing the two pools is worth more than getting the ratio right.**
+- **Do not lower the verification bar for students.** A 20-year-old marker is much closer in
+  age to a 17-year-old than a retired teacher is. Same ID check, credential check, paid trial.
+- **Go asymmetric, not balanced.** Seniors are scarce and expensive; one covers a lot of
+  checking. Juniors are abundant; recruit more than needed and meet the SLA with spare
+  capacity rather than longer hours.
+
+### A.2 Partner cohort model (OPEN — requires finalisation)
+
+Replaces the senior *retainer* with a revenue share. A senior teacher becomes a **partner**
+over a cohort of ~500 students: they assist in recruiting into it, oversee marking quality,
+and take a share of that cohort's revenue. The platform takes a thin slice and lets partners
+drive volume.
+
+**Indicative split, cohort of 500 at $12 (gross $6,000, net of processing $5,760), junior
+marking $1,000:**
+
+| Platform share | Partner earns/mo | Platform left after infra + content |
+|---|---|---|
+| 20% | $3,560 | $550 |
+| 25% | $3,260 | $850 |
+| 30% | $2,960 | $1,150 |
+| 35% | $2,660 | $1,450 |
+
+**Why a thin slice is defensible:** holding 500 students against churn costs ~$1,000/month in
+TikTok spend. A respected senior teacher with a network across three schools fills those
+seats more cheaply and converts far better. Much of the partner's share is simply the ad
+budget redirected to a human who is better at it. And platform economics come from
+*multiplying cohorts*, not a big slice of one — ten partners at 30% is $18,000/month.
+
+**The $2,960 figure is the recruitment story.** Roughly 10× a teacher's salary. That attracts
+people who cannot be attracted any other way.
+
+#### Must be resolved before this is adopted
+
+1. **Content is not housekeeping — fund it off the top.** The owner's framing was that the
+   platform needs "a small percentage for housekeeping and advertising". Content production
+   is neither: it is the moat, the thing partners sell, and the only reason a student stays
+   past month one. At 30% only ~$1,150/cohort/month remains after infrastructure and
+   content, and the next syllabus costs far more than the $400/month assumed here.
+   **Make content a first charge before the percentage split, not a residual after it.**
+   Otherwise the split starves the thing that makes the split worth having.
+2. **Partnership in the pitch, revenue share in the instrument.** Real equity means dilution,
+   a cap table, shareholder rights, and a partner who cannot be removed when they
+   underperform. Use a terminable cohort revenue-share contract. The word "owner" is fine
+   in the pitch; the instrument should not be shares.
+3. **A partner must never mark or view submissions from their own cohort.** They recruited
+   those students and know them in real life. Their oversight is over *markers and quality*,
+   never over individual student work. Marking stays pooled and blind across all cohorts —
+   which is needed for turnaround anyway. **The cohort is a commercial construct for
+   revenue attribution, not an operational one.** This is load-bearing: without it, §4
+   blinding collapses.
+4. **Disintermediation inverts and worsens.** §13's non-solicitation protects against a
+   marker poaching a student they cannot identify. A partner holds 500 real relationships
+   and can walk with them. Lock-in is the library, which they cannot take, plus a
+   non-compete with a specific number in it. Settle this before the first partner signs.
+5. **Open numbers:** the platform percentage; the junior rate; whether partners are paid on
+   gross or net; what happens to a cohort when a partner leaves; whether a partner's share
+   vests or is at-will; how cohort revenue is attributed when marking is pooled.
+
+#### Open questions not yet modelled
+
+- Does a partner's share survive their inactivity, or is it contingent on ongoing
+  recruitment and oversight?
+- Cohort ceiling: is 500 a cap, a target, or an accounting unit?
+- Whether a partner can run more than one cohort.
+- Interaction with the §9 coverage gate: a partner recruiting into a syllabus area with no
+  library is selling something that does not exist.
