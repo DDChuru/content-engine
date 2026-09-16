@@ -1,0 +1,17 @@
+{
+  "_comment": "Normalized ring-callout boxes over the 1344x2992 phone stills (origin top-left, 0..1). Keyed by the `ring` name in narration.json/timing.json. color optional (defaults to sky #3CB6E0). First-pass coords from the real captures; verify against the rendered preview and nudge.",
+  "noTasksHero":   { "x": 0.06,  "y": 0.258, "w": 0.64, "h": 0.034, "color": "#3CB6E0" },
+  "areasNav":      { "x": 0.348, "y": 0.912, "w": 0.115, "h": 0.052, "color": "#3CB6E0" },
+  "livePill":      { "x": 0.795, "y": 0.156, "w": 0.140, "h": 0.034, "color": "#1F9C5A" },
+  "dateToday":     { "x": 0.040, "y": 0.180, "w": 0.230, "h": 0.064, "color": "#3CB6E0" },
+  "noTasksDue":    { "x": 0.110, "y": 0.572, "w": 0.780, "h": 0.048, "color": "#3CB6E0" },
+  "offSchedTab":   { "x": 0.500, "y": 0.292, "w": 0.450, "h": 0.052, "color": "#3CB6E0" },
+  "readOnlyPill":  { "x": 0.765, "y": 0.156, "w": 0.175, "h": 0.034, "color": "#3CB6E0" },
+  "siteOps69":     { "x": 0.575, "y": 0.758, "w": 0.375, "h": 0.056, "color": "#3CB6E0" },
+  "canteen9":      { "x": 0.575, "y": 0.478, "w": 0.375, "h": 0.052, "color": "#8A93A0" },
+  "siteOps72":     { "x": 0.575, "y": 0.758, "w": 0.375, "h": 0.056, "color": "#3CB6E0" },
+  "canteen12":     { "x": 0.575, "y": 0.478, "w": 0.375, "h": 0.052, "color": "#3CB6E0" },
+  "previewBanner": { "x": 0.038, "y": 0.168, "w": 0.924, "h": 0.062, "color": "#E89A30" },
+  "due26":         { "x": 0.085, "y": 0.282, "w": 0.450, "h": 0.052, "color": "#3CB6E0" },
+  "cadencePills":  { "x": 0.038, "y": 0.352, "w": 0.560, "h": 0.046, "color": "#3CB6E0" }
+}

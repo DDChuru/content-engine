@@ -1,0 +1,107 @@
+{
+  "fps": 30,
+  "total_seconds": 153.772,
+  "total_frames": 4614,
+  "beats": [
+    {
+      "id": "context",
+      "shot": "s01-home-offday",
+      "chip": "Today: nothing due",
+      "ring": "noTasksHero",
+      "audio": "schedule-preview/audio/01-context.mp3",
+      "voStart": 0.6,
+      "duration": 17.972,
+      "text": "Here is home, at I-and-J today. Look at the banner: no tasks scheduled. Today is a rest day — zero areas due. So it's the perfect day to show you how the schedule actually works."
+    },
+    {
+      "id": "areasButton",
+      "shot": "s01-home-offday",
+      "chip": "Open Areas",
+      "ring": "areasNav",
+      "audio": "schedule-preview/audio/02-areasButton.mp3",
+      "voStart": 19.522,
+      "duration": 14.211,
+      "text": "Down in the nav, tap the Areas button — second from the left. Not the scan button in the middle; that one is for checking in on the day. Areas is where you see the plan."
+    },
+    {
+      "id": "areasToday",
+      "shot": "s02-areas-today-live",
+      "chip": "Live · today",
+      "ring": "livePill",
+      "audio": "schedule-preview/audio/03-areasToday.mp3",
+      "voStart": 34.683,
+      "duration": 15.726,
+      "text": "Every area at the site, and what each one owes. The green tag says lyve, meaning right now — this really is today. And today, every area reads zero of zero due. Nothing is scheduled."
+    },
+    {
+      "id": "openZone",
+      "shot": "s04-zone-due-empty",
+      "chip": "No tasks due",
+      "ring": "noTasksDue",
+      "audio": "schedule-preview/audio/04-openZone.mp3",
+      "voStart": 51.359,
+      "duration": 11.233,
+      "text": "Open any area. No tasks due on Sunday. But say you are called in anyway — the work does not disappear, it simply is not on today's schedule."
+    },
+    {
+      "id": "offSchedule",
+      "shot": "s05-zone-offschedule",
+      "chip": "Off-schedule",
+      "ring": "offSchedTab",
+      "audio": "schedule-preview/audio/05-offSchedule.mp3",
+      "voStart": 63.541,
+      "duration": 11.729,
+      "text": "So switch to Off-schedule. Here is everything this area can be checked on, even when it is not due. Record only what you actually did — nothing here is forced."
+    },
+    {
+      "id": "dateStrip",
+      "shot": "s02-areas-today-live",
+      "chip": "Pick any day",
+      "ring": "dateToday",
+      "audio": "schedule-preview/audio/06-dateStrip.mp3",
+      "voStart": 76.22,
+      "duration": 9.456,
+      "text": "Now the part that makes planning easy. Up top is the schedule date. Slide it forward to any day, and see exactly what is coming."
+    },
+    {
+      "id": "monday",
+      "shot": "s06-areas-monday-preview",
+      "chip": "Read-only preview",
+      "ring": "readOnlyPill",
+      "audio": "schedule-preview/audio/07-monday.mp3",
+      "voStart": 86.627,
+      "duration": 17.502,
+      "text": "Tomorrow — Monday. The tag flips to READ ONLY: this is a preview, it never records anything. And watch the numbers wake up. Site Operations: sixty-nine tasks due. A full working day."
+    },
+    {
+      "id": "friday",
+      "shot": "s07-areas-friday-preview",
+      "chip": "Compare days",
+      "ring": "siteOps72",
+      "audio": "schedule-preview/audio/08-friday.mp3",
+      "voStart": 105.079,
+      "duration": 17.45,
+      "text": "Now jump to Friday. Same areas — but Site Operations climbs to seventy-two, and the canteen goes from nine to twelve. Those extra checks are the weekly and monthly tasks that land on a Friday."
+    },
+    {
+      "id": "fridayZone",
+      "shot": "s08-zone-friday-due",
+      "chip": "Friday's checks",
+      "ring": "due26",
+      "audio": "schedule-preview/audio/09-fridayZone.mp3",
+      "voStart": 123.478,
+      "duration": 13.74,
+      "text": "Open Site Operations on that Friday: twenty-six checks due — twenty-three every shift, plus three periodic. You can see exactly what Friday holds, days before it arrives."
+    },
+    {
+      "id": "guardrail",
+      "shot": "s08-zone-friday-due",
+      "chip": "Preview only",
+      "ring": "previewBanner",
+      "audio": "schedule-preview/audio/10-guardrail.mp3",
+      "voStart": 138.169,
+      "duration": 13.453,
+      "text": "One rule to remember. A preview plans — it never ticks a box. Due and off-schedule, view only. To actually record the work, you scan the area, on the day."
+    }
+  ]
+}
