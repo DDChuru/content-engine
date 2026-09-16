@@ -133,3 +133,6 @@ education-task-queue.json
 # heavy packages/backend/output/ stays ignored (rule above).
 !/output/
 !/output/**
+
+# Playwright storage states are live session tokens — never commit
+projects/onboarding/*/capture/state/
