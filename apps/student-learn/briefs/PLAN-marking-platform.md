@@ -22,6 +22,47 @@ Free anonymous study needs no guardian. **Taking money and a photograph of a chi
 does.** Paid submission must be gated on a redeemed guardian link. Not yet implemented;
 it changes the §6 submit path.
 
+**H. §7's "the catalogue is mostly already written" was FALSE, and it was load-bearing.**
+`wrongIdea` exists on disk in exactly two files, both **IGCSE 0580** (sets and surds). The
+`misconceptions[]` field is real in the lesson generator, but **no 9709 Mechanics lesson was
+ever generated through that pipeline** — Mechanics produced markdown notes, which have no
+misconceptions section. Anyone planning Phase 1 off that sentence budgets an import and gets
+an authoring job. The 21-item catalogue was authored from the notes prose instead, each item
+quoting its grounding line.
+
+**I. The content roadmap inverts: the bottleneck is QUESTIONS, not recordings.**
+Of 21 catalogue codes: **0 uncovered, 4 covered, 17 partial**. Every misconception already has
+a notes page *and* a video, because notes are the one complete pipeline. They are partial
+purely because fewer than 2 of the 12 exercise questions diagnose them. §9's gate (≥80% of
+in-scope codes covered) currently sits at **19%**. §8 was written assuming gap aggregation
+would say what to *record*; for Mechanics it says what to *write questions for* — roughly
+25-30 more items concentrated on the eight force-diagram, friction and resolving codes that
+have no question at all. That is cheaper and faster than recording.
+
+**J. §8's tag-drift mitigation has an incentive hole that pays teachers to misdiagnose.**
+Randomising picker order does not help when only 4 of 21 codes are `covered`. A teacher who
+wants the student to receive a usable prescription is *rationally* pushed toward those 4,
+because the other 17 trigger §9's "no lesson yet" path and cost them a 3-5 sentence written
+explanation. Paying 1.5× for that fallback makes it worse, not better. **Hide coverage state
+from the picker**, or the pay structure is actively buying wrong diagnoses.
+
+**K. The deployed `misconceptionCatalogue` cannot hold what §7 needs.**
+It has single `lessonHref` and `videoId`, but §7's prescription is "note → video → two
+practice questions", ordered by prerequisite. It also drops `title` and `description`, so the
+picker has no short label and shows a teacher a paragraph of `wrongIdea` instead. Needs
+`noteSlugs: v.array`, `videoIds: v.array`, `title`, `description`. The JSON already holds the
+full form, so the fix is a schema change plus a re-seed.
+
+**L. §9's coverage threshold contradicts itself — pick one number.**
+The prose says ≥3 questions per syllabus point; the schema comment says ≥3; the catalogue was
+built to ≥2. At 2 the covered count is 4. **At 3 it is 0.**
+
+**M. Severity (§8) has no defined scale.**
+It ranks `frequency × severity × coverage_gap_bonus` with severity as a bare 1-5. The
+catalogue used "how far downstream the damage goes" — a wrong normal reaction poisons every
+later friction answer, so 5; a sign slip, 4. Write the scale down before a second unit is
+authored, or §8's ranking silently stops being comparable across units.
+
 **B. §11.5 — "never delete, retain 3 years" collides with the right to erasure.**
 POPIA and the ZW DPA both grant a deletion right; the plan asserted append-only without
 resolving the conflict. Resolution: scrub the `users` row in place and keep the
