@@ -1,13 +1,19 @@
 /**
  * The policy documents a registering user consents to.
  *
- * `registerSelf` writes one `consents` row per version string, and consent is
- * versioned by document because a re-worded privacy policy needs re-consent
- * (REGISTRATION-AND-ROLES.md §5). Bump these when the wording changes — never
- * edit an old row.
+ * These are RE-EXPORTED from the server copy, `convex/lib/policy.ts`, and are
+ * used here only to render the version a user is being shown. They are no longer
+ * sent to `registerSelf`: a consent row naming a version the client chose is not
+ * evidence of what anyone agreed to, so the mutation writes the constant itself.
+ * Two copies of a version string is exactly how a screen and a record drift
+ * apart, so there is one, and it lives on the server side.
  */
-export const TERMS_VERSION = 'terms-2026-09-16';
-export const PRIVACY_VERSION = 'privacy-2026-09-16';
+export {
+  TERMS_VERSION,
+  PRIVACY_VERSION,
+  GUARDIAN_ATTESTATION_STATEMENT,
+  GUARDIAN_CONSENT_VERSION,
+} from '@/convex/lib/policy';
 
 /**
  * Countries offered to a GUARDIAN at registration, and the labels the account page

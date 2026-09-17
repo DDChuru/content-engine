@@ -72,6 +72,31 @@ export const catalogueStateValidator = v.union(
   v.literal('retired')
 );
 
+/**
+ * HOW a consenting party was established — recorded on the consent row itself.
+ *
+ * Nothing short of identity verification stops a determined 16-year-old from
+ * registering a second email address, declaring it a guardian and redeeming
+ * their own link code. The defect worth fixing is not that it is possible; it is
+ * that the database recorded the result as if it had been checked. A consent row
+ * that cannot distinguish a real parent from a self-redeemed one is not evidence.
+ *
+ *  - `self_declared`   — an account that said it was a guardian and attested to
+ *                        it. This is what a link redemption alone can ever be.
+ *  - `payment_verified` — a payment later cleared against an instrument in the
+ *                        guardian's own name. §0 amendment A gates paid marking
+ *                        on guardian consent; payment is the natural anchor,
+ *                        because a card or mobile-money account is materially
+ *                        harder to fake than a second inbox.
+ *
+ * Payments are not built. The level exists so the gate CAN require it, and so
+ * every screen can say which of the two it is looking at.
+ */
+export const assuranceLevelValidator = v.union(
+  v.literal('self_declared'),
+  v.literal('payment_verified')
+);
+
 export const availabilityValidator = v.union(
   v.literal('available'),
   v.literal('in_progress'),
@@ -139,7 +164,11 @@ export default defineSchema({
     ),
 
     // -- guardian-only state --
-    /** Guardians confirm they are the adult responsible. Timestamp of that click. */
+    /**
+     * Guardians confirm they are the adult responsible. Timestamp of the FIRST
+     * such attestation. The binding per-student record is on `guardianLinks`,
+     * because attesting to being Tanaka's parent says nothing about Rudo.
+     */
     guardianAttestedAt: v.optional(v.number()),
 
     createdAt: v.number(),
@@ -422,6 +451,28 @@ export default defineSchema({
     /** Either side may revoke; the row stays for the audit trail. */
     revokedAt: v.optional(v.number()),
     revokedBy: v.optional(v.id('users')),
+    /** 'student' | 'guardian' | 'admin' — which side ended it. */
+    revokedByRole: v.optional(roleValidator),
+
+    // -- what the redemption actually established (see assuranceLevelValidator) --
+    /**
+     * Absent on an unredeemed invite. `self_declared` on every redemption:
+     * a redeemed code proves someone had the code, nothing more.
+     */
+    assuranceLevel: v.optional(assuranceLevelValidator),
+    /** The attestation click. Redemption is REFUSED without it. */
+    guardianAttestedAt: v.optional(v.number()),
+    /** Which wording they attested to, and the wording itself, stored verbatim. */
+    attestationVersion: v.optional(v.string()),
+    attestationStatement: v.optional(v.string()),
+    /**
+     * The upgrade path §0 amendment A needs: set when a payment clears against
+     * an instrument in this guardian's own name. Nothing writes these yet —
+     * payments are not built — but the gate can read `assuranceLevel` today and
+     * the upgrade does not need a migration when it lands.
+     */
+    assuranceUpgradedAt: v.optional(v.number()),
+    assuranceEvidence: v.optional(v.string()),
     /** §11.6 — both parties are told the mirror exists. When they were told. */
     mirrorDisclosedAt: v.optional(v.number()),
     createdAt: v.number(),
@@ -443,14 +494,36 @@ export default defineSchema({
       v.literal('minor_processing'), // guardian consent for a 13-17 student
       v.literal('marketing')
     ),
-    /** Policy document version, e.g. "privacy-2026-09-16". */
+    /**
+     * Policy document version, e.g. "privacy-2026-09-16". Written from
+     * `convex/lib/policy.ts`, NEVER from a mutation argument: a version string
+     * the client chose is not a record of what anyone was shown.
+     */
     documentVersion: v.string(),
     grantedAt: v.number(),
     /** Withdrawal is a new row with `withdrawnAt`; the grant row is never edited. */
     withdrawnAt: v.optional(v.number()),
+
+    /**
+     * How the granting party was established. Absent on rows written before this
+     * field existed — `identity:backfillConsentAssurance` fills them as
+     * `self_declared`, which is what they were.
+     */
+    assuranceLevel: v.optional(assuranceLevelValidator),
+    /** For `minor_processing`: the link whose redemption produced this consent. */
+    sourceLinkId: v.optional(v.id('guardianLinks')),
+    /** The sentence the granting party was shown, verbatim, and its version. */
+    attestationStatement: v.optional(v.string()),
+    /**
+     * Append-only upgrade chain: a consent re-granted at a higher assurance is a
+     * NEW row, and the old one points at it. Nothing is overwritten, and
+     * "self-declared then payment-verified" stays readable as two facts.
+     */
+    supersededBy: v.optional(v.id('consents')),
   })
     .index('by_subject_kind', ['subjectId', 'kind'])
-    .index('by_subject', ['subjectId']),
+    .index('by_subject', ['subjectId'])
+    .index('by_source_link', ['sourceLinkId']),
 
   // -------------------------------------------------------------------------
   // submissions — the spine (§6)
@@ -774,16 +847,56 @@ export default defineSchema({
     expiresAt: v.number(),
     /** Every read against this grant bumps this, so scope creep is visible. */
     readCount: v.number(),
-    /** §11 — student + guardian told within 24h. */
+    /**
+     * §11 — student + guardian told WITHIN 24h. `notifyDueAt` is the deadline,
+     * not the send time: delivery is attempted immediately (scheduled from
+     * `revealCandidate`), and anything still un-notified as this passes is
+     * overdue and is surfaced as such (`identity:overdueRevealNotices`).
+     */
     notifyDueAt: v.number(),
     notifiedAt: v.optional(v.number()),
-    /** Suppression needs its own logged reason (§11). */
+    /** How many recipients the notice actually reached. 0 is a failure, not a pass. */
+    notifiedRecipientCount: v.optional(v.number()),
+    /** Set when a delivery attempt produced nothing. Kept so failure is visible. */
+    notificationError: v.optional(v.string()),
+    /**
+     * Suppression needs its own logged reason (§11) AND is limited to
+     * safeguarding/legal triggers — see SUPPRESSIBLE_REVEAL_TRIGGERS.
+     */
     notificationSuppressed: v.optional(v.boolean()),
     suppressionReason: v.optional(v.string()),
+    suppressedBy: v.optional(v.id('users')),
+    suppressedAt: v.optional(v.number()),
   })
     .index('by_submission', ['submissionId'])
     .index('by_actor_granted', ['actorId', 'grantedAt'])
     .index('by_student', ['studentId'])
     // the 24h notification sweep
     .index('by_notify_due', ['notifiedAt', 'notifyDueAt']),
+
+  // -------------------------------------------------------------------------
+  // revealNotices — the §11 notification, as a thing that exists
+  // -------------------------------------------------------------------------
+  // "Notified within 24 hours" was a comment on a function nobody called. A row
+  // here IS the notice: it is written to the student and to every linked
+  // guardian, it is rendered on their own account page, and it cannot be
+  // silently skipped because `deanonymisations.notifiedAt` is only stamped once
+  // these rows exist. Email is a separate channel and is NOT wired (no provider);
+  // `channel` records which one actually carried it, so nobody can later read
+  // an in-app-only notice as proof an email went out.
+  revealNotices: defineTable({
+    grantId: v.id('deanonymisations'),
+    recipientId: v.id('users'),
+    /** Why this person is being told: they are the student, or their guardian. */
+    recipientRole: v.union(v.literal('student'), v.literal('guardian')),
+    /** Denormalised so the notice renders without reading the grant itself. */
+    trigger: revealTriggerValidator,
+    grantedAt: v.number(),
+    channel: v.union(v.literal('in_app'), v.literal('email')),
+    createdAt: v.number(),
+    /** Stamped when the recipient opens their account page and sees it. */
+    seenAt: v.optional(v.number()),
+  })
+    .index('by_recipient', ['recipientId', 'createdAt'])
+    .index('by_grant', ['grantId']),
 });

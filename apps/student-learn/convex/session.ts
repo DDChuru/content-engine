@@ -110,26 +110,43 @@ export const guardianState = query({
         .withIndex('by_student', (q) => q.eq('studentId', user._id))
         .collect();
 
+      const codes = [];
+      for (const l of links.slice().sort((a, b) => b.createdAt - a.createdAt)) {
+        // WHO redeemed it. The student could previously see only that *someone*
+        // had, which makes a mistakenly-shared code neither identifiable nor
+        // — now that `revokeGuardianLink` exists — targetable. First name and
+        // nothing else: it is what the guardian already gave, it is what the
+        // student needs to recognise their own parent, and a contact address
+        // would hand a route from the platform to an adult that §11.1 refuses.
+        const guardian = l.guardianId ? await ctx.db.get(l.guardianId) : null;
+        codes.push({
+          // The id is needed to revoke. It is an opaque handle to a row this
+          // student owns; `revokeGuardianLink` re-checks that they are a party
+          // to it rather than trusting the argument.
+          linkId: l._id,
+          code: l.linkCode,
+          createdAt: l.createdAt,
+          expiresAt: l.expiresAt,
+          redeemedAt: l.redeemedAt ?? null,
+          revokedAt: l.revokedAt ?? null,
+          guardianFirstName: guardian ? (guardian.firstName ?? null) : null,
+          /** null until redeemed. `self_declared` is the honest answer, shown. */
+          assuranceLevel: l.assuranceLevel ?? null,
+          attestedAt: l.guardianAttestedAt ?? null,
+          state: l.revokedAt
+            ? ('revoked' as const)
+            : l.redeemedAt
+              ? ('redeemed' as const)
+              : l.expiresAt < now
+                ? ('expired' as const)
+                : ('open' as const),
+        });
+      }
+
       return {
         side: 'student' as const,
         linked: links.some((l) => l.redeemedAt && !l.revokedAt),
-        codes: links
-          .slice()
-          .sort((a, b) => b.createdAt - a.createdAt)
-          .map((l) => ({
-            code: l.linkCode,
-            createdAt: l.createdAt,
-            expiresAt: l.expiresAt,
-            redeemedAt: l.redeemedAt ?? null,
-            revokedAt: l.revokedAt ?? null,
-            state: l.revokedAt
-              ? ('revoked' as const)
-              : l.redeemedAt
-                ? ('redeemed' as const)
-                : l.expiresAt < now
-                  ? ('expired' as const)
-                  : ('open' as const),
-          })),
+        codes,
       };
     }
 
@@ -144,14 +161,54 @@ export const guardianState = query({
         if (l.revokedAt) continue;
         const student = await ctx.db.get(l.studentId);
         students.push({
+          linkId: l._id,
           firstName: student?.firstName ?? '[erased]',
           redeemedAt: l.redeemedAt ?? null,
           mirrorDisclosedAt: l.mirrorDisclosedAt ?? null,
+          assuranceLevel: l.assuranceLevel ?? null,
+          attestedAt: l.guardianAttestedAt ?? null,
         });
       }
       return { side: 'guardian' as const, linked: students.length > 0, students };
     }
 
     return { side: 'other' as const, linked: false };
+  },
+});
+
+/**
+ * §11 — "student and guardian told within 24 hours naming the trigger".
+ *
+ * This is the reading end of that. The notice names the trigger and the date and
+ * nothing else: not the admin, not the reason text, not the submission. The
+ * student is entitled to know their identity was looked at and why in the
+ * enumerated sense; the free-text reason can name a third party in a
+ * safeguarding case and is not theirs to read.
+ */
+export const revealNotices = query({
+  args: {},
+  handler: async (ctx) => {
+    const identity = await ctx.auth.getUserIdentity();
+    if (!identity) return [];
+
+    const user = await ctx.db
+      .query('users')
+      .withIndex('by_auth_subject', (q) => q.eq('authSubject', identity.subject))
+      .unique();
+    if (!user || user.erasedAt) return [];
+
+    const notices = await ctx.db
+      .query('revealNotices')
+      .withIndex('by_recipient', (q) => q.eq('recipientId', user._id))
+      .order('desc')
+      .take(20);
+
+    return notices.map((n) => ({
+      id: n._id,
+      trigger: n.trigger,
+      grantedAt: n.grantedAt,
+      createdAt: n.createdAt,
+      about: n.recipientRole === 'student' ? ('you' as const) : ('student' as const),
+    }));
   },
 });

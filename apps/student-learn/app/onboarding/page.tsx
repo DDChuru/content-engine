@@ -90,8 +90,9 @@ export default function OnboardingPage() {
             }
           : undefined,
         country: effectiveCountry,
-        termsVersion: TERMS_VERSION,
-        privacyVersion: PRIVACY_VERSION,
+        // The policy versions are NOT sent. The server writes its own constants
+        // (convex/lib/policy.ts) — the strings below are for reading, not for
+        // recording, and a consent row must not name whatever a client typed.
       });
       router.replace(isStudent ? '/account' : '/guardian/redeem');
     } catch (err) {

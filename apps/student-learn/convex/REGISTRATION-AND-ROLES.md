@@ -85,19 +85,40 @@ hold a route from an adult to a named child, which is exactly the channel §11.1
 built to not have. Student-generated means the link is always an act the learner
 performed, in the room, out loud.
 
-Properties: single use, 7-day expiry, revocable by either side, and the row survives
-revocation for the audit trail. A wrong, expired, revoked or already-redeemed code all
-raise the **same** error — otherwise the endpoint is an oracle for guessing valid codes.
+Properties: single use, 7-day expiry, revocable by either side (`revokeGuardianLink`,
+which either party may call and which is audited), and the row survives revocation for
+the audit trail. A wrong, expired, revoked or already-redeemed code all raise the
+**same** error — otherwise the endpoint is an oracle for guessing valid codes. A student
+may hold at most 3 open codes and create at most 10 a day; a guardian may hold at most
+5 students.
 
 Redemption writes two things: the link, and a `minor_processing` consent row with the
 guardian as `grantedBy`. It also stamps `mirrorDisclosedAt`, because §11.6 requires
 both parties to be *told* the mirror exists, and an undisclosed mirror is surveillance.
 
-**Open, flagged:** for a 13-17 student the guardian consent arrives *after* the student
-registered and possibly after they submitted work. The clean fix is to gate paid
-submission — not free study — on a redeemed guardian link. Free anonymous study needs
-no guardian; taking money and a photograph of a child's work does. That gate is not
-written yet and should be, before Phase 1 charges anyone.
+### What a redemption actually establishes — and what it does not
+
+**A redeemed code proves someone had the code.** It does not prove parenthood or
+adulthood, and no check in `redeemGuardianLinkCode` can. A minor can open a second
+Clerk account, declare it a guardian and redeem a code they generated themselves.
+Verifying otherwise means demanding an ID document from a child, which §1 refuses on
+the grounds that it is a larger harm than the one it prevents.
+
+The defect that was worth fixing is therefore not that it is possible. It is that the
+database **recorded the result as though it had been checked** — and the consent row is
+the legal artefact. So:
+
+| Control | What it buys |
+|---|---|
+| `assuranceLevel` on the link and the consent row | The record says *how* the guardian was established. `self_declared` is what a redemption can ever be. Both parties' account pages print the word. |
+| Explicit attestation (`attested: true`, refused without) | A false claim becomes a dated, attributable act rather than a side effect of typing a code. The sentence and its version are stored verbatim on both rows. |
+| `guardianAttestedAt` | Existed in the schema and was never written. Now stamped per link, and once on the `users` row. |
+| Self-redemption refusals | Same `authSubject`, and the same email address after lower-casing and stripping a `+tag` sub-address. Honest limit: a minor's email is deliberately never mirrored into Convex (§1), so for exactly the minors this protects there is nothing to compare. This catches the lazy version of the attack, not the thought-about one. |
+| `payment_verified` | The real floor (§0 amendment A). A parent paying with their own instrument is far harder to fake than a second inbox. The level and the upgrade fields exist; payments are not built, so nothing writes it yet. |
+
+**Still open:** the §0 amendment A gate itself — paid submission refused unless a linked
+guardian consent exists. That belongs to the §6 submit path (`submissions.ts`), not here.
+The data it needs — `assuranceLevel` on a live, unrevoked link — is now there to read.
 
 ---
 
@@ -170,14 +191,22 @@ strip in §5.1 of the plan is what makes that true), no behavioural advertising 
 
 | Consent | Who grants | Where it lives |
 |---|---|---|
-| Terms, privacy | The registering user | `consents` row at `registerSelf` |
+| Terms, privacy | The registering user | `consents` row at `registerSelf`, versioned from `convex/lib/policy.ts` — **never** from a mutation argument |
 | Processing a 13-17 student's data | The **guardian** | `consents` row at `redeemGuardianLinkCode`, `kind: 'minor_processing'` |
 | Marketing | Never for a minor | `consents`, and simply not offered when `ageBand === '13-17'` |
 | Teacher verification evidence | The teacher | Out of band; the *fact* is `verifyTeacher`'s `evidenceNote` + audit row |
 
 Consent is versioned by policy document (`documentVersion`), because a re-worded privacy
 policy needs re-consent and "they agreed to something once" is not a defensible record.
-Withdrawal is a new row, never an edit.
+**The version is a server constant.** It used to be a `registerSelf` argument, so a
+crafted request could record a consent naming `""` or any invented string — which is a
+row that looks like evidence and is not. `lib/policy.ts` (client) re-exports the server
+copy so a screen and a record cannot drift. Withdrawal is a new row, never an edit; so is
+an upgrade of assurance, with the superseded row pointing forward via `supersededBy`.
+
+`country` is likewise required and validated against the offered list for **every** role.
+It was optional and unchecked for guardians, which left the controlling regime unknown on
+exactly the account the guardian-consent rule turns on.
 
 **Retention:** §11.5 requires append-only and three years. That collides head-on with a
 deletion request, so the two are reconciled explicitly:
@@ -250,9 +279,33 @@ Everything written here is reviewable now and compiles the moment step 1 runs.
 ## 8. Not written yet, deliberately
 
 `marks.ts` (submit-a-mark, catalogue validation, `timeSpentSec` auto-flag),
-`prescriptions.ts` (server-side generation), `imageIngest.ts` (§5), `crons.ts` (claim
-expiry, auto-close, credit expiry, the 24h reveal-notification sweep), `middleware.ts`,
-and `lib/progress-convex.ts`. `lib/progress.ts` is untouched — its `ProgressStore`
+`prescriptions.ts` (server-side generation), `imageIngest.ts` (§5), `middleware.ts`,
+and `lib/progress-convex.ts`. `crons.ts` now exists but holds only the reveal-notice
+retry; claim expiry, auto-close and credit expiry belong to the marking loop and are not
+written.
+
+### The §11 notice, and what "delivered" means here
+
+`revealCandidate` schedules `deliverRevealNotice` immediately — `notifyDueAt` is a
+**deadline**, and the first implementation swept for rows whose deadline had already
+passed, so the earliest notice it could produce was already late. The notice reaches the
+student and every guardian on a live link, names the enumerated trigger and the date, and
+does **not** quote the written reason (in a safeguarding case that text can name a third
+party).
+
+**Delivered means an in-app row** (`revealNotices`), rendered on the recipient's own
+account page. **No email is sent** — no provider is wired to this deployment — and
+`channel: 'in_app'` is stored so nobody later reads the row as proof one went out. A
+grant with no reachable recipient stays un-notified and appears in
+`identity:overdueRevealNotices`, an admin query that lists overdue AND suppressed grants
+side by side; failure is loud rather than absent.
+
+Suppression is limited to `safeguarding_flag` and `legal_request` (the plan says "a
+safeguarding or legal hold"; the first implementation allowed every trigger, billing
+disputes included). Because delivery is now immediate, a hold is declared **at the
+grant** (`revealCandidate({ suppressNoticeReason })`); the standalone
+`suppressRevealNotification` remains for a hold that arises while delivery is still
+pending, and refuses once the notice has landed. `lib/progress.ts` is untouched — its `ProgressStore`
 interface is the seam the Convex implementation slots behind, and changing its shape
 now would be the one change that makes the swap harder rather than easier.
 
@@ -277,7 +330,18 @@ npx clerk@3.3.0 config patch --json '{"auth_phone":{
 Verified by creating a user with an email address and no phone. Email remains required.
 `clerk config pull` prints the current state; `--dry-run` on a patch shows the diff first.
 
-**JWT template `convex`** — `aud: convex`, lifetime 3600, clock skew 5. Created via
+**JWT template `convex`** — `aud: convex`, **`email: {{user.primary_email_address}}`**,
+lifetime 3600, clock skew 5. The email claim was added 2026-09-17: without it
+`ctx.auth.getUserIdentity().email` is always `undefined`, so `users.contactEmail` was
+never populated for anyone — adults and guardians included, despite §1 saying it is
+mirrored for parties who must be contacted — and the self-redemption check in
+`redeemGuardianLinkCode` had nothing to compare. Re-apply on the production instance:
+
+```
+npx clerk@3.3.0 api "/jwt_templates/<id>" -X PATCH --yes \
+  -d '{"name":"convex","claims":{"aud":"convex","email":"{{user.primary_email_address}}"}}'
+```
+ Created via
 `POST /jwt_templates`. Convex trusts the issuer through `CLERK_JWT_ISSUER_DOMAIN`, set per
 Convex deployment, so production points at the production Clerk instance without a code change.
 **That env var is currently set on dev only** — `npx convex deploy` (which targets production)

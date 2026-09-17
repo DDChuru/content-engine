@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { useMutation, useQuery } from 'convex/react';
 import { api } from '@/convex/_generated/api';
+import type { Id } from '@/convex/_generated/dataModel';
 import { AuthShell, buttonClass, secondaryButtonClass } from '@/components/auth-shell';
 import { RegistrationGate } from '@/components/registration-gate';
 
@@ -21,6 +22,29 @@ export default function GuardianLinkPage() {
  * the platform would hold a route from an adult to a named child, which is the
  * one channel §11.1 exists to not have.
  */
+/** Revoke an unredeemed code. Same mutation as ending a live link. */
+function CancelCode({ linkId }: { linkId: string }) {
+  const revoke = useMutation(api.identity.revokeGuardianLink);
+  const [busy, setBusy] = useState(false);
+  return (
+    <button
+      type="button"
+      disabled={busy}
+      onClick={async () => {
+        setBusy(true);
+        try {
+          await revoke({ linkId: linkId as Id<'guardianLinks'> });
+        } finally {
+          setBusy(false);
+        }
+      }}
+      className="text-[0.8rem] font-semibold text-accent underline underline-offset-2"
+    >
+      {busy ? 'Cancelling…' : 'Cancel'}
+    </button>
+  );
+}
+
 function GuardianLink() {
   const state = useQuery(api.session.guardianState, {});
   const status = useQuery(api.session.status, {});
@@ -104,6 +128,9 @@ function GuardianLink() {
                 <span className="text-xs text-ink-muted">
                   expires {new Date(c.expiresAt).toLocaleDateString()}
                 </span>
+                {/* A code read to the wrong person is a live credential for
+                    seven days. Cancelling one is the student's own call. */}
+                <CancelCode linkId={c.linkId} />
               </li>
             ))}
           </ul>
@@ -123,11 +150,23 @@ function GuardianLink() {
               .map((c) => (
                 <li key={c.code}>
                   <code className="font-mono">{c.code}</code> — {c.state}
+                  {c.state === 'redeemed' ? (
+                    <>
+                      {' '}
+                      by {c.guardianFirstName ?? 'a guardian'} (
+                      {c.assuranceLevel === 'payment_verified'
+                        ? 'payment-verified'
+                        : 'self-declared'}
+                      )
+                    </>
+                  ) : null}
                 </li>
               ))}
           </ul>
           <p className="mt-2 text-[0.8rem] text-ink-muted">
-            Used and expired codes stay on this list rather than disappearing, so
+            A redeemed code says who redeemed it, and whether that adult was
+            checked or merely said so — end a link you do not recognise from your
+            account page. Used and expired codes stay on this list rather than disappearing, so
             there is always a record of who was given a way in.
           </p>
         </div>
