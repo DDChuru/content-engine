@@ -1,4 +1,6 @@
 import type { Metadata, Viewport } from 'next';
+import { ClerkProvider } from '@clerk/nextjs';
+import { ConvexClientProvider } from '@/components/convex-client-provider';
 import 'katex/dist/katex.min.css';
 import './brand-tokens.css';
 import './globals.css';
@@ -36,7 +38,9 @@ export default function RootLayout({
         <link rel="stylesheet" href="/brand/fonts/fonts.css" />
       </head>
       <body className="min-h-screen bg-paper font-sans text-ink antialiased">
-        {children}
+        <ClerkProvider>
+          <ConvexClientProvider>{children}</ConvexClientProvider>
+        </ClerkProvider>
       </body>
     </html>
   );
