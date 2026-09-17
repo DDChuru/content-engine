@@ -7,7 +7,7 @@ import { api } from '@/convex/_generated/api';
 import { AuthShell, secondaryButtonClass } from '@/components/auth-shell';
 import { RegistrationGate } from '@/components/registration-gate';
 import { COUNTRIES } from '@/lib/policy';
-import { AVAILABILITY_LABEL, describeEnrolment } from '@/lib/exam-catalogue';
+import { AVAILABILITY_LABEL } from '@/lib/exam-catalogue';
 
 export default function AccountPage() {
   return (
@@ -49,7 +49,8 @@ function Account() {
         {isStudent ? (
           <Row
             label="Sitting"
-            value={user.enrolment ? describeEnrolment(user.enrolment) : '—'}
+            // Built server-side from the catalogue tables (convex/session.ts).
+            value={user.enrolment?.label ?? '—'}
           />
         ) : null}
         {isStudent ? <Row label="Age band" value={ageBandLabel(user.ageBand)} /> : null}

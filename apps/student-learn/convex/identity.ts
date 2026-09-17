@@ -20,7 +20,8 @@ import {
   AuthError,
 } from './lib/auth';
 import { revealTriggerValidator } from './schema';
-import { resolveEnrolment, type ResolvedEnrolment } from '../lib/exam-catalogue';
+import { type ResolvedEnrolment } from '../lib/exam-catalogue';
+import { resolveEnrolment } from './lib/catalogue';
 
 const HOUR = 60 * 60 * 1000;
 const DAY = 24 * HOUR;
@@ -71,6 +72,8 @@ export async function allocateTeacherCode(ctx: MutationCtx): Promise<string> {
  * created by `promoteToTeacher` (admin-only) and verified by hand (§11.4).
  */
 export const enrolmentInputValidator = v.object({
+  /** ISO country code. The top layer: it decides which boards are even offered. */
+  countryCode: v.string(),
   bodyId: v.string(),
   levelId: v.string(),
   sessionId: v.string(),
@@ -87,9 +90,10 @@ export const registerSelf = mutation({
     country: v.optional(v.string()),
     /**
      * Required for a student, refused for a guardian. The client sends ids only
-     * (`{ bodyId, levelId, sessionId, subjectIds }`); every title, code and
-     * availability flag is resolved server-side from lib/exam-catalogue.ts, so a
-     * crafted request cannot invent a subject or claim one is available.
+     * (`{ countryCode, bodyId, levelId, sessionId, subjectIds }`); every title,
+     * code and availability flag is resolved server-side from the catalogue tables
+     * (convex/lib/catalogue.ts), so a crafted request cannot invent a subject,
+     * claim one is available, or enrol for a board its country does not sit.
      */
     enrolment: v.optional(enrolmentInputValidator),
     termsVersion: v.string(),
@@ -124,7 +128,7 @@ export const registerSelf = mutation({
         throw new AuthError('Choose the exam you are sitting.');
       }
       // Throws on an unknown body/level/session/subject, or on zero subjects.
-      enrolment = resolveEnrolment(args.enrolment);
+      enrolment = await resolveEnrolment(ctx, args.enrolment);
     } else if (args.enrolment) {
       throw new AuthError('A guardian account does not sit exams.');
     }
@@ -138,7 +142,10 @@ export const registerSelf = mutation({
       role: args.role,
       firstName,
       ageBand: args.ageBand,
-      country: args.country,
+      // The country on the user row and the country on the enrolment answer two
+      // different questions — which privacy regime applies, and where they are
+      // sitting. They are usually the same and are not the same field.
+      country: args.country ?? args.enrolment?.countryCode,
       // A minor's contact details are not mirrored into Convex at all; Clerk holds
       // them and the guardian is the addressable party.
       contactEmail:
@@ -178,6 +185,7 @@ async function insertEnrolment(
 ): Promise<Id<'enrolments'>> {
   const enrolmentId = await ctx.db.insert('enrolments', {
     studentId,
+    countryCode: enrolment.countryCode,
     bodyId: enrolment.bodyId,
     levelId: enrolment.levelId,
     sessionId: enrolment.sessionId,
@@ -217,7 +225,7 @@ export const changeEnrolment = mutation({
   args: { enrolment: enrolmentInputValidator },
   handler: async (ctx, args) => {
     const student = await requireRole(ctx, 'student');
-    const resolved = resolveEnrolment(args.enrolment);
+    const resolved = await resolveEnrolment(ctx, args.enrolment);
     const now = Date.now();
 
     const newId = await insertEnrolment(ctx, student._id, resolved, now);

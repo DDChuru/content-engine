@@ -61,6 +61,23 @@ export const revealTriggerValidator = v.union(
   v.literal('account_recovery')
 );
 
+/**
+ * Catalogue rows are RETIRED, never deleted. An enrolment snapshots its subject,
+ * but the catalogue references itself — a deleted body orphans its levels, its
+ * series, its subjects and every country join — and the rest of this schema is
+ * append-only by design. `retired` rows stay readable and stop being offered.
+ */
+export const catalogueStateValidator = v.union(
+  v.literal('active'),
+  v.literal('retired')
+);
+
+export const availabilityValidator = v.union(
+  v.literal('available'),
+  v.literal('in_progress'),
+  v.literal('planned')
+);
+
 export default defineSchema({
   // -------------------------------------------------------------------------
   // users — one table, role discriminator (§4)
@@ -136,6 +153,156 @@ export default defineSchema({
     .index('by_role_verified', ['role', 'verifiedAt']),
 
   // -------------------------------------------------------------------------
+  // THE QUALIFICATIONS CATALOGUE — country → body → level → session → subjects
+  // -------------------------------------------------------------------------
+  // Six tables, because the shape is not a tree. Cambridge operates in over 160
+  // countries; Zimbabwe sits both ZIMSEC and Cambridge; South Africa sits the NSC
+  // and also Cambridge and Edexcel. Country↔body is therefore a JOIN TABLE
+  // (`catalogueCountryBodies`), not a parent column — a `countryCode` on the body
+  // would force one duplicate Cambridge per country, and each duplicate would carry
+  // its own drifting copy of 42 syllabus codes.
+  //
+  // Everything under the body IS a hierarchy and is stored as such: a level belongs
+  // to exactly one body, a subject to exactly one (body, level).
+  //
+  // Seeded from `content/catalogue/exam-catalogue.json`, edited at runtime through
+  // `convex/examCatalogue.ts` (admin only), and exported back to that same JSON by
+  // `scripts/export-exam-catalogue.mjs` so a wrong subject code is catchable in a
+  // git diff. After the first seed, THESE TABLES are the source of truth and the
+  // JSON is a reviewable mirror of them.
+
+  /** ISO-3166-1 alpha-2, plus the sentinel 'OTHER'. The first question asked. */
+  catalogueCountries: defineTable({
+    code: v.string(),
+    title: v.string(),
+    /** One line under the option, where the country needs one. */
+    note: v.optional(v.string()),
+    sortOrder: v.number(),
+    state: catalogueStateValidator,
+    /** Set together with state:'retired'. The row itself is never removed. */
+    retiredAt: v.optional(v.number()),
+    retiredBy: v.optional(v.id('users')),
+    createdAt: v.number(),
+  })
+    .index('by_code', ['code'])
+    .index('by_state', ['state']),
+
+  catalogueBodies: defineTable({
+    /** Stable slug stored on enrolments ('cambridge'). Never renamed. */
+    bodyId: v.string(),
+    title: v.string(),
+    shortTitle: v.string(),
+    hint: v.string(),
+    sortOrder: v.number(),
+    state: catalogueStateValidator,
+    /** Set together with state:'retired'. The row itself is never removed. */
+    retiredAt: v.optional(v.number()),
+    retiredBy: v.optional(v.id('users')),
+    createdAt: v.number(),
+  })
+    .index('by_body', ['bodyId'])
+    .index('by_state', ['state']),
+
+  /**
+   * The many-to-many. One row = "a candidate in this country can enter for this
+   * board". `levelIds` narrows it where only part of a board is available: Cambridge
+   * IGCSE is sat in UK independent schools, Cambridge O Level and A Level are not.
+   */
+  catalogueCountryBodies: defineTable({
+    countryCode: v.string(),
+    bodyId: v.string(),
+    /** Absent = every active level of the body. Present = only these. */
+    levelIds: v.optional(v.array(v.string())),
+    note: v.optional(v.string()),
+    sortOrder: v.number(),
+    state: catalogueStateValidator,
+    /** Set together with state:'retired'. The row itself is never removed. */
+    retiredAt: v.optional(v.number()),
+    retiredBy: v.optional(v.id('users')),
+    createdAt: v.number(),
+  })
+    .index('by_country', ['countryCode', 'state'])
+    .index('by_body', ['bodyId'])
+    .index('by_country_body', ['countryCode', 'bodyId']),
+
+  catalogueLevels: defineTable({
+    bodyId: v.string(),
+    levelId: v.string(), // unique within the body
+    title: v.string(),
+    hint: v.optional(v.string()),
+    sortOrder: v.number(),
+    state: catalogueStateValidator,
+    /** Set together with state:'retired'. The row itself is never removed. */
+    retiredAt: v.optional(v.number()),
+    retiredBy: v.optional(v.id('users')),
+    createdAt: v.number(),
+  })
+    .index('by_body', ['bodyId', 'state'])
+    .index('by_body_level', ['bodyId', 'levelId']),
+
+  /**
+   * Sittings. A series hangs off the body, or off a LEVEL where the level differs:
+   * Pearson retired the January series for International GCSE after 2023 while
+   * keeping it for the IAL, so `levelId` is optional and level rows win.
+   *
+   * Sessions themselves are not stored. A session is (series × year) and is
+   * generated forward from `examMonth`, so the table never needs a yearly edit and
+   * a sitting whose papers are already written cannot be offered.
+   */
+  catalogueSeries: defineTable({
+    bodyId: v.string(),
+    /** Absent = applies to every level of the body. */
+    levelId: v.optional(v.string()),
+    seriesId: v.string(),
+    title: v.string(),
+    /** Month the written papers fall in, 1-12. */
+    examMonth: v.number(),
+    note: v.optional(v.string()),
+    sortOrder: v.number(),
+    state: catalogueStateValidator,
+    /** Set together with state:'retired'. The row itself is never removed. */
+    retiredAt: v.optional(v.number()),
+    retiredBy: v.optional(v.id('users')),
+    createdAt: v.number(),
+  })
+    .index('by_body', ['bodyId', 'state'])
+    .index('by_body_level', ['bodyId', 'levelId', 'seriesId']),
+
+  /**
+   * NOTE WHAT IS NOT A COLUMN HERE: `availability`.
+   *
+   * Availability is DERIVED from `lib/syllabus.ts` — the same array the study pages
+   * render from — every time it is read. No admin edit can set it, because a
+   * catalogue that can claim content the library does not have is a catalogue that
+   * will. `availabilityOverride` is the separate, deliberate escape hatch: it is a
+   * different field, it requires a written reason, it records who set it and when,
+   * it writes an audit row, and the UI labels a row using it as overridden.
+   */
+  catalogueSubjects: defineTable({
+    bodyId: v.string(),
+    levelId: v.string(),
+    subjectId: v.string(), // unique within (bodyId, levelId)
+    /** The board's own published code. Absent where the board publishes none. */
+    code: v.optional(v.string()),
+    title: v.string(),
+    sortOrder: v.number(),
+    state: catalogueStateValidator,
+    /** Set together with state:'retired'. The row itself is never removed. */
+    retiredAt: v.optional(v.number()),
+    retiredBy: v.optional(v.id('users')),
+
+    // -- the audited override, deliberately not called `availability` --
+    availabilityOverride: v.optional(availabilityValidator),
+    overrideReason: v.optional(v.string()),
+    overrideBy: v.optional(v.id('users')),
+    overrideAt: v.optional(v.number()),
+
+    createdAt: v.number(),
+  })
+    .index('by_body_level', ['bodyId', 'levelId', 'state'])
+    .index('by_body_level_subject', ['bodyId', 'levelId', 'subjectId']),
+
+  // -------------------------------------------------------------------------
   // enrolments — WHAT a student is sitting: body → level → session → subjects
   // -------------------------------------------------------------------------
   // A row, not a column on `users`, for three reasons:
@@ -153,7 +320,15 @@ export default defineSchema({
   enrolments: defineTable({
     studentId: v.id('users'),
 
-    /** lib/exam-catalogue.ts ids. Validated against the catalogue server-side. */
+    /**
+     * Where they are sitting it. Optional because rows written before country
+     * became the top layer do not have one — not because it is optional to ask.
+     * It is snapshotted like the subjects: a student who moves country has not
+     * retrospectively sat a different board.
+     */
+    countryCode: v.optional(v.string()),
+
+    /** Catalogue ids. Validated against the catalogue tables server-side. */
     bodyId: v.string(), // 'cambridge' | 'zimsec' | 'edexcel' | ...
     levelId: v.string(), // 'a-level' | 'o-level' | 'igcse' | ...
     /** Composite session id, e.g. "2027-oct-nov". Denormalised below for indexes. */

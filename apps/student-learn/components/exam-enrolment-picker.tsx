@@ -1,18 +1,16 @@
 'use client';
 
-import { useMemo } from 'react';
+import { useQuery } from 'convex/react';
+import { api } from '@/convex/_generated/api';
 import {
   AVAILABILITY_LABEL,
-  EXAM_BODIES,
   MAX_SUBJECTS,
-  findBody,
-  findLevel,
-  sessionsFor,
   type SubjectAvailability,
 } from '@/lib/exam-catalogue';
 import { FieldLabel, WhyNote, inputClass } from '@/components/auth-shell';
 
 export interface EnrolmentDraft {
+  countryCode: string;
   bodyId: string;
   levelId: string;
   sessionId: string;
@@ -20,6 +18,7 @@ export interface EnrolmentDraft {
 }
 
 export const EMPTY_ENROLMENT: EnrolmentDraft = {
+  countryCode: '',
   bodyId: '',
   levelId: '',
   sessionId: '',
@@ -28,6 +27,7 @@ export const EMPTY_ENROLMENT: EnrolmentDraft = {
 
 export function enrolmentComplete(d: EnrolmentDraft): boolean {
   return (
+    d.countryCode !== '' &&
     d.bodyId !== '' &&
     d.levelId !== '' &&
     d.sessionId !== '' &&
@@ -37,16 +37,21 @@ export function enrolmentComplete(d: EnrolmentDraft): boolean {
 }
 
 /**
- * Four questions that narrow: board → level → session → subjects. Each one only
- * appears once the one above it is answered, because until you know the board
- * you cannot honestly offer a level, and until you know the level the subject
+ * Five questions that narrow: country → board → level → session → subjects. Each
+ * appears once the one above it is answered, because until you know the country
+ * you cannot honestly offer a board — Edexcel International is not sat in the UK,
+ * ZIMSEC is not sat in South Africa — and until you know the level the subject
  * list is a guess.
  *
- * The subject list tells the truth about what exists. One subject in the whole
- * catalogue has material today; the rest say so on their own row, in the same
- * type size as the subject name. Choosing one of them is still allowed — it is
- * how we learn what to write next — and the copy says that too, rather than
- * quietly dropping the answer.
+ * Country is first and it is a real filter, not a form field we file away. It is
+ * a MANY-TO-MANY: Zimbabwe sits both ZIMSEC and Cambridge, South Africa sits the
+ * NSC and Cambridge and Edexcel, and Cambridge is in all of them. The join lives
+ * in Convex; this component just asks.
+ *
+ * Every list here comes from the catalogue tables, so adding a board is an admin
+ * edit and not a deploy. The subject list still tells the truth about what exists:
+ * availability is derived from the library and printed on each row, in the same
+ * type size as the subject name.
  */
 export function ExamEnrolmentPicker({
   value,
@@ -55,59 +60,125 @@ export function ExamEnrolmentPicker({
   value: EnrolmentDraft;
   onChange: (next: EnrolmentDraft) => void;
 }) {
-  const body = value.bodyId ? findBody(value.bodyId) : undefined;
-  const level = value.levelId ? findLevel(value.bodyId, value.levelId) : undefined;
-  const sessions = useMemo(
-    () =>
-      value.bodyId && value.levelId
-        ? sessionsFor(value.bodyId, value.levelId)
-        : [],
-    [value.bodyId, value.levelId]
+  const countries = useQuery(api.examCatalogue.countries, {});
+  const bodies = useQuery(
+    api.examCatalogue.bodies,
+    value.countryCode ? { countryCode: value.countryCode } : 'skip'
   );
+  const levels = useQuery(
+    api.examCatalogue.levels,
+    value.countryCode && value.bodyId
+      ? { countryCode: value.countryCode, bodyId: value.bodyId }
+      : 'skip'
+  );
+  const sessionData = useQuery(
+    api.examCatalogue.sessions,
+    value.bodyId && value.levelId
+      ? { bodyId: value.bodyId, levelId: value.levelId }
+      : 'skip'
+  );
+  const subjects = useQuery(
+    api.examCatalogue.subjects,
+    value.bodyId && value.levelId
+      ? { bodyId: value.bodyId, levelId: value.levelId }
+      : 'skip'
+  );
+
+  const country = countries?.find((c) => c.code === value.countryCode);
+  const body = bodies?.find((b) => b.bodyId === value.bodyId);
+  const level = levels?.find((l) => l.levelId === value.levelId);
+  const sessions = sessionData?.sessions ?? [];
+  const series = sessionData?.series ?? [];
 
   // Only the untouched ones. A partly-written subject gets its own note on its
   // own row and must not be swept into "we have not written this".
-  const chosenPlanned = (level?.subjects ?? []).filter(
+  const chosenPlanned = (subjects ?? []).filter(
     (s) => value.subjectIds.includes(s.id) && s.availability === 'planned'
   );
   // Counted, never asserted: the sentence above the list has to stay true when
   // a second subject ships, and when a level has nothing at all.
-  const readyCount = (level?.subjects ?? []).filter(
+  const readyCount = (subjects ?? []).filter(
     (s) => s.availability !== 'planned'
   ).length;
 
   return (
     <div className="space-y-6">
-      {/* 1 — exam board */}
+      {/* 1 — country. The top layer: it decides which boards exist below it. */}
       <div>
-        <FieldLabel htmlFor="examBody">Exam board</FieldLabel>
+        <FieldLabel htmlFor="examCountry">Where are you sitting your exams?</FieldLabel>
         <select
-          id="examBody"
-          name="examBody"
-          value={value.bodyId}
+          id="examCountry"
+          name="examCountry"
+          value={value.countryCode}
           onChange={(e) =>
-            onChange({ ...EMPTY_ENROLMENT, bodyId: e.target.value })
+            onChange({ ...EMPTY_ENROLMENT, countryCode: e.target.value })
           }
           required
           className={inputClass}
         >
-          <option value="">Choose a board…</option>
-          {EXAM_BODIES.map((b) => (
-            <option key={b.id} value={b.id}>
-              {b.shortTitle} — {b.title}
+          <option value="">Choose a country…</option>
+          {(countries ?? []).map((c) => (
+            <option key={c.code} value={c.code}>
+              {c.title}
             </option>
           ))}
         </select>
-        {body ? <WhyNote>{body.hint}</WhyNote> : null}
+        {country?.note ? <WhyNote>{country.note}</WhyNote> : null}
         <WhyNote>
-          Boards set different papers for the same subject name, so this decides
-          everything under it — which levels exist, when the sittings are, and
-          which syllabus a marked answer is judged against.
+          Not every board is sat everywhere: Zimbabwe has ZIMSEC and Cambridge,
+          South Africa has the NSC as well as Cambridge and Edexcel, and Pearson
+          Edexcel International is not available to candidates studying in the UK.
+          This is what we filter the next question by, so you are only shown boards
+          you could actually enter for.
         </WhyNote>
       </div>
 
-      {/* 2 — level */}
-      {body ? (
+      {/* 2 — exam board, filtered by country */}
+      {value.countryCode ? (
+        <div>
+          <FieldLabel htmlFor="examBody">Exam board</FieldLabel>
+          <select
+            id="examBody"
+            name="examBody"
+            value={value.bodyId}
+            onChange={(e) =>
+              onChange({
+                ...EMPTY_ENROLMENT,
+                countryCode: value.countryCode,
+                bodyId: e.target.value,
+              })
+            }
+            required
+            className={inputClass}
+          >
+            <option value="">
+              {bodies === undefined ? 'Loading…' : 'Choose a board…'}
+            </option>
+            {(bodies ?? []).map((b) => (
+              <option key={b.bodyId} value={b.bodyId}>
+                {b.shortTitle} — {b.title}
+              </option>
+            ))}
+          </select>
+          {bodies?.length === 0 ? (
+            <WhyNote>
+              We do not have any boards listed for {country?.title ?? 'that country'}{' '}
+              yet. Choose &ldquo;Somewhere else&rdquo; above and tell us — the list
+              is managed by hand and we can add yours.
+            </WhyNote>
+          ) : null}
+          {body?.countryNote ? <WhyNote>{body.countryNote}</WhyNote> : null}
+          {body ? <WhyNote>{body.hint}</WhyNote> : null}
+          <WhyNote>
+            Boards set different papers for the same subject name, so this decides
+            everything under it — which levels exist, when the sittings are, and
+            which syllabus a marked answer is judged against.
+          </WhyNote>
+        </div>
+      ) : null}
+
+      {/* 3 — level */}
+      {value.bodyId ? (
         <div>
           <FieldLabel htmlFor="examLevel">Level</FieldLabel>
           <select
@@ -127,9 +198,11 @@ export function ExamEnrolmentPicker({
             required
             className={inputClass}
           >
-            <option value="">Choose a level…</option>
-            {body.levels.map((l) => (
-              <option key={l.id} value={l.id}>
+            <option value="">
+              {levels === undefined ? 'Loading…' : 'Choose a level…'}
+            </option>
+            {(levels ?? []).map((l) => (
+              <option key={l.levelId} value={l.levelId}>
                 {l.title}
               </option>
             ))}
@@ -138,8 +211,8 @@ export function ExamEnrolmentPicker({
         </div>
       ) : null}
 
-      {/* 3 — session: a year AND a series */}
-      {body && level ? (
+      {/* 4 — session: a year AND a series */}
+      {value.bodyId && value.levelId ? (
         <div>
           <FieldLabel htmlFor="examSession">Exam session</FieldLabel>
           <select
@@ -150,7 +223,9 @@ export function ExamEnrolmentPicker({
             required
             className={inputClass}
           >
-            <option value="">Choose a sitting…</option>
+            <option value="">
+              {sessionData === undefined ? 'Loading…' : 'Choose a sitting…'}
+            </option>
             {sessions.map((s) => (
               <option key={s.id} value={s.id}>
                 {s.title}
@@ -158,35 +233,34 @@ export function ExamEnrolmentPicker({
               </option>
             ))}
           </select>
-          <WhyNote>
-            A sitting, not a year: {level.title} at {body.shortTitle} runs{' '}
-            {(level.series ?? body.series).map((x) => x.title).join(' and ')},
-            and how much time you have is the difference between them. Sittings whose papers are
-            already written are not listed. If you resit, you tell us then — this
-            answer is kept, not overwritten.
-          </WhyNote>
+          {level && body ? (
+            <WhyNote>
+              A sitting, not a year: {level.title} at {body.shortTitle} runs{' '}
+              {series.map((x) => x.title).join(' and ')}, and how much time you have
+              is the difference between them. Sittings whose papers are already
+              written are not listed. If you resit, you tell us then — this answer is
+              kept, not overwritten.
+            </WhyNote>
+          ) : null}
         </div>
       ) : null}
 
-      {/* 4 — subjects */}
-      {body && level && value.sessionId ? (
+      {/* 5 — subjects */}
+      {value.bodyId && value.levelId && value.sessionId ? (
         <fieldset>
-          <legend className="block text-sm font-semibold text-ink">
-            Subjects
-          </legend>
+          <legend className="block text-sm font-semibold text-ink">Subjects</legend>
           <p className="mt-1.5 text-[0.8rem] leading-relaxed text-ink-muted">
             Pick everything you are sitting, up to {MAX_SUBJECTS}.{' '}
             {readyCount === 0
-              ? `We have not written anything for ${level.title} yet, and every row below says so.`
+              ? `We have not written anything for ${level?.title ?? 'this level'} yet, and every row below says so.`
               : `We have material for ${readyCount} of these today, and every row says where it stands.`}{' '}
-            Choosing one we have not written is not a waste — it is the list we
-            build from, in the order you ask for them.
+            Choosing one we have not written is not a waste — it is the list we build
+            from, in the order you ask for them.
           </p>
           <div className="mt-3 space-y-2">
-            {level.subjects.map((s) => {
+            {(subjects ?? []).map((s) => {
               const checked = value.subjectIds.includes(s.id);
-              const atCap =
-                !checked && value.subjectIds.length >= MAX_SUBJECTS;
+              const atCap = !checked && value.subjectIds.length >= MAX_SUBJECTS;
               return (
                 <label
                   key={s.id}
@@ -222,6 +296,7 @@ export function ExamEnrolmentPicker({
                     <AvailabilityLine
                       availability={s.availability}
                       note={s.note}
+                      overridden={s.availabilityOverridden}
                     />
                   </span>
                 </label>
@@ -231,11 +306,10 @@ export function ExamEnrolmentPicker({
 
           {chosenPlanned.length > 0 ? (
             <p className="mt-3 rounded-lg border border-grid-line bg-paper px-3 py-2.5 text-sm leading-relaxed text-ink">
-              You have chosen{' '}
-              {chosenPlanned.map((s) => s.title).join(', ')}, which we have
-              not written yet. Your account will still be created and we will
-              record that you asked. You will get an email when one of them is
-              ready — and nothing will pretend to be there in the meantime.
+              You have chosen {chosenPlanned.map((s) => s.title).join(', ')}, which we
+              have not written yet. Your account will still be created and we will
+              record that you asked. You will get an email when one of them is ready —
+              and nothing will pretend to be there in the meantime.
             </p>
           ) : null}
         </fieldset>
@@ -247,9 +321,11 @@ export function ExamEnrolmentPicker({
 function AvailabilityLine({
   availability,
   note,
+  overridden,
 }: {
   availability: SubjectAvailability;
   note?: string;
+  overridden?: boolean;
 }) {
   const tone =
     availability === 'available'
@@ -261,6 +337,8 @@ function AvailabilityLine({
     <span className={`mt-0.5 block text-[0.8rem] leading-relaxed ${tone}`}>
       {AVAILABILITY_LABEL[availability]}
       {note ? ` — ${note}` : ''}
+      {/* An override is a human's claim, not the library's. Say which it is. */}
+      {overridden ? ' (set by hand)' : ''}
     </span>
   );
 }

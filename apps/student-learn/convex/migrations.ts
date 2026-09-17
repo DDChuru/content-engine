@@ -6,7 +6,7 @@
 
 import { internalMutation } from './_generated/server';
 import { v } from 'convex/values';
-import { DEFAULT_MIGRATION_TARGET, findSubject } from '../lib/exam-catalogue';
+import { DEFAULT_MIGRATION_TARGET, derivedAvailability } from '../lib/exam-catalogue';
 
 /**
  * `users.yearGroup` held a bare year string ("2027") and nothing else — no body,
@@ -88,24 +88,34 @@ export const backfillEnrolments = internalMutation({
       const sessionYear = Number.isFinite(year) && year > 2000
         ? year
         : new Date().getFullYear() + 1;
-      const { bodyId, levelId, series, subjectIds } = DEFAULT_MIGRATION_TARGET;
+      const { countryCode, bodyId, levelId, series, subjectIds } =
+        DEFAULT_MIGRATION_TARGET;
       const sessionId = `${sessionYear}-${series}`;
 
-      const subjects = subjectIds.map((subjectId) => {
-        const found = findSubject(bodyId, levelId, subjectId);
+      // Read the target subjects out of the catalogue TABLES — the static file
+      // they used to come from is gone, and Convex is now the source of truth.
+      const subjects = [];
+      for (const subjectId of subjectIds) {
+        const found = await ctx.db
+          .query('catalogueSubjects')
+          .withIndex('by_body_level_subject', (q) =>
+            q.eq('bodyId', bodyId).eq('levelId', levelId).eq('subjectId', subjectId)
+          )
+          .unique();
         if (!found) throw new Error(`Migration target subject missing: ${subjectId}`);
-        return {
-          subjectId: found.id,
+        subjects.push({
+          subjectId: found.subjectId,
           code: found.code,
           title: found.title,
-          availability: found.availability,
-        };
-      });
+          availability: derivedAvailability(bodyId, levelId, subjectId).availability,
+        });
+      }
 
       const now = Date.now();
       if (!dryRun) {
         const enrolmentId = await ctx.db.insert('enrolments', {
           studentId: user._id,
+          countryCode,
           bodyId,
           levelId,
           sessionId,
@@ -146,5 +156,29 @@ export const backfillEnrolments = internalMutation({
     }
 
     return report;
+  },
+});
+
+/**
+ * Bootstrap the first admin.
+ *
+ * Role is never self-assigned and `promoteToTeacher` is itself admin-only, so a
+ * deployment with no admin has no way to grow one from inside the app. This is
+ * that way in, and it is deliberately the narrowest one available: an
+ * internalMutation, callable only from the CLI by someone who already holds the
+ * deploy key.
+ *
+ *   npx convex run migrations:grantAdmin '{"authSubject":"user_..."}'
+ */
+export const grantAdmin = internalMutation({
+  args: { authSubject: v.string() },
+  handler: async (ctx, { authSubject }) => {
+    const user = await ctx.db
+      .query('users')
+      .withIndex('by_auth_subject', (q) => q.eq('authSubject', authSubject))
+      .unique();
+    if (!user) throw new Error('No users row for that identity — register first.');
+    await ctx.db.patch(user._id, { role: 'admin' as const });
+    return { userId: user._id, firstName: user.firstName };
   },
 });

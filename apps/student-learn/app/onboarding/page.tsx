@@ -62,9 +62,13 @@ export default function OnboardingPage() {
   const chosenRole: Role = role;
   const isStudent = chosenRole === 'student';
   const under13 = isStudent && ageBand === 'under13';
+  // A student answers country inside the picker — it is the first question there,
+  // because it decides which boards they are offered. A guardian sits no exam, so
+  // they still get the plain country field: we ask it for the privacy regime.
+  const effectiveCountry = isStudent ? enrolment.countryCode : country;
   const complete =
     firstName.trim().length > 0 &&
-    country !== '' &&
+    effectiveCountry !== '' &&
     (!isStudent || (enrolmentComplete(enrolment) && ageBand !== '' && !under13));
 
   async function submit(e: React.FormEvent) {
@@ -78,13 +82,14 @@ export default function OnboardingPage() {
         ageBand: isStudent ? (ageBand as AgeBand) : undefined,
         enrolment: isStudent
           ? {
+              countryCode: enrolment.countryCode,
               bodyId: enrolment.bodyId,
               levelId: enrolment.levelId,
               sessionId: enrolment.sessionId,
               subjectIds: enrolment.subjectIds,
             }
           : undefined,
-        country,
+        country: effectiveCountry,
         termsVersion: TERMS_VERSION,
         privacyVersion: PRIVACY_VERSION,
       });
@@ -210,6 +215,7 @@ export default function OnboardingPage() {
           </>
         ) : null}
 
+        {!isStudent ? (
         <div>
           <FieldLabel htmlFor="country">Country</FieldLabel>
           <select
@@ -235,6 +241,16 @@ export default function OnboardingPage() {
             and more intrusive.
           </WhyNote>
         </div>
+        ) : (
+          <p className="text-[0.8rem] leading-relaxed text-ink-muted">
+            The country you gave above does two jobs: it decides which exam boards
+            you are offered, and it decides which privacy law protects you — South
+            Africa&apos;s POPIA and Zimbabwe&apos;s Data Protection Act differ on
+            consent age and on what has to happen after a breach. We ask instead of
+            guessing from your IP address, because guessing is both less accurate
+            and more intrusive.
+          </p>
+        )}
 
         {error ? (
           <p role="alert" className="rounded-lg border border-accent/40 bg-accent/5 px-3 py-2.5 text-sm text-ink">

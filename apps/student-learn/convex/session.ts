@@ -13,6 +13,7 @@
  */
 
 import { query } from './_generated/server';
+import { describeEnrolment } from './lib/catalogue';
 
 /**
  * Who is calling, and how far through registration are they.
@@ -57,6 +58,11 @@ export const status = query({
         firstName: user.firstName,
         enrolment: enrolment
           ? {
+              countryCode: enrolment.countryCode ?? null,
+              // Built here, from the catalogue tables, rather than in the client:
+              // the board and level titles are Convex data now, and a page that
+              // rebuilt the label locally would need the whole catalogue to do it.
+              label: await describeEnrolment(ctx, enrolment),
               bodyId: enrolment.bodyId,
               levelId: enrolment.levelId,
               sessionId: enrolment.sessionId,

@@ -10,8 +10,15 @@ export const TERMS_VERSION = 'terms-2026-09-16';
 export const PRIVACY_VERSION = 'privacy-2026-09-16';
 
 /**
- * Countries offered at registration. The list is short on purpose: it exists to
- * pick a data-protection regime (POPIA vs Zimbabwe's DPA), not to profile anyone.
+ * Countries offered to a GUARDIAN at registration, and the labels the account page
+ * renders. The list is short on purpose: it exists to pick a data-protection
+ * regime (POPIA vs Zimbabwe's DPA), not to profile anyone.
+ *
+ * A STUDENT no longer answers from this list. Country is the first question in the
+ * exam picker, because it decides which boards they are offered, and it comes from
+ * the `catalogueCountries` table so a country can be added without a deploy. The
+ * two lists answer two questions and are deliberately not merged: which law
+ * protects you is not the same question as where you sit your papers.
  */
 export const COUNTRIES = [
   { code: 'ZW', label: 'Zimbabwe' },

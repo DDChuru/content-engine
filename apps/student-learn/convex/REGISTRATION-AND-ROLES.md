@@ -7,9 +7,28 @@
 
 ## 1. What a student provides — and what they do not
 
-**Collected:** first name, an **exam enrolment** (board → level → session → subjects),
-self-declared age band, country, and whatever Clerk holds for the sign-in factor (a
+**Collected:** first name, an **exam enrolment** (country → board → level → session →
+subjects), self-declared age band, and whatever Clerk holds for the sign-in factor (a
 Google account or an email address).
+
+**Country is the top layer, not a field we file away.** It was collected and unused;
+it now decides which exam bodies a student is offered at all. The relationship is
+MANY-TO-MANY and is stored as a join (`catalogueCountryBodies`), not a tree:
+Cambridge operates in over 160 countries, Zimbabwe sits both ZIMSEC and Cambridge,
+South Africa sits the NSC and also Cambridge and Edexcel, and Pearson Edexcel
+International is not available to candidates studying in the UK. The join carries an
+optional `levelIds`, so a country can sit part of a board — Cambridge IGCSE is taken
+at UK independent schools while Cambridge O Level and A Level are not.
+
+The catalogue itself lives in Convex (six `catalogue*` tables, admin-CRUD via
+`convex/examCatalogue.ts`), seeded from `content/catalogue/exam-catalogue.json` and
+exported back to it by `scripts/export-exam-catalogue.mjs` so board data stays
+reviewable in a git diff. Catalogue rows are **retired, never deleted** — there is no
+delete mutation for any of them — and retiring something a cohort is sitting is
+refused unless the admin acknowledges the count. `availability` is not a column and
+no mutation accepts one: it is derived from `lib/syllabus.ts` on every read, and the
+one way to contradict it is `setAvailabilityOverride`, a separate field with a
+mandatory written reason and an audit row.
 
 **Not collected:** surname, school, date of birth, address, photograph, phone number,
 ID number.

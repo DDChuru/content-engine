@@ -1,0 +1,1691 @@
+{
+  "version": "2026-09-17",
+  "generatedBy": "scripts/export-exam-catalogue.mjs — exported from Convex",
+  "bodies": [
+    {
+      "bodyId": "cambridge",
+      "hint": "IGCSE, O Level and AS & A Level. Sat at most private and trust schools in Zimbabwe.",
+      "shortTitle": "Cambridge International",
+      "sortOrder": 10,
+      "state": "active",
+      "title": "Cambridge Assessment International Education"
+    },
+    {
+      "bodyId": "zimsec",
+      "hint": "The national Zimbabwean board. Ordinary and Advanced Level, sat in June and November.",
+      "shortTitle": "ZIMSEC",
+      "sortOrder": 20,
+      "state": "active",
+      "title": "Zimbabwe School Examinations Council"
+    },
+    {
+      "bodyId": "edexcel",
+      "hint": "International GCSE and International A Level. Not available to candidates studying in the UK.",
+      "shortTitle": "Edexcel",
+      "sortOrder": 30,
+      "state": "active",
+      "title": "Pearson Edexcel International"
+    },
+    {
+      "bodyId": "nsc",
+      "hint": "Grade 12 matric, set by the DBE or the IEB. Both are quality-assured by Umalusi.",
+      "shortTitle": "NSC — matric",
+      "sortOrder": 40,
+      "state": "active",
+      "title": "National Senior Certificate (South Africa)"
+    }
+  ],
+  "countries": [
+    {
+      "code": "ZW",
+      "sortOrder": 10,
+      "state": "active",
+      "title": "Zimbabwe"
+    },
+    {
+      "code": "ZA",
+      "sortOrder": 20,
+      "state": "active",
+      "title": "South Africa"
+    },
+    {
+      "code": "GB",
+      "sortOrder": 30,
+      "state": "active",
+      "title": "United Kingdom"
+    },
+    {
+      "code": "BW",
+      "sortOrder": 40,
+      "state": "active",
+      "title": "Botswana"
+    },
+    {
+      "code": "ZM",
+      "sortOrder": 50,
+      "state": "active",
+      "title": "Zambia"
+    },
+    {
+      "code": "NA",
+      "sortOrder": 60,
+      "state": "active",
+      "title": "Namibia"
+    },
+    {
+      "code": "MW",
+      "sortOrder": 70,
+      "state": "active",
+      "title": "Malawi"
+    },
+    {
+      "code": "KE",
+      "sortOrder": 80,
+      "state": "active",
+      "title": "Kenya"
+    },
+    {
+      "code": "NG",
+      "sortOrder": 90,
+      "state": "active",
+      "title": "Nigeria"
+    },
+    {
+      "code": "OTHER",
+      "note": "Cambridge International runs centres in over 160 countries; the national board of wherever you are is probably not listed yet. Tell us and we will add it.",
+      "sortOrder": 999,
+      "state": "active",
+      "title": "Somewhere else"
+    }
+  ],
+  "countryBodies": [
+    {
+      "bodyId": "cambridge",
+      "countryCode": "BW",
+      "sortOrder": 10,
+      "state": "active"
+    },
+    {
+      "bodyId": "cambridge",
+      "countryCode": "GB",
+      "levelIds": [
+        "igcse"
+      ],
+      "note": "Cambridge IGCSE is taken at many UK independent schools. Cambridge O Level and AS & A Level are not available to candidates in the UK, so they are not offered here.",
+      "sortOrder": 10,
+      "state": "active"
+    },
+    {
+      "bodyId": "cambridge",
+      "countryCode": "KE",
+      "sortOrder": 10,
+      "state": "active"
+    },
+    {
+      "bodyId": "cambridge",
+      "countryCode": "MW",
+      "sortOrder": 10,
+      "state": "active"
+    },
+    {
+      "bodyId": "cambridge",
+      "countryCode": "NA",
+      "sortOrder": 10,
+      "state": "active"
+    },
+    {
+      "bodyId": "cambridge",
+      "countryCode": "NG",
+      "sortOrder": 10,
+      "state": "active"
+    },
+    {
+      "bodyId": "edexcel",
+      "countryCode": "NG",
+      "sortOrder": 20,
+      "state": "active"
+    },
+    {
+      "bodyId": "cambridge",
+      "countryCode": "OTHER",
+      "sortOrder": 10,
+      "state": "active"
+    },
+    {
+      "bodyId": "edexcel",
+      "countryCode": "OTHER",
+      "note": "Pearson Edexcel International is not available to candidates studying in the United Kingdom.",
+      "sortOrder": 20,
+      "state": "active"
+    },
+    {
+      "bodyId": "nsc",
+      "countryCode": "ZA",
+      "note": "Matric — the qualification almost every South African school leaver sits.",
+      "sortOrder": 10,
+      "state": "active"
+    },
+    {
+      "bodyId": "cambridge",
+      "countryCode": "ZA",
+      "note": "Offered at international and some independent schools.",
+      "sortOrder": 20,
+      "state": "active"
+    },
+    {
+      "bodyId": "edexcel",
+      "countryCode": "ZA",
+      "note": "Offered at international and some independent schools.",
+      "sortOrder": 30,
+      "state": "active"
+    },
+    {
+      "bodyId": "cambridge",
+      "countryCode": "ZM",
+      "sortOrder": 10,
+      "state": "active"
+    },
+    {
+      "bodyId": "zimsec",
+      "countryCode": "ZW",
+      "note": "The national board. Most government and mission schools sit ZIMSEC.",
+      "sortOrder": 10,
+      "state": "active"
+    },
+    {
+      "bodyId": "cambridge",
+      "countryCode": "ZW",
+      "note": "Sat at most private and trust schools. Zimbabwe is Cambridge administrative zone 3, so O Level is still examined here.",
+      "sortOrder": 20,
+      "state": "active"
+    }
+  ],
+  "levels": [
+    {
+      "bodyId": "zimsec",
+      "hint": "Lower and Upper Six.",
+      "levelId": "a-level",
+      "sortOrder": 10,
+      "state": "active",
+      "title": "Advanced Level"
+    },
+    {
+      "bodyId": "cambridge",
+      "hint": "Lower and Upper Six. This is where our material is.",
+      "levelId": "a-level",
+      "sortOrder": 10,
+      "state": "active",
+      "title": "AS & A Level"
+    },
+    {
+      "bodyId": "edexcel",
+      "hint": "Formally the International Advanced Level (IAL). January, May/June and October sittings.",
+      "levelId": "ial",
+      "sortOrder": 10,
+      "state": "active",
+      "title": "International A Level"
+    },
+    {
+      "bodyId": "nsc",
+      "hint": "Papers set and marked by the Department of Basic Education.",
+      "levelId": "nsc-dbe",
+      "sortOrder": 10,
+      "state": "active",
+      "title": "NSC — DBE (public schools)"
+    },
+    {
+      "bodyId": "edexcel",
+      "hint": "Formally the International Advanced Subsidiary — the first half of the IAL.",
+      "levelId": "ias",
+      "sortOrder": 20,
+      "state": "active",
+      "title": "International AS"
+    },
+    {
+      "bodyId": "nsc",
+      "hint": "The same certificate, papers set by the Independent Examinations Board.",
+      "levelId": "nsc-ieb",
+      "sortOrder": 20,
+      "state": "active",
+      "title": "NSC — IEB (independent schools)"
+    },
+    {
+      "bodyId": "cambridge",
+      "hint": "Forms 3 and 4. Still examined in Zimbabwe; Cambridge starts moving these schools to IGCSE from June 2028.",
+      "levelId": "o-level",
+      "sortOrder": 20,
+      "state": "active",
+      "title": "O Level"
+    },
+    {
+      "bodyId": "zimsec",
+      "hint": "Forms 3 and 4.",
+      "levelId": "o-level",
+      "sortOrder": 20,
+      "state": "active",
+      "title": "Ordinary Level"
+    },
+    {
+      "bodyId": "cambridge",
+      "hint": "The international GCSE, taken instead of O Level at many schools.",
+      "levelId": "igcse",
+      "sortOrder": 30,
+      "state": "active",
+      "title": "IGCSE"
+    },
+    {
+      "bodyId": "edexcel",
+      "hint": "Pearson’s IGCSE (9–1). No January sitting — the last one was 2023.",
+      "levelId": "igcse",
+      "sortOrder": 30,
+      "state": "active",
+      "title": "International GCSE"
+    },
+    {
+      "bodyId": "nsc",
+      "hint": "The same certificate, for homeschool and distance candidates.",
+      "levelId": "nsc-sacai",
+      "sortOrder": 30,
+      "state": "active",
+      "title": "NSC — SACAI (homeschool and distance)"
+    }
+  ],
+  "series": [
+    {
+      "bodyId": "edexcel",
+      "examMonth": 1,
+      "seriesId": "january",
+      "sortOrder": 10,
+      "state": "active",
+      "title": "January"
+    },
+    {
+      "bodyId": "edexcel",
+      "examMonth": 1,
+      "levelId": "ial",
+      "seriesId": "january",
+      "sortOrder": 10,
+      "state": "active",
+      "title": "January"
+    },
+    {
+      "bodyId": "edexcel",
+      "examMonth": 1,
+      "levelId": "ias",
+      "seriesId": "january",
+      "sortOrder": 10,
+      "state": "active",
+      "title": "January"
+    },
+    {
+      "bodyId": "cambridge",
+      "examMonth": 6,
+      "seriesId": "june",
+      "sortOrder": 10,
+      "state": "active",
+      "title": "June"
+    },
+    {
+      "bodyId": "zimsec",
+      "examMonth": 6,
+      "seriesId": "june",
+      "sortOrder": 10,
+      "state": "active",
+      "title": "June"
+    },
+    {
+      "bodyId": "edexcel",
+      "examMonth": 6,
+      "levelId": "igcse",
+      "seriesId": "may-june",
+      "sortOrder": 10,
+      "state": "active",
+      "title": "May/June"
+    },
+    {
+      "bodyId": "nsc",
+      "examMonth": 11,
+      "note": "the main matric sitting",
+      "seriesId": "oct-nov",
+      "sortOrder": 10,
+      "state": "active",
+      "title": "October/November"
+    },
+    {
+      "bodyId": "edexcel",
+      "examMonth": 6,
+      "seriesId": "may-june",
+      "sortOrder": 20,
+      "state": "active",
+      "title": "May/June"
+    },
+    {
+      "bodyId": "edexcel",
+      "examMonth": 6,
+      "levelId": "ial",
+      "seriesId": "may-june",
+      "sortOrder": 20,
+      "state": "active",
+      "title": "May/June"
+    },
+    {
+      "bodyId": "edexcel",
+      "examMonth": 6,
+      "levelId": "ias",
+      "seriesId": "may-june",
+      "sortOrder": 20,
+      "state": "active",
+      "title": "May/June"
+    },
+    {
+      "bodyId": "nsc",
+      "examMonth": 5,
+      "note": "the mid-year SC/NSC sitting — rewrites and part-time candidates",
+      "seriesId": "may-june",
+      "sortOrder": 20,
+      "state": "active",
+      "title": "May/June"
+    },
+    {
+      "bodyId": "cambridge",
+      "examMonth": 11,
+      "seriesId": "november",
+      "sortOrder": 20,
+      "state": "active",
+      "title": "November"
+    },
+    {
+      "bodyId": "zimsec",
+      "examMonth": 11,
+      "seriesId": "november",
+      "sortOrder": 20,
+      "state": "active",
+      "title": "November"
+    },
+    {
+      "bodyId": "edexcel",
+      "examMonth": 11,
+      "levelId": "igcse",
+      "seriesId": "november",
+      "sortOrder": 20,
+      "state": "active",
+      "title": "November"
+    },
+    {
+      "bodyId": "edexcel",
+      "examMonth": 10,
+      "seriesId": "october",
+      "sortOrder": 30,
+      "state": "active",
+      "title": "October"
+    },
+    {
+      "bodyId": "edexcel",
+      "examMonth": 10,
+      "levelId": "ial",
+      "seriesId": "october",
+      "sortOrder": 30,
+      "state": "active",
+      "title": "October"
+    },
+    {
+      "bodyId": "edexcel",
+      "examMonth": 10,
+      "levelId": "ias",
+      "seriesId": "october",
+      "sortOrder": 30,
+      "state": "active",
+      "title": "October"
+    }
+  ],
+  "subjects": [
+    {
+      "bodyId": "cambridge",
+      "code": "9709",
+      "levelId": "a-level",
+      "sortOrder": 10,
+      "state": "active",
+      "subjectId": "cie-al-9709",
+      "title": "Mathematics"
+    },
+    {
+      "bodyId": "cambridge",
+      "code": "0580",
+      "levelId": "igcse",
+      "sortOrder": 10,
+      "state": "active",
+      "subjectId": "cie-igcse-0580",
+      "title": "Mathematics"
+    },
+    {
+      "bodyId": "zimsec",
+      "code": "4004",
+      "levelId": "o-level",
+      "sortOrder": 10,
+      "state": "active",
+      "subjectId": "zimsec-ol-4004",
+      "title": "Mathematics"
+    },
+    {
+      "bodyId": "edexcel",
+      "code": "YMA01",
+      "levelId": "ial",
+      "sortOrder": 10,
+      "state": "active",
+      "subjectId": "edexcel-ial-YMA01",
+      "title": "Mathematics"
+    },
+    {
+      "bodyId": "edexcel",
+      "code": "YMA01",
+      "levelId": "ias",
+      "sortOrder": 10,
+      "state": "active",
+      "subjectId": "edexcel-ial-YMA01",
+      "title": "Mathematics"
+    },
+    {
+      "bodyId": "nsc",
+      "levelId": "nsc-dbe",
+      "sortOrder": 10,
+      "state": "active",
+      "subjectId": "nsc-mathematics",
+      "title": "Mathematics"
+    },
+    {
+      "bodyId": "nsc",
+      "levelId": "nsc-ieb",
+      "sortOrder": 10,
+      "state": "active",
+      "subjectId": "nsc-mathematics",
+      "title": "Mathematics"
+    },
+    {
+      "bodyId": "nsc",
+      "levelId": "nsc-sacai",
+      "sortOrder": 10,
+      "state": "active",
+      "subjectId": "nsc-mathematics",
+      "title": "Mathematics"
+    },
+    {
+      "bodyId": "edexcel",
+      "code": "4MA1",
+      "levelId": "igcse",
+      "sortOrder": 10,
+      "state": "active",
+      "subjectId": "edexcel-igcse-4MA1",
+      "title": "Mathematics (Specification A)"
+    },
+    {
+      "bodyId": "cambridge",
+      "code": "4024",
+      "levelId": "o-level",
+      "sortOrder": 10,
+      "state": "active",
+      "subjectId": "cie-ol-4024",
+      "title": "Mathematics (Syllabus D)"
+    },
+    {
+      "bodyId": "zimsec",
+      "code": "6042",
+      "levelId": "a-level",
+      "sortOrder": 10,
+      "state": "active",
+      "subjectId": "zimsec-al-6042",
+      "title": "Pure Mathematics"
+    },
+    {
+      "bodyId": "zimsec",
+      "code": "4026",
+      "levelId": "o-level",
+      "sortOrder": 20,
+      "state": "active",
+      "subjectId": "zimsec-ol-4026",
+      "title": "Additional Mathematics"
+    },
+    {
+      "bodyId": "edexcel",
+      "code": "YFM01",
+      "levelId": "ial",
+      "sortOrder": 20,
+      "state": "active",
+      "subjectId": "edexcel-ial-YFM01",
+      "title": "Further Mathematics"
+    },
+    {
+      "bodyId": "edexcel",
+      "code": "YFM01",
+      "levelId": "ias",
+      "sortOrder": 20,
+      "state": "active",
+      "subjectId": "edexcel-ial-YFM01",
+      "title": "Further Mathematics"
+    },
+    {
+      "bodyId": "nsc",
+      "levelId": "nsc-dbe",
+      "sortOrder": 20,
+      "state": "active",
+      "subjectId": "nsc-mathematical-literacy",
+      "title": "Mathematical Literacy"
+    },
+    {
+      "bodyId": "nsc",
+      "levelId": "nsc-ieb",
+      "sortOrder": 20,
+      "state": "active",
+      "subjectId": "nsc-mathematical-literacy",
+      "title": "Mathematical Literacy"
+    },
+    {
+      "bodyId": "nsc",
+      "levelId": "nsc-sacai",
+      "sortOrder": 20,
+      "state": "active",
+      "subjectId": "nsc-mathematical-literacy",
+      "title": "Mathematical Literacy"
+    },
+    {
+      "bodyId": "cambridge",
+      "code": "4037",
+      "levelId": "o-level",
+      "sortOrder": 20,
+      "state": "active",
+      "subjectId": "cie-ol-4037",
+      "title": "Mathematics – Additional"
+    },
+    {
+      "bodyId": "cambridge",
+      "code": "0606",
+      "levelId": "igcse",
+      "sortOrder": 20,
+      "state": "active",
+      "subjectId": "cie-igcse-0606",
+      "title": "Mathematics – Additional"
+    },
+    {
+      "bodyId": "cambridge",
+      "code": "9231",
+      "levelId": "a-level",
+      "sortOrder": 20,
+      "state": "active",
+      "subjectId": "cie-al-9231",
+      "title": "Mathematics – Further"
+    },
+    {
+      "bodyId": "edexcel",
+      "code": "4MB1",
+      "levelId": "igcse",
+      "sortOrder": 20,
+      "state": "active",
+      "subjectId": "edexcel-igcse-4MB1",
+      "title": "Mathematics (Specification B)"
+    },
+    {
+      "bodyId": "zimsec",
+      "code": "6021",
+      "levelId": "a-level",
+      "sortOrder": 20,
+      "state": "active",
+      "subjectId": "zimsec-al-6021",
+      "title": "Mechanical Mathematics"
+    },
+    {
+      "bodyId": "cambridge",
+      "code": "0607",
+      "levelId": "igcse",
+      "sortOrder": 30,
+      "state": "active",
+      "subjectId": "cie-igcse-0607",
+      "title": "Mathematics – International"
+    },
+    {
+      "bodyId": "cambridge",
+      "code": "9702",
+      "levelId": "a-level",
+      "sortOrder": 30,
+      "state": "active",
+      "subjectId": "cie-al-9702",
+      "title": "Physics"
+    },
+    {
+      "bodyId": "edexcel",
+      "code": "4PH1",
+      "levelId": "igcse",
+      "sortOrder": 30,
+      "state": "active",
+      "subjectId": "edexcel-igcse-4PH1",
+      "title": "Physics"
+    },
+    {
+      "bodyId": "zimsec",
+      "code": "4027",
+      "levelId": "o-level",
+      "sortOrder": 30,
+      "state": "active",
+      "subjectId": "zimsec-ol-4027",
+      "title": "Pure Mathematics"
+    },
+    {
+      "bodyId": "edexcel",
+      "code": "YPM01",
+      "levelId": "ial",
+      "sortOrder": 30,
+      "state": "active",
+      "subjectId": "edexcel-ial-YPM01",
+      "title": "Pure Mathematics"
+    },
+    {
+      "bodyId": "edexcel",
+      "code": "YPM01",
+      "levelId": "ias",
+      "sortOrder": 30,
+      "state": "active",
+      "subjectId": "edexcel-ial-YPM01",
+      "title": "Pure Mathematics"
+    },
+    {
+      "bodyId": "cambridge",
+      "code": "4040",
+      "levelId": "o-level",
+      "sortOrder": 30,
+      "state": "active",
+      "subjectId": "cie-ol-4040",
+      "title": "Statistics"
+    },
+    {
+      "bodyId": "zimsec",
+      "code": "6046",
+      "levelId": "a-level",
+      "sortOrder": 30,
+      "state": "active",
+      "subjectId": "zimsec-al-6046",
+      "title": "Statistics"
+    },
+    {
+      "bodyId": "nsc",
+      "levelId": "nsc-dbe",
+      "sortOrder": 30,
+      "state": "active",
+      "subjectId": "nsc-technical-mathematics",
+      "title": "Technical Mathematics"
+    },
+    {
+      "bodyId": "nsc",
+      "levelId": "nsc-ieb",
+      "sortOrder": 30,
+      "state": "active",
+      "subjectId": "nsc-technical-mathematics",
+      "title": "Technical Mathematics"
+    },
+    {
+      "bodyId": "nsc",
+      "levelId": "nsc-sacai",
+      "sortOrder": 30,
+      "state": "active",
+      "subjectId": "nsc-technical-mathematics",
+      "title": "Technical Mathematics"
+    },
+    {
+      "bodyId": "zimsec",
+      "code": "6002",
+      "levelId": "a-level",
+      "sortOrder": 40,
+      "state": "active",
+      "subjectId": "zimsec-al-6002",
+      "title": "Additional Mathematics"
+    },
+    {
+      "bodyId": "cambridge",
+      "code": "9701",
+      "levelId": "a-level",
+      "sortOrder": 40,
+      "state": "active",
+      "subjectId": "cie-al-9701",
+      "title": "Chemistry"
+    },
+    {
+      "bodyId": "edexcel",
+      "code": "4CH1",
+      "levelId": "igcse",
+      "sortOrder": 40,
+      "state": "active",
+      "subjectId": "edexcel-igcse-4CH1",
+      "title": "Chemistry"
+    },
+    {
+      "bodyId": "zimsec",
+      "code": "4003",
+      "levelId": "o-level",
+      "sortOrder": 40,
+      "state": "active",
+      "subjectId": "zimsec-ol-4003",
+      "title": "Combined Science"
+    },
+    {
+      "bodyId": "nsc",
+      "levelId": "nsc-dbe",
+      "sortOrder": 40,
+      "state": "active",
+      "subjectId": "nsc-physical-sciences",
+      "title": "Physical Sciences"
+    },
+    {
+      "bodyId": "nsc",
+      "levelId": "nsc-ieb",
+      "sortOrder": 40,
+      "state": "active",
+      "subjectId": "nsc-physical-sciences",
+      "title": "Physical Sciences"
+    },
+    {
+      "bodyId": "nsc",
+      "levelId": "nsc-sacai",
+      "sortOrder": 40,
+      "state": "active",
+      "subjectId": "nsc-physical-sciences",
+      "title": "Physical Sciences"
+    },
+    {
+      "bodyId": "cambridge",
+      "code": "5054",
+      "levelId": "o-level",
+      "sortOrder": 40,
+      "state": "active",
+      "subjectId": "cie-ol-5054",
+      "title": "Physics"
+    },
+    {
+      "bodyId": "cambridge",
+      "code": "0625",
+      "levelId": "igcse",
+      "sortOrder": 40,
+      "state": "active",
+      "subjectId": "cie-igcse-0625",
+      "title": "Physics"
+    },
+    {
+      "bodyId": "edexcel",
+      "code": "YPH11",
+      "levelId": "ial",
+      "sortOrder": 40,
+      "state": "active",
+      "subjectId": "edexcel-ial-YPH11",
+      "title": "Physics"
+    },
+    {
+      "bodyId": "edexcel",
+      "code": "YPH11",
+      "levelId": "ias",
+      "sortOrder": 40,
+      "state": "active",
+      "subjectId": "edexcel-ial-YPH11",
+      "title": "Physics"
+    },
+    {
+      "bodyId": "cambridge",
+      "code": "9700",
+      "levelId": "a-level",
+      "sortOrder": 50,
+      "state": "active",
+      "subjectId": "cie-al-9700",
+      "title": "Biology"
+    },
+    {
+      "bodyId": "edexcel",
+      "code": "4BI1",
+      "levelId": "igcse",
+      "sortOrder": 50,
+      "state": "active",
+      "subjectId": "edexcel-igcse-4BI1",
+      "title": "Biology"
+    },
+    {
+      "bodyId": "cambridge",
+      "code": "5070",
+      "levelId": "o-level",
+      "sortOrder": 50,
+      "state": "active",
+      "subjectId": "cie-ol-5070",
+      "title": "Chemistry"
+    },
+    {
+      "bodyId": "cambridge",
+      "code": "0620",
+      "levelId": "igcse",
+      "sortOrder": 50,
+      "state": "active",
+      "subjectId": "cie-igcse-0620",
+      "title": "Chemistry"
+    },
+    {
+      "bodyId": "edexcel",
+      "code": "YCH11",
+      "levelId": "ial",
+      "sortOrder": 50,
+      "state": "active",
+      "subjectId": "edexcel-ial-YCH11",
+      "title": "Chemistry"
+    },
+    {
+      "bodyId": "edexcel",
+      "code": "YCH11",
+      "levelId": "ias",
+      "sortOrder": 50,
+      "state": "active",
+      "subjectId": "edexcel-ial-YCH11",
+      "title": "Chemistry"
+    },
+    {
+      "bodyId": "zimsec",
+      "code": "6032",
+      "levelId": "a-level",
+      "sortOrder": 50,
+      "state": "active",
+      "subjectId": "zimsec-al-6032",
+      "title": "Physics"
+    },
+    {
+      "bodyId": "zimsec",
+      "code": "4023",
+      "levelId": "o-level",
+      "sortOrder": 50,
+      "state": "active",
+      "subjectId": "zimsec-ol-4023",
+      "title": "Physics"
+    },
+    {
+      "bodyId": "nsc",
+      "levelId": "nsc-dbe",
+      "sortOrder": 50,
+      "state": "active",
+      "subjectId": "nsc-technical-sciences",
+      "title": "Technical Sciences"
+    },
+    {
+      "bodyId": "nsc",
+      "levelId": "nsc-ieb",
+      "sortOrder": 50,
+      "state": "active",
+      "subjectId": "nsc-technical-sciences",
+      "title": "Technical Sciences"
+    },
+    {
+      "bodyId": "nsc",
+      "levelId": "nsc-sacai",
+      "sortOrder": 50,
+      "state": "active",
+      "subjectId": "nsc-technical-sciences",
+      "title": "Technical Sciences"
+    },
+    {
+      "bodyId": "cambridge",
+      "code": "5090",
+      "levelId": "o-level",
+      "sortOrder": 60,
+      "state": "active",
+      "subjectId": "cie-ol-5090",
+      "title": "Biology"
+    },
+    {
+      "bodyId": "cambridge",
+      "code": "0610",
+      "levelId": "igcse",
+      "sortOrder": 60,
+      "state": "active",
+      "subjectId": "cie-igcse-0610",
+      "title": "Biology"
+    },
+    {
+      "bodyId": "edexcel",
+      "code": "YBI11",
+      "levelId": "ial",
+      "sortOrder": 60,
+      "state": "active",
+      "subjectId": "edexcel-ial-YBI11",
+      "title": "Biology"
+    },
+    {
+      "bodyId": "edexcel",
+      "code": "YBI11",
+      "levelId": "ias",
+      "sortOrder": 60,
+      "state": "active",
+      "subjectId": "edexcel-ial-YBI11",
+      "title": "Biology"
+    },
+    {
+      "bodyId": "zimsec",
+      "code": "6031",
+      "levelId": "a-level",
+      "sortOrder": 60,
+      "state": "active",
+      "subjectId": "zimsec-al-6031",
+      "title": "Chemistry"
+    },
+    {
+      "bodyId": "zimsec",
+      "code": "4024",
+      "levelId": "o-level",
+      "sortOrder": 60,
+      "state": "active",
+      "subjectId": "zimsec-ol-4024",
+      "title": "Chemistry"
+    },
+    {
+      "bodyId": "cambridge",
+      "code": "9708",
+      "levelId": "a-level",
+      "sortOrder": 60,
+      "state": "active",
+      "subjectId": "cie-al-9708",
+      "title": "Economics"
+    },
+    {
+      "bodyId": "edexcel",
+      "code": "4EC1",
+      "levelId": "igcse",
+      "sortOrder": 60,
+      "state": "active",
+      "subjectId": "edexcel-igcse-4EC1",
+      "title": "Economics"
+    },
+    {
+      "bodyId": "nsc",
+      "levelId": "nsc-dbe",
+      "sortOrder": 60,
+      "state": "active",
+      "subjectId": "nsc-life-sciences",
+      "title": "Life Sciences"
+    },
+    {
+      "bodyId": "nsc",
+      "levelId": "nsc-ieb",
+      "sortOrder": 60,
+      "state": "active",
+      "subjectId": "nsc-life-sciences",
+      "title": "Life Sciences"
+    },
+    {
+      "bodyId": "nsc",
+      "levelId": "nsc-sacai",
+      "sortOrder": 60,
+      "state": "active",
+      "subjectId": "nsc-life-sciences",
+      "title": "Life Sciences"
+    },
+    {
+      "bodyId": "cambridge",
+      "code": "9706",
+      "levelId": "a-level",
+      "sortOrder": 70,
+      "state": "active",
+      "subjectId": "cie-al-9706",
+      "title": "Accounting"
+    },
+    {
+      "bodyId": "nsc",
+      "levelId": "nsc-dbe",
+      "sortOrder": 70,
+      "state": "active",
+      "subjectId": "nsc-accounting",
+      "title": "Accounting"
+    },
+    {
+      "bodyId": "nsc",
+      "levelId": "nsc-ieb",
+      "sortOrder": 70,
+      "state": "active",
+      "subjectId": "nsc-accounting",
+      "title": "Accounting"
+    },
+    {
+      "bodyId": "nsc",
+      "levelId": "nsc-sacai",
+      "sortOrder": 70,
+      "state": "active",
+      "subjectId": "nsc-accounting",
+      "title": "Accounting"
+    },
+    {
+      "bodyId": "zimsec",
+      "code": "6030",
+      "levelId": "a-level",
+      "sortOrder": 70,
+      "state": "active",
+      "subjectId": "zimsec-al-6030",
+      "title": "Biology"
+    },
+    {
+      "bodyId": "zimsec",
+      "code": "4025",
+      "levelId": "o-level",
+      "sortOrder": 70,
+      "state": "active",
+      "subjectId": "zimsec-ol-4025",
+      "title": "Biology"
+    },
+    {
+      "bodyId": "edexcel",
+      "code": "YEC11",
+      "levelId": "ial",
+      "sortOrder": 70,
+      "state": "active",
+      "subjectId": "edexcel-ial-YEC11",
+      "title": "Economics"
+    },
+    {
+      "bodyId": "edexcel",
+      "code": "YEC11",
+      "levelId": "ias",
+      "sortOrder": 70,
+      "state": "active",
+      "subjectId": "edexcel-ial-YEC11",
+      "title": "Economics"
+    },
+    {
+      "bodyId": "edexcel",
+      "code": "4EA1",
+      "levelId": "igcse",
+      "sortOrder": 70,
+      "state": "active",
+      "subjectId": "edexcel-igcse-4EA1",
+      "title": "English Language (Specification A)"
+    },
+    {
+      "bodyId": "cambridge",
+      "code": "5129",
+      "levelId": "o-level",
+      "sortOrder": 70,
+      "state": "active",
+      "subjectId": "cie-ol-5129",
+      "title": "Science – Combined"
+    },
+    {
+      "bodyId": "cambridge",
+      "code": "0654",
+      "levelId": "igcse",
+      "sortOrder": 70,
+      "state": "active",
+      "subjectId": "cie-igcse-0654",
+      "title": "Sciences – Co-ordinated (Double Award)"
+    },
+    {
+      "bodyId": "cambridge",
+      "code": "9609",
+      "levelId": "a-level",
+      "sortOrder": 80,
+      "state": "active",
+      "subjectId": "cie-al-9609",
+      "title": "Business"
+    },
+    {
+      "bodyId": "zimsec",
+      "code": "6073",
+      "levelId": "a-level",
+      "sortOrder": 80,
+      "state": "active",
+      "subjectId": "zimsec-al-6073",
+      "title": "Economics"
+    },
+    {
+      "bodyId": "nsc",
+      "levelId": "nsc-dbe",
+      "sortOrder": 80,
+      "state": "active",
+      "subjectId": "nsc-economics",
+      "title": "Economics"
+    },
+    {
+      "bodyId": "nsc",
+      "levelId": "nsc-ieb",
+      "sortOrder": 80,
+      "state": "active",
+      "subjectId": "nsc-economics",
+      "title": "Economics"
+    },
+    {
+      "bodyId": "nsc",
+      "levelId": "nsc-sacai",
+      "sortOrder": 80,
+      "state": "active",
+      "subjectId": "nsc-economics",
+      "title": "Economics"
+    },
+    {
+      "bodyId": "zimsec",
+      "code": "4005",
+      "levelId": "o-level",
+      "sortOrder": 80,
+      "state": "active",
+      "subjectId": "zimsec-ol-4005",
+      "title": "English Language"
+    },
+    {
+      "bodyId": "edexcel",
+      "code": "YEN01",
+      "levelId": "ial",
+      "sortOrder": 80,
+      "state": "active",
+      "subjectId": "edexcel-ial-YEN01",
+      "title": "English Language"
+    },
+    {
+      "bodyId": "edexcel",
+      "code": "YEN01",
+      "levelId": "ias",
+      "sortOrder": 80,
+      "state": "active",
+      "subjectId": "edexcel-ial-YEN01",
+      "title": "English Language"
+    },
+    {
+      "bodyId": "edexcel",
+      "code": "4EB1",
+      "levelId": "igcse",
+      "sortOrder": 80,
+      "state": "active",
+      "subjectId": "edexcel-igcse-4EB1",
+      "title": "English Language (Specification B)"
+    },
+    {
+      "bodyId": "cambridge",
+      "code": "5014",
+      "levelId": "o-level",
+      "sortOrder": 80,
+      "state": "active",
+      "subjectId": "cie-ol-5014",
+      "title": "Environmental Management"
+    },
+    {
+      "bodyId": "cambridge",
+      "code": "0653",
+      "levelId": "igcse",
+      "sortOrder": 80,
+      "state": "active",
+      "subjectId": "cie-igcse-0653",
+      "title": "Science – Combined"
+    },
+    {
+      "bodyId": "zimsec",
+      "code": "6001",
+      "levelId": "a-level",
+      "sortOrder": 90,
+      "state": "active",
+      "subjectId": "zimsec-al-6001",
+      "title": "Accounting"
+    },
+    {
+      "bodyId": "nsc",
+      "levelId": "nsc-dbe",
+      "sortOrder": 90,
+      "state": "active",
+      "subjectId": "nsc-business-studies",
+      "title": "Business Studies"
+    },
+    {
+      "bodyId": "nsc",
+      "levelId": "nsc-ieb",
+      "sortOrder": 90,
+      "state": "active",
+      "subjectId": "nsc-business-studies",
+      "title": "Business Studies"
+    },
+    {
+      "bodyId": "nsc",
+      "levelId": "nsc-sacai",
+      "sortOrder": 90,
+      "state": "active",
+      "subjectId": "nsc-business-studies",
+      "title": "Business Studies"
+    },
+    {
+      "bodyId": "cambridge",
+      "code": "9618",
+      "levelId": "a-level",
+      "sortOrder": 90,
+      "state": "active",
+      "subjectId": "cie-al-9618",
+      "title": "Computer Science"
+    },
+    {
+      "bodyId": "cambridge",
+      "code": "2281",
+      "levelId": "o-level",
+      "sortOrder": 90,
+      "state": "active",
+      "subjectId": "cie-ol-2281",
+      "title": "Economics"
+    },
+    {
+      "bodyId": "cambridge",
+      "code": "0455",
+      "levelId": "igcse",
+      "sortOrder": 90,
+      "state": "active",
+      "subjectId": "cie-igcse-0455",
+      "title": "Economics"
+    },
+    {
+      "bodyId": "zimsec",
+      "code": "4029",
+      "levelId": "o-level",
+      "sortOrder": 90,
+      "state": "active",
+      "subjectId": "zimsec-ol-4029",
+      "title": "Literature in English"
+    },
+    {
+      "bodyId": "cambridge",
+      "code": "7707",
+      "levelId": "o-level",
+      "sortOrder": 100,
+      "state": "active",
+      "subjectId": "cie-ol-7707",
+      "title": "Accounting"
+    },
+    {
+      "bodyId": "cambridge",
+      "code": "0452",
+      "levelId": "igcse",
+      "sortOrder": 100,
+      "state": "active",
+      "subjectId": "cie-igcse-0452",
+      "title": "Accounting"
+    },
+    {
+      "bodyId": "zimsec",
+      "code": "6023",
+      "levelId": "a-level",
+      "sortOrder": 100,
+      "state": "active",
+      "subjectId": "zimsec-al-6023",
+      "title": "Computer Science"
+    },
+    {
+      "bodyId": "nsc",
+      "levelId": "nsc-dbe",
+      "sortOrder": 100,
+      "state": "active",
+      "subjectId": "nsc-geography",
+      "title": "Geography"
+    },
+    {
+      "bodyId": "nsc",
+      "levelId": "nsc-ieb",
+      "sortOrder": 100,
+      "state": "active",
+      "subjectId": "nsc-geography",
+      "title": "Geography"
+    },
+    {
+      "bodyId": "nsc",
+      "levelId": "nsc-sacai",
+      "sortOrder": 100,
+      "state": "active",
+      "subjectId": "nsc-geography",
+      "title": "Geography"
+    },
+    {
+      "bodyId": "cambridge",
+      "code": "9626",
+      "levelId": "a-level",
+      "sortOrder": 100,
+      "state": "active",
+      "subjectId": "cie-al-9626",
+      "title": "Information Technology"
+    },
+    {
+      "bodyId": "zimsec",
+      "code": "4051",
+      "levelId": "o-level",
+      "sortOrder": 100,
+      "state": "active",
+      "subjectId": "zimsec-ol-4051",
+      "title": "Principles of Accounting"
+    },
+    {
+      "bodyId": "cambridge",
+      "code": "7081",
+      "levelId": "o-level",
+      "sortOrder": 110,
+      "state": "active",
+      "subjectId": "cie-ol-7081",
+      "title": "Business"
+    },
+    {
+      "bodyId": "cambridge",
+      "code": "0450",
+      "levelId": "igcse",
+      "sortOrder": 110,
+      "state": "active",
+      "subjectId": "cie-igcse-0450",
+      "title": "Business Studies"
+    },
+    {
+      "bodyId": "zimsec",
+      "code": "4049",
+      "levelId": "o-level",
+      "sortOrder": 110,
+      "state": "active",
+      "subjectId": "zimsec-ol-4049",
+      "title": "Commerce"
+    },
+    {
+      "bodyId": "cambridge",
+      "code": "9093",
+      "levelId": "a-level",
+      "sortOrder": 110,
+      "state": "active",
+      "subjectId": "cie-al-9093",
+      "title": "English Language"
+    },
+    {
+      "bodyId": "zimsec",
+      "code": "6037",
+      "levelId": "a-level",
+      "sortOrder": 110,
+      "state": "active",
+      "subjectId": "zimsec-al-6037",
+      "title": "Geography"
+    },
+    {
+      "bodyId": "nsc",
+      "levelId": "nsc-dbe",
+      "sortOrder": 110,
+      "state": "active",
+      "subjectId": "nsc-history",
+      "title": "History"
+    },
+    {
+      "bodyId": "nsc",
+      "levelId": "nsc-ieb",
+      "sortOrder": 110,
+      "state": "active",
+      "subjectId": "nsc-history",
+      "title": "History"
+    },
+    {
+      "bodyId": "nsc",
+      "levelId": "nsc-sacai",
+      "sortOrder": 110,
+      "state": "active",
+      "subjectId": "nsc-history",
+      "title": "History"
+    },
+    {
+      "bodyId": "cambridge",
+      "code": "7115",
+      "levelId": "o-level",
+      "sortOrder": 120,
+      "state": "active",
+      "subjectId": "cie-ol-7115",
+      "title": "Business Studies"
+    },
+    {
+      "bodyId": "cambridge",
+      "code": "0478",
+      "levelId": "igcse",
+      "sortOrder": 120,
+      "state": "active",
+      "subjectId": "cie-igcse-0478",
+      "title": "Computer Science"
+    },
+    {
+      "bodyId": "zimsec",
+      "code": "4050",
+      "levelId": "o-level",
+      "sortOrder": 120,
+      "state": "active",
+      "subjectId": "zimsec-ol-4050",
+      "title": "Economics"
+    },
+    {
+      "bodyId": "cambridge",
+      "code": "9695",
+      "levelId": "a-level",
+      "sortOrder": 120,
+      "state": "active",
+      "subjectId": "cie-al-9695",
+      "title": "English – Literature"
+    },
+    {
+      "bodyId": "zimsec",
+      "code": "6006",
+      "levelId": "a-level",
+      "sortOrder": 120,
+      "state": "active",
+      "subjectId": "zimsec-al-6006",
+      "title": "History"
+    },
+    {
+      "bodyId": "nsc",
+      "levelId": "nsc-dbe",
+      "sortOrder": 120,
+      "state": "active",
+      "subjectId": "nsc-information-technology",
+      "title": "Information Technology"
+    },
+    {
+      "bodyId": "nsc",
+      "levelId": "nsc-ieb",
+      "sortOrder": 120,
+      "state": "active",
+      "subjectId": "nsc-information-technology",
+      "title": "Information Technology"
+    },
+    {
+      "bodyId": "nsc",
+      "levelId": "nsc-sacai",
+      "sortOrder": 120,
+      "state": "active",
+      "subjectId": "nsc-information-technology",
+      "title": "Information Technology"
+    },
+    {
+      "bodyId": "nsc",
+      "levelId": "nsc-dbe",
+      "sortOrder": 130,
+      "state": "active",
+      "subjectId": "nsc-cat",
+      "title": "Computer Applications Technology"
+    },
+    {
+      "bodyId": "nsc",
+      "levelId": "nsc-ieb",
+      "sortOrder": 130,
+      "state": "active",
+      "subjectId": "nsc-cat",
+      "title": "Computer Applications Technology"
+    },
+    {
+      "bodyId": "nsc",
+      "levelId": "nsc-sacai",
+      "sortOrder": 130,
+      "state": "active",
+      "subjectId": "nsc-cat",
+      "title": "Computer Applications Technology"
+    },
+    {
+      "bodyId": "cambridge",
+      "code": "2210",
+      "levelId": "o-level",
+      "sortOrder": 130,
+      "state": "active",
+      "subjectId": "cie-ol-2210",
+      "title": "Computer Science"
+    },
+    {
+      "bodyId": "zimsec",
+      "code": "4021",
+      "levelId": "o-level",
+      "sortOrder": 130,
+      "state": "active",
+      "subjectId": "zimsec-ol-4021",
+      "title": "Computer Science"
+    },
+    {
+      "bodyId": "cambridge",
+      "code": "0500",
+      "levelId": "igcse",
+      "sortOrder": 130,
+      "state": "active",
+      "subjectId": "cie-igcse-0500",
+      "title": "English – First Language"
+    },
+    {
+      "bodyId": "cambridge",
+      "code": "8021",
+      "levelId": "a-level",
+      "sortOrder": 130,
+      "state": "active",
+      "subjectId": "cie-al-8021",
+      "title": "English General Paper (AS only)"
+    },
+    {
+      "bodyId": "zimsec",
+      "code": "6039",
+      "levelId": "a-level",
+      "sortOrder": 130,
+      "state": "active",
+      "subjectId": "zimsec-al-6039",
+      "title": "Literature in English"
+    },
+    {
+      "bodyId": "cambridge",
+      "code": "0510",
+      "levelId": "igcse",
+      "sortOrder": 140,
+      "state": "active",
+      "subjectId": "cie-igcse-0510",
+      "title": "English as a Second Language"
+    },
+    {
+      "bodyId": "nsc",
+      "levelId": "nsc-dbe",
+      "sortOrder": 140,
+      "state": "active",
+      "subjectId": "nsc-english-hl",
+      "title": "English Home Language"
+    },
+    {
+      "bodyId": "nsc",
+      "levelId": "nsc-ieb",
+      "sortOrder": 140,
+      "state": "active",
+      "subjectId": "nsc-english-hl",
+      "title": "English Home Language"
+    },
+    {
+      "bodyId": "nsc",
+      "levelId": "nsc-sacai",
+      "sortOrder": 140,
+      "state": "active",
+      "subjectId": "nsc-english-hl",
+      "title": "English Home Language"
+    },
+    {
+      "bodyId": "cambridge",
+      "code": "1123",
+      "levelId": "o-level",
+      "sortOrder": 140,
+      "state": "active",
+      "subjectId": "cie-ol-1123",
+      "title": "English Language"
+    },
+    {
+      "bodyId": "zimsec",
+      "code": "6043",
+      "levelId": "a-level",
+      "sortOrder": 140,
+      "state": "active",
+      "subjectId": "zimsec-al-6043",
+      "title": "Sociology"
+    },
+    {
+      "bodyId": "zimsec",
+      "code": "4073",
+      "levelId": "o-level",
+      "sortOrder": 140,
+      "state": "active",
+      "subjectId": "zimsec-ol-4073",
+      "title": "Statistics"
+    },
+    {
+      "bodyId": "nsc",
+      "levelId": "nsc-dbe",
+      "sortOrder": 150,
+      "state": "active",
+      "subjectId": "nsc-english-fal",
+      "title": "English First Additional Language"
+    },
+    {
+      "bodyId": "nsc",
+      "levelId": "nsc-ieb",
+      "sortOrder": 150,
+      "state": "active",
+      "subjectId": "nsc-english-fal",
+      "title": "English First Additional Language"
+    },
+    {
+      "bodyId": "nsc",
+      "levelId": "nsc-sacai",
+      "sortOrder": 150,
+      "state": "active",
+      "subjectId": "nsc-english-fal",
+      "title": "English First Additional Language"
+    },
+    {
+      "bodyId": "zimsec",
+      "code": "4022",
+      "levelId": "o-level",
+      "sortOrder": 150,
+      "state": "active",
+      "subjectId": "zimsec-ol-4022",
+      "title": "Geography"
+    },
+    {
+      "bodyId": "cambridge",
+      "code": "2010",
+      "levelId": "o-level",
+      "sortOrder": 150,
+      "state": "active",
+      "subjectId": "cie-ol-2010",
+      "title": "Literature in English"
+    },
+    {
+      "bodyId": "zimsec",
+      "code": "4044",
+      "levelId": "o-level",
+      "sortOrder": 160,
+      "state": "active",
+      "subjectId": "zimsec-ol-4044",
+      "title": "History"
+    },
+    {
+      "bodyId": "nsc",
+      "levelId": "nsc-dbe",
+      "sortOrder": 160,
+      "state": "active",
+      "subjectId": "nsc-life-orientation",
+      "title": "Life Orientation"
+    },
+    {
+      "bodyId": "nsc",
+      "levelId": "nsc-ieb",
+      "sortOrder": 160,
+      "state": "active",
+      "subjectId": "nsc-life-orientation",
+      "title": "Life Orientation"
+    },
+    {
+      "bodyId": "nsc",
+      "levelId": "nsc-sacai",
+      "sortOrder": 160,
+      "state": "active",
+      "subjectId": "nsc-life-orientation",
+      "title": "Life Orientation"
+    }
+  ]
+}
