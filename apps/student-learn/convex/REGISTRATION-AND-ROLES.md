@@ -261,5 +261,22 @@ and no composition rules are set — which is the current NIST position: length 
 composition rules push people toward predictable patterns, while breach-list checking blocks
 the passwords that are actually used in attacks. 8 is also Clerk's own default.
 
+**Password is optional — the student picks their sign-in method.** `auth_password.required`
+was `true`, forcing every account to invent a password. Set to `false` 2026-09-17:
+
+```
+npx clerk@3.3.0 config patch --json '{"auth_password":{"required":false}}'
+```
+
+Password stays *enabled*, and `auth_email.sign_in_strategies` already contains `email_code`, so
+both routes are live at once: a student may set a password and use it, or skip it and sign in
+with a code sent to their email. Verified by creating an account with an email address and no
+password (`password_enabled: false`).
+
+Why it matters for this audience: teenagers lose passwords, and every password reset is support
+work for a solo operator. Offering the code route removes that for the students who take it,
+without taking passwords away from those who prefer them — notably guardians, who sign in
+rarely and may not want to hunt for an email each time.
+
 **Phone OTP is a Phase 2 item** (PLAN §3): SMS costs money per send and is an abuse vector
 under paid ad traffic. If it is turned on later, turn it on for *sign-in*, not for sign-up.
