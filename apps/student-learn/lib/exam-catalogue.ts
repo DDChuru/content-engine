@@ -161,6 +161,8 @@ export function resolveAvailability(
  * A session you cannot enter is not an option, so a series is dropped once its
  * papers are past. Someone registering during the exam month is sitting *this*
  * series, so the current month still counts as ahead.
+ *
+ * Ordering is by exam month, NOT by the catalogue's `sortOrder`.
  */
 export function sessionsFromSeries(
   seriesList: ExamSeries[],
@@ -168,10 +170,17 @@ export function sessionsFromSeries(
   count = 5
 ): ExamSession[] {
   const cursor = now.getFullYear() * 12 + now.getMonth(); // months since year 0
+  // CHRONOLOGICAL, not catalogue order. `seriesList` arrives sorted by the
+  // catalogue's `sortOrder`, which is a display preference and says nothing about
+  // when the papers are sat — the NSC lists November before May/June, so the
+  // unsorted loop offered "November 2027" above "May/June 2027". A student
+  // picking their sitting reads the list as a timeline; the first entry has to be
+  // the next one they can actually enter for.
+  const byMonth = [...seriesList].sort((a, b) => a.examMonth - b.examMonth);
   const out: ExamSession[] = [];
   for (let yearOffset = 0; yearOffset <= 3 && out.length < count; yearOffset++) {
     const year = now.getFullYear() + yearOffset;
-    for (const series of seriesList) {
+    for (const series of byMonth) {
       if (out.length >= count) break;
       const seriesCursor = year * 12 + (series.examMonth - 1);
       if (seriesCursor < cursor) continue; // already sat

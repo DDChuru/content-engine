@@ -22,19 +22,28 @@ import { DEFAULT_MIGRATION_TARGET, derivedAvailability } from '../lib/exam-catal
  *
  * It is a backfill of two hand-made rows, not a general inference rule. If this
  * ever has to run against real users, ask them instead of guessing for them.
+ *
+ * INSERT-ONLY, AND THERE IS NO RE-RUN. It skips any student who already has an
+ * active enrolment and deletes nothing, so running it again is a no-op report.
+ *
+ * It used to carry a `redo` flag that deleted every `subjectDemand` and
+ * `enrolments` row for every student before rewriting one default enrolment
+ * each. That was never provenance-scoped — it could not tell a row this script
+ * wrote from a registration a student made — and because the first run clears
+ * `yearGroup`, a later run would also have defaulted the sitting year. Both
+ * seeded rows are migrated, so the flag had no remaining purpose and every
+ * remaining use of it was destruction of real, append-only history. It is gone,
+ * and with it the last `ctx.db.delete` in the codebase: enrolments and the
+ * catalogue are both append-only, and a mistake is corrected by writing a new
+ * row (superseding) rather than by removing the old one. If a future migration
+ * genuinely has to rewrite its own output, give the rows it writes a provenance
+ * marker first and scope the rewrite to that marker.
  */
 export const backfillEnrolments = internalMutation({
   args: {
     dryRun: v.optional(v.boolean()),
-    /**
-     * Delete and rewrite enrolments this migration created. Needed because the
-     * first run wrote a session series that the catalogue no longer has —
-     * Cambridge's series is "November", not "October/November". Safe only while
-     * every enrolment in the table came from this script.
-     */
-    redo: v.optional(v.boolean()),
   },
-  handler: async (ctx, { dryRun, redo }) => {
+  handler: async (ctx, { dryRun }) => {
     const students = await ctx.db
       .query('users')
       .withIndex('by_role', (q) => q.eq('role', 'student'))
@@ -52,21 +61,6 @@ export const backfillEnrolments = internalMutation({
       // The column is gone from the schema; a row restored from a pre-migration
       // snapshot may still carry it, so read it defensively rather than typed.
       const legacyYear = (user as unknown as { yearGroup?: string }).yearGroup;
-      if (redo && !dryRun) {
-        for (const row of await ctx.db
-          .query('subjectDemand')
-          .withIndex('by_student', (q) => q.eq('studentId', user._id))
-          .collect()) {
-          await ctx.db.delete(row._id);
-        }
-        for (const row of await ctx.db
-          .query('enrolments')
-          .withIndex('by_student_created', (q) => q.eq('studentId', user._id))
-          .collect()) {
-          await ctx.db.delete(row._id);
-        }
-      }
-
       const existing = await ctx.db
         .query('enrolments')
         .withIndex('by_student_status', (q) =>

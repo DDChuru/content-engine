@@ -17,7 +17,7 @@
 
 import { internalMutation, internalQuery, mutation, query } from './_generated/server';
 import { v } from 'convex/values';
-import type { MutationCtx } from './_generated/server';
+import type { MutationCtx, QueryCtx } from './_generated/server';
 import { AuthError, audit, requireAdmin, requireUser } from './lib/auth';
 import { availabilityValidator, catalogueStateValidator } from './schema';
 import {
@@ -338,8 +338,14 @@ export const upsertCountryBody = mutation({
       sortOrder: args.sortOrder ?? existing?.sortOrder ?? 500,
     };
     if (existing) {
-      await ctx.db.patch(existing._id, { ...fields, state: 'active' as const });
-      await auditCatalogue(ctx, admin, 'catalogue.countryBody.update', 'catalogueCountryBodies', existing._id, { countryCode, bodyId, ...fields });
+      // NOT `state: 'active'`. An edit changes what a row SAYS, never whether it
+      // is offered: forcing active here silently un-retired an offering (the
+      // admin screen lets you edit a retired row), and left `retiredAt` /
+      // `retiredBy` behind on a row claiming to be active — an audit trail
+      // contradicting itself. `unretire` is the one way back, and it is explicit,
+      // clears both stamps and writes its own audit row.
+      await ctx.db.patch(existing._id, fields);
+      await auditCatalogue(ctx, admin, 'catalogue.countryBody.update', 'catalogueCountryBodies', existing._id, { countryCode, bodyId, ...fields, state: existing.state });
       return existing._id;
     }
     const id = await ctx.db.insert('catalogueCountryBodies', {
@@ -417,6 +423,23 @@ export const upsertSeries = mutation({
     if (!Number.isInteger(args.examMonth) || args.examMonth < 1 || args.examMonth > 12) {
       throw new AuthError('Exam month must be 1-12.');
     }
+    // Both parents must exist, like every other upsert here. A series hanging off
+    // a board or level that is not in the catalogue is a row nothing can ever
+    // read — it reaches no picker, and it is only found when someone wonders why
+    // a sitting they typed in never appeared.
+    const body = await ctx.db
+      .query('catalogueBodies')
+      .withIndex('by_body', (q) => q.eq('bodyId', bodyId))
+      .unique();
+    if (!body) throw new AuthError('Add the exam board first.');
+    if (levelId) {
+      const level = await ctx.db
+        .query('catalogueLevels')
+        .withIndex('by_body_level', (q) => q.eq('bodyId', bodyId).eq('levelId', levelId))
+        .unique();
+      if (!level) throw new AuthError(`${body.shortTitle} has no level "${levelId}".`);
+    }
+
     const existing = await ctx.db
       .query('catalogueSeries')
       .withIndex('by_body_level', (q) =>
@@ -682,20 +705,67 @@ async function locate(ctx: MutationCtx, args: EntityArgs) {
 }
 
 /**
+ * The enrolment rows that could possibly match an entity reference.
+ *
+ * WHY THIS IS NOT `.collect()` ON THE WHOLE TABLE. Retirement used to count by
+ * reading every enrolment ever written. That is a control that gets SLOWER as the
+ * thing it protects gets more important, and past the Convex transaction read
+ * limit it stops working altogether — retiring a mis-typed subject would throw,
+ * for everyone, permanently, with no way to tidy the catalogue at all. A safety
+ * check that fails closed under load is worse than the risk it covers.
+ *
+ * Two things bound it now:
+ *
+ *  1. The `by_body_level_session` index. Every entity except a country reference
+ *     names a board, and most name a level too, so the scan is over that board's
+ *     enrolments rather than the table.
+ *  2. A hard read cap. Whatever the index leaves, at most SCAN_CAP rows are read.
+ *     Past that the count is reported as a floor ("at least N"), which is all the
+ *     confirmation step ever needed: the admin is deciding whether a cohort is
+ *     mid-year, and "at least 500" answers that as well as an exact 4,132 does.
+ *
+ * A country or country↔board reference still scans unindexed, because `enrolments`
+ * has no index on `countryCode` — see the note in the retire mutation.
+ */
+const SCAN_CAP = 1000;
+
+async function candidateEnrolments(
+  ctx: MutationCtx | QueryCtx,
+  args: EntityArgs
+) {
+  const table = ctx.db.query('enrolments');
+  // `by_body_level_session` is [bodyId, levelId, sessionId]: usable as a prefix.
+  const narrowed =
+    args.bodyId === undefined
+      ? table
+      : args.levelId === undefined
+        ? ctx.db
+            .query('enrolments')
+            .withIndex('by_body_level_session', (q) => q.eq('bodyId', args.bodyId!))
+        : ctx.db
+            .query('enrolments')
+            .withIndex('by_body_level_session', (q) =>
+              q.eq('bodyId', args.bodyId!).eq('levelId', args.levelId!)
+            );
+  const rows = await narrowed.take(SCAN_CAP + 1);
+  return { rows: rows.slice(0, SCAN_CAP), truncated: rows.length > SCAN_CAP };
+}
+
+/**
  * How many students are sitting this right now.
  *
  * ACTIVE enrolments only — a superseded or withdrawn row is history, and history
  * is precisely what retirement must not disturb. This is the number the admin is
- * shown before they are allowed to take something out of the picker.
+ * shown before they are allowed to take something out of the picker. `atLeast`
+ * marks a count that hit the read cap and is therefore a floor, not a total.
  */
 async function countActiveEnrolments(
-  ctx: MutationCtx,
+  ctx: MutationCtx | QueryCtx,
   args: EntityArgs
-): Promise<number> {
-  const active = (await ctx.db.query('enrolments').collect()).filter(
-    (e) => e.status === 'active'
-  );
-  return countFromRows(active, args);
+): Promise<{ count: number; atLeast: boolean }> {
+  const { rows, truncated } = await candidateEnrolments(ctx, args);
+  const active = rows.filter((e) => e.status === 'active');
+  return { count: countFromRows(active, args), atLeast: truncated };
 }
 
 /** The counting rule itself, shared by the mutation and the read-only query. */
@@ -763,16 +833,21 @@ export const retire = mutation({
   handler: async (ctx, args) => {
     const admin = await requireAdmin(ctx);
     const { table, row } = await locate(ctx, args);
-    const inUseCount = await countActiveEnrolments(ctx, args);
+    // NOTE (schema): a country or country/board reference cannot be narrowed by
+    // index — `enrolments` has no index on `countryCode`. Adding
+    // `.index('by_country_status', ['countryCode', 'status'])` would make every
+    // entity here index-bounded and let the cap go away. schema.ts is owned by
+    // another workstream right now, so this is reported rather than done.
+    const { count: inUseCount, atLeast } = await countActiveEnrolments(ctx, args);
 
     if (inUseCount > 0 && !args.acknowledgeInUse) {
       throw new AuthError(
-        `${inUseCount} student${inUseCount === 1 ? ' is' : 's are'} sitting ${describeEntity(args)} right now. ` +
+        `${atLeast ? 'At least ' : ''}${inUseCount} student${inUseCount === 1 && !atLeast ? ' is' : 's are'} sitting ${describeEntity(args)} right now. ` +
           'Retiring it takes it out of the picker for everyone new; their own enrolment is kept and still renders. ' +
           'Confirm to go ahead.'
       );
     }
-    if (row.state === 'retired') return { alreadyRetired: true, inUseCount };
+    if (row.state === 'retired') return { alreadyRetired: true, inUseCount, atLeast };
 
     await ctx.db.patch(row._id, {
       state: 'retired' as const,
@@ -788,9 +863,10 @@ export const retire = mutation({
       seriesId: args.seriesId,
       subjectId: args.subjectId,
       inUseCount,
+      inUseCountIsFloor: atLeast,
       acknowledgedInUse: Boolean(args.acknowledgeInUse),
     });
-    return { alreadyRetired: false, inUseCount };
+    return { alreadyRetired: false, inUseCount, atLeast };
   },
 });
 
@@ -811,7 +887,7 @@ export const unretire = mutation({
   handler: async (ctx, args) => {
     const admin = await requireAdmin(ctx);
     const { table, row } = await locate(ctx, args);
-    const inUseCount = await countActiveEnrolments(ctx, args);
+    const { count: inUseCount } = await countActiveEnrolments(ctx, args);
 
     await ctx.db.patch(row._id, {
       state: 'active' as const,
@@ -844,11 +920,9 @@ export const inUseCount = query({
   },
   handler: async (ctx, args) => {
     await requireAdmin(ctx);
-    // Same counting rule as the mutation, read-only.
-    const active = (await ctx.db.query('enrolments').collect()).filter(
-      (e) => e.status === 'active'
-    );
-    return countFromRows(active, args);
+    // Same bounded counting rule as the mutation, read-only. `atLeast` says the
+    // read cap was hit and the number is a floor.
+    return countActiveEnrolments(ctx, args);
   },
 });
 
@@ -950,7 +1024,16 @@ export const seed = internalMutation({
     ) => {
       if (existing) {
         if (patchExisting) {
-          await ctx.db.patch(existing._id, fields);
+          // `state` is NEVER patched onto an existing row. Retirement is a
+          // decision with a confirmation step (`retire` refuses while students
+          // are sitting it), an actor and an audit row; letting a file restore
+          // flip it would route around all three and leave `retiredAt` /
+          // `retiredBy` disagreeing with `state`. The file wins on what a row
+          // SAYS; `retire` / `unretire` stay the only way to change whether it
+          // is offered. `state` on a seed row still applies on INSERT, where
+          // there is no decision to overwrite.
+          const { state: _ignoredState, ...patchable } = fields;
+          await ctx.db.patch(existing._id, patchable);
           report.patched++;
         } else {
           report.skipped++;
