@@ -9,7 +9,7 @@
     "M4.4d",
     "M4.4e"
   ],
-  "generatedAt": "2026-09-16T16:49:10+00:00",
+  "generatedAt": "2026-09-16T16:50:39+00:00",
   "questions": [
     {
       "id": "M4.4a-001",
@@ -57,12 +57,12 @@
       "feedbackCorrect": "Yes — one horizontal force, so $F=ma$ gives it directly.",
       "feedbackIncorrect": "Smooth floor means no friction. Use $F = ma$ with $F = 20$ and $m = 5$.",
       "diagnosticFor": [
-        "M4.4a-X01"
+        "M4.1a-X01"
       ],
       "provenance": {
         "modelledOn": "Direct application of Newton's second law to a single body on a smooth horizontal plane.",
         "generatedBy": "claude-opus-5 (authored in repo, not extracted)",
-        "generatedAt": "2026-09-16T16:49:10+00:00",
+        "generatedAt": "2026-09-16T16:50:39+00:00",
         "solveGate": {
           "routes": [
             "newton-direct",
@@ -71,7 +71,7 @@
           ],
           "symbolicCheck": true,
           "agreedToSigFigs": 3,
-          "checkedAt": "2026-09-16T16:49:10+00:00"
+          "checkedAt": "2026-09-16T16:50:39+00:00"
         }
       }
     },
@@ -137,12 +137,12 @@
       "feedbackCorrect": "Yes — acceleration from suvat, then $F = ma$.",
       "feedbackIncorrect": "Acceleration is the change in velocity over the time: $(20-8)/6$. Then $F = ma$.",
       "diagnosticFor": [
-        "M4.4a-X02"
+        "M4.4a-X03"
       ],
       "provenance": {
         "modelledOn": "Two-stage kinematics-then-Newton item, the standard Paper 4 opener.",
         "generatedBy": "claude-opus-5 (authored in repo, not extracted)",
-        "generatedAt": "2026-09-16T16:49:10+00:00",
+        "generatedAt": "2026-09-16T16:50:39+00:00",
         "solveGate": {
           "routes": [
             "impulse-momentum",
@@ -151,7 +151,7 @@
           ],
           "symbolicCheck": true,
           "agreedToSigFigs": 3,
-          "checkedAt": "2026-09-16T16:49:10+00:00"
+          "checkedAt": "2026-09-16T16:50:39+00:00"
         }
       }
     },
@@ -208,12 +208,12 @@
       "feedbackCorrect": "Yes — subtract the opposing force, then $F = ma$.",
       "feedbackIncorrect": "The forces oppose, so the resultant is $12 - 4.5$, not $12 + 4.5$.",
       "diagnosticFor": [
-        "M4.4a-X03"
+        "M4.4a-X02"
       ],
       "provenance": {
         "modelledOn": "Resultant of collinear forces feeding Newton's second law.",
         "generatedBy": "claude-opus-5 (authored in repo, not extracted)",
-        "generatedAt": "2026-09-16T16:49:10+00:00",
+        "generatedAt": "2026-09-16T16:50:39+00:00",
         "solveGate": {
           "routes": [
             "resultant-then-newton",
@@ -222,7 +222,7 @@
           ],
           "symbolicCheck": true,
           "agreedToSigFigs": 3,
-          "checkedAt": "2026-09-16T16:49:10+00:00"
+          "checkedAt": "2026-09-16T16:50:39+00:00"
         }
       }
     },
@@ -279,12 +279,12 @@
       "feedbackCorrect": "Yes — acceleration from the distance-time information, then rearrange $F = ma$.",
       "feedbackIncorrect": "Average speed is not the acceleration. Use $s = \\tfrac12 a t^2$ from rest.",
       "diagnosticFor": [
-        "M4.4a-X04"
+        "M4.4a-X03"
       ],
       "provenance": {
         "modelledOn": "Reverse application of Newton's second law: mass as the unknown.",
         "generatedBy": "claude-opus-5 (authored in repo, not extracted)",
-        "generatedAt": "2026-09-16T16:49:10+00:00",
+        "generatedAt": "2026-09-16T16:50:39+00:00",
         "solveGate": {
           "routes": [
             "energy-work",
@@ -293,7 +293,7 @@
           ],
           "symbolicCheck": true,
           "agreedToSigFigs": 3,
-          "checkedAt": "2026-09-16T16:49:10+00:00"
+          "checkedAt": "2026-09-16T16:50:39+00:00"
         }
       }
     },
@@ -358,12 +358,13 @@
       "feedbackCorrect": "Yes — normal force, then $\\mu R$, then $F = ma$ along the floor.",
       "feedbackIncorrect": "Friction is $\\mu R$ with $R = mg = 80\\ \\text{N}$, not $\\mu m$.",
       "diagnosticFor": [
+        "M4.4a-X01",
         "M4.4e-X01"
       ],
       "provenance": {
         "modelledOn": "Rough horizontal plane with a horizontal pull — the standard friction + F = ma item.",
         "generatedBy": "claude-opus-5 (authored in repo, not extracted)",
-        "generatedAt": "2026-09-16T16:49:10+00:00",
+        "generatedAt": "2026-09-16T16:50:39+00:00",
         "solveGate": {
           "routes": [
             "normal-then-newton",
@@ -372,7 +373,7 @@
           ],
           "symbolicCheck": true,
           "agreedToSigFigs": 3,
-          "checkedAt": "2026-09-16T16:49:10+00:00"
+          "checkedAt": "2026-09-16T16:50:39+00:00"
         }
       }
     },
@@ -442,12 +443,13 @@
       "feedbackCorrect": "Yes — deceleration from suvat, then $\\mu = ma / mg$.",
       "feedbackIncorrect": "Once the rope goes, friction alone decelerates the sledge. Find $a$ from $v^2 = u^2 + 2as$ first.",
       "diagnosticFor": [
+        "M4.4a-X05",
         "M4.4e-X02"
       ],
       "provenance": {
         "modelledOn": "Deceleration-to-rest under friction, solving for the coefficient.",
         "generatedBy": "claude-opus-5 (authored in repo, not extracted)",
-        "generatedAt": "2026-09-16T16:49:10+00:00",
+        "generatedAt": "2026-09-16T16:50:39+00:00",
         "solveGate": {
           "routes": [
             "suvat-then-newton",
@@ -456,7 +458,7 @@
           ],
           "symbolicCheck": true,
           "agreedToSigFigs": 3,
-          "checkedAt": "2026-09-16T16:49:10+00:00"
+          "checkedAt": "2026-09-16T16:50:39+00:00"
         }
       }
     },
@@ -518,7 +520,7 @@
       "provenance": {
         "modelledOn": "Apparent weight in an accelerating lift.",
         "generatedBy": "claude-opus-5 (authored in repo, not extracted)",
-        "generatedAt": "2026-09-16T16:49:10+00:00",
+        "generatedAt": "2026-09-16T16:50:39+00:00",
         "solveGate": {
           "routes": [
             "factorised",
@@ -527,7 +529,7 @@
           ],
           "symbolicCheck": true,
           "agreedToSigFigs": 3,
-          "checkedAt": "2026-09-16T16:49:10+00:00"
+          "checkedAt": "2026-09-16T16:50:39+00:00"
         }
       }
     },
@@ -584,12 +586,12 @@
       "feedbackCorrect": "Yes — accelerating downwards means the floor pushes less than the weight.",
       "feedbackIncorrect": "The acceleration is downwards here, so $mg - R = ma$ and $R < 500\\ \\text{N}$.",
       "diagnosticFor": [
-        "M4.4c-X02"
+        "M4.4c-X01"
       ],
       "provenance": {
         "modelledOn": "Apparent weight with downward acceleration — the sign-convention trap.",
         "generatedBy": "claude-opus-5 (authored in repo, not extracted)",
-        "generatedAt": "2026-09-16T16:49:10+00:00",
+        "generatedAt": "2026-09-16T16:50:39+00:00",
         "solveGate": {
           "routes": [
             "factorised",
@@ -598,7 +600,7 @@
           ],
           "symbolicCheck": true,
           "agreedToSigFigs": 3,
-          "checkedAt": "2026-09-16T16:49:10+00:00"
+          "checkedAt": "2026-09-16T16:50:39+00:00"
         }
       }
     },
@@ -668,7 +670,7 @@
       "provenance": {
         "modelledOn": "Two-body tow-bar system with no resistances.",
         "generatedBy": "claude-opus-5 (authored in repo, not extracted)",
-        "generatedAt": "2026-09-16T16:49:10+00:00",
+        "generatedAt": "2026-09-16T16:50:39+00:00",
         "solveGate": {
           "routes": [
             "car-equation",
@@ -677,7 +679,7 @@
           ],
           "symbolicCheck": true,
           "agreedToSigFigs": 3,
-          "checkedAt": "2026-09-16T16:49:10+00:00"
+          "checkedAt": "2026-09-16T16:50:39+00:00"
         }
       }
     },
@@ -749,12 +751,14 @@
       "feedbackCorrect": "Yes — both resistances in the system equation, the trailer's own resistance in its equation.",
       "feedbackIncorrect": "Do not forget the trailer's own $100\\ \\text{N}$ resistance when you isolate it.",
       "diagnosticFor": [
+        "M4.4a-X01",
+        "M4.4b-X01",
         "M4.4b-X02"
       ],
       "provenance": {
         "modelledOn": "Two-body system with per-body resistances — the classic dropped-resistance error.",
         "generatedBy": "claude-opus-5 (authored in repo, not extracted)",
-        "generatedAt": "2026-09-16T16:49:10+00:00",
+        "generatedAt": "2026-09-16T16:50:39+00:00",
         "solveGate": {
           "routes": [
             "sympy-symbolic",
@@ -763,7 +767,7 @@
           ],
           "symbolicCheck": true,
           "agreedToSigFigs": 3,
-          "checkedAt": "2026-09-16T16:49:10+00:00"
+          "checkedAt": "2026-09-16T16:50:39+00:00"
         }
       }
     },
@@ -841,7 +845,7 @@
       "provenance": {
         "modelledOn": "Smooth pulley with two freely hanging particles.",
         "generatedBy": "claude-opus-5 (authored in repo, not extracted)",
-        "generatedAt": "2026-09-16T16:49:10+00:00",
+        "generatedAt": "2026-09-16T16:50:39+00:00",
         "solveGate": {
           "routes": [
             "add-equations",
@@ -850,7 +854,7 @@
           ],
           "symbolicCheck": true,
           "agreedToSigFigs": 3,
-          "checkedAt": "2026-09-16T16:49:10+00:00"
+          "checkedAt": "2026-09-16T16:50:39+00:00"
         }
       }
     },
@@ -927,7 +931,7 @@
       "provenance": {
         "modelledOn": "Table-and-pulley system, smooth surface.",
         "generatedBy": "claude-opus-5 (authored in repo, not extracted)",
-        "generatedAt": "2026-09-16T16:49:10+00:00",
+        "generatedAt": "2026-09-16T16:50:39+00:00",
         "solveGate": {
           "routes": [
             "eliminate-tension",
@@ -936,7 +940,7 @@
           ],
           "symbolicCheck": true,
           "agreedToSigFigs": 3,
-          "checkedAt": "2026-09-16T16:49:10+00:00"
+          "checkedAt": "2026-09-16T16:50:39+00:00"
         }
       }
     }

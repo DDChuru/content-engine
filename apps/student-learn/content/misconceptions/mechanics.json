@@ -1,0 +1,711 @@
+{
+  "schemaVersion": 1,
+  "unit": "M",
+  "syllabus": "9709",
+  "title": "Mechanics misconception catalogue — forces and Newton's laws",
+  "generatedAt": "2026-09-17T00:00:00+00:00",
+  "coverageRule": {
+    "covered": "at least one notes page AND at least 2 questions resolve",
+    "partial": "at least one notes page OR at least one question, but not both thresholds",
+    "uncovered": "nothing resolves"
+  },
+  "notes": [
+    "Items are the CLOSED list of §7/§8. Teachers select, never invent.",
+    "resolvesTo is resolved against real files: noteSlugs exist in public/notes/index.json, videoIds exist in public/videos/<id>.mp4 (gitignored, present on disk), questionIds exist in content/questions/mechanics-forces-f-equals-ma.json.",
+    "-fable duplicate topics in lib/syllabus.ts are deliberately NOT used as syllabusCode or noteSlug (amendment G)."
+  ],
+  "items": [
+    {
+      "code": "M4.1a-X01",
+      "syllabusCode": "M4.1a",
+      "title": "Invents a force nothing produces",
+      "description": "The student reads forces off the story rather than off the physical agents: a forward force because the body is moving, or a friction force on a surface the question calls smooth.",
+      "wrongIdea": "A moving body must have a resultant force in the direction it is travelling, and any surface a body slides along resists it — so the diagram gets an extra arrow the question never gave.",
+      "whyWrong": "This is Newton's first law failing. Force changes velocity, it does not maintain it, and a smooth contact supplies no friction at all. Nothing in the situation produces the extra arrow, so every equation that follows has a term too many.",
+      "correctUnderstanding": "Draw only forces something actually exerts: weight, contact forces, tension, stated applied forces. Smooth means no friction. Zero resultant means constant velocity, not rest. Velocity and acceleration arrows are not forces.",
+      "severity": 5,
+      "resolvesTo": {
+        "noteSlugs": [
+          "mechanics-force-diagrams",
+          "mechanics-f-equals-ma"
+        ],
+        "videoIds": [
+          "mechanics-force-diagrams",
+          "mechanics-f-equals-ma"
+        ],
+        "questionIds": [
+          "M4.4a-001"
+        ]
+      },
+      "coverageState": "partial",
+      "provenance": {
+        "source": "authored",
+        "groundedIn": [
+          "public/notes/mechanics-force-diagrams.md — 'Do not invent a force merely because the body is moving: motion does not require a forward resultant.'",
+          "public/notes/mechanics-f-equals-ma.md — 'Check yourself: a moving car has equal forward and backward forces. Must it stop? No.'"
+        ],
+        "authoredBy": "claude-opus-5",
+        "authoredAt": "2026-09-17"
+      },
+      "state": "active"
+    },
+    {
+      "code": "M4.1a-X02",
+      "syllabusCode": "M4.1a",
+      "title": "Third-law pair drawn on one body",
+      "description": "The student puts both halves of an action–reaction pair on the same force diagram and concludes they cancel, so the body can never accelerate.",
+      "wrongIdea": "Because the floor pushes the person up and the person pushes the floor down with an equal force, the two cancel on the person's diagram.",
+      "whyWrong": "A third-law pair acts on two different bodies. The reaction on the floor belongs on the floor's diagram, never on the person's. Putting it on one diagram makes every resultant zero.",
+      "correctUnderstanding": "Choose one body. Draw only the forces other things exert on that body. The partner force is drawn on the other body, or it disappears as an internal force when the two are treated as one system.",
+      "severity": 4,
+      "resolvesTo": {
+        "noteSlugs": [
+          "mechanics-force-diagrams",
+          "mechanics-connected-bodies-lifts"
+        ],
+        "videoIds": [
+          "mechanics-force-diagrams",
+          "mechanics-connected-bodies-lifts"
+        ],
+        "questionIds": []
+      },
+      "coverageState": "partial",
+      "provenance": {
+        "source": "authored",
+        "groundedIn": [
+          "public/notes/mechanics-connected-bodies-lifts.md — 'These are a Newton's third-law pair acting on different bodies.'",
+          "public/notes/mechanics-f-equals-ma.md — 'Newton's third-law pair acts on different bodies.'"
+        ],
+        "authoredBy": "claude-opus-5",
+        "authoredAt": "2026-09-17"
+      },
+      "state": "active"
+    },
+    {
+      "code": "M4.1a-X03",
+      "syllabusCode": "M4.1a",
+      "title": "Force and its components both counted",
+      "description": "The student resolves a force and then keeps the original as well, so one force is counted twice (three arrows where there should be one, or two).",
+      "wrongIdea": "After resolving, the diagram carries the original force and both of its components as three independent forces.",
+      "whyWrong": "The components are the force, expressed along two axes. Keeping the original as well doubles its contribution and every equation that follows is too large.",
+      "correctUnderstanding": "Components replace the force they came from. Either use the original force, or its two components — never both in the same equation.",
+      "severity": 4,
+      "resolvesTo": {
+        "noteSlugs": [
+          "mechanics-resolving-forces-and-inclined-planes",
+          "mechanics-force-diagrams",
+          "mechanics-coefficient-of-friction-and-inclined-planes"
+        ],
+        "videoIds": [
+          "mechanics-resolving-forces-and-inclined-planes",
+          "mechanics-force-diagrams"
+        ],
+        "questionIds": []
+      },
+      "coverageState": "partial",
+      "provenance": {
+        "source": "authored",
+        "groundedIn": [
+          "public/notes/mechanics-resolving-forces-and-inclined-planes.md — 'Do not count the original and its components as three independent forces.'",
+          "public/notes/mechanics-force-diagrams.md — 'do not draw mg, mg sinθ and mg cosθ as three separate forces.'"
+        ],
+        "authoredBy": "claude-opus-5",
+        "authoredAt": "2026-09-17"
+      },
+      "state": "active"
+    },
+    {
+      "code": "M4.1a-X04",
+      "syllabusCode": "M4.1a",
+      "title": "Weight omitted because it was not mentioned",
+      "description": "The student includes only the forces the question names in words and leaves weight (or the normal contact force) off entirely.",
+      "wrongIdea": "If the question does not say 'weight' or give a value for it, weight is not one of the forces.",
+      "whyWrong": "Weight acts on every massive body whether or not the stem mentions it, and where there is contact there is a normal force. The vertical equation is then wrong, and with friction involved so is the horizontal one.",
+      "correctUnderstanding": "Start every diagram with weight mg downwards, add the normal contact force perpendicular to any surface, then add the forces the question names.",
+      "severity": 4,
+      "resolvesTo": {
+        "noteSlugs": [
+          "mechanics-force-diagrams",
+          "mechanics-types-of-forces"
+        ],
+        "videoIds": [
+          "mechanics-force-diagrams",
+          "mechanics-types-of-forces"
+        ],
+        "questionIds": []
+      },
+      "coverageState": "partial",
+      "provenance": {
+        "source": "authored",
+        "groundedIn": [
+          "public/notes/mechanics-force-diagrams.md — 'Common exam slips: forgetting weight because the question does not mention it explicitly.'"
+        ],
+        "authoredBy": "claude-opus-5",
+        "authoredAt": "2026-09-17"
+      },
+      "state": "active"
+    },
+    {
+      "code": "M4.1c-X01",
+      "syllabusCode": "M4.1c",
+      "title": "Balances across directions instead of within them",
+      "description": "The student checks equilibrium by comparing the horizontal total with the vertical total, rather than balancing each direction against itself.",
+      "wrongIdea": "For equilibrium the total horizontal force must equal the total vertical force.",
+      "whyWrong": "Equilibrium is two independent conditions. The vertical pair may legitimately be far stronger than the horizontal pair; nothing requires the two totals to match.",
+      "correctUnderstanding": "Resolve into two perpendicular directions and set the resultant to zero in each one separately. Two equations, solved together.",
+      "severity": 3,
+      "resolvesTo": {
+        "noteSlugs": [
+          "mechanics-equilibrium-in-2d",
+          "mechanics-equilibrium-in-1d"
+        ],
+        "videoIds": [
+          "mechanics-equilibrium-in-2d",
+          "mechanics-equilibrium-in-1d"
+        ],
+        "questionIds": []
+      },
+      "coverageState": "partial",
+      "provenance": {
+        "source": "authored",
+        "groundedIn": [
+          "public/notes/mechanics-equilibrium-in-2d.md — 'the horizontal total does not have to equal the vertical total.'"
+        ],
+        "authoredBy": "claude-opus-5",
+        "authoredAt": "2026-09-17"
+      },
+      "state": "active"
+    },
+    {
+      "code": "M4.1d-X01",
+      "syllabusCode": "M4.1d",
+      "title": "sin and cos swapped on a slope",
+      "description": "The student puts mg cosθ along the slope and mg sinθ perpendicular to it, reversing the two components of weight.",
+      "wrongIdea": "The component of weight down the slope is mg cosθ and the component pressing into the slope is mg sinθ.",
+      "whyWrong": "θ is measured between the slope and the horizontal, which puts it between the weight and the perpendicular to the slope. The component along the slope is therefore mg sinθ. Swapping them is self-consistent enough to look right and wrong at every angle except 45°.",
+      "correctUnderstanding": "Along the slope: mg sinθ. Perpendicular to the slope: mg cosθ. Sanity-check at θ → 0: a flat surface has no component along it, and sin 0 = 0.",
+      "severity": 5,
+      "resolvesTo": {
+        "noteSlugs": [
+          "mechanics-resolving-forces-and-inclined-planes",
+          "mechanics-coefficient-of-friction-and-inclined-planes"
+        ],
+        "videoIds": [
+          "mechanics-resolving-forces-and-inclined-planes",
+          "mechanics-coefficient-of-friction-and-inclined-planes"
+        ],
+        "questionIds": []
+      },
+      "coverageState": "partial",
+      "provenance": {
+        "source": "authored",
+        "groundedIn": [
+          "public/notes/mechanics-force-diagrams.md — 'mg vertically down, not perpendicular to the plane'",
+          "public/notes/mechanics-resolving-forces-and-inclined-planes.md"
+        ],
+        "authoredBy": "claude-opus-5",
+        "authoredAt": "2026-09-17"
+      },
+      "state": "active"
+    },
+    {
+      "code": "M4.1e-X01",
+      "syllabusCode": "M4.1e",
+      "title": "Friction is always μR",
+      "description": "The student writes F = μR for any rough contact, including a body at rest well below the limit, so friction comes out larger than the force it is supposed to be resisting.",
+      "wrongIdea": "On a rough surface the friction force equals μR, always.",
+      "whyWrong": "μR is the maximum friction available, not the friction acting. A stationary body takes only as much friction as it needs; a rough surface with no horizontal demand supplies zero friction.",
+      "correctUnderstanding": "f ≤ μR. Decide first whether the body is sliding or on the point of sliding. Only then is f = μR. Otherwise equilibrium determines f.",
+      "severity": 5,
+      "resolvesTo": {
+        "noteSlugs": [
+          "mechanics-coefficient-of-friction",
+          "mechanics-force-diagrams",
+          "mechanics-coefficient-of-friction-and-inclined-planes"
+        ],
+        "videoIds": [
+          "mechanics-coefficient-of-friction",
+          "mechanics-force-diagrams"
+        ],
+        "questionIds": []
+      },
+      "coverageState": "partial",
+      "provenance": {
+        "source": "authored",
+        "groundedIn": [
+          "public/notes/mechanics-coefficient-of-friction.md — 'In A, writing f = 20 N would be wrong. Only 12 N is needed to balance the pull.'",
+          "public/notes/mechanics-force-diagrams.md — 'Writing F = μR when friction is not stated to be limiting.'"
+        ],
+        "authoredBy": "claude-opus-5",
+        "authoredAt": "2026-09-17"
+      },
+      "state": "active"
+    },
+    {
+      "code": "M4.1e-X02",
+      "syllabusCode": "M4.1e",
+      "title": "Normal reaction is always mg",
+      "description": "The student uses R = mg when an applied force has a vertical component, or on a slope, so every friction value that follows is wrong.",
+      "wrongIdea": "The normal contact force equals the weight of the body.",
+      "whyWrong": "R is whatever the vertical (or perpendicular) equation makes it. An upward component of a pull shares the support and reduces R; a downward push increases it; on a slope R = mg cosθ.",
+      "correctUnderstanding": "Always write the perpendicular equation before touching friction. R = mg only when no other force has a perpendicular component and there is no perpendicular acceleration.",
+      "severity": 5,
+      "resolvesTo": {
+        "noteSlugs": [
+          "mechanics-coefficient-of-friction-f-equals-ma",
+          "mechanics-coefficient-of-friction-and-inclined-planes",
+          "mechanics-resolving-forces-and-inclined-planes"
+        ],
+        "videoIds": [
+          "mechanics-coefficient-of-friction-f-equals-ma",
+          "mechanics-coefficient-of-friction-and-inclined-planes"
+        ],
+        "questionIds": []
+      },
+      "coverageState": "partial",
+      "provenance": {
+        "source": "authored",
+        "groundedIn": [
+          "public/notes/mechanics-coefficient-of-friction-f-equals-ma.md — 'An upward component shares the support with the floor; a downward component increases the floor's support.'"
+        ],
+        "authoredBy": "claude-opus-5",
+        "authoredAt": "2026-09-17"
+      },
+      "state": "active"
+    },
+    {
+      "code": "M4.4a-X01",
+      "syllabusCode": "M4.4a",
+      "title": "Uses one force where the resultant is needed",
+      "description": "The student substitutes a single named force (the driving force, the pull) into F = ma and ignores the other forces acting along the same line.",
+      "wrongIdea": "The F in F = ma is the applied force named in the question.",
+      "whyWrong": "F = ma takes the resultant of every force in the chosen direction. Using the pull alone overstates the acceleration by exactly the resistance the student dropped.",
+      "correctUnderstanding": "Choose a positive direction, list every force along it, combine them into one resultant, then apply F = ma once.",
+      "severity": 5,
+      "resolvesTo": {
+        "noteSlugs": [
+          "mechanics-f-equals-ma",
+          "mechanics-force-diagrams"
+        ],
+        "videoIds": [
+          "mechanics-f-equals-ma",
+          "mechanics-force-diagrams"
+        ],
+        "questionIds": [
+          "M4.4e-001",
+          "M4.4b-002"
+        ]
+      },
+      "coverageState": "covered",
+      "provenance": {
+        "source": "authored",
+        "groundedIn": [
+          "public/notes/mechanics-f-equals-ma.md — 'The force in F = ma is 2400 N, the resultant, not the driving force alone.'"
+        ],
+        "authoredBy": "claude-opus-5",
+        "authoredAt": "2026-09-17"
+      },
+      "state": "active"
+    },
+    {
+      "code": "M4.4a-X02",
+      "syllabusCode": "M4.4a",
+      "title": "Combines opposing forces by adding",
+      "description": "The student adds the magnitudes of forces that act in opposite directions instead of subtracting, treating the resultant as a total rather than a signed sum.",
+      "wrongIdea": "The resultant of a 12 N force right and a 4.5 N force left is 16.5 N.",
+      "whyWrong": "Force is a vector along the line of motion. Opposing forces partly cancel; adding them ignores the sign that the chosen positive direction fixes.",
+      "correctUnderstanding": "Fix a positive direction. Forces against it enter the sum negatively. 12 − 4.5 = 7.5 N in the positive direction.",
+      "severity": 4,
+      "resolvesTo": {
+        "noteSlugs": [
+          "mechanics-f-equals-ma",
+          "mechanics-equilibrium-in-1d"
+        ],
+        "videoIds": [
+          "mechanics-f-equals-ma",
+          "mechanics-equilibrium-in-1d"
+        ],
+        "questionIds": [
+          "M4.4a-003"
+        ]
+      },
+      "coverageState": "partial",
+      "provenance": {
+        "source": "authored",
+        "groundedIn": [
+          "public/notes/mechanics-f-equals-ma.md — 'With right positive, a driving force D to the right and resistance R to the left give D − R = ma.'",
+          "content/questions/mechanics-forces-f-equals-ma.json — M4.4a-003 feedbackIncorrect"
+        ],
+        "authoredBy": "claude-opus-5",
+        "authoredAt": "2026-09-17"
+      },
+      "state": "active"
+    },
+    {
+      "code": "M4.4a-X03",
+      "syllabusCode": "M4.4a",
+      "title": "Substitutes a speed or a distance for acceleration",
+      "description": "The student puts a velocity, a change in velocity, or an average speed straight into F = ma instead of first finding the acceleration from the kinematics.",
+      "wrongIdea": "The a in F = ma can be read off the question — it is the speed it reaches, or the change in speed, or distance ÷ time.",
+      "whyWrong": "Acceleration is the rate of change of velocity. 20 − 8 = 12 is a change in velocity, not an acceleration; 9 ÷ 3 = 3 is an average speed, not an acceleration. Both have the wrong units.",
+      "correctUnderstanding": "When the question gives distances or times, find a from a suvat equation first (v = u + at, or s = ut + ½at²), and only then use F = ma. Check the units say m s⁻².",
+      "severity": 5,
+      "resolvesTo": {
+        "noteSlugs": [
+          "mechanics-f-equals-ma",
+          "mechanics-suvat-in-1d",
+          "mechanics-deriving-suvat"
+        ],
+        "videoIds": [
+          "mechanics-f-equals-ma",
+          "mechanics-suvat-in-1d"
+        ],
+        "questionIds": [
+          "M4.4a-002",
+          "M4.4a-004"
+        ]
+      },
+      "coverageState": "covered",
+      "provenance": {
+        "source": "authored",
+        "groundedIn": [
+          "public/notes/mechanics-f-equals-ma.md — 'Acceleration is the link between the force equation and suvat.'",
+          "content/questions/mechanics-forces-f-equals-ma.json — M4.4a-002 and M4.4a-004 feedbackIncorrect"
+        ],
+        "authoredBy": "claude-opus-5",
+        "authoredAt": "2026-09-17"
+      },
+      "state": "active"
+    },
+    {
+      "code": "M4.4a-X04",
+      "syllabusCode": "M4.4a",
+      "title": "Mass and weight interchanged",
+      "description": "The student uses the weight in newtons where F = ma wants the mass in kilograms (or multiplies a mass by g a second time), typically producing an answer a factor of g out.",
+      "wrongIdea": "Mass and weight are the same quantity, so a 5 kg body can be written as 50 N in F = ma.",
+      "whyWrong": "Mass is the kilograms in F = ma; weight is a force, mg newtons, and belongs on the force side. Using one for the other multiplies or divides the answer by g.",
+      "correctUnderstanding": "m is always in kg on the right-hand side. Weight mg appears only as one of the forces on the left. If an answer is out by a factor of about 10, this is usually why.",
+      "severity": 4,
+      "resolvesTo": {
+        "noteSlugs": [
+          "mechanics-f-equals-ma",
+          "mechanics-types-of-forces",
+          "mechanics-si-units"
+        ],
+        "videoIds": [
+          "mechanics-f-equals-ma",
+          "mechanics-types-of-forces"
+        ],
+        "questionIds": []
+      },
+      "coverageState": "partial",
+      "provenance": {
+        "source": "authored",
+        "groundedIn": [
+          "public/notes/mechanics-f-equals-ma.md — 'Mass is measured in kg. Weight is the gravitational force, measured in N: W = mg.'"
+        ],
+        "authoredBy": "claude-opus-5",
+        "authoredAt": "2026-09-17"
+      },
+      "state": "active"
+    },
+    {
+      "code": "M4.4a-X05",
+      "syllabusCode": "M4.4a",
+      "title": "Deceleration taken as positive",
+      "description": "The student keeps acceleration positive because the body is still moving forwards, so the resultant force comes out in the wrong direction and a μ or a force is wrong in sign or magnitude.",
+      "wrongIdea": "The body is moving forwards, so its acceleration is positive; slowing down does not change the sign.",
+      "whyWrong": "Sign is fixed by the chosen positive direction, not by the direction of travel. A body slowing while moving in the positive direction has negative acceleration, and the resultant force points backwards.",
+      "correctUnderstanding": "Choose one positive direction and keep it for velocity, acceleration and every force. Slowing down in the positive direction means a < 0, so the resultant force is negative too.",
+      "severity": 4,
+      "resolvesTo": {
+        "noteSlugs": [
+          "mechanics-f-equals-ma",
+          "mechanics-connected-bodies-lifts",
+          "mechanics-force-diagrams"
+        ],
+        "videoIds": [
+          "mechanics-f-equals-ma",
+          "mechanics-connected-bodies-lifts"
+        ],
+        "questionIds": [
+          "M4.4e-002"
+        ]
+      },
+      "coverageState": "partial",
+      "provenance": {
+        "source": "authored",
+        "groundedIn": [
+          "public/notes/mechanics-f-equals-ma.md — 'A car moving right but slowing down has acceleration to the left: a < 0.'",
+          "public/notes/mechanics-connected-bodies-lifts.md — 'Direction of motion and direction of acceleration need not agree.'"
+        ],
+        "authoredBy": "claude-opus-5",
+        "authoredAt": "2026-09-17"
+      },
+      "state": "active"
+    },
+    {
+      "code": "M4.4b-X01",
+      "syllabusCode": "M4.4b",
+      "title": "Looks for the tension in the whole-system equation",
+      "description": "The student tries to find the tension in the tow bar or coupling from the equation for car and trailer together, where it has already cancelled.",
+      "wrongIdea": "The tension can be read off the equation for the combined system.",
+      "whyWrong": "The connection forces are an internal third-law pair. When the two bodies are treated as one, they cancel and the tension is not in the equation at all.",
+      "correctUnderstanding": "Two steps. Whole system to get the common acceleration; then isolate one body — usually the trailer — and apply F = ma to it alone to make the tension appear.",
+      "severity": 5,
+      "resolvesTo": {
+        "noteSlugs": [
+          "mechanics-connected-bodies-ropes-and-tow-bars"
+        ],
+        "videoIds": [
+          "mechanics-connected-bodies-ropes-and-tow-bars"
+        ],
+        "questionIds": [
+          "M4.4b-001",
+          "M4.4b-002"
+        ]
+      },
+      "coverageState": "covered",
+      "provenance": {
+        "source": "authored",
+        "groundedIn": [
+          "public/notes/mechanics-connected-bodies-ropes-and-tow-bars.md — 'The connection forces are internal to the combined system.'",
+          "content/questions/mechanics-forces-f-equals-ma.json — M4.4b-001 feedbackIncorrect"
+        ],
+        "authoredBy": "claude-opus-5",
+        "authoredAt": "2026-09-17"
+      },
+      "state": "active"
+    },
+    {
+      "code": "M4.4b-X02",
+      "syllabusCode": "M4.4b",
+      "title": "Wrong forces carried onto the isolated body",
+      "description": "Having isolated one body, the student drops the forces that act only on it (the trailer's own resistance) or applies the system's total resistance to it.",
+      "wrongIdea": "Once the acceleration is known, the isolated body only has the tension acting on it.",
+      "whyWrong": "Isolating changes which forces apply, not whether they exist. The trailer keeps its own resistance and its own weight; it loses the driving force and the car's resistance.",
+      "correctUnderstanding": "Redraw the isolated body from scratch. Ask of each force: does this act on THIS body? The tension enters; the other body's forces do not.",
+      "severity": 4,
+      "resolvesTo": {
+        "noteSlugs": [
+          "mechanics-connected-bodies-ropes-and-tow-bars",
+          "mechanics-force-diagrams"
+        ],
+        "videoIds": [
+          "mechanics-connected-bodies-ropes-and-tow-bars",
+          "mechanics-force-diagrams"
+        ],
+        "questionIds": [
+          "M4.4b-002"
+        ]
+      },
+      "coverageState": "partial",
+      "provenance": {
+        "source": "authored",
+        "groundedIn": [
+          "public/notes/mechanics-connected-bodies-ropes-and-tow-bars.md — 'Equal connection forces do not mean equal resultant forces: each vehicle has other forces acting on it.'",
+          "content/questions/mechanics-forces-f-equals-ma.json — M4.4b-002 feedbackIncorrect"
+        ],
+        "authoredBy": "claude-opus-5",
+        "authoredAt": "2026-09-17"
+      },
+      "state": "active"
+    },
+    {
+      "code": "M4.4c-X01",
+      "syllabusCode": "M4.4c",
+      "title": "Floor reaction equals weight in an accelerating lift",
+      "description": "The student gives the force from the lift floor as mg, because the person is standing on it, regardless of the lift's acceleration.",
+      "wrongIdea": "Standing on the floor means the floor pushes up with exactly the person's weight.",
+      "whyWrong": "R = mg only when the vertical acceleration is zero. Accelerating upwards needs an upward resultant, so R > mg; accelerating downwards needs a downward resultant, so R < mg.",
+      "correctUnderstanding": "Apply F = ma to the person alone, up positive: R − mg = ma. Then R = m(g + a), which reduces to mg only when a = 0.",
+      "severity": 5,
+      "resolvesTo": {
+        "noteSlugs": [
+          "mechanics-connected-bodies-lifts"
+        ],
+        "videoIds": [
+          "mechanics-connected-bodies-lifts"
+        ],
+        "questionIds": [
+          "M4.4c-001",
+          "M4.4c-002"
+        ]
+      },
+      "coverageState": "covered",
+      "provenance": {
+        "source": "authored",
+        "groundedIn": [
+          "public/notes/mechanics-connected-bodies-lifts.md — 'The upward reaction is less than the passenger's downward weight.'",
+          "content/questions/mechanics-forces-f-equals-ma.json — M4.4c-001, M4.4c-002"
+        ],
+        "authoredBy": "claude-opus-5",
+        "authoredAt": "2026-09-17"
+      },
+      "state": "active"
+    },
+    {
+      "code": "M4.4c-X02",
+      "syllabusCode": "M4.4c",
+      "title": "Cable tension applied to the passenger",
+      "description": "The student writes the passenger's equation with the cable tension in it, or the lift's equation without the passenger's contact force, mixing the two free bodies.",
+      "wrongIdea": "The cable holds the passenger up, so T appears in the passenger's equation.",
+      "whyWrong": "The cable is attached to the lift, not to the person. The only upward force on the passenger is the floor's contact force. The lift, in turn, feels the passenger pushing down on it.",
+      "correctUnderstanding": "Passenger alone: R − mg = ma. Lift alone: T − Mg − R = Ma. Both together: T − (M + m)g = (M + m)a, with R internal and gone.",
+      "severity": 3,
+      "resolvesTo": {
+        "noteSlugs": [
+          "mechanics-connected-bodies-lifts",
+          "mechanics-force-diagrams"
+        ],
+        "videoIds": [
+          "mechanics-connected-bodies-lifts",
+          "mechanics-force-diagrams"
+        ],
+        "questionIds": []
+      },
+      "coverageState": "partial",
+      "provenance": {
+        "source": "authored",
+        "groundedIn": [
+          "public/notes/mechanics-connected-bodies-lifts.md — 'Cable tension does not act directly on the passenger.'"
+        ],
+        "authoredBy": "claude-opus-5",
+        "authoredAt": "2026-09-17"
+      },
+      "state": "active"
+    },
+    {
+      "code": "M4.4d-X01",
+      "syllabusCode": "M4.4d",
+      "title": "One equation for the whole pulley system",
+      "description": "The student writes a single F = ma for both particles as though they moved in the same direction, instead of one equation per particle with each one's own positive direction.",
+      "wrongIdea": "The pulley system is one body, so one equation covers both masses.",
+      "whyWrong": "The string bends over the pulley, so the two particles move in opposite senses. A single vector equation for the pair is not valid; the shared quantities are the magnitude of the acceleration and the tension.",
+      "correctUnderstanding": "One equation per particle, each with its own direction of motion as positive: 30 − T = 3a and T − 20 = 2a. Add them to eliminate T.",
+      "severity": 5,
+      "resolvesTo": {
+        "noteSlugs": [
+          "mechanics-connected-bodies-pulleys"
+        ],
+        "videoIds": [
+          "mechanics-connected-bodies-pulleys"
+        ],
+        "questionIds": [
+          "M4.4d-001"
+        ]
+      },
+      "coverageState": "partial",
+      "provenance": {
+        "source": "authored",
+        "groundedIn": [
+          "public/notes/mechanics-connected-bodies-pulleys.md — 'Draw each particle separately and choose its own positive direction.'",
+          "content/questions/mechanics-forces-f-equals-ma.json — M4.4d-001 feedbackIncorrect"
+        ],
+        "authoredBy": "claude-opus-5",
+        "authoredAt": "2026-09-17"
+      },
+      "state": "active"
+    },
+    {
+      "code": "M4.4d-X02",
+      "syllabusCode": "M4.4d",
+      "title": "Hanging mass treated as a free fall",
+      "description": "The student takes the acceleration of a hanging particle as g, ignoring that the string makes it drag the connected mass along too.",
+      "wrongIdea": "The hanging mass falls freely, so a = g (or the tension equals its weight).",
+      "whyWrong": "The string is taut, so the hanging mass has to accelerate the mass on the table as well. The same driving weight now moves the total mass, so a < g and the tension is less than the hanging weight.",
+      "correctUnderstanding": "The driving force is the hanging weight; the mass being accelerated is the total. Write each body's equation, add to eliminate T: 60 = (4 + 6)a gives a = 6, not 10.",
+      "severity": 5,
+      "resolvesTo": {
+        "noteSlugs": [
+          "mechanics-connected-bodies-pulleys"
+        ],
+        "videoIds": [
+          "mechanics-connected-bodies-pulleys"
+        ],
+        "questionIds": [
+          "M4.4d-002"
+        ]
+      },
+      "coverageState": "partial",
+      "provenance": {
+        "source": "authored",
+        "groundedIn": [
+          "content/questions/mechanics-forces-f-equals-ma.json — M4.4d-002 'Do not use a = g.'",
+          "public/notes/mechanics-connected-bodies-pulleys.md"
+        ],
+        "authoredBy": "claude-opus-5",
+        "authoredAt": "2026-09-17"
+      },
+      "state": "active"
+    },
+    {
+      "code": "M4.4e-X01",
+      "syllabusCode": "M4.4e",
+      "title": "Friction computed as μ × mass",
+      "description": "The student writes the friction force as μm — the coefficient times the mass in kilograms — instead of μR, skipping the vertical equation entirely.",
+      "wrongIdea": "Friction is μ times the mass of the body.",
+      "whyWrong": "μ multiplies the normal contact force, a force in newtons, not a mass in kilograms. μm has the wrong units and is a factor of g too small on a horizontal floor.",
+      "correctUnderstanding": "Vertical equation first to get R (on a horizontal floor with no vertical component of the pull, R = mg), then f = μR, then the equation along the floor.",
+      "severity": 5,
+      "resolvesTo": {
+        "noteSlugs": [
+          "mechanics-coefficient-of-friction",
+          "mechanics-coefficient-of-friction-f-equals-ma"
+        ],
+        "videoIds": [
+          "mechanics-coefficient-of-friction",
+          "mechanics-coefficient-of-friction-f-equals-ma"
+        ],
+        "questionIds": [
+          "M4.4e-001"
+        ]
+      },
+      "coverageState": "partial",
+      "provenance": {
+        "source": "authored",
+        "groundedIn": [
+          "content/questions/mechanics-forces-f-equals-ma.json — M4.4e-001 'Friction is μR with R = mg = 80 N, not μm.'"
+        ],
+        "authoredBy": "claude-opus-5",
+        "authoredAt": "2026-09-17"
+      },
+      "state": "active"
+    },
+    {
+      "code": "M4.4e-X02",
+      "syllabusCode": "M4.4e",
+      "title": "Removed force still in the equation",
+      "description": "When a driving force or rope is released, the student keeps it in the equation of motion, or cannot see what decelerates the body once it has gone.",
+      "wrongIdea": "The pull that got the body moving is still acting after the rope is released.",
+      "whyWrong": "A released rope exerts nothing. After release the only horizontal force is friction, and it is the whole resultant, which is what makes the body decelerate.",
+      "correctUnderstanding": "Redraw the diagram at the moment the situation changes. Once the rope goes, μR = ma is the entire horizontal equation, with a found from the kinematics of the stopping distance.",
+      "severity": 4,
+      "resolvesTo": {
+        "noteSlugs": [
+          "mechanics-coefficient-of-friction-f-equals-ma",
+          "mechanics-force-diagrams",
+          "mechanics-coefficient-of-friction"
+        ],
+        "videoIds": [
+          "mechanics-coefficient-of-friction-f-equals-ma",
+          "mechanics-force-diagrams"
+        ],
+        "questionIds": [
+          "M4.4e-002"
+        ]
+      },
+      "coverageState": "partial",
+      "provenance": {
+        "source": "authored",
+        "groundedIn": [
+          "public/notes/mechanics-force-diagrams.md — 'If the engine is no longer driving, do not leave a forward driving force on the diagram.'",
+          "content/questions/mechanics-forces-f-equals-ma.json — M4.4e-002 feedbackIncorrect"
+        ],
+        "authoredBy": "claude-opus-5",
+        "authoredAt": "2026-09-17"
+      },
+      "state": "active"
+    }
+  ]
+}
