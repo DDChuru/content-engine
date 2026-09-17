@@ -221,3 +221,33 @@ expiry, auto-close, credit expiry, the 24h reveal-notification sweep), `middlewa
 and `lib/progress-convex.ts`. `lib/progress.ts` is untouched — its `ProgressStore`
 interface is the seam the Convex implementation slots behind, and changing its shape
 now would be the one change that makes the swap harder rather than easier.
+
+---
+
+## Clerk instance configuration (not in code — set on the instance)
+
+State that lives in Clerk, not the repo. Re-apply it on the **production instance**, which
+starts from Clerk's defaults and will otherwise reintroduce the problem below.
+
+**Phone collection is OFF.** The instance shipped with `auth_phone.required_for_sign_up: true`,
+which meant Clerk's own `<SignUp>` asked every student for a phone number *before* onboarding
+ran — collecting a minor's phone number in direct contradiction of §1 ("Not collected: …
+phone number"). Disabled 2026-09-17:
+
+```
+npx clerk@3.3.0 config patch --json '{"auth_phone":{
+  "required_for_sign_up": false, "used_for_sign_up": false,
+  "used_for_sign_in": false, "used_for_second_factor": false }}'
+```
+
+Verified by creating a user with an email address and no phone. Email remains required.
+`clerk config pull` prints the current state; `--dry-run` on a patch shows the diff first.
+
+**JWT template `convex`** — `aud: convex`, lifetime 3600, clock skew 5. Created via
+`POST /jwt_templates`. Convex trusts the issuer through `CLERK_JWT_ISSUER_DOMAIN`, set per
+Convex deployment, so production points at the production Clerk instance without a code change.
+**That env var is currently set on dev only** — `npx convex deploy` (which targets production)
+fails until it is set there too.
+
+**Phone OTP is a Phase 2 item** (PLAN §3): SMS costs money per send and is an abuse vector
+under paid ad traffic. If it is turned on later, turn it on for *sign-in*, not for sign-up.
