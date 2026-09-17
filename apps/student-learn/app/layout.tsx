@@ -38,7 +38,14 @@ export default function RootLayout({
         <link rel="stylesheet" href="/brand/fonts/fonts.css" />
       </head>
       <body className="min-h-screen bg-paper font-sans text-ink antialiased">
-        <ClerkProvider>
+        {/* Sign-in lives in this app, not on a Clerk-hosted page: the routes are
+            declared here so `auth.protect()` and every <SignInButton> agree. */}
+        <ClerkProvider
+          signInUrl="/sign-in"
+          signUpUrl="/sign-up"
+          signInFallbackRedirectUrl="/onboarding"
+          signUpFallbackRedirectUrl="/onboarding"
+        >
           <ConvexClientProvider>{children}</ConvexClientProvider>
         </ClerkProvider>
       </body>

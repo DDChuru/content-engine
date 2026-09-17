@@ -14,11 +14,23 @@ const isProtected = createRouteMatcher([
   '/teacher(.*)',
   '/admin(.*)',
   '/account(.*)',
+  '/onboarding(.*)',
+  '/guardian(.*)',
 ]);
 
-export default clerkMiddleware(async (auth, req) => {
-  if (isProtected(req)) await auth.protect();
-});
+export default clerkMiddleware(
+  async (auth, req) => {
+    // Redirect to our own sign-in page. Without an explicit signInUrl the
+    // middleware has nowhere to send an anonymous visitor and answers 404, which
+    // reads as a broken link rather than as "you need an account".
+    if (isProtected(req)) {
+      await auth.protect({
+        unauthenticatedUrl: new URL('/sign-in', req.url).toString(),
+      });
+    }
+  },
+  { signInUrl: '/sign-in', signUpUrl: '/sign-up' }
+);
 
 export const config = {
   matcher: [
