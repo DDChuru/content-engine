@@ -249,5 +249,17 @@ Convex deployment, so production points at the production Clerk instance without
 **That env var is currently set on dev only** — `npx convex deploy` (which targets production)
 fails until it is set there too.
 
+**Password minimum is 8, not 15.** The instance shipped with `min_length: 15`, which failed
+students on the very first screen after acquisition. Lowered 2026-09-17:
+
+```
+npx clerk@3.3.0 config patch --json '{"auth_password":{"min_length":8}}'
+```
+
+This is not a security downgrade. Breach checking (HIBP) is on at both sign-up and sign-in,
+and no composition rules are set — which is the current NIST position: length minimums plus
+composition rules push people toward predictable patterns, while breach-list checking blocks
+the passwords that are actually used in attacks. 8 is also Clerk's own default.
+
 **Phone OTP is a Phase 2 item** (PLAN §3): SMS costs money per send and is an abuse vector
 under paid ad traffic. If it is turned on later, turn it on for *sign-in*, not for sign-up.
