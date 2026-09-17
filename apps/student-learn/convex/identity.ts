@@ -20,6 +20,7 @@ import {
   AuthError,
 } from './lib/auth';
 import { revealTriggerValidator } from './schema';
+import { resolveEnrolment, type ResolvedEnrolment } from '../lib/exam-catalogue';
 
 const HOUR = 60 * 60 * 1000;
 const DAY = 24 * HOUR;
@@ -69,15 +70,28 @@ export async function allocateTeacherCode(ctx: MutationCtx): Promise<string> {
  * A self-service caller may only become a student or a guardian. Teachers are
  * created by `promoteToTeacher` (admin-only) and verified by hand (§11.4).
  */
+export const enrolmentInputValidator = v.object({
+  bodyId: v.string(),
+  levelId: v.string(),
+  sessionId: v.string(),
+  subjectIds: v.array(v.string()),
+});
+
 export const registerSelf = mutation({
   args: {
     role: v.union(v.literal('student'), v.literal('guardian')),
     firstName: v.string(),
-    yearGroup: v.optional(v.string()),
     ageBand: v.optional(
       v.union(v.literal('under13'), v.literal('13-17'), v.literal('18plus'))
     ),
     country: v.optional(v.string()),
+    /**
+     * Required for a student, refused for a guardian. The client sends ids only
+     * (`{ bodyId, levelId, sessionId, subjectIds }`); every title, code and
+     * availability flag is resolved server-side from lib/exam-catalogue.ts, so a
+     * crafted request cannot invent a subject or claim one is available.
+     */
+    enrolment: v.optional(enrolmentInputValidator),
     termsVersion: v.string(),
     privacyVersion: v.string(),
   },
@@ -97,6 +111,24 @@ export const registerSelf = mutation({
       throw new AuthError('This service is for students aged 13 and over.');
     }
 
+    let enrolment: ResolvedEnrolment | null = null;
+    if (args.role === 'student') {
+      // ageBand is REQUIRED for a student even though the column is optional:
+      // everything downstream reads a missing band as "adult" (session.status
+      // `isMinor`), so an absent band silently disables the guardian gate that
+      // §0 amendment A exists to build. Refuse the registration instead.
+      if (!args.ageBand) {
+        throw new AuthError('Tell us your age band before we create the account.');
+      }
+      if (!args.enrolment) {
+        throw new AuthError('Choose the exam you are sitting.');
+      }
+      // Throws on an unknown body/level/session/subject, or on zero subjects.
+      enrolment = resolveEnrolment(args.enrolment);
+    } else if (args.enrolment) {
+      throw new AuthError('A guardian account does not sit exams.');
+    }
+
     const firstName = args.firstName.trim().slice(0, 40);
     if (!firstName) throw new AuthError('First name required.');
 
@@ -105,7 +137,6 @@ export const registerSelf = mutation({
       authSubject: identity.subject,
       role: args.role,
       firstName,
-      yearGroup: args.yearGroup,
       ageBand: args.ageBand,
       country: args.country,
       // A minor's contact details are not mirrored into Convex at all; Clerk holds
@@ -116,6 +147,8 @@ export const registerSelf = mutation({
           : undefined,
       createdAt: now,
     });
+
+    if (enrolment) await insertEnrolment(ctx, userId, enrolment, now);
 
     for (const [kind, documentVersion] of [
       ['terms', args.termsVersion],
@@ -130,6 +163,80 @@ export const registerSelf = mutation({
       });
     }
     return userId;
+  },
+});
+
+/**
+ * Write an enrolment and its demand rows. One place, so registration and a later
+ * change of sitting cannot drift apart on what gets counted.
+ */
+async function insertEnrolment(
+  ctx: MutationCtx,
+  studentId: Id<'users'>,
+  enrolment: ResolvedEnrolment,
+  now: number
+): Promise<Id<'enrolments'>> {
+  const enrolmentId = await ctx.db.insert('enrolments', {
+    studentId,
+    bodyId: enrolment.bodyId,
+    levelId: enrolment.levelId,
+    sessionId: enrolment.sessionId,
+    sessionYear: enrolment.sessionYear,
+    sessionSeries: enrolment.sessionSeries,
+    subjects: enrolment.subjects,
+    status: 'active',
+    createdAt: now,
+  });
+
+  // Every pick, available or not. The missing ones are the roadmap (§8); the
+  // available ones are the denominator that makes the missing ones a ratio.
+  for (const subject of enrolment.subjects) {
+    await ctx.db.insert('subjectDemand', {
+      studentId,
+      enrolmentId,
+      bodyId: enrolment.bodyId,
+      levelId: enrolment.levelId,
+      sessionId: enrolment.sessionId,
+      subjectId: subject.subjectId,
+      subjectCode: subject.code,
+      subjectTitle: subject.title,
+      wasAvailable: subject.availability === 'available',
+      availability: subject.availability,
+      createdAt: now,
+    });
+  }
+  return enrolmentId;
+}
+
+/**
+ * Change what you are sitting. The old row is SUPERSEDED, never edited: a resit
+ * in November and the June sitting it follows are two facts, and overwriting the
+ * first destroys the only record of what the student was told at the time.
+ */
+export const changeEnrolment = mutation({
+  args: { enrolment: enrolmentInputValidator },
+  handler: async (ctx, args) => {
+    const student = await requireRole(ctx, 'student');
+    const resolved = resolveEnrolment(args.enrolment);
+    const now = Date.now();
+
+    const newId = await insertEnrolment(ctx, student._id, resolved, now);
+
+    const previous = await ctx.db
+      .query('enrolments')
+      .withIndex('by_student_status', (q) =>
+        q.eq('studentId', student._id).eq('status', 'active')
+      )
+      .collect();
+    for (const row of previous) {
+      if (row._id === newId) continue;
+      await ctx.db.patch(row._id, {
+        status: 'superseded' as const,
+        supersededBy: newId,
+        endedAt: now,
+      });
+    }
+    return newId;
   },
 });
 
@@ -330,7 +437,6 @@ export const readRevealedCandidate = mutation({
     return {
       candidateCode: grant.candidateCode,
       firstName: student?.firstName ?? null,
-      yearGroup: student?.yearGroup ?? null,
       country: student?.country ?? null,
       expiresAt: grant.expiresAt,
     };
@@ -392,7 +498,6 @@ export const me = query({
     return {
       role: user.role,
       firstName: user.firstName,
-      yearGroup: user.yearGroup,
       teacherCode: user.teacherCode,
       verified: Boolean(user.verifiedAt) && !user.suspendedAt,
       approvedTopicCodes: user.approvedTopicCodes ?? [],

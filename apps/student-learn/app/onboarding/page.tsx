@@ -13,7 +13,13 @@ import {
   secondaryButtonClass,
 } from '@/components/auth-shell';
 import { GateWaiting } from '@/components/registration-gate';
-import { COUNTRIES, PRIVACY_VERSION, TERMS_VERSION, examYears } from '@/lib/policy';
+import { COUNTRIES, PRIVACY_VERSION, TERMS_VERSION } from '@/lib/policy';
+import {
+  EMPTY_ENROLMENT,
+  ExamEnrolmentPicker,
+  enrolmentComplete,
+  type EnrolmentDraft,
+} from '@/components/exam-enrolment-picker';
 
 type Role = 'student' | 'guardian';
 type AgeBand = 'under13' | '13-17' | '18plus';
@@ -35,7 +41,7 @@ export default function OnboardingPage() {
 
   const [role, setRole] = useState<Role | null>(null);
   const [firstName, setFirstName] = useState('');
-  const [examYear, setExamYear] = useState('');
+  const [enrolment, setEnrolment] = useState<EnrolmentDraft>(EMPTY_ENROLMENT);
   const [ageBand, setAgeBand] = useState<AgeBand | ''>('');
   const [country, setCountry] = useState('');
   const [error, setError] = useState<string | null>(null);
@@ -59,7 +65,7 @@ export default function OnboardingPage() {
   const complete =
     firstName.trim().length > 0 &&
     country !== '' &&
-    (!isStudent || (examYear !== '' && ageBand !== '' && !under13));
+    (!isStudent || (enrolmentComplete(enrolment) && ageBand !== '' && !under13));
 
   async function submit(e: React.FormEvent) {
     e.preventDefault();
@@ -69,8 +75,15 @@ export default function OnboardingPage() {
       await registerSelf({
         role: chosenRole,
         firstName: firstName.trim(),
-        yearGroup: isStudent ? examYear : undefined,
         ageBand: isStudent ? (ageBand as AgeBand) : undefined,
+        enrolment: isStudent
+          ? {
+              bodyId: enrolment.bodyId,
+              levelId: enrolment.levelId,
+              sessionId: enrolment.sessionId,
+              subjectIds: enrolment.subjectIds,
+            }
+          : undefined,
         country,
         termsVersion: TERMS_VERSION,
         privacyVersion: PRIVACY_VERSION,
@@ -89,7 +102,11 @@ export default function OnboardingPage() {
   return (
     <AuthShell
       eyebrow={isStudent ? 'Student account' : 'Parent or guardian account'}
-      title={isStudent ? 'Four questions, then you are in' : 'Two questions, then you are in'}
+      title={
+        isStudent
+          ? 'Tell us what you are sitting, then you are in'
+          : 'Two questions, then you are in'
+      }
       lede={
         <>
           Each one is here for a reason, and the reason is written under it. If a
@@ -144,28 +161,7 @@ export default function OnboardingPage() {
 
         {isStudent ? (
           <>
-            <div>
-              <FieldLabel htmlFor="examYear">Exam year</FieldLabel>
-              <select
-                id="examYear"
-                name="examYear"
-                value={examYear}
-                onChange={(e) => setExamYear(e.target.value)}
-                required
-                className={inputClass}
-              >
-                <option value="">Choose a year…</option>
-                {examYears().map((y) => (
-                  <option key={y} value={y}>
-                    {y}
-                  </option>
-                ))}
-              </select>
-              <WhyNote>
-                So we can pace the syllabus against your sitting and not show you
-                a topic you have not met yet. A year, not a birthday.
-              </WhyNote>
-            </div>
+            <ExamEnrolmentPicker value={enrolment} onChange={setEnrolment} />
 
             <fieldset>
               <legend className="block text-sm font-semibold text-ink">Age band</legend>

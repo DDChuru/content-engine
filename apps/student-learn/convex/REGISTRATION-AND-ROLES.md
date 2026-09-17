@@ -7,20 +7,27 @@
 
 ## 1. What a student provides — and what they do not
 
-**Collected:** first name, year group, self-declared age band, country, and whatever
-Clerk holds for the sign-in factor (a Google account or an email address).
+**Collected:** first name, an **exam enrolment** (board → level → session → subjects),
+self-declared age band, country, and whatever Clerk holds for the sign-in factor (a
+Google account or an email address).
 
 **Not collected:** surname, school, date of birth, address, photograph, phone number,
 ID number.
 
 **Challenge to the plan, and where it holds.** §4 says "first name and year only".
-That is right for what teachers and the product need, but two fields have to be added
-to make the rest of the plan legal and operable:
+A bare year answered none of "which board", "which level" or "which series", and boards
+set different papers under the same subject name — so "year" is now an `enrolments` row
+(`lib/exam-catalogue.ts` + `convex/schema.ts`). It is a row and not a column because a
+student resits, and sits a new session the next year; a mutable field would overwrite the
+history. Two further fields have to be added to make the rest of the plan legal and
+operable:
 
 - **`ageBand`** — §11 turns on "most users are 16-18". You cannot apply a
   guardian-consent rule to minors without knowing who is one. A *band*
   (`under13` / `13-17` / `18plus`) is the minimum that answers it. A full date of
-  birth is a stronger identifier and buys nothing.
+  birth is a stronger identifier and buys nothing. **Required for `role: 'student'`**,
+  enforced in `registerSelf`: `session.status` reads a missing band as an adult, so an
+  absent band silently disables the guardian gate that §0 amendment A exists to build.
 - **`country`** — POPIA (South Africa) and Zimbabwe's Data Protection Act differ on
   consent age and on breach notification. Which regime applies is not derivable from
   anything else we hold, and guessing from an IP address is both wrong and worse.
@@ -34,6 +41,14 @@ record is the compliance artefact.
 so the student's own screens address a person ("Nice work, Tanaka") and so a guardian
 redeeming a link code sees who they just linked to. First name alone is weak enough to
 be near-useless to an attacker who breaches the database and strong enough for both.
+
+**Subjects we do not have are still selectable, and that is deliberate.** The library
+covers one subject (Cambridge A Level Mathematics 9709) and one unit of it. A student may
+still enrol in Physics; the pick is written to `subjectDemand`, which is §8's gap
+aggregation one step earlier in the funnel — measured demand before a single mark exists.
+The rule that makes this honest rather than a bait: `availability` is *derived* from
+`lib/syllabus.ts`, never hand-declared, and the picker prints each subject's state on its
+own row in the same type size as the subject name.
 
 **`under13` is refused at registration**, not accommodated. Both regimes treat
 under-13 data as a distinct and heavier category, the syllabus is A-Level, and the

@@ -74,9 +74,16 @@ export default defineSchema({
 
     // -- what we collect from a student: first name + year. Nothing else. --
     firstName: v.string(),
-    /** School year/form, e.g. "Lower 6". Not a date of birth — see §5 of the doc. */
-    yearGroup: v.optional(v.string()),
-    /** Self-declared age band. Drives the consent gate, not identity. */
+    // `yearGroup: v.optional(v.string())` lived here and is GONE. A sitting is
+    // (body, level, session, subjects) and changes between sittings — it was
+    // never one mutable string. See the `enrolments` table below, and
+    // `migrations:backfillEnrolments` for how the two rows that held one moved.
+    /**
+     * Self-declared age band. Drives the consent gate, not identity.
+     * REQUIRED for role 'student' — enforced in `registerSelf`, because the
+     * payment gate (§0 amendment A) hangs on it and `undefined` silently means
+     * "adult" everywhere downstream. Optional here only for guardians/teachers.
+     */
     ageBand: v.optional(
       v.union(v.literal('under13'), v.literal('13-17'), v.literal('18plus'))
     ),
@@ -127,6 +134,104 @@ export default defineSchema({
     .index('by_teacher_code', ['teacherCode'])
     // the claim queue needs "verified, unsuspended teachers" cheaply
     .index('by_role_verified', ['role', 'verifiedAt']),
+
+  // -------------------------------------------------------------------------
+  // enrolments — WHAT a student is sitting: body → level → session → subjects
+  // -------------------------------------------------------------------------
+  // A row, not a column on `users`, for three reasons:
+  //
+  //  1. A sitting is a tuple, not a scalar. "2027" answered none of "which board",
+  //     "which level", "which series", "which subjects".
+  //  2. It is not single-valued over time. A student resits in November what they
+  //     failed in June, and sits AS this year and A2 the next. A mutable field
+  //     would overwrite the very history the §8 demand signal is made of.
+  //  3. It is the demand signal. Counting "how many students are sitting 9702 in
+  //     Oct/Nov 2027" is an index scan here and impossible on an overwritten field.
+  //
+  // Superseding, not editing: changing your sitting writes a new row and marks the
+  // old one `superseded`, matching the append-only rule the rest of the schema uses.
+  enrolments: defineTable({
+    studentId: v.id('users'),
+
+    /** lib/exam-catalogue.ts ids. Validated against the catalogue server-side. */
+    bodyId: v.string(), // 'cambridge' | 'zimsec' | 'edexcel' | ...
+    levelId: v.string(), // 'a-level' | 'o-level' | 'igcse' | ...
+    /** Composite session id, e.g. "2027-oct-nov". Denormalised below for indexes. */
+    sessionId: v.string(),
+    sessionYear: v.number(),
+    /** Series slug within the body, e.g. 'may-june' | 'oct-nov' | 'november'. */
+    sessionSeries: v.string(),
+
+    /**
+     * The chosen subjects, snapshotted. Title and availability are copied in on
+     * purpose: a statement about what a student was told at registration must not
+     * change because the catalogue was later edited or a subject went live.
+     */
+    subjects: v.array(
+      v.object({
+        subjectId: v.string(), // catalogue id, unique within body+level
+        /** Syllabus code where the body uses one ("9709"). Absent where it does not. */
+        code: v.optional(v.string()),
+        title: v.string(),
+        /** What the UI told them at the time. See lib/exam-catalogue.ts. */
+        availability: v.union(
+          v.literal('available'),
+          v.literal('in_progress'),
+          v.literal('planned')
+        ),
+      })
+    ),
+
+    status: v.union(
+      v.literal('active'),
+      v.literal('superseded'),
+      v.literal('withdrawn')
+    ),
+    supersededBy: v.optional(v.id('enrolments')),
+    createdAt: v.number(),
+    endedAt: v.optional(v.number()),
+  })
+    .index('by_student_status', ['studentId', 'status'])
+    .index('by_student_created', ['studentId', 'createdAt'])
+    // "who is sitting this, when" — the cohort view behind pacing and demand
+    .index('by_body_level_session', ['bodyId', 'levelId', 'sessionId']),
+
+  // -------------------------------------------------------------------------
+  // subjectDemand — one row per subject picked. The §8 logic, one step earlier
+  // -------------------------------------------------------------------------
+  // §8 aggregates diagnosed gaps into a content roadmap. This aggregates *asked
+  // for and not there* into the same roadmap, before a single mark exists —
+  // which is the only signal available while the library covers one unit of one
+  // subject.
+  //
+  // Every pick is recorded, not only the missing ones, because "40 wanted 9709,
+  // 38 wanted 9702" is a ratio and the denominator has to be real.
+  subjectDemand: defineTable({
+    studentId: v.id('users'),
+    enrolmentId: v.id('enrolments'),
+    bodyId: v.string(),
+    levelId: v.string(),
+    sessionId: v.string(),
+    subjectId: v.string(),
+    subjectCode: v.optional(v.string()),
+    subjectTitle: v.string(),
+    /** Availability at the moment of asking. `false` = the thing to build. */
+    wasAvailable: v.boolean(),
+    availability: v.union(
+      v.literal('available'),
+      v.literal('in_progress'),
+      v.literal('planned')
+    ),
+    /** Set when the subject ships and the student is told (mirrors coverageMisses). */
+    notifiedAt: v.optional(v.number()),
+    createdAt: v.number(),
+  })
+    // the ranking: "what is asked for and missing, most recently"
+    .index('by_available_created', ['wasAvailable', 'createdAt'])
+    .index('by_subject_created', ['subjectId', 'createdAt'])
+    .index('by_body_level_subject', ['bodyId', 'levelId', 'subjectId'])
+    // deduplicate by student, per §8
+    .index('by_student', ['studentId']),
 
   // -------------------------------------------------------------------------
   // guardianLinks — guardian ↔ student, via a code the STUDENT generates (§4)

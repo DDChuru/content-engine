@@ -37,13 +37,34 @@ export const status = query({
       return { signedIn: true as const, registered: false as const, user: null };
     }
 
+    // The active sitting, if any. A guardian has none; a student always has one
+    // after `registerSelf`, and may have superseded rows behind it.
+    const enrolment =
+      user.role === 'student'
+        ? await ctx.db
+            .query('enrolments')
+            .withIndex('by_student_status', (q) =>
+              q.eq('studentId', user._id).eq('status', 'active')
+            )
+            .first()
+        : null;
+
     return {
       signedIn: true as const,
       registered: true as const,
       user: {
         role: user.role,
         firstName: user.firstName,
-        yearGroup: user.yearGroup ?? null,
+        enrolment: enrolment
+          ? {
+              bodyId: enrolment.bodyId,
+              levelId: enrolment.levelId,
+              sessionId: enrolment.sessionId,
+              sessionYear: enrolment.sessionYear,
+              sessionSeries: enrolment.sessionSeries,
+              subjects: enrolment.subjects,
+            }
+          : null,
         ageBand: user.ageBand ?? null,
         country: user.country ?? null,
         // A minor is anyone who has not declared 18plus. Undefined is treated as

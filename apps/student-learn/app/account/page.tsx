@@ -7,6 +7,7 @@ import { api } from '@/convex/_generated/api';
 import { AuthShell, secondaryButtonClass } from '@/components/auth-shell';
 import { RegistrationGate } from '@/components/registration-gate';
 import { COUNTRIES } from '@/lib/policy';
+import { AVAILABILITY_LABEL, describeEnrolment } from '@/lib/exam-catalogue';
 
 export default function AccountPage() {
   return (
@@ -45,10 +46,37 @@ function Account() {
       <dl className="divide-y divide-grid-line border-y border-grid-line">
         <Row label="First name" value={user.firstName} />
         <Row label="Account type" value={user.role === 'guardian' ? 'Parent or guardian' : 'Student'} />
-        {isStudent ? <Row label="Exam year" value={user.yearGroup ?? '—'} /> : null}
+        {isStudent ? (
+          <Row
+            label="Sitting"
+            value={user.enrolment ? describeEnrolment(user.enrolment) : '—'}
+          />
+        ) : null}
         {isStudent ? <Row label="Age band" value={ageBandLabel(user.ageBand)} /> : null}
         <Row label="Country" value={countryLabel(user.country)} />
       </dl>
+
+      {isStudent && user.enrolment ? (
+        <section className="mt-6">
+          <h2 className="font-heading text-lg font-semibold text-ink">Your subjects</h2>
+          <ul className="mt-2 space-y-1.5">
+            {user.enrolment.subjects.map((s) => (
+              <li key={s.subjectId} className="text-sm text-ink">
+                <span className="font-semibold">{s.title}</span>
+                {s.code ? <span className="text-ink-muted"> {s.code}</span> : null}
+                <span className="block text-[0.8rem] text-ink-muted">
+                  {AVAILABILITY_LABEL[s.availability]}
+                </span>
+              </li>
+            ))}
+          </ul>
+          <p className="mt-3 text-[0.8rem] leading-relaxed text-ink-muted">
+            Where a subject is not ready, we have recorded that you asked for it.
+            That list is what decides the order things get written in, and you
+            will be told when one of yours lands.
+          </p>
+        </section>
+      ) : null}
 
       <p className="mt-4 text-[0.8rem] leading-relaxed text-ink-muted">
         Not held: your surname, your school, your date of birth, your address or

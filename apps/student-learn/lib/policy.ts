@@ -26,8 +26,8 @@ export const COUNTRIES = [
   { code: 'OTHER', label: 'Somewhere else' },
 ] as const;
 
-/** Exam years offered. A year, not a date of birth. */
-export function examYears(now = new Date()): string[] {
-  const y = now.getFullYear();
-  return [String(y), String(y + 1), String(y + 2)];
-}
+/*
+ * Exam years used to live here as a bare list of the next three calendar years.
+ * A year alone answered none of "which board", "which level" or "which series",
+ * so it has been replaced by `lib/exam-catalogue.ts`, which asks all four.
+ */
