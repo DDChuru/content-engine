@@ -66,6 +66,44 @@ The backend already exists; this is the missing face of it.
 - **Watch:** per amendment J, **coverage state must not be visible in the picker** or teachers
   are paid to misdiagnose.
 
+#### W1 inherits five verified security findings — read before writing a line
+
+A cross-engine review (3 rounds, Codex reviewing Claude) found these in `convex/submissions.ts`.
+They were deliberately NOT fixed because that file has no UI yet and W1 rebuilds on it. They are
+verified, with exploit paths. **Do not rediscover them; do not ship without closing them.**
+
+1. **The queue hands out full work before any claim.** `queue` returns `toTeacherView` for up to
+   50 submissions — redacted images, typed answers, candidate codes, prior context — with no claim
+   required. That is browsing, not "take the next item", and it lets a marker shop for students.
+   Return minimal metadata before claim; the full view comes only with a live claim.
+
+2. **Access outlives the claim, and completed work can be reopened.** `getForMarking` only applies
+   expiry when `status === 'claimed'`, so a teacher whose `claimedBy` is still set can read
+   `marked`, `returned`, `queried`, `closed` and `refunded` submissions indefinitely. `release`
+   has no status guard at all and can push completed or refunded work back to `queued` with its
+   mark still attached.
+
+3. **The rotation cap is erasable, so it is not a cap.** `rotationCapReached` counts mutable
+   `claimedBy`/`claimedAt`. Both voluntary release and expiry clear those fields. Claim, read,
+   release, repeat — the counter never rises. **It needs an append-only assignment history**, not a
+   count of current state.
+
+4. **Prior context is a cross-submission fingerprint.** `buildContext` returns exact attempt count,
+   last mark and latest misconception. Two queued submissions from one student carry the same
+   tuple; sequential ones form an incrementing series. That makes per-submission candidate codes
+   linkable, which defeats the whole point of them. It also counts drafts and rejected work,
+   because no status filter is applied.
+
+5. **Teacher-visible strings are unsanitised.** `createDraft` takes client-controlled `questionId`
+   and `topicCode` and `toTeacherView` returns them verbatim, as it does `typedFinalAnswer`. A
+   student typing their name or email into the answer field walks straight past the image
+   redaction boundary. Re-resolve identifiers server-side; filter every free-text field a teacher
+   sees, using the same contact-detail filter as the thread.
+
+Confirmed still holding, so do not regress them: no teacher-callable endpoint returns `studentId`,
+a name, an email or `originalStorageId`; every teacher endpoint requires a verified, unsuspended
+teacher row; clients cannot self-register as teacher or admin.
+
 ### W2 — Exercise questions at scale
 The coverage gate is at **19%** against an 80% requirement. This is the path to charging.
 - **Owns:** `content/questions/**`, `scripts/build-exercise-questions.py`
