@@ -705,7 +705,7 @@ async function locate(ctx: MutationCtx, args: EntityArgs) {
 }
 
 /**
- * The enrolment rows that could possibly match an entity reference.
+ * How many students are sitting this right now.
  *
  * WHY THIS IS NOT `.collect()` ON THE WHOLE TABLE. Retirement used to count by
  * reading every enrolment ever written. That is a control that gets SLOWER as the
@@ -714,96 +714,144 @@ async function locate(ctx: MutationCtx, args: EntityArgs) {
  * for everyone, permanently, with no way to tidy the catalogue at all. A safety
  * check that fails closed under load is worse than the risk it covers.
  *
- * Two things bound it now:
+ * WHY IT IS NO LONGER A CAPPED SCAN OF CANDIDATES EITHER. The version before
+ * this one read a page of rows that merely shared a board and level, then kept
+ * the `active` ones. Two things followed from filtering after the cap. The count
+ * was a floor rather than a total whenever the board was busy — and, far worse,
+ * a page filled by OTHER subjects' rows returned zero while the real enrolments
+ * sat just past the cap. `retire` refused only on a non-zero count, so a subject
+ * a cohort was mid-way through could be retired in silence. Truncation was being
+ * read as "nobody", when all it ever meant was "not known".
  *
- *  1. The `by_body_level_session` index. Every entity except a country reference
- *     names a board, and most name a level too, so the scan is over that board's
- *     enrolments rather than the table.
- *  2. A hard read cap. Whatever the index leaves, at most SCAN_CAP rows are read.
- *     Past that the count is reported as a floor ("at least N"), which is all the
- *     confirmation step ever needed: the admin is deciding whether a cohort is
- *     mid-year, and "at least 500" answers that as well as an exact 4,132 does.
+ * Both halves are fixed here:
  *
- * A country or country↔board reference still scans unindexed, because `enrolments`
- * has no index on `countryCode` — see the note in the retire mutation.
+ *  1. `status` leads every index used below (schema.ts, `enrolments`), so the
+ *     cap applies to MATCHING ACTIVE ROWS, not to candidates. For a country, a
+ *     country/board pair, a board, a level or a series the index prefix decides
+ *     the whole predicate and the count is EXACT.
+ *  2. `subject` is the one entity that cannot be index-exact, because `subjects`
+ *     is an array and Convex does not index array membership. It narrows on
+ *     status + board + level and filters the array in memory, so it alone can
+ *     still truncate — and truncation is now reported as `atLeast` on a count the
+ *     caller must treat as UNKNOWN, never as safe. See `retire`.
+ *
+ * ACTIVE enrolments only — a superseded or withdrawn row is history, and history
+ * is precisely what retirement must not disturb.
  */
 const SCAN_CAP = 1000;
 
-async function candidateEnrolments(
-  ctx: MutationCtx | QueryCtx,
-  args: EntityArgs
-) {
-  const table = ctx.db.query('enrolments');
-  // `by_body_level_session` is [bodyId, levelId, sessionId]: usable as a prefix.
-  const narrowed =
-    args.bodyId === undefined
-      ? table
-      : args.levelId === undefined
-        ? ctx.db
-            .query('enrolments')
-            .withIndex('by_body_level_session', (q) => q.eq('bodyId', args.bodyId!))
-        : ctx.db
-            .query('enrolments')
-            .withIndex('by_body_level_session', (q) =>
-              q.eq('bodyId', args.bodyId!).eq('levelId', args.levelId!)
-            );
-  const rows = await narrowed.take(SCAN_CAP + 1);
-  return { rows: rows.slice(0, SCAN_CAP), truncated: rows.length > SCAN_CAP };
-}
-
-/**
- * How many students are sitting this right now.
- *
- * ACTIVE enrolments only — a superseded or withdrawn row is history, and history
- * is precisely what retirement must not disturb. This is the number the admin is
- * shown before they are allowed to take something out of the picker. `atLeast`
- * marks a count that hit the read cap and is therefore a floor, not a total.
- */
 async function countActiveEnrolments(
   ctx: MutationCtx | QueryCtx,
   args: EntityArgs
 ): Promise<{ count: number; atLeast: boolean }> {
-  const { rows, truncated } = await candidateEnrolments(ctx, args);
-  const active = rows.filter((e) => e.status === 'active');
-  return { count: countFromRows(active, args), atLeast: truncated };
-}
+  const country = args.countryCode?.toUpperCase();
 
-/** The counting rule itself, shared by the mutation and the read-only query. */
-function countFromRows(
-  active: { countryCode?: string; bodyId: string; levelId: string; sessionSeries: string; subjects: { subjectId: string }[] }[],
-  args: EntityArgs
-): number {
+  /** Index-exact: the prefix IS the predicate, so the page size is the answer. */
+  const exact = async (
+    rows: Promise<{ _id: unknown }[]>
+  ): Promise<{ count: number; atLeast: boolean }> => {
+    const page = await rows;
+    // A count past the cap is still a refusal — `retire` only ever asks whether
+    // the number is zero — so reporting it as a floor costs nothing and keeps
+    // the transaction bounded.
+    return page.length > SCAN_CAP
+      ? { count: SCAN_CAP, atLeast: true }
+      : { count: page.length, atLeast: false };
+  };
+
   switch (args.entity) {
     case 'country':
-      return active.filter(
-        (e) => e.countryCode === args.countryCode?.toUpperCase()
-      ).length;
-    case 'body':
-      return active.filter((e) => e.bodyId === args.bodyId).length;
+      return exact(
+        ctx.db
+          .query('enrolments')
+          .withIndex('by_status_country_body', (q) =>
+            q.eq('status', 'active').eq('countryCode', country)
+          )
+          .take(SCAN_CAP + 1)
+      );
+
     case 'countryBody':
-      return active.filter(
-        (e) =>
-          e.bodyId === args.bodyId &&
-          e.countryCode === args.countryCode?.toUpperCase()
-      ).length;
+      return exact(
+        ctx.db
+          .query('enrolments')
+          .withIndex('by_status_country_body', (q) =>
+            q
+              .eq('status', 'active')
+              .eq('countryCode', country)
+              .eq('bodyId', args.bodyId!)
+          )
+          .take(SCAN_CAP + 1)
+      );
+
+    case 'body':
+      return exact(
+        ctx.db
+          .query('enrolments')
+          .withIndex('by_status_body_level', (q) =>
+            q.eq('status', 'active').eq('bodyId', args.bodyId!)
+          )
+          .take(SCAN_CAP + 1)
+      );
+
     case 'level':
-      return active.filter(
-        (e) => e.bodyId === args.bodyId && e.levelId === args.levelId
-      ).length;
+      return exact(
+        ctx.db
+          .query('enrolments')
+          .withIndex('by_status_body_level', (q) =>
+            q
+              .eq('status', 'active')
+              .eq('bodyId', args.bodyId!)
+              .eq('levelId', args.levelId!)
+          )
+          .take(SCAN_CAP + 1)
+      );
+
     case 'series':
-      return active.filter(
-        (e) =>
-          e.bodyId === args.bodyId &&
-          e.sessionSeries === args.seriesId &&
-          (!args.levelId || e.levelId === args.levelId)
-      ).length;
-    case 'subject':
-      return active.filter(
-        (e) =>
-          e.bodyId === args.bodyId &&
-          e.levelId === args.levelId &&
-          e.subjects.some((s) => s.subjectId === args.subjectId)
-      ).length;
+      // `by_status_body_series` is [status, bodyId, sessionSeries, levelId]:
+      // exact with or without a level, because levelId is the last component.
+      return exact(
+        args.levelId === undefined
+          ? ctx.db
+              .query('enrolments')
+              .withIndex('by_status_body_series', (q) =>
+                q
+                  .eq('status', 'active')
+                  .eq('bodyId', args.bodyId!)
+                  .eq('sessionSeries', args.seriesId!)
+              )
+              .take(SCAN_CAP + 1)
+          : ctx.db
+              .query('enrolments')
+              .withIndex('by_status_body_series', (q) =>
+                q
+                  .eq('status', 'active')
+                  .eq('bodyId', args.bodyId!)
+                  .eq('sessionSeries', args.seriesId!)
+                  .eq('levelId', args.levelId!)
+              )
+              .take(SCAN_CAP + 1)
+      );
+
+    case 'subject': {
+      // The inexact one. Every row read is already an ACTIVE enrolment for this
+      // board and level, so the cap bites only on a genuinely large cohort — and
+      // when it bites, `atLeast` is true and the count means nothing on its own.
+      const page = await ctx.db
+        .query('enrolments')
+        .withIndex('by_status_body_level', (q) =>
+          q
+            .eq('status', 'active')
+            .eq('bodyId', args.bodyId!)
+            .eq('levelId', args.levelId!)
+        )
+        .take(SCAN_CAP + 1);
+      const truncated = page.length > SCAN_CAP;
+      const count = page
+        .slice(0, SCAN_CAP)
+        .filter((e) => e.subjects.some((s) => s.subjectId === args.subjectId))
+        .length;
+      return { count, atLeast: truncated };
+    }
   }
 }
 
@@ -816,8 +864,10 @@ const describeEntity = (args: EntityArgs) =>
  * Take an entry out of the picker.
  *
  * Refuses while students are sitting it unless the admin passes
- * `acknowledgeInUse`, and says how many they are. Tidying a list should not be
- * able to quietly pull a subject out from under a cohort halfway through a year.
+ * `acknowledgeInUse`, and says how many they are. It refuses on the same terms
+ * when the count could not be completed, because "we did not finish counting" is
+ * not the same answer as "nobody". Tidying a list should not be able to quietly
+ * pull a subject out from under a cohort halfway through a year.
  */
 export const retire = mutation({
   args: {
@@ -833,18 +883,25 @@ export const retire = mutation({
   handler: async (ctx, args) => {
     const admin = await requireAdmin(ctx);
     const { table, row } = await locate(ctx, args);
-    // NOTE (schema): a country or country/board reference cannot be narrowed by
-    // index — `enrolments` has no index on `countryCode`. Adding
-    // `.index('by_country_status', ['countryCode', 'status'])` would make every
-    // entity here index-bounded and let the cap go away. schema.ts is owned by
-    // another workstream right now, so this is reported rather than done.
     const { count: inUseCount, atLeast } = await countActiveEnrolments(ctx, args);
 
-    if (inUseCount > 0 && !args.acknowledgeInUse) {
+    // TRUNCATION IS NOT ZERO. `atLeast` says the count stopped at the read cap,
+    // so the true number is somewhere above it — and for the one entity that can
+    // still truncate (`subject`, whose match lives inside an array Convex cannot
+    // index) a truncated page can legitimately contain no match while matches
+    // exist beyond it. Reading that as "nobody is sitting this" is exactly how a
+    // live cohort loses its subject without anyone confirming anything. An
+    // unknown count asks the human; it never answers for them.
+    if ((inUseCount > 0 || atLeast) && !args.acknowledgeInUse) {
       throw new AuthError(
-        `${atLeast ? 'At least ' : ''}${inUseCount} student${inUseCount === 1 && !atLeast ? ' is' : 's are'} sitting ${describeEntity(args)} right now. ` +
-          'Retiring it takes it out of the picker for everyone new; their own enrolment is kept and still renders. ' +
-          'Confirm to go ahead.'
+        inUseCount === 0
+          ? `Whether anybody is sitting ${describeEntity(args)} could not be determined: ` +
+            `there are more than ${SCAN_CAP} active enrolments to check and the count stopped there. ` +
+            'Retiring it takes it out of the picker for everyone new; existing enrolments are kept and still render. ' +
+            'Confirm to go ahead.'
+          : `${atLeast ? 'At least ' : ''}${inUseCount} student${inUseCount === 1 && !atLeast ? ' is' : 's are'} sitting ${describeEntity(args)} right now. ` +
+            'Retiring it takes it out of the picker for everyone new; their own enrolment is kept and still renders. ' +
+            'Confirm to go ahead.'
       );
     }
     if (row.state === 'retired') return { alreadyRetired: true, inUseCount, atLeast };

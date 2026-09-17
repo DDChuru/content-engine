@@ -276,13 +276,25 @@ export const changeEnrolment = mutation({
 
     // A ceiling on genuinely-different changes. A student legitimately switches
     // sitting a handful of times a year, not ten times a day.
+    //
+    // Counting ROWS created today over-counts by one for anybody who registered
+    // today: registration writes the first enrolment, and registering is not a
+    // change. A new student was silently getting nine. The row written by
+    // `registerSelf` is the student's earliest enrolment, so excluding it makes
+    // the limit mean what it says.
     const recent = await ctx.db
       .query('enrolments')
       .withIndex('by_student_created', (q) =>
         q.eq('studentId', student._id).gt('createdAt', now - DAY)
       )
       .collect();
-    if (recent.length >= MAX_ENROLMENT_CHANGES_PER_DAY) {
+    const first = await ctx.db
+      .query('enrolments')
+      .withIndex('by_student_created', (q) => q.eq('studentId', student._id))
+      .order('asc')
+      .first();
+    const changesToday = recent.filter((row) => row._id !== first?._id).length;
+    if (changesToday >= MAX_ENROLMENT_CHANGES_PER_DAY) {
       throw new AuthError(
         'That is a lot of changes for one day. Try again tomorrow, or ask us.'
       );
@@ -589,9 +601,32 @@ function normaliseEmail(email: string | undefined | null): string | null {
  * `minor_processing` consent is WITHDRAWN as a new `consents` row rather than an
  * edit, because "consent was given and later withdrawn" is two facts and
  * overwriting the first destroys the record of what was lawful when.
+ *
+ * THE ADMIN PATH IS BREAK-GLASS, AND IS NAMED AS SUCH.
+ *
+ * An admin who is neither party can also revoke. That is deliberate and it is
+ * not a convenience: the case it exists for is a link code that reached the
+ * wrong adult, where the person with the power to sever it is exactly the person
+ * the student must not be asked to route the request through. §11's structural
+ * position is that a guardian mirror is a safeguarding instrument, so the
+ * ability to cut one that has been captured has to exist.
+ *
+ * It is a real power to sever a legitimate guardian's mirror, so it is fenced
+ * like the other §11 powers rather than left as an unremarked exception:
+ *
+ *  - a written reason is REQUIRED (an admin acting as a party — their own link —
+ *    is not break-glass and needs none);
+ *  - the audit row carries a distinct action, `guardian.link.revoke.break_glass`,
+ *    so an admin revocation can never be read as the student changing their mind.
+ *
+ * See REGISTRATION-AND-ROLES.md §1.
  */
 export const revokeGuardianLink = mutation({
-  args: { linkId: v.id('guardianLinks') },
+  args: {
+    linkId: v.id('guardianLinks'),
+    /** Required only on the admin break-glass path. Recorded in the audit row. */
+    breakGlassReason: v.optional(v.string()),
+  },
   handler: async (ctx, args) => {
     // Role is re-derived; the caller asserts nothing but which link they mean,
     // and is then checked to be a party to that link.
@@ -601,8 +636,17 @@ export const revokeGuardianLink = mutation({
 
     const isStudent = link.studentId === user._id;
     const isGuardian = link.guardianId !== undefined && link.guardianId === user._id;
-    if (!isStudent && !isGuardian && user.role !== 'admin') {
+    const isParty = isStudent || isGuardian;
+    if (!isParty && user.role !== 'admin') {
       throw new AuthError('Not permitted.');
+    }
+
+    const breakGlass = !isParty;
+    const breakGlassReason = args.breakGlassReason?.trim();
+    if (breakGlass && (!breakGlassReason || breakGlassReason.length < 20)) {
+      throw new AuthError(
+        'Severing somebody else\u2019s guardian link needs a specific written reason.'
+      );
     }
     if (link.revokedAt) return; // idempotent: revoking twice is not an error
 
@@ -627,12 +671,20 @@ export const revokeGuardianLink = mutation({
     }
 
     await audit(ctx, {
-      action: 'guardian.link.revoke',
+      // Distinct action, not a flag buried in the metadata blob: an admin
+      // severing somebody else's link and a student ending their own are
+      // different events and the log has to be greppable for the first.
+      action: breakGlass
+        ? 'guardian.link.revoke.break_glass'
+        : 'guardian.link.revoke',
       actor: user,
       targetTable: 'guardianLinks',
       targetId: link._id,
       metadata: {
         revokedByRole: user.role,
+        revokedByParty: isParty ? (isStudent ? 'student' : 'guardian') : null,
+        breakGlass,
+        breakGlassReason: breakGlassReason ?? null,
         wasRedeemed: Boolean(link.redeemedAt),
         studentId: link.studentId,
         guardianId: link.guardianId ?? null,
@@ -903,23 +955,39 @@ export const deliverRevealNotice = internalMutation({
 /**
  * Cron (hourly). A retry, not the primary path — anything still un-notified is
  * either a delivery that fell over or a grant written before this existed.
+ *
+ * TWO THINGS KEEP THIS BOUNDED, and they matter more than they look.
+ *
+ * The first version collected EVERY grant without `notifiedAt` and dropped the
+ * suppressed ones afterwards. A suppressed grant never gets `notifiedAt` — that
+ * is the whole point of suppressing it — so every one ever written stayed in the
+ * scan set for ever. The set only grew, and the transaction it would eventually
+ * push past Convex's read limit is the one carrying the legitimate unsent
+ * notices. The failure lands precisely on the rows §11 exists to protect.
+ *
+ * So: suppressed rows are excluded in the INDEX PREFIX (`by_notify_pending`,
+ * where `notificationSuppressed: undefined` is the un-suppressed case), and the
+ * read is a bounded page. A backlog larger than one page drains over successive
+ * hours instead of failing all at once; `overdueRevealNotices` is the loud view
+ * that makes such a backlog visible while it drains.
  */
+const SWEEP_BATCH = 200;
+
 export const sweepRevealNotifications = internalMutation({
   args: {},
   handler: async (ctx) => {
     const pending = await ctx.db
       .query('deanonymisations')
-      .withIndex('by_notify_due', (q) => q.eq('notifiedAt', undefined))
-      .collect();
-    let delivered = 0;
+      .withIndex('by_notify_pending', (q) =>
+        q.eq('notifiedAt', undefined).eq('notificationSuppressed', undefined)
+      )
+      .take(SWEEP_BATCH);
     for (const grant of pending) {
-      if (grant.notificationSuppressed) continue;
       await ctx.scheduler.runAfter(0, internal.identity.deliverRevealNotice, {
         grantId: grant._id,
       });
-      delivered++;
     }
-    return delivered;
+    return { delivered: pending.length, more: pending.length === SWEEP_BATCH };
   },
 });
 

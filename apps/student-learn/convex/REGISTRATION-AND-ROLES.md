@@ -87,7 +87,17 @@ performed, in the room, out loud.
 
 Properties: single use, 7-day expiry, revocable by either side (`revokeGuardianLink`,
 which either party may call and which is audited), and the row survives revocation for
-the audit trail. A wrong, expired, revoked or already-redeemed code all raise the
+the audit trail.
+
+**Admin revocation is a named break-glass power, not a third ordinary caller.** An admin
+who is neither party can also revoke a link. The case it exists for is a code that
+reached the wrong adult — where the person able to sever the link is precisely the
+person the student cannot be asked to go through. Severing a *legitimate* guardian's
+mirror is a real harm in the other direction, so the power is fenced: a written reason of
+at least 20 characters is required, and the audit row carries its own action,
+`guardian.link.revoke.break_glass`, with the reason and the acting admin. A plain
+`guardian.link.revoke` is always a party ending their own link. An admin ending a link
+they are themselves a party to is the ordinary path and needs no reason. A wrong, expired, revoked or already-redeemed code all raise the
 **same** error — otherwise the endpoint is an oracle for guessing valid codes. A student
 may hold at most 3 open codes and create at most 10 a day; a guardian may hold at most
 5 students.

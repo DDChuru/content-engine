@@ -12,7 +12,10 @@
  * accepts a role, a `userId` or any other identity assertion from the client.
  */
 
-import { query } from './_generated/server';
+import { mutation, query } from './_generated/server';
+import { v } from 'convex/values';
+import { paginationOptsValidator } from 'convex/server';
+import type { Doc, Id } from './_generated/dataModel';
 import { describeEnrolment } from './lib/catalogue';
 
 /**
@@ -184,31 +187,98 @@ export const guardianState = query({
  * student is entitled to know their identity was looked at and why in the
  * enumerated sense; the free-text reason can name a third party in a
  * safeguarding case and is not theirs to read.
+ *
+ * WHY THIS IS PAGINATED RATHER THAN `.take(20)`. A fixed newest-20 window with
+ * no way to reach page two is not a history, it is a buffer — and it is a buffer
+ * an admin can flush. Reveal the submission you actually wanted, grant twenty
+ * more, and the notice that mattered falls off the end of the only page the
+ * student can see, while the page goes on telling them "every such look-up" is
+ * listed. That defeats the control: §11 says notification is what makes the
+ * audit log a control rather than a record nobody reads, and a notice nobody can
+ * reach is not a notification. The history is now complete and reachable.
  */
+type RevealNoticeView = {
+  id: Id<'revealNotices'>;
+  trigger: Doc<'revealNotices'>['trigger'];
+  grantedAt: number;
+  createdAt: number;
+  seenAt: number | null;
+  about: 'you' | 'student';
+};
+
 export const revealNotices = query({
-  args: {},
-  handler: async (ctx) => {
+  args: { paginationOpts: paginationOptsValidator },
+  handler: async (ctx, args) => {
+    const empty: {
+      page: RevealNoticeView[];
+      isDone: boolean;
+      continueCursor: string;
+    } = { page: [], isDone: true, continueCursor: '' };
+
     const identity = await ctx.auth.getUserIdentity();
-    if (!identity) return [];
+    if (!identity) return empty;
 
     const user = await ctx.db
       .query('users')
       .withIndex('by_auth_subject', (q) => q.eq('authSubject', identity.subject))
       .unique();
-    if (!user || user.erasedAt) return [];
+    if (!user || user.erasedAt) return empty;
 
-    const notices = await ctx.db
+    const result = await ctx.db
       .query('revealNotices')
       .withIndex('by_recipient', (q) => q.eq('recipientId', user._id))
       .order('desc')
-      .take(20);
+      .paginate(args.paginationOpts);
 
-    return notices.map((n) => ({
-      id: n._id,
-      trigger: n.trigger,
-      grantedAt: n.grantedAt,
-      createdAt: n.createdAt,
-      about: n.recipientRole === 'student' ? ('you' as const) : ('student' as const),
-    }));
+    return {
+      ...result,
+      page: result.page.map((n) => ({
+        id: n._id,
+        trigger: n.trigger,
+        grantedAt: n.grantedAt,
+        createdAt: n.createdAt,
+        seenAt: n.seenAt ?? null,
+        about: n.recipientRole === 'student' ? ('you' as const) : ('student' as const),
+      })),
+    };
+  },
+});
+
+/**
+ * Stamp `seenAt` on notices the recipient has actually had rendered to them.
+ *
+ * The field was declared as "stamped when the recipient opens their account page
+ * and sees it" and nothing ever wrote it, which is worse than not having it: a
+ * reader of the schema — or of a subject access request built from it — would
+ * take a blank `seenAt` to mean the notice went unread, when it only ever meant
+ * nobody was recording. Either write it or drop it. It is worth writing: "told"
+ * and "read it" are two different facts about the same §11 obligation.
+ *
+ * Only the recipient can stamp their own, only from unset to set, and the
+ * timestamp is the server's.
+ */
+export const markRevealNoticesSeen = mutation({
+  args: { ids: v.array(v.id('revealNotices')) },
+  handler: async (ctx, args) => {
+    const identity = await ctx.auth.getUserIdentity();
+    if (!identity) return 0;
+
+    const user = await ctx.db
+      .query('users')
+      .withIndex('by_auth_subject', (q) => q.eq('authSubject', identity.subject))
+      .unique();
+    if (!user || user.erasedAt) return 0;
+
+    const now = Date.now();
+    let stamped = 0;
+    for (const id of args.ids.slice(0, 100)) {
+      const notice = await ctx.db.get(id);
+      // Somebody else's notice, or one already stamped: silently skipped. The
+      // first is not the caller's to read, the second is not theirs to re-date.
+      if (!notice || notice.recipientId !== user._id || notice.seenAt) continue;
+      await ctx.db.patch(id, { seenAt: now });
+      stamped++;
+    }
+    return stamped;
   },
 });

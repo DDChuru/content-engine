@@ -1,8 +1,8 @@
 'use client';
 
 import Link from 'next/link';
-import { useState } from 'react';
-import { useMutation, useQuery } from 'convex/react';
+import { useEffect, useRef, useState } from 'react';
+import { useMutation, usePaginatedQuery, useQuery } from 'convex/react';
 import { SignOutButton } from '@clerk/nextjs';
 import { api } from '@/convex/_generated/api';
 import type { Id } from '@/convex/_generated/dataModel';
@@ -253,10 +253,39 @@ function RevokeButton({ linkId, label }: { linkId: string; label: string }) {
  * scheduled function, and it says which enumerated reason applied. It does not
  * quote the written reason: in a safeguarding case that text can name somebody
  * else.
+ *
+ * The list is PAGINATED, and the copy below only claims what the page can
+ * actually deliver. It used to render the newest twenty with no way to reach the
+ * twenty-first while telling the reader every look-up was shown — which made the
+ * sentence false and, worse, made the control defeasible: twenty further grants
+ * push the one that mattered off the only page anyone can see. Nothing here
+ * truncates the history now.
  */
 function RevealNotices() {
-  const notices = useQuery(api.session.revealNotices, {});
-  if (!notices || notices.length === 0) return null;
+  const { results, status, loadMore } = usePaginatedQuery(
+    api.session.revealNotices,
+    {},
+    { initialNumItems: 20 }
+  );
+  const markSeen = useMutation(api.session.markRevealNoticesSeen);
+
+  // Which ones were unseen WHEN THE PAGE LOADED. Held in a ref because stamping
+  // them immediately would otherwise make the "new" marker flicker out from
+  // under the reader's eyes on the next reactive update.
+  const wasUnseen = useRef<Set<string>>(new Set());
+  const stamped = useRef<Set<string>>(new Set());
+
+  useEffect(() => {
+    const fresh = results.filter((n) => !n.seenAt && !stamped.current.has(n.id));
+    if (fresh.length === 0) return;
+    for (const n of fresh) {
+      wasUnseen.current.add(n.id);
+      stamped.current.add(n.id);
+    }
+    void markSeen({ ids: fresh.map((n) => n.id as Id<'revealNotices'>) });
+  }, [results, markSeen]);
+
+  if (results.length === 0) return null;
 
   return (
     <section className="mt-8">
@@ -264,11 +293,16 @@ function RevealNotices() {
         When your identity was looked at
       </h2>
       <ul className="mt-2 space-y-2">
-        {notices.map((n) => (
+        {results.map((n) => (
           <li
             key={n.id}
             className="rounded-lg border border-accent/40 bg-accent/5 px-3 py-2.5 text-sm leading-relaxed text-ink"
           >
+            {wasUnseen.current.has(n.id) ? (
+              <span className="mr-2 rounded bg-accent px-1.5 py-0.5 text-[11px] font-semibold uppercase tracking-wide text-paper">
+                New
+              </span>
+            ) : null}
             On {new Date(n.grantedAt).toLocaleDateString()}, the name behind{' '}
             {n.about === 'you' ? 'your' : 'this student\u2019s'} marked work was
             unmasked for: <strong>{REVEAL_TRIGGER_LABEL[n.trigger] ?? n.trigger}</strong>.
@@ -276,6 +310,23 @@ function RevealNotices() {
           </li>
         ))}
       </ul>
+      {status === 'CanLoadMore' ? (
+        <button
+          type="button"
+          onClick={() => loadMore(20)}
+          className={`${secondaryButtonClass} mt-3`}
+        >
+          Show earlier look-ups
+        </button>
+      ) : null}
+      {status === 'LoadingMore' ? (
+        <p className="mt-3 text-sm text-ink-muted">Loading…</p>
+      ) : null}
+      {status === 'Exhausted' ? (
+        <p className="mt-3 text-sm text-ink-muted">
+          That is the complete list. Nothing is hidden behind a limit.
+        </p>
+      ) : null}
     </section>
   );
 }

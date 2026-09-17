@@ -398,7 +398,29 @@ export default defineSchema({
     .index('by_student_status', ['studentId', 'status'])
     .index('by_student_created', ['studentId', 'createdAt'])
     // "who is sitting this, when" — the cohort view behind pacing and demand
-    .index('by_body_level_session', ['bodyId', 'levelId', 'sessionId']),
+    .index('by_body_level_session', ['bodyId', 'levelId', 'sessionId'])
+    // -----------------------------------------------------------------------
+    // The three indexes below exist for ONE caller: the in-use check that stands
+    // between an admin and retiring something a cohort is mid-way through
+    // (`examCatalogue.retire`).
+    //
+    // They all lead with `status` on purpose. The previous shape indexed the
+    // catalogue coordinates only, read a capped page of CANDIDATES and filtered
+    // for `active` afterwards — so a page full of other subjects' rows could
+    // report "0 students are sitting this" while the real enrolments sat just
+    // past the cap, and the mutation, which only refused on a non-zero count,
+    // retired it silently. Putting `status` in the prefix means the cap now
+    // applies to MATCHES rather than to candidates: for a country, a board, a
+    // level or a series the count is exact, and nothing has to be inferred from
+    // a truncated page.
+    //
+    // `subject` is the one that still cannot be exact — `subjects` is an array
+    // and Convex does not index array membership — so that entity alone filters
+    // in memory and reports truncation, which the mutation now treats as
+    // "unknown" and refuses on.
+    .index('by_status_country_body', ['status', 'countryCode', 'bodyId'])
+    .index('by_status_body_level', ['status', 'bodyId', 'levelId'])
+    .index('by_status_body_series', ['status', 'bodyId', 'sessionSeries', 'levelId']),
 
   // -------------------------------------------------------------------------
   // subjectDemand — one row per subject picked. The §8 logic, one step earlier
@@ -871,8 +893,19 @@ export default defineSchema({
     .index('by_submission', ['submissionId'])
     .index('by_actor_granted', ['actorId', 'grantedAt'])
     .index('by_student', ['studentId'])
-    // the 24h notification sweep
-    .index('by_notify_due', ['notifiedAt', 'notifyDueAt']),
+    // the overdue view: un-notified, ordered by deadline, suppressed rows included
+    .index('by_notify_due', ['notifiedAt', 'notifyDueAt'])
+    // The hourly RETRY sweep. `notificationSuppressed` is in the prefix because
+    // a suppressed grant never gets `notifiedAt` by design: filtering it out
+    // after the read left it in the scan set for ever, so the set the cron had
+    // to walk only ever grew, and the transaction it eventually broke was the
+    // one retrying the notices that had NOT been suppressed. Suppressed rows are
+    // now excluded at index time and the sweep takes a bounded page.
+    .index('by_notify_pending', [
+      'notifiedAt',
+      'notificationSuppressed',
+      'notifyDueAt',
+    ]),
 
   // -------------------------------------------------------------------------
   // revealNotices — the §11 notification, as a thing that exists
