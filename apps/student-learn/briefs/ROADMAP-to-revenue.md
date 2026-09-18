@@ -203,3 +203,59 @@ plans it.
   and the sign-up path being short — the current five-step picker is long for a phone.
 - A free revision offer for students sitting current-session exams is a marketing option once a
   syllabus is complete. It is not a build dependency.
+
+---
+
+## Appendix B — OPEN: tutor and admin dashboards, and the correction loop
+
+Raised 2026-09-18. **For stewing, not for building yet.**
+
+### The idea
+A **tutor dashboard** where tutors review published material and leave corrections —
+including **timestamped comments on a video** ("at 2:14 the normal reaction is drawn wrong").
+An **admin dashboard** over the top for oversight. The video and content people then pick the
+corrections up and act on them.
+
+### The constraint that shapes the design
+**The correction work is done through Claude Code and Codex, not through an API.** Durai already
+pays for those; metered API calls are a separate cost he does not want to take on yet. If the API
+route ever becomes sustainable, that is a later decision.
+
+This is not a limitation, it is a design instruction, and it changes what the dashboard is for:
+
+- The dashboard's **output is a brief**, not an API call. A correction should come out shaped
+  like the briefs that already drive this project: which file, what is wrong, what "done" looks
+  like, what must not change.
+- A human dispatches that brief to an agent. The dashboard tracks the correction's state
+  (raised → briefed → fixed → verified) but never executes anything itself.
+- **This keeps the expensive judgement where it already works** — a person deciding what to fix
+  and an agent doing it under a cross-engine review gate.
+
+### What already exists and should be reused, not rebuilt
+
+1. **Timestamped video comments are already built.** `remotion-branding/tools/annotate.html`
+   loads a recording, lets you scrub and drop marks (tap / rect / circle / arrow / label) with
+   `atSec` and normalised 0..1 coordinates, and exports marks JSON. That IS the tutor comment
+   feature. It was written to annotate tutorials; the data shape is identical to what a
+   correction needs.
+2. **The admin dashboard partly exists** — `app/admin/catalogue` with role gating, audited
+   mutations and a no-hard-delete rule already established.
+3. **The append-only audit machinery** (`auditLog`, every consequential action recorded) is the
+   ledger a correction workflow needs.
+
+### Questions to settle before building
+- Is a "tutor" here the same principal as a **marker** (blinded, pooled, per-submission) or a
+  different, named role? A reviewer of published material has no reason to be anonymous, and
+  probably should NOT be — corrections need attribution. That is a second, named role.
+- Does a correction attach to a **video timestamp**, a **notes paragraph**, a **question**, or a
+  **misconception code**? Probably all four, which argues for one `corrections` table with a
+  polymorphic target rather than four features.
+- A correction that says "this lesson teaches the misconception wrong" is the highest-value kind
+  and links straight to the catalogue. Worth designing for explicitly.
+- Who closes a correction — the person who raised it, or the one who fixed it? (The marking
+  platform already answers this for submissions; reuse the pattern.)
+
+### The wider reuse
+This is the same shape as the food-safety training product (Appendix note, 2026-09-18): a review
+loop over published material, with an attributable ledger. Building it once for Stem 4 Life and
+again for corporate training would be a mistake worth avoiding.
