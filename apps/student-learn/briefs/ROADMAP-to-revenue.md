@@ -47,6 +47,46 @@ gate on a roadmap and becomes **the thing that decides whether launch works at a
 
 ---
 
+## 1a. The product is the interactive artifact (decided 2026-09-18)
+
+Durai, on seeing the three prototypes: **"OMG mind blown, that is the product."**
+
+This supersedes the ordering in §2, which had interactives as P4, a differentiator on the free
+tier. They are the product. The consequence is not enthusiasm, it is a merge:
+
+**A predict-gate IS a question.** The pulley artifact already makes a student commit a number and
+then shows them being wrong. That is auto-marked assessment wearing the costume of play. The
+question bank (P1) and the artifacts (P4) are therefore **one workstream at two scales**, not two.
+
+**What turns it from a demo into a product: persistence.** The prototypes deliberately record
+nothing. "You said 10, it was 4" is:
+- the mastery signal — real evidence of a held misconception, not a self-reported confidence
+- the thing that makes the app feel like it knows the student
+- the bridge to the marking platform: a marker seeing "this candidate predicted g on a pulley
+  twice" has the §4 anonymous prior context, earned rather than inferred
+- the part no competitor can copy by looking at the page
+
+It needs `lib/progress.ts` → Convex, which is the swap the interface was built for.
+
+**Scope, from the build's own recommendation — take it.** Not 28 topics. It earns its place only
+where a wrong belief is *visual and numeric with something to drag*. Third-law pairing and unit
+discipline are language errors; a widget there is a quiz with extra steps. Target the **8-10
+misconceptions at severity 4-5 that have a draggable parameter**, each one the *hinge* of a
+notes page: prose leads in, the artifact is where the student gets caught, prose closes with the
+exam-safe procedure.
+
+**One critique to fix while scaling:** two of the three hide their model until the student
+commits, so the page's first impression is reading, not touching — the opposite of the instinct
+this is built on. The pulley shows its diagram first and reads far better. Give every artifact a
+live teaser above the gate.
+
+**Free/paid, revisited.** §1 still holds but sharpens: free is a handful of exemplar artifacts —
+they are the shareable hook a celebrity can point a camera at. Paid is **practising every
+misconception with your predictions tracked**, which is where the value compounds and where the
+zero-marginal-cost tier finally has something substantial in it.
+
+---
+
 ## 2. Build order — what to code
 
 ### P1. The question bank (the critical path)
