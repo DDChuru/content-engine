@@ -63,7 +63,12 @@ if (DRY) {
 // `catalogue:seed` is an internalMutation — only the CLI may call it, which is
 // the point: the list is closed and nothing client-reachable writes to it.
 // `--push` uploads the current convex/ source first, so the function exists.
-const run = spawnSync('npx', ['convex', 'run', 'catalogue:seed', payload, '--push'], {
+// `--prod` targets the production deployment; without it the CLI uses .env.local (dev).
+// `--push` deploys functions first, which `convex run` refuses against prod — there
+// functions arrive via `npx convex deploy`, so the two flags are mutually exclusive.
+const isProd = process.argv.includes('--prod');
+const deployFlags = isProd ? ['--prod'] : ['--push'];
+const run = spawnSync('npx', ['convex', 'run', 'catalogue:seed', payload, ...deployFlags], {
   cwd: root,
   stdio: 'inherit',
 });
