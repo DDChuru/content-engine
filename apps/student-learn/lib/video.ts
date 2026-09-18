@@ -17,7 +17,7 @@
 
 /** The Bunny pull-zone host. Public by design — it is in every video URL. */
 export const CDN_HOST =
-  process.env.NEXT_PUBLIC_BUNNY_CDN_HOST || 'vz-a2c1131e-cb8.b-cdn.net';
+  process.env.NEXT_PUBLIC_BUNNY_CDN_HOST || 'vz-c77378c6-e3c.b-cdn.net';
 
 const base = (guid: string) => `https://${CDN_HOST}/${guid}`;
 
