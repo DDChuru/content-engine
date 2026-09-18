@@ -102,6 +102,26 @@ Everything paid depends on this. Nothing else matters as much.
 - The real rate limit is **human sign-off of the mark scheme**, ~40 items/hour — not generation.
 - Then: **Pure 1.** Every candidate sits Pure; Mechanics is one option among several.
 
+### P1b. Question sourcing — a SEPARATE project (decided 2026-09-18)
+
+Durai holds a large archive of real past papers and mark schemes. The pipeline splits in two,
+and the split is exactly where the copyright exposure sits:
+
+**Scraper — the genuine article, for social media.** Ingest real papers and their mark schemes
+into a structured store. These are used **as they are on TikTok and YouTube**, where publishing
+the real question is the point. Note the risk already recorded in §9 of the marking plan: the
+TikTok leg is the *more* exposed of the two, because a claim there arrives as a channel strike
+and kills the acquisition channel overnight.
+
+**Generator — original items, for the app.** Takes a scraped item and varies the numbers, the
+context and the wording to produce an original question *and its mark scheme*, which is the part
+`build-exercise-questions.py` currently has no machine check for (amendment E: the mark scheme,
+not the answer, is what human sign-off is really for). Output goes through the existing solve
+gate — three routes, one symbolic, agreement to 3sf or discard.
+
+**This is the product**, and it is a project of its own rather than a task inside the app build.
+Set it up separately. Nothing in the app shell waits on it.
+
 ### P2. Payments and entitlement
 
 Build it now, not later. It is the thing that makes tier 1 real.
