@@ -142,4 +142,3 @@ Why can Q continue upwards after P stops, even though Q's acceleration points do
 
 Its upward velocity does not disappear instantly. Gravity reduces that velocity until it reaches zero at the greatest height. Force determines acceleration, not the instantaneous direction of motion.
 
-Source scope: Save My Exams recording *ConnectedBodiesPullies.mp4*, especially the suspended-pair two-stage example at approximately 399–582 seconds; *NewtonSecondlaw.pdf*, pages 19–22, supplies the pulley models and separate-particle diagrams. The numerical values above are a fresh teaching example of the recording's type.

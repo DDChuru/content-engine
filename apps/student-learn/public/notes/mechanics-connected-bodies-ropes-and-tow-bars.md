@@ -108,4 +108,4 @@ Can you cancel tension when considering the trailer alone?
 - Choose the system or one body.
 - Find the force in the connection.
 
-Cambridge 9709, section 4.4. Source scope checked against the Connected Bodies (Ropes & Tow Bars) recording and Newton’s Second Law notes. [Official syllabus, p.33](https://www.cambridgeinternational.org/Images/697427-2026-2027-syllabus.pdf#page=33).
+Cambridge 9709, section 4.4. [Official syllabus, p.33](https://www.cambridgeinternational.org/Images/697427-2026-2027-syllabus.pdf#page=33).
