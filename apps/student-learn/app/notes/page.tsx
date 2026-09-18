@@ -9,6 +9,7 @@ interface NoteTopic {
   title: string;
   unit: string;
   video?: string;
+  videoId?: string;
   duration?: string;
 }
 
@@ -56,7 +57,7 @@ export default function NotesIndexPage() {
             >
               <p className="text-xs uppercase tracking-[0.2em] text-ink-muted">{t.unit}</p>
               <p className="mt-1 font-semibold text-ink">{t.title}</p>
-              <p className="mt-1 text-xs text-ink-muted">{t.video ? `Video · ${t.duration ?? ''}` : 'Notes only for now'}</p>
+              <p className="mt-1 text-xs text-ink-muted">{t.videoId ? `Video · ${t.duration ?? ''}` : 'Notes only for now'}</p>
             </Link>
           </li>
         ))}

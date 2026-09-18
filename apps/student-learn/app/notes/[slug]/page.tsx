@@ -5,13 +5,15 @@ import { useParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { NotesMarkdown } from '@/components/notes-markdown';
 import { topicCodeForSlug } from '@/lib/topics';
+import { VideoPlayer } from '@/components/video-player';
 
 interface NoteTopic {
   slug: string;
   title: string;
   unit: string;
   notes: string; // path under /public
-  video?: string; // path under /public, optional until rendered
+  video?: string; // legacy local path, development only — gitignored, never deployed
+  videoId?: string; // Bunny Stream GUID — the real source, see lib/video.ts
   duration?: string;
 }
 
@@ -39,14 +41,12 @@ export default function NotesPage() {
       .then((data: { topics: NoteTopic[] }) => {
         const t = data.topics.find((x) => x.slug === slug);
         if (!t) throw new Error('No notes for this topic yet.');
-        // Renders are built artefacts and not committed; only show the player if the file is really there.
-        const withVideo = t.video
-          ? fetch(t.video, { method: 'HEAD' }).then((r) => (r.ok ? t : { ...t, video: undefined })).catch(() => ({ ...t, video: undefined }))
-          : Promise.resolve(t);
-        return withVideo.then((resolved) => {
-          setTopic(resolved);
-          return fetch(t.notes);
-        }).then((r) => (r.ok ? r.text() : Promise.reject(new Error('Notes file missing.'))));
+        // The videos live on Bunny Stream now and are addressed by `videoId`;
+        // there is no local file left to probe.
+        setTopic(t);
+        return fetch(t.notes).then((r) =>
+          r.ok ? r.text() : Promise.reject(new Error('Notes file missing.'))
+        );
       })
       .then(setMarkdown)
       .catch((e: Error) => setError(e.message));
@@ -62,9 +62,9 @@ export default function NotesPage() {
         <>
           <p className="mt-3 text-xs uppercase tracking-[0.2em] text-ink-muted">{topic.unit}</p>
           <h1 className="mt-1 font-heading text-3xl md:text-4xl">{topic.title}</h1>
-          {topic.video ? (
+          {topic.videoId ? (
             <figure className="mt-6 overflow-hidden rounded-xl bg-black shadow-sm">
-              <video className="w-full" controls preload="metadata" src={topic.video} />
+              <VideoPlayer videoId={topic.videoId} title={topic.title} />
               {topic.duration && (
                 <figcaption className="px-4 py-2 text-xs text-ink-muted bg-paper-raised">
                   Watch first · {topic.duration}. Then read the notes below.

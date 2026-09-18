@@ -6,6 +6,7 @@ import { useParams } from 'next/navigation';
 import { AppBar } from '@/components/app-bar';
 import { NotesMarkdown } from '@/components/notes-markdown';
 import { MasteryBadge } from '@/components/mastery-badge';
+import { VideoPlayer } from '@/components/video-player';
 import { InteractiveArtifact } from '@/components/interactive/registry';
 import { useSkillStates } from '@/components/use-progress';
 import { progress } from '@/lib/progress';
@@ -17,6 +18,8 @@ interface NoteEntry {
   unit: string;
   notes: string;
   video?: string;
+  /** Bunny Stream GUID. The real source — see lib/video.ts. */
+  videoId?: string;
   duration?: string;
 }
 
@@ -53,18 +56,12 @@ export default function TopicPage() {
       .then(async (data: { topics: NoteEntry[] }) => {
         const found = data.topics.find((t) => t.slug === slug);
         if (!found) throw new Error('No notes file is registered for this topic yet.');
-        // Renders are build artefacts and are not committed, so the player is
-        // only shown when the file is really there. A dead <video> element is a
-        // worse promise than "coming soon".
-        let video = found.video;
-        if (video) {
-          const ok = await fetch(video, { method: 'HEAD' })
-            .then((r) => r.ok)
-            .catch(() => false);
-          if (!ok) video = undefined;
-        }
+        // The videos are on Bunny Stream and are addressed by `videoId`, so
+        // there is nothing local to probe any more: the old HEAD request against
+        // `/videos/*.mp4` is what made every deployed topic say "coming soon",
+        // because that 682 MB directory is gitignored and never shipped.
         if (cancelled) return;
-        setEntry({ ...found, video });
+        setEntry(found);
         const text = await fetch(found.notes).then((r) =>
           r.ok ? r.text() : Promise.reject(new Error('The notes file is missing.'))
         );
@@ -153,9 +150,9 @@ export default function TopicPage() {
         ) : null}
 
         {/* 1 — watch */}
-        {entry?.video ? (
+        {entry?.videoId ? (
           <figure className="mt-7 overflow-hidden rounded-xl border border-grid-line bg-black">
-            <video className="w-full" controls preload="metadata" src={entry.video} />
+            <VideoPlayer videoId={entry.videoId} title={topic.title} />
             <figcaption className="bg-paper-raised px-4 py-2 text-xs text-ink-muted">
               Watch first{entry.duration ? ` · ${entry.duration}` : ''}. Then the model, then
               the notes.
