@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import { ClerkProvider } from '@clerk/nextjs';
 import { ConvexClientProvider } from '@/components/convex-client-provider';
+import { ProgressSync } from '@/components/progress-sync';
 import 'katex/dist/katex.min.css';
 import './brand-tokens.css';
 import './globals.css';
@@ -46,7 +47,12 @@ export default function RootLayout({
           signInFallbackRedirectUrl="/onboarding"
           signUpFallbackRedirectUrl="/onboarding"
         >
-          <ConvexClientProvider>{children}</ConvexClientProvider>
+          <ConvexClientProvider>
+            {/* Installs the Convex-backed ProgressStore once a student is signed
+                in. Renders nothing; signed out it does nothing at all. */}
+            <ProgressSync />
+            {children}
+          </ConvexClientProvider>
         </ClerkProvider>
       </body>
     </html>

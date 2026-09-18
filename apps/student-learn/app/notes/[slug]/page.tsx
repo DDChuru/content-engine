@@ -1,9 +1,10 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { useParams } from 'next/navigation';
+import { useParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { NotesMarkdown } from '@/components/notes-markdown';
+import { topicCodeForSlug } from '@/lib/topics';
 
 interface NoteTopic {
   slug: string;
@@ -20,6 +21,14 @@ interface NoteTopic {
  */
 export default function NotesPage() {
   const { slug } = useParams<{ slug: string }>();
+  const router = useRouter();
+  // A topic is one thing now — video, model and notes on `/topic/<code>`. Where
+  // the syllabus knows this slug, that is where the reader belongs; this page
+  // stays behind it for notes the map has not listed yet.
+  const topicCode = slug ? topicCodeForSlug(slug) : null;
+  useEffect(() => {
+    if (topicCode) router.replace(`/topic/${encodeURIComponent(topicCode)}`);
+  }, [topicCode, router]);
   const [topic, setTopic] = useState<NoteTopic | null>(null);
   const [markdown, setMarkdown] = useState('');
   const [error, setError] = useState('');

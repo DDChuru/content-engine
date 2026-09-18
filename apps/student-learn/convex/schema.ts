@@ -932,4 +932,39 @@ export default defineSchema({
   })
     .index('by_recipient', ['recipientId', 'createdAt'])
     .index('by_grant', ['grantId']),
+
+  // -------------------------------------------------------------------------
+  // studentProgress — one row per (student, topic). The swap lib/progress.ts
+  // was built for.
+  // -------------------------------------------------------------------------
+  // Why a row per topic rather than one blob per student: a blob is rewritten in
+  // full on every quiz attempt, which is how two tabs lose each other's work, and
+  // it cannot be read for a cohort. `attempts` is bounded inside the mutation.
+  //
+  // Nothing here is identity: a topic code and a percentage. It is written only
+  // by the student it belongs to, and read only by them.
+  studentProgress: defineTable({
+    studentId: v.id('users'),
+    /** Syllabus topic code, lib/syllabus.ts ("M4.4d"). Not a catalogue id. */
+    topicCode: v.string(),
+    state: v.union(
+      v.literal('not-started'),
+      v.literal('developing'),
+      v.literal('secure')
+    ),
+    attempts: v.array(
+      v.object({
+        correct: v.number(),
+        total: v.number(),
+        percentage: v.number(),
+        passingScore: v.number(),
+        passed: v.boolean(),
+        /** ISO string — the shape lib/progress.ts already stores. */
+        timestamp: v.string(),
+      })
+    ),
+    updatedAt: v.number(),
+  })
+    .index('by_student', ['studentId'])
+    .index('by_student_topic', ['studentId', 'topicCode']),
 });

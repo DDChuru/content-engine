@@ -50,7 +50,7 @@ export default function OnboardingPage() {
   // Already registered — this screen has nothing to ask.
   const alreadyRegistered = status?.registered === true;
   useEffect(() => {
-    if (alreadyRegistered) router.replace('/account');
+    if (alreadyRegistered) router.replace(status?.user?.role === 'student' ? '/study' : '/account');
   }, [alreadyRegistered, router]);
 
   if (isLoading || !isAuthenticated || status === undefined || alreadyRegistered) {
@@ -94,7 +94,10 @@ export default function OnboardingPage() {
         // (convex/lib/policy.ts) — the strings below are for reading, not for
         // recording, and a consent row must not name whatever a client typed.
       });
-      router.replace(isStudent ? '/account' : '/guardian/redeem');
+      // A student belongs on their study home: it is the first screen that has
+      // read the enrolment they just gave us. `/account` is where they go to
+      // change it, which is not the same thing and is not what they came for.
+      router.replace(isStudent ? '/study' : '/guardian/redeem');
     } catch (err) {
       setError(
         err instanceof Error

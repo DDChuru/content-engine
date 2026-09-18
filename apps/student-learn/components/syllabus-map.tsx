@@ -1,11 +1,12 @@
 'use client';
 
-import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { BrandLogo } from '@/components/brand-logo';
 import { MasteryBadge } from '@/components/mastery-badge';
-import { progress, type SkillState } from '@/lib/progress';
+import { type SkillState } from '@/lib/progress';
+import { useSkillStates } from '@/components/use-progress';
+import { artifactForTopic, topicHref } from '@/lib/topics';
 import { COURSE, FUTURE_UNITS, UNITS, liveTopics, type SyllabusTopic } from '@/lib/syllabus';
 
 /** Topic/unit code in the margin column; inline prefix below lg. */
@@ -30,7 +31,8 @@ function TopicRow({ topic, state }: { topic: SyllabusTopic; state: SkillState })
       </div>
     );
   }
-  const href = topic.href ?? `/lesson/${topic.code}`;
+  const href = topicHref(topic);
+  const artifact = artifactForTopic(topic.code);
   return (
     <Link
       href={href}
@@ -41,23 +43,20 @@ function TopicRow({ topic, state }: { topic: SyllabusTopic; state: SkillState })
         {topic.title}
         {topic.hint && <span className="ml-2 text-xs font-normal text-ink-muted">{topic.hint}</span>}
       </span>
-      {topic.kind === 'notes' ? (
-        <span className="text-xs text-ink-muted">{topic.href === '/ink' ? 'show me the working' : 'video · notes'}</span>
-      ) : (
-        <MasteryBadge state={state} drawKey={topic.code} />
-      )}
+      {artifact ? (
+        <span className="whitespace-nowrap text-xs text-accent">predict first</span>
+      ) : topic.href === '/ink' ? (
+        <span className="text-xs text-ink-muted">show me the working</span>
+      ) : null}
+      <MasteryBadge state={state} drawKey={topic.code} />
     </Link>
   );
 }
 
 export function SyllabusMap({ hasIllustration }: { hasIllustration: boolean }) {
-  const [states, setStates] = useState<Record<string, SkillState>>({});
-
-  useEffect(() => {
-    const next: Record<string, SkillState> = {};
-    for (const topic of liveTopics()) next[topic.code] = progress.getSkillState(topic.code);
-    setStates(next);
-  }, []);
+  const states: Record<string, SkillState> = useSkillStates(
+    liveTopics().map((t) => t.code)
+  );
 
   const hasProgress = Object.values(states).some((s) => s !== 'not-started');
   const liveCount = liveTopics().length;

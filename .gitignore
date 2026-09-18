@@ -136,3 +136,6 @@ education-task-queue.json
 
 # Playwright storage states are live session tokens — never commit
 projects/onboarding/*/capture/state/
+
+# Verification builds (NEXT_DIST_DIR) must not clobber a running dev server.
+.next-verify/
