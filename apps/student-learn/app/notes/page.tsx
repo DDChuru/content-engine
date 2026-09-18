@@ -1,7 +1,8 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import Link from 'next/link';
+import { variantTopics } from '@/lib/syllabus';
 
 interface NoteTopic {
   slug: string;
@@ -13,6 +14,26 @@ interface NoteTopic {
 
 export default function NotesIndexPage() {
   const [topics, setTopics] = useState<NoteTopic[]>([]);
+
+  /**
+   * Alternate recordings are not listed here.
+   *
+   * `index.json` carries all 38 pages including the six `-fable` variants, and
+   * listing them put six rows titled "... (Fable)" directly beneath the rows they
+   * are variants of — a student reading this list had to choose between two
+   * near-identical titles on the strength of a word that means nothing to them.
+   * The URLs still work; `lib/syllabus.ts` is the one place that decides what is
+   * a variant, so this and the syllabus map cannot disagree.
+   */
+  const variantSlugs = useMemo(
+    () =>
+      new Set(
+        variantTopics()
+          .map((t) => t.href?.replace('/notes/', ''))
+          .filter((s): s is string => Boolean(s))
+      ),
+    []
+  );
   useEffect(() => {
     fetch('/notes/index.json')
       .then((r) => r.json())
@@ -27,7 +48,7 @@ export default function NotesIndexPage() {
       <h1 className="mt-1 font-heading text-3xl md:text-4xl">Topic notes</h1>
       <p className="mt-1 text-sm text-ink-muted">Short explainer, then the notes. Five minutes each.</p>
       <ul className="mt-6 space-y-3">
-        {topics.map((t) => (
+        {topics.filter((t) => !variantSlugs.has(t.slug)).map((t) => (
           <li key={t.slug}>
             <Link
               href={`/notes/${t.slug}`}

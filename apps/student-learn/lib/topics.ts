@@ -13,7 +13,7 @@
  * ships it is one line here.
  */
 
-import { UNITS, type SyllabusTopic, type SyllabusUnit } from './syllabus';
+import { UNITS, isStudentFacing, type SyllabusTopic, type SyllabusUnit } from './syllabus';
 
 /** Catalogue subject id → the units of `lib/syllabus.ts` it is taught through. */
 const SUBJECT_UNITS: Record<string, string[]> = {
@@ -55,7 +55,7 @@ export function unitsForSubject(subjectId: string): SyllabusUnit[] {
 }
 
 export function subjectHasContent(subjectId: string): boolean {
-  return unitsForSubject(subjectId).some((u) => u.topics.some((t) => t.live));
+  return unitsForSubject(subjectId).some((u) => u.topics.some(isStudentFacing));
 }
 
 /**
@@ -88,10 +88,29 @@ export interface LocatedTopic {
   next: SyllabusTopic | null;
 }
 
-/** Find a topic by code, with the unit and the neighbours a topic page needs. */
+/**
+ * Find a topic by code, with the unit and the neighbours a topic page needs.
+ *
+ * An alternate recording (`variantOf`) is still findable here — its URL has to keep
+ * working — but it is not part of the sequence a student walks, so it is looked up
+ * against the full list while position and neighbours are computed against the
+ * student-facing one. A variant therefore renders with no prev/next rather than
+ * silently splicing itself into the course order.
+ */
 export function locateTopic(code: string): LocatedTopic | null {
   for (const unit of UNITS) {
-    const live = unit.topics.filter((t) => t.live);
+    const live = unit.topics.filter(isStudentFacing);
+    const variant = unit.topics.find((t) => t.live && t.variantOf && t.code === code);
+    if (variant) {
+      return {
+        topic: variant,
+        unit,
+        index: 0,
+        liveCount: live.length,
+        previous: null,
+        next: null,
+      };
+    }
     const i = live.findIndex((t) => t.code === code);
     if (i === -1) continue;
     return {
@@ -111,7 +130,7 @@ export function liveTopicsForSubject(
   subjectId: string
 ): { topic: SyllabusTopic; unit: SyllabusUnit }[] {
   return unitsForSubject(subjectId).flatMap((unit) =>
-    unit.topics.filter((t) => t.live).map((topic) => ({ topic, unit }))
+    unit.topics.filter(isStudentFacing).map((topic) => ({ topic, unit }))
   );
 }
 

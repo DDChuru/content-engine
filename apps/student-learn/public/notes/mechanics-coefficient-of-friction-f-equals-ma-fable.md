@@ -1,4 +1,4 @@
-# Coefficient of Friction - F = ma (Fable)
+# Coefficient of Friction: F = ma
 
 Friction problems with Newton's second law follow one routine. The step people skip is the **normal reaction**: any extra vertical force, or the vertical part of an angled force, changes \(R\), and therefore changes the most friction the surface can give.
 

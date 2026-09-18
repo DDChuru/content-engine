@@ -113,11 +113,24 @@ export default function TopicPage() {
         <header>
           <p className="text-xs font-medium uppercase tracking-[0.18em] text-ink-muted">
             <span className="font-mono normal-case tracking-normal">{topic.code}</span> ·{' '}
-            {unit.title} · {unit.paper} · {index} of {liveCount}
+            {unit.title} · {unit.paper}
+            {/* An alternate recording has no place in the course order, so it gets
+                no "4 of 31" — printing "0 of 31" told the student their position
+                was zero rather than that the question does not apply. */}
+            {topic.variantOf ? null : ` · ${index} of ${liveCount}`}
           </p>
           <h1 className="mt-2 font-heading text-3xl font-semibold leading-tight sm:text-4xl">
             {topic.title}
           </h1>
+          {topic.variantOf ? (
+            <p className="mt-2 text-sm text-ink-muted">
+              A second recording of this topic, kept for comparison.{' '}
+              <Link href={`/topic/${encodeURIComponent(topic.variantOf)}`} className="underline hover:text-accent">
+                Open the main version
+              </Link>
+              .
+            </p>
+          ) : null}
           <div className="mt-3 flex items-center gap-2 text-sm text-ink-muted">
             <MasteryBadge state={state} size="sm" drawKey={topic.code} />
             <span>

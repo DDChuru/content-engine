@@ -13,6 +13,7 @@ import {
   type QuizAttempt,
   type SkillState,
 } from '@/lib/progress';
+import { ErrorBoundary } from '@/components/error-boundary';
 
 /**
  * Makes a signed-in student's progress live in Convex instead of in one browser.
@@ -136,5 +137,40 @@ export function ProgressSync() {
     }).catch(() => {});
   }, [snapshot?.signedIn, importLocal]);
 
+  return null;
+}
+
+/**
+ * `ProgressSync` inside a boundary that fails to nothing.
+ *
+ * This is the exact failure the shell build hit: `progress:mine` had not been
+ * deployed yet, `useQuery` threw, and because nothing above it caught, React tore
+ * down the tree and onboarding went blank. Progress is an *enhancement* — the
+ * whole free product reads from files, not from Convex — so the correct behaviour
+ * when it breaks is that the student keeps their ticks in this browser and never
+ * finds out.
+ *
+ * The fallback explicitly un-installs the store rather than just rendering null:
+ * if the query threw on a re-render, a Convex-backed store may already be
+ * installed and answering from a cache that will now never update. Handing
+ * `lib/progress` back its localStorage default is what makes "degrade" true
+ * rather than "freeze".
+ */
+export function ProgressSyncBoundary() {
+  return (
+    <ErrorBoundary
+      label="progress-sync"
+      fallback={<ProgressSyncDisabled />}
+    >
+      <ProgressSync />
+    </ErrorBoundary>
+  );
+}
+
+function ProgressSyncDisabled() {
+  useEffect(() => {
+    installProgressStore(null);
+    notifyProgressChanged();
+  }, []);
   return null;
 }

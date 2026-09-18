@@ -25,7 +25,7 @@
  * never happen is the UI implying the material is there.
  */
 
-import { UNITS } from './syllabus';
+import { UNITS, isStudentFacing } from './syllabus';
 
 // ---------------------------------------------------------------------------
 // Types
@@ -101,9 +101,11 @@ const AVAILABILITY_SOURCES: Record<
 > = {
   'cambridge/a-level/cie-al-9709': () => {
     const mechanics = UNITS.find((u) => u.code === 'M');
-    const liveMechanics = mechanics?.topics.filter((t) => t.live).length ?? 0;
+    // Counts the syllabus points, not the recordings: the six `-fable` alternates
+    // are the same four/six topics taught twice and must not inflate this.
+    const liveMechanics = mechanics?.topics.filter(isStudentFacing).length ?? 0;
     const liveElsewhere = UNITS.filter((u) => u.code !== 'M').reduce(
-      (n, u) => n + u.topics.filter((t) => t.live).length,
+      (n, u) => n + u.topics.filter(isStudentFacing).length,
       0
     );
     if (liveMechanics === 0) {

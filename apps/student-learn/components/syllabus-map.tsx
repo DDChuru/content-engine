@@ -7,7 +7,14 @@ import { MasteryBadge } from '@/components/mastery-badge';
 import { type SkillState } from '@/lib/progress';
 import { useSkillStates } from '@/components/use-progress';
 import { artifactForTopic, topicHref } from '@/lib/topics';
-import { COURSE, FUTURE_UNITS, UNITS, liveTopics, type SyllabusTopic } from '@/lib/syllabus';
+import {
+  COURSE,
+  FUTURE_UNITS,
+  UNITS,
+  isStudentFacing,
+  liveTopics,
+  type SyllabusTopic,
+} from '@/lib/syllabus';
 
 /** Topic/unit code in the margin column; inline prefix below lg. */
 function MarginCode({ code }: { code: string }) {
@@ -103,7 +110,7 @@ export function SyllabusMap({ hasIllustration }: { hasIllustration: boolean }) {
             <span className="ml-auto shrink-0 whitespace-nowrap text-xs font-normal uppercase tracking-[0.18em] text-ink-muted">{unit.paper}</span>
           </h2>
           <ol className="divide-y divide-grid-line">
-            {unit.topics.map((topic) => (
+            {unit.topics.filter(isStudentFacing).map((topic) => (
               <li key={topic.code} className="relative">
                 <TopicRow topic={topic} state={states[topic.code] ?? 'not-started'} />
               </li>

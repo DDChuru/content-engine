@@ -92,4 +92,4 @@ A moving car has equal forward and backward forces. Must it stop?
 - Choose signs for acceleration.
 - Link forces to distance travelled.
 
-Cambridge 9709, section 4.4; scope checked against the F = ma recording and Newton’s Second Law notes. [Official syllabus, p.33](https://www.cambridgeinternational.org/Images/697427-2026-2027-syllabus.pdf#page=33).
+Cambridge 9709, section 4.4. [Official syllabus, p.33](https://www.cambridgeinternational.org/Images/697427-2026-2027-syllabus.pdf#page=33).

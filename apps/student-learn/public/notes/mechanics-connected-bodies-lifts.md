@@ -96,4 +96,4 @@ If the lift instead **speeds up upwards**, its acceleration is upwards. From the
 - Choose the body and its forces.
 - Calculate reaction and cable tension.
 
-Cambridge 9709, section 4.4. This lesson covers a two-body lift/passenger example; additional stacked or carried loads require selecting the appropriate further bodies. Scope checked against the Connected Bodies (Lifts) recording and Newton's Second Law notes.
+Cambridge 9709, section 4.4. This lesson covers a two-body lift/passenger example; additional stacked or carried loads require selecting the appropriate further bodies.

@@ -25,4 +25,4 @@ Keep the horizontal component the same, but reverse the vertical component. Vert
 
 At rest, friction adjusts to the required value up to μR. Equality f=μR applies at limiting equilibrium or during sliding in this ideal model; it is not the automatic friction force for every rough surface.
 
-Sources: assigned Coefficient of Friction F=ma recording, 0–133 s; Resolving Forces, Inclined Planes and Friction PDF, pages 11–12. Syllabus 4.4 opening excerpt: “apply Newton’s laws of motion” (p.33). Scope map M4.4e.
+Cambridge 9709, section 4.4 — “apply Newton’s laws of motion”. [Official syllabus, p.33](https://www.cambridgeinternational.org/Images/697427-2026-2027-syllabus.pdf#page=33).
