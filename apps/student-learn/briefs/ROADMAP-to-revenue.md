@@ -1,149 +1,145 @@
-# Roadmap to revenue — Stem 4 Life
+# Product plan — Stem 4 Life
 
 **Status:** Live plan · **Owner:** Durai · **Author:** Claude (conductor)
-**Date:** 2026-09-18 · Works backwards from the May/June 2027 exam season.
+**Date:** 2026-09-18 · Supersedes the exam-calendar roadmap of the same name.
 
 Companion to `PLAN-marking-platform.md` (the *what*) and `DELIVERY-PLAN.md` (the *workstreams*).
-This one answers **by when, and what we give up**.
+**This one is about what to build, in what order.** Marketing is deliberately out of scope here.
 
 ---
 
-## 1. The calendar, honestly
+## 0. Two corrections to the previous version
 
-| | Date | From today |
-|---|---|---|
-| Cambridge Oct/Nov 2026 exams begin | ~12 Oct 2026 | **24 days** |
-| Oct/Nov season ends | ~27 Nov 2026 | 10 weeks |
-| Selling opens for May/June | 1 Feb 2027 | 19 weeks |
-| May/June 2027 exams begin | ~3 May 2027 | **32 weeks** |
-
-*(Exam dates are approximate — confirm against the published Cambridge and ZIMSEC timetables
-before anything depends on a specific day.)*
+1. **There is no exam-date deadline.** The Oct/Nov 2026 pressure was a personal milestone, not a
+   commercial one. Nothing in this plan is dated against an exam timetable. Ship when it is good.
+2. **Free AND paid from day one.** The previous plan said run free and charge from February. That
+   was wrong, for a reason worth keeping: a product that is free while a paid tier is "coming"
+   anchors everyone on free and converts nobody. Payments get built early, not late.
 
 ---
 
-## 2. What we concede, and why it is not a loss
+## 1. The free/paid line
 
-**Concede: no paid marking in the Oct/Nov 2026 season.**
+The principle is the one already settled: **the material is marketing, the assessment is the
+product.** Applied one tier lower than `PLAN-marking-platform.md` §7 assumed, so it can ship
+before verified markers exist.
 
-Twenty-four days is not enough to build a submission path, an image pipeline, a marking
-interface, a payment rail and recruit five verified markers. Attempting it produces all five
-half-finished and none working.
-
-**This was never a revenue season in the plan.** The go-to-market decision already said run
-Oct/Nov free and start charging in February. So "we are behind" is only true against a target
-nobody set. What we would genuinely lose is the *beta* — and that is what makes February
-possible, because it is where the marking rubric gets calibrated, the first real submissions
-arrive, and the pay-per-mark figure stops being a guess.
-
-**So the October target changes from "the product" to "the library, in public."**
-
----
-
-## 3. Phase A — Ship the library (now → 12 Oct, 3 weeks)
-
-One goal: **a stranger can use stem4life.com and study 9709 Mechanics for free, on a phone,
-during the highest-intent three weeks of the year.**
-
-No accounts required. No submission. No marking. No payments.
-
-| # | Work | Why it is in scope |
-|---|---|---|
-| A1 | **Next 15 migration** | Unpatched critical advisory; cannot ship publicly without it. 6 routes now, a week's work at 20 |
-| A2 | **Videos off git to a host** | 682 MB gitignored — a deploy today ships *zero* videos and every lesson says "coming soon" |
-| A3 | **Deploy to stem4life.com** | Vercel + DNS. Durai owns the domain |
-| A4 | **Low-data mode** | Notes first, 360p option, file sizes shown. Mobile data in Zimbabwe is among the world's most expensive — this is retention, not polish |
-| A5 | **Analytics (Plausible) + error reporting** | You cannot improve or later buy traffic for something you cannot measure |
-| A6 | **YouTube: upload all 31 lessons** | Free distribution, Google carries ad compliance, and it is where students already are |
-
-**Not in Phase A:** registration is built and works, but does not need to be *required* — study
-stays anonymous. Leave the sign-up path live for anyone who wants progress sync.
-
-**Done when:** a phone on a Zimbabwean network loads a lesson in under 5 seconds and plays the
-video.
-
----
-
-## 4. Phase B — Build the loop while the season runs (Oct → Nov, weeks 4-10)
-
-The season is running; students are on the site. Build the thing they will pay for next time,
-and **use real students to test it.**
-
-| # | Work | Notes |
-|---|---|---|
-| B1 | **Image ingest** | Gemini first. Answer-sheet header + student-confirms-redaction are the layered defence that makes a good-not-perfect detector safe |
-| B2 | **Submission path** | Camera-first, client compression, typed final answer for instant auto-marking |
-| B3 | **Marking interface** | Must close the 5 deferred findings in `DELIVERY-PLAN` W1 — especially the rotation cap, which release currently erases |
-| B4 | **Prescriptions** | Needs the amendment-K schema fix first. The student sees "your next 25 minutes", not a score |
-| B5 | **Questions 12 → 40+** | Coverage 19% → 80%. **Decide first: is `covered` ≥2 questions or ≥3?** At 3 it is currently 0 |
-| B6 | **Durai marks everything himself** | The first 200 marks calibrate the rubric, set the real pay-per-mark, and measure AI agreement silently alongside |
-
-**Done when:** a real student submits a photo and gets a human-marked prescription back inside
-the promised window — **for free**, with Durai as the only marker.
-
----
-
-## 5. Phase C — Supply and trust (Dec → Jan, weeks 11-19)
-
-Nothing here is buildable without Phase B running first.
-
-| # | Work |
+| FREE — learn | PAID — practise and be assessed |
 |---|---|
-| C1 | Recruit and verify **5 markers** — university students + retired teachers (counter-cyclical availability) |
-| C2 | Paid trial of 10 marks each, reviewed against the rubric Phase B produced |
-| C3 | 10% sampling, SLA timer with automatic credit refund, report flow |
-| C4 | Credits + Paynow/Paystack checkout; **guardian-link gate on paid submission** (amendment A) |
-| C5 | Legal opinion delivered and acted on: Cambridge question reuse + minors' consent |
-| C6 | Terms, privacy notice, refund policy published |
+| All notes | The exercise-question bank |
+| All videos | Auto-marking + full worked solutions |
+| **The interactive artifacts** | Mastery tracking that means something |
+| Registration, progress on one device | Offline / low-data packs |
+| A sample of questions per topic | Progress synced across devices |
+| | *Later:* human marking + prescriptions (upgrade tier) |
 
-**Done when:** five external markers clear a day's queue without Durai touching it.
+**Why the interactives are free.** They are the memorable, shareable thing — the reason a
+student sends a link to a friend and the thing a celebrity can point a camera at. Paywalling
+the hook kills the distribution it exists to create. Same argument as video: cheap for us,
+expensive to copy, best used as reach.
+
+**Why human marking is not the entry tier.** It has a real marginal cost per submission and it
+needs verified markers with weekday coverage. Launching it thin produces missed turnarounds and
+refunds. Paid tier 1 has **zero marginal cost**, so it can launch the day the payment rail works.
+
+**The hard consequence:** 12 questions is not a paid product. The question bank stops being a
+gate on a roadmap and becomes **the thing that decides whether launch works at all.**
 
 ---
 
-## 6. Phase D — Sell (Feb → May 2027, weeks 20-32)
+## 2. Build order — what to code
 
-| # | Work |
+### P1. The question bank (the critical path)
+
+Everything paid depends on this. Nothing else matters as much.
+
+- Take `content/questions/` from **12 → 150+** items across the Mechanics unit.
+- `scripts/build-exercise-questions.py` already gates: 3 independent solution routes, one
+  symbolic, all agreeing to 3sf, or the item is discarded.
+- **Decide first:** `covered` = ≥2 questions per misconception code, or ≥3? At 2 the current
+  count is 4 codes; **at 3 it is 0.** Authoring starts on the wrong target until this is settled.
+- Apply amendment F: allow recurring answers where the stem says "to 3 significant figures".
+- The real rate limit is **human sign-off of the mark scheme**, ~40 items/hour — not generation.
+- Then: **Pure 1.** Every candidate sits Pure; Mechanics is one option among several.
+
+### P2. Payments and entitlement
+
+Build it now, not later. It is the thing that makes tier 1 real.
+
+- Credit/subscription ledger, entitlement checks server-side (never client-trusted).
+- Paynow (EcoCash/OneMoney, ZW) + Paystack or Yoco (SA). Mobile money is the rail; cards are not.
+- **A parent must be able to pay for a student they are linked to** — the payer is not the learner.
+- Amendment A: paid actions by a minor require a redeemed guardian link.
+- Per `PLAN-marking-platform.md` Appendix A, consent `assuranceLevel` upgrades to
+  `payment_verified` here. **This is the only real verification of a guardian that exists.**
+
+### P3. Practice loop
+
+- Topic → question → attempt → auto-mark the typed answer → full worked solution → retry.
+- Reuse `gradeAnswer`; `ExerciseQuestion` already extends `Question` so no adapter is needed.
+- **Un-orphan or delete `/lesson/[code]`** — it fetches `localhost:3001` and fails on load.
+- Mastery derived from real attempts, so the badges finally fire.
+
+### P4. Interactive artifacts (free tier, and the differentiator)
+
+- Three prototypes in flight. The standard: **the misconception catalogue is the spec, and every
+  artifact lets the student be wrong first.** Predict, commit, find out.
+- Scale across the unit once the standard is agreed. Not all 28 topics need one; some are
+  genuinely better as prose.
+- Phone-first, touch, low data. They must weigh less than a video, not more.
+
+### P5. Deployability
+
+- **Next 15 migration** — unpatched critical advisory on 14; cannot ship publicly. Cheapest now.
+- Videos off git to a host. 682 MB gitignored: a deploy today ships **zero** videos.
+- Vercel + stem4life.com. Low-data mode: notes first, 360p option, sizes shown.
+- Analytics before any paid traffic. You cannot buy attention you cannot measure.
+
+### P6. Human marking (upgrade tier, after the above)
+
+Everything in `DELIVERY-PLAN.md` W1 plus the five deferred security findings — the queue
+exposing work pre-claim, access outliving the claim, the erasable rotation cap, the
+context fingerprint, unsanitised teacher-visible strings. Needs image ingest (vision provider),
+the submission path, and verified markers.
+
+---
+
+## 3. Gates that still stand
+
+Not dates. Conditions.
+
+1. **The paid tier must be substantial at launch.** Thin paid + bought traffic = refunds.
+2. **No human marking sold until 5 verified markers cover weekdays.**
+3. **No public deployment on Next 14.**
+4. **No paid action by a minor without a redeemed guardian link.**
+5. **Never a free human mark to paid traffic** (~$20 of marking burned per conversion, on top of
+   acquisition). Auto-marked free samples are fine — they cost nothing.
+6. **Legal opinion before the question pipeline scales:** Cambridge reuse + minors' consent.
+
+---
+
+## 4. Blocked on Durai
+
+| Decision | Blocks |
 |---|---|
-| D1 | Open Session Pass sales for May/June 2027 |
-| D2 | **First ad spend** — and not before C1 is done. A student whose first paid submission sits unmarked for two days never returns |
-| D3 | Pure 1 production in parallel — every candidate sits Pure; Mechanics is one option among several |
-| D4 | School and tutor pilots: 3-5 Cambridge schools in Harare and Johannesburg |
+| `covered` = 2 or 3 questions? | P1 — authoring starts now and needs the target |
+| Merchant account (Paynow / Paystack or Yoco) | P2 — onboarding is slow, start it early |
+| Video host + Vercel | P5 |
+| Vision provider (recommend Gemini) | P6 only — no longer on the critical path |
+| Legal opinion (1-2 hours) | P1 at scale |
 
 ---
 
-## 7. The gates — do not pass these
+## Appendix — Distribution (recorded, not planned here)
 
-These are not targets. Passing them early does more damage than arriving late.
+Kept for context because it shapes what the product must withstand, not because this document
+plans it.
 
-1. **No ad spend until 5 verified markers cover 6am-9pm weekdays.**
-2. **No charging until ≥80% of in-scope catalogue codes are `covered`.** Today: 19%.
-3. **No charging until the legal opinion is in.** It decides which product exists.
-4. **No public deployment on Next 14.** Unpatched critical advisory.
-5. **No paid submission by a minor without a redeemed guardian link.**
-6. **Never a free mark to paid traffic.** ~$20 of trial marking burned per paying customer, on
-   top of ~$10 acquisition. It is the fastest way to lose money at scale.
-
----
-
-## 8. Blocked on Durai — each is one decision
-
-| Decision | Blocks | Cost of delay |
-|---|---|---|
-| **Vision provider** (recommend: Gemini) | B1 → B2 → B3 → everything | The whole submission path |
-| **Video host + Vercel** | A2, A3 | Phase A entirely |
-| **Merchant account** (Paynow ZW / Paystack or Yoco SA) | C4 | Only bites in Dec; start it in Nov, onboarding is slow |
-| **Legal opinion** (1-2 hours) | C5, and the question pipeline | Could invalidate work already done |
-| **`covered` = 2 or 3 questions?** | B5 | Authoring starts on the wrong target |
-
----
-
-## 9. What "behind" actually means
-
-Not behind on revenue — February was always the date.
-
-The real risk is **Phase A slipping past mid-October**, because then the highest-intent window
-of the year passes with nothing public, no traffic measured, no students to test Phase B
-against, and no audience to sell to in February.
-
-**Phase A is three weeks of work and needs three accounts opened.** That is the whole
-critical path right now.
+- **Paid celebrity promotion on TikTok** — musicians and comedians paid to push the channel.
+  Decided 2026-09-18.
+- Implication for the product: traffic will arrive in **spikes**, from people who trust the
+  promoter rather than the product, and who will judge it in seconds. That argues for the free
+  tier being genuinely impressive (the interactives), the paid tier being obviously substantial,
+  and the sign-up path being short — the current five-step picker is long for a phone.
+- A free revision offer for students sitting current-session exams is a marketing option once a
+  syllabus is complete. It is not a build dependency.
