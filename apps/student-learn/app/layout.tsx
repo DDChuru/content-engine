@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next';
 import { ClerkProvider } from '@clerk/nextjs';
 import { ConvexClientProvider } from '@/components/convex-client-provider';
 import { ProgressSyncBoundary } from '@/components/progress-sync';
+import { Telemetry } from '@/components/analytics';
 import 'katex/dist/katex.min.css';
 import './brand-tokens.css';
 import './globals.css';
@@ -39,6 +40,12 @@ export default function RootLayout({
         <link rel="stylesheet" href="/brand/fonts/fonts.css" />
       </head>
       <body className="min-h-screen bg-paper font-sans text-ink antialiased">
+        {/* Cookieless analytics and lazily-loaded error monitoring. Renders no
+            markup: there is no consent banner because there is nothing stored
+            on the device to consent to. See components/analytics.tsx. It sits
+            OUTSIDE ClerkProvider deliberately — nothing about telemetry should
+            be able to see a session. */}
+        <Telemetry />
         {/* Sign-in lives in this app, not on a Clerk-hosted page: the routes are
             declared here so `auth.protect()` and every <SignInButton> agree. */}
         <ClerkProvider

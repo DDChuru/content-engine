@@ -1,6 +1,8 @@
 'use client';
 
 import { useEffect } from 'react';
+import { track } from '@/lib/analytics';
+import { captureError } from '@/lib/monitoring';
 
 /**
  * The last boundary. `app/error.tsx` lives *inside* the root layout, so it cannot
@@ -20,6 +22,14 @@ export default function GlobalError({
 }) {
   useEffect(() => {
     console.error('[global error]', error);
+    // This boundary replaces the whole document, so the layout — and with it
+    // both the Plausible script and its queue stub — never rendered. The
+    // `track` call below will therefore no-op, and that is fine: it costs
+    // nothing and it will start working the day the stub moves. `captureError`
+    // is a bare dynamic import with no such dependency, which is precisely why
+    // the worst failure this app has is the one Sentry can still see.
+    track('app_error', { where: 'global' });
+    captureError(error, 'global');
   }, [error]);
 
   return (

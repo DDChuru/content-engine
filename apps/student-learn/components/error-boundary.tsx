@@ -1,6 +1,8 @@
 'use client';
 
 import { Component, type ErrorInfo, type ReactNode } from 'react';
+import { track } from '@/lib/analytics';
+import { captureError } from '@/lib/monitoring';
 
 interface Props {
   children: ReactNode;
@@ -39,7 +41,14 @@ export class ErrorBoundary extends Component<Props, State> {
   componentDidCatch(error: Error, info: ErrorInfo) {
     // Visible to us, never to the student. No error text reaches the UI: a Convex
     // error string can carry function names and argument values.
-    console.error(`[boundary${this.props.label ? ` ${this.props.label}` : ''}]`, error, info.componentStack);
+    const where = this.props.label ?? 'boundary';
+    console.error(`[boundary ${where}]`, error, info.componentStack);
+    // Two destinations, on purpose. Plausible gets a COUNT keyed on the
+    // boundary's label — enough to see "the video boundary caught 400 of these
+    // yesterday" next to the traffic that caused it. Sentry gets the exception
+    // itself, scrubbed, and is the only place a stack trace exists.
+    track('app_error', { where });
+    captureError(error, where);
   }
 
   reset = () => this.setState({ error: null });

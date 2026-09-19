@@ -2,6 +2,9 @@
 
 import { useEffect } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { track } from '@/lib/analytics';
+import { captureError } from '@/lib/monitoring';
 
 /**
  * Route-level boundary. Next mounts this in place of the page that threw, inside
@@ -20,9 +23,17 @@ export default function RouteError({
   error: Error & { digest?: string };
   reset: () => void;
 }) {
+  const pathname = usePathname();
+  // Which ROUTE threw, not which URL: `/topic/M4.4d` and `/topic/M4.1e` are the
+  // same fault and should be one row, and a path segment is the one place a
+  // student-specific id could ride along. First segment only.
+  const where = `route-${(pathname ?? '/').split('/')[1] || 'home'}`;
+
   useEffect(() => {
     console.error('[route error]', error);
-  }, [error]);
+    track('app_error', { where });
+    captureError(error, where);
+  }, [error, where]);
 
   return (
     <main className="mx-auto max-w-lg px-4 py-16">

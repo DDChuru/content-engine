@@ -1,7 +1,51 @@
 'use client';
 
-import React, { useId, useState } from 'react';
+import React, { useContext, useEffect, useId, useRef, useState } from 'react';
 import { MathText } from '@/components/math-text';
+import { track, trackOnce } from '@/lib/analytics';
+
+/**
+ * Which artifact the surrounding <Artifact> is, so a PredictGate nested inside
+ * it can name itself without every call site passing the code down by hand.
+ * The value is the artifact's syllabus code — a public label off
+ * `content/misconceptions/mechanics.json`, not anything about the student.
+ */
+const ArtifactCodeContext = React.createContext<string>('unknown');
+
+/** The artifact's own code, for anything inside it that reports. */
+export function useArtifactCode(): string {
+  return useContext(ArtifactCodeContext);
+}
+
+/**
+ * Fire `artifact_view` when the artifact is actually ON SCREEN, not when React
+ * mounts it. `/notes/interactive-preview` renders three of these in one column
+ * and a topic page puts one below a video: counting mounts would report every
+ * artifact as seen by every visitor and make the one number that matters —
+ * views ÷ predictions — a lie.
+ */
+export function useSeenOnScreen(code: string) {
+  const ref = useRef<HTMLElement | null>(null);
+  useEffect(() => {
+    const node = ref.current;
+    if (!node || typeof IntersectionObserver === 'undefined') return;
+    const io = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            trackOnce('artifact_view', { artifact: code });
+            io.disconnect();
+          }
+        }
+      },
+      // Half of it, so a strip of border scrolling past does not count as a view.
+      { threshold: 0.5 }
+    );
+    io.observe(node);
+    return () => io.disconnect();
+  }, [code]);
+  return ref;
+}
 
 /**
  * Shared chrome for the interactive notes artifacts.
@@ -26,8 +70,14 @@ export function Artifact({
   claim: string;
   children: React.ReactNode;
 }) {
+  // Two artifacts attack two misconceptions and print both codes ("M4.1e-X01 ·
+  // M4.4e-X01"). The first is the primary one and is what the report is keyed
+  // on — a compound label would split one artifact across two rows.
+  const slug = code.split('·')[0]!.trim();
+  const ref = useSeenOnScreen(slug);
   return (
-    <section className="rounded-xl border border-grid-line bg-paper-raised p-4 md:p-6">
+    <ArtifactCodeContext.Provider value={slug}>
+    <section ref={ref as React.RefObject<HTMLElement>} className="rounded-xl border border-grid-line bg-paper-raised p-4 md:p-6">
       <p className="font-mono text-[0.7rem] uppercase tracking-[0.2em] text-ink-muted">
         {code}
       </p>
@@ -37,6 +87,7 @@ export function Artifact({
       </p>
       <div className="mt-4">{children}</div>
     </section>
+    </ArtifactCodeContext.Provider>
   );
 }
 
@@ -63,8 +114,38 @@ export function PredictGate({
   children: (state: { chosen: PredictOption; correct: boolean }) => React.ReactNode;
 }) {
   const uid = useId();
+  const artifact = useArtifactCode();
   const [chosenId, setChosenId] = useState<string | null>(null);
   const chosen = options.find((o) => o.id === chosenId) ?? null;
+
+  /**
+   * The event the whole product rests on. `/briefs/ROADMAP-to-revenue.md` §1a:
+   * "a predict-gate IS a question" — so this is the only place in the free tier
+   * where a student is assessed, and the ratio of `artifact_view` to
+   * `artifact_predict` is the honest measure of whether the interactives are the
+   * hook Durai is about to pay musicians to point a camera at.
+   *
+   * `outcome` is right|wrong, never the option the student picked: an option id
+   * is a per-student answer and the aggregate of it is a class profile we have
+   * no business assembling out here. When predictions become persistent
+   * (§1a, `lib/progress.ts` → Convex) that detail belongs in Convex behind the
+   * student's own account, not in a third-party analytics table.
+   *
+   * Only the FIRST commit is reported. The buttons stay live afterwards — the
+   * student is meant to go back and read the other notes — but a second click
+   * is reading, not predicting, and counting it would inflate the one rate this
+   * is here to measure.
+   */
+  const committed = useRef(false);
+  const commit = (option: PredictOption) => {
+    setChosenId(option.id);
+    if (committed.current) return;
+    committed.current = true;
+    track('artifact_predict', {
+      artifact,
+      outcome: option.correct ? 'right' : 'wrong',
+    });
+  };
 
   return (
     <div>
@@ -94,7 +175,7 @@ export function PredictGate({
                 key={o.id}
                 type="button"
                 aria-pressed={picked}
-                onClick={() => setChosenId(o.id)}
+                onClick={() => commit(o)}
                 className={`rounded-lg border px-3 py-2 text-left text-sm transition-colors ${tone}`}
               >
                 <span className="font-medium">
@@ -159,6 +240,7 @@ export function Dial({
   valueText?: string;
 }) {
   const uid = useId();
+  const artifact = useArtifactCode();
   return (
     <div>
       <label
@@ -178,7 +260,14 @@ export function Dial({
         step={step}
         value={value}
         aria-valuetext={valueText ?? `${value} ${unit ?? ''}`.trim()}
-        onChange={(e) => onChange(Number(e.target.value))}
+        // First drag of any dial in this artifact = "someone actually touched
+        // it". It sits between `artifact_view` and `artifact_predict` and is
+        // what tells a view that went nowhere apart from one that was tried and
+        // then abandoned at the gate — different problems with different fixes.
+        onChange={(e) => {
+          trackOnce('artifact_engage', { artifact });
+          onChange(Number(e.target.value));
+        }}
         className="mt-1 h-6 w-full cursor-pointer accent-[var(--accent)]"
       />
     </div>

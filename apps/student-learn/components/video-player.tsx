@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import { Play } from 'lucide-react';
 import { ErrorBoundary } from '@/components/error-boundary';
 import { hlsUrl, mp4Url, posterUrl } from '@/lib/video';
+import { track } from '@/lib/analytics';
 
 interface Props {
   /** Bunny Stream GUID. */
@@ -36,6 +37,14 @@ function Player({ videoId, title }: Props) {
   // 'hls' → adaptive; 'mp4' → progressive fallback; 'dead' → we give up honestly.
   const [mode, setMode] = useState<'hls' | 'mp4' | 'dead'>('hls');
   const [started, setStarted] = useState(false);
+  // One start per mount. `playing` also fires after every pause and every seek,
+  // and a play-through rate computed against those is meaningless.
+  const startReported = useRef(false);
+  const trackStart = (transport: string) => {
+    if (startReported.current) return;
+    startReported.current = true;
+    track('video_start', { transport });
+  };
 
   useEffect(() => {
     const video = ref.current;
@@ -69,6 +78,11 @@ function Player({ videoId, title }: Props) {
           // network hiccups by itself, and a dropped segment on a bad connection
           // is precisely the case this player exists for.
           if (!data.fatal) return;
+          // Adaptive streaming gave up. On a Zimbabwean mobile connection this
+          // is the common failure and it is invisible from the outside: the
+          // student sees a spinner, we see nothing. `data.type` is an hls.js
+          // enum ('networkError' | 'mediaError' | …), not anything about them.
+          track('video_trouble', { stage: String(data.type) });
           hls.destroy();
           if (!cancelled) setMode('mp4');
         });
@@ -78,7 +92,11 @@ function Player({ videoId, title }: Props) {
         hls.loadSource(hlsUrl(videoId));
         hls.attachMedia(ref.current);
       })
-      .catch(() => !cancelled && setMode('mp4'));
+      .catch(() => {
+        // The hls.js chunk itself did not download.
+        track('video_trouble', { stage: 'loader' });
+        return !cancelled && setMode('mp4');
+      });
 
     return () => {
       cancelled = true;
@@ -117,12 +135,27 @@ function Player({ videoId, title }: Props) {
         // driving it, hls.js owns the errors — and it empties `src` whenever it
         // detaches, which fires a perfectly ordinary `error` here. Escalating on
         // that once cost us the player on every mount under StrictMode.
-        onError={() => mode === 'mp4' && setMode('dead')}
+        // `playing` is the first frame actually shown — not `play`, which fires
+        // on intent and would report every stalled start as a success.
+        onPlaying={() => trackStart(mode)}
+        onStalled={() => track('video_trouble', { stage: 'stalled' })}
+        onError={() => {
+          if (mode !== 'mp4') return;
+          track('video_trouble', { stage: 'dead' });
+          setMode('dead');
+        }}
       />
       {started ? null : (
         <button
           type="button"
-          onClick={() => setStarted(true)}
+          // The one deliberate cost in this player: until this click the page
+          // has fetched a poster and nothing else. So `video_play` is both "did
+          // they want the video" and "did we spend their data", and the gap
+          // between it and `video_start` is the stall Durai needs to see.
+          onClick={() => {
+            track('video_play');
+            setStarted(true);
+          }}
           aria-label={`Play: ${title}`}
           className="absolute inset-0 flex items-center justify-center bg-black/25 transition hover:bg-black/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
         >

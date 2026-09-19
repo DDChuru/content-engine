@@ -14,6 +14,7 @@ import {
 } from '@/components/auth-shell';
 import { GateWaiting } from '@/components/registration-gate';
 import { COUNTRIES, PRIVACY_VERSION, TERMS_VERSION } from '@/lib/policy';
+import { track, trackOnce } from '@/lib/analytics';
 import {
   EMPTY_ENROLMENT,
   ExamEnrolmentPicker,
@@ -46,6 +47,17 @@ export default function OnboardingPage() {
   const [country, setCountry] = useState('');
   const [error, setError] = useState<string | null>(null);
   const [saving, setSaving] = useState(false);
+
+  /**
+   * The top of the registration funnel: signed in, form on screen, nothing
+   * answered yet. Fired only once the gate has resolved and we know this is a
+   * real new registration — firing it on mount would count every already-
+   * registered student bouncing through here on their way to /study, which is
+   * the population least likely to register and would flatter the rate.
+   */
+  useEffect(() => {
+    if (status && status.registered === false) trackOnce('signup_start');
+  }, [status]);
 
   // Already registered — this screen has nothing to ask.
   const alreadyRegistered = status?.registered === true;
@@ -97,8 +109,19 @@ export default function OnboardingPage() {
       // A student belongs on their study home: it is the first screen that has
       // read the enrolment they just gave us. `/account` is where they go to
       // change it, which is not the same thing and is not what they came for.
+      // The floor of the funnel. `role` is student|guardian — a population
+      // split, not a person. Nothing else about the account goes with it: not
+      // the name just typed, not the age band, not the country, not the
+      // subjects. Those are the four things this form was carefully designed to
+      // be the only holder of.
+      track('signup_complete', { role: chosenRole });
       router.replace(isStudent ? '/study' : '/guardian/redeem');
     } catch (err) {
+      // A slug WE choose, never the server's message: a Convex error string
+      // carries the function name and sometimes its arguments, which is the
+      // exact thing `stripConvexNoise` below exists to keep off the screen.
+      // The detail goes to Sentry via the boundary; here it is just a count.
+      track('signup_failed', { reason: 'register-self' });
       setError(
         err instanceof Error
           ? stripConvexNoise(err.message)

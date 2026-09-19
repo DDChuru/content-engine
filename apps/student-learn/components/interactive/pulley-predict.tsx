@@ -5,8 +5,10 @@ import {
   Artifact,
   Dial,
   Readout,
+  useArtifactCode,
   usePrefersReducedMotion,
 } from '@/components/interactive/artifact-shell';
+import { track } from '@/lib/analytics';
 import { MathText } from '@/components/math-text';
 
 /**
@@ -51,6 +53,12 @@ function Rig() {
   const [phase, setPhase] = useState<Phase>('predict');
   const [t, setT] = useState(0);
   const reduced = usePrefersReducedMotion();
+  const artifact = useArtifactCode();
+  // This artifact does not use <PredictGate> — its gate is a number on a dial
+  // rather than a choice from a list — so it reports the same two events by
+  // hand. Without this the pulley, which is the best of the three and the one
+  // the landing page names, would be the only one missing from the funnel.
+  const committed = useRef(false);
 
   const a = (m2 * G) / (m1 + m2);
   const T = (m1 * m2 * G) / (m1 + m2);
@@ -59,11 +67,24 @@ function Rig() {
 
   // --- the race -----------------------------------------------------------
   const frame = useRef<number | null>(null);
+  const resolvedOnce = useRef(false);
+  /** Watched it all the way to the floor. Reported once, however many replays. */
+  const resolved = () => {
+    if (resolvedOnce.current) return;
+    resolvedOnce.current = true;
+    track('artifact_resolve', {
+      artifact,
+      outcome: Math.abs(guess - a) < 0.05 ? 'right' : 'wrong',
+    });
+  };
   useEffect(() => {
     if (phase !== 'running') return;
     if (reduced) {
+      // prefers-reduced-motion: jump straight to the answer. Still a resolve —
+      // the student saw the outcome, they just did not watch it happen.
       setT(tReal);
       setPhase('done');
+      resolved();
       return;
     }
     const t0 = performance.now();
@@ -73,6 +94,7 @@ function Rig() {
       if (elapsed >= tReal) {
         setT(tReal);
         setPhase('done');
+        resolved();
         return;
       }
       setT(elapsed);
@@ -247,6 +269,19 @@ function Rig() {
           <button
             type="button"
             onClick={() => {
+              if (!committed.current) {
+                committed.current = true;
+                // `outcome`, not the guess. "How many students think a = g" is
+                // the interesting question and `right|wrong` answers it here,
+                // because on this artifact being wrong essentially always means
+                // having said 10. The number itself is a per-student answer and
+                // belongs in Convex behind their own account (ROADMAP §1a),
+                // not in a third-party table.
+                track('artifact_predict', {
+                  artifact,
+                  outcome: Math.abs(guess - a) < 0.05 ? 'right' : 'wrong',
+                });
+              }
               setT(0);
               setPhase('running');
             }}

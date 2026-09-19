@@ -9,6 +9,7 @@ import {
   type SubjectAvailability,
 } from '@/lib/exam-catalogue';
 import { FieldLabel, WhyNote, inputClass } from '@/components/auth-shell';
+import { trackOnce } from '@/lib/analytics';
 
 export interface EnrolmentDraft {
   countryCode: string;
@@ -147,6 +148,36 @@ export function ExamEnrolmentPicker({
     autoLevel.current = `${value.bodyId}:${only}`;
     onChange({ ...value, levelId: only, sessionId: '', subjectIds: [] });
   }, [levels, value, onChange]);
+
+  /**
+   * Where students fall out of the picker.
+   *
+   * Derived from the draft rather than wired into five onChange handlers: the
+   * first two steps auto-answer themselves (a guessed country, a country with
+   * one board), and a handler-based version would miss exactly those and report
+   * a cliff at step 1 that is really the picker working as designed.
+   *
+   * `trackOnce` keys on the step name, so re-renders and a student going back
+   * to change an answer do not inflate the earlier steps. The value sent is the
+   * step's NAME — never the country, board, level or subject chosen. Which
+   * subjects a 16-year-old in Zimbabwe is sitting is precisely the kind of
+   * detail `REGISTRATION-AND-ROLES.md` keeps inside Convex; `subjectDemand`
+   * already aggregates it there, where it belongs.
+   */
+  const furthest = value.subjectIds.length > 0
+    ? 'subjects'
+    : value.sessionId
+      ? 'session'
+      : value.levelId
+        ? 'level'
+        : value.bodyId
+          ? 'body'
+          : value.countryCode
+            ? 'country'
+            : null;
+  useEffect(() => {
+    if (furthest) trackOnce('enrolment_step', { step: furthest });
+  }, [furthest]);
 
   const country = countries?.find((c) => c.code === value.countryCode);
   const body = bodies?.find((b) => b.bodyId === value.bodyId);
