@@ -1,5 +1,5 @@
 {
   "extends": "../../../../tsconfig.json",
   "compilerOptions": {"noEmit": true, "declaration": false, "declarationMap": false},
-  "include": ["./*.ts", "./*.tsx", "../../index-stem4life.ts"]
+  "include": ["./*.ts", "./*.tsx", "../../index-stem4life.ts", "../../index-stem4life-branding.tsx"]
 }

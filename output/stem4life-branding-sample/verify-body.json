@@ -1,0 +1,686 @@
+{
+  "inputs": {
+    "source": "/home/dachu/Documents/projects/content-engine/apps/student-learn/public/videos/mechanics-si-units.mp4",
+    "introAudio": "/home/dachu/Documents/projects/content-engine/output/stem4life-lessons/.work/music/intro.aac",
+    "outroAudio": "/home/dachu/Documents/projects/content-engine/output/stem4life-lessons/.work/music/outro.aac",
+    "hashesBefore": {
+      "source": "caacbd96abb069be550c76e0d8df6e7fa5835b3b5cea4e47dc3abafeb5ae2ff7",
+      "introAudio": "5170ed514aa248de8c9138f3aeed6b7976bd580566fba9239aa4f16f3bcbce4e",
+      "outroAudio": "bab660c1246054176bd4cb0e5f31bad2ec1d9f5a781fd72484f977f72975f3b4"
+    },
+    "hashesAfter": {
+      "source": "caacbd96abb069be550c76e0d8df6e7fa5835b3b5cea4e47dc3abafeb5ae2ff7",
+      "introAudio": "5170ed514aa248de8c9138f3aeed6b7976bd580566fba9239aa4f16f3bcbce4e",
+      "outroAudio": "bab660c1246054176bd4cb0e5f31bad2ec1d9f5a781fd72484f977f72975f3b4"
+    }
+  },
+  "output": "/home/dachu/.claude-codex/worktrees/content-engine-321a8f91/video-corrections/output/stem4life-branding-sample/mechanics-si-units.mp4",
+  "outputSha256": "84f671ce6551fc3bfd2465c4439e9f0fe8fb6d84b3938885b810d48ccb27f662",
+  "bodyReencoded": false,
+  "renderConcurrency": 1,
+  "concat": {
+    "warningFree": true
+  },
+  "allBodyFrames": {
+    "count": 5607,
+    "format": "RGB24",
+    "originalSha256": "bd42d3eede6d850eeccf61d68ffdd1cc3fbaf4cc06f46d61aa9055398d991568",
+    "sampleSha256": "bd42d3eede6d850eeccf61d68ffdd1cc3fbaf4cc06f46d61aa9055398d991568",
+    "bitExact": true
+  },
+  "outputProbe": {
+    "video": {
+      "index": 0,
+      "codec_name": "h264",
+      "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+      "profile": "High",
+      "codec_type": "video",
+      "codec_tag_string": "avc1",
+      "codec_tag": "0x31637661",
+      "width": 1920,
+      "height": 1080,
+      "coded_width": 1920,
+      "coded_height": 1088,
+      "closed_captions": 0,
+      "film_grain": 0,
+      "has_b_frames": 2,
+      "sample_aspect_ratio": "1:1",
+      "display_aspect_ratio": "16:9",
+      "pix_fmt": "yuvj420p",
+      "level": 40,
+      "color_range": "pc",
+      "color_space": "bt470bg",
+      "chroma_location": "center",
+      "field_order": "progressive",
+      "refs": 4,
+      "is_avc": "true",
+      "nal_length_size": "4",
+      "id": "0x1",
+      "r_frame_rate": "30/1",
+      "avg_frame_rate": "2533120/84447",
+      "time_base": "1/15360",
+      "start_pts": 0,
+      "start_time": "0.000000",
+      "duration_ts": 3040092,
+      "duration": "197.922656",
+      "bit_rate": "751956",
+      "bits_per_raw_sample": "8",
+      "nb_frames": "5937",
+      "nb_read_frames": "5937",
+      "extradata_size": 51,
+      "disposition": {
+        "default": 1,
+        "dub": 0,
+        "original": 0,
+        "comment": 0,
+        "lyrics": 0,
+        "karaoke": 0,
+        "forced": 0,
+        "hearing_impaired": 0,
+        "visual_impaired": 0,
+        "clean_effects": 0,
+        "attached_pic": 0,
+        "timed_thumbnails": 0,
+        "non_diegetic": 0,
+        "captions": 0,
+        "descriptions": 0,
+        "metadata": 0,
+        "dependent": 0,
+        "still_image": 0
+      },
+      "tags": {
+        "language": "und",
+        "handler_name": "VideoHandler",
+        "vendor_id": "[0][0][0][0]",
+        "encoder": "Lavc61.19.100 libx264"
+      }
+    },
+    "audio": {
+      "index": 1,
+      "codec_name": "aac",
+      "codec_long_name": "AAC (Advanced Audio Coding)",
+      "profile": "LC",
+      "codec_type": "audio",
+      "codec_tag_string": "mp4a",
+      "codec_tag": "0x6134706d",
+      "sample_fmt": "fltp",
+      "sample_rate": "48000",
+      "channels": 2,
+      "channel_layout": "stereo",
+      "bits_per_sample": 0,
+      "initial_padding": 0,
+      "id": "0x2",
+      "r_frame_rate": "0/0",
+      "avg_frame_rate": "0/0",
+      "time_base": "1/48000",
+      "start_pts": 0,
+      "start_time": "0.000000",
+      "duration_ts": 9500032,
+      "duration": "197.917333",
+      "bit_rate": "309843",
+      "nb_frames": "9277",
+      "nb_read_frames": "9277",
+      "extradata_size": 2,
+      "disposition": {
+        "default": 1,
+        "dub": 0,
+        "original": 0,
+        "comment": 0,
+        "lyrics": 0,
+        "karaoke": 0,
+        "forced": 0,
+        "hearing_impaired": 0,
+        "visual_impaired": 0,
+        "clean_effects": 0,
+        "attached_pic": 0,
+        "timed_thumbnails": 0,
+        "non_diegetic": 0,
+        "captions": 0,
+        "descriptions": 0,
+        "metadata": 0,
+        "dependent": 0,
+        "still_image": 0
+      },
+      "tags": {
+        "language": "und",
+        "handler_name": "SoundHandler",
+        "vendor_id": "[0][0][0][0]"
+      }
+    },
+    "format": {
+      "filename": "/home/dachu/.claude-codex/worktrees/content-engine-321a8f91/video-corrections/output/stem4life-branding-sample/mechanics-si-units.mp4",
+      "nb_streams": 2,
+      "nb_programs": 0,
+      "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+      "format_long_name": "QuickTime / MOV",
+      "start_time": "0.000000",
+      "duration": "197.922656",
+      "size": "26487054",
+      "bit_rate": "1070602",
+      "probe_score": 100,
+      "tags": {
+        "major_brand": "isom",
+        "minor_version": "512",
+        "compatible_brands": "isomiso2avc1mp41",
+        "encoder": "Lavf60.16.100"
+      }
+    },
+    "videoExtradataSha256": "57d40d800a7255c82774d5c685ff63251c9bd7dcfaed42c154dbb552c62a6003",
+    "audioExtradataSha256": "a75e5a34d5e09992cf0a68999e7478f1a32a5d5933a1c5858b892e6857351129"
+  },
+  "frameCount": 5937,
+  "expectedFrameCount": 5937,
+  "expectedDurationSeconds": 197.922667,
+  "videoDurationSeconds": 197.922656,
+  "audioDurationSeconds": 197.917333,
+  "formatDurationSeconds": 197.922656,
+  "durationDeltaSeconds": -0.00001100000000064938,
+  "bodyFrameComparison": {
+    "method": "decoded RGB24 SHA-256",
+    "sourceFrameIndex": 2803,
+    "outputFrameIndex": 2953,
+    "sourceTimestampSeconds": 93.433333,
+    "outputTimestampSeconds": 98.433333,
+    "sourceFrameSha256": "f76c418eb8c7ecd928ae4f578491cd883b07a23b1b538f271c991ee2ab3136b8",
+    "outputFrameSha256": "f76c418eb8c7ecd928ae4f578491cd883b07a23b1b538f271c991ee2ab3136b8",
+    "bitExact": true,
+    "psnr": "infinite"
+  },
+  "lessonAudioComparison": {
+    "method": "complete decoded f32le 48000Hz stereo PCM SHA-256",
+    "sourceStartSeconds": 0,
+    "outputStartSeconds": 5,
+    "comparedDurationSeconds": 186.922667,
+    "sourcePcmSha256": "0ca6613ab524865447fdf294f241307c0605666f8784c290e6dec7e0ce8c546c",
+    "outputPcmSha256": "0ca6613ab524865447fdf294f241307c0605666f8784c290e6dec7e0ce8c546c",
+    "bitExact": true,
+    "musicAbsentFromLessonBody": true
+  },
+  "narrationLoudness": {
+    "windowStartSeconds": 1,
+    "windowDurationSeconds": 60,
+    "integratedLufs": -21.5,
+    "truePeakDbfs": -4.8,
+    "firstSecond": {
+      "meanDbfs": -22.8,
+      "peakDbfs": -7.8
+    }
+  },
+  "musicPresence": {
+    "intro": {
+      "meanDbfs": -22.7,
+      "peakDbfs": -13.1,
+      "measuredWindowSeconds": [
+        0.4,
+        3.5
+      ],
+      "present": true
+    },
+    "outro": {
+      "meanDbfs": -22.6,
+      "peakDbfs": -12.6,
+      "measuredWindowSeconds": [
+        192.422656,
+        195.622656
+      ],
+      "present": true
+    }
+  },
+  "seamAnalysis": {
+    "binSeconds": 0.1,
+    "intro": {
+      "sourceWindowSeconds": [
+        4.5,
+        6
+      ],
+      "wav": "output/stem4life-branding-sample/.work/seams/intro-seam-4.5-6.0.wav",
+      "curveFile": "output/stem4life-branding-sample/.work/seams/intro-seam-rms-100ms.txt",
+      "rmsDbfs": [
+        {
+          "bin": 0,
+          "startSeconds": 0,
+          "rmsDbfs": -35.855315
+        },
+        {
+          "bin": 1,
+          "startSeconds": 0.1,
+          "rmsDbfs": -45.254087
+        },
+        {
+          "bin": 2,
+          "startSeconds": 0.2,
+          "rmsDbfs": -65.25304
+        },
+        {
+          "bin": 3,
+          "startSeconds": 0.3,
+          "rmsDbfs": "-inf"
+        },
+        {
+          "bin": 4,
+          "startSeconds": 0.4,
+          "rmsDbfs": "-inf"
+        },
+        {
+          "bin": 5,
+          "startSeconds": 0.5,
+          "rmsDbfs": -94.993944
+        },
+        {
+          "bin": 6,
+          "startSeconds": 0.6,
+          "rmsDbfs": -26.831016
+        },
+        {
+          "bin": 7,
+          "startSeconds": 0.7,
+          "rmsDbfs": -25.983655
+        },
+        {
+          "bin": 8,
+          "startSeconds": 0.8,
+          "rmsDbfs": -18.614585
+        },
+        {
+          "bin": 9,
+          "startSeconds": 0.9,
+          "rmsDbfs": -20.131538
+        },
+        {
+          "bin": 10,
+          "startSeconds": 1,
+          "rmsDbfs": -30.213853
+        },
+        {
+          "bin": 11,
+          "startSeconds": 1.1,
+          "rmsDbfs": -31.480048
+        },
+        {
+          "bin": 12,
+          "startSeconds": 1.2,
+          "rmsDbfs": -23.463256
+        },
+        {
+          "bin": 13,
+          "startSeconds": 1.3,
+          "rmsDbfs": -24.04711
+        },
+        {
+          "bin": 14,
+          "startSeconds": 1.4,
+          "rmsDbfs": -18.573357
+        }
+      ],
+      "finalPreLessonBinsAtOrBelowMinus60Dbfs": true
+    },
+    "outro": {
+      "sourceWindowSeconds": [
+        190.922656,
+        197.922656
+      ],
+      "wav": "output/stem4life-branding-sample/.work/seams/outro-seam-final-7s.wav",
+      "curveFile": "output/stem4life-branding-sample/.work/seams/outro-seam-rms-100ms.txt",
+      "rmsDbfs": [
+        {
+          "bin": 0,
+          "startSeconds": 0,
+          "rmsDbfs": -35.506524
+        },
+        {
+          "bin": 1,
+          "startSeconds": 0.1,
+          "rmsDbfs": -57.139473
+        },
+        {
+          "bin": 2,
+          "startSeconds": 0.2,
+          "rmsDbfs": -91.217187
+        },
+        {
+          "bin": 3,
+          "startSeconds": 0.3,
+          "rmsDbfs": -91.068096
+        },
+        {
+          "bin": 4,
+          "startSeconds": 0.4,
+          "rmsDbfs": -94.646323
+        },
+        {
+          "bin": 5,
+          "startSeconds": 0.5,
+          "rmsDbfs": "-inf"
+        },
+        {
+          "bin": 6,
+          "startSeconds": 0.6,
+          "rmsDbfs": "-inf"
+        },
+        {
+          "bin": 7,
+          "startSeconds": 0.7,
+          "rmsDbfs": "-inf"
+        },
+        {
+          "bin": 8,
+          "startSeconds": 0.8,
+          "rmsDbfs": "-inf"
+        },
+        {
+          "bin": 9,
+          "startSeconds": 0.9,
+          "rmsDbfs": "-inf"
+        },
+        {
+          "bin": 10,
+          "startSeconds": 1,
+          "rmsDbfs": -38.612671
+        },
+        {
+          "bin": 11,
+          "startSeconds": 1.1,
+          "rmsDbfs": -28.909549
+        },
+        {
+          "bin": 12,
+          "startSeconds": 1.2,
+          "rmsDbfs": -24.381108
+        },
+        {
+          "bin": 13,
+          "startSeconds": 1.3,
+          "rmsDbfs": -25.817383
+        },
+        {
+          "bin": 14,
+          "startSeconds": 1.4,
+          "rmsDbfs": -22.562453
+        },
+        {
+          "bin": 15,
+          "startSeconds": 1.5,
+          "rmsDbfs": -21.901744
+        },
+        {
+          "bin": 16,
+          "startSeconds": 1.6,
+          "rmsDbfs": -22.153887
+        },
+        {
+          "bin": 17,
+          "startSeconds": 1.7,
+          "rmsDbfs": -21.708078
+        },
+        {
+          "bin": 18,
+          "startSeconds": 1.8,
+          "rmsDbfs": -22.386886
+        },
+        {
+          "bin": 19,
+          "startSeconds": 1.9,
+          "rmsDbfs": -25.730577
+        },
+        {
+          "bin": 20,
+          "startSeconds": 2,
+          "rmsDbfs": -23.293176
+        },
+        {
+          "bin": 21,
+          "startSeconds": 2.1,
+          "rmsDbfs": -23.191831
+        },
+        {
+          "bin": 22,
+          "startSeconds": 2.2,
+          "rmsDbfs": -23.48528
+        },
+        {
+          "bin": 23,
+          "startSeconds": 2.3,
+          "rmsDbfs": -20.71804
+        },
+        {
+          "bin": 24,
+          "startSeconds": 2.4,
+          "rmsDbfs": -25.675177
+        },
+        {
+          "bin": 25,
+          "startSeconds": 2.5,
+          "rmsDbfs": -23.672009
+        },
+        {
+          "bin": 26,
+          "startSeconds": 2.6,
+          "rmsDbfs": -22.556551
+        },
+        {
+          "bin": 27,
+          "startSeconds": 2.7,
+          "rmsDbfs": -22.540056
+        },
+        {
+          "bin": 28,
+          "startSeconds": 2.8,
+          "rmsDbfs": -20.723234
+        },
+        {
+          "bin": 29,
+          "startSeconds": 2.9,
+          "rmsDbfs": -21.562108
+        },
+        {
+          "bin": 30,
+          "startSeconds": 3,
+          "rmsDbfs": -21.969861
+        },
+        {
+          "bin": 31,
+          "startSeconds": 3.1,
+          "rmsDbfs": -20.200819
+        },
+        {
+          "bin": 32,
+          "startSeconds": 3.2,
+          "rmsDbfs": -21.169052
+        },
+        {
+          "bin": 33,
+          "startSeconds": 3.3,
+          "rmsDbfs": -21.593839
+        },
+        {
+          "bin": 34,
+          "startSeconds": 3.4,
+          "rmsDbfs": -20.87171
+        },
+        {
+          "bin": 35,
+          "startSeconds": 3.5,
+          "rmsDbfs": -25.714105
+        },
+        {
+          "bin": 36,
+          "startSeconds": 3.6,
+          "rmsDbfs": -22.667302
+        },
+        {
+          "bin": 37,
+          "startSeconds": 3.7,
+          "rmsDbfs": -22.293345
+        },
+        {
+          "bin": 38,
+          "startSeconds": 3.8,
+          "rmsDbfs": -22.976731
+        },
+        {
+          "bin": 39,
+          "startSeconds": 3.9,
+          "rmsDbfs": -21.555873
+        },
+        {
+          "bin": 40,
+          "startSeconds": 4,
+          "rmsDbfs": -24.057406
+        },
+        {
+          "bin": 41,
+          "startSeconds": 4.1,
+          "rmsDbfs": -25.896535
+        },
+        {
+          "bin": 42,
+          "startSeconds": 4.2,
+          "rmsDbfs": -23.751558
+        },
+        {
+          "bin": 43,
+          "startSeconds": 4.3,
+          "rmsDbfs": -24.270117
+        },
+        {
+          "bin": 44,
+          "startSeconds": 4.4,
+          "rmsDbfs": -23.435521
+        },
+        {
+          "bin": 45,
+          "startSeconds": 4.5,
+          "rmsDbfs": -20.907482
+        },
+        {
+          "bin": 46,
+          "startSeconds": 4.6,
+          "rmsDbfs": -27.209992
+        },
+        {
+          "bin": 47,
+          "startSeconds": 4.7,
+          "rmsDbfs": -24.061411
+        },
+        {
+          "bin": 48,
+          "startSeconds": 4.8,
+          "rmsDbfs": -23.461693
+        },
+        {
+          "bin": 49,
+          "startSeconds": 4.9,
+          "rmsDbfs": -23.891762
+        },
+        {
+          "bin": 50,
+          "startSeconds": 5,
+          "rmsDbfs": -25.893056
+        },
+        {
+          "bin": 51,
+          "startSeconds": 5.1,
+          "rmsDbfs": -27.35749
+        },
+        {
+          "bin": 52,
+          "startSeconds": 5.2,
+          "rmsDbfs": -28.578211
+        },
+        {
+          "bin": 53,
+          "startSeconds": 5.3,
+          "rmsDbfs": -30.351254
+        },
+        {
+          "bin": 54,
+          "startSeconds": 5.4,
+          "rmsDbfs": -32.022761
+        },
+        {
+          "bin": 55,
+          "startSeconds": 5.5,
+          "rmsDbfs": -34.375537
+        },
+        {
+          "bin": 56,
+          "startSeconds": 5.6,
+          "rmsDbfs": -36.734884
+        },
+        {
+          "bin": 57,
+          "startSeconds": 5.7,
+          "rmsDbfs": -39.722304
+        },
+        {
+          "bin": 58,
+          "startSeconds": 5.8,
+          "rmsDbfs": -41.426904
+        },
+        {
+          "bin": 59,
+          "startSeconds": 5.9,
+          "rmsDbfs": -43.405754
+        },
+        {
+          "bin": 60,
+          "startSeconds": 6,
+          "rmsDbfs": -47.200416
+        },
+        {
+          "bin": 61,
+          "startSeconds": 6.1,
+          "rmsDbfs": -49.03669
+        },
+        {
+          "bin": 62,
+          "startSeconds": 6.2,
+          "rmsDbfs": -51.639602
+        },
+        {
+          "bin": 63,
+          "startSeconds": 6.3,
+          "rmsDbfs": -57.053626
+        },
+        {
+          "bin": 64,
+          "startSeconds": 6.4,
+          "rmsDbfs": -63.97653
+        },
+        {
+          "bin": 65,
+          "startSeconds": 6.5,
+          "rmsDbfs": -74.942768
+        },
+        {
+          "bin": 66,
+          "startSeconds": 6.6,
+          "rmsDbfs": -92.519688
+        },
+        {
+          "bin": 67,
+          "startSeconds": 6.7,
+          "rmsDbfs": "-inf"
+        },
+        {
+          "bin": 68,
+          "startSeconds": 6.8,
+          "rmsDbfs": "-inf"
+        },
+        {
+          "bin": 69,
+          "startSeconds": 6.9,
+          "rmsDbfs": "-inf"
+        }
+      ],
+      "finalBinsAtOrBelowMinus60Dbfs": true
+    }
+  },
+  "fullDecodePassed": true,
+  "bookendDurations": {
+    "introVideoSeconds": 5,
+    "introAudioSeconds": 4.992,
+    "outroVideoSeconds": 6,
+    "outroAudioSeconds": 5.994667
+  }
+}

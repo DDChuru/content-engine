@@ -395,7 +395,7 @@ const makeFfmpegOverride = ({type, args}) => {
   return next;
 };
 
-const renderBookendVideo = async ({serveUrl, lesson, id, output, expectedFrames, ordinal, total, fonts}) => {
+const renderBookendVideo = async ({serveUrl, lesson, id, output, expectedFrames, ordinal, total, fonts, concurrency = 2}) => {
   const inputProps = {title: lesson.title, subtitle: lesson.subtitle};
   const composition = await selectComposition({
     serveUrl,
@@ -426,7 +426,7 @@ const renderBookendVideo = async ({serveUrl, lesson, id, output, expectedFrames,
     codec: 'h264',
     crf: 18,
     imageFormat: 'png',
-    concurrency: 2,
+    concurrency,
     disallowParallelEncoding: true,
     timeoutInMilliseconds: 120_000,
     ffmpegOverride: makeFfmpegOverride,
@@ -1088,7 +1088,15 @@ const main = async () => {
   if (allComplete) console.log(`Contact sheet: ${CONTACT_SHEET_FILE}`);
 };
 
-main().catch((error) => {
-  console.error(error.stack ?? error.message ?? error);
-  process.exitCode = 1;
-});
+// The one-lesson branding proof reuses the exact mux and verification contract.
+export {
+  assertApprovedMaster, assertBookendMatchesMaster, concatenate, muxBookend,
+  probeFirstAudioDtsSeconds, probeMedia, renderBookendVideo, sha256File, verifyOutput,
+};
+
+if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
+  main().catch((error) => {
+    console.error(error.stack ?? error.message ?? error);
+    process.exitCode = 1;
+  });
+}
