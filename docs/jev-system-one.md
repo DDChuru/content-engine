@@ -156,11 +156,42 @@ mapping table. That is a `choice` problem in a database.
   defensible record.
 - **Open-ended anything.** It does not generate.
 
+## 8a. Cost — measured 2026-09-20, and it is close to free
+
+**$0.042 per million input tokens. Output is free.** Observed from the console after our test
+session: 15 requests, 6,779 tokens, **$0.0003** total. That is ~450 input tokens and
+**$0.000019 per decision**.
+
+| Workload | Calls/month | Cost |
+|---|---:|---:|
+| Stem 4 Life: 500 students × 20 gated attempts | 10,000 | $0.25 |
+| Stem 4 Life: every message through the safeguarding filter | 5,000 | $0.13 |
+| e-wizer: one 500-row MCS re-import | 500 | $0.01 |
+| e-wizer: 50 sites re-importing monthly | 25,000 | $0.63 |
+| myHACCPAdmin: every evidence item judged on arrival | 20,000 | $0.50 |
+| **All of the above** | **60,200** | **$1.52** |
+| A million decisions | 1,000,000 | $25.20 |
+
+**This removes cost as a design consideration, and it supersedes earlier advice in this doc.**
+§7 says to match deterministically first and send only the residue. That remains *tidier*
+engineering, but it is no longer a cost argument — 500 rows is a cent.
+
+What it actually licenses:
+- **Be extravagant with questions.** Fifteen beats three, and they are parallel (§4).
+- **Judge on arrival, not at audit time.** Continuous conformance becomes affordable.
+- **Re-judge history.** When a standard changes or a definition sharpens, re-run the judgement
+  across the entire archive. *"We re-evaluated every record against the revised clause; these
+  eleven now fail"* is something a human-reviewed system structurally cannot do. At these prices
+  it is a background job, not a project.
+
+The constraint that survives is **not cost but trust**: no rationale on the record (§8), and a
+wrong decision is still wrong however cheap it was.
+
+---
+
 ## 9. Open questions
 
 - **Does `state` accept images?** One page mentions multimodal/vision; the API docs describe text.
   **Unresolved, and it matters** — if images work it is a candidate for the student-photo redaction
   gate that currently blocks the whole submission path.
-- **Pricing.** Nothing concrete found publicly. `usage` tokens come back per call, so measure real
-  cost before committing to a per-submission design.
 - Rate limits are undocumented beyond "back off on 429/529".
