@@ -20,8 +20,8 @@ sentence back, this is the wrong tool.
 | Type | Ask | Returns |
 |---|---|---|
 | `noul` | a yes/no statement | probability the statement is true |
-| `choice` | pick from options you defined | probability per option + confidence |
-| `score` | rate against ordered levels | continuous score + distribution + confidence |
+| `choice` | pick from options you defined (under `criteria`, **not** `options`) | probability per option + confidence |
+| `score` | rate against ordered levels (under `criteria`, **not** `levels`) | continuous score + distribution + confidence |
 
 ## 3. Verified API
 
@@ -107,13 +107,24 @@ wrongly blocking one who understands? Misconception M4.4d-X02, "the hanging mass
 - **One number cannot gate safely.** The student with sound physics and a slipped decimal scored
   0.60 — blocked at a 0.7 threshold, which is the exact harm to avoid. The *second* question
   separates them: arithmetic-only 0.57 versus 0.02.
-- **Therefore gate on `cleared OR arithmetic_only`, never `cleared` alone.** Costs nothing (§4).
+- **⚠ CORRECTED 2026-09-20.** I originally wrote "gate on `cleared OR arithmetic_only`". **That does not
+  work.** The arithmetic-slip student scored 0.60 *and* 0.57 — both below a 0.70 threshold, so the OR
+  still blocks them. Two weak signals do not make a strong one. What actually works (Astra, Fable, both
+  independently): **a panel of narrow questions plus a follow-up, not a threshold on two.** Fable ran an
+  eight-question panel and routed all twelve test answers correctly, including informal English at 0.95
+  and a prompt-injection attempt at 0.03. And the gate must be a **sequence over time** — re-checking the
+  same misconception days later is what lets any single decision be lenient.
 - A terse answer scores low *correctly* — it genuinely cannot tell. Route 0.4–0.75 to a follow-up
   question or a human, not to a decision.
 
 ## 7. Candidate uses, by surface
 
 ### Stem 4 Life (education)
+> **Corrected:** Save My Exams already ships *Smart Mark*, which marks written answers, and earlier
+> tutoring systems assessed physics reasoning in natural language. "Nobody can do this" was wrong —
+> both education streams found it independently. The advantage is narrower and more defensible:
+> a marked answer costs **$0.000055**, so *unlimited* marked practice is affordable in a way it is not
+> for anyone paying frontier-model prices.
 - **Mastery gating** — tested above. The other session has decided notes are gated with no blind
   progression; this is the gate decider.
 - **Contact-detail filter (safeguarding)** — regex misses paraphrase ("find me on the green app").
