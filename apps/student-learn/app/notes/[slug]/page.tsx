@@ -11,9 +11,10 @@ interface NoteTopic {
   slug: string;
   title: string;
   unit: string;
-  notes: string; // path under /public
+  notes?: string; // path under /public
   video?: string; // legacy local path, development only — gitignored, never deployed
   videoId?: string; // Bunny Stream GUID — the real source, see lib/video.ts
+  cdnHost?: string;
   duration?: string;
 }
 
@@ -44,6 +45,7 @@ export default function NotesPage() {
         // The videos live on Bunny Stream now and are addressed by `videoId`;
         // there is no local file left to probe.
         setTopic(t);
+        if (!t.notes) return '';
         return fetch(t.notes).then((r) =>
           r.ok ? r.text() : Promise.reject(new Error('Notes file missing.'))
         );
@@ -64,7 +66,7 @@ export default function NotesPage() {
           <h1 className="mt-1 font-heading text-3xl md:text-4xl">{topic.title}</h1>
           {topic.videoId ? (
             <figure className="mt-6 overflow-hidden rounded-xl bg-black shadow-sm">
-              <VideoPlayer videoId={topic.videoId} title={topic.title} />
+              <VideoPlayer videoId={topic.videoId} cdnHost={topic.cdnHost} title={topic.title} />
               {topic.duration && (
                 <figcaption className="px-4 py-2 text-xs text-ink-muted bg-paper-raised">
                   Watch first · {topic.duration}. Then read the notes below.

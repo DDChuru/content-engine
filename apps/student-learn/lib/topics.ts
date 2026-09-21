@@ -7,10 +7,9 @@
  * knew nothing about the others. This file is the only place they meet, so the
  * through-line — subject → syllabus → topic → learn it — has one definition.
  *
- * It is deliberately a map with ONE subject in it. Every other subject in the
- * catalogue resolves to "nothing written", which is the honest default and is what
- * the subject page renders rather than an empty shell. When the second subject
- * ships it is one line here.
+ * It is deliberately a small, explicit map. Subjects named here resolve to their
+ * written units; every other subject in the catalogue resolves to "nothing written",
+ * which is the honest default the subject page renders rather than an empty shell.
  */
 
 import { UNITS, isStudentFacing, type SyllabusTopic, type SyllabusUnit } from './syllabus';
@@ -18,6 +17,7 @@ import { UNITS, isStudentFacing, type SyllabusTopic, type SyllabusUnit } from '.
 /** Catalogue subject id → the units of `lib/syllabus.ts` it is taught through. */
 const SUBJECT_UNITS: Record<string, string[]> = {
   'cie-al-9709': ['M', 'P1'],
+  'cie-al-9700': ['B1'],
 };
 
 export interface ArtifactRef {
@@ -61,12 +61,12 @@ export function subjectHasContent(subjectId: string): boolean {
 /**
  * The notes slug behind a topic, where there is one.
  *
- * `href` is the field the map already links through, so the slug is derived from
- * it rather than stored a second time — two copies of a slug is exactly how a
- * topic page and a notes page drift apart. A topic pointing anywhere other than
- * `/notes/...` (P1.7 points at `/ink`) has no slug and keeps its own destination.
+ * A video-only topic carries the slug directly because it has no notes `href`.
+ * Existing topics derive it from their `/notes/...` destination; a topic pointing
+ * anywhere else (P1.7 points at `/ink`) has no slug and keeps that destination.
  */
 export function notesSlug(topic: SyllabusTopic): string | null {
+  if (topic.slug) return topic.slug;
   const href = topic.href ?? '';
   return href.startsWith('/notes/') ? href.slice('/notes/'.length) : null;
 }

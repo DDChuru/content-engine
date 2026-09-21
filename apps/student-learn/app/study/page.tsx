@@ -214,7 +214,7 @@ function StudyHome() {
         <p className="mt-10 text-sm text-ink-muted">
           Browsing something outside your subjects?{' '}
           <Link href="/syllabus" className="font-semibold text-accent underline underline-offset-4">
-            The whole 9709 map is open
+            The whole map is open
           </Link>
           .
         </p>

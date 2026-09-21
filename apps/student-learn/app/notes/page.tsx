@@ -8,6 +8,7 @@ interface NoteTopic {
   slug: string;
   title: string;
   unit: string;
+  notes?: string;
   video?: string;
   videoId?: string;
   duration?: string;
@@ -19,7 +20,8 @@ export default function NotesIndexPage() {
   /**
    * Alternate recordings are not listed here.
    *
-   * `index.json` carries all 38 pages including the six `-fable` variants, and
+   * `index.json` has notes on 37 of its 49 entries, including the six `-fable`
+   * variants, and
    * listing them put six rows titled "... (Fable)" directly beneath the rows they
    * are variants of — a student reading this list had to choose between two
    * near-identical titles on the strength of a word that means nothing to them.
@@ -49,7 +51,7 @@ export default function NotesIndexPage() {
       <h1 className="mt-1 font-heading text-3xl md:text-4xl">Topic notes</h1>
       <p className="mt-1 text-sm text-ink-muted">Short explainer, then the notes. Five minutes each.</p>
       <ul className="mt-6 space-y-3">
-        {topics.filter((t) => !variantSlugs.has(t.slug)).map((t) => (
+        {topics.filter((t) => Boolean(t.notes) && !variantSlugs.has(t.slug)).map((t) => (
           <li key={t.slug}>
             <Link
               href={`/notes/${t.slug}`}

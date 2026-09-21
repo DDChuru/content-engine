@@ -9,6 +9,8 @@ import { track } from '@/lib/analytics';
 interface Props {
   /** Bunny Stream GUID. */
   videoId: string;
+  /** Bunny pull-zone host for this video's library. Omit for the default (Maths). */
+  cdnHost?: string;
   /** For the accessible name — the topic title, not "video". */
   title: string;
 }
@@ -32,7 +34,7 @@ interface Props {
  *    the interactive artifact below are the rest of the lesson and must never be
  *    taken down by a codec.
  */
-function Player({ videoId, title }: Props) {
+function Player({ videoId, cdnHost, title }: Props) {
   const ref = useRef<HTMLVideoElement>(null);
   // 'hls' → adaptive; 'mp4' → progressive fallback; 'dead' → we give up honestly.
   const [mode, setMode] = useState<'hls' | 'mp4' | 'dead'>('hls');
@@ -56,7 +58,7 @@ function Player({ videoId, title }: Props) {
     // and then fails with MEDIA_ERR_SRC_NOT_SUPPORTED, which is exactly the trap
     // this ordering exists to avoid.
     if (!('MediaSource' in window) && video.canPlayType('application/vnd.apple.mpegurl')) {
-      video.src = hlsUrl(videoId);
+      video.src = hlsUrl(videoId, cdnHost);
       void video.play().catch(() => {});
       return;
     }
@@ -89,7 +91,7 @@ function Player({ videoId, title }: Props) {
         hls.on(Hls.Events.MANIFEST_PARSED, () => {
           void ref.current?.play().catch(() => {});
         });
-        hls.loadSource(hlsUrl(videoId));
+        hls.loadSource(hlsUrl(videoId, cdnHost));
         hls.attachMedia(ref.current);
       })
       .catch(() => {
@@ -102,15 +104,15 @@ function Player({ videoId, title }: Props) {
       cancelled = true;
       instance?.destroy();
     };
-  }, [videoId, mode, started]);
+  }, [videoId, cdnHost, mode, started]);
 
   // The fallback path needs the element to actually carry the file.
   useEffect(() => {
     const video = ref.current;
     if (!video || mode !== 'mp4' || !started) return;
-    video.src = mp4Url(videoId);
+    video.src = mp4Url(videoId, 360, cdnHost);
     void video.play().catch(() => {});
-  }, [videoId, mode, started]);
+  }, [videoId, cdnHost, mode, started]);
 
   if (mode === 'dead') {
     return (
@@ -129,7 +131,7 @@ function Player({ videoId, title }: Props) {
         controls={started}
         playsInline
         preload="none"
-        poster={posterUrl(videoId)}
+        poster={posterUrl(videoId, cdnHost)}
         aria-label={title}
         // Only the progressive path reports through the element. While hls.js is
         // driving it, hls.js owns the errors — and it empties `src` whenever it

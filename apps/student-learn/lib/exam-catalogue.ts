@@ -12,10 +12,10 @@
  * WHAT STAYED IN CODE, AND WHY
  *
  * `availability` is not a column and is not editable. It is computed here, at read
- * time, against `lib/syllabus.ts` — the same array the study pages render from. One
- * subject in the whole catalogue resolves above `planned`: Cambridge A Level
- * Mathematics 9709, and only its Mechanics unit. If the syllabus map goes empty, so
- * does this, automatically, and no admin action can say otherwise. (An admin who
+ * time, against `lib/syllabus.ts` — the same array the study pages render from.
+ * Cambridge A Level Mathematics 9709 and Biology 9700 resolve above `planned` from
+ * their live units. If the syllabus map goes empty, so does this, automatically,
+ * and no admin action can say otherwise. (An admin who
  * genuinely needs to say otherwise uses `catalogueSubjects.availabilityOverride`,
  * which is a different field, needs a written reason, names its author, and shows
  * on the row as an override.)
@@ -25,7 +25,7 @@
  * never happen is the UI implying the material is there.
  */
 
-import { UNITS, isStudentFacing } from './syllabus';
+import { COURSES, UNITS, isStudentFacing } from './syllabus';
 
 // ---------------------------------------------------------------------------
 // Types
@@ -91,9 +91,8 @@ export const AVAILABILITY_LABEL: Record<SubjectAvailability, string> = {
 /**
  * The single source of truth for "do we have this". Keyed `bodyId/levelId/subjectId`.
  *
- * It is a map with ONE entry, and it should stay embarrassing to look at until
- * that changes. The value is a function so the answer is recomputed from
- * `lib/syllabus.ts` rather than asserted here.
+ * Each value is a function so the answer is recomputed from `lib/syllabus.ts`
+ * rather than asserted here.
  */
 const AVAILABILITY_SOURCES: Record<
   string,
@@ -104,7 +103,10 @@ const AVAILABILITY_SOURCES: Record<
     // Counts the syllabus points, not the recordings: the six `-fable` alternates
     // are the same four/six topics taught twice and must not inflate this.
     const liveMechanics = mechanics?.topics.filter(isStudentFacing).length ?? 0;
-    const liveElsewhere = UNITS.filter((u) => u.code !== 'M').reduce(
+    const mathsUnitCodes = COURSES.find((course) => course.code === '9709')?.unitCodes ?? [];
+    const liveElsewhere = UNITS.filter(
+      (u) => u.code !== 'M' && mathsUnitCodes.includes(u.code)
+    ).reduce(
       (n, u) => n + u.topics.filter(isStudentFacing).length,
       0
     );
@@ -118,6 +120,17 @@ const AVAILABILITY_SOURCES: Record<
         (liveElsewhere > 0
           ? `Pure and Statistics are ${liveElsewhere} topics in and still being written.`
           : 'Pure Mathematics and Statistics are not written yet.'),
+    };
+  },
+  'cambridge/a-level/cie-al-9700': () => {
+    const cells = UNITS.find((u) => u.code === 'B1');
+    const live = cells?.topics.filter(isStudentFacing).length ?? 0;
+    if (live === 0) return { availability: 'planned' };
+    return {
+      availability: 'in_progress',
+      note:
+        `Topic 1, Cell structure, is recorded — ${live} video lessons. ` +
+        'Written notes are not published yet, and the rest of the syllabus is not written.',
     };
   },
 };

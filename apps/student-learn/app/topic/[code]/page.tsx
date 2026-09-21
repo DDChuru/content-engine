@@ -16,10 +16,11 @@ interface NoteEntry {
   slug: string;
   title: string;
   unit: string;
-  notes: string;
+  notes?: string;
   video?: string;
   /** Bunny Stream GUID. The real source — see lib/video.ts. */
   videoId?: string;
+  cdnHost?: string;
   duration?: string;
 }
 
@@ -62,6 +63,7 @@ export default function TopicPage() {
         // because that 682 MB directory is gitignored and never shipped.
         if (cancelled) return;
         setEntry(found);
+        if (!found.notes) return; // Video-only topic: nothing to fetch, nothing wrong.
         const text = await fetch(found.notes).then((r) =>
           r.ok ? r.text() : Promise.reject(new Error('The notes file is missing.'))
         );
@@ -152,15 +154,24 @@ export default function TopicPage() {
         {/* 1 — watch */}
         {entry?.videoId ? (
           <figure className="mt-7 overflow-hidden rounded-xl border border-grid-line bg-black">
-            <VideoPlayer videoId={entry.videoId} title={topic.title} />
+            <VideoPlayer videoId={entry.videoId} cdnHost={entry.cdnHost} title={topic.title} />
             <figcaption className="bg-paper-raised px-4 py-2 text-xs text-ink-muted">
-              Watch first{entry.duration ? ` · ${entry.duration}` : ''}. Then the model, then
-              the notes.
+              {entry.notes ? (
+                <>Watch first{entry.duration ? ` · ${entry.duration}` : ''}. Then the model, then the notes.</>
+              ) : (
+                <>Watch{entry.duration ? ` · ${entry.duration}` : ''}</>
+              )}
             </figcaption>
           </figure>
         ) : entry ? (
           <p className="mt-7 rounded-xl border border-grid-line bg-paper-raised px-4 py-3 text-sm text-ink-muted">
             The video for this topic is not rendered yet. The notes below are complete.
+          </p>
+        ) : null}
+
+        {entry && !entry.notes ? (
+          <p className="mt-4 rounded-xl border border-grid-line bg-paper-raised px-4 py-3 text-sm text-ink-muted">
+            Written notes for this topic are not published yet — the video is the lesson.
           </p>
         ) : null}
 

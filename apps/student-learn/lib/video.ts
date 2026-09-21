@@ -5,7 +5,8 @@
  * deployed build shipped thirty-seven "video coming soon" placeholders — the one
  * thing the product is for, missing everywhere except this machine. The renders
  * are on Bunny Stream now, and a topic carries a `videoId` (the Bunny GUID) in
- * `public/notes/index.json`.
+ * `public/notes/index.json`. Each Bunny library has its own pull zone, so the host
+ * travels with that content data; omitting it keeps the Maths library as default.
  *
  * The delivery is HLS, not a fixed MP4, and that is the whole point rather than a
  * detail: these students are on Zimbabwean and South African mobile data, which is
@@ -19,11 +20,11 @@
 export const CDN_HOST =
   process.env.NEXT_PUBLIC_BUNNY_CDN_HOST || 'vz-c77378c6-e3c.b-cdn.net';
 
-const base = (guid: string) => `https://${CDN_HOST}/${guid}`;
+const base = (guid: string, host: string = CDN_HOST) => `https://${host}/${guid}`;
 
 /** The adaptive master playlist: every rendition, the player picks. */
-export function hlsUrl(guid: string): string {
-  return `${base(guid)}/playlist.m3u8`;
+export function hlsUrl(guid: string, host?: string): string {
+  return `${base(guid, host)}/playlist.m3u8`;
 }
 
 /**
@@ -31,11 +32,15 @@ export function hlsUrl(guid: string): string {
  * 360p rather than 720p: if we have reached this branch we already know the
  * adaptive path failed, so the cheap, always-playable one is the right guess.
  */
-export function mp4Url(guid: string, height: 240 | 360 | 480 | 720 | 1080 = 360): string {
-  return `${base(guid)}/play_${height}p.mp4`;
+export function mp4Url(
+  guid: string,
+  height: 240 | 360 | 480 | 720 | 1080 = 360,
+  host?: string
+): string {
+  return `${base(guid, host)}/play_${height}p.mp4`;
 }
 
 /** Bunny's generated poster. Free, and it stops the player being a black hole. */
-export function posterUrl(guid: string): string {
-  return `${base(guid)}/thumbnail.jpg`;
+export function posterUrl(guid: string, host?: string): string {
+  return `${base(guid, host)}/thumbnail.jpg`;
 }

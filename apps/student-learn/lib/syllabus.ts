@@ -1,5 +1,5 @@
 /**
- * Cambridge International AS & A Level Mathematics 9709 — the app's syllabus map.
+ * Cambridge International AS & A Level Mathematics 9709 and Biology 9700 — the app's syllabus map.
  * Topic codes follow the syllabus numbering (Paper 1 = Pure 1, Paper 4 = Mechanics).
  * A topic is `live` when it links somewhere real: a lesson (/lesson/<code>) or a notes page.
  */
@@ -12,6 +12,15 @@ export interface SyllabusTopic {
   live: boolean;
   kind?: TopicKind;
   href?: string;
+  /**
+   * The key of this topic's row in `public/notes/index.json`.
+   *
+   * Historically the slug was derived from an `href` of the form `/notes/<slug>`, because every
+   * topic had notes. A Biology topic has a recorded video and no notes page yet, so it carries a
+   * slug and NO href — writing `/notes/…` for it would put a lie in the data about a page that
+   * does not exist. Where both are absent the topic keeps its own `href`.
+   */
+  slug?: string;
   /** Short lead-in for the map row, optional. */
   hint?: string;
   /**
@@ -40,10 +49,17 @@ export interface SyllabusUnit {
   topics: SyllabusTopic[];
 }
 
-export const COURSE = {
-  code: '9709',
-  title: 'Cambridge International A Level Mathematics 9709',
-};
+export interface Course {
+  code: string;
+  title: string;
+  /** SyllabusUnit codes taught under this course, in display order. */
+  unitCodes: string[];
+}
+
+export const COURSES: Course[] = [
+  { code: '9709', title: 'Cambridge International A Level Mathematics 9709', unitCodes: ['M', 'P1'] },
+  { code: '9700', title: 'Cambridge International A Level Biology 9700', unitCodes: ['B1'] },
+];
 
 export const UNITS: SyllabusUnit[] = [
   {
@@ -105,11 +121,30 @@ export const UNITS: SyllabusUnit[] = [
       { code: 'P1.8', title: 'Integration', live: false },
     ],
   },
+  {
+    code: 'B1',
+    title: 'Cell structure',
+    paper: 'AS Level · Topic 1',
+    topics: [
+      { code: 'B1.1.1', title: 'Making temporary preparations', live: true, slug: 'biology-making-temporary-preparations', hint: 'microscopy' },
+      { code: 'B1.1.2', title: 'Drawing cells', live: true, slug: 'biology-drawing-cells', hint: 'microscopy' },
+      { code: 'B1.1.3', title: 'Magnification and actual size', live: true, slug: 'biology-magnification-and-actual-size', hint: 'microscopy' },
+      { code: 'B1.1.4', title: 'Measuring with the eyepiece graticule', live: true, slug: 'biology-measuring-with-the-eyepiece-graticule', hint: 'microscopy' },
+      { code: 'B1.1.5', title: 'Resolution and magnification', live: true, slug: 'biology-resolution-and-magnification', hint: 'microscopy' },
+      { code: 'B1.2.1', title: 'Cell structures and their functions', live: true, slug: 'biology-cell-structures-and-their-functions', hint: 'cells' },
+      { code: 'B1.2.2', title: 'Interpreting cell images', live: true, slug: 'biology-interpreting-cell-images', hint: 'cells' },
+      { code: 'B1.2.3', title: 'Plant and animal cells compared', live: true, slug: 'biology-plant-and-animal-cells-compared', hint: 'cells' },
+      { code: 'B1.2.4', title: 'ATP for cellular work', live: true, slug: 'biology-atp-for-cellular-work', hint: 'cells' },
+      { code: 'B1.2.5', title: 'A typical bacterium', live: true, slug: 'biology-a-typical-bacterium', hint: 'cells' },
+      { code: 'B1.2.6', title: 'Prokaryotes and eukaryotes compared', live: true, slug: 'biology-prokaryotes-and-eukaryotes-compared', hint: 'cells' },
+      { code: 'B1.2.7', title: 'Viruses', live: true, slug: 'biology-viruses', hint: 'cells' },
+    ],
+  },
 ];
 
 export const FUTURE_UNITS = [
-  { code: 'P3', title: 'Pure Mathematics 3', paper: 'Paper 3' },
-  { code: 'S1', title: 'Probability & Statistics 1', paper: 'Paper 5' },
+  { code: 'P3', title: 'Pure Mathematics 3', paper: 'Paper 3', course: '9709' },
+  { code: 'S1', title: 'Probability & Statistics 1', paper: 'Paper 5', course: '9709' },
 ];
 
 /**

@@ -8,9 +8,9 @@ import './brand-tokens.css';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Cambridge Maths — learn topic by topic',
+  title: 'Cambridge A Level — learn topic by topic',
   description:
-    'Cambridge International A Level Mathematics 9709, taught topic by topic: a short explainer, tight notes, and the working done by hand.',
+    'Cambridge International A Level Mathematics 9709 and Biology 9700, taught topic by topic with short explainers and clear lessons.',
   applicationName: 'Stem 4 Life',
   appleWebApp: { title: 'Stem4Life' },
   manifest: '/icons/site.webmanifest',

@@ -23,8 +23,8 @@ import {
  * nothing joined them. `lib/topics.ts` is that join; this page renders it.
  *
  * The honest-empty case is a first-class branch, not a fallback. A student who
- * enrolled in Biology gets told we have not written Biology — with the reason and
- * what happens next — rather than a heading over an empty list.
+ * enrolled in a subject with no mapped topics gets told we have not written it —
+ * with the reason and what happens next — rather than a heading over an empty list.
  */
 export default function SubjectPage() {
   return (
@@ -47,6 +47,8 @@ function Subject() {
 
   const title = enrolled?.title ?? subjectId;
   const secure = topics.filter((t) => states[t.topic.code] === 'secure').length;
+  // `every` is safe for empty subjects because they return below; mixed subjects use the fuller copy.
+  const videoOnly = topics.every((t) => Boolean(t.topic.slug) && !t.topic.href);
 
   if (status === undefined) return null;
 
@@ -96,14 +98,14 @@ function Subject() {
             Your pick was recorded when you registered. It is not filed away — it is
             the list we write from, in the order students ask for subjects, and you
             will hear from us when the first topic of {title} is ready. In the
-            meantime the one subject that is written is open to you whether you are
-            sitting it or not.
+            meantime the material already in the library is open to you whether or
+            not it is one of your subjects.
           </p>
           <Link
             href="/syllabus"
             className="mt-6 inline-flex min-h-[44px] items-center font-semibold text-accent underline underline-offset-4"
           >
-            Open the 9709 Mathematics map →
+            Open the syllabus map →
           </Link>
         </main>
       </>
@@ -121,9 +123,12 @@ function Subject() {
           {title}
         </h1>
         <p className="mt-3 text-ink-muted">
-          {secure} of {topics.length} written topics secure. Work down the list — it is
-          in syllabus order, and each topic is a video, the notes, and where there is
-          one, a model to be wrong in.
+          {secure} of {topics.length}
+          {videoOnly ? ' topics secure.' : ' written topics secure.'} Work down the list —
+          it is in syllabus order
+          {videoOnly
+            ? '. Each topic is a video lesson; written notes are not published yet.'
+            : ', and each topic is a video, the notes, and where there is one, a model to be wrong in.'}
         </p>
 
         {units.map((unit) => {
