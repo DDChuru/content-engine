@@ -2,17 +2,16 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { BrandLogo } from '@/components/brand-logo';
+import { AppBar } from '@/components/app-bar';
 import { MasteryBadge } from '@/components/mastery-badge';
 import { type SkillState } from '@/lib/progress';
 import { useSkillStates } from '@/components/use-progress';
 import { artifactForTopic, topicHref } from '@/lib/topics';
 import {
-  COURSES,
   FUTURE_UNITS,
   UNITS,
   isStudentFacing,
-  liveTopics,
+  type Course,
   type SyllabusTopic,
 } from '@/lib/syllabus';
 
@@ -60,96 +59,104 @@ function TopicRow({ topic, state }: { topic: SyllabusTopic; state: SkillState })
   );
 }
 
-export function SyllabusMap({ hasIllustration }: { hasIllustration: boolean }) {
+export function SyllabusMap({
+  course,
+  hasIllustration,
+}: {
+  course: Course;
+  hasIllustration: boolean;
+}) {
+  const units = course.unitCodes.flatMap((code) => {
+    const unit = UNITS.find((candidate) => candidate.code === code);
+    return unit ? [unit] : [];
+  });
+  const topics = units.flatMap((unit) => unit.topics.filter(isStudentFacing));
   const states: Record<string, SkillState> = useSkillStates(
-    liveTopics().map((t) => t.code)
+    topics.map((topic) => topic.code)
   );
 
   const hasProgress = Object.values(states).some((s) => s !== 'not-started');
-  const liveCount = liveTopics().length;
+  const liveCount = topics.length;
+  const futureUnits = FUTURE_UNITS.filter((unit) => unit.course === course.code);
 
   return (
-    <main className="mx-auto max-w-2xl px-5 pb-24 pt-12 sm:pt-16">
-      <header className="mb-10">
-        <BrandLogo variant="wordmark" theme="light" className="mb-4" />
-        <h1 className="font-heading text-4xl font-semibold leading-tight sm:text-5xl">
-          Learn it topic by topic.
-        </h1>
-        <p className="mt-4 max-w-[60ch] text-ink-muted">
-          A short explainer, tight notes, and the working done by hand, the way the exam asks it.
-        </p>
-      </header>
-
-      {!hasProgress && (
-        <div className="mb-10 flex items-center gap-5">
-          {hasIllustration && (
-            <Image
-              src="/illustrations/empty-progress.png"
-              alt=""
-              width={200}
-              height={200}
-              className="h-auto w-[120px] max-w-[200px] sm:w-[160px]"
-            />
-          )}
-          <p className="text-sm text-ink-muted">
-            {liveCount} topic{liveCount === 1 ? ' is' : 's are'} live. Start with any.
+    <>
+      <AppBar
+        crumbs={[
+          { label: 'All syllabuses', href: '/syllabus' },
+          { label: course.code },
+        ]}
+      />
+      <main className="mx-auto max-w-2xl px-5 pb-24 pt-8">
+        <header className="mb-10">
+          <p className="text-xs font-medium uppercase tracking-[0.18em] text-ink-muted">
+            Syllabus {course.code}
           </p>
-        </div>
-      )}
+          <h1 className="mt-2 font-heading text-4xl font-semibold leading-tight sm:text-5xl">
+            {course.title}
+          </h1>
+          {course.blurb ? (
+            <p className="mt-4 max-w-[60ch] text-ink-muted">{course.blurb}</p>
+          ) : null}
+        </header>
 
-      {COURSES.map((course) => {
-        const units = course.unitCodes.flatMap((code) => {
-          const unit = UNITS.find((candidate) => candidate.code === code);
-          return unit ? [unit] : [];
-        });
-        const futureUnits = FUTURE_UNITS.filter((unit) => unit.course === course.code);
-        return (
-          <div key={course.code} className="mb-16 last:mb-0">
-            <p className="mb-6 text-xs font-medium uppercase tracking-[0.18em] text-ink-muted">
-              {course.title}
+        {!hasProgress && (
+          <div className="mb-10 flex items-center gap-5">
+            {hasIllustration && (
+              <Image
+                src="/illustrations/empty-progress.png"
+                alt=""
+                width={200}
+                height={200}
+                className="h-auto w-[120px] max-w-[200px] sm:w-[160px]"
+              />
+            )}
+            <p className="text-sm text-ink-muted">
+              {liveCount} topic{liveCount === 1 ? ' is' : 's are'} live. Start with any.
             </p>
-            {units.map((unit) => (
-              <section key={unit.code} aria-labelledby={`unit-${unit.code}`} className="relative mb-14 lg:pl-24">
-                <span aria-hidden="true" className="absolute inset-y-0 left-[5.25rem] hidden w-px bg-grid-line lg:block" />
-                <h2
-                  id={`unit-${unit.code}`}
-                  className="relative flex items-baseline gap-3 border-b border-grid-line pb-3 font-heading text-2xl font-semibold"
-                >
-                  <MarginCode code={unit.code} />
-                  {unit.title}
-                  <span className="ml-auto shrink-0 whitespace-nowrap text-xs font-normal uppercase tracking-[0.18em] text-ink-muted">{unit.paper}</span>
-                </h2>
-                <ol className="divide-y divide-grid-line">
-                  {unit.topics.filter(isStudentFacing).map((topic) => (
-                    <li key={topic.code} className="relative">
-                      <TopicRow topic={topic} state={states[topic.code] ?? 'not-started'} />
-                    </li>
-                  ))}
-                </ol>
-              </section>
-            ))}
-
-            {futureUnits.length > 0 ? (
-              <section aria-labelledby={`coming-next-${course.code}`} className="lg:pl-24">
-                <h2 id={`coming-next-${course.code}`} className="font-heading text-lg font-semibold text-ink-muted">
-                  Coming next
-                </h2>
-                <ul className="mt-3 space-y-2 text-sm text-ink-muted">
-                  {futureUnits.map((unit) => (
-                    <li key={unit.code} className="flex items-baseline gap-3">
-                      <span className="w-12 shrink-0 font-mono text-xs" aria-hidden="true">
-                        {unit.code}
-                      </span>
-                      {unit.title}
-                      <span className="ml-auto text-xs uppercase tracking-[0.18em]">{unit.paper}</span>
-                    </li>
-                  ))}
-                </ul>
-              </section>
-            ) : null}
           </div>
-        );
-      })}
-    </main>
+        )}
+
+        {units.map((unit) => (
+          <section key={unit.code} aria-labelledby={`unit-${unit.code}`} className="relative mb-14 lg:pl-24">
+            <span aria-hidden="true" className="absolute inset-y-0 left-[5.25rem] hidden w-px bg-grid-line lg:block" />
+            <h2
+              id={`unit-${unit.code}`}
+              className="relative flex items-baseline gap-3 border-b border-grid-line pb-3 font-heading text-2xl font-semibold"
+            >
+              <MarginCode code={unit.code} />
+              {unit.title}
+              <span className="ml-auto shrink-0 whitespace-nowrap text-xs font-normal uppercase tracking-[0.18em] text-ink-muted">{unit.paper}</span>
+            </h2>
+            <ol className="divide-y divide-grid-line">
+              {unit.topics.filter(isStudentFacing).map((topic) => (
+                <li key={topic.code} className="relative">
+                  <TopicRow topic={topic} state={states[topic.code] ?? 'not-started'} />
+                </li>
+              ))}
+            </ol>
+          </section>
+        ))}
+
+        {futureUnits.length > 0 ? (
+          <section aria-labelledby={`coming-next-${course.code}`} className="lg:pl-24">
+            <h2 id={`coming-next-${course.code}`} className="font-heading text-lg font-semibold text-ink-muted">
+              Coming next
+            </h2>
+            <ul className="mt-3 space-y-2 text-sm text-ink-muted">
+              {futureUnits.map((unit) => (
+                <li key={unit.code} className="flex items-baseline gap-3">
+                  <span className="w-12 shrink-0 font-mono text-xs" aria-hidden="true">
+                    {unit.code}
+                  </span>
+                  {unit.title}
+                  <span className="ml-auto text-xs uppercase tracking-[0.18em]">{unit.paper}</span>
+                </li>
+              ))}
+            </ul>
+          </section>
+        ) : null}
+      </main>
+    </>
   );
 }

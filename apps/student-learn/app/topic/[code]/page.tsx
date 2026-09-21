@@ -10,6 +10,7 @@ import { VideoPlayer } from '@/components/video-player';
 import { InteractiveArtifact } from '@/components/interactive/registry';
 import { useSkillStates } from '@/components/use-progress';
 import { progress } from '@/lib/progress';
+import { COURSES } from '@/lib/syllabus';
 import { artifactForTopic, locateTopic, notesSlug, topicHref } from '@/lib/topics';
 
 interface NoteEntry {
@@ -98,13 +99,14 @@ export default function TopicPage() {
   }
 
   const { topic, unit, index, liveCount, previous, next } = located;
+  const course = COURSES.find((candidate) => candidate.unitCodes.includes(unit.code));
   const artifact = artifactForTopic(code);
 
   return (
     <>
       <AppBar
         crumbs={[
-          { label: 'Syllabus', href: '/syllabus' },
+          { label: 'Syllabus', href: course ? `/syllabus/${course.code}` : '/syllabus' },
           { label: unit.title },
         ]}
       />

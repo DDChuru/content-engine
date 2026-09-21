@@ -10,6 +10,7 @@ import { MasteryBadge } from '@/components/mastery-badge';
 import { useSkillStates } from '@/components/use-progress';
 import {
   artifactForTopic,
+  courseForSubject,
   liveTopicsForSubject,
   topicHref,
   unitsForSubject,
@@ -42,6 +43,7 @@ function Subject() {
 
   const enrolled = enrolment?.subjects.find((s) => s.subjectId === subjectId) ?? null;
   const units = unitsForSubject(subjectId);
+  const course = courseForSubject(subjectId);
   const topics = liveTopicsForSubject(subjectId);
   const states = useSkillStates(topics.map((t) => t.topic.code));
 
@@ -102,7 +104,7 @@ function Subject() {
             not it is one of your subjects.
           </p>
           <Link
-            href="/syllabus"
+            href={course ? `/syllabus/${course.code}` : '/syllabus'}
             className="mt-6 inline-flex min-h-[44px] items-center font-semibold text-accent underline underline-offset-4"
           >
             Open the syllabus map →

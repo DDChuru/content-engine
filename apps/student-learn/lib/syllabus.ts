@@ -52,13 +52,25 @@ export interface SyllabusUnit {
 export interface Course {
   code: string;
   title: string;
+  /** The course's one-line promise; it must stay true of what is actually published. */
+  blurb?: string;
   /** SyllabusUnit codes taught under this course, in display order. */
   unitCodes: string[];
 }
 
 export const COURSES: Course[] = [
-  { code: '9709', title: 'Cambridge International A Level Mathematics 9709', unitCodes: ['M', 'P1'] },
-  { code: '9700', title: 'Cambridge International A Level Biology 9700', unitCodes: ['B1'] },
+  {
+    code: '9709',
+    title: 'Cambridge International A Level Mathematics 9709',
+    blurb: 'A short explainer, tight notes, and the working done by hand, the way the exam asks it.',
+    unitCodes: ['M', 'P1'],
+  },
+  {
+    code: '9700',
+    title: 'Cambridge International A Level Biology 9700',
+    blurb: 'A video lesson for every syllabus point, written from the syllabus and checked against the mark schemes.',
+    unitCodes: ['B1'],
+  },
 ];
 
 export const UNITS: SyllabusUnit[] = [

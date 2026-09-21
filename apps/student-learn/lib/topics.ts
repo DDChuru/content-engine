@@ -12,13 +12,31 @@
  * which is the honest default the subject page renders rather than an empty shell.
  */
 
-import { UNITS, isStudentFacing, type SyllabusTopic, type SyllabusUnit } from './syllabus';
+import {
+  COURSES,
+  UNITS,
+  isStudentFacing,
+  type Course,
+  type SyllabusTopic,
+  type SyllabusUnit,
+} from './syllabus';
 
 /** Catalogue subject id → the units of `lib/syllabus.ts` it is taught through. */
 const SUBJECT_UNITS: Record<string, string[]> = {
   'cie-al-9709': ['M', 'P1'],
   'cie-al-9700': ['B1'],
 };
+
+/** The course containing the units mapped to this catalogue subject. */
+export function courseForSubject(subjectId: string): Course | null {
+  const unitCodes = SUBJECT_UNITS[subjectId];
+  if (!unitCodes?.length) return null;
+  return (
+    COURSES.find((course) =>
+      unitCodes.every((unitCode) => course.unitCodes.includes(unitCode))
+    ) ?? null
+  );
+}
 
 export interface ArtifactRef {
   /** Component key, resolved in components/interactive/registry.tsx. */
