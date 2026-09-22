@@ -123,13 +123,20 @@ const AVAILABILITY_SOURCES: Record<
     };
   },
   'cambridge/a-level/cie-al-9700': () => {
-    const cells = UNITS.find((u) => u.code === 'B1');
-    const live = cells?.topics.filter(isStudentFacing).length ?? 0;
+    const recorded = UNITS.filter((u) => u.code.startsWith('B')).map((u) => ({
+      title: u.title.toLowerCase(),
+      live: u.topics.filter(isStudentFacing).length,
+    }));
+    const live = recorded.reduce((n, u) => n + u.live, 0);
     if (live === 0) return { availability: 'planned' };
+    const named = recorded
+      .filter((u) => u.live > 0)
+      .map((u) => u.title)
+      .join(' and ');
     return {
       availability: 'in_progress',
       note:
-        `Topic 1, Cell structure, is recorded — ${live} video lessons. ` +
+        `${live} video lessons are recorded, covering ${named}. ` +
         'Written notes are not published yet, and the rest of the syllabus is not written.',
     };
   },

@@ -24,7 +24,7 @@ import {
 /** Catalogue subject id → the units of `lib/syllabus.ts` it is taught through. */
 const SUBJECT_UNITS: Record<string, string[]> = {
   'cie-al-9709': ['M', 'P1'],
-  'cie-al-9700': ['B1'],
+  'cie-al-9700': ['B1', 'B2'],
 };
 
 /** The course containing the units mapped to this catalogue subject. */
