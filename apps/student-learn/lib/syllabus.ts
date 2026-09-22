@@ -157,6 +157,7 @@ export const UNITS: SyllabusUnit[] = [
     title: 'Biological molecules',
     paper: 'AS Level · Topic 2',
     topics: [
+      { code: 'B2.1.2', title: 'The semi-quantitative Benedict test', live: true, slug: 'biology-the-semi-quantitative-benedict-test', hint: 'food tests' },
       { code: 'B2.2.1', title: 'Alpha and beta glucose', live: true, slug: 'biology-alpha-and-beta-glucose', hint: 'carbohydrates' },
       { code: 'B2.2.2', title: 'Monomers, polymers and sugars', live: true, slug: 'biology-monomers-polymers-and-sugars', hint: 'carbohydrates' },
       { code: 'B2.2.3', title: 'Covalent bonds in polymers', live: true, slug: 'biology-covalent-bonds-in-polymers', hint: 'carbohydrates' },
@@ -173,6 +174,7 @@ export const UNITS: SyllabusUnit[] = [
       { code: 'B2.3.3', title: 'What holds a protein in shape', live: true, slug: 'biology-what-holds-a-protein-in-shape', hint: 'proteins' },
       { code: 'B2.3.4', title: 'Globular and fibrous proteins', live: true, slug: 'biology-globular-and-fibrous-proteins', hint: 'proteins' },
       { code: 'B2.3.5-6', title: 'Haemoglobin', live: true, slug: 'biology-haemoglobin', hint: 'proteins' },
+      { code: 'B2.3.7-8', title: 'Collagen', live: true, slug: 'biology-collagen', hint: 'proteins' },
       { code: 'B2.4.1', title: 'Water', live: true, slug: 'biology-water', hint: 'water' },
     ],
   },
