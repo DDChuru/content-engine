@@ -220,3 +220,12 @@ highlights → correct in place; marker held until the last fault is corrected).
 (65–75 s) each, never thinned. Badge **COMMON MISTAKE** only where an ER or an MS reject/ignore line
 shows candidates make it; otherwise **EXAM CONTRAST**; state the basis. A lesson without an assigned
 error beat has NO COMMON MISTAKE beat (it may have a captioned reject card).
+
+## Errata after round-one checks (24 September 2026)
+
+These supersede the lines above where they differ; the storyboards already follow them.
+- **Timer:** t = 0 is the frame the reactants first meet (never after a pour, tilt or mixing ends; never reset). Disc rise: timed from release, identical brief descent.
+- **ONPG assay:** there is no reading at 0 s. The cuvette goes in after mixing; (0 s, 0.00) is an assumed start under stated assumptions (no initial product, negligible enzyme-preparation optical background, stable blank); measured readings at 30–180 s (3.1.4 CHECK M1). Calibration stock of the yellow product is made up in water (3.1.4 CHECK M2).
+- **Gas rig:** 250 cm³ flask, offset small tube, ~30° tilt, toppling path and weighted ring as specified in 3.1.3; three-way tap venting during equilibration, baseline 0 cm³ set after equilibration; gas control = 5.0 cm³ of the same enzyme-free buffer solution, pH 7.0 (not water).
+- **Iodine sampler:** every blue-black well is drawn the same shade (the "may be drawn less intense" allowance is withdrawn).
+- **Frames:** no text-only frames; objectives surfaces carry authored pictograms.
