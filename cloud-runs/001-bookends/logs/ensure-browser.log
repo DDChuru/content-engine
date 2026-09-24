@@ -1,0 +1,14 @@
+Downloading from: https://remotion.media/chromium-headless-shell-linux-x64-149.0.7790.0.zip?clear
+/tmp/claude-0/-home-user-content-engine/d4c0cbdb-41a7-58f1-a996-614b76c8823b/scratchpad/deps/node_modules/@remotion/renderer/dist/assets/read-file.js:59
+        throw new Error([
+              ^
+
+Error: Received a status code of 403 while downloading file https://remotion.media/chromium-headless-shell-linux-x64-149.0.7790.0.zip?clear.
+The response body was:
+---
+Host not in allowlist: remotion.media. Add this host to your network egress settings to allow access.
+---
+    at readFile (/tmp/claude-0/-home-user-content-engine/d4c0cbdb-41a7-58f1-a996-614b76c8823b/scratchpad/deps/node_modules/@remotion/renderer/dist/assets/read-file.js:59:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+
+Node.js v22.22.2
