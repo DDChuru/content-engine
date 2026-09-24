@@ -1,4 +1,4 @@
-PHASE: 4 FINISH (all 17 beats authored + approved; stale re-render running; bookends rendered)
+PHASE: 5 BUNNY (master verified, branded verified, uploaded guid d2571913-2ef8-4046-b7e4-4ddac6062802; polling to status 4)
 
 ## Rules (from Durai's brief, cloud run 004-3.2.2-3)
 Narration FROZEN (STORYBOARD.md = cloud-inputs/003/topic-03/3.2.2-3/STORYBOARD.md, copied verbatim). Push ONLY branch
@@ -66,3 +66,8 @@ delete/move nothing. Render per beat, at most 4 concurrent (4 vCPU). No logo/pro
 - Bunny: POST https://video.bunnycdn.com/library/$BUNNY_BIO_LIBRARY_ID/videos {"title":"REVIEW 3.2.2-3 Vmax, Km and inhibitors
   on the graph"} (NO collection, NO key header), PUT with curl -T, poll every 60 s to status 4.
 - Design decisions: qa/decisions.md.
+
+## Resume here (phase 5)
+Uploaded to Bunny library 758254, guid d2571913-2ef8-4046-b7e4-4ddac6062802 (no collection). Poll
+`curl -sS https://video.bunnycdn.com/library/$BUNNY_BIO_LIBRARY_ID/videos/<guid>` every 60 s (log logs/bunny-poll.txt) until
+status 4, then fill BUNNY_DONE / BUNNY_WAIT / BUNNY_T4 in REPORT.md, commit, push. Do NOT upload again.
