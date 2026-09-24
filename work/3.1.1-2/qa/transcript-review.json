@@ -1,0 +1,720 @@
+[
+ {
+  "beat": 1,
+  "seconds": 38.359375,
+  "wpm": 137.6,
+  "matched": 88,
+  "src": 88,
+  "diffs": [],
+  "lowConfidence": [],
+  "watch": {}
+ },
+ {
+  "beat": 2,
+  "seconds": 28.978520833333334,
+  "wpm": 122.2,
+  "matched": 62,
+  "src": 62,
+  "diffs": [],
+  "lowConfidence": [
+   [
+    "using",
+    0.42,
+    10.3
+   ],
+   [
+    "-and",
+    0.49,
+    21.38
+   ]
+  ],
+  "watch": {
+   "induced": [
+    1,
+    1
+   ],
+   "activation": [
+    1,
+    1
+   ],
+   "specificity": [
+    1,
+    1
+   ]
+  }
+ },
+ {
+  "beat": 3,
+  "seconds": 31.57914583333333,
+  "wpm": 136.8,
+  "matched": 72,
+  "src": 72,
+  "diffs": [],
+  "lowConfidence": [],
+  "watch": {
+   "polypeptide": [
+    1,
+    1
+   ]
+  }
+ },
+ {
+  "beat": 4,
+  "seconds": 41.65660416666667,
+  "wpm": 125.3,
+  "matched": 84,
+  "src": 87,
+  "diffs": [
+   [
+    "replace",
+    "catalyse",
+    "catalyze"
+   ],
+   [
+    "replace",
+    "catalase",
+    "catalyze"
+   ],
+   [
+    "replace",
+    "catalyse",
+    "catalyze"
+   ]
+  ],
+  "lowConfidence": [],
+  "watch": {
+   "catalase": [
+    1,
+    0
+   ],
+   "amylase": [
+    1,
+    1
+   ],
+   "lipase": [
+    1,
+    1
+   ],
+   "intracellular": [
+    1,
+    1
+   ],
+   "extracellular": [
+    1,
+    1
+   ],
+   "catalyse": [
+    2,
+    0
+   ]
+  }
+ },
+ {
+  "beat": 5,
+  "seconds": 69.75275,
+  "wpm": 135.9,
+  "matched": 154,
+  "src": 158,
+  "diffs": [
+   [
+    "replace",
+    "ex",
+    "x"
+   ],
+   [
+    "replace",
+    "ex",
+    "x"
+   ],
+   [
+    "replace",
+    "learnt",
+    "learned"
+   ],
+   [
+    "replace",
+    "ex",
+    "x"
+   ]
+  ],
+  "lowConfidence": [
+   [
+    "on",
+    0.43,
+    4.02
+   ],
+   [
+    "X",
+    0.49,
+    43.16
+   ],
+   [
+    "when",
+    0.36,
+    52.98
+   ],
+   [
+    "lipases.",
+    0.19,
+    56.68
+   ]
+  ],
+  "watch": {
+   "extracellular": [
+    2,
+    2
+   ],
+   "catalyses": [
+    1,
+    1
+   ]
+  }
+ },
+ {
+  "beat": 6,
+  "seconds": 31.2540625,
+  "wpm": 128.6,
+  "matched": 66,
+  "src": 67,
+  "diffs": [
+   [
+    "replace",
+    "r",
+    "our"
+   ]
+  ],
+  "lowConfidence": [
+   [
+    "our",
+    0.33,
+    13.2
+   ]
+  ],
+  "watch": {
+   "polypeptide": [
+    1,
+    1
+   ]
+  }
+ },
+ {
+  "beat": 7,
+  "seconds": 44.3965625,
+  "wpm": 128.4,
+  "matched": 94,
+  "src": 95,
+  "diffs": [
+   [
+    "replace",
+    "this",
+    "the"
+   ]
+  ],
+  "lowConfidence": [],
+  "watch": {
+   "specificity": [
+    1,
+    1
+   ],
+   "complementary": [
+    3,
+    3
+   ]
+  }
+ },
+ {
+  "beat": 8,
+  "seconds": 30.046625,
+  "wpm": 133.8,
+  "matched": 67,
+  "src": 68,
+  "diffs": [
+   [
+    "replace",
+    "seats",
+    "seeds"
+   ]
+  ],
+  "lowConfidence": [],
+  "watch": {}
+ },
+ {
+  "beat": 9,
+  "seconds": 53.08083333333333,
+  "wpm": 135.6,
+  "matched": 116,
+  "src": 121,
+  "diffs": [
+   [
+    "replace",
+    "one",
+    "1"
+   ],
+   [
+    "insert",
+    "",
+    "water"
+   ],
+   [
+    "replace",
+    "o h",
+    "oh"
+   ],
+   [
+    "replace",
+    "four",
+    "4"
+   ],
+   [
+    "replace",
+    "four",
+    "4"
+   ]
+  ],
+  "lowConfidence": [
+   [
+    "1",
+    0.39,
+    25.92
+   ],
+   [
+    "water,",
+    0.14,
+    28.82
+   ],
+   [
+    "catalyst",
+    0.5,
+    51.4
+   ]
+  ],
+  "watch": {
+   "amylase": [
+    1,
+    1
+   ],
+   "glycosidic": [
+    1,
+    1
+   ],
+   "maltose": [
+    1,
+    1
+   ]
+  }
+ },
+ {
+  "beat": 10,
+  "seconds": 51.269666666666666,
+  "wpm": 142.8,
+  "matched": 122,
+  "src": 122,
+  "diffs": [],
+  "lowConfidence": [],
+  "watch": {
+   "activation": [
+    2,
+    2
+   ]
+  }
+ },
+ {
+  "beat": 11,
+  "seconds": 98.6848125,
+  "wpm": 132.5,
+  "matched": 212,
+  "src": 220,
+  "diffs": [
+   [
+    "replace",
+    "learnt",
+    "learned"
+   ],
+   [
+    "replace",
+    "catalyses",
+    "catalyzes"
+   ],
+   [
+    "replace",
+    "one six",
+    "1 6"
+   ],
+   [
+    "replace",
+    "catalyses",
+    "catalyzes"
+   ],
+   [
+    "replace",
+    "one six",
+    "1 6"
+   ],
+   [
+    "replace",
+    "laccase",
+    "lackeys"
+   ]
+  ],
+  "lowConfidence": [
+   [
+    "And",
+    0.46,
+    49.26
+   ],
+   [
+    "the",
+    0.27,
+    52.08
+   ],
+   [
+    "lackeys.",
+    0.28,
+    92.64
+   ]
+  ],
+  "watch": {
+   "laccase": [
+    1,
+    0
+   ],
+   "activation": [
+    2,
+    2
+   ],
+   "glycosidic": [
+    2,
+    2
+   ],
+   "catalyses": [
+    2,
+    0
+   ],
+   "glycogen": [
+    4,
+    4
+   ],
+   "synthase": [
+    1,
+    1
+   ]
+  }
+ },
+ {
+  "beat": 12,
+  "seconds": 44.443,
+  "wpm": 126.9,
+  "matched": 97,
+  "src": 98,
+  "diffs": [
+   [
+    "insert",
+    "",
+    "out"
+   ],
+   [
+    "replace",
+    "lysozyme",
+    "lysozim"
+   ]
+  ],
+  "lowConfidence": [
+   [
+    "site",
+    0.45,
+    10.26
+   ],
+   [
+    "the",
+    0.45,
+    20.98
+   ],
+   [
+    "out.",
+    0.23,
+    27.24
+   ],
+   [
+    "lock",
+    0.38,
+    33.96
+   ],
+   [
+    "and",
+    0.38,
+    41.26
+   ]
+  ],
+  "watch": {
+   "lysozyme": [
+    1,
+    0
+   ],
+   "specificity": [
+    1,
+    1
+   ],
+   "complementary": [
+    1,
+    1
+   ]
+  }
+ },
+ {
+  "beat": 13,
+  "seconds": 44.58233333333333,
+  "wpm": 122.5,
+  "matched": 92,
+  "src": 92,
+  "diffs": [],
+  "lowConfidence": [
+   [
+    "fit",
+    0.15,
+    1.8
+   ],
+   [
+    "the",
+    0.15,
+    29.32
+   ],
+   [
+    "and",
+    0.41,
+    34.48
+   ]
+  ],
+  "watch": {
+   "induced": [
+    2,
+    2
+   ],
+   "complementary": [
+    2,
+    2
+   ]
+  }
+ },
+ {
+  "beat": 14,
+  "seconds": 54.70622916666667,
+  "wpm": 137.1,
+  "matched": 128,
+  "src": 129,
+  "diffs": [
+   [
+    "replace",
+    "the",
+    "this"
+   ],
+   [
+    "insert",
+    "",
+    "together"
+   ],
+   [
+    "insert",
+    "",
+    "end"
+   ]
+  ],
+  "lowConfidence": [
+   [
+    "this",
+    0.48,
+    12.7
+   ],
+   [
+    "together.",
+    0.03,
+    25.0
+   ],
+   [
+    "end",
+    0.38,
+    53.4
+   ]
+  ],
+  "watch": {
+   "induced": [
+    3,
+    3
+   ]
+  }
+ },
+ {
+  "beat": 15,
+  "seconds": 25.913479166666665,
+  "wpm": 118.1,
+  "matched": 52,
+  "src": 52,
+  "diffs": [],
+  "lowConfidence": [
+   [
+    "the",
+    0.39,
+    1.74
+   ],
+   [
+    "The",
+    0.45,
+    19.88
+   ]
+  ],
+  "watch": {
+   "activation": [
+    1,
+    1
+   ],
+   "complementary": [
+    1,
+    1
+   ]
+  }
+ },
+ {
+  "beat": 16,
+  "seconds": 79.96954166666667,
+  "wpm": 135.8,
+  "matched": 178,
+  "src": 184,
+  "diffs": [
+   [
+    "replace",
+    "swap",
+    "swab"
+   ],
+   [
+    "replace",
+    "labelled e s c",
+    "labeled esc"
+   ],
+   [
+    "replace",
+    "earns",
+    "in"
+   ]
+  ],
+  "lowConfidence": [
+   [
+    "-and",
+    0.41,
+    10.74
+   ],
+   [
+    "swab",
+    0.4,
+    41.84
+   ],
+   [
+    "and",
+    0.48,
+    57.5
+   ],
+   [
+    "enzyme",
+    0.37,
+    64.88
+   ]
+  ],
+  "watch": {
+   "lysozyme": [
+    3,
+    3
+   ],
+   "peptidoglycan": [
+    3,
+    3
+   ]
+  }
+ },
+ {
+  "beat": 17,
+  "seconds": 51.7805,
+  "wpm": 117.0,
+  "matched": 104,
+  "src": 104,
+  "diffs": [],
+  "lowConfidence": [],
+  "watch": {
+   "intracellular": [
+    1,
+    1
+   ],
+   "extracellular": [
+    1,
+    1
+   ],
+   "induced": [
+    1,
+    1
+   ],
+   "activation": [
+    1,
+    1
+   ],
+   "specificity": [
+    1,
+    1
+   ],
+   "complementary": [
+    1,
+    1
+   ]
+  }
+ },
+ {
+  "beat": 18,
+  "seconds": 48.34395833333333,
+  "wpm": 132.8,
+  "matched": 106,
+  "src": 107,
+  "diffs": [
+   [
+    "replace",
+    "laccase",
+    "lackas"
+   ]
+  ],
+  "lowConfidence": [
+   [
+    "full",
+    0.48,
+    8.58
+   ],
+   [
+    "lackas",
+    0.22,
+    21.14
+   ],
+   [
+    "laccase",
+    0.41,
+    24.58
+   ],
+   [
+    "in",
+    0.37,
+    40.44
+   ]
+  ],
+  "watch": {
+   "amylase": [
+    1,
+    1
+   ],
+   "laccase": [
+    2,
+    1
+   ],
+   "extracellular": [
+    1,
+    1
+   ],
+   "complementary": [
+    2,
+    2
+   ]
+  }
+ }
+]
