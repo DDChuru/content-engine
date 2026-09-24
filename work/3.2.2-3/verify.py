@@ -74,7 +74,7 @@ for b in S:
     if b['id'] == 9: exp = re.sub(r'\bVmax\b', 'V max', exp)
     assert req == exp, b['id']
     for para in b['paragraphs']: assert para in md, b['id']
-R['frozenNarration'] = 'storyboard paragraphs present verbatim; requests differ only by Km→'K M' (all beats) and Vmax→'V max' (beat 9)'
+R['frozenNarration'] = 'storyboard paragraphs present verbatim; requests differ only by Km -> K M (all beats) and Vmax -> V max (beat 9)'
 # 8. no one-frame holds at beat boundaries
 bf = subprocess.run([sys.executable, str(P / 'qa/detect_boundary_flash.py'), str(final), str(P / 'timeline.json'), '--output', str(P / 'qa/boundary-audit.json')], capture_output=True, text=True)
 assert bf.returncode == 0, bf.stderr

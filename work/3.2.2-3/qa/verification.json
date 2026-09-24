@@ -1,0 +1,138 @@
+{
+  "1_ffprobeDuration": 903.966667,
+  "2_videoCoversAudio": {
+    "video": 903.966667,
+    "encodedAudio": 902.966,
+    "marginSeconds": 1.001,
+    "videoFrames": 27119
+  },
+  "3_fullDecodeErrors": 0,
+  "4_cues": {
+    "matched": 201,
+    "total": 201
+  },
+  "5_audioPacketsUnchanged": {
+    "packets": 42328,
+    "identical": true
+  },
+  "6_finalWord": {
+    "word": "graph.",
+    "endsAt": 899.84,
+    "audioEnds": 902.966,
+    "headroom": 3.126,
+    "afterWordMaxDb": -28.6
+  },
+  "7_silentReads": [
+    {
+      "beat": 6,
+      "before": "Look at the number first",
+      "start": 208.54,
+      "seconds": 4,
+      "pcmAllZero": true,
+      "encodedInteriorMaxDb": -91.0
+    },
+    {
+      "beat": 9,
+      "before": "Look at the first line",
+      "start": 392.637,
+      "seconds": 4,
+      "pcmAllZero": true,
+      "encodedInteriorMaxDb": -91.0
+    },
+    {
+      "beat": 13,
+      "before": "Look at where the sketched curve ends",
+      "start": 645.437,
+      "seconds": 4,
+      "pcmAllZero": true,
+      "encodedInteriorMaxDb": -91.0
+    },
+    {
+      "beat": 17,
+      "before": "Then watch the three marks",
+      "start": 869.48,
+      "seconds": 5,
+      "pcmAllZero": true,
+      "encodedInteriorMaxDb": -91.0
+    },
+    {
+      "beat": 17,
+      "before": "END",
+      "start": 900.461,
+      "seconds": 2,
+      "pcmAllZero": true,
+      "encodedInteriorMaxDb": -91.0
+    }
+  ],
+  "7_speechPCMUnchanged": true,
+  "frozenNarration": "storyboard paragraphs present verbatim; requests differ only by Km -> K M (all beats) and Vmax -> V max (beat 9)",
+  "8_boundaries": {
+    "master": "/home/user/content-engine/work/3.2.2-3/3.2.2-3-vmax-km-inhibitors.mp4",
+    "timeline": "/home/user/content-engine/work/3.2.2-3/timeline.json",
+    "master_bytes": 40116249,
+    "fps": 30.0,
+    "frame_count": 27119,
+    "boundaries_tested": 16,
+    "candidate_count": 0,
+    "candidate_beats": [],
+    "method": "RGB 640x360 area downsample; last/first near-match, then material abrupt jump",
+    "thresholds": {
+      "near_mae_max": 0.8,
+      "near_changed_fraction_max": 0.005,
+      "changed_pixel_threshold": 12,
+      "jump_mae_min": 1,
+      "jump_changed_fraction_min": 0.005,
+      "jump_tile_mae_min": 8,
+      "jump_ratio_min": 5,
+      "noise_floor": 0.05,
+      "post_jump_stable_mae_max": "max(0.8, 0.45 * jump_mae)"
+    },
+    "limits": "Candidates, not proof. Deliberate one-frame holds can match; identical layouts can hide a lookup error. Subtle/animated holds can evade thresholds. Requires unshifted CFR master."
+  },
+  "markerAudit": {
+    "framesChecked": 27119,
+    "marked": 7605,
+    "unmarked": 19514,
+    "intervals": [
+      {
+        "beat": 6,
+        "label": "COMMON MISTAKE",
+        "startFrame": 5772,
+        "endFrame": 8395,
+        "announceFrame": 5772,
+        "correctionCueFrame": 8377,
+        "clearsOnFrame": 8395
+      },
+      {
+        "beat": 9,
+        "label": "COMMON MISTAKE",
+        "startFrame": 11243,
+        "endFrame": 13852,
+        "announceFrame": 11243,
+        "correctionCueFrame": 13834,
+        "clearsOnFrame": 13852
+      },
+      {
+        "beat": 13,
+        "label": "COMMON MISTAKE",
+        "startFrame": 18875,
+        "endFrame": 21248,
+        "announceFrame": 18875,
+        "correctionCueFrame": 21194,
+        "clearsOnFrame": 21248
+      }
+    ],
+    "badgeTextMae": {
+      "commonMaeMax": 3.676826238632202,
+      "examMaeMin": 18.850839614868164
+    },
+    "mismatches": 0
+  },
+  "longestUnchangedVisual": {
+    "beat": 9,
+    "startFrame": 11269,
+    "seconds": 11.866666666666667
+  },
+  "unchangedOver15s": [],
+  "sha256": "fe29ad5cb287c80b5e3aa1d153b5b6195e43aeda0ac789fe8f51171c8de877c7"
+}

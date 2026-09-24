@@ -46,7 +46,7 @@ export default function Beat11(s: any) {
         <Txt x={560} y={336} size={26} weight={800} fill={C.ink}>not identical</Txt>
         <Small x={560} y={368} text="(one corner clipped)" opacity={overlay} />
       </g>
-      <Enzyme x={EX} y={EY} s={ES} labEnzyme={1} labActive={fi(a('iseat'))} caption={1} ringActive={compete} ringColor={C.teal} />
+      <Enzyme x={EX} y={EY} s={ES} labEnzyme={1} labActive={fi(a("iseat"))} activeLabelSide="left" caption={1} ringActive={compete} ringColor={C.teal} />
       {iOn && <Mol x={EX} y={EY} s={ES} kind="comp" off={iOff} />}
       {iOn && <Txt x={EX + 250} y={EY - 150} size={21} weight={800} fill={C.primary} opacity={fi(a('iseat'))}>competitive inhibitor</Txt>}
       {s1On && <Mol x={EX} y={EY} s={ES} kind="substrate" off={s1Off} slide={s1Slide} rot={s1Rot} />}
