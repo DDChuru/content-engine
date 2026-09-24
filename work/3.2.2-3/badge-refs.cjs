@@ -1,0 +1,6 @@
+// Reference renders of both possible badges, to prove WHICH text the encoded badge carries.
+const P=__dirname,N='/home/user/deps/node_modules';module.paths.unshift(N);process.env.NODE_PATH=N;require('module').Module._initPaths();process.env.FONTCONFIG_FILE=P+'/render-cache/fonts.conf';
+const esb=require('esbuild'),fs=require('fs'),sharp=require('sharp');
+esb.buildSync({stdin:{contents:"import React from 'react';import {renderToStaticMarkup} from 'react-dom/server';import {ErrorMarker} from './src/shared/ErrorMarker';import {BRAND} from './src/shared/theme';export const svg=(label)=>renderToStaticMarkup(React.createElement('svg',{xmlns:'http://www.w3.org/2000/svg',width:1920,height:1080},React.createElement('rect',{width:1920,height:1080,fill:BRAND.warm}),React.createElement(ErrorMarker,{on:true,label})));",resolveDir:P,loader:'tsx'},bundle:true,platform:'node',format:'cjs',outfile:P+'/render-cache/badge.cjs',external:['react','react-dom'],nodePaths:[N]});
+const {svg}=require('./render-cache/badge.cjs');
+(async()=>{for(const l of ['EXAM CONTRAST','COMMON MISTAKE']){await sharp(Buffer.from(svg(l))).png().toFile(P+'/qa/badge-'+l.split(' ')[0]+'.png');}console.log('badge refs written');})();

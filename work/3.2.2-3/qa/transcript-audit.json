@@ -1,0 +1,323 @@
+[
+  {
+    "beat": 1,
+    "sourceWords": 96,
+    "recognizerTokens": 96,
+    "matchedSourceTokens": 96,
+    "differences": []
+  },
+  {
+    "beat": 2,
+    "sourceWords": 55,
+    "recognizerTokens": 55,
+    "matchedSourceTokens": 55,
+    "differences": []
+  },
+  {
+    "beat": 3,
+    "sourceWords": 90,
+    "recognizerTokens": 90,
+    "matchedSourceTokens": 88,
+    "differences": [
+      {
+        "op": "replace",
+        "script": "axes read",
+        "heard": "excess rate"
+      }
+    ]
+  },
+  {
+    "beat": 4,
+    "sourceWords": 91,
+    "recognizerTokens": 91,
+    "matchedSourceTokens": 91,
+    "differences": []
+  },
+  {
+    "beat": 5,
+    "sourceWords": 95,
+    "recognizerTokens": 96,
+    "matchedSourceTokens": 84,
+    "differences": [
+      {
+        "op": "replace",
+        "script": "nine",
+        "heard": "9"
+      },
+      {
+        "op": "replace",
+        "script": "nine",
+        "heard": "9"
+      },
+      {
+        "op": "replace",
+        "script": "halve",
+        "heard": "half"
+      },
+      {
+        "op": "replace",
+        "script": "four point five",
+        "heard": "4 5"
+      },
+      {
+        "op": "replace",
+        "script": "eighteen",
+        "heard": "18"
+      },
+      {
+        "op": "replace",
+        "script": "eighteen",
+        "heard": "18"
+      },
+      {
+        "op": "replace",
+        "script": "decimetre",
+        "heard": "decimeter"
+      },
+      {
+        "op": "replace",
+        "script": "vmax",
+        "heard": "v max"
+      },
+      {
+        "op": "replace",
+        "script": "vmax",
+        "heard": "v max"
+      }
+    ]
+  },
+  {
+    "beat": 6,
+    "sourceWords": 199,
+    "recognizerTokens": 200,
+    "matchedSourceTokens": 190,
+    "differences": [
+      {
+        "op": "replace",
+        "script": "eighteen",
+        "heard": "18"
+      },
+      {
+        "op": "replace",
+        "script": "nine",
+        "heard": "9"
+      },
+      {
+        "op": "replace",
+        "script": "four point five",
+        "heard": "4 5"
+      },
+      {
+        "op": "replace",
+        "script": "eighteen",
+        "heard": "18"
+      },
+      {
+        "op": "replace",
+        "script": "vmax",
+        "heard": "v max"
+      },
+      {
+        "op": "replace",
+        "script": "vmax",
+        "heard": "v max"
+      },
+      {
+        "op": "replace",
+        "script": "eighteen",
+        "heard": "18"
+      }
+    ]
+  },
+  {
+    "beat": 7,
+    "sourceWords": 101,
+    "recognizerTokens": 101,
+    "matchedSourceTokens": 101,
+    "differences": []
+  },
+  {
+    "beat": 8,
+    "sourceWords": 110,
+    "recognizerTokens": 107,
+    "matchedSourceTokens": 103,
+    "differences": [
+      {
+        "op": "replace",
+        "script": "y",
+        "heard": "ui"
+      },
+      {
+        "op": "replace",
+        "script": "four hundred",
+        "heard": "400"
+      },
+      {
+        "op": "replace",
+        "script": "one hundred",
+        "heard": "100"
+      },
+      {
+        "op": "replace",
+        "script": "two hundred",
+        "heard": "200"
+      }
+    ]
+  },
+  {
+    "beat": 9,
+    "sourceWords": 188,
+    "recognizerTokens": 180,
+    "matchedSourceTokens": 174,
+    "differences": [
+      {
+        "op": "replace",
+        "script": "1",
+        "heard": "one"
+      },
+      {
+        "op": "replace",
+        "script": "vmax",
+        "heard": "vmex"
+      },
+      {
+        "op": "replace",
+        "script": "x one hundred z two hundred y four hundred",
+        "heard": "x100 z200 y400"
+      },
+      {
+        "op": "replace",
+        "script": "x z y",
+        "heard": "xzy"
+      }
+    ]
+  },
+  {
+    "beat": 10,
+    "sourceWords": 104,
+    "recognizerTokens": 103,
+    "matchedSourceTokens": 102,
+    "differences": [
+      {
+        "op": "replace",
+        "script": "difference is",
+        "heard": "differences"
+      }
+    ]
+  },
+  {
+    "beat": 11,
+    "sourceWords": 119,
+    "recognizerTokens": 119,
+    "matchedSourceTokens": 119,
+    "differences": []
+  },
+  {
+    "beat": 12,
+    "sourceWords": 128,
+    "recognizerTokens": 128,
+    "matchedSourceTokens": 127,
+    "differences": [
+      {
+        "op": "replace",
+        "script": "read",
+        "heard": "red"
+      }
+    ]
+  },
+  {
+    "beat": 13,
+    "sourceWords": 179,
+    "recognizerTokens": 180,
+    "matchedSourceTokens": 178,
+    "differences": [
+      {
+        "op": "replace",
+        "script": "this",
+        "heard": "the"
+      },
+      {
+        "op": "insert",
+        "script": "",
+        "heard": "candidates"
+      }
+    ]
+  },
+  {
+    "beat": 14,
+    "sourceWords": 100,
+    "recognizerTokens": 100,
+    "matchedSourceTokens": 99,
+    "differences": [
+      {
+        "op": "replace",
+        "script": "the",
+        "heard": "this"
+      }
+    ]
+  },
+  {
+    "beat": 15,
+    "sourceWords": 88,
+    "recognizerTokens": 89,
+    "matchedSourceTokens": 87,
+    "differences": [
+      {
+        "op": "replace",
+        "script": "across",
+        "heard": "a cross"
+      }
+    ]
+  },
+  {
+    "beat": 16,
+    "sourceWords": 122,
+    "recognizerTokens": 121,
+    "matchedSourceTokens": 115,
+    "differences": [
+      {
+        "op": "replace",
+        "script": "your",
+        "heard": "youre"
+      },
+      {
+        "op": "replace",
+        "script": "1",
+        "heard": "one"
+      },
+      {
+        "op": "replace",
+        "script": "row",
+        "heard": "role"
+      },
+      {
+        "op": "replace",
+        "script": "suggest",
+        "heard": "suggests"
+      },
+      {
+        "op": "replace",
+        "script": "where the",
+        "heard": "whether"
+      },
+      {
+        "op": "replace",
+        "script": "rate",
+        "heard": "read"
+      }
+    ]
+  },
+  {
+    "beat": 17,
+    "sourceWords": 72,
+    "recognizerTokens": 72,
+    "matchedSourceTokens": 71,
+    "differences": [
+      {
+        "op": "replace",
+        "script": "eighteen",
+        "heard": "18"
+      }
+    ]
+  }
+]

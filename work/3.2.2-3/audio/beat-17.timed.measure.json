@@ -1,0 +1,35 @@
+{
+  "id": 17,
+  "words": 72,
+  "seconds": 38.1611875,
+  "samples": 1831737,
+  "wpm": 138.63399782180957,
+  "voice_id": "BcpjRWrYhDBHmOnetmBl",
+  "model_id": "eleven_multilingual_v2",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 1.0
+  },
+  "sample_rate": 48000,
+  "time_stretched": false,
+  "requestDiffers": false,
+  "mp3_sha256": "adf107307fcbda443ef66a51a6940162c162c9d4281a1cca02c21e7b7e73bdca",
+  "originalSeconds": 31.1611875,
+  "holds": [
+    {
+      "atSample": 248640,
+      "samples": 240000,
+      "seconds": 5,
+      "before": "Then watch the three marks"
+    },
+    {
+      "atSample": 1495737,
+      "samples": 96000,
+      "seconds": 2,
+      "before": "END"
+    }
+  ]
+}

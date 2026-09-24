@@ -1,0 +1,11 @@
+{
+  "text": "That question is a real one, from June 2024 Paper 1, and the report tells us exactly how it went wrong, on the card. Three enzymes, one graph: put them in order of affinity, highest first. Read these two answers. Look at the first line. It has picked out the highest plateau and called that affinity. Vmax is how fast the enzyme can go when it is saturated; it does not tell you the substrate concentration at half that rate. That concentration is K M, a different quantity in different units. The report says some candidates confused K M with Vmax and chose that order. Now the second line: the steepest start. It looks like eagerness, and X does happen to start steepest here, but a gradient is a rate per concentration, not a concentration, and the report says a similar proportion thought the gradient of the initial curve showed affinity. Affinity is read from K M, and K M comes from the construction: each curve, its own half Vmax, down to the axis. K M for X one hundred, Z two hundred, Y four hundred. Lowest K M, highest affinity: X, Z, Y.",
+  "model_id": "eleven_multilingual_v2",
+  "voice_settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 1.0
+  }
+}

@@ -1,0 +1,190 @@
+[
+  {
+    "id": 1,
+    "heading": "Hook and context · 0:00–0:40",
+    "text": "Ever wondered how a tablet can switch off one enzyme in your body and leave thousands of others running? Something in it binds to that enzyme and slows it down, and the way biologists describe what it does uses the same two numbers they use to compare enzymes with each other. You have already drawn the graph those numbers live on: initial rate against substrate concentration, rising, then flattening off. Today that graph does two jobs. First it lets you compare how readily these enzymes bind their substrates. Then it shows you what an inhibitor does.",
+    "paragraphs": [
+      "Ever wondered how a tablet can switch off one enzyme in your body and leave thousands of others running? Something in it binds to that enzyme and slows it down, and the way biologists describe what it does uses the same two numbers they use to compare enzymes with each other. You have already drawn the graph those numbers live on: initial rate against substrate concentration, rising, then flattening off. Today that graph does two jobs. First it lets you compare how readily these enzymes bind their substrates. Then it shows you what an inhibitor does."
+    ],
+    "words": 96,
+    "holds": []
+  },
+  {
+    "id": 2,
+    "heading": "What you will be able to do · 0:40–1:05",
+    "text": "By the end you will be able to read Vmax from a rate–concentration graph and use it to find Km by construction; use Km to compare the affinity of different enzymes for their substrates; and explain what a competitive and a non-competitive reversible inhibitor each do to the enzyme and to that graph.",
+    "paragraphs": [
+      "By the end you will be able to read Vmax from a rate–concentration graph and use it to find Km by construction; use Km to compare the affinity of different enzymes for their substrates; and explain what a competitive and a non-competitive reversible inhibitor each do to the enzyme and to that graph."
+    ],
+    "words": 53,
+    "holds": []
+  },
+  {
+    "id": 3,
+    "heading": "The curve, and Vmax from the plateau · 1:05–1:50",
+    "text": "Here is the graph again, with its axes read properly. Along the bottom, substrate concentration. Up the side, initial rate: the rate at the very start of each run. At low substrate the rate climbs steeply; then the active sites fill and the curve levels off. That flat top is the maximum rate, Vmax. Read it from the plateau, or use the value the question gives you. If the curve is still rising at the last point, that point is not Vmax; the enzyme has not reached its maximum yet.",
+    "paragraphs": [
+      "Here is the graph again, with its axes read properly. Along the bottom, substrate concentration. Up the side, initial rate: the rate at the very start of each run. At low substrate the rate climbs steeply; then the active sites fill and the curve levels off. That flat top is the maximum rate, Vmax. Read it from the plateau, or use the value the question gives you. If the curve is still rising at the last point, that point is not Vmax; the enzyme has not reached its maximum yet."
+    ],
+    "words": 90,
+    "holds": []
+  },
+  {
+    "id": 4,
+    "heading": "One number for affinity: Km · 1:50–2:25",
+    "text": "Now the number that lets you compare enzymes. Different enzymes have different curves, and you need something you can read off each one. That number is the Michaelis–Menten constant, Km, and here is its definition, in the words a paper used: Km is the substrate concentration at which the initial rate of reaction is half its maximum value, Vmax. Notice what kind of quantity that is. It is a concentration, on the bottom axis, with concentration units. Vmax is used to get to it, but Km is not a rate.",
+    "paragraphs": [
+      "Now the number that lets you compare enzymes. Different enzymes have different curves, and you need something you can read off each one. That number is the Michaelis–Menten constant, Km, and here is its definition, in the words a paper used: Km is the substrate concentration at which the initial rate of reaction is half its maximum value, Vmax. Notice what kind of quantity that is. It is a concentration, on the bottom axis, with concentration units. Vmax is used to get to it, but Km is not a rate."
+    ],
+    "words": 90,
+    "holds": []
+  },
+  {
+    "id": 5,
+    "heading": "The construction: Vmax, half it, across, down · 2:25–3:15",
+    "text": "Here is how you get Km from Vmax, and this is the working the examiners want to see drawn on the graph. Take this enzyme: the plateau is at nine, so Vmax is nine. Draw the horizontal line at Vmax. Halve it: four point five. Draw the horizontal line at half Vmax. Follow that line across until it meets the curve. From that point, drop a vertical line to the concentration axis and read the value: eighteen. Km is eighteen millimoles per decimetre cubed. Show the construction on the graph: Vmax, half Vmax, across, down.",
+    "paragraphs": [
+      "Here is how you get Km from Vmax, and this is the working the examiners want to see drawn on the graph. Take this enzyme: the plateau is at nine, so Vmax is nine. Draw the horizontal line at Vmax. Halve it: four point five. Draw the horizontal line at half Vmax. Follow that line across until it meets the curve. From that point, drop a vertical line to the concentration axis and read the value: eighteen. Km is eighteen millimoles per decimetre cubed. Show the construction on the graph: Vmax, half Vmax, across, down."
+    ],
+    "words": 95,
+    "holds": []
+  },
+  {
+    "id": 6,
+    "heading": "COMMON MISTAKE E37: the right number, and a bare graph · 3:15–4:25",
+    "text": "Here is the most common error on exactly that question, on the card. June 2023, Paper 31, gave the lactase graph and asked you to estimate Km and show your working on the graph. Read this answer. Look at the number first: eighteen, and it is right. Now look at the graph: nothing on it. The calculation is written out neatly beside it, and the graph is bare. The arithmetic can feel like the working, and half of nine really is four point five. But the question said show your working on the graph, and the mark scheme has three marks: shows Vmax on graph, shows half Vmax on graph, eighteen. Two of the three marks are for showing those values on the graph. The examiners' report says the most common error was to calculate Km correctly, showing the calculation instead of showing how Vmax and half Vmax were obtained on the graph. And one more thing, from an older report: half Vmax is a stage on the way, not the answer; the answer is the concentration. So draw the lines in place: Vmax across, half Vmax across, down to eighteen. Now all three marks are on the page.",
+    "paragraphs": [
+      "Here is the most common error on exactly that question, on the card. June 2023, Paper 31, gave the lactase graph and asked you to estimate Km and show your working on the graph. Read this answer.",
+      "Look at the number first: eighteen, and it is right. Now look at the graph: nothing on it. The calculation is written out neatly beside it, and the graph is bare. The arithmetic can feel like the working, and half of nine really is four point five. But the question said show your working on the graph, and the mark scheme has three marks: shows Vmax on graph, shows half Vmax on graph, eighteen. Two of the three marks are for showing those values on the graph. The examiners' report says the most common error was to calculate Km correctly, showing the calculation instead of showing how Vmax and half Vmax were obtained on the graph. And one more thing, from an older report: half Vmax is a stage on the way, not the answer; the answer is the concentration. So draw the lines in place: Vmax across, half Vmax across, down to eighteen. Now all three marks are on the page."
+    ],
+    "words": 199,
+    "holds": [
+      {
+        "kind": "silent read",
+        "before": "Look at the number"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "heading": "What Km tells you: the eager enzyme · 4:25–5:10",
+    "text": "So what does Km tell you? Compare two enzymes. This one reaches half its maximum rate when the substrate concentration is still low; its Km is small. This one needs far more substrate around before it gets to half speed; its Km is large. The first enzyme grabs its substrate more readily: picture the eager enzyme, running at half speed on very little. Written properly: a lower Km means a higher affinity of the enzyme for its substrate, and a higher Km means a lower affinity. That is what Km is for: comparing the affinity of different enzymes for their substrates.",
+    "paragraphs": [
+      "So what does Km tell you? Compare two enzymes. This one reaches half its maximum rate when the substrate concentration is still low; its Km is small. This one needs far more substrate around before it gets to half speed; its Km is large. The first enzyme grabs its substrate more readily: picture the eager enzyme, running at half speed on very little. Written properly: a lower Km means a higher affinity of the enzyme for its substrate, and a higher Km means a lower affinity. That is what Km is for: comparing the affinity of different enzymes for their substrates."
+    ],
+    "words": 101,
+    "holds": []
+  },
+  {
+    "id": 8,
+    "heading": "Three enzymes, each from its own half-Vmax · 5:10–6:05",
+    "text": "Now three enzymes on one graph, X, Y and Z, and the question is which has the highest affinity. Do the construction for each curve separately, from its own plateau. Y has the highest Vmax, so its half line is highest, and its Km reads four hundred. X: its own plateau, its own half line, Km one hundred. Z: a low plateau, but read from its own half line, Km two hundred. Lowest Km first: X, then Z, then Y. Notice that Y, the fastest at the top, has the lowest affinity. And never draw one horizontal across all three: each enzyme's half Vmax is half of its own maximum.",
+    "paragraphs": [
+      "Now three enzymes on one graph, X, Y and Z, and the question is which has the highest affinity. Do the construction for each curve separately, from its own plateau. Y has the highest Vmax, so its half line is highest, and its Km reads four hundred. X: its own plateau, its own half line, Km one hundred. Z: a low plateau, but read from its own half line, Km two hundred. Lowest Km first: X, then Z, then Y. Notice that Y, the fastest at the top, has the lowest affinity. And never draw one horizontal across all three: each enzyme's half Vmax is half of its own maximum."
+    ],
+    "words": 110,
+    "holds": []
+  },
+  {
+    "id": 9,
+    "heading": "COMMON MISTAKE E36: Vmax called affinity; the gradient called affinity · 6:05–7:15",
+    "text": "That question is a real one, from June 2024 Paper 1, and the report tells us exactly how it went wrong, on the card. Three enzymes, one graph: put them in order of affinity, highest first. Read these two answers. Look at the first line. It has picked out the highest plateau and called that affinity. Vmax is how fast the enzyme can go when it is saturated; it does not tell you the substrate concentration at half that rate. That concentration is Km, a different quantity in different units. The report says some candidates confused Km with Vmax and chose that order. Now the second line: the steepest start. It looks like eagerness, and X does happen to start steepest here, but a gradient is a rate per concentration, not a concentration, and the report says a similar proportion thought the gradient of the initial curve showed affinity. Affinity is read from Km, and Km comes from the construction: each curve, its own half Vmax, down to the axis. Km for X one hundred, Z two hundred, Y four hundred. Lowest Km, highest affinity: X, Z, Y.",
+    "paragraphs": [
+      "That question is a real one, from June 2024 Paper 1, and the report tells us exactly how it went wrong, on the card. Three enzymes, one graph: put them in order of affinity, highest first. Read these two answers.",
+      "Look at the first line. It has picked out the highest plateau and called that affinity. Vmax is how fast the enzyme can go when it is saturated; it does not tell you the substrate concentration at half that rate. That concentration is Km, a different quantity in different units. The report says some candidates confused Km with Vmax and chose that order. Now the second line: the steepest start. It looks like eagerness, and X does happen to start steepest here, but a gradient is a rate per concentration, not a concentration, and the report says a similar proportion thought the gradient of the initial curve showed affinity. Affinity is read from Km, and Km comes from the construction: each curve, its own half Vmax, down to the axis. Km for X one hundred, Z two hundred, Y four hundred. Lowest Km, highest affinity: X, Z, Y."
+    ],
+    "words": 188,
+    "holds": [
+      {
+        "kind": "silent read",
+        "before": "Look at the first"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "heading": "Same enzyme, with and without an inhibitor · 7:15–8:05",
+    "text": "Now the second half, and the comparison changes. Until now it was different enzymes side by side. From here it is the same enzyme, under the same conditions, with and without an inhibitor. An inhibitor is a molecule that binds to the enzyme and lowers its activity. The two kinds in this lesson are reversible: the inhibitor binds and leaves again, and when it leaves the activity returns. This is one way cells control their reactions, and it is how a number of medicines work: bind the enzyme, slow the reaction. Here we compare two classes, and the difference is where the inhibitor binds.",
+    "paragraphs": [
+      "Now the second half, and the comparison changes. Until now it was different enzymes side by side. From here it is the same enzyme, under the same conditions, with and without an inhibitor. An inhibitor is a molecule that binds to the enzyme and lowers its activity. The two kinds in this lesson are reversible: the inhibitor binds and leaves again, and when it leaves the activity returns. This is one way cells control their reactions, and it is how a number of medicines work: bind the enzyme, slow the reaction. Here we compare two classes, and the difference is where the inhibitor binds."
+    ],
+    "words": 104,
+    "holds": []
+  },
+  {
+    "id": 11,
+    "heading": "Competitive: in the active site, overcome by substrate · 8:05–9:05",
+    "text": "A competitive inhibitor has a shape similar to the substrate, so it can bind reversibly in the active site itself. Watch: the inhibitor seats, a substrate arrives, and there is nowhere for it to go; it slides away. Then the inhibitor leaves, and a substrate seats and reacts. Substrate and inhibitor are competing for the same site, so the more substrate there is, the more often substrate wins. At high substrate concentration the inhibition can be overcome and the maximum rate is reached: Vmax is unchanged. But it takes more substrate to get to half of it, so Km increases. On the graph, the curve sits to the right of the original and merges with it at the plateau.",
+    "paragraphs": [
+      "A competitive inhibitor has a shape similar to the substrate, so it can bind reversibly in the active site itself. Watch: the inhibitor seats, a substrate arrives, and there is nowhere for it to go; it slides away. Then the inhibitor leaves, and a substrate seats and reacts. Substrate and inhibitor are competing for the same site, so the more substrate there is, the more often substrate wins. At high substrate concentration the inhibition can be overcome and the maximum rate is reached: Vmax is unchanged. But it takes more substrate to get to half of it, so Km increases. On the graph, the curve sits to the right of the original and merges with it at the plateau."
+    ],
+    "words": 119,
+    "holds": []
+  },
+  {
+    "id": 12,
+    "heading": "Non-competitive: another site, and the active site changes shape · 9:05–10:10",
+    "text": "A non-competitive inhibitor binds at a different site from the substrate. It binds reversibly at a site other than the active site, and that binding changes the shape of the active site, so the active site is no longer complementary to the substrate. Watch: the inhibitor seats at the other site, the cleft distorts, a substrate arrives and cannot seat. Adding more substrate cannot restore the uninhibited maximum rate, because it does not compete for the inhibitor's binding site. In the simplified model drawn here, Vmax decreases, increasing substrate concentration does not restore it, and Km is unchanged: read from its own, lower, half Vmax, it comes out at the same concentration. When the inhibitor leaves, the active site returns to its shape and activity comes back.",
+    "paragraphs": [
+      "A non-competitive inhibitor binds at a different site from the substrate. It binds reversibly at a site other than the active site, and that binding changes the shape of the active site, so the active site is no longer complementary to the substrate. Watch: the inhibitor seats at the other site, the cleft distorts, a substrate arrives and cannot seat. Adding more substrate cannot restore the uninhibited maximum rate, because it does not compete for the inhibitor's binding site. In the simplified model drawn here, Vmax decreases, increasing substrate concentration does not restore it, and Km is unchanged: read from its own, lower, half Vmax, it comes out at the same concentration. When the inhibitor leaves, the active site returns to its shape and activity comes back."
+    ],
+    "words": 127,
+    "holds": []
+  },
+  {
+    "id": 13,
+    "heading": "COMMON MISTAKE E41: the two curves swapped · 10:10–11:20",
+    "text": "Here is where the two curves get swapped, on the card. June 2023, Paper 23: sulfonamide is a competitive inhibitor of carbonic anhydrase; sketch a curve to show its effect. Read this sketch. Look at where the sketched curve ends: still below the original at high substrate concentration, with its own lower plateau. That is the non-competitive shape, and the question said competitive. Both inhibited curves lie below the original at low positive substrate concentrations, so it is easy to overlook what happens at high substrate. Ask it: a competitive inhibitor can be overcome by more substrate, so the curve has to climb back and meet the original plateau. The June 2023 report says a number of candidates drew the curve for a non-competitive inhibitor, or went above the maximum, which an inhibitor does not do; it lowers the rate. The March 2023 Paper 1 report found the same swap in about a quarter of candidates. Redraw it: below the original at first, then merging with it at the plateau. Vmax unchanged, Km increased; that is competitive.",
+    "paragraphs": [
+      "Here is where the two curves get swapped, on the card. June 2023, Paper 23: sulfonamide is a competitive inhibitor of carbonic anhydrase; sketch a curve to show its effect. Read this sketch.",
+      "Look at where the sketched curve ends: still below the original at high substrate concentration, with its own lower plateau. That is the non-competitive shape, and the question said competitive. Both inhibited curves lie below the original at low positive substrate concentrations, so it is easy to overlook what happens at high substrate. Ask it: a competitive inhibitor can be overcome by more substrate, so the curve has to climb back and meet the original plateau. The June 2023 report says a number of candidates drew the curve for a non-competitive inhibitor, or went above the maximum, which an inhibitor does not do; it lowers the rate. The March 2023 Paper 1 report found the same swap in about a quarter of candidates. Redraw it: below the original at first, then merging with it at the plateau. Vmax unchanged, Km increased; that is competitive."
+    ],
+    "words": 177,
+    "holds": [
+      {
+        "kind": "silent read",
+        "before": "Look at where the"
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "heading": "The sentences you write, clause by clause · 11:20–12:10",
+    "text": "Now the sentences you write, clause by clause, one for each outcome. For Km: Vmax is the maximum initial rate; Km is the substrate concentration at half Vmax, read by construction from each enzyme's own curve; a lower Km means a higher affinity for the substrate. For inhibitors: a competitive inhibitor binds reversibly in the active site, so Vmax is unchanged and Km increases, because more substrate can overcome it; a non-competitive inhibitor binds at a site other than the active site and changes the active site's shape, so in the simplified model Vmax decreases and Km is unchanged.",
+    "paragraphs": [
+      "Now the sentences you write, clause by clause, one for each outcome. For Km: Vmax is the maximum initial rate; Km is the substrate concentration at half Vmax, read by construction from each enzyme's own curve; a lower Km means a higher affinity for the substrate. For inhibitors: a competitive inhibitor binds reversibly in the active site, so Vmax is unchanged and Km increases, because more substrate can overcome it; a non-competitive inhibitor binds at a site other than the active site and changes the active site's shape, so in the simplified model Vmax decreases and Km is unchanged."
+    ],
+    "words": 99,
+    "holds": []
+  },
+  {
+    "id": 15,
+    "heading": "What I told you, read off the graph and the model · 12:10–12:55",
+    "text": "So here is the whole lesson on the graph and the model you have been using. Vmax from the plateau. Half it, across, down: Km, a concentration. Lower Km, higher affinity, and each enzyme's Km from its own half Vmax. Same enzyme with an inhibitor: competitive, in the active site, overcome by substrate, Vmax unchanged, Km increased, the curve merges at the plateau. Non-competitive, at another site, the active site changes shape, Vmax decreased, Km unchanged in this model. Both reversible: activity returns when the inhibitor leaves.",
+    "paragraphs": [
+      "So here is the whole lesson on the graph and the model you have been using. Vmax from the plateau. Half it, across, down: Km, a concentration. Lower Km, higher affinity, and each enzyme's Km from its own half Vmax. Same enzyme with an inhibitor: competitive, in the active site, overcome by substrate, Vmax unchanged, Km increased, the curve merges at the plateau. Non-competitive, at another site, the active site changes shape, Vmax decreased, Km unchanged in this model. Both reversible: activity returns when the inhibitor leaves."
+    ],
+    "words": 87,
+    "holds": []
+  },
+  {
+    "id": 16,
+    "heading": "How it is asked, and the reject card · 12:55–13:40",
+    "text": "How this reaches you. They give you a graph and say estimate Km, show your working on the graph: three marks, including two for showing the values on the graph. They give you a curve and say sketch the effect of a competitive inhibitor, and the merge at the plateau is a mark. In Paper 1 they ask for the order of affinity of three enzymes, or a row for the effect of a competitive inhibitor on Vmax and Km, or which lines on a graph belong to which mixture. And one in words: suggest why an enzyme's Km is lower, where the credited ideas are the active site being more complementary or more accessible. The reject: Km is not a rate.",
+    "paragraphs": [
+      "How this reaches you. They give you a graph and say estimate Km, show your working on the graph: three marks, including two for showing the values on the graph. They give you a curve and say sketch the effect of a competitive inhibitor, and the merge at the plateau is a mark. In Paper 1 they ask for the order of affinity of three enzymes, or a row for the effect of a competitive inhibitor on Vmax and Km, or which lines on a graph belong to which mixture. And one in words: suggest why an enzyme's Km is lower, where the credited ideas are the active site being more complementary or more accessible. The reject: Km is not a rate."
+    ],
+    "words": 122,
+    "holds": []
+  },
+  {
+    "id": 17,
+    "heading": "The real question on screen, and the tablet · 13:40–14:20",
+    "text": "Here is the question itself, from June 2023. Read it. Then watch the three marks land on our graph: Vmax shown, half Vmax shown, eighteen. And the tablet? Its molecule binds one enzyme, reversibly, in the active site or beside it, and other enzymes have different active sites, so a molecule that fits one need not fit the rest. Which kind of inhibitor it is, you can now read off a graph.",
+    "paragraphs": [
+      "Here is the question itself, from June 2023. Read it. Then watch the three marks land on our graph: Vmax shown, half Vmax shown, eighteen. And the tablet? Its molecule binds one enzyme, reversibly, in the active site or beside it, and other enzymes have different active sites, so a molecule that fits one need not fit the rest. Which kind of inhibitor it is, you can now read off a graph."
+    ],
+    "words": 72,
+    "holds": []
+  }
+]

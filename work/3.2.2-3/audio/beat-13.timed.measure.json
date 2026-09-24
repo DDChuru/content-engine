@@ -1,0 +1,29 @@
+{
+  "id": 13,
+  "words": 177,
+  "seconds": 88.38133333333333,
+  "samples": 4242304,
+  "wpm": 125.85721960623202,
+  "voice_id": "BcpjRWrYhDBHmOnetmBl",
+  "model_id": "eleven_multilingual_v2",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 1.0
+  },
+  "sample_rate": 48000,
+  "time_stretched": false,
+  "requestDiffers": true,
+  "mp3_sha256": "4129c0a1b20721317667bc4c3ed63e445db41f6f75b3d9f94f4bdab7a5735619",
+  "originalSeconds": 84.38133333333333,
+  "holds": [
+    {
+      "atSample": 780960,
+      "samples": 192000,
+      "seconds": 4,
+      "before": "Look at where the sketched curve ends"
+    }
+  ]
+}

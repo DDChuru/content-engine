@@ -1,0 +1,572 @@
+[
+ {
+  "beat": 1,
+  "seconds": 43.607083333333335,
+  "wpm": 132.0886323896156,
+  "matched": 96,
+  "src": 96,
+  "diffs": [],
+  "lowConfidence": []
+ },
+ {
+  "beat": 2,
+  "seconds": 23.266395833333334,
+  "wpm": 136.6778087495646,
+  "matched": 55,
+  "src": 55,
+  "diffs": [],
+  "lowConfidence": [
+   [
+    "Vmax",
+    0.03
+   ]
+  ]
+ },
+ {
+  "beat": 3,
+  "seconds": 38.638020833333336,
+  "wpm": 139.75871132978364,
+  "matched": 88,
+  "src": 90,
+  "diffs": [
+   [
+    "replace",
+    "axes read",
+    "excess rate"
+   ]
+  ],
+  "lowConfidence": [
+   [
+    "excess",
+    0.07
+   ],
+   [
+    "or",
+    0.3
+   ]
+  ]
+ },
+ {
+  "beat": 4,
+  "seconds": 40.77425,
+  "wpm": 132.43652550322813,
+  "matched": 91,
+  "src": 91,
+  "diffs": [],
+  "lowConfidence": [
+   [
+    "but",
+    0.41
+   ]
+  ]
+ },
+ {
+  "beat": 5,
+  "seconds": 43.514208333333336,
+  "wpm": 130.99169715638857,
+  "matched": 84,
+  "src": 95,
+  "diffs": [
+   [
+    "replace",
+    "nine",
+    "9"
+   ],
+   [
+    "replace",
+    "nine",
+    "9"
+   ],
+   [
+    "replace",
+    "halve",
+    "half"
+   ],
+   [
+    "replace",
+    "four point five",
+    "4 5"
+   ],
+   [
+    "replace",
+    "eighteen",
+    "18"
+   ],
+   [
+    "replace",
+    "eighteen",
+    "18"
+   ],
+   [
+    "replace",
+    "decimetre",
+    "decimeter"
+   ],
+   [
+    "replace",
+    "vmax",
+    "v max"
+   ],
+   [
+    "replace",
+    "vmax",
+    "v max"
+   ]
+  ],
+  "lowConfidence": [
+   [
+    "half",
+    0.25
+   ],
+   [
+    "km",
+    0.5
+   ],
+   [
+    "show",
+    0.46
+   ],
+   [
+    "V",
+    0.42
+   ],
+   [
+    "max",
+    0.22
+   ]
+  ]
+ },
+ {
+  "beat": 6,
+  "seconds": 85.77452083333333,
+  "wpm": 139.20217663705012,
+  "matched": 190,
+  "src": 199,
+  "diffs": [
+   [
+    "replace",
+    "eighteen",
+    "18"
+   ],
+   [
+    "replace",
+    "nine",
+    "9"
+   ],
+   [
+    "replace",
+    "four point five",
+    "4 5"
+   ],
+   [
+    "replace",
+    "eighteen",
+    "18"
+   ],
+   [
+    "replace",
+    "vmax",
+    "v max"
+   ],
+   [
+    "replace",
+    "vmax",
+    "v max"
+   ],
+   [
+    "replace",
+    "eighteen",
+    "18"
+   ]
+  ],
+  "lowConfidence": [
+   [
+    "June",
+    0.07
+   ],
+   [
+    "Paper",
+    0.3
+   ],
+   [
+    "Km",
+    0.31
+   ],
+   [
+    "and",
+    0.47
+   ],
+   [
+    "show",
+    0.3
+   ],
+   [
+    "km",
+    0.15
+   ],
+   [
+    "half",
+    0.42
+   ],
+   [
+    "v",
+    0.28
+   ],
+   [
+    "max",
+    0.42
+   ],
+   [
+    "now",
+    0.48
+   ]
+  ]
+ },
+ {
+  "beat": 7,
+  "seconds": 46.068395833333334,
+  "wpm": 131.54354282106812,
+  "matched": 101,
+  "src": 101,
+  "diffs": [],
+  "lowConfidence": []
+ },
+ {
+  "beat": 8,
+  "seconds": 44.953833333333336,
+  "wpm": 146.81729033119163,
+  "matched": 103,
+  "src": 110,
+  "diffs": [
+   [
+    "replace",
+    "y",
+    "ui"
+   ],
+   [
+    "replace",
+    "four hundred",
+    "400"
+   ],
+   [
+    "replace",
+    "one hundred",
+    "100"
+   ],
+   [
+    "replace",
+    "two hundred",
+    "200"
+   ]
+  ],
+  "lowConfidence": [
+   [
+    "X,",
+    0.49
+   ],
+   [
+    "read",
+    0.32
+   ],
+   [
+    "lowest",
+    0.08
+   ],
+   [
+    "X",
+    0.45
+   ]
+  ]
+ },
+ {
+  "beat": 9,
+  "seconds": 87.39991666666667,
+  "wpm": 129.06190795376426,
+  "matched": 174,
+  "src": 188,
+  "diffs": [
+   [
+    "replace",
+    "1",
+    "one"
+   ],
+   [
+    "replace",
+    "vmax",
+    "vmex"
+   ],
+   [
+    "replace",
+    "x one hundred z two hundred y four hundred",
+    "x100 z200 y400"
+   ],
+   [
+    "replace",
+    "x z y",
+    "xzy"
+   ]
+  ],
+  "lowConfidence": [
+   [
+    "from",
+    0.16
+   ],
+   [
+    "paper",
+    0.49
+   ],
+   [
+    "It",
+    0.35
+   ],
+   [
+    "km,",
+    0.35
+   ],
+   [
+    "and",
+    0.44
+   ],
+   [
+    "Km",
+    0.49
+   ],
+   [
+    "Z200,",
+    0.48
+   ]
+  ]
+ },
+ {
+  "beat": 10,
+  "seconds": 46.486354166666665,
+  "wpm": 134.23294022215302,
+  "matched": 102,
+  "src": 104,
+  "diffs": [
+   [
+    "replace",
+    "difference is",
+    "differences"
+   ]
+  ],
+  "lowConfidence": [
+   [
+    "and",
+    0.44
+   ]
+  ]
+ },
+ {
+  "beat": 11,
+  "seconds": 52.9879375,
+  "wpm": 134.74764893425035,
+  "matched": 119,
+  "src": 119,
+  "diffs": [],
+  "lowConfidence": [
+   [
+    "the",
+    0.38
+   ]
+  ]
+ },
+ {
+  "beat": 12,
+  "seconds": 61.48645833333333,
+  "wpm": 123.92972707405086,
+  "matched": 127,
+  "src": 128,
+  "diffs": [
+   [
+    "replace",
+    "read",
+    "red"
+   ]
+  ],
+  "lowConfidence": [
+   [
+    "Adding",
+    0.38
+   ],
+   [
+    "and",
+    0.49
+   ]
+  ]
+ },
+ {
+  "beat": 13,
+  "seconds": 84.38133333333333,
+  "wpm": 125.85721960623202,
+  "matched": 178,
+  "src": 179,
+  "diffs": [
+   [
+    "replace",
+    "this",
+    "the"
+   ],
+   [
+    "insert",
+    "",
+    "candidates"
+   ]
+  ],
+  "lowConfidence": [
+   [
+    "paper",
+    0.38
+   ],
+   [
+    "with",
+    0.33
+   ],
+   [
+    "and",
+    0.33
+   ],
+   [
+    "competitive.",
+    0.35
+   ],
+   [
+    "candidates",
+    0.02
+   ],
+   [
+    "Paper",
+    0.4
+   ]
+  ]
+ },
+ {
+  "beat": 14,
+  "seconds": 49.0405625,
+  "wpm": 121.12422242301972,
+  "matched": 99,
+  "src": 100,
+  "diffs": [
+   [
+    "replace",
+    "the",
+    "this"
+   ]
+  ],
+  "lowConfidence": [
+   [
+    "because",
+    0.32
+   ]
+  ]
+ },
+ {
+  "beat": 15,
+  "seconds": 43.607083333333335,
+  "wpm": 119.70532310308914,
+  "matched": 87,
+  "src": 88,
+  "diffs": [
+   [
+    "replace",
+    "across",
+    "a cross"
+   ]
+  ],
+  "lowConfidence": [
+   [
+    "site,",
+    0.39
+   ],
+   [
+    "non",
+    0.32
+   ]
+  ]
+ },
+ {
+  "beat": 16,
+  "seconds": 52.012708333333336,
+  "wpm": 140.7348364382102,
+  "matched": 115,
+  "src": 122,
+  "diffs": [
+   [
+    "replace",
+    "your",
+    "youre"
+   ],
+   [
+    "replace",
+    "1",
+    "one"
+   ],
+   [
+    "replace",
+    "row",
+    "role"
+   ],
+   [
+    "replace",
+    "suggest",
+    "suggests"
+   ],
+   [
+    "replace",
+    "where the",
+    "whether"
+   ],
+   [
+    "replace",
+    "rate",
+    "read"
+   ]
+  ],
+  "lowConfidence": [
+   [
+    "estimate",
+    0.21
+   ],
+   [
+    "Km,",
+    0.5
+   ],
+   [
+    "affinity",
+    0.39
+   ],
+   [
+    "the",
+    0.45
+   ],
+   [
+    "suggests",
+    0.44
+   ],
+   [
+    "a",
+    0.37
+   ]
+  ]
+ },
+ {
+  "beat": 17,
+  "seconds": 31.1611875,
+  "wpm": 138.63399782180957,
+  "matched": 71,
+  "src": 72,
+  "diffs": [
+   [
+    "replace",
+    "eighteen",
+    "18"
+   ]
+  ],
+  "lowConfidence": [
+   [
+    "You",
+    0.36
+   ]
+  ]
+ }
+]

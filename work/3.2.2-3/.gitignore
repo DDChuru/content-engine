@@ -1,0 +1,12 @@
+render-cache/
+tmp/
+*.mp4
+*.wav
+*.m4a
+public/
+qa/beat-*/*.png
+qa/beat-*/*.svg
+qa/encoded-frames/
+audio/probe/*.mp3
+bookends/
+node_modules
