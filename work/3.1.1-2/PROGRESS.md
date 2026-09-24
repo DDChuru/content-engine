@@ -1,40 +1,32 @@
 # 3.1.1-2 Enzymes: where and how they act · BUILD PROGRESS (handover)
 
-Updated 2026-09-24 11:58Z. Builder: claude-opus-5-5 (cloud run 003). Branch `cloud/003-3.1.1-2` ONLY.
-**Phase: RENDER + FINISH CHAIN running (`chain-finish.sh`, log logs/chain-finish.log; ends "CHAIN DONE"). All 18 beats authored, LOOKED at and approved.** · **Beats complete: 2 / 18** · master: not yet built
-Live render processes: 6366 xargs -P 4 -I{} sh -c nice -n 10 node render-beat.cjs {} > logs/render-beat-$(printf %02d {}).log 2>&1; echo "beat {} exit $?"
-6367 sh -c nice -n 10 node render-beat.cjs 1 > logs/render-beat-$(printf %02d 1).log 2>&1; echo "beat 1 exit $?"
-6369 sh -c nice -n 10 node render-beat.cjs 3 > logs/render-beat-$(printf %02d 3).log 2>&1; echo "beat 3 exit $?"
-6372 node render-beat.cjs 1
-6377 node render-beat.cjs 3
-6702 sh -c nice -n 10 node render-beat.cjs 5 > logs/render-beat-$(printf %02d 5).log 2>&1; echo "beat 5 exit $?"
-6704 node render-beat.cjs 5
-6888 sh -c nice -n 10 node render-beat.cjs 6 > logs/render-beat-$(printf %02d 6).log 2>&1; echo "beat 6 exit $?"
-6890 node render-beat.cjs 6
+Updated 2026-09-24 12:18Z. Builder: claude-opus-5-5 (cloud run 003). Branch `cloud/003-3.1.1-2` ONLY.
+**Phase: DELIVERED FOR REVIEW — master verified, branded, uploaded to Bunny (guid 08c56c4e-3505-412c-af04-4175524e4a1b, no collection). Only remaining step if this session died: re-poll Bunny to status 4 (`./bunny-poll.sh 08c56c4e-3505-412c-af04-4175524e4a1b`) and fill BUNNY_* in REPORT.md.** · **Beats complete: 18 / 18** · master: present
+Live render processes: none
 NOTE: render-cache/ (chunks) and all MP4/WAV are NOT in git — a fresh container must re-render approved beats
 (`./launch-render.sh N`, 4 at a time); approvals (qa/beat-NN/approved.json) ARE in git and stay valid while the
 source fingerprint matches.
 
 | Beat | Heading | Frames | Cues | State |
 |---|---|---|---|---|
-| 1 | Hook and context · 0:00–0:38 | 1166 | 12 | RENDERING (lock) |
+| 1 | Hook and context · 0:00–0:38 | 1166 | 12 | COMPLETE |
 | 2 | What you will be able to do · 0:38–1:05 | 885 | 11 | COMPLETE |
-| 3 | A globular protein, and a catalyst · 1:05–1:50 | 963 | 9 | RENDERING (lock) |
+| 3 | A globular protein, and a catalyst · 1:05–1:50 | 963 | 9 | COMPLETE |
 | 4 | Inside the cell, or secreted to work outside · 1:50–2:38 | 1265 | 12 | COMPLETE |
-| 5 | COMMON MISTAKE E32: the wrong prefix · 2:38–3:35 | 2198 | 13 | RENDERING (lock) |
-| 6 | The fold, and the active site · 3:35–4:12 | 953 | 10 | RENDERING (lock) |
-| 7 | Specificity: complementary, not the same shape · 4:12–4:58 | 1347 | 13 | approved, not rendered |
-| 8 | Held in place: the enzyme–substrate complex · 4:58–5:32 | 917 | 10 | approved, not rendered |
-| 9 | Inside the complex: the reaction, and the enzyme goes agai | 1608 | 15 | approved, not rendered |
-| 10 | Why it is faster: activation energy · 6:40–7:40 | 1554 | 16 | approved, not rendered |
-| 11 | COMMON MISTAKE E35: the sentence that answers every questi | 3096 | 17 | approved, not rendered |
-| 12 | The lock-and-key hypothesis · 8:45–9:25 | 1349 | 12 | approved, not rendered |
-| 13 | The induced-fit hypothesis · 9:25–10:10 | 1353 | 13 | approved, not rendered |
-| 14 | COMMON MISTAKE E33: two names glued together · 10:10–11:05 | 1747 | 12 | approved, not rendered |
-| 15 | The sentence you write · 11:05–11:35 | 793 | 8 | approved, not rendered |
-| 16 | COMMON MISTAKE E34: the labels on the drawing · 11:50–13:0 | 2535 | 17 | approved, not rendered |
-| 17 | What I told you, read off the model · 13:05–13:50 | 1569 | 12 | approved, not rendered |
-| 18 | How it is asked, with the real question on screen · 13:50– | 1676 | 12 | approved, not rendered |
+| 5 | COMMON MISTAKE E32: the wrong prefix · 2:38–3:35 | 2198 | 13 | COMPLETE |
+| 6 | The fold, and the active site · 3:35–4:12 | 953 | 10 | COMPLETE |
+| 7 | Specificity: complementary, not the same shape · 4:12–4:58 | 1347 | 13 | COMPLETE |
+| 8 | Held in place: the enzyme–substrate complex · 4:58–5:32 | 917 | 10 | COMPLETE |
+| 9 | Inside the complex: the reaction, and the enzyme goes agai | 1608 | 15 | COMPLETE |
+| 10 | Why it is faster: activation energy · 6:40–7:40 | 1554 | 16 | COMPLETE |
+| 11 | COMMON MISTAKE E35: the sentence that answers every questi | 3096 | 17 | COMPLETE |
+| 12 | The lock-and-key hypothesis · 8:45–9:25 | 1349 | 12 | COMPLETE |
+| 13 | The induced-fit hypothesis · 9:25–10:10 | 1353 | 13 | COMPLETE |
+| 14 | COMMON MISTAKE E33: two names glued together · 10:10–11:05 | 1747 | 12 | COMPLETE |
+| 15 | The sentence you write · 11:05–11:35 | 793 | 8 | COMPLETE |
+| 16 | COMMON MISTAKE E34: the labels on the drawing · 11:50–13:0 | 2535 | 17 | COMPLETE |
+| 17 | What I told you, read off the model · 13:05–13:50 | 1569 | 12 | COMPLETE |
+| 18 | How it is asked, with the real question on screen · 13:50– | 1676 | 12 | COMPLETE |
 
 
 ## Resume procedure (fresh container)
@@ -109,3 +101,10 @@ chrome-headless-shell. Late frames LOOKED at (qa/bookend-*-late.jpg): title read
    3.1.1-2-enzymes.mp4 3.1.1-2-enzymes-branded.mp4` (the inputs come from `git checkout origin/cloud/inputs-003 -- cloud-inputs/003`).
 4. Bunny: POST create {"title":"REVIEW 3.1.1-2 Enzymes: where and how they act"} (no collection) → PUT curl -T → poll to status 4.
 5. REPORT.md (<70 lines).
+
+## Final state
+- Master `3.1.1-2-enzymes.mp4` 900.133 s, sha256 ea72f948bcf7597b71bd2d95c92846012d9cb3c3793b304ad4bbf58cf1d43d32 (all §4 checks pass,
+  qa/verification.json). Superseded pre-review master kept as `3.1.1-2-enzymes-SUPERSEDED-prereview.mp4` (not in git).
+- Branded `3.1.1-2-enzymes-branded.mp4` 911.162 s, sha256 eba19eb8c9ed10e417187198704ce842c5b6c0ce1891849cb9a2c8b8e52455d1.
+- MP4s are NOT in git (rule). To reproduce: npm install, make_fonts.py, generate_audio.py (reuses MP3s), insert_holds.py,
+  assemble_timeline.py, ./chain-finish.sh, bookends, branding — approvals in qa/beat-NN/approved.json stay valid.

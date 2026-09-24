@@ -5,8 +5,9 @@ style 0, speaker boost; one MP3 per beat (mp3_44100_128) → 48 kHz mono PCM. **
 Transcription: faster-whisper `small` (CPU int8, word timestamps, topic prompt). Second opinions: `medium`, no prompt
 (`qa/second-opinion-medium-NN.json`). Every transcript diff per beat: `qa/transcript-review.json`.
 
-Characters (GET /v1/user `subscription.character_count`): before **222,543** → after audio **231,267** (Δ 8,724 as
-reported by the account; final beat requests total 10,941 characters, pronunciation probes 2,233).
+Characters (GET /v1/user `subscription.character_count`): before **222,543** → **237,993** at the end of the build
+(**15,450 used**: 18 beats of 10,941 request characters + retakes of B4, B5, B11 + 2,233 of pronunciation probes). A
+reading taken straight after the audio (231,267) had not yet caught up with the account's counter.
 
 ## Request-only normalisations (the storyboard and every cue phrase are untouched)
 | Beat | Storyboard | Request text | Why |

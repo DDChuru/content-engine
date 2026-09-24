@@ -1,4 +1,4 @@
-PHASE: RENDER + FINISH CHAIN running (`chain-finish.sh`, log logs/chain-finish.log; ends "CHAIN DONE"). All 18 beats authored, LOOKED at and approved.
+PHASE: DELIVERED FOR REVIEW — master verified, branded, uploaded to Bunny (guid 08c56c4e-3505-412c-af04-4175524e4a1b, no collection). Only remaining step if this session died: re-poll Bunny to status 4 (`./bunny-poll.sh 08c56c4e-3505-412c-af04-4175524e4a1b`) and fill BUNNY_* in REPORT.md.
 
 ## Resume procedure (fresh container)
 1. `apt-get update && apt-get install -y ffmpeg`; `pip install faster-whisper pillow numpy fonttools brotli`.
@@ -72,3 +72,10 @@ chrome-headless-shell. Late frames LOOKED at (qa/bookend-*-late.jpg): title read
    3.1.1-2-enzymes.mp4 3.1.1-2-enzymes-branded.mp4` (the inputs come from `git checkout origin/cloud/inputs-003 -- cloud-inputs/003`).
 4. Bunny: POST create {"title":"REVIEW 3.1.1-2 Enzymes: where and how they act"} (no collection) → PUT curl -T → poll to status 4.
 5. REPORT.md (<70 lines).
+
+## Final state
+- Master `3.1.1-2-enzymes.mp4` 900.133 s, sha256 ea72f948bcf7597b71bd2d95c92846012d9cb3c3793b304ad4bbf58cf1d43d32 (all §4 checks pass,
+  qa/verification.json). Superseded pre-review master kept as `3.1.1-2-enzymes-SUPERSEDED-prereview.mp4` (not in git).
+- Branded `3.1.1-2-enzymes-branded.mp4` 911.162 s, sha256 eba19eb8c9ed10e417187198704ce842c5b6c0ce1891849cb9a2c8b8e52455d1.
+- MP4s are NOT in git (rule). To reproduce: npm install, make_fonts.py, generate_audio.py (reuses MP3s), insert_holds.py,
+  assemble_timeline.py, ./chain-finish.sh, bookends, branding — approvals in qa/beat-NN/approved.json stay valid.
