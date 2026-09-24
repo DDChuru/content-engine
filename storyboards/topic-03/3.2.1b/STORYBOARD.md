@@ -72,7 +72,7 @@ Temperature and pH are held fixed, so the second clause holds steady; the three 
 
 Beat windows in the headings are provisional (words ÷ 120 per beat, plus the prescribed silent reads, which the effective rate already absorbs); the runtime table below is authoritative and final cue times come from the measured audio. Every cue is an exact narration substring, unique within its beat, in spoken order; no stretch beyond 30 words without a stated visual change.
 
-### BEAT 1 · Hook and context · 0:00–0:39
+### BEAT 1 · Hook and context · 0:00–0:36
 **Narration:**
 > Ever wondered why adding more of something to a reaction speeds it up, and then, past a certain point, hardly speeds it up at all? Inside a cell the amounts keep changing: a cell can make more of an enzyme or less, the supply of substrate rises and falls, and other molecules can bind to an enzyme and slow it. Here you measure each of those amounts, and explain what you see.
 
@@ -86,7 +86,7 @@ Beat windows in the headings are provisional (words ÷ 120 per beat, plus the pr
 
 ---
 
-### BEAT 2 · Recall: the sentence from 3.2.1 · 0:39–1:32
+### BEAT 2 · Recall: the sentence from 3.2.1 · 0:36–1:30
 **Narration:**
 > First, the one idea you need from the lesson on temperature and pH. Here is an enzyme, drawn as a model. A substrate molecule collides with the active site, binds and forms an enzyme–substrate complex; the reaction happens, the products leave, and the site is free again. That lesson built one sentence. The rate depends on how often substrate molecules meet a working active site and form enzyme–substrate complexes per unit time, and on whether the active sites stay functional. High temperature or extreme pH can denature an enzyme, so the substrate no longer fits the active site. Today those conditions stay fixed, and the amounts change.
 
@@ -101,7 +101,7 @@ Beat windows in the headings are provisional (words ÷ 120 per beat, plus the pr
 
 ---
 
-### BEAT 3 · What you will be able to do · 1:32–1:56
+### BEAT 3 · What you will be able to do · 1:30–1:55
 **Narration:**
 > By the end you will be able to investigate how enzyme, substrate and inhibitor concentration affect the rate, and say which rate each method actually measures; explain each effect with that one sentence; and describe and explain a graph of rate against substrate concentration in the way mark schemes credit.
 
@@ -114,7 +114,7 @@ Small type: *syllabus 3.2.1, p.20: "investigate and explain".*
 
 ---
 
-### BEAT 4 · More enzyme: the amylase dilution series · 1:56–2:52
+### BEAT 4 · More enzyme: the amylase dilution series · 1:55–2:51
 **Narration:**
 > Start with enzyme concentration: amylase acting on starch. You dilute a one per cent amylase stock with pH seven buffer to make five concentrations; one worked dilution is on screen. Every tube gets the same five cubic centimetres of starch suspension. Amylase and starch warm separately in the water bath at thirty degrees, then you pour the starch into the amylase and start the timer. Every thirty seconds, one drop of the mixture goes onto iodine on the spotting tile. The endpoint is the first sample that no longer turns blue-black; the well stays yellow-brown, iodine's own colour. Three repeats at each concentration, and a control with water in place of amylase.
 
@@ -132,7 +132,7 @@ Small type: *syllabus 3.2.1, p.20: "investigate and explain".*
 
 ---
 
-### BEAT 5 · More enzyme: what the times show, and why · 2:52–3:47
+### BEAT 5 · More enzyme: what the times show, and why · 2:51–3:47
 **Narration:**
 > The mean endpoint times fall from nine hundred and ten seconds at the lowest concentration to one hundred and eighty at the highest. Each time is known only to within one sampling interval, thirty seconds, so the concentrations are spread far enough apart that each mean differs from the next by more than that. Plot one over the mean endpoint time: a relative rate, larger when faster, and not an initial rate. Double the amylase, and one over t roughly doubles. Why? More amylase, more active sites available, so more successful collisions and more enzyme–substrate complexes formed per unit time. While substrate is in excess, the rate rises in proportion to enzyme concentration.
 
@@ -148,7 +148,7 @@ Small type: *syllabus 3.2.1, p.20: "investigate and explain".*
 
 ---
 
-### BEAT 6 · COMMON MISTAKE E40: a count with no time, and intervals with no times · 3:47–5:05
+### BEAT 6 · COMMON MISTAKE E40: a count with no time, and intervals with no times · 3:47–5:07
 **Narration:**
 > Now a mistake in two places, on the card. Our framing: describe how you would compare the rates, and explain why more amylase is faster. Read this answer.
 >
@@ -177,7 +177,7 @@ Small type: *syllabus 3.2.1, p.20: "investigate and explain".*
 
 ---
 
-### BEAT 7 · More substrate: peroxide dilutions and initial slopes · 5:05–6:02
+### BEAT 7 · More substrate: peroxide dilutions and initial slopes · 5:07–6:04
 **Narration:**
 > Now substrate concentration: catalase in yeast breaking down hydrogen peroxide, on the gas-syringe rig. Every run has the same five cubic centimetres of yeast suspension; the peroxide changes, five concentrations diluted from one stock. Tip to mix at time zero, and the syringe collects the gas. Each flask starts with a different amount of peroxide, so comparing times to finish would compare different amounts. Take the initial rate instead, from the tangent at time zero. For zero point two moles per cubic decimetre, the tangent rises twelve cubic centimetres in thirty seconds: zero point four cubic centimetres per second. Three runs each, and the means, plotted against concentration, rise steeply, then level off.
 
@@ -194,7 +194,7 @@ Small type: *syllabus 3.2.1, p.20: "investigate and explain".*
 
 ---
 
-### BEAT 8 · COMMON MISTAKE E38: a concentration graph read as time · 6:02–7:18
+### BEAT 8 · COMMON MISTAKE E38: a concentration graph read as time · 6:04–7:21
 **Narration:**
 > Here is a description of that graph, in wording that one mark scheme has a line for. Read it.
 >
@@ -218,7 +218,7 @@ Small type: *syllabus 3.2.1, p.20: "investigate and explain".*
 
 ---
 
-### BEAT 9 · Why it levels off: saturated active sites · 7:18–8:14
+### BEAT 9 · Why it levels off: saturated active sites · 7:21–8:15
 **Narration:**
 > Why that shape? At low substrate concentration many active sites are empty at any moment. Add substrate, and substrate molecules meet free active sites more often, so more enzyme–substrate complexes form per unit time and the rate rises: substrate concentration is the limiting factor. Keep adding, and nearly every active site is occupied at any moment: the active sites are saturated. Picture a shop where every till is busy: a longer queue gets nobody through faster, yet every till is still serving. Written properly: at the plateau, complexes still form and break at the maximum rate, and enzyme concentration, the number of active sites, is now the limiting factor.
 
@@ -234,7 +234,7 @@ Small type: *syllabus 3.2.1, p.20: "investigate and explain".*
 
 ---
 
-### BEAT 10 · COMMON MISTAKE E39: describing, and "full" read as "finished" · 8:14–9:34
+### BEAT 10 · COMMON MISTAKE E39: describing, and "full" read as "finished" · 8:15–9:33
 **Narration:**
 > Here is an explanation that an examiners' report describes in detail, on the card. June 2023, Paper 31, asked for an explanation of a lactase graph over two ranges of lactose concentration. Read this answer.
 >
@@ -262,7 +262,7 @@ Small type: *syllabus 3.2.1, p.20: "investigate and explain".*
 
 ---
 
-### BEAT 11 · More inhibitor: fewer working active sites · 9:34–10:47
+### BEAT 11 · More inhibitor: fewer working active sites · 9:33–10:52
 **Narration:**
 > The third amount is inhibitor, in an adaptation of a Paper 5 question. That paper changed the substrate with and without an inhibitor called X; here the substrate is fixed and X changes, five concentrations including zero. The assay is the colorimeter one from earlier: colourless ONPG becomes a yellow product, read through a blue filter. Each concentration of X has its own blank, with water in place of enzyme, and you zero on it. The rate is the initial gradient over the first sixty seconds: with no X, zero point two four in sixty seconds, zero point zero zero four per second. A single reading at one time is an amount of colour, not a rate. As X increases, the rate falls. More X means more enzyme molecules with X bound at any moment, so fewer active sites available or working, and fewer complexes per unit time. How X binds is for the lesson on inhibitors.
 
@@ -280,7 +280,7 @@ Small type: *syllabus 3.2.1, p.20: "investigate and explain".*
 
 ---
 
-### BEAT 12 · What I told you, on the three graphs · 10:47–11:28
+### BEAT 12 · What I told you, on the three graphs · 10:52–11:34
 **Narration:**
 > So here is the lesson, on the graphs you built. More enzyme: more active sites, more complexes per unit time, and one over the mean endpoint time rises roughly in proportion. More substrate: the initial rate rises while active sites are free, then levels off once they are saturated, with complexes still forming and breaking at the maximum rate. More inhibitor: fewer active sites available or working, and a lower initial rate of change of absorbance. Under all three sits the sentence you started with.
 
@@ -293,7 +293,7 @@ Small type: *syllabus 3.2.1, p.20: "investigate and explain".*
 
 ---
 
-### BEAT 13 · How it is asked, with our version of the June 2021 question · 11:28–12:28
+### BEAT 13 · How it is asked, with our version of the June 2021 question · 11:34–12:18
 **Narration:**
 > How does this reach you? One form is a graph of rate against substrate concentration with describe and explain, as in June 2021, Paper 22: three marks, one for the description and two for the cause. Others ask what more enzyme does, or which control to use. Read our version of that June 2021 question, then watch the credited ideas land on our graph. And the hook? More substrate speeds the reaction up until the active sites are saturated; then the number of active sites sets the limit.
 
@@ -457,7 +457,7 @@ Not used: the ER's "60–100" interval wording (the ER passage quoted above name
 2. `UNVERIFIED — the S21/22 Q5(c) MS p.17 marking points other than the ignore line` (Beat 13 shows the weights' summary as paraphrase, not in quotation marks).
 3. `UNVERIFIED — verbatim QP instruction for S23/31 Q1(b)(i)` (Beat 10 header is our framing; the intervals come from the MS).
 4. `UNVERIFIED — Learner Guide p.28 wording on rate proportional to enzyme concentration / straight line through the origin` (the plan cites it; Beat 5 teaches the idea in our words and quotes nothing).
-5. `UNVERIFIED — S21/22 Q5(d)(i) question context beyond "higher Vmax"` (Beat 6 says only "explaining a higher maximum rate", from the weights' ledger row).
+5. `UNVERIFIED — S21/22 Q5(d)(i) question context beyond "higher Vmax"` (Beat 6 says only *explaining a higher maximum rate*, from the weights' ledger row).
 6. `UNVERIFIED — S21/51 QP wording for the inhibitor X method` (Beat 11 describes the paper only as the weights and plan do; no wording quoted; its two-minute reading convention is not mentioned).
 
 ---
@@ -468,25 +468,28 @@ Counted by the validator over the blockquoted narration (silent-read lines exclu
 
 | Beat | Kind | Words | Seconds |
 |---|---|---:|---:|
-| 1 Hook and context | teaching | 79 | 39.5 |
-| 2 Recall: the sentence from 3.2.1 | teaching | 106 | 53.0 |
-| 3 Objectives | teaching | 49 | 24.5 |
-| 4 More enzyme: the amylase series | teaching | 112 | 56.0 |
-| 5 More enzyme: what the times show | teaching | 110 | 55.0 |
-| **6 E40** | **error** | **156** | **78.0** |
-| 7 More substrate: initial slopes | teaching | 114 | 57.0 |
-| **8 E38** | **error** | **152** | **76.0** |
-| 9 Why it levels off | teaching | 111 | 55.5 |
-| **10 E39** | **error** | **160** | **80.0** |
-| 11 More inhibitor | teaching | 146 | 73.0 |
-| 12 Recap | teaching | 81 | 40.5 |
-| 13 Exam close | teaching | 91 | 45.5 |
-| **Teaching (10 beats)** | | **999** | **8:19.5** |
-| **Error (3 beats)** | | **468** | **3:54** |
-| **Total (13 beats)** | | **1,467** | **12:13.5** |
+| 1 Hook and context | teaching | 72 | 36 |
+| 2 Recall: the sentence from 3.2.1 | teaching | 107 | 53.5 |
+| 3 Objectives | teaching | 50 | 25 |
+| 4 More enzyme: the amylase series | teaching | 112 | 56 |
+| 5 More enzyme: what the times show | teaching | 113 | 56.5 |
+| **6 E40** | **error** | **160** | **80** |
+| 7 More substrate: initial slopes | teaching | 113 | 56.5 |
+| **8 E38** | **error** | **154** | **77** |
+| 9 Why it levels off | teaching | 109 | 54.5 |
+| **10 E39** | **error** | **156** | **78** |
+| 11 More inhibitor | teaching | 157 | 78.5 |
+| 12 Recap | teaching | 85 | 42.5 |
+| 13 Exam close | teaching | 88 | 44 |
+| **Teaching (10 beats)** | | **1006** | **8:23** |
+| **Error (3 beats)** | | **470** | **3:55** |
+| **Total (13 beats)** | | **1,476** | **12:18** |
 | Budget | | 1,050 | 8:45 |
 
-@@LENGTH@@
+**Length, honestly:** **1,476 words, 12:18**, which is **3:33 over** the 8:45 budget. Where it sits:
+- **Error beats: 470 words, 3:55** (E40 160 words, 80 s; E38 154, 77 s; E39 156, 78 s, each including its announcement), against the plan's three protected 45-second allowances (2:15): **1:40 of the overrun**. Each is slightly above the ~130–150-word guide because E40 and E39 each correct two faults with the marker held, and E40 carries both its local ruling and the Learner Guide annotation. None is thinned.
+- **Teaching: 1,006 words, 8:23** against the **6:30** base (780 words): **1:53 of the overrun**. It sits in the three investigations (Beats 4, 7, 11: 382 words, 3:11), which carry every design point the plan's investigation map requires (worked dilutions, fixed volumes, separate equilibration, timed sampling and a common endpoint, repeats and means, controls, the t = 0 tangent and why not times to finish, own blanks, the labelled S21/51 adaptation, a single reading as an amount), and in the standalone recall (Beat 2, 53.5 s), which the plan's standalone-halves paragraph requires. Numbers are written out as spoken words (about 45 more words than digits), so the count reflects speaking time.
+- **Cut list, teaching only, in order, if the checker wants the envelope nearer 8:45:** (1) Beat 11, *The assay is the colorimeter one from earlier: colourless ONPG becomes a yellow product, read through a blue filter.* (19 words; the recall tag and part labels carry it); (2) Beat 13, *Others ask what more enzyme does, or which control to use.* (11 words; rows 2–3 stay on screen); (3) Beat 2, *Here is an enzyme, drawn as a model.* (8 words; its cue moves to *collides with the active site*). Together 38 words, 19 s. Beyond these, the remaining teaching overrun is the cost of three complete investigations plus a standalone recall inside a 6:30 base; I do not propose cutting a required design point, and no error beat is cut. Never speed the narration.
 
 ---
 
@@ -534,5 +537,21 @@ Counted by the validator over the blockquoted narration (silent-read lines exclu
 `python3 work/005/validate_storyboard.py storyboards/topic-03/3.2.1b/STORYBOARD.md`
 
 ```
-(pasted after the run)
+beat  words  cues maxgap  status
+   1     72     7     19  ok
+   2    107    14     16  ok
+   3     50     4     16  ok
+   4    112    13     15  ok
+   5    113    15     18  ok
+   6    160    19     18  ok
+   7    113    15     13  ok
+   8    154    17     21  ok
+   9    109    16     16  ok
+  10    156    17     14  ok
+  11    157    20     12  ok
+  12     85     9     17  ok
+  13     88    12     16  ok
+TOTAL words 1476  cues 178  runtime at 120 wpm 12:18.0  beats 13  failing beats 0
 ```
+
+Quote check (`python3 work/005/check_quotes.py`): `quotes checked 35  not found 0`.
