@@ -1,0 +1,173 @@
+{
+  "1_ffprobeDuration": 900.133333,
+  "2_videoCoversAudio": {
+    "video": 900.133333,
+    "encodedAudio": 899.133,
+    "marginSeconds": 1.0,
+    "videoFrames": 27004
+  },
+  "3_fullDecodeErrors": 0,
+  "4_cues": {
+    "matched": 224,
+    "total": 224
+  },
+  "5_audioPacketsUnchanged": {
+    "packets": 42148,
+    "identical": true
+  },
+  "6_finalWord": {
+    "word": "substrate.",
+    "endsAt": 895.947,
+    "audioEnds": 899.133,
+    "headroom": 3.186,
+    "afterWordMaxDb": -18.6
+  },
+  "7_silentReads": [
+    {
+      "beat": 5,
+      "before": "Look at the prefix.",
+      "start": 158.493,
+      "seconds": 3.0,
+      "pcmAllZero": true,
+      "encodedInteriorMaxDb": -91.0
+    },
+    {
+      "beat": 11,
+      "before": "Look at what this",
+      "start": 443.963,
+      "seconds": 4.0,
+      "pcmAllZero": true,
+      "encodedInteriorMaxDb": -91.0
+    },
+    {
+      "beat": 14,
+      "before": "Look at the words.",
+      "start": 637.68,
+      "seconds": 3.0,
+      "pcmAllZero": true,
+      "encodedInteriorMaxDb": -91.0
+    },
+    {
+      "beat": 16,
+      "before": "Start with the labels.",
+      "start": 727.237,
+      "seconds": 4.0,
+      "pcmAllZero": true,
+      "encodedInteriorMaxDb": -91.0
+    },
+    {
+      "beat": 18,
+      "before": "then watch the credited",
+      "start": 876.997,
+      "seconds": 5.0,
+      "pcmAllZero": true,
+      "encodedInteriorMaxDb": -91.0
+    },
+    {
+      "beat": 18,
+      "before": "END",
+      "start": 896.611,
+      "seconds": 2.0,
+      "pcmAllZero": true,
+      "encodedInteriorMaxDb": -91.0
+    }
+  ],
+  "7_speechPCMUnchanged": true,
+  "frozenNarration": "storyboard paragraphs present verbatim; requests differ only by the recorded request-only normalisations: B4: Catalase\u2192Catalaise; B5: catalyses\u2192catalyzes",
+  "8_boundaries": {
+    "master": "/home/user/content-engine/work/3.1.1-2/3.1.1-2-enzymes.mp4",
+    "timeline": "/home/user/content-engine/work/3.1.1-2/timeline.json",
+    "master_bytes": 40278317,
+    "fps": 30.0,
+    "frame_count": 27004,
+    "boundaries_tested": 17,
+    "candidate_count": 0,
+    "candidate_beats": [],
+    "method": "RGB 640x360 area downsample; last/first near-match, then material abrupt jump",
+    "thresholds": {
+      "near_mae_max": 0.8,
+      "near_changed_fraction_max": 0.005,
+      "changed_pixel_threshold": 12,
+      "jump_mae_min": 1,
+      "jump_changed_fraction_min": 0.005,
+      "jump_tile_mae_min": 8,
+      "jump_ratio_min": 5,
+      "noise_floor": 0.05,
+      "post_jump_stable_mae_max": "max(0.8, 0.45 * jump_mae)"
+    },
+    "limits": "Candidates, not proof. Deliberate one-frame holds can match; identical layouts can hide a lookup error. Subtle/animated holds can evade thresholds. Requires unshifted CFR master."
+  },
+  "markerAudit": {
+    "framesChecked": 27004,
+    "marked": 9344,
+    "unmarked": 17660,
+    "intervals": [
+      {
+        "beat": 5,
+        "label": "COMMON MISTAKE",
+        "startFrame": 4279,
+        "endFrame": 6447,
+        "announceFrame": 4279,
+        "beatEndFrame": 6477,
+        "clearKey": "exit",
+        "clearsOnFrame": 6447
+      },
+      {
+        "beat": 11,
+        "label": "COMMON MISTAKE",
+        "startFrame": 12856,
+        "endFrame": 15924,
+        "announceFrame": 12856,
+        "beatEndFrame": 15952,
+        "clearKey": "exit",
+        "clearsOnFrame": 15924
+      },
+      {
+        "beat": 14,
+        "label": "COMMON MISTAKE",
+        "startFrame": 18654,
+        "endFrame": 20369,
+        "announceFrame": 18654,
+        "beatEndFrame": 20401,
+        "clearKey": "exit",
+        "clearsOnFrame": 20369
+      },
+      {
+        "beat": 16,
+        "label": "COMMON MISTAKE",
+        "startFrame": 21194,
+        "endFrame": 23587,
+        "announceFrame": 21194,
+        "beatEndFrame": 23729,
+        "clearKey": "fix3",
+        "clearsOnFrame": 23587
+      }
+    ],
+    "badgeTextMae": {
+      "commonMaeMax": 3.9034361839294434,
+      "examMaeMin": 20.31788444519043
+    },
+    "mismatches": 0
+  },
+  "longestUnchangedVisual": {
+    "beat": 11,
+    "startFrame": 14487,
+    "seconds": 11.5
+  },
+  "unchangedOver15s": [],
+  "valenceAudit": {
+    "framesAudited": 1131,
+    "allOk": true,
+    "states": [
+      "pre",
+      "pre+water",
+      "post"
+    ],
+    "molecules": [
+      "C0H2O1 + C24H42O21 (pre+water)",
+      "C12H22O11 + C12H22O11 (post)",
+      "C24H42O21 (pre)"
+    ]
+  },
+  "sha256": "ea72f948bcf7597b71bd2d95c92846012d9cb3c3793b304ad4bbf58cf1d43d32"
+}

@@ -1,0 +1,55 @@
+{
+  "framesChecked": 27004,
+  "intervals": [
+    {
+      "beat": 5,
+      "label": "COMMON MISTAKE",
+      "startFrame": 4279,
+      "endFrame": 6447,
+      "announceFrame": 4279,
+      "beatEndFrame": 6477,
+      "clearKey": "exit",
+      "clearsOnFrame": 6447
+    },
+    {
+      "beat": 11,
+      "label": "COMMON MISTAKE",
+      "startFrame": 12856,
+      "endFrame": 15924,
+      "announceFrame": 12856,
+      "beatEndFrame": 15952,
+      "clearKey": "exit",
+      "clearsOnFrame": 15924
+    },
+    {
+      "beat": 14,
+      "label": "COMMON MISTAKE",
+      "startFrame": 18654,
+      "endFrame": 20369,
+      "announceFrame": 18654,
+      "beatEndFrame": 20401,
+      "clearKey": "exit",
+      "clearsOnFrame": 20369
+    },
+    {
+      "beat": 16,
+      "label": "COMMON MISTAKE",
+      "startFrame": 21194,
+      "endFrame": 23587,
+      "announceFrame": 21194,
+      "beatEndFrame": 23729,
+      "clearKey": "fix3",
+      "clearsOnFrame": 23587
+    }
+  ],
+  "stats": {
+    "marked": 9344,
+    "unmarked": 17660
+  },
+  "badgeText": {
+    "commonMaeMax": 3.9034361839294434,
+    "examMaeMin": 20.31788444519043
+  },
+  "mismatches": [],
+  "mismatchCount": 0
+}

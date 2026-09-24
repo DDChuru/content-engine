@@ -24,7 +24,7 @@ export default function Beat15(s: any) {
   return (
     <g>
       <g opacity={1 - shrink * 0.2} transform={`translate(${1540 * shrink} ${200 * shrink}) scale(${1 - 0.67 * shrink})`}>
-        <g transform={`translate(0 ${-PANEL.y * (1 - shrink)})`}><g transform={`translate(${-PANEL.lk.x * shrink} ${-PANEL.y * shrink})`}><Frame which="lk" tick={1} /><LKRun seat={-1} complex={-1} leave={1e9} same={1e9} /><g transform={`translate(${(PANEL.lk.x - PANEL.if.x) * shrink} ${(PANEL.h + 30) * shrink})`}><Frame which="if" /><IFRun cl={-1} match={-1} complex={-1} leave={1e9} reopen={-1} /></g></g></g>
+        <g><g transform={`translate(${-PANEL.lk.x * shrink} ${-PANEL.y * shrink})`}><Frame which="lk" tick={1} /><LKRun seat={-1} complex={-1} leave={1e9} same={1e9} /><g transform={`translate(${(PANEL.lk.x - PANEL.if.x) * shrink} ${(PANEL.h + 30) * shrink})`}><Frame which="if" /><IFRun cl={-1} match={-1} complex={-1} leave={1e9} reopen={-1} /></g></g></g>
       </g>
       <g opacity={fi(a('layout'))}>
         <Enzyme x={X} y={Y} s={S} trace={between(a('c1'), a('c2')) > 0 ? fe(a('c1'), 0.8) : 0}>

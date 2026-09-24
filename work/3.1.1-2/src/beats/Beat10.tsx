@@ -35,7 +35,7 @@ export default function Beat10(s: any) {
     <g>
       <EnergyGraph {...G10} v={v} hi={hi} />
       {tok && <circle cx={tok[0]} cy={tok[1] - 11} r={11} fill={C.sub} stroke={C.subEdge} strokeWidth={2} />}
-      <Txt x={g.x0} y={g.yr - 60} size={18} weight={700} fill={C.muted} opacity={between(a('climb'), a('cat'))}>a substrate particle: not enough energy to get over</Txt>
+      <Txt x={g.x0} y={g.yr + 72} size={18} weight={700} fill={C.muted} opacity={between(a('climb'), a('cat'))}>a substrate particle: not enough energy to get over</Txt>
       {tk >= 0 && <g>
         {stream(g.yu, 6, 1, '#D5DBE2', 0)}
         {stream(g.yc, 6, 4, C.sub, 0.15)}
