@@ -1,0 +1,21 @@
+Verification of the ~21s test MP4 (intro + 10s hold of outro frame 0 carrying the narration + outro)
+
+ffprobe:  h264 High / yuv420p / bt709, 1920x1080, 30/1 fps, 632 decoded frames, 21.067s
+          aac LC / 48000 Hz / stereo, 983 frames, 20.950s
+          container 21.114s, 520318 bytes
+
+video >= audio:  21.067s >= 20.950s  -> TRUE
+  (First assembly failed this by 47ms: AAC rounds the tail up to a whole 1024-sample
+   frame, so audio ran to 21.114s past a 21.067s video. Fixed by trimming trailing
+   silence to 20.95s; no narration was lost — speech ends at ~13.5s.)
+
+full decode:  ffmpeg -v error -xerror -i test-002.mp4 -f null -   ->  no output, exit 0
+
+audio placement (RMS per 2s window of the final MP4):
+  0-2 silent | 2-4 silent | 4-6 AUDIO | 6-8 AUDIO | 8-10 AUDIO | 10-12 AUDIO
+  12-14 AUDIO | 14-16 silent | 16-18 silent | 18-20 silent | 20-22 silent
+  -> narration sits inside the 5-15s hold exactly as intended.
+
+frame count note: 632 frames rather than 630 (ffmpeg reported dup=2 from the
+looped-still input). 21.07s vs a nominal 21.00s. Harmless here; a real lesson
+build should cut the hold from a frame-exact source rather than -loop 1.

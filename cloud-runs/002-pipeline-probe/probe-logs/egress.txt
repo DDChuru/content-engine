@@ -1,0 +1,10 @@
+Egress re-probe — curl HEAD/GET root, max-time 25s, via agent proxy (2026-09-24)
+host                                       http   time
+https://api.elevenlabs.io                  404    0.32s   reachable (404 = no route at /)
+https://huggingface.co                     200    0.16s
+https://cdn-lfs.huggingface.co             ---    0.29s   BLOCKED: curl (56) CONNECT tunnel failed, response 502
+https://cas-bridge.xethub.hf.co            403    0.44s   reachable (403 at bare root; real object paths worked — faster-whisper "small" downloaded)
+https://remotion.media                     200    0.62s   NOW REACHABLE (was not in run 001)
+https://video.bunnycdn.com                 404    0.29s   reachable (404 = no route at /)
+https://storage.bunnycdn.com               200    0.46s
+https://vz-e2af76b2-543.b-cdn.net          403    0.16s   reachable (403 at bare root, expected for a Stream CDN zone)

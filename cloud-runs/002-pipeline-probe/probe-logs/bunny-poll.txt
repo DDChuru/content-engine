@@ -1,0 +1,8 @@
+Bunny Stream poll — GET /library/$BUNNY_BIO_LIBRARY_ID/videos/<guid>, every 30s, no AccessKey header
+t=0s    http=200  status=2 encodeProgress=0   length=0   availableResolutions=null
+t=31s   http=200  status=2 encodeProgress=0   length=0   availableResolutions=null
+t=61s   http=200  status=2 encodeProgress=0   length=0   availableResolutions=null
+t=92s   http=200  status=2 encodeProgress=0   length=0   availableResolutions=null
+t=123s  http=200  status=2 encodeProgress=0   length=0   availableResolutions=null
+t=153s  http=200  status=2 encodeProgress=5   length=21  availableResolutions=null
+t=184s  http=200  status=4 encodeProgress=100 length=21  availableResolutions=360p,480p,720p,240p,1080p
