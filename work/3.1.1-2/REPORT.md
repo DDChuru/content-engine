@@ -13,7 +13,7 @@
 | Sheet review → 2 fixes → pass 2 (3 beats re-rendered) | 12:03 → 12:07:41 (4 min) |
 | Bookends (Remotion 4.0.365, own Chrome headless shell) | 52 s |
 | Branding (`apply-branding-cloud.sh`) | 12:08:02 → 12:16:05 (8 min) |
-| Bunny create + `curl -T` upload + encode to status 4 | 12:16:47 → BUNNY_DONE |
+| Bunny create + `curl -T` upload + encode to status 4 | 12:16:47 → 12:38:29 (upload 18 s; status 4 21 min 24 s after upload) |
 
 Pinned Node deps (no lockfile in repo, `work/3.1.1-2/package.json`): react/react-dom 19.2.0, sharp 0.33.5 (librsvg 2.58.93), esbuild 0.25.10, remotion + @remotion/bundler + @remotion/renderer 4.0.365, zod 3.22.4. Node 22.22.2.
 
@@ -36,7 +36,7 @@ Thandi `BcpjRWrYhDBHmOnetmBl`, `eleven_multilingual_v2`, speed 1.0, one file per
 Per-beat stills were checked before each approval. That caught the Haworth inset being too cramped (widened: ring pitch 245→290), label collisions in B4/B7/B9/B11/B12/B13/B15/B18, text-width drift (switched to real font metrics), B16 struck labels left faded beside their replacements (now replaced in place), and B18's NAM/NAG labels sitting off their pieces. The **encoded** master was then reviewed on 16 sheets (139 samples). It had **B15's opening panels drawn 200 px high and covering the title** (a transform error at the first frames), and **B10's "substrate particle" note crossing the Ea bracket**. Both were fixed and re-finished; B11 was re-approved because it imports B10's graph geometry. Sheets before and after: `qa/encoded-sheets-prereview/`, `qa/encoded-sheets/`.
 
 ## Bunny
-guid **`08c56c4e-3505-412c-af04-4175524e4a1b`**, title "REVIEW 3.1.1-2 Enzymes: where and how they act", **no collection**. Create 200, PUT `curl -T` 200 (39,691,168 B). Status 4 after BUNNY_TIME (`logs/bunny-poll.txt`). Nothing deleted or moved.
+guid **`08c56c4e-3505-412c-af04-4175524e4a1b`**, title "REVIEW 3.1.1-2 Enzymes: where and how they act", **no collection**. Create 200, PUT `curl -T` 200 (39,691,168 B). Polled every 60 s: status 2 with `availableResolutions` null until **status 4 at 12:38:29Z, 21 min 24 s after the upload**; resolutions 240p/360p/480p/720p/1080p, length 911 s (`logs/bunny-poll.txt`). Nothing deleted or moved.
 
 ## Design choices
 - House style rebuilt from the Stem 4 Life brand tokens (`palette.ts`: ink #253247, terracotta #B64A30, peach #FFAC8F, warm #F6F3EB) plus the reference chrome geometry, because the reference's `topic-02/shared/src` was not in the inputs. The chrome is the header strip, title, MODEL line, caption bar and top-right badge. Fonts are the brand Source Sans 3 / Manrope, instanced to TTF for librsvg.

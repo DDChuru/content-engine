@@ -1,4 +1,4 @@
-PHASE: DELIVERED FOR REVIEW — master verified, branded, uploaded to Bunny (guid 08c56c4e-3505-412c-af04-4175524e4a1b, no collection). Only remaining step if this session died: re-poll Bunny to status 4 (`./bunny-poll.sh 08c56c4e-3505-412c-af04-4175524e4a1b`) and fill BUNNY_* in REPORT.md.
+PHASE: BUILD COMPLETE — delivered for REVIEW on Bunny (guid 08c56c4e-3505-412c-af04-4175524e4a1b, status 4 at 12:38:29Z, no collection). See REPORT.md.
 
 ## Resume procedure (fresh container)
 1. `apt-get update && apt-get install -y ffmpeg`; `pip install faster-whisper pillow numpy fonttools brotli`.

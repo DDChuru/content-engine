@@ -1,7 +1,7 @@
 # 3.1.1-2 Enzymes: where and how they act · BUILD PROGRESS (handover)
 
-Updated 2026-09-24 12:18Z. Builder: claude-opus-5-5 (cloud run 003). Branch `cloud/003-3.1.1-2` ONLY.
-**Phase: DELIVERED FOR REVIEW — master verified, branded, uploaded to Bunny (guid 08c56c4e-3505-412c-af04-4175524e4a1b, no collection). Only remaining step if this session died: re-poll Bunny to status 4 (`./bunny-poll.sh 08c56c4e-3505-412c-af04-4175524e4a1b`) and fill BUNNY_* in REPORT.md.** · **Beats complete: 18 / 18** · master: present
+Updated 2026-09-24 12:38Z. Builder: claude-opus-5-5 (cloud run 003). Branch `cloud/003-3.1.1-2` ONLY.
+**Phase: BUILD COMPLETE — delivered for REVIEW on Bunny (guid 08c56c4e-3505-412c-af04-4175524e4a1b, status 4 at 12:38:29Z, no collection). See REPORT.md.** · **Beats complete: 18 / 18** · master: present
 Live render processes: none
 NOTE: render-cache/ (chunks) and all MP4/WAV are NOT in git — a fresh container must re-render approved beats
 (`./launch-render.sh N`, 4 at a time); approvals (qa/beat-NN/approved.json) ARE in git and stay valid while the
