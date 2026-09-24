@@ -46,5 +46,5 @@ v1 files kept locally as `…-SUPERSEDED-v1.mp4` (not in git).
 
 ## Bunny
 New video **`a8f7f4ac-caac-4382-8730-d9e0100e6767`**, "REVIEW 3.1.1-2 Enzymes: where and how they act (v2)", **no collection**.
-Create 200; PUT `curl -T` 200 (39,836,781 B) at 13:48:35Z; BUNNY_V2. The first REVIEW video
+Create 200; PUT `curl -T` 200 (39,836,781 B) at 13:48:35Z; polled every 60 s → **status 4 at 14:18:04Z (29 min 29 s after upload)**, resolutions 240p–1080p, length 911 s (`logs/bunny-poll-v2.txt`). The first REVIEW video
 (`08c56c4e-3505-412c-af04-4175524e4a1b`) was not touched (still status 4). Nothing deleted or moved.

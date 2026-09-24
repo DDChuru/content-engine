@@ -1,4 +1,4 @@
-PHASE: v2 FIX — Beat 18 redesigned (visual on every frame), re-rendered, verified, re-branded; uploaded to Bunny as NEW video a8f7f4ac-caac-4382-8730-d9e0100e6767 (v2). See REPORT-v2.md. If this session died before status 4: `./bunny-poll.sh a8f7f4ac-caac-4382-8730-d9e0100e6767 logs/bunny-poll-v2.txt` and fill BUNNY_V2 in REPORT-v2.md.
+PHASE: v2 COMPLETE — Beat 18 fixed; v2 on Bunny (a8f7f4ac-caac-4382-8730-d9e0100e6767, status 4 at 14:18:04Z, no collection). v1 review video untouched. See REPORT-v2.md.
 
 ## Resume procedure (fresh container)
 1. `apt-get update && apt-get install -y ffmpeg`; `pip install faster-whisper pillow numpy fonttools brotli`.
