@@ -1,5 +1,7 @@
 # Cloud run 005 — summary: the five remaining Topic 3 (Enzymes) storyboards
 
+> **Final status (round two, 25 Sep 2026): all five storyboards CLEARED** after the round-two minor edits — see `work/005/FIXES-round-2.md`. 3.2.1b remains one lesson; the split is Durai's decision.
+
 > **Status after round-one checks (24 Sep 2026).** This summary describes the first drafts. Round-one checks (3.1.4 CLEARED WITH MINOR EDITS; the other four NOT CLEARED) have been applied — see `work/005/FIXES-round-1.md`. Current lengths: 3.1.3 1,418 words 11:49; 3.1.4 425 words 3:32.5; 3.2.1 966 words 8:03; 3.2.1b 1,466 words 12:13 (kept as one lesson; split deferred to Durai); 3.2.4 825 words 6:52.5; all validators 0 failing beats. Where this file says handling was "checked on still frames", read "handling specified; rendered still-frame verification pending" (no render exists). The quote checker still lists each storyboard's self-quotations; every external quotation is found.
 
 
