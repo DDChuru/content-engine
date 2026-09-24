@@ -1,7 +1,7 @@
 {
   "master": "/home/user/content-engine/work/3.1.1-2/3.1.1-2-enzymes.mp4",
   "timeline": "/home/user/content-engine/work/3.1.1-2/timeline.json",
-  "master_bytes": 40278317,
+  "master_bytes": 40547558,
   "fps": 30.0,
   "frame_count": 27004,
   "boundaries_tested": 17,
@@ -515,17 +515,17 @@
           "max_tile_mae": 0.0
         },
         "last_to_first": {
-          "mae": 7.653708457946777,
-          "changed_fraction": 0.15156684027777778,
+          "mae": 8.634197235107422,
+          "changed_fraction": 0.17705729166666667,
           "max_tile_mae": 45.710792541503906
         },
         "first_to_second": {
-          "mae": 0.0014901619870215654,
+          "mae": 0.0017809605924412608,
           "changed_fraction": 0.0,
           "max_tile_mae": 0.04398148134350777
         },
         "second_to_third": {
-          "mae": 0.00026765046641230583,
+          "mae": 0.00025462961639277637,
           "changed_fraction": 0.0,
           "max_tile_mae": 0.01128472201526165
         }
