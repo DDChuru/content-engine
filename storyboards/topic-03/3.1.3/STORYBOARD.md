@@ -122,7 +122,7 @@ Beat windows in the headings are provisional and follow the per-beat ledger (wor
 
 ### BEAT 1 · Hook and context · 0:00–0:42
 **Narration:**
-> Ever wondered how you would put a number on how fast an enzyme works, when you cannot see a single molecule of it? Drop hydrogen peroxide onto raw potato and it fizzes: the enzyme catalase in the potato is breaking the peroxide down, and one product is a gas. The fizz shows it is happening, not how fast. Yet how fast is what this topic keeps asking: faster when warmer, with more enzyme? For that you need a number, measured against a clock.
+> Ever wondered how you would put a number on how fast an enzyme works, when you cannot see a single molecule of it? Drop hydrogen peroxide onto raw potato and it fizzes: the enzyme catalase in the potato is breaking the peroxide down, and one product is a gas. The fizz shows it is happening, not how fast. Yet how fast is what this topic keeps asking: does warming it, or adding more enzyme, change the speed? For that you need a number, measured against a clock.
 
 **Visual action:**
 1. At *put a number on*, the hook question typesets on a dark opening frame.
@@ -130,7 +130,7 @@ Beat windows in the headings are provisional and follow the per-beat ledger (wor
 3. At *the enzyme catalase in the potato*, a magnifier circle opens on the cut face showing `EnzymeActiveSiteModel` in `rest-lk`, labelled **catalase**, caption *schematic; not a real protein shape*; a substrate outline labelled **hydrogen peroxide** travels in and seats (`bound`), then two smaller outlines drift out (`products`).
 4. At *one product is a gas*, the rising bubbles are tagged **gas**.
 5. At *The fizz shows*, a question tag **how fast?** hovers over the bubbles.
-6. At *faster when warmer*, a thermometer icon appears beside the slice; at *with more enzyme*, a second enzyme silhouette joins it; both tagged *later: 3.2.1, 3.2.1b*.
+6. At *does warming it*, a thermometer icon appears beside the slice; at *adding more enzyme*, a second enzyme silhouette joins it; both tagged *later: 3.2.1, 3.2.1b*.
 7. At *measured against a clock*, a stopwatch icon starts and a blank pair of axes draws beneath it (no labels yet); dissolve to the objectives surface.
 
 **On-screen text:** the hook question; *catalase*; *gas*; *how fast?*. Small type: *potatoes are among the plant sources of catalase listed on syllabus p.58*.
@@ -167,15 +167,15 @@ Small type: *syllabus 3.1.3, "investigate", p.20.*
 
 ### BEAT 4 · The catalase reaction, atom by atom · 1:40–2:18
 **Narration:**
-> Here is the first reaction. Catalase breaks hydrogen peroxide into water and oxygen: two H two O two gives two H two O plus O two. The inset shows the net change. In each peroxide molecule, the oxygen–oxygen bond breaks; one oxygen from each ends up with both hydrogens, as water. The other two oxygens end up joined by a double bond: an oxygen molecule. Four hydrogens, four oxygens, before and after, and the enzyme unchanged.
+> Here is the first reaction. Catalase breaks hydrogen peroxide into water and oxygen: two H two O two gives two H two O plus O two. The inset shows the net change, as bookkeeping, not as the way the enzyme does it. Two peroxide molecules go in; in one step on screen their atoms are regrouped as two molecules of water and one molecule of oxygen, its two atoms held by a double bond. Four hydrogens, four oxygens, before and after, and the enzyme unchanged.
 
 **Visual action:**
 1. At *Here is the first reaction*, `EnzymeActiveSiteModel` in `rest-lk` at left, labelled **catalase**, caption *schematic; not a real protein shape*, small type *the model does not show how many peroxide molecules bind at a time*; at *into water and oxygen*, the substrate outline labelled **hydrogen peroxide** travels in and seats (`bound`).
 2. At *two H two O two gives*, the equation **2H₂O₂ → 2H₂O + O₂** typesets above the model.
 3. At *The inset shows the net change*, the `CatalaseNet` inset opens at right showing the two complete peroxide molecules, atoms labelled **O1–O4, H1–H4**; the caption **net reaction; not a stepwise mechanism** appears and stays to the end of the beat.
-4. At *the oxygen–oxygen bond breaks*, the O1–O2 and O3–O4 single bonds are ringed in the accent **while still drawn** (reactants fully bonded on screen).
-5. At *ends up with both hydrogens*, **the complete bond graph switches in one rendered frame** to the product keyframe (delete O1–O2, O3–O4, O2–H2, O3–H3; create O1–H2, O4–H3, O2=O3; retain O1–H1, O4–H4); in the same frame the main model switches to `products`; the two water molecules (O1 with H1, H2; O4 with H3, H4) are ringed and labelled **water**.
-6. At *joined by a double bond*, O2=O3 is ringed and labelled **oxygen**.
+4. At *as bookkeeping, not as the way the enzyme does it*, small type under the caption: *atom labels are bookkeeping for the net change; no pathway is shown or implied*; both peroxide molecules stay complete and fully bonded.
+5. At *their atoms are regrouped*, **the complete bond graph switches in one rendered frame** to the product keyframe (delete O1–O2, O3–O4, O2–H2, O3–H3; create O1–H2, O4–H3, O2=O3; retain O1–H1, O4–H4); in the same frame the main model switches to `products`; at *two molecules of water*, the two water molecules (O1 with H1, H2; O4 with H3, H4) are ringed and labelled **water**.
+6. At *held by a double bond*, O2=O3 is ringed and labelled **oxygen**.
 7. At *Four hydrogens, four oxygens*, an atom tally slides in beside the inset: **before H 4, O 4 · after H 4, O 4**.
 8. At *the enzyme unchanged*, the product outlines drift out of the model's cleft (motion), the silhouette is traced once and a tick lands, tag *unchanged*; recall tag *recall: 3.1.1-2*.
 
@@ -241,12 +241,12 @@ Small type: *syllabus 3.1.3, "investigate", p.20.*
 
 ### BEAT 8 · An amount, an average rate, and a rate that falls · 5:02–5:50
 **Narration:**
-> Three things are easy to blur here. The reading at sixty seconds, nineteen cubic centimetres, is an amount: the volume of gas collected after one minute, the reading a June 2023 planning question used. Divided by sixty seconds, it gives an average rate over that minute, about 0.32 cubic centimetres per second, lower than the initial rate because the curve was already bending. A June 2023 practical question did the same with a mass: fifty-four grams in ten minutes, 5.4 grams per minute. And the rate itself, plotted against time, is highest at the start, then falls.
+> Three things are easy to blur here. The reading at sixty seconds, nineteen cubic centimetres, is an amount: the volume of gas collected after one minute. Divided by sixty seconds, it gives an average rate over that minute, about 0.32 cubic centimetres per second, lower than the initial rate because the curve was already bending. A June 2023 practical question did the same with a mass: fifty-four grams in ten minutes, 5.4 grams per minute. And the rate itself, plotted against time, is highest at the start, then falls.
 
 **Visual action:**
 1. At *Three things are easy to blur*, three labelled slots appear above the graph: **amount** · **average rate** · **initial rate** (the last already filled: *0.40 cm³ s⁻¹*).
 2. At *The reading at sixty seconds*, overlay `reading` draws at t = 60 s; at *is an amount*, its label **amount: 19.0 cm³ at 60 s** lands and the **amount** slot fills.
-3. At *a June 2023 planning question*, small type: *S23/51 Q1(d): volume of gas collected after one minute (Paper 5)*.
+3. At *the volume of gas collected after one minute*, small type: *the reading used in S23/51 Q1(d) (June 2023, Paper 5)*.
 4. At *Divided by sixty seconds*, overlay `chord` draws dashed from (0, 0) to (60 s, 19.0 cm³); at *an average rate over that minute*, its label **average rate over 0–60 s = 19.0 cm³ ÷ 60 s = 0.32 cm³ s⁻¹** lands and the **average rate** slot fills.
 5. At *lower than the initial rate*, the tangent and the chord are ringed together; the chord visibly lies below the tangent.
 6. At *did the same with a mass*, a small separate card slides in at right, headed *s23_34 Q1(c)(i–ii)*; at *fifty-four grams in ten minutes*, the card shows **54 g in 10 min** with small type *read from the QP p.8 graph; ER p.33*; at *5.4 grams per minute*, **average rate = 54 g ÷ 10 min = 5.4 g min⁻¹** lands on the card. The card never shows the printed MS values.
@@ -296,10 +296,10 @@ Small type: *syllabus 3.1.3, "investigate", p.20.*
 
 ### BEAT 11 · Sampling by eye: an endpoint and 1/t · 7:24–8:21
 **Narration:**
-> At once, then every thirty seconds, let one drop of the mixture fall into the next well from just above, without touching the iodine, rinsing the dropper between samples. Blue-black up to a hundred and twenty seconds; at a hundred and fifty, yellow-brown. That first sample without blue-black is the endpoint, a hundred and fifty seconds, good to one sampling interval. One over a hundred and fifty is 0.0067 per second, a relative rate like the disc's. Colours judged by eye give no concentration values, so no starch curve here and no initial gradient. A falling starch curve is only a schematic: its gradient is negative, and the rate of disappearance is its size.
+> At once, then every thirty seconds, let one drop of the mixture fall into the next well from just above, without touching the iodine. Blue-black up to a hundred and twenty seconds; at a hundred and fifty, yellow-brown. That first sample without blue-black is the endpoint, a hundred and fifty seconds, good to one sampling interval. One over a hundred and fifty is 0.0067 per second, a relative rate like the disc's. Colours judged by eye give no concentration values, so no starch curve here and no initial gradient. A falling starch curve is only a schematic: its gradient is negative, and the rate of disappearance is its size.
 
 **Visual action:**
-1. At *every thirty seconds*, the dropper draws from the reaction tube, moves above well A-0 and releases one drop (the well switches in one frame to blue-black); the stopwatch reads 0 s; at *from just above*, the gap between dropper tip and iodine is ringed, tag *above, not touching*; at *rinsing the dropper*, the dropper dips and squeezes in the rinse beaker.
+1. At *every thirty seconds*, the dropper draws from the reaction tube, moves above well A-0 and releases one drop (the well switches in one frame to blue-black); the stopwatch reads 0 s; at *from just above*, the gap between dropper tip and iodine is ringed, tag *above, not touching*; between samples the dropper dips and squeezes in the rinse beaker (shown, not narrated).
 2. At *up to a hundred and twenty seconds*, wells A-30, A-60, A-90 and A-120 are sampled in time-lapse, each switching in one frame to **blue-black** as its drop lands; row B is sampled alongside and every control well switches to **blue-black**.
 3. At *at a hundred and fifty, yellow-brown*, the drop lands in A-150 and the well **stays yellow-brown**; A-180 is sampled and stays yellow-brown; B-150 and B-180 switch to blue-black.
 4. At *is the endpoint*, A-150 is ringed, tag **endpoint: first sample without blue-black**; at *good to one sampling interval*, a bracket spans A-120 to A-150, tag *the change happened after the 120 s sample, by 150 s*.
@@ -353,7 +353,7 @@ Small type: *syllabus 3.1.3, "investigate", p.20.*
 
 ### BEAT 14 · What I told you, on the rig and the graph · 10:16–11:02
 **Narration:**
-> So here it is, on the rig and graph you have been watching. Catalase, a product forming: gas collected in a closed system from mixing. The tangent at time zero gives the initial rate, 0.40 cubic centimetres per second; a change over an interval, an average rate; a single reading, an amount. The disc gives one time to a fixed endpoint, and one over it is a relative rate. Amylase, a substrate disappearing: iodine samples by eye, an endpoint, and one over its time. Without active enzyme, the controls stay unchanged.
+> So here it is, on the rig and graph. Catalase, a product forming: gas collected in a closed system from mixing. The tangent at time zero gives the initial rate, 0.40 cubic centimetres per second; a change over an interval, an average rate; a single reading, an amount. The disc gives one time to a fixed endpoint; one over it, a relative rate. Amylase, a substrate disappearing: iodine samples by eye, an endpoint, and one over its time. Without active enzyme, the controls stay unchanged.
 
 **Visual action:** **No new slide.** The screen returns to the layout built through the lesson: `GasSyringeRig` (`collecting`, bath at 30 °C) at left, `RateGraph` `progress-product` at centre with its `tangent-t0` triangle, `chord` and `reading` overlays, the `CatalaseDiscRig` small at upper right with its results table, the `AmylaseIodineSampler` tile small at lower right. Static. Key points fade in in place:
 1. At *on the rig and graph*, the whole layout settles; nothing moves.

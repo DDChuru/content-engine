@@ -132,12 +132,12 @@ Small type: *syllabus 3.2.1, p.20: "investigate and explain"; temperature and pH
 
 ### BEAT 5 · One sentence, and the rising half · 2:45–3:26.5
 **Narration:**
-> To explain that graph, one sentence carries the whole lesson. The rate depends on how often substrate molecules meet a working active site and form enzyme–substrate complexes per unit time, and on whether the active sites stay functional. Below the optimum, warming gives the molecules more kinetic energy, so they collide more often: more effective collisions, more complexes per unit time, a higher rate. And the cold did no damage: at ten degrees the enzyme is not denatured; complexes simply form less often.
+> To explain that graph, one sentence carries the whole lesson. The rate depends on how often substrate molecules meet a working active site and form enzyme–substrate complexes per unit time, and on whether the active sites stay functional. Below the optimum, warming gives the molecules more kinetic energy, so they collide more often: more effective collisions, more complexes per unit time, a higher rate. And a slow rate in the cold is not denaturation: at ten degrees the enzyme is not denatured; complexes simply form less often.
 
 **Visual action:**
 1. At *one sentence carries the whole lesson*, the plot shrinks to the top right; `EnzymeActiveSiteModel` in `rest-lk` appears at centre with its backbone trace and bond legend, caption *schematic; not a real protein shape*; at *The rate depends on how often*, the sentence begins to write beneath the model; at *meet a working active site*, a substrate token travels into the cleft and seats (`bound`, motion); at *form enzyme–substrate complexes per unit time*, the bracket **enzyme–substrate complex** draws and a small tally beside it, labelled *complexes per unit time* (illustrative tally, no numbers), ticks; at *whether the active sites stay functional*, the cleft is ringed. The sentence completes and holds, boxed, labelled *the sentence for 3.2.1 and 3.2.1b*.
 2. At *Below the optimum*, the 10–40 °C section of the plot lights; at *more kinetic energy*, a field of several enzyme models and substrate tokens appears, the thermometer glyph rises and the tokens speed up; at *collide more often*, contact flashes between tokens and clefts become more frequent; at *more effective collisions*, the flashes that end in a seated substrate are ringed; at *more complexes per unit time, a higher rate*, the tally ticks faster and the 10–40 °C rise on the plot pulses. Tag on the field: *illustrative motion; no numerical claim*.
-3. At *the cold did no damage*, the thermometer glyph drops; the field slows; one model is enlarged, every dashed and dotted link still present; at *not denatured*, tag **not denatured** on that model and the cleft is traced intact; at *complexes simply form less often*, the tally ticks slowly.
+3. At *a slow rate in the cold*, the thermometer glyph drops; the field slows; one model is enlarged, every dashed and dotted link still present; at *not denatured*, tag **not denatured** on that model and the cleft is traced intact; at *complexes simply form less often*, the tally ticks slowly.
 
 **On-screen text:** the sentence, boxed; *more kinetic energy → more effective collisions → more enzyme–substrate complexes per unit time*; *not denatured*.
 
@@ -164,7 +164,7 @@ Small type: *syllabus 3.2.1, p.20: "investigate and explain"; temperature and pH
 
 ### BEAT 7 · pH: buffer solutions and rising discs · 4:25–5:18
 **Narration:**
-> Now pH, with that practical's disc method. Yeast suspension is mixed with a buffer solution, which holds the chosen pH: five buffers, pH five to nine, either side of the expected optimum. Identical paper discs soak in each mixture for the same time. With forceps, each disc goes to the bottom of a tube of hydrogen peroxide, same concentration and depth, and is released. Oxygen forms on the disc, it rises, and you time it to the surface. Fresh peroxide for every disc, because a used tube already contains enzyme. Three whole-second times per pH. A disc soaked in boiled enzyme, the control, does not rise.
+> Now pH, with that practical's disc method. Yeast suspension is mixed with a buffer solution, which holds the chosen pH: five buffers, pH five to nine, either side of the expected optimum. Identical paper discs soak in each mixture for the same time. With forceps, each disc goes to the bottom of a tube of hydrogen peroxide, same concentration and depth, and is released. Oxygen forms on the disc, it rises, and you time it to the surface. Fresh peroxide for every disc, because a used tube can already contain enzyme. Three whole-second times per pH. A disc soaked in boiled enzyme, the control, does not rise here.
 
 **Visual action:**
 1. At *Now pH*, `CatalaseDiscRig` builds: a glass-sided water bath held at 30 °C with a rack, thermometer in the bath, tag *recall: 3.1.3 (transfer example); S22/33 Q1(a) design*.
@@ -172,7 +172,7 @@ Small type: *syllabus 3.2.1, p.20: "investigate and explain"; temperature and pH
 3. At *Identical paper discs*, a hole punch produces a stack of identical discs; at *for the same time*, a disc goes into each mixture with a **60 s** timer each.
 4. At *With forceps*, a disc is lifted and drained for 5 s above its tube; at *to the bottom of a tube of hydrogen peroxide*, long forceps carry it down inside a boiling tube filled to the marked line; at *same concentration and depth*, the marked line on the next tube in the rack pulses; at *is released*, the forceps open and withdraw, and a stopwatch starts at **0 s**.
 5. At *Oxygen forms on the disc*, bubbles gather on the disc and it lifts; small type *2H₂O₂ → 2H₂O + O₂ (the atom-resolved reaction is 3.1.3's)*; at *time it to the surface*, the disc reaches the surface and the stopwatch stops at **13 s** (pH 7.0, rise time 2).
-6. At *Fresh peroxide for every disc*, the used tube moves to a rack labelled *used* and a fresh tube takes its place; at *a used tube already contains enzyme*, the used tube is tinted with the tag *contains enzyme*, small type *S22/33 Q1(a), MS p.6: "contaminated with enzyme" / "use fresh hydrogen peroxide for each test"*.
+6. At *Fresh peroxide for every disc*, the used tube moves to a rack labelled *used* and a fresh tube takes its place; at *a used tube can already contain enzyme*, the used tube is tinted with the tag *contains enzyme*, small type *S22/33 Q1(a), MS p.6: "contaminated with enzyme" / "use fresh hydrogen peroxide for each test"*.
 7. At *Three whole-second times per pH*, the pH table (see *Datasets*) slides in with its column heads *pH of buffer solution* · *rise time / s* (three columns) · *mean rise time / s* · *1/mean rise time / s⁻¹*, and the pH 7.0 row fills *12, 13, 14*; small type *S22/33 Q1(a), MS p.6: "records three times for each pH ;" "results recorded as whole seconds ;"*.
 8. At *soaked in boiled enzyme*, the control tube is taken from a boiling bath **in a test-tube holder**, cooled, mixed with pH 7.0 buffer, and a disc soaked in it; at *does not rise*, that disc stays on the bottom while a stopwatch passes 120 s; the control row fills *did not rise within 120 s*; small type *MS p.6: "use boiled enzyme ;"*.
 
@@ -313,12 +313,12 @@ Every sentence containing *all, every, always, never, only, no, nothing, cannot,
 - "one enzyme's optimum, not a rule" (Beat 4): the negated universal is the point.
 - "collects no measurable gas" (Beat 4): bounded by measurement; table 0.00.
 - "one sentence carries the whole lesson" (Beat 5): about this lesson's explanations.
-- "the cold did no damage … not denatured" (Beat 5): about this enzyme at 10 °C in these data; the plan's trap rule.
+- "a slow rate in the cold is not denaturation … not denatured" (Beat 5): about this enzyme at 10 °C in these data; the plan's trap rule.
 - "held partly by hydrogen bonds and ionic bonds" (Beat 6): "partly"; other interactions not denied.
 - "the substrate is no longer complementary: it arrives, rocks, and cannot seat" (Beat 6): about the drawn denatured molecule.
 - "peptide bonds do not" (Beat 6): the plan's rule for the standard model (backbone never cut).
 - "The particles have not lost kinetic energy" (Beat 6): the plan's trap rule; true of the heated mixture.
-- "because a used tube already contains enzyme" (Beat 7): the S22/33 MS reason ("contaminated with enzyme"); a factual cause for this design.
+- "because a used tube can already contain enzyme" (Beat 7): the S22/33 MS reason ("contaminated with enzyme"), with "can".
 - "The control disc … does not rise" (Beat 7): bounded on screen, "within 120 s".
 - "not an initial rate" (Beat 8): definitional (SHARED-SPECS §4).
 - "Some carry charges" (Beat 9); "need not unfold"; "activity can return"; "enough bonds can break" (Beat 9): hedged to typical behaviour, as the plan words it.

@@ -114,7 +114,7 @@ Beat windows in the headings follow the word ledger below (words ÷ 120); final 
 
 **Visual action:**
 1. At *Add the enzyme last*, the blank is lifted out by its ridged faces and set aside; a new cuvette holding buffer, ONPG and water (colourless) receives **0.5 cm³ enzyme solution** from a pipette whose tip is inside the cuvette mouth above the liquid, then a lid is fitted and the cuvette is inverted twice, held by the ridged faces, and set upright with a level surface; at *start the timer at mixing*, a stopwatch starts at **0 s**; at *put the cuvette in*, it is lowered into the holder, clear faces to the light path, lid closed.
-2. At *Read the absorbance every thirty seconds*, the stopwatch runs and the display steps through **0.00, 0.12, 0.24, 0.35, 0.45, 0.53, 0.60** at 0, 30 … 180 s while a cutaway view of the cuvette deepens in yellow opacity only; at *plot it against time*, `RateGraph` `absorbance-time` slides in at right and each reading lands as a point as it appears, points labelled *our illustrative data*.
+2. At *Read the absorbance every thirty seconds*, the stopwatch runs and the display steps through **0.00, 0.12, 0.24, 0.35, 0.45, 0.53, 0.60** at 0, 30 … 180 s while a cutaway view of the cuvette deepens in yellow opacity only; small type under the display: *0 s: the mixture at mixing, before product forms, taken as the blank's 0.00; readings from 30 s*; at *plot it against time*, `RateGraph` `absorbance-time` slides in at right and each reading lands as a point as it appears, points labelled *our illustrative data*.
 3. At *For the first sixty seconds the line is straight*, the first three points are joined by a ruled line (`straight-initial`), and the later points are joined by a curve that bends away below the extended ruled line; at *rising by zero point two four*, the rise/run triangle draws: **rise 0.24**, **run 60 s**.
 4. At *the initial rate of change of absorbance*, the result label lands: **initial rate of change of absorbance = 0.24 ÷ 60 s = 0.0040 s⁻¹**, small type *absorbance has no unit, so the rate is per second*; at *zero point zero zero four per second*, **0.0040 s⁻¹** is ringed.
 5. At *That is why a number beats your eye*, the Beat 1 eyes-and-tags inset returns small beside the graph and dims; at *compare one run with another*, a faint second ruled line of a different slope flashes on the graph beside the first with tag *another run, compared by gradient* (no values; illustrative), then fades.
@@ -163,7 +163,7 @@ Conditions: reaction cuvette as in the model spec (buffer pH 7.0 1.0 cm³ + ONPG
 
 | t / s | Absorbance | Change over previous 30 s | Concentration of yellow product from Dataset B, A ÷ 0.0080 / µmol dm⁻³ |
 |---:|---:|---:|---:|
-| 0 | 0.00 | — | 0.00 ÷ 0.0080 = 0.0 |
+| 0 (start) | 0.00 | — | 0.00 ÷ 0.0080 = 0.0 |
 | 30 | 0.12 | 0.12 − 0.00 = 0.12 | 0.12 ÷ 0.0080 = 15.0 |
 | 60 | 0.24 | 0.24 − 0.12 = 0.12 | 0.24 ÷ 0.0080 = 30.0 |
 | 90 | 0.35 | 0.35 − 0.24 = 0.11 | 0.35 ÷ 0.0080 = 43.75 ≈ 43.8 |
@@ -172,6 +172,7 @@ Conditions: reaction cuvette as in the model spec (buffer pH 7.0 1.0 cm³ + ONPG
 | 180 | 0.60 | 0.60 − 0.53 = 0.07 | 0.60 ÷ 0.0080 = 75.0 |
 
 Derived numbers:
+- **The 0 s value is not a reading.** The cuvette goes into the colorimeter just after mixing, so no reading can be taken at exactly 0 s; at mixing no product has formed, so the start point is the blank's zero, 0.00 (shown so in small type in Beat 3). The first reading is at 30 s.
 - **Straight initial section:** the 0–30 s and 30–60 s increments are equal (0.12 and 0.12), so the points at 0, 30 and 60 s lie on one straight line; the 60–90 s increment falls to 0.11 and later increments keep falling (0.10, 0.08, 0.07), so the curve bends after 60 s. This is why 0–60 s is used and not a longer interval.
 - **Initial rate of change of absorbance** = (0.24 − 0.00) ÷ (60 s − 0 s) = 0.24 ÷ 60 s = **0.0040 s⁻¹** (absorbance has no unit).
 - For contrast only (not narrated, not on screen): the **average** rate of change of absorbance over 0–180 s would be 0.60 ÷ 180 s = 0.0033 s⁻¹, lower than the initial rate because the curve bends. It is not used as the initial rate anywhere.
