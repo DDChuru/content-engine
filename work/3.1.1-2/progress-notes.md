@@ -1,4 +1,4 @@
-PHASE: BEATS — authoring + rendering (1–4 rendered; 5–8 rendering; 9 approved)
+PHASE: RENDER + FINISH CHAIN running (`chain-finish.sh`, log logs/chain-finish.log; ends "CHAIN DONE"). All 18 beats authored, LOOKED at and approved.
 
 ## Resume procedure (fresh container)
 1. `apt-get update && apt-get install -y ffmpeg`; `pip install faster-whisper pillow numpy fonttools brotli`.
@@ -56,3 +56,19 @@ PHASE: BEATS — authoring + rendering (1–4 rendered; 5–8 rendering; 9 appro
 - Cue normalisation: B10 uses "same finish, a lower hill" (CHECK-R2), B11 "Lowering activation energy is true" (the
   storyboard cue occurs twice under case-folding).
 - Products are a ONE-FRAME outline switch (never a cross-fade), then motion; Beat 1 bead cut likewise.
+
+## Bookends (DONE, not in git: re-render in ~1 min if the container is fresh)
+`cd bookend-src && node render-bookends.mjs "3.1.1-2=Enzymes: where and how they act"` → `bookends/intro-3.1.1-2.mp4`
+(Stem4LifeIntroB, heroHeight 518, 150 f) and `bookends/outro-3.1.1-2.mp4` (Stem4LifeOutro, aesthetic C, 180 f). Sources are
+copies of packages/backend/src/remotion/compositions/stem4life + public fonts; Remotion 4.0.365 downloads its own
+chrome-headless-shell. Late frames LOOKED at (qa/bookend-*-late.jpg): title reads exactly "Enzymes: where and how they act".
+
+## Resume after the chain
+1. If logs/chain-finish.log lacks "CHAIN DONE": check `pgrep -fa render-beat`; if none alive, remove render.lock files whose
+   PID is dead and rerun `setsid nohup ./chain-finish.sh > logs/chain-finish.log 2>&1 < /dev/null &` (idempotent).
+2. LOOK at qa/encoded-sheets/*.jpg; fix → qa-beat/approve that beat → rerun chain (re-renders only stale beats).
+3. Brand: `BAR_PNG=../../cloud-inputs/003/branding/bar-3.1.1-2.png MUSIC_MP3=../../cloud-inputs/003/branding/tutorial.mp3
+   INTRO_MP4=bookends/intro-3.1.1-2.mp4 OUTRO_MP4=bookends/outro-3.1.1-2.mp4 ../../cloud-inputs/003/branding/apply-branding-cloud.sh
+   3.1.1-2-enzymes.mp4 3.1.1-2-enzymes-branded.mp4` (the inputs come from `git checkout origin/cloud/inputs-003 -- cloud-inputs/003`).
+4. Bunny: POST create {"title":"REVIEW 3.1.1-2 Enzymes: where and how they act"} (no collection) → PUT curl -T → poll to status 4.
+5. REPORT.md (<70 lines).

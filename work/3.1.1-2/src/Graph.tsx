@@ -5,7 +5,14 @@
  * two peaks (accent). No transition-state label, no molecular drawing. */
 import React from 'react';
 import {BRAND as C, clamp01} from '../shared/src/theme';
-import {Txt, Lines, Arrow} from '../shared/src/Type';
+import {Txt, Lines, Arrow, textW} from '../shared/src/Type';
+
+/** Warm backing behind a multi-line label so curves never run through its letters. */
+function BG({x, y, text, size, anchor = 'start', opacity = 1}: any) {
+  const ls = String(text).split('\n'), w = Math.max(...ls.map((l) => textW(l, size, 700))) + 12;
+  const x0 = anchor === 'end' ? x - w + 6 : x - 6;
+  return <rect x={x0} y={y - size * 1.05} width={w} height={ls.length * size * 1.2 + size * 0.35} rx={6} fill={C.warm} opacity={0.92 * opacity} />;
+}
 
 export function geom(x: number, y: number, w: number, h: number) {
   const x0 = x + 0.04 * w, xa = x + 0.2 * w, xm = x + 0.5 * w, xb = x + 0.8 * w, x1 = x + 0.96 * w;
@@ -84,13 +91,16 @@ export function EnergyGraph({x, y, w, h, v = {}, hi = {}, opacity = 1, small = f
       {(V('ea2') > 0) && <path d={`M${g.xm} ${g.yc}H${x + 0.7 * w}M${g.xa} ${g.yr}H${x + 0.7 * w}`} stroke={C.muted} strokeWidth={1.5} strokeDasharray="6 5" opacity={V('ea2')} />}
       {/* brackets */}
       <VBracket x={x + 0.3 * w} y1={g.yr} y2={g.yu} color={C.ink} p={V('ea1') * 1.0001} opacity={1 - 0.7 * dim} width={3.5 + 3 * H('ea1')} />
+      {V('ea1') >= 1 && <BG x={x + 0.3 * w - 16} y={(g.yr + g.yu) / 2 - 10} size={fs} anchor="end" text={'activation energy\nwithout enzyme'} opacity={1 - 0.7 * dim} />}
       {V('ea1') >= 1 && <Lines x={x + 0.3 * w - 16} y={(g.yr + g.yu) / 2 - 10} size={fs} step={fs * 1.2} weight={800} anchor="end" fill={C.ink} opacity={1 - 0.7 * dim} text={'activation energy\nwithout enzyme'} />}
       <VBracket x={x + 0.7 * w} y1={g.yr} y2={g.yc} color={C.teal} p={V('ea2') * 1.0001} opacity={1 - 0.7 * dim} width={3.5 + 3 * H('ea2')} />
       {V('ea2') >= 1 && <g opacity={1 - 0.7 * dim}>
         {H('ea2') > 0 && <rect x={x + 0.7 * w + 8} y={(g.yr + g.yc) / 2 - fs * 1.3} width={fs * 9.4} height={fs * 2.6} rx={8} fill={C.accent} opacity={0.5 * H('ea2')} />}
+        <BG x={x + 0.7 * w + 16} y={(g.yr + g.yc) / 2 - 4} size={fs} text={'activation energy\nwith enzyme'} />
         <Lines x={x + 0.7 * w + 16} y={(g.yr + g.yc) / 2 - 4} size={fs} step={fs * 1.2} weight={800} fill={C.teal} text={'activation energy\nwith enzyme'} />
       </g>}
       <VBracket x={g.xm} y1={g.yc} y2={g.yu} color={C.primary} width={5 + 3 * H('red')} p={V('red') * 1.0001} />
+      {V('red') >= 1 && <BG x={g.xm + 18} y={(g.yc + g.yu) / 2 + 4} size={fs} text={'reduction in\nactivation energy'} />}
       {V('red') >= 1 && <Lines x={g.xm + 18} y={(g.yc + g.yu) / 2 + 4} size={fs} step={fs * 1.2} weight={800} fill={C.primary} text={'reduction in\nactivation energy'} />}
     </g>
   );
