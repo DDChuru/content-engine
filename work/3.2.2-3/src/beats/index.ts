@@ -10,4 +10,7 @@ import Beat09 from './Beat09';
 import Beat10 from './Beat10';
 import Beat11 from './Beat11';
 import Beat12 from './Beat12';
-export const BEATS: Record<number, any> = {1: Beat01, 2: Beat02, 3: Beat03, 4: Beat04, 5: Beat05, 6: Beat06, 7: Beat07, 8: Beat08, 9: Beat09, 10: Beat10, 11: Beat11, 12: Beat12};
+import Beat13 from './Beat13';
+import Beat14 from './Beat14';
+import Beat15 from './Beat15';
+export const BEATS: Record<number, any> = {1: Beat01, 2: Beat02, 3: Beat03, 4: Beat04, 5: Beat05, 6: Beat06, 7: Beat07, 8: Beat08, 9: Beat09, 10: Beat10, 11: Beat11, 12: Beat12, 13: Beat13, 14: Beat14, 15: Beat15};

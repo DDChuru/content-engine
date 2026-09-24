@@ -1,9 +1,9 @@
 # 3.2.2-3 — Vmax, Km and inhibitors on the graph · BUILD PROGRESS (handover file)
 
-Updated 2026-09-24 12:03 (UTC, cloud container). Builder: claude-opus-5-5.
-**Phase: 3 BEATS (audio + timeline complete; authoring beats in order)** · **Beats complete: 10 / 17** · master: not yet built
-Live render processes: 5398 node render-beat.cjs 10
-5572 node render-beat.cjs 12
+Updated 2026-09-24 12:07 (UTC, cloud container). Builder: claude-opus-5-5.
+**Phase: 3 BEATS (audio + timeline complete; authoring beats in order)** · **Beats complete: 13 / 17** · master: not yet built
+Live render processes: 5981 node render-beat.cjs 14
+6111 node render-beat.cjs 15
 
 | Beat | Heading | Frames | Cues | State |
 |---|---|---|---|---|
@@ -16,12 +16,12 @@ Live render processes: 5398 node render-beat.cjs 10
 | 7 | What Km tells you: the eager enzyme · 4:25–5:10 | 1398 | 10 | COMPLETE |
 | 8 | Three enzymes, each from its own half-Vmax · 5:10–6:05 | 1364 | 15 | COMPLETE |
 | 9 | COMMON MISTAKE E36: Vmax called affinity; the gradient cal | 2757 | 15 | COMPLETE |
-| 10 | Same enzyme, with and without an inhibitor · 7:15–8:05 | 1410 | 12 | RENDERING (lock) |
+| 10 | Same enzyme, with and without an inhibitor · 7:15–8:05 | 1410 | 12 | COMPLETE |
 | 11 | Competitive: in the active site, overcome by substrate · 8 | 1605 | 13 | COMPLETE |
-| 12 | Non-competitive: another site, and the active site changes | 1860 | 16 | approved, not rendered |
-| 13 | COMMON MISTAKE E41: the two curves swapped · 10:10–11:20 | 2667 | 16 | not authored |
-| 14 | The sentences you write, clause by clause · 11:20–12:10 | 1487 | 11 | not authored |
-| 15 | What I told you, read off the graph and the model · 12:10– | 1324 | 10 | not authored |
+| 12 | Non-competitive: another site, and the active site changes | 1860 | 16 | COMPLETE |
+| 13 | COMMON MISTAKE E41: the two curves swapped · 10:10–11:20 | 2667 | 16 | COMPLETE |
+| 14 | The sentences you write, clause by clause · 11:20–12:10 | 1487 | 11 | RENDERING (lock) |
+| 15 | What I told you, read off the graph and the model · 12:10– | 1324 | 10 | approved, not rendered |
 | 16 | How it is asked, and the reject card · 12:55–13:40 | 1576 | 10 | not authored |
 | 17 | The real question on screen, and the tablet · 13:40–14:20 | 1160 | 10 | not authored |
 
