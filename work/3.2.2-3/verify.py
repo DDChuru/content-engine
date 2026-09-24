@@ -1,4 +1,4 @@
-"""Ordered PIPELINE-STANDARD §4 verification of the 2.1.1 master, then the every-frame error-marker
+"""Ordered PIPELINE-STANDARD §4 verification of the 3.2.2-3 master, then the every-frame error-marker
 audit (presence AND badge text) and the beat-boundary hold check. Writes qa/verification.json."""
 from pathlib import Path
 import json, subprocess, hashlib, wave, re, math, sys
@@ -7,7 +7,7 @@ from PIL import Image
 P = Path(__file__).resolve().parent
 T = json.loads((P / 'timeline.json').read_text())
 S = json.loads((P / 'script.json').read_text())
-final = P / '2.1.1-food-tests.mp4'; audio = P / 'audio/narration-encoded.m4a'
+final = P / '3.2.2-3-vmax-km-inhibitors.mp4'; audio = P / 'audio/narration-encoded.m4a'
 R = {}
 def probe(f): return json.loads(subprocess.check_output(['ffprobe', '-v', 'error', '-show_streams', '-show_format', '-of', 'json', str(f)]))
 def packets(f): return json.loads(subprocess.check_output(['ffprobe', '-v', 'error', '-select_streams', 'a:0', '-show_packets', '-show_data_hash', 'sha256', '-show_entries', 'packet=pts,dts,duration,size,data_hash', '-of', 'json', str(f)]))['packets']
@@ -43,8 +43,8 @@ R['4_cues'] = {'matched': matched, 'total': total}; print('4. cues', matched, '/
 p0, p1 = packets(audio), packets(final); assert p0 == p1, 'AAC packets or timestamps changed'
 R['5_audioPacketsUnchanged'] = {'packets': len(p1), 'identical': True}; print('5. AAC packets identical', len(p1), flush=True)
 # 6. final word not clipped
-last = T['scenes'][-1]; words = json.loads((P / 'audio/beat-20.timed.words.json').read_text())['words']
-lw = re.sub(r'[^a-z]', '', words[-1]['word'].lower()); assert lw == 'sugar', lw
+last = T['scenes'][-1]; words = json.loads((P / 'audio/beat-17.timed.words.json').read_text())['words']
+lw = re.sub(r'[^a-z]', '', words[-1]['word'].lower()); assert lw == 'graph', lw
 lastEnd = last['start'] + words[-1]['end']; assert lastEnd < ad
 tail = maxvol(lastEnd + 0.25, 1.0)
 R['6_finalWord'] = {'word': words[-1]['word'], 'endsAt': round(lastEnd, 3), 'audioEnds': ad, 'headroom': round(ad - lastEnd, 3), 'afterWordMaxDb': tail}
@@ -70,9 +70,11 @@ print('7. silent reads', [(x['beat'], x['before'], x['encodedInteriorMaxDb']) fo
 md = (P / 'STORYBOARD.md').read_text()
 for b in S:
     req = json.loads((P / f"audio/beat-{b['id']:02d}.request.json").read_text())['text']
-    assert req == b['text'].replace('copper(II)', 'copper two').replace('biuret', 'bye-yoo-ret'), b['id']
+    exp = re.sub(r'\bKm\b', 'K M', b['text'])
+    if b['id'] == 9: exp = re.sub(r'\bVmax\b', 'V max', exp)
+    assert req == exp, b['id']
     for para in b['paragraphs']: assert para in md, b['id']
-R['frozenNarration'] = 'storyboard paragraphs present verbatim; requests differ only by copper(II)→copper two, biuret→bye-yoo-ret'
+R['frozenNarration'] = 'storyboard paragraphs present verbatim; requests differ only by Km→'K M' (all beats) and Vmax→'V max' (beat 9)'
 # 8. no one-frame holds at beat boundaries
 bf = subprocess.run([sys.executable, str(P / 'qa/detect_boundary_flash.py'), str(final), str(P / 'timeline.json'), '--output', str(P / 'qa/boundary-audit.json')], capture_output=True, text=True)
 assert bf.returncode == 0, bf.stderr
@@ -88,7 +90,7 @@ refE = np.asarray(Image.open(P / 'qa/badge-EXAM.png').convert('RGB'))[BY:BY + BH
 refC = np.asarray(Image.open(P / 'qa/badge-COMMON.png').convert('RGB'))[BY:BY + BH, BX:BX + BW].astype(np.float32)
 proc = subprocess.Popen(['nice', '-n', '10', 'ffmpeg', '-v', 'error', '-threads', '3', '-i', str(final), '-vf', f'crop={BW}:{BH}:{BX}:{BY},format=rgb24', '-an', '-f', 'rawvideo', '-'], stdout=subprocess.PIPE)
 size = BW * BH * 3; mism = []; f = 0; stats = {'marked': 0, 'unmarked': 0}
-worst = {'examMaeMax': 0.0, 'commonMaeMin': 1e9}
+worst = {}
 while True:
     buf = proc.stdout.read(size)
     if not buf: break
@@ -97,17 +99,17 @@ while True:
     px = img[6, 4]; seen = 145 < px[0] < 215 and px[1] < 115 and px[2] < 95
     maeE = float(np.abs(img - refE).mean()); maeC = float(np.abs(img - refC).mean())
     if exp:
-        stats['marked'] += 1; worst['examMaeMax'] = max(worst['examMaeMax'], maeE); worst['commonMaeMin'] = min(worst['commonMaeMin'], maeC)
-        ok = seen and maeE < 6 and maeC > maeE * 3 and exp['label'] == 'EXAM CONTRAST'
+        stats['marked'] += 1; worst['commonMaeMax'] = max(worst.get('commonMaeMax', 0.0), maeC); worst['examMaeMin'] = min(worst.get('examMaeMin', 1e9), maeE)
+        ok = seen and maeC < 6 and maeE > maeC * 3 and exp['label'] == 'COMMON MISTAKE'
     else:
-        stats['unmarked'] += 1; ok = not seen and maeE > 20
+        stats['unmarked'] += 1; ok = not seen and maeC > 20
     if not ok: mism.append({'frame': f, 'expected': bool(exp), 'seen': bool(seen), 'maeExam': round(maeE, 2), 'maeCommon': round(maeC, 2)})
     f += 1
 proc.wait(); assert f == T['durationFrames'], (f, T['durationFrames'])
 (P / 'qa/marker-audit.json').write_text(json.dumps({'framesChecked': f, 'intervals': iv, 'stats': stats, 'badgeText': worst, 'mismatches': mism[:200], 'mismatchCount': len(mism)}, indent=2))
 assert not mism, mism[:5]
 R['markerAudit'] = {'framesChecked': f, **stats, 'intervals': iv, 'badgeTextMae': worst, 'mismatches': 0}
-print('Marker audit: every frame; presence and EXAM CONTRAST text confirmed', stats, worst, flush=True)
+print('Marker audit: every frame; presence and COMMON MISTAKE text confirmed', stats, worst, flush=True)
 # longest unchanged rendered visual (render ledgers)
 gaps = []
 for sc in T['scenes']:

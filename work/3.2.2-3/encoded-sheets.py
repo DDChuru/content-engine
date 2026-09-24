@@ -1,5 +1,5 @@
 """Whole-lesson inspection from the ENCODED master: one frame every 8 s + every beat's first frame
-+ the E01 marker boundary frames + the last frame; 9 per sheet."""
++ the error-marker boundary frames + the last frame; 9 per sheet."""
 from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont
 import json, subprocess
@@ -11,7 +11,7 @@ iv = json.loads((p / 'qa/error-intervals.json').read_text())['intervals'] if (p 
 for i in iv: want |= {i['startFrame'], i['endFrame'] - 1, i['endFrame']}
 want = sorted(want)
 sel = '+'.join(f'eq(n\\,{f})' for f in want)
-subprocess.run(['nice', '-n', '10', 'ffmpeg', '-v', 'error', '-y', '-threads', '3', '-i', str(p / '2.1.1-food-tests.mp4'), '-vf', f"select='{sel}',scale=960:540", '-fps_mode', 'passthrough', str(d / 'f-%04d.png')], check=True)
+subprocess.run(['nice', '-n', '10', 'ffmpeg', '-v', 'error', '-y', '-threads', '3', '-i', str(p / '3.2.2-3-vmax-km-inhibitors.mp4'), '-vf', f"select='{sel}',scale=960:540", '-fps_mode', 'passthrough', str(d / 'f-%04d.png')], check=True)
 files = sorted(d.glob('f-*.png')); assert len(files) == len(want), (len(files), len(want))
 entries = [{'file': f.name, 'frame': fr, 'seconds': fr / 30} for f, fr in zip(files, want)]
 font = ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf', 19)

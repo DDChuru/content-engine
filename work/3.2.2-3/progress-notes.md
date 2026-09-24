@@ -1,4 +1,4 @@
-PHASE: 3 BEATS (audio + timeline complete; authoring beats in order)
+PHASE: 4 FINISH (all 17 beats authored + approved; stale re-render running; bookends rendered)
 
 ## Rules (from Durai's brief, cloud run 004-3.2.2-3)
 Narration FROZEN (STORYBOARD.md = cloud-inputs/003/topic-03/3.2.2-3/STORYBOARD.md, copied verbatim). Push ONLY branch
@@ -47,3 +47,22 @@ delete/move nothing. Render per beat, at most 4 concurrent (4 vCPU). No logo/pro
 - All three error beats badge **COMMON MISTAKE**: E37 (June 2023 ER p.26 "The most common error …"), E36 (June 2024 ER p.4
   "Some candidates confused Km with Vmax …"), E41 (June 2023 ER p.22; March 2023 ER p.2) — each an examiner report diagnosing
   the candidate error.
+
+## Resume here (phase 4)
+- All 17 beats authored and visually approved. `rerender-stale.sh` (log `logs/rerender-stale.log`, ends "RERENDER DONE")
+  re-renders beats 1–11 (made stale by shared-component edits); beat 17 rendered by `launch-render.sh 17`.
+  Check: `node -e` fingerprint loop (see chain in PROGRESS) — every `render-cache/beat-NN/complete.json` sourceHash must
+  equal `beat-fingerprint.cjs(N)`. render-cache is NOT in git: after a relaunch re-run `./rerender-stale.sh` style renders
+  (approve.sh N && launch-render.sh N for every beat; ~15 min at 4 parallel).
+- Then: `python3 finish.py` → `3.2.2-3-vmax-km-inhibitors.mp4` (gitignored); `python3 verify.py` → qa/verification.json,
+  qa/marker-audit.json, qa/boundary-audit.json; `python3 encoded-sheets.py` → qa/encoded-sheets/ (LOOK at every sheet).
+- Bookends DONE: /home/user/outro-render/bookends/{intro,outro}-3.2.2-3.mp4 (Remotion 4.0.365, zod 3.22.3, Chrome headless
+  shell auto-downloaded). Recreate: /home/user/outro-render (copy of stem4life compositions + index.tsx +
+  render-bookends.mjs from cloud-inputs/003/branding with sourceRoot → this checkout), `node render-bookends.mjs
+  "3.2.2-3=Vmax, Km and inhibitors on the graph"`. Late frames checked: qa/bookend-*-late.jpg (title exact).
+- Brand: `BAR_PNG=cloud-inputs/003/branding/bar-3.2.2-3.png MUSIC_MP3=cloud-inputs/003/branding/tutorial.mp3
+  INTRO_MP4=/home/user/outro-render/bookends/intro-3.2.2-3.mp4 OUTRO_MP4=/home/user/outro-render/bookends/outro-3.2.2-3.mp4
+  cloud-inputs/003/branding/apply-branding-cloud.sh <master> <branded>` (run from repo root).
+- Bunny: POST https://video.bunnycdn.com/library/$BUNNY_BIO_LIBRARY_ID/videos {"title":"REVIEW 3.2.2-3 Vmax, Km and inhibitors
+  on the graph"} (NO collection, NO key header), PUT with curl -T, poll every 60 s to status 4.
+- Design decisions: qa/decisions.md.

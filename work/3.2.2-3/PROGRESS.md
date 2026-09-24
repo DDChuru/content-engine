@@ -1,29 +1,37 @@
 # 3.2.2-3 — Vmax, Km and inhibitors on the graph · BUILD PROGRESS (handover file)
 
-Updated 2026-09-24 12:07 (UTC, cloud container). Builder: claude-opus-5-5.
-**Phase: 3 BEATS (audio + timeline complete; authoring beats in order)** · **Beats complete: 13 / 17** · master: not yet built
-Live render processes: 5981 node render-beat.cjs 14
-6111 node render-beat.cjs 15
+Updated 2026-09-24 12:13 (UTC, cloud container). Builder: claude-opus-5-5.
+**Phase: 4 FINISH (all 17 beats authored + approved; stale re-render running; bookends rendered)** · **Beats complete: 6 / 17** · master: not yet built
+Live render processes: 6490 node render-beat.cjs 17
+7058 xargs -P 4 -I{} sh -c nice -n 10 node render-beat.cjs {} > logs/rerender-beat-{}.log 2>&1; echo "beat {} exit $?"
+7059 sh -c nice -n 10 node render-beat.cjs 1 > logs/rerender-beat-1.log 2>&1; echo "beat 1 exit $?"
+7061 sh -c nice -n 10 node render-beat.cjs 3 > logs/rerender-beat-3.log 2>&1; echo "beat 3 exit $?"
+7062 sh -c nice -n 10 node render-beat.cjs 4 > logs/rerender-beat-4.log 2>&1; echo "beat 4 exit $?"
+7064 node render-beat.cjs 1
+7065 node render-beat.cjs 4
+7066 node render-beat.cjs 3
+7752 sh -c nice -n 10 node render-beat.cjs 5 > logs/rerender-beat-5.log 2>&1; echo "beat 5 exit $?"
+7753 node render-beat.cjs 5
 
 | Beat | Heading | Frames | Cues | State |
 |---|---|---|---|---|
-| 1 | Hook and context · 0:00–0:40 | 1324 | 9 | COMPLETE |
+| 1 | Hook and context · 0:00–0:40 | 1324 | 9 | RENDERING (lock) |
 | 2 | What you will be able to do · 0:40–1:05 | 713 | 4 | COMPLETE |
-| 3 | The curve, and Vmax from the plateau · 1:05–1:50 | 1175 | 11 | COMPLETE |
-| 4 | One number for affinity: Km · 1:50–2:25 | 1239 | 9 | COMPLETE |
-| 5 | The construction: Vmax, half it, across, down · 2:25–3:15 | 1321 | 12 | COMPLETE |
-| 6 | COMMON MISTAKE E37: the right number, and a bare graph · 3 | 2709 | 18 | COMPLETE |
-| 7 | What Km tells you: the eager enzyme · 4:25–5:10 | 1398 | 10 | COMPLETE |
-| 8 | Three enzymes, each from its own half-Vmax · 5:10–6:05 | 1364 | 15 | COMPLETE |
-| 9 | COMMON MISTAKE E36: Vmax called affinity; the gradient cal | 2757 | 15 | COMPLETE |
-| 10 | Same enzyme, with and without an inhibitor · 7:15–8:05 | 1410 | 12 | COMPLETE |
-| 11 | Competitive: in the active site, overcome by substrate · 8 | 1605 | 13 | COMPLETE |
+| 3 | The curve, and Vmax from the plateau · 1:05–1:50 | 1175 | 11 | RENDERING (lock) |
+| 4 | One number for affinity: Km · 1:50–2:25 | 1239 | 9 | RENDERING (lock) |
+| 5 | The construction: Vmax, half it, across, down · 2:25–3:15 | 1321 | 12 | RENDERING (lock) |
+| 6 | COMMON MISTAKE E37: the right number, and a bare graph · 3 | 2709 | 18 | approved, not rendered |
+| 7 | What Km tells you: the eager enzyme · 4:25–5:10 | 1398 | 10 | approved, not rendered |
+| 8 | Three enzymes, each from its own half-Vmax · 5:10–6:05 | 1364 | 15 | approved, not rendered |
+| 9 | COMMON MISTAKE E36: Vmax called affinity; the gradient cal | 2757 | 15 | approved, not rendered |
+| 10 | Same enzyme, with and without an inhibitor · 7:15–8:05 | 1410 | 12 | approved, not rendered |
+| 11 | Competitive: in the active site, overcome by substrate · 8 | 1605 | 13 | approved, not rendered |
 | 12 | Non-competitive: another site, and the active site changes | 1860 | 16 | COMPLETE |
 | 13 | COMMON MISTAKE E41: the two curves swapped · 10:10–11:20 | 2667 | 16 | COMPLETE |
-| 14 | The sentences you write, clause by clause · 11:20–12:10 | 1487 | 11 | RENDERING (lock) |
-| 15 | What I told you, read off the graph and the model · 12:10– | 1324 | 10 | approved, not rendered |
-| 16 | How it is asked, and the reject card · 12:55–13:40 | 1576 | 10 | not authored |
-| 17 | The real question on screen, and the tablet · 13:40–14:20 | 1160 | 10 | not authored |
+| 14 | The sentences you write, clause by clause · 11:20–12:10 | 1487 | 11 | COMPLETE |
+| 15 | What I told you, read off the graph and the model · 12:10– | 1324 | 10 | COMPLETE |
+| 16 | How it is asked, and the reject card · 12:55–13:40 | 1576 | 10 | COMPLETE |
+| 17 | The real question on screen, and the tablet · 13:40–14:20 | 1160 | 10 | RENDERING (lock) |
 
 
 ## Rules (from Durai's brief, cloud run 004-3.2.2-3)
@@ -73,3 +81,22 @@ delete/move nothing. Render per beat, at most 4 concurrent (4 vCPU). No logo/pro
 - All three error beats badge **COMMON MISTAKE**: E37 (June 2023 ER p.26 "The most common error …"), E36 (June 2024 ER p.4
   "Some candidates confused Km with Vmax …"), E41 (June 2023 ER p.22; March 2023 ER p.2) — each an examiner report diagnosing
   the candidate error.
+
+## Resume here (phase 4)
+- All 17 beats authored and visually approved. `rerender-stale.sh` (log `logs/rerender-stale.log`, ends "RERENDER DONE")
+  re-renders beats 1–11 (made stale by shared-component edits); beat 17 rendered by `launch-render.sh 17`.
+  Check: `node -e` fingerprint loop (see chain in PROGRESS) — every `render-cache/beat-NN/complete.json` sourceHash must
+  equal `beat-fingerprint.cjs(N)`. render-cache is NOT in git: after a relaunch re-run `./rerender-stale.sh` style renders
+  (approve.sh N && launch-render.sh N for every beat; ~15 min at 4 parallel).
+- Then: `python3 finish.py` → `3.2.2-3-vmax-km-inhibitors.mp4` (gitignored); `python3 verify.py` → qa/verification.json,
+  qa/marker-audit.json, qa/boundary-audit.json; `python3 encoded-sheets.py` → qa/encoded-sheets/ (LOOK at every sheet).
+- Bookends DONE: /home/user/outro-render/bookends/{intro,outro}-3.2.2-3.mp4 (Remotion 4.0.365, zod 3.22.3, Chrome headless
+  shell auto-downloaded). Recreate: /home/user/outro-render (copy of stem4life compositions + index.tsx +
+  render-bookends.mjs from cloud-inputs/003/branding with sourceRoot → this checkout), `node render-bookends.mjs
+  "3.2.2-3=Vmax, Km and inhibitors on the graph"`. Late frames checked: qa/bookend-*-late.jpg (title exact).
+- Brand: `BAR_PNG=cloud-inputs/003/branding/bar-3.2.2-3.png MUSIC_MP3=cloud-inputs/003/branding/tutorial.mp3
+  INTRO_MP4=/home/user/outro-render/bookends/intro-3.2.2-3.mp4 OUTRO_MP4=/home/user/outro-render/bookends/outro-3.2.2-3.mp4
+  cloud-inputs/003/branding/apply-branding-cloud.sh <master> <branded>` (run from repo root).
+- Bunny: POST https://video.bunnycdn.com/library/$BUNNY_BIO_LIBRARY_ID/videos {"title":"REVIEW 3.2.2-3 Vmax, Km and inhibitors
+  on the graph"} (NO collection, NO key header), PUT with curl -T, poll every 60 s to status 4.
+- Design decisions: qa/decisions.md.
