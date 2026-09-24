@@ -1,6 +1,6 @@
 # 3.1.4 — Following a colour change: the colorimeter
 
-**Storyboard, first draft. Cloud run 005, 24 September 2026.** No audio, no code, no render. Folder `storyboards/topic-03/3.1.4/`.
+**Storyboard, first draft with round-one check edits applied. Cloud run 005, 24 September 2026.** No audio, no code, no render. Folder `storyboards/topic-03/3.1.4/`.
 Cambridge 9700 syllabus 2025–2027, p.20. Command word **OUTLINE**. Budget from `TOPIC-PLAN-03-ENZYMES.md` §3.1.4 and `TOPIC-03-WEIGHTS.md`: **3:15, 5 macro beats, 0 errors**. **No error beat**: the plan records that colorimeter misconceptions are reported in June 2024 ER, Paper 22 Q4(b)(ii), p.15, and "are addressed in normal teaching; no separate error beat is allocated to them in this plan". This lesson therefore has no COMMON MISTAKE and no EXAM CONTRAST beat; it closes on one captioned reject card (Beat 5), which is not an error beat. 3.1.4 appears in **0 of 15** sampled papers (weights: "No sampled mark in the enzyme sense"); its content is set by the syllabus and by the supplementary rows S-C (Specimen 2022 P3 Q1(b)) and S-E (S21/51 Q1). Runtime estimated at **120 words per minute of final video**.
 
 > **3.1.4** outline the use of a colorimeter for measuring the progress of enzyme-catalysed reactions that involve colour changes
@@ -17,7 +17,7 @@ Authorities read in full: `work/005/SHARED-SPECS.md`; `VIDEO-STRUCTURE.md`; `CON
 
 The outcome asks for the **use** of a colorimeter to follow **progress** when the reaction involves a **colour change**. Everything in the lesson follows from one idea: a colorimeter turns *how strongly a coloured solution absorbs one band of light* into a number, and a number can be turned into a rate.
 
-> **When a substrate or product is coloured, a colorimeter measures the absorbance of one wavelength band of light passing through the sample, so the progress of the reaction is recorded as a number rather than judged by eye. Choose a filter that passes the colour the coloured substance absorbs (blue for a yellow product; the filter is not the colour of the solution), zero the colorimeter on a blank that contains everything except the enzyme, keep the filter and the light path the same, read the absorbance at stated times and plot absorbance against time. The gradient of the straight initial section is the initial rate of change of absorbance. To turn absorbance into a concentration, use a calibration curve made from known concentrations under the same conditions; re-zero if the filter or the blank conditions change.**
+> **When a substrate or product is coloured, a colorimeter measures the absorbance of one wavelength band of light passing through the sample, so the progress of the reaction is recorded as a number rather than judged by eye. Choose a filter that passes the colour the coloured substance absorbs (blue for a yellow product; the filter is not the colour of the solution), for this assay, zero the colorimeter on a reaction blank with water replacing the enzyme solution, keep the filter and the light path the same, read the absorbance at stated times and plot absorbance against time. The gradient of the straight initial section is the initial rate of change of absorbance. To turn absorbance into a concentration, use a calibration curve made from known concentrations under the same conditions; re-zero if the filter or the blank conditions change.**
 
 **What the mark schemes and reports credit, quoted** (all copied from the plan or weights; see *Citations*):
 - [S21/51 Q1(b)(i), MS p.7] "idea that (result / it, is) quantitative / AW".
@@ -54,13 +54,13 @@ No lenses, gratings, photocell circuitry or equations are drawn. The light band 
 | **Reaction cuvette** | 1.0 cm³ | 0.5 cm³ | 0.5 cm³ | 0.5 cm³, added **last** | 2.5 cm³ |
 | **Reaction blank** | 1.0 cm³ | 0.5 cm³ | 0.5 cm³ | — (0.5 cm³ water in place of enzyme) | 2.5 cm³ |
 
-Sequence: filter set to blue → blank cuvette in the holder → read-out set to **0.00** with the zero button → blank removed → reaction cuvette made up with the enzyme added last, lid fitted, inverted twice → **timer started at mixing** → cuvette into the holder → absorbance recorded at **0, 30, 60, 90, 120, 150, 180 s**. The 0 s entry is the value at mixing, before product has formed (the mixture matches the blank), recorded as 0.00.
+Sequence: select the blue filter → insert the reaction blank and close the holder lid → set absorbance to 0.00 → remove the blank → add enzyme last to the reaction cuvette and start the timer when enzyme first contacts the mixture → promptly fit the cuvette lid and invert twice → set upright and insert with clear faces in the light path → close the holder lid → record absorbance at 30, 60, 90, 120, 150 and 180 s. For these illustrative data, assume no yellow product initially, negligible optical contribution from the enzyme preparation at the selected wavelength, and a stable blank over the run. The point (0 s, 0.00) is an assumed starting point, not an instrument reading. These assumptions are specific to this example; zeroing a blank does not itself establish them.
 
 **Colour rule (VIDEO-STRUCTURE, "A colour change passes only through colours the reaction really shows").** The cuvette's contents are drawn in **one yellow hue only**, from colourless at mixing to pale yellow and then deeper yellow, by raising that hue's opacity. No other hue appears at any frame: no green, no orange, no blue tint in the liquid. The blank stays colourless throughout. The standards in Beat 4 are drawn with the same hue at five opacities.
 
 **`RateGraph`, configuration `absorbance-time` (new here; extends 3.1.3's component).** y-axis **absorbance** (small type *no unit*), 0.00–0.70; x-axis **time / s**, 0–180. Points from Dataset A, labelled *our illustrative data*. A smooth curve through them. Overlay **`straight-initial`**: a ruled line over 0–60 s with a rise/run triangle labelled **rise 0.24**, **run 60 s**, and the result **initial rate of change of absorbance = 0.24 ÷ 60 s = 0.0040 s⁻¹**. The graph is never labelled "initial rate of reaction" without the words "of change of absorbance".
 
-**`RateGraph`, configuration `calibration` (new here).** y-axis **absorbance**, 0.00–0.90; x-axis **concentration of yellow product / µmol dm⁻³**, 0–100. Six points from Dataset B, labelled *our illustrative standards*, with a straight ruled line through them. Overlay **`read-across`**: a horizontal dashed line from 0.24 on the absorbance axis to the line, then a vertical dashed drop to **30 µmol dm⁻³**. Caption *same filter, same blank, same cuvette and volume as the reaction*.
+**`RateGraph`, configuration `calibration` (new here).** y-axis **absorbance**, 0.00–0.90; x-axis **concentration of yellow product / µmol dm⁻³**, 0–100. Six points from Dataset B, labelled *our illustrative standards*, with a straight ruled line through them. Overlay **`read-across`**: a horizontal dashed line from 0.24 on the absorbance axis to the line, then a vertical dashed drop to **30 µmol dm⁻³**. Caption *same filter, same blank, same cuvette type, optical path and total volume as the reaction*.
 
 ---
 
@@ -79,14 +79,14 @@ Beat windows in the headings follow the word ledger below (words ÷ 120); final 
 2. At *Not every enzyme reaction changes colour*, two small insets slide in at left: the 3.1.3 gas syringe with bubbles (tag *recall: 3.1.3, no colour change*) and a colourless tube; at *but some do*, the gas-syringe inset dims and the colourless tube stays.
 3. At *beta-galactosidase*, the word label **β-galactosidase (enzyme)** appears above the tube; at *releases a yellow product*, the liquid turns from colourless to pale yellow through the one yellow hue only, and the label **yellow product** lands; at *a colourless compound, ONPG*, the label **ONPG (colourless)** lands on the left of an arrow pointing to **yellow product**. Small type *names are context, not a list to learn*. No structures, no equation.
 4. At *by eye you are left with a judgement*, two cartoon eyes beside the tube with speech tags reading *a bit more?* and *about the same?* (our illustration, not quotations); at *two people may judge it differently*, the two tags pulse in turn.
-5. At *A colorimeter gives you the number*, the tube's liquid is shown transferred to a cuvette, which slides into the outline of the `ColorimeterModel` (unlabelled silhouette) and the read-out box fills with **0.24**; dissolve to the objectives surface.
-6. At *By the end you will be able to outline*, the objectives surface (own styled background, no diagram, no colorimeter) builds line 1; at *say what a calibration curve adds*, line 2.
+5. At *A colorimeter gives you the number*, use a match dissolve from the yellow tube to a prepared cuvette containing the same yellow solution; this is a change of illustration, not a pouring animation. The cuvette slides into the unlabelled outline of `ColorimeterModel`, and the read-out fills with **0.24**, labelled **preview: our 60 s example**; dissolve to the objectives surface.
+6. At *By the end you will be able to outline*, the objectives surface (own styled background, no diagram, no colorimeter) builds line 1; at *say what a calibration curve adds*, line 2. Each line carries a simple authored pictogram at its left, so the surface is not text alone: line 1 a small cuvette beside a stopwatch; line 2 a row of three small cuvettes in pale-to-deeper yellow beside a short ruled line. The pictograms are icons, not the lesson's `ColorimeterModel` or graphs.
    1. **OUTLINE** how a colorimeter follows a colour-change reaction: filter, zero, readings, rate of change of absorbance
    2. **SAY** what a calibration curve adds: from absorbance to concentration
 
    Small type: *syllabus 3.1.4 "outline", p.20.*
 
-**On-screen text:** the hook question; *β-galactosidase*, *ONPG (colourless)*, *yellow product*; the objectives.
+**On-screen text:** the hook question; *β-galactosidase*, *ONPG (colourless)*, *yellow product*; *preview: our 60 s example*; the objectives with their pictograms.
 
 ---
 
@@ -95,16 +95,16 @@ Beat windows in the headings follow the word ledger below (words ÷ 120); final 
 > Light from a lamp passes through a filter, which lets through one band of colour, then through the cuvette of sample in its holder, and on to a detector. The read-out shows absorbance: the more of that light the sample absorbs, the higher the number. Hold the cuvette by its ridged sides, clear faces to the light. Picture yellow soaking up blue. Written properly: the yellow product absorbs blue light, so you choose a blue filter, not the colour of the solution. Then zero on the blank: buffer, ONPG and water in place of the enzyme, set to zero. Keep the filter and the cuvette position fixed, and if the filter or the blank conditions change, zero again.
 
 **Visual action:**
-1. At *Light from a lamp*, `ColorimeterModel` in cutaway fills the frame, caption *schematic; not a particular instrument*; label **light source** and the lamp glows; at *passes through a filter*, label **filter** at its slot; at *one band of colour*, a single flat band of light leaves the filter (neutral grey until the filter is chosen in action 5).
+1. At *Light from a lamp*, `ColorimeterModel` in cutaway fills the frame, caption *schematic; not a particular instrument*; label **light source** and the lamp glows; at *passes through a filter*, label **filter** at its slot; at *one band of colour*, a single flat band of light leaves the filter. This is a schematic preview of an already set-up instrument, captioned “principle preview; setup follows”. The blue filter is already seated; the light band is blue throughout.
 2. At *through the cuvette of sample in its holder*, labels **cuvette** and **holder**, the band crossing the cuvette; at *on to a detector*, label **detector** as the band reaches it.
-3. At *The read-out shows absorbance*, label **absorbance read-out** on the display; at *the more of that light the sample absorbs*, a pale yellow cuvette is swapped for a deeper yellow one (same hue) and the band beyond the cuvette is drawn thinner while the display rises from **0.12** to **0.35** (illustrative readings; the zeroing comes in action 7).
+3. At *The read-out shows absorbance*, label **absorbance read-out** on the display; at *the more of that light the sample absorbs*, a pale yellow cuvette is swapped for a deeper yellow one (same hue) and the band beyond the cuvette retains its width and blue hue but becomes dimmer while the display rises from **0.12** to **0.35** (illustrative preview states from Dataset A, not readings made before setup; the zeroing comes in action 7).
 4. At *Hold the cuvette by its ridged sides*, a hand lifts the cuvette by the **ridged faces** (labelled), fingers clear of the clear faces; at *clear faces to the light*, the cuvette is lowered into the holder, clear faces (labelled) turned to the lamp and detector, and the lid closes.
-5. At *Picture yellow soaking up blue*, the filter slot is ringed and the handle strap-line **yellow soaks up blue** appears beside a small colour pair (a yellow drop and a blue band, the band entering the drop and not leaving it); at *Written properly*, the creditworthy sentence lands: **the yellow product absorbs blue light, so a blue filter is used**; at *you choose a blue filter*, `filter-blue` slides into the slot and the band becomes blue.
+5. At *Picture yellow soaking up blue*, the filter slot is ringed and the handle strap-line **yellow soaks up blue** appears beside a small colour pair (a yellow drop and a blue band, the band entering the drop and emerging fainter, with the same blue hue); at *Written properly*, the creditworthy sentence lands: **the yellow product absorbs blue light, so a blue filter is used**; at *you choose a blue filter*, the already seated `filter-blue` and its label are highlighted.
 6. At *not the colour of the solution*, a ghost yellow filter hovers above the slot with a small ✗ and dissolves; citation tab: **March 2023 ER, Paper 52 Q1(a)(i), p.14: "the filter used should not be the same as the colour of the solution being tested"**.
-7. At *Then zero on the blank*, a second cuvette labelled **reaction blank** (colourless) is lowered into the holder by its ridged faces; at *buffer, ONPG and water in place of the enzyme*, its contents list appears beside it: **buffer solution, pH 7.0 · ONPG solution · water (in place of enzyme)**, with the volume table from the model spec in small type; at *set to zero*, the **zero** button is pressed and the display reads **0.00**.
+7. At *Then zero on the blank*, a second cuvette labelled **reaction blank** (colourless) is lowered into the holder by its ridged faces; at *buffer, ONPG and water in place of the enzyme*, its contents list appears beside it: **buffer solution, pH 7.0 · ONPG solution · water (in place of enzyme)**, with the volume table from the model spec in small type; at *set to zero*, the **zero** button is pressed and the display reads **0.00**. Remove the preview caption as the blank enters. Close the holder lid before pressing zero.
 8. At *Keep the filter and the cuvette position fixed*, the blue filter and the holder are outlined together with tag *fixed*; at *zero again*, a small loop arrow returns to the zero button with tag *re-zero if the filter or blank conditions change*.
 
-**On-screen text:** the five part labels; *ridged faces*, *clear faces*; the handle and the sentence; the March 2023 citation; *reaction blank* and its contents; *fixed*; *re-zero if the filter or blank conditions change*.
+**On-screen text:** *principle preview; setup follows* (removed as the blank enters); the five part labels; *ridged faces*, *clear faces*; the handle and the sentence; the March 2023 citation; *reaction blank* and its contents; *fixed*; *re-zero if the filter or blank conditions change*.
 
 ---
 
@@ -113,43 +113,43 @@ Beat windows in the headings follow the word ledger below (words ÷ 120); final 
 > Add the enzyme last, mix, start the timer at mixing, and put the cuvette in. Read the absorbance every thirty seconds and plot it against time. For the first sixty seconds the line is straight, rising by zero point two four. So the initial rate of change of absorbance is zero point zero zero four per second. That is why a number beats your eye: you can calculate a rate, and compare one run with another.
 
 **Visual action:**
-1. At *Add the enzyme last*, the blank is lifted out by its ridged faces and set aside; a new cuvette holding buffer, ONPG and water (colourless) receives **0.5 cm³ enzyme solution** from a pipette whose tip is inside the cuvette mouth above the liquid, then a lid is fitted and the cuvette is inverted twice, held by the ridged faces, and set upright with a level surface; at *start the timer at mixing*, a stopwatch starts at **0 s**; at *put the cuvette in*, it is lowered into the holder, clear faces to the light path, lid closed.
-2. At *Read the absorbance every thirty seconds*, the stopwatch runs and the display steps through **0.00, 0.12, 0.24, 0.35, 0.45, 0.53, 0.60** at 0, 30 … 180 s while a cutaway view of the cuvette deepens in yellow opacity only; small type under the display: *0 s: the mixture at mixing, before product forms, taken as the blank's 0.00; readings from 30 s*; at *plot it against time*, `RateGraph` `absorbance-time` slides in at right and each reading lands as a point as it appears, points labelled *our illustrative data*.
+1. At *Add the enzyme last*, remove the blank and set it aside; the prepared reaction cuvette receives 0.5 cm³ enzyme solution from the graduated pipette, its tip inside the mouth above the liquid. Start the visible stopwatch at the first contact of enzyme with the mixture. At *mix, start*, promptly fit the lid and invert the cuvette twice while the stopwatch continues, then set it upright with a level liquid surface. At *start the timer at mixing*, highlight the running stopwatch and its tag **t = 0: enzyme first contacts the mixture**; do not restart it. At *put the cuvette in*, lower it into the holder with clear faces in the light path and close the holder lid. Handle the ridged faces throughout.
+2. At *Read the absorbance every thirty seconds*, show the stopwatch and reaction cuvette with the caption **time compressed; first reading at 30 s**. The read-out sequence is **0.12, 0.24, 0.35, 0.45, 0.53, 0.60**, paired respectively with **30, 60, 90, 120, 150, 180 s**; the liquid deepens in the same yellow hue. At *plot it against time*, introduce `RateGraph` `absorbance-time` and plot Dataset A. Draw (0 s, 0.00) as an open point labelled **assumed start; not measured**, and the six readings as filled points. Keep **our illustrative data** visible. No reaction read-out at 0 s is shown.
 3. At *For the first sixty seconds the line is straight*, the first three points are joined by a ruled line (`straight-initial`), and the later points are joined by a curve that bends away below the extended ruled line; at *rising by zero point two four*, the rise/run triangle draws: **rise 0.24**, **run 60 s**.
 4. At *the initial rate of change of absorbance*, the result label lands: **initial rate of change of absorbance = 0.24 ÷ 60 s = 0.0040 s⁻¹**, small type *absorbance has no unit, so the rate is per second*; at *zero point zero zero four per second*, **0.0040 s⁻¹** is ringed.
 5. At *That is why a number beats your eye*, the Beat 1 eyes-and-tags inset returns small beside the graph and dims; at *compare one run with another*, a faint second ruled line of a different slope flashes on the graph beside the first with tag *another run, compared by gradient* (no values; illustrative), then fades.
 
-**On-screen text:** *our illustrative data*; the triangle; **initial rate of change of absorbance = 0.24 ÷ 60 s = 0.0040 s⁻¹**; *absorbance has no unit*.
+**On-screen text:** *t = 0: enzyme first contacts the mixture*; *time compressed; first reading at 30 s*; *assumed start; not measured*; *our illustrative data*; the triangle; **initial rate of change of absorbance = 0.24 ÷ 60 s = 0.0040 s⁻¹**; *absorbance has no unit*.
 
 ---
 
-### BEAT 4 · From absorbance to concentration: the calibration curve · 2:20–2:51
+### BEAT 4 · From absorbance to concentration: the calibration curve · 2:20–2:47
 **Narration:**
-> But absorbance is not a concentration. For that you make a calibration curve: known concentrations of the yellow product, read with the same filter and blank, the colour-standards idea from the Benedict's lesson. Read zero point two four across: thirty micromoles per decimetre cubed. Thirty in sixty seconds is zero point five micromoles per decimetre cubed per second, a concentration rate.
+> But absorbance is not a concentration. For that you make a calibration curve: known concentrations of the yellow product, read with the same filter and blank. Read zero point two four across: thirty micromoles per decimetre cubed. Thirty in sixty seconds is zero point five micromoles per decimetre cubed per second, a concentration rate.
 
 **Visual action:**
 1. At *absorbance is not a concentration*, the y-axis label **absorbance** on the `absorbance-time` graph is ringed with side-note *a reading, not an amount of product*; the graph shrinks to the left.
-2. At *you make a calibration curve*, a row of six cuvettes appears, colourless to deepest yellow in the one hue, labelled **0, 20, 40, 60, 80, 100 µmol dm⁻³**; at *known concentrations of the yellow product*, the label *standards of known concentration* brackets the row; at *read with the same filter and blank*, each standard passes through the holder in turn by its ridged faces and its reading (**0.00, 0.16, 0.32, 0.48, 0.64, 0.80**) lands as a point on `RateGraph` `calibration` at right, caption *same filter, same blank, same cuvette and volume as the reaction*; the ruled line draws through the six points; at *the colour-standards idea from the Benedict's lesson*, recall tag *recall: 2.1.2, colour standards of known concentration*.
+2. At *you make a calibration curve*, a row of six cuvettes appears, colourless to deepest yellow in the one hue, labelled **0, 20, 40, 60, 80, 100 µmol dm⁻³**; at *known concentrations of the yellow product*, the label *standards of known concentration* brackets the row; at *read with the same filter and blank*, each standard passes through the holder in turn by its ridged faces and its reading (**0.00, 0.16, 0.32, 0.48, 0.64, 0.80**) lands as a point on `RateGraph` `calibration` at right, caption *same filter, same blank, same cuvette type, optical path and total volume as the reaction*, and alongside the standard readings the recall tag *recall: 2.1.2, colour standards of known concentration* appears; the ruled line draws through the six points.
 3. At *Read zero point two four across*, `read-across` draws from **0.24** on the absorbance axis to the line; at *thirty micromoles per decimetre cubed*, the vertical drop lands at **30 µmol dm⁻³**.
-4. At *Thirty in sixty seconds*, the 60 s point on the left graph and the 30 µmol dm⁻³ reading pulse together; at *a concentration rate*, the result label lands: **30 µmol dm⁻³ ÷ 60 s = 0.50 µmol dm⁻³ s⁻¹**, beside the Beat 3 label **0.0040 s⁻¹ (absorbance)**, the two tagged *rate of change of absorbance* and *concentration rate*.
+4. At *Thirty in sixty seconds*, the 60 s point on the left graph and the 30 µmol dm⁻³ read-across value pulse together; at *a concentration rate*, the result label lands: **30 µmol dm⁻³ ÷ 60 s = 0.50 µmol dm⁻³ s⁻¹**, beside the Beat 3 label **0.0040 s⁻¹ (absorbance)**, the two tagged *rate of change of absorbance* and *concentration rate*.
 
 **On-screen text:** the six standards and readings; *our illustrative standards*; the caption; the read-across; the two rate labels with their tags; the 2.1.2 recall tag.
 
 ---
 
-### BEAT 5 · What I told you, how it is asked, and the reject card · 2:51–3:36
+### BEAT 5 · What I told you, how it is asked, and the reject card · 2:47–3:32.5
 **Narration:**
 > So, on the colorimeter: blue filter, zeroed on the blank, cuvette fixed in the light path. On the graphs: the straight start, a rate of change of absorbance; the calibration curve, a concentration. Asked why a colorimeter is used, one mark scheme credited the idea that the result is quantitative; asked how, a report stresses the filter choice. And on the card, from a June 2024 report: the intensity of one colour, absorbance at one wavelength. A bit more yellow? Thirty micromoles per decimetre cubed of product in the first minute.
 
 **Visual action:**
-1. **No new slide.** At *on the colorimeter*, the screen returns to the layout built through the lesson: `ColorimeterModel` at left with the reaction cuvette in the holder, the `absorbance-time` graph top right, the `calibration` graph bottom right. Static. At *blue filter*, `filter-blue` and the handle tag brighten; at *zeroed on the blank*, the **0.00** on the read-out and the *reaction blank* label brighten; at *cuvette fixed in the light path*, the clear faces and the *fixed* tag brighten.
-2. At *the straight start*, the ruled 0–60 s line and its triangle brighten with **0.0040 s⁻¹**; at *the calibration curve, a concentration*, the `read-across` and **0.50 µmol dm⁻³ s⁻¹** brighten.
+1. **No new slide.** At *on the colorimeter*, the screen returns to the layout built through the lesson: `ColorimeterModel` at left with the colourless reaction blank in the holder and the caption **recap: zeroing on the blank**, the `absorbance-time` graph top right, the `calibration` graph bottom right. Static. At *blue filter*, `filter-blue` and the handle tag brighten; at *zeroed on the blank*, the **0.00** on the read-out and the *reaction blank* label brighten; at *cuvette fixed in the light path*, the clear faces and the *fixed* tag brighten.
+2. At *the straight start*, the ruled 0–60 s line and its triangle brighten with **0.0040 s⁻¹**; at *the calibration curve, a concentration*, the `read-across` from absorbance **0.24** to concentration **30 µmol dm⁻³** brightens; the concentration-rate result remains unhighlighted.
 3. At *Asked why a colorimeter is used*, the layout slides left and a forms surface builds at right, plain, one row per form; row 1: **why use a colorimeter rather than judging by eye** · *our framing; S21/51 Q1(b)(i)*; at *the idea that the result is quantitative*, small type **MS p.7: "idea that (result / it, is) quantitative / AW"**.
 4. At *asked how*, row 2: **how the colorimeter is set up** · *our framing; March 2023 Paper 52 Q1(a)(i)*; at *the filter choice*, small type **ER p.14: "the filter used should not be the same as the colour of the solution being tested"**.
-5. At *on the card*, the reject card lands, struck through by hand: **✗ The colorimeter measures the solution changing colour, using different wavelengths.** / **✓ The colorimeter measures the absorbance of light of one wavelength band; as the yellow intensifies, the absorbance increases.** Small type: *our composite, built on June 2024 ER, Paper 22 Q4(b)(ii), p.15: "different wavelengths of light rather than different absorbance or transmission values using the same light wavelength"; the report also objects to "changing" colours where the intensity was wanted.* No COMMON MISTAKE badge. At *the intensity of one colour*, the words *one wavelength band* on the ✓ line are underlined in the accent.
-6. At *A bit more yellow*, the Beat 1 tube returns small beneath the card; at *Thirty micromoles per decimetre cubed of product*, its empty read-out box fills **0.24 → 30 µmol dm⁻³ after 60 s**. Final frame held 2 s: the forms, the reject card, the small tube with its number. No slogan.
+5. At *on the card*, the reject card lands beneath the forms, with `ColorimeterModel` and both graphs still at left, struck through by hand: **✗ The colorimeter measures the solution changing colour, using different wavelengths.** / **✓ The colorimeter measures the absorbance of light of one wavelength band; as the yellow intensifies, the absorbance increases.** Small type: *our composite, built on June 2024 ER, Paper 22 Q4(b)(ii), p.15: "different wavelengths of light rather than different absorbance or transmission values using the same light wavelength"; the report also objects to "changing" colours where the intensity was wanted.* No COMMON MISTAKE badge. At *the intensity of one colour*, the words *one wavelength band* on the ✓ line are underlined in the accent.
+6. At *A bit more yellow*, the Beat 1 tube returns small beneath the card; at *Thirty micromoles per decimetre cubed of product*, its empty read-out box fills **0.24**, and beside the box, outside it, a calculated tag reads **→ 30 µmol dm⁻³ after 60 s (from the calibration curve)**. Final frame held 2 s: `ColorimeterModel` and both graphs at left, the forms, the reject card, the small tube with its number and calculated tag. No slogan.
 
-**On-screen text:** the recap highlights in place; the two forms with citations; the reject card with its source line; the answered hook.
+**On-screen text:** *recap: zeroing on the blank*; the recap highlights in place; the two forms with citations; the reject card with its source line; the answered hook.
 
 ---
 
@@ -159,11 +159,11 @@ All values are **our illustrative data**, fixed by `SHARED-SPECS.md` §5 (Datase
 
 ### Dataset A — demonstration run (= 3.2.1b zero-inhibitor series)
 
-Conditions: reaction cuvette as in the model spec (buffer pH 7.0 1.0 cm³ + ONPG solution 0.5 cm³ + water 0.5 cm³ + enzyme solution 0.5 cm³, total 2.5 cm³), 25 °C, blue filter, zeroed on the reaction blank; timer at mixing.
+Conditions: reaction cuvette as in the model spec (buffer pH 7.0 1.0 cm³ + ONPG solution 0.5 cm³ + water 0.5 cm³ + enzyme solution 0.5 cm³, total 2.5 cm³), 25 °C, blue filter, zeroed on the reaction blank; timer started when enzyme first contacts the mixture (t = 0).
 
 | t / s | Absorbance | Change over previous 30 s | Concentration of yellow product from Dataset B, A ÷ 0.0080 / µmol dm⁻³ |
 |---:|---:|---:|---:|
-| 0 (start) | 0.00 | — | 0.00 ÷ 0.0080 = 0.0 |
+| 0 (assumed start; not measured) | 0.00 (assumed) | — | 0.00 ÷ 0.0080 = 0.0 |
 | 30 | 0.12 | 0.12 − 0.00 = 0.12 | 0.12 ÷ 0.0080 = 15.0 |
 | 60 | 0.24 | 0.24 − 0.12 = 0.12 | 0.24 ÷ 0.0080 = 30.0 |
 | 90 | 0.35 | 0.35 − 0.24 = 0.11 | 0.35 ÷ 0.0080 = 43.75 ≈ 43.8 |
@@ -172,8 +172,8 @@ Conditions: reaction cuvette as in the model spec (buffer pH 7.0 1.0 cm³ + ONPG
 | 180 | 0.60 | 0.60 − 0.53 = 0.07 | 0.60 ÷ 0.0080 = 75.0 |
 
 Derived numbers:
-- **The 0 s value is not a reading.** The cuvette goes into the colorimeter just after mixing, so no reading can be taken at exactly 0 s; at mixing no product has formed, so the start point is the blank's zero, 0.00 (shown so in small type in Beat 3). The first reading is at 30 s.
-- **Straight initial section:** the 0–30 s and 30–60 s increments are equal (0.12 and 0.12), so the points at 0, 30 and 60 s lie on one straight line; the 60–90 s increment falls to 0.11 and later increments keep falling (0.10, 0.08, 0.07), so the curve bends after 60 s. This is why 0–60 s is used and not a longer interval.
+- **The 0 s value is an assumed starting point, not a reading.** The illustrative model assumes no initial yellow product, negligible enzyme-preparation optical background at the selected wavelength and a stable blank. The first measurement is at 30 s. The plotted initial section is straight in this model; the two measured values independently give (0.24 − 0.12) ÷ (60 − 30) = 0.0040 s⁻¹, consistent with its assumed origin.
+- **Straight initial section:** the 0–30 s and 30–60 s increments are equal (0.12 and 0.12), so the points at 0 (assumed start), 30 and 60 s lie on one straight line; the 60–90 s increment falls to 0.11 and later increments keep falling (0.10, 0.08, 0.07), so the curve bends after 60 s. This is why 0–60 s is used and not a longer interval.
 - **Initial rate of change of absorbance** = (0.24 − 0.00) ÷ (60 s − 0 s) = 0.24 ÷ 60 s = **0.0040 s⁻¹** (absorbance has no unit).
 - For contrast only (not narrated, not on screen): the **average** rate of change of absorbance over 0–180 s would be 0.60 ÷ 180 s = 0.0033 s⁻¹, lower than the initial rate because the curve bends. It is not used as the initial rate anywhere.
 - **Initial concentration rate** (reading converted through Dataset B first, then the gradient taken, as the plan's inhibitor row requires) = (30.0 − 0.0) µmol dm⁻³ ÷ 60 s = **0.50 µmol dm⁻³ s⁻¹**. Cross-check: 0.0040 s⁻¹ ÷ 0.0080 dm³ µmol⁻¹ = 0.50 µmol dm⁻³ s⁻¹. ✓
@@ -181,7 +181,9 @@ Derived numbers:
 
 ### Dataset B — calibration standards (chosen here; 3.2.1b uses these values if it converts)
 
-Standards: a stock of the yellow product at **250 µmol dm⁻³** in buffer; each standard is buffer pH 7.0 1.0 cm³ + ONPG solution 0.5 cm³ + (stock + water) 1.0 cm³, total 2.5 cm³, i.e. the same volumes and matrix as the reaction blank with product stock in the water slots. Final concentration = 250 µmol dm⁻³ × (stock volume ÷ 2.5 cm³) = 100 × stock volume (cm³) µmol dm⁻³. Same blue filter, zeroed on the same reaction blank, same cuvette type, 25 °C.
+Standards: a stock of the yellow product at **250 µmol dm⁻³** in water; each standard is buffer pH 7.0 1.0 cm³ + ONPG solution 0.5 cm³ + (stock + water) 1.0 cm³, total 2.5 cm³, i.e. the same buffer and ONPG inputs and total volume as the reaction blank, with aqueous product stock replacing part of its water. Final concentration = 250 µmol dm⁻³ × (stock volume ÷ 2.5 cm³) = 100 × stock volume (cm³) µmol dm⁻³. Same blue filter, zeroed on the same reaction blank, same cuvette type, 25 °C.
+
+Use the same buffer stock and ONPG stock for all standards and the reaction blank. The illustrative calibration assumes that the buffer maintains the final pH at 7.0 and that the enzyme preparation's optical contribution is negligible, as specified for Dataset A. The absorbances are illustrative values, not predictions from dilution arithmetic alone.
 
 | Stock / cm³ | Water / cm³ | Concentration of yellow product / µmol dm⁻³ | Absorbance |
 |---:|---:|---:|---:|
@@ -278,13 +280,13 @@ Counted by `work/005/validate_storyboard.py` over the blockquoted narration (hyp
 | 1 Hook, context, objectives | 86 | 43.0 | 0:00–0:43 |
 | 2 The colorimeter, the filter and the zero | 118 | 59.0 | 0:43–1:42 |
 | 3 Absorbance against time | 76 | 38.0 | 1:42–2:20 |
-| 4 The calibration curve | 61 | 30.5 | 2:20–2:50.5 |
-| 5 Recap, forms, reject card | 91 | 45.5 | 2:50.5–3:36 |
-| **Total** | **432** | **216.0 = 3:36** | budget **3:15** (390 words) |
+| 4 The calibration curve | 54 | 27.0 | 2:20–2:47 |
+| 5 Recap, forms, reject card | 91 | 45.5 | 2:47–3:32.5 |
+| **Total** | **425** | **212.5 = 3:32.5** | budget **3:15** (390 words) |
 
 Error-beat time: **0** (no error beat; the reject card is 17 words inside Beat 5's close, "And on the card … at one wavelength").
 
-**Length, honestly:** **432 words, 3:36, which is 0:21 (42 words) over the 3:15 budget.** The first draft was 486 words (4:03); 54 words of repetition and signposting were cut ("Here is the colorimeter", "Now run it", "Now the filter", the spoken 0.24 ÷ 60 working now carried on screen, a second statement of the filter rule in the recap, and wordier hook and recap phrasing). Where the remaining time sits: Beat 2 (59 s) carries every procedural element the plan names for an outline — the five parts where they sit, the handling, the filter chosen by what the product absorbs with its handle and precise sentence, zeroing on the blank, the fixed filter and path, and the re-zero rule — and Beat 5 (45.5 s) carries the in-place recap, three evidence-based exam forms and the answered hook. There is no error beat to trim and no remaining repetition beyond the required recap. **Recommendation: accept the 21 s.** **Optional cut list, in order, if the conductor wants ~3:26:** (1) Beat 4 "the colour-standards idea from the Benedict's lesson" (7 words; the 2.1.2 recall tag stays on screen; remap that cue to *read with the same filter and blank*); (2) Beat 5 ", cuvette fixed in the light path" (6 words; remap that highlight to *zeroed on the blank*); (3) Beat 1 ", and two people may judge it differently" (7 words; the two eye-tags stay on screen and carry the objectivity point). Together 20 words, 10 s. Never speed the narration.
+**Length, honestly:** **425 words, 3:32.5, which is 0:17.5 (35 words) over the 3:15 budget.** The first draft was 486 words (4:03); 54 words of repetition and signposting were cut before the check ("Here is the colorimeter", "Now run it", "Now the filter", the spoken 0.24 ÷ 60 working now carried on screen, a second statement of the filter rule in the recap, and wordier hook and recap phrasing), giving 432 words (3:36). The round-one check then ruled on the author's optional cut list: cut 1, Beat 4 "the colour-standards idea from the Benedict's lesson" (7 words), **taken**; the 2.1.2 recall tag stays on screen at *read with the same filter and blank*. Cut 2 (Beat 5 ", cuvette fixed in the light path") and cut 3 (Beat 1 ", and two people may judge it differently") are **kept** as ruled: the fixed optical path belongs in the procedural recap, and the possible disagreement between observers makes the reason for a quantitative reading concrete. Where the remaining time sits: Beat 2 (59 s) carries every procedural element the plan names for an outline — the five parts where they sit, the handling, the filter chosen by what the product absorbs with its handle and precise sentence, zeroing on the blank, the fixed filter and path, and the re-zero rule — and Beat 5 (45.5 s) carries the in-place recap, the evidence-based exam forms and the answered hook. The check's visual and scoping edits add no narration words. There is no error beat to trim. **The checker accepted the remaining 17.5 s teaching overrun.** Never speed the narration; the final 2 s hold is not added to the runtime again.
 
 ---
 
@@ -313,9 +315,9 @@ What **3.2.1b inherits** from this lesson, to be copied exactly:
 | Filter | **blue** (`filter-blue`); the yellow product absorbs blue; filter not the colour of the solution |
 | Zeroing | on the reaction blank = buffer + ONPG + water in place of enzyme; **3.2.1b zeroes on each inhibitor concentration's own blank** (buffer + ONPG + inhibitor X at that concentration + water in place of enzyme); re-zero if filter or blank conditions change |
 | Volumes | buffer pH 7.0 1.0 cm³ + ONPG solution 0.5 cm³ + **0.5 cm³ slot** (water here; inhibitor X solution at the stated concentration, or its solvent for zero, in 3.2.1b) + enzyme solution 0.5 cm³ added last; total 2.5 cm³ |
-| Conditions | buffer pH 7.0; all solutions at 25 °C; timer at mixing; readings every **30 s**, 0–180 s |
+| Conditions | Buffer pH 7.0; all solutions at 25 °C; timer starts when enzyme first contacts the mixture; measured readings every 30 s from 30–180 s; (0 s, 0.00) is an explicitly assumed start under the stated optical-background assumptions. |
 | Rate | initial rate of change of absorbance = gradient over **0–60 s**; unit s⁻¹ |
-| Demonstration series | **0.00, 0.12, 0.24, 0.35, 0.45, 0.53, 0.60** = 3.2.1b's zero-inhibitor series → **0.0040 s⁻¹** |
+| Demonstration series | **0.00** (assumed start at 0 s, not measured), then readings **0.12, 0.24, 0.35, 0.45, 0.53, 0.60** at 30–180 s = 3.2.1b's zero-inhibitor series → **0.0040 s⁻¹** |
 | Calibration (only if 3.2.1b converts) | standards 0, 20, 40, 60, 80, 100 µmol dm⁻³ → absorbance 0.00, 0.16, 0.32, 0.48, 0.64, 0.80; gradient **0.0080 dm³ µmol⁻¹**; conversion = absorbance ÷ 0.0080; convert readings first, then take the 0–60 s gradient (zero-inhibitor: **0.50 µmol dm⁻³ s⁻¹**); keep readings inside 0–0.80 |
 | `RateGraph` `absorbance-time` | y *absorbance* (no unit), x *time / s*; `straight-initial` overlay with rise/run triangle; label always "rate of change of absorbance" |
 | `RateGraph` `calibration` | y *absorbance*, x *concentration of yellow product / µmol dm⁻³*; `read-across` overlay |
@@ -335,6 +337,7 @@ Also reusable: the handle and sentence (*yellow soaks up blue* → *the yellow p
 | `RateGraph` `absorbance-time` and `calibration` configurations with `straight-initial` and `read-across` overlays | **extend** 3.1.3's component | authored |
 | Gas-syringe inset (Beat 1 recall) | reuse | 3.1.3 `GasSyringeRig` |
 | Objectives surface; forms surface; reject card | shared | existing |
+| Objectives pictograms (cuvette with stopwatch; three standards with a short ruled line) | new | authored |
 | Micrographs, photographs, Cambridge artwork | none | — |
 
 ---
@@ -347,10 +350,10 @@ Also reusable: the handle and sentence (*yellow soaks up blue* → *the yellow p
 beat  words  cues maxgap  status
    1     86    12     16  ok
    2    118    18     17  ok
-   3     76    11     14  ok
-   4     61     9     14  ok
+   3     76    12     14  ok
+   4     54     8     14  ok
    5     91    14     11  ok
-TOTAL words 432  cues 64  runtime at 120 wpm 3:36.0  beats 5  failing beats 0
+TOTAL words 425  cues 64  runtime at 120 wpm 3:32.5  beats 5  failing beats 0
 ```
 
 ---
@@ -361,3 +364,23 @@ Review against the cleared 3.1.1-2 and 3.2.2-3 storyboards and their CHECK repor
 
 - **The 0 s point is not a reading.** The cuvette goes in just after mixing, so a reading at exactly 0 s is impossible. The start point is now labelled on screen and in Dataset A as the blank's zero at mixing (0.00); the first reading is at 30 s. No number changed.
 - The brief's "June 2024 ER p.58" was the conductor's slip; the plan's citation (June 2023 ER p.58) is used, and its wording stays UNVERIFIED.
+
+---
+
+## CHECK RESPONSE (round 1)
+
+Response to `work/005/checks-round-1/3.1.4-CHECK.md` (verdict **CLEARED WITH MINOR EDITS**, reviewed SHA-256 `1801ab31…dd033`, which matched this file before editing) and to the cross-cutting fixes in `work/005/checks-round-1/README.md`. Text edits only. Where the conductor review above describes the 0 s point as *the blank's zero at mixing*, M1 supersedes it: (0 s, 0.00) is an assumed start, not a reading.
+
+| Item | What changed |
+|---|---|
+| **M1** start, timer, assumed origin | Model-spec *Sequence* paragraph replaced verbatim (timer starts when enzyme first contacts the mixture; readings 30–180 s; stated optical-background assumptions; (0 s, 0.00) assumed, not a reading). Beat 3 action 1 replaced verbatim (new cue *mix, start*; stopwatch starts at first contact, never restarted; tag **t = 0: enzyme first contacts the mixture**). Beat 3 action 2 replaced verbatim (no 0 s read-out; open point **assumed start; not measured**; caption **time compressed; first reading at 30 s**). Dataset A first derived bullet replaced verbatim. Reusable-models Conditions replaced verbatim. |
+| **M2** calibration matrix | Dataset B stock now *in water*; *same volumes and matrix…* sentence replaced verbatim; the three-sentence same-stocks/assumptions paragraph added after it. Caption *same filter, same blank, same cuvette type, optical path and total volume as the reaction* replaced in both the `calibration` model spec and Beat 4 action 2. |
+| **M3** recap highlights | Beat 5 action 1: colourless reaction blank in the holder with caption **recap: zeroing on the blank**. Beat 5 action 2: the `read-across` from **0.24** to **30 µmol dm⁻³** brightens; the concentration-rate result stays unhighlighted. Narration unchanged. |
+| **M4** light/filter state | Beat 2 action 1: grey-band parenthesis deleted; preview caption *principle preview; setup follows*, filter already seated, band blue throughout. Action 3: band keeps width and blue hue but dims; 0.12/0.35 marked as illustrative preview states, not readings made before setup. Action 5: colour-pair band emerges fainter in the same blue; seated `filter-blue` highlighted instead of sliding in. Action 7: preview caption removed as the blank enters; holder lid closed before zero. |
+| **M5** blank rule, hook transition | Causal spine: *for this assay, zero the colorimeter on a reaction blank with water replacing the enzyme solution*. Beat 1 action 5 replaced verbatim (match dissolve, not a pour; read-out **0.24** labelled **preview: our 60 s example**). |
+| **Cut 1** (Benedict's recall, 7 words) | **Taken.** Beat 4 sentence now ends *…read with the same filter and blank.*; old recall cue deleted; the 2.1.2 recall tag appears at the existing cue *read with the same filter and blank*, alongside the standard readings. No duplicate cue. |
+| **Cuts 2 and 3** | **Kept**, as ruled. Narration unchanged. |
+| **Cross-cutting 1** timer at mixing | Covered by M1; Dataset A conditions line now reads *timer started when enzyme first contacts the mixture (t = 0)*. |
+| **Cross-cutting 2** no text-only frames | Objectives surface stays its own styled surface (no lesson diagram) but each line gets an authored pictogram (cuvette + stopwatch; three standards + short ruled line); pictograms added to Assets. Beat 5 reject card and final frame explicitly keep `ColorimeterModel` and both graphs on screen at left. |
+| **Cross-cutting 3** calculated vs measured | Dataset A table row 0 relabelled *0 (assumed start; not measured) / 0.00 (assumed)*; straight-section bullet marks the 0 s point as the assumed start; Reusable-models demonstration series separates the assumed 0.00 from the six readings. Beat 4 action 4 *30 µmol dm⁻³ reading* → *read-across value*. Beat 5 action 6: the hook's read-out box shows only **0.24**; the calibrated **30 µmol dm⁻³** sits outside it as a calculated tag. |
+| **Bookkeeping** | Header notes check edits applied; Beat 4/5 windows 2:20–2:47 and 2:47–3:32.5; on-screen-text lines for Beats 1, 2, 3 and 5 list the new captions; word ledger, totals and *Length, honestly* updated to **425 words, 3:32.5, 17.5 s over**; Validator run block refreshed (cues 64: Beat 3 +1, Beat 4 −1). SUMMARY's *no model names* line (component identifiers only, nothing spoken) needs no action. Handoff to 3.2.1b: carry M1's assumed-origin distinction (its Dataset C and Beat 11 are not edited here). |
