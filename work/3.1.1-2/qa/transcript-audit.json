@@ -1,0 +1,289 @@
+[
+  {
+    "beat": 1,
+    "sourceWords": 88,
+    "recognizerTokens": 88,
+    "matchedSourceTokens": 88,
+    "differences": []
+  },
+  {
+    "beat": 2,
+    "sourceWords": 62,
+    "recognizerTokens": 62,
+    "matchedSourceTokens": 62,
+    "differences": []
+  },
+  {
+    "beat": 3,
+    "sourceWords": 72,
+    "recognizerTokens": 72,
+    "matchedSourceTokens": 72,
+    "differences": []
+  },
+  {
+    "beat": 4,
+    "sourceWords": 87,
+    "recognizerTokens": 87,
+    "matchedSourceTokens": 84,
+    "differences": [
+      {
+        "op": "replace",
+        "script": "catalyse",
+        "heard": "catalyze"
+      },
+      {
+        "op": "replace",
+        "script": "catalase",
+        "heard": "catalyze"
+      },
+      {
+        "op": "replace",
+        "script": "catalyse",
+        "heard": "catalyze"
+      }
+    ]
+  },
+  {
+    "beat": 5,
+    "sourceWords": 158,
+    "recognizerTokens": 158,
+    "matchedSourceTokens": 154,
+    "differences": [
+      {
+        "op": "replace",
+        "script": "ex",
+        "heard": "x"
+      },
+      {
+        "op": "replace",
+        "script": "ex",
+        "heard": "x"
+      },
+      {
+        "op": "replace",
+        "script": "learnt",
+        "heard": "learned"
+      },
+      {
+        "op": "replace",
+        "script": "ex",
+        "heard": "x"
+      }
+    ]
+  },
+  {
+    "beat": 6,
+    "sourceWords": 67,
+    "recognizerTokens": 67,
+    "matchedSourceTokens": 66,
+    "differences": [
+      {
+        "op": "replace",
+        "script": "r",
+        "heard": "our"
+      }
+    ]
+  },
+  {
+    "beat": 7,
+    "sourceWords": 95,
+    "recognizerTokens": 95,
+    "matchedSourceTokens": 94,
+    "differences": [
+      {
+        "op": "replace",
+        "script": "this",
+        "heard": "the"
+      }
+    ]
+  },
+  {
+    "beat": 8,
+    "sourceWords": 68,
+    "recognizerTokens": 68,
+    "matchedSourceTokens": 67,
+    "differences": [
+      {
+        "op": "replace",
+        "script": "seats",
+        "heard": "seeds"
+      }
+    ]
+  },
+  {
+    "beat": 9,
+    "sourceWords": 121,
+    "recognizerTokens": 121,
+    "matchedSourceTokens": 116,
+    "differences": [
+      {
+        "op": "replace",
+        "script": "one",
+        "heard": "1"
+      },
+      {
+        "op": "insert",
+        "script": "",
+        "heard": "water"
+      },
+      {
+        "op": "replace",
+        "script": "o h",
+        "heard": "oh"
+      },
+      {
+        "op": "replace",
+        "script": "four",
+        "heard": "4"
+      },
+      {
+        "op": "replace",
+        "script": "four",
+        "heard": "4"
+      }
+    ]
+  },
+  {
+    "beat": 10,
+    "sourceWords": 122,
+    "recognizerTokens": 122,
+    "matchedSourceTokens": 122,
+    "differences": []
+  },
+  {
+    "beat": 11,
+    "sourceWords": 220,
+    "recognizerTokens": 220,
+    "matchedSourceTokens": 212,
+    "differences": [
+      {
+        "op": "replace",
+        "script": "learnt",
+        "heard": "learned"
+      },
+      {
+        "op": "replace",
+        "script": "catalyses",
+        "heard": "catalyzes"
+      },
+      {
+        "op": "replace",
+        "script": "one six",
+        "heard": "1 6"
+      },
+      {
+        "op": "replace",
+        "script": "catalyses",
+        "heard": "catalyzes"
+      },
+      {
+        "op": "replace",
+        "script": "one six",
+        "heard": "1 6"
+      },
+      {
+        "op": "replace",
+        "script": "laccase",
+        "heard": "lackeys"
+      }
+    ]
+  },
+  {
+    "beat": 12,
+    "sourceWords": 98,
+    "recognizerTokens": 99,
+    "matchedSourceTokens": 97,
+    "differences": [
+      {
+        "op": "insert",
+        "script": "",
+        "heard": "out"
+      },
+      {
+        "op": "replace",
+        "script": "lysozyme",
+        "heard": "lysozim"
+      }
+    ]
+  },
+  {
+    "beat": 13,
+    "sourceWords": 92,
+    "recognizerTokens": 92,
+    "matchedSourceTokens": 92,
+    "differences": []
+  },
+  {
+    "beat": 14,
+    "sourceWords": 129,
+    "recognizerTokens": 131,
+    "matchedSourceTokens": 128,
+    "differences": [
+      {
+        "op": "replace",
+        "script": "the",
+        "heard": "this"
+      },
+      {
+        "op": "insert",
+        "script": "",
+        "heard": "together"
+      },
+      {
+        "op": "insert",
+        "script": "",
+        "heard": "end"
+      }
+    ]
+  },
+  {
+    "beat": 15,
+    "sourceWords": 52,
+    "recognizerTokens": 52,
+    "matchedSourceTokens": 52,
+    "differences": []
+  },
+  {
+    "beat": 16,
+    "sourceWords": 184,
+    "recognizerTokens": 182,
+    "matchedSourceTokens": 178,
+    "differences": [
+      {
+        "op": "replace",
+        "script": "swap",
+        "heard": "swab"
+      },
+      {
+        "op": "replace",
+        "script": "labelled e s c",
+        "heard": "labeled esc"
+      },
+      {
+        "op": "replace",
+        "script": "earns",
+        "heard": "in"
+      }
+    ]
+  },
+  {
+    "beat": 17,
+    "sourceWords": 104,
+    "recognizerTokens": 104,
+    "matchedSourceTokens": 104,
+    "differences": []
+  },
+  {
+    "beat": 18,
+    "sourceWords": 107,
+    "recognizerTokens": 107,
+    "matchedSourceTokens": 106,
+    "differences": [
+      {
+        "op": "replace",
+        "script": "laccase",
+        "heard": "lackas"
+      }
+    ]
+  }
+]

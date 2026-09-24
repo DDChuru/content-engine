@@ -1,7 +1,7 @@
 # 3.1.1-2 Enzymes: where and how they act · BUILD PROGRESS (handover)
 
 Builder: claude-opus-5-5 (cloud run 003). Branch `cloud/003-3.1.1-2` only. Work dir `work/3.1.1-2/`.
-**Phase: AUDIO COMPLETE → next: holds + cue plan + timeline.**
+**Phase: TIMELINE COMPLETE → next: shared components + beats (author, qa-beat, look, approve, render).**
 
 ## Resume procedure (fresh container)
 1. `apt-get update && apt-get install -y ffmpeg`; `pip install faster-whisper pillow numpy fonttools brotli`.
@@ -15,6 +15,12 @@ Builder: claude-opus-5-5 (cloud run 003). Branch `cloud/003-3.1.1-2` only. Work 
 - Audio: 18 beats, Thandi v2 speed 1.0, no stretch. Request-only normalisations in `request_normalise.json`
   (B4 Catalase→Catalaise, B5 catalyses→catalyzes); B11 retaken unchanged. Detail: `qa/audio-review.md`.
 - ElevenLabs characters: before 222,543; after audio 231,267.
+
+- Holds (digital silence, `insert_holds.py`): B5 3 s, B11 4 s, B14 3 s, B16 4 s silent reads; B18 5 s anchored read
+  between "Read it," and "then watch…", plus a 2 s END hold. `audio/*.timed.wav` rebuilt by `python3 insert_holds.py`.
+- Timeline: `cue_plan.py` (224 cues) → `assemble_timeline.py` → `timeline.json`: 900.133 s, 27,004 frames, max cue gap
+  11.96 s. `public/narration.wav` (not in git) is rebuilt by `python3 assemble_timeline.py`.
+  Cue syntax: '^' = trigger word; trailing '$' = trigger at the END of the last word (error-beat exit cues).
 
 ## Decisions
 - House style: the reference's `topic-02/shared/src` was NOT in the inputs; rebuilt in `shared/src/` from the brand
