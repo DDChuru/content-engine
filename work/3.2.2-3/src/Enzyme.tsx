@@ -129,9 +129,9 @@ export function Enzyme({x, y, s = 1, distort = 0, opacity = 1, labEnzyme = 0, la
         : <g opacity={labActive}><path d={`M${x + (ax - 20) * s} ${y + (ay - 50) * s}L${x + (ax - 40) * s} ${y + (ay - 120) * s}`} stroke={C.ink} strokeWidth={2} /><Txt x={x + (ax - 40) * s} y={y + (ay - 128) * s} size={labelSize} weight={800} anchor="middle" fill={labActiveHi > 0 ? C.teal : C.ink}>active site</Txt></g>)}
       {labActiveHi > 0 && <rect x={x + (ax + 70) * s} y={y + (ay - 142) * s} width={126} height={labelSize * 1.5} rx={6} fill={C.teal} opacity={0.12 * labActiveHi} />}
       {labSecond > 0 && <g opacity={labSecond}>
-        <path d={`M${x + (bx - 30) * s} ${y + (by + 30) * s}L${x + (bx - 60) * s} ${y + (by + 80) * s}`} stroke={C.ink} strokeWidth={2} />
-        <Txt x={x + (bx - 60) * s} y={y + (by + 106) * s} size={labelSize - 2} weight={800} anchor="middle">a site other than the active site</Txt>
-        {secondSmall && <Txt x={x + (bx - 60) * s} y={y + (by + 106) * s + labelSize * 1.1} size={16} weight={700} anchor="middle" fill={C.muted}>MS p.9 also credits "allosteric site" as the name</Txt>}
+        <path d={`M${x + (bx - 24) * s} ${y + (by + 4) * s}L${x + (bx - 60) * s} ${y + (by + 4) * s}`} stroke={C.ink} strokeWidth={2} />
+        <Txt x={x + (bx - 66) * s} y={y + (by + 11) * s} size={labelSize - 2} weight={800} anchor="end">a site other than the active site</Txt>
+        {secondSmall && <Txt x={x + (bx - 66) * s} y={y + (by + 11) * s + labelSize * 1.05} size={15} weight={700} anchor="end" fill={C.muted}>MS p.9 also credits "allosteric site" as the name</Txt>}
       </g>}
       {caption > 0 && <Txt x={x} y={y + (R + (labEnzyme > 0 ? 80 : 44)) * s} size={17} weight={700} anchor="middle" fill={C.muted} opacity={caption}>MODEL · schematic; not a real protein shape</Txt>}
     </g>
@@ -154,6 +154,17 @@ export function ActivityArrow({x, y, w = 150, level = 1, opacity = 1, label = 'r
       <path d={`M${x} ${y}H${x + w - 20}`} stroke={C.good} strokeWidth={th} strokeLinecap="butt" />
       <path d={`M${x + w} ${y}L${x + w - 26} ${y - th / 2 - 12}V${y + th / 2 + 12}Z`} fill={C.good} />
       <Txt x={x + w / 2} y={y + th / 2 + 36} size={18} weight={700} anchor="middle" fill={C.muted}>{label}</Txt>
+    </g>
+  );
+}
+
+/** A molecule drawn free-standing, its centroid at (px, py), scale s, rotation rot (degrees). */
+export function MolAt({px, py, s = 1, kind = 'substrate', rot = 0, opacity = 1, dash}: any) {
+  if (opacity <= 0) return null;
+  const pts = molecule(kind), [cx, cy] = centroid(pts), st = (MS as any)[kind];
+  return (
+    <g transform={`translate(${px} ${py}) rotate(${rot}) scale(${s}) translate(${-cx} ${-cy})`} opacity={opacity < 1 ? opacity : undefined} data-mol={kind}>
+      <path d={poly(pts)} fill={dash ? 'none' : st.fill} stroke={st.stroke} strokeWidth={3 / s} strokeLinejoin="round" strokeDasharray={dash} />
     </g>
   );
 }

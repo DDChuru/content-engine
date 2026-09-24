@@ -1,9 +1,9 @@
 # 3.2.2-3 — Vmax, Km and inhibitors on the graph · BUILD PROGRESS (handover file)
 
-Updated 2026-09-24 11:58 (UTC, cloud container). Builder: claude-opus-5-5.
-**Phase: 3 BEATS (audio + timeline complete; authoring beats in order)** · **Beats complete: 7 / 17** · master: not yet built
-Live render processes: 4854 node render-beat.cjs 8
-4993 node render-beat.cjs 9
+Updated 2026-09-24 12:03 (UTC, cloud container). Builder: claude-opus-5-5.
+**Phase: 3 BEATS (audio + timeline complete; authoring beats in order)** · **Beats complete: 10 / 17** · master: not yet built
+Live render processes: 5398 node render-beat.cjs 10
+5572 node render-beat.cjs 12
 
 | Beat | Heading | Frames | Cues | State |
 |---|---|---|---|---|
@@ -14,11 +14,11 @@ Live render processes: 4854 node render-beat.cjs 8
 | 5 | The construction: Vmax, half it, across, down · 2:25–3:15 | 1321 | 12 | COMPLETE |
 | 6 | COMMON MISTAKE E37: the right number, and a bare graph · 3 | 2709 | 18 | COMPLETE |
 | 7 | What Km tells you: the eager enzyme · 4:25–5:10 | 1398 | 10 | COMPLETE |
-| 8 | Three enzymes, each from its own half-Vmax · 5:10–6:05 | 1364 | 15 | RENDERING (lock) |
-| 9 | COMMON MISTAKE E36: Vmax called affinity; the gradient cal | 2757 | 15 | approved, not rendered |
-| 10 | Same enzyme, with and without an inhibitor · 7:15–8:05 | 1410 | 12 | not authored |
-| 11 | Competitive: in the active site, overcome by substrate · 8 | 1605 | 13 | not authored |
-| 12 | Non-competitive: another site, and the active site changes | 1860 | 16 | not authored |
+| 8 | Three enzymes, each from its own half-Vmax · 5:10–6:05 | 1364 | 15 | COMPLETE |
+| 9 | COMMON MISTAKE E36: Vmax called affinity; the gradient cal | 2757 | 15 | COMPLETE |
+| 10 | Same enzyme, with and without an inhibitor · 7:15–8:05 | 1410 | 12 | RENDERING (lock) |
+| 11 | Competitive: in the active site, overcome by substrate · 8 | 1605 | 13 | COMPLETE |
+| 12 | Non-competitive: another site, and the active site changes | 1860 | 16 | approved, not rendered |
 | 13 | COMMON MISTAKE E41: the two curves swapped · 10:10–11:20 | 2667 | 16 | not authored |
 | 14 | The sentences you write, clause by clause · 11:20–12:10 | 1487 | 11 | not authored |
 | 15 | What I told you, read off the graph and the model · 12:10– | 1324 | 10 | not authored |
