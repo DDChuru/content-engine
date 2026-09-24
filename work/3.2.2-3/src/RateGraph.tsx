@@ -31,8 +31,8 @@ export function Axes({g, xLabel, yLabel, xTicks = [], yTicks = [], hiX = 0, hiY 
             <Txt x={ox - 14} y={gy(g, v) + 7} size={size - 2} weight={600} anchor="end" fill={C.muted}>{tickFmt(v)}</Txt>
           </g>
         ))}
-        {hiY > 0 && <rect x={ox - 60 - size * 0.8} y={g.y + g.h / 2 - 260} width={size * 1.6} height={520} rx={8} fill={C.teal} opacity={0.12 * clamp01(hiY)} />}
-        <Txt x={ox - 64} y={g.y + g.h / 2} size={size} weight={800} anchor="middle" fill={labCol(hiY)} rotate={-90}>{yLabel}</Txt>
+        {hiY > 0 && <rect x={ox - (yTicks.length ? 100 : 64) + 4 - size * 0.8} y={g.y + g.h / 2 - 260} width={size * 1.6} height={520} rx={8} fill={C.teal} opacity={0.12 * clamp01(hiY)} />}
+        <Txt x={ox - (yTicks.length ? 100 : 64)} y={g.y + g.h / 2} size={size} weight={800} anchor="middle" fill={labCol(hiY)} rotate={-90}>{yLabel}</Txt>
       </g>
       <path d={`M${ox} ${oy}H${ox + g.w + 18}`} stroke={C.ink} strokeWidth={3} />
       <path d={`M${ox + g.w + 8} ${oy - 8}L${ox + g.w + 24} ${oy}L${ox + g.w + 8} ${oy + 8}`} fill="none" stroke={C.ink} strokeWidth={3} />

@@ -23,7 +23,7 @@ export function Card({x, y, w, h, opacity = 1, active = false, stroke, fill, rx 
 /** Pill tag. Width estimated from the text length (Source Sans 3 ≈ 0.52 em average). */
 export function Tag({x, y, text, size = 22, fill = C.ink, bg = C.white, stroke = C.line, opacity = 1, anchor = 'start', weight = 800, strike = 0}: any) {
   if (opacity <= 0) return null;
-  const w = String(text).length * size * 0.53 + size * 1.1, h = size * 1.6;
+  const w = textW(text, size, weight) + size * 1.1, h = size * 1.6;
   const x0 = anchor === 'middle' ? x - w / 2 : anchor === 'end' ? x - w : x;
   return (
     <g opacity={opacity < 1 ? opacity : undefined}>
@@ -33,7 +33,7 @@ export function Tag({x, y, text, size = 22, fill = C.ink, bg = C.white, stroke =
     </g>
   );
 }
-export const tagWidth = (text: string, size = 22) => String(text).length * size * 0.53 + size * 1.1;
+export const tagWidth = (text: string, size = 22) => textW(text, size, 800) + size * 1.1;
 export function Cite({x, y, text, size = 17, fill = C.muted, anchor = 'start', opacity = 1}: any) {
   return <Txt x={x} y={y} size={size} weight={700} fill={fill} anchor={anchor} opacity={opacity}>{text}</Txt>;
 }
@@ -68,3 +68,12 @@ export function Under({x, y, w, p = 1, color = C.primary, width = 4}: any) {
 }
 export const Cross = ({x, y, s = 16, color = C.primary, width = 5, opacity = 1}: any) => opacity <= 0 ? null : <path d={`M${x - s} ${y - s}L${x + s} ${y + s}M${x + s} ${y - s}L${x - s} ${y + s}`} stroke={color} strokeWidth={width} strokeLinecap="round" opacity={opacity < 1 ? opacity : undefined} />;
 export const Tick = ({x, y, s = 16, color = C.good, width = 5, opacity = 1}: any) => opacity <= 0 ? null : <path d={`M${x - s} ${y}L${x - s * 0.3} ${y + s * 0.7}L${x + s} ${y - s * 0.8}`} fill="none" stroke={color} strokeWidth={width} strokeLinecap="round" strokeLinejoin="round" opacity={opacity < 1 ? opacity : undefined} />;
+import M from './metrics.json';
+/** Measured advance width of a string in Source Sans 3 (fallback glyphs ≈ 0.55 em). */
+export function textW(str: string, size: number, weight = 600) {
+  const w = [400, 600, 700, 800].reduce((b, x) => (Math.abs(x - weight) < Math.abs(b - weight) ? x : b), 600);
+  const t = (M as any)[w];
+  let s = 0;
+  for (const ch of String(str)) s += t[ch] ?? 0.55;
+  return s * size;
+}
