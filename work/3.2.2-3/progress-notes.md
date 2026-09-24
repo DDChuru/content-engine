@@ -1,4 +1,4 @@
-PHASE: 5 BUNNY (master verified, branded verified, uploaded guid d2571913-2ef8-4046-b7e4-4ddac6062802; polling to status 4)
+PHASE: BUILD COMPLETE — master + branded verified; Bunny guid d2571913-2ef8-4046-b7e4-4ddac6062802 status 4 (13:05 UTC); REPORT.md
 
 ## Rules (from Durai's brief, cloud run 004-3.2.2-3)
 Narration FROZEN (STORYBOARD.md = cloud-inputs/003/topic-03/3.2.2-3/STORYBOARD.md, copied verbatim). Push ONLY branch

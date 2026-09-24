@@ -13,7 +13,7 @@
 | Re-render of beats 1–11 made stale by shared-code edits | 12:13–12:21 | 8 min |
 | finish + verify + 16 contact sheets; B11 fix; re-finish, re-verify, re-sheets | 12:21–12:31 | 10 min |
 | Branding (apply-branding-cloud.sh) + branded checks | 12:31–12:45 | 14 min |
-| Bunny create + upload (3.4 s) → status 4 | 12:45–BUNNY_DONE | BUNNY_WAIT |
+| Bunny create + upload (3.4 s) → status 4 | 12:45–13:05 | 20 min (encode queue) |
 
 ## Audio
 ElevenLabs Thandi `BcpjRWrYhDBHmOnetmBl`, `eleven_multilingual_v2`, speed 1.0, one MP3 per beat, no time-stretch.
@@ -28,7 +28,7 @@ concentration all transcribed correctly. **Worth a listen by ear:** B16 "a row f
   sha256 `fe29ad5cb287c80b5e3aa1d153b5b6195e43aeda0ac789fe8f51171c8de877c7`
 - **Branded** `…-BRANDED.mp4`: **914.996 s** (= master + 11.029 s).
   sha256 `52da90bee9e994b055975d003b56d9f7a3bd53265f5e3bf7c93753ea565a6cb3`
-- **Bunny** lib 758254, **guid `d2571913-2ef8-4046-b7e4-4ddac6062802`**, "REVIEW 3.2.2-3 …", no collection; HTTP 200; **status 4 at BUNNY_T4**.
+- **Bunny** lib 758254, **guid `d2571913-2ef8-4046-b7e4-4ddac6062802`**, "REVIEW 3.2.2-3 …", no collection; HTTP 200; **status 4 at 13:05:01 UTC, 19.5 min after upload** (240p–1080p).
 
 ## Verification (standard order; `qa/verification.json`, re-run on the final master)
 1 ffprobe duration 903.967 s · 2 video 903.967 ≥ encoded audio 902.966 (1.0 s tail) · 3 full decode, 0 errors ·

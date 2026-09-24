@@ -1,7 +1,7 @@
 # 3.2.2-3 — Vmax, Km and inhibitors on the graph · BUILD PROGRESS (handover file)
 
-Updated 2026-09-24 12:57 (UTC, cloud container). Builder: claude-opus-5-5.
-**Phase: 5 BUNNY (master verified, branded verified, uploaded guid d2571913-2ef8-4046-b7e4-4ddac6062802; polling to status 4)** · **Beats complete: 17 / 17** · master: present
+Updated 2026-09-24 13:05 (UTC, cloud container). Builder: claude-opus-5-5.
+**Phase: BUILD COMPLETE — master + branded verified; Bunny guid d2571913-2ef8-4046-b7e4-4ddac6062802 status 4 (13:05 UTC); REPORT.md** · **Beats complete: 17 / 17** · master: present
 Live render processes: none
 
 | Beat | Heading | Frames | Cues | State |
