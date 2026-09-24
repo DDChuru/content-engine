@@ -16,11 +16,14 @@ export function Lines({x, y, text, size = 24, step, weight = 600, fill = C.ink, 
   const st = step ?? size * 1.3;
   return <g opacity={opacity < 1 ? opacity : undefined}>{ls.map((l, i) => <Txt key={i} x={x} y={y + i * st} size={size} weight={weight} fill={fill} anchor={anchor} italic={italic}>{l}</Txt>)}</g>;
 }
-/** Approximate advance width for Source Sans 3 (for pills and underlines). */
+/** Advance width from the brand font's real metrics (Source Sans 3; shared/src/metrics.json, built from
+ * the instanced TTFs). Glyphs outside the brand subset fall back to DejaVu-like 0.6 em. */
+import M from './metrics.json';
 export const textW = (t: string, size: number, weight = 600) => {
+  const tab: any = (M as any)[weight >= 700 ? 700 : weight >= 600 ? 600 : 400];
   let w = 0;
-  for (const ch of String(t)) w += /[mwMW@]/.test(ch) ? 0.8 : /[A-Z0-9]/.test(ch) ? 0.6 : /[iljtfr.,:;'’|! ]/.test(ch) ? 0.28 : /[–—→✓✗]/.test(ch) ? 0.75 : 0.5;
-  return w * size * (weight >= 700 ? 1.04 : 1);
+  for (const ch of String(t)) w += tab[ch] ?? 0.6;
+  return w * size;
 };
 export function Card({x, y, w, h, fill = C.white, stroke = C.line, opacity = 1, active = false, rx = 16, children}: any) {
   if (opacity <= 0) return null;
