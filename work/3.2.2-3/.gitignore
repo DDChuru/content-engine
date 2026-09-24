@@ -10,3 +10,5 @@ qa/encoded-frames/
 audio/probe/*.mp3
 bookends/
 node_modules
+!audio/beat-*.mp3
+!audio/superseded-b09-vmax/*.mp3
