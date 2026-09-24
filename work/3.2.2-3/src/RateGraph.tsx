@@ -17,7 +17,7 @@ export const gx = (g: G, S: number) => g.x + (S / g.xmax) * g.w;
 export const gy = (g: G, v: number) => g.y + g.h - (v / g.ymax) * g.h;
 
 /** Axes: origin bottom-left at (g.x, g.y+g.h). Labels as text nodes. hiX/hiY brighten a label (0..1). */
-export function Axes({g, xLabel, yLabel, xTicks = [], yTicks = [], hiX = 0, hiY = 0, dimY = 0, traceX = 0, xUnitPulse = 0, size = 22, tickFmt = (v: number) => String(v), opacity = 1}: any) {
+export function Axes({g, xLabel, yLabel, xTicks = [], yTicks = [], hiX = 0, hiY = 0, dimY = 0, traceX = 0, xUnitPulse = 0, size = 22, tickFmt = (v: number) => String(v), opacity = 1, xLabelDy = 0, yLabelDx = 0}: any) {
   const ox = g.x, oy = g.y + g.h;
   const labCol = (hi: number) => (hi > 0 ? C.teal : C.ink);
   return (
@@ -32,7 +32,7 @@ export function Axes({g, xLabel, yLabel, xTicks = [], yTicks = [], hiX = 0, hiY 
           </g>
         ))}
         {hiY > 0 && <rect x={ox - (yTicks.length ? 100 : 64) + 4 - size * 0.8} y={g.y + g.h / 2 - 260} width={size * 1.6} height={520} rx={8} fill={C.teal} opacity={0.12 * clamp01(hiY)} />}
-        <Txt x={ox - (yTicks.length ? 100 : 64)} y={g.y + g.h / 2} size={size} weight={800} anchor="middle" fill={labCol(hiY)} rotate={-90}>{yLabel}</Txt>
+        <Txt x={ox - (yTicks.length ? 100 : 64) - yLabelDx} y={g.y + g.h / 2} size={size} weight={800} anchor="middle" fill={labCol(hiY)} rotate={-90}>{yLabel}</Txt>
       </g>
       <path d={`M${ox} ${oy}H${ox + g.w + 18}`} stroke={C.ink} strokeWidth={3} />
       <path d={`M${ox + g.w + 8} ${oy - 8}L${ox + g.w + 24} ${oy}L${ox + g.w + 8} ${oy + 8}`} fill="none" stroke={C.ink} strokeWidth={3} />
@@ -43,8 +43,8 @@ export function Axes({g, xLabel, yLabel, xTicks = [], yTicks = [], hiX = 0, hiY 
           <Txt x={gx(g, v)} y={oy + 32} size={size - 2} weight={600} anchor="middle" fill={C.muted}>{tickFmt(v)}</Txt>
         </g>
       ))}
-      {hiX > 0 && <rect x={g.x + g.w / 2 - 330} y={oy + (xTicks.length ? 44 : 14)} width={660} height={size * 1.6} rx={8} fill={C.teal} opacity={0.12 * clamp01(hiX)} />}
-      <Txt x={g.x + g.w / 2} y={oy + (xTicks.length ? 72 : 44)} size={size} weight={800} anchor="middle" fill={labCol(hiX + xUnitPulse)}>{xLabel}</Txt>
+      {hiX > 0 && <rect x={g.x + g.w / 2 - 330} y={oy + (xTicks.length ? 44 : 14) + xLabelDy} width={660} height={size * 1.6} rx={8} fill={C.teal} opacity={0.12 * clamp01(hiX)} />}
+      <Txt x={g.x + g.w / 2} y={oy + (xTicks.length ? 72 : 44) + xLabelDy} size={size} weight={800} anchor="middle" fill={labCol(hiX + xUnitPulse)}>{xLabel}</Txt>
     </g>
   );
 }

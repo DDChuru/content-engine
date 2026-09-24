@@ -1,8 +1,9 @@
 # 3.2.2-3 — Vmax, Km and inhibitors on the graph · BUILD PROGRESS (handover file)
 
-Updated 2026-09-24 11:56 (UTC, cloud container). Builder: claude-opus-5-5.
-**Phase: 3 BEATS (audio + timeline complete; authoring beats in order)** · **Beats complete: 5 / 17** · master: not yet built
-Live render processes: 4521 node render-beat.cjs 6
+Updated 2026-09-24 11:58 (UTC, cloud container). Builder: claude-opus-5-5.
+**Phase: 3 BEATS (audio + timeline complete; authoring beats in order)** · **Beats complete: 7 / 17** · master: not yet built
+Live render processes: 4854 node render-beat.cjs 8
+4993 node render-beat.cjs 9
 
 | Beat | Heading | Frames | Cues | State |
 |---|---|---|---|---|
@@ -11,10 +12,10 @@ Live render processes: 4521 node render-beat.cjs 6
 | 3 | The curve, and Vmax from the plateau · 1:05–1:50 | 1175 | 11 | COMPLETE |
 | 4 | One number for affinity: Km · 1:50–2:25 | 1239 | 9 | COMPLETE |
 | 5 | The construction: Vmax, half it, across, down · 2:25–3:15 | 1321 | 12 | COMPLETE |
-| 6 | COMMON MISTAKE E37: the right number, and a bare graph · 3 | 2709 | 18 | approved, not rendered |
-| 7 | What Km tells you: the eager enzyme · 4:25–5:10 | 1398 | 10 | not authored |
-| 8 | Three enzymes, each from its own half-Vmax · 5:10–6:05 | 1364 | 15 | not authored |
-| 9 | COMMON MISTAKE E36: Vmax called affinity; the gradient cal | 2757 | 15 | not authored |
+| 6 | COMMON MISTAKE E37: the right number, and a bare graph · 3 | 2709 | 18 | COMPLETE |
+| 7 | What Km tells you: the eager enzyme · 4:25–5:10 | 1398 | 10 | COMPLETE |
+| 8 | Three enzymes, each from its own half-Vmax · 5:10–6:05 | 1364 | 15 | RENDERING (lock) |
+| 9 | COMMON MISTAKE E36: Vmax called affinity; the gradient cal | 2757 | 15 | approved, not rendered |
 | 10 | Same enzyme, with and without an inhibitor · 7:15–8:05 | 1410 | 12 | not authored |
 | 11 | Competitive: in the active site, overcome by substrate · 8 | 1605 | 13 | not authored |
 | 12 | Non-competitive: another site, and the active site changes | 1860 | 16 | not authored |
