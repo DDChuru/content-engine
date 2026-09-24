@@ -157,7 +157,9 @@ export const UNITS: SyllabusUnit[] = [
     title: 'Biological molecules',
     paper: 'AS Level · Topic 2',
     topics: [
+      { code: 'B2.1.1', title: 'Food tests', live: true, slug: 'biology-food-tests', hint: 'food tests' },
       { code: 'B2.1.2', title: 'The semi-quantitative Benedict test', live: true, slug: 'biology-the-semi-quantitative-benedict-test', hint: 'food tests' },
+      { code: 'B2.1.3', title: 'The non-reducing sugar test', live: true, slug: 'biology-the-non-reducing-sugar-test', hint: 'food tests' },
       { code: 'B2.2.1', title: 'Alpha and beta glucose', live: true, slug: 'biology-alpha-and-beta-glucose', hint: 'carbohydrates' },
       { code: 'B2.2.2', title: 'Monomers, polymers and sugars', live: true, slug: 'biology-monomers-polymers-and-sugars', hint: 'carbohydrates' },
       { code: 'B2.2.3', title: 'Covalent bonds in polymers', live: true, slug: 'biology-covalent-bonds-in-polymers', hint: 'carbohydrates' },
