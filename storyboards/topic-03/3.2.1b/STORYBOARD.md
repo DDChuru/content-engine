@@ -88,11 +88,11 @@ Beat windows in the headings are provisional (words ÷ 120 per beat, plus the pr
 
 ### BEAT 2 · Recall: the sentence from 3.2.1 · 0:36–1:30
 **Narration:**
-> First, the one idea you need from the lesson on temperature and pH. Here is an enzyme, drawn as a model. A substrate molecule collides with the active site, binds and forms an enzyme–substrate complex; the reaction happens, the products leave, and the site is free again. That lesson built one sentence. The rate depends on how often substrate molecules meet a working active site and form enzyme–substrate complexes per unit time, and on whether the active sites stay functional. High temperature or extreme pH can denature an enzyme, so the substrate no longer fits the active site. Today those conditions stay fixed, and the amounts change.
+> First, the one idea you need from the lesson on temperature and pH. A substrate molecule collides with the active site, binds and forms an enzyme–substrate complex; the reaction happens, the products leave, and the site is free again. That lesson built one sentence. The rate depends on how often substrate molecules meet a working active site and form enzyme–substrate complexes per unit time, and on whether the active sites stay functional. High temperature or extreme pH can denature an enzyme, so the substrate no longer fits the active site. Today those conditions stay fixed, and the amounts change.
 
 **Visual action:**
-1. The tag **recall: 3.2.1** sits top left for the whole beat. At *the one idea you need*, a plain recall surface; at *drawn as a model*, `EnzymeActiveSiteModel` in `rest-lk` at centre with labels **enzyme**, **active site**, caption *schematic; not a real protein shape*.
-2. At *collides with the active site*, a substrate outline travels in and seats (motion); at *forms an enzyme–substrate complex*, `bound` with the bracket **enzyme–substrate complex**; at *the products leave*, `products`, two outlines drift out; at *the site is free again*, the empty cleft is traced.
+1. The tag **recall: 3.2.1** sits top left for the whole beat. At *the one idea you need*, a plain recall surface; `EnzymeActiveSiteModel` in `rest-lk` at centre with labels **enzyme**, **active site**, caption *schematic; not a real protein shape*.
+2. At *collides with the active site*, (model already on screen) a substrate outline travels in and seats (motion); at *forms an enzyme–substrate complex*, `bound` with the bracket **enzyme–substrate complex**; at *the products leave*, `products`, two outlines drift out; at *the site is free again*, the empty cleft is traced.
 3. At *built one sentence*, a boxed sentence surface opens beneath the model, labelled *the sentence for 3.2.1 and 3.2.1b*. At *how often substrate molecules meet a working active site*, the first clause writes and a second substrate seats; at *per unit time*, a small tally beside the model, *complexes per unit time (illustrative)*, ticks; at *whether the active sites stay functional*, the last clause writes and the cleft is ringed. The complete sentence holds, boxed.
 4. At *can denature an enzyme*, a second model beside the first runs 3.2.1's `denatured` motion by reference (links vanish one by one, fold loosens, cleft distorts, backbone traced continuous with **peptide bonds intact**); at *no longer fits the active site*, a substrate reaches its cleft, rocks and drifts away; caption **denatured**.
 5. At *those conditions stay fixed*, the denatured model slides off; a strip beneath the working model reads **held fixed today: temperature (water bath) · pH (buffer solution)**; at *the amounts change*, the three tabs from Beat 1 return as a row.
@@ -134,7 +134,7 @@ Small type: *syllabus 3.2.1, p.20: "investigate and explain".*
 
 ### BEAT 5 · More enzyme: what the times show, and why · 2:51–3:47
 **Narration:**
-> The mean endpoint times fall from nine hundred and ten seconds at the lowest concentration to one hundred and eighty at the highest. Each time is known only to within one sampling interval, thirty seconds, so the concentrations are spread far enough apart that each mean differs from the next by more than that. Plot one over the mean endpoint time: a relative rate, larger when faster, and not an initial rate. Double the amylase, and one over t roughly doubles. Why? More amylase, more active sites available, so more successful collisions and more enzyme–substrate complexes formed per unit time. While substrate is in excess, the rate rises in proportion to enzyme concentration.
+> The mean endpoint times fall from nine hundred and ten seconds at the lowest concentration to one hundred and eighty at the highest. Each time is known only to within one sampling interval, thirty seconds, and each mean differs from the next by more than that. Plot one over the mean endpoint time: a relative rate, larger when faster, and not an initial rate. Double the amylase, and one over t roughly doubles. Why? More amylase, more active sites available, so more successful collisions and more enzyme–substrate complexes formed per unit time. While substrate is in excess, the rate rises in proportion to enzyme concentration.
 
 **Visual action:**
 1. At *The mean endpoint times fall*, Dataset A builds beside the tile (concentration, three endpoint times, mean), with the control row **blue-black at every sample to 930 s**. At *nine hundred and ten seconds*, the 0.20 % mean **910 s** is highlighted; at *one hundred and eighty at the highest*, the 1.00 % mean **180 s**.
@@ -196,7 +196,7 @@ Small type: *syllabus 3.2.1, p.20: "investigate and explain".*
 
 ### BEAT 8 · COMMON MISTAKE E38: a concentration graph read as time · 6:04–7:21
 **Narration:**
-> Here is a description of that graph, in wording that one mark scheme has a line for. Read it.
+> Here is a description of that graph that a mark scheme sets aside, a common slip, on the card. Read it.
 >
 > *(silent read, 3 s)*
 >
@@ -204,7 +204,7 @@ Small type: *syllabus 3.2.1, p.20: "investigate and explain".*
 
 **Visual action:**
 1. **Entry cue: *Here is a description of that graph*.** COMMON MISTAKE panel enters with its basis line: *basis: mark-scheme ignore line, S21/22 Q5(c), MS p.17*. It stays on until the completed correct frame. The Beat 7 `rate-substrate` graph holds at left.
-2. At *one mark scheme has a line for*, the header lands: **Describe the effect of hydrogen peroxide concentration on the rate of reaction shown in the graph.** Small type *our framing, on our graph; the card's wording is the wording S21/22 Q5(c), MS p.17 ignores*.
+2. At *a mark scheme sets aside*, the header lands: **Describe the effect of hydrogen peroxide concentration on the rate of reaction shown in the graph.** Small type *our framing, on our graph; the card's wording is the wording S21/22 Q5(c), MS p.17 ignores*.
 3. At *Read it*, the written wrong answer appears in handwriting style: **✗** *The rate of reaction is fast and then slows down.*
 4. **Silent read, 3 s.**
 5. At *Look at the words fast and slows down*, *fast* and *slows down* on the card are underlined in terracotta; at *a change over time*, side-note *time words*.
@@ -375,7 +375,7 @@ Worked:
 - The zero row is 3.1.4's demonstration series exactly (0.00, 0.12, 0.24, 0.35, 0.45, 0.53, 0.60 → 0.0040 s⁻¹). Every reading lies within the 3.1.4 calibration range (0–0.80). No conversion is made in this lesson; if one were needed, 3.1.4's calibration (concentration = absorbance ÷ 0.0080 per µmol dm⁻³) is applied to each reading before the gradient is taken (the zero row would give 0.50 µmol dm⁻³ s⁻¹, as in 3.1.4; not shown here).
 - Later increments never exceed earlier ones in any row (each curve bends downward after its straight start).
 - The 120 s reading of the zero row, **0.45**, is the single reading ringed as an amount (Beat 11).
-- Description: the initial rate falls as X increases; each further 0.5 mmol dm⁻³ lowers it by less (0.0010, 0.0007, 0.0003, 0.0003 s⁻¹, from the rounded values). Not narrated; no inhibition class is read from this shape.
+- Description: the initial rate falls as X increases; each further 0.5 mmol dm⁻³ lowers it by the same or less (0.0010, 0.0007, 0.0003, 0.0003 s⁻¹, from the rounded values). Not narrated; no inhibition class is read from this shape.
 
 ---
 
@@ -469,24 +469,24 @@ Counted by the validator over the blockquoted narration (silent-read lines exclu
 | Beat | Kind | Words | Seconds |
 |---|---|---:|---:|
 | 1 Hook and context | teaching | 72 | 36 |
-| 2 Recall: the sentence from 3.2.1 | teaching | 107 | 53.5 |
+| 2 Recall: the sentence from 3.2.1 | teaching | 99 | 49.5 |
 | 3 Objectives | teaching | 50 | 25 |
 | 4 More enzyme: the amylase series | teaching | 112 | 56 |
-| 5 More enzyme: what the times show | teaching | 113 | 56.5 |
+| 5 More enzyme: what the times show | teaching | 105 | 52.5 |
 | **6 E40** | **error** | **160** | **80** |
 | 7 More substrate: initial slopes | teaching | 113 | 56.5 |
-| **8 E38** | **error** | **154** | **77** |
+| **8 E38** | **error** | **156** | **78** |
 | 9 Why it levels off | teaching | 109 | 54.5 |
 | **10 E39** | **error** | **156** | **78** |
 | 11 More inhibitor | teaching | 157 | 78.5 |
 | 12 Recap | teaching | 85 | 42.5 |
 | 13 Exam close | teaching | 88 | 44 |
-| **Teaching (10 beats)** | | **1006** | **8:23** |
-| **Error (3 beats)** | | **470** | **3:55** |
-| **Total (13 beats)** | | **1,476** | **12:18** |
+| **Teaching (10 beats)** | | **990** | **8:15** |
+| **Error (3 beats)** | | **472** | **3:56** |
+| **Total (13 beats)** | | **1,462** | **12:11** |
 | Budget | | 1,050 | 8:45 |
 
-**Length, honestly:** **1,476 words, 12:18**, which is **3:33 over** the 8:45 budget. Where it sits:
+**Length, honestly (after the conductor's review):** **1,462 words, 12:11**, which is **3:26 over** the 8:45 budget. Review changes: cut (3) taken (Beat 2, 8 words); Beat 5's resolution sentence shortened (8 words); E38's announcement made an explicit mistake announcement (+2 words: E38 now 156 words, 78 s). The figures in the bullets below are the author's pre-review counts: error beats now 472 words (3:56), 1:41 over the three allowances; teaching now 990 words (8:15), 1:45 over the 6:30 base. Where it sits:
 - **Error beats: 470 words, 3:55** (E40 160 words, 80 s; E38 154, 77 s; E39 156, 78 s, each including its announcement), against the plan's three protected 45-second allowances (2:15): **1:40 of the overrun**. Each is slightly above the ~130–150-word guide because E40 and E39 each correct two faults with the marker held, and E40 carries both its local ruling and the Learner Guide annotation. None is thinned.
 - **Teaching: 1,006 words, 8:23** against the **6:30** base (780 words): **1:53 of the overrun**. It sits in the three investigations (Beats 4, 7, 11: 382 words, 3:11), which carry every design point the plan's investigation map requires (worked dilutions, fixed volumes, separate equilibration, timed sampling and a common endpoint, repeats and means, controls, the t = 0 tangent and why not times to finish, own blanks, the labelled S21/51 adaptation, a single reading as an amount), and in the standalone recall (Beat 2, 53.5 s), which the plan's standalone-halves paragraph requires. Numbers are written out as spoken words (about 45 more words than digits), so the count reflects speaking time.
 - **Cut list, teaching only, in order, if the checker wants the envelope nearer 8:45:** (1) Beat 11, *The assay is the colorimeter one from earlier: colourless ONPG becomes a yellow product, read through a blue filter.* (19 words; the recall tag and part labels carry it); (2) Beat 13, *Others ask what more enzyme does, or which control to use.* (11 words; rows 2–3 stay on screen); (3) Beat 2, *Here is an enzyme, drawn as a model.* (8 words; its cue moves to *collides with the active site*). Together 38 words, 19 s. Beyond these, the remaining teaching overrun is the cost of three complete investigations plus a standalone recall inside a 6:30 base; I do not propose cutting a required design point, and no error beat is cut. Never speed the narration.
@@ -539,19 +539,30 @@ Counted by the validator over the blockquoted narration (silent-read lines exclu
 ```
 beat  words  cues maxgap  status
    1     72     7     19  ok
-   2    107    14     16  ok
+   2     99    13     15  ok
    3     50     4     16  ok
    4    112    13     15  ok
-   5    113    15     18  ok
+   5    105    15     10  ok
    6    160    19     18  ok
    7    113    15     13  ok
-   8    154    17     21  ok
+   8    156    17     21  ok
    9    109    16     16  ok
   10    156    17     14  ok
   11    157    20     12  ok
   12     85     9     17  ok
   13     88    12     16  ok
-TOTAL words 1476  cues 178  runtime at 120 wpm 12:18.0  beats 13  failing beats 0
+TOTAL words 1462  cues 177  runtime at 120 wpm 12:11.0  beats 13  failing beats 0
 ```
 
 Quote check (`python3 work/005/check_quotes.py`): `quotes checked 35  not found 0`.
+
+---
+
+## Conductor review (cloud run 005)
+
+Review against the cleared 3.1.1-2 and 3.2.2-3 storyboards and their CHECK reports, and for consistency across the five lessons. Changes made after the author's draft:
+
+- **Beat 8 / E38 announcement:** "Here is a description of that graph, in wording that one mark scheme has a line for." → "Here is a description of that graph that a mark scheme sets aside, a common slip, on the card." The first move must announce a mistake (VIDEO-STRUCTURE, five moves). Entry cue remapped to *a mark scheme sets aside*.
+- **Cuts:** the author's cut (3), Beat 2 "Here is an enzyme, drawn as a model." (the model enters on the recall surface without a spoken cue); Beat 5's resolution sentence shortened to "Each time is known only to within one sampling interval, thirty seconds, and each mean differs from the next by more than that." Cuts (1) and (2) are not taken: (1) is the standalone recall of the assay, (2) is part of the forms move.
+- **Dataset C note:** "each further 0.5 mmol dm⁻³ lowers it by less" → "by the same or less" (the last two steps are equal, 0.0003 and 0.0003 s⁻¹).
+- **Length:** 12:11 against 8:45. The error beats are untouched (472 words); teaching is 1:45 over its 6:30 base. This is the largest overrun of the five and is flagged for a ruling.

@@ -352,3 +352,12 @@ beat  words  cues maxgap  status
    5     91    14     11  ok
 TOTAL words 432  cues 64  runtime at 120 wpm 3:36.0  beats 5  failing beats 0
 ```
+
+---
+
+## Conductor review (cloud run 005)
+
+Review against the cleared 3.1.1-2 and 3.2.2-3 storyboards and their CHECK reports, and for consistency across the five lessons. Changes made after the author's draft:
+
+- **The 0 s point is not a reading.** The cuvette goes in just after mixing, so a reading at exactly 0 s is impossible. The start point is now labelled on screen and in Dataset A as the blank's zero at mixing (0.00); the first reading is at 30 s. No number changed.
+- The brief's "June 2024 ER p.58" was the conductor's slip; the plan's citation (June 2023 ER p.58) is used, and its wording stays UNVERIFIED.

@@ -454,3 +454,11 @@ beat  words  cues maxgap  status
   12     70    10     13  ok
 TOTAL words 788  cues 115  runtime at 120 wpm 6:34.0  beats 12  failing beats 0
 ```
+
+---
+
+## Conductor review (cloud run 005)
+
+Review against the cleared 3.1.1-2 and 3.2.2-3 storyboards and their CHECK reports, and for consistency across the five lessons. Changes made after the author's draft:
+
+- No edits. Checked: equal nominal input is not equal retained enzyme (Beat 7); neither a lower rate nor better stability is promised; the product-removal advantage is worded as the plan words it (flow-through, "can"); re-use is a separate run; the reject card is captioned as our own contrast; there is no badge. The starch mismatch (0.71% in the free tube against 1% in the liquid around the beads at t = 0) is disclosed in Dataset 2 as a limitation. Overrun: 34 s of teaching, with the author's cut list available.

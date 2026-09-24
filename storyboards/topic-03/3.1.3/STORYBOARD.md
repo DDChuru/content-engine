@@ -517,25 +517,25 @@ Counted by the validator over the blockquoted narration, silent-read line exclud
 
 | Beat | Title | Words | Seconds |
 |---|---|---:|---:|
-| 1 | Hook and context | 83 | 41.5 |
+| 1 | Hook and context | 87 | 43.5 |
 | 2 | What you will be able to do | 48 | 24.0 |
 | 3 | A rate, not an amount | 70 | 35.0 |
-| 4 | The catalase reaction, atom by atom | 76 | 38.0 |
+| 4 | The catalase reaction, atom by atom | 85 | 42.5 |
 | 5 | The rig, named where it sits | 88 | 44.0 |
 | 6 | Closed first, then mix: time zero | 101 | 50.5 |
 | 7 | The progress curve, and the initial rate | 138 | 69.0 |
-| 8 | An amount, an average rate, and a rate that falls | 97 | 48.5 |
+| 8 | An amount, an average rate, and a rate that falls | 89 | 44.5 |
 | 9 | Transfer: the rising disc | 102 | 51.0 |
 | 10 | Amylase: following starch as it disappears | 85 | 42.5 |
-| 11 | Sampling by eye: an endpoint and 1/t | 114 | 57.0 |
+| 11 | Sampling by eye: an endpoint and 1/t | 109 | 54.5 |
 | 12 | Variables, the control, and the sentence you write | 84 | 42.0 |
 | 13 | COMMON MISTAKE E42: produced, average, amount | 146 | 73.0 |
-| 14 | What I told you, on the rig and the graph | 91 | 45.5 |
+| 14 | What I told you, on the rig and the graph | 85 | 42.5 |
 | 15 | How it is asked, the reject card, and the potato | 111 | 55.5 |
-| **Total** | 15 beats (14 teaching + 1 error) | **1434** | **717.0** (11:57) |
+| **Total** | 15 beats (14 teaching + 1 error) | **1428** | **714.0** (11:54) |
 
 
-**Length, honestly:** **1,434 words = 11:57** at 120 words per minute, **1:42 over** the 10:15 budget. The fourteen teaching beats total **1,288 words = 10:44**, **1:14 over** the 9:30 (1,140-word) teaching base; E42 is **146 words = 73 s**, inside the five-move 130–150-word range and **28 s over** its 45 s talk-through allowance. The prescribed 4 s silent read is not added again. Where the teaching time sits: two complete practical designs with every piece of apparatus named and handled (Beats 5–6, 189 words), the curve-and-tangent beat that carries the gas label, control, initial rate and straight-section check (Beat 7, 138), and the amylase sampling beat that must say what by-eye sampling does *not* give (Beat 11, 114). Plan note: "Demonstration time is visual; words may run under" — they did not. **Ordered cut list, teaching beats only, if the checker wants the envelope (never the error beat, never faster narration):** (1) Beat 15, the amylase-test form "Another asked how to find out whether a protein is amylase: mix it with starch, leave it a stated time, test for starch." (22 words; its MS row can stay as small type on the forms surface); (2) Beat 14, "you have been watching" and "and one over it is a relative rate" → "one over it, a relative rate" (≈8 words); (3) Beat 11, "rinsing the dropper between samples" (5 words; the rinse stays on screen) and "like the disc's" (3); (4) Beat 1, "Yet how fast is what this topic keeps asking: faster when warmer, with more enzyme?" (14 words; loses the forward link to 3.2.1/3.2.1b); (5) Beat 8, "the reading a June 2023 planning question used" (8 words; the S23/51 small type stays). Together about 60 words, 0:30. The remaining ~0:45 is the demonstration itself; cutting it would remove named apparatus, the closed-system start or the rate distinctions the plan binds.
+**Length, honestly (after the conductor's review):** **1,428 words = 11:54**, **1:39 over** the 10:15 budget; teaching **1,282 words = 10:41**, **1:11 over** the base; E42 unchanged at 146 words. Review changes: Beat 4 rewritten so the atom labels are bookkeeping, not a claimed pathway (+9 words); Beat 1's question no longer implies warming always speeds a reaction (+4); cuts (2), (3) and (5) below taken (−19). The author's pre-review figures follow. **1,434 words = 11:57** at 120 words per minute, **1:42 over** the 10:15 budget. The fourteen teaching beats total **1,288 words = 10:44**, **1:14 over** the 9:30 (1,140-word) teaching base; E42 is **146 words = 73 s**, inside the five-move 130–150-word range and **28 s over** its 45 s talk-through allowance. The prescribed 4 s silent read is not added again. Where the teaching time sits: two complete practical designs with every piece of apparatus named and handled (Beats 5–6, 189 words), the curve-and-tangent beat that carries the gas label, control, initial rate and straight-section check (Beat 7, 138), and the amylase sampling beat that must say what by-eye sampling does *not* give (Beat 11, 114). Plan note: "Demonstration time is visual; words may run under" — they did not. **Ordered cut list, teaching beats only, if the checker wants the envelope (never the error beat, never faster narration):** (1) Beat 15, the amylase-test form "Another asked how to find out whether a protein is amylase: mix it with starch, leave it a stated time, test for starch." (22 words; its MS row can stay as small type on the forms surface); (2) Beat 14, "you have been watching" and "and one over it is a relative rate" → "one over it, a relative rate" (≈8 words); (3) Beat 11, "rinsing the dropper between samples" (5 words; the rinse stays on screen) and "like the disc's" (3); (4) Beat 1, "Yet how fast is what this topic keeps asking: faster when warmer, with more enzyme?" (14 words; loses the forward link to 3.2.1/3.2.1b); (5) Beat 8, "the reading a June 2023 planning question used" (8 words; the S23/51 small type stays). Together about 60 words, 0:30. The remaining ~0:45 is the demonstration itself; cutting it would remove named apparatus, the closed-system start or the rate distinctions the plan binds.
 
 ## What I left out, and who owns it
 
@@ -543,7 +543,7 @@ Counted by the validator over the blockquoted narration, silent-read line exclud
 |---|---|
 | Colorimeter; absorbance; turning a colour change into concentration values | 3.1.4 (Beat 11 points to it only by "no concentration values") |
 | Effects of temperature and pH; separate equilibration at several temperatures; five-pH disc series | 3.2.1 |
-| Enzyme, substrate and inhibitor concentration; peroxide dilution series; amylase dilution series; E38–E40 (including the "timed or regular intervals" Learner Guide annotation, E40) | 3.2.1b |
+| Enzyme, substrate and inhibitor concentration; peroxide dilution series; amylase dilution series; E38–E40 (including the Learner Guide annotation on "'timed' or 'regular' intervals", E40) | 3.2.1b |
 | Vmax, Km; the still-rising last point | 3.2.2-3 |
 | Free vs immobilised amylase | 3.2.4 |
 | Catalase's catalytic mechanism, compound intermediates, radicals | not in the outcome (the `CatalaseNet` caption says net reaction) |
@@ -587,20 +587,31 @@ Counted by the validator over the blockquoted narration, silent-read line exclud
 
 ```
 beat  words  cues maxgap  status
-   1     83     8     21  ok
+   1     87     8     21  ok
    2     48     3     17  ok
    3     70     8     16  ok
-   4     76     9     13  ok
+   4     85    10     20  ok
    5     88    12     13  ok
    6    101    12     14  ok
    7    138    15     18  ok
-   8     97    12     16  ok
+   8     89    12     16  ok
    9    102    12     11  ok
   10     85    11     19  ok
-  11    114    13     16  ok
+  11    109    12     16  ok
   12     84     9     18  ok
   13    146    15     19  ok
-  14     91    10     17  ok
+  14     85    10     15  ok
   15    111    11     20  ok
-TOTAL words 1434  cues 160  runtime at 120 wpm 11:57.0  beats 15  failing beats 0
+TOTAL words 1428  cues 160  runtime at 120 wpm 11:54.0  beats 15  failing beats 0
 ```
+
+---
+
+## Conductor review (cloud run 005)
+
+Review against the cleared 3.1.1-2 and 3.2.2-3 storyboards and their CHECK reports, and for consistency across the five lessons. Changes made after the author's draft:
+
+- **Beat 4 (chemistry):** the narration no longer states which atoms end up where ("In each peroxide molecule, the oxygen–oxygen bond breaks … The other two oxygens end up joined …"). The `CatalaseNet` edge list is kept exactly as the plan specifies, but it is net-reaction bookkeeping, and narrating it as the enzyme's pathway would assert a mechanism (for real catalase, isotope-labelling work shows the O₂ comes from a single peroxide molecule). New words: "The inset shows the net change, as bookkeeping, not as the way the enzyme does it. Two peroxide molecules go in; in one step on screen their atoms are regrouped as two molecules of water and one molecule of oxygen, its two atoms held by a double bond." Cues remapped; a small-type line *atom labels are bookkeeping for the net change; no pathway is shown or implied* added. The one-frame switch, caption and valence audit are unchanged.
+- **Beat 1:** "faster when warmer, with more enzyme?" → "does warming it, or adding more enzyme, change the speed?" (above an optimum, warming slows the rate). Cues remapped.
+- **Cuts taken:** the author's cuts (2) Beat 14, (3) Beat 11 "rinsing the dropper between samples" (the rinse stays on screen), and (5) Beat 8 "the reading a June 2023 planning question used" (its small type moves to the cue *the volume of gas collected after one minute*). Cut (1), the only amylase exam form, and cut (4), the hook, are not taken.
+- The absolutes-sweep lines above quote the author's draft wording where these edits changed it; the narration is authoritative.

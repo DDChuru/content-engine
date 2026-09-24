@@ -356,16 +356,16 @@ Counted by `work/005/validate_storyboard.py` over the blockquoted narration (no 
 | 2 | 39 | 19.5 |
 | 3 | 110 | 55.0 |
 | 4 | 100 | 50.0 |
-| 5 | 83 | 41.5 |
+| 5 | 87 | 43.5 |
 | 6 | 117 | 58.5 |
-| 7 | 106 | 53.0 |
+| 7 | 108 | 54.0 |
 | 8 | 78 | 39.0 |
 | 9 | 95 | 47.5 |
 | 10 | 58 | 29.0 |
 | 11 | 90 | 45.0 |
-| **Total** | **957** | **478.5 = 7:58.5** |
+| **Total** | **963** | **481.5 = 8:01.5** |
 
-**Length, honestly:** **957 words, 7:58.5** against the **7:00** budget (840 words): **0:58.5 over**, all of it teaching (no error beats in this lesson). The first full draft was 1,105 words (9:12.5); cuts already taken: tightening in every beat, the rig beat's recall phrase (now an on-screen tag *recall: 3.1.3*), and the recap's second spoken statement of the sentence (it stays boxed on screen and brightens in place; it is spoken verbatim once, in Beat 5). Where the time sits: the two investigations (Beats 3, 4, 7, 8: 394 words, 3:17) carry the plan's required design points (separate equilibration, t = 0 at mixing, worked tangent, means, control, S22/33 Q1(b) contrast; buffers, fresh peroxide, whole seconds, boiled control, 1/mean, values either side); the two explanations (Beats 5, 6, 9: 295 words, 2:27.5) carry every point of the S22/33 Q1(b)(v) chain and the plan's pH depth. **Further cuts available, in order, if the checker wants the envelope met:** (1) Beat 3, move the S22/33 Q1(b) contrast sentence to the on-screen panel only, 32 words; (2) Beat 1, the pH sentence of the hook, 21 words (the hook then frames temperature only); (3) Beat 6, the press-stud handle sentence, keeping its conversion, 12 words; (4) Beat 11, the forms sentence, 18 words. Together 83 words (41.5 s), leaving 874 words, 7:17, about 0:17 over. I recommend (4) first; (3) removes the lesson's handle, and (1) weakens the plan's requirement "Show the two designs as different experiments." Never speed the narration.
+**Length, honestly:** **963 words, 8:01.5** against the **7:00** budget (840 words): **1:01.5 over**, all of it teaching (no error beats in this lesson). (957 words in the author's draft; the conductor's review added 6 words of typicality bounding in Beats 5 and 7: "a slow rate in the cold is not denaturation", "can already contain", "does not rise here".) Conductor ruling: cut (4) is NOT taken, because the forms sentence is the lesson's what-you-get-asked move; the overrun is reported, not hidden. The first full draft was 1,105 words (9:12.5); cuts already taken: tightening in every beat, the rig beat's recall phrase (now an on-screen tag *recall: 3.1.3*), and the recap's second spoken statement of the sentence (it stays boxed on screen and brightens in place; it is spoken verbatim once, in Beat 5). Where the time sits: the two investigations (Beats 3, 4, 7, 8: 394 words, 3:17) carry the plan's required design points (separate equilibration, t = 0 at mixing, worked tangent, means, control, S22/33 Q1(b) contrast; buffers, fresh peroxide, whole seconds, boiled control, 1/mean, values either side); the two explanations (Beats 5, 6, 9: 295 words, 2:27.5) carry every point of the S22/33 Q1(b)(v) chain and the plan's pH depth. **Further cuts available, in order, if the checker wants the envelope met:** (1) Beat 3, move the S22/33 Q1(b) contrast sentence to the on-screen panel only, 32 words; (2) Beat 1, the pH sentence of the hook, 21 words (the hook then frames temperature only); (3) Beat 6, the press-stud handle sentence, keeping its conversion, 12 words; (4) Beat 11, the forms sentence, 18 words. Together 83 words (41.5 s), leaving 874 words, 7:17, about 0:17 over. I recommend (4) first; (3) removes the lesson's handle, and (1) weakens the plan's requirement "Show the two designs as different experiments." Never speed the narration.
 
 ---
 
@@ -425,12 +425,22 @@ beat  words  cues maxgap  status
    2     39     3     14  ok
    3    110    17     12  ok
    4    100    14     13  ok
-   5     83    13     11  ok
+   5     87    13     15  ok
    6    117    20     13  ok
-   7    106    17     11  ok
+   7    108    17     11  ok
    8     78    11     11  ok
    9     95    13     15  ok
   10     58     7     10  ok
   11     90    13     12  ok
-TOTAL words 957  cues 138  runtime at 120 wpm 7:58.5  beats 11  failing beats 0
+TOTAL words 963  cues 138  runtime at 120 wpm 8:01.5  beats 11  failing beats 0
 ```
+
+---
+
+## Conductor review (cloud run 005)
+
+Review against the cleared 3.1.1-2 and 3.2.2-3 storyboards and their CHECK reports, and for consistency across the five lessons. Changes made after the author's draft:
+
+- **Beat 5:** "And the cold did no damage" → "And a slow rate in the cold is not denaturation" (the plan's trap wording; no claim about damage in general).
+- **Beat 7:** "a used tube already contains enzyme" → "a used tube can already contain enzyme"; "does not rise" → "does not rise here" (the control result is this run's, bounded on screen to 120 s).
+- **Length:** the author's cut (4), the forms sentence, is not taken, because it is the lesson's what-you-get-asked move. The 1:01.5 overrun is all teaching and is reported for the checker's ruling (the author's cuts (1)–(3) stay available).
