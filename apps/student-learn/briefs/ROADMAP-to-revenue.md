@@ -85,6 +85,26 @@ they are the shareable hook a celebrity can point a camera at. Paid is **practis
 misconception with your predictions tracked**, which is where the value compounds and where the
 zero-marginal-cost tier finally has something substantial in it.
 
+### 1b. Where the artifacts stand (audited 2026-09-25)
+
+**Built and live on `dev`** (`606949a`, `48c4a40`): `components/interactive/artifact-shell.tsx`
+(the standard: `Artifact`, `PredictGate`, `Dial`, `Readout`, view counted at 50% on-screen),
+three artifacts (`friction-bench`, `slope-resolver`, `pulley-predict`), `registry.tsx`, and
+`lib/topics.ts` `artifactForTopic()` rendering them inline on topics M4.1e, M4.4e, M4.1d, M4.4d.
+Showcase at `/notes/interactive-preview`.
+
+**Outstanding, in dependency order:**
+1. **Persistence — decision needed from Durai first.** Predictions go to Plausible only; nothing
+   reaches Convex. Choose what a prediction records: artifact code + right/wrong (cheap), or the
+   *number guessed* (feeds marker context — "predicted g twice" — but needs schema and a
+   retention rule for a minor's data). Swap point is `lib/progress.ts`.
+2. **Live teaser above the gate.** Not implemented. Two of three still hide the model until
+   commit, so first impression is reading, not touching. Fix in the shell, not per artifact.
+3. **Scale 3 → 8-10**, severity 4-5 misconceptions with a draggable parameter only.
+
+Note: parallel sessions have since pushed Biology in-app and 9709 P1 content; confirm
+priority against those before staffing.
+
 ---
 
 ## 2. Build order — what to code
