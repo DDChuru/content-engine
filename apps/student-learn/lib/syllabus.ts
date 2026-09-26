@@ -69,7 +69,7 @@ export const COURSES: Course[] = [
     code: '9700',
     title: 'Cambridge International A Level Biology 9700',
     blurb: 'A video lesson for every syllabus point, written from the syllabus and checked against the mark schemes.',
-    unitCodes: ['B1', 'B2'],
+    unitCodes: ['B1', 'B2', 'B3'],
   },
 ];
 
