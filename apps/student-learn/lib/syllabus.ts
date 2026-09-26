@@ -180,6 +180,15 @@ export const UNITS: SyllabusUnit[] = [
       { code: 'B2.4.1', title: 'Water', live: true, slug: 'biology-water', hint: 'water' },
     ],
   },
+  {
+    code: 'B3',
+    title: 'Enzymes',
+    paper: 'AS Level · Topic 3',
+    topics: [
+      { code: 'B3.1.1-2', title: 'Enzymes: where and how they act', live: true, slug: 'biology-enzymes-where-and-how-they-act', hint: 'enzymes' },
+      { code: 'B3.2.2-3', title: 'Vmax, Km and inhibitors on the graph', live: true, slug: 'biology-vmax-km-and-inhibitors-on-the-graph', hint: 'enzymes' },
+    ],
+  },
 ];
 
 export const FUTURE_UNITS = [
