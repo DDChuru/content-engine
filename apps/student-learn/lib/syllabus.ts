@@ -186,6 +186,7 @@ export const UNITS: SyllabusUnit[] = [
     paper: 'AS Level · Topic 3',
     topics: [
       { code: 'B3.1.1-2', title: 'Enzymes: where and how they act', live: true, slug: 'biology-enzymes-where-and-how-they-act', hint: 'enzymes' },
+      { code: 'B3.1.4', title: 'Following a colour change: the colorimeter', live: true, slug: 'biology-following-a-colour-change-the-colorimeter', hint: 'enzymes' },
       { code: 'B3.2.2-3', title: 'Vmax, Km and inhibitors on the graph', live: true, slug: 'biology-vmax-km-and-inhibitors-on-the-graph', hint: 'enzymes' },
     ],
   },
