@@ -180,21 +180,21 @@ Beat windows in the headings are provisional and follow the per-beat ledger (wor
 
 ### BEAT 6 · What makes net diffusion faster · 3:45–4:24
 **Narration:**
-> What makes net diffusion faster? A steeper concentration gradient: a bigger difference between the sides gives a bigger gap between the two counts. A higher temperature: the particles have more kinetic energy and move faster. A larger surface area to cross, and a shorter distance to travel: you will calculate and test those in the surface-area lesson. And the molecule itself: small and non-polar molecules cross the bilayer faster. No equation needed here, just the direction of each effect.
+> What makes net diffusion faster? A steeper concentration gradient: a bigger difference between the sides gives a bigger gap between the two counts. A higher temperature: the particles have more kinetic energy and move faster. A larger surface area to cross, and a shorter distance to travel: you will calculate and test those in the surface-area lesson. For bilayer passage, molecular size and lipid solubility also matter; small, non-polar molecules cross readily. No equation needed here, just the direction of each effect.
 
 **Visual action:**
-1. **From the first frame**, the Beat 5 membrane scene holds (O₂, 24 outside / 8 inside, last window 6 · 2, net arrow down). At *What makes net diffusion faster*, a factor panel opens at right, headed *faster net diffusion · qualitative; no equation*.
-2. At *A steeper concentration gradient*, more O₂ tokens drift in from the top edge (outside tag **32**, inside **8**); panel row 1 *steeper gradient*.
-3. At *a bigger gap between the two counts*, the next window closes at **8 · 2**; the net arrow lengthens; small type *net 6 per window, was 4*.
-4. At *A higher temperature*, a thermometer icon beside the scene rises (no number); token runs lengthen and motion speeds up; panel row 2 *higher temperature*.
+1. **From the first frame**, retain the completed Beat 5 demonstration at 20/12 with its last completed counter 6/2 (net arrow down). At *What makes net diffusion faster*, a factor panel opens at right, headed *faster net diffusion · qualitative; no equation*.
+2. At *A steeper concentration gradient*, show a labelled new comparison, reset to 32/8, with the same area, temperature, membrane and 5 s observation window as the 24/8 comparison. Animate eight inward and two outward crossings, ending 26/14. Panel row 1 *steeper gradient*.
+3. At *a bigger gap between the two counts*, highlight the completed net comparison 6 versus 4; if the window has not finished, allow it to finish before revealing that result. The counter holds at **8 · 2**, labelled *last completed demonstration*; the net arrow lengthens; small type *net 6 in this 5 s window, was 4*.
+4. At *A higher temperature*, the baseline conditions are explicitly restored first (labelled reset to the 24/8 setup, original temperature and width; side tags and counter set aside with the tag *qualitative; not counted*); then only the thermometer icon beside the scene rises (no number); token runs lengthen and motion speeds up; panel row 2 *higher temperature*.
 5. At *more kinetic energy*, the motion trails pulse, tag *more kinetic energy*.
-6. At *A larger surface area*, the membrane section widens by half as much again (the same components repeated), more tokens crossing per window; panel row 3 *larger surface area*.
-7. At *a shorter distance to travel*, a small inset compares a thick and a thin barrier with a path arrow across each, the shorter path tagged *shorter distance*; panel row 4.
+6. At *A larger surface area*, the baseline is restored first (the thermometer returns to its original level; tag *same gradient and temperature*); then only the membrane section widens by half as much again (the same components repeated), more tokens crossing (qualitative; not counted); panel row 3 *larger surface area*.
+7. At *a shorter distance to travel*, the width returns to baseline; a small inset compares a thick and a thin barrier under the same conditions (tag *only thickness differs*) with a path arrow across each, the shorter path tagged *shorter distance*; panel row 4.
 8. At *the surface-area lesson*, rows 3 and 4 gain the tag *calculated and tested in 4.2.3-4*.
-9. At *the molecule itself*, panel row 5 *small, non-polar molecules cross the bilayer faster*; an O₂ token passes the core while a glucose token held above the membrane stays outside (no crossing shown).
-10. At *No equation needed*, the panel header brightens *direction of each effect only*; temperature and width return to the Beat 5 state.
+9. At *For bilayer passage*, panel row 5 *for bilayer passage: size and lipid solubility matter; small, non-polar molecules cross readily*; an O₂ token passes the core while a glucose token held above the membrane stays outside (no crossing shown).
+10. At *No equation needed*, the panel header brightens *direction of each effect only*; the scene shows, after a labelled reset, the retained steeper-gradient result (26 outside / 14 inside, counter 8 · 2, *last completed demonstration*).
 
-**On-screen text:** the factor panel (five rows); *net 6 per window, was 4*; *more kinetic energy*; *shorter distance*; *calculated and tested in 4.2.3-4*.
+**On-screen text:** the factor panel (five rows); *new comparison; set starting counts*; *net 6 in this 5 s window, was 4*; *last completed demonstration*; *qualitative; not counted*; *same gradient and temperature*; *only thickness differs*; *more kinetic energy*; *shorter distance*; *calculated and tested in 4.2.3-4*.
 
 ---
 

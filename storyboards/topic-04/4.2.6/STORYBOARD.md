@@ -283,14 +283,14 @@ Beat windows in the headings are provisional and follow the per-beat ledger (wor
 
 ### Schematic crossing counts (Beats 3–9; *schematic counts; not measurements; far fewer than real*)
 
-The counter shows crossings per 5-second window of model time. These numbers are drawing instructions for the builder, labelled on screen as schematic, not data.
+The counter shows **crossings per model-time window** (5 s of schematic, compressed model time; not experimental timing), not cumulative totals. These numbers are drawing instructions for the builder, labelled on screen as schematic, not data.
 
 | Case | solution → cell | cell → solution | net per window | net arrow |
 |---|---:|---:|---:|---|
 | initially higher (all cells, start of case) | 15 | 5 | 15 − 5 = **10 in** | into the cell |
 | equal (`rbc-equal`, `plant-equal`) | 10 | 10 | 10 − 10 = **0** | none |
 | initially lower (all cells, start of case) | 5 | 15 | 5 − 15 = **−10 (10 out)** | out of the cell |
-| `plant-turgid` → `plant-turgid-equilibrium` (`equalise`), successive windows | 15 → 13 → 11 → 10 | 5 → 7 → 9 → 10 | 10 → 6 → 2 → **0** | shortens with the net value; fades over 2 s on the window where net = 0 |
+| `plant-taking-up-water` → `plant-turgid` (`equalise`), successive windows | 15 → 13 → 11 → 10 | 5 → 7 → 9 → 10 | 10 → 6 → 2 → **0** | shortens with the imbalance; disappears as the markers meet (net = 0) |
 
 Worked: the net value is the difference of the two counts in each window; the arrow's drawn length is proportional to it (10 units at net 10, 6 at 6, 2 at 2, faded at 0). In every row the total crossings per window stay at 20 (15 + 5, 13 + 7, 11 + 9, 10 + 10), so equilibrium is drawn as **the same amount of crossing, balanced**, never as crossing stopping.
 
@@ -306,14 +306,15 @@ Plant vacuole share of cell area: starting 70%, turgid 80%, flaccid 55%, plasmol
 
 ## Real-world samples
 
-No real material is handled in this lesson. Two real-world examples appear in explain beats.
+All examples are schematic; the lettuce handling is illustrated, not a recorded experiment. Three real-world examples appear in explain beats (red blood cells, isotonic saline, lettuce).
 
 | Material | What the method responds to | Fit (range, clarity) | Interferences and how the lesson handles them | Beats |
 |---|---|---|---|---|
-| **Red blood cells** (shown as a drawn model; an optional **sourced** micrograph inset, never generated) | Under a light microscope, what is seen is **each cell's outline**: swelling, the normal biconcave shape and crenation show as changes of shape; a burst cell leaves a faint empty outline | Good for comparing shapes between solutions; the model does not show water potentials, only their consequences; no measurement is taken | A micrograph may be unavailable (fallback: *drawn model of a light-microscope view; not a micrograph*); shapes on a prepared slide can be affected by preparation, so a micrograph is used only with its source line and preparation stated; in a solution only slightly higher, a cell may swell without bursting (small type, Beat 5) | 1, 5 (narrated statement and on-screen note), 6, 10, 11 |
-| **Lettuce leaf** (hook and Beat 7; drawn, schematic) | **Firmness** (turgidity) of the leaf, judged by eye, as its living cells take up water | Shows net water entry restoring turgor, qualitatively; **does not measure a water potential** and gives no numbers | A leaf with dead or damaged cells may not recover (on-screen note); how fast it firms depends on the leaf; the clock is *time compressed; our example; nothing measured* | 1, 7 (narrated statement and two-line on-screen note), 11 |
+| **Red blood cells** (shown as a drawn model; an optional **sourced** micrograph inset, never generated). Narrated composition: *water, dissolved salts and haemoglobin* (Beat 5) | We compare **each cell's outline** as water moves in or out, without measuring its water potential: swelling, the normal biconcave shape and crenation show as changes of shape; a burst cell leaves a faint empty outline | Good for comparing shapes between solutions; the model does not show water potentials, only their consequences; no measurement is taken | A micrograph may be unavailable (fallback: *drawn model of a light-microscope view; not a micrograph*); shapes on a prepared slide can be affected by preparation, so a micrograph is used only with its source line and preparation stated; in a solution only slightly higher, a cell may swell without bursting (small type, Beat 5) | 1, 5 (narrated statement and on-screen note), 6, 10, 11 |
+| **Isotonic saline** (Beat 6; drawn solution vessel, not a clinical infusion-bag silhouette). Narrated composition: *sodium chloride dissolved in water* | Red blood cells' **volume** stays steady when the solution's conditions are matched | An example of matched conditions only; no concentration, dose or treatment guidance | Label *sodium chloride solution; matched conditions in this example*; small type *no clinical use is described here* | 6 (MF6 sentence plus narrated composition sentence) |
+| **Lettuce leaf** (hook and Beat 7; drawn, schematic). Narrated composition: *living cells containing water and dissolved cell-sap solutes* | **Firmness** (turgidity) of the leaf, judged by eye, as its living cells take up water | Works as a **qualitative demonstration when the cells are intact** (narrated); **firmness does not measure water potential** and gives no numbers | A dead or badly damaged leaf may not recover (now narrated, and on-screen note); how fast it firms depends on the leaf; the unnumbered time graphic is *time compressed; our example; nothing measured* | 1, 7 (narrated statements and three-line on-screen note), 11 |
 
-Explain-beat real-world examples: the lettuce (Beat 7, *our example*); the isotonic saline example (Beat 6, the plan-check sentence spoken verbatim, panel *our example; no clinical use is described here*).
+Explain-beat real-world examples: the lettuce (Beat 7, *our example*); the isotonic saline example (Beat 6, the plan-check sentence spoken verbatim, followed by the narrated composition sentence; panel *our example; no clinical use is described here*).
 
 ---
 
@@ -326,7 +327,7 @@ Explain-beat real-world examples: the lettuce (Beat 7, *our example*); the isoto
 | explain the movement of water between cells and solutions in terms of water potential | 3, 4, 5, 6, 7, 8, 9, 10 | MF3 sentences restated verbatim; osmosis defined in water-potential terms; `cell-vs-solution`: the solution's water potential compared with the cell's, labelled *initially*; crossings both ways, net direction from higher to lower; equilibrium (net arrow fades, crossings continue) |
 | explain the different effects of the movement of water on plant cells | 7, 8, 9, 10 | three cases: higher → turgid (wall resists expansion; does not burst) → equilibrium (cell's water potential rises to equal the solution's); equal → no net movement, unchanged; lower → flaccid → plasmolysed, gap filled with external solution through the freely permeable wall |
 | … and animal cells | 5, 6, 10 | red blood cell: higher → swells and, in pure water, bursts (haemolysis, red-blood-cell term); equal → unchanged in this comparison (equality alone does not set shape); lower → crenated |
-| the different effects (the comparison) | 1, 9, 10, 11 | the cell wall as the difference: plasmolysis needs a wall; crenation without one |
+| the different effects (the comparison) | 1, 9, 10, 11 | the cell wall as the difference: the plasmolysed protoplast withdraws from its wall; crenation without one (Beat 9 on-screen tag *no wall: crenation, not plasmolysis*) |
 | (knowledge of solute potential and pressure potential is not expected) | all | never named, symbolised or calculated; "the wall resists expansion" and "the cell's water potential rises" only |
 | Mathematical requirements p.63 | none | no calculation in this outcome; the scale carries only 0 kPa |
 
@@ -341,7 +342,7 @@ Explain-beat real-world examples: the lettuce (Beat 7, *our example*); the isoto
 | Plasmolysis: gap fills with external solution through the freely permeable wall | 9 |
 | Lettuce: turgor demonstration, not a water-potential measurement | 1, 7, 11 |
 | MF6 isotonic saline sentence; no drip/IV claim | 6 |
-| `WaterPotentialModel` `cell-vs-solution` added; `CellOsmosisSet` published with all ten states | models section; 4–9 |
+| `WaterPotentialModel` `cell-vs-solution` added; `CellOsmosisSet` published with the eight shared states, plus local equality/compatibility states specified here (and the lesson-local transition `plant-taking-up-water`) | models section; 4–9 |
 | Exam close syllabus-based and labelled so, with W20/21 Q4(b)(ii) and W20/51 Q1(c)(ii) as adjacent | 11 |
 
 ### Mark-scheme and examiner points → beats
@@ -355,17 +356,17 @@ Explain-beat real-world examples: the lettuce (Beat 7, *our example*); the isoto
 ### Absolutes sweep (own)
 
 Every narrated sentence containing *all, every, always, never, only, no, nothing, cannot, because, must, needs* and causal *so/since* was reread: true of all cases, or of the case on screen?
-- Beat 1: "water crosses all the time, in both directions": true of a partially permeable membrane in water; no claim of equal rates. "Cells are bathed in watery solutions": the typical case, said without "every". "one structure that the lettuce's cells have and a red blood cell lacks": about these two cell types only.
-- Beat 3: "so the solutions in this comparison have negative values": MF3's own bounded wording ("in this comparison"). "Water still crosses both ways when the water potentials are equal": MF3 verbatim.
+- Beat 1: (round 1: the "Cells are bathed in watery solutions … both directions" sentence is cut.) "one structure that the lettuce's cells have and a red blood cell lacks": about these two cell types only.
+- Beat 3: (round 1: opening sentence cut; no new wording.) "so the solutions in this comparison have negative values": MF3's own bounded wording ("in this comparison"). "Water still crosses both ways when the water potentials are equal": MF3 verbatim.
 - Beat 4: "so a cell has a water potential of its own": follows from its contents being solutions. "so each case today is labelled as the initial condition": our labelling rule, bounded by "today". "In all three, water molecules cross the membrane both ways; the comparison decides only the net direction": "all three" = the three cases on screen; "only" limits what the comparison decides (direction, not whether crossing happens), which is the MF3 point. "a cell works properly only within a range of water content": the typical physiological statement, framing only; "it cannot simply stop water crossing its membrane": bounded by "simply"; water crosses the bilayer, and the lesson makes no claim about regulation.
-- Beat 5: "so there is a net movement of water into the cell": follows from more entering than leaving. "A red blood cell has no cell wall to resist the expansion": true of red blood cells. "In pure water the membrane stretches until it bursts": bounded to pure water; the small type says a solution only slightly higher may leave it swollen but intact; the plan's "may burst" is kept in the spine.
-- Beat 6: "so there is no net movement, and this red blood cell stays unchanged": "this" red blood cell, in this comparison (MF3). "they do not by themselves decide a cell's shape": MF3's limit. "This cell stays normal because it started normal": the causal claim is about this cell in this comparison. "can prevent large net changes": the plan-check sentence verbatim, with its "can".
-- Beat 7: "so it stretches only slightly and the cell does not burst": about a plant cell with an intact wall in this case; "only slightly" matches the model's ≤2% bulge. "its living cells take up water": bounded to living cells; the note adds that damaged leaves may not recover.
+- Beat 5 (round 1, new opening): "It contains water, dissolved salts and haemoglobin": a composition statement true of red blood cells, not exhaustive ("contains", not "consists only of"). "we compare its outline … without measuring its water potential": bounded to what this lesson does. "so there is a net movement of water into the cell": follows from more entering than leaving. "A red blood cell has no cell wall to resist the expansion": true of red blood cells. "In pure water the membrane stretches until it bursts": bounded to pure water; the small type says a solution only slightly higher may leave it swollen but intact; the plan's "may burst" is kept in the spine.
+- Beat 6: "so there is no net movement, and this red blood cell stays unchanged": "this" red blood cell, in this comparison (MF3). "they do not by themselves decide a cell's shape": MF3's limit. "This cell stays normal because it started normal": the causal claim is about this cell in this comparison. "can prevent large net changes": the plan-check sentence verbatim, with its "can". (Round 1) "Saline is sodium chloride dissolved in water; here its concentration is chosen to keep the cells' volume steady": the composition is definitional; "here" bounds the matched concentration to this example; no dose or clinical claim.
+- Beat 7: "so it stretches only slightly and the cell does not burst": about a plant cell with an intact wall in this case; "only slightly" matches the model's ≤2% bulge. "the cell becomes more turgid" (round 1, was "fully turgid"): describes the transition, not a completed endpoint. (Round 1 lettuce sentences) "its living cells contain water and dissolved cell-sap solutes": bounded to living cells. "Water entry restores turgor and the leaf firms up": this leaf, in this example. "This works as a qualitative demonstration when the cells are intact; a dead or badly damaged leaf may not recover": conditional, with "may". "Firmness does not measure water potential": true of the method in general.
 - Beat 8: "But water does not flood in for ever": the equilibrium point. "then there is no net water entry": MF3. "a turgid plant cell can have the same water potential": MF3's "can". "they do not mean the cell is flaccid … equal concentrations": MF3's "not necessarily", said as "do not mean".
-- Beat 9: "No net movement, so it stays as it was": this cell in the equal case. "often first at the corners": "often". "The wall is freely permeable, so the gap … fills with the external solution, not air": the plan's own statement. "it needs a wall to pull away from": definitional (plasmolysis is withdrawal of the protoplast from the wall).
+- Beat 9: "No net movement, so it stays as it was": this cell in the equal case. "often first at the corners": "often". "The wall is freely permeable, so the gap … fills with the external solution, not air": the plan's own statement. (Round 1: "Plasmolysis is a plant-cell term; it needs a wall to pull away from" is cut, removing the over-exclusive plant-only claim.)
 - Beat 10: "Each case compares …": our labelling rule. "in pure water, bursts": bounded as in Beat 5. "The difference is the cell wall": the plan's "The difference in outcome between the two cell types comes from the cell wall", scoped to these two cell types.
-- Beat 11: "In the papers checked for this topic, no question tests this outcome directly": the weights' 0/5 direct within the cited blocks, bounded by "checked for this topic"; not an archive-wide claim. "so this close is built from the syllabus": the plan's labelled syllabus-based close. "carried water-potential points among its five marks": not "five marks for osmosis". "credited the point of zero mass change … as its estimate": the plan-check description of Q1(c)(ii). "Water entered both": true of the two hook cases.
-- No sentence says pure water has the highest water potential without its reference condition, says all solutions are negative, uses "concentration of water", says plant cells burst, uses plasmolysis for an animal cell, calls the plasmolysed gap empty or air-filled, treats equal water potentials as flaccid or as equal concentrations, ties a normal red-cell shape to equality alone, or names a component potential.
+- Beat 11 (round 1): "None of the cited question parts in the five-paper Paper 2 sample directly tests this outcome": the weights' 0/5 coding of the cited Paper 2 blocks, bounded to those cited parts; not a claim about every question in those papers or the archive. "So this close follows the syllabus": the plan's labelled syllabus-based close. "carried water-potential points among its five marks": not "five marks for osmosis". "credited the point of zero mass change … as its estimate": the plan-check description of Q1(c)(ii). "Water entered both": true of the two hook cases.
+- No sentence says pure water has the highest water potential without its reference condition, says all solutions are negative, uses "concentration of water", says plant cells burst, uses plasmolysis for an animal cell, says plasmolysis belongs to plants alone, calls the plasmolysed gap empty or air-filled, treats equal water potentials as flaccid or as equal concentrations, ties a normal red-cell shape to equality alone, or names a component potential.
 
 ---
 
@@ -376,17 +377,17 @@ Every quotation in this storyboard, where it appears, and where it was copied fr
 | # | Quotation (verbatim) | Paper / session / question / page | Beat(s) | Copied from | Status |
 |---|---|---|---|---|---|
 | 1 | "explain the movement of water between cells and solutions in terms of water potential and explain the different effects of the movement of water on plant cells and animal cells (knowledge of solute potential and pressure potential is not expected)" | Syllabus 2025–2027, 4.2.6, p.22 | header; 11 (without the bracket) | `SYLLABUS-9700-DETAIL.md` | syllabus (verbatim) |
-| 2 | (no quotation; description) five-mark phloem mass-flow explanation containing water-potential/osmosis points; not five marks solely for osmosis | W20/21 Q4(b)(ii), MS p.10 | spine; 11 | `TOPIC-04-WEIGHTS.md` ledger (plan check's exact description) | description only; context PDF-CHECKED (plan check); MS wording PDF-UNCHECKED here |
-| 3 | (no quotation; description) 3 marks for a labelled downward-trending sketch and identifying its zero-mass-change intercept as the estimate; red pepper fruit-wall tissue | W20/51 Q1(c)(ii), QP p.5 / MS p.9 | spine; 11 | `TOPIC-PLAN-04-MEMBRANES.md` §4.2.5 MF2 paragraph; `TOPIC-04-WEIGHTS.md` S-B | description only; context PDF-CHECKED (plan check); MS wording PDF-UNCHECKED here |
+| 2 | (no quotation; description) five-mark phloem mass-flow explanation containing water-potential/osmosis points; not five marks solely for osmosis | W20/21 Q4(b)(ii), MS p.10 | spine; 11 | `TOPIC-04-WEIGHTS.md` ledger (plan check's exact description) | description only; PDF-CHECKED (round-1 storyboard check: `9700_w20_qp_21.pdf` p.11, `9700_w20_ms_21.pdf` p.10; question asks how assimilates and viruses travel through phloem sieve tubes; any five relevant points, including assimilate entry lowering water potential and consequent water entry by osmosis; other points concern hydrostatic-pressure gradients and mass flow) |
+| 3 | (no quotation; description) 3 marks for a labelled downward-trending sketch and identifying its zero-mass-change intercept as the estimate; red pepper fruit-wall tissue | W20/51 Q1(c)(ii), QP p.5 / MS p.9 | spine; 11 | `TOPIC-PLAN-04-MEMBRANES.md` §4.2.5 MF2 paragraph; `TOPIC-04-WEIGHTS.md` S-B | description only; PDF-CHECKED (round-1 storyboard check: `9700_w20_qp_51.pdf` p.5, `9700_w20_ms_51.pdf` p.9; stem asks for expected-result sketch, axes labels/units and how to estimate the equivalent sucrose concentration; three points cover x-axis label/unit, single downward crossing and identifying the intercept; no numerical −860 kPa answer belongs to this part) |
 
 Plan-check sentences spoken verbatim (our teaching wording adopted by the plan, **not** exam quotations; never shown in quotation marks as Cambridge text): the MF3 water-potential sentences (Beat 3); the MF3 equilibrium ideas (Beats 6 and 8, close to verbatim); the MF6 sentence "An isotonic saline example shows why matching the effective osmotic conditions around red blood cells can prevent large net changes in their volume." (Beat 6). Source: `plan/topic-04/TOPIC-PLAN-04-MEMBRANES.md` §4.2.1 and §4.2.6, copied from `cloud-checks/006/plan/CHECK.md` MF3 and MF6.
 
 **UNVERIFIED items** (not quoted; shown only as our paraphrase or omitted):
-1. `UNVERIFIED — a marked question testing 4.2.6 directly` (none in the cited blocks: 0/5 direct). The close is labelled **syllabus-based; not a Cambridge question**.
-2. `UNVERIFIED — the exact MS p.10 wording of W20/21 Q4(b)(ii)`, including which of its points concern water potential. Only the plan check's description is shown, as paraphrase.
-3. `UNVERIFIED — the exact QP p.5 / MS p.9 wording of W20/51 Q1(c)(ii)`. Only the plan check's description is shown, as paraphrase; the verified −860 kPa line belongs to Q1(d)(i) and is not used here.
+1. `UNVERIFIED — a marked question testing 4.2.6 directly`: no direct example identified in this cited set (0/5 direct in the cited Paper 2 blocks); the adjacent PDFs do not establish that no direct question exists elsewhere. The close is labelled **syllabus-based; not a Cambridge question**.
+2. **RESOLVED (round-1 check, PDF-CHECKED):** W20/21 Q4(b)(ii), QP p.11 / MS p.10. The question asks how assimilates and viruses travel through phloem sieve tubes; the scheme awards any five relevant points, including assimilate entry lowering water potential and consequent water entry by osmosis; other points concern hydrostatic-pressure gradients and mass flow. Five marks are not all for osmosis. Still shown only as our paraphrase.
+3. **RESOLVED (round-1 check, PDF-CHECKED):** W20/51 Q1(c)(ii), QP p.5 / MS p.9. The stem asks for an expected-result sketch, axes labels/units and how to estimate the equivalent sucrose concentration; three points cover x-axis label/unit, single downward crossing and identifying the intercept. No numerical −860 kPa answer belongs to this part (that line is Q1(d)(i), not used here). Still shown only as our paraphrase.
 4. `UNVERIFIED — a sourced micrograph of red blood cells in solutions of different water potentials` (asset dependency; fallback is a drawn view captioned *drawn model of a light-microscope view; not a micrograph*).
-5. `UNVERIFIED — a content source for the lettuce example beyond the plan check's ruling` (the plan check calls it "suitably bounded as a turgor demonstration, not a water-potential measurement"; the lesson claims nothing more than firmness returning as living cells take up water).
+5. `UNVERIFIED — a content source for the lettuce example beyond the plan check's ruling` (not resolved by the exam PDFs; the plan check calls it "suitably bounded as a turgor demonstration, not a water-potential measurement"; the lesson claims nothing more than firmness returning as living cells take up water, now with the narrated intact-cells caveat and no numeric potential or duration).
 
 ---
 
@@ -396,30 +397,22 @@ Counted by the validator over the blockquoted narration; seconds = words ÷ 120 
 
 | Beat | Title | Words | Seconds |
 |---|---|---:|---:|
-| 1 | Hook and context | 89 | 44.5 |
+| 1 | Hook and context | 70 | 35.0 |
 | 2 | What you will be able to do | 53 | 26.5 |
-| 3 | Water potential, restated | 114 | 57.0 |
+| 3 | Water potential, restated | 107 | 53.5 |
 | 4 | Make one side a cell | 110 | 55.0 |
-| 5 | Red blood cell: higher | 108 | 54.0 |
-| 6 | Red blood cell: equal, then lower | 108 | 54.0 |
-| 7 | Plant cell: higher | 128 | 64.0 |
+| 5 | Red blood cell: higher | 110 | 55.0 |
+| 6 | Red blood cell: equal, then lower | 126 | 63.0 |
+| 7 | Plant cell: higher | 149 | 74.5 |
 | 8 | The turgid cell reaches equilibrium | 106 | 53.0 |
-| 9 | Plant cell: equal, then lower | 116 | 58.0 |
+| 9 | Plant cell: equal, then lower | 103 | 51.5 |
 | 10 | Recap on the six cells | 99 | 49.5 |
-| 11 | How it is asked, reject card, lettuce | 116 | 58.0 |
-| **Total** | 11 beats (11 teaching + 0 error) | **1,147** | **573.5** (9:33.5) |
+| 11 | How it is asked, reject card, lettuce | 103 | 51.5 |
+| **Total** | 11 beats (11 teaching + 0 error) | **1,136** | **568.0** (9:28.0) |
 
-**Length, honestly:** **1,147 words = 9:33.5** at 120 words per minute, **1:18.5 over** the 8:15 budget (about 990 words), all of it teaching (there is no error beat). Where it sits: the lesson must restate the MF3 water-potential sentences and the definition so that it stands alone (Beat 3, 57 s), carry six cases rather than four (the plant equal case added by the plan check), and give the plant equilibrium its own beat (Beat 8, 53 s), while the REAL-WORLD statements for blood cells and lettuce and the MF6 saline sentence each add a spoken sentence. One tightening is already taken (Beat 6, −8 words). No narration is sped up.
+**Length, honestly (after round-1 check):** **1,136 words = 9:28.0** at 120 words per minute, **1:13.0 over** the 8:15 budget (about 990 words), all of it teaching (there is no error beat). The check's runtime ruling was applied: author cuts **1, 3, 4 and 6** taken (19 + 8 + 7 + 13 = **−47 words**; 1,147 → 1,100 = 9:10 before replacements), then the required M4–M5 material/fit and scope wording added (Beat 5 +21, Beat 6 +17, Beat 7 +20 including "more turgid", Beat 11 −5 net from the M5 rewording): **1,136 words**. Per the check, this remaining overrun is **accepted**: the six comparisons, standalone definition, plant equilibrium, real examples and recap each do distinct work; no case is deleted, no error beat is invented and no narration is sped up. Cuts 2 (Beat 10 recap sentence, 22 words) and 5 ("from a watered plant", 4 words) are **kept by the check's ruling**. Beat windows in the headings are provisional; per-beat seconds above are the ledger.
 
-**Cut list, in the order I would take it** (none touches the MF3 sentences, any of the six cases, the equilibrium beat, a REAL-WORLD statement, the saline sentence or the exam-close forms):
-1. Beat 1: "Cells are bathed in watery solutions, wrapped in a membrane that water crosses all the time, in both directions." (−19; both-way crossing is taught in Beats 3–4; remove action 4 and its cue).
-2. Beat 10: "Each case compares the solution's water potential with the cell's, at the start, and net water movement runs from higher to lower." (−22; the column headers and the scale arrow brighten unnarrated with the first fade-in; remove action 2's cues).
-3. Beat 11: "The same language turns up inside other answers:" (−8).
-4. Beat 3: "First, the idea that does the explaining." (−7; the **water potential** caption moves to *describes water's tendency to move*).
-5. Beat 7: "from a watered plant," (−4; the on-screen label keeps it).
-6. Beat 9: "Plasmolysis is a plant-cell term; it needs a wall to pull away from." (−13; the board tag *no wall: crenation, not plasmolysis* keeps the contrast on screen; lowest priority, since it is the lesson's one spoken plant/animal contrast at the plasmolysis step).
-
-Cuts 1–5 give 1,087 words (9:03.5); with 6, 1,074 words (8:57.0). About 9:00 is the honest floor for this content; reaching 8:15 would mean dropping a case or the equilibrium beat, which the plan and plan check require.
+**Cut list status:** 1 (Beat 1, both-directions sentence) **taken** (also removes the post-haemolysis magnifier); 2 (Beat 10 recap sentence) **kept by ruling**; 3 (Beat 11 "The same language turns up inside other answers:") **taken**; 4 (Beat 3 "First, the idea that does the explaining.") **taken**; 5 (Beat 7 "from a watered plant,") **kept by ruling**; 6 (Beat 9 "Plasmolysis is a plant-cell term; …") **taken** (the board tag *no wall: crenation, not plasmolysis* keeps the contrast on screen).
 
 ## What I left out, and who owns it
 
@@ -440,7 +433,7 @@ Cuts 1–5 give 1,087 words (9:03.5); with 6, 1,074 words (8:57.0). About 9:00 i
 | Model | Specified | For |
 |---|---|---|
 | **`WaterPotentialModel` `cell-vs-solution`** (solution left, cell right, membrane rotated and relabelled; *solution* and *cell* markers on the scale; initial-condition label; counter relabelled; plant case with open-mesh freely permeable wall; `equalise` sub-state: markers meet, counts level, net arrow fades, crossings continue) | here (base state 4.2.1a) | 4.2.2a (osmometer explanation), 4.2.2b (red onion), 4.2.5 (tissue-vs-solution comparison) |
-| **`CellOsmosisSet`** (all ten states; `plant-equal` and `rbc-normal` also the starting geometries; token colour roles for cell contents and for sucrose / sodium chloride solutions; gap filled with external solution through the wall) | here | 4.2.2b (red onion explanation recall: `plant-plasmolysed`, with the vacuole-edge-is-the-tonoplast point), 4.2.5 (potato cell inset: `plant-turgid`, `plant-flaccid`, `plant-plasmolysed`) |
+| **`CellOsmosisSet`** (the eight shared states, plus local equality/compatibility states specified here: `rbc-equal`, `plant-turgid-equilibrium` = compatibility alias of the canonical `plant-turgid` endpoint; lesson-local transition `plant-taking-up-water`, not exported; `plant-equal` and `rbc-normal` also the starting geometries; token colour roles for cell contents and for sucrose / sodium chloride solutions; gap filled with external solution through the wall) | here | 4.2.2b (red onion explanation recall: `plant-plasmolysed`, with the vacuole-edge-is-the-tonoplast point), 4.2.5 (potato cell inset: `plant-turgid`, `plant-equal`, `plant-flaccid`); 4.2.2b may also import `plant-turgid-equilibrium` (alias of `plant-turgid`) |
 | **`comparison-board`** layout (2 × 3, initial-condition headers) | here | 4.2.2b and 4.2.5 may reuse one row as a recall thumbnail |
 | Schematic crossing counts (15/5, 10/10, 5/15; convergence 15→10, 5→10) | here | any later lesson that shows the counter, so counts look the same topic-wide |
 
@@ -450,13 +443,13 @@ Cuts 1–5 give 1,087 words (9:03.5); with 6, 1,074 words (8:57.0). About 9:00 i
 |---|---|---|
 | `WaterPotentialModel` base state | reuse | 4.2.1a |
 | `cell-vs-solution` state, `equalise` sub-state, scale markers, open-mesh wall | **new build** | authored |
-| `CellOsmosisSet` (ten states, plant and red-blood-cell geometry, token roles, motion) | **new build** | authored |
+| `CellOsmosisSet` (eight shared states, local `rbc-equal` and alias `plant-turgid-equilibrium`, local transition `plant-taking-up-water`; plant and red-blood-cell geometry, token roles, motion) | **new build** | authored |
 | `comparison-board` layout | **new build** | authored |
 | `FluidMosaicMembrane` `full` (rotated zoom inset, Beat 4) | reuse | 4.1.1-2 |
-| Lettuce leaf, bowl, hand, small clock (hook, Beat 7, Beat 11) | new, schematic vector | authored; handling specified (leaf lowered by hand into water, clock starting on first contact, never reset); rendered still-frame verification pending |
+| Lettuce leaf, bowl, hand, small unnumbered time-passing graphic (hook, Beat 7, Beat 11) | new, schematic vector | authored; handling specified (leaf lowered by hand into water, time graphic starting on first contact, never reset, no elapsed-minute figures); rendered still-frame verification pending |
 | Light-microscope view of red blood cells (Beat 5) | **dependency: sourced micrograph** with source line and preparation stated; otherwise a drawn view captioned *drawn model of a light-microscope view; not a micrograph* | never generated |
-| Isotonic saline panel (bag outline, `rbc-equal` group) | new, schematic | authored; *our example; no clinical use is described here* |
-| Objectives pictograms (droplet with arrows; red disc and green rectangle with three dots; thick and thin outlines); forms surface; reject card | new card content; shared surfaces | authored |
+| Isotonic saline panel (simple solution vessel labelled *sodium chloride solution; matched conditions in this example*, not a clinical infusion-bag silhouette; `rbc-equal` group) | new, schematic | authored; *our example; no clinical use is described here* |
+| Objectives pictograms (droplet with opposed arrows; red disc beside green rectangle with three dots; thick wall beside thin membrane outline; all three visible from the first frame of Beat 2); forms surface; reject card | new card content; shared surfaces | authored |
 | Photographs, generated images, Cambridge artwork | none | — |
 
 ## Plan interpretations

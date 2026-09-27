@@ -496,7 +496,7 @@ Every narrated sentence containing *all, every, always, never, only, no, nothing
 
 ## Citations
 
-Every quotation in this storyboard, where it appears, and where it was copied from. No exam PDF was opened; exam strings are those SHARED-SPECS §2 lists as verified by the plan check.
+Every quotation in this storyboard, where it appears, and where it was copied from. No exam PDF was opened by the author; exam strings are those SHARED-SPECS §2 lists as verified by the plan check. **The round-1 independent check (27 September 2026) re-verified every row below against the actual W20/51 and M24/52 QP/MS PDFs and R24 pp.54–55 (one-based PDF pages); its findings are added in the Status column.**
 
 | # | Quotation (verbatim) | Paper / session / question / page | Beat(s) | Copied from | Status |
 |---|---|---|---|---|---|
@@ -505,26 +505,26 @@ Every quotation in this storyboard, where it appears, and where it was copied fr
 | 3 | "recognise when it is appropriate to join the points on a graph with straight ruled lines and when it is appropriate to use a line (straight or curved) of best fit" | Syllabus p.63 | 11 (small type) | `SYLLABUS-9700-DETAIL.md` | syllabus, verbatim |
 | 4 | "describe how different concentrations would be prepared by serial dilution or proportional dilution" | Syllabus p.60 | 6 (small type) | `SYLLABUS-9700-DETAIL.md` | syllabus, verbatim |
 | 5 | "prepare a simple risk assessment of their plans, taking into account the severity of any hazards and the probability that a problem could occur" | Syllabus p.61 | 5 (small type) | `SYLLABUS-9700-DETAIL.md` | syllabus, verbatim |
-| 6 | `ref. to hazard and risk and precaution ;` | M24/52 (March 2024, Paper 52) Q1(c)(iii), MS p.7 (m24_52) | spine; 5; 14 | SHARED-SPECS §2; plan §4.2.5; weights S-D | **PDF-CHECKED (plan check)** |
-| 7 | `–860kPa ;` | W20/51 (November 2020, Paper 51) Q1(d)(i), MS p.9 (w20_51) | spine; 14 | SHARED-SPECS §2; plan §4.2.5; weights S-B | **PDF-CHECKED (plan check)** |
-| 8 | “The term ‘amount’ is not accepted as it is not specific.” | R24 p.54, June 2024 ER, Paper 52 key messages | spine; 9 (E48) | SHARED-SPECS §2; plan E48; weights S-F and E48 | **PDF-CHECKED (plan check)** |
-| 9 | (no quotation) Table 1.1: 0.10–0.70 mol dm⁻³ → −260, −540, −860, −1120, −1450, −1800, −2180 kPa, shown as *supplied data from W20/51* | W20/51 (w20_51) Q1(d), Table 1.1, QP pp.6–7 | 12, 13, 14; Dataset 4 | SHARED-SPECS §4 shared numbers; plan MF2 | **PDF-CHECKED (plan check)** (values) |
-| 10 | (no quotation; our paraphrase) labelled downward-trending sketch; zero-mass-change intercept as the estimate; 3 marks | W20/51 (w20_51) Q1(c)(ii), QP p.5 / MS p.9 | spine; 14 | plan MF2 paragraph; weights S-B | **PDF-CHECKED (plan check)** (description, not wording) |
-| 11 | (no quotation; our paraphrase) density-drop method; no-rise/no-fall drop identifies 0.30 mol dm⁻³ | W20/51 (w20_51) Q1(d)(i), QP pp.6–7 / MS p.9 | 14 | plan MF2 paragraph | **PDF-CHECKED (plan check)** (description, not wording) |
-| 12 | (no quotation; our paraphrase) maximum 6 marks, any six of nine listed points; turnip blocks, temperature | M24/52 (m24_52) Q1(c)(i), MS p.6 | spine; 14 | plan §4.2.2 and §4.2.5; weights S-D | **PDF-CHECKED (plan check)** (description, not wording) |
-| 13 | (no quotation; our paraphrase) limitations, any four of eight points; untested intermediate concentrations, variation among cells, missing uncertainty information | M24/52 (m24_52) Q1(b)(ii), MS p.5 | spine; 14 | plan §4.2.2; weights S-C | **PDF-CHECKED (plan check)** (description, not wording) |
-| 14 | (no quotation; our paraphrase) range/dilution, controls and percentage-change interpretation across Q1(a)(ii) 3, Q1(b) 6, Q1(c)(i) 2 | W20/51 (w20_51) MS pp.7–9 | spine; scope ledger | weights S-A | **PDF-CHECKED (plan check)** (description, not wording) |
+| 6 | `ref. to hazard and risk and precaution ;` | M24/52 (March 2024, Paper 52) Q1(c)(iii), MS p.7 (m24_52) | spine; 5; 14 (unspoken row 3 tab) | SHARED-SPECS §2; plan §4.2.5; weights S-D | **PDF-CHECKED (plan check; round-1 check: exact wording and one mark, MS p.7)** |
+| 7 | `–860kPa ;` | W20/51 (November 2020, Paper 51) Q1(d)(i), MS p.9 (w20_51) | spine; 14 | SHARED-SPECS §2; plan §4.2.5; weights S-B | **PDF-CHECKED (plan check; round-1 check: exact answer, MS p.9)** |
+| 8 | “The term ‘amount’ is not accepted as it is not specific.” | R24 p.54, June 2024 ER, Paper 52 key messages | spine; 9 (E48) | SHARED-SPECS §2; plan E48; weights S-F and E48 | **PDF-CHECKED (plan check; round-1 check: exact 12-word quotation, R24 pp.54–55, Paper 52 key messages)** |
+| 9 | (no quotation) Table 1.1: 0.10–0.70 mol dm⁻³ → −260, −540, −860, −1120, −1450, −1800, −2180 kPa, shown as *supplied data: W20/51 Table 1.1, QP p.7 — sucrose solutions used in both methods* | W20/51 (w20_51) Table 1.1, QP p.7 | 12, 13, 14; Dataset 4 | SHARED-SPECS §4 shared numbers; plan MF2 | **PDF-CHECKED (plan check; round-1 check: all seven pairs match; QP p.7 says the table covers solutions used in method 1 and method 2)** (values) |
+| 10 | (no quotation; our paraphrase) labelled downward-trending sketch; zero-mass-change intercept as the estimate; 3 marks | W20/51 (w20_51) Q1(c)(ii), QP p.5 / MS p.9 | spine; 14 (form row 1; closing contrast caption) | plan MF2 paragraph; weights S-B | **PDF-CHECKED (plan check; round-1 check: x-axis label/unit, downward line crossing once, x-intercept indicated as estimate)** (description, not wording) |
+| 11 | (no quotation; our paraphrase) density-drop method; no-rise/no-fall drop identifies 0.30 mol dm⁻³ | W20/51 (w20_51) Q1(d)(i), QP pp.6–7 / MS p.9 | 14 | plan MF2 paragraph | **PDF-CHECKED (plan check; round-1 check: QP pp.6–7 Figs 1.3–1.4, 0.30 drop level unchanged)** (description, not wording) |
+| 12 | (no quotation; our paraphrase) maximum 6 marks, any six of nine listed points; turnip blocks, temperature | M24/52 (m24_52) Q1(c)(i), MS p.6 | spine; 14 (unspoken row 3) | plan §4.2.2 and §4.2.5; weights S-D | **PDF-CHECKED (plan check; round-1 check: M24/52 QP pp.6–7, MS p.6, nine listed marking points)** (description, not wording) |
+| 13 | (no quotation; our paraphrase) limitations, any four of eight points; untested intermediate concentrations, variation among cells, missing uncertainty information | M24/52 (m24_52) Q1(b)(ii), MS p.5 | spine; 14 (unspoken row 4) | plan §4.2.2; weights S-C | **PDF-CHECKED (plan check; round-1 check: M24/52 QP pp.4–5, MS p.5, onion/NaCl context; not a universal list for potato)** (description, not wording) |
+| 14 | (no quotation; our paraphrase) range/dilution, controls and percentage-change interpretation across Q1(a)(ii) 3, Q1(b) 6, Q1(c)(i) 2 | W20/51 (w20_51) MS pp.7–9 | spine; scope ledger | weights S-A | **PDF-CHECKED (plan check; round-1 check: MS pp.7–8; original asks for 50 cm³, so our 20 cm³ is an adaptation)** (description, not wording) |
 
 Plan-check paragraphs used as our wording without quotation marks on screen: MF3 water-potential sentences (Beat 3), MF6 potato sentence (Beat 4), MF5 eighteen-vessel and estimate paragraph (Beats 6, 12), MF2 W20/51 paragraph (Beats 12, 14). They are plan text, not exam wording, and never appear on an MS/ER tab.
 
-**UNVERIFIED items** (not quoted; shown only as our framing or paraphrase, or omitted):
-1. `UNVERIFIED — the question wording of W20/51 Q1(c)(ii) and Q1(d)(i).` Beat 14 describes both from the plan check's paragraph; no stem is reproduced.
-2. `UNVERIFIED — the exact mark-scheme wording of W20/51 Q1(c)(ii)'s three marking points.` Shown as our paraphrase (row 1), never on an MS tab.
-3. `UNVERIFIED — the density-drop procedure of W20/51 Q1(d) beyond "the no-rise/no-fall drop identifies 0.30 mol dm⁻³".` Beat 14 says only that; the method is not taught.
-4. `UNVERIFIED — the exact mark-scheme wording of M24/52 Q1(c)(i) and Q1(b)(ii).` Shown as paraphrase (rows 3 and 4).
-5. `UNVERIFIED — which June 2024 Paper 52 question(s) the "amount" key message arose from.` Not claimed; the card is captioned as a paper-wide key message applied to our constructed plan.
-6. `UNVERIFIED — a content source for the firm/limp raw-potato-strip observation used in the hook.` Shown as *our illustration of what this lesson measures; not a measured result*, with no numbers; the lesson's own method is the evidence it builds.
-7. `UNVERIFIED — a sourced density for raw potato tissue.` Used only in the Dataset 2 plausibility note (not narrated, not on screen).
+**UNVERIFIED items** (not quoted; shown only as our framing or paraphrase, or omitted). Items 1–4 are **resolved** by the round-1 check against the actual PDFs; paraphrase labels are retained for paraphrases.
+1. **RESOLVED (round-1 check)** — the question wording of W20/51 Q1(c)(ii) and Q1(d)(i): checked, QP p.5 (Q1(c)(ii) asks for the sucrose concentration equivalent to the tissue water potential) and QP pp.6–7 (density drops). Beat 14 still describes, not quotes, them.
+2. **RESOLVED (round-1 check)** — W20/51 Q1(c)(ii)'s three marking points, MS p.9: x-axis label/unit; downward line crossing once; indication of x-intercept as estimate. Still shown as our paraphrase (row 1), never on an MS tab.
+3. **RESOLVED (round-1 check)** — the W20/51 Q1(d) density-drop procedure, QP pp.6–7, Figs 1.3–1.4: methylene blue added to the post-soak solution, drop released into the matched unused solution; the 0.30 drop level unchanged. Beat 14 still says only that the drop picked out 0.30; the method is not taught.
+4. **RESOLVED (round-1 check)** — M24/52 Q1(c)(i) (MS p.6, nine listed marking points; QP pp.6–7, turnip blocks, 10–50 °C) and Q1(b)(ii) (MS p.5, any four of eight; onion/NaCl). Still shown as paraphrase (rows 3 and 4).
+5. `UNVERIFIED — which June 2024 Paper 52 question(s) the "amount" key message arose from.` Remains unresolved (round-1 check: the PDF places the statement in key messages and does not settle a narrower origin). Not claimed; the card is captioned as a paper-wide key message applied to our constructed plan.
+6. `UNVERIFIED — a content source for the firm/limp raw-potato-strip observation used in the hook.` (Round-1 check: not exam evidence; consistent with the mechanism but not a measured observation.) Shown as *our illustration of what this lesson measures; not a measured result*, with no numbers; the lesson's own method is the evidence it builds.
+7. `UNVERIFIED — a sourced density for raw potato tissue.` Used only in the Dataset 2 plausibility note (not narrated, not on screen). (Round-1 check: a plausibility assumption, not a sourced datum.)
 
 ---
 
