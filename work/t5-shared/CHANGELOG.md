@@ -1,5 +1,22 @@
 # t5-shared CHANGELOG
 
+## 27 Sep 2026 — run 009g (branch `cloud/009g-fix-3a72s8`, fix pass on 5.1.3 v3 / 5.1.4 v3 / 5.1.2 v2)
+
+**Added: `MitosisCellModel.tsx`** (animal + plant, stage ids interphase · prophase-early · prophase-late · metaphase ·
+anaphase · telophase · cytokinesis; `MSTAGES`, `stageAt`, `mixM`, `mLayout`/`mGeom`, `mCentromeres`, `MCOUNT`). Built by
+009b inside 5.1.2 and folded in here, with the two review fixes (review 5.1.2 P1):
+- **One cytokinesis event predicate.** New export `cytoParted(cyto, variant)`: true from the first frame on which the two
+  daughter-cell outlines are disconnected (animal: cleavage offset ≥ half-cell radius; plant: cyto ≥ 1). The outline
+  geometry itself uses it, and **beats must switch the count strip with it** (never with a separate timer): the switch
+  frame and the outline split are then the same frame by construction.
+- **Telophase containment.** New nuclei larger and nearer the equator (animal radius 0.25 → 0.30 R, centre 0.50 → 0.45 R),
+  centrosomes further out (pole 0.82 → 0.88 R), each chromosome group compacted ahead of the re-forming envelope and
+  centred on its nucleus, new-envelope fragments gather from further out. Probed from the first fragment to the closed
+  envelope: every chromosome point + half width stays ≥ 11.8 px (size 0.8; ≥ 4 px at size 0.3) inside the inner envelope
+  line, animal and plant; nothing is clipped; centrosomes stay outside the new envelopes.
+The other six files are unchanged (the 5.1.2 copies were stale — 009b had built on the pre-009f files — and are now
+re-synced byte for byte).
+
 ## 27 Sep 2026 — run 009f (branch `cloud/009f-fix-4t1jp6`, fix pass on 5.1.1 / 5.1.3 / 5.1.4 after the independent video review)
 
 **Why.** New binding rule from the review: NO text under 17 px in the delivered 1920×1080 frame. The lesson is branded into a

@@ -1,0 +1,40 @@
+{
+  "id": 4,
+  "words": 132,
+  "seconds": 69.3045625,
+  "samples": 3326619,
+  "wpm": 114.27819055924348,
+  "voice_id": "BcpjRWrYhDBHmOnetmBl",
+  "model_id": "eleven_multilingual_v2",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 1.0
+  },
+  "sample_rate": 48000,
+  "time_stretched": false,
+  "requestDiffers": false,
+  "mp3_sha256": null,
+  "composite": {
+    "v1": "beat-04.v1.mp3",
+    "hook": "beat-04.hook.mp3",
+    "cut1_sample": 1709712,
+    "cut1_s": 35.619,
+    "cut1_dBFS": -93.3,
+    "cut2_sample": 1887264,
+    "cut2_s": 39.318,
+    "cut2_dBFS": -92.0,
+    "hook_trim": [
+      0,
+      1065518
+    ],
+    "hook_seconds": 22.198291666666666,
+    "removed_v1_seconds": 3.699,
+    "total_seconds": 69.3045625,
+    "wav_sha256": "e5d78abdabd8c4cc06022e345b676f662861efadd1e0228f4c6fa52a13b81eb6"
+  },
+  "v1_mp3_sha256": "84209765ef45af69d98aeb5dd0665576977e969bed4b661c9cbe1646d47904d1",
+  "hook_mp3_sha256": "5437a1e7cc275c2be75cecef59722341ec3b95b72f73dbb38752454e648ed983"
+}

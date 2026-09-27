@@ -1,0 +1,23 @@
+{
+ "rule": "EVERY frame: no visible (opacity > 0.02) text < 17 px in the delivered 1920x1080 frame; no two visible text boxes overlap",
+ "everyFrame": true,
+ "visibleOpacity": 0.02,
+ "overlapFailures": 1,
+ "overlaps": [
+  {
+   "beat": 6,
+   "frame": 7842,
+   "t": 261.4,
+   "a": "growing tissues",
+   "b": "Simplified chromosome-set comparison; not this org",
+   "ox": 138,
+   "oy": 14
+  }
+ ],
+ "brandingScale": 0.8802,
+ "minSourcePx": 19.31,
+ "framesChecked": 4131,
+ "smallestEffectivePx": 17.6,
+ "failures": 0,
+ "list": []
+}

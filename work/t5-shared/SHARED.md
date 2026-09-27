@@ -13,11 +13,13 @@ rings/highlights use `T5.ring` over a `T5.ringHalo` ink halo (`T5Annot.tsx`). Ev
 | `T5Annot.tsx` | `Ring`, `Glow`, `Trace`, `Leader`, `Bracket`, `Tick`, `Note`, `Label` | annotation (decor) |
 | `t5-palette.ts` | `T5` tokens | byte-identical copy of `cloud-inputs/009/topic-05/t5-palette.ts` |
 
-Not built here (not used by 5.1.1, 5.1.3, 5.1.4): `MitosisCellModel`, `RootTipSquashRig`, `FieldOfViewSchematic`.
+| `MitosisCellModel.tsx` | `MitosisCellModel` (animal / plant), `cytoParted`, `MCOUNT` | interphase · prophase-early · prophase-late · metaphase · anaphase · telophase · cytokinesis (continuous parameters; one-frame `sep`); added run 009g from 5.1.2, see CHANGELOG |
+
+Not built here: `RootTipSquashRig`, `FieldOfViewSchematic`.
 
 ## sha256
 
-(run 009f, 27 Sep: label-size fix; see `CHANGELOG.md`. Every lesson copy in 5.1.1, 5.1.3 and 5.1.4 is byte-identical to these.)
+(run 009f, 27 Sep: label-size fix; run 009g: MitosisCellModel added; see `CHANGELOG.md`. Every lesson copy in 5.1.1, 5.1.2, 5.1.3 and 5.1.4 is byte-identical to these.)
 
 | file | sha256 |
 |---|---|
@@ -27,3 +29,4 @@ Not built here (not used by 5.1.1, 5.1.3, 5.1.4): `MitosisCellModel`, `RootTipSq
 | `DNAContentGraph.tsx` | `99b69034ef1bfc551d26e59026b4d29d3d5989d4b60fa97195f66cb39902fe18` |
 | `T5Annot.tsx` | `c8081bb10eba2f70ebc2fff1e15bc12099fa6825eca445722c7368decfbb7ee4` |
 | `TelomereEndModel.tsx` | `0ad089f52f4c76e9538dbfd0626a7867c9e98d1a513d27b2740572fd03ce1dfc` |
+| `MitosisCellModel.tsx` | `86656d7f7f7421d3268a028aff30cdfce9d89788146abcb58502b4e12e755349` (run 009g; used by 5.1.2) |
