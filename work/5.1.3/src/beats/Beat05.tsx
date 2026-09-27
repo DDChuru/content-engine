@@ -36,7 +36,8 @@ export default function Beat05(s: any) {
       rows={rows} human={human} insetCount={ic}>
       <Txt x={W.cx} y={878} size={15} weight={600} fill={C.muted} anchor="middle" italic opacity={a('s') >= 0 ? fi(a('s'), 0.4) : 0}>schematic account of replication during S; detailed replication in 6.1.4</Txt>
       {done && <>
-        <Label x={W.cx + 70} y={W.cy - 70} text="sister chromatids" size={19} opacity={fi(a('sisters'), 0.4)} />
+        <Label x={W.cx + 40} y={W.cy - 64} text="sister" size={20} opacity={fi(a('sisters'), 0.4)} />
+        <Label x={W.cx + 40} y={W.cy - 41} text="chromatids" size={20} opacity={fi(a('sisters'), 0.4)} />
         <Label x={W.cx - 30} y={W.cy + 36} text="centromere" size={19} anchor="end" opacity={fi(a('cen'), 0.4)} />
         <Bracket x1={G.sides[-1].top[0] - 16} y1={G.sides[-1].top[1] - 8} x2={G.sides[1].top[0] + 16} y2={G.sides[1].top[1] - 8} side={1} depth={10} opacity={fi(a('one'), 0.4)} />
         <Label x={W.cx - 70} y={W.cy - 105} text="one chromosome" size={19} anchor="middle" opacity={fi(a('one'), 0.4)} />

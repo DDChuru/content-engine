@@ -2,7 +2,7 @@
  * the human-scale hook nucleus, the staple handle, the light-microscope field schematic, forms rows, reject card. */
 import React from 'react';
 import {BRAND as C, BODY, clamp01} from '../../shared/src/theme';
-import {Txt, Tag, textW} from '../../shared/src/Type';
+import {Txt, Tag, textW, fit} from '../../shared/src/Type';
 import {T5} from '../t5-palette';
 import {fi, fe, lerp} from '../util';
 
@@ -18,6 +18,7 @@ export const typed = (text: string, a: number, cps = 26) => a <= 0 ? '' : text.s
 /** Compact caption line(s) (never alone on a frame). */
 export function Caption({x, y, text, size = 30, maxW = 1500, opacity = 1, anchor = 'start', weight = 700, fill = INK}: any) {
   if (opacity <= 0) return null;
+  size = fit(size);   // run 009f: >= 20 source px; wrap and line step at the drawn size
   const ls = wrap(text, size, maxW, weight);
   return <g opacity={opacity < 1 ? opacity : undefined}>{ls.map((l, i) => <Txt key={i} x={x} y={y + i * size * 1.25} size={size} weight={weight} fill={fill} anchor={anchor}>{l}</Txt>)}</g>;
 }
@@ -66,7 +67,7 @@ export function ScaleBar({x, y, len, label = '5 µm', opacity = 1, pulse = 0}: a
 }
 
 /** Light-microscope field schematic: a circular field; blur → resolves to a dark X as it condenses. */
-export function FieldSchematic({x, y, r = 120, resolve = 0, opacity = 1}: any) {
+export function FieldSchematic({x, y, r = 120, resolve = 0, opacity = 1, capAbove = false}: any) {
   if (opacity <= 0) return null;
   const k = clamp01(resolve);
   return (
@@ -80,13 +81,13 @@ export function FieldSchematic({x, y, r = 120, resolve = 0, opacity = 1}: any) {
           <path d="M14 -46C10 -20 8 -8 4 0C8 8 10 20 14 46" fill="none" stroke="#1F2A55" strokeWidth={13} strokeLinecap="round" />
         </g>}
       </g>
-      <Txt x={x} y={y + r + 30} size={17} weight={600} fill={C.muted} anchor="middle" italic>schematic drawing — not a photomicrograph</Txt>
+      <Txt x={x} y={capAbove ? y - r - 16 : y + r + 30} size={20} weight={600} fill={C.muted} anchor="middle" italic>schematic drawing — not a photomicrograph</Txt>
     </g>
   );
 }
 
 /** Staple handle: two identical sheets, one on the other, a staple pressing through both (p 0..1 = staple in). */
-export function StapleInset({x, y, p = 1, opacity = 1, pulse = 0}: any) {
+export function StapleInset({x, y, p = 1, opacity = 1, pulse = 0, hiA = 0, hiB = 0}: any) {
   if (opacity <= 0) return null;
   const sy = lerp(-60, 0, clamp01(p));
   const sheet = (dx: number, dy: number, k: string) => (
@@ -97,6 +98,8 @@ export function StapleInset({x, y, p = 1, opacity = 1, pulse = 0}: any) {
   );
   return (
     <g opacity={opacity < 1 ? opacity : undefined}>
+      {hiB > 0 && <rect data-role="decor" x={x + 14} y={y + 6} width={174} height={220} rx={10} fill={T5.ring} opacity={0.5 * hiB} />}
+      {hiA > 0 && <rect data-role="decor" x={x - 12} y={y - 12} width={174} height={220} rx={10} fill={T5.ring} opacity={0.5 * hiA} />}
       <g data-role="drawing">
         {sheet(26, 18, 'b')}{sheet(0, 0, 'a')}
         <path d={`M${x + 18} ${y + 24 + sy}H${x + 48}`} stroke="#6B6B6B" strokeWidth={6} strokeLinecap="round" />

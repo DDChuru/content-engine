@@ -20,23 +20,24 @@ export default function Beat13(s: any) {
       <Tag x={700} y={430} text="growth" size={18} opacity={K(a('g1'))} />
       <Tag x={560} y={880} text="DNA replication, S (synthesis) phase of interphase" size={17} anchor="middle" opacity={K(a('s'))} />
       {a('sis') >= 0 && <g opacity={K(a('sis'))}>
-        <rect data-role="decor" x={660} y={590} width={210} height={130} rx={12} fill="#FFFFFF" stroke="#D6CEBD" strokeWidth={2} />
-        <Chromosome x={775} y={650} id="C1" cond={0} rep={1} rot={90} scale={0.28} wave={0.3} />
-        <Txt x={765} y={708} size={13} weight={700} fill={T5.ringHalo} anchor="middle">one chromosome, two DNA molecules</Txt>
+        <rect data-role="decor" x={690} y={456} width={190} height={156} rx={12} fill="#FFFFFF" stroke="#D6CEBD" strokeWidth={2} />
+        <Chromosome x={785} y={508} id="C1" cond={0} rep={1} rot={90} scale={0.24} wave={0.3} />
+        <Txt x={785} y={572} size={20} weight={700} fill={T5.ringHalo} anchor="middle">one chromosome,</Txt>
+        <Txt x={785} y={596} size={20} weight={700} fill={T5.ringHalo} anchor="middle">two DNA molecules</Txt>
       </g>}
       <Tag x={75} y={760} text="more growth" size={16} opacity={K(a('g2'))} />
       {a('m') >= 0 && <g opacity={K(a('m'))}>
-        <rect data-role="decor" x={70} y={300} width={170} height={110} rx={12} fill="#FFFFFF" stroke="#D6CEBD" strokeWidth={2} />
-        <g data-role="drawing"><circle cx={120} cy={350} r={28} fill={T5.nucleoplasm} stroke={T5.envelope} strokeWidth={2} /><circle cx={190} cy={350} r={28} fill={T5.nucleoplasm} stroke={T5.envelope} strokeWidth={2} /></g>
-        <Txt x={155} y={400} size={14} weight={800} fill={T5.ringHalo} anchor="middle">nuclear division</Txt>
+        <rect data-role="decor" x={70} y={300} width={200} height={116} rx={12} fill="#FFFFFF" stroke="#D6CEBD" strokeWidth={2} />
+        <g data-role="drawing"><circle cx={135} cy={350} r={28} fill={T5.nucleoplasm} stroke={T5.envelope} strokeWidth={2} /><circle cx={205} cy={350} r={28} fill={T5.nucleoplasm} stroke={T5.envelope} strokeWidth={2} /></g>
+        <Txt x={170} y={404} size={20} weight={800} fill={T5.ringHalo} anchor="middle">nuclear division</Txt>
       </g>}
       {a('c') >= 0 && <g opacity={K(a('c'))}>
-        <rect data-role="decor" x={600} y={250} width={230} height={120} rx={12} fill="#FFFFFF" stroke="#D6CEBD" strokeWidth={2} />
-        <g data-role="drawing"><circle cx={675} cy={300} r={34} fill={T5.cytoplasm} stroke={T5.membrane} strokeWidth={2} /><circle cx={755} cy={300} r={34} fill={T5.cytoplasm} stroke={T5.membrane} strokeWidth={2} />
-          <circle cx={675} cy={300} r={15} fill={T5.nucleoplasm} stroke={T5.envelope} strokeWidth={1.5} /><circle cx={755} cy={300} r={15} fill={T5.nucleoplasm} stroke={T5.envelope} strokeWidth={1.5} /></g>
-        <Txt x={715} y={358} size={14} weight={800} fill={T5.ringHalo} anchor="middle">division of the cytoplasm</Txt>
+        <rect data-role="decor" x={600} y={250} width={270} height={124} rx={12} fill="#FFFFFF" stroke="#D6CEBD" strokeWidth={2} />
+        <g data-role="drawing"><circle cx={695} cy={300} r={34} fill={T5.cytoplasm} stroke={T5.membrane} strokeWidth={2} /><circle cx={775} cy={300} r={34} fill={T5.cytoplasm} stroke={T5.membrane} strokeWidth={2} />
+          <circle cx={695} cy={300} r={15} fill={T5.nucleoplasm} stroke={T5.envelope} strokeWidth={1.5} /><circle cx={775} cy={300} r={15} fill={T5.nucleoplasm} stroke={T5.envelope} strokeWidth={1.5} /></g>
+        <Txt x={735} y={362} size={20} weight={800} fill={T5.ringHalo} anchor="middle">division of the cytoplasm</Txt>
       </g>}
-      {a('back') >= 0 && <rect data-role="decor" x={890} y={660} width={950} height={52} rx={10} fill={T5.ring} opacity={0.4 * K(a('back'))} />}
+      {a('back') >= 0 && <rect data-role="decor" x={898} y={660} width={934} height={66} rx={10} fill={T5.ring} opacity={0.4 * K(a('back'))} />}
     </Stage>
   );
 }

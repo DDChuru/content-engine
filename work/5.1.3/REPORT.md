@@ -1,56 +1,48 @@
-# 5.1.3 The mitotic cell cycle: copy first, then share — REPORT (cloud run 009a)
+# 5.1.3 The mitotic cell cycle: copy first, then share — REPORT **v2** (cloud run 009f fix pass)
 
-**Model:** claude-opus-5-5 · branch `cloud/009-5.1.1-to-5.1.4-qls6vy` · 27 Sep 2026 (UTC)
-**Bunny (review):** guid `8d2edf6f-e5d3-4f2d-81df-177cb2f4ae00`, title "REVIEW 5.1.3 The mitotic cell cycle: copy first, then share", no collection; uploaded 11:34:54Z; **status 4 at 11:37:57Z (≈3 min)**; 240p–1080p, length 529 s.
+**Model:** claude-opus-5-5 · branch `cloud/009f-fix-4t1jp6` (from `cloud/009-5.1.1-to-5.1.4-qls6vy`) · 27 Sep 2026 (UTC) · v1 report: `REPORT-v1.md`
+**Bunny v2 (review):** guid `da3aaf6e-e161-4c60-9dbe-0377c2aff15c`, title "REVIEW 5.1.3 v2 The mitotic cell cycle: copy first, then share", no collection; uploaded 2026-09-27T13:08:27Z; **status 4 at 2026-09-27T13:11:29Z** (≈3 min); 240p–1080p, length 543 s. v1 guid `8d2edf6f…` untouched.
 
-## Phases (wall clock, UTC; from file/log timestamps, to the minute)
-| Phase | Time |
+## Review findings → fixes
+| Finding (Codex review, CHANGES) | Fix |
 |---|---|
-| setup, TTS + Whisper (14 beats), review, beat 14 retake | 10:55–11:05 |
-| cue plan (147 cues), holds, timeline | 11:05–11:06 |
-| beats 1–14 authored, looked at, fixed, approved | 11:07–11:17 |
-| render (14 beats, 4-way) | 11:17–11:24 |
-| finish, verify, text-only, encoded sheets, count audit | 11:24–11:28 |
-| bookends (concurrent) · branding | 11:18–11:24 · 11:28–11:33 |
-| Bunny upload → status 4 | 11:34–11:38 |
+| P2 labels < 17 px; the two "daughter chromosome" labels collide (B7), small graph/axis labels | New rule enforced mechanically: `verify-label-size.cjs` (run by `verify.py`) renders every 0.5 s + every cue (1,466 frames), takes each visible text's font size × its transform scale × the 0.8802 branding scale and FAILS below 17 px; it also fails on any two overlapping text boxes or text off the frame. Result: **smallest 17.6 px, 0 failures, 0 overlaps.** House type floored at 20 source px (`shared/src/Type.tsx` `MIN_TEXT`, `Panels.tsx`, `kit.tsx` captions); shared models floored (t5-shared, see `work/t5-shared/CHANGELOG.md`). B7: each "daughter / chromosome" label now sits OUTSIDE the wheel on its own side with a leader to its own daughter chromosome; spindle fibres/equator/pole/new nucleus 20 px; B12 enlarged-inset labels two-line 20 px. Also re-laid out: B4 magnifier moved off the G1 label, B5 "sister chromatids" off G1, B13 recap insets, B14 hook panel, B6/B8 tags. |
+| P2 copy/share/split handle too fast, no paired mapping or hold | Hook re-voiced (below) and rebuilt in B9: a mapping card, one row per link, lit **together with its target** as each is spoken — copy ↔ S arc + graph rise, share ↔ M arc (two nuclei), split ↔ C arc + graph drop — then all three held lit through a **2.0 s digital-silence hold** before "Written properly" (verify step 7: −91 dB). Hook beat ≈ 13.6 s (was 2.1 s). The exam sentence follows unchanged. |
+| P3 delivered audio outlasted the picture by 47 ms | Branding now pads the picture 0.2 s (`work/apply-branding-v2.sh` = the kit script + `tpad` on the final concat). New `verify_delivered.py` checks the DELIVERED file: video end 543.033333 s ≥ audio end 542.862 s (margin 0.1713 s), last packets likewise, full decode 0 errors. |
 
-## ElevenLabs characters (ACCOUNT-WIDE counter; parallel sessions move it)
-before 309,506 → after 312,893 → after beat 14 retake 313,171. Script 6,159 chars + retake 506.
+## Narration changes (ONLY the hook sentence of Beat 9; everything else frozen)
+- v1: *Think of it as a copy-then-share routine.*
+- v2: *Think of it as a copy, share, split routine. Copy: replication, in the S phase. Share: mitosis, sharing the copies between two new nuclei. Split: cytokinesis, splitting the cytoplasm.* + 2 s held silence.
+Only Beat 9 was re-voiced (Thandi, eleven_multilingual_v2, speed 1.0, request 486 chars; no normalisation; Whisper 74/74 words, no mangled terms). `STORYBOARD.md` updated to match; all other beats reuse their v1 MP3s byte for byte.
+ElevenLabs (account-wide counter): 329,672 before → 330,301 after this lesson's request (332,143 after all three lessons).
 
-## Master / branded
-- master `5.1.3-mitotic-cell-cycle.mp4`: 518.233 s, 15,547 frames, sha256 `af41bf0ec28044262889bc19a579d643fed638cfd68a0ec92b663bdc8af95dcc`
-- branded: 529.262 s (= master + 11.03 s), full decode 0 errors, sha256 `134cfd8f0f05d2713557332efae276161bc49d34f12eae7fb3a189068791829e`; `qa/branded-mid.jpg` (Beat 7 inside the cream frame, 5.1.3 bar).
+## Phases (UTC)
+fixes + re-voice + timeline 12:27–12:47 · render 14 beats 12:47–12:52 · finish/verify/sheets 12:53–13:00 · bookends 12:57 · branding 13:01–13:08 · upload 13:08 → status 4 2026-09-27T13:11:29Z.
 
-## Verification — all PASS
-1 ffprobe 518.233 s · 2 video 518.233 ≥ audio 517.233 · 3 full decode 0 errors · 4 cues 147 = 147 = 147 planned · 5 AAC packets identical (24,247) · 6 final word "cells" ends 514.18 s, headroom 3.05 s (−28.5 dB in the next second = the take's breath tail before the END silence; nothing clipped) · 7 silent reads: B10 4 s and B12 4 s digital silence, −91 dB; B14 END −91 dB; speech PCM unchanged · 8 boundary one-frame holds: 0 · **every-frame marker audit: EXAM CONTRAST on B10 frames 8324–10464 (clears on 10465, the completed correct frame) and B12 frames 11275–13340 (clears 13341); 4,207 marked / 11,340 unmarked, 0 mismatches; badge-text MAE vs EXAM ref ≤ 3.93, vs COMMON ≥ 20.4** · longest unchanged visual 7.9 s · text-only controls PASS, 0 untagged, 0 text-only runs.
+## Master / branded (v2)
+- master `5.1.3-mitotic-cell-cycle.mp4`: 531.833 s, 15,955 frames, sha256 `02a4c4b03dd3f07653ff4fc97ce808e5c265d10d19a42f8c609be3eabd31f740`
+- branded: 543.033333 s (= master + 11.03 s bookends + 0.17 s end pad), full decode 0 errors, sha256 `b4736fb2a02b5ba6b29f70a82c7e986147a5f1b68d95e99f28a4deb32c25aee3`; `qa/branded-mid-v2.jpg` shows B9's hook card inside the cream frame with the 5.1.3 bar.
 
-## Count audit (encoded master; `qa/count-*.png`)
-| Event (frame) | before | event frame |
+## Verification (master, PIPELINE-STANDARD §4) — all PASS
+1 ffprobe 531.833 s · 2 video ≥ encoded audio (margin 1.0 s, master) · 3 decode 0 errors · 4 cues 150 = 150 = 150 planned · 5 AAC packets identical (24,884) · 6 final word "cells" ends 527.78 s, headroom 3.05 s · 7 silences: B9 hook hold 2 s, B10 4 s, B12 4 s, B14 END — all −91 dB, speech PCM unchanged · 8 boundary one-frame holds 0 · every-frame marker audit: EXAM CONTRAST B10 f8732–10872 (clears 10873) and B12 f11683–13748 (clears 13749); 4,207 marked / 11,748 unmarked, 0 mismatches; badge MAE vs EXAM ≤ 3.93, vs COMMON ≥ 20.4 · longest unchanged visual 7.9 s · text-only controls PASS, 0 untagged, longest text-only run 0.5 s · **label size ≥ 17 px (min 17.6), 0 overlaps** · delivered file: see above.
+
+## Count audit (encoded master; `qa/count-*.jpg`, before | event frame) — unchanged frames from v1 (beats 1–8 audio unchanged)
+| Event | before | event |
 |---|---|---|
-| end of S (3863) | whole cell 4 · replication in progress; inset "1 chromosome · replication in progress"; human 46 · in progress | 4 (8 sister chromatids) · 8; inset 1 · 2; human 46 (92 chromatids) · 92 |
-| centromere divides (5708) | 4 (8 sister chromatids) · 8; inset 1 chromosome · 2 | 8 · 8; inset "tracked pair: 2 daughter chromosomes · 2 DNA molecules …"; human 92 · 92 |
-| new nuclei formed (6073) | whole cell 8 · 8 | + each new nucleus 4 · 4 (human + 46 · 46) |
-| cytokinesis complete (6905) | whole cell 8 · 8 / each new nucleus 4 · 4; trace at 2 | each daughter cell 4 · 4; per-cell trace drops 2 → 1 on this frame; inset "tracked chromosome in this daughter cell: 1 · 1" |
+| end of S, f3863 | 4 · replication in progress; inset 1 · in progress | 4 (8 sister chromatids) · 8; inset 1 · 2 |
+| centromeres divide, f5708 | whole cell 4 · 8; inset 1 · 2 | 8 · 8; tracked pair 2 daughter chromosomes · 2 DNA; labels on the same frame |
+| new nuclei formed, f6073 | 8 · 8 | + each new nucleus 4 · 4 |
+| cytokinesis, f6905 | 8 · 8 + 4 · 4, graph at 2 | each daughter cell 4 · 4, graph 1 |
 
-## Sheets: seen and fixed
-Beat 5: a sign error ran the marker and pen backwards during S (fixed before render). Beat 7: decondensing daughter chromosomes swelled beyond the inset (CellCycleWheel fix, twice). Beat 10: talk-through boxes collided with the citation tabs (hidden when the tabs land). Beats 4, 6, 9, 13, 14: overlaps respaced. Encoded sheets (10): no defect found.
+## Sheets
+Per-beat stills and all 10 encoded sheets looked at. Found and fixed before render: B1 "full copy in each?" / "same genetic information" cross-fade overlap; B6/B8 tags into the wheel; B8 highlight rows re-pitched to the taller count strip; B13/B14 small insets re-laid out; B10 source line off-frame. Encoded sheets: no defects found.
 
-## Pronunciation
-No request normalisation. Beat 14 take 1 rejected ("chromatid" heard as chromated/cremated); take 2 kept. "interphase" heard as "interface" by the unprompted model (z/s voicing only): kept. `qa/audio-review.md`.
-
-## Shared models used (sha256 of `src/` copies = `work/t5-shared`)
-ChromosomeModel `d727c225…3319` · CellCycleWheel `577b4186…6d7c` (published here; includes the two inset fixes) · DNAContentGraph `4fcc7b5d…4591` (published here) · TelomereEndModel `8ba409de…b666` · T5Annot `ec225c18…6961` · t5-palette `1b4ce00b…34aa`.
+## Shared models (sha256 of the copies in `src/`; byte-identical to `work/t5-shared`)
+ChromosomeModel `124e4195…6aa5d` · CellCycleWheel `456fef65…7cfba` · DNAContentGraph `99b69034…fe18` · T5Annot `c8081bb1…8ee4` · TelomereEndModel `0ad089f5…1dfc` (full values: `work/t5-shared/SHARED.md`) · t5-palette `1b4ce00b…34aa`.
 
 ## Images / Video description
-No image in 5.1.3; no credit paragraph needed.
-
-## Design choices
-1. One stage for Beats 4–8: wheel, per-cell graph and count strip, with the graph pen tied to the wheel marker so replication, the rise and the counters move as one.
-2. Error beats keep small copies of the wheel and graph at left, dimmed, with the EXAM CONTRAST panel at right; terracotta only in the badge, frame, card rings and strikes.
-3. Every count names its compartment; the inset counter follows the round-2 tracked-pair wording.
+None (no photomicrograph in 5.1.3).
 
 ## Interpretations
-- Long arc labels are callouts from one slot above the wheel, with a leader line to the arc (they replace one another; short labels stay on the arcs).
-- Beat 9's miniature separation and Beat 11's inset replays are tagged "replay: mitosis" / "earlier in mitosis" (replays reset visibly).
-- Beat 12's enlarged M inset is drawn as a separate panel beside the card (same C1 model, spindle poles, fibres, one-frame separation).
-- Beat titles for the error beats omit the badge words ("E5-01: seen is not copied") so the title never shows a badge after the marker clears.
+- Hook wording: the storyboard's "copy-then-share" became the three-link "copy, share, split" so every Beat 1 icon maps to one stage (the review asked for exactly this mapping).
+- 2 s hold implemented as inserted digital silence before "Written properly" (insert_holds), so the completed mapping is held with no speech over it.

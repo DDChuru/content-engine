@@ -83,7 +83,7 @@ function Inset({cx, cy, ri, s}: {cx: number; cy: number; ri: number; s: Inset}) 
   const poleX = ri * 0.66, nucR = ri * 0.3, nucX = ri * 0.5;
   // chromosome placement: diagonal in interphase, vertical long axis once condensing/aligned (poles left and right)
   const rot = s.rot ?? lerp(-28, 0, ease(Math.max(cond, align)));
-  const scale = (s.scale ?? lerp(0.3, 0.72, ease(cond))) * lerp(1, 0.42, ease(dec));
+  const scale = (s.scale ?? lerp(0.3, 0.72, ease(cond))) * lerp(1, 0.2, Math.sqrt(dec));
   const condNow = cond * (1 - dec);
   const ripple = s.ripple ?? 0;
   const wave = (s.wave ?? 1) * (1 + 0.25 * Math.sin(ripple * Math.PI * 2)) * lerp(1, 1.6, dec);
@@ -195,7 +195,7 @@ export function CellCycleWheel(p: WheelProps) {
   const longs = ARC_ORDER.map((k) => {
     const v = lng[k] ?? 0; if (v <= 0) return null;
     const [x, y, anc] = (p.longPos?.[k] as any) ?? longAnchor(p, k);
-    const size = p.small ? 17 : 22, w = textW(LONG[k], size, 700) + 22, h = size * 1.6;
+    const size = p.small ? 20 : 22, w = textW(LONG[k], size, 700) + 22, h = size * 1.6;
     let x0 = anc === 'start' ? x : anc === 'end' ? x - w : x - w / 2;
     x0 = Math.max(72, Math.min(1848 - w, x0));
     const m = onRing(cx, cy, r1 + 3, (ARCS[k][0] + ARCS[k][1]) / 2);
@@ -212,7 +212,7 @@ export function CellCycleWheel(p: WheelProps) {
     <g opacity={p.bracketHi ? undefined : undefined}>
       <path data-role="decor" d={arcPath(cx, cy, rb, 0.004, 0.004 + (bEnd - 0.008) * br)} fill="none" stroke={T5.ringHalo} strokeWidth={p.bracketHi ? 3 + 3 * c01(p.bracketHi) : 3} />
       {[0.004, bEnd - 0.004].map((f, i) => (i === 0 || br >= 1) ? <path key={i} data-role="decor" d={`M${f1(onRing(cx, cy, rb, f)[0])} ${f1(onRing(cx, cy, rb, f)[1])}L${f1(onRing(cx, cy, rb - 12, f)[0])} ${f1(onRing(cx, cy, rb - 12, f)[1])}`} stroke={T5.ringHalo} strokeWidth={3} /> : null)}
-      {br >= 1 && (() => { const q = onRing(cx, cy, rb + (p.small ? 12 : 16), bEnd / 2); return <text x={f1(q[0] + 4)} y={f1(q[1] + 12)} fontSize={p.small ? 17 : 23} fontWeight={800} fill={T5.ringHalo} textAnchor="start" fontFamily={BODY} fontStyle="italic">interphase</text>; })()}
+      {br >= 1 && (() => { const q = onRing(cx, cy, rb + (p.small ? 12 : 16), bEnd / 2); return <text x={f1(q[0] + 4)} y={f1(q[1] + 12)} fontSize={p.small ? 20 : 23} fontWeight={800} fill={T5.ringHalo} textAnchor="start" fontFamily={BODY} fontStyle="italic">interphase</text>; })()}
     </g>
   ) : null;
   const mk = p.marker ?? 0, pos = p.pos ?? 0;
@@ -227,7 +227,7 @@ export function CellCycleWheel(p: WheelProps) {
       {p.inset && <Inset cx={ins.cx} cy={ins.cy} ri={ins.ri} s={p.inset} />}
       {mk > 0 && <g data-role="decor" opacity={mk < 1 ? mk : undefined}><circle cx={f1(mq[0])} cy={f1(mq[1])} r={p.small ? 10 : 14} fill={T5.ring} stroke={T5.ringHalo} strokeWidth={3.5} /></g>}
       {longs}
-      {(p.caption ?? 0) > 0 && <text x={f1(cx)} y={f1(cy + r1 + (p.small ? 38 : 58))} fontSize={p.small ? 14 : 18} fontWeight={600} fill="#6F6A60" textAnchor="middle" fontStyle="italic" fontFamily={BODY} opacity={p.caption! < 1 ? p.caption : undefined}>schematic proportions — interphase is typically the longest part</text>}
+      {(p.caption ?? 0) > 0 && <text x={f1(cx)} y={f1(cy + r1 + (p.small ? 38 : 58))} fontSize={20} fontWeight={600} fill="#6F6A60" textAnchor="middle" fontStyle="italic" fontFamily={BODY} opacity={p.caption! < 1 ? p.caption : undefined}>schematic proportions — interphase is typically the longest part</text>}
     </g>
   );
 }

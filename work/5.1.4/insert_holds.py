@@ -7,6 +7,7 @@ P=Path(__file__).resolve().parent
 S=json.loads((P/'script.json').read_text())
 H={b['id']:[(h['before'],h['seconds']) for h in b['holds']] for b in S}
 H[8]=H.get(8,[])+[('END',2.0)]   # Beat 8: final frame held 2 s (storyboard); no silent reads in 5.1.4
+H[6]=H.get(6,[])+[('Written properly',2.0)]   # run 009f memory-hook rule: 2 s hold on the completed buffer/track mapping
 norm=lambda s:re.findall(r'[a-z0-9]+',s.lower().replace('’',"'").replace("'",''))
 
 # Recogniser spellings → storyboard spellings (numerals spelled out; US → UK). Heard tokens only; never the script.

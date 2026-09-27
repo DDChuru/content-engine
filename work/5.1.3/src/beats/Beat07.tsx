@@ -6,7 +6,7 @@ import React from 'react';
 import {Txt, Tag} from '../../shared/src/Type';
 import {T5} from '../t5-palette';
 import {insetGeom, ARCS} from '../CellCycleWheel';
-import {Label} from '../T5Annot';
+import {Label, Leader} from '../T5Annot';
 import {fi, fe, lerp, pulse, ramp} from '../util';
 import {Stage, W, ALL} from './stage';
 
@@ -28,16 +28,22 @@ export default function Beat07(s: any) {
   return (
     <Stage
       wheel={{labels: ALL, bracket: 1, caption: 1, marker: 1, pos: pen, long: {m: fi(t, 0.3)}, inset: ins}}
-      graph={{pen}} rows={rows} human={human} insetCount={sep ? undefined : ic}>
-      {sep > 0 && <><Txt x={W.cx} y={906} size={16} weight={800} fill={T5.ringHalo} anchor="middle">tracked pair: 2 daughter chromosomes · 2 DNA molecules in total;</Txt>
-        <Txt x={W.cx} y={928} size={16} weight={800} fill={T5.ringHalo} anchor="middle">1 DNA molecule per daughter chromosome</Txt></>}
-      <Label x={W.cx} y={W.cy - g.ri + 30} text="spindle fibres" size={15} anchor="middle" opacity={fi(a('fib') - 0.8, 0.4) * (1 - fe(a('nuc'), 1))} />
-      <Label x={W.cx} y={W.cy + g.ri - 18} text="equator" size={15} anchor="middle" opacity={fi(a('eq'), 0.4) * (1 - fe(a('move'), 1))} />
-      {sep > 0 && [-1, 1].map((sd) => <Label key={sd} x={W.cx + sd * 62} y={W.cy - 72} text="daughter chromosome" size={13} anchor="middle" opacity={1 - fe(a('nuc'), 1)} />)}
-      {[-1, 1].map((sd) => <Label key={'p' + sd} x={W.cx + sd * g.poleX} y={W.cy + 34} text="pole" size={14} anchor="middle" opacity={fi(a('move'), 0.4) * (1 - fe(a('nuc'), 1))} />)}
-      {[-1, 1].map((sd) => <Label key={'n' + sd} x={W.cx + sd * g.ri * 0.5} y={W.cy + 78} text="new nucleus" size={14} anchor="middle" opacity={fi(a('nuc') - 1.5, 0.4)} />)}
-      {hiRow >= 0 && <rect data-role="decor" x={890} y={650 + 10 + hiRow * 57.4} width={950} height={52} rx={10} fill={T5.ring} opacity={0.4 * Math.max(pulse(a('w8'), 1.4), pulse(a('n4'), 1.4))} />}
-      <Tag x={1480} y={330} text="nothing has left the cell yet" size={18} opacity={fi(a('flatm'), 0.4)} />
+      graph={{pen}} rows={rows} human={human} insetCount={sep ? undefined : ic} hiRow={hiRow} hiA={0.9 * Math.max(pulse(a('w8'), 1.4), pulse(a('n4'), 1.4))}>
+      {sep > 0 && <><Txt x={W.cx} y={906} size={20} weight={800} fill={T5.ringHalo} anchor="middle">tracked pair: 2 daughter chromosomes · 2 DNA molecules in total;</Txt>
+        <Txt x={W.cx} y={930} size={20} weight={800} fill={T5.ringHalo} anchor="middle">1 DNA molecule per daughter chromosome</Txt></>}
+      <Label x={W.cx} y={W.cy - g.ri + 30} text="spindle fibres" size={20} anchor="middle" opacity={fi(a('fib') - 0.8, 0.4) * (1 - fe(a('nuc'), 1))} />
+      <Label x={W.cx} y={W.cy + g.ri - 18} text="equator" size={20} anchor="middle" opacity={fi(a('eq'), 0.4) * (1 - fe(a('move'), 1))} />
+      {/* run 009f: the two daughter-chromosome labels sit OUTSIDE the wheel, one each side, with leaders to their own
+          daughter chromosome (they collided inside the inset) */}
+      {sep > 0 && [-1, 1].map((sd) => { const o = 1 - fe(a('nuc'), 1); const lx = sd < 0 ? 180 : 686, tx = W.cx + sd * (fe(a('move'), 2.5) * g.poleX * 0.9 + 14);
+        return o > 0 ? <g key={sd}>
+          <Leader x1={sd < 0 ? lx + 6 : lx - 6} y1={416} x2={tx} y2={W.cy - 34} opacity={o} />
+          <Label x={lx} y={408} text="daughter" size={21} anchor={sd < 0 ? 'end' : 'start'} opacity={o} />
+          <Label x={lx} y={432} text="chromosome" size={21} anchor={sd < 0 ? 'end' : 'start'} opacity={o} />
+        </g> : null; })}
+      {[-1, 1].map((sd) => <Label key={'p' + sd} x={W.cx + sd * g.poleX} y={W.cy + 34} text="pole" size={20} anchor="middle" opacity={fi(a('move'), 0.4) * (1 - fe(a('nuc'), 1))} />)}
+      {[-1, 1].map((sd) => <Label key={'n' + sd} x={W.cx + sd * g.ri * 0.5} y={W.cy + 78} text="new nucleus" size={20} anchor="middle" opacity={fi(a('nuc') - 1.5, 0.4)} />)}
+      <Tag x={1480} y={330} text="nothing has left the cell yet" size={20} opacity={fi(a('flatm'), 0.4)} />
     </Stage>
   );
 }

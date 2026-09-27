@@ -34,9 +34,9 @@ export default function Beat07(s: any) {
       <LostBracket p={P} hi={K(a('lost'))} />
       <RunLabel p={P} text="telomere: repeated, non-coding DNA" dy={-120} hi={K(a('what')) * (1 - fi(a('ends'), 0.5))} />
       <RoundCounter x={1580} y={220} value={3} hi={tick[2]} />
-      <Tag x={1705} y={335} text="typical dividing somatic cells" size={16} anchor="middle" bg={K(a('typ')) > 0 ? '#FFD9CA' : '#FFFFFF'} />
+      <Tag x={1705} y={200} text="typical dividing somatic cells" size={20} anchor="middle" bg={K(a('typ')) > 0 ? '#FFD9CA' : '#FFFFFF'} />
       <Tag x={(g.X(0.3) + g.X(0.52)) / 2} y={P.y + 125} text="genes intact" size={20} anchor="middle" opacity={0.5 + 0.5 * genes} />
-      {genes > 0 && <Arrow x1={g.X(0.88)} y1={P.y - 70} x2={g.X(0.42)} y2={P.y - 40} color={T5.ring} width={5} bend={-40} opacity={genes} />}
+      {genes > 0 && <Arrow x1={g.X(0.84)} y1={P.y - 48} x2={g.X(0.42)} y2={P.y - 44} color={T5.ring} width={5} bend={-36} opacity={genes} />}
       <SentenceStrip x={560} y={700} w={1260} text={SENT} shown={SENT.length} size={24} label="written properly" />
       {genes > 0 && <rect data-role="decor" x={580} y={742} width={1220} height={32} rx={8} fill={T5.ring} opacity={0.3 * genes} />}
       <Captions x={560} y={900} compare={0} />

@@ -3,7 +3,7 @@
  * that frame; DNA unchanged); daughter chromosomes MOVE to the poles, centromere leading; one pole: 4 · 4. */
 import React from 'react';
 import {BRAND as C} from '../../shared/src/theme';
-import {Txt, Tag} from '../../shared/src/Type';
+import {Txt, Tag, Lines} from '../../shared/src/Type';
 import {T5} from '../t5-palette';
 import {Chromosome, chromGeom, ModelCell, CountStrip, HistoneFiber, CId} from '../ChromosomeModel';
 import {Ring, Glow, Tick, Label, Bracket} from '../T5Annot';
@@ -54,7 +54,7 @@ export default function Beat09(s: any) {
       </g>
       {a('pole') >= 0 && <Bracket x1={CX - 250} y1={CY - 150 - 60} x2={CX + 250} y2={CY - 150 - 60} side={-1} depth={-16} opacity={fi(a('pole'), 0.4)} />}
       <Tag x={CX - 330} y={CY - 250} text="how: 5.2.1" size={18} bg="#FFF3EC" opacity={fi(a('how'), 0.4)} anchor="middle" />
-      <Txt x={1040} y={740} size={16} weight={600} fill={C.muted} italic opacity={fi(a('move'), 0.4)}>in this schematic, the arms trail behind the leading centromere; real chromosomes may look U- or V-shaped</Txt>
+      <Lines x={1040} y={740} size={20} step={25} weight={600} fill={C.muted} italic opacity={fi(a('move'), 0.4)} text={'in this schematic, the arms trail behind the leading centromere;\nreal chromosomes may look U- or V-shaped'} />
     </g>
   );
 }

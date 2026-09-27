@@ -1,330 +1,450 @@
 {
   "id": 9,
-  "duration": 28.235479166666668,
+  "duration": 41.84545833333333,
   "words": [
     {
       "word": "Think",
       "start": 0.0,
-      "end": 0.24,
-      "probability": 0.9335675835609436
+      "end": 0.22,
+      "probability": 0.9303545951843262
     },
     {
       "word": "of",
-      "start": 0.24,
-      "end": 0.42,
-      "probability": 0.9993284940719604
+      "start": 0.22,
+      "end": 0.34,
+      "probability": 0.9979568719863892
     },
     {
       "word": "it",
-      "start": 0.42,
-      "end": 0.58,
-      "probability": 0.9966309666633606
+      "start": 0.34,
+      "end": 0.48,
+      "probability": 0.9962299466133118
     },
     {
       "word": "as",
-      "start": 0.58,
-      "end": 0.78,
-      "probability": 0.9950377345085144
+      "start": 0.48,
+      "end": 0.66,
+      "probability": 0.9955447912216187
     },
     {
       "word": "a",
+      "start": 0.66,
+      "end": 0.78,
+      "probability": 0.989368736743927
+    },
+    {
+      "word": "copy,",
       "start": 0.78,
-      "end": 0.92,
-      "probability": 0.9959238767623901
+      "end": 1.1,
+      "probability": 0.8820738792419434
     },
     {
-      "word": "copy",
-      "start": 0.92,
-      "end": 1.24,
-      "probability": 0.729518473148346
+      "word": "share,",
+      "start": 1.44,
+      "end": 1.88,
+      "probability": 0.9213320016860962
     },
     {
-      "word": "-then",
-      "start": 1.24,
-      "end": 1.46,
-      "probability": 0.8443541824817657
-    },
-    {
-      "word": "-share",
-      "start": 1.46,
-      "end": 1.82,
-      "probability": 0.9509654442469279
+      "word": "split",
+      "start": 2.28,
+      "end": 2.64,
+      "probability": 0.9911714196205139
     },
     {
       "word": "routine.",
-      "start": 1.82,
-      "end": 2.28,
-      "probability": 0.987316370010376
+      "start": 2.64,
+      "end": 3.22,
+      "probability": 0.9671260714530945
     },
     {
-      "word": "Written",
-      "start": 2.88,
-      "end": 3.2,
-      "probability": 0.9931592047214508
+      "word": "Copy,",
+      "start": 3.64,
+      "end": 3.9,
+      "probability": 0.9598211050033569
     },
     {
-      "word": "properly,",
-      "start": 3.2,
-      "end": 3.72,
-      "probability": 0.9971345663070679
-    },
-    {
-      "word": "DNA",
-      "start": 4.4,
+      "word": "replication",
+      "start": 4.38,
       "end": 4.82,
-      "probability": 0.9949117302894592
+      "probability": 0.9894073605537415
     },
     {
-      "word": "is",
+      "word": "in",
       "start": 4.82,
-      "end": 5.3,
-      "probability": 0.9980777502059937
-    },
-    {
-      "word": "replicated",
-      "start": 5.3,
-      "end": 5.8,
-      "probability": 0.9988434314727783
-    },
-    {
-      "word": "during",
-      "start": 5.8,
-      "end": 6.52,
-      "probability": 0.9978943467140198
+      "end": 5.44,
+      "probability": 0.6967239379882812
     },
     {
       "word": "the",
-      "start": 6.52,
-      "end": 6.7,
-      "probability": 0.9919443130493164
+      "start": 5.44,
+      "end": 5.56,
+      "probability": 0.9981824159622192
     },
     {
       "word": "S",
-      "start": 6.7,
-      "end": 7.1,
-      "probability": 0.7625085115432739
+      "start": 5.56,
+      "end": 5.86,
+      "probability": 0.8357362151145935
     },
     {
-      "word": "phase",
-      "start": 7.1,
-      "end": 7.4,
-      "probability": 0.7714011669158936
+      "word": "phase.",
+      "start": 5.86,
+      "end": 6.12,
+      "probability": 0.7968952655792236
     },
     {
-      "word": "of",
-      "start": 7.4,
-      "end": 7.74,
-      "probability": 0.9961012601852417
+      "word": "Share.",
+      "start": 6.6,
+      "end": 6.98,
+      "probability": 0.9802170991897583
     },
     {
-      "word": "interphase.",
-      "start": 7.74,
-      "end": 8.42,
-      "probability": 0.816043347120285
-    },
-    {
-      "word": "Mitosis",
-      "start": 9.14,
-      "end": 9.66,
-      "probability": 0.878315806388855
-    },
-    {
-      "word": "then",
-      "start": 9.66,
-      "end": 10.3,
-      "probability": 0.9802859425544739
-    },
-    {
-      "word": "separates",
-      "start": 10.3,
-      "end": 10.74,
-      "probability": 0.9975588321685791
-    },
-    {
-      "word": "the",
-      "start": 10.74,
-      "end": 11.14,
-      "probability": 0.9959386587142944
-    },
-    {
-      "word": "copies",
-      "start": 11.14,
-      "end": 11.44,
-      "probability": 0.9955757856369019
-    },
-    {
-      "word": "into",
-      "start": 11.44,
-      "end": 11.92,
-      "probability": 0.9960801005363464
-    },
-    {
-      "word": "two",
-      "start": 11.92,
-      "end": 12.3,
-      "probability": 0.9245888590812683
-    },
-    {
-      "word": "nuclei.",
-      "start": 12.3,
-      "end": 12.84,
-      "probability": 0.9990875720977783
-    },
-    {
-      "word": "Cytokinesis",
-      "start": 13.82,
-      "end": 14.66,
-      "probability": 0.9362625360488892
-    },
-    {
-      "word": "divides",
-      "start": 14.66,
-      "end": 15.32,
-      "probability": 0.9979827404022217
-    },
-    {
-      "word": "the",
-      "start": 15.32,
-      "end": 15.74,
-      "probability": 0.9981517195701599
-    },
-    {
-      "word": "cytoplasm.",
-      "start": 15.74,
-      "end": 16.72,
-      "probability": 0.9899795055389404
-    },
-    {
-      "word": "Copying",
-      "start": 17.26,
-      "end": 17.68,
-      "probability": 0.97245854139328
-    },
-    {
-      "word": "before",
-      "start": 17.68,
-      "end": 18.06,
-      "probability": 0.9928250312805176
+      "word": "Mitosis,",
+      "start": 7.5,
+      "end": 8.04,
+      "probability": 0.8254861235618591
     },
     {
       "word": "sharing",
-      "start": 18.06,
-      "end": 18.64,
-      "probability": 0.996955394744873
-    },
-    {
-      "word": "normally",
-      "start": 18.64,
-      "end": 19.32,
-      "probability": 0.9731664061546326
-    },
-    {
-      "word": "keeps",
-      "start": 19.32,
-      "end": 19.92,
-      "probability": 0.9960743188858032
-    },
-    {
-      "word": "daughter",
-      "start": 19.92,
-      "end": 20.24,
-      "probability": 0.9685714840888977
-    },
-    {
-      "word": "cells",
-      "start": 20.24,
-      "end": 20.72,
-      "probability": 0.945092499256134
-    },
-    {
-      "word": "genetically",
-      "start": 20.72,
-      "end": 21.38,
-      "probability": 0.9922762513160706
-    },
-    {
-      "word": "identical",
-      "start": 21.38,
-      "end": 22.08,
-      "probability": 0.9982569813728333
-    },
-    {
-      "word": "to",
-      "start": 22.08,
-      "end": 22.64,
-      "probability": 0.9990862607955933
+      "start": 8.54,
+      "end": 8.9,
+      "probability": 0.9935991764068604
     },
     {
       "word": "the",
-      "start": 22.64,
-      "end": 22.82,
-      "probability": 0.9944981932640076
+      "start": 8.9,
+      "end": 9.08,
+      "probability": 0.9965904951095581
     },
     {
-      "word": "parent.",
-      "start": 22.82,
-      "end": 23.2,
-      "probability": 0.9975278973579407
+      "word": "copies",
+      "start": 9.08,
+      "end": 9.38,
+      "probability": 0.9970569610595703
     },
     {
-      "word": "That",
-      "start": 23.86,
-      "end": 24.08,
-      "probability": 0.9959560036659241
+      "word": "between",
+      "start": 9.38,
+      "end": 9.9,
+      "probability": 0.9977437257766724
+    },
+    {
+      "word": "two",
+      "start": 9.9,
+      "end": 10.24,
+      "probability": 0.9342784881591797
+    },
+    {
+      "word": "new",
+      "start": 10.24,
+      "end": 10.52,
+      "probability": 0.9968037605285645
+    },
+    {
+      "word": "nuclei.",
+      "start": 10.52,
+      "end": 11.0,
+      "probability": 0.9987101554870605
+    },
+    {
+      "word": "Split,",
+      "start": 11.48,
+      "end": 11.86,
+      "probability": 0.9946191310882568
+    },
+    {
+      "word": "cytokinesis,",
+      "start": 12.5,
+      "end": 13.38,
+      "probability": 0.9904147386550903
+    },
+    {
+      "word": "splitting",
+      "start": 13.68,
+      "end": 14.14,
+      "probability": 0.9987253546714783
+    },
+    {
+      "word": "the",
+      "start": 14.14,
+      "end": 14.46,
+      "probability": 0.9960825443267822
+    },
+    {
+      "word": "cytoplasm.",
+      "start": 14.46,
+      "end": 15.3,
+      "probability": 0.9847684949636459
+    },
+    {
+      "word": "Written",
+      "start": 17.78,
+      "end": 18.0,
+      "probability": 0.989330917596817
+    },
+    {
+      "word": "properly,",
+      "start": 18.0,
+      "end": 18.48,
+      "probability": 0.9959683418273926
+    },
+    {
+      "word": "DNA",
+      "start": 19.04,
+      "end": 19.36,
+      "probability": 0.9957225322723389
     },
     {
       "word": "is",
-      "start": 24.08,
-      "end": 24.22,
-      "probability": 0.9923911690711975
+      "start": 19.36,
+      "end": 19.64,
+      "probability": 0.9980891346931458
     },
     {
-      "word": "why",
-      "start": 24.22,
-      "end": 24.5,
-      "probability": 0.9992617964744568
+      "word": "replicated",
+      "start": 19.64,
+      "end": 20.04,
+      "probability": 0.9985052347183228
+    },
+    {
+      "word": "during",
+      "start": 20.04,
+      "end": 20.6,
+      "probability": 0.9975952506065369
     },
     {
       "word": "the",
-      "start": 24.5,
-      "end": 24.68,
-      "probability": 0.996559202671051
+      "start": 20.6,
+      "end": 20.76,
+      "probability": 0.9975625276565552
+    },
+    {
+      "word": "S",
+      "start": 20.76,
+      "end": 21.06,
+      "probability": 0.9863348007202148
+    },
+    {
+      "word": "phase",
+      "start": 21.06,
+      "end": 21.3,
+      "probability": 0.9686540365219116
+    },
+    {
+      "word": "of",
+      "start": 21.3,
+      "end": 21.62,
+      "probability": 0.9959805011749268
+    },
+    {
+      "word": "interphase.",
+      "start": 21.62,
+      "end": 22.18,
+      "probability": 0.6469104886054993
+    },
+    {
+      "word": "Mitosis,",
+      "start": 22.74,
+      "end": 23.34,
+      "probability": 0.9907510876655579
+    },
+    {
+      "word": "then",
+      "start": 23.72,
+      "end": 23.96,
+      "probability": 0.9980533123016357
+    },
+    {
+      "word": "separates",
+      "start": 23.96,
+      "end": 24.38,
+      "probability": 0.9857942461967468
+    },
+    {
+      "word": "the",
+      "start": 24.38,
+      "end": 24.74,
+      "probability": 0.999336302280426
+    },
+    {
+      "word": "copies",
+      "start": 24.74,
+      "end": 25.06,
+      "probability": 0.9974071383476257
+    },
+    {
+      "word": "into",
+      "start": 25.06,
+      "end": 25.58,
+      "probability": 0.9959775805473328
+    },
+    {
+      "word": "two",
+      "start": 25.58,
+      "end": 25.94,
+      "probability": 0.963919997215271
+    },
+    {
+      "word": "nuclei.",
+      "start": 25.94,
+      "end": 26.48,
+      "probability": 0.9982193112373352
+    },
+    {
+      "word": "cytokinesis",
+      "start": 26.48,
+      "end": 28.32,
+      "probability": 0.8118024989962578
+    },
+    {
+      "word": "divides",
+      "start": 28.32,
+      "end": 28.84,
+      "probability": 0.9943681359291077
+    },
+    {
+      "word": "the",
+      "start": 28.84,
+      "end": 29.26,
+      "probability": 0.9969125986099243
+    },
+    {
+      "word": "cytoplasm.",
+      "start": 29.26,
+      "end": 30.26,
+      "probability": 0.9830956608057022
+    },
+    {
+      "word": "Copying",
+      "start": 30.62,
+      "end": 31.2,
+      "probability": 0.964212566614151
+    },
+    {
+      "word": "before",
+      "start": 31.2,
+      "end": 31.54,
+      "probability": 0.9816470742225647
+    },
+    {
+      "word": "sharing",
+      "start": 31.54,
+      "end": 32.04,
+      "probability": 0.9964690208435059
+    },
+    {
+      "word": "normally",
+      "start": 32.04,
+      "end": 32.68,
+      "probability": 0.9583936929702759
+    },
+    {
+      "word": "keeps",
+      "start": 32.68,
+      "end": 33.26,
+      "probability": 0.9934778213500977
+    },
+    {
+      "word": "daughter",
+      "start": 33.26,
+      "end": 33.58,
+      "probability": 0.98563551902771
+    },
+    {
+      "word": "cells",
+      "start": 33.58,
+      "end": 34.1,
+      "probability": 0.9450239539146423
+    },
+    {
+      "word": "genetically",
+      "start": 34.1,
+      "end": 34.88,
+      "probability": 0.9904717206954956
+    },
+    {
+      "word": "identical",
+      "start": 34.88,
+      "end": 35.58,
+      "probability": 0.9985271692276001
+    },
+    {
+      "word": "to",
+      "start": 35.58,
+      "end": 36.1,
+      "probability": 0.9989917874336243
+    },
+    {
+      "word": "the",
+      "start": 36.1,
+      "end": 36.22,
+      "probability": 0.9977207779884338
+    },
+    {
+      "word": "parent.",
+      "start": 36.22,
+      "end": 36.64,
+      "probability": 0.9966188669204712
+    },
+    {
+      "word": "That",
+      "start": 37.38,
+      "end": 37.58,
+      "probability": 0.9876048564910889
+    },
+    {
+      "word": "is",
+      "start": 37.58,
+      "end": 37.84,
+      "probability": 0.9890095591545105
+    },
+    {
+      "word": "why",
+      "start": 37.84,
+      "end": 38.12,
+      "probability": 0.9988736510276794
+    },
+    {
+      "word": "the",
+      "start": 38.12,
+      "end": 38.3,
+      "probability": 0.9973021745681763
     },
     {
       "word": "loop",
-      "start": 24.68,
-      "end": 25.0,
-      "probability": 0.9600754380226135
+      "start": 38.3,
+      "end": 38.58,
+      "probability": 0.9339442849159241
     },
     {
       "word": "exists",
-      "start": 25.0,
-      "end": 25.62,
-      "probability": 0.9975180625915527
+      "start": 38.58,
+      "end": 39.16,
+      "probability": 0.996256947517395
     },
     {
       "word": "for",
-      "start": 25.62,
-      "end": 26.04,
-      "probability": 0.9900960922241211
+      "start": 39.16,
+      "end": 39.62,
+      "probability": 0.9930256605148315
     },
     {
       "word": "growth",
-      "start": 26.04,
-      "end": 26.46,
-      "probability": 0.9963818788528442
+      "start": 39.62,
+      "end": 40.04,
+      "probability": 0.9988478422164917
     },
     {
       "word": "and",
-      "start": 26.46,
-      "end": 26.88,
-      "probability": 0.9982233643531799
+      "start": 40.04,
+      "end": 40.48,
+      "probability": 0.9966509938240051
     },
     {
       "word": "replacement.",
-      "start": 26.88,
-      "end": 27.54,
-      "probability": 0.9976792931556702
+      "start": 40.48,
+      "end": 41.12,
+      "probability": 0.9980084300041199
     }
   ]
 }

@@ -26,7 +26,14 @@
   },
   {
     "beat": 6,
-    "holds": [],
+    "holds": [
+      {
+        "atSample": 1612320,
+        "samples": 96000,
+        "seconds": 2.0,
+        "before": "Written properly"
+      }
+    ],
     "speechUnchanged": true
   },
   {

@@ -219,7 +219,7 @@ Small type: *syllabus 5.1.3, "outline", p.23.*
 
 ### BEAT 9 · The handle, and the sentence you write · 4:20–4:46
 **Narration:**
-> Think of it as a copy-then-share routine. Written properly: DNA is replicated during the S phase of interphase; mitosis then separates the copies into two nuclei; cytokinesis divides the cytoplasm. Copying before sharing normally keeps daughter cells genetically identical to the parent; that is why the loop exists, for growth and replacement.
+> Think of it as a copy, share, split routine. Copy: replication, in the S phase. Share: mitosis, sharing the copies between two new nuclei. Split: cytokinesis, splitting the cytoplasm. Written properly: DNA is replicated during the S phase of interphase; mitosis then separates the copies into two nuclei; cytokinesis divides the cytoplasm. Copying before sharing normally keeps daughter cells genetically identical to the parent; that is why the loop exists, for growth and replacement.
 
 **Visual action:**
 1. At *a copy-then-share routine*, the Beat 1 **copy · share · split** icons return small above the wheel, sitting over the S, M and C arcs respectively, tag *the handle: not an exam answer*.

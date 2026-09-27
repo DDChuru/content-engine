@@ -29,26 +29,26 @@ export default function Beat04(s: any) {
       {xo < 1 && <g clipPath="url(#zclip)"><g opacity={xo > 0 ? 1 - xo : undefined} transform={`translate(${lerp(tip[0], g.X(1) - 30, z).toFixed(1)} ${lerp(tip[1], TP.y, z).toFixed(1)}) scale(${k.toFixed(3)}) translate(${-tip[0]} ${-tip[1]})`}>
         <Chromosome {...X} />
         {z < 0.05 && <>
-          <Label x={X.x + 120} y={X.y - 120} text="sister chromatids" size={20} />
+          <Label x={X.x + 90} y={X.y - 50} text="sister chromatids" size={20} />
           <Label x={X.x - 60} y={X.y + 6} text="centromere" size={20} anchor="end" />
-          {ends.map((q: number[], i: number) => <Label key={i} x={q[0] + (i === 0 || i === 3 ? -28 : 28)} y={q[1] + (i < 2 ? -14 : 30)} text="telomere" size={17} anchor={i === 0 || i === 3 ? 'end' : 'start'} />)}
-          <Txt x={X.x} y={X.y + 330} size={16} weight={600} fill={C.muted} italic anchor="middle">drawn condensed for clarity</Txt>
+          {ends.map((q: number[], i: number) => <Label key={i} x={q[0] + (i === 0 || i === 3 ? -28 : 28)} y={q[1] + (i < 2 ? -14 : 30)} text="telomere" size={20} anchor={i === 0 || i === 3 ? 'end' : 'start'} />)}
+          <Txt x={X.x} y={X.y + 330} size={20} weight={600} fill={C.muted} italic anchor="middle">drawn condensed for clarity</Txt>
         </>}
       </g></g>}
       {z < 0.2 && <Ring cx={tip[0]} cy={tip[1] + 10} rx={30} ry={30} p={fe(a('zoom'), 0.6)} />}
       {xo > 0 && <g opacity={xo < 1 ? xo : undefined}>
         <TelomereEndModel {...TP} hiRun={a('seq') >= 0 && a('rep') < 0 ? fi(a('seq'), 0.4) : 0} sweep={sweep} />
-        <Tag x={TP.x} y={300} text="schematic; Z2-like scale" size={17} />
+        <Tag x={TP.x} y={300} text="schematic; Z2-like scale" size={20} />
         <Label x={TP.x - 20} y={TP.y + 8} text="DNA" size={24} anchor="end" opacity={fi(a('dna'), 0.4)} />
         {GENES.map(([p0, p1], i) => <g key={i} opacity={genesO[i]}>
           <Ring cx={(g.X(p0) + g.X(p1)) / 2} cy={TP.y} rx={30} ry={46} p={Math.min(1, fe(a('genes') - i * 0.8, 0.5))} opacity={1 - fi(a('tel'), 0.4)} />
           <Label x={(g.X(p0) + g.X(p1)) / 2} y={TP.y + 70} text="gene" size={22} anchor="middle" />
         </g>)}
-        <RunLabel text={a('noncoding') >= 0 ? 'telomere: repeated, non-coding DNA' : 'telomere'} opacity={fi(a('tel'), 0.4)} hi={pulse(a('tel'), 1.2)} />
-        <Txt x={g.X(0.62)} y={TP.y + 60} size={14} weight={600} fill={C.muted} italic opacity={fi(a('rep') - 0.6, 0.4)}>{BLOCKNOTE}</Txt>
+        <RunLabel text={a('noncoding') >= 0 ? 'telomere: repeated, non-coding DNA' : 'telomere'} opacity={fi(a('tel'), 0.4)} hi={pulse(a('tel'), 1.2)} seq={0} />
+        <Txt x={TP.x} y={TP.y + 190} size={20} weight={600} fill={C.muted} italic opacity={fi(a('rep') - 0.6, 0.4)}>{BLOCKNOTE}</Txt>
         {a('ttaggg') >= 0 && <g opacity={fi(a('ttaggg'), 0.4)}>
           <Tag x={(g.X(0.62) + g.X(1)) / 2} y={TP.y - 124} text="repeat in humans: TTAGGG" size={20} anchor="middle" />
-          <Txt x={(g.X(0.62) + g.X(1)) / 2} y={TP.y - 158} size={14} weight={600} fill={C.muted} italic anchor="middle">a real-world detail: it names the sequence, not the amount lost</Txt>
+          <Txt x={(g.X(0.62) + g.X(1)) / 2} y={TP.y - 158} size={20} weight={600} fill={C.muted} italic anchor="middle">a real-world detail: it names the sequence, not the amount lost</Txt>
         </g>}
         {a('tip') >= 0 && <g opacity={fi(a('tip'), 0.4)}>
           <Arrow x1={g.X(0.54)} y1={TP.y + 110} x2={g.X(1)} y2={TP.y + 110} color={T5.ringHalo} />

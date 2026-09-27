@@ -17,11 +17,13 @@ Not built here (not used by 5.1.1, 5.1.3, 5.1.4): `MitosisCellModel`, `RootTipSq
 
 ## sha256
 
+(run 009f, 27 Sep: label-size fix; see `CHANGELOG.md`. Every lesson copy in 5.1.1, 5.1.3 and 5.1.4 is byte-identical to these.)
+
 | file | sha256 |
 |---|---|
 | `t5-palette.ts` | `1b4ce00b033cdacb14b8e033d854671fc4f7ad96afb71af59a5ac19e81af34aa` |
-| `CellCycleWheel.tsx` | `577b4186cdddc2c36e5f9d00f7216d984bfd7ef60f9dfab357428d4481ef6d7c` |
-| `ChromosomeModel.tsx` | `d727c225ac73c0f76717b13a70d18f58f333a7170d20f2e2b417a645e50c3319` |
-| `DNAContentGraph.tsx` | `4fcc7b5d2631102b3a211e0b72d82f56442744862d033d46db2814502c1e4591` |
-| `T5Annot.tsx` | `ec225c18663efd193fa2dbd0ac7c9a98b9d7825b325959223a459ea162686961` |
-| `TelomereEndModel.tsx` | `8ba409dea0a4bbea04b01f7af1f6947ebe73063a454a39baa96d250d8353b666` |
+| `CellCycleWheel.tsx` | `456fef65c9f4c4cc947bbb75f57712ba250a9960348443a25d7677737e17cfba` |
+| `ChromosomeModel.tsx` | `124e4195a20bd74f17ecd8c968d56d0430cc16f7bce412786222a389c1f6aa5d` |
+| `DNAContentGraph.tsx` | `99b69034ef1bfc551d26e59026b4d29d3d5989d4b60fa97195f66cb39902fe18` |
+| `T5Annot.tsx` | `c8081bb10eba2f70ebc2fff1e15bc12099fa6825eca445722c7368decfbb7ee4` |
+| `TelomereEndModel.tsx` | `0ad089f52f4c76e9538dbfd0626a7867c9e98d1a513d27b2740572fd03ce1dfc` |

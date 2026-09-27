@@ -44,7 +44,7 @@ export default function Beat10(s: any) {
       {/* the panel */}
       <Caption x={PX} y={214} size={15} maxW={PW} weight={600} fill={C.muted} text="basis: a real question; no examiner report on how often. s23_21 Q4(b)(ii), QP p13 / MS p14, and m24_22 Q4(b), QP p15 / MS p11; PDF-VERIFIED summaries (plan check A05, A06)" />
       <QHeader x={PX} y={250} w={PW} label="OUR FRAMING" text={header} size={27} opacity={fi(a('q'), 0.4)}
-        src={'our framing of the demand in s23_21 Q4(b)(ii) (a named stage of interphase) and m24_22 Q4(b) (six supplied event labels to circle);\nnot the papers’ wording or layout; demands PDF-VERIFIED (round-1 check)'}
+        src={'our framing of the demand in s23_21 Q4(b)(ii) (a named stage of interphase) and m24_22 Q4(b)\n(six supplied event labels to circle); not the papers’ wording or layout; demands PDF-VERIFIED (round-1 check)'}
         hi={a('where') >= 0 ? <Underline x1={PX + 22 + hw} x2={PX + 22 + hw + textW('replicated', 27, 700)} y={250 + 44 + 27 + 8} p={fe(a('where'), 0.5)} color={T5.ring} /> : null} />
       <g opacity={fi(a('card'), 0.4)}>
         <rect data-role="decor" x={PX} y={cy - 50} width={PW} height={fix ? 140 : 90} rx={12} fill="#FFFFFF" stroke="#C9BFA8" strokeWidth={2} />

@@ -77,7 +77,7 @@ export default function Beat12(s: any) {
           {[-1, 1].map((sd) => { const f = fe(a('fix1'), 1.6); const d = fe(a('move'), 2.2) * 100; const ex = MX + sd * (6 + d); return f > 0 ? [-12, 0, 12].map((dy, j) => <line key={sd + '' + j} x1={MX + sd * 140} y1={MY} x2={lerp(MX + sd * 140, ex, f)} y2={MY + dy * f} stroke={T5.spindle} strokeWidth={2} />) : null; })}
         </g>
         <Chromosome x={MX} y={MY} id="C1" cond={1} rep={1} sep={sep} dist={fe(a('move'), 2.2) * 100 / 0.62} trail={sep} scale={0.62} />
-        {sep > 0 && [-1, 1].map((sd) => <Label key={sd} x={MX + sd * 80} y={MY - 118} text="daughter chromosome" size={14} anchor="middle" />)}
+        {sep > 0 && [-1, 1].map((sd) => <g key={sd}><Label x={MX + sd * 84} y={MY - 124} text="daughter" size={20} anchor="middle" /><Label x={MX + sd * 84} y={MY - 101} text="chromosome" size={20} anchor="middle" /></g>)}
         <Txt x={MX} y={MY + 142} size={14} weight={600} fill={C.muted} anchor="middle" italic>M inset, enlarged (schematic)</Txt>
       </g>}
     </g>

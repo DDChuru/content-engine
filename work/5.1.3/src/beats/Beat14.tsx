@@ -51,15 +51,16 @@ export default function Beat14(s: any) {
         <Txt x={932} y={746} size={14} weight={600} fill={C.muted} italic>our wording contrast; not an examiner-reported error</Txt>
       </g>}
       {hook > 0 && <g opacity={hook < 1 ? hook : undefined}>
-        <rect data-role="decor" x={HX} y={HY} width={500} height={140} rx={12} fill="#FFFFFF" stroke="#D6CEBD" strokeWidth={2} />
+        <rect data-role="decor" x={HX} y={HY} width={540} height={140} rx={12} fill="#FFFFFF" stroke="#D6CEBD" strokeWidth={2} />
         <g data-role="drawing">
-          {[0, 1, 2, 3, 4].map((i) => <rect key={i} x={HX + 20 + i * 70} y={HY + 70} width={66} height={48} rx={6} fill={T5.cytoplasm} stroke={T5.membrane} strokeWidth={2} />)}
-          <rect x={HX + 160} y={HY + 22} width={66} height={48} rx={6} fill={T5.cytoplasm} stroke={T5.membrane} strokeWidth={2} />
-          {[[HX + 193, HY + 94], [HX + 193, HY + 46]].map((q, i) => <circle key={i} cx={q[0]} cy={q[1]} r={13} fill={T5.nucleoplasm} stroke={T5.envelope} strokeWidth={2} />)}
+          {[0, 1, 2, 3, 4].map((i) => <rect key={i} x={HX + 20 + i * 50} y={HY + 70} width={46} height={48} rx={6} fill={T5.cytoplasm} stroke={T5.membrane} strokeWidth={2} />)}
+          <rect x={HX + 120} y={HY + 22} width={46} height={48} rx={6} fill={T5.cytoplasm} stroke={T5.membrane} strokeWidth={2} />
+          {[[HX + 143, HY + 94], [HX + 143, HY + 46]].map((q, i) => <circle key={i} cx={q[0]} cy={q[1]} r={13} fill={T5.nucleoplasm} stroke={T5.envelope} strokeWidth={2} />)}
         </g>
-        {[[HX + 193, HY + 94], [HX + 193, HY + 46]].map((q, i) => <Glow key={'g' + i} cx={q[0]} cy={q[1]} r={24} a={fi(a('full'), 0.4)} />)}
-        <Txt x={HX + 280} y={HY + 44} size={18} weight={800} fill={INK} opacity={fi(a('full'), 0.4)}>full genetic set in each</Txt>
-        <Txt x={HX + 20} y={HY + 20} size={13} weight={600} fill={C.muted} italic>the hook: skin's deepest layer (schematic)</Txt>
+        {[[HX + 143, HY + 94], [HX + 143, HY + 46]].map((q, i) => <Glow key={'g' + i} cx={q[0]} cy={q[1]} r={24} a={fi(a('full'), 0.4)} />)}
+        <Txt x={HX + 272} y={HY + 44} size={20} weight={800} fill={INK} opacity={fi(a('full'), 0.4)}>full genetic set in each</Txt>
+        <Txt x={HX + 272} y={HY + 90} size={20} weight={600} fill={C.muted} italic>the hook: skin's deepest</Txt>
+        <Txt x={HX + 272} y={HY + 114} size={20} weight={600} fill={C.muted} italic>layer (schematic)</Txt>
       </g>}
     </g>
   );

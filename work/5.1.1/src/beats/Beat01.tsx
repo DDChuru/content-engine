@@ -2,7 +2,7 @@
  * joined), rewind into orderly loops; dividing-cell inset; dissolve to the simplified model cell (2n = 4). */
 import React from 'react';
 import {BRAND as C, clamp01, easeInOut} from '../../shared/src/theme';
-import {Txt, Tag} from '../../shared/src/Type';
+import {Txt, Tag, TextScale} from '../../shared/src/Type';
 import {T5} from '../t5-palette';
 import {Chromosome, ModelCell} from '../ChromosomeModel';
 import {Glow} from '../T5Annot';
@@ -68,7 +68,7 @@ export default function Beat01(s: any) {
           <g data-role="drawing">
             {Array.from({length: NT}, (_, k) => <path key={k} d={threadPath(k, emerge(k), st)} fill="none" stroke={T5.dna} strokeWidth={(4.5 / z).toFixed(2)} strokeLinecap="round" />)}
           </g>
-          <g opacity={zoomed < 1 ? zoomed : undefined}><ScaleBar x={-62} y={200} len={125} pulse={barP} /></g>
+          <TextScale.Provider value={z}><g opacity={zoomed < 1 ? zoomed : undefined}><ScaleBar x={-62} y={200} len={125} pulse={barP} /></g></TextScale.Provider>
         </g>
         <Txt x={960} y={862} size={20} weight={600} fill={C.muted} anchor="middle" italic opacity={zoomed}>nucleus: a few µm across (typical); schematic</Txt>
         <Caption x={960} y={760} anchor="middle" size={24} maxW={1500} weight={700} text="Total nuclear DNA before replication: about 2 m, laid end to end; typical diploid human cell; schematic, not to scale." opacity={between(a('row') - 0.6, a('rewind') - 1.2)} />

@@ -47,7 +47,7 @@ export default function Beat11(s: any) {
         <Txt x={fx} y={fnY + 26} size={26} weight={700} fill={INK}>{fn}</Txt>
         <Caption x={fx} y={fnY + 58} size={15} maxW={FW - 40} weight={600} fill={C.muted} text="Centromere: holds sister chromatids together — credited in s23_21 Q4(c)(i), MS p.15. This is one accepted function; attachment to the spindle is also accepted. “Daughter chromatids” is rejected for this function in this item; “kinetochore” is ignored as the name of A here. (PDF-VERIFIED (round-1 check))" />
         <Txt x={fx} y={ya + 206} size={16} weight={700} fill={INK} opacity={fi(a('mark'), 0.4)}>A: 1 mark (5.1.1); B, spindle fibres: 1 mark (5.2.1)</Txt>
-        <Txt x={fx + 480} y={ya + 38} size={16} weight={600} fill={C.muted} italic opacity={fi(a('name'), 0.4)}>I “kinetochore” (naming A) · PDF-VERIFIED (plan check)</Txt>
+        <Txt x={fx + 290} y={ya + 38} size={20} weight={600} fill={C.muted} italic opacity={fi(a('name'), 0.4)}>I “kinetochore” (naming A) · PDF-VERIFIED (plan check)</Txt>
         <Txt x={fx} y={ya + 240} size={16} weight={600} fill={C.muted} italic opacity={fi(a('reject'), 0.4)}>R “daughter chromatids” (the function answer) · MS p15 · PDF-VERIFIED (plan check)</Txt>
         {a('reject') >= 0 && <path data-role="decor" d={`M${sx0} ${fnY + 34}H${sx0 + (sx1 - sx0) * fe(a('reject'), 0.6)}`} stroke={T5.ring} strokeWidth={5} />}
       </g>

@@ -92,7 +92,10 @@ PLANS = {
 ],
 9: [
  ("Think of it as", "open", "The handle"),
- ("a copy-then-share routine", "handle", "A copy-then-share routine (the handle)"),
+ ("a copy, share, split routine", "handle", "Copy, share, split (the handle)"),
+ ("Copy: replication", "lc", "Copy → replication, in S"),
+ ("Share: mitosis", "lm", "Share → mitosis: two new nuclei"),
+ ("Split: cytokinesis", "ls", "Split → cytokinesis: the cytoplasm"),
  ("Written properly", "written", "Written properly"),
  ("DNA is replicated during the S phase of interphase", "cl1", ""),
  ("mitosis then separates the copies into two nuclei", "cl2", ""),

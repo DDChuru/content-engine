@@ -11,17 +11,17 @@ export const GOOD = '#1D6B40';
 export function QHeader({x, y, w, label = 'THE QUESTION', text, src, size = 27, opacity = 1, hi}: any) {
   if (opacity <= 0) return null;
   const n = String(text).split('\n').length, srcN = src ? String(src).split('\n').length : 0;
-  const h = 50 + n * size * 1.25 + srcN * 21 + 14;
+  const h = 50 + n * size * 1.25 + srcN * 25 + 14;
   return (
     <Card x={x} y={y} w={w} h={h} opacity={opacity} fill="#FBF8F1">
-      <Txt x={x + 22} y={y + 32} size={18} weight={800} fill={C.primary}>{label}</Txt>
+      <Txt x={x + 22} y={y + 32} size={20} weight={800} fill={C.primary}>{label}</Txt>
       {hi}
       <Lines x={x + 22} y={y + 44 + size} text={text} size={size} step={size * 1.25} weight={700} />
-      {src && <Lines x={x + 22} y={y + 44 + n * size * 1.25 + 18} text={src} size={16} step={21} weight={600} fill={C.muted} italic />}
+      {src && <Lines x={x + 22} y={y + 44 + n * size * 1.25 + 18} text={src} size={20} step={25} weight={600} fill={C.muted} italic />}
     </Card>
   );
 }
-export const qHeaderH = (text: string, src: string | undefined, size = 27) => 50 + String(text).split('\n').length * size * 1.25 + (src ? String(src).split('\n').length * 21 : 0) + 14;
+export const qHeaderH = (text: string, src: string | undefined, size = 27) => 50 + String(text).split('\n').length * size * 1.25 + (src ? String(src).split('\n').length * 25 : 0) + 14;
 
 /** Handwritten answer text with a leading ✗/✓. */
 export function Written({x, y, text, size = 44, ok = false, opacity = 1, color}: any) {
@@ -48,7 +48,7 @@ export function QuoteTab({x, y, w, quote, source, opacity = 1, size = 20, accent
     <g data-role="decor" opacity={opacity < 1 ? opacity : undefined}>
       <rect x={x} y={y} width={w} height={h} rx={12} fill="#FBF8F1" stroke={accent ? C.teal : C.muted} strokeWidth={accent ? 3 : 1.5} strokeDasharray={accent ? undefined : '6 4'} />
       <Lines x={x + 18} y={y + 30} text={quote} size={size} step={size * 1.3} weight={600} fill={C.ink} />
-      <Txt x={x + 18} y={y + h - 14} size={16} weight={700} fill={C.muted}>{source}</Txt>
+      <Txt x={x + 18} y={y + h - 14} size={20} weight={700} fill={C.muted}>{source}</Txt>
       {children}
     </g>
   );
@@ -77,7 +77,7 @@ export function CorrectCard({x, y, w, h = 110, text, cite, opacity = 1, size = 2
     <Card x={x} y={y} w={w} h={h} opacity={opacity} stroke="#1D8A4E" fill="#F2FAF5">
       <rect data-role="decor" x={x} y={y} width={10} height={h} rx={5} fill="#1D8A4E" />
       <Lines x={x + 32} y={y + 44} text={text} size={size} step={size * 1.3} weight={700} />
-      {cite && <Cite x={x + 32} y={y + h - 16} text={cite} size={16} />}
+      {cite && <Cite x={x + 32} y={y + h - 16} text={cite} size={20} />}
     </Card>
   );
 }

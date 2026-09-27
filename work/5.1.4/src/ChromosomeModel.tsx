@@ -269,15 +269,32 @@ export function ModelCell({x, y, r = 250, nr, envelope = 1, nucleolus = 1, opaci
 }
 
 /** Count overlay: rows of [chromosomes (count centromeres) · DNA molecules · compartment]. A value is shown exactly
- * as passed — the beat changes it ON the event frame. dna may be a number or 'replication in progress'. */
-export function CountStrip({x, y, rows, w = 560, title, opacity = 1, size = 23, hiRow = -1, hiCol = -1, hiA = 0}: any) {
+ * as passed — the beat changes it ON the event frame. dna may be a number or 'replication in progress'.
+ * Run 009f: every label >= MIN_T5_TEXT (17 px after branding); the row height, the DNA column and the width grow to
+ * fit the labels (never text pushed into a neighbouring column). countStripW/countStripH give the real box. */
+export const MIN_T5_TEXT = 20;
+const fz = (v: number) => Math.max(v, MIN_T5_TEXT);
+const CHROM_HEAD = 'chromosomes (count centromeres)', DNA_HEAD = 'DNA molecules';
+function stripLayout(rows: any[], w: number, size: number, title?: string) {
+  const lab = fz(size * 0.62), val = fz(size * 1.1), note = fz(size * 0.7), dnaWord = fz(size * 0.72), tag = fz(size * 0.66);
+  const rh = Math.max(size * 2.05, lab + val + 22), tfs = fz(size * 0.78), head = title ? tfs * 1.9 : 0;
+  const c0 = Math.max(...rows.map((r: any) => textW(String(r.chrom ?? ''), val, 800) + (r.chromNote ? 10 + textW(r.chromNote, note, 600) : 0)), textW(CHROM_HEAD, lab, 600));
+  const c1 = Math.max(...rows.map((r: any) => typeof r.dna === 'number' ? textW(String(r.dna), val, 800) : textW(String(r.dna ?? ''), dnaWord, 800)), textW(DNA_HEAD, lab, 600));
+  const tw = Math.max(...rows.map((r: any) => textW(String(r.comp ?? ''), tag, 700) + tag * 1.2));
+  const col1 = Math.max(w * 0.5, 18 + c0 + 26);
+  const W = Math.max(w, col1 + 8 + c1 + 22 + tw + 12, title ? textW(title, tfs, 700) + 32 : 0);
+  return {lab, val, note, dnaWord, tag, rh, tfs, head, col1, W, h: head + rh * rows.length + 16};
+}
+export const countStripW = (rows: any[], w = 560, size = 23, title?: string) => stripLayout(rows, w, size, title).W;
+export function CountStrip({x, y, rows, w = 560, title, opacity = 1, size = 23, hiRow = -1, hiCol = -1, hiA = 0, anchor = 'start'}: any) {
   if (opacity <= 0) return null;
-  const rh = size * 2.05, head = title ? size * 1.5 : 0, h = head + rh * rows.length + 16;
-  const cols = [0, w * 0.5];
+  const L = stripLayout(rows, w, size, title), {lab, val, rh, head, h} = L, W = L.W;
+  if (anchor === 'end') x = x + w - W;   // grow leftwards when the caller's right edge is fixed
+  const cols = [0, L.col1];
   return (
     <g opacity={opacity < 1 ? opacity : undefined}>
-      <rect data-role="decor" x={x} y={y} width={w} height={h} rx={12} fill="#FFFFFF" stroke="#D6CEBD" strokeWidth={2} />
-      {title && <text x={x + 16} y={y + size * 1.15} fontSize={size * 0.78} fontWeight={700} fill="#6F6A60" fontFamily={BODY}>{title}</text>}
+      <rect data-role="decor" x={x} y={y} width={W} height={h} rx={12} fill="#FFFFFF" stroke="#D6CEBD" strokeWidth={2} />
+      {title && <text x={x + 16} y={y + L.tfs * 1.42} fontSize={L.tfs} fontWeight={700} fill="#6F6A60" fontFamily={BODY}>{title}</text>}
       {rows.map((r: any, i: number) => {
         const yy = y + head + 10 + rh * i;
         const hl = (col: number) => hiA > 0 && hiRow === i && (hiCol === col || hiCol === -1);
@@ -285,21 +302,22 @@ export function CountStrip({x, y, rows, w = 560, title, opacity = 1, size = 23, 
         return (
           <g key={i} opacity={r.opacity != null && r.opacity < 1 ? r.opacity : undefined}>
             {hl(0) && <rect data-role="decor" x={x + 8} y={yy} width={cols[1] - 12} height={rh - 6} rx={8} fill={T5.ring} opacity={0.45 * hiA} />}
-            {hl(1) && <rect data-role="decor" x={x + cols[1] - 2} y={yy} width={w * 0.3} height={rh - 6} rx={8} fill={T5.ring} opacity={0.45 * hiA} />}
-            <text x={x + 18} y={yy + size * 0.95} fontSize={size * 0.62} fontWeight={600} fill="#6F6A60" fontFamily={BODY}>chromosomes (count centromeres)</text>
-            <text x={x + 18} y={yy + size * 1.85} fontSize={size * 1.1} fontWeight={800} fill={T5.ringHalo} fontFamily={BODY}>{r.chrom}{r.chromNote ? <tspan dx={10} fontSize={size * 0.7} fontWeight={600}>{r.chromNote}</tspan> : null}</text>
-            <text x={x + cols[1] + 8} y={yy + size * 0.95} fontSize={size * 0.62} fontWeight={600} fill="#6F6A60" fontFamily={BODY}>DNA molecules</text>
-            <text x={x + cols[1] + 8} y={yy + size * 1.85} fontSize={typeof r.dna === 'number' ? size * 1.1 : size * 0.72} fontWeight={800} fill={T5.ringHalo} fontFamily={BODY}>{dnaTxt}</text>
-            <CompTag x={x + w - 12} y={yy + size * 1.5} text={r.comp} size={size * 0.66} />
+            {hl(1) && <rect data-role="decor" x={x + cols[1] - 2} y={yy} width={Math.max(W * 0.3, textW(DNA_HEAD, lab, 600) + 20)} height={rh - 6} rx={8} fill={T5.ring} opacity={0.45 * hiA} />}
+            <text x={x + 18} y={yy + lab + 2} fontSize={lab} fontWeight={600} fill="#6F6A60" fontFamily={BODY}>{CHROM_HEAD}</text>
+            <text x={x + 18} y={yy + lab + 6 + val * 0.9} fontSize={val} fontWeight={800} fill={T5.ringHalo} fontFamily={BODY}>{r.chrom}{r.chromNote ? <tspan dx={10} fontSize={L.note} fontWeight={600}>{r.chromNote}</tspan> : null}</text>
+            <text x={x + cols[1] + 8} y={yy + lab + 2} fontSize={lab} fontWeight={600} fill="#6F6A60" fontFamily={BODY}>{DNA_HEAD}</text>
+            <text x={x + cols[1] + 8} y={yy + lab + 6 + val * 0.9} fontSize={typeof r.dna === 'number' ? val : L.dnaWord} fontWeight={800} fill={T5.ringHalo} fontFamily={BODY}>{dnaTxt}</text>
+            <CompTag x={x + W - 12} y={yy + rh * 0.72} text={r.comp} size={L.tag} />
           </g>
         );
       })}
     </g>
   );
 }
-export const countStripH = (rows: number, size = 23, title = false) => (title ? size * 1.5 : 0) + size * 2.05 * rows + 16;
+export const countStripH = (rows: number, size = 23, title = false) => (title ? fz(size * 0.78) * 1.9 : 0) + Math.max(size * 2.05, fz(size * 0.62) + fz(size * 1.1) + 22) * rows + 16;
 /** Compartment tag (whole cell / one pole / one nucleus / one daughter cell / moving towards one pole). */
-export function CompTag({x, y, text, size = 15, anchor = 'end'}: any) {
+export function CompTag({x, y, text, size = 20, anchor = 'end'}: any) {
+  size = fz(size);
   const w = textW(text, size, 700) + size * 1.2, h = size * 1.6;
   const x0 = anchor === 'end' ? x - w : anchor === 'middle' ? x - w / 2 : x;
   return (

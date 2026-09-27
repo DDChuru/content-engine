@@ -25,8 +25,8 @@ export default function Beat04(s: any) {
       stripOp={fi(a('flat1'), 0.4)}
       insetCount="this chromosome: 1 chromosome · 1 DNA molecule">
       <Label x={W.cx} y={W.cy + 118} text="chromosome" size={20} anchor="middle" opacity={fi(s.local - 0.4, 0.4)} />
-      <Tag x={W.cx} y={W.cy - 128} text="recall: 5.1.1" size={15} anchor="middle" opacity={fi(s.local, 0.4)} bg="#FFF3EC" />
-      <Tag x={690} y={430} text="proteins · organelles" size={16} opacity={fi(a('prot'), 0.4)} />
+      <Tag x={W.cx} y={W.cy - 128} text="recall: 5.1.1" size={20} anchor="middle" opacity={fi(s.local, 0.4)} bg="#FFF3EC" />
+      <Tag x={690} y={430} text="proteins · organelles" size={20} opacity={fi(a('prot'), 0.4)} />
       {/* light-microscope silhouette icon with a blurred field */}
       <g opacity={fi(a('fine'), 0.4)}>
         <g data-role="drawing" transform="translate(40 180)">
@@ -34,14 +34,16 @@ export default function Beat04(s: any) {
           <circle cx={800} cy={600} r={30} fill="#F2F2EC" stroke={T5.ringHalo} strokeWidth={3} />
           <circle cx={795} cy={598} r={18} fill="#6E7390" opacity={0.2} /><circle cx={806} cy={604} r={14} fill="#6E7390" opacity={0.2} />
         </g>
-        <Tag x={800} y={915} text="not individually visible" size={16} anchor="middle" />
+        <Tag x={800} y={915} text="not individually visible" size={20} anchor="middle" />
       </g>
       {/* Z1 magnifier opens on the thread, then closes */}
       {between(a('z1'), a('z1') - 4.2) > 0 && <g opacity={between(a('z1'), a('z1') - 4.2)}>
-        <rect data-role="decor" x={580} y={330} width={330} height={150} rx={14} fill="#FFFFFF" stroke={T5.ringHalo} strokeWidth={2} />
-        <g transform="translate(596 400) scale(0.34)"><HistoneFiber x={0} y={0} beads={5} gap={165} r={36} lead={90} /></g>
-        <Txt x={596} y={352} size={16} weight={800} fill={T5.ringHalo}>DNA</Txt>
-        <Txt x={596} y={466} size={16} weight={800} fill={T5.ringHalo}>histone proteins</Txt>
+        {/* run 009f: the magnifier sits clear of the wheel (it covered the G1 label) with a leader to the thread */}
+        <line data-role="decor" x1={958} y1={392} x2={W.cx + 8} y2={W.cy - 40} stroke={T5.ringHalo} strokeWidth={2} strokeDasharray="6 5" />
+        <rect data-role="decor" x={960} y={310} width={360} height={170} rx={14} fill="#FFFFFF" stroke={T5.ringHalo} strokeWidth={2} />
+        <g transform="translate(980 395) scale(0.36)"><HistoneFiber x={0} y={0} beads={5} gap={165} r={36} lead={90} /></g>
+        <Txt x={980} y={342} size={21} weight={800} fill={T5.ringHalo}>DNA</Txt>
+        <Txt x={980} y={466} size={21} weight={800} fill={T5.ringHalo}>histone proteins</Txt>
       </g>}
     </Stage>
   );

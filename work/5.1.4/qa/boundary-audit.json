@@ -1,9 +1,9 @@
 {
   "master": "/home/user/content-engine/work/5.1.4/5.1.4-telomeres.mp4",
   "timeline": "/home/user/content-engine/work/5.1.4/timeline.json",
-  "master_bytes": 12191328,
+  "master_bytes": 13651677,
   "fps": 30.0,
-  "frame_count": 7379,
+  "frame_count": 7772,
   "boundaries_tested": 7,
   "candidate_count": 0,
   "candidate_beats": [],
@@ -35,19 +35,19 @@
           "max_tile_mae": 0.0
         },
         "last_to_first": {
-          "mae": 6.993333339691162,
-          "changed_fraction": 0.10740017361111111,
+          "mae": 7.573389530181885,
+          "changed_fraction": 0.11624131944444445,
           "max_tile_mae": 36.36689758300781
         },
         "first_to_second": {
-          "mae": 0.10927951335906982,
-          "changed_fraction": 0.001935763888888889,
+          "mae": 0.10930266976356506,
+          "changed_fraction": 0.0019401041666666666,
           "max_tile_mae": 4.572048664093018
         },
         "second_to_third": {
-          "mae": 0.21942999958992004,
-          "changed_fraction": 0.003845486111111111,
-          "max_tile_mae": 8.9620943069458
+          "mae": 0.2192389965057373,
+          "changed_fraction": 0.0038628472222222224,
+          "max_tile_mae": 8.962818145751953
         }
       }
     },
@@ -65,12 +65,12 @@
           "max_tile_mae": 0.0
         },
         "last_to_first": {
-          "mae": 184.51416015625,
-          "changed_fraction": 0.9967230902777777,
-          "max_tile_mae": 200.984375
+          "mae": 184.0297088623047,
+          "changed_fraction": 0.9965451388888888,
+          "max_tile_mae": 202.00057983398438
         },
         "first_to_second": {
-          "mae": 0.03166377544403076,
+          "mae": 0.031572628766298294,
           "changed_fraction": 0.0006857638888888889,
           "max_tile_mae": 1.1815682649612427
         },
@@ -95,19 +95,19 @@
           "max_tile_mae": 0.0
         },
         "last_to_first": {
-          "mae": 182.98379516601562,
-          "changed_fraction": 0.9957335069444444,
-          "max_tile_mae": 189.00926208496094
+          "mae": 182.90042114257812,
+          "changed_fraction": 0.9956814236111111,
+          "max_tile_mae": 189.17434692382812
         },
         "first_to_second": {
-          "mae": 0.005509259644895792,
+          "mae": 0.005140335764735937,
           "changed_fraction": 6.076388888888889e-05,
-          "max_tile_mae": 0.2747395932674408
+          "max_tile_mae": 0.27097809314727783
         },
         "second_to_third": {
-          "mae": 0.001977719832211733,
-          "changed_fraction": 2.604166666666667e-05,
-          "max_tile_mae": 0.1384548544883728
+          "mae": 0.0021325231064110994,
+          "changed_fraction": 3.472222222222222e-05,
+          "max_tile_mae": 0.14597801864147186
         }
       }
     },
@@ -125,12 +125,12 @@
           "max_tile_mae": 0.0
         },
         "last_to_first": {
-          "mae": 2.2990798950195312,
-          "changed_fraction": 0.027096354166666666,
-          "max_tile_mae": 26.50621795654297
+          "mae": 2.6446197032928467,
+          "changed_fraction": 0.03246527777777778,
+          "max_tile_mae": 26.54021644592285
         },
         "first_to_second": {
-          "mae": 0.005227141547948122,
+          "mae": 0.005305266473442316,
           "changed_fraction": 3.0381944444444444e-05,
           "max_tile_mae": 0.053096067160367966
         },
@@ -155,27 +155,27 @@
           "max_tile_mae": 0.0
         },
         "last_to_first": {
-          "mae": 5.210885524749756,
-          "changed_fraction": 0.09114583333333333,
-          "max_tile_mae": 50.97062683105469
+          "mae": 6.145823001861572,
+          "changed_fraction": 0.10210069444444445,
+          "max_tile_mae": 51.47337341308594
         },
         "first_to_second": {
-          "mae": 0.006303530186414719,
-          "changed_fraction": 1.3020833333333334e-05,
-          "max_tile_mae": 0.05671296641230583
+          "mae": 0.053828127682209015,
+          "changed_fraction": 0.00040364583333333333,
+          "max_tile_mae": 1.3459200859069824
         },
         "second_to_third": {
-          "mae": 0.0007537616183981299,
-          "changed_fraction": 0.0,
-          "max_tile_mae": 0.04311342537403107
+          "mae": 0.04680556058883667,
+          "changed_fraction": 0.0003125,
+          "max_tile_mae": 1.2873263359069824
         }
       }
     },
     {
       "beat": 7,
       "previous_beat": 6,
-      "frame": 5332,
-      "time_seconds": 177.73333333333332,
+      "frame": 5725,
+      "time_seconds": 190.83333333333334,
       "candidate": false,
       "settles_after_jump": true,
       "metrics": {
@@ -185,17 +185,17 @@
           "max_tile_mae": 0.0
         },
         "last_to_first": {
-          "mae": 8.897337913513184,
-          "changed_fraction": 0.1211501736111111,
-          "max_tile_mae": 47.23075866699219
+          "mae": 10.139481544494629,
+          "changed_fraction": 0.14452256944444444,
+          "max_tile_mae": 47.77734375
         },
         "first_to_second": {
-          "mae": 0.01171875,
-          "changed_fraction": 4.340277777777778e-06,
-          "max_tile_mae": 0.109375
+          "mae": 0.014743923209607601,
+          "changed_fraction": 8.680555555555556e-06,
+          "max_tile_mae": 0.1163194477558136
         },
         "second_to_third": {
-          "mae": 0.0019169561564922333,
+          "mae": 0.003041087882593274,
           "changed_fraction": 0.0,
           "max_tile_mae": 0.0403645820915699
         }
@@ -204,8 +204,8 @@
     {
       "beat": 8,
       "previous_beat": 7,
-      "frame": 6119,
-      "time_seconds": 203.96666666666667,
+      "frame": 6512,
+      "time_seconds": 217.06666666666666,
       "candidate": false,
       "settles_after_jump": true,
       "metrics": {
@@ -215,19 +215,19 @@
           "max_tile_mae": 0.0
         },
         "last_to_first": {
-          "mae": 8.052410125732422,
-          "changed_fraction": 0.1359982638888889,
-          "max_tile_mae": 50.95182418823242
+          "mae": 9.435076713562012,
+          "changed_fraction": 0.15424479166666666,
+          "max_tile_mae": 48.43996047973633
         },
         "first_to_second": {
-          "mae": 0.004969618283212185,
-          "changed_fraction": 8.246527777777778e-05,
-          "max_tile_mae": 0.10879629850387573
+          "mae": 0.003343460848554969,
+          "changed_fraction": 0.0,
+          "max_tile_mae": 0.07826968282461166
         },
         "second_to_third": {
-          "mae": 0.0006973379640839994,
+          "mae": 0.000603298656642437,
           "changed_fraction": 0.0,
-          "max_tile_mae": 0.018373843282461166
+          "max_tile_mae": 0.014033564366400242
         }
       }
     }

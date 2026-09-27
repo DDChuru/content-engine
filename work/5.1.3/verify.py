@@ -129,6 +129,14 @@ holds = [g for g in gaps if g['seconds'] > 15]
 R['longestUnchangedVisual'] = longest; R['unchangedOver15s'] = holds
 assert not holds, ('rendered visual unchanged for more than 15 s', holds)
 R['valenceAudit'] = 'not applicable: no covalent chemistry in Topic 5 (replication is schematic progress; no bond edits)'
+# run 009f: label-size + text-overlap audit (fails on any visible text < 17 px in the DELIVERED frame, i.e. after the
+# 0.88 branding scale, or any two overlapping text boxes); details in qa/label-size-audit.json
+ls = subprocess.run(['node', str(P / 'verify-label-size.cjs')], capture_output=True, text=True, cwd=P)
+print(ls.stdout.strip(), flush=True)
+assert ls.returncode == 0, ('label-size / overlap audit failed', ls.stdout[-2000:], ls.stderr[-2000:])
+LS = json.loads((P / 'qa/label-size-audit.json').read_text())
+R['labelSize'] = {k: LS[k] for k in ['rule', 'brandingScale', 'minSourcePx', 'framesChecked', 'smallestEffectivePx', 'failures', 'overlapFailures']}
+R['note_2'] = 'step 2 checks the MASTER; the delivered (branded) file is checked by verify_delivered.py (qa/delivered-verification.json)'
 R['sha256'] = hashlib.sha256(final.read_bytes()).hexdigest()
 (P / 'qa/verification.json').write_text(json.dumps(R, indent=2) + '\n')
 print(json.dumps({k: R[k] for k in ['longestUnchangedVisual', 'unchangedOver15s', 'sha256']}, indent=2))

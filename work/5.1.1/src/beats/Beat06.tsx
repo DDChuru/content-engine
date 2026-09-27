@@ -24,9 +24,9 @@ export default function Beat06(s: any) {
       <Chromosome {...P} />
       {[-1, 1].map((sd, i) => <Trace key={sd} pts={tr(sd)} p={fe(a('thin') - i * 0.4, 1.4)} width={4} opacity={between(a('thin'), a('thin') - 3.6)} />)}
       <Tag x={1000} y={500} text="typically long and thin" size={21} anchor="middle" opacity={between(a('thin') - 0.4, a('coil'))} />
-      <FieldSchematic x={1660} y={370} r={112} resolve={fe(a('visible'), 1.2)} opacity={f} />
-      <Tag x={1660} y={560} text="not resolved" size={19} anchor="middle" opacity={between(a('fine'), a('visible'))} />
-      <Tag x={1660} y={560} text="visible with a light microscope" size={19} anchor="middle" opacity={fi(a('visible') - 0.8, 0.4)} />
+      <FieldSchematic x={1660} y={346} r={112} resolve={fe(a('visible'), 1.2)} opacity={f} capAbove />
+      <Tag x={1660} y={488} text="not resolved" size={20} anchor="middle" opacity={between(a('fine'), a('visible'))} />
+      <Tag x={1660} y={488} text="visible with a light microscope" size={20} anchor="middle" opacity={fi(a('visible') - 0.8, 0.4)} />
       <Tag x={1180} y={780} text="start of mitosis: later, 5.2.1" size={20} bg="#FFF3EC" opacity={fi(a('begin'), 0.4)} />
       {/* Z1 inset: the beaded fibre coiling further (beads drawn closer together) */}
       <g opacity={fi(a('coil'), 0.4)}>

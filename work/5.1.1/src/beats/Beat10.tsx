@@ -38,7 +38,7 @@ export default function Beat10(s: any) {
       <ModelCell x={1640} y={360} r={130} nr={92} nucleolusAt={[1680, 300]}>
         {(['C1', 'C2', 'C3', 'C4'] as CId[]).map((id, i) => <Chromosome key={id} x={1584 + i * 40} y={370} id={id} cond={1} rep={1} scale={0.33} />)}
       </ModelCell>
-      <CountStrip x={1290} y={778} w={560} size={24} rows={[{chrom: 4, dna: 8, comp: 'whole cell'}]} hiRow={0} hiCol={-1} hiA={K(a('comp')) * 0.9} />
+      <CountStrip x={1290} y={778} w={560} size={24} anchor="end" rows={[{chrom: 4, dna: 8, comp: 'whole cell'}]} hiRow={0} hiCol={-1} hiA={K(a('comp')) * 0.9} />
       <g opacity={K(a('count'))}>
         <rect data-role="decor" x={930} y={870} width={920} height={56} rx={12} fill="#FFFFFF" stroke={T5.ring} strokeWidth={3} />
         <Txt x={950} y={907} size={23} weight={800} fill={INK}>chromosomes: count centromeres · DNA molecules: count separately</Txt>
@@ -48,9 +48,11 @@ export default function Beat10(s: any) {
         <rect data-role="decor" x={1440} y={515} width={410} height={245} rx={12} fill="#FFFFFF" stroke="#D6CEBD" strokeWidth={2} />
         <HookNucleus x={1530} y={600} r={58} />
         <ScaleBar x={1482} y={680} len={48} label="5 µm" />
-        <Txt x={1610} y={590} size={17} weight={700} fill={INK}>about 2 m of DNA</Txt>
-        <Txt x={1610} y={612} size={17} weight={700} fill={INK}>in a few µm</Txt>
-        <Txt x={1645} y={748} size={13} weight={600} fill={C.muted} italic anchor="middle">typical diploid human cell; schematic, not to scale</Txt>
+        <Txt x={1610} y={588} size={22} weight={700} fill={INK}>about 2 m of DNA</Txt>
+        <Txt x={1610} y={616} size={22} weight={700} fill={INK}>in a few µm</Txt>
+        <Txt x={1610} y={686} size={20} weight={600} fill={C.muted} italic>typical diploid</Txt>
+        <Txt x={1610} y={710} size={20} weight={600} fill={C.muted} italic>human cell;</Txt>
+        <Txt x={1610} y={734} size={20} weight={600} fill={C.muted} italic>schematic, not to scale</Txt>
       </g>
       <Tag x={760} y={820} text="packing with histones + coiling" size={22} anchor="middle" opacity={K(a('fits'))} />
     </g>

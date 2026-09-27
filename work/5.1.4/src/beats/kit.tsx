@@ -2,7 +2,7 @@
  * the human-scale hook nucleus, the staple handle, the light-microscope field schematic, forms rows, reject card. */
 import React from 'react';
 import {BRAND as C, BODY, clamp01} from '../../shared/src/theme';
-import {Txt, Tag, textW} from '../../shared/src/Type';
+import {Txt, Tag, textW, fit} from '../../shared/src/Type';
 import {T5} from '../t5-palette';
 import {fi, fe, lerp} from '../util';
 
@@ -18,6 +18,7 @@ export const typed = (text: string, a: number, cps = 26) => a <= 0 ? '' : text.s
 /** Compact caption line(s) (never alone on a frame). */
 export function Caption({x, y, text, size = 30, maxW = 1500, opacity = 1, anchor = 'start', weight = 700, fill = INK}: any) {
   if (opacity <= 0) return null;
+  size = fit(size);   // run 009f: >= 20 source px; wrap and line step at the drawn size
   const ls = wrap(text, size, maxW, weight);
   return <g opacity={opacity < 1 ? opacity : undefined}>{ls.map((l, i) => <Txt key={i} x={x} y={y + i * size * 1.25} size={size} weight={weight} fill={fill} anchor={anchor}>{l}</Txt>)}</g>;
 }

@@ -3,15 +3,9 @@
   "beat": 1,
   "seconds": 29.860875,
   "wpm": 144.7,
-  "matched": 71,
+  "matched": 72,
   "src": 72,
-  "diffs": [
-   [
-    "replace",
-    "metres",
-    "meters"
-   ]
-  ],
+  "diffs": [],
   "lowConfidence": [
    [
     "two",
@@ -42,20 +36,14 @@
   "beat": 2,
   "seconds": 22.7555625,
   "wpm": 121.3,
-  "matched": 43,
+  "matched": 46,
   "src": 46,
-  "diffs": [
-   [
-    "replace",
-    "tell a chromosome",
-    "telochromosome"
-   ]
-  ],
+  "diffs": [],
   "lowConfidence": [],
   "watch": {
    "chromosome": [
     2,
-    1
+    2
    ],
    "chromosomes": [
     1,
@@ -83,18 +71,13 @@
   "beat": 3,
   "seconds": 34.22622916666667,
   "wpm": 121.0,
-  "matched": 68,
+  "matched": 69,
   "src": 69,
   "diffs": [
    [
     "insert",
     "",
     "proteins"
-   ],
-   [
-    "replace",
-    "metres",
-    "meters"
    ]
   ],
   "lowConfidence": [],
@@ -251,45 +234,32 @@
  },
  {
   "beat": 7,
-  "seconds": 39.4275,
-  "wpm": 114.1,
-  "matched": 74,
-  "src": 75,
-  "diffs": [
-   [
-    "replace",
-    "trap",
-    "trip"
-   ]
-  ],
-  "lowConfidence": [
-   [
-    "trip.",
-    0.28,
-    0.42
-   ],
-   [
-    "1.",
-    0.48,
-    4.02
-   ]
-  ],
+  "seconds": 55.170625,
+  "wpm": 109.8,
+  "matched": 101,
+  "src": 101,
+  "diffs": [],
+  "lowConfidence": [],
   "watch": {
    "chromosome": [
-    1,
-    1
+    2,
+    2
    ],
    "chromosomes": [
     2,
     2
    ],
+   "chromatid": [
+    2,
+    2
+   ],
    "chromatids": [
-    1,
-    1
+    2,
+    2
    ],
    "centromere": [
-    3,
-    3
+    4,
+    4
    ],
    "centromeres": [
     1,
@@ -301,7 +271,7 @@
   "beat": 8,
   "seconds": 39.05597916666667,
   "wpm": 107.5,
-  "matched": 70,
+  "matched": 71,
   "src": 73,
   "diffs": [
    [
@@ -313,11 +283,6 @@
     "replace",
     "two",
     "too"
-   ],
-   [
-    "replace",
-    "colour",
-    "color"
    ],
    [
     "insert",
@@ -403,14 +368,9 @@
   "beat": 10,
   "seconds": 35.9909375,
   "wpm": 116.7,
-  "matched": 68,
+  "matched": 69,
   "src": 70,
   "diffs": [
-   [
-    "replace",
-    "metres",
-    "meters"
-   ],
    [
     "replace",
     "histones",

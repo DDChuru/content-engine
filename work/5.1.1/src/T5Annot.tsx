@@ -67,13 +67,15 @@ export function Tick({x, y, s = 1, p = 1, color = '#1D6B40'}: any) {
   return <path data-role="decor" d={d} fill="none" stroke={color} strokeWidth={5 * s} strokeLinecap="round" strokeLinejoin="round" pathLength="1" strokeDasharray="1" strokeDashoffset={1 - c01(p)} />;
 }
 /** Small caption line in the model's own small type (schematic notes). */
-export function Note({x, y, text, size = 17, anchor = 'start', opacity = 1, fill = '#6F6A60', weight = 600, italic = true}: any) {
+export function Note({x, y, text, size = 20, anchor = 'start', opacity = 1, fill = '#6F6A60', weight = 600, italic = true}: any) {
   if (opacity <= 0) return null;
+  size = Math.max(size, 20);   // run 009f: no text under 17 px after branding
   return <text x={x} y={y} fontSize={size} fontWeight={weight} fill={fill} textAnchor={anchor} fontStyle={italic ? 'italic' : undefined} fontFamily={BODY} opacity={opacity < 1 ? opacity : undefined}>{text}</text>;
 }
 /** A label with a white halo box so it reads over drawings (decor box + text). */
 export function Label({x, y, text, size = 22, anchor = 'start', opacity = 1, fill = T5.ringHalo, weight = 700, box = true}: any) {
   if (opacity <= 0) return null;
+  size = Math.max(size, 20);   // run 009f: no text under 17 px after branding
   const w = textW(text, size, weight), x0 = anchor === 'middle' ? x - w / 2 : anchor === 'end' ? x - w : x;
   return (
     <g opacity={opacity < 1 ? opacity : undefined}>

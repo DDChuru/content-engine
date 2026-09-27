@@ -1,33 +1,41 @@
 {
-  "1_ffprobeDuration": 245.966667,
+  "1_ffprobeDuration": 259.066667,
   "2_videoCoversAudio": {
-    "video": 245.966667,
-    "encodedAudio": 244.966,
+    "video": 259.066667,
+    "encodedAudio": 258.066,
     "marginSeconds": 1.001,
-    "videoFrames": 7379
+    "videoFrames": 7772
   },
   "3_fullDecodeErrors": 0,
   "4_cues": {
-    "matched": 77,
-    "total": 77,
-    "planned": 77
+    "matched": 81,
+    "total": 81,
+    "planned": 81
   },
   "5_audioPacketsUnchanged": {
-    "packets": 11484,
+    "packets": 12098,
     "identical": true
   },
   "6_finalWord": {
     "word": "intact.",
-    "endsAt": 241.807,
-    "audioEnds": 244.966,
+    "endsAt": 254.907,
+    "audioEnds": 258.066,
     "headroom": 3.159,
-    "afterWordMaxDb": -23.3
+    "afterWordMaxDb": -23.2
   },
   "7_silentReads": [
     {
+      "beat": 6,
+      "before": "Written properly",
+      "start": 170.59,
+      "seconds": 2.0,
+      "pcmAllZero": true,
+      "encodedInteriorMaxDb": -91.0
+    },
+    {
       "beat": 8,
       "before": "END",
-      "start": 242.465,
+      "start": 255.565,
       "seconds": 2.0,
       "pcmAllZero": true,
       "encodedInteriorMaxDb": -91.0
@@ -38,9 +46,9 @@
   "8_boundaries": {
     "master": "/home/user/content-engine/work/5.1.4/5.1.4-telomeres.mp4",
     "timeline": "/home/user/content-engine/work/5.1.4/timeline.json",
-    "master_bytes": 12191328,
+    "master_bytes": 13651677,
     "fps": 30.0,
-    "frame_count": 7379,
+    "frame_count": 7772,
     "boundaries_tested": 7,
     "candidate_count": 0,
     "candidate_beats": [],
@@ -59,9 +67,9 @@
     "limits": "Candidates, not proof. Deliberate one-frame holds can match; identical layouts can hide a lookup error. Subtle/animated holds can evade thresholds. Requires unshifted CFR master."
   },
   "markerAudit": {
-    "framesChecked": 7379,
+    "framesChecked": 7772,
     "marked": 0,
-    "unmarked": 7379,
+    "unmarked": 7772,
     "intervals": [],
     "badgeTextMae": {
       "commonMaeMax": 0.0,
@@ -76,5 +84,15 @@
   },
   "unchangedOver15s": [],
   "valenceAudit": "not applicable: no covalent chemistry in Topic 5 (copying drawn as schematic growth; no bond edits)",
-  "sha256": "d42dadc6d66109a91e2cffc54c12a1284a49854fa828eaa662b26ac4140b79fd"
+  "labelSize": {
+    "rule": "no visible text < 17 px in the delivered 1920x1080 frame; no two visible text boxes overlap",
+    "brandingScale": 0.8802,
+    "minSourcePx": 19.31,
+    "framesChecked": 740,
+    "smallestEffectivePx": 17.6,
+    "failures": 0,
+    "overlapFailures": 0
+  },
+  "note_2": "step 2 checks the MASTER; the delivered (branded) file is checked by verify_delivered.py (qa/delivered-verification.json)",
+  "sha256": "ddf899b92c222575256cc637f8702c7450f9fb41e4a51cea52811267246b3b8f"
 }

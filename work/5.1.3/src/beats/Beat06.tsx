@@ -19,12 +19,13 @@ export default function Beat06(s: any) {
         inset: {on: 1, nucleus: 1, cell: 1, cellGrow: 1, rep: 1, cond: 0, ripple: a('thin') < 0 ? 0 : Math.min(2, a('thin') / 1.2)}}}
       graph={{pen}} rows={rows} human="typical diploid human somatic cell: whole cell 46 chromosomes (92 chromatids) · 92 DNA molecules"
       insetCount="this chromosome: 1 chromosome · 2 DNA molecules">
-      <Tag x={W.cx} y={W.cy + 120} text="replicated, not yet visible" size={17} anchor="middle" opacity={fi(a('thin'), 0.4)} />
+      <Tag x={W.cx} y={W.cy + 120} text="replicated, not yet visible" size={20} anchor="middle" opacity={fi(a('thin'), 0.4)} />
       <g opacity={fi(a('later'), 0.4)}>
         <Arrow x1={p1[0]} y1={p1[1]} x2={p2[0]} y2={p2[1]} color={T5.ringHalo} bend={-14} />
-        <Tag x={75} y={345} text="condense here (5.2.1 names the stages)" size={17} />
+        <Tag x={75} y={340} text="condense here" size={20} />
+        <Tag x={75} y={378} text="(5.2.1 names the stages)" size={20} />
       </g>
-      <Tag x={890} y={930} text="copied (S) → still thin (G2) → condenses (M)" size={22} opacity={fi(a('order') + 0.0 - 2.2, 0.4)} />
+      <Tag x={890} y={880} text="copied (S) → still thin (G2) → condenses (M)" size={22} opacity={fi(a('order') + 0.0 - 2.2, 0.4)} />
     </Stage>
   );
 }

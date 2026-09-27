@@ -94,7 +94,7 @@ export function RoundCounter({x, y, value, label = 'replication rounds', opacity
   return (
     <g opacity={opacity < 1 ? opacity : undefined}>
       <rect data-role="decor" x={x} y={y} width={250} height={86} rx={12} fill="#FFFFFF" stroke={hi > 0 ? T5.ring : '#D6CEBD'} strokeWidth={hi > 0 ? 3 + 2 * hi : 2} />
-      <text x={x + 16} y={y + 28} fontSize={17} fontWeight={700} fill="#6F6A60" fontFamily={BODY}>{label}</text>
+      <text x={x + 16} y={y + 28} fontSize={20} fontWeight={700} fill="#6F6A60" fontFamily={BODY}>{label}</text>
       <text x={x + 16} y={y + 72} fontSize={40} fontWeight={800} fill={T5.ringHalo} fontFamily={BODY}>{value}</text>
     </g>
   );

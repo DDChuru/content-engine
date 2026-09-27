@@ -47,7 +47,7 @@ export function DNAContentGraph(p: GraphProps) {
   const op = p.opacity ?? 1;
   if (op <= 0) return null;
   const g = graphGeom(p), {L, R, T, B, gx, gy} = g, v = p.variant ?? 'per-cell', pen = Math.max(0, Math.min(T_MAX, p.pen ?? 0));
-  const ax = c01(p.axes ?? 1), bands = c01(p.bands ?? 1), fs = p.small ? 15 : 19;
+  const ax = c01(p.axes ?? 1), bands = c01(p.bands ?? 1), fs = p.small ? 20 : 21;   // run 009f: >= 20 source px (17 px after branding)
   const spans: [string, number, number][] = [...ARC_ORDER.map((k) => [k, ARCS[k][0], ARCS[k][1]] as [string, number, number]), ['g1', 1, T_MAX]];
   const bandEls = bands > 0 ? spans.map(([k, a, b], i) => (
     <g key={'b' + i} opacity={bands < 1 ? bands : undefined}>
@@ -100,13 +100,13 @@ export function DNAContentGraph(p: GraphProps) {
       </g>
       {ax > 0 && <g opacity={ax < 1 ? ax : undefined}>
         {[0, 1, 2].map((k) => <text key={k} x={f1(L - 15)} y={f1(gy(k) + 7)} fontSize={fs + 1} fontWeight={700} fill={T5.ringHalo} textAnchor="end" fontFamily={BODY}>{k}</text>)}
-        <text transform={`translate(${f1(p.x + (p.small ? 16 : 22))} ${f1((T + B) / 2)}) rotate(-90)`} fontSize={p.small ? 14 : 18} fontWeight={700} fill={T5.ringHalo} textAnchor="middle" fontFamily={BODY}>{v === 'per-nucleus' ? 'DNA mass per nucleus / arbitrary units' : 'DNA mass per cell / arbitrary units'}</text>
+        <text transform={`translate(${f1(p.x + (p.small ? 16 : 22))} ${f1((T + B) / 2)}) rotate(-90)`} fontSize={20} fontWeight={700} fill={T5.ringHalo} textAnchor="middle" fontFamily={BODY}>{v === 'per-nucleus' ? 'DNA mass per nucleus / arbitrary units' : 'DNA mass per cell / arbitrary units'}</text>
         <text x={f1(R)} y={f1(B + fs * 2.55)} fontSize={fs} fontWeight={700} fill={T5.ringHalo} textAnchor="end" fontFamily={BODY}>time</text>
       </g>}
-      {(p.caption ?? 0) > 0 && <text x={f1(L)} y={f1(p.y - 4)} fontSize={p.small ? 13 : 16} fontWeight={600} fill="#6F6A60" fontStyle="italic" fontFamily={BODY} opacity={p.caption! < 1 ? p.caption : undefined}>schematic; not measured data</text>}
-      {(p.unitKey ?? 0) > 0 && <text x={f1(R)} y={f1(p.y - 4)} fontSize={p.small ? 12 : 15} fontWeight={600} fill="#6F6A60" fontStyle="italic" textAnchor="end" fontFamily={BODY} opacity={p.unitKey! < 1 ? p.unitKey : undefined}>1 unit = the G1 amount of DNA in one cell (schematic)</text>}
-      {(p.slopeNote ?? 0) > 0 && <text x={f1(gx(ARCS.s[0]) + 8)} y={f1(gy(0.55))} fontSize={p.small ? 13 : 16} fontWeight={700} fill={T5.ringHalo} fontStyle="italic" fontFamily={BODY} opacity={p.slopeNote! < 1 ? p.slopeNote : undefined}>slope schematic — not a constant replication rate</text>}
-      {v === 'per-nucleus' && (p.hatchLabel ?? 0) > 0 && <text x={f1((hx0 + hx1) / 2)} y={f1(T - 8)} fontSize={p.small ? 13 : 16} fontWeight={700} fill={T5.ringHalo} textAnchor="middle" fontStyle="italic" fontFamily={BODY} opacity={p.hatchLabel! < 1 ? p.hatchLabel : undefined}>schematic — no intact nucleus</text>}
+      {(p.caption ?? 0) > 0 && <text x={f1(L)} y={f1(p.y - (p.small ? 30 : 4))} fontSize={20} fontWeight={600} fill="#6F6A60" fontStyle="italic" fontFamily={BODY} opacity={p.caption! < 1 ? p.caption : undefined}>schematic; not measured data</text>}
+      {(p.unitKey ?? 0) > 0 && <text x={f1(R)} y={f1(p.y - 4)} fontSize={20} fontWeight={600} fill="#6F6A60" fontStyle="italic" textAnchor="end" fontFamily={BODY} opacity={p.unitKey! < 1 ? p.unitKey : undefined}>1 unit = the G1 amount of DNA in one cell (schematic)</text>}
+      {(p.slopeNote ?? 0) > 0 && <text x={f1(gx(ARCS.s[0]) + 8)} y={f1(gy(0.55))} fontSize={20} fontWeight={700} fill={T5.ringHalo} fontStyle="italic" fontFamily={BODY} opacity={p.slopeNote! < 1 ? p.slopeNote : undefined}>slope schematic — not a constant replication rate</text>}
+      {v === 'per-nucleus' && (p.hatchLabel ?? 0) > 0 && <text x={f1((hx0 + hx1) / 2)} y={f1(T - 8)} fontSize={20} fontWeight={700} fill={T5.ringHalo} textAnchor="middle" fontStyle="italic" fontFamily={BODY} opacity={p.hatchLabel! < 1 ? p.hatchLabel : undefined}>schematic — no intact nucleus</text>}
       {dim > 0 && <rect data-role="decor" x={p.x} y={p.y - 30} width={p.w} height={p.h + 40} fill="#F6F3EB" opacity={0.6 * dim} />}
     </g>
   );

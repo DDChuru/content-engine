@@ -35,10 +35,10 @@ export default function Beat08(s: any) {
       <Txt x={W.cx} y={878} size={14} weight={600} fill={C.muted} anchor="middle" italic opacity={1 - fi(a('next'), 0.4)}>schematic; how plant and animal cells divide the cytoplasm: 5.2.1</Txt>
       <Tag x={gg.gx(0.92)} y={gg.B + 80} text="typical order; they can overlap" size={17} anchor="middle" opacity={fi(a('overlap'), 0.4)} />
       {split && [-1, 1].map((sd) => <Label key={sd} x={W.cx + sd * g.ri * 0.52} y={W.cy + 90} text="daughter cell" size={15} anchor="middle" opacity={1 - fe(a('next'), 0.6)} />)}
-      <Tag x={gg.gx(1.0) + 16} y={gg.gy(1.5)} text="2 units ÷ 2 cells = 1 unit each" size={18} opacity={fi(a('half'), 0.4)} />
-      {hl > 0 && <rect data-role="decor" x={890} y={660} width={950} height={52} rx={10} fill={T5.ring} opacity={0.4 * hl} />}
+      <Tag x={gg.gx(1.0) - 16} y={gg.gy(1.5)} text="2 units ÷ 2 cells = 1 unit each" size={20} anchor="end" opacity={fi(a('half'), 0.4)} />
+      {hl > 0 && <rect data-role="decor" x={898} y={660} width={934} height={66} rx={10} fill={T5.ring} opacity={0.4 * hl} />}
       {pulse(a('d46'), 1.4) > 0 && <rect data-role="decor" x={890} y={745} width={950} height={40} rx={10} fill={T5.ring} opacity={0.35 * pulse(a('d46'), 1.4)} />}
-      <Tag x={W.cx} y={W.cy - g.ri - 50} text="each daughter cell can go round again" size={17} anchor="middle" opacity={fi(a('next'), 0.4)} />
+      <Tag x={W.cx} y={290} text="each daughter cell can go round again" size={20} anchor="middle" opacity={fi(a('next'), 0.4)} />
     </Stage>
   );
 }

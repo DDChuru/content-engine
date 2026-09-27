@@ -35,16 +35,17 @@ export default function Beat05(s: any) {
     <g>
       <TelomereEndModel {...TP} end={end} grow={grow} stop={stop} swap={swap} />
       <RunLabel text="telomere: repeated, non-coding DNA" dy={-120} />
-      <Label x={TP.x - 20} y={TP.y + 8} text={round <= 0 || swap < 1 ? 'parent molecule' : ''} size={18} anchor="end" opacity={a('copy') >= 0 && round === 0 ? fi(a('copy'), 0.4) : 0} />
-      {grow > 0 && <Label x={TP.x - 20} y={TP.y + TP.copyGap + 8 - TP.copyGap * swap} text="daughter molecule" size={18} anchor="end" />}
-      {grow > 0 && swap === 0 && <Label x={TP.x - 20} y={TP.y + 8} text="template" size={18} anchor="end" />}
+      {/* run 009f: two-line labels so they stay inside the frame at >= 20 px */}
+      {['parent', 'molecule'].map((w, i) => <Label key={w} x={TP.x - 20} y={TP.y - 4 + i * 23} text={w} size={20} anchor="end" opacity={a('copy') >= 0 && round === 0 ? fi(a('copy'), 0.4) : 0} />)}
+      {grow > 0 && ['daughter', 'molecule'].map((w, i) => <Label key={w} x={TP.x - 20} y={TP.y + TP.copyGap - 4 - TP.copyGap * swap + i * 23} text={w} size={20} anchor="end" />)}
+      {grow > 0 && swap === 0 && <Label x={TP.x - 20} y={TP.y + 8} text="template" size={20} anchor="end" />}
       <StartGuide opacity={fi(a('end'), 0.4)} />
       <EndTicks n={ticks} />
       {gapRing && <Ring cx={(g.X(ENDS[1]) + g.X(1)) / 2} cy={TP.y + TP.copyGap / 2} rx={(g.X(1) - g.X(ENDS[1])) / 2 + 30} ry={70} p={fe(a('stop1') - 0.3, 0.6)} />}
       <RoundCounter x={1570} y={220} value={Math.max(0, round)} opacity={fi(a('copy'), 0.4)} />
-      <Tag x={1695} y={335} text="typical dividing somatic cells" size={16} anchor="middle" opacity={fi(a('r3'), 0.4)} />
+      <Tag x={1695} y={200} text="typical dividing somatic cells" size={20} anchor="middle" opacity={fi(a('r3'), 0.4)} />
       <Captions y={880} opacity={fi(a('end'), 0.4)} />
-      <Txt x={200} y={840} size={15} weight={600} fill={C.muted} italic opacity={fi(a('swap1'), 0.4)}>why the very tip is hard to copy: beyond this outline (general replication: 6.1.4)</Txt>
+      <Txt x={200} y={836} size={20} weight={600} fill={C.muted} italic opacity={fi(a('swap1'), 0.4)}>why the very tip is hard to copy: beyond this outline (general replication: 6.1.4)</Txt>
       {pulse(a('r3') - 3.8, 1.2) > 0 && <rect data-role="decor" x={195} y={872} width={420} height={36} rx={8} fill={T5.ring} opacity={0.4 * pulse(a('r3') - 3.8, 1.2)} />}
       <LostBracket opacity={fi(a('lost'), 0.4)} />
       <GeneRings pr={[fe(a('genes'), 0.5), fe(a('genes') - 0.3, 0.5)]} />
@@ -54,7 +55,7 @@ export default function Beat05(s: any) {
         <Txt x={1270} y={712} size={20} weight={800} fill={T5.ringHalo}>some cells maintain their telomeres</Txt>
         <g data-role="drawing"><rect x={1270} y={740} width={360} height={18} rx={6} fill={T5.telomere} stroke={T5.telomereEdge} strokeWidth={1.5} /></g>
         <Txt x={1650} y={757} size={18} weight={800} fill={T5.ringHalo}>rounds: {1 + Math.min(2, Math.floor(Math.max(0, a('maintain') - 0.8) / 0.8))}</Txt>
-        <Txt x={1270} y={794} size={14} weight={600} fill={C.muted} italic>how: not needed here</Txt>
+        <Txt x={1270} y={798} size={20} weight={600} fill={C.muted} italic>how: not needed here</Txt>
       </g>}
     </g>
   );

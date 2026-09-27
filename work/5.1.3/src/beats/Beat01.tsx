@@ -50,8 +50,8 @@ export default function Beat01(s: any) {
         {nuclei.map((q, i) => <g key={'n' + i}><circle cx={f1(q[0])} cy={f1(q[1])} r={24} fill={T5.nucleoplasm} stroke={T5.envelope} strokeWidth={2.5} /><circle cx={f1(q[0] + 8)} cy={f1(q[1] - 7)} r={6} fill={T5.nucleolus} /></g>)}
       </g>
       {newTop.map((q, i) => <Glow key={'g' + i} cx={q[0]} cy={q[1]} r={40} a={fi(a('full'), 0.5) * (0.6 + 0.4 * pulse(a('full') - 0.2, 1))} />)}
-      <Tag x={x3 + CW / 2} y={560} text="full copy in each?" size={22} anchor="middle" opacity={fi(a('half'), 0.4) * (1 - fi(a('full'), 0.4))} />
-      <Tag x={x3 + CW / 2} y={560} text="same genetic information" size={22} anchor="middle" opacity={fi(a('full'), 0.4)} />
+      <Tag x={x3 + CW / 2} y={560} text="full copy in each?" size={22} anchor="middle" opacity={fi(a('half'), 0.4) * (1 - fi(a('full'), 0.3))} />
+      <Tag x={x3 + CW / 2} y={560} text="same genetic information" size={22} anchor="middle" opacity={fi(a('full') - 0.4, 0.3)} />
       <Tag x={X0} y={900} text="deepest layer of the skin" size={21} opacity={fi(a('skin'), 0.4)} />
       <Txt x={X0 + NC * CW} y={470} size={18} weight={700} fill={INK} anchor="end" opacity={fi(a('skin'), 0.4)}>surface ↑</Txt>
       <Txt x={X0} y={470} size={16} weight={600} fill={C.muted} italic>schematic; not to scale</Txt>

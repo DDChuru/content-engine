@@ -1,11 +1,13 @@
 """Insert DIGITAL SILENCE only; speech samples are retained byte for byte.
-5.1.1: a 2 s final hold (END) on Beat 11 for the held closing frame. No other holds (no error beats, no silent reads)."""
+5.1.1: a 2 s final hold (END) on Beat 11 for the held closing frame; run 009f: a 2 s hold before 'Written properly' in Beat 7
+(the completed memory-hook mapping, RULE-MEMORY-HOOKS). No error beats, no silent reads."""
 from pathlib import Path
 import json,re,difflib,wave
 P=Path(__file__).resolve().parent
 S=json.loads((P/'script.json').read_text())
 H={b['id']:[(h['before'],h['seconds']) for h in b['holds']] for b in S}
 H[11]=H.get(11,[])+[('END',2.0)]   # Beat 11: final frame held 2 s (storyboard); no silent reads in 5.1.1
+H[7]=H.get(7,[])+[('Written properly',2.0)]   # run 009f memory-hook rule: 2 s hold on the completed staple mapping
 norm=lambda s:re.findall(r'[a-z0-9]+',s.lower().replace('’',"'").replace("'",''))
 
 # Recogniser spellings → storyboard spellings (numerals spelled out; US → UK). Heard tokens only; never the script.

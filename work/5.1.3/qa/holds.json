@@ -41,7 +41,14 @@
   },
   {
     "beat": 9,
-    "holds": [],
+    "holds": [
+      {
+        "atSample": 745920,
+        "samples": 96000,
+        "seconds": 2.0,
+        "before": "Written properly"
+      }
+    ],
     "speechUnchanged": true
   },
   {

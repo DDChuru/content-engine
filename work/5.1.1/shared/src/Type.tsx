@@ -2,10 +2,18 @@
 import React from 'react';
 import {BRAND as C, BODY, clamp01} from './theme';
 
+/** Run 009f (review 27 Sep): NO text under 17 px in the delivered frame. The lesson is branded into a 1690-px slot
+ * (x 0.8802), so every label is at least MIN_TEXT = 20 source px at its drawn scale. Groups drawn at a reduced scale k
+ * wrap their children in <TextScale.Provider value={k}> so their labels keep >= MIN_TEXT on screen. */
+export const MIN_TEXT = 20;
+export const TextScale = React.createContext(1);
+export const fit = (size: number, k = 1) => Math.max(size, MIN_TEXT / k);
+
 export function Txt({x, y, size = 24, weight = 600, fill = C.ink, anchor = 'start', opacity = 1, italic = false, family, children, deco}: any) {
+  const k = React.useContext(TextScale);
   if (opacity <= 0) return null;
   return (
-    <text x={x} y={y} fontSize={size} fontWeight={weight} fill={fill} textAnchor={anchor} opacity={opacity < 1 ? opacity : undefined}
+    <text x={x} y={y} fontSize={fit(size, k)} fontWeight={weight} fill={fill} textAnchor={anchor} opacity={opacity < 1 ? opacity : undefined}
       fontFamily={family ?? BODY} fontStyle={italic ? 'italic' : undefined} textDecoration={deco}>{children}</text>
   );
 }
@@ -13,7 +21,8 @@ export function Txt({x, y, size = 24, weight = 600, fill = C.ink, anchor = 'star
 export function Lines({x, y, text, size = 24, step, weight = 600, fill = C.ink, anchor = 'start', opacity = 1, italic = false}: any) {
   if (opacity <= 0) return null;
   const ls = String(text).split('\n');
-  const st = step ?? size * 1.3;
+  const fs = fit(size, React.useContext(TextScale));
+  const st = Math.max(step ?? fs * 1.3, fs * 1.18);
   return <g opacity={opacity < 1 ? opacity : undefined}>{ls.map((l, i) => <Txt key={i} x={x} y={y + i * st} size={size} weight={weight} fill={fill} anchor={anchor} italic={italic}>{l}</Txt>)}</g>;
 }
 /** Advance width from the brand font's real metrics (Source Sans 3; shared/src/metrics.json, built from
@@ -23,7 +32,7 @@ export const textW = (t: string, size: number, weight = 600) => {
   const tab: any = (M as any)[weight >= 700 ? 700 : weight >= 600 ? 600 : 400];
   let w = 0;
   for (const ch of String(t)) w += tab[ch] ?? 0.6;
-  return w * size;
+  return w * Math.max(size, MIN_TEXT);
 };
 export function Card({x, y, w, h, fill = C.white, stroke = C.line, opacity = 1, active = false, rx = 16, children}: any) {
   if (opacity <= 0) return null;
@@ -37,6 +46,7 @@ export function Card({x, y, w, h, fill = C.white, stroke = C.line, opacity = 1, 
 /** Pill label. */
 export function Tag({x, y, text, size = 20, fill = C.ink, bg = C.white, stroke = C.line, anchor = 'start', opacity = 1, weight = 700}: any) {
   if (opacity <= 0) return null;
+  size = fit(size);
   const w = textW(text, size, weight) + size * 1.1, h = size * 1.55;
   const x0 = anchor === 'middle' ? x - w / 2 : anchor === 'end' ? x - w : x;
   return (
@@ -47,7 +57,7 @@ export function Tag({x, y, text, size = 20, fill = C.ink, bg = C.white, stroke =
   );
 }
 /** Small-type source line. */
-export function Cite({x, y, text, size = 17, anchor = 'start', opacity = 1, fill = C.muted}: any) {
+export function Cite({x, y, text, size = 20, anchor = 'start', opacity = 1, fill = C.muted}: any) {
   return <Txt x={x} y={y} size={size} weight={600} fill={fill} anchor={anchor} opacity={opacity} italic>{text}</Txt>;
 }
 /** Hand-drawn ring (pre-drawn ink that POINTS AT structure); p 0..1 reveals the stroke. */

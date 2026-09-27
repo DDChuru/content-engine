@@ -11,7 +11,7 @@ import {TelomereEndModel} from '../TelomereEndModel';
 import {Ring} from '../T5Annot';
 import {fi, fe, lerp, pulse} from '../util';
 import {Caption, INK} from './kit';
-import {CAPTION, COMPARE} from './tel';
+import {Captions} from './tel';
 
 const f1 = (v: number) => v.toFixed(1);
 function Strip({x, y, a, label, lab}: any) {
@@ -47,7 +47,7 @@ export default function Beat01(s: any) {
     <g>
       <Caption x={70} y={236} size={30} maxW={1760} text="Ever wondered how a chromosome can be copied again and again without losing the genes near its ends?" opacity={fi(a('open') + 0.5, 0.5)} />
       <Chromosome {...R} />
-      <Txt x={R.x} y={R.y + 250 * R.scale / 2} size={16} weight={600} fill={C.muted} italic anchor="middle">schematic</Txt>
+      <Txt x={R.x} y={R.y + 250 * R.scale / 2 + 40} size={20} weight={600} fill={C.muted} italic anchor="middle">schematic</Txt>
       {toCorner < 0.2 && <><Ring cx={G.top[0]} cy={G.top[1] + 6} rx={34} ry={30} p={fe(a('ends'), 0.6)} opacity={1 - fi(a('strips'), 0.3)} />
         <Ring cx={G.bottom[0]} cy={G.bottom[1] - 6} rx={34} ry={30} p={fe(a('ends') - 0.3, 0.6)} opacity={1 - fi(a('strips'), 0.3)} /></>}
       {stripsO > 0 && <g opacity={stripsO < 1 ? stripsO : undefined}>
@@ -68,8 +68,8 @@ export default function Beat01(s: any) {
         </g>
         <Tag x={MX} y={MY - MR - 22} text="typical dividing body cells" size={18} anchor="middle" />
         <Tag x={MX + MR - 30} y={MY + 60} text="round 1" size={17} opacity={fi(a('short'), 0.3)} />
-        <Txt x={MX} y={MY + MR + 34} size={17} weight={700} fill={INK} anchor="middle" italic opacity={fi(a('short'), 0.4)}>{CAPTION}</Txt>
-        <Caption x={1060} y={MY + MR + 60} size={14} maxW={660} weight={600} fill={C.muted} text={COMPARE} opacity={fi(a('short'), 0.4)} />
+        {/* run 009f: the model's persistent notes (shortening caption, endpoint comparison while copying, grey-block note) */}
+        <Captions x={1040} y={MY + MR + 34} w={800} opacity={fi(a('short'), 0.4)} />
         <Tag x={560} y={800} text="so what protects the genes?" size={26} opacity={fi(a('q'), 0.4)} />
       </g>}
     </g>

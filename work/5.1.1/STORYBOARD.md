@@ -161,7 +161,7 @@ Small type: *syllabus 5.1.1, "describe", p.23.*
 
 ### BEAT 7 · Count the centromeres · 3:17–3:55
 **Narration:**
-> Now the trap. How many chromosomes is this X? One. Picture a page and its photocopy, held by a single staple: two identical sheets, still one stapled set. Written properly: after replication, a chromosome consists of two sister chromatids, each its own DNA molecule, joined at one centromere. So count chromosomes by counting centromeres, and count DNA molecules separately. Before replication, one centromere and one DNA molecule; after, still one centromere, but two DNA molecules.
+> Now the trap. How many chromosomes is this X? One. Picture a page and its photocopy, held by a single staple. The page: one sister chromatid. The photocopy: the other sister chromatid, identical to the first. The staple: the centromere, holding the two together. Two sheets, one stapled set: two sister chromatids, one chromosome. Written properly: after replication, a chromosome consists of two sister chromatids, each its own DNA molecule, joined at one centromere. So count chromosomes by counting centromeres, and count DNA molecules separately. Before replication, one centromere and one DNA molecule; after, still one centromere, but two DNA molecules.
 
 **Visual action:**
 1. At *Now the trap*, the C1 X (`replicated-condensed`) holds at centre.

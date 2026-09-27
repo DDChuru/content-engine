@@ -1,33 +1,41 @@
 {
-  "1_ffprobeDuration": 375.533333,
+  "1_ffprobeDuration": 393.3,
   "2_videoCoversAudio": {
-    "video": 375.533333,
-    "encodedAudio": 374.533,
+    "video": 393.3,
+    "encodedAudio": 392.3,
     "marginSeconds": 1.0,
-    "videoFrames": 11266
+    "videoFrames": 11799
   },
   "3_fullDecodeErrors": 0,
   "4_cues": {
-    "matched": 108,
-    "total": 108,
-    "planned": 108
+    "matched": 111,
+    "total": 111,
+    "planned": 111
   },
   "5_audioPacketsUnchanged": {
-    "packets": 17558,
+    "packets": 18391,
     "identical": true
   },
   "6_finalWord": {
     "word": "centromere.",
-    "endsAt": 371.64,
-    "audioEnds": 374.533,
+    "endsAt": 389.407,
+    "audioEnds": 392.3,
     "headroom": 2.893,
     "afterWordMaxDb": -84.3
   },
   "7_silentReads": [
     {
+      "beat": 7,
+      "before": "Written properly",
+      "start": 211.987,
+      "seconds": 2.0,
+      "pcmAllZero": true,
+      "encodedInteriorMaxDb": -91.0
+    },
+    {
       "beat": 11,
       "before": "END",
-      "start": 372.013,
+      "start": 389.78,
       "seconds": 2.0,
       "pcmAllZero": true,
       "encodedInteriorMaxDb": -91.0
@@ -38,9 +46,9 @@
   "8_boundaries": {
     "master": "/home/user/content-engine/work/5.1.1/5.1.1-inside-a-chromosome.mp4",
     "timeline": "/home/user/content-engine/work/5.1.1/timeline.json",
-    "master_bytes": 19506029,
+    "master_bytes": 20586434,
     "fps": 30.0,
-    "frame_count": 11266,
+    "frame_count": 11799,
     "boundaries_tested": 10,
     "candidate_count": 0,
     "candidate_beats": [],
@@ -59,9 +67,9 @@
     "limits": "Candidates, not proof. Deliberate one-frame holds can match; identical layouts can hide a lookup error. Subtle/animated holds can evade thresholds. Requires unshifted CFR master."
   },
   "markerAudit": {
-    "framesChecked": 11266,
+    "framesChecked": 11799,
     "marked": 0,
-    "unmarked": 11266,
+    "unmarked": 11799,
     "intervals": [],
     "badgeTextMae": {
       "commonMaeMax": 0.0,
@@ -71,10 +79,20 @@
   },
   "longestUnchangedVisual": {
     "beat": 11,
-    "startFrame": 11008,
+    "startFrame": 11541,
     "seconds": 8.6
   },
   "unchangedOver15s": [],
   "valenceAudit": "not applicable: no covalent chemistry in Topic 5 (replication is schematic progress; no bond edits)",
-  "sha256": "defc8f4301e372a5292027a7e413d5ebdc3ac3ea58b511bfda958af92e3c3c83"
+  "labelSize": {
+    "rule": "no visible text < 17 px in the delivered 1920x1080 frame; no two visible text boxes overlap",
+    "brandingScale": 0.8802,
+    "minSourcePx": 19.31,
+    "framesChecked": 1088,
+    "smallestEffectivePx": 17.6,
+    "failures": 0,
+    "overlapFailures": 0
+  },
+  "note_2": "step 2 checks the MASTER; the delivered (branded) file is checked by verify_delivered.py (qa/delivered-verification.json)",
+  "sha256": "8f695ec9ee5bf05413ee48ceae04b4313a7b0459b40cf734bbd82cf6ff845d4a"
 }
