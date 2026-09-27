@@ -554,4 +554,25 @@ All five together save 56 words (28 s), giving 1,234 words = 10:17, still 0:47 o
 
 ## Validator run
 
-To be completed.
+`python3 work/006/validate_storyboard.py storyboards/topic-04/4.2.2a/STORYBOARD.md`
+
+```
+== storyboards/topic-04/4.2.2a/STORYBOARD.md
+beat  words  cues maxgap  status
+   1     88    10     23  ok
+   2     47     4     16  ok
+   3     92    11     13  ok
+   4    107    15     14  ok
+   5     85    10     14  ok
+   6     93    11     19  ok
+   7    109    12     18  ok
+   8    108    13     12  ok
+   9    131    18     17  ok
+  10     98    11     18  ok
+  11    122    15     20  ok
+  12     87    11     16  ok
+  13    123    14     18  ok
+TOTAL words 1290  cues 155  runtime at 120 wpm 10:45.0  beats 13  failing beats 0
+```
+
+No MISSING SECTION or CITATION lines.
