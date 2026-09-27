@@ -10,9 +10,9 @@ Per beat (### BEAT n · Title · window):
   - every cue must be an exact substring of the narration, unique within it, and in
     spoken order; the longest stretch of narration without a cue (start → first cue,
     cue → cue, last cue → end) must be <= 30 words
-  - error beats (title contains COMMON MISTAKE or EXAM CONTRAST) must run 65–75 s at
-    120 wpm (130–150 words; the 3–4 s silent read is inside the effective rate) and must
-    contain a silent-read line
+  - error beats (title contains COMMON MISTAKE or EXAM CONTRAST) must run 65–75 s as a
+    complete five-move beat: narration at 120 wpm plus the silent read (seconds parsed from
+    the silent-read line, default 4) — i.e. about 122–142 words with a 4 s read (plan check MF7)
 Whole file:
   - forbidden narration phrases (Topic 4 traps and the 4.2.6 exclusion)
   - every beat has a **Visual action** block whose first item states which model or
@@ -25,7 +25,7 @@ import sys
 
 WPM = 120
 MAX_GAP = 30
-ERR_MIN, ERR_MAX = 130, 150
+ERR_MIN_S, ERR_MAX_S = 65, 75  # complete error beat: narration at 120 wpm + silent read
 
 FORBIDDEN = [
     (r"concentration of water", "use water potential, not 'concentration of water'"),
@@ -81,7 +81,8 @@ def narration_of(body):
             continue
         t = ln.lstrip(">").strip()
         if re.match(r"^\*?\(silent read", t, flags=re.I):
-            silent = True
+            ms = re.search(r"(\d+(?:\.\d+)?)\s*s", t)
+            silent = float(ms.group(1)) if ms else 4.0
             continue
         if t:
             lines.append(t)
@@ -130,8 +131,9 @@ def check_beat(num, title, body):
         problems.append(f"{maxgap} words without a cue (max {MAX_GAP})")
     is_err = bool(re.search(r"COMMON MISTAKE|EXAM CONTRAST", title))
     if is_err:
-        if not (ERR_MIN <= nw <= ERR_MAX):
-            problems.append(f"error beat {nw} words = {nw * 60 / WPM:.1f} s (need 65–75 s)")
+        secs = nw * 60 / WPM + (silent or 0)
+        if not (ERR_MIN_S <= secs <= ERR_MAX_S):
+            problems.append(f"error beat {nw} words + silent read = {secs:.1f} s (need 65–75 s)")
         if not silent:
             problems.append("error beat has no silent-read line")
     first_item = vis.strip().splitlines()
