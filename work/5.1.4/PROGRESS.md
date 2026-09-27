@@ -1,5 +1,7 @@
 # 5.1.4 Telomeres: why copying costs telomere, not genes · BUILD PROGRESS (handover)
 
+**v3 (run 009g, 27 Sep, branch `cloud/009g-fix-3a72s8`): DONE — B6 transition collisions fixed, every-frame audit, on-screen paper references removed; "REVIEW 5.1.4 v3 …" at Bunny status 4 (guid 2fddf183-…); see REPORT.md.**
+
 **v2 (run 009f, 27 Sep, branch `cloud/009f-fix-4t1jp6`): DONE** — review fixes applied (B2 overlap, persistent schematic
 captions on every model use, all text >= 17 px after branding, buffer memory hook re-voiced with paired highlights and a
 2 s hold, delivered video >= audio), 8/8 beats re-rendered and approved, verified (`qa/verification.json`,

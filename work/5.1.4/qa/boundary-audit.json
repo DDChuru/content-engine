@@ -1,7 +1,7 @@
 {
   "master": "/home/user/content-engine/work/5.1.4/5.1.4-telomeres.mp4",
   "timeline": "/home/user/content-engine/work/5.1.4/timeline.json",
-  "master_bytes": 13651677,
+  "master_bytes": 13627139,
   "fps": 30.0,
   "frame_count": 7772,
   "boundaries_tested": 7,
@@ -155,19 +155,19 @@
           "max_tile_mae": 0.0
         },
         "last_to_first": {
-          "mae": 6.145823001861572,
-          "changed_fraction": 0.10210069444444445,
-          "max_tile_mae": 51.47337341308594
+          "mae": 6.440631866455078,
+          "changed_fraction": 0.10147135416666667,
+          "max_tile_mae": 49.173892974853516
         },
         "first_to_second": {
-          "mae": 0.053828127682209015,
-          "changed_fraction": 0.00040364583333333333,
-          "max_tile_mae": 1.3459200859069824
+          "mae": 0.0033926505129784346,
+          "changed_fraction": 1.3020833333333334e-05,
+          "max_tile_mae": 0.05671296641230583
         },
         "second_to_third": {
-          "mae": 0.04680556058883667,
-          "changed_fraction": 0.0003125,
-          "max_tile_mae": 1.2873263359069824
+          "mae": 8.246527431765571e-05,
+          "changed_fraction": 0.0,
+          "max_tile_mae": 0.00824652798473835
         }
       }
     },
@@ -185,8 +185,8 @@
           "max_tile_mae": 0.0
         },
         "last_to_first": {
-          "mae": 10.139481544494629,
-          "changed_fraction": 0.14452256944444444,
+          "mae": 10.137979507446289,
+          "changed_fraction": 0.1445138888888889,
           "max_tile_mae": 47.77734375
         },
         "first_to_second": {

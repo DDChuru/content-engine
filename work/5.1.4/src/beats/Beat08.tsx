@@ -17,9 +17,9 @@ export default function Beat08(s: any) {
   const P = {...TP, x: 1000, len: 700, y: 400, amp: 14, copyGap: 50};
   const g = telGeom(P);
   const FX = 70, FW = 880;
-  const r1 = 's21_22 Q1(b), part D: 1 mark of a 4-mark cloze (QP p3 / MS p8); parts A–C are Topic 6';
-  const r2 = 's21_12 Q19, QP p7 / MS p2, key A';
-  const r3 = 'S22/12 Q18, QP p7 / MS p2, key A (PDF-VERIFIED (round-1 check))';
+  const r1 = 'a real question: 1 mark (gap D) of a 4-mark cloze; the other gaps are Topic 6';
+  const r2 = 'a real multiple-choice item';
+  const r3 = 'a real multiple-choice item: the keyed option';
   let y = 300;
   const y1 = y; y += formRowH(r1, FW) + 40;
   const y2 = y; y += formRowH(r2, FW) + 10;
@@ -46,9 +46,9 @@ export default function Beat08(s: any) {
         <Txt x={1000} y={772} size={20} weight={600} fill={C.muted} italic>genes kept is the answer</Txt>
       </g>}
       <Tag x={FX} y={242} text="outline" size={24} opacity={fi(a('outline'), 0.4)} />
-      <Txt x={FX + 130} y={250} size={20} weight={600} fill={C.muted} italic opacity={fi(a('outline'), 0.4)}>Learner Guide PDF p15: “Detail is not required.” — PDF-VERIFIED (plan check)</Txt>
+      <Txt x={FX + 130} y={250} size={20} weight={600} fill={C.muted} italic opacity={fi(a('outline'), 0.4)}>Learner Guide: “Detail is not required.”</Txt>
       <FormRow x={FX} y={y1} w={FW} title="cloze: name the structure" cite={r1} a={a('row1')} />
-      <Txt x={FX + 20} y={y1 + formRowH(r1, FW) + 24} size={20} weight={600} fill={C.muted} italic opacity={fi(a('rep'), 0.4)}>PDF-VERIFIED in round-one check; displayed wording is our paraphrase</Txt>
+      <Txt x={FX + 20} y={y1 + formRowH(r1, FW) + 24} size={20} weight={600} fill={C.muted} italic opacity={fi(a('rep'), 0.4)}>displayed wording is our paraphrase</Txt>
       {a('ans') >= 0 && <g opacity={fi(a('ans'), 0.4)}><Txt x={FX + FW - 190} y={y1 + 38} size={26} weight={800} fill={GOOD}>telomeres</Txt><Tick x={FX + FW - 30} y={y1 + 28} p={fe(a('ans'), 0.5)} /></g>}
       <FormRow x={FX} y={y2} w={FW} title="MCQ: telomeres after more divisions" cite={r2} a={a('row2')} />
       <g opacity={fi(a('row3'), 0.4)}>
@@ -58,7 +58,7 @@ export default function Beat08(s: any) {
         <Txt x={FX + 20} y={y3 + 91} size={20} weight={600} fill={C.muted} italic>maintained telomere length in stem and cancer cells is supplied context in the question</Txt>
       </g>
       <Txt x={FX} y={y3 + 130} size={20} weight={600} fill={C.muted} italic opacity={fi(a('row3'), 0.4)}>Question-demand summaries are our paraphrases; the row-3 answer</Txt>
-      <Txt x={FX} y={y3 + 154} size={20} weight={600} fill={C.muted} italic opacity={fi(a('row3'), 0.4)}>sentence is Cambridge's exact option-A wording.</Txt>
+      <Txt x={FX} y={y3 + 154} size={20} weight={600} fill={C.muted} italic opacity={fi(a('row3'), 0.4)}>sentence is Cambridge's exact wording of the keyed option.</Txt>
       {hook > 0 && <g opacity={hook < 1 ? hook : undefined}>
         {/* run 009f: the hook replay carries the model's notes (endpoint comparison while copying, block note, whole-run TTAGGG) */}
         <rect data-role="decor" x={FX} y={HY} width={FW} height={940 - HY} rx={12} fill="#FFFFFF" stroke="#D6CEBD" strokeWidth={2} />

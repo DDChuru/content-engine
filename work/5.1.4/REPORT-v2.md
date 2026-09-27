@@ -1,34 +1,3 @@
-# 5.1.4 Telomeres: why copying costs telomere, not genes — REPORT **v3** (cloud run 009g fix pass)
-
-**Model:** claude-opus-5-5 · branch `cloud/009g-fix-3a72s8` (from `cloud/009f-fix-4t1jp6`) · 27 Sep 2026 (UTC) · v2 report: `REPORT-v2.md` (unchanged below)
-**Bunny v3 (review):** guid `2fddf183-8e38-4da9-9221-d556db7119fd`, title "REVIEW 5.1.4 v3 Telomeres: why copying costs telomere, not genes", no collection; uploaded 2026-09-27T16:52:46Z; **status 4 at 2026-09-27T16:54:48Z** (≈2 min); 240p–1080p, length 270 s. v1/v2 guids untouched.
-
-## Review findings (5.1.4-V2-REVIEW, CHANGES) → fixes (`src/beats/Beat06.tsx`)
-| Finding | Fix |
-|---|---|
-| P2 02:22.1 (f4113): set-aside molecule's "telomere: repeated, non-coding DNA" label crosses "thought experiment — not a real chromosome" | The thought-experiment frame (heading, model, counter, captions) fades in only from `thought` + 0.25 s, after the set-aside molecule's labels are gone (they leave by aside 0.05 ≈ 0.16 s), and fades out as the molecule starts back (`back`, 0.3 s) — the every-frame audit also caught this reverse transition at f4619, now clean. |
-| P2 03:13.3 (f5648–5652): "handle" and "the exam answer" superimposed | Handle inset fades OUT over 0.4 s from `protect`; the note "the handle is not / the exam answer" fades in only from `protect` + 0.45 s. |
-| Sampled audit | `verify-label-size.cjs` checks EVERY frame (7,772), text visible from opacity > 0.02: **min 17.01 px, 0 failures, 0 overlaps**. |
-| NEW rule: exam questions in our own words | B8 forms: "a real question: 1 mark (gap D) of a 4-mark cloze; the other gaps are Topic 6", "a real multiple-choice item", "a real multiple-choice item: the keyed option", "Learner Guide: “Detail is not required.”", "displayed wording is our paraphrase", "…Cambridge's exact wording of the keyed option." — all paper codes/pages/PDF-VERIFIED tags gone. Captions had none; narration unchanged. |
-
-## Phases (UTC)
-fixes + audit 16:25–16:32 · render 8 beats 16:38–16:41 · finish/verify 16:41–16:44 · bookends 16:42–16:47 · branding 16:48–16:51 · sheets 16:53 · upload 16:52 → status 4 16:54:48.
-
-## Master / branded (v3)
-- master `5.1.4-telomeres.mp4`: 259.067 s, 7,772 frames, sha256 `c5d778314ea21008d83e7a2432a7e177be6fd104d330d075b91b34db1498c4f4` (timeline and audio byte-identical to v2; no ElevenLabs characters used)
-- branded `5.1.4-branded-v3.mp4`: 270.266667 s, sha256 `dfbc06938017738a9bc10c506d94347ee7e9832e49ab657b429acbc8776baf90`; `verify_delivered.py`: video end ≥ audio end, margin 0.171 s; full decode 0 errors; `qa/branded-mid-v3.jpg`.
-
-## Verification (master) — all PASS
-1 ffprobe 259.067 · 2 video ≥ audio · 3 decode clean · 4 cues 81/81 · 5 AAC packets identical (12,098) · 6 final word headroom 3.16 s · 7 holds −91 dB (B6 hook 2 s before "Written properly", B8 END) · 8 boundary holds 0 · marker audit: no error beat, 7,772 frames unmarked · label size/overlap every frame PASS · text-only controls PASS, longest text-only 0.5 s, 0 untagged.
-
-## Count audit
-No chromosome/DNA counter in this lesson. Round counter changes on the round-start frames f3227 / f3500 / f3688 (unchanged timeline and B5 source).
-
-## Sheets
-B6/B8 stills and transition frames (f4108–4135, f5648–5670) and the 5 encoded sheets looked at: no defect. Shared models unchanged (byte-identical to `work/t5-shared`). Images: none.
-
----
-
 # 5.1.4 Telomeres: why copying costs telomere, not genes — REPORT **v2** (cloud run 009f fix pass)
 
 **Model:** claude-opus-5-5 · branch `cloud/009f-fix-4t1jp6` (from `cloud/009-5.1.1-to-5.1.4-qls6vy`) · 27 Sep 2026 (UTC) · v1 report: `REPORT-v1.md`

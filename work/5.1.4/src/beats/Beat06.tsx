@@ -29,7 +29,11 @@ export default function Beat06(s: any) {
   }
   const telo = 1 - fe(a('away'), 1.5);
   const g = telGeom(TP);
-  const handle = fi(a('handle'), 0.4), hsmall = fe(a('protect'), 0.8);
+  // run 009g: outgoing text is gone before incoming text takes its place — the handle inset fades out over 0.4 s from
+  // 'protect', and only then does the note fade in (they share a baseline); the thought-experiment frame waits for the
+  // set-aside molecule's labels (gone by aside 0.05, ~0.16 s) before it appears.
+  const handle = fi(a('handle'), 0.4), hsmall = fe(a('protect'), 0.4), hnote = fe(a('protect') - 0.45, 0.4);
+  const teIn = fi(a('thought') - 0.25, 0.3) * (1 - fi(a('back'), 0.3));   // and leaves as the molecule starts back
   const typedS = a('written') < 0 ? '' : a('s1') < 0 ? typed('Written properly:', a('written') - 0.5, 30) : a('s2') < 0 ? typed(S1, a('s1') + 0.6, 20) : S1 + (a('protect') >= 1.2 ? S2 : typed(S2, a('s2'), (S2.length) / (at('protect') + 1.2 - at('s2'))));
   const sy = 700, sw = 1300, sx = 210;   // run 009f: narrower, so the handle inset sits beside it
   const tickHi = [0, 1, 2].map((i) => pulse(a('ticks') - i * 0.5, 0.9));
@@ -44,7 +48,7 @@ export default function Beat06(s: any) {
   const ROWS: any[] = [['buffer', 'the telomere: the repeated DNA at the tip', hBuf, 'lbuf'], ['track', 'the nearby genes', hTrack, 'ltrack'], ['the buffer takes the loss first', 'the track (the genes) stays intact', Math.max(hLoss, lit('lintact', null)), 'lloss']];
   return (
     <g>
-      {TE && <g>
+      {TE && teIn > 0 && <g opacity={teIn < 1 ? teIn : undefined}>
         <rect data-role="decor" x={120} y={330} width={1700} height={330} rx={16} fill="none" stroke={T5.ring} strokeWidth={4} strokeDasharray="14 10" />
         <Txt x={970} y={362} size={24} weight={800} fill={T5.ringHalo} anchor="middle">thought experiment — not a real chromosome</Txt>
         <TelomereEndModel {...TP} end={end} telo={telo} grow={grow} stop={stop} swap={swap} />
@@ -84,8 +88,8 @@ export default function Beat06(s: any) {
           <Txt x={1560} y={792} size={20} weight={700} fill={T5.ringHalo}>track</Txt>
           <Txt x={1812} y={684} size={20} weight={700} fill={T5.ringHalo} anchor="end">buffer</Txt>
         </g>}
-        <Txt x={1540} y={660} size={20} weight={600} fill={C.muted} italic opacity={hsmall}>the handle is not</Txt>
-        <Txt x={1540} y={684} size={20} weight={600} fill={C.muted} italic opacity={hsmall}>the exam answer</Txt>
+        <Txt x={1540} y={660} size={20} weight={600} fill={C.muted} italic opacity={hnote}>the handle is not</Txt>
+        <Txt x={1540} y={684} size={20} weight={600} fill={C.muted} italic opacity={hnote}>the exam answer</Txt>
       </g>}
       {cardO > 0 && <g opacity={cardO < 1 ? cardO : undefined}>
         <rect data-role="decor" x={210} y={660} width={1300} height={196} rx={14} fill="#FFFFFF" stroke={T5.ringHalo} strokeWidth={2} />

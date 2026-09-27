@@ -46,7 +46,7 @@
   "8_boundaries": {
     "master": "/home/user/content-engine/work/5.1.4/5.1.4-telomeres.mp4",
     "timeline": "/home/user/content-engine/work/5.1.4/timeline.json",
-    "master_bytes": 13651677,
+    "master_bytes": 13627139,
     "fps": 30.0,
     "frame_count": 7772,
     "boundaries_tested": 7,
@@ -85,14 +85,14 @@
   "unchangedOver15s": [],
   "valenceAudit": "not applicable: no covalent chemistry in Topic 5 (copying drawn as schematic growth; no bond edits)",
   "labelSize": {
-    "rule": "no visible text < 17 px in the delivered 1920x1080 frame; no two visible text boxes overlap",
+    "rule": "EVERY frame: no visible (opacity > 0.02) text < 17 px in the delivered 1920x1080 frame; no two visible text boxes overlap",
     "brandingScale": 0.8802,
     "minSourcePx": 19.31,
-    "framesChecked": 740,
-    "smallestEffectivePx": 17.6,
+    "framesChecked": 7772,
+    "smallestEffectivePx": 17.01,
     "failures": 0,
     "overlapFailures": 0
   },
   "note_2": "step 2 checks the MASTER; the delivered (branded) file is checked by verify_delivered.py (qa/delivered-verification.json)",
-  "sha256": "ddf899b92c222575256cc637f8702c7450f9fb41e4a51cea52811267246b3b8f"
+  "sha256": "c5d778314ea21008d83e7a2432a7e177be6fd104d330d075b91b34db1498c4f4"
 }
