@@ -11,7 +11,7 @@ EXAM CONTRAST), 141 cues.
 | Render, 4 beats in parallel (17,201 frames) | 11:05:58–11:21:32 |
 | finish / verify / text-only audits + encoded sheets | 11:22:53 / 11:28 / 11:28–11:37 |
 | Bookends / branding | 11:49–11:50 / 11:52–11:59 |
-| Bunny upload / status 4 | 12:07:59–12:08:03 / STATUS4 |
+| Bunny upload / status 4 | 12:07:59–12:08:03 / 12:11:10 (≈3 min) |
 
 ## ElevenLabs (counter is ACCOUNT-WIDE: parallel sessions move it)
 before 305,014 / after 309,179 / after the retake 309,506 of 363,000.
@@ -41,7 +41,7 @@ fill in order; no fix needed.
 
 ## Bunny
 guid `93f5b0ad-6962-439e-bced-35ed1897fe0b`, title "REVIEW 4.1.3 What each part of the membrane does", no collection;
-uploaded 12:08:03Z; status 4 at STATUS4 (STATUSDELTA after upload; length 584 s).
+uploaded 12:08:03Z; status 4 at 12:11:10Z (3 min 7 s after upload; length 584 s; 240p–1080p).
 
 ## Pronunciation (`qa/audio-review.md`)
 No request-only normalisation. Retake: B6 "and whether energy is used" (take 1 heard "where the energy" by both recognisers);
