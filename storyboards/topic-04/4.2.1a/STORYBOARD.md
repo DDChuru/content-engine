@@ -265,16 +265,16 @@ Beat windows in the headings are provisional and follow the per-beat ledger (wor
 
 **Visual action:**
 1. **From the first frame**, the membrane scene holds dimmed at left: a glucose token paused at the top of the tail band (turn-back position) and the carrier in its rest shape. **Entry cue: *Here is a mistake the June 2023 examiners reported*.** The COMMON MISTAKE panel enters (header badge **COMMON MISTAKE**, terracotta border, desaturated surround), basis line in small type: *basis: examiner-report diagnosis, June 2023 report p.12, Paper 21 Q3(a)*. It **stays on until the completed correct frame**.
-2. At *Our framing*, the header lands: **Explain why glucose needs a transport protein to cross a cell surface membrane.** Small type: *our framing of S23/21 Q3(a); constructed answer, not a transcript. UNVERIFIED — verbatim QP wording.*
+2. At *Our framing*, the header lands: **Explain why glucose needs a transport protein to cross a cell surface membrane.** Small type: *our framing of S23/21 Q3(a), QP p.8; constructed answer, not a transcript.*
 3. At *Read this answer*, the written wrong answer appears in handwriting style: **✗ Glucose molecules are too large to pass through the phospholipid bilayer.**
 4. **Silent read, 4 s.** Panel and card held.
 5. At *Look at the words too large here*, the words *too large* on the card are underlined in terracotta.
 6. At *bigger than an oxygen molecule*, side-note: an O₂ token and a glucose token side by side at their schematic sizes, tag *sizes differ; size alone is not the credited reason here*.
-7. At *The June 2023 report on this question*, citation tab, exact: **R23 p.12, June 2023 P21 Q3(a): “Most incorrect answers stated that glucose was too large.”** (small type *PDF-CHECKED (plan check)*); at *most incorrect answers*, the words *incorrect answers* in the tab are underlined, tag *of the incorrect answers; not of all candidates*.
-8. At *a different property*, a second tab in the normal accent, no quotation marks: *S23/21 Q3(a), 1 mark, MS p.11: credited polar / water-soluble / hydrophilic and the hydrophobic bilayer core (our paraphrase of the plan check's description)*; at *the core of the bilayer is hydrophobic*, in the dimmed scene the glucose token brightens with tag *polar* and the tail band brightens with tag *hydrophobic core*.
+7. At *The June 2023 report on this question*, citation tab, exact: **R23 p.12, June 2023 P21 Q3(a): “Most incorrect answers stated that glucose was too large.”**; at *most incorrect answers*, the words *incorrect answers* in the tab are underlined, tag *of the incorrect answers; not of all candidates*.
+8. At *a different property*, a second tab in the normal accent, no quotation marks: *S23/21 Q3(a), 1 mark, MS p.11: credited polar / water-soluble / hydrophilic and the hydrophobic bilayer core (our paraphrase)*; at *the core of the bilayer is hydrophobic*, in the dimmed scene the glucose token brightens with tag *polar* and the tail band brightens with tag *hydrophobic core*.
 9. At *nothing for size alone*, a line joins the second tab: *ignored at that point: size-only; active transport; facilitated diffusion (paraphrase)*; the terracotta underline on *too large* pulses.
 10. At *So state the property and the barrier first*, side-note beside the card: *property → barrier → protein*.
-11. At *In place*, the words *molecules are too large to pass through the phospholipid bilayer* are struck and rewritten in place; at *it needs a transport protein, such as a carrier*, the last words land and the card reads **✓ Glucose is polar (hydrophilic), so it does not cross the hydrophobic core of the phospholipid bilayer readily; it needs a transport protein, such as a carrier protein.**; **the marker clears on this completed frame**. **Exit cue: end of *such as a carrier*.** The treatment lifts; the corrected card holds; the dimmed scene brightens and the carrier runs one `carrier-bind` → `carrier-reset` cycle.
+11. At *In place*, the words *molecules are too large to pass through the phospholipid bilayer* are struck and rewritten in place; at *it needs a transport protein, such as a carrier*, the last words land and the card reads **✓ Glucose is polar (hydrophilic), so it does not cross the hydrophobic core of the phospholipid bilayer readily; it needs a transport protein, such as a carrier protein.**; **the marker clears on this completed frame**. **Exit cue: end of *such as a carrier*.** The treatment lifts; the corrected card holds; the dimmed scene brightens and the carrier runs one `carrier-bind` → `carrier-reset` cycle in a small carrier callout, separate from the counted field (tag *mechanism replay; not counted*); the field keeps its last completed demonstration (13 · 7, counter 3 · 1).
 
 **On-screen text:** the panel and basis line; the framed header and its caption; the card; the ER tab; the MS paraphrase tab and its ignored line; *property → barrier → protein*; the corrected card.
 
@@ -285,7 +285,7 @@ Beat windows in the headings are provisional and follow the per-beat ledger (wor
 > Now water, which has its own measure. Water potential describes water's tendency to move. Pure water at atmospheric pressure is the reference, with a water potential of zero kilopascals. At the same temperature and pressure, adding solute lowers the water potential, so the solutions here have negative values, and a less negative value is higher. Watch: a little solute on the left, more on the right. So, at the start, the left side has the higher water potential, less negative, and the right side the lower, more negative.
 
 **Visual action:**
-1. **From the first frame**, `WaterPotentialModel` in state `pure` fills the centre: two compartments of pure water separated by the vertical membrane strip labelled *partially permeable membrane (rotated: compartments left and right; not a cell)*, caption *schematic; not to scale*, the vertical scale at right with markers L and R, tag *same temperature and pressure both sides*; the Beat 9 membrane scene small and dimmed at upper left. At *which has its own measure*, the scale title **water potential** lands.
+1. **From the first frame**, `WaterPotentialModel` in state `pure` fills the centre: two compartments of pure water separated by the vertical membrane strip labelled *partially permeable membrane (rotated: compartments left and right; not a cell)*, caption *schematic; not to scale*, the vertical scale at right with markers L and R, tag *same temperature and pressure both sides*, caption **conceptual comparison at fixed volume, temperature and pressure; not an osmometer; volume changes not modelled** and the conspicuous model caption *in this model the gaps let only water through; a generic model barrier*; the Beat 9 membrane scene small and dimmed at upper left. At *which has its own measure*, the scale title **water potential** lands.
 2. At *water's tendency to move*, caption under the title: *water potential: water's tendency to move*.
 3. At *Pure water at atmospheric pressure*, both compartments are labelled *pure water*; markers L and R sit together at the top of the scale.
 4. At *zero kilopascals*, the top tick is labelled **0 kPa — pure water at atmospheric pressure (reference)**.
@@ -296,7 +296,7 @@ Beat windows in the headings are provisional and follow the per-beat ledger (wor
 9. At *more on the right*, the dropper above the right compartment releases 12 sucrose tokens; marker R slides further down.
 10. At *at the start, the left side*, the left label lands: *initially: higher water potential (less negative)*; at *the right side the lower*, the right label lands: *initially: lower water potential (more negative)*.
 
-**On-screen text:** *water potential: water's tendency to move*; *0 kPa — pure water at atmospheric pressure (reference)*; *more negative ↓*; *less negative = higher*; the two *initially:* labels; model labels and captions.
+**On-screen text:** *water potential: water's tendency to move*; *0 kPa — pure water at atmospheric pressure (reference)*; *more negative ↓*; *less negative = higher*; the two *initially:* labels; *conceptual comparison at fixed volume, temperature and pressure; not an osmometer; volume changes not modelled*; *in this model the gaps let only water through; a generic model barrier*; model labels and captions.
 
 ---
 
@@ -306,18 +306,18 @@ Beat windows in the headings are provisional and follow the per-beat ledger (wor
 
 **Visual action:**
 1. **From the first frame**, `WaterPotentialModel` in state `initial` holds (left 4 sucrose, right 12; markers apart; *initially:* labels). At *in both directions all the time*, `net-osmosis`: water tokens cross the membrane gaps both ways (motion); the counter appears, *left → right · right → left*, subtitle *crossings in each 5 s window; illustrative counts*.
-2. At *in many cells, channel proteins too*, a small inset opens: a bilayer section with one water token passing between phospholipids and one through a channel protein, tag *water channels (aquaporins) in many cells: named, not taught*.
+2. At *in many cells, channel proteins too*, a small inset opens: a continuous bilayer section with one water token passing between phospholipids (no tear or gap drawn) and one through an actual teal water-channel protein spanning the bilayer (never a naked permanent hole through exposed tails), tag *water channels (aquaporins) in many cells: named, not taught*; the main model's caption *in this model the gaps let only water through; a generic model barrier* stays conspicuous.
 3. At *The sucrose here does not pass*, a sucrose token approaches a gap and turns back, tag *in this model the membrane lets water through, not sucrose*.
 4. At *More water molecules cross from the higher*, the window closes at **15 · 9**.
 5. At *a net movement to the lower side*, the net arrow grows left → right, labelled **net movement of water by osmosis**.
 6. At *That is osmosis*, the definition builds under the model clause by clause: **Osmosis: net movement of water molecules · from a region of higher water potential · to a region of lower water potential · through a partially permeable membrane.**
 7. At *through a partially permeable membrane*, the membrane strip is ringed as the last clause lands.
-8. At *add solute to the left*, `equalise`: the dropper above the left compartment releases 8 more sucrose tokens (left now 12); marker L slides down.
+8. At *add solute to the left*, `equalise`: caption **we change the left solution**; the dropper above the left compartment releases 8 more sucrose tokens (left now 12); marker L slides down (equality by intervention; the two solutions are labelled comparison states).
 9. At *the water potentials are equal*, marker L meets marker R, tag *equal water potentials*; the *initially:* labels dim to small history text.
 10. At *The net arrow fades*, the next window closes at **12 · 12** and the net arrow fades over 1 s.
 11. At *water still crosses both ways*, water tokens keep crossing in both directions (motion never freezes); tag *no net movement; crossings continue*.
 
-**On-screen text:** counter; aquaporin inset tag; *in this model the membrane lets water through, not sucrose*; *net movement of water by osmosis*; the osmosis definition; *equal water potentials*; *no net movement; crossings continue*.
+**On-screen text:** counter; the fixed-volume caption (as Beat 11); the generic-model-barrier caption; aquaporin inset tag; *in this model the membrane lets water through, not sucrose*; *we change the left solution*; *net movement of water by osmosis*; the osmosis definition; *equal water potentials*; *no net movement; crossings continue*.
 
 ---
 
