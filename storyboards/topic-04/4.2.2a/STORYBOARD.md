@@ -233,7 +233,7 @@ Small type: *syllabus 4.2.2, "investigate", p.21; non-living materials (plant ti
 
 ---
 
-### BEAT 8 · The osmometer: set up, and a model of what happens · 5:15–6:07
+### BEAT 8 · The osmometer: set up, and a model of what happens · 5:15–6:04
 **Narration:**
 > The same tubing can show osmosis. Fill a knotted bag with one mole per cubic decimetre sucrose solution, push a capillary tube into its open end, and wind thread tightly round the tubing and capillary. Check there is no trapped air and no drip at the tie. Clamp it upright, a millimetre ruler beside the capillary, and lower the bag into a beaker of distilled water. From here on, what you see is a model of what happens, not measured data. The meniscus can shift as the bag settles, so a mark made beforehand is not a zero-time reading.
 
@@ -250,7 +250,7 @@ Small type: *syllabus 4.2.2, "investigate", p.21; non-living materials (plant ti
 
 ---
 
-### BEAT 9 · The rise, explained in water potential, and its limits · 6:08–7:25
+### BEAT 9 · The rise, explained in water potential, and its limits · 6:04–7:23
 **Narration:**
 > In a real run, record the meniscus at stated elapsed times, using the same fixed ruler. Choose the observation interval from a trial of the actual apparatus. Compare with a matched bag containing distilled water, while recognising that this control cannot reproduce the stretching caused by osmotic inflow. Distilled water is close to pure water, the reference at zero; the sucrose solution's water potential is lower, more negative. So there is a net movement of water molecules into the bag, from higher to lower water potential, through the partially permeable tubing: osmosis. With a uniform bore, a rise in height means more liquid in the capillary. It does not measure all the water entering, because the bag can stretch and sucrose can leave. Sucrose passes the pores too, just more slowly, so a transient rise is possible; the later behaviour depends on sucrose leakage, bag mechanics and the rising liquid column. It is not a permanent equilibrium.
 
@@ -267,7 +267,7 @@ Small type: *syllabus 4.2.2, "investigate", p.21; non-living materials (plant ti
 **On-screen text:** *in a real run: read at stated elapsed times; start timing at first contact*; *same fixed ruler for every reading*; *in a real run: choose the observation interval from a trial of the actual apparatus*; unnumbered axis labels; **SCHEMATIC: model of what happens — not measured data**; *control: distilled water in the bag*; *the control cannot reproduce osmotic stretching*; water-potential labels; *net movement of water by osmosis*; *uniform bore: height change tracks capillary-column volume change*; *sucrose also passes, more slowly*; *a transient rise is possible*; *one possible qualitative course; not data; no times*.
 ---
 
-### BEAT 10 · Agar: a well, a dye and a clock · 7:25–8:14
+### BEAT 10 · Agar: a well, a dye and a clock · 7:23–8:12
 **Narration:**
 > Now diffusion with no membrane at all. Agar is a jelly that is mostly water held in a fine mesh of fibres: dissolved molecules diffuse through that water, while the gel largely stops currents stirring it. Pour plain agar five millimetres deep in a Petri dish, let it set, and stand it on white card over a ruler. Push an eight-millimetre cork borer straight down, lift out the plug to leave a well, and let three drops of methylene blue fall into it from a dropper held above. The stopwatch starts as the first drop reaches the well.
 
@@ -284,7 +284,7 @@ Small type: *syllabus 4.2.2, "investigate", p.21; non-living materials (plant ti
 
 ---
 
-### BEAT 11 · Measuring the blue zone, and what it cannot tell you · 8:14–9:15
+### BEAT 11 · Measuring the blue zone, and what it cannot tell you · 8:12–9:13
 **Narration:**
 > Keep the dish level and lidded, and do not move it; the time-lapse squeezes a day into seconds. Dye molecules move randomly, so more spread out of the crowded well than drift back, and the blue zone widens. Define its edge once: the outermost point where blue is still visible against the white card, judged the same way each time. Measure two diameters at right angles and take the mean: twelve millimetres at half an hour, twenty at four hours, thirty-six and a half at twenty-four, widening ever more slowly. Colour, dye binding to the agar and what your eye can detect all affect that edge, so the diameter is an operational colour-zone measure: no diffusion coefficient or concentration comes from it.
 
@@ -300,7 +300,7 @@ Small type: *syllabus 4.2.2, "investigate", p.21; non-living materials (plant ti
 
 ---
 
-### BEAT 12 · What I told you, on the three rigs · 9:15–10:04
+### BEAT 12 · What I told you, on the three rigs · 9:13–10:01
 **Narration:**
 > So here it is, on the three rigs. The bag: blanks tested first, samples at recorded times, and glucose, not starch, found outside, because glucose fits Visking's pores and starch does not. The osmometer, shown as a model: water entering by osmosis, from higher to lower water potential; a transient rise is possible; the later behaviour depends on sucrose leakage, bag mechanics and the rising liquid column. The agar: a blue zone widening as the dye diffuses through the water in the gel, measured as a defined colour-zone diameter. And every clock started at first contact.
 
@@ -314,7 +314,7 @@ Small type: *syllabus 4.2.2, "investigate", p.21; non-living materials (plant ti
 
 ---
 
-### BEAT 13 · How it is asked, the reject card, and the invisible molecules · 10:04–11:05
+### BEAT 13 · How it is asked, the reject card, and the invisible molecules · 10:01–11:02
 **Narration:**
 > How this reaches you. A separate June twenty twenty-one Paper 21 question asks you to explain Visking meniscus changes using net water movement down a water-potential gradient. That question specifies tubing impermeable to sucrose; keep its stated conditions separate from our demonstration. Agar diffusion did appear. A June 2021 paper had agar cubes A, B and C containing universal indicator, blue at the start and red in acid, and asked the order in which they changed colour completely. The credited order: A, then B, then C. Why size matters is the surface-area lesson's job. The reject card: Visking models partial permeability through pores, not a phospholipid bilayer with transport proteins. And those molecules too small to see? You watched what they did.
 
@@ -484,15 +484,15 @@ Counted by the validator over the blockquoted narration; seconds = words ÷ 120 
 | 5 | The blank, matched tubes, and first contact | 85 | 42.5 |
 | 6 | Samples at recorded times, and reading them | 91 | 45.5 |
 | 7 | What crossed, and why: pores, not a membrane | 128 | 64.0 |
-| 8 | The osmometer: set up, then the first reading after immersion | 107 | 53.5 |
-| 9 | The rise, explained in water potential, and its limits | 153 | 76.5 |
+| 8 | The osmometer: set up, and a model of what happens | 99 | 49.5 |
+| 9 | The rise, explained in water potential, and its limits | 157 | 78.5 |
 | 10 | Agar: a well, a dye and a clock | 98 | 49.0 |
 | 11 | Measuring the blue zone, and what it cannot tell you | 122 | 61.0 |
-| 12 | What I told you, on the three rigs | 98 | 49.0 |
+| 12 | What I told you, on the three rigs | 96 | 48.0 |
 | 13 | How it is asked, the reject card, and the invisible molecules | 122 | 61.0 |
-| **Total** | 13 beats (13 teaching + 0 error) | **1329** | **664.5** (11:04.5) |
+| **Total** | 13 beats (13 teaching + 0 error) | **1323** | **661.5** (11:01.5) |
 
-**Length, honestly:** **1,329 words = 11:04.5** at 120 words per minute, **1:34.5 over** the 9:30 (1,140-word) budget, all of it teaching (there are no error beats). The first draft stood at 1,290 words (10:45). The round-one check's runtime ruling took two cuts: Beat 1's single-glucose-molecule sentence (−9 words; magnifier moved to *far too small to see*) and Beat 13's beyond-the-mark-scheme sentence with its dashed panel (−25 words). Together these bring it to 1,256 words (10:28) before the rewrites. The mandated replacement wording then adds 73 words net: Beat 6 −2, Beat 7 +19, Beat 8 −1, Beat 9 +22, Beat 12 +11, Beat 13 +24 (Visking opening and reject line, less the 25-word cut). Every added word is the check's exact wording for the sampling contract, the illustrative-colour limit, the actual-reading procedure, the control's limitation, the capillary-volume limit, the conditional transient rise, the supplementary Visking question and the model-limits reject line. The check ruled against cutting the other proposed items: the Beat 9 control sentence (replaced, not cut), Beat 12's "And every clock started at first contact." (KEEP) and Beat 3's "bought dry and flat" (KEEP). **No further cut is proposed**, because any remaining sentence carries a required element (a blank, a first-contact or first-reading rule, a limit, a REAL-WORLD fit statement or the glucose/cell-membrane contrast). I recommend accepting the 1:34.5 overrun for three complete investigations and their limits, as the check accepted the practical time. Cue times for Beats 8–9 are to be rescheduled against the recorded osmometer run once it exists.
+**Length, honestly:** **1,323 words = 11:01.5** at 120 words per minute, **1:31.5 over** the 9:30 (1,140-word) budget (11:03.5 if the two-second final hold is scheduled outside the effective estimate), all of it teaching (there are no error beats). The first draft stood at 1,290 words (10:45). The round-one check's runtime ruling took two cuts: Beat 1's single-glucose-molecule sentence (−9 words; magnifier moved to *far too small to see*) and Beat 13's beyond-the-mark-scheme sentence with its dashed panel (−25 words). Together these bring it to 1,256 words (10:28) before the rewrites. The mandated replacement wording then adds 73 words net: Beat 6 −2, Beat 7 +19, Beat 8 −1, Beat 9 +22, Beat 12 +11, Beat 13 +24 (Visking opening and reject line, less the 25-word cut). Every added word is the check's exact wording for the sampling contract, the illustrative-colour limit, the actual-reading procedure, the control's limitation, the capillary-volume limit, the conditional transient rise, the supplementary Visking question and the model-limits reject line. The check ruled against cutting the other proposed items: the Beat 9 control sentence (replaced, not cut), Beat 12's "And every clock started at first contact." (KEEP) and Beat 3's "bought dry and flat" (KEEP). **No further cut is proposed**, because any remaining sentence carries a required element (a blank, a first-contact or first-reading rule, a limit, a REAL-WORLD fit statement or the glucose/cell-membrane contrast). After round one the script stood at 1,329 words (11:04.5). The round-two changes (conductor ruling on the osmometer) take it to 1,323 words net −6: Beat 8 −8 (the stopwatch clause and the first-reading sentence replaced by "From here on, what you see is a model of what happens, not measured data. The meniscus can shift as the bag settles, so a mark made beforehand is not a zero-time reading."), Beat 9 +4 ("In a real run,"), Beat 12 −2 ("The osmometer, shown as a model:"). I recommend accepting the 1:31.5 overrun for three complete investigations and their limits, as both checks accepted the practical time; narration is not accelerated. Beats 8–9 cues follow the narration only, since the osmometer schematic carries no timed observation.
 
 ## What I left out, and who owns it
 
@@ -538,7 +538,7 @@ Counted by the validator over the blockquoted narration; seconds = words ÷ 120 
 
 ## Plan interpretations
 
-1. **Thirteen beats for three investigations.** The plan's 13 teaching beats are used as: hook/context, objectives, then four Visking-diffusion beats (material and tests; filling and content tests; blanks and first contact; sampling and reading) plus one interpretation beat, two osmometer beats (set-up and first reading; readings, explanation and limits), two agar beats (set-up; measurement and limits), recap and exam close. The osmometer's limits share a beat with its explanation to keep within 13.
+1. **Thirteen beats for three investigations.** The plan's 13 teaching beats are used as: hook/context, objectives, then four Visking-diffusion beats (material and tests; filling and content tests; blanks and first contact; sampling and reading) plus one interpretation beat, two osmometer beats (set-up and the labelled schematic; readings, explanation and limits), two agar beats (set-up; measurement and limits), recap and exam close. The osmometer's limits share a beat with its explanation to keep within 13.
 2. **"Separate matched vessels per sampling time"** (MF5) is implemented as three matched set-ups, each with its own bag and its own stopwatch started at its own first contact, each tube sampled once. Sampling times (3, 10, 20 min), bath volume (33 cm³, nominal 30 cm³ after a 3.0 cm³ blank aliquot), 3.0 cm³ sample aliquots and 5 min heating are our choices, stated in Dataset 1 following the round-one check's sampling contract; the ideal submersion estimate is worked, but actual bag fit is to be confirmed on the filled, sealed bag.
 3. **Initial positive tests** (MF5) are shown on the mixture before any bag meets water; the plan's starch-alone Benedict's check is shown as the interference check.
 4. **Osmometer control bag of distilled water** is an addition not named in the plan: a reference for rig drift, stated with its limit (it cannot reproduce the stretching caused by osmotic inflow). It costs one sentence.
