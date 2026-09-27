@@ -43,7 +43,7 @@ export default function Beat04(s: any) {
       })}
       {ring3.map((r, i) => <InkRing key={i} cx={r.x} cy={r.y} rx={34} ry={46} p={fe(a('tailsout') - i * 0.2, 0.5)} opacity={1 - fe(a('tailsout') - 2.2, 0.5)} color={C.primary} />)}
       <Pill x={90} y={250} text="water–water hydrogen bonds" o={fi(a('wwhb'), 0.4) * (1 - fe(a('sides'), 0.5))} fill={T4.waterEdge} />
-      <Pill x={90} y={296} text="tails: no hydrogen bonds with water" o={fi(a('tailsout'), 0.4) * (1 - fe(a('sides'), 0.5))} fill={C.primary} />
+      <Pill x={90} y={906} text="tails: no hydrogen bonds with water" o={fi(a('tailsout'), 0.4) * (1 - fe(a('sides'), 0.5))} fill={C.primary} />
       {/* after assembly */}
       <Bracket x={Lf.x1 + 36} y0={cy - 44} y1={cy + 44} side={-1} o={fi(a('hint'), 0.4)} color={C.primary} />
       <Lbl x={Lf.x1 + 60} y={cy + 8} text="hydrophobic interactions" o={fi(a('hint'), 0.4)} size={24} fill={C.primary} />
@@ -51,7 +51,7 @@ export default function Beat04(s: any) {
       <Lbl x={90} y={cy + FACE * u + 50} text="cytoplasm (watery)" o={fi(a('sides'), 0.5)} size={24} fill={C.teal} />
       <Bracket x={Lf.x0 - 40} y0={Lf.outerHead - 30} y1={cy - 6} side={1} o={fi(a('two'), 0.4)} />
       <Bracket x={Lf.x0 - 40} y0={cy + 6} y1={Lf.innerHead + 30} side={1} o={fi(a('two') - 0.2, 0.4)} />
-      <Pill x={Lf.x0 - 60} y={cy + 8} text="12 per layer (drawn section)" o={fi(a('two'), 0.4) * (1 - fi(a('core'), 0.4))} anchor="end" />
+      <Pill x={Lf.x0 - 60} y={cy + 8} text="12 per layer (drawn section)" o={fi(a('two'), 0.4) * (1 - fi(a('core') + 0.4, 0.4))} anchor="end" />
       <Lbl x={Lf.x0 - 60} y={cy + 8} text="hydrophobic core" o={fi(a('core'), 0.5)} size={24} anchor="end" fill={C.muted} />
       <Lbl x={Lf.x1 + 60} y={Lf.outerHead - 70} text="phospholipid bilayer" o={fi(a('bilayer'), 0.5)} size={30} />
       <Cite x={Lf.x1 + 60} y={Lf.outerHead - 40} text={SCHEM} opacity={fi(a('bilayer'), 0.5)} />

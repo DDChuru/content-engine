@@ -66,7 +66,7 @@ export function CholesterolQualitative({x, y, w = 560, h = 420, t = 0, hot = 0, 
   const topAmp = [0.35 + 0.95 * H, 0.35 + 0.95 * H];
   // bottom row: lower temperature: without cholesterol motion nearly stops and tails pack; with it, slow motion, spaced
   const botAmp = [0.35 * (1 - 0.9 * Cc), 0.35 * (1 - 0.35 * Cc)];
-  const lab = (tx: number, ty: number, s: string, size = 17, fill = '#253247', anchor = 'middle') => <text x={tx} y={ty} fontSize={size} fontWeight={700} fill={fill} textAnchor={anchor} fontFamily="'Stem4Life Source Sans 3', 'DejaVu Sans', sans-serif">{s}</text>;
+  const lab = (tx: number, ty: number, s: string, size = 21, fill = '#253247', anchor = 'middle') => <text x={tx} y={ty} fontSize={size} fontWeight={700} fill={fill} textAnchor={anchor} fontFamily="'Stem4Life Source Sans 3', 'DejaVu Sans', sans-serif">{s}</text>;
   return (
     <g opacity={opacity < 1 ? opacity : undefined}>
       <rect data-role="decor" x={x} y={y} width={w} height={h} rx={14} fill="#FFFFFF" stroke="#D6CEBD" strokeWidth={2} />
@@ -76,15 +76,15 @@ export function CholesterolQualitative({x, y, w = 560, h = 420, t = 0, hot = 0, 
       {[0, 1].map((r) => (
         <g key={r}>
           <Thermo x={x + 30} y={rowY[r] - 48} level={r === 0 ? 1 : 0} />
-          {lab(x + 52, rowY[r] - 12, r === 0 ? 'higher' : 'lower', 16, '#6F6A60', 'start')}
-          {lab(x + 52, rowY[r] + 8, 'temperature', 16, '#6F6A60', 'start')}
+          {lab(x + 50, rowY[r] - 12, r === 0 ? 'higher' : 'lower', 20, '#6F6A60', 'start')}
+          {lab(x + 50, rowY[r] + 12, 'temperature', 20, '#6F6A60', 'start')}
           <rect data-role="decor" x={x + L0} y={rowY[r] - rowH * 0.46} width={sw} height={rowH * 0.92} rx={8} fill={T4.solution} />
           <rect data-role="decor" x={x + L0 + 12 + sw} y={rowY[r] - rowH * 0.46} width={sw} height={rowH * 0.92} rx={8} fill={T4.solution} />
           <Strip x={x + L0} y={rowY[r]} w={sw} u={u} t={t} chol={false} amp={r === 0 ? topAmp[0] : botAmp[0]} pack={r === 1 ? Cc : 0} seed={r * 40} />
           <Strip x={x + L0 + 12 + sw} y={rowY[r]} w={sw} u={u} t={t} chol amp={r === 0 ? topAmp[1] : botAmp[1]} pack={0} seed={r * 40 + 20} />
         </g>
       ))}
-      <text x={x + w / 2} y={y + h - 10} fontSize={16} fontWeight={700} fontStyle="italic" fill="#B64A30" textAnchor="middle" fontFamily="'Stem4Life Source Sans 3', 'DejaVu Sans', sans-serif">qualitative schematic; not measured data</text>
+      <text x={x + w / 2} y={y + h - 10} fontSize={20} fontWeight={700} fontStyle="italic" fill="#B64A30" textAnchor="middle" fontFamily="'Stem4Life Source Sans 3', 'DejaVu Sans', sans-serif">qualitative schematic; not measured data</text>
     </g>
   );
 }

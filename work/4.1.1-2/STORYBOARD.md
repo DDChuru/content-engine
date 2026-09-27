@@ -162,11 +162,12 @@ Beat windows in the headings are provisional and follow the per-beat word ledger
 
 ### BEAT 5 · Heads to the water, tails to each other · 2:30–3:19
 **Narration:**
-> Here's a way to hold on to it: heads to the water, tails to each other. That's a memory aid, not an exam answer. Written properly: phospholipids form a bilayer because their hydrophilic heads interact with water on both sides, while their hydrophobic tails are excluded from water and held together by hydrophobic interactions. And here's why that matters. A cell is a watery compartment in watery surroundings, like our red blood cell in plasma, and the bilayer keeps a water-based inside separate from a water-based outside. The proteins set into it let the cell control what crosses.
+> Here's a way to hold on to it: heads to the water, tails to each other. Heads to the water: the heads face the water on both sides. Tails to each other: the tails face each other in the core. That's a memory aid, not an exam answer. Written properly: phospholipids form a bilayer because their hydrophilic heads interact with water on both sides, while their hydrophobic tails are excluded from water and held together by hydrophobic interactions. And here's why that matters. A cell is a watery compartment in watery surroundings, like our red blood cell in plasma, and the bilayer keeps a water-based inside separate from a water-based outside. The proteins set into it let the cell control what crosses.
 
 **Visual action:**
-1. **From the first frame**, the bilayer from Beat 4 holds at centre, jittering sideways, with its region labels. At *heads to the water, tails to each other*, the phrase appears in small italics above the section, tag *handle*.
-2. At *a memory aid, not an exam answer*, the handle phrase is boxed with the small tag *memory aid only*.
+1. **From the first frame**, the bilayer from Beat 4 holds at centre, jittering sideways, with its region labels. At *heads to the water, tails to each other*, the phrase appears above the section, tag *handle*.
+1a. *(008f memory-hook revision, RULE-MEMORY-HOOKS)* At *Heads to the water: the heads*, the words **heads** and **water** in the phrase light (amber / blue) together with both rows of heads (amber wash) and the water above and below (blue wash); a connector links the lit words to the heads. At *Tails to each other: the tails*, the words **tails** and **each other** light (grey) together with the tails meeting in the core (core wash); a second connector links them. Both links stay lit together: **2 s hold** on the completed mapping (digital silence, `insert_holds.py`) before *That's a memory aid*.
+2. At *a memory aid, not an exam answer*, the handle phrase is boxed with the small tag *memory aid only*; the mapping stays visible.
 3. At *Written properly*, the sentence surface slides up beneath the bilayer.
 4. At *their hydrophilic heads interact with water on both sides*, clause 1 builds: **Phospholipids form a bilayer because the hydrophilic heads interact with water on both sides**; both rows of heads pulse.
 5. At *held together by hydrophobic interactions*, clause 2 builds: **while the hydrophobic tails are excluded from water and held together by hydrophobic interactions**; the core pulses. The connectives **because** and **while** are highlighted.
@@ -560,3 +561,10 @@ Check: `r1/4.1.1-2/CHECK.md`, verdict CLEARED WITH MINOR EDITS (reviewed SHA-256
 | Runtime ruling (2 s hold, no speed-up) | applied | Beat 13 action 9: "Final frame held 2 s (scheduled after the narration ends, 9:14.5–9:16.5; not included in the words ÷ 120 runtime)". Word table has a separate hold row; "Length, honestly" gives 1,109 words = 9:14.5 narration + 2 s = 9:16.5 on screen. The +3.5 s over the accepted 9:11 comes only from M3's mandated wording. Beat 12/13 windows now 7:32–8:21 and 8:21–9:15. Cut list kept as optional (now 1,085 words = 9:02.5). |
 
 New validator TOTAL: `TOTAL words 1109  cues 125  runtime at 120 wpm 9:14.5  beats 13  failing beats 0`
+
+
+## 008f REVISION (memory hook, RULE-MEMORY-HOOKS, 27 Sep 2026)
+Narration changed ONLY in Beat 5's hook: added *"Heads to the water: the heads face the water on both sides. Tails to
+each other: the tails face each other in the core."* after the phrase, then a 2 s silent hold on the completed
+mapping before *"That's a memory aid, not an exam answer."* Every other sentence of every beat is unchanged. Visual
+action 1a added (paired highlights, completed-map hold). Beat 5 alone was re-voiced.

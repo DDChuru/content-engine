@@ -3,7 +3,7 @@
  * Topic 4 models are the top-level copies from work/t4-shared. */
 import React from 'react';
 import {BRAND as C, BODY, clamp01} from '../shared/src/theme';
-import {Txt, Lines, Card, Cite, textW} from '../shared/src/Type';
+import {Txt, Lines, Card, Cite, textW, MIN_TEXT} from '../shared/src/Type';
 import {FluidMosaicMembrane, FACE} from './FluidMosaicMembrane';
 import {WaterField} from './WaterField';
 import {T4} from './t4-palette';
@@ -12,23 +12,27 @@ export const gt = (s: any) => s.frame / 30;             // global animation cloc
 export const CY = 540, U = 58;                          // membrane stage used by Beats 4–12
 
 /** Text label with an optional straight leader to (lx, ly). Leader is decor. */
-export function Lbl({x, y, text, o = 1, size = 22, weight = 700, fill = C.ink, anchor = 'start', lx, ly, lead = C.muted, italic = false, halo = C.warm}: any) {
+/** `part`: 'leader' draws only the leader, 'label' only the text — so a group of labels can paint EVERY leader
+ * beneath EVERY label (review 4.1.1-2 #4). */
+export function Lbl({x, y, text, o = 1, size: size0 = 22, weight = 700, fill = C.ink, anchor = 'start', lx, ly, lead = C.muted, italic = false, halo = C.warm, part}: any) {
   if (o <= 0) return null;
+  const size = Math.max(MIN_TEXT, size0);
   const w = textW(text, size, weight), x0 = anchor === 'middle' ? x - w / 2 : anchor === 'end' ? x - w : x;
   let d = '';
   if (lx != null) { const ax = lx < x0 ? x0 - 6 : lx > x0 + w ? x0 + w + 6 : lx, ay = ly < y - size ? y - size - 2 : ly > y ? y + 6 : y - size * 0.35; d = `M${ax.toFixed(1)} ${ay.toFixed(1)}L${lx.toFixed(1)} ${ly.toFixed(1)}`; }
   return (
     <g opacity={o < 1 ? o : undefined}>
-      {d && <path data-role="decor" d={d} stroke={lead} strokeWidth={1.8} fill="none" />}
-      {d && <circle data-role="decor" cx={lx} cy={ly} r={3.2} fill={lead} />}
-      {halo && <text x={x} y={y} fontSize={size} fontWeight={weight} fill={halo} stroke={halo} strokeWidth={7} strokeLinejoin="round" textAnchor={anchor} fontFamily={BODY} fontStyle={italic ? 'italic' : undefined}>{text}</text>}
-      <Txt x={x} y={y} size={size} weight={weight} fill={fill} anchor={anchor} italic={italic}>{text}</Txt>
+      {d && part !== 'label' && <path data-role="decor" d={d} stroke={lead} strokeWidth={1.8} fill="none" />}
+      {d && part !== 'label' && <circle data-role="decor" cx={lx} cy={ly} r={3.2} fill={lead} />}
+      {part !== 'leader' && halo && <text x={x} y={y} fontSize={size} fontWeight={weight} fill={halo} stroke={halo} strokeWidth={7} strokeLinejoin="round" textAnchor={anchor} fontFamily={BODY} fontStyle={italic ? 'italic' : undefined}>{text}</text>}
+      {part !== 'leader' && <Txt x={x} y={y} size={size} weight={weight} fill={fill} anchor={anchor} italic={italic}>{text}</Txt>}
     </g>
   );
 }
 /** Small pill tag. */
-export function Pill({x, y, text, o = 1, size = 18, fill = C.ink, bg = C.white, stroke = C.line, anchor = 'start'}: any) {
+export function Pill({x, y, text, o = 1, size: size0 = 20, fill = C.ink, bg = C.white, stroke = C.line, anchor = 'start'}: any) {
   if (o <= 0) return null;
+  const size = Math.max(MIN_TEXT, size0);
   const w = textW(text, size, 700) + size * 1.1, h = size * 1.55, x0 = anchor === 'middle' ? x - w / 2 : anchor === 'end' ? x - w : x;
   return (
     <g data-role="decor" opacity={o < 1 ? o : undefined}>
@@ -118,6 +122,18 @@ export function RegionLabels({cy = CY, u = U, x = 90, o = 1, oOut, oIn, oCore, p
       <Lbl x={x} y={cy - FACE * u - 30} text={plasma ? 'outside the cell (watery): plasma' : 'outside the cell (watery)'} o={oo} size={22} fill={hiOut > 0 ? C.primary : C.teal} />
       <Lbl x={x} y={cy + FACE * u + 46} text="cytoplasm (watery)" o={oi} size={22} fill={hiIn > 0 ? C.primary : C.teal} />
       <Lbl x={x} y={cy + 8} text="hydrophobic core" o={oc} size={22} fill={C.muted} />
+    </g>
+  );
+}
+/** Model-contract caption while components enter (storyboard §FluidMosaicMembrane layer reveals; review 4.1.1-2 #2). */
+export const BUILD1 = 'Components enter progressively to build the explanatory drawing;';
+export const BUILD2 = 'this is not a depiction of cellular membrane synthesis or protein insertion machinery.';
+export function BuildNote({o = 1, x = 90, y = 902}: any) {
+  if (o <= 0) return null;
+  return (
+    <g opacity={o < 1 ? o : undefined}>
+      <Txt x={x} y={y} size={20} weight={700} fill={C.primary} italic>{BUILD1}</Txt>
+      <Txt x={x} y={y + 26} size={20} weight={700} fill={C.primary} italic>{BUILD2}</Txt>
     </g>
   );
 }

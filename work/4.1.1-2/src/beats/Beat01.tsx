@@ -9,6 +9,7 @@ import {InkRing} from '../../shared/src/Type';
 export default function Beat01(s: any) {
   const t = gt(s), a = s.a, end = s.sc.duration - s.local;
   const shrink = fe(1.1 - end, 1.1);                       // last 1.1 s: the cell shrinks to the corner thumbnail
+  const lo = 1 - clamp01(shrink * 5);                       // labels clear before the cell moves under them
   const cx0 = move(a('rbc'), 1.2, 700, 820), cy0 = 600;
   const cx = cx0 + (1710 - cx0) * shrink, cy = cy0 + (300 - cy0) * shrink, r = 150 - 100 * shrink;
   const mag = fe(a('membrane'), 0.7) * (1 - shrink), mx = 1450, my = 560, mr = 200;
@@ -34,29 +35,29 @@ export default function Beat01(s: any) {
         {[[-0.3, 0.25], [0.05, -0.12], [0.2, 0.3]].map(([dx, dy], i) => <SoluteDot key={i} x={cx + dx * r} y={cy + dy * r} r={8} shape={i % 2 ? 'tri' : 'square'} opacity={fi(a('solutes') - 0.3 - i * 0.12, 0.4) * (1 - shrink)} />)}
       </g>}
       <Txt x={960} y={250} size={30} weight={700} anchor="middle" opacity={fi(a('hook'), 0.5)}>Ever wondered why a cell doesn't simply mix into the water around it?</Txt>
-      <Lbl x={cx} y={cy + r + 42} text="red blood cell" anchor="middle" o={fi(a('rbc'), 0.5) * (1 - shrink)} size={24} />
-      <Cite x={cx} y={cy + r + 68} text={SCHEM} anchor="middle" opacity={fi(a('rbc'), 0.5) * (1 - shrink)} />
-      <Lbl x={130} y={330} text="plasma (watery)" o={plasma * (1 - shrink)} size={26} fill={C.teal} />
-      <Lbl x={cx - 330} y={cy - 40} text="cytoplasm (watery)" anchor="end" o={fi(a('cyto'), 0.5) * (1 - shrink)} size={24} fill={C.teal} lx={cx - r * 0.35} ly={cy - r * 0.05} />
-      <Pill x={130} y={380} text="different dissolved substances" o={fi(a('solutes'), 0.5) * (1 - shrink)} />
+      <Lbl x={cx} y={cy + r + 42} text="red blood cell" anchor="middle" o={fi(a('rbc'), 0.5) * lo} size={24} />
+      <Cite x={cx} y={cy + r + 68} text={SCHEM} anchor="middle" opacity={fi(a('rbc'), 0.5) * lo} />
+      <Lbl x={130} y={330} text="plasma (watery)" o={plasma * lo} size={26} fill={C.teal} />
+      <Lbl x={cx - 330} y={cy - 40} text="cytoplasm (watery)" anchor="end" o={fi(a('cyto'), 0.5) * lo} size={24} fill={C.teal} lx={cx - r * 0.35} ly={cy - r * 0.05} />
+      <Pill x={130} y={380} text="different dissolved substances" o={fi(a('solutes'), 0.5) * lo} />
       {mag > 0 && <Magnifier x={mx} y={my} r={mr * (0.3 + 0.7 * mag)} lx={cx + r} ly={cy} o={mag}>
         <g clipPath="url(#b1mag)" opacity={clamp01(mag * 2 - 1)}>
           <rect data-role="decor" x={mx - mr} y={my - mr} width={2 * mr} height={mr} fill="#FBF3DD" />
           <rect data-role="decor" x={mx - mr} y={my} width={2 * mr} height={mr} fill="#F4EEF2" />
           {split < 1 && band(my - 14, 28, 'b0')}
           {split > 0 && <g opacity={split}>{band(my - 22 - 6 * split, 14, 'b1')}{band(my + 8 + 6 * split, 14, 'b2')}</g>}
-          {outT.map((k) => <circle key={k.i} data-role="drawing" cx={k.x} cy={k.y} r={6} fill="#BFE0F5" stroke="#5B9CC4" strokeWidth={1.3} />)}
-          {inT.map((k) => <circle key={k.i} data-role="drawing" cx={k.x} cy={k.y} r={6} fill="#BFE0F5" stroke="#5B9CC4" strokeWidth={1.3} />)}
+          {outT.map((k) => <circle key={k.i} data-role="drawing" data-field="water" cx={k.x} cy={k.y} r={6} fill="#BFE0F5" stroke="#5B9CC4" strokeWidth={1.3} />)}
+          {inT.map((k) => <circle key={k.i} data-role="drawing" data-field="water" cx={k.x} cy={k.y} r={6} fill="#BFE0F5" stroke="#5B9CC4" strokeWidth={1.3} />)}
           {q > 0 && <SoluteDot x={qx} y={Math.min(qy, my - 36)} r={10} opacity={q} />}
         </g>
       </Magnifier>}
-      <Lbl x={mx} y={my + mr + 40} text="cell surface membrane" anchor="middle" o={mag} size={24} />
-      <Pill x={mx + mr + 16} y={my + 6} text="two layers" o={split * (1 - shrink)} />
-      <Lbl x={mx - mr + 30} y={my - mr - 16} text="outside" o={fi(sep, 0.4) * (1 - shrink)} size={20} fill={C.teal} />
-      <Lbl x={mx - mr + 30} y={my + mr + 70} text="inside" o={fi(sep, 0.4) * (1 - shrink)} size={20} fill={C.teal} />
+      <Lbl x={mx} y={my + mr + 40} text="cell surface membrane" anchor="middle" o={mag * lo} size={24} />
+      <Pill x={mx + mr + 16} y={my + 6} text="two layers" o={split * lo} />
+      <Lbl x={mx - mr + 30} y={my - mr - 16} text="outside" o={fi(sep, 0.4) * lo} size={20} fill={C.teal} />
+      <Lbl x={mx - mr + 30} y={my + mr + 70} text="inside" o={fi(sep, 0.4) * lo} size={20} fill={C.teal} />
       {sep > 0 && <InkRing cx={mx - 60} cy={my - 105} rx={120} ry={60} p={fe(sep, 0.6)} opacity={1 - shrink} color={C.teal} />}
       {sep > 0 && <InkRing cx={mx - 40} cy={my + 110} rx={120} ry={60} p={fe(sep - 0.3, 0.6)} opacity={1 - shrink} color={C.teal} />}
-      {q > 0 && <Txt x={qx + 34} y={qy - 18} size={56} weight={800} fill={C.primary} opacity={q * (1 - shrink)}>?</Txt>}
+      {q > 0 && <Txt x={qx + 34} y={my - 58} size={56} weight={800} fill={C.primary} opacity={q * lo}>?</Txt>}
       <Cite x={1850} y={930} text={PARTS} anchor="end" opacity={1 - shrink} />
     </g>
   );

@@ -21,7 +21,14 @@
   },
   {
     "beat": 5,
-    "holds": [],
+    "holds": [
+      {
+        "atSample": 696000,
+        "samples": 96000,
+        "seconds": 2.0,
+        "before": "That's a memory aid"
+      }
+    ],
     "speechUnchanged": true
   },
   {

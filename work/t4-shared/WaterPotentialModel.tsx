@@ -70,7 +70,7 @@ export function sucrosePts({M = WPM, spawns, t, turn = null, seed = 7}: any) {
   return out;
 }
 export function SucroseTokens({pts, t = 0, hi = -1}: any) {
-  return <g data-role="drawing">{pts.map((p: any) => <g key={p.i}>{p.i === hi && <circle cx={p.x} cy={p.y} r={24} fill="none" stroke="#F2A93B" strokeWidth={3} />}<SucroseTok x={p.x} y={p.y} r={12} rot={(p.i * 41 + t * 15) % 360} /></g>)}</g>;
+  return <g data-role="drawing" data-field="particles">{pts.map((p: any) => <g key={p.i}>{p.i === hi && <circle cx={p.x} cy={p.y} r={24} fill="none" stroke="#F2A93B" strokeWidth={3} />}<SucroseTok x={p.x} y={p.y} r={12} rot={(p.i * 41 + t * 15) % 360} /></g>)}</g>;
 }
 /** Dropper icon held ABOVE a compartment (never touching). */
 export function Dropper({x, y, o = 1, squeeze = 0}: any) {
@@ -97,10 +97,10 @@ export function WPScale({x, y0, y1, dl = 0, dr = 0, oTitle = 1, oZero = 1, oArro
         {oArrow > 0 && <path d={`M${x} ${y1}l-10 -18h20Z`} fill="#1F2A36" opacity={oArrow} />}
       </g>
       {oTitle > 0 && <text x={x} y={y0 - 64} fontSize={24} fontWeight={800} fill="#1F2A36" textAnchor="middle" fontFamily={FONT} opacity={oTitle}>water potential</text>}
-      {oZero > 0 && <g opacity={oZero}><text x={x + 66} y={y0 + 8} fontSize={21} fontWeight={800} fill="#1F2A36" fontFamily={FONT}>0 kPa</text><text x={x + 66} y={y0 + 30} fontSize={15} fontWeight={600} fill="#555" fontFamily={FONT}>pure water at atmospheric</text><text x={x + 66} y={y0 + 48} fontSize={15} fontWeight={600} fill="#555" fontFamily={FONT}>pressure (reference)</text></g>}
-      {oArrow > 0 && <text x={x + 26} y={y1 - 8} fontSize={19} fontWeight={700} fill="#1F2A36" fontFamily={FONT} opacity={oArrow}>more negative ↓</text>}
-      {oShade > 0 && <text x={x + 26} y={(y0 + y1) / 2 + 30} fontSize={17} fontWeight={700} fill="#4E7391" fontFamily={FONT} opacity={oShade}>negative</text>}
-      {oBracket > 0 && <g opacity={oBracket}><path data-role="decor" d={`M${x - 40} ${yAt(0.3)}h-12V${yAt(0.62)}h12`} stroke="#1F2A36" strokeWidth={2.5} fill="none" /><text x={x - 60} y={yAt(0.3) + 6} fontSize={16} fontWeight={700} fill="#1F2A36" textAnchor="end" fontFamily={FONT}>higher</text><text x={x - 60} y={yAt(0.46) + 6} fontSize={16} fontWeight={700} fill="#1F2A36" textAnchor="end" fontFamily={FONT}>less negative =</text><text x={x - 60} y={yAt(0.62) + 6} fontSize={16} fontWeight={700} fill="#1F2A36" textAnchor="end" fontFamily={FONT}>lower</text></g>}
+      {oZero > 0 && <g opacity={oZero}><text x={x + 66} y={y0 + 8} fontSize={21} fontWeight={800} fill="#1F2A36" fontFamily={FONT}>0 kPa</text><text x={x + 66} y={y0 + 34} fontSize={20} fontWeight={600} fill="#555" fontFamily={FONT}>pure water at atmospheric</text><text x={x + 66} y={y0 + 58} fontSize={20} fontWeight={600} fill="#555" fontFamily={FONT}>pressure (reference)</text></g>}
+      {oArrow > 0 && <text x={x + 26} y={y1 - 8} fontSize={21} fontWeight={700} fill="#1F2A36" fontFamily={FONT} opacity={oArrow}>more negative ↓</text>}
+      {oShade > 0 && <text x={x + 26} y={(y0 + y1) / 2 + 30} fontSize={20} fontWeight={700} fill="#4E7391" fontFamily={FONT} opacity={oShade}>negative</text>}
+      {oBracket > 0 && <g opacity={oBracket}><path data-role="decor" d={`M${x - 40} ${yAt(0.3)}h-12V${yAt(0.62)}h12`} stroke="#1F2A36" strokeWidth={2.5} fill="none" /><text x={x - 60} y={yAt(0.3) + 6} fontSize={20} fontWeight={700} fill="#1F2A36" textAnchor="end" fontFamily={FONT}>higher</text><text x={x - 60} y={yAt(0.46) + 7} fontSize={20} fontWeight={700} fill="#1F2A36" textAnchor="end" fontFamily={FONT}>less negative =</text><text x={x - 60} y={yAt(0.62) + 7} fontSize={20} fontWeight={700} fill="#1F2A36" textAnchor="end" fontFamily={FONT}>lower</text></g>}
       {oMarkers > 0 && <g opacity={oMarkers}>
         <g data-role="decor"><path d={`M${x - 14} ${yl}l-26 -14v28Z`} fill={hiL > 0 ? '#E0892B' : '#2F6B8F'} /><path d={`M${x + 14} ${yr}l26 -14v28Z`} fill={hiR > 0 ? '#E0892B' : '#8E4B6B'} /></g>
         <text x={x - 48} y={yl + 7} fontSize={21} fontWeight={800} fill="#2F6B8F" textAnchor="end" fontFamily={FONT}>L</text>

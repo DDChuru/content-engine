@@ -139,7 +139,7 @@ export function Tok({k, x, y, s = 1, opacity = 1, rot = 0}: any) {
 export function FieldTokens({st, k = 'o2', s = 1, t = 0, opacity = 1, hi = [] as number[], trail = 0}: any) {
   if (opacity <= 0) return null;
   return (
-    <g data-role="drawing" opacity={opacity < 1 ? opacity : undefined}>
+    <g data-role="drawing" data-field="particles" opacity={opacity < 1 ? opacity : undefined}>
       {st.pts.map((p: any) => <g key={p.i}>
         {hi.includes(p.i) && <circle cx={p.x} cy={p.y} r={17 * s} fill="none" stroke="#F2A93B" strokeWidth={3} />}
         <Tok k={k} x={p.x} y={p.y} s={s} rot={(p.i * 37 + t * 20) % 360} />
@@ -151,14 +151,14 @@ export function FieldTokens({st, k = 'o2', s = 1, t = 0, opacity = 1, hi = [] as
 /** Crossing counter card: title (e.g. "current five-second window"), two directions, optional subtitle. */
 export function CounterCard({x, y, w = 330, la = 'left → right', lb = 'right → left', n = 0, m = 0, title = '', sub = '', o = 1, hi = 0, accent = T4.protein, font = "'Stem4Life Source Sans 3', 'DejaVu Sans', sans-serif", dim = false}: any) {
   if (o <= 0) return null;
-  const h = sub ? 106 : 84;
+  const h = sub ? 122 : 90;
   return (
     <g data-role="decor" opacity={o < 1 ? o : undefined}>
       <rect x={x} y={y} width={w} height={h} rx={10} fill={dim ? '#F4F1EA' : '#FFFFFF'} stroke={hi > 0 ? '#E0892B' : accent} strokeWidth={hi > 0 ? 2 + 2 * hi : 2} />
-      <text x={x + 12} y={y + 22} fontSize={15} fontWeight={700} fill={dim ? '#8A857C' : accent} fontFamily={font}>{title}</text>
-      <text x={x + 12} y={y + 52} fontSize={20} fontWeight={700} fill={dim ? '#8A857C' : '#1F2A36'} fontFamily={font}>{`${la}: ${n}`}</text>
-      <text x={x + 12} y={y + 76} fontSize={20} fontWeight={700} fill={dim ? '#8A857C' : '#1F2A36'} fontFamily={font}>{`${lb}: ${m}`}</text>
-      {sub && <text x={x + 12} y={y + 98} fontSize={13} fontWeight={600} fontStyle="italic" fill="#6B6B6B" fontFamily={font}>{sub}</text>}
+      <text x={x + 12} y={y + 25} fontSize={20} fontWeight={700} fill={dim ? '#8A857C' : accent} fontFamily={font}>{title}</text>
+      <text x={x + 12} y={y + 54} fontSize={21} fontWeight={700} fill={dim ? '#8A857C' : '#1F2A36'} fontFamily={font}>{`${la}: ${n}`}</text>
+      <text x={x + 12} y={y + 80} fontSize={21} fontWeight={700} fill={dim ? '#8A857C' : '#1F2A36'} fontFamily={font}>{`${lb}: ${m}`}</text>
+      {sub && <text x={x + 12} y={y + 108} fontSize={20} fontWeight={600} fontStyle="italic" fill="#6B6B6B" fontFamily={font}>{sub}</text>}
     </g>
   );
 }
@@ -169,7 +169,7 @@ export function SideTag({x, y, n, cap = '', o = 1, font = "'Stem4Life Source San
     <g data-role="decor" opacity={o < 1 ? o : undefined}>
       <rect x={x - 30} y={y - 26} width={60} height={38} rx={8} fill="#FFFFFF" stroke="#8A857C" strokeWidth={1.5} />
       <text x={x} y={y + 2} fontSize={24} fontWeight={800} fill={fill} textAnchor="middle" fontFamily={font}>{n}</text>
-      {cap && <text x={x} y={y + 32} fontSize={14} fontWeight={700} fill="#6B6B6B" textAnchor="middle" fontFamily={font}>{cap}</text>}
+      {cap && <text x={x} y={y + 36} fontSize={20} fontWeight={700} fill="#6B6B6B" textAnchor="middle" fontFamily={font}>{cap}</text>}
     </g>
   );
 }

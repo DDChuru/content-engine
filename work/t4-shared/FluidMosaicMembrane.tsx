@@ -1,14 +1,23 @@
 /** FluidMosaicMembrane (published by 4.1.1-2 with ALL component layers; reused across Topic 4).
  * Orientation fixed: OUTSIDE THE CELL AT THE TOP, CYTOPLASM AT THE BOTTOM. 12 phospholipids per leaflet in every
- * state. Component ids, left → right (ordinal positions of the `full` section):
- *   glycolipid (outer, pos 2, 4-bead chain) · intrinsic-channel (spanning, 4–5, pore lined by hydrophilic R groups)
- *   · cholesterol (outer pos 6, inner pos 7; OH at head level, rings among tails) · receptor-glycoprotein (spanning,
- *   8–9, binding-site cup on the outer face, 3-bead chain beside it) · intrinsic-carrier (spanning, 10–11, notch
- *   facing outside at rest) · glycoprotein (spanning, 12, 5-bead chain) · extrinsic (cytoplasmic face under 3–4).
- * Layout is columnar: spanning proteins are shared columns; between them each leaflet spreads its items evenly, so
- * the outer and inner leaflets always meet the proteins at the same x. With no components the section is 12 slots
- * wide (bilayer only); `full` is 21 slots. Components enter by drifting sideways from the section's edge while the
- * phospholipids part to make room (`show` progress 0..1) — never across the core, never between leaflets.
+ * state. POSITIONS = SHARED-SPECS §FluidMosaicMembrane, read literally as 1-based slots counted left to right in the
+ * `full` section (1 slot = 1 phospholipid width u):
+ *   1 phospholipid · 2 glycolipid (outer leaflet; inner leaflet: phospholipid) · 3 phospholipid ·
+ *   4–5 intrinsic-channel (spanning) · 6 cholesterol (outer; inner: phospholipid) · 7 cholesterol (inner; outer:
+ *   phospholipid) · 8–9 receptor-glycoprotein (spanning; 3-bead chain beside its cup) · 10–11 intrinsic-carrier
+ *   (spanning; notch to the outside at rest) · 12 glycoprotein (spanning; 5-bead chain) · 13–21 phospholipids (outer
+ *   9 at unit spacing; the inner leaflet's remaining 8 spread across the same stretch) · extrinsic on the cytoplasmic
+ *   face centred under the 3|4 boundary (touching the heads at 3 and the channel's lower end).
+ *   Outer leaflet: 12 phospholipids at slots 1, 3, 7, 13–21. Inner: 12 at slots 1, 2, 3, 6 and 8 across 13–21.
+ * Layout is columnar: spanning proteins are shared columns, so both leaflets meet each protein at the same x. Where
+ * the two leaflets hold different numbers of items between two columns (slots 1–3 before the glycolipid is in;
+ * slots 13–21 always), the stretch takes a width between the two counts (denser leaflet ≥ 0.88u spacing, heads never
+ * touch). With no components present each leaflet is laid out on its own at unit spacing (12 wide).
+ * ENTRY (008f, review 4.1.1-2 #1): a component enters AT ITS SEAT. Its drawn footprint widens from zero (horizontal
+ * scale = entry progress) while the molecules on either side part by exactly that footprint: no hole ever opens ahead
+ * of it and it never crosses another glyph. A sideways path from the section's edge is impossible in a cross-section
+ * without a spanning protein passing over occupied lipid positions, so there is none. Nothing crosses the core or
+ * moves between leaflets. `extrinsic` rises from the cytoplasm onto the face (through water only).
  * States: assemble (`assemble` 0..1 with `scatter` 0..1; `keep` = token indices already in place), full (default `show`), highlight:<id> (`highlight` + `hl`).
  * Motion contract: phospholipids jitter and drift sideways (≤ 1 token width per 2 s; here ≤ 0.16u/s); proteins drift
  * more slowly; nothing crosses between leaflets; carbohydrate chains stay on the external (top) face. */
@@ -28,48 +37,93 @@ const clamp01 = (v: number) => Math.max(0, Math.min(1, v));
 const ease = (t: number) => { t = clamp01(t); return t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2; };
 const f = (n: number) => n.toFixed(2);
 
+// Stretches (lipid-leaflet items between columns) and columns (spanning proteins), left → right; see the header.
 const SEGS: any[] = [
-  {outer: ['pl', 'pl', 'glycolipid', 'pl', 'pl'], inner: ['pl', 'pl', 'pl', 'pl']},
-  {prot: 'channel', w: 2},
-  {outer: ['pl', 'cholOut', 'pl', 'pl'], inner: ['pl', 'pl', 'cholIn', 'pl']},
-  {prot: 'receptor', w: 2},
-  {outer: ['pl', 'pl'], inner: ['pl', 'pl']},
-  {prot: 'carrier', w: 2},
-  {outer: ['pl'], inner: ['pl']},
-  {prot: 'glycoprotein', w: 1},
-  {outer: ['pl', 'pl'], inner: ['pl', 'pl']},
+  {outer: ['pl', 'glycolipid', 'pl'], inner: ['pl', 'pl', 'pl']},                              // slots 1–3
+  {prot: 'channel', w: 2},                                                                       // 4–5
+  {outer: ['cholOut', 'pl'], inner: ['pl', 'cholIn']},                                           // 6–7
+  {prot: 'receptor', w: 2},                                                                      // 8–9
+  {prot: 'carrier', w: 2},                                                                       // 10–11
+  {prot: 'glycoprotein', w: 1},                                                                  // 12
+  {outer: ['pl', 'pl', 'pl', 'pl', 'pl', 'pl', 'pl', 'pl', 'pl'], inner: ['pl', 'pl', 'pl', 'pl', 'pl', 'pl', 'pl', 'pl']}, // 13–21
 ];
 const PROT_KEYS = ['channel', 'receptor', 'carrier', 'glycoprotein'];
 export const COMP_OF: Record<string, CompId> = {channel: 'intrinsic-channel', receptor: 'receptor-glycoprotein', carrier: 'intrinsic-carrier', glycoprotein: 'glycoprotein', cholOut: 'cholesterol', cholIn: 'cholesterol', glycolipid: 'glycolipid', extrinsic: 'extrinsic'};
+/** Canonical slot numbers (1-based, `full`) — checked by fmm-selftest.cjs against fmmLayout. */
+export const SLOTS = {glycolipid: [2], channel: [4, 5], cholOut: [6], cholIn: [7], receptor: [8, 9], carrier: [10, 11], glycoprotein: [12], extrinsicUnder: [3, 4]};
+const IMBALANCE = 0.35;   // a stretch with n and n+1 items is (n + 1 − 0.35) wide
 
-/** Geometry of the section: slot x of every item (final, eased widths), protein centres, faces, extent. */
-export function fmmLayout({cx = 960, cy = 560, u = 58, show = FULL}: any) {
-  const sh = {...FULL, ...show};
-  const W = (k: string) => (k === 'pl' ? 1 : ease(sh[k as ShowKey] ?? 1));
-  const widths = SEGS.map((s) => (s.prot ? s.w * ease(sh[s.prot as ShowKey]) : Math.max(s.outer.reduce((a: number, k: string) => a + W(k), 0), s.inner.reduce((a: number, k: string) => a + W(k), 0))));
-  const total = widths.reduce((a, b) => a + b, 0) * u;
-  let x = cx - total / 2;
-  const outer: any[] = [], inner: any[] = [], comps: any = {};
+/** Entry timing: during the first ALIGN of a component's `show` progress the lipids only drift so the two leaflets
+ * line up at the (zero-width) columns; the component's footprint then widens over the rest. */
+const ALIGN = 0.2;
+const grow = (p: number) => clamp01((p - ALIGN) / (1 - ALIGN));
+
+function bilayerOnly(cx: number, u: number) {
+  const outer: any[] = [], inner: any[] = [];
+  const x0 = cx - 6 * u;
   let io = 0, ii = 0;
+  for (const s of SEGS) if (!s.prot) for (const [arr, list, isOut] of [[outer, s.outer, true], [inner, s.inner, false]] as any) for (const k of list) {
+    if (k !== 'pl') { arr.push({kind: k, x: NaN, idx: -1, p: 0}); continue; }
+    const idx = isOut ? io++ : ii++;
+    arr.push({kind: k, x: x0 + (idx + 0.5) * u, idx, p: 1});
+  }
+  return {outer, inner, x0, total: 12 * u};
+}
+function columnar(cx: number, u: number, sh: any, compShift: any) {
+  const W = (k: string) => (k === 'pl' ? 1 : ease(grow(sh[k] ?? 1)));
+  const widths = SEGS.map((s) => {
+    if (s.prot) return s.w * ease(grow(sh[s.prot]));
+    const so = s.outer.reduce((a: number, k: string) => a + W(k), 0), si = s.inner.reduce((a: number, k: string) => a + W(k), 0);
+    return Math.max(so, si) - IMBALANCE * Math.min(1, Math.abs(so - si));
+  });
+  // lateral shift of a run of adjacent columns: the stretch on its left gains dx, the stretch on its right loses dx
+  for (const [k, dx] of Object.entries(compShift || {})) {
+    const i = SEGS.findIndex((s) => s.prot === k); if (i < 0 || !dx) continue;
+    let l = i; while (l > 0 && SEGS[l - 1].prot) l--;
+    let r = i; while (r < SEGS.length - 1 && SEGS[r + 1].prot) r++;
+    if (l > 0) widths[l - 1] += dx as number;
+    if (r < SEGS.length - 1) widths[r + 1] -= dx as number;
+  }
+  const total = widths.reduce((a, b) => a + b, 0) * u, x0 = cx - total / 2;
+  const outer: any[] = [], inner: any[] = [], comps: any = {};
+  let x = x0, io = 0, ii = 0;
   SEGS.forEach((s, si) => {
     const sw = widths[si] * u;
-    if (s.prot) comps[s.prot] = {x: x + sw / 2, w: s.w * u, p: sh[s.prot as ShowKey]};
+    if (s.prot) comps[s.prot] = {x: x + sw / 2, w: s.w * u, p: sh[s.prot], sx: ease(grow(sh[s.prot]))};
     else for (const [arr, list, isOut] of [[outer, s.outer, true], [inner, s.inner, false]] as any) {
       const sum = list.reduce((a: number, k: string) => a + W(k), 0) || 1;
       let c = 0;
       for (const k of list) {
         const w = W(k), xc = x + ((c + w / 2) / sum) * sw;
         c += w;
-        const item = {kind: k, x: xc, idx: k === 'pl' ? (isOut ? io++ : ii++) : -1, p: k === 'pl' ? 1 : sh[k as ShowKey]};
+        const item = {kind: k, x: xc, idx: k === 'pl' ? (isOut ? io++ : ii++) : -1, p: k === 'pl' ? 1 : sh[k]};
         arr.push(item);
-        if (k !== 'pl') comps[k] = {x: xc, w: u, p: item.p};
+        if (k !== 'pl') comps[k] = {x: xc, w: u, p: item.p, sx: ease(grow(item.p))};
       }
     }
     x += sw;
   });
-  const ch = comps.channel;
-  comps.extrinsic = {x: ch.x - 1.05 * u, w: 1.7 * u, p: sh.extrinsic};
-  return {cx, cy, u, outer, inner, comps, x0: cx - total / 2, x1: cx + total / 2, width: total,
+  return {outer, inner, comps, x0, total};
+}
+
+/** Geometry of the section: x of every item, protein columns (with `sx` = drawn footprint scale 0..1), faces, extent.
+ * `compShift` {protKey: dx in u} slides a protein's run of adjacent columns sideways; the stretches either side
+ * widen / narrow by the same amount (neighbours make way; nothing overlaps). */
+export function fmmLayout({cx = 960, cy = 560, u = 58, show = FULL, compShift = {}}: any) {
+  const sh: any = {...FULL, ...show};
+  const pMax = Math.max(...PROT_KEYS.map((k) => sh[k]), sh.cholOut, sh.cholIn, sh.glycolipid);
+  const C = columnar(cx, u, sh, compShift);
+  let {outer, inner, x0, total} = C;
+  const a = ease(clamp01(pMax / ALIGN));
+  if (a < 1) {
+    const B = bilayerOnly(cx, u), mix = (bb: any[], cc: any[]) => cc.map((it, i) => (it.kind === 'pl' ? {...it, x: bb[i].x + (it.x - bb[i].x) * a} : it));
+    // same stretch order in both layouts, so items correspond one to one
+    outer = mix(B.outer, C.outer); inner = mix(B.inner, C.inner);
+    x0 = B.x0 + (C.x0 - B.x0) * a; total = B.total + (C.total - B.total) * a;
+  }
+  const comps = C.comps, ch = comps.channel;
+  comps.extrinsic = {x: ch.x - (ch.w * ch.sx) / 2 - 0.02 * u, w: 1.7 * u, p: sh.extrinsic};
+  return {cx, cy, u, outer, inner, comps, x0, x1: x0 + total, width: total,
     outerHead: cy - HY * u, innerHead: cy + HY * u, top: cy - FACE * u, bottom: cy + FACE * u, protTop: cy - PROT.H * u, protBottom: cy + PROT.H * u};
 }
 
@@ -176,14 +230,21 @@ export function scatterPose(i: number, field: number[], t: number) {
   return {x: x + 6 * Math.sin(t * 1.7 + i * 2.1), y: y + 5 * Math.sin(t * 1.3 + i * 1.3), a};
 }
 
+/** Lateral-drift amplitude at x: 1 for free lipids, easing to the proteins' 0.45 next to a protein column. */
+function driftAmp(Lf: any, x: number) {
+  const u = Lf.u; let d = 1e9;
+  for (const k of PROT_KEYS) { const c = Lf.comps[k]; if (c.sx > 0) d = Math.min(d, Math.abs(x - c.x) - (c.w * c.sx) / 2); }
+  return 0.45 + 0.55 * clamp01((d - 0.5 * u) / (1.5 * u));
+}
+
 /** The membrane. See the header for the contract. */
 export function FluidMosaicMembrane(props: any) {
   const {cx = 960, cy = 560, u = 58, t = 0, show = FULL, chains = {}, highlight = null, hl = 0, carrierPhase = 0,
     drift = 1, jitter = 1, opacity = 1, tracer = -1, tracerTint = 0, assemble = 1, scatter = 1, field = [220, 260, 1700, 860],
-    rBands = 0, rBandsOn = null, poreWater = false, compDim = {}, dimLipids = 0, hideComp = {}, entryFrom = null, keep = [], plShift = {}, compShift = {}} = props;
+    rBands = 0, rBandsOn = null, poreWater = false, compDim = {}, dimLipids = 0, hideComp = {}, keep = [], plShift = {}, compShift = {}} = props;
   if (opacity <= 0) return null;
   const sh = {...FULL, ...show};
-  const Lf = fmmLayout({cx, cy, u, show: sh});
+  const Lf = fmmLayout({cx, cy, u, show: sh, compShift});
   const L0 = fmmLayout({cx, cy, u, show: BILAYER});
   const ch = {glycolipid: 1, receptor: 1, glycoprotein: 1, ...chains};
   const dimOf = (id: CompId | 'lipid') => {
@@ -210,12 +271,15 @@ export function FluidMosaicMembrane(props: any) {
     return <g opacity={opacity < 1 ? opacity : undefined}>{toks}</g>;
   }
   // ---- lipids ----
-  const edgeX = (x: number) => (x < cx ? Lf.x0 - 1.6 * u : Lf.x1 + 1.6 * u);
-  const entry = (k: string, xFinal: number) => { const p = ease(sh[k as ShowKey] ?? 1); const ex = entryFrom?.[k] ?? edgeX(xFinal); return {x: ex + (xFinal - ex) * p, o: clamp01((sh[k as ShowKey] ?? 1) * 4)}; };
+  // entry AT THE SEAT: footprint scale sx 0..1 (the neighbours part by exactly sx × its width; see the header)
+  const entry = (k: string, xFinal: number) => { const sx = k in Lf.comps ? Lf.comps[k].sx ?? 1 : 1; return {x: xFinal, sx, o: clamp01(sx * 3)}; };
+  const xs = (x: number, sx: number, el: any, key: string) => (sx >= 1 ? el : <g key={key} transform={`translate(${f(x)} 0) scale(${sx.toFixed(4)} 1) translate(${f(-x)} 0)`}>{el}</g>);
+  // lipids next to a protein column drift with it (protein drift amplitude), so resting neighbours never collide
+  const amp = (x: number) => driftAmp(Lf, x);
   for (const [arr, isOut] of [[Lf.outer, true], [Lf.inner, false]] as any) for (const it of arr) {
     const i = it.idx + (isOut ? 0 : 12);
     if (it.kind === 'pl') {
-      const w = wobble(t, i, it.x, u, drift, jitter), ps = (plShift as any)[i] || {dx: 0, o: 1};   // plShift: lateral swap (units u; o < 1 while passing behind a neighbour)
+      const w = wobble(t, i, it.x, u, drift * amp(it.x), jitter), ps = (plShift as any)[i] || {dx: 0, o: 1};   // plShift: lateral swap (units u; o < 1 while passing behind a neighbour)
       out.push(<PhospholipidToken key={'p' + i} x={it.x + w.dx + ps.dx * u} y={(isOut ? Lf.outerHead : Lf.innerHead) + w.dy} u={u} angle={isOut ? w.da : 180 + w.da} opacity={dimOf('lipid') * (ps.o ?? 1)} tint={i === tracer ? tracerTint : 0} />);
     }
   }
@@ -223,15 +287,15 @@ export function FluidMosaicMembrane(props: any) {
   for (const k of ['cholOut', 'cholIn']) {
     const it = (k === 'cholOut' ? Lf.outer : Lf.inner).find((x: any) => x.kind === k);
     if (!it || sh[k as ShowKey] <= 0 || (hideComp as any).cholesterol) continue;
-    const e = entry(k, it.x), w = wobble(t, k === 'cholOut' ? 30 : 31, it.x, u, drift, jitter, 0.8);
-    out.push(<Cholesterol key={k} x={e.x + w.dx} y={(k === 'cholOut' ? Lf.outerHead : Lf.innerHead) + w.dy} u={u} dir={k === 'cholOut' ? 1 : -1} opacity={e.o * dimOf('cholesterol')} hl={hlOf('cholesterol')} />);
+    const e = entry(k, it.x), w = wobble(t, k === 'cholOut' ? 30 : 31, it.x, u, drift * amp(it.x), jitter, 0.8);
+    out.push(xs(e.x + w.dx, e.sx, <Cholesterol key={k} x={e.x + w.dx} y={(k === 'cholOut' ? Lf.outerHead : Lf.innerHead) + w.dy} u={u} dir={k === 'cholOut' ? 1 : -1} opacity={e.o * dimOf('cholesterol')} hl={hlOf('cholesterol')} />, k));
   }
   // ---- glycolipid ----
   {
     const it = Lf.outer.find((x: any) => x.kind === 'glycolipid');
     if (it && sh.glycolipid > 0 && !(hideComp as any).glycolipid) {
-      const e = entry('glycolipid', it.x), w = wobble(t, 32, it.x, u, drift, jitter, 0.8);
-      out.push(<Glycolipid key="gl" x={e.x + w.dx} y={Lf.outerHead + w.dy} u={u} t={t} chain={ch.glycolipid} opacity={e.o * dimOf('glycolipid')} hl={hlOf('glycolipid')} angle={w.da * 0.6} />);
+      const e = entry('glycolipid', it.x), w = wobble(t, 32, it.x, u, drift * amp(it.x), jitter, 0.8);
+      out.push(xs(e.x + w.dx, e.sx, <Glycolipid key="gl" x={e.x + w.dx} y={Lf.outerHead + w.dy} u={u} t={t} chain={ch.glycolipid} opacity={e.o * dimOf('glycolipid')} hl={hlOf('glycolipid')} angle={w.da * 0.6} />, 'gl'));
     }
   }
   // ---- spanning proteins ----
@@ -239,7 +303,8 @@ export function FluidMosaicMembrane(props: any) {
   PROT_KEYS.forEach((k, i) => {
     const c = Lf.comps[k];
     if (!c || c.p <= 0 || (hideComp as any)[COMP_OF[k]]) return;
-    const e = entry(k, c.x), w = pw(k, i), x = e.x + w.dx + ((compShift as any)[k] ?? 0) * u, y = cy + w.dy * 0.5, id = COMP_OF[k], o = e.o * dimOf(id);
+    const e = entry(k, c.x), w = pw(k, i), x = e.x + w.dx, y = cy + w.dy * 0.5, id = COMP_OF[k], o = e.o * dimOf(id);
+    const n0 = out.length;
     if (k === 'channel') out.push(<ChannelProtein key={k} x={x} y={y} u={u} opacity={o} hl={hlOf(id)} poreWater={poreWater} />);
     if (k === 'carrier') out.push(<CarrierProtein key={k} x={x} y={y} u={u} phase={carrierPhase} opacity={o} hl={hlOf(id)} />);
     if (k === 'receptor') out.push(<g key={k} opacity={o < 1 ? o : undefined}><ReceptorProtein x={x} y={y} u={u} hl={hlOf(id)} /><BeadChain x={x + 0.62 * u} y={y - PROT.H * u} u={u} n={3} t={t} reveal={ch.receptor} hl={hlOf(id)} /></g>);
@@ -253,6 +318,7 @@ export function FluidMosaicMembrane(props: any) {
         {outP > 0 && <rect x={x - hw} y={y + mid + 0.45 * u} width={2 * hw} height={H - mid - 0.45 * u + 3} rx={8} fill="#FFFFFF" opacity={0.5 * outP} />}
       </g>);
     }
+    if (e.sx < 1) out.splice(n0, out.length - n0, xs(x, e.sx, <g>{out.slice(n0)}</g>, 'xs' + k));
   });
   // ---- extrinsic ----
   if (sh.extrinsic > 0 && !(hideComp as any).extrinsic) {
@@ -264,11 +330,11 @@ export function FluidMosaicMembrane(props: any) {
 
 /** Live position of a component (with its drift) for pointing labels/ink at it. */
 export function compPos(props: any, key: ShowKey) {
-  const {cx = 960, cy = 560, u = 58, t = 0, show = FULL, drift = 1, jitter = 1} = props;
-  const Lf = fmmLayout({cx, cy, u, show});
+  const {cx = 960, cy = 560, u = 58, t = 0, show = FULL, drift = 1, jitter = 1, compShift = {}} = props;
+  const Lf = fmmLayout({cx, cy, u, show, compShift});
   if (key === 'cholOut' || key === 'cholIn' || key === 'glycolipid') {
     const it = (key === 'cholIn' ? Lf.inner : Lf.outer).find((x: any) => x.kind === key);
-    const w = wobble(t, key === 'cholOut' ? 30 : key === 'cholIn' ? 31 : 32, it.x, u, drift, jitter, 0.8);
+    const w = wobble(t, key === 'cholOut' ? 30 : key === 'cholIn' ? 31 : 32, it.x, u, drift * driftAmp(Lf, it.x), jitter, 0.8);
     return {x: it.x + w.dx, y: (key === 'cholIn' ? Lf.innerHead : Lf.outerHead) + w.dy};
   }
   const i = PROT_KEYS.indexOf(key === 'extrinsic' ? 'channel' : key), c = Lf.comps[key];
@@ -277,9 +343,9 @@ export function compPos(props: any, key: ShowKey) {
 }
 /** Live position of phospholipid i (0–11 outer, 12–23 inner) head centre. */
 export function plPos(props: any, i: number) {
-  const {cx = 960, cy = 560, u = 58, t = 0, show = FULL, drift = 1, jitter = 1} = props;
-  const Lf = fmmLayout({cx, cy, u, show});
+  const {cx = 960, cy = 560, u = 58, t = 0, show = FULL, drift = 1, jitter = 1, compShift = {}} = props;
+  const Lf = fmmLayout({cx, cy, u, show, compShift});
   const isOut = i < 12, it = (isOut ? Lf.outer : Lf.inner).find((x: any) => x.kind === 'pl' && x.idx === (isOut ? i : i - 12));
-  const w = wobble(t, i, it.x, u, drift, jitter);
+  const w = wobble(t, i, it.x, u, drift * driftAmp(Lf, it.x), jitter);
   return {x: it.x + w.dx, y: (isOut ? Lf.outerHead : Lf.innerHead) + w.dy};
 }

@@ -2,8 +2,12 @@
 import React from 'react';
 import {BRAND as C, BODY, clamp01} from './theme';
 
-export function Txt({x, y, size = 24, weight = 600, fill = C.ink, anchor = 'start', opacity = 1, italic = false, family, children, deco}: any) {
+/** 008f: every text node is at least MIN_TEXT px at 1:1 (≥ 17 px in the delivered, branded frame: 950/1080 scale);
+ * label-audit.cjs checks every frame, transforms included. */
+export const MIN_TEXT = 20;
+export function Txt({x, y, size: size0 = 24, weight = 600, fill = C.ink, anchor = 'start', opacity = 1, italic = false, family, children, deco}: any) {
   if (opacity <= 0) return null;
+  const size = Math.max(MIN_TEXT, size0);
   return (
     <text x={x} y={y} fontSize={size} fontWeight={weight} fill={fill} textAnchor={anchor} opacity={opacity < 1 ? opacity : undefined}
       fontFamily={family ?? BODY} fontStyle={italic ? 'italic' : undefined} textDecoration={deco}>{children}</text>
@@ -13,7 +17,7 @@ export function Txt({x, y, size = 24, weight = 600, fill = C.ink, anchor = 'star
 export function Lines({x, y, text, size = 24, step, weight = 600, fill = C.ink, anchor = 'start', opacity = 1, italic = false}: any) {
   if (opacity <= 0) return null;
   const ls = String(text).split('\n');
-  const st = step ?? size * 1.3;
+  const st = Math.max(step ?? 0, Math.max(MIN_TEXT, size) * 1.3);
   return <g opacity={opacity < 1 ? opacity : undefined}>{ls.map((l, i) => <Txt key={i} x={x} y={y + i * st} size={size} weight={weight} fill={fill} anchor={anchor} italic={italic}>{l}</Txt>)}</g>;
 }
 /** Advance width from the brand font's real metrics (Source Sans 3; shared/src/metrics.json, built from
@@ -35,8 +39,9 @@ export function Card({x, y, w, h, fill = C.white, stroke = C.line, opacity = 1, 
   );
 }
 /** Pill label. */
-export function Tag({x, y, text, size = 20, fill = C.ink, bg = C.white, stroke = C.line, anchor = 'start', opacity = 1, weight = 700}: any) {
+export function Tag({x, y, text, size: size0 = 20, fill = C.ink, bg = C.white, stroke = C.line, anchor = 'start', opacity = 1, weight = 700}: any) {
   if (opacity <= 0) return null;
+  const size = Math.max(MIN_TEXT, size0);
   const w = textW(text, size, weight) + size * 1.1, h = size * 1.55;
   const x0 = anchor === 'middle' ? x - w / 2 : anchor === 'end' ? x - w : x;
   return (
@@ -47,7 +52,7 @@ export function Tag({x, y, text, size = 20, fill = C.ink, bg = C.white, stroke =
   );
 }
 /** Small-type source line. */
-export function Cite({x, y, text, size = 17, anchor = 'start', opacity = 1, fill = C.muted}: any) {
+export function Cite({x, y, text, size = 20, anchor = 'start', opacity = 1, fill = C.muted}: any) {
   return <Txt x={x} y={y} size={size} weight={600} fill={fill} anchor={anchor} opacity={opacity} italic>{text}</Txt>;
 }
 /** Hand-drawn ring (pre-drawn ink that POINTS AT structure); p 0..1 reveals the stroke. */

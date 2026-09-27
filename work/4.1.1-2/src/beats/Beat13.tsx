@@ -1,7 +1,8 @@
 import React from 'react';
 import {fi, fe, pulse} from '../util';
 import {gt, Lbl, Pill, RBC, Magnifier, Stage, C, Txt, Lines, Card, Cite, SCHEM, clamp01, textW} from '../kit';
-import {fmmLayout, compPos, FULL, BILAYER, FluidMosaicMembrane} from '../FluidMosaicMembrane';
+import {fmmLayout, compPos, FULL, BILAYER, FluidMosaicMembrane, Cholesterol} from '../FluidMosaicMembrane';
+import {PhospholipidToken} from '../PhospholipidToken';
 import {Written, Strike} from '../Panels';
 import {T4} from '../t4-palette';
 
@@ -18,6 +19,7 @@ export default function Beat13(s: any) {
   const wrong = 'the OH group of cholesterol points into the hydrophobic core';
   // magnifier on the red blood cell's edge: the bilayer from this lesson, plasma above, cytoplasm below
   const mx = 1560, my = 840, mr = 88;
+  const IX = {x0: 1060, x1: 1760, y0: 500, y1: 730, u: 58, head: 574, pl: [1330, 1388], ch: 1446, cx: 1410};
   return (
     <g>
       {/* forms surface (left) */}
@@ -40,15 +42,31 @@ export default function Beat13(s: any) {
       <Stage s={s} cx={cx} cy={cy} u={u} mem={M} n={[14, 10]} xw={[Lf.x0 - 40, Lf.x1 + 40]} waterTop={214} waterBottom={500} />
       <Txt x={Lf.x0 - 30} y={cy - 70} size={17} weight={700} fill={C.teal} anchor="end">outside</Txt>
       <Txt x={Lf.x0 - 30} y={cy + 84} size={17} weight={700} fill={C.teal} anchor="end">cytoplasm</Txt>
+      {/* polarity: an ENLARGED inset (review 4.1.1-2 #3) — two phospholipids and a cholesterol of the outer layer, the
+          cholesterol at the right end so its OH knob and ring plate are reached from the right; heads/tails from the left */}
       {pol > 0 && <g opacity={pol}>
-        <Pill x={co.x - 60} y={co.y - 22} text="polar" anchor="end" size={15} fill={C.teal} />
-        <Pill x={co.x + 60} y={co.y + 36} text="non-polar" size={15} fill={C.primary} />
+        <path data-role="decor" d={`M${co.x} ${co.y + 8}L${IX.cx} ${IX.y0}`} stroke={C.muted} strokeWidth={1.8} strokeDasharray="6 5" fill="none" />
+        <rect data-role="decor" x={IX.x0} y={IX.y0} width={IX.x1 - IX.x0} height={IX.y1 - IX.y0} rx={14} fill="#FFFFFF" stroke={C.line} strokeWidth={2} />
+        <rect data-role="decor" x={IX.x0 + 2} y={IX.y0 + 2} width={IX.x1 - IX.x0 - 4} height={IX.head - IX.y0 - 26} rx={12} fill="#E7F2F8" />
+        <path data-role="decor" d={`M${IX.pl[0] - 0.7 * IX.u} ${IX.head}H${IX.ch + 0.5 * IX.u}`} stroke={C.primary} strokeWidth={2} strokeDasharray="8 6" />
+        <PhospholipidToken x={IX.pl[0]} y={IX.head} u={IX.u} />
+        <PhospholipidToken x={IX.pl[1]} y={IX.head} u={IX.u} />
+        <Cholesterol x={IX.ch} y={IX.head} u={IX.u} dir={1} />
+        <Lbl part="leader" x={IX.pl[0] - 44} y={IX.head + 8} text="polar heads" anchor="end" size={21} lx={IX.pl[0] - 0.42 * IX.u} ly={IX.head} o={1} />
+        <Lbl part="leader" x={IX.pl[0] - 44} y={IX.head + 76} text="non-polar tails" anchor="end" size={21} lx={IX.pl[0] - 0.15 * IX.u} ly={IX.head + 68} o={1} />
+        <Lbl part="leader" x={IX.ch + 44} y={IX.head + 8} text="polar OH" size={21} lx={IX.ch + 0.19 * IX.u} ly={IX.head} o={1} />
+        <Lbl part="leader" x={IX.ch + 44} y={IX.head + 66} text="non-polar rings" size={21} lx={IX.ch + 0.24 * IX.u} ly={IX.head + 0.9 * IX.u} o={1} />
+        <Lbl part="label" x={IX.pl[0] - 44} y={IX.head + 8} text="polar heads" anchor="end" size={21} fill={C.teal} o={1} />
+        <Lbl part="label" x={IX.pl[0] - 44} y={IX.head + 76} text="non-polar tails" anchor="end" size={21} fill={C.primary} o={1} />
+        <Lbl part="label" x={IX.ch + 44} y={IX.head + 8} text="polar OH" size={21} fill={C.teal} o={1} />
+        <Lbl part="label" x={IX.ch + 44} y={IX.head + 66} text="non-polar rings" size={21} fill={C.primary} o={1} />
+        <Txt x={IX.x1 - 14} y={IX.y1 - 12} size={20} weight={600} fill={C.muted} anchor="end" italic>enlarged: outer layer, schematic</Txt>
       </g>}
       {r2 > 0 && <g opacity={pulse(a('row2') - 0.4, 3.0)}>
         <rect data-role="decor" x={Lf.x0 - 10} y={Lf.outerHead - 16} width={Lf.width + 20} height={32} rx={8} fill="none" stroke={C.teal} strokeWidth={3} />
         <rect data-role="decor" x={Lf.x0 - 10} y={cy - 36} width={Lf.width + 20} height={72} rx={8} fill="none" stroke={C.primary} strokeWidth={3} />
       </g>}
-      <Cite x={Lf.x1} y={520} text={SCHEM} anchor="end" />
+      <Cite x={Lf.x1} y={488} text={SCHEM} anchor="end" />
       {/* reject card: our wording contrast */}
       {rj > 0 && <Card x={910} y={548} w={940} h={150} opacity={rj} fill="#FFFFFF">
         <Written x={934} y={596} text={wrong} size={24} />

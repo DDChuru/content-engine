@@ -3,7 +3,7 @@
  * Topic 4 models are the top-level copies from work/t4-shared. */
 import React from 'react';
 import {BRAND as C, BODY, clamp01} from '../shared/src/theme';
-import {Txt, Lines, Card, Cite, textW} from '../shared/src/Type';
+import {Txt, Lines, Card, Cite, textW, MIN_TEXT} from '../shared/src/Type';
 import {FluidMosaicMembrane, FACE} from './FluidMosaicMembrane';
 import {WaterField} from './WaterField';
 import {T4} from './t4-palette';
@@ -12,8 +12,9 @@ export const gt = (s: any) => s.frame / 30;             // global animation cloc
 export const CY = 540, U = 58;                          // membrane stage used by Beats 4–12
 
 /** Text label with an optional straight leader to (lx, ly). Leader is decor. */
-export function Lbl({x, y, text, o = 1, size = 22, weight = 700, fill = C.ink, anchor = 'start', lx, ly, lead = C.muted, italic = false, halo = C.warm}: any) {
+export function Lbl({x, y, text, o = 1, size: size0 = 22, weight = 700, fill = C.ink, anchor = 'start', lx, ly, lead = C.muted, italic = false, halo = C.warm}: any) {
   if (o <= 0) return null;
+  const size = Math.max(MIN_TEXT, size0);
   const w = textW(text, size, weight), x0 = anchor === 'middle' ? x - w / 2 : anchor === 'end' ? x - w : x;
   let d = '';
   if (lx != null) { const ax = lx < x0 ? x0 - 6 : lx > x0 + w ? x0 + w + 6 : lx, ay = ly < y - size ? y - size - 2 : ly > y ? y + 6 : y - size * 0.35; d = `M${ax.toFixed(1)} ${ay.toFixed(1)}L${lx.toFixed(1)} ${ly.toFixed(1)}`; }
@@ -27,8 +28,9 @@ export function Lbl({x, y, text, o = 1, size = 22, weight = 700, fill = C.ink, a
   );
 }
 /** Small pill tag. */
-export function Pill({x, y, text, o = 1, size = 18, fill = C.ink, bg = C.white, stroke = C.line, anchor = 'start'}: any) {
+export function Pill({x, y, text, o = 1, size: size0 = 20, fill = C.ink, bg = C.white, stroke = C.line, anchor = 'start'}: any) {
   if (o <= 0) return null;
+  const size = Math.max(MIN_TEXT, size0);
   const w = textW(text, size, 700) + size * 1.1, h = size * 1.55, x0 = anchor === 'middle' ? x - w / 2 : anchor === 'end' ? x - w : x;
   return (
     <g data-role="decor" opacity={o < 1 ? o : undefined}>

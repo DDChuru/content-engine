@@ -40,13 +40,13 @@ export default function Beat07(s: any) {
       <Cite x={960} y={cy + 2.8 * u + 48} text="schematic lateral motion; not measured" anchor="middle" opacity={fi(a('drift'), 0.5) * trails} />
       {/* each stays in its own layer */}
       {fi(a('own'), 0.5) > 0 && <path data-role="decor" d={`M${Lf.x0 - 20} ${cy}H${Lf.x1 + 20}`} stroke={C.ink} strokeWidth={2.5} strokeDasharray="10 8" opacity={fi(a('own'), 0.5) * (1 - fe(a('shapes'), 0.6))} />}
-      <Pill x={Lf.x1 + 30} y={cy + 8} text="each stays in its own layer (in this model)" o={fi(a('own'), 0.5)} />
+      <Pill x={90} y={cy + 2.8 * u + 96} text="each stays in its own layer (in this model)" o={fi(a('own'), 0.5) * (1 - fe(a('1972'), 0.5))} />
       {/* mosaic: proteins outlined one after another */}
       {outl.map((o, i) => { const p = fi(a('shapes') - i * 0.35, 0.3); return p > 0 ? <rect key={i} data-role="decor" x={o.x - o.w / 2} y={o.y - o.h / 2} width={o.w} height={o.h} rx={16} fill="none" stroke={C.primary} strokeWidth={3.5} opacity={p * (0.4 + 0.6 * (1 - fe(a('1972'), 0.6)))} /> : null; })}
       {tiles > 0 && <g opacity={tiles}>
-        <rect data-role="decor" x={1560} y={250} width={250} height={170} rx={12} fill="#FFFFFF" stroke={C.line} strokeWidth={2} />
+        <rect data-role="decor" x={1530} y={250} width={310} height={170} rx={12} fill="#FFFFFF" stroke={C.line} strokeWidth={2} />
         <g data-role="drawing">{Array.from({length: 18}, (_, i) => { const c = i % 6, r = Math.floor(i / 6), sz = 22 + ((i * 7) % 3) * 8; return <rect key={i} x={1580 + c * 38 + ((i * 5) % 7)} y={268 + r * 48 + ((i * 3) % 9)} width={sz} height={sz * 0.8} rx={4} fill={i % 3 === 0 ? T4.protein : '#E8E2D4'} stroke={i % 3 === 0 ? T4.proteinEdge : '#B8B09E'} strokeWidth={1.5} />; })}</g>
-        <Txt x={1685} y={444} size={17} weight={700} fill={C.muted} anchor="middle">a mosaic: tiles set in a surface</Txt>
+        <Txt x={1685} y={446} size={20} weight={700} fill={C.muted} anchor="middle">a mosaic: tiles set in a surface</Txt>
       </g>}
       <Pill x={960} y={cy + 2.8 * u + 90} text="proteins scattered through the bilayer" anchor="middle" o={fi(a('tiles') - 1.4, 0.5)} fill={T4.proteinEdge} />
       {tab > 0 && <QuoteTab x={330} y={800} w={1260} quote={q} source="" opacity={tab} size={21} />}

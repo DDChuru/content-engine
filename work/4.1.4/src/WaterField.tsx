@@ -44,7 +44,7 @@ export function WaterField(props: any) {
     lines.push(`M${(toks[a].x + ux * (r + 2)).toFixed(1)} ${(toks[a].y + uy * (r + 2)).toFixed(1)}L${(toks[b].x - ux * (r + 2)).toFixed(1)} ${(toks[b].y - uy * (r + 2)).toFixed(1)}`);
   }
   return (
-    <g data-role="drawing" opacity={opacity < 1 ? opacity : undefined}>
+    <g data-role="drawing" data-field="water" opacity={opacity < 1 ? opacity : undefined}>
       {lines.length > 0 && <path d={lines.join('')} stroke={T4.waterEdge} strokeWidth={1.8} strokeDasharray="4 4" fill="none" opacity={hbonds} />}
       {toks.map((k) => <circle key={k.i} cx={k.x.toFixed(1)} cy={k.y.toFixed(1)} r={r} fill={T4.water} stroke={T4.waterEdge} strokeWidth={1.4} />)}
       {extra}

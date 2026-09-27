@@ -31,7 +31,7 @@ export default function Beat11(s: any) {
       <InkRing cx={gl.x + 0.1 * u} cy={gl.y - 0.4 * u} rx={0.7 * u} ry={1.6 * u} p={fe(a('gl'), 0.5)} opacity={1 - fe(a('desc'), 0.6)} />
       <Pill x={Lf.x1 + 20} y={Lf.outerHead + 8} text="outer face" o={faces} fill="#35652B" />
       <Pill x={Lf.x1 + 20} y={Lf.innerHead + 8} text="cytoplasmic face" o={faces} fill={C.teal} />
-      <Lbl x={co.x - 30} y={Lf.top - 2.6 * u} text="cholesterol: both layers" anchor="end" o={fi(a('chol'), 0.5) * (1 - fe(a('desc'), 0.6))} size={20} lx={co.x - 4} ly={co.y - 8} />
+      <Lbl x={co.x + 34} y={Lf.top - 2.6 * u} text="cholesterol: both layers" o={fi(a('chol'), 0.5) * (1 - fe(a('desc'), 0.6))} size={20} lx={co.x - 4} ly={co.y - 8} />
       <Lbl x={gl.x - 20} y={Lf.top - 2.6 * u} text="glycolipid: outer layer" anchor="end" o={fi(a('gl'), 0.5) * (1 - fe(a('desc'), 0.6))} size={20} lx={gl.x - 6} ly={gl.y - 1.9 * u} />
       {c1 > 0 && <g><InkRing cx={co.x} cy={co.y + 0.6 * u} rx={0.55 * u} ry={1.0 * u} p={1} opacity={c1} color="#B8862F" /><InkRing cx={ci.x} cy={ci.y - 0.6 * u} rx={0.55 * u} ry={1.0 * u} p={1} opacity={c1} color="#B8862F" /></g>}
       <Sentence x={200} y={728} w={1520} o={fe(a('desc'), 0.6)} tag="a description you could write" size={26} lines={[

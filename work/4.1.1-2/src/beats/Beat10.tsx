@@ -1,6 +1,6 @@
 import React from 'react';
-import {fi, fe, pulse} from '../util';
-import {gt, Lbl, Pill, RBC, Stage, RegionLabels, C, Txt, Cite, SCHEM, PARTS, CY, U, clamp01} from '../kit';
+import {fi, fe, pulse, between} from '../util';
+import {gt, Lbl, Pill, RBC, Stage, RegionLabels, BuildNote, C, Txt, Cite, SCHEM, PARTS, CY, U, clamp01} from '../kit';
 import {fmmLayout, compPos, FULL} from '../FluidMosaicMembrane';
 import {PROT} from '../TransportProteinSet';
 import {Tray} from './Beat08';
@@ -31,14 +31,15 @@ export default function Beat10(s: any) {
       <g opacity={1 - fe(a('gprot') - 1.2, 0.6)}><Tray items={['glycoprotein']} lift={{glycoprotein: fe(a('gp'), 0.6) + fe(a('gprot'), 0.8)}} t={t} /></g>
       <Lbl x={rc.x - 50} y={top - 1.7 * u} text="receptor-glycoprotein" anchor="end" o={fi(a('rchain'), 0.5)} size={24} lx={rc.x - 6} ly={top - 6} />
       <Lbl x={rc.x - 50} y={top - 0.9 * u} text="binding site" anchor="end" o={fi(a('rchain'), 0.5)} size={18} weight={600} fill={C.muted} lx={rc.x - 4} ly={top + 18} />
-      <Lbl x={gp.x + 30} y={top - 2.4 * u} text="glycoprotein" o={fi(a('gprot') - 1.6, 0.5)} size={24} lx={gp.x + 6} ly={top - 1.0 * u} />
+      <Lbl x={gp.x + 70} y={top - 1.15 * u} text="glycoprotein" o={fi(a('gprot') - 1.6, 0.5)} size={24} lx={gp.x + 10} ly={top - 1.0 * u} />
       <Txt x={960} y={236} size={24} weight={700} anchor="middle" fill="#35652B" opacity={fi(a('project'), 0.5)}>chains project from the outer surface</Txt>
       <Pill x={(ch.x + ca.x) / 2} y={cy + H + 70} text="no chain on these two (in our membrane)" anchor="middle" o={fi(a('notevery'), 0.5)} />
       {hlId && <path data-role="decor" d={`M${(ch.x + ca.x) / 2 - 80} ${cy + H + 46}L${(hlId === 'intrinsic-channel' ? ch : ca).x} ${cy + H + 6}`} stroke={C.muted} strokeWidth={1.8} opacity={hlAmt} />}
       <Pill x={rc.x} y={cy + H + 34} text="roles: 4.1.3" anchor="middle" o={fi(a('nochain'), 0.5)} />
       <Pill x={gp.x} y={cy + H + 34} text="roles: 4.1.3" anchor="middle" o={fi(a('nochain'), 0.5)} />
       <RBC x={1760} y={250} r={36} />
-      <Cite x={90} y={930} text={SCHEM} />
+      <Cite x={1660} y={880} text={SCHEM} anchor="end" />
+      <BuildNote o={between(a('rchain'), a('parts') - 0.5)} />
       <Cite x={1850} y={930} text={PARTS} anchor="end" />
     </g>
   );

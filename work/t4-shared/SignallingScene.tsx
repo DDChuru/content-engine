@@ -6,7 +6,8 @@
  * LIVER CELL (target; same receptor), and a CELL WITHOUT A COMPLEMENTARY RECEPTOR FOR INSULIN (4 receptors with a
  * rounded-square site). Stage labels along the top: secretion · transport · binding · specific response.
  * States are driven by ages (seconds since each began; negative = not yet):
- *   secrete  → one vesicle performs exocytosis (VesicleTransport ExoCell) at the side facing the vessel; wedges drift
+ *   secrete  → one vesicle performs exocytosis at the side facing the vessel (VesicleTransport ExoOutline: the vesicle fuses
+ *              INTO the beta cell's outline and opens it; the wedges leave through that opening); wedges drift
  *              into the tissue fluid; enter → they drift into the lumen (route through the wall not detailed);
  *   carry    → they travel down the lumen with the flow and spread; out → they drift out into the tissue fluid beside
  *              each right-hand cell; bind → seat at a muscle and a liver receptor (0.8 s, ReceptorLigand `seat`);
@@ -16,7 +17,7 @@
 import React from 'react';
 import {T4} from './t4-palette';
 import {LigandA, failMotion} from './ReceptorLigand';
-import {ExoCell, EXO} from './VesicleTransport';
+import {ExoOutline, exoPoint, EXO} from './VesicleTransport';
 import {GlucoseTok} from './T4Tokens';
 
 const clamp01 = (v: number) => Math.max(0, Math.min(1, v));
@@ -30,6 +31,7 @@ export const SS = {
   vessel: {x0: 775, x1: 945, y0: 250, y1: 930},
   muscle: {x: 1420, y: 395, w: 600, h: 130}, liver: {x: 1300, y: 626, r: 100}, other: {x: 1330, y: 842, r: 76},
   ru: 17,                                             // receptor scale (membrane units) at whole-cell view
+  exoPhi: -Math.asin(20 / 165),                       // the beta cell's outline point facing the capillary (secretion)
 };
 /** Receptor sites (outline point + outward normal) per cell: muscle and liver notch (complementary), other round. */
 export function receptorSites() {
@@ -74,13 +76,14 @@ export function SignallingScene(props: any) {
   const B = SS.beta, V = SS.vessel, M = SS.muscle, L = SS.liver, O = SS.other, R = receptorSites();
   const vx = (V.x0 + V.x1) / 2;
   // ---- wedges: 3 from the one exocytosis event, then the vessel, then one to each right-hand cell ----
-  const edge = {x: B.x + B.rx - 2, y: B.y - 20};
+  const E = exoPoint(B.x, B.y, B.rx, B.ry, SS.exoPhi), edge = {x: E.x, y: E.y};
   const rel = [0, 1, 2].map((i) => ({x: edge.x + 42 + 24 * i, y: edge.y - 28 + 30 * i}));
+  const relNow = rel.map((p, i) => ({x: p.x + 4 * Math.sin(t * 1.3 + i), y: p.y + 3 * Math.cos(t * 1.1 + i)}));
   const exoDone = secrete >= EXO.approach + EXO.fuse + EXO.release;
   const dest = [seatAt(R.muscle[0], 26), seatAt(R.liver[0], 26), seatAt(R.other[0], 30)];
   const wed: any[] = [];
   if (!hideWedges && exoDone) for (let i = 0; i < 3; i++) {
-    let x = rel[i].x + 4 * Math.sin(t * 1.3 + i), y = rel[i].y + 3 * Math.cos(t * 1.1 + i), rot = 8 * Math.sin(t + i);
+    let x = relNow[i].x, y = relNow[i].y, rot = 8 * Math.sin(t + i);
     if (enter >= 0) { const k = ease(enter / 1.4); x = lerp(x, vx - 30 + 30 * i, k); y = lerp(y, edge.y + 20 * i, k); }
     const exitY = [R.muscle[0][1], R.liver[0][1], R.other[0][1]][i];
     if (carry >= 0) { const k = clamp01(carry / (2.2 + 0.5 * i)); y = lerp(edge.y + 20 * i, exitY, ease(k)); x = vx - 30 + 30 * i + 6 * Math.sin(t * 3 + i); rot = 0; }
@@ -121,11 +124,10 @@ export function SignallingScene(props: any) {
         <rect x={V.x0} y={V.y0} width={V.x1 - V.x0} height={V.y1 - V.y0} rx={10} fill="#A63A33" stroke="#6E1F1A" strokeWidth={3} />
         {rbc}{arrows}
         {/* beta cell */}
-        <ellipse cx={B.x} cy={B.y} rx={B.rx} ry={B.ry} fill="#FBF6FA" stroke="#6B5B7B" strokeWidth={3} />
+        <ExoOutline cx={B.x} cy={B.y} rx={B.rx} ry={B.ry} phi={SS.exoPhi} vx={vesicles[0][0]} vy={vesicles[0][1]} r={27} age={secrete} t={t} u={SS.ru} to={relNow} showWedges={!hideWedges} />
         <circle cx={SS.nucleus.x} cy={SS.nucleus.y} r={SS.nucleus.r} fill="#E6DCEB" stroke="#6B5B7B" strokeWidth={2} />
         {vesicles.map(([x, y], i) => i === 0 ? null : <g key={'v' + i}><circle cx={x} cy={y} r={27} fill="#FFF6F0" stroke="#7A5C8E" strokeWidth={2} />{[-1, 0, 1].map((k) => <LigandA key={k} x={x + k * 13} y={y - 6 + (k === 0 ? 6 : 0)} u={10} />)}</g>)}
         {secrete < 0 && <g><circle cx={vesicles[0][0]} cy={vesicles[0][1]} r={27} fill="#FFF6F0" stroke="#7A5C8E" strokeWidth={2} />{[-1, 0, 1].map((k) => <LigandA key={k} x={vesicles[0][0] + k * 13} y={vesicles[0][1] - 6 + (k === 0 ? 6 : 0)} u={10} />)}</g>}
-        {secrete >= 0 && !exoDone && <ExoCell vx={vesicles[0][0]} vy={vesicles[0][1]} ex={edge.x} ey={edge.y} nx={1} ny={0} r={27} age={secrete} t={t} u={12} />}
         {/* target and non-target cells */}
         <rect x={M.x - M.w / 2} y={M.y - M.h / 2} width={M.w} height={M.h} rx={M.h / 2} fill="#FCEEEE" stroke="#8E4A4A" strokeWidth={3} />
         {[1, 2, 3].map((k) => <path key={k} d={`M${M.x - M.w / 2 + 60 + k * 120} ${M.y - M.h / 2 + 18}V${M.y + M.h / 2 - 18}`} stroke="#E3C3C3" strokeWidth={2} />)}
@@ -144,15 +146,15 @@ export function SignallingScene(props: any) {
       {lbl(B.x, 232, 'secretion', 0.35 + 0.65 * st('secretion'), 26, st('secretion') > 0.5 ? '#B64A30' : '#6F6A60', 'middle', 800)}
       {lbl(vx, 232, 'transport', 0.35 + 0.65 * st('transport'), 26, st('transport') > 0.5 ? '#B64A30' : '#6F6A60', 'middle', 800)}
       {lbl(1160, 232, 'binding', 0.35 + 0.65 * st('binding'), 26, st('binding') > 0.5 ? '#B64A30' : '#6F6A60', 'middle', 800)}
-      {lbl(1560, 232, 'specific response: increased glucose uptake', 0.35 + 0.65 * st('response'), 20, st('response') > 0.5 ? '#B64A30' : '#6F6A60', 'middle', 800)}
-      {lbl(B.x, B.y + B.ry + 34, 'beta cell (pancreas)', labels.beta ?? 0)}
-      {lbl(vx, V.y1 - 12, 'capillary', labels.capillary ?? 0, 18, '#FFFFFF')}
-      {lbl(M.x, M.y + M.h / 2 + 34, 'muscle cell (target)', labels.muscle ?? 0)}
-      {lbl(L.x + L.r + 16, L.y + 6, 'liver cell (target)', labels.liver ?? 0, 20, '#253247', 'start')}
-      {lbl(O.x + O.r + 16, O.y - 4, 'cell without a complementary receptor', labels.other ?? 0, 18, '#253247', 'start')}
-      {lbl(O.x + O.r + 16, O.y + 18, 'for insulin (schematic)', labels.other ?? 0, 18, '#253247', 'start')}
-      {lbl(gtp.x + 18, gtp.y - 50, 'glucose transport protein', labels.gtp ?? 0, 16, T4.proteinEdge, 'end')}
-      {lbl(1830, 924, 'schematic; not to scale', 1, 16, '#6F6A60', 'end', 600)}
+      {lbl(1560, 232, 'specific response: increased glucose uptake', 0.35 + 0.65 * st('response'), 21, st('response') > 0.5 ? '#B64A30' : '#6F6A60', 'middle', 800)}
+      {lbl(B.x, B.y + B.ry + 36, 'beta cell (pancreas)', labels.beta ?? 0, 22)}
+      {lbl(vx, V.y1 - 14, 'capillary', labels.capillary ?? 0, 21, '#FFFFFF')}
+      {lbl(M.x, M.y + M.h / 2 + 36, 'muscle cell (target)', labels.muscle ?? 0, 22)}
+      {lbl(L.x + L.r + 18, L.y + 7, 'liver cell (target)', labels.liver ?? 0, 22, '#253247', 'start')}
+      {lbl(O.x + O.r + 18, O.y - 6, 'cell without a complementary receptor', labels.other ?? 0, 21, '#253247', 'start')}
+      {lbl(O.x + O.r + 18, O.y + 20, 'for insulin (schematic)', labels.other ?? 0, 21, '#253247', 'start')}
+      {lbl(gtp.x + 18, gtp.y - 52, 'glucose transport protein', labels.gtp ?? 0, 21, T4.proteinEdge, 'end')}
+      {lbl(1830, 920, 'schematic; not to scale', 1, 21, '#6F6A60', 'end', 600)}
     </g>
   );
 }

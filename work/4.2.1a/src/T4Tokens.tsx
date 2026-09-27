@@ -59,12 +59,14 @@ export function SoluteDot({x, y, r = 8, shape = 'circle', opacity = 1}: any) {
   return <circle data-role="drawing" cx={x} cy={y} r={r} fill="#A9A49A" stroke="#6F6A60" strokeWidth={1.5} opacity={op(opacity)} />;
 }
 /** ATP token: yellow rounded tag with its text (the text is part of the token). */
-export function ATPTag({x, y, text = 'ATP', w = 64, h = 30, opacity = 1, struck = false}: any) {
+export function ATPTag({x, y, text = 'ATP', w: w0 = 64, h: h0 = 30, opacity = 1, struck = false}: any) {
   if (opacity <= 0) return null;
+  // 008f: the letters are text in the frame like any label: ≥ 20.5 px at 1:1 (≥ 17 px after branding); the tag grows to fit
+  const fs = Math.max(20.5, h0 * 0.62), h = Math.max(h0, fs / 0.62), w = Math.max(w0, fs * 0.58 * String(text).length + h * 0.7);
   return (
     <g data-role="drawing" opacity={op(opacity)}>
       <rect x={x - w / 2} y={y - h / 2} width={w} height={h} rx={h / 2} fill={struck ? '#E3DED3' : T4.atp} stroke={struck ? '#9A958B' : T4.atpEdge} strokeWidth={2} />
-      <text x={x} y={y + h * 0.24} fontSize={h * 0.62} fontWeight={700} fontFamily="'Stem4Life Source Sans 3', 'DejaVu Sans', sans-serif" fill={struck ? '#8A857B' : '#4A3608'} textAnchor="middle">{text}</text>
+      <text x={x} y={y + h * 0.24} fontSize={fs} fontWeight={700} fontFamily="'Stem4Life Source Sans 3', 'DejaVu Sans', sans-serif" fill={struck ? '#8A857B' : '#4A3608'} textAnchor="middle">{text}</text>
       {struck && <path d={`M${x - w / 2 - 4} ${y + h / 2 + 2}L${x + w / 2 + 4} ${y - h / 2 - 2}`} stroke="#6F6A60" strokeWidth={3} strokeLinecap="round" />}
     </g>
   );

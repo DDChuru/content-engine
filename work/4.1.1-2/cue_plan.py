@@ -56,6 +56,9 @@ PLANS = {
 5: [
  ("Here's a way", "open", "The bilayer"),
  ("heads to the water, tails to each other", "handle", "Memory aid: heads to the water, tails to each other"),
+ ("each other. ^Heads to the water: the heads", "l1", "Heads → the heads · water → the water on both sides"),
+ ("on both sides. ^Tails to each other", "l2", "Tails → the tails · each other → they meet in the core"),
+ ("face each other in the core$", "map", "The whole mapping: heads to the water, tails to each other"),
  ("a memory aid, not an exam answer", "aid", "A memory aid, not an exam answer"),
  ("Written properly", "written", "Written properly"),
  ("their hydrophilic heads interact with water on both sides", "c1", "Clause 1: heads interact with water"),
