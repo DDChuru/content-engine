@@ -1,0 +1,5 @@
+// Expand SVG normalized dash lengths for librsvg. Chromium handles pathLength natively.
+// This preserves Fable's ink-ring reveal without altering the component source.
+const lengths=new Map();
+function pathLength(d){if(lengths.has(d))return lengths.get(d);const chunks=d.match(/[MC][^MC]*/g);let pos=[0,0],len=0;for(const c of chunks){const n=c.slice(1).match(/-?\d*\.?\d+(?:e[-+]?\d+)?/gi).map(Number);if(c[0]==='M'){pos=n.slice(0,2);continue;}for(let j=0;j<n.length;j+=6){let old=pos;for(let i=1;i<=200;i++){const t=i/200,u=1-t;const p=[u*u*u*pos[0]+3*u*u*t*n[j]+3*u*t*t*n[j+2]+t*t*t*n[j+4],u*u*u*pos[1]+3*u*u*t*n[j+1]+3*u*t*t*n[j+3]+t*t*t*n[j+5]];len+=Math.hypot(p[0]-old[0],p[1]-old[1]);old=p;}pos=n.slice(j+4,j+6);}}lengths.set(d,len);return len;}
+module.exports=(s)=>s.replace(/<(?:path|circle)\b[^>]*\bpathLength="1"[^>]*>/g,tag=>{const d=tag.match(/\bd="([^"]+)"/),r=tag.match(/\br="([^"]+)"/);const len=d?pathLength(d[1]):2*Math.PI*Number(r[1]);return tag.replace(/ pathLength="1"/,'').replace(/stroke-dasharray="1"/,`stroke-dasharray="${len}"`).replace(/stroke-dashoffset="([^"]+)"/,(_,v)=>`stroke-dashoffset="${Number(v)*len}"`);});
