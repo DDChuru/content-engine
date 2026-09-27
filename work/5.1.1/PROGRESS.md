@@ -1,5 +1,8 @@
 # 5.1.1 Inside a chromosome · BUILD PROGRESS (handover)
 
+**v2 (run 009f, 27 Sep, branch `cloud/009f-fix-4t1jp6`): DONE — review fixes applied, re-rendered, verified (incl. label-size/overlap audit and delivered-file check), re-branded, uploaded as "REVIEW 5.1.1 v2 …" and at Bunny status 4; see REPORT.md (v2) — the table below is the v1 build.**
+
+
 Updated 2026-09-27 11:18Z. Builder: cloud run 009a (claude-opus-5-5). Branch `cloud/009-5.1.1-to-5.1.4-qls6vy`; commit ONLY work/5.1.1, work/5.1.3, work/5.1.4, work/t5-shared; push that branch only.
 **Phase: DONE — REPORT.md written after Bunny status 4 (guid e45b3801-e495-49ef-b0a3-b6b36865e708)** · **Beats complete: 11 / 11** · master: present
 Live render processes: 8757 bash -c printf "%s\n" "$@" | xargs -P 4 -I{} sh -c "nice -n 10 \"\$NODE\" render-beat.cjs {} > logs/render-beat-{}.log 2>&1; rc=\$?; echo beat {} exit \$rc; exit \$rc" _ 5 6 7 8

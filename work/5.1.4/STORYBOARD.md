@@ -1,5 +1,7 @@
 # 5.1.4 — Telomeres: why copying costs telomere, not genes
 
+> **Run 009f (v2) narration note:** the memory-hook sentence was re-written per `cloud-reviews/RULE-MEMORY-HOOKS.md` (each link said explicitly, then a 2 s hold); every other line is the cleared, frozen text. The exact v1 → v2 change is listed in `REPORT.md`.
+
 **STATUS: CLEARED WITH MINOR EDITS (edits applied) — round-2 independent check (`cloud-checks/007/round-2/5.1.4/CHECK.md`, final round), 27 September 2026.** Open production dependencies (licensed photomicrographs, Topic 1 component names) are tracked in `work/007/ASSETS-NEEDED.md`, not as storyboard defects.
 
 **Storyboard, first draft, revised after the round-1 check (see *CHECK RESPONSE (round 1)*). Cloud run 007, 27 September 2026.** No audio, no code, no render. Folder `storyboards/topic-05/5.1.4/`. Stands alone: own hook, a labelled recall of the S phase of interphase (5.1.3) and of the chromosome (5.1.1), own objectives, explanation, recap in place and exam close.

@@ -1,50 +1,45 @@
-# 5.1.4 Telomeres: why copying costs telomere, not genes — REPORT (cloud run 009a)
+# 5.1.4 Telomeres: why copying costs telomere, not genes — REPORT **v2** (cloud run 009f fix pass)
 
-**Model:** claude-opus-5-5 · branch `cloud/009-5.1.1-to-5.1.4-qls6vy` · 27 Sep 2026 (UTC)
-**Bunny (review):** guid `13c90983-4f7d-4693-8eaa-f315705b02be`, title "REVIEW 5.1.4 Telomeres: why copying costs telomere, not genes", no collection; uploaded 11:40:01Z–11:40:03Z; **status 4 at 11:42:05Z (≈2 min)**; 240p–1080p, length 256 s.
+**Model:** claude-opus-5-5 · branch `cloud/009f-fix-4t1jp6` (from `cloud/009-5.1.1-to-5.1.4-qls6vy`) · 27 Sep 2026 (UTC) · v1 report: `REPORT-v1.md`
+**Bunny v2 (review):** guid `d6705b5e-1b23-44fa-a633-2f28a6e10e3c`, title "REVIEW 5.1.4 v2 Telomeres: why copying costs telomere, not genes", no collection; uploaded 2026-09-27T13:13:55Z; **status 4 at 2026-09-27T13:15:57Z** (≈2 min); 240p–1080p, length 270 s. v1 guid `13c90983…` untouched.
 
-## Phases (wall clock, UTC; from file/log/commit timestamps, to the minute)
-| Phase | Time |
+## Review findings → fixes
+| Finding (Codex review, CHANGES) | Fix |
 |---|---|
-| balance check, TTS (8 beats), Whisper, review, beat 4 retake | 11:18–11:27 |
-| cue plan (77 cues), holds, timeline | 11:27 |
-| beats 1–8 authored, looked at, fixed, approved | 11:28–11:34 |
-| render (8 beats, 4-way, two batches) | 11:34–11:36 |
-| finish, verify, text-only, encoded sheets, count audit | 11:36–11:37 |
-| bookends (concurrent) · branding | 11:35–11:36 · 11:38–11:39 |
-| Bunny upload → status 4 | 11:40–11:42 |
+| P2 recall panel covered the end of "S (synthesis) phase of interphase"; "sister chromatids" ran into G1 (B2) | The recall panel moved right (x 1262–1762) so the full S-phase callout is clear of it; "sister / chromatids" is a two-line label inside the inset, clear of G1; "still one chromosome" sits above the wheel. Checked by the new overlap audit (0 overlaps) and on stills. |
+| P2 schematic qualifications missing on later uses (block note, whole-run TTAGGG, endpoint-comparison note) | `tel.tsx` `Captions` now carries all three notes at 20 px (wrapped to the space) and `RunLabel` carries "repeat in humans: TTAGGG (the whole run)" on the run. Shown wherever the model is: B1 hook magnifier (all three), B4 (block note enlarged, 20 px), B5 (all three), B6 thought-experiment copying (comparison note; its grey run is removed) and real model (shortening + block note), B7 recap and B8 exam model (shortening + block note + TTAGGG), B8 closing hook copy (all three while copying). |
+| P2 endpoint labels / model answer / B2 labels < 17 px | Label-size audit (`verify-label-size.cjs`, run by `verify.py`): every visible text's size × transform × 0.8802 branding scale must be ≥ 17 px, and no two text boxes may overlap. **Smallest 17.6 px, 0 failures, 0 overlaps** (740 frames). "end after round n", "starting end", "lost from the telomere" 20 px; B8 model answer 20 px in a taller box; the B6 set-aside model's labels leave before it shrinks. |
+| P2 buffer hook only a phrase | Re-voiced (below); B6 mapping card lights each link WITH its target — buffer ↔ grey run + its bracket + the buffer stop, track ↔ gene bands + the rails, "takes the loss first" ↔ "lost from the telomere", "stays intact" ↔ genes — then a **2.0 s digital-silence hold** on the completed mapping before "Written properly" (−91 dB). Hook ≈ 14.6 s (was 2.6 s). |
+| P3 delivered audio outlasted the picture by 36 ms | `apply-branding-v2.sh` pads the picture 0.2 s; `verify_delivered.py` on the DELIVERED file: video end 270.266667 s ≥ audio end 270.096 s (margin 0.1707 s), 0 decode errors. |
+| Report wording "no replication-complete … event on screen" | Corrected: B2 shows a replication RECALL (the inset completes as the marker leaves S) but has no numerical counter; the only counter is the round counter. |
 
-## ElevenLabs characters (ACCOUNT-WIDE counter; parallel sessions move it)
-before 320,145 (limit 363,000; guard 1.2 × 2,965 = 3,558 → PASS) → after 321,776 → after beat 4 retake 321,776 (counter did not move on the 349-char retake). Script 2,965 chars + retake 349.
+## Narration changes (ONLY the hook of Beat 6; everything else frozen)
+- v1: *Picture it as a buffer at the end of the line.*
+- v2: *Picture it as a buffer at the end of the line. The buffer: the telomere, the repeated DNA at the tip. The track behind the buffer: the nearby genes. The buffer takes the loss first; the track stays intact.* + 2 s held silence.
+Only Beat 6 re-voiced (Thandi, eleven_multilingual_v2, speed 1.0, 647 chars, no normalisation; Whisper 107/107 words). `STORYBOARD.md` updated. ElevenLabs (account-wide): 329,672 before → 332,143 after all three lessons' re-voicing.
 
-## Master / branded
-- master `5.1.4-telomeres.mp4`: 245.967 s, 7,379 frames, sha256 `d42dadc6d66109a91e2cffc54c12a1284a49854fa828eaa662b26ac4140b79fd`
-- branded: 256.996 s (= master + 11.03 s), full decode 0 errors, sha256 `752514b48f471466d17bdd16480a6a95db0aa62d5574f9056ad4000cbf73163a`; `qa/branded-mid.jpg` (lesson inside the cream frame, 5.1.4 bar).
+## Phases (UTC)
+fixes + re-voice + timeline 12:28–13:00 · render 8 beats 13:00–13:05 · finish/verify/sheets 13:05–13:09 · bookends 13:09 · branding 13:09–13:13 · upload 13:13 → status 4 2026-09-27T13:15:57Z.
 
-## Verification — all PASS
-1 ffprobe 245.967 s · 2 video 245.967 ≥ audio 244.966 (margin 1.00 s) · 3 full decode 0 errors · 4 cues 77 = 77 = 77 planned · 5 AAC packets identical (11,484) · 6 final word "intact." ends 241.81 s, headroom 3.16 s (−23.3 dB after the word = breath tail; nothing clipped) · 7 silent read: B8 END 2 s, PCM all zero, −91 dB; speech PCM unchanged · 8 boundary one-frame holds: 0 of 7 boundaries · every-frame marker audit: no error beat in this lesson; 0 marked / 7,379 unmarked, 0 mismatches · longest unchanged visual 7.0 s (B2, frame 884); none over 15 s · text-only controls PASS; 0 untagged; two 0.5 s sparse samples in B3 (58.5 s, 60.5 s), none over 2 s.
+## Master / branded (v2)
+- master `5.1.4-telomeres.mp4`: 259.067 s, 7,772 frames, sha256 `ddf899b92c222575256cc637f8702c7450f9fb41e4a51cea52811267246b3b8f`
+- branded: 270.266667 s (= master + 11.03 s + 0.17 s end pad), 0 decode errors, sha256 `4cf51b201140306ae854ecc3fbc1de54da7c1960bb7aa79222195c2d2ddf53ab`; `qa/branded-mid-v2.jpg`: B6 completed mapping inside the cream frame, 5.1.4 bar.
 
-## Count audit (encoded master)
-No chromosome or DNA-molecule counter in this lesson (no replication-complete, separation or cytokinesis event on screen). The only counter is the replication-round counter (B5), which counts rounds as each one starts. Read from the encoded master (pixel scan + stills): frame 3226 shows 0, and 3227 (the first frame at or after the "grow1" cue at 107.54 s) shows 1. Frame 3499 shows 1, and 3500 (the "grow2" cue at 116.66 s) shows 2. Frame 3688 (the round-3 start, 122.93 s) shows 3. The only other change in the 100–130 s scan is the counter fading in at 104.07–104.43 s (frames 3122–3133). No telomere block is ever detached; the end steps only on each round's completion (ENDS 1 → .935 → .868 → .8).
+## Verification (master) — all PASS
+1 ffprobe 259.067 s · 2 video ≥ encoded audio (1.0 s, master) · 3 decode 0 errors · 4 cues 81 = 81 = 81 planned · 5 AAC packets identical (12,098) · 6 final word "intact" ends 254.91 s, headroom 3.16 s · 7 silences: B6 hook hold 2 s, B8 END — −91 dB, speech PCM unchanged · 8 boundary holds 0 · marker audit every frame: 0 marked / 7,772 (no error beat) · longest unchanged visual 7.0 s · text-only controls PASS, 0 untagged, longest run 0.5 s · label size/overlap PASS · delivered file PASS.
 
-## Sheets: seen and fixed
-Beat 4: the zoom first targeted the chromatid centre and the model overran the panel during the zoom — target moved to the ringed tip and a clipPath added (fixed before render). Other beats: small overlaps respaced before approval. Encoded sheets (5): no defect found.
+## Count audit (rendered frames, `count-audit.cjs`)
+No chromosome/DNA counter (B2 = replication recall, no number). Round counter (B5): appears at f3122 showing 0; f3226 → f3227 0 → 1; f3499 → f3500 1 → 2; f3687 → f3688 2 → 3 (round starts; same frames as v1 and the review). No block ever detached; genes intact in the real state.
 
-## Pronunciation
-No request normalisation (`request_normalise.json` = `[]`); "T, T, A, G, G, G" spoken as letters. Beat 4 take 1 rejected ("short" heard as "shot" in the telomere definition); take 2 kept. Beat 8: small model dropped "too short" and heard "cloze" as "close"; the medium model hears "too short"; homophone kept. `qa/audio-review.md`.
+## Sheets
+Per-beat stills and all 5 encoded sheets looked at. Fixed before render: B6 "part of a gene not copied" tag into the tick labels; "starting end" into "lost from the telomere"; "typical dividing somatic cells" tag into the counter (moved above it); B6 counter box too narrow for "thought-experiment rounds" (lesson-local `WideCounter`); B8 layout (hook panel with its notes, taller answer/reject cards). Encoded sheets: no defects found.
 
-## Shared models used (sha256 of `src/` copies = `work/t5-shared`)
-ChromosomeModel `d727c225…3319` · CellCycleWheel `577b4186…6d7c` · DNAContentGraph `4fcc7b5d…4591` · TelomereEndModel `8ba409de…b666` (published here) · T5Annot `ec225c18…6961` · t5-palette `1b4ce00b…34aa`.
+## Shared models (sha256 in `src/`; byte-identical to `work/t5-shared`, see `SHARED.md`)
+TelomereEndModel `0ad089f5…1dfc` · ChromosomeModel `124e4195…a5d` · CellCycleWheel `456fef65…cfba` · DNAContentGraph `99b69034…fe18` · T5Annot `c8081bb1…8ee4` · t5-palette `1b4ce00b…34aa`.
 
 ## Images / Video description
-No image in 5.1.4; no credit paragraph needed.
-
-## Design choices
-1. One TelomereEndModel stage for Beats 4–7: DNA strip, two genes and the grey run, with each round a daughter copy growing along the template and stopping short, so the cost is seen, never stated alone.
-2. The thought experiment (no-telomere state) keeps a dashed accent frame and "thought experiment — not a real chromosome" on every frame, then visibly returns to the real state.
-3. The grey run is labelled as a whole (TTAGGG on the run), never block by block; the round counter is the only counter on screen.
+None (no photomicrograph in 5.1.4).
 
 ## Interpretations
-- Hook magnifier (B1) is drawn as a miniature of the telomere model's motion contract on one grey tip (a copy grows and stops just short), tagged "round 1".
-- B4's "zoom into the tip" is a continuous camera zoom from the ringed chromatid tip that resolves into the real-state model at the end of the zoom (clipped to the panel).
-- B6: the narration gives about 2 s between "run the same rounds" and "reaches"; rounds 1–2 run inside that window (≈0.7 s each), and round 3 runs from "reaches", where the end meets gene 2 and the daughter's copy of that gene is cut short (ringed).
+- "Track" names the line behind the buffer stop so the second link has its own hook word; the mapping stays qualified ("takes the loss first" = "initially removes telomeric DNA").
+- In B6's thought experiment the grey run is gone, so the block note is not shown there (nothing grey to qualify); the comparison note is, while rounds copy.
