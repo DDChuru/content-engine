@@ -1,4 +1,4 @@
-/** 5.1.2 frame router and lesson chrome (house style of the 2.1.1 reference build).
+/** 3.2.1 frame router and lesson chrome (house style of the 2.1.1 reference build).
  * Scene lookup by INTEGER frames. Unauthored beats throw. */
 import React from 'react';
 import T from '../timeline.json';
@@ -7,18 +7,18 @@ import {Txt} from '../shared/src/Type';
 import {ErrorMarker, ErrorLabel} from '../shared/src/ErrorMarker';
 import {BEATS} from './beats';
 
-export const TITLES = ['Hook and context', 'What you will be able to do', 'Recall: copy in S, share in anaphase',
-  'Why the daughter nuclei are identical', 'E5-06: the result, not the reason', 'Growth: new cells with the same genes',
-  'Replacement and repair', 'Asexual reproduction: a clone from one parent', 'What I told you, on the chain and the strip',
-  'How it is asked, and the reject card'];
+export const TITLES = [
+  'Why your body holds its temperature', 'What you will be able to do', 'Temperature: the rig and the key design choice',
+  'Initial rates, means and an optimum', 'One sentence, and the rising half', 'Above the optimum: denatured',
+  'pH: buffer solutions and rising discs', 'One over the mean rise time', 'Why pH changes the rate',
+  'What I told you, on the pictures you know', 'How it is asked, and the real question',
+];
 
-/** Error beat (SHARED-SPECS §8): E5-06 in Beat 5, EXAM CONTRAST (a real question, w22_23 Q4(b); no examiner report on
- * how often). The marker holds until the completed correct frame: clearKey = the cue at the end of the corrected
- * answer's last clause; animFrames = frames of the final write after that cue. */
-export const ERROR_BEATS: Record<number, {label: ErrorLabel; clearKey: string; animFrames: number}> = {
-  5: {label: 'EXAM CONTRAST', clearKey: 'done', animFrames: 12},
-};
-export const ERROR_LABEL: Record<number, string> = {5: 'EXAM CONTRAST'};
+/** Error beats: NONE in this lesson (storyboard: "Error beats: none"). The close carries one captioned
+ * wording-contrast card, labelled as our contrast, never a COMMON MISTAKE badge. Kept as an empty table so
+ * the renderer's every-frame marker check proves the badge is absent on every frame. */
+export const ERROR_BEATS: Record<number, {label: ErrorLabel; clearKey: string; animFrames: number}> = {};
+export const ERROR_LABEL: Record<number, string> = {};
 export const audits: Record<number, (s: any) => any> = {};
 
 export function stateAt(frame: number) {
@@ -54,9 +54,9 @@ export function Lesson({frame = 0}: {frame: number}) {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width={1920} height={1080} viewBox="0 0 1920 1080" style={{fontFamily: BODY}}>
       <rect data-role="decor" width={1920} height={1080} fill={dark ? C.ink : C.warm} />
-      <Txt x={70} y={44} size={22} fill={dark ? C.accent : C.muted}>BIOLOGY 9700 · 5.1.2 · WHY MITOSIS MAKES IDENTICAL CELLS</Txt>
+      <Txt x={70} y={44} size={22} fill={dark ? C.accent : C.muted}>BIOLOGY 9700 · 3.2.1 · WORKING CONDITIONS: TEMPERATURE AND pH</Txt>
       <Txt x={70} y={111} size={43} weight={700} fill={dark ? C.warm : C.ink}>{TITLES[s.sc.id - 1]}</Txt>
-      {!dark && <Txt x={72} y={170} size={20} fill={C.muted}>MODEL — cells, chromosomes, tissues and plants are schematic drawings; not to scale; not measured data</Txt>}
+      {!dark && <Txt x={72} y={170} size={20} fill={C.muted}>MODEL — apparatus, graphs and enzyme drawings are schematic; our illustrative data unless a source is cited</Txt>}
       <Beat {...s} />
       <line data-role="decor" x1={70} y1={959} x2={1850} y2={959} stroke={dark ? C.muted : C.line} strokeWidth={2} />
       <rect data-role="decor" x={70} y={984} width={7} height={54} rx={3} fill={C.primary} />

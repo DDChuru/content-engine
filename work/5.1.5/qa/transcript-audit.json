@@ -1,0 +1,70 @@
+[
+  {
+    "beat": 1,
+    "sourceWords": 68,
+    "recognizerTokens": 68,
+    "matchedSourceTokens": 68,
+    "differences": []
+  },
+  {
+    "beat": 2,
+    "sourceWords": 43,
+    "recognizerTokens": 43,
+    "matchedSourceTokens": 43,
+    "differences": []
+  },
+  {
+    "beat": 3,
+    "sourceWords": 58,
+    "recognizerTokens": 66,
+    "matchedSourceTokens": 58,
+    "differences": [
+      {
+        "op": "insert",
+        "script": "",
+        "heard": "thank you for watching thank you for watching"
+      }
+    ]
+  },
+  {
+    "beat": 4,
+    "sourceWords": 87,
+    "recognizerTokens": 87,
+    "matchedSourceTokens": 87,
+    "differences": []
+  },
+  {
+    "beat": 5,
+    "sourceWords": 68,
+    "recognizerTokens": 68,
+    "matchedSourceTokens": 68,
+    "differences": []
+  },
+  {
+    "beat": 6,
+    "sourceWords": 77,
+    "recognizerTokens": 77,
+    "matchedSourceTokens": 76,
+    "differences": [
+      {
+        "op": "replace",
+        "script": "differentiation",
+        "heard": "differenciation"
+      }
+    ]
+  },
+  {
+    "beat": 7,
+    "sourceWords": 59,
+    "recognizerTokens": 59,
+    "matchedSourceTokens": 59,
+    "differences": []
+  },
+  {
+    "beat": 8,
+    "sourceWords": 73,
+    "recognizerTokens": 73,
+    "matchedSourceTokens": 73,
+    "differences": []
+  }
+]

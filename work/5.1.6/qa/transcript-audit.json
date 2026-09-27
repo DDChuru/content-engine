@@ -1,0 +1,82 @@
+[
+  {
+    "beat": 1,
+    "sourceWords": 80,
+    "recognizerTokens": 80,
+    "matchedSourceTokens": 80,
+    "differences": []
+  },
+  {
+    "beat": 2,
+    "sourceWords": 49,
+    "recognizerTokens": 49,
+    "matchedSourceTokens": 49,
+    "differences": []
+  },
+  {
+    "beat": 3,
+    "sourceWords": 86,
+    "recognizerTokens": 86,
+    "matchedSourceTokens": 86,
+    "differences": []
+  },
+  {
+    "beat": 4,
+    "sourceWords": 87,
+    "recognizerTokens": 87,
+    "matchedSourceTokens": 87,
+    "differences": []
+  },
+  {
+    "beat": 5,
+    "sourceWords": 93,
+    "recognizerTokens": 93,
+    "matchedSourceTokens": 93,
+    "differences": []
+  },
+  {
+    "beat": 6,
+    "sourceWords": 68,
+    "recognizerTokens": 68,
+    "matchedSourceTokens": 67,
+    "differences": [
+      {
+        "op": "replace",
+        "script": "its",
+        "heard": "it"
+      }
+    ]
+  },
+  {
+    "beat": 7,
+    "sourceWords": 148,
+    "recognizerTokens": 148,
+    "matchedSourceTokens": 148,
+    "differences": []
+  },
+  {
+    "beat": 8,
+    "sourceWords": 69,
+    "recognizerTokens": 68,
+    "matchedSourceTokens": 66,
+    "differences": [
+      {
+        "op": "replace",
+        "script": "inherit it",
+        "heard": "inherited"
+      },
+      {
+        "op": "replace",
+        "script": "mass",
+        "heard": "mess"
+      }
+    ]
+  },
+  {
+    "beat": 9,
+    "sourceWords": 66,
+    "recognizerTokens": 66,
+    "matchedSourceTokens": 66,
+    "differences": []
+  }
+]
