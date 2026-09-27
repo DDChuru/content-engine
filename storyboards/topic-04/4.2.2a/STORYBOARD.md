@@ -392,7 +392,7 @@ Derived:
 | **Plain agar** (technical agar: syllabus p.58) | a water-filled gel: dissolved molecules diffuse through the water held in the fibre mesh; the gel largely prevents stirring currents | near-colourless and 5 mm deep on white millimetre-grid backing with two fixed perpendicular scales, so a blue zone can be read along both scales from directly above without moving the dish | movement or tilting of the dish, evaporation: kept level, lid on, not moved; well cut cleanly to the base | 10, 11 |
 | **Methylene blue, 0.1%** (syllabus p.58, [HH] as a materials-list code; working-solution classification from the identified supplier) | its **blue colour**: the zone that is visibly blue | visible at decreasing intensity towards the edge; a day of spreading stays within the dish | some dye binds to the agar; the apparent edge depends on colour intensity and the eye's visibility threshold (should-fix 4): edge defined once and judged the same way each time; diameter treated as an operational colour-zone measure; no diffusion coefficient or concentration inferred | 10, 11, 13 |
 
-Explain-beat real-world examples: none beyond the handled materials; the potato slice in Beat 1 is a context thumbnail only (plant tissue handed off to 4.2.2b). In the exam close (Beat 13) the mark-scheme answers come first; the earlier beyond-the-scheme sentence on colour boundaries has been cut (round-one runtime ruling, cut 1), since Beat 11 already teaches that the blue edge is a visibility threshold. The paper's universal indicator is shown with labelled start/result swatches only, kept apart from our dye.
+Explain-beat real-world examples: none beyond the handled materials; the potato slice in Beat 1 is a context thumbnail only, labelled *plant tissue; quantitative potato investigation: 4.2.5* (plant-tissue diffusion and osmosis handed off to 4.2.2b). In the exam close (Beat 13) the mark-scheme answers come first; the earlier beyond-the-scheme sentence on colour boundaries has been cut (round-one runtime ruling, cut 1), since Beat 11 already teaches that the blue edge is a visibility threshold. The paper's universal indicator is shown with labelled start/result swatches only, kept apart from our dye.
 
 ---
 
@@ -454,16 +454,17 @@ Every quotation in this storyboard, where it appears, and where it was copied fr
 | 1 | "investigate simple diffusion and osmosis using plant tissue and non-living materials, including dialysis (Visking) tubing and agar" | Syllabus 2025–2027, 4.2.2, p.21 | header; 1 (excerpt "including dialysis (Visking) tubing and agar") | `SYLLABUS-9700-DETAIL.md` | syllabus |
 | 2 | "dialysis (Visking) tubing, 14 mm width with a pore diameter of approximately 2.5 nm"; "capillary tubing"; "cork borers"; "Petri dishes, plastic or glass, 9 cm diameter" | Syllabus apparatus list, p.57 | spine; 3, 8, 10 (labels paraphrase: *14 mm width*, *pores about 2.5 nm (syllabus p.57)*) | `SYLLABUS-9700-DETAIL.md` | syllabus |
 | 3 | "[HH] methylene blue"; "technical agar"; "[N] – iodine in potassium iodide solution (suitable for starch test)"; "[MH] [N] – Benedict’s solution (suitable for qualitative reducing sugar test)" | Syllabus materials list, p.58 | spine; safety tags (codes only) | `SYLLABUS-9700-DETAIL.md` | syllabus |
-| 4 | no wording quoted: description only — order of complete indicator change A → B → C, 1 mark; universal indicator, initially blue, red in acid | S21/22 Q4(c), QP p.9 / MS p.14 (s21_22) | spine; 13 | plan check row (`cloud-checks/006/plan/CHECK.md`), plan §4.2.2, weights ledger | description PDF-CHECKED (plan check); no quotation, so no wording to check; any wording beyond the description PDF-UNCHECKED |
-| 5 | no wording quoted: description only — cube C, surface area 54 cm², volume 27 cm³ (used only to caption cube C as the 3 cm cube) | S21/22 Q4(b), QP p.9 / MS p.14 (s21_22) | 13 (caption) | plan check row; weights ledger | description PDF-CHECKED (plan check); PDF-UNCHECKED for anything further |
+| 4 | no wording quoted: description only — order of complete indicator change A → B → C, 1 mark; universal indicator, initially blue, red in acid | S21/22 Q4(c), QP p.9 / MS p.14 (s21_22) | spine; 13 | plan check row (`cloud-checks/006/plan/CHECK.md`), plan §4.2.2, weights ledger; round-one check citation audit | description PDF-CHECKED (plan check); QP instruction and MS answer A → B → C (also ratio/side-length alternatives) re-verified against QP p.9 / MS p.14 by the round-one check; no quotation |
+| 5 | no wording quoted: description only — Table 4.1 cube sides A 1 cm, B 2 cm, C 3 cm; universal indicator in agar containing sodium hydroxide, initially blue, red in acid (cube caption) | S21/22 Q4(b–c), QP p.9, Table 4.1 (s21_22) | 13 (caption) | plan check row; weights ledger; round-one check (QP text and rendered page) | description PDF-CHECKED (plan check); cube sides verified by the round-one check; no quotation |
+| 6 | no wording quoted: description only — explain meniscus-height changes after 20 minutes using net water movement and water-potential differences; tubing stipulated impermeable to sucrose; 3 marks, any three listed points | S21/21 Q3(a), QP pp.6–7 / MS p.10 (s21_21) | 13 | round-one check citation audit (`scratchpad/r1/4.2.2a/CHECK.md`) | description PDF-CHECKED (round-one check; not in the plan check's verified list); supplementary, outside the original five-paper sample; no quotation |
 
 Plan and plan-check wording applied (our instructions, not exam evidence, never shown as quotations on screen): the MF5 Visking sampling rules and osmometer rules; should-fix 4 ("We follow visible dye spreading through hydrated agar; colour/adsorption and visibility thresholds can affect the apparent boundary, so diameter is an operational colour-zone measure."); the 4.2.2a close sentence ("The 4.2.2a close may use Q4(c) as an agar-diffusion application; no Visking-specific question has been verified in these cited blocks."); MF2 glucose sentence; MF3 water-potential sentences; should-fix 7 safety sentence.
 
 **UNVERIFIED items** (not quoted; shown only as our framing or omitted):
-1. `UNVERIFIED — a marked Visking-tubing question` (plan register item 4). Beat 13 says so; that part of the close is labelled syllabus-based.
-2. `UNVERIFIED — the exact wording of S21/22 Q4(c) and of its MS point beyond the plan check's description` (plan register item 2). Beat 13's question description is labelled *our framing*; only the order A → B → C and the indicator colours are used.
-3. `UNVERIFIED — the dimensions of cubes A and B in S21/22 Q4`. They are drawn smaller than C, as the credited order implies, with the caption *dimensions of A and B not reproduced*.
-4. `UNVERIFIED — a sourced measured osmometer trace for this tubing, bore and concentration`. Dataset 2 is our illustrative data, chosen to be realistic and stated with its observation interval; it is not presented as measured.
+1. **RESOLVED — supplementary Visking evidence: S21/21 Q3(a), QP pp.6–7 / MS p.10, 3 marks. Explain meniscus-height changes after 20 minutes using net water movement and water-potential differences. This paper explicitly stipulates tubing impermeable to sucrose; its setup and permeability assumption differ from our capillary demonstration. It does not supply a time-series trace for our rig. Outside the fixed sample; incidence totals unchanged.**
+2. **RESOLVED** (round-one check, S21/22 QP p.9 / MS p.14): the QP asks completion of Fig. 4.1 from shortest to longest time for complete colour change; the MS credits **A → B → C** (also ratio/side-length alternatives), 1 mark. Beat 13's question description remains *our framing*; no wording is quoted.
+3. **RESOLVED** (round-one check, S21/22 QP p.9, Table 4.1): cube sides **1 / 2 / 3 cm** explicitly supplied; Beat 13's caption now states them.
+4. `UNVERIFIED — a sourced measured osmometer trace for this tubing, bore and concentration` (still **UNRESOLVED** after the round-one check). Dataset 2 holds no numbers (osmometer evidence pending); the rig and `meniscus-height` are a qualitative schematic until a recorded run exists; S21/21's end-point data from another apparatus are not borrowed.
 5. `UNVERIFIED — a sourced correspondence between Benedict's colours and glucose concentration for these conditions`. No concentrations are assigned to the colours; they are by-eye, illustrative results.
 
 ---
@@ -474,29 +475,22 @@ Counted by the validator over the blockquoted narration; seconds = words ÷ 120 
 
 | Beat | Title | Words | Seconds |
 |---|---|---:|---:|
-| 1 | Hook and context: watching what you cannot see | 88 | 44.0 |
+| 1 | Hook and context: watching what you cannot see | 79 | 39.5 |
 | 2 | What you will be able to do | 47 | 23.5 |
 | 3 | The tubing, and the two tests that read it | 92 | 46.0 |
 | 4 | Filling the bag, and testing what it holds | 107 | 53.5 |
 | 5 | The blank, matched tubes, and first contact | 85 | 42.5 |
-| 6 | Samples at recorded times, and reading them | 93 | 46.5 |
-| 7 | What crossed, and why: pores, not a membrane | 109 | 54.5 |
-| 8 | The osmometer: set up, then the first real reading | 108 | 54.0 |
-| 9 | The rise, explained in water potential, and its limits | 131 | 65.5 |
+| 6 | Samples at recorded times, and reading them | 91 | 45.5 |
+| 7 | What crossed, and why: pores, not a membrane | 128 | 64.0 |
+| 8 | The osmometer: set up, then the first reading after immersion | 107 | 53.5 |
+| 9 | The rise, explained in water potential, and its limits | 153 | 76.5 |
 | 10 | Agar: a well, a dye and a clock | 98 | 49.0 |
 | 11 | Measuring the blue zone, and what it cannot tell you | 122 | 61.0 |
-| 12 | What I told you, on the three rigs | 87 | 43.5 |
-| 13 | How it is asked, the reject card, and the invisible molecules | 123 | 61.5 |
-| **Total** | 13 beats (13 teaching + 0 error) | **1290** | **645.0** (10:45) |
+| 12 | What I told you, on the three rigs | 98 | 49.0 |
+| 13 | How it is asked, the reject card, and the invisible molecules | 122 | 61.0 |
+| **Total** | 13 beats (13 teaching + 0 error) | **1329** | **664.5** (11:04.5) |
 
-**Length, honestly:** **1,290 words = 10:45** at 120 words per minute, **1:15 over** the 9:30 (1,140-word) budget, all of it teaching (there are no error beats). Before saving, one round of trims was taken (−43 words: "Start with the tubing", "Now the water", the Beat 5 reagent sentence shortened, the repeated Beat 7 starch sentence moved onto the written sentence's cue, the Beat 9 and Beat 11 clock asides left to the on-screen captions, two Beat 13 phrases shortened). The remaining length comes from what the plan requires of this lesson: three complete investigations, each with named apparatus and handling, first-contact timing, compressed waiting stated, and readout interpretation with its limits (MF5, MF7, should-fix 4), plus the REAL-WORLD statements for five materials. **Cut list if the budget must be met more closely, in order** (none touches an MF5 rule, a REAL-WORLD statement or the glucose/cell-membrane contrast):
-1. Beat 13, the beyond-the-mark-scheme sentence ("The scheme doesn't need this, … first acid molecules are.", −26 words) and its dashed panel.
-2. Beat 1, "You cannot follow a single glucose molecule by eye." (−10 words; the magnifier moves to *far too small to see*).
-3. Beat 9, "The control bag of distilled water barely moves." (−9 words; the control stays on the graph, labelled).
-4. Beat 12, "And every clock started at first contact." (−7 words; the four t = 0 marks still brighten, silently, at the recap's end).
-5. Beat 3, "bought dry and flat," (−4 words).
-
-All five together save 56 words (28 s), giving 1,234 words = 10:17, still 0:47 over. Going further would remove a required element (a blank, a first-reading rule, a limit, or a material's fit statement); I recommend accepting the remaining overrun, as the checker did for 3.1.3's practical beats.
+**Length, honestly:** **1,329 words = 11:04.5** at 120 words per minute, **1:34.5 over** the 9:30 (1,140-word) budget, all of it teaching (there are no error beats). The first draft stood at 1,290 words (10:45). The round-one check's runtime ruling took two cuts: Beat 1's single-glucose-molecule sentence (−9 words; magnifier moved to *far too small to see*) and Beat 13's beyond-the-mark-scheme sentence with its dashed panel (−25 words). Together these bring it to 1,256 words (10:28) before the rewrites. The mandated replacement wording then adds 73 words net: Beat 6 −2, Beat 7 +19, Beat 8 −1, Beat 9 +22, Beat 12 +11, Beat 13 +24 (Visking opening and reject line, less the 25-word cut). Every added word is the check's exact wording for the sampling contract, the illustrative-colour limit, the actual-reading procedure, the control's limitation, the capillary-volume limit, the conditional transient rise, the supplementary Visking question and the model-limits reject line. The check ruled against cutting the other proposed items: the Beat 9 control sentence (replaced, not cut), Beat 12's "And every clock started at first contact." (KEEP) and Beat 3's "bought dry and flat" (KEEP). **No further cut is proposed**, because any remaining sentence carries a required element (a blank, a first-contact or first-reading rule, a limit, a REAL-WORLD fit statement or the glucose/cell-membrane contrast). I recommend accepting the 1:34.5 overrun for three complete investigations and their limits, as the check accepted the practical time. Cue times for Beats 8–9 are to be rescheduled against the recorded osmometer run once it exists.
 
 ## What I left out, and who owns it
 
@@ -518,7 +512,7 @@ All five together save 56 words (28 s), giving 1,234 words = 10:17, still 0:47 o
 |---|---|---|
 | **`VKTubingRig`** (`diffusion-bag`, `content-tests`, `blank`, `immerse`, `sample`, `benedicts-heat`, `osmometer`, `osmometer-control`; Datasets 1–2) | here | 4.2.2b (comparison thumbnail) |
 | **`AgarPlateRig`** (`pour-set`, `well`, `dye`, `spreading`, `measure`; Dataset 3) | here | none downstream |
-| **`meniscus-height`**, **`blue-zone-diameter`** graph configurations | here | none downstream |
+| **`meniscus-height`** (unnumbered qualitative schematic until the osmometer record exists), **`blue-zone-diameter`** graph configurations | here | none downstream |
 | `DiffusionField` states `tubing-pores`, `agar-open` | here (base 4.2.1a) | 4.2.3-4 may reuse `agar-open`'s gel convention for its acid inset |
 | `WaterPotentialModel` state `tubing-leak` | here (base 4.2.1a) | none downstream |
 | `FluidMosaicMembrane`, `TransportProteinSet`, `WaterBathRig` | 4.1.1-2, 4.2.1a, Topic 3 | used by state id only |
@@ -529,13 +523,13 @@ All five together save 56 words (28 s), giving 1,234 words = 10:17, still 0:47 o
 
 | Asset | Status | Source |
 |---|---|---|
-| `VKTubingRig` SVGs with named states: tubing roll, soaking beaker, knotted/tied bags, 10 cm³ syringe, three boiling tubes with 30 cm³ marks, three stopwatches, sample pipette, rinse and waste beakers, spotting tile with iodine wells, test tubes, boiling-water bath, test-tube holder, capillary osmometer and control on clamp stands with mm rulers, 250 cm³ beakers; hands (knot, rub-open, syringe fill, thread tie, rinse, lower by thread, pipette, holder) | **new build** | authored; handling specified; **rendered still-frame verification pending** (pours at 120°, syringe and dropper above the opening, level surfaces, bag fully submerged, holder on heated tubes, capillary eased in) |
-| `AgarPlateRig` SVGs: dish with lid, white card, ruler under the dish, cork borer, mounted needle, dropper, methylene blue zone at decreasing intensity, measuring lines | **new build** | authored; **rendered still-frame verification pending** (borer pushed straight down, fingers clear; dropper above the well) |
+| `VKTubingRig` SVGs with named states: tubing roll, soaking beaker, knotted/tied bags, 10 cm³ syringe, three boiling tubes with 30 cm³ marks, three stopwatches, clean sample pipettes, labelled sample vials, separate clean droppers, waste beaker, labelled bath rack, spotting tile with iodine wells, test tubes, boiling-water bath, test-tube holder, capillary osmometer and control on clamp stands with mm rulers, 250 cm³ beakers; hands (knot, rub-open, syringe fill, thread tie, rinse, lower by thread, pipette, holder) | **new build** | authored; handling specified; **rendered still-frame verification pending** (pours at 120°, syringe and dropper above the opening, level surfaces, bag fully submerged with actual filled/sealed dimensions checked, holder on heated tubes, capillary eased in); the osmometer's numerical run is an **evidence dependency** (Dataset 2), not an asset to author |
+| `AgarPlateRig` SVGs: dish with lid, white millimetre-grid backing with two fixed perpendicular scales, partly filled well (about 3 mm liquid depth), cork borer, mounted needle, dropper, methylene blue zone at decreasing intensity, measuring lines | **new build** | authored; **rendered still-frame verification pending** (borer pushed straight down, fingers clear; dropper above the well) |
 | Colour swatches: Benedict's real sequence (one-frame steps), iodine two-state switch, methylene blue single hue at decreasing intensity | **new build** | authored; no RGB tween between hues |
 | `DiffusionField` `tubing-pores`, `agar-open`; `WaterPotentialModel` `tubing-leak` | **new states** on existing models | 4.2.1a base |
-| `meniscus-height`, `blue-zone-diameter` | **new build** | Topic 3 `RateGraph` conventions |
+| `meniscus-height` (unnumbered, labelled *qualitative schematic; not measurements*, no reading crosses), `blue-zone-diameter` | **new build** | Topic 3 `RateGraph` conventions |
 | `FluidMosaicMembrane`, `TransportProteinSet`, `WaterBathRig` | reuse | 4.1.1-2, 4.2.1a, Topic 3 |
-| Potato-slice thumbnail (Beat 1), objectives pictograms (tied bag, rising column, spreading circle, stopwatch, touch point, magnifier), sieve pictogram, safety tags, forms surface, schematic agar cubes A–C, beyond-the-mark-scheme panel, reject card | new card content; shared surfaces | authored; no photograph, no generated image, no Cambridge artwork |
+| Potato-slice thumbnail (Beat 1), objectives pictograms (tied bag, rising column, spreading circle, stopwatch, touch point, magnifier), sieve pictogram, safety tags, forms surface, schematic agar cubes A–C (1, 2, 3 cm), S21/21 setup thumbnail (labelled as that paper's setup), reject card | new card content; shared surfaces | authored; no photograph, no generated image, no Cambridge artwork |
 | Micrographs, photographs, real footage | none | — |
 
 ---
@@ -543,15 +537,15 @@ All five together save 56 words (28 s), giving 1,234 words = 10:17, still 0:47 o
 ## Plan interpretations
 
 1. **Thirteen beats for three investigations.** The plan's 13 teaching beats are used as: hook/context, objectives, then four Visking-diffusion beats (material and tests; filling and content tests; blanks and first contact; sampling and reading) plus one interpretation beat, two osmometer beats (set-up and first reading; readings, explanation and limits), two agar beats (set-up; measurement and limits), recap and exam close. The osmometer's limits share a beat with its explanation to keep within 13.
-2. **"Separate matched vessels per sampling time"** (MF5) is implemented as three matched set-ups, each with its own bag and its own stopwatch started at its own first contact, each tube sampled once. Sampling times (3, 10, 20 min), bath volume (30 cm³ after a 2 cm³ blank) and 5 min heating are our choices, stated in Dataset 1; the bath volume was chosen so the filled bag is submerged (worked check).
+2. **"Separate matched vessels per sampling time"** (MF5) is implemented as three matched set-ups, each with its own bag and its own stopwatch started at its own first contact, each tube sampled once. Sampling times (3, 10, 20 min), bath volume (33 cm³, nominal 30 cm³ after a 3.0 cm³ blank aliquot), 3.0 cm³ sample aliquots and 5 min heating are our choices, stated in Dataset 1 following the round-one check's sampling contract; the ideal submersion estimate is worked, but actual bag fit is to be confirmed on the filled, sealed bag.
 3. **Initial positive tests** (MF5) are shown on the mixture before any bag meets water; the plan's starch-alone Benedict's check is shown as the interference check.
-4. **Osmometer control bag of distilled water** is an addition not named in the plan: it gives "allow for initial bag displacement/stretching" (MF5) a visible reference. It costs one sentence.
-5. **First reading at 1:00 after immersion; readings every 2 min to 21 min.** MF5 says "Select and state the observation interval from a workable setup, rather than inventing a meniscus trace"; the brief asks for illustrative data with realistic readings and publishes the `meniscus-height` configuration. The interval is stated before the data, the values are labelled *our illustrative data*, the trace is listed as UNVERIFIED item 4, and the longer-term behaviour is a separately captioned schematic, not data.
-6. **Working concentrations** not fixed by the plan: iodine "dilute, as used for the starch test", Benedict's "as supplied", methylene blue **0.1%**, agar **2%**, capillary bore **1.0 mm**. Hazard tags use the syllabus p.58 codes for the listed solutions and precautionary handling for the dye; no hazard classification is invented beyond those codes.
+4. **Osmometer control bag of distilled water** is an addition not named in the plan: a reference for rig drift, stated with its limit (it cannot reproduce the stretching caused by osmotic inflow). It costs one sentence.
+5. **Osmometer readings (revised after round-one check M1).** The amended plan's "Select and state the observation interval from a workable setup, rather than inventing a meniscus trace" takes precedence (SHARED-SPECS). The first draft's invented 48–105 mm trace, its 1–21 min interval and the 51/52 mm control series are withdrawn. Until a recorded run exists, the osmometer and `meniscus-height` are a qualitative schematic with no numerical readings; the narration gives the procedure (first reading after immersion at its actual elapsed time; readings at stated elapsed times on the same fixed ruler; interval chosen from a trial of the actual apparatus). This is an evidence dependency before clearance.
+6. **Working concentrations** not fixed by the plan: iodine "dilute, as used for the starch test", Benedict's "as supplied", methylene blue **0.1%**, agar **2%**, capillary bore **1.0 mm**. Syllabus p.58 codes are shown as materials-list codes; each working solution's classification follows the identified supplier's current safety information; the builder's reagent list must name the actual iodine working concentration and the Benedict's product/formulation. No hazard classification is invented.
 7. **Model extensions.** `DiffusionField` gains `tubing-pores` and `agar-open`; `WaterPotentialModel` gains `tubing-leak`, because the 4.2.1a base state's membrane passes only water and Visking also passes sucrose (MF5; the plan's "do not claim sucrose is excluded"). Starch is drawn as a coiled chain of linked orange hexagons (glucose-token colour) so it is not confused with the green carbohydrate chains of membrane glycoproteins; dye tokens are deep-blue squares so they are not confused with pale blue water circles.
 8. **Tubes numbered 1–3**, not lettered, so they are not confused with S21/22's cubes A, B, C in the close.
-9. **Exam close.** S21/22 Q4(c) is used, as the plan check permits, "as an agar-diffusion application"; the mark-scheme answer (A → B → C) comes first; "why size matters" is handed to 4.2.3-4 by label; the paper's universal indicator (blue, red in acid) is kept on its own side of a divider from our methylene blue; the real-world extra about colour boundaries sits on a dashed **beyond the mark scheme** panel. Cubes A and B are drawn smaller than C as the credited order implies, captioned as a schematic reconstruction (UNVERIFIED item 3).
-10. **Reject card.** No examiner reject exists for this outcome, so the card is our wording contrast on the plan's author-flagged trap "Visking tubing is a model of the cell membrane", captioned as such; no badge.
+9. **Exam close.** S21/22 Q4(c) is used, as the plan check permits, "as an agar-diffusion application"; the mark-scheme answer (A → B → C) comes first; "why size matters" is handed to 4.2.3-4 by label; the paper's universal indicator (blue, red in acid) is kept on its own side of a divider from our methylene blue; the real-world extra about colour boundaries sits on a dashed **beyond the mark scheme** panel. Cubes are drawn at the Table 4.1 sides (1, 2, 3 cm), verified by the round-one check (UNVERIFIED item 3 resolved). The beyond-the-mark-scheme sentence was cut under the check's runtime ruling. The Visking part now uses the supplementary S21/21 Q3(a), whose sucrose-impermeable tubing is kept separate from our rig.
+10. **Reject card.** No examiner reject exists for this outcome. The round-one check ruled that "Visking tubing is a model of the cell membrane" is a legitimate limited model statement, so the card now contrasts the model's limits (✗ bilayer and transport proteins / ✓ partial permeability through pores), captioned as our constructed wording contrast; no badge.
 11. **Handle.** *A sieve* is our choice (the standard textbook image for dialysis tubing), converted at once into the partially-permeable sentence and bounded by the not-a-cell-membrane contrast.
 12. **Hook.** Ours; the VIDEO-STRUCTURE list has no practical hook for this outcome. It is answered in Beat 13 ("You watched what they did").
 13. **Glucose sentence (MF2)** is shortened to its first clause ("glucose is polar, does not cross the hydrophobic core readily, and needs a transport protein"); the facilitated-diffusion detail is 4.2.1a's and is shown only as the carrier motion.
@@ -561,25 +555,49 @@ All five together save 56 words (28 s), giving 1,234 words = 10:17, still 0:47 o
 
 ## Validator run
 
-`python3 work/006/validate_storyboard.py storyboards/topic-04/4.2.2a/STORYBOARD.md`
+`python3 work/006/validate_storyboard.py storyboards/topic-04/4.2.2a/STORYBOARD.md` (after the round-one revision)
 
 ```
 == storyboards/topic-04/4.2.2a/STORYBOARD.md
 beat  words  cues maxgap  status
-   1     88    10     23  ok
-   2     47     4     16  ok
+   1     79    10     19  ok
+   2     47     5     16  ok
    3     92    11     13  ok
    4    107    15     14  ok
    5     85    10     14  ok
-   6     93    11     19  ok
-   7    109    12     18  ok
-   8    108    13     12  ok
-   9    131    18     17  ok
+   6     91    13     14  ok
+   7    128    14     18  ok
+   8    107    13     12  ok
+   9    153    20     13  ok
   10     98    11     18  ok
   11    122    15     20  ok
-  12     87    11     16  ok
-  13    123    14     18  ok
-TOTAL words 1290  cues 155  runtime at 120 wpm 10:45.0  beats 13  failing beats 0
+  12     98    12     16  ok
+  13    122    15     16  ok
+TOTAL words 1329  cues 164  runtime at 120 wpm 11:04.5  beats 13  failing beats 0
 ```
 
 No MISSING SECTION or CITATION lines.
+
+## CHECK RESPONSE (round 1)
+
+Check: `scratchpad/r1/4.2.2a/CHECK.md` (NOT CLEARED; reviewed SHA-256 `0ff74b57…7e38a84`, which matched the pre-revision file).
+
+| ID | Status | What changed |
+|---|---|---|
+| M1 — invented osmometer readings; column volume vs net entry | applied | Dataset 2's numeric trace and 1–21 min interval replaced by the **"Osmometer evidence pending."** block verbatim (also in `osmometer` state). 48/57/65/72/…/105 and control 51/52 removed from the models, graph, Beats 8, 9, 12 and 13, and from scope and assets. `meniscus-height` is now unnumbered, labelled **qualitative schematic; not measurements**, with no crosses or elapsed-time positions. Beat 8's final sentence is now exactly: "The meniscus can shift as the bag settles, so take the first reading after immersion and record its actual elapsed time; do not call a mark made beforehand a zero-time reading." Beat 9's first three sentences are now exactly "Record the meniscus at stated elapsed times, using the same fixed ruler. Choose the observation interval from a trial of the actual apparatus. Compare with a matched bag containing distilled water, while recognising that this control cannot reproduce the stretching caused by osmotic inflow.", cued to the reading marker, the fixed ruler and the labelled control. Bore sentence replaced exactly ("With a uniform bore, a rise in height means more liquid in the capillary. It does not measure all the water entering, because the bag can stretch and sucrose can leave."). Action 6 tag: **"uniform bore: height change tracks capillary-column volume change"**. "0.045 cm³ entered" and the 0.9% inference removed; the arithmetic survives only in the author's audit, labelled exactly **"hypothetical geometric example only: capillary volume increase, not measured net water entry"**. Real-world readout cell replaced verbatim. The unconditional transient claim is replaced in the spine, Beat 9 and Beat 12 by "a transient rise is possible; the later behaviour depends on sucrose leakage, bag mechanics and the rising liquid column". The dashed curve is labelled **one possible qualitative course; not data; no times**. The possible rise is kept as motion. |
+| M2 — blank and sample volumes, carry-over | applied | The three-paragraph sampling contract is inserted verbatim in `VKTubingRig` and applied to the `content-tests`/`blank`/`sample` states, Beats 4–6 and Dataset 1: 20 cm³ mixture (10 + 10); 33 cm³ baths; 3.0 cm³ blank and sample aliquots into clean labelled vials; 2.0 cm³ to Benedict's, a separate clean dropper for iodine, the rest discarded; no rinse-and-reuse pipette. Beat 6's sampling sentences are replaced exactly ("At three minutes, collect a three-cubic-centimetre sample from tube one into a clean labelled vial, away from the bag. Use two cubic centimetres for the Benedict's test and a separate drop for iodine. Tubes two and three are sampled the same way at ten and twenty minutes."), with cues remapped. Labels now read **"withdrawal started at 3:00 / 10:00 / 20:00"** and the stopwatch runs on through collection. The initial contents tests use the same 3.0 cm³ division. The Benedict's-heating paragraph is added verbatim: colours develop during heating, and the Beat 6 colour-name cues only highlight developed results. First-contact immersion clocks are preserved. |
+| M3 — agar drop event, liquid depth, two-direction measurement | applied | Beat 10 actions 6–7 are replaced by the given text verbatim, split across the two items, and the `dye` state is aligned: the stopwatch starts on the frame the first drop contacts the well and is not reset. Every "fill the well" / "well full" is replaced by the 0.15 cm³ / **about 3 mm** partly-filled-well direction, in the `dye` state, Beat 10 action 7, Beat 11 action 1 and Dataset 3 (worked: 0.15 ÷ 0.503 = 0.30 cm). The measuring-rig paragraph is inserted verbatim in `measure`. Ruler-under-dish is replaced by white millimetre-grid backing with two fixed perpendicular scales in the parts, Beat 10 action 4, Beat 11 action 4, Dataset 3, real-world and assets. The 8 mm open circle and the single-hue edge are kept. *Interpretation:* Beat 10's narration phrase "over a ruler" is left unchanged, because the check did not touch it and it remains true of the scaled backing. |
+| M4 — reject card; resolved exam evidence | applied | The reject card is replaced verbatim (✗ bilayer and transport proteins / ✓ models partial permeability through pores; caption *Our constructed wording contrast about the model's limits; not an examiner-reported error or a mark-scheme reject.*). Its narration is now exactly "The reject card: Visking models partial permeability through pores, not a phospholipid bilayer with transport proteins." No badge. The cube caption is replaced verbatim (Table 4.1: 1, 2, 3 cm). UNVERIFIED 1 is replaced with the RESOLVED text verbatim; UNVERIFIED 2 and 3 are marked resolved with the check's page wording. The Beat 13 Visking opening is replaced by the check's two sentences, and Visual 2–3 add the source/tariff row (S21/21 Q3(a), QP pp.6–7 / MS p.10, 3 marks), a labelled thumbnail of that distinct setup, the paraphrased water-potential answer, and a divider keeping its sucrose-impermeable stipulation away from `tubing-leak`. The citations table gains row 6 (description PDF-CHECKED by the round-one check), and the spine and scope ledger are updated. |
+| M5 — Dataset 1 inferences and Beat 7 readout | applied | The ceiling bullet is replaced verbatim by the **"Mass-balance illustration, not timing evidence"** bullet. Beat 7's first sentence is replaced exactly ("In these illustrative results, later outside samples give a stronger reducing-sugar test, while starch is not detected by iodine. The contents and blank tests support glucose crossing the tubing; these colours do not give an exact concentration or total mass transferred."), with new cues. The tag is now **"stronger outside reducing-sugar result at later sampled times: illustrative"**. The method note **"Repeat the complete series with fresh independent bags before generalising the time trend."** is added in Beat 7 and Dataset 1. The colour-order bullet is bounded to concentration, not mass, with no replication claim. |
+| M6 — pictograms on the objectives' opening frame | applied | Beat 2's opening visual direction is replaced verbatim; action 1 now reveals line 1 beside the already-visible icons. |
+| S1 — working-solution hazards | applied | The methylene tag is replaced verbatim. The Benedict's and iodine codes are now labelled materials-list codes, with classification deferred to the identified supplier. The builder's reagent list must record the iodine working concentration and the Benedict's product/formulation, which are flagged as not fixed here. Plan interpretation 6 is updated. |
+| S2 — bag geometry | applied | "so the filled part is under water" is replaced by the check's wording, in Dataset 1 and in Handling. "air-free headspace" is removed; spare tubing is collapsed before tying. |
+| S3 — bath volume | applied | Vessel capacity (*250 cm³ beaker*) is now labelled separately from the actual water volume, depth and headroom, which are to come from the workable setup (osmometer state, Beat 8, Dataset 2). |
+| S4 — control uncertainty | not applied (superseded) | The numerical control series is withdrawn under M1, so the sentence about "one 1 mm scale division" would describe data that no longer exist. The ±1 mm claim is removed with the series. |
+| S5 — clock count | applied | "four" is replaced by "investigation" in the Beat 12 recap action and the absolutes sweep. Each first-contact mark is local to its own experiment, and the Benedict's heating interval is explicitly not a diffusion/osmosis start. |
+| S6 — dye vs indicator boundaries | not applied (moot) | The beyond-the-scheme sentence and panel were cut under the runtime ruling (cut 1: TAKE). The paper's indicator is shown only with labelled start/result swatches (no invented hue sequence), behind the existing divider. |
+| S7 — preview/context ownership | applied | The potato thumbnail is now labelled *plant tissue; quantitative potato investigation: 4.2.5*. The first-frame rigs are tagged *preview; schematic*. |
+| Runtime ruling | applied | Cut 1 (Beat 13 beyond-scheme sentence, 25 words, with its panel) and cut 2 (Beat 1 glucose sentence, 9 words; magnifier moved to *far too small to see*) taken. Cuts 3–5 not taken, as ruled. The word table, beat windows and "Length, honestly" are recounted: **1,329 words = 11:04.5**, 1:34.5 over, because of the mandated rewrites. |
+| Typicality/absolutes | applied | The sweep is re-run on every changed sentence (Beats 1, 6, 7, 8, 9, 12, 13), and the typicality rules paragraph is updated. |
+
+New validator line: `TOTAL words 1329  cues 164  runtime at 120 wpm 11:04.5  beats 13  failing beats 0`
