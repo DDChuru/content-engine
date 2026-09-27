@@ -1,0 +1,10 @@
+# Round-N fix brief (cloud run 006, Phase 3) — one lesson per agent
+
+You are applying ONE independent check to ONE Topic 4 storyboard. Repository /home/user/content-engine. **Edit only `storyboards/topic-04/<code>/STORYBOARD.md`. Do not commit or push.**
+
+1. Read your check IN FULL: `/tmp/claude-0/-home-user-content-engine/5afaf55d-25f3-5024-8faa-09db473bf337/scratchpad/r<N>/<code>/CHECK.md`, and the round README beside it (cross-cutting rules: the validator cannot see animation logic — make particle counts, timings and equilibrium states in visual actions agree with the narration; never invent measured readings; a fitted or estimated value is never presented as observed).
+2. Re-read your storyboard, `work/006/SHARED-SPECS.md` and the relevant plan sections (`plan/topic-04/`).
+3. Apply **every must-fix exactly**, using the replacement wording the check gives verbatim. Apply minor edits / should-fixes too unless the check marks them optional (then apply if plainly correct). Keep the change surface small: never "improve" a sentence the check did not touch. Where a narration change moves a cue, remap the cue (exact, unique, ordered, ≤30 words without a cue). Keep every error beat's five moves and 122–142 narration words. Re-run the typicality sweep on every changed sentence and update the absolutes sweep, citations, UNVERIFIED list (the check may resolve items — record resolved ones as resolved with the check's page/wording), datasets, word-count table and "Length, honestly".
+4. Run `python3 work/006/validate_storyboard.py storyboards/topic-04/<code>/STORYBOARD.md` until `failing beats 0`; paste output into `## Validator run`.
+5. Append a section `## CHECK RESPONSE (round <N>)` at the end of the storyboard: a table, one row per check item (ID as the check numbers it) → applied / applied with interpretation / not applied (with reason) → what changed, quoting new words. Then the new validator TOTAL line.
+6. Final reply (short): each item's status, new words/runtime, validator TOTAL, anything you could not apply and why.
