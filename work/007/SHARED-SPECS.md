@@ -187,7 +187,7 @@ typically the longest part*. A travelling marker; a `ChromosomeModel` inset (one
 an unreplicated extended chromosome; S shows replication progressing; G2 shows the replicated extended
 state. Within M, the inset condenses, aligns, separates at anaphase and decondenses at telophase. C shows
 division of the cytoplasm around the two already formed chromosome sets. Separation must not first occur
-in the C arc. No G0 arc, no checkpoint marks, no proteins.
+in the C arc. No G0 arc, no checkpoint marks, no proteins. **Added by the owner, 5.1.3 (phase-2 review):** named M sub-states `m-condense`, `m-align`, `m-separate`, `m-decondense`; from `m-align` the inset carries its own minimal spindle elements (two small pole marks, thin spindle-fibre lines to the centromere, a faint dashed equator) so the wheel can show spindle formation and poleward movement before `MitosisCellModel` exists. The full spindle belongs to `MitosisCellModel`.
 
 ### `DNAContentGraph` (published by 5.1.3)
 The per-cell graph is the teaching trace. y: **DNA mass per cell / arbitrary units** (ticks 0, 1, 2
@@ -331,7 +331,7 @@ storyboards call it *the Topic 1 light-microscope model*.
 
 ## 8. Error beats and budgets
 
-| Code | Budget | ≈ words at 120 wpm | Teaching beats | Error beats (badge) |
+| Code | Budget | ≈ words at 120 wpm | Teaching beats (plan outcome headers give teaching + error totals) | Error beats (badge) |
 |---|---:|---:|---:|---|
 | 5.1.1 | 6:00 | 720 | 11 | none |
 | 5.1.3 | 8:30 | 1,020 | 12 | E5-01 (EXAM CONTRAST), E5-02 (EXAM CONTRAST — an ignore line) |
@@ -355,8 +355,8 @@ refuses…'; for EXAM CONTRAST: 'Here is an answer that would lose the mark…')
 why tempting, why it loses the mark — cite the basis line; cue-synced rings/underlines on the offending
 words), then the `> *(correction)*` marker line; (5) **correct in place**, marker clears only on the
 completed correct frame. Whole beat **65–75 s ≈ 130–150 words**, never thinned. The badge's basis is
-stated on the panel in small type (COMMON MISTAKE: *basis: mark-scheme reject line, w22_23 Q4(a)(iii),
-MS p15, PDF-VERIFIED*; EXAM CONTRAST: *basis: a real question; no examiner report on how often* — for
+stated on the panel in small type, naming that beat's own source (COMMON MISTAKE, e.g. E5-03: *basis: mark-scheme
+reject line, w22_23 Q4(a)(iii), MS p15, PDF-VERIFIED*; E5-05: *… s21_22 Q1(a)(i), MS p7 …*); EXAM CONTRAST: *basis: a real question; no examiner report on how often* — for
 E5-02 add *the scheme's ignore line*). A lesson with no assigned error beat has NO badge beat (it may have
 a captioned reject card). Wrong propositions are written, never spoken as claims; a wrong word is named
 only as the word under discussion. Never claim how often candidates make an error.
