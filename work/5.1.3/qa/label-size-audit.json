@@ -1,10 +1,12 @@
 {
- "rule": "no visible text < 17 px in the delivered 1920x1080 frame; no two visible text boxes overlap",
+ "rule": "EVERY frame: no visible (opacity > 0.02) text < 17 px in the delivered 1920x1080 frame; no two visible text boxes overlap",
+ "everyFrame": true,
+ "visibleOpacity": 0.02,
  "overlapFailures": 0,
  "overlaps": [],
  "brandingScale": 0.8802,
  "minSourcePx": 19.31,
- "framesChecked": 1466,
+ "framesChecked": 15955,
  "smallestEffectivePx": 17.6,
  "failures": 0,
  "list": []

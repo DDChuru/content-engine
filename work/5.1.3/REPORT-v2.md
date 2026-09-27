@@ -1,36 +1,3 @@
-# 5.1.3 The mitotic cell cycle: copy first, then share — REPORT **v3** (cloud run 009g fix pass)
-
-**Model:** claude-opus-5-5 · branch `cloud/009g-fix-3a72s8` (from `cloud/009f-fix-4t1jp6`) · 27 Sep 2026 (UTC) · v2 report: `REPORT-v2.md` (unchanged below)
-**Bunny v3 (review):** guid `a869c16c-8337-49ae-a27d-c44751408203`, title "REVIEW 5.1.3 v3 The mitotic cell cycle: copy first, then share", no collection; uploaded 2026-09-27T16:52:13Z; **status 4 at 2026-09-27T16:55:18Z** (≈3 min); 240p–1080p, length 543 s. v1/v2 guids untouched.
-
-## Review findings (5.1.3-V2-REVIEW, CHANGES) → fixes
-| Finding | Fix |
-|---|---|
-| P2 B8 04:12.8: "C — cytokinesis…" long label and "each daughter cell can go round again" cross-fade on one baseline | `Beat08.tsx`: the incoming tag waits 0.35 s — the wheel's long label (0.3 s fade from `next`) is gone before it starts. |
-| P2 B10 05:50.4: quote tabs overprint the seen/copied comparison panels | `Beat10.tsx`: tabs = `fi(a('tabs') − 0.35, 0.4)`; the comparison panels (`between(…, tabs)`, 0.35 s) have faded out first. |
-| Sampled audit missed the crossfades | `verify-label-size.cjs` now checks **EVERY frame** (15,955) and counts text as visible from opacity > 0.02 (was ≥ 0.3), for both the ≥ 17 px rule and the text-box overlap rule. Proven on the v2 source: it fails B8 f7430 and B10 f10357 (7 pairs); passes on v3. It also caught two more v2 transitions, fixed: B4 graph slid in from x 1100 (its right-hand labels off the frame) → now slides up into place; B9 hook card vs "Written properly" strip (7×16 px) → card fades in 0.25 s, strip after. |
-| NEW rule: exam questions in our own words — no on-screen paper/session/year | Removed every on-screen paper code, page and verification tag (B10, B12, B14 panels, tabs, citations): e.g. "basis: two real exam questions, shown here in our own words…", tabs "one scheme — …" / "another scheme — …", "the mark scheme's ignore line: “I ref. to replication or cytokinesis”" (the scheme's words stay quoted exactly), forms rows "our framing of a real question, 1 mark". Captions had none. Narration not re-voiced. |
-
-## Phases (UTC)
-setup 16:10–16:20 · fixes + every-frame audit 16:20–16:32 · render 14 beats 16:32–16:38 · finish/verify 16:38–16:41 · sheets/bookends 16:42–16:47 · branding 16:44–16:51 · upload 16:52 → status 4 16:55.
-
-## Master / branded (v3)
-- master `5.1.3-mitotic-cell-cycle.mp4`: 531.833 s, 15,955 frames, sha256 `219e782c76960ac807aa525b32482795b5d7b73b6877b87db045ade9168444ff` (timeline and audio byte-identical to v2; no ElevenLabs characters used)
-- branded `5.1.3-branded-v3.mp4`: 543.033333 s, sha256 `d6f6dc6d203b11e72ce68687636cc2fb5f64d2bacf2dd6bd3ca1ac5de177d1d7`; `verify_delivered.py`: video end 543.033 ≥ audio end 542.862 (margin 0.171 s), full decode 0 errors; `qa/branded-mid-v3.jpg`.
-
-## Verification (master) — all PASS
-1 ffprobe 531.833 · 2 video ≥ audio · 3 decode clean · 4 cues 150/150/150 · 5 AAC packets identical (24,884) · 6 final word "cells" headroom 3.05 s · 7 holds −91 dB (B9 hook 2 s, B10 4 s, B12 4 s, END) · 8 boundary holds 0 · marker audit every frame: EXAM CONTRAST B10/B12 only, 4,207 marked / 11,748 unmarked, 0 mismatches · **label size + overlap, every frame: 15,955 frames, min 17.60 px, 0 failures, 0 overlaps** · text-only controls PASS, longest text-only 0.5 s, 0 untagged.
-
-## Count audit (encoded master, frame before | event) — unchanged event frames
-end S f3863: 4 · in progress → 4 (8 sister chromatids) · 8 · centromeres divide f5708: 4·8 → 8·8 · new nuclei f6073: + each new nucleus 4·4 · cytokinesis f6905 (checked in the v3 encode): connected outline, whole cell 8·8 + 4·4 → two cells, each daughter cell 4·4, graph drops.
-
-## Sheets
-Per-beat stills for B4/8/9/10/12/14 and the 10 encoded sheets looked at; B12 basis line shortened to one line. No other defect.
-
-## Shared models — unchanged from v2, byte-identical to `work/t5-shared` (see SHARED.md). Images: none.
-
----
-
 # 5.1.3 The mitotic cell cycle: copy first, then share — REPORT **v2** (cloud run 009f fix pass)
 
 **Model:** claude-opus-5-5 · branch `cloud/009f-fix-4t1jp6` (from `cloud/009-5.1.1-to-5.1.4-qls6vy`) · 27 Sep 2026 (UTC) · v1 report: `REPORT-v1.md`

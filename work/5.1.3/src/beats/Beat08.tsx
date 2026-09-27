@@ -38,7 +38,7 @@ export default function Beat08(s: any) {
       <Tag x={gg.gx(1.0) - 16} y={gg.gy(1.5)} text="2 units ÷ 2 cells = 1 unit each" size={20} anchor="end" opacity={fi(a('half'), 0.4)} />
       {hl > 0 && <rect data-role="decor" x={898} y={660} width={934} height={66} rx={10} fill={T5.ring} opacity={0.4 * hl} />}
       {pulse(a('d46'), 1.4) > 0 && <rect data-role="decor" x={890} y={745} width={950} height={40} rx={10} fill={T5.ring} opacity={0.35 * pulse(a('d46'), 1.4)} />}
-      <Tag x={W.cx} y={290} text="each daughter cell can go round again" size={20} anchor="middle" opacity={fi(a('next'), 0.4)} />
+      <Tag x={W.cx} y={290} text="each daughter cell can go round again" size={20} anchor="middle" opacity={fi(a('next') - 0.35, 0.4)} />
     </Stage>
   );
 }

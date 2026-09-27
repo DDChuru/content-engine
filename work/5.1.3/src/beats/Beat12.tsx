@@ -30,7 +30,7 @@ export default function Beat12(s: any) {
   const MX = 1660, MY = 780;
   const sep = a('move') >= 0 ? 1 : 0;
   const tab = fi(a('tab'), 0.4);
-  const tabQ = 'w20_21 Q1(a)(iii), MS p6: “I ref. to replication or cytokinesis”';
+  const TABP = 'the mark scheme’s ignore line: “', tabQ = TABP + 'I ref. to replication or cytokinesis”';
   return (
     <g>
       <g opacity={lerp(0.4, 1, wheelLit)}>
@@ -41,8 +41,8 @@ export default function Beat12(s: any) {
       <Tag x={390} y={270} text="the question's scope: M" size={18} anchor="middle" opacity={fi(a('scope'), 0.4)} />
       <Tag x={530} y={860} text="outside M" size={16} anchor="middle" opacity={fi(a('outS'), 0.4)} />
       <Tag x={470} y={320} text="outside M" size={16} anchor="middle" opacity={fi(a('outC'), 0.4)} />
-      <Caption x={PX} y={214} size={15} maxW={PW} weight={600} fill={C.muted} text="basis: a real question; no examiner report on how often; the scheme's ignore line. w20_21 Q1(a)(iii), QP p2 / MS p6; 2 marks, any two credited points" />
-      <QHeader x={PX} y={250} w={PW} label="OUR FRAMING" text={header} size={27} opacity={fi(a('q'), 0.4)} src="our framing of w20_21 Q1(a)(iii); the paper's command word is suggest (PDF-VERIFIED, round-1 check)"
+      <Caption x={PX} y={214} size={15} maxW={PW} weight={600} fill={C.muted} text="basis: a real exam question, in our own words; no examiner report on how often; 2 marks, any two credited points" />
+      <QHeader x={PX} y={250} w={PW} label="OUR FRAMING" text={header} size={27} opacity={fi(a('q'), 0.4)} src="our framing of a real question; the paper's command word is suggest"
         hi={a('scope') >= 0 ? <Underline x1={hx} x2={hx + textW('mitosis', 27, 700)} y={250 + 44 + 27 + 8} p={fe(a('scope'), 0.5)} color={T5.ring} /> : null} />
       <g opacity={fi(a('card'), 0.4)}>
         <rect data-role="decor" x={PX} y={cy - 50} width={PW} height={fix ? 160 : 90} rx={12} fill="#FFFFFF" stroke="#C9BFA8" strokeWidth={2} />
@@ -57,11 +57,11 @@ export default function Beat12(s: any) {
         <Txt x={cx0} y={cy + 56} size={WS} weight={800} fill={GOOD}>✓</Txt>
         <Caption x={cx0 + WS * 1.05} y={cy + 56} size={27} maxW={PW - 80} weight={600} fill={GOOD} text={right} />
       </g>}
-      <Txt x={PX} y={cy + 140} size={15} weight={600} fill={C.muted} italic opacity={fi(a('fix2'), 0.4)}>Lesson model answer; all its points are supported by W20/21 Q1(a)(iii), MS p6; maximum two marks.</Txt>
+      <Txt x={PX} y={cy + 140} size={15} weight={600} fill={C.muted} italic opacity={fi(a('fix2'), 0.4)}>Lesson model answer; all its points are supported by that question's mark scheme; maximum two marks.</Txt>
       <SideNote x={PX} y={620} text="both use energy; both are in the cycle" size={22} color={INK} opacity={between(a('energy'), a('tab'))} />
       {tab > 0 && <g opacity={tab < 1 ? tab : undefined}>
-        <QuoteTab x={PX} y={640} w={640} size={20} quote={tabQ} source="PDF-VERIFIED (plan check A07)" accent />
-        <Underline x1={PX + 18 + textW('w20_21 Q1(a)(iii), MS p6: “', 20, 600)} x2={PX + 18 + textW(tabQ, 20, 600)} y={640 + 36} p={fe(a('ign'), 0.6)} color={T5.ring} />
+        <QuoteTab x={PX} y={640} w={640} size={20} quote={tabQ} source="quoted from the mark scheme" accent />
+        <Underline x1={PX + 18 + textW(TABP, 20, 600)} x2={PX + 18 + textW(tabQ, 20, 600)} y={640 + 36} p={fe(a('ign'), 0.6)} color={T5.ring} />
       </g>}
       {a('bound') >= 0 && <g opacity={fi(a('bound'), 0.4)}>
         <rect data-role="decor" x={PX} y={750} width={640} height={70} rx={10} fill="#EAF0F8" stroke="#B3C9E7" strokeWidth={2} />

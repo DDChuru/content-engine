@@ -1,5 +1,7 @@
 # 5.1.3 The mitotic cell cycle · BUILD PROGRESS (handover)
 
+**v3 (run 009g, 27 Sep, branch `cloud/009g-fix-3a72s8`): DONE — B8/B10 crossfade collisions fixed, every-frame label audit, on-screen paper references removed; uploaded "REVIEW 5.1.3 v3 …", Bunny status 4 (guid a869c16c-…); see REPORT.md (v3 on top).**
+
 **v2 (run 009f, 27 Sep, branch `cloud/009f-fix-4t1jp6`): DONE — review fixes applied, re-rendered, verified (incl. label-size/overlap audit and delivered-file check), re-branded, uploaded as "REVIEW 5.1.3 v2 …" and at Bunny status 4; see REPORT.md (v2) — the table below is the v1 build.**
 
 

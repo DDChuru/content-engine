@@ -1,12 +1,14 @@
 // Label-size audit (run 009f, review 27 Sep): NO text under 17 px in the DELIVERED 1920x1080 picture, anywhere.
-// Every 0.5 s (and at every cue frame) the frame's SVG is parsed as a tree; every visible <text>/<tspan> with glyphs gets
+// Run 009g: EVERY frame of the lesson is checked (was: every 0.5 s + cue frames, which missed the middle of cross-fades),
+// and text counts as visible from accumulated opacity > 0.02 (was ≥ 0.3): outgoing text must be GONE before incoming
+// text occupies its space. Each frame's SVG is parsed as a tree; every visible <text>/<tspan> with glyphs gets
 // its effective size = font-size (inherited) × the accumulated transform scale of its ancestors × the branding scale
-// (the lesson is composited into a 1690-px-wide slot: 1690/1920 = 0.8802). Visible = accumulated opacity ≥ 0.3.
+// (the lesson is composited into a 1690-px-wide slot: 1690/1920 = 0.8802). Visible = accumulated opacity > VIS (0.02).
 // Also: no two visible <text> boxes (brand-font metrics, full transforms) may overlap by > 3 px — crowded/colliding labels.
 // Exits 1 on any visible text below MIN (17) or any overlap. Writes qa/label-size-audit.json. Usage: node verify-label-size.cjs [beat…]
 const P = __dirname;
 process.env.FONTCONFIG_FILE = P + '/fonts/fonts.conf'; process.env.XDG_CACHE_HOME = P + '/render-cache';
-const MIN = 17, BRAND = 1690 / 1920;
+const MIN = 17, BRAND = 1690 / 1920, VIS = 0.02;
 const {parse} = require('./verify-text-only.cjs');
 const scaleOf = (tr) => {
   let k = 1;
@@ -49,8 +51,8 @@ function texts(svg) {
     const op2 = op * num(a.opacity, 1) * num(a['fill-opacity'], 1);
     if ((n.tag === 'text' || n.tag === 'tspan') && !defs) {
       const own = decode((n.children || []).filter((c) => c.tag === '#text').map((c) => c.text).join('')).trim();
-      if (own && op2 >= 0.3) out.push({text: own.slice(0, 60), eff: +(fs2 * k2 * BRAND).toFixed(2), src: +(fs2 * k2).toFixed(2)});
-      if (n.tag === 'text' && op2 >= 0.3) {
+      if (own && op2 > VIS) out.push({text: own.slice(0, 60), eff: +(fs2 * k2 * BRAND).toFixed(2), src: +(fs2 * k2).toFixed(2)});
+      if (n.tag === 'text' && op2 > VIS) {
         const full = decode(allText(n)); const w = width(full, fs2, wt2), x = num(a.x, 0), y = num(a.y, 0);
         if (full.trim()) {
           const x0 = an2 === 'middle' ? x - w / 2 : an2 === 'end' ? x - w : x;
@@ -82,8 +84,8 @@ if (require.main === module) {
   const {Lesson, stateAt} = require(P + '/' + (process.env.BUNDLE || 'render-cache/Lesson.cjs')), T = require('./timeline.json');
   const only = new Set(process.argv.slice(2).map(Number));
   const frames = new Set();
-  for (let f = 0; f < T.durationFrames; f += 15) frames.add(f);
-  for (const sc of T.scenes) for (const c of sc.cues || []) { const f = Math.round((c.t ?? c.time ?? c.start ?? 0) * 30); for (const d of [0, 30, 60]) if (f + d < T.durationFrames) frames.add(f + d); }
+  const STEP = +(process.env.STEP || 1);   // 1 = every frame (run 009g default; verify.py uses it); >1 only for quick worklists
+  for (let f = 0; f < T.durationFrames; f += STEP) frames.add(f);
   const bad = new Map(), clash = new Map(); let n = 0, minSeen = 1e9;
   for (const f of [...frames].sort((a, b) => a - b)) {
     const beat = stateAt(f).sc.id; if (only.size && !only.has(beat)) continue;
@@ -97,7 +99,7 @@ if (require.main === module) {
   }
   const list = [...bad.values()];
   const cl = [...clash.values()];
-  const res = {rule: 'no visible text < 17 px in the delivered 1920x1080 frame; no two visible text boxes overlap', overlapFailures: cl.length, overlaps: cl.slice(0, 200), brandingScale: +BRAND.toFixed(4), minSourcePx: +(MIN / BRAND).toFixed(2), framesChecked: n, smallestEffectivePx: +minSeen.toFixed(2), failures: list.length, list: list.slice(0, 400)};
+  const res = {rule: 'EVERY frame: no visible (opacity > 0.02) text < 17 px in the delivered 1920x1080 frame; no two visible text boxes overlap', everyFrame: true, visibleOpacity: VIS, overlapFailures: cl.length, overlaps: cl.slice(0, 200), brandingScale: +BRAND.toFixed(4), minSourcePx: +(MIN / BRAND).toFixed(2), framesChecked: n, smallestEffectivePx: +minSeen.toFixed(2), failures: list.length, list: list.slice(0, 400)};
   if (!only.size) fs.writeFileSync(P + '/qa/label-size-audit.json', JSON.stringify(res, null, 1));
   console.log(`label size: ${n} frames, smallest effective ${minSeen.toFixed(2)} px, ${list.length} distinct failures`);
   for (const x of list.slice(0, 80)) console.log(`  B${x.beat} f${x.frame} ${x.eff}px (src ${x.src}) "${x.text}"`);

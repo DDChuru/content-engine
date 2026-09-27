@@ -62,7 +62,7 @@
   "8_boundaries": {
     "master": "/home/user/content-engine/work/5.1.3/5.1.3-mitotic-cell-cycle.mp4",
     "timeline": "/home/user/content-engine/work/5.1.3/timeline.json",
-    "master_bytes": 25636909,
+    "master_bytes": 25299077,
     "fps": 30.0,
     "frame_count": 15955,
     "boundaries_tested": 13,
@@ -122,14 +122,14 @@
   "unchangedOver15s": [],
   "valenceAudit": "not applicable: no covalent chemistry in Topic 5 (replication is schematic progress; no bond edits)",
   "labelSize": {
-    "rule": "no visible text < 17 px in the delivered 1920x1080 frame; no two visible text boxes overlap",
+    "rule": "EVERY frame: no visible (opacity > 0.02) text < 17 px in the delivered 1920x1080 frame; no two visible text boxes overlap",
     "brandingScale": 0.8802,
     "minSourcePx": 19.31,
-    "framesChecked": 1466,
+    "framesChecked": 15955,
     "smallestEffectivePx": 17.6,
     "failures": 0,
     "overlapFailures": 0
   },
   "note_2": "step 2 checks the MASTER; the delivered (branded) file is checked by verify_delivered.py (qa/delivered-verification.json)",
-  "sha256": "02a4c4b03dd3f07653ff4fc97ce808e5c265d10d19a42f8c609be3eabd31f740"
+  "sha256": "219e782c76960ac807aa525b32482795b5d7b73b6877b87db045ade9168444ff"
 }

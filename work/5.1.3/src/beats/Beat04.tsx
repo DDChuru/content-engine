@@ -19,7 +19,7 @@ export default function Beat04(s: any) {
     <Stage
       wheel={{labels: ALL, bracket: 1, caption: 1, marker: 1, pos, long: {g1: fi(a('g1'), 0.3)},
         inset: {on: fi(s.local, 0.5), nucleus: 1, cell: 1, cellGrow: fe(a('prot'), 3), rep: -1, cond: 0, ripple: a('thin') < 0 ? 0 : Math.min(2, a('thin') / 1.2)}}}
-      graph={graphIn > 0 ? {pen, opacity: graphIn, x: lerp(1100, 890, graphIn) as any} as any : null}
+      graph={graphIn > 0 ? {pen, opacity: graphIn, y: lerp(310, 250, graphIn) as any} as any : null}   // run 009g: slides up into place (the old slide from x 1100 put its right-hand text off the frame)
       rows={strip ? [{chrom: 4, dna: 4, comp: 'whole cell'}] : undefined}
       human={strip ? 'typical diploid human somatic cell: whole cell 46 chromosomes · 46 DNA molecules' : undefined}
       stripOp={fi(a('flat1'), 0.4)}

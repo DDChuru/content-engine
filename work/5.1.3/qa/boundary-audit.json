@@ -1,7 +1,7 @@
 {
   "master": "/home/user/content-engine/work/5.1.3/5.1.3-mitotic-cell-cycle.mp4",
   "timeline": "/home/user/content-engine/work/5.1.3/timeline.json",
-  "master_bytes": 25636909,
+  "master_bytes": 25299077,
   "fps": 30.0,
   "frame_count": 15955,
   "boundaries_tested": 13,
@@ -245,8 +245,8 @@
           "max_tile_mae": 0.0
         },
         "last_to_first": {
-          "mae": 4.245931625366211,
-          "changed_fraction": 0.07657118055555556,
+          "mae": 4.243810653686523,
+          "changed_fraction": 0.07626736111111111,
           "max_tile_mae": 29.98162841796875
         },
         "first_to_second": {
@@ -275,17 +275,17 @@
           "max_tile_mae": 0.0
         },
         "last_to_first": {
-          "mae": 15.865496635437012,
-          "changed_fraction": 0.3336935763888889,
+          "mae": 15.691219329833984,
+          "changed_fraction": 0.33079427083333335,
           "max_tile_mae": 75.75390625
         },
         "first_to_second": {
-          "mae": 0.011506075970828533,
+          "mae": 0.011442418210208416,
           "changed_fraction": 2.170138888888889e-05,
           "max_tile_mae": 0.3901909291744232
         },
         "second_to_third": {
-          "mae": 0.0018677663756534457,
+          "mae": 0.001705729286186397,
           "changed_fraction": 0.0,
           "max_tile_mae": 0.03240741044282913
         }
@@ -305,8 +305,8 @@
           "max_tile_mae": 0.0
         },
         "last_to_first": {
-          "mae": 11.42630386352539,
-          "changed_fraction": 0.27466145833333333,
+          "mae": 11.120950698852539,
+          "changed_fraction": 0.2710677083333333,
           "max_tile_mae": 42.60416793823242
         },
         "first_to_second": {
@@ -335,12 +335,12 @@
           "max_tile_mae": 0.0
         },
         "last_to_first": {
-          "mae": 15.539107322692871,
-          "changed_fraction": 0.3184635416666667,
+          "mae": 15.471282958984375,
+          "changed_fraction": 0.31733940972222224,
           "max_tile_mae": 75.75390625
         },
         "first_to_second": {
-          "mae": 0.012732927687466145,
+          "mae": 0.012753182090818882,
           "changed_fraction": 2.170138888888889e-05,
           "max_tile_mae": 0.3901909291744232
         },
@@ -365,9 +365,9 @@
           "max_tile_mae": 0.0
         },
         "last_to_first": {
-          "mae": 14.192383766174316,
-          "changed_fraction": 0.30633680555555554,
-          "max_tile_mae": 42.35706329345703
+          "mae": 14.121540069580078,
+          "changed_fraction": 0.30592447916666665,
+          "max_tile_mae": 42.357784271240234
         },
         "first_to_second": {
           "mae": 0.008415798656642437,
@@ -395,19 +395,19 @@
           "max_tile_mae": 0.0
         },
         "last_to_first": {
-          "mae": 10.617524147033691,
-          "changed_fraction": 0.26817708333333334,
+          "mae": 10.505425453186035,
+          "changed_fraction": 0.26634114583333335,
           "max_tile_mae": 35.34418487548828
         },
         "first_to_second": {
-          "mae": 0.08504340052604675,
-          "changed_fraction": 0.0004296875,
-          "max_tile_mae": 1.6018518209457397
+          "mae": 0.08060185611248016,
+          "changed_fraction": 0.00047743055555555554,
+          "max_tile_mae": 1.8424478769302368
         },
         "second_to_third": {
-          "mae": 0.08017650246620178,
-          "changed_fraction": 0.0009548611111111111,
-          "max_tile_mae": 1.5756654739379883
+          "mae": 0.07530960440635681,
+          "changed_fraction": 0.0008159722222222223,
+          "max_tile_mae": 1.8622686862945557
         }
       }
     }

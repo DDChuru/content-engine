@@ -23,7 +23,7 @@ export default function Beat09(s: any) {
   const K = ['lc', 'lm', 'ls'];
   const done = a('ls') >= 2.4 || a('written') >= 0;                // the third link has been said: completed mapping
   const link = (i: number) => a(K[i]) < 0 ? 0 : done ? 1 : (i < 2 && a(K[i + 1]) >= 0) ? 0.45 : fi(a(K[i]), 0.3);
-  const hk = [0, 1, 2].map(link), cardO = icons * (1 - fi(a('written'), 0.4));
+  const hk = [0, 1, 2].map(link), cardO = icons * (1 - fi(a('written'), 0.25));   // run 009g: card gone before the sentence strip comes in
   const glS = Math.max(fi(a('cl1'), 0.3) * (1 - fi(a('cl2'), 0.3)), hk[0] * cardO), glM = Math.max(fi(a('cl2'), 0.3) * (1 - fi(a('cl3'), 0.3)), hk[1] * cardO), glC = Math.max(fi(a('cl3'), 0.3) * (1 - fi(a('ident'), 0.3)), hk[2] * cardO);
   const ROWS = [['copy', 'replication, in the S phase', 'S arc · graph rise'], ['share', 'mitosis: copies shared between two new nuclei', 'M arc'], ['split', 'cytokinesis: the cytoplasm divides', 'C arc · graph drop']];
   const icon = (i: number, x: number, y: number) => i === 0
@@ -31,7 +31,7 @@ export default function Beat09(s: any) {
     : i === 1 ? <path d={`M${x - 18} ${y}H${x}L${x + 18} ${y - 13}M${x} ${y}L${x + 18} ${y + 13}`} fill="none" stroke={INK} strokeWidth={3} strokeLinecap="round" />
     : <><circle cx={x - 10} cy={y} r={11} fill="none" stroke={INK} strokeWidth={2.5} /><circle cx={x + 13} cy={y} r={11} fill="none" stroke={INK} strokeWidth={2.5} /></>;
   const why = fi(a('why'), 0.4), pinch = fe(a('why') - 0.5, 2);
-  const shown = typed(SENT, a('written') + 0.0, 16).length;
+  const shown = typed(SENT, a('written') - 0.25, 16).length;
   return (
     <Stage wheel={{labels: ALL, bracket: 1, caption: 1, marker: 1, pos: 1.05, lit: {s: glS * 0.8, m: glM * 0.8, c: glC * 0.8}, inset: ins}}
       graph={{pen: 1.12, hiRise: glS, hiM: glM, hiDrop: glC}} insetCap={1}>
@@ -47,7 +47,7 @@ export default function Beat09(s: any) {
           <Txt x={1100} y={y} size={24} weight={700} fill={INK}>{t}</Txt>
         </g> : null; })}
       </g>}
-      <SentenceStrip x={890} y={690} w={950} text={SENT} shown={shown} size={26} opacity={fi(a('written'), 0.4)} label="the sentence you write" />
+      <SentenceStrip x={890} y={690} w={950} text={SENT} shown={shown} size={26} opacity={fi(a('written') - 0.25, 0.3)} label="the sentence you write" />
       <Tag x={W.cx} y={W.cy + 120} text="same bands on both copies" size={20} anchor="middle" opacity={between(a('ident') - 0.4, a('why') - 2.5)} />
       {why > 0 && <g opacity={why < 1 ? why : undefined}>
         <rect data-role="decor" x={1500} y={832} width={340} height={112} rx={12} fill="#FFFFFF" stroke="#D6CEBD" strokeWidth={2} />
