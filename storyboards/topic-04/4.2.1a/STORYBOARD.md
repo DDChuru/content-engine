@@ -92,7 +92,7 @@ Beat windows in the headings are provisional and follow the per-beat ledger (wor
 2. At *built to keep water-loving things out*, the band of tails glows faintly grey (no label yet).
 3. At *trade with their surroundings*, the membrane section slides down to a strip along the bottom and three small schematic vignettes open above it, left to right, each drawn in vector with the colour roles.
 4. At *oxygen moves into red blood cells*, vignette 1: an alveolus outline beside a capillary segment holding a red blood cell; O₂ tokens drift from the alveolus side into the red blood cell (motion); tag *Topic 9 context: named, not taught*.
-5. At *reaches cells that use it in respiration*, vignette 2: a cell outline beside a short blood-vessel segment; glucose tokens drift from the plasma to the cell and pass in (motion); tag *used in respiration*.
+5. At *reaches cells that use it in respiration*, vignette 2: a cell outline beside a short blood-vessel segment; glucose tokens drift from the plasma to the cell and pass in (motion) at a small teal transport-protein symbol on the cell boundary; tag *used in respiration*.
 6. At *Water moves into and out of cells*, vignette 3: a cell outline with water tokens crossing its edge in both directions (motion).
 7. At *has a hydrophobic core*, the vignettes shrink to thumbnails along the top and the membrane returns full size; region label **hydrophobic core** appears on the tail band.
 8. At *a polar molecule*, one glucose token above the membrane is labelled **glucose (polar)**.
@@ -130,8 +130,8 @@ Beat windows in the headings are provisional and follow the per-beat ledger (wor
 3. At *colliding and changing direction*, two highlighted tokens meet and rebound in new directions.
 4. At *Put more of them on the left*, 40 O₂ tokens drift in from the edges and settle **30 on the left, 10 on the right**, labelled *oxygen (dissolved)*; side count tags **30** and **10**; tags *left: higher concentration* and *right: lower concentration*.
 5. At *watch the counter in the middle*, the crossing counter appears on the dashed line: *left → right: 0 · right → left: 0*, subtitle *crossings in each 5 s window; illustrative counts*.
-6. At *Particles cross both ways*, individual O₂ tokens cross the line in both directions (motion), each crossing ticking its side of the counter.
-7. At *more cross from left to right*, the first window closes at **12 · 4**; side tags update to **22** and **18**.
+6. At *Particles cross both ways*, individual O₂ tokens cross the line in both directions (motion), each crossing ticking its side of the counter and updating the side counts live.
+7. At *more cross from left to right*, the first window closes at **12 · 4**; the live side tags have reached **22** and **18**; the counter holds, labelled *last completed window*.
 8. At *a net movement, down the concentration gradient*, the net-movement arrow grows left → right, labelled **net movement**; a gradient wedge beneath the field is labelled *concentration gradient: higher → lower*.
 9. At *So diffusion is the net movement*, the definition builds beneath the field clause by clause: **Diffusion: net movement of particles · from higher to lower concentration · as a result of their random movement.**
 
@@ -145,9 +145,9 @@ Beat windows in the headings are provisional and follow the per-beat ledger (wor
 
 **Visual action:**
 1. **From the first frame**, the same `DiffusionField` `open` holds, counter reading 12 · 4, side tags 22 and 18, net arrow at full length; the motion continues.
-2. At *the counts come closer*, the second window closes at **9 · 7**; side tags update to **20** and **20**; the net arrow shortens.
-3. At *the two numbers run level*, the third window closes at **8 · 8**; tag *concentrations equal*.
-4. At *still cross both ways*, O₂ tokens keep crossing in both directions (motion never freezes); a highlight follows one token across and another back.
+2. At *the counts come closer*, the second window closes at **9 · 7**; the side tags, updated on every crossing, have reached **20** and **20**; the net arrow shortens.
+3. At *the two numbers run level*, the third window closes at **8 · 8** (deliberately balanced scripted counts: equal average fluxes, not identical counts in every real sample); tag *concentrations equal*; the counter holds, labelled *last completed window*.
+4. At *still cross both ways*, O₂ tokens keep crossing in both directions (motion never freezes); a highlight follows one token across and another back; each continuing crossing still ticks a live counter and the side counts (paired crossings return them to 20 · 20).
 5. At *so the arrow fades*, the net arrow fades over 1 s; tag *no net movement; movement continues*.
 6. At *what drove all of this*, motion trails on several tokens pulse, tag *kinetic energy of the particles*.
 7. At *no ATP from a cell*, a greyed ATP token appears beside the field and is struck through, tag *no ATP used*.
