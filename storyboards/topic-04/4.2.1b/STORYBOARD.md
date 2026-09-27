@@ -1,5 +1,7 @@
 # 4.2.1b — Active transport and bulk transport
 
+**STATUS: CLEARED** — independent checks, cloud run 006 (cleared in round 3 (round-2 minor edits applied); `cloud-checks/006/round-3/README.md`: FINAL), 27 September 2026. Narration frozen for build.
+
 **Storyboard, first draft. Cloud run 006, 27 September 2026.** No audio, no code, no render. Folder `storyboards/topic-04/4.2.1b/`. The second of two linked lessons on outcome 4.2.1; it owns active transport, endocytosis and exocytosis, the facilitated-diffusion versus active-transport comparison and carrier saturation. It opens with a brief labelled recall of 4.2.1a's passive processes on the `FluidMosaicMembrane`, then stands alone (own hook, context, objectives, explanation, recap and exam close).
 Cambridge 9700 syllabus 2025–2027, p.21. Command words **DESCRIBE and EXPLAIN**. Budget from `TOPIC-PLAN-04-MEMBRANES.md` (4.2.1 section, lesson list, words-and-runtime table) and `TOPIC-04-WEIGHTS.md` (4.2.1 row, 22:00 across 4.2.1a and 4.2.1b; register E46, E47): **4.2.1b 11:15 = teaching 8:45 (about 1,050 words) + 2 complete error beats × 1:15; 11 teaching beats + 2 error beats (E46, E47)**; delivered here as **13 beats** (11 teaching + 2 error). 4.2.1 as a whole: direct exposure in 4 of 5 cited Paper 2 blocks, 15 overlapping marks. Runtime estimated at **120 words per minute of final video** (words ÷ 120).
 

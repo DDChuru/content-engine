@@ -1,5 +1,7 @@
 # 4.2.5 — Estimating the water potential of potato tissue
 
+**STATUS: CLEARED** — independent checks, cloud run 006 (cleared in round 3 (round-2 minor edits applied); `cloud-checks/006/round-3/README.md`: FINAL), 27 September 2026. Narration frozen for build.
+
 **Storyboard, first draft. Cloud run 006, 27 September 2026.** No audio, no code, no render. Folder `storyboards/topic-04/4.2.5/`.
 Cambridge 9700 syllabus 2025–2027, p.22. Command word **INVESTIGATE** (with "using the results to estimate"). Budget from `TOPIC-PLAN-04-MEMBRANES.md` §4.2.5 and the lesson list, and `TOPIC-04-WEIGHTS.md` (4.2.5 row and paragraph; supplementary S-A to S-D, S-F; register E48): **11:15 = teaching 10:00 (about 1,200 words) + one complete error beat 1:15 (E48); 13 teaching beats + 1 error beat**, delivered here as **14 beats (13 teaching + 1 error)**. 4.2.5 has no direct Paper 2 exposure in the cited blocks (0/5); both cited Paper 5s (W20/51, M24/52) bear on it as supplementary practical evidence outside the counts. Runtime estimated at **120 words per minute of final video** (words ÷ 120); E48 is counted as a complete beat, narration plus its 4 s silent read (SHARED-SPECS §2a).
 

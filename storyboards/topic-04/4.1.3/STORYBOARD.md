@@ -1,5 +1,7 @@
 # 4.1.3 — What each part of the membrane does
 
+**STATUS: CLEARED** — independent checks, cloud run 006 (cleared in round 2 (confirmed final in round 3); `cloud-checks/006/round-3/README.md`: FINAL), 27 September 2026. Narration frozen for build.
+
 **Storyboard, first draft. Cloud run 006, 27 September 2026.** No audio, no code, no render. Folder `storyboards/topic-04/4.1.3/`.
 Cambridge 9700 syllabus 2025–2027, p.21. Command word **DESCRIBE**. Budget from `TOPIC-PLAN-04-MEMBRANES.md` §4.1.3 and the lesson list, and `TOPIC-04-WEIGHTS.md` (4.1.3 row): **10:15 = teaching 9:00 (about 1,080 words-equivalent) + one complete error beat 1:15 (E43); 12 teaching beats + 1 error beat**; delivered here as **13 beats (12 teaching + 1 error)**. 4.1.3 has direct exposure in 4 of 5 cited Paper 2 blocks, 10 overlapping marks (not additive topic marks, not archive-wide frequencies). Planning time is spoken narration at 120 words per minute plus explicitly timed silence. E43 has 142 spoken words (71 seconds) and a four-second silent read: 75 seconds in total. Its full five-move allocation is retained. Final cue timings follow measured audio.
 

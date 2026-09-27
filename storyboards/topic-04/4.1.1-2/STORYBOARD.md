@@ -1,5 +1,7 @@
 # 4.1.1-2 — Fluid mosaic membranes: how the bilayer forms and what sits in it
 
+**STATUS: CLEARED** — independent checks, cloud run 006 (cleared in round 2 (confirmed final in round 3); `cloud-checks/006/round-3/README.md`: FINAL), 27 September 2026. Narration frozen for build.
+
 **Storyboard, first draft. Cloud run 006, 27 September 2026.** No audio, no code, no render. Folder `storyboards/topic-04/4.1.1-2/`.
 Cambridge 9700 syllabus 2025–2027, p.21. Command word **DESCRIBE** (both outcomes). Budget from `TOPIC-PLAN-04-MEMBRANES.md` (§4.1.1, §4.1.2, lesson list, words-and-runtime table) and `TOPIC-04-WEIGHTS.md` (4.1.1 and 4.1.2 rows): **9:00 = teaching 9:00 (4.1.1 5:00 + 4.1.2 4:00) + no error allowance; 13 teaching beats (4.1.1 7 + 4.1.2 6); 0 error beats**; about 1,080 words at the timing equivalent. Delivered here as **13 beats (13 teaching, 0 error)**. Exposure in the cited blocks: 4.1.1 0/5; 4.1.2 1/5 (M24/22 Q1(a)(ii), 1 mark). Runtime estimated at **120 words per minute of final video** (words ÷ 120 = minutes).
 

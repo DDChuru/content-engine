@@ -1,5 +1,7 @@
 # 4.2.2b — Investigating diffusion and osmosis: plant tissue
 
+**STATUS: CLEARED** — independent checks, cloud run 006 (cleared in round 2 and round 3; `cloud-checks/006/round-3/README.md`: FINAL), 27 September 2026. Narration frozen for build.
+
 **Storyboard, first draft. Cloud run 006, 27 September 2026.** No audio, no code, no render. Folder `storyboards/topic-04/4.2.2b/`. The second of two linked lessons on outcome 4.2.2, split by material; it stands alone (own hook, context, objectives, explanation, recap on its own rigs and exam close). This lesson owns **plant tissue** (beetroot for diffusion of pigment through membranes; red onion epidermis for osmosis). Visking tubing and agar are 4.2.2a's; the quantitative plant-tissue osmosis investigation (estimating a tissue's water potential) is 4.2.5's.
 Cambridge 9700 syllabus 2025–2027, p.21. Command word **INVESTIGATE**. Budget from `TOPIC-PLAN-04-MEMBRANES.md` (4.2.2 entry and lesson list) and `TOPIC-04-WEIGHTS.md` (4.2.2 row, 17:00 combined, 23 teaching beats, 0 errors): **4.2.2b 7:30 = teaching base 7:30 (about 900 words-equivalent) + 0 error allowance; 10 teaching beats, no error beats**; delivered here as **10 beats (10 teaching + 0 error)**. 4.2.2 as a whole: 1 of 5 cited Paper 2 blocks (S21/22 Q4(c), 1 overlapping agar-diffusion mark, owned by 4.2.2a's close), with M24/52 as supplementary Paper 5 planning evidence. Runtime estimated at **120 words per minute of final video** (runtime = words ÷ 120).
 

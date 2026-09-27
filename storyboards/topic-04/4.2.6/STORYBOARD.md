@@ -1,5 +1,7 @@
 # 4.2.6 — Water, plant cells and animal cells
 
+**STATUS: CLEARED** — independent checks, cloud run 006 (cleared in round 3 (round-2 minor edits applied); `cloud-checks/006/round-3/README.md`: FINAL), 27 September 2026. Narration frozen for build.
+
 **Storyboard, first draft with round-1 check fixes applied. Cloud run 006, 27 September 2026.** No audio, no code, no render. Folder `storyboards/topic-04/4.2.6/`.
 Cambridge 9700 syllabus 2025–2027, p.22. Command word **EXPLAIN** (twice: the movement of water in water-potential terms; the different effects on plant and animal cells). Budget from `TOPIC-PLAN-04-MEMBRANES.md` §4.2.6 and lesson list and `TOPIC-04-WEIGHTS.md` (4.2.6 row): **8:15 = teaching 8:15 + no error allowance; 11 teaching beats, 0 error beats** (120-wpm timing equivalent about 990 words, not a quota); delivered here as **11 beats (11 teaching + 0 error)**. Direct exposure 0/5 in the cited Paper 2 blocks; adjacent W20/21 Q4(b)(ii) and W20/51 Q1(c)(ii). Runtime estimated at **120 words per minute of final video** (words ÷ 120).
 

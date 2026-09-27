@@ -1,5 +1,7 @@
 # 4.1.4 — Cell signalling: secretion, transport, binding
 
+**STATUS: CLEARED** — independent checks, cloud run 006 (cleared in round 2 and round 3; `cloud-checks/006/round-3/README.md`: FINAL), 27 September 2026. Narration frozen for build.
+
 **Storyboard, first draft. Cloud run 006, 27 September 2026.** No audio, no code, no render. Folder `storyboards/topic-04/4.1.4/`.
 Cambridge 9700 syllabus 2025–2027, p.21. Command word **OUTLINE**. Budget from `TOPIC-PLAN-04-MEMBRANES.md` §4.1.4 and the lesson list, and `TOPIC-04-WEIGHTS.md` (4.1.4 row): **7:00 = teaching 5:45 (about 690 words) + one complete five-move error beat reserved at 1:15 (E44); 8 teaching beats + 1 error beat**; delivered here as **9 beats (8 teaching + 1 error)**. 4.1.4 has direct exposure in 2 of the 5 cited Paper 2 blocks (W22/23, M24/22; 4 marks), three papers including the adjacent S21/22 Q3(c). Runtime estimated at **120 words per minute of final video**. **Narration: 805 words ÷ 120 = 6:42.5. Add the explicit E44 read of 4 s: 6:46.5, 13.5 s below the 7:00 budget. E44: 142 words ÷ 2 + 4 = 75 s. Ordinary settling holds are included in the effective pacing estimate unless explicitly scheduled outside it.**
 

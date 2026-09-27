@@ -1,5 +1,7 @@
 # 4.2.3-4 — Surface area to volume: calculating it and testing it with agar
 
+**STATUS: CLEARED** — independent checks, cloud run 006 (cleared in round 3 (round-2 minor edits applied); `cloud-checks/006/round-3/README.md`: FINAL), 27 September 2026. Narration frozen for build.
+
 **Storyboard, first draft. Cloud run 006, 27 September 2026.** No audio, no code, no render. Folder `storyboards/topic-04/4.2.3-4/`. Two outcomes delivered as one lesson: the calculation (4.2.3) and the investigation of the same principle (4.2.4); it stands alone (own hook, context, objectives, explanation, recap and exam close).
 Cambridge 9700 syllabus 2025–2027, p.21 (mathematical requirements p.63; apparatus p.57; materials p.58). Command words **ILLUSTRATE (by calculating)** (4.2.3) and **INVESTIGATE** (4.2.4). Budget from `TOPIC-PLAN-04-MEMBRANES.md` (lesson list; §4.2.3, §4.2.4) and `TOPIC-04-WEIGHTS.md` (4.2.3 and 4.2.4 rows): **9:45 = 4.2.3 4:15 (6 teaching beats) + 4.2.4 5:30 (7 teaching beats); 0 error beats; teaching base 9:45 (about 1,170 words at 120 wpm)**; delivered here as **13 beats (13 teaching, 0 error)**, Beats 1–6 carrying 4.2.3 and Beats 7–13 carrying 4.2.4 (the recap and exam close cover both). Direct exposure in the cited Paper 2 blocks: 4.2.3 1/5 (S21/22 Q4(b), 2 marks); 4.2.4 1/5 (S21/22 Q4(c), 1 mark). Runtime estimated at **120 words per minute of final video**.
 
