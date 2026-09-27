@@ -1,6 +1,6 @@
 # 5.2.1 — Chromosome behaviour in mitosis: animal and plant cells
 
-**STATUS: CLEARED WITH MINOR EDITS (edits applied) — round-2 independent check (`cloud-checks/007/round-2/5.2.1/CHECK.md`, final round), 27 September 2026.** Open production dependencies (licensed photomicrographs, Topic 1 component names) are tracked in `work/007/ASSETS-NEEDED.md`, not as storyboard defects.
+**STATUS: CLEARED — round-3 image re-check (`5.2.1/CHECK-R3.md`: CLEARED WITH MINOR EDITS, all edits applied), 27 September 2026.** The root-tip image `IMG-5.2.1-01` is resolved (`final/IMG-5.2.1-01.jpg`, CC0). The remaining open production dependency (Topic 1 component names) is tracked in `work/007/ASSETS-NEEDED.md`, not as a storyboard defect.
 
 **Storyboard, round-1 fixes applied (see *CHECK RESPONSE (round 1)*). Cloud run 007, 27 September 2026.** No audio, no code, no render. Folder `storyboards/topic-05/5.2.1/`.
 Cambridge 9700 syllabus 2025–2027, p.23. Command word **DESCRIBE**. Budget from `TOPIC-PLAN-05-CELL-CYCLE.md` §5.2.1 and `TOPIC-05-WEIGHTS.md` (5.2.1 row): **12:00, 19 beats = 17 teaching/framing/recap beats + 2 error beats (E5-03 COMMON MISTAKE, two faults; E5-04 EXAM CONTRAST)**; teaching allowance 9:40 (about 1,160 words) plus 2 × 1:10 error beats (about 140 words each); about 1,440 words at **120 words per minute of final video**. 5.2.1 is 6 of the 15 fixed-sample papers (3 Paper 1 + 3 Paper 2), 14 overlapping marks, tariffs 1–3 (weights ledger).
@@ -11,7 +11,7 @@ Cambridge 9700 syllabus 2025–2027, p.23. Command word **DESCRIBE**. Budget fro
 
 **Authorities read, in full:** `work/007/SHARED-SPECS.md` (binding; §1–8); `plan/topic-05/TOPIC-PLAN-05-CELL-CYCLE.md` (scope and authoring rules, counting convention, wording convention, §5.2.1 in full, lesson list, shared-models table, per-lesson budget, traps table, evidence limits, `## CHECK RESPONSE (plan)`); `plan/topic-05/TOPIC-05-WEIGHTS.md` (5.2.1 row and paragraph; ledger rows w22_23 Q4(a)(ii), (a)(iii), s23_21 Q4(c)(i), (c)(ii), s21_22 Q1(a)(ii), s23_21 Q1(a)(ii); Paper 1 keys s20_12 Q21, s22_12 Q20, s24_12 Q20; error register E5-03, E5-04); `work/007/VERIFIED-EVIDENCE.md`; `cloud-inputs/007/standards-update/VIDEO-STRUCTURE.md` (all of it, including the five-move error beat, the truthful badge, anchored silence, motion rule, recap on the same diagram, exam close with one reject card, and the REAL-WORLD SAMPLES rule); the cleared `cloud-inputs/006/examples/3.1.3/STORYBOARD.md` and `3.2.1b/STORYBOARD.md` and `TOPIC-03-PLAN-CHECK.md`; `cloud-inputs/003/standards/SYLLABUS-9700-DETAIL.md` (Topic 5, p.23); `cloud-inputs/007/evidence/GATE-CRITERIA-9700-05-MITOTIC-CELL-CYCLE.md` (G05) and `EXAMINER-INSIGHT-9700.md`. **No question paper or mark scheme PDF was opened for the first draft**; the round-1 check then audited the cited QP/MS pages against the originals (see *Citations*). Every quotation is copied from the permitted files named in *Citations*; everything else is our wording, labelled *our framing*, or listed as `UNVERIFIED`.
 
-**Build position:** 4 of 8 (5.1.1 → 5.1.3 → 5.1.4 → **5.2.1** → 5.2.2 → 5.1.2 → 5.1.5 → 5.1.6). **Models used:** `ChromosomeModel` (5.1.1; states `replicated-extended`, `replicated-condensed`, `separated`, and the decondensing return to extended; Z0 only); `CellCycleWheel` (5.1.3; marker in G2, then the M arc expanding into the stage ribbon); the Topic 1 cell-structure recall of the nucleolus and centrioles by label only. **Published here:** `MitosisCellModel` (animal and plant variants, every stage state and every transition as motion, nucleolus behaviour, spindle) with its **count strip** (chromosomes · DNA molecules · compartment). Everything drawn is a **MODEL** captioned *schematic*; the one real image, a root-tip photomicrograph, is an **open asset** (`IMG-5.2.1-01`, `work/007/ASSETS-NEEDED.md`), not yet held.
+**Build position:** 4 of 8 (5.1.1 → 5.1.3 → 5.1.4 → **5.2.1** → 5.2.2 → 5.1.2 → 5.1.5 → 5.1.6). **Models used:** `ChromosomeModel` (5.1.1; states `replicated-extended`, `replicated-condensed`, `separated`, and the decondensing return to extended; Z0 only); `CellCycleWheel` (5.1.3; marker in G2, then the M arc expanding into the stage ribbon); the Topic 1 cell-structure recall of the nucleolus and centrioles by label only. **Published here:** `MitosisCellModel` (animal and plant variants, every stage state and every transition as motion, nucleolus behaviour, spindle) with its **count strip** (chromosomes · DNA molecules · compartment). Everything drawn is a **MODEL** captioned *schematic*; the real root-tip photomicrograph `IMG-5.2.1-01` is resolved as `final/IMG-5.2.1-01.jpg`; use the image-panel resolution, credit line and `final/COORDS.json` below.
 
 ---
 
@@ -102,7 +102,7 @@ Beat windows in the headings follow the per-beat ledger (words ÷ 120; the 4 s s
 5. At *it copies its DNA*, a small `CellCycleWheel` inset opens beside the drawn cell: the marker runs through the S arc while the C1 inset shows replication progressing, caption *schematic account of replication during S; detailed replication in 6.1.4*, then the completed two-sister state (tag *recall: 5.1.3*).
 6. At *shares the copies out, exactly*, the four colour chips copy into two identical sets and one set slides into each daughter outline, filling every slot; dissolve to the objectives surface.
 
-**On-screen text:** the hook question; *growing root tip*; *gut lining: cells replaced*; the placeholder label (until the asset is supplied); *light microscope*; *chromatin stained*; *condensed chromosomes*; *identification: 5.2.2*; the wheel caption and recall tag.
+**On-screen text:** the hook question; *growing root tip*; *gut lining: cells replaced*; *Berkshire CC Bioscience Image Library · CC0 · onion (Allium) root tip, longitudinal section · stain not stated*; *light microscope*; *chromatin stained*; *condensed chromosomes*; *identification: 5.2.2*; the wheel caption and recall tag.
 
 ---
 
@@ -304,14 +304,14 @@ Lines: **1 DESCRIBE** the chromosomes in prophase, metaphase, anaphase and telop
 > Now run it again in a plant cell, like one in that growing root tip. Two differences show before anything moves. A cell wall surrounds the cell surface membrane, and there are typically no centrioles. Even so, a spindle still forms between the two poles. Watch prophase and metaphase: the chromosomes condense, the nucleolus disappears, the envelope breaks down, and the chromosomes line up at the equator, just as in the animal cell.
 
 **Visual action:**
-1. At *run it again in a plant cell*, the two animal daughter cells shrink to the top-left corner (tag *animal*), and `MitosisCellModel` plant in `interphase` takes the main position, caption *schematic; 2n = 4 teaching model*; the count strip resets to **4 (8 sister chromatids) · 8 · whole cell**; at *that growing root tip*, the Beat 1 root-tip image (`IMG-5.2.1-01`) returns as a small inset at lower right (placeholder label retained until supplied; rings matched to the recorded coordinates).
+1. At *run it again in a plant cell*, the two animal daughter cells shrink to the top-left corner (tag *animal*), and `MitosisCellModel` plant in `interphase` takes the main position, caption *schematic; 2n = 4 teaching model*; the count strip resets to **4 (8 sister chromatids) · 8 · whole cell**; at *that growing root tip*, the Beat 1 root-tip image (`IMG-5.2.1-01`) returns as a small inset at lower right (whole image, no rings, as specified in `final/COORDS.json`; retain a legible on-screen credit beside the inset: *Berkshire CC Bioscience Image Library · CC0 · onion (Allium) root tip, longitudinal section · stain not stated*).
 2. At *A cell wall surrounds*, the wall band is traced once, label **cell wall**, and the line just inside it labelled **cell surface membrane**.
 3. At *typically no centrioles*, the space where the animal centrosomes sat is ringed and stays empty, tag *no centrioles (typical)*.
 4. At *a spindle still forms*, **prophase** lights; microtubules grow out from the two broad pole regions through the cytoplasm around the outside of the still-intact nuclear envelope (motion), label **spindle**; no fibre crosses the intact envelope or reaches a chromosome until the envelope fragments in action 5.
 5. At *the chromosomes condense*, the threads coil and shorten (motion); at *the nucleolus disappears*, it fades (motion); at *the envelope breaks down*, the double line fragments and disperses (motion).
 6. At *line up at the equator*, **metaphase** lights; fibres attach at the centromeres and the chromosomes are drawn to the equator (motion); at *just as in the animal cell*, the corner animal miniature briefly replays its metaphase beside it.
 
-**On-screen text:** caption; *cell wall*; *cell surface membrane*; *no centrioles (typical)*; *spindle*; ribbon; the root-tip inset and its placeholder label.
+**On-screen text:** caption; *cell wall*; *cell surface membrane*; *no centrioles (typical)*; *spindle*; ribbon; the root-tip inset and its credit line.
 
 ---
 
@@ -686,3 +686,16 @@ Round-2 verdict: **CLEARED WITH MINOR EDITS (edits applied)**.
 | Minor edit — owner/consumer render-style contract | applied, replacement paragraph verbatim | `MitosisCellModel` *Render styles* paragraph; `work/007/SHARED-SPECS.md` registration bullet (round-2 wording) | `toluidine-blue-schematic` is plant-only and used exclusively inside 5.2.2's `FieldOfViewSchematic`; diagram references beside image panels retain `default`. No narration or runtime change. |
 
 Validator and quote check re-run after the edits: see *Validator run* (refreshed).
+
+## CHECK RESPONSE (round 3)
+
+Round-3 verdict (`5.2.1/CHECK-R3.md`): **CLEARED WITH MINOR EDITS (edits applied)**. Status line now **CLEARED**.
+
+| Item | Ruling | Where applied | Action taken |
+|---|---|---|---|
+| Replacement 1 — Build position | applied verbatim | Build position | Open-asset sentence replaced with the resolved `IMG-5.2.1-01` / `final/COORDS.json` sentence. |
+| Replacement 2 — Beat 1 on-screen text | applied verbatim | Beat 1 *On-screen text* | Placeholder label replaced with the Berkshire CC0 credit line. |
+| Replacement 3 — Beat 13 inset | applied verbatim | Beat 13 action 1; Beat 13 *On-screen text* | Inset is the whole image, **no rings** (matches `final/COORDS.json`), with a legible credit beside it; the on-screen list now says *credit line* instead of *placeholder label* (consequential). |
+| Coordinate audit (six Beat 1 rings) | passed, no change | — | Three interphase and three dividing-cell rings stand, per `final/COORDS.json`. |
+| Validator | re-run | *Validator run* | 19 beats, 1,494 words, 172 cues, **0 failing beats**; narration and cue strings unchanged. |
+
