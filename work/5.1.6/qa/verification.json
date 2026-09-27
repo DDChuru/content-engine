@@ -1,0 +1,107 @@
+{
+  "1_ffprobeDuration": 354.3,
+  "2_videoCoversAudio": {
+    "video": 354.3,
+    "encodedAudio": 353.3,
+    "marginSeconds": 1.0,
+    "videoFrames": 10629
+  },
+  "3_fullDecodeErrors": 0,
+  "4_cues": {
+    "matched": 86,
+    "total": 86,
+    "planned": 86
+  },
+  "5_audioPacketsUnchanged": {
+    "packets": 16562,
+    "identical": true
+  },
+  "6_finalWord": {
+    "word": "loss.",
+    "endsAt": 350.22,
+    "audioEnds": 353.3,
+    "headroom": 3.08,
+    "afterWordMaxDb": -18.9
+  },
+  "7_silentReads": [
+    {
+      "beat": 5,
+      "before": "Usually more than one",
+      "start": 170.403,
+      "seconds": 2.0,
+      "pcmAllZero": true,
+      "encodedInteriorMaxDb": -91.0
+    },
+    {
+      "beat": 7,
+      "before": "Look at the word",
+      "start": 222.623,
+      "seconds": 4.0,
+      "pcmAllZero": true,
+      "encodedInteriorMaxDb": -91.0
+    },
+    {
+      "beat": 9,
+      "before": "END",
+      "start": 350.783,
+      "seconds": 2.0,
+      "pcmAllZero": true,
+      "encodedInteriorMaxDb": -91.0
+    }
+  ],
+  "7_speechPCMUnchanged": true,
+  "frozenNarration": "storyboard paragraphs present verbatim; requests differ only by the recorded request-only normalisations: B3: goes round the cell cycle\u2192goes <break time=\"0.1s\" /> round the cell cycle",
+  "8_boundaries": {
+    "master": "/home/user/content-engine/work/5.1.6/5.1.6-tumours.mp4",
+    "timeline": "/home/user/content-engine/work/5.1.6/timeline.json",
+    "master_bytes": 83056423,
+    "fps": 30.0,
+    "frame_count": 10629,
+    "boundaries_tested": 8,
+    "candidate_count": 0,
+    "candidate_beats": [],
+    "method": "RGB 640x360 area downsample; last/first near-match, then material abrupt jump",
+    "thresholds": {
+      "near_mae_max": 0.8,
+      "near_changed_fraction_max": 0.005,
+      "changed_pixel_threshold": 12,
+      "jump_mae_min": 1,
+      "jump_changed_fraction_min": 0.005,
+      "jump_tile_mae_min": 8,
+      "jump_ratio_min": 5,
+      "noise_floor": 0.05,
+      "post_jump_stable_mae_max": "max(0.8, 0.45 * jump_mae)"
+    },
+    "limits": "Candidates, not proof. Deliberate one-frame holds can match; identical layouts can hide a lookup error. Subtle/animated holds can evade thresholds. Requires unshifted CFR master."
+  },
+  "markerAudit": {
+    "framesChecked": 10629,
+    "marked": 2191,
+    "unmarked": 8438,
+    "intervals": [
+      {
+        "beat": 7,
+        "label": "EXAM CONTRAST",
+        "startFrame": 6331,
+        "endFrame": 8522,
+        "announceFrame": 6331,
+        "beatEndFrame": 8538,
+        "clearKey": "done",
+        "clearsOnFrame": 8522
+      }
+    ],
+    "badgeTextMae": {
+      "examMaeMax": 3.92836856842041,
+      "commonMaeMin": 20.365219116210938
+    },
+    "mismatches": 0
+  },
+  "longestUnchangedVisual": {
+    "beat": 8,
+    "startFrame": 8672,
+    "seconds": 8.0
+  },
+  "unchangedOver15s": [],
+  "valenceAudit": "not applicable: no covalent chemistry in Topic 5 (replication is schematic progress; no bond edits)",
+  "sha256": "9bd1fb777b2213f8ba7c9761871aec8bfa8e5a5e323147ab13726be966305039"
+}

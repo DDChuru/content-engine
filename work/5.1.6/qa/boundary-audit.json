@@ -1,0 +1,265 @@
+{
+  "master": "/home/user/content-engine/work/5.1.6/5.1.6-tumours.mp4",
+  "timeline": "/home/user/content-engine/work/5.1.6/timeline.json",
+  "master_bytes": 83056423,
+  "fps": 30.0,
+  "frame_count": 10629,
+  "boundaries_tested": 8,
+  "candidate_count": 0,
+  "candidate_beats": [],
+  "method": "RGB 640x360 area downsample; last/first near-match, then material abrupt jump",
+  "thresholds": {
+    "near_mae_max": 0.8,
+    "near_changed_fraction_max": 0.005,
+    "changed_pixel_threshold": 12,
+    "jump_mae_min": 1,
+    "jump_changed_fraction_min": 0.005,
+    "jump_tile_mae_min": 8,
+    "jump_ratio_min": 5,
+    "noise_floor": 0.05,
+    "post_jump_stable_mae_max": "max(0.8, 0.45 * jump_mae)"
+  },
+  "limits": "Candidates, not proof. Deliberate one-frame holds can match; identical layouts can hide a lookup error. Subtle/animated holds can evade thresholds. Requires unshifted CFR master.",
+  "boundaries": [
+    {
+      "beat": 2,
+      "previous_beat": 1,
+      "frame": 1065,
+      "time_seconds": 35.5,
+      "candidate": false,
+      "settles_after_jump": true,
+      "metrics": {
+        "prior_motion": {
+          "mae": 0.3526895046234131,
+          "changed_fraction": 0.011271701388888888,
+          "max_tile_mae": 3.005497455596924
+        },
+        "last_to_first": {
+          "mae": 180.67906188964844,
+          "changed_fraction": 0.9955034722222222,
+          "max_tile_mae": 189.00926208496094
+        },
+        "first_to_second": {
+          "mae": 0.017592594027519226,
+          "changed_fraction": 0.00018663194444444445,
+          "max_tile_mae": 0.8887442350387573
+        },
+        "second_to_third": {
+          "mae": 0.01589120365679264,
+          "changed_fraction": 0.00016493055555555556,
+          "max_tile_mae": 0.8478009700775146
+        }
+      }
+    },
+    {
+      "beat": 3,
+      "previous_beat": 2,
+      "frame": 1639,
+      "time_seconds": 54.63333333333333,
+      "candidate": false,
+      "settles_after_jump": true,
+      "metrics": {
+        "prior_motion": {
+          "mae": 0.0,
+          "changed_fraction": 0.0,
+          "max_tile_mae": 0.0
+        },
+        "last_to_first": {
+          "mae": 180.96795654296875,
+          "changed_fraction": 0.9970572916666667,
+          "max_tile_mae": 189.00926208496094
+        },
+        "first_to_second": {
+          "mae": 0.33731335401535034,
+          "changed_fraction": 0.009921875,
+          "max_tile_mae": 2.7349538803100586
+        },
+        "second_to_third": {
+          "mae": 0.37241461873054504,
+          "changed_fraction": 0.011579861111111112,
+          "max_tile_mae": 3.0076675415039062
+        }
+      }
+    },
+    {
+      "beat": 4,
+      "previous_beat": 3,
+      "frame": 2826,
+      "time_seconds": 94.2,
+      "candidate": false,
+      "settles_after_jump": true,
+      "metrics": {
+        "prior_motion": {
+          "mae": 0.3563903570175171,
+          "changed_fraction": 0.011102430555555556,
+          "max_tile_mae": 3.0610532760620117
+        },
+        "last_to_first": {
+          "mae": 5.1634721755981445,
+          "changed_fraction": 0.07676649305555555,
+          "max_tile_mae": 21.42664909362793
+        },
+        "first_to_second": {
+          "mae": 0.3253153860569,
+          "changed_fraction": 0.010004340277777777,
+          "max_tile_mae": 2.7349538803100586
+        },
+        "second_to_third": {
+          "mae": 0.616124153137207,
+          "changed_fraction": 0.011453993055555556,
+          "max_tile_mae": 4.890480995178223
+        }
+      }
+    },
+    {
+      "beat": 5,
+      "previous_beat": 4,
+      "frame": 4012,
+      "time_seconds": 133.73333333333332,
+      "candidate": false,
+      "settles_after_jump": true,
+      "metrics": {
+        "prior_motion": {
+          "mae": 0.3608376681804657,
+          "changed_fraction": 0.01115451388888889,
+          "max_tile_mae": 3.104745388031006
+        },
+        "last_to_first": {
+          "mae": 8.655191421508789,
+          "changed_fraction": 0.16521701388888888,
+          "max_tile_mae": 26.619935989379883
+        },
+        "first_to_second": {
+          "mae": 0.32700520753860474,
+          "changed_fraction": 0.010520833333333333,
+          "max_tile_mae": 2.820601463317871
+        },
+        "second_to_third": {
+          "mae": 0.3221035897731781,
+          "changed_fraction": 0.010303819444444445,
+          "max_tile_mae": 3.151475429534912
+        }
+      }
+    },
+    {
+      "beat": 6,
+      "previous_beat": 5,
+      "frame": 5364,
+      "time_seconds": 178.8,
+      "candidate": false,
+      "settles_after_jump": true,
+      "metrics": {
+        "prior_motion": {
+          "mae": 0.2911313474178314,
+          "changed_fraction": 0.008463541666666666,
+          "max_tile_mae": 2.5915801525115967
+        },
+        "last_to_first": {
+          "mae": 13.344928741455078,
+          "changed_fraction": 0.29278645833333333,
+          "max_tile_mae": 41.037757873535156
+        },
+        "first_to_second": {
+          "mae": 0.385745108127594,
+          "changed_fraction": 0.0109765625,
+          "max_tile_mae": 2.7837095260620117
+        },
+        "second_to_third": {
+          "mae": 0.40620657801628113,
+          "changed_fraction": 0.009019097222222222,
+          "max_tile_mae": 3.4311342239379883
+        }
+      }
+    },
+    {
+      "beat": 7,
+      "previous_beat": 6,
+      "frame": 6331,
+      "time_seconds": 211.03333333333333,
+      "candidate": false,
+      "settles_after_jump": true,
+      "metrics": {
+        "prior_motion": {
+          "mae": 0.40214842557907104,
+          "changed_fraction": 0.009917534722222222,
+          "max_tile_mae": 2.421441078186035
+        },
+        "last_to_first": {
+          "mae": 15.742231369018555,
+          "changed_fraction": 0.2477170138888889,
+          "max_tile_mae": 75.75390625
+        },
+        "first_to_second": {
+          "mae": 0.07916811108589172,
+          "changed_fraction": 0.00026475694444444447,
+          "max_tile_mae": 1.3065682649612427
+        },
+        "second_to_third": {
+          "mae": 0.06727864593267441,
+          "changed_fraction": 0.0003081597222222222,
+          "max_tile_mae": 1.4056711196899414
+        }
+      }
+    },
+    {
+      "beat": 8,
+      "previous_beat": 7,
+      "frame": 8538,
+      "time_seconds": 284.6,
+      "candidate": false,
+      "settles_after_jump": true,
+      "metrics": {
+        "prior_motion": {
+          "mae": 0.113825224339962,
+          "changed_fraction": 0.0005946180555555556,
+          "max_tile_mae": 2.373408555984497
+        },
+        "last_to_first": {
+          "mae": 14.853280067443848,
+          "changed_fraction": 0.3124826388888889,
+          "max_tile_mae": 46.974098205566406
+        },
+        "first_to_second": {
+          "mae": 0.015345774590969086,
+          "changed_fraction": 1.3020833333333334e-05,
+          "max_tile_mae": 0.2222222238779068
+        },
+        "second_to_third": {
+          "mae": 0.0028660299722105265,
+          "changed_fraction": 0.0,
+          "max_tile_mae": 0.0334201417863369
+        }
+      }
+    },
+    {
+      "beat": 9,
+      "previous_beat": 8,
+      "frame": 9558,
+      "time_seconds": 318.6,
+      "candidate": false,
+      "settles_after_jump": true,
+      "metrics": {
+        "prior_motion": {
+          "mae": 0.0,
+          "changed_fraction": 0.0,
+          "max_tile_mae": 0.0
+        },
+        "last_to_first": {
+          "mae": 12.127243995666504,
+          "changed_fraction": 0.25938368055555555,
+          "max_tile_mae": 42.34129333496094
+        },
+        "first_to_second": {
+          "mae": 0.17340423166751862,
+          "changed_fraction": 0.0025564236111111113,
+          "max_tile_mae": 2.204861640930176
+        },
+        "second_to_third": {
+          "mae": 0.16847945749759674,
+          "changed_fraction": 0.0022743055555555555,
+          "max_tile_mae": 2.3181424140930176
+        }
+      }
+    }
+  ]
+}

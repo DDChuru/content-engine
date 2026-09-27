@@ -42,14 +42,14 @@ export default function Beat05(s: any) {
       <ChromInset x={IX} y={IY} r={120} rep={insetRep} star={1} caption={postDiv ? 'after division: one daughter chromosome (schematic)' : 'schematic'} />
       {repP >= 0 && !postDiv && <Txt x={IX} y={IY + 164} size={14} weight={600} fill={C.muted} anchor="middle" italic>schematic account of replication during S; detailed replication in 6.1.4 · recall: 5.1.3</Txt>}
       {a('inherit') >= 0 && <Tag x={1280} y={470} text="recall: 5.1.2 — each daughter cell receives the same genetic information" size={15} opacity={fi(a('inherit'), 0.4)} />}
-      <Balance x={1560} y={560} tilt={0.2 + 0.5 * fe(a('rounds'), 5)} />
+      <Balance x={1560} y={515} tilt={0.2 + 0.5 * fe(a('rounds'), 5)} s={0.85} />
       {tap && <g opacity={fi(a('tap'), 0.4)} transform={`translate(0 0)`}>
-        <TapInset x={1310} y={800} level={lvl} t={L} />
-        {hTap + hFlow > 0 && <rect data-role="decor" x={1340} y={710} width={90} height={80} rx={12} fill={T5.ring} opacity={0.35} />}
-        {hLevel > 0 && <rect data-role="decor" x={1310} y={800} width={170} height={110} rx={8} fill={T5.ring} opacity={0.3} />}
-        <Txt x={1500} y={740} size={15} weight={700} fill={T5.ringHalo}>tap stuck open: division</Txt>
-        <Txt x={1500} y={764} size={15} weight={700} fill={T5.ringHalo}>drain the same: cells lost</Txt>
-        <Txt x={1500} y={788} size={15} weight={700} fill={T5.ringHalo}>level rises: a mass</Txt>
+        <TapInset x={1310} y={770} level={lvl} t={L} />
+        {hTap + hFlow > 0 && <rect data-role="decor" x={1340} y={680} width={90} height={80} rx={12} fill={T5.ring} opacity={0.35} />}
+        {hLevel > 0 && <rect data-role="decor" x={1310} y={770} width={170} height={110} rx={8} fill={T5.ring} opacity={0.3} />}
+        <Txt x={1500} y={710} size={15} weight={700} fill={T5.ringHalo}>tap stuck open: division</Txt>
+        <Txt x={1500} y={734} size={15} weight={700} fill={T5.ringHalo}>drain the same: cells lost</Txt>
+        <Txt x={1500} y={758} size={15} weight={700} fill={T5.ringHalo}>level rises: a mass</Txt>
       </g>}
       {a('wp') >= 0 && <SentenceStrip x={SX} y={SY} w={SW} text={SENT5} shown={shown} size={26} opacity={fi(a('wp'), 0.4)} />}
       {hl(sp1, hTap)}{hl(sp2, hFlow)}{hl(sp3, hLevel)}
