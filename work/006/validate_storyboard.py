@@ -17,7 +17,7 @@ Whole file:
   - forbidden narration phrases (Topic 4 traps and the 4.2.6 exclusion)
   - every beat has a **Visual action** block whose first item states which model or
     apparatus is on screen "from the first frame" (or "from the beat's first frame")
-  - required sections present; citations table rows with exam references carry PDF-UNCHECKED
+  - required sections present; citations table rows with exam references carry PDF-UNCHECKED or PDF-CHECKED (plan check)
 Runtime = words / 120 min.
 """
 import re
@@ -157,8 +157,8 @@ def main(paths):
         if len(cit) > 1:
             block = re.split(r"^## ", cit[1], flags=re.M)[0]
             for row in block.splitlines():
-                if row.startswith("|") and re.search(r"\b[swm]\d\d_\d\d\b|ER\b|R2[34]|MS PDF", row) and "PDF-UNCHECKED" not in row:
-                    print(f"   CITATION ROW WITHOUT PDF-UNCHECKED: {row[:90]}")
+                if row.startswith("|") and re.search(r"\b[swm]\d\d_\d\d\b|ER\b|R2[34]|MS PDF", row) and "PDF-UNCHECKED" not in row and "PDF-CHECKED" not in row:
+                    print(f"   CITATION ROW WITHOUT PDF-UNCHECKED/PDF-CHECKED TAG: {row[:90]}")
                     grand_fail += 1
         print("beat  words  cues maxgap  status")
         tw = tc = fails = 0
