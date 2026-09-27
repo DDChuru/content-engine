@@ -1,0 +1,598 @@
+[
+ {
+  "beat": 1,
+  "seconds": 32.78658333333333,
+  "wpm": 133.6,
+  "matched": 73,
+  "src": 73,
+  "diffs": [],
+  "lowConfidence": [],
+  "watch": {
+   "mitotic": [
+    1,
+    1
+   ]
+  }
+ },
+ {
+  "beat": 2,
+  "seconds": 23.684354166666665,
+  "wpm": 129.2,
+  "matched": 50,
+  "src": 51,
+  "diffs": [
+   [
+    "replace",
+    "interphase",
+    "interface"
+   ]
+  ],
+  "lowConfidence": [
+   [
+    "you",
+    0.48,
+    0.66
+   ],
+   [
+    "one,",
+    0.0,
+    5.0
+   ],
+   [
+    "two",
+    0.0,
+    6.68
+   ],
+   [
+    "apart",
+    0.29,
+    21.66
+   ]
+  ],
+  "watch": {
+   "interphase": [
+    2,
+    1
+   ],
+   "mitosis": [
+    2,
+    2
+   ],
+   "cytokinesis": [
+    2,
+    2
+   ]
+  }
+ },
+ {
+  "beat": 3,
+  "seconds": 25.495520833333334,
+  "wpm": 136.5,
+  "matched": 58,
+  "src": 58,
+  "diffs": [],
+  "lowConfidence": [
+   [
+    "one,",
+    0.0,
+    7.54
+   ],
+   [
+    "and",
+    0.48,
+    12.88
+   ]
+  ],
+  "watch": {
+   "interphase": [
+    2,
+    2
+   ],
+   "mitosis": [
+    1,
+    1
+   ],
+   "cytokinesis": [
+    1,
+    1
+   ],
+   "nucleus": [
+    1,
+    1
+   ],
+   "cytoplasm": [
+    1,
+    1
+   ]
+  }
+ },
+ {
+  "beat": 4,
+  "seconds": 28.421229166666667,
+  "wpm": 130.9,
+  "matched": 61,
+  "src": 62,
+  "diffs": [
+   [
+    "replace",
+    "histone",
+    "his stone"
+   ]
+  ],
+  "lowConfidence": [
+   [
+    "one,",
+    0.01,
+    3.18
+   ],
+   [
+    "his",
+    0.45,
+    20.76
+   ]
+  ],
+  "watch": {
+   "interphase": [
+    1,
+    1
+   ],
+   "chromosome": [
+    2,
+    2
+   ],
+   "histone": [
+    1,
+    0
+   ]
+  }
+ },
+ {
+  "beat": 5,
+  "seconds": 39.520375,
+  "wpm": 123.0,
+  "matched": 82,
+  "src": 83,
+  "diffs": [
+   [
+    "replace",
+    "diploid",
+    "deployed"
+   ]
+  ],
+  "lowConfidence": [
+   [
+    "46",
+    0.46,
+    36.52
+   ]
+  ],
+  "watch": {
+   "chromosome": [
+    2,
+    2
+   ],
+   "chromosomes": [
+    1,
+    1
+   ],
+   "chromatids": [
+    1,
+    1
+   ],
+   "centromere": [
+    1,
+    1
+   ],
+   "synthesis": [
+    1,
+    1
+   ],
+   "diploid": [
+    1,
+    0
+   ]
+  }
+ },
+ {
+  "beat": 6,
+  "seconds": 23.173520833333335,
+  "wpm": 129.5,
+  "matched": 50,
+  "src": 50,
+  "diffs": [],
+  "lowConfidence": [
+   [
+    "two",
+    0.0,
+    0.24
+   ]
+  ],
+  "watch": {
+   "mitosis": [
+    1,
+    1
+   ],
+   "chromosomes": [
+    2,
+    2
+   ]
+  }
+ },
+ {
+  "beat": 7,
+  "seconds": 38.359375,
+  "wpm": 120.4,
+  "matched": 77,
+  "src": 77,
+  "diffs": [],
+  "lowConfidence": [],
+  "watch": {
+   "mitosis": [
+    1,
+    1
+   ],
+   "chromosome": [
+    2,
+    2
+   ],
+   "chromosomes": [
+    1,
+    1
+   ],
+   "chromatids": [
+    1,
+    1
+   ],
+   "centromere": [
+    2,
+    2
+   ],
+   "spindle": [
+    1,
+    1
+   ],
+   "nucleus": [
+    3,
+    3
+   ],
+   "decondense": [
+    1,
+    1
+   ]
+  }
+ },
+ {
+  "beat": 8,
+  "seconds": 33.15810416666667,
+  "wpm": 121.2,
+  "matched": 70,
+  "src": 70,
+  "diffs": [],
+  "lowConfidence": [],
+  "watch": {
+   "mitosis": [
+    2,
+    2
+   ],
+   "cytokinesis": [
+    1,
+    1
+   ],
+   "chromosomes": [
+    1,
+    1
+   ],
+   "nuclei": [
+    1,
+    1
+   ],
+   "cytoplasm": [
+    2,
+    2
+   ]
+  }
+ },
+ {
+  "beat": 9,
+  "seconds": 28.235479166666668,
+  "wpm": 110.5,
+  "matched": 54,
+  "src": 54,
+  "diffs": [],
+  "lowConfidence": [],
+  "watch": {
+   "interphase": [
+    1,
+    1
+   ],
+   "mitosis": [
+    1,
+    1
+   ],
+   "cytokinesis": [
+    1,
+    1
+   ],
+   "nuclei": [
+    1,
+    1
+   ],
+   "cytoplasm": [
+    1,
+    1
+   ]
+  }
+ },
+ {
+  "beat": 10,
+  "seconds": 68.08091666666667,
+  "wpm": 128.7,
+  "matched": 144,
+  "src": 146,
+  "diffs": [
+   [
+    "replace",
+    "interphase",
+    "interface"
+   ],
+   [
+    "replace",
+    "interphase",
+    "interface"
+   ]
+  ],
+  "lowConfidence": [
+   [
+    "but",
+    0.31,
+    26.92
+   ],
+   [
+    "phase",
+    0.46,
+    34.34
+   ],
+   [
+    "DNA",
+    0.49,
+    61.44
+   ],
+   [
+    "phase",
+    0.34,
+    65.62
+   ]
+  ],
+  "watch": {
+   "interphase": [
+    2,
+    0
+   ],
+   "mitosis": [
+    2,
+    2
+   ],
+   "chromosome": [
+    1,
+    1
+   ],
+   "chromosomes": [
+    1,
+    1
+   ],
+   "chromatids": [
+    1,
+    1
+   ],
+   "prophase": [
+    3,
+    3
+   ],
+   "synthesis": [
+    1,
+    1
+   ]
+  }
+ },
+ {
+  "beat": 11,
+  "seconds": 25.2633125,
+  "wpm": 140.1,
+  "matched": 58,
+  "src": 59,
+  "diffs": [
+   [
+    "replace",
+    "ours",
+    "ask"
+   ]
+  ],
+  "lowConfidence": [
+   [
+    "One",
+    0.47,
+    0.0
+   ]
+  ],
+  "watch": {
+   "mitosis": [
+    1,
+    1
+   ],
+   "nucleus": [
+    2,
+    2
+   ],
+   "nuclei": [
+    1,
+    1
+   ]
+  }
+ },
+ {
+  "beat": 12,
+  "seconds": 64.7836875,
+  "wpm": 138.0,
+  "matched": 148,
+  "src": 150,
+  "diffs": [
+   [
+    "replace",
+    "card",
+    "cart"
+   ],
+   [
+    "replace",
+    "processes",
+    "processors"
+   ]
+  ],
+  "lowConfidence": [
+   [
+    "cart.",
+    0.41,
+    3.2
+   ],
+   [
+    "the",
+    0.03,
+    27.88
+   ],
+   [
+    "replication",
+    0.3,
+    33.98
+   ],
+   [
+    "mark",
+    0.38,
+    41.28
+   ],
+   [
+    "card",
+    0.28,
+    52.24
+   ],
+   [
+    "arc.",
+    0.29,
+    55.42
+   ]
+  ],
+  "watch": {
+   "mitosis": [
+    2,
+    2
+   ],
+   "cytokinesis": [
+    3,
+    3
+   ],
+   "chromosomes": [
+    1,
+    1
+   ],
+   "spindle": [
+    1,
+    1
+   ],
+   "nucleus": [
+    1,
+    1
+   ],
+   "atp": [
+    3,
+    3
+   ]
+  }
+ },
+ {
+  "beat": 13,
+  "seconds": 28.235479166666668,
+  "wpm": 127.5,
+  "matched": 59,
+  "src": 60,
+  "diffs": [
+   [
+    "replace",
+    "two",
+    "to"
+   ]
+  ],
+  "lowConfidence": [
+   [
+    "one,",
+    0.01,
+    3.6
+   ],
+   [
+    "to",
+    0.48,
+    17.84
+   ]
+  ],
+  "watch": {
+   "interphase": [
+    1,
+    1
+   ],
+   "mitosis": [
+    1,
+    1
+   ],
+   "cytokinesis": [
+    1,
+    1
+   ],
+   "chromosome": [
+    1,
+    1
+   ],
+   "chromatids": [
+    1,
+    1
+   ],
+   "nucleus": [
+    1,
+    1
+   ],
+   "cytoplasm": [
+    1,
+    1
+   ]
+  }
+ },
+ {
+  "beat": 14,
+  "seconds": 40.8206875,
+  "wpm": 126.4,
+  "matched": 86,
+  "src": 87,
+  "diffs": [
+   [
+    "replace",
+    "round",
+    "around"
+   ]
+  ],
+  "lowConfidence": [],
+  "watch": {
+   "interphase": [
+    2,
+    2
+   ],
+   "mitosis": [
+    2,
+    2
+   ],
+   "synthesis": [
+    1,
+    1
+   ],
+   "atp": [
+    1,
+    1
+   ]
+  }
+ }
+]

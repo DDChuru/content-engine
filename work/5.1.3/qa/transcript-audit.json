@@ -1,0 +1,158 @@
+[
+  {
+    "beat": 1,
+    "sourceWords": 73,
+    "recognizerTokens": 73,
+    "matchedSourceTokens": 73,
+    "differences": []
+  },
+  {
+    "beat": 2,
+    "sourceWords": 51,
+    "recognizerTokens": 51,
+    "matchedSourceTokens": 50,
+    "differences": [
+      {
+        "op": "replace",
+        "script": "interphase",
+        "heard": "interface"
+      }
+    ]
+  },
+  {
+    "beat": 3,
+    "sourceWords": 58,
+    "recognizerTokens": 58,
+    "matchedSourceTokens": 58,
+    "differences": []
+  },
+  {
+    "beat": 4,
+    "sourceWords": 62,
+    "recognizerTokens": 63,
+    "matchedSourceTokens": 61,
+    "differences": [
+      {
+        "op": "replace",
+        "script": "histone",
+        "heard": "his stone"
+      }
+    ]
+  },
+  {
+    "beat": 5,
+    "sourceWords": 83,
+    "recognizerTokens": 83,
+    "matchedSourceTokens": 82,
+    "differences": [
+      {
+        "op": "replace",
+        "script": "diploid",
+        "heard": "deployed"
+      }
+    ]
+  },
+  {
+    "beat": 6,
+    "sourceWords": 50,
+    "recognizerTokens": 50,
+    "matchedSourceTokens": 50,
+    "differences": []
+  },
+  {
+    "beat": 7,
+    "sourceWords": 77,
+    "recognizerTokens": 77,
+    "matchedSourceTokens": 77,
+    "differences": []
+  },
+  {
+    "beat": 8,
+    "sourceWords": 70,
+    "recognizerTokens": 70,
+    "matchedSourceTokens": 70,
+    "differences": []
+  },
+  {
+    "beat": 9,
+    "sourceWords": 54,
+    "recognizerTokens": 54,
+    "matchedSourceTokens": 54,
+    "differences": []
+  },
+  {
+    "beat": 10,
+    "sourceWords": 146,
+    "recognizerTokens": 146,
+    "matchedSourceTokens": 144,
+    "differences": [
+      {
+        "op": "replace",
+        "script": "interphase",
+        "heard": "interface"
+      },
+      {
+        "op": "replace",
+        "script": "interphase",
+        "heard": "interface"
+      }
+    ]
+  },
+  {
+    "beat": 11,
+    "sourceWords": 59,
+    "recognizerTokens": 59,
+    "matchedSourceTokens": 58,
+    "differences": [
+      {
+        "op": "replace",
+        "script": "ours",
+        "heard": "ask"
+      }
+    ]
+  },
+  {
+    "beat": 12,
+    "sourceWords": 150,
+    "recognizerTokens": 150,
+    "matchedSourceTokens": 148,
+    "differences": [
+      {
+        "op": "replace",
+        "script": "card",
+        "heard": "cart"
+      },
+      {
+        "op": "replace",
+        "script": "processes",
+        "heard": "processors"
+      }
+    ]
+  },
+  {
+    "beat": 13,
+    "sourceWords": 60,
+    "recognizerTokens": 60,
+    "matchedSourceTokens": 59,
+    "differences": [
+      {
+        "op": "replace",
+        "script": "two",
+        "heard": "to"
+      }
+    ]
+  },
+  {
+    "beat": 14,
+    "sourceWords": 87,
+    "recognizerTokens": 87,
+    "matchedSourceTokens": 86,
+    "differences": [
+      {
+        "op": "replace",
+        "script": "round",
+        "heard": "around"
+      }
+    ]
+  }
+]

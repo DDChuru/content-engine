@@ -1,0 +1,80 @@
+{
+  "1_ffprobeDuration": 375.533333,
+  "2_videoCoversAudio": {
+    "video": 375.533333,
+    "encodedAudio": 374.533,
+    "marginSeconds": 1.0,
+    "videoFrames": 11266
+  },
+  "3_fullDecodeErrors": 0,
+  "4_cues": {
+    "matched": 108,
+    "total": 108,
+    "planned": 108
+  },
+  "5_audioPacketsUnchanged": {
+    "packets": 17558,
+    "identical": true
+  },
+  "6_finalWord": {
+    "word": "centromere.",
+    "endsAt": 371.64,
+    "audioEnds": 374.533,
+    "headroom": 2.893,
+    "afterWordMaxDb": -84.3
+  },
+  "7_silentReads": [
+    {
+      "beat": 11,
+      "before": "END",
+      "start": 372.013,
+      "seconds": 2.0,
+      "pcmAllZero": true,
+      "encodedInteriorMaxDb": -91.0
+    }
+  ],
+  "7_speechPCMUnchanged": true,
+  "frozenNarration": "storyboard paragraphs present verbatim; requests differ only by the recorded request-only normalisations: ",
+  "8_boundaries": {
+    "master": "/home/user/content-engine/work/5.1.1/5.1.1-inside-a-chromosome.mp4",
+    "timeline": "/home/user/content-engine/work/5.1.1/timeline.json",
+    "master_bytes": 19506029,
+    "fps": 30.0,
+    "frame_count": 11266,
+    "boundaries_tested": 10,
+    "candidate_count": 0,
+    "candidate_beats": [],
+    "method": "RGB 640x360 area downsample; last/first near-match, then material abrupt jump",
+    "thresholds": {
+      "near_mae_max": 0.8,
+      "near_changed_fraction_max": 0.005,
+      "changed_pixel_threshold": 12,
+      "jump_mae_min": 1,
+      "jump_changed_fraction_min": 0.005,
+      "jump_tile_mae_min": 8,
+      "jump_ratio_min": 5,
+      "noise_floor": 0.05,
+      "post_jump_stable_mae_max": "max(0.8, 0.45 * jump_mae)"
+    },
+    "limits": "Candidates, not proof. Deliberate one-frame holds can match; identical layouts can hide a lookup error. Subtle/animated holds can evade thresholds. Requires unshifted CFR master."
+  },
+  "markerAudit": {
+    "framesChecked": 11266,
+    "marked": 0,
+    "unmarked": 11266,
+    "intervals": [],
+    "badgeTextMae": {
+      "commonMaeMax": 0.0,
+      "examMaeMin": 1000000000.0
+    },
+    "mismatches": 0
+  },
+  "longestUnchangedVisual": {
+    "beat": 11,
+    "startFrame": 11008,
+    "seconds": 8.6
+  },
+  "unchangedOver15s": [],
+  "valenceAudit": "not applicable: no covalent chemistry in Topic 5 (replication is schematic progress; no bond edits)",
+  "sha256": "defc8f4301e372a5292027a7e413d5ebdc3ac3ea58b511bfda958af92e3c3c83"
+}

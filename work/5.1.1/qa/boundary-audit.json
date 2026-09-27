@@ -1,0 +1,325 @@
+{
+  "master": "/home/user/content-engine/work/5.1.1/5.1.1-inside-a-chromosome.mp4",
+  "timeline": "/home/user/content-engine/work/5.1.1/timeline.json",
+  "master_bytes": 19506029,
+  "fps": 30.0,
+  "frame_count": 11266,
+  "boundaries_tested": 10,
+  "candidate_count": 0,
+  "candidate_beats": [],
+  "method": "RGB 640x360 area downsample; last/first near-match, then material abrupt jump",
+  "thresholds": {
+    "near_mae_max": 0.8,
+    "near_changed_fraction_max": 0.005,
+    "changed_pixel_threshold": 12,
+    "jump_mae_min": 1,
+    "jump_changed_fraction_min": 0.005,
+    "jump_tile_mae_min": 8,
+    "jump_ratio_min": 5,
+    "noise_floor": 0.05,
+    "post_jump_stable_mae_max": "max(0.8, 0.45 * jump_mae)"
+  },
+  "limits": "Candidates, not proof. Deliberate one-frame holds can match; identical layouts can hide a lookup error. Subtle/animated holds can evade thresholds. Requires unshifted CFR master.",
+  "boundaries": [
+    {
+      "beat": 2,
+      "previous_beat": 1,
+      "frame": 911,
+      "time_seconds": 30.366666666666667,
+      "candidate": false,
+      "settles_after_jump": true,
+      "metrics": {
+        "prior_motion": {
+          "mae": 0.0,
+          "changed_fraction": 0.0,
+          "max_tile_mae": 0.0
+        },
+        "last_to_first": {
+          "mae": 185.75146484375,
+          "changed_fraction": 0.9980425347222223,
+          "max_tile_mae": 189.00926208496094
+        },
+        "first_to_second": {
+          "mae": 0.03342447802424431,
+          "changed_fraction": 0.0007335069444444444,
+          "max_tile_mae": 1.290219783782959
+        },
+        "second_to_third": {
+          "mae": 0.031931422650814056,
+          "changed_fraction": 0.0007378472222222222,
+          "max_tile_mae": 1.2703994512557983
+        }
+      }
+    },
+    {
+      "beat": 3,
+      "previous_beat": 2,
+      "frame": 1609,
+      "time_seconds": 53.63333333333333,
+      "candidate": false,
+      "settles_after_jump": true,
+      "metrics": {
+        "prior_motion": {
+          "mae": 7.23379707778804e-05,
+          "changed_fraction": 0.0,
+          "max_tile_mae": 0.007233796641230583
+        },
+        "last_to_first": {
+          "mae": 183.18646240234375,
+          "changed_fraction": 0.9925434027777778,
+          "max_tile_mae": 189.00926208496094
+        },
+        "first_to_second": {
+          "mae": 0.01721498742699623,
+          "changed_fraction": 0.0001388888888888889,
+          "max_tile_mae": 0.804108738899231
+        },
+        "second_to_third": {
+          "mae": 0.0129933450371027,
+          "changed_fraction": 0.00016493055555555556,
+          "max_tile_mae": 0.6908276081085205
+        }
+      }
+    },
+    {
+      "beat": 4,
+      "previous_beat": 3,
+      "frame": 2651,
+      "time_seconds": 88.36666666666666,
+      "candidate": false,
+      "settles_after_jump": true,
+      "metrics": {
+        "prior_motion": {
+          "mae": 0.0,
+          "changed_fraction": 0.0,
+          "max_tile_mae": 0.0
+        },
+        "last_to_first": {
+          "mae": 4.958949565887451,
+          "changed_fraction": 0.11891493055555556,
+          "max_tile_mae": 25.669702529907227
+        },
+        "first_to_second": {
+          "mae": 0.04960937425494194,
+          "changed_fraction": 0.0007161458333333333,
+          "max_tile_mae": 0.7350983023643494
+        },
+        "second_to_third": {
+          "mae": 0.15284721553325653,
+          "changed_fraction": 0.004162326388888889,
+          "max_tile_mae": 2.1147279739379883
+        }
+      }
+    },
+    {
+      "beat": 5,
+      "previous_beat": 4,
+      "frame": 3594,
+      "time_seconds": 119.8,
+      "candidate": false,
+      "settles_after_jump": true,
+      "metrics": {
+        "prior_motion": {
+          "mae": 0.0,
+          "changed_fraction": 0.0,
+          "max_tile_mae": 0.0
+        },
+        "last_to_first": {
+          "mae": 7.411865234375,
+          "changed_fraction": 0.0901171875,
+          "max_tile_mae": 52.30990219116211
+        },
+        "first_to_second": {
+          "mae": 0.003139467677101493,
+          "changed_fraction": 4.340277777777778e-06,
+          "max_tile_mae": 0.0355902761220932
+        },
+        "second_to_third": {
+          "mae": 0.0014438658254221082,
+          "changed_fraction": 0.0,
+          "max_tile_mae": 0.018952546641230583
+        }
+      }
+    },
+    {
+      "beat": 6,
+      "previous_beat": 5,
+      "frame": 4597,
+      "time_seconds": 153.23333333333332,
+      "candidate": false,
+      "settles_after_jump": true,
+      "metrics": {
+        "prior_motion": {
+          "mae": 0.0001128472140408121,
+          "changed_fraction": 0.0,
+          "max_tile_mae": 0.010995369404554367
+        },
+        "last_to_first": {
+          "mae": 11.793645858764648,
+          "changed_fraction": 0.16169704861111112,
+          "max_tile_mae": 77.41580200195312
+        },
+        "first_to_second": {
+          "mae": 0.00339699094183743,
+          "changed_fraction": 2.604166666666667e-05,
+          "max_tile_mae": 0.033998843282461166
+        },
+        "second_to_third": {
+          "mae": 0.0007913772715255618,
+          "changed_fraction": 0.0,
+          "max_tile_mae": 0.0217013880610466
+        }
+      }
+    },
+    {
+      "beat": 7,
+      "previous_beat": 6,
+      "frame": 5567,
+      "time_seconds": 185.56666666666666,
+      "candidate": false,
+      "settles_after_jump": true,
+      "metrics": {
+        "prior_motion": {
+          "mae": 0.0007436343003064394,
+          "changed_fraction": 0.0,
+          "max_tile_mae": 0.0451388880610466
+        },
+        "last_to_first": {
+          "mae": 7.846420764923096,
+          "changed_fraction": 0.09224826388888889,
+          "max_tile_mae": 66.80265045166016
+        },
+        "first_to_second": {
+          "mae": 0.001462673651985824,
+          "changed_fraction": 0.0,
+          "max_tile_mae": 0.03848380222916603
+        },
+        "second_to_third": {
+          "mae": 0.0003660301154013723,
+          "changed_fraction": 0.0,
+          "max_tile_mae": 0.01779513992369175
+        }
+      }
+    },
+    {
+      "beat": 8,
+      "previous_beat": 7,
+      "frame": 6765,
+      "time_seconds": 225.5,
+      "candidate": false,
+      "settles_after_jump": true,
+      "metrics": {
+        "prior_motion": {
+          "mae": 0.0,
+          "changed_fraction": 0.0,
+          "max_tile_mae": 0.0
+        },
+        "last_to_first": {
+          "mae": 11.196419715881348,
+          "changed_fraction": 0.16081597222222221,
+          "max_tile_mae": 71.10070037841797
+        },
+        "first_to_second": {
+          "mae": 0.0033998838625848293,
+          "changed_fraction": 8.680555555555556e-06,
+          "max_tile_mae": 0.05324074253439903
+        },
+        "second_to_third": {
+          "mae": 0.0002372685121372342,
+          "changed_fraction": 0.0,
+          "max_tile_mae": 0.00824652798473835
+        }
+      }
+    },
+    {
+      "beat": 9,
+      "previous_beat": 8,
+      "frame": 7952,
+      "time_seconds": 265.06666666666666,
+      "candidate": false,
+      "settles_after_jump": true,
+      "metrics": {
+        "prior_motion": {
+          "mae": 0.0,
+          "changed_fraction": 0.0,
+          "max_tile_mae": 0.0
+        },
+        "last_to_first": {
+          "mae": 6.352828025817871,
+          "changed_fraction": 0.15340277777777778,
+          "max_tile_mae": 30.963111877441406
+        },
+        "first_to_second": {
+          "mae": 0.004301215056329966,
+          "changed_fraction": 0.0,
+          "max_tile_mae": 0.0473090298473835
+        },
+        "second_to_third": {
+          "mae": 0.04348813742399216,
+          "changed_fraction": 0.0,
+          "max_tile_mae": 1.2607061862945557
+        }
+      }
+    },
+    {
+      "beat": 10,
+      "previous_beat": 9,
+      "frame": 8877,
+      "time_seconds": 295.9,
+      "candidate": false,
+      "settles_after_jump": true,
+      "metrics": {
+        "prior_motion": {
+          "mae": 0.0,
+          "changed_fraction": 0.0,
+          "max_tile_mae": 0.0
+        },
+        "last_to_first": {
+          "mae": 11.32083797454834,
+          "changed_fraction": 0.20027777777777778,
+          "max_tile_mae": 50.754188537597656
+        },
+        "first_to_second": {
+          "mae": 0.0030541089363396168,
+          "changed_fraction": 4.340277777777778e-06,
+          "max_tile_mae": 0.033709488809108734
+        },
+        "second_to_third": {
+          "mae": 0.0004673032963182777,
+          "changed_fraction": 0.0,
+          "max_tile_mae": 0.019241899251937866
+        }
+      }
+    },
+    {
+      "beat": 11,
+      "previous_beat": 10,
+      "frame": 9972,
+      "time_seconds": 332.4,
+      "candidate": false,
+      "settles_after_jump": true,
+      "metrics": {
+        "prior_motion": {
+          "mae": 0.0,
+          "changed_fraction": 0.0,
+          "max_tile_mae": 0.0
+        },
+        "last_to_first": {
+          "mae": 11.059868812561035,
+          "changed_fraction": 0.2096267361111111,
+          "max_tile_mae": 58.70746612548828
+        },
+        "first_to_second": {
+          "mae": 0.0019126158440485597,
+          "changed_fraction": 0.0,
+          "max_tile_mae": 0.04788773134350777
+        },
+        "second_to_third": {
+          "mae": 0.00016927083197515458,
+          "changed_fraction": 0.0,
+          "max_tile_mae": 0.0086805559694767
+        }
+      }
+    }
+  ]
+}
