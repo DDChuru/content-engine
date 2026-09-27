@@ -1,0 +1,100 @@
+[
+  {
+    "beat": 1,
+    "sourceWords": 83,
+    "recognizerTokens": 83,
+    "matchedSourceTokens": 82,
+    "differences": [
+      {
+        "op": "replace",
+        "script": "sent",
+        "heard": "sense"
+      }
+    ]
+  },
+  {
+    "beat": 2,
+    "sourceWords": 55,
+    "recognizerTokens": 55,
+    "matchedSourceTokens": 55,
+    "differences": []
+  },
+  {
+    "beat": 3,
+    "sourceWords": 88,
+    "recognizerTokens": 88,
+    "matchedSourceTokens": 88,
+    "differences": []
+  },
+  {
+    "beat": 4,
+    "sourceWords": 77,
+    "recognizerTokens": 77,
+    "matchedSourceTokens": 77,
+    "differences": []
+  },
+  {
+    "beat": 5,
+    "sourceWords": 96,
+    "recognizerTokens": 95,
+    "matchedSourceTokens": 95,
+    "differences": [
+      {
+        "op": "delete",
+        "script": "site",
+        "heard": ""
+      }
+    ]
+  },
+  {
+    "beat": 6,
+    "sourceWords": 89,
+    "recognizerTokens": 89,
+    "matchedSourceTokens": 88,
+    "differences": [
+      {
+        "op": "replace",
+        "script": "too",
+        "heard": "to"
+      }
+    ]
+  },
+  {
+    "beat": 7,
+    "sourceWords": 145,
+    "recognizerTokens": 146,
+    "matchedSourceTokens": 144,
+    "differences": [
+      {
+        "op": "replace",
+        "script": "37",
+        "heard": "thirty seven"
+      }
+    ]
+  },
+  {
+    "beat": 8,
+    "sourceWords": 73,
+    "recognizerTokens": 73,
+    "matchedSourceTokens": 73,
+    "differences": []
+  },
+  {
+    "beat": 9,
+    "sourceWords": 103,
+    "recognizerTokens": 106,
+    "matchedSourceTokens": 101,
+    "differences": [
+      {
+        "op": "replace",
+        "script": "2024",
+        "heard": "twenty twenty four"
+      },
+      {
+        "op": "replace",
+        "script": "22",
+        "heard": "twenty two"
+      }
+    ]
+  }
+]
