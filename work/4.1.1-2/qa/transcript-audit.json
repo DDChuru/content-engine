@@ -1,0 +1,110 @@
+[
+  {
+    "beat": 1,
+    "sourceWords": 88,
+    "recognizerTokens": 88,
+    "matchedSourceTokens": 88,
+    "differences": []
+  },
+  {
+    "beat": 2,
+    "sourceWords": 44,
+    "recognizerTokens": 44,
+    "matchedSourceTokens": 44,
+    "differences": []
+  },
+  {
+    "beat": 3,
+    "sourceWords": 79,
+    "recognizerTokens": 79,
+    "matchedSourceTokens": 79,
+    "differences": []
+  },
+  {
+    "beat": 4,
+    "sourceWords": 91,
+    "recognizerTokens": 92,
+    "matchedSourceTokens": 91,
+    "differences": [
+      {
+        "op": "insert",
+        "script": "",
+        "heard": "water"
+      }
+    ]
+  },
+  {
+    "beat": 5,
+    "sourceWords": 100,
+    "recognizerTokens": 100,
+    "matchedSourceTokens": 100,
+    "differences": []
+  },
+  {
+    "beat": 6,
+    "sourceWords": 95,
+    "recognizerTokens": 95,
+    "matchedSourceTokens": 95,
+    "differences": []
+  },
+  {
+    "beat": 7,
+    "sourceWords": 86,
+    "recognizerTokens": 86,
+    "matchedSourceTokens": 86,
+    "differences": []
+  },
+  {
+    "beat": 8,
+    "sourceWords": 94,
+    "recognizerTokens": 94,
+    "matchedSourceTokens": 94,
+    "differences": []
+  },
+  {
+    "beat": 9,
+    "sourceWords": 75,
+    "recognizerTokens": 76,
+    "matchedSourceTokens": 74,
+    "differences": [
+      {
+        "op": "insert",
+        "script": "",
+        "heard": "a"
+      },
+      {
+        "op": "replace",
+        "script": "cytoplasm",
+        "heard": "satoplasm"
+      }
+    ]
+  },
+  {
+    "beat": 10,
+    "sourceWords": 81,
+    "recognizerTokens": 81,
+    "matchedSourceTokens": 81,
+    "differences": []
+  },
+  {
+    "beat": 11,
+    "sourceWords": 80,
+    "recognizerTokens": 80,
+    "matchedSourceTokens": 80,
+    "differences": []
+  },
+  {
+    "beat": 12,
+    "sourceWords": 98,
+    "recognizerTokens": 98,
+    "matchedSourceTokens": 98,
+    "differences": []
+  },
+  {
+    "beat": 13,
+    "sourceWords": 110,
+    "recognizerTokens": 110,
+    "matchedSourceTokens": 110,
+    "differences": []
+  }
+]
