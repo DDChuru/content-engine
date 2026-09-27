@@ -122,7 +122,7 @@ export function SyllabusMap({
             <span aria-hidden="true" className="absolute inset-y-0 left-[5.25rem] hidden w-px bg-grid-line lg:block" />
             <h2
               id={`unit-${unit.code}`}
-              className="relative flex items-baseline gap-3 border-b border-grid-line pb-3 font-heading text-2xl font-semibold"
+              className="relative flex flex-wrap items-baseline gap-3 border-b border-grid-line pb-3 font-heading text-2xl font-semibold"
             >
               <MarginCode code={unit.code} />
               {unit.title}

@@ -1,5 +1,5 @@
 /**
- * Cambridge International AS & A Level Mathematics 9709 and Biology 9700 — the app's syllabus map.
+ * Cambridge International AS & A Level Mathematics 9709, Biology 9700 and Chemistry 9701 — the app's syllabus map.
  * Topic codes follow the syllabus numbering (Paper 1 = Pure 1, Paper 4 = Mechanics).
  * A topic is `live` when it links somewhere real: a lesson (/lesson/<code>) or a notes page.
  */
@@ -70,6 +70,12 @@ export const COURSES: Course[] = [
     title: 'Cambridge International A Level Biology 9700',
     blurb: 'A video lesson for every syllabus point, written from the syllabus and checked against the mark schemes.',
     unitCodes: ['B1', 'B2', 'B3'],
+  },
+  {
+    code: '9701',
+    title: 'Cambridge International A Level Chemistry 9701',
+    blurb: 'Video lessons written from the syllabus and checked against the mark schemes.',
+    unitCodes: ['C13'],
   },
 ];
 
@@ -188,6 +194,15 @@ export const UNITS: SyllabusUnit[] = [
       { code: 'B3.1.1-2', title: 'Enzymes: where and how they act', live: true, slug: 'biology-enzymes-where-and-how-they-act', hint: 'enzymes' },
       { code: 'B3.1.4', title: 'Following a colour change: the colorimeter', live: true, slug: 'biology-following-a-colour-change-the-colorimeter', hint: 'enzymes' },
       { code: 'B3.2.2-3', title: 'Vmax, Km and inhibitors on the graph', live: true, slug: 'biology-vmax-km-and-inhibitors-on-the-graph', hint: 'enzymes' },
+    ],
+  },
+  {
+    code: 'C13',
+    title: 'Organic chemistry: stereoisomerism',
+    paper: 'AS Level · Topic 13',
+    topics: [
+      { code: 'C13.4.2-3', title: 'Geometrical (cis/trans) isomerism: why a C=C locks the shape', live: true, slug: 'chemistry-geometrical-cis-trans-isomerism-why-a-c-c-locks-the-shape', hint: 'stereoisomerism' },
+      { code: 'C13.4.4-5', title: 'Optical isomerism: chiral centres, mirror images and spotting stereoisomers', live: true, slug: 'chemistry-optical-isomerism-chiral-centres-mirror-images-and-spotting-stereoisomers', hint: 'stereoisomerism' },
     ],
   },
 ];

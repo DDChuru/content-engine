@@ -51,7 +51,7 @@ function PublicLanding() {
       <BrandLogo variant="wordmark" theme="light" className="mb-6" />
 
       <p className="text-xs font-medium uppercase tracking-[0.18em] text-ink-muted">
-        Cambridge International A Level · Mathematics 9709 and Biology 9700
+        Cambridge International A Level · Mathematics 9709, Biology 9700 and Chemistry 9701
       </p>
       <h1 className="mt-3 font-heading text-4xl font-semibold leading-[1.1] sm:text-5xl">
         Notes you can be{' '}

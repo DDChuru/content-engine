@@ -13,7 +13,7 @@
  *
  * `availability` is not a column and is not editable. It is computed here, at read
  * time, against `lib/syllabus.ts` — the same array the study pages render from.
- * Cambridge A Level Mathematics 9709 and Biology 9700 resolve above `planned` from
+ * Cambridge A Level Mathematics 9709, Biology 9700 and Chemistry 9701 resolve above `planned` from
  * their live units. If the syllabus map goes empty, so does this, automatically,
  * and no admin action can say otherwise. (An admin who
  * genuinely needs to say otherwise uses `catalogueSubjects.availabilityOverride`,
@@ -124,6 +124,24 @@ const AVAILABILITY_SOURCES: Record<
   },
   'cambridge/a-level/cie-al-9700': () => {
     const recorded = UNITS.filter((u) => u.code.startsWith('B')).map((u) => ({
+      title: u.title.toLowerCase(),
+      live: u.topics.filter(isStudentFacing).length,
+    }));
+    const live = recorded.reduce((n, u) => n + u.live, 0);
+    if (live === 0) return { availability: 'planned' };
+    const named = recorded
+      .filter((u) => u.live > 0)
+      .map((u) => u.title)
+      .join(' and ');
+    return {
+      availability: 'in_progress',
+      note:
+        `${live} video lessons are recorded, covering ${named}. ` +
+        'Written notes are not published yet, and the rest of the syllabus is not written.',
+    };
+  },
+  'cambridge/a-level/cie-al-9701': () => {
+    const recorded = UNITS.filter((u) => u.code.startsWith('C')).map((u) => ({
       title: u.title.toLowerCase(),
       live: u.topics.filter(isStudentFacing).length,
     }));

@@ -25,6 +25,7 @@ import {
 const SUBJECT_UNITS: Record<string, string[]> = {
   'cie-al-9709': ['M', 'P1'],
   'cie-al-9700': ['B1', 'B2', 'B3'],
+  'cie-al-9701': ['C13'],
 };
 
 /** The course containing the units mapped to this catalogue subject. */
