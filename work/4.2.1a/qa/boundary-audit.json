@@ -1,7 +1,7 @@
 {
   "master": "/home/user/content-engine/work/4.2.1a/4.2.1a-passive-transport.mp4",
   "timeline": "/home/user/content-engine/work/4.2.1a/timeline.json",
-  "master_bytes": 234468656,
+  "master_bytes": 234485459,
   "fps": 30.0,
   "frame_count": 19246,
   "boundaries_tested": 13,
@@ -300,14 +300,14 @@
       "settles_after_jump": true,
       "metrics": {
         "prior_motion": {
-          "mae": 0.5095008611679077,
-          "changed_fraction": 0.011471354166666666,
+          "mae": 0.5074493288993835,
+          "changed_fraction": 0.011493055555555555,
           "max_tile_mae": 2.7427663803100586
         },
         "last_to_first": {
-          "mae": 14.809380531311035,
-          "changed_fraction": 0.2888454861111111,
-          "max_tile_mae": 52.52662658691406
+          "mae": 14.754242897033691,
+          "changed_fraction": 0.2876692708333333,
+          "max_tile_mae": 52.62384033203125
         },
         "first_to_second": {
           "mae": 0.19437354803085327,
@@ -395,8 +395,8 @@
           "max_tile_mae": 4.122685432434082
         },
         "last_to_first": {
-          "mae": 10.636948585510254,
-          "changed_fraction": 0.18747395833333333,
+          "mae": 10.636148452758789,
+          "changed_fraction": 0.18746961805555556,
           "max_tile_mae": 42.09535217285156
         },
         "first_to_second": {
