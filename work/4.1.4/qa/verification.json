@@ -1,0 +1,99 @@
+{
+  "1_ffprobeDuration": 391.3,
+  "2_videoCoversAudio": {
+    "video": 391.3,
+    "encodedAudio": 390.3,
+    "marginSeconds": 1.0,
+    "videoFrames": 11739
+  },
+  "3_fullDecodeErrors": 0,
+  "4_cues": {
+    "matched": 99,
+    "total": 99,
+    "planned": 99
+  },
+  "5_audioPacketsUnchanged": {
+    "packets": 18297,
+    "identical": true
+  },
+  "6_finalWord": {
+    "word": "respond.",
+    "endsAt": 387.06,
+    "audioEnds": 390.3,
+    "headroom": 3.24,
+    "afterWordMaxDb": -20.3
+  },
+  "7_silentReads": [
+    {
+      "beat": 7,
+      "before": "Look at the words",
+      "start": 241.943,
+      "seconds": 4.0,
+      "pcmAllZero": true,
+      "encodedInteriorMaxDb": -91.0
+    },
+    {
+      "beat": 9,
+      "before": "END",
+      "start": 387.781,
+      "seconds": 2.0,
+      "pcmAllZero": true,
+      "encodedInteriorMaxDb": -91.0
+    }
+  ],
+  "7_speechPCMUnchanged": true,
+  "frozenNarration": "storyboard paragraphs present verbatim; requests differ only by the recorded request-only normalisations: B0: LL-37\u2192L L thirty-seven",
+  "8_boundaries": {
+    "master": "/home/user/content-engine/work/4.1.4/4.1.4-cell-signalling.mp4",
+    "timeline": "/home/user/content-engine/work/4.1.4/timeline.json",
+    "master_bytes": 62353249,
+    "fps": 30.0,
+    "frame_count": 11739,
+    "boundaries_tested": 8,
+    "candidate_count": 0,
+    "candidate_beats": [],
+    "method": "RGB 640x360 area downsample; last/first near-match, then material abrupt jump",
+    "thresholds": {
+      "near_mae_max": 0.8,
+      "near_changed_fraction_max": 0.005,
+      "changed_pixel_threshold": 12,
+      "jump_mae_min": 1,
+      "jump_changed_fraction_min": 0.005,
+      "jump_tile_mae_min": 8,
+      "jump_ratio_min": 5,
+      "noise_floor": 0.05,
+      "post_jump_stable_mae_max": "max(0.8, 0.45 * jump_mae)"
+    },
+    "limits": "Candidates, not proof. Deliberate one-frame holds can match; identical layouts can hide a lookup error. Subtle/animated holds can evade thresholds. Requires unshifted CFR master."
+  },
+  "markerAudit": {
+    "framesChecked": 11739,
+    "marked": 2125,
+    "unmarked": 9614,
+    "intervals": [
+      {
+        "beat": 7,
+        "label": "COMMON MISTAKE",
+        "startFrame": 6769,
+        "endFrame": 8894,
+        "announceFrame": 6769,
+        "beatEndFrame": 8932,
+        "clearKey": "exit",
+        "clearsOnFrame": 8894
+      }
+    ],
+    "badgeTextMae": {
+      "commonMaeMax": 3.9034361839294434,
+      "examMaeMin": 20.319210052490234
+    },
+    "mismatches": 0
+  },
+  "longestUnchangedVisual": {
+    "beat": 2,
+    "startFrame": 1208,
+    "seconds": 7.633333333333334
+  },
+  "unchangedOver15s": [],
+  "valenceAudit": "not applicable: no covalent bond is made or broken on screen (Topic 4: membrane assembly, lateral drift and insertion are non-covalent motion)",
+  "sha256": "0168bbcc153ab490e9faedd1378273356cd24ab1453edc2c9d1ea6e4e965aa47"
+}

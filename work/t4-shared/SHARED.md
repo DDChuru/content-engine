@@ -32,3 +32,26 @@ d45dca56c40296721f66faf2faec263165ec57f1fd496caf29ff4764feed8525  FluidMosaicMem
 2e4f353050895a9473e21612a64396238828409cd479098202c85942d1fb4de1  WaterField.tsx
 6c1088fc47558a3354c0b4049e404df0d05a85f35f6c8f65bfa66a4c26b0ec5a  t4-palette.ts
 ```
+
+## Models added later in this session
+
+| File | First lesson | Model(s) | States / API |
+|---|---|---|---|
+| `CholesterolQualitative.tsx` | 4.1.3 | 2 × 2 qualitative panel | higher / lower temperature × without / with cholesterol; qualitative schematic, no data |
+| `VesicleTransport.tsx` | 4.1.4 | `ExocytosisInset`, `ExoCell` | `exocytosis`: approach 1.2 s → fuse 0.6 s (one continuous midline offset to two leaflets: never a cut) → release 1.0 s → flatten 1.0 s; `ExoCell` = the same event at whole-cell scale. 4.2.1b adds phagocytosis / pinocytosis |
+| `SignallingScene.tsx` | 4.1.4 | `SignallingScene`, `CellReceptor`, `receptorSites`, `seatAt`, `SS` | beta cell with insulin vesicles, capillary, tissue fluid, muscle cell (target, with a separate glucose transport protein), liver cell (target), a cell without a complementary receptor (rounded receptors); wedge motion props `secrete`/`enter`/`carry`/`out`/`bind`/`bindMuscle`/`fail`/`respond`; `stage` labels (secretion, transport, binding, specific response) |
+| `DiffusionField.tsx` | 4.2.1a | `fieldState`, `FieldTokens`, `windowEvents`, `countIn`, `sides`, `walk`, `CounterCard`, `SideTag`, `NetArrow` | finite solute tokens in random motion (short straight runs); `open` (h, dashed middle line) and `membrane` (v, outside top) geometries; crossings are SCRIPTED events (illustrative counts) that are always drawn as actual crossings (straight through a lane / pore gate, or along a carrier's cycle via `via`); side populations change only at crossings; counters count only completed crossings inside a window |
+| `WaterPotentialModel.tsx` | 4.2.1a | `WPMFrame`, `wpmGeo`, `sucrosePts`, `Dropper`, `WPScale`, `WPM` | two fixed-volume compartments left / right, vertical partially permeable strip with water-only gaps (generic model barrier); sucrose dropped from above, never crossing (turn-back available); scale: 0 kPa reference tick, "more negative ↓", unnumbered L / R markers by order only. 4.2.6 adds `cell-vs-solution` |
+
+## sha256 at the end of this session (27 Sep 2026)
+
+```
+4f37d3634b11d331f81cc7e7131ef0c23fca2c42d8929e2d7874d9183fa055d3  CholesterolQualitative.tsx   (4.1.3, 4.1.4, 4.2.1a)
+3d23691ad45dde7e9ebf8cf634e535999884a3472c85836cc42c4891b0a73023  DiffusionField.tsx           (4.2.1a)
+8072191f8975e9c5813b8d670cabbbc0c979a2325c163ea200ab2688ec772357  SignallingScene.tsx          (4.1.4)
+f85e458b886dec2e757c11ecebfef6b081501dc86f0fc44ed7980d3946a9e5b7  VesicleTransport.tsx         (4.1.4, 4.2.1a)
+2e91d00a3c86f39412d97c419f4d40268275165633e8152cc2af2471a65498d1  WaterPotentialModel.tsx      (4.2.1a)
+```
+The seven 4.1.1-2 files above are unchanged and identical in all four lessons. 4.2.1a's `src/SignallingScene.tsx` is an
+earlier copy (6cb4aca8…, before `bindMuscle`), unused by any 4.2.1a beat; it was left as rendered rather than re-render
+the lesson for an unused file.
