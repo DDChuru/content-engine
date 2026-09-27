@@ -1,0 +1,125 @@
+[
+  {
+    "beat": 1,
+    "sourceWords": 72,
+    "recognizerTokens": 72,
+    "matchedSourceTokens": 72,
+    "differences": []
+  },
+  {
+    "beat": 2,
+    "sourceWords": 46,
+    "recognizerTokens": 46,
+    "matchedSourceTokens": 46,
+    "differences": []
+  },
+  {
+    "beat": 3,
+    "sourceWords": 69,
+    "recognizerTokens": 70,
+    "matchedSourceTokens": 69,
+    "differences": [
+      {
+        "op": "insert",
+        "script": "",
+        "heard": "proteins"
+      }
+    ]
+  },
+  {
+    "beat": 4,
+    "sourceWords": 68,
+    "recognizerTokens": 68,
+    "matchedSourceTokens": 66,
+    "differences": [
+      {
+        "op": "replace",
+        "script": "it sit",
+        "heard": "its set"
+      }
+    ]
+  },
+  {
+    "beat": 5,
+    "sourceWords": 71,
+    "recognizerTokens": 71,
+    "matchedSourceTokens": 71,
+    "differences": []
+  },
+  {
+    "beat": 6,
+    "sourceWords": 69,
+    "recognizerTokens": 69,
+    "matchedSourceTokens": 69,
+    "differences": []
+  },
+  {
+    "beat": 7,
+    "sourceWords": 75,
+    "recognizerTokens": 75,
+    "matchedSourceTokens": 74,
+    "differences": [
+      {
+        "op": "replace",
+        "script": "trap",
+        "heard": "trip"
+      }
+    ]
+  },
+  {
+    "beat": 8,
+    "sourceWords": 73,
+    "recognizerTokens": 74,
+    "matchedSourceTokens": 71,
+    "differences": [
+      {
+        "op": "replace",
+        "script": "two",
+        "heard": "too"
+      },
+      {
+        "op": "replace",
+        "script": "two",
+        "heard": "too"
+      },
+      {
+        "op": "insert",
+        "script": "",
+        "heard": "and"
+      }
+    ]
+  },
+  {
+    "beat": 9,
+    "sourceWords": 64,
+    "recognizerTokens": 64,
+    "matchedSourceTokens": 64,
+    "differences": []
+  },
+  {
+    "beat": 10,
+    "sourceWords": 70,
+    "recognizerTokens": 71,
+    "matchedSourceTokens": 69,
+    "differences": [
+      {
+        "op": "replace",
+        "script": "histones",
+        "heard": "his stones"
+      }
+    ]
+  },
+  {
+    "beat": 11,
+    "sourceWords": 73,
+    "recognizerTokens": 73,
+    "matchedSourceTokens": 72,
+    "differences": [
+      {
+        "op": "replace",
+        "script": "cloze",
+        "heard": "close"
+      }
+    ]
+  }
+]
