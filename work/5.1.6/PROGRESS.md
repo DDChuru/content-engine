@@ -1,7 +1,7 @@
 # 5.1.6 When division runs out of control: tumours · BUILD PROGRESS (handover)
 
-Updated 2026-09-27 13:46Z. Builder: cloud run 009b (claude-opus-5-5). Branch `cloud/009-5.1.2-to-5.1.6-rmr4ks`; commit only work/5.1.x and work/t5-shared.
-**Phase: uploaded to Bunny (guid 6d679cd3-18f7-408f-9e64-d62597e0361c), polling; next: REPORT.md after status 4** · **Beats complete: 9 / 9** · master: present
+Updated 2026-09-27 13:49Z. Builder: cloud run 009b (claude-opus-5-5). Branch `cloud/009-5.1.2-to-5.1.6-rmr4ks`; commit only work/5.1.x and work/t5-shared.
+**Phase: DONE — REPORT.md written after Bunny status 4 (guid 6d679cd3-18f7-408f-9e64-d62597e0361c)** · **Beats complete: 9 / 9** · master: present
 Live render processes: none
 NOTE: render-cache/ (chunks) and all MP4/WAV are NOT in git — a fresh container must re-render approved beats
 (`./launch-render.sh N`, 4 at a time); approvals (qa/beat-NN/approved.json) ARE in git and stay valid while the
