@@ -1,0 +1,35 @@
+{
+  "framesChecked": 15547,
+  "intervals": [
+    {
+      "beat": 10,
+      "label": "EXAM CONTRAST",
+      "startFrame": 8324,
+      "endFrame": 10465,
+      "announceFrame": 8324,
+      "beatEndFrame": 10502,
+      "clearKey": "done",
+      "clearsOnFrame": 10465
+    },
+    {
+      "beat": 12,
+      "label": "EXAM CONTRAST",
+      "startFrame": 11275,
+      "endFrame": 13341,
+      "announceFrame": 11275,
+      "beatEndFrame": 13354,
+      "clearKey": "fix2",
+      "clearsOnFrame": 13341
+    }
+  ],
+  "stats": {
+    "marked": 4207,
+    "unmarked": 11340
+  },
+  "badgeText": {
+    "examMaeMax": 3.92836856842041,
+    "commonMaeMin": 20.365219116210938
+  },
+  "mismatches": [],
+  "mismatchCount": 0
+}

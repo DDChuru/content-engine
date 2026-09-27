@@ -1,4 +1,4 @@
-"""Ordered PIPELINE-STANDARD §4 verification of the 3.2.1 master, then the every-frame error-marker
+"""Ordered PIPELINE-STANDARD §4 verification of the 5.1.3 master, then the every-frame error-marker
 audit (presence AND badge text) and the beat-boundary hold check. Writes qa/verification.json."""
 from pathlib import Path
 import json, subprocess, hashlib, wave, re, math, sys
@@ -7,7 +7,7 @@ from PIL import Image
 P = Path(__file__).resolve().parent
 T = json.loads((P / 'timeline.json').read_text())
 S = json.loads((P / 'script.json').read_text())
-final = P / '3.2.1-temperature-ph.mp4'; audio = P / 'audio/narration-encoded.m4a'
+final = P / '5.1.3-mitotic-cell-cycle.mp4'; audio = P / 'audio/narration-encoded.m4a'
 R = {}
 def probe(f): return json.loads(subprocess.check_output(['ffprobe', '-v', 'error', '-show_streams', '-show_format', '-of', 'json', str(f)]))
 def packets(f): return json.loads(subprocess.check_output(['ffprobe', '-v', 'error', '-select_streams', 'a:0', '-show_packets', '-show_data_hash', 'sha256', '-show_entries', 'packet=pts,dts,duration,size,data_hash', '-of', 'json', str(f)]))['packets']
@@ -38,7 +38,11 @@ for sc, b in zip(T['scenes'], S):
         ts = norm(c['phrase']); occ = [i for i in range(len(src) - len(ts) + 1) if src[i:i + len(ts)] == ts]
         assert len(occ) == 1 and occ[0] > last and c['match'] == 'exact-spoken-token', (sc['id'], c['phrase'])
         last = occ[0]; matched += 1
-R['4_cues'] = {'matched': matched, 'total': total}; print('4. cues', matched, '/', total, flush=True)
+import sys as _sys; _sys.path.insert(0, str(P)); from cue_plan import PLANS
+planned = sum(len(v) for v in PLANS.values())
+assert matched == total == planned, ('cue count mismatch', matched, total, planned)
+assert all(len(sc['cues']) == len(PLANS[sc['id']]) for sc in T['scenes']), 'per-beat cue count mismatch'
+R['4_cues'] = {'matched': matched, 'total': total, 'planned': planned}; print('4. cues', matched, '/', total, flush=True)
 # 5. audio packets unchanged
 # the cached AAC must be the encode of the CURRENT narration.wav (finish.py keys it by sha256), else packet equality proves nothing
 src_key = json.loads((P / 'audio/narration-encoded.source.json').read_text())
@@ -46,8 +50,8 @@ assert src_key['narrationWavSha256'] == hashlib.sha256((P / 'public/narration.wa
 p0, p1 = packets(audio), packets(final); assert p0 == p1, 'AAC packets or timestamps changed'
 R['5_audioPacketsUnchanged'] = {'packets': len(p1), 'identical': True}; print('5. AAC packets identical', len(p1), flush=True)
 # 6. final word not clipped
-last = T['scenes'][-1]; words = json.loads((P / 'audio/beat-11.timed.words.json').read_text())['words']
-lw = re.sub(r'[^a-z]', '', words[-1]['word'].lower()); assert lw == 'denature', lw
+last = T['scenes'][-1]; words = json.loads((P / 'audio/beat-14.timed.words.json').read_text())['words']
+lw = re.sub(r'[^a-z]', '', words[-1]['word'].lower()); assert lw == 'cells', lw
 lastEnd = last['start'] + words[-1]['end']; assert lastEnd < ad
 tail = maxvol(lastEnd + 0.25, 1.0)
 R['6_finalWord'] = {'word': words[-1]['word'], 'endsAt': round(lastEnd, 3), 'audioEnds': ad, 'headroom': round(ad - lastEnd, 3), 'afterWordMaxDb': tail}
@@ -96,7 +100,7 @@ refE = np.asarray(Image.open(P / 'qa/badge-EXAM.png').convert('RGB'))[BY:BY + BH
 refC = np.asarray(Image.open(P / 'qa/badge-COMMON.png').convert('RGB'))[BY:BY + BH, BX:BX + BW].astype(np.float32)
 proc = subprocess.Popen(['nice', '-n', '10', 'ffmpeg', '-v', 'error', '-threads', '3', '-i', str(final), '-vf', f'crop={BW}:{BH}:{BX}:{BY},format=rgb24', '-an', '-f', 'rawvideo', '-'], stdout=subprocess.PIPE)
 size = BW * BH * 3; mism = []; f = 0; stats = {'marked': 0, 'unmarked': 0}
-worst = {'commonMaeMax': 0.0, 'examMaeMin': 1e9}
+worst = {'examMaeMax': 0.0, 'commonMaeMin': 1e9}
 while True:
     buf = proc.stdout.read(size)
     if not buf: break
@@ -105,8 +109,8 @@ while True:
     px = img[6, 4]; seen = 145 < px[0] < 215 and px[1] < 115 and px[2] < 95
     maeE = float(np.abs(img - refE).mean()); maeC = float(np.abs(img - refC).mean())
     if exp:
-        stats['marked'] += 1; worst['commonMaeMax'] = max(worst['commonMaeMax'], maeC); worst['examMaeMin'] = min(worst['examMaeMin'], maeE)
-        ok = seen and maeC < 6 and maeE > maeC * 3 and exp['label'] == 'COMMON MISTAKE'
+        stats['marked'] += 1; worst['examMaeMax'] = max(worst['examMaeMax'], maeE); worst['commonMaeMin'] = min(worst['commonMaeMin'], maeC)
+        ok = seen and ((exp['label'] == 'EXAM CONTRAST' and maeE < 6 and maeC > maeE * 3) or (exp['label'] == 'COMMON MISTAKE' and maeC < 6 and maeE > maeC * 3))
     else:
         stats['unmarked'] += 1; ok = not seen and maeE > 20 and maeC > 20
     if not ok: mism.append({'frame': f, 'expected': bool(exp), 'seen': bool(seen), 'maeExam': round(maeE, 2), 'maeCommon': round(maeC, 2)})
@@ -115,7 +119,7 @@ proc.wait(); assert f == T['durationFrames'], (f, T['durationFrames'])
 (P / 'qa/marker-audit.json').write_text(json.dumps({'framesChecked': f, 'intervals': iv, 'stats': stats, 'badgeText': worst, 'mismatches': mism[:200], 'mismatchCount': len(mism)}, indent=2))
 assert not mism, mism[:5]
 R['markerAudit'] = {'framesChecked': f, **stats, 'intervals': iv, 'badgeTextMae': worst, 'mismatches': 0}
-print('Marker audit: every frame; no error beats in this lesson, so every frame must be unmarked', stats, worst, flush=True)
+print('Marker audit: every frame; EXAM CONTRAST on beats 10 and 12 until the completed correct frame, unmarked elsewhere', stats, worst, flush=True)
 # longest unchanged rendered visual (render ledgers)
 gaps = []
 for sc in T['scenes']:
@@ -124,7 +128,7 @@ longest = max(gaps, key=lambda g: g['seconds'])
 holds = [g for g in gaps if g['seconds'] > 15]
 R['longestUnchangedVisual'] = longest; R['unchangedOver15s'] = holds
 assert not holds, ('rendered visual unchanged for more than 15 s', holds)
-R['valenceAudit'] = 'not applicable: no covalent bond is made or broken on screen (all enzyme changes are non-covalent motion; the reaction appears only as the formula 2H2O2 -> 2H2O + O2)'
+R['valenceAudit'] = 'not applicable: no covalent chemistry in Topic 5 (replication is schematic progress; no bond edits)'
 R['sha256'] = hashlib.sha256(final.read_bytes()).hexdigest()
 (P / 'qa/verification.json').write_text(json.dumps(R, indent=2) + '\n')
 print(json.dumps({k: R[k] for k in ['longestUnchangedVisual', 'unchangedOver15s', 'sha256']}, indent=2))

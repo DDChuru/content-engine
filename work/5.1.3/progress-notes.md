@@ -1,8 +1,6 @@
-PHASE: audio + timeline done; beats not yet authored
+PHASE: master verified, branded, uploaded (guid 8d2edf6f-e5d3-4f2d-81df-177cb2f4ae00); polling for status 4, then REPORT
 
-## Session (cloud run 009a): 5.1.1 (uploaded, polling) → 5.1.3 (this) → 5.1.4
 ## Decisions
-- Audio: no request normalisation; beat 14 retaken ("chromatid" misheard as chromated/cremated in take 1); qa/audio-review.md.
-- Opening cues added: B1 "Ever wondered", B2 "By the end", B5 "Next", B9 "Think of it as", B11 "One more thing", B13 "Here it is"; exit cues use '$'.
-- Error beats: 10 (E5-01, EXAM CONTRAST, clearKey 'done' = end of "phase of interphase") and 12 (E5-02, EXAM CONTRAST, clearKey 'fix2' = end of "to opposite poles"); silent reads 4 s (digital silence).
-- Beat 14 END hold 2 s.
+- Audio: no normalisation; beat 14 retaken; qa/audio-review.md.
+- Error beats 10 and 12: EXAM CONTRAST (marker audit passes every frame).
+- CellCycleWheel: two inset fixes during this lesson (decondensing daughter scale); 5.1.1 keeps its earlier copy (not used there).

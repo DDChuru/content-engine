@@ -3,7 +3,7 @@ from pathlib import Path
 import subprocess,json,sys
 P=Path(__file__).resolve().parent
 T=json.loads((P/'timeline.json').read_text())
-assert len(T['scenes'])==11
+assert len(T['scenes'])==14
 fp=lambda i: subprocess.check_output(['node','-e',f"console.log(require('./beat-fingerprint.cjs')({i}))"],cwd=P,text=True).strip()
 parts=[];stale=[]
 for sc in T['scenes']:
@@ -11,7 +11,7 @@ for sc in T['scenes']:
     assert (d/'complete.json').exists(),f"Beat {sc['id']} incomplete"
     assert not (d/'render.lock').exists(),f"Beat {sc['id']} still locked"
     done=json.loads((d/'complete.json').read_text())
-    want=sc['frames']+(30 if sc['id']==11 else 0)
+    want=sc['frames']+(30 if sc['id']==14 else 0)
     assert done['frames']==want,(sc['id'],done['frames'],want)
     n=int(json.loads(subprocess.check_output(['ffprobe','-v','error','-select_streams','v:0','-count_packets','-show_entries','stream=nb_read_packets','-of','json',str(d/'video.mp4')]))['streams'][0]['nb_read_packets'])
     assert n==want,(sc['id'],n,want)
@@ -35,7 +35,7 @@ if not (aac.exists() and key.exists() and json.loads(key.read_text())==want):
     kp=key.with_name(key.name+'.partial'); kp.write_text(json.dumps(want,indent=2)+'\n'); kp.replace(key)
 manifest=P/'render-cache/beats.ffconcat'
 manifest.write_text('ffconcat version 1.0\n'+''.join(f"file '{x}'\n" for x in parts))
-out=P/'3.2.1-temperature-ph.mp4';tmp=P/'3.2.1-temperature-ph.partial.mp4'
+out=P/'5.1.3-mitotic-cell-cycle.mp4';tmp=P/'5.1.3-mitotic-cell-cycle.partial.mp4'
 subprocess.run(['nice','-n','10','ffmpeg','-v','error','-y','-safe','0','-f','concat','-i',str(manifest),'-i',str(aac),'-map','0:v:0','-map','1:a:0','-c','copy','-movflags','+faststart',str(tmp)],check=True)
 tmp.rename(out)
 receipt={'renderer':'React/SVG component tree → react-dom/server → Sharp/librsvg → FFmpeg H.264 1080p30, beat-chunked, joined with -c copy','frames':T['durationFrames'],'staleBeats':stale,'beats':[json.loads((x.parent/'complete.json').read_text()) for x in parts]}

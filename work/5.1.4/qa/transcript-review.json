@@ -1,0 +1,268 @@
+[
+ {
+  "beat": 1,
+  "seconds": 27.956833333333332,
+  "wpm": 145.9,
+  "matched": 69,
+  "src": 69,
+  "diffs": [],
+  "lowConfidence": [],
+  "watch": {
+   "chromosome": [
+    1,
+    1
+   ]
+  }
+ },
+ {
+  "beat": 2,
+  "seconds": 29.489354166666665,
+  "wpm": 122.1,
+  "matched": 60,
+  "src": 60,
+  "diffs": [],
+  "lowConfidence": [],
+  "watch": {
+   "telomere": [
+    1,
+    1
+   ],
+   "chromosome": [
+    2,
+    2
+   ],
+   "chromosomes": [
+    1,
+    1
+   ],
+   "chromatids": [
+    1,
+    1
+   ],
+   "centromere": [
+    1,
+    1
+   ],
+   "interphase": [
+    1,
+    1
+   ],
+   "replication": [
+    1,
+    1
+   ]
+  }
+ },
+ {
+  "beat": 3,
+  "seconds": 15.789583333333333,
+  "wpm": 136.8,
+  "matched": 36,
+  "src": 36,
+  "diffs": [],
+  "lowConfidence": [
+   [
+    "and",
+    0.41,
+    10.38
+   ]
+  ],
+  "watch": {
+   "telomere": [
+    1,
+    1
+   ],
+   "telomeres": [
+    1,
+    1
+   ],
+   "chromosome": [
+    1,
+    1
+   ],
+   "replication": [
+    1,
+    1
+   ]
+  }
+ },
+ {
+  "beat": 4,
+  "seconds": 28.514125,
+  "wpm": 145.2,
+  "matched": 70,
+  "src": 70,
+  "diffs": [],
+  "lowConfidence": [
+   [
+    "the",
+    0.42,
+    15.38
+   ]
+  ],
+  "watch": {
+   "telomere": [
+    2,
+    2
+   ]
+  }
+ },
+ {
+  "beat": 5,
+  "seconds": 32.69370833333333,
+  "wpm": 123.0,
+  "matched": 67,
+  "src": 67,
+  "diffs": [],
+  "lowConfidence": [
+   [
+    "Some",
+    0.45,
+    28.88
+   ]
+  ],
+  "watch": {
+   "telomere": [
+    1,
+    1
+   ],
+   "telomeres": [
+    2,
+    2
+   ],
+   "somatic": [
+    1,
+    1
+   ]
+  }
+ },
+ {
+  "beat": 6,
+  "seconds": 40.21697916666667,
+  "wpm": 116.4,
+  "matched": 79,
+  "src": 79,
+  "diffs": [],
+  "lowConfidence": [],
+  "watch": {
+   "telomere": [
+    2,
+    2
+   ],
+   "telomeres": [
+    1,
+    1
+   ],
+   "telomeric": [
+    1,
+    1
+   ],
+   "chromosome": [
+    2,
+    2
+   ],
+   "somatic": [
+    1,
+    1
+   ],
+   "replication": [
+    1,
+    1
+   ]
+  }
+ },
+ {
+  "beat": 7,
+  "seconds": 25.727729166666666,
+  "wpm": 128.3,
+  "matched": 56,
+  "src": 56,
+  "diffs": [],
+  "lowConfidence": [
+   [
+    "phase",
+    0.46,
+    12.08
+   ]
+  ],
+  "watch": {
+   "telomere": [
+    1,
+    1
+   ],
+   "telomeric": [
+    1,
+    1
+   ],
+   "chromosome": [
+    1,
+    1
+   ],
+   "interphase": [
+    1,
+    1
+   ],
+   "somatic": [
+    1,
+    1
+   ],
+   "replication": [
+    1,
+    1
+   ]
+  }
+ },
+ {
+  "beat": 8,
+  "seconds": 38.4986875,
+  "wpm": 123.1,
+  "matched": 77,
+  "src": 80,
+  "diffs": [
+   [
+    "replace",
+    "cloze",
+    "close"
+   ],
+   [
+    "delete",
+    "too short",
+    ""
+   ]
+  ],
+  "lowConfidence": [
+   [
+    "outline.",
+    0.34,
+    2.98
+   ],
+   [
+    "to",
+    0.25,
+    26.66
+   ]
+  ],
+  "watch": {
+   "telomere": [
+    2,
+    2
+   ],
+   "telomeres": [
+    2,
+    2
+   ],
+   "chromosome": [
+    1,
+    1
+   ],
+   "replication": [
+    2,
+    2
+   ],
+   "cloze": [
+    1,
+    0
+   ]
+  }
+ }
+]

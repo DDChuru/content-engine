@@ -1,33 +1,34 @@
-# 3.2.1 Working conditions: temperature and pH · BUILD PROGRESS (handover)
+# 5.1.3 The mitotic cell cycle · BUILD PROGRESS (handover)
 
-Updated 2026-09-27 11:06Z. Builder: claude-opus-5-5 (LOCAL build on machine A, per work/LOCAL-BUILD.md). Branch `local/topic3-builds`; commit ONLY work/3.2.1; no push.
-**Phase: audio + timeline done; beats not yet authored** · **Beats complete: 0 / 11** · master: not yet built
-Live render processes: none
+Updated 2026-09-27 11:35Z. Builder: cloud run 009a (claude-opus-5-5). Branch `cloud/009-5.1.1-to-5.1.4-qls6vy`; commit only work/5.1.x and work/t5-shared.
+**Phase: master verified, branded, uploaded (guid 8d2edf6f-e5d3-4f2d-81df-177cb2f4ae00); polling for status 4, then REPORT** · **Beats complete: 14 / 14** · master: present
+Live render processes: 11586 bash -c printf "%s\n" "$@" | xargs -P 4 -I{} sh -c "nice -n 10 \"\$NODE\" render-beat.cjs {} > logs/render-beat-{}.log 2>&1; rc=\$?; echo beat {} exit \$rc; exit \$rc" _ 1 2 3 4
+11588 xargs -P 4 -I{} sh -c nice -n 10 "$NODE" render-beat.cjs {} > logs/render-beat-{}.log 2>&1; rc=$?; echo beat {} exit $rc; exit $rc
+11590 sh -c nice -n 10 "$NODE" render-beat.cjs 2 > logs/render-beat-2.log 2>&1; rc=$?; echo beat 2 exit $rc; exit $rc
+11594 node render-beat.cjs 2
 NOTE: render-cache/ (chunks) and all MP4/WAV are NOT in git — a fresh container must re-render approved beats
 (`./launch-render.sh N`, 4 at a time); approvals (qa/beat-NN/approved.json) ARE in git and stay valid while the
 source fingerprint matches.
 
 | Beat | Heading | Frames | Cues | State |
 |---|---|---|---|---|
-| 1 | Hook and context · 0:00–0:36 | 999 | 10 | not authored |
-| 2 | What you will be able to do · 0:36–1:02 | 726 | 6 | not authored |
-| 3 | The loop · 1:02–1:31 | 780 | 8 | not authored |
-| 4 | G1: growth, one DNA molecule · 1:31–2:02 | 868 | 8 | not authored |
-| 5 | S phase: replication, drawn as it happens · 2:02–2:42 | 1201 | 12 | not authored |
-| 6 | G2: replicated, still long and thin · 2:42–3:08 | 711 | 6 | not authored |
-| 7 | Mitosis: one nucleus becomes two · 3:08–3:46 | 1166 | 10 | not authored |
-| 8 | Cytokinesis: the cytoplasm divides, the graph drops · 3:46 | 1010 | 10 | not authored |
-| 9 | The handle, and the sentence you write · 4:20–4:46 | 863 | 8 | not authored |
-| 10 | EXAM CONTRAST E5-01: seen is not copied · 4:46–5:58 | 2178 | 18 | not authored |
-| 11 | Read the axis label first · 5:58–6:28 | 773 | 9 | not authored |
-| 12 | EXAM CONTRAST E5-02: an ignore line, and what to write ins | 2079 | 19 | not authored |
-| 13 | What I told you, on the wheel and the graph · 7:42–8:12 | 863 | 11 | not authored |
-| 14 | How it is asked, and the reject card · 8:12–8:55.5 | 1300 | 12 | not authored |
+| 1 | Hook and context · 0:00–0:36 | 999 | 10 | COMPLETE |
+| 2 | What you will be able to do · 0:36–1:02 | 726 | 6 | COMPLETE |
+| 3 | The loop · 1:02–1:31 | 780 | 8 | COMPLETE |
+| 4 | G1: growth, one DNA molecule · 1:31–2:02 | 868 | 8 | COMPLETE |
+| 5 | S phase: replication, drawn as it happens · 2:02–2:42 | 1201 | 12 | COMPLETE |
+| 6 | G2: replicated, still long and thin · 2:42–3:08 | 711 | 6 | COMPLETE |
+| 7 | Mitosis: one nucleus becomes two · 3:08–3:46 | 1166 | 10 | COMPLETE |
+| 8 | Cytokinesis: the cytoplasm divides, the graph drops · 3:46 | 1010 | 10 | COMPLETE |
+| 9 | The handle, and the sentence you write · 4:20–4:46 | 863 | 8 | COMPLETE |
+| 10 | EXAM CONTRAST E5-01: seen is not copied · 4:46–5:58 | 2178 | 18 | COMPLETE |
+| 11 | Read the axis label first · 5:58–6:28 | 773 | 9 | COMPLETE |
+| 12 | EXAM CONTRAST E5-02: an ignore line, and what to write ins | 2079 | 19 | COMPLETE |
+| 13 | What I told you, on the wheel and the graph · 7:42–8:12 | 863 | 11 | COMPLETE |
+| 14 | How it is asked, and the reject card · 8:12–8:55.5 | 1300 | 12 | COMPLETE |
 
 
-## Session (cloud run 009a): 5.1.1 (uploaded, polling) → 5.1.3 (this) → 5.1.4
 ## Decisions
-- Audio: no request normalisation; beat 14 retaken ("chromatid" misheard as chromated/cremated in take 1); qa/audio-review.md.
-- Opening cues added: B1 "Ever wondered", B2 "By the end", B5 "Next", B9 "Think of it as", B11 "One more thing", B13 "Here it is"; exit cues use '$'.
-- Error beats: 10 (E5-01, EXAM CONTRAST, clearKey 'done' = end of "phase of interphase") and 12 (E5-02, EXAM CONTRAST, clearKey 'fix2' = end of "to opposite poles"); silent reads 4 s (digital silence).
-- Beat 14 END hold 2 s.
+- Audio: no normalisation; beat 14 retaken; qa/audio-review.md.
+- Error beats 10 and 12: EXAM CONTRAST (marker audit passes every frame).
+- CellCycleWheel: two inset fixes during this lesson (decondensing daughter scale); 5.1.1 keeps its earlier copy (not used there).
