@@ -124,3 +124,131 @@ export function RegionLabels({cy = CY, u = U, x = 90, o = 1, oOut, oIn, oCore, p
 export const SCHEM = 'schematic; not to scale';
 export const PARTS = 'particles drawn schematically; not to scale; far fewer than real';
 export {C, Txt, Lines, Card, Cite, textW, T4, clamp01};
+
+/* ---------------- 4.1.3 additions ---------------- */
+import {PhospholipidToken} from './PhospholipidToken';
+import {Cholesterol, Glycolipid, BeadChain} from './FluidMosaicMembrane';
+/** 4.1.3 stage: membrane at the left two-thirds, RoleGrid at the right. */
+export const L3 = {cx: 560, cy: 440, u: 44, xw: [80, 1040]};
+export const ROWS = ['phospholipids', 'cholesterol', 'glycolipids', 'proteins', 'glycoproteins'];
+export const COLS = ['stability', 'fluidity', 'permeability', 'transport', 'cell signalling', 'cell recognition'];
+export const CELLS: Record<string, string> = {
+  'phospholipids|fluidity': 'move sideways: fluid',
+  'phospholipids|permeability': 'hydrophobic core: barrier to ions and polar molecules',
+  'cholesterol|stability': 'helps stability',
+  'cholesterol|fluidity': 'regulates fluidity',
+  'cholesterol|permeability': 'reduces permeability to small polar molecules and ions',
+  'glycolipids|stability': 'chains H-bond with water',
+  'glycolipids|cell recognition': 'antigens',
+  'proteins|transport': 'channel proteins · carrier proteins',
+  'proteins|cell signalling': 'some are receptors',
+  'glycoproteins|stability': 'chains H-bond with water',
+  'glycoproteins|cell signalling': 'some are receptors',
+  'glycoproteins|cell recognition': 'antigens',
+};
+export function wrap(text: string, w: number, size: number, weight = 600) {
+  const out: string[] = []; let line = '';
+  for (const word of text.split(' ')) { const tryL = line ? line + ' ' + word : word; if (textW(tryL, size, weight) > w && line) { out.push(line); line = word; } else line = tryL; }
+  if (line) out.push(line); return out;
+}
+export const GRID = {x: 1060, y: 206, w: 790, hdr: 58, rowH: 138, rowW: 176};
+export const cellBox = (row: string, col: string) => {
+  const cw = (GRID.w - GRID.rowW) / 6, r = ROWS.indexOf(row), c = COLS.indexOf(col);
+  return {x: GRID.x + GRID.rowW + c * cw, y: GRID.y + GRID.hdr + r * GRID.rowH, w: cw, h: GRID.rowH};
+};
+function RowIcon({k, x, y, t}: any) {
+  if (k === 'phospholipids') return <PhospholipidToken x={x} y={y - 22} u={24} />;
+  if (k === 'cholesterol') return <Cholesterol x={x} y={y - 26} u={34} dir={1} />;
+  if (k === 'glycolipids') return <Glycolipid x={x} y={y - 4} u={20} t={t} />;
+  if (k === 'proteins') return <g data-role="drawing"><rect x={x - 13} y={y - 34} width={26} height={62} rx={9} fill={T4.protein} stroke={T4.proteinEdge} strokeWidth={2} /></g>;
+  return <g data-role="drawing"><rect x={x - 11} y={y - 22} width={22} height={52} rx={8} fill={T4.protein} stroke={T4.proteinEdge} strokeWidth={2} /><BeadChain x={x} y={y - 22} u={26} n={3} t={t} /></g>;
+}
+/** RoleGrid (lesson panel published by 4.1.3): 5 components × 6 roles. `fill[key]` 0..1 per cell ('row|col'; the
+ * transport cell also takes 'proteins|transport:half' for its first half), `rowLit`/`colLit` 0..1, `hi[key]` pulse. */
+export function RoleGrid({fill = {}, rowLit = {}, colLit = {}, hi = {}, o = 1, t = 0, dimCells = 0}: any) {
+  if (o <= 0) return null;
+  const {x, y, w, hdr, rowH, rowW} = GRID, cw = (w - rowW) / 6, H = hdr + 5 * rowH;
+  return (
+    <g opacity={o < 1 ? o : undefined}>
+      <rect data-role="decor" x={x} y={y} width={w} height={H} rx={14} fill="#FFFFFF" stroke={C.line} strokeWidth={2} />
+      {COLS.map((c, i) => { const L = rowLit && colLit[c] ? colLit[c] : 0; return (
+        <g key={c}>
+          {L > 0 && <rect data-role="decor" x={x + rowW + i * cw + 2} y={y + 2} width={cw - 4} height={H - 4} rx={8} fill="#FFF3C4" opacity={0.75 * L} />}
+          {wrap(c, cw - 10, 17, 700).map((ln, j, arr) => <Txt key={j} x={x + rowW + i * cw + cw / 2} y={y + hdr / 2 + 6 - (arr.length - 1) * 9 + j * 19} size={17} weight={700} anchor="middle" fill={L > 0.3 ? C.primary : C.ink}>{ln}</Txt>)}
+        </g>); })}
+      {ROWS.map((r, j) => { const L = rowLit[r] ?? 0, yy = y + hdr + j * rowH; return (
+        <g key={r}>
+          {L > 0 && <rect data-role="decor" x={x + 2} y={yy + 2} width={w - 4} height={rowH - 4} rx={8} fill="#FFF3C4" opacity={0.75 * L} />}
+          <path data-role="decor" d={`M${x + 10} ${yy}H${x + w - 10}`} stroke={C.line} strokeWidth={1.5} />
+          <RowIcon k={r} x={x + 36} y={yy + rowH / 2} t={t} />
+          {wrap(r, 110, 17, 700).map((ln, i) => <Txt key={i} x={x + 62} y={yy + rowH / 2 + 6 + i * 19} size={17} weight={700} fill={L > 0.3 ? C.primary : C.ink}>{ln}</Txt>)}
+        </g>); })}
+      {COLS.map((_, i) => <path key={'v' + i} data-role="decor" d={`M${x + rowW + i * cw} ${y + 8}V${y + H - 8}`} stroke={C.line} strokeWidth={1.5} />)}
+      {ROWS.map((r) => COLS.map((c) => {
+        const key = r + '|' + c, b = cellBox(r, c), txt = CELLS[key];
+        let f = fill[key] ?? 0, text = txt;
+        if (key === 'proteins|transport' && f <= 0 && (fill['proteins|transport:half'] ?? 0) > 0) { f = fill['proteins|transport:half']; text = 'channel proteins'; }
+        const h = hi[key] ?? 0;
+        if (!txt || f <= 0) return <Txt key={key} x={b.x + b.w / 2} y={b.y + b.h / 2 + 6} size={18} weight={600} fill="#C9C2B3" anchor="middle">—</Txt>;
+        const lines = wrap(text, b.w - 12, 15, 700);
+        return (
+          <g key={key} opacity={(f < 1 ? f : 1) * (1 - dimCells * 0.5)}>
+            <rect data-role="decor" x={b.x + 4} y={b.y + 5} width={b.w - 8} height={b.h - 10} rx={8} fill={h > 0 ? '#FBD9CE' : '#EAF5EE'} stroke={h > 0 ? C.primary : '#9CCBB0'} strokeWidth={h > 0 ? 2.5 : 1.5} />
+            {lines.map((ln, i) => <Txt key={i} x={b.x + b.w / 2} y={b.y + b.h / 2 + 5 - (lines.length - 1) * 9 + i * 18} size={15} weight={700} anchor="middle" fill="#1D5A38">{ln}</Txt>)}
+          </g>);
+      }))}
+      <Cite x={x + w} y={y + H + 24} text="roles named in syllabus 4.1.3 (p.21)" anchor="end" />
+    </g>
+  );
+}
+/** Standard 4.1.3 membrane stage (water above/below, left two-thirds). */
+export function Stage3({s, mem = {}, n = [22, 18], cx = L3.cx, cy = L3.cy, u = L3.u, xw = L3.xw, water = 1}: any) {
+  // the carrier's one-run shape-change preview happens in Beat 6; its return is not shown in this lesson, so from Beat 7
+  // on it is held in its flipped outline
+  return <Stage s={s} cx={cx} cy={cy} u={u} xw={xw} mem={{carrierPhase: s.sc.id >= 7 ? 1 : 0, ...mem}} n={n} water={water} waterBottom={936} />;
+}
+/** Grid fills: every cell completed in an earlier beat is full; this beat's cells fade in at their cue keys. */
+export const FILLS: Record<number, [string, string][]> = {
+  4: [['phospholipids|permeability', 'pp']],
+  5: [['proteins|transport:half', 'shape']],
+  6: [['proteins|transport', 'both']],
+  8: [['phospholipids|fluidity', 'fluid'], ['cholesterol|fluidity', 'steady']],
+  9: [['cholesterol|stability', 'stable'], ['cholesterol|permeability', 'perm'], ['glycolipids|stability', 'hb'], ['glycoproteins|stability', 'hb']],
+  10: [['proteins|cell signalling', 'sent'], ['glycoproteins|cell signalling', 'sent']],
+  11: [['glycolipids|cell recognition', 'outer'], ['glycoproteins|cell recognition', 'outer']],
+};
+export function gridFill(s: any) {
+  const id = s.sc.id, out: Record<string, number> = {};
+  for (const [b, list] of Object.entries(FILLS)) for (const [k, key] of list) {
+    if (Number(b) < id) out[k] = 1; else if (Number(b) === id) out[k] = Math.max(out[k] ?? 0, clamp01(s.a(key) / 0.5));
+  }
+  return out;
+}
+/** Region labels for the 4.1.3 stage. */
+export function Regions3({o = 1, cy = L3.cy, u = L3.u}: any) {
+  return <g>
+    <Lbl x={250} y={236} text="outside the cell (watery)" o={o} size={21} fill={C.teal} />
+    <Lbl x={250} y={cy + 2.3 * u + 84} text="cytoplasm (watery)" o={o} size={21} fill={C.teal} />
+  </g>;
+}
+import {plPos} from './FluidMosaicMembrane';
+import {WaterTok} from './T4Tokens';
+/** Crossing lanes between phospholipids: [outer-gap x, inner-gap x] for the lipid-only segments (A, C, E). */
+export function lanes(M: any) {
+  const g = (i: number, j: number) => (plPos(M, i).x + plPos(M, j).x) / 2;
+  return [[g(2, 3), g(13, 14)], [g(7, 8), g(19, 20)], [g(10, 11), g(22, 23)], [g(0, 1), g(12, 13)]];
+}
+/** A token's hydration halo: five pale blue water tokens around (x, y), jiggling. */
+export function Halo({x, y, r = 24, t = 0, o = 1}: any) {
+  if (o <= 0) return null;
+  return <g opacity={o < 1 ? o : undefined}>{[0, 1, 2, 3, 4].map((k) => { const a = k * 1.2566 + 0.3 * Math.sin(t * 2 + k); return <WaterTok key={k} x={x + Math.cos(a) * r} y={y + Math.sin(a) * r} r={6} />; })}</g>;
+}
+/** Turn-back at the core (1.5 s): down through the head region, stall where the tails begin, back up. */
+export const turnBack = (age: number, x: number, yTop: number, yStall: number) => {
+  if (age < 0) return [x, yTop];
+  if (age < 0.6) return [x, yTop + (yStall - yTop) * (1 - Math.pow(1 - age / 0.6, 2))];
+  if (age < 0.85) return [x + 2 * Math.sin(age * 40), yStall];
+  if (age < 1.5) { const k = (age - 0.85) / 0.65; return [x, yStall + (yTop - yStall) * (k * k * (3 - 2 * k))]; }
+  return [x, yTop];
+};
+export const DIM_ALL = {glycolipid: 0.5, 'intrinsic-channel': 0.5, cholesterol: 0.5, 'receptor-glycoprotein': 0.5, 'intrinsic-carrier': 0.5, glycoprotein: 0.5, extrinsic: 0.5};

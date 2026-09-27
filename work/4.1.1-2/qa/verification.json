@@ -1,0 +1,80 @@
+{
+  "1_ffprobeDuration": 537.133333,
+  "2_videoCoversAudio": {
+    "video": 537.133333,
+    "encodedAudio": 536.133,
+    "marginSeconds": 1.0,
+    "videoFrames": 16114
+  },
+  "3_fullDecodeErrors": 0,
+  "4_cues": {
+    "matched": 136,
+    "total": 136,
+    "planned": 136
+  },
+  "5_audioPacketsUnchanged": {
+    "packets": 25133,
+    "identical": true
+  },
+  "6_finalWord": {
+    "word": "core.",
+    "endsAt": 533.18,
+    "audioEnds": 536.133,
+    "headroom": 2.953,
+    "afterWordMaxDb": -61.4
+  },
+  "7_silentReads": [
+    {
+      "beat": 13,
+      "before": "END",
+      "start": 533.623,
+      "seconds": 2.0,
+      "pcmAllZero": true,
+      "encodedInteriorMaxDb": -91.0
+    }
+  ],
+  "7_speechPCMUnchanged": true,
+  "frozenNarration": "storyboard paragraphs present verbatim; requests differ only by the recorded request-only normalisations: B0: OH\u2192O H; B1: Between the two sits the\u2192Between the two, sits the",
+  "8_boundaries": {
+    "master": "/home/user/content-engine/work/4.1.1-2/4.1.1-2-fluid-mosaic.mp4",
+    "timeline": "/home/user/content-engine/work/4.1.1-2/timeline.json",
+    "master_bytes": 157846687,
+    "fps": 30.0,
+    "frame_count": 16114,
+    "boundaries_tested": 12,
+    "candidate_count": 0,
+    "candidate_beats": [],
+    "method": "RGB 640x360 area downsample; last/first near-match, then material abrupt jump",
+    "thresholds": {
+      "near_mae_max": 0.8,
+      "near_changed_fraction_max": 0.005,
+      "changed_pixel_threshold": 12,
+      "jump_mae_min": 1,
+      "jump_changed_fraction_min": 0.005,
+      "jump_tile_mae_min": 8,
+      "jump_ratio_min": 5,
+      "noise_floor": 0.05,
+      "post_jump_stable_mae_max": "max(0.8, 0.45 * jump_mae)"
+    },
+    "limits": "Candidates, not proof. Deliberate one-frame holds can match; identical layouts can hide a lookup error. Subtle/animated holds can evade thresholds. Requires unshifted CFR master."
+  },
+  "markerAudit": {
+    "framesChecked": 16114,
+    "marked": 0,
+    "unmarked": 16114,
+    "intervals": [],
+    "badgeTextMae": {
+      "commonMaeMax": 0.0,
+      "examMaeMin": 1000000000.0
+    },
+    "mismatches": 0
+  },
+  "longestUnchangedVisual": {
+    "beat": 12,
+    "startFrame": 14223,
+    "seconds": 7.266666666666667
+  },
+  "unchangedOver15s": [],
+  "valenceAudit": "not applicable: no covalent bond is made or broken on screen (Topic 4: membrane assembly, lateral drift and insertion are non-covalent motion)",
+  "sha256": "29f77af37632d1bbf408648ed6347e6a5a92434005c85003e72f6752d86e91de"
+}

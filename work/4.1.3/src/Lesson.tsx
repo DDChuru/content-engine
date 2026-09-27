@@ -1,4 +1,4 @@
-/** 3.2.1 frame router and lesson chrome (house style of the 2.1.1 reference build).
+/** 4.1.3 frame router and lesson chrome (house style of the 2.1.1 reference build).
  * Scene lookup by INTEGER frames. Unauthored beats throw. */
 import React from 'react';
 import T from '../timeline.json';
@@ -8,17 +8,17 @@ import {ErrorMarker, ErrorLabel} from '../shared/src/ErrorMarker';
 import {BEATS} from './beats';
 
 export const TITLES = [
-  'Why your body holds its temperature', 'What you will be able to do', 'Temperature: the rig and the key design choice',
-  'Initial rates, means and an optimum', 'One sentence, and the rising half', 'Above the optimum: denatured',
-  'pH: buffer solutions and rising discs', 'One over the mean rise time', 'Why pH changes the rate',
-  'What I told you, on the pictures you know', 'How it is asked, and the real question',
+  'Oxygen through, sodium turned back: why?', 'What you will be able to do', 'The membrane, and why its parts matter',
+  'Permeability: the hydrophobic core', 'Transport: channel proteins', 'Transport: carrier proteins',
+  'Exam contrast: the word "membrane"', 'Fluidity: moving phospholipids and cholesterol', 'Stability: cholesterol and the carbohydrate chains',
+  'Cell signalling: receptors', 'Cell recognition: antigens', 'What I told you, on the membrane', 'How it is asked, and the sodium ion',
 ];
 
-/** Error beats: NONE in this lesson (storyboard: "Error beats: none"). The close carries one captioned
- * wording-contrast card, labelled as our contrast, never a COMMON MISTAKE badge. Kept as an empty table so
- * the renderer's every-frame marker check proves the badge is absent on every frame. */
-export const ERROR_BEATS: Record<number, {label: ErrorLabel; clearKey: string; animFrames: number}> = {};
-export const ERROR_LABEL: Record<number, string> = {};
+/** Error beats: E43 in Beat 7, badge EXAM CONTRAST (basis: the W22/23 Q6(a) MS p.19 ignore line; an ignore line, not
+ * evidence of prevalence). The marker is on from the beat's first frame (entry cue = its first words) and clears on
+ * the completed correct frame: the END of "through channel or carrier proteins" (cue key `exit`). */
+export const ERROR_BEATS: Record<number, {label: ErrorLabel; clearKey: string; animFrames: number}> = {7: {label: 'EXAM CONTRAST', clearKey: 'exit', animFrames: 6}};
+export const ERROR_LABEL: Record<number, string> = {7: 'EXAM CONTRAST'};
 export const audits: Record<number, (s: any) => any> = {};
 
 export function stateAt(frame: number) {
@@ -54,9 +54,9 @@ export function Lesson({frame = 0}: {frame: number}) {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width={1920} height={1080} viewBox="0 0 1920 1080" style={{fontFamily: BODY}}>
       <rect data-role="decor" width={1920} height={1080} fill={dark ? C.ink : C.warm} />
-      <Txt x={70} y={44} size={22} fill={dark ? C.accent : C.muted}>BIOLOGY 9700 · 3.2.1 · WORKING CONDITIONS: TEMPERATURE AND pH</Txt>
+      <Txt x={70} y={44} size={22} fill={dark ? C.accent : C.muted}>BIOLOGY 9700 · 4.1.3 · WHAT EACH PART OF THE MEMBRANE DOES</Txt>
       <Txt x={70} y={111} size={43} weight={700} fill={dark ? C.warm : C.ink}>{TITLES[s.sc.id - 1]}</Txt>
-      {!dark && <Txt x={72} y={170} size={20} fill={C.muted}>MODEL — apparatus, graphs and enzyme drawings are schematic; our illustrative data unless a source is cited</Txt>}
+      {!dark && <Txt x={72} y={170} size={20} fill={C.muted}>MODEL — membranes, molecules, cells and particles are schematic drawings; not to scale</Txt>}
       <Beat {...s} />
       <line data-role="decor" x1={70} y1={959} x2={1850} y2={959} stroke={dark ? C.muted : C.line} strokeWidth={2} />
       <rect data-role="decor" x={70} y={984} width={7} height={54} rx={3} fill={C.primary} />
