@@ -171,7 +171,7 @@ Beat windows in the headings follow the per-beat ledger (words ÷ 120, plus the 
 
 ---
 
-### BEAT 5 · Cutting identical cylinders, safely · 3:05–3:56
+### BEAT 5 · Cutting identical cylinders, safely · 3:05–4:08
 **Narration:**
 > Use one potato, and remove the skin, so no cylinder has a patch of skin that the others lack. Stand it on a white tile and push a ten-millimetre cork borer straight down through the flesh until it reaches the tile, then lift the borer and push the core out. Lay each core beside a ruler and trim it to thirty millimetres with a scalpel, cutting down onto the tile. Pair the hazard, the risk and the precaution: the edges are sharp; if one slips, it can cut your hand; so cut down onto the tile, blade away from you, fingers clear. Then allocate the cylinders to tubes at random. Keep the cut cylinders covered to limit drying until you weigh and immerse each one.
 
@@ -189,7 +189,7 @@ Beat windows in the headings follow the per-beat ledger (words ÷ 120, plus the 
 
 ---
 
-### BEAT 6 · Six solutions, eighteen tubes · 3:56–4:43
+### BEAT 6 · Six solutions, eighteen tubes · 4:08–4:54
 **Narration:**
 > Next, the solutions. You need six concentrations of sucrose, from distilled water up to 1.0 mole per cubic decimetre, made by proportional dilution of a 1.0 mole per cubic decimetre stock, each to a total of 20.0 cubic centimetres. For 0.4, measure 8.0 cubic centimetres of stock and 12.0 of distilled water. Then the vessels: eighteen boiling tubes, each labelled and closed with a bung to limit evaporation, three per concentration, one cylinder in each. Three cylinders sharing one tube share one solution, so they are not independent repeats; three separate tubes are.
 
@@ -208,7 +208,7 @@ Beat windows in the headings follow the per-beat ledger (words ÷ 120, plus the 
 
 ---
 
-### BEAT 7 · Blot, weigh, immerse, and start the clock · 4:43–5:32
+### BEAT 7 · Blot, weigh, immerse, and start the clock · 4:54–5:43
 **Narration:**
 > Before each cylinder goes in, blot it the same way every time, one roll across a paper towel, and weigh it on a balance reading to 0.01 grams. Record that mass against the tube's label. The immersion time is written into the plan before any results exist: here, sixty minutes. Start the stopwatch the moment the first cylinder touches its solution, and never reset it. The rest go in at one-minute intervals, each start time written down, so every cylinder can come out exactly sixty minutes after it went in. The room temperature, twenty-one degrees, is recorded.
 
@@ -228,7 +228,7 @@ Beat windows in the headings follow the per-beat ledger (words ÷ 120, plus the 
 
 ---
 
-### BEAT 8 · Out, reweigh, and a percentage for every cylinder · 5:32–6:17
+### BEAT 8 · Out, reweigh, and a percentage for every cylinder · 5:43–6:28
 **Narration:**
 > When each cylinder's sixty minutes are up, lift it out with forceps, blot it exactly as before, and weigh it again. Now calculate, for every cylinder on its own: percentage change in mass equals final mass minus initial mass, divided by initial mass, times a hundred. This cylinder from distilled water went from 2.51 to 2.71 grams: a gain of 0.20 grams, divided by 2.51, times a hundred, is plus 8.0 per cent. Dividing by the starting mass lets you compare cylinders that did not start at exactly the same mass.
 
@@ -246,7 +246,7 @@ Beat windows in the headings follow the per-beat ledger (words ÷ 120, plus the 
 
 ---
 
-### BEAT 9 · COMMON MISTAKE E48: the word amount in a plan · 6:17–7:31
+### BEAT 9 · COMMON MISTAKE E48: the word amount in a plan · 6:28–7:43
 **Narration:**
 > Here is a mistake examiners flag in planning answers, on the card. These two lines are our constructed plan for this investigation. Read them.
 >
@@ -274,7 +274,7 @@ Beat windows in the headings follow the per-beat ledger (words ÷ 120, plus the 
 
 ---
 
-### BEAT 10 · The results table, and what the signs mean · 7:31–8:14
+### BEAT 10 · The results table, and what the signs mean · 7:43–8:26
 **Narration:**
 > Here are the results, our illustrative data: three percentage changes for each concentration, and their mean. The signs carry the biology. Positive means the tissue gained water: that solution's water potential was initially higher than the cells'. Negative means it lost water: the solution's was initially lower. From distilled water the mean is plus 8.1 per cent; by 1.0 mole per cubic decimetre it is minus 8.6. At 0.4, the three cylinders barely moved, a hundredth of a gram each way, a mean of plus 0.1.
 
@@ -292,7 +292,7 @@ Beat windows in the headings follow the per-beat ledger (words ÷ 120, plus the 
 
 ---
 
-### BEAT 11 · The graph and its zero crossing · 8:14–9:02
+### BEAT 11 · The graph and its zero crossing · 8:26–9:14
 **Narration:**
 > Plot the mean percentage change in mass against sucrose concentration, and draw the zero line across. Then draw a smooth trend through the means, rather than joining dot to dot, because each mean still carries some scatter; here it curves gently as the losses level off. The trend falls through zero. Where it crosses, draw a construction line down to the concentration axis: 0.40 moles per cubic decimetre. That value is read from the trend, inside the range you tested. It is an interpolation, not a new data point, and nothing is extended beyond your results.
 
@@ -312,7 +312,7 @@ Beat windows in the headings follow the per-beat ledger (words ÷ 120, plus the 
 
 ---
 
-### BEAT 12 · From concentration to kilopascals · 9:02–9:52
+### BEAT 12 · From concentration to kilopascals · 9:14–10:05
 **Narration:**
 > The graph gives you a concentration, not a water potential. For that, you need supplied data: this table comes from a November 2020 practical paper, and pairs sucrose concentrations with their water potentials. Go down to 0.40, then across: minus 1120 kilopascals. Keep the sign and the unit. So zero measured mass change gives an estimate of the tissue's initial water potential under these conditions, about minus 1120 kilopascals. It is not proof that every cell has the same water potential, or that no solute moved and no cells were damaged. For a sharper estimate, test extra concentrations around the crossing.
 
@@ -330,7 +330,7 @@ Beat windows in the headings follow the per-beat ledger (words ÷ 120, plus the 
 
 ---
 
-### BEAT 13 · What I told you, on the rig and the graph · 9:52–10:32
+### BEAT 13 · What I told you, on the rig and the graph · 10:05–10:44
 **Narration:**
 > So here it is, on the rig and the graph. One potato, identical cylinders, eighteen covered tubes, three per concentration, one cylinder in each. Blot the same way, weigh to 0.01 grams, and immerse for a stated sixty minutes, timed from first contact. A percentage change for each cylinder, then the mean. A smooth trend crossing zero at 0.40, read by construction. The supplied table turns that into minus 1120 kilopascals: an estimate for this tissue, under these conditions.
 
@@ -345,7 +345,7 @@ Beat windows in the headings follow the per-beat ledger (words ÷ 120, plus the 
 
 ---
 
-### BEAT 14 · How it is asked, and the potato again · 10:32–11:36
+### BEAT 14 · How it is asked, and the potato again · 10:44–11:38
 **Narration:**
 > How this reaches you. A November 2020 Paper 5 question, on red pepper tissue, gave three marks for a labelled sketch trending downward and for identifying where it crosses zero change in mass as the estimate. Separately, it used a density-drop method: the drop that neither rose nor fell picked out 0.30, and its table gave minus 860 kilopascals. Keep the two methods apart, and when you give a water potential, give kilopascals with the sign, not a concentration. The scheme doesn't need this, but a different potato can give a different estimate. And your potato? About minus 1120 kilopascals, estimated from its own change in mass.
 
@@ -354,7 +354,7 @@ Beat windows in the headings follow the per-beat ledger (words ÷ 120, plus the 
 2. At *on red pepper tissue*, row 1 lands: **W20/51 Q1(c)(ii), 3 marks · QP p.5 / MS p.9** · *red pepper fruit-wall tissue*; at *a labelled sketch trending downward*, a small blank sketch-axes icon beside the row draws a downward trend, tag *our paraphrase of the credited points*; at *where it crosses zero change in mass*, the sketch's crossing is ringed and the lesson graph's construction line brightens briefly.
 3. At *a density-drop method*, row 2 lands beneath, visibly separate: **W20/51 Q1(d)(i), 1 mark · QP pp.6–7 / MS p.9 · a different method: density drops**; at *picked out 0.30*, the `LookupTable`'s 0.30 row brightens; at *minus 860 kilopascals*, citation tab, exact: **MS p.9: `–860kPa ;`**, tag *W20/51's density-drop answer; not our potato's value*.
 4. At *Keep the two methods apart*, a divider line draws between rows 1 and 2, tags *method 1: mass change, sketch and intercept* / *method 2: density drop, table lookup*; small type *our potato dataset + supplied lookup = an adaptation combining the two skills*.
-5. At “not a concentration”, show the written contrast **✗ The potato tissue's water potential is 0.40 mol dm⁻³.** Strike it through and replace it in place with **✓ The fitted zero-change concentration is about 0.40 mol dm⁻³. Its supplied water potential, −1120 kPa, estimates this tissue's initial water potential under these conditions.** Caption: **our wording contrast; not a quoted mark-scheme reject. Method reference: W20/51 Q1(c)(ii), QP p.5 / MS p.9; supplied Table 1.1, QP p.7.** Speak only the existing correct unit explanation. Hold the corrected version on the final frame. The graph and the `LookupTable` stay beside the card.
+5. At *not a concentration*, show the written contrast **✗ The potato tissue's water potential is 0.40 mol dm⁻³.** Strike it through and replace it in place with **✓ The fitted zero-change concentration is about 0.40 mol dm⁻³. Its supplied water potential, −1120 kPa, estimates this tissue's initial water potential under these conditions.** Caption: **our wording contrast; not a quoted mark-scheme reject. Method reference: W20/51 Q1(c)(ii), QP p.5 / MS p.9; supplied Table 1.1, QP p.7.** Speak only the existing correct unit explanation. Hold the corrected version on the final frame. The graph and the `LookupTable` stay beside the card.
 6. (Revealed with the forms surface at action 1; no spoken line, no cue of its own.) Row 3, small and subordinate: **M24/52 Q1(c)(i), maximum 6 marks, any six of nine listed points · MS p.6** · *a plan varying the temperature of turnip blocks; related planning evidence, not this protocol*; with its citation tab, exact: **M24/52 Q1(c)(iii), MS p.7: `ref. to hazard and risk and precaution ;`**.
 7. (Revealed with the forms surface at action 1; no spoken line, no cue of its own.) Row 4, small and subordinate: **M24/52 Q1(b)(ii), limitations, any four of eight points · MS p.5** · *examples: untested intermediate concentrations · variation among cells · missing uncertainty information (our paraphrase; onions and sodium chloride context)*.
 8. At *The scheme doesn't need this*, a separate panel slides in below the forms, **dashed border, no tick, no MS tab**, headed **beyond the mark scheme**; at *a different potato can give a different estimate*, it fills: *a different potato, or one stored for weeks, can give a different estimate; this estimate belongs to this tissue, this immersion time and this dataset*, with a ghost second potato beside it.
@@ -437,7 +437,7 @@ Spread within each set of three (range, not narrated): 0.7, 0.7, 0.8, 0.5, 0.2, 
 
 | Material | What the method responds to | Fit (range, clarity) | Interferences and how the method handles them | Beats |
 |---|---|---|---|---|
-| **Potato tissue** (one raw potato, skin removed, 10 mm × 30 mm cylinders) | MF6: potato contains water, dissolved cell-sap solutes and insoluble starch reserves; the readout is **tissue mass change as a proxy for net water exchange**; not a starch assay; insoluble starch does not make the tissue solute-free or prevent leakage from damaged cells | Firm; cuts into identical cylinders with one borer; in our illustrative data mass changes of about −9 % to +8 % over 60 min across 0.0–1.0 mol dm⁻³, well above the 0.01 g (≈ 0.4 %) resolution except near the crossing, where the changes sit at the resolution (Dataset 2 note) | Cylinders from different potatoes or regions differ → one potato, one borer, random allocation; surface solution → blot every cylinder the same way; evaporation → bunged tubes; damaged cells at cut surfaces → same dimensions (same cut surface area), and the estimate is bounded by MF5's caveat (Beat 12); different potatoes or storage → beyond-the-mark-scheme panel (Beat 14) | 1, 4 (explain beat, on-screen **fit** note card), 5, 7, 8, 10, 12, 14 |
+| **Potato tissue** (one raw potato, skin removed, 10 mm × 30 mm cylinders) | MF6: potato contains water, dissolved cell-sap solutes and insoluble starch reserves; the readout is **tissue mass change as a proxy for net water exchange**; not a starch assay; insoluble starch does not make the tissue solute-free or prevent leakage from damaged cells | Firm; cuts into identical cylinders with one borer; in our illustrative data mass changes of about −9 % to +8 % over 60 min across 0.0–1.0 mol dm⁻³, well above the 0.01 g (≈ 0.4 %) resolution except near the crossing, where the changes sit at the resolution (Dataset 2 note) | Cylinders from different potatoes or regions differ → one potato, one borer, random allocation; surface solution → blot every cylinder the same way; drying while waiting → covered humid container until each is blotted, weighed and immediately immersed (round-1 M1); evaporation → bunged tubes; damaged cells at cut surfaces → same dimensions (same cut surface area), and the estimate is bounded by MF5's caveat (Beat 12); different potatoes or storage → beyond-the-mark-scheme panel (Beat 14) | 1, 4 (explain beat, on-screen **fit** note card), 5, 7, 8, 10, 12, 14 |
 | Raw potato strips in plain water / strong sugar solution (hook) | net water entry (firm) or loss (limp), recall of 4.2.6 turgor | an illustration of this lesson's own measurement; labelled *our illustration … not a measured result* | not a measurement; no numbers attached | 1, 14 (callback) |
 | Red pepper fruit-wall tissue (W20/51) | named only as the paper's context; not handled | — | kept separate from our potato method (MF2) | 12, 14 |
 
@@ -593,13 +593,13 @@ Cuts 1–2 remove 28 words (14 s) → 1,357 words = 11:18.5 (11:22.5 with the si
 
 | Asset | Status | Source |
 |---|---|---|
-| `PotatoCylinderRig` SVGs with named states (potato, tile, borer and push rod, scalpel, ruler, towel, balance with two-decimal display, stock bottle, wash bottle, two labelled 25 cm³ measuring cylinders, dropper, eighteen labelled boiling tubes with bungs in three racks, forceps, stopwatch, thermometer, results sheet); hands (borer push, scalpel cut, pours, forceps roll and lift) | **new build** | authored; handling specified; **rendered still-frame verification pending** (borer pushed down onto the tile away from the hand; scalpel blade down onto the tile, away from the body; pours at about 120° with the stream from the computed lip into the receiving mouth; dropper above the cylinder, not touching; bung seated before inverting; level liquid surfaces; first-contact frame of tube 0.0-A) |
+| `PotatoCylinderRig` SVGs with named states (potato, tile, borer and push rod, scalpel, ruler, towel, balance with two-decimal display (label *resolution 0.01 g*), covered humid container with eighteen labelled positions, stock bottle, wash bottle, two labelled 25 cm³ measuring cylinders, dropper, eighteen labelled boiling tubes with bungs in three racks, forceps, stopwatch, thermometer, results sheet); hands (borer push, scalpel cut, pours, forceps roll and lift) | **new build** | authored; handling specified; **rendered still-frame verification pending** (borer pushed vertically through the flesh, stopping at the tile surface, its edge never entering the tile; supporting fingers beside and clear of the cutting path; borer lifted before the push rod expels the core; container opened only to take the next cylinder; scalpel blade down onto the tile, away from the body; pours at about 120° with the stream from the computed lip into the receiving mouth; dropper above the cylinder, not touching; bung seated before inverting; level liquid surfaces; first-contact frame of tube 0.0-A) |
 | `percent-mass-change` graph with `zero-crossing` overlay | **new build** | authored on the Topic 3 `RateGraph` conventions; crossing locked at x = 0.398 on the drawn quadratic |
 | `LookupTable` panel | **new build** | authored; values exactly W20/51 Table 1.1 (plan check); no Cambridge artwork |
 | `starch-grains` overlay | **new build** | authored |
 | `WaterPotentialModel` (`cell-vs-solution`), `CellOsmosisSet` (`plant-turgid`, `plant-equal`, `plant-flaccid`) | reuse | 4.2.1a, 4.2.6 |
 | Hook beakers and potato strips | new, schematic vector | authored; no photograph, no generated image |
-| E48 card and COMMON MISTAKE panel; objectives surface and pictograms (cylinder-and-ruler, mini graph with zero line, table-with-arrow); hazard–risk–precaution tag; safety tag and eye-protection pictogram; forms surface; model-answer card; **beyond the mark scheme** panel (dashed border, no tick, no MS tab) | new card content; shared panels | authored; COMMON MISTAKE panel from Topics 1–3 |
+| E48 card and COMMON MISTAKE panel; objectives surface and pictograms (cylinder-and-ruler, mini graph with zero line, table-with-arrow); hazard–risk–precaution tag; safety tag and eye-protection pictogram; forms surface; closing wording-contrast card (✗ struck and replaced in place by ✓; caption *our wording contrast; not a quoted mark-scheme reject*); **beyond the mark scheme** panel (dashed border, no tick, no MS tab) | new card content; shared panels | authored; COMMON MISTAKE panel from Topics 1–3 |
 | Micrographs, photographs, Cambridge artwork | none | — |
 
 ---
@@ -607,7 +607,7 @@ Cuts 1–2 remove 28 words (14 s) → 1,357 words = 11:18.5 (11:22.5 with the si
 ## Plan interpretations
 
 1. **Intercept at a tested concentration.** The plan fixes the tested concentrations (0.0–1.0 in steps of 0.2) and the illustrative intercept (0.40 mol dm⁻³, so the lookup uses Table 1.1's −1120 kPa directly). The crossing therefore falls at a tested concentration. I made the 0.4 mean **+0.1 %** (not zero), drew the trend as a least-squares quadratic that crosses at 0.398 (0.40 on the grid), and made Beat 11 ring the 0.4 mean separately from the crossing, so the answer is read from the trend by construction and the crossing is never a plotted point. Beat 12 names extra concentrations around the crossing (MF5) for a more precise intercept.
-2. **Immersion time 60 min, loading at one-minute intervals, room temperature 21 °C.** The plan requires the immersion time to be specified before the dataset and staggered starts, without fixing values; I chose these and state them before any result (Beat 7). Each cylinder is weighed immediately before its own immersion, so no cylinder dries on the bench while waiting.
+2. **Immersion time 60 min, loading at one-minute intervals, room temperature 21 °C.** The plan requires the immersion time to be specified before the dataset and staggered starts, without fixing values; I chose these and state them before any result (Beat 7). Covered storage limits pre-immersion drying; each cylinder is then blotted, weighed and immediately immersed. Initial weighing alone does not prevent drying. (Round-1 check M1; the solutions are prepared before cutting, the one-minute stagger and all eighteen vessels retained.)
 3. **"Covered vessels" = boiling tubes closed with bungs**, each made up directly with two labelled 25 cm³ measuring cylinders (stock, water). The apparatus list (p.56) includes boiling tubes and bungs; 20.0 cm³ covers a 30 mm cylinder in a boiling tube.
 4. **E48 placement:** after the method (Beat 9) and before the results, where the standardised quantities have just been shown; the card is labelled *our framing of a planning answer … constructed plan lines, not a transcript* and carries the exact E48 caption from the plan. The repairs are the plan's wording ("cylinders cut with the same cork borer and trimmed to 30 mm, each blotted and weighed to 0.01 g"; "20.0 cm³ of each solution, measured with a measuring cylinder").
 5. **Status tags.** SHARED-SPECS §2 tags the listed strings **PDF-CHECKED (plan check)**; §3's spine instruction mentions PDF-UNCHECKED. I followed §2 and the citations-column rule (every exam row carries one of the two tags; all exam rows here rest on the plan check, including the descriptions, which are marked "description, not wording").
@@ -617,9 +617,9 @@ Cuts 1–2 remove 28 words (14 s) → 1,357 words = 11:18.5 (11:22.5 with the si
 9. **Plasmolysis not claimed.** The negative rows use `plant-flaccid`, not `plant-plasmolysed`, because the dataset does not show plasmolysis and the potato cells are not observed; all insets are captioned *model cell states; not observed in this tissue*.
 10. **Controls.** The plan's design has no separate control group; distilled water (0.0) is part of the range. W20/51's control points are listed only in the scope ledger as a described credit, not claimed as a form row here.
 11. **Hook example.** Raw potato strips firm in plain water and limp in strong sugar solution are used as an illustration of what the lesson measures, labelled as such and listed UNVERIFIED 6, since the plan asks for examples only with a verified source.
-12. **Exam close.** W20/51's two methods are separate rows with a divider, each named (method 1 mass change, sketch and intercept; method 2 density drop, table lookup), as SHARED-SPECS §2a lists the 4.2.5 close; M24/52 planning and limitations follow, as the task brief asks. The MS answer `–860kPa ;` is shown as the scheme's, and the real-world extra (different potatoes) is spoken as beyond the scheme on its own dashed panel, per the REAL-WORLD SAMPLES rule. **No reject card:** the updated brief allows one only where a verified R/I line exists, and none exists for 4.2.5, so the close ends on a ticked model sentence captioned *our model sentence; not mark-scheme wording* (SHARED-SPECS §2's older line allowing an own-wording reject card is superseded by the brief's newer wording).
+12. **Exam close.** W20/51's two methods are separate rows with a divider, each named (method 1 mass change, sketch and intercept; method 2 density drop, table lookup), as SHARED-SPECS §2a lists the 4.2.5 close; M24/52 planning and limitations follow, as the task brief asks. The MS answer `–860kPa ;` is shown as the scheme's, and the real-world extra (different potatoes) is spoken as beyond the scheme on its own dashed panel, per the REAL-WORLD SAMPLES rule. **Closing wording contrast (round-1 check M3, replacing the first draft's no-reject-card close):** the user-designated VIDEO-STRUCTURE requires a closing reject card and SHARED-SPECS §2 allows an honestly labelled authored contrast, so the close shows ✗ *The potato tissue's water potential is 0.40 mol dm⁻³.* struck and replaced in place by the ✓ fitted-concentration/supplied-water-potential sentence, captioned *our wording contrast; not a quoted mark-scheme reject*. No Cambridge R/I instruction is invented; it is not a new COMMON MISTAKE beat. The March 2024 spoken sentence is cut (round-1 runtime ruling, author cut 1); its two rows remain as unspoken subordinate references.
 
-13. **Specs updated during drafting.** `SHARED-SPECS.md`, `AGENT-BRIEF.md` and the validator were revised while this draft was in progress (new §2a lesson table and exam closes; complete error beat = narration at 120 wpm + silent read, 122–142 words; reject cards only on verified R/I lines; exact `WaterPotentialModel` and `CellOsmosisSet` label wording). I re-read both files in full and applied the changes: E48 trimmed from 148 to 140 words (content unchanged: both faults, the R24 quotation, where/why/why-it-loses, in-place repairs); the reject card removed; the scale label, the *initially: solution's water potential higher / equal / lower than the cell's* labels and the `plant-turgid` equilibrium arrow brought into line.
+13. **Specs updated during drafting.** `SHARED-SPECS.md`, `AGENT-BRIEF.md` and the validator were revised while this draft was in progress (new §2a lesson table and exam closes; complete error beat = narration at 120 wpm + silent read, 122–142 words; reject cards only on verified R/I lines; exact `WaterPotentialModel` and `CellOsmosisSet` label wording). I re-read both files in full and applied the changes: E48 trimmed from 148 to 140 words (content unchanged: both faults, the R24 quotation, where/why/why-it-loses, in-place repairs); the reject card removed (restored in round 1 as an authored wording contrast, interpretation 12); the scale label, the *initially: solution's water potential higher / equal / lower than the cell's* labels and the `plant-turgid` equilibrium arrow brought into line.
 14. **Self-review changes to narration.** The hook no longer says that no probe can enter a cell (research instruments can); "measure" became "put a number on" (the lesson estimates); "on the frame" (production language) became "the moment" in Beat 7; the peeling rationale is bounded to the skin; M24/52's limitation point is attributed to "the March 2024 paper", not to its planning question.
 
 ---

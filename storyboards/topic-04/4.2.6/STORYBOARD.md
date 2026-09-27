@@ -77,7 +77,7 @@ Captions on every frame that shows the set: *schematic; not to scale; cells draw
 
 Beat windows in the headings are provisional and follow the per-beat ledger (words ÷ 120); final cue times come from the measured audio. Every cue is an exact narration substring, unique within its beat, in spoken order; no stretch over 30 words without a stated visual change. No beat has a silent hold except the recap's settle, which is anchored by the fade-ins.
 
-### BEAT 1 · Hook and context · 0:00–0:45
+### BEAT 1 · Hook and context · 0:00–0:35
 
 **Narration:**
 > Ever wondered why a limp lettuce leaf goes crisp again after a while in cold water, while a red blood cell dropped into pure water swells and bursts? Both start the same way: water moving into cells. Whether a cell swells, stays the same or shrinks depends on the solution around it, and on one structure that the lettuce's cells have and a red blood cell lacks: a cell wall.
@@ -93,7 +93,7 @@ Beat windows in the headings are provisional and follow the per-beat ledger (wor
 
 ---
 
-### BEAT 2 · What you will be able to do · 0:45–1:11
+### BEAT 2 · What you will be able to do · 0:35–1:02
 
 **Narration:**
 > By the end you will be able to explain which way water moves between a cell and a solution, in terms of water potential; to predict what happens to a red blood cell and to a plant cell in three kinds of solution; and to explain why the two end up so differently.
@@ -110,7 +110,7 @@ Beat windows in the headings are provisional and follow the per-beat ledger (wor
 
 ---
 
-### BEAT 3 · Water potential, restated · 1:11–2:08
+### BEAT 3 · Water potential, restated · 1:02–1:55
 
 **Narration:**
 > Water potential describes water's tendency to move. Pure water at atmospheric pressure is the reference, with water potential zero kilopascals. At the same temperature and pressure, adding solute lowers water potential, so the solutions in this comparison have negative values; a less negative value is higher. Net osmosis is from higher to lower water potential through a partially permeable membrane. Water still crosses both ways when the water potentials are equal. Picture water running downhill on this scale. Written properly: osmosis is the net movement of water molecules from a region of higher water potential to a region of lower water potential, through a partially permeable membrane.
@@ -130,7 +130,7 @@ Beat windows in the headings are provisional and follow the per-beat ledger (wor
 
 ---
 
-### BEAT 4 · Make one side a cell · 2:08–3:03
+### BEAT 4 · Make one side a cell · 1:55–2:50
 
 **Narration:**
 > Now make the right-hand side a cell. Its contents are solutions too, so a cell has a water potential of its own. What decides things is how the solution's water potential compares with the cell's at the start, so each case today is labelled as the initial condition. There are three possibilities: the solution's water potential is higher than the cell's, equal to it, or lower. In all three, water molecules cross the membrane both ways; the comparison decides only the net direction: in, neither, or out. That matters, because a cell works properly only within a range of water content, and it cannot simply stop water crossing its membrane.
@@ -148,7 +148,7 @@ Beat windows in the headings are provisional and follow the per-beat ledger (wor
 
 ---
 
-### BEAT 5 · Red blood cell: the solution's water potential higher · 3:03–3:57
+### BEAT 5 · Red blood cell: the solution's water potential higher · 2:50–3:45
 
 **Narration:**
 > Take a red blood cell, drawn here as a model. It contains water, dissolved salts and haemoglobin; we compare its outline as water moves in or out, without measuring its water potential. Put it in a liquid with a higher water potential than its contents, such as pure water. More water molecules enter than leave, so there is a net movement of water into the cell, and it swells from a flattened disc towards a sphere. A red blood cell has no cell wall to resist the expansion. In pure water the membrane stretches until it bursts and the contents spill out. For red blood cells, this is called haemolysis.
@@ -167,7 +167,7 @@ Beat windows in the headings are provisional and follow the per-beat ledger (wor
 
 ---
 
-### BEAT 6 · Red blood cell: equal, then lower · 3:57–4:51
+### BEAT 6 · Red blood cell: equal, then lower · 3:45–4:48
 
 **Narration:**
 > Now a solution with the same water potential as the cell. Water still crosses both ways, at equal rates, so there is no net movement, and this red blood cell stays unchanged. Careful: equal water potentials mean no net movement; they do not by themselves decide a cell's shape. This cell stays normal because it started normal. An isotonic saline example shows why matching the effective osmotic conditions around red blood cells can prevent large net changes in their volume. Saline is sodium chloride dissolved in water; here its concentration is chosen to keep the cells' volume steady. Last, a solution with a lower water potential than the cell. More water leaves than enters, the cell shrinks, and its outline puckers into points: it is crenated.
@@ -186,7 +186,7 @@ Beat windows in the headings are provisional and follow the per-beat ledger (wor
 
 ---
 
-### BEAT 7 · Plant cell: the solution's water potential higher · 4:51–5:55
+### BEAT 7 · Plant cell: the solution's water potential higher · 4:48–6:03
 
 **Narration:**
 > Now a plant cell, from a watered plant, already pressing gently on its wall. Outside the cell surface membrane is a cellulose cell wall; inside are cytoplasm, a nucleus and a large vacuole bounded by the tonoplast. The membrane and everything inside it is the protoplast. In a liquid with a higher water potential, such as pure water, there is a net movement of water into the cell. The vacuole and cytoplasm swell and the protoplast pushes harder against the wall: the cell becomes more turgid. The wall resists expansion, so it stretches only slightly and the cell does not burst. That explains the lettuce: its living cells contain water and dissolved cell-sap solutes. Water entry restores turgor and the leaf firms up. This works as a qualitative demonstration when the cells are intact; a dead or badly damaged leaf may not recover. Firmness does not measure water potential.
@@ -206,7 +206,7 @@ Beat windows in the headings are provisional and follow the per-beat ledger (wor
 
 ---
 
-### BEAT 8 · The turgid cell reaches equilibrium · 5:55–6:48
+### BEAT 8 · The turgid cell reaches equilibrium · 6:03–6:56
 
 **Narration:**
 > But water does not flood in for ever. As the cell takes up water, its expanding contents press against the resisting wall, and the cell's water potential rises. It rises until it equals the water potential of the surrounding solution, and then there is no net water entry. Watch the net arrow fade, while individual water molecules keep crossing both ways, in equal numbers. So a turgid plant cell can have the same water potential as its surroundings. Equal water potentials mean no net movement; they do not mean the cell is flaccid, and they do not mean the solutions inside and outside have equal concentrations.
@@ -225,7 +225,7 @@ Beat windows in the headings are provisional and follow the per-beat ledger (wor
 
 ---
 
-### BEAT 9 · Plant cell: equal, then lower · 6:48–7:46
+### BEAT 9 · Plant cell: equal, then lower · 6:56–7:47
 
 **Narration:**
 > Back to the starting cell, now in a solution whose water potential equals the cell's. No net movement, so it stays as it was, still pressing gently on its wall. Now a solution with a lower water potential. There is a net movement of water out of the cell; the vacuole shrinks and the protoplast stops pushing on the wall: the cell is flaccid. With further loss, the cell surface membrane pulls away from the wall, often first at the corners: this is plasmolysis. The wall is freely permeable, so the gap between wall and membrane fills with the external solution, not air.
@@ -244,7 +244,7 @@ Beat windows in the headings are provisional and follow the per-beat ledger (wor
 
 ---
 
-### BEAT 10 · What I told you, on the six cells · 7:46–8:36
+### BEAT 10 · What I told you, on the six cells · 7:47–8:37
 
 **Narration:**
 > So here it is, on the six cells. Each case compares the solution's water potential with the cell's, at the start, and net water movement runs from higher to lower. Higher outside: the red blood cell swells and, in pure water, bursts, haemolysis; the plant cell becomes turgid, and its wall holds it while its water potential rises to equal the solution's. Equal: no net movement, though water still crosses both ways. Lower outside: the red blood cell is crenated; the plant cell becomes flaccid, then plasmolysed, the gap full of external solution. The difference is the cell wall.
@@ -259,7 +259,7 @@ Beat windows in the headings are provisional and follow the per-beat ledger (wor
 
 ---
 
-### BEAT 11 · How it is asked, the reject card, and the lettuce · 8:36–9:34
+### BEAT 11 · How it is asked, the reject card, and the lettuce · 8:37–9:28
 
 **Narration:**
 > How this reaches you. None of the cited question parts in the five-paper Paper 2 sample directly tests this outcome. So this close follows the syllabus: explain water movement in water-potential terms and compare its effects on plant and animal cells. A November 2020 phloem explanation carried water-potential points among its five marks, and a practical paper credited the point of zero mass change, where there is no net change, as its estimate. The reject card is ours: equal water potentials mean no net movement. And the lettuce and the red cell? Water entered both; the lettuce's cells had walls to push against.
@@ -410,7 +410,7 @@ Counted by the validator over the blockquoted narration; seconds = words ÷ 120 
 | 11 | How it is asked, reject card, lettuce | 103 | 51.5 |
 | **Total** | 11 beats (11 teaching + 0 error) | **1,136** | **568.0** (9:28.0) |
 
-**Length, honestly (after round-1 check):** **1,136 words = 9:28.0** at 120 words per minute, **1:13.0 over** the 8:15 budget (about 990 words), all of it teaching (there is no error beat). The check's runtime ruling was applied: author cuts **1, 3, 4 and 6** taken (19 + 8 + 7 + 13 = **−47 words**; 1,147 → 1,100 = 9:10 before replacements), then the required M4–M5 material/fit and scope wording added (Beat 5 +21, Beat 6 +17, Beat 7 +20 including "more turgid", Beat 11 −5 net from the M5 rewording): **1,136 words**. Per the check, this remaining overrun is **accepted**: the six comparisons, standalone definition, plant equilibrium, real examples and recap each do distinct work; no case is deleted, no error beat is invented and no narration is sped up. Cuts 2 (Beat 10 recap sentence, 22 words) and 5 ("from a watered plant", 4 words) are **kept by the check's ruling**. Beat windows in the headings are provisional; per-beat seconds above are the ledger.
+**Length, honestly (after round-1 check):** **1,136 words = 9:28.0** at 120 words per minute, **1:13.0 over** the 8:15 budget (about 990 words), all of it teaching (there is no error beat). The check's runtime ruling was applied: author cuts **1, 3, 4 and 6** taken (19 + 8 + 7 + 13 = **−47 words**; 1,147 → 1,100 = 9:10 before replacements), then the required M4–M5 material/fit and scope wording added (Beat 5 +2, Beat 6 +18, Beat 7 +21 including "more turgid", Beat 11 −5 net from the M5 rewording; 1,100 + 2 + 18 + 21 − 5): **1,136 words**. Per the check, this remaining overrun is **accepted**: the six comparisons, standalone definition, plant equilibrium, real examples and recap each do distinct work; no case is deleted, no error beat is invented and no narration is sped up. Cuts 2 (Beat 10 recap sentence, 22 words) and 5 ("from a watered plant", 4 words) are **kept by the check's ruling**. Beat windows in the headings are provisional; per-beat seconds above are the ledger.
 
 **Cut list status:** 1 (Beat 1, both-directions sentence) **taken** (also removes the post-haemolysis magnifier); 2 (Beat 10 recap sentence) **kept by ruling**; 3 (Beat 11 "The same language turns up inside other answers:") **taken**; 4 (Beat 3 "First, the idea that does the explaining.") **taken**; 5 (Beat 7 "from a watered plant,") **kept by ruling**; 6 (Beat 9 "Plasmolysis is a plant-cell term; …") **taken** (the board tag *no wall: crenation, not plasmolysis* keeps the contrast on screen).
 
@@ -467,23 +467,46 @@ Counted by the validator over the blockquoted narration; seconds = words ÷ 120 
 
 ## Validator run
 
-`python3 work/006/validate_storyboard.py storyboards/topic-04/4.2.6/STORYBOARD.md` (exit code 0)
+`python3 work/006/validate_storyboard.py storyboards/topic-04/4.2.6/STORYBOARD.md` (exit code 0; re-run after the round-1 check fixes)
 
 ```
 == storyboards/topic-04/4.2.6/STORYBOARD.md
 beat  words  cues maxgap  status
-   1     89     7     23  ok
+   1     70     6     14  ok
    2     53     3     21  ok
-   3    114    12     25  ok
+   3    107    11     25  ok
    4    110    12     17  ok
-   5    108    10     16  ok
-   6    108    12     16  ok
-   7    128    16     16  ok
+   5    110    11     18  ok
+   6    126    14     16  ok
+   7    149    18     15  ok
    8    106    10     20  ok
-   9    116    15     13  ok
+   9    103    13     13  ok
   10     99    14     17  ok
-  11    116    11     19  ok
-TOTAL words 1147  cues 122  runtime at 120 wpm 9:33.5  beats 11  failing beats 0
+  11    103    11     19  ok
+TOTAL words 1136  cues 123  runtime at 120 wpm 9:28.0  beats 11  failing beats 0
 ```
 
 No MISSING SECTION or CITATION lines. Forbidden-phrase scan of narration clean (no "concentration of water", no component-potential names, no ψs/ψp, no "L1"-style lesson names).
+
+## CHECK RESPONSE (round 1)
+
+Check: `r1/4.2.6/CHECK.md` (27 September 2026, NOT CLEARED). Only this storyboard was edited; nothing committed or pushed.
+
+| ID | Status | What changed |
+|---|---|---|
+| M1 — one shared turgid endpoint | applied | State table now defines `plant-taking-up-water` (lesson-local transition; label **becoming more turgid; water uptake in progress**), `plant-turgid` (canonical shared endpoint: "protoplast pressed firmly against the wall; water potentials equal; no net arrow; water molecules continue crossing both ways at equal average rates"; label **turgid · water potentials now equal · no net movement**) and `plant-turgid-equilibrium` ("compatibility alias of `plant-turgid`, with exactly the same geometry, flux and labels"), using the check's wording verbatim. Beat 7 narration "fully turgid" → "**the cell becomes more turgid**"; its cue *becomes more turgid* launches/labels `plant-taking-up-water`; the lettuce inset shows the canonical endpoint with no net arrow. Beat 8 action 1 replaced verbatim; actions 4–5 replaced verbatim (split at the replay cue), with the state change to canonical `plant-turgid` on the equality cue, retained by the board. `cell-vs-solution:equalise` paragraph replaced verbatim ("crossings per model-time window … 15/5 → 13/7 → 11/9 → 10/10 … net inward values 10 → 6 → 2 → 0 …"). Datasets row, board slot, Beat 11 reject-card slot reference updated to `plant-turgid`. |
+| M2 — no osmosis across a ruptured membrane | applied | Cut 1 taken: "Cells are bathed in watery solutions, wrapped in a membrane that water crosses all the time, in both directions." deleted and Beat 1 action 4 (magnifier) removed. Global motion contract replaced verbatim ("In all intact-cell states, water tokens cross … In `rbc-haemolysed`, the membrane is ruptured: remove the osmosis net arrow and crossing counter …"). Beat 1 action 3 and Beat 11's final arrow instruction replaced verbatim ("Attach **water entered before haemolysis** to the swelling-stage thumbnail, not an inward osmosis arrow to the burst ghost. The leaf's completed turgid inset likewise carries a past-event label **water uptake restored turgor** …"); Beat 1 keeps an inward arrow only on the still-stiffening leaf. Beat 5 action 7 removes counter and net arrow at rupture. |
+| M3 — objectives pictograms at entry | applied | Beat 2 action 1 opening replaced verbatim ("From the first frame, the objectives' styled surface contains all three flat authored pictograms … Their text slots are empty …"); actions 1–3 now reveal text and brighten the already-visible pictogram. No narration change. |
+| M4 — real-sample composition and limits | applied with interpretation | Beat 5 opening replaced verbatim: "**Take a red blood cell, drawn here as a model. It contains water, dissolved salts and haemoglobin; we compare its outline as water moves in or out, without measuring its water potential.**" Cues *compare its outline* (outline highlight + micrograph/drawn-fallback inset) and *without measuring its water potential* (limitation tag); **haemoglobin-containing cell contents** label kept through dispersal. Beat 6 adds "**Saline is sodium chloride dissolved in water; here its concentration is chosen to keep the cells' volume steady.**" with a simple vessel labelled **sodium chloride solution; matched conditions in this example** (bag silhouette removed); saline row added to Real-world samples. Beat 7: the check says "final three sentences"; taken literally that would also delete "The wall resists expansion, so it stretches only slightly and the cell does not burst", which the check's biology ruling relies on, so only the two lettuce sentences (three clauses: "That is the lettuce … It shows turgor returning; it does not measure a water potential.") were replaced, verbatim, by "**That explains the lettuce: its living cells contain water and dissolved cell-sap solutes. Water entry restores turgor and the leaf firms up. This works as a qualitative demonstration when the cells are intact; a dead or badly damaged leaf may not recover. Firmness does not measure water potential.**" Cues *dissolved cell-sap solutes* (vacuole inset) and *when the cells are intact* (fit/limitation note). "No real material is handled in this lesson" → "**All examples are schematic; the lettuce handling is illustrated, not a recorded experiment.**" |
+| M5 — exam-evidence claim scope | applied | Beat 11 first two sentences replaced verbatim: "**How this reaches you. None of the cited question parts in the five-paper Paper 2 sample directly tests this outcome. So this close follows the syllabus: explain water movement in water-potential terms and compare its effects on plant and animal cells.**" Exposure cue now *None of the cited question parts*; on-screen **direct exposure in the cited Paper 2 blocks: 0/5** retained, with small type limiting it to the cited blocks. Absolutes sweep updated. |
+| SF1 — plasmolysis wording | applied (cut 6 taken) | "Plasmolysis is a plant-cell term; it needs a wall to pull away from." deleted; the local label **no wall: crenation, not plasmolysis** kept (Beat 9 action 8, now unnarrated after *not air*). |
+| SF2 — model-state bookkeeping | applied | "all ten states the plan lists" → "**the eight shared states, plus local equality/compatibility states specified here**", with `plant-taking-up-water` listed separately (Models used, scope ledger, reusable models, assets). 4.2.5 consumer list → **`plant-turgid`, `plant-equal`, `plant-flaccid`**. |
+| SF3 — recap wall count | applied | Beat 10 action 6: "the two plant-row walls" → "**all three plant-row walls**". |
+| SF4 — lower-column plant label | applied | Board slot, Beat 9 action 8 and Beat 10 recap label: **with sufficient further water loss: plasmolysed**. Narration "With further loss" unchanged. |
+| SF5 — clock | applied | Clock replaced by a **small unnumbered time-passing graphic** (no elapsed-minute figures) in Handling, Beats 1, 7, 11 and Assets; caption *time compressed; our example; nothing measured* retained; first-contact start kept. |
+| Runtime ruling (cuts 1, 3, 4, 6) | applied | Cut 1 (M2); cut 3 "The same language turns up inside other answers:" deleted (next sentence capitalised, cue *A November 2020 phloem explanation*); cut 4 "First, the idea that does the explaining." deleted (the **water potential** caption moved to *describes water's tendency to move*); cut 6 (SF1). Cuts 2 and 5 kept. Remaining overrun accepted per the ruling; word-count table, beat windows and "Length, honestly" recounted. |
+| Citation audit / UNVERIFIED | applied | UNVERIFIED 2 and 3 recorded as **RESOLVED (round-1 check, PDF-CHECKED)** with the check's page references and wording; citation rows 2–3 status upgraded, "our paraphrase" retained. UNVERIFIED 1 reworded to "no direct example identified in this cited set"; 4 and 5 remain open (5 annotated as not resolved by the exam PDFs). |
+
+New narration: **1,136 words = 9:28.0** at 120 wpm (was 1,147 = 9:33.5; 73 s over the 8:15 budget, accepted by the check's runtime ruling). Rendered still-frame verification remains pending.
+
+TOTAL words 1136  cues 123  runtime at 120 wpm 9:28.0  beats 11  failing beats 0

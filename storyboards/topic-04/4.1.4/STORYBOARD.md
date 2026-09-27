@@ -423,6 +423,25 @@ beat  words  cues maxgap  status
    6     89    12     10  ok
    7    142    17     14  ok
    8     73    10     14  ok
-   9     98    12     14  ok
-TOTAL words 801  cues 96  runtime at 120 wpm 6:40.5  beats 9  failing beats 0
+   9    102    14     18  ok
+TOTAL words 805  cues 98  runtime at 120 wpm 6:42.5  beats 9  failing beats 0
 ```
+
+---
+
+## CHECK RESPONSE (round 1)
+
+Check: `r1/4.1.4/CHECK.md` (27 September 2026, NOT CLEARED). Applied to this file only; not committed or pushed.
+
+| ID | Status | What changed |
+|---|---|---|
+| M1 — glucose not through a bare gap | applied | The check's uptake contract replaced the "plain gap … not a drawn transport protein" wording in `response-uptake`, the `SignallingScene` motion contract (and its `respond` state and glucose-token line), Plan interpretations 6, the spine typicality line, Reusable models and Assets: "Keep the bilayer continuous around a separate teal glucose carrier, spatially distinct from the insulin receptor, labelled glucose transport protein. … At whole-cell scale, preserve a small labelled protein route at the crossing position." Beat 6 action 1 now reads "From the first frame, retain the bound receptor from Beat 5 and a small explicitly labelled before-binding comparison beside the muscle-cell membrane"; action 2 shows "the after-binding uptake increase through the separate carrier" at *leads to an increase in glucose uptake*; "The baseline belongs to the labelled comparison, not to an interval after insulin has already bound." Recap (Beat 8) and close (Beat 9) thumbnails keep the labelled glucose transport protein; Datasets updated. No narration change. |
+| M2 — prostaglandin answer first; insulin labelled beyond the scheme | applied | Beat 9 narration replaced verbatim: "How does this reach you? March 2024 Paper 22 used prostaglandins in inflammation. … complementary receptors determine which cells respond." Actions 2–7 follow the check's replacement (row "Prostaglandins in inflammation — outline cell signalling; 2 marks", lines "1. Prostaglandins are released by cells OR transported to target cells." / "2. They bind to receptors on target-cell surface membranes.", point-1 bracket, three-stage highlight without a mark claim, dashed panel "beyond the mark scheme — our insulin illustration", LL-37 row with corrected E44 thumbnail, local contrast "✗ receptor active site / ✓ receptor binding site" citing W22/23 Q5(a)(i), MS p.17). Hook callback (action 8) remapped to *And our hormone does not search*, *blood carries it widely*, *complementary receptors determine which cells respond*. The struck-through insulin reject card is removed; heading renamed "How it is asked, the local reject, and the hook"; spine error-beat line and Plan interpretations 8–9 updated. All Beat 9 cues re-mapped from the new narration (14 cues, max gap 18). |
+| M2 — E44 action 10 | applied | Insulin-thumbnail highlight replaced: "At *share the same complementary receptor*, show two unnamed cell silhouettes beside the corrected answer, each carrying the same abstract receptor symbol. Caption: shared receptor, schematic explanation of the credited point; LL-37 receptor identity not specified. Keep the earlier insulin scene dimmed as background recall …". E44 narration unchanged (142 words). |
+| SF1 — timing convention | applied with interpretation | Header and "Length, honestly" now read "Narration: 805 words ÷ 120 = 6:42.5. Add the explicit E44 read of 4 s: 6:46.5, 13.5 s below the 7:00 budget. E44: 142 words ÷ 2 + 4 = 75 s. Ordinary settling holds are included …" (the check's sentence recounted after M2: 801 → 805 words). Beat-window preamble corrected; Beat 7 now ends 5:19, Beat 8 5:19–5:56, Beat 9 5:56–6:47. Interpretation: Beat 9's final 2 s hold is treated as an ordinary settling hold inside the effective pacing estimate (stated in the beat), so 6:46.5 is declared, not 6:48.5. Word-count table shows E44 75.0 s and totals 663 / 142 / 805. |
+| SF2 — stale model history | applied | Plan interpretations 1: "Use response-uptake, matching current SHARED-SPECS and the amended plan's named uptake response; treat the plan table's residual response-pulse label as stale." |
+| SF3 — vesicle inset leaflets | applied | `exocytosis` spec and Beat 3 action 6: "both apposed bilayers join into continuous leaflets around an extracellularly open fusion pore; the vesicle lumen becomes continuous with tissue fluid, while cytoplasm remains separated", two leaflets retained at cell-surface scale; Reusable models and Assets rows aligned. |
+| SF4 — citation statuses | applied | Citation rows 3–8 add *PDF-CHECKED (round-1 check)* with file/page, kept distinct from the author's register-only status (Authorities note added). UNVERIFIED items 1, 2, 4, 5 recorded as RESOLVED with the check's page/wording; item 3 (LL-37 receptor identity) remains UNVERIFIED and unnamed. "(UNVERIFIED)" removed from E44's student-facing caption; spine and scope-ledger M24/22 and W22/23 descriptions updated (prostaglandins context; location accepts cell surface membrane or inside cell). |
+| Sweeps | applied | Absolutes sweep rewritten for every new Beat 9 sentence (all bounded to their question/scheme or to our insulin example); Real-world samples note records the answer-first order and the "beyond the mark scheme" label. |
+
+New validator TOTAL: `TOTAL words 805  cues 98  runtime at 120 wpm 6:42.5  beats 9  failing beats 0` (plus the 4 s E44 read = 6:46.5).

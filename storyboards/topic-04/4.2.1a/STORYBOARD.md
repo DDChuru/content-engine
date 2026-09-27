@@ -200,7 +200,7 @@ Beat windows in the headings are provisional and follow the per-beat ledger (wor
 
 ### BEAT 7 · Turned back at the core: why some need a protein · 4:24–5:07
 **Narration:**
-> Now the hook's problem. The core of the bilayer is made of fatty-acid tails, and it is hydrophobic. Ions are charged, and glucose is polar: both interact well with water, and poorly with that core. Watch an ion and a glucose molecule approach it and turn back. Glucose is polar and does not cross the hydrophobic bilayer core readily; it needs a transport protein. Ions need a protein route too. That is facilitated diffusion: still down the concentration gradient, still passive, but through a protein.
+> Now the hook's problem. The core of the bilayer is made of fatty-acid tails, and it is hydrophobic. Ions are charged, and glucose is polar: both interact well with water, and poorly with that core. Watch an ion and a glucose molecule approach it and turn back. Glucose is polar and does not cross the hydrophobic bilayer core readily; it needs a transport protein. Ions need a protein route too. In the passive routes shown here, net movement through these proteins is down the concentration gradient, without ATP: facilitated diffusion.
 
 **Visual action:**
 1. **From the first frame**, the membrane scene holds with the O₂ tokens dimmed; ion tokens (violet +) and glucose tokens (orange hexagons) sit in the outside and cytoplasm regions, more of each outside (ions 20 / 5; glucose 15 / 5). At *Now the hook's problem*, the Beat 1 hook caption returns small at the top.
@@ -210,9 +210,9 @@ Beat windows in the headings are provisional and follow the per-beat ledger (wor
 5. At *approach it and turn back*, the ion and then the glucose token drift down through the head region, stall where the tails begin, and drift back up (turn-back motion, 1.5 s each); caption *does not cross the core readily (schematic)*.
 6. At *does not cross the hydrophobic bilayer core readily*, the sentence builds beneath the membrane: **Glucose is polar and does not cross the hydrophobic bilayer core readily; it needs a transport protein.**
 7. At *Ions need a protein route too*, `highlight:intrinsic-channel` and then `highlight:intrinsic-carrier` (each brightens, others dim to 50%).
-8. At *That is facilitated diffusion*, a bracket labelled **facilitated diffusion** spans route slots 2 and 3; tags *down the gradient · passive · through a protein*; at *but through a protein*, the two highlighted proteins are labelled **channel protein** and **carrier protein**.
+8. At *In the passive routes shown here*, a bracket spans route slots 2 and 3; at *through these proteins*, the two highlighted proteins are labelled **channel protein** and **carrier protein**; at *without ATP: facilitated diffusion*, the bracket is labelled **facilitated diffusion**, with tags *net movement down the gradient · no ATP · through a protein*.
 
-**On-screen text:** *hydrophobic fatty-acid tails*; *ion (charged)*; *glucose (polar)*; *does not cross the core readily (schematic)*; the MF2 sentence; *facilitated diffusion*; *channel protein*; *carrier protein*.
+**On-screen text:** *hydrophobic fatty-acid tails*; *ion (charged)*; *glucose (polar)*; *does not cross the core readily (schematic)*; the MF2 sentence; *facilitated diffusion*; *net movement down the gradient · no ATP · through a protein*; *channel protein*; *carrier protein*.
 
 ---
 
@@ -221,17 +221,17 @@ Beat windows in the headings are provisional and follow the per-beat ledger (wor
 > The first is a channel protein. Picture a door in a wall. Written properly: a channel protein provides a hydrophilic pore through which particular ions or polar molecules diffuse down their concentration gradient. Watch the ions: each drifts into the pore, lined by hydrophilic parts of the protein, and out the other side, without meeting the hydrophobic core. A few go the other way, but more go down the gradient. The channel does not change shape to move them; in our model the pore simply stays open. Different channels let through different, particular ions.
 
 **Visual action:**
-1. **From the first frame**, the membrane scene zooms to the `intrinsic-channel` (highlighted), ion tokens 20 outside / 5 inside, the carrier dimmed at right. At *The first is a channel protein*, the label **channel protein** brightens.
+1. **From the first frame**, the membrane scene zooms to the `intrinsic-channel` (highlighted), the carrier dimmed at right; caption *new illustrative setup*: ion tokens reset to **20** outside / **5** inside, each tagged *set starting count*. At *The first is a channel protein*, the label **channel protein** brightens.
 2. At *Picture a door in a wall*, a small flat door-in-wall pictogram appears in the corner, tag *handle, not an exam answer*.
 3. At *Written properly*, a sentence surface slides up under the membrane; at *provides a hydrophilic pore*, the first clause lands and the pore's light core is ringed, label **hydrophilic pore**; at *diffuse down their concentration gradient*, the sentence completes: **A channel protein provides a hydrophilic pore through which particular ions or polar molecules diffuse down their concentration gradient.**
-4. At *Watch the ions*, `channel-open`: ion tokens near the outer mouth enter the pore and pass through to the cytoplasm (motion); the counter runs.
-5. At *lined by hydrophilic parts*, the polar dots along the pore lining pulse, label *lined by hydrophilic R groups*.
-6. At *A few go the other way*, one ion passes upward through the pore and ticks the counter; the window closes at **8 · 2**; the net arrow grows downward, labelled *net movement: facilitated diffusion*.
+4. At *Watch the ions*, `channel-open` in a magnified pore callout beside the field (mechanism view, tag *mechanism view; not counted*; its token is not one of the counted field's tokens): an ion enters the pore mouth and passes through (motion).
+5. At *lined by hydrophilic parts*, the polar dots along the pore lining pulse, label *lined by hydrophilic R groups*; at *without meeting the hydrophobic core*, the 5 s counted sequence starts in the field: ion tokens near the outer mouth enter the pore and pass through to the cytoplasm (motion), each crossing ticking the counter and updating the live side totals.
+6. At *A few go the other way*, ions pass upward through the pore and tick the counter; the 5 s counted sequence completes at eight inward and two outward crossings, **8 · 2**, the live side totals ending **14** outside / **11** inside; the counter holds, labelled *last completed demonstration*; the net arrow grows downward, labelled *net movement: facilitated diffusion*.
 7. At *does not change shape*, the channel outline is traced once and holds fixed, tag *shape unchanged*.
 8. At *the pore simply stays open*, tag *our model: pore open; gating not taught*.
 9. At *Different channels let through*, a second channel ghost appears beside the first with a violet − token passing through it, tag *each channel: particular ions*; route slot 2 fills: **channel protein: hydrophilic pore**.
 
-**On-screen text:** the handle tag; the channel sentence; *hydrophilic pore*; *lined by hydrophilic R groups*; *net movement: facilitated diffusion*; *shape unchanged*; *our model: pore open; gating not taught*; *each channel: particular ions*; route slot 2.
+**On-screen text:** *new illustrative setup*; *set starting count*; *last completed demonstration*; the handle tag; the channel sentence; *hydrophilic pore*; *lined by hydrophilic R groups*; *net movement: facilitated diffusion*; *shape unchanged*; *our model: pore open; gating not taught*; *each channel: particular ions*; route slot 2.
 
 ---
 
