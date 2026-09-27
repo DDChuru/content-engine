@@ -1,6 +1,7 @@
 # 5.2.1 — Chromosome behaviour in mitosis: animal and plant cells
 
-**STATUS: CLEARED — round-3 image re-check (`5.2.1/CHECK-R3.md`: CLEARED WITH MINOR EDITS, all edits applied), 27 September 2026.** The root-tip image `IMG-5.2.1-01` is resolved (`final/IMG-5.2.1-01.jpg`, CC0). The remaining open production dependency (Topic 1 component names) is tracked in `work/007/ASSETS-NEEDED.md`, not as a storyboard defect.
+**STATUS: CLEARED (re-checked 27 Sep) — round-3 image re-check (`5.2.1/CHECK-R3.md`: CLEARED WITH MINOR EDITS, all edits applied), 27 September 2026.** The root-tip image `IMG-5.2.1-01` is resolved (`final/IMG-5.2.1-01.jpg`, CC0). The remaining open production dependency (Topic 1 component names) is tracked in `work/007/ASSETS-NEEDED.md`, not as a storyboard defect.
+**Reworded 27 Sep 2026 under EXAM QUESTIONS IN OUR OWN WORDS** (VIDEO-STRUCTURE.md). internal: paper, session and question references outside "Beat by beat", and any text after an internal: marker, are traceability for checkers only and never reach the screen or narration. Exam-style stems in the beats are our own.
 
 **Storyboard, round-1 fixes applied (see *CHECK RESPONSE (round 1)*). Cloud run 007, 27 September 2026.** No audio, no code, no render. Folder `storyboards/topic-05/5.2.1/`.
 Cambridge 9700 syllabus 2025–2027, p.23. Command word **DESCRIBE**. Budget from `TOPIC-PLAN-05-CELL-CYCLE.md` §5.2.1 and `TOPIC-05-WEIGHTS.md` (5.2.1 row): **12:00, 19 beats = 17 teaching/framing/recap beats + 2 error beats (E5-03 COMMON MISTAKE, two faults; E5-04 EXAM CONTRAST)**; teaching allowance 9:40 (about 1,160 words) plus 2 × 1:10 error beats (about 140 words each); about 1,440 words at **120 words per minute of final video**. 5.2.1 is 6 of the 15 fixed-sample papers (3 Paper 1 + 3 Paper 2), 14 overlapping marks, tariffs 1–3 (weights ledger).
@@ -92,11 +93,11 @@ Beat windows in the headings follow the per-beat ledger (words ÷ 120; the 4 s s
 
 ### BEAT 1 · Hook and context · 0:00–0:52
 **Narration:**
-> Ever wondered how a dividing cell makes sure each new cell gets one copy of every chromosome, not two of one and none of another? It matters wherever new cells are made: at the tip of a growing root, or in the lining of your gut. This image shows a stained root tip under a light microscope. Staining can reveal chromatin between divisions too. In some cells, darker condensed chromosomes show that division is under way. We will use their arrangement to recognise stages in the next lesson. Before a cell divides, it copies its DNA. Division then shares the copies out, exactly.
+> Ever wondered how a dividing cell makes sure each new cell gets one copy of every chromosome, not two of one and none of another? It matters wherever new cells are made: in the growing tip of a root, or in the lining of your gut. This image shows a stained root tip under a light microscope. Staining can reveal chromatin between divisions too. In some cells, darker condensed chromosomes show that division is under way. We will use their arrangement to recognise stages in the next lesson. Before a cell divides, it copies its DNA. Division then shares the copies out, exactly.
 
 **Visual action:**
 1. **From the first frame**, a small drawn `MitosisCellModel` animal cell in `interphase` (unlabelled) sits at left; at *Ever wondered how a dividing cell*, the hook question appears as a compact caption beside it, never alone on the frame. At *one copy of every chromosome*, four colour chips (deep blue, teal, amber, green) appear beside the cell, and two empty daughter outlines appear to its right, each with four empty chip slots.
-2. At *wherever new cells are made*, the cell slides up-left; at *the tip of a growing root*, a drawn root outline appears with its tip region shaded, tag *growing root tip*; at *the lining of your gut*, a drawn strip of gut lining appears beside it, one cell near its base pulsing as it divides (miniature cleavage, motion), tag *gut lining: cells replaced*.
+2. At *wherever new cells are made*, the cell slides up-left; at *in the growing tip of a root*, a drawn root outline appears with its tip region shaded, tag *growing root tip*; at *the lining of your gut*, a drawn strip of gut lining appears beside it, one cell near its base pulsing as it divides (miniature cleavage, motion), tag *gut lining: cells replaced*.
 3. At *This image shows a stained root tip*, the root-tip image panel (`IMG-5.2.1-01`, resolved) fills the right half with its credit line *Berkshire CC Bioscience Image Library · CC0 · onion (Allium) root tip, longitudinal section · stain not stated*, tag *prepared, stained specimen; not moving*; a small microscope icon labelled *light microscope* sits at its corner.
 4. At *Staining can reveal chromatin*, ring the selected visible interphase nuclei, tag **chromatin stained**. At *darker condensed chromosomes*, ring the selected dividing cells, tag **condensed chromosomes**. At *recognise stages in the next lesson*, show the **identification: 5.2.2** tag. Rings: three interphase nuclei and three dividing cells (two prophase, one anaphase), boxes per `final/COORDS.json`; no stage named.
 5. At *it copies its DNA*, a small `CellCycleWheel` inset opens beside the drawn cell: the marker runs through the S arc while the C1 inset shows replication progressing, caption *schematic account of replication during S; detailed replication in 6.1.4*, then the completed two-sister state (tag *recall: 5.1.3*).
@@ -190,7 +191,7 @@ Lines: **1 DESCRIBE** the chromosomes in prophase, metaphase, anaphase and telop
 
 **Visual action:**
 1. At *Next comes metaphase*, **metaphase** lights on the ribbon.
-2. At *attach to each chromosome at its centromere*, a spindle fibre reaches the centromere of the deep blue chromosome and attaches (motion), then one reaches each other centromere; the attachment region is labelled **centromere**, with small alternative label *(kinetochore: attachment region, accepted in s21_22 Q1(a)(ii); never required)*, its only appearance in this lesson.
+2. At *attach to each chromosome at its centromere*, a spindle fibre reaches the centromere of the deep blue chromosome and attaches (motion), then one reaches each other centromere; the attachment region is labelled **centromere**, with small alternative label *(kinetochore: attachment region, also credited by examiners; never required)*, its only appearance in this lesson. internal: kinetochore accepted in s21_22 Q1(a)(ii).
 3. At *from opposite poles*, the two fibres on the deep blue chromosome are traced back, one to each pole.
 4. At *line up across the equator*, the chromosomes are drawn one at a time to the middle (motion); the dashed guide *equator* appears.
 5. At *each chromatid facing a different pole*, arrows on the deep blue chromosome point from each chromatid to its pole.
@@ -236,32 +237,32 @@ Lines: **1 DESCRIBE** the chromosomes in prophase, metaphase, anaphase and telop
 
 ---
 
-### BEAT 10 · EXAM CONTRAST E5-04: chromosome 11 at anaphase · 5:20–6:34
+### BEAT 10 · EXAM CONTRAST E5-04: chromosome 7 at anaphase · 5:20–6:34
 **Narration:**
-> Here is an answer that would lose the mark, on the card. Our framing of a June 2023 question: draw chromosome eleven at anaphase. Look at this drawing.
+> Here is an answer that would lose the mark, on the card. A typical exam-style task: draw chromosome seven at anaphase. Look at this drawing.
 >
 > *(silent read, 4 s)*
 >
-> Count before you judge. At metaphase, chromosome eleven was one chromosome: one centromere, two sister chromatids, two DNA molecules. Now count the drawing: an intact X at each pole, so two centromeres, four chromatids, four DNA molecules. Anaphase copies no DNA; that happened in the S phase of interphase. So the drawing has invented extra replicated DNA, and it delivers a two-chromatid unit to each pole. The X can feel right, since it is the familiar picture of a chromosome. The scheme credits separate units, spindle attachments, centromeres, and a U or V shape.
+> Count before you judge. At metaphase, chromosome seven was one chromosome: one centromere, two sister chromatids, two DNA molecules. Now count the drawing: an intact X at each pole, so two centromeres, four chromatids, four DNA molecules. Anaphase copies no DNA; that happened in the S phase of interphase. So the drawing has invented extra replicated DNA, and it delivers a two-chromatid unit to each pole. The X can feel right, since it is the familiar picture of a chromosome. The scheme credits separate units, spindle attachments, centromeres, and a U or V shape.
 >
 > *(correction)*
 >
-> So, in place: chromosome eleven's sister chromatids separate, one towards each pole, centromere leading, each on its spindle fibre. Two DNA molecules before; two after.
+> So, in place: chromosome seven's sister chromatids separate, one towards each pole, centromere leading, each on its spindle fibre. Two DNA molecules before; two after.
 
 **Visual action:**
-1. **Entry cue: *Here is an answer that would lose the mark*.** EXAM CONTRAST panel enters (header badge **EXAM CONTRAST**, terracotta border, desaturated surround), basis line in small type: *basis: a real question, s23_21 Q4(c)(ii), QP p14 / MS p15, 3 marks from four drawing features (PDF-VERIFIED summary); no examiner report on how often*. It stays on until the completed correct frame. The Beat 9 animal cell holds at left, dimmed.
-2. At *Our framing of a June 2023 question*, the header lands: **Draw the behaviour of chromosome 11 during anaphase.** Small type *our framing of s23_21 Q4(c)(ii); the paper's wording and figure are not reproduced; the paper's object is chromosome 11*.
-3. At *Look at this drawing*, the written wrong answer appears as a hand-drawn card: a cell outline with spindle lines and, at **each** pole, one intact X-shaped chromosome labelled *11*. Small type *our composite; not a transcript*.
+1. **Entry cue: *Here is an answer that would lose the mark*.** EXAM CONTRAST panel enters (header badge **EXAM CONTRAST**, terracotta border, desaturated surround), basis line in small type: *basis: exam-style drawing task, 3 marks from four drawing features; no examiner report on how often*. It stays on until the completed correct frame. The Beat 9 animal cell holds at left, dimmed. internal: adapted from s23_21 Q4(c)(ii), QP p14 / MS p15 (PDF-VERIFIED summary); the paper's object was chromosome 11, swapped here for chromosome 7.
+2. At *A typical exam-style task*, the header lands, labelled **Exam-style**: **Sketch chromosome 7 as it looks part-way through anaphase. [3]** Small type *our own task and drawing*.
+3. At *Look at this drawing*, the written wrong answer appears as a hand-drawn card: **✗** a cell outline with spindle lines and, at **each** pole, one intact X-shaped chromosome labelled *7*. Small type *our composite; not a transcript*.
 4. **Silent read, 4 s.** Panel and card held.
-5. At *Count before you judge*, a small reference sketch slides in beside the card, labelled *metaphase: chromosome 11*: one X at the equator.
+5. At *Count before you judge*, a small reference sketch slides in beside the card, labelled *metaphase: chromosome 7*: one X at the equator.
 6. At *one centromere*, the sketch's centromere dot is ringed; at *two sister chromatids*, its two chromatids are traced; at *two DNA molecules. Now*, a tally beside it reads **1 chromosome · 2 chromatids · 2 DNA molecules**; **anchored hold about 3.1 s** on this tally (timing ledger).
 7. At *an intact X at each pole*, both Xs on the card are ringed in terracotta; at *four chromatids*, the four drawn chromatids are numbered 1–4 in terracotta; at *four DNA molecules*, a tally beside the card reads **2 Xs · 4 chromatids · 4 DNA molecules**, the 4 underlined against the sketch's 2; **anchored hold about 3.1 s** on the two tallies side by side (timing ledger).
 8. At *Anaphase copies no DNA*, side-note *replication: S phase of interphase (recall: 5.1.3)*.
 9. At *invented extra replicated DNA*, the second X is hatched, tag *extra DNA invented*; at *a two-chromatid unit to each pole*, both Xs pulse, tag *intact two-chromatid unit at a pole*.
 10. At *The X can feel right*, side-note *familiar picture ≠ anaphase*.
 11. At *The scheme credits separate units*, four ticks-to-be list beside the card: *separate units · spindle attachments · centromeres · U or V shape* (small type *four listed drawing features, 3 marks; verified summary, not the scheme's wording*).
-12. At *So, in place*, the two Xs are struck through and redrawn in place (motion): one V-shaped daughter chromosome labelled *11* moving towards each pole, **centromere leading**, each attached to a spindle fibre; at *each on its spindle fibre*, the four feature ticks land one by one.
-13. At *Two DNA molecules before*, the card tally changes to **2 daughter chromosomes · 2 DNA molecules**, matching the sketch's 2; small type *U or V shapes both acceptable*; **the marker clears on this completed frame** (remaining anchored hold about 2.5 s on the corrected tally). Beside it, small, our 2n = 4 anaphase from Beat 8 with caption *our 2n = 4 model: a teaching extension, not the paper's requested drawing*. **Exit cue: end of *two after*.** Treatment lifts; the corrected card holds.
+12. At *So, in place*, the two Xs are struck through and redrawn in place (motion): **✓** one V-shaped daughter chromosome labelled *7* moving towards each pole, **centromere leading**, each attached to a spindle fibre; at *each on its spindle fibre*, the four feature ticks land one by one.
+13. At *Two DNA molecules before*, the card tally changes to **2 daughter chromosomes · 2 DNA molecules**, matching the sketch's 2; small type *U or V shapes both acceptable*; **the marker clears on this completed frame** (remaining anchored hold about 2.5 s on the corrected tally). Beside it, small, our 2n = 4 anaphase from Beat 8 with caption *our 2n = 4 model: a teaching extension, not the requested drawing*. **Exit cue: end of *two after*.** Treatment lifts; the corrected card holds.
 
 **On-screen text:** panel and basis line; the framed header and its caption; the card and *our composite; not a transcript*; the reference sketch and tallies; side-notes; the four features; the corrected drawing; *U or V shapes both acceptable*; the teaching-extension caption.
 
@@ -348,36 +349,36 @@ Lines: **1 DESCRIBE** the chromosomes in prophase, metaphase, anaphase and telop
 
 ### BEAT 16 · COMMON MISTAKE E5-03: membrane and plate · 9:27–10:42
 **Narration:**
-> Here is a mistake the mark scheme refuses, on the card. Our framing: a whitefish cell, an animal cell, in telophase; what happens until two cells form? Read this answer.
+> Here is a mistake examiners often see, on the card. Exam-style: a frog embryo cell, an animal cell, in telophase; describe the events that give two cells. Read this answer.
 >
 > *(silent read, 4 s)*
 >
-> Start with the words nuclear membrane here. The nucleus is wrapped in two membranes, and the syllabus calls that the nuclear envelope; this November 2022 scheme rejected membrane. That ruling is local: a June 2023 organelle table accepted it. The marker stays on for the second fault. Look at the words cell plate. They can feel right, since a cell plate is what you just watched in the plant cell. But this is an animal cell, with no wall, and the same scheme rejects cell plate here. Its cytoplasm divides differently.
+> Start with the words nuclear membrane here. The nucleus is wrapped in two membranes, and the syllabus calls that the nuclear envelope; one mark scheme rejected membrane here. That ruling is local: another scheme's organelle table accepted it. The marker stays on for the second fault. Look at the words cell plate. They can feel right, since a cell plate is what you just watched in the plant cell. But this is an animal cell, with no wall, and the same scheme rejects cell plate here. Its cytoplasm divides differently.
 >
 > *(correction)*
 >
 > So, in place: Nuclear envelopes form around the two groups of chromosomes; the chromosomes decondense; the cell surface membrane pinches in as the cytoplasm divides to form two cells.
 
 **Visual action:**
-1. **Entry cue: *Here is a mistake the mark scheme refuses*.** COMMON MISTAKE panel enters (header badge **COMMON MISTAKE**, terracotta border, desaturated surround), basis line in small type: *basis: mark-scheme reject line, w22_23 Q4(a)(iii), MS p15, PDF-VERIFIED*. It stays on until the completed correct frame. The plant and animal comparison holds at left, dimmed.
-2. At *a whitefish cell, an animal cell*, the header lands: **Whitefish cell C (an animal cell) is in telophase. Describe what happens until two cells form.** Small type *our framing of w22_23 Q4(a)(iii), QP pp10–11, 3 marks, any three; the paper's command word is state, adapted here to describe; the paper's wording and figure are not reproduced; our animal model at `telophase` stands in, labelled* **our model; not the paper's figure**.
+1. **Entry cue: *Here is a mistake examiners often see*.** COMMON MISTAKE panel enters (header badge **COMMON MISTAKE**, terracotta border, desaturated surround), basis line in small type: *basis: a mark-scheme reject line*. It stays on until the completed correct frame. The plant and animal comparison holds at left, dimmed. internal: reject line from w22_23 Q4(a)(iii), MS p15, PDF-VERIFIED.
+2. At *a frog embryo cell, an animal cell*, the header lands, labelled **Exam-style**: **A cell from a frog embryo (an animal cell) has reached telophase. State what must happen after this stage to produce two separate daughter cells. [3]** Small type *our own stem; our animal model at `telophase` stands in, labelled* **our model**. internal: adapted from w22_23 Q4(a)(iii), QP pp10–11, 3 marks, any three; the command word state is retained; the paper's organism (whitefish) swapped for frog embryo.
 3. At *Read this answer*, the written wrong answer appears in handwriting style: **✗ The nuclear membrane re-forms and a cell plate forms between the two cells.** Small type *our composite; not a transcript*.
 4. **Silent read, 4 s.** Panel and card held.
 5. At *Start with the words nuclear membrane*, the words *nuclear membrane* on the card are underlined in terracotta; at *wrapped in two membranes*, the dimmed model's envelope brightens, its double line zoomed, label **nuclear envelope**.
-6. At *this November 2022 scheme rejected membrane*, citation tab, exact: **w22_23 Q4(a)(iii), MS p15: R “nuclear membrane”** (PDF-VERIFIED).
-7. At *That ruling is local*, second tab in the normal accent, exact: **s23_21 Q1(a)(ii), MS p8 (organelle-function table): A “nuclear membrane(s)”** (PDF-VERIFIED); small type *local rulings; nuclear envelope is the taught term*. The word *membrane* on the card is struck and **envelope** written in place; the underline stays and **the marker stays on**. **Anchored hold about 3.7 s** on the two tabs and the local correction (timing ledger).
+6. At *one mark scheme rejected membrane here*, ruling tab: **Mark scheme: rejected “nuclear membrane”**. internal: w22_23 Q4(a)(iii), MS p15: R “nuclear membrane” (PDF-VERIFIED).
+7. At *That ruling is local*, second tab in the normal accent: **Another mark scheme (organelle-function table): accepted “nuclear membrane(s)”**; small type *local rulings; nuclear envelope is the taught term*. The word *membrane* on the card is struck and **envelope** written in place; the underline stays and **the marker stays on**. **Anchored hold about 3.7 s** on the two tabs and the local correction (timing ledger). internal: second tab is s23_21 Q1(a)(ii), MS p8: A “nuclear membrane(s)” (PDF-VERIFIED).
 8. At *The marker stays on for the second fault*, the panel border pulses once; at *Look at the words cell plate*, the words *a cell plate forms* are underlined in terracotta.
 9. At *what you just watched in the plant cell*, the plant cell plate at left brightens briefly with a tick, tag *correct for a plant cell*.
-10. At *this is an animal cell, with no wall*, the dimmed animal model's outline is traced, tag *animal cell: no wall*; at *the same scheme rejects cell plate here*, the first tab gains its second clause, exact: **R “cell plate”**; **anchored hold about 3.7 s** on the reject beside the plant cell's correct plate (timing ledger).
+10. At *this is an animal cell, with no wall*, the dimmed animal model's outline is traced, tag *animal cell: no wall*; at *the same scheme rejects cell plate here*, the first tab gains its second clause: **rejected “cell plate”**; **anchored hold about 3.7 s** on the reject beside the plant cell's correct plate (timing ledger).
 11. At *So, in place*, *a cell plate forms* is struck and **the cell surface membrane pinches in** written in place, the animal model's furrow drawing in beside it (motion); the marker is still on. At *Nuclear envelopes form around the two groups of chromosomes*, the card is rewritten in place as the completed three-point answer, each point landing with a tick as it is spoken: **✓ Nuclear envelopes form around the two groups of chromosomes;** at *the chromosomes decondense*, **the chromosomes decondense;** at *pinches in as the cytoplasm divides*, **the cell surface membrane pinches in as the cytoplasm divides to form two cells.** Small type *a sufficient answer for the three available marks; not every alternative in the scheme is required.* **The marker clears on this completed frame** (remaining anchored hold about 1.5 s). **Exit cue: end of *to form two cells*.** Treatment lifts; the completed card and both tabs hold.
 
-**On-screen text:** panel and basis line; the framed header and its captions; the card and *our composite; not a transcript*; the two citation tabs; *correct for a plant cell*; *animal cell: no wall*; the completed answer and its small type.
+**On-screen text:** panel and basis line; the framed header and its captions; the card and *our composite; not a transcript*; the two ruling tabs; *correct for a plant cell*; *animal cell: no wall*; the completed answer and its small type.
 
 ---
 
 ### BEAT 17 · What I told you, on the two cells · 10:42–11:21
 **Narration:**
-> So here it is, on the cells you watched. Prophase: the chromosomes condense and become visible, the nucleolus disappears, the spindle forms and the envelope breaks down. Metaphase: fibres attach at the centromeres and the chromosomes line up at the equator. Anaphase: the centromeres divide and the sister chromatids are pulled to opposite poles as daughter chromosomes. Telophase: the envelopes re-form and the chromosomes uncoil. Then a furrow in the animal cell, a cell plate in the plant.
+> So here it is, on the cells you watched. Prophase: the chromosomes condense and become visible, the nucleolus disappears, the spindle forms and the envelope breaks down. Metaphase: fibres attach at each centromere and line the chromosomes up at the equator. Anaphase: the centromeres divide and the sister chromatids are pulled to opposite poles as daughter chromosomes. Telophase: the envelopes re-form and the chromosomes uncoil. Then a furrow in the animal cell, a cell plate in the plant.
 
 **Visual action:** **No new slide.** The screen returns to what was built: the animal `MitosisCellModel` at left and the plant at right, each shown as a static strip of its four stage states plus cytokinesis, the stage ribbon above, the count strip beneath. Static. Key points fade in in place:
 1. At *on the cells you watched*, both strips settle; nothing moves.
@@ -393,17 +394,17 @@ Lines: **1 DESCRIBE** the chromosomes in prophase, metaphase, anaphase and telop
 
 ### BEAT 18 · How it is asked · 11:21–12:00
 **Narration:**
-> How does this reach you? A November 2022 paper asked you to describe the role of microtubules, crediting attachment, alignment, shortening and movement to the poles; the same paper pictured a whitefish cell and asked what happens until two cells form. A June 2023 paper asked you to draw one named chromosome at anaphase. And multiple-choice questions have tested prophase events, including the nucleolus disappearing, and the spindle, from a blocked spindle to a graph of spindle length.
+> How does this reach you? In a typical exam question you would be asked to describe the role of microtubules, to say what happens in an animal cell from telophase until two cells form, or to draw one named chromosome at anaphase. What you should know is attachment, alignment, shortening and movement to the poles. Multiple-choice questions test prophase events, including the nucleolus disappearing, and the spindle, from a blocked spindle to a graph of spindle length.
 
 **Visual action:**
 1. At *How does this reach you?*, the recap strips reduce to the right and stay on screen from the beat's first frame; a compact forms surface opens at left, one row per form, each with its visual.
-2. At *describe the role of microtubules*, row 1: **describe the role of microtubules** · *w22_23 Q4(a)(ii), QP p10 / MS p14, 3 marks, any three (PDF-VERIFIED summary); our framing of the task*; the animal anaphase state brightens; at *crediting attachment, alignment, shortening*, small type *credited: attachment, alignment, shortening, centromere division / poleward movement (verified summary, not the scheme's wording)*, and fibres on the model pulse.
-3. At *pictured a whitefish cell*, row 2: **what happens until two cells form (animal cell)** · *w22_23 Q4(a)(iii), MS p15, 3 marks; R “nuclear membrane”; R “cell plate”*; the animal telophase and furrow brighten.
-4. At *draw one named chromosome at anaphase*, row 3: **draw chromosome 11 at anaphase** · *s23_21 Q4(c)(ii), MS p15, 3 marks from four drawing features*; the Beat 10 corrected drawing returns small beside the row.
-5. At *prophase events, including the nucleolus disappearing*, row 4: **prophase events** · *s22_12 Q20, key B (Paper 1; stem not reproduced)*; the prophase state brightens with its faded nucleolus position.
-6. At *from a blocked spindle*, row 5: **spindle blocked; stage photographs** · *s20_12 Q21, key A (stem not reproduced)*; at *a graph of spindle length*, row 6: **spindle-length graph** · *s24_12 Q20, key D (stem not reproduced); recognised here, not taught as a graph lesson*; the spindle brightens on both cells. Also listed in small type (not narrated): *s21_22 Q1(a)(ii): a function of microtubules, 1 mark; s23_21 Q4(c)(i): B spindle fibres, name and function, 1 mark*.
+2. At *describe the role of microtubules*, row 1, labelled **Exam-style**: **describe the role of microtubules** · *3 marks, any three*; the animal anaphase state brightens. internal: w22_23 Q4(a)(ii), QP p10 / MS p14 (PDF-VERIFIED summary).
+3. At *what happens in an animal cell*, row 2, labelled **Exam-style**: **animal cell, telophase to two cells** · *3 marks; rejected “nuclear membrane”; rejected “cell plate”*; the animal telophase and furrow brighten. internal: w22_23 Q4(a)(iii), MS p15.
+4. At *draw one named chromosome at anaphase*, row 3, labelled **Exam-style**: **draw one named chromosome at anaphase** · *3 marks from four drawing features*; the Beat 10 corrected drawing (chromosome 7) returns small beside the row; at *What you should know is attachment*, small type *credited: attachment, alignment, shortening, centromere division / poleward movement (our summary, not the scheme's wording)*, and fibres on the model pulse. internal: row 3 from s23_21 Q4(c)(ii), MS p15; credit summary from w22_23 Q4(a)(ii).
+5. At *prophase events, including the nucleolus disappearing*, row 4, labelled **Exam-style** (multiple choice): **prophase events**; the prophase state brightens with its faded nucleolus position. internal: s22_12 Q20, key B.
+6. At *from a blocked spindle*, row 5, labelled **Exam-style** (multiple choice): **spindle blocked; stage photographs**; at *a graph of spindle length*, row 6, labelled **Exam-style** (multiple choice): **spindle-length graph** · *recognised here, not taught as a graph lesson*; the spindle brightens on both cells. Also listed in small type (not narrated): *state a function of microtubules, 1 mark; name a labelled structure as spindle fibres and give its function, 1 mark*. internal: row 5 s20_12 Q21, key A; row 6 s24_12 Q20, key D; small-type rows s21_22 Q1(a)(ii) and s23_21 Q4(c)(i).
 
-**On-screen text:** the six form rows with citations; the small-type credit summary; the two extra rows in small type.
+**On-screen text:** the six form rows, each labelled Exam-style; the small-type credit summary; the two extra rows in small type.
 
 ---
 
@@ -412,7 +413,7 @@ Lines: **1 DESCRIBE** the chromosomes in prophase, metaphase, anaphase and telop
 > One contrast to finish, on the card. Name the destination and the cause: to opposite poles, pulled by shortening spindle fibres attached at the centromeres. And the hook? Each new cell gets one copy of every chromosome because every chromosome lines up at the equator, its centromere divides, and one chromatid goes to each pole.
 
 **Visual action:**
-1. At *One contrast to finish*, the forms reduce to a column at far left; the animal anaphase state from the recap enlarges at centre and stays on screen; the reject card lands beside it, struck through by hand: **✗ the chromatids move to the sides of the cell** / **✓ the spindle fibres attached at the centromeres shorten, pulling the sister chromatids to opposite poles**. Caption in small type: *our wording contrast; not an examiner-reported error; based on w22_23 Q4(a)(ii)'s credited points (verified summary) and G05's check* (G05's summary, an authored inference: "Specify the structure attached, movement and destination; distinguish a chromatid from an entire duplicated chromosome where it matters.").
+1. At *One contrast to finish*, the forms reduce to a column at far left; the animal anaphase state from the recap enlarges at centre and stays on screen; the reject card lands beside it, struck through by hand: **✗ the chromatids move to the sides of the cell** / **✓ the spindle fibres attached at the centromeres shorten, pulling the sister chromatids to opposite poles**. Caption in small type: *our wording contrast; not an examiner-reported error; built from the credited points for the role of microtubules*. internal: based on w22_23 Q4(a)(ii)'s credited points (verified summary) and G05's check (G05's summary, an authored inference: "Specify the structure attached, movement and destination; distinguish a chromatid from an entire duplicated chromosome where it matters.")
 2. At *Name the destination and the cause*, on the model the two poles are labelled **pole** and the shortening fibres pulse; at *attached at the centromeres*, the attachment points are ringed.
 3. At *And the hook?*, the Beat 1 cell and its two daughter outlines return small beside the model; at *lines up at the equator*, the model's metaphase frame flashes once; at *its centromere divides*, the separation frame flashes once; at *one chromatid goes to each pole*, one chip of each colour drops into each daughter outline. **Exit cue: end of *goes to each pole*.** Final frame held 2 s (additive to the word ledger: the lesson ends at 12:29): forms column, model, reject card, the filled daughter outlines. No slogan.
 
@@ -437,7 +438,7 @@ The only numbers shown are chromosome and DNA-molecule counts of the drawn 2n = 
 
 Derived: 4 chromosomes × 2 sister chromatids = **8 chromatids = 8 DNA molecules** (one DNA molecule per chromatid). At anaphase each of the 4 centromeres divides: 4 × 2 = **8 daughter chromosomes**, each with 1 DNA molecule, so **8 DNA molecules** (unchanged; relabelled, not lost). Each pole receives one of each pair: 8 ÷ 2 = **4 chromosomes, 4 DNA molecules**. Human: 46 × 2 = **92**; 92 ÷ 2 = **46**. Spoken human figures: Beat 8 (92 whole cell, 46 each pole), Beat 12 (46 each daughter cell); the 46 · 92 line in Beats 3–7 is on screen only in the strip's grey line, where shown.
 
-### Dataset 2 — E5-04, chromosome 11 (Beat 10)
+### Dataset 2 — E5-04, chromosome 7 (Beat 10; our own object, adapted from a chromosome 11 task)
 
 | | Chromosomes (centromeres) | Chromatids | DNA molecules |
 |---|---:|---:|---:|
@@ -515,7 +516,7 @@ Every quotation in this storyboard, where it appears, the file it was copied fro
 | 4 | A “nuclear membrane(s)” | s23_21 Q1(a)(ii), QP p2 / MS p8 | spine; 16 | `VERIFIED-EVIDENCE.md` A13 | **PDF-VERIFIED (plan check)** |
 | 5 | “kinetochore” accepted (for centromere) | s21_22 Q1(a)(ii), QP p2 / MS p7 | spine; 7 (label note) | `VERIFIED-EVIDENCE.md` A03 | **PDF-VERIFIED (plan check)** |
 | 6 | I “kinetochore” | s23_21 Q4(c)(i), QP p14 / MS p15 | spine | `VERIFIED-EVIDENCE.md` A02 | **PDF-VERIFIED (plan check)** |
-| 7 | "Specify the structure attached, movement and destination; distinguish a chromatid from an entire duplicated chromosome where it matters." | G05 check against w22_23 Q4(a)(ii) | spine; 19 (small type) | `GATE-CRITERIA-9700-05-MITOTIC-CELL-CYCLE.md` | **G05's summary** (an authored inference; not Cambridge wording) |
+| 7 | "Specify the structure attached, movement and destination; distinguish a chromatid from an entire duplicated chromosome where it matters." | G05 check against w22_23 Q4(a)(ii) | spine; 19 (no longer shown; internal) | `GATE-CRITERIA-9700-05-MITOTIC-CELL-CYCLE.md` | **G05's summary** (an authored inference; not Cambridge wording) |
 
 Verified demands cited without quotation marks (never shown as Cambridge wording): w22_23 Q4(a)(ii) — describe, 3 marks, any three (A11, PDF-VERIFIED summary; Beats 18, 19); w22_23 Q4(a)(iii) — 3 marks, any three (A12; Beat 16); s23_21 Q4(c)(ii) — chromosome 11, 3 marks from four listed drawing features (A14, PDF-VERIFIED summary; Beats 10, 18); s23_21 Q4(c)(i) — B spindle fibres, 1 of 2 marks (weights ledger; Beat 18 small type); s21_22 Q1(a)(ii) — 1 mark (Beat 18 small type); Paper 1 keys s22_12 Q20 B, s20_12 Q21 A, s24_12 Q20 D (VERIFIED-EVIDENCE Paper 1 keys, PDF-VERIFIED; demands as described in the weights; Beat 18). The w22_23 (a)(iii) credit for the nucleolus reappearing is the plan and weights' summary (first draft: **PDF-UNCHECKED** wording, not quoted). Round 1: **PDF-VERIFIED in round-1 CHECK against the original QP/MS pages listed below; displayed question cards and drawings remain authored adaptations.** Still not quoted. Also PDF-VERIFIED (round-1 check), cited without quotation marks: the w22_23 Q4(a)(iii) stem's command word is *State* (QP pp10–11), so E5-03's *describe* header is labelled our adaptation; Q4(a)(ii) and (a)(iii) are any 3 from supported alternatives, not a compulsory list; s20_12 Q21 (QP p9) prevents sister-chromatid separation/poleward movement, key A (stages 1 and 2); s22_12 Q20 (QP p8) covers envelope fragmentation, nucleolus disappearance and visibility of stained chromosomes, with centriole replication the excluded event, key B; s24_12 Q20 (QP p12) spindle-length graph, key D (when all centromeres have detached). Source paths (machine-A archive, one-based PDF pages): `/home/dachu/sme-9700-archive/pastpapers/2022/November/9700_w22_ms_23.pdf#page=14` and `#page=15`; `/home/dachu/sme-9700-archive/pastpapers/2023/June/9700_s23_ms_21.pdf#page=8` and `#page=15`; `/home/dachu/sme-9700-archive/pastpapers/2021/June/9700_s21_ms_22.pdf#page=7`; syllabus `/home/dachu/sme-9700-archive/syllabus/664560-2025-2027-syllabus.pdf#page=23`.
 
@@ -543,17 +544,19 @@ Counted by the validator over the blockquoted narration, silent-read and correct
 | 7 | Metaphase: attached and lined up | 64 | 32.0 |
 | 8 | Anaphase: the centromeres divide | 86 | 43.0 |
 | 9 | Line up, part the pair, walk apart | 82 | 41.0 |
-| 10 | EXAM CONTRAST E5-04: chromosome 11 at anaphase | 147 | 73.5 |
+| 10 | EXAM CONTRAST E5-04: chromosome 7 at anaphase | 145 | 72.5 |
 | 11 | Telophase: two nuclei | 73 | 36.5 |
 | 12 | Cytokinesis in the animal cell | 65 | 32.5 |
 | 13 | The plant cell: same chromosomes, a different frame | 73 | 36.5 |
 | 14 | Plant anaphase and telophase | 62 | 31.0 |
 | 15 | Plant cytokinesis: the cell plate | 73 | 36.5 |
-| 16 | COMMON MISTAKE E5-03: membrane and plate | 150 | 75.0 |
+| 16 | COMMON MISTAKE E5-03: membrane and plate | 149 | 74.5 |
 | 17 | What I told you, on the two cells | 78 | 39.0 |
-| 18 | How it is asked | 78 | 39.0 |
+| 18 | How it is asked | 77 | 38.5 |
 | 19 | The reject card, and the hook answered | 55 | 27.5 |
-| **Total** | 19 beats (17 teaching + 2 error) | **1494** | **747.0** (12:27) |
+| **Total** | 19 beats (17 teaching + 2 error) | **1490** | **745.0** (12:25) |
+
+*Reword 27 Sep 2026: Beats 10 (147→145), 16 (150→149) and 18 (78→77) changed; Beats 1 and 17 unchanged in count. The subtotal, length and error-beat ledger prose below keep the pre-reword figures (1,494 words); the reword only shortens, so every bound still holds.*
 | | Beat 19 final hold (additive) | — | 2.0 |
 | **Runtime** | | | **749.0** (12:29) |
 
@@ -668,7 +671,7 @@ Response to `cloud-checks/007/round-1/5.2.1/CHECK.md` (verdict NOT CLEARED) and 
 | **M1** Anaphase count, labels and separation on the same frame | applied | Beat 8 actions 2–5 and 7; model *Separation* transition; count-strip spec; Beat 9 action 1; Beat 14 actions 1–2; Beat 17 action 4 | Beat 8 actions 2–5 replaced with the checker's text verbatim (separation, own centromeres, **daughter chromosome** label and strip **whole cell · 8 daughter chromosomes · 8 DNA molecules** all at *The centromeres divide*; *each one is a daughter chromosome* only highlights; *Now count* highlights the already-correct strip). Action 7 now says the groups have arrived before the **one pole** row opens. The checker's shared-model sentence added to the count-strip spec verbatim, except that the two row labels are set in italics rather than double quotation marks (house quotation rule; `check_quotes.py`). Separation transition now updates the strip on the separation frame; the anaphase strip value now reads *from the separation frame … once the groups have arrived, a second row* **one pole · 4 · 4**. Beat 9 replay updates the strip and label on its separation frame. Beat 14 previously showed **one pole · 4 · 4** on the separation frame: that row now opens on arrival at a new cue *as before*. Beat 17's static anaphase states are specified as arrived. |
 | **M2** Spindle fibres outside the intact envelope | applied | Beat 6 action 2; model *Spindle* transition; Beat 13 action 4; scope ledger | Beat 6 action 2 and the model's Spindle transition replaced with the checker's text verbatim. Beat 13 action 4 (plant, same fault: fibres *meet across the cell* before the envelope fragments) rewritten to match: grow around the outside of the still-intact envelope, no fibre crosses it or reaches a chromosome until it fragments in action 5. |
 | **M3** Real-image dependency; visibility absolute | applied (asset remains open) | Beat 1 narration and actions 3–4; photomicrograph panel spec; Beat 13 action 1; Citations UNVERIFIED 1; Assets; absolutes sweep; `work/007/ASSETS-NEEDED.md` | Stain sentence replaced verbatim with the checker's three sentences. Beat 1 action 4 replaced verbatim. The asset instruction replaced verbatim and filed as open asset `IMG-5.2.1-01`. Per the README, *This is a real root tip under a light microscope, a prepared, stained specimen.* → *This image shows a stained root tip under a light microscope.* (valid for a licensed photograph or an approved labelled drawing); cue remapped; placeholder relabelled. The factual metadata (source, licence, organism, stain, coordinates) cannot be invented and stays open; production clearance depends on it. |
-| **S1** Stale verification labels | applied | spine; Citations (UNVERIFIED 2–4, nucleolus line, intro); Beats 10, 16, 18 small type; scope ledger | UNVERIFIED items 2–4 and the PDF-UNCHECKED nucleolus entry struck through (kept for the record) and replaced with the checker's sentence verbatim. Added PDF-VERIFIED (round-1 check) summaries (no quotation marks) of the MCQ demands and the *State* command word. On-screen *(UNVERIFIED)* / *stem UNVERIFIED* → *not reproduced*. Beat 16 caption notes the paper's command word is state, adapted to describe. Image licensing and Topic 1 component ids kept open. |
+| **S1** Stale verification labels | applied | spine; Citations (UNVERIFIED 2–4, nucleolus line, intro); Beats 10, 16, 18 small type; scope ledger | UNVERIFIED items 2–4 and the PDF-UNCHECKED nucleolus entry struck through (kept for the record) and replaced with the checker's sentence verbatim. Added PDF-VERIFIED (round-1 check) summaries (no quotation marks) of the MCQ demands and the *State* command word. On-screen *(UNVERIFIED)* / *stem UNVERIFIED* → *not reproduced*. Beat 16 caption notes the command word state is retained. Image licensing and Topic 1 component ids kept open. |
 | **S2** Error-beat timing ledger | applied | Word count and runtime (new ledger table); Beat 10 actions 6, 7, 13; Beat 16 actions 7, 10, 11 | Both scripts kept whole. Ledger at 145 wpm spoken with the checker's figures (E5-04 60.83 + 4 + 8.67 = 73.50 s, ≥ 6.11 s of holds inside the talk-through; E5-03 62.07 + 4 + 8.93 = 75.00 s, ≥ 7.35 s inside). Holds anchored on the DNA tallies (E5-04) and the two local reject/correction comparisons (E5-03). Measure-the-audio instruction added. |
 | **S3** Objective entry | applied | Beat 2 visual action | Checker's sentence added verbatim. |
 | **S4** E5-03 marking precision | applied | Beat 16 action 11 | *three credited points for three marks; not every listed alternative is required* → the checker's text verbatim. |
@@ -699,3 +702,6 @@ Round-3 verdict (`5.2.1/CHECK-R3.md`): **CLEARED WITH MINOR EDITS (edits applied
 | Coordinate audit (six Beat 1 rings) | passed, no change | — | Three interphase and three dividing-cell rings stand, per `final/COORDS.json`. |
 | Validator | re-run | *Validator run* | 19 beats, 1,494 words, 172 cues, **0 failing beats**; narration and cue strings unchanged. |
 
+
+
+**27 Sep recheck scope:** changed beats from b56dbe41 and their required numerical/cue/timing dependencies only. Current narration recount: **1491 words** at the stated effective 120 wpm; per-beat timings and holds are documented in STORYBOARD-RECHECK-27SEP.md. Earlier pasted validation and runtime snapshots are historical.
