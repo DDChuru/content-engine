@@ -1,0 +1,107 @@
+{
+  "1_ffprobeDuration": 394.6,
+  "2_videoCoversAudio": {
+    "video": 394.6,
+    "encodedAudio": 393.6,
+    "marginSeconds": 1.0,
+    "videoFrames": 11838
+  },
+  "3_fullDecodeErrors": 0,
+  "4_cues": {
+    "matched": 102,
+    "total": 102,
+    "planned": 102
+  },
+  "5_audioPacketsUnchanged": {
+    "packets": 18451,
+    "identical": true
+  },
+  "6_finalWord": {
+    "word": "chromosome.",
+    "endsAt": 390.313,
+    "audioEnds": 393.6,
+    "headroom": 3.287,
+    "afterWordMaxDb": -17.6
+  },
+  "7_silentReads": [
+    {
+      "beat": 4,
+      "before": "END",
+      "start": 145.139,
+      "seconds": 2.0,
+      "pcmAllZero": true,
+      "encodedInteriorMaxDb": -91.0
+    },
+    {
+      "beat": 5,
+      "before": "Look at the whole",
+      "start": 159.477,
+      "seconds": 4.0,
+      "pcmAllZero": true,
+      "encodedInteriorMaxDb": -91.0
+    },
+    {
+      "beat": 10,
+      "before": "END",
+      "start": 391.084,
+      "seconds": 2.0,
+      "pcmAllZero": true,
+      "encodedInteriorMaxDb": -91.0
+    }
+  ],
+  "7_speechPCMUnchanged": true,
+  "frozenNarration": "storyboard paragraphs present verbatim; requests differ only by the recorded request-only normalisations: B7: where needed\u2192where, needed",
+  "8_boundaries": {
+    "master": "/home/user/content-engine/work/5.1.2/5.1.2-mitosis-identical-cells.mp4",
+    "timeline": "/home/user/content-engine/work/5.1.2/timeline.json",
+    "master_bytes": 32140092,
+    "fps": 30.0,
+    "frame_count": 11838,
+    "boundaries_tested": 9,
+    "candidate_count": 0,
+    "candidate_beats": [],
+    "method": "RGB 640x360 area downsample; last/first near-match, then material abrupt jump",
+    "thresholds": {
+      "near_mae_max": 0.8,
+      "near_changed_fraction_max": 0.005,
+      "changed_pixel_threshold": 12,
+      "jump_mae_min": 1,
+      "jump_changed_fraction_min": 0.005,
+      "jump_tile_mae_min": 8,
+      "jump_ratio_min": 5,
+      "noise_floor": 0.05,
+      "post_jump_stable_mae_max": "max(0.8, 0.45 * jump_mae)"
+    },
+    "limits": "Candidates, not proof. Deliberate one-frame holds can match; identical layouts can hide a lookup error. Subtle/animated holds can evade thresholds. Requires unshifted CFR master."
+  },
+  "markerAudit": {
+    "framesChecked": 11838,
+    "marked": 2132,
+    "unmarked": 9706,
+    "intervals": [
+      {
+        "beat": 5,
+        "label": "EXAM CONTRAST",
+        "startFrame": 4430,
+        "endFrame": 6562,
+        "announceFrame": 4430,
+        "beatEndFrame": 6584,
+        "clearKey": "done",
+        "clearsOnFrame": 6562
+      }
+    ],
+    "badgeTextMae": {
+      "examMaeMax": 3.92836856842041,
+      "commonMaeMin": 20.365219116210938
+    },
+    "mismatches": 0
+  },
+  "longestUnchangedVisual": {
+    "beat": 5,
+    "startFrame": 4535,
+    "seconds": 7.066666666666666
+  },
+  "unchangedOver15s": [],
+  "valenceAudit": "not applicable: no covalent chemistry in Topic 5 (replication is schematic progress; no bond edits)",
+  "sha256": "891cc477a4143e7ce1d5d7bad82ab323ab4bcb3ca8dc3722557755c1a505b38b"
+}
