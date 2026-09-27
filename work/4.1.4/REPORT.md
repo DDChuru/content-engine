@@ -1,5 +1,34 @@
 # 4.1.4 — Cell signalling: secretion, transport, binding · REPORT
 
+## v2 (cloud run 008f, 27 Sep 2026) — fixes for review `cloud-reviews/4.1.4-REVIEW.md` (CHANGES)
+Branch `cloud/008f-fix-4prnob`. 9 beats, 1 error beat (E44, Beat 7), 104 cues (+5 hook cues).
+**Bunny guid `2aca389d-5b07-4072-a48d-c504b03b8ceb`** "REVIEW 4.1.4 v2 Cell signalling: secretion, transport, binding", no
+collection; uploaded 16:13Z; **status 4 at 16:16:25Z** (≈3 min; 240p–1080p, 421 s).
+
+| Finding | Fix |
+|---|---|
+| 1 HIGH whole-cell secretion through an unbroken outline | Shared `SignallingScene` now draws the beta cell with `ExoOutline` (VesicleTransport): the outline itself is one line into which the vesicle fuses — approach, fuse (the neck is a real opening in the outline), release (insulin leaves through the opening), flatten back. Same topology as the close-up `ExocytosisInset`, which runs beside it. No insulin crosses an intact outline. `../t4-shared/CHANGELOG.md`. |
+| 2 text < 17 px | Every text ≥ 20 px at 1:1 (≥ 17.59 px delivered), incl. the envelope's "to: 35", the door numbers and the thumbnails: the envelope inset redrawn (address on the envelope, numbered doors, 20–22 px); zoomed scenes fade their labels out BEFORE zooming (`labelO`/`labelOf`); reduced scenes are `bare` (no text) with full-size labels outside; Beat 8 recap relaid. Per-frame `label-audit.cjs` in `render-beat.cjs`: **12,312/12,312 frames, min 17.59 px, 0 violations** (asserted in `verify.py`). |
+| 3 envelope hook unmapped | Beat 5 re-voiced (hook only): *"The letter: insulin, the signalling molecule. The address: its shape. The matching door: the one receptor with a complementary binding site. Unlike the letter, insulin isn't carried inside; it binds at the cell surface."* Letter ↔ insulin, address ↔ its shape, door ↔ receptor binding site light together with link tags; **2 s silent hold** on the completed mapping before *"Unlike the letter"*; the creditworthy binding sentence follows. |
+| 4 positions ≠ spec | Shared `FluidMosaicMembrane` literal SHARED-SPECS slots; the close-up (Beats 5–7) re-anchored (receptor slots 8–9, carrier 10–11). |
+| 5 audio outlasts video | `work/brand_final.py` pads the picture (raw branded audio ended 29 ms after picture; 0.229 s clone of the last frame), audio untouched: **video ends 0.204 s after audio** (421.633 vs 421.429 s). |
+
+**Narration changes (the only ones):** Beat 5 hook sentences above (+ 2.0 s hold). **ElevenLabs** (account-wide):
+348,032 before / 348,032 after (counter lagged; 797 chars requested, one take; `qa/elevenlabs-usage.jsonl`).
+**Master** `4.1.4-cell-signalling.mp4` 410.4 s, 12,312 frames, sha256 `1261116ba18a78c3f4acbdf28b7cd560a500d6c4cbf54a8fd208c0fa0023f633`.
+**Branded** `4.1.4-branded.mp4` 421.633 s, sha256 `3cdae564f7e238a95718553805b6c07531409dbbebbec6cbf517b56242c323fb`, full decode 0
+errors (`qa/branded-verification.json`); `qa/branded-mid.jpg` looked at.
+**Verification** (`qa/verification.json`): ffprobe 410.4 · video ≥ audio (1.0 s) · decode 0 · cues 104/104 · AAC packets identical
+(19,192) · final word "respond." 3.24 s headroom · silent holds B5 hook 2 s, B7 read 4 s, B9 END 2 s all −91 dB · 8 boundaries ·
+marker audit every frame (E44 marked 2,125 frames, 0 mismatches) · label audit 0 violations · longest still 7.63 s ·
+text-only PASS (longest 0 s, 0 untagged). Encoded sheets (7) looked at: exocytosis opening visible in the whole cell and the
+close-up together; hook mapping held.
+**Render:** 15:26:46–16:00:56Z (Beat 6 re-rendered once: the per-frame audit stopped it at one frame where the syllabus
+line touched the capillary; line moved into the empty lower-left panel).
+
+---
+
+## v1 (run 008a) — superseded (details below)
 Model: claude-opus-5-5 (cloud run 008a). Branch `cloud/008-4.1.1-2-to-4.2.1a-dq9f0v`. 9 beats, 1 error beat (E44, Beat 7,
 COMMON MISTAKE), 99 cues.
 

@@ -1,33 +1,41 @@
 {
-  "1_ffprobeDuration": 391.3,
+  "1_ffprobeDuration": 410.4,
   "2_videoCoversAudio": {
-    "video": 391.3,
-    "encodedAudio": 390.3,
+    "video": 410.4,
+    "encodedAudio": 409.4,
     "marginSeconds": 1.0,
-    "videoFrames": 11739
+    "videoFrames": 12312
   },
   "3_fullDecodeErrors": 0,
   "4_cues": {
-    "matched": 99,
-    "total": 99,
-    "planned": 99
+    "matched": 104,
+    "total": 104,
+    "planned": 104
   },
   "5_audioPacketsUnchanged": {
-    "packets": 18297,
+    "packets": 19192,
     "identical": true
   },
   "6_finalWord": {
     "word": "respond.",
-    "endsAt": 387.06,
-    "audioEnds": 390.3,
+    "endsAt": 406.16,
+    "audioEnds": 409.4,
     "headroom": 3.24,
     "afterWordMaxDb": -20.3
   },
   "7_silentReads": [
     {
+      "beat": 5,
+      "before": "Unlike the letter",
+      "start": 186.723,
+      "seconds": 2.0,
+      "pcmAllZero": true,
+      "encodedInteriorMaxDb": -91.0
+    },
+    {
       "beat": 7,
       "before": "Look at the words",
-      "start": 241.943,
+      "start": 261.043,
       "seconds": 4.0,
       "pcmAllZero": true,
       "encodedInteriorMaxDb": -91.0
@@ -35,7 +43,7 @@
     {
       "beat": 9,
       "before": "END",
-      "start": 387.781,
+      "start": 406.881,
       "seconds": 2.0,
       "pcmAllZero": true,
       "encodedInteriorMaxDb": -91.0
@@ -46,9 +54,9 @@
   "8_boundaries": {
     "master": "/home/user/content-engine/work/4.1.4/4.1.4-cell-signalling.mp4",
     "timeline": "/home/user/content-engine/work/4.1.4/timeline.json",
-    "master_bytes": 62353249,
+    "master_bytes": 61498839,
     "fps": 30.0,
-    "frame_count": 11739,
+    "frame_count": 12312,
     "boundaries_tested": 8,
     "candidate_count": 0,
     "candidate_beats": [],
@@ -67,19 +75,19 @@
     "limits": "Candidates, not proof. Deliberate one-frame holds can match; identical layouts can hide a lookup error. Subtle/animated holds can evade thresholds. Requires unshifted CFR master."
   },
   "markerAudit": {
-    "framesChecked": 11739,
+    "framesChecked": 12312,
     "marked": 2125,
-    "unmarked": 9614,
+    "unmarked": 10187,
     "intervals": [
       {
         "beat": 7,
         "label": "COMMON MISTAKE",
-        "startFrame": 6769,
-        "endFrame": 8894,
-        "announceFrame": 6769,
-        "beatEndFrame": 8932,
+        "startFrame": 7342,
+        "endFrame": 9467,
+        "announceFrame": 7342,
+        "beatEndFrame": 9505,
         "clearKey": "exit",
-        "clearsOnFrame": 8894
+        "clearsOnFrame": 9467
       }
     ],
     "badgeTextMae": {
@@ -94,6 +102,59 @@
     "seconds": 7.633333333333334
   },
   "unchangedOver15s": [],
+  "labelAudit": {
+    "rule": "every text node >= 17 px after branding (x 950/1080), transforms included, no exemptions; no text/leader/geometry overlap; nothing off the content area",
+    "framesChecked": 12312,
+    "minEffectivePx": 17.59,
+    "violations": 0,
+    "beats": [
+      {
+        "beat": 1,
+        "frames": 1133,
+        "minEffectivePx": 17.59
+      },
+      {
+        "beat": 2,
+        "frames": 716,
+        "minEffectivePx": 17.59
+      },
+      {
+        "beat": 3,
+        "frames": 1196,
+        "minEffectivePx": 17.59
+      },
+      {
+        "beat": 4,
+        "frames": 1060,
+        "minEffectivePx": 17.59
+      },
+      {
+        "beat": 5,
+        "frames": 1976,
+        "minEffectivePx": 17.59
+      },
+      {
+        "beat": 6,
+        "frames": 1261,
+        "minEffectivePx": 17.59
+      },
+      {
+        "beat": 7,
+        "frames": 2163,
+        "minEffectivePx": 17.59
+      },
+      {
+        "beat": 8,
+        "frames": 1109,
+        "minEffectivePx": 17.59
+      },
+      {
+        "beat": 9,
+        "frames": 1698,
+        "minEffectivePx": 17.59
+      }
+    ]
+  },
   "valenceAudit": "not applicable: no covalent bond is made or broken on screen (Topic 4: membrane assembly, lateral drift and insertion are non-covalent motion)",
-  "sha256": "0168bbcc153ab490e9faedd1378273356cd24ab1453edc2c9d1ea6e4e965aa47"
+  "sha256": "1261116ba18a78c3f4acbdf28b7cd560a500d6c4cbf54a8fd208c0fa0023f633"
 }

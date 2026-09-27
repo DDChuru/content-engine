@@ -1,0 +1,30 @@
+{
+  "master": "4.1.4-cell-signalling.mp4",
+  "masterVideoDur": 410.4,
+  "raw": {
+    "videoStart": 0.0,
+    "videoDur": 421.4,
+    "videoEnd": 421.4,
+    "audioStart": 0.0,
+    "audioDur": 421.429,
+    "audioEnd": 421.429,
+    "videoFrames": 12642,
+    "formatDur": 421.429
+  },
+  "padSeconds": 0.229,
+  "final": {
+    "videoStart": 0.0,
+    "videoDur": 421.633333,
+    "videoEnd": 421.633333,
+    "audioStart": 0.0,
+    "audioDur": 421.429,
+    "audioEnd": 421.429,
+    "videoFrames": 12649,
+    "formatDur": 421.633333
+  },
+  "videoMinusAudioEnd": 0.204,
+  "brandedMinusMaster": 11.233,
+  "fullDecodeErrors": 0,
+  "sha256": "3cdae564f7e238a95718553805b6c07531409dbbebbec6cbf517b56242c323fb",
+  "audioPacketsFromRaw": "copied (-c:a copy): the audio stream is the branded audio unchanged"
+}

@@ -1,5 +1,7 @@
 # 4.1.4 Cell signalling: secretion, transport, binding · BUILD PROGRESS (handover)
 
+**008f (27 Sep 2026, 16:17Z): DONE — v2 rendered (12,312 frames, label audit 0 violations), verified, branded (video ends 0.204 s after audio), uploaded: Bunny `2aca389d-5b07-4072-a48d-c504b03b8ceb` status 4 at 16:16:25Z. Branch `cloud/008f-fix-4prnob`. See REPORT.md v2. Older status below is history.**
+
 Updated 2026-09-27 11:15Z. Builder: claude-opus-5-5 (cloud run 008a). Branch `cloud/008-4.1.1-2-to-4.2.1a-dq9f0v`; commit work/<code> + work/t4-shared only.
 **Phase: audio + timeline done; authoring beats** · **Beats complete: 0 / 9** · master: not yet built
 Live render processes: 8798 bash -c printf "%s\n" "$@" | xargs -P 4 -I{} sh -c "nice -n 10 \"\$NODE\" render-beat.cjs {} > logs/render-beat-{}.log 2>&1; rc=\$?; echo beat {} exit \$rc; exit \$rc" _ 1 2 3 4 5 6 7 8 9 10 11 12 13

@@ -18,3 +18,10 @@ as "twenty twenty three" by the cue model (the voice reads the year correctly; n
 ## Second opinion (medium, no prompt)
 Beats 8 and 10 (lowest-confidence words): Beat 8 reads word for word; Beat 10 reads word for word except "phospholipid
 B layer" for "phospholipid bilayer" (the small cue model hears "bilayer"; treated as a recogniser split of the frozen word). Accepted.
+
+## 008f — Beat 8 re-voiced (memory hook only)
+One take (731 chars requested). Transcript 118/118 words matched, the hook sentences read exactly: "Picture a doorway in a
+wall. The wall. The phospholipid bilayer, whose hydrophobic core turns ions back. The doorway. The channel protein's
+hydrophilic pore. An opening right through the wall." Low-confidence recogniser token: "pore" (0.48, at 51.9 s) — the recognised
+word and its position match the script ("the pore simply stays open"); a confidence-only flag. No request-only normalisation needed. The 2 s hold
+before "Written properly" is digital silence (insert_holds.py H[8]).
