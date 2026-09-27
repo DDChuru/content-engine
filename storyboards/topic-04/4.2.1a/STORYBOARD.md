@@ -357,11 +357,11 @@ Beat windows in the headings are provisional and follow the per-beat ledger (wor
 
 ## Datasets
 
-Every number in this lesson is **our illustrative counts** in a schematic model: no measured, supplied or calculated experimental quantity appears. Counts are crossings in one 5 s animation window; each dataset is built from a single crossing probability per token per window so that counts follow the numbers present. The only value on a scale is the **0 kPa** reference (MF3 wording), which is a defined reference value, not a measurement.
+Every number in this lesson is **our illustrative counts** in a schematic model: no measured, supplied or calculated experimental quantity appears. Counts are crossings in one 5 s animation window (the carrier demonstration: one 16 s window, Dataset 2); each dataset is built from a single crossing probability per token per window so that counts follow the numbers present. The only value on a scale is the **0 kPa** reference (MF3 wording), which is a defined reference value, not a measurement.
 
 ### Dataset 1 — `DiffusionField` `open`, oxygen (dissolved), 40 tokens (Beats 3, 4)
 
-Crossing probability per token per window p = 0.40.
+Crossing probability per token per window p = 0.40. These are selected illustrative counts; p × population supplies an expected-count illustration, not a guarantee of the exact count in a random sample.
 
 | window | left count at start | right count at start | left → right (p × left) | right → left (p × right) | net (left → right) | left after | right after |
 |---|---:|---:|---:|---:|---:|---:|---:|
@@ -369,18 +369,20 @@ Crossing probability per token per window p = 0.40.
 | 2 | 22 | 18 | 0.40 × 22 = 8.8 → **9** | 0.40 × 18 = 7.2 → **7** | 9 − 7 = 2 | 22 − 2 = 20 | 18 + 2 = 20 |
 | 3 | 20 | 20 | 0.40 × 20 = 8 | 0.40 × 20 = 8 | 0 | 20 | 20 |
 
-Window 2's counts are rounded to whole tokens (9 and 7), keeping the total at 40 (20 + 20). From window 3 on the counts run level (8 · 8) and the net arrow fades; motion continues.
+Window 2's counts are rounded to whole tokens (9 and 7), keeping the total at 40 (20 + 20). Window 3's counts run level (8 · 8) and the net arrow fades; motion continues. The windows are staged at their teaching cues; between them the counter holds as *last completed window*, and any continuing crossing is still counted (Counter convention).
 
 ### Dataset 2 — `DiffusionField` `membrane` scenes (Beats 5–9)
 
-| scene | tokens outside | tokens inside | p | outside → cytoplasm | cytoplasm → outside | net inward |
-|---|---:|---:|---:|---:|---:|---:|
-| O₂, simple diffusion (Beat 5) | 24 | 8 | 0.25 | 0.25 × 24 = 6 | 0.25 × 8 = 2 | 6 − 2 = 4 |
-| O₂, steeper gradient (Beat 6) | 32 | 8 | 0.25 | 0.25 × 32 = 8 | 0.25 × 8 = 2 | 8 − 2 = 6 |
-| ions, channel (Beat 8) | 20 | 5 | 0.40 | 0.40 × 20 = 8 | 0.40 × 5 = 2 | 8 − 2 = 6 |
-| glucose, carrier (Beat 9) | 15 | 5 | 0.20 | 0.20 × 15 = 3 | 0.20 × 5 = 1 | 3 − 1 = 2 |
+**Continuity contract.** Each membrane example is a separately set finite-particle demonstration, not a continuation of the previous example's populations. Show “new illustrative setup” while the existing membrane or particle scaffold stays visible and the tokens are reset. At the start, label each side's number “set starting count”; during the counted sequence update live side totals on every actual crossing. Do not add or delete tokens during that sequence. At its end, retain the final populations and display the completed counter as “last completed demonstration”. Any replay starts with an explicit labelled reset. Counts are scripted illustrative events, not experimental readings or predicted exact outcomes of a random simulation.
 
-The Beat 6 comparison: a steeper gradient (32 : 8 against 24 : 8) gives a larger net count per window (6 against 4), the direction of effect only. The higher-temperature, larger-area and shorter-distance rows of Beat 6 carry no numbers. In Beats 8 and 9 the counts are shown for one window only; the token populations are not depleted on screen (each window is illustrative, not a time course).
+| Demonstration | Set outside / inside | p | Inward (p × outside) / outward (p × inside) crossings | Net inward | End outside / inside | Animation window |
+|---|---:|---:|---:|---:|---:|---|
+| Beat 5 oxygen | 24 / 8 | 0.25 | 0.25 × 24 = 6 / 0.25 × 8 = 2 | 6 − 2 = 4 | 24 − 4 = **20** / 8 + 4 = **12** | 5 s |
+| Beat 6 oxygen, steeper initial gradient | 32 / 8 | 0.25 | 0.25 × 32 = 8 / 0.25 × 8 = 2 | 8 − 2 = 6 | 32 − 6 = **26** / 8 + 6 = **14** | 5 s |
+| Beat 8 ions | 20 / 5 | 0.40 | 0.40 × 20 = 8 / 0.40 × 5 = 2 | 8 − 2 = 6 | 20 − 6 = **14** / 5 + 6 = **11** | 5 s |
+| Beat 9 glucose | 15 / 5 | 0.20 | 0.20 × 15 = 3 / 0.20 × 5 = 1 | 3 − 1 = 2 | 15 − 2 = **13** / 5 + 2 = **7** | **16 s** (carrier exception) |
+
+Totals are conserved in every row (32, 40, 25, 20 tokens). The Beat 6 comparison: a steeper initial gradient (32 : 8 against 24 : 8), set up separately with the same area, temperature, membrane and 5 s window, gives a larger net count (6 against 4), the direction of effect only. The higher-temperature, larger-area and shorter-distance demonstrations of Beat 6 carry no numbers (baseline restored before each; *qualitative; not counted*). **Carrier exception:** four sequential carrier cycles at 0.6 + 0.8 + 0.5 + 0.8 = 2.7 s each need at least 4 × 2.7 = 10.8 s, so the glucose demonstration runs in a 16 s animation window (schedule in Beat 9 action 6: reverse cycle 0.0–2.7 s → 16 / 4; inward cycles ending 5.9, 9.4 and 12.9 s → 15 / 5, 14 / 6, 13 / 7), captioned *crossings in this 16 s illustrative demonstration; not comparable rates between transport routes*. This is animation time, not a biological transport rate. The first, slow carrier cycle in Beat 9 and the carrier cycles in Beats 10 and 14 are uncounted mechanism demonstrations (the latter two in a separate callout), so they do not change the counted populations.
 
 ### Dataset 3 — `WaterPotentialModel` (Beats 11, 12)
 
@@ -390,7 +392,7 @@ The Beat 6 comparison: a steeper gradient (32 : 8 against 24 : 8) gives a larger
 | `initial` / `net-osmosis` | 4 | 12 | 15 | 9 | 15 − 9 = 6, left → right | L above R (L less negative) |
 | `equalise` | 4 + 8 = 12 | 12 | 12 | 12 | 12 − 12 = 0 | L meets R |
 
-The water crossing counts are illustrative only; they are **not derived from water potentials** and no water-potential value other than the 0 kPa reference is shown. The markers' positions are unnumbered and show order only (L above R = left less negative = higher). Equal sucrose tokens in equal compartments, at the same temperature and pressure, is the equal-water-potential case. Compartment volumes are held fixed in the schematic (volume change is not modelled).
+The water crossing counts are illustrative only; they are **not derived from water potentials** and no water-potential value other than the 0 kPa reference is shown. The markers' positions are unnumbered and show order only (L above R = left less negative = higher). Equal sucrose tokens in equal compartments, at the same temperature and pressure, is the equal-water-potential case within this same-solute, equal-volume comparison only (not a universal cell rule; 4.2.6 shows equal water potentials without equal solute concentrations). Equality is reached by intervention (*we change the left solution*), not by water flow equalising two unchanged solutions. Compartment volumes are held fixed in the schematic (volume change is not modelled).
 
 ---
 
