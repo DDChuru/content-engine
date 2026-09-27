@@ -10,7 +10,7 @@ const rnd = (i: number, k: number) => { const v = Math.sin((i + 1) * 12.9898 + k
 const refl = (v: number, a: number, b: number) => { const w = b - a; if (w <= 0) return a; let m = (v - a) % (2 * w); if (m < 0) m += 2 * w; return a + (m > w ? 2 * w - m : m); };
 
 /** Positions of every water token at time t. regions: [[x0,y0,x1,y1], ...]; n: count per region (number or array). */
-export function waterTokens({regions, n = 30, seed = 1, t = 0, speed = 1, holes = [] as number[][]}: any) {
+export function waterTokens({regions, n = 30, seed = 1, t = 0, speed = 1, holes = [] as number[][], push = [] as number[][]}: any) {
   const toks: {x: number; y: number; i: number}[] = [];
   regions.forEach((R: number[], ri: number) => {
     const N = Array.isArray(n) ? n[ri] : n, cols = Math.max(1, Math.round(Math.sqrt((N * (R[2] - R[0])) / Math.max(1, R[3] - R[1]))));
@@ -23,7 +23,9 @@ export function waterTokens({regions, n = 30, seed = 1, t = 0, speed = 1, holes 
       const x = refl(bx + 26 * Math.sin(tt * (0.9 + rnd(i, 3)) + 6 * rnd(i, 4)) + 14 * Math.sin(tt * (2.1 + rnd(i, 5)) + 6 * rnd(i, 6)), R[0], R[2]);
       const y = refl(by + 20 * Math.sin(tt * (0.8 + rnd(i, 7)) + 6 * rnd(i, 8)) + 11 * Math.sin(tt * (2.3 + rnd(i, 9)) + 6 * rnd(i, 10)), R[1], R[3]);
       if (holes.some((h: number[]) => x > h[0] && x < h[2] && y > h[1] && y < h[3])) continue;
-      toks.push({x, y, i});
+      let yy = y;   // `push` rects: water excluded from a forming region is displaced to its nearer edge (no token inside)
+      for (const h of push) if (x > h[0] && x < h[2] && yy > h[1] && yy < h[3]) yy = yy - h[1] < h[3] - yy ? h[1] - 3 - 9 * rnd(i, 11) : h[3] + 3 + 9 * rnd(i, 11);
+      toks.push({x, y: yy, i});
     }
   });
   return toks;

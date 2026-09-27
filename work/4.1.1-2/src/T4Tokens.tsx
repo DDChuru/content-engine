@@ -64,7 +64,7 @@ export function ATPTag({x, y, text = 'ATP', w = 64, h = 30, opacity = 1, struck 
   return (
     <g data-role="drawing" opacity={op(opacity)}>
       <rect x={x - w / 2} y={y - h / 2} width={w} height={h} rx={h / 2} fill={struck ? '#E3DED3' : T4.atp} stroke={struck ? '#9A958B' : T4.atpEdge} strokeWidth={2} />
-      <text x={x} y={y + h * 0.24} fontSize={h * 0.62} fontWeight={700} fill={struck ? '#8A857B' : '#4A3608'} textAnchor="middle">{text}</text>
+      <text x={x} y={y + h * 0.24} fontSize={h * 0.62} fontWeight={700} fontFamily="'Stem4Life Source Sans 3', 'DejaVu Sans', sans-serif" fill={struck ? '#8A857B' : '#4A3608'} textAnchor="middle">{text}</text>
       {struck && <path d={`M${x - w / 2 - 4} ${y + h / 2 + 2}L${x + w / 2 + 4} ${y - h / 2 - 2}`} stroke="#6F6A60" strokeWidth={3} strokeLinecap="round" />}
     </g>
   );

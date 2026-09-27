@@ -1,0 +1,105 @@
+[
+  {
+    "beat": 1,
+    "sourceWords": 93,
+    "recognizerTokens": 93,
+    "matchedSourceTokens": 93,
+    "differences": []
+  },
+  {
+    "beat": 2,
+    "sourceWords": 53,
+    "recognizerTokens": 53,
+    "matchedSourceTokens": 53,
+    "differences": []
+  },
+  {
+    "beat": 3,
+    "sourceWords": 94,
+    "recognizerTokens": 94,
+    "matchedSourceTokens": 94,
+    "differences": []
+  },
+  {
+    "beat": 4,
+    "sourceWords": 110,
+    "recognizerTokens": 110,
+    "matchedSourceTokens": 110,
+    "differences": []
+  },
+  {
+    "beat": 5,
+    "sourceWords": 96,
+    "recognizerTokens": 96,
+    "matchedSourceTokens": 96,
+    "differences": []
+  },
+  {
+    "beat": 6,
+    "sourceWords": 101,
+    "recognizerTokens": 101,
+    "matchedSourceTokens": 101,
+    "differences": []
+  },
+  {
+    "beat": 7,
+    "sourceWords": 142,
+    "recognizerTokens": 144,
+    "matchedSourceTokens": 141,
+    "differences": [
+      {
+        "op": "replace",
+        "script": "2022",
+        "heard": "twenty twenty two"
+      }
+    ]
+  },
+  {
+    "beat": 8,
+    "sourceWords": 97,
+    "recognizerTokens": 97,
+    "matchedSourceTokens": 96,
+    "differences": [
+      {
+        "op": "replace",
+        "script": "too",
+        "heard": "to"
+      }
+    ]
+  },
+  {
+    "beat": 9,
+    "sourceWords": 81,
+    "recognizerTokens": 81,
+    "matchedSourceTokens": 81,
+    "differences": []
+  },
+  {
+    "beat": 10,
+    "sourceWords": 95,
+    "recognizerTokens": 95,
+    "matchedSourceTokens": 95,
+    "differences": []
+  },
+  {
+    "beat": 11,
+    "sourceWords": 68,
+    "recognizerTokens": 68,
+    "matchedSourceTokens": 68,
+    "differences": []
+  },
+  {
+    "beat": 12,
+    "sourceWords": 72,
+    "recognizerTokens": 72,
+    "matchedSourceTokens": 72,
+    "differences": []
+  },
+  {
+    "beat": 13,
+    "sourceWords": 103,
+    "recognizerTokens": 103,
+    "matchedSourceTokens": 103,
+    "differences": []
+  }
+]

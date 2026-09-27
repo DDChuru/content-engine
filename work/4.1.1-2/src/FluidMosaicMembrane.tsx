@@ -9,7 +9,7 @@
  * the outer and inner leaflets always meet the proteins at the same x. With no components the section is 12 slots
  * wide (bilayer only); `full` is 21 slots. Components enter by drifting sideways from the section's edge while the
  * phospholipids part to make room (`show` progress 0..1) — never across the core, never between leaflets.
- * States: assemble (`assemble` 0..1 with `scatter` 0..1), full (default `show`), highlight:<id> (`highlight` + `hl`).
+ * States: assemble (`assemble` 0..1 with `scatter` 0..1; `keep` = token indices already in place), full (default `show`), highlight:<id> (`highlight` + `hl`).
  * Motion contract: phospholipids jitter and drift sideways (≤ 1 token width per 2 s; here ≤ 0.16u/s); proteins drift
  * more slowly; nothing crosses between leaflets; carbohydrate chains stay on the external (top) face. */
 import React from 'react';
@@ -75,8 +75,8 @@ export function fmmLayout({cx = 960, cy = 560, u = 58, show = FULL}: any) {
 
 /** Lateral drift (spatially correlated so neighbours move together) + jiggle, px. */
 function wobble(t: number, i: number, x0: number, u: number, amt: number, jig: number, slow = 1) {
-  const drift = u * amt * slow * (0.22 * Math.sin(0.55 * t + x0 * 0.013) + 0.1 * Math.sin(0.31 * t + 1.3 + x0 * 0.021));
-  const jx = u * jig * (0.045 * Math.sin(t * 5.1 + i * 2.3) + 0.025 * Math.sin(t * 7.7 + i * 1.1));
+  const drift = u * amt * slow * (0.22 * Math.sin(0.55 * t + x0 * 0.0035) + 0.1 * Math.sin(0.31 * t + 1.3 + x0 * 0.0055));
+  const jx = u * jig * (0.035 * Math.sin(t * 5.1 + i * 2.3) + 0.02 * Math.sin(t * 7.7 + i * 1.1));
   const jy = u * jig * 0.03 * Math.sin(t * 6.3 + i * 1.7);
   const ja = jig * 3.2 * Math.sin(t * 4.3 + i * 0.9);
   return {dx: drift + jx, dy: jy, da: ja};
@@ -180,7 +180,7 @@ export function scatterPose(i: number, field: number[], t: number) {
 export function FluidMosaicMembrane(props: any) {
   const {cx = 960, cy = 560, u = 58, t = 0, show = FULL, chains = {}, highlight = null, hl = 0, carrierPhase = 0,
     drift = 1, jitter = 1, opacity = 1, tracer = -1, tracerTint = 0, assemble = 1, scatter = 1, field = [220, 260, 1700, 860],
-    rBands = 0, rBandsOn = null, poreWater = false, compDim = {}, dimLipids = 0, hideComp = {}, entryFrom = null} = props;
+    rBands = 0, rBandsOn = null, poreWater = false, compDim = {}, dimLipids = 0, hideComp = {}, entryFrom = null, keep = [], plShift = {}, compShift = {}} = props;
   if (opacity <= 0) return null;
   const sh = {...FULL, ...show};
   const Lf = fmmLayout({cx, cy, u, show: sh});
@@ -196,9 +196,10 @@ export function FluidMosaicMembrane(props: any) {
   if (assemble < 1) {
     const toks: any[] = [];
     for (const [arr, isOut] of [[L0.outer, true], [L0.inner, false]] as any) for (const it of arr) {
+      if (it.kind !== 'pl') continue;   // component slots are empty (width 0) in the bilayer-only layout
       const i = it.idx + (isOut ? 0 : 12), st = scatterPose(i, field, t);
       const edge = {x: st.x + (st.x < cx ? -900 : 900), y: st.y};
-      const sc = ease(clamp01(scatter * 1.25 - (i % 5) * 0.06));
+      const sc = keep.includes(i) ? 1 : ease(clamp01(scatter * 1.25 - (i % 5) * 0.06));
       const sx = edge.x + (st.x - edge.x) * sc, sy = st.y;
       const d = ((i * 7) % 24) / 24 * 0.35, q = ease(clamp01((assemble - d) / 0.65));
       const w = wobble(t, i, it.x, u, 0, jitter);
@@ -214,8 +215,8 @@ export function FluidMosaicMembrane(props: any) {
   for (const [arr, isOut] of [[Lf.outer, true], [Lf.inner, false]] as any) for (const it of arr) {
     const i = it.idx + (isOut ? 0 : 12);
     if (it.kind === 'pl') {
-      const w = wobble(t, i, it.x, u, drift, jitter);
-      out.push(<PhospholipidToken key={'p' + i} x={it.x + w.dx} y={(isOut ? Lf.outerHead : Lf.innerHead) + w.dy} u={u} angle={isOut ? w.da : 180 + w.da} opacity={dimOf('lipid')} tint={i === tracer ? tracerTint : 0} />);
+      const w = wobble(t, i, it.x, u, drift, jitter), ps = (plShift as any)[i] || {dx: 0, o: 1};   // plShift: lateral swap (units u; o < 1 while passing behind a neighbour)
+      out.push(<PhospholipidToken key={'p' + i} x={it.x + w.dx + ps.dx * u} y={(isOut ? Lf.outerHead : Lf.innerHead) + w.dy} u={u} angle={isOut ? w.da : 180 + w.da} opacity={dimOf('lipid') * (ps.o ?? 1)} tint={i === tracer ? tracerTint : 0} />);
     }
   }
   // ---- cholesterol (among the lipids) ----
@@ -238,7 +239,7 @@ export function FluidMosaicMembrane(props: any) {
   PROT_KEYS.forEach((k, i) => {
     const c = Lf.comps[k];
     if (!c || c.p <= 0 || (hideComp as any)[COMP_OF[k]]) return;
-    const e = entry(k, c.x), w = pw(k, i), x = e.x + w.dx, y = cy + w.dy * 0.5, id = COMP_OF[k], o = e.o * dimOf(id);
+    const e = entry(k, c.x), w = pw(k, i), x = e.x + w.dx + ((compShift as any)[k] ?? 0) * u, y = cy + w.dy * 0.5, id = COMP_OF[k], o = e.o * dimOf(id);
     if (k === 'channel') out.push(<ChannelProtein key={k} x={x} y={y} u={u} opacity={o} hl={hlOf(id)} poreWater={poreWater} />);
     if (k === 'carrier') out.push(<CarrierProtein key={k} x={x} y={y} u={u} phase={carrierPhase} opacity={o} hl={hlOf(id)} />);
     if (k === 'receptor') out.push(<g key={k} opacity={o < 1 ? o : undefined}><ReceptorProtein x={x} y={y} u={u} hl={hlOf(id)} /><BeadChain x={x + 0.62 * u} y={y - PROT.H * u} u={u} n={3} t={t} reveal={ch.receptor} hl={hlOf(id)} /></g>);
@@ -247,7 +248,7 @@ export function FluidMosaicMembrane(props: any) {
       const hw = (k === 'glycoprotein' ? 0.43 : PROT.W / 2) * u + 3, mid = 1.55 * u, H = PROT.H * u;
       const midP = clamp01(rBands * 2), outP = clamp01(rBands * 2 - 1);
       out.push(<g key={'rb' + k} data-role="decor" opacity={o < 1 ? o : undefined}>
-        {midP > 0 && <rect x={x - hw} y={y - mid} width={2 * hw} height={2 * mid} rx={6} fill="#4F6F73" opacity={0.42 * midP} />}
+        {midP > 0 && <rect x={x - hw} y={y - mid} width={2 * hw} height={2 * mid} rx={6} fill="#4F6F73" opacity={0.3 * midP} />}
         {outP > 0 && <rect x={x - hw} y={y - H - 3} width={2 * hw} height={H - mid - 0.45 * u} rx={8} fill="#FFFFFF" opacity={0.5 * outP} />}
         {outP > 0 && <rect x={x - hw} y={y + mid + 0.45 * u} width={2 * hw} height={H - mid - 0.45 * u + 3} rx={8} fill="#FFFFFF" opacity={0.5 * outP} />}
       </g>);

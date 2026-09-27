@@ -1,0 +1,29 @@
+{
+  "id": 13,
+  "words": 103,
+  "seconds": 48.579229166666664,
+  "samples": 2331803,
+  "wpm": 132.6771634173494,
+  "voice_id": "BcpjRWrYhDBHmOnetmBl",
+  "model_id": "eleven_multilingual_v2",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 1.0
+  },
+  "sample_rate": 48000,
+  "time_stretched": false,
+  "requestDiffers": false,
+  "mp3_sha256": "18139fbee933173a006e0f4d3bef6142542b267b50b59d620092a07169f920ef",
+  "originalSeconds": 46.579229166666664,
+  "holds": [
+    {
+      "atSample": 2235803,
+      "samples": 96000,
+      "seconds": 2.0,
+      "before": "END"
+    }
+  ]
+}
