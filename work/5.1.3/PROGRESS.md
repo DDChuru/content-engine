@@ -1,11 +1,8 @@
 # 5.1.3 The mitotic cell cycle · BUILD PROGRESS (handover)
 
-Updated 2026-09-27 11:35Z. Builder: cloud run 009a (claude-opus-5-5). Branch `cloud/009-5.1.1-to-5.1.4-qls6vy`; commit only work/5.1.x and work/t5-shared.
-**Phase: master verified, branded, uploaded (guid 8d2edf6f-e5d3-4f2d-81df-177cb2f4ae00); polling for status 4, then REPORT** · **Beats complete: 14 / 14** · master: present
-Live render processes: 11586 bash -c printf "%s\n" "$@" | xargs -P 4 -I{} sh -c "nice -n 10 \"\$NODE\" render-beat.cjs {} > logs/render-beat-{}.log 2>&1; rc=\$?; echo beat {} exit \$rc; exit \$rc" _ 1 2 3 4
-11588 xargs -P 4 -I{} sh -c nice -n 10 "$NODE" render-beat.cjs {} > logs/render-beat-{}.log 2>&1; rc=$?; echo beat {} exit $rc; exit $rc
-11590 sh -c nice -n 10 "$NODE" render-beat.cjs 2 > logs/render-beat-2.log 2>&1; rc=$?; echo beat 2 exit $rc; exit $rc
-11594 node render-beat.cjs 2
+Updated 2026-09-27 11:40Z. Builder: cloud run 009a (claude-opus-5-5). Branch `cloud/009-5.1.1-to-5.1.4-qls6vy`; commit only work/5.1.x and work/t5-shared.
+**Phase: DONE — REPORT.md written after Bunny status 4 (guid 8d2edf6f-e5d3-4f2d-81df-177cb2f4ae00)** · **Beats complete: 14 / 14** · master: present
+Live render processes: none
 NOTE: render-cache/ (chunks) and all MP4/WAV are NOT in git — a fresh container must re-render approved beats
 (`./launch-render.sh N`, 4 at a time); approvals (qa/beat-NN/approved.json) ARE in git and stay valid while the
 source fingerprint matches.
@@ -27,8 +24,3 @@ source fingerprint matches.
 | 13 | What I told you, on the wheel and the graph · 7:42–8:12 | 863 | 11 | COMPLETE |
 | 14 | How it is asked, and the reject card · 8:12–8:55.5 | 1300 | 12 | COMPLETE |
 
-
-## Decisions
-- Audio: no normalisation; beat 14 retaken; qa/audio-review.md.
-- Error beats 10 and 12: EXAM CONTRAST (marker audit passes every frame).
-- CellCycleWheel: two inset fixes during this lesson (decondensing daughter scale); 5.1.1 keeps its earlier copy (not used there).

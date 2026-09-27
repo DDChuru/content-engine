@@ -1,0 +1,80 @@
+{
+  "1_ffprobeDuration": 245.966667,
+  "2_videoCoversAudio": {
+    "video": 245.966667,
+    "encodedAudio": 244.966,
+    "marginSeconds": 1.001,
+    "videoFrames": 7379
+  },
+  "3_fullDecodeErrors": 0,
+  "4_cues": {
+    "matched": 77,
+    "total": 77,
+    "planned": 77
+  },
+  "5_audioPacketsUnchanged": {
+    "packets": 11484,
+    "identical": true
+  },
+  "6_finalWord": {
+    "word": "intact.",
+    "endsAt": 241.807,
+    "audioEnds": 244.966,
+    "headroom": 3.159,
+    "afterWordMaxDb": -23.3
+  },
+  "7_silentReads": [
+    {
+      "beat": 8,
+      "before": "END",
+      "start": 242.465,
+      "seconds": 2.0,
+      "pcmAllZero": true,
+      "encodedInteriorMaxDb": -91.0
+    }
+  ],
+  "7_speechPCMUnchanged": true,
+  "frozenNarration": "storyboard paragraphs present verbatim; requests differ only by the recorded request-only normalisations: ",
+  "8_boundaries": {
+    "master": "/home/user/content-engine/work/5.1.4/5.1.4-telomeres.mp4",
+    "timeline": "/home/user/content-engine/work/5.1.4/timeline.json",
+    "master_bytes": 12191328,
+    "fps": 30.0,
+    "frame_count": 7379,
+    "boundaries_tested": 7,
+    "candidate_count": 0,
+    "candidate_beats": [],
+    "method": "RGB 640x360 area downsample; last/first near-match, then material abrupt jump",
+    "thresholds": {
+      "near_mae_max": 0.8,
+      "near_changed_fraction_max": 0.005,
+      "changed_pixel_threshold": 12,
+      "jump_mae_min": 1,
+      "jump_changed_fraction_min": 0.005,
+      "jump_tile_mae_min": 8,
+      "jump_ratio_min": 5,
+      "noise_floor": 0.05,
+      "post_jump_stable_mae_max": "max(0.8, 0.45 * jump_mae)"
+    },
+    "limits": "Candidates, not proof. Deliberate one-frame holds can match; identical layouts can hide a lookup error. Subtle/animated holds can evade thresholds. Requires unshifted CFR master."
+  },
+  "markerAudit": {
+    "framesChecked": 7379,
+    "marked": 0,
+    "unmarked": 7379,
+    "intervals": [],
+    "badgeTextMae": {
+      "commonMaeMax": 0.0,
+      "examMaeMin": 1000000000.0
+    },
+    "mismatches": 0
+  },
+  "longestUnchangedVisual": {
+    "beat": 2,
+    "startFrame": 884,
+    "seconds": 7.0
+  },
+  "unchangedOver15s": [],
+  "valenceAudit": "not applicable: no covalent chemistry in Topic 5 (copying drawn as schematic growth; no bond edits)",
+  "sha256": "d42dadc6d66109a91e2cffc54c12a1284a49854fa828eaa662b26ac4140b79fd"
+}

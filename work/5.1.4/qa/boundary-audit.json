@@ -1,0 +1,235 @@
+{
+  "master": "/home/user/content-engine/work/5.1.4/5.1.4-telomeres.mp4",
+  "timeline": "/home/user/content-engine/work/5.1.4/timeline.json",
+  "master_bytes": 12191328,
+  "fps": 30.0,
+  "frame_count": 7379,
+  "boundaries_tested": 7,
+  "candidate_count": 0,
+  "candidate_beats": [],
+  "method": "RGB 640x360 area downsample; last/first near-match, then material abrupt jump",
+  "thresholds": {
+    "near_mae_max": 0.8,
+    "near_changed_fraction_max": 0.005,
+    "changed_pixel_threshold": 12,
+    "jump_mae_min": 1,
+    "jump_changed_fraction_min": 0.005,
+    "jump_tile_mae_min": 8,
+    "jump_ratio_min": 5,
+    "noise_floor": 0.05,
+    "post_jump_stable_mae_max": "max(0.8, 0.45 * jump_mae)"
+  },
+  "limits": "Candidates, not proof. Deliberate one-frame holds can match; identical layouts can hide a lookup error. Subtle/animated holds can evade thresholds. Requires unshifted CFR master.",
+  "boundaries": [
+    {
+      "beat": 2,
+      "previous_beat": 1,
+      "frame": 854,
+      "time_seconds": 28.466666666666665,
+      "candidate": false,
+      "settles_after_jump": true,
+      "metrics": {
+        "prior_motion": {
+          "mae": 0.0,
+          "changed_fraction": 0.0,
+          "max_tile_mae": 0.0
+        },
+        "last_to_first": {
+          "mae": 6.993333339691162,
+          "changed_fraction": 0.10740017361111111,
+          "max_tile_mae": 36.36689758300781
+        },
+        "first_to_second": {
+          "mae": 0.10927951335906982,
+          "changed_fraction": 0.001935763888888889,
+          "max_tile_mae": 4.572048664093018
+        },
+        "second_to_third": {
+          "mae": 0.21942999958992004,
+          "changed_fraction": 0.003845486111111111,
+          "max_tile_mae": 8.9620943069458
+        }
+      }
+    },
+    {
+      "beat": 3,
+      "previous_beat": 2,
+      "frame": 1754,
+      "time_seconds": 58.46666666666667,
+      "candidate": false,
+      "settles_after_jump": true,
+      "metrics": {
+        "prior_motion": {
+          "mae": 0.0,
+          "changed_fraction": 0.0,
+          "max_tile_mae": 0.0
+        },
+        "last_to_first": {
+          "mae": 184.51416015625,
+          "changed_fraction": 0.9967230902777777,
+          "max_tile_mae": 200.984375
+        },
+        "first_to_second": {
+          "mae": 0.03166377544403076,
+          "changed_fraction": 0.0006857638888888889,
+          "max_tile_mae": 1.1815682649612427
+        },
+        "second_to_third": {
+          "mae": 0.03191261366009712,
+          "changed_fraction": 0.0006727430555555556,
+          "max_tile_mae": 1.1728878021240234
+        }
+      }
+    },
+    {
+      "beat": 4,
+      "previous_beat": 3,
+      "frame": 2243,
+      "time_seconds": 74.76666666666667,
+      "candidate": false,
+      "settles_after_jump": true,
+      "metrics": {
+        "prior_motion": {
+          "mae": 0.0,
+          "changed_fraction": 0.0,
+          "max_tile_mae": 0.0
+        },
+        "last_to_first": {
+          "mae": 182.98379516601562,
+          "changed_fraction": 0.9957335069444444,
+          "max_tile_mae": 189.00926208496094
+        },
+        "first_to_second": {
+          "mae": 0.005509259644895792,
+          "changed_fraction": 6.076388888888889e-05,
+          "max_tile_mae": 0.2747395932674408
+        },
+        "second_to_third": {
+          "mae": 0.001977719832211733,
+          "changed_fraction": 2.604166666666667e-05,
+          "max_tile_mae": 0.1384548544883728
+        }
+      }
+    },
+    {
+      "beat": 5,
+      "previous_beat": 4,
+      "frame": 3114,
+      "time_seconds": 103.8,
+      "candidate": false,
+      "settles_after_jump": true,
+      "metrics": {
+        "prior_motion": {
+          "mae": 0.0,
+          "changed_fraction": 0.0,
+          "max_tile_mae": 0.0
+        },
+        "last_to_first": {
+          "mae": 2.2990798950195312,
+          "changed_fraction": 0.027096354166666666,
+          "max_tile_mae": 26.50621795654297
+        },
+        "first_to_second": {
+          "mae": 0.005227141547948122,
+          "changed_fraction": 3.0381944444444444e-05,
+          "max_tile_mae": 0.053096067160367966
+        },
+        "second_to_third": {
+          "mae": 0.0009924768237397075,
+          "changed_fraction": 0.0,
+          "max_tile_mae": 0.0247395858168602
+        }
+      }
+    },
+    {
+      "beat": 6,
+      "previous_beat": 5,
+      "frame": 4110,
+      "time_seconds": 137.0,
+      "candidate": false,
+      "settles_after_jump": true,
+      "metrics": {
+        "prior_motion": {
+          "mae": 0.0,
+          "changed_fraction": 0.0,
+          "max_tile_mae": 0.0
+        },
+        "last_to_first": {
+          "mae": 5.210885524749756,
+          "changed_fraction": 0.09114583333333333,
+          "max_tile_mae": 50.97062683105469
+        },
+        "first_to_second": {
+          "mae": 0.006303530186414719,
+          "changed_fraction": 1.3020833333333334e-05,
+          "max_tile_mae": 0.05671296641230583
+        },
+        "second_to_third": {
+          "mae": 0.0007537616183981299,
+          "changed_fraction": 0.0,
+          "max_tile_mae": 0.04311342537403107
+        }
+      }
+    },
+    {
+      "beat": 7,
+      "previous_beat": 6,
+      "frame": 5332,
+      "time_seconds": 177.73333333333332,
+      "candidate": false,
+      "settles_after_jump": true,
+      "metrics": {
+        "prior_motion": {
+          "mae": 0.0,
+          "changed_fraction": 0.0,
+          "max_tile_mae": 0.0
+        },
+        "last_to_first": {
+          "mae": 8.897337913513184,
+          "changed_fraction": 0.1211501736111111,
+          "max_tile_mae": 47.23075866699219
+        },
+        "first_to_second": {
+          "mae": 0.01171875,
+          "changed_fraction": 4.340277777777778e-06,
+          "max_tile_mae": 0.109375
+        },
+        "second_to_third": {
+          "mae": 0.0019169561564922333,
+          "changed_fraction": 0.0,
+          "max_tile_mae": 0.0403645820915699
+        }
+      }
+    },
+    {
+      "beat": 8,
+      "previous_beat": 7,
+      "frame": 6119,
+      "time_seconds": 203.96666666666667,
+      "candidate": false,
+      "settles_after_jump": true,
+      "metrics": {
+        "prior_motion": {
+          "mae": 0.0,
+          "changed_fraction": 0.0,
+          "max_tile_mae": 0.0
+        },
+        "last_to_first": {
+          "mae": 8.052410125732422,
+          "changed_fraction": 0.1359982638888889,
+          "max_tile_mae": 50.95182418823242
+        },
+        "first_to_second": {
+          "mae": 0.004969618283212185,
+          "changed_fraction": 8.246527777777778e-05,
+          "max_tile_mae": 0.10879629850387573
+        },
+        "second_to_third": {
+          "mae": 0.0006973379640839994,
+          "changed_fraction": 0.0,
+          "max_tile_mae": 0.018373843282461166
+        }
+      }
+    }
+  ]
+}
