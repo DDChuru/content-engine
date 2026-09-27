@@ -34,7 +34,7 @@ export default function Beat10(s: any) {
   const c1 = fi(a('fix') - 0.8, 0.4) * (1 - done), c2 = fi(a('last'), 0.4) * (1 - done);
   const final = ['Glucose is polar (hydrophilic), so it does not', 'cross the hydrophobic core of the phospholipid', 'bilayer readily; it needs a transport protein,', 'such as a carrier protein.'];
   const Q = 'R23 p.12, June 2023 P21 Q3(a):\n“Most incorrect answers stated that glucose was too large.”';
-  const qy = 668, qs = quoteSpan(X + 20, qy, Q, 1, 6, 23, 19);
+  const qy = 690, qs = quoteSpan(X + 20, qy, Q, 1, 6, 23, 19);
   const replay = a('exit') - 0.6;
   const cyc = replay >= 0 ? carrierCycle(replay % 3.2) : null;
   const mxy = [860, 330];

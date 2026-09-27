@@ -1,0 +1,415 @@
+{
+  "master": "/home/user/content-engine/work/4.2.1a/4.2.1a-passive-transport.mp4",
+  "timeline": "/home/user/content-engine/work/4.2.1a/timeline.json",
+  "master_bytes": 234468656,
+  "fps": 30.0,
+  "frame_count": 19246,
+  "boundaries_tested": 13,
+  "candidate_count": 0,
+  "candidate_beats": [],
+  "method": "RGB 640x360 area downsample; last/first near-match, then material abrupt jump",
+  "thresholds": {
+    "near_mae_max": 0.8,
+    "near_changed_fraction_max": 0.005,
+    "changed_pixel_threshold": 12,
+    "jump_mae_min": 1,
+    "jump_changed_fraction_min": 0.005,
+    "jump_tile_mae_min": 8,
+    "jump_ratio_min": 5,
+    "noise_floor": 0.05,
+    "post_jump_stable_mae_max": "max(0.8, 0.45 * jump_mae)"
+  },
+  "limits": "Candidates, not proof. Deliberate one-frame holds can match; identical layouts can hide a lookup error. Subtle/animated holds can evade thresholds. Requires unshifted CFR master.",
+  "boundaries": [
+    {
+      "beat": 2,
+      "previous_beat": 1,
+      "frame": 1283,
+      "time_seconds": 42.766666666666666,
+      "candidate": false,
+      "settles_after_jump": true,
+      "metrics": {
+        "prior_motion": {
+          "mae": 0.3424088656902313,
+          "changed_fraction": 0.009431423611111111,
+          "max_tile_mae": 2.4774301052093506
+        },
+        "last_to_first": {
+          "mae": 180.34107971191406,
+          "changed_fraction": 0.9979166666666667,
+          "max_tile_mae": 193.6012725830078
+        },
+        "first_to_second": {
+          "mae": 0.014677372761070728,
+          "changed_fraction": 0.0,
+          "max_tile_mae": 0.7446469664573669
+        },
+        "second_to_third": {
+          "mae": 0.012233794666826725,
+          "changed_fraction": 4.340277777777778e-06,
+          "max_tile_mae": 0.6656539440155029
+        }
+      }
+    },
+    {
+      "beat": 3,
+      "previous_beat": 2,
+      "frame": 1930,
+      "time_seconds": 64.33333333333333,
+      "candidate": false,
+      "settles_after_jump": true,
+      "metrics": {
+        "prior_motion": {
+          "mae": 0.0,
+          "changed_fraction": 0.0,
+          "max_tile_mae": 0.0
+        },
+        "last_to_first": {
+          "mae": 184.61550903320312,
+          "changed_fraction": 0.9965364583333334,
+          "max_tile_mae": 191.8383026123047
+        },
+        "first_to_second": {
+          "mae": 0.09746527671813965,
+          "changed_fraction": 0.0026475694444444446,
+          "max_tile_mae": 0.8090277910232544
+        },
+        "second_to_third": {
+          "mae": 0.09690538048744202,
+          "changed_fraction": 0.002634548611111111,
+          "max_tile_mae": 0.8107638359069824
+        }
+      }
+    },
+    {
+      "beat": 4,
+      "previous_beat": 3,
+      "frame": 3270,
+      "time_seconds": 109.0,
+      "candidate": false,
+      "settles_after_jump": true,
+      "metrics": {
+        "prior_motion": {
+          "mae": 0.47865164279937744,
+          "changed_fraction": 0.010203993055555555,
+          "max_tile_mae": 4.510995388031006
+        },
+        "last_to_first": {
+          "mae": 4.174952030181885,
+          "changed_fraction": 0.10875434027777778,
+          "max_tile_mae": 36.795284271240234
+        },
+        "first_to_second": {
+          "mae": 0.4973263740539551,
+          "changed_fraction": 0.010451388888888889,
+          "max_tile_mae": 4.788628101348877
+        },
+        "second_to_third": {
+          "mae": 0.49688661098480225,
+          "changed_fraction": 0.010598958333333333,
+          "max_tile_mae": 4.747829914093018
+        }
+      }
+    },
+    {
+      "beat": 5,
+      "previous_beat": 4,
+      "frame": 4670,
+      "time_seconds": 155.66666666666666,
+      "candidate": false,
+      "settles_after_jump": false,
+      "metrics": {
+        "prior_motion": {
+          "mae": 0.2141362875699997,
+          "changed_fraction": 0.004457465277777778,
+          "max_tile_mae": 1.7278646230697632
+        },
+        "last_to_first": {
+          "mae": 1.8458216190338135,
+          "changed_fraction": 0.022981770833333335,
+          "max_tile_mae": 17.985387802124023
+        },
+        "first_to_second": {
+          "mae": 1.3727387189865112,
+          "changed_fraction": 0.031011284722222223,
+          "max_tile_mae": 15.911602020263672
+        },
+        "second_to_third": {
+          "mae": 2.6894822120666504,
+          "changed_fraction": 0.0528515625,
+          "max_tile_mae": 28.591291427612305
+        }
+      }
+    },
+    {
+      "beat": 6,
+      "previous_beat": 5,
+      "frame": 6061,
+      "time_seconds": 202.03333333333333,
+      "candidate": false,
+      "settles_after_jump": true,
+      "metrics": {
+        "prior_motion": {
+          "mae": 0.5187384486198425,
+          "changed_fraction": 0.010794270833333333,
+          "max_tile_mae": 6.119791507720947
+        },
+        "last_to_first": {
+          "mae": 3.0168228149414062,
+          "changed_fraction": 0.03928385416666667,
+          "max_tile_mae": 40.42042541503906
+        },
+        "first_to_second": {
+          "mae": 0.7148061990737915,
+          "changed_fraction": 0.011692708333333333,
+          "max_tile_mae": 6.37644624710083
+        },
+        "second_to_third": {
+          "mae": 0.7958130836486816,
+          "changed_fraction": 0.012213541666666666,
+          "max_tile_mae": 6.450231552124023
+        }
+      }
+    },
+    {
+      "beat": 7,
+      "previous_beat": 6,
+      "frame": 7314,
+      "time_seconds": 243.8,
+      "candidate": false,
+      "settles_after_jump": true,
+      "metrics": {
+        "prior_motion": {
+          "mae": 0.5600650906562805,
+          "changed_fraction": 0.011115451388888888,
+          "max_tile_mae": 4.561052322387695
+        },
+        "last_to_first": {
+          "mae": 3.0713512897491455,
+          "changed_fraction": 0.0366015625,
+          "max_tile_mae": 23.040363311767578
+        },
+        "first_to_second": {
+          "mae": 0.6134288311004639,
+          "changed_fraction": 0.011358506944444444,
+          "max_tile_mae": 4.3673319816589355
+        },
+        "second_to_third": {
+          "mae": 0.6227083206176758,
+          "changed_fraction": 0.011727430555555555,
+          "max_tile_mae": 4.625289440155029
+        }
+      }
+    },
+    {
+      "beat": 8,
+      "previous_beat": 7,
+      "frame": 8614,
+      "time_seconds": 287.1333333333333,
+      "candidate": false,
+      "settles_after_jump": true,
+      "metrics": {
+        "prior_motion": {
+          "mae": 0.5051968097686768,
+          "changed_fraction": 0.011979166666666667,
+          "max_tile_mae": 3.9490747451782227
+        },
+        "last_to_first": {
+          "mae": 5.274660587310791,
+          "changed_fraction": 0.07177517361111112,
+          "max_tile_mae": 28.169851303100586
+        },
+        "first_to_second": {
+          "mae": 0.4534606337547302,
+          "changed_fraction": 0.010169270833333334,
+          "max_tile_mae": 4.1678242683410645
+        },
+        "second_to_third": {
+          "mae": 0.45709922909736633,
+          "changed_fraction": 0.01015625,
+          "max_tile_mae": 4.233796119689941
+        }
+      }
+    },
+    {
+      "beat": 9,
+      "previous_beat": 8,
+      "frame": 10000,
+      "time_seconds": 333.3333333333333,
+      "candidate": false,
+      "settles_after_jump": true,
+      "metrics": {
+        "prior_motion": {
+          "mae": 0.4082074761390686,
+          "changed_fraction": 0.008068576388888889,
+          "max_tile_mae": 3.475694179534912
+        },
+        "last_to_first": {
+          "mae": 6.788055419921875,
+          "changed_fraction": 0.10221354166666667,
+          "max_tile_mae": 31.474971771240234
+        },
+        "first_to_second": {
+          "mae": 0.41420719027519226,
+          "changed_fraction": 0.009110243055555555,
+          "max_tile_mae": 2.9943575859069824
+        },
+        "second_to_third": {
+          "mae": 0.4233463406562805,
+          "changed_fraction": 0.00921875,
+          "max_tile_mae": 3.0302376747131348
+        }
+      }
+    },
+    {
+      "beat": 10,
+      "previous_beat": 9,
+      "frame": 11403,
+      "time_seconds": 380.1,
+      "candidate": false,
+      "settles_after_jump": true,
+      "metrics": {
+        "prior_motion": {
+          "mae": 0.3993605077266693,
+          "changed_fraction": 0.009153645833333333,
+          "max_tile_mae": 3.167968511581421
+        },
+        "last_to_first": {
+          "mae": 21.399368286132812,
+          "changed_fraction": 0.5679991319444444,
+          "max_tile_mae": 75.9907455444336
+        },
+        "first_to_second": {
+          "mae": 0.2947149872779846,
+          "changed_fraction": 0.005998263888888889,
+          "max_tile_mae": 2.190682888031006
+        },
+        "second_to_third": {
+          "mae": 0.2950361371040344,
+          "changed_fraction": 0.005911458333333334,
+          "max_tile_mae": 2.0218465328216553
+        }
+      }
+    },
+    {
+      "beat": 11,
+      "previous_beat": 10,
+      "frame": 13513,
+      "time_seconds": 450.43333333333334,
+      "candidate": false,
+      "settles_after_jump": true,
+      "metrics": {
+        "prior_motion": {
+          "mae": 0.5095008611679077,
+          "changed_fraction": 0.011471354166666666,
+          "max_tile_mae": 2.7427663803100586
+        },
+        "last_to_first": {
+          "mae": 14.809380531311035,
+          "changed_fraction": 0.2888454861111111,
+          "max_tile_mae": 52.52662658691406
+        },
+        "first_to_second": {
+          "mae": 0.19437354803085327,
+          "changed_fraction": 0.005138888888888889,
+          "max_tile_mae": 1.6127022504806519
+        },
+        "second_to_third": {
+          "mae": 0.19511865079402924,
+          "changed_fraction": 0.005169270833333333,
+          "max_tile_mae": 1.6332465410232544
+        }
+      }
+    },
+    {
+      "beat": 12,
+      "previous_beat": 11,
+      "frame": 14785,
+      "time_seconds": 492.8333333333333,
+      "candidate": false,
+      "settles_after_jump": true,
+      "metrics": {
+        "prior_motion": {
+          "mae": 0.3475795388221741,
+          "changed_fraction": 0.009162326388888888,
+          "max_tile_mae": 3.8411457538604736
+        },
+        "last_to_first": {
+          "mae": 1.7838037014007568,
+          "changed_fraction": 0.022469618055555557,
+          "max_tile_mae": 17.718172073364258
+        },
+        "first_to_second": {
+          "mae": 0.36162468791007996,
+          "changed_fraction": 0.009236111111111112,
+          "max_tile_mae": 3.8291380405426025
+        },
+        "second_to_third": {
+          "mae": 0.36027345061302185,
+          "changed_fraction": 0.009309895833333333,
+          "max_tile_mae": 4.0104169845581055
+        }
+      }
+    },
+    {
+      "beat": 13,
+      "previous_beat": 12,
+      "frame": 16157,
+      "time_seconds": 538.5666666666667,
+      "candidate": false,
+      "settles_after_jump": true,
+      "metrics": {
+        "prior_motion": {
+          "mae": 0.41913920640945435,
+          "changed_fraction": 0.010555555555555556,
+          "max_tile_mae": 4.347221851348877
+        },
+        "last_to_first": {
+          "mae": 14.138381958007812,
+          "changed_fraction": 0.24625868055555555,
+          "max_tile_mae": 51.426353454589844
+        },
+        "first_to_second": {
+          "mae": 0.4224291443824768,
+          "changed_fraction": 0.010004340277777777,
+          "max_tile_mae": 5.24855375289917
+        },
+        "second_to_third": {
+          "mae": 0.4264988601207733,
+          "changed_fraction": 0.009904513888888888,
+          "max_tile_mae": 5.262876033782959
+        }
+      }
+    },
+    {
+      "beat": 14,
+      "previous_beat": 13,
+      "frame": 17871,
+      "time_seconds": 595.7,
+      "candidate": false,
+      "settles_after_jump": true,
+      "metrics": {
+        "prior_motion": {
+          "mae": 0.4281800091266632,
+          "changed_fraction": 0.0100390625,
+          "max_tile_mae": 4.122685432434082
+        },
+        "last_to_first": {
+          "mae": 10.636948585510254,
+          "changed_fraction": 0.18747395833333333,
+          "max_tile_mae": 42.09535217285156
+        },
+        "first_to_second": {
+          "mae": 0.32050347328186035,
+          "changed_fraction": 0.002439236111111111,
+          "max_tile_mae": 2.8758676052093506
+        },
+        "second_to_third": {
+          "mae": 0.19722656905651093,
+          "changed_fraction": 0.0025173611111111113,
+          "max_tile_mae": 2.1508970260620117
+        }
+      }
+    }
+  ]
+}

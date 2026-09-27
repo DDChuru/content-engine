@@ -1,0 +1,99 @@
+{
+  "1_ffprobeDuration": 641.533333,
+  "2_videoCoversAudio": {
+    "video": 641.533333,
+    "encodedAudio": 640.533,
+    "marginSeconds": 1.0,
+    "videoFrames": 19246
+  },
+  "3_fullDecodeErrors": 0,
+  "4_cues": {
+    "matched": 146,
+    "total": 146,
+    "planned": 146
+  },
+  "5_audioPacketsUnchanged": {
+    "packets": 30026,
+    "identical": true
+  },
+  "6_finalWord": {
+    "word": "ATP.",
+    "endsAt": 637.4,
+    "audioEnds": 640.533,
+    "headroom": 3.133,
+    "afterWordMaxDb": -21.8
+  },
+  "7_silentReads": [
+    {
+      "beat": 10,
+      "before": "Look at the words",
+      "start": 394.2,
+      "seconds": 4.0,
+      "pcmAllZero": true,
+      "encodedInteriorMaxDb": -91.0
+    },
+    {
+      "beat": 14,
+      "before": "END",
+      "start": 638.007,
+      "seconds": 2.0,
+      "pcmAllZero": true,
+      "encodedInteriorMaxDb": -91.0
+    }
+  ],
+  "7_speechPCMUnchanged": true,
+  "frozenNarration": "storyboard paragraphs present verbatim; requests differ only by the recorded request-only normalisations: ",
+  "8_boundaries": {
+    "master": "/home/user/content-engine/work/4.2.1a/4.2.1a-passive-transport.mp4",
+    "timeline": "/home/user/content-engine/work/4.2.1a/timeline.json",
+    "master_bytes": 234468656,
+    "fps": 30.0,
+    "frame_count": 19246,
+    "boundaries_tested": 13,
+    "candidate_count": 0,
+    "candidate_beats": [],
+    "method": "RGB 640x360 area downsample; last/first near-match, then material abrupt jump",
+    "thresholds": {
+      "near_mae_max": 0.8,
+      "near_changed_fraction_max": 0.005,
+      "changed_pixel_threshold": 12,
+      "jump_mae_min": 1,
+      "jump_changed_fraction_min": 0.005,
+      "jump_tile_mae_min": 8,
+      "jump_ratio_min": 5,
+      "noise_floor": 0.05,
+      "post_jump_stable_mae_max": "max(0.8, 0.45 * jump_mae)"
+    },
+    "limits": "Candidates, not proof. Deliberate one-frame holds can match; identical layouts can hide a lookup error. Subtle/animated holds can evade thresholds. Requires unshifted CFR master."
+  },
+  "markerAudit": {
+    "framesChecked": 19246,
+    "marked": 2082,
+    "unmarked": 17164,
+    "intervals": [
+      {
+        "beat": 10,
+        "label": "COMMON MISTAKE",
+        "startFrame": 11403,
+        "endFrame": 13485,
+        "announceFrame": 11403,
+        "beatEndFrame": 13513,
+        "clearKey": "exit",
+        "clearsOnFrame": 13485
+      }
+    ],
+    "badgeTextMae": {
+      "commonMaeMax": 3.9034361839294434,
+      "examMaeMin": 20.31788444519043
+    },
+    "mismatches": 0
+  },
+  "longestUnchangedVisual": {
+    "beat": 2,
+    "startFrame": 1581,
+    "seconds": 7.233333333333333
+  },
+  "unchangedOver15s": [],
+  "valenceAudit": "not applicable: no covalent bond is made or broken on screen (Topic 4: membrane assembly, lateral drift and insertion are non-covalent motion)",
+  "sha256": "7eeaaeb54b28aa1765cd89ecbd5b9cd7737bbdd16d9d85c6345c67af74345e44"
+}

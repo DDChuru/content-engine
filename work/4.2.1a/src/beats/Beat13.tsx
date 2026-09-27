@@ -66,7 +66,7 @@ export function RecapLayout({s, t, hi = {}}: any) {
       </g>
       <Txt x={720} y={716} size={14} weight={700} fill={C.ink}>conceptual comparison at fixed volume, temperature and pressure; not an osmometer; volume changes not modelled</Txt>
       <Txt x={720} y={736} size={14} weight={800} fill={C.primary}>in this model the gaps let only water through; a generic model barrier · same temperature and pressure both sides</Txt>
-      {(hi.osm ?? 0) > 0 && <Txt x={720} y={930} size={17} weight={800} fill={C.teal} opacity={hi.osm}>osmosis: net movement of water, higher → lower water potential, through a partially permeable membrane</Txt>}
+      {(hi.osm ?? 0) > 0 && <Txt x={720} y={908} size={17} weight={800} fill={C.teal} opacity={hi.osm}>osmosis: net movement of water, higher → lower water potential, through a partially permeable membrane</Txt>}
       {/* route slots, in a row */}
       {SLOTS.map(([h, b], i) => { const x = SL.x + i * (SL.w + SL.gap), hh = [hi.o2, hi.chan, hi.carr, hi.osm][i] ?? 0; return (
         <g key={i}>
