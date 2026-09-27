@@ -12,7 +12,9 @@ export const gt = (s: any) => s.frame / 30;             // global animation cloc
 export const CY = 540, U = 58;                          // membrane stage used by Beats 4–12
 
 /** Text label with an optional straight leader to (lx, ly). Leader is decor. */
-export function Lbl({x, y, text, o = 1, size: size0 = 22, weight = 700, fill = C.ink, anchor = 'start', lx, ly, lead = C.muted, italic = false, halo = C.warm}: any) {
+/** `part`: 'leader' draws only the leader, 'label' only the text — so a group of labels can paint EVERY leader
+ * beneath EVERY label (008f). */
+export function Lbl({x, y, text, o = 1, size: size0 = 22, weight = 700, fill = C.ink, anchor = 'start', lx, ly, lead = C.muted, italic = false, halo = C.warm, part}: any) {
   if (o <= 0) return null;
   const size = Math.max(MIN_TEXT, size0);
   const w = textW(text, size, weight), x0 = anchor === 'middle' ? x - w / 2 : anchor === 'end' ? x - w : x;
@@ -20,10 +22,10 @@ export function Lbl({x, y, text, o = 1, size: size0 = 22, weight = 700, fill = C
   if (lx != null) { const ax = lx < x0 ? x0 - 6 : lx > x0 + w ? x0 + w + 6 : lx, ay = ly < y - size ? y - size - 2 : ly > y ? y + 6 : y - size * 0.35; d = `M${ax.toFixed(1)} ${ay.toFixed(1)}L${lx.toFixed(1)} ${ly.toFixed(1)}`; }
   return (
     <g opacity={o < 1 ? o : undefined}>
-      {d && <path data-role="decor" d={d} stroke={lead} strokeWidth={1.8} fill="none" />}
-      {d && <circle data-role="decor" cx={lx} cy={ly} r={3.2} fill={lead} />}
-      {halo && <text x={x} y={y} fontSize={size} fontWeight={weight} fill={halo} stroke={halo} strokeWidth={7} strokeLinejoin="round" textAnchor={anchor} fontFamily={BODY} fontStyle={italic ? 'italic' : undefined}>{text}</text>}
-      <Txt x={x} y={y} size={size} weight={weight} fill={fill} anchor={anchor} italic={italic}>{text}</Txt>
+      {d && part !== 'label' && <path data-role="decor" d={d} stroke={lead} strokeWidth={1.8} fill="none" />}
+      {d && part !== 'label' && <circle data-role="decor" cx={lx} cy={ly} r={3.2} fill={lead} />}
+      {part !== 'leader' && halo && <text x={x} y={y} fontSize={size} fontWeight={weight} fill={halo} stroke={halo} strokeWidth={7} strokeLinejoin="round" textAnchor={anchor} fontFamily={BODY} fontStyle={italic ? 'italic' : undefined}>{text}</text>}
+      {part !== 'leader' && <Txt x={x} y={y} size={size} weight={weight} fill={fill} anchor={anchor} italic={italic}>{text}</Txt>}
     </g>
   );
 }

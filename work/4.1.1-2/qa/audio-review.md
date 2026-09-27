@@ -21,3 +21,8 @@ Transcribed with faster-whisper small (cue pipeline) and adjudicated with faster
 - "1972", "2024" (numerals for "nineteen seventy-two", "twenty twenty-four"); "onto" for "on to" (mapped in `_spell`).
 - Beat 9 "cytoplasm" → "satoplasm"/"setoplasm": the same word is recognised as "cytoplasm" in Beats 1, 5, 6, 11 and 12 from the same voice; recogniser spelling.
 - Beat 4 small model inserted "water" (probability 0.18); medium hears the line exactly: recogniser artefact.
+
+## 008f re-voice (memory hook, RULE-MEMORY-HOOKS)
+Beat 5 only: hook sentences added (see STORYBOARD.md § 008f REVISION). One take; small recogniser 124/124 words
+matched; no normalisation needed. Old take kept in `audio/v3-pre008f/`. 2 s digital-silence hold inserted before
+"That's a memory aid" (`insert_holds.py`).

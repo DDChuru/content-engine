@@ -1,60 +1,44 @@
 # 4.1.1-2 — Fluid mosaic membranes: how the bilayer forms and what sits in it · REPORT
 
-Model: claude-opus-5-5 (cloud run 008a). Branch `cloud/008-4.1.1-2-to-4.2.1a-dq9f0v`. 13 beats, 0 error beats, 136 cues.
+## v2 (cloud run 008f, 27 Sep 2026) — fixes for review `cloud-reviews/4.1.1-2-REVIEW.md` (CHANGES)
+Model: claude-opus-5-5. Branch `cloud/008f-fix-4prnob`. 13 beats, 0 error beats, 139 cues (136 + 3 hook cues).
+**Bunny guid `1ab01c37-b2c5-410f-8388-b40a572a0c75`** "REVIEW 4.1.1-2 v2 Fluid mosaic membranes: how the bilayer forms and
+what sits in it", no collection; uploaded 14:52:27–14:52:30Z; **status 4 at 14:55:36Z** (≈3 min; 240p–1080p, 558 s).
 
-## Phases (UTC, 27 Sep 2026)
-| Phase | Wall clock |
+| Finding | Fix |
 |---|---|
-| Setup (apt, pip, pinned npm in `work/`, fonts) | 10:06–10:08 |
-| Audio (TTS + faster-whisper) / review + 3 retakes / holds + timeline | 10:08–10:16 / 10:16–10:26 / 10:26 |
-| Shared Topic 4 models (`work/t4-shared`) + 13 beats authored, stills LOOKED at, approved | 10:10–10:38 |
-| Render, 4 beats in parallel (16,114 frames) | 10:38:57–10:49:45 |
-| finish + verify / text-only audits + encoded sheets / bookends | 10:50 / 10:50–10:52 / 10:51–10:52 |
-| Branding | 10:54–11:00 |
-| Bunny upload / status 4 | 11:00:51–11:00:55 / 11:04:02 (≈3 min) |
+| 1 HIGH entry opens holes / crosses glyphs | Shared `FluidMosaicMembrane`: every component now enters AT ITS SEAT — footprint widens from zero while the neighbours part by exactly that width (never a hole, never a crossing); the first 20 % only lines the leaflets up. `t4-shared/fmm-selftest.cjs` sweeps every entry (0 overlaps, max clear space 0.53 u, no jumps). Intermediate frames of Beats 6/8/9/10 looked at. |
+| 2 construction disclaimer absent | Kit `BuildNote` shows the storyboard caption verbatim while components enter (Beats 6, 8, 9, 10). Beat 9's enlarged glycolipid now stays outside the membrane (right column, tray faded) with a dashed arrow through the water to slot 2 — no sweep across the drawing. |
+| 3 exam-close polarity labels | Beat 13: an enlarged inset (two phospholipids + one outer cholesterol, head-level guide) with leaders: *polar heads*, *non-polar tails*, *polar OH*, *non-polar rings*. |
+| 4 labels < 17 px; leaders over labels | Every text ≥ 20 px at 1:1 (≥ 17.59 px delivered); tray 20 px; Beat 12 recap relaid (left column + staircase ordered by target x), all leaders painted under all labels (`Lbl part=`). **New per-frame `label-audit.cjs`** in `render-beat.cjs`: fails the beat on any text < 17 px after branding (transforms, letters in drawings: no exemptions), text/text or leader/text overlap, text on drawn geometry, or text off the content area. Result: 16,405/16,405 frames, min 17.59 px, 0 violations (`qa/beat-NN/label-audit.json`, asserted in `verify.py`). The later border rule (card/pill edges) run on every frame too: 0 (`qa/label-audit-v2-design-check.txt`). |
+| 5 memory hook | Beat 5 re-voiced (only the hook): *"Heads to the water: the heads face the water on both sides. Tails to each other: the tails face each other in the core."* Each hook word lights with its target (heads ↔ head rows, water ↔ water above/below, tails/each other ↔ core), connectors, then a 2 s silent hold on the completed mapping; hook 2.5–17.1 s of the beat. |
+| 6 positions ≠ spec | Shared layout now literal SHARED-SPECS slots (glycolipid 2, channel 4–5, cholesterol 6/7, receptor 8–9, carrier 10–11, glycoprotein 12, extrinsic under 3–4); all labels re-anchored. `t4-shared/CHANGELOG.md`. |
+| 7 audio outlasts video | `work/brand_final.py`: after `apply-branding-cloud.sh` the raw branded audio ended 29 ms after picture; picture padded (last outro frame cloned 0.229 s), audio untouched: **video ends 0.205 s after audio**. |
 
-## ElevenLabs (counter is ACCOUNT-WIDE: parallel sessions move it)
-before 293,084 / after 296,791 of 363,000 (retakes 10:23–10:24 read 296,791 before and after; the counter lagged).
-Characters requested by this lesson, retakes included: 8,727 (script 6,737).
+**Narration changes (the only ones):** Beat 5, added after the handle phrase: "Heads to the water: the heads face the water on
+both sides. Tails to each other: the tails face each other in the core." (+ 2.0 s hold before "That's a memory aid").
+**ElevenLabs** (account-wide counter; other sessions move it): 332,143 before / 332,143 after (counter lagged; 706 chars
+requested, one take). Pronunciation: none needed (qa/audio-review.md).
+**Phases (UTC):** setup 13:58–14:05 · shared models + audit tool 14:05–14:15 · re-voice 14:09 · beats redesigned + looked at
+14:10–14:25 · render 14:25:35–14:37:09 (16,405 frames, audit live) · finish + verify 14:37–14:43 · sheets/bookends 14:43–14:47 ·
+brand 14:45–14:52 · upload 14:52 · status 4 14:55:36.
+**Master** `4.1.1-2-fluid-mosaic.mp4` 546.833 s, 16,405 frames, sha256 `7291d5ebee948c09b369900dbfc61ea203ef09d4920cbee8d538e6fe108ab2b4`.
+**Branded** `4.1.1-2-branded.mp4` 558.067 s (= master + 11.03 + 0.20 pad), sha256 `80b83e8f143adfc8608a9e88789c0f005913e154f0267fc75b50cfc4381e63b7`,
+full decode 0 errors, video 558.067 ≥ audio 557.862 (`qa/branded-verification.json`); mid frame `qa/branded-mid.jpg` (cream frame,
+this lesson's bar). Bookends re-rendered; settled late frames read the exact title (`qa/bookend-*-late.jpg`).
+**Verification** (`qa/verification.json`): ffprobe 546.833 · video ≥ audio (1.0 s) · decode 0 errors · cues 139 = 139 = 139 ·
+AAC packets identical (25,587) · final word "core." 2.95 s headroom · silent holds (B5 hook, B13 END) −91 dB · 12 boundaries,
+0 candidates · marker audit 16,405 frames, 0 marked · label audit 16,405 frames, 0 violations · longest still 7.27 s ·
+text-only controls PASS, longest text-only run 0 s, 0 untagged shapes.
+**Sheets:** encoded sheets (10) looked at: hook mapping visible and held; entries clean; labels clear. Fixes before render are
+the rows above.
+**Shared sha256 used:** FluidMosaicMembrane cd18164e…, PhospholipidToken 9940f739…, ReceptorLigand 1cc07252…, T4Tokens 6f8ad2db…,
+TransportProteinSet 3bc4ab34…, WaterField ebae9295…, t4-palette 6c1088fc… (full values: `../t4-shared/SHARED.md`).
+**Interpretation:** the storyboard's "drift in sideways from the section's edge" is replaced by entry at the seat (a sideways
+path cannot avoid crossing occupied lipids in a cross-section; review #1). "This protein at the end" (Beat 10) now names the
+last protein of the row (slot 12), as the spec positions place it.
 
-## Master and branded
-- Master `4.1.1-2-fluid-mosaic.mp4`: 537.133 s, 16,114 frames, sha256 `29f77af37632d1bbf408648ed6347e6a5a92434005c85003e72f6752d86e91de`.
-- Branded `4.1.1-2-branded.mp4`: 548.162 s (= master + 11.029 s), full decode 0 errors, sha256
-  `09695a744299cf9258121cf0ac16101bc8874871201af90861cc219979bb5234`. Mid frame `qa/branded-mid.jpg`: lesson inside the cream
-  frame, title bar "Fluid mosaic membranes: how the bilayer forms and what sits in it · Cambridge A Level Biology".
-- Bookends: late frames of intro and outro read exactly the title (`qa/bookend-intro-late.png`, `qa/bookend-outro-late.png`).
-
-## Verification (`qa/verification.json`, standard order)
-1 ffprobe 537.133 s · 2 video 537.133 ≥ encoded audio 536.133 (margin 1.0 s) · 3 full decode 0 errors · 4 cues matched 136 =
-total 136 = planned 136 (unique, in order) · 5 AAC packets identical (25,133) · 6 final word "core." ends 533.18 s, 2.95 s
-headroom, −61.4 dB after it · 7 silent hold (Beat 13 END, 2 s) PCM all zero, encoded −91 dB; speech PCM unchanged · 8 boundary
-audit 12 boundaries, 0 candidates · marker audit every frame (16,114): 0 marked, 0 mismatches (no error beats) · longest
-unchanged visual 7.27 s (Beat 12, still recap) · `verify-text-only --controls` all PASS, 0 untagged shapes ·
-`verify-text-only`: longest text-only run 0 s.
-
-## Sheets
-Beat sheets (`qa/beat-NN/sheet-*.jpg`) LOOKED at before approval; fixed: stray tokens in `assemble` (component slots drawn as
-lipids — shared-model fix), lipid bunching (drift field too fine — shared-model fix), overlapping labels in Beats 6, 8, 10,
-label halos over drifting water, Beat 3 hydrogen-bond length. Encoded sheets (9, `qa/encoded-sheets/`) LOOKED at: every beat
-reads as intended; no fix needed.
-
-## Bunny
-guid `05dc76d4-d562-4644-b6c6-39ddc62c0e07`, title "REVIEW 4.1.1-2 Fluid mosaic membranes: how the bilayer forms and what
-sits in it", no collection; uploaded 11:00:55Z; status 4 at 11:04:02Z (length 548 s; 240p–1080p).
-
-## Pronunciation (`qa/audio-review.md`)
-Request-only: `OH` → `O H` (all beats); Beat 1 `Between the two sits the` → `Between the two, sits the` (takes 1–2 heard "sides",
-"sites" by both recognisers). Retakes: B1 ×2, B9 ("theirs"), B10 ("bilayer"). Old takes kept in `audio/v1`, `audio/v2`.
-
-## Shared-model sha256 used (copied byte for byte into `src/`)
-FluidMosaicMembrane d45dca56…8525 · PhospholipidToken 9940f739…bf49 · ReceptorLigand 1cc07252…0d69 · T4Tokens
-82c10a8a…45fe · TransportProteinSet 3bc4ab34…6d28 · WaterField 2e4f3530…4de1 · t4-palette 6c1088fc…5ec5a (full values in
-`work/t4-shared/SHARED.md`).
-
-## Design choices
-1. Columnar membrane layout: spanning proteins are shared columns, so the section widens from 12 to 21 slots as components drift in from the cut edge and the lipids part; both leaflets keep 12 phospholipids.
-2. Motion is continuous and spatially smooth (jitter + correlated lateral drift); the recap freezes the clock at its first frame so nothing jumps; "fluid" is shown by a tinted tracer swapping places with a neighbour (1 token width in 2.2 s).
-3. The red blood cell is a flat authored outline with a magnifier onto the bilayer, reused as the hook, the "why it matters" link and the callback.
-
-## Interpretation
-Beat 4's "twenty-four tokens" assemble into exactly the 24 phospholipids of the section; Beat 5 adds an opening cue (as B1–4, 6–8, 10–12); the objectives surface is the dark house-style surface; the Beat 13 "hook question with a tick" shows the question only (the answer is spoken), per its on-screen list.
+---
+## v1 (run 008a) — superseded
+Bunny `05dc76d4-d562-4644-b6c6-39ddc62c0e07` (status 4 at 11:04:02Z, 548.162 s), reviewed CHANGES. Full v1 report: git history of
+this file (commit a5b5941).

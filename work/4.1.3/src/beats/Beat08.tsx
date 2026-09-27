@@ -29,9 +29,9 @@ export default function Beat08(s: any) {
       {tint > 0 && <circle data-role="decor" cx={p8.x - k * u} cy={p8.y} r={0.42 * u} fill="#FFF1D6" opacity={0.7 * tint * (1 - 0.65 * dip)} />}
       <Pill x={cx} y={Lf.top - 2.6 * u} text="sideways, within one layer; never flipping between layers" anchor="middle" o={fi(a('drift'), 0.5) * (1 - fe(a('chol'), 0.6))} fill={T4.headEdge} />
       {gsh > 0 && <path data-role="decor" d={`M${gp.x - gsh * u} ${cy - 2.65 * u - 12}L${gp.x + 0.5} ${cy - 2.65 * u - 12}`} stroke={T4.proteinEdge} strokeWidth={5} strokeLinecap="round" opacity={0.6} />}
-      <Txt x={cx - 200} y={Lf.bottom + 64} size={40} weight={800} fill={C.primary} anchor="middle" opacity={fi(a('fluid'), 0.5) * (1 - fe(a('inset'), 0.5))}>fluid</Txt>
-      <Lbl x={co.x + 40} y={Lf.top - 2.6 * u} text="cholesterol (animal cell membranes)" o={fi(a('chol'), 0.5)} size={22} lx={co.x + 4} ly={co.y - 8} />
-      {inset > 0 && <g opacity={inset}><CholesterolQualitative x={170} y={600} w={700} h={330} t={t} hot={fe(a('hot'), 1.0)} cold={fe(a('cold'), 1.5)} glow={fe(a('steady'), 0.6)} /></g>}
+      <Txt x={cx - 200} y={Lf.bottom + 56} size={40} weight={800} fill={C.primary} anchor="middle" opacity={fi(a('fluid'), 0.5) * (1 - fe(a('inset'), 0.5))}>fluid</Txt>
+      <Lbl x={co.x + 40} y={Lf.top - 2.6 * u} text="cholesterol (animal cell membranes)" o={fi(a('chol') - 0.5, 0.4)} size={22} lx={co.x + 4} ly={co.y - 8} />
+      {inset > 0 && <g opacity={inset}><CholesterolQualitative x={80} y={604} w={756} h={332} t={t} hot={fe(a('hot'), 1.0)} cold={fe(a('cold'), 1.5)} glow={fe(a('steady'), 0.6)} /></g>}
       <Cite x={1850} y={944} text={SCHEM} anchor="end" />
     </g>
   );

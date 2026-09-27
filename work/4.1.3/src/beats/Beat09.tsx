@@ -36,12 +36,12 @@ export default function Beat09(s: any) {
       <RoleGrid t={t} fill={gridFill(s)} colLit={{stability: fi(a('stable'), 0.4)}} hi={hi} />
       <InkRing cx={co.x} cy={co.y + 0.7 * u} rx={0.45 * u} ry={0.75 * u} p={fe(a('rings'), 0.5)} opacity={1 - fe(a('chains'), 0.5)} color="#8A5F12" />
       <InkRing cx={ci.x} cy={ci.y - 0.7 * u} rx={0.45 * u} ry={0.75 * u} p={fe(a('rings') - 0.3, 0.5)} opacity={1 - fe(a('chains'), 0.5)} color="#8A5F12" />
-      <Lbl x={co.x - 40} y={Lf.top - 2.4 * u} text="rigid rings among the tails" anchor="end" o={fi(a('rings'), 0.5) * (1 - fe(a('chains'), 0.5))} size={21} lx={co.x - 6} ly={co.y + 0.5 * u} />
+      <Lbl x={co.x + 36} y={Lf.top - 2.4 * u} text="rigid rings among the tails" o={fi(a('rings'), 0.5) * (1 - fe(a('chains'), 0.5))} size={21} lx={co.x - 6} ly={co.y + 0.5 * u} />
       {a('perm') >= 0 && a('perm') < 2 && <g><SoluteDot x={rb1[0]} y={rb1[1]} r={7} /><IonTok x={rb2[0]} y={rb2[1]} r={9} /></g>}
-      <Lbl x={co.x + 40} y={Lf.top - 2.4 * u} text="small polar molecule · sodium ion" o={fi(a('perm'), 0.4) * (1 - fe(a('three'), 0.5))} size={18} fill={C.muted} />
+      <Lbl x={90} y={Lf.top - 3.3 * u} text="small polar molecule · sodium ion" o={fi(a('perm'), 0.4) * (1 - fe(a('three'), 0.5))} size={20} fill={C.muted} />
       {/* chains: glycolipid, receptor-glycoprotein, glycoprotein */}
-      <Lbl x={gl.x - 30} y={Lf.top - 2.5 * u} text="glycolipid" anchor="end" o={chainsOn} size={21} fill="#35652B" lx={gl.x} ly={Lf.top - 1.8 * u} />
-      <Lbl x={gp.x - 30} y={Lf.top - 2.5 * u} text="glycoprotein" anchor="end" o={chainsOn} size={21} fill="#35652B" lx={gp.x + 6} ly={Lf.top - 1.6 * u} />
+      <Lbl x={gl.x - 16} y={Lf.top - 2.5 * u} text="glycolipid" o={fi(a('chains') - 0.5, 0.4)} size={21} fill="#35652B" lx={gl.x} ly={Lf.top - 1.8 * u} />
+      <Lbl x={gp.x + 30} y={Lf.top - 2.5 * u} text="glycoprotein" o={fi(a('chains') - 0.5, 0.4)} size={21} fill="#35652B" lx={gp.x + 6} ly={Lf.top - 1.6 * u} />
       <Underline x1={Lf.x0} x2={Lf.x1} y={Lf.outerHead - 0.55 * u} p={fe(a('outer'), 1.0)} color="#35652B" opacity={1 - fe(a('hb') - 1.5, 0.6)} />
       <Pill x={cx + 200} y={Lf.bottom + 70} text="chains on the outer face only" anchor="middle" o={fi(a('outer'), 0.5)} fill="#35652B" />
       {hb > 0 && chainTops.map(([x, y], i) => [0, 1, 2].map((k) => {
@@ -49,7 +49,7 @@ export default function Beat09(s: any) {
         const on = Math.sin(t * 2.7 + k * 2 + i) > -0.3 ? 1 : 0.3;
         return <g key={i + '-' + k} opacity={hb}><path data-role="drawing" d={`M${x} ${y}L${wx} ${wy}`} stroke={T4.waterEdge} strokeWidth={2} strokeDasharray="4 4" opacity={on} /><WaterTok x={wx} y={wy} r={6} /></g>;
       }))}
-      <Txt x={cx + 200} y={Lf.bottom + 110} size={18} weight={700} fill={T4.waterEdge} anchor="middle" opacity={hb}>dashed lines: hydrogen bonds (schematic)</Txt>
+      <Txt x={cx + 200} y={Lf.bottom + 110} size={20} weight={700} fill={T4.waterEdge} anchor="middle" opacity={hb}>dashed lines: hydrogen bonds (schematic)</Txt>
       <Cite x={1850} y={944} text={SCHEM} anchor="end" />
     </g>
   );

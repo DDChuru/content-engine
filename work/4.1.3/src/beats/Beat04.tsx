@@ -9,7 +9,7 @@ import {O2Tok, IonTok, GlucoseTok, WaterTok} from '../T4Tokens';
 export default function Beat04(s: any) {
   const t = gt(s), a = s.a, {cx, cy, u} = L3, M = {cx, cy, u, t, show: FULL};
   const Lf = fmmLayout(M), LN = lanes(M);
-  const top = Lf.top - 2.6 * u, bot = Lf.bottom + 0.8 * u;
+  const top = Lf.top - 2.6 * u, bot = Lf.bottom + 0.4 * u;
   const cross = (age: number, ln: number[], up = false) => { const k = clamp01(age / 1.3); const e = k * k * (3 - 2 * k); return up ? [ln[1] + (ln[0] - ln[1]) * e, bot + (top - bot) * e] : [ln[0] + (ln[1] - ln[0]) * e, top + (bot - top) * e]; };
   const o2s = [[0, LN[0], false], [0.5, LN[1], false], [1.0, LN[2], true], [1.6, LN[3], false]].map(([d, ln, up]: any) => ({age: a('o2') - d, ln, up}));
   const o2glow = pulse(a('c1'), 1.6);
@@ -58,9 +58,14 @@ export default function Beat04(s: any) {
           {i === 0 ? <IonTok x={p[0]} y={p[1]} r={11} /> : <GlucoseTok x={p[0]} y={p[1]} r={13} />}
         </g>); })}
       {c2g > 0 && <g opacity={c2g}><Halo x={bx[0]} y={Lf.top - 1.3 * u} t={t} /><IonTok x={bx[0]} y={Lf.top - 1.3 * u} r={11} /><Halo x={bx[1]} y={Lf.top - 1.3 * u} t={t} /><GlucoseTok x={bx[1]} y={Lf.top - 1.3 * u} r={13} /></g>}
-      <Lbl x={bx[0] - 36} y={Lf.top - 1.1 * u} text="sodium ion" anchor="end" o={halo * (1 - fe(a('written'), 0.5))} size={20} fill="#553585" />
-      <Lbl x={bx[1] + 36} y={Lf.top - 1.1 * u} text="glucose" o={halo * (1 - fe(a('written'), 0.5))} size={20} fill="#A4561A" />
-      <Txt x={(bx[0] + bx[1]) / 2} y={Lf.top - 2.7 * u} size={20} weight={700} anchor="middle" fill={C.muted} opacity={halo * (1 - fe(a('written'), 0.5))}>surrounded by water (schematic)</Txt>
+      {/* legend (the halos stay clear of text): token · name, then what the halo means */}
+      {halo > 0 && <g opacity={halo * (1 - fe(a('written'), 0.5))}>
+        <IonTok x={102} y={255} r={10} />
+        <Txt x={118} y={262} size={20} weight={700} fill="#553585">sodium ion</Txt>
+        <GlucoseTok x={246} y={255} r={11} />
+        <Txt x={264} y={262} size={20} weight={700} fill="#A4561A">glucose</Txt>
+        <Txt x={346} y={262} size={20} weight={700} fill={C.muted}>surrounded by water (schematic)</Txt>
+      </g>}
       <Pill x={Lf.x0 + 10} y={Lf.bottom + 122} text="barrier to ions and polar molecules" o={fi(a('barrier'), 0.5)} fill={C.primary} />
       {/* handle inset: oil drops sit apart on water; each hook word lights with its target */}
       {oil > 0 && <g opacity={oil * (1 - fe(a('written') - 0.2, 0.5))}>
@@ -79,12 +84,12 @@ export default function Beat04(s: any) {
         {L1 > 0 && <Txt x={IN.x + 222} y={IN.y + 196} size={20} weight={700} fill="#6B5410" opacity={L1}>oil → the tails (core)</Txt>}
         {L2 > 0 && <Txt x={IN.x + 222} y={IN.y + 218} size={20} weight={700} fill="#2F6B8F" opacity={L2}>water → both sides</Txt>}
       </g>}
-      <Txt x={Lf.x0 + 10} y={Lf.bottom + 156} size={20} weight={700} fill={C.primary} italic opacity={fi(a('film'), 0.5) * (1 - fe(a('written') - 0.2, 0.5))}>the image is for the core only; a membrane is not a layer of oil</Txt>
+      <Txt x={Lf.x0 + 10} y={Lf.bottom + 156} size={20} weight={700} fill={C.primary} italic opacity={fi(a('film'), 0.5) * (1 - fe(a('written') + 0.35, 0.3))}>the image is for the core only; a membrane is not a layer of oil</Txt>
       <Sentence x={80} y={IN.y - 20} w={756} o={fe(a('written'), 0.6)} size={21} lines={[
         {text: 'Small non-polar molecules cross the phospholipid bilayer,', o: fi(a('c1'), 0.5)},
         {text: 'but its hydrophobic core is a barrier to ions and polar molecules.', o: fi(a('c2'), 0.5), hi: ['barrier'], hiO: fi(a('c2'), 0.5)},
       ]} />
-      <Lbl x={Lf.x1} y={Lf.top - 3.2 * u} text="partially permeable" anchor="end" o={fi(a('pp'), 0.5)} size={24} fill={C.primary} />
+      <Lbl x={Lf.x0 + 10} y={Lf.top - 3.2 * u} text="partially permeable" o={fi(a('pp'), 0.5)} size={24} fill={C.primary} />
       <Cite x={1850} y={940} text={PARTS} anchor="end" />
     </g>
   );

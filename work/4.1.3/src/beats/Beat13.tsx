@@ -1,6 +1,6 @@
 import React from 'react';
 import {fi, fe, pulse, path} from '../util';
-import {gt, Lbl, Pill, Stage, RoleGrid, gridFill, C, Txt, Lines, Card, Cite, SCHEM, textW, clamp01} from '../kit';
+import {gt, Lbl, Pill, Stage, RoleGrid, gridFill, CELLS, wrap, C, Txt, Lines, Card, Cite, SCHEM, textW, clamp01} from '../kit';
 import {fmmLayout, compPos, FULL} from '../FluidMosaicMembrane';
 import {PROT, channelPass} from '../TransportProteinSet';
 import {LigandA} from '../ReceptorLigand';
@@ -10,6 +10,24 @@ import {Written, Strike} from '../Panels';
 /** Beat 13 · How it is asked (the two narrated forms, cited; paraphrases labelled), our wording-contrast reject card
  * (not the scheme's wording), and the callback: the sodium ion is turned back by the core and passes through a
  * channel protein. Final frame held 2 s. */
+/** The completed RoleGrid's cholesterol row, as three full-size cells (008f). */
+function CholRow({x, y, w, hi = 0}: any) {
+  const cells = [['stability', CELLS['cholesterol|stability']], ['fluidity', CELLS['cholesterol|fluidity']], ['permeability', CELLS['cholesterol|permeability']]];
+  let yy = y + 66; const out: any[] = [];
+  cells.forEach(([k, v], i) => {
+    const ls = wrap(k + ': ' + v, w - 36, 20, 600), h = 16 + ls.length * 24;
+    out.push(<g key={i}><rect data-role="decor" x={x + 12} y={yy - 22} width={w - 24} height={h} rx={8} fill={hi > 0.5 ? '#FBEFD5' : '#EAF5EE'} stroke={hi > 0.5 ? '#B8862F' : '#9CCBB0'} strokeWidth={1.5} />
+      {ls.map((l, j) => <Txt key={j} x={x + 24} y={yy + j * 24} size={20} weight={600} fill="#1D5A38">{l}</Txt>)}</g>);
+    yy += h + 8;
+  });
+  return (
+    <g>
+      <rect data-role="decor" x={x} y={y} width={w} height={yy - y + 4} rx={12} fill="#FFFFFF" stroke={C.line} strokeWidth={2} />
+      <Txt x={x + 14} y={y + 26} size={20} weight={700} fill="#8A5F12">cholesterol (grid row)</Txt>
+      {out}
+    </g>
+  );
+}
 export default function Beat13(s: any) {
   const t = gt(s), a = s.a, u = 20, cx = 1620, cy = 350;
   const M = {cx, cy, u, t, show: FULL, carrierPhase: 1};
@@ -29,7 +47,7 @@ export default function Beat13(s: any) {
   return (
     <g>
       {/* forms surface */}
-      <Card x={70} y={206} w={1270} h={500} fill="#FBF8F1" />
+      <Card x={70} y={206} w={1270} h={462} fill="#FBF8F1" />
       <Txt x={100} y={254} size={30} weight={800} fill={C.primary} opacity={fi(a('open'), 0.4)}>How it is asked</Txt>
       {fi(a('row1'), 0.4) > 0 && <g opacity={fi(a('row1'), 0.4)}>
         <IonTok x={116} y={300} r={13} />
@@ -37,31 +55,33 @@ export default function Beat13(s: any) {
       </g>}
       <Txt x={144} y={342} size={19} weight={600} fill={C.muted} opacity={fi(a('s23'), 0.4)}>S23/21 Q3(a), 1 mark, MS p.11</Txt>
       <Txt x={450} y={342} size={19} weight={600} fill={C.muted} opacity={fi(a('m24'), 0.4)}>·  M24/22 Q1(b)(i), 1 mark, MS p.5 (sodium ions)</Txt>
-      <Lines x={144} y={374} size={17} weight={600} fill={C.muted} italic opacity={fi(a('credit'), 0.4)} text={'Our paraphrase, checked against the PDFs: S23/21 Q3(a), MS p.11, links polar/water-soluble/hydrophilic substances to the\nphospholipid bilayer or hydrophobic core. M24/22 Q1(b)(i), MS p.5, links sodium\'s charge to the hydrophobic/non-polar core.\nThese are separate one-mark contexts.'} />
-      <Txt x={144} y={452} size={17} weight={700} fill={C.primary} italic opacity={fi(a('ignored'), 0.4)}>S23/21 Q3(a): size-only, active transport and facilitated diffusion ignored at that point (our paraphrase of the plan-check description)</Txt>
+      <Lines x={144} y={376} size={20} weight={600} fill={C.muted} italic opacity={fi(a('credit'), 0.4)} text={'Our paraphrase, checked against the PDFs: S23/21 Q3(a), MS p.11, links polar/water-soluble/hydrophilic\nsubstances to the phospholipid bilayer or hydrophobic core. M24/22 Q1(b)(i), MS p.5, links sodium\'s charge\nto the hydrophobic/non-polar core. These are separate one-mark contexts.'} />
+      <Lines x={144} y={462} size={20} weight={700} fill={C.primary} italic opacity={fi(a('ignored'), 0.4)} text={'S23/21 Q3(a): size-only, active transport and facilitated diffusion ignored at that point\n(our paraphrase of the plan-check description)'} />
       {fi(a('row2'), 0.4) > 0 && <g opacity={fi(a('row2'), 0.4)}>
-        <path data-role="decor" d="M100 486H1310" stroke={C.line} strokeWidth={2} />
-        <Txt x={144} y={530} size={27} weight={700}>state one role of cholesterol</Txt>
-        <Txt x={144} y={562} size={19} weight={600} fill={C.muted}>M24/22 Q1(a)(iii), 1 mark, MS p.5</Txt>
-        <Lines x={144} y={596} size={17} weight={600} fill={C.muted} italic text={'M24/22 Q1(a)(iii), MS p.5: one mark for any one accepted role — regulation of fluidity, maintenance of mechanical stability,\nor limiting entry of hydrophilic/polar substances or ions (our paraphrase).'} />
+        <path data-role="decor" d="M100 506H1310" stroke={C.line} strokeWidth={2} />
+        <Txt x={144} y={548} size={27} weight={700}>state one role of cholesterol</Txt>
+        <Txt x={144} y={578} size={20} weight={600} fill={C.muted}>M24/22 Q1(a)(iii), 1 mark, MS p.5</Txt>
+        <Lines x={144} y={610} size={20} weight={600} fill={C.muted} italic text={'M24/22 Q1(a)(iii), MS p.5: one mark for any one accepted role — regulation of fluidity, maintenance of\nmechanical stability, or limiting entry of hydrophilic/polar substances or ions (our paraphrase).'} />
       </g>}
       {/* reject card: our wording contrast */}
-      {rj > 0 && <Card x={70} y={726} w={1270} h={200} opacity={rj} fill="#FFFFFF">
-        <Written x={96} y={774} text={wrong} size={26} />
-        <Strike x1={96 + 28} x2={96 + 28 + textW(wrong, 26, 600)} y={766} p={fe(a('reject') - 0.8, 0.6)} />
-        <Written x={96} y={818} ok text="Glucose is polar, so it does not cross the hydrophobic core of the phospholipid bilayer" size={26} />
-        <Txt x={96 + 28} y={852} size={26} weight={600} fill="#1D6B40" italic>readily; it needs a transport protein.</Txt>
-        <Cite x={1320} y={910} text="our wording contrast, based on the plan-check description of S23/21 Q3(a), MS p.11; not the scheme's wording" anchor="end" size={15} />
+      {rj > 0 && <Card x={70} y={684} w={1270} h={246} opacity={rj} fill="#FFFFFF">
+        <Written x={96} y={732} text={wrong} size={26} />
+        <Strike x1={96 + 28} x2={96 + 28 + textW(wrong, 26, 600)} y={724} p={fe(a('reject') - 0.8, 0.6)} />
+        <Written x={96} y={782} ok text="Glucose is polar, so it does not cross the hydrophobic core of the phospholipid bilayer" size={26} />
+        <Txt x={96 + 28} y={818} size={26} weight={600} fill="#1D6B40" italic>readily; it needs a transport protein.</Txt>
+        <Cite x={1320} y={908} text="our wording contrast, based on the plan-check description of S23/21 Q3(a), MS p.11; not the scheme's wording" anchor="end" size={20} />
       </Card>}
       {/* the familiar layout, reduced, at right */}
       {coreGlow > 0 && <rect data-role="decor" x={Lf.x0 - 6} y={cy - 1.5 * u} width={Lf.width + 12} height={3 * u} rx={6} fill="#FFF3C4" opacity={coreGlow} />}
       <Stage s={s} cx={cx} cy={cy} u={u} xw={[Lf.x0 - 20, Lf.x1 + 20]} waterTop={214} waterBottom={500} n={[12, 10]} mem={M} />
       <LigandA x={rc.x} y={rc.y - H} u={u} />
       {na && <IonTok x={na[0]} y={na[1]} r={7} />}
-      <Txt x={Lf.x0} y={cy + 4.4 * u} size={15} weight={700} fill={C.teal}>cytoplasm</Txt>
-      <Txt x={cx} y={228} size={17} weight={700} anchor="middle" opacity={fi(a('na'), 0.4)}>oxygen slips through; a sodium ion is turned back — why?</Txt>
-      <g transform="translate(827 427) scale(0.55)"><RoleGrid t={t} fill={gridFill(s)} hi={hi} /></g>
-      <Cite x={1850} y={512} text={SCHEM} anchor="end" />
+      <Txt x={Lf.x1} y={cy + 4.6 * u} size={20} weight={700} fill={C.teal} anchor="end">cytoplasm</Txt>
+      <Txt x={cx - 20} y={230} size={20} weight={700} anchor="middle" opacity={fi(a('na'), 0.4)}>oxygen slips through;</Txt>
+      <Txt x={cx - 20} y={254} size={20} weight={700} anchor="middle" opacity={fi(a('na'), 0.4)}>a sodium ion is turned back — why?</Txt>
+      {/* the grid's cholesterol row at full size (a reduced 30-cell grid would put its text under 17 px) */}
+      <CholRow x={1370} y={540} w={480} hi={cholOn} />
+      <Cite x={1850} y={520} text={SCHEM} anchor="end" />
     </g>
   );
 }

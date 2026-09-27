@@ -23,19 +23,19 @@ export default function Beat11(s: any) {
     <g>
       {on > 0 && tops.map((x, i) => <rect key={i} data-role="decor" x={x - 0.55 * u} y={Lf.top - 2.2 * u} width={1.1 * u} height={2.2 * u} rx={12} fill="#E3F2DC" opacity={Math.max(on, mk)} />)}
       <Stage3 s={s} cy={cy} mem={{dimLipids: d, compDim: {'intrinsic-channel': d, 'intrinsic-carrier': d, cholesterol: d, extrinsic: d}}} />
-      <defs><clipPath id="b11c"><rect x={70} y={198} width={980} height={742} /></clipPath></defs>
+      <defs><clipPath id="b11c"><rect x={70} y={198} width={766} height={742} /></clipPath></defs>
       {cellOn && <g data-role="drawing" clipPath="url(#b11c)"><circle cx={c[0]} cy={c[1]} r={230} fill="#F3ECF6" stroke="#7A5C8E" strokeWidth={4} opacity={0.95} /></g>}
-      <Pill x={c[0] + 250} y={280} text="recognition" o={cellOn ? fi(a('cell') - 1.2, 0.4) * (1 - fe(a('cell') - 3.4, 0.4)) : 0} fill="#7A5C8E" />
-      <Txt x={c[0]} y={256} size={18} weight={700} fill="#7A5C8E" anchor="middle" opacity={cellOn ? fi(a('cell') - 1.0, 0.4) : 0}>another cell (schematic)</Txt>
+      <Pill x={90} y={272} text="recognition" o={cellOn ? fi(a('cell') - 1.2, 0.4) * (1 - fe(a('cell') - 3.4, 0.4)) : 0} fill="#7A5C8E" />
+      <Lbl x={90} y={232} text="another cell (schematic)" size={21} fill="#7A5C8E" o={cellOn ? fi(a('cell') - 1.0, 0.4) * (1 - fe(a('cell') - 3.4, 0.4)) : 0} lx={c[0] - 199} ly={c[1] + 115} />
       <LigandA x={rc.x} y={rc.y - PROT.H * u} u={u} />
-      <Lbl x={250} y={L3.cy + 2.3 * u + 84 + (cy - L3.cy)} text="cytoplasm (watery)" size={21} fill={C.teal} />
+      <Lbl x={836} y={cy + 2.3 * u + 40} text="cytoplasm (watery)" anchor="end" size={21} fill={C.teal} />
       <RoleGrid t={t} fill={gridFill(s)} colLit={{'cell recognition': fi(a('open'), 0.4)}} />
       {fi(a('antigens'), 0.4) > 0 && <g opacity={fi(a('antigens'), 0.4) * (cellOn ? 0.25 : 1)}>
         <path data-role="decor" d={`M${tops[0]} ${Lf.top - 2.35 * u}V${Lf.top - 2.7 * u}H${tops[2]}V${Lf.top - 2.35 * u}M${tops[1]} ${Lf.top - 2.7 * u}V${Lf.top - 2.35 * u}`} stroke="#35652B" strokeWidth={3} fill="none" />
       </g>}
       <Txt x={(tops[0] + tops[2]) / 2} y={Lf.top - 2.85 * u} size={24} weight={800} fill="#35652B" anchor="middle" opacity={fi(a('antigens'), 0.4) * (cellOn ? 0.25 : 1)}>cell surface antigens</Txt>
       <Pill x={cx - 150} y={Lf.bottom + 142} text="self and non-self: 11.1.2" anchor="middle" o={fi(a('self'), 0.4)} />
-      <Txt x={cx - 150} y={Lf.bottom + 176} size={16} weight={600} fill={C.muted} italic anchor="middle" opacity={fi(a('self'), 0.4)}>named here, taught with immunity</Txt>
+      <Txt x={cx - 150} y={Lf.bottom + 178} size={20} weight={600} fill={C.muted} italic anchor="middle" opacity={fi(a('self'), 0.4)}>named here, taught with immunity</Txt>
       <Underline x1={Lf.x0} x2={Lf.x1} y={Lf.outerHead - 0.55 * u} p={fe(a('outer'), 1.0)} color="#35652B" />
       <Pill x={cx + 200} y={Lf.bottom + 142} text="chains on the outer face only" anchor="middle" o={fi(a('outer'), 0.4)} fill="#35652B" />
       <Cite x={1850} y={944} text={SCHEM} anchor="end" />

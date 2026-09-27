@@ -15,7 +15,7 @@ export default function Beat07(s: any) {
   const a = s.a, hold = s.sc.holds?.[0], h0 = hold ? hold.atSample / 48000 : 1e9, hd = hold ? hold.seconds : 0;
   const t = gt(s) - clamp01((s.local - h0) / Math.max(hd, 1e-6)) * hd;       // clock paused through the silent read
   const {cx, cy, u} = L3;
-  const done = fe(a('exit'), 0.15), lift = fe(a('exit') - 0.2, 0.8);
+  const done = a('exit') >= 0 ? 1 : 0, lift = fe(a('exit') - 0.2, 0.8);   // 008f: the corrected card replaces the worked one in one frame (no two overlapping texts)
   const pr = fi(a('proteins'), 0.5);
   const dim = 0.55 * (1 - lift);
   const M = {cx, cy, u, t, show: FULL, carrierPhase: 1};

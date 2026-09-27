@@ -59,7 +59,7 @@ function Strip({x, y, w, u, t, chol, amp, pack, seed}: any) {
 
 export function CholesterolQualitative({x, y, w = 560, h = 420, t = 0, hot = 0, cold = 0, glow = 0, opacity = 1}: any) {
   if (opacity <= 0) return null;
-  const u = 20, L0 = 150, sw = (w - L0 - 20) / 2, rowH = (h - 70) / 2;
+  const u = 20, L0 = 164, sw = (w - L0 - 20) / 2, rowH = (h - 70) / 2;
   const rowY = [y + 60 + rowH * 0.5, y + 60 + rowH * 1.5];
   const H = clamp01(hot), Cc = clamp01(cold);
   // top row: higher temperature: without cholesterol large motion; with cholesterol, neighbours restrained
@@ -76,8 +76,8 @@ export function CholesterolQualitative({x, y, w = 560, h = 420, t = 0, hot = 0, 
       {[0, 1].map((r) => (
         <g key={r}>
           <Thermo x={x + 30} y={rowY[r] - 48} level={r === 0 ? 1 : 0} />
-          {lab(x + 50, rowY[r] - 12, r === 0 ? 'higher' : 'lower', 20, '#6F6A60', 'start')}
-          {lab(x + 50, rowY[r] + 12, 'temperature', 20, '#6F6A60', 'start')}
+          {lab(x + 46, rowY[r] - 12, r === 0 ? 'higher' : 'lower', 20, '#6F6A60', 'start')}
+          {lab(x + 46, rowY[r] + 12, 'temperature', 20, '#6F6A60', 'start')}
           <rect data-role="decor" x={x + L0} y={rowY[r] - rowH * 0.46} width={sw} height={rowH * 0.92} rx={8} fill={T4.solution} />
           <rect data-role="decor" x={x + L0 + 12 + sw} y={rowY[r] - rowH * 0.46} width={sw} height={rowH * 0.92} rx={8} fill={T4.solution} />
           <Strip x={x + L0} y={rowY[r]} w={sw} u={u} t={t} chol={false} amp={r === 0 ? topAmp[0] : botAmp[0]} pack={r === 1 ? Cc : 0} seed={r * 40} />

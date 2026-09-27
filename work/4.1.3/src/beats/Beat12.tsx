@@ -1,7 +1,7 @@
 import React from 'react';
 import {fi, fe, pulse} from '../util';
 import {Lbl, Pill, Wash, Stage3, RoleGrid, gridFill, COLS, ROWS, L3, C, Txt, Cite, SCHEM} from '../kit';
-import {fmmLayout, compPos, FULL} from '../FluidMosaicMembrane';
+import {fmmLayout, compPos, plPos, FULL} from '../FluidMosaicMembrane';
 import {PROT} from '../TransportProteinSet';
 import {LigandA} from '../ReceptorLigand';
 
@@ -18,7 +18,7 @@ export default function Beat12(s: any) {
   const rowLit: any = {}, colLit: any = {};
   ROWS.forEach((r) => { rowLit[r] = Math.max((rows as any)[r] ?? 0, on.six * 0.8); });
   COLS.forEach((c) => { colLit[c] = on.six * 0.8; });
-  const H = PROT.H * u;
+  const H = PROT.H * u, pl3 = plPos(M, 15);   // inner phospholipid at slot 6 (clear of the extrinsic protein)
   const tag = (k: string, x: number, y: number, text: string, lx: number, ly: number, fill = C.ink) => <Lbl x={x} y={y} text={text} o={fi(a(k), 0.5)} size={20} fill={fill} lx={lx} ly={ly} />;
   const chainGlow = Math.max(on.gp, on.gl);
   return (
@@ -29,16 +29,21 @@ export default function Beat12(s: any) {
       {chainGlow > 0 && [gl.x + 0.2 * u, rc.x + 0.62 * u, gp.x].map((x, i) => <rect key={'c' + i} data-role="decor" x={x - 0.55 * u} y={Lf.top - 2.2 * u} width={1.1 * u} height={2.2 * u} rx={12} fill="#E3F2DC" opacity={i === 0 ? on.gl : on.gp} />)}
       <Stage3 s={s} mem={{t}} />
       <LigandA x={rc.x} y={rc.y - H} u={u} />
-      <Lbl x={250} y={cy + 2.3 * u + 84} text="cytoplasm (watery)" size={21} fill={C.teal} />
+      <Lbl x={836} y={cy + 2.3 * u + 40} text="cytoplasm (watery)" anchor="end" size={21} fill={C.teal} />
       <RoleGrid t={t} fill={gridFill(s)} rowLit={rowLit} colLit={colLit} />
       <Txt x={Lf.x0 + 10} y={236} size={24} weight={800} fill={C.primary} opacity={fi(a('pl'), 0.5)}>partially permeable</Txt>
-      {tag('barrier', 110, 690, 'barrier to ions and polar molecules', Lf.x0 + 1.2 * u, cy + 0.4 * u, C.primary)}
-      {tag('fluid', 110, 726, 'fluid: phospholipids move sideways', Lf.x0 + 2.2 * u, Lf.innerHead + 0.3 * u, '#A36B17')}
-      {tag('chol', 110, 762, 'cholesterol: fluidity, stability, permeability', ci.x, ci.y + 0.3 * u, '#8A5F12')}
-      {tag('prot', 560, 690, 'channel proteins · carrier proteins', ca.x, cy + H + 4, '#2F7F86')}
-      {tag('rec', 560, 726, 'binding site', rc.x + 6, rc.y - H + 14, '#2F7F86')}
-      {tag('gp', 560, 762, 'glycoproteins: receptors, recognition, stability', gp.x + 0.4 * u, cy + H, '#35652B')}
-      {tag('gl', 560, 798, 'glycolipids: recognition, stability', gl.x + 0.3 * u, Lf.innerHead + 0.4 * u, '#35652B')}
+      {/* key points: above the membrane the glycolipid (leader to the OUTER glycolipid's chain/lipid junction; review
+          4.1.3 #1) and the binding site; below, a staircase ordered by descending target x; all leaders under all labels */}
+      {(['leader', 'label'] as const).map((part) => <g key={part}>
+        <Lbl part={part} x={86} y={266} text="glycolipids: recognition, stability" o={fi(a('gl'), 0.5)} size={20} fill="#35652B" lx={gl.x} ly={Lf.outerHead - 0.34 * u} />
+        <Lbl part={part} x={434} y={236} text="binding site" o={fi(a('rec'), 0.5)} size={20} fill="#2F7F86" lx={rc.x + 2} ly={rc.y - H + 12} />
+        <Lbl part={part} x={gp.x - 16} y={604} text="glycoproteins: receptors," o={fi(a('gp'), 0.5)} size={20} fill="#35652B" lx={gp.x} ly={cy + H + 2} />
+        <Lbl part={part} x={gp.x - 16} y={628} text="recognition, stability" o={fi(a('gp'), 0.5)} size={20} fill="#35652B" />
+        <Lbl part={part} x={ca.x - 16} y={660} text="channel proteins · carrier proteins" o={fi(a('prot'), 0.5)} size={20} fill="#2F7F86" lx={ca.x} ly={cy + H + 4} />
+        <Lbl part={part} x={ci.x - 16} y={692} text="cholesterol: fluidity, stability, permeability" o={fi(a('chol'), 0.5)} size={20} fill="#8A5F12" lx={ci.x} ly={ci.y + 0.3 * u} />
+        <Lbl part={part} x={pl3.x - 16} y={724} text="fluid: phospholipids move sideways" o={fi(a('fluid'), 0.5)} size={20} fill="#A36B17" lx={pl3.x} ly={pl3.y + 0.4 * u} />
+        <Lbl part={part} x={90} y={764} text="barrier to ions and polar molecules" o={fi(a('barrier'), 0.5)} size={20} fill={C.primary} />
+      </g>)}
       <Txt x={560} y={870} size={24} weight={800} anchor="middle" opacity={fi(a('six'), 0.5)}>six roles · five kinds of molecule · one membrane</Txt>
       <Txt x={836} y={236} size={20} weight={700} fill={C.muted} anchor="end" opacity={fi(a('open'), 0.5)}>recap: the same membrane</Txt>
       <Cite x={1850} y={944} text={SCHEM} anchor="end" />

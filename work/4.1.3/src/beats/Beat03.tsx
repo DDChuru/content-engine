@@ -28,7 +28,7 @@ export default function Beat03(s: any) {
   const ctl = pulse(a('control'), 1.4), intact = pulse(a('intact'), 1.4), comm = pulse(a('comm'), 1.4);
   const cols: Record<string, number> = {};
   COLS.forEach((k, i) => { cols[k] = pulse(a('cols') - i * 0.35, 1.2); });
-  const gridIn = fe(a('grid'), 1.0);
+  const gridIn = fe(a('grid') - 1.0, 0.6);   // the grid appears once the membrane has moved out of its way
   return (
     <g>
       <Wash x={Lf.x0 - 16} y={Lf.outerHead - 0.5 * u} w={Lf.width + 32} h={u} o={0.9 * pulse(a('heads'), 2)} />
@@ -42,8 +42,8 @@ export default function Beat03(s: any) {
       <Lbl x={Lf.x0 - 24} y={Lf.outerHead - 0.9 * u} text="outside the cell (watery)" anchor="end" o={fi(a('heads'), 0.4) * (1 - fi(a('grid'), 0.3))} size={21} fill={C.teal} />
       <Lbl x={Lf.x0 - 24} y={Lf.innerHead + 0.9 * u + 16} text="cytoplasm (watery)" anchor="end" o={fi(a('heads'), 0.4) * (1 - fi(a('grid'), 0.3))} size={21} fill={C.teal} />
       <Regions3 o={fi(a('grid') - 0.8, 0.4)} />
-      <Bracket x={Lf.x1 + 16} y0={cy - 1.5 * u} y1={cy + 1.5 * u} side={-1} o={fi(a('core'), 0.4) * (1 - fi(a('grid'), 0.3))} />
-      <Lbl x={Lf.x1 + 36} y={cy + 8} text="hydrophobic core" o={fi(a('core'), 0.4) * (1 - fi(a('grid'), 0.3))} size={22} fill={C.muted} />
+      <Bracket x={Lf.x1 + 16} y0={cy - 1.5 * u} y1={cy + 1.5 * u} side={-1} o={fi(a('core'), 0.4) * (1 - fi(a('grid') + 0.3, 0.3))} />
+      <Lbl x={Lf.x1 + 36} y={cy + 8} text="hydrophobic core" o={fi(a('core'), 0.4) * (1 - fi(a('grid') + 0.3, 0.3))} size={22} fill={C.muted} />
       {labAt && <Lbl x={labAt.x} y={Lf.top - 2.9 * u} text={lab} anchor="middle" size={24} fill={C.primary} lx={labAt.x} ly={labAt.y - 0.6 * u} />}
       <Pill x={cx} y={Lf.top - 2.9 * u} text="roles?" anchor="middle" o={fi(a('roles'), 0.4) * (1 - fe(a('wall'), 0.4))} fill={C.primary} />
       {wallO > 0 && <g opacity={wallO}>
@@ -52,7 +52,7 @@ export default function Beat03(s: any) {
         <LigandA x={bounceL[0]} y={bounceL[1]} u={u} />
         <Pill x={cx} y={Lf.bottom + 2.6 * u} text="not how a membrane works" anchor="middle" fill={C.primary} />
       </g>}
-      {gridIn > 0 && <g transform={`translate(${(1 - gridIn) * 820} 0)`}><RoleGrid t={t} colLit={cols} /></g>}
+      {gridIn > 0 && <g opacity={gridIn < 1 ? gridIn : undefined}><RoleGrid t={t} colLit={cols} /></g>}
       <Cite x={Lf.x0} y={930} text={SCHEM} />
     </g>
   );

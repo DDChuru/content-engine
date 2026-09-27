@@ -133,6 +133,22 @@ longest = max(gaps, key=lambda g: g['seconds'])
 holds = [g for g in gaps if g['seconds'] > 15]
 R['longestUnchangedVisual'] = longest; R['unchangedOver15s'] = holds
 assert not holds, ('rendered visual unchanged for more than 15 s', holds)
+# 008f LABEL AUDIT (every frame, no exemptions): each beat's render ran label-audit.cjs on EVERY frame it encoded
+# (text >= 17 px in the delivered branded frame incl. letters inside drawings; no text-text, leader-text, text-on-
+# geometry overlap; nothing off the content area). The render fails on the first violation; here every beat's record
+# must exist, cover every frame and match the approved source.
+la = []
+for sc in T['scenes']:
+    n = f"{sc['id']:02d}"; rec = json.loads((P / f'qa/beat-{n}/label-audit.json').read_text())
+    appr = json.loads((P / f'qa/beat-{n}/approved.json').read_text())
+    want = sc['frames'] + (30 if sc['id'] == len(T['scenes']) else 0)
+    assert rec['framesChecked'] == rec['frames'] == want, ('label audit frame count', sc['id'], rec['framesChecked'], want)
+    assert rec['violations'] == [], ('label audit violations', sc['id'])
+    assert rec['minEffectivePx'] >= 17.0 and rec['minPx'] == 17, ('label audit size', sc['id'], rec['minEffectivePx'])
+    assert rec['sourceHash'] == appr['sourceHash'], ('label audit not of the approved source', sc['id'])
+    la.append({'beat': sc['id'], 'frames': rec['framesChecked'], 'minEffectivePx': round(rec['minEffectivePx'], 2)})
+R['labelAudit'] = {'rule': 'every text node >= 17 px after branding (x 950/1080), transforms included, no exemptions; no text/leader/geometry overlap; nothing off the content area', 'framesChecked': sum(x['frames'] for x in la), 'minEffectivePx': min(x['minEffectivePx'] for x in la), 'violations': 0, 'beats': la}
+print('Label audit: every frame of every beat', R['labelAudit']['framesChecked'], 'frames; min effective', R['labelAudit']['minEffectivePx'], 'px; 0 violations', flush=True)
 R['valenceAudit'] = 'not applicable: no covalent bond is made or broken on screen (Topic 4: membrane assembly, lateral drift and insertion are non-covalent motion)'
 R['sha256'] = hashlib.sha256(final.read_bytes()).hexdigest()
 (P / 'qa/verification.json').write_text(json.dumps(R, indent=2) + '\n')

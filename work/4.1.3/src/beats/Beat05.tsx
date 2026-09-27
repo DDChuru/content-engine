@@ -24,7 +24,7 @@ export default function Beat05(s: any) {
   const hl = fe(a('role'), 0.5) * (1 - fe(a('shape') - 2.6, 0.6));
   const lining = pulse(a('lining'), 1.4), pore = fi(a('pore'), 0.4);
   const ghost = fe(a('shape'), 0.6);
-  const p3 = plPos(M, 3), p4 = plPos(M, 4);
+  const p3 = plPos(M, 1), p4 = plPos(M, 15);   // the columns either side of the channel (slots 3 and 6)
   return (
     <g>
       <Stage3 s={s} mem={{highlight: hl > 0 ? 'intrinsic-channel' : null, hl, poreWater: pore > 0}} />
@@ -43,7 +43,7 @@ export default function Beat05(s: any) {
       {[p3, p4].map((p, i) => <InkRing key={i} cx={p.x} cy={cy} rx={0.6 * u} ry={1.5 * u} p={fe(a('untouched') - i * 0.2, 0.5)} opacity={1 - fe(a('untouched') - 1.8, 0.5)} color={C.teal} />)}
       {/* a second, different channel (inset) */}
       {fi(a('different'), 0.5) > 0 && <g opacity={fi(a('different'), 0.5)}>
-        <rect data-role="decor" x={96} y={690} width={330} height={210} rx={12} fill="#FFFFFF" stroke={C.line} strokeWidth={2} />
+        <rect data-role="decor" x={96} y={690} width={520} height={216} rx={12} fill="#FFFFFF" stroke={C.line} strokeWidth={2} />
         <g data-role="drawing">
           <rect x={206} y={726} width={110} height={10} rx={3} fill={T4.head} opacity={0.6} /><rect x={206} y={836} width={110} height={10} rx={3} fill={T4.head} opacity={0.6} />
           <path d={roundRect(236, 712, 256, 860, 8)} fill={T4.protein} stroke={T4.proteinEdge} strokeWidth={2} />
@@ -51,7 +51,7 @@ export default function Beat05(s: any) {
           <rect x={256} y={716} width={10} height={140} fill="#E4F3FA" />
           {[0, 1, 2, 3, 4].map((k) => <path key={k} d={`M256 ${730 + k * 28}L262 ${736 + k * 28}L256 ${742 + k * 28}Z`} fill="#FFFFFF" stroke={T4.proteinEdge} strokeWidth={1} />)}
         </g>
-        <Txt x={110} y={884} size={15} weight={700} fill={C.muted}>particular ions or polar molecules for each channel</Txt>
+        <Txt x={112} y={890} size={20} weight={700} fill={C.muted}>particular ions or polar molecules for each channel</Txt>
       </g>}
       {ghost > 0 && <g opacity={ghost}>
         <path data-role="decor" d={roundRect(ch.x - W, cy - H, ch.x - PROT.poreW * u / 2, cy + H, 0.32 * u) + roundRect(ch.x + PROT.poreW * u / 2, cy - H, ch.x + W, cy + H, 0.32 * u)} fill="none" stroke={C.primary} strokeWidth={3} strokeDasharray="8 6" />
