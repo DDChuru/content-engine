@@ -7,7 +7,10 @@ Sources (cloud run 007): the Topic 5 plan and weights, the plan check's PDF-veri
 current VIDEO-STRUCTURE (for quoted standard wording only).
 Normalisation: whitespace collapsed; curly quotes/apostrophes and dashes unified; subscript/superscript
 digits and minus signs unified; markdown emphasis and links removed. Quotes of <= 3 words are skipped (terms).
-Prints NOT FOUND quotes (and with --all, found ones too). Exit status 1 if any are not found.
+Prints NOT FOUND quotes (and with --all, found ones too). Exit status 1 if any are not found, 2 if a
+source could not be read. Sources under cloud-inputs/ are read from disk, or else from their input branch
+(`git show origin/cloud/inputs-NNN:<path>`, fetched on demand), so the check reproduces in a checkout of
+the run branch alone.
 """
 import re, sys, pathlib
 ROOT = pathlib.Path(__file__).resolve().parents[2]
@@ -28,7 +31,28 @@ def norm(s):
     s = re.sub(r"\[([^\]]*)\]\([^)]*\)", r"\1", s)
     s = s.replace("…", "...").replace(" ... ", " ").replace("...", " ")
     return re.sub(r"\s+", " ", s).strip().lower()
-corpus = norm("\n".join(p.read_text(encoding="utf-8") for p in SRC))
+import subprocess
+def read_src(p):
+    """Read a source file; if it is absent (cloud-inputs/ is not committed to the run branch), read it
+    from its input branch with git (origin/cloud/inputs-NNN), fetching that branch once if needed."""
+    if p.exists():
+        return p.read_text(encoding="utf-8")
+    rel = p.relative_to(ROOT).as_posix()
+    m = re.match(r"cloud-inputs/(\d{3})/", rel)
+    if m:
+        ref = f"origin/cloud/inputs-{m.group(1)}"
+        for attempt in (0, 1):
+            r = subprocess.run(["git", "-C", str(ROOT), "show", f"{ref}:{rel}"], capture_output=True, text=True)
+            if r.returncode == 0:
+                return r.stdout
+            if attempt == 0:
+                subprocess.run(["git", "-C", str(ROOT), "fetch", "-q", "origin", f"cloud/inputs-{m.group(1)}"],
+                               capture_output=True)
+    print(f"MISSING SOURCE: {rel} (not on disk, not readable from its input branch)")
+    return None
+texts = [read_src(p) for p in SRC]
+missing = sum(t is None for t in texts)
+corpus = norm("\n".join(t for t in texts if t))
 text = pathlib.Path(sys.argv[1]).read_text(encoding="utf-8")
 show_all = "--all" in sys.argv
 quotes = re.findall(r"“([^”]{3,}?)”|\"([^\"\n]{3,}?)\"", text)
@@ -45,5 +69,5 @@ for a, b in quotes:
         print("NOT FOUND:", q[:220])
     elif show_all:
         print("ok:", q[:120])
-print(f"quotes checked {len(seen)}  not found {bad}")
-sys.exit(1 if bad else 0)
+print(f"quotes checked {len(seen)}  not found {bad}" + (f"  MISSING SOURCES {missing}" if missing else ""))
+sys.exit(1 if bad else (2 if missing else 0))

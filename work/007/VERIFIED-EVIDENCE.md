@@ -14,6 +14,24 @@ Source: `cloud-checks/007/plan/CHECK.md` (27 Sep 2026; QP/MS/syllabus/Learner Gu
 | A13 | s23_21 Q1(a)(ii), QP p2 / MS p8 | A “nuclear membrane(s)” | Organelle-function table (Topic 1): the local counter-ruling. |
 | A15 | s21_22 Q1(a)(i), QP p2 / MS p7 | “R more than one stage given for either E or F” | 2 marks: E metaphase, F anaphase. Reject line → COMMON MISTAKE. |
 
+## Exact Cambridge wording added by the round-1 checks (`cloud-checks/007/round-1/<code>/CHECK.md`)
+
+| Source | Exact wording | Checked in |
+|---|---|---|
+| w20_21 Q1(a)(iii), QP p2 | “Suggest the role of ATP in the process of mitosis.” (command word *suggest*; any 'describe' framing is ours) | round-1 5.1.3 |
+| w20_21 Q6(a)(i), QP p15 | “Outline how mutations can result in the development of a tumour.” | round-1 5.1.6 |
+| s24_23 Q5(d), QP p13 / MS p10 | “Explain why CDK inhibitors can be used to treat cancerous tumours.” | round-1 5.1.6 |
+| s22_12 Q18, QP p7 / MS p2, key A | “If telomeres become too short, a cell may stop dividing.” (the keyed correct statement) | round-1 5.1.4 |
+
+Further round-1 verified facts (cite by demand, not as quotations): w22_23 Q4(a)(iii) uses the command
+*State* (QP pp10–11) and its MS p15 credits nucleolus reappearance; s21_22 Q1(a)(ii) (QP p2) states that the
+microtubules are present but not visible in its image; w20_21 Q1(a)(ii) MS p6 also accepts prometaphase
+(not added to teaching); w22_13 Q20 is on QP p10 (key B pairs *basal cells only* with *Golgi body*); the
+s23_21 Q4(c)(i) centromere function may be holding the sister chromatids together or attachment to the
+spindle; w20_21 Q1(a)(i) cloze gaps concern identical sister chromatids, centromere and histone proteins;
+Paper 1 stems for s20_12 Q19–21, s21_12 Q17–19, s22_12 Q17–20, s23_12 Q20–21 and s24_12 Q19–20 were read
+and support the demands listed in the weights. SAPS resource 1358 sheets are version 1.1 (2019).
+
 ## Verified tariffs, keys and demands (cite by demand; do NOT quote as Cambridge wording)
 
 | ID | Source | Verified content |
@@ -22,7 +40,7 @@ Source: `cloud-checks/007/plan/CHECK.md` (27 Sep 2026; QP/MS/syllabus/Learner Gu
 | A05 | s23_21 Q4(b)(ii), QP p13 / MS p14 | Which stage **of interphase**; 1 mark for S / synthesis phase; a bare "S" is ignored. |
 | A06 | m24_22 Q4(b), QP p15 / MS p11 | 1 mark requires circling **both** interphase and S phase. Q4(c) (MS p12) is Topic 6 mechanism. |
 | A08 | s21_22 Q1(b), QP p3 / MS p8 | 4-mark cloze; only D (telomeres), 1 mark, is Topic 5 (repeated end sequences permitting replication without gene loss). |
-| A09 | w22_13 Q18–21, QP pp9–11 / MS p2 | Keys 18 A, 19 C, 20 B, 21 A. Q18 one chromosome at telophase (1 centromere / 2 polynucleotide strands / 2 telomeres); Q19 interphase photograph for replication; Q20 basal skin stem cells plus Golgi; Q21 DNA doubling and growth in interphase. |
+| A09 | w22_13 Q18–21, QP pp9–10 (Q20 on p10) / MS p2 | Keys 18 A, 19 C, 20 B, 21 A. Q18 one chromosome at telophase (1 centromere / 2 polynucleotide strands / 2 telomeres); Q19 interphase photograph for replication; Q20 basal skin stem cells plus Golgi; Q21 DNA doubling and growth in interphase. |
 | A10 | w20_21 Q6(a)(i), QP p15 / MS p12 | Mutation context supplied; 2 marks, any two credited consequences. |
 | A11 | w22_23 Q4(a)(ii), QP p10 / MS p14 | Command **describe** (not explain) the role of microtubules; 3 marks, any three: attachment, alignment, shortening, centromere division/poleward movement, equivalent sets. |
 | A14 | s23_21 Q4(c)(ii), QP p14 / MS p15 | Draw anaphase behaviour of **chromosome 11**; 3 marks from four listed drawing features (separate units, spindle attachments, U/V orientation, centromeres). |

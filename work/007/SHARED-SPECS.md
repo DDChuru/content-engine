@@ -149,6 +149,46 @@ two-sister state. Caption this as a schematic account of replication during S; d
 taught in 6.1.4. The final state change marks completion, not instantaneous duplication of the entire
 genome. No bond edits.
 
+### Round-1 contracts (binding on every lesson that shows these events; from `cloud-checks/007/round-1`)
+
+- **Counts change on the event frame.** A chromosome or DNA-molecule counter changes on the same rendered
+  frame as the event that changes it (replication completing; centromeres dividing; cytokinesis dividing
+  the cell), never on a later narration cue. Later cues may only highlight values already shown. During S,
+  DNA values read *replication in progress* until the completion frame.
+- **Separation frame (from the 5.2.1 check, verbatim):** All replays, including Beat 9 and downstream
+  lessons, update the chromosome count and daughter-chromosome label on the separation frame.
+  DNA-molecule count does not change. A row labelled “one pole” describes an arrived group; before arrival
+  use “moving towards one pole”.
+- **Spindle and intact envelope (5.2.1 check, verbatim):** Spindle microtubules grow from the animal
+  centrosomes or the plant's broad pole regions. While the nuclear envelope is intact, keep them outside it.
+  After envelope breakdown, chromosome-attached fibres reach the centromere regions, with opposite-pole
+  attachments to the two sister chromatids. Distinguish these from any fibres overlapping elsewhere in the
+  spindle.
+- **Division excerpts (5.1.5 and 5.1.6 checks).** A miniature or replayed division that shows only late
+  mitosis and cytokinesis is a labelled excerpt: before its first run and before every daughter repeats it,
+  hold the cell, show the caption *later in the cell cycle; DNA replication in S phase and earlier mitotic
+  stages omitted* (5.1.6 wording: *interphase and early mitosis omitted*), and make an explicit time cut
+  into the existing anaphase state (whole teaching cell 8 daughter chromosomes / 8 DNA molecules, four
+  moving towards each pole). Never morph a newly formed daughter directly into the next anaphase set.
+  Motion is continuous within each shown process; labelled omitted intervals are not instantaneous
+  biological transitions. Telophase strips read in full: *Whole cell: 8 chromosomes · 8 DNA molecules. Each
+  new nucleus: 4 chromosomes · 4 DNA molecules.*
+- **Replays reset visibly.** A replay of an earlier state is labelled (*Replay: metaphase*, *earlier in
+  mitosis*, *Before S phase*, *Recap: after replication*) so it cannot be read as the next event.
+- **Exam beats:** the credited answer appears first and stays visible; any real-world callback follows,
+  spoken as beyond the scheme and on a panel labelled **beyond the mark scheme**.
+- **Real images (round-1 README).** Never invent or describe a specific real photograph as if we hold it.
+  Each needed image is an open asset in `work/007/ASSETS-NEEDED.md` (what it must show, stage,
+  magnification, stain, organism). Narration says *the image*, not *this micrograph*, so it stays valid
+  either way. The target is a licensed real photomicrograph set (plan MF4; 5.2.2 M2: do not create, recolour
+  or substitute schematic microscopy to fill missing evidence). A labelled drawing is used only if the
+  conductor approves it for a named frame, and that frame is then re-checked.
+- **Timers** start on the frame of first contact (acid on roots; stain drop on tips), never at a later cue.
+- `TelomereEndModel` carries the caption *schematic copying, not the molecular mechanism* wherever copying
+  is shown, and its TTAGGG run label and block note persist at every zoom (5.1.4 check SF3–SF4).
+- `MitosisCellModel` registers `renderStyle: toluidine-blue-schematic` (dark-blue chromatin on a paler
+  background) for the 5.2.2 diagram references; the default drawn style is unchanged.
+
 ## 5. Shared models (identical in every lesson — same geometry, colours, labels, state ids)
 
 Colour tokens (drawn models only; the squash and photomicrographs use real stain colours, §6):
@@ -194,9 +234,9 @@ The per-cell graph is the teaching trace. y: **DNA mass per cell / arbitrary uni
 only); x: **time** (no values). G1 flat at 1; S a rise from 1 to 2, drawn straight, with the note *slope
 schematic — not a constant replication rate*; G2 and M flat at 2; a vertical drop to 1 when cytokinesis
 divides the cell; optionally a second cycle. Phase bands shaded beneath, aligned to the wheel's labels.
-Caption *schematic; not measured data*. Named variant `per-nucleus` (y **DNA mass per nucleus / per
-chromosome set**): the open-mitosis interval (no intact nucleus) is hatched and labelled *schematic —
-no intact nucleus*, and the value drops when the two new nuclei form.
+Caption *schematic; not measured data*. Named variant `per-nucleus` (y **DNA mass per nucleus / arbitrary units**; 'per chromosome set' is a
+different denominator and is not used): the open-mitosis interval is hatched and labelled *no intact
+nucleus*, with no trace, and the value drops when the two new nuclei form.
 
 ### `TelomereEndModel` (published by 5.1.4)
 One chromatid end at Z2-like scale: two gene bands, then a telomere drawn as **grey schematic blocks**

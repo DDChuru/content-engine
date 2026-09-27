@@ -87,8 +87,8 @@ Filter the outcome column, sum the marks, count distinct pair IDs. Shared rows o
 | s23_21 Q4(c)(i) | [QP p14 / MS p15](/home/dachu/sme-9700-archive/pastpapers/2023/June/9700_s23_ms_21.pdf#page=15) | A → 5.1.1 (1); B → 5.2.1 (1) | 2 | Name **and function** of A centromere and B spindle fibres; MS partial-credit fallback disclosed (not a pure labelling task). R “daughter chromatids” applies to the centromere's sister-chromatid-holding function; I “kinetochore” for naming A. |
 | s23_21 Q4(c)(ii) | QP p14 / MS p15 | 5.2.1 | 3 | Draw anaphase behaviour of **chromosome 11**; 3 marks from four listed drawing features (separate units, spindle attachments, U/V orientation, centromeres). Basis of E5-04. |
 | s23_21 Q1(a)(ii) | [QP p2 / MS p8](/home/dachu/sme-9700-archive/pastpapers/2023/June/9700_s23_ms_21.pdf#page=8) | adjacent (Topic 1 organelle table), outside outcome totals | 0 | A “nuclear membrane(s)” (exact) — the counter-ruling that keeps E5-03's R local. |
-| s24_23 Q5(c)(i–ii) | QP p13 / MS pp9–10 | 5.1.3 | 2 + 2 | Apply supplied inhibitor information to S/G2/chromatid state. `UNVERIFIED — MS points verbatim`. |
-| s24_23 Q5(d) | QP p13 / MS pp9–10 | 5.1.6 | 2 | Explain stopping uncontrolled division. Q5(a–b) (signalling/inhibition) are not Topic 5 marks; inhibitor names are not taught as a list. |
+| s24_23 Q5(c)(i–ii) | QP p13 / MS p9 (round-1 check located (d) on p10) | 5.1.3 | 2 + 2 | Apply supplied inhibitor information to S/G2/chromatid state. `UNVERIFIED — MS points verbatim`. |
+| s24_23 Q5(d) | QP p13 / MS p10 | 5.1.6 | 2 | “Explain why CDK inhibitors can be used to treat cancerous tumours.” (exact, round-1 check). Q5(a–b) (signalling/inhibition) are not Topic 5 marks; inhibitor names are not taught as a list. |
 
 ### Paper 1 (one mark each; keys from MS p2)
 
@@ -101,7 +101,7 @@ Filter the outcome column, sum the marks, count distinct pair IDs. Shared rows o
 | s21_12 Q18 | p7 | C | 5.1.3 | 92/46/92 chromatid counts. |
 | s21_12 Q19 | p7 | A | 5.1.4 | Telomere shortening after more divisions. |
 | s22_12 Q17 | pp7–8 | A | 5.1.2 | Purpose of mitosis. |
-| s22_12 Q18 | pp7–8 | A | 5.1.4 | Telomere function/shortening; supplies maintained length in stem/cancer cells (does not assess stem cells' replacement/repair role). |
+| s22_12 Q18 | p7 | A | 5.1.4 | Telomere function/shortening; correct statement “If telomeres become too short, a cell may stop dividing.” (round-1 check); supplies maintained length in stem/cancer cells (does not assess stem cells' replacement/repair role). |
 | s22_12 Q19 | pp7–8 | D | 5.1.3 | DNA mass through S/G2. |
 | s22_12 Q20 | pp7–8 | B | 5.2.1 | Prophase events, including nucleolus disappearance. |
 | s23_12 Q20 | p12 | D | 5.1.1 | Histone/DNA organisation. |
@@ -135,7 +135,7 @@ The check's intermediate reconciliation of only the originally printed rows (5.1
 | ID; question | Page | Outcome(s) / purpose | Checked demand |
 |---|---|---|---|
 | S-A: m24_22 Q4(b) | [QP p15 / MS p11](/home/dachu/sme-9700-archive/pastpapers/2024/March/9700_m24_ms_22.pdf#page=11) | 5.1.3 | 1 mark requires circling **both** interphase and S phase; the format is preserved (one circle is not the complete answer). Corroborates E5-01. Q4(c), MS p12, is replication mechanism (4 marks, Topic 6) and adds no Topic 5 requirement. |
-| S-B: w22_13 Q18–21 | [QP pp9–11 / MS p2](/home/dachu/sme-9700-archive/pastpapers/2022/November/9700_w22_ms_13.pdf#page=2) | disaggregated | Keys **18 A, 19 C, 20 B, 21 A**. Q18: one chromosome at telophase — 1 centromere / 2 polynucleotide strands / 2 telomeres (5.1.1). Q19: interphase photograph for replication (5.1.3/5.2.2). Q20: basal skin stem cells plus Golgi (mixed Topic 1/5; 5.1.5's exam-close item). Q21: DNA doubling and growth in interphase (5.1.3). Not four stage-identification items. |
+| S-B: w22_13 Q18–21 | [QP pp9–10 / MS p2](/home/dachu/sme-9700-archive/pastpapers/2022/November/9700_w22_ms_13.pdf#page=2) (Q20 on QP p10) | disaggregated | Keys **18 A, 19 C, 20 B, 21 A**. Q18: one chromosome at telophase — 1 centromere / 2 polynucleotide strands / 2 telomeres (5.1.1). Q19: interphase photograph for replication (5.1.3/5.2.2). Q20: basal skin stem cells plus Golgi (mixed Topic 1/5; 5.1.5's exam-close item). Q21: DNA doubling and growth in interphase (5.1.3). Not four stage-identification items. |
 | S-D: Learner Guide PDF p15 (EXAMINER-INSIGHT §4) | — | 5.1.3, 5.1.4, 5.1.5 (outline command) | “Detail is not required.” — PDF-VERIFIED exact (downloaded Cambridge Learner Guide). Governs exam answers, not teaching depth, and is not permission to omit essential steps. |
 
 (The former row S-C, G05's five C4 papers, is **removed from the active evidence basis**: its manifest is absent and no C4 evidence is needed to justify the eight outcomes.)

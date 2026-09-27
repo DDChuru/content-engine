@@ -112,3 +112,9 @@ which name the same states.
 
 All validators re-run after the review edits: every storyboard `failing beats 0`, every quote check
 `not found 0`; *Validator run* sections refreshed.
+
+## After round 1
+
+See `work/007/FIXES-round-1.md` for the current per-lesson figures (topic 7,271 words ≈ 60:36), the fixes
+applied, the reproducible quote checker, the open image assets (`work/007/ASSETS-NEEDED.md`) and the new
+shared-spec contracts. The table above records the phase-2 first draft.
