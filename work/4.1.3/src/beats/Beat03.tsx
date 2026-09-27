@@ -1,6 +1,6 @@
 import React from 'react';
 import {fi, fe, pulse, path} from '../util';
-import {gt, Lbl, Pill, Bracket, Wash, Stage, RoleGrid, GRID, COLS, L3, C, Txt, Cite, SCHEM, clamp01} from '../kit';
+import {gt, Lbl, Pill, Bracket, Wash, Stage, RoleGrid, Regions3, GRID, COLS, L3, C, Txt, Cite, SCHEM, clamp01} from '../kit';
 import {fmmLayout, compPos, FULL} from '../FluidMosaicMembrane';
 import {O2Tok} from '../T4Tokens';
 import {LigandA} from '../ReceptorLigand';
@@ -36,15 +36,16 @@ export default function Beat03(s: any) {
       <Wash x={Lf.x0 - 16} y={Lf.outerHead - 0.6 * u} w={Lf.width + 32} h={Lf.innerHead - Lf.outerHead + 1.2 * u} o={0.8 * intact} fill="#FFFFFF" />
       {[P('channel'), P('carrier')].map((p, i) => <rect key={i} data-role="decor" x={p.x - PROT.W * u / 2 - 8} y={cy - PROT.H * u - 8} width={PROT.W * u + 16} height={2 * PROT.H * u + 16} rx={14} fill="#FFFFFF" opacity={0.7 * ctl} />)}
       {comm > 0 && <rect data-role="decor" x={Lf.x0} y={Lf.top - 2.3 * u} width={Lf.width} height={2.2 * u} rx={14} fill="#E3F2DC" opacity={comm} />}
-      <Stage s={s} cx={cx} cy={cy} u={u} xw={[80, 80 + (1840 - 80) * (1 - sl) + (1040 - 80) * sl]} mem={mem} n={[26, 22]} />
+      <Stage s={s} cx={cx} cy={cy} u={u} xw={[80, 80 + (1840 - 80) * (1 - sl) + (836 - 80) * sl]} mem={mem} n={[26, 22]} />
       <Pill x={cx} y={cy - 5.3 * u} text="recall: 4.1.1-2" anchor="middle" o={1 - fi(a('bilayer'), 0.4)} />
-      <Lbl x={Lf.x1 + 20} y={cy - 2.6 * u} text="phospholipid bilayer" o={fi(a('bilayer'), 0.4) * (1 - sl)} size={24} />
-      <Lbl x={Lf.x0 + 20} y={Lf.top - 2.7 * u} text="outside the cell (watery)" o={fi(a('heads'), 0.4)} size={21} fill={C.teal} />
-      <Lbl x={Lf.x0 + 20} y={Lf.bottom + 1.6 * u} text="cytoplasm (watery)" o={fi(a('heads'), 0.4)} size={21} fill={C.teal} />
-      <Bracket x={Lf.x1 + 16} y0={cy - 1.5 * u} y1={cy + 1.5 * u} side={-1} o={fi(a('core'), 0.4) * (1 - sl)} />
-      <Lbl x={Lf.x1 + 36} y={cy + 8} text="hydrophobic core" o={fi(a('core'), 0.4) * (1 - sl)} size={22} fill={C.muted} />
+      <Lbl x={Lf.x1 + 20} y={cy - 2.6 * u} text="phospholipid bilayer" o={fi(a('bilayer'), 0.4) * (1 - fi(a('grid') + 0.3, 0.3))} size={24} />
+      <Lbl x={Lf.x0 - 24} y={Lf.outerHead - 0.9 * u} text="outside the cell (watery)" anchor="end" o={fi(a('heads'), 0.4) * (1 - fi(a('grid'), 0.3))} size={21} fill={C.teal} />
+      <Lbl x={Lf.x0 - 24} y={Lf.innerHead + 0.9 * u + 16} text="cytoplasm (watery)" anchor="end" o={fi(a('heads'), 0.4) * (1 - fi(a('grid'), 0.3))} size={21} fill={C.teal} />
+      <Regions3 o={fi(a('grid') - 0.8, 0.4)} />
+      <Bracket x={Lf.x1 + 16} y0={cy - 1.5 * u} y1={cy + 1.5 * u} side={-1} o={fi(a('core'), 0.4) * (1 - fi(a('grid'), 0.3))} />
+      <Lbl x={Lf.x1 + 36} y={cy + 8} text="hydrophobic core" o={fi(a('core'), 0.4) * (1 - fi(a('grid'), 0.3))} size={22} fill={C.muted} />
       {labAt && <Lbl x={labAt.x} y={Lf.top - 2.9 * u} text={lab} anchor="middle" size={24} fill={C.primary} lx={labAt.x} ly={labAt.y - 0.6 * u} />}
-      <Pill x={cx} y={Lf.top - 3.6 * u} text="roles?" anchor="middle" o={fi(a('roles'), 0.4) * (1 - fe(a('wall'), 0.4))} fill={C.primary} />
+      <Pill x={cx} y={Lf.top - 2.9 * u} text="roles?" anchor="middle" o={fi(a('roles'), 0.4) * (1 - fe(a('wall'), 0.4))} fill={C.primary} />
       {wallO > 0 && <g opacity={wallO}>
         <rect data-role="decor" x={Lf.x0 - 10} y={Lf.outerHead - 0.5 * u} width={Lf.width + 20} height={Lf.innerHead - Lf.outerHead + u} rx={10} fill="#8E8E8E" opacity={0.85} />
         <O2Tok x={bounceO2[0]} y={bounceO2[1]} r={9} />

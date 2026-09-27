@@ -38,7 +38,7 @@ export default function Beat11(s: any) {
       <Txt x={cx - 150} y={Lf.bottom + 176} size={16} weight={600} fill={C.muted} italic anchor="middle" opacity={fi(a('self'), 0.4)}>named here, taught with immunity</Txt>
       <Underline x1={Lf.x0} x2={Lf.x1} y={Lf.outerHead - 0.55 * u} p={fe(a('outer'), 1.0)} color="#35652B" />
       <Pill x={cx + 200} y={Lf.bottom + 142} text="chains on the outer face only" anchor="middle" o={fi(a('outer'), 0.4)} fill="#35652B" />
-      <Cite x={1040} y={948} text={SCHEM} anchor="end" />
+      <Cite x={1850} y={944} text={SCHEM} anchor="end" />
     </g>
   );
 }

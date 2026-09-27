@@ -23,7 +23,7 @@ export default function Beat07(s: any) {
   const mem = {t, dimLipids: dim, compDim: {glycolipid: dim, cholesterol: dim, 'receptor-glycoprotein': dim, glycoprotein: dim, extrinsic: dim, 'intrinsic-channel': dim * (1 - pr), 'intrinsic-carrier': dim * (1 - pr)}};
   const na = a('proteins') >= 0 ? channelPass(a('proteins') - 0.3, 1.4, -3.6, 3.8) : null;
   // the card
-  const X = 1080, W = 760, sz = 29;
+  const X = 870, W = 980, sz = 29;
   const L1 = 'The ions are charged, so they cannot pass', L2w = 'through the membrane.';
   const yA = 520, step = 42;
   const [mx0, mx1] = span(X + 20, L2w, 12, 20, sz);
@@ -35,12 +35,12 @@ export default function Beat07(s: any) {
     <g>
       <Wash x={Lf.x0 - 10} y={cy - 1.5 * u} w={Lf.width + 20} h={3 * u} o={0.9 * fi(a('bilayer'), 0.5) * (1 - fe(a('proteins'), 0.5))} fill="#FFF3C4" />
       <Stage3 s={s} mem={mem} n={[22, 18]} />
-      {dim > 0 && <rect data-role="decor" x={70} y={200} width={980} height={740} fill="#9A9A9A" opacity={0.12 * (1 - lift)} />}
-      <Lbl x={ch.x - 60} y={cy - PROT.H * u - 50} text="channel protein" anchor="end" size={20} lx={ch.x - 0.9 * u} ly={cy - PROT.H * u + 10} />
-      <Lbl x={ca.x + 60} y={cy - PROT.H * u - 50} text="carrier protein" size={20} lx={ca.x + 0.9 * u} ly={cy - PROT.H * u + 10} />
+      {dim > 0 && <rect data-role="decor" x={70} y={200} width={786} height={740} fill="#9A9A9A" opacity={0.12 * (1 - lift)} />}
+      <Lbl x={ch.x - 20} y={cy - PROT.H * u - 56} text="channel protein" size={20} lx={ch.x - 0.5 * u} ly={cy - PROT.H * u + 6} />
+      <Lbl x={ca.x + 90} y={cy - PROT.H * u - 56} text="carrier protein" size={20} lx={ca.x + 0.6 * u} ly={cy - PROT.H * u + 6} />
       <Pill x={cx} y={Lf.bottom + 80} text="bilayer core: yes, a barrier" anchor="middle" o={fi(a('bilayer'), 0.5) * (1 - lift)} fill={C.primary} />
       {na && na.tok && <IonTok x={ch.x} y={cy + na.ty * u} r={9} />}
-      <Cite x={90} y={930} text={SCHEM} />
+      <Cite x={90} y={936} text={SCHEM} />
       {/* EXAM CONTRAST panel */}
       <Card x={X} y={206} w={W} h={724} fill="#FFFFFF" stroke={done >= 1 ? C.line : C.primary} active={done < 1}>
         <Lines x={X + 20} y={236} text={'basis: mark-scheme ignore line, W22/23 Q6(a), MS p.19; an ignore line,\nnot evidence of how often candidates write this'} size={16} weight={600} fill={C.muted} italic />
@@ -70,16 +70,16 @@ export default function Beat07(s: any) {
       <SideNote x={X + W - 20} y={yA + step} text="membrane ≠ bilayer alone" anchor="end" size={20} opacity={fi(a('picture'), 0.4) * (1 - fe(a('fix'), 0.4))} />
       {fi(a('route'), 0.4) > 0 && <g opacity={fi(a('route'), 0.4) * (1 - fe(a('fix'), 0.4))}>
         <Arrow x1={mx0 - 10} y1={yA + step + 14} x2={ch.x + 0.9 * u} y2={cy + 0.4 * u} color={C.primary} width={3} bend={-60} />
-        <SideNote x={(mx0 + ch.x) / 2 + 40} y={cy + 2.8 * u} text="the protein route" size={20} anchor="middle" />
+        <SideNote x={(mx0 + ch.x) / 2} y={Lf.bottom + 116} text="the protein route" size={20} anchor="middle" />
       </g>}
       {fi(a('ms'), 0.4) > 0 && <QuoteTab x={X + 20} y={yA + 4 * step + 34} w={W - 40} opacity={fi(a('ms'), 0.4)} size={20}
         quote={'W22/23 Q6(a), MS p.19:  I ‘ions cannot pass through the membrane’'} source="PDF-CHECKED (plan check)" />}
-      <Txt x={X + 38} y={yA + 4 * step + 132} size={15} weight={600} fill={C.muted} italic opacity={fi(a('ms'), 0.4)}>credited at that part: ion transport through a membrane protein, any one point (our paraphrase)</Txt>
-      <InkRing cx={iX - 4} cy={yA + 4 * step + 34 + 24} rx={16} ry={18} p={fe(a('nothing'), 0.5)} />
-      <Txt x={X + 38} y={yA + 4 * step + 156} size={15} weight={700} fill={C.primary} opacity={fi(a('nothing'), 0.4)}>I = ignore: earns nothing at that point</Txt>
+      <Txt x={X + 38} y={yA + 4 * step + 150} size={20} weight={600} fill={C.muted} italic opacity={fi(a('ms'), 0.4)}>credited at that part: ion transport through a membrane protein, any one point (our paraphrase)</Txt>
+      <InkRing cx={iX + 6} cy={yA + 4 * step + 34 + 24} rx={16} ry={18} p={fe(a('nothing'), 0.5)} />
+      <Txt x={X + 38} y={yA + 4 * step + 176} size={20} weight={700} fill={C.primary} opacity={fi(a('nothing'), 0.4)}>I = ignore: earns nothing at that point</Txt>
       {fi(a('local'), 0.4) > 0 && <g opacity={fi(a('local'), 0.4)}>
-        <rect data-role="decor" x={X + 20} y={yA + 4 * step + 172} width={W - 40} height={44} rx={10} fill="#F2FAFA" stroke={C.teal} strokeWidth={2} />
-        <Txt x={X + 36} y={yA + 4 * step + 200} size={17} weight={700} fill={C.teal}>local ruling: W22/23 Q6(a); not a global word ban, not evidence of how common it is</Txt>
+        <rect data-role="decor" x={X + 20} y={yA + 4 * step + 190} width={W - 40} height={40} rx={10} fill="#F2FAFA" stroke={C.teal} strokeWidth={2} />
+        <Txt x={X + 36} y={yA + 4 * step + 217} size={20} weight={700} fill={C.teal}>local ruling: W22/23 Q6(a); not a global word ban, not evidence of how common it is</Txt>
       </g>}
     </g>
   );

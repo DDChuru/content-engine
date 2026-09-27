@@ -47,7 +47,7 @@ export default function Beat10(s: any) {
         {text: 'A receptor has a binding site complementary in shape', o: fi(a('sent'), 0.5), hi: ['complementary in shape'], hiO: fi(a('sent') + 0.5, 0.5)},
         {text: 'to its signalling molecule.', o: fi(a('sent') - 0.8, 0.5)},
       ]} />
-      <Cite x={1040} y={948} text={SCHEM} anchor="end" />
+      <Cite x={1850} y={944} text={SCHEM} anchor="end" />
     </g>
   );
 }

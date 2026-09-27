@@ -32,7 +32,7 @@ export default function Beat08(s: any) {
       <Txt x={cx - 200} y={Lf.bottom + 64} size={40} weight={800} fill={C.primary} anchor="middle" opacity={fi(a('fluid'), 0.5) * (1 - fe(a('inset'), 0.5))}>fluid</Txt>
       <Lbl x={co.x + 40} y={Lf.top - 2.6 * u} text="cholesterol (animal cell membranes)" o={fi(a('chol'), 0.5)} size={22} lx={co.x + 4} ly={co.y - 8} />
       {inset > 0 && <g opacity={inset}><CholesterolQualitative x={170} y={600} w={700} h={330} t={t} hot={fe(a('hot'), 1.0)} cold={fe(a('cold'), 1.5)} glow={fe(a('steady'), 0.6)} /></g>}
-      <Cite x={1040} y={948} text={SCHEM} anchor="end" />
+      <Cite x={1850} y={944} text={SCHEM} anchor="end" />
     </g>
   );
 }

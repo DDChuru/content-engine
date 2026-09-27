@@ -1,6 +1,6 @@
 import React from 'react';
 import {fi, fe, pulse, path} from '../util';
-import {gt, Lbl, Pill, Stage3, RoleGrid, Regions3, turnBack, gridFill, L3, C, Txt, Cite, SCHEM, PARTS, clamp01} from '../kit';
+import {gt, Lbl, Pill, Stage3, RoleGrid, Regions3, turnBack, gridFill, L3, C, Txt, Cite, textW, SCHEM, PARTS, clamp01} from '../kit';
 import {fmmLayout, compPos, plPos, FULL} from '../FluidMosaicMembrane';
 import {PROT, carrierSiteY, channelPass} from '../TransportProteinSet';
 import {GlucoseTok, IonTok} from '../T4Tokens';
@@ -22,7 +22,7 @@ export default function Beat06(s: any) {
   if (a('needs') >= 0) g = path(a('needs'), [[0, g0[0], g0[1]], [1.2, ca.x, cy - H - 0.7 * u]]);
   if (a('bind') >= 0) g = [ca.x, (cy - H - 0.7 * u) + ((cy + carrierSiteY(0, u)) - (cy - H - 0.7 * u)) * ez(a('bind') / 0.6)];
   if (a('flip') >= 0) g = [ca.x, cy + carrierSiteY(phase, u)];
-  if (a('release') >= 0) g = [ca.x, cy + carrierSiteY(1, u) + (4.2 * u - carrierSiteY(1, u)) * ez(a('release') / 0.5)];
+  if (a('release') >= 0) g = [ca.x, cy + carrierSiteY(1, u) + (3.2 * u - carrierSiteY(1, u)) * ez(a('release') / 0.5)];
   const gOn = a('glu') >= 0 && a('release') < 0.9;
   const held = fe(a('release') - 0.6, 0.5) * (1 - fe(a('role'), 0.5));
   const hl = fe(a('open'), 0.5) * (1 - fe(a('role'), 0.5));
@@ -33,20 +33,21 @@ export default function Beat06(s: any) {
       <Stage3 s={s} mem={mem} />
       <Regions3 />
       <RoleGrid t={t} fill={gridFill(s)} rowLit={{proteins: 1 - fe(a('site'), 0.5) + fi(a('role'), 0.4)}} colLit={{transport: 1 - fe(a('site'), 0.5) + fi(a('role'), 0.4)}} />
-      <Pill x={ch.x} y={cy - H - 20} text="no change of shape" anchor="middle" o={0.6 * (1 - fe(a('role'), 0.5))} fill={C.primary} />
-      <Lbl x={ca.x + 1.4 * u} y={cy - H - 56} text="carrier protein" o={fi(a('open'), 0.4)} size={24} lx={ca.x + PROT.W * u / 2} ly={cy - H + 12} />
+      <Pill x={ch.x} y={250} text="no change of shape" anchor="middle" o={0.6 * (1 - fe(a('role'), 0.5))} fill={C.primary} />
+      <Lbl x={ca.x - 30} y={cy - H - 74} text="carrier protein" anchor="end" o={fi(a('open'), 0.4)} size={24} lx={ca.x - 0.5 * u} ly={cy - H + 6} />
       {gOn && <GlucoseTok x={g[0]} y={g[1]} r={13} />}
-      <Lbl x={g0[0] - 26} y={g0[1] - 26} text="glucose (polar)" anchor="end" o={fi(a('glu'), 0.4) * (1 - fe(a('needs'), 0.5))} size={20} fill="#A4561A" />
-      <Txt x={ca.x - 60} y={Lf.bottom + 62} size={17} weight={600} fill={C.muted} italic anchor="middle" opacity={fi(a('example'), 0.5) * (1 - fe(a('handoff'), 0.5))}>our example; which carrier, which direction and whether energy is used: 4.2.1</Txt>
+      <Lbl x={g0[0] - 26} y={g0[1] - 46} text="glucose (polar)" anchor="end" o={fi(a('glu'), 0.4) * (1 - fe(a('needs'), 0.5))} size={20} fill="#A4561A" />
+      <Txt x={Lf.x0 + 10} y={Lf.bottom + 90} size={20} weight={600} fill={C.muted} italic opacity={fi(a('example'), 0.5) * (1 - fe(a('handoff'), 0.5))}>our example; which carrier, which direction</Txt>
+      <Txt x={Lf.x0 + 10} y={Lf.bottom + 116} size={20} weight={600} fill={C.muted} italic opacity={fi(a('example'), 0.5) * (1 - fe(a('handoff'), 0.5))}>and whether energy is used: 4.2.1</Txt>
       <InkRing cx={ca.x} cy={cy - 1.6 * u} rx={0.7 * u} ry={1.1 * u} p={fe(a('site'), 0.5)} opacity={1 - fe(a('bind'), 0.5)} />
-      <Lbl x={ca.x - 1.6 * u} y={cy - 2.0 * u} text="binding site" anchor="end" o={fi(a('site'), 0.4) * (1 - fe(a('handoff'), 0.5))} size={20} lx={ca.x - 0.3 * u} ly={cy - 1.4 * u} />
-      <Pill x={ca.x + 1.4 * u} y={cy - 0.4 * u} text="process: 4.2.1" o={fi(a('bind'), 0.4) * (1 - fe(a('flip'), 0.3))} />
-      <Pill x={ca.x + 1.4 * u} y={cy - 0.4 * u} text="preview; process: 4.2.1" o={fi(a('flip'), 0.3) * (1 - fe(a('role'), 0.5))} fill={C.primary} />
-      {['when', 'which direction', 'energy?'].map((w, i) => <Pill key={w} x={ca.x - 300 + i * 190} y={Lf.bottom + 72} text={w + ' · 4.2.1'} o={fi(a('handoff') - i * 0.3, 0.4)} />)}
+      <Lbl x={ca.x + 2.4 * u} y={cy - H - 36} text="binding site" o={fi(a('site'), 0.4) * (1 - fe(a('handoff'), 0.5))} size={20} lx={ca.x - 0.3 * u} ly={cy - 1.4 * u} />
+      <Pill x={Lf.x0 + 10} y={Lf.bottom + 52} text="process: 4.2.1" o={fi(a('bind'), 0.4) * (1 - fe(a('flip') + 0.3, 0.3))} />
+      <Pill x={Lf.x0 + 10} y={Lf.bottom + 52} text="preview; process: 4.2.1" o={fi(a('flip') - 0.05, 0.3) * (1 - fe(a('role'), 0.5))} fill={C.primary} />
+      {['when', 'which direction', 'energy?'].map((w, i, arr) => <Pill key={w} x={Lf.x0 + 10 + arr.slice(0, i).reduce((acc, q) => acc + textW(q + ' · 4.2.1', 20, 700) + 22 + 14, 0)} y={Lf.bottom + 196} text={w + ' · 4.2.1'} o={fi(a('handoff') - i * 0.3, 0.4)} />)}
       {na && na.tok && <IonTok x={ch.x} y={cy + na.ty * u} r={9} />}
       <Lbl x={(ch.x + ca.x) / 2} y={Lf.bottom + 130} text="transport: channel proteins and carrier proteins" anchor="middle" o={fi(a('both'), 0.5)} size={23} fill={T4.proteinEdge} />
       {fi(a('both'), 0.5) > 0 && <path data-role="decor" d={`M${ch.x} ${Lf.bottom + 30}V${Lf.bottom + 104}H${ca.x}V${Lf.bottom + 30}`} stroke={T4.proteinEdge} strokeWidth={2.5} fill="none" opacity={fi(a('both'), 0.5)} />}
-      <Cite x={1040} y={930} text={SCHEM + '; ' + PARTS} anchor="end" />
+      <Cite x={1850} y={944} text={SCHEM + '; ' + PARTS} anchor="end" />
     </g>
   );
 }

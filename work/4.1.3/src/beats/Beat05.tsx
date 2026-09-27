@@ -18,9 +18,9 @@ export default function Beat05(s: any) {
   let n1: number[] = hover;
   if (a('reach') >= 0) n1 = turnBack(a('reach') - 0.2, hover[0], hover[1], Lf.outerHead + 0.55 * u);
   if (a('chan') >= 0) n1 = path(a('chan'), [[0, hover[0], hover[1]], [1.2, ch.x, mouth - 0.6 * u]]);
-  if (a('pass') >= 0) { const p = channelPass(a('pass'), 1.2, 0, 1); n1 = [ch.x, (mouth - 0.6 * u) + ((cy + H + 1.2 * u) - (mouth - 0.6 * u)) * p.ty]; }
+  if (a('pass') >= 0) { const p = channelPass(a('pass'), 1.2, 0, 1); n1 = [ch.x, (mouth - 0.6 * u) + ((cy + H + 0.55 * u) - (mouth - 0.6 * u)) * p.ty]; }
   const n1on = a('pass') < 1.6;
-  const n2 = a('particular') >= 0 ? path(a('particular') - 0.3, [[0, ch.x + 1.2 * u, Lf.top - 1.6 * u], [0.6, ch.x, mouth - 0.4 * u], [1.8, ch.x, cy + H + 1.2 * u]]) : null;
+  const n2 = a('particular') >= 0 ? path(a('particular') - 0.3, [[0, ch.x + 1.2 * u, Lf.top - 1.6 * u], [0.6, ch.x, mouth - 0.4 * u], [1.8, ch.x, cy + H + 0.55 * u]]) : null;
   const hl = fe(a('role'), 0.5) * (1 - fe(a('shape') - 2.6, 0.6));
   const lining = pulse(a('lining'), 1.4), pore = fi(a('pore'), 0.4);
   const ghost = fe(a('shape'), 0.6);
@@ -34,10 +34,11 @@ export default function Beat05(s: any) {
       {n1on && <IonTok x={n1[0]} y={n1[1]} r={9} />}
       {n2 && a('particular') < 2.2 && <IonTok x={n2[0]} y={n2[1]} r={9} />}
       <InkRing cx={hover[0]} cy={hover[1]} rx={26} ry={26} p={fe(a('open'), 0.5)} opacity={1 - fe(a('reach'), 0.4)} />
-      <Lbl x={ch.x - 60} y={cy - H - 60} text="channel protein" anchor="end" o={fi(a('chan'), 0.4)} size={24} lx={ch.x - W} ly={cy - H + 10} />
+      <Lbl x={ch.x - 40} y={cy - H - 64} text="channel protein" o={fi(a('chan'), 0.4)} size={24} lx={ch.x - W} ly={cy - H + 10} />
       <Bracket x={ch.x + W + 12} y0={cy - H} y1={cy + H} side={-1} o={fi(a('span'), 0.4)} color={C.teal} />
-      <Txt x={ch.x - 60} y={Lf.bottom + 60} size={17} weight={600} fill={C.muted} italic opacity={fi(a('span'), 0.5) * (1 - fe(a('pore'), 0.4))}>intrinsic proteins are embedded in the bilayer; this channel spans it (a transmembrane protein)</Txt>
-      <Lbl x={ch.x - 60} y={Lf.bottom + 60} text="hydrophilic pore (water-filled)" o={pore} size={22} fill={T4.proteinEdge} lx={ch.x} ly={cy + 0.4 * u} />
+      <Txt x={Lf.x0 + 10} y={Lf.bottom + 62} size={20} weight={600} fill={C.muted} italic opacity={fi(a('span'), 0.5) * (1 - fe(a('pore'), 0.4))}>intrinsic proteins are embedded in the bilayer;</Txt>
+      <Txt x={Lf.x0 + 10} y={Lf.bottom + 88} size={20} weight={600} fill={C.muted} italic opacity={fi(a('span'), 0.5) * (1 - fe(a('pore'), 0.4))}>this channel spans it (a transmembrane protein)</Txt>
+      <Lbl x={ch.x + 40} y={Lf.bottom + 62} text="hydrophilic pore (water-filled)" o={fi(a('pore') - 0.4, 0.4)} size={22} fill={T4.proteinEdge} lx={ch.x} ly={cy + 0.4 * u} />
       <Pill x={ch.x + 1.3 * u} y={Lf.bottom + 104} text="process: 4.2.1" o={fi(a('pass'), 0.4)} />
       {[p3, p4].map((p, i) => <InkRing key={i} cx={p.x} cy={cy} rx={0.6 * u} ry={1.5 * u} p={fe(a('untouched') - i * 0.2, 0.5)} opacity={1 - fe(a('untouched') - 1.8, 0.5)} color={C.teal} />)}
       {/* a second, different channel (inset) */}
@@ -54,9 +55,9 @@ export default function Beat05(s: any) {
       </g>}
       {ghost > 0 && <g opacity={ghost}>
         <path data-role="decor" d={roundRect(ch.x - W, cy - H, ch.x - PROT.poreW * u / 2, cy + H, 0.32 * u) + roundRect(ch.x + PROT.poreW * u / 2, cy - H, ch.x + W, cy + H, 0.32 * u)} fill="none" stroke={C.primary} strokeWidth={3} strokeDasharray="8 6" />
-        <Pill x={ch.x + W + 30} y={cy - H - 20} text="no change of shape" fill={C.primary} />
+        <Pill x={ch.x + 170} y={cy - H - 70} text="no change of shape" fill={C.primary} />
       </g>}
-      <Cite x={1040} y={930} text={SCHEM + '; ' + PARTS} anchor="end" />
+      <Cite x={1850} y={944} text={SCHEM + '; ' + PARTS} anchor="end" />
     </g>
   );
 }

@@ -40,8 +40,8 @@ export default function Beat12(s: any) {
       {tag('gp', 560, 762, 'glycoproteins: receptors, recognition, stability', gp.x + 0.4 * u, cy + H, '#35652B')}
       {tag('gl', 560, 798, 'glycolipids: recognition, stability', gl.x + 0.3 * u, Lf.innerHead + 0.4 * u, '#35652B')}
       <Txt x={560} y={870} size={24} weight={800} anchor="middle" opacity={fi(a('six'), 0.5)}>six roles · five kinds of molecule · one membrane</Txt>
-      <Txt x={1040} y={236} size={18} weight={700} fill={C.muted} anchor="end" opacity={fi(a('open'), 0.5)}>recap: the same membrane</Txt>
-      <Cite x={1040} y={948} text={SCHEM} anchor="end" />
+      <Txt x={836} y={236} size={20} weight={700} fill={C.muted} anchor="end" opacity={fi(a('open'), 0.5)}>recap: the same membrane</Txt>
+      <Cite x={1850} y={944} text={SCHEM} anchor="end" />
     </g>
   );
 }

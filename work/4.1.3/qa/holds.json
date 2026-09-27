@@ -16,7 +16,14 @@
   },
   {
     "beat": 4,
-    "holds": [],
+    "holds": [
+      {
+        "atSample": 2334240,
+        "samples": 96000,
+        "seconds": 2.0,
+        "before": "The membrane isn't a film"
+      }
+    ],
     "speechUnchanged": true
   },
   {

@@ -3,7 +3,9 @@
 //      1920x1080 frame: source font-size × every ancestor transform scale × the branding slot scale (950/1080).
 //      Letters inside drawings (L/R, ATP, charges, captions) count exactly like labels.
 //   2. OVERLAP (vector): no two visible text boxes intersect; no leader/connector/arrow line (decor path/line) crosses
-//      a text box unless one end of that line is attached to the box (its own leader, underline or strike).
+//      a text box unless one end of that line is attached to the box (its own leader, underline or strike); the border
+//      of a stroked box (card, pill, inset frame) may never run through a text box.
+//   2b. FRAME: no visible text box leaves the content area (x 60–1860) or the frame.
 //   3. OVERLAP (raster): no text box that is not itself part of a drawing sits on drawn geometry: the frame is re-rasterised
 //      with ONLY data-role="drawing" shapes (particle fields tagged data-field are background, like the page) and the
 //      opaque pixels inside each text box are counted.
@@ -92,6 +94,11 @@ function parse(svg) {
     if (SHAPES.has(tag) && e.role !== 'drawing' && !e.inText && !e.defs && e.op >= OP_MIN) {
       const sw = Number(A['stroke-width'] || 1), stroked = A.stroke && A.stroke !== 'none', filled = A.fill && A.fill !== 'none';
       let polys = null;
+      if (tag === 'rect' && stroked && Number(A.width) > 0 && Number(A.height) > 0) {
+        // a card / box / pill border: its four edges may not run through any text box (no attachment exemption)
+        const x = Number(A.x || 0), y = Number(A.y || 0), w = Number(A.width), h = Number(A.height), r = Math.min(Number(A.rx || 0), w / 2, h / 2);
+        for (const pl of [[[x + r, y], [x + w - r, y]], [[x + w, y + r], [x + w, y + h - r]], [[x + w - r, y + h], [x + r, y + h]], [[x, y + h - r], [x, y + r]]]) lines.push({pts: pl.map((q) => ap(e.m, q[0], q[1])), op: e.op, sw, border: true});
+      }
       if (tag === 'line') polys = [[[Number(A.x1), Number(A.y1)], [Number(A.x2), Number(A.y2)]]];
       else if (tag === 'path' && stroked && !filled) polys = flatten(A.d);
       if (polys) for (const pl of polys) if (pl.length > 1) lines.push({pts: pl.map((q) => ap(e.m, q[0], q[1])), op: e.op, sw});
@@ -118,6 +125,7 @@ async function audit(svg, opts = {}) {
   const V = [];
   let minEff = Infinity;
   for (const t of texts) if (t.op > 0) { minEff = Math.min(minEff, t.eff); if (t.eff < MIN_PX - 1e-9) V.push({type: 'size', text: t.s.slice(0, 60), eff: +t.eff.toFixed(2), src: t.src, scale: +t.scale.toFixed(3)}); }
+  for (const t of texts) if (t.op >= OP_MIN && (t.box[0] < 60 || t.box[2] > 1860 || t.box[1] < 0 || t.box[3] > 1080)) V.push({type: 'off-frame', text: t.s.slice(0, 50), box: t.box.map((v) => Math.round(v))});
   const vis = texts.filter((t) => t.op >= OP_MIN);
   // dedupe halos (a stroked copy under the same text)
   const uniq = [];
@@ -129,7 +137,7 @@ async function audit(svg, opts = {}) {
     const B = grow(t.box, -2), att = grow(t.box, 18);
     for (const L of lines) {
       const ends = [L.pts[0], L.pts[L.pts.length - 1]];
-      if (ends.some((p) => inBox(p, att))) continue;
+      if (!L.border && ends.some((p) => inBox(p, att))) continue;
       for (let k = 1; k < L.pts.length; k++) if (segHitsBox(L.pts[k - 1], L.pts[k], B)) { V.push({type: 'line-text', text: t.s.slice(0, 50), at: L.pts[k].map((v) => Math.round(v))}); break; }
     }
   }

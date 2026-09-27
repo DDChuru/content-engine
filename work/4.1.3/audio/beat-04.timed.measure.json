@@ -1,9 +1,9 @@
 {
   "id": 4,
-  "words": 107,
-  "seconds": 52.012708333333336,
-  "samples": 2496610,
-  "wpm": 123.43137294170894,
+  "words": 148,
+  "seconds": 69.75583333333333,
+  "samples": 3348280,
+  "wpm": 131.0588264233092,
   "voice_id": "BcpjRWrYhDBHmOnetmBl",
   "model_id": "eleven_multilingual_v2",
   "settings": {
@@ -16,7 +16,14 @@
   "sample_rate": 48000,
   "time_stretched": false,
   "requestDiffers": false,
-  "mp3_sha256": "5fde79e4fa8e7f5bae4743949b49b8d045db54fc4ee4e56a2d6b56519f222040",
-  "originalSeconds": 52.012708333333336,
-  "holds": []
+  "mp3_sha256": "3bb3afa3a143e86eed68314c8438033a4ccf2f2eb0f650b11a585c9f3bb4ffe6",
+  "originalSeconds": 67.75583333333333,
+  "holds": [
+    {
+      "atSample": 2334240,
+      "samples": 96000,
+      "seconds": 2.0,
+      "before": "The membrane isn't a film"
+    }
+  ]
 }

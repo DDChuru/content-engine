@@ -1,33 +1,41 @@
 {
-  "1_ffprobeDuration": 537.133333,
+  "1_ffprobeDuration": 546.833333,
   "2_videoCoversAudio": {
-    "video": 537.133333,
-    "encodedAudio": 536.133,
+    "video": 546.833333,
+    "encodedAudio": 545.833,
     "marginSeconds": 1.0,
-    "videoFrames": 16114
+    "videoFrames": 16405
   },
   "3_fullDecodeErrors": 0,
   "4_cues": {
-    "matched": 136,
-    "total": 136,
-    "planned": 136
+    "matched": 139,
+    "total": 139,
+    "planned": 139
   },
   "5_audioPacketsUnchanged": {
-    "packets": 25133,
+    "packets": 25587,
     "identical": true
   },
   "6_finalWord": {
     "word": "core.",
-    "endsAt": 533.18,
-    "audioEnds": 536.133,
+    "endsAt": 542.88,
+    "audioEnds": 545.833,
     "headroom": 2.953,
-    "afterWordMaxDb": -61.4
+    "afterWordMaxDb": -61.7
   },
   "7_silentReads": [
     {
+      "beat": 5,
+      "before": "That's a memory aid",
+      "start": 156.333,
+      "seconds": 2.0,
+      "pcmAllZero": true,
+      "encodedInteriorMaxDb": -91.0
+    },
+    {
       "beat": 13,
       "before": "END",
-      "start": 533.623,
+      "start": 543.323,
       "seconds": 2.0,
       "pcmAllZero": true,
       "encodedInteriorMaxDb": -91.0
@@ -38,9 +46,9 @@
   "8_boundaries": {
     "master": "/home/user/content-engine/work/4.1.1-2/4.1.1-2-fluid-mosaic.mp4",
     "timeline": "/home/user/content-engine/work/4.1.1-2/timeline.json",
-    "master_bytes": 157846687,
+    "master_bytes": 162318923,
     "fps": 30.0,
-    "frame_count": 16114,
+    "frame_count": 16405,
     "boundaries_tested": 12,
     "candidate_count": 0,
     "candidate_beats": [],
@@ -59,9 +67,9 @@
     "limits": "Candidates, not proof. Deliberate one-frame holds can match; identical layouts can hide a lookup error. Subtle/animated holds can evade thresholds. Requires unshifted CFR master."
   },
   "markerAudit": {
-    "framesChecked": 16114,
+    "framesChecked": 16405,
     "marked": 0,
-    "unmarked": 16114,
+    "unmarked": 16405,
     "intervals": [],
     "badgeTextMae": {
       "commonMaeMax": 0.0,
@@ -71,10 +79,83 @@
   },
   "longestUnchangedVisual": {
     "beat": 12,
-    "startFrame": 14223,
+    "startFrame": 14514,
     "seconds": 7.266666666666667
   },
   "unchangedOver15s": [],
+  "labelAudit": {
+    "rule": "every text node >= 17 px after branding (x 950/1080), transforms included, no exemptions; no text/leader/geometry overlap; nothing off the content area",
+    "framesChecked": 16405,
+    "minEffectivePx": 17.59,
+    "violations": 0,
+    "beats": [
+      {
+        "beat": 1,
+        "frames": 1196,
+        "minEffectivePx": 17.59
+      },
+      {
+        "beat": 2,
+        "frames": 669,
+        "minEffectivePx": 17.59
+      },
+      {
+        "beat": 3,
+        "frames": 1109,
+        "minEffectivePx": 17.59
+      },
+      {
+        "beat": 4,
+        "frames": 1281,
+        "minEffectivePx": 17.59
+      },
+      {
+        "beat": 5,
+        "frames": 1704,
+        "minEffectivePx": 17.59
+      },
+      {
+        "beat": 6,
+        "frames": 1398,
+        "minEffectivePx": 17.59
+      },
+      {
+        "beat": 7,
+        "frames": 1228,
+        "minEffectivePx": 17.59
+      },
+      {
+        "beat": 8,
+        "frames": 1243,
+        "minEffectivePx": 17.59
+      },
+      {
+        "beat": 9,
+        "frames": 1056,
+        "minEffectivePx": 17.59
+      },
+      {
+        "beat": 10,
+        "frames": 1247,
+        "minEffectivePx": 17.59
+      },
+      {
+        "beat": 11,
+        "frames": 1154,
+        "minEffectivePx": 17.59
+      },
+      {
+        "beat": 12,
+        "frames": 1556,
+        "minEffectivePx": 17.59
+      },
+      {
+        "beat": 13,
+        "frames": 1564,
+        "minEffectivePx": 17.59
+      }
+    ]
+  },
   "valenceAudit": "not applicable: no covalent bond is made or broken on screen (Topic 4: membrane assembly, lateral drift and insertion are non-covalent motion)",
-  "sha256": "29f77af37632d1bbf408648ed6347e6a5a92434005c85003e72f6752d86e91de"
+  "sha256": "7291d5ebee948c09b369900dbfc61ea203ef09d4920cbee8d538e6fe108ab2b4"
 }

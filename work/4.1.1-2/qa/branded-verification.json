@@ -1,0 +1,30 @@
+{
+  "master": "4.1.1-2-fluid-mosaic.mp4",
+  "masterVideoDur": 546.833333,
+  "raw": {
+    "videoStart": 0.0,
+    "videoDur": 557.833333,
+    "videoEnd": 557.833333,
+    "audioStart": 0.0,
+    "audioDur": 557.862,
+    "audioEnd": 557.862,
+    "videoFrames": 16735,
+    "formatDur": 557.862
+  },
+  "padSeconds": 0.229,
+  "final": {
+    "videoStart": 0.0,
+    "videoDur": 558.066667,
+    "videoEnd": 558.066667,
+    "audioStart": 0.0,
+    "audioDur": 557.862,
+    "audioEnd": 557.862,
+    "videoFrames": 16742,
+    "formatDur": 558.066667
+  },
+  "videoMinusAudioEnd": 0.205,
+  "brandedMinusMaster": 11.233,
+  "fullDecodeErrors": 0,
+  "sha256": "80b83e8f143adfc8608a9e88789c0f005913e154f0267fc75b50cfc4381e63b7",
+  "audioPacketsFromRaw": "copied (-c:a copy): the audio stream is the branded audio unchanged"
+}

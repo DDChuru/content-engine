@@ -134,7 +134,7 @@ Planning time is spoken narration at 120 words per minute plus explicitly timed 
 
 ### BEAT 4 · Permeability: the hydrophobic core · 2:00–2:54
 **Narration:**
-> Start with the phospholipids and permeability. The middle of the bilayer is the tails: non-polar, hydrophobic, with very little water in it. Small non-polar molecules such as oxygen and carbon dioxide pass straight through; oxygen enters a red blood cell across its bilayer this way. Sodium ions and glucose interact strongly with water; entering the hydrophobic core is unfavourable for them, so they do not cross it readily. Keep the image of oil and water, which don't mix. Written properly: small non-polar molecules cross the phospholipid bilayer, but its hydrophobic core is a barrier to ions and polar molecules. That is why the membrane is partially permeable.
+> Start with the phospholipids and permeability. The middle of the bilayer is the tails: non-polar, hydrophobic, with very little water in it. Small non-polar molecules such as oxygen and carbon dioxide pass straight through; oxygen enters a red blood cell across its bilayer this way. Sodium ions and glucose interact strongly with water; entering the hydrophobic core is unfavourable for them, so they do not cross it readily. Keep the image of oil and water, which don't mix. Oil: the non-polar tails in the core. Water: the watery solutions on each side, holding the ions and glucose. They don't mix, so those stay out of the core. The membrane isn't a film of oil; only its core is oil-like. Written properly: small non-polar molecules cross the phospholipid bilayer, but its hydrophobic core is a barrier to ions and polar molecules. That is why the membrane is partially permeable.
 
 **Visual action:**
 1. **From the first frame**, `FluidMosaicMembrane` in `highlight:` on the phospholipids (every protein, cholesterol and chain dimmed to 50%) at left, the `RoleGrid` at right; at *Start with the phospholipids and permeability*, the grid's **phospholipids** row and **permeability** column light.
@@ -144,6 +144,7 @@ Planning time is spoken narration at 120 words per minute plus explicitly timed 
 5. At *Sodium ions and glucose interact strongly with water*, a Na⁺ token and a glucose hexagon appear in the outside region, each ringed by a halo of pale blue water tokens, label *surrounded by water (schematic)*.
 6. At *entering the hydrophobic core is unfavourable for them*, each token approaches the heads, meets the tails and rebounds back into the outside (motion); at *do not cross it readily*, tag **barrier to ions and polar molecules**.
 7. At *Keep the image of oil and water*, a small inset at lower left shows oil drops sitting apart on water in a beaker icon, tag *handle, not the exam answer*.
+7a. *(008f memory-hook revision, RULE-MEMORY-HOOKS)* At *Oil: the non-polar tails*, the word **oil** and the oil drops in the inset light (ochre) together with the tail region of the membrane (ochre wash), a connector joining them. At *Water: the watery solutions*, the word **water** and the inset's water light (blue) together with the watery outside and cytoplasm (blue wash) and the water-haloed Na⁺ and glucose tokens, a second connector. At *so those stay out of the core*, both links stay lit: **2 s hold** on the completed mapping (digital silence). At *isn't a film of oil*, small type *the image is for the core only; a membrane is not a layer of oil*.
 8. At *Written properly*, the sentence surface slides up beneath the membrane; at *small non-polar molecules cross the phospholipid bilayer*, the first clause builds with the O₂ tokens brightening; at *its hydrophobic core is a barrier*, the second clause builds with the rebounding tokens brightening: **Small non-polar molecules cross the phospholipid bilayer, but its hydrophobic core is a barrier to ions and polar molecules.**
 9. At *partially permeable*, the label **partially permeable** lands on the membrane; the grid cell *phospholipids × permeability* fills: **hydrophobic core: barrier to ions and polar molecules**.
 
@@ -529,3 +530,11 @@ Check: `r1/4.1.3/CHECK.md`, verdict CLEARED WITH MINOR EDITS; reviewed SHA-256 `
 | SF5 | applied | Datasets: model timings are "build instructions (animation durations), not numbers shown to the learner; the student-facing model caption remains *schematic; not to scale*". |
 
 New validator TOTAL: `TOTAL words 1201  cues 138  runtime at 120 wpm 10:00.5  beats 13  failing beats 0`. Planned whole-video duration including silence: 604.5 s (10:04.5).
+
+
+## 008f REVISION (memory hook, RULE-MEMORY-HOOKS, 27 Sep 2026)
+Narration changed ONLY in Beat 4's hook: after *"Keep the image of oil and water, which don't mix."* added *"Oil: the
+non-polar tails in the core. Water: the watery solutions on each side, holding the ions and glucose. They don't mix,
+so those stay out of the core. The membrane isn't a film of oil; only its core is oil-like."*, with a 2 s silent hold on
+the completed mapping before *"The membrane isn't a film of oil"*. Every other sentence is unchanged; Beat 4 alone was
+re-voiced. Visual action 7a added.

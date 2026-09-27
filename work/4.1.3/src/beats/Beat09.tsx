@@ -50,7 +50,7 @@ export default function Beat09(s: any) {
         return <g key={i + '-' + k} opacity={hb}><path data-role="drawing" d={`M${x} ${y}L${wx} ${wy}`} stroke={T4.waterEdge} strokeWidth={2} strokeDasharray="4 4" opacity={on} /><WaterTok x={wx} y={wy} r={6} /></g>;
       }))}
       <Txt x={cx + 200} y={Lf.bottom + 110} size={18} weight={700} fill={T4.waterEdge} anchor="middle" opacity={hb}>dashed lines: hydrogen bonds (schematic)</Txt>
-      <Cite x={1040} y={948} text={SCHEM} anchor="end" />
+      <Cite x={1850} y={944} text={SCHEM} anchor="end" />
     </g>
   );
 }

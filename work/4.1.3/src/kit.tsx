@@ -131,7 +131,7 @@ export {C, Txt, Lines, Card, Cite, textW, T4, clamp01};
 import {PhospholipidToken} from './PhospholipidToken';
 import {Cholesterol, Glycolipid, BeadChain} from './FluidMosaicMembrane';
 /** 4.1.3 stage: membrane at the left two-thirds, RoleGrid at the right. */
-export const L3 = {cx: 560, cy: 440, u: 44, xw: [80, 1040]};
+export const L3 = {cx: 452, cy: 450, u: 36, xw: [74, 836]};   // 008f: smaller membrane so the grid's text can be ≥ 20 px
 export const ROWS = ['phospholipids', 'cholesterol', 'glycolipids', 'proteins', 'glycoproteins'];
 export const COLS = ['stability', 'fluidity', 'permeability', 'transport', 'cell signalling', 'cell recognition'];
 export const CELLS: Record<string, string> = {
@@ -153,17 +153,17 @@ export function wrap(text: string, w: number, size: number, weight = 600) {
   for (const word of text.split(' ')) { const tryL = line ? line + ' ' + word : word; if (textW(tryL, size, weight) > w && line) { out.push(line); line = word; } else line = tryL; }
   if (line) out.push(line); return out;
 }
-export const GRID = {x: 1060, y: 206, w: 790, hdr: 58, rowH: 138, rowW: 176};
+export const GRID = {x: 852, y: 206, w: 998, hdr: 62, rowH: 124, rowW: 140};
 export const cellBox = (row: string, col: string) => {
   const cw = (GRID.w - GRID.rowW) / 6, r = ROWS.indexOf(row), c = COLS.indexOf(col);
   return {x: GRID.x + GRID.rowW + c * cw, y: GRID.y + GRID.hdr + r * GRID.rowH, w: cw, h: GRID.rowH};
 };
 function RowIcon({k, x, y, t}: any) {
-  if (k === 'phospholipids') return <PhospholipidToken x={x} y={y - 22} u={24} />;
-  if (k === 'cholesterol') return <Cholesterol x={x} y={y - 26} u={34} dir={1} />;
-  if (k === 'glycolipids') return <Glycolipid x={x} y={y - 4} u={20} t={t} />;
-  if (k === 'proteins') return <g data-role="drawing"><rect x={x - 13} y={y - 34} width={26} height={62} rx={9} fill={T4.protein} stroke={T4.proteinEdge} strokeWidth={2} /></g>;
-  return <g data-role="drawing"><rect x={x - 11} y={y - 22} width={22} height={52} rx={8} fill={T4.protein} stroke={T4.proteinEdge} strokeWidth={2} /><BeadChain x={x} y={y - 22} u={26} n={3} t={t} /></g>;
+  if (k === 'phospholipids') return <PhospholipidToken x={x} y={y - 20} u={20} />;
+  if (k === 'cholesterol') return <Cholesterol x={x} y={y - 26} u={30} dir={1} />;
+  if (k === 'glycolipids') return <Glycolipid x={x} y={y - 8} u={17} t={t} />;
+  if (k === 'proteins') return <g data-role="drawing"><rect x={x - 11} y={y - 30} width={22} height={50} rx={8} fill={T4.protein} stroke={T4.proteinEdge} strokeWidth={2} /></g>;
+  return <g data-role="drawing"><rect x={x - 9} y={y - 14} width={18} height={36} rx={7} fill={T4.protein} stroke={T4.proteinEdge} strokeWidth={2} /><BeadChain x={x} y={y - 14} u={22} n={3} t={t} /></g>;
 }
 /** RoleGrid (lesson panel published by 4.1.3): 5 components × 6 roles. `fill[key]` 0..1 per cell ('row|col'; the
  * transport cell also takes 'proteins|transport:half' for its first half), `rowLit`/`colLit` 0..1, `hi[key]` pulse. */
@@ -176,14 +176,14 @@ export function RoleGrid({fill = {}, rowLit = {}, colLit = {}, hi = {}, o = 1, t
       {COLS.map((c, i) => { const L = rowLit && colLit[c] ? colLit[c] : 0; return (
         <g key={c}>
           {L > 0 && <rect data-role="decor" x={x + rowW + i * cw + 2} y={y + 2} width={cw - 4} height={H - 4} rx={8} fill="#FFF3C4" opacity={0.75 * L} />}
-          {wrap(c, cw - 10, 17, 700).map((ln, j, arr) => <Txt key={j} x={x + rowW + i * cw + cw / 2} y={y + hdr / 2 + 6 - (arr.length - 1) * 9 + j * 19} size={17} weight={700} anchor="middle" fill={L > 0.3 ? C.primary : C.ink}>{ln}</Txt>)}
+          {wrap(c, cw - 10, 20, 700).map((ln, j, arr) => <Txt key={j} x={x + rowW + i * cw + cw / 2} y={y + hdr / 2 + 7 - (arr.length - 1) * 11 + j * 22} size={20} weight={700} anchor="middle" fill={L > 0.3 ? C.primary : C.ink}>{ln}</Txt>)}
         </g>); })}
       {ROWS.map((r, j) => { const L = rowLit[r] ?? 0, yy = y + hdr + j * rowH; return (
         <g key={r}>
           {L > 0 && <rect data-role="decor" x={x + 2} y={yy + 2} width={w - 4} height={rowH - 4} rx={8} fill="#FFF3C4" opacity={0.75 * L} />}
           <path data-role="decor" d={`M${x + 10} ${yy}H${x + w - 10}`} stroke={C.line} strokeWidth={1.5} />
-          <RowIcon k={r} x={x + 36} y={yy + rowH / 2} t={t} />
-          {wrap(r, 110, 17, 700).map((ln, i) => <Txt key={i} x={x + 62} y={yy + rowH / 2 + 6 + i * 19} size={17} weight={700} fill={L > 0.3 ? C.primary : C.ink}>{ln}</Txt>)}
+          <RowIcon k={r} x={x + rowW / 2} y={yy + 50} t={t} />
+          <Txt x={x + rowW / 2} y={yy + rowH - 16} size={20} weight={700} anchor="middle" fill={L > 0.3 ? C.primary : C.ink}>{r}</Txt>
         </g>); })}
       {COLS.map((_, i) => <path key={'v' + i} data-role="decor" d={`M${x + rowW + i * cw} ${y + 8}V${y + H - 8}`} stroke={C.line} strokeWidth={1.5} />)}
       {ROWS.map((r) => COLS.map((c) => {
@@ -191,15 +191,15 @@ export function RoleGrid({fill = {}, rowLit = {}, colLit = {}, hi = {}, o = 1, t
         let f = fill[key] ?? 0, text = txt;
         if (key === 'proteins|transport' && f <= 0 && (fill['proteins|transport:half'] ?? 0) > 0) { f = fill['proteins|transport:half']; text = 'channel proteins'; }
         const h = hi[key] ?? 0;
-        if (!txt || f <= 0) return <Txt key={key} x={b.x + b.w / 2} y={b.y + b.h / 2 + 6} size={18} weight={600} fill="#C9C2B3" anchor="middle">—</Txt>;
-        const lines = wrap(text, b.w - 12, 15, 700);
+        if (!txt || f <= 0) return <Txt key={key} x={b.x + b.w / 2} y={b.y + b.h / 2 + 6} size={20} weight={600} fill="#C9C2B3" anchor="middle">—</Txt>;
+        const lines = wrap(text, b.w - 12, 20, 600);
         return (
           <g key={key} opacity={(f < 1 ? f : 1) * (1 - dimCells * 0.5)}>
             <rect data-role="decor" x={b.x + 4} y={b.y + 5} width={b.w - 8} height={b.h - 10} rx={8} fill={h > 0 ? '#FBD9CE' : '#EAF5EE'} stroke={h > 0 ? C.primary : '#9CCBB0'} strokeWidth={h > 0 ? 2.5 : 1.5} />
-            {lines.map((ln, i) => <Txt key={i} x={b.x + b.w / 2} y={b.y + b.h / 2 + 5 - (lines.length - 1) * 9 + i * 18} size={15} weight={700} anchor="middle" fill="#1D5A38">{ln}</Txt>)}
+            {lines.map((ln, i) => <Txt key={i} x={b.x + b.w / 2} y={b.y + b.h / 2 + 7 - (lines.length - 1) * 11 + i * 22} size={20} weight={600} anchor="middle" fill="#1D5A38">{ln}</Txt>)}
           </g>);
       }))}
-      <Cite x={x + w} y={y + H + 24} text="roles named in syllabus 4.1.3 (p.21)" anchor="end" />
+      <Cite x={x + w} y={y + H + 26} text="roles named in syllabus 4.1.3 (p.21)" anchor="end" />
     </g>
   );
 }
@@ -229,8 +229,8 @@ export function gridFill(s: any) {
 /** Region labels for the 4.1.3 stage. */
 export function Regions3({o = 1, cy = L3.cy, u = L3.u}: any) {
   return <g>
-    <Lbl x={250} y={236} text="outside the cell (watery)" o={o} size={21} fill={C.teal} />
-    <Lbl x={250} y={cy + 2.3 * u + 84} text="cytoplasm (watery)" o={o} size={21} fill={C.teal} />
+    <Lbl x={836} y={236} text="outside the cell (watery)" anchor="end" o={o} size={21} fill={C.teal} />
+    <Lbl x={836} y={cy + 2.3 * u + 40} text="cytoplasm (watery)" anchor="end" o={o} size={21} fill={C.teal} />
   </g>;
 }
 import {plPos} from './FluidMosaicMembrane';
