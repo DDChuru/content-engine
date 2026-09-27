@@ -1,23 +1,25 @@
 import React from 'react';
 import {fi, fe, pulse} from '../util';
-import {gt, Lbl, Pill, Scene, SS, C, Txt, Cite, SCHEM, sceneAges, receptorSites, CUE, clamp01} from '../kit';
+import {gt, Lbl, Pill, Scene, SS, C, Txt, Cite, SCHEM, sceneAges, receptorSites, CUE, clamp01, wrapText as wrap} from '../kit';
 import {FluidMosaicMembrane, compPos, FULL} from '../FluidMosaicMembrane';
 import {LigandA, receptorSite} from '../ReceptorLigand';
 
-/** The small close-up of the seated insulin (upper right of the scene) with the Beat 5 sentence beneath it. */
-export function MiniClose({x, y, t, edge = 0, site = 0, o = 1}: any) {
+/** The small close-up of the seated insulin with the Beat 5 sentence (008f: every text ≥ 20 px; the box is sized to
+ * the text, the membrane drawing carries no text). */
+export function MiniClose({x, y, w = 420, h = 270, t, edge = 0, site = 0, o = 1}: any) {
   if (o <= 0) return null;
-  const M = {cx: x + 135, cy: y + 100, u: 12, t, show: FULL}, r = compPos(M, 'receptor'), st = receptorSite(r.x, r.y, M.u);
+  const M = {cx: x + 130, cy: y + 88, u: 12, t, show: FULL}, r = compPos(M, 'receptor'), st = receptorSite(r.x, r.y, M.u);
+  const lines = wrap('The ligand binds to a specific receptor because their shapes are complementary.', w - 28, 20, 700);
   return (
     <g opacity={o < 1 ? o : undefined}>
-      <rect data-role="decor" x={x} y={y} width={270} height={250} rx={12} fill="#FFFFFF" stroke={C.line} strokeWidth={2} />
-      <FluidMosaicMembrane {...M} />
+      <rect data-role="decor" x={x} y={y} width={w} height={h} rx={12} fill="#FFFFFF" stroke={C.line} strokeWidth={2} />
+      <defs><clipPath id={'mini' + x}><rect x={x + 6} y={y + 6} width={250} height={170} /></clipPath></defs>
+      <g clipPath={`url(#mini${x})`}><FluidMosaicMembrane {...M} /></g>
       <LigandA x={r.x} y={st.y} u={M.u} />
       {edge > 0 && <path data-role="decor" d={`M${r.x - 0.46 * M.u} ${st.y}L${r.x} ${st.y + 0.56 * M.u}L${r.x + 0.46 * M.u} ${st.y}`} stroke="#E0892B" strokeWidth={3} fill="none" opacity={edge} />}
-      <Txt x={r.x + 16} y={y + 34} size={14} weight={800} fill={site > 0 ? C.primary : C.ink}>binding site</Txt>
-      <Txt x={x + 12} y={y + 196} size={14} weight={700}>The ligand binds to a specific receptor</Txt>
-      <Txt x={x + 12} y={y + 216} size={14} weight={700}>because their shapes are complementary.</Txt>
-      <Txt x={x + 12} y={y + 240} size={12} weight={600} fill={C.muted} italic>close-up: schematic; not to scale</Txt>
+      <Lbl x={x + w - 14} y={y + 40} text="binding site" anchor="end" size={20} fill={site > 0 ? C.primary : C.ink} lx={r.x + 0.5 * M.u} ly={st.y + 2} />
+      {lines.map((l, i) => <Txt key={i} x={x + 14} y={y + h - 38 - (lines.length - 1 - i) * 24} size={20} weight={700}>{l}</Txt>)}
+      <Txt x={x + 14} y={y + h - 12} size={20} weight={600} fill={C.muted} italic>close-up: schematic; not to scale</Txt>
     </g>
   );
 }
@@ -39,10 +41,10 @@ export default function Beat08(s: any) {
       {P('tf', 2.8) > 0 && <rect data-role="decor" x={968} y={252} width={872} height={676} rx={24} fill="none" stroke="#8A6414" strokeWidth={5} strokeDasharray="12 8" opacity={P('tf', 2.8)} />}
       <Lbl x={1000} y={292} text="tissue fluid" o={0.5 + 0.5 * P('tf', 2.8)} size={20} fill="#8A6414" />
       {P('resp', 3) > 0 && <circle data-role="decor" cx={SS.muscle.x + SS.muscle.w / 2 - 70} cy={SS.muscle.y - SS.muscle.h / 2} r={34} fill="none" stroke="#E0892B" strokeWidth={4} opacity={P('resp', 3)} />}
-      <Pill x={SS.liver.x - 20} y={SS.liver.y - SS.liver.r - 34} text="one receptor, several cell types" anchor="end" o={0.45 + 0.55 * P('share', 3.5)} fill={C.teal} size={16} />
-      <Pill x={SS.other.x + SS.other.r + 16} y={SS.other.y + 52} text="no response to insulin" o={0.45 + 0.55 * fi(a('none'), 0.4)} size={16} fill={C.primary} />
-      <Pill x={SS.liver.x + SS.liver.r + 16} y={SS.liver.y + 40} text="responds (Topic 14)" o={0.6} size={15} fill="#8A6414" />
-      <MiniClose x={1570} y={480} t={t} edge={P('comp', 4)} site={P('comp', 4)} />
+      <Pill x={1840} y={560} text="one receptor, several cell types" anchor="end" o={0.45 + 0.55 * P('share', 3.5)} fill={C.teal} size={20} />
+      <Pill x={SS.other.x - SS.other.r - 16} y={SS.other.y + 6} text="no response to insulin" anchor="end" o={0.45 + 0.55 * fi(a('none'), 0.4)} size={20} fill={C.primary} />
+      <Pill x={SS.liver.x + SS.liver.r + 16} y={SS.liver.y + 42} text="responds (Topic 14)" o={0.6} size={20} fill="#8A6414" />
+      <MiniClose x={112} y={652} t={t} edge={P('comp', 4)} site={P('comp', 4)} />
     </g>
   );
 }

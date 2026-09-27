@@ -59,9 +59,9 @@ export default function Beat01(s: any) {
       <Body t={t} flow={0.35 + 0.65 * fi(a('flow'), 0.6)} wedges={fi(a('insulin'), 0.6)} glucose={fi(a('meal'), 0.6)} pancreas={fi(a('insulin'), 0.4)} />
       {fi(a('meal'), 0.5) > 0 && <g opacity={fi(a('meal'), 0.5)}>
         <g data-role="drawing"><ellipse cx={640} cy={330} rx={56} ry={16} fill="#FFFFFF" stroke="#8E7A66" strokeWidth={3} /><ellipse cx={640} cy={326} rx={34} ry={8} fill="#E9D8B8" /></g>
-        <Pill x={590} y={384} text="blood glucose rises" fill="#A4561A" />
+        <Pill x={560} y={284} text="blood glucose rises" fill="#A4561A" />
       </g>}
-      <Lbl x={470} y={510} text="insulin" o={fi(a('insulin'), 0.4)} size={22} fill="#7D1F5A" lx={434} ly={498} />
+      <Lbl x={566} y={600} text="insulin" o={fi(a('insulin'), 0.4)} size={22} fill="#7D1F5A" lx={462} ly={502} />
       {/* magnified window: a vessel segment with three different cells */}
       <path data-role="decor" d={`M430 560L${W.x} ${W.y + 40}M430 580L${W.x} ${W.y + W.h - 40}`} stroke={C.muted} strokeWidth={1.5} strokeDasharray="6 6" />
       <rect data-role="decor" x={W.x} y={W.y} width={W.w} height={W.h} rx={18} fill="#FBF3DD" stroke={C.ink} strokeWidth={3} />
@@ -73,8 +73,8 @@ export default function Beat01(s: any) {
       </g>
       {wedgesIn > 0 && [0, 1, 2, 3, 4].map((k) => { const xx = W.x + 30 + ((t * 110 + k * 190) % (W.w - 60)); return <LigandA key={k} x={xx} y={vy - 10 + (k % 2 ? 12 : -4)} u={13} opacity={wedgesIn} />; })}
       {cells.map((c, i) => <InkRing key={i} cx={c.x} cy={c.y} rx={c.k === 'ell' ? 122 : 98} ry={c.k === 'ell' ? 82 : 92} p={fe(a('comp') - i * 0.3, 0.6)} opacity={1 - fe(a('signal'), 0.6)} color={C.teal} />)}
-      <Pill x={W.x + W.w / 2} y={W.y + 36} text="each cell inside its own membrane" anchor="middle" o={trace * (1 - fe(a('meal'), 0.5))} fill={C.teal} />
-      {sig >= 0 && sig < 4.6 && <g><LigandA x={sp[0]} y={sp[1]} u={13} /><Pill x={sp[0] + 20} y={sp[1] - 26} text="chemical signal" fill="#7D1F5A" o={fi(sig, 0.4) * (1 - fe(sig - 3.8, 0.6))} /></g>}
+      <Pill x={W.x + W.w / 2} y={W.y + W.h - 14} text="each cell inside its own membrane" anchor="middle" o={trace * (1 - fe(a('meal'), 0.5))} fill={C.teal} />
+      {sig >= 0 && sig < 4.6 && <g><LigandA x={sp[0]} y={sp[1]} u={13} /><Pill x={W.x + 24} y={W.y + 36} text="chemical signal" fill="#7D1F5A" o={fi(sig, 0.4) * (1 - fe(sig - 3.8, 0.6))} /></g>}
       <Pill x={cells[2].x} y={cells[2].y - 110} text="why here?" anchor="middle" o={glow} fill={C.primary} />
       <Txt x={960} y={250} size={29} weight={700} anchor="middle" opacity={fi(a('hook'), 0.5)}>Ever wondered how a hormone finds exactly the right cells?</Txt>
       <Cite x={1820} y={880} text={SCHEM} anchor="end" />

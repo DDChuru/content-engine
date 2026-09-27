@@ -1,33 +1,41 @@
 {
-  "1_ffprobeDuration": 573.366667,
+  "1_ffprobeDuration": 591.1,
   "2_videoCoversAudio": {
-    "video": 573.366667,
-    "encodedAudio": 572.366,
-    "marginSeconds": 1.001,
-    "videoFrames": 17201
+    "video": 591.1,
+    "encodedAudio": 590.1,
+    "marginSeconds": 1.0,
+    "videoFrames": 17733
   },
   "3_fullDecodeErrors": 0,
   "4_cues": {
-    "matched": 141,
-    "total": 141,
-    "planned": 141
+    "matched": 145,
+    "total": 145,
+    "planned": 145
   },
   "5_audioPacketsUnchanged": {
-    "packets": 26831,
+    "packets": 27662,
     "identical": true
   },
   "6_finalWord": {
     "word": "through.",
-    "endsAt": 569.307,
-    "audioEnds": 572.366,
-    "headroom": 3.059,
+    "endsAt": 587.04,
+    "audioEnds": 590.1,
+    "headroom": 3.06,
     "afterWordMaxDb": -63.9
   },
   "7_silentReads": [
     {
+      "beat": 4,
+      "before": "The membrane isn't a film",
+      "start": 154.43,
+      "seconds": 2.0,
+      "pcmAllZero": true,
+      "encodedInteriorMaxDb": -91.0
+    },
+    {
       "beat": 7,
       "before": "Look at the word",
-      "start": 263.577,
+      "start": 281.31,
       "seconds": 4.0,
       "pcmAllZero": true,
       "encodedInteriorMaxDb": -91.0
@@ -35,7 +43,7 @@
     {
       "beat": 13,
       "before": "END",
-      "start": 569.846,
+      "start": 587.579,
       "seconds": 2.0,
       "pcmAllZero": true,
       "encodedInteriorMaxDb": -91.0
@@ -46,9 +54,9 @@
   "8_boundaries": {
     "master": "/home/user/content-engine/work/4.1.3/4.1.3-membrane-roles.mp4",
     "timeline": "/home/user/content-engine/work/4.1.3/timeline.json",
-    "master_bytes": 145250245,
+    "master_bytes": 137501469,
     "fps": 30.0,
-    "frame_count": 17201,
+    "frame_count": 17733,
     "boundaries_tested": 12,
     "candidate_count": 0,
     "candidate_beats": [],
@@ -67,19 +75,19 @@
     "limits": "Candidates, not proof. Deliberate one-frame holds can match; identical layouts can hide a lookup error. Subtle/animated holds can evade thresholds. Requires unshifted CFR master."
   },
   "markerAudit": {
-    "framesChecked": 17201,
+    "framesChecked": 17733,
     "marked": 1873,
-    "unmarked": 15328,
+    "unmarked": 15860,
     "intervals": [
       {
         "beat": 7,
         "label": "EXAM CONTRAST",
-        "startFrame": 7508,
-        "endFrame": 9381,
-        "announceFrame": 7508,
-        "beatEndFrame": 9413,
+        "startFrame": 8040,
+        "endFrame": 9913,
+        "announceFrame": 8040,
+        "beatEndFrame": 9945,
         "clearKey": "exit",
-        "clearsOnFrame": 9381
+        "clearsOnFrame": 9913
       }
     ],
     "badgeTextMae": {
@@ -92,10 +100,83 @@
   },
   "longestUnchangedVisual": {
     "beat": 12,
-    "startFrame": 14933,
+    "startFrame": 15465,
     "seconds": 5.833333333333333
   },
   "unchangedOver15s": [],
+  "labelAudit": {
+    "rule": "every text node >= 17 px after branding (x 950/1080), transforms included, no exemptions; no text/leader/geometry overlap; nothing off the content area",
+    "framesChecked": 17733,
+    "minEffectivePx": 17.59,
+    "violations": 0,
+    "beats": [
+      {
+        "beat": 1,
+        "frames": 1148,
+        "minEffectivePx": 17.59
+      },
+      {
+        "beat": 2,
+        "frames": 695,
+        "minEffectivePx": 17.59
+      },
+      {
+        "beat": 3,
+        "frames": 1331,
+        "minEffectivePx": 17.59
+      },
+      {
+        "beat": 4,
+        "frames": 2108,
+        "minEffectivePx": 17.59
+      },
+      {
+        "beat": 5,
+        "frames": 1331,
+        "minEffectivePx": 17.59
+      },
+      {
+        "beat": 6,
+        "frames": 1427,
+        "minEffectivePx": 17.59
+      },
+      {
+        "beat": 7,
+        "frames": 1905,
+        "minEffectivePx": 17.59
+      },
+      {
+        "beat": 8,
+        "frames": 1469,
+        "minEffectivePx": 17.59
+      },
+      {
+        "beat": 9,
+        "frames": 1187,
+        "minEffectivePx": 17.59
+      },
+      {
+        "beat": 10,
+        "frames": 1378,
+        "minEffectivePx": 17.59
+      },
+      {
+        "beat": 11,
+        "frames": 989,
+        "minEffectivePx": 17.59
+      },
+      {
+        "beat": 12,
+        "frames": 1262,
+        "minEffectivePx": 17.59
+      },
+      {
+        "beat": 13,
+        "frames": 1503,
+        "minEffectivePx": 17.59
+      }
+    ]
+  },
   "valenceAudit": "not applicable: no covalent bond is made or broken on screen (Topic 4: membrane assembly, lateral drift and insertion are non-covalent motion)",
-  "sha256": "abd2e10f1d0ad4ea9cdc5722b51460879d818c0b5653c650e604b19590c529f3"
+  "sha256": "42098e9e536b9da6c7c49dd2465f5ff22ac6fbdde2d7e41a6c887ade413c4a05"
 }

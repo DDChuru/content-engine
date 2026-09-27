@@ -13,6 +13,10 @@
  *              each right-hand cell; bind → seat at a muscle and a liver receptor (0.8 s, ReceptorLigand `seat`);
  *   fail     → at the non-target cell a wedge touches the rounded-square site, rocks, fails and drifts on (1.5 s);
  *   respond  → muscle: glucose crosses ONLY through the labelled transport protein, more often; liver: one soft glow.
+ * `bare` (008f) draws the scene with no text (for reduced thumbnails; label them outside at full size); `labelO`
+ * multiplies every label's opacity (fade the text out before zooming the scene); `labelOf` {id: 0..1} fades single labels
+ * (ids: secretion, transport, binding, response, beta, capillary, muscle, liver, other, gtp, schematic). The capillary label sits beside the
+ * vessel, not on it.
  * No token passes through a cell outline except glucose via the transport protein; no intracellular pathway is drawn. */
 import React from 'react';
 import {T4} from './t4-palette';
@@ -71,7 +75,7 @@ export function seatAt(s: number[], off = 0) {
 
 export function SignallingScene(props: any) {
   const {t = 0, secrete = -1, enter = -1, carry = -1, out = -1, bind = -1, bindMuscle = null, fail = -1, respond = -1, stage = {}, labels = {},
-    liverGlow = 0, dim = 0, hideWedges = false, opacity = 1, vesselPulse = 0, receptorGlow = {}, glucoseRate = 0.2} = props;
+    liverGlow = 0, dim = 0, hideWedges = false, opacity = 1, vesselPulse = 0, receptorGlow = {}, glucoseRate = 0.2, bare = false, labelO = 1, labelOf = {}} = props;
   if (opacity <= 0) return null;
   const B = SS.beta, V = SS.vessel, M = SS.muscle, L = SS.liver, O = SS.other, R = receptorSites();
   const vx = (V.x0 + V.x1) / 2;
@@ -110,7 +114,8 @@ export function SignallingScene(props: any) {
   const period = respond >= 0 ? 1.6 : 1 / Math.max(0.05, glucoseRate);
   const ph = ((t % period) + period) % period / period;
   const crossing = ph < 0.6 ? {x: gtp.x, y: lerp(gtp.y - 26, gtp.y + 40, ease(ph / 0.6))} : null;
-  const lbl = (x: number, y: number, s: string, o = 1, size = 20, fill = '#253247', anchor = 'middle', w = 700) => o > 0 ? <text x={x} y={y} fontSize={size} fontWeight={w} fill={fill} textAnchor={anchor} fontFamily={FONT} opacity={o < 1 ? o : undefined}>{s}</text> : null;
+  // `bare`: no text at all (a reduced thumbnail must not carry sub-17-px text; the caller labels it at full size)
+  const lbl = (x: number, y: number, s: string, o0 = 1, size = 20, fill = '#253247', anchor = 'middle', w = 700, id = '') => { const o = o0 * labelO * ((labelOf as any)[id] ?? 1); return o > 0 && !bare ? <text x={x} y={y} fontSize={size} fontWeight={w} fill={fill} textAnchor={anchor} fontFamily={FONT} opacity={o < 1 ? o : undefined}>{s}</text> : null; };
   const st = (k: string) => stage[k] ?? 0;
   const vesicles = [[470, 370], [430, 500], [260, 360], [230, 460], [485, 440], [330, 318], [385, 522], [292, 522]];
   return (
@@ -143,18 +148,18 @@ export function SignallingScene(props: any) {
         {crossing && <GlucoseTok x={crossing.x} y={crossing.y} r={8} />}
         {wed}
       </g>
-      {lbl(B.x, 232, 'secretion', 0.35 + 0.65 * st('secretion'), 26, st('secretion') > 0.5 ? '#B64A30' : '#6F6A60', 'middle', 800)}
-      {lbl(vx, 232, 'transport', 0.35 + 0.65 * st('transport'), 26, st('transport') > 0.5 ? '#B64A30' : '#6F6A60', 'middle', 800)}
-      {lbl(1160, 232, 'binding', 0.35 + 0.65 * st('binding'), 26, st('binding') > 0.5 ? '#B64A30' : '#6F6A60', 'middle', 800)}
-      {lbl(1560, 232, 'specific response: increased glucose uptake', 0.35 + 0.65 * st('response'), 21, st('response') > 0.5 ? '#B64A30' : '#6F6A60', 'middle', 800)}
-      {lbl(B.x, B.y + B.ry + 36, 'beta cell (pancreas)', labels.beta ?? 0, 22)}
-      {lbl(vx, V.y1 - 14, 'capillary', labels.capillary ?? 0, 21, '#FFFFFF')}
-      {lbl(M.x, M.y + M.h / 2 + 36, 'muscle cell (target)', labels.muscle ?? 0, 22)}
-      {lbl(L.x + L.r + 18, L.y + 7, 'liver cell (target)', labels.liver ?? 0, 22, '#253247', 'start')}
-      {lbl(O.x + O.r + 18, O.y - 6, 'cell without a complementary receptor', labels.other ?? 0, 21, '#253247', 'start')}
-      {lbl(O.x + O.r + 18, O.y + 20, 'for insulin (schematic)', labels.other ?? 0, 21, '#253247', 'start')}
-      {lbl(gtp.x + 18, gtp.y - 52, 'glucose transport protein', labels.gtp ?? 0, 21, T4.proteinEdge, 'end')}
-      {lbl(1830, 920, 'schematic; not to scale', 1, 21, '#6F6A60', 'end', 600)}
+      {lbl(B.x, 232, 'secretion', 0.35 + 0.65 * st('secretion'), 26, st('secretion') > 0.5 ? '#B64A30' : '#6F6A60', 'middle', 800, 'secretion')}
+      {lbl(vx, 232, 'transport', 0.35 + 0.65 * st('transport'), 26, st('transport') > 0.5 ? '#B64A30' : '#6F6A60', 'middle', 800, 'transport')}
+      {lbl(1160, 232, 'binding', 0.35 + 0.65 * st('binding'), 26, st('binding') > 0.5 ? '#B64A30' : '#6F6A60', 'middle', 800, 'binding')}
+      {lbl(1560, 232, 'specific response: increased glucose uptake', 0.35 + 0.65 * st('response'), 21, st('response') > 0.5 ? '#B64A30' : '#6F6A60', 'middle', 800, 'response')}
+      {lbl(B.x, B.y + B.ry + 36, 'beta cell (pancreas)', labels.beta ?? 0, 22, '#253247', 'middle', 700, 'beta')}
+      {lbl(V.x0 - 12, V.y0 + 34, 'capillary', labels.capillary ?? 0, 21, '#8E2A24', 'end', 700, 'capillary')}
+      {lbl(M.x, M.y + M.h / 2 + 36, 'muscle cell (target)', labels.muscle ?? 0, 22, '#253247', 'middle', 700, 'muscle')}
+      {lbl(L.x + L.r + 18, L.y + 7, 'liver cell (target)', labels.liver ?? 0, 22, '#253247', 'start', 700, 'liver')}
+      {lbl(O.x + O.r + 18, O.y - 6, 'cell without a complementary receptor', labels.other ?? 0, 21, '#253247', 'start', 700, 'other')}
+      {lbl(O.x + O.r + 18, O.y + 20, 'for insulin (schematic)', labels.other ?? 0, 21, '#253247', 'start', 700, 'other')}
+      {lbl(gtp.x + 18, gtp.y - 52, 'glucose transport protein', labels.gtp ?? 0, 21, T4.proteinEdge, 'end', 700, 'gtp')}
+      {lbl(1830, 920, 'schematic; not to scale', 1, 21, '#6F6A60', 'end', 600, 'schematic')}
     </g>
   );
 }

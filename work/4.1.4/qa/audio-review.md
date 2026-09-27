@@ -15,3 +15,9 @@ frame adds the measured length of "LL-37" (69.36 → 70.70 s = 1.34 s → animFr
 - Beat 1 "a message sent so widely": small wrote "sense" (p 0.34); medium hears "sent" — accepted.
 - Beat 5: small missed one "site" token; medium hears every "binding site"; medium writes "do not feed" where small hears "fit" — accepted (small, the cue model, matches "fit").
 - Recogniser spellings: "route" as "root" (British pronunciation), "too" as "to", years and "Paper 22" spelled out.
+
+## 008f re-voice (memory hook, RULE-MEMORY-HOOKS)
+Beat 5 only: hook sentences added (STORYBOARD.md § 008f REVISION). One take: small recogniser 130/130; it also emitted a
+0.12 s duplicate "binding" (p 0.14) at 28.4 s — faster-whisper medium on 25.8–30.2 s hears "…to the binding site, so it
+binds." with no duplicate: recogniser artefact, take kept. Old take in `audio/v-pre008f/`. 2 s digital-silence hold before
+"Unlike the letter".

@@ -11,7 +11,7 @@
 import React from 'react';
 import {T4} from './t4-palette';
 import {SucroseTok} from './T4Tokens';
-import {Geo, walk} from './DiffusionField';
+import {Geo, Ev, walk} from './DiffusionField';
 
 const clamp01 = (v: number) => Math.max(0, Math.min(1, v));
 const ease = (t: number) => { t = clamp01(t); return t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2; };
@@ -24,8 +24,43 @@ export function wpmGeo(M = WPM): Geo {
 }
 export const wpmGaps = (M = WPM) => [M.y + M.h * 0.2, M.y + M.h * 0.5, M.y + M.h * 0.8];
 
-/** Compartment frame (decor) and the membrane strip (drawing). `ring` = ring the strip (0..1). */
-export function WPMFrame({M = WPM, o = 1, ring = 0, t = 0}: any) {
+/** 008f: OPEN ENDS (optional). Each compartment drawn as a window on a larger solution: its far end is open
+ * (dashed), so that sustained net osmosis can run without draining one side. For every net crossing (a forward
+ * membrane crossing not matched by a reverse one) one water token leaves the far end of the receiving side and one
+ * enters the far end of the source side (`wpmEdgeEvents`), so each side's token count (and density) stays constant
+ * while crossings through the membrane continue. Edge passages are NOT membrane crossings: keep them out of any
+ * counter (pass them to fieldState only). Draw the water tokens clipped to the model box (`WPMClip`). */
+export function wpmEdgeEvents(wins: [number, number, number, number?][], M = WPM, seed = 5): Ev[] {
+  const out: Ev[] = [];
+  const x0 = M.x, x1 = M.x + M.w;
+  wins.forEach(([t0, f, r, dur = 5], wi) => {
+    const n = Math.abs(f - r);
+    if (!n) return;
+    const dir = f > r ? -1 : 1;                 // net A→B (left→right) is balanced by one B→A passage through the far ends
+    for (let k = 0; k < n; k++) {
+      const te = t0 + (dur * (k + 0.5)) / n;
+      const y1 = M.y + 50 + hashW(wi, k, seed) * (M.h - 100), y2 = M.y + 50 + hashW(wi, k, seed + 3) * (M.h - 100);
+      const from = dir < 0 ? [x1 - 50, y1] : [x0 + 50, y1], exitP = dir < 0 ? [x1 + 26, y1] : [x0 - 26, y1];
+      const entP = dir < 0 ? [x0 - 26, y2] : [x1 + 26, y2], to = dir < 0 ? [x0 + 50, y2] : [x1 - 50, y2];
+      const pre = 2.0, post = 1.4, ta = te - pre + 0.7;
+      const via = (tt: number) => {
+        if (tt <= te) { const k2 = Math.max(0, Math.min(1, (tt - ta) / (te - ta))); return [from[0] + (exitP[0] - from[0]) * k2, from[1]]; }
+        const k2 = Math.max(0, Math.min(1, (tt - te) / post)); return [entP[0] + (to[0] - entP[0]) * k2, entP[1]];
+      };
+      out.push({t: te, dir: dir as 1 | -1, pre, post, via});
+    }
+  });
+  return out;
+}
+const hashW = (i: number, k: number, s: number) => { const x = Math.sin(i * 91.3 + k * 47.9 + s * 13.1) * 43758.5453; return x - Math.floor(x); };
+/** Clip for the water tokens of an open-ended model (tokens leaving/entering the far ends are hidden outside). */
+export function WPMClip({M = WPM, id = 'wpm-clip', children}: any) {
+  return <g><defs><clipPath id={id}><rect x={M.x} y={M.y} width={M.w} height={M.h} /></clipPath></defs><g clipPath={`url(#${id})`}>{children}</g></g>;
+}
+
+/** Compartment frame (decor) and the membrane strip (drawing). `ring` = ring the strip (0..1). `openEnds` (008f):
+ * the two far ends drawn dashed (each side a window on a larger solution). */
+export function WPMFrame({M = WPM, o = 1, ring = 0, t = 0, openEnds = false}: any) {
   if (o <= 0) return null;
   const xm = M.x + M.w / 2, hw = M.strip / 2, gaps = wpmGaps(M), gapH = 30;
   const heads: any[] = [];
@@ -40,7 +75,11 @@ export function WPMFrame({M = WPM, o = 1, ring = 0, t = 0}: any) {
   }
   return (
     <g opacity={o < 1 ? o : undefined}>
-      <rect data-role="decor" x={M.x} y={M.y} width={M.w} height={M.h} rx={14} fill="#EEF6FB" stroke="#9FB6C6" strokeWidth={3} />
+      {openEnds ? <g data-role="decor">
+        <rect x={M.x} y={M.y} width={M.w} height={M.h} fill="#EEF6FB" />
+        <path d={`M${M.x} ${M.y}H${M.x + M.w}M${M.x} ${M.y + M.h}H${M.x + M.w}`} stroke="#9FB6C6" strokeWidth={3} />
+        <path d={`M${M.x} ${M.y}V${M.y + M.h}M${M.x + M.w} ${M.y}V${M.y + M.h}`} stroke="#9FB6C6" strokeWidth={3} strokeDasharray="10 12" />
+      </g> : <rect data-role="decor" x={M.x} y={M.y} width={M.w} height={M.h} rx={14} fill="#EEF6FB" stroke="#9FB6C6" strokeWidth={3} />}
       <g data-role="drawing">{heads}</g>
       {ring > 0 && <rect data-role="decor" x={xm - hw - 14} y={M.y - 10} width={M.strip + 28} height={M.h + 20} rx={20} fill="none" stroke="#E0892B" strokeWidth={5} opacity={ring} />}
     </g>
@@ -99,8 +138,8 @@ export function WPScale({x, y0, y1, dl = 0, dr = 0, oTitle = 1, oZero = 1, oArro
       {oTitle > 0 && <text x={x} y={y0 - 64} fontSize={24} fontWeight={800} fill="#1F2A36" textAnchor="middle" fontFamily={FONT} opacity={oTitle}>water potential</text>}
       {oZero > 0 && <g opacity={oZero}><text x={x + 66} y={y0 + 8} fontSize={21} fontWeight={800} fill="#1F2A36" fontFamily={FONT}>0 kPa</text><text x={x + 66} y={y0 + 34} fontSize={20} fontWeight={600} fill="#555" fontFamily={FONT}>pure water at atmospheric</text><text x={x + 66} y={y0 + 58} fontSize={20} fontWeight={600} fill="#555" fontFamily={FONT}>pressure (reference)</text></g>}
       {oArrow > 0 && <text x={x + 26} y={y1 - 8} fontSize={21} fontWeight={700} fill="#1F2A36" fontFamily={FONT} opacity={oArrow}>more negative ↓</text>}
-      {oShade > 0 && <text x={x + 26} y={(y0 + y1) / 2 + 30} fontSize={20} fontWeight={700} fill="#4E7391" fontFamily={FONT} opacity={oShade}>negative</text>}
-      {oBracket > 0 && <g opacity={oBracket}><path data-role="decor" d={`M${x - 40} ${yAt(0.3)}h-12V${yAt(0.62)}h12`} stroke="#1F2A36" strokeWidth={2.5} fill="none" /><text x={x - 60} y={yAt(0.3) + 6} fontSize={20} fontWeight={700} fill="#1F2A36" textAnchor="end" fontFamily={FONT}>higher</text><text x={x - 60} y={yAt(0.46) + 7} fontSize={20} fontWeight={700} fill="#1F2A36" textAnchor="end" fontFamily={FONT}>less negative =</text><text x={x - 60} y={yAt(0.62) + 7} fontSize={20} fontWeight={700} fill="#1F2A36" textAnchor="end" fontFamily={FONT}>lower</text></g>}
+      {oShade > 0 && <text x={x + 80} y={(y0 + y1) / 2 + 30} fontSize={20} fontWeight={700} fill="#4E7391" fontFamily={FONT} opacity={oShade}>negative</text>}
+      {oBracket > 0 && <g opacity={oBracket}><path data-role="decor" d={`M${x - 40} ${yAt(0.3)}h-12V${yAt(0.62)}h12`} stroke="#1F2A36" strokeWidth={2.5} fill="none" /><text x={x - 70} y={yAt(0.3) + 6} fontSize={20} fontWeight={700} fill="#1F2A36" textAnchor="end" fontFamily={FONT}>higher</text><text x={x - 70} y={yAt(0.46) + 7} fontSize={20} fontWeight={700} fill="#1F2A36" textAnchor="end" fontFamily={FONT}>less negative =</text><text x={x - 70} y={yAt(0.62) + 7} fontSize={20} fontWeight={700} fill="#1F2A36" textAnchor="end" fontFamily={FONT}>lower</text></g>}
       {oMarkers > 0 && <g opacity={oMarkers}>
         <g data-role="decor"><path d={`M${x - 14} ${yl}l-26 -14v28Z`} fill={hiL > 0 ? '#E0892B' : '#2F6B8F'} /><path d={`M${x + 14} ${yr}l26 -14v28Z`} fill={hiR > 0 ? '#E0892B' : '#8E4B6B'} /></g>
         <text x={x - 48} y={yl + 7} fontSize={21} fontWeight={800} fill="#2F6B8F" textAnchor="end" fontFamily={FONT}>L</text>

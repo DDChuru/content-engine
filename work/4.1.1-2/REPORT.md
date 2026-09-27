@@ -1,7 +1,7 @@
 # 4.1.1-2 — Fluid mosaic membranes: how the bilayer forms and what sits in it · REPORT
 
 ## v2 (cloud run 008f, 27 Sep 2026) — fixes for review `cloud-reviews/4.1.1-2-REVIEW.md` (CHANGES)
-Model: claude-opus-5-5. Branch `cloud/008f-fix-4prnob`. 13 beats, 0 error beats, 139 cues (136 + 3 hook cues).
+Branch `cloud/008f-fix-4prnob`. 13 beats, 0 error beats, 139 cues (136 + 3 hook cues).
 **Bunny guid `1ab01c37-b2c5-410f-8388-b40a572a0c75`** "REVIEW 4.1.1-2 v2 Fluid mosaic membranes: how the bilayer forms and
 what sits in it", no collection; uploaded 14:52:27–14:52:30Z; **status 4 at 14:55:36Z** (≈3 min; 240p–1080p, 558 s).
 

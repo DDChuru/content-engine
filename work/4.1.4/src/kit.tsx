@@ -134,7 +134,7 @@ import {SignallingScene, SS} from './SignallingScene';
 /** Scene with an optional zoom about (zx, zy). */
 export function Scene({z = 1, zx = 380, zy = 470, ...p}: any) {
   if (z === 1) return <SignallingScene {...p} />;
-  return <g><defs><clipPath id="sceneclip"><rect x={0} y={168} width={1920} height={782} /></clipPath></defs>
+  return <g><defs><clipPath id="sceneclip"><rect x={0} y={196} width={1920} height={754} /></clipPath></defs>
     <g clipPath="url(#sceneclip)"><g transform={`translate(${zx} ${zy}) scale(${z}) translate(${-zx} ${-zy})`}><SignallingScene {...p} /></g></g></g>;
 }
 /** Exocytosis age synced to the narration: approach from `move`, fusion from `fuse`, release from `release`. */
@@ -153,3 +153,10 @@ export const CUE = (beat: number, key: string) => { const sc = SCN.find((x) => x
 /** The scene's wedge motion ages at global t, as built in Beats 3–4 (secretion done; entered; carried; out). */
 export const sceneAges = (t: number) => ({secrete: 99, enter: t - CUE(4, 'enter'), carry: t - CUE(4, 'carry'), out: t - CUE(4, 'out')});
 export {receptorSites};
+
+/** Greedy word wrap by measured width (brand metrics). */
+export function wrapText(text: string, w: number, size: number, weight = 600) {
+  const out: string[] = []; let line = '';
+  for (const word of text.split(' ')) { const tryL = line ? line + ' ' + word : word; if (textW(tryL, size, weight) > w && line) { out.push(line); line = word; } else line = tryL; }
+  if (line) out.push(line); return out;
+}

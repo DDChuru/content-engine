@@ -21,7 +21,14 @@
   },
   {
     "beat": 5,
-    "holds": [],
+    "holds": [
+      {
+        "atSample": 2394720,
+        "samples": 96000,
+        "seconds": 2.0,
+        "before": "Unlike the letter"
+      }
+    ],
     "speechUnchanged": true
   },
   {

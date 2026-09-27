@@ -1,5 +1,33 @@
 # 4.1.3 — What each part of the membrane does · REPORT
 
+## v2 (cloud run 008f, 27 Sep 2026) — fixes for review `cloud-reviews/4.1.3-REVIEW.md` (CHANGES)
+Branch `cloud/008f-fix-4prnob`. 13 beats, 1 error beat (E43, Beat 7), 145 cues (+4 hook cues).
+**Bunny guid `2887cc09-d18d-4bf9-96c7-ad9c649abf75`** "REVIEW 4.1.3 v2 What each part of the membrane does", no collection;
+uploaded 15:56Z; **status 4 at 16:00:24Z** (≈4 min; 240p–1080p, 602 s).
+
+| Finding | Fix |
+|---|---|
+| 1 HIGH recap glycolipid leader on an inner head | Beat 12: the *glycolipids: recognition, stability* leader now ends on the OUTER-leaflet glycolipid's carbohydrate chain (`compPos(…,'glycolipid')`, above the outer heads); every recap leader re-anchored to the new spec slots and looked at (08:40–08:48 equivalent). |
+| 2 text < 17 px | Every text ≥ 20 px at 1:1 (≥ 17.59 px delivered), no exemptions: role grid rebuilt at 20 px (icon above name, 124 px rows), Beat 13 recap uses a full-size cholesterol row instead of the 0.55-scaled grid, memory inset 20 px, shared CholesterolQualitative relaid (labels beside curves, 20–21 px). Per-frame `label-audit.cjs` in `render-beat.cjs` (size after branding incl. transforms, text/text, leader/text, text-on-geometry, off-frame): **17,733/17,733 frames, min 17.59 px, 0 violations**, asserted per beat in `verify.py`. |
+| 3 oil-and-water hook unmapped | Beat 4 re-voiced (hook only): *"Oil: the non-polar tails in the core. Water: the watery solutions on each side, holding the ions and glucose. They don't mix, so those stay out of the core. The membrane isn't a film of oil; only its core is oil-like."* Oil ↔ tail core and water ↔ both watery sides light together with link tags, then a **2 s silent hold** on the completed mapping before *"The membrane isn't a film"*. |
+| 4 positions ≠ spec | Shared `FluidMosaicMembrane` now uses the literal SHARED-SPECS slots (glycolipid 2, channel 4–5, cholesterol 6/7, receptor 8–9, carrier 10–11, glycoprotein 12); all lesson anchors (lanes, labels, grid links) moved to them. `../t4-shared/CHANGELOG.md`. |
+| 5 audio outlasts video | `work/brand_final.py` pads the picture after branding (last frame cloned), audio untouched: **video ends 0.204 s after audio** (602.333 vs 602.129 s). |
+
+**Narration changes (the only ones):** Beat 4 hook sentences above (+ 2.0 s hold). First take recognised "bilayer" as "B layer"
+(both recognisers) and was retaken (old take in `audio/v-008f-t1/`). **ElevenLabs** (account-wide): 340,986 before / 341,806
+after (820 chars incl. the retake). Beat 7 exam-contrast card now switches to the corrected text in one frame (no overlap).
+**Master** `4.1.3-membrane-roles.mp4` 591.1 s, 17,733 frames, sha256 `42098e9e536b9da6c7c49dd2465f5ff22ac6fbdde2d7e41a6c887ade413c4a05`.
+**Branded** `4.1.3-branded.mp4` 602.333 s, sha256 `044a7c1de612b7a56c690b87b1c966138f2233be4915ac2345bc6cbae6534f19`, full decode
+0 errors, video ≥ audio (`qa/branded-verification.json`); `qa/branded-mid.jpg` looked at (bar + frame correct).
+**Verification** (`qa/verification.json`): ffprobe 591.1 · video ≥ audio (1.0 s) · decode 0 · cues 145/145/145 · AAC packets
+identical (27,662) · final word "through." 3.06 s headroom · silent holds B4 hook 2 s, B7 read 4 s, B13 END 2 s all −91 dB ·
+12 boundaries, 0 candidates · marker audit 17,733 frames, 0 mismatches · label audit 0 violations · longest still 5.83 s ·
+text-only PASS (longest 0 s, 0 untagged). Encoded sheets (10) looked at.
+**Interpretation:** the recap grid's per-cell layout was replaced by a narrower 20 px grid (fewer words per cell; meanings kept).
+
+---
+
+## v1 (run 008a) — superseded (details below)
 Model: claude-opus-5-5 (cloud run 008a). Branch `cloud/008-4.1.1-2-to-4.2.1a-dq9f0v`. 13 beats, 1 error beat (E43, Beat 7,
 EXAM CONTRAST), 141 cues.
 

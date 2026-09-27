@@ -1,5 +1,7 @@
 # 4.1.3 What each part of the membrane does · BUILD PROGRESS (handover)
 
+**008f (27 Sep 2026, 16:01Z): DONE — v2 rendered (17,733 frames, label audit 0 violations), verified, branded (video ends 0.204 s after audio), uploaded: Bunny `2887cc09-d18d-4bf9-96c7-ad9c649abf75` status 4 at 16:00:24Z. Branch `cloud/008f-fix-4prnob`. See REPORT.md v2. The 008a status below is history.**
+
 Updated 2026-09-27 10:45Z. Builder: claude-opus-5-5 (cloud run 008a). Branch `cloud/008-4.1.1-2-to-4.2.1a-dq9f0v`; commit work/<code> + work/t4-shared only; push that branch only.
 **Phase: audio + timeline done; authoring beats** · **Beats complete: 0 / 13** · master: not yet built
 Live render processes: 5127 bash -c printf "%s\n" "$@" | xargs -P 4 -I{} sh -c "nice -n 10 \"\$NODE\" render-beat.cjs {} > logs/render-beat-{}.log 2>&1; rc=\$?; echo beat {} exit \$rc; exit \$rc" _ 1 2 3 4 5 6 7 8 9 10 11 12 13

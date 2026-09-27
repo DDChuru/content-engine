@@ -1,8 +1,8 @@
 import React from 'react';
 import {fi, fe, pulse} from '../util';
-import {gt, Lbl, Pill, C, Txt, Cite, PARTS, SCHEM, clamp01, OPEN, openWindows, openEvents, NETPX, BSTART, RouteSlots, Stage, fmmLayout, FULL, ATPTag} from '../kit';
+import {gt, Lbl, Pill, C, Txt, Cite, PARTS, SCHEM, clamp01, OPEN, openWindows, openEvents, NETPX, BSTART, RouteSlots, Stage, fmmLayout, FULL, ATPTag, winState} from '../kit';
 import {openState, OpenBase, OpenCounters} from './Beat03';
-import {FieldTokens, NetArrow, SideTag} from '../DiffusionField';
+import {FieldTokens, NetArrow, SideTag, CounterCard} from '../DiffusionField';
 import {GlucoseTok, O2Tok, IonTok} from '../T4Tokens';
 
 const G = OPEN;
@@ -46,19 +46,25 @@ export default function Beat04(s: any) {
   const trailsHi = a('drove') >= 0 && a('noatp') < 0 ? [2, 7, 12, 25, 33, 38] : [];
   const net = openNet(t);
   const endO = 1 - fe(a('exch'), 0.6);
+  // No text is ever drawn scaled down: every text inside the shrinking field fades out BEFORE the shrink starts;
+  // the thumbnail keeps only the drawing, and its retained result is shown 1:1 in a card beneath it.
+  const textO = 1 - clamp01((a('exch') + 0.5) / 0.5);
+  const ws = winState(wins, openEvents(), t);
+  const thumbCardO = fi(a('exch') - 1.2, 0.4);
   return (
     <g>
       <g transform={openThumbTransform(shrink)}>
-        <OpenBase t={t} />
+        <OpenBase t={t} labelO={textO} />
         <FieldTokens st={st} k="o2" t={t} hi={[...stillHi, ...trailsHi]} />
-        <SideTag x={G.x0 + 44} y={G.y0 + 48} n={st.a} />
-        <SideTag x={G.x1 - 44} y={G.y0 + 48} n={st.b} />
-        <OpenCounters t={t} hiLive={pulse(a('level'), 1.4) + pulse(a('closer'), 1.2)} />
+        <SideTag x={G.x0 + 44} y={G.y0 + 48} n={st.a} o={textO} />
+        <SideTag x={G.x1 - 44} y={G.y0 + 48} n={st.b} o={textO} />
+        <OpenCounters t={t} o={textO} hiLive={pulse(a('level'), 1.4) + pulse(a('closer'), 1.2)} />
         {trailsHi.length > 0 && <g data-role="decor" opacity={pulse(a('drove'), 2.5)}>{st.pts.filter((p: any) => trailsHi.includes(p.i)).map((p: any) => <path key={p.i} d={`M${p.x - 40} ${p.y + 6}L${p.x - 14} ${p.y}`} stroke="#E0892B" strokeWidth={4} strokeLinecap="round" />)}</g>}
         <NetArrow x={G.m - NETPX * 4} y={G.y1 + 74} len={net} label="net movement" lx={G.m + 260} ly={G.y1 + 81} anchor="start" />
         {a('fades') >= 0 && <path data-role="decor" d={`M${G.m - NETPX * 4} ${G.y1 + 74}H${G.m + NETPX * 4}`} stroke="#C0453D" strokeWidth={3} strokeDasharray="6 7" opacity={pulse(a('fades'), 2.2) * endO} />}
-        <Lbl x={G.x0 + 4} y={G.y0 - 14} text="concentrations equal" o={fi(t - (wins[1][0] + 5), 0.4) * (1 - fe(a('exch') - 1.5, 0.5)) * (eq ? 1 : 0)} size={22} fill={C.teal} />
+        <Lbl x={G.x0 + 4} y={G.y0 - 14} text="concentrations equal" o={fi(t - (wins[1][0] + 5), 0.4) * textO * (eq ? 1 : 0)} size={22} fill={C.teal} />
       </g>
+      {ws.last && <CounterCard x={70} y={420} w={340} n={ws.last.f} m={ws.last.r} title="last completed five-second window" sub={`sides: ${st.a} / ${st.b}`} o={thumbCardO} />}
       <Pill x={G.m - 60} y={G.y1 + 130} text="no net movement; movement continues" anchor="middle" o={fi(a('fades'), 0.4) * endO} fill={C.primary} />
       <Pill x={1350} y={560} text="kinetic energy of the particles" o={fi(a('drove'), 0.4) * endO} fill="#A4561A" />
       {a('noatp') >= 0 && <g opacity={fi(a('noatp'), 0.4) * endO}><ATPTag x={1400} y={640} struck /><Pill x={1450} y={646} text="no ATP used" /></g>}

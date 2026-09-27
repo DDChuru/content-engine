@@ -4,6 +4,7 @@ import {gt, Lbl, Pill, C, Txt, Lines, Card, Cite, SCHEM, PARTS, clamp01, textW, 
 import {mixedFields} from './Beat07';
 import {ionField} from './Beat08';
 import {b9} from './Beat09';
+import {CoreLabel} from './Beat05';
 import {fieldState, FieldTokens, SideTag} from '../DiffusionField';
 import {GlucoseTok, O2Tok} from '../T4Tokens';
 import {CarrierProtein, carrierCycle} from '../TransportProteinSet';
@@ -19,7 +20,9 @@ export default function Beat10(s: any) {
   const a = s.a, hold = s.sc.holds?.[0], h0 = hold ? hold.atSample / 48000 : 1e9, hd = hold ? hold.seconds : 0;
   const t = gt(s) - clamp01((s.local - h0) / Math.max(hd, 1e-6)) * hd;
   const M0 = memM(t), G = memGeo(M0), Lf = fmmLayout(M0), ca = compPos(M0, 'carrier');
-  const done = fe(a('exit'), 0.15), lift = fe(a('exit') - 0.2, 0.8);
+  // the corrected-in-place swap: the old and the final wording share lines, so the short crossfade skips its middle
+  // (they never both show at a readable opacity)
+  const d0 = fe(a('exit'), 0.15), done = d0 <= 0 ? 0 : d0 >= 1 ? 1 : d0 < 0.5 ? 0.46 * d0 : 0.77 + 0.46 * (d0 - 0.5), lift = fe(a('exit') - 0.2, 0.8);
   const dim = 0.55 * (1 - lift);
   const F = mixedFields(t, G, BSTART(7)), ions = ionField(t, {...G, gates: [compPos(M0, 'channel').x]});
   const B = b9(M0), glu = fieldState({G, nA: 15, nB: 5, evs: B.plan.evs, t, origin: B.c, seed: 92, speed: 0.7});
@@ -40,7 +43,7 @@ export default function Beat10(s: any) {
   const mxy = [860, 330];
   return (
     <g>
-      <MemScene s={s} t={t} mem={{t, carrierPhase: 0, dimLipids: dim}} />
+      <MemScene s={s} t={t} mem={{t, carrierPhase: 0, dimLipids: dim}} core={0} />
       <FieldTokens st={F.o2} k="o2" t={t} opacity={0.3} />
       <FieldTokens st={ions} k="ion" t={t} opacity={0.3} />
       <FieldTokens st={glu} k="glucose" t={t} s={0.85} />
@@ -48,8 +51,10 @@ export default function Beat10(s: any) {
       {coreHi > 0 && <rect data-role="decor" x={Lf.x0} y={M0.cy - (HY - 0.35) * M0.u} width={Lf.width} height={2 * (HY - 0.35) * M0.u} fill="#F2C45A" opacity={0.35 * coreHi} />}
       <g data-role="drawing"><GlucoseTok x={gx} y={gy} r={15} rot={10} /></g>
       {coreHi > 0 && <circle data-role="decor" cx={gx} cy={gy} r={22} fill="none" stroke="#E0892B" strokeWidth={4} opacity={coreHi} />}
-      <Pill x={gx + 30} y={gy - 30} text="polar" o={coreHi} size={17} fill="#A4561A" />
-      <Pill x={Lf.x0 + 10} y={M0.cy + 8} text="hydrophobic core" o={coreHi} size={17} />
+      <Pill x={gx} y={gy - 44} text="polar" anchor="middle" o={coreHi} size={17} fill="#A4561A" />
+      {/* the core's region label (below the membrane, leader into the tails); at "hydrophobic core" it is emphasised */}
+      <CoreLabel o={1 - coreHi} />
+      <Lbl x={112} y={712} text="hydrophobic core" lx={150} ly={562} o={coreHi} size={20} fill={C.ink} halo="#FFFFFF" />
       <SideTag x={MX.x1 - 50} y={MX.y0 + 44} n={glu.a} /><SideTag x={MX.x1 - 50} y={MX.y1 - 56} n={glu.b} />
       {cyc && <Magnifier x={mxy[0]} y={mxy[1]} r={96} lx={ca.x} ly={M0.cy - 2.6 * M0.u} o={fi(replay, 0.5)}>
         <CarrierProtein x={mxy[0]} y={mxy[1]} u={26} phase={cyc.phase} />
@@ -84,20 +89,20 @@ export default function Beat10(s: any) {
       {/* size side-note */}
       {fi(a('size'), 0.4) > 0 && <g opacity={fi(a('size'), 0.4) * (1 - fe(a('fix'), 0.4))}>
         <g data-role="drawing"><O2Tok x={1440} y={yA + step + 52} r={10} /><GlucoseTok x={1490} y={yA + step + 52} r={16} /></g>
-        <Txt x={1520} y={yA + step + 48} size={15} weight={700} fill={C.primary}>sizes differ; size alone is not</Txt>
-        <Txt x={1520} y={yA + step + 66} size={15} weight={700} fill={C.primary}>the credited reason here</Txt>
+        <Txt x={1520} y={yA + step + 44} size={15} weight={700} fill={C.primary}>sizes differ; size alone is not</Txt>
+        <Txt x={1520} y={yA + step + 68} size={15} weight={700} fill={C.primary}>the credited reason here</Txt>
         
       </g>}
       <SideNote x={X + 36} y={yA + step + 70} text="property → barrier → protein" size={21} opacity={fi(a('first'), 0.4) * (1 - fe(a('fix'), 0.4))} />
       {/* the examiner-report tab (exact) and the MS paraphrase tab */}
       <QuoteTab x={X + 20} y={qy} w={W - 40} quote={Q} source="PDF-CHECKED (plan check)" size={19} opacity={fi(a('report'), 0.4)} />
       <Underline x1={qs.x0} x2={qs.x1} y={qs.y} p={fe(a('most'), 0.5)} />
-      <Txt x={X + W - 24} y={qy + 124} size={15} weight={700} fill={C.primary} anchor="end" opacity={fi(a('most'), 0.4)}>of the incorrect answers; not of all candidates</Txt>
+      <Txt x={X + W - 24} y={qy + 127} size={15} weight={700} fill={C.primary} anchor="end" opacity={fi(a('most'), 0.4)}>of the incorrect answers; not of all candidates</Txt>
       {fi(a('prop'), 0.4) > 0 && <g opacity={fi(a('prop'), 0.4)}>
-        <rect data-role="decor" x={X + 20} y={qy + 136} width={W - 40} height={74} rx={12} fill="#F2FAFA" stroke={C.teal} strokeWidth={2} />
-        <Txt x={X + 36} y={qy + 162} size={16} weight={700} fill={C.ink}>S23/21 Q3(a), 1 mark, MS p.11: credited polar / water-soluble /</Txt>
-        <Txt x={X + 36} y={qy + 184} size={16} weight={700} fill={C.ink}>hydrophilic and the hydrophobic bilayer core (our paraphrase)</Txt>
-        <Txt x={X + 36} y={qy + 204} size={15} weight={700} fill={C.primary} opacity={fi(a('nothing'), 0.4)}>ignored at that point: size-only; active transport; facilitated diffusion (paraphrase)</Txt>
+        <rect data-role="decor" x={X + 20} y={qy + 139} width={W - 40} height={90} rx={12} fill="#F2FAFA" stroke={C.teal} strokeWidth={2} />
+        <Txt x={X + 36} y={qy + 166} size={16} weight={700} fill={C.ink}>S23/21 Q3(a), 1 mark, MS p.11: credited polar / water-soluble /</Txt>
+        <Txt x={X + 36} y={qy + 190} size={16} weight={700} fill={C.ink}>hydrophilic and the hydrophobic bilayer core (our paraphrase)</Txt>
+        <Txt x={X + 36} y={qy + 216} size={15} weight={700} fill={C.primary} opacity={fi(a('nothing'), 0.4)}>ignored there: size-only; active transport; facilitated diffusion (paraphrase)</Txt>
       </g>}
     </g>
   );

@@ -84,7 +84,10 @@ PLANS = {
 ],
 8: [
  ("The first is a channel protein", "open", "A channel protein"),
- ("Picture a door in a wall", "door", "Handle: a door in a wall"),
+ ("Picture a doorway in a wall", "door", "Handle: a doorway in a wall"),
+ ("in a wall. ^The wall: the phospholipid", "l1", "Wall → phospholipid bilayer"),
+ ("^The doorway: the channel", "l2", "Doorway → hydrophilic pore"),
+ ("right through the wall$", "map", "The whole mapping: wall, doorway"),
  ("Written properly", "written", "Written properly"),
  ("provides a hydrophilic pore", "pore", "A hydrophilic pore"),
  ("diffuse down their concentration gradient", "sent", ""),

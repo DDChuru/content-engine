@@ -145,7 +145,7 @@ Beat windows in the headings are provisional and follow the per-beat ledger (wor
 
 ### BEAT 5 · Stage three: binding, and the address on the envelope · 2:32–3:20
 **Narration:**
-> Stage three is binding. A target cell has cell surface receptors: proteins in its membrane, this one a glycoprotein. Each receptor has a binding site with a particular shape. Watch a different signalling molecule arrive. It touches the binding site, but the shapes do not fit, and it drifts away. Now insulin. Its shape is complementary to the binding site, so it binds. Picture an address on an envelope: the letter passes many doors, but it is opened where the address matches. Written properly: the ligand binds to a specific receptor because their shapes are complementary.
+> Stage three is binding. A target cell has cell surface receptors: proteins in its membrane, this one a glycoprotein. Each receptor has a binding site with a particular shape. Watch a different signalling molecule arrive. It touches the binding site, but the shapes do not fit, and it drifts away. Now insulin. Its shape is complementary to the binding site, so it binds. Picture an address on an envelope: the letter passes many doors, but it is opened where the address matches. The letter: insulin, the signalling molecule. The address: its shape. The matching door: the one receptor with a complementary binding site. Unlike the letter, insulin isn't carried inside; it binds at the cell surface. Written properly: the ligand binds to a specific receptor because their shapes are complementary.
 
 **Visual action:**
 1. **From the first frame**, `SignallingScene` holds with wedges in the tissue fluid beside the muscle cell; at *Stage three is binding*, the **binding** label lights and the view zooms onto one receptor on the muscle cell's surface, cross-fading into `FluidMosaicMembrane` `highlight:receptor-glycoprotein`, outside at the top, cytoplasm at the bottom; region labels *outside the cell (watery)*, *cytoplasm (watery)*; caption *schematic; not to scale*.
@@ -154,6 +154,7 @@ Beat windows in the headings are provisional and follow the per-beat ledger (wor
 4. At *a different signalling molecule arrive*, ligand B (magenta square, label **a different signalling molecule**) descends from the top; at *It touches the binding site*, `wrong-ligand-fail`: it touches the rim and rocks once; at *the shapes do not fit*, side-note *not complementary*; at *it drifts away*, it drifts off upward (motion) and out of frame.
 5. At *Now insulin*, ligand A (magenta wedge, label **insulin (ligand)**) descends; at *Its shape is complementary to the binding site*, `seat`: it seats flush in the notch (0.8 s) and the fitted edge is traced, tag **complementary shape**; at *so it binds*, the tag **bound** lands.
 6. At *Picture an address on an envelope*, a small handle inset slides in at right, beside the receptor: an envelope passing a row of three doors (motion); at *opened where the address matches*, it stops at the door whose number matches the envelope's address and opens; small type *handle: an aid to memory, not an exam answer*.
+6a. *(008f memory-hook revision, RULE-MEMORY-HOOKS)* At *The letter: insulin*, the envelope in the inset and the seated insulin wedge glow together (magenta), a connector joining them; tag *letter → insulin (the signalling molecule)*. At *The address: its shape*, the envelope's address and the wedge's outline light together (traced), tag *address → its shape*. At *The matching door*, the matching door and the receptor's binding site light together, tag *matching door → the receptor with a complementary binding site*. All three links stay lit: **2 s hold** on the completed mapping (digital silence). At *Unlike the letter*, small type *binds at the surface; insulin is not taken in through a door*.
 7. At *Written properly*, a sentence surface slides up beneath the receptor; at *the ligand binds to a specific receptor*, the sentence builds clause by clause beside the seated wedge: **The ligand binds to a specific receptor · because their shapes are complementary.** The handle inset dims.
 
 **On-screen text:** *binding*; *cell surface receptor*; *glycoprotein*; *binding site*; *a different signalling molecule*; *not complementary*; *insulin (ligand)*; *complementary shape*; *bound*; the handle inset and its small type; the sentence.
@@ -447,3 +448,10 @@ Check: `r1/4.1.4/CHECK.md` (27 September 2026, NOT CLEARED). Applied to this fil
 | Sweeps | applied | Absolutes sweep rewritten for every new Beat 9 sentence (all bounded to their question/scheme or to our insulin example); Real-world samples note records the answer-first order and the "beyond the mark scheme" label. |
 
 New validator TOTAL: `TOTAL words 805  cues 98  runtime at 120 wpm 6:42.5  beats 9  failing beats 0` (plus the 4 s E44 read = 6:46.5).
+
+
+## 008f REVISION (memory hook, RULE-MEMORY-HOOKS, 27 Sep 2026)
+Narration changed ONLY in Beat 5's hook: after *"...it is opened where the address matches."* added *"The letter: insulin,
+the signalling molecule. The address: its shape. The matching door: the one receptor with a complementary binding site.
+Unlike the letter, insulin isn't carried inside; it binds at the cell surface."*, with a 2 s silent hold on the completed
+mapping before *"Unlike the letter"*. Every other sentence is unchanged; Beat 5 alone was re-voiced. Visual action 6a added.

@@ -6,7 +6,8 @@ import json,re,difflib,wave
 P=Path(__file__).resolve().parent
 S=json.loads((P/'script.json').read_text())
 H={b['id']:[(h['before'],h['seconds']) for h in b['holds']] for b in S}
-H[14]=H.get(14,[])+[('END',2.0)]   # 4.2.1a Beat 14: final frame held 2 s after the narration
+H[14]=H.get(14,[])+[('END',2.0)]
+H[8]=H.get(8,[])+[('Written properly',2.0)]   # 008f memory hook: 2 s hold on the completed mapping (RULE-MEMORY-HOOKS)   # 4.2.1a Beat 14: final frame held 2 s after the narration
 norm=lambda s:re.findall(r'[a-z0-9]+',s.lower().replace('’',"'").replace("'",''))
 
 # Recogniser spellings → storyboard spellings (numerals spelled out; US → UK). Heard tokens only; never the script.

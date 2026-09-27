@@ -218,13 +218,13 @@ Beat windows in the headings are provisional and follow the per-beat ledger (wor
 
 ---
 
-### BEAT 8 · A channel protein: a door in a wall · 5:10–5:57
+### BEAT 8 · A channel protein: a doorway in a wall · 5:10–5:57
 **Narration:**
-> The first is a channel protein. Picture a door in a wall. Written properly: a channel protein provides a hydrophilic pore through which particular ions or polar molecules diffuse down their concentration gradient. Watch the ions: each drifts into the pore, lined by hydrophilic parts of the protein, and out the other side, without meeting the hydrophobic core. A few go the other way, but more go down the gradient. The channel does not change shape to move them; in our model the pore simply stays open. Different channels let through different, particular ions.
+> The first is a channel protein. Picture a doorway in a wall. The wall: the phospholipid bilayer, whose hydrophobic core turns ions back. The doorway: the channel protein's hydrophilic pore, an opening right through the wall. Written properly: a channel protein provides a hydrophilic pore through which particular ions or polar molecules diffuse down their concentration gradient. Watch the ions: each drifts into the pore, lined by hydrophilic parts of the protein, and out the other side, without meeting the hydrophobic core. A few go the other way, but more go down the gradient. The channel does not change shape to move them; in our model the pore simply stays open. Different channels let through different, particular ions.
 
 **Visual action:**
 1. **From the first frame**, the membrane scene zooms to the `intrinsic-channel` (highlighted), the carrier dimmed at right; caption *new illustrative setup*: ion tokens reset to **20** outside / **5** inside, each tagged *set starting count*. At *The first is a channel protein*, the label **channel protein** brightens.
-2. At *Picture a door in a wall*, a small flat door-in-wall pictogram appears in the corner, tag *handle, not an exam answer*.
+2. (008f memory hook, RULE-MEMORY-HOOKS) At *Picture a doorway in a wall*, a large flat doorway-in-a-wall pictogram (an open doorway: no door leaf, nothing that swings or gates) appears in the right-hand panel, tag *handle, not an exam answer*. At *The wall:*, the pictogram's bricks and the membrane's phospholipid bilayer light together, link tag **wall → phospholipid bilayer**; at *The doorway:*, the doorway and the channel's pore light together, link tag **doorway → hydrophilic pore**. The completed mapping (both links lit) is held for 2 s of digital silence before *Written properly*.
 3. At *Written properly*, a sentence surface slides up under the membrane; at *provides a hydrophilic pore*, the first clause lands and the pore's light core is ringed, label **hydrophilic pore**; at *diffuse down their concentration gradient*, the sentence completes: **A channel protein provides a hydrophilic pore through which particular ions or polar molecules diffuse down their concentration gradient.**
 4. At *Watch the ions*, `channel-open` in a magnified pore callout beside the field (mechanism view, tag *mechanism view; not counted*; its token is not one of the counted field's tokens): an ion enters the pore mouth and passes through (motion).
 5. At *lined by hydrophilic parts*, the polar dots along the pore lining pulse, label *lined by hydrophilic R groups*; at *without meeting the hydrophobic core*, the 5 s counted sequence starts in the field from 0 · 0 (provisionally 26.5–31.5 s into the beat): ion tokens near the outer mouth enter the pore and pass through to the cytoplasm (motion), each crossing ticking the live counter and updating the live side totals.
@@ -660,3 +660,28 @@ Round-3 verdict: CLEARED WITH MINOR EDITS. Both edits were applied exactly by th
 | R3-S2 — provisional offset | applied verbatim | Beat 4 action 2: "at 7.0 s" → "at 6.0 s". |
 
 No narration changed. Validator after round 3: `TOTAL words 1338  cues 140  runtime at 120 wpm 11:09.0  beats 14  failing beats 0`.
+
+## 008f REVISION (memory hook, RULE-MEMORY-HOOKS, 27 Sep 2026)
+Narration changed ONLY in Beat 8's hook: *"Picture a door in a wall."* became *"Picture a doorway in a wall. The wall: the
+phospholipid bilayer, whose hydrophobic core turns ions back. The doorway: the channel protein's hydrophilic pore, an
+opening right through the wall."* (a doorway, not a door: nothing that swings or gates), followed by a 2 s silent hold
+on the completed mapping before *"Written properly"*, whose creditworthy sentence follows at once. Every other
+sentence is unchanged; Beat 8 alone was re-voiced. Visual action 2 rewritten (paired highlights, link tags, hold).
+
+### 008f: visual revisions (no narration change)
+- **Dataset 3 / Beats 11–13 (review #1): water never stops crossing.** Uncounted membrane crossings run from Beat 11's
+  first frame (balanced 12 · 12 per 5 s while both sides are pure water and while the solute lands; 15 · 9 per 5 s once
+  the potentials differ). From Beat 12 *in both directions all the time*, COUNTED 15 · 9 windows run back to back until
+  *the water potentials are equal* (seven windows; the last completed one is always shown), then balanced 12 · 12
+  windows to the end. Crossings continue during the solute addition. To keep a fixed volume without draining one side,
+  the model's two far ends are OPEN (dashed): each side is part of a larger solution, and for every net crossing one
+  water token leaves the right-hand end and one enters the left-hand end (never counted). Caption: *open ends: each
+  side is part of a larger solution; its water stays the same*. Beat 12 action 8's "no boundary crossing is drawn"
+  is withdrawn.
+- **Typography (review #2):** every text ≥ 20 px at 1:1 (≥ 17 px delivered), including L/R, +/−, ATP and counters;
+  no annotated diagram is scaled down. Beat 13 shows ONE model at a time (water model → membrane scene at *Particles
+  move randomly* → water model at *water moves by osmosis*); Beat 14 shows label-free scaled drawings with full-size
+  labels beside them (membrane; water at the reject card; membrane for the sugar). Counter titles shortened:
+  *current 5 s window*, *completed 5 s window*, *before the change*; the per-card subtitle moved to the header line
+  (*counts are illustrative*). The upper-left membrane thumbnail in Beats 11–12 and the open-field thumbnail in Beat
+  13 are dropped.

@@ -5,10 +5,12 @@
 //   2. OVERLAP (vector): no two visible text boxes intersect; no leader/connector/arrow line (decor path/line) crosses
 //      a text box unless one end of that line is attached to the box (its own leader, underline or strike); the border
 //      of a stroked box (card, pill, inset frame) may never run through a text box.
-//   2b. FRAME: no visible text box leaves the content area (x 60–1860) or the frame.
-//   3. OVERLAP (raster): no text box that is not itself part of a drawing sits on drawn geometry: the frame is re-rasterised
-//      with ONLY data-role="drawing" shapes (particle fields tagged data-field are background, like the page) and the
-//      opaque pixels inside each text box are counted.
+//   2b. FRAME: no visible text box leaves the content area (x 60–1860) or the frame, and no text is cut by a clip-path
+//       (text wholly clipped away is not on screen and is not checked).
+//   3. OVERLAP (raster): no text box that is not itself part of a drawing sits on VISIBLE drawn geometry: the frame is
+//      re-rasterised in document order with data-role="drawing" shapes in black (particle fields tagged data-field are
+//      background, like the page) and large opaque cards/insets in white (they hide what they cover); the dark pixels
+//      inside each text box are counted.
 // Throws nothing itself: returns {violations, minEff, texts}; render-beat.cjs fails the beat on any violation.
 const M = require('./shared/src/metrics.json');
 const BRAND_SCALE = 950 / 1080;           // apply-branding-cloud.sh: 1920x1080 → 1690x950 slot (the smaller axis)
@@ -69,27 +71,53 @@ const meet = (A, B) => A[0] < B[2] && B[0] < A[2] && A[1] < B[3] && B[1] < A[3];
 /** Parse one frame. Returns texts (with boxes), decor lines, and the geometry-only SVG. */
 function parse(svg) {
   const re = /<(\/?)([a-zA-Z]+)([^>]*?)(\/?)>|([^<]+)/g;
-  const stack = [{m: [1, 0, 0, 1, 0, 0], op: 1, fs: 16, fw: 400, anchor: 'start', role: null, field: false, keep: true, defs: false}];
-  const texts = [], lines = []; let geom = ''; let txt = null; let m;
+  const stack = [{m: [1, 0, 0, 1, 0, 0], op: 1, fs: 16, fw: 400, anchor: 'start', role: null, field: false, keep: true, defs: false, clip: null}];
+  const texts = [], lines = [], clips = {}; let geom = ''; let txt = null; let m; let clipId = null;
   while ((m = re.exec(svg))) {
     if (m[5] != null) { if (txt) txt.s += dec(m[5]); else if (stack[stack.length - 1].defs) geom += m[5]; continue; }
     const [whole, close, tag, rest, self] = m;
     if (close) {
       const top = stack.pop();
+      if (tag === 'clipPath') clipId = null;
       if (tag === 'text' && txt) { finishText(txt, texts); txt = null; }
       if (top.keep) geom += whole;
       continue;
     }
     const A = attrs(rest), P = stack[stack.length - 1];
+    if (tag === 'clipPath') clipId = A.id;
+    if (clipId && (tag === 'rect' || tag === 'circle') && !clips[clipId]) {
+      clips[clipId] = tag === 'rect' ? [Number(A.x || 0), Number(A.y || 0), Number(A.x || 0) + Number(A.width), Number(A.y || 0) + Number(A.height)]
+        : [Number(A.cx) - Number(A.r), Number(A.cy) - Number(A.r), Number(A.cx) + Number(A.r), Number(A.cy) + Number(A.r)];
+    }
     const e = {m: A.transform ? mul(P.m, parseTransform(A.transform)) : P.m, op: P.op * (A.opacity != null ? Number(A.opacity) : 1) * (A['fill-opacity'] != null && tag === 'text' ? Number(A['fill-opacity']) : 1),
       fs: A['font-size'] != null ? Number(A['font-size']) : P.fs, fw: A['font-weight'] != null ? Number(A['font-weight']) || 400 : P.fw, anchor: A['text-anchor'] || P.anchor,
       role: A['data-role'] || P.role, field: P.field || A['data-field'] != null, inText: P.inText || tag === 'text' || tag === 'tspan', defs: P.defs || tag === 'defs'};
     if (A.visibility === 'hidden' || A.display === 'none') e.op = 0;
-    // geometry raster keeps: svg/g containers, <defs> subtrees, and drawing-role shapes outside particle fields
-    e.keep = e.defs || tag === 'svg' || tag === 'g' || (SHAPES.has(tag) && e.role === 'drawing' && !e.field && !e.inText);
-    if (tag === 'svg') e.keep = true;
-    if (e.keep) geom += whole;
-    if (tag === 'text') txt = {x: Number(A.x || 0), y: Number(A.y || 0), m: e.m, op: e.op, fs: e.fs, fw: e.fw, anchor: e.anchor, drawing: e.role === 'drawing', s: '', tspanFs: []};
+    // clip-path (rect / circle bounding box, in this element's user space): visible text is cut to it
+    e.clip = P.clip;
+    const cp = A['clip-path'] && A['clip-path'].match(/url\(#([^)]+)\)/);
+    if (cp && clips[cp[1]]) {
+      const b = clips[cp[1]], c = [[b[0], b[1]], [b[2], b[1]], [b[0], b[3]], [b[2], b[3]]].map((q) => ap(e.m, q[0], q[1]));
+      const cb = [Math.min(...c.map((q) => q[0])), Math.min(...c.map((q) => q[1])), Math.max(...c.map((q) => q[0])), Math.max(...c.map((q) => q[1]))];
+      e.clip = P.clip ? [Math.max(P.clip[0], cb[0]), Math.max(P.clip[1], cb[1]), Math.min(P.clip[2], cb[2]), Math.min(P.clip[3], cb[3])] : cb;
+    }
+    // geometry raster (document order): drawing-role shapes outside particle fields paint BLACK; large opaque decor
+    // boxes (cards, insets, panels: ≥ 20,000 px² on screen) paint WHITE and so hide what they cover; everything else
+    // is left out. Visible geometry under a text box = dark pixels.
+    const isGeom = SHAPES.has(tag) && e.role === 'drawing' && !e.field && !e.inText && !e.defs;
+    let isOcc = false;
+    if (tag === 'rect' && e.role !== 'drawing' && !e.defs && A.fill && A.fill !== 'none' && !/url\(/.test(A.fill)) {
+      const sc2 = Math.abs(e.m[0] * e.m[3] - e.m[1] * e.m[2]);
+      isOcc = Number(A.width) * Number(A.height) * sc2 >= 20000 && e.op * (A['fill-opacity'] != null ? Number(A['fill-opacity']) : 1) >= 0.9;
+    }
+    e.keep = e.defs || tag === 'svg' || tag === 'g' || isGeom || isOcc;
+    if (e.keep) {
+      let w = whole;
+      if (isGeom) w = w.replace(/\bfill="(?!none")[^"]*"/, 'fill="#000000"').replace(/\bstroke="(?!none")[^"]*"/, 'stroke="#000000"');
+      if (isOcc) w = w.replace(/\bfill="[^"]*"/, 'fill="#FFFFFF"').replace(/\bstroke="[^"]*"/, 'stroke="none"');
+      geom += w;
+    }
+    if (tag === 'text') txt = {x: Number(A.x || 0), y: Number(A.y || 0), m: e.m, op: e.op, fs: e.fs, fw: e.fw, anchor: e.anchor, drawing: e.role === 'drawing', s: '', tspanFs: [], clip: e.clip};
     if (tag === 'tspan' && txt && A['font-size']) txt.tspanFs.push(Number(A['font-size']));
     if (SHAPES.has(tag) && e.role !== 'drawing' && !e.inText && !e.defs && e.op >= OP_MIN) {
       const sw = Number(A['stroke-width'] || 1), stroked = A.stroke && A.stroke !== 'none', filled = A.fill && A.fill !== 'none';
@@ -115,7 +143,13 @@ function finishText(t, texts) {
   const w = tw(s, t.fs, t.fw), x0 = t.anchor === 'middle' ? t.x - w / 2 : t.anchor === 'end' ? t.x - w : t.x;
   const c = [[x0, t.y - 0.7 * t.fs], [x0 + w, t.y - 0.7 * t.fs], [x0, t.y + 0.16 * t.fs], [x0 + w, t.y + 0.16 * t.fs]].map((q) => ap(t.m, q[0], q[1]));
   const box = [Math.min(...c.map((q) => q[0])), Math.min(...c.map((q) => q[1])), Math.max(...c.map((q) => q[0])), Math.max(...c.map((q) => q[1]))];
-  texts.push({s, op: t.op, eff: fsMin * sc * BRAND_SCALE, src: fsMin, scale: sc, box, drawing: t.drawing});
+  let cut = false, vis = box;
+  if (t.clip) {
+    vis = [Math.max(box[0], t.clip[0]), Math.max(box[1], t.clip[1]), Math.min(box[2], t.clip[2]), Math.min(box[3], t.clip[3])];
+    if (vis[0] >= vis[2] || vis[1] >= vis[3]) return;            // wholly clipped away: not on screen
+    cut = vis[0] > box[0] + 2 || vis[1] > box[1] + 2 || vis[2] < box[2] - 2 || vis[3] < box[3] - 2;
+  }
+  texts.push({s, op: t.op, eff: fsMin * sc * BRAND_SCALE, src: fsMin, scale: sc, box: vis, drawing: t.drawing, cut});
 }
 
 let sharp = null;
@@ -125,6 +159,7 @@ async function audit(svg, opts = {}) {
   const V = [];
   let minEff = Infinity;
   for (const t of texts) if (t.op > 0) { minEff = Math.min(minEff, t.eff); if (t.eff < MIN_PX - 1e-9) V.push({type: 'size', text: t.s.slice(0, 60), eff: +t.eff.toFixed(2), src: t.src, scale: +t.scale.toFixed(3)}); }
+  for (const t of texts) if (t.op >= OP_MIN && t.cut) V.push({type: 'clipped', text: t.s.slice(0, 50)});
   for (const t of texts) if (t.op >= OP_MIN && (t.box[0] < 60 || t.box[2] > 1860 || t.box[1] < 0 || t.box[3] > 1080)) V.push({type: 'off-frame', text: t.s.slice(0, 50), box: t.box.map((v) => Math.round(v))});
   const vis = texts.filter((t) => t.op >= OP_MIN);
   // dedupe halos (a stroked copy under the same text)
@@ -144,12 +179,12 @@ async function audit(svg, opts = {}) {
   if (opts.raster) {
     sharp = sharp || require('sharp');
     const k = 0.5, W = 960, H = 540;
-    const {data} = await sharp(Buffer.from(geom), {density: 72 * k}).resize(W, H).ensureAlpha().extractChannel(3).raw().toBuffer({resolveWithObject: true});
+    const {data} = await sharp(Buffer.from(geom), {density: 72 * k}).resize(W, H).ensureAlpha().raw().toBuffer({resolveWithObject: true});
     for (const t of uniq) {
       if (t.drawing) continue;   // letters that are part of a drawing sit on their own drawing by design (size still checked)
       const x0 = Math.max(0, Math.floor((t.box[0] + 2) * k)), x1 = Math.min(W, Math.ceil((t.box[2] - 2) * k)), y0 = Math.max(0, Math.floor((t.box[1] + 2) * k)), y1 = Math.min(H, Math.ceil((t.box[3] - 2) * k));
       let hit = 0, area = Math.max(1, (x1 - x0) * (y1 - y0));
-      for (let y = y0; y < y1; y++) for (let x = x0; x < x1; x++) if (data[y * W + x] > 90) hit++;
+      for (let y = y0; y < y1; y++) for (let x = x0; x < x1; x++) { const q = (y * W + x) * 4; if (data[q + 3] > 90 && data[q] < 110) hit++; }
       if (hit > Math.max(6, 0.02 * area)) V.push({type: 'text-geometry', text: t.s.slice(0, 50), px: hit, frac: +(hit / area).toFixed(3)});
     }
   }

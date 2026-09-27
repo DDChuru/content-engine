@@ -236,26 +236,16 @@
  },
  {
   "beat": 8,
-  "seconds": 45.696875,
-  "wpm": 123.4,
-  "matched": 94,
-  "src": 94,
+  "seconds": 58.8858125,
+  "wpm": 120.2,
+  "matched": 118,
+  "src": 118,
   "diffs": [],
   "lowConfidence": [
    [
-    "without",
-    0.47,
-    25.66
-   ],
-   [
-    "but",
-    0.47,
-    30.32
-   ],
-   [
-    "let",
-    0.47,
-    42.0
+    "pore",
+    0.48,
+    51.9
    ]
   ],
   "watch": {
@@ -263,13 +253,17 @@
     2,
     2
    ],
-   "hydrophobic": [
+   "phospholipid": [
     1,
     1
    ],
+   "hydrophobic": [
+    2,
+    2
+   ],
    "channel": [
-    3,
-    3
+    4,
+    4
    ],
    "polar": [
     1,

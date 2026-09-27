@@ -5,6 +5,7 @@ import {fieldState, FieldTokens, SideTag, CounterCard} from '../DiffusionField';
 import {GlucoseTok, IonTok} from '../T4Tokens';
 import {HY} from '../FluidMosaicMembrane';
 import {PROT} from '../TransportProteinSet';
+import {CoreLabel} from './Beat05';
 
 /** Ion and glucose populations on the membrane scene (Beats 7–10): ions 20 / 5, glucose 15 / 5 (one of each
  * outside is the labelled token, drawn separately), O₂ held at the retained 26 / 14 (dimmed). */
@@ -16,7 +17,7 @@ export function mixedFields(t: number, G: any, origin: number) {
   };
 }
 /** Slot geometry of the route slots as laid out from Beat 5 on. */
-export const SLOT = {x: 1370, y: 600, w: 480, h: 70, gap: 12};
+export const SLOT = {x: 1370, y: 600, w: 480, h: 78, gap: 8};   // = Beat05 SLOT56: no jump at the Beat 6→7 cut
 export const slotY = (i: number) => SLOT.y + i * (SLOT.h + SLOT.gap);
 /** The facilitated-diffusion bracket spanning route slots 2 and 3, with its label and tags. */
 export function FDBracket({p = 1, lab = 1, tags = 1, o = 1}: any) {
@@ -50,21 +51,25 @@ export default function Beat07(s: any) {
   const gluP = a('turn') >= 1.6 ? turnBack(a('turn') - 1.6, gluX, yTop, yStall) : [gluX + 6 * Math.sin(t * 0.8 + 1), yTop + 5 * Math.sin(t * 1.1 + 2)];
   const startFade = 1 - fe(a('open'), 0.6);
   const tailsHi = fi(a('tails'), 0.5) * (1 - fe(a('ion'), 0.5));
+  // the labelled ion and glucose (with their labels) step back before the proteins are named, so the protein labels
+  // have the space above the membrane to themselves
+  const tokO = fi(a('open'), 0.6) * (1 - fe(a('names') + 0.6, 0.5));
   return (
     <g>
-      <MemScene s={s} t={t} mem={mem} />
+      <MemScene s={s} t={t} mem={mem} core={0} />
+      <CoreLabel />
       {tailsHi > 0 && <rect data-role="decor" x={Lf.x0} y={M0.cy - (HY - 0.35) * M0.u} width={Lf.width} height={2 * (HY - 0.35) * M0.u} fill="#F2C45A" opacity={0.3 * tailsHi} />}
       <FieldTokens st={F.o2} k="o2" t={t} opacity={1 - 0.7 * fe(a('open'), 0.6)} />
       <FieldTokens st={F.ion} k="ion" t={t} opacity={fi(a('open'), 0.6)} />
       <FieldTokens st={F.glu} k="glucose" t={t} opacity={fi(a('open'), 0.6)} s={0.85} />
-      <Halo x={ionP[0]} y={ionP[1]} r={26} t={t} o={fi(a('water'), 0.5)} />
-      <Halo x={gluP[0]} y={gluP[1]} r={30} t={t + 1} o={fi(a('water'), 0.5)} />
-      <g data-role="drawing" opacity={fi(a('open'), 0.6)}><IonTok x={ionP[0]} y={ionP[1]} r={13} /><GlucoseTok x={gluP[0]} y={gluP[1]} r={15} rot={t * 10} /></g>
-      <Lbl x={ionX - 30} y={yTop - 36} text="ion (charged)" anchor="end" o={fi(a('ion'), 0.4)} size={21} fill="#6A3D9A" lx={ionX - 10} ly={yTop - 14} />
-      <Lbl x={gluX + 30} y={yTop - 36} text="glucose (polar)" o={fi(a('glu'), 0.4)} size={21} fill="#A4561A" lx={gluX + 10} ly={yTop - 16} />
+      <Halo x={ionP[0]} y={ionP[1]} r={26} t={t} o={fi(a('water'), 0.5) * tokO} />
+      <Halo x={gluP[0]} y={gluP[1]} r={30} t={t + 1} o={fi(a('water'), 0.5) * tokO} />
+      {tokO > 0 && <g data-role="drawing" opacity={tokO}><IonTok x={ionP[0]} y={ionP[1]} r={13} /><GlucoseTok x={gluP[0]} y={gluP[1]} r={15} rot={t * 10} /></g>}
+      <Lbl x={ionX - 30} y={yTop - 36} text="ion (charged)" anchor="end" o={fi(a('ion'), 0.4) * tokO} size={21} fill="#6A3D9A" lx={ionX - 10} ly={yTop - 14} />
+      <Lbl x={gluX - 30} y={yTop - 36} text="glucose (polar)" anchor="end" o={fi(a('glu'), 0.4) * tokO} size={21} fill="#A4561A" lx={gluX - 10} ly={yTop - 16} />
       <Lbl x={MX.x1 + 16} y={M0.cy + 6} text="hydrophobic fatty-acid tails" o={fi(a('tails'), 0.4) * (1 - fe(a('prot'), 0.5))} size={20} fill="#6B6B6B" />
       <Pill x={(MX.x0 + MX.x1) / 2} y={MX.y0 - 12} text="does not cross the core readily (schematic)" anchor="middle" o={fi(a('turn'), 0.4)} size={16} fill={C.primary} />
-      <Pill x={1610} y={250} text="How does sugar get into a cell?" anchor="middle" o={fi(a('open'), 0.5) * (1 - fe(a('turn'), 0.4))} size={17} />
+      <Pill x={1610} y={250} text="How does sugar get into a cell?" anchor="middle" o={fi(a('open') - 0.6, 0.5) * (1 - fe(a('turn'), 0.4))} size={17} />
       {a('sent') >= 0 && <Sentence x={120} y={742} w={870} size={23} o={fi(a('sent'), 0.4)} lines={[{text: 'Glucose is polar and does not cross the hydrophobic', o: 1}, {text: 'bilayer core readily; it needs a transport protein.', o: fi(a('sent') - 1.4, 0.5)}]} />}
       <Lbl x={ch.x} y={Lf.protTop - 58} text="channel protein" anchor="middle" o={fi(a('names'), 0.4)} size={21} fill="#1E6B66" lx={ch.x} ly={Lf.protTop - 4} />
       <Lbl x={ca.x} y={Lf.protTop - 58} text="carrier protein" anchor="middle" o={fi(a('names') - 0.5, 0.4)} size={21} fill="#1E6B66" lx={ca.x} ly={Lf.protTop - 4} />

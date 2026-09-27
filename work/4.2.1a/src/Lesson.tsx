@@ -10,7 +10,7 @@ import {BEATS} from './beats';
 export const TITLES = [
   'How does sugar get into a cell?', 'What you will be able to do', 'Random movement, net movement',
   'Equal, but still moving; and why passive matters', 'Simple diffusion: straight through the bilayer', 'What makes net diffusion faster',
-  'Turned back at the core: why some need a protein', 'A channel protein: a door in a wall', 'A carrier protein: glucose, down its gradient, no ATP',
+  'Turned back at the core: why some need a protein', 'A channel protein: a doorway in a wall', 'A carrier protein: glucose, down its gradient, no ATP',
   'Common mistake: glucose "too large"', 'Water potential: a measure for water', 'Osmosis: net movement of water, and equality',
   'What I told you, on the membrane and the water model', 'How it is asked, the reject card, and the sugar',
 ];

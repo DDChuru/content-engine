@@ -5,40 +5,49 @@ import {GlucoseTok, O2Tok} from '../T4Tokens';
 import {HY} from '../FluidMosaicMembrane';
 
 const lerp = (a: number, b: number, k: number) => a + (b - a) * k;
+/** Vignette labels (vignette-local coordinates), always drawn OUTSIDE the drawn shapes and never inside a scaled
+ * group: Beat 1 draws them at 1:1 beside the full-size vignettes and hides them before the vignettes shrink. */
+export const VLABELS: {x: number; y: number; text: string; fill: string; anchor?: string}[][] = [
+  [{x: 130, y: 385, text: 'alveolus', fill: '#8E4B5A', anchor: 'middle'}, {x: 375, y: 438, text: 'red blood cell', fill: '#A63A33', anchor: 'middle'}],
+  [{x: 40, y: 30, text: 'blood plasma', fill: '#A63A33'}, {x: 412, y: 350, text: 'a cell', fill: '#6B5B7B'}],
+  [{x: 270, y: 440, text: 'a cell', fill: '#6B5B7B', anchor: 'middle'}],
+];
+export function VLabels({k, dx = 0, dy = 0, o = 1}: any) {
+  if (o <= 0) return null;
+  return <g opacity={o < 1 ? o : undefined}>{VLABELS[k].map((L, i) => <Txt key={i} x={dx + L.x} y={dy + L.y} size={22} weight={700} fill={L.fill} anchor={L.anchor ?? 'start'}>{L.text}</Txt>)}</g>;
+}
 /** One of the three context vignettes, drawn in its own 540×470 frame at (0,0); `age` = seconds since it opened. */
-export function Vignette({k, t, age}: any) {
+export function Vignette({k, t, age, labels = true}: any) {
   const o = clamp01(age / 0.5);
   if (o <= 0) return null;
   const loop = (i: number, per: number) => ((t + i * per * 0.37) % per) / per;
   if (k === 0) {
     const out: any[] = [];
-    for (let i = 0; i < 5; i++) { const u = loop(i, 3.2); const x = lerp(150, 370, u), y = lerp(150 + i * 38, 230 + (i % 3) * 20, u); out.push(<O2Tok key={i} x={x} y={y} r={9} rot={i * 50} />); }
+    for (let i = 0; i < 5; i++) { const u = loop(i, 3.2); const x = lerp(150, 370, u), y = lerp(150 + i * 38, 215 + (i % 3) * 20, u); out.push(<O2Tok key={i} x={x} y={y} r={9} rot={i * 50} />); }
     return (
       <g opacity={o}>
         <g data-role="drawing">
           <circle cx={130} cy={235} r={110} fill="#FBE9EC" stroke="#B5707E" strokeWidth={3} />
-          <rect x={300} y={40} width={150} height={400} rx={18} fill="#E9A39C" stroke="#A63A33" strokeWidth={3} />
-          <RBC x={375} y={240} r={52} />
+          <rect x={300} y={40} width={150} height={360} rx={18} fill="#E9A39C" stroke="#A63A33" strokeWidth={3} />
+          <RBC x={375} y={225} r={52} />
           {out}
         </g>
-        <Txt x={130} y={375} size={18} weight={700} fill="#8E4B5A" anchor="middle">alveolus</Txt>
-        <Txt x={375} y={330} size={18} weight={700} fill="#FFFFFF" anchor="middle">red blood cell</Txt>
+        {labels && <VLabels k={0} />}
       </g>
     );
   }
   if (k === 1) {
     const out: any[] = [];
-    for (let i = 0; i < 4; i++) { const u = loop(i, 3.6); const pre = u < 0.55; const x = pre ? lerp(60 + i * 30, 270, u / 0.55) : 270; const y = pre ? lerp(95 + (i % 2) * 20, 205, u / 0.55) : lerp(205, 360, (u - 0.55) / 0.45); out.push(<GlucoseTok key={i} x={x} y={y} r={13} rot={i * 30 + t * 20} />); }
+    for (let i = 0; i < 4; i++) { const u = loop(i, 3.6); const pre = u < 0.55; const x = pre ? lerp(60 + i * 30, 230, u / 0.55) : 230; const y = pre ? lerp(95 + (i % 2) * 20, 205, u / 0.55) : lerp(205, 360, (u - 0.55) / 0.45); out.push(<GlucoseTok key={i} x={x} y={y} r={13} rot={i * 30 + t * 20} />); }
     return (
       <g opacity={o}>
         <g data-role="drawing">
           <rect x={20} y={40} width={500} height={120} rx={20} fill="#E9A39C" stroke="#A63A33" strokeWidth={3} />
-          <ellipse cx={270} cy={340} rx={210} ry={120} fill="#F7F2F8" stroke="#6B5B7B" strokeWidth={3} />
-          <rect x={255} y={208} width={30} height={30} rx={6} fill={'#7FC3BE'} stroke="#2F7F7A" strokeWidth={2} />
+          <ellipse cx={230} cy={340} rx={170} ry={120} fill="#F7F2F8" stroke="#6B5B7B" strokeWidth={3} />
+          <rect x={215} y={208} width={30} height={30} rx={6} fill={'#7FC3BE'} stroke="#2F7F7A" strokeWidth={2} />
           {out}
         </g>
-        <Txt x={40} y={30} size={18} weight={700} fill="#A63A33">blood plasma</Txt>
-        <Txt x={270} y={400} size={18} weight={700} fill="#6B5B7B" anchor="middle">a cell</Txt>
+        {labels && <VLabels k={1} />}
       </g>
     );
   }
@@ -47,7 +56,7 @@ export function Vignette({k, t, age}: any) {
   return (
     <g opacity={o}>
       <g data-role="drawing"><ellipse cx={270} cy={240} rx={180} ry={128} fill="#F7F2F8" stroke="#6B5B7B" strokeWidth={3} />{out}</g>
-      <Txt x={270} y={250} size={18} weight={700} fill="#6B5B7B" anchor="middle">a cell</Txt>
+      {labels && <VLabels k={2} />}
     </g>
   );
 }
@@ -76,14 +85,17 @@ export default function Beat01(s: any) {
       {[0, 1, 2].map((k) => {
         const key = ['o2', 'glu', 'water'][k], age = a(key);
         if (age < 0) return null;
-        const sc = lerp(1, 0.3, thumb), x = lerp(vx[k], 360 + k * 420, thumb), y = lerp(215, 196, thumb);
+        const sc = lerp(1, 0.3, thumb), x = lerp(vx[k], 80 + k * 184, thumb), y = lerp(215, 200, thumb);
+        // labels only while the vignettes are full size: they fade out just before the shrink starts
+        const labO = clamp01(age / 0.5) * (1 - clamp01((a('core') + 0.5) / 0.5));
         return (
           <g key={k}>
             <rect data-role="decor" x={x - 4} y={y - 4} width={548 * sc} height={478 * sc} rx={14 * sc + 4} fill="#FFFFFF" stroke={C.line} strokeWidth={2} opacity={clamp01(age / 0.5)} />
-            <g transform={`translate(${x} ${y}) scale(${sc})`}><Vignette k={k} t={t} age={age} /></g>
-            {k === 0 && <Pill x={x + 270 * sc} y={y + 470 * sc + 30} text="Topic 9 context: named, not taught" anchor="middle" o={clamp01(age / 0.5) * (1 - thumb)} size={17} />}
-            {k === 1 && <Pill x={x + 270 * sc} y={y + 470 * sc + 30} text="used in respiration" anchor="middle" o={clamp01(age / 0.5) * (1 - thumb)} size={17} fill="#A4561A" />}
-            {k === 2 && <Pill x={x + 270 * sc} y={y + 470 * sc + 30} text="water: in and out" anchor="middle" o={clamp01(age / 0.5) * (1 - thumb)} size={17} fill={C.teal} />}
+            <g transform={`translate(${x} ${y}) scale(${sc})`}><Vignette k={k} t={t} age={age} labels={false} /></g>
+            {thumb <= 0 && <VLabels k={k} dx={x} dy={y} o={labO} />}
+            {k === 0 && <Pill x={x + 270 * sc} y={y + 470 * sc + 30} text="Topic 9 context: named, not taught" anchor="middle" o={thumb <= 0 ? labO : 0} size={17} />}
+            {k === 1 && <Pill x={x + 270 * sc} y={y + 470 * sc + 30} text="used in respiration" anchor="middle" o={thumb <= 0 ? labO : 0} size={17} fill="#A4561A" />}
+            {k === 2 && <Pill x={x + 270 * sc} y={y + 470 * sc + 30} text="water: in and out" anchor="middle" o={thumb <= 0 ? labO : 0} size={17} fill={C.teal} />}
           </g>
         );
       })}

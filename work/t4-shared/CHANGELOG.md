@@ -60,6 +60,26 @@ on them. Newest first.
   (in every lesson's tooling) fails the render otherwise, letters inside drawings included.
 - Ion charges in `IonTok` are drawn strokes (a + or − of ≈ r wide), not text.
 
+### Later 008f additions (made while fixing 4.1.3, 4.1.4 and 4.2.1a)
+- `CholesterolQualitative`: the curve origin moved right (L0 164) and the curve labels sit beside the curves at
+  x + 46 (20–21 px), so no label crosses a curve or the axis.
+- `SignallingScene`: new props `bare` (draw with NO text, for reduced thumbnails — label them outside at full size),
+  `labelO` (multiplies every label's opacity: fade labels out BEFORE zooming the scene so no scaled text is ever
+  shown) and `labelOf` {id: 0..1} (fade single labels, e.g. one that a zoom would push off-frame). The *capillary*
+  label moved beside the vessel (it overlapped the vessel wall).
+- `WaterPotentialModel` (4.2.1a review #1, water must never appear to stop crossing): new optional OPEN ENDS.
+  `WPMFrame openEnds` draws the two far ends dashed (each compartment a window on a larger solution);
+  `wpmEdgeEvents(windows)` returns, for every net membrane crossing in each [t0, forward, reverse, dur] window, one
+  water passage OUT through the far end of the receiving side and one IN through the far end of the source side
+  (DiffusionField `via` events). Each side's water count therefore stays constant while net osmosis runs for as long as
+  the potentials differ. Pass these events to `fieldState` only — NEVER to a counter (`countIn`) — and draw the water
+  tokens inside `WPMClip` so the passages vanish at the open ends. Default (closed box) unchanged for other lessons.
+  Consumers (4.2.2a, 4.2.2b, 4.2.5, 4.2.6): keep water crossing through the whole time a potential difference is
+  taught; use open ends (or an explicit, captioned alternative) rather than stopping crossings.
+- `WPScale`: *negative* moved to x + 80 and the bracket words to x − 70 (a sliding marker letter and the model's
+  right edge crossed them). Place the scale ≥ ~230 px right of the model's right edge (4.2.1a: model ends 1200,
+  scale x 1440).
+
 ### Tagging for the overlap audit
 - `WaterField` top group `data-field="water"`, `DiffusionField.FieldTokens` / `WaterPotentialModel.SucroseTokens`
   `data-field="particles"`: moving particle fields are background for the label-vs-geometry check (labels still

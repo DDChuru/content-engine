@@ -6,6 +6,7 @@ import json,re,difflib,wave
 P=Path(__file__).resolve().parent
 S=json.loads((P/'script.json').read_text())
 H={b['id']:[(h['before'],h['seconds']) for h in b['holds']] for b in S}
+H[5]=H.get(5,[])+[("Unlike the letter",2.0)]   # 008f memory hook: 2 s hold on the completed mapping (RULE-MEMORY-HOOKS)
 H[9]=H.get(9,[])+[('END',2.0)]   # 4.1.4 Beat 9: final frame held 2 s after the narration
 norm=lambda s:re.findall(r'[a-z0-9]+',s.lower().replace('’',"'").replace("'",''))
 

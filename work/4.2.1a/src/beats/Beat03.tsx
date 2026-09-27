@@ -16,23 +16,23 @@ export function openState(t: number) {
   return {st, evs, o: clamp01((t - o0) / 0.4)};
 }
 /** Ambient water + the dashed middle line + its label + particle caption. */
-export function OpenBase({t, lineO = 1, speed = 1}: any) {
+export function OpenBase({t, lineO = 1, speed = 1, labelO}: any) {
   return (
     <g>
       <rect data-role="decor" x={G.x0} y={G.y0} width={G.x1 - G.x0} height={G.y1 - G.y0} rx={16} fill="#EEF6FB" stroke="#9FB6C6" strokeWidth={2.5} />
       <WaterField regions={[[G.x0 + 14, G.y0 + 14, G.m - 8, G.y1 - 14], [G.m + 8, G.y0 + 14, G.x1 - 14, G.y1 - 14]]} n={[26, 26]} t={t} speed={speed} />
       <path data-role="decor" d={`M${G.m} ${G.y0 + 6}V${G.y1 - 6}`} stroke="#5E6B75" strokeWidth={3} strokeDasharray="12 9" opacity={lineO} />
-      <Pill x={G.m} y={G.y1 + 30} text="middle line (no membrane)" anchor="middle" size={17} o={lineO} />
+      <Pill x={G.m} y={G.y1 + 30} text="middle line (no membrane)" anchor="middle" size={17} o={labelO ?? lineO} />
     </g>
   );
 }
 /** Live counter (current window) and retained card (last completed window) for the open field. */
-export function OpenCounters({t, cx = G.m, cardX = G.x0 + 830, cardY = 188, o = 1, hiLive = 0, hiLast = 0}: any) {
+export function OpenCounters({t, cx = G.m, cardX = G.m + 240, cardY = 188, o = 1, hiLive = 0, hiLast = 0}: any) {
   const wins = openWindows(), evs = openEvents(), ws = winState(wins, evs, t);
   return (
     <g>
-      {ws.cur && <CounterCard x={cx - 165} y={188} w={330} n={ws.cur.c[0]} m={ws.cur.c[1]} title="current five-second window" sub="crossings in each 5 s window; illustrative counts" o={o} hi={hiLive} />}
-      {ws.last && <CounterCard x={cardX} y={cardY} w={330} n={ws.last.f} m={ws.last.r} title="last completed five-second window" sub="illustrative counts" o={o} hi={hiLast} />}
+      {ws.cur && <CounterCard x={cx - 220} y={188} w={440} n={ws.cur.c[0]} m={ws.cur.c[1]} title="current five-second window" sub="crossings in each 5 s window; illustrative counts" o={o} hi={hiLive} />}
+      {ws.last && <CounterCard x={cardX} y={cardY} w={340} n={ws.last.f} m={ws.last.r} title="last completed five-second window" sub="illustrative counts" o={o} hi={hiLast} />}
     </g>
   );
 }

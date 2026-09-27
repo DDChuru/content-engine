@@ -2,7 +2,7 @@ import React from 'react';
 import {fi, fe, pulse} from '../util';
 import {gt, Lbl, Pill, C, Txt, Cite, PARTS, SCHEM, clamp01, CUE, BSTART, RouteSlots, MemScene, memM, memGeo, MX, fmmLayout, compPos, carrierPlan, NETPX, Card, ATPTag} from '../kit';
 import {mixedFields, SLOT, FDBracket} from './Beat07';
-import {MemCounters, MemNet} from './Beat05';
+import {MemCounters, MemNet, CoreLabel, slotFill} from './Beat05';
 import {ionField} from './Beat08';
 import {fieldState, FieldTokens, SideTag, countIn, Ev} from '../DiffusionField';
 import {PROT} from '../TransportProteinSet';
@@ -41,7 +41,8 @@ export default function Beat09(s: any) {
   const revHi = a('either') >= 0 && t < B.c + 2.9 ? 1 : pulse(a('either'), 1.6);
   return (
     <g>
-      <MemScene s={s} t={t} mem={mem} />
+      <MemScene s={s} t={t} mem={mem} core={0} />
+      <CoreLabel />
       <FieldTokens st={F.o2} k="o2" t={t} opacity={0.3} />
       <FieldTokens st={ions} k="ion" t={t} opacity={0.3} />
       {X < 1 && <FieldTokens st={pre} k="glucose" t={t} s={0.85} opacity={1 - X} hi={a('bind') >= -0.7 && !counted ? pre.pts.filter((p: any) => p.crossing).map((p: any) => p.i) : []} />}
@@ -51,16 +52,21 @@ export default function Beat09(s: any) {
       <InkRing cx={ca.x} cy={M0.cy} rx={1.4 * M0.u} ry={3.1 * M0.u} p={revHi > 0 ? 1 : 0} opacity={revHi} color="#E0892B" />
       {!counted && <Pill x={(MX.x0 + MX.x1) / 2} y={MX.y0 - 12} text="mechanism demonstration; not counted" anchor="middle" size={16} fill={C.primary} />}
       {counted && <Pill x={(MX.x0 + MX.x1) / 2} y={MX.y0 - 12} text="new counted demonstration: glucose reset to 15 / 5" anchor="middle" size={16} fill={C.primary} o={X} />}
-      <SideTag x={MX.x1 - 50} y={MX.y0 + 44} n={st.a} o={X} cap={t < B.c + 1.5 ? 'set starting count' : ''} />
-      <SideTag x={MX.x1 - 50} y={MX.y1 - 56} n={st.b} o={X} cap={t < B.c + 1.5 ? 'set starting count' : ''} />
-      <MemCounters live={doneAll ? null : live} last={doneAll ? [3, 1] : null} o={X} liveTitle="current demonstration (16 s)" sub="crossings in this 16 s illustrative demonstration" hiLast={pulse(t - (B.c + 12.9), 1.2)} />
-      <Txt x={1030} y={466} size={14} weight={700} fill={C.muted} italic opacity={X}>not comparable rates between transport routes</Txt>
+      <SideTag x={MX.x1 - 50} y={MX.y0 + 44} n={st.a} o={X} />
+      <SideTag x={MX.x1 - 50} y={MX.y1 - 56} n={st.b} o={X} />
+      {t < B.c + 1.5 && <g opacity={X}>
+        <Txt x={MX.x1 - 90} y={MX.y0 + 40} size={20} weight={700} fill={C.muted} anchor="end">set starting count</Txt>
+        <Txt x={MX.x1 - 90} y={MX.y1 - 60} size={20} weight={700} fill={C.muted} anchor="end">set starting count</Txt>
+      </g>}
+      <MemCounters live={doneAll ? null : live} last={doneAll ? [3, 1] : null} o={X} liveTitle="current demonstration (16 s)" sub="illustrative counts" hiLast={pulse(t - (B.c + 12.9), 1.2)} />
+      <Txt x={1030} y={488} size={20} weight={700} fill={C.muted} italic opacity={X}>not comparable rates</Txt>
+      <Txt x={1030} y={511} size={20} weight={700} fill={C.muted} italic opacity={X}>between transport routes</Txt>
       <MemNet net={net} label="facilitated diffusion" />
       {counted && <g opacity={X}>
-        <Pill x={1030} y={506} text="down its concentration gradient" size={16} fill={C.teal} />
-        <ATPTag x={1062} y={548} w={52} h={24} struck /><Pill x={1098} y={553} text="no ATP used" size={15} />
+        <Pill x={1030} y={551} text="down its concentration gradient" size={16} fill={C.teal} />
+        <ATPTag x={1062} y={588} w={52} h={24} struck /><Pill x={1098} y={593} text="no ATP used" size={15} />
       </g>}
-      <Txt x={1030} y={592} size={16} weight={700} fill={C.teal} italic opacity={X}>our facilitated-diffusion example</Txt>
+      <Txt x={1030} y={706} size={16} weight={700} fill={C.teal} italic opacity={X}>our facilitated-diffusion example</Txt>
       {a('caution') >= 0 && <Card x={1370} y={206} w={480} h={150} opacity={fi(a('caution'), 0.4)} stroke={C.primary} fill="#FFFFFF">
         <Txt x={1390} y={238} size={18} weight={800} fill={C.primary}>one caution</Txt>
         <Txt x={1390} y={266} size={17} weight={700}>needing a protein does not by itself establish</Txt>
@@ -68,7 +74,7 @@ export default function Beat09(s: any) {
         <Txt x={1390} y={314} size={17} weight={700}>glucose-transport system</Txt>
         <Txt x={1390} y={342} size={15} weight={600} fill={C.muted} italic>energy-requiring transport: 4.2.1b</Txt>
       </Card>}
-      <RouteSlots x={SLOT.x} y={SLOT.y} w={SLOT.w} h={SLOT.h} gap={SLOT.gap} fill={[1, 1, fe(a('more') - 0.4, 0.6), 0]} hi={[0, 0, pulse(a('more') - 0.4, 1.4), 0]} />
+      <RouteSlots x={SLOT.x} y={SLOT.y} w={SLOT.w} h={SLOT.h} gap={SLOT.gap} fill={[1, 1, slotFill(a('more') - 0.4), 0]} hi={[0, 0, pulse(a('more') - 0.4, 1.4), 0]} />
       <FDBracket />
       <Cite x={MX.x1} y={948} text={SCHEM + '; ' + PARTS} anchor="end" />
     </g>

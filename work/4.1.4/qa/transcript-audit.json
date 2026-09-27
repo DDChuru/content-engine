@@ -35,14 +35,14 @@
   },
   {
     "beat": 5,
-    "sourceWords": 96,
-    "recognizerTokens": 95,
-    "matchedSourceTokens": 95,
+    "sourceWords": 130,
+    "recognizerTokens": 131,
+    "matchedSourceTokens": 130,
     "differences": [
       {
-        "op": "delete",
-        "script": "site",
-        "heard": ""
+        "op": "insert",
+        "script": "",
+        "heard": "binding"
       }
     ]
   },
