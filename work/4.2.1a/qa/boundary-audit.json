@@ -1,9 +1,9 @@
 {
   "master": "/home/user/content-engine/work/4.2.1a/4.2.1a-passive-transport.mp4",
   "timeline": "/home/user/content-engine/work/4.2.1a/timeline.json",
-  "master_bytes": 234485459,
+  "master_bytes": 232458818,
   "fps": 30.0,
-  "frame_count": 19246,
+  "frame_count": 19702,
   "boundaries_tested": 13,
   "candidate_count": 0,
   "candidate_beats": [],
@@ -30,17 +30,17 @@
       "settles_after_jump": true,
       "metrics": {
         "prior_motion": {
-          "mae": 0.3424088656902313,
-          "changed_fraction": 0.009431423611111111,
-          "max_tile_mae": 2.4774301052093506
+          "mae": 0.3363237977027893,
+          "changed_fraction": 0.0087890625,
+          "max_tile_mae": 3.514756679534912
         },
         "last_to_first": {
-          "mae": 180.34107971191406,
+          "mae": 180.2282257080078,
           "changed_fraction": 0.9979166666666667,
-          "max_tile_mae": 193.6012725830078
+          "max_tile_mae": 191.03298950195312
         },
         "first_to_second": {
-          "mae": 0.014677372761070728,
+          "mae": 0.014649884775280952,
           "changed_fraction": 0.0,
           "max_tile_mae": 0.7446469664573669
         },
@@ -65,17 +65,17 @@
           "max_tile_mae": 0.0
         },
         "last_to_first": {
-          "mae": 184.61550903320312,
-          "changed_fraction": 0.9965364583333334,
+          "mae": 184.45086669921875,
+          "changed_fraction": 0.9965234375,
           "max_tile_mae": 191.8383026123047
         },
         "first_to_second": {
-          "mae": 0.09746527671813965,
+          "mae": 0.0974406749010086,
           "changed_fraction": 0.0026475694444444446,
           "max_tile_mae": 0.8090277910232544
         },
         "second_to_third": {
-          "mae": 0.09690538048744202,
+          "mae": 0.09697771817445755,
           "changed_fraction": 0.002634548611111111,
           "max_tile_mae": 0.8107638359069824
         }
@@ -90,22 +90,22 @@
       "settles_after_jump": true,
       "metrics": {
         "prior_motion": {
-          "mae": 0.47865164279937744,
-          "changed_fraction": 0.010203993055555555,
-          "max_tile_mae": 4.510995388031006
+          "mae": 0.48288044333457947,
+          "changed_fraction": 0.010151909722222222,
+          "max_tile_mae": 4.541522026062012
         },
         "last_to_first": {
-          "mae": 4.174952030181885,
-          "changed_fraction": 0.10875434027777778,
+          "mae": 4.549274921417236,
+          "changed_fraction": 0.11651041666666667,
           "max_tile_mae": 36.795284271240234
         },
         "first_to_second": {
-          "mae": 0.4973263740539551,
+          "mae": 0.49819302558898926,
           "changed_fraction": 0.010451388888888889,
           "max_tile_mae": 4.788628101348877
         },
         "second_to_third": {
-          "mae": 0.49688661098480225,
+          "mae": 0.4970514476299286,
           "changed_fraction": 0.010598958333333333,
           "max_tile_mae": 4.747829914093018
         }
@@ -120,24 +120,24 @@
       "settles_after_jump": false,
       "metrics": {
         "prior_motion": {
-          "mae": 0.2141362875699997,
-          "changed_fraction": 0.004457465277777778,
-          "max_tile_mae": 1.7278646230697632
+          "mae": 0.2204875648021698,
+          "changed_fraction": 0.004605034722222222,
+          "max_tile_mae": 2.2669270038604736
         },
         "last_to_first": {
-          "mae": 1.8458216190338135,
-          "changed_fraction": 0.022981770833333335,
-          "max_tile_mae": 17.985387802124023
+          "mae": 2.3674755096435547,
+          "changed_fraction": 0.04202256944444444,
+          "max_tile_mae": 21.22525978088379
         },
         "first_to_second": {
-          "mae": 1.3727387189865112,
-          "changed_fraction": 0.031011284722222223,
-          "max_tile_mae": 15.911602020263672
+          "mae": 0.3863498270511627,
+          "changed_fraction": 0.010325520833333334,
+          "max_tile_mae": 2.372974157333374
         },
         "second_to_third": {
-          "mae": 2.6894822120666504,
-          "changed_fraction": 0.0528515625,
-          "max_tile_mae": 28.591291427612305
+          "mae": 0.8586024045944214,
+          "changed_fraction": 0.023862847222222223,
+          "max_tile_mae": 4.884114742279053
         }
       }
     },
@@ -150,24 +150,24 @@
       "settles_after_jump": true,
       "metrics": {
         "prior_motion": {
-          "mae": 0.5187384486198425,
-          "changed_fraction": 0.010794270833333333,
-          "max_tile_mae": 6.119791507720947
+          "mae": 0.47796154022216797,
+          "changed_fraction": 0.010286458333333333,
+          "max_tile_mae": 3.191840171813965
         },
         "last_to_first": {
-          "mae": 3.0168228149414062,
-          "changed_fraction": 0.03928385416666667,
-          "max_tile_mae": 40.42042541503906
+          "mae": 2.164435863494873,
+          "changed_fraction": 0.027000868055555554,
+          "max_tile_mae": 18.217735290527344
         },
         "first_to_second": {
-          "mae": 0.7148061990737915,
-          "changed_fraction": 0.011692708333333333,
-          "max_tile_mae": 6.37644624710083
+          "mae": 0.511074960231781,
+          "changed_fraction": 0.010104166666666666,
+          "max_tile_mae": 3.1294851303100586
         },
         "second_to_third": {
-          "mae": 0.7958130836486816,
-          "changed_fraction": 0.012213541666666666,
-          "max_tile_mae": 6.450231552124023
+          "mae": 0.6866145730018616,
+          "changed_fraction": 0.010321180555555556,
+          "max_tile_mae": 3.668257713317871
         }
       }
     },
@@ -180,24 +180,24 @@
       "settles_after_jump": true,
       "metrics": {
         "prior_motion": {
-          "mae": 0.5600650906562805,
-          "changed_fraction": 0.011115451388888888,
-          "max_tile_mae": 4.561052322387695
+          "mae": 0.5495803952217102,
+          "changed_fraction": 0.01109375,
+          "max_tile_mae": 4.727719783782959
         },
         "last_to_first": {
-          "mae": 3.0713512897491455,
-          "changed_fraction": 0.0366015625,
-          "max_tile_mae": 23.040363311767578
+          "mae": 3.3516666889190674,
+          "changed_fraction": 0.042291666666666665,
+          "max_tile_mae": 24.80569839477539
         },
         "first_to_second": {
-          "mae": 0.6134288311004639,
-          "changed_fraction": 0.011358506944444444,
-          "max_tile_mae": 4.3673319816589355
+          "mae": 0.6152488589286804,
+          "changed_fraction": 0.011519097222222222,
+          "max_tile_mae": 4.549190044403076
         },
         "second_to_third": {
-          "mae": 0.6227083206176758,
-          "changed_fraction": 0.011727430555555555,
-          "max_tile_mae": 4.625289440155029
+          "mae": 0.628381073474884,
+          "changed_fraction": 0.011558159722222221,
+          "max_tile_mae": 4.620080947875977
         }
       }
     },
@@ -210,204 +210,204 @@
       "settles_after_jump": true,
       "metrics": {
         "prior_motion": {
-          "mae": 0.5051968097686768,
-          "changed_fraction": 0.011979166666666667,
-          "max_tile_mae": 3.9490747451782227
+          "mae": 0.49577978253364563,
+          "changed_fraction": 0.011653645833333334,
+          "max_tile_mae": 3.964554786682129
         },
         "last_to_first": {
-          "mae": 5.274660587310791,
-          "changed_fraction": 0.07177517361111112,
-          "max_tile_mae": 28.169851303100586
+          "mae": 5.079890251159668,
+          "changed_fraction": 0.0693359375,
+          "max_tile_mae": 28.14916229248047
         },
         "first_to_second": {
-          "mae": 0.4534606337547302,
-          "changed_fraction": 0.010169270833333334,
-          "max_tile_mae": 4.1678242683410645
+          "mae": 0.4564279615879059,
+          "changed_fraction": 0.01001736111111111,
+          "max_tile_mae": 4.103153705596924
         },
         "second_to_third": {
-          "mae": 0.45709922909736633,
-          "changed_fraction": 0.01015625,
-          "max_tile_mae": 4.233796119689941
+          "mae": 0.4571397602558136,
+          "changed_fraction": 0.010013020833333334,
+          "max_tile_mae": 4.211661338806152
         }
       }
     },
     {
       "beat": 9,
       "previous_beat": 8,
-      "frame": 10000,
-      "time_seconds": 333.3333333333333,
+      "frame": 10456,
+      "time_seconds": 348.53333333333336,
       "candidate": false,
       "settles_after_jump": true,
       "metrics": {
         "prior_motion": {
-          "mae": 0.4082074761390686,
-          "changed_fraction": 0.008068576388888889,
-          "max_tile_mae": 3.475694179534912
+          "mae": 0.37366896867752075,
+          "changed_fraction": 0.007725694444444445,
+          "max_tile_mae": 2.5833334922790527
         },
         "last_to_first": {
-          "mae": 6.788055419921875,
-          "changed_fraction": 0.10221354166666667,
-          "max_tile_mae": 31.474971771240234
+          "mae": 6.435412406921387,
+          "changed_fraction": 0.11953993055555556,
+          "max_tile_mae": 30.550777435302734
         },
         "first_to_second": {
-          "mae": 0.41420719027519226,
-          "changed_fraction": 0.009110243055555555,
-          "max_tile_mae": 2.9943575859069824
+          "mae": 0.4166131615638733,
+          "changed_fraction": 0.009205729166666666,
+          "max_tile_mae": 3.0426793098449707
         },
         "second_to_third": {
-          "mae": 0.4233463406562805,
-          "changed_fraction": 0.00921875,
-          "max_tile_mae": 3.0302376747131348
+          "mae": 0.4431626498699188,
+          "changed_fraction": 0.010169270833333334,
+          "max_tile_mae": 3.0801498889923096
         }
       }
     },
     {
       "beat": 10,
       "previous_beat": 9,
-      "frame": 11403,
-      "time_seconds": 380.1,
+      "frame": 11859,
+      "time_seconds": 395.3,
       "candidate": false,
       "settles_after_jump": true,
       "metrics": {
         "prior_motion": {
-          "mae": 0.3993605077266693,
-          "changed_fraction": 0.009153645833333333,
-          "max_tile_mae": 3.167968511581421
+          "mae": 0.40508973598480225,
+          "changed_fraction": 0.008984375,
+          "max_tile_mae": 3.3690688610076904
         },
         "last_to_first": {
-          "mae": 21.399368286132812,
-          "changed_fraction": 0.5679991319444444,
+          "mae": 21.941905975341797,
+          "changed_fraction": 0.563984375,
           "max_tile_mae": 75.9907455444336
         },
         "first_to_second": {
-          "mae": 0.2947149872779846,
-          "changed_fraction": 0.005998263888888889,
-          "max_tile_mae": 2.190682888031006
+          "mae": 0.3030121624469757,
+          "changed_fraction": 0.0061892361111111115,
+          "max_tile_mae": 2.769965410232544
         },
         "second_to_third": {
-          "mae": 0.2950361371040344,
-          "changed_fraction": 0.005911458333333334,
-          "max_tile_mae": 2.0218465328216553
+          "mae": 0.3033897578716278,
+          "changed_fraction": 0.006167534722222222,
+          "max_tile_mae": 2.7832753658294678
         }
       }
     },
     {
       "beat": 11,
       "previous_beat": 10,
-      "frame": 13513,
-      "time_seconds": 450.43333333333334,
+      "frame": 13969,
+      "time_seconds": 465.6333333333333,
       "candidate": false,
       "settles_after_jump": true,
       "metrics": {
         "prior_motion": {
-          "mae": 0.5074493288993835,
-          "changed_fraction": 0.011493055555555555,
-          "max_tile_mae": 2.7427663803100586
+          "mae": 0.48754194378852844,
+          "changed_fraction": 0.010625,
+          "max_tile_mae": 2.767650604248047
         },
         "last_to_first": {
-          "mae": 14.754242897033691,
-          "changed_fraction": 0.2876692708333333,
-          "max_tile_mae": 52.62384033203125
+          "mae": 15.973241806030273,
+          "changed_fraction": 0.2929861111111111,
+          "max_tile_mae": 54.28501510620117
         },
         "first_to_second": {
-          "mae": 0.19437354803085327,
-          "changed_fraction": 0.005138888888888889,
-          "max_tile_mae": 1.6127022504806519
+          "mae": 0.18618489801883698,
+          "changed_fraction": 0.004982638888888889,
+          "max_tile_mae": 1.6487268209457397
         },
         "second_to_third": {
-          "mae": 0.19511865079402924,
-          "changed_fraction": 0.005169270833333333,
-          "max_tile_mae": 1.6332465410232544
+          "mae": 0.18741174042224884,
+          "changed_fraction": 0.005151909722222223,
+          "max_tile_mae": 1.5817420482635498
         }
       }
     },
     {
       "beat": 12,
       "previous_beat": 11,
-      "frame": 14785,
-      "time_seconds": 492.8333333333333,
+      "frame": 15241,
+      "time_seconds": 508.03333333333336,
       "candidate": false,
       "settles_after_jump": true,
       "metrics": {
         "prior_motion": {
-          "mae": 0.3475795388221741,
-          "changed_fraction": 0.009162326388888888,
-          "max_tile_mae": 3.8411457538604736
+          "mae": 0.3107537627220154,
+          "changed_fraction": 0.008025173611111111,
+          "max_tile_mae": 4.339844226837158
         },
         "last_to_first": {
-          "mae": 1.7838037014007568,
-          "changed_fraction": 0.022469618055555557,
+          "mae": 1.824064016342163,
+          "changed_fraction": 0.021788194444444443,
           "max_tile_mae": 17.718172073364258
         },
         "first_to_second": {
-          "mae": 0.36162468791007996,
-          "changed_fraction": 0.009236111111111112,
-          "max_tile_mae": 3.8291380405426025
+          "mae": 0.30568575859069824,
+          "changed_fraction": 0.007782118055555555,
+          "max_tile_mae": 4.201533794403076
         },
         "second_to_third": {
-          "mae": 0.36027345061302185,
-          "changed_fraction": 0.009309895833333333,
-          "max_tile_mae": 4.0104169845581055
+          "mae": 0.30411601066589355,
+          "changed_fraction": 0.007934027777777778,
+          "max_tile_mae": 4.25303840637207
         }
       }
     },
     {
       "beat": 13,
       "previous_beat": 12,
-      "frame": 16157,
-      "time_seconds": 538.5666666666667,
+      "frame": 16613,
+      "time_seconds": 553.7666666666667,
       "candidate": false,
       "settles_after_jump": true,
       "metrics": {
         "prior_motion": {
-          "mae": 0.41913920640945435,
-          "changed_fraction": 0.010555555555555556,
-          "max_tile_mae": 4.347221851348877
+          "mae": 0.36237847805023193,
+          "changed_fraction": 0.009396701388888888,
+          "max_tile_mae": 3.5865163803100586
         },
         "last_to_first": {
-          "mae": 14.138381958007812,
-          "changed_fraction": 0.24625868055555555,
-          "max_tile_mae": 51.426353454589844
+          "mae": 4.323849678039551,
+          "changed_fraction": 0.09874565972222223,
+          "max_tile_mae": 26.585216522216797
         },
         "first_to_second": {
-          "mae": 0.4224291443824768,
-          "changed_fraction": 0.010004340277777777,
-          "max_tile_mae": 5.24855375289917
+          "mae": 0.38886865973472595,
+          "changed_fraction": 0.009865451388888889,
+          "max_tile_mae": 4.072482109069824
         },
         "second_to_third": {
-          "mae": 0.4264988601207733,
-          "changed_fraction": 0.009904513888888888,
-          "max_tile_mae": 5.262876033782959
+          "mae": 0.39235392212867737,
+          "changed_fraction": 0.010086805555555555,
+          "max_tile_mae": 4.114294052124023
         }
       }
     },
     {
       "beat": 14,
       "previous_beat": 13,
-      "frame": 17871,
-      "time_seconds": 595.7,
+      "frame": 18327,
+      "time_seconds": 610.9,
       "candidate": false,
       "settles_after_jump": true,
       "metrics": {
         "prior_motion": {
-          "mae": 0.4281800091266632,
-          "changed_fraction": 0.0100390625,
-          "max_tile_mae": 4.122685432434082
+          "mae": 0.3574725091457367,
+          "changed_fraction": 0.009136284722222223,
+          "max_tile_mae": 3.9173898696899414
         },
         "last_to_first": {
-          "mae": 10.636148452758789,
-          "changed_fraction": 0.18746961805555556,
-          "max_tile_mae": 42.09535217285156
+          "mae": 11.004318237304688,
+          "changed_fraction": 0.1832421875,
+          "max_tile_mae": 46.45558166503906
         },
         "first_to_second": {
-          "mae": 0.32050347328186035,
-          "changed_fraction": 0.002439236111111111,
-          "max_tile_mae": 2.8758676052093506
+          "mae": 0.5005526542663574,
+          "changed_fraction": 0.005299479166666667,
+          "max_tile_mae": 3.726128578186035
         },
         "second_to_third": {
-          "mae": 0.19722656905651093,
-          "changed_fraction": 0.0025173611111111113,
-          "max_tile_mae": 2.1508970260620117
+          "mae": 0.34040799736976624,
+          "changed_fraction": 0.005303819444444444,
+          "max_tile_mae": 3.964409351348877
         }
       }
     }

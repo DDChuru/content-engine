@@ -56,3 +56,22 @@ f85e458b886dec2e757c11ecebfef6b081501dc86f0fc44ed7980d3946a9e5b7  VesicleTranspo
 The seven 4.1.1-2 files above are unchanged and identical in all four lessons. 4.2.1a's `src/SignallingScene.tsx` is an
 earlier copy (6cb4aca8…, before `bindMuscle`), unused by any 4.2.1a beat; it was left as rendered rather than re-render
 the lesson for an unused file.
+
+## sha256 after cloud run 008f (27 Sep 2026) — CURRENT; supersedes the two lists above
+Every lesson copy is byte-identical to these (lessons that use the file in brackets). Changes: `CHANGELOG.md` (008f).
+```
+ee03b7658ab66211d95b05f2b46ed13286ea0967601e6cb89891d6035d5f96c9  CholesterolQualitative.tsx   (4.1.3, 4.1.4, 4.2.1a)
+17b0041360cd5fa6586a759fa47abf4b1499e4134fb175125645ea243397119b  DiffusionField.tsx           (4.2.1a)
+cd18164e2155a3d2e5d74ec8457bfaff80436fa7ac8e60ec5a6325bbd6adaaf0  FluidMosaicMembrane.tsx      (4.1.1-2, 4.1.3, 4.1.4, 4.2.1a)
+9940f7391c94fd1541d894925b8f374f4024cd82d46e0b1a81ddd69b93aebf49  PhospholipidToken.tsx        (4.1.1-2, 4.1.3, 4.1.4, 4.2.1a)
+1cc07252bbe002ca4a99d838d93a88b812a9ba77a4121446235f1988ed3f0d69  ReceptorLigand.tsx           (4.1.1-2, 4.1.3, 4.1.4, 4.2.1a)
+ddb918e7c338dc008e2d3cfaaef457b9b34abb434dc9ff5db5384caa693ea0f1  SignallingScene.tsx          (4.1.4, 4.2.1a)
+6f8ad2db316ae2d9f9e28a8fa4371bf490cb1c0104ec154796a1c26d780f2676  T4Tokens.tsx                 (4.1.1-2, 4.1.3, 4.1.4, 4.2.1a)
+3bc4ab34ff0e39781ed7acce7192278d0d80bba0d6e593407e89f6f576625d28  TransportProteinSet.tsx      (4.1.1-2, 4.1.3, 4.1.4, 4.2.1a)
+7154187b789e57ca076ac0f99711db51c5c7def8997caa7eed21e4261eff2245  VesicleTransport.tsx         (4.1.4, 4.2.1a)
+ebae9295e25e40ce85fde95e72cab2169914ef36863b462f702ffec254da0d8c  WaterField.tsx               (4.1.1-2, 4.1.3, 4.1.4, 4.2.1a)
+4b60170c97223e4c213d2687ed08714eed88832ad286e5564c1870b8329e2434  WaterPotentialModel.tsx      (4.2.1a)
+6c1088fc47558a3354c0b4049e404df0d05a85f35f6c8f65bfa66a4c26b0ec5a  t4-palette.ts                (4.1.1-2, 4.1.3, 4.1.4, 4.2.1a)
+```
+Label-audit tooling for all Topic 4 lessons: `work/t4-tools/label-audit.cjs` (+ `label-audit-beat.cjs`); copy it into a
+new lesson and call it from `render-beat.cjs` on every frame (see 4.2.1a).

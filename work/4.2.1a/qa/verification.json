@@ -1,33 +1,41 @@
 {
-  "1_ffprobeDuration": 641.533333,
+  "1_ffprobeDuration": 656.733333,
   "2_videoCoversAudio": {
-    "video": 641.533333,
-    "encodedAudio": 640.533,
+    "video": 656.733333,
+    "encodedAudio": 655.733,
     "marginSeconds": 1.0,
-    "videoFrames": 19246
+    "videoFrames": 19702
   },
   "3_fullDecodeErrors": 0,
   "4_cues": {
-    "matched": 146,
-    "total": 146,
-    "planned": 146
+    "matched": 149,
+    "total": 149,
+    "planned": 149
   },
   "5_audioPacketsUnchanged": {
-    "packets": 30026,
+    "packets": 30739,
     "identical": true
   },
   "6_finalWord": {
     "word": "ATP.",
-    "endsAt": 637.4,
-    "audioEnds": 640.533,
+    "endsAt": 652.6,
+    "audioEnds": 655.733,
     "headroom": 3.133,
     "afterWordMaxDb": -21.8
   },
   "7_silentReads": [
     {
+      "beat": 8,
+      "before": "Written properly",
+      "start": 305.323,
+      "seconds": 2.0,
+      "pcmAllZero": true,
+      "encodedInteriorMaxDb": -91.0
+    },
+    {
       "beat": 10,
       "before": "Look at the words",
-      "start": 394.2,
+      "start": 409.4,
       "seconds": 4.0,
       "pcmAllZero": true,
       "encodedInteriorMaxDb": -91.0
@@ -35,7 +43,7 @@
     {
       "beat": 14,
       "before": "END",
-      "start": 638.007,
+      "start": 653.207,
       "seconds": 2.0,
       "pcmAllZero": true,
       "encodedInteriorMaxDb": -91.0
@@ -46,9 +54,9 @@
   "8_boundaries": {
     "master": "/home/user/content-engine/work/4.2.1a/4.2.1a-passive-transport.mp4",
     "timeline": "/home/user/content-engine/work/4.2.1a/timeline.json",
-    "master_bytes": 234485459,
+    "master_bytes": 232458818,
     "fps": 30.0,
-    "frame_count": 19246,
+    "frame_count": 19702,
     "boundaries_tested": 13,
     "candidate_count": 0,
     "candidate_beats": [],
@@ -67,19 +75,19 @@
     "limits": "Candidates, not proof. Deliberate one-frame holds can match; identical layouts can hide a lookup error. Subtle/animated holds can evade thresholds. Requires unshifted CFR master."
   },
   "markerAudit": {
-    "framesChecked": 19246,
+    "framesChecked": 19702,
     "marked": 2082,
-    "unmarked": 17164,
+    "unmarked": 17620,
     "intervals": [
       {
         "beat": 10,
         "label": "COMMON MISTAKE",
-        "startFrame": 11403,
-        "endFrame": 13485,
-        "announceFrame": 11403,
-        "beatEndFrame": 13513,
+        "startFrame": 11859,
+        "endFrame": 13941,
+        "announceFrame": 11859,
+        "beatEndFrame": 13969,
         "clearKey": "exit",
-        "clearsOnFrame": 13485
+        "clearsOnFrame": 13941
       }
     ],
     "badgeTextMae": {
@@ -94,6 +102,84 @@
     "seconds": 7.233333333333333
   },
   "unchangedOver15s": [],
+  "labelAudit": {
+    "rule": "every text node >= 17 px after branding (x 950/1080), transforms included, no exemptions; no text/leader/geometry overlap; nothing off the content area",
+    "framesChecked": 19702,
+    "minEffectivePx": 17.59,
+    "violations": 0,
+    "beats": [
+      {
+        "beat": 1,
+        "frames": 1283,
+        "minEffectivePx": 17.59
+      },
+      {
+        "beat": 2,
+        "frames": 647,
+        "minEffectivePx": 17.59
+      },
+      {
+        "beat": 3,
+        "frames": 1340,
+        "minEffectivePx": 17.59
+      },
+      {
+        "beat": 4,
+        "frames": 1400,
+        "minEffectivePx": 17.59
+      },
+      {
+        "beat": 5,
+        "frames": 1391,
+        "minEffectivePx": 17.59
+      },
+      {
+        "beat": 6,
+        "frames": 1253,
+        "minEffectivePx": 17.59
+      },
+      {
+        "beat": 7,
+        "frames": 1300,
+        "minEffectivePx": 17.59
+      },
+      {
+        "beat": 8,
+        "frames": 1842,
+        "minEffectivePx": 17.59
+      },
+      {
+        "beat": 9,
+        "frames": 1403,
+        "minEffectivePx": 17.59
+      },
+      {
+        "beat": 10,
+        "frames": 2110,
+        "minEffectivePx": 17.59
+      },
+      {
+        "beat": 11,
+        "frames": 1272,
+        "minEffectivePx": 17.59
+      },
+      {
+        "beat": 12,
+        "frames": 1372,
+        "minEffectivePx": 17.59
+      },
+      {
+        "beat": 13,
+        "frames": 1714,
+        "minEffectivePx": 17.59
+      },
+      {
+        "beat": 14,
+        "frames": 1375,
+        "minEffectivePx": 17.59
+      }
+    ]
+  },
   "valenceAudit": "not applicable: no covalent bond is made or broken on screen (Topic 4: membrane assembly, lateral drift and insertion are non-covalent motion)",
-  "sha256": "102e29e14e8d191bf9e9ef3156b65a4d32a08aed872db33686e64ea122a4a2b1"
+  "sha256": "1f9d0d9d922a65bb92b508329cd685abf45da0e129e97718a4bd0f8302b47900"
 }

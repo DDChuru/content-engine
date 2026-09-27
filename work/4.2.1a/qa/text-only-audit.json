@@ -2,8 +2,15 @@
  "classifier": "role-based tree (data-role drawing/decor; untagged = error)",
  "sampledEvery": 0.5,
  "threshold": "<40 drawing px in the teaching area at 480x270",
- "longestSeconds": 0,
- "runs": [],
+ "longestSeconds": 0.5,
+ "runs": [
+  {
+   "from": 598.5,
+   "beat": 13,
+   "to": 598.5,
+   "seconds": 0.5
+  }
+ ],
  "over2s": [],
  "untagged": []
 }

@@ -1,5 +1,43 @@
 # 4.2.1a — Passive transport: diffusion, facilitated diffusion, osmosis · REPORT
 
+## v2 (cloud run 008f, 27 Sep 2026) — fixes for review `cloud-reviews/4.2.1a-REVIEW.md` (CHANGES)
+Branch `cloud/008f-fix-4prnob`. 14 beats, 1 error beat (E45, Beat 10), 149 cues (+3 hook cues).
+**Bunny guid `4221b6a9-03d9-4f5e-955d-0c09b6fe1514`** "REVIEW 4.2.1a v2 Passive transport: diffusion, facilitated diffusion, osmosis", no collection;
+uploaded 16:36Z; **status 4 at 16:40:46Z** (≈4 min; 240p–1080p, 668 s).
+
+| Finding | Fix |
+|---|---|
+| 1 HIGH water stops crossing 08:25–08:55 | Water now crosses the membrane for the WHOLE time the water model is shown (Beats 11–14; largest gap between two membrane crossings 1.6 s). Counted 15 · 9 windows run back to back from *in both directions all the time* until *the water potentials are equal* (7 windows; the live *current 5 s window* counter and the *completed 5 s window* card keep updating, net arrow left → right), then balanced 12 · 12 windows to the end; before counting starts, uncounted crossings (balanced while both sides are pure, 15 · 9 per 5 s once the potentials differ). Crossings continue during the solute addition. To keep a FIXED VOLUME without draining the left side, the model's far ends are open (dashed; caption *open ends: each side is part of a larger solution; its water stays the same*): for each net crossing one water token leaves the right-hand end and one enters the left-hand end (not counted). Shared `WaterPotentialModel` gained this optional mode (`openEnds`, `wpmEdgeEvents`, `WPMClip`; `../t4-shared/CHANGELOG.md`). |
+| 2 text < 17 px (L/R, ATP, counters, scaled models) | Every text ≥ 20 px at 1:1 (≥ 17.59 px delivered), letters in drawings included (L/R 21 px, ATP ≥ 20.5 px, counters 20–21 px). No annotated model is scaled down any more: Beat 13 shows ONE model at a time (water → membrane scene at *Particles move randomly* → water at *water moves by osmosis*), Beat 14 uses label-free scaled drawings with full-size labels beside them; thumbnails in Beats 1, 4, 5, 11–13 carry no text (labels fade before a scene shrinks, or sit outside). All 14 beats relaid; per-frame `label-audit.cjs` in `render-beat.cjs`: **19,702/19,702 frames, min 17.59 px, 0 violations** (asserted per beat in `verify.py`). |
+| 3 door-in-a-wall hook | Beat 8 re-voiced (hook only): *"Picture a doorway in a wall. The wall: the phospholipid bilayer, whose hydrophobic core turns ions back. The doorway: the channel protein's hydrophilic pore, an opening right through the wall."* A doorway (no door leaf: nothing swings or gates; tag *an opening: nothing swings shut*). Bricks ↔ bilayer (wash + label) and doorway ↔ ringed pore light together with link tags; **2 s silent hold** on the completed mapping; the creditworthy channel sentence (*Written properly: …*) follows at once. Hook 2.7–20.5 s of the beat. |
+| 4 positions ≠ spec | Shared `FluidMosaicMembrane` literal SHARED-SPECS slots (channel 4–5, carrier 10–11, …); every label, lane and gate re-anchored. |
+| 5 audio outlasts video | `work/brand_final.py` pads the picture after branding, audio untouched: raw branded audio ended 29 ms after picture; 0.229 s clone of the last frame: **video ends 0.205 s after audio** (667.967 vs 667.762 s). |
+| hygiene: PROGRESS.md missing | `PROGRESS.md` restored with the 008f completion record. |
+
+**Narration changes (the only ones):** Beat 8, *"Picture a door in a wall."* → the three hook sentences above (+ 2.0 s hold before
+*"Written properly"*); title *A channel protein: a doorway in a wall*. **ElevenLabs** (account-wide): 348,470 before / 348,872 after
+(731 chars requested, one take; counter lags). Transcript 118/118 (`qa/audio-review.md`).
+**Wording changes on screen** (meaning kept; STORYBOARD.md *008f: visual revisions*): counter titles *current 5 s window*,
+*completed 5 s window*, *before the change* (subtitle → header line *counts are illustrative*); *in this model water crosses; sucrose
+does not*; the caption lines reworded at 20 px (fixed volume / generic model barrier / open ends); Beat 6 pill *new comparison; set
+starting counts 32 / 8 (same area, temperature, membrane, 5 s window)*; *counter set aside:* + pill *qualitative; not counted*;
+Beat 9 counter subtitle *illustrative counts*; Beat 10 paraphrase *ignored there: …*; side-tag captions *set starting count* folded
+into the setup pills; the Beat 11–12 membrane thumbnail and the Beat 13 open-field thumbnail dropped.
+**Master** `4.2.1a-passive-transport.mp4` 656.733 s, 19,702 frames, sha256 `1f9d0d9d922a65bb92b508329cd685abf45da0e129e97718a4bd0f8302b47900`.
+**Branded** `4.2.1a-branded.mp4` 667.967 s, sha256 `4beff7df0a697384cfb0daa4c0e975d0863bfa6016a24e54f0b508ee10f6342f`, full decode 0
+errors (`qa/branded-verification.json`); `qa/branded-mid.jpg` looked at.
+**Verification** (`qa/verification.json`): ffprobe 656.733 · video ≥ audio (1.0 s) · decode 0 · cues 149/149 · AAC packets identical
+(30,739) · final word "ATP." 3.13 s headroom · silent holds B8 hook 2 s, B10 read 4 s, B14 END 2 s all −91 dB · 13 boundaries,
+0 candidates · marker audit every frame (E45 2,082 frames, 0 mismatches) · label audit 0 violations · longest still 7.23 s ·
+text-only PASS (longest 0.5 s, 0 untagged). Encoded sheets (11) looked at (osmosis 8:28–9:12 master: crossings, counters and net
+arrow live throughout; hook mapping held).
+**Phases (UTC):** review/plan 15:30 · shared WPM open ends + Beats 8, 11–14 redesign 15:35–16:00 (Beats 1–7, 9–10 relaid in
+parallel, each passing the every-frame audit) · re-voice 15:40 · render 15:59–16:22 (19,702 frames, audit live) · finish/verify/
+sheets 16:22–16:30 · brand 16:30–16:36 · upload 16:36 · status 4 16:40:46.
+
+---
+
+## v1 (run 008a) — superseded (details below)
 Model: claude-opus-5-5 (cloud run 008a). Branch `cloud/008-4.1.1-2-to-4.2.1a-dq9f0v`. 14 beats, 1 error beat (E45, Beat 10,
 COMMON MISTAKE), 146 cues.
 

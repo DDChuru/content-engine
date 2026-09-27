@@ -1,0 +1,30 @@
+{
+  "master": "4.2.1a-passive-transport.mp4",
+  "masterVideoDur": 656.733333,
+  "raw": {
+    "videoStart": 0.0,
+    "videoDur": 667.733333,
+    "videoEnd": 667.733333,
+    "audioStart": 0.0,
+    "audioDur": 667.762,
+    "audioEnd": 667.762,
+    "videoFrames": 20032,
+    "formatDur": 667.762
+  },
+  "padSeconds": 0.229,
+  "final": {
+    "videoStart": 0.0,
+    "videoDur": 667.966667,
+    "videoEnd": 667.966667,
+    "audioStart": 0.0,
+    "audioDur": 667.762,
+    "audioEnd": 667.762,
+    "videoFrames": 20039,
+    "formatDur": 667.966667
+  },
+  "videoMinusAudioEnd": 0.205,
+  "brandedMinusMaster": 11.233,
+  "fullDecodeErrors": 0,
+  "sha256": "4beff7df0a697384cfb0daa4c0e975d0863bfa6016a24e54f0b508ee10f6342f",
+  "audioPacketsFromRaw": "copied (-c:a copy): the audio stream is the branded audio unchanged"
+}
