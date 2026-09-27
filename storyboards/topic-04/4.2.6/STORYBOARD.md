@@ -53,7 +53,7 @@ Captions on every frame that shows the set: *schematic; not to scale; cells draw
 
 **Plant cell parts (labelled on first appearance, Beat 7):** **cellulose cell wall** (thick outline), **cell surface membrane**, **cytoplasm**, **nucleus**, **large vacuole**, **tonoplast**; bracket **protoplast = the cell surface membrane and everything inside it**. Rest geometry: wall a rounded rectangle, width 1.00 × height 0.70 (model units).
 
-| State | Geometry and motion | Label (always the initial comparison) |
+| State | Geometry and motion | Label (initial condition and current state, as applicable) |
 |---|---|---|
 | `plant-equal` (**also the starting geometry for all three plant cases**) | protoplast pressing gently on the wall along its whole length; vacuole about 70% of the cell's area; wall at rest outline; crossings balanced, no net arrow | before immersion: *starting cell (from a watered plant)*; in the equal case: *initially: solution's water potential equal to the cell's · no net movement · unchanged* |
 | `plant-taking-up-water` (**lesson-local transition**) | vacuole enlarges, protoplast presses increasingly against the resisting wall, cell water-potential marker rises, inward and outward crossings progressively approach balance. Net inflow is present only while the water potentials differ. (Geometry: over 3 s the vacuole grows towards about 80% of the area; the wall bulges outward very slightly, at most 2% of its width, at mid-side; the net arrow into the cell shortens with the imbalance, per `cell-vs-solution:equalise`) | *initially: solution's water potential higher than the cell's* · **becoming more turgid; water uptake in progress** |
@@ -75,7 +75,7 @@ Captions on every frame that shows the set: *schematic; not to scale; cells draw
 
 ## Beat by beat
 
-Beat windows in the headings are provisional and follow the per-beat ledger (words ÷ 120); final cue times come from the measured audio. Every cue is an exact narration substring, unique within its beat, in spoken order; no stretch over 30 words without a stated visual change. No beat has a silent hold except the recap's settle, which is anchored by the fade-ins.
+Beat windows in the headings are provisional and follow the per-beat ledger (words ÷ 120); final cue times come from the measured audio. Every cue is an exact narration substring, unique within its beat, in spoken order; no stretch over 30 words without a stated visual change. The narration ledger excludes two separately scheduled holds: 1.5 seconds after Beat 9's narration on the labelled plasmolysis gap, and 2 seconds on Beat 11's final frame. Recap highlights and settling otherwise occur within its allocated beat time. All holds remain anchored to the displayed cells and labels.
 
 ### BEAT 1 · Hook and context · 0:00–0:35
 
@@ -225,7 +225,7 @@ Beat windows in the headings are provisional and follow the per-beat ledger (wor
 
 ---
 
-### BEAT 9 · Plant cell: equal, then lower · 6:56–7:47
+### BEAT 9 · Plant cell: equal, then lower · 6:55.5–7:48.5
 
 **Narration:**
 > Back to the starting cell, now in a solution whose water potential equals the cell's. No net movement, so it stays as it was, still pressing gently on its wall. Now a solution with a lower water potential. There is a net movement of water out of the cell; the vacuole shrinks and the protoplast stops pushing on the wall: the cell is flaccid. With further loss, the cell surface membrane pulls away from the wall, often first at the corners: this is plasmolysis. The wall is freely permeable, so the gap between wall and membrane fills with the external solution, not air.
@@ -244,7 +244,7 @@ Beat windows in the headings are provisional and follow the per-beat ledger (wor
 
 ---
 
-### BEAT 10 · What I told you, on the six cells · 7:47–8:37
+### BEAT 10 · What I told you, on the six cells · 7:48.5–8:38.0
 
 **Narration:**
 > So here it is, on the six cells. Each case compares the solution's water potential with the cell's, at the start, and net water movement runs from higher to lower. Higher outside: the red blood cell swells and, in pure water, bursts, haemolysis; the plant cell becomes turgid, and its wall holds it while its water potential rises to equal the solution's. Equal: no net movement, though water still crosses both ways. Lower outside: the red blood cell is crenated; the plant cell becomes flaccid, then plasmolysed, the gap full of external solution. The difference is the cell wall.
@@ -259,7 +259,7 @@ Beat windows in the headings are provisional and follow the per-beat ledger (wor
 
 ---
 
-### BEAT 11 · How it is asked, the reject card, and the lettuce · 8:37–9:28
+### BEAT 11 · How it is asked, the reject card, and the lettuce · 8:38.0–9:31.5
 
 **Narration:**
 > How this reaches you. None of the cited question parts in the five-paper Paper 2 sample directly tests this outcome. So this close follows the syllabus: explain water movement in water-potential terms and compare its effects on plant and animal cells. A November 2020 phloem explanation carried water-potential points among its five marks, and a practical paper credited the point of zero mass change, where there is no net change, as its estimate. The reject card is ours: equal water potentials mean no net movement. And the lettuce and the red cell? Water entered both; the lettuce's cells had walls to push against.
@@ -410,7 +410,7 @@ Counted by the validator over the blockquoted narration; seconds = words ÷ 120 
 | 11 | How it is asked, reject card, lettuce | 103 | 51.5 |
 | **Total** | 11 beats (11 teaching + 0 error) | **1,136** | **568.0** (9:28.0) |
 
-**Length, honestly (after round-1 check):** **1,136 words = 9:28.0** at 120 words per minute, **1:13.0 over** the 8:15 budget (about 990 words), all of it teaching (there is no error beat). The check's runtime ruling was applied: author cuts **1, 3, 4 and 6** taken (19 + 8 + 7 + 13 = **−47 words**; 1,147 → 1,100 = 9:10 before replacements), then the required M4–M5 material/fit and scope wording added (Beat 5 +2, Beat 6 +18, Beat 7 +21 including "more turgid", Beat 11 −5 net from the M5 rewording; 1,100 + 2 + 18 + 21 − 5): **1,136 words**. Per the check, this remaining overrun is **accepted**: the six comparisons, standalone definition, plant equilibrium, real examples and recap each do distinct work; no case is deleted, no error beat is invented and no narration is sped up. Cuts 2 (Beat 10 recap sentence, 22 words) and 5 ("from a watered plant", 4 words) are **kept by the check's ruling**. Beat windows in the headings are provisional; per-beat seconds above are the ledger.
+**Length, honestly (after round-2 check):** Narration: 1,136 words at 120 wpm = 9:28.0. Add Beat 9's 1.5-second settle and Beat 11's two-second final hold: total 9:31.5, 1:16.5 over the 8:15 budget. This overrun is accepted. No case or required sample explanation is cut, and narration is not accelerated. The check's runtime ruling was applied: author cuts **1, 3, 4 and 6** taken (19 + 8 + 7 + 13 = **−47 words**; 1,147 → 1,100 = 9:10 before replacements), then the required M4–M5 material/fit and scope wording added (Beat 5 +2, Beat 6 +18, Beat 7 +21 including "more turgid", Beat 11 −5 net from the M5 rewording; 1,100 + 2 + 18 + 21 − 5): **1,136 words**. Per the check, this remaining overrun is **accepted**: the six comparisons, standalone definition, plant equilibrium, real examples and recap each do distinct work; no case is deleted, no error beat is invented and no narration is sped up. Cuts 2 (Beat 10 recap sentence, 22 words) and 5 ("from a watered plant", 4 words) are **kept by the check's ruling**. Beat windows in the headings are provisional; per-beat seconds above are the ledger.
 
 **Cut list status:** 1 (Beat 1, both-directions sentence) **taken** (also removes the post-haemolysis magnifier); 2 (Beat 10 recap sentence) **kept by ruling**; 3 (Beat 11 "The same language turns up inside other answers:") **taken**; 4 (Beat 3 "First, the idea that does the explaining.") **taken**; 5 (Beat 7 "from a watered plant,") **kept by ruling**; 6 (Beat 9 "Plasmolysis is a plant-cell term; …") **taken** (the board tag *no wall: crenation, not plasmolysis* keeps the contrast on screen).
 
@@ -463,11 +463,11 @@ Counted by the validator over the blockquoted narration; seconds = words ÷ 120 
 7. **Handle.** The plan leaves the handle to the author and warns against invented metaphors. "Water runs downhill on the water-potential scale" uses the subject's own gradient language and is converted at once into the definition (Beat 3).
 8. **Exam close.** The brief names W20/21 Q4(b)(ii) and W20/51 Q1(c)(ii) as adjacent evidence. Both are shown as described by the plan check, as our paraphrase, with the close labelled **syllabus-based; not a Cambridge question**. The reject card uses the MF3 trap (equal ≠ flaccid) and is captioned as our wording contrast; no examiner reject was invented.
 9. **The isotonic saline sentence** is spoken verbatim as the plan requires; the word "isotonic" appears only there. The panel shows matched conditions and steady volumes, with no drip, prescription or IV claim.
-10. **Micrograph.** The plan allows a sourced micrograph "if used". I made it optional with a labelled drawn fallback, so the narration ("under a light microscope you would see each cell's outline") is true either way.
+10. **Micrograph.** The plan permits an optional sourced micrograph. Beat 5 compares cell outlines in a labelled inset: use a micrograph only with its source and preparation identified; otherwise use the explicitly labelled drawn model of a light-microscope view. Neither option is a measurement of water potential.
 
 ## Validator run
 
-`python3 work/006/validate_storyboard.py storyboards/topic-04/4.2.6/STORYBOARD.md` (exit code 0; re-run after the round-1 check fixes)
+`python3 work/006/validate_storyboard.py storyboards/topic-04/4.2.6/STORYBOARD.md` (exit code 0; re-run after the round-2 check edits, output unchanged because no narration changed)
 
 ```
 == storyboards/topic-04/4.2.6/STORYBOARD.md
@@ -508,5 +508,19 @@ Check: `r1/4.2.6/CHECK.md` (27 September 2026, NOT CLEARED). Only this storyboar
 | Citation audit / UNVERIFIED | applied | UNVERIFIED 2 and 3 recorded as **RESOLVED (round-1 check, PDF-CHECKED)** with the check's page references and wording; citation rows 2–3 status upgraded, "our paraphrase" retained. UNVERIFIED 1 reworded to "no direct example identified in this cited set"; 4 and 5 remain open (5 annotated as not resolved by the exam PDFs). |
 
 New narration: **1,136 words = 9:28.0** at 120 wpm (was 1,147 = 9:33.5; 73 s over the 8:15 budget, accepted by the check's runtime ruling). Rendered still-frame verification remains pending.
+
+TOTAL words 1136  cues 123  runtime at 120 wpm 9:28.0  beats 11  failing beats 0
+
+## CHECK RESPONSE (round 2)
+
+Check: `r2/4.2.6/CHECK.md` (27 September 2026, CLEARED WITH MINOR EDITS; source SHA-256 matched before editing). Only this storyboard was edited; nothing committed or pushed. No narration changed, so cues, word counts, typicality sweep, absolutes sweep, citations, UNVERIFIED list and datasets are unchanged.
+
+| ID | Status | What changed |
+|---|---|---|
+| 1 — Schedule the explicit holds | applied | Beat-section sentence replaced verbatim: "**The narration ledger excludes two separately scheduled holds: 1.5 seconds after Beat 9's narration on the labelled plasmolysis gap, and 2 seconds on Beat 11's final frame. Recap highlights and settling otherwise occur within its allocated beat time. All holds remain anchored to the displayed cells and labels.**" Final runtime statement (opening of "Length, honestly", now "after round-2 check") replaced verbatim: "**Narration: 1,136 words at 120 wpm = 9:28.0. Add Beat 9's 1.5-second settle and Beat 11's two-second final hold: total 9:31.5, 1:16.5 over the 8:15 budget. This overrun is accepted. No case or required sample explanation is cut, and narration is not accelerated.**" (the round-1 cut bookkeeping after it retained). Headings set to the exact windows **Beat 9 6:55.5–7:48.5**, **Beat 10 7:48.5–8:38.0**, **Beat 11 8:38.0–9:31.5**; earlier headings left provisional; narration ledger table unchanged. |
+| 2 — State-table heading | applied | "Label (always the initial comparison)" → "**Label (initial condition and current state, as applicable)**". Canonical endpoint label *water potentials now equal* unchanged. |
+| 3 — Interpretation 10 | applied | Replaced verbatim: "**Micrograph.** The plan permits an optional sourced micrograph. Beat 5 compares cell outlines in a labelled inset: use a micrograph only with its source and preparation identified; otherwise use the explicitly labelled drawn model of a light-microscope view. Neither option is a measurement of water potential." |
+
+Narration: **1,136 words = 9:28.0**; with both scheduled holds, total **9:31.5** (1:16.5 over the 8:15 budget, accepted by the check).
 
 TOTAL words 1136  cues 123  runtime at 120 wpm 9:28.0  beats 11  failing beats 0

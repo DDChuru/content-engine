@@ -27,7 +27,7 @@ One idea carries the lesson: **for shapes of the same kind, volume grows faster 
 
 **The handle:** *wrapping paper and the present inside.* A bigger box needs more paper, but less paper for each cubic centimetre it holds. Converted at once, in Beat 4: *for the same shape, as size increases, volume increases faster than surface area, so the surface area to volume ratio decreases.* The handle is never the exam answer and is not a metaphor a mark scheme could credit; it is said once and immediately replaced by the sentence.
 
-**Typicality rules applied.** "Volume increases faster than surface area" is bounded to **the same shape** (a flattened or folded shape can keep a high ratio; not taught, just not contradicted). Organisms: "many single-celled organisms" get oxygen by diffusion across their surface; larger size is "one reason" **many** larger organisms have specialised exchange surfaces and transport systems (named as framing only; later topics). The agar colour change is described only in real colours (blue → paler blue at the boundary → colourless). The colour boundary is described in the plan check's exact wording: it marks the indicator's pH transition as alkali is neutralised, not the position of the first acid molecules; no fixed separation between two fronts is claimed. The earlier endpoint in small cubes is explained by shorter paths and less volume per unit exposed area, never by faster diffusion; 1/t, where it appears, is labelled *reciprocal time to complete decolourisation / s⁻¹*, not a flux, diffusion coefficient or diffusion speed. No time ∝ distance² law is narrated, labelled or implied by a caption. The paper's universal indicator (blue at the start, red in acid) is kept distinct from our thymolphthalein. Hazard statements are for the working concentrations used: 0.1 mol dm⁻³ hydrochloric acid and 0.01 mol dm⁻³ sodium hydroxide are below the irritant-labelling threshold in the cited Practical Biology protocol (eye protection still worn, skin splashes rinsed); the thymolphthalein stock bottle's classification comes from an identified reference formulation (Carl Roth 8152 SDS, section 2) and is kept separate from the syllabus p.58 materials-list codes.
+**Typicality rules applied.** "Volume increases faster than surface area" is bounded to **the same shape** (a flattened or folded shape can keep a high ratio; not taught, just not contradicted). Organisms: "many single-celled organisms" get oxygen by diffusion across their surface; larger size is "one reason" **many** larger organisms have specialised exchange surfaces and transport systems (named as framing only; later topics). The agar colour change is described only in real colours (blue → paler blue at the boundary → colourless). Colourless is narrated as the pH having fallen below the indicator's transition range, not as pH 7 or complete neutralisation of the alkali (round 2). The colour boundary is described in the plan check's exact wording: it marks the indicator's pH transition as alkali is neutralised, not the position of the first acid molecules; no fixed separation between two fronts is claimed. The earlier endpoint in small cubes is explained by shorter paths and less volume per unit exposed area, never by faster diffusion; 1/t, where it appears, is labelled *reciprocal time to complete decolourisation / s⁻¹*, not a flux, diffusion coefficient or diffusion speed. No time ∝ distance² law is narrated, labelled or implied by a caption. The paper's universal indicator (blue at the start, red in acid) is kept distinct from our thymolphthalein. Hazard statements are for the working concentrations used: 0.1 mol dm⁻³ hydrochloric acid and 0.01 mol dm⁻³ sodium hydroxide are below the irritant-labelling threshold in the cited Practical Biology protocol (eye protection still worn, skin splashes rinsed); the thymolphthalein stock bottle's classification comes from an identified reference formulation (Carl Roth 8152 SDS, section 2) and is kept separate from the syllabus p.58 materials-list codes.
 
 **Error beats:** none. The weights register assigns no error beat to 4.2.3 or 4.2.4 (no examiner diagnosis in the checked sources; evidence-gaps paragraph). No beat carries a COMMON MISTAKE or EXAM CONTRAST badge. **Beat 13 closes with a compact wording-contrast card** for the plan's trap row "Bigger organisms have less surface area", captioned *our wording contrast illustrating syllabus 4.2.3; not a mark-scheme reject line* (no verified R/I line exists for S21/22 Q4; SHARED-SPECS §2 allows a reject card captioned as ours). It carries no COMMON MISTAKE or EXAM CONTRAST badge and is not an error beat.
 
@@ -196,7 +196,7 @@ Small type: *syllabus 4.2.3, "illustrate", and 4.2.4, "investigate", p.21.*
 
 ### BEAT 7 · The agar and what its colour responds to · 5:03–6:00
 **Narration:**
-> Here is the material. Agar is a jelly that is mostly water, so dissolved particles can diffuse through it. This agar was made up with dilute sodium hydroxide, nought point nought one moles per cubic decimetre, plus thymolphthalein indicator. Thymolphthalein responds to pH: it is blue in this alkaline agar, and colourless once enough acid has diffused in to neutralise the alkali. That suits the method, because the alkali gives a clear starting blue, and blue to colourless is easy to see against a white background. The change is not a sharp line, though; a paler blue band sits at the boundary, so you judge the endpoint by eye, the same way every time.
+> Here is the material. Agar is a jelly that is mostly water, so dissolved particles can diffuse through it. This agar was made up with dilute sodium hydroxide, nought point nought one moles per cubic decimetre, plus thymolphthalein indicator. Thymolphthalein responds to pH: it is blue in this alkaline agar, and colourless once enough acid has diffused in to lower the pH below its transition range. That suits the method, because the alkali gives a clear starting blue, and blue to colourless is easy to see against a white background. The change is not a sharp line, though; a paler blue band sits at the boundary, so you judge the endpoint by eye, the same way every time.
 
 **Visual action:**
 1. **From the first frame**, `AgarCubeRig` in `tray`: the covered agar tray on the bench with the white tile, scalpel, mm ruler and blunt forceps beside it, the eye-protection pictogram in the corner. At *Here is the material*, the lid lifts off; the uniform blue agar is labelled **agar made with sodium hydroxide, 0.01 mol dm⁻³, and thymolphthalein indicator (blue)**.
@@ -416,7 +416,7 @@ Every narrated sentence containing *all, every, always, never, only, no, nothing
 - "for the same shape, as size increases, volume increases faster than surface area, so the surface area to volume ratio decreases" (Beat 4): bounded by "for the same shape"; true for geometric scaling. "The cubes got bigger and the ratio got smaller": these cubes.
 - "The same method works for any cuboid" (Beat 5): true (six rectangular faces in three pairs). "so the ratio is four point six seven": arithmetic.
 - "An animal cell like yours takes in oxygen and glucose and gets rid of waste across its surface, yet the whole of its volume uses supplies" (Beat 6): typical respiring animal cell; "like yours". "That is one reason many larger organisms have specialised exchange surfaces and transport systems": "one reason", "many". "so now test it": transition, not a causal claim.
-- "Agar is a jelly that is mostly water, so dissolved particles can diffuse through it" (Beat 7): "can"; agar gels are largely water. "That suits the method, because the alkali gives a clear starting blue": the fit claim, for this preparation. "blue to colourless is easy to see against a white background": contrast of these two real states. "so you judge the endpoint by eye, the same way every time": an instruction for this method.
+- "Agar is a jelly that is mostly water, so dissolved particles can diffuse through it" (Beat 7): "can"; agar gels are largely water. "That suits the method, because the alkali gives a clear starting blue": the fit claim, for this preparation. "blue to colourless is easy to see against a white background": contrast of these two real states. "so you judge the endpoint by eye, the same way every time": an instruction for this method. "colourless once enough acid has diffused in to lower the pH below its transition range" (round 2): the indicator's property (citation 11); no claim of pH 7 or complete neutralisation.
 - "because an uneven cube has a different surface area and a different path to its centre" (Beat 8): true of a cube cut unevenly (relative to the intended cube).
 - "all from the same stock, at the same recorded room temperature" (Beat 9): the design of this protocol (one stock; thermometer check and record per run). "far more than it takes to neutralise even the largest cube's alkali": Dataset 4 (125-fold stoichiometric excess). "so acid reaches all six faces": the mesh's purpose; no claim of identical access at every point. "These working concentrations are below the irritant-labelling threshold in this protocol; still wear eye protection and rinse skin splashes with water": bounded to "these working concentrations" and "this protocol" (Practical Biology); no universal claim about every supplier's SDS.
 - "Once the cube is submerged, colourless layers develop from its exposed faces and thicken inward" (Beat 10): no "at once" claim; faces begin as each meets the acid (lower face first); on an open mesh all faces are exposed. "It is not the position of the first acid molecules": the plan check's exact wording. "each stopwatch keeps the real elapsed time": the production rule. "The smallest cube loses its last blue first …": this run (Dataset 5). "record that limit rather than inventing an endpoint": MF5 instruction.
@@ -443,7 +443,7 @@ Every quotation in this storyboard, where it appears, and the file it was copied
 | 8 | Our plan's label, shown as a table heading: "reciprocal time to complete decolourisation / s⁻¹" | Plan check MF5; plan §4.2.4 | 11; Dataset 5 | `TOPIC-PLAN-04-MEMBRANES.md` | plan wording; not exam evidence |
 | 9 | Description (not a quotation): 0.1 mol dm⁻³ hydrochloric acid and 0.01 mol dm⁻³ sodium hydroxide are below the concentration requiring an irritant label; eye protection retained; splashes rinsed | Practical Biology, "Effect of size on uptake by diffusion" (practicalbiology.org/exchange-of-materials/diffusion/effect-of-size-on-uptake-by-diffusion.html) | 7, 9 (tags; Beat 9 narration) | round-1 check M3 | safety reference; not exam evidence; verified in round 1 |
 | 10 | Description (not a quotation): thymolphthalein indicator 0.1% in denatured ethanol, Flam. Liq. 2 / H225 (highly flammable liquid and vapour) and Eye Irrit. 2 / H319 (causes serious eye irritation) | Carl Roth 8152 safety data sheet, section 2 (reference formulation for the authored model, not a centre's actual bottle) | 7 (indicator tag) | round-1 check M3 | safety reference; not exam evidence; verified in round 1 |
-| 11 | Description (not a quotation): thymolphthalein colourless at pH 9.3, blue at pH 10.5 (supports *lowered the pH below the indicator's transition range*; the pH values are not shown) | Thermo Fisher thymolphthalein indicator specification, catalogue B23896 | 7 (label wording); Real-world samples | round-1 check should-fix 2 | reference for label wording; not exam evidence |
+| 11 | Description (not a quotation): thymolphthalein colourless at pH 9.3, blue at pH 10.5 (supports *lowered the pH below the indicator's transition range* and the Beat 7 narration *lower the pH below its transition range*; colourless does not certify pH 7 or complete consumption of the alkali; the pH values are not shown) | Thermo Fisher thymolphthalein indicator specification, catalogue B23896 | 7 (label wording and narration); Real-world samples | round-1 check should-fix 2; round-2 check S2 (specification directly retrieved) | reference for label and narration wording; not exam evidence |
 
 No verbatim string from the SHARED-SPECS §2 list is used: none of them belongs to this lesson's questions (the list's M24/52 Q1(c)(iii) hazard–risk–precaution line is 4.2.5's).
 
@@ -467,21 +467,21 @@ Counted by the validator over the blockquoted narration; seconds = words ÷ 120 
 | 4 | The ratio falls as the size rises | 113 | 56.5 |
 | 5 | Cuboids, and a potato cylinder | 122 | 61.0 |
 | 6 | Why size matters to a living thing | 107 | 53.5 |
-| 7 | The agar and what its colour responds to | 114 | 57.0 |
+| 7 | The agar and what its colour responds to | 118 | 59.0 |
 | 8 | Cutting and measuring the cubes | 91 | 45.5 |
 | 9 | One bath per cube, and a clock from first contact | 108 | 54.0 |
 | 10 | Watching the colour boundary move in | 135 | 67.5 |
 | 11 | The results against SA:V, and what they mean | 99 | 49.5 |
 | 12 | What I told you, on the shapes, the rig and the graph | 96 | 48.0 |
 | 13 | How it is asked, one point to keep, and the single-celled organism | 124 | 62.0 |
-| **Total** | 13 beats (13 teaching, 0 error) | **1353** | **676.5** (11:16.5) |
+| **Total** | 13 beats (13 teaching, 0 error) | **1357** | **678.5** (11:18.5) |
 
-**Length, honestly (after round-1 fixes):** **1,353 words = 11:16.5** at 120 words per minute, **1:31.5 over** the 9:45 (1,170-word) budget. There are no error beats, so the whole overrun is teaching. By outcome: the 4.2.3 half (Beats 1–6) is **586 words = 4:53** against 4:15 (**+38 s**), and the 4.2.4 half (Beats 7–13, including the joint recap and close) is **767 words = 6:23.5** against 5:30 (**+53.5 s**); 586 + 767 = 1,353. Round 1 took the checker's four required cuts (−40 words, −20 s):
+**Length, honestly (after round-2 fixes):** **1,357 words = 11:18.5** at 120 words per minute, **1:33.5 over** the 9:45 (1,170-word) budget. There are no error beats, so the whole overrun is teaching. By outcome: the 4.2.3 half (Beats 1–6) is **586 words = 4:53** against 4:15 (**+38 s**), and the 4.2.4 half (Beats 7–13, including the joint recap and close) is **771 words = 6:25.5** against 5:30 (**+55.5 s**); 586 + 771 = 1,357. Round 1 took the checker's four required cuts (−40 words, −20 s):
 1. Beat 11: "about seventeen minutes at three per centimetre, about seventy seconds at twelve" and the joining colon (−12 words); the ringed points keep their values on screen at *the time falls steeply*.
 2. Beat 5: "Put in three, three and three, and you get fifty-four and twenty-seven again." (−13 words); the generic cuboid formula and face-pair animation remain.
 3. Beat 12: "and four point six seven for the potato cylinder" (−9 words); the labelled cylinder net stays in the recap layout.
 4. Beat 1: "Size is part of the answer." (−6 words); the size bracket moves to *do not grow at the same pace*.
-The required replacement wording then added 15 words: Beat 9 +8 ("at the same recorded room temperature" and the new safety sentence), Beat 10 +3 (submersion wording), Beat 13 +4 (beyond-the-mark-scheme callback). **Kept, per the check:** Beat 3's units sentence ("Keep an eye on the units …", 14 words), the first explicit area-versus-volume distinction. The checker accepted the remaining overrun (nets, arithmetic, a complete practical, endpoint interpretation and the familiar recap each have separate teaching jobs); no further cut, no split, no accelerated narration.
+The required replacement wording then added 15 words: Beat 9 +8 ("at the same recorded room temperature" and the new safety sentence), Beat 10 +3 (submersion wording), Beat 13 +4 (beyond-the-mark-scheme callback). Round 2's required Beat 7 replacement ("to lower the pH below its transition range" for "to neutralise the alkali") added 4 more words: 1,353 + 4 = 1,357. **Kept, per the check:** Beat 3's units sentence ("Keep an eye on the units …", 14 words), the first explicit area-versus-volume distinction. The checker accepted the remaining overrun (nets, arithmetic, a complete practical, endpoint interpretation and the familiar recap each have separate teaching jobs); no further cut, no split, no accelerated narration. The round-2 check accepts 11:18.5 against 9:45 after the Beat 7 edit; the final two-second hold is scheduled within that allowance, or the resulting total is declared explicitly if the editor adds it separately.
 
 ## What I left out, and who owns it
 
@@ -552,14 +552,14 @@ beat  words  cues maxgap  status
    4    113    17     14  ok
    5    122    15     13  ok
    6    107     9     19  ok
-   7    114    13     15  ok
+   7    118    13     15  ok
    8     91    11     16  ok
    9    108    10     17  ok
   10    135    17     16  ok
   11     99    11     15  ok
   12     96    12     12  ok
   13    124    13     23  ok
-TOTAL words 1353  cues 154  runtime at 120 wpm 11:16.5  beats 13  failing beats 0
+TOTAL words 1357  cues 154  runtime at 120 wpm 11:18.5  beats 13  failing beats 0
 ```
 
 No MISSING SECTION or CITATION lines; failing beats 0.
@@ -589,3 +589,17 @@ Check: `r1/4.2.3-4/CHECK.md` (NOT CLEARED; reviewed SHA-256 `f98f129f…2c59c78`
 | Runtime: remaining overrun | applied (accepted) | 1,353 words = 11:16.5, 1:31.5 over 9:45; *Length, honestly* rewritten. |
 
 New validator TOTAL: `TOTAL words 1353  cues 154  runtime at 120 wpm 11:16.5  beats 13  failing beats 0`
+
+## CHECK RESPONSE (round 2)
+
+Verdict: CLEARED WITH MINOR EDITS. One remaining edit; applied exactly, nothing else changed in content.
+
+| Check item | Status | What changed |
+|---|---|---|
+| S2 (round-one PARTLY) — Beat 7 narration | applied | Sentence replaced verbatim: "Thymolphthalein responds to pH: it is blue in this alkaline agar, and colourless once enough acid has diffused in to lower the pH below its transition range." Both cues (*Thymolphthalein responds to pH*, *colourless once enough acid has diffused in*) unchanged, exact and ordered; Beat 7 max gap still 15. Beat 7 114 → 118 words. |
+| S2 — ledger updates | applied | Word-count table (Beat 7 118 / 59.0 s; total 1357 / 678.5 s = 11:18.5); *Length, honestly* (1,357 words, 1:33.5 over; 4.2.4 half 771 words = 6:25.5, +55.5 s; +4 words recorded); citation 11 extended to the narration with the round-2 source note ("colourless does not certify pH 7 or complete consumption of the alkali"); typicality and absolutes sweeps note the new sentence. |
+| Keep "as alkali is neutralised" in Beats 10/12 | applied (no change) | Wording left as is, per the check. |
+| Runtime ruling (11:18.5 accepted; final two-second hold) | applied | *Length, honestly* records the acceptance and that the hold sits within the allowance or is declared explicitly if added separately. |
+| All other round-one items | no action | Check marks them FIXED. |
+
+New validator TOTAL: `TOTAL words 1357  cues 154  runtime at 120 wpm 11:18.5  beats 13  failing beats 0`

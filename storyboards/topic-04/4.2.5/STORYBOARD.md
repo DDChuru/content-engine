@@ -176,7 +176,7 @@ Beat windows in the headings follow the per-beat ledger (words ÷ 120, plus the 
 > Use one potato, and remove the skin, so no cylinder has a patch of skin that the others lack. Stand it on a white tile and push a ten-millimetre cork borer straight down through the flesh until it reaches the tile, then lift the borer and push the core out. Lay each core beside a ruler and trim it to thirty millimetres with a scalpel, cutting down onto the tile. Pair the hazard, the risk and the precaution: the edges are sharp; if one slips, it can cut your hand; so cut down onto the tile, blade away from you, fingers clear. Then allocate the cylinders to tubes at random. Keep the cut cylinders covered to limit drying until you weigh and immerse each one.
 
 **Visual action:**
-1. **From the first frame**, `PotatoCylinderRig` in `cut` fills the frame: one whole potato on the white tile, cork borer, push rod, scalpel and ruler beside it; behind, the three racks of eighteen filled, bunged tubes already stand together, reduced, tag *solutions prepared before cutting (made up: Beat 6) · reaching room temperature*, with the empty covered humid container beside them. Prepare the solutions before cutting the tissue. At *Use one potato*, labels **one potato** and **white tile** appear.
+1. **From the first frame**, `PotatoCylinderRig` in `cut` fills the frame: one whole potato on the white tile, cork borer, push rod, scalpel and ruler beside it; behind, the three racks of eighteen filled, bunged tubes already stand together, reduced, tag *solutions prepared before cutting · reaching room temperature*, with the empty covered humid container beside them. Prepare the solutions before cutting the tissue. At *Use one potato*, labels **one potato** and **white tile** appear.
 2. At *remove the skin*, strips of skin come off under the scalpel per the handling spec (blade drawn down onto the tile, away from the body); the peeled potato is labelled *skin removed*.
 3. At *push a ten-millimetre cork borer straight down*, the borer (label **cork borer, 10 mm internal diameter**) is shown: Push the borer vertically through the flesh with a slight twist, stopping at the tile surface; do not animate the edge entering the tile. Keep the supporting fingers beside and clear of the cutting path. At *push the core out*: Lift the borer before using the push rod to expel the core onto the tile.
 4. At *trim it to thirty millimetres*, the core lies beside the **ruler**; the scalpel (label **scalpel**) cuts straight down at 0 mm and 30 mm; label *30 mm, trimmed*; small type *every cylinder: diameter 1.0 cm, length 3.0 cm → surface area 11.0 cm², volume 2.36 cm³ (recall 4.2.3-4)*.
@@ -185,13 +185,13 @@ Beat windows in the headings follow the per-beat ledger (words ÷ 120, plus the 
 7. At *allocate the cylinders to tubes at random*, a random-number list slides in and each cylinder is assigned a tube label (**0.0-A … 1.0-C**), tag *random allocation, one potato*.
 8. At *Keep the cut cylinders covered*, the covered humid container comes forward (label **covered humid container**): forceps place each allocated cylinder in its labelled position on the dry grid, out of contact with liquid water, and the lid closes; tag *covered: limits drying until each is weighed and immersed*. Keep the trimmed, allocated cylinders in labelled positions in a covered humid container, out of contact with liquid water, until each is blotted, weighed and immediately immersed. `cut` ends.
 
-**On-screen text:** part labels; *solutions prepared before cutting (made up: Beat 6) · reaching room temperature*; *30 mm, trimmed*; the cylinder dimensions; the hazard–risk–precaution tag; the M24/52 tab; the syllabus p.61 line; *random allocation, one potato*; *covered humid container*; *covered: limits drying until each is weighed and immersed*.
+**On-screen text:** part labels; *solutions prepared before cutting · reaching room temperature*; *30 mm, trimmed*; the cylinder dimensions; the hazard–risk–precaution tag; the M24/52 tab; the syllabus p.61 line; *random allocation, one potato*; *covered humid container*; *covered: limits drying until each is weighed and immersed*.
 
 ---
 
 ### BEAT 6 · Six solutions, eighteen tubes · 4:08–4:54
 **Narration:**
-> Next, the solutions. You need six concentrations of sucrose, from distilled water up to 1.0 mole per cubic decimetre, made by proportional dilution of a 1.0 mole per cubic decimetre stock, each to a total of 20.0 cubic centimetres. For 0.4, measure 8.0 cubic centimetres of stock and 12.0 of distilled water. Then the vessels: eighteen boiling tubes, each labelled and closed with a bung to limit evaporation, three per concentration, one cylinder in each. Three cylinders sharing one tube share one solution, so they are not independent repeats; three separate tubes are.
+> First, the solutions. You need six concentrations of sucrose, from distilled water up to 1.0 mole per cubic decimetre, made by proportional dilution of a 1.0 mole per cubic decimetre stock, each to a total of 20.0 cubic centimetres. For 0.4, measure 8.0 cubic centimetres of stock and 12.0 of distilled water. Then the vessels: eighteen boiling tubes, each labelled and closed with a bung to limit evaporation, three per concentration, one cylinder in each. Three cylinders sharing one tube share one solution, so they are not independent repeats; three separate tubes are.
 
 **Visual action:**
 1. **From the first frame**, `PotatoCylinderRig` is on screen with the covered humid container holding the eighteen allocated cylinders at left and, at right, under a caption *earlier: made up before the tissue was cut*, the **sucrose stock, 1.0 mol dm⁻³** bottle, the **distilled water** wash bottle and the two **25 cm³ measuring cylinders** labelled **stock** and **water**; the eye-protection pictogram and the tag *working solutions: sucrose, 0–1.0 mol dm⁻³; no hazard code for sucrose on the syllabus materials list (p.58); wipe up spills* in the frame corner. At *the solutions*, `make-up` replays as that earlier setup.
@@ -345,7 +345,7 @@ Beat windows in the headings follow the per-beat ledger (words ÷ 120, plus the 
 
 ---
 
-### BEAT 14 · How it is asked, and the potato again · 10:44–11:38
+### BEAT 14 · How it is asked, and the potato again · 10:44–11:40
 **Narration:**
 > How this reaches you. A November 2020 Paper 5 question, on red pepper tissue, gave three marks for a labelled sketch trending downward and for identifying where it crosses zero change in mass as the estimate. Separately, it used a density-drop method: the drop that neither rose nor fell picked out 0.30, and its table gave minus 860 kilopascals. Keep the two methods apart, and when you give a water potential, give kilopascals with the sign, not a concentration. The scheme doesn't need this, but a different potato can give a different estimate. And your potato? About minus 1120 kilopascals, estimated from its own change in mass.
 
@@ -547,10 +547,10 @@ Counted by the validator over the blockquoted narration, silent-read line exclud
 | 11 | The graph and its zero crossing | 96 | 48.0 |
 | 12 | From concentration to kilopascals | 101 | 50.5 |
 | 13 | What I told you, on the rig and the graph | 79 | 39.5 |
-| 14 | How it is asked, and the potato again | 107 | 53.5 |
-| **Total** | 14 beats (13 teaching + 1 error) | **1387** | **693.5** (11:33.5; 11:37.5 with the silent read) |
+| 14 | How it is asked, and the potato again | 107 | 53.5 (+ 2.0 = 55.5, including the separately scheduled 2 s final hold) |
+| **Total** | 14 beats (13 teaching + 1 error) | **1387** | **693.5** (11:33.5; 11:37.5 with the silent read; 11:39.5 with the 2 s final hold) |
 
-**Length, honestly (after round-1 check):** **1,387 words = 11:33.5** at 120 words per minute (the validator's figure), **11:37.5** with E48's 4 s silent read added: **22.5 s over** the 11:15 budget. The thirteen teaching beats total **1,245 words = 10:22.5**, **22.5 s over** the 10:00 (1,200-word) teaching base. E48 is **142 words = 71 s + 4 s silent read = 75 s**, at the top of the 122–142-word range and exactly the 75 s reservation (round-1 should-fix 5 added 2 words; should-fix 3 is word-neutral).
+**Length, honestly (after round-2 check):** Narration: 1,387 words at 120 wpm = 11:33.5. E48's four-second silent read gives 11:37.5. The separately scheduled two-second final hold gives 11:39.5 total, 24.5 seconds over the 11:15 budget. E48 remains 75 seconds complete. This overrun is accepted; no additional cut or faster delivery is required. The thirteen teaching beats total **1,245 words = 10:22.5**, **22.5 s over** the 10:00 (1,200-word) teaching base. E48 is **142 words = 71 s + 4 s silent read = 75 s**, at the top of the 122–142-word range and exactly the 75 s reservation (round-1 should-fix 5 added 2 words; should-fix 3 is word-neutral).
 
 Round-1 changes to length: author cut 1 taken (Beat 14's 22-word March 2024 sentence; rows 3 and 4 stay as unspoken subordinate references revealed with the forms surface), −22 words; M1's borer sentence (+7) and covered-storage line (+15) add 22 words to Beat 5; should-fix 5 adds 2 to E48. Net +2 words against the first draft. The check ruled: **accept the remaining overrun and the short M1 addition**; the complete investigation and estimate deserve their explanation. Speech is not accelerated, E48 is not cut and no blanket silence allowance is added.
 
@@ -675,5 +675,20 @@ Check: `r1/4.2.5/CHECK.md` (27 September 2026, NOT CLEARED). Applied to this sto
 | Numerical audit | no change needed | Geometry, dilutions, masses, means, fit (root 0.398), lookup and timing confirmed by the check; unchanged. |
 
 Word counts: Beat 5 103 → 125; Beat 9 140 → 142; Beat 14 129 → 107; total **1,387 words = 11:33.5, 11:37.5 with the E48 silent read** (22.5 s over 11:15, accepted by the check's runtime ruling). Beat windows re-derived from the ledger.
+
+New validator TOTAL: `TOTAL words 1387  cues 155  runtime at 120 wpm 11:33.5  beats 14  failing beats 0`
+
+---
+
+## CHECK RESPONSE (round 2)
+
+Check: `r2/4.2.5/CHECK.md` (27 September 2026, CLEARED WITH MINOR EDITS). Only the two minor edits applied; no other text changed.
+
+| ID | Status | What changed |
+|---|---|---|
+| 1 (Beat 6 chronology) | applied | Beat 6 narration “Next, the solutions.” → “First, the solutions.” (word-neutral; cue *the solutions* unchanged, still exact, unique and ordered). Beat 5 action 1 tag and its on-screen-text listing → *solutions prepared before cutting · reaching room temperature*. Beat 6 caption *earlier: made up before the tissue was cut* kept. Typicality sweep: the changed sentence makes no claim. |
+| 2 (final hold) | applied with interpretation | “Length, honestly” opening replaced verbatim: “Narration: 1,387 words at 120 wpm = 11:33.5. E48's four-second silent read gives 11:37.5. The separately scheduled two-second final hold gives 11:39.5 total, 24.5 seconds over the 11:15 budget. E48 remains 75 seconds complete. This overrun is accepted; no additional cut or faster delivery is required.” (heading tag updated to “after round-2 check”; the teaching-base and E48 detail sentences retained). Beat 14 header window 10:44–11:38 → **10:44–11:40**. Beat 14 runtime-table entry → “53.5 (+ 2.0 = 55.5, including the separately scheduled 2 s final hold)”; interpretation: the Total row also gains “11:39.5 with the 2 s final hold” so the ledger agrees. No second blanket silence allowance added. |
+
+Word counts unchanged: **1,387 words = 11:33.5 narration; 11:39.5 with E48's 4 s read and the 2 s final hold** (24.5 s over 11:15, accepted by the check). Validator output unchanged, so `## Validator run` stands as pasted.
 
 New validator TOTAL: `TOTAL words 1387  cues 155  runtime at 120 wpm 11:33.5  beats 14  failing beats 0`
