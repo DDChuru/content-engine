@@ -538,28 +538,30 @@ Counted by the validator over the blockquoted narration, silent-read line exclud
 | 2 | What you will be able to do | 52 | 26.0 |
 | 3 | Why weighing works: water potential | 124 | 62.0 |
 | 4 | The potato: what the method responds to | 99 | 49.5 |
-| 5 | Cutting identical cylinders, safely | 103 | 51.5 |
+| 5 | Cutting identical cylinders, safely | 125 | 62.5 |
 | 6 | Six solutions, eighteen tubes | 93 | 46.5 |
 | 7 | Blot, weigh, immerse, and start the clock | 97 | 48.5 |
 | 8 | Out, reweigh, and a percentage for every cylinder | 91 | 45.5 |
-| 9 | COMMON MISTAKE E48: the word amount in a plan | 140 | 70.0 (+ 4 s silent read = 74.0) |
+| 9 | COMMON MISTAKE E48: the word amount in a plan | 142 | 71.0 (+ 4 s silent read = 75.0) |
 | 10 | The results table, and what the signs mean | 86 | 43.0 |
 | 11 | The graph and its zero crossing | 96 | 48.0 |
 | 12 | From concentration to kilopascals | 101 | 50.5 |
 | 13 | What I told you, on the rig and the graph | 79 | 39.5 |
-| 14 | How it is asked, and the potato again | 129 | 64.5 |
-| **Total** | 14 beats (13 teaching + 1 error) | **1385** | **692.5** (11:32.5; 11:36.5 with the silent read) |
+| 14 | How it is asked, and the potato again | 107 | 53.5 |
+| **Total** | 14 beats (13 teaching + 1 error) | **1387** | **693.5** (11:33.5; 11:37.5 with the silent read) |
 
-**Length, honestly:** **1,385 words = 11:32.5** at 120 words per minute (the validator's figure), **11:36.5** with E48's 4 s silent read added: **21.5 s over** the 11:15 budget. The thirteen teaching beats total **1,245 words = 10:22.5**, **22.5 s over** the 10:00 (1,200-word) teaching base. E48 is **140 words = 70 s + 4 s silent read = 74 s**, inside the 122–142-word range and the 75 s reservation, protected in full. The teaching overrun sits mainly in Beat 3 (the MF3 water-potential sentences carried nearly verbatim so the lesson stands alone) and Beat 14 (W20/51's two methods kept separate and named, M24/52's planning and limitation points, and the beyond-the-mark-scheme line).
+**Length, honestly (after round-1 check):** **1,387 words = 11:33.5** at 120 words per minute (the validator's figure), **11:37.5** with E48's 4 s silent read added: **22.5 s over** the 11:15 budget. The thirteen teaching beats total **1,245 words = 10:22.5**, **22.5 s over** the 10:00 (1,200-word) teaching base. E48 is **142 words = 71 s + 4 s silent read = 75 s**, at the top of the 122–142-word range and exactly the 75 s reservation (round-1 should-fix 5 added 2 words; should-fix 3 is word-neutral).
 
-**Cut list if the budget must be met (never touches Beat 9):**
-1. Beat 14: "The March 2024 paper gave one mark for hazard, risk and precaution together, and credited limitations such as untested concentrations in between." (−22 words, 11 s). Rows 3 and 4 and their MS tab stay on screen, revealed with the forms surface; hazard–risk–precaution is already spoken in Beat 5.
+Round-1 changes to length: author cut 1 taken (Beat 14's 22-word March 2024 sentence; rows 3 and 4 stay as unspoken subordinate references revealed with the forms surface), −22 words; M1's borer sentence (+7) and covered-storage line (+15) add 22 words to Beat 5; should-fix 5 adds 2 to E48. Net +2 words against the first draft. The check ruled: **accept the remaining overrun and the short M1 addition**; the complete investigation and estimate deserve their explanation. Speech is not accelerated, E48 is not cut and no blanket silence allowance is added.
+
+**Remaining optional cuts (not required by the check; never touch Beat 9):**
+1. ~~Beat 14 March 2024 sentence~~ — **taken in round 1.**
 2. Beat 3: "First, why weighing tells you anything." (−6 words, 3 s); the balance icon joins the *water's tendency to move* action.
 3. Beat 4: ", and what the method is really detecting" (−7 words, 3.5 s); move its cue to *Now the material*.
 4. Beat 7: "The room temperature, twenty-one degrees, is recorded." (−7 words, 3.5 s); the thermometer and the sheet header stay on screen.
-5. Beat 12: "Keep the sign and the unit." (−6 words, 3 s); the ringing stays visual and the Beat 14 model-answer card carries the unit point.
+5. Beat 12: "Keep the sign and the unit." (−6 words, 3 s); the ringing stays visual and the Beat 14 wording-contrast card carries the unit point.
 
-Cuts 1–2 remove 28 words (14 s) → 1,357 words = 11:18.5 (11:22.5 with the silent read); cuts 1–5 remove 48 words (24 s) → 1,337 words = 11:08.5 (11:12.5 with the silent read), inside budget. I would take cut 1 first if the conductor wants the budget met; the others remove hand-holding the standards ask for.
+The check states cuts 2–5 are not required and asks that the sign/unit line, recorded temperature and explanatory lead-ins be kept.
 
 ---
 
@@ -635,15 +637,15 @@ beat  words  cues maxgap  status
    2     52     4     15  ok
    3    124    13     22  ok
    4     99    13     15  ok
-   5    103    11     22  ok
+   5    125    12     22  ok
    6     93    11     16  ok
    7     97    11     14  ok
    8     91    10     16  ok
-   9    140    15     24  ok
+   9    142    15     24  ok
   10     86    11     12  ok
   11     96    11     15  ok
   12    101    11     16  ok
   13     79     9     15  ok
-  14    129    16     17  ok
-TOTAL words 1385  cues 157  runtime at 120 wpm 11:32.5  beats 14  failing beats 0
+  14    107    13     17  ok
+TOTAL words 1387  cues 155  runtime at 120 wpm 11:33.5  beats 14  failing beats 0
 ```
