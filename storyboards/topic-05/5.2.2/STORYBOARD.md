@@ -1,5 +1,7 @@
 # 5.2.2 — Identifying the stages: photomicrographs, diagrams and the root-tip squash
 
+**STATUS: CLEARED WITH MINOR EDITS (edits applied) — round-2 independent check (`cloud-checks/007/round-2/5.2.2/CHECK.md`, final round), 27 September 2026.** Open production dependencies (licensed photomicrographs, Topic 1 component names) are tracked in `work/007/ASSETS-NEEDED.md`, not as storyboard defects.
+
 **Storyboard, first draft. Cloud run 007, 27 September 2026.** No audio, no code, no render. Folder `storyboards/topic-05/5.2.2/`.
 Cambridge 9700 syllabus 2025–2027, p.23. Command words **INTERPRET** and **IDENTIFY**. Budget from `TOPIC-PLAN-05-CELL-CYCLE.md` §5.2.2 and `TOPIC-05-WEIGHTS.md` (5.2.2 row): **11:00, 17 beats = 16 teaching/framing/recap beats + 1 error beat (E5-05, COMMON MISTAKE)**; teaching allowance 9:50, error beat 1:10; about 1,320 words at **120 words per minute of final video** (the effective rate; the 4 s silent read is not added again). Time plan (SHARED-SPECS §6, a feasible allocation to test): real-image and diagram interpretation ≈ 3:00; edited demonstration ≈ 3:30; counting ≈ 1:15; E5-05 1:10; framing, objectives, recap and exam close ≈ 2:05. 5.2.2 is 4 of 15 fixed-sample papers (1 P1 + 3 P2, 0 P3), 6 overlapping marks (+1 mixed Topic 1/5).
 
@@ -636,7 +638,7 @@ Both re-run after the round-1 fixes and after pasting this section; outputs unch
 
 ## CHECK RESPONSE (round 1)
 
-Response to `/tmp/claude-0/sp/r1/5.2.2/CHECK.md` (verdict NOT CLEARED) and the round-1 README's cross-cutting rules. Narration changed only in Beats 8, 10 and 11 (1,374 → 1,373 words). Replacement texts marked *verbatim* are the checker's own wording, copied without quotation marks.
+Response to `cloud-checks/007/round-1/5.2.2/CHECK.md` (verdict NOT CLEARED) and the round-1 README's cross-cutting rules. Narration changed only in Beats 8, 10 and 11 (1,374 → 1,373 words). Replacement texts marked *verbatim* are the checker's own wording, copied without quotation marks.
 
 | Item | Ruling | Where applied | Exact action taken |
 |---|---|---|---|
@@ -652,3 +654,13 @@ Response to `/tmp/claude-0/sp/r1/5.2.2/CHECK.md` (verdict NOT CLEARED) and the r
 | **SF6** E5-05 timing reproducible | applied | Beat 13 actions 8, 9, 11; new *E5-05 timing schedule* paragraph | 60.41 s speech at 145 wpm + 4 s read + 8.59 s anchored holds = 73.00 s; holds 2.0 s (E box) + 2.0 s (E/F boxes) + 1.7 s (single-stage evidence comparison) = 5.70 s in the talk-through (39.31 + 5.70 = 45.01 s); 2.89 s on the completed frame. Measured audio to be checked. No narration change. |
 | **SF7** Final-hold accounting | applied | Beat 17 action 6 and heading; beat-by-beat intro; runtime section | Stated that the 2 s final hold is **added**: 11:26.5 + 2 s = 11:28.5, within the checker's 11:29 acceptance. |
 | **Length** | applied | word table, segment table, beat windows, *Length, honestly*, cut list | 1,373 words = 11:26.5 (+2 s hold = 11:28.5). Teaching 1,227 = 10:13.5; E5-05 146 (95 talk-through). Beat windows recomputed from Beat 8 on. Optional cut list extended with (7) Beat 12 *Real images have limits.* so the seven cuts (58 words) reach 10:59.5 including the additive hold. No forced cuts. |
+
+## CHECK RESPONSE (round 2)
+
+Round-2 verdict: **CLEARED WITH MINOR EDITS (edits applied)**.
+
+| Item | Ruling | Where applied | Action taken |
+|---|---|---|---|
+| Remaining minor edit — SF4 owner/consumer agreement | applied in the owner (5.2.1) and SHARED-SPECS, verbatim; 5.2.2's field-only rule kept unchanged | 5.2.1 *Render styles* paragraph; SHARED-SPECS bullet | As the check directs; the historical round-1 response is not rewritten. No narration change. |
+
+Validator and quote check re-run after the edits: see *Validator run* (refreshed).

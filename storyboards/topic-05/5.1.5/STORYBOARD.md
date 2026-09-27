@@ -1,5 +1,7 @@
 # 5.1.5 — Stem cells: replacing cells and repairing tissue by mitosis
 
+**STATUS: CLEARED — round-2 independent check (`cloud-checks/007/round-2/5.1.5/CHECK.md`, final round), 27 September 2026.** Open production dependencies (licensed photomicrographs, Topic 1 component names) are tracked in `work/007/ASSETS-NEEDED.md`, not as storyboard defects.
+
 **Storyboard, first draft, with round-1 check fixes applied (see *CHECK RESPONSE (round 1)*). Cloud run 007, 27 September 2026.** No audio, no code, no render. Folder `storyboards/topic-05/5.1.5/`. It stands alone: own hook and context, a labelled recall of 5.1.2 and 5.2.1, own objectives, explanation, recap in place and exam close.
 Cambridge 9700 syllabus 2025–2027, p.23. Command word **OUTLINE**. Budget from `plan/topic-05/TOPIC-PLAN-05-CELL-CYCLE.md` §5.1.5 and lesson table, and `plan/topic-05/TOPIC-05-WEIGHTS.md` (5.1.5 row): **4:30 (about 540 words), 8 beats + 0 error beats = 8 beats**; no error beat and no badge. 5.1.5 has no fixed-sample demand (0 papers); one supplementary Paper 1 item, w22_13 Q20. Runtime estimated at **120 words per minute of final video**.
 
@@ -344,7 +346,7 @@ Both re-run in this checkout after the round-1 fixes and after pasting; outputs 
 
 ## CHECK RESPONSE (round 1)
 
-Response to `/tmp/claude-0/sp/r1/5.1.5/CHECK.md` (verdict NOT CLEARED; reviewed SHA-256 `97151370…a624a380`) and the cross-cutting rules in the round README. Replacement text supplied by the checker is applied verbatim; it is set in italics or bold here (not in double quotation marks) because it is our own or the checker's wording, not external evidence. Narration changed only in Beat 5 (last sentence) and Beat 8 (hook callback).
+Response to `cloud-checks/007/round-1/5.1.5/CHECK.md` (verdict NOT CLEARED; reviewed SHA-256 `97151370…a624a380`) and the cross-cutting rules in the round README. Replacement text supplied by the checker is applied verbatim; it is set in italics or bold here (not in double quotation marks) because it is our own or the checker's wording, not external evidence. Narration changed only in Beat 5 (last sentence) and Beat 8 (hook callback).
 
 | Item | Ruling | Where applied | Exact action taken |
 |---|---|---|---|
@@ -360,3 +362,11 @@ Response to `/tmp/claude-0/sp/r1/5.1.5/CHECK.md` (verdict NOT CLEARED; reviewed 
 | Runtime | accepted by checker | Word count and runtime | 531 → **529 words, 4:24.5** (budget 540 / 4:30); no cut list needed. |
 
 Validator after fixes: `TOTAL words 529  cues 75  runtime at 120 wpm 4:24.5  beats 8  failing beats 0`; quote check: `quotes checked 3  not found 0`.
+
+## CHECK RESPONSE (round 2)
+
+Round-2 verdict: **CLEARED**.
+
+None required (round 2 ruled CLEARED). Round-1 source path now points at `cloud-checks/007/round-1/5.1.5/CHECK.md`.
+
+Validator and quote check re-run after the edits: see *Validator run* (refreshed).

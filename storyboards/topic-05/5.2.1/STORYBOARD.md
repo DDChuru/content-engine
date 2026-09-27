@@ -1,5 +1,7 @@
 # 5.2.1 — Chromosome behaviour in mitosis: animal and plant cells
 
+**STATUS: CLEARED WITH MINOR EDITS (edits applied) — round-2 independent check (`cloud-checks/007/round-2/5.2.1/CHECK.md`, final round), 27 September 2026.** Open production dependencies (licensed photomicrographs, Topic 1 component names) are tracked in `work/007/ASSETS-NEEDED.md`, not as storyboard defects.
+
 **Storyboard, round-1 fixes applied (see *CHECK RESPONSE (round 1)*). Cloud run 007, 27 September 2026.** No audio, no code, no render. Folder `storyboards/topic-05/5.2.1/`.
 Cambridge 9700 syllabus 2025–2027, p.23. Command word **DESCRIBE**. Budget from `TOPIC-PLAN-05-CELL-CYCLE.md` §5.2.1 and `TOPIC-05-WEIGHTS.md` (5.2.1 row): **12:00, 19 beats = 17 teaching/framing/recap beats + 2 error beats (E5-03 COMMON MISTAKE, two faults; E5-04 EXAM CONTRAST)**; teaching allowance 9:40 (about 1,160 words) plus 2 × 1:10 error beats (about 140 words each); about 1,440 words at **120 words per minute of final video**. 5.2.1 is 6 of the 15 fixed-sample papers (3 Paper 1 + 3 Paper 2), 14 overlapping marks, tariffs 1–3 (weights ledger).
 
@@ -37,7 +39,7 @@ Beat 19's reject card is authored and captioned *our wording contrast; not an ex
 
 ### `MitosisCellModel` (published here; reused by 5.2.2, 5.1.2, 5.1.5, 5.1.6)
 
-**Render styles (registered by the conductor after round 1, at 5.2.2's request):** `default` (the chromosome hues above) and `toluidine-blue-schematic` (plant variant only: dark-blue chromatin and chromosomes on a paler background, no per-chromosome hues; used by 5.2.2's diagram references beside real images). Geometry, states and counts are identical in both styles.
+**Render styles (registered by the conductor after round 1, at 5.2.2's request):** `default` uses the chromosome hues above. `toluidine-blue-schematic` is a plant-only style with dark-blue chromatin and chromosomes on a paler background, with no per-chromosome hues; in 5.2.2 it is used exclusively inside `FieldOfViewSchematic`. Diagram references beside the image panels retain `default`. Geometry, stage states and counts are identical in both styles. Retain the schematic and non-garlic-karyotype captions.
 
 Identical to SHARED-SPECS §5: two variants, the same chromosome set (2n = 4: **C1 long = deep blue**, **C2 long = teal**, **C3 short = amber**, **C4 short = green**; colour means *which chromosome*, never parental origin; homologous pairs never named), and the same stage ids: `interphase`, `prophase-early` (condensing inside an intact envelope; nucleolus fading), `prophase-late` (envelope fragmenting, nucleolus gone, spindle forming), `metaphase`, `anaphase`, `telophase` (envelopes re-forming, nucleolus reappearing in each new nucleus, chromosomes decondensing), `cytokinesis`. Caption on every frame the model is shown: *schematic; 2n = 4 teaching model*.
 
@@ -657,7 +659,7 @@ quotes checked 9  not found 0
 
 ## CHECK RESPONSE (round 1)
 
-Response to `/tmp/claude-0/sp/r1/5.2.1/CHECK.md` (verdict NOT CLEARED) and the cross-cutting rules in the round-1 README. Narration changed only in Beats 1 and 8. Old and new wording of this storyboard is set in italics in this table; none of it is external evidence.
+Response to `cloud-checks/007/round-1/5.2.1/CHECK.md` (verdict NOT CLEARED) and the cross-cutting rules in the round-1 README. Narration changed only in Beats 1 and 8. Old and new wording of this storyboard is set in italics in this table; none of it is external evidence.
 
 | Item | Ruling | Where applied | Exact action taken |
 |---|---|---|---|
@@ -672,3 +674,13 @@ Response to `/tmp/claude-0/sp/r1/5.2.1/CHECK.md` (verdict NOT CLEARED) and the c
 | **S6** Final hold accounting | applied | Beat 19 action 3; runtime table | Stated as additive: 747.0 s words + 2.0 s hold = 12:29. |
 | **S7** Cut arithmetic | applied | Optional cuts | Recounted (Beat 4 cut is 16, not 15; list total 57); cuts marked optional. One cut, Beat 8 *the moment to watch closely* (−5), taken so that the mandatory Beat 1 replacement (+7) keeps the lesson within the accepted 12:29.5. Human-count teaching kept. |
 | **Runtime ruling** | accepted | Word count and runtime; beat headings | 1,494 words = 12:27.0 + 2 s hold = **12:29.0**, inside the checker's accepted 12:29.5. Beat windows recomputed (words ÷ 120). Teaching 1,197 words = 9:58.5 (+18.5 s); errors 297 words = 2:28.5 (+8.5 s). The ±5 % tolerance claim withdrawn as a clearance argument. |
+
+## CHECK RESPONSE (round 2)
+
+Round-2 verdict: **CLEARED WITH MINOR EDITS (edits applied)**.
+
+| Item | Ruling | Where applied | Action taken |
+|---|---|---|---|
+| Minor edit — owner/consumer render-style contract | applied, replacement paragraph verbatim | `MitosisCellModel` *Render styles* paragraph; `work/007/SHARED-SPECS.md` registration bullet (round-2 wording) | `toluidine-blue-schematic` is plant-only and used exclusively inside 5.2.2's `FieldOfViewSchematic`; diagram references beside image panels retain `default`. No narration or runtime change. |
+
+Validator and quote check re-run after the edits: see *Validator run* (refreshed).

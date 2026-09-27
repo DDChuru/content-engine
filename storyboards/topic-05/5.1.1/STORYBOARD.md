@@ -1,5 +1,7 @@
 # 5.1.1 — Inside a chromosome
 
+**STATUS: CLEARED — round-2 independent check (`cloud-checks/007/round-2/5.1.1/CHECK.md`, final round), 27 September 2026.** Open production dependencies (licensed photomicrographs, Topic 1 component names) are tracked in `work/007/ASSETS-NEEDED.md`, not as storyboard defects.
+
 **Storyboard, first draft, revised after the round-1 independent check (CLEARED WITH MINOR EDITS). Cloud run 007, 27 September 2026.** No audio, no code, no render. Folder `storyboards/topic-05/5.1.1/`.
 Cambridge 9700 syllabus 2025–2027, p.23. Command word **DESCRIBE** (content type STRUCTURE). Budget from `TOPIC-PLAN-05-CELL-CYCLE.md` §5.1.1 and `TOPIC-05-WEIGHTS.md` (5.1.1 row): **6:00, 11 macro beats, 0 error beats** (about 720 words at 120 words per minute); delivered here as **11 beats (11 teaching/framing/recap + 0 error)**. 5.1.1 is 5 of 15 sampled papers (3 Paper 1, 2 Paper 2, 0 Paper 3), 7 overlapping marks, 1–3 marks per item. Runtime estimated at **120 words per minute of final video**.
 
@@ -444,3 +446,10 @@ Response to `round-1/5.1.1/CHECK.md` (verdict CLEARED WITH MINOR EDITS) and the 
 | Runtime ruling / cut (b) | applied | *Word count and runtime*; timestamps Beats 3–11 | 746 words = 6:13, +26 words (+3.6 %), 13 s over 6:00, inside ±5 %; accepted per the check. Cut (b) withdrawn as rejected; (d) noted as the checker's preferred optional cut; beat windows recomputed (words ÷ 120). |
 | Quote-checker input path (validator ruling) | noted | *Validator run* | The G05 input exists in this checkout; the checker reproduces *quotes checked 15, not found 0*. |
 
+## CHECK RESPONSE (round 2)
+
+Round-2 verdict: **CLEARED**.
+
+None required (round 2 ruled CLEARED). Round-1 source paths now point at `cloud-checks/007/round-1/` rather than the conductor's scratch copy.
+
+Validator and quote check re-run after the edits: see *Validator run* (refreshed).

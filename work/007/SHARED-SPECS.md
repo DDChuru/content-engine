@@ -186,8 +186,10 @@ genome. No bond edits.
 - **Timers** start on the frame of first contact (acid on roots; stain drop on tips), never at a later cue.
 - `TelomereEndModel` carries the caption *schematic copying, not the molecular mechanism* wherever copying
   is shown, and its TTAGGG run label and block note persist at every zoom (5.1.4 check SF3–SF4).
-- `MitosisCellModel` registers `renderStyle: toluidine-blue-schematic` (dark-blue chromatin on a paler
-  background) for the 5.2.2 diagram references; the default drawn style is unchanged.
+- `MitosisCellModel` registers `renderStyle: toluidine-blue-schematic` (plant variant only, dark-blue chromatin
+  and chromosomes on a paler background) exclusively for 5.2.2's `FieldOfViewSchematic`. Its diagram references
+  beside image panels retain the default chromosome hues. Geometry, stage states and counts are unchanged;
+  retain the schematic and non-garlic-karyotype captions. (Round-2 wording.)
 
 ## 5. Shared models (identical in every lesson — same geometry, colours, labels, state ids)
 

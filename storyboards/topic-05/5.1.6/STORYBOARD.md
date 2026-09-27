@@ -1,5 +1,7 @@
 # 5.1.6 — When division runs out of control: tumours
 
+**STATUS: CLEARED — round-2 independent check (`cloud-checks/007/round-2/5.1.6/CHECK.md`, final round), 27 September 2026.** Open production dependencies (licensed photomicrographs, Topic 1 component names) are tracked in `work/007/ASSETS-NEEDED.md`, not as storyboard defects.
+
 **Storyboard, first draft, with round-1 check fixes applied (see *CHECK RESPONSE (round 1)*). Cloud run 007, 27 September 2026.** No audio, no code, no render. Folder `storyboards/topic-05/5.1.6/`.
 Cambridge 9700 syllabus 2025–2027, p.23. Command word **EXPLAIN**. Budget from `TOPIC-PLAN-05-CELL-CYCLE.md` §5.1.6 and `TOPIC-05-WEIGHTS.md` (5.1.6 row): **6:00, 9 beats = 8 teaching/framing/recap beats + 1 error beat (E5-07, EXAM CONTRAST)**; teaching allowance 4:50 (about 580 words) plus one 70 s error beat (about 140 words); about 720 words at 120 words per minute of final video. 5.1.6 is 2 of 15 sampled papers (both Paper 2: w20_21 Q6(a)(i), s24_23 Q5(d)), 4 overlapping marks. Runtime estimated at **120 words per minute of final video**.
 
@@ -391,7 +393,7 @@ Run in this checkout, where `cloud-inputs/007/evidence/GATE-CRITERIA-9700-05-MIT
 
 ## CHECK RESPONSE (round 1)
 
-Response to `/tmp/claude-0/sp/r1/5.1.6/CHECK.md` (verdict NOT CLEARED; reviewed SHA-256 `1f900d6d…0bd30`) and the cross-cutting rules in the round README. Replacement text supplied by the check is used verbatim. Narration changed only in Beats 4, 5, 7, 8 and 9.
+Response to `cloud-checks/007/round-1/5.1.6/CHECK.md` (verdict NOT CLEARED; reviewed SHA-256 `1f900d6d…0bd30`) and the cross-cutting rules in the round README. Replacement text supplied by the check is used verbatim. Narration changed only in Beats 4, 5, 7, 8 and 9.
 
 | Item | Ruling | Where applied | Exact action taken |
 |---|---|---|---|
@@ -404,3 +406,11 @@ Response to `/tmp/claude-0/sp/r1/5.1.6/CHECK.md` (verdict NOT CLEARED; reviewed 
 | **SF2** Recount; cut list | applied | Word table, beat headings, *Length, honestly* | 744 words = 6:12 (was 731 = 6:05.5); headings re-timed; no cut required; cut list re-ordered to hook/objective phrasing (−14 words available). |
 | **SF3** S24 demand label | applied | Beat 9 row 2; mark-scheme paragraph; scope ledger | Label **why supplied CDK inhibitors can treat a cancerous tumour**; *CDK* marked as the question's supplied term, not recall. Narration *asked how uncontrolled division could be stopped* → *asked why they could treat a tumour* (same word count) so the spoken demand also carries the treatment purpose. |
 | **SF4** Stale labels and quote-check status | applied | Beats 7, 9; Citations; *Validator run* | UNVERIFIED tags replaced as above; quote-check status note explains the checker's `FileNotFoundError` and records the fresh local pass. Rendered QA of panel readability and cell/vessel motion remains pending. |
+
+## CHECK RESPONSE (round 2)
+
+Round-2 verdict: **CLEARED**.
+
+None required (round 2 ruled CLEARED). Round-1 source path now points at `cloud-checks/007/round-1/5.1.6/CHECK.md`.
+
+Validator and quote check re-run after the edits: see *Validator run* (refreshed).

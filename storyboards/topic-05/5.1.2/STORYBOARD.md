@@ -1,5 +1,7 @@
 # 5.1.2 — Why mitosis makes identical cells: growth, replacement, repair and asexual reproduction
 
+**STATUS: CLEARED — round-2 independent check (`cloud-checks/007/round-2/5.1.2/CHECK.md`, final round), 27 September 2026.** Open production dependencies (licensed photomicrographs, Topic 1 component names) are tracked in `work/007/ASSETS-NEEDED.md`, not as storyboard defects.
+
 **Storyboard, first draft; round-1 check fixes applied. Cloud run 007, 27 September 2026.** No audio, no code, no render. Folder `storyboards/topic-05/5.1.2/`.
 Cambridge 9700 syllabus 2025–2027, p.23. Command word **EXPLAIN**. Budget from `TOPIC-PLAN-05-CELL-CYCLE.md` §5.1.2 and lesson table, and `TOPIC-05-WEIGHTS.md` (5.1.2 row): **6:30 (about 780 words at 120 wpm) = teaching allowance 5:20 + one 70 s error beat (E5-06, EXAM CONTRAST); 9 teaching/framing/recap beats + 1 error beat = 10 beats**; delivered here as **10 beats (9 + 1)**. 5.1.2 is 3 of 15 fixed-sample papers (2 Paper 1, 1 Paper 2, 0 Paper 3), 5 overlapping marks. Runtime estimated at **120 words per minute of final video**.
 
@@ -423,3 +425,11 @@ Response to `round-1/5.1.2/CHECK.md` (verdict NOT CLEARED) and the round README'
 | SF6 Preserve s22_12 Q17's distinction | applied (no narration change needed) | MS ledger; spine paragraph | Narration already says *Repair is replacement after damage* and never *mitosis repairs cells*; ledger notes *repair of cells* is a distractor. |
 | Runtime | accepted by checker | Word table; beat headings 7–10; length statement; cut list | 800 → **802 words = 6:41** (teaching 653 = 5:26.5; E5-06 149 = 74.5 s, talk-through 92). Beats 7–10 re-timed. Cut list marked optional (−20 words → 6:31). |
 | check_quotes.py | note | — | The checker could not run it (GATE-CRITERIA file missing in its checkout); it runs here: `quotes checked 12  not found 0`. |
+
+## CHECK RESPONSE (round 2)
+
+Round-2 verdict: **CLEARED**.
+
+None required (round 2 ruled CLEARED).
+
+Validator and quote check re-run after the edits: see *Validator run* (refreshed).
