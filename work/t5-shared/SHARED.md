@@ -13,7 +13,9 @@ rings/highlights use `T5.ring` over a `T5.ringHalo` ink halo (`T5Annot.tsx`). Ev
 | `T5Annot.tsx` | `Ring`, `Glow`, `Trace`, `Leader`, `Bracket`, `Tick`, `Note`, `Label` | annotation (decor) |
 | `t5-palette.ts` | `T5` tokens | byte-identical copy of `cloud-inputs/009/topic-05/t5-palette.ts` |
 
-Not built here (not used by 5.1.1, 5.1.3, 5.1.4): `MitosisCellModel`, `RootTipSquashRig`, `FieldOfViewSchematic`.
+| `MitosisCellModel.tsx` | `MitosisCellModel`, `mLayout`/`mGeom`, `stageAt`, `mixM`, `MCOUNT`, `mCentromeres` | **ADDED by run 009b** (branch cloud/009-5.1.2-to-5.1.6-rmr4ks), built to SHARED-SPECS §5 and the 5.2.1 storyboard's model section: animal + plant; stage ids `interphase`, `prophase-early`, `prophase-late`, `metaphase`, `anaphase`, `telophase`, `cytokinesis` (`MSTAGES`); continuous params cond · nucleolus · env · centro · spindle · align · sep (one-frame switch, set by the beat) · pole · newEnv · newNuc · decond · spOff · cyto; spindle axis horizontal; animal cleavage furrow, plant vesicles → cell plate → new walls; count rows `MCOUNT` per §4. Not added: the `toluidine-blue-schematic` render style (5.2.2 only). |
+
+Not built here: `RootTipSquashRig`, `FieldOfViewSchematic` (5.2.2).
 
 ## sha256
 
@@ -24,4 +26,5 @@ Not built here (not used by 5.1.1, 5.1.3, 5.1.4): `MitosisCellModel`, `RootTipSq
 | `ChromosomeModel.tsx` | `d727c225ac73c0f76717b13a70d18f58f333a7170d20f2e2b417a645e50c3319` |
 | `DNAContentGraph.tsx` | `4fcc7b5d2631102b3a211e0b72d82f56442744862d033d46db2814502c1e4591` |
 | `T5Annot.tsx` | `ec225c18663efd193fa2dbd0ac7c9a98b9d7825b325959223a459ea162686961` |
+| `MitosisCellModel.tsx` | `f063ac7bd0f7d9b5d01d2d43464e2ffe8f1ffecdb78e828a46cc108c72265b9e` (added by 009b) |
 | `TelomereEndModel.tsx` | `8ba409dea0a4bbea04b01f7af1f6947ebe73063a454a39baa96d250d8353b666` |
