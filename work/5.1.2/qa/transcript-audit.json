@@ -1,0 +1,107 @@
+[
+  {
+    "beat": 1,
+    "sourceWords": 81,
+    "recognizerTokens": 81,
+    "matchedSourceTokens": 80,
+    "differences": [
+      {
+        "op": "replace",
+        "script": "grazed",
+        "heard": "graced"
+      }
+    ]
+  },
+  {
+    "beat": 2,
+    "sourceWords": 41,
+    "recognizerTokens": 41,
+    "matchedSourceTokens": 41,
+    "differences": []
+  },
+  {
+    "beat": 3,
+    "sourceWords": 86,
+    "recognizerTokens": 86,
+    "matchedSourceTokens": 86,
+    "differences": []
+  },
+  {
+    "beat": 4,
+    "sourceWords": 100,
+    "recognizerTokens": 100,
+    "matchedSourceTokens": 98,
+    "differences": [
+      {
+        "op": "replace",
+        "script": "four",
+        "heard": "for"
+      },
+      {
+        "op": "replace",
+        "script": "diploid",
+        "heard": "deployed"
+      }
+    ]
+  },
+  {
+    "beat": 5,
+    "sourceWords": 149,
+    "recognizerTokens": 149,
+    "matchedSourceTokens": 148,
+    "differences": [
+      {
+        "op": "replace",
+        "script": "interphase",
+        "heard": "interface"
+      }
+    ]
+  },
+  {
+    "beat": 6,
+    "sourceWords": 66,
+    "recognizerTokens": 66,
+    "matchedSourceTokens": 66,
+    "differences": []
+  },
+  {
+    "beat": 7,
+    "sourceWords": 102,
+    "recognizerTokens": 103,
+    "matchedSourceTokens": 102,
+    "differences": [
+      {
+        "op": "insert",
+        "script": "",
+        "heard": "next"
+      }
+    ]
+  },
+  {
+    "beat": 8,
+    "sourceWords": 53,
+    "recognizerTokens": 53,
+    "matchedSourceTokens": 53,
+    "differences": []
+  },
+  {
+    "beat": 9,
+    "sourceWords": 64,
+    "recognizerTokens": 64,
+    "matchedSourceTokens": 64,
+    "differences": []
+  },
+  {
+    "beat": 10,
+    "sourceWords": 62,
+    "recognizerTokens": 63,
+    "matchedSourceTokens": 61,
+    "differences": [
+      {
+        "op": "replace",
+        "script": "23",
+        "heard": "twenty three"
+      }
+    ]
+  }
+]
