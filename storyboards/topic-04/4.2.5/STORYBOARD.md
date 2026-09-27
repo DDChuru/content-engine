@@ -1,7 +1,7 @@
 # 4.2.5 — Estimating the water potential of potato tissue
 
 **Storyboard, first draft. Cloud run 006, 27 September 2026.** No audio, no code, no render. Folder `storyboards/topic-04/4.2.5/`.
-Cambridge 9700 syllabus 2025–2027, p.22. Command word **INVESTIGATE** (with "using the results to estimate"). Budget from `TOPIC-PLAN-04-MEMBRANES.md` §4.2.5 and the lesson list, and `TOPIC-04-WEIGHTS.md` (4.2.5 row and paragraph; supplementary S-A to S-D, S-F; register E48): **11:15 = teaching 10:00 (about 1,200 words) + one complete error beat 1:15 (E48); 13 teaching beats + 1 error beat**, delivered here as **14 beats (13 teaching + 1 error)**. 4.2.5 has no direct Paper 2 exposure in the cited blocks (0/5); both cited Paper 5s (W20/51, M24/52) bear on it as supplementary practical evidence outside the counts. Runtime estimated at **120 words per minute of final video** (words ÷ 120); the 4 s silent read in E48 sits inside that effective rate and is not added again.
+Cambridge 9700 syllabus 2025–2027, p.22. Command word **INVESTIGATE** (with "using the results to estimate"). Budget from `TOPIC-PLAN-04-MEMBRANES.md` §4.2.5 and the lesson list, and `TOPIC-04-WEIGHTS.md` (4.2.5 row and paragraph; supplementary S-A to S-D, S-F; register E48): **11:15 = teaching 10:00 (about 1,200 words) + one complete error beat 1:15 (E48); 13 teaching beats + 1 error beat**, delivered here as **14 beats (13 teaching + 1 error)**. 4.2.5 has no direct Paper 2 exposure in the cited blocks (0/5); both cited Paper 5s (W20/51, M24/52) bear on it as supplementary practical evidence outside the counts. Runtime estimated at **120 words per minute of final video** (words ÷ 120); E48 is counted as a complete beat, narration plus its 4 s silent read (SHARED-SPECS §2a).
 
 > **4.2.5** investigate the effects of immersing plant tissues in solutions of different water potentials, using the results to estimate the water potential of the tissues
 
@@ -25,7 +25,7 @@ One idea carries the lesson: **you cannot measure water potential inside a cell 
 
 **What the mark schemes credit, quoted:** [W20/51 Q1(d)(i), MS p.9] `–860kPa ;` (the density-drop method's answer at 0.30 mol dm⁻³ from the supplied table; **PDF-CHECKED (plan check)**). [M24/52 Q1(c)(iii), MS p.7] `ref. to hazard and risk and precaution ;` (1 mark; **PDF-CHECKED (plan check)**). [R24 p.54, June 2024 P52 key messages] “The term ‘amount’ is not accepted as it is not specific.” (**PDF-CHECKED (plan check)**). Described, not quoted (plan-check descriptions, used as our paraphrase with the citation): W20/51 Q1(c)(ii), QP p.5 / MS p.9, 3 marks for a labelled downward-trending sketch and identifying its zero-mass-change intercept as the estimate; W20/51 Q1(a)(ii) 3, Q1(b) 6, Q1(c)(i) 2, MS pp.7–9: range/dilution, controls and percentage-change interpretation across different parts; M24/52 Q1(c)(i), maximum 6 marks, any six of nine listed points, a plan varying the temperature of turnip blocks (related planning evidence, not this protocol); M24/52 Q1(b)(ii), MS p.5, limitations, any four of eight points, of which untested intermediate concentrations, variation among cells and missing uncertainty information are examples. W20/51 is red pepper fruit-wall tissue and two separate methods; **our potato mass-change dataset followed by a supplied lookup is an adaptation combining these skills, not the paper's original numerical solution** (plan check MF2). So the spine is what is credited: a downward trend with its zero-change intercept as the estimate; a supplied-table lookup with sign and unit; quantities named specifically; hazard, risk and precaution together.
 
-**The handle:** *a see-saw sitting level* (Beat 3). Neither side wins: water still crosses both ways, but nothing net moves. Converted at once, in the same breath: *where the change in mass is zero, there is no net movement of water, so that solution's water potential equals the tissue's initial water potential.* The handle is never the exam answer.
+**The handle:** *a see-saw sitting level* (Beat 3). Neither side wins: water still crosses both ways, but nothing net moves. Converted at once, in the same breath: *where the change in mass is zero, there is no net movement of water, so that solution's water potential estimates the tissue's initial water potential.* The handle is never the exam answer.
 
 **Typicality rules applied.** Zero measured mass change gives **an estimate of the tissue's initial water potential under these conditions**; it is not proof that every cell has identical water potential or that no solute exchange or damage occurred (MF5, said in Beat 12). Comparisons are labelled **initially** higher/lower. "Potato fits the method" is said of this method's needs (firm, cuts cleanly, mass changes enough to weigh), not as a claim that every potato behaves the same; different potatoes can give different estimates (beyond-the-mark-scheme panel, Beat 14). The trend is "smooth" and "curves gently" for **this dataset**; no general curve shape is claimed. The intercept is read **within the tested range**; nothing is extrapolated. The 0.4 mol dm⁻³ mean (+0.1 %) is shown as a mean, and the answer is read from the trend, not from that point. The R24 sentence is stated as a key message for June 2024 Paper 52 **as a whole**, applied to our constructed plan; R24/52 is not called an osmosis paper. −860 kPa is spoken only as W20/51's density-drop answer. Reasons students err are phrased as possibilities ("It can feel precise enough, since…"). The 4.2.6 exclusion holds: water potential only; the component potentials are never named.
 
@@ -94,16 +94,16 @@ Five or six small grey-white ovals in the cytoplasm of the plant cell, label **i
 
 ## Beat by beat
 
-Beat windows in the headings follow the per-beat ledger (words ÷ 120; the 4 s silent read in Beat 9 sits inside the effective rate); final cue times come from the measured audio. Every cue is an exact narration substring, unique within its beat, in spoken order; no stretch over 30 words without a stated visual change.
+Beat windows in the headings follow the per-beat ledger (words ÷ 120, plus the 4 s silent read in Beat 9, since SHARED-SPECS §2a counts a complete error beat as narration + silent read); final cue times come from the measured audio. Every cue is an exact narration substring, unique within its beat, in spoken order; no stretch over 30 words without a stated visual change.
 
-### BEAT 1 · Hook and context · 0:00–0:47
+### BEAT 1 · Hook and context · 0:00–0:48
 **Narration:**
-> Ever wondered how you could measure the water potential of a potato, when no probe is small enough to go inside one of its cells? Leave raw potato strips in plain water and they come out firm; leave them in a strong sugar solution and they go limp. The tissue is swapping water with the liquid around it, and which way it goes depends on a comparison you cannot see. So you let the tissue report it: weigh it before and after. By the end of this lesson, that report becomes a number in kilopascals.
+> Ever wondered how you could put a number on the water potential of a potato, with nothing more than a balance and some sugar solutions? Leave raw potato strips in plain water and they come out firm; leave them in a strong sugar solution and they go limp. The tissue is swapping water with the liquid around it, and which way it goes depends on a comparison you cannot see. So you let the tissue report it: weigh it before and after. By the end of this lesson, that report becomes a number in kilopascals.
 
 **Visual action:**
-1. **From the first frame**, `PotatoCylinderRig` in `bench` is on screen, reduced: a whole raw potato on a white tile, the top-pan balance at rest beside it, and two beakers of liquid (no labels yet). At *measure the water potential of a potato*, the hook question appears as a compact caption above the potato.
-2. At *no probe is small enough*, a magnifier opens on the potato's surface showing one plant cell (`CellOsmosisSet` outline, *schematic; not to scale*), with a ghost probe tip far larger than the cell; small ✗ beside the probe.
-3. At *Leave raw potato strips in plain water*, the magnifier closes; the left beaker is labelled **plain water** and three raw potato strips are lowered into it with forceps; at *come out firm*, after a time-lapse wipe (caption *time compressed*), forceps lift one strip by one end and it stays straight, tag **firm**.
+1. **From the first frame**, `PotatoCylinderRig` in `bench` is on screen, reduced: a whole raw potato on a white tile, the top-pan balance at rest beside it, and two beakers of liquid (no labels yet). At *put a number on the water potential of a potato*, the hook question appears as a compact caption above the potato.
+2. At *nothing more than a balance*, the balance brightens and a short row of stoppered bottles labelled *sugar solutions* ghosts in beside it.
+3. At *Leave raw potato strips in plain water*, the left beaker is labelled **plain water** and three raw potato strips are lowered into it with forceps; at *come out firm*, after a time-lapse wipe (caption *time compressed*), forceps lift one strip by one end and it stays straight, tag **firm**.
 4. At *a strong sugar solution*, the right beaker is labelled **strong sugar solution** and three strips go in the same way; at *go limp*, one is lifted after the same time-lapse and droops, tag **limp**. Small type under both: *our illustration of what this lesson measures; not a measured result*.
 5. At *swapping water with the liquid around it*, small insets open over each strip: over the firm strip a plant cell with a net arrow in, the arrow fading as the cell reaches `CellOsmosisSet` `plant-turgid` while tokens keep crossing both ways; over the limp strip a net arrow out, ending in `plant-flaccid`; caption *model cell states; not observed in this tissue*.
 6. At *a comparison you cannot see*, a question-mark tag hangs between each beaker's liquid and its inset cell.
@@ -114,7 +114,7 @@ Beat windows in the headings follow the per-beat ledger (words ÷ 120; the 4 s s
 
 ---
 
-### BEAT 2 · What you will be able to do · 0:47–1:12
+### BEAT 2 · What you will be able to do · 0:48–1:14
 **Narration:**
 > By the end you will be able to set up this investigation so that anyone could repeat it exactly; to turn masses into percentage changes, means and a graph with a zero crossing; and to read off the tissue's water potential from supplied data, with its sign, its unit and its limits.
 
@@ -129,9 +129,9 @@ Beat windows in the headings follow the per-beat ledger (words ÷ 120; the 4 s s
 
 ---
 
-### BEAT 3 · Why weighing works: water potential · 1:12–2:13
+### BEAT 3 · Why weighing works: water potential · 1:14–2:16
 **Narration:**
-> First, why weighing tells you anything. Water potential describes water's tendency to move. Pure water at atmospheric pressure is the reference, zero kilopascals. At the same temperature and pressure, adding solute lowers water potential, so these sucrose solutions have negative values, and a less negative value is higher. Net osmosis is from higher to lower water potential, through partially permeable membranes. If the solution's water potential starts higher than the cells', they take in water and the tissue gains mass; if it starts lower, the tissue loses mass. Picture a see-saw sitting level. Written properly: where the change in mass is zero, water still crosses both ways but there is no net movement, so that solution's water potential equals the tissue's initial water potential.
+> First, why weighing tells you anything. Water potential describes water's tendency to move. Pure water at atmospheric pressure is the reference, zero kilopascals. At the same temperature and pressure, adding solute lowers water potential, so these sucrose solutions have negative values, and a less negative value is higher. Net osmosis is from higher to lower water potential, through partially permeable membranes. If the solution's water potential starts higher than the cells', they take in water and the tissue gains mass; if it starts lower, the tissue loses mass. Picture a see-saw sitting level. Written properly: where the change in mass is zero, water still crosses both ways but there is no net movement, so that solution's water potential estimates the tissue's initial water potential.
 
 **Visual action:**
 1. **From the first frame**, `WaterPotentialModel` in `cell-vs-solution` is on screen: the vertical membrane strip (label *membrane*), the **solution** compartment at left, a **plant cell** outline at right, the vertical water-potential scale beside it; captions *schematic; not to scale* and *particles drawn schematically; not to scale; far fewer than real*. At *why weighing tells you anything*, a small balance icon sits under the model.
@@ -143,13 +143,13 @@ Beat windows in the headings follow the per-beat ledger (words ÷ 120; the 4 s s
 7. At *if it starts lower*, the solution's marker slides below the cell's (tag *initially: solution's water potential lower than the cell's*); the counter reverses, the net arrow points out of the cell, and the cylinder icon's tag becomes **−**.
 8. At *Picture a see-saw sitting level*, a small see-saw icon settles level beside the model, strap-line *handle: a level see-saw*.
 9. At *Written properly*, the markers slide to the same level (tag *initially: solution's water potential equal to the cell's*); the net arrow fades while tokens keep crossing both ways and the counter's two numbers run level; the cylinder icon's tag becomes **0**.
-10. At *the change in mass is zero*, the sentence surface slides up beneath the model and builds clause by clause; at *equals the tissue's initial water potential*, it completes: **At zero change in mass there is no net movement of water, so the solution's water potential = the tissue's initial water potential.** The see-saw icon dims (the handle is not the answer).
+10. At *the change in mass is zero*, the sentence surface slides up beneath the model and builds clause by clause; at *estimates the tissue's initial water potential*, it completes: **At zero change in mass there is no net movement of water, so the solution's water potential gives an estimate of the tissue's initial water potential, under these conditions.** The see-saw icon dims (the handle is not the answer).
 
 **On-screen text:** *membrane*; *solution*; *plant cell*; *0 kPa — pure water at atmospheric pressure (reference)*; *higher (less negative)* / *lower (more negative)*; *initially: …* tags; *net movement of water by osmosis*; the sentence.
 
 ---
 
-### BEAT 4 · The potato: what the method responds to · 2:13–3:05
+### BEAT 4 · The potato: what the method responds to · 2:16–3:05
 **Narration:**
 > Now the material, and what the method is really detecting. Potato contains water, dissolved cell-sap solutes and insoluble starch reserves. You measure the tissue's change in mass, as a proxy for net water exchange. This is not a starch test, and the insoluble starch does not make the tissue solute-free, or stop damaged cells leaking. Potato fits the method well: it is firm, it cuts into identical cylinders, and its mass changes enough to weigh. The catches are that potatoes, and regions within one, differ; liquid clings to the surface; and cut cells can leak. The method handles each.
 
@@ -158,7 +158,7 @@ Beat windows in the headings follow the per-beat ledger (words ÷ 120; the 4 s s
 2. At *dissolved cell-sap solutes*, the vacuole of one cell is ringed, label **cell sap: water + dissolved solutes**; at *insoluble starch reserves*, the grains are ringed, label **insoluble starch grains**.
 3. At *as a proxy for net water exchange*, the balance brightens beside the magnifier, tag **readout: change in mass → proxy for net water exchange**.
 4. At *not a starch test*, a ghost iodine dropper appears over the grains and is struck through, tag *not a starch assay*; at *stop damaged cells leaking*, a cell at the magnifier's cut edge is drawn torn, with a few tokens drifting out, tag *damaged cells at cut surfaces can leak*.
-5. At *Potato fits the method well*, an on-screen note card opens beside the potato, headed **fit**; at *cuts into identical cylinders*, a ghost cylinder outline is traced on the cut face; at *changes enough to weigh*, the balance display flickers through two decimal places, tag *changes within a 0.01 g balance's resolution*.
+5. At *Potato fits the method well*, an on-screen note card opens beside the potato, headed **fit**; at *cuts into identical cylinders*, a ghost cylinder outline is traced on the cut face; at *changes enough to weigh*, the balance display flickers through two decimal places, tag *changes large enough to register on a 0.01 g balance*.
 6. At *potatoes, and regions within one, differ*, a second, differently shaped potato appears ghosted beside the first with a ≠ sign, and the half potato's centre and edge are tagged *region*; the note card gains **one potato, one borer, random allocation**.
 7. At *liquid clings to the surface*, a droplet film is drawn on a ghost cylinder; the note card gains **blot the same way each time**.
 8. At *cut cells can leak*, the torn cell pulses again; the note card gains **same dimensions for every cylinder, so the same cut surface**; at *The method handles each*, the card's three lines tick in turn.
@@ -167,13 +167,13 @@ Beat windows in the headings follow the per-beat ledger (words ÷ 120; the 4 s s
 
 ---
 
-### BEAT 5 · Cutting identical cylinders, safely · 3:05–3:55
+### BEAT 5 · Cutting identical cylinders, safely · 3:05–3:56
 **Narration:**
-> Use one potato, with the skin removed, so every cylinder is the same kind of tissue. Stand it on a white tile and push a ten-millimetre cork borer straight down through it into the tile, then push the core out. Lay each core beside a ruler and trim it to thirty millimetres with a scalpel, cutting down onto the tile. Pair the hazard, the risk and the precaution: the edges are sharp; if one slips, it can cut your hand; so cut down onto the tile, blade away from you, fingers clear. Then allocate the cylinders to tubes at random.
+> Use one potato, and remove the skin, so no cylinder has a patch of skin that the others lack. Stand it on a white tile and push a ten-millimetre cork borer straight down through it into the tile, then push the core out. Lay each core beside a ruler and trim it to thirty millimetres with a scalpel, cutting down onto the tile. Pair the hazard, the risk and the precaution: the edges are sharp; if one slips, it can cut your hand; so cut down onto the tile, blade away from you, fingers clear. Then allocate the cylinders to tubes at random.
 
 **Visual action:**
 1. **From the first frame**, `PotatoCylinderRig` in `bench` fills the frame: one whole potato on the white tile, cork borer, push rod, scalpel and ruler beside it. At *Use one potato*, labels **one potato** and **white tile** appear.
-2. At *the skin removed*, strips of skin come off under the scalpel per the handling spec (blade drawn down onto the tile, away from the body); the peeled potato is labelled *skin removed*.
+2. At *remove the skin*, strips of skin come off under the scalpel per the handling spec (blade drawn down onto the tile, away from the body); the peeled potato is labelled *skin removed*.
 3. At *push a ten-millimetre cork borer straight down*, the borer (label **cork borer, 10 mm internal diameter**) is pushed straight down through the flesh into the tile with a slight twist, the free hand on top of the potato away from its path; at *push the core out*, the borer is lifted and the push rod expels the core onto the tile.
 4. At *trim it to thirty millimetres*, the core lies beside the **ruler**; the scalpel (label **scalpel**) cuts straight down at 0 mm and 30 mm; label *30 mm, trimmed*; small type *every cylinder: diameter 1.0 cm, length 3.0 cm → surface area 11.0 cm², volume 2.36 cm³ (recall 4.2.3-4)*.
 5. At *cutting down onto the tile*, the scalpel's contact with the tile is ringed; time-lapse to eighteen cylinders lined on the tile.
@@ -184,7 +184,7 @@ Beat windows in the headings follow the per-beat ledger (words ÷ 120; the 4 s s
 
 ---
 
-### BEAT 6 · Six solutions, eighteen tubes · 3:55–4:44
+### BEAT 6 · Six solutions, eighteen tubes · 3:56–4:43
 **Narration:**
 > Next, the solutions. You need six concentrations of sucrose, from distilled water up to 1.0 mole per cubic decimetre, made by proportional dilution of a 1.0 mole per cubic decimetre stock, each to a total of 20.0 cubic centimetres. For 0.4, measure 8.0 cubic centimetres of stock and 12.0 of distilled water. Then the vessels: eighteen boiling tubes, each labelled and closed with a bung to limit evaporation, three per concentration, one cylinder in each. Three cylinders sharing one tube share one solution, so they are not independent repeats; three separate tubes are.
 
@@ -203,9 +203,9 @@ Beat windows in the headings follow the per-beat ledger (words ÷ 120; the 4 s s
 
 ---
 
-### BEAT 7 · Blot, weigh, immerse, and start the clock · 4:44–5:36
+### BEAT 7 · Blot, weigh, immerse, and start the clock · 4:43–5:32
 **Narration:**
-> Before each cylinder goes in, blot it the same way every time, one roll across a paper towel, and weigh it on a balance reading to 0.01 grams. Record that mass against the tube's label. The immersion time is written into the plan before any results exist: here, sixty minutes. Start the stopwatch on the frame the first cylinder touches its solution, and never reset it. The rest go in at one-minute intervals, each start time written down, so every cylinder can come out exactly sixty minutes after it went in. The room temperature, twenty-one degrees, is recorded.
+> Before each cylinder goes in, blot it the same way every time, one roll across a paper towel, and weigh it on a balance reading to 0.01 grams. Record that mass against the tube's label. The immersion time is written into the plan before any results exist: here, sixty minutes. Start the stopwatch the moment the first cylinder touches its solution, and never reset it. The rest go in at one-minute intervals, each start time written down, so every cylinder can come out exactly sixty minutes after it went in. The room temperature, twenty-one degrees, is recorded.
 
 **Visual action:**
 1. **From the first frame**, `PotatoCylinderRig` in `load` is on screen: the eighteen allocated cylinders, the folded paper towel, the balance, the racks of bunged tubes and the stopwatch at 0:00:00, with the results sheet beside them. At *blot it the same way every time*, forceps pick up the cylinder for tube **0.0-A** (first in the loading order).
@@ -223,7 +223,7 @@ Beat windows in the headings follow the per-beat ledger (words ÷ 120; the 4 s s
 
 ---
 
-### BEAT 8 · Out, reweigh, and a percentage for every cylinder · 5:36–6:24
+### BEAT 8 · Out, reweigh, and a percentage for every cylinder · 5:32–6:17
 **Narration:**
 > When each cylinder's sixty minutes are up, lift it out with forceps, blot it exactly as before, and weigh it again. Now calculate, for every cylinder on its own: percentage change in mass equals final mass minus initial mass, divided by initial mass, times a hundred. This cylinder from distilled water went from 2.51 to 2.71 grams: a gain of 0.20 grams, divided by 2.51, times a hundred, is plus 8.0 per cent. Dividing by the starting mass lets you compare cylinders that did not start at exactly the same mass.
 
@@ -241,7 +241,7 @@ Beat windows in the headings follow the per-beat ledger (words ÷ 120; the 4 s s
 
 ---
 
-### BEAT 9 · COMMON MISTAKE E48: the word amount in a plan · 6:24–7:36
+### BEAT 9 · COMMON MISTAKE E48: the word amount in a plan · 6:17–7:31
 **Narration:**
 > Here is a mistake examiners flag in planning answers, on the card. These two lines are our constructed plan for this investigation. Read them.
 >
@@ -269,7 +269,7 @@ Beat windows in the headings follow the per-beat ledger (words ÷ 120; the 4 s s
 
 ---
 
-### BEAT 10 · The results table, and what the signs mean · 7:36–8:22
+### BEAT 10 · The results table, and what the signs mean · 7:31–8:14
 **Narration:**
 > Here are the results, our illustrative data: three percentage changes for each concentration, and their mean. The signs carry the biology. Positive means the tissue gained water: that solution's water potential was initially higher than the cells'. Negative means it lost water: the solution's was initially lower. From distilled water the mean is plus 8.1 per cent; by 1.0 mole per cubic decimetre it is minus 8.6. At 0.4, the three cylinders barely moved, a hundredth of a gram each way, a mean of plus 0.1.
 
@@ -287,7 +287,7 @@ Beat windows in the headings follow the per-beat ledger (words ÷ 120; the 4 s s
 
 ---
 
-### BEAT 11 · The graph and its zero crossing · 8:22–9:13
+### BEAT 11 · The graph and its zero crossing · 8:14–9:02
 **Narration:**
 > Plot the mean percentage change in mass against sucrose concentration, and draw the zero line across. Then draw a smooth trend through the means, rather than joining dot to dot, because each mean still carries some scatter; here it curves gently as the losses level off. The trend falls through zero. Where it crosses, draw a construction line down to the concentration axis: 0.40 moles per cubic decimetre. That value is read from the trend, inside the range you tested. It is an interpolation, not a new data point, and nothing is extended beyond your results.
 
@@ -307,7 +307,7 @@ Beat windows in the headings follow the per-beat ledger (words ÷ 120; the 4 s s
 
 ---
 
-### BEAT 12 · From concentration to kilopascals · 9:13–10:06
+### BEAT 12 · From concentration to kilopascals · 9:02–9:52
 **Narration:**
 > The graph gives you a concentration, not a water potential. For that, you need supplied data: this table comes from a November 2020 practical paper, and pairs sucrose concentrations with their water potentials. Go down to 0.40, then across: minus 1120 kilopascals. Keep the sign and the unit. So zero measured mass change gives an estimate of the tissue's initial water potential under these conditions, about minus 1120 kilopascals. It is not proof that every cell has the same water potential, or that no solute moved and no cells were damaged. For a sharper estimate, test extra concentrations around the crossing.
 
@@ -325,7 +325,7 @@ Beat windows in the headings follow the per-beat ledger (words ÷ 120; the 4 s s
 
 ---
 
-### BEAT 13 · What I told you, on the rig and the graph · 10:06–10:46
+### BEAT 13 · What I told you, on the rig and the graph · 9:52–10:32
 **Narration:**
 > So here it is, on the rig and the graph. One potato, identical cylinders, eighteen covered tubes, three per concentration, one cylinder in each. Blot the same way, weigh to 0.01 grams, and immerse for a stated sixty minutes, timed from first contact. A percentage change for each cylinder, then the mean. A smooth trend crossing zero at 0.40, read by construction. The supplied table turns that into minus 1120 kilopascals: an estimate for this tissue, under these conditions.
 
@@ -340,9 +340,9 @@ Beat windows in the headings follow the per-beat ledger (words ÷ 120; the 4 s s
 
 ---
 
-### BEAT 14 · How it is asked, and the potato again · 10:46–11:53
+### BEAT 14 · How it is asked, and the potato again · 10:32–11:36
 **Narration:**
-> How this reaches you. A November 2020 Paper 5 question, on red pepper tissue, gave three marks for a labelled sketch trending downward and for identifying where it crosses zero change in mass as the estimate. Separately, it used a density-drop method: the drop that neither rose nor fell picked out 0.30, and its table gave minus 860 kilopascals. Keep the two methods apart, and when you give a water potential, give kilopascals with the sign, not a concentration. A March 2024 planning question gave one mark for hazard, risk and precaution together, and credited limitations such as untested concentrations in between. The scheme doesn't need this, but a different potato can give a different estimate. And your potato? About minus 1120 kilopascals, estimated from its own change in mass.
+> How this reaches you. A November 2020 Paper 5 question, on red pepper tissue, gave three marks for a labelled sketch trending downward and for identifying where it crosses zero change in mass as the estimate. Separately, it used a density-drop method: the drop that neither rose nor fell picked out 0.30, and its table gave minus 860 kilopascals. Keep the two methods apart, and when you give a water potential, give kilopascals with the sign, not a concentration. The March 2024 paper gave one mark for hazard, risk and precaution together, and credited limitations such as untested concentrations in between. The scheme doesn't need this, but a different potato can give a different estimate. And your potato? About minus 1120 kilopascals, estimated from its own change in mass.
 
 **Visual action:**
 1. **From the first frame**, the familiar lesson layout stays on screen at right, reduced (`PotatoCylinderRig`, the `percent-mass-change` graph with its construction, the `LookupTable`); a compact forms surface is ready at left. At *How this reaches you*, the forms surface enters.
@@ -350,7 +350,7 @@ Beat windows in the headings follow the per-beat ledger (words ÷ 120; the 4 s s
 3. At *a density-drop method*, row 2 lands beneath, visibly separate: **W20/51 Q1(d)(i), 1 mark · QP pp.6–7 / MS p.9 · a different method: density drops**; at *picked out 0.30*, the `LookupTable`'s 0.30 row brightens; at *minus 860 kilopascals*, citation tab, exact: **MS p.9: `–860kPa ;`**, tag *W20/51's density-drop answer; not our potato's value*.
 4. At *Keep the two methods apart*, a divider line draws between rows 1 and 2, tags *method 1: mass change, sketch and intercept* / *method 2: density drop, table lookup*; small type *our potato dataset + supplied lookup = an adaptation combining the two skills*.
 5. At *not a concentration*, a model-answer card lands beside the graph, a single ticked line with nothing struck through: **✓ The potato tissue's water potential is estimated as −1120 kPa: the water potential of the 0.40 mol dm⁻³ sucrose solution that gave no change in mass.** Caption in small type *our model sentence; not mark-scheme wording*. Its **−** and **kPa** are ringed, and the **0.40 mol dm⁻³** label at the foot of the construction line is tagged *a concentration: the step before the lookup*. No reject card is shown: no verified reject or ignore line exists for this outcome.
-6. At *A March 2024 planning question*, row 3 lands: **M24/52 Q1(c)(i), maximum 6 marks, any six of nine listed points · MS p.6** · *a plan varying the temperature of turnip blocks; related planning evidence, not this protocol*; at *hazard, risk and precaution together*, row 3 extends, citation tab, exact: **M24/52 Q1(c)(iii), MS p.7: `ref. to hazard and risk and precaution ;`**, and the Beat 5 hazard–risk–precaution tag returns small beside it.
+6. At *The March 2024 paper*, row 3 lands: **M24/52 Q1(c)(i), maximum 6 marks, any six of nine listed points · MS p.6** · *a plan varying the temperature of turnip blocks; related planning evidence, not this protocol*; at *hazard, risk and precaution together*, row 3 extends, citation tab, exact: **M24/52 Q1(c)(iii), MS p.7: `ref. to hazard and risk and precaution ;`**, and the Beat 5 hazard–risk–precaution tag returns small beside it.
 7. At *untested concentrations in between*, row 4 lands: **M24/52 Q1(b)(ii), limitations, any four of eight points · MS p.5** · *examples: untested intermediate concentrations · variation among cells · missing uncertainty information (our paraphrase; onions and sodium chloride context)*; the Beat 12 ghost ticks at 0.30–0.50 blink on the graph.
 8. At *The scheme doesn't need this*, a separate panel slides in below the forms, **dashed border, no tick, no MS tab**, headed **beyond the mark scheme**; at *a different potato can give a different estimate*, it fills: *a different potato, or one stored for weeks, can give a different estimate; this estimate belongs to this tissue, this immersion time and this dataset*, with a ghost second potato beside it.
 9. At *And your potato?*, the Beat 1 potato returns small at the bottom with its readout; at *estimated from its own change in mass*, the readout reads **≈ −1120 kPa (estimate; our illustrative data)** and the Beat 1 hook caption returns above it with a tick. Final frame held 2 s: forms at left, the lesson layout and model-answer card at right, the beyond-the-mark-scheme panel and the potato beneath. No slogan.
@@ -470,11 +470,11 @@ Explain-beat real-world example: the potato itself (Beat 4), with the on-screen 
 ### Absolutes sweep (own)
 
 Every narrated sentence containing *all, every, always, never, only, no, nothing, cannot, because, must, needs* and causal *so/since* was reread with one question: true of all cases, or of the case on screen?
-- Beat 1: "no probe is small enough to go inside one of its cells": our framing of why the lesson measures indirectly; bounded to measuring this way in a school lab by the next sentences (the tissue reports it). "which way it goes depends on a comparison you cannot see": the comparison is not visible by eye; true. "So you let the tissue report it": a method choice, not a causal claim about biology.
+- Beat 1: "with nothing more than a balance and some sugar solutions": the method's apparatus in outline (the full list follows in Beats 5–7); no claim that no other way exists. (An earlier draft's "no probe is small enough to go inside one of its cells" was removed in self-review: research instruments can measure inside single cells.) "which way it goes depends on a comparison you cannot see": the comparison is not visible by eye; true. "So you let the tissue report it": a method choice, not a causal claim about biology.
 - Beat 2: "so that anyone could repeat it exactly": an aim, stated as what they will be able to do.
-- Beat 3: "adding solute lowers water potential, so these sucrose solutions have negative values": MF3, bounded by "at the same temperature and pressure" and "these". "Net osmosis is from higher to lower water potential": the definition as taught (MF3). "If … starts higher … gains mass; if … starts lower … loses mass": initial-condition comparison, for this tissue in this method. "water still crosses both ways but there is no net movement, so that solution's water potential equals the tissue's initial water potential": the creditworthy sentence; "initial" kept; its bound (estimate, not proof) is said in Beat 12.
+- Beat 3: "adding solute lowers water potential, so these sucrose solutions have negative values": MF3, bounded by "at the same temperature and pressure" and "these". "Net osmosis is from higher to lower water potential": the definition as taught (MF3). "If … starts higher … gains mass; if … starts lower … loses mass": initial-condition comparison, for this tissue in this method. "water still crosses both ways but there is no net movement, so that solution's water potential estimates the tissue's initial water potential": the creditworthy sentence; "initial" kept; its bound (estimate, not proof) is said in Beat 12.
 - Beat 4: "This is not a starch test, and the insoluble starch does not make the tissue solute-free, or stop damaged cells leaking": MF6 verbatim meaning. "Potato fits the method well": of this method's needs, with the three reasons given. "cut cells can leak": "can". "The method handles each": the three listed interferences, each with its handling on the card; not a claim of zero error (Beat 12's caveat).
-- Beat 5: "so every cylinder is the same kind of tissue": the purpose of peeling; not a claim that every cell is identical (Beat 12). "if one slips, it can cut your hand": "can". 
+- Beat 5: "so no cylinder has a patch of skin that the others lack": the purpose of peeling, bounded to the skin; no claim that the flesh is uniform (regions within a potato differ, Beat 4; random allocation handles it). "if one slips, it can cut your hand": "can". 
 - Beat 6: "Three cylinders sharing one tube share one solution, so they are not independent repeats": MF5 and the plan's trap row; a statement about the design, not about all experiments.
 - Beat 7: "never reset it": a procedural instruction for this clock (SHARED-SPECS timer rule). "so every cylinder can come out exactly sixty minutes after it went in": the purpose of staggering.
 - Beat 8: "Dividing by the starting mass lets you compare cylinders that did not start at exactly the same mass": the reason for percentage change here; no "must".
@@ -528,33 +528,32 @@ Counted by the validator over the blockquoted narration, silent-read line exclud
 
 | Beat | Title | Words | Seconds |
 |---|---|---:|---:|
-| 1 | Hook and context | 94 | 47.0 |
-| 2 | What you will be able to do | 50 | 25.0 |
-| 3 | Why weighing works: water potential | 122 | 61.0 |
-| 4 | The potato: what the method responds to | 103 | 51.5 |
-| 5 | Cutting identical cylinders, safely | 101 | 50.5 |
-| 6 | Six solutions, eighteen tubes | 97 | 48.5 |
-| 7 | Blot, weigh, immerse, and start the clock | 104 | 52.0 |
-| 8 | Out, reweigh, and a percentage for every cylinder | 96 | 48.0 |
-| 9 | COMMON MISTAKE E48: the word amount in a plan | 144 | 72.0 |
-| 10 | The results table, and what the signs mean | 90 | 45.0 |
-| 11 | The graph and its zero crossing | 101 | 50.5 |
-| 12 | From concentration to kilopascals | 106 | 53.0 |
-| 13 | What I told you, on the rig and the graph | 80 | 40.0 |
-| 14 | How it is asked, and the potato again | 133 | 66.5 |
-| **Total** | 14 beats (13 teaching + 1 error) | **1421** | **710.5** (11:50.5) |
+| 1 | Hook and context | 95 | 47.5 |
+| 2 | What you will be able to do | 52 | 26.0 |
+| 3 | Why weighing works: water potential | 124 | 62.0 |
+| 4 | The potato: what the method responds to | 99 | 49.5 |
+| 5 | Cutting identical cylinders, safely | 103 | 51.5 |
+| 6 | Six solutions, eighteen tubes | 93 | 46.5 |
+| 7 | Blot, weigh, immerse, and start the clock | 97 | 48.5 |
+| 8 | Out, reweigh, and a percentage for every cylinder | 91 | 45.5 |
+| 9 | COMMON MISTAKE E48: the word amount in a plan | 140 | 70.0 (+ 4 s silent read = 74.0) |
+| 10 | The results table, and what the signs mean | 86 | 43.0 |
+| 11 | The graph and its zero crossing | 96 | 48.0 |
+| 12 | From concentration to kilopascals | 101 | 50.5 |
+| 13 | What I told you, on the rig and the graph | 79 | 39.5 |
+| 14 | How it is asked, and the potato again | 129 | 64.5 |
+| **Total** | 14 beats (13 teaching + 1 error) | **1385** | **692.5** (11:32.5; 11:36.5 with the silent read) |
 
-**Length, honestly:** **1,421 words = 11:50.5** at 120 words per minute, **35.5 s over** the 11:15 budget. The thirteen teaching beats total **1,277 words = 10:38.5**, **38.5 s over** the 10:00 (1,200-word) teaching base; E48 is **144 words = 72 s**, inside the five-move 130–150-word range and inside its 75 s reservation (3 s under), protected in full. The 4 s silent read is not added again. The teaching overrun sits mainly in Beat 3 (the MF3 sentences are carried nearly verbatim so this lesson stands alone) and Beat 14 (two W20/51 methods kept separate, M24/52 and a beyond-the-mark-scheme line).
+**Length, honestly:** **1,385 words = 11:32.5** at 120 words per minute (the validator's figure), **11:36.5** with E48's 4 s silent read added: **21.5 s over** the 11:15 budget. The thirteen teaching beats total **1,245 words = 10:22.5**, **22.5 s over** the 10:00 (1,200-word) teaching base. E48 is **140 words = 70 s + 4 s silent read = 74 s**, inside the 122–142-word range and the 75 s reservation, protected in full. The teaching overrun sits mainly in Beat 3 (the MF3 water-potential sentences carried nearly verbatim so the lesson stands alone) and Beat 14 (W20/51's two methods kept separate and named, M24/52's planning and limitation points, and the beyond-the-mark-scheme line).
 
 **Cut list if the budget must be met (never touches Beat 9):**
-1. Beat 14: "A March 2024 planning question gave one mark for hazard, risk and precaution together, and credited limitations such as untested concentrations in between." (−23 words, 11.5 s). Rows 3 and 4 and their MS tab stay on screen, revealed with the forms surface; hazard–risk–precaution is already spoken in Beat 5.
-2. Beat 3: "First, why weighing tells you anything." (−6 words, 3 s); move that cue's balance icon to *Water potential describes*.
-3. Beat 4: "and what the method is really detecting" (−7 words, 3.5 s); move its cue to *Now the material*.
-4. Beat 7: "The room temperature, twenty-one degrees, is recorded." (−7 words, 3.5 s); the thermometer and sheet header stay on screen.
-5. Beat 1: "By the end of this lesson, that report becomes a number in kilopascals." → "That report becomes a number in kilopascals." (−6 words, 3 s).
-6. Beat 12: "Keep the sign and the unit." (−6 words, 3 s); the ringing stays visual (the model-answer card in Beat 14 carries the unit point).
+1. Beat 14: "The March 2024 paper gave one mark for hazard, risk and precaution together, and credited limitations such as untested concentrations in between." (−22 words, 11 s). Rows 3 and 4 and their MS tab stay on screen, revealed with the forms surface; hazard–risk–precaution is already spoken in Beat 5.
+2. Beat 3: "First, why weighing tells you anything." (−6 words, 3 s); the balance icon joins the *water's tendency to move* action.
+3. Beat 4: ", and what the method is really detecting" (−7 words, 3.5 s); move its cue to *Now the material*.
+4. Beat 7: "The room temperature, twenty-one degrees, is recorded." (−7 words, 3.5 s); the thermometer and the sheet header stay on screen.
+5. Beat 12: "Keep the sign and the unit." (−6 words, 3 s); the ringing stays visual and the Beat 14 model-answer card carries the unit point.
 
-Cuts 1–6 remove 55 words (27.5 s) → 1,366 words = 11:23; cuts 1–4 alone give 1,378 words = 11:29. I recommend cuts 1 and 2 only if the conductor wants to reduce; the rest carry hand-holding the standards ask for.
+Cuts 1–2 remove 28 words (14 s) → 1,357 words = 11:18.5 (11:22.5 with the silent read); cuts 1–5 remove 48 words (24 s) → 1,337 words = 11:08.5 (11:12.5 with the silent read), inside budget. I would take cut 1 first if the conductor wants the budget met; the others remove hand-holding the standards ask for.
 
 ---
 
@@ -614,6 +613,9 @@ Cuts 1–6 remove 55 words (27.5 s) → 1,366 words = 11:23; cuts 1–4 alone gi
 11. **Hook example.** Raw potato strips firm in plain water and limp in strong sugar solution are used as an illustration of what the lesson measures, labelled as such and listed UNVERIFIED 6, since the plan asks for examples only with a verified source.
 12. **Exam close.** W20/51's two methods are separate rows with a divider, each named (method 1 mass change, sketch and intercept; method 2 density drop, table lookup), as SHARED-SPECS §2a lists the 4.2.5 close; M24/52 planning and limitations follow, as the task brief asks. The MS answer `–860kPa ;` is shown as the scheme's, and the real-world extra (different potatoes) is spoken as beyond the scheme on its own dashed panel, per the REAL-WORLD SAMPLES rule. **No reject card:** the updated brief allows one only where a verified R/I line exists, and none exists for 4.2.5, so the close ends on a ticked model sentence captioned *our model sentence; not mark-scheme wording* (SHARED-SPECS §2's older line allowing an own-wording reject card is superseded by the brief's newer wording).
 
+13. **Specs updated during drafting.** `SHARED-SPECS.md`, `AGENT-BRIEF.md` and the validator were revised while this draft was in progress (new §2a lesson table and exam closes; complete error beat = narration at 120 wpm + silent read, 122–142 words; reject cards only on verified R/I lines; exact `WaterPotentialModel` and `CellOsmosisSet` label wording). I re-read both files in full and applied the changes: E48 trimmed from 148 to 140 words (content unchanged: both faults, the R24 quotation, where/why/why-it-loses, in-place repairs); the reject card removed; the scale label, the *initially: solution's water potential higher / equal / lower than the cell's* labels and the `plant-turgid` equilibrium arrow brought into line.
+14. **Self-review changes to narration.** The hook no longer says that no probe can enter a cell (research instruments can); "measure" became "put a number on" (the lesson estimates); "on the frame" (production language) became "the moment" in Beat 7; the peeling rationale is bounded to the skin; M24/52's limitation point is attributed to "the March 2024 paper", not to its planning question.
+
 ---
 
 ## Validator run
@@ -621,5 +623,21 @@ Cuts 1–6 remove 55 words (27.5 s) → 1,366 words = 11:23; cuts 1–4 alone gi
 `python3 work/006/validate_storyboard.py storyboards/topic-04/4.2.5/STORYBOARD.md`
 
 ```
-(pending)
+== storyboards/topic-04/4.2.5/STORYBOARD.md
+beat  words  cues maxgap  status
+   1     95    11     14  ok
+   2     52     4     15  ok
+   3    124    13     22  ok
+   4     99    13     15  ok
+   5    103    11     22  ok
+   6     93    11     16  ok
+   7     97    11     14  ok
+   8     91    10     16  ok
+   9    140    15     24  ok
+  10     86    11     12  ok
+  11     96    11     15  ok
+  12    101    11     16  ok
+  13     79     9     15  ok
+  14    129    16     17  ok
+TOTAL words 1385  cues 157  runtime at 120 wpm 11:32.5  beats 14  failing beats 0
 ```
