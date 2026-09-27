@@ -1,0 +1,88 @@
+{
+  "1_ffprobeDuration": 265.033333,
+  "2_videoCoversAudio": {
+    "video": 265.033333,
+    "encodedAudio": 264.033,
+    "marginSeconds": 1.0,
+    "videoFrames": 7951
+  },
+  "3_fullDecodeErrors": 0,
+  "4_cues": {
+    "matched": 77,
+    "total": 77,
+    "planned": 77
+  },
+  "5_audioPacketsUnchanged": {
+    "packets": 12378,
+    "identical": true
+  },
+  "6_finalWord": {
+    "word": "differentiation.",
+    "endsAt": 260.62,
+    "audioEnds": 264.033,
+    "headroom": 3.413,
+    "afterWordMaxDb": -16.4
+  },
+  "7_silentReads": [
+    {
+      "beat": 4,
+      "before": "END",
+      "start": 120.166,
+      "seconds": 2.0,
+      "pcmAllZero": true,
+      "encodedInteriorMaxDb": -91.0
+    },
+    {
+      "beat": 8,
+      "before": "END",
+      "start": 261.509,
+      "seconds": 2.0,
+      "pcmAllZero": true,
+      "encodedInteriorMaxDb": -91.0
+    }
+  ],
+  "7_speechPCMUnchanged": true,
+  "frozenNarration": "storyboard paragraphs present verbatim; requests differ only by the recorded request-only normalisations: B6: extra divisions there help\u2192extra divisions there, help",
+  "8_boundaries": {
+    "master": "/home/user/content-engine/work/5.1.5/5.1.5-stem-cells.mp4",
+    "timeline": "/home/user/content-engine/work/5.1.5/timeline.json",
+    "master_bytes": 24294416,
+    "fps": 30.0,
+    "frame_count": 7951,
+    "boundaries_tested": 7,
+    "candidate_count": 0,
+    "candidate_beats": [],
+    "method": "RGB 640x360 area downsample; last/first near-match, then material abrupt jump",
+    "thresholds": {
+      "near_mae_max": 0.8,
+      "near_changed_fraction_max": 0.005,
+      "changed_pixel_threshold": 12,
+      "jump_mae_min": 1,
+      "jump_changed_fraction_min": 0.005,
+      "jump_tile_mae_min": 8,
+      "jump_ratio_min": 5,
+      "noise_floor": 0.05,
+      "post_jump_stable_mae_max": "max(0.8, 0.45 * jump_mae)"
+    },
+    "limits": "Candidates, not proof. Deliberate one-frame holds can match; identical layouts can hide a lookup error. Subtle/animated holds can evade thresholds. Requires unshifted CFR master."
+  },
+  "markerAudit": {
+    "framesChecked": 7951,
+    "marked": 0,
+    "unmarked": 7951,
+    "intervals": [],
+    "badgeTextMae": {
+      "examMaeMax": 0.0,
+      "commonMaeMin": 1000000000.0
+    },
+    "mismatches": 0
+  },
+  "longestUnchangedVisual": {
+    "beat": 2,
+    "startFrame": 1071,
+    "seconds": 5.533333333333333
+  },
+  "unchangedOver15s": [],
+  "valenceAudit": "not applicable: no covalent chemistry in Topic 5 (replication is schematic progress; no bond edits)",
+  "sha256": "6ffa5d9795f65fef0eac7eb5f2233f65c87e3ab422dd985c7b182fbf9226c15f"
+}

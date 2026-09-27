@@ -1,4 +1,4 @@
-/** 3.2.1 frame router and lesson chrome (house style of the 2.1.1 reference build).
+/** 5.1.5 frame router and lesson chrome (house style of the 2.1.1 reference build).
  * Scene lookup by INTEGER frames. Unauthored beats throw. */
 import React from 'react';
 import T from '../timeline.json';
@@ -7,12 +7,9 @@ import {Txt} from '../shared/src/Type';
 import {ErrorMarker, ErrorLabel} from '../shared/src/ErrorMarker';
 import {BEATS} from './beats';
 
-export const TITLES = [
-  'Why your body holds its temperature', 'What you will be able to do', 'Temperature: the rig and the key design choice',
-  'Initial rates, means and an optimum', 'One sentence, and the rising half', 'Above the optimum: denatured',
-  'pH: buffer solutions and rising discs', 'One over the mean rise time', 'Why pH changes the rate',
-  'What I told you, on the pictures you know', 'How it is asked, and the real question',
-];
+export const TITLES = ['Hook and context', 'What you will be able to do', 'Recall: what mitosis gives',
+  'What makes a cell a stem cell', 'Bone marrow to red blood cell', 'Skin, a graze, and two separate steps',
+  'What I told you, on the lineage', 'How it is asked, and the reject card'];
 
 /** Error beats: NONE in this lesson (storyboard: "Error beats: none"). The close carries one captioned
  * wording-contrast card, labelled as our contrast, never a COMMON MISTAKE badge. Kept as an empty table so
@@ -54,9 +51,9 @@ export function Lesson({frame = 0}: {frame: number}) {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width={1920} height={1080} viewBox="0 0 1920 1080" style={{fontFamily: BODY}}>
       <rect data-role="decor" width={1920} height={1080} fill={dark ? C.ink : C.warm} />
-      <Txt x={70} y={44} size={22} fill={dark ? C.accent : C.muted}>BIOLOGY 9700 · 3.2.1 · WORKING CONDITIONS: TEMPERATURE AND pH</Txt>
+      <Txt x={70} y={44} size={22} fill={dark ? C.accent : C.muted}>BIOLOGY 9700 · 5.1.5 · STEM CELLS: REPLACING CELLS AND REPAIRING TISSUE BY MITOSIS</Txt>
       <Txt x={70} y={111} size={43} weight={700} fill={dark ? C.warm : C.ink}>{TITLES[s.sc.id - 1]}</Txt>
-      {!dark && <Txt x={72} y={170} size={20} fill={C.muted}>MODEL — apparatus, graphs and enzyme drawings are schematic; our illustrative data unless a source is cited</Txt>}
+      {!dark && <Txt x={72} y={170} size={20} fill={C.muted}>MODEL — cells, tissues and lineages are schematic drawings; not to scale; intermediate stages simplified</Txt>}
       <Beat {...s} />
       <line data-role="decor" x1={70} y1={959} x2={1850} y2={959} stroke={dark ? C.muted : C.line} strokeWidth={2} />
       <rect data-role="decor" x={70} y={984} width={7} height={54} rx={3} fill={C.primary} />
