@@ -1,7 +1,7 @@
 # 4.1.1-2 Fluid mosaic membranes: how the bilayer forms and what sits in it · BUILD PROGRESS (handover)
 
-Updated 2026-09-27 11:01Z. Builder: claude-opus-5-5 (cloud run 008a). Branch `cloud/008-4.1.1-2-to-4.2.1a-dq9f0v`; commit work/4.1.1-2 + work/t4-shared only; push that branch only.
-**Phase: master verified, branded, uploaded to Bunny (guid 05dc76d4-d562-4644-b6c6-39ddc62c0e07); waiting for status 4, then REPORT.md** · **Beats complete: 13 / 13** · master: present
+Updated 2026-09-27 11:05Z. Builder: claude-opus-5-5 (cloud run 008a). Branch `cloud/008-4.1.1-2-to-4.2.1a-dq9f0v`; commit work/4.1.1-2 + work/t4-shared only; push that branch only.
+**Phase: DONE — Bunny status 4 confirmed 11:04:02Z; REPORT.md written** · **Beats complete: 13 / 13** · master: present
 Live render processes: none
 NOTE: render-cache/ (chunks) and all MP4/WAV are NOT in git — a fresh container must re-render approved beats
 (`./launch-render.sh N`, 4 at a time); approvals (qa/beat-NN/approved.json) ARE in git and stay valid while the

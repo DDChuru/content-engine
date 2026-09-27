@@ -1,4 +1,4 @@
-PHASE: master verified, branded, uploaded to Bunny (guid 05dc76d4-d562-4644-b6c6-39ddc62c0e07); waiting for status 4, then REPORT.md
+PHASE: DONE — Bunny status 4 confirmed 11:04:02Z; REPORT.md written
 ## Session
 Cloud run 008a, lessons in order: 4.1.1-2 → 4.1.3 → 4.1.4 → 4.2.1a. Branch `cloud/008-4.1.1-2-to-4.2.1a-dq9f0v`
 (the harness-designated push branch for this run). Shared Topic 4 models: `work/t4-shared/` (see SHARED.md), copied byte
