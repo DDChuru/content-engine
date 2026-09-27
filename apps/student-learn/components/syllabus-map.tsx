@@ -19,7 +19,7 @@ import {
 function MarginCode({ code }: { code: string }) {
   return (
     <span
-      className="w-12 shrink-0 font-mono text-xs text-ink-muted lg:absolute lg:-left-24 lg:top-1/2 lg:w-[4.5rem] lg:-translate-y-1/2 lg:text-right"
+      className="min-w-12 shrink-0 whitespace-nowrap font-mono text-xs text-ink-muted lg:absolute lg:-left-24 lg:top-1/2 lg:w-[4.5rem] lg:-translate-y-1/2 lg:text-right"
       aria-hidden="true"
     >
       {code}
