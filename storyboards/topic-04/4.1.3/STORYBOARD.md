@@ -485,7 +485,7 @@ Counted by the validator over the blockquoted narration, silent-read line exclud
 
 ## Validator run
 
-`python3 work/006/validate_storyboard.py storyboards/topic-04/4.1.3/STORYBOARD.md`
+`python3 work/006/validate_storyboard.py storyboards/topic-04/4.1.3/STORYBOARD.md` (after the round-1 check edits)
 
 ```
 == storyboards/topic-04/4.1.3/STORYBOARD.md
@@ -493,8 +493,8 @@ beat  words  cues maxgap  status
    1     93     9     17  ok
    2     53     5     14  ok
    3     94    11     24  ok
-   4    108    13     17  ok
-   5     97    13     12  ok
+   4    107    13     17  ok
+   5     96    13     12  ok
    6    101    12     16  ok
    7    142    15     16  ok
    8     97    12     15  ok
@@ -503,5 +503,27 @@ beat  words  cues maxgap  status
   11     68     7     16  ok
   12     71    11     11  ok
   13    103    11     21  ok
-TOTAL words 1203  cues 138  runtime at 120 wpm 10:01.5  beats 13  failing beats 0
+TOTAL words 1201  cues 138  runtime at 120 wpm 10:00.5  beats 13  failing beats 0
 ```
+
+The printed runtime is narration-only; whole-video planned duration adds Beat 7's 4 s silent read: 604.5 s (10:04.5), or 606.5 s (10:06.5) with an additional 2 s closing hold.
+
+---
+
+## CHECK RESPONSE (round 1)
+
+Check: `r1/4.1.3/CHECK.md`, verdict CLEARED WITH MINOR EDITS; reviewed SHA-256 `c40221cf…581e` matched the file before editing.
+
+| ID | Status | What changed |
+|---|---|---|
+| M1 | applied | Beat 2 narration: "explain why sodium ions and glucose need transport proteins to cross"; action 3 cue *explain why sodium ions and glucose need transport proteins*; objective 3 "**EXPLAIN** why sodium ions and glucose need transport proteins". Beat 4: "Sodium ions and glucose interact strongly with water; entering the hydrophobic core is unfavourable for them, so they do not cross it readily." Action 5 cue *Sodium ions and glucose interact strongly with water*; action 6 first cue *entering the hydrophobic core is unfavourable for them* (halos, rebound and *do not cross it readily* kept). Beat 5 opening: "So how do sodium ions cross this barrier? Through transport proteins: this is their transport role." Cues *how do sodium ions cross this barrier* / *this is their transport role*. Spine: "the carbohydrate chains face the watery outside, where they interact with water and contribute to recognition; specific receptor binding sites receive signalling molecules". Beat 10 binding site stays on the protein. Absolutes sweep (Beats 2, 4, 5, spine, closing list) and typicality rules updated; interpretation 6 quotation updated. |
+| M2 | applied | Header and beat-window preamble now read "Planning time is spoken narration at 120 words per minute plus explicitly timed silence. E43 has 142 spoken words (71 seconds) and a four-second silent read: 75 seconds in total. Its full five-move allocation is retained. Final cue timings follow measured audio." "Length, honestly" opens with the check's runtime conclusion verbatim (605.5 s / 10:05.5; 607.5 s / 10:07.5 with hold). Ledger: Beat 7 and Error rows "75.0 s including silence"; reviewed-draft total row "1,203 / 605.5 s including silence". After the M1 edits, words were recounted and windows regenerated (Beat 7 now 4:32–5:47, Beat 13 9:13–10:05): 1,201 words, 604.5 s (10:04.5), or 606.5 s (10:06.5) with the hold. E43 narration and all five moves unchanged. |
+| M3 | applied | Beat 7 action 2 caption replaced verbatim ("*Our framing of W22/23 Q6(a); constructed answer, not a transcript. Source context: hydrogencarbonate and chloride ions crossing a red blood cell membrane (QP p.15; MS p.19). The sodium-channel drawing is our generic illustration of a protein route.*"). Beat 13 action 3 source note and action 5 cholesterol note replaced verbatim. Source-ledger paragraph added verbatim under Citations ("S23/21 Q3(a) asks why membrane proteins are required…"). UNVERIFIED 1, 2, 4 and 5 recorded as **PDF-CHECKED (independent storyboard check)** with the check's pages and wording, still paraphrase. The PDF-UNCHECKED descriptions were rewritten as PDF-checked paraphrases. Item 3 keeps "ABO omitted; no additional source is needed for an example that is not taught." Item 6 replaced verbatim. The historical "no PDF was opened for this draft" statement kept, with a note added that the independent check did open the PDFs. Interpretation 8 updated to match. |
+| M4 | applied | `FluidMosaicMembrane` reuse contract adds the corrected glycolipid text verbatim ("Use the corrected 4.1.1-2 glycolipid: two hydrophobic tails with a neutral-coloured attachment node…"). All three `response-pulse`/`response-uptake` alternatives (the published-models line, the `ReceptorLigand` heading and the reusable-models table) now read `response-uptake`. The end of Plan interpretation 2 was replaced verbatim ("This lesson shows a static arrow labelled as leading to a response. Lesson 4.1.4 adds `response-uptake`…"). |
+| SF1 | applied | Beat 2 action 1: "authored pictograms already visible from the first frame; each objective line enters beside its existing pictogram". |
+| SF2 | applied | Beat 13 action 1: the two unnarrated S21/22 rows were removed from the screen ("only the two narrated forms appear (the S21/22 Q3(b) and Q3(c) rows stay in the evidence ledger, not on screen)"). The on-screen list, Citations #3, the scope-ledger rows and interpretation 7 were updated. No narration changed. |
+| SF3 | applied | Carrier shape-change spec adds verbatim: "Shape change alternates which side can access the binding site; the protein remains embedded in its orientation and never creates a continuous open pore through both sides. Do not rotate the whole protein or flip it between leaflets." |
+| SF4 | applied | `cholesterol-qualitative` low-temperature strip: "lateral head-to-head spacing decreases as neighbouring tails pack together; do not depict this as the bilayer becoming thinner along its normal". The qualitative-data caption is kept. |
+| SF5 | applied | Datasets: model timings are "build instructions (animation durations), not numbers shown to the learner; the student-facing model caption remains *schematic; not to scale*". |
+
+New validator TOTAL: `TOTAL words 1201  cues 138  runtime at 120 wpm 10:00.5  beats 13  failing beats 0`. Planned whole-video duration including silence: 604.5 s (10:04.5).

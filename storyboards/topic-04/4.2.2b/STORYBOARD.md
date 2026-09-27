@@ -446,7 +446,7 @@ Counted by the validator over the blockquoted narration (hyphenated and en-dash 
 
 | Asset | Status | Source |
 |---|---|---|
-| `BeetrootRig` SVGs (beetroot, tile, cork borer with rod, scalpel, ruler, forceps, rinse beaker and tap, six labelled boiling tubes, test-tube holder, waste beaker, matched flat tubes, white card), `ColourStandardStrip`, `PigmentToken`; hands (borer push with steadying hand at the side, scalpel stroke away from the body, forceps lowering discs, holder lift, swirl, ~120° pour) | **new build** | authored; handling specified; **rendered still-frame verification pending** (borer vertical onto the tile, hand clear of the path, blade away from the body, pour mouth below base with stream from the lip, level surfaces, holder on hot tubes) |
+| `BeetrootRig` SVGs (beetroot, tile, cork borer with rod, scalpel, ruler, forceps, rinse beaker and tap, six labelled boiling tubes, test-tube holder, waste beaker, matched flat tubes, white card; standards-preparation inset: pestle and mortar, filter funnel with filter paper, flask, measuring cylinder), `ColourStandardStrip`, `PigmentToken`, whole-cell thumbnail beside the enlarged membrane inset (tonoplast and cell surface membrane crossings); hands (borer push with steadying hand at the side, scalpel stroke away from the body, forceps lowering discs, holder lift, swirl, ~120° pour) | **new build** | authored; handling specified; **rendered still-frame verification pending** (borer vertical onto the tile, hand clear of the path, blade away from the body, pour mouth below base with stream from the lip, level surfaces, holder on hot tubes) |
 | `WaterBathRig` `maintained` (two baths, 30 °C and 70 °C) | reuse | Topic 3 (3.1.3) |
 | `ColorimeterModel` inset with green filter and water blank | reuse | Topic 3 (3.1.4) |
 | `FluidMosaicMembrane` insets `full` and `heat-damaged` | reuse + new lesson-local state | 4.1.1-2; motion authored here |
@@ -496,8 +496,28 @@ beat  words  cues maxgap  status
    7    120    15     14  ok
    8     85    10     11  ok
    9     74     8     15  ok
-  10    104    16     13  ok
-TOTAL words 957  cues 118  runtime at 120 wpm 7:58.5  beats 10  failing beats 0
+  10    102    16     11  ok
+TOTAL words 955  cues 118  runtime at 120 wpm 7:57.5  beats 10  failing beats 0
 ```
 
-No MISSING SECTION or CITATION lines; failing beats 0.
+No MISSING SECTION or CITATION lines; failing beats 0. (Re-run after the round-1 check response.)
+
+---
+
+## CHECK RESPONSE (round 1)
+
+Independent round-one check of 4.2.2b (27 September 2026; verdict NOT CLEARED; reviewed SHA-256 `e3ba0f8d…3b236`). Every must-fix applied with the check's replacement wording verbatim. The only change is to cue markup: in M1, the two cue phrases the check gives in curly quotes are written in the storyboard's italic cue syntax so the validator can see them. The words are unchanged.
+
+| ID | Status | What changed |
+|---|---|---|
+| M1 — removal schedule in chronological order | applied | Beat 5 action 1 replaced verbatim: "At *After thirty minutes*, the clock reads 30:00 and tube 30-A is lifted with a holder … end 30-B at 31:00, 30-C at 32:00, 70-A at 33:00, 70-B at 34:00 and 70-C at 35:00 … Never reset or run the clock backwards. All 70 °C tubes are lifted with a holder." `BeetrootRig` timing contract gains: "Add each ten-disc batch promptly, using the same loading procedure and approximately the same loading duration in every tube. First-disc contact defines that tube's nominal exposure start; remove each batch promptly at its scheduled endpoint. The individual discs do not all make contact simultaneously." |
+| M2 — membrane compartments | applied | The one-membrane-as-model-of-both bracket is removed from the `heat-damaged` spec and from Beat 5 action 8. In both places the text now reads: "The enlarged bilayer inset represents the cell surface membrane only: outside the cell above, cytoplasm below. Caption: “cell surface membrane enlarged; pigment has already crossed the tonoplast”. Keep the whole-cell thumbnail from Beat 3 beside it … Label the two crossings “tonoplast” and “cell surface membrane”. Both membranes can be damaged; …". The lateral-motion/no-flip-flop convention is retained. Plan interpretation 6 and the assets table were updated to match. |
+| M3 — exam close | applied | Beat 10 narration from "In March 2024" through "variation among cells" replaced verbatim: "March twenty twenty-four Paper fifty-two asks how temperature, from ten to fifty degrees, affects osmosis in turnip blocks in distilled water. Six marks are available from nine listed points. Creditable choices include five stated temperatures and three different blocks per temperature with a mean. That question needs a temperature range. Its onion question challenges a water-potential conclusion: onion cells need not all have the same water potential." The pigment sentence and hook callback are kept. Row 1 and row 2 texts are replaced verbatim. The tag is now **"this question asks for a range: 10–50 °C"**. Cues are remapped (*March twenty twenty-four Paper fifty-two*, *from ten to fifty degrees*, *affects osmosis in turnip blocks*, *Six marks are available from nine listed points*, *five stated temperatures*, *three different blocks per temperature with a mean*, *That question needs a temperature range*, *Its onion question challenges a water-potential conclusion*, *need not all have the same water potential*); the removed cues are dropped. The old "Label beneath row 1" is removed because the new row 1 text carries "related planning evidence, not this beetroot protocol". The PDF resolution is propagated to the causal-spine paragraph, scope ledger, absolutes sweep, citations 6–9, the UNVERIFIED list (items 1–3 RESOLVED; item 4 kept, bounded) and interpretations 10 and 15. |
+| SF1 — concentration units | applied | Beat 7: "that is the stock concentration you applied, not a measured concentration at every cell"; cue remapped; typicality paragraph and absolutes sweep updated. |
+| SF2 — pH comparability | applied | Interpretation 3 no longer says "distilled water throughout" as a pH control. It now reads: "The same distilled-water stock is used; final pH is not measured here. pH and pigment stability remain limitations of interpreting colour solely as leakage." The Real-world samples row is aligned. The spoken caveat is unchanged. No buffer and no correction added. |
+| SF3 — standard preparation | applied | Beat 5 action 4 adds a brief inset at the existing standards cue: tissue crushed in a **pestle and mortar**, filtered through **filter paper** in a **filter funnel**, measured dilution made up to 8.0 cm³ in a **measuring cylinder** (labelled). No spoken protocol added. Assets row updated. |
+| SF4 — range terminology | applied | Beat 5 now shows "median 1, observed category span 1–2" and "median 4, observed category span 4–5". Dataset A's worked text uses the same terms and notes the unequal dilution steps. |
+| SF5 — onion start event and final hold | applied | Beat 7 action 2: the liquid front "is held short of the tissue edge; it does not reach the tissue until the next cue, when contact and clock start occur together". Beat 10's 2 s hold is marked "inside the effective runtime allowance unless the audio edit adds it separately", and *Length, honestly* says the same. |
+| Runtime ruling | applied | Overrun accepted, as the check rules. *Length, honestly* and the word-count table are recounted (Beat 10 102; total 955 = 7:57.5, 27.5 s over). The cut list no longer offers *without lifting the coverslip* or the colorimeter sentence; the Beat 9 recap sentence stays listed as optional and is not taken. |
+
+TOTAL words 955  cues 118  runtime at 120 wpm 7:57.5  beats 10  failing beats 0

@@ -161,20 +161,20 @@ Beat windows in the headings are provisional and follow the per-beat ledger (wor
 
 ### BEAT 5 · Simple diffusion: straight through the bilayer · 2:55–3:45
 **Narration:**
-> Now put a membrane in the way. Turn the field so the outside of the cell is at the top and the cytoplasm below, then slide in a phospholipid bilayer, with the gradient running across it. Our example is a red blood cell in the lungs: oxygen that has come from the air in the alveoli is at a higher concentration in the plasma outside the cell than in its cytoplasm. Oxygen molecules are small and non-polar, so they pass straight through the bilayer, hydrophobic core included, down their concentration gradient. That is simple diffusion: no transport protein needed.
+> Now put a membrane in the way. Turn the field so the outside of the cell is at the top and the cytoplasm below, then slide in a phospholipid bilayer, with the gradient running across it. Our example is a red blood cell taking up oxygen in a lung capillary. Here we track freely dissolved oxygen, not oxygen bound to haemoglobin: it diffuses from the surrounding plasma into the cell. Oxygen molecules are small and non-polar, so they pass straight through the bilayer, hydrophobic core included, down their concentration gradient. That is simple diffusion: no transport protein needed.
 
 **Visual action:**
 1. **From the first frame**, the Beat 4 layout holds: `DiffusionField` `open` (equal, 20 · 20) small at upper left, the membrane section at centre, the route slots at right. At *put a membrane in the way*, the field enlarges to centre and the loose membrane section slides aside.
 2. At *Turn the field so the outside*, the field **rotates 90°** (configuration `membrane`): its labels change to *outside the cell (watery)* at the top and *cytoplasm (watery)* at the bottom; the counter relabels *outside → cytoplasm · cytoplasm → outside*.
 3. At *slide in a phospholipid bilayer*, `FluidMosaicMembrane` `full` slides in horizontally across the middle, carbohydrate chains on the top face, region label **hydrophobic core**, caption *schematic; not to scale*; the gradient wedge redraws **vertically, along the membrane normal**.
-4. At *a red blood cell in the lungs*, an inset opens at upper right: alveolus, capillary and red blood cell, with a small ring on the red blood cell's membrane marking where this section sits; labels *outside: blood plasma* and *inside: red blood cell cytoplasm*; tag *Topic 9 context: named, not taught*.
-5. At *from the air in the alveoli*, O₂ tokens drift in from the top edge (arriving from the alveolus side) until the side tags read **24** outside and **8** inside.
-6. At *higher concentration in the plasma*, tags *higher* (top) and *lower* (bottom) land beside the side counts.
+4. At *a red blood cell taking up oxygen*, an inset opens at upper right: alveolus, capillary and red blood cell, with a small ring on the red blood cell's membrane marking where this section sits; labels *outside: blood plasma* and *inside: red blood cell cytoplasm*; tag *Topic 9 context: named, not taught*.
+5. At *Here we track freely dissolved oxygen* (the check's cue *from the air in the alveoli* no longer exists after M4; same action, remapped), retain the lung-context inset and explicitly initialise a new illustrative membrane comparison with 24 oxygen tokens outside and 8 inside. Caption: new setup; set starting counts, not a continuation of the 20/20 field. The alveolar context animation does not create or remove uncounted particles within the finite counted demonstration.
+6. At *not oxygen bound to haemoglobin*, the caption **freely dissolved O₂; haemoglobin-bound oxygen not counted; illustrative gradient during uptake** lands beside the O₂ populations; at *from the surrounding plasma into the cell*, tags *higher* (top) and *lower* (bottom) land beside the side counts.
 7. At *small and non-polar*, one O₂ token enlarges in a callout, tagged *small · non-polar*.
-8. At *pass straight through the bilayer*, O₂ tokens pass down between phospholipids, through the core (motion), and a few pass up; the window closes at **6 · 2**; the net arrow grows downward, labelled *net movement: simple diffusion*.
+8. At *pass straight through the bilayer*, the 5 s counted sequence runs: O₂ tokens pass down between phospholipids, through the core (motion), and a few pass up, each crossing updating the live side totals; after six inward and two outward crossings the counter shows **6 · 2** and the populations **20** outside / **12** inside; the counter holds, labelled *last completed demonstration*; the net arrow grows downward, labelled *net movement: simple diffusion*.
 9. At *That is simple diffusion*, small type beside the callout: *CO₂ crosses the bilayer the same way (not animated here)*; route slot 1 fills: **simple diffusion: through the bilayer**; tag *no transport protein*.
 
-**On-screen text:** region and side labels; the inset labels; *small · non-polar*; *net movement: simple diffusion*; the CO₂ note; route slot 1.
+**On-screen text:** region and side labels; *new setup; set starting counts*; *freely dissolved O₂; haemoglobin-bound oxygen not counted; illustrative gradient during uptake*; *last completed demonstration*; the inset labels; *small · non-polar*; *net movement: simple diffusion*; the CO₂ note; route slot 1.
 
 ---
 
