@@ -9,14 +9,14 @@ for sc in T['scenes']:
     if comp: done+=1
     state='COMPLETE' if comp else 'RENDERING (lock)' if lock else 'approved, not rendered' if appr else 'authored' if src else 'not authored'
     rows.append(f"| {sc['id']} | {sc['heading'][:58]} | {sc['frames']} | {len(sc['cues'])} | {state} |")
-master=P/'3.2.1-temperature-ph.mp4'
+master=P/'5.1.3-mitotic-cell-cycle.mp4'
 live=subprocess.run(['pgrep','-fa','render-beat.cjs'],capture_output=True,text=True).stdout.strip() or 'none'
 notes=(P/'progress-notes.md').read_text()
 phase=notes.split('\n',1)[0].replace('PHASE:','').strip()
-out=f"""# 3.2.1 Working conditions: temperature and pH · BUILD PROGRESS (handover)
+out=f"""# 5.1.3 The mitotic cell cycle · BUILD PROGRESS (handover)
 
-Updated {datetime.datetime.utcnow().strftime('%Y-%m-%d %H:%M')}Z. Builder: claude-opus-5-5 (LOCAL build on machine A, per work/LOCAL-BUILD.md). Branch `local/topic3-builds`; commit ONLY work/3.2.1; no push.
-**Phase: {phase}** · **Beats complete: {done} / 11** · master: {'present' if master.exists() else 'not yet built'}
+Updated {datetime.datetime.utcnow().strftime('%Y-%m-%d %H:%M')}Z. Builder: cloud run 009a (claude-opus-5-5). Branch `cloud/009-5.1.1-to-5.1.4-qls6vy`; commit only work/5.1.x and work/t5-shared.
+**Phase: {phase}** · **Beats complete: {done} / {len(T['scenes'])}** · master: {'present' if master.exists() else 'not yet built'}
 Live render processes: {live}
 NOTE: render-cache/ (chunks) and all MP4/WAV are NOT in git — a fresh container must re-render approved beats
 (`./launch-render.sh N`, 4 at a time); approvals (qa/beat-NN/approved.json) ARE in git and stay valid while the
@@ -25,4 +25,4 @@ source fingerprint matches.
 | Beat | Heading | Frames | Cues | State |
 |---|---|---|---|---|
 """ + '\n'.join(rows) + '\n\n' + notes.split('\n',1)[1]
-(P/'PROGRESS.md').write_text(out);print(f'PROGRESS: {done}/11 complete')
+(P/'PROGRESS.md').write_text(out);print(f"PROGRESS: {done}/{len(T['scenes'])} complete")

@@ -83,7 +83,7 @@ function Inset({cx, cy, ri, s}: {cx: number; cy: number; ri: number; s: Inset}) 
   const poleX = ri * 0.66, nucR = ri * 0.3, nucX = ri * 0.5;
   // chromosome placement: diagonal in interphase, vertical long axis once condensing/aligned (poles left and right)
   const rot = s.rot ?? lerp(-28, 0, ease(Math.max(cond, align)));
-  const scale = (s.scale ?? lerp(0.3, 0.72, ease(cond))) * lerp(1, 0.42, ease(dec));
+  const scale = (s.scale ?? lerp(0.3, 0.72, ease(cond))) * lerp(1, 0.2, Math.sqrt(dec));
   const condNow = cond * (1 - dec);
   const ripple = s.ripple ?? 0;
   const wave = (s.wave ?? 1) * (1 + 0.25 * Math.sin(ripple * Math.PI * 2)) * lerp(1, 1.6, dec);
