@@ -1,0 +1,101 @@
+{
+  "1_ffprobeDuration": 573.366667,
+  "2_videoCoversAudio": {
+    "video": 573.366667,
+    "encodedAudio": 572.366,
+    "marginSeconds": 1.001,
+    "videoFrames": 17201
+  },
+  "3_fullDecodeErrors": 0,
+  "4_cues": {
+    "matched": 141,
+    "total": 141,
+    "planned": 141
+  },
+  "5_audioPacketsUnchanged": {
+    "packets": 26831,
+    "identical": true
+  },
+  "6_finalWord": {
+    "word": "through.",
+    "endsAt": 569.307,
+    "audioEnds": 572.366,
+    "headroom": 3.059,
+    "afterWordMaxDb": -63.9
+  },
+  "7_silentReads": [
+    {
+      "beat": 7,
+      "before": "Look at the word",
+      "start": 263.577,
+      "seconds": 4.0,
+      "pcmAllZero": true,
+      "encodedInteriorMaxDb": -91.0
+    },
+    {
+      "beat": 13,
+      "before": "END",
+      "start": 569.846,
+      "seconds": 2.0,
+      "pcmAllZero": true,
+      "encodedInteriorMaxDb": -91.0
+    }
+  ],
+  "7_speechPCMUnchanged": true,
+  "frozenNarration": "storyboard paragraphs present verbatim; requests differ only by the recorded request-only normalisations: ",
+  "8_boundaries": {
+    "master": "/home/user/content-engine/work/4.1.3/4.1.3-membrane-roles.mp4",
+    "timeline": "/home/user/content-engine/work/4.1.3/timeline.json",
+    "master_bytes": 145250245,
+    "fps": 30.0,
+    "frame_count": 17201,
+    "boundaries_tested": 12,
+    "candidate_count": 0,
+    "candidate_beats": [],
+    "method": "RGB 640x360 area downsample; last/first near-match, then material abrupt jump",
+    "thresholds": {
+      "near_mae_max": 0.8,
+      "near_changed_fraction_max": 0.005,
+      "changed_pixel_threshold": 12,
+      "jump_mae_min": 1,
+      "jump_changed_fraction_min": 0.005,
+      "jump_tile_mae_min": 8,
+      "jump_ratio_min": 5,
+      "noise_floor": 0.05,
+      "post_jump_stable_mae_max": "max(0.8, 0.45 * jump_mae)"
+    },
+    "limits": "Candidates, not proof. Deliberate one-frame holds can match; identical layouts can hide a lookup error. Subtle/animated holds can evade thresholds. Requires unshifted CFR master."
+  },
+  "markerAudit": {
+    "framesChecked": 17201,
+    "marked": 1873,
+    "unmarked": 15328,
+    "intervals": [
+      {
+        "beat": 7,
+        "label": "EXAM CONTRAST",
+        "startFrame": 7508,
+        "endFrame": 9381,
+        "announceFrame": 7508,
+        "beatEndFrame": 9413,
+        "clearKey": "exit",
+        "clearsOnFrame": 9381
+      }
+    ],
+    "badgeTextMae": {
+      "commonMaeMax": 0.0,
+      "examMaeMin": 1000000000.0,
+      "examMaeMax": 3.92836856842041,
+      "commonMaeMin": 20.365219116210938
+    },
+    "mismatches": 0
+  },
+  "longestUnchangedVisual": {
+    "beat": 12,
+    "startFrame": 14933,
+    "seconds": 5.833333333333333
+  },
+  "unchangedOver15s": [],
+  "valenceAudit": "not applicable: no covalent bond is made or broken on screen (Topic 4: membrane assembly, lateral drift and insertion are non-covalent motion)",
+  "sha256": "abd2e10f1d0ad4ea9cdc5722b51460879d818c0b5653c650e604b19590c529f3"
+}

@@ -1,0 +1,118 @@
+import React from 'react';
+import {fi, fe, pulse} from '../util';
+import {gt, Lbl, Pill, C, Txt, Cite, PARTS, SCHEM, clamp01, OPEN, CUE, NETPX, RouteSlots, MemScene, memM, memGeo, MX, RBC, Card} from '../kit';
+import {openState, OpenBase} from './Beat03';
+import {Returned, openThumbTransform} from './Beat04';
+import {fieldState, FieldTokens, CounterCard, SideTag, NetArrow, windowEvents, countIn} from '../DiffusionField';
+import {O2Tok} from '../T4Tokens';
+
+/** Dataset 2, Beat 5: new setup 24 / 8 at `setup`; the 5 s counted sequence at `pass` (6 in, 2 out → 20 / 12). */
+export const b5 = () => ({origin: CUE(5, 'setup'), w0: CUE(5, 'pass'), evs: windowEvents(CUE(5, 'pass'), 6, 2, 5, 51)});
+/** Right-hand counter column for membrane demonstrations. */
+export function MemCounters({live, last, o = 1, hiLive = 0, hiLast = 0, liveTitle = 'current demonstration (5 s)', lastTitle = 'last completed demonstration', sub = 'illustrative counts', x = 1030}: any) {
+  return (
+    <g>
+      {live && <CounterCard x={x} y={214} w={306} la="outside → cytoplasm" lb="cytoplasm → outside" n={live[0]} m={live[1]} title={liveTitle} sub={sub} o={o} hi={hiLive} />}
+      {last && <CounterCard x={x} y={340} w={306} la="outside → cytoplasm" lb="cytoplasm → outside" n={last[0]} m={last[1]} title={lastTitle} sub={sub} o={o} hi={hiLast} />}
+    </g>
+  );
+}
+/** Vertical net arrow at the right edge of the membrane field (downward = into the cytoplasm). */
+export function MemNet({net, label, o = 1, hi = 0}: any) {
+  const len = NETPX * net, cy = memM(0).cy;
+  return <g opacity={o < 1 ? o : undefined}><NetArrow x={MX.x1 - 40} y={cy - len / 2} dx={0} dy={1} len={len} hi={hi} />{len > 2 && <><Txt x={MX.x1 + 22} y={cy + 70} size={19} weight={800} fill="#C0453D">net movement:</Txt><Txt x={MX.x1 + 22} y={cy + 94} size={19} weight={800} fill="#C0453D">{label}</Txt></>}</g>;
+}
+/** Upper-right context inset: alveolus, capillary and a red blood cell with a ring where the section sits. */
+export function LungInset({o = 1, t = 0}: any) {
+  if (o <= 0) return null;
+  const x = 1370, y = 196;
+  const toks = [0, 1, 2].map((i) => { const u = ((t * 0.35 + i / 3) % 1); return [x + 120 + 170 * u, y + 110 + 30 * i + 10 * Math.sin(u * 6)]; });
+  return (
+    <g opacity={o < 1 ? o : undefined}>
+      <rect data-role="decor" x={x} y={y} width={480} height={330} rx={14} fill="#FFFFFF" stroke={C.line} strokeWidth={2} />
+      <g data-role="drawing">
+        <circle cx={x + 90} cy={y + 170} r={78} fill="#FBE9EC" stroke="#B5707E" strokeWidth={3} />
+        <rect x={x + 240} y={y + 24} width={130} height={286} rx={16} fill="#E9A39C" stroke="#A63A33" strokeWidth={3} />
+        <RBC x={x + 305} y={y + 170} r={46} />
+        <circle cx={x + 305 - 46} cy={y + 170} r={14} fill="none" stroke="#E0892B" strokeWidth={4} />
+        {toks.map((p, i) => <O2Tok key={i} x={p[0]} y={p[1]} r={8} rot={i * 60} />)}
+      </g>
+      <Txt x={x + 90} y={y + 276} size={16} weight={700} fill="#8E4B5A" anchor="middle">alveolus</Txt>
+      <Txt x={x + 390} y={y + 60} size={15} weight={700} fill="#A63A33">outside:</Txt>
+      <Txt x={x + 390} y={y + 78} size={15} weight={700} fill="#A63A33">blood plasma</Txt>
+      <Txt x={x + 390} y={y + 250} size={15} weight={700} fill="#8E2A24">inside: red</Txt>
+      <Txt x={x + 390} y={y + 268} size={15} weight={700} fill="#8E2A24">blood cell</Txt>
+      <Txt x={x + 390} y={y + 286} size={15} weight={700} fill="#8E2A24">cytoplasm</Txt>
+      <Txt x={x + 16} y={y + 318} size={14} weight={700} fill={C.muted} italic>Topic 9 context: named, not taught</Txt>
+    </g>
+  );
+}
+
+/** Beat 5 · Simple diffusion: the field turns (outside at the top), a bilayer slides in, the lung context; a new
+ * setup 24 / 8 of freely dissolved O₂; the 5 s counted sequence (6 · 2 → 20 / 12) and only then the net arrow. */
+export default function Beat05(s: any) {
+  const t = gt(s), a = s.a;
+  const grow = fe(a('open'), 1.2), turn = fe(a('turn'), 1.4), mem = fe(a('turn') - 1.2, 0.6);
+  const slide = fe(a('slide'), 1.4);
+  const M = memM(t), G = memGeo(M);
+  const B = b5();
+  const pre = fieldState({G, nA: 20, nB: 20, evs: [], t, origin: CUE(5, 'turn') + 1.2, seed: 5});
+  const st = fieldState({G, nA: 24, nB: 8, evs: B.evs, t, origin: B.origin, seed: 6});
+  const reset = fe(a('setup'), 0.5);
+  const done = t >= B.w0 + 5;
+  const live = a('pass') >= 0 ? countIn(B.evs, B.w0, B.w0 + 5, t) : a('setup') >= 0 ? [0, 0] : null;
+  const net = done ? 4 * fe(t - (B.w0 + 5), 0.8) : 0;
+  const Lf = {top: M.cy - 2.3 * M.u};
+  // the Beat 4 open field grows, then rotates 90° into the membrane configuration
+  const G0 = OPEN, cxO = (G0.x0 + G0.x1) / 2, cyO = (G0.y0 + G0.y1) / 2;
+  const scO = 0.34 + (0.62 - 0.34) * grow;
+  const openO = 1 - mem;
+  const opn = openState(t);
+  return (
+    <g>
+      {openO > 0 && <g opacity={openO}>
+        <g transform={turn > 0 || grow > 0 ? `translate(${553 * grow + (1 - grow) * (70 + (cxO - G0.x0) * 0.34)} ${572 * grow + (1 - grow) * (190 + (cyO - 188) * 0.34)}) rotate(${90 * turn}) scale(${scO}) translate(${-cxO} ${-cyO})` : openThumbTransform(1)}>
+          <OpenBase t={t} lineO={1 - turn} />
+          <FieldTokens st={opn.st} k="o2" t={t} />
+        </g>
+      </g>}
+      <Returned s={s} t={t} o={1 - fe(a('open'), 0.8)} cx={880 + 600 * fe(a('open'), 0.8)} />
+      {mem > 0 && <g opacity={mem}>
+        <MemScene s={s} t={t} mem={{}} water={1} labels={1} core={fi(a('slide') - 0.8, 0.5)} />
+      </g>}
+      {slide < 1 && mem > 0 && <rect data-role="decor" x={MX.x0 + 2 + (MX.x1 - MX.x0) * slide} y={M.cy - 2.9 * M.u} width={(MX.x1 - MX.x0 - 4) * (1 - slide)} height={5.8 * M.u} fill="#EEF6FB" />}
+      {mem > 0 && <FieldTokens st={pre} k="o2" t={t} opacity={mem * 0.55 * (1 - reset)} />}
+      {reset > 0 && <FieldTokens st={st} k="o2" t={t} opacity={reset} hi={a('pass') >= 0 && !done ? st.pts.filter((p: any) => p.crossing).map((p: any) => p.i) : []} />}
+      {mem > 0 && slide > 0.5 && <g opacity={fi(a('slide') - 0.6, 0.5)}>
+        <path data-role="decor" d={`M${MX.x0 - 30} ${MX.y0 + 40}L${MX.x0 - 12} ${MX.y1 - 40}L${MX.x0 - 48} ${MX.y1 - 40}Z`} fill="#D7C2E6" />
+        <Txt x={MX.x0 - 30} y={MX.y0 + 26} size={14} weight={700} fill="#4B2F63" anchor="middle">higher</Txt>
+        <Txt x={MX.x0 - 30} y={MX.y1 - 16} size={14} weight={700} fill="#4B2F63" anchor="middle">lower</Txt>
+      </g>}
+      {reset > 0 && <g>
+        <SideTag x={MX.x1 - 50} y={MX.y0 + 44} n={st.a} cap={a('pass') < 0 ? 'set starting count' : ''} o={reset} />
+        <SideTag x={MX.x1 - 50} y={MX.y1 - 56} n={st.b} cap={a('pass') < 0 ? 'set starting count' : ''} o={reset} />
+        <Pill x={MX.x1 - 90} y={MX.y0 + 48} text="higher" anchor="end" o={fi(a('hilo'), 0.4)} size={16} />
+        <Pill x={MX.x1 - 90} y={MX.y1 - 52} text="lower" anchor="end" o={fi(a('hilo'), 0.4)} size={16} />
+        <Pill x={(MX.x0 + MX.x1) / 2} y={MX.y0 - 12} text="new setup; set starting counts (not a continuation of the 20 / 20 field)" anchor="middle" o={fi(a('setup'), 0.4) * (1 - fe(a('small'), 0.5))} size={16} fill={C.primary} />
+      </g>}
+      <MemCounters live={done ? null : live} last={done ? [6, 2] : null} o={reset} hiLast={pulse(t - (B.w0 + 5), 1.2)} />
+      <MemNet net={net} label="simple diffusion" />
+      <LungInset o={fi(a('rbc'), 0.5)} t={t} />
+      {a('hb') >= 0 && <Card x={1030} y={470} w={306} h={118} opacity={fi(a('hb'), 0.4)} stroke="#B2352C" fill="#FFFFFF">
+        <Txt x={1044} y={498} size={16} weight={800} fill="#B2352C">freely dissolved O₂;</Txt>
+        <Txt x={1044} y={522} size={16} weight={700}>haemoglobin-bound oxygen</Txt>
+        <Txt x={1044} y={546} size={16} weight={700}>not counted; illustrative</Txt>
+        <Txt x={1044} y={570} size={16} weight={700}>gradient during uptake</Txt>
+      </Card>}
+      {a('small') >= 0 && <g opacity={fi(a('small'), 0.4)}>
+        <circle data-role="decor" cx={880} cy={330} r={64} fill="#FFFFFF" stroke={C.ink} strokeWidth={3} />
+        <O2Tok x={880} y={330} r={30} rot={20} />
+        <Pill x={880} y={420} text="small · non-polar" anchor="middle" size={18} fill="#B2352C" />
+      </g>}
+      <Lbl x={1000} y={466} text="CO₂ crosses the bilayer the same way (not animated here)" anchor="end" o={fi(a('simple'), 0.4)} size={16} weight={600} fill={C.muted} italic />
+      <Pill x={1030} y={690} text="no transport protein" o={fi(a('simple') - 0.4, 0.4)} fill={C.teal} />
+      <RouteSlots x={1360 + 10 * grow} y={330 + 270 * grow} w={500 - 20 * grow} h={92 - 22 * grow} gap={18 - 6 * grow} fill={[fe(a('simple'), 0.6), 0, 0, 0]} hi={[pulse(a('simple'), 1.4), 0, 0, 0]} o={1} />
+      <Cite x={MX.x1} y={948} text={SCHEM + '; ' + PARTS} anchor="end" />
+    </g>
+  );
+}

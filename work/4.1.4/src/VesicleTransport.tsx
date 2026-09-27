@@ -86,7 +86,7 @@ export function ExocytosisInset({x, y, w, h, age = -1, t = 0, opacity = 1, wedge
   for (let i = 0; i < wedges; i++) {
     const ox = (i - (wedges - 1) / 2) * R * 0.5, oy = (i % 2 ? 0.15 : -0.1) * R;
     const out3 = ease(clamp01((a3 * 1.4 - i * 0.15)));
-    const tx = lum.x + ox * (1 + 1.5 * out3) + 3 * Math.sin(t * 2 + i), ty = (lum.y + oy) + (y + h * 0.12 - (lum.y + oy)) * out3;
+    const tx = lum.x + ox * (1 + 1.5 * out3) + 3 * Math.sin(t * 2 + i), ty = (lum.y + oy) + (y + h * 0.24 - (lum.y + oy)) * out3;
     tok.push(<LigandA key={'w' + i} x={tx} y={ty - R * 0.25} u={h * 0.09} rot={10 * Math.sin(t * 1.5 + i)} />);
   }
   return (

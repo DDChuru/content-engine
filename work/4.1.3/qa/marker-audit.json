@@ -1,0 +1,27 @@
+{
+  "framesChecked": 17201,
+  "intervals": [
+    {
+      "beat": 7,
+      "label": "EXAM CONTRAST",
+      "startFrame": 7508,
+      "endFrame": 9381,
+      "announceFrame": 7508,
+      "beatEndFrame": 9413,
+      "clearKey": "exit",
+      "clearsOnFrame": 9381
+    }
+  ],
+  "stats": {
+    "marked": 1873,
+    "unmarked": 15328
+  },
+  "badgeText": {
+    "commonMaeMax": 0.0,
+    "examMaeMin": 1000000000.0,
+    "examMaeMax": 3.92836856842041,
+    "commonMaeMin": 20.365219116210938
+  },
+  "mismatches": [],
+  "mismatchCount": 0
+}

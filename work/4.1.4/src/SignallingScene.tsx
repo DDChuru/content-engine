@@ -68,7 +68,7 @@ export function seatAt(s: number[], off = 0) {
 }
 
 export function SignallingScene(props: any) {
-  const {t = 0, secrete = -1, enter = -1, carry = -1, out = -1, bind = -1, fail = -1, respond = -1, stage = {}, labels = {},
+  const {t = 0, secrete = -1, enter = -1, carry = -1, out = -1, bind = -1, bindMuscle = null, fail = -1, respond = -1, stage = {}, labels = {},
     liverGlow = 0, dim = 0, hideWedges = false, opacity = 1, vesselPulse = 0, receptorGlow = {}, glucoseRate = 0.2} = props;
   if (opacity <= 0) return null;
   const B = SS.beta, V = SS.vessel, M = SS.muscle, L = SS.liver, O = SS.other, R = receptorSites();
@@ -85,7 +85,8 @@ export function SignallingScene(props: any) {
     const exitY = [R.muscle[0][1], R.liver[0][1], R.other[0][1]][i];
     if (carry >= 0) { const k = clamp01(carry / (2.2 + 0.5 * i)); y = lerp(edge.y + 20 * i, exitY, ease(k)); x = vx - 30 + 30 * i + 6 * Math.sin(t * 3 + i); rot = 0; }
     if (out >= 0) { const k = ease((out - 0.2 * i) / 1.3); x = lerp(vx - 30 + 30 * i, dest[i].x, k); y = lerp(exitY, dest[i].y, k); rot = lerp(0, dest[i].rot, k); }
-    if (i < 2 && bind >= 0) { const k = ease(bind / 0.8); const s = seatAt(i === 0 ? R.muscle[0] : R.liver[0]); x = lerp(dest[i].x, s.x, k); y = lerp(dest[i].y, s.y, k); rot = s.rot; }
+    const bi = i === 0 && bindMuscle != null ? bindMuscle : bind;
+    if (i < 2 && bi >= 0) { const k = ease(bi / 0.8); const s = seatAt(i === 0 ? R.muscle[0] : R.liver[0]); x = lerp(dest[i].x, s.x, k); y = lerp(dest[i].y, s.y, k); rot = s.rot; }
     if (i === 2 && fail >= 0) {
       const fm = failMotion(fail, -26 / SS.ru, [0, 0]);
       const [sx, sy, nx, ny] = R.other[0], base = seatAt(R.other[0], 4);
