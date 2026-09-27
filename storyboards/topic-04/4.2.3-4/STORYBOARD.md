@@ -461,28 +461,27 @@ Counted by the validator over the blockquoted narration; seconds = words ÷ 120 
 
 | Beat | Title | Words | Seconds |
 |---|---|---:|---:|
-| 1 | Hook and context | 93 | 46.5 |
+| 1 | Hook and context | 87 | 43.5 |
 | 2 | What you will be able to do | 56 | 28.0 |
 | 3 | Surface area and volume of a cube | 101 | 50.5 |
 | 4 | The ratio falls as the size rises | 113 | 56.5 |
-| 5 | Cuboids, and a potato cylinder | 135 | 67.5 |
+| 5 | Cuboids, and a potato cylinder | 122 | 61.0 |
 | 6 | Why size matters to a living thing | 107 | 53.5 |
 | 7 | The agar and what its colour responds to | 114 | 57.0 |
 | 8 | Cutting and measuring the cubes | 91 | 45.5 |
-| 9 | One bath per cube, and a clock from first contact | 100 | 50.0 |
-| 10 | Watching the colour boundary move in | 132 | 66.0 |
-| 11 | The results against SA:V, and what they mean | 111 | 55.5 |
-| 12 | What I told you, on the shapes, the rig and the graph | 105 | 52.5 |
-| 13 | How it is asked, one point to keep, and the single-celled organism | 120 | 60.0 |
-| **Total** | 13 beats (13 teaching, 0 error) | **1378** | **689.0** (11:29) |
+| 9 | One bath per cube, and a clock from first contact | 108 | 54.0 |
+| 10 | Watching the colour boundary move in | 135 | 67.5 |
+| 11 | The results against SA:V, and what they mean | 99 | 49.5 |
+| 12 | What I told you, on the shapes, the rig and the graph | 96 | 48.0 |
+| 13 | How it is asked, one point to keep, and the single-celled organism | 124 | 62.0 |
+| **Total** | 13 beats (13 teaching, 0 error) | **1353** | **676.5** (11:16.5) |
 
-**Length, honestly:** **1,378 words = 11:29** at 120 words per minute, **1:44 over** the 9:45 (1,170-word) budget. There are no error beats, so the whole overrun is teaching. By outcome: the 4.2.3 half (Beats 1–6) is **605 words = 5:02.5** against 4:15 (**+47.5 s**), and the 4.2.4 half (Beats 7–13, including the joint recap and close) is **773 words = 6:26.5** against 5:30 (**+56.5 s**). Where the time goes: the cylinder working with its net (Beat 5, 67.5 s) and the investigation's required design content (the REAL-WORLD statement for the agar and indicator, the working-concentration safety line, separate baths from one stock in excess, the open mesh, first-contact timing, the plan's boundary sentence, compressed time with the real clock, and the observation-period limit rule with the fixed-time alternative; Beats 7–10), each of which the plan or SHARED-SPECS makes compulsory. Nothing is sped up. **Cut list, in the order I would take it** (no error beat exists to protect; none of these removes a required element, and each keeps its visual on screen):
-1. Beat 11: "about seventeen minutes at three per centimetre, about seventy seconds at twelve" plus the joining colon (−12 words, −6 s); the ringed points keep their labels (the values were spoken in Beat 10).
-2. Beat 5: "Put in three, three and three, and you get fifty-four and twenty-seven again." (−14 words, −7 s); the `cuboid-check` working still lands on screen at *length, width and height*.
-3. Beat 12: "and four point six seven for the potato cylinder" (−9 words, −4.5 s); the cylinder net stays in the recap layout with its value.
-4. Beat 1: "Size is part of the answer." (−6 words, −3 s); the size bracket moves to *do not grow at the same pace*.
-5. Beat 3: "Keep an eye on the units: area in square centimetres, volume in cubic centimetres." (−15 words, −7.5 s); the unit rings move to *eight cubic centimetres*; Beat 4 and the recap still say the units.
-All five: **−56 words = −28 s → 1,322 words = 11:01**, still **1:16 over**. I would not cut further: the remaining words are the calculation working a student must see done (4.2.3), the plan's compulsory practical design and wording (4.2.4), the recap on the same diagrams and the cited close. The Topic 3 precedent (3.1.3 cleared at 1:34 over) suggests the checker rules on the remainder.
+**Length, honestly (after round-1 fixes):** **1,353 words = 11:16.5** at 120 words per minute, **1:31.5 over** the 9:45 (1,170-word) budget. There are no error beats, so the whole overrun is teaching. By outcome: the 4.2.3 half (Beats 1–6) is **586 words = 4:53** against 4:15 (**+38 s**), and the 4.2.4 half (Beats 7–13, including the joint recap and close) is **767 words = 6:23.5** against 5:30 (**+53.5 s**); 586 + 767 = 1,353. Round 1 took the checker's four required cuts (−40 words, −20 s):
+1. Beat 11: "about seventeen minutes at three per centimetre, about seventy seconds at twelve" and the joining colon (−12 words); the ringed points keep their values on screen at *the time falls steeply*.
+2. Beat 5: "Put in three, three and three, and you get fifty-four and twenty-seven again." (−13 words); the generic cuboid formula and face-pair animation remain.
+3. Beat 12: "and four point six seven for the potato cylinder" (−9 words); the labelled cylinder net stays in the recap layout.
+4. Beat 1: "Size is part of the answer." (−6 words); the size bracket moves to *do not grow at the same pace*.
+The required replacement wording then added 15 words: Beat 9 +8 ("at the same recorded room temperature" and the new safety sentence), Beat 10 +3 (submersion wording), Beat 13 +4 (beyond-the-mark-scheme callback). **Kept, per the check:** Beat 3's units sentence ("Keep an eye on the units …", 14 words), the first explicit area-versus-volume distinction. The checker accepted the remaining overrun (nets, arithmetic, a complete practical, endpoint interpretation and the familiar recap each have separate teaching jobs); no further cut, no split, no accelerated narration.
 
 ## What I left out, and who owns it
 
@@ -547,20 +546,46 @@ All five: **−56 words = −28 s → 1,322 words = 11:01**, still **1:16 over**
 ```
 == storyboards/topic-04/4.2.3-4/STORYBOARD.md
 beat  words  cues maxgap  status
-   1     93    10     17  ok
+   1     87     9     17  ok
    2     56     5     12  ok
    3    101    12     14  ok
    4    113    17     14  ok
-   5    135    17     13  ok
+   5    122    15     13  ok
    6    107     9     19  ok
    7    114    13     15  ok
    8     91    11     16  ok
-   9    100    10     15  ok
-  10    132    16     16  ok
-  11    111    13     15  ok
-  12    105    13     12  ok
-  13    120    14     23  ok
-TOTAL words 1378  cues 160  runtime at 120 wpm 11:29.0  beats 13  failing beats 0
+   9    108    10     17  ok
+  10    135    17     16  ok
+  11     99    11     15  ok
+  12     96    12     12  ok
+  13    124    13     23  ok
+TOTAL words 1353  cues 154  runtime at 120 wpm 11:16.5  beats 13  failing beats 0
 ```
 
 No MISSING SECTION or CITATION lines; failing beats 0.
+
+## CHECK RESPONSE (round 1)
+
+Check: `r1/4.2.3-4/CHECK.md` (NOT CLEARED; reviewed SHA-256 `f98f129f…2c59c78`, matching the pre-fix file).
+
+| ID | Status | What changed |
+|---|---|---|
+| M1 (Beat 13 action 4) | applied | Graph pulse replaced with the check's text verbatim: paper's icons A → B → C, then separately our points (12.0, 70) 0.5 cm → (6.0, 260) 1.0 cm → (3.0, 1016) 2.0 cm, "This is right to left on the increasing-SA:V axis"; tag now "our illustrative data: smaller cubes finished first"; paper's cubes A = 1 cm, B = 2 cm, C = 3 cm never given our sizes. |
+| M1 (Beat 12) | applied | Entry now keeps "the completed run's colourless cubes, endpoint clocks and result table" and the "familiar mid-run cutaway from Beat 10, labelled 'earlier during exposure: explanatory snapshot'"; action 5 highlights that snapshot's colourless rim and rings its paler-blue band; "Never restore blue to a completed cube or place a blue core beside its completed-endpoint clock." |
+| M1 (Beat 6 action 1) | applied | Glucose tokens now "enter through a small labelled carrier-protein symbol on that boundary, tagged 'glucose: transport protein; recall 4.2.1'"; route reminder only; waste arrows generic; no glucose through an unmarked lipid region. No narration change. |
+| M2 | applied | Thermometer and temperature-record field added to the rig parts, Beat 9 action 2 (at *all from the same stock*, check text verbatim, blank-entry option chosen), Dataset 5 conditions, scope ledger, assets, interpretation 12. Narration: "all from the same stock, at the same recorded room temperature". First contact and clock start unchanged (one atomic event). |
+| M3 | applied | Acid/alkali tags replaced verbatim ("…below the IRRITANT-labelling threshold in the cited Practical Biology protocol. Wear eye protection and rinse skin splashes with water. Working-solution information; do not copy the concentrated-stock hazard label onto the agar.") in the rig, Beat 7 (tray) and Beat 9 (acid bottle). Beat 9 safety sentence now "These working concentrations are below the irritant-labelling threshold in this protocol; still wear eye protection and rinse skin splashes with water." (cue remapped to *below the irritant-labelling threshold*). Indicator tag now the Carl Roth 8152 reference-formulation text verbatim; [F][MH][HH] kept separately as "syllabus p.58 materials-list codes". UNVERIFIED 4 replaced with the check's wording; citations 9–10 added; typicality paragraph and interpretation 8 updated. |
+| M4 | applied | Beat 13 action 6 replaced verbatim (✗/✓ card, wrong line struck, caption "our wording contrast illustrating syllabus 4.2.3; not a mark-scheme reject line", no badge). "No reject card" statements removed from the causal spine (credited paragraph and error-beat note), assets and interpretation 9. Last narration now "Beyond the mark scheme, that answers our opening question: a single-celled organism's high ratio and short distances can let diffusion meet its needs."; action 7 places the callback on a small **beyond the mark scheme** panel (dashed, no tick, no MS tab) with the paper's answers still visible; exit cue unchanged (*meet its needs*). |
+| S1 | applied | Beat 10 narration: "Once the cube is submerged, colourless layers develop from its exposed faces and thicken inward" ("thickens" → "thicken" for agreement); action 1 starts each cube's change at its own first contact (lower face first, then sides/top); `decolourising` state and absolutes sweep updated. |
+| S2 | applied | Beat 7 note line 2 and the Real-world table now "colourless once acid has lowered the pH below the indicator's transition range" (pH values not shown; citation 11). Narration untouched, as the check targets the label. |
+| S3 | applied | Dataset 4 conclusion replaced with the check's wording ("…consumes only 0.8% of the bath's initial acid inventory. This establishes a large stoichiometric excess; it does not measure the external acid concentration, which can also change as acid enters the water-filled gel. All baths start with the same concentration and volume."); Real-world table "every cube can be fully neutralised" narrowed to "125-fold stoichiometric excess". |
+| S4 | applied | `per-cm3` spec and Beats 4 and 6 now highlight the whole outer surface with the whole volume, labelled "whole cube's total outer area divided by its total volume"; no internal subcube. |
+| S5 | applied | Beat 2: "three visible authored pictograms beside empty text slots". |
+| S6 | applied with interpretation | The 3, 3, 3 substitution was cut (runtime ruling); the generic cuboid and three face pairs remain. No rectangular numerical example added (check: "do not add another long numerical beat"). Spec, Dataset 1, scope ledger and interpretation 2 updated. |
+| Citation audit: apparatus pages | applied | Scope ledger now "apparatus pp.56–57 (beakers on p.56; … on p.57)". |
+| Citation audit: Beat 13 source caption / Dataset 6 | applied | Replaced verbatim with "Source checked against S21/22 QP p.9 and MS p.14 in independent round 1. Paper cubes: A 1 cm, B 2 cm, C 3 cm. Our description, not a reproduction of the question figure. Our practical uses different cube sizes and separate baths." |
+| Citation audit: UNVERIFIED 1, 2 | applied | Recorded as resolved (PDF-CHECKED, independent round 1) with the check's QP p.9 / MS p.14 findings; citation rows 5–6 carry the added tag; kept as paraphrase (not in the SHARED-SPECS verified list). |
+| Runtime: four required cuts | applied | Beat 11 (−12), Beat 5 (−13), Beat 12 (−9), Beat 1 (−6); cues remapped; Beat 3 units sentence kept as ruled. |
+| Runtime: remaining overrun | applied (accepted) | 1,353 words = 11:16.5, 1:31.5 over 9:45; *Length, honestly* rewritten. |
+
+New validator TOTAL: `TOTAL words 1353  cues 154  runtime at 120 wpm 11:16.5  beats 13  failing beats 0`
