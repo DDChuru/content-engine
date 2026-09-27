@@ -104,7 +104,7 @@ The 4.2.1a model with its membrane strip drawn vertically and relabelled **Viski
 
 Beat windows in the headings are provisional and follow the per-beat ledger (words ÷ 120); final cue times come from the measured audio. Every cue is an exact narration substring, unique within its beat, in spoken order; no stretch over 30 words without a stated visual change. Compressed waiting is always captioned and every clock shows real elapsed time.
 
-### BEAT 1 · Hook and context: watching what you cannot see · 0:00–0:45
+### BEAT 1 · Hook and context: watching what you cannot see · 0:00–0:44
 **Narration:**
 > Ever wondered how you could watch diffusion or osmosis happen, when the molecules doing it are far too small to see? You cannot follow a single glucose molecule by eye. Instead, you set things up so that their movement changes something you can see: a colour test, a liquid climbing a tube, a blue patch spreading. Living tissue complicates this, since cells have transport proteins, respire, and leak where they are cut. So the syllabus also asks for non-living materials: dialysis tubing, known as Visking tubing, and agar.
 
@@ -121,7 +121,7 @@ Beat windows in the headings are provisional and follow the per-beat ledger (wor
 
 ---
 
-### BEAT 2 · What you will be able to do · 0:45–1:09
+### BEAT 2 · What you will be able to do · 0:44–1:08
 **Narration:**
 > By the end you will be able to set up three investigations, a Visking bag, a Visking osmometer and a dye in agar; to read each one at recorded times, starting every clock at first contact; and to say what each result shows, and what it cannot.
 
@@ -139,7 +139,7 @@ Small type: *syllabus 4.2.2, "investigate", p.21; non-living materials (plant ti
 
 ---
 
-### BEAT 3 · The tubing, and the two tests that read it · 1:09–1:58
+### BEAT 3 · The tubing, and the two tests that read it · 1:08–1:54
 **Narration:**
 > Visking tubing is a thin tube of regenerated cellulose, bought dry and flat, fourteen millimetres wide. Its wall is full of tiny pores, about 2.5 nanometres across. Water and glucose molecules are small enough to pass through; a starch molecule, a long chain of many glucose units, is far too big. There is no phospholipid bilayer and no protein in it, so it sorts molecules by size alone. To find out what crossed, you use two tests: Benedict's reagent responds to reducing sugars, and glucose is one; iodine solution responds to starch.
 
@@ -154,7 +154,7 @@ Small type: *syllabus 4.2.2, "investigate", p.21; non-living materials (plant ti
 
 ---
 
-### BEAT 4 · Filling the bag, and testing what it holds · 1:58–2:53
+### BEAT 4 · Filling the bag, and testing what it holds · 1:54–2:47
 **Narration:**
 > Soak a ten-centimetre length in water until it softens, tie a tight knot at one end, and rub the other end between your fingers to open it. Holding a syringe above the opening, run in five cubic centimetres of a mixture: equal volumes of one per cent starch suspension and ten per cent glucose solution. Tie the top with thread, then rinse the outside, so mixture on the surface is not mistaken for leakage. Test the mixture itself first: Benedict's turns brick red, and iodine blue-black. Then test the starch alone with Benedict's: it stays blue, so this starch brings no reducing sugar the test can detect.
 
@@ -170,7 +170,7 @@ Small type: *syllabus 4.2.2, "investigate", p.21; non-living materials (plant ti
 
 ---
 
-### BEAT 5 · The blank, matched tubes, and first contact · 2:53–3:44
+### BEAT 5 · The blank, matched tubes, and first contact · 2:47–3:30
 **Narration:**
 > Set up three matched boiling tubes of distilled water, one for each sampling time, each with its own identical bag and its own stopwatch. Before a bag goes in, test a sample of that tube's water: Benedict's stays blue and iodine stays yellow-brown, so the water starts with neither, as far as these tests can tell. Then lower the bag in; that tube's stopwatch starts the moment the tubing first touches the water. No reagent goes into a tube, and no tested sample goes back.
 
@@ -186,7 +186,7 @@ Small type: *syllabus 4.2.2, "investigate", p.21; non-living materials (plant ti
 
 ---
 
-### BEAT 6 · Samples at recorded times, and reading them · 3:44–4:34
+### BEAT 6 · Samples at recorded times, and reading them · 3:30–4:16
 **Narration:**
 > The waiting is sped up on screen, but each stopwatch keeps real time. At three minutes, draw two cubic centimetres from tube one, away from the bag, into a test tube with two cubic centimetres of Benedict's, and let one drop fall onto iodine on the spotting tile. Tubes two and three are sampled the same way at ten and twenty minutes. Each Benedict's tube goes into a boiling-water bath for five minutes, held in a test-tube holder. Tube one reaches green, tube two yellow, tube three orange. Every iodine drop stays yellow-brown.
 
@@ -203,7 +203,7 @@ Small type: *syllabus 4.2.2, "investigate", p.21; non-living materials (plant ti
 
 ---
 
-### BEAT 7 · What crossed, and why: pores, not a membrane · 4:34–5:28
+### BEAT 7 · What crossed, and why: pores, not a membrane · 4:16–5:10
 **Narration:**
 > So glucose got out, more of it the longer the bag sat, while starch, as far as iodine can tell, did not. Inside the bag glucose started far more concentrated than in the water. Its molecules move randomly, passing through the pores both ways, but more leave than return: net diffusion down the concentration gradient. Think of a sieve. Written properly: Visking tubing is partially permeable; small molecules such as water and glucose pass through its pores, but large starch molecules do not. It is not a cell membrane: across a living cell's bilayer, glucose is polar, does not cross the hydrophobic core readily, and needs a transport protein.
 
@@ -218,7 +218,7 @@ Small type: *syllabus 4.2.2, "investigate", p.21; non-living materials (plant ti
 
 ---
 
-### BEAT 8 · The osmometer: set up, then the first real reading · 5:28–6:26
+### BEAT 8 · The osmometer: set up, then the first real reading · 5:10–6:04
 **Narration:**
 > The same tubing can show osmosis. Fill a knotted bag with one mole per cubic decimetre sucrose solution, push a capillary tube into its open end, and wind thread tightly round the tubing and capillary. Check there is no trapped air and no drip at the tie. Clamp it upright, a millimetre ruler beside the capillary, and lower the bag into a beaker of distilled water: the stopwatch starts as the tubing first touches the water. The meniscus can shift as the bag settles, so the first reading is taken after immersion: forty-eight millimetres on the ruler at one minute, not a mark made beforehand and called zero.
 
@@ -235,7 +235,7 @@ Small type: *syllabus 4.2.2, "investigate", p.21; non-living materials (plant ti
 
 ---
 
-### BEAT 9 · The rise, explained in water potential, and its limits · 6:26–7:39
+### BEAT 9 · The rise, explained in water potential, and its limits · 6:04–7:10
 **Narration:**
 > Time is compressed again. Every two minutes: fifty-seven, sixty-five, seventy-two, on to a hundred and five millimetres at twenty-one minutes, rising more slowly as time goes on. The control bag of distilled water barely moves. Distilled water is close to pure water, the reference at zero; the sucrose solution's water potential is lower, more negative. So there is a net movement of water molecules into the bag, from higher to lower water potential, through the partially permeable tubing: osmosis. The bore is the same all the way up, so height tracks the volume that entered. But sucrose passes the pores too, just more slowly, the bag stretches, and the rising column pushes back, so the rise is transient: it slows, and can stop or fall. It is not a permanent equilibrium.
 
@@ -253,7 +253,7 @@ Small type: *syllabus 4.2.2, "investigate", p.21; non-living materials (plant ti
 
 ---
 
-### BEAT 10 · Agar: a well, a dye and a clock · 7:39–8:29
+### BEAT 10 · Agar: a well, a dye and a clock · 7:10–7:59
 **Narration:**
 > Now diffusion with no membrane at all. Agar is a jelly that is mostly water held in a fine mesh of fibres: dissolved molecules diffuse through that water, while the gel largely stops currents stirring it. Pour plain agar five millimetres deep in a Petri dish, let it set, and stand it on white card over a ruler. Push an eight-millimetre cork borer straight down, lift out the plug to leave a well, and let three drops of methylene blue fall into it from a dropper held above. The stopwatch starts as the first drop reaches the well.
 
@@ -270,7 +270,7 @@ Small type: *syllabus 4.2.2, "investigate", p.21; non-living materials (plant ti
 
 ---
 
-### BEAT 11 · Measuring the blue zone, and what it cannot tell you · 8:29–9:36
+### BEAT 11 · Measuring the blue zone, and what it cannot tell you · 7:59–9:00
 **Narration:**
 > Keep the dish level and lidded, and do not move it; the time-lapse squeezes a day into seconds. Dye molecules move randomly, so more spread out of the crowded well than drift back, and the blue zone widens. Define its edge once: the outermost point where blue is still visible against the white card, judged the same way each time. Measure two diameters at right angles and take the mean: twelve millimetres at half an hour, twenty at four hours, thirty-six and a half at twenty-four, widening ever more slowly. Colour, dye binding to the agar and what your eye can detect all affect that edge, so the diameter is an operational colour-zone measure: no diffusion coefficient or concentration comes from it.
 
@@ -286,7 +286,7 @@ Small type: *syllabus 4.2.2, "investigate", p.21; non-living materials (plant ti
 
 ---
 
-### BEAT 12 · What I told you, on the three rigs · 9:36–10:18
+### BEAT 12 · What I told you, on the three rigs · 9:00–9:44
 **Narration:**
 > So here it is, on the three rigs. The bag: blanks tested first, samples at recorded times, and glucose, not starch, found outside, because glucose fits Visking's pores and starch does not. The osmometer: the first reading after immersion, then a rise as water enters by osmosis, from higher to lower water potential, transient because sucrose leaks too. The agar: a blue zone widening as the dye diffuses through the water in the gel, measured as a defined colour-zone diameter. And every clock started at first contact.
 
@@ -300,7 +300,7 @@ Small type: *syllabus 4.2.2, "investigate", p.21; non-living materials (plant ti
 
 ---
 
-### BEAT 13 · How it is asked, the reject card, and the invisible molecules · 10:18–11:18
+### BEAT 13 · How it is asked, the reject card, and the invisible molecules · 9:44–10:45
 **Narration:**
 > How this reaches you. No Visking-tubing question has been verified in the papers cited here, so that part rests on the syllabus. Agar diffusion did appear. A June 2021 paper had agar cubes A, B and C containing universal indicator, blue at the start and red in acid, and asked the order in which they changed colour completely. The credited order: A, then B, then C. Why size matters is the surface-area lesson's job. The scheme doesn't need this, but, like our blue edge, that colour boundary marks where the indicator changes, not where the first acid molecules are. The reject card: Visking tubing is partially permeable by pore size alone. And those molecules too small to see? You watched what they did.
 
@@ -425,7 +425,7 @@ Every narrated sentence containing *all, every, always, never, only, no, nothing
 - Beat 2: "starting every clock at first contact": this lesson's rule for its own clocks.
 - Beat 3: "Water and glucose molecules are small enough to pass through; a starch molecule … is far too big": relative to this tubing's pores (about 2.5 nm, syllabus). "There is no phospholipid bilayer and no protein in it, so it sorts molecules by size alone": true of regenerated-cellulose dialysis tubing; the plan's "partially permeable by pore size only".
 - Beat 4: "so mixture on the surface is not mistaken for leakage": the purpose of rinsing. "so this starch brings no reducing sugar the test can detect": bounded to this starch and this test's sensitivity.
-- Beat 5: "so the water starts with neither, as far as these tests can tell": bounded by test sensitivity. "Reagents never go into the tubes themselves": a procedural instruction for this method (MF5), not a biological claim. "tested samples are not poured back": instruction.
+- Beat 5: "so the water starts with neither, as far as these tests can tell": bounded by test sensitivity. "No reagent goes into a tube, and no tested sample goes back": a procedural instruction for this method (MF5), not a biological claim.
 - Beat 6: "each stopwatch keeps real time": the rig's rule. "Every iodine drop stays yellow-brown": this run's three sample wells.
 - Beat 7: "while starch, as far as iodine can tell, did not": bounded. "Starch molecules are too large for the pores": this tubing. "small molecules such as water and glucose pass through its pores, but large starch molecules do not": "such as", not "all small molecules". "across a living cell's bilayer, glucose is polar, does not cross the hydrophobic core readily, and needs a transport protein": the plan's MF2 wording ("readily"); no claim about direction or energy for every glucose system.
 - Beat 8: "no trapped air and no drip at the tie": the checks to be made. "so the first reading is taken after immersion": the MF5 rule. "The meniscus can shift": "can".
@@ -467,22 +467,29 @@ Counted by the validator over the blockquoted narration; seconds = words ÷ 120 
 
 | Beat | Title | Words | Seconds |
 |---|---|---:|---:|
-| 1 | Hook and context: watching what you cannot see | — | — |
-| 2 | What you will be able to do | — | — |
-| 3 | The tubing, and the two tests that read it | — | — |
-| 4 | Filling the bag, and testing what it holds | — | — |
-| 5 | The blank, matched tubes, and first contact | — | — |
-| 6 | Samples at recorded times, and reading them | — | — |
-| 7 | What crossed, and why: pores, not a membrane | — | — |
-| 8 | The osmometer: set up, then the first real reading | — | — |
-| 9 | The rise, explained in water potential, and its limits | — | — |
-| 10 | Agar: a well, a dye and a clock | — | — |
-| 11 | Measuring the blue zone, and what it cannot tell you | — | — |
-| 12 | What I told you, on the three rigs | — | — |
-| 13 | How it is asked, the reject card, and the invisible molecules | — | — |
-| **Total** | 13 beats (13 teaching + 0 error) | — | — |
+| 1 | Hook and context: watching what you cannot see | 88 | 44.0 |
+| 2 | What you will be able to do | 47 | 23.5 |
+| 3 | The tubing, and the two tests that read it | 92 | 46.0 |
+| 4 | Filling the bag, and testing what it holds | 107 | 53.5 |
+| 5 | The blank, matched tubes, and first contact | 85 | 42.5 |
+| 6 | Samples at recorded times, and reading them | 93 | 46.5 |
+| 7 | What crossed, and why: pores, not a membrane | 109 | 54.5 |
+| 8 | The osmometer: set up, then the first real reading | 108 | 54.0 |
+| 9 | The rise, explained in water potential, and its limits | 131 | 65.5 |
+| 10 | Agar: a well, a dye and a clock | 98 | 49.0 |
+| 11 | Measuring the blue zone, and what it cannot tell you | 122 | 61.0 |
+| 12 | What I told you, on the three rigs | 87 | 43.5 |
+| 13 | How it is asked, the reject card, and the invisible molecules | 123 | 61.5 |
+| **Total** | 13 beats (13 teaching + 0 error) | **1290** | **645.0** (10:45) |
 
-**Length, honestly:** to be completed from the validator run.
+**Length, honestly:** **1,290 words = 10:45** at 120 words per minute, **1:15 over** the 9:30 (1,140-word) budget, all of it teaching (there are no error beats). Before saving, one round of trims was taken (−43 words: "Start with the tubing", "Now the water", the Beat 5 reagent sentence shortened, the repeated Beat 7 starch sentence moved onto the written sentence's cue, the Beat 9 and Beat 11 clock asides left to the on-screen captions, two Beat 13 phrases shortened). The remaining length comes from what the plan requires of this lesson: three complete investigations, each with named apparatus and handling, first-contact timing, compressed waiting stated, and readout interpretation with its limits (MF5, MF7, should-fix 4), plus the REAL-WORLD statements for five materials. **Cut list if the budget must be met more closely, in order** (none touches an MF5 rule, a REAL-WORLD statement or the glucose/cell-membrane contrast):
+1. Beat 13, the beyond-the-mark-scheme sentence ("The scheme doesn't need this, … first acid molecules are.", −26 words) and its dashed panel.
+2. Beat 1, "You cannot follow a single glucose molecule by eye." (−10 words; the magnifier moves to *far too small to see*).
+3. Beat 9, "The control bag of distilled water barely moves." (−9 words; the control stays on the graph, labelled).
+4. Beat 12, "And every clock started at first contact." (−7 words; the four t = 0 marks still brighten, silently, at the recap's end).
+5. Beat 3, "bought dry and flat," (−4 words).
+
+All five together save 56 words (28 s), giving 1,234 words = 10:17, still 0:47 over. Going further would remove a required element (a blank, a first-reading rule, a limit, or a material's fit statement); I recommend accepting the remaining overrun, as the checker did for 3.1.3's practical beats.
 
 ## What I left out, and who owns it
 
