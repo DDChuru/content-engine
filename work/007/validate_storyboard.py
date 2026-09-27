@@ -15,6 +15,11 @@ Per beat (headings '### BEAT n ...'):
   * gaps = words from narration start to first cue, between successive cue starts, and
     from last cue start to narration end; any gap > --gap words fails the beat.
 Runtime = total words / 120 wpm.
+
+Error beats (heading contains COMMON MISTAKE or EXAM CONTRAST): the narration must contain a
+'*(silent read, N s)*' line with N in 3-4 and a later '*(correction)*' marker line; the TALK-THROUGH
+is the spoken narration between them and must be >= 90 words (45 s at 120 wpm); the whole beat must
+be 130-150 words (65-75 s). Reported per error beat.
 """
 import re, sys
 
@@ -27,7 +32,7 @@ def parse(path):
     for ln in lines:
         m = re.match(r"^###\s+BEAT\s+(\w+)", ln)
         if m:
-            cur = {"id": m.group(1), "title": ln, "narr": [], "vis": []}
+            cur = {"id": m.group(1), "title": ln, "narr": [], "vis": [], "marks": []}
             beats.append(cur); mode = None; continue
         if cur is None:
             continue
@@ -43,7 +48,12 @@ def parse(path):
             mode = None if ln.startswith("---") else mode
         if mode == "narr" and ln.startswith(">"):
             body = ln[1:].strip()
-            if re.match(r"^\*\(silent", body) or not body:
+            if re.match(r"^\*\(silent", body):
+                sec = re.search(r"(\d+)\s*s", body)
+                cur["marks"].append(("silent", len(cur["narr"]), int(sec.group(1)) if sec else 0)); continue
+            if re.match(r"^\*\(correction", body):
+                cur["marks"].append(("correct", len(cur["narr"]), 0)); continue
+            if not body:
                 continue
             cur["narr"].append(body)
         elif mode == "vis":
@@ -83,6 +93,22 @@ def check(beat, gap_limit):
         problems.append(f"GAP {maxgap} words after word {pts[i]}")
     if not words:
         problems.append("NO NARRATION")
+    info = ""
+    if re.search(r"COMMON MISTAKE|EXAM CONTRAST", beat["title"]):
+        sil = [m for m in beat["marks"] if m[0] == "silent"]
+        cor = [m for m in beat["marks"] if m[0] == "correct"]
+        if not sil or not cor or cor[0][1] < sil[0][1]:
+            problems.append("ERROR BEAT needs '*(silent read, N s)*' then '*(correction)*' marker lines")
+        else:
+            if not 3 <= sil[0][2] <= 4:
+                problems.append(f"silent read {sil[0][2]} s (must be 3-4 s)")
+            talk = words_of(" ".join(beat["narr"][sil[0][1]:cor[0][1]]))
+            info = f"talk-through {len(talk)} w"
+            if len(talk) < 90:
+                problems.append(f"TALK-THROUGH {len(talk)} words < 90 (45 s)")
+        if not 130 <= len(words) <= 150:
+            problems.append(f"ERROR BEAT {len(words)} words outside 130-150 (65-75 s)")
+    beat["info"] = info
     return len(words), len(cues), maxgap, problems
 
 def main():
@@ -98,7 +124,7 @@ def main():
         tw += w; tc += c
         st = "ok" if not p else "FAIL"
         if p: fail += 1
-        print(f"{b['id']:>4} {w:>6} {c:>5} {g:>6}  {st}")
+        print(f"{b['id']:>4} {w:>6} {c:>5} {g:>6}  {st}  {b.get('info','')}")
         for x in p:
             print(f"        - {x}")
     secs = tw / 120 * 60

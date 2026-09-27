@@ -2,8 +2,9 @@
 """List every double-quoted string in a storyboard and check it verbatim against the permitted sources.
 
 Usage: python3 check_quotes.py STORYBOARD.md [--all]
-Sources (cloud run 007): the Topic 5 plan and weights, the G05 gate criteria, EXAMINER-INSIGHT, the
-syllabus detail, and the current VIDEO-STRUCTURE (for quoted standard wording only).
+Sources (cloud run 007): the Topic 5 plan and weights, the plan check's PDF-verified evidence
+(work/007/VERIFIED-EVIDENCE.md), the G05 gate criteria, EXAMINER-INSIGHT, the syllabus detail, and the
+current VIDEO-STRUCTURE (for quoted standard wording only).
 Normalisation: whitespace collapsed; curly quotes/apostrophes and dashes unified; subscript/superscript
 digits and minus signs unified; markdown emphasis and links removed. Quotes of <= 3 words are skipped (terms).
 Prints NOT FOUND quotes (and with --all, found ones too). Exit status 1 if any are not found.
@@ -12,6 +13,7 @@ import re, sys, pathlib
 ROOT = pathlib.Path(__file__).resolve().parents[2]
 SRC = [ROOT/"plan/topic-05/TOPIC-PLAN-05-CELL-CYCLE.md",
        ROOT/"plan/topic-05/TOPIC-05-WEIGHTS.md",
+       ROOT/"work/007/VERIFIED-EVIDENCE.md",
        ROOT/"cloud-inputs/007/evidence/GATE-CRITERIA-9700-05-MITOTIC-CELL-CYCLE.md",
        ROOT/"cloud-inputs/007/evidence/EXAMINER-INSIGHT-9700.md",
        ROOT/"cloud-inputs/003/standards/SYLLABUS-9700-DETAIL.md",
